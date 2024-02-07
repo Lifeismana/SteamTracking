@@ -33,7 +33,7 @@ do
 	else
 		unzip -q -o "$z" -d "$DIR/ClientExtracted/"
 	fi
-	unzip -lv "$z" | awk '{print $(NF-1),$NF}' | head -n-4 | tail -n+2 >> $DIR/ClientExtracted/ClientContentWindows.txt
+	unzip -lv "$z" | head -n-2 | tail -n+4 | awk '{print $(NF-1),$NF}' >> $DIR/ClientExtracted/ClientContentWindows.txt
 done
 
 for z in linux_archives/*.zip;
@@ -42,11 +42,11 @@ do
 	then
 		unzip -q -n "$z" -d linux_bins/
 	fi
-	unzip -lv "$z" | awk '{print $(NF-1),$NF}' | head -n-4 | tail -n+2  >> $DIR/ClientExtracted/ClientContentLinux.txt
+	unzip -lv "$z" | head -n -2 | tail -n+4 | awk '{print $(NF-1),$NF}' >> $DIR/ClientExtracted/ClientContentLinux.txt
 done
 
-#sort -k 2 -o $DIR/ClientExtracted/ClientContentWindows.txt{,}
-#sort -k 2 -o $DIR/ClientExtracted/ClientContentLinux.txt{,}
+sort -k 2 -o $DIR/ClientExtracted/ClientContentWindows.txt{,}
+sort -k 2 -o $DIR/ClientExtracted/ClientContentLinux.txt{,}
 
 #
 # PROTOBUF DUMP
