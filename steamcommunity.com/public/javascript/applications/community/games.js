@@ -343,8 +343,8 @@
         "string" == typeof e
           ? (n = e)
           : "location" in e
-          ? (n = e.location.search)
-          : "search" in e && (n = e.search);
+            ? (n = e.location.search)
+            : "search" in e && (n = e.search);
         const a = new URLSearchParams(n.substring(1));
         if (a.has(t)) {
           const e = a.getAll(t);
@@ -1905,20 +1905,20 @@
                 }),
               )
             : m.BHasPendingUpdate()
-            ? l.push(
-                s.createElement(je, {
-                  key: "updatePending",
-                  app: m,
-                  clientid: o,
-                }),
-              )
-            : l.push(
-                s.createElement(qe, {
-                  key: "installuninstall",
-                  app: m,
-                  clientid: o,
-                }),
-              );
+              ? l.push(
+                  s.createElement(je, {
+                    key: "updatePending",
+                    app: m,
+                    clientid: o,
+                  }),
+                )
+              : l.push(
+                  s.createElement(qe, {
+                    key: "installuninstall",
+                    app: m,
+                    clientid: o,
+                  }),
+                );
         return s.createElement(
           "div",
           { className: (0, F.Z)(Pe.RemoteControls, t) },
@@ -2449,23 +2449,17 @@
             (0, ee.e7)(f.De.EREALM) ||
               t.push(
                 {
-                  href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${
-                    f.De.STORE_BASE_URL
-                  }forum/${e.appid}`,
+                  href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${f.De.STORE_BASE_URL}forum/${e.appid}`,
                   label: (0, O.Xx)("#Community_Forums"),
                   key: "forums",
                 },
                 {
-                  href: `${
-                    f.De.COMMUNITY_BASE_URL
-                  }search/groups/?text=${encodeURIComponent(e.name)}`,
+                  href: `${f.De.COMMUNITY_BASE_URL}search/groups/?text=${encodeURIComponent(e.name)}`,
                   label: (0, O.Xx)("#Community_Groups"),
                   key: "groups",
                 },
                 {
-                  href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${
-                    f.De.STORE_BASE_URL
-                  }appofficialsite/${e.appid}`,
+                  href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${f.De.STORE_BASE_URL}appofficialsite/${e.appid}`,
                   label: (0, O.Xx)("#Community_OfficialWebsite"),
                   key: "website",
                 },
@@ -3093,9 +3087,7 @@
         const t = Lt(),
           [n, a] = (0, s.useState)(0),
           i = [
-            `${f.De.STORE_ICON_BASE_URL}${e.appid}/${
-              e.capsule_filename || "library_600x900.jpg"
-            }`,
+            `${f.De.STORE_ICON_BASE_URL}${e.appid}/${e.capsule_filename || "library_600x900.jpg"}`,
             `${f.De.STORE_ICON_BASE_URL}${e.appid}/portrait.png`,
             mt,
           ],
@@ -3419,22 +3411,22 @@
               position: "center",
             })
           : 0 === (null === (a = r.data) || void 0 === a ? void 0 : a.length) &&
-            n === it.Perfect
-          ? s.createElement(
-              "p",
-              { className: Ie.emptyDescription },
-              (0, O.Xx)("#GamesList_PerfectGames_Description"),
-            )
-          : s.createElement(
-              bn.Provider,
-              { value: c },
-              !f.De.IN_CLIENT && s.createElement(He, null),
-              s.createElement(hn, {
-                games: r.data,
-                tab: n,
-                fnCalculateGameSize: m,
-              }),
-            );
+              n === it.Perfect
+            ? s.createElement(
+                "p",
+                { className: Ie.emptyDescription },
+                (0, O.Xx)("#GamesList_PerfectGames_Description"),
+              )
+            : s.createElement(
+                bn.Provider,
+                { value: c },
+                !f.De.IN_CLIENT && s.createElement(He, null),
+                s.createElement(hn, {
+                  games: r.data,
+                  tab: n,
+                  fnCalculateGameSize: m,
+                }),
+              );
       }
       function Gn(e) {
         return wt;

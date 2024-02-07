@@ -546,22 +546,22 @@
         return e.date.getTime() < t.date.getTime()
           ? -1
           : e.date.getTime() > t.date.getTime()
-          ? 1
-          : e.eventType < t.eventType
-          ? -1
-          : e.eventType > t.eventType
-          ? 1
-          : e.title < t.title
-          ? -1
-          : e.title > t.title
-          ? 1
-          : (null == e ? void 0 : e.promotionPlan.id) <
-            (null == t ? void 0 : t.promotionPlan.id)
-          ? -1
-          : (null == e ? void 0 : e.promotionPlan.id) >
-            (null == t ? void 0 : t.promotionPlan.id)
-          ? 1
-          : 0;
+            ? 1
+            : e.eventType < t.eventType
+              ? -1
+              : e.eventType > t.eventType
+                ? 1
+                : e.title < t.title
+                  ? -1
+                  : e.title > t.title
+                    ? 1
+                    : (null == e ? void 0 : e.promotionPlan.id) <
+                        (null == t ? void 0 : t.promotionPlan.id)
+                      ? -1
+                      : (null == e ? void 0 : e.promotionPlan.id) >
+                          (null == t ? void 0 : t.promotionPlan.id)
+                        ? 1
+                        : 0;
       }
       function L(e, t) {
         const { element: n, header: a } = t;

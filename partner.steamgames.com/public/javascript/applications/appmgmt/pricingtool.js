@@ -566,12 +566,15 @@
                     K,
                   )
                 : n < U
-                ? (0, E.Xx)(
-                    "#PricingDashboard_SavePrice_FutureDiscountSoon",
-                    n,
-                    K,
-                  )
-                : (0, E.Xx)("#PricingDashboard_SavePrice_CooldownWarning", K)),
+                  ? (0, E.Xx)(
+                      "#PricingDashboard_SavePrice_FutureDiscountSoon",
+                      n,
+                      K,
+                    )
+                  : (0, E.Xx)(
+                      "#PricingDashboard_SavePrice_CooldownWarning",
+                      K,
+                    )),
             a.createElement(
               "div",
               { className: G().PriceChangeSaveWarning },
@@ -698,12 +701,12 @@
                 ? null == t
                   ? ee.Loading
                   : 1 != t
-                  ? ee.FailedToLoad
-                  : (0, R.co)(e).every(
-                      (e) => e.rtStartDate > o + M.LX || e.rtEndDate < o,
-                    )
-                  ? ee.OK
-                  : ee.RequiresCooldown
+                    ? ee.FailedToLoad
+                    : (0, R.co)(e).every(
+                          (e) => e.rtStartDate > o + M.LX || e.rtEndDate < o,
+                        )
+                      ? ee.OK
+                      : ee.RequiresCooldown
                 : ee.OK
             );
           })(t, i),
@@ -868,10 +871,10 @@
         return e.contains_game && e.contains_dlc
           ? "BOTH"
           : e.contains_game
-          ? "GAME"
-          : e.contains_dlc
-          ? "DLC"
-          : null;
+            ? "GAME"
+            : e.contains_dlc
+              ? "DLC"
+              : null;
       }
       function le(e) {
         const { cell: r } = e,
@@ -921,56 +924,60 @@
             (v = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
             (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NeedsReview")))
           : 1 == (null == l ? void 0 : l.eState) && l.bPartnerWillPublish
-          ? ((p = x().PartnerWillPublish),
-            (v = (0, E.Xx)(
-              "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
-              m,
-              c,
-            )),
-            (h = (0, E.Xx)(
-              "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
-            )))
-          : 1 != (null == l ? void 0 : l.eState) || l.bPartnerWillPublish
-          ? 4 == (null == l ? void 0 : l.eState)
-            ? ((p = x().ApprovedCanPublish),
-              (v = (0, E.Xx)("#PricingDashboard_PriceProposal_Approved_ttip")),
-              (h = a.createElement(
-                s.KM,
-                {
-                  onClick: (e) =>
-                    (0, _.AM)(
-                      a.createElement(te, { packageID: i }),
-                      (0, b.RA)(e),
-                    ),
-                },
-                (0, E.Xx)(
-                  "#PricingDashboard_PriceProposal_PublishDialog_Button",
-                ),
-              )))
-            : ((p = x().NoProposalsInFlight),
+            ? ((p = x().PartnerWillPublish),
               (v = (0, E.Xx)(
-                "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
+                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
+                m,
+                c,
               )),
-              (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NoneInFlight")))
-          : ((p = x().AutoPublish),
-            (v = (0, E.Xx)(
-              "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
-              m,
-              c,
-            )),
-            (h = a.createElement(
-              "div",
-              null,
-              (0, E.Xx)("#PricingDashboard_PriceProposal_WaitingForReview"),
-              a.createElement("br", null),
-              a.createElement(
-                "span",
-                null,
-                (0, E.Xx)(
-                  "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
-                ),
-              ),
-            )));
+              (h = (0, E.Xx)(
+                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
+              )))
+            : 1 != (null == l ? void 0 : l.eState) || l.bPartnerWillPublish
+              ? 4 == (null == l ? void 0 : l.eState)
+                ? ((p = x().ApprovedCanPublish),
+                  (v = (0, E.Xx)(
+                    "#PricingDashboard_PriceProposal_Approved_ttip",
+                  )),
+                  (h = a.createElement(
+                    s.KM,
+                    {
+                      onClick: (e) =>
+                        (0, _.AM)(
+                          a.createElement(te, { packageID: i }),
+                          (0, b.RA)(e),
+                        ),
+                    },
+                    (0, E.Xx)(
+                      "#PricingDashboard_PriceProposal_PublishDialog_Button",
+                    ),
+                  )))
+                : ((p = x().NoProposalsInFlight),
+                  (v = (0, E.Xx)(
+                    "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
+                  )),
+                  (h = (0, E.Xx)(
+                    "#PricingDashboard_PriceProposal_NoneInFlight",
+                  )))
+              : ((p = x().AutoPublish),
+                (v = (0, E.Xx)(
+                  "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
+                  m,
+                  c,
+                )),
+                (h = a.createElement(
+                  "div",
+                  null,
+                  (0, E.Xx)("#PricingDashboard_PriceProposal_WaitingForReview"),
+                  a.createElement("br", null),
+                  a.createElement(
+                    "span",
+                    null,
+                    (0, E.Xx)(
+                      "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
+                    ),
+                  ),
+                )));
         let C = o || !!l;
         return a.createElement(
           "div",
@@ -1532,9 +1539,7 @@
                   return a.createElement(
                     "div",
                     { key: `${e.message}-${r}`, className: be().Error },
-                    `${null !== (t = e.row) && void 0 !== t ? t : "-"} ${
-                      e.message
-                    }`,
+                    `${null !== (t = e.row) && void 0 !== t ? t : "-"} ${e.message}`,
                   );
                 }),
               ),
@@ -2026,8 +2031,8 @@
           E = (null == b ? void 0 : b.data)
             ? b.data.m_strPlayerName
             : null == _
-            ? void 0
-            : _.submitterID;
+              ? void 0
+              : _.submitterID;
         return a.createElement(
           "div",
           { className: C().PricePopout },

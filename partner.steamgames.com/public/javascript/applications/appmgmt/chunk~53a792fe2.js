@@ -982,8 +982,8 @@
             )
               ? this.UpdateRegAndTrackInStore(t, r.data.data)
               : null === (a = null == r ? void 0 : r.data) || void 0 === a
-              ? void 0
-              : a.data;
+                ? void 0
+                : a.data;
           });
         }
         FetchPendingReviewOptInRegistrationn(t) {
@@ -1001,8 +1001,8 @@
             )
               ? this.UpdateRegAndTrackInStore(t, o.data.data)
               : null === (n = null == o ? void 0 : o.data) || void 0 === n
-              ? void 0
-              : n.data;
+                ? void 0
+                : n.data;
           });
         }
         LoadOptInRegistration(t, e, n) {
@@ -1437,10 +1437,10 @@
                 e.restricted || e.pruned
                   ? (t.nAppIneligible += 1)
                   : e.opt_in
-                  ? ((t.nAppOptedIn += 1), (t.nAppEligible += 1))
-                  : !e.time_opted_in || e.invited
-                  ? (t.nAppEligible += 1)
-                  : (t.nAppOptedOut += 1);
+                    ? ((t.nAppOptedIn += 1), (t.nAppEligible += 1))
+                    : !e.time_opted_in || e.invited
+                      ? (t.nAppEligible += 1)
+                      : (t.nAppOptedOut += 1);
               }),
                 JSON.stringify(t) != JSON.stringify(n) && i(t);
             }
@@ -1982,9 +1982,7 @@
         }
       }
       function _(t) {
-        return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, d.JD)(
-          t.strDiscountName,
-        )}`;
+        return `custom-event-${t.rtStartDate}-${t.rtEndDate}-${(0, d.JD)(t.strDiscountName)}`;
       }
       function f(t) {
         return t.startsWith("custom-event-");
@@ -3391,16 +3389,8 @@
       }
       function b(t, e, n, i) {
         return t == (0, o.Xx)("#PackageGrid_NoBaseGameFoundForPackage")
-          ? `<div title='${(0, o.Xx)(
-              "#PackageGrid_NoBaseGameExplanation",
-            )}' >${t} (?) <span>(${(0, o.kb)(
-              "#PackageGrid_PackageCount",
-              e,
-            )})</span></div>`
-          : `<div>${t} <span>(${(0, o.kb)(
-              "#PackageGrid_PackageCount",
-              e,
-            )})</span></div>`;
+          ? `<div title='${(0, o.Xx)("#PackageGrid_NoBaseGameExplanation")}' >${t} (?) <span>(${(0, o.kb)("#PackageGrid_PackageCount", e)})</span></div>`
+          : `<div>${t} <span>(${(0, o.kb)("#PackageGrid_PackageCount", e)})</span></div>`;
       }
       function R(t) {
         const {

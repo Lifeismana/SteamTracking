@@ -116,8 +116,8 @@
                   const r = s
                       ? null
                       : null === (t = window.history.state) || void 0 === t
-                      ? void 0
-                      : t[l],
+                        ? void 0
+                        : t[l],
                     o = window.setTimeout(() => {
                       let e = !1;
                       s

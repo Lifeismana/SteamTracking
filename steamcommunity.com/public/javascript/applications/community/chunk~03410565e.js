@@ -1660,8 +1660,8 @@
                   ),
                 )
               : r
-              ? o.createElement($, { fnAskQuestion: u })
-              : i && o.createElement(te, null),
+                ? o.createElement($, { fnAskQuestion: u })
+                : i && o.createElement(te, null),
           ),
           c.length + m.length == 0
             ? o.createElement(

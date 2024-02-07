@@ -316,8 +316,8 @@
                     "success" === r.statusType
                       ? (t = s().StatusSuccess)
                       : "danger" === r.statusType
-                      ? (t = s().StatusDanger)
-                      : "caution" === r.statusType && (t = s().StatusCaution),
+                        ? (t = s().StatusDanger)
+                        : "caution" === r.statusType && (t = s().StatusCaution),
                     n.createElement(
                       d.M2,
                       {
@@ -335,11 +335,7 @@
                         {
                           key: r.key,
                           className: (0, a.Z)(
-                            `${s().GraphicalAssetsTab} ${
-                              r.key === e.key
-                                ? (0, a.Z)(s().Active, "ActiveTab")
-                                : ""
-                            }`,
+                            `${s().GraphicalAssetsTab} ${r.key === e.key ? (0, a.Z)(s().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(r),
@@ -438,17 +434,7 @@
                     this.m_mapOptInToPartners.set(e.publisherid, r), n.push(r);
                   })
                 : console.log(
-                    `CPartnerInfoStore.FindPartnerByName failed with status ${
-                      null == s ? void 0 : s.status
-                    } eresult ${
-                      null === (t = null == s ? void 0 : s.data) || void 0 === t
-                        ? void 0
-                        : t.success
-                    } and msg ${
-                      null === (o = null == s ? void 0 : s.data) || void 0 === o
-                        ? void 0
-                        : o.msg
-                    }`,
+                    `CPartnerInfoStore.FindPartnerByName failed with status ${null == s ? void 0 : s.status} eresult ${null === (t = null == s ? void 0 : s.data) || void 0 === t ? void 0 : t.success} and msg ${null === (o = null == s ? void 0 : s.data) || void 0 === o ? void 0 : o.msg}`,
                   );
             } catch (e) {
               const r = (0, i.l)(e);
@@ -933,8 +919,8 @@
           P = (null == S ? void 0 : S.data)
             ? S.data.m_strPlayerName
             : null == E
-            ? void 0
-            : E.submitterID;
+              ? void 0
+              : E.submitterID;
         return a.createElement(
           "div",
           { className: b().PricePopout },
@@ -1292,16 +1278,16 @@
                 (0, s.Xx)("#App_Landing_Release_EarliestDate", (0, s.vX)(o)),
               )
           : n
-          ? a.createElement(
-              L,
-              null,
-              (0, s.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
-            )
-          : a.createElement(
-              L,
-              null,
-              (0, s.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks"),
-            );
+            ? a.createElement(
+                L,
+                null,
+                (0, s.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
+              )
+            : a.createElement(
+                L,
+                null,
+                (0, s.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks"),
+              );
       }
       function B(e) {
         const { fnCloseModal: r, fnSubmit: t, children: n } = e,
@@ -1845,10 +1831,11 @@
             t.bNoKeyboardSupport
               ? ee.k_eGamepadRequired
               : t.bGamepadPreferred
-              ? ee.k_eGamepadPreferred
-              : t.bFullXboxControllerSupport || t.bPartialXboxControllerSupport
-              ? ee.k_eGamepadAndMouse
-              : ee.k_eMouseKBOnly,
+                ? ee.k_eGamepadPreferred
+                : t.bFullXboxControllerSupport ||
+                    t.bPartialXboxControllerSupport
+                  ? ee.k_eGamepadAndMouse
+                  : ee.k_eMouseKBOnly,
           c = i();
         a.useEffect(() => {
           c == ee.k_eMouseKBOnly && o(!0);
@@ -3151,12 +3138,12 @@
             return r == He.k_ERegionCodeCIS
               ? "usd_cis"
               : r == He.k_ERegionCodeSAsia
-              ? "usd_sasia"
-              : r == He.k_ERegionCodeLATAM
-              ? "usd_latam"
-              : r == He.k_ERegionCodeMENA
-              ? "usd_mena"
-              : "usd";
+                ? "usd_sasia"
+                : r == He.k_ERegionCodeLATAM
+                  ? "usd_latam"
+                  : r == He.k_ERegionCodeMENA
+                    ? "usd_mena"
+                    : "usd";
         }
       }
       function Ge(e) {
@@ -3926,9 +3913,7 @@
               k.uH,
               {
                 strTitle: "Create Ticket for Partner",
-                strDescription: `Create a pricing ticket for partner ${
-                  null == l ? void 0 : l.name
-                } (${r}) for Package ${t}. Please update ticket title and body`,
+                strDescription: `Create a pricing ticket for partner ${null == l ? void 0 : l.name} (${r}) for Package ${t}. Please update ticket title and body`,
                 bOKDisabled: !s || 0 == d.trim().length || 0 == _.trim().length,
                 onOK: () =>
                   y.mutate({ appid: s, strRequestTitle: d, strRequestBody: _ }),
@@ -4171,14 +4156,10 @@
         if (r)
           if (n && n.price > r.amount.amount) {
             o = $e.outofmatrixlower;
-            l = `Suggested price ${hr(n.price)} - ${Math.floor(
-              100 - (r.amount.amount / n.price) * 100,
-            )}% ▼`;
+            l = `Suggested price ${hr(n.price)} - ${Math.floor(100 - (r.amount.amount / n.price) * 100)}% ▼`;
           } else if (n && n.price < r.amount.amount) {
             o = $e.outofmatrix;
-            l = `Suggested price ${hr(n.price)} - ${Math.floor(
-              (r.amount.amount / n.price) * 100 - 100,
-            )}% ▲`;
+            l = `Suggested price ${hr(n.price)} - ${Math.floor((r.amount.amount / n.price) * 100 - 100)}% ▲`;
           } else
             t
               ? t.amount > r.amount.amount

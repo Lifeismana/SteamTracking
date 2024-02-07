@@ -469,34 +469,34 @@
                   ),
                 )
               : this.m_chat.IsUserMutedLocally(t.steamid)
-              ? s.push(
-                  o.createElement(
-                    _.Zo,
-                    {
-                      key: "unmuteuser",
-                      onSelected: () =>
-                        this.m_chat.UnmuteUserForSession(
-                          t.steamid,
-                          t.persona_name,
-                        ),
-                    },
-                    (0, k.Xx)("#BroadcastChat_UnmuteLocal"),
+                ? s.push(
+                    o.createElement(
+                      _.Zo,
+                      {
+                        key: "unmuteuser",
+                        onSelected: () =>
+                          this.m_chat.UnmuteUserForSession(
+                            t.steamid,
+                            t.persona_name,
+                          ),
+                      },
+                      (0, k.Xx)("#BroadcastChat_UnmuteLocal"),
+                    ),
+                  )
+                : s.push(
+                    o.createElement(
+                      _.Zo,
+                      {
+                        key: "muteuser",
+                        onSelected: () =>
+                          this.m_chat.MuteUserForSession(
+                            t.steamid,
+                            t.persona_name,
+                          ),
+                      },
+                      (0, k.Xx)("#BroadcastChat_MuteLocal"),
+                    ),
                   ),
-                )
-              : s.push(
-                  o.createElement(
-                    _.Zo,
-                    {
-                      key: "muteuser",
-                      onSelected: () =>
-                        this.m_chat.MuteUserForSession(
-                          t.steamid,
-                          t.persona_name,
-                        ),
-                    },
-                    (0, k.Xx)("#BroadcastChat_MuteLocal"),
-                  ),
-                ),
             ((B.L7 && B.L7.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
               t.steamid)
@@ -559,8 +559,8 @@
           return e.type === P.gK.Notification
             ? T().MessageNotification
             : e.type === P.gK.Error
-            ? T().MessageError
-            : T().MessageChat;
+              ? T().MessageError
+              : T().MessageChat;
         }
         FormatMessage(e, t) {
           if (e.type === P.gK.Chat) {
@@ -577,10 +577,10 @@
                   return s
                     ? "presenter"
                     : t.GetBroadcastSteamID() === e
-                    ? "broadcaster"
-                    : t.BIsUserBroadcastModerator(e)
-                    ? "moderator"
-                    : "";
+                      ? "broadcaster"
+                      : t.BIsUserBroadcastModerator(e)
+                        ? "moderator"
+                        : "";
                 })(e.steamid, this.m_chat, a)
               : "";
           return o.createElement(
@@ -604,9 +604,7 @@
               o.createElement(
                 "span",
                 {
-                  className: `${T().MessageNotification} ${
-                    T().MessageContents
-                  }`,
+                  className: `${T().MessageNotification} ${T().MessageContents}`,
                 },
                 ` (${(0, k.Xx)("#BroadcastChat_Broadcaster")})`,
               ),
@@ -615,22 +613,14 @@
               o.createElement(
                 "span",
                 {
-                  className: `${T().MessageNotification} ${
-                    T().MessageContents
-                  }`,
+                  className: `${T().MessageNotification} ${T().MessageContents}`,
                 },
                 ` (${(0, k.Xx)("#BroadcastChat_Moderator")})`,
               ),
             o.createElement(
               "span",
               {
-                className: `${T().MessageContents} ${
-                  this.AddLinksEmoticons(e.msg, !1).filter(
-                    (e) => e && "string" == typeof e,
-                  ).length
-                    ? ""
-                    : T().EmoticonsOnly
-                }`,
+                className: `${T().MessageContents} ${this.AddLinksEmoticons(e.msg, !1).filter((e) => e && "string" == typeof e).length ? "" : T().EmoticonsOnly}`,
               },
               e.type === P.gK.Chat ? " : " : "",
               this.FormatMessage(e, this.m_chat.TextFilterStore),
@@ -1808,10 +1798,10 @@
           s > 65
             ? (a += " HighestVolume")
             : s > 45
-            ? (a += " HighVolume")
-            : s < 46 && s > 24
-            ? (a += " MedVolume")
-            : s < 25 && (a += " LowVolume");
+              ? (a += " HighVolume")
+              : s < 46 && s > 24
+                ? (a += " MedVolume")
+                : s < 25 && (a += " LowVolume");
           let n = "BroadcastVolumeControl";
           return (
             this.m_bShowSlider && (n += " ShowVolumeSlider"),
@@ -2030,21 +2020,21 @@
                   this.props.bWebRTC,
                 ))
               : this.props.broadcastClipID
-              ? e &&
-                (t = m.c9.CreateClipVideo(
-                  e,
-                  this.props.broadcastClipID,
-                  this.props.watchLocation,
-                ))
-              : this.props.nAppIDVOD &&
-                e &&
-                ((t = m.c9.CreateVODVideo(
-                  e,
-                  this.props.nAppIDVOD,
-                  this.props.watchLocation,
-                )),
-                this.props.fnOnVideoEnd &&
-                  t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
+                ? e &&
+                  (t = m.c9.CreateClipVideo(
+                    e,
+                    this.props.broadcastClipID,
+                    this.props.watchLocation,
+                  ))
+                : this.props.nAppIDVOD &&
+                  e &&
+                  ((t = m.c9.CreateVODVideo(
+                    e,
+                    this.props.nAppIDVOD,
+                    this.props.watchLocation,
+                  )),
+                  this.props.fnOnVideoEnd &&
+                    t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
             t &&
               (this.props.bStartMuted && t.SetMute(!0),
               this.props.bStartPaused
@@ -2627,8 +2617,8 @@
             "start" === t
               ? ((s = { bStartMouseDown: !0 }), e.stopPropagation())
               : "end" === t
-              ? ((s = { bEndMouseDown: !0 }), e.stopPropagation())
-              : (s = { bGrabberMouseDown: !0 }),
+                ? ((s = { bEndMouseDown: !0 }), e.stopPropagation())
+                : (s = { bGrabberMouseDown: !0 }),
               this.setState(s, () => this.AdjustSliderForClientX(e.clientX)),
               this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
                 "mousemove",
@@ -2647,12 +2637,12 @@
           this.state.bStartMouseDown
             ? this.setState({ bStartMouseDown: !1 })
             : this.state.bEndMouseDown
-            ? this.setState({ bEndMouseDown: !1 })
-            : (this.props.video.Seek(this.state.nGrabberMouseDownTime),
-              this.setState({
-                bGrabberMouseDown: !1,
-                nGrabberMouseDownTime: 0,
-              })),
+              ? this.setState({ bEndMouseDown: !1 })
+              : (this.props.video.Seek(this.state.nGrabberMouseDownTime),
+                this.setState({
+                  bGrabberMouseDown: !1,
+                  nGrabberMouseDownTime: 0,
+                })),
             this.m_elSlider.current &&
               (this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
                 "mousemove",
@@ -3932,27 +3922,18 @@
                 this.m_strProfanityWords += t.Body().dictionary();
               }
             } else {
-              t = `${
-                S.De.COMMUNITY_CDN_URL
-              }textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0,
-              S.Kc)()}`;
+              t = `${S.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0, S.Kc)()}`;
               {
                 const e = yield r().get(t);
                 this.m_strBannedWords += e.data;
               }
-              t = `${
-                S.De.COMMUNITY_CDN_URL
-              }textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0,
-              S.Kc)()}`;
+              t = `${S.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0, S.Kc)()}`;
               {
                 const e = yield r().get(t);
                 this.m_strProfanityWords += e.data;
               }
             }
-            t = `${
-              S.De.COMMUNITY_CDN_URL
-            }textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0,
-            S.Kc)()}`;
+            t = `${S.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0, S.Kc)()}`;
             {
               const e = yield r().get(t);
               this.m_strCleanWords += e.data;
@@ -4221,11 +4202,11 @@
                       17 == a.result
                         ? (0, g.Xx)("#BroadcastChat_YouMuted")
                         : 84 == a.result
-                        ? (0, g.Xx)(
-                            "#BroadcastChat_Cooldown",
-                            a.cooldown_time_seconds,
-                          )
-                        : (0, g.Xx)("#BroadcastChat_FailedToSendMsg", t)),
+                          ? (0, g.Xx)(
+                              "#BroadcastChat_Cooldown",
+                              a.cooldown_time_seconds,
+                            )
+                          : (0, g.Xx)("#BroadcastChat_FailedToSendMsg", t)),
                     void this.m_rgChatMessages.push({
                       type: o.gK.Error,
                       msg: e,

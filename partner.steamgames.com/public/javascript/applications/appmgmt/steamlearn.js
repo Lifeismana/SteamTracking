@@ -2487,11 +2487,11 @@
               0 == t.length
                 ? (0, c.Xx)("#SteamLearn_Config_DataSourcesDialog_Add")
                 : 1 == t.length
-                ? (0, c.Xx)("#SteamLearn_Config_DataSourcesDialog_Add_1")
-                : (0, c.Xx)(
-                    "#SteamLearn_Config_DataSourcesDialog_Add_Multiple",
-                    t.length,
-                  )),
+                  ? (0, c.Xx)("#SteamLearn_Config_DataSourcesDialog_Add_1")
+                  : (0, c.Xx)(
+                      "#SteamLearn_Config_DataSourcesDialog_Add_Multiple",
+                      t.length,
+                    )),
             o.createElement(
               Ve.On,
               {
@@ -2759,12 +2759,7 @@
                                   o.createElement(
                                     "div",
                                     null,
-                                    `${
-                                      t.multi_binary_crossentropy().value()[a]
-                                    } - ${(
-                                      100 *
-                                      t.multi_binary_crossentropy().weight()[a]
-                                    ).toFixed(2)}%`,
+                                    `${t.multi_binary_crossentropy().value()[a]} - ${(100 * t.multi_binary_crossentropy().weight()[a]).toFixed(2)}%`,
                                   ),
                                 );
                             }
@@ -2775,9 +2770,7 @@
                                   o.createElement(
                                     "div",
                                     null,
-                                    `${(
-                                      100 * t.binary_crossentropy().value()
-                                    ).toFixed(2)}%`,
+                                    `${(100 * t.binary_crossentropy().value()).toFixed(2)}%`,
                                   ),
                                 )),
                               t.categorical_crossentropy().value().length > 0)
@@ -2791,12 +2784,7 @@
                                   o.createElement(
                                     "div",
                                     null,
-                                    `${
-                                      t.categorical_crossentropy().value()[a]
-                                    } - ${(
-                                      100 *
-                                      t.categorical_crossentropy().weight()[a]
-                                    ).toFixed(2)}%`,
+                                    `${t.categorical_crossentropy().value()[a]} - ${(100 * t.categorical_crossentropy().weight()[a]).toFixed(2)}%`,
                                   ),
                                 );
                           }
@@ -7344,9 +7332,7 @@
                 return (
                   (0, u.X)(
                     !1,
-                    `Incoming node/connector ${n.node_id()}, ${o} have a shape with a primary dimension of ${
-                      e.length
-                    }: ${e}!`,
+                    `Incoming node/connector ${n.node_id()}, ${o} have a shape with a primary dimension of ${e.length}: ${e}!`,
                   ),
                   null
                 );
@@ -9655,10 +9641,7 @@
                     o.createElement(
                       "div",
                       { className: qt.ProgressPct },
-                      `${(
-                        (100 * m.total_rows_processed()) / m.total_rows() -
-                        0.5
-                      ).toFixed(0)}%`,
+                      `${((100 * m.total_rows_processed()) / m.total_rows() - 0.5).toFixed(0)}%`,
                     ),
                 ),
                 o.createElement("div", { className: qt.RowProgress }, d),
@@ -10340,29 +10323,29 @@
             i.isLoading || c.isLoading
               ? o.createElement("div", null, "LOADING")
               : i.isSuccess && c.isSuccess
-              ? o.createElement(
-                  "div",
-                  { className: qt.ProjectTrain },
-                  a > 0 &&
-                    o.createElement(aa, {
+                ? o.createElement(
+                    "div",
+                    { className: qt.ProjectTrain },
+                    a > 0 &&
+                      o.createElement(aa, {
+                        nProjectID: e,
+                        nFetchID: a,
+                        arrAllFetchIDs: l.versions(),
+                        fnSetFetchID: (e) => {
+                          n(e);
+                        },
+                      }),
+                    o.createElement("div", { className: qt.Separator }),
+                    o.createElement(ra, {
                       nProjectID: e,
-                      nFetchID: a,
-                      arrAllFetchIDs: l.versions(),
-                      fnSetFetchID: (e) => {
-                        n(e);
+                      nTrainID: r,
+                      arrAllTrainIDs: d.versions(),
+                      fnSetTrainID: (e) => {
+                        s(e);
                       },
                     }),
-                  o.createElement("div", { className: qt.Separator }),
-                  o.createElement(ra, {
-                    nProjectID: e,
-                    nTrainID: r,
-                    arrAllTrainIDs: d.versions(),
-                    fnSetTrainID: (e) => {
-                      s(e);
-                    },
-                  }),
-                )
-              : null
+                  )
+                : null
           );
         };
       var ca = a(57024),
@@ -10703,33 +10686,19 @@
           SteamLearnProjectEvents: () => `/${_a.SteamLearnProject()}/events`,
           SteamLearnProjectCreate: () => `/${_a.SteamLearnProject()}/create`,
           SteamLearnProjectDataSources: (e, t) =>
-            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/datasources`,
+            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/datasources`,
           SteamLearnProjectSnapshots: (e, t) =>
-            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/snapshots`,
+            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/snapshots`,
           SteamLearnProjectModel: (e, t) =>
-            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/structure`,
+            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/structure`,
           SteamLearnProjectTrainSettings: (e, t) =>
-            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/trainsettings`,
+            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainsettings`,
           SteamLearnProjectTrain: (e, t) =>
-            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/train`,
+            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/train`,
           SteamLearnProjectTrainStatus: (e, t) =>
-            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/trainstatus`,
+            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/trainstatus`,
           SteamLearnProjectInferenceTester: (e, t) =>
-            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${
-              null != t ? t : ":version"
-            }/inferencetester`,
+            `/${_a.SteamLearnProject()}/${null != e ? e : ":id"}/${null != t ? t : ":version"}/inferencetester`,
         };
       function ma(e, t) {
         return t.some((t) => (0, r.LX)(e, { path: t, exact: !1, strict: !1 }));

@@ -246,9 +246,7 @@
             (a =
               !this.props.bDisableAnimation &&
               (this.state.bHovered || this.props.bForceAnimated)),
-            `${h.De.STORE_CDN_URL}public/images/loyalty/reactions/${
-              a ? "animated" : "still"
-            }/${t}.png`);
+            `${h.De.STORE_CDN_URL}public/images/loyalty/reactions/${a ? "animated" : "still"}/${t}.png`);
           var t, a;
           return i.createElement("img", {
             className: this.props.className,

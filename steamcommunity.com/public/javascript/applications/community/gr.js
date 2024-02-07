@@ -579,25 +579,25 @@
               Boolean(p) && p,
             )
           : h || L || m
-          ? n.createElement(
-              i.uH,
-              {
-                strTitle: t,
-                strDescription: L || (0, l.Xx)("#EventDisplay_Share_Success"),
-                bAlertDialog: !0,
-                closeModal: a,
-              },
-              n.createElement(n.Fragment, null, Boolean(m) && m),
-            )
-          : n.createElement(
-              i.uH,
-              { strTitle: t, closeModal: () => {} },
-              n.createElement(C.V, {
-                string: s || g || (0, l.Xx)("#Loading"),
-                size: "medium",
-                position: "center",
-              }),
-            );
+            ? n.createElement(
+                i.uH,
+                {
+                  strTitle: t,
+                  strDescription: L || (0, l.Xx)("#EventDisplay_Share_Success"),
+                  bAlertDialog: !0,
+                  closeModal: a,
+                },
+                n.createElement(n.Fragment, null, Boolean(m) && m),
+              )
+            : n.createElement(
+                i.uH,
+                { strTitle: t, closeModal: () => {} },
+                n.createElement(C.V, {
+                  string: s || g || (0, l.Xx)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+              );
       }
     },
     77556: (e, t, r) => {

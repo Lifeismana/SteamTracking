@@ -637,12 +637,12 @@
                   });
               }
             : "function" == typeof setImmediate
-            ? function (e) {
-                setImmediate(e);
-              }
-            : function (e) {
-                setTimeout(e);
-              };
+              ? function (e) {
+                  setImmediate(e);
+                }
+              : function (e) {
+                  setTimeout(e);
+                };
       function a(e, t, n) {
         s(t);
         for (var r = 0; r < t.keys.length; r++)
@@ -1099,8 +1099,8 @@
                   e >= s
                     ? "#EventDisplay_TimeBeginsOn"
                     : t >= s
-                    ? "#EventDisplay_TimeBeginsOn_Past"
-                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                      ? "#EventDisplay_TimeBeginsOn_Past"
+                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
               a.createElement(_, {

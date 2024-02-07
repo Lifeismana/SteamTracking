@@ -231,8 +231,8 @@
                       o || (i && !t)
                         ? (r.ConvertMalformedNodeToText(), (r.text += l))
                         : e
-                        ? (i = !0)
-                        : t && (i = !1),
+                          ? (i = !0)
+                          : t && (i = !1),
                         (r = d(n, r)),
                         (o = !1);
                     }
@@ -375,8 +375,8 @@
                     " " == s
                       ? ((a = 0), (l = !1), (d = !0))
                       : '"' == s
-                      ? ((a = 4), (l = !1))
-                      : (a = 3);
+                        ? ((a = 4), (l = !1))
+                        : (a = 3);
                     break;
                   case 3:
                   case 4:
@@ -433,8 +433,8 @@
           return o.length > 1
             ? r.createElement(r.Fragment, null, ...o)
             : 1 == o.length
-            ? o[0]
-            : null;
+              ? o[0]
+              : null;
         }
       }
       const _ = [

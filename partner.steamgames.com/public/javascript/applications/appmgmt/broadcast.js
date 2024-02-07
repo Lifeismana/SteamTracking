@@ -946,27 +946,18 @@
                 this.m_strProfanityWords += t.Body().dictionary();
               }
             } else {
-              t = `${
-                y.De.COMMUNITY_CDN_URL
-              }textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0,
-              y.Kc)()}`;
+              t = `${y.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0, y.Kc)()}`;
               {
                 const e = yield r().get(t);
                 this.m_strBannedWords += e.data;
               }
-              t = `${
-                y.De.COMMUNITY_CDN_URL
-              }textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0,
-              y.Kc)()}`;
+              t = `${y.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0, y.Kc)()}`;
               {
                 const e = yield r().get(t);
                 this.m_strProfanityWords += e.data;
               }
             }
-            t = `${
-              y.De.COMMUNITY_CDN_URL
-            }textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0,
-            y.Kc)()}`;
+            t = `${y.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0, y.Kc)()}`;
             {
               const e = yield r().get(t);
               this.m_strCleanWords += e.data;
@@ -1235,11 +1226,11 @@
                       17 == a.result
                         ? (0, C.Xx)("#BroadcastChat_YouMuted")
                         : 84 == a.result
-                        ? (0, C.Xx)(
-                            "#BroadcastChat_Cooldown",
-                            a.cooldown_time_seconds,
-                          )
-                        : (0, C.Xx)("#BroadcastChat_FailedToSendMsg", t)),
+                          ? (0, C.Xx)(
+                              "#BroadcastChat_Cooldown",
+                              a.cooldown_time_seconds,
+                            )
+                          : (0, C.Xx)("#BroadcastChat_FailedToSendMsg", t)),
                     void this.m_rgChatMessages.push({
                       type: m.gK.Error,
                       msg: e,
@@ -2655,34 +2646,34 @@
                   ),
                 )
               : this.m_chat.IsUserMutedLocally(t.steamid)
-              ? s.push(
-                  l.createElement(
-                    Q.Zo,
-                    {
-                      key: "unmuteuser",
-                      onSelected: () =>
-                        this.m_chat.UnmuteUserForSession(
-                          t.steamid,
-                          t.persona_name,
-                        ),
-                    },
-                    (0, C.Xx)("#BroadcastChat_UnmuteLocal"),
+                ? s.push(
+                    l.createElement(
+                      Q.Zo,
+                      {
+                        key: "unmuteuser",
+                        onSelected: () =>
+                          this.m_chat.UnmuteUserForSession(
+                            t.steamid,
+                            t.persona_name,
+                          ),
+                      },
+                      (0, C.Xx)("#BroadcastChat_UnmuteLocal"),
+                    ),
+                  )
+                : s.push(
+                    l.createElement(
+                      Q.Zo,
+                      {
+                        key: "muteuser",
+                        onSelected: () =>
+                          this.m_chat.MuteUserForSession(
+                            t.steamid,
+                            t.persona_name,
+                          ),
+                      },
+                      (0, C.Xx)("#BroadcastChat_MuteLocal"),
+                    ),
                   ),
-                )
-              : s.push(
-                  l.createElement(
-                    Q.Zo,
-                    {
-                      key: "muteuser",
-                      onSelected: () =>
-                        this.m_chat.MuteUserForSession(
-                          t.steamid,
-                          t.persona_name,
-                        ),
-                    },
-                    (0, C.Xx)("#BroadcastChat_MuteLocal"),
-                  ),
-                ),
             ((y.L7 && y.L7.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
               t.steamid)
@@ -2745,8 +2736,8 @@
           return e.type === m.gK.Notification
             ? de().MessageNotification
             : e.type === m.gK.Error
-            ? de().MessageError
-            : de().MessageChat;
+              ? de().MessageError
+              : de().MessageChat;
         }
         FormatMessage(e, t) {
           if (e.type === m.gK.Chat) {
@@ -2763,10 +2754,10 @@
                   return s
                     ? "presenter"
                     : t.GetBroadcastSteamID() === e
-                    ? "broadcaster"
-                    : t.BIsUserBroadcastModerator(e)
-                    ? "moderator"
-                    : "";
+                      ? "broadcaster"
+                      : t.BIsUserBroadcastModerator(e)
+                        ? "moderator"
+                        : "";
                 })(e.steamid, this.m_chat, a)
               : "";
           return l.createElement(
@@ -2790,9 +2781,7 @@
               l.createElement(
                 "span",
                 {
-                  className: `${de().MessageNotification} ${
-                    de().MessageContents
-                  }`,
+                  className: `${de().MessageNotification} ${de().MessageContents}`,
                 },
                 ` (${(0, C.Xx)("#BroadcastChat_Broadcaster")})`,
               ),
@@ -2801,22 +2790,14 @@
               l.createElement(
                 "span",
                 {
-                  className: `${de().MessageNotification} ${
-                    de().MessageContents
-                  }`,
+                  className: `${de().MessageNotification} ${de().MessageContents}`,
                 },
                 ` (${(0, C.Xx)("#BroadcastChat_Moderator")})`,
               ),
             l.createElement(
               "span",
               {
-                className: `${de().MessageContents} ${
-                  this.AddLinksEmoticons(e.msg, !1).filter(
-                    (e) => e && "string" == typeof e,
-                  ).length
-                    ? ""
-                    : de().EmoticonsOnly
-                }`,
+                className: `${de().MessageContents} ${this.AddLinksEmoticons(e.msg, !1).filter((e) => e && "string" == typeof e).length ? "" : de().EmoticonsOnly}`,
               },
               e.type === m.gK.Chat ? " : " : "",
               this.FormatMessage(e, this.m_chat.TextFilterStore),
@@ -3210,9 +3191,9 @@
                   ? "#SalePage_WatchForDrop_Hours_CreatorNamed"
                   : "#SalePage_WatchForDrop_Minutes_CreatorNamed"
                 : t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 ==
-                  0
-                ? "#SalePage_WatchForDrop_Hours_Developer"
-                : "#SalePage_WatchForDrop_Minutes_Developer",
+                    0
+                  ? "#SalePage_WatchForDrop_Hours_Developer"
+                  : "#SalePage_WatchForDrop_Minutes_Developer",
               t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
                 ? t.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
                 : t.jsondata.broadcast_item_drops_min_watch_time_minutes,
@@ -3564,13 +3545,13 @@
                 })),
                 (s.rightPanel = r))
               : t
-              ? ((s.leftPanel = l.createElement("div", null)),
-                (s.rightPanel = l.createElement(Ot, {
-                  stream: e,
-                  orientation: "rightside",
-                })),
-                (s.bRightPanelArtworkOrEmpty = !1))
-              : ((s.leftPanel = i), (s.rightPanel = r)),
+                ? ((s.leftPanel = l.createElement("div", null)),
+                  (s.rightPanel = l.createElement(Ot, {
+                    stream: e,
+                    orientation: "rightside",
+                  })),
+                  (s.bRightPanelArtworkOrEmpty = !1))
+                : ((s.leftPanel = i), (s.rightPanel = r)),
             s
           );
         }
@@ -4917,10 +4898,10 @@
           s > 65
             ? (a += " HighestVolume")
             : s > 45
-            ? (a += " HighVolume")
-            : s < 46 && s > 24
-            ? (a += " MedVolume")
-            : s < 25 && (a += " LowVolume");
+              ? (a += " HighVolume")
+              : s < 46 && s > 24
+                ? (a += " MedVolume")
+                : s < 25 && (a += " LowVolume");
           let n = "BroadcastVolumeControl";
           return (
             this.m_bShowSlider && (n += " ShowVolumeSlider"),
@@ -5139,21 +5120,21 @@
                   this.props.bWebRTC,
                 ))
               : this.props.broadcastClipID
-              ? e &&
-                (t = m.c9.CreateClipVideo(
-                  e,
-                  this.props.broadcastClipID,
-                  this.props.watchLocation,
-                ))
-              : this.props.nAppIDVOD &&
-                e &&
-                ((t = m.c9.CreateVODVideo(
-                  e,
-                  this.props.nAppIDVOD,
-                  this.props.watchLocation,
-                )),
-                this.props.fnOnVideoEnd &&
-                  t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
+                ? e &&
+                  (t = m.c9.CreateClipVideo(
+                    e,
+                    this.props.broadcastClipID,
+                    this.props.watchLocation,
+                  ))
+                : this.props.nAppIDVOD &&
+                  e &&
+                  ((t = m.c9.CreateVODVideo(
+                    e,
+                    this.props.nAppIDVOD,
+                    this.props.watchLocation,
+                  )),
+                  this.props.fnOnVideoEnd &&
+                    t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
             t &&
               (this.props.bStartMuted && t.SetMute(!0),
               this.props.bStartPaused
@@ -5736,8 +5717,8 @@
             "start" === t
               ? ((s = { bStartMouseDown: !0 }), e.stopPropagation())
               : "end" === t
-              ? ((s = { bEndMouseDown: !0 }), e.stopPropagation())
-              : (s = { bGrabberMouseDown: !0 }),
+                ? ((s = { bEndMouseDown: !0 }), e.stopPropagation())
+                : (s = { bGrabberMouseDown: !0 }),
               this.setState(s, () => this.AdjustSliderForClientX(e.clientX)),
               this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
                 "mousemove",
@@ -5756,12 +5737,12 @@
           this.state.bStartMouseDown
             ? this.setState({ bStartMouseDown: !1 })
             : this.state.bEndMouseDown
-            ? this.setState({ bEndMouseDown: !1 })
-            : (this.props.video.Seek(this.state.nGrabberMouseDownTime),
-              this.setState({
-                bGrabberMouseDown: !1,
-                nGrabberMouseDownTime: 0,
-              })),
+              ? this.setState({ bEndMouseDown: !1 })
+              : (this.props.video.Seek(this.state.nGrabberMouseDownTime),
+                this.setState({
+                  bGrabberMouseDown: !1,
+                  nGrabberMouseDownTime: 0,
+                })),
             this.m_elSlider.current &&
               (this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
                 "mousemove",

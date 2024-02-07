@@ -1205,10 +1205,10 @@
           E.L7.logged_in
             ? this.setState({ bShareOnSteamDialog: !0 })
             : E.De.IN_CLIENT
-            ? console.log(
-                "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
-              )
-            : this.setState({ bRequireLoginToShare: !0 });
+              ? console.log(
+                  "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
+                )
+              : this.setState({ bRequireLoginToShare: !0 });
         }
         render() {
           const {
@@ -1230,29 +1230,29 @@
                 onOK: () => (0, K.X)(),
               })
             : this.state.bShareOnSteamDialog
-            ? i.createElement(Se, {
-                eventLink: e,
-                appid: n,
-                emoticonStore: r,
-                partnerEventStore: o,
-                closeModal: a,
-              })
-            : i.createElement(
-                Q.uH,
-                {
-                  strDescription: "",
-                  strTitle: (0, x.Xx)("#Button_Share"),
-                  onCancel: this.props.closeModal,
-                  onOK: this.props.closeModal,
-                  bAlertDialog: !0,
-                  modalClassName: "EventDisplay_Share_Dialog",
-                },
-                i.createElement(Ne, {
+              ? i.createElement(Se, {
                   eventLink: e,
-                  fnGetSharePageUrl: t,
-                  fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
-                }),
-              );
+                  appid: n,
+                  emoticonStore: r,
+                  partnerEventStore: o,
+                  closeModal: a,
+                })
+              : i.createElement(
+                  Q.uH,
+                  {
+                    strDescription: "",
+                    strTitle: (0, x.Xx)("#Button_Share"),
+                    onCancel: this.props.closeModal,
+                    onOK: this.props.closeModal,
+                    bAlertDialog: !0,
+                    modalClassName: "EventDisplay_Share_Dialog",
+                  },
+                  i.createElement(Ne, {
+                    eventLink: e,
+                    fnGetSharePageUrl: t,
+                    fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
+                  }),
+                );
         }
       }
       (0, a.gn)([z.ak], De.prototype, "ShareOnSteamActivityFeed", null);
@@ -2982,15 +2982,15 @@
           return t == mt.Loading && n == mt.Loading
             ? null
             : ("top" == e.location ? t : n) == mt.Loading
-            ? i.createElement(
-                "div",
-                { className: G().DirectionState },
-                i.createElement(ee.V, {
-                  position: "center",
-                  string: (0, x.Xx)("#Loading"),
-                }),
-              )
-            : null;
+              ? i.createElement(
+                  "div",
+                  { className: G().DirectionState },
+                  i.createElement(ee.V, {
+                    position: "center",
+                    string: (0, x.Xx)("#Loading"),
+                  }),
+                )
+              : null;
         }),
         dt = i.forwardRef(function (e, t) {
           const n = (0, E.id)(),

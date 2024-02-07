@@ -1098,9 +1098,7 @@
                 );
               (0, s.X)(
                 (null == r ? void 0 : r.length) == t.length,
-                `CThumbnailCache.InternalLoadMultipleThumbnails request ${
-                  t.length
-                } and got back ${null == r ? void 0 : r.length}`,
+                `CThumbnailCache.InternalLoadMultipleThumbnails request ${t.length} and got back ${null == r ? void 0 : r.length}`,
               );
               for (
                 let i = 0;
@@ -1806,11 +1804,11 @@
               0 === n
                 ? (t = i.endOffsetPX)
                 : n === this.m_timelineOffsets.length - 1
-                ? ((r = i.startOffsetPX),
-                  e.push({ gapStartPX: t, gapEndPX: r }))
-                : ((r = i.startOffsetPX),
-                  e.push({ gapStartPX: t, gapEndPX: r }),
-                  (t = i.endOffsetPX));
+                  ? ((r = i.startOffsetPX),
+                    e.push({ gapStartPX: t, gapEndPX: r }))
+                  : ((r = i.startOffsetPX),
+                    e.push({ gapStartPX: t, gapEndPX: r }),
+                    (t = i.endOffsetPX));
             }),
             e
           );
@@ -2486,10 +2484,10 @@
                 n % 20 == 0
                   ? "Whole"
                   : n % 10 == 0
-                  ? "Half"
-                  : n % 5 == 0
-                  ? "Quarter"
-                  : "Default",
+                    ? "Half"
+                    : n % 5 == 0
+                      ? "Quarter"
+                      : "Default",
               [n],
             );
           return i.createElement(
@@ -3037,10 +3035,10 @@
         return _e[e.type] !== _e[t.type]
           ? _e[e.type] - _e[t.type]
           : e.priority != t.priority
-          ? t.priority - e.priority
-          : e.time != t.time
-          ? parseInt(e.time) - parseInt(t.time)
-          : e.id.localeCompare(t.id);
+            ? t.priority - e.priority
+            : e.time != t.time
+              ? parseInt(e.time) - parseInt(t.time)
+              : e.id.localeCompare(t.id);
       }
       const Se = i.memo(function (e) {
         const { timeline: t } = e,
@@ -9602,16 +9600,16 @@
                 (e, t) => parseInt(e.time) - parseInt(t.time),
               )
             : (0, fe.Od)(i)
-            ? ue.DG(
-                r.m_rgRichPresence,
-                i,
-                (e, t) => parseInt(e.time) - parseInt(t.time),
-              )
-            : ue.DG(
-                r.m_rgEntries,
-                i,
-                (e, t) => parseInt(e.time) - parseInt(t.time),
-              );
+              ? ue.DG(
+                  r.m_rgRichPresence,
+                  i,
+                  (e, t) => parseInt(e.time) - parseInt(t.time),
+                )
+              : ue.DG(
+                  r.m_rgEntries,
+                  i,
+                  (e, t) => parseInt(e.time) - parseInt(t.time),
+                );
           let n = parseInt(t.m_metadata.duration_ms()) || 0,
             a = parseInt(e.time());
           n < a && t.m_metadata.set_duration_ms(a.toString()),
@@ -9779,17 +9777,9 @@
                 () => this.m_gameRecordingVideo.BSeekReadyToPlay(),
                 (e) => {
                   if (e) {
-                    const e = `seeking_${this.GetManifestFromRecordingID(
-                      this.m_strRecordingID,
-                    )}_${this.m_gameRecordingVideo
-                      .GetPlaybackTime()
-                      .toFixed(3)}`;
+                    const e = `seeking_${this.GetManifestFromRecordingID(this.m_strRecordingID)}_${this.m_gameRecordingVideo.GetPlaybackTime().toFixed(3)}`;
                     try {
-                      const t = `measure_${
-                          this.m_strRecordingID
-                        }_${this.m_gameRecordingVideo
-                          .GetPlaybackTime()
-                          .toFixed(3)}`,
+                      const t = `measure_${this.m_strRecordingID}_${this.m_gameRecordingVideo.GetPlaybackTime().toFixed(3)}`,
                         r = performance.measure(t, e);
                       (0, o.hB)(
                         `CGameRecordingVideo:: perf measure ${e} duration ${r.duration}`,
@@ -9958,11 +9948,7 @@
           return (
             t ||
             ((0, o.F0)(
-              `failed to find offset for ${
-                this.m_strRecordingID
-              } at ${Math.floor(
-                1e3 * this.m_gameRecordingVideo.GetPlaybackTime(),
-              )} MS`,
+              `failed to find offset for ${this.m_strRecordingID} at ${Math.floor(1e3 * this.m_gameRecordingVideo.GetPlaybackTime())} MS`,
             ),
             null)
           );

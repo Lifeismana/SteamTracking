@@ -634,8 +634,9 @@
             ("None" == this.props.loopDuration
               ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
               : "Infinite" == this.props.loopDuration
-              ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
-              : (this.setState({ bAnimate: !0 }), this.SetupAnimationTimer())),
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : (this.setState({ bAnimate: !0 }),
+                  this.SetupAnimationTimer())),
             this.props.bParentHovered != e.bParentHovered &&
               (this.props.bParentHovered &&
               "None" != this.props.loopDuration &&
@@ -988,13 +989,13 @@
                 }),
               ))
             : r.is_watchingbroadcast
-            ? (k = c.createElement(
-                G,
-                Object.assign({}, this.props, {
-                  className: b ? E().miniProfileBackdropBlur : void 0,
-                }),
-              ))
-            : (w += " " + E().notInOrWatchingGame);
+              ? (k = c.createElement(
+                  G,
+                  Object.assign({}, this.props, {
+                    className: b ? E().miniProfileBackdropBlur : void 0,
+                  }),
+                ))
+              : (w += " " + E().notInOrWatchingGame);
           let D = !0,
             R = !1,
             T = !1;
@@ -1429,26 +1430,26 @@
                 this.m_PrivacySettings.PrivacyOwnedGames,
               )
             : "PrivacyPlaytime" == e
-            ? M(
-                this.GetPrivacySetting("PrivacyOwnedGames"),
-                this.m_PrivacySettings.PrivacyPlaytime,
-              )
-            : "PrivacyInventory" == e
-            ? M(
-                this.m_PrivacySettings.PrivacyProfile,
-                this.m_PrivacySettings.PrivacyInventory,
-              )
-            : "PrivacyInventoryGifts" == e
-            ? M(
-                this.GetPrivacySetting("PrivacyInventory"),
-                this.m_PrivacySettings.PrivacyInventoryGifts,
-              )
-            : "PrivacyFriendsList" == e
-            ? M(
-                this.m_PrivacySettings.PrivacyProfile,
-                this.m_PrivacySettings.PrivacyFriendsList,
-              )
-            : this.m_PrivacySettings[e];
+              ? M(
+                  this.GetPrivacySetting("PrivacyOwnedGames"),
+                  this.m_PrivacySettings.PrivacyPlaytime,
+                )
+              : "PrivacyInventory" == e
+                ? M(
+                    this.m_PrivacySettings.PrivacyProfile,
+                    this.m_PrivacySettings.PrivacyInventory,
+                  )
+                : "PrivacyInventoryGifts" == e
+                  ? M(
+                      this.GetPrivacySetting("PrivacyInventory"),
+                      this.m_PrivacySettings.PrivacyInventoryGifts,
+                    )
+                  : "PrivacyFriendsList" == e
+                    ? M(
+                        this.m_PrivacySettings.PrivacyProfile,
+                        this.m_PrivacySettings.PrivacyFriendsList,
+                      )
+                    : this.m_PrivacySettings[e];
         }
         get CommentPermission() {
           return this.m_eCommentPermission;
@@ -1904,11 +1905,11 @@
             return r && 1 != r.GetEResult()
               ? r.GetEResult()
               : i && 1 != i.GetEResult()
-              ? i.GetEResult()
-              : (this.m_Avatars.SetComitted(),
-                this.m_AvatarFrames.SetComitted(),
-                this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
-                1);
+                ? i.GetEResult()
+                : (this.m_Avatars.SetComitted(),
+                  this.m_AvatarFrames.SetComitted(),
+                  this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
+                  1);
           });
         }
         RevertAvatarChanges() {
@@ -2210,14 +2211,14 @@
             t
               ? this.SetComitted()
               : (e &&
-                  (!this.m_CommittedEquippedItem ||
-                    this.m_CommittedEquippedItem.communityitemid !=
-                      e.communityitemid ||
-                    this.m_CommittedEquippedItem.equipped_flags !=
-                      this.m_EquipFlags)) ||
-                (!e && this.m_CommittedEquippedItem)
-              ? (this.m_bUnsavedChanges = !0)
-              : (this.m_bUnsavedChanges = !1);
+                    (!this.m_CommittedEquippedItem ||
+                      this.m_CommittedEquippedItem.communityitemid !=
+                        e.communityitemid ||
+                      this.m_CommittedEquippedItem.equipped_flags !=
+                        this.m_EquipFlags)) ||
+                  (!e && this.m_CommittedEquippedItem)
+                ? (this.m_bUnsavedChanges = !0)
+                : (this.m_bUnsavedChanges = !1);
         }
         SetEquippedFlags(e) {
           this.m_EquipFlags = e;
@@ -3024,30 +3025,30 @@
                           }),
                         )
                       : "timestamp" in e
-                      ? c.createElement(
-                          c.Fragment,
-                          { key: e.avatar_hash },
-                          c.createElement(Ee, {
-                            hash: e.avatar_hash,
-                            onSelected: this.SelectPreviousAvatar,
-                            large: !0,
-                          }),
-                          c.createElement("div", {
-                            className: ve.AvatarRowSpacer,
-                          }),
-                        )
-                      : c.createElement(
-                          c.Fragment,
-                          { key: e.avatar_hash },
-                          c.createElement(Ee, {
-                            hash: e.avatar_hash,
-                            onSelected: this.SelectOGGAvatar,
-                            large: !0,
-                          }),
-                          c.createElement("div", {
-                            className: ve.AvatarRowSpacer,
-                          }),
-                        ),
+                        ? c.createElement(
+                            c.Fragment,
+                            { key: e.avatar_hash },
+                            c.createElement(Ee, {
+                              hash: e.avatar_hash,
+                              onSelected: this.SelectPreviousAvatar,
+                              large: !0,
+                            }),
+                            c.createElement("div", {
+                              className: ve.AvatarRowSpacer,
+                            }),
+                          )
+                        : c.createElement(
+                            c.Fragment,
+                            { key: e.avatar_hash },
+                            c.createElement(Ee, {
+                              hash: e.avatar_hash,
+                              onSelected: this.SelectOGGAvatar,
+                              large: !0,
+                            }),
+                            c.createElement("div", {
+                              className: ve.AvatarRowSpacer,
+                            }),
+                          ),
                   ),
                 ),
               ),
@@ -3651,20 +3652,20 @@
                   m && !m(r)
                     ? null
                     : r.item
-                    ? c.createElement(
-                        Ge.SV,
-                        { key: r.key },
-                        c.createElement(e, {
-                          Item: r.item,
-                          onSelected: r.OnSelected,
-                          active: i && p(r.item, i),
-                        }),
-                      )
-                    : c.createElement(
-                        Ge.SV,
-                        { key: r.key },
-                        t({ onSelected: r.OnSelected, active: !i }),
-                      ),
+                      ? c.createElement(
+                          Ge.SV,
+                          { key: r.key },
+                          c.createElement(e, {
+                            Item: r.item,
+                            onSelected: r.OnSelected,
+                            active: i && p(r.item, i),
+                          }),
+                        )
+                      : c.createElement(
+                          Ge.SV,
+                          { key: r.key },
+                          t({ onSelected: r.OnSelected, active: !i }),
+                        ),
                 ),
               ),
             ),

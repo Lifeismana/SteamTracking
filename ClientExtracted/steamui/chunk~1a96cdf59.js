@@ -680,10 +680,10 @@
           s > 65
             ? (o += " HighestVolume")
             : s > 45
-            ? (o += " HighVolume")
-            : s < 46 && s > 24
-            ? (o += " MedVolume")
-            : s < 25 && (o += " LowVolume");
+              ? (o += " HighVolume")
+              : s < 46 && s > 24
+                ? (o += " MedVolume")
+                : s < 25 && (o += " LowVolume");
           let n = "BroadcastVolumeControl";
           return (
             this.m_bShowSlider && (n += " ShowVolumeSlider"),
@@ -904,21 +904,21 @@
                   this.props.bWebRTC,
                 ))
               : this.props.broadcastClipID
-              ? e &&
-                (t = u.BroadcastWatchStore.CreateClipVideo(
-                  e,
-                  this.props.broadcastClipID,
-                  this.props.watchLocation,
-                ))
-              : this.props.nAppIDVOD &&
-                e &&
-                ((t = u.BroadcastWatchStore.CreateVODVideo(
-                  e,
-                  this.props.nAppIDVOD,
-                  this.props.watchLocation,
-                )),
-                this.props.fnOnVideoEnd &&
-                  t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
+                ? e &&
+                  (t = u.BroadcastWatchStore.CreateClipVideo(
+                    e,
+                    this.props.broadcastClipID,
+                    this.props.watchLocation,
+                  ))
+                : this.props.nAppIDVOD &&
+                  e &&
+                  ((t = u.BroadcastWatchStore.CreateVODVideo(
+                    e,
+                    this.props.nAppIDVOD,
+                    this.props.watchLocation,
+                  )),
+                  this.props.fnOnVideoEnd &&
+                    t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
             t &&
               (this.props.bStartMuted && t.SetMute(!0),
               this.props.bStartPaused
@@ -1502,8 +1502,8 @@
             "start" === t
               ? ((s = { bStartMouseDown: !0 }), e.stopPropagation())
               : "end" === t
-              ? ((s = { bEndMouseDown: !0 }), e.stopPropagation())
-              : (s = { bGrabberMouseDown: !0 }),
+                ? ((s = { bEndMouseDown: !0 }), e.stopPropagation())
+                : (s = { bGrabberMouseDown: !0 }),
               this.setState(s, () => this.AdjustSliderForClientX(e.clientX)),
               this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
                 "mousemove",
@@ -1522,12 +1522,12 @@
           this.state.bStartMouseDown
             ? this.setState({ bStartMouseDown: !1 })
             : this.state.bEndMouseDown
-            ? this.setState({ bEndMouseDown: !1 })
-            : (this.props.video.Seek(this.state.nGrabberMouseDownTime),
-              this.setState({
-                bGrabberMouseDown: !1,
-                nGrabberMouseDownTime: 0,
-              })),
+              ? this.setState({ bEndMouseDown: !1 })
+              : (this.props.video.Seek(this.state.nGrabberMouseDownTime),
+                this.setState({
+                  bGrabberMouseDown: !1,
+                  nGrabberMouseDownTime: 0,
+                })),
             this.m_elSlider.current &&
               (this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
                 "mousemove",

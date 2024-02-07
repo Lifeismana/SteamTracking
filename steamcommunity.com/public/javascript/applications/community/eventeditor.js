@@ -424,17 +424,17 @@
                   (0, T.Xx)("#EventDisplay_Upcoming"),
                 ))
               : (0, Z.G1)(t.type) && t.GetEndTimeAndDateUnixSeconds() > e
-              ? (m = d.createElement(
-                  "span",
-                  { className: P.EventStateActive },
-                  (0, T.Xx)("#EventDisplay_Active"),
-                ))
-              : t.GetStartTimeAndDateUnixSeconds() > e + 3600 &&
-                (m = d.createElement(
-                  "span",
-                  { className: P.EventStateRecent },
-                  (0, T.Xx)("#EventDisplay_RecentlyActive"),
-                ));
+                ? (m = d.createElement(
+                    "span",
+                    { className: P.EventStateActive },
+                    (0, T.Xx)("#EventDisplay_Active"),
+                  ))
+                : t.GetStartTimeAndDateUnixSeconds() > e + 3600 &&
+                  (m = d.createElement(
+                    "span",
+                    { className: P.EventStateRecent },
+                    (0, T.Xx)("#EventDisplay_RecentlyActive"),
+                  ));
           }
           r &&
             (h =
@@ -828,10 +828,14 @@
                   size: "medium",
                 })
               : Boolean(0 == n.length)
-              ? d.createElement("div", null, "No Publishing History available")
-              : n.map((e) =>
-                  d.createElement(le, { key: e.clan_event_gid, record: e }),
-                ),
+                ? d.createElement(
+                    "div",
+                    null,
+                    "No Publishing History available",
+                  )
+                : n.map((e) =>
+                    d.createElement(le, { key: e.clan_event_gid, record: e }),
+                  ),
           );
         },
         le = (e) => {
@@ -848,11 +852,7 @@
               d.createElement(
                 "a",
                 {
-                  href: `${
-                    A.De.COMMUNITY_BASE_URL
-                  }gid/${a.ConvertTo64BitString()}/partnerevents/edit/${
-                    n.clan_event_gid
-                  }`,
+                  href: `${A.De.COMMUNITY_BASE_URL}gid/${a.ConvertTo64BitString()}/partnerevents/edit/${n.clan_event_gid}`,
                   target: "_blank",
                 },
                 n.clan_event_gid,
@@ -1977,8 +1977,8 @@
         return null == r
           ? null
           : (r && !n) || (!r && n)
-          ? d.createElement(d.Fragment, null, e.children)
-          : null;
+            ? d.createElement(d.Fragment, null, e.children)
+            : null;
       }
       function st(e) {
         if (A.L7.logged_in) {

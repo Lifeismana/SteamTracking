@@ -1562,8 +1562,8 @@
                   const a = s
                       ? null
                       : null === (t = window.history.state) || void 0 === t
-                      ? void 0
-                      : t[m],
+                        ? void 0
+                        : t[m],
                     i = window.setTimeout(() => {
                       let e = !1;
                       s
@@ -1765,8 +1765,9 @@
             ("None" == this.props.loopDuration
               ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
               : "Infinite" == this.props.loopDuration
-              ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
-              : (this.setState({ bAnimate: !0 }), this.SetupAnimationTimer())),
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : (this.setState({ bAnimate: !0 }),
+                  this.SetupAnimationTimer())),
             this.props.bParentHovered != e.bParentHovered &&
               (this.props.bParentHovered &&
               "None" != this.props.loopDuration &&
@@ -2854,8 +2855,8 @@
               8 == e.community_item_class
                 ? -1
                 : 8 == t.community_item_class
-                ? 1
-                : t.community_item_class - e.community_item_class,
+                  ? 1
+                  : t.community_item_class - e.community_item_class,
             ),
             t.items.forEach((e) => {
               const r = parseInt(e.point_cost);
@@ -3262,8 +3263,8 @@
                     e.max_use_count < t.max_use_count
                       ? -1
                       : e.max_use_count == t.max_use_count
-                      ? 0
-                      : 1,
+                        ? 0
+                        : 1,
                   )
                   .forEach((e) =>
                     this.m_mapCouponPromos.set(e.loyalty_reward_id, e),
@@ -3406,8 +3407,8 @@
               t.last_playtime != e.last_playtime
                 ? t.last_playtime - e.last_playtime
                 : t.playtime_2weeks != e.playtime_2weeks
-                ? t.playtime_2weeks - e.playtime_2weeks
-                : t.playtime_forever - e.playtime_forever,
+                  ? t.playtime_2weeks - e.playtime_2weeks
+                  : t.playtime_forever - e.playtime_forever,
             ),
             e.map((e) => e.appid)
           );
@@ -3990,17 +3991,9 @@
         const t = E.Z.LoyaltyStore();
         switch (e.type) {
           case "app":
-            return `${t}/app/${e.appid}${
-              "number" == typeof e.clusterindex
-                ? `/cluster/${e.clusterindex}`
-                : ""
-            }`;
+            return `${t}/app/${e.appid}${"number" == typeof e.clusterindex ? `/cluster/${e.clusterindex}` : ""}`;
           case "custom":
-            return `${t}/c/${e.pageid}${
-              "number" == typeof e.clusterindex
-                ? `/cluster/${e.clusterindex}`
-                : ""
-            }`;
+            return `${t}/c/${e.pageid}${"number" == typeof e.clusterindex ? `/cluster/${e.clusterindex}` : ""}`;
           case "event":
             return `${t}/event/${e.eventname}`;
           default:
@@ -4719,11 +4712,7 @@
         return {
           position: "absolute",
           transformOrigin: "center",
-          transform: `translateX(${
-            e * Math.min(n, o / t) + ((r - t) / 2) * n
-          }px) translateY(${(30 * Math.pow(e - s, 2)) / (s * s)}px) rotate(${
-            (0.84 / (t - 1)) * e - i
-          }rad)`,
+          transform: `translateX(${e * Math.min(n, o / t) + ((r - t) / 2) * n}px) translateY(${(30 * Math.pow(e - s, 2)) / (s * s)}px) rotate(${(0.84 / (t - 1)) * e - i}rad)`,
           width: `${n}px`,
           height: `${n}px`,
         };
@@ -5119,10 +5108,10 @@
         return l.De.IN_GAMEPADUI
           ? "mobile"
           : n
-          ? "desktop"
-          : r
-          ? "tablet"
-          : "mobile";
+            ? "desktop"
+            : r
+              ? "tablet"
+              : "mobile";
       }
       function E(e) {
         return e.children(S());
@@ -7383,9 +7372,7 @@
           (r.backgroundImage = `url(${t})`),
           (r.width = 256),
           (r.height = 256),
-          (r.animation = `${T().fireworkLongX} 0.2s steps(9) 10, ${
-            T().fireworkLongY
-          } 2.0s steps(10) forwards`),
+          (r.animation = `${T().fireworkLongX} 0.2s steps(9) 10, ${T().fireworkLongY} 2.0s steps(10) forwards`),
           (r.transformOrigin = "0 0"),
           (r.transform = `scale( ${e.scale} )`),
           a.createElement(
@@ -7405,9 +7392,7 @@
           (r.backgroundImage = `url(${t})`),
           (r.width = 256),
           (r.height = 256),
-          (r.animation = `${T().fireworkBigX} 0.2s steps(9) 4, ${
-            T().fireworkBigY
-          } 0.8s steps(4) forwards`),
+          (r.animation = `${T().fireworkBigX} 0.2s steps(9) 4, ${T().fireworkBigY} 0.8s steps(4) forwards`),
           (r.transformOrigin = "0 0"),
           (r.transform = `scale( ${e.scale} )`),
           a.createElement(
@@ -7427,9 +7412,7 @@
           (r.backgroundImage = `url(${t})`),
           (r.width = 256),
           (r.height = 256),
-          (r.animation = `${T().fireworkSmallX} 0.15s steps(10) 6, ${
-            T().fireworkSmallY
-          } 0.9s steps(6) forwards`),
+          (r.animation = `${T().fireworkSmallX} 0.15s steps(10) 6, ${T().fireworkSmallY} 0.9s steps(6) forwards`),
           (r.transformOrigin = "0 0"),
           (r.transform = `scale( ${e.scale / 2} )`),
           a.createElement(
@@ -8083,19 +8066,19 @@
               ? (this.setState({ step: "equipped" }),
                 (this.m_bShowTransitions = !1))
               : this.BSkipToEquip()
-              ? (this.setState({ step: "equip" }),
-                (this.m_bShowTransitions = !1))
-              : _.Vb.Get().BIsLoggedIn() && !this.BCanRedeemPointsForItem()
-              ? (this.setState({ step: "cantredeemforapp" }),
-                this.ShowError(),
-                (this.m_bShowTransitions = !1))
-              : this.BSkipToCantAfford()
-              ? (this.setState({ step: "cantafford" }),
-                this.ShowError(),
-                (this.m_bShowTransitions = !1))
-              : this.BIsFreeSaleRewardItem()
-              ? this.setState({ step: "saleitem" })
-              : this.setState({ step: "redeem" }));
+                ? (this.setState({ step: "equip" }),
+                  (this.m_bShowTransitions = !1))
+                : _.Vb.Get().BIsLoggedIn() && !this.BCanRedeemPointsForItem()
+                  ? (this.setState({ step: "cantredeemforapp" }),
+                    this.ShowError(),
+                    (this.m_bShowTransitions = !1))
+                  : this.BSkipToCantAfford()
+                    ? (this.setState({ step: "cantafford" }),
+                      this.ShowError(),
+                      (this.m_bShowTransitions = !1))
+                    : this.BIsFreeSaleRewardItem()
+                      ? this.setState({ step: "saleitem" })
+                      : this.setState({ step: "redeem" }));
         }
         BIsFreeSaleRewardItem() {
           return this.props.saleitem && _.Vb.Get().BIsSaleActive();
@@ -8210,12 +8193,12 @@
                                   requestInProgress: !1,
                                 }))
                               : (
-                                  null === (t = e.strMessage) || void 0 === t
-                                    ? void 0
-                                    : t.length
-                                )
-                              ? this.ShowError(e.strMessage)
-                              : this.ShowGenericError();
+                                    null === (t = e.strMessage) || void 0 === t
+                                      ? void 0
+                                      : t.length
+                                  )
+                                ? this.ShowError(e.strMessage)
+                                : this.ShowGenericError();
                           })
                           .catch(this.ShowGenericError)
                       : _.Vb.Get()
@@ -8230,8 +8213,8 @@
                                   requestInProgress: !1,
                                 })
                               : e.strMessage.length
-                              ? this.ShowError(e.strMessage)
-                              : this.ShowGenericError();
+                                ? this.ShowError(e.strMessage)
+                                : this.ShowGenericError();
                           })
                           .catch(this.ShowGenericError);
                     break;
@@ -8268,8 +8251,8 @@
                               requestInProgress: !1,
                             })
                           : e.strMessage.length
-                          ? this.ShowError(e.strMessage)
-                          : this.ShowGenericError();
+                            ? this.ShowError(e.strMessage)
+                            : this.ShowGenericError();
                       })
                       .catch(this.ShowGenericError);
                   }
@@ -8286,8 +8269,8 @@
                       ? (this.setState({ requestInProgress: !1 }),
                         this.CloseModal())
                       : e.strMessage.length
-                      ? this.ShowError(e.strMessage)
-                      : this.ShowGenericError();
+                        ? this.ShowError(e.strMessage)
+                        : this.ShowGenericError();
                   })
                   .catch(this.ShowGenericError);
                 break;
@@ -8300,8 +8283,8 @@
                     1 == e.eResult
                       ? this.CloseModal()
                       : e.strMessage.length
-                      ? this.ShowError(e.strMessage)
-                      : this.ShowGenericError();
+                        ? this.ShowError(e.strMessage)
+                        : this.ShowGenericError();
                   })
                   .catch(this.ShowGenericError);
             }
@@ -8385,9 +8368,7 @@
                 : e.type,
             )
           ) {
-            o = `${document.location.href.split("/reward/")[0]}/reward/${
-              this.props.definition.rewardDefinition.defid
-            }`;
+            o = `${document.location.href.split("/reward/")[0]}/reward/${this.props.definition.rewardDefinition.defid}`;
           }
           return a.createElement(
             _t,
@@ -8660,15 +8641,15 @@
           return "equip" == this.props.step
             ? (0, u.Xx)("#Redeem_Equip_Chat")
             : "saleitem" == this.props.step
-            ? a.createElement(
-                "div",
-                null,
-                (0, u.Xx)("#LunarSale2022_Redeem_Desc1"),
-                a.createElement("br", null),
-                a.createElement("br", null),
-                (0, u.Xx)("#LunarSale2022_Redeem_Desc2"),
-              )
-            : (0, u.Xx)("#Redeem_UsePoints_Sticker");
+              ? a.createElement(
+                  "div",
+                  null,
+                  (0, u.Xx)("#LunarSale2022_Redeem_Desc1"),
+                  a.createElement("br", null),
+                  a.createElement("br", null),
+                  (0, u.Xx)("#LunarSale2022_Redeem_Desc2"),
+                )
+              : (0, u.Xx)("#Redeem_UsePoints_Sticker");
         }
         GetModalPreview() {
           if ("saleitem" == this.props.step)
@@ -8741,20 +8722,20 @@
           return "equip" == this.props.step
             ? (0, u.Xx)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-            ? a.createElement(
-                "div",
-                { className: d.EquippedDesc },
-                (0, u.kQ)(
-                  "#Redeem_Equipped_Background",
-                  a.createElement(
-                    "span",
-                    null,
-                    this.props.definition.rewardDefinition.community_item_data
-                      .item_title,
+              ? a.createElement(
+                  "div",
+                  { className: d.EquippedDesc },
+                  (0, u.kQ)(
+                    "#Redeem_Equipped_Background",
+                    a.createElement(
+                      "span",
+                      null,
+                      this.props.definition.rewardDefinition.community_item_data
+                        .item_title,
+                    ),
                   ),
-                ),
-              )
-            : (0, u.Xx)("#Redeem_UsePoints_Background");
+                )
+              : (0, u.Xx)("#Redeem_UsePoints_Background");
         }
         GetPreview() {
           const e = this.props.definition.rewardDefinition;
@@ -8811,8 +8792,8 @@
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? a.createElement(it, { closeModal: this.props.closeModal })
-            : null;
+              ? a.createElement(it, { closeModal: this.props.closeModal })
+              : null;
         }
         render() {
           return a.createElement(
@@ -8979,20 +8960,20 @@
           return "equip" == this.props.step
             ? (0, u.Xx)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-            ? a.createElement(
-                "div",
-                { className: d.EquippedDesc },
-                (0, u.kQ)(
-                  "#Redeem_Equipped_MiniProfile",
-                  a.createElement(
-                    "span",
-                    null,
-                    this.props.definition.rewardDefinition.community_item_data
-                      .item_title,
+              ? a.createElement(
+                  "div",
+                  { className: d.EquippedDesc },
+                  (0, u.kQ)(
+                    "#Redeem_Equipped_MiniProfile",
+                    a.createElement(
+                      "span",
+                      null,
+                      this.props.definition.rewardDefinition.community_item_data
+                        .item_title,
+                    ),
                   ),
-                ),
-              )
-            : (0, u.Xx)("#Redeem_UsePoints_MiniProfile");
+                )
+              : (0, u.Xx)("#Redeem_UsePoints_MiniProfile");
         }
         GetButtons() {
           return "equip" == this.props.step
@@ -9001,12 +8982,12 @@
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? a.createElement(
-                he,
-                { onClick: this.props.closeModal },
-                (0, u.Xx)("#Button_Close"),
-              )
-            : null;
+              ? a.createElement(
+                  he,
+                  { onClick: this.props.closeModal },
+                  (0, u.Xx)("#Button_Close"),
+                )
+              : null;
         }
         render() {
           const e = this.props.definition.rewardDefinition;
@@ -9093,20 +9074,20 @@
           return "equip" == this.props.step
             ? (0, u.Xx)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
-            ? a.createElement(
-                "div",
-                { className: d.EquippedDesc },
-                (0, u.kQ)(
-                  "#Redeem_Equipped_AvatarFrame",
-                  a.createElement(
-                    "span",
-                    null,
-                    this.props.definition.rewardDefinition.community_item_data
-                      .item_title,
+              ? a.createElement(
+                  "div",
+                  { className: d.EquippedDesc },
+                  (0, u.kQ)(
+                    "#Redeem_Equipped_AvatarFrame",
+                    a.createElement(
+                      "span",
+                      null,
+                      this.props.definition.rewardDefinition.community_item_data
+                        .item_title,
+                    ),
                   ),
-                ),
-              )
-            : (0, u.Xx)("#Redeem_UsePoints_AvatarFrame");
+                )
+              : (0, u.Xx)("#Redeem_UsePoints_AvatarFrame");
         }
         GetButtons() {
           return "equip" == this.props.step
@@ -9115,8 +9096,8 @@
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? a.createElement(it, { closeModal: this.props.closeModal })
-            : null;
+              ? a.createElement(it, { closeModal: this.props.closeModal })
+              : null;
         }
         render() {
           const e = this.props.definition.rewardDefinition;
@@ -9202,20 +9183,20 @@
           return "equip" == this.props.step
             ? (0, u.Xx)("#Redeem_Equip_AnimatedAvatar")
             : "equipped" == this.props.step
-            ? a.createElement(
-                "div",
-                { className: d.EquippedDesc },
-                (0, u.kQ)(
-                  "#Redeem_Equipped_AnimatedAvatar",
-                  a.createElement(
-                    "span",
-                    null,
-                    this.props.definition.rewardDefinition.community_item_data
-                      .item_title,
+              ? a.createElement(
+                  "div",
+                  { className: d.EquippedDesc },
+                  (0, u.kQ)(
+                    "#Redeem_Equipped_AnimatedAvatar",
+                    a.createElement(
+                      "span",
+                      null,
+                      this.props.definition.rewardDefinition.community_item_data
+                        .item_title,
+                    ),
                   ),
-                ),
-              )
-            : (0, u.Xx)("#Redeem_UsePoints_AnimatedAvatar");
+                )
+              : (0, u.Xx)("#Redeem_UsePoints_AnimatedAvatar");
         }
         GetButtons() {
           return "equip" == this.props.step
@@ -9224,8 +9205,8 @@
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? a.createElement(it, { closeModal: this.props.closeModal })
-            : null;
+              ? a.createElement(it, { closeModal: this.props.closeModal })
+              : null;
         }
         render() {
           const e = this.props.definition.rewardDefinition;
@@ -9454,30 +9435,30 @@
                 title: (0, u.Xx)("#Redeem_Badge_CurrentLevel"),
               })
             : 0 == e
-            ? a.createElement(dt, {
-                definition: this.props.definition.rewardDefinition,
-                badgeLevel: this.props.definition.itemLevel,
-                title: (0, u.Xx)("#Redeem_Badge_AfterPoints"),
-              })
-            : a.createElement(
-                a.Fragment,
-                null,
-                a.createElement(dt, {
-                  definition: this.props.definition.rewardDefinition,
-                  badgeLevel: e,
-                  title: (0, u.Xx)("#Redeem_Badge_CurrentLevel"),
-                }),
-                a.createElement(
-                  "div",
-                  { className: (0, N.Z)(d.BadgeColumn, d.ArrowColumn) },
-                  a.createElement("div", { className: d.BlueArrow }),
-                ),
-                a.createElement(dt, {
+              ? a.createElement(dt, {
                   definition: this.props.definition.rewardDefinition,
                   badgeLevel: this.props.definition.itemLevel,
                   title: (0, u.Xx)("#Redeem_Badge_AfterPoints"),
-                }),
-              );
+                })
+              : a.createElement(
+                  a.Fragment,
+                  null,
+                  a.createElement(dt, {
+                    definition: this.props.definition.rewardDefinition,
+                    badgeLevel: e,
+                    title: (0, u.Xx)("#Redeem_Badge_CurrentLevel"),
+                  }),
+                  a.createElement(
+                    "div",
+                    { className: (0, N.Z)(d.BadgeColumn, d.ArrowColumn) },
+                    a.createElement("div", { className: d.BlueArrow }),
+                  ),
+                  a.createElement(dt, {
+                    definition: this.props.definition.rewardDefinition,
+                    badgeLevel: this.props.definition.itemLevel,
+                    title: (0, u.Xx)("#Redeem_Badge_AfterPoints"),
+                  }),
+                );
         }
         render() {
           return this.props.definition.rewardDefinition.community_item_data
@@ -9527,8 +9508,8 @@
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? a.createElement(it, { closeModal: this.props.closeModal })
-            : null;
+              ? a.createElement(it, { closeModal: this.props.closeModal })
+              : null;
         }
         render() {
           return a.createElement(
@@ -9562,8 +9543,8 @@
           return "equip" == this.props.step
             ? (0, u.Xx)("#Redeem_Equip_GoldenProfile")
             : "equipped" == this.props.step
-            ? (0, u.Xx)("#Redeem_Equipped_GoldenProfile")
-            : (0, u.Xx)("#Redeem_UsePoints_GoldenProfile");
+              ? (0, u.Xx)("#Redeem_Equipped_GoldenProfile")
+              : (0, u.Xx)("#Redeem_UsePoints_GoldenProfile");
         }
         GetButtons() {
           return "equip" == this.props.step
@@ -9572,8 +9553,8 @@
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? a.createElement(it, { closeModal: this.props.closeModal })
-            : null;
+              ? a.createElement(it, { closeModal: this.props.closeModal })
+              : null;
         }
         render() {
           var e;
@@ -9699,15 +9680,15 @@
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-            ? a.createElement(it, { closeModal: this.props.closeModal })
-            : null;
+              ? a.createElement(it, { closeModal: this.props.closeModal })
+              : null;
         }
         GetProfileSteamID() {
           return _.Vb.Get().BIsLoggedIn()
             ? f.L7.steamid
             : 2 == f.De.EUNIVERSE
-            ? "148618792083695825"
-            : "76561197960266962";
+              ? "148618792083695825"
+              : "76561197960266962";
         }
         render() {
           const e = this.state.bLoadedIFrame;
@@ -9894,8 +9875,8 @@
           return _.Vb.Get().BIsLoggedIn()
             ? f.L7.steamid
             : 2 == f.De.EUNIVERSE
-            ? "148618792083695825"
-            : "76561197960266962";
+              ? "148618792083695825"
+              : "76561197960266962";
         }
         GetDescription() {
           return "equip" == this.props.step
@@ -10064,20 +10045,20 @@
                 6 == e.definition.rewardDefinition.type
                   ? qe
                   : 8 == e.definition.rewardDefinition.community_item_class &&
-                    0 !=
-                      (null ===
-                        (t = e.definition.rewardDefinition.bundle_defids) ||
-                      void 0 === t
-                        ? void 0
-                        : t.length)
-                  ? Je
-                  : Ke[e.definition.rewardDefinition.community_item_class];
+                      0 !=
+                        (null ===
+                          (t = e.definition.rewardDefinition.bundle_defids) ||
+                        void 0 === t
+                          ? void 0
+                          : t.length)
+                    ? Je
+                    : Ke[e.definition.rewardDefinition.community_item_class];
           }
           return r
             ? a.createElement(r, Object.assign({}, e))
             : 4 == e.definition.rewardDefinition.type
-            ? a.createElement(We, Object.assign({}, e))
-            : null;
+              ? a.createElement(We, Object.assign({}, e))
+              : null;
         }),
         et = (e) => {
           const { className: t } = e,
@@ -10347,22 +10328,22 @@
             "cantredeemforapp" == t
               ? (m = a.createElement(ot, { closeModal: o }))
               : "cantafford" == t
-              ? (m = a.createElement(st, { closeModal: o }))
-              : "saleitem" == t &&
-                (m = a.createElement(
-                  a.Fragment,
-                  null,
-                  a.createElement(
-                    ge,
-                    { onClick: s },
-                    (0, u.Xx)("#SummerSale_Redeem_Btn"),
-                  ),
-                  a.createElement(
-                    he,
-                    { onClick: o },
-                    (0, u.Xx)("#Button_Cancel"),
-                  ),
-                ));
+                ? (m = a.createElement(st, { closeModal: o }))
+                : "saleitem" == t &&
+                  (m = a.createElement(
+                    a.Fragment,
+                    null,
+                    a.createElement(
+                      ge,
+                      { onClick: s },
+                      (0, u.Xx)("#SummerSale_Redeem_Btn"),
+                    ),
+                    a.createElement(
+                      he,
+                      { onClick: o },
+                      (0, u.Xx)("#Button_Cancel"),
+                    ),
+                  ));
           return a.createElement(
             i.s,
             Object.assign(
@@ -10902,16 +10883,16 @@
             (this.m_playPromise
               ? (this.m_bShouldContinuePlaying = e)
               : e
-              ? ((this.m_playPromise = this.m_ref.current.play()),
-                this.m_playPromise &&
-                  (this.m_playPromise.then(() => {
-                    !this.m_bShouldContinuePlaying &&
-                      this.m_ref.current &&
-                      this.m_ref.current.pause(),
-                      (this.m_playPromise = null);
-                  }),
-                  (this.m_bShouldContinuePlaying = !0)))
-              : this.m_ref.current.pause()),
+                ? ((this.m_playPromise = this.m_ref.current.play()),
+                  this.m_playPromise &&
+                    (this.m_playPromise.then(() => {
+                      !this.m_bShouldContinuePlaying &&
+                        this.m_ref.current &&
+                        this.m_ref.current.pause(),
+                        (this.m_playPromise = null);
+                    }),
+                    (this.m_bShouldContinuePlaying = !0)))
+                : this.m_ref.current.pause()),
             this.setState({ bVisible: e });
         }
       }
@@ -11937,11 +11918,11 @@
               s.cMaxToReturn > 0
                 ? (0, g.Xx)("#SeeAllButton")
                 : s.cTotalMatching > 0
-                ? (0, g.Xx)(
-                    "#SeeAllWithCountButton",
-                    s.cTotalMatching.toLocaleString(),
-                  )
-                : (0, g.Xx)("#SeeAllButton")),
+                  ? (0, g.Xx)(
+                      "#SeeAllWithCountButton",
+                      s.cTotalMatching.toLocaleString(),
+                    )
+                  : (0, g.Xx)("#SeeAllButton")),
             0 === s.cTotalMatching && !s.bLoadingMore)
           )
             return null;
@@ -14650,11 +14631,7 @@
           {
             background:
               I &&
-              `${s.De.MEDIA_CDN_COMMUNITY_URL}images/items/${I.appid}/${
-                null === (i = I.community_item_data) || void 0 === i
-                  ? void 0
-                  : i.item_image_large
-              }`,
+              `${s.De.MEDIA_CDN_COMMUNITY_URL}images/items/${I.appid}/${null === (i = I.community_item_data) || void 0 === i ? void 0 : i.item_image_large}`,
           },
           a.createElement(
             h.Kq,

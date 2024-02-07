@@ -151,8 +151,8 @@
           ("number" == typeof e
             ? this.fromNumber(e, t, n)
             : null == t && "string" != typeof e
-            ? this.fromString(e, 256)
-            : this.fromString(e, t));
+              ? this.fromString(e, 256)
+              : this.fromString(e, t));
       }
       function r() {
         return new i(null);
@@ -175,28 +175,28 @@
           }),
           (o = 30))
         : "Netscape" != navigator.appName
-        ? ((i.prototype.am = function (e, t, n, o, i, r) {
-            for (; --r >= 0; ) {
-              var s = t * this[e++] + n[o] + i;
-              (i = Math.floor(s / 67108864)), (n[o++] = 67108863 & s);
-            }
-            return i;
-          }),
-          (o = 26))
-        : ((i.prototype.am = function (e, t, n, o, i, r) {
-            for (var s = 16383 & t, a = t >> 14; --r >= 0; ) {
-              var l = 16383 & this[e],
-                c = this[e++] >> 14,
-                u = a * l + c * s;
-              (i =
-                ((l = s * l + ((16383 & u) << 14) + n[o] + i) >> 28) +
-                (u >> 14) +
-                a * c),
-                (n[o++] = 268435455 & l);
-            }
-            return i;
-          }),
-          (o = 28)),
+          ? ((i.prototype.am = function (e, t, n, o, i, r) {
+              for (; --r >= 0; ) {
+                var s = t * this[e++] + n[o] + i;
+                (i = Math.floor(s / 67108864)), (n[o++] = 67108863 & s);
+              }
+              return i;
+            }),
+            (o = 26))
+          : ((i.prototype.am = function (e, t, n, o, i, r) {
+              for (var s = 16383 & t, a = t >> 14; --r >= 0; ) {
+                var l = 16383 & this[e],
+                  c = this[e++] >> 14,
+                  u = a * l + c * s;
+                (i =
+                  ((l = s * l + ((16383 & u) << 14) + n[o] + i) >> 28) +
+                  (u >> 14) +
+                  a * c),
+                  (n[o++] = 268435455 & l);
+              }
+              return i;
+            }),
+            (o = 28)),
         (i.prototype.DB = o),
         (i.prototype.DM = (1 << o) - 1),
         (i.prototype.DV = 1 << o);
@@ -366,10 +366,10 @@
                 0 == s
                   ? (this[this.t++] = a)
                   : s + n > this.DB
-                  ? ((this[this.t - 1] |=
-                      (a & ((1 << (this.DB - s)) - 1)) << s),
-                    (this[this.t++] = a >> (this.DB - s)))
-                  : (this[this.t - 1] |= a << s),
+                    ? ((this[this.t - 1] |=
+                        (a & ((1 << (this.DB - s)) - 1)) << s),
+                      (this[this.t++] = a >> (this.DB - s)))
+                    : (this[this.t - 1] |= a << s),
                 (s += n) >= this.DB && (s -= this.DB));
           }
           8 == n &&
@@ -843,8 +843,8 @@
           return this.s < 0
             ? -1
             : this.t <= 0 || (1 == this.t && this[0] <= 0)
-            ? 0
-            : 1;
+              ? 0
+              : 1;
         }),
         (i.prototype.toByteArray = function () {
           var e = this.t,
@@ -1043,10 +1043,10 @@
           return 0 != o.compareTo(i.ONE)
             ? i.ZERO
             : l.compareTo(e) >= 0
-            ? l.subtract(e)
-            : l.signum() < 0
-            ? (l.addTo(e, l), l.signum() < 0 ? l.add(e) : l)
-            : l;
+              ? l.subtract(e)
+              : l.signum() < 0
+                ? (l.addTo(e, l), l.signum() < 0 ? l.add(e) : l)
+                : l;
         }),
         (i.prototype.pow = function (e) {
           return this.exp(e, new y());
@@ -1316,9 +1316,7 @@
                     else {
                       const e = t.Body().agreement_session_url(),
                         n = document.location.href;
-                      window.location.href = `${e}&redir=${encodeURIComponent(
-                        n,
-                      )}`;
+                      window.location.href = `${e}&redir=${encodeURIComponent(n)}`;
                     }
                     return this.m_onCompleteCallback({ bSuccess: !1 }), n;
                   }
@@ -1586,11 +1584,7 @@
                     return o && i && r
                       ? { publickey_exp: o, publickey_mod: i, timestamp: r }
                       : ((0, f.F0)(
-                          `Missing expected field in RSA Key: ${JSON.stringify({
-                            publickey_exp: o,
-                            publickey_mod: i,
-                            timestamp: r,
-                          })}`,
+                          `Missing expected field in RSA Key: ${JSON.stringify({ publickey_exp: o, publickey_mod: i, timestamp: r })}`,
                         ),
                         null);
                   } catch (e) {
@@ -1666,9 +1660,7 @@
                           else {
                             const e = _.Body().agreement_session_url(),
                               t = document.location.href;
-                            window.location.href = `${e}&redir=${encodeURIComponent(
-                              t,
-                            )}`;
+                            window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                           }
                           return this.m_onCompleteCallback({ bSuccess: !1 }), t;
                         default:
@@ -1774,9 +1766,7 @@
             } catch (e) {
               return (
                 (0, f.F0)(
-                  `Failed to start auth session. Exception: ${JSON.stringify(
-                    e,
-                  )}`,
+                  `Failed to start auth session. Exception: ${JSON.stringify(e)}`,
                 ),
                 (0, f.Zb)(e),
                 this.SetFailureState(m.NZ.Generic, b.FailedToStart()),
@@ -1843,9 +1833,7 @@
                 if (!t)
                   return (
                     (0, f.F0)(
-                      `Failed to automatically update session with local SG info. Result ${r}. Transport ${i
-                        .Hdr()
-                        .transport_error()}`,
+                      `Failed to automatically update session with local SG info. Result ${r}. Transport ${i.Hdr().transport_error()}`,
                     ),
                     r
                   );
@@ -1874,9 +1862,7 @@
                     else {
                       const e = i.Body().agreement_session_url(),
                         t = document.location.href;
-                      window.location.href = `${e}&redir=${encodeURIComponent(
-                        t,
-                      )}`;
+                      window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                     }
                     return this.m_onCompleteCallback({ bSuccess: !1 }), r;
                   default:
@@ -1985,21 +1971,21 @@
             94 == n.GetEResult()
               ? (this.m_eStatus = 12)
               : n.Body().success()
-              ? (n.DEBUG_LogToConsole(),
-                (this.m_replacementAuthenticator = (0, m.tY)(
-                  n.Body().replacement_token().toObject(),
-                )),
-                (this.m_eStatus = 9),
-                (this.m_bUsingCodeOverride = !1))
-              : (n.DEBUG_LogToConsole(),
-                (0, f.F0)(
-                  "Error when calling RemoveAuthenticatorViaChallengeContinue",
-                  n.GetEResult(),
-                ),
-                this.SetFailureState(
-                  m.NZ.MoveAuthenticator,
-                  b.EResult(n.GetEResult()),
-                ));
+                ? (n.DEBUG_LogToConsole(),
+                  (this.m_replacementAuthenticator = (0, m.tY)(
+                    n.Body().replacement_token().toObject(),
+                  )),
+                  (this.m_eStatus = 9),
+                  (this.m_bUsingCodeOverride = !1))
+                : (n.DEBUG_LogToConsole(),
+                  (0, f.F0)(
+                    "Error when calling RemoveAuthenticatorViaChallengeContinue",
+                    n.GetEResult(),
+                  ),
+                  this.SetFailureState(
+                    m.NZ.MoveAuthenticator,
+                    b.EResult(n.GetEResult()),
+                  ));
           });
         }
         FinishMoveRecovery() {
@@ -2280,10 +2266,10 @@
           v = E
             ? i.createElement(H, null)
             : C
-            ? i.createElement(Z, { reset: g })
-            : _
-            ? i.createElement(U, { size: "small" })
-            : null,
+              ? i.createElement(Z, { reset: g })
+              : _
+                ? i.createElement(U, { size: "small" })
+                : null,
           S = _ || C || E;
         (0, i.useEffect)(() => {
           var t;
@@ -2546,41 +2532,41 @@
               new URLSearchParams(s.search).get("need_password")
                 ? r(!1)
                 : t.current
-                ? (function (e) {
-                    var t;
-                    return (0, o.mG)(this, void 0, void 0, function* () {
-                      const n = new FormData();
-                      n.append("redir", e);
-                      const i = `${c.De.LOGIN_BASE_URL}jwt/ajaxrefresh`,
-                        r = yield l().post(i, n, {
-                          timeout: 1e4,
-                          withCredentials: !0,
-                        });
-                      if (
-                        200 !== r.status ||
-                        !(null === (t = null == r ? void 0 : r.data) ||
-                        void 0 === t
-                          ? void 0
-                          : t.success)
-                      )
-                        return !1;
-                      const s = r.data,
-                        { success: a, login_url: u, error: m } = s,
-                        d = (0, o._T)(s, ["success", "login_url", "error"]),
-                        h = new FormData();
-                      Object.keys(d).forEach((e) => h.append(e, d[e]));
-                      const g = yield l().post(u, h),
-                        f = 200 === g.status && 1 === g.data.result;
-                      return f && window.location.assign(e), f;
-                    });
-                  })(t.current)
-                    .then((e) => {
-                      r(e);
-                    })
-                    .catch((e) => {
-                      (0, f.aF)("PerformRefresh exception", e), r(!1);
-                    })
-                : r(!1);
+                  ? (function (e) {
+                      var t;
+                      return (0, o.mG)(this, void 0, void 0, function* () {
+                        const n = new FormData();
+                        n.append("redir", e);
+                        const i = `${c.De.LOGIN_BASE_URL}jwt/ajaxrefresh`,
+                          r = yield l().post(i, n, {
+                            timeout: 1e4,
+                            withCredentials: !0,
+                          });
+                        if (
+                          200 !== r.status ||
+                          !(null === (t = null == r ? void 0 : r.data) ||
+                          void 0 === t
+                            ? void 0
+                            : t.success)
+                        )
+                          return !1;
+                        const s = r.data,
+                          { success: a, login_url: u, error: m } = s,
+                          d = (0, o._T)(s, ["success", "login_url", "error"]),
+                          h = new FormData();
+                        Object.keys(d).forEach((e) => h.append(e, d[e]));
+                        const g = yield l().post(u, h),
+                          f = 200 === g.status && 1 === g.data.result;
+                        return f && window.location.assign(e), f;
+                      });
+                    })(t.current)
+                      .then((e) => {
+                        r(e);
+                      })
+                      .catch((e) => {
+                        (0, f.aF)("PerformRefresh exception", e), r(!1);
+                      })
+                  : r(!1);
             }, [t, s.search]),
             n
           );
@@ -2626,11 +2612,7 @@
           : i.createElement(
               Je,
               {
-                href: `${
-                  c.De.HELP_BASE_URL
-                }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                  document.location.href,
-                )}`,
+                href: `${c.De.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
               },
               (0, V.Xx)("#Login_Help_SignIn"),
             );
@@ -3196,11 +3178,7 @@
             i.createElement(
               Je,
               {
-                href: `${
-                  c.De.HELP_BASE_URL
-                }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                  document.location.href,
-                )}`,
+                href: `${c.De.HELP_BASE_URL}wizard/HelpWithLogin?redir=${encodeURIComponent(document.location.href)}`,
                 align: "center",
               },
               (0, V.Xx)("#Login_Help_SignIn"),

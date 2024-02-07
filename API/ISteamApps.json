@@ -2,57 +2,6 @@
     "name": "ISteamApps",
     "methods": [
         {
-            "name": "GetAppBetas",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "appid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "AppID of game"
-                }
-            ]
-        },
-        {
-            "name": "GetAppBuilds",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "appid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "AppID of game"
-                },
-                {
-                    "name": "count",
-                    "type": "uint32",
-                    "optional": true,
-                    "description": "# of builds to retrieve (default 10)"
-                },
-                {
-                    "name": "depot_details",
-                    "type": "bool",
-                    "optional": true,
-                    "description": "True if we want the info on the depots in each build.  False if we don't need that info.  Defaults to true."
-                }
-            ]
-        },
-        {
-            "name": "GetAppDepotVersions",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "appid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "AppID of depot"
-                }
-            ]
-        },
-        {
             "name": "GetAppList",
             "version": 1,
             "httpmethod": "GET",
@@ -63,100 +12,6 @@
             "version": 2,
             "httpmethod": "GET",
             "parameters": []
-        },
-        {
-            "name": "GetCheatingReports",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "appid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "AppID of game"
-                },
-                {
-                    "name": "timebegin",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "Time range begin"
-                },
-                {
-                    "name": "timeend",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "Time range end"
-                },
-                {
-                    "name": "includereports",
-                    "type": "bool",
-                    "optional": false,
-                    "description": "include reports that were not bans"
-                },
-                {
-                    "name": "includebans",
-                    "type": "bool",
-                    "optional": false,
-                    "description": "include reports that were bans"
-                },
-                {
-                    "name": "reportidmin",
-                    "type": "uint64",
-                    "optional": true,
-                    "description": "minimum report id"
-                }
-            ]
-        },
-        {
-            "name": "GetPartnerAppListForWebAPIKey",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "key",
-                    "type": "string",
-                    "optional": false,
-                    "description": "access key"
-                },
-                {
-                    "name": "type_filter",
-                    "type": "string",
-                    "optional": true,
-                    "description": "Filter app results by type. Can be comman separated, eg: games,dlc"
-                }
-            ]
-        },
-        {
-            "name": "GetPartnerAppListForWebAPIKey",
-            "version": 2,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "key",
-                    "type": "string",
-                    "optional": false,
-                    "description": "access key"
-                },
-                {
-                    "name": "type_filter",
-                    "type": "string",
-                    "optional": true,
-                    "description": "Filter app results by type. Can be comman separated, eg: games,dlc"
-                }
-            ]
-        },
-        {
-            "name": "GetPlayersBanned",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "appid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "AppID of game"
-                }
-            ]
         },
         {
             "name": "GetSDRConfig",
@@ -172,25 +27,6 @@
             ]
         },
         {
-            "name": "GetServerList",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "filter",
-                    "type": "string",
-                    "optional": true,
-                    "description": "Query filter string"
-                },
-                {
-                    "name": "limit",
-                    "type": "uint32",
-                    "optional": true,
-                    "description": "Limit number of servers in the response"
-                }
-            ]
-        },
-        {
             "name": "GetServersAtAddress",
             "version": 1,
             "httpmethod": "GET",
@@ -200,74 +36,6 @@
                     "type": "string",
                     "optional": false,
                     "description": "IP or IP:queryport to list"
-                }
-            ]
-        },
-        {
-            "name": "SetAppBuildLive",
-            "version": 1,
-            "httpmethod": "POST",
-            "parameters": [
-                {
-                    "name": "appid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "AppID of game"
-                },
-                {
-                    "name": "buildid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "BuildID"
-                },
-                {
-                    "name": "betakey",
-                    "type": "string",
-                    "optional": false,
-                    "description": "beta key, required. Use public for default branch"
-                },
-                {
-                    "name": "description",
-                    "type": "string",
-                    "optional": true,
-                    "description": "optional description for this build"
-                }
-            ]
-        },
-        {
-            "name": "SetAppBuildLive",
-            "version": 2,
-            "httpmethod": "POST",
-            "parameters": [
-                {
-                    "name": "appid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "AppID of game"
-                },
-                {
-                    "name": "buildid",
-                    "type": "uint32",
-                    "optional": false,
-                    "description": "BuildID"
-                },
-                {
-                    "name": "betakey",
-                    "type": "string",
-                    "optional": false,
-                    "description": "beta key, required. Use public for default branch"
-                },
-                {
-                    "name": "steamid",
-                    "type": "uint64",
-                    "optional": true,
-                    "description": "SteamID of user approving build change, required for public branches of released apps"
-                },
-                {
-                    "name": "description",
-                    "type": "string",
-                    "optional": true,
-                    "description": "optional description for this build"
                 }
             ]
         },

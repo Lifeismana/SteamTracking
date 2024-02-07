@@ -10,14 +10,11 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-l#
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
 __DATA
-@
-
 __nl_symbol_ptr
 __DATA
 __got
@@ -42,37 +39,1466 @@ __bss
 __DATA
 __common
 __DATA
-XE
-H
 __LINKEDIT
-
-8
 @loader_path/steamconsole.dylib
-"
-P
-
-*
-8
 @loader_path/libtier0_s.dylib
-8
 @loader_path/libvstdlib_s.dylib
-h
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
-X
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
-h
 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
-`
-0
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
-8
 /usr/lib/libSystem.B.dylib
-h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-8
 /usr/lib/libobjc.A.dylib
-&
-)
+AWAVSPI
+gwMA
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+	H;M
+AWAVATSD
+[A\A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVSH
+([A^A_]
+AWAVAUATSPM
+tWE1
+A;D$
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVSP
+[A^A_]
+AWAVAUATSP
+A;M }CM
+[A\A]A^A_]
+[A\A]A^A_]
+E A;D$
+AWAVAUATSH
+A;M }BL
+[A\A]A^A_]
+[A\A]A^A_]
+E A;D$
+AWAVAUATSH
+[A\A]A^A_]
+9Q @
+tN;S |I
+9K uAH9s(t@H
+H9:u
+[A^]
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+H9H 
+I;O 
+G H;
+L9;t
+([A\A]A^A_]
+AWAVAUATSPH
+L9h 
+L9n 
+L9n uzH
+L9v(t
+H93t;H
+H93t
+[A\A]A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+[A^]
+[A^]
+AVSA
+[A^]
+t-UH
+AVSH
+[A^]
+t-UH
+AVSH
+[A^]
+AWAVSPH
+;F }
+[A^A_]
+H91tHH
+wH91
+AVSI
+L93t
+L97u
+[A^]
+AWAVSPH
+H;F s
+[A^A_]
+AVSI
+L93t
+L97u
+[A^]
+AWAVAUATSH
+([A\A]A^A_]
+AVSI
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVAUATSH
+w-Ic
+w0Hc
+~FD)
+0uNH
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSI
+[A^]
+[A^]
+[A^]
+AWAVAUATSH
+~$E1
+KJcL0
+t09Z
+u+Hc
+[A\A]A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSH
+t-D)
+([A\A]A^A_]
+AWAVAUATSH
+Ict$
+JcL9$I
+8[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+< u	
+< u	
+ASAR
+w1IcO
+	H;M
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AVSH
+[A^]
+AWAVSPI
+[A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+([A\A]A^A_]
+([A\A]A^A_]
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVATSI
+[A\A^A_]
+AWAVAUATSPI
+-t!L
+-uiL
+[A\A]A^A_]
+ uP@
+	r`@
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+[A^A_]
+AWAVATSI
+|$HA
+t$(H
+t$(H
+[A\A^A_]
+AWAVATSI
+[A\A^A_]
+AWAVATSH
+[A\A^A_]
+AVSH
+	H;M
+[A^]
+[A^]
+AVSI
+[A^]
+[A^]
+AWAVATSH
+0[A\A^A_]
+0[A\A^A_]
+AWAVATSH
+0[A\A^A_]
+0[A\A^A_]
+AVSH
+[A^]
+[A^]
+AWAVATSH
+[A\A^A_]
+[A\A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+[A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVAUATSPI
+[A\A]A^A_]
+;G(u	
+AVSH
+[A^]
+AWAVATSI
+t$`A
+t$PH
+t$HH
+t$@H
+t$0H
+[A\A^A_]
+AVSH
+[A^]
+AWAVAUATSPE
+[A\A]A^A_]
+;G(u
+AVSH
+[A^]
+AWAVAUATSP
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVATSH
+t	[A\A^A_]
+[A\A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSH
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+[A^]
+AWAVSH
+	H;M
+[A^A_]
+AVSH
+P[A^]
+AVSH
+[A^]
+AWAVAUATSP
+AUAU
+AUAU
+AUAU
+AUAU
+AUAU
+AUAU
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AVSH
+[A^]
+AWAVSH
+[A^A_]
+AWAVAUATSH
+t2<-ueL
+[<-u
+[A\A]A^A_]
+AWAVATSI
+[A\A^A_]
+AWAVAUATSH
+rGfI
+r1fI
+x[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+;A|}TL
+;A||
+8[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+w1IcN`H
+Mc~`H
+w4Ic
+[A\A]A^A_]
+AWAVAUATSH
+;C`t#H
+C0L9
+w*HcK@H
+Lc{@H
+([A\A]A^A_]
+AWAVATSH
+0[A\A^A_]
+AWAVSH
+8[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+	H;M
+[A\A]A^A_]
+AWAU
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+	H;M
+[A\A^A_]
+AWAVATSH
+	H;M
+[A\A^A_]
+[A\A^A_]
+[A\A^A_]
+AVSH
+[A^]
+AWAVAUATSPM
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+D$XH
+D$xH
+D$@F
+w2HcJpH
+LcrpH
+w5Hc
+IcD$PI9
+D$ A
+L$`L
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+w.IcN(H
+Mc~(H
+X[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVATSI
+whHc
+D$pI
+t$HA
+t$(A
+P [A\A^A_]
+AVSH
+[A^]
+AWAVAUATSPM
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVATSI
+[A\A^A_]
+AWAVATS
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+[A\A^A_]
+AWAVAUATSPA
+[A\A]A^A_]
+AWAVAUATSH
+ARASSAVM
+D$0H
+ARSH
+SAWH
+SAUH
+[A\A]A^A_]
+AWAVAUATSH
+P8E1
+[A\A]A^A_]
+AWAVAUATSH
+;+u'H
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AVSH
+P[A^]
+AWAVATSH
+ARSASAWAVAT
+`[A\A^A_]
+AVSH
+[A^]
+AWAVAUATSPH
+[A\A]A^A_]
+[A\A]A^A_]
+[A\A]A^A_]A
+AWAVSPH
+[A^A_]
+[A^A_]
+AWAVSPH
+[A^A_]
+[A^A_]
+AWAVATSH
+AWSAVASARAT
+ASARSAV
+0[A\A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSH
+ARAVASSAW
+([A^A_]
+AWAVSP
+[A^A_]
+[A^]
+AVSH
+[A^]
+AWAVSH
+SAWAVASAR
+[A^A_]
+AWAVAUATSP
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+ATAT
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+ASARSAV
+([A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVAUATSH
+SAWASARAT
+ARSASATAWAU
+([A\A]A^A_]
+AWAVAUATSH
+SAWASARAT
+ARSASATAWAU
+([A\A]A^A_]
+AWAVAUATSH
+ASARSAW
+ARSASATAWAU
+([A\A]A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+D$49
+L$HA
+D$49
+)t.I
+D$HB
+L$0B
+\$0A
+L$,I
+|$XI
+D$`I
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+D$49
+L$HA
+D$49
+)t.I
+D$HB
+L$0B
+\$0A
+L$,I
+|$XI
+D$`I
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+D$49
+L$HA
+D$49
+)t.I
+D$HB
+L$0B
+\$0A
+L$,I
+|$XI
+D$`I
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AWAVSPI
+[A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSPI
+u	H9
+Mco I
+O8Lc
+[A\A]A^A_]
+AWAVAUATSD
+Ic\$
+uuHcX
+tmA97
+IcD$
+/IcG
+)LcP
+'IcP
+)LcP
+&IcP
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSH
+ARATAWS
+ARATAWS
+H[A\A]A^A_]
+ASARSAV
+SARAWAVAS
+AWAVAUATSH
+ASARSAV
+8[A\A]A^A_]
+AWAVATS
+[A\A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVAUATSH
+	H;M
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+[A\A]A^A_]
+P Hc
+AWAVSPI
+[A^A_]
+AWAVSH
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AVSH
+`[A^]
+AVSH
+@[A^]
+AWAVSH
+H[A^A_]
+AWAVAUATSH
+x[A\A]A^A_]
+AVSI
+[A^]
+AWAVAUATSH
+D$ E
+L$4H
+[A\A]A^A_]
+PAVARQ
+AVSH
+[A^]
+AWAVATSH
+[A\A^A_]
+H;G0u
+AVSH
+[A^]
+AWAVATS
+[A\A^A_]
+AWAVATSA
+ s[I
+>[A\A^A_]
+[A^]
+[A^]
+AWAVAUATSPI
+[A\A]A^A_]
+"u!M
+AWAVATSD
+?[A\A^A_]
+AWAVATSI
+[A\A^A_]
+`P[A\A^A_]
+AVSH
+[A^]
+H	G(]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+ChLc
+.Cxv
+8[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AVSH
+P [A^]
+AVSH
+[A^]
+[A^]
+AWAVAUATSP
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVATS
+PA;_X~"H
+[A\A^A_]
+AVSI
+[A^]
+AWAVAUATSH
+>=u<H
+H[A\A]A^A_]
+AWAVAUATSPH
+McghI
+[A\A]A^A_]
+AVSH
+`[A^]
+AWAVSH
+K|Hc
+8[A^A_]
+AWAVSH
+8[A^A_]
+AWAVSH
+^|fH
+8[A^A_]
+AVSH
+[A^]
+AWAVSPI
+[A^A_]
+[A^]
+[A^]
+[A^]
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+t(< t
+Mcw L
+Mco I
+H[A\A]A^A_]
+AVSA
+0[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AVSH
+r:H9
+[A^]
+[A^]
+AWAVAUATSH
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVAUATSPH
+|$0H
+|$8B
+D$$H
+[A\A]A^A_]
+t{UH
+AVSI
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AVSI
+!uQI
+[A^]
+AWAVAUATSPI
+$t><(
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVAUATSH
+8#u,H
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AVSH
+ [A^]
+AWAVAUATSH
+8[A\A]A^A_]
+AWAVATSH
+</t+
+ [A\A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+~&E1
+([A\A]A^A_]
+AWAVAUATSH
+u+D9e
+h[A\A]A^A_]
+AVSH
+[A^]
+AWAVSH
+[A^A_]
+AVSH
+[A^]
+AWAVATSH
+0[A\A^A_]
+AWAVAUATSH
+([A\A]A^A_]
+AWAVSH
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSPH
+>~-1
+[A^A_]
+[A^A_]
+AWAVSPA
+t'E1
+[A^A_]
+AWAVATSA
+[A\A^A_]
+AWAVAUATSH
+p(E1
+t\H9
+ubLc}
+q(A9
+([A\A]A^A_]
+AWAVSPH
+K H9
+[A^A_]
+AWAVATSA
+~)Ak
+[A\A^A_]
+AWAVSPH
+[A^A_]
+AWAVAUATSH
+t>E1
+8[A\A]A^A_]
+AWAVAUATSPH
+w-Hc
+[A\A]A^A_]
+AWAVATS
+[A\A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSI
+D$ D9
+[A\A^A_]
+[A\A^A_]
+[A^]
+AWAVSP
+[A^A_]
+AWAVSH
+	H;M
+[A^A_]
+AVSH
+=*.*
+*t"H
+[A^]
+AVSH
+[A^]
+AWAVAUATSPH
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVAUATSPH
+[A\A]A^A_]
+AVSI
+[A^]
+AVSI
+[A^]
+AVSI
+L90t
+[A^]
+AVSH
+[A^]
+AVSI
+[A^]
+AWAVAUATSPI
+[A\A]A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+AWAVATSH
+ [A\A^A_]
+AVSI
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+u*Mc`
+0Icp
+Lc L
+'McF
+Lc L
+(McF
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVAUATSH
+w,Ic
+Lc-i
+[A\A]A^A_]
+tEUH
+AWAVATSA
+[A\A^A_]
+AVSI
+[A^]
+AWAVSPI
+t.L9
+[A^A_]
+AWAVSPI
+[A^A_]
+AWAVATSI
+[A\A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSA
+[A\A^A_]
+AWAVAUATSH
+x[A\A]A^A_]
+AWAVAUATSH
+X[A\A]A^A_]
+AWAVAUATSH
+0D8w&
+<"t5<=t
+<}u7A
+<[u(
+F<=w(
+unD;m
+[A\A]A^A_]
+AWAVAUATSH
+t|Hc
+[A\A]A^A_]
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AWAVAUATSH
+w*IcW
+[A\A]A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+t(L9
+AVSH
+tlE1
+[A^]
+AWAVATSI
+[A\A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVSH
+[A^A_]
+AWAVATSH
+[A\A^A_]
+AVSH
+[A^]
+AWAVATSH
+$$Ic
+[A\A^A_]
+AVSH
+	w{H
+[A^]
+AWAVSPI
+[A^A_]
+AWAVSPH
+[A^A_]
+t)UH
+AVSA
+[A^]
+t)UH
+AVSI
+[A^]
+AWAVAUATSPI
+tDE1
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+[A^A_]
+AVSA
+[A^]
+AWAVAUATSH
+<}t	
+h[A\A]A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+([A\A]A^A_]
+K ;K
+K +K
+C +C
+C ;C
+C ;C
+AVSH
+[A^]
+AVSH
+P [A^]
+AWAVSPA
+x	A9
+[A^A_]
+AVSH
+P[A^]
+P[A^]
+AWAVSPA
+fA;F
+[A^A_]
+AWAVSPL
+[A^A_]
+AWAVAUATSPL
+d>$I
+A9F }
+[A\A]A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AWAVSPA
+[A^A_]
+;C ~;
+AWAVSP
+[A^A_]
+AVSI
+[A^]
+AWAVSPA
+[A^A_]
+19S }
+[A^]
+AVSI
+C +C
+[A^]
+AWAVSP
+[A^A_]
+[A^]
+[A^]
+AWAVAUATSPE1
+[A\A]A^A_]
+AWAVAUATSP1
+~?E1
+[A\A]A^A_]
+AWAVATS
+t HcC
+[A\A^A_]
+AWAVSP
+[A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+tYHcs
+tOHcs
+D;{ 
+AWAVATSH
+[A\A^A_]
+~0IcV
+A;^ 
+AWAVSPI
+t<Hcs
+[A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+C&upI
+u9E1
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+,$E1
+ uWH
+tqHc{
+	H;M
+AWAVSP
+t6IcF
+[A^A_]
+[A^A_]
+AWAVSPA
+ujE1
+[A^A_]
+AWAVATSI
+|$$E
+IcD$
+IcD$
+IcD$
+[A\A^A_]
+t#IcD$
+[A\A^A_]
+[A\A^A_]
+AWAVSPA
+tSIcO
+t"IcG
+[A^A_]
+[A^A_]
+AVSA
+C D9
+C D)
+[A^]
+AVSH
+F'$`<@H
+0[A^]
+0[A^]
+AVSH
+C'$`<@D
+0[A^]
+0[A^]
+AVSH
+uTzR
+0[A^]
+0[A^]
+AVSH
+@ulf
+@[A^]
+@[A^]
+AVSH
+t:HcK
+[A^]
+AVSH
+ uFHcK
+@tAH
+[A^]
+AVSH
+ uFHcK
+@tAH
+[A^]
+AVSH
+ uCHcK
+[A^]
+AVSH
+ uMHcC
+#HcC
+[A^]
+AVSA
+[A^]
+AWAVSP
+[A^A_]
+[A^]
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+8[A\A]A^A_]
+8[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVSH
+[A^A_]
+	H;M
+	H;M
+AWAVSH
+[A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AWAVAUATSH
+rkM9
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSP
+[A^A_]
+AVSH
+[A^]
+AWAVSPI
+[A^A_]
+AWAVSPI
+IcF`H9
+[A^A_]
+AVSH
+[A^]
+	H;M
+AVSH
+@[A^]
+AWAVAUATSH
+ASAVAR
+H[A\A]A^A_]
+AVSH
+@[A^]
+AWAVSPI
+[A^A_]
+AWAVATSA
+[A\A^A_]
+AWAVAUATSPI
+D?HH9
+D?LH9
+l8LB
+\8HI
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+9t5H
+9t5H
+9t5H
+9t5H
+D;{d|gE
+D;c\|[E
+D9c 
+Hc	H
+D;{d|mE
+D;c\|aE
+D9c 
+([A\A]A^A_]
+AWAVAUATSPI
+u	H9
+Mco I
+O8Lc
+[A\A]A^A_]
+AWAVAUATSPI
+~bE1
+|$@C
+F@Hc
+D$XH
+[A\A]A^A_]
+AWAVAUATSPI
+~bE1
+|$@C
+F@Hc
+D$XH
+[A\A]A^A_]
+AWAVAUATSPI
+~bE1
+|$@C
+F@Hc
+D$XH
+[A\A]A^A_]
+AWAVAUATSH
+E;wd||E
+E;o\|pE
+E9o 
+[A\A]A^A_]
+AWAVAUATSH
+h[A\A]A^A_]
+AWAVAUATSH
+|$(L
+8[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+H9=u
+AWAVAUATSH
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVATSH
+[A\A^A_]
+AVSH
+C,A;F,u
+C I;F u
+C(A;F(u
+C0A;F0
+[A^]
+AWAVATSA
+[A\A^A_]
+AWAVATS
+[A\A^A_]
+AWAVAUATSH
+taE1
+t8E1
+A;G@
+A9GD
+A;GD}+
+[A\A]A^A_]
+AWAVAUATSH
+H[A\A]A^A_]
+4vH9D
+4vB9
+1t5H
+v1IcL$
+Mcl$
+~%D)
+t(HcH
+AWAVSP
+[A^A_]
+AWAVAUATSH
+(wEH
+8[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSH
+t'Ic
+[A\A]A^A_]
+AWAVAUATSH
+<%uG
+%uHB
+x[A\A]A^A_]
+AWAVSPA
+t	E1
+[A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVSP
+[A^A_]
+AWAVSPH
+[A^A_]
+AWAVAUATSH
+D$ H
+w4Hc
+w4Hc
+d||L
+[A\A]A^A_]
+G@;F@uKI
+GD;FDu=H
+u%HcStA;Vtu
+[A^]
+CHI;FH
+AWAVSPI
+[A^A_]
+AWAVSPI
+[A^A_]
+AWAVATS
+tcI;
+G0#C0
+I;G t
+A;O,u
+[A\A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+AVSI
+[A^]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AWAVAUATSH
+K$D9
+K$D9
+HcT0
+&Ic{
+9Jc|!
+D97u
+Ic;H
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVAUATSH
+A;]d
+E;u\
+E9u 
+E9u 
+E0F	$
+E@Hc
+A;]d
+ETA;EXuRHc
+u@Ic
+([A\A]A^A_]
+AWAVAUATSP
+~#D)
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+G`A9
+L$\I
+E9t$ 
+D$0D
+L$\A
+D$`A
+E9t$ 
+D$0F	,
+D$@Hc
+IcD$
+t$\A
+D$`A9
+[A\A]A^A_]
+D$\A
+D$dI
+[A\A]A^A_]
+AWAVAUATSH
+A;]d
+E;u\
+E9u 
+E9u 
+E0F	$
+M@Hc
+A;]d
+ETA;EXuNHc
+U@Hc
+([A\A]A^A_]
+AWAVAUATSP
+~#D)
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+G`A9
+L$\I
+E9t$ 
+D$0D
+L$\A
+D$`A
+E9t$ 
+D$0F	,
+D$@Hc
+IcD$
+t$\A
+D$`A9
+[A\A]A^A_]
+D$\A
+D$dI
+[A\A]A^A_]
+AWAVAUATSH
+G0F	,
+_@Ic
+;_dL
+GT;GXuVHc
+Q@Hc
+8[A\A]A^A_]
+AWAVAUATSP
+~#D)
+[A\A]A^A_]
+[A\A]A^A_]
+AWAVAUATSH
+G`A9
+E9u 
+E9u 
+E0B	
+e@Ic
+E`A9
+[A\A]A^A_]
+[A\A]A^A_]
+;Gp|
+AWAVAUATSH
+([A\A]A^A_]
+([A\A]A^A_]
+([A\A]A^A_]
+([A\A]A^A_]
+([A\A]A^A_]
+AWAVAUATSPI
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+t&L9e
+([A\A]A^A_]
+AWAVAUATSH
+t&L9e
+([A\A]A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AWAVSPH
+[A^A_]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AWAVSPH
+[A^A_]
+AWAVATS
+[A\A^A_]
+AVSH
+[A^]
+AWAVSP
+gfffffffH
+w-Hc
+[A^A_]
+AVSH
+[A^]
+[A^]
+[A^]
 public
 local
 anonymous
@@ -82,10 +1508,6 @@ anonymous
 13CCallbackBase
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
-N@
-0C
-0E
-0C
 0EN15CAppInfoUpdater25CCallback_OnAppInfoUpdateE
 9CCallbackI15CAppInfoUpdater23AppInfoUpdateComplete_tLb0EE
 13CCallbackImplILi12EE
@@ -109,17 +1531,54 @@ N10CSteamUser34CCallbackInternal_OnPostLogonStateE
 N10CSteamUser41CCallbackInternal_OnSteamGuardFileCreatedE
 N10CSteamUser43CCallbackInternal_OnPeerContentServerChangeE
 10CUtlString
+>N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
 9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
 13CCallbackImplILi40EE
+C19CConsoleInputThread
 N16CCallbackHandler21CCallback_OnLoggedOffE
 9CCallbackI16CCallbackHandler26SteamServersDisconnected_tLb0EE
 25SteamClientConVarAccessor
 23IConCommandBaseAccessor
+20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
 9CCallbackI23CWorkshopItemDownloader20DownloadItemResult_tLb0EE
+ n;^
+Qkkbal
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+Z* ,	
+H$6t
+52F*
+	#jT$
+^6o}
+[-&LMb#{'
+w+OQvr
+R1h58
+SKyu
+)\ZEo^m/
+ru&o
+i8P/
+?(3w
+H*0"ZOW
+{kHw
+)T`D
+!AxU
+l!;b	F
+:1X:
+y9*O
+kM`~
+Vc0a
+dQy/
+lDa>
+7~8A
+C-Yn
 _convar_
 14ConCommandBase
 10ConCommand
@@ -132,20 +1591,13 @@ NSt3__117bad_function_callE
 7CUtlMapI10CUtlStringbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
+?11CFileWriter
 11CPathString
 17CFileWriterThread
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread19CFileWriterWorkItemE
-t
-r
-u
-e
-f
-a
-l
-s
-e
+?21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
@@ -162,10 +1614,8 @@ fileop
 system
 smtp
 account
-job
 crypto
 network
-vac
 client
 content
 cloud
@@ -180,16 +1630,13 @@ friends
 chat
 guestpass
 license
-p2p
 datacoll
-drm
 svcm
 httpclient
 httpserver
 networkmgr
 music
 parental
-vr
 inventory
 input
 streaming
@@ -266,16 +1713,12 @@ Set the base used to construct quick login URLs
 Use local dev websites
 -devsiteshost
 Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
-/
 local
 help
-%s/
 login
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Missing String for %s (%d)
 Unknown
-OK
-0
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
@@ -287,17 +1730,14 @@ Unknown version %d for vpk %s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vpklib/packedstore.cpp
 fread() failed
 nRead == nNumBytes
-rb
 Exceeded limit of number of vpk files supported (%d)!
-.%s
 %s%s%s crc=0x%x metadatasz=%d
-fnumber=%d ofs=0x%x sz=%d
+ fnumber=%d ofs=0x%x sz=%d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 count >= 0
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 appid
-1
 stopping
 reconfiguring
 preallocating
@@ -309,8 +1749,8 @@ verifying update
 finalizing
 running
 unknown
-Update state (0x%X) : Timed out waiting for update to start, bailing.
-Update state (0x%X) %s, progress: %.2f (%llu / %llu)
+ Update state (0x%X) : Timed out waiting for update to start, bailing.
+ Update state (0x%X) %s, progress: %.2f (%llu / %llu)
 validate
 beta
 betapassword
@@ -345,15 +1785,14 @@ m_eAppInfoResult != k_EResultPending
 CAppInfoUpdater::OnAppInfoUpdate
 ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
-%s
 CAppLauncher::OnAppLifetimeNotice
 ERROR! AppId %u launch failed (%s)
 App info request sent.
-ERROR! Failed to request AppInfo for appID %d.
+ERROR! Failed to request AppInfo for appID %d
 Usage: force_install_dir <directory>
 Please use force_install_dir before logon!
 AppID %u already owned.
-Requesting license for AppID %u ...
+Requesting license for AppID %u ... 
 Success.
 ERROR! Failed getting license for appID %u (%s).
 english
@@ -381,36 +1820,46 @@ CSteamUser::OnPeerContentServerChange
 Peer Content Server uploading AppID %u to "%s"
 m_strAccountName
 Logging in user '%s' to Steam %s...
-This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and enter the Steam Guard code from that message.You can also enter this code at any time using 'set_steam_guard_code' at the console.Steam Guard code:
-Enter the current code from your Steam Guard Mobile Authenticator appTwo-factor code:
+This computer has not been authenticated for your account using Steam Guard.
+Please check your email for the message from Steam, and enter the Steam Guard
+ code from that message.
+You can also enter this code at any time using 'set_steam_guard_code'
+ at the console.
+Steam Guard code:
+Enter the current code from your Steam Guard Mobile Authenticator app
+Two-factor code:
 FAILED (%s)
 Logging off current session...
-password:
+password: 
 Waiting for client config...
 Extended
 Waiting for user info...
 Connecting anonymously to Steam %s...
-Account: %s
-SteamID: %s
-Email: %s %s
+Account: %s 
+SteamID: %s 
+Email: %s %s 
 (Validated)
-Logon state: %s
-Language: %s
-Persona Name: %s
-Persona State: %s
-Direct Friends: %d
-Groups Friends: %d
-InstallPath: %s
-Universe: %s
-Server Time: %s
-IPCountry: %s
+Logon state: %s 
+Language: %s 
+Persona Name: %s 
+Persona State: %s 
+Direct Friends: %d 
+Groups Friends: %d 
+InstallPath: %s 
+Universe: %s 
+Server Time: %s 
+IPCountry: %s 
 Offline Mode: %s
-yes
-no
 CellID: %u
+Usage:
+	login <username> [<password>] [<Steam guard code>]
 FAILED (invalid cached credentials)
-This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and usethe command 'set_steam_guard_code' to enter the code here.
-Retrying. . .
+This computer has not been authenticated for your account using Steam Guard.
+Please check your email for the message from Steam, and use
+the command 'set_steam_guard_code' to enter the code here.
+Usage:
+	set_steam_guard_code <code>
+Retrying. . . 
 Peer Content Server stopped
 FAILED (No cached credentials and @NoPromptForPassword is set)
 FAILED (Timed out)
@@ -422,8 +1871,7 @@ FAILED (Timed out)
 @DepotBuilderProgressTimeout
 1000
 %s%capp_build_%u.log
-[%s]:
-
+[%s]: 
 preview
 setpublic
 nobaseline
@@ -434,11 +1882,11 @@ enablelzma
 disablelzma
 nocegsniff
 enablesymlinks
-%.1fMB (%d%%)
-%.1fMB
+ %.1fMB (%d%%)
+ %.1fMB
 app_build_all_depots
 app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>  : Build all depots for one app
-ERROR! Not logged on.
+ERROR! Not logged on
 run_app_build
 run_app_build [-preview] [-desc <text>] <appbuildfile> : run app depot build as specified in appbuildfile
 run_app_build_http
@@ -454,7 +1902,7 @@ verify_vpk <datafile> : verifies content of given VPK
 download_depot
 download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>] [<destination folder>]: download a single depot
 download_item
-download_item <appid> <PublishedFileId> : download a workshop item directly
+download_item <appid> <PublishedFileId> : download a workshop item directly 
 download_chunk
 download_chunk <appid> <depotid> <sha>: download a single chunk from a depot
 desc
@@ -516,14 +1964,17 @@ Item download to "%s" finish (%s)
 Invalid parameters
 Chunk download to "%s"
 Chunk download failed : %s
-.
 Uploading content...
 Signing install script
 Updating local CS
 Scanning content
 Building file mapping...
 Preparing update...
+Usage:
+	app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>
 ERROR! Failed to parse parameters
+Usage:
+	run_app_build [-preview] [-desc <text>] <appbuildfile>
 -globaluser
 -master_ipc_name_override
 @ShutdownOnFailedCommand
@@ -534,11 +1985,45 @@ Use something other than 'logs' as the folder for log files
 @bSiteLicenseServerGUI
 @sStartupScript
 Exec contents of this convar as a script at startup
--- Logging in to Steam --Connecting to your Steam account using steamcmd is similar to using the regular Steam client UI. You can login, logout, and set your Steam Guard email code. Any other account management should be done using the Steam client UI.The first time logging in to a given account on this machine, you'll need to specify the password. For subsequent sessions you can omit the password; using the 'logout' command will clear those cached credentials (your password is never stored locally) and require a password on the next login. If the password is required but not supplied as part of the 'login' command, you will be prompted for a password. To disable this prompt, first set the '@NoPromptForPassword' ConVar to 1 (see the help topic 'convars' for more info). If the prompt is disabled and the password is required, the login command will fail.Note: you may login anonymously using "login anonymous" if the content you wish to download is available for anonymous access.Common commands:               login : Login to Steam              logout : Disconnect from Steamset_steam_guard_code : Enter the Steam Guard code that was emailed to you for authorizing this machine
+-- Directly invoking commands at program execution time using the command-line
+This can be done using the '+' directive: Any command (including convars) which you can type at the Steam> prompt may also be passed in via the program command-line after the '+' character.
+If the command takes more than one argument, you must wrap the entire command (including the '+' character) in quotes. Additionally, if any arguments include spaces, they should themselves be wrapped in quotes. In the case where outer and inner quotes are necessary, escape the inner qotes with the backslash ('\') character.
+You can include as many '+' directives on the command-line as you want, they will be executed sequentially in order.
+Examples:
+ * to invoke 'some_command' run:
+	steamcmd +some_command
+ * to invoke 'some_command arg1' run:
+	steamcmd +some_command arg1
+ * to invoke 'some_command arg1 arg2' run:
+	steamcmd "+some_command arg1 arg2"
+ * to invoke 'some_command arg1 "arg with spaces"' run:
+	steamcmd "+some_command arg1 \"arg with spaces\""
+-- Logging in to Steam --
+Connecting to your Steam account using steamcmd is similar to using the regular Steam client UI. You can login, logout, and set your Steam Guard email code. Any other account management should be done using the Steam client UI.
+The first time logging in to a given account on this machine, you'll need to specify the password. For subsequent sessions you can omit the password; using the 'logout' command will clear those cached credentials (your password is never stored locally) and require a password on the next login. If the password is required but not supplied as part of the 'login' command, you will be prompted for a password. To disable this prompt, first set the '@NoPromptForPassword' ConVar to 1 (see the help topic 'convars' for more info). If the prompt is disabled and the password is required, the login command will fail.
+Note: you may login anonymously using "login anonymous" if the content you wish to download is available for anonymous access.
+Common commands:
+               login : Login to Steam
+              logout : Disconnect from Steam
+set_steam_guard_code : Enter the Steam Guard code that was emailed to you for authorizing this machine
 You can use the 'runscript' command to execute a text-file script. The file should have each desired command listed sequentially on a new line. The filename and extension do not matter; you only need 'read' access to the file. Each line of the file will be executed sequentially.
--- Console Variables --ConVars are variables used to set options and program behavior. Often, but not always, Steam client ConVars are named beginning with the '@' character. The '@' character is simply part of their name, it is not a directive itself.To see the current value of a ConVar, simply type its name into the console and hit enter. To change the value, type the name of the ConVar followed by the desired value, and hit enter.
--- Building Steam Applications --Full documentation of this process is beyond the scope of this little 'help' system, and so it is provided as part of the Steam SDK.If you are a licensed Steam Application Developer, then you will be using this tool to 'build' your game or application and create update patches in the Steam system. In that case, the 'app_build' command is the one you're looking for.
--- Downloading and updating Steam applications installed on the local machine --Use the 'app_update' command to download and update Steam games and applications on this computer. This is generally intended for game dedicated server installations, and will only work for games that have been converted to the new Steam HTTP download system - for games that haven't been converted yet, you should use the older 'HldsUpdateTool' (Windows) / 'steam' (linux) command-line tool.By default, the game is downloaded to the folder "./SteamApps/common/<gamename>". To change this location, use the 'force_install_dir' command to set the target directory BEFORE running app_update. Note: Steam will create a directory within the target directory for storing state information and temporary files; the name of this folder will be a string of numbers and letters 40 characters long.You will first need to login to Steam using an account which has access to the game, or anonymously - type 'help login' for more information.It's likely you'll want to put all of the necessary calls into a script file (see "runscript"); here is an example file:  @ShutdownOnFailedCommand 1 @NoPromptForPassword 1 force_install_dir ../Ricochet/ login anonymous app_update 60 validate quit
+-- Console Variables --
+ConVars are variables used to set options and program behavior. Often, but not always, Steam client ConVars are named beginning with the '@' character. The '@' character is simply part of their name, it is not a directive itself.
+To see the current value of a ConVar, simply type its name into the console and hit enter. To change the value, type the name of the ConVar followed by the desired value, and hit enter.
+-- Building Steam Applications --
+Full documentation of this process is beyond the scope of this little 'help' system, and so it is provided as part of the Steam SDK.
+If you are a licensed Steam Application Developer, then you will be using this tool to 'build' your game or application and create update patches in the Steam system. In that case, the 'app_build' command is the one you're looking for.
+-- Downloading and updating Steam applications installed on the local machine --
+Use the 'app_update' command to download and update Steam games and applications on this computer. This is generally intended for game dedicated server installations, and will only work for games that have been converted to the new Steam HTTP download system - for games that haven't been converted yet, you should use the older 'HldsUpdateTool' (Windows) / 'steam' (linux) command-line tool.
+By default, the game is downloaded to the folder "./SteamApps/common/<gamename>". To change this location, use the 'force_install_dir' command to set the target directory BEFORE running app_update. Note: Steam will create a directory within the target directory for storing state information and temporary files; the name of this folder will be a string of numbers and letters 40 characters long.
+You will first need to login to Steam using an account which has access to the game, or anonymously - type 'help login' for more information.
+It's likely you'll want to put all of the necessary calls into a script file (see "runscript"); here is an example file: 
+ @ShutdownOnFailedCommand 1
+ @NoPromptForPassword 1
+ force_install_dir ../Ricochet/
+ login anonymous
+ app_update 60 validate
+ quit
 commandline
 scripts
 convars
@@ -554,18 +2039,16 @@ Installing/updating a Steam application on the local filesystem (EG dedicated se
 Command not found: %s
 Non-user command %s received at console; ignoring
 "%s" = "%s"
-//
-%s
 Failed to load script file '%s'
 SteamExe::RunFrame()
 steamcmd has been disconnected from steam with result %d (%s)
 ConVars:
 %40s
 "%s"
-= %-12s : %s
+ = %-12s : %s
 Commands:
-%40s
-: %s
+  %40s
+ : %s
 set_spew
 <group> <level> <loglevel> set spew levels for the given group
 find
@@ -587,6 +2070,10 @@ http_test
 profile
 <seconds> profile for N seconds
 FCVAR_NEVER_AS_STRING
+Usage:
+	set_spew <group> <level> <loglevel>
+Usage:
+	find <keyword>
 Usage: set_var <name> <value>
 set_var used with no parameters
 set_var variable is not found
@@ -600,11 +2087,9 @@ brief
 https://www.example.com/
 GetBootstrapperVersion
 Steam Console Client (c) Valve Corporation
-- version %llu
+ - version %llu
 -help
 --help
--h
-/h
 Loading Steam API...
 steam_dev.cfg
 steamconsole.cfg
@@ -627,9 +2112,11 @@ Steam>
 -nodebug
 CCallbackHandler::OnLoggedOff
 running profile for %d seconds...
+Usage:	steamcmd ["+COMMAND [ARG]..."]...
+  or:	steamcmd +runscript SCRIPTFILE
 Help topics - type "help <topic>" or run with "--help <topic>" for more information:
 You can also type "find <string>" to see a list of all commands and convars that contain or reference <string>.
-- local build
+ - local build
 -- type 'quit' to exit --
 sign_install_script
 sign_install_script <appid> <input filename> <output filename> : upload install script to back end for signing
@@ -652,7 +2139,7 @@ CEG wrap failed with EResult %d (%s)
 Usage: sign_install_script <appid> <filename> <output filename>
 Sign installscript failed to start job
 Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags> [<destination>]
-documentation here: https://partner.steamgames.com/doc/features/drm
+       documentation here: https://partner.steamgames.com/doc/features/drm
 Unknown destination '%s' - use 'local' or 'cloud'
 DRM wrap failed to start job
 Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>
@@ -692,7 +2179,6 @@ ERROR! Failed getting bucket : %s
 baselinemanifest
 filemapping
 localpath
-*
 depotpath
 recursive
 ERROR! Build for depot failed : %s
@@ -703,7 +2189,6 @@ Transcode upload complete ( AppID: %u, BucketID: %llu ) ulTranscodedSizeBytes %l
 SteamSwarm
 G7:VulkanPipelinesV%u%%
 GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu GPUDesc: %s DriverDesc: %s
-_
 Using compat tool hash: %s
 Download depot version %llu .
 DownloadDepot ERROR %s!
@@ -722,13 +2207,10 @@ GetBucketManifest[existing precompiled depot] SUCCESS: baseline manifest: %llu s
 DownloadDepot[existing precompiled depot] ERROR %s!
 DownloadDepot[existing precompiled depot] success: %s
 PrepopulatePrecompiledCache ERROR %s
-%s_
 %s%d:VP%d_%sprecomp_%s
-W
 Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...
 WritePrecompiledCache returned result '%s'. foz file missing from depot or no full pipelines in it.
 WritePrecompiledCache success for GPU(s): '%s' Driver(s): '%s' CacheType: %d
-,
 /%s/%s
 Building depot for %s / %s
 GetBucketManifest ERROR %s (this is normal if it's the first time built)
@@ -738,6 +2220,8 @@ StartDepotBuild success. manifest: %llu size: %llu
 Shader upload complete ( AppID: %u, BucketID: %llu Manifest: %llu ) Dest: %s / %s Src: %s / %s
 Mark updated with no data ( AppID: %u, BucketID: %llu Manifest: %llu ) Src: %s / %s
 ERROR. Shader processing failed!
+Usage:
+	swarm_get_bucket_manifest <appid> <bucket_hw_id> <bucket_sw_id>
 ERROR! Shader conversion failed!
 ERROR! Failed to write swarm_tc_download.vdf
 Current downloaded manifest matches, skipping download.
@@ -747,9 +2231,17 @@ Using no baseline manifest for upload
 ERROR! Failed to write swarm_shader_download.vdf
 got empty manifest from GetStaleBucket!
 Done. No more shader bucket to compile
+Usage:
+	swarm_shader_download <work_dir>
+Usage:
+	swarm_shader_prepopulate <work_dir>
 CompileShaders ERROR!
 CompileShaders success
+Usage:
+	swarm_shader_compile <work_dir> <threadCount>
 WritePrecompiledCache ERROR!
+Usage:
+	swarm_shader_upload <work_dir>
 workshop_build_item
 workshop_build_item <build config filename> : build a workshop item
 workshop_create_legacy_item
@@ -775,7 +2267,7 @@ Preparing content...
 Uploading content...
 Uploading preview image...
 Committing update...
-ERROR! Failed to update new workshop item.
+ERROR! Failed to update new workshop item
 ERROR! Failed to update workshop item (%s).
 Success.
 ERROR! Invalid appID.
@@ -788,7 +2280,7 @@ CWorkshopItemDownloader::OnDownloadItemResult
 ERROR! Failed to start downloading item %llu.
 Downloading item %llu ...
 ERROR! Timeout downloading item %llu
-Success. Downloaded item %llu to "%s" (%llu bytes)
+Success. Downloaded item %llu to "%s" (%llu bytes) 
 ERROR! Failed to get install info for item %llu.
 ERROR! Download item %llu failed (%s).
 ERROR! Missing build config file.
@@ -806,13 +2298,13 @@ GetInts()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
 m_fnCompletionCallback
-%d
 %llu
-%f
 m_vecCallbacks.Count() == 0 || !callback
 m_pParent == this
 ConVar::InternalSetValue: called with NULL
-Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.Did you mean to do `%s %s` instead?
+Hey, you just set %s's number values to be 0.  Is that what you wanted?
+If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.
+Did you mean to do `%s %s` instead?
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 m_vecCallbacks.Count() == 0
 pDefaultValue
@@ -825,7 +2317,6 @@ m_strConvertedDefaultValue
 m_vecCallbacks
 ConCommand '%s' not currently supported in config file
 !pszString || pszString[nChars] == '\0'
-m_p
 Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
@@ -841,7 +2332,6 @@ flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
 fsync %s failed, errno = %d
 %lld
-%lf
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unReadAheadChunkSize < INT32_MAX/2
 unsupported flags 0x%x passed to CFileReader::BOpenFile
@@ -853,7 +2343,6 @@ Seeking to a position which is not sector aligned will break unbuffered io
 cubData < INT32_MAX
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 %s%c%s
-..
 cbActual < (uint32)nBufSizeWithTerminator
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
@@ -886,25 +2375,20 @@ strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 0123456789abcdef
 %%%d
 ]:%u
-ReadToken overflow
+ ReadToken overflow
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
-"
-{
+"		"
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
-}
 GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
 can't convert uint64 to int32 (data loss)
 can't convert int64 to uint64 (negative number)
 RGBA: %.2X %.2X %.2X %.2X
-$0
-$1
 WINDOWS
 WIN32
 WIN64
 VISTA
 WIN7
-OSX
 OSX1010
 POSIX
 LINUX
@@ -918,7 +2402,7 @@ ANDROID64
 X360
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 #include
-#include is NULL
+#include is NULL 
 KeyValues don't support #include anymore, file "%s"
 LoadFromBuffer: missing {   (current key: '%s')
 Error while parsing text KeyValues for resource %s
@@ -933,14 +2417,11 @@ NULL
 m_errorIndex>=0
 stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]
-,
-(*
-*),
+*), 
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-"
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -952,17 +2433,6 @@ m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-%u
-n
-t
-v
-b
-r
-f
-a
-\
-?
-'
 %.18g
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
@@ -996,7 +2466,6 @@ V_strlen( pchTime ) == 25
 Infinite time value
 Nil time value
 Invalid time value
-NIL
 %04u%02u%02u
 %04u-%02u-%02u
 %04u%02u%02u%02u%02u%02u
@@ -1004,7 +2473,6 @@ NIL
 steamclient.dylib
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EResult
-cs
 EUniverse
 false
 true
@@ -1143,7 +2611,6 @@ Invalid
 Public
 Beta
 Internal
-Dev
 None
 Offline
 Online
@@ -1208,30 +2675,7 @@ Install path removed
 Invalid backup path
 Invalid Passcode
 Self updating
-en
-de
-fr
-it
-ko
-es
-ru
-th
-ja
-pt
-pl
-da
-nl
-fi
-sv
-hu
-ro
-tr
 pt-br
-bg
-el
-uk
-vi
-id
 Logged Off
 Connecting
 Connected
@@ -1239,7 +2683,6 @@ Logging On
 Logged On
 Logging Off
 broadcast
-PS3
 unspecified
 zh_CN
 English
@@ -1398,7 +2841,6 @@ arabic
 #Panorama_Selection_Arabic
 #Panorama_Lang_Arabic
 ar_AE
-ar
 Ukrainian
 ukrainian
 #SteamUI_Selection_Ukrainian
@@ -1445,9 +2887,9 @@ CLogger::GeneratePrefixFromLogWatchParam
 pchMsg
 %s [%s]%-*s
 [%s]%-*s
-[IP:%s]
-[ID:%s]
-[TXN:%llu]
+[IP:%s] 
+[ID:%s] 
+[TXN:%llu] 
 *pchMsg && *pchMsg == '%'
 Logger does not handle * char as used for a width specifier (where width is a param)
 Stop using I64/I32 - use lld or d, respectively
@@ -1466,7 +2908,6 @@ Failed to close logfile with prefix %s during BTearOffLogFile call!
 NULL == m_pFile
 0 != m_rgchPrefixFileName[0]
 %s.current.txt
-w
 Log started.
 %s-%d
 Log stopped.
@@ -1478,8 +2919,7 @@ Persistent logfile %s is past the keep until date - cleaning up
 Failed to find time in logfile name
 Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
-...
-Last Message Repeated %d times.%s
+Last Message Repeated %d times.
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 CIPAndPort::GetIPv4 called on IPv6 address
@@ -1488,11 +2928,8 @@ nBytes
 bitNum >= 0 && bitNum < this->Size()
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
-10
 @nSpewThrottleResumeThreshold
-3
 @nSpewThrottleUnconditionalTriggerCount
-50
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
@@ -1510,46 +2947,748 @@ bitNum >= 0 && bitNum < this->Size()
 [a:%u:%u]
 [i:%u:%u]
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
-E
-0
-
-
-
-
-
-@
-=
-0
-0
-j
-@
-@
-0
-0
-
-=
-=
-@
-=*.*
-r
-Hc
-Ic
-@
-@
-0
-#
-@
-@
-@
-@
-@
-@
-0
-0
-0
-0
-0
-g
-\
-0
-Ic]
+stringWithCString:encoding:
+defaultManager
+attributesOfFileSystemForPath:error:
+valueForKey:
+unsignedLongLongValue
+stringWithUTF8String:
+fileURLWithPath:
+getResourceValue:forKey:error:
+boolValue
+arrayWithObjects:count:
+resourceValuesForKeys:error:
+objectForKeyedSubscript:
+UTF8String
+fileSystemRepresentation
+stringWithFileSystemRepresentation:length:
+stringByExpandingTildeInPath
+stringByResolvingSymlinksInPath
+mountedVolumeURLsIncludingResourceValuesForKeys:options:
+countByEnumeratingWithState:objects:count:
+getRelationship:ofDirectoryAtURL:toItemAtURL:error:
+path
+hasPrefix:
+length
+`qD`|AVAp
+RARAp
+TAVARARAVAp
+RARAVAp
+TAVAp
+RARAVAp
+TAVAp
+RARAVAp
+TARAp
+TAVAp
+TAVAp
+TAVAp
+TAVAp
+TAVAp
+RARAVAp
+ZASAp p
+VARARAVARAp
+RAUAp
+VARARAVA`
+A`%Ap
+RARAp
+SBRASAp
+RARARAp
+RARARB
+XBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWBWC`
+@__ZN16SteamThreadTools12CThreadMutexD1Ev
+@__ZN16SteamThreadTools7CThread13GetThreadProcEv
+@__ZN16SteamThreadTools7CThread4InitEv
+@__ZN16SteamThreadTools7CThread6OnExitEv
+@__ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+@__ZTIN16SteamThreadTools7CThreadE
+@_g_ClockSpeedSecondsMultiplier
+@_g_VProfManager
+@_g_VProfProfilesRunningCount
+@_g_pMemAllocSteam
+@__ZN11SteamStdLib17CCommandLineParamD1Ev
+@_OBJC_CLASS_$_NSFileManager
+@_OBJC_CLASS_$_NSString
+@__ZNKSt9exception4whatEv
+@__ZTISt9exception
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVN10__cxxabiv121__vmi_class_type_infoE
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___cxa_pure_virtual
+@___gxx_personality_v0
+@__DefaultRuneLocale
+@___stack_chk_guard
+@___stderrp
+@___stdinp
+@___stdoutp
+@__tlv_bootstrap
+@_alphasort$INODE64
+@_bootstrap_port
+@_mach_task_self_
+@dyld_stub_binder
+@_OBJC_CLASS_$_NSArray
+@_OBJC_CLASS_$_NSURL
+@__ZTINSt3__117bad_function_callE
+@__ZTSNSt3__117bad_function_callE
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_CVProfile_ExitScope
+@_CreateSimpleProcess
+@_Error
+@_GetOSType
+@_GetSpewOutputFunc
+@_KeyValuesSystemSteam
+@_Msg
+@_Plat_CommandLineParamExists
+@_Plat_FloatTime
+@_Plat_GetExecutablePath
+@_Plat_GetExecutablePathUTF8
+@_Plat_IsChromeOS
+@_Plat_MSTime
+@_Plat_RelativeTicks
+@_Plat_ctime
+@_Plat_gmtime
+@_Plat_localtime
+@_SpewAndLogActivate
+@_SpewOutputFunc
+@_TSListBase_Init
+@_TSListBase_Pop
+@_TSListBase_UnsafePeek
+@_TSQueueBase_Init
+@_TSQueueBase_Pop
+@_TSQueueBase_Push
+@_TSQueueBase_UnsafeDummy
+@_TSQueueBase_UnsafePeek
+@_TSQueue_PopIntoFreeList
+@_ThreadCloseProcess
+@_ThreadGetCurrentId
+@_ThreadGetCurrentProcessId
+@_ThreadInMainThread
+@_ThreadInterlockedAssignIf
+@_ThreadInterlockedDecrement
+@_ThreadInterlockedExchange
+@_ThreadInterlockedExchangeAdd
+@_ThreadInterlockedIncrement
+@_ThreadSleep
+@_ThreadTerminateProcessCode
+@_VProfInternalEnterScopeCurrentThread
+@_V_ExtractFileExtension
+@_V_ExtractFilePath
+@_V_FileBase
+@_V_FixDoubleSlashes
+@_V_FixSlashes
+@_V_IsAbsolutePath
+@_V_MakeAbsolutePath
+@_V_RemoveDotSlashes
+@_V_StripFilename
+@_V_UTF16ToUTF32
+@_V_UTF32ToUTF8
+@_V_UnqualifiedFileName
+@_V_atof
+@_V_atoi
+@_V_atoui64
+@_V_binarytohex
+@_V_hextobinary
+@_V_isnumeric
+@_V_snprintf
+@_V_strcat
+@_V_strlower_fast
+@_V_strncat
+@_V_strncat_length
+@_V_strncmp
+@_V_strncpy
+@_V_strnicmp
+@_V_strtoui64
+@_V_tolower
+@_V_vsnprintf
+@_V_vsnprintfRet
+@_V_wcstoui64
+@_Warning
+@_WeakRandomInt
+@__DMsg
+@__SpewMessageType
+@__Unwind_Resume
+@__Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+@__Z9V_stristrPKcS0_
+@__ZN10CValidator11ClaimMemoryEPKv
+@__ZN10CValidator16ClaimArrayMemoryEPKv
+@__ZN10CValidator3PopEv
+@__ZN10CValidator4PushEPKcPvS1_
+@__ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+@__ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+@__ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
+@__ZN11SteamStdLib11CommandLineEv
+@__ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+@__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+@__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+@__ZN16SteamThreadTools12CThreadEvent3SetEv
+@__ZN16SteamThreadTools12CThreadEventC1Eb
+@__ZN16SteamThreadTools12CThreadMutexC1Ev
+@__ZN16SteamThreadTools12CThreadMutexD1Ev
+@__ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
+@__ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
+@__ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
+@__ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+@__ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+@__ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+@__ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+@__ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+@__ZN16SteamThreadTools7CThread4JoinEj
+@__ZN16SteamThreadTools7CThread5StartEm
+@__ZN16SteamThreadTools7CThread7SetNameEPKc
+@__ZN16SteamThreadTools7CThread9TerminateEi
+@__ZN16SteamThreadTools7CThreadC2Ev
+@__ZN16SteamThreadTools7CThreadD2Ev
+@__ZNK10CValidator9IsClaimedEPKv
+@__ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+@__ZNK16SteamThreadTools7CThread7IsAliveEv
+@__ZNSt9exceptionD2Ev
+@__ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+@__ZSt9terminatev
+@___bzero
+@___cxa_atexit
+@___cxa_bad_typeid
+@___cxa_begin_catch
+@___cxa_end_catch
+@___cxa_guard_abort
+@___cxa_guard_acquire
+@___cxa_guard_release
+@___error
+@___maskrune
+@___stack_chk_fail
+@_atoi
+@_atoll
+@_bootstrap_look_up
+@_chmod
+@_close
+@_dlclose
+@_dlopen
+@_dlsym
+@_fclose
+@_fcntl
+@_feof
+@_fflush
+@_fgets
+@_fileno
+@_flock
+@_fnmatch
+@_fopen
+@_fprintf
+@_fputs
+@_fread
+@_free
+@_fseek
+@_fstat$INODE64
+@_fsync
+@_fwrite
+@_getcwd
+@_getpid
+@_kill
+@_launch_data_alloc
+@_launch_data_dict_insert
+@_launch_data_free
+@_launch_data_new_string
+@_launch_msg
+@_lseek
+@_lstat$INODE64
+@_mach_msg
+@_mach_port_allocate
+@_mach_port_deallocate
+@_mach_port_mod_refs
+@_mach_port_type
+@_malloc
+@_memcmp
+@_memcpy
+@_memmove
+@_memset
+@_mkdir
+@_mktime
+@_open
+@_printf
+@_pthread_mutex_lock
+@_pthread_mutex_unlock
+@_putchar
+@_puts
+@_read
+@_remove
+@_rename
+@_rindex
+@_scandir$INODE64
+@_setenv
+@_snprintf
+@_sprintf
+@_sscanf
+@_stat$INODE64
+@_strchr
+@_strcmp
+@_strcpy
+@_strftime
+@_strlen
+@_strncmp
+@_strncpy
+@_strrchr
+@_strstr
+@_strtod
+@_strtol
+@_strtoul
+@_tcgetattr
+@_tcsetattr
+@_time
+@_unlink
+@_usleep
+@_vasprintf
+@_vsnprintf
+@_vstdlib_wcsicmp
+@_wcscmp
+@_wcslen
+@_wcstol
+@_write
+SteamDllMain
++CreateInterface
+?_ZT
+SNSt3__117bad_function_callE
+INSt3__117bad_function_callE
+>3(;'%
+4H4@
+(D$^
+(D$t
+ 9Cl
+&,L2
+^hnhhhr
+^<b6
+",& 4
+	~tZFz
+HFxf
+][Z][L
+RRR6R
+_CreateInterface
+_SteamDllMain
+_SteamDllMainEx
+__ZTINSt3__117bad_function_callE
+__ZTSNSt3__117bad_function_callE
+_CVProfile_ExitScope
+_CreateSimpleProcess
+_Error
+_GetOSType
+_GetSpewOutputFunc
+_KeyValuesSystemSteam
+_Msg
+_OBJC_CLASS_$_NSArray
+_OBJC_CLASS_$_NSFileManager
+_OBJC_CLASS_$_NSString
+_OBJC_CLASS_$_NSURL
+_Plat_CommandLineParamExists
+_Plat_FloatTime
+_Plat_GetExecutablePath
+_Plat_GetExecutablePathUTF8
+_Plat_IsChromeOS
+_Plat_MSTime
+_Plat_RelativeTicks
+_Plat_ctime
+_Plat_gmtime
+_Plat_localtime
+_SpewAndLogActivate
+_SpewOutputFunc
+_TSListBase_Init
+_TSListBase_Pop
+_TSListBase_UnsafePeek
+_TSQueueBase_Init
+_TSQueueBase_Pop
+_TSQueueBase_Push
+_TSQueueBase_UnsafeDummy
+_TSQueueBase_UnsafePeek
+_TSQueue_PopIntoFreeList
+_ThreadCloseProcess
+_ThreadGetCurrentId
+_ThreadGetCurrentProcessId
+_ThreadInMainThread
+_ThreadInterlockedAssignIf
+_ThreadInterlockedDecrement
+_ThreadInterlockedExchange
+_ThreadInterlockedExchangeAdd
+_ThreadInterlockedIncrement
+_ThreadSleep
+_ThreadTerminateProcessCode
+_VProfInternalEnterScopeCurrentThread
+_V_ExtractFileExtension
+_V_ExtractFilePath
+_V_FileBase
+_V_FixDoubleSlashes
+_V_FixSlashes
+_V_IsAbsolutePath
+_V_MakeAbsolutePath
+_V_RemoveDotSlashes
+_V_StripFilename
+_V_UTF16ToUTF32
+_V_UTF32ToUTF8
+_V_UnqualifiedFileName
+_V_atof
+_V_atoi
+_V_atoui64
+_V_binarytohex
+_V_hextobinary
+_V_isnumeric
+_V_snprintf
+_V_strcat
+_V_strlower_fast
+_V_strncat
+_V_strncat_length
+_V_strncmp
+_V_strncpy
+_V_strnicmp
+_V_strtoui64
+_V_tolower
+_V_vsnprintf
+_V_vsnprintfRet
+_V_wcstoui64
+_Warning
+_WeakRandomInt
+__DMsg
+__DefaultRuneLocale
+__SpewMessageType
+__Unwind_Resume
+__Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+__Z9V_stristrPKcS0_
+__ZN10CValidator11ClaimMemoryEPKv
+__ZN10CValidator16ClaimArrayMemoryEPKv
+__ZN10CValidator3PopEv
+__ZN10CValidator4PushEPKcPvS1_
+__ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+__ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+__ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
+__ZN11SteamStdLib11CommandLineEv
+__ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+__ZN11SteamStdLib17CCommandLineParamD1Ev
+__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+__ZN16SteamThreadTools12CThreadEvent3SetEv
+__ZN16SteamThreadTools12CThreadEventC1Eb
+__ZN16SteamThreadTools12CThreadMutexC1Ev
+__ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
+__ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
+__ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
+__ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+__ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+__ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+__ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+__ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+__ZN16SteamThreadTools7CThread13GetThreadProcEv
+__ZN16SteamThreadTools7CThread4InitEv
+__ZN16SteamThreadTools7CThread4JoinEj
+__ZN16SteamThreadTools7CThread5StartEm
+__ZN16SteamThreadTools7CThread6OnExitEv
+__ZN16SteamThreadTools7CThread7SetNameEPKc
+__ZN16SteamThreadTools7CThread9TerminateEi
+__ZN16SteamThreadTools7CThreadC2Ev
+__ZN16SteamThreadTools7CThreadD2Ev
+__ZNK10CValidator9IsClaimedEPKv
+__ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+__ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+__ZNK16SteamThreadTools7CThread7IsAliveEv
+__ZNKSt9exception4whatEv
+__ZNSt9exceptionD2Ev
+__ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+__ZSt9terminatev
+__ZTIN16SteamThreadTools7CThreadE
+__ZTISt9exception
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVN10__cxxabiv121__vmi_class_type_infoE
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___bzero
+___cxa_atexit
+___cxa_bad_typeid
+___cxa_begin_catch
+___cxa_end_catch
+___cxa_guard_abort
+___cxa_guard_acquire
+___cxa_guard_release
+___cxa_pure_virtual
+___error
+___gxx_personality_v0
+___maskrune
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+___stdinp
+___stdoutp
+__tlv_bootstrap
+_alphasort$INODE64
+_atoi
+_atoll
+_bootstrap_look_up
+_bootstrap_port
+_chmod
+_close
+_dlclose
+_dlopen
+_dlsym
+_fclose
+_fcntl
+_feof
+_fflush
+_fgets
+_fileno
+_flock
+_fnmatch
+_fopen
+_fprintf
+_fputs
+_fread
+_free
+_fseek
+_fstat$INODE64
+_fsync
+_fwrite
+_g_ClockSpeedSecondsMultiplier
+_g_VProfManager
+_g_VProfProfilesRunningCount
+_g_pMemAllocSteam
+_getcwd
+_getpid
+_kill
+_launch_data_alloc
+_launch_data_dict_insert
+_launch_data_free
+_launch_data_new_string
+_launch_msg
+_lseek
+_lstat$INODE64
+_mach_msg
+_mach_port_allocate
+_mach_port_deallocate
+_mach_port_mod_refs
+_mach_port_type
+_mach_task_self_
+_malloc
+_memcmp
+_memcpy
+_memmove
+_memset
+_mkdir
+_mktime
+_open
+_printf
+_pthread_mutex_lock
+_pthread_mutex_unlock
+_putchar
+_puts
+_read
+_remove
+_rename
+_rindex
+_scandir$INODE64
+_setenv
+_snprintf
+_sprintf
+_sscanf
+_stat$INODE64
+_strchr
+_strcmp
+_strcpy
+_strftime
+_strlen
+_strncmp
+_strncpy
+_strrchr
+_strstr
+_strtod
+_strtol
+_strtoul
+_tcgetattr
+_tcsetattr
+_time
+_unlink
+_usleep
+_vasprintf
+_vsnprintf
+_vstdlib_wcsicmp
+_wcscmp
+_wcslen
+_wcstol
+_write
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
+g>SO
+Pd+0Mz<2
+=J1b
+>tu#
+qLW*h
+pt<6
+{Y(Z:
+-18+
+H4bk
+%p^>%
+v!zV
+gG]q
+ygE9
+4"Yo
+IWxR=TS
+X	BA\r
+_(er
+lPf"
+cnOX
+,0w;D
+LGLG6
+HdJ?
+zFQ]
+_M!:
+xxWWi(
+fO:6MHUB(
+bWa^Q
+cnc:A
+?!).lM}P4
+? j8
+k-!rCr
++!(s
+subject.OU
+MXGJJ98X76
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+240206220746Z0/
+=5p\?sr
+1/0-
+=5p\?sr
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		FDdZzeKpzz01cFw/c3KK1zQl9a4=
+		</data>
+	</array>
+</dict>
+</plist>
+[9UL
+ff`c
+u*l`
+20240206220746Z0
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+240111205539Z
+240222205538Z0B1
+Timestamp Signer NWK21
+Apple Inc.1
+Q2T4(
+\rZ(
+PI,|
+	7MFm
+*~8M
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+,+	(_
+_u][
+Dq%v
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+240206220746Z0#
+OVwv0+
+?mIt
+p?Z (
+jkoWy?

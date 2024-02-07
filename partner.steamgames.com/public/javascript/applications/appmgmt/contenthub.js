@@ -18,10 +18,10 @@ License: MIT
               "undefined" != typeof self
                 ? self
                 : "undefined" != typeof window
-                ? window
-                : void 0 !== t
-                ? t
-                : {},
+                  ? window
+                  : void 0 !== t
+                    ? t
+                    : {},
             r = !t.document && !!t.postMessage,
             i = t.IS_PAPA_WORKER || !1,
             n = {},
@@ -79,9 +79,10 @@ License: MIT
                       })(r)),
                       (c = i.download ? new u(i) : new d(i)))
                     : !0 === r.readable && b(r.read) && b(r.on)
-                    ? (c = new l(i))
-                    : ((t.File && r instanceof File) || r instanceof Object) &&
-                      (c = new f(i)),
+                      ? (c = new l(i))
+                      : ((t.File && r instanceof File) ||
+                          r instanceof Object) &&
+                        (c = new f(i)),
                   c.stream(r)
                 );
               },
@@ -145,8 +146,8 @@ License: MIT
                         (e.fields = Array.isArray(e.data[0])
                           ? e.fields
                           : "object" == typeof e.data[0]
-                          ? Object.keys(e.data[0])
-                          : []),
+                            ? Object.keys(e.data[0])
+                            : []),
                       Array.isArray(e.data[0]) ||
                         "object" == typeof e.data[0] ||
                         (e.data = [e.data])),
@@ -719,10 +720,10 @@ License: MIT
                       })(r)
                         ? parseFloat(r)
                         : h.test(r)
-                        ? new Date(r)
-                        : "" === r
-                        ? null
-                        : r))
+                          ? new Date(r)
+                          : "" === r
+                            ? null
+                            : r))
                   : r
               );
               var i;

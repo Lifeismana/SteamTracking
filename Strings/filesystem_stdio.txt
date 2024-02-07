@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-^
-^
 __stubs
 __TEXT
 __stub_helper
@@ -17,48 +15,456 @@ __TEXT
 __unwind_info
 __TEXT
 __DATA
-@
-@
-
 __nl_symbol_ptr
 __DATA
-Z
 __got
 __DATA
-@
-[
 __la_symbol_ptr
 __DATA
-c
-__
-15CBaseFileSystem
-11IFileSystem
-15IBaseFileSystem
-10IAppSystem
-10CUtlVectorIPFvPKcS1_E10CUtlMemoryIS3_EE
-10CUtlVectorIP7__sFILE10CUtlMemoryIS1_EE
-10CUtlVectorIN15CBaseFileSystem10FindData_tE10CUtlMemoryIS1_EE
-10CUtlVectorIc10CUtlMemoryIcEE
-10CUtlVectorIPi10CUtlMemoryIS0_EE
-7CUtlMapIPKcii22CDefCaselessStringLessE
-10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlVectorIN15CBaseFileSystem11CSearchPathE10CUtlMemoryIS1_EE
-10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
-10CUtlVectorIPN15CBaseFileSystem11CPathIDInfoE10CUtlMemoryIS2_EE
-10CUtlVectorIN15CBaseFileSystem11COpenedFileE10CUtlMemoryIS1_EE
-10CUtlVectorIPN15CBaseFileSystem11CFileHandleE10CUtlMemoryIS2_EE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
-17CFileSystem_Stdio
-27CFileSystemStdIODLLValidate
-9IValidate
-11CPathString
-10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
-21CUtlCStringConversion
-18CUtlCharConversion
-19CUtlNoEscConversion
-14CUtlMemoryBase
-0
+__mod_init_func
+__DATA
+__const
+__DATA
+__objc_imageinfo__DATA
+__objc_selrefs
+__DATA
+__objc_classrefs__DATA
+__data
+__DATA
+__thread_vars
+__DATA
+__thread_bss
+__DATA
+__common
+__DATA
+__bss
+__DATA
+__LINKEDIT
+@loader_path/filesystem_stdio.dylib
+@loader_path/libtier0_s.dylib
+@loader_path/libvstdlib_s.dylib
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+/usr/lib/libc++.1.dylib
+/usr/lib/libSystem.B.dylib
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+/usr/lib/libobjc.A.dylib
+AWAVAUATSH
+([A\A]A^A_]
+~-Mi
+AVSH
+[A^]
+AWAVSPI
+[A^A_]
+AVSH
+[A^]
+AWAVSPI
+~-Ii
+[A^A_]
+AWAVAUATSPI
+~dMi
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVAUATSPI
+t$pE
+~.Ii
+|$xH
+t$0A
+[A\A]A^A_]
+AVSI
+[A^]
+AWAVSH
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AWAVAUATSPI
+l$(E
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+w0Ic
+([A\A]A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVATSH
+[A\A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+MxHi
+uxHi
+E8L9
+w*IcMHH
+u0MceHL
+[A\A]A^A_]
+AWAVAUATSH
+;Pu4
+Mcw@I
+OXLc
+[A\A]A^A_]
+AWAVAUATSH
+;PuR
+4u@H
+X[A\A]A^A_]
+Mce@I
+MXLc
+AWAVAUATSH
+L$PE1
+D$PH9
+w+IcT$`H
+l$`Mc
+t$HL
+\$`L
+D$`I
+D$PH
+L$PN
+([A\A]A^A_]
+AWAVAUATSH
+D$pH
+D$0H
+L$xHi
+L$xIc
+|3pI
+D$8L9
+w+IcL$HH
+Ic\$HH
+t$HH
+D$HI
+D$8I
+|$xL
+L$xI
+[A\A]A^A_]
+AWAVAUATSH
+<Rf9
+[A\A]A^A_]
+AWAVAUATSPLc
+[A\A]A^A_]
+AWAVAUATSH
+;VBSPu
+[A\A]A^A_]
+MxHi
+t#pI
+4If9
+E8L9
+w*IcMHH
+u0MceHL
+AWAVAUATSPI
+fA94
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+axIc
+fD9@
+f90u
+KxHi
+sxMi
+\>h1
+D>pK
+Rf94
+\>pH
+[A\A]A^A_]
+AWAVAUATSH
+D'pH
+	H;M
+[A\A]A^A_]
+AVSH
+[A^]
+AVSI
+4Rf9
+[A^]
+AWAVSPI
+~-Ii
+[A^A_]
+AWAVAUATSP
+[A\A]A^A_]
+AWAVATSH
+arget%\
+%fs_targH
+[A\A^A_]
+AWAVATSH
+4Rf9
+w-Ic
+	H;M
+[A\A^A_]
+AWAVAUATSH
+~cLi
+D6pH
+[A\A]A^A_]
+AWAVATSH
+w-Ic
+ [A\A^A_]
+AWAVATSH
+[A\A^A_]
+$[A\A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVATSH
+[A\A^A_]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSH
+4Rf9
+	H;M
+[A^A_]
+AWAVSH
+4Rf9
+	H;M
+[A^A_]
+AWAVATSH
+ttIc
+[A\A^A_]
+AWAVATSH
+ttIc
+[A\A^A_]
+AWAVSH
+[A^A_]
+AVSH
+[A^]
+AWAVSH
+	H;M
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+4Rf9
+AWAVSH
+8[A^A_]
+AWAVAUATSH
+t	fD9h
+[A\A]A^A_]
+AWAVAUATSH
+L8pH
+	H;M
+[A\A]A^A_]
+AWAVAUATSH
+L0pH
+	H;M
+[A\A]A^A_]
+AWAVAUATSH
+L(pH
+	H;M
+[A\A]A^A_]
+AWAVSH
+[A^A_]
+AWAVAUATSH
+IcEhH
+MXHi
+}XLi
+[A\A]A^A_]
+AWAVAUATSPI
+w)Hc
+[A\A]A^A_]
+AWAVAUATSH
+W8Hc
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVAUATSH
+FXHc
+[A\A]A^A_]
+GXHc
+AWAVAUATSP
+E9fhw
+[A\A]A^A_]
+AWAVAUATSH
+L0pH
+[A\A]A^A_]
+AWAVAUATSH
+	H;M
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVSPH
+[A^A_]
+AWAVSPI
+[A^A_]
+AWAVAUATSH
+	H;M
+[A\A]A^A_]
+AWAVATSH
+w*IcW(H
+Mcg(M
+[A\A^A_]
+F([A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+	H;M
+[A\A^A_]
+AWAVAUATSPI
+t5fA9
+[A\A]A^A_]
+AWAVSPA
+[A^A_]
+AWAVAUATSPH
+\8(L
+D$XJ
+|8PL
+IcD$hI
+t' L
+[A\A]A^A_]
+AWAVSPH
+O8Hc
+[A^A_]
+AWAVATSH
+|$HH
+D$PH
+IcD$`H9
+[A\A^A_]
+AWAVAUATSPE
+[A\A]A^A_]
+AWAVSPI
+[A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVSPI
+[A^A_]
+O8Hc
+HHcP
+t.9p
+u)Hc
+AWAVAUATSI
+fD;m
+fD;m
+fA9	u:f
+fA9I
+fE9q
+fE91u
+[A\A]A^A_]
+AWAVAUATSD
+Ic\$
+uuHcX
+tmA97
+IcD$
+/IcG
+)LcP
+'IcP
+)LcP
+&IcP
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AWAVAUATSPD
+o8Ic
+[A\A]A^A_]
+AWAVAUATSP
+Mcg I
+O8Lc
+[A\A]A^A_]
+AVSH
+[A^]
+AWAVSPH
+[A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+AWAVSPI
+[A^A_]
+AVSH
+[A^]
+AVSI
+[A^]
+t/UH
+AVSH
+[A^]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
+AVSH
+ [A^]
+AWAVSH
+[A^A_]
+AWAVAUATSH
+[A\A]A^A_]
+AWAVSPH
+>~-1
+[A^A_]
+[A^A_]
+AWAVSH
+	H;M
+[A^A_]
+AVSH
+=*.*
+*t"H
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVSPI
+[A^A_]
+[A^A_]
+AWAVAUATSH
+w,Ic
+[A\A]A^A_]
+tEUH
+AWAVAUATSPA
+[A\A]A^A_]
+AWAVSPL
+[A^A_]
+AWAVAUATSPL
+d>$I
+A9F }
+[A\A]A^A_]
+AWAVAUATSPH
+[A\A]A^A_]
+AVSA
+[A^]
+[A^]
+AVSH
+[A^]
+[A^]
+AWAVAUATSPI
+[A\A]A^A_]
+AWAVATSH
+t/fA9D$
+L$(H
+t$PH
+[A\A^A_]
+AWAVSPI
+IcF`H9
+[A^A_]
+AVSH
+[A^]
+AWAVAUATSH
+D$(A
+D$(H
+D$(H
+D$(H
+L$(H
+\$ H
+L$(A
+D$(H
+[A\A]A^A_]
+D$(H
 -fs_log
 Log file system accesses
 -fs_target
@@ -66,7 +472,6 @@ Set target syntax
 -fs_logbins
 Log the binaries we load during operation
 fs_debug
-w
 @echo off
 setlocal
 set fs_target="%s"
@@ -112,7 +517,6 @@ Tried to read %llu bytes from unknown file pointer %p
 Tried to write %llu bytes from unknown file pointer %p
 File %s was never closed
 %s%s
-rb
 packfile.m_bIsPackFile
 packfile.m_hPackFile
 foundEndOfCentralDirRecord
@@ -129,8 +533,6 @@ Paths:
 .bsp
 Requested non-existent write path %s!
 DEFAULT_WRITE_PATH
-.\
-\
 copy "%s" "%s"
 mkdir "%s"
 fs_debug: %s
@@ -184,7 +586,6 @@ Unable to remove %s!
 pOldPath && pNewPath
 pOldPathId
 Unable to rename %s to %s!
-???
 EXECUTABLE_PATH
 !m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
 CBaseFileSystem
@@ -229,34 +630,20 @@ Filesystem
 g_FileSystem_Stdio
 g_PathIDTable
 CUtlSymbol::ValidateGlobals
-.
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 %s%c%s
-/
-..
 CPathString
 .dylib
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
-%s
 g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 CreateInterface
-"
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-n
-t
-v
-b
-r
-f
-a
-?
-'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
@@ -266,15 +653,427 @@ num > 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
-0
-~
-0
-@
-@
-=
-=
-@
-=
-@
-=*.*
-'
+15CBaseFileSystem
+11IFileSystem
+15IBaseFileSystem
+10IAppSystem
+10CUtlVectorIPFvPKcS1_E10CUtlMemoryIS3_EE
+10CUtlVectorIP7__sFILE10CUtlMemoryIS1_EE
+10CUtlVectorIN15CBaseFileSystem10FindData_tE10CUtlMemoryIS1_EE
+10CUtlVectorIc10CUtlMemoryIcEE
+10CUtlVectorIPi10CUtlMemoryIS0_EE
+7CUtlMapIPKcii22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorIN15CBaseFileSystem11CSearchPathE10CUtlMemoryIS1_EE
+10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
+10CUtlVectorIPN15CBaseFileSystem11CPathIDInfoE10CUtlMemoryIS2_EE
+10CUtlVectorIN15CBaseFileSystem11COpenedFileE10CUtlMemoryIS1_EE
+10CUtlVectorIPN15CBaseFileSystem11CFileHandleE10CUtlMemoryIS2_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+17CFileSystem_Stdio
+27CFileSystemStdIODLLValidate
+9IValidate
+11CPathString
+10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+21CUtlCStringConversion
+18CUtlCharConversion
+19CUtlNoEscConversion
+14CUtlMemoryBase
+stringWithCString:encoding:
+defaultManager
+attributesOfFileSystemForPath:error:
+valueForKey:
+unsignedLongLongValue
+stringWithUTF8String:
+fileURLWithPath:
+getResourceValue:forKey:error:
+boolValue
+arrayWithObjects:count:
+resourceValuesForKeys:error:
+objectForKeyedSubscript:
+UTF8String
+fileSystemRepresentation
+stringWithFileSystemRepresentation:length:
+stringByExpandingTildeInPath
+stringByResolvingSymlinksInPath
+mountedVolumeURLsIncludingResourceValuesForKeys:options:
+countByEnumeratingWithState:objects:count:
+getRelationship:ofDirectoryAtURL:toItemAtURL:error:
+path
+hasPrefix:
+length
+!H`'D`4A`*EUBX0
+RA`NATARARAp
+RARAp
+RARAp
+RARARA`
+@_g_VProfProfilesRunningCount
+@_g_pMemAllocSteam
+@__ZN11SteamStdLib17CCommandLineParamD1Ev
+@_OBJC_CLASS_$_NSFileManager
+@_OBJC_CLASS_$_NSString
+@__ZTVN10__cxxabiv117__class_type_infoE
+@__ZTVN10__cxxabiv120__si_class_type_infoE
+@__ZTVN10__cxxabiv121__vmi_class_type_infoE
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@___cxa_pure_virtual
+@___gxx_personality_v0
+@___stack_chk_guard
+@___stderrp
+@__tlv_bootstrap
+@_alphasort$INODE64
+@dyld_stub_binder
+@_OBJC_CLASS_$_NSArray
+@_OBJC_CLASS_$_NSURL
+@__ZdaPv
+@__ZdlPv
+@__Znam
+@__Znwm
+@_CFRelease
+@_CFStringGetCStringPtr
+@_CVProfile_ExitScope
+@_FSPathMakeRef
+@_LSCopyKindStringForRef
+@_Plat_GetExecutablePath
+@_Plat_ctime
+@_VProfInternalEnterScopeCurrentThread
+@_V_ExtractFilePath
+@_V_FixDoubleSlashes
+@_V_FixSlashes
+@_V_IsAbsolutePath
+@_V_RemoveDotSlashes
+@_V_StripFilename
+@_V_UTF16ToUTF32
+@_V_UTF8ToUTF32
+@_V_UnqualifiedFileName
+@_V_snprintf
+@_V_strcat
+@_V_strlower_fast
+@_V_strncat
+@_V_strncat_length
+@_V_strncpy
+@_V_strnicmp
+@_V_vsnprintf
+@__Unwind_Resume
+@__Z9V_stristrPKcS0_
+@__ZN10CValidator11ClaimMemoryEPKv
+@__ZN10CValidator16ClaimArrayMemoryEPKv
+@__ZN10CValidator3PopEv
+@__ZN10CValidator4PushEPKcPvS1_
+@__ZN11SteamStdLib11CommandLineEv
+@__ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+@__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+@__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+@__ZN16SteamThreadTools12CThreadMutexC1Ev
+@__ZN16SteamThreadTools12CThreadMutexD1Ev
+@__ZNK10CValidator9IsClaimedEPKv
+@__ZSt9terminatev
+@___bzero
+@___cxa_atexit
+@___cxa_begin_catch
+@___error
+@___stack_chk_fail
+@_chmod
+@_dlclose
+@_dlopen
+@_dlsym
+@_fclose
+@_feof
+@_ferror
+@_fflush
+@_fgets
+@_fnmatch
+@_fopen
+@_fprintf
+@_fputs
+@_fread
+@_free
+@_fseek
+@_ftell
+@_fwrite
+@_getcwd
+@_getenv
+@_lstat$INODE64
+@_memcpy
+@_memmove
+@_mkdir
+@_pthread_mutex_lock
+@_pthread_mutex_unlock
+@_puts
+@_rename
+@_scandir$INODE64
+@_setvbuf
+@_snprintf
+@_stat$INODE64
+@_strcat
+@_strchr
+@_strcmp
+@_strlen
+@_strncpy
+@_strrchr
+@_strstr
+@_unlink
+@_vfprintf
+@_wcsncpy
+_CreateInterface
+6v6x
+O00^
+_CreateInterface
+_CFRelease
+_CFStringGetCStringPtr
+_CVProfile_ExitScope
+_FSPathMakeRef
+_LSCopyKindStringForRef
+_OBJC_CLASS_$_NSArray
+_OBJC_CLASS_$_NSFileManager
+_OBJC_CLASS_$_NSString
+_OBJC_CLASS_$_NSURL
+_Plat_GetExecutablePath
+_Plat_ctime
+_VProfInternalEnterScopeCurrentThread
+_V_ExtractFilePath
+_V_FixDoubleSlashes
+_V_FixSlashes
+_V_IsAbsolutePath
+_V_RemoveDotSlashes
+_V_StripFilename
+_V_UTF16ToUTF32
+_V_UTF8ToUTF32
+_V_UnqualifiedFileName
+_V_snprintf
+_V_strcat
+_V_strlower_fast
+_V_strncat
+_V_strncat_length
+_V_strncpy
+_V_strnicmp
+_V_vsnprintf
+__Unwind_Resume
+__Z9V_stristrPKcS0_
+__ZN10CValidator11ClaimMemoryEPKv
+__ZN10CValidator16ClaimArrayMemoryEPKv
+__ZN10CValidator3PopEv
+__ZN10CValidator4PushEPKcPvS1_
+__ZN11SteamStdLib11CommandLineEv
+__ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+__ZN11SteamStdLib17CCommandLineParamD1Ev
+__ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+__ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+__ZN16SteamThreadTools12CThreadMutexC1Ev
+__ZN16SteamThreadTools12CThreadMutexD1Ev
+__ZNK10CValidator9IsClaimedEPKv
+__ZSt9terminatev
+__ZTVN10__cxxabiv117__class_type_infoE
+__ZTVN10__cxxabiv120__si_class_type_infoE
+__ZTVN10__cxxabiv121__vmi_class_type_infoE
+__ZdaPv
+__ZdlPv
+__Znam
+__Znwm
+___bzero
+___cxa_atexit
+___cxa_begin_catch
+___cxa_pure_virtual
+___error
+___gxx_personality_v0
+___stack_chk_fail
+___stack_chk_guard
+___stderrp
+__tlv_bootstrap
+_alphasort$INODE64
+_chmod
+_dlclose
+_dlopen
+_dlsym
+_fclose
+_feof
+_ferror
+_fflush
+_fgets
+_fnmatch
+_fopen
+_fprintf
+_fputs
+_fread
+_free
+_fseek
+_ftell
+_fwrite
+_g_VProfProfilesRunningCount
+_g_pMemAllocSteam
+_getcwd
+_getenv
+_lstat$INODE64
+_memcpy
+_memmove
+_mkdir
+_pthread_mutex_lock
+_pthread_mutex_unlock
+_puts
+_rename
+_scandir$INODE64
+_setvbuf
+_snprintf
+_stat$INODE64
+_strcat
+_strchr
+_strcmp
+_strlen
+_strncpy
+_strrchr
+_strstr
+_unlink
+_vfprintf
+_wcsncpy
+dyld_stub_binder
+radr://5614542
+com.valvesoftware.steam
+MXGJJ98X76
++4bq	
+3\\_
+e#`H
+OO$:8+
+z5(ctR
+subject.OU
+MXGJJ98X76
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120201221215Z
+270201221215Z0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+)xEii`k_
+1? v(m
+'0%0#
+http://crl.apple.com/root.crl0
+B9tk
+P9jDt
+#q-_
+ "ror
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!0
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+210205030950Z
+260206030950Z0
+MXGJJ98X761A0?
+8Developer ID Application: Valve Corporation (MXGJJ98X76)1
+MXGJJ98X761
+Valve Corporation1
+~kk!
+3oC&
+uN`AJ
+40200
+$http://ocsp.apple.com/ocsp03-devid080
+)http://www.apple.com/certificateauthority0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+20120706000000Z0
+o(D-U
+6fQS
+:iPq
+0y1-0+
+$Developer ID Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+240206220610Z0/
+1/0-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cdhashes</key>
+	<array>
+		<data>
+		glpPnDmt8ET0c2gRIrlU9NUPx0s=
+		</data>
+	</array>
+</dict>
+</plist>
+V)]V
+-'cDCU
+6,`wz
+20240206220611Z0
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+240111205539Z
+240222205538Z0B1
+Timestamp Signer NWK21
+Apple Inc.1
+Q2T4(
+\rZ(
+PI,|
+	7MFm
+*~8M
+http://www.apple.com/appleca0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+,0*0(
+"http://crl.apple.com/timestamp.crl0
+,+	(_
+_u][
+Dq%v
+}LWc
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+120405120244Z
+270405120244Z0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+Im] 
+(ny_~
+&By^
+t-D>
+E~4u&
+'0%0#
+http://crl.apple.com/root.crl0
+mzT_
+Bsu|QC
+:m7(
+FeoU
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+060425214036Z
+350209214036Z0b1
+Apple Inc.1&0$
+Apple Certification Authority1
+Apple Root CA0
+, op
+https://www.apple.com/appleca/0
+Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
+=&g 
+Sj[d
+uu!1
+0|100.
+'Apple Timestamp Certification Authority1&0$
+Apple Certification Authority1
+Apple Inc.1
+240206220611Z0#
+6Y0+
+oy`%y
+:X,)
+Evbg
+:>rG

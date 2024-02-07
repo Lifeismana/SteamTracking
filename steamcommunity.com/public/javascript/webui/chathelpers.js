@@ -109,8 +109,8 @@ var CLSTAMP = "8679045";
               a < 3
                 ? t
                 : null === r
-                ? (r = Object.getOwnPropertyDescriptor(t, n))
-                : r;
+                  ? (r = Object.getOwnPropertyDescriptor(t, n))
+                  : r;
           if (
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
@@ -2235,8 +2235,8 @@ var CLSTAMP = "8679045";
             return this.m_rgLocalesToUse
               ? this.m_rgLocalesToUse
               : navigator && navigator.languages
-              ? navigator.languages
-              : ["en-US"];
+                ? navigator.languages
+                : ["en-US"];
           }
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
@@ -2422,10 +2422,12 @@ var CLSTAMP = "8679045";
             e instanceof Oe
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? (this.m_ulSteamID = we.Z.fromString(e, !0))
-              : t && n && void 0 !== r
-              ? this.SetFromComponents(e, r, n, t)
-              : (this.m_ulSteamID = e ? we.Z.fromNumber(e, !0) : we.Z.UZERO);
+                ? (this.m_ulSteamID = we.Z.fromString(e, !0))
+                : t && n && void 0 !== r
+                  ? this.SetFromComponents(e, r, n, t)
+                  : (this.m_ulSteamID = e
+                      ? we.Z.fromNumber(e, !0)
+                      : we.Z.UZERO);
           }
           static InitFromAccountID(e) {
             return new Oe(
@@ -2778,95 +2780,99 @@ var CLSTAMP = "8679045";
                     ),
                   )
                 : e.account_mismatch
-                ? a.createElement(
-                    Ke,
-                    { render: this.props.controller.GetPreRenderedHTML() },
-                    a.createElement(
-                      "div",
-                      { className: "inviteLabel" },
-                      Pe("#InviteLanding_AccountMismatch"),
-                    ),
-                    a.createElement(
-                      "div",
-                      { className: "inviteLabel" },
+                  ? a.createElement(
+                      Ke,
+                      { render: this.props.controller.GetPreRenderedHTML() },
                       a.createElement(
-                        "button",
-                        {
-                          className: r,
-                          type: "button",
-                          onClick: this.OpenInSteamIgnoreAccount,
-                        },
-                        Pe("#InviteLanding_OpenInSteam"),
+                        "div",
+                        { className: "inviteLabel" },
+                        Pe("#InviteLanding_AccountMismatch"),
                       ),
                       a.createElement(
-                        "button",
-                        {
-                          className: r,
-                          type: "button",
-                          onClick: this.LaunchWebChat,
-                        },
-                        Pe("#InviteLanding_OpenInWebChat"),
-                      ),
-                    ),
-                  )
-                : e.call_unsupported
-                ? a.createElement(
-                    "div",
-                    { className: "ChatMessageInvite" },
-                    a.createElement(
-                      "div",
-                      { className: "groupName" },
-                      Pe("#InviteLanding_SentToSteam"),
-                    ),
-                    a.createElement(
-                      "div",
-                      { className: "inviteLabel" },
-                      be(
-                        "#InviteLanding_SentToSteam_Desc",
-                        a.createElement(
-                          "a",
-                          {
-                            href: "javascript:void(0);",
-                            onClick: this.LaunchWebChat,
-                          },
-                          Pe("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
-                        ),
-                      ),
-                    ),
-                  )
-                : a.createElement(
-                    Ke,
-                    { render: this.props.controller.GetPreRenderedHTML() },
-                    a.createElement(
-                      "div",
-                      { className: "inviteLabel inviteLabelButtons" },
-                      !n &&
+                        "div",
+                        { className: "inviteLabel" },
                         a.createElement(
                           "button",
                           {
                             className: r,
                             type: "button",
-                            onClick: this.LaunchSteamClient,
+                            onClick: this.OpenInSteamIgnoreAccount,
                           },
                           Pe("#InviteLanding_OpenInSteam"),
                         ),
-                      a.createElement(
-                        "button",
-                        {
-                          className: r,
-                          type: "button",
-                          onClick: this.LaunchWebChat,
-                        },
-                        Pe("#InviteLanding_OpenInWebChat"),
+                        a.createElement(
+                          "button",
+                          {
+                            className: r,
+                            type: "button",
+                            onClick: this.LaunchWebChat,
+                          },
+                          Pe("#InviteLanding_OpenInWebChat"),
+                        ),
                       ),
-                    ),
-                    this.m_bTriedToLaunchSteam &&
-                      a.createElement(
+                    )
+                  : e.call_unsupported
+                    ? a.createElement(
                         "div",
-                        { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Pe("#InviteLanding_OpenInSteam_Help"),
-                      ),
-                  )
+                        { className: "ChatMessageInvite" },
+                        a.createElement(
+                          "div",
+                          { className: "groupName" },
+                          Pe("#InviteLanding_SentToSteam"),
+                        ),
+                        a.createElement(
+                          "div",
+                          { className: "inviteLabel" },
+                          be(
+                            "#InviteLanding_SentToSteam_Desc",
+                            a.createElement(
+                              "a",
+                              {
+                                href: "javascript:void(0);",
+                                onClick: this.LaunchWebChat,
+                              },
+                              Pe(
+                                "#InviteLanding_SentToSteam_Desc_LaunchWebChat",
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    : a.createElement(
+                        Ke,
+                        { render: this.props.controller.GetPreRenderedHTML() },
+                        a.createElement(
+                          "div",
+                          { className: "inviteLabel inviteLabelButtons" },
+                          !n &&
+                            a.createElement(
+                              "button",
+                              {
+                                className: r,
+                                type: "button",
+                                onClick: this.LaunchSteamClient,
+                              },
+                              Pe("#InviteLanding_OpenInSteam"),
+                            ),
+                          a.createElement(
+                            "button",
+                            {
+                              className: r,
+                              type: "button",
+                              onClick: this.LaunchWebChat,
+                            },
+                            Pe("#InviteLanding_OpenInWebChat"),
+                          ),
+                        ),
+                        this.m_bTriedToLaunchSteam &&
+                          a.createElement(
+                            "div",
+                            {
+                              className: "inviteLabel inviteLabelLaunchPrompt",
+                            },
+                            Pe("#InviteLanding_OpenInSteam_Help"),
+                          ),
+                      )
             );
           }
         };

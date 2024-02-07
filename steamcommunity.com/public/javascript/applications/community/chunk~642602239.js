@@ -890,8 +890,8 @@
                 "full" == n
                   ? ""
                   : "leftthumb" == n
-                  ? p.floatLeft
-                  : p.floatRight;
+                    ? p.floatLeft
+                    : p.floatRight;
             return i.createElement(u.O, {
               videoID: t,
               classNameAlign: o,
@@ -1366,11 +1366,7 @@
         }
         Load(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const t = `${
-              i.De.COMMUNITY_CDN_URL
-            }economy/emoticonhoverjson/${encodeURIComponent(
-              e,
-            )}?l=${encodeURIComponent(i.De.LANGUAGE)}&origin=${(0, i.Kc)()}`;
+            const t = `${i.De.COMMUNITY_CDN_URL}economy/emoticonhoverjson/${encodeURIComponent(e)}?l=${encodeURIComponent(i.De.LANGUAGE)}&origin=${(0, i.Kc)()}`;
             this.m_inflightRequests[e] = !0;
             try {
               const { data: n } = yield s().get(t);
@@ -1469,11 +1465,7 @@
                     (null === (n = o.Body().definitions()) || void 0 === n
                       ? void 0
                       : n.length),
-                  `Requested definition ID ${e} and receive # ${
-                    null === (i = o.Body().definitions()) || void 0 === i
-                      ? void 0
-                      : i.length
-                  }, expecting exactly one.`,
+                  `Requested definition ID ${e} and receive # ${null === (i = o.Body().definitions()) || void 0 === i ? void 0 : i.length}, expecting exactly one.`,
                 );
                 const t = o.Body().definitions()[0].toObject();
                 return (
@@ -2427,9 +2419,9 @@
               this.m_bIsLoaded
                 ? 1
                 : o.L7.logged_in
-                ? (this.m_promise || (this.m_promise = this.InternalLoad()),
-                  this.m_promise)
-                : 1
+                  ? (this.m_promise || (this.m_promise = this.InternalLoad()),
+                    this.m_promise)
+                  : 1
             );
           });
         }
@@ -2932,25 +2924,25 @@
               Boolean(g) && g,
             )
           : u || h || _
-          ? r.createElement(
-              i.uH,
-              {
-                strTitle: t,
-                strDescription: h || (0, a.Xx)("#EventDisplay_Share_Success"),
-                bAlertDialog: !0,
-                closeModal: l,
-              },
-              r.createElement(r.Fragment, null, Boolean(_) && _),
-            )
-          : r.createElement(
-              i.uH,
-              { strTitle: t, closeModal: () => {} },
-              r.createElement(s.V, {
-                string: c || E || (0, a.Xx)("#Loading"),
-                size: "medium",
-                position: "center",
-              }),
-            );
+            ? r.createElement(
+                i.uH,
+                {
+                  strTitle: t,
+                  strDescription: h || (0, a.Xx)("#EventDisplay_Share_Success"),
+                  bAlertDialog: !0,
+                  closeModal: l,
+                },
+                r.createElement(r.Fragment, null, Boolean(_) && _),
+              )
+            : r.createElement(
+                i.uH,
+                { strTitle: t, closeModal: () => {} },
+                r.createElement(s.V, {
+                  string: c || E || (0, a.Xx)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+              );
       }
     },
     33682: (e, t, n) => {
@@ -4220,22 +4212,22 @@
                   onStickerSelected: this.props.onStickerSelected,
                 })
               : r &&
-                n.flair_list &&
-                (null === (t = n.GetFlairListByGroupID(r)) || void 0 === t
-                  ? void 0
-                  : t.length) > 0
-              ? i.createElement(m.uC, {
-                  emoticonStore: this.props.emoticonStore,
-                  emoticonHoverStore: this.props.emoticonHoverStore,
-                  strFlairGroupID: this.props.strFlairGroupID,
-                  OnSelected: this.props.OnEmoticonSelected,
-                })
-              : i.createElement(m.ag, {
-                  emoticonStore: this.props.emoticonStore,
-                  emoticonHoverStore: this.props.emoticonHoverStore,
-                  strFlairGroupID: this.props.strFlairGroupID,
-                  OnSelected: this.props.OnEmoticonSelected,
-                })),
+                  n.flair_list &&
+                  (null === (t = n.GetFlairListByGroupID(r)) || void 0 === t
+                    ? void 0
+                    : t.length) > 0
+                ? i.createElement(m.uC, {
+                    emoticonStore: this.props.emoticonStore,
+                    emoticonHoverStore: this.props.emoticonHoverStore,
+                    strFlairGroupID: this.props.strFlairGroupID,
+                    OnSelected: this.props.OnEmoticonSelected,
+                  })
+                : i.createElement(m.ag, {
+                    emoticonStore: this.props.emoticonStore,
+                    emoticonHoverStore: this.props.emoticonHoverStore,
+                    strFlairGroupID: this.props.strFlairGroupID,
+                    OnSelected: this.props.OnEmoticonSelected,
+                  })),
             (0, c.yV)(
               l,
               e,
@@ -4631,63 +4623,63 @@
                 ),
               )
             : this.state.bSummaryMode
-            ? i.createElement(
-                "div",
-                {
-                  className: H().dynamiclink_box,
-                  onClick: this.OnSketchFabClick,
-                },
-                Boolean(this.state.bLoadedMetaData)
-                  ? i.createElement(
-                      i.Fragment,
-                      null,
-                      i.createElement("img", {
-                        className: H().dynamiclink_preview,
-                        src: this.state.data.thumbnail_url,
-                      }),
-                      i.createElement("img", {
-                        className: H().sketchfab_play_overlay_image,
-                      }),
-                      i.createElement(
-                        "div",
-                        { className: H().dynamiclink_content },
+              ? i.createElement(
+                  "div",
+                  {
+                    className: H().dynamiclink_box,
+                    onClick: this.OnSketchFabClick,
+                  },
+                  Boolean(this.state.bLoadedMetaData)
+                    ? i.createElement(
+                        i.Fragment,
+                        null,
+                        i.createElement("img", {
+                          className: H().dynamiclink_preview,
+                          src: this.state.data.thumbnail_url,
+                        }),
+                        i.createElement("img", {
+                          className: H().sketchfab_play_overlay_image,
+                        }),
                         i.createElement(
                           "div",
-                          { className: H().dynamiclink_name },
+                          { className: H().dynamiclink_content },
                           i.createElement(
-                            "span",
-                            { className: H().dynamiclink_type },
-                            (0, v.Xx)("#EventDisplay_Sketchfab"),
+                            "div",
+                            { className: H().dynamiclink_name },
+                            i.createElement(
+                              "span",
+                              { className: H().dynamiclink_type },
+                              (0, v.Xx)("#EventDisplay_Sketchfab"),
+                            ),
+                            i.createElement(
+                              "div",
+                              null,
+                              this.state.data.title,
+                              " ",
+                            ),
                           ),
                           i.createElement(
                             "div",
-                            null,
-                            this.state.data.title,
-                            " ",
+                            { className: H().dynamiclink_author },
+                            this.state.data.author_name,
                           ),
                         ),
-                        i.createElement(
-                          "div",
-                          { className: H().dynamiclink_author },
-                          this.state.data.author_name,
-                        ),
-                      ),
-                    )
-                  : i.createElement(B.V, { size: "medium" }),
-              )
-            : i.createElement(
-                "div",
-                { className: H().sketchfabmodelembedded },
-                i.createElement("iframe", {
-                  className: H().sketchfabmodelembedded,
-                  src:
-                    "https://sketchfab.com/models/" +
-                    this.props.modelID +
-                    "/embed?autostart=1",
-                  frameBorder: 0,
-                  allowFullScreen: !0,
-                }),
-              );
+                      )
+                    : i.createElement(B.V, { size: "medium" }),
+                )
+              : i.createElement(
+                  "div",
+                  { className: H().sketchfabmodelembedded },
+                  i.createElement("iframe", {
+                    className: H().sketchfabmodelembedded,
+                    src:
+                      "https://sketchfab.com/models/" +
+                      this.props.modelID +
+                      "/embed?autostart=1",
+                    frameBorder: 0,
+                    allowFullScreen: !0,
+                  }),
+                );
         }
       };
       (0, r.gn)([c.ak], V.prototype, "OnSketchFabClick", null),
@@ -4843,10 +4835,10 @@
             "gid" == t[1]
               ? (r = new d.K(t[2]))
               : "groups" == t[1]
-              ? (a = t[2])
-              : isNaN(+t[2])
-              ? (o = t[2])
-              : (n = Number(t[2]));
+                ? (a = t[2])
+                : isNaN(+t[2])
+                  ? (o = t[2])
+                  : (n = Number(t[2]));
             let s = t[3];
             if (
               ((void 0 !== n && n > 0) ||
@@ -4910,12 +4902,12 @@
             "gid" == n[1]
               ? (r = new d.K(n[2]))
               : "group" == n[1]
-              ? (r = d.K.InitFromClanID(Number.parseInt(n[2])))
-              : "groups" == n[1]
-              ? (a = n[2])
-              : isNaN(+n[2])
-              ? (o = n[2])
-              : (e = Number(n[2]));
+                ? (r = d.K.InitFromClanID(Number.parseInt(n[2])))
+                : "groups" == n[1]
+                  ? (a = n[2])
+                  : isNaN(+n[2])
+                    ? (o = n[2])
+                    : (e = Number(n[2]));
             const s = n[3];
             if (
               ((void 0 !== e && e > 0) ||
@@ -5157,10 +5149,10 @@
         return 1 == n
           ? i.createElement(Je, { fileUploadManager: t })
           : 3 == n || 5 == n || 4 == n
-          ? i.createElement(Ke, { fileUploadManager: t })
-          : 0 != n
-          ? i.createElement(qe, { fileUploadManager: t })
-          : null;
+            ? i.createElement(Ke, { fileUploadManager: t })
+            : 0 != n
+              ? i.createElement(qe, { fileUploadManager: t })
+              : null;
       }
       function Je(e) {
         const { fileUploadManager: t } = e,
@@ -5318,16 +5310,16 @@
           "string" == typeof r && r.length > 0 && "#" == r[0]
             ? i.createElement("a", { className: l, href: r }, e.children)
             : "steam://settings/account" == r
-            ? i.createElement(
-                Ue.ns,
-                { className: l, href: "steam://settings/account" },
-                e.children,
-              )
-            : i.createElement(
-                P.z,
-                { className: l, url: r, event: e.context.event, id: a },
-                e.children,
-              )
+              ? i.createElement(
+                  Ue.ns,
+                  { className: l, href: "steam://settings/account" },
+                  e.children,
+                )
+              : i.createElement(
+                  P.z,
+                  { className: l, url: r, event: e.context.event, id: a },
+                  e.children,
+                )
         );
       }
       function st(e) {
@@ -5635,8 +5627,8 @@
               i.createElement(Qe, { fileUploadManager: o }),
             )
           : t
-          ? i.createElement("div", null, (0, v.Xx)("#CloudUpload_NotSupport"))
-          : null;
+            ? i.createElement("div", null, (0, v.Xx)("#CloudUpload_NotSupport"))
+            : null;
       }
       class St extends i.Component {
         constructor(e) {
@@ -6089,10 +6081,7 @@
           const { eventModel: e, lang: t } = this.props,
             n = e.GetNameWithFallback(t);
           if (c.xM.BHasEntityNameForID(e.appid, e.clanSteamID.GetAccountID())) {
-            return `${c.xM.GetEntityNameForID(
-              e.appid,
-              e.clanSteamID.GetAccountID(),
-            )}: ${n}`;
+            return `${c.xM.GetEntityNameForID(e.appid, e.clanSteamID.GetAccountID())}: ${n}`;
           }
           return n;
         }
@@ -6128,9 +6117,7 @@
               ? "app/" + t.appid
               : "group/" + t.clanSteamID.GetAccountID(),
             i = "l=" + (0, s.j_)(n);
-          return `${R.De.STORE_BASE_URL}${(0, B.x3)()}/download/${r}/${e}/${
-            t.GID
-          }?${i}`;
+          return `${R.De.STORE_BASE_URL}${(0, B.x3)()}/download/${r}/${e}/${t.GID}?${i}`;
         }
         render() {
           const {
@@ -6757,15 +6744,9 @@
           (null == c ? void 0 : c.item_movie_mp4) &&
           (null == c ? void 0 : c.item_movie_webm)
         ) {
-          const e = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == c ? void 0 : c.item_image_large
-            }`,
-            n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == c ? void 0 : c.item_movie_webm
-            }`,
-            r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-              null == c ? void 0 : c.item_movie_mp4
-            }`;
+          const e = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == c ? void 0 : c.item_image_large}`,
+            n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == c ? void 0 : c.item_movie_webm}`,
+            r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == c ? void 0 : c.item_movie_mp4}`;
           return i.createElement(
             "video",
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
@@ -6775,10 +6756,7 @@
           );
         }
         if (c) {
-          const n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${
-            (null == c ? void 0 : c.item_image_small) ||
-            (null == c ? void 0 : c.item_image_large)
-          }`;
+          const n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${(null == c ? void 0 : c.item_image_small) || (null == c ? void 0 : c.item_image_large)}`;
           return i.createElement("img", {
             className: e.className,
             src: n,
@@ -7234,8 +7212,8 @@
                   e >= o
                     ? "#EventDisplay_TimeBeginsOn"
                     : t >= o
-                    ? "#EventDisplay_TimeBeginsOn_Past"
-                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                      ? "#EventDisplay_TimeBeginsOn_Past"
+                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
               i.createElement(g, {
