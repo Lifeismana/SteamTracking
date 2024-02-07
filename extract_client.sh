@@ -45,8 +45,9 @@ do
 	unzip -lv "$z" | awk '{print $(NF-1),$NF}' | head -n-4 | tail -n+2  >> $DIR/ClientExtracted/ClientContentLinux.txt
 done
 
-sort -k 2 -o $DIR/ClientExtracted/ClientContentWindows.txt{,}
-sort -k 2 -o $DIR/ClientExtracted/ClientContentLinux.txt{,}
+#sort -k 2 -o $DIR/ClientExtracted/ClientContentWindows.txt{,}
+#sort -k 2 -o $DIR/ClientExtracted/ClientContentLinux.txt{,}
+
 #
 # PROTOBUF DUMP
 #
