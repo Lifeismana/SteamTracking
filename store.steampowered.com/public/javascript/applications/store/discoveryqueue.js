@@ -310,38 +310,32 @@
     },
     13043: (e, t, s) => {
       "use strict";
-      s.d(t, { p: () => u });
-      var n = s(85556),
-        r = s(47427),
-        a = s(82493),
-        i = s(4030),
-        o = s(20417),
-        l = s(37563),
-        c = s(35643);
-      function u(e) {
-        const { children: t, navTreeRef: s } = e,
-          u = (0, n._T)(e, ["children", "navTreeRef"]),
-          d = r.useRef(),
-          j = (0, o.BE)(d, s),
-          m = (0, l.id)(),
-          g = window.__virtual_keyboard_client;
-        if (m) {
+      s.d(t, { p: () => c });
+      var n = s(47427),
+        r = s(82493),
+        a = s(4030),
+        i = s(20417),
+        o = s(37563),
+        l = s(35643);
+      function c(e) {
+        const { children: t, navTreeRef: s, ...c } = e,
+          u = n.useRef(),
+          d = (0, i.BE)(u, s),
+          j = (0, o.id)(),
+          m = window.__virtual_keyboard_client;
+        if (j) {
           const e = window.__nav_tree_root;
-          return r.createElement(
-            a.Fe,
-            Object.assign({}, u, {
-              navTreeRef: j,
-              secondary: !0,
-              parentEmbeddedNavTree: e,
-            }),
-            r.createElement(
-              c.o5,
-              { factory: g },
-              r.createElement(i.O, null, t),
+          return n.createElement(
+            r.Fe,
+            { ...c, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
+            n.createElement(
+              l.o5,
+              { factory: m },
+              n.createElement(a.O, null, t),
             ),
           );
         }
-        return r.createElement(r.Fragment, null, t);
+        return n.createElement(n.Fragment, null, t);
       }
     },
     64936: (e, t, s) => {
@@ -355,11 +349,11 @@
         l = (s(29480), s(37563));
       class c {
         constructor() {
-          (this.bOpenEventLandingPage = !1),
-            (this.bIncludeFeaturedAsGameSource = !0),
-            (this.nOverrideDateNow = void 0),
-            (0, r.rC)(this);
+          (0, r.rC)(this);
         }
+        bOpenEventLandingPage = !1;
+        bIncludeFeaturedAsGameSource = !0;
+        nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -410,8 +404,7 @@
       const d = new Date(),
         j = Math.floor(d.getTime() / 1e3);
       function m() {
-        var e;
-        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : j;
+        return u.nOverrideDateNow ?? j;
       }
       function g() {
         return o.useMemo(() => m(), []);
@@ -422,13 +415,15 @@
     },
     89373: (e, t, s) => {
       "use strict";
-      s.d(t, { C: () => l });
-      var n = s(85556),
-        r = s(79545),
-        a = s(22791),
-        i = s(13557),
-        o = s(37563);
-      class l {
+      s.d(t, { C: () => o });
+      var n = s(79545),
+        r = s(22791),
+        a = s(13557),
+        i = s(37563);
+      class o {
+        m_transport = void 0;
+        m_dateSaleStart = new Date("2024-06-27T17:00:00Z");
+        m_dateSaleEnd = new Date("2024-07-11T17:00:00Z");
         BIsSaleActive() {
           const e = Date.now();
           return Boolean(
@@ -436,56 +431,50 @@
               e < this.m_dateSaleEnd.getTime(),
           );
         }
-        GetNumTradingCardsEarned() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            this.LazyInitTransport();
-            const e = { earned_today: 0, earned_lifetime: 0, eresult: 2 },
-              t = Date.now(),
-              s =
-                864e5 *
-                  Math.floor((t - this.m_dateSaleStart.getTime()) / 864e5) +
-                this.m_dateSaleStart.getTime(),
-              n = r.gA.Init(i.GZ);
-            let a = yield i.Ts.GetNumTradingCardsEarned(this.m_transport, n),
-              o = a.GetEResult();
-            return 1 !== o
-              ? ((e.eresult = o), e)
-              : ((e.earned_lifetime = a.Body().num_trading_cards()),
-                n.Body().set_timestamp_start(s / 1e3),
-                (a = yield i.Ts.GetNumTradingCardsEarned(this.m_transport, n)),
-                (o = a.GetEResult()),
-                1 != o
-                  ? ((e.eresult = o), e)
-                  : ((e.earned_today = a.Body().num_trading_cards()),
-                    (e.eresult = 1),
-                    e));
-          });
+        async GetNumTradingCardsEarned() {
+          this.LazyInitTransport();
+          const e = { earned_today: 0, earned_lifetime: 0, eresult: 2 },
+            t = Date.now(),
+            s =
+              864e5 * Math.floor((t - this.m_dateSaleStart.getTime()) / 864e5) +
+              this.m_dateSaleStart.getTime(),
+            r = n.gA.Init(a.GZ);
+          let i = await a.Ts.GetNumTradingCardsEarned(this.m_transport, r),
+            o = i.GetEResult();
+          return 1 !== o
+            ? ((e.eresult = o), e)
+            : ((e.earned_lifetime = i.Body().num_trading_cards()),
+              r.Body().set_timestamp_start(s / 1e3),
+              (i = await a.Ts.GetNumTradingCardsEarned(this.m_transport, r)),
+              (o = i.GetEResult()),
+              1 != o
+                ? ((e.eresult = o), e)
+                : ((e.earned_today = i.Body().num_trading_cards()),
+                  (e.eresult = 1),
+                  e));
         }
+        static s_Singleton;
         static Get() {
           return (
-            l.s_Singleton ||
-              ((l.s_Singleton = new l()),
-              "dev" == o.De.WEB_UNIVERSE &&
-                (window.g_SeasonalSaleStore = l.s_Singleton)),
-            l.s_Singleton
+            o.s_Singleton ||
+              ((o.s_Singleton = new o()),
+              "dev" == i.De.WEB_UNIVERSE &&
+                (window.g_SeasonalSaleStore = o.s_Singleton)),
+            o.s_Singleton
           );
         }
         LazyInitTransport() {
           if (!this.m_transport) {
-            const e = (0, o.kQ)("loyalty_webapi_token", "application_config");
+            const e = (0, i.kQ)("loyalty_webapi_token", "application_config");
             "string" == typeof e
-              ? (this.m_transport = new a.J(
-                  o.De.WEBAPI_BASE_URL,
+              ? (this.m_transport = new r.J(
+                  i.De.WEBAPI_BASE_URL,
                   e,
                 ).GetServiceTransport())
               : console.error("CSeasonalSaleStore failed to load webapi token");
           }
         }
-        constructor() {
-          (this.m_transport = void 0),
-            (this.m_dateSaleStart = new Date("2023-12-21T18:00:00Z")),
-            (this.m_dateSaleEnd = new Date("2024-01-04T18:00:00Z"));
-        }
+        constructor() {}
       }
     },
     71472: (e, t, s) => {
@@ -519,7 +508,7 @@
         r.delete(t),
           i(s) && r.append(t, s),
           n
-            ? e.replace(`?${r.toString()}`, Object.assign({}, e.location.state))
+            ? e.replace(`?${r.toString()}`, { ...e.location.state })
             : e.push(`?${r.toString()}`);
       }
       function l(e, t, s) {
@@ -554,7 +543,7 @@
             n.delete(e), i(s) && n.append(e, s);
           }
         s
-          ? e.replace(`?${n.toString()}`, Object.assign({}, e.location.state))
+          ? e.replace(`?${n.toString()}`, { ...e.location.state })
           : e.push(`?${n.toString()}`);
       }
       function d(e, t) {
@@ -602,18 +591,13 @@
           [p, b] = (0, n.useState)(!1),
           [E, D] = (0, n.useState)(!1),
           [f] = (0, l.vs)(t, { include_assets: !0 }),
-          y = (0, i.L)(),
-          w = n.useRef();
-        n.useEffect(() => {
-          var e;
-          return null === (e = w.current) || void 0 === e
-            ? void 0
-            : e.Activate(!0);
-        }, []);
+          w = (0, i.L)(),
+          y = n.useRef();
+        n.useEffect(() => y.current?.Activate(!0), []);
         const k = (0, v.id)(),
-          { eStoreDiscoveryQueueType: A, storePageFilter: S } =
+          { eStoreDiscoveryQueueType: S, storePageFilter: A } =
             n.useMemo(() => {
-              if ((null == g ? void 0 : g.length) > 0) {
+              if (g?.length > 0) {
                 const e = g.split("_"),
                   t = Number(e[0]);
                 let s;
@@ -630,15 +614,15 @@
           _ = n.useCallback(() => {
             b(!0);
           }, []),
-          T = (0, o.ZP)(A, S);
+          T = (0, o.ZP)(S, A);
         return s && f
           ? E
             ? null
             : n.createElement(
                 r.p,
                 {
-                  NavigationManager: y,
-                  navTreeRef: w,
+                  NavigationManager: w,
+                  navTreeRef: y,
                   navID: "DiscoveryQueueAppWidget",
                 },
                 n.createElement(
@@ -655,14 +639,13 @@
                   },
                   n.createElement("img", {
                     className: h().WidgetCapsule,
-                    src:
-                      null == f ? void 0 : f.GetAssets().GetSmallCapsuleURL(),
+                    src: f?.GetAssets().GetSmallCapsuleURL(),
                   }),
                   n.createElement(
                     "div",
                     { onClick: _, className: h().WidgetText },
                     (0, m.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == T ? void 0 : T.length) > 0 && ": " + T,
+                    T?.length > 0 && ": " + T,
                   ),
                   !k &&
                     n.createElement(
@@ -675,8 +658,8 @@
                       includeAppID: t,
                       bWizardVisible: p,
                       fnCloseModal: () => b(!1),
-                      eStoreDiscoveryQueueType: A,
-                      storePageFilter: S,
+                      eStoreDiscoveryQueueType: S,
+                      storePageFilter: A,
                     }),
                 ),
               )

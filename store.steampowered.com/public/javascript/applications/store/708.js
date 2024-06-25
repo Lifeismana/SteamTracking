@@ -54,13 +54,15 @@
     },
     89373: (e, t, a) => {
       "use strict";
-      a.d(t, { C: () => l });
-      var n = a(85556),
-        i = a(79545),
-        r = a(22791),
-        o = a(13557),
-        c = a(37563);
-      class l {
+      a.d(t, { C: () => c });
+      var n = a(79545),
+        i = a(22791),
+        r = a(13557),
+        o = a(37563);
+      class c {
+        m_transport = void 0;
+        m_dateSaleStart = new Date("2024-06-27T17:00:00Z");
+        m_dateSaleEnd = new Date("2024-07-11T17:00:00Z");
         BIsSaleActive() {
           const e = Date.now();
           return Boolean(
@@ -68,86 +70,76 @@
               e < this.m_dateSaleEnd.getTime(),
           );
         }
-        GetNumTradingCardsEarned() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            this.LazyInitTransport();
-            const e = { earned_today: 0, earned_lifetime: 0, eresult: 2 },
-              t = Date.now(),
-              a =
-                864e5 *
-                  Math.floor((t - this.m_dateSaleStart.getTime()) / 864e5) +
-                this.m_dateSaleStart.getTime(),
-              n = i.gA.Init(o.GZ);
-            let r = yield o.Ts.GetNumTradingCardsEarned(this.m_transport, n),
-              c = r.GetEResult();
-            return 1 !== c
-              ? ((e.eresult = c), e)
-              : ((e.earned_lifetime = r.Body().num_trading_cards()),
-                n.Body().set_timestamp_start(a / 1e3),
-                (r = yield o.Ts.GetNumTradingCardsEarned(this.m_transport, n)),
-                (c = r.GetEResult()),
-                1 != c
-                  ? ((e.eresult = c), e)
-                  : ((e.earned_today = r.Body().num_trading_cards()),
-                    (e.eresult = 1),
-                    e));
-          });
+        async GetNumTradingCardsEarned() {
+          this.LazyInitTransport();
+          const e = { earned_today: 0, earned_lifetime: 0, eresult: 2 },
+            t = Date.now(),
+            a =
+              864e5 * Math.floor((t - this.m_dateSaleStart.getTime()) / 864e5) +
+              this.m_dateSaleStart.getTime(),
+            i = n.gA.Init(r.GZ);
+          let o = await r.Ts.GetNumTradingCardsEarned(this.m_transport, i),
+            c = o.GetEResult();
+          return 1 !== c
+            ? ((e.eresult = c), e)
+            : ((e.earned_lifetime = o.Body().num_trading_cards()),
+              i.Body().set_timestamp_start(a / 1e3),
+              (o = await r.Ts.GetNumTradingCardsEarned(this.m_transport, i)),
+              (c = o.GetEResult()),
+              1 != c
+                ? ((e.eresult = c), e)
+                : ((e.earned_today = o.Body().num_trading_cards()),
+                  (e.eresult = 1),
+                  e));
         }
+        static s_Singleton;
         static Get() {
           return (
-            l.s_Singleton ||
-              ((l.s_Singleton = new l()),
-              "dev" == c.De.WEB_UNIVERSE &&
-                (window.g_SeasonalSaleStore = l.s_Singleton)),
-            l.s_Singleton
+            c.s_Singleton ||
+              ((c.s_Singleton = new c()),
+              "dev" == o.De.WEB_UNIVERSE &&
+                (window.g_SeasonalSaleStore = c.s_Singleton)),
+            c.s_Singleton
           );
         }
         LazyInitTransport() {
           if (!this.m_transport) {
-            const e = (0, c.kQ)("loyalty_webapi_token", "application_config");
+            const e = (0, o.kQ)("loyalty_webapi_token", "application_config");
             "string" == typeof e
-              ? (this.m_transport = new r.J(
-                  c.De.WEBAPI_BASE_URL,
+              ? (this.m_transport = new i.J(
+                  o.De.WEBAPI_BASE_URL,
                   e,
                 ).GetServiceTransport())
               : console.error("CSeasonalSaleStore failed to load webapi token");
           }
         }
-        constructor() {
-          (this.m_transport = void 0),
-            (this.m_dateSaleStart = new Date("2023-12-21T18:00:00Z")),
-            (this.m_dateSaleEnd = new Date("2024-01-04T18:00:00Z"));
-        }
+        constructor() {}
       }
     },
     1774: (e, t, a) => {
       "use strict";
-      a.d(t, { Pl: () => v, k8: () => D, Jm: () => f, $1: () => E });
+      a.d(t, { Pl: () => D, k8: () => h, Jm: () => f, $1: () => E });
       var n = a(47427),
         i = a(91618),
         r = a(86437),
         o = a(65255);
       var c = a(7769),
-        l = a.n(c),
-        s = a(58129),
-        d = a(95082),
-        _ = a(62613),
-        u = a(25006),
-        m = a(14609),
+        s = a.n(c),
+        l = a(58129),
+        _ = a(95082),
+        d = a(62613),
+        m = a(25006),
+        u = a(14609),
         p = a(13129),
         S = a(31846),
         g = a(39451);
       function E(e) {
-        var t;
-        const { spotlight: a } = e,
-          r = (0, u.YR)(a.url, "spotlight");
+        const { spotlight: t } = e,
+          a = (0, m.YR)(t.url, "spotlight");
         return n.createElement(
-          d.ZP,
+          _.ZP,
           {
-            appID:
-              "app" == (null === (t = a.item) || void 0 === t ? void 0 : t.type)
-                ? a.item.id
-                : null,
+            appID: "app" == t.item?.type ? t.item.id : null,
             feature: "spotlight",
           },
           n.createElement(
@@ -155,7 +147,7 @@
             {
               className: g.SpotlightCtn,
               onOKButton: () => {
-                window.location.href = r;
+                window.location.href = a;
               },
             },
             n.createElement(
@@ -166,31 +158,31 @@
                 {
                   className: (0, p.Z)(c.CapsuleDecorators, g.CapsuleDecorators),
                 },
-                a.has_live_broadcast && n.createElement(s.x, null),
+                t.has_live_broadcast && n.createElement(l.x, null),
               ),
-              a.open_in_new_window
+              t.open_in_new_window
                 ? n.createElement(
-                    m.ns,
-                    { href: r },
-                    n.createElement("img", { src: a.image_url, alt: a.title }),
+                    u.ns,
+                    { href: a },
+                    n.createElement("img", { src: t.image_url, alt: t.title }),
                   )
                 : n.createElement(
                     "a",
-                    { href: r },
-                    n.createElement("img", { src: a.image_url, alt: a.title }),
+                    { href: a },
+                    n.createElement("img", { src: t.image_url, alt: t.title }),
                   ),
             ),
             n.createElement(
               "div",
               { className: g.SpotlightTextCtn },
-              n.createElement("div", { className: g.SpotlightTitle }, a.title),
-              n.createElement("div", { className: g.SpotlightBody }, a.body),
+              n.createElement("div", { className: g.SpotlightTitle }, t.title),
+              n.createElement("div", { className: g.SpotlightBody }, t.body),
               n.createElement(
                 "div",
                 { className: g.BottomBarPriceInfo },
-                n.createElement(h, {
-                  discountBlock: a.discount_block,
-                  bIsSalePage: a.is_sale_page,
+                n.createElement(N, {
+                  discountBlock: t.discount_block,
+                  bIsSalePage: t.is_sale_page,
                 }),
               ),
             ),
@@ -198,34 +190,25 @@
         );
       }
       function f(e) {
-        var t, a;
-        const { spotlight: i } = e,
-          r = i.associated_item,
-          c = Object.assign(
-            {
-              is_weeklong_deals: "weeklong_deals" == i.spotlight_template,
-              url: i.spotlight_link_url,
-              image_url: o.De.MEDIA_CDN_URL + i.asset_url,
-              title: i.spotlight_title,
-              body: i.spotlight_body,
-            },
-            N(r),
-          );
+        const { spotlight: t } = e,
+          a = t.associated_item,
+          i = {
+            is_weeklong_deals: "weeklong_deals" == t.spotlight_template,
+            url: t.spotlight_link_url,
+            image_url: o.De.MEDIA_CDN_URL + t.asset_url,
+            title: t.spotlight_title,
+            body: t.spotlight_body,
+            ...b(a),
+          };
         if (
-          (!c.url && r && (c.url = o.De.STORE_BASE_URL + r.store_url_path),
-          (null ===
-            (a =
-              null === (t = null == r ? void 0 : r.best_purchase_option) ||
-              void 0 === t
-                ? void 0
-                : t.active_discounts) || void 0 === a
-            ? void 0
-            : a.length) > 0 && -1 !== i.spotlight_body.indexOf("%1$s"))
+          (!i.url && a && (i.url = o.De.STORE_BASE_URL + a.store_url_path),
+          a?.best_purchase_option?.active_discounts?.length > 0 &&
+            -1 !== t.spotlight_body.indexOf("%1$s"))
         ) {
           const e = new Date(
-            1e3 * r.best_purchase_option.active_discounts[0].discount_end_date,
+            1e3 * a.best_purchase_option.active_discounts[0].discount_end_date,
           );
-          c.body = i.spotlight_body.replace(
+          i.body = t.spotlight_body.replace(
             "%1$s",
             e.toLocaleTimeString(S.Yt.GetPreferredLocales(), {
               hour: "numeric",
@@ -235,19 +218,15 @@
             }),
           );
         }
-        return n.createElement(E, { spotlight: c });
+        return n.createElement(E, { spotlight: i });
       }
-      function v(e) {
-        var t;
-        const { dailyDeal: a } = e,
-          r = (0, u.YR)(a.target, "daily-deal");
+      function D(e) {
+        const { dailyDeal: t } = e,
+          a = (0, m.YR)(t.target, "daily-deal");
         return n.createElement(
-          d.ZP,
+          _.ZP,
           {
-            appID:
-              "app" == (null === (t = a.item) || void 0 === t ? void 0 : t.type)
-                ? a.item.id
-                : null,
+            appID: "app" == t.item?.type ? t.item.id : null,
             feature: "daily-deal",
           },
           n.createElement(
@@ -255,7 +234,7 @@
             {
               className: g.DailyDealCtn,
               onOKButton: () => {
-                window.location.href = r;
+                window.location.href = a;
               },
             },
             n.createElement(
@@ -263,50 +242,41 @@
               { className: g.DailyDealImageCtn },
               n.createElement(
                 "a",
-                { href: r },
-                n.createElement("img", { src: a.image }),
+                { href: a },
+                n.createElement("img", { src: t.image }),
               ),
             ),
             n.createElement(
               "div",
               { className: g.DailyDealTextCtn },
-              n.createElement("div", { className: g.DailyDealDesc }, a.desc),
-              n.createElement(h, {
-                discountBlock: a.discount_block,
-                bIsSalePage: a.is_sale_page,
+              n.createElement("div", { className: g.DailyDealDesc }, t.desc),
+              n.createElement(N, {
+                discountBlock: t.discount_block,
+                bIsSalePage: t.is_sale_page,
               }),
             ),
           ),
         );
       }
-      function D(e) {
-        var t, a;
+      function h(e) {
         const {
-            dailyDeal: { item: i },
+            dailyDeal: { item: t },
           } = e,
-          r = Object.assign(
-            {
-              end_date:
-                null ===
-                  (a =
-                    null === (t = i.best_purchase_option) || void 0 === t
-                      ? void 0
-                      : t.active_discounts[0]) || void 0 === a
-                  ? void 0
-                  : a.discount_end_date,
-              target: o.De.STORE_BASE_URL + i.store_url_path,
-              image:
-                ((c = i.assets),
-                (l = "header"),
-                o.De.MEDIA_CDN_URL +
-                  c.asset_url_format.replace("${FILENAME}", c[l])),
-            },
-            N(i),
-          );
-        var c, l;
-        return n.createElement(v, { dailyDeal: r });
+          a = {
+            end_date:
+              t.best_purchase_option?.active_discounts[0]?.discount_end_date,
+            target: o.De.STORE_BASE_URL + t.store_url_path,
+            image:
+              ((i = t.assets),
+              (r = "header"),
+              o.De.MEDIA_CDN_URL +
+                i.asset_url_format.replace("${FILENAME}", i[r])),
+            ...b(t),
+          };
+        var i, r;
+        return n.createElement(D, { dailyDeal: a });
       }
-      const h = (e) => {
+      const N = (e) => {
         const { discountBlock: t, bIsSalePage: a } = e;
         if (!t) return null;
         const i = e.discountBlock.hide_discount_percent_for_compliance && !0;
@@ -318,13 +288,13 @@
                   "div",
                   {
                     className: (0, p.Z)(
-                      l().StoreSalePriceWidgetContainer,
-                      l().Discounted,
+                      s().StoreSalePriceWidgetContainer,
+                      s().Discounted,
                     ),
                   },
                   n.createElement(
                     "div",
-                    { className: l().StoreSaleDiscountBox },
+                    { className: s().StoreSaleDiscountBox },
                     "Up to -",
                     t.discount_max,
                     "%",
@@ -333,27 +303,27 @@
               : i
                 ? n.createElement(
                     "div",
-                    { className: l().DiscountIconCtn },
-                    n.createElement(_.dCe, null),
+                    { className: s().DiscountIconCtn },
+                    n.createElement(d.dCe, null),
                   )
                 : n.createElement(
                     "div",
                     {
                       className: (0, p.Z)(
-                        l().StoreSalePriceWidgetContainer,
-                        l().Discounted,
+                        s().StoreSalePriceWidgetContainer,
+                        s().Discounted,
                       ),
                     },
                     t.discount_min === t.discount_max
                       ? n.createElement(
                           "div",
-                          { className: l().StoreSaleDiscountBox },
+                          { className: s().StoreSaleDiscountBox },
                           t.discount_min,
                           "%",
                         )
                       : n.createElement(
                           "div",
-                          { className: l().StoreSaleDiscountBox },
+                          { className: s().StoreSaleDiscountBox },
                           t.discount_min,
                           " - ",
                           t.discount_max,
@@ -380,21 +350,21 @@
                       "div",
                       {
                         className: (0, p.Z)(
-                          l().StoreSalePriceWidgetContainer,
-                          l().Discounted,
+                          s().StoreSalePriceWidgetContainer,
+                          s().Discounted,
                         ),
                       },
                       n.createElement(
                         "div",
-                        { className: l().DiscountIconCtn },
-                        n.createElement(_.dCe, null),
+                        { className: s().DiscountIconCtn },
+                        n.createElement(d.dCe, null),
                       ),
                       n.createElement(
                         "div",
-                        { className: l().StoreSaleDiscountedPriceCtn },
+                        { className: s().StoreSaleDiscountedPriceCtn },
                         n.createElement(
                           "div",
-                          { className: l().StoreSalePriceBox },
+                          { className: s().StoreSalePriceBox },
                           t.final_price,
                         ),
                       ),
@@ -403,46 +373,46 @@
                       "div",
                       {
                         className: (0, p.Z)(
-                          l().StoreSalePriceWidgetContainer,
-                          l().Discounted,
+                          s().StoreSalePriceWidgetContainer,
+                          s().Discounted,
                         ),
                       },
                       n.createElement(
                         "div",
-                        { className: l().StoreSaleDiscountBox },
+                        { className: s().StoreSaleDiscountBox },
                         t.discount_percent,
                         "%",
                       ),
                       n.createElement(
                         "div",
-                        { className: l().StoreSaleDiscountedPriceCtn },
+                        { className: s().StoreSaleDiscountedPriceCtn },
                         n.createElement(
                           "div",
-                          { className: l().StoreOriginalPrice },
+                          { className: s().StoreOriginalPrice },
                           t.orig_price,
                         ),
                         n.createElement(
                           "div",
-                          { className: l().StoreSalePriceBox },
+                          { className: s().StoreSalePriceBox },
                           t.final_price,
                         ),
                       ),
                     )
                 : n.createElement(
                     "div",
-                    { className: (0, p.Z)(l().StoreSalePriceWidgetContainer) },
+                    { className: (0, p.Z)(s().StoreSalePriceWidgetContainer) },
                     n.createElement(
                       "div",
-                      { className: l().StoreSaleDiscountedPriceCtn },
+                      { className: s().StoreSaleDiscountedPriceCtn },
                       n.createElement(
                         "div",
-                        { className: l().StoreSalePriceBox },
+                        { className: s().StoreSalePriceBox },
                         t.final_price,
                       ),
                     ),
                   );
       };
-      function N(e) {
+      function b(e) {
         return e
           ? {
               item: { type: (0, r.qE)(e.item_type), id: e.id },
@@ -459,18 +429,18 @@
     },
     84823: (e, t, a) => {
       "use strict";
-      a.d(t, { Eu: () => v, J8: () => E, gq: () => h, nk: () => S });
+      a.d(t, { Eu: () => D, J8: () => E, gq: () => N, nk: () => S });
       var n,
         i = a(27605),
         r = a(47427),
         o = a(31421),
         c = a(80886),
-        l = a(35714),
-        s = a.n(l),
-        d = a(62613),
-        _ = a(13129),
-        u = a(25006),
-        m = a(85305),
+        s = a(35714),
+        l = a.n(s),
+        _ = a(62613),
+        d = a(13129),
+        m = a(25006),
+        u = a(85305),
         p = a(61931);
       !(function (e) {
         (e.k_eBlock = "block"),
@@ -495,7 +465,7 @@
         return r.createElement(
           "span",
           {
-            className: (0, _.Z)({
+            className: (0, d.Z)({
               [p.StoreSalePriceWidget]: !0,
               [e.className]: Boolean(e.className),
               [p.StoreSaleReservationPrice]: t,
@@ -505,7 +475,7 @@
             r.createElement(
               "span",
               {
-                className: (0, _.Z)(
+                className: (0, d.Z)(
                   p.StoreSaleDiscountBox,
                   "StoreSaleDiscountBox",
                   e.bDiscountFromCoupon && p.FromCoupon,
@@ -517,19 +487,19 @@
             r.createElement(
               "div",
               {
-                className: (0, _.Z)({
+                className: (0, d.Z)({
                   [p.DiscountIconCtn]: !0,
                   bbcode_price_discount: i,
                 }),
               },
-              r.createElement(d.dCe, null),
+              r.createElement(_.dCe, null),
             ),
           Boolean(e.formatted_final_price) &&
             (Boolean(e.discount_percent && e.formatted_orig_price)
               ? r.createElement(
                   "div",
                   {
-                    className: (0, _.Z)({
+                    className: (0, d.Z)({
                       [p.StoreSaleDiscountedPriceCtn]: !0,
                       bbcode_price_ctn: i,
                     }),
@@ -537,7 +507,7 @@
                   r.createElement(
                     "div",
                     {
-                      className: (0, _.Z)({
+                      className: (0, d.Z)({
                         [p.StoreOriginalPrice]: !0,
                         StoreOriginalPrice: !0,
                         bbcode_price_orig: i,
@@ -548,7 +518,7 @@
                   r.createElement(
                     "div",
                     {
-                      className: (0, _.Z)({
+                      className: (0, d.Z)({
                         [p.StoreSalePriceBox]: !0,
                         bbcode_price_box: i,
                         [p.StoreSaleReservationPriceBox]: t,
@@ -561,7 +531,7 @@
               : r.createElement(
                   "div",
                   {
-                    className: (0, _.Z)({
+                    className: (0, d.Z)({
                       [p.StoreSalePriceBox]: !0,
                       bbcode_price_box: i,
                       [p.StoreSaleReservationPriceBox]: t,
@@ -599,15 +569,9 @@
           [a] = (0, c.ie)(e.compareID, {});
         if (!t || !a) return null;
         const n = (function (e, t) {
-          var a;
           if (
-            !(null == e
-              ? void 0
-              : e.GetBestPurchaseOption().final_price_in_cents) ||
-            !(null === (a = null == t ? void 0 : t.GetBestPurchaseOption()) ||
-            void 0 === a
-              ? void 0
-              : a.final_price_in_cents)
+            !e?.GetBestPurchaseOption().final_price_in_cents ||
+            !t?.GetBestPurchaseOption()?.final_price_in_cents
           )
             return;
           return (
@@ -627,25 +591,25 @@
           ? null
           : r.createElement("span", { className: p.StorePriceSavings }, n);
       });
-      function v(e) {
+      function D(e) {
         const t = Number(e.args.packageid),
           a = Number(e.args.compareid);
         return t && a
           ? r.createElement(f, { packageID: t, compareID: a })
           : null;
       }
-      const D = (e) => {
-        const t = (0, u.bJ)(),
+      const h = (e) => {
+        const t = (0, m.bJ)(),
           a = (0, o.mY)(t);
-        return r.createElement(m.RJ, {
+        return r.createElement(u.RJ, {
           snr: a,
           appID: e.appid,
-          classOverride: (0, _.Z)(s().WishlistButtonNotTop, "WishlistButton"),
+          classOverride: (0, d.Z)(l().WishlistButtonNotTop, "WishlistButton"),
         });
       };
-      function h(e) {
+      function N(e) {
         const t = Number(e.args.appid);
-        return t ? r.createElement(D, { appid: t }) : null;
+        return t ? r.createElement(h, { appid: t }) : null;
       }
     },
     2324: (e, t, a) => {
