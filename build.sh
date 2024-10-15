@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Update
-git submodule update --remote --merge
+git submodule update --remote --depth 1
 
 # ProtobufDumper
 cd SteamKit
