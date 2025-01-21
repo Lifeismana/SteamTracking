@@ -768,6 +768,9 @@ html.tablet .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
     padding-bottom: 8px;
   }
 }
+.ContentHubSalePage .contenthubmaincarousel {
+  overflow-x: hidden;
+}
 html.tablet .ContentHubSalePage .contenthubmaincarousel {
   max-width: 100%;
   width: 100%;
@@ -857,6 +860,7 @@ html.tablet .ContentHubSalePage .contenthubmaincarousel.expanded {
 }
 .ContentHubSalePage .SaleSectionTabListContainer {
   position: unset;
+  overflow-x: hidden;
 }
 .ContentHubSalePage
   .SaleSectionTabListContainer
