@@ -13,6 +13,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		private bool $UseCache = true;
 		private bool $ExtractClientArchives = false;
 		private bool $DumpJavascriptFiles = false;
+		private bool $FixCssFiles = false;
 		private bool $UpdateManifestUrls = false;
 		private bool $UpdateSSRUrls = false;
 
@@ -174,6 +175,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			{
 				$this->Log( '{lightblue}Extracting client archives' );
 				$this->DumpJavascriptFiles = true;
+				$this->FixCssFiles = true;
 
 				$this->RunCommand( escapeshellarg( PHP_BINARY ) . ' tools/extract_client.php' );
 			}
@@ -185,6 +187,13 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				$this->RunCommand( 'node tools/dump_javascript_protobufs.mjs' );
 				$this->RunCommand( 'node tools/dump_javascript_urls.mjs' );
 				$this->RunCommand( 'node tools/dump_javascript_svg.mjs' );
+			}
+
+			if( $this->FixCssFiles )
+			{
+				$this->Log( '{lightblue}Fixing CSS files' );
+
+				system( 'node generate_readable_css.mjs' );
 			}
 
 			$this->Log( '{lightblue}Done' );
@@ -662,6 +671,11 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
+
+				if( str_ends_with( $File, '.css' ) || str_ends_with( $File, '.js' ) )
+				{
+					$this->FixCssFiles = true;
+				}
 
 				return true;
 			}
