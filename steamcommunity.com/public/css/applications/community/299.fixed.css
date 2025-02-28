@@ -1,0 +1,110 @@
+.Hover {
+  position: fixed;
+  background: #ccc;
+  color: #000;
+  padding: 4px;
+}
+.Link {
+  font-size: 12px;
+}
+.LinkHelp {
+  font-size: 10px;
+  font-weight: italic;
+}
+.ClanImageContainer {
+  position: relative;
+  display: inline-block;
+}
+.ClanImageContainer .ImageControls {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: calc(100% - 16px);
+  min-width: fit-content;
+  opacity: 1;
+  transition: opacity .25s;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
+}
+.ClanImageContainer:not(.Hovered)
+  .ImageControls {
+  opacity: 0;
+  pointer-events: none;
+}
+.ClanImageModalContent {
+  width: 600px;
+}
+.ClanImageModalMode {
+  margin-top: 12px;
+}
+.ClanImageModalMode:not(.Active) {
+  display: none;
+}
+.PreviewYoutubeEditor {
+  position: relative;
+  display: inline-block;
+}
+.PreviewYoutubeEditor.Selected .SelectionOverlay {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 255, 0.25);
+  z-index: 1;
+}
+.PreviewYoutubeEditor .EditHover {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 2;
+}
+.PreviewYoutubeEditorModal .Error {
+  color: red;
+  font-weight: bold;
+}
+.Column {
+  position: relative;
+  flex-grow: 1;
+}
+.controls {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  opacity: 1;
+  transition: opacity .25s;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
+}
+.EditorCtn {
+  position: relative;
+}
+button.DialogButton.AddNew {
+  margin-left: 10px;
+  margin-bottom: 16px;
+}
+.DialogCtn {
+  min-width: 500px;
+}
+.ParticipantRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ParticipantRow > div {
+  margin-right: 8px;
+}
+.EventDescriptionField.DialogTextInputBase {
+  width: 100%;
+  padding: 11px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.2);
+  outline: none;
+}

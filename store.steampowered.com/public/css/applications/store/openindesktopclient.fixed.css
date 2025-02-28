@@ -1,0 +1,63 @@
+.OpenInBannerContainer {
+  width: 100%;
+  background-color: #2681da;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  position: relative;
+}
+.OpenInBannerContent {
+  display: flex;
+  justify-content: start;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 10px;
+  width: 100%;
+  max-width: 960px;
+  color: #c6d4df;
+}
+.ValveOnly {
+  color: orange;
+  padding-top: 5px;
+  padding-left: 5px;
+  font-size: 15px;
+  position: absolute;
+}
+.BannerMessage {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: #cee1f3;
+}
+.BannerMessage .BannerTitle {
+  line-height: 17px;
+}
+.BannerMessage .BannerTitle b {
+  color: #fff;
+}
+.BannerButtonContainer {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.BannerButtonContainer .BannerButton {
+  cursor: pointer;
+  align-content: center;
+  padding: 10px 20px;
+  background-color: #fefefed1;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  color: #3d7291;
+  font-weight: 600;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+  border-radius: 2px;
+}
+.BannerButtonContainer .BannerButton:hover {
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}

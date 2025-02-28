@@ -1,0 +1,324 @@
+.GrantAwardModal {
+  font-size: 14px;
+  font-family: "Motiva Sans", Sans-serif;
+  color: #e4e4e4;
+  background-color: #1d3f5f;
+}
+.GrantAwardModal
+  .Header
+  .Title {
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.GrantAwardModal
+  .Header
+  .Description {
+  font-size: 14px;
+  color: #66c0f4;
+}
+.GrantAwardModal .ButtonContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-height: 485px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 910px) {
+  .GrantAwardModal .ButtonContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button {
+  padding: 8px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button:hover,
+.GrantAwardModal
+  .ButtonContainer
+  .Button.Selected {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button.Selected {
+  border-color: #66c0f4;
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button.Disabled:hover,
+.GrantAwardModal
+  .ButtonContainer
+  .Button.Disabled {
+  background-color: unset;
+  cursor: unset;
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button
+  .IconCtn
+  img {
+  width: 80px;
+  height: 80px;
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button
+  .Label {
+  color: #66c0f4;
+  letter-spacing: 0.05em;
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button
+  .Points {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button.Disabled
+  .IconCtn
+  img,
+.GrantAwardModal
+  .ButtonContainer
+  .Button.Disabled
+  .Label,
+.GrantAwardModal
+  .ButtonContainer
+  .Button.Disabled
+  .Points {
+  opacity: 0.25;
+}
+.GrantAwardModal
+  .ButtonContainer
+  .Button
+  .IconCheckMark {
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  color: #5b7e0f;
+}
+.GrantAwardModal .Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 910px) {
+  .GrantAwardModal .Footer {
+    display: block;
+  }
+}
+.GrantAwardModal
+  .Footer
+  .Left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.GrantAwardModal
+  .Footer
+  .Left
+  .BalanceIcon {
+  width: 32px;
+  height: 32px;
+  padding-right: 4px;
+}
+.GrantAwardModal
+  .Footer
+  .Left
+  .BalanceDetails {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2em;
+}
+.GrantAwardModal
+  .Footer
+  .Left
+  .BalanceDetails
+  .BalanceLabel {
+  color: #66c0f4;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.GrantAwardModal
+  .Footer
+  .Left
+  .BalanceDetails
+  .BalanceAmount {
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+.GrantAwardModal
+  .Footer
+  .Right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (max-width: 910px) {
+  .GrantAwardModal
+    .Footer
+    .Right {
+    padding-top: 10px;
+    align-items: center;
+  }
+}
+.GrantAwardModal
+  .Footer
+  .Right
+  .Actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.GrantAwardModal
+  .Footer
+  .Right
+  .Actions
+  .Action {
+  padding-left: 12px;
+  min-width: 150px;
+}
+@media screen and (max-width: 910px) {
+  .GrantAwardModal
+    .Footer
+    .Right
+    .Actions
+    .Action {
+    min-width: 100px;
+  }
+}
+.GrantAwardModal
+  .Footer
+  .FooterLink {
+  padding-top: 8px;
+  font-size: 12px;
+  color: #189ad3;
+}
+.Divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+.ConfirmContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+.ConfirmContainer .ConfirmAwardImage {
+  height: 220px;
+}
+@media screen and (max-width: 910px) {
+  .ConfirmContainer .ConfirmAwardImage {
+    height: 200px;
+  }
+}
+.ConfirmContainer .ConfirmText {
+  padding-top: 26px;
+  max-width: 360px;
+  text-align: center;
+}
+.ConfirmContainer
+  .ConfirmText
+  .AwardName {
+  color: #66c0f4;
+  font-weight: 500;
+}
+.ConfirmContainer
+  .ConfirmText
+  .TimePeriod {
+  text-decoration: underline;
+}
+.ConfirmContainer.Visible {
+  opacity: 1;
+}
+.LoadingContainer,
+.SuccessContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+.LoadingContainer.Visible,
+.SuccessContainer.Visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.LoadingContainer .SuccessText,
+.SuccessContainer .SuccessText {
+  font-size: 16;
+  padding-top: 24px;
+}
+.InitialLoading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  min-height: 300px;
+}
+.ErrorContainer {
+  padding: 20px;
+}
+.ErrorContainer .ErrorText {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e4e4e4;
+}
+.PointsAmount {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+.PointsAmount .PointsAmountIcon {
+  width: 16px;
+  height: 16px;
+  padding-right: 2px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+.NotEnoughPoints {
+  font-size: 12px;
+  opacity: 0.6;
+}
+.UnstyledButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.UnstyledButton a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  margin: 0px !important;
+  padding: 0px;
+}

@@ -1,0 +1,15 @@
+.ScrollPanel {
+  position: relative;
+}
+.ScrollY,
+.ScrollBoth {
+  overflow-y: auto;
+  scroll-padding-top: 20px;
+  scroll-padding-bottom: 20px;
+}
+.ScrollX,
+.ScrollBoth {
+  overflow-x: auto;
+  scroll-padding-left: 20px;
+  scroll-padding-right: 20px;
+}

@@ -1,0 +1,81 @@
+.Container {
+  padding-top: 5px;
+}
+.Container h2 {
+  font-family: "Motiva Sans", Arial, Sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  padding-top: 2px;
+}
+@media screen and (max-width: 910px) {
+  .StoreHeaderAdjust {
+    margin-top: 58px;
+  }
+}
+.SectionButtonCtn {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: -21px;
+  margin-top: -5px;
+}
+.SectionButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 15px;
+  line-height: normal;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  bottom: 30px;
+}
+.SectionButton:hover {
+  border: 1px solid #fff;
+}
+.EventsSummariesCtn {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  overflow-x: auto;
+}
+.BasicUI .EventsSummariesCtn {
+  margin: unset;
+  gap: var(--gpSpace-Gap);
+}
+.LatestUpdateButtonCtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.LatestUpdateIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.LatestUpdateIcon svg {
+  height: 20px;
+  width: 20px;
+  fill: #fff;
+}
+.LatestUpdateButton {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 15px;
+  line-height: normal;
+  width: fit-content;
+  cursor: pointer;
+}
+.LatestUpdateButton:hover {
+  border: 1px solid #fff;
+}
