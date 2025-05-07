@@ -1,0 +1,289 @@
+.BannerContainer {
+  padding: 12px 0px;
+}
+.BannerHeader {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5;
+}
+.BannerContentDesktop,
+.BannerContent {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #3b5a7280;
+  align-items: center;
+  transition: background-color .2s ease;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media screen and (min-width: 1280px) {
+  .BannerContentDesktop,
+  .BannerContent {
+    padding: 16px 24px;
+  }
+}
+.BannerContentDesktop:focus-within,
+.BannerContent:focus-within {
+  background-color: #678ba670;
+}
+.BannerContentDesktop {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.BannerContentDesktop .LearnMore {
+  font-size: 14px;
+}
+.DeveloperBlockLinkDesktop {
+  padding-left: 10px;
+  text-decoration: underline;
+}
+.CategoryIcon {
+  padding-right: 8px;
+  vertical-align: middle;
+}
+.LearnMoreCtn {
+  width: 100%;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  height: 28px;
+  display: flex;
+  gap: 6px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.LearnMoreCtn .LearnMorePC {
+  background-color: #7f919f;
+  font-size: 12px;
+}
+.LearnMoreCtn a:hover {
+  cursor: pointer;
+}
+.LearnMorePC {
+  font-size: 1.3em;
+}
+.LearnMore {
+  font-size: 16px;
+}
+.LearnMorePC,
+.LearnMore {
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #1a9fff;
+  border-radius: 2px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
+  transition-property: color, background-color, border-radius;
+  transition-duration: .1s;
+  transition-timing-function: ease;
+  display: flex;
+}
+.LearnMorePC:hover,
+.LearnMore:hover {
+  color: #fff;
+  background-color: #0bf;
+  cursor: pointer;
+}
+.LearnMorePC.gpfocus,
+.LearnMore.gpfocus {
+  background-color: #fff;
+  border-radius: 0px;
+  color: #000;
+}
+.DialogHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.DialogTitle {
+  display: flex;
+  flex-direction: column;
+  font: var(--gpText-HeadingLarge);
+  color: #fff;
+}
+.AppTitleCategory {
+  padding-left: 8px;
+}
+.AppTitleCategory .CategoryIcon {
+  padding-top: 1px;
+  width: 26px;
+}
+.CompatibilityDetailsStillLearning {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.CompatibilityDetailsContainerDesktop,
+.CompatibilityDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-height: 85vh;
+}
+.CompatibilityDetailsContainerDesktop .CompatibilityDetailsInterior_NoScroll,
+.CompatibilityDetailsContainerDesktop .CompatibilityDetailsInterior_Scroll,
+.CompatibilityDetailsContainer .CompatibilityDetailsInterior_NoScroll,
+.CompatibilityDetailsContainer .CompatibilityDetailsInterior_Scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex: 1;
+  padding-right: 15px;
+}
+.CompatibilityDetailsContainerDesktop .CompatibilityDetailsInterior_NoScroll::-webkit-scrollbar,
+.CompatibilityDetailsContainer .CompatibilityDetailsInterior_NoScroll::-webkit-scrollbar {
+  display: none;
+}
+.CompatibilityDetailsContainerDesktop .CompatibilityDetailsInterior_Scroll::-webkit-scrollbar,
+.CompatibilityDetailsContainer .CompatibilityDetailsInterior_Scroll::-webkit-scrollbar {
+  display: inline;
+  padding-left: 20px;
+}
+.CompatibilityDetailsRow {
+  padding-bottom: 10px;
+  display: inline-flex;
+  font-size: 14px;
+  word-break: break-word;
+  color: #fff;
+  width: 100%;
+}
+.CompatibilityDetailRatingSummary {
+  padding-bottom: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+.CompatibilityDetailRatingSummary .Verified {
+  font-weight: bold;
+  color: #59bf40;
+}
+.CompatibilityDetailRatingSummary .Playable {
+  font-weight: bold;
+  color: #ffc82c;
+}
+.CompatibilityDetailRatingSummary .Unsupported {
+  font-weight: bold;
+  color: #7c8ea3;
+}
+.CompatibilityDetailRatingDescription {
+  vertical-align: middle;
+  font-size: 14px;
+}
+.CompatibilityDetailRatingDescription .Verified {
+  color: #59bf40;
+}
+.CompatibilityDetailRatingDescription .Playable {
+  color: #ffc82c;
+}
+.CompatibilityDetailRatingDescription .Unsupported {
+  color: #7c8ea3;
+}
+.CompatibilityDetailsSeparator {
+  height: 1px;
+  background-color: #5b5b5b;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.CompatibilityDetailsResultIcon {
+  height: 20px;
+  width: 20px;
+  padding-right: 15px;
+  flex-shrink: 0;
+}
+.CompatabilityDetailsNoteContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 0px;
+}
+.CompatibilityNotes {
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.CompatibilityDetailsNoteRow {
+  padding-left: 35px;
+  padding-bottom: 5px;
+  font-style: italic;
+  display: inline-flex;
+  font-size: 14px;
+  color: #a9a9a9;
+  word-break: break-word;
+}
+.DeveloperBlogYButton svg {
+  vertical-align: bottom;
+  height: 18px;
+  width: 18px;
+}
+.DeveloperBlogYButton {
+  padding-left: 10px;
+  display: inline-block;
+}
+.Divider {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 1px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.DeveloperComments_Anchor {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  cursor: pointer;
+}
+.DeveloperComments_Icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yIDRWMjBWMjRMNyAyMEgyNFY0SDJaTTM0IDEyVjMyTDI5IDI4SDEyVjI0SDI4VjEySDM0WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+.DeveloperComments_LinkNoIcon {
+  vertical-align: middle;
+}
+.DeveloperComments_LinkIcon {
+  vertical-align: middle;
+  color: var(--gpStoreLightestGrey);
+  font-size: 14px;
+  line-height: 20px;
+}
+.Dark .Background {
+  color: #0e141b;
+}
+.Dark .Foreground {
+  color: #fff;
+}
+.Light .Background {
+  color: #fff;
+}
+.Light .Foreground {
+  color: #0e141b;
+}
+.Knockout {
+  color: #fff;
+}
+.SizeSmall {
+  width: auto;
+  height: 16px;
+}
+.SizeMedium {
+  width: auto;
+  height: 22px;
+}
+.SizeLarge {
+  width: auto;
+  height: 36px;
+}
+.ChordSummary.SizeSmall {
+  margin-right: 20px;
+}

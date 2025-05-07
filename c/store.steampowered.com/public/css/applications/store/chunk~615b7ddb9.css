@@ -1,0 +1,1483 @@
+.ProgressBar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-progress-bar-background);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.ProgressBar::after {
+  content: "";
+  display: block;
+  width: calc(100% * var(--percent));
+  height: 100%;
+  background-color: var(--color-progress-bar-foreground);
+}
+.ProgressBar.AnimateProgress::after {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  background-color: var(--color-progress-bar-foreground);
+  background-position-x: 0px;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  animation: _2SA1xV5w3BGirkDWosGYoX 2s linear infinite forwards;
+}
+.ProgressBar.AnimateProgress.Indeterminate::after {
+  width: 100%;
+  background-color: transparent;
+}
+@keyframes _2SA1xV5w3BGirkDWosGYoX {
+  0% {
+    background-position-x: calc(0% - 250px);
+  }
+  100% {
+    background-position-x: calc(100% + 250px);
+  }
+}
+.Circular {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Circular.Full svg {
+  filter: drop-shadow(0 0 2px #000000) drop-shadow(0 0 16px #1a9fff)
+    drop-shadow(10px 10px 16px #1a9fff);
+}
+.DiscoveryQueueCarouselCtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #dcdedf;
+  scrollbar-width: none;
+}
+.DiscoveryQueueCarouselCtn .TextLink {
+  color: #1a9fff;
+  cursor: pointer;
+  transition: color .1s ease;
+  text-align: center;
+}
+.DiscoveryQueueCarouselCtn .TextLink:hover {
+  color: #fff;
+}
+.DiscoveryQueueApp {
+  background: linear-gradient(180deg, #2a475e 0%, #1b2838 80%);
+  scroll-snap-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  outline: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-areas: "video info";
+  position: relative;
+}
+@media screen and (max-aspect-ratio: 10 / 9) {
+  .DiscoveryQueueApp {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "video" "info";
+  }
+}
+.DiscoveryQueueApp::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  z-index: 1;
+  box-sizing: border-box;
+  outline-offset: 2px;
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  transition: opacity .3s ease;
+  opacity: 0;
+}
+.DiscoveryQueueApp.gpfocus::after {
+  opacity: 1;
+}
+.DiscoveryQueueWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 80% 1fr;
+  grid-template-rows: 1fr 50px 50px auto 50px 1fr;
+  grid-template-areas: "spacer spacer spacer" "leftArrow name rightArrow" "leftArrow controls rightArrow" "leftArrow content rightArrow" "leftArrow pips rightArrow" "bottomspacer bottomspacer bottomspacer";
+  margin: auto 0px;
+  width: 100%;
+  height: 100%;
+  animation-name: brzQbY6Z8TH8Ww-rFL4E0;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  animation-delay: 0s;
+}
+@media screen and (min-aspect-ratio: 10 / 6) {
+  .DiscoveryQueueWrapper {
+    grid-template-columns: 1fr 160vh 1fr;
+  }
+}
+.BasicUI .DiscoveryQueueWrapper {
+  max-width: initial;
+  grid-template-columns: 7% 86% 7%;
+}
+@media screen and (max-height: 500px) {
+  .DiscoveryQueueWrapper {
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 1fr 50px auto 1fr;
+    grid-template-areas: "leftArrow spacer rightArrow" "leftArrow controls rightArrow" "leftArrow content rightArrow" "leftArrow pips rightArrow";
+  }
+}
+@media screen and (max-width: 500px) {
+  .DiscoveryQueueWrapper {
+    grid-template-columns: 5% 90% 5%;
+  }
+}
+.DiscoveryQueueItemsCtn {
+  grid-area: content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding-top: 39.4%;
+}
+.BasicUI .DiscoveryQueueItemsCtn {
+  padding-top: 39.7%;
+}
+@media screen and (max-aspect-ratio: 10 / 9) {
+  .DiscoveryQueueItemsCtn {
+    padding-top: calc(56% + 35vh);
+  }
+}
+.DiscoveryQueueItemPositioner {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform .5s ease, filter .5s ease;
+  z-index: 4;
+  filter: brightness(0.5) saturate(0.2);
+}
+.DiscoveryQueueItemPositioner .DiscoveryQueueApp {
+  transition: transform .5s ease;
+  transform: scale(0.8);
+}
+.DiscoveryQueueItemPositioner .DiscoveryQueueApp.Selected {
+  transform: unset;
+}
+.DiscoveryQueueItemPositioner.InRange:not(
+    .Dragging
+  ).Selected {
+  box-shadow: 0 0 20px #000;
+}
+.DiscoveryQueueItemPositioner.Dragging {
+  transition: filter .5s ease;
+}
+.DiscoveryQueueItemPositioner.FarLeft {
+  transform: translateX(calc(-150vw + var(--dragOffsetX)));
+}
+.DiscoveryQueueItemPositioner.Left {
+  transform: translateX(calc(-75vw + var(--dragOffsetX)));
+}
+.DiscoveryQueueItemPositioner.Current {
+  transform: translateX(var(--dragOffsetX));
+}
+.DiscoveryQueueItemPositioner.Right {
+  transform: translateX(calc(75vw + var(--dragOffsetX)));
+}
+.DiscoveryQueueItemPositioner.FarRight {
+  transform: translateX(calc(150vw + var(--dragOffsetX)));
+}
+.DiscoveryQueueItemPositioner.Selected {
+  z-index: 5;
+  filter: unset;
+}
+@keyframes brzQbY6Z8TH8Ww-rFL4E0 {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.AppDetailsCtn {
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  cursor: default;
+}
+.AppDetailsCtn .AppDetailsCtnTop {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: auto auto auto 1fr;
+  grid-template-areas: "capsule appInfo" "tags tags" "review review" "relevance relevance";
+  padding: calc(8px + .6vw);
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  gap: 8px 16px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-mask-image: linear-gradient(black 94%, transparent);
+  mask-image: linear-gradient(black 94%, transparent);
+  scrollbar-width: none;
+}
+.BasicUI .AppDetailsCtn .AppDetailsCtnTop {
+  padding: 12px;
+  grid-template-areas: "capsule capsule" "appInfo appInfo" "tags tags" "review review";
+}
+@media screen and (max-aspect-ratio: 10 / 9) {
+  .AppDetailsCtn .AppDetailsCtnTop {
+    grid-template-columns: 15% auto;
+    grid-template-areas: "capsule appInfo" "capsule tags" "capsule review" "capsule relevance";
+  }
+}
+@media screen and (max-aspect-ratio: 10 / 9) and (max-width: 600px) {
+  .AppDetailsCtn .AppDetailsCtnTop {
+    gap: 8px;
+    grid-template-columns: 25% auto;
+    grid-template-areas: "capsule appInfo" "capsule tags" "review review" "relevance relevance";
+  }
+}
+.CapsuleLink {
+  grid-area: capsule;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+}
+.CapsuleLink .AppLibraryHero {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.BasicUI .CapsuleLink .AppLibraryHero {
+  display: none;
+}
+.CapsuleLink .AppHeader {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.BasicUI .CapsuleLink .AppHeader {
+  display: block;
+}
+.RightColumn {
+  grid-area: appInfo;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.RightColumn .AppName {
+  font-size: clamp(18px, 1.5vw, 40px);
+  padding: 0 0 6px 0;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.BasicUI .RightColumn .AppName {
+  font-size: 15px;
+  font-weight: 400;
+}
+@media screen and (max-width: 1200px) {
+  .RightColumn {
+    font-size: 15px;
+  }
+}
+.AppTagsCtn {
+  grid-area: tags;
+  display: flex;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  margin-right: -16px;
+  overflow: hidden;
+  min-height: 21px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 4px;
+}
+.BasicUI .AppTagsCtn {
+  margin: 2px 0 2px -4px;
+  padding: 0;
+  flex-wrap: wrap;
+  max-height: 39px;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.BasicUI .AppTagsCtn .TagEntry {
+  font-size: 11px;
+}
+.AppTagsCtn .TagEntry {
+  height: fit-content;
+  background: rgba(14, 20, 27, 0.3);
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 2px 6px;
+  color: var(--gpStoreLighterGrey);
+}
+.AppReviews {
+  grid-area: review;
+  padding-bottom: 8px;
+}
+.AppReviews .ReviewScore {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  padding: unset;
+}
+.BasicUI .AppReviews .ReviewScore {
+  font-size: 12px;
+}
+@media screen and (max-width: 1200px) {
+  .AppReviews .ReviewScore {
+    font-size: 12px;
+  }
+}
+.RelevantCtn {
+  padding: 0;
+  border-top: 1px solid #acb2c924;
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0px;
+  overflow: hidden;
+}
+.RelevantColumn {
+  flex-grow: 1;
+}
+.RelevantItem {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  margin-top: 0px;
+  display: flex;
+}
+.RelevantCheck {
+  align-self: flex-start;
+}
+.RelevantCheck svg {
+  width: 12px;
+  fill: var(--gpStoreLighterGrey);
+  vertical-align: text-top;
+  margin-right: 5px;
+}
+.IgnoreLink {
+  font-size: 12px;
+  margin-bottom: -8px;
+}
+.BasicUI .IgnoreLink {
+  display: none;
+}
+.AppActionButtonsCtn {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: calc(8px + .6vw);
+  padding-top: 0px;
+}
+.AppActionButtonsCtn .AppActionJustButtonsCtn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.AppActionButtonsCtn .AppActionJustButtonsCtn .QueueButton {
+  flex-grow: 1;
+  max-width: 300px;
+}
+.AppActionButtonsCtn .ButtonsRowWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.IgnoredCtn {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  z-index: 0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 16px;
+  background-color: rgba(33, 52, 71, 0.6);
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity .2s ease .1s;
+}
+.IgnoredCtn.Active {
+  opacity: 1;
+  backdrop-filter: blur(40px);
+  transition: opacity .2s ease;
+  z-index: 100;
+}
+.IgnoredCtn .IgnoredInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+  position: absolute;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .1s ease-in, transform .15s ease-in;
+}
+.IgnoredCtn .IgnoredInfo .IgnoredTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+.IgnoredCtn .IgnoredInfo .IgnoredDescription {
+  font-size: 14px;
+  opacity: 0.8;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #acb2c924;
+  width: 50%;
+  text-align: center;
+}
+.BasicUI
+  .IgnoredCtn
+  .IgnoredInfo
+  .UndoIgnoreButton {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: unset;
+}
+.IgnoredCtn .IgnoredInfo.Active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity .3s ease, transform .4s ease;
+}
+.AppDesc {
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.YGlyph {
+  vertical-align: text-top;
+}
+.SummaryContentCtn {
+  display: flex;
+  flex-direction: column;
+  color: var(--gpStoreLighterGrey);
+  justify-content: center;
+  align-items: center;
+  row-gap: 12px;
+  user-select: none;
+  flex: auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.SummaryContentCtn .SummaryTitle {
+  font-size: calc(12px + .8vw);
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.SummaryContentCtn .YourStats {
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+.SummaryContentCtn .SummaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  max-width: 720px;
+}
+.SummaryContentCtn
+  .SummaryGrid
+  .GridItem:nth-child(2) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.SummaryContentCtn .SummaryGrid .GridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  padding-bottom: 0px;
+}
+.SummaryContentCtn
+  .SummaryGrid
+  .GridItem
+  .GridTitle {
+  font-weight: 700;
+  font-size: 12px;
+}
+.SummaryContentCtn
+  .SummaryGrid
+  .GridItem
+  .GridNumber {
+  font-size: calc(22px + .4vw);
+  color: #fff;
+  font-weight: 800;
+}
+.SummaryContentCtn
+  .SummaryGrid
+  .GridItem
+  .GridSubTitle {
+  font-size: 14px;
+}
+.SummaryContentCtn .SummaryActionButtonsCtn {
+  display: flex;
+  column-gap: 8px;
+  margin-top: 1vw;
+}
+.TopBarCtn {
+  grid-area: controls;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: normal;
+}
+.LearnMoreLink {
+  display: inline-block;
+  color: #1a9fff;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color .1s ease, background-color .1s ease;
+}
+.LearnMoreLink:hover {
+  color: #fff;
+  background-color: #acb2c924;
+  border-radius: 2px;
+}
+.LearnMoreLink:visited {
+  color: #1a9fff;
+}
+.LearnMoreLink.gpfocus {
+  color: #fff;
+  background-color: #acb2c924;
+}
+.ControlsCtn {
+  display: flex;
+  column-gap: 8px;
+}
+.QueueButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 10px;
+  color: #dcdedf;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 2px;
+  box-shadow: none;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #acb2c924;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 8px 16px;
+  transition: background-color .1s ease, border-radius .1s ease;
+}
+.QueueButton.Disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.QueueButton.Primary {
+  background-color: #1a9fff;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+}
+.QueueButton.Primary:hover:not(
+    .Disabled
+  ) {
+  background-color: #0bf;
+}
+.QueueButton.Launch {
+  background-color: #59bf40;
+}
+.QueueButton.Wide {
+  padding: 12px 40px;
+}
+.QueueButton svg {
+  width: 16px;
+  transition: fill .1s ease;
+}
+.QueueButton:hover:not(.Disabled) {
+  background-color: #acb2c947;
+}
+.QueueButton.Active,
+.QueueButton.Active:hover {
+  background-color: #1a9fff;
+}
+.QueueButton.gpfocus {
+  background-color: #fff;
+  border-radius: 0px;
+}
+.QueueButton.gpfocus svg {
+  fill: #0e141b;
+}
+@media screen and (max-width: 1200px) {
+  .QueueButton {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+.QueueNavArrow {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%;
+  visibility: hidden;
+  z-index: 2;
+  background-color: rgba(103, 112, 123, 0.6);
+  backdrop-filter: blur(24px);
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3), inset 0 0 0 1px
+    rgba(255, 255, 255, 0.1);
+  transition: background-color ease, box-shadow ease, transform ease, opacity
+    ease;
+  transition-duration: .3s;
+}
+.QueueNavArrow svg {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  transition: color ease;
+  transition-duration: .3s;
+}
+.QueueNavArrow.Enable {
+  visibility: visible;
+  pointer-events: all;
+}
+.QueueNavArrow:hover {
+  background-color: #fff;
+  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4), inset 0 0 0 1px
+    rgba(255, 255, 255, 0.1);
+  transition-duration: .06s;
+}
+.QueueNavArrow:hover svg {
+  transition-duration: .06s;
+  color: #0e141b;
+}
+.QueueNavArrow:active {
+  opacity: 0.9;
+}
+.QueueNavArrow.RightArrow {
+  grid-area: rightArrow;
+  margin: auto auto auto 0;
+  transform: scale(0.92);
+}
+.QueueNavArrow.RightArrow svg {
+  margin: 20px 18px 20px 22px;
+}
+.QueueNavArrow.RightArrow:hover {
+  transform: scale(1);
+}
+.QueueNavArrow.RightArrow:active {
+  transform: scale(0.96);
+}
+.QueueNavArrow.LeftArrow {
+  grid-area: leftArrow;
+  margin: auto 0 auto auto;
+  transform: scale(0.92);
+}
+.QueueNavArrow.LeftArrow svg {
+  margin: 20px 22px 20px 18px;
+}
+.QueueNavArrow.LeftArrow:hover {
+  transform: scale(1);
+}
+.QueueNavArrow.LeftArrow:active {
+  transform: scale(0.96);
+}
+.BasicUI .QueueNavArrow {
+  display: none;
+}
+.ReleventSimilarAppsCtn {
+  display: flex;
+  margin: 4px 0px 0px 0px;
+  column-gap: 4px;
+}
+.RecommendingCuratorsCtn img {
+  width: 28px;
+}
+.AppRelevanceCtn {
+  grid-area: relevance;
+}
+.BasicUI .AppRelevanceCtn {
+  display: none;
+}
+.WhyRelevant {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+.SimilarAppCtn {
+  display: flex;
+}
+.SimilarAppImg {
+  width: 80px;
+  box-shadow: var(--gpShadow-Small);
+  margin-right: 5px;
+  display: block;
+}
+.SimilarAppText {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+}
+.FriendAvatarsCtn {
+  display: flex;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  mask-image: linear-gradient(
+    to right,
+    black calc(100% - 32px),
+    transparent calc(100% - 8px)
+  );
+  margin-right: -16px;
+  margin-top: 2px;
+}
+.RelevantTextBold {
+  font-weight: bold;
+}
+.AppDescription {
+  font-size: 12px;
+  color: var(--gpStoreLighterGrey);
+  padding: 0;
+  line-height: 18px;
+}
+.TradingCardCtn {
+  display: flex;
+  background: #83beec1f;
+  padding: 16px 1vw;
+  align-items: center;
+  color: var(--gpStoreLighterGrey);
+  width: 28%;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.TradingCardCtn .TradingCardImage {
+  transform: rotate(-10deg);
+  filter: drop-shadow(0px 8px 6px #00000022);
+}
+@media screen and (max-width: 1400px) {
+  .TradingCardCtn .TradingCardImage {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .TradingCardCtn {
+    font-size: 14px;
+  }
+}
+.Bold {
+  font-weight: 700;
+}
+.FriendBlockCtn {
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  min-width: 200px;
+  border-radius: 3px;
+  padding: 3px 20px 3px 3px;
+}
+.FriendBlockCtn .PersonaStatus {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 4px;
+}
+.ContentHubMainCarouselCapsule .WhyRelevant {
+  font-size: 15px;
+}
+.ProgressHidden {
+  visibility: hidden;
+}
+.DiscoveryQueueName {
+  grid-area: name;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1ch;
+  font-weight: bold;
+  opacity: 80%;
+}
+.SaleRewardsCtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #8fa3b3 0%, #516677 100%);
+  padding: 8px 40px 8px 8px;
+  margin: 1vh auto;
+}
+@media screen and (max-width: 600px) {
+  .SaleRewardsCtn {
+    font-size: 12px;
+  }
+}
+.SaleRewardsCtn .RewardStatusCtn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.SaleRewardsCtn .RewardStatusCtn a {
+  text-decoration: underline;
+  font-weight: 300;
+  opacity: 0.7;
+  transition: opacity .2s ease-in-out;
+  width: fit-content;
+}
+.SaleRewardsCtn .RewardStatusCtn a:hover {
+  opacity: 1;
+}
+.SaleRewardsCtn .SaleRewardAppTitle {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 600px) {
+  .SaleRewardsCtn .SaleRewardAppTitle {
+    font-size: 12px;
+  }
+}
+.AppVideoCtn {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  background: radial-gradient(100% 100% at 20% 0%, #828283 10%, #3f4041 90%);
+}
+.AppVideoCtn .WishlistBadge {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 2px;
+  z-index: 1;
+  background-color: #99d4ff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2px 6px;
+  opacity: 0;
+  transform: translateX(calc(-100% - 8px));
+  transition: opacity .2s cubic-bezier(0.32, 0, 0.67, 0), transform .2s
+    cubic-bezier(0.32, 0, 0.67, 0);
+}
+.AppVideoCtn .WishlistBadge.Active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity .1s ease, transform .2s ease;
+}
+.AppVideoCtn .DeckVerifiedLogo {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+}
+.AppVideoCtn .VideoArea {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.IgnoredCtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 16px;
+  background-color: rgba(33, 52, 71, 0.6);
+  opacity: 0;
+  backdrop-filter: blur(0px);
+  transition: opacity .2s ease .1s;
+}
+.IgnoredCtn.Active {
+  opacity: 1;
+  backdrop-filter: blur(40px);
+  transition: opacity .2s ease;
+  z-index: 100;
+}
+.IgnoredCtn .IgnoredInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+  position: absolute;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .1s ease-in, transform .15s ease-in;
+}
+.IgnoredCtn .IgnoredInfo .IgnoredTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+.IgnoredCtn .IgnoredInfo .IgnoredDescription {
+  font-size: 14px;
+  opacity: 0.8;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #acb2c924;
+  width: 50%;
+  text-align: center;
+}
+.BasicUI
+  .IgnoredCtn
+  .IgnoredInfo
+  .UndoIgnoreButton {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: unset;
+}
+.IgnoredCtn .IgnoredInfo.Active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity .3s ease, transform .4s ease;
+}
+.IgnoredCtn .IgnoredInfo .UndoButton {
+  min-width: 10px;
+  color: #dcdedf;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 2px;
+  box-shadow: none;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #acb2c924;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 8px 16px;
+  transition: background-color .1s ease, border-radius .1s ease;
+}
+.IgnoredCtn
+  .IgnoredInfo
+  .UndoButton.Disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.IgnoredCtn .IgnoredInfo .UndoButton svg {
+  width: 16px;
+  transition: fill .1s ease;
+}
+.IgnoredCtn
+  .IgnoredInfo
+  .UndoButton:hover:not(.Disabled) {
+  background-color: #acb2c947;
+}
+.IgnoredCtn
+  .IgnoredInfo
+  .UndoButton.gpfocus {
+  background-color: #fff;
+  border-radius: 0px;
+}
+.IgnoredCtn
+  .IgnoredInfo
+  .UndoButton.gpfocus
+  svg {
+  fill: #0e141b;
+}
+@media screen and (max-width: 1200px) {
+  .IgnoredCtn .IgnoredInfo .UndoButton {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+.TrailerTitle {
+  position: absolute;
+  z-index: 11;
+  top: -20px;
+  left: 0;
+  padding: 3px 4px;
+  color: #fff;
+  background-color: #333;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  user-select: none;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+.TrailerTitle .Category {
+  font-weight: 600;
+}
+.TrailerTitle.Visible {
+  top: 0;
+  opacity: 1;
+}
+.AppCarouselTrailerCtn {
+  grid-area: video;
+  padding: 56.25% 0 0 0;
+  position: relative;
+  background: #000;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.AppCarouselTrailerCtn:hover .AutoplayCheckbox {
+  display: block;
+}
+@keyframes _3D_pgT8sxFP3ieDxVt_1zp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes HMoi7fPFNjxiHeyrfkgmO {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes _3kp7PkbzSVQPFoobA3Xx7N {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.AppVideo {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.AppVideo.Microtrailer {
+  opacity: 1;
+}
+.AppVideo.Microtrailer.PlayFullTrailer {
+  opacity: 0;
+  animation: HMoi7fPFNjxiHeyrfkgmO .6s ease-in-out;
+  pointer-events: none;
+}
+.AppVideo.Microtrailer.PlayMicrotrailer {
+  opacity: 1;
+  animation: _3D_pgT8sxFP3ieDxVt_1zp .6s ease-in-out;
+}
+.AppVideo.Microtrailer.NoTrailer {
+  opacity: 0;
+}
+.AppVideo.Trailer {
+  opacity: 0;
+  pointer-events: none;
+}
+.AppVideo.Trailer.PlayFullTrailer {
+  opacity: 1;
+  animation: _3kp7PkbzSVQPFoobA3Xx7N .6s ease-in-out;
+  pointer-events: unset;
+}
+@keyframes hckHU2LXCJNx0X37OqCsx {
+  0% {
+    opacity: 1;
+    transform: blur(0);
+  }
+  100% {
+    opacity: 0.5;
+    filter: blur(30px);
+  }
+}
+.AppMainCap {
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  transition: opacity .6s ease 1s, blur .6s ease 1s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-mask-image: radial-gradient(65% 55%, black 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(65% 55%, black 50%, rgba(0, 0, 0, 0) 100%);
+  filter: saturate(0.3);
+  opacity: 0;
+  animation: _2tGHq2pbqmrGJVCXoN5f0r .5s forwards;
+}
+@keyframes _2tGHq2pbqmrGJVCXoN5f0r {
+  to {
+    opacity: 1;
+  }
+}
+.PlayButton {
+  position: absolute;
+  z-index: 8;
+  cursor: pointer;
+  top: calc(50% - 35px);
+  opacity: 0;
+  animation: _3Nk6pNRuMCIddyuE9mWS55 .25s forwards;
+}
+.PlayButton svg {
+  width: 110px;
+  height: auto;
+  fill: #fff;
+  filter: drop-shadow(1px 1px 6px black);
+}
+@keyframes _3Nk6pNRuMCIddyuE9mWS55 {
+  to {
+    opacity: 1;
+  }
+}
+.AutoplayCheckboxCtn {
+  z-index: 12;
+}
+.DialogCheckbox_Container.AutoplayCheckbox {
+  position: absolute;
+  z-index: 5;
+  right: 16px;
+  padding-right: 12px;
+  top: 5px;
+  font-size: 13px;
+  color: #fff;
+  display: none;
+  text-shadow: 1px 1px 1px #000;
+  background: #2f3b4c;
+}
+.AOWarning {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 8;
+  top: calc(50% + 35px);
+  width: fit-content;
+  align-items: center;
+  pointer-events: none;
+}
+.AOWarning .Text {
+  padding: 0 8px;
+  background-color: #e3d6d1;
+  color: #000;
+}
+.WidgetHeaderCtn {
+  background: linear-gradient(
+    77deg,
+    #58306c 0%,
+    #386483 50%,
+    rgba(64, 121, 153, 0) 70%
+  );
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 3vw;
+  line-height: 30px;
+  row-gap: 4px;
+  transition: filter .2s ease-in-out;
+}
+.WidgetHeaderCtn .LaunchAction {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+}
+.WidgetHeaderCtn .LaunchAction svg {
+  width: 16px;
+  fill: #c6d4df;
+  margin-left: 4px;
+}
+.DiscoveryQueueWidget:hover .WidgetHeaderCtn,
+.DiscoveryQueueWidget.gpfocus .WidgetHeaderCtn {
+  filter: brightness(1.2);
+}
+.WidgetHeaderText {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #fff;
+  width: 65%;
+}
+.WidgetHeaderSubText {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.2;
+  color: #fff;
+  width: 65%;
+}
+.LoginButton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 3px 18px;
+  font-size: 14px;
+  background: #1a9fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #fff;
+}
+.Placeholder {
+  height: 200px;
+}
+.SaleTopSection {
+  display: flex;
+  margin-bottom: 15px;
+  position: relative;
+}
+.StickerArrangement {
+  width: 115px;
+  position: absolute;
+}
+.SaleSticker {
+  padding: 5px;
+  background: linear-gradient(45deg, #ffffff 70%, #e5e5e5 90%);
+  border-radius: 5px;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+.SaleSticker:nth-child(1) {
+  transform: rotate(-15deg);
+  left: 0;
+  top: 0;
+}
+.SaleSticker:nth-child(2) {
+  z-index: 5;
+  left: 35px;
+  top: -2px;
+}
+.SaleSticker:nth-child(3) {
+  transform: rotate(15deg);
+  right: 0;
+  top: 0;
+}
+.SaleSticker img {
+  width: 100%;
+}
+.SaleTextCtn {
+  padding: 8px 30px 8px 130px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 1.2;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.SaleTextCtn:after {
+  top: 100%;
+  left: 56px;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-width: 15px;
+  margin-left: -15px;
+}
+.SaleTextCtn .BoldText {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+}
+.SaleTextCtn a {
+  text-decoration: underline;
+  color: #fff;
+}
+.ProgressCtn {
+  grid-area: pips;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 16px;
+  min-height: 20px;
+  gap: 6px;
+}
+.BasicUI .ProgressCtn {
+  transform: scale(0.8);
+}
+.ProgressCtn .ProgressDot {
+  width: 16px;
+  height: 12px;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 30%;
+  transition: width .15s ease-in-out, opacity .15s ease-in-out;
+}
+.ProgressCtn .ProgressDotActive {
+  opacity: 80%;
+}
+.ProgressCtn .ProgressDotSelected {
+  width: 26px;
+  opacity: 90%;
+}
+.ProgressCtn .ProgressDotClickable {
+  cursor: pointer;
+}
+.DiscoveryQueueWidgetCtn {
+  height: 200px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: var(--gpShadow-Medium);
+  background: #386483;
+  transition: transform .2s ease-in-out;
+}
+.DiscoveryQueueWidgetCtn:hover,
+.DiscoveryQueueWidgetCtn.gpfocus {
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  transform: scale(1.05);
+}
+.DiscoveryQueueWidgetCtn:hover .WidgetHeaderCtn,
+.DiscoveryQueueWidgetCtn.gpfocus .WidgetHeaderCtn {
+  filter: brightness(1.2);
+}
+.AppCarouselPosition {
+  width: 50%;
+  margin-left: auto;
+  position: relative;
+  background-color: #386483;
+  transform: rotateZ(-11deg) translateX(14px);
+  --capsule-width: 320px;
+}
+.DiscoveryQueueWidgetCtn:not(.Initialized) .AppCarouselPosition {
+  display: flex;
+}
+.AppCarouselPosition .Spinner {
+  margin: auto;
+  margin-right: 90px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+@keyframes Qc0gimNJ0GLAPE87EH3Gp {
+  from {
+    opacity: 0;
+  }
+}
+.AppCarouselCtn {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: Qc0gimNJ0GLAPE87EH3Gp;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  gap: 8px;
+}
+.AppCapsuleCtn {
+  width: var(--capsule-width);
+  height: calc(var(--capsule-width) / 1.6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  align-items: flex-end;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 80%;
+  box-shadow: 0 0 10px #000;
+}
+.AppName {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.LibraryImage {
+  display: flex;
+}
+.LibraryImage img {
+  width: 50px;
+}
+.CapsuleColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}

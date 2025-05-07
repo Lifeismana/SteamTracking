@@ -1,0 +1,890 @@
+.SnoozeContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.SnoozeContainer .SnoozeZ {
+  font-size: 6px;
+  animation-name: T3Fb5KTXwIHM2B-ThTvEs;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.SnoozeContainer .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer .SnoozeZ {
+  font-size: 8px;
+  font-weight: bold;
+}
+.SnoozeContainer.Medium .SnoozeZ {
+  font-size: 8px;
+}
+.SnoozeContainer.Large .SnoozeZ {
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000, 1px 1px
+    2px #000;
+}
+.SnoozeContainer.Dim .SnoozeZ {
+  filter: brightness(0.75);
+}
+.SnoozeContainer .Z1 {
+  animation-delay: 0s;
+  margin-top: 0px;
+  z-index: 1;
+}
+.SnoozeContainer .Z2 {
+  animation-delay: .2s;
+  margin-top: 2px;
+  z-index: 2;
+}
+.SnoozeContainer .Z3 {
+  animation-delay: .4s;
+  margin-top: 4px;
+  z-index: 3;
+}
+.SnoozeContainer.online .SnoozeZ {
+  color: #4c91ac;
+}
+.SnoozeContainer.online .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer.online .SnoozeZ {
+  color: #4cb4ff;
+}
+.SnoozeContainer.watchingbroadcast .SnoozeZ {
+  color: #c9bdf7;
+}
+.SnoozeContainer.watchingbroadcast .SnoozeZ.GamepadMode,
+.GamepadMode
+  .SnoozeContainer.watchingbroadcast
+  .SnoozeZ {
+  color: #5340a6;
+}
+.SnoozeContainer.in-game .SnoozeZ {
+  color: #91c257;
+}
+.SnoozeContainer.in-game .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer.in-game .SnoozeZ {
+  color: #3e862d;
+}
+.SnoozeContainer.online.Dim .SnoozeZ {
+  color: #6dcff6;
+}
+.SnoozeContainer.online.Dim
+  .SnoozeZ.GamepadMode,
+.GamepadMode
+  .SnoozeContainer.online.Dim
+  .SnoozeZ {
+  color: #4cb4ff;
+}
+.SnoozeContainer.in-game.Dim
+  .SnoozeZ {
+  color: #a1f410;
+}
+.SnoozeContainer.in-game.Dim
+  .SnoozeZ.GamepadMode,
+.GamepadMode
+  .SnoozeContainer.in-game.Dim
+  .SnoozeZ {
+  color: #3e862d;
+}
+.friend.gpfocus .SnoozeZ,
+.hoverParent.gpfocus .SnoozeZ,
+.SnoozeContainer.animating .SnoozeZ,
+.hoverParent:hover * .SnoozeZ {
+  animation-name: _38wIVgo1WjvGqL5ZsmpmiX;
+}
+@keyframes _38wIVgo1WjvGqL5ZsmpmiX {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.PersonaStatusIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 2px;
+}
+.PersonaStatusIcon.GamepadMode,
+.GamepadMode .PersonaStatusIcon {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PersonaStatusIcon.MobilePhoneIcon {
+  margin-top: -2px;
+  margin-left: -1px;
+}
+.PersonaStatusIcon.MobilePhoneIcon.GamepadMode,
+.GamepadMode .PersonaStatusIcon.MobilePhoneIcon {
+  margin-top: -4px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BasicUI .PersonaStatusIcon.MobilePhoneIcon {
+  display: block;
+}
+.PersonaStatusIcon.SteamDeckIcon {
+  margin-left: 4px;
+}
+.PersonaStatusIcon.VRIcon {
+  margin-top: -1px;
+}
+.PersonaStatusIcon.ingame .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.ingame .SVGIcon_VRIcon path,
+.PersonaStatusIcon.ingame .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.ingame .SVGIcon_BigPicture path {
+  fill: #80aa4d;
+}
+.PersonaStatusIcon.ingame .SVGIcon_SteamDeck path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.ingame .SVGIcon_VRIcon path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_VRIcon path,
+.PersonaStatusIcon.ingame .SVGIcon_MobilePhone path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.ingame .SVGIcon_BigPicture path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_BigPicture path {
+  fill: #59bf40;
+}
+.PersonaStatusIcon.online .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.online .SVGIcon_VRIcon path,
+.PersonaStatusIcon.online .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.online .SVGIcon_BigPicture path {
+  fill: #4c91ac;
+}
+.PersonaStatusIcon.online .SVGIcon_SteamDeck path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.online .SVGIcon_VRIcon path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_VRIcon path,
+.PersonaStatusIcon.online .SVGIcon_MobilePhone path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.online .SVGIcon_BigPicture path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_BigPicture path {
+  fill: #4cb4ff;
+}
+.statusAndName {
+  display: flex;
+}
+.statusAndName.threeLines {
+  margin-top: -2px;
+}
+.statusAndName.GamepadMode,
+.GamepadMode .statusAndName {
+  align-items: center;
+}
+.statusAndName.GamepadMode.threeLines,
+.GamepadMode .statusAndName.threeLines {
+  margin-top: 0;
+}
+.blocked .richPresenceLabel {
+  color: rgba(195, 74, 72, 0.75);
+}
+.playerName,
+.playerNickname {
+  flex: 1;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  font-size: 14px;
+  transition: text-overflow 0s linear;
+}
+.playerName.GamepadMode,
+.GamepadMode .playerName,
+.playerNickname.GamepadMode,
+.GamepadMode .playerNickname {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 15px;
+}
+.BasicUI .playerName,
+.BasicUI .playerNickname {
+  text-overflow: ellipsis;
+}
+.DisableColoring .playerName,
+.DisableColoring .playerNickname {
+  color: inherit;
+}
+.playerNickname {
+  padding-left: 5px;
+  color: #666;
+}
+.playerNickname.GamepadMode,
+.GamepadMode .playerNickname {
+  color: #67707b;
+}
+.DisableColoring .playerNickname {
+  color: inherit;
+}
+.playerName {
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  flex: initial;
+  padding-right: 6px;
+  margin-right: -6px;
+}
+.playerName.GamepadMode,
+.GamepadMode .playerName {
+  -webkit-mask: none;
+  mask: none;
+  padding-right: 2px;
+  margin-right: 0px;
+}
+.playerNicknameBracket {
+  color: #999;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 1px;
+  opacity: 0.5;
+  line-height: 16px;
+}
+.richPresenceContainer {
+  display: flex;
+  flex-direction: column;
+}
+.richPresenceContainer.GamepadMode
+  .gameName.richPresenceLabel.threeLines,
+.GamepadMode
+  .richPresenceContainer
+  .gameName.richPresenceLabel.threeLines {
+  line-height: 15px;
+  margin-top: -2px;
+}
+.FriendPicker_Suggestions .richPresenceContainer {
+  display: none;
+}
+.richPresenceLabel {
+  display: flex;
+  flex-direction: row;
+  line-height: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 10px;
+  margin-top: -1px;
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  padding-right: 24px;
+}
+.BasicUI .richPresenceLabel {
+  display: block;
+  text-overflow: ellipsis;
+}
+.NoMask .richPresenceLabel {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.twoLine .richPresenceLabel {
+  line-height: 18px;
+  font-size: 12px;
+}
+.twoLine .richPresenceLabel.GamepadMode,
+.GamepadMode .twoLine .richPresenceLabel {
+  line-height: 15px;
+  height: 20px;
+}
+.RecentMessagesTabList.FriendsListTabPanel
+  .twoLine.GamepadMode
+  .statusAndName,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .twoLine
+  .statusAndName {
+  align-items: center;
+  margin-top: -2px;
+  margin-bottom: 1px;
+}
+.RecentMessagesTabList.FriendsListTabPanel
+  .twoLine.GamepadMode
+  .richPresenceLabel,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .twoLine
+  .richPresenceLabel {
+  height: 25px;
+}
+.DNDContainer {
+  width: 12px;
+  height: 12px;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+.partyBeaconJoin {
+  font-weight: 800;
+}
+.ingame .playerName {
+  color: #e3ffc2;
+}
+.ingame .playerName.GamepadMode,
+.GamepadMode .ingame .playerName {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  color: #c2ffb3;
+  font-weight: 400;
+}
+.ingame .gameName.richPresenceLabel,
+.ingame .gameName.richPresenceLabel a,
+.ingame .gameName.richPresenceLabel a:hover,
+.ingame .gameName.richPresenceLabel a:active,
+.ingame .gameName.richPresenceLabel a:visited,
+.ingame.twoLine .richPresenceLabel {
+  color: #91c257;
+}
+.ingame .gameName.richPresenceLabel.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel,
+.ingame .gameName.richPresenceLabel a.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a,
+.ingame .gameName.richPresenceLabel a:hover.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a:hover,
+.ingame .gameName.richPresenceLabel a:active.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a:active,
+.ingame .gameName.richPresenceLabel a:visited.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a:visited,
+.ingame.twoLine .richPresenceLabel.GamepadMode,
+.GamepadMode .ingame.twoLine .richPresenceLabel {
+  color: #59bf40;
+}
+.ingame .gameName.richPresenceLabel {
+  font-size: 12px;
+}
+.ingame .gameName.richPresenceLabel.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #59bf40;
+}
+.VoiceChannelParticipants .ingame .playerName {
+  font-size: 11px;
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .twoLine
+  .playerName {
+  font-size: 14px;
+  margin-top: 0px;
+}
+.VoiceChannelParticipants .ingame .richPresenceLabel {
+  font-size: 10px;
+  margin-top: -6px;
+  margin-bottom: 3px;
+}
+.VoiceChannelParticipants
+  .ingame
+  .twoLine
+  .richPresenceLabel {
+  font-size: 12px;
+  margin-top: 0px;
+}
+.ingame.awayOrSnooze .richPresenceLabel,
+.ingame .richPresenceLabel,
+.ingame .richPresenceLabel a,
+.ingame .richPresenceLabel a:hover,
+.ingame .richPresenceLabel a:active,
+.ingame .richPresenceLabel a:visited {
+  color: #62813b;
+}
+.ingame.awayOrSnooze .richPresenceLabel.GamepadMode,
+.GamepadMode .ingame.awayOrSnooze .richPresenceLabel,
+.ingame .richPresenceLabel.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel,
+.ingame .richPresenceLabel a.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a,
+.ingame .richPresenceLabel a:hover.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a:hover,
+.ingame .richPresenceLabel a:active.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a:active,
+.ingame .richPresenceLabel a:visited.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a:visited {
+  color: #3e862d;
+}
+.ingame .SVGIcon_DoNotDisturb circle,
+.ingame .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.friend.gpfocus .labelHolder.GamepadMode .playerName,
+.friend.gpfocus .labelHolder.GamepadMode .richPresenceLabel,
+.GamepadMode .friend.gpfocus .labelHolder .playerName,
+.GamepadMode .friend.gpfocus .labelHolder .richPresenceLabel,
+.favoriteElement.gpfocus .labelHolder.GamepadMode .playerName,
+.favoriteElement.gpfocus .labelHolder.GamepadMode .richPresenceLabel,
+.GamepadMode .favoriteElement.gpfocus .labelHolder .playerName,
+.GamepadMode .favoriteElement.gpfocus .labelHolder .richPresenceLabel {
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus .labelHolder.GamepadMode.offline .richPresenceLabel,
+.GamepadMode .friend.gpfocus .labelHolder.offline .richPresenceLabel,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.offline
+  .richPresenceLabel,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.offline
+  .richPresenceLabel {
+  color: #8b929a;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .playerName,
+.friend.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .richPresenceLabel,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .playerName,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .richPresenceLabel,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .playerName,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .richPresenceLabel,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .playerName,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .richPresenceLabel {
+  color: #4cb4ff;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus
+  .labelHolder.GamepadMode.ingame.awayOrSnooze
+  .playerName,
+.friend.gpfocus .labelHolder.GamepadMode.ingame .richPresenceLabel,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .playerName,
+.GamepadMode .friend.gpfocus .labelHolder.ingame .richPresenceLabel,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.ingame.awayOrSnooze
+  .playerName,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.ingame
+  .richPresenceLabel,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .playerName,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame
+  .richPresenceLabel {
+  color: #59bf40;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.awayOrSnooze .playerName.GamepadMode,
+.GamepadMode .awayOrSnooze .playerName {
+  color: #59bf40;
+}
+.watchingbroadcast .playerName {
+  color: #c9bdf7;
+}
+.watchingbroadcast .richPresenceLabel,
+.watchingbroadcast .gameName.richPresenceLabel a,
+.watchingbroadcast .gameName.richPresenceLabel a:hover,
+.watchingbroadcast .gameName.richPresenceLabel a:active,
+.watchingbroadcast .gameName.richPresenceLabel a:visited {
+  color: #8277b1;
+}
+.awayOrSnooze.online .playerName.GamepadMode,
+.GamepadMode .awayOrSnooze.online .playerName {
+  color: #4cb4ff;
+}
+.awayOrSnooze.online .richPresenceLabel.GamepadMode,
+.GamepadMode .awayOrSnooze.online .richPresenceLabel,
+.awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a,
+.awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a:hover.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a:hover,
+.awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a:active.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a:active,
+.awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a:visited.GamepadMode,
+.GamepadMode
+  .awayOrSnooze.online
+  .gameName.richPresenceLabel
+  a:visited {
+  color: #4cb4ff;
+}
+.online .playerName {
+  color: #ccccd5;
+  color: #6dcff6;
+}
+.online .playerName.GamepadMode,
+.GamepadMode .online .playerName {
+  color: #b3dfff;
+}
+.online .richPresenceLabel,
+.online .gameName.richPresenceLabel a,
+.online .gameName.richPresenceLabel a:hover,
+.online .gameName.richPresenceLabel a:active,
+.online .gameName.richPresenceLabel a:visited {
+  color: #4c91ac;
+}
+.online .richPresenceLabel.GamepadMode,
+.GamepadMode .online .richPresenceLabel,
+.online .gameName.richPresenceLabel a.GamepadMode,
+.GamepadMode .online .gameName.richPresenceLabel a,
+.online .gameName.richPresenceLabel a:hover.GamepadMode,
+.GamepadMode .online .gameName.richPresenceLabel a:hover,
+.online .gameName.richPresenceLabel a:active.GamepadMode,
+.GamepadMode .online .gameName.richPresenceLabel a:active,
+.online .gameName.richPresenceLabel a:visited.GamepadMode,
+.GamepadMode
+  .online
+  .gameName.richPresenceLabel
+  a:visited {
+  color: #4cb4ff;
+}
+.online .SVGIcon_DoNotDisturb circle,
+.online .SVGIcon_DoNotDisturb line {
+  stroke: #a0545a;
+}
+.offline .playerName {
+  color: #a0a0a0;
+}
+.offline .playerName.GamepadMode,
+.GamepadMode .offline .playerName {
+  color: #b8bcbf;
+}
+.offline .richPresenceLabel,
+.offline .gameName.richPresenceLabel a,
+.offline .gameName.richPresenceLabel a:hover,
+.offline .gameName.richPresenceLabel a:active,
+.offline .gameName.richPresenceLabel a:visited {
+  color: #6e6e6e;
+}
+.offline .SVGIcon_DoNotDisturb circle,
+.offline .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.offline .DNDContainer {
+  display: none;
+}
+.FriendVoiceChatContainer .playerName {
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+}
+.hidePersona .statusAndName {
+  height: 100%;
+  align-items: center;
+  margin-top: 0px;
+}
+.compactView.twoLine .richPresenceLabel {
+  font-size: 10px;
+  margin-top: 1px;
+}
+.compactView .richPresenceLabel {
+  font-size: 10px;
+  line-height: 11px;
+}
+.compactView
+  .ingame
+  .gameName.richPresenceLabel {
+  font-size: 10px;
+  line-height: 14px;
+}
+.compactView .speaking .playerName {
+  filter: brightness(1.5);
+}
+.compactView .playerName,
+.compactView .playerNickname {
+  margin-bottom: -6px;
+  font-size: 12px;
+}
+.compactView .noContextMenu .playerName,
+.compactView .noContextMenu .playerNickname {
+  margin-bottom: -2px;
+}
+.currentUserContainer .playerName {
+  font-size: 16px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  transition: color .94s ease-in-out;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+}
+.currentUserContainer .statusAndName {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -4px;
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer .gameName.richPresenceLabel {
+  font-size: 13px;
+}
+.currentUserContainer .richPresenceLabel {
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer .richPresenceContainer {
+  margin-top: 2px;
+  align-self: stretch;
+}
+.currentUserContainer .compactView .playerName {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.currentUserContainer .compactView .richPresenceLabel {
+  line-height: initial;
+}
+.currentUserContainer
+  .compactView
+  .gameName.richPresenceLabel {
+  font-size: 12px;
+}
+.ChatTabs .compactView .playerName,
+.ChatTabs .compactView .playerNickname {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-overflow: clip;
+}
+.ChatTabs .compactView .playerNickname {
+  color: #a2a6ac;
+}
+.ChatTabs .compactView .richPresenceLabel {
+  line-height: 11px;
+  font-size: 10px;
+  margin-top: -1px;
+}
+.ChatTabs
+  .compactView:not(.twoLine)
+  .richPresenceLabel:not(.gameName) {
+  display: none;
+}
+.ChatTabs .compactView .offline .statusAndName {
+  color: #ccc;
+}
+.ChatTabs .compactView .offline .richPresenceLabel {
+  color: #888;
+}
+.titleBarContainer .currentUserContainer .richPresenceLabel {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  display: inline-block;
+  transition: color .94s ease-in-out;
+}
+.titleBarContainer
+  .currentUserContainer
+  .compactView
+  .richPresenceLabel {
+  margin-top: -4px;
+  margin-bottom: -2px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .twoLine
+  .richPresenceLabel {
+  margin-top: 0px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .compactView.twoLine
+  .richPresenceLabel {
+  margin-top: -4px;
+  margin-bottom: 0px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .richPresenceLabel:not(.gameName) {
+  font-size: 10px;
+  margin-top: -1px;
+  margin-bottom: 1px;
+}
+.titleBarContainer .currentUserContainer .ContextMenuButton {
+  margin-top: -4px;
+  margin-bottom: 4px;
+}
+.singlewindow .currentUserContainer .statusAndName {
+  margin-right: 4px;
+}
+.singlewindow
+  .currentUserContainer
+  .twoLine
+  .statusAndName,
+.singlewindow .currentUserContainer .twoLine {
+  width: 100%;
+}
+.needsUpdate
+  .currentUserContainer
+  .twoLine
+  .statusAndName {
+  margin-right: 48px;
+}
+.friendRequests .bright .moMutualFriends .playerName,
+.friendRequests .playerName {
+  color: #fff;
+  transition: color .2s ease-in-out;
+}
+.friendRequests .noMutualFriends .playerName {
+  color: #aaa;
+  transition: color .2s ease-in-out;
+}
+.MemberListColumn .statusAndName .richPresenceLabel,
+.MemberListColumn .statusAndName .playerNickname,
+.MemberListColumn .statusAndName .playerName {
+  text-overflow: clip;
+  transition-delay: .4s;
+}
+.MemberListColumn.MemberListViewCompact
+  .statusAndName
+  .richPresenceLabel,
+.MemberListColumn.MemberListViewCompact
+  .statusAndName
+  .playerNickname,
+.MemberListColumn.MemberListViewCompact
+  .statusAndName
+  .playerName {
+  text-overflow: clip;
+  transition-delay: 0s;
+}
+.groupMemberList .playerName,
+.groupMemberList .playerNickname {
+  font-size: 13px;
+}
+.groupMemberList .ingame .gameName.richPresenceLabel {
+  font-size: 10px;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.groupMemberList
+  .ingame.twoLine
+  .gameName.richPresenceLabel {
+  font-size: 12px;
+  margin-top: -1px;
+}
+.groupMemberList .twoLine .richPresenceLabel {
+  font-size: 12px;
+}
+.groupMemberList .richPresenceLabel {
+  line-height: 13px;
+}
+.Dialog_RemotePlay .awayOrSnooze .statusAndName {
+  margin-bottom: -10px;
+}
+.Dialog_RemotePlay .ingame .playerName,
+.Dialog_RemotePlay .ingame .playerNickname {
+  margin-top: 0px;
+  width: 175px;
+}
+.Dialog_RemotePlay .twoLine {
+  margin-top: -44px;
+  width: 175px;
+}
+.Dialog_RemotePlay .ingame .richPresenceLabel {
+  margin-top: -15px;
+  width: 175px;
+  visibility: collapse;
+}
+.gameIsPrivateIcon {
+  width: 28px;
+  height: 20px;
+  margin-top: -3px;
+  margin-left: 0px;
+  display: inline-block;
+}
+.gameIsPrivateIcon svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -8px;
+}
+.gameIsPrivateIcon svg line,
+.gameIsPrivateIcon svg path {
+  stroke: #6e8d50;
+}
+.PendingPersona {
+  margin-top: -6px;
+  margin-left: 4px;
+  display: inline-block;
+}
+.PendingPersona svg {
+  height: 12px;
+  width: 12px;
+}

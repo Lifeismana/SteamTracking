@@ -1,0 +1,60 @@
+.AppSocialLinksCtn {
+  margin-top: 42px;
+  max-width: 688px;
+}
+.AppSocialLinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 2px 6px;
+}
+.AppSocialLinks a {
+  cursor: pointer;
+}
+.AppSocialLinks a:hover .AppSocialLinkIcon {
+  opacity: 1;
+}
+.AppSocialLinks a .tool-tip-source {
+  cursor: pointer;
+}
+.AppSocialLinks .AppSocialLinkIcon {
+  width: 24px;
+  height: auto;
+  opacity: 0.6;
+  fill: #fff;
+}
+.AppSocialLinkWithText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.AppSocialLinkWithText .AppSocialText {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-bottom: 5px;
+}
+.AppSocialLinkWithText .AppSocialText:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: rgba(255, 255, 255, 0.3);
+  border-width: 6px;
+  margin-top: -6px;
+}
+.Ctn {
+  margin-bottom: unset;
+  margin-top: unset;
+}

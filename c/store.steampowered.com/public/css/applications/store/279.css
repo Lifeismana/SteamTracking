@@ -1,0 +1,1519 @@
+.CartCard {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.CartCard {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.TradingCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #8b9db0;
+  font-size: 12px;
+}
+.EarnedMessage {
+  color: #1a9fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.Right {
+  align-self: flex-end;
+}
+.ProgressSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.Progress,
+.ProgressRail {
+  height: 10px;
+  border-radius: 5px;
+}
+.ProgressRail {
+  width: 100%;
+  background-color: #67707b;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.ProgressRail .Progress {
+  background-color: #1a9fff;
+  box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.2), 0px 5px 5px 0px
+    rgba(0, 0, 0, 0.2) inset;
+}
+.IneligbleList {
+  color: #ffcc6a;
+}
+.LoadingWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.LoadingWrapper.Static {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD;
+}
+.LoadingWrapper.Static * {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.LoadingWrapper.Static .bottomCircle path {
+  stroke-width: 0 !important;
+}
+.LoadingWrapper.noString {
+  flex-direction: row;
+}
+.LoadingWrapper .Throbber,
+.LoadingWrapper .SVGIcon_Throbber,
+.LoadingWrapper .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.LoadingWrapper .Throbber {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.LoadingWrapper.throbber_small .Throbber {
+  width: 32px;
+  height: 32px;
+}
+.LoadingWrapper.throbber_medium .Throbber {
+  width: 64px;
+  height: 64px;
+}
+.LoadingWrapper.throbber_large .Throbber {
+  width: 92px;
+  height: 92px;
+}
+.throbber_center_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ThrobberText,
+.LoadingWrapper .ThrobberText {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.LoadingWrapper.throbber_medium .ThrobberText {
+  margin-top: 4px;
+}
+.LoadingWrapper.throbber_small .ThrobberText {
+  margin-top: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur path {
+  stroke: #4375fd;
+}
+.LoadingWrapper .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
+  animation-duration: .7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline,
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline {
+  display: none;
+}
+@keyframes _1O-cWE6nuIVO3x6-Onw0IU {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundFill {
+  animation-name: ofdi9VLSRZ5W98WsXVHiq;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes ofdi9VLSRZ5W98WsXVHiq {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.LoadingWrapper
+  .SVGIcon_Throbber
+  .topCircle
+  .circlePulse,
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  stroke: #67c1f5;
+  animation-name: _1jALk36CiS_T9Pg7vBjpIQ;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+}
+.LoadingWrapper .SVGIcon_Throbber .bottomCircle path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes _1jALk36CiS_T9Pg7vBjpIQ {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes _1KvOgdKiNE9XuSYUau3hKW {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-name: _1fs4RGcMBRzbQQirDBiFoM;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: .5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02 {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03 {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04 {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05 {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06 {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08 {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09 {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10 {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11 {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12 {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13 {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14 {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15 {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes _1fs4RGcMBRzbQQirDBiFoM {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+.throbber_small {
+  width: 36px;
+  height: 36px;
+}
+.throbber_medium {
+  width: 64px;
+  height: 64px;
+}
+.throbber_large {
+  width: 92px;
+  height: 92px;
+}
+.throbber_xlarge {
+  width: 120px;
+  height: 120px;
+}
+.throbber_xxlarge {
+  width: 240px;
+  height: 240px;
+}
+.ThrobberDelayAppear {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.ThrobberDelayAppear.Visible {
+  opacity: 1;
+}
+.NewThrobber img {
+  width: 100%;
+}
+.ErrorDiv {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
+}
+.CartCard {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.LineItemsCtn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.LineItemsCtn .StoreSalePriceBox {
+  padding-right: 0px;
+}
+.LineItemsCtn .StoreSaleDiscountedPriceCtn {
+  padding-right: 0px;
+}
+.LineItemWrapper {
+  position: relative;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.LineItemCapsule {
+  background-color: rgba(0, 0, 0, 0.2) 5;
+  width: 200px;
+  flex-shrink: 0;
+  height: 94px;
+}
+.LineItemCapsule .HeaderImg {
+  max-width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .LineItemCapsule {
+    flex-direction: column;
+    align-self: center;
+    width: auto;
+    height: auto;
+  }
+}
+.LineItemPlaceholder {
+  min-height: 110px;
+}
+.AddRemoveLinks {
+  color: #606f7f;
+  font-size: 12px;
+}
+.RemoveLineItem,
+.AddLineItem {
+  color: #606f7f;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+.RemoveLineItem:hover,
+.AddLineItem:hover {
+  color: #fff;
+}
+.LineItemRightCol {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: flex-end;
+}
+.InnerLineItemCtn {
+  display: flex;
+  gap: 15px;
+}
+@media screen and (max-width: 600px) {
+  .InnerLineItemCtn {
+    flex-direction: column;
+  }
+}
+.InnerLineItemCtn .LineItemDetailsCtn {
+  flex-grow: 1;
+}
+.InnerLineItemCtn .LineItemCol {
+  display: flex;
+}
+.InnerLineItemCtn .LineItemDetailsRow {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.InnerLineItemCtn .LineItemDetailsRowTop {
+  margin-top: 0px;
+}
+.InnerLineItemCtn .LineItemSpaceBetween {
+  justify-content: space-between;
+}
+.InnerLineItemCtn .LineItemTitle {
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.InnerLineItemCtn .LineItemPricingOptions {
+  margin: auto 0;
+}
+.InnerLineItemCtn .LineItemDropDown {
+  margin: 0;
+}
+.InnerLineItemCtn .LineItemDropDown :hover {
+  background: #464d58;
+}
+.InnerLineItemCtn .PlatformIcons svg {
+  fill: #7c8289;
+  color: #7c8289;
+}
+.DialogButton.AddLineItemCtn {
+  width: 26px;
+  margin: 0;
+  padding: 0;
+  line-height: 28px;
+  margin-left: 10px;
+  background: rgba(59, 63, 72, 0.5);
+}
+.DialogButton.AddLineItemCtn .AddLineItemIcon {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  color: #ccd5e0;
+}
+.PendingLineItem {
+  opacity: 0.3;
+  user-select: none;
+}
+.FlexRow {
+  display: flex;
+}
+.PriceWidget div {
+  background: transparent;
+  background-color: transparent;
+  padding-right: 0px;
+}
+.Warning {
+  color: #ffcc6a;
+  font-size: 13px;
+}
+.LineItemNoticeAppsCtn {
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.LoadingThrobber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.DialogDropDown.DropDownThin {
+  font-size: 12px;
+  padding: 5px 7px 5px 7px;
+  min-width: 100px;
+}
+.DropDownOptionsCtnThin {
+  font-size: 12px;
+  min-width: 300px;
+}
+.DropDownOptionItem {
+  padding: 5px;
+}
+.WhiteText {
+  color: #fff;
+}
+.ErrorLineItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ErrorLineItem .Left {
+  flex: 1;
+}
+.ErrorLineItem .Left .Error {
+  color: #de3618;
+}
+.ErrorLineItem .Left .Muted {
+  color: #606f7f;
+}
+.GiftForNotice {
+  border-radius: 2px;
+  padding: 3px 7px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ccd5e0;
+  font-size: 11px;
+}
+.GiftForNotice .Name {
+  color: #fff;
+}
+.RemoveButton {
+  color: #606f7f;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 6px;
+}
+.RemoveButton:hover {
+  color: #fff;
+}
+.PopupScreenshotModal .DialogContentFullSize .DialogContent_InnerWidth {
+  overflow: hidden;
+}
+.PopupScreenshotContainer {
+  width: fit-content;
+  height: fit-content;
+}
+.PopupFullWindow .PopupScreenshotContainer {
+  width: calc(100vw - 48px);
+}
+.PopupScreenshot {
+  width: auto;
+  height: auto;
+  max-height: 90vh;
+  max-width: 80vw;
+}
+.ButtonCtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+.ButtonIcon {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.ButtonIcon:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.ButtonIcon.Disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.CartCard {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+body.ShoppingCart {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+.ShoppingCartPage {
+  max-width: 940px;
+  min-height: 50vh;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.ShoppingCartPage .CartCheckboxNoMargin {
+  margin: 0;
+  margin-bottom: 0;
+}
+.ShoppingCartHeader {
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.ShoppingCartCtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .ShoppingCartCtn {
+    flex-direction: column-reverse;
+    max-width: 615px;
+    margin: 0 auto;
+  }
+}
+.ShoppingCartCtn .ShoppingCartLeftCol {
+  max-width: 615px;
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ShoppingCartCtn .ShoppingCartRightCol {
+  flex-shrink: 0;
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop)
+    .ShoppingCartCtn
+    .ShoppingCartRightCol.SmallCart {
+    display: none;
+  }
+}
+.LoadingThrobber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.CartRightColStickyCtn {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: calc(var(--store-menu-floating-height, 0) + 10px);
+  max-width: 280px;
+}
+.CartRightColStickyCtn .CartSummaryCtn {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .CartRightColStickyCtn .CartSummaryCtn {
+    position: static;
+    margin: 0 auto;
+    max-width: none;
+  }
+}
+.CartRightColStickyCtn .CartSummaryCtn .EstimatedTotalFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CartRightColStickyCtn .CartSummaryCtn .SummaryMarginBottom {
+  margin-bottom: 10px;
+}
+.CartRightColStickyCtn .LicenseContextCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 21px;
+  background: radial-gradient(
+    45% 45% at 50% 28%,
+    #67c1f549 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+.CartRightColStickyCtn .LicenseContextCtn img {
+  width: 80%;
+  margin-bottom: 8px;
+}
+.CartRightColStickyCtn .LicenseContextCtn .LicenseTitle {
+  font-size: 15px;
+  line-height: 18px;
+  color: #c6d4df;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.CartRightColStickyCtn .LicenseContextCtn .LicenseLink {
+  color: #ccd5e0;
+  font-size: 12px;
+  font-weight: 400;
+}
+.ResponsiveShoppingCartSummary {
+  display: none;
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .ResponsiveShoppingCartSummary {
+    display: block;
+  }
+}
+.RequestPurchaseCtn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.CartNoteText {
+  color: #ccd5e0;
+}
+.CartLabelText {
+  color: #fff;
+  font-size: 13px;
+}
+.CartValueText {
+  font-weight: 700;
+  color: #fff;
+  font-size: 15px;
+}
+.ShoppingCartBreadcrumbs {
+  color: #8f98a0;
+  margin-top: 25px;
+}
+.ShoppingCartBreadcrumbs .CurrentBreadcrumb {
+  color: #56707f;
+}
+.ShoppingCartModal {
+  width: 600px;
+  max-width: calc(100% - 48px);
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+.ShoppingCartModalBtns {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+@media screen and (max-width: 440px) {
+  .ShoppingCartModalBtns {
+    flex-direction: column;
+  }
+}
+.FooterNotice {
+  display: flex;
+  font-size: 13px;
+}
+.FooterNotice .NoticeIndex {
+  margin-right: 10px;
+}
+.CartFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.CartFooter .Button {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.BetaNotice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.BetaNotice .Text,
+.BetaNotice a {
+  flex: 1;
+  color: #8b9db0;
+}
+.BetaNotice a {
+  text-decoration: underline;
+}
+.BetaNotice a:hover {
+  color: #fff;
+}
+.BackgroundImage {
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
+.page_root {
+  position: relative;
+}
+.HeaderNotices {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.HeaderNotice {
+  padding: 15px;
+  color: #0e141b;
+  background-color: #ffc82c;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ErrorModalContent {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ErrorModalMessage {
+  color: #fff;
+  font-size: 14px;
+  margin: 12px 0;
+}
+.ErrorModalBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ErrorModalCode {
+  color: #3d4450;
+  font-size: 12px;
+  text-align: right;
+}
+.CartCard {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.CartUpsellArea {
+  margin-top: 48px;
+}
+.CartUpsellTitle {
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.UpsellRow {
+  margin-bottom: 32px;
+  overflow-x: auto;
+}
+.Specials {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.Specials.Loading {
+  min-height: 148px;
+}
+.Specials > div {
+  flex: 1 1 0px;
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .Specials > div {
+    min-width: 220px;
+  }
+}
+.DailyDeals,
+.Spotlights {
+  display: flex;
+  flex-direction: row;
+}
+.DailyDeals > div,
+.Spotlights > div {
+  flex: 1;
+}
+.DailyDeals > div:first-child,
+.Spotlights > div:first-child {
+  margin-right: 4px;
+}
+@media screen and (max-width: 840px) {
+  html:not(.force_desktop) .DailyDeals > div {
+    min-width: 260px;
+  }
+}
+.DailyDeals.Loading {
+  min-height: 194px;
+}
+.Spotlights.Loading {
+  min-height: 406px;
+}
+.Title {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+.EventTimeSection:first-child {
+  margin-bottom: 12px;
+}
+.EventTimeSection:last-child {
+  margin-bottom: 0px;
+}
+.EventTimeTitle {
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  position: relative;
+}
+.EventVisibilityItem {
+  line-height: 24px;
+}
+.EventEditorInputPaneContainer input.TimeWidth {
+  font-size: 15px;
+}
+.EventPublishTimeCtn {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.DateWidth {
+  max-width: 200px;
+}
+.TimeWidth {
+  max-width: 100px;
+}
+.PacificTimeHint {
+  display: block;
+  line-height: 22px;
+  padding: 10px;
+  font-size: 14px;
+}
+.TimeZone {
+  padding: 10px;
+}
+.InputBorder.TimeBlock {
+  margin-right: 8px;
+}
+.TimeRowContainer {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(57, 61, 71, 0.5);
+}
+.TimeRowDropDown {
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.TimeRowDropDown > .EndDateAmountCtn {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 50%;
+}
+.TimeRowDropDown > .EndRound > span {
+  margin-bottom: 0px;
+}
+.VisibilityItemList {
+  display: flex;
+  flex-direction: column;
+}
+.VisibilityItems {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5);
+}
+.EventEditorVisibilityCtn {
+  margin-top: 12px;
+}
+.DateErrorCtn {
+  position: absolute;
+  top: -13px;
+  left: 30px;
+  background: #744f4f;
+  padding: 2px 8px 2px 2px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px #000;
+}
+.DateErrorCtn img {
+  margin-right: 4px;
+}
+/*!
+ * https://github.com/arqex/react-datetime
+ */ .rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: "";
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker td span.rdtOld {
+  color: #999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+  cursor: default;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-of-type th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-of-type th:hover {
+  background: #eee;
+}
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+.rdtCounters {
+  display: inline-block;
+}
+.rdtCounters > div {
+  float: left;
+}
+.rdtCounter {
+  height: 100px;
+}
+.rdtCounter {
+  width: 40px;
+}
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+.rdtTime td {
+  cursor: default;
+}
+.GiftFormDivider {
+  border-top: 1px solid #343a44;
+  margin-bottom: 15px;
+}
+.GiftFormSection {
+  margin: 20px 0;
+}
+.FormTextLabel {
+  font-size: 14px;
+  color: #c6d4df;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.FormTitle {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+}
+.RedText {
+  color: red;
+}
+.GiftNoteInput {
+  border: 1px solid #0e141b;
+  border-radius: 4px;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  box-shadow: inset 0px 0px 4px transparent;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  width: calc(100% - 16px - 2px);
+  transition-property: background, box-shadow;
+  transition-duration: .18s;
+  transition-timing-function: ease-in-out;
+}
+.GiftNoteInput::placeholder {
+  font-style: italic;
+  color: rgba(148, 161, 166, 0.562);
+}
+.GiftNoteInput:focus {
+  outline: none;
+  background: rgba(29, 34, 39, 0.8);
+  box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+.GiftNoteInput:focus::placeholder {
+  margin-left: 2px;
+}
+.GiftRecipientPickerModal .DialogTextInputBase:focus {
+  background: #23262e !important;
+}
+.GiftRecipientPickerModal .DialogTextInputBase:focus:hover {
+  background: #23262e;
+}
+.GiftFriendsListCtn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 85%;
+  overflow-y: auto;
+}
+.GiftRecipientPickerFormCtn {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  max-width: 100%;
+}
+.GiftRecipientPickerFormCtn .GiftFriendsInput {
+  margin: 10px 0;
+}
+.GiftRecipientPickerFormCtn .GiftRecipientSaveBtn {
+  margin-top: auto;
+}
+.GiftPickerFriendBlock {
+  background: rgba(21, 21, 21, 0.15);
+  border-color: rgba(21, 21, 21, 0.15);
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.GiftPickerFriendBlock .FriendAvatar {
+  margin-right: 2px;
+}
+.GiftPickerFriendBlock:hover,
+.GiftPickerFriendBlock.Focused {
+  background: #393f49;
+  border-color: #404650;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+}
+.GiftPickerFriendBlock.Disabled {
+  opacity: 50%;
+  border-color: #3d4450;
+}
+.GiftPickerFriendBlock.Disabled:hover {
+  background: unset;
+  box-shadow: none;
+  cursor: auto;
+}
+.GiftPickerFriendBlock.Selected {
+  border-color: #1a9fff;
+}
+.GiftPickerFriendBlock .PersonaName {
+  flex: 1;
+  min-width: 0;
+}
+@media screen and (max-width: 440px) {
+  html:not(.force_desktop) .GiftPickerFriendBlock .PersonaName {
+    align-self: flex-start;
+  }
+}
+.FriendsGiftLabel {
+  font-size: 13px;
+  margin-left: auto;
+}
+@media screen and (max-width: 440px) {
+  html:not(.force_desktop) .FriendsGiftLabel {
+    align-self: flex-end;
+  }
+}
+.FriendsGiftLabel.OwnsGame {
+  color: #ffc82c;
+}
+.FriendsGiftLabel.OnWishlist {
+  color: #1a9fff;
+}
+.GiftFormRecipient {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.GiftFormRecipient .FriendAvatar {
+  margin: 0px 2px 0px 7px;
+}
+.GiftFormRecipient .ChangeGiftRecipientBtn {
+  width: auto;
+  margin-left: 15px;
+  padding: 0 5px;
+}
+.LinkButton {
+  color: #606f7f;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 6px;
+}
+.LinkButton:hover {
+  color: #fff;
+}
+.GiftDatePicker {
+  display: flex;
+  margin-top: 10px;
+}
+.DialogButton.ScheduleGiftBtn {
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.GiftScheduleIcon {
+  width: 24px;
+  vertical-align: -5px;
+  fill: #fff;
+  margin-right: 10px;
+}
+.GiftRadioLabel {
+  font-size: 14px;
+  color: #c6d4df;
+  margin-left: 5px;
+  vertical-align: 1px;
+}
+.GiftRadioRow {
+  margin-top: 10px;
+}
+.GiftSignatureInput {
+  max-width: 60%;
+}
+.GiftSignatureInput .DialogTextInputBase:not(:disabled) {
+  background: red !important;
+}
+.GiftSignatureInput .DialogTextInputBase:not(:disabled):hover {
+  background: #23262e;
+}
+.ScheduleError {
+  color: #de3618;
+}
+.LoadingError {
+  margin-top: 14px;
+  color: #de3618;
+}
+.GamepadTimePickerRow {
+  margin: 12px 0 12px 30px;
+}
+.GamepadTimePickerRow .DialogInputLabelGroup {
+  margin-bottom: 0;
+}
+.GamepadTimePickerRow .DialogInput_Wrapper > input.DialogInput {
+  min-width: 0;
+}
+.GamepadTimePickerRow .TimezoneDisplay {
+  align-self: center;
+}
+.FamilyGiftNotice {
+  color: #1a9fff;
+}
+.CouponPickerRowGlow {
+  background: linear-gradient(-45deg, #0056d6 8%, #1a9fff 90%);
+  border-radius: 2px;
+  padding: 1px;
+}
+.CouponPickerRowGlow .CouponPickerRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 9px;
+  min-height: 40px;
+  background-color: #23262e;
+}
+.CouponPickerRowGlow .CouponPickerRow .ModifyLink {
+  color: #ccd5e0;
+  flex: 1;
+  text-align: end;
+  text-decoration: underline;
+}
+.CouponRepresentation {
+  width: 80px;
+  height: 40px;
+  background-color: #1aa0ff53;
+}
+.PackageName {
+  font-weight: bold;
+}
+.CouponListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.CouponListItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  gap: 12px;
+  min-width: 400px;
+  background-color: #3d445080;
+}
+.CouponListItem.Disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.CouponListItem .Image {
+  width: 63px;
+}
+.CouponListItem .Info {
+  flex: 1;
+}
+.CouponListItem .Discount {
+  color: #ccd5e0;
+  font-size: 15px;
+  font-weight: bold;
+}
+.CouponInfoText {
+  color: #1a9fff;
+  font-size: 12px;
+}
+.Checkbox {
+  width: 16px;
+  height: 16px;
+  background-color: #0e141b;
+}
+.Checkbox.Hidden {
+  visibility: hidden;
+}
+.PreviewCtn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.PreviewCtn img {
+  display: block;
+}
+.PreviewCtn .SVG {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 5px 5px 1px 5px;
+}
+.PreviewCtn:hover {
+  cursor: pointer;
+}
+.PreviewCtn:hover .SVG {
+  opacity: 0.5;
+}
+.UserCountrySelector {
+  margin-bottom: 6px;
+}
+.UserCountrySelector .DialogInputLabelGroup {
+  margin-bottom: 0;
+}

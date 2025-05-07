@@ -1,0 +1,715 @@
+* {
+  box-sizing: border-box;
+}
+.Background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SteamMLButton {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 16px;
+  border-radius: 4px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+.SteamMLButton.AcceptButton {
+  background: linear-gradient(to bottom, #82a6d7, #3c6091);
+  border-top: 1px solid #aaceff;
+}
+.SteamMLButton.AcceptButton .Inner {
+  color: #fff;
+}
+.SteamMLButton.CancelButton {
+  background: linear-gradient(to bottom, #ca5025, #572310);
+  border-top: 1px solid #e76b3e;
+}
+.SteamMLButton.CancelButton .Inner {
+  color: #f7d8cd;
+}
+.SteamMLButton:hover {
+  filter: brightness(1.1);
+}
+.SteamMLButton.Disabled {
+  filter: saturate(0) brightness(0.6);
+  cursor: default;
+}
+.SteamMLButton .Inner {
+  font-size: 17px;
+  text-align: center;
+  user-select: none;
+}
+.FullSize {
+  width: 100%;
+  height: 100%;
+}
+.Header {
+  width: 600px;
+  min-width: 600px;
+  margin: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Header .HeaderOption {
+  flex-grow: 1;
+  min-width: 100px;
+  margin: 0px 12px;
+  height: 50px;
+  color: #999;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+.Header .HeaderOption:hover {
+  background-color: #282828;
+}
+.Header .HeaderOption.Selected {
+  background-color: #323940;
+  color: #43a8f5;
+}
+.SchemaPage {
+  width: 100%;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SchemaList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.SchemaList .SelectAppID {
+  margin-bottom: 10px;
+}
+.SchemaList.Hidden {
+  height: 0px;
+  margin: 0px;
+  border: 0px;
+}
+.SchemaElement {
+  width: 100%;
+  max-width: 900px;
+  min-width: 700px;
+  margin: 8px 0px;
+  padding: 4px 12px;
+  border: 1px solid #122b3d;
+  border-radius: 4px;
+  background-color: #0e2130;
+  text-decoration: none;
+  color: #999;
+  transition: .2s;
+  cursor: pointer;
+}
+.SchemaElement .Label {
+  color: #ccc;
+}
+.SchemaElement .SchemaName {
+  font-size: 18px;
+  color: #43a8f5;
+}
+.SchemaElement .AppID {
+  font-size: 14px;
+  color: #2e71a5;
+}
+.SchemaElement .HorizontalSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.SchemaElement .RowCount,
+.SchemaElement .KeepCount {
+  margin-top: 2px;
+}
+.SchemaElement:hover {
+  filter: brightness(1.3);
+}
+.SchemaDetails {
+  max-width: 1000px;
+  min-width: 700px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+}
+.SchemaDetails .Back {
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+.SchemaDetails .Back:hover {
+  filter: brightness(1.3);
+}
+.SchemaDetails .SchemaDetailsHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-bottom: 12px;
+}
+.SchemaDetails .SchemaDetailsHeader .SchemaDetailsBack {
+  font-size: 40px;
+  padding: 0px 10px 6px 0px;
+  color: #aaa;
+  text-decoration: none;
+}
+.SchemaDetails .SchemaDetailsHeader .SchemaDetailsBack:hover {
+  color: #fff;
+}
+.SchemaDetails .SchemaDetailsHeader .SchemaDetailsTitle {
+  height: 100%;
+  flex-grow: 1;
+  padding: 4px 10px;
+  background-color: #132f44;
+  border-bottom: 2px solid #2e72a7;
+}
+.SchemaDetails
+  .SchemaDetailsHeader
+  .SchemaDetailsTitle
+  .SchemaDetailsName {
+  font-size: 30px;
+  color: #43a8f5;
+}
+.SchemaDetails
+  .SchemaDetailsHeader
+  .SchemaDetailsTitle
+  .SchemaDetailsSchemaID {
+  font-size: 12px;
+  color: #2e72a7;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody {
+  color: #999;
+  font-size: 14px;
+  background-color: #222;
+  border: 1px solid #252525;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: 4px;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody.TypeInt32
+  .TypeName {
+  color: #b19696;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody.TypeInt64
+  .TypeName {
+  color: #a78181;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody.TypeBool
+  .TypeName {
+  color: #83805a;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody.TypeFloat
+  .TypeName {
+  color: #836d5a;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody.TypeEnum
+  .TypeName {
+  color: #6e835a;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody.TypeTimestamp
+  .TypeName {
+  color: #835a6d;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody
+  .ElementName {
+  color: #fff;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsElementBody
+  .TypeName {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsStructRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsStructRow:hover {
+  filter: brightness(1.3);
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsStructRow
+  .CollapseIcon {
+  padding: 0px 4px;
+  margin-left: -22px;
+  transition: .2s;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .SchemaDetailsStructRow
+  .CollapseIcon.Collapsed {
+  transform: rotateZ(-90deg);
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .StructIndent {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  overflow-y: hidden;
+}
+.SchemaDetails
+  .SchemaDetailsElements
+  .SchemaDetailsElement
+  .StructIndent.IndentCollapsed {
+  height: 0px;
+}
+.ProblemPage {
+  width: 100%;
+  min-height: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ProblemPage .ProblemListContainer {
+  width: 800px;
+  margin-top: 30px;
+  min-height: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ProblemPage .ProblemListContainer .ProblemListHeader {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.ProblemPage .ProblemListContainer .NoProblems {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.ProblemEntry {
+  width: 800px;
+  background-color: #323940;
+  border: 1px solid #3e4750;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: relative;
+  transition-property: filter, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  text-decoration: none;
+  cursor: pointer;
+}
+.ProblemEntry:hover {
+  filter: brightness(1.1);
+}
+.ProblemEntry .ProblemName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.ProblemEntry .Inactive {
+  font-size: 16px;
+  color: #ca5029;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.ProblemEntry .ProblemDescription {
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+.ProblemEntry .ProblemID {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 14px;
+  padding-top: 6px;
+}
+.ProblemEntry .Dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ProblemEntry .Dates .CreatedDate {
+  font-size: 12px;
+  color: #888;
+}
+.ProblemEntry .Dates .UpdatedDate {
+  font-size: 12px;
+  color: #888;
+}
+.ProblemEntry .ProblemSchemaList {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.AddNewProblem {
+  width: 800px;
+  background-color: #262c31;
+  border: 1px solid #323941;
+  border-radius: 6px;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  transition-property: width, transform, filter, height;
+  transition-timing-function: ease-in-out;
+  transition-duration: .2s;
+  position: relative;
+}
+.AddNewProblem.IsPrompt {
+  cursor: pointer;
+  width: 400px;
+  height: 48px;
+}
+.AddNewProblem.IsPrompt:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
+.AddNewProblem.IsPrompt
+  .NewProblemHeader.PlusSymbol {
+  transform: scale(1);
+}
+.AddNewProblem.IsPrompt .NewProblemDescription {
+  height: 0px;
+  margin: 0;
+  padding: 0;
+}
+.AddNewProblem.IsHeader {
+  height: 700px;
+  margin-bottom: 10px;
+}
+.AddNewProblem.IsHeader .NewProblemHeader {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3e4750;
+  justify-content: start;
+}
+.AddNewProblem.IsHeader
+  .NewProblemHeader
+  .PlusSymbol {
+  width: 0px;
+}
+.AddNewProblem .NewProblemHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition-property: justify-content;
+  transition-timing-function: ease-in-out;
+  transition-duration: .2s;
+}
+.AddNewProblem .NewProblemHeader .PlusSymbol {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  transition-property: width;
+  transition-timing-function: ease-out;
+  transition-duration: .2s;
+}
+.AddNewProblem .NewProblemHeader .AddProblemHeader {
+  font-size: 18px;
+  color: #b6c5ca;
+  text-align: center;
+}
+.AddNewProblem .NewProblemDescription {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px;
+  overflow-y: hidden;
+}
+.AddNewProblem .NewProblemDescription .LabelValue {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.AddNewProblem
+  .NewProblemDescription
+  .LabelValue
+  .Label {
+  width: 200px;
+  height: 22px;
+  color: #b2b2b2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.AddNewProblem
+  .NewProblemDescription
+  .LabelValue
+  .Value {
+  flex-grow: 1;
+  height: 22px;
+  border: 0px solid transparent;
+  background-color: #1a1a1a;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  padding: 4px;
+}
+.AddNewProblem .SchemaListContainer {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+}
+.AddNewProblem .SchemaListContainer .SchemaSelectListTitle {
+  color: #b2b2b2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.AddNewProblem .ButtonContainer {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  align-self: center;
+}
+.SchemaSelectList {
+  width: 100%;
+  height: 450px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #39393a;
+  border-right: 1px solid #39393a;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  position: relative;
+  transition-property: height;
+  transition-timing-function: ease-in-out;
+  transition-duration: .2s;
+}
+.SchemaSelectList.Hidden {
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SchemaSelectList .SchemaOption {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 3px 0px;
+  border: 1px solid #3e4750;
+  background-color: #202529;
+  cursor: pointer;
+  transition-property: filter, transform, background-color, border;
+  transition-timing-function: ease-in-out;
+  transition-duration: .05s;
+  position: relative;
+}
+.SchemaSelectList .SchemaOption:hover {
+  filter: brightness(1.3);
+  transform: scale(1.02);
+}
+.SchemaSelectList .SchemaOption.Selected {
+  background-color: #3e525f;
+  border: 1px solid #3e4a50;
+  color: #fff;
+}
+.ProblemDetails {
+  width: 800px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.ProblemDetails .BackButton {
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #323940, #262c31);
+  border-bottom: 2px solid #3e4750;
+  padding: 8px 16px;
+  position: relative;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer form.Hidden {
+  height: 0px;
+  max-height: 0px;
+  padding: 0;
+  border-width: 0;
+  overflow: hidden;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer .ProblemName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.ProblemDetails
+  .ProblemDetailsHeaderContainer
+  .ProblemName.Hidden {
+  display: none;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer .ProblemNameEditing {
+  height: 35px;
+  width: 200px;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer .ProblemDescription {
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  color: #dbe2e6;
+}
+.ProblemDetails
+  .ProblemDetailsHeaderContainer
+  .ProblemDescription.Hidden {
+  display: none;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer .ProblemDescEditing {
+  height: 32px;
+  width: 500px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer .ProblemID {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 14px;
+  padding-top: 6px;
+}
+.ProblemDetails .ProblemDetailsHeaderContainer .Dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ProblemDetails
+  .ProblemDetailsHeaderContainer
+  .Dates
+  .CreatedDate {
+  font-size: 12px;
+  color: #888;
+}
+.ProblemDetails
+  .ProblemDetailsHeaderContainer
+  .Dates
+  .UpdatedDate {
+  font-size: 12px;
+  color: #888;
+}
+.ProblemDetails .SchemaListContainer {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.ProblemDetails .SchemaListContainer .SchemaListHeader {
+  margin-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.ProblemDetails .SchemaListContainer .SchemaListEdit {
+  position: absolute;
+  top: 26px;
+  right: 4px;
+  color: #888;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+.ProblemDetails .SchemaListContainer .SchemaListEdit:hover {
+  color: #fff;
+}
+.ProblemDetails .SchemaListContainer .SchemaElement {
+  height: 36px;
+}
+.ProblemDetails .SchemaListContainer .ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  margin: 16px 0px;
+}
+.ProblemDetails .DeleteLink {
+  font-size: 14px;
+  color: #ca5025;
+  text-transform: uppercase;
+  margin: 8px auto;
+  cursor: pointer;
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+}
+.ProblemDetails .DeleteLink:hover {
+  color: #d67754;
+}

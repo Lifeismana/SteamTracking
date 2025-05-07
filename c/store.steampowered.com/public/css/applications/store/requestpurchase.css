@@ -1,0 +1,148 @@
+.RoleIcon {
+  width: 20px;
+  height: 20px;
+}
+.ProfileLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  max-width: 100%;
+}
+.MeBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e141b;
+  background-color: #59bf40;
+  font-size: 12px;
+  font-weight: 600;
+  height: 21px;
+  width: 50px;
+  text-align: center;
+}
+.PlayerName {
+  font-size: 20px;
+  overflow: hidden;
+}
+.RoleAndIcon {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+.RoleName {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+.FamilyErrorDisplay {
+  background-color: #de3618;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.FamilyMemberRow {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  transition: height .5s;
+}
+.FamilyMemberRow .FamilyMemberRowTop,
+.FamilyMemberRow .FamilyMemberRowTop .Left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .FamilyMemberRow .FamilyMemberRowTop,
+  .FamilyMemberRow .FamilyMemberRowTop .Left {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+.FamilyMemberRow .InvitePending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  color: #ff0;
+  font-size: 12px;
+  border-style: solid;
+  border-color: #ff0;
+  border-width: thin;
+}
+.ExpandRowButton.ExpandRowButton {
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  height: 24px;
+  width: 24px;
+}
+@media screen and (max-width: 500px) {
+  .ExpandRowButton.ExpandRowButton {
+    width: 100%;
+    background-color: #23262e;
+  }
+}
+.ExpandRowButton.ExpandRowButton:hover {
+  background-color: #1a9fff;
+}
+.ExpandRowButton.ExpandRowButton svg {
+  transition: transform .2s ease-in-out;
+  height: 18px;
+  margin-top: 4px;
+}
+.ExpandRowButton.ExpandRowButton.Selected svg {
+  transform: rotateZ(180deg);
+  transition: transform .2s ease-in-out;
+}
+.CartCard {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.PurchaseRequestBanner {
+  padding: 10px 15px;
+  margin: 20px 0px;
+  background-color: #1a9fff;
+  color: #fff;
+}
+.PurchaseRequestBanner a {
+  color: #fff;
+  text-decoration: underline;
+}
+.PurchaseRequestInfoPage {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.PurchaseRequestInfoPage .Header {
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.PurchaseRequestInfoPage .ButtonContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.PurchaseRequestInfoPage .PrimaryButton {
+  background-color: #1a9fff;
+  width: fit-content;
+  padding: 2px 20px;
+  margin-top: 40px;
+}

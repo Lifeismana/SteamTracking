@@ -1,0 +1,2163 @@
+.ChartContainerPlaceholder {
+  height: 210px;
+  width: 940px;
+}
+.ChartContainer {
+  background-image: linear-gradient(
+    180deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+  height: 210px;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 16px 0px 0px;
+}
+@media all and (max-width: 700px) {
+  .ChartContainer {
+    flex-direction: column-reverse;
+  }
+}
+.ChartContainer .Chart {
+  flex: 1;
+}
+.ChartContainer
+  .Chart
+  .recharts-cartesian-grid-horizontal
+  line {
+  stroke: #4c5661;
+}
+.ChartContainer .Stats {
+  min-width: 25%;
+  margin-left: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media all and (max-width: 700px) {
+  .ChartContainer .Stats {
+    flex-direction: row;
+  }
+}
+.ChartContainer .Stats .StatsTitle {
+  color: #fff;
+  letter-spacing: 0px;
+  font-size: 27px;
+  font-weight: 300;
+}
+@media all and (max-width: 700px) {
+  .ChartContainer .Stats .StatsTitle {
+    font-size: 21px;
+  }
+}
+.ChartContainer .Stats .StatSubtitle {
+  font-size: 10px;
+  color: #b6b6b6;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.ChartContainer
+  .Stats
+  .StatSubtitle
+  .Concurrent {
+  color: #82ff01;
+}
+.ChartContainer
+  .Stats
+  .StatSubtitle
+  .Now {
+  color: #70c3ff;
+}
+.ChartContainer .Stats .CurrentStats {
+  padding-bottom: 30px;
+}
+@media all and (max-width: 700px) {
+  .ChartContainer .Stats .CurrentStats {
+    padding-bottom: 0px;
+  }
+}
+.PageSection {
+  margin-bottom: 48px;
+}
+.PageSection .SectionTitle {
+  font-size: 16px;
+  color: #c5cbd8;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.PageSection .SectionTitle b {
+  color: #fff;
+  font-weight: 500;
+}
+.ChartPage {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.Placeholder {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 60%
+  );
+  background-size: 400% 400%;
+  border-radius: 5px;
+  animation: _1NHk0m80j5yOZhsPNvNh2t 3.2s ease;
+  animation-iteration-count: infinite;
+}
+@keyframes _1NHk0m80j5yOZhsPNvNh2t {
+  0% {
+    background-position: 100% 100%;
+  }
+  30% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.ChartTable {
+  width: 100%;
+  color: #fff;
+  border-spacing: 0 3px;
+  border-collapse: separate;
+  border: none;
+}
+.ChartTable .ColumnHeaders {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.ChartTable .ColumnHeaders th {
+  font-weight: 300;
+}
+.ChartTable .ColumnHeaders th.HoverCell {
+  width: 0%;
+}
+.ChartTable .ColumnHeaders th svg {
+  width: 15px;
+  fill: #8890a0;
+  margin-left: 3px;
+}
+@media all and (max-width: 700px) {
+  .ChartTable .ColumnHeaders th svg {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Rank {
+  width: 5%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable
+    .ColumnHeaders
+    th.Rank
+    span {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Game {
+  width: 50%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable
+    .ColumnHeaders
+    th.Game
+    span {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Price {
+  width: 15%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable .ColumnHeaders th.Price {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Change {
+  width: 9%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable
+    .ColumnHeaders
+    th.Change
+    span {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Concurrent {
+  width: 18%;
+}
+.ChartTable .ColumnHeaders th.Weeks {
+  width: 7%;
+}
+.ChartTable .ColumnHeaders th.PeakInGame {
+  width: 12%;
+}
+.ChartTable .RightCell {
+  text-align: right;
+  padding-right: 16px;
+}
+.ChartTable .TableRow {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 92, 103, 0.3),
+    rgba(90, 98, 108, 0.3)
+  );
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  overflow: visible;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.ChartTable .TableRow:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(130, 137, 151, 0.3),
+    rgba(163, 170, 178, 0.3)
+  );
+}
+.ChartTable
+  .TableRow:hover
+  .CapsuleCell
+  .Banner
+  .BannerText {
+  display: block;
+}
+.ChartTable .TableRow .HoverCell {
+  width: 0px;
+}
+.ChartTable
+  .TableRow
+  .HoverCell
+  .HoverSource {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ChartTable
+  .TableRow
+  .HoverCell
+  .HoverSource
+  .HoverMask {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  position: relative;
+  z-index: 6;
+}
+@media screen and (max-width: 1750px) {
+  .ChartTable
+    .TableRow
+    .HoverCell
+    .HoverSource {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .ChartTable
+    .TableRow
+    .HoverCell
+    .HoverSource {
+    width: 0%;
+  }
+}
+.ChartTable .TableRow .RankCell {
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  width: 5%;
+}
+.ChartTable .TableRow .PriceCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: fit-content;
+  min-width: 15%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable .TableRow .PriceCell {
+    display: none;
+  }
+}
+.ChartTable .TableRow .ConcurrentCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 15%;
+}
+.ChartTable .TableRow .WeeksCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 5%;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.ChartTable
+  .TableRow
+  .WeeksCell
+  .Tooltip {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.ChartTable .TableRow .PeakInGameCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 12%;
+}
+.ChartTable .TableRow .CapsuleCell {
+  padding: 6px 16px 6px 0px;
+  min-width: 50%;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell.Unavailable
+  .TopChartItem {
+  line-height: normal;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell.Unavailable
+  .GameName {
+  margin-left: 0;
+}
+.ChartTable .TableRow .CapsuleCell a {
+  display: flex;
+  flex-direction: row;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .CapsuleArt {
+  display: inline-block;
+  height: 52px;
+  vertical-align: middle;
+}
+@media all and (max-width: 530px) {
+  .ChartTable
+    .TableRow
+    .CapsuleCell
+    .CapsuleArt {
+    height: auto;
+    width: 46%;
+  }
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .ExpandedImage {
+  height: 70px;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .ExpandedMedia {
+  height: 110px;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .ExpandedButtons {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .CartButton {
+  margin: 4px;
+  font-size: 14px;
+  padding: 8px 18px;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .GameInfo {
+  padding: 8px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .GameName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-left: 8px;
+  white-space: pre-line;
+  overflow: hidden;
+  min-width: 0;
+}
+@media all and (max-width: 500px) {
+  .ChartTable
+    .TableRow
+    .CapsuleCell
+    .GameName {
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .GameName
+  .GameUnavailable {
+  font-size: 12px;
+  color: #a6a6a6;
+  margin-left: 19px;
+}
+.ChangeCell {
+  color: transparent;
+  text-align: right;
+  padding-right: 16px;
+  width: 7%;
+}
+.ChangeCell .Tooltip {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.ChangeCell.Up {
+  color: #68bb28;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.ChangeCell.Up:hover {
+  cursor: help;
+}
+.ChangeCell.Down {
+  color: #ec9d0c;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.ChangeCell.Down:hover {
+  cursor: help;
+}
+.ChangeCell .ListWeeksDebut,
+.ChangeCell .ListWeeksReturning {
+  color: #202327;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 2px 6px;
+}
+.ChangeCell .ListWeeksDebut {
+  background-color: #76dbfb;
+}
+.ChangeCell .ListWeeksReturning {
+  background-color: #41ffcb;
+}
+.TopSectionFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (max-width: 700px) {
+  .TopSectionFlex {
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 700px) {
+  .SteamDeckChartDropdown {
+    margin-top: 10px;
+  }
+}
+.SteamDeckBanner {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.SteamDeckBanner img {
+  width: 200px;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBanner {
+    flex-direction: row;
+  }
+  .SteamDeckBanner img {
+    width: 175px;
+  }
+}
+.SteamDeckBannerWords {
+  display: flex;
+  flex-direction: column;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBannerWords {
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 15px;
+  }
+}
+.SteamDeckBannerTitle {
+  color: #88bde9;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBannerTitle {
+    font-size: 16px;
+  }
+}
+.SteamDeckBannerDesc {
+  color: #a4b3c4;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 550;
+  text-align: center;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBannerDesc {
+    font-size: 14px;
+  }
+}
+.DeckChartDateRange {
+  font-size: 14px;
+  font-weight: 200;
+  margin-bottom: 25px;
+  display: block;
+  color: #fff;
+}
+@media all and (max-width: 700px) {
+  .DeckChartDateRange {
+    text-align: center;
+  }
+}
+body.SteamChartsPage .responsive_page_frame {
+  background: #0e1014;
+}
+.SteamChartsShell {
+  position: relative;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  min-height: 80vh;
+  transition: padding-left .2s;
+  padding-left: 200px;
+  z-index: 0;
+}
+@media all and (max-width: 910px) {
+  .SteamChartsShell {
+    padding-left: 0px;
+    top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.SteamChartsShell .SteamChartsContent .HeaderCtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+@media all and (max-width: 910px) {
+  .SteamChartsShell .SteamChartsContent .HeaderCtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.SteamChartsShell
+  .SteamChartsContent
+  .HeaderCtn.WithSubtitle {
+  margin-bottom: 0px;
+}
+.SteamChartsShell .SteamChartsContent .HeaderCtn h1 {
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media all and (max-width: 910px) {
+  .SteamChartsShell
+    .SteamChartsContent
+    .HeaderCtn
+    h1 {
+    font-size: 29px;
+  }
+}
+.SteamChartsShell .SteamChartsContent h3 {
+  font-size: 23px;
+  font-weight: 300;
+  text-align: center;
+}
+.SteamChartsShell .SteamChartsContent .PageSubtitle {
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 30px;
+  display: block;
+  color: #fff;
+}
+@media all and (max-width: 910px) {
+  .SteamChartsShell .SteamChartsContent .PageSubtitle {
+    text-align: center;
+    margin-top: 6px;
+  }
+  .SteamChartsShell
+    .SteamChartsContent
+    .PageSubtitle
+    span {
+    display: none;
+  }
+}
+.SteamChartsShell
+  .SteamChartsContent
+  .PageSubtitle
+  span {
+  color: #85939d;
+}
+.SteamChartsShell
+  .SteamChartsContent
+  .PageSubtitle
+  > div {
+  margin-left: 6px;
+  display: inline-block;
+}
+.SteamChartsShell
+  .SteamChartsContent
+  .PageSubtitle.TopDeckSubtitle {
+  margin-bottom: 0px;
+}
+.page_content_ctn#page_root {
+  position: relative;
+  transition: padding-left .2s, padding-right .2s;
+  overflow: hidden;
+}
+div#global_header .content {
+  position: relative;
+  left: 0;
+  transition: left .2s;
+}
+@media all and (min-width: 1190px) {
+  .page_content_ctn#page_root {
+    padding-left: 200px;
+  }
+  div#global_header .content {
+    left: 90px;
+  }
+  .SteamChartsShell {
+    padding-left: 0;
+  }
+}
+@media all and (min-width: 1374px) {
+  .page_content_ctn#page_root {
+    padding-right: 200px;
+  }
+  div#global_header .content {
+    left: 0;
+  }
+}
+.SteamChartsRootPosition {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+.AlignWithMenu {
+  position: relative;
+  width: 100vw;
+}
+.SteamChartsMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  margin-right: 30px;
+  padding-top: 94px;
+  overflow: hidden;
+  background: #0e1014;
+  background: linear-gradient(180deg, #0e1014 50%, #0e101400 100%);
+  transition: padding-top .2s;
+}
+.SteamChartsMenu svg.SteamLogo {
+  position: absolute;
+  width: 110%;
+  top: -90px;
+  left: -40px;
+  filter: opacity(0.1);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, black 100%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+@media screen and (max-width: 1190px) {
+  .SteamChartsMenu svg.SteamLogo {
+    top: 40px;
+  }
+}
+.SteamChartsMenu > :not(svg) {
+  position: relative;
+}
+@media screen and (max-width: 1190px) {
+  .SteamChartsMenu {
+    padding-top: 96px;
+    box-shadow: unset;
+    background: unset;
+  }
+}
+@media screen and (max-width: 910px) {
+  .SteamChartsMenu {
+    position: relative;
+    padding-top: 0;
+    margin-right: 0;
+    width: unset;
+    overflow-x: scroll;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    background: #25282e;
+  }
+  .SteamChartsMenu::-webkit-scrollbar {
+    height: 0;
+    background: transparent;
+  }
+}
+@media all and (max-width: 910px) {
+  .SteamChartsMenu
+    .MenuGroup.Weekly
+    .MenuLinks
+    a:not(:first-child),
+  .SteamChartsMenu
+    .MenuGroup.Monthly
+    .MenuLinks
+    a:not(:first-child) {
+    display: none;
+  }
+}
+.SteamChartsMenu .MenuGroup .MenuHeader {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 12px 0px 0px 18px;
+  margin-top: 2px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #7c8588;
+  border-top: 1px solid #2e3033;
+}
+@media all and (max-width: 910px) {
+  .SteamChartsMenu .MenuGroup .MenuHeader {
+    display: none;
+  }
+}
+.SteamChartsMenu .MenuGroup .MenuLinks a {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 12px 18px;
+  margin: 4px 0px;
+  color: #c3d3d8;
+}
+.SteamChartsMenu .MenuGroup .MenuLinks a:hover {
+  background-color: #414653;
+}
+.SteamChartsMenu
+  .MenuGroup
+  .MenuLinks
+  a.ActiveLink {
+  background-color: #414653;
+}
+.SteamChartsMenu .MenuGroup .MenuLinks a svg {
+  width: 26px;
+  height: 26px;
+  margin-right: 14px;
+}
+@media all and (max-width: 910px) {
+  .SteamChartsMenu .MenuGroup .MenuLinks {
+    display: flex;
+    flex-direction: row;
+  }
+  .SteamChartsMenu .MenuGroup .MenuLinks a {
+    white-space: nowrap;
+  }
+  .SteamChartsMenu
+    .MenuGroup
+    .MenuLinks
+    a
+    span {
+    display: flex;
+  }
+  .SteamChartsMenu .MenuGroup .MenuLinks a svg {
+    width: 19px;
+    height: 19px;
+    margin-right: 7px;
+  }
+}
+.ChartRangeCtn {
+  font-family: "Motiva Sans", Sans-serif;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: fit-content;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.ChartRangeCtn .ChartRangeText {
+  margin-left: 16px;
+}
+.ChartRangeCtn .ChartRangeText.ShortDate {
+  display: none;
+}
+@media all and (max-width: 910px) {
+  .ChartRangeCtn .ChartRangeText {
+    font-size: 14px;
+  }
+  .ChartRangeCtn .ChartRangeText.ShortDate {
+    display: block;
+  }
+  .ChartRangeCtn .ChartRangeText.LongDate {
+    display: none;
+  }
+}
+.ChartRangeCtn .ChartNavCtn {
+  display: flex;
+  flex-grow: 1;
+}
+.ChartRangeCtn .ChartNavCtn a {
+  display: flex;
+  background: linear-gradient(
+    to right,
+    rgba(144, 153, 161, 0.1),
+    rgba(144, 153, 161, 0.06)
+  );
+  padding: 12px 24px;
+  border-radius: 3px;
+  margin-right: 4px;
+  height: 43px;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+}
+.ChartRangeCtn
+  .ChartNavCtn:not(.Disabled)
+  a:hover {
+  background: linear-gradient(
+    to right,
+    rgba(204, 213, 220, 0.2),
+    rgba(204, 213, 220, 0.1)
+  );
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.ChartRangeCtn .ChartNavPrev {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 9px 7px 0;
+  border-color: transparent #fff transparent transparent;
+}
+.ChartRangeCtn .ChartNavNext {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 9px;
+  border-color: transparent transparent transparent #fff;
+}
+.ChartRangeCtn
+  .ChartNavCtn.Disabled
+  .ChartNavNext,
+.ChartRangeCtn
+  .ChartNavCtn.Disabled
+  .ChartNavPrev {
+  border-color: transparent transparent transparent #545c67;
+}
+.PageContainer {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.ChartItemsCtn {
+  background: linear-gradient(
+    135deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(144, 153, 161, 0.06) 100%
+  );
+  border-radius: 3px;
+  padding: 6px;
+}
+.ChartItemsCtn .ChartMoreBtn {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #1e2834;
+  font-weight: 400;
+  text-align: center;
+}
+.ChartItemsCtn .ChartMoreBtn:hover {
+  background-color: #3a4d64;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.PageSubtitle {
+  font-size: 18px;
+  font-weight: 200;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.SideBySideCharts {
+  display: flex;
+  flex-direction: row;
+}
+.SideBySideCharts .OverviewChart {
+  flex: 1;
+  min-width: 0;
+  min-height: 570px;
+}
+.SideBySideCharts .OverviewChart:first-child {
+  margin-right: 30px;
+}
+.SideBySideCharts .Chart {
+  flex: 1;
+  min-width: 0;
+}
+.SideBySideCharts .Chart:first-child {
+  margin-right: 30px;
+}
+@media all and (max-width: 550px) {
+  .SideBySideCharts {
+    flex-direction: column;
+  }
+  .SideBySideCharts .Chart:first-child,
+  .SideBySideCharts .OverviewChart:first-child {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+.TopItem {
+  border-bottom: 1px solid #1a9fff;
+}
+.TopItem img.Capsule {
+  max-width: 100%;
+}
+.TopItem .ItemRow {
+  padding: 14px 6px;
+  border-top: none;
+}
+.TopItem .ItemRow .Rank {
+  font-size: 21px;
+  color: #fff;
+  line-height: 25px;
+}
+.ItemRow {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 15px;
+  color: #fff;
+  padding: 12px 4px;
+  border-top: 1px solid #4c5661;
+}
+.ItemRow .Rank {
+  color: #a7a7a7;
+  margin-right: 5px;
+  width: 18px;
+  text-align: center;
+}
+.ItemRow:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.ItemRow .ItemNameCtn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.ItemRow .ItemNameCtn .ItemDesc {
+  text-transform: uppercase;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #a0aab6;
+  margin-top: 2px;
+}
+.ItemRow .AddDataCtn {
+  text-align: right;
+}
+.ItemRow .AddDataDesc {
+  text-transform: uppercase;
+  line-height: 12px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #a0aab6;
+  margin-top: 2px;
+}
+.ImageButtonCtn {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 192px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.ImageButtonCtn .ImageButtonLink {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 50px #2d333b;
+}
+.ImageButtonCtn .ImageButtonLink:hover {
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+.ImageButtonCtn .ImageGridCtn {
+  position: absolute;
+  padding: 0px;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 304%;
+  transform: scale(0.55) rotate(337deg) translateX(-44%) translateY(1%);
+  transform-origin: top left;
+  transition-property: transform, filter;
+  transition-duration: .3s;
+  transition-timing-function: ease-in;
+  filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
+    hue-rotate(0deg) saturate(1) blur(4px);
+}
+.Monthly .ImageButtonCtn .ImageGridCtn {
+  transform: scale(0.45) rotate(337deg) translateX(-31%) translateY(1%);
+  filter: saturate(0.8) contrast(0.8) brightness(0.6) sepia(0.3)
+    hue-rotate(0deg) saturate(1) blur(4px);
+}
+.ImageButtonCtn .ImageGridCtn img {
+  width: 33%;
+  height: auto;
+}
+.ImageButtonCtn:hover .ImageGridCtn {
+  transform: scale(0.58) rotate(337deg) translateX(-45%) translateY(-2%);
+}
+.Monthly .ImageButtonCtn:hover .ImageGridCtn {
+  transform: scale(0.48) rotate(337deg) translateX(-32%) translateY(-3%);
+}
+.MoreLinksCtn {
+  position: relative;
+}
+.MoreLinksCtn a {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right,
+    rgba(144, 153, 161, 0.1),
+    rgba(144, 153, 161, 0.06)
+  );
+}
+.OverviewChartPlaceholder {
+  min-height: 494px;
+}
+.BestOfYearButton {
+  background-color: #1e2834;
+  width: auto;
+  text-align: center;
+  display: block;
+  padding: 16px;
+}
+.BestOfYearButton:hover {
+  background-color: #3a4d64;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.BestOfYearButton .BackupBestOfYearText {
+  font-size: 32px;
+  color: #fff;
+}
+.BestOfYearBanner {
+  max-width: 940px;
+  width: 100%;
+  object-fit: contain;
+}
+.BestOfYearBanner.Big {
+  display: block;
+}
+.BestOfYearBanner.Mobile {
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  .BestOfYearBanner.Big {
+    display: none;
+  }
+  .BestOfYearBanner.Mobile {
+    display: block;
+  }
+}
+.PageSection {
+  margin-bottom: 48px;
+}
+.PageSection .SectionTitle {
+  font-size: 16px;
+  color: #c5cbd8;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.PageSection .SectionTitle b {
+  color: #fff;
+  font-weight: 500;
+}
+.ChartPage {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.Placeholder {
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 60%
+  );
+  background-size: 400% 400%;
+  border-radius: 5px;
+  animation: _3n0N_c3fIHBhVJ2Cye5zs9 3.2s ease;
+  animation-iteration-count: infinite;
+}
+@keyframes _3n0N_c3fIHBhVJ2Cye5zs9 {
+  0% {
+    background-position: 100% 100%;
+  }
+  30% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.ChartTable {
+  width: 100%;
+  color: #fff;
+  border-spacing: 0 3px;
+  border-collapse: separate;
+  border: none;
+}
+.ChartTable .ColumnHeaders {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.ChartTable .ColumnHeaders th {
+  font-weight: 300;
+}
+.ChartTable .ColumnHeaders th.HoverCell {
+  width: 0%;
+}
+.ChartTable .ColumnHeaders th svg {
+  width: 15px;
+  fill: #8890a0;
+  margin-left: 3px;
+}
+@media all and (max-width: 700px) {
+  .ChartTable .ColumnHeaders th svg {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Rank {
+  width: 5%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable
+    .ColumnHeaders
+    th.Rank
+    span {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Game {
+  width: 50%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable
+    .ColumnHeaders
+    th.Game
+    span {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Price {
+  width: 15%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable .ColumnHeaders th.Price {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Change {
+  width: 9%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable
+    .ColumnHeaders
+    th.Change
+    span {
+    display: none;
+  }
+}
+.ChartTable .ColumnHeaders th.Concurrent {
+  width: 18%;
+}
+.ChartTable .ColumnHeaders th.Weeks {
+  width: 7%;
+}
+.ChartTable .ColumnHeaders th.PeakInGame {
+  width: 12%;
+}
+.ChartTable .RightCell {
+  text-align: right;
+  padding-right: 16px;
+}
+.ChartTable .TableRow {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 92, 103, 0.3),
+    rgba(90, 98, 108, 0.3)
+  );
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  overflow: visible;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+.ChartTable .TableRow:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(130, 137, 151, 0.3),
+    rgba(163, 170, 178, 0.3)
+  );
+}
+.ChartTable
+  .TableRow:hover
+  .CapsuleCell
+  .Banner
+  .BannerText {
+  display: block;
+}
+.ChartTable .TableRow .HoverCell {
+  width: 0px;
+}
+.ChartTable
+  .TableRow
+  .HoverCell
+  .HoverSource {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ChartTable
+  .TableRow
+  .HoverCell
+  .HoverSource
+  .HoverMask {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  position: relative;
+  z-index: 6;
+}
+@media screen and (max-width: 1750px) {
+  .ChartTable
+    .TableRow
+    .HoverCell
+    .HoverSource {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .ChartTable
+    .TableRow
+    .HoverCell
+    .HoverSource {
+    width: 0%;
+  }
+}
+.ChartTable .TableRow .RankCell {
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  width: 5%;
+}
+.ChartTable .TableRow .PriceCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: fit-content;
+  min-width: 15%;
+}
+@media all and (max-width: 700px) {
+  .ChartTable .TableRow .PriceCell {
+    display: none;
+  }
+}
+.ChartTable .TableRow .ConcurrentCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 15%;
+}
+.ChartTable .TableRow .WeeksCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 5%;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.ChartTable
+  .TableRow
+  .WeeksCell
+  .Tooltip {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.ChartTable .TableRow .PeakInGameCell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 12%;
+}
+.ChartTable .TableRow .CapsuleCell {
+  padding: 6px 16px 6px 0px;
+  min-width: 50%;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell.Unavailable
+  .TopChartItem {
+  line-height: normal;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell.Unavailable
+  .GameName {
+  margin-left: 0;
+}
+.ChartTable .TableRow .CapsuleCell a {
+  display: flex;
+  flex-direction: row;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .CapsuleArt {
+  display: inline-block;
+  height: 52px;
+  vertical-align: middle;
+}
+@media all and (max-width: 530px) {
+  .ChartTable
+    .TableRow
+    .CapsuleCell
+    .CapsuleArt {
+    height: auto;
+    width: 46%;
+  }
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .ExpandedImage {
+  height: 70px;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .ExpandedMedia {
+  height: 110px;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .ExpandedButtons {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .CartButton {
+  margin: 4px;
+  font-size: 14px;
+  padding: 8px 18px;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .GameInfo {
+  padding: 8px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .GameName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-left: 8px;
+  white-space: pre-line;
+  overflow: hidden;
+  min-width: 0;
+}
+@media all and (max-width: 500px) {
+  .ChartTable
+    .TableRow
+    .CapsuleCell
+    .GameName {
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.ChartTable
+  .TableRow
+  .CapsuleCell
+  .GameName
+  .GameUnavailable {
+  font-size: 12px;
+  color: #a6a6a6;
+  margin-left: 19px;
+}
+.ChangeCell {
+  color: transparent;
+  text-align: right;
+  padding-right: 16px;
+  width: 7%;
+}
+.ChangeCell .Tooltip {
+  width: 100%;
+  text-align: right;
+  display: unset;
+}
+.ChangeCell.Up {
+  color: #68bb28;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.ChangeCell.Up:hover {
+  cursor: help;
+}
+.ChangeCell.Down {
+  color: #ec9d0c;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.ChangeCell.Down:hover {
+  cursor: help;
+}
+.ChangeCell .ListWeeksDebut,
+.ChangeCell .ListWeeksReturning {
+  color: #202327;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: 2px 6px;
+}
+.ChangeCell .ListWeeksDebut {
+  background-color: #76dbfb;
+}
+.ChangeCell .ListWeeksReturning {
+  background-color: #41ffcb;
+}
+.TopSectionFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (max-width: 700px) {
+  .TopSectionFlex {
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 700px) {
+  .SteamDeckChartDropdown {
+    margin-top: 10px;
+  }
+}
+.SteamDeckBanner {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.SteamDeckBanner img {
+  width: 200px;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBanner {
+    flex-direction: row;
+  }
+  .SteamDeckBanner img {
+    width: 175px;
+  }
+}
+.SteamDeckBannerWords {
+  display: flex;
+  flex-direction: column;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBannerWords {
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 15px;
+  }
+}
+.SteamDeckBannerTitle {
+  color: #88bde9;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBannerTitle {
+    font-size: 16px;
+  }
+}
+.SteamDeckBannerDesc {
+  color: #a4b3c4;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 550;
+  text-align: center;
+}
+@media all and (max-width: 700px) {
+  .SteamDeckBannerDesc {
+    font-size: 14px;
+  }
+}
+.DeckChartDateRange {
+  font-size: 14px;
+  font-weight: 200;
+  margin-bottom: 25px;
+  display: block;
+  color: #fff;
+}
+@media all and (max-width: 700px) {
+  .DeckChartDateRange {
+    text-align: center;
+  }
+}
+.WeekBrowseLink {
+  cursor: pointer;
+}
+.CountryControl {
+  margin-top: 4px;
+}
+.CountryControl .DropDownContainer {
+  width: 33%;
+  min-width: 250px;
+}
+.MostPlayedOptionsControl .DropDownContainer {
+  width: 33%;
+  min-width: 250px;
+}
+.TopGameBackground {
+  filter: saturate(0.4) opacity(0.4) blur(0px);
+  position: absolute;
+  top: -95px;
+  left: 1%;
+  width: calc(100vw - 200px);
+  max-width: 1900px;
+  transform-origin: top;
+  -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    );
+  mask: radial-gradient(
+    51.31% 143.89% at 49.99% -21.75%,
+    #000000 0%,
+    #000000 52.6%,
+    rgba(0, 0, 0, 0.18) 83.33%,
+    rgba(0, 0, 0, 0) 95.31%
+  );
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+  z-index: -1;
+}
+@media screen and (max-width: 910px) {
+  .TopGameBackground {
+    top: -20px;
+    width: 100vw;
+    transform: scale(1.5);
+  }
+}
+.BrowseTopSellersButton {
+  margin-top: 12px;
+}
+.TopChartItem {
+  display: flex;
+  line-height: 52px;
+  align-items: center;
+  position: relative;
+}
+.CapsuleDecorator {
+  position: absolute;
+  left: 0px;
+  top: 14px;
+  display: grid;
+  row-gap: 5px;
+}
+.Banner {
+  font-size: 11px;
+  color: #111;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  padding: 3px 4px 3px 4px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 5;
+  text-transform: uppercase;
+  background-color: #66c0f4;
+}
+.LinesImg {
+  height: 10px;
+}
+.BannerText {
+  display: none;
+}
+.ChartPlaceholder {
+  min-height: 100vh;
+}
+.WeeklyFooterControls {
+  margin: 12px auto 0 auto;
+  max-width: 50vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.Tooltip {
+  display: inline-flex;
+}
+.PriceWidget {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.PriceWidget .StoreSalePriceWidgetContainer {
+  position: relative;
+  margin-top: 0px;
+}
+.TopReleasesContainer {
+  margin-top: -95px;
+  width: 100%;
+}
+.LoadingWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.LoadingWrapper.Static {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD;
+}
+.LoadingWrapper.Static * {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.LoadingWrapper.Static .bottomCircle path {
+  stroke-width: 0 !important;
+}
+.LoadingWrapper.noString {
+  flex-direction: row;
+}
+.LoadingWrapper .Throbber,
+.LoadingWrapper .SVGIcon_Throbber,
+.LoadingWrapper .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.LoadingWrapper .Throbber {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.LoadingWrapper.throbber_small .Throbber {
+  width: 32px;
+  height: 32px;
+}
+.LoadingWrapper.throbber_medium .Throbber {
+  width: 64px;
+  height: 64px;
+}
+.LoadingWrapper.throbber_large .Throbber {
+  width: 92px;
+  height: 92px;
+}
+.throbber_center_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ThrobberText,
+.LoadingWrapper .ThrobberText {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.LoadingWrapper.throbber_medium .ThrobberText {
+  margin-top: 4px;
+}
+.LoadingWrapper.throbber_small .ThrobberText {
+  margin-top: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur path {
+  stroke: #4375fd;
+}
+.LoadingWrapper .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
+  animation-duration: .7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline,
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline {
+  display: none;
+}
+@keyframes _1O-cWE6nuIVO3x6-Onw0IU {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundFill {
+  animation-name: ofdi9VLSRZ5W98WsXVHiq;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes ofdi9VLSRZ5W98WsXVHiq {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.LoadingWrapper
+  .SVGIcon_Throbber
+  .topCircle
+  .circlePulse,
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  stroke: #67c1f5;
+  animation-name: _1jALk36CiS_T9Pg7vBjpIQ;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+}
+.LoadingWrapper .SVGIcon_Throbber .bottomCircle path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes _1jALk36CiS_T9Pg7vBjpIQ {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes _1KvOgdKiNE9XuSYUau3hKW {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-name: _1fs4RGcMBRzbQQirDBiFoM;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: .5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02 {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03 {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04 {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05 {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06 {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08 {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09 {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10 {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11 {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12 {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13 {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14 {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15 {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes _1fs4RGcMBRzbQQirDBiFoM {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+.throbber_small {
+  width: 36px;
+  height: 36px;
+}
+.throbber_medium {
+  width: 64px;
+  height: 64px;
+}
+.throbber_large {
+  width: 92px;
+  height: 92px;
+}
+.throbber_xlarge {
+  width: 120px;
+  height: 120px;
+}
+.throbber_xxlarge {
+  width: 240px;
+  height: 240px;
+}
+.ThrobberDelayAppear {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.ThrobberDelayAppear.Visible {
+  opacity: 1;
+}
+.NewThrobber img {
+  width: 100%;
+}
+.ErrorDiv {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
+}
+.PopupScreenshotModal .DialogContentFullSize .DialogContent_InnerWidth {
+  overflow: hidden;
+}
+.PopupScreenshotContainer {
+  width: fit-content;
+  height: fit-content;
+}
+.PopupFullWindow .PopupScreenshotContainer {
+  width: calc(100vw - 48px);
+}
+.PopupScreenshot {
+  width: auto;
+  height: auto;
+  max-height: 90vh;
+  max-width: 80vw;
+}
+.ButtonCtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+.ButtonIcon {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.ButtonIcon:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.ButtonIcon.Disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.PreviewCtn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.PreviewCtn img {
+  display: block;
+}
+.PreviewCtn .SVG {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 5px 5px 1px 5px;
+}
+.PreviewCtn:hover {
+  cursor: pointer;
+}
+.PreviewCtn:hover .SVG {
+  opacity: 0.5;
+}
+.TopReleasesContainer {
+  width: 100%;
+}
+.HelpRequestChartContainer {
+  height: 300px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(144, 153, 161, 0.1) 0%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+}
+.CategoryBlock.Placeholder {
+  min-height: 300px;
+}
+.CategoryBlock thead th {
+  padding: 4px 12px;
+}
+.CategoryBlock thead th.Category {
+  width: 45%;
+}
+.CategoryBlock thead th.Submitted24h {
+  width: 25%;
+}
+.CategoryBlock thead th.ResponseTimes {
+  width: 30%;
+}
+.CategoryBlock tbody tr.TableRow {
+  font-size: 16px;
+  line-height: 24px;
+  cursor: default;
+}
+.CategoryBlock tbody tr.TableRow td {
+  padding: 4px 12px;
+}
+.CategoryBlock tbody td.Submitted24h,
+.CategoryBlock tbody td.ResponseTimes {
+  color: #c5cbd8;
+}
+.CategoryBlock .NumberCol {
+  text-align: right;
+}

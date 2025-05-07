@@ -1,0 +1,233 @@
+.Discount {
+  font-size: 14px;
+  padding: 4px 6px;
+  background-color: #4c6b22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a4d007;
+}
+body.v6.rewards {
+  background-color: #161a1f;
+  height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+body.v6.rewards .ModalPosition {
+  overflow-y: auto;
+}
+body.v6.rewards .ModalPosition_Content {
+  min-height: none;
+}
+.responsive_page_frame {
+  height: 100%;
+}
+.responsive_page_content {
+  max-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.responsive_page_template_content {
+  padding-bottom: 0 !important;
+}
+.responsive_page_template_content,
+.page_content_ctn,
+#points_shop_root,
+.Shell,
+.ShellScrollParent {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.placeHolder_summerSale2020_promotionDetailsBar {
+  overflow-x: hidden;
+}
+.ShellHeader {
+  background-color: #1e232e;
+  width: 100%;
+  z-index: 12;
+  box-sizing: border-box;
+  min-height: 51px;
+  user-select: none;
+}
+.ShellHeader .ShellHeaderFlex {
+  max-width: 988px;
+  margin: 0 auto;
+}
+.ShellHeader .ShellHeaderBrandLink {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  min-width: 200px;
+  position: relative;
+}
+.ShellHeader .ShellHeaderBrandLink .Sparkles {
+  width: 40px;
+  position: absolute;
+}
+.ShellHeader .PointsContainer {
+  margin-right: 25px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ShellHeader .AppFilterContainer {
+  margin-top: 2px;
+  margin-right: 25px;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ShellHeader .AppFilterContainer .SearchTermContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.ShellHeader .AppFilterContainer .AppFilterLabel {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #d0d0d0;
+}
+.ShellHeader .AppFilterContainer .SearchTerm {
+  background: #393d43;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  height: 28px;
+  width: 300px;
+  color: #c5cbd8;
+  padding-left: 28px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+.ShellHeader
+  .AppFilterContainer
+  .SearchTerm::placeholder {
+  font-style: italic;
+  color: #838588;
+}
+.ShellHeader .AppFilterContainer .SearchIconContainer {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+}
+.ShellHeader .AppFilterContainer .SearchIcon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.ShellHeader .AppFilterContainer .SearchTermClearButton {
+  position: absolute;
+  right: 6px;
+  top: 8px;
+}
+.ShellHeader .AppFilterContainer .SearchTermClearIcon {
+  height: 12px;
+  cursor: pointer;
+  color: #939393;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.ShellHeader .AppFilterContainer .SearchTermClearIcon:hover {
+  color: inherit;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.ShellHeader .RewardsPointsIcon {
+  width: 24px;
+  height: 24px;
+}
+.ShellHeader .YourBalanceLabel {
+  white-space: nowrap;
+  color: #78a9e2;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.ShellHeader .RewardsPointsCount {
+  letter-spacing: .1em;
+}
+.ShellHeaderBrandName {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #d9d9d9;
+  padding-left: 20px;
+}
+.Shell {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  color: #c5cbd8;
+  letter-spacing: 0em;
+}
+.Shell a {
+  color: #c5cbd8;
+}
+.Shell .ShellScrollParent {
+  align-items: stretch;
+}
+.SvgOverrideColor path {
+  fill: #78a9e2;
+}
+.ItemHoverZIndex {
+  z-index: 1;
+}
+.ItemHoverZIndex:hover {
+  z-index: 20;
+}
+.ActionButton {
+  border-radius: 3px;
+  background-color: #474e58;
+  color: #c5cbd8;
+  font-size: .75rem;
+  font-weight: 100;
+  letter-spacing: .0625rem;
+  line-height: 1.125rem;
+  padding: 2px 8px;
+  margin-left: 8px;
+  transition: color .2s ease-in-out;
+}
+.ActionButton:hover {
+  color: #fff;
+}
+.ActionButton:focus {
+  color: #fff;
+}
+.Icon {
+  width: 32px;
+  height: 32px;
+}
+.PrimaryRedeemButton {
+  margin-bottom: 20px;
+}
+.CheckmarkCircle {
+  width: 20px;
+  height: 20px;
+  color: #5b7e0f;
+}
+.AlreadyOwned {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #5b7e0f;
+  user-select: none;
+}
+.AlreadyOwned .AlreadyOwnedText {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-left: 8px;
+}

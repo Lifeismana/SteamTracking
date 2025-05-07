@@ -1,0 +1,1125 @@
+.Bold {
+  display: inline;
+  font-weight: bold;
+}
+.Italic {
+  display: inline;
+  font-style: italic;
+}
+p.Paragraph {
+  margin: .5em 0;
+}
+.Header1,
+.Header2,
+.Header3,
+.Header4,
+.Header5 {
+  margin: 0;
+}
+.Header1 {
+  display: block;
+  color: #fff;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  margin-bottom: 4px;
+}
+.Header2 {
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.Header3 {
+  color: #fff;
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.Header4 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.Header5 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+}
+.CenterSpan {
+  align-items: center;
+}
+.SmallText {
+  color: #fff;
+  font-size: 11px;
+  line-height: 13px;
+}
+.Underline {
+  display: inline;
+  text-decoration: underline;
+}
+.Strike {
+  display: inline;
+  text-decoration: line-through;
+}
+.Spoiler {
+  display: inline;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #000;
+  padding: 0px 8px;
+}
+.Spoiler:hover,
+.Spoiler.Revealed {
+  color: #fff;
+}
+.Spoiler:hover .SpoilerText,
+.Spoiler.Revealed .SpoilerText {
+  visibility: visible;
+  transition-delay: 80ms;
+  transition-duration: 120ms;
+}
+.Spoiler .SpoilerText {
+  visibility: hidden;
+  transition-delay: 80ms;
+  transition-duration: 120ms;
+}
+.DisabledMouseEvents {
+  pointer-events: none;
+}
+.BlockQuote {
+  display: table;
+  box-sizing: border-box;
+  border: 1px solid #56707f;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 92%;
+}
+.BlockQuote > p:first-child {
+  margin-top: 0;
+}
+.BlockQuote > p:last-child {
+  margin-bottom: 0;
+}
+.QuoteAuthor {
+  display: block;
+  font-style: italic;
+}
+.PullQuote {
+  width: 33%;
+  min-width: 200px;
+  float: right;
+  border-radius: 3px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  display: table;
+  word-break: break-word;
+  line-height: 28px;
+  padding: 0px 0px 10px 20px;
+}
+.Code,
+.CodeBlock {
+  font-size: 13px;
+  font-family: Consolas, monospace;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+.CodeBlock {
+  display: block;
+  border: 1px solid #535354;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  overflow-x: auto;
+}
+.List {
+  display: block;
+  padding-inline-start: 40px;
+}
+.OrderedList {
+  display: block;
+  padding-inline-start: 40px;
+}
+.OrderedList .OrderedList {
+  margin-top: 4px;
+}
+.ListItem {
+  list-style-position: outside;
+  margin-bottom: 5px;
+}
+.HR {
+  border: none;
+  height: 1px;
+  color: #6e7577;
+  background-color: #6e7577;
+  margin: 12px 0px;
+}
+.Table {
+  display: table;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.Table.NoBorder {
+  position: relative;
+}
+.Table.NoBorder .TableRow,
+.Table.NoBorder
+  .TableRow:first-of-type,
+.Table.NoBorder .TableCell,
+.Table.NoBorder
+  .TableCell:first-of-type {
+  border: none;
+}
+.Table.EqualCells {
+  width: 100%;
+  table-layout: fixed;
+}
+.Table .TableRow {
+  border-bottom: 1px solid rgba(226, 229, 233, 0.3);
+}
+.Table .TableRow:first-of-type {
+  border-top: 1px solid rgba(226, 229, 233, 0.3);
+}
+.Table .TableCell {
+  border-right: 1px solid rgba(226, 229, 233, 0.3);
+}
+.Table .TableCell:first-of-type {
+  border-left: 1px solid rgba(226, 229, 233, 0.3);
+}
+.TableCell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 4px;
+}
+th.TableCell {
+  display: table-cell;
+  font-weight: bold;
+  padding: 4px;
+  color: #f0f2f4;
+  border-right: 1px solid rgba(226, 229, 233, 0.3);
+  background: rgba(198, 202, 210, 0.2);
+}
+th.TableCell:first-of-type {
+  border-left: 1px solid rgba(226, 229, 233, 0.3);
+}
+.TableRow {
+  display: table-row;
+}
+.ExpandSectionBlock .ExpandSectionHeader {
+  padding: 3px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.11);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  color: #aebac2;
+}
+.ExpandSectionBlock .ExpandSectionHeader .EmbedArrow svg {
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+  fill: #aebac2;
+  transition: transform;
+  transition-duration: .2s;
+}
+.ExpandSectionBlock .ExpandSectionHeader:hover {
+  color: #fff;
+}
+.ExpandSectionBlock
+  .ExpandSectionHeader:hover
+  .EmbedArrow
+  svg {
+  fill: #fff;
+}
+.ExpandSectionBlock .ExpandSectionBody {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 2px;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle {
+  padding-bottom: 8px;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle .ExpandSectionHeader {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle
+  .ExpandSectionHeader
+  .EmbedArrow {
+  margin-left: auto;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle
+  .ExpandSectionHeader
+  .EmbedArrow
+  svg {
+  margin-right: 8px;
+}
+a.LinkButton {
+  background-color: #2681da;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 4px 0px;
+}
+a.LinkButton span {
+  color: #fff;
+  padding-bottom: 6px;
+}
+a.LinkButton:hover {
+  background-color: #3691fa;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.Image {
+  max-width: 100%;
+}
+.PreservedUnsupportedTag .Tag {
+  color: #999;
+  display: inline-block;
+  margin: 0 2px;
+}
+.CalendarEventContainer.CalendarEventContainer.CalendarEventContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+  margin-bottom: 0;
+}
+.CalendarEventContainer.CalendarEventContainer.CalendarEventContainer
+  .CalendarEventLink.CalendarEventLink.CalendarEventLink {
+  border-radius: 20px;
+  padding: 4px 22px;
+  color: #fff;
+  background-color: red;
+}
+.ProseMirror-gapcursor {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+}
+.ProseMirror-gapcursor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  border-top: 1px solid #000;
+  animation: ProseMirror-cursor-blink 1.1s steps(2, start) infinite;
+}
+@keyframes ProseMirror-cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+.ProseMirror-focused .ProseMirror-gapcursor {
+  display: block;
+}
+.ProseMirror {
+  position: relative;
+}
+.ProseMirror {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: break-spaces;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0;
+}
+.ProseMirror pre {
+  white-space: pre-wrap;
+}
+.ProseMirror li {
+  position: relative;
+}
+.ProseMirror-hideselection *::selection {
+  background: transparent;
+}
+.ProseMirror-hideselection *::-moz-selection {
+  background: transparent;
+}
+.ProseMirror-hideselection {
+  caret-color: transparent;
+}
+.ProseMirror [draggable][contenteditable="false"] {
+  user-select: text;
+}
+.ProseMirror-selectednode {
+  outline: 2px solid #8cf;
+}
+li.ProseMirror-selectednode {
+  outline: none;
+}
+li.ProseMirror-selectednode:after {
+  content: "";
+  position: absolute;
+  left: -32px;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+  border: 2px solid #8cf;
+  pointer-events: none;
+}
+img.ProseMirror-separator {
+  display: inline !important;
+  border: none !important;
+  margin: 0 !important;
+}
+.Hover {
+  position: fixed;
+  background: #ccc;
+  color: #000;
+  padding: 4px;
+}
+.Link {
+  font-size: 12px;
+}
+.LinkHelp {
+  font-size: 10px;
+  font-weight: italic;
+}
+.LoadingWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.LoadingWrapper.Static {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD;
+}
+.LoadingWrapper.Static * {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.LoadingWrapper.Static .bottomCircle path {
+  stroke-width: 0 !important;
+}
+.LoadingWrapper.noString {
+  flex-direction: row;
+}
+.LoadingWrapper .Throbber,
+.LoadingWrapper .SVGIcon_Throbber,
+.LoadingWrapper .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.LoadingWrapper .Throbber {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.LoadingWrapper.throbber_small .Throbber {
+  width: 32px;
+  height: 32px;
+}
+.LoadingWrapper.throbber_medium .Throbber {
+  width: 64px;
+  height: 64px;
+}
+.LoadingWrapper.throbber_large .Throbber {
+  width: 92px;
+  height: 92px;
+}
+.throbber_center_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ThrobberText,
+.LoadingWrapper .ThrobberText {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.LoadingWrapper.throbber_medium .ThrobberText {
+  margin-top: 4px;
+}
+.LoadingWrapper.throbber_small .ThrobberText {
+  margin-top: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur path {
+  stroke: #4375fd;
+}
+.LoadingWrapper .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
+  animation-duration: .7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline,
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline {
+  display: none;
+}
+@keyframes _1O-cWE6nuIVO3x6-Onw0IU {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundFill {
+  animation-name: ofdi9VLSRZ5W98WsXVHiq;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes ofdi9VLSRZ5W98WsXVHiq {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.LoadingWrapper
+  .SVGIcon_Throbber
+  .topCircle
+  .circlePulse,
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  stroke: #67c1f5;
+  animation-name: _1jALk36CiS_T9Pg7vBjpIQ;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+}
+.LoadingWrapper .SVGIcon_Throbber .bottomCircle path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes _1jALk36CiS_T9Pg7vBjpIQ {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes _1KvOgdKiNE9XuSYUau3hKW {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-name: _1fs4RGcMBRzbQQirDBiFoM;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: .5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02 {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03 {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04 {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05 {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06 {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08 {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09 {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10 {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11 {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12 {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13 {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14 {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15 {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes _1fs4RGcMBRzbQQirDBiFoM {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+.throbber_small {
+  width: 36px;
+  height: 36px;
+}
+.throbber_medium {
+  width: 64px;
+  height: 64px;
+}
+.throbber_large {
+  width: 92px;
+  height: 92px;
+}
+.throbber_xlarge {
+  width: 120px;
+  height: 120px;
+}
+.throbber_xxlarge {
+  width: 240px;
+  height: 240px;
+}
+.ThrobberDelayAppear {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.ThrobberDelayAppear.Visible {
+  opacity: 1;
+}
+.NewThrobber img {
+  width: 100%;
+}
+.Container > .ProseMirror {
+  padding: 12px;
+}
+p.pm_paragraph {
+  min-height: 8px;
+}
+.ProseMirror table {
+  overflow: hidden;
+}
+.ProseMirror td,
+.ProseMirror th {
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+}
+.ProseMirror .ProseMirror-gapcursor:after {
+  border-top: none;
+  border-left: 1px solid #fff;
+  height: 1em;
+  top: .5em;
+}
+.ProseMirror .selectedCell:after {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(200, 200, 255, 0.4);
+  pointer-events: none;
+}
+.ProseMirror td:not([data-colwidth]):not(.column-resize-dragging),
+.ProseMirror th:not([data-colwidth]):not(.column-resize-dragging) {
+  min-width: var(--default-cell-min-width);
+}
+.ProseMirror .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  z-index: 20;
+  background-color: #adf;
+  pointer-events: none;
+}
+.ProseMirror.resize-cursor {
+  cursor: ew-resize;
+  cursor: col-resize;
+}
+.ToolbarRowOverflowContainer {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 4px;
+}
+.ToolbarRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: fit-content;
+}
+.ToolbarRow .Gap {
+  width: 12px;
+}
+.ToolbarRow .Spacer {
+  flex: 1;
+  min-width: 12px;
+}
+.ToolbarRow ._DialogInputContainer {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+button.DialogButton.CommandButton {
+  margin-right: 4px;
+  width: 30px;
+  height: 30px;
+}
+.BasicUI button.DialogButton.CommandButton {
+  padding: unset;
+  margin-right: 4px;
+  min-width: unset;
+}
+.BasicUI button.DialogButton.CommandButton.gpfocus {
+  color: #0e141b;
+}
+.BasicUI button.DialogButton.CommandButton.gpfocus svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI button.DialogButton.CommandButton.gpfocus svg path {
+  stroke: currentColor;
+}
+.BasicUI button.DialogButton.CommandButton.gpfocus svg line,
+.BasicUI button.DialogButton.CommandButton.gpfocus svg polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+button.DialogButton.CommandButton.DialogButton .SVGIcon_Button {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 4px;
+  padding-left: 1px;
+}
+button.DialogButton.CommandButton.DialogButton
+  .SVGIcon_Button.SVGIcon_TextBold,
+button.DialogButton.CommandButton.DialogButton
+  .SVGIcon_Button.SVGIcon_TextItalic,
+button.DialogButton.CommandButton.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline,
+button.DialogButton.CommandButton.DialogButton
+  .SVGIcon_Button.SVGIcon_TextStrikethrough {
+  width: 18px;
+  height: 18px;
+}
+button.DialogButton.CommandButton.DialogButton
+  .SVGIcon_Button.SVGIcon_SpellCheck {
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+button.DialogButton.CommandButton.DialogButton
+  .SVGIcon_Button.SVGIcon_TextBullets {
+  width: 25px;
+  height: 25px;
+}
+button.DialogButton.CommandButton.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline {
+  padding-bottom: 5px;
+}
+button.DialogButton.CommandButton.Toggled {
+  background: #626c7f;
+  color: #fff;
+}
+.FileUploadPlaceholder {
+  position: relative;
+  display: inline-block;
+}
+.FileUploadPlaceholder .ThrobberCtn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.FileUploadPlaceholder .ThrobberCtn .ThrobberRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.FileUploadPlaceholder
+  .ThrobberCtn
+  .ThrobberRow
+  .Throbber {
+  align-items: center;
+}
+.FileUploadPlaceholder img.PendingImage {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  max-width: 100%;
+  filter: grayscale(1) brightness(0.8) saturate(0.5);
+}
+.FileUploadDragDrop {
+  position: relative;
+}
+.FileUploadDragDrop .FileUploadDropFilesMessage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  color: #ccc;
+  text-shadow: 2px 2px 4px #000;
+  pointer-events: none;
+}
+.TooltipWithShortcut {
+  text-align: center;
+}
+.TooltipWithShortcut .KeyCap {
+  display: inline-block;
+  font-size: .8em;
+  line-height: 1.25em;
+  background: #3d4450;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 6px;
+}
+.Page {
+  display: flex;
+  flex-direction: row;
+  margin: 12px 2%;
+  min-height: 50vh;
+  max-height: 90vh;
+}
+.Page .Content {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+}
+.NotesPagedSettings {
+  flex: 1;
+  height: auto;
+  min-height: 0;
+}
+.NotesPagedSettings .DialogContentTransition {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+}
+.NotesPagedSettings .PageListColumn {
+  min-height: unset !important;
+}
+.NotesPagedSettings .NotePage > .DialogContent_InnerWidth {
+  max-width: none;
+  min-height: 0;
+}
+.BasicUI
+  .NotesPagedSettings
+  .NotePage
+  > .DialogContent_InnerWidth {
+  overflow: hidden;
+}
+.NotesPagedSettings.PinnedView .DialogContentTransition {
+  background: none;
+}
+.NotesPagedSettings.PinnedView .PageListColumn {
+  visibility: hidden;
+}
+.NotesPagedSettings.PinnedView .NotePage {
+  background: none;
+}
+.NotesPagedSettings.PinnedView .Toolbar,
+.NotesPagedSettings.PinnedView .NoteActions {
+  visibility: hidden;
+}
+.NotesPagedSettings.PinnedView
+  .NoteEditorArea
+  .EditorInput {
+  overflow: hidden;
+}
+.NotesPagedSettings .NewNoteButton {
+  width: 36px;
+  height: 36px;
+  margin: 10px;
+  padding: 0px;
+}
+.BasicUI .NotesPagedSettings .NewNoteButton {
+  padding: 0px;
+  min-width: unset;
+  width: 100%;
+  box-sizing: unset;
+}
+.BasicUI .NotesPagedSettings .NewNoteButton.gpfocus {
+  color: #0e141b;
+}
+.BasicUI .NotesPagedSettings .NewNoteButton.gpfocus svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI .NotesPagedSettings .NewNoteButton.gpfocus svg path {
+  stroke: currentColor;
+}
+.BasicUI .NotesPagedSettings .NewNoteButton.gpfocus svg line,
+.BasicUI .NotesPagedSettings .NewNoteButton.gpfocus svg polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.NotesPagedSettings .NewNoteButton svg {
+  margin-bottom: 4px;
+}
+.NoteEditorArea {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  margin: 0px 10px 25px 0px;
+  position: relative;
+  color: #c1c6cf;
+}
+.BasicUI .NoteEditorArea {
+  min-height: 75vh;
+  max-height: 75vh;
+  max-width: 75vw;
+}
+.NoteEditorArea .EditorInput {
+  flex: 1;
+  overflow: auto;
+  min-height: 0;
+}
+.NoteEditorArea .NoteActions {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.NoteEditorArea .NoteActions .DialogButton {
+  width: 22px;
+  height: 30px;
+  padding: 8px 8px 0px 8px;
+  opacity: 0.5;
+}
+.NoteEditorArea .NoteActions .DialogButton:hover {
+  opacity: 0.8;
+}
+.BasicUI .NoteEditorArea .NoteActions .DialogButton {
+  padding: 8px 8px 0px 8px;
+  min-width: unset;
+  box-sizing: unset;
+}
+.BasicUI
+  .NoteEditorArea
+  .NoteActions
+  .DialogButton.gpfocus {
+  color: #0e141b;
+}
+.BasicUI
+  .NoteEditorArea
+  .NoteActions
+  .DialogButton.gpfocus
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI
+  .NoteEditorArea
+  .NoteActions
+  .DialogButton.gpfocus
+  svg
+  path {
+  stroke: currentColor;
+}
+.BasicUI
+  .NoteEditorArea
+  .NoteActions
+  .DialogButton.gpfocus
+  svg
+  line,
+.BasicUI
+  .NoteEditorArea
+  .NoteActions
+  .DialogButton.gpfocus
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.NoteEditorArea .NoteActions .CloseWindowButton {
+  margin-left: 8px;
+  width: fit-content;
+  padding: 0px 8px;
+  height: 38px;
+}
+.Toolbar {
+  padding: 12px 0;
+  -webkit-app-region: no-drag;
+  position: relative;
+  z-index: 3;
+}
+.EditorInput {
+  background: #111;
+  box-shadow: inset 0 8px 6px -6px #000;
+  display: flex;
+  flex-direction: column;
+}
+.EditorInput > .ProseMirror {
+  flex: 1;
+  min-height: 0;
+}
+.EditorInput > .ProseMirror:focus-visible {
+  outline: none;
+}
+.EditorInput a {
+  color: #aad8ec;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+}
+.EditorInput a:hover {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
+}
+.EditorInput h1,
+.EditorInput h2,
+.EditorInput h3,
+.EditorInput h4,
+.EditorInput h5 {
+  margin: .5em 0;
+}
+.EditorInput ul,
+.EditorInput ol {
+  margin: .5em 0;
+}
+.EditorInput li > p:first-of-type {
+  margin: 0;
+}
