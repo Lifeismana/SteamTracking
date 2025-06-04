@@ -1,0 +1,1267 @@
+.LoadingWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.LoadingWrapper.Static {
+  animation-name: none;
+}
+.LoadingWrapper.Static * {
+  animation-name: none !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.LoadingWrapper.Static .bottomCircle path {
+  stroke-width: 0 !important;
+}
+.LoadingWrapper.noString {
+  flex-direction: row;
+}
+.LoadingWrapper .Throbber,
+.LoadingWrapper .SVGIcon_Throbber,
+.LoadingWrapper .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.LoadingWrapper .Throbber {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.LoadingWrapper.throbber_small .Throbber {
+  width: 32px;
+  height: 32px;
+}
+.LoadingWrapper.throbber_medium .Throbber {
+  width: 64px;
+  height: 64px;
+}
+.LoadingWrapper.throbber_large .Throbber {
+  width: 92px;
+  height: 92px;
+}
+.throbber_center_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ThrobberText,
+.LoadingWrapper .ThrobberText {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.LoadingWrapper.throbber_medium .ThrobberText {
+  margin-top: 4px;
+}
+.LoadingWrapper.throbber_small .ThrobberText {
+  margin-top: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur path {
+  stroke: #4375fd;
+}
+.LoadingWrapper .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: ThrobberRoundLoop;
+  animation-duration: 0.7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0.0;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline,
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline {
+  display: none;
+}
+@keyframes ThrobberRoundLoop {
+  to {
+    stroke-dashoffset: -232.0;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundFill {
+  animation-name: ThrobberFillLoop;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes ThrobberFillLoop {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle .circlePulse,
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  stroke: #67c1f5;
+  animation-name: ThrobberTopCircleLoop;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  animation-name: ThrobberBottomCircleLoop;
+}
+.LoadingWrapper .SVGIcon_Throbber .bottomCircle path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: ThrobberBottomCircleLoop;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes ThrobberTopCircleLoop {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes ThrobberBottomCircleLoop {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-name: ThrobberRoundLoopThickness;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-delay: -0.0s;
+  opacity: 0.06;
+  stroke-width: 0.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02 {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1.0px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03 {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04 {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2.0px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05 {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06 {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3.0px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08 {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4.0px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09 {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10 {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5.0px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11 {
+  animation-delay: -1.0s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12 {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6.0px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13 {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14 {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7.0px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15 {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes ThrobberRoundLoopThickness {
+  0% {
+  }
+  100% {
+    stroke-dashoffset: -1100.0;
+  }
+}
+.throbber_small {
+  width: 36px;
+  height: 36px;
+}
+.throbber_medium {
+  width: 64px;
+  height: 64px;
+}
+.throbber_large {
+  width: 92px;
+  height: 92px;
+}
+.throbber_xlarge {
+  width: 120px;
+  height: 120px;
+}
+.throbber_xxlarge {
+  width: 240px;
+  height: 240px;
+}
+.SVGIcon_Button {
+  fill: #ffffff;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px;
+}
+.EmoticonBow {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.EmoticonBow_st0 {
+  opacity: 0.4;
+  fill: #231f20;
+}
+.EmoticonBow_st1 {
+  fill: #e41e25;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: white;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #861221;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: #ff0000;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: yellow;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: white;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #861221;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: #ff0000;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: yellow;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+a:link {
+  text-decoration: none;
+}
+.App {
+  font-family: "motiva sans regular", "Motiva Sans", arial, tahoma;
+  margin: 0px auto;
+  height: 3840px;
+  background-image: linear-gradient(#2a465d, #1b2838 400px, #1b2838 100%);
+  color: white;
+  padding: 40px;
+  position: relative;
+}
+@media (max-width: 414px) {
+  .App {
+    padding: 10px;
+  }
+}
+.App .Login {
+  width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+.App .Login .Text {
+  font-size: 24px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+.App .Container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.App .Container .TopSection {
+  color: #fbfcfc;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 60px;
+  min-width: 300px;
+}
+@media (max-width: 414px) {
+  .App .Container .TopSection {
+    margin-bottom: 20px;
+  }
+}
+.App .Container .TopSection .Header {
+  font-size: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+@media (max-width: 414px) {
+  .App .Container .TopSection .Header {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+.App .Container .TopSection .Body {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 22px;
+  letter-spacing: 0px;
+}
+@media screen and (max-width: 414px) {
+  .App .Container .TopSection .Body {
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+  }
+}
+.App .Container .TopSection .Spacer {
+  height: 20px;
+  min-height: 20px;
+}
+.App .Container .BottomSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: clip;
+}
+.App .Container .BottomSection .VerticalBar {
+  width: 0px;
+  height: 100%;
+  border-left: 1px solid #30455a;
+}
+.PlaytimeList {
+  width: 300px;
+  min-width: 300px;
+}
+@media screen and (max-width: 1000px) {
+  .PlaytimeList {
+    display: none;
+  }
+}
+.PlaytimeList .Header {
+  font-size: 16px;
+  color: #fbfcfc;
+  text-shadow: 1px 1px 1px #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.PlaytimeList .Loading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #355d79;
+}
+.IdentityBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.IdentityBlock .Avatar {
+  width: 48px;
+  height: 48px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.IdentityBlock .PersonalInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  justify-content: center;
+}
+.IdentityBlock .PersonalInfo .Persona {
+  font-size: 10px;
+}
+.IdentityBlock .PersonalInfo .GameCount {
+  font-size: 10px;
+}
+.IdentityBlock .PersonalInfo .TotalTime {
+  font-size: 10px;
+}
+.PlayedGame {
+  display: flex;
+  flex-direction: row;
+  background-color: #00000000;
+  margin-right: 20px;
+  margin-bottom: 4px;
+}
+.PlayedGame.Ignored {
+  filter: saturate(10%) brightness(60%);
+}
+.PlayedGame.Ignored .PlaytimeInfo .IgnoreToggle {
+  margin-top: 2px;
+  height: 15px;
+}
+.PlayedGame .Logo {
+  width: 100px;
+  height: 48px;
+  background-color: black;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.PlayedGame .PlaytimeInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  justify-content: center;
+  color: #ddd;
+}
+.PlayedGame .PlaytimeInfo .HoursPlayed {
+  font-size: 10px;
+}
+.PlayedGame .PlaytimeInfo .Title {
+  font-size: 10px;
+  display: none;
+}
+.PlayedGame .PlaytimeInfo .LastPlayed {
+  font-size: 10px;
+  padding-right: 4px;
+  color: #999;
+}
+.PlayedGame .PlaytimeInfo .IgnoreToggle {
+  background-color: #355d79;
+  height: 15px;
+  width: 80px;
+  border-radius: 2px;
+  overflow: hidden;
+  font-size: 10px;
+  text-align: center;
+  height: 0px;
+  transition-property: height, margin;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+.PlayedGame .PlaytimeInfo .IgnoreToggle:hover {
+  background-color: #406f91;
+  color: #fff;
+}
+.PlayedGame:hover .PlaytimeInfo .Title {
+  display: block;
+}
+.PlayedGame:hover .PlaytimeInfo .HoursPlayed {
+  display: none;
+}
+.PlayedGame:hover .PlaytimeInfo .IgnoreToggle {
+  margin-top: 2px;
+  height: 15px;
+}
+.UpdateSaveBlock .UpdateButton {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  cursor: default;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  background-color: #353535;
+  color: #aaa;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.UpdateSaveBlock .UpdateButton.Enabled {
+  background-color: #355d79;
+  color: #fff;
+  cursor: pointer;
+}
+.UpdateSaveBlock .UpdateButton.Enabled:hover {
+  background-color: #406f91;
+}
+.RecommendationList {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 414px) {
+  .RecommendationList {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.RecommendationList .Header {
+  font-size: 16px;
+  color: #fbfcfc;
+  text-shadow: 1px 1px 1px #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 777px) {
+  .RecommendationList .Header {
+    text-align: center;
+  }
+}
+.RecommendationList .List {
+  transition-property: filter;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  position: relative;
+}
+.RecommendationList .List.Updating {
+  filter: saturate(50%) brightness(90%);
+}
+.RecommendationOptions .Row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.RecommendationOptions .SecondRow {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 777px) {
+  .RecommendationOptions .SecondRow {
+    margin-bottom: 40px;
+  }
+}
+.OptionCheckbox {
+  color: #ccc;
+  margin-top: 10px;
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.OptionCheckbox .Checkbox {
+  margin-right: 4px;
+  margin-top: 2px;
+}
+.OptionCheckbox.WishlistCheckbox {
+  height: 40px;
+}
+.SaveUserSettingsButton {
+  height: 40px;
+  margin-left: 4px;
+  margin-right: 0px;
+  margin-top: 10px;
+  padding: 8px;
+  justify-content: center;
+  background-color: #00000000;
+  border-color: #ddd;
+  border-style: solid;
+  color: #ddd;
+}
+.SaveUserSettingsButton:hover {
+  background-color: #29455c;
+}
+.SaveUserSettingsButton:active {
+  background-color: #355d79;
+}
+.OptionSlider {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  width: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 777px) {
+  .OptionSlider {
+    margin-bottom: 20px;
+  }
+}
+.OptionSlider .Title {
+  font-size: 11px;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+.OptionSlider .Labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.OptionSlider .Labels .Min {
+  text-align: left;
+}
+.OptionSlider .Labels .Max {
+  text-align: right;
+}
+.OptionSlider .OptionalLabel {
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+  color: #ccc;
+}
+.OptionDropdown {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  width: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+.OptionDropdown .Label {
+  color: #ccc;
+  margin-bottom: 4px;
+}
+.OptionTagList .Label {
+  color: #ccc;
+  margin-bottom: 4px;
+}
+.OptionTagList .SelectedTag {
+  background-color: #29455c;
+  color: #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 2px 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.OptionTagList .SelectedTag .Close {
+  font-weight: bold;
+  transform: scale(0);
+  color: #fad9d9;
+  transition: transform 0.1s ease-in-out;
+}
+.OptionTagList .SelectedTag:hover .Close {
+  transform: scale(1);
+}
+.game_purchase_action {
+  height: 0px;
+  overflow: hidden;
+}
+.RecommendationEntry {
+  width: 100%;
+  height: 106px;
+  max-width: 667px;
+  background-color: #151f2b;
+  overflow: hidden;
+  cursor: pointer;
+  background-image: radial-gradient(ellipse at top left, #2f374d, #18264a);
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  padding-bottom: 0px;
+  margin-bottom: 4px;
+  position: absolute;
+  transition: all 0.1s ease-in-out, top 0.3s ease-in-out;
+}
+.RecommendationEntry .BottomEntrySection {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.1s ease-in-out;
+}
+.RecommendationEntry .BottomEntrySection .WishlistSection {
+  margin-right: 39px;
+}
+.RecommendationEntry.Hidden {
+  opacity: 0;
+}
+@media screen and (max-width: 777px) {
+  .RecommendationEntry {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry {
+    height: 60px;
+  }
+}
+.RecommendationEntry .TopEntrySection {
+  display: flex;
+  flex-direction: row;
+}
+.RecommendationEntry .TopEntrySection .LeftSection {
+  position: relative;
+}
+.RecommendationEntry .TopEntrySection .LeftSection .Logo,
+.RecommendationEntry .TopEntrySection .LeftSection .Video {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  background: black;
+  transition: opacity 0.2s ease-in-out, width 0.1s ease-in-out, height 0.1s
+    ease-in-out;
+  opacity: 0;
+}
+@media screen and (max-width: 777px) {
+  .RecommendationEntry .TopEntrySection .LeftSection .Logo,
+  .RecommendationEntry .TopEntrySection .LeftSection .Video {
+    width: 150px;
+    height: 75px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry .TopEntrySection .LeftSection .Logo,
+  .RecommendationEntry .TopEntrySection .LeftSection .Video {
+    width: 108px;
+    height: 54px;
+  }
+}
+.RecommendationEntry .TopEntrySection .LeftSection .Logo.Revealed,
+.RecommendationEntry .TopEntrySection .LeftSection .Video.Revealed {
+  opacity: 1;
+}
+.RecommendationEntry .TopEntrySection .LeftSection .UnMute {
+  width: 20px;
+  height: 20px;
+  margin: 4px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+.RecommendationEntry .TopEntrySection .LeftSection .UnMute.Revealed {
+  opacity: 0.5;
+}
+.RecommendationEntry .TopEntrySection .RightSection {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  padding: 4px;
+  margin-left: 210px;
+  transition: all 0.1s ease-in-out;
+}
+@media screen and (max-width: 777px) {
+  .RecommendationEntry .TopEntrySection .RightSection {
+    margin-left: 150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry .TopEntrySection .RightSection {
+    padding-bottom: 0px;
+    margin-left: 110px;
+  }
+}
+.RecommendationEntry .TopEntrySection .RightSection .CenterSection {
+  position: relative;
+  height: 66px;
+  min-height: 66px;
+}
+.RecommendationEntry
+  .TopEntrySection
+  .RightSection
+  .CenterSection
+  .CenterOption {
+  position: absolute;
+  color: #9099a1;
+}
+.RecommendationEntry
+  .TopEntrySection
+  .RightSection
+  .CenterSection
+  .CenterOption.Hidden {
+  opacity: 0;
+}
+.RecommendationEntry .TopEntrySection .RightSection .Name {
+  font-weight: 100;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  max-height: 27px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry .TopEntrySection .RightSection .Name {
+    font-size: 9px;
+  }
+}
+.RecommendationEntry .TopEntrySection .RightSection .Released {
+  font-size: 11px;
+  color: #9099a1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-height: 15.5px;
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry .TopEntrySection .RightSection .Released {
+    font-size: 7px;
+    min-height: 8px;
+    margin-bottom: 4px;
+  }
+}
+.RecommendationEntry .TopEntrySection .RightSection .BarContainer {
+  width: 440px;
+}
+@media screen and (max-width: 777px) {
+  .RecommendationEntry .TopEntrySection .RightSection .BarContainer {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry .TopEntrySection .RightSection .BarContainer {
+    width: 200px;
+  }
+}
+.RecommendationEntry .TopEntrySection .RightSection .BarContainer .Bar {
+  background-color: #355d79;
+  height: 8px;
+  margin-top: 4px;
+  margin-bottom: 22px;
+  border-radius: 2px;
+  transition: width 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry .TopEntrySection .RightSection .BarContainer .Bar {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+.RecommendationEntry .TopEntrySection .RightSection .Score {
+  font-size: 11px;
+  color: #9099a1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 600px) {
+  .RecommendationEntry .TopEntrySection .RightSection .Score {
+    font-size: 6px;
+    margin-bottom: 4px;
+  }
+}
+@media screen and (max-width: 777px) {
+  .RecommendationEntry .TopEntrySection .RightSection .Score {
+    margin-bottom: 4px;
+  }
+}
+.RecommendationEntry .TopEntrySection .RightSection .Tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.RecommendationEntry .TopEntrySection .RightSection .Tags .Tag {
+  color: #65bcef;
+  font-size: 10px;
+  background-color: #1e3242;
+  border-radius: 1px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-right: 4px;
+}
+@media screen and (max-width: 777px) {
+  .RecommendationEntry .TopEntrySection .RightSection .Tags .Tag {
+    display: none;
+  }
+}
+.RecommendationEntry.Hovered {
+  background-color: #121b25;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  width: 740px;
+  height: 144px;
+  margin-left: -40px;
+  margin-top: -16px;
+  max-width: 740px;
+}
+.RecommendationEntry.Hovered .RightSection {
+  margin-left: 260px;
+}
+.RecommendationEntry.Hovered .RightSection .BottomEntrySection {
+  height: 40px;
+  opacity: 1;
+}
+.RecommendationEntry.Hovered
+  .RightSection
+  .BottomEntrySection
+  .WishlistSection {
+  margin-top: 8px;
+}
+.RecommendationEntry.Hovered
+  .RightSection
+  .BottomEntrySection
+  .WishlistSection.Wishlisted {
+  padding-top: 2px;
+  line-height: 26px;
+}
+.RecommendationEntry.Hovered
+  .RightSection
+  .BottomEntrySection
+  .PurchaseSection {
+  margin-top: 8px;
+}
+.RecommendationEntry.Hovered
+  .RightSection
+  .BottomEntrySection
+  .PurchaseSection
+  .PurchaseBG {
+  padding: 0px;
+  background-color: transparent;
+  border-radius: 0px;
+}
+.RecommendationEntry.Hovered
+  .RightSection
+  .BottomEntrySection
+  .PurchaseSection
+  .PurchaseBG
+  .Price {
+  padding-top: 5px;
+}
+.RecommendationEntry.Hovered .TopEntrySection .LeftSection .WishlistFlag {
+  opacity: 0;
+}
+.RecommendationEntry.Hovered .TopEntrySection .LeftSection .Logo,
+.RecommendationEntry.Hovered .TopEntrySection .LeftSection .Video {
+  width: 250px;
+  height: 141px;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 4.45px 0;
+  background-color: rgba(0, 0, 0, 0);
+  max-height: 5px;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3.1px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #67c1f5;
+  border-radius: 1.5px;
+  border: 0px solid #67c1f5;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.45px;
+}
+@media (max-width: 414px) {
+  input[type="range"]::-webkit-slider-thumb {
+    height: 18px;
+    width: 18px;
+    border-radius: 9px;
+    margin-top: -7.75px;
+  }
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #7fcbf7;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 3.1px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #67c1f5;
+  border-radius: 1.5px;
+  border: 0px solid #67c1f5;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 3.1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #4fb7f3;
+  border: 0px solid #67c1f5;
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #67c1f5;
+  border: 0px solid #67c1f5;
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type="range"]::-ms-thumb {
+  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #67c1f5;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #7fcbf7;
+}
+.SelectionBox {
+  display: block;
+  font-size: 12px;
+  font-weight: 100;
+  color: #ddd;
+  line-height: 1.3;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #355d79;
+  border: 0px;
+}
+.SelectionBox::-ms-expand {
+  display: none;
+}
+.SelectionBox:hover {
+  border-color: #888;
+}
+.SelectionBox:focus {
+  outline: none;
+}
+.SelectionBox option {
+  font-weight: normal;
+}
+.SuggestionInput {
+  background-color: #355d79;
+  border: 1px solid #3d6a8a;
+  padding: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 12px;
+}
+.SuggestionInput::placeholder {
+  color: #1e3242;
+}
+.SuggestionContainerOpen {
+  background-color: #1e3242;
+  border: 1px solid #355d79;
+  position: absolute;
+  z-index: 200;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 150px;
+}
+.SuggestionContainerOpen .SuggestionsList {
+  list-style-type: none;
+  margin-left: 0px;
+}
+.SuggestionContainerOpen .SuggestionsList .OptionSuggestion {
+  color: #67c1f5;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.SuggestionContainerOpen .SuggestionsList .OptionSuggestion:hover {
+  background-color: #29445a;
+}

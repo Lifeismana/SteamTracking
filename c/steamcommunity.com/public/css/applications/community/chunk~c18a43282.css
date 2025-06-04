@@ -1,0 +1,2435 @@
+.LinkRegionDragBox {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  -webkit-app-region: no-drag;
+  z-index: 50;
+}
+.LinkRegionDragBox.EdgeDown {
+  z-index: 52;
+}
+.LinkRegionGridBox {
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-rows: 16px auto 16px;
+  grid-gap: 0;
+  grid-row-gap: 0;
+  margin-left: -16px;
+  margin-top: -16px;
+  -webkit-app-region: no-drag;
+}
+.LinkRegionEdge {
+  background-color: rgba(92, 191, 230, 0.192);
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: no-drag;
+}
+.LinkRegionEdge.TopLeft {
+  border-right: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nwse-resize;
+}
+.LinkRegionEdge.Top {
+  border-bottom: 2px dotted #008ada;
+  background: linear-gradient(
+    to top,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ns-resize;
+}
+.LinkRegionEdge.TopRight {
+  border-left: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nesw-resize;
+}
+.LinkRegionEdge.Left {
+  border-right: 2px dotted #008ada;
+  background: linear-gradient(
+    to left,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ew-resize;
+}
+.LinkRegionEdge.Middle {
+  cursor: move;
+  background-color: rgba(191, 202, 250, 0.133);
+}
+.LinkRegionEdge.Middle .LinkRegionDelete {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition-property: opacity;
+  transition-duration: .21s;
+  transition-timing-function: ease-in-out;
+}
+.LinkRegionEdge.Middle .LinkRegionSettings {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition-property: opacity;
+  transition-duration: .21s;
+  transition-timing-function: ease-in-out;
+}
+.LinkRegionEdge.Middle .LinkRegionDelete line,
+.LinkRegionEdge.Middle .LinkRegionSettings line {
+  stroke-width: 26px;
+  stroke: #008ada;
+  transition-property: stroke, stroke-width;
+  transition-duration: .21s;
+  transition-timing-function: ease-in-out;
+}
+.LinkRegionEdge.Middle:hover .LinkRegionDelete:hover line,
+.LinkRegionEdge.Middle:hover .LinkRegionSettings:hover line {
+  stroke: #cce0ff;
+}
+.LinkRegionEdge.Middle:hover .LinkRegionDelete,
+.LinkRegionEdge.Middle:hover .LinkRegionSettings {
+  opacity: 1;
+}
+.LinkRegionEdge.Right {
+  border-left: 2px dotted #008ada;
+  background: linear-gradient(
+    to right,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ew-resize;
+}
+.LinkRegionEdge.BottomLeft {
+  border-right: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nesw-resize;
+}
+.LinkRegionEdge.Bottom {
+  border-top: 2px dotted #008ada;
+  background: linear-gradient(
+    to bottom,
+    rgba(1, 153, 255, 0.5) -50%,
+    rgba(29, 30, 35, 0) 100%
+  );
+  cursor: ns-resize;
+}
+.LinkRegionEdge.BottomRight {
+  border-left: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nwse-resize;
+}
+.LinkRegionDragBox.topleft .LinkRegionEdge.TopLeft,
+.LinkRegionDragBox.top .LinkRegionEdge.Top,
+.LinkRegionDragBox.topright .LinkRegionEdge.TopRight,
+.LinkRegionDragBox.left .LinkRegionEdge.Left,
+.LinkRegionDragBox.right .LinkRegionEdge.Right,
+.LinkRegionDragBox.bottomleft .LinkRegionEdge.BottomLeft,
+.LinkRegionDragBox.bottom .LinkRegionEdge.Bottom,
+.LinkRegionDragBox.bottomright .LinkRegionEdge.BottomRight {
+  border-color: #fff;
+}
+.LinkRegionEdge:hover {
+  border-color: #7eadf8;
+}
+.EdgeDown.middle .LinkRegionEdge.Middle,
+.LinkRegionEdge.Middle:hover {
+  z-index: 10;
+  background-color: rgba(133, 156, 255, 0.171);
+}
+.EdgeDown.middle .LinkRegionEdge.Right,
+.EdgeDown.middle .LinkRegionEdge.Bottom,
+.EdgeDown.middle .LinkRegionEdge.Top,
+.EdgeDown.middle .LinkRegionEdge.Left {
+  border-color: #fff;
+}
+.LinkRegionButtonContainer .DialogButton {
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px;
+}
+.LinkRegionInfo {
+  background-color: #000;
+  padding: 10px;
+}
+.LinkText {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+.CropImage {
+  position: relative;
+  margin: 0px auto;
+}
+.CropPreviewGroup {
+  margin: 10px auto;
+}
+.CropPreviewLabel {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+.Bold {
+  display: inline;
+  font-weight: bold;
+}
+.Italic {
+  display: inline;
+  font-style: italic;
+}
+p.Paragraph {
+  margin: .5em 0;
+}
+.TemplateMediaTitle p.Paragraph,
+.Question p.Paragraph,
+.Answer p.Paragraph {
+  margin: 0;
+}
+.Header1,
+.Header2,
+.Header3,
+.Header4,
+.Header5 {
+  margin: 0;
+}
+.Header1 {
+  display: block;
+  color: #fff;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  margin-bottom: 4px;
+}
+.Header2 {
+  color: #fff;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.Header3 {
+  color: #fff;
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.Header4 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.Header5 {
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+}
+.CenterSpan {
+  align-items: center;
+}
+.SmallText {
+  color: #fff;
+  font-size: 11px;
+  line-height: 13px;
+}
+.Underline {
+  display: inline;
+  text-decoration: underline;
+}
+.Strike {
+  display: inline;
+  text-decoration: line-through;
+}
+.Spoiler {
+  display: inline;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #000;
+  padding: 0px 8px;
+}
+.Spoiler:hover,
+.Spoiler.Revealed {
+  color: #fff;
+}
+.Spoiler:hover .SpoilerText,
+.Spoiler.Revealed .SpoilerText {
+  visibility: visible;
+  transition-delay: 80ms;
+  transition-duration: 120ms;
+}
+.Spoiler .SpoilerText {
+  visibility: hidden;
+  transition-delay: 80ms;
+  transition-duration: 120ms;
+}
+.DisabledMouseEvents {
+  pointer-events: none;
+}
+.BlockQuote {
+  display: table;
+  box-sizing: border-box;
+  border: 1px solid #56707f;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 92%;
+}
+.BlockQuote > p:first-child {
+  margin-top: 0;
+}
+.BlockQuote > p:last-child {
+  margin-bottom: 0;
+}
+.QuoteAuthor {
+  display: block;
+  font-style: italic;
+}
+.PullQuote {
+  width: 33%;
+  min-width: 200px;
+  float: right;
+  border-radius: 3px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  display: table;
+  word-break: break-word;
+  line-height: 28px;
+  padding: 0px 0px 10px 20px;
+}
+.Code,
+.CodeBlock {
+  font-size: 13px;
+  font-family: Consolas, monospace;
+  white-space: pre;
+  white-space: pre-wrap;
+}
+.CodeBlock {
+  display: block;
+  border: 1px solid #535354;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  overflow-x: auto;
+}
+.List {
+  display: block;
+  padding-inline-start: 40px;
+}
+.OrderedList {
+  display: block;
+  padding-inline-start: 40px;
+}
+.OrderedList .OrderedList {
+  margin-top: 4px;
+}
+.ListItem {
+  list-style-position: outside;
+  margin-bottom: 5px;
+}
+.HR {
+  border: none;
+  height: 1px;
+  color: #6e7577;
+  background-color: #6e7577;
+  margin: 12px 0px;
+}
+.Table {
+  display: table;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.Table.NoBorder {
+  position: relative;
+}
+.Table.NoBorder .TableRow,
+.Table.NoBorder .TableRow:first-of-type,
+.Table.NoBorder .TableCell,
+.Table.NoBorder .TableCell:first-of-type {
+  border: none;
+}
+.Table.EqualCells {
+  width: 100%;
+  table-layout: fixed;
+}
+.Table .TableRow {
+  border-bottom: 1px solid rgba(226, 229, 233, 0.3);
+}
+.Table .TableRow:first-of-type {
+  border-top: 1px solid rgba(226, 229, 233, 0.3);
+}
+.Table .TableCell {
+  border-right: 1px solid rgba(226, 229, 233, 0.3);
+}
+.Table .TableCell:first-of-type {
+  border-left: 1px solid rgba(226, 229, 233, 0.3);
+}
+.TableCell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 4px;
+}
+th.TableCell {
+  display: table-cell;
+  font-weight: bold;
+  padding: 4px;
+  color: #f0f2f4;
+  border-right: 1px solid rgba(226, 229, 233, 0.3);
+  background: rgba(198, 202, 210, 0.2);
+}
+th.TableCell:first-of-type {
+  border-left: 1px solid rgba(226, 229, 233, 0.3);
+}
+.TableRow {
+  display: table-row;
+}
+.ExpandSectionBlock .ExpandSectionHeader {
+  padding: 3px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.11);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  color: #aebac2;
+}
+.ExpandSectionBlock .ExpandSectionHeader .EmbedArrow svg {
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+  fill: #aebac2;
+  transition: transform;
+  transition-duration: .2s;
+}
+.ExpandSectionBlock .ExpandSectionHeader:hover {
+  color: #fff;
+}
+.ExpandSectionBlock .ExpandSectionHeader:hover .EmbedArrow svg {
+  fill: #fff;
+}
+.ExpandSectionBlock .ExpandSectionBody {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 2px;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle {
+  padding-bottom: 8px;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle .ExpandSectionHeader {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  color: #fff;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle .ExpandSectionHeader .EmbedArrow {
+  margin-left: auto;
+}
+.ExpandSectionBlock.ExpandSection_WithTitle
+  .ExpandSectionHeader
+  .EmbedArrow
+  svg {
+  margin-right: 8px;
+}
+a.LinkButton {
+  background-color: #2681da;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 4px 0px;
+}
+a.LinkButton span {
+  color: #fff;
+  padding-bottom: 6px;
+}
+a.LinkButton:hover {
+  background-color: #3691fa;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.Image {
+  max-width: 100%;
+}
+.PreservedUnsupportedTag .Tag {
+  color: #999;
+  display: inline-block;
+  margin: 0 2px;
+}
+.CalendarEventContainer.CalendarEventContainer.CalendarEventContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 8px;
+  margin-bottom: 0;
+}
+.CalendarEventContainer.CalendarEventContainer.CalendarEventContainer
+  .CalendarEventLink.CalendarEventLink.CalendarEventLink {
+  border-radius: 20px;
+  padding: 4px 22px;
+  color: #fff;
+  background-color: red;
+}
+.Ctn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  background: linear-gradient(90deg, #2a2c32b3, #23252ab3);
+  border-radius: 7px;
+  padding: 20px;
+  margin-bottom: 6px;
+}
+.VisibilityOverride {
+  border: 2px dotted red;
+}
+.CtnRegistered {
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+.CtnRegistered::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  z-index: -1;
+}
+.SessionTitle {
+  color: #fff;
+  text-align: left;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.SessionDesc {
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+}
+.SessionOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+}
+.SessionColumnCtn {
+  flex-grow: 1;
+}
+.SessionInstance {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  background: #40444d;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.SessionInstance .Background {
+  background: linear-gradient(to bottom, #707787, #555b67);
+  border: none;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.SessionInstance .Button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  line-height: 19px;
+  transition: filter .2s ease-in-out;
+  user-select: none;
+}
+.SessionInstance .Button:not(:disabled):hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+.SessionInstance .Button .Title {
+  font-size: 15px;
+  font-weight: 600;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+.SessionInstance .Button .TimeFrame {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.SessionInstance .MaxSize {
+  padding: 8px 0;
+}
+.SessionInstance .SoldOut {
+  padding: 8px 0;
+  color: orange;
+}
+.Max {
+  font-size: 13px;
+}
+.InstanceDivider {
+  margin: auto 8px;
+  padding-bottom: 16px;
+}
+.Day {
+  font-size: 24px;
+  font-weight: bold;
+}
+.Time {
+  font-size: 16px;
+}
+.Registering,
+.Registered,
+.Unregistering {
+  border: 1px dashed #47bfff;
+}
+.Registering .StatusText,
+.Registered .StatusText,
+.Unregistering .StatusText {
+  width: 100%;
+  position: absolute;
+  top: -12px;
+  z-index: 1;
+  pointer-events: none;
+}
+.Registering .StatusText span,
+.Registered .StatusText span,
+.Unregistering .StatusText span {
+  width: fit-content;
+  display: none;
+  margin: 0 auto;
+  background-color: #47bfff;
+  font-size: 12px;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.Registered {
+  border: 1px solid #8fd52c;
+}
+.Registered .StatusText span {
+  background-color: #8fd52c;
+  display: block;
+}
+.Unregistering {
+  border: 1px dashed #cfcf21;
+}
+.Unregistering button,
+.Unregistering div {
+  opacity: 0.5;
+}
+.Unregistering .StatusText span {
+  background-color: #cfcf21;
+  display: none;
+}
+@keyframes confirm-panel-intro {
+  0% {
+    filter: brightness(0.5);
+  }
+  30% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+.CompleteRegistrationCtn {
+  display: none;
+  padding: 16px;
+  background: #545963;
+  box-shadow: 0 0 10px #000;
+  margin-top: 20px;
+}
+.CompleteRegistrationCtn.Visible {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  animation: confirm-panel-intro .2s;
+}
+.CompleteRegistrationCtn button.DialogButton.Primary {
+  line-height: 45px;
+}
+.ExpanderRow {
+  display: flex;
+  flex-direction: row;
+}
+.SingleDayCtn {
+  margin-bottom: 30px;
+}
+.SingleDayCtn .ScheduleRow:not(:first-of-type) {
+  border-top: 1px solid #52565e;
+}
+.ScheduleTopDate {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.ScheduleRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.ScheduleRow .ScheduleTimeColumn {
+  width: 165px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.ScheduleRow .ScheduleSessionsColumn {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.ScheduleRow .ScheduleActionRow {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.DynamicLinkBox {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  background: -webkit-linear-gradient(
+    60deg,
+    rgba(87, 92, 104, 0.3) 5%,
+    rgba(255, 255, 255, 0.05) 95%
+  );
+  background: linear-gradient(
+    60deg,
+    rgba(87, 92, 104, 0.3) 5%,
+    rgba(255, 255, 255, 0.05) 95%
+  );
+}
+.DynamicLinkBox .DynamicLink_Preview {
+  float: left;
+  margin-right: 14px;
+  max-height: 88px;
+  max-width: 75%;
+}
+a.DynamicLinkBox {
+  display: block;
+  text-decoration: none !important;
+  border-bottom: none;
+}
+a.DynamicLinkBox:hover {
+  border-bottom: none;
+}
+.DynamicLink_Author {
+  height: 16px;
+  font-size: 12px;
+  color: #95a6b2;
+  margin-bottom: 4px;
+}
+.DynamicLink_Author span {
+  color: #809fb7;
+}
+.DynamicLink_Description {
+  padding-bottom: 10px;
+}
+.DynamicLink_Content {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px #000;
+  font-size: 13px;
+  line-height: normal;
+  text-align: left;
+  display: flow-root;
+}
+.DynamicLink_Name {
+  font-size: 15px;
+  color: #aad8ec;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+  padding-bottom: 0px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.DynamicLink_YoutubeViews {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #bfbfbf;
+}
+.Dynamiclink_Content {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px #000;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 9px;
+  text-align: left;
+  display: flow-root;
+}
+.DynamicLink_URL a,
+.DynamicLink_AuthorName {
+  color: #fff;
+}
+.DynamicLink_Date {
+  float: right;
+}
+.PreviewYouTubeVideo {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+}
+.PreviewYouTubeVideo img {
+  width: 100%;
+  display: block;
+}
+.PreviewYouTubeVideo iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.PreviewYouTubeVideo.sizeThumb {
+  width: 311px;
+  height: 187px;
+}
+.PreviewYouTubeVideo.sizeFull {
+  width: 100%;
+  margin-bottom: 6px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.SaleSectionCtn.text_section
+  .SaleSectionForCustomCSS
+  .PreviewYouTubeVideo.sizeFull
+  img.PlaceholderImg {
+  width: 100%;
+}
+.PreviewYouTubeVideo.floatLeft {
+  float: left;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.PreviewYouTubeVideo.floatRight {
+  float: right;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+iframe.PreviewYouTubeVideo.floatLeft,
+iframe.PreviewYouTubeVideo.floatRight {
+  float: none;
+  padding: 0px;
+}
+._2V6GLdiU4guy4ND3n4Usgg,
+.HZ6b2d4r4EFnT_1BeU5vo {
+  display: inline-flex;
+  white-space: nowrap;
+}
+._2V6GLdiU4guy4ND3n4Usgg span.Fn5EUtWkwSAw_gbbiySKN,
+.HZ6b2d4r4EFnT_1BeU5vo span.Fn5EUtWkwSAw_gbbiySKN {
+  margin: 0px 4px;
+  color: #6c767f;
+}
+.HZ6b2d4r4EFnT_1BeU5vo {
+  display: inline-flex;
+}
+.rT7EkJjqw27KBB7HxAAWk {
+  color: #a3cf06;
+  display: flex;
+}
+.rT7EkJjqw27KBB7HxAAWk ._2pJftSRjT_UngZZ4BJimwg {
+  background: #a3cf06;
+  font-size: 11px;
+  color: #222;
+  padding: 0px 5px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 4px;
+  margin-top: 1px;
+}
+._4LAnPYKRPeF-QDReu_VGm {
+  font-size: 12px;
+  font-weight: 200;
+  color: #b1b4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+._2E5LHvnVEF3dSVV3wrDflm {
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: #5e6068;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.MBkkhT4wei3tWetnWbiqn {
+  margin: 0px 4px;
+  text-transform: initial;
+  color: #868f98;
+  letter-spacing: normal;
+}
+._3CN6I3krBRNzD7kCuKQ_w7 {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  ._3CN6I3krBRNzD7kCuKQ_w7 {
+    flex-direction: column;
+  }
+}
+._3CN6I3krBRNzD7kCuKQ_w7 ._4LAnPYKRPeF-QDReu_VGm {
+  display: flex;
+  flex-wrap: wrap;
+}
+div.Header1,
+div.Header2,
+div.Header3,
+h1.Header1,
+h2.Header2,
+h3.Header3 {
+  color: #fff;
+  margin-bottom: 6px;
+  margin-top: 8px;
+  clear: both;
+}
+div.Header1,
+h1.Header1 {
+  font-size: clamp(15px, 5.5vw, 32px);
+  line-height: clamp(17px, 6vw, 35px);
+  font-weight: 500;
+}
+div.Header2,
+h2.Header2 {
+  font-size: clamp(12px, 4.5vw, 26px);
+  line-height: clamp(15px, 5vw, 29px);
+  font-weight: 400;
+}
+div.Header3,
+h3.Header3 {
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
+}
+.Link {
+  color: #969696;
+  text-decoration: underline;
+}
+.Link:hover {
+  color: #fff;
+}
+.LinkHost {
+  font-size: 10px;
+  color: #7e8391;
+  padding: 4px;
+  top: -1px;
+}
+a.LinkButton {
+  background-color: #2681da;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 4px 0px;
+}
+a.LinkButton span {
+  color: #fff;
+  padding-bottom: 6px;
+}
+.LinkButton:hover {
+  background-color: #3691fa;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+ul.UnorderedList {
+  list-style-type: disc;
+  list-style-position: inside;
+  line-height: 21px;
+  padding-left: 1em;
+  padding-inline-start: 40px;
+  margin-top: 14px;
+  margin-bottom: 0px;
+}
+ol.OrderedList {
+  padding-left: 3em;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+iframe.StoreWidget {
+  height: 190px;
+  width: 100%;
+}
+iframe.MedalTVWidget {
+  height: 360px;
+  width: 100%;
+}
+.LoyaltyRewardCtn {
+  flex-grow: 2;
+  flex-basis: 0;
+}
+.DetailPageExample .Header2 {
+  font-size: 10px;
+  line-height: 10px;
+}
+.DetailPageExample .Header1 {
+  font-size: 11px;
+  line-height: 11px;
+}
+.SaleSectionCtn.text_section .SaleSectionCtn,
+.SaleSectionCtn.text_section .SaleTextCtn {
+  color: #c3c4d9;
+  font-size: 14px;
+}
+.SaleSectionCtn.text_section .SaleSectionCtn .ReminderCtn,
+.SaleSectionCtn.text_section .SaleTextCtn .ReminderCtn {
+  margin: 6px 0;
+}
+.SaleSectionCtn.text_section .SaleSectionCtn .BlockQuote,
+.SaleSectionCtn.text_section .SaleTextCtn .BlockQuote {
+  border: none;
+  width: 60%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .SaleSectionCtn.text_section .SaleSectionCtn .BlockQuote,
+  .SaleSectionCtn.text_section .SaleTextCtn .BlockQuote {
+    width: 100%;
+  }
+}
+.SaleSectionCtn.text_section .SaleSectionCtn .BB_TableData,
+.SaleSectionCtn.text_section .SaleTextCtn .BB_TableData {
+  font-size: 18px;
+}
+@media screen and (max-width: 800px) {
+  .SaleSectionCtn.text_section .SaleSectionCtn .BB_TableData,
+  .SaleSectionCtn.text_section .SaleTextCtn .BB_TableData {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .SaleSectionCtn.text_section .SaleSectionCtn .BB_TableData,
+  .SaleSectionCtn.text_section .SaleTextCtn .BB_TableData {
+    font-size: 13px;
+  }
+}
+.SaleSectionCtn.text_section .SaleSectionCtn img,
+.SaleSectionCtn.text_section .SaleTextCtn img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+.SaleSectionCtn.text_section .SaleSectionCtn .Link,
+.SaleSectionCtn.text_section .SaleTextCtn .Link {
+  color: #fff;
+}
+.SocialLink {
+  display: inline-block;
+}
+.SocialIcon {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  margin-right: 8px;
+}
+.LocalizeBlock {
+  white-space: pre-wrap;
+}
+.CheckMark {
+  height: 32px;
+}
+.ScreenshotCarousel .SliderBody {
+  background: #000;
+}
+.ScreenshotCarousel .carousel__inner-slide,
+.ScreenshotCarousel .carousel__inner-slide > div {
+  height: 100%;
+}
+.ScreenshotCarousel button.CarouselBtnRight,
+.ScreenshotCarousel button.CarouselBtnLeft {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0.1;
+  transition: opacity .2s ease-in;
+  height: 50%;
+  top: 25%;
+}
+.ScreenshotCarousel button.CarouselBtnRight {
+  right: 0px;
+}
+.ScreenshotCarousel button.CarouselBtnLeft {
+  left: 0px;
+}
+.ScreenshotCarousel:hover button.CarouselBtnRight,
+.ScreenshotCarousel:hover button.CarouselBtnLeft {
+  opacity: 1;
+}
+.PersonaStatusIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 2px;
+}
+.PersonaStatusIcon.GamepadMode,
+.GamepadMode .PersonaStatusIcon {
+  margin-top: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PersonaStatusIcon.MobilePhoneIcon {
+  margin-top: -2px;
+  margin-left: -1px;
+}
+.PersonaStatusIcon.MobilePhoneIcon.GamepadMode,
+.GamepadMode .PersonaStatusIcon.MobilePhoneIcon {
+  margin-top: -4px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BasicUI .PersonaStatusIcon.MobilePhoneIcon {
+  display: block;
+}
+.PersonaStatusIcon.SteamDeckIcon {
+  margin-left: 4px;
+}
+.PersonaStatusIcon.VRIcon {
+  margin-top: -1px;
+}
+.PersonaStatusIcon.ingame .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.ingame .SVGIcon_VRIcon path,
+.PersonaStatusIcon.ingame .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.ingame .SVGIcon_BigPicture path {
+  fill: #80aa4d;
+}
+.PersonaStatusIcon.ingame .SVGIcon_SteamDeck path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.ingame .SVGIcon_VRIcon path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_VRIcon path,
+.PersonaStatusIcon.ingame .SVGIcon_MobilePhone path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.ingame .SVGIcon_BigPicture path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.ingame .SVGIcon_BigPicture path {
+  fill: #59bf40;
+}
+.PersonaStatusIcon.online .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.online .SVGIcon_VRIcon path,
+.PersonaStatusIcon.online .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.online .SVGIcon_BigPicture path {
+  fill: #4c91ac;
+}
+.PersonaStatusIcon.online .SVGIcon_SteamDeck path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_SteamDeck path,
+.PersonaStatusIcon.online .SVGIcon_VRIcon path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_VRIcon path,
+.PersonaStatusIcon.online .SVGIcon_MobilePhone path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_MobilePhone path,
+.PersonaStatusIcon.online .SVGIcon_BigPicture path.GamepadMode,
+.GamepadMode .PersonaStatusIcon.online .SVGIcon_BigPicture path {
+  fill: #4cb4ff;
+}
+.SnoozeContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.SnoozeContainer .SnoozeZ {
+  font-size: 6px;
+  animation-name: none;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.SnoozeContainer .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer .SnoozeZ {
+  font-size: 8px;
+  font-weight: bold;
+}
+.SnoozeContainer.Medium .SnoozeZ {
+  font-size: 8px;
+}
+.SnoozeContainer.Large .SnoozeZ {
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000, 1px 1px
+    2px #000;
+}
+.SnoozeContainer.Dim .SnoozeZ {
+  filter: brightness(0.75);
+}
+.SnoozeContainer .Z1 {
+  animation-delay: 0s;
+  margin-top: 0px;
+  z-index: 1;
+}
+.SnoozeContainer .Z2 {
+  animation-delay: .2s;
+  margin-top: 2px;
+  z-index: 2;
+}
+.SnoozeContainer .Z3 {
+  animation-delay: .4s;
+  margin-top: 4px;
+  z-index: 3;
+}
+.SnoozeContainer.online .SnoozeZ {
+  color: #4c91ac;
+}
+.SnoozeContainer.online .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer.online .SnoozeZ {
+  color: #4cb4ff;
+}
+.SnoozeContainer.watchingbroadcast .SnoozeZ {
+  color: #c9bdf7;
+}
+.SnoozeContainer.watchingbroadcast .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer.watchingbroadcast .SnoozeZ {
+  color: #5340a6;
+}
+.SnoozeContainer.in-game .SnoozeZ {
+  color: #91c257;
+}
+.SnoozeContainer.in-game .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer.in-game .SnoozeZ {
+  color: #3e862d;
+}
+.SnoozeContainer.online.Dim .SnoozeZ {
+  color: #6dcff6;
+}
+.SnoozeContainer.online.Dim .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer.online.Dim .SnoozeZ {
+  color: #4cb4ff;
+}
+.SnoozeContainer.in-game.Dim .SnoozeZ {
+  color: #a1f410;
+}
+.SnoozeContainer.in-game.Dim .SnoozeZ.GamepadMode,
+.GamepadMode .SnoozeContainer.in-game.Dim .SnoozeZ {
+  color: #3e862d;
+}
+.friend.gpfocus .SnoozeZ,
+.hoverParent.gpfocus .SnoozeZ,
+.SnoozeContainer.animating .SnoozeZ,
+.hoverParent:hover * .SnoozeZ {
+  animation-name: Snoring;
+}
+@keyframes Snoring {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.avatarHolder {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  margin: 0px 0px;
+  transform: scale(0.86, 0.86) translateX(0px);
+  transition-property: transform;
+  transition-duration: .34s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.avatarHolder.X-Small {
+  height: 28px;
+  width: 28px;
+}
+.avatarHolder.Medium {
+  height: 36px;
+  width: 36px;
+}
+.avatarHolder.MediumLarge {
+  height: 48px;
+  width: 48px;
+}
+.avatarHolder.Large {
+  height: 84px;
+  width: 84px;
+}
+.avatarHolder.X-Large {
+  height: 92px;
+  width: 92px;
+}
+.avatarHolder.FillArea {
+  height: 100%;
+  width: 100%;
+}
+.ChatSpeaker.ChatRoomSpeaker .avatarHolder {
+  transform: scale(1, 1) translateX(0px);
+}
+.avatarHolder .avatarStatus.right,
+.avatarHolder .avatarStatus.bottom {
+  display: block !important;
+}
+.ingame .avatarStatus {
+  background: linear-gradient(
+    to bottom,
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
+  );
+}
+.ingame .avatarStatus.GamepadMode,
+.GamepadMode .ingame .avatarStatus {
+  background: #59bf40;
+}
+.offline .avatarStatus.GamepadMode,
+.GamepadMode .offline .avatarStatus {
+  background: #67707b;
+}
+.ingame .X-Large .avatarStatus {
+  background: #bff02b;
+}
+.watchingbroadcast .avatarStatus {
+  background: linear-gradient(
+    to bottom,
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
+  );
+}
+.online .avatarStatus {
+  background: linear-gradient(
+    to bottom,
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
+  );
+}
+.online .avatarStatus.GamepadMode,
+.GamepadMode .online .avatarStatus {
+  background: #4cb4ff;
+}
+.awayOrSnooze .avatarStatus {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  -webkit-mask-size: 5px 5px;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  mask-size: 5px 5px;
+  opacity: 0.75;
+}
+.awayOrSnooze .avatarStatus.GamepadMode,
+.GamepadMode .awayOrSnooze .avatarStatus {
+  opacity: 1;
+}
+.avatarStatus.right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+}
+.avatarStatus.right.GamepadMode,
+.GamepadMode .avatarStatus.right {
+  width: 3px;
+  right: -3px;
+}
+.avatarStatus.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.avatarStatus.bottom.GamepadMode,
+.GamepadMode .avatarStatus.bottom {
+  height: 3px;
+  bottom: -3px;
+}
+.awayOrSnooze .avatarStatus.bottom {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-x;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-x;
+}
+.awayOrSnooze .X-Large .avatarStatus.bottom {
+  mask-size: 6px 6px;
+  opacity: 1;
+}
+.avatar {
+  border: 1px solid #383c43;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  transition: filter .24s ease-in-out;
+}
+.avatar.GamepadMode,
+.GamepadMode .avatar {
+  border: 0px solid transparent;
+  height: 100%;
+  width: 100%;
+}
+.avatarFrame {
+  position: absolute;
+  top: 0;
+}
+.avatarFrame .avatarFrameImg {
+  width: 100%;
+  height: 100%;
+}
+.avatarHolder .avatarFrame {
+  transform: scale(1.2);
+}
+.RoleIcon {
+  width: 20px;
+  height: 20px;
+}
+.ProfileLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  max-width: 100%;
+}
+.MeBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e141b;
+  background-color: #59bf40;
+  font-size: 12px;
+  font-weight: 600;
+  height: 21px;
+  width: 50px;
+  text-align: center;
+}
+.PlayerName {
+  font-size: 20px;
+  overflow: hidden;
+}
+.RoleAndIcon {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+.RoleName {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+.FamilyErrorDisplay {
+  background-color: #de3618;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.FamilyMemberRow {
+  display: flex;
+  flex-direction: column;
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  transition: height .5s;
+}
+.FamilyMemberRow .FamilyMemberRowTop,
+.FamilyMemberRow .FamilyMemberRowTop .Left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .FamilyMemberRow .FamilyMemberRowTop,
+  .FamilyMemberRow .FamilyMemberRowTop .Left {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+.FamilyMemberRow .InvitePending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  color: #ff0;
+  font-size: 12px;
+  border-style: solid;
+  border-color: #ff0;
+  border-width: thin;
+}
+.ExpandRowButton.ExpandRowButton {
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  height: 24px;
+  width: 24px;
+}
+@media screen and (max-width: 500px) {
+  .ExpandRowButton.ExpandRowButton {
+    width: 100%;
+    background-color: #23262e;
+  }
+}
+.ExpandRowButton.ExpandRowButton:hover {
+  background-color: #1a9fff;
+}
+.ExpandRowButton.ExpandRowButton svg {
+  transition: transform .2s ease-in-out;
+  height: 18px;
+  margin-top: 4px;
+}
+.ExpandRowButton.ExpandRowButton.Selected svg {
+  transform: rotateZ(180deg);
+  transition: transform .2s ease-in-out;
+}
+.FlexColumnContainer {
+  display: flex;
+  flex-direction: column;
+}
+.FullStartTime {
+  color: #a4d5ff;
+  padding: 8px 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.ReminderDialog.ReminderOptions {
+  width: 300px;
+  padding: 0px;
+  background: transparent;
+  border-left: none;
+}
+.ReminderBackground {
+  position: relative;
+  background: #2f2f33;
+  padding: 0px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  width: max-content;
+  min-width: 100%;
+}
+.ReminderBackground.ReminderExpandsLeft {
+  position: absolute;
+  right: 0;
+}
+.ReminderOption,
+a.ReminderOption {
+  padding: 4px;
+  margin: 0px 8px 2px 8px;
+  background: #444850;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+}
+.ReminderOption:not(.Unverified):hover,
+a.ReminderOption:not(.Unverified):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.ReminderOption.Unverified,
+a.ReminderOption.Unverified {
+  color: #777;
+}
+.ReminderOption a,
+a.ReminderOption a {
+  color: #a4d5ff;
+  padding: 0 4px;
+}
+.ReminderOption a:hover,
+a.ReminderOption a:hover {
+  text-decoration: underline;
+}
+.ReminderOption .CheckboxWrapper,
+a.ReminderOption .CheckboxWrapper {
+  flex: 1;
+}
+.ReminderOption .CheckboxWrapper .DialogCheckbox_Container,
+a.ReminderOption .CheckboxWrapper .DialogCheckbox_Container {
+  margin-bottom: 0px;
+  padding: 0 8px 0 0;
+}
+.ReminderOption .CheckboxWrapper .DialogCheckbox_Container .DialogCheckbox,
+a.ReminderOption .CheckboxWrapper .DialogCheckbox_Container .DialogCheckbox {
+  margin: 3px;
+  width: 16px;
+  height: 16px;
+}
+.ReminderOption
+  .CheckboxWrapper
+  .DialogCheckbox_Container
+  .DialogCheckbox
+  .SVGIcon_DialogCheck,
+a.ReminderOption
+  .CheckboxWrapper
+  .DialogCheckbox_Container
+  .DialogCheckbox
+  .SVGIcon_DialogCheck {
+  margin: 0 0 2px 0;
+  width: 16px;
+  height: 16px;
+}
+.ReminderOption .CheckboxWrapper .DialogCheckbox_Container .DialogToggle_Label,
+a.ReminderOption
+  .CheckboxWrapper
+  .DialogCheckbox_Container
+  .DialogToggle_Label {
+  margin-left: 28px;
+}
+.ReminderCheckBox {
+  width: fit-content;
+  display: flex;
+  font-size: 14px;
+  overflow: hidden;
+}
+.ReminderCheckBox.IconMode {
+  position: relative;
+}
+.ReminderCheckBox.IconMode .RemindBell {
+  width: 26px;
+  height: 32px;
+  padding-left: 4px;
+}
+.ReminderCheckBox.IconMode svg {
+  fill: #399aec;
+}
+.ReminderCheckBox.IconMode .RemindCheck {
+  position: absolute;
+  padding-top: 0;
+  height: 32px;
+}
+.ReminderCheckBox.IconMode .ReminderOptions {
+  display: none;
+}
+.ReminderCheckBox.IconMode .ReminderDefault {
+  width: 0;
+  padding: 0;
+  height: 0;
+  border: 0;
+}
+html:not(.touch) .ReminderCheckBox.IconMode .ReminderDefault {
+  transition: padding-right .2s ease-out;
+}
+.ReminderCheckBox.IconMode:hover .ReminderOptions,
+.ReminderDialog .ReminderCheckBox.IconMode .ReminderOptions {
+  display: block;
+}
+.ReminderCheckBox.IconMode:hover .ReminderDefault,
+.ReminderDialog .ReminderCheckBox.IconMode .ReminderDefault {
+  width: auto;
+  padding: 6px 12px;
+}
+.ReminderCheckBox.IconMode:hover .RemindBell,
+.ReminderDialog .ReminderCheckBox.IconMode .RemindBell {
+  display: none;
+}
+.ReminderCheckBox.IconMode:hover .RemindCheck,
+.ReminderDialog .ReminderCheckBox.IconMode .RemindCheck {
+  position: relative;
+}
+.ReminderCheckBox.TextMode,
+.ReminderCheckBox.IconMode:hover,
+.ReminderDialog .ReminderCheckBox {
+  background-image: radial-gradient(
+    circle at top left,
+    #399aec 10%,
+    #225dce 80%
+  );
+  border-radius: 3px;
+  width: 100%;
+  max-width: 300px;
+}
+.ReminderCheckBox.TextMode:hover,
+.ReminderCheckBox.IconMode:hover:hover,
+.ReminderDialog .ReminderCheckBox:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.ReminderCheckBox.TextMode:hover .ReminderDefault,
+.ReminderCheckBox.TextMode:hover .ReminderOptions,
+.ReminderCheckBox.TextMode:hover .ReminderCheck,
+.ReminderCheckBox.TextMode:hover .ReminderOpennedOptions,
+.ReminderCheckBox.IconMode:hover:hover .ReminderDefault,
+.ReminderCheckBox.IconMode:hover:hover .ReminderOptions,
+.ReminderCheckBox.IconMode:hover:hover .ReminderCheck,
+.ReminderCheckBox.IconMode:hover:hover .ReminderOpennedOptions,
+.ReminderDialog .ReminderCheckBox:hover .ReminderDefault,
+.ReminderDialog .ReminderCheckBox:hover .ReminderOptions,
+.ReminderDialog .ReminderCheckBox:hover .ReminderCheck,
+.ReminderDialog .ReminderCheckBox:hover .ReminderOpennedOptions {
+  background-color: rgba(57, 154, 236, 0.5);
+}
+.ReminderCheckBox.TextMode .ReminderDefault,
+.ReminderCheckBox.IconMode:hover .ReminderDefault,
+.ReminderDialog .ReminderCheckBox .ReminderDefault {
+  padding: 6px 12px;
+  color: #fff;
+  flex: 1;
+  flex-grow: 100;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+  height: 32px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.ReminderCheckBox.TextMode .ReminderOptions,
+.ReminderCheckBox.TextMode .ReminderOpennedOptions,
+.ReminderCheckBox.IconMode:hover .ReminderOptions,
+.ReminderCheckBox.IconMode:hover .ReminderOpennedOptions,
+.ReminderDialog .ReminderCheckBox .ReminderOptions,
+.ReminderDialog .ReminderCheckBox .ReminderOpennedOptions {
+  flex: 1;
+  flex-basis: 32px;
+  background-repeat: no-repeat;
+  background-position: 9px 9px;
+  width: 35px;
+  height: 32px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+.ReminderOptions {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=);
+}
+.ReminderOpennedOptions {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjA2NkUxRjYzNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjA2NkUxRjczNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MDY2RTFGNDM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MDY2RTFGNTM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puj4W0sAAADSSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAjD27dvQSwWgABigIuAOEDAiCQABgABhCGAohwkCWKwAA38DdOBoQUggHCaAQfIzgC5De4+qBzYBJAXsGkWEhJiJGgFQAARVMDEQCLgwOEBMBCB+kAEWQETkuRraDS8RlbECDIWKPgd3S5hYWFOoAk/KPcFQIARjgsCgImBUoDDBSxowcaCTR88MTAyMiJrFIAFKVqoiQKpD0D8B9limAE4NeIyCKjvD7oBHNicigWANP5AMWBAYwEAUl+ORKnWwrgAAAAASUVORK5CYII=);
+}
+.ReminderOptionsHeader {
+  color: #b1b4b9;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 8px 10px 4px;
+}
+.ReminderCalendarOptions {
+  padding: 0px 8px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ReminderSettings {
+  margin-top: 12px;
+  border-top: 1px solid #5b616b;
+  padding: 8px;
+}
+.ReminderCalendarOptions .ReminderOption {
+  padding: 4px 8px;
+  margin: 0 2px 0;
+  flex-basis: 25%;
+  display: inline;
+  text-align: center;
+}
+.ReminderNotes {
+  padding: 8px;
+  color: #e1c48a;
+  font-size: 12px;
+}
+.RemindCheck {
+  width: 26px;
+  height: 26px;
+  padding-top: 5px;
+  padding-left: 4px;
+}
+.RemindCheck svg polyline {
+  stroke-width: 32;
+}
+.RpcThrobber {
+  position: absolute;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.statusAndName {
+  display: flex;
+}
+.statusAndName.threeLines {
+  margin-top: -2px;
+}
+.statusAndName.GamepadMode,
+.GamepadMode .statusAndName {
+  align-items: center;
+}
+.statusAndName.GamepadMode.threeLines,
+.GamepadMode .statusAndName.threeLines {
+  margin-top: 0;
+}
+.blocked .richPresenceLabel {
+  color: rgba(195, 74, 72, 0.75);
+}
+.playerName,
+.playerNickname {
+  flex: 1;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  font-size: 14px;
+  transition: text-overflow 0s linear;
+}
+.playerName.GamepadMode,
+.GamepadMode .playerName,
+.playerNickname.GamepadMode,
+.GamepadMode .playerNickname {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 15px;
+}
+.BasicUI .playerName,
+.BasicUI .playerNickname {
+  text-overflow: ellipsis;
+}
+.DisableColoring .playerName,
+.DisableColoring .playerNickname {
+  color: inherit;
+}
+.playerNickname {
+  padding-left: 5px;
+  color: #666;
+}
+.playerNickname.GamepadMode,
+.GamepadMode .playerNickname {
+  color: #67707b;
+}
+.DisableColoring .playerNickname {
+  color: inherit;
+}
+.playerName {
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 6px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  flex: initial;
+  padding-right: 6px;
+  margin-right: -6px;
+}
+.playerName.GamepadMode,
+.GamepadMode .playerName {
+  -webkit-mask: none;
+  mask: none;
+  padding-right: 2px;
+  margin-right: 0px;
+}
+.playerNicknameBracket {
+  color: #999;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 1px;
+  opacity: 0.5;
+  line-height: 16px;
+}
+.richPresenceContainer {
+  display: flex;
+  flex-direction: column;
+}
+.richPresenceContainer.GamepadMode .gameName.richPresenceLabel.threeLines,
+.GamepadMode .richPresenceContainer .gameName.richPresenceLabel.threeLines {
+  line-height: 15px;
+  margin-top: -2px;
+}
+.FriendPicker_Suggestions .richPresenceContainer {
+  display: none;
+}
+.richPresenceLabel {
+  display: flex;
+  flex-direction: row;
+  line-height: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 10px;
+  margin-top: -1px;
+  -webkit-mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mask: linear-gradient(
+    to right,
+    black calc(100% - 8px),
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  padding-right: 24px;
+}
+.BasicUI .richPresenceLabel {
+  display: block;
+  text-overflow: ellipsis;
+}
+.NoMask .richPresenceLabel {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.twoLine .richPresenceLabel {
+  line-height: 18px;
+  font-size: 12px;
+}
+.twoLine .richPresenceLabel.GamepadMode,
+.GamepadMode .twoLine .richPresenceLabel {
+  line-height: 15px;
+  height: 20px;
+}
+.RecentMessagesTabList.FriendsListTabPanel .twoLine.GamepadMode .statusAndName,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .twoLine
+  .statusAndName {
+  align-items: center;
+  margin-top: -2px;
+  margin-bottom: 1px;
+}
+.RecentMessagesTabList.FriendsListTabPanel
+  .twoLine.GamepadMode
+  .richPresenceLabel,
+.GamepadMode
+  .RecentMessagesTabList.FriendsListTabPanel
+  .twoLine
+  .richPresenceLabel {
+  height: 25px;
+}
+.DNDContainer {
+  width: 12px;
+  height: 12px;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+.partyBeaconJoin {
+  font-weight: 800;
+}
+.ingame .playerName {
+  color: #e3ffc2;
+}
+.ingame .playerName.GamepadMode,
+.GamepadMode .ingame .playerName {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  color: #c2ffb3;
+  font-weight: 400;
+}
+.ingame .gameName.richPresenceLabel,
+.ingame .gameName.richPresenceLabel a,
+.ingame .gameName.richPresenceLabel a:hover,
+.ingame .gameName.richPresenceLabel a:active,
+.ingame .gameName.richPresenceLabel a:visited,
+.ingame.twoLine .richPresenceLabel {
+  color: #91c257;
+}
+.ingame .gameName.richPresenceLabel.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel,
+.ingame .gameName.richPresenceLabel a.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a,
+.ingame .gameName.richPresenceLabel a:hover.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a:hover,
+.ingame .gameName.richPresenceLabel a:active.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a:active,
+.ingame .gameName.richPresenceLabel a:visited.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel a:visited,
+.ingame.twoLine .richPresenceLabel.GamepadMode,
+.GamepadMode .ingame.twoLine .richPresenceLabel {
+  color: #59bf40;
+}
+.ingame .gameName.richPresenceLabel {
+  font-size: 12px;
+}
+.ingame .gameName.richPresenceLabel.GamepadMode,
+.GamepadMode .ingame .gameName.richPresenceLabel {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #59bf40;
+}
+.VoiceChannelParticipants .ingame .playerName {
+  font-size: 11px;
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+.VoiceChannelParticipants .ingame .twoLine .playerName {
+  font-size: 14px;
+  margin-top: 0px;
+}
+.VoiceChannelParticipants .ingame .richPresenceLabel {
+  font-size: 10px;
+  margin-top: -6px;
+  margin-bottom: 3px;
+}
+.VoiceChannelParticipants .ingame .twoLine .richPresenceLabel {
+  font-size: 12px;
+  margin-top: 0px;
+}
+.ingame.awayOrSnooze .richPresenceLabel,
+.ingame .richPresenceLabel,
+.ingame .richPresenceLabel a,
+.ingame .richPresenceLabel a:hover,
+.ingame .richPresenceLabel a:active,
+.ingame .richPresenceLabel a:visited {
+  color: #62813b;
+}
+.ingame.awayOrSnooze .richPresenceLabel.GamepadMode,
+.GamepadMode .ingame.awayOrSnooze .richPresenceLabel,
+.ingame .richPresenceLabel.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel,
+.ingame .richPresenceLabel a.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a,
+.ingame .richPresenceLabel a:hover.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a:hover,
+.ingame .richPresenceLabel a:active.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a:active,
+.ingame .richPresenceLabel a:visited.GamepadMode,
+.GamepadMode .ingame .richPresenceLabel a:visited {
+  color: #3e862d;
+}
+.ingame .SVGIcon_DoNotDisturb circle,
+.ingame .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.friend.gpfocus .labelHolder.GamepadMode .playerName,
+.friend.gpfocus .labelHolder.GamepadMode .richPresenceLabel,
+.GamepadMode .friend.gpfocus .labelHolder .playerName,
+.GamepadMode .friend.gpfocus .labelHolder .richPresenceLabel,
+.favoriteElement.gpfocus .labelHolder.GamepadMode .playerName,
+.favoriteElement.gpfocus .labelHolder.GamepadMode .richPresenceLabel,
+.GamepadMode .favoriteElement.gpfocus .labelHolder .playerName,
+.GamepadMode .favoriteElement.gpfocus .labelHolder .richPresenceLabel {
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus .labelHolder.GamepadMode.offline .richPresenceLabel,
+.GamepadMode .friend.gpfocus .labelHolder.offline .richPresenceLabel,
+.favoriteElement.gpfocus .labelHolder.GamepadMode.offline .richPresenceLabel,
+.GamepadMode .favoriteElement.gpfocus .labelHolder.offline .richPresenceLabel {
+  color: #8b929a;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze .playerName,
+.friend.gpfocus .labelHolder.GamepadMode.online.awayOrSnooze .richPresenceLabel,
+.GamepadMode .friend.gpfocus .labelHolder.online.awayOrSnooze .playerName,
+.GamepadMode
+  .friend.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .richPresenceLabel,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .playerName,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.online.awayOrSnooze
+  .richPresenceLabel,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .playerName,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.online.awayOrSnooze
+  .richPresenceLabel {
+  color: #4cb4ff;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.friend.gpfocus .labelHolder.GamepadMode.ingame.awayOrSnooze .playerName,
+.friend.gpfocus .labelHolder.GamepadMode.ingame .richPresenceLabel,
+.GamepadMode .friend.gpfocus .labelHolder.ingame.awayOrSnooze .playerName,
+.GamepadMode .friend.gpfocus .labelHolder.ingame .richPresenceLabel,
+.favoriteElement.gpfocus
+  .labelHolder.GamepadMode.ingame.awayOrSnooze
+  .playerName,
+.favoriteElement.gpfocus .labelHolder.GamepadMode.ingame .richPresenceLabel,
+.GamepadMode
+  .favoriteElement.gpfocus
+  .labelHolder.ingame.awayOrSnooze
+  .playerName,
+.GamepadMode .favoriteElement.gpfocus .labelHolder.ingame .richPresenceLabel {
+  color: #59bf40;
+  text-shadow: 1px 1px 0 #0e141b;
+}
+.awayOrSnooze .playerName.GamepadMode,
+.GamepadMode .awayOrSnooze .playerName {
+  color: #59bf40;
+}
+.watchingbroadcast .playerName {
+  color: #c9bdf7;
+}
+.watchingbroadcast .richPresenceLabel,
+.watchingbroadcast .gameName.richPresenceLabel a,
+.watchingbroadcast .gameName.richPresenceLabel a:hover,
+.watchingbroadcast .gameName.richPresenceLabel a:active,
+.watchingbroadcast .gameName.richPresenceLabel a:visited {
+  color: #8277b1;
+}
+.awayOrSnooze.online .playerName.GamepadMode,
+.GamepadMode .awayOrSnooze.online .playerName {
+  color: #4cb4ff;
+}
+.awayOrSnooze.online .richPresenceLabel.GamepadMode,
+.GamepadMode .awayOrSnooze.online .richPresenceLabel,
+.awayOrSnooze.online .gameName.richPresenceLabel a.GamepadMode,
+.GamepadMode .awayOrSnooze.online .gameName.richPresenceLabel a,
+.awayOrSnooze.online .gameName.richPresenceLabel a:hover.GamepadMode,
+.GamepadMode .awayOrSnooze.online .gameName.richPresenceLabel a:hover,
+.awayOrSnooze.online .gameName.richPresenceLabel a:active.GamepadMode,
+.GamepadMode .awayOrSnooze.online .gameName.richPresenceLabel a:active,
+.awayOrSnooze.online .gameName.richPresenceLabel a:visited.GamepadMode,
+.GamepadMode .awayOrSnooze.online .gameName.richPresenceLabel a:visited {
+  color: #4cb4ff;
+}
+.online .playerName {
+  color: #ccccd5;
+  color: #6dcff6;
+}
+.online .playerName.GamepadMode,
+.GamepadMode .online .playerName {
+  color: #b3dfff;
+}
+.online .richPresenceLabel,
+.online .gameName.richPresenceLabel a,
+.online .gameName.richPresenceLabel a:hover,
+.online .gameName.richPresenceLabel a:active,
+.online .gameName.richPresenceLabel a:visited {
+  color: #4c91ac;
+}
+.online .richPresenceLabel.GamepadMode,
+.GamepadMode .online .richPresenceLabel,
+.online .gameName.richPresenceLabel a.GamepadMode,
+.GamepadMode .online .gameName.richPresenceLabel a,
+.online .gameName.richPresenceLabel a:hover.GamepadMode,
+.GamepadMode .online .gameName.richPresenceLabel a:hover,
+.online .gameName.richPresenceLabel a:active.GamepadMode,
+.GamepadMode .online .gameName.richPresenceLabel a:active,
+.online .gameName.richPresenceLabel a:visited.GamepadMode,
+.GamepadMode .online .gameName.richPresenceLabel a:visited {
+  color: #4cb4ff;
+}
+.online .SVGIcon_DoNotDisturb circle,
+.online .SVGIcon_DoNotDisturb line {
+  stroke: #a0545a;
+}
+.offline .playerName {
+  color: #a0a0a0;
+}
+.offline .playerName.GamepadMode,
+.GamepadMode .offline .playerName {
+  color: #b8bcbf;
+}
+.offline .richPresenceLabel,
+.offline .gameName.richPresenceLabel a,
+.offline .gameName.richPresenceLabel a:hover,
+.offline .gameName.richPresenceLabel a:active,
+.offline .gameName.richPresenceLabel a:visited {
+  color: #6e6e6e;
+}
+.offline .SVGIcon_DoNotDisturb circle,
+.offline .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67;
+}
+.offline .DNDContainer {
+  display: none;
+}
+.FriendVoiceChatContainer .playerName {
+  font-size: 20px;
+  line-height: 24px;
+  width: 100%;
+}
+.hidePersona .statusAndName {
+  height: 100%;
+  align-items: center;
+  margin-top: 0px;
+}
+.compactView.twoLine .richPresenceLabel {
+  font-size: 10px;
+  margin-top: 1px;
+}
+.compactView .richPresenceLabel {
+  font-size: 10px;
+  line-height: 11px;
+}
+.compactView .ingame .gameName.richPresenceLabel {
+  font-size: 10px;
+  line-height: 14px;
+}
+.compactView .speaking .playerName {
+  filter: brightness(1.5);
+}
+.compactView .playerName,
+.compactView .playerNickname {
+  margin-bottom: -6px;
+  font-size: 12px;
+}
+.compactView .noContextMenu .playerName,
+.compactView .noContextMenu .playerNickname {
+  margin-bottom: -2px;
+}
+.currentUserContainer .playerName {
+  font-size: 16px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  transition: color .94s ease-in-out;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+}
+.currentUserContainer .statusAndName {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -4px;
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer .gameName.richPresenceLabel {
+  font-size: 13px;
+}
+.currentUserContainer .richPresenceLabel {
+  -webkit-app-region: no-drag;
+}
+.currentUserContainer .richPresenceContainer {
+  margin-top: 2px;
+  align-self: stretch;
+}
+.currentUserContainer .compactView .playerName {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.currentUserContainer .compactView .richPresenceLabel {
+  line-height: initial;
+}
+.currentUserContainer .compactView .gameName.richPresenceLabel {
+  font-size: 12px;
+}
+.ChatTabs .compactView .playerName,
+.ChatTabs .compactView .playerNickname {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-overflow: clip;
+}
+.ChatTabs .compactView .playerNickname {
+  color: #a2a6ac;
+}
+.ChatTabs .compactView .richPresenceLabel {
+  line-height: 11px;
+  font-size: 10px;
+  margin-top: -1px;
+}
+.ChatTabs .compactView:not(.twoLine) .richPresenceLabel:not(.gameName) {
+  display: none;
+}
+.ChatTabs .compactView .offline .statusAndName {
+  color: #ccc;
+}
+.ChatTabs .compactView .offline .richPresenceLabel {
+  color: #888;
+}
+.titleBarContainer .currentUserContainer .richPresenceLabel {
+  margin-top: -1px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  display: inline-block;
+  transition: color .94s ease-in-out;
+}
+.titleBarContainer .currentUserContainer .compactView .richPresenceLabel {
+  margin-top: -4px;
+  margin-bottom: -2px;
+}
+.titleBarContainer .currentUserContainer .twoLine .richPresenceLabel {
+  margin-top: 0px;
+}
+.titleBarContainer
+  .currentUserContainer
+  .compactView.twoLine
+  .richPresenceLabel {
+  margin-top: -4px;
+  margin-bottom: 0px;
+}
+.titleBarContainer .currentUserContainer .richPresenceLabel:not(.gameName) {
+  font-size: 10px;
+  margin-top: -1px;
+  margin-bottom: 1px;
+}
+.titleBarContainer .currentUserContainer .ContextMenuButton {
+  margin-top: -4px;
+  margin-bottom: 4px;
+}
+.singlewindow .currentUserContainer .statusAndName {
+  margin-right: 4px;
+}
+.singlewindow .currentUserContainer .twoLine .statusAndName,
+.singlewindow .currentUserContainer .twoLine {
+  width: 100%;
+}
+.needsUpdate .currentUserContainer .twoLine .statusAndName {
+  margin-right: 48px;
+}
+.friendRequests .bright .moMutualFriends .playerName,
+.friendRequests .playerName {
+  color: #fff;
+  transition: color .2s ease-in-out;
+}
+.friendRequests .noMutualFriends .playerName {
+  color: #aaa;
+  transition: color .2s ease-in-out;
+}
+.MemberListColumn .statusAndName .richPresenceLabel,
+.MemberListColumn .statusAndName .playerNickname,
+.MemberListColumn .statusAndName .playerName {
+  text-overflow: clip;
+  transition-delay: .4s;
+}
+.MemberListColumn.MemberListViewCompact .statusAndName .richPresenceLabel,
+.MemberListColumn.MemberListViewCompact .statusAndName .playerNickname,
+.MemberListColumn.MemberListViewCompact .statusAndName .playerName {
+  text-overflow: clip;
+  transition-delay: 0s;
+}
+.groupMemberList .playerName,
+.groupMemberList .playerNickname {
+  font-size: 13px;
+}
+.groupMemberList .ingame .gameName.richPresenceLabel {
+  font-size: 10px;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+.groupMemberList .ingame.twoLine .gameName.richPresenceLabel {
+  font-size: 12px;
+  margin-top: -1px;
+}
+.groupMemberList .twoLine .richPresenceLabel {
+  font-size: 12px;
+}
+.groupMemberList .richPresenceLabel {
+  line-height: 13px;
+}
+.Dialog_RemotePlay .awayOrSnooze .statusAndName {
+  margin-bottom: -10px;
+}
+.Dialog_RemotePlay .ingame .playerName,
+.Dialog_RemotePlay .ingame .playerNickname {
+  margin-top: 0px;
+  width: 175px;
+}
+.Dialog_RemotePlay .twoLine {
+  margin-top: -44px;
+  width: 175px;
+}
+.Dialog_RemotePlay .ingame .richPresenceLabel {
+  margin-top: -15px;
+  width: 175px;
+  visibility: collapse;
+}
+.gameIsPrivateIcon {
+  width: 28px;
+  height: 20px;
+  margin-top: -3px;
+  margin-left: 0px;
+  display: inline-block;
+}
+.gameIsPrivateIcon svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: -8px;
+}
+.gameIsPrivateIcon svg line,
+.gameIsPrivateIcon svg path {
+  stroke: #6e8d50;
+}
+.PendingPersona {
+  margin-top: -6px;
+  margin-left: 4px;
+  display: inline-block;
+}
+.PendingPersona svg {
+  height: 12px;
+  width: 12px;
+}
+.ErrorDiv {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
+}

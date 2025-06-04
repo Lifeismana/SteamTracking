@@ -1,0 +1,167 @@
+._1lo3nIamSX1TzzE4TlhFXA {
+  position: fixed;
+  background: #ccc;
+  color: #000;
+  padding: 4px;
+}
+._1ds3uh7ntoekPm635F2Ziv {
+  font-size: 12px;
+}
+._3Vn5X8bzPjWx5p545nkB6k {
+  font-size: 10px;
+  font-weight: italic;
+}
+.ClanImageModalContent {
+  width: 600px;
+}
+.ClanImageModalMode {
+  margin-top: 12px;
+}
+.ClanImageModalMode:not(.Active) {
+  display: none;
+}
+.EditableComponentToolbarContainer {
+  position: relative;
+}
+.EditableComponentToolbarContainer .EditableComponentToolbar {
+  opacity: 0;
+  pointer-events: none;
+}
+.EditableComponentToolbarContainer:hover .EditableComponentToolbar {
+  opacity: 1;
+  pointer-events: initial;
+}
+.EditableComponentInlineContainer > *:not(.InlineHoverContainer) {
+  pointer-events: none;
+}
+.InlineHoverContainer.Hidden .EditableComponentToolbar {
+  opacity: 0;
+  pointer-events: none;
+}
+.InlineHoverContainer.WidthConstrained .EditableComponentToolbar {
+  right: initial;
+  left: 0;
+}
+.EditableComponentToolbar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  transition: opacity .25s;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
+  gap: 12px;
+}
+.EditableComponentToolbar .FloatingToolbarButton {
+  box-shadow: 0 0 6px 0 #000;
+  margin: 0;
+}
+.EditableComponentToolbar.StrongShadows .FloatingToolbarButton {
+  box-shadow: 0 0 12px 6px #000;
+}
+.CarouselEditContainer {
+  position: relative;
+}
+.CarouselList {
+  background: rgba(0, 0, 0, 0.15);
+  overflow-x: auto;
+  height: 110px;
+  width: 500px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: row;
+}
+.CarouselList .ListItem {
+  padding: 8px;
+  height: 80px;
+  position: relative;
+}
+.CarouselList .ListItem.DraggableItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.CarouselList .ListItem .ImagePreview img {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+.CarouselList .ListItem .Spacer {
+  flex: 1;
+}
+.CarouselList .ListItem .Controls {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 200ms;
+  pointer-events: none;
+}
+.CarouselList .ListItem .Controls .Control {
+  min-width: 36px;
+}
+.CarouselList .ListItem:hover .Controls {
+  opacity: 1;
+  pointer-events: initial;
+}
+button.DialogButton.AddButton {
+  padding: 0 12px;
+}
+button.DialogButton.AddButton .PlusIcon {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+.Column {
+  position: relative;
+  flex-grow: 1;
+}
+.controls {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  opacity: 1;
+  transition: opacity .25s;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
+}
+.EditorCtn {
+  position: relative;
+}
+button.DialogButton.AddNew {
+  margin-left: 10px;
+  margin-bottom: 16px;
+}
+.DialogCtn {
+  min-width: 500px;
+}
+.ParticipantRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ParticipantRow > div {
+  margin-right: 8px;
+}
+.EventDescriptionField.DialogTextInputBase {
+  width: 100%;
+  padding: 11px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.EditorCtn {
+  position: relative;
+}
+.controls {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  opacity: 1;
+  transition: opacity .25s;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
+}

@@ -1,0 +1,2433 @@
+html:not(.client)
+  .events_listing
+  .AppPartnerEventsPage
+  .AppPartnerEventsBanner {
+  margin-top: 104px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.client)
+    .events_listing
+    .responsive_page_frame.with_header
+    div.responsive_page_content {
+    padding-top: 0px;
+  }
+}
+@media screen and (max-width: 500px) {
+  html:not(.client) .events_listing .AppPartnerEventsBanner .AppBannerLinks {
+    margin: unset;
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+}
+html:not(.client) .events_listing .ControlSection.NoGameLink {
+  margin-top: 160px;
+}
+html:not(.client) .events_listing .AppPartnerEventsBody {
+  margin-top: 0px;
+}
+.events_listing .ControlSection.NoGameLink {
+  margin-top: 60px;
+}
+.AppPartnerEventsPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 25;
+  outline: none;
+  display: flex;
+  flex-flow: column;
+}
+@media screen and (max-width: 884px) {
+  .AppPartnerEventsPage .AppBannerGroup {
+    padding-left: 10px;
+  }
+}
+.AppPartnerEventsBody {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex: 1;
+  outline: none;
+}
+.AppPartnerEventsBody .NoEvents {
+  padding: 30px;
+  font-size: 2em;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: auto;
+}
+.AppBannerCtn {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.AppBannerCtn .AppBannerBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(60px) brightness(40%);
+  opacity: 0.6;
+  background: center / cover no-repeat;
+  z-index: 1;
+}
+.AppBannerGroup {
+  position: relative;
+  z-index: 2;
+  max-width: 866px;
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 142px 1fr;
+  grid-template-rows: 38px 28px;
+  grid-column-gap: 15px;
+}
+.BasicUI .AppBannerGroup {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .AppBannerGroup {
+    grid-template-rows: 29px 28px;
+    padding: 15px;
+  }
+}
+.AppBannerGroup.ClanBanner {
+  grid-template-columns: 66px 1fr;
+}
+.TallBanner .AppBannerGroup {
+  grid-template-columns: 290px 1fr;
+  grid-template-rows: 100px 36px;
+}
+.TallBanner .AppBannerGroup.ClanBanner {
+  grid-template-columns: 136px 1fr;
+}
+.WideBanner .AppBannerGroup {
+  max-width: 1012px;
+  padding: 7px 16px;
+}
+@media screen and (max-width: 700px) {
+  .WideBanner .AppBannerGroup {
+    padding: 10px;
+  }
+}
+.AppBannerGroup .AppBannerTitle {
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 100;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.TallBanner .AppBannerGroup .AppBannerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 35px;
+  line-height: 41px;
+  word-break: break-word;
+  white-space: normal;
+}
+@media screen and (max-width: 1024px) {
+  .AppBannerGroup .AppBannerTitle {
+    font-size: 27px;
+    line-height: 27px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .AppBannerGroup .AppBannerTitle {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .AppBannerGroup .AppBannerTitle {
+    font-size: 20px;
+    line-height: 22px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+.AppBannerGroup .AppBannerTitle .NewsHubSubTitle {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 25px;
+  display: none;
+}
+.TallBanner .AppBannerGroup .AppBannerTitle .NewsHubSubTitle {
+  display: block;
+}
+@media screen and (max-width: 700px) {
+  .TallBanner .AppBannerGroup .AppBannerTitle .NewsHubSubTitle {
+    display: none;
+  }
+}
+.AppBannerGroup .AppBannerLogoCtn {
+  border-radius: 3px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  box-sizing: border-box;
+  display: block;
+  grid-row-end: span 2;
+}
+@media screen and (max-width: 500px) {
+  .AppBannerGroup .AppBannerLogoCtn {
+    display: none;
+  }
+}
+.AppBannerGroup .AppBannerLogo {
+  height: 100%;
+  margin: 0px;
+  display: block;
+}
+.AppBannerGroup .AppBannerLinks {
+  display: flex;
+  align-self: end;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+@media screen and (max-width: 500px) {
+  .AppBannerGroup .AppBannerLinks {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+.AppBannerGroup .HeaderButtonDark {
+  background: #32353b;
+}
+.AppBannerGroup .HeaderButtonDark:hover {
+  color: #fff;
+}
+.AppBannerGroup .HeaderButtonDark:hover svg {
+  fill: #fff;
+}
+.AppBannerGroup .HeaderFollowButton {
+  margin-right: 16px;
+  height: 30px;
+}
+.AppBannerGroup .HeaderWishlistButton {
+  margin-right: 16px;
+  height: 30px;
+}
+.AppBannerGroup .AppBannerLink {
+  padding: 2px 16px 2px 0;
+  color: #c5cedf;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.AppBannerGroup .AppBannerLink svg {
+  width: 18px;
+  height: 18px;
+  fill: #c5cedf;
+  margin-right: 5px;
+}
+.AppBannerGroup .AppBannerLink:hover {
+  color: #fff;
+}
+.AppBannerGroup .AppBannerLink:hover svg {
+  fill: #fff;
+}
+.AppBannerGroup .AppBannerRSSLink {
+  width: 18px;
+  height: 18px;
+  padding: 2px 12px 2px 0;
+}
+.AppBannerGroup .AppBannerLinkDD {
+  margin-bottom: 0px;
+}
+.AppBannerGroup .AppBannerLinkDDButton {
+  background: #32353b;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px 6px 25px;
+  font-size: 12px;
+  line-height: 18px;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.AppBannerGroup .AppBannerLinkDDButton:hover {
+  background: #464d58;
+  color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.AppBannerGroup .DDButtonArrow {
+  position: unset;
+  height: 18px;
+}
+.AppBannerGroup .DDButtonArrow svg {
+  padding-top: 3px;
+}
+.AppBannerGroup .AppBannerLinkDDContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.AppBannerGroup .WishlistBtnShort {
+  height: 30px;
+}
+.RssRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.RssRow svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  margin-right: 4px;
+}
+.AppPartnerEventsBanner {
+  width: 100%;
+  background-color: #3d424c;
+  background-image: radial-gradient(
+    ellipse at bottom center,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  display: flex;
+  box-shadow: 0 0 10px #000;
+  z-index: 3;
+}
+.AppPartnerEventsContainer {
+  padding: 0px 20px;
+  margin: 0 auto 80px;
+  pointer-events: none;
+}
+@media screen and (max-width: 910px) {
+  .AppPartnerEventsContainer {
+    padding: 0px 10px 0px 10px;
+  }
+}
+.BasicUI .AppPartnerEventsContainer {
+  margin: unset;
+}
+.PartnerEvent {
+  max-width: 848px;
+  overflow: hidden;
+  margin: 56px auto 16px auto;
+  position: relative;
+  background-color: #25282e;
+  border-radius: 4px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 0 0 32px #000;
+  pointer-events: initial;
+  border: 1px solid transparent;
+  font-weight: 300;
+}
+.BasicUI .PartnerEvent {
+  border: none;
+  border-radius: 0px;
+  max-width: 640px;
+  margin: 24px auto 40px auto;
+  box-shadow: var(--gpShadow-XLarge);
+}
+.PartnerEvent a {
+  text-decoration: none;
+}
+.PartnerEvent .LibraryViewSubtitle {
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+div.EventDetailsBody {
+  min-height: 0;
+}
+.ControlSection {
+  position: fixed;
+  top: 106px;
+  margin-bottom: -196px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1000;
+}
+.ControlSection.NoGameLink {
+  margin-bottom: -138px;
+}
+.ControlSection.NoScrollArrows {
+  top: 136px;
+}
+.BasicUI .ControlSection.NoScrollArrows {
+  display: none;
+}
+.ControlSection .ControlSectionWidth {
+  margin-left: auto;
+  margin-right: auto;
+  width: 890px;
+  display: flex;
+}
+.ControlSection .ControlSectionWidth .ControlSectionRightSide {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  pointer-events: initial;
+  max-width: 896px;
+}
+.ControlSection .ControlSectionWidth .ControlSectionRightSide .GameArt {
+  width: 48px;
+  height: 48px;
+}
+.ControlSection .ControlSectionWidth .ControlSectionRightSide .GameArt img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: filter .1s ease-in-out;
+}
+.ControlSection > *:not(:first-child) {
+  margin-left: 8px;
+}
+@keyframes transitionIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.ScrollButton {
+  background-color: #44444b;
+  border: 1px solid #63636d;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  width: 48px;
+  height: 24px;
+  box-shadow: 0 3px 32px #000;
+}
+.ScrollButton:hover {
+  background-color: #575761;
+  border: 1px solid #9e9ead;
+}
+.ScrollButton:hover svg polygon {
+  fill: #fff;
+}
+.ScrollButton:hover.GameArt img {
+  filter: brightness(1.25);
+}
+.ScrollButton.Up {
+  padding-top: 3px;
+}
+.ScrollButton.Down {
+  padding-bottom: 3px;
+}
+.ScrollButton svg polygon {
+  fill: #9e9ead;
+}
+.CloseButton {
+  background-color: #44444b;
+  border: 1px solid #63636d;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 32px #000;
+}
+.CloseButton:hover {
+  background-color: #575761;
+  border: 1px solid #9e9ead;
+}
+.CloseButton:hover svg line {
+  stroke: #fff;
+}
+.CloseButton svg line {
+  stroke-width: 16px;
+  stroke: #9e9ead;
+}
+.AnimIn {
+  animation-name: transitionIn;
+  animation-duration: .32s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  transition-property: transform, background-color, box-shadow;
+  transition-duration: .21s;
+  transition-timing-function: ease-out;
+}
+.AnimIn svg {
+  transition-property: transform;
+  transition-duration: .21s;
+  transition-timing-function: ease-out;
+}
+.AnimIn:active {
+  background-color: #000;
+  transition-duration: 0s;
+  box-shadow: 0 0 12px #181818;
+}
+.AnimIn:active svg {
+  transform: scale(0.8);
+  transition-duration: 0s;
+}
+.AnimIn.Down:active svg {
+  transform: scale(0.8) rotateZ(180deg);
+  transition-duration: 0s;
+}
+.ClickableBG {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 100%;
+  margin-bottom: calc(-100vh - 10px);
+}
+.DirectionState {
+  margin: 10px 0px 0px 0px;
+}
+.EventTypeAndTimeRow {
+  display: flex;
+  align-items: center;
+}
+.EventTypeAndTimeRow.WithReminder {
+  padding: 6px;
+  border-radius: 6px;
+  background-color: rgba(30, 33, 38, 0.5);
+  margin-bottom: 6px;
+}
+@media screen and (max-width: 700px) {
+  .EventTypeAndTimeRow.WithReminder {
+    flex-direction: column;
+  }
+}
+.EventTypeAndTimeRow .TimeandPostedBy {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+  margin: 0px 12px 0px 0px;
+  color: #6c767f;
+}
+.EventTypeAndTimeRow .TimeandPostedBy .EventType {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #289cff;
+  margin-right: 6px;
+}
+.EventTypeAndTimeRow .TimeandPostedBy .PostedBy {
+  margin: 0px 6px;
+  color: #868f98;
+  display: none;
+}
+.EventTypeAndTimeRow .ReminderContainer {
+  margin-left: auto;
+  flex: none;
+}
+.ReadMoreCnt {
+  padding-top: 20px;
+}
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+  background-image: radial-gradient(
+    ellipse at top center,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+@media screen and (max-width: 600px) {
+  .Container {
+    padding: 4px;
+  }
+}
+.VoteContainer,
+.DiscussContainer,
+.ShareContainer,
+.InnerContainer {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
+.VoteContainer,
+.ShareContainer,
+.DiscussContainer {
+  padding: 10px;
+  background-color: rgba(30, 33, 38, 0.5);
+}
+@media screen and (max-width: 910px) {
+  .VoteContainer,
+  .ShareContainer,
+  .DiscussContainer {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 910px) {
+  .VoteContainer .DiscussionButton {
+    margin-left: 0px;
+  }
+}
+.DiscussContainer {
+  margin-right: 0px;
+}
+@media screen and (max-width: 910px) {
+  .DiscussContainer .DiscussionButton {
+    padding: 6px 11px 8px 11px;
+    margin-left: 0px;
+  }
+}
+.ShareContainer {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  margin-right: 0px;
+}
+.DiscussIcon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 910px) {
+  .DiscussIcon {
+    margin-right: 0px;
+    margin-left: 0px;
+    left: 15px;
+  }
+}
+.linkField {
+  font-size: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+.linkField span {
+  padding-right: 10px;
+  padding-left: 2px;
+  white-space: nowrap;
+}
+.ShareButtonContainer {
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .LinkInputLabel {
+    display: none;
+  }
+  .ShareButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .LinkButton {
+    display: none !important;
+  }
+}
+.ShareSteamBtn {
+  height: 33px;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 700px) {
+  .ShareSteamBtn {
+    height: 30px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 2px;
+  }
+}
+.ClipboardText {
+  text-align: center;
+  min-height: 30px;
+  padding-top: 10px;
+}
+.LinkInput {
+  flex-grow: 10;
+  width: 485px;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+  outline: none;
+  font-family: "Motiva Sans", Sans-serif;
+  resize: none;
+  line-height: 14px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 700px) {
+  .LinkInput {
+    min-width: 250px;
+    min-height: 80px;
+  }
+}
+.ShareIcon {
+  width: 19px;
+  height: 19px;
+  margin-right: 12px;
+  margin-top: 1px;
+  margin-left: -10px;
+  fill: rgba(255, 255, 255, 0.66);
+}
+@media screen and (max-width: 500px) {
+  .ShareIcon {
+    margin-right: -7px;
+  }
+}
+.ClipboardIcon {
+  height: 18px;
+  margin-top: 0px;
+}
+.SteamIcon {
+  height: 30px;
+  margin-top: 1px;
+  margin-left: -10px;
+  margin-bottom: -8px;
+  margin-right: 4px;
+}
+@media screen and (max-width: 700px) {
+  .SteamIcon {
+    height: 26px !important;
+    padding-top: 0px;
+    margin: 0px;
+  }
+}
+.share_controls_ctn {
+  background-color: rgba(59, 63, 72, 0.5);
+  border-radius: 3px;
+  padding: 10px;
+  text-align: left;
+  margin-top: 16px;
+}
+@media screen and (max-width: 700px) {
+  .share_controls_ctn {
+    margin-top: 2px;
+    padding: 0px;
+    background: none;
+  }
+}
+.ShareLanguagePicker {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px 8px;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .ShareLanguagePicker {
+    flex-direction: column;
+  }
+}
+.ShareLanguagePicker .LanguageLabel {
+  padding: 0px 8px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+.ShareBtn:not(:first-child) {
+  margin-left: 8px;
+}
+@media screen and (max-width: 700px) {
+  .ShareBtn:not(:first-child) {
+    margin-left: 2px;
+  }
+}
+.ShareBtn > img {
+  height: 33px;
+  padding-bottom: 8px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 700px) {
+  .ShareBtn > img {
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+  }
+}
+.ShareBtn > span {
+  line-height: 33px;
+}
+@media screen and (max-width: 700px) {
+  .ShareBtn > span {
+    display: none;
+  }
+}
+.VoteCount,
+.DiscussionCount {
+  color: #399aec;
+  font-size: 17px;
+  font-weight: 800;
+  padding-top: 7px;
+  margin-right: 12px;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  height: 20px;
+  position: relative;
+  display: flex;
+}
+@media screen and (max-width: 910px) {
+  .VoteCount,
+  .DiscussionCount {
+    margin-right: 6px;
+  }
+}
+.DiscussionCount {
+  display: flex;
+}
+.DiscussionCount > svg {
+  margin-left: -1px;
+  margin-right: 5px;
+  margin-top: -1px;
+  width: 26px;
+  height: 26px;
+  fill: #399aec;
+}
+@media screen and (max-width: 500px) {
+  .DiscussionCount > svg {
+    display: none;
+  }
+}
+.DiscussionButton {
+  display: flex;
+  white-space: nowrap;
+  margin: 5px;
+}
+.DiscussionButton .SVGIcon_ChatBubble {
+  width: 21px;
+  height: 21px;
+  fill: rgba(255, 255, 255, 0.66);
+  display: none;
+}
+.DiscussionButton .DiscussionButtonText {
+  line-height: 22px;
+}
+@media screen and (max-width: 500px) {
+  .DiscussionButton .DiscussionButtonText {
+    display: none;
+  }
+  .DiscussionButton .SVGIcon_ChatBubble {
+    display: block;
+  }
+}
+.VoteDownIcon,
+.VoteDownSelectedIcon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: -4px;
+  bottom: 3px;
+  left: 9px;
+  position: absolute;
+  transform: scaleY(-1);
+}
+@media screen and (max-width: 500px) {
+  .VoteDownIcon,
+  .VoteDownSelectedIcon {
+    margin-bottom: -2px;
+  }
+}
+.VoteDownIcon {
+  fill: rgba(255, 255, 255, 0.66);
+}
+.VoteDownSelectedIcon {
+  fill: #9cccf5;
+}
+.VoteUpIcon,
+.VoteUpSelectedIcon {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  margin-bottom: -4px;
+  margin-top: -6px;
+  margin-left: -20px;
+}
+@media screen and (max-width: 500px) {
+  .VoteUpIcon,
+  .VoteUpSelectedIcon {
+    margin-top: initial;
+    margin-left: initial;
+    margin-bottom: -1px;
+    bottom: 3px;
+    left: 9px;
+    position: absolute;
+  }
+}
+.VoteUpIcon {
+  fill: rgba(255, 255, 255, 0.66);
+}
+.VoteUpSelectedIcon {
+  fill: #9cccf5;
+}
+.VoteUpStaticIcon {
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+  margin-bottom: -4px;
+  margin-top: -6px;
+  margin-left: -5px;
+  fill: #399aec;
+}
+@media screen and (max-width: 500px) {
+  .VoteUpStaticIcon {
+    display: none;
+  }
+}
+.VoteButtonSelected {
+  background-color: #399aec;
+}
+.SteamAwardContainer {
+  margin-right: 24px;
+  margin-left: 24px;
+  margin-top: 24px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  position: relative;
+  background-size: cover;
+  color: #fff;
+  background-repeat: no-repeat;
+  min-height: 290px;
+  padding: 16px 0 16px 16px;
+}
+.InLibraryView .SteamAwardContainer {
+  margin: 24px;
+}
+.SteamAwardContainer .SVGIcon_DialogCheck {
+  fill: #fad569;
+}
+.SteamAwardContainer .SteamAwardHeader {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 60px 5px 0;
+  font-size: 12px;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderImage {
+  position: absolute;
+  right: -10px;
+  max-width: 65px;
+  top: -30px;
+  z-index: 1;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardMainCtn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardMainTitle {
+  position: relative;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  padding-right: 90px;
+  padding-bottom: 5px;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardSubTitle {
+  position: relative;
+  text-transform: uppercase;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardLearnMore {
+  color: #c9d3d9;
+  margin-left: 12px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardLearnMore:hover {
+  color: #fff;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardLearnMore.BottomRight {
+  margin-left: auto;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderText {
+  position: relative;
+  padding-top: 15px;
+  width: 85%;
+  font-size: 14px;
+  font-style: italic;
+  display: flex;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderText .LinkText {
+  color: #ebebeb;
+  font-style: normal;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderText .LinkText:hover {
+  color: #fff;
+}
+@media screen and (max-width: 620px) {
+  .SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderText {
+    display: none;
+  }
+}
+.SteamAwardContainer .SteamAwardVoteWidget {
+  padding: 10px;
+  color: #fff;
+  font-size: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  max-width: 90%;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardVotePrompt {
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: .05em;
+  margin-left: 15px;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardCategoryTitle {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  margin: auto 0 auto 6px;
+  flex: 1 0 25%;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardCategoryTitle.VotingTitle {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 0;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardCategoryDesc {
+  margin-bottom: 10px;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardVoteButtonArea {
+  border-radius: 4px;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButton {
+  border: none;
+  margin: 15px 0px 6px;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 13px;
+  background: transparent;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButton
+  .SteamAwardVoteButtonText {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: #fff;
+}
+@media screen and (max-width: 620px) {
+  .SteamAwardContainer
+    .SteamAwardVoteWidget
+    .SteamAwardVoteButtonArea
+    .SteamAwardVoteButton
+    .SteamAwardVoteButtonText {
+    padding: 5px;
+  }
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButton:hover
+  .SteamAwardVoteButtonText {
+  border: 2px solid #fff;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButtonSubmitted {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  border: none;
+  margin: 15px 0px 6px;
+  padding: 0px;
+  cursor: default;
+  font-size: 13px;
+  background: transparent;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButtonSubmitted
+  .SteamAwardVoteButtonText {
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: #355a5f;
+}
+@media screen and (max-width: 620px) {
+  .SteamAwardContainer
+    .SteamAwardVoteWidget
+    .SteamAwardVoteButtonArea
+    .SteamAwardVoteButtonSubmitted
+    .SteamAwardVoteButtonText {
+    padding: 5px;
+  }
+}
+.SteamAwardContainer .SteamAwardVoteWidget .NominateCtn {
+  display: flex;
+  flex-direction: column;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 8px 8px 0px;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton:hover {
+  border: 1px solid #fff;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton.Nominated {
+  border: unset;
+  padding-left: 0;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton.Nominated:hover {
+  border: unset;
+  cursor: text;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton
+  .DialogCheckbox {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  margin: auto 0;
+  max-width: 22px;
+  width: 100%;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardCategoryDesc {
+  margin-left: 0px;
+  background: #ffffff1a;
+  color: #fff;
+  padding: 8px;
+  font-size: 14px;
+}
+.SteamAwardContainer .SteamAwardNominationWidget {
+  padding: 0;
+}
+.SteamAwardLinkToNominationPage {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.SteamAwardLinkToNominationPage a {
+  color: #c9d3d9;
+  font-size: 12px;
+}
+.SteamAwardLinkToNominationPage a:hover {
+  color: #fff;
+}
+.SteamAwardVoteCheckBox {
+  display: flex;
+}
+.SteamAwardVoteCheckBox.Nominated {
+  cursor: default;
+}
+.SteamAwardModalGameTitle {
+  color: #fff;
+}
+.ExpiredEventHeader {
+  font-size: 16px;
+  color: #c9d3d9;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: rgba(30, 33, 38, 0.5);
+}
+.EventDetail .SteamAwardContainer {
+  max-width: 713px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.steam_awards_vote_section .SteamAwardContainer {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.steam_awards_vote_section
+  .SteamAwardContainer
+  .SteamAwardHeader
+  .SteamAwardHeaderImage {
+  height: 180px;
+}
+.steam_awards_vote_section
+  .SteamAwardContainer
+  .SteamAwardHeader
+  .SteamAwardMainTitle {
+  font-size: 28px;
+  line-height: 28px;
+}
+.steam_awards_vote_section .AwardCategoriesCtn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 85%;
+}
+@media screen and (max-width: 620px) {
+  .steam_awards_vote_section .AwardCategoriesCtn {
+    max-width: 100%;
+  }
+}
+.steam_awards_vote_section .AwardCategoriesCtn .SteamAwardVoteWidget {
+  flex-grow: 1;
+}
+.steam_awards_vote_section
+  .AwardCategoriesCtn
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0px;
+}
+.steam_awards_vote_section
+  .AwardCategoriesCtn
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardCategoryTitle {
+  padding-left: 8px;
+}
+.SteamAwardConflictModal {
+  min-width: 600px;
+}
+.ConflictBody {
+  min-height: 190px;
+}
+.NominationSwitchCtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+body.v6.partner_events {
+  background: #24282e;
+}
+.EventDetailsPageContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #24282e;
+}
+@media screen and (min-width: 940px) {
+  .EventDetailsPageContainer .AppPartnerEventsBanner {
+    display: none;
+  }
+}
+.EventBackgroundBlurCtn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.EventBackgroundBlur {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 68%;
+  opacity: 0.2;
+  position: absolute;
+  filter: blur(32px) saturate(0.9);
+}
+.LowPerfMode .EventBackgroundBlur {
+  display: none;
+}
+.EventBackgroundBlur.GamepadMode,
+.GamepadMode .EventBackgroundBlur {
+  filter: unset;
+}
+.DetailArtworkAgeAppropriate {
+  position: relative;
+}
+.DetailArtworkAgeNotAppropriate .EventCoverImageBlr {
+  filter: blur(30px) saturate(0.9);
+}
+.DetailArtworkAgeNotAppropriate .EventBackgroundBlur {
+  background: #1f2126;
+  background-image: none !important;
+  opacity: 1;
+}
+.EventBodyCtn {
+  position: relative;
+  padding-bottom: 8vw;
+}
+.EventBodyPosition {
+  max-width: 1065px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px auto;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .EventBodyPosition {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .EventBodyPosition .OtherEventsCtn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.EventBody {
+  margin-top: -6vw;
+  width: 100%;
+  min-height: 600px;
+  background-color: #25282e;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  position: relative;
+  overflow: clip;
+}
+@media screen and (min-width: 1920px) {
+  .EventBody {
+    margin-top: -113px;
+  }
+}
+.EventBody .EventBackgroundBlur {
+  position: absolute;
+  z-index: 0;
+  filter: blur(32px) saturate(0.9);
+  opacity: 0.2;
+  left: 0;
+}
+.EventBroadcastCtn {
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 940px;
+}
+.EventColumns {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.EventCoverImageCtn {
+  overflow: hidden;
+  height: 26vw;
+  max-height: 510px;
+  width: 100%;
+  position: relative;
+}
+.NoTitleArtwork .EventCoverImageCtn {
+  height: 16vw;
+}
+.ScreenshotInsteadOfCover .EventCoverImageCtn {
+  height: 20vw;
+}
+.EventCoverImage,
+.EventCoverImageBackground {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 32vw;
+  max-height: 622px;
+  width: 100%;
+  top: -22%;
+  max-width: 1920px;
+  position: absolute;
+}
+.InLibraryView .EventCoverImage,
+.InLibraryView .EventCoverImageBackground {
+  display: block;
+  min-width: unset;
+  top: -51px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: -47px;
+  background-repeat: no-repeat;
+  height: 219px;
+  margin-bottom: -51px;
+  width: 100%;
+  opacity: 1;
+  position: relative;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-mask-image: unset;
+  mask-image: unset;
+}
+@media screen and (max-width: 940px) {
+  .InLibraryView .EventCoverImage,
+  .InLibraryView .EventCoverImageBackground {
+    height: 25vw;
+    top: -5vw;
+    margin-bottom: -5vw;
+  }
+}
+.InEditor .EventCoverImage,
+.InEditor .EventCoverImageBackground {
+  height: 129px;
+  position: relative;
+  top: -28px;
+  margin-bottom: -28px;
+}
+.EventCoverImage.MaskImages,
+.EventCoverImageBackground.MaskImages {
+  filter: blur(30px);
+  clip-path: inset(0);
+}
+.EventCoverImageBackground {
+  background-color: #25292e;
+  object-fit: cover;
+  object-position: center top;
+}
+.EventCoverImageFuzz {
+  position: absolute;
+  filter: blur(30px);
+  height: 32vw;
+  width: 100%;
+}
+.InLibraryView .EventCoverImageFuzz {
+  display: none;
+}
+.InLibraryView .EventCoverImage.NoTitleArtwork {
+  height: 100%;
+  opacity: 0.4;
+  position: absolute;
+  filter: blur(12px);
+}
+.LibraryEventTitleContainer {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+html.tablet .LibraryEventTitleContainer {
+  backdrop-filter: blur(32px);
+}
+@media screen and (max-width: 910px) {
+  .LibraryEventTitleContainer {
+    backdrop-filter: blur(32px);
+  }
+}
+.EventCoverImageBlr {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  height: 32vw;
+  object-fit: cover;
+  object-position: center top;
+}
+@media screen and (min-width: 1920px) {
+  .EventCoverImageBlr {
+    height: 614px;
+  }
+}
+.CoverImageGradient {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.EventDetailTitleImg {
+  width: 100%;
+}
+.EventDetailTitleDesc {
+  text-align: left;
+  width: 280px;
+  padding: 20px 24px 24px 0px;
+  align-items: flex-start;
+}
+@media screen and (max-width: 700px) {
+  .EventDetailTitleDesc {
+    padding: 10px 24px 10px 0px;
+  }
+}
+@media screen and (max-width: 940px) {
+  body .EventColumns {
+    flex-direction: column;
+  }
+  body .EventDetailTitleDesc {
+    order: 1;
+    width: calc(100% - 50px);
+    margin: 0px 1px;
+    padding-left: 24px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  body .EventDetailTitleDesc .EventDetailsSticky {
+    display: flex;
+    flex-direction: column;
+  }
+  body .EventDetailTitleDesc .EventDetailUserType {
+    display: none;
+  }
+  body .EventDetailTitleDesc .EventDetailGameCallToAction {
+    display: none;
+  }
+  body .EventDetailTitleDesc .EventDetailTimeInfo {
+    margin-bottom: 0px;
+  }
+  body .EventDetailsDescription {
+    width: 100%;
+    order: 2;
+  }
+  body .EventDetailsDescription .EventDetailsBody {
+    border-right: none;
+    padding-right: 0px;
+  }
+}
+.EventDetailsSticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+.EventDetailsGame {
+  font-size: 18px;
+  color: #eaeaeb;
+  width: 280px;
+  height: 130px;
+  background-color: #000;
+  background-size: cover;
+  margin-bottom: 0px;
+}
+.EventDetailsAvatar {
+  height: 184px;
+  width: 184px;
+  margin-bottom: 20px;
+}
+.GameActions {
+  display: flex;
+  flex-direction: row;
+  max-height: 38px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+.GameActions .ActionButton {
+  flex: 1;
+  margin-top: 0;
+}
+.GameActions .Ownership {
+  width: 50%;
+  padding: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  align-self: center;
+}
+.EventDetailsType {
+  color: #ccc;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.EventDetailsDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.EventDetailTitle {
+  font-size: 33px;
+  line-height: 36px;
+  font-weight: 200;
+  color: #eaeaeb;
+}
+.InLibraryView .EventDetailTitle {
+  font-size: 24px;
+  margin-top: 12px;
+}
+.InLibraryView .EventDetailTitle:hover {
+  cursor: pointer;
+  color: #fff;
+}
+html.tablet .EventDetailTitle {
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 0px;
+  font-size: 22px;
+}
+@media screen and (max-width: 910px) {
+  .EventDetailTitle {
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 0px;
+    font-size: 22px;
+  }
+}
+.InLibraryView.InEditor .EventDetailTitle {
+  font-size: 14px;
+}
+.InLibraryView.InEditor .EventDetailTimeInfo,
+.InLibraryView.InEditor .EventDetailTimeInfo > div > div,
+.InLibraryView.InEditor .EventDetailTitleContainer > div,
+.InLibraryView.InEditor .EventDetailTitleContainer > div > span {
+  font-size: 7px;
+}
+.InLibraryView.InEditor .EventDetailsSubTitle {
+  font-size: 10px;
+}
+.InLibraryView.InEditor .EventDetailsBody {
+  font-size: 7.9px;
+  line-height: 11px;
+}
+.InLibraryView.InEditor .AppSummaryWidgetCtn {
+  width: 900px;
+  transform: scale(0.48);
+  transform-origin: top left;
+}
+.EventDetailsSubTitle {
+  font-size: 22px;
+  line-height: 1.3;
+  color: #ccc;
+  font-weight: 200;
+  margin-top: 4px;
+}
+html.tablet .EventDetailsSubTitle {
+  font-size: 18px;
+}
+@media screen and (max-width: 910px) {
+  .EventDetailsSubTitle {
+    font-size: 18px;
+  }
+}
+.EventDetailsBody {
+  position: relative;
+  padding-right: 24px;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  line-height: 19px;
+  min-height: 600px;
+  color: #cfd2d3;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 688px;
+}
+.EventDetailsBody .EventDescriptionRichField .ProseMirror {
+  min-height: 566px;
+  outline: none;
+}
+.EventDetailsBody .ToolBar {
+  position: sticky;
+  top: 48px;
+  z-index: 100;
+  background: #24282e;
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+.EventDetailsBody.MaskImages img,
+.EventDetailsBody.MaskImages video {
+  filter: blur(30px);
+  clip-path: inset(0);
+}
+.EventDescriptionContainer {
+  position: relative;
+}
+.EventDescriptionContainer .ToolBar {
+  position: sticky;
+  top: 48px;
+  z-index: 100;
+  padding: 1px 4px 4px 4px;
+  background: #1d2025;
+}
+.EventDescriptionArea {
+  padding: 24px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+}
+@media screen and (max-width: 700px) {
+  .EventDetailsBody {
+    min-height: unset;
+    padding-bottom: 100px;
+  }
+}
+.LibraryEventBodyContainer .EventDetailsBody {
+  border-right: unset;
+  position: relative;
+  padding-right: unset;
+  user-select: text;
+  max-width: unset;
+}
+.EventDetailsBody img {
+  max-width: 100%;
+}
+.EventDetailsBody a:not(.LinkButton) {
+  color: #80bcd2;
+  text-decoration: none;
+  padding-bottom: 0px;
+}
+.EventDetailsBody a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.EventDetailsPageContainer.lang_zh-cn .EventDetailsBody b,
+.EventDetailsPageContainer.lang_ko .EventDetailsBody b,
+.EventDetailsPageContainer.lang_ja .EventDetailsBody b,
+.EventDetailsPageContainer.lang_zh-tw .EventDetailsBody b {
+  color: #c7e5ff;
+}
+.social_links .EventEditorTextTitle {
+  padding-top: 10px;
+  margin-right: 4px;
+}
+.LibraryEventBodyContainer {
+  padding: 24px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  min-height: 300px;
+}
+.LibraryEventBodyContainer.GamepadMode,
+.GamepadMode .LibraryEventBodyContainer {
+  backdrop-filter: blur(32px);
+}
+.LibraryEventBodyContainer .EventBackgroundBlur {
+  position: absolute;
+  opacity: 0.2;
+}
+.EventDetailTitleContainer {
+  padding: 24px;
+  position: relative;
+  z-index: 2;
+}
+html.tablet .EventDetailTitleContainer {
+  padding-top: 10px;
+}
+@media screen and (max-width: 910px) {
+  .EventDetailTitleContainer {
+    padding-top: 10px;
+  }
+}
+.InLibraryView .EventDetailTitleContainer {
+  padding: 16px 24px 12px 24px;
+  background: radial-gradient(
+    ellipse at bottom center,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+.EventDetailTimeInfo {
+  margin-bottom: 24px;
+}
+.EventDetailTimeInfo .StartDate,
+.EventDetailTimeInfo .EndDate {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 940px) {
+  .EventDetailTimeInfo {
+    display: flex;
+    flex-direction: row;
+  }
+  .EventDetailTimeInfo .StartDate,
+  .EventDetailTimeInfo .EndDate {
+    display: flex;
+    flex-direction: row;
+  }
+  .EventDetailTimeInfo .MultiDateAndTime {
+    display: flex;
+    flex-direction: row;
+  }
+  .EventDetailTimeInfo .MultiDateAndTime .RightSideTitles,
+  .EventDetailTimeInfo .MultiDateAndTime .DisplayAdminPanel_Title {
+    font-size: 12px;
+    margin-right: 4px;
+  }
+  .EventDetailTimeInfo .MultiDateAndTime .DateAndTime {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .EventDetailTimeInfo .MultiDateAndTime {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.InLibraryView .EventDetailTimeInfo {
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #868f98;
+}
+.InLibraryView .EventDetailTimeInfo div {
+  display: flex;
+}
+.RightSideTitles,
+.DisplayAdminPanel_Title {
+  font-size: 11px;
+  font-weight: 200;
+  color: #b1b4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.InLibraryView .RightSideTitles,
+.InLibraryView .DisplayAdminPanel_Title {
+  display: none;
+}
+.EventDetailTimeInfo .DateAndTime {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #dadadb;
+  margin-bottom: 20px;
+}
+html.tablet .EventDetailTimeInfo .DateAndTime {
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 910px) {
+  .EventDetailTimeInfo .DateAndTime {
+    margin-bottom: 0px;
+  }
+}
+.EventDetailTimeInfo .DateAndTime > span {
+  color: #6a737c;
+  padding: 0px 4px;
+}
+.NoDateAndTime,
+.DateAndTime {
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 700px) {
+  .EventDetailTimeInfo .DateAndTime {
+    margin-bottom: 0px;
+  }
+}
+.NoDateAndTime {
+  font-style: italic;
+}
+.AppSummaryCtn {
+  width: 100%;
+  border-top: 1px dotted #6d6e70;
+  background: #1b1d21;
+  padding-top: 36px;
+  padding-bottom: 42px;
+}
+.AppSummaryCtn .EventBodyPosition {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 940px) {
+  .AppSummaryCtn .EventBodyPosition {
+    display: block;
+  }
+}
+.AppSummaryWidgetTitleCtn {
+  flex-grow: 2;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+}
+.AppSummaryWidgetTitleCtn .Title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+@media screen and (max-width: 500px) {
+  .AppSummaryWidgetTitleCtn .Title {
+    margin-left: 16px;
+  }
+}
+.AppSummaryWidgetCtn {
+  margin-right: 16px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+}
+@media screen and (max-width: 940px) {
+  .AppSummaryWidgetCtn {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 0;
+  }
+}
+.DisplayAdminPanel {
+  position: relative;
+  z-index: 2;
+}
+.DisplayAdminPanel.Sticky {
+  position: sticky;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #707061;
+}
+.DisplayAdminPanelMarker {
+  background-color: transparent;
+  height: 1px;
+  width: 1px;
+}
+.DisplayAdminPanelClose {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.Locked {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.DisplayAdminPanel_ctn {
+  padding: 16px;
+  border-radius: 5px;
+  background: #707061;
+  display: flex;
+  flex-wrap: wrap;
+}
+.DisplayAdminPanel_ctn.Sticky {
+  padding: 0 16px;
+}
+.DisplayAdminPanel_Title {
+  color: #ff0;
+  padding-right: 20px;
+}
+.DisplayAdminPanel_TopSpacer {
+  padding-top: 50px;
+}
+.DisplayAdminPanel_TopSpacer.Sticky {
+  padding-top: 82px;
+}
+.DisplayAdminPanel_Spacer {
+  padding-right: 10px;
+}
+.AdminButton {
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.EditorStatsCtn {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: rgba(30, 33, 38, 0.5);
+}
+.EditorStatsCtn .VisibilityNote {
+  color: orange;
+}
+.EditorStatsRow {
+  display: flex;
+  justify-content: space-between;
+}
+.SteamBlog {
+  visibility: hidden;
+}
+.LunarNewYearHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.LunarNewYearHeader .EnvelopeArea {
+  position: relative;
+  width: 95%;
+  max-width: 1300px;
+  display: flex;
+  padding: 10px 0px;
+  transition-duration: .23s;
+  transition-timing-function: ease-in-out;
+  background-color: none;
+}
+.LunarNewYearHeader .EnvelopeArea .TokenBalanceContainer {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+.LunarNewYearHeader .EnvelopeArea .TokenBalanceContainer .TokenBalance {
+  margin-left: 12px;
+  text-align: center;
+  background-color: #dd3e3e;
+  padding: 5px 20px;
+  border-radius: 3px;
+  display: block;
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer {
+  position: relative;
+  margin: 45px 8px 0 8px;
+  margin-top: 45px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer .BackingRect {
+  background-color: none;
+  margin-top: 100px;
+  height: 60px;
+  width: 100%;
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer .Envelope {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  padding-top: 12px;
+  height: 400px;
+  left: 8%;
+  right: 8%;
+  transition: transform .15s;
+  background-image: url(https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/redenvelope.png?v=2);
+  background-size: 100%;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer .Envelope .GiftLabel {
+  font-size: 18px;
+  color: #ffb321;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer .OpenState {
+  z-index: 2;
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 3px;
+  background: #dd3e3e;
+  color: #eeeeeeaa;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer .OpenState:hover {
+  cursor: pointer;
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Opened .Envelope {
+  background-image: url(https://cdn.cloudflare.steamstatic.com/store/promo/lunar2020/redenvelopeback.png);
+}
+.LunarNewYearHeader
+  .EnvelopeArea
+  .EnvelopeContainer.Opened
+  .Envelope
+  .GiftLabel {
+  display: none;
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Opened .OpenState {
+  background: rgba(221, 62, 62, 0.5);
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Opened .OpenState:hover {
+  filter: brightness(120%);
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Locked .Envelope {
+  filter: brightness(0.6);
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Locked .OpenState {
+  filter: brightness(0.6);
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Unlocked:hover .Envelope {
+  transform: rotateZ(6deg) scale(1.2);
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Unlocked .OpenState,
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.NeedLogin .OpenState {
+  color: #eee;
+  filter: none;
+}
+.LunarNewYearHeader .EnvelopeArea .EnvelopeContainer.Unlocked .OpenState:hover,
+.LunarNewYearHeader
+  .EnvelopeArea
+  .EnvelopeContainer.NeedLogin
+  .OpenState:hover {
+  filter: brightness(120%);
+}
+.LunarNewYearHeader .BottomMessage {
+  z-index: 3;
+  height: 32px;
+  padding-top: 18px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffb321;
+  pointer-events: none;
+  text-shadow: 4px 4px 18px rgba(0, 0, 0, 0.5);
+  background: radial-gradient(
+    50% 100% at 50% 100%,
+    #000000 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+.VO.VO.VO.VO.VO.VO {
+  background-color: darkred;
+  margin: 4px;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog {
+  padding: 0px;
+  background-color: #000;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .Container {
+  padding: 24px 40px 12px;
+  display: flex;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .Container .Column {
+  display: flex;
+  flex-direction: column;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .VideoBox {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  width: 250px;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .VideoBox .CoinText {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+  top: 180px;
+  left: 0;
+  width: 50%;
+  padding: 4px;
+  border: 2px solid #ffb321;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffb321;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 1s ease-in-out 2s;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .VideoBox .CoinText.Visible {
+  opacity: 1;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog
+  .VideoBox
+  .LunarNewYearOpenEnvelopeVideo {
+  position: absolute;
+  left: -260px;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .StoryHeader {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #f85757;
+  padding-bottom: 4px;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .StorySubHeader {
+  font-weight: bold;
+  font-size: 12px;
+  color: #f85757;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .StoryText {
+  padding: 24px 0px;
+  white-space: pre-wrap;
+  font-size: 12px;
+  line-height: 19px;
+  color: #ccc;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .StoryPicture {
+  flex: 1;
+  min-width: 200px;
+  background-color: darkred;
+  margin-left: 24px;
+  flex-grow: 0;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .StoryPicture img {
+  display: block;
+}
+@media screen and (max-width: 620px) {
+  .DialogContent.LunarNewYearOpenEnvelopeVideoDialog .StoryPicture {
+    display: none;
+  }
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .CheckBackText {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #f85757;
+  padding: 4px 0px 24px 24px;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .DancingRat {
+  width: 150px;
+  align-self: center;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .Links {
+  margin-left: auto;
+  padding: 12px 36px 24px;
+  display: flex;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .Links .MarketLink {
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0px 4px;
+  padding: 5px 20px;
+  border-radius: 3px;
+  background: #dd3e3e;
+  color: #eee;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .Links .MarketLink:hover,
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .Links .MarketLinkhover a,
+.DialogContent.LunarNewYearOpenEnvelopeVideoDialog .Links .MarketLink a:hover {
+  filter: brightness(120%);
+  color: #fff;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .LunarNewYearHeader .EnvelopeArea {
+    width: 100%;
+  }
+}
+.ReadMoreCnt {
+  padding-top: 20px;
+}
+.ReadMoreCnt .LinkButton {
+  background-color: #2681da;
+  font-size: 16px;
+  color: #fff;
+}
+.VerticalLocalDateAndTime {
+  display: flex;
+  flex-direction: column;
+}
+.ReferencedApps {
+  font-size: 14px;
+  color: #cfd2d3;
+  border-top: 1px solid #4d525b;
+  padding-top: 7px;
+  margin-right: 24px;
+}
+.ReferencedApps a {
+  color: #80bcd2;
+  text-decoration: none;
+}
+.AppSocialLinksCtn {
+  margin-top: 42px;
+  max-width: 688px;
+}
+.AppSocialLinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+  gap: 2px 6px;
+}
+.AppSocialLinks a {
+  cursor: pointer;
+}
+.AppSocialLinks a:hover .AppSocialLinkIcon {
+  opacity: 1;
+}
+.AppSocialLinks a .tool-tip-source {
+  cursor: pointer;
+}
+.AppSocialLinks .AppSocialLinkIcon {
+  width: 24px;
+  height: auto;
+  opacity: 0.6;
+  fill: #fff;
+}
+.AppSocialLinkWithText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.AppSocialLinkWithText .AppSocialText {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-bottom: 5px;
+}
+.AppSocialLinkWithText .AppSocialText:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: rgba(255, 255, 255, 0.3);
+  border-width: 6px;
+  margin-top: -6px;
+}
+.Main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.BuildNoteCtn {
+  border-top: 1px solid #bbed08;
+  background: radial-gradient(
+      circle at top left,
+      rgba(74, 81, 92, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%
+    ), #25282e;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.BuildNoteCtn .SplitPanel {
+  display: flex;
+  flex-direction: row;
+}
+.BuildNoteCtn .DescriptionPanel {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+.BuildNoteCtn .DescriptionPanel button {
+  width: 200px;
+}
+.BuildNoteCtn .RightPanel {
+  flex-grow: 1;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.BuildNoteCtn .BuildTitle {
+  font-size: 28px;
+  font-weight: 400;
+  color: #bbed08;
+  margin-bottom: 2px;
+}
+.BuildNoteCtn .BuildSubTitle {
+  font-size: 21px;
+  color: #fff;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.BuildNoteCtn .InfoText {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #969696;
+}
+.BuildNoteCtn .EditTopBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.BuildNoteCtn .EditTopBar .LangPicker {
+  display: flex;
+  flex-direction: row;
+}
+.BuildNoteCtn .EditTopBar .LangPicker button {
+  width: 200px;
+  margin-right: 20px;
+}
+.BuildNoteCtn .EditTopBar .EditTitle {
+  display: block;
+}
+.BuildNoteCtn .SubmitButtonCtn {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  align-items: flex-end;
+}
+.BuildNoteCtn .SubmitButtonCtn button {
+  width: 200px;
+  margin-bottom: 8px;
+}
+.BuildNoteCtn .EditTitle {
+  margin-top: 20px;
+  font-size: 13px;
+}
+.BuildNoteCtn .DialogInput_Wrapper {
+  margin-top: 10px;
+}
+.BuildNoteCtn .BBCodeEditor {
+  max-width: calc(100% - 20px);
+  width: 100%;
+  height: 200px;
+}
+.BuildNoteCtn .ErrorMsg {
+  color: #f44;
+  font-size: 12px;
+}
+.BuildNoteCtn .SteamChinaMsg {
+  color: #888;
+  font-size: 12px;
+}
+.PreviewHeader {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background-color: #000;
+  justify-content: space-between;
+}
+.PreviewHeader .SubmitButtonCtn {
+  display: flex;
+  flex-direction: row;
+}
+.PreviewHeader .SubmitButtonCtn button {
+  margin-left: 20px;
+  width: 200px;
+}
+.SubmitPanel {
+  align-items: center;
+}
+.SubmitPanel .SubmitThrobber {
+  margin: 40px auto 20px auto;
+}
+.SuccessPanel {
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+.SuccessPanel .ViewEventButton button {
+  margin-top: 15px;
+  padding: 5px 10px;
+}
+.FailedPanel {
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+.FailedPanel .FailedText {
+  max-width: 400px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #f88;
+  font-size: 20px;
+}
+.FailedPanel .FailedButton {
+  width: 200px;
+}

@@ -1,0 +1,8297 @@
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.NavBar {
+  width: 100%;
+  height: 60px;
+  min-height: 60px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.NavBar .NavBarButton {
+  width: 25%;
+  color: #507082;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+.NavBar .NavBarButton:focus {
+  outline: 0;
+}
+.NavBar .NavBarButton img {
+  width: 32px;
+  height: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.NavBar .NavBarButton.Disabled {
+  filter: brightness(0.4);
+}
+.NavBar .NavBarButton.Enabled {
+  color: #ee481a;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.HelpOverlay {
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    rgba(12, 47, 66, 0.9490196078),
+    rgba(5, 20, 29, 0.9490196078)
+  );
+  color: #fff;
+  z-index: 100;
+}
+.HelpOverlay.ShowBackground {
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+}
+.HelpOverlay .HelpContainer {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+.HelpOverlay .HelpContainer.Show {
+  min-width: 100%;
+  min-height: 100%;
+}
+.HelpOverlay .HelpContainer .HelpPages {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  flex-grow: 1;
+}
+.HelpOverlay .HelpContainer .HelpPages .HelpPage {
+  min-width: 100%;
+  min-height: 100%;
+  overflow: visible;
+  scroll-snap-align: center;
+}
+.HelpOverlay .HelpContainer .PageLeft {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.HelpOverlay .HelpContainer .PageRight {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-right: 12px;
+}
+.HelpOverlay .HelpContainer .PageSelector {
+  width: 100%;
+  min-height: 60px;
+  max-height: 60px;
+  flex-grow: 1;
+}
+.HelpOverlay .HelpContainer .PageSelector .PageSelectorBottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  position: absolute;
+  bottom: 0px;
+}
+.HelpOverlay .HelpContainer .PageSelector .PageSelectorBottom .Pips {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.HelpOverlay .HelpContainer .PageSelector .PageSelectorBottom .Pips .Pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #507082;
+  margin-top: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  transition: background-color .2s ease-in-out;
+}
+.HelpOverlay
+  .HelpContainer
+  .PageSelector
+  .PageSelectorBottom
+  .Pips
+  .Pip.Selected {
+  background-color: #9652ed;
+}
+.HelpOverlay .HelpContainer .PageSelector .PageSelectorBottom .DismissSpacer {
+  width: 100px;
+  padding-left: 20px;
+}
+.HelpOverlay .HelpContainer .PageSelector .PageSelectorBottom .Dismiss {
+  width: 100px;
+  text-align: right;
+  padding-right: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+  font-size: 16px;
+  cursor: pointer;
+}
+.FullHeightWidth {
+  width: 100%;
+  height: 100%;
+}
+.HelpTop {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HelpBottom {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+.HelpBottom .BottomHeader {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.HelpBottom .TwoColumn {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.HelpBottom .TwoColumn .Column {
+  width: 50%;
+}
+.HelpBottom .BottomText {
+  font-size: 14px;
+  color: #c4c4c4;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.HelpBottom .BottomText.Caps {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.HelpBottom .BottomText.Small {
+  color: #507082;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 9px;
+  font-weight: bold;
+}
+.HelpBottom .BottomText.SubHeader {
+  color: #fff;
+  font-size: 15px;
+}
+.HelpBottom .BottomText.Gold {
+  font-size: 10px;
+  color: #eda10f;
+}
+.HelpBottom .BottomText.Silver {
+  font-size: 10px;
+  color: #e0e0e0;
+}
+.HelpBottom .BottomText.Bronze {
+  color: #ee481a;
+}
+.HelpBottom .Spacer {
+  height: 12px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.GCDown {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(5, 21, 31, 0.9);
+  color: #fff;
+  z-index: 10000;
+}
+.GCDown.Display {
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+}
+.GCDown .ErrorArt {
+  width: 300px;
+  height: 290px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.GCDown .ErrorHeading {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  margin-top: 12px;
+}
+.GCDown .ErrorMessage {
+  font-size: 14px;
+  color: #e0e0e0;
+  text-align: center;
+}
+.GCDown .RetryButton {
+  width: 95%;
+  height: 40px;
+  background-color: #ee481a;
+  border-radius: 6px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 36px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-top: 20px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.App {
+  font-family: "Open Sans", Verdana, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  background-color: #0f1417;
+  max-width: 550px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.NavContents {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.FeedPage {
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.FeedPage .Contents {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.FeedPage .Contents.Loading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.FadeIn {
+  animation-name: fadein;
+  animation-duration: .5s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.FadeInDelay {
+  animation-name: fadeindelay;
+  animation-duration: 2s;
+}
+@keyframes fadeindelay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.VerticalCollapseable {
+  transition:
+    opacity .4s ease-in-out, height .4s ease-in-out, padding .4s ease-in-out, margin .4s ease-in-out, min-height .4s ease-in-out;
+}
+.VerticalCollapse {
+  pointer-events: none;
+  height: 0px !important;
+  min-height: 0px !important;
+  opacity: 0 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  overflow-y: hidden !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.FeedElement {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.FeedElement .HeadlineRow {
+  display: flex;
+  flex-direction: row;
+  padding-left: 12px;
+  height: 21px;
+}
+.FeedElement .HeadlineRow .Icon {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+}
+.FeedElement .HeadlineRow .Headline {
+  margin-left: 6px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.FeedElement .HeadlineRow .Timestamp {
+  font-size: 10px;
+  color: #e0e0e0;
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 12px;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.FeedElement .Underline {
+  height: 1px;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-top: 4px;
+  opacity: 0.5;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+*:link {
+  text-decoration: none;
+}
+*:focus {
+  outline: 0;
+}
+.card {
+  background-color: #1a272f;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+.card .content {
+  padding: 16px;
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  display: flex;
+}
+.card .image {
+  width: 100%;
+  height: auto;
+}
+.card .image:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card .image:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 8px;
+}
+.news.withIcon {
+  margin-top: 3.75px;
+}
+.imageCard {
+  height: 250px;
+  background-size: cover;
+}
+.imageCard.short {
+  height: 156px;
+}
+.tournament {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4px !important;
+}
+.tournament .type {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 8px;
+  line-height: 8px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.tournament .title {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+.tournament .details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 9px;
+}
+.tournament .details .location {
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #507082;
+  margin-right: 16px;
+}
+.tournament .details .prize {
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #15c65c;
+}
+.tournament .Dates {
+  font-size: 11px;
+  text-align: right;
+  color: #e0e0e0;
+}
+.SeriesCard {
+  height: 132px;
+  display: block;
+  padding: 8px;
+  padding-bottom: 12px;
+  background-color: #1a272f;
+  border-radius: 4px;
+  margin: 12px;
+}
+.SeriesCard .Columns {
+  display: flex;
+  flex-direction: row;
+}
+.SeriesCard .Columns .Team {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.SeriesCard .Columns .Team img {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+.SeriesCard .Columns .Team .TeamName {
+  margin-top: 18px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+}
+.SeriesCard .Columns .Details {
+  height: 110px;
+  flex-grow: 1;
+}
+.SeriesCard .Columns .Details .GameOrFinal {
+  margin-top: 12px;
+  height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.SeriesCard .Columns .Details .Score {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12px;
+}
+.SeriesCard .Columns .Details .Score .ScoreValue {
+  margin-top: 2px;
+}
+.SeriesCard .Columns .Details .Score .ScoreSeparator {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 28px;
+  margin-top: 3px;
+}
+.SeriesCard .Columns .Details .Time {
+  text-align: center;
+  font-size: 10px;
+  color: #e0e0e0;
+}
+.SeriesCard .Timestamp {
+  text-align: center;
+  color: #507082;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.SeriesCard .ThrobberSpacing {
+  margin-top: 20px;
+}
+.UpcomingSeriesCard,
+.LiveMatchCard {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a272f;
+  border-radius: 4px;
+  margin: 12px;
+  color: #fff;
+  font-size: 20px;
+}
+.UpcomingSeriesCard .LeagueLogo,
+.LiveMatchCard .LeagueLogo {
+  width: 240px;
+  height: 95px;
+  margin-top: 12px;
+  border-radius: 6px;
+}
+.UpcomingSeriesCard .Details,
+.LiveMatchCard .Details {
+  min-height: 17px;
+  margin-top: 4px;
+  width: 100%;
+  text-align: center;
+  color: #eda10f;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.UpcomingSeriesCard .Columns,
+.LiveMatchCard .Columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.UpcomingSeriesCard .Columns .Team,
+.LiveMatchCard .Columns .Team {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.UpcomingSeriesCard .Columns .Team img,
+.LiveMatchCard .Columns .Team img {
+  width: 48px;
+  height: 48px;
+  margin-left: 40px;
+  margin-right: 40px;
+  object-fit: cover;
+}
+.UpcomingSeriesCard .Columns .Team .TeamName,
+.LiveMatchCard .Columns .Team .TeamName {
+  margin-top: 6px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+}
+.UpcomingSeriesCard .Columns .Center,
+.LiveMatchCard .Columns .Center {
+  text-align: center;
+}
+.UpcomingSeriesCard .Columns .Center .BestOf,
+.LiveMatchCard .Columns .Center .BestOf {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #507082;
+}
+.MatchCard {
+  height: 132px;
+  display: block;
+  padding: 8px;
+  background-color: #1a272f;
+  border-radius: 4px;
+  margin: 12px;
+}
+.MatchCard .Columns {
+  display: flex;
+  flex-direction: row;
+}
+.MatchCard .Columns .Team {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-top: 32px;
+}
+.MatchCard .Columns .Team img {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+.MatchCard .Columns .Team .TeamName {
+  margin-top: 21px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+}
+.MatchCard .Columns .Details {
+  flex-grow: 1;
+}
+.MatchCard .Columns .Details .Game {
+  margin-top: 12px;
+  height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.MatchCard .Columns .Details .Score {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 8px;
+}
+.MatchCard .Columns .Details .Score .ScoreValue {
+  margin-top: 2px;
+}
+.MatchCard .Columns .Details .Score .ScoreSeparator {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 28px;
+  margin-top: 3px;
+}
+.MatchCard .Columns .Details .Time {
+  text-align: center;
+  font-size: 10px;
+  color: #e0e0e0;
+  letter-spacing: 1px;
+}
+.MatchCard .ThrobberSpacing {
+  margin-top: 20px;
+}
+.TournamentResultsCard .Content {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-bottom: 8px;
+}
+.TournamentResultsCard .Content .TopDown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80px;
+}
+.TournamentResultsCard .Content .TopDown.Generic {
+  min-height: 60px;
+}
+.TournamentResultsCard .Content .TopDown .TeamInfo {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.TournamentResultsCard .Content .TopDown .TeamInfo .TeamLogo {
+  margin: auto;
+  margin-left: 12px;
+  margin-right: 12px;
+  max-width: 48px;
+  min-width: 48px;
+  max-height: 32px;
+  min-height: 32px;
+}
+.TournamentResultsCard .Content .TopDown .TeamInfo .Text {
+  margin: auto;
+  padding-right: 12px;
+}
+.TournamentResultsCard .Content .TopDown .Earnings {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  margin-left: 72px;
+  margin-right: 16px;
+  font-weight: 500;
+}
+.TournamentResultsCard .Content .TopDown .Earnings .Points {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: #e0e0e0;
+}
+.TournamentResultsCard .Content .TopDown .Earnings .Winnings {
+  flex-grow: 1;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: #eda10f;
+}
+.TeamRosterCard .card {
+  min-height: 76px;
+}
+.TeamRosterCard .card .Content {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+.TeamRosterCard .card .Content .TeamLogo {
+  margin: auto;
+  margin-left: 12px;
+  margin-right: 16px;
+  width: 48px;
+  height: 32px;
+}
+.TeamRosterCard .card .Content .Text {
+  margin: auto 0px;
+  padding-right: 12px;
+}
+.LoadingWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.LoadingWrapper.Static {
+  animation-name: none;
+}
+.LoadingWrapper.Static * {
+  animation-name: none !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.LoadingWrapper.Static .bottomCircle path {
+  stroke-width: 0 !important;
+}
+.LoadingWrapper.noString {
+  flex-direction: row;
+}
+.LoadingWrapper .Throbber,
+.LoadingWrapper .SVGIcon_Throbber,
+.LoadingWrapper .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.LoadingWrapper .Throbber {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.LoadingWrapper.throbber_small .Throbber {
+  width: 32px;
+  height: 32px;
+}
+.LoadingWrapper.throbber_medium .Throbber {
+  width: 64px;
+  height: 64px;
+}
+.LoadingWrapper.throbber_large .Throbber {
+  width: 92px;
+  height: 92px;
+}
+.throbber_center_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ThrobberText,
+.LoadingWrapper .ThrobberText {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.LoadingWrapper.throbber_medium .ThrobberText {
+  margin-top: 4px;
+}
+.LoadingWrapper.throbber_small .ThrobberText {
+  margin-top: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur path {
+  stroke: #4375fd;
+}
+.LoadingWrapper .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: ThrobberRoundLoop;
+  animation-duration: .7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline,
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline {
+  display: none;
+}
+@keyframes ThrobberRoundLoop {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundFill {
+  animation-name: ThrobberFillLoop;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes ThrobberFillLoop {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle .circlePulse,
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  stroke: #67c1f5;
+  animation-name: ThrobberTopCircleLoop;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  animation-name: ThrobberBottomCircleLoop;
+}
+.LoadingWrapper .SVGIcon_Throbber .bottomCircle path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: ThrobberBottomCircleLoop;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes ThrobberTopCircleLoop {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes ThrobberBottomCircleLoop {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-name: ThrobberRoundLoopThickness;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: .5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02 {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03 {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04 {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05 {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06 {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08 {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09 {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10 {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11 {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12 {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13 {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14 {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15 {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes ThrobberRoundLoopThickness {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+.throbber_small {
+  width: 36px;
+  height: 36px;
+}
+.throbber_medium {
+  width: 64px;
+  height: 64px;
+}
+.throbber_large {
+  width: 92px;
+  height: 92px;
+}
+.throbber_xlarge {
+  width: 120px;
+  height: 120px;
+}
+.throbber_xxlarge {
+  width: 240px;
+  height: 240px;
+}
+.ThrobberDelayAppear {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.ThrobberDelayAppear.Visible {
+  opacity: 1;
+}
+.NewThrobber img {
+  width: 100%;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.TeamLogoLarge {
+  width: 192px;
+  height: 192px;
+}
+.TeamLogoMedium {
+  width: 64px;
+  height: 64px;
+}
+.TeamLogoSmall {
+  width: 32px;
+  height: 32px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.TitleHeader {
+  width: 100%;
+  padding-top: 20px;
+}
+.TitleHeader .TitleElements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+}
+.TitleHeader .TitleElements .BackArrow {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 8px;
+  padding-bottom: 4px;
+  transition-property: width, margin;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+.TitleHeader .TitleElements .BackArrow.Hidden {
+  width: 0px;
+  margin-right: 0px;
+}
+.TitleHeader .TitleElements .HeaderText {
+  flex-grow: 1;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: .5px;
+}
+.TitleHeader .TitleElements .HeaderButton {
+  width: 26px;
+  height: 26px;
+  margin-top: 4px;
+}
+.TitleHeader .TitleElements .HeaderButtonText {
+  margin-top: 14px;
+}
+.TitleHeader .TitleElements .Avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+.TitleHeader .TitleElements .Favorite {
+  margin-top: 8px;
+}
+.TitleHeader .TitleElements .Shards {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.TitleHeader .TitleElements .Shards .Count {
+  margin-top: 2px;
+}
+.TitleHeader .TitleElements .Shards img {
+  width: 19px;
+  height: 22px;
+  margin-right: 4px;
+}
+.TitleHeader .TitleElements .HelpPage {
+  width: 20px;
+  height: 20px;
+  margin: 4px;
+  margin-left: 12px;
+  margin-top: 8px;
+}
+.TitleHeader .Underline {
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.FavoriteToggle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.FavoriteToggle .Favorite {
+  justify-self: right;
+  width: 24px;
+  height: 24px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.TournamentListPage {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.TournamentListPage .TournamentStandingsButton {
+  height: 56px;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  background-color: #eda10f;
+  color: #fff;
+  z-index: 2;
+  font-size: 14px;
+}
+.TournamentListPage .TournamentStandingsButton img {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+.TournamentListPage .Contents {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: rgba(0, 0, 0, 0);
+}
+.PredictionsPage {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 0;
+}
+.PredictionsPage .PredictionHeader {
+  position: relative;
+}
+.PredictionsPage .headerChildren {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  bottom: 18px;
+  right: 8px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.PredictionsPage .TournamentHeader {
+  height: 70px;
+  min-height: 70px;
+  max-height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  margin-bottom: 8px;
+  background-color: #37c2b1;
+  border-radius: 0px;
+  color: #fff;
+  z-index: 99;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  font-weight: 600;
+  text-align: center;
+}
+.PredictionsPage .WagerTokensTitle {
+  font-size: 14px;
+}
+.PredictionsPage .ShardsIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 8px;
+  margin-left: 18px;
+}
+.PredictionsPage .Spacer {
+  flex-grow: 1;
+}
+.PredictionsPage .Contents {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.PredictionsPage .PredictionList {
+  display: flex;
+  flex-direction: column;
+}
+.Loading {
+  margin: auto;
+}
+.NoPredictionsContainer {
+  margin: auto;
+}
+.NoPredictions {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+}
+.NoPredictionsAlertContainer {
+  width: 96px;
+  height: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-size: 48px;
+  color: #4e6f80;
+  border-radius: 50%;
+  border: 4px solid #4e6f80;
+  display: flex;
+}
+.NoPredictionsIcon {
+  margin: auto;
+  font-size: 64px;
+  font-weight: bold;
+}
+.NoPredictionsTitle {
+  color: #fff;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.NoPredictionsDetail {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.PredictionsHelp .PredictionsHelpPage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+.PredictionsHelp .PredictionsHelpPageContents {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+}
+.PredictionsHelp .CardContainer {
+  width: 100%;
+  height: 300px;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+.PredictionsHelp .SmallCards {
+  position: relative;
+  width: 100%;
+  height: 183px;
+}
+.PredictionsHelp .SmallCardContainer {
+  position: absolute;
+  width: 100%;
+  transform: scale(0.75, 0.75);
+  box-sizing: border-box;
+}
+.PredictionsHelp .SmallCardContainer.Left {
+  top: -25px;
+  left: -25px;
+}
+.PredictionsHelp .SmallCardContainer.Right {
+  top: 25px;
+  left: 25px;
+}
+.PredictionsHelp .HelpTextContainer {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
+.PredictionsHelp .HelpTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+.PredictionsHelp .HelpDetail {
+  font-size: 14px;
+  text-align: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  color: gray;
+  margin-bottom: 8px;
+}
+.PredictionsHelp .HelpSubDetail {
+  font-size: 14px;
+  text-align: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  color: #7f4cc2;
+  margin-bottom: 8px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+*:link {
+  text-decoration: none;
+}
+*:focus {
+  outline: 0;
+}
+.card {
+  background-color: #1a272f;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+.card .content {
+  padding: 16px;
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  display: flex;
+}
+.card .image {
+  width: 100%;
+  height: auto;
+}
+.card .image:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.card .image:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 8px;
+}
+.news.withIcon {
+  margin-top: 3.75px;
+}
+.imageCard {
+  height: 250px;
+  background-size: cover;
+}
+.imageCard.short {
+  height: 156px;
+}
+.tournament {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4px !important;
+}
+.tournament .type {
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 8px;
+  line-height: 8px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.tournament .title {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+.tournament .details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 9px;
+}
+.tournament .details .location {
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #507082;
+  margin-right: 16px;
+}
+.tournament .details .prize {
+  font-family: "Open Sans", Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #15c65c;
+}
+.tournament .Dates {
+  font-size: 11px;
+  text-align: right;
+  color: #e0e0e0;
+}
+.SeriesCard {
+  height: 132px;
+  display: block;
+  padding: 8px;
+  padding-bottom: 12px;
+  background-color: #1a272f;
+  border-radius: 4px;
+  margin: 12px;
+}
+.SeriesCard .Columns {
+  display: flex;
+  flex-direction: row;
+}
+.SeriesCard .Columns .Team {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.SeriesCard .Columns .Team img {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+.SeriesCard .Columns .Team .TeamName {
+  margin-top: 18px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+}
+.SeriesCard .Columns .Details {
+  height: 110px;
+  flex-grow: 1;
+}
+.SeriesCard .Columns .Details .GameOrFinal {
+  margin-top: 12px;
+  height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.SeriesCard .Columns .Details .Score {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12px;
+}
+.SeriesCard .Columns .Details .Score .ScoreValue {
+  margin-top: 2px;
+}
+.SeriesCard .Columns .Details .Score .ScoreSeparator {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 28px;
+  margin-top: 3px;
+}
+.SeriesCard .Columns .Details .Time {
+  text-align: center;
+  font-size: 10px;
+  color: #e0e0e0;
+}
+.SeriesCard .Timestamp {
+  text-align: center;
+  color: #507082;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.SeriesCard .ThrobberSpacing {
+  margin-top: 20px;
+}
+.UpcomingSeriesCard,
+.LiveMatchCard {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a272f;
+  border-radius: 4px;
+  margin: 12px;
+  color: #fff;
+  font-size: 20px;
+}
+.UpcomingSeriesCard .LeagueLogo,
+.LiveMatchCard .LeagueLogo {
+  width: 240px;
+  height: 95px;
+  margin-top: 12px;
+  border-radius: 6px;
+}
+.UpcomingSeriesCard .Details,
+.LiveMatchCard .Details {
+  min-height: 17px;
+  margin-top: 4px;
+  width: 100%;
+  text-align: center;
+  color: #eda10f;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.UpcomingSeriesCard .Columns,
+.LiveMatchCard .Columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.UpcomingSeriesCard .Columns .Team,
+.LiveMatchCard .Columns .Team {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.UpcomingSeriesCard .Columns .Team img,
+.LiveMatchCard .Columns .Team img {
+  width: 48px;
+  height: 48px;
+  margin-left: 40px;
+  margin-right: 40px;
+  object-fit: cover;
+}
+.UpcomingSeriesCard .Columns .Team .TeamName,
+.LiveMatchCard .Columns .Team .TeamName {
+  margin-top: 6px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+}
+.UpcomingSeriesCard .Columns .Center,
+.LiveMatchCard .Columns .Center {
+  text-align: center;
+}
+.UpcomingSeriesCard .Columns .Center .BestOf,
+.LiveMatchCard .Columns .Center .BestOf {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #507082;
+}
+.MatchCard {
+  height: 132px;
+  display: block;
+  padding: 8px;
+  background-color: #1a272f;
+  border-radius: 4px;
+  margin: 12px;
+}
+.MatchCard .Columns {
+  display: flex;
+  flex-direction: row;
+}
+.MatchCard .Columns .Team {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-top: 32px;
+}
+.MatchCard .Columns .Team img {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+.MatchCard .Columns .Team .TeamName {
+  margin-top: 21px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+}
+.MatchCard .Columns .Details {
+  flex-grow: 1;
+}
+.MatchCard .Columns .Details .Game {
+  margin-top: 12px;
+  height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.MatchCard .Columns .Details .Score {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 8px;
+}
+.MatchCard .Columns .Details .Score .ScoreValue {
+  margin-top: 2px;
+}
+.MatchCard .Columns .Details .Score .ScoreSeparator {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: 28px;
+  margin-top: 3px;
+}
+.MatchCard .Columns .Details .Time {
+  text-align: center;
+  font-size: 10px;
+  color: #e0e0e0;
+  letter-spacing: 1px;
+}
+.MatchCard .ThrobberSpacing {
+  margin-top: 20px;
+}
+.TournamentResultsCard .Content {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding-bottom: 8px;
+}
+.TournamentResultsCard .Content .TopDown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80px;
+}
+.TournamentResultsCard .Content .TopDown.Generic {
+  min-height: 60px;
+}
+.TournamentResultsCard .Content .TopDown .TeamInfo {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.TournamentResultsCard .Content .TopDown .TeamInfo .TeamLogo {
+  margin: auto;
+  margin-left: 12px;
+  margin-right: 12px;
+  max-width: 48px;
+  min-width: 48px;
+  max-height: 32px;
+  min-height: 32px;
+}
+.TournamentResultsCard .Content .TopDown .TeamInfo .Text {
+  margin: auto;
+  padding-right: 12px;
+}
+.TournamentResultsCard .Content .TopDown .Earnings {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  margin-left: 72px;
+  margin-right: 16px;
+  font-weight: 500;
+}
+.TournamentResultsCard .Content .TopDown .Earnings .Points {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: #e0e0e0;
+}
+.TournamentResultsCard .Content .TopDown .Earnings .Winnings {
+  flex-grow: 1;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  color: #eda10f;
+}
+.TeamRosterCard .card {
+  min-height: 76px;
+}
+.TeamRosterCard .card .Content {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+.TeamRosterCard .card .Content .TeamLogo {
+  margin: auto;
+  margin-left: 12px;
+  margin-right: 16px;
+  width: 48px;
+  height: 32px;
+}
+.TeamRosterCard .card .Content .Text {
+  margin: auto 0px;
+  padding-right: 12px;
+}
+.PredictionCard {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  background-color: #1a272f;
+  border-radius: 4px;
+  margin-bottom: 9px;
+  margin-top: 9px;
+  margin-left: 12px;
+  margin-right: 12px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -webkit-touch-callout: none;
+}
+.PredictionCard .StartTime {
+  color: gray;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.PredictionCard .StartTime.InProgress {
+  color: aqua;
+}
+.PredictionCard .StartTimePadding {
+  margin-bottom: 6px;
+}
+.PredictionCard .Columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.PredictionCard .Columns .Team {
+  display: flex;
+  flex-direction: column;
+  width: 72px;
+}
+.PredictionCard .Columns .Team img {
+  width: 72px;
+  height: 43px;
+}
+.PredictionCard .Columns .Team .TeamNameContainer {
+  margin-top: 12px;
+  min-height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.PredictionCard .Columns .Team .TeamName {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+  vertical-align: middle;
+  margin: auto;
+}
+.PredictionCard .Columns .Team .TeamStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 21px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: gray;
+}
+.PredictionCard .Columns .Team .TeamStatus img {
+  height: 14px;
+  width: 14px;
+  margin-right: 2px;
+}
+.PredictionCard .Columns .Team .TeamStatus.TeamFavored {
+  color: #eda10f;
+}
+.PredictionCard .Columns .Team .TeamStatus.TeamSelected {
+  color: #15c65c;
+}
+.PredictionCard .Columns .Team .TeamSelected img {
+  height: 14px;
+  width: 14px;
+  padding: 1px;
+  border-radius: 50%;
+  background-color: #76ca65;
+  margin-right: 4px;
+}
+.PredictionCard .Columns .Team .TeamStatus.TeamWinner {
+  color: #76ca65;
+}
+.PredictionCard .Columns .PayoutPreview img {
+  margin-left: 4px;
+  height: 14px;
+  width: 14px;
+}
+.PredictionCard .Columns .PayoutContainer {
+  width: 130px;
+  margin-top: -18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PredictionCard .Columns .Results {
+  margin: auto;
+  color: #fff;
+  text-transform: bold;
+  font-size: 30px;
+}
+.PredictionCard .Columns .Payouts {
+  color: #fff;
+  text-transform: bold;
+  font-size: 30px;
+}
+.PredictionCard .Columns .BottomPadding {
+  height: 19px;
+  width: 1px;
+}
+.PredictionCard .Columns .StaleOdds .Payouts {
+  animation-name: stalecolor;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  color: darkred;
+}
+@keyframes stalecolor {
+  0% {
+    color: darkred;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: darkred;
+  }
+}
+.PredictionCard .Columns .Payouts img {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.PredictionCard .Columns .PayoutSpacer {
+  width: 18px;
+  height: 18px;
+}
+.PredictionCard .Columns .PayoutLabel {
+  margin-top: 4px;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #b9babb;
+}
+.PredictionCard .PredictionBottomSection {
+  background-color: #2e3c45;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 16px;
+  position: relative;
+  margin-top: 8px;
+  height: 56px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.PredictionCard .Spacer {
+  flex-grow: 1;
+}
+.PredictionCard .WagerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.PredictionCard .SelectTeamLabel {
+  width: 130px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: bold;
+}
+.PredictionCard .WagerShardsButton {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background-color: #507082;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.PredictionCard .WagerShardsButton.Small {
+  width: 28px;
+  height: 28px;
+  min-width: 24px;
+  margin-top: 6px;
+  margin-left: 20px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.PredictionCard .WagerShardsButton.Check {
+  background-color: #15c65c;
+}
+.PredictionCard .WagerShardsButton.Close {
+  background-color: #ee481a;
+  margin-left: 0px;
+  margin-right: 20px;
+}
+.PredictionCard .WagerShardsButton.Small img {
+  width: 12px;
+  height: 12px;
+  margin-left: 3px;
+}
+.PredictionCard .NotDemoMode.WagerShardsButton:hover {
+  border: 2px solid #adc5d3;
+}
+.PredictionCard .NotDemoMode.WagerShardsButton:active {
+  box-shadow: none;
+  border: 2px solid #76ca65;
+  background-color: #76ca65;
+}
+.PredictionCard .Close.NotDemoMode.WagerShardsButton:active {
+  box-shadow: none;
+  border: 2px solid #eb6844;
+  background-color: #eb6844;
+}
+.PredictionCard .WagerShardsButton img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  color: #507082;
+}
+.PredictionCard .WagerSelectionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #d3d3d3;
+  padding-bottom: 4px;
+}
+.PredictionCard .WagerSelectionContainer .WagerSelectionGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.PredictionCard .WagerSelectionContainer .WagerSelectionGroup.TeamSelected {
+  color: #ccc;
+}
+.PredictionCard .WagerSelectionContainer .WagerLabel {
+  margin-right: 4px;
+  color: #e0e0e0;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+}
+.PredictionCard .WagerSelectionContainer .WagerSliderContainer {
+  flex-grow: 1;
+  padding-right: 4px;
+  margin-top: 8px;
+  height: 42px;
+  position: relative;
+}
+.PredictionCard .WagerSelectionContainer .WagerAmount.StaleOdds {
+  animation-name: stalepayoutcolor;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  color: darkred;
+}
+@keyframes stalepayoutcolor {
+  0% {
+    color: darkred;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: darkred;
+  }
+}
+.PredictionCard .WagerSelectionContainer img {
+  width: 17px;
+  height: 17px;
+  margin-right: 4px;
+}
+.WonPrediction {
+  box-shadow: 0px 0px 4px 4px green;
+}
+.LostPrediction {
+  box-shadow: 0px 0px 4px 4px red;
+}
+.TiedPrediction {
+  box-shadow: 0px 0px 4px 4px aqua;
+}
+.SubmittingContainer {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+.SubmittingContainer .SubmittingText {
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.PredictionBottomSection.ErrorSection {
+  align-items: center;
+  height: 88px;
+  padding: 0px;
+}
+.ErrorBody {
+  color: #ff6060;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 12px;
+}
+.ErrorButton {
+  min-width: 100px;
+  max-width: 200px;
+  border-radius: 5px;
+  padding: 4px 16px 4px 16px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #507082;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ErrorButton:hover {
+  background-color: #6f9ab3;
+}
+.ErrorButton:active {
+  background-color: #8ec6e5;
+}
+.SliderContainer {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -webkit-touch-callout: none;
+}
+.SliderContainer .Slider {
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: #d3d3d3;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+.SliderContainer .Pip {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ee481a;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  margin-top: -12px;
+  margin-left: -12px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.FantasyHelp .League,
+.FantasyPage .Contents .League {
+  background-color: #1a272f;
+  padding-top: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  min-height: 80px;
+}
+.FantasyHelp .Selected.League,
+.FantasyPage .Contents .Selected.League {
+  opacity: 1;
+  background-color: #4661ec;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  max-height: 70px;
+  min-height: 70px;
+  border-radius: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  top: 0;
+}
+.FantasyHelp .Selected.League .Name,
+.FantasyPage .Contents .Selected.League .Name {
+  padding-bottom: 0px;
+}
+.FantasyHelp .Selected.League .Phase,
+.FantasyPage .Contents .Selected.League .Phase {
+  color: #b9babb;
+  font-size: 10px;
+}
+.FantasyHelp .Selected.League .Dates,
+.FantasyPage .Contents .Selected.League .Dates {
+  padding-top: 4px;
+}
+.FantasyHelp .Selected.League .Status,
+.FantasyPage .Contents .Selected.League .Status {
+  opacity: 0;
+}
+.FantasyHelp .League .Name,
+.FantasyPage .Contents .League .Name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 2px;
+}
+.FantasyHelp .League .Phase,
+.FantasyPage .Contents .League .Phase {
+  color: #4661ec;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: bold;
+  text-align: left;
+}
+.FantasyHelp .League .Dates,
+.FantasyPage .Contents .League .Dates {
+  padding-top: 8px;
+  font-size: 8px;
+  color: #e0e0e0;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.FantasyHelp .League .Status,
+.FantasyPage .Contents .League .Status {
+  margin-top: -4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+}
+.FantasyHelp .League .Status.StatusUnset,
+.FantasyPage .Contents .League .Status.StatusUnset {
+  color: #eda10f;
+}
+.FantasyHelp .League .Status.StatusPartial,
+.FantasyPage .Contents .League .Status.StatusPartial {
+  color: #ff0;
+}
+.FantasyHelp .League .Status.StatusFull,
+.FantasyPage .Contents .League .Status.StatusFull {
+  color: #15c65c;
+}
+.FantasyHelp .League .Status.StatusConcluded,
+.FantasyPage .Contents .League .Status.StatusConcluded {
+  color: #507082;
+}
+.FantasyHelp .RosterSlot,
+.FantasyPage .Contents .PlayerSelect .RosterSlot,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 8px;
+  height: 58px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+.FantasyHelp .Locked.RosterSlot,
+.FantasyPage .Contents .PlayerSelect .Locked.RosterSlot,
+.FantasyPage .Contents .Roster .RosterSlots .Locked.RosterSlot {
+  cursor: auto;
+}
+.FantasyHelp .NeedsSubmit.RosterSlot,
+.FantasyPage .Contents .PlayerSelect .NeedsSubmit.RosterSlot,
+.FantasyPage .Contents .Roster .RosterSlots .NeedsSubmit.RosterSlot {
+  box-shadow: 0 0 8px #15c65c;
+  background-color: #1a272f;
+}
+.FantasyHelp .RosterSlot .Player,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .Player,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .Player {
+  width: 48px;
+  height: 48px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  border-radius: 6px;
+  margin-right: 6px;
+  background-color: #000;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
+}
+.FantasyHelp .RosterSlot .Team,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .Team,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .Team {
+  width: 42px;
+  height: 28px;
+  margin-top: 12px;
+  margin-right: 8px;
+  background-color: #000;
+  padding: 4px;
+  border-radius: 6px;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
+}
+.FantasyHelp .RosterSlot .Identity,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .Identity,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .Identity {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 8px;
+}
+.FantasyHelp .RosterSlot .Identity .Name,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .Identity .Name,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .Identity .Name {
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 2px;
+}
+.FantasyHelp .RosterSlot .Identity .Name.Empty,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .Identity .Name.Empty,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .Identity .Name.Empty {
+  color: #507082;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.FantasyHelp .RosterSlot .Identity .Role,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .Identity .Role,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .Identity .Role {
+  text-align: left;
+  color: #507082;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.FantasyHelp .RosterSlot .SelectArrow,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .SelectArrow,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .SelectArrow {
+  color: #507082;
+  margin-top: 18px;
+  margin-right: 12px;
+  width: 16px;
+  height: 16px;
+  transition: width .4s ease-in-out;
+}
+.FantasyHelp .RosterSlot .ClearX,
+.FantasyPage .Contents .PlayerSelect .RosterSlot .ClearX,
+.FantasyPage .Contents .Roster .RosterSlots .RosterSlot .ClearX {
+  margin-top: 16px;
+  margin-right: 14px;
+  width: 24px;
+  height: 24px;
+  transition: width .4s ease-in-out;
+}
+.FantasyHelp .Player,
+.FantasyPage .Contents .Leaderboards .PlayerList .Player {
+  display: flex;
+  flex-direction: row;
+  background-color: #1a272f;
+  border-radius: 4px;
+  height: 40px;
+  min-height: 40px;
+  margin-bottom: 4px;
+}
+.FantasyHelp .Player .Avatar,
+.FantasyPage .Contents .Leaderboards .PlayerList .Player .Avatar {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px;
+  margin-top: 4px;
+  border-radius: 2px;
+  background-color: #0f1417;
+}
+.FantasyHelp .Player .Name,
+.FantasyPage .Contents .Leaderboards .PlayerList .Player .Name {
+  flex-grow: 1;
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+.FantasyHelp .Player .Score,
+.FantasyPage .Contents .Leaderboards .PlayerList .Player .Score {
+  color: #4661ec;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+.FantasyPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  color: #fff;
+  box-sizing: border-box;
+}
+.FantasyPage .Contents {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  min-height: 0px;
+  box-sizing: border-box;
+}
+.FantasyPage .Contents .Loading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.FantasyPage .Contents .LeagueHeader {
+  color: #507082;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: .5px;
+  height: 20px;
+  padding-top: 16px;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+.FantasyPage .Contents .TabSelector {
+  background-color: #1a272f;
+  height: 40px;
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.FantasyPage .Contents .TabSelector .TextSelector {
+  display: flex;
+  flex-direction: row;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+.FantasyPage .Contents .TabSelector .TextSelector .Entry {
+  width: 33%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #507082;
+  font-weight: 600;
+}
+.FantasyPage .Contents .TabSelector .TextSelector .Entry.Selected {
+  color: #4661ec;
+}
+.FantasyPage .Contents .TabSelector .UnderlineSelector {
+  display: flex;
+  flex-direction: column;
+}
+.FantasyPage .Contents .TabSelector .UnderlineSelector .Underline {
+  width: 33%;
+  height: 2px;
+  background-color: #4661ec;
+  transition: margin-left .2s ease-in-out;
+}
+.FantasyPage .Contents .TabSelector .UnderlineSelector .Underline.Roster {
+  margin-left: 0%;
+}
+.FantasyPage .Contents .TabSelector .UnderlineSelector .Underline.Scores {
+  margin-left: 33%;
+}
+.FantasyPage .Contents .TabSelector .UnderlineSelector .Underline.Leaderboard {
+  margin-left: 66%;
+}
+.FantasyPage .Contents .RegionSelectHeader {
+  color: #507082;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: .5px;
+  height: 70px;
+  padding-top: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 4px;
+}
+.FantasyPage .Contents .RegionSelectList {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+.FantasyPage .Contents .RegionSelectList .RegionSelect {
+  background-color: #1a272f;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 18px;
+  border-radius: 4px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.FantasyPage .Contents .SubContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.FantasyPage .Contents .Concluded {
+  font-size: 20px;
+  margin-top: 80px;
+  text-align: center;
+  color: #507082;
+}
+.FantasyPage .Contents .NoRosterPlayers {
+  text-align: center;
+  margin-top: 40px;
+}
+.FantasyPage .Contents .NoRosterPlayers .Header {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e0e0e0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.FantasyPage .Contents .NoRosterPlayers .Sub {
+  margin-top: 10px;
+  color: #507082;
+  font-size: 14px;
+}
+.FantasyPage .Contents .Roster {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.FantasyPage .Contents .Roster .RoleHeader {
+  font-size: 14px;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 18px;
+  margin-top: 12px;
+  font-weight: 500;
+}
+.FantasyPage .Contents .Roster .RosterSlots {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.FantasyPage .Contents .Roster .SubmitButton {
+  transition-property: height, min-height, margin-top, padding-top;
+  transition-duration: .4s;
+  transition-timing-function: ease-in-out;
+  margin-left: 12px;
+  margin-right: 12px;
+  overflow-y: hidden;
+  border-radius: 4px;
+  background-color: #15c65c;
+  height: 0px;
+  bottom: 0;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.FantasyPage .Contents .Roster .SubmitButton.Enabled {
+  height: 36px;
+  min-height: 36px;
+  margin-top: 8px;
+  padding-top: 10px;
+}
+.FantasyPage .Contents .Roster .CancelButton {
+  transition: height .2s ease-in-out;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 4px;
+  background-color: #1a272f;
+  height: 0px;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 0px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.FantasyPage .Contents .Roster .CancelButton.Enabled {
+  background-color: #992410;
+  height: 32px;
+  padding-top: 8px;
+  font-size: 18px;
+  opacity: 1;
+  width: 200px;
+  margin: auto;
+}
+.FantasyPage .Contents .PlayerSelect {
+  display: block;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.FantasyPage .Contents .PlayerSelect .RosterSlot .SelectButton {
+  width: 24px;
+  height: 28px;
+  background-color: #507082;
+  border-radius: 24px;
+  text-align: center;
+  margin-top: 8px;
+  margin-right: 8px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 500;
+  padding: 4px;
+  padding-top: 0;
+  font-size: 24px;
+}
+.FantasyPage .Contents .Scores {
+  display: flex;
+  flex-direction: column;
+}
+.FantasyPage .Contents .Scores .ScoreSelector {
+  margin-top: 8px;
+}
+.FantasyPage .Contents .Scores .ScoreSelector .VerticalLine {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1px;
+  background-color: #507082;
+  transition: opacity .4s ease-in-out;
+}
+.FantasyPage .Contents .Scores .ScoreSelector .VerticalLine.Collapse {
+  opacity: 0;
+}
+.FantasyPage .Contents .Scores .ScoreSelector .VerticalList {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.FantasyPage .Contents .Scores .ScoreSelector .VerticalList .HorizonalLine {
+  height: 1px;
+  background-color: #b9babb;
+  width: 300px;
+  margin: auto;
+  transition: width .4s ease-in-out;
+}
+.FantasyPage
+  .Contents
+  .Scores
+  .ScoreSelector
+  .VerticalList
+  .HorizonalLine.Collapse {
+  width: 0px;
+}
+.FantasyPage .Contents .Scores .ScoreSelector .VerticalList .DayOption {
+  color: #b9babb;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  height: 20px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: height .4s ease-in-out, padding .4s ease-in-out, opacity .4s
+    ease-in-out;
+}
+.FantasyPage
+  .Contents
+  .Scores
+  .ScoreSelector
+  .VerticalList
+  .DayOption.Selected {
+  color: #fff;
+}
+.FantasyPage
+  .Contents
+  .Scores
+  .ScoreSelector
+  .VerticalList
+  .DayOption.Collapse {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 0px;
+  overflow-y: hidden;
+  opacity: 0;
+}
+.FantasyPage .Contents .Scores .TotalScore {
+  color: #4661ec;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 6px;
+  text-align: right;
+  text-align: center;
+  transition: height .4s ease-in-out, opacity .4s ease-in-out;
+}
+.FantasyPage .Contents .Scores .TotalScore.Collapsed {
+  height: 0px;
+  opacity: 0;
+}
+.FantasyPage .Contents .Scores .Element {
+  display: flex;
+  flex-direction: row;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 8px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #1a272f;
+}
+.FantasyPage .Contents .Scores .Element .Player {
+  width: 36px;
+  height: 36px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #000;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
+}
+.FantasyPage .Contents .Scores .Element .Team {
+  width: 42px;
+  height: 28px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  margin-right: 16px;
+  background-color: #000;
+  padding: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: width .4s ease-in-out, height .4s ease-in-out;
+}
+.FantasyPage .Contents .Scores .Element .Identity {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 8px;
+}
+.FantasyPage .Contents .Scores .Element .Identity .Name {
+  text-align: left;
+  color: #fff;
+  font-size: 13px;
+}
+.FantasyPage .Contents .Scores .Element .Identity .Role {
+  text-align: left;
+  color: #507082;
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.FantasyPage .Contents .Scores .Element .Score {
+  color: #4661ec;
+  font-weight: bold;
+  font-size: 17px;
+  width: 70px;
+  margin-top: 12px;
+  text-align: center;
+  margin-right: 8px;
+}
+.FantasyPage .Contents .Leaderboards {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.FantasyPage .Contents .Leaderboards .FriendSection {
+  display: flex;
+  flex-direction: row;
+  color: #507082;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  min-height: 20px;
+}
+.FantasyPage .Contents .Leaderboards .FriendSection .Title {
+  margin-left: 20px;
+  flex-grow: 1;
+  text-align: left;
+}
+.FantasyPage .Contents .Leaderboards .FriendSection .FriendSwitch {
+  position: relative;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.FantasyPage
+  .Contents
+  .Leaderboards
+  .FriendSection
+  .FriendSwitch.Friend
+  .Background {
+  background-color: #87351d;
+}
+.FantasyPage
+  .Contents
+  .Leaderboards
+  .FriendSection
+  .FriendSwitch.Friend
+  .Selector {
+  background-color: #ff5722;
+  margin-left: 20px;
+}
+.FantasyPage .Contents .Leaderboards .FriendSection .FriendSwitch .Background {
+  margin-top: 4px;
+  background-color: #2b3b44;
+  width: 44px;
+  height: 16px;
+  border-radius: 8px;
+  transition: background-color .2s ease-in-out;
+}
+.FantasyPage .Contents .Leaderboards .FriendSection .FriendSwitch .Selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0px;
+  background-color: #507082;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  transition: margin-left .2s ease-in-out, background-color .2s ease-in-out;
+}
+.FantasyPage .Contents .Leaderboards .PlayerList .EmptyLeaderboard {
+  text-align: center;
+  margin: 20px 40px;
+}
+.FantasyPage .Contents .Leaderboards .PlayerList .EmptyLeaderboard .Heading {
+  color: #e0e0e0;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.FantasyPage .Contents .Leaderboards .PlayerList .EmptyLeaderboard .SubHeading {
+  color: #507082;
+  font-size: 14px;
+}
+.FantasyHelp {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.FantasyHelp .League {
+  transform: scale(0.8);
+  box-shadow: 5px 5px 20px #000;
+}
+.FantasyHelp .RosterSlot {
+  transform: scale(0.8);
+  box-shadow: 5px 5px 20px #000;
+}
+.FantasyHelp .Player {
+  transform: scale(0.8);
+  box-shadow: 5px 5px 20px #000;
+}
+.FantasyHelp .Header {
+  margin-top: 40px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.FantasyHelp .Body {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.FantasyHelp .Details {
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+  text-shadow: 5px 5px 5px #000;
+  line-height: 16px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.TeamPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.TeamPage .Contents {
+  padding-left: 16px;
+  padding-right: 16px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  flex-grow: 1;
+}
+.TeamPage .TeamLogoContainer {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  width: 172px;
+  height: 172px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.TeamPage .TeamName {
+  font-size: 28px;
+  color: #fff;
+}
+.TeamPage .SubsectionHeader {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: #507082;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.TeamPage .InfoStat {
+  color: #d3d3d3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2f4f4f;
+}
+.TeamPage .Rank {
+  margin-right: 4px;
+}
+.TeamPage .Spacer {
+  flex-grow: 1;
+}
+.TeamPage .CountryFlag {
+  width: 16px;
+  height: 11px;
+  margin-left: 8px;
+}
+.TeamPage .SponsorLogo {
+  height: 20px;
+  width: 40px;
+  object-fit: contain;
+}
+.TeamPage .AchievementsList {
+  display: flex;
+  flex-direction: row;
+}
+.TeamPage .AchievementContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  color: gray;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.TeamPage .AchievementRank {
+  color: #fff;
+}
+.TeamPage .LeagueImage {
+  width: 42px;
+  height: 42px;
+}
+.TeamPage .PlayerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 14px;
+}
+.TeamPage .PlayerImage {
+  width: 40px;
+  height: 40px;
+  background-color: #1a272f;
+  border-radius: 4px;
+}
+.TeamPage .PlayerImageContainer {
+  position: relative;
+}
+.TeamPage .PlayerInfo {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.TeamPage .PlayerCountry {
+  color: #e0e0e0;
+  font-size: 12px;
+  margin-left: 20px;
+  text-align: right;
+}
+.TeamPage .TeamRole {
+  text-transform: uppercase;
+  color: #2f4f4f;
+  font-size: 10px;
+}
+.Loading {
+  margin: auto;
+}
+.InvalidTeam {
+  color: darkred;
+  margin: auto;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.PlayerPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.PlayerPage .Contents {
+  padding-left: 16px;
+  padding-right: 16px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.PlayerPage .ImageContainer {
+  position: relative;
+}
+.PlayerPage .PlayerImageContainer {
+  width: 223px;
+  height: 223px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 70px;
+  margin-bottom: 20px;
+  display: block;
+}
+.PlayerPage .PlayerImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.PlayerPage .TeamLogoContainer {
+  width: 150px;
+  height: 90px;
+  position: absolute;
+  display: block;
+  right: 0px;
+  top: 40px;
+}
+.PlayerPage .TeamLogoContainer img {
+  width: 100%;
+  height: 100%;
+}
+.PlayerPage .PlayerName {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+}
+.PlayerPage .SubsectionHeader {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: #507082;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.PlayerPage .InfoStat {
+  color: #d3d3d3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2f4f4f;
+}
+.PlayerPage .Spacer {
+  flex-grow: 1;
+}
+.PlayerPage .CountryFlag {
+  width: 16px;
+  height: 11px;
+  margin-left: 8px;
+}
+.PlayerPage .AchievementsList {
+  display: flex;
+  flex-direction: row;
+}
+.PlayerPage .AchievementContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4px;
+  color: gray;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.PlayerPage .LeagueImage {
+  width: 42px;
+  height: 42px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+.PlayerPage .PrevTeamContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 14px;
+}
+.PlayerPage .PrevTeamLogoContainer {
+  width: 53px;
+  height: 32px;
+  background-color: #1a272f;
+  padding: 4px;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+.PlayerPage .PrevTeamLogoContainer img {
+  width: 100%;
+  height: 100%;
+}
+.PlayerPage .TeamDates {
+  position: relative;
+  color: gray;
+  font-size: 12px;
+}
+.Loading {
+  margin: auto;
+}
+.InvalidPlayer {
+  color: darkred;
+  margin: auto;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.ProfilePage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+}
+.ProfilePage .Scrollable {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.ProfilePage .Scrollable .TopSection {
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 20px;
+}
+.ProfilePage .Scrollable .TopSection .Avatar {
+  width: 128px;
+  height: 128px;
+}
+.ProfilePage .Scrollable .TopSection .NameInfo {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  margin-left: 12px;
+}
+.ProfilePage .Scrollable .TopSection .NameInfo .Name {
+  font-size: 20px;
+  color: #fff;
+}
+.ProfilePage .Scrollable .TopSection .NameInfo .RealName {
+  font-size: 16px;
+  color: #507082;
+}
+.ProfilePage .Scrollable .FavoritesSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 20px;
+}
+.ProfilePage .Scrollable .FavoritesSection .FavoritesHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.ProfilePage .Scrollable .FavoritesSection .FavoritesHeader .LeftLabel {
+  display: flex;
+}
+.ProfilePage
+  .Scrollable
+  .FavoritesSection
+  .FavoritesHeader
+  .LeftLabel
+  .FavoritesHeart {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+.ProfilePage
+  .Scrollable
+  .FavoritesSection
+  .FavoritesHeader
+  .LeftLabel
+  .FavoritesLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #507082;
+  letter-spacing: 1px;
+  margin-left: 4px;
+  padding-top: 4px;
+}
+.ProfilePage .Scrollable .FavoritesSection .FavoritesHeader .ManageFavorites {
+  font-size: 12px;
+  color: #ee481a;
+}
+.ProfilePage .Scrollable .FavoritesSection .PlayerFavorite {
+  display: flex;
+  margin-top: 4px;
+}
+.ProfilePage .Scrollable .FavoritesSection .PlayerFavorite .PlayerIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #1a272f;
+  border-radius: 4px;
+}
+.ProfilePage .Scrollable .FavoritesSection .PlayerFavorite .Name {
+  margin-top: 8px;
+  margin-left: 20px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.ProfilePage .Scrollable .FavoritesSection .TeamFavorite {
+  display: flex;
+  margin-top: 4px;
+}
+.ProfilePage .Scrollable .FavoritesSection .TeamFavorite .TeamIcon {
+  width: 48px;
+  height: 32px;
+  background-color: #1a272f;
+  border-radius: 4px;
+}
+.ProfilePage .Scrollable .FavoritesSection .TeamFavorite .Name {
+  margin-top: 4px;
+  margin-left: 12px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.ProfilePage .Scrollable .PredictionsSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 20px;
+}
+.ProfilePage .Scrollable .PredictionsSection .PredictionsHeader {
+  display: flex;
+  margin-bottom: 8px;
+}
+.ProfilePage
+  .Scrollable
+  .PredictionsSection
+  .PredictionsHeader
+  .PredictionsIcon {
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
+}
+.ProfilePage
+  .Scrollable
+  .PredictionsSection
+  .PredictionsHeader
+  .PredictionsLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #507082;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+.ProfilePage .Scrollable .PredictionsSection .NoPredictionData {
+  font-size: 14px;
+  color: #e0e0e0;
+}
+.ProfilePage .Scrollable .PredictionsSection .Entry {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a272f;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.ProfilePage .Scrollable .PredictionsSection .Entry .Label {
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.ProfilePage .Scrollable .PredictionsSection .Entry .Value {
+  color: #fff;
+  font-size: 13px;
+}
+.ProfilePage .Scrollable .FantasySection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 20px;
+}
+.ProfilePage .Scrollable .FantasySection .FantasyHeader {
+  display: flex;
+  margin-bottom: 8px;
+}
+.ProfilePage .Scrollable .FantasySection .FantasyHeader .FantasyIcon {
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
+}
+.ProfilePage .Scrollable .FantasySection .FantasyHeader .FantasyLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #507082;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+.ProfilePage .Scrollable .FantasySection .Entry {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a272f;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.ProfilePage .Scrollable .FantasySection .Entry .Label {
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.ProfilePage .Scrollable .FantasySection .Entry .Value {
+  color: #fff;
+  font-size: 13px;
+}
+.ProfilePage .Scrollable .NotificationsSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 20px;
+}
+.ProfilePage .Scrollable .NotificationsSection .NotificationsHeader {
+  display: flex;
+  margin-bottom: 12px;
+}
+.ProfilePage
+  .Scrollable
+  .NotificationsSection
+  .NotificationsHeader
+  .NotificationsIcon {
+  width: 10px;
+  height: 10px;
+  margin-top: 2px;
+}
+.ProfilePage
+  .Scrollable
+  .NotificationsSection
+  .NotificationsHeader
+  .NotificationsLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #507082;
+  letter-spacing: 1px;
+  margin-left: 4px;
+}
+.ProfilePage .Scrollable .NotificationsSection .Entry {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a272f;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.ProfilePage .Scrollable .NotificationsSection .Entry .Label {
+  color: #e0e0e0;
+  font-size: 14px;
+}
+.ProfilePage .Scrollable .NotificationsSection .Entry .Switch {
+  position: relative;
+  margin-right: 0px;
+  cursor: pointer;
+}
+.ProfilePage .Scrollable .NotificationsSection .Entry .Switch.On .Background {
+  background-color: #87351d;
+}
+.ProfilePage .Scrollable .NotificationsSection .Entry .Switch.On .Selector {
+  background-color: #ff5722;
+  margin-left: 20px;
+}
+.ProfilePage .Scrollable .NotificationsSection .Entry .Switch .Background {
+  margin-top: 4px;
+  background-color: #2b3b44;
+  width: 40px;
+  height: 12px;
+  border-radius: 6px;
+  transition: background-color .2s ease-in-out;
+}
+.ProfilePage .Scrollable .NotificationsSection .Entry .Switch .Selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0px;
+  background-color: #507082;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  transition: margin-left .2s ease-in-out, background-color .2s ease-in-out;
+}
+.LogoutText {
+  font-size: 12px;
+  color: #900;
+  margin-bottom: 6px;
+}
+.Loading {
+  margin: auto;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.SeriesPage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: hidden;
+  min-height: 0;
+  color: #fff;
+}
+.SeriesPage .Loading {
+  margin: auto;
+}
+.SeriesPage .Body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
+}
+.SeriesPage .Body .Header {
+  background-color: #1a272f;
+  padding-top: 20px;
+  min-height: 120px;
+}
+.SeriesPage .Body .Header .TopIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.SeriesPage .Body .Header .TopIcons .BackArrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+.SeriesPage .Body .Header .TopIcons .Dots {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+.SeriesPage .Body .Header .SeriesInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.SeriesPage .Body .Header .SeriesInfo .Team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 128px;
+  color: #fff;
+}
+.SeriesPage .Body .Header .SeriesInfo .Team .Logo {
+  width: 72px;
+  height: 48px;
+}
+.SeriesPage .Body .Header .SeriesInfo .Team .Name {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.SeriesPage .Body .Header .SeriesInfo .Score {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.SeriesPage .Body .Scrollable {
+  overflow-y: scroll;
+}
+.SeriesPage .Body .Scrollable .Predictions {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 10px;
+}
+.SeriesPage .Body .Scrollable .Predictions .TopRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.SeriesPage .Body .Scrollable .Predictions .TopRow .TeamInfo {
+  display: flex;
+  flex-direction: row;
+}
+.SeriesPage .Body .Scrollable .Predictions .TopRow .TeamInfo .Logo {
+  width: 32px;
+  height: 24px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.SeriesPage .Body .Scrollable .Predictions .TopRow .TeamInfo .Name {
+  font-size: 8px;
+  flex-grow: 1;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.SeriesPage .Body .Scrollable .Predictions .TopRow .TeamInfo .Name.Left {
+  text-align: left;
+}
+.SeriesPage .Body .Scrollable .Predictions .TopRow .TeamInfo .Name.Right {
+  text-align: right;
+}
+.SeriesPage .Body .Scrollable .Predictions .Bars {
+  display: flex;
+  flex-direction: row;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+.SeriesPage .Body .Scrollable .Predictions .Bars .Bar {
+  height: 6px;
+  border-radius: 3px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: #b9babb;
+}
+.SeriesPage .Body .Scrollable .Predictions .Percentages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+.SeriesPage .Body .Scrollable .Predictions .Percentages .Percentage {
+  font-size: 9px;
+}
+.SeriesPage .Body .Scrollable .Winner {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.SeriesPage .Body .Scrollable .Winner .WinString {
+  font-weight: 500;
+  font-size: 18px;
+}
+.SeriesPage .Body .Scrollable .Winner .Predict {
+  font-size: 10px;
+  color: #507082;
+}
+.SeriesPage .Body .Scrollable .TopStats {
+  border-bottom: 1px solid #1a272f;
+  border-top: 1px solid #1a272f;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #e0e0e0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine .Text {
+  flex-grow: 1;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine .PlayerLink {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine .PlayerLink .PlayerName {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #507082;
+  text-align: right;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine .PlayerLink .Player {
+  margin-left: 8px;
+  width: 30px;
+  height: 30px;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine .Hero {
+  width: 43px;
+  height: 24px;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine .Value {
+  margin-top: 2px;
+  margin-left: 16px;
+  margin-right: 8px;
+  color: #e0e0e0;
+  font-size: 18px;
+}
+.SeriesPage .Body .Scrollable .TopStats .StatLine.Kills {
+  border-bottom: 1px solid #1a272f;
+}
+.SeriesPage .Body .Scrollable .MatchList {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 20px;
+}
+.SeriesPage .Body .Scrollable .MatchList .Title {
+  margin-left: 12px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+}
+.SeriesPage .Body .Scrollable .TeamRosters {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.SeriesPage .Body .Scrollable .TeamRosters .Title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+  margin-bottom: 12px;
+}
+.SeriesPage .Body .Scrollable .TeamRosters .TeamRosterTeams {
+  display: flex;
+  flex-direction: row;
+}
+.SeriesPage .Body .Scrollable .TeamRosters .TeamRosterTeams .TeamRoster {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+  color: #e0e0e0;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Image {
+  width: 32px;
+  height: 32px;
+  background-color: #1a272f;
+  border-radius: 2px;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Image.Hide {
+  display: none;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name.Left {
+  text-align: left;
+  margin-left: 6px;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name.Right {
+  text-align: right;
+  margin-right: 6px;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name
+  .ProName {
+  font-size: 13px;
+}
+.SeriesPage
+  .Body
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name
+  .RealName {
+  font-size: 9px;
+  color: #507082;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.UpcomingSeriesPage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: hidden;
+  min-height: 0;
+  color: #fff;
+}
+.UpcomingSeriesPage .Loading {
+  margin: auto;
+}
+.UpcomingSeriesPage .Header {
+  background-color: #1a272f;
+  padding-top: 20px;
+  min-height: 120px;
+}
+.UpcomingSeriesPage .Header .TopIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.UpcomingSeriesPage .Header .TopIcons .BackArrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+.UpcomingSeriesPage .Header .TopIcons .Dots {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+.UpcomingSeriesPage .Header .SeriesInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.UpcomingSeriesPage .Header .SeriesInfo .Team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 128px;
+  max-width: 128px;
+  color: #fff;
+}
+.UpcomingSeriesPage .Header .SeriesInfo .Team .Logo {
+  width: 48px;
+  height: 48px;
+}
+.UpcomingSeriesPage .Header .SeriesInfo .Team .Name {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.UpcomingSeriesPage .Header .SeriesInfo .Score {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.UpcomingSeriesPage .Scrollable {
+  overflow-y: scroll;
+}
+.UpcomingSeriesPage .Scrollable .TeamRosters {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 18px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.UpcomingSeriesPage .Scrollable .TeamRosters .Title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+  margin-bottom: 12px;
+}
+.UpcomingSeriesPage .Scrollable .TeamRosters .TeamRosterTeams {
+  display: flex;
+  flex-direction: row;
+}
+.UpcomingSeriesPage .Scrollable .TeamRosters .TeamRosterTeams .TeamRoster {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Image {
+  width: 40px;
+  height: 40px;
+  background-color: #1a272f;
+  border-radius: 2px;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Image.Hide {
+  display: none;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name.Left {
+  text-align: left;
+  margin-left: 8px;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name.Right {
+  text-align: right;
+  margin-right: 8px;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name
+  .ProName {
+  font-size: 13px;
+  margin-top: 4px;
+}
+.UpcomingSeriesPage
+  .Scrollable
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name
+  .RealName {
+  font-size: 9px;
+  color: #507082;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.MatchPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  color: #fff;
+}
+.MatchPage .Body {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+.MatchPage .Body .Header {
+  background-color: #1a272f;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  min-height: 130px;
+  height: 130px;
+}
+.MatchPage .Body .Header .BackArrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+  margin-bottom: 12px;
+}
+.MatchPage .Body .Header .MatchInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.MatchPage .Body .Header .MatchInfo .Team {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  align-items: center;
+  width: 118px;
+  max-width: 118px;
+  color: #fff;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.MatchPage .Body .Header .MatchInfo .Team .Logo {
+  width: 48px;
+  height: 48px;
+}
+.MatchPage .Body .Header .MatchInfo .Team .Name {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.MatchPage .Body .Header .MatchInfo .Score {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.MatchPage .Body .Header .MatchInfo .Score .GameTime {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #507082;
+}
+.MatchPage .Body .RadiantDireBar {
+  width: 100%;
+  min-height: 6px;
+  height: 6px;
+  display: flex;
+  flex-direction: row;
+}
+.MatchPage .Body .RadiantDireBar .Radiant {
+  background-color: #15c65c;
+  height: 100%;
+  width: 50%;
+}
+.MatchPage .Body .RadiantDireBar .Dire {
+  background-color: red;
+  height: 100%;
+  width: 50%;
+}
+.MatchPage .Body .Drafting {
+  text-align: center;
+  color: #507082;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+.MatchPage .Body .Map {
+  width: 90%;
+  height: 0;
+  padding-bottom: 90.9090909091%;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: 50% 50%;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+}
+.MatchPage .Body .Map .HeroIcon {
+  width: 20px;
+  height: 20px;
+  z-index: 5;
+  position: absolute;
+  transition: left 1s ease-in-out, bottom 1s ease-in-out;
+}
+.MatchPage .Body .Map .HeroIcon.Radiant {
+  filter: drop-shadow(0px 0px 3px #0f0);
+}
+.MatchPage .Body .Map .HeroIcon.Dire {
+  filter: drop-shadow(0px 0px 3px #f00);
+}
+.MatchPage .Body .Map .BuildingIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.MatchPage .Body .Map .BuildingIcon.Radiant {
+  filter: brightness(0.6) sepia(1) hue-rotate(90deg) saturate(3);
+}
+.MatchPage .Body .Map .BuildingIcon.Dire {
+  filter: brightness(0.3) sepia(1) hue-rotate(300deg) saturate(4);
+}
+.MatchPage .Body .Map .BuildingIcon.Destroyed {
+  display: none;
+}
+.MatchPage .Body .Winner {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  text-shadow: 0 0 20px #15c65c;
+}
+.MatchPage .Body .GraphSection {
+  margin-top: 0px;
+  margin-left: 12px;
+  margin-right: 12px;
+  position: relative;
+}
+.MatchPage .Body .GraphSection .Title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #507082;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.MatchPage .Body .GraphSection .Bottom {
+  width: 96%;
+  margin-left: 2%;
+  font-size: 9px;
+  color: #507082;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.MatchPage .Body .GraphSection .GraphContainer {
+  background: repeating-linear-gradient(
+    90deg,
+    #0f1417,
+    #0f1417 10%,
+    #222f36 10%,
+    #222f36 calc(10% + 1px),
+    #161d22 calc(10% + 1px),
+    #161d22 20%,
+    #222f36 20%,
+    #222f36 calc(20% + 1px)
+  );
+}
+.MatchPage .Body .GraphSection .GraphContainer .Legend {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  color: #e0e0e0;
+}
+.MatchPage .Body .GraphSection .GraphContainer .Legend .Arrow {
+  margin-top: 4px;
+  margin-left: 2px;
+  font-size: 6px;
+}
+.MatchPage .Body .GraphSection .GraphContainer .Legend.DireGreater {
+  top: auto;
+  bottom: 10px;
+}
+.MatchPage .Body .GraphSection .GraphContainer .EdgeMask {
+  position: absolute;
+  background-image: linear-gradient(
+    rgb(15, 20, 23) 0%,
+    rgba(15, 20, 23, 0) 30%,
+    rgba(15, 20, 23, 0) 70%,
+    rgb(15, 20, 23) 100%
+  );
+  width: 100%;
+  height: 200px;
+}
+.MatchPage .Body .HeroStatsSection {
+  margin-top: 20px;
+}
+.MatchPage .Body .HeroStatsSection .Title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #507082;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+}
+.MatchPage .Body .HeroStatsSection .HeroStats {
+  display: flex;
+  flex-direction: row;
+}
+.MatchPage .Body .HeroStatsSection .HeroStats .TeamHeroStats {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  width: 50%;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Radiant
+  .SingleHeroStats:nth-child(2n - 1) {
+  border-top: 2px solid #26353e;
+  background-color: #161d22;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Dire
+  .SingleHeroStats:nth-child(2n) {
+  border-top: 2px solid #26353e;
+  background-color: #161d22;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Dire
+  .SingleHeroStats
+  .TopBar {
+  flex-direction: row-reverse;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Dire
+  .SingleHeroStats
+  .Stats {
+  margin-left: 0px;
+  margin-right: 60px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Dire
+  .SingleHeroStats
+  .Stats
+  .KDA {
+  text-align: right;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Dire
+  .SingleHeroStats
+  .Stats
+  .NetWorth {
+  text-align: right;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Dire
+  .SingleHeroStats
+  .TopBar
+  .NameAndName
+  .HeroName {
+  text-align: right;
+  margin-right: 8px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Dire
+  .SingleHeroStats
+  .TopBar
+  .NameAndName
+  .PlayerName {
+  text-align: right;
+  margin-right: 8px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Radiant
+  .SingleHeroStats
+  .TopBar
+  .NameAndName
+  .HeroName {
+  text-align: left;
+  margin-left: 8px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats.Radiant
+  .SingleHeroStats
+  .TopBar
+  .NameAndName
+  .PlayerName {
+  text-align: left;
+  margin-left: 8px;
+}
+.MatchPage .Body .HeroStatsSection .HeroStats .TeamHeroStats .SingleHeroStats {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 12px;
+  height: 98px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .TopBar {
+  display: flex;
+  flex-direction: row;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .TopBar
+  .HeroImage {
+  min-width: 54px;
+  width: 54px;
+  height: 32px;
+  border-radius: 4px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .TopBar
+  .NameAndName {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .TopBar
+  .NameAndName
+  .HeroName {
+  font-size: 14px;
+  color: #fff;
+  max-width: 100px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .TopBar
+  .NameAndName
+  .PlayerName {
+  font-size: 8px;
+  color: #507082;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  max-height: 14px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .Items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .Items
+  .Item {
+  margin-left: 1px;
+  margin-right: 1px;
+  min-width: 25px;
+  min-height: 18px;
+  height: 18px;
+  filter: saturate(0.6);
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .Stats {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-left: 60px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .Stats
+  .KDA {
+  color: #e0e0e0;
+  margin-top: 2px;
+}
+.MatchPage
+  .Body
+  .HeroStatsSection
+  .HeroStats
+  .TeamHeroStats
+  .SingleHeroStats
+  .Stats
+  .NetWorth {
+  color: #eda10f;
+  font-size: 16px;
+  margin-top: -2px;
+}
+.MatchPage .Body .TeamRosters {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 18px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.MatchPage .Body .TeamRosters .Title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+  margin-bottom: 12px;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams {
+  display: flex;
+  flex-direction: row;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams .TeamRoster {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams .TeamRoster .Player {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams .TeamRoster .Player .Image {
+  width: 40px;
+  height: 40px;
+  background-color: #1a272f;
+  border-radius: 2px;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams .TeamRoster .Player .Image.Hide {
+  display: none;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams .TeamRoster .Player .Name {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams .TeamRoster .Player .Name.Left {
+  text-align: left;
+  margin-left: 8px;
+}
+.MatchPage .Body .TeamRosters .TeamRosterTeams .TeamRoster .Player .Name.Right {
+  text-align: right;
+  margin-right: 8px;
+}
+.MatchPage
+  .Body
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name
+  .ProName {
+  font-size: 13px;
+  margin-top: 4px;
+}
+.MatchPage
+  .Body
+  .TeamRosters
+  .TeamRosterTeams
+  .TeamRoster
+  .Player
+  .Name
+  .RealName {
+  font-size: 9px;
+  color: #507082;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.MatchPage .Body .PicksAndBansSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+}
+.MatchPage .Body .PicksAndBansSection .Title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+  margin-bottom: 12px;
+}
+.MatchPage .Body .PicksAndBansSection .PicksAndBans {
+  display: flex;
+  flex-direction: row;
+}
+.MatchPage .Body .PicksAndBansSection .PicksAndBans .TeamPicksAndBans {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans.Radiant
+  .PickOrBan {
+  flex-direction: row;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans.Dire
+  .PickOrBan {
+  flex-direction: row-reverse;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans.Dire
+  .HeroName {
+  text-align: right;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans
+  .PickOrBan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans
+  .PickOrBan
+  .Number {
+  color: #fff;
+  border-radius: 4px;
+  min-width: 24px;
+  height: 20px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  padding-top: 4px;
+  margin-right: 6px;
+  margin-left: 4px;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans
+  .PickOrBan
+  .HeroImage {
+  max-height: 40px;
+  border-radius: 4px;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans
+  .PickOrBan
+  .HeroName {
+  font-size: 10px;
+  color: #fff;
+  margin-left: 6px;
+  margin-right: 6px;
+  flex-grow: 1;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans
+  .PickOrBan.Pick
+  .Number {
+  background-color: #15c65c;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .TeamPicksAndBans
+  .PickOrBan.Ban
+  .Number {
+  background-color: #ee481a;
+}
+.MatchPage .Body .PicksAndBansSection .PicksAndBans .PickAndBansLabel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  align-items: center;
+  min-width: 40px;
+  padding-top: 20px;
+}
+.MatchPage
+  .Body
+  .PicksAndBansSection
+  .PicksAndBans
+  .PickAndBansLabel
+  .PickOrBanLabel {
+  height: 50px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.MatchPage .Body .PicksAndBansSection .PicksAndBans .PickAndBansLabel .Pick {
+  color: #15c65c;
+}
+.MatchPage .Body .PicksAndBansSection .PicksAndBans .PickAndBansLabel .Ban {
+  color: #ee481a;
+}
+.MatchPage .Body .Scrollable {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.Loading {
+  margin: auto;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.LiveMatchPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+}
+.LiveMatchPage .Header {
+  background-color: #1a272f;
+  padding-top: 20px;
+  min-height: 130px;
+  height: 130px;
+}
+.LiveMatchPage .Scrollable {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.TopBar .BackArrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+.TopBar .MatchInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.TopBar .MatchInfo .Score {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #fff;
+}
+.TopBar .MatchInfo .Score .GameTime {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #507082;
+}
+.Team {
+  align-items: center;
+  width: 118px;
+  max-width: 118px;
+  color: #fff;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.Team .Logo {
+  width: 48px;
+  height: 48px;
+}
+.Team .Name {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.Loading {
+  margin: auto;
+}
+.GameState {
+  text-align: center;
+  color: #507082;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+.Map {
+  width: 90%;
+  height: 0;
+  padding-bottom: 90.9090909091%;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: 50% 50%;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+}
+.Map .BuildingIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.Map .BuildingIcon.Radiant {
+  filter: brightness(0.6) sepia(1) hue-rotate(90deg) saturate(3);
+}
+.Map .BuildingIcon.Dire {
+  filter: brightness(0.3) sepia(1) hue-rotate(300deg) saturate(4);
+}
+.Map .BuildingIcon.Destroyed {
+  display: none;
+}
+.Map .Hero {
+  width: 23px;
+  height: 23px;
+  border-radius: 13px;
+  border: 2px solid;
+  background-color: #0f1417;
+  z-index: 5;
+  position: absolute;
+  transition: left 1s ease-in-out, bottom 1s ease-in-out;
+}
+.Map .Hero.Radiant {
+  border-color: #3ae67c;
+}
+.Map .Hero.Dire {
+  border-color: #bb4156;
+}
+.Map .Hero .HeroIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;
+  margin-top: 1.5px;
+}
+.HeroStatsSection {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.HeroStatsSection .TeamHeroStats {
+  width: 50%;
+  max-width: 50%;
+  position: relative;
+}
+.SingleHeroStats {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 12px;
+  height: 100px;
+  position: relative;
+}
+.SingleHeroStats .TopBar {
+  display: flex;
+  flex-direction: row;
+}
+.SingleHeroStats .TopBar .HeroImage {
+  width: 54px;
+  height: 32px;
+  border-radius: 4px;
+}
+.SingleHeroStats .TopBar .NameAndName {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.SingleHeroStats .TopBar .NameAndName .PlayerName {
+  font-size: 14px;
+  color: #fff;
+  max-width: 100px;
+}
+.SingleHeroStats .TopBar .NameAndName .HeroName {
+  font-size: 10px;
+  color: #507082;
+  text-transform: uppercase;
+  letter-spacing: .5s;
+}
+.SingleHeroStats .Stats {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-left: 60px;
+  margin-top: 8px;
+}
+.SingleHeroStats .Stats .KDA {
+  color: #e0e0e0;
+}
+.SingleHeroStats .Stats .NetWorth {
+  color: #eda10f;
+  font-size: 16px;
+  margin-top: 4px;
+}
+.SingleHeroStats.Recessed {
+  border-top: 2px solid #26353e;
+  background-color: #161d22;
+}
+.SingleHeroStats.Right .TopBar {
+  flex-direction: row-reverse;
+}
+.SingleHeroStats.Right .Stats {
+  margin-left: 0px;
+  margin-right: 60px;
+}
+.SingleHeroStats.Right .Stats .KDA {
+  text-align: right;
+}
+.SingleHeroStats.Right .Stats .NetWorth {
+  text-align: right;
+}
+.SingleHeroStats.Right .TopBar .NameAndName .HeroName {
+  text-align: right;
+}
+.SingleHeroStats.Right .TopBar .NameAndName .PlayerName {
+  text-align: right;
+}
+.GraphSection {
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  position: relative;
+}
+.GraphSection .Title {
+  font-size: 10px;
+  color: #507082;
+  text-transform: uppercase;
+  letter-spacing: .5s;
+  margin-bottom: 12px;
+}
+.GraphSection .Bottom {
+  width: 96%;
+  margin-left: 2%;
+  font-size: 9px;
+  color: #507082;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.GraphSection .GraphContainer {
+  background: repeating-linear-gradient(
+    90deg,
+    #0f1417,
+    #0f1417 10%,
+    #222f36 10%,
+    #222f36 calc(10% + 1px),
+    #161d22 calc(10% + 1px),
+    #161d22 20%,
+    #222f36 20%,
+    #222f36 calc(20% + 1px)
+  );
+}
+.GraphSection .GraphContainer .Legend {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  color: #e0e0e0;
+}
+.GraphSection .GraphContainer .Legend .Arrow {
+  margin-top: 4px;
+  margin-left: 2px;
+  font-size: 6px;
+}
+.GraphSection .GraphContainer .Legend.DireGreater {
+  top: auto;
+  bottom: 10px;
+}
+.GraphSection .GraphContainer .EdgeMask {
+  position: absolute;
+  background-image: linear-gradient(
+    rgb(15, 20, 23) 0%,
+    rgba(15, 20, 23, 0) 30%,
+    rgba(15, 20, 23, 0) 70%,
+    rgb(15, 20, 23) 100%
+  );
+  width: 100%;
+  height: 200px;
+}
+.TeamRosters {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 18px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.TeamRosters .Title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+  margin-bottom: 12px;
+}
+.TeamRosters .TeamRosterTeams {
+  display: flex;
+  flex-direction: row;
+}
+.TeamRoster {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+  width: 50%;
+  max-width: 50%;
+}
+.TeamRoster .Player {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.TeamRoster .Player .Image {
+  width: 32px;
+  height: 32px;
+  background-color: #1a272f;
+  border-radius: 2px;
+}
+.TeamRoster .Player .Image.Hide {
+  display: none;
+}
+.TeamRoster .Player.Right {
+  flex-direction: row-reverse;
+}
+.TeamRoster .Player.Right .Names {
+  width: 100%;
+}
+.TeamRoster .Player.Right .Names .ProName {
+  text-align: right;
+}
+.TeamRoster .Player.Right .Names .RealName {
+  text-align: right;
+}
+.TeamRoster .Player .Names {
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.TeamRoster .Player .Names .ProName {
+  font-size: 13px;
+}
+.TeamRoster .Player .Names .RealName {
+  font-size: 9px;
+  color: #507082;
+}
+.PicksAndBansSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+}
+.PicksAndBansSection .Title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #507082;
+  margin-bottom: 12px;
+}
+.PicksAndBansSection .PicksAndBans {
+  display: flex;
+  flex-direction: row;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex-grow: 1;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans.Radiant .PickOrBan {
+  flex-direction: row;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans.Dire .PickOrBan {
+  flex-direction: row-reverse;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans.Dire .HeroName {
+  text-align: right;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans .PickOrBan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans .PickOrBan .Number {
+  color: #fff;
+  border-radius: 4px;
+  min-width: 24px;
+  height: 22px;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 4px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans .PickOrBan .HeroImage {
+  max-width: 48px;
+  max-height: 27px;
+  border-radius: 4px;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans .PickOrBan .HeroName {
+  font-size: 10px;
+  color: #fff;
+  margin-left: 4px;
+  margin-right: 4px;
+  flex-grow: 1;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans .PickOrBan.Pick .Number {
+  background-color: #15c65c;
+}
+.PicksAndBansSection .PicksAndBans .TeamPicksAndBans .PickOrBan.Ban .Number {
+  background-color: #ee481a;
+}
+.PicksAndBansSection .PicksAndBans .PickAndBansLabel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  align-items: center;
+  min-width: 40px;
+  padding-top: 20px;
+}
+.PicksAndBansSection .PicksAndBans .PickAndBansLabel .PickOrBanLabel {
+  height: 50px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.PicksAndBansSection .PicksAndBans .PickAndBansLabel .Pick {
+  color: #15c65c;
+}
+.PicksAndBansSection .PicksAndBans .PickAndBansLabel .Ban {
+  color: #ee481a;
+}
+.RadiantDireBar {
+  width: 100%;
+  min-height: 6px;
+  height: 6px;
+  display: flex;
+  flex-direction: row;
+}
+.RadiantDireBar .Radiant {
+  background-color: #15c65c;
+  height: 100%;
+  width: 50%;
+}
+.RadiantDireBar .Dire {
+  background-color: red;
+  height: 100%;
+  width: 50%;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.TournamentPage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+.TournamentPage .LeagueLogoContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40%;
+}
+.TournamentPage .LeagueLogoContainer .TopIcons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+.TournamentPage .LeagueLogoContainer .TopIcons .BackArrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+}
+.TournamentPage .LeagueLogoContainer .TopIcons .Dots {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+.TournamentPage .LeagueLogoContainer .LeagueLogo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.TournamentPage .HeaderAndBody {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  min-height: 0px;
+  flex-grow: 1;
+}
+.TournamentPage .HeaderAndBody .Header {
+  width: 100%;
+  min-height: 40px;
+  background-color: #1a272f;
+  display: flex;
+  flex-direction: row;
+}
+.TournamentPage .HeaderAndBody .Header .MenuLink {
+  width: 33%;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #507082;
+  text-align: center;
+  padding-top: 10px;
+  transition: color .2s ease-in-out;
+}
+.TournamentPage .HeaderAndBody .Header .MenuLink.Enabled {
+  color: #ee481a;
+}
+.TournamentPage .HeaderAndBody .HeaderUnderline {
+  background-color: #1a272f;
+}
+.TournamentPage .HeaderAndBody .HeaderUnderline .Underline {
+  width: 33%;
+  height: 2px;
+  background-color: #ee481a;
+  transition: margin-left .2s ease-in-out;
+}
+.TournamentPage .HeaderAndBody .HeaderUnderline .Underline.OnTeams {
+  margin-left: 0;
+}
+.TournamentPage .HeaderAndBody .HeaderUnderline .Underline.OnStandings {
+  margin-left: 33%;
+}
+.TournamentPage .HeaderAndBody .HeaderUnderline .Underline.OnMatches {
+  margin-left: 66%;
+}
+.TournamentPage .HeaderAndBody .Body {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.TournamentPage .Loading {
+  margin-top: 20px;
+}
+.TournamentPage .PhaseHeader {
+  color: #507082;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+.TournamentPage .PhaseBlock {
+  background-color: #1a272f;
+  margin: 0px 16px;
+  border-radius: 4px;
+  padding-left: 0px;
+  width: 410px;
+}
+.TournamentPage .PhaseBlock .Standing {
+  color: #fff;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.TournamentPage .PhaseBlock .Team {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 400px;
+}
+.TournamentPage .PhaseBlock .Team.Advancing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  opacity: 0.1;
+}
+.TournamentPage .PhaseBlock .Team.Eliminated::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 0.1;
+}
+.TournamentPage .PhaseBlock .Team img {
+  margin-left: 4px;
+  margin-top: 16px;
+  width: 44px;
+  height: 24px;
+}
+.TournamentPage .PhaseBlock .Team .TeamName {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-left: 14px;
+  flex-grow: 1;
+  font-size: 15px;
+}
+.TournamentPage .PhaseBlock .Team .Score {
+  margin-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.TournamentPage .PhaseBlock .Team:not(:last-child) .TeamName {
+  border-bottom: 1px solid #507082;
+}
+.TournamentPage .Matches {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  flex-grow: 1;
+}
+.TournamentPage .Standings {
+  display: flex;
+  flex-direction: column;
+  min-height: 0px;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  color: #fff;
+}
+.TournamentPage .Standings .PhaseDropdown {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 340px;
+  height: 40px;
+  min-height: 48px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #1a272f;
+  background-position-x: 95%;
+  background-position-y: 12px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  padding-left: 16px;
+}
+.TournamentPage .Standings .Scrollable {
+  width: 100%;
+  height: 500px;
+}
+.TournamentBracketSingle,
+.TournamentBracketDouble,
+.TournamentBracketDoublSeeded,
+.TournamentBracketGSL,
+.TournamentRoundRobin {
+  margin: 12px;
+}
+.TournamentBracketSingle.Tiebreak,
+.TournamentBracketDouble.Tiebreak,
+.TournamentBracketDoublSeeded.Tiebreak,
+.TournamentBracketGSL.Tiebreak,
+.TournamentRoundRobin.Tiebreak {
+  margin-left: 32px;
+}
+.TournamentBracketSingle .Title,
+.TournamentBracketDouble .Title,
+.TournamentBracketDoublSeeded .Title,
+.TournamentBracketGSL .Title,
+.TournamentRoundRobin .Title {
+  width: 800px;
+  background-image: linear-gradient(to right, #4f1c14, #0f1417);
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 32px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 8px;
+  border-top-left-radius: 8px;
+}
+.TournamentBracketSingle .TitleUnderline,
+.TournamentBracketDouble .TitleUnderline,
+.TournamentBracketDoublSeeded .TitleUnderline,
+.TournamentBracketGSL .TitleUnderline,
+.TournamentRoundRobin .TitleUnderline {
+  width: 800px;
+  height: 2px;
+  background-image: linear-gradient(to right, #ee481a, #0f1417);
+  margin-bottom: 20px;
+}
+.TournamentBracketSingle .Background,
+.TournamentBracketDouble .Background,
+.TournamentBracketDoublSeeded .Background,
+.TournamentBracketGSL .Background,
+.TournamentRoundRobin .Background {
+  background-color: #0f1417;
+  background-size: cover;
+  margin: 0px 16px;
+  position: relative;
+}
+.BracketNode {
+  width: 282px;
+  height: 118px;
+  position: absolute;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.BracketNode.IsProgress {
+  border: 1px #550 solid;
+  border-radius: 4px;
+}
+.BracketNode.IsCompleted {
+  border: 1px #050 solid;
+  border-radius: 4px;
+}
+.BracketNode.IsCompleted .TeamRow.Winner {
+  color: #e0e0e0;
+}
+.BracketNode.IsCompleted .TeamRow:not(.Winner)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+}
+.BracketNode .TeamRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  color: #507082;
+  position: relative;
+}
+.BracketNode .TeamRow .TeamLogo {
+  width: 32px;
+  height: 24px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 8px;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.BracketNode .TeamRow .TeamName {
+  flex-grow: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #fff;
+}
+.BracketNode .TeamRow .TeamWins {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 16px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.Results {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.TournamentResult {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.TournamentResult .Standing {
+  height: 21px;
+  width: 24px;
+  min-width: 24px;
+  color: #0f1417;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  padding-top: 3px;
+  background-color: #507082;
+  border-radius: 6px;
+}
+.TournamentResult .Standing.First {
+  background-color: #eda10f;
+}
+.TournamentResult .Standing.Second {
+  background-color: #e0e0e0;
+}
+.TournamentResult .Standing.Third {
+  background-color: #ee481a;
+}
+.TournamentResult .TeamInfo {
+  height: 100%;
+  margin-left: 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 0px;
+  background-color: #1a272f;
+  border-radius: 6px;
+}
+.TournamentResult .TeamInfo .Top {
+  display: flex;
+  flex-direction: row;
+}
+.TournamentResult .TeamInfo .Top .TeamLogo {
+  width: 42px;
+  height: 28px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.TournamentResult .TeamInfo .Top .TeamName {
+  color: #e0e0e0;
+  font-size: 16px;
+  text-transform: uppercase;
+  flex-grow: 1;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.TournamentResult .TeamInfo .Bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TournamentResult .TeamInfo .Bottom .LabelAndValue {
+  margin-left: 14px;
+  margin-right: 14px;
+  display: flex;
+  flex-direction: row;
+}
+.TournamentResult .TeamInfo .Bottom .LabelAndValue .Label {
+  color: #507082;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-top: auto;
+}
+.TournamentResult .TeamInfo .Bottom .LabelAndValue .Value {
+  color: #fff;
+  font-size: 12px;
+  margin-left: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.SearchPage {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.SearchPage .Contents {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.SearchPage .Contents .Divider {
+  width: 100%;
+  height: 0px;
+  margin-top: 24px;
+  border-bottom: solid 1px #eda10f;
+}
+.SearchPage .Contents .Category {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  padding-bottom: 2px;
+  margin-top: 20px;
+  color: #507082;
+  font-weight: bold;
+}
+.SearchPage .Contents .SearchElement {
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+}
+.SearchPage .Contents .SearchElement .Link {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.SearchPage .Contents .SearchElement .Link .Icon {
+  width: 40px;
+  height: 40px;
+  background-color: #1a272f;
+  border-radius: 3px;
+}
+.SearchPage .Contents .SearchElement .Link .Icon.Team {
+  width: 60px;
+}
+.SearchPage .Contents .SearchElement .Link .Icon.League {
+  width: 80px;
+}
+.SearchPage .Contents .SearchElement .Link .Name {
+  padding-left: 12px;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  flex-grow: 1;
+}
+.SearchPage .Contents .SearchElement .Favorite {
+  justify-self: right;
+  width: 24px;
+  height: 24px;
+}
+.SearchPage .HeaderChildren {
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+.SearchPage .HeaderChildren .SearchInput {
+  display: flex;
+  flex-direction: row;
+}
+.SearchPage .HeaderChildren .SearchInput .SearchIcon {
+  margin-left: 12px;
+  margin-right: 8px;
+  margin-top: 16px;
+  min-width: 24px;
+  min-height: 24px;
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.SearchPage .HeaderChildren .SearchInput input {
+  box-sizing: border-box;
+  padding: 0px 12px;
+  width: 100%;
+  margin-top: 12px;
+  margin-left: 12px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+}
+.SearchPage .HeaderChildren .SearchInput .Close {
+  width: 24px;
+  height: 24px;
+  margin-top: 20px;
+  margin-left: 8px;
+}
+.SearchPage .HeaderChildren input:focus::placeholder {
+  opacity: 0;
+}
+.colorBlack {
+  color: #0f1417;
+}
+.colorWhite {
+  color: #fff;
+}
+.colorDarkGrey {
+  color: #1a272f;
+}
+.colorGrey {
+  color: #507082;
+}
+.colorLightGrey {
+  color: #1a272f;
+}
+.colorOrange {
+  color: #ee481a;
+}
+.colorRed {
+  color: #992410;
+}
+.colorAqua {
+  color: #37c2b1;
+}
+.colorBlue {
+  color: #4661ec;
+}
+.colorBrightRed {
+  color: red;
+}
+.colorBrightBlue {
+  color: #00b3ff;
+}
+.colorBrightOrange {
+  color: #eda10f;
+}
+.colorBrightPurple {
+  color: #9652ed;
+}
+.colorBrightYellow {
+  color: #ff0;
+}
+.colorBrightGreen {
+  color: #15c65c;
+}
+.colorBrightGrey {
+  color: #e0e0e0;
+}
+.backgroundColorBlack {
+  background-color: #0f1417;
+}
+.backgroundColorDarkGrey {
+  background-color: #1a272f;
+}
+.backgroundColorLightGrey {
+  background-color: #b9babb;
+}
+.backgroundColorWhite {
+  background-color: #fff;
+}
+.backgroundColorOrange {
+  background-color: #ee481a;
+}
+.backgroundColorRed {
+  background-color: #992410;
+}
+.backgroundColorAqua {
+  background-color: #37c2b1;
+}
+.backgroundColorBlue {
+  background-color: #4661ec;
+}
+.backgroundColorGrey {
+  background-color: #507082;
+}
+.backgroundColorBrightRed {
+  background-color: red;
+}
+.backgroundColorBrightBlue {
+  background-color: #00b3ff;
+}
+.backgroundColorBrightOrange {
+  background-color: #eda10f;
+}
+.backgroundColorBrightPurple {
+  background-color: #9652ed;
+}
+.backgroundColorBrightYellow {
+  background-color: #ff0;
+}
+.backgroundColorBrightGreen {
+  background-color: #15c65c;
+}
+.backgroundColorBrightGrey {
+  background-color: #e0e0e0;
+}
+.StandingsPage {
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.StandingsPage .LeagueOrTIHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.StandingsPage .LeagueOrTIHeader .CategoryOption {
+  width: 50%;
+  padding: 12px 0px;
+  min-height: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #527285;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.StandingsPage .LeagueOrTIHeader .CategoryOption.OptionSelected {
+  background-color: #1a272f;
+  color: #ff4a18;
+}
+.LeagueStandingsPage {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.LeagueStandingsPage .RegionSelector {
+  width: 100%;
+  padding: 20px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.LeagueStandingsPage .RegionSelector .Region {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  margin: 0px 10px;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  color: #6893aa;
+  background-color: #1a272f;
+}
+.LeagueStandingsPage .RegionSelector .Region .RegionText {
+  margin: 0px auto;
+  margin-top: 9px;
+}
+.LeagueStandingsPage .RegionSelector .Region.SelectedRegion {
+  color: #fff;
+  background-color: #b23613;
+  border: 2px solid #ff4a18;
+  width: 32px;
+  height: 32px;
+}
+.LeagueStandingsPage .RegionSelector .Region.SelectedRegion .RegionText {
+  margin-top: 7px;
+}
+.LeagueStandingsPage .ScrollableContents {
+  overflow-y: scroll;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.LeagueStandingsPage .Division {
+  margin: 10px 20px;
+  margin-top: 20px;
+  color: #517183;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+.LeagueStandingsPage .Entry {
+  margin: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.LeagueStandingsPage .Entry .TeamName {
+  flex-grow: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+.LeagueStandingsPage .Entry .Logo {
+  width: 36px;
+  height: 36px;
+}
+.LeagueStandingsPage .Entry .WinLoss {
+  font-weight: bold;
+}
+.InternationalStandingsPage {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.InternationalStandingsPage .headerChildren {
+  padding-right: 12px;
+}
+.InternationalStandingsPage .Contents {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 12px;
+}
+.InternationalStandingsPage .Loading {
+  margin: auto;
+}
+.InternationalStandingsPage .NoPointsYet {
+  margin: auto;
+}
+.InternationalStandingsPage .NoPointsDesc {
+  color: #fff;
+}
+.InternationalStandingsPage .Team {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.InternationalStandingsPage .RankContainer {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  text-align: center;
+}
+.InternationalStandingsPage .ClinchedInvite.RankContainer {
+  background-color: orange;
+}
+.InternationalStandingsPage .Eliminated.RankContainer {
+  background-color: darkred;
+}
+.InternationalStandingsPage .Rank {
+  font-size: 12px;
+}
+.InternationalStandingsPage .DefaultStatus .Rank {
+  color: #507082;
+}
+.InternationalStandingsPage .ClinchedInvite .Rank {
+  color: #0f1417;
+}
+.InternationalStandingsPage .Eliminated .Rank {
+  color: #0f1417;
+}
+.InternationalStandingsPage .TeamLogoContainer {
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 2px;
+}
+.InternationalStandingsPage .TeamLogo {
+  height: 100%;
+  width: 100%;
+}
+.InternationalStandingsPage .TeamName {
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 210px;
+  white-space: nowrap;
+  font-size: 16px;
+}
+.InternationalStandingsPage .Spacer {
+  flex-grow: 1;
+}
+.InternationalStandingsPage .Points {
+  color: #fff;
+  font-size: 14px;
+}
+.InternationalStandingsPage .InviteSeparator {
+  margin-left: 48px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  height: 1px;
+  min-height: 1px;
+  background-color: orange;
+}
+.InternationalStandingsPage .FooterContainer {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #444;
+}
+.InternationalStandingsPage .Footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.InternationalStandingsPage .Footer .RankContainer {
+  width: 18px;
+  height: 18px;
+}
+.InternationalStandingsPage .FooterText {
+  margin-left: 10px;
+  color: gray;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.InternationalStandingsPage .FooterSpacer {
+  width: 50px;
+}

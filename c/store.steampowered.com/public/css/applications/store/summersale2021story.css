@@ -1,0 +1,437 @@
+body.forgeyourfate {
+  background: url(../../../images/applications/store/story_page_bg.jpg?v=valveisgoodatcaching)
+    no-repeat top center, #232323;
+  filter: drop-shadow(2px 4px 6px #00000066);
+}
+.PageOuterContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.LocalizedHeaderImg {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width: 500px) {
+  .LocalizedHeaderImg {
+    display: none;
+  }
+}
+.LocalizedHeaderMobileImg {
+  display: none;
+  margin-bottom: 50px;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width: 500px) {
+  .LocalizedHeaderMobileImg {
+    display: block;
+  }
+}
+.PageInnerBG {
+  background: url(../../../images/applications/store/back_cover.jpg?v=valveisgoodatcaching)
+    no-repeat top center, #442e31;
+  max-width: 1300px;
+  margin: 0 auto;
+  background-size: contain;
+  padding: 50px 0;
+  border-radius: 7px;
+  filter: drop-shadow(2px 4px 20px #00000033);
+}
+.PageInnerContent {
+  max-width: 940px;
+  margin: 0 auto;
+  color: #fffbec;
+  padding: 0 2%;
+}
+.GenreListContainer {
+  display: flex;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.HeaderContainer {
+  max-width: 770px;
+  margin: 0 auto;
+  font-family: "Jomhuria", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  word-break: break-word;
+  font-size: 185px;
+  text-align: left;
+  border-bottom: 3px solid #fefeef;
+  line-height: 80px;
+  margin-bottom: 25px;
+  margin-top: 100px;
+  color: #fffbec;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 500px) {
+  .HeaderContainer {
+    margin-top: 0;
+    font-size: 100px;
+    line-height: 70px;
+  }
+}
+.HeaderContainer .HeaderPrefix {
+  max-width: 770px;
+  margin: 0 auto 4px 0px;
+  font-size: 24px;
+  line-height: 54px;
+  text-indent: 3px;
+  font-family: "Big Shoulders Display", sans-serif;
+}
+.greek .HeaderContainer,
+.japanese .HeaderContainer,
+.koreana .HeaderContainer,
+.russian .HeaderContainer,
+.schinese .HeaderContainer,
+.tchinese .HeaderContainer,
+.thai .HeaderContainer,
+.turkish .HeaderContainer,
+.ukrainian .HeaderContainer,
+.vietnamese .HeaderContainer {
+  font-size: 80px;
+  font-family: "Motiva Sans", sans-serif;
+}
+.greek .GenreTitle,
+.japanese .GenreTitle,
+.koreana .GenreTitle,
+.russian .GenreTitle,
+.schinese .GenreTitle,
+.tchinese .GenreTitle,
+.thai .GenreTitle,
+.turkish .GenreTitle,
+.ukrainian .GenreTitle,
+.vietnamese .GenreTitle {
+  font-family: "Motiva Sans", sans-serif;
+}
+.bulgarian .HeaderContainer {
+  line-height: 130px;
+  font-size: 140px;
+}
+.bulgarian .HeaderPrefix {
+  margin-bottom: 15px;
+}
+.czech .HeaderContainer,
+.danish .HeaderContainer,
+.french .HeaderContainer,
+.hungarian .HeaderContainer,
+.polish .HeaderContainer,
+.romanian .HeaderContainer,
+.vietnamese .HeaderContainer {
+  line-height: 110px;
+}
+.czech .HeaderPrefix,
+.danish .HeaderPrefix,
+.french .HeaderPrefix,
+.hungarian .HeaderPrefix,
+.polish .HeaderPrefix,
+.romanian .HeaderPrefix,
+.vietnamese .HeaderPrefix {
+  margin-bottom: 12px;
+}
+.russian .HeaderContainer,
+.turkish .HeaderContainer {
+  padding-bottom: 10px;
+}
+.turkish .HeaderContainer,
+.vietnamese .HeaderContainer {
+  font-family: "Motiva Sans", sans-serif;
+}
+.ListHeader {
+  max-width: 770px;
+  margin: 0 auto;
+  text-indent: 0px;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+.HeaderIntro {
+  max-width: 770px;
+  margin: 0 auto;
+  text-indent: 0px;
+  font-size: 24px;
+  line-height: 54px;
+  font-weight: 900;
+  font-style: italic;
+  color: #fffbec;
+}
+.HeaderDesc {
+  max-width: 770px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-indent: 0px;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: justify;
+  color: #968396;
+  display: block;
+}
+.HeaderDesc.Wallpapers {
+  font-size: 14px;
+}
+.Noto {
+  font-family: "Noto Serif", sans-serif;
+  font-weight: 600;
+}
+.Noto.schinese,
+.Noto.sc_schinese {
+  font-family: "Noto Serif", "Noto Serif SC", sans-serif;
+}
+.Noto.tchinese {
+  font-family: "Noto Serif", "Noto Serif TC", sans-serif;
+}
+.Noto.japanese {
+  font-family: "Noto Serif", "Noto Serif JP", sans-serif;
+}
+.Noto.korean {
+  font-family: "Noto Serif", "Noto Serif KR\9", sans-serif;
+}
+.GenreContainer {
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  background: #cd723f;
+  flex: 1 1 100%;
+  color: #000;
+  margin-bottom: 10px;
+  min-height: 150px;
+  -webkit-transition-property: color, border, transform;
+  -webkit-transition-duration: .23s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-property: color, border, transform;
+  -moz-transition-duration: .23s;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-property: color, border, transform;
+  -o-transition-duration: .23s;
+  -o-transition-timing-function: ease-out;
+  transition-property: color, border, transform;
+  transition-duration: .23s;
+  transition-timing-function: ease-out;
+  border: 10px solid #fffbec00;
+  border-radius: 40px;
+  transform: scale(1);
+}
+@media screen and (max-width: 500px) {
+  .GenreContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.GenreContainer:hover {
+  color: initial;
+  border: 10px solid #fffbef;
+  transform: scale(1.09);
+}
+.GenreContainer:hover .GenreSubheader {
+  color: #fefeef;
+}
+.GenreContainer .LeftColumn {
+  max-width: 60%;
+}
+@media screen and (max-width: 500px) {
+  .GenreContainer .LeftColumn {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.GenreContainer .RightColumn {
+  display: flex;
+  align-items: center;
+}
+.GenreContainer .GenreTitle {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  color: #232323;
+  margin-bottom: 10px;
+}
+.GenreContainer .GenreSubheader {
+  font-size: 16px;
+}
+.GenreContainer .GenreSubheader span {
+  text-decoration: underline;
+}
+.GenreContainer .GenreStory {
+  font-size: 16px;
+  letter-spacing: .05em;
+  font-weight: 600;
+  color: #232323;
+}
+.GenreContainer .StickerPreview {
+  width: 158px;
+  height: 158px;
+  border: 0px solid #efefef00;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-position: center;
+  background-color: #23232333;
+  background-repeat: no-repeat;
+  box-shadow: 3px -1px 4px 4px #00000022, inset 0px 0px 0px 5px #fefeef;
+}
+.GenreContainer .StickerPreview.Unclaimed {
+  border: 3px dashed #fefeef66;
+  box-shadow: inset 0px 0px 0px 5px #fefeef00;
+}
+.GenreContainer.Unclaimed {
+  background: #7c5f5a;
+}
+.CompletedSummaryText {
+  margin: 50px auto;
+  padding: 0 2%;
+}
+.TheEnd {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: .09em;
+  color: #fefeef;
+  margin: 0 auto 200px;
+  max-width: 750px;
+  text-indent: 0px;
+}
+.BadgeContainer {
+  background: url(../../../images/applications/store/book.jpg?v=valveisgoodatcaching)
+    no-repeat top center;
+  background-size: contain;
+  margin: 50px auto;
+  display: flex;
+  color: #212121;
+  height: 900px;
+  max-width: 1100px;
+  border-radius: 5px;
+  transform: skew(2deg, -2deg);
+  box-shadow: 6px -2px 8px 8px #00000011;
+}
+@media screen and (max-width: 900px) {
+  .BadgeContainer {
+    height: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .BadgeContainer {
+    background: url(../../../images/applications/store/page_texture.jpg?v=valveisgoodatcaching)
+      no-repeat top center;
+    width: 100%;
+    height: auto;
+    transform: none;
+    flex-wrap: wrap;
+  }
+}
+.BadgeContainer .BadgeName {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  margin: 15px 0;
+}
+@media screen and (max-width: 700px) {
+  .BadgeContainer .BadgeName {
+    font-size: 30px;
+  }
+}
+.BadgeContainer .SubHeader {
+  font-size: 32px;
+}
+@media screen and (max-width: 700px) {
+  .BadgeContainer .SubHeader {
+    font-size: 20px;
+  }
+}
+.BadgeContainer .BadgeText {
+  font-size: 18px;
+  text-align: center;
+  text-transform: none;
+  color: #232323;
+}
+@media screen and (max-width: 700px) {
+  .BadgeContainer .BadgeText {
+    font-size: 14px;
+  }
+}
+.BadgeContainer .BadgeDesc {
+  font-style: normal;
+  font-weight: 600;
+  color: #232323;
+  font-size: 18px;
+  text-align: justify;
+  max-width: 700px;
+}
+@media screen and (max-width: 700px) {
+  .BadgeContainer .BadgeDesc {
+    font-size: 14px;
+  }
+}
+.BadgeContainer .BadgeImg {
+  width: 40vw;
+  max-width: 390px;
+  max-height: 390px;
+  height: 40vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 3px -1px 4px 4px #00000011, inset 0px 0px 0px 22px #fefeef;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 700px) {
+  .BadgeContainer .BadgeImg {
+    box-shadow: none;
+    margin-bottom: 10px;
+  }
+}
+.BadgeContainer .BadgeLink {
+  font-size: 14px;
+  letter-spacing: .02em;
+  text-align: center;
+  color: #437882;
+  margin-top: 10px;
+}
+.BadgeContainer .FrameExample {
+  background: url(../../../images/applications/store/all_frames_sm.png?v=valveisgoodatcaching)
+    no-repeat top center;
+  width: 24vw;
+  height: 12vw;
+  background-size: contain;
+  margin: 10px;
+  padding-top: 20px;
+}
+@media screen and (max-width: 600px) {
+  .BadgeContainer .FrameExample {
+    width: 40vw;
+    height: 15vw;
+  }
+}
+.BadgeContainer .Badge_51 {
+  background-image: url(../../../images/applications/store/51_lg.png?v=valveisgoodatcaching);
+}
+.BadgeContainer .Badge_52 {
+  background-image: url(../../../images/applications/store/52_lg.png?v=valveisgoodatcaching);
+}
+.BadgeContainer .Badge_53 {
+  background-image: url(../../../images/applications/store/53_lg.png?v=valveisgoodatcaching);
+}
+.BadgeContainer .Badge_54 {
+  background-image: url(../../../images/applications/store/54_lg.png?v=valveisgoodatcaching);
+}
+.BadgeContainer .Badge_55 {
+  background-image: url(../../../images/applications/store/55_lg.png?v=valveisgoodatcaching);
+}
+.BadgeContainer .Column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 5%;
+  max-width: 40%;
+}
+@media screen and (max-width: 500px) {
+  .BadgeContainer .Column {
+    padding: 5%;
+    max-width: none;
+    width: 100%;
+  }
+}

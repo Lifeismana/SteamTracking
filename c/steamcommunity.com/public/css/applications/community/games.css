@@ -1,0 +1,1178 @@
+.Gameslistapp {
+  --typography-font-size-small: 0.625rem;
+  --typography-font-size-medium: 0.75rem;
+  --typography-font-size-body: 0.9375rem;
+  --typography-font-size-large: 1.0625rem;
+  --typography-color-neutral: #b8bcbf;
+  --typography-color-primary: white;
+  --color-info: #1a9fff;
+  --color-backdrop: #3c3f49;
+  --color-highlight: #199fff;
+  max-width: 936px;
+  margin: auto;
+}
+.Gameslistapp.GamepadMode {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.DisplayControls {
+  display: grid;
+  grid-template-areas: "search bothOwned sort";
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr auto;
+  padding-bottom: 10px;
+}
+.FilterInput {
+  grid-area: search;
+}
+.SortOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  grid-area: sort;
+}
+.SortOptions .SortOption {
+  border: none;
+  background: transparent;
+  color: var(--color-highlight);
+  cursor: pointer;
+}
+.SortOptions .SortOption.SelectedSort {
+  color: var(--typography-color-primary);
+  text-decoration: underline;
+}
+.BothOwnedFilter {
+  grid-area: bothOwned;
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 8px;
+  font-size: var(--typography-font-size-body);
+}
+.MeasurementContainer {
+  position: relative;
+}
+.PrivacySettingsLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  margin: 6px 14px 0 0;
+}
+.PrivacySettingsLink svg {
+  width: 16px;
+}
+@media (max-width: 51rem) {
+  .DisplayControls {
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "search search" "bothOwned sort";
+    padding-left: 4px;
+    padding-right: 4px;
+    gap: 4px;
+  }
+  .SortOptions {
+    justify-content: flex-end;
+  }
+  .PrivacySettingsLink {
+    display: none;
+  }
+}
+.Filter {
+  position: relative;
+  display: flex;
+  height: 33px;
+}
+.Filter input {
+  background: rgba(24, 26, 33, 0.5);
+  color: var(--typography-color-primary);
+  border: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 7px 8px 7px 14px;
+}
+.Filter input::placeholder {
+  font-style: italic;
+}
+.Filter .ClearButton {
+  position: absolute;
+  background: transparent;
+  border: none;
+  width: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  right: 4px;
+  padding: 0;
+}
+.Filter .ClearButton svg {
+  color: var(--typography-color-neutral);
+  fill: var(--typography-color-neutral);
+}
+.Filter .SearchIcon {
+  position: absolute;
+  width: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  right: 4px;
+  pointer-events: none;
+}
+.Icon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform .1s ease-in-out;
+  vertical-align: top;
+  box-shadow: 0 0 3px #0005;
+  cursor: pointer;
+}
+.Icon.IconGlow {
+  box-shadow: 0px 0px 2px 1px rgba(255, 184, 78, 0.6), 0px 0px 16px 1px
+    rgba(255, 184, 78, 0.4);
+}
+.Icon:after {
+  background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+}
+.AchievementIconWrapper {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+.BasicUI .AchievementIconWrapper {
+  width: 64px;
+  height: 64px;
+}
+.RareAchievementIconGlowContainerRoot,
+.RareAchievementIconGlowContainer {
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  bottom: -20%;
+  left: -20%;
+  -webkit-mask-image: url(../../../images/applications/community/square_mask.png?v=valveisgoodatcaching);
+  mask-image: url(../../../images/applications/community/square_mask.png?v=valveisgoodatcaching);
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  overflow: hidden;
+}
+.RareAchievementIconGlowContainer {
+  animation-name: rotate;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-play-state: running;
+  -webkit-mask-image: url(../../../images/applications/community/star_mask.png?v=valveisgoodatcaching);
+  mask-image: url(../../../images/applications/community/star_mask.png?v=valveisgoodatcaching);
+}
+div.LowPerfMode .RareAchievementIconGlowContainer {
+  animation-duration: 0s;
+}
+.RareAchievementNoAnimation .RareAchievementIconGlowContainer {
+  animation-play-state: paused;
+}
+.RareAchievementIconGlow {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  animation-name: rotate;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  mix-blend-mode: overlay;
+  background: repeating-conic-gradient(
+    rgba(255, 217, 0, 0.178) 0%,
+    rgba(255, 184, 78, 0) 6%,
+    rgba(255, 217, 0, 0.178) 10%,
+    #ffb84e 26%,
+    rgba(255, 217, 0, 0.178) 35%,
+    #ffb84e 40%,
+    rgba(255, 217, 0, 0.178) 60%,
+    #ffb84e 82%,
+    rgba(255, 217, 0, 0.178) 100%
+  );
+  overflow: hidden;
+}
+div.LowPerfMode .RareAchievementIconGlow {
+  animation-duration: 0s;
+}
+.RareAchievementNoAnimation .RareAchievementIconGlow {
+  animation-play-state: paused;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.HiddenLabel {
+  width: 48px;
+  height: 48px;
+  margin-right: 5px;
+  font-size: 32px;
+  color: #cacbcd;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 0 3px #0005;
+  background: linear-gradient(to right, #3b414a 0%, #2c3138 95%);
+}
+.BasicUI .HiddenLabel {
+  width: 64px;
+  height: 64px;
+  background: #acb2c924;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+._3szjUMH5QeRwtXAsLRcWt9 {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-progress-bar-background);
+  border-radius: 2px;
+  overflow: hidden;
+}
+._3szjUMH5QeRwtXAsLRcWt9::after {
+  content: "";
+  display: block;
+  width: calc(100% * var(--percent));
+  height: 100%;
+  background-color: var(--color-progress-bar-foreground);
+}
+._3szjUMH5QeRwtXAsLRcWt9._3DjdoQj5NoknowwV5t5JPN::after {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  background-color: var(--color-progress-bar-foreground);
+  background-position-x: 0px;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  animation: _2SA1xV5w3BGirkDWosGYoX 2s linear infinite forwards;
+}
+._3szjUMH5QeRwtXAsLRcWt9._3DjdoQj5NoknowwV5t5JPN._3G7KLhFOuTiHW-fGxtWtRs::after {
+  width: 100%;
+  background-color: transparent;
+}
+@keyframes _2SA1xV5w3BGirkDWosGYoX {
+  0% {
+    background-position-x: calc(0% - 250px);
+  }
+  100% {
+    background-position-x: calc(100% + 250px);
+  }
+}
+._3wMS41OoTPnZyEddTVwzy_ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+._3wMS41OoTPnZyEddTVwzy_._3t_UEZDy1QxxcYfn3TTvD2 svg {
+  filter: drop-shadow(0 0 2px #000000) drop-shadow(0 0 16px #1a9fff)
+    drop-shadow(10px 10px 16px #1a9fff);
+}
+.List {
+  margin: auto;
+  position: relative;
+}
+.GamesListItemContainer {
+  margin-bottom: 10px;
+  position: absolute;
+  width: 100%;
+}
+.GamesListItem {
+  position: relative;
+  --padding: 10px;
+  display: grid;
+  box-sizing: border-box;
+  height: 140px;
+  grid-template-areas: "image title title" "image playtime playtime" "image links download";
+  grid-template-columns: 259px min-content auto;
+  grid-template-rows: auto auto 1fr;
+  gap: var(--padding);
+  padding: var(--padding);
+  row-gap: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.GamesListItem.Changing {
+  background-color: #3d4450;
+}
+.GamesListItem.Changing .NavButton {
+  background-color: rgba(103, 112, 123, 0.5);
+}
+.GamesListItem.Changing .NavButton:hover {
+  background-color: #67707b;
+}
+.GamesListItem .GameItemPortrait {
+  grid-area: image;
+  width: 259px;
+  height: 121px;
+}
+.GamesListItem .GameItemPortrait .FallbackTitle {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  text-align: center;
+  word-break: break-word;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #b9c2cc;
+  background: linear-gradient(to bottom, #ffffff 0%, #b1b7ca 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+.GamesListItem .PortraitContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.HasAdultContent .GamesListItem .GameItemPortrait img {
+  filter: blur(30px);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.GamesListItem picture {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.GamesListItem picture img {
+  width: 100%;
+  height: 100%;
+}
+.GamesListItem .GameNameContainer {
+  grid-area: title;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: calc(2.1 * var(--typography-font-size-large));
+  margin-right: 32px;
+}
+.GamesListItem .GameName {
+  font-weight: 400;
+  font-size: var(--typography-font-size-large);
+  color: var(--typography-color-primary);
+  line-height: var(--typography-font-size-large);
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-bottom: .14em;
+}
+.GamesListItem .Playtime {
+  grid-area: playtime;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  white-space: nowrap;
+  color: var(--typography-color-neutral);
+}
+[lang="ru"] .GamesListItem .Playtime,
+[lang="bg"] .GamesListItem .Playtime,
+[lang="de"] .GamesListItem .Playtime,
+[lang="fi"] .GamesListItem .Playtime {
+  gap: 8px;
+}
+.GamesListItem .Playtime .Hours,
+.GamesListItem .Playtime .Hours2weeks,
+.GamesListItem .Playtime .LastPlayed {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: var(--typography-font-size-medium);
+  color: rgba(184, 188, 191, 0.8);
+}
+.GamesListItem .Playtime .FactLabel {
+  font-weight: 700;
+  letter-spacing: .03em;
+  color: var(--typography-color-neutral);
+}
+.GamesListItem .AchievementContainer {
+  grid-area: achievements;
+  align-self: stretch;
+}
+.GamesListItem .AchievementContainer .AchievementsProgress {
+  row-gap: 6px;
+}
+.GamesListItem .Buttons {
+  grid-area: links;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.GamesListItem .Buttons .NavButton {
+  padding: 6px 10px 6px 15px;
+}
+.GamesListItem .GameLinks {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.GamesListItem .GameLinks .GameLinksButton {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.GamesListItem .GameLinks .GameLinksButton svg {
+  width: 18px;
+}
+.GamesListItem .GameLinks .AppPrivateIndicator {
+  margin-right: 6px;
+}
+.GamepadMode .GamesListItem .GameLinks {
+  position: unset;
+  top: unset;
+  left: unset;
+}
+.GamesListItem .DownloadStatus {
+  grid-area: download;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+.GamesListItem .PerfectRibbon {
+  position: absolute;
+  left: -12px;
+  bottom: -12px;
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 51rem) {
+  .GamesListItem {
+    grid-template-areas: "image title title" "image playtime download" "links playtime download";
+    grid-template-columns: 184px 1fr auto;
+    grid-template-rows: auto auto 1fr;
+    row-gap: 5px;
+  }
+  .GamesListItem .GameItemPortrait {
+    width: 184px;
+    height: 86px;
+  }
+  .GamesListItem .Playtime {
+    display: grid;
+    grid-template-areas: "total lastPlayed empty" "achievements achievements achievements";
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto;
+    align-content: space-between;
+    gap: 8px;
+  }
+  .GamesListItem .ContentLinks {
+    width: 100%;
+  }
+  .GamesListItem .StatLinks {
+    display: none;
+  }
+}
+@media (max-width: 30rem) {
+  .GamesListItem {
+    grid-template-areas: "image title" "image playtime";
+    grid-template-columns: 93px 1fr;
+    grid-template-rows: auto 1fr;
+    text-align: left;
+    width: 100%;
+    border: none;
+    align-items: stretch;
+    padding: 0;
+    padding-right: var(--padding);
+    background-color: rgba(58, 64, 74, 0.2);
+  }
+  .GamesListItem .GameItemPortrait {
+    width: 93px;
+    height: 140px;
+  }
+  .GamesListItem .Playtime {
+    gap: 4px;
+    align-content: start;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .GamesListItem .Playtime .Hours {
+    flex-direction: row;
+    gap: 1ch;
+  }
+  .GamesListItem .Playtime .AchievementContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 8px;
+    padding-bottom: var(--padding);
+    align-self: stretch;
+  }
+  .GamesListItem .Playtime .LastPlayed {
+    display: none;
+  }
+  .GamesListItem .Playtime .Hours2weeks {
+    flex-direction: row;
+    gap: 1ch;
+  }
+  .GamesListItem .Buttons {
+    display: none;
+  }
+  .GamesListItem .GameLinks {
+    display: none;
+  }
+  .GamesListItem .PerfectRibbon {
+    top: 0;
+    left: unset;
+    right: 0;
+  }
+}
+.BottomSheetContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.BottomSheetContainer .BottomSheetOverlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.BottomSheet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden;
+}
+.BottomSheet .GameInfo {
+  position: relative;
+  box-sizing: border-box;
+  padding: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.BottomSheet .GameInfo .Facts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 16px;
+  flex-grow: 1;
+}
+.BottomSheet .GameInfo .Facts .Playtime {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
+}
+.BottomSheet .GameInfo .Facts .Playtime .Hours,
+.BottomSheet .GameInfo .Facts .Playtime .Hours2weeks,
+.BottomSheet .GameInfo .Facts .Playtime .LastPlayed {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: var(--typography-font-size-large);
+  color: var(--typography-color-primary);
+}
+.BottomSheet .GameInfo .Facts .Playtime .FactLabel {
+  font-weight: 700;
+  letter-spacing: .5px;
+  opacity: 70%;
+  font-size: var(--typography-font-size-medium);
+}
+.BottomSheet .GameInfo .GameTitle {
+  font-size: var(--typography-font-size-large);
+  font-weight: 500;
+  color: var(--typography-color-primary);
+  margin-bottom: 16px;
+}
+.BottomSheet .GameInfo .AchievementContainer {
+  margin-top: 16px;
+  display: flex;
+  grid-column: 1 / 3;
+}
+.BottomSheet .GameInfo .AchievementContainer .AchievementsProgress {
+  width: 100%;
+}
+.BottomSheet .GameInfo .AchievementContainer .AchievementIcons {
+  display: none;
+}
+.BottomSheet .GameInfo .Portrait {
+  width: 35%;
+  object-fit: contain;
+  object-position: top;
+}
+.HasAdultContent .BottomSheet .GameInfo .Portrait {
+  filter: blur(30px);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.BottomSheet .GameInfo .BlurredBackground {
+  position: absolute;
+  top: -40px;
+  bottom: 0px;
+  left: -20px;
+  right: -20px;
+  width: 120%;
+  z-index: -1;
+}
+.BottomSheet .GameInfo .BlurredBackground::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.BottomSheet .GameInfo .BlurredBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(10px);
+}
+.BottomSheet .BottomSheetSection {
+  background-color: #2a2c34;
+}
+.BottomSheet .BottomSheetSection summary {
+  font-weight: 700;
+  font-size: var(--typography-font-size-body);
+  color: var(--typography-color-primary);
+  display: inline-flex;
+  gap: .25rem;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+}
+.BottomSheet .BottomSheetSection summary svg {
+  width: 16px;
+  transition: transform 120ms ease-in-out;
+}
+.BottomSheet .BottomSheetSection .SectionContent {
+  display: flex;
+  flex-direction: column;
+}
+.BottomSheet .BottomSheetSection .SectionContent .BottomSheetRemoteControls {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+}
+.BottomSheet .BottomSheetSection[open] summary {
+  background-color: #3d4450;
+}
+.BottomSheet .BottomSheetSection[open] summary svg {
+  transform: scaleY(-1);
+}
+.BottomSheet .BottomSheetSection .BottomSheetLink {
+  font-size: var(--typography-font-size-body);
+  color: var(--typography-color-primary);
+  display: inline-flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.BottomSheet .BottomSheetSection .ClientName {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: var(--typography-font-size-body);
+  color: var(--typography-color-primary);
+}
+@keyframes placeholderPulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.NavButton {
+  background: rgba(58, 64, 74, 0.5);
+  border-radius: 2px;
+  font-size: 13px;
+  letter-spacing: .03em;
+  font-weight: 400;
+  color: var(--typography-color-primary);
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  cursor: pointer;
+  gap: 15px;
+}
+.NavButton svg {
+  width: 12px;
+}
+.NavButton:hover {
+  background: #67707b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.GamepadMode .NavButton {
+  opacity: 0;
+  transition: opacity 200ms ease 100ms;
+}
+.GamepadMode .gpfocuswithin.GamesListItem .NavButton {
+  opacity: 1;
+}
+.NavDropdownMenu {
+  min-width: 124px;
+}
+.NavDropdownMenu .contextMenuItem {
+  padding: 0;
+}
+.NavDropdownMenu .contextMenuItem a,
+.NavDropdownMenu .contextMenuItem span {
+  color: #ebebeb;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+.AchievementContainer {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 232px);
+  grid-template-rows: 1fr;
+  flex-grow: 1;
+  gap: 16px;
+  min-height: 32px;
+}
+.AchievementContainer .AchievementIcons {
+  height: 32px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.AchievementContainer .AchievementIcons .AchievementIcon {
+  width: 32px;
+  height: 32px;
+}
+.AchievementContainer .AchievementIcons .Remainder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: 100%;
+  width: 32px;
+  background-color: #2e3238;
+  color: #fff;
+  font-size: var(--typography-font-size-small);
+  text-shadow: 1px 1px 1px #000;
+  letter-spacing: 1px;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.AchievementHover {
+  position: relative;
+  box-sizing: border-box;
+  color: #fff;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  width: 400px;
+  padding: 0;
+}
+.AchievementHover .Background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -3;
+  background: radial-gradient(
+    ellipse farthest-corner at 20% 30%,
+    #4c505b 0%,
+    #34373f 50%,
+    #282c32 100%
+  );
+}
+.AchievementHover .Blur {
+  width: 380px;
+  height: 380px;
+  filter: blur(10px) saturate(2);
+  position: absolute;
+  left: -60px;
+  top: -60px;
+  opacity: 0.4;
+  -webkit-mask: radial-gradient(
+    ellipse farthest-corner at 150px 150px,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.3) 34%,
+    rgba(0, 0, 0, 0) 64%
+  );
+  mask: radial-gradient(
+    ellipse farthest-corner at 150px 150px,
+    black 0%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(0, 0, 0, 0.3) 34%,
+    rgba(0, 0, 0, 0) 64%
+  );
+  mix-blend-mode: screen;
+}
+.AchievementHover .TopSection {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  box-sizing: border-box;
+}
+.AchievementHover .TopSection .AchievementIcon {
+  width: 92px;
+  height: 92px;
+  flex-shrink: 0;
+  margin: 8px;
+}
+.AchievementHover .TopSection .TextSection {
+  font-weight: 300;
+  flex-grow: 1;
+  color: #ffffff80;
+  font-size: 13px;
+  padding: 16px 16px 16px 4px;
+}
+.AchievementHover .TopSection .TextSection .Name {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ffffffe0;
+}
+.AchievementHover .Unlocked {
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 26, 30, 0.7) 5%,
+    rgba(24, 26, 30, 0.4) 95%
+  );
+  font-size: 13px;
+  color: #888;
+}
+.AchievementHover .Unlocked .RareLabel {
+  color: #e4a74a;
+}
+.AchievementsProgress {
+  display: grid;
+  grid-template-areas: "label fraction" "bar bar";
+  gap: 4px;
+  align-items: center;
+  align-content: start;
+}
+.AchievementsProgress .AchievementsProgressBar {
+  grid-area: bar;
+  --color-progress-bar-background: var(--color-backdrop);
+  --color-progress-bar-foreground: var(--color-info);
+}
+.AchievementsProgress .AchievementsProgressLabel {
+  grid-area: label;
+  font-weight: 700;
+  font-size: var(--typography-font-size-medium);
+  margin-right: 8px;
+  color: inherit;
+  letter-spacing: .03em;
+}
+.AchievementsProgress .AchievementsFraction {
+  grid-area: fraction;
+  font-size: var(--typography-font-size-medium);
+  margin-right: 8px;
+  justify-self: flex-end;
+  text-align: end;
+  min-width: 2.5rem;
+}
+.emptyDescription {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  font-size: var(--typography-font-size-body);
+  font-weight: 400;
+  text-align: center;
+}
+.GamesListItem .GamepadNavigationDropdown {
+  padding-top: 0;
+  padding-bottom: 0;
+  --field-row-children-spacing: 0;
+  --gamepad-field-control-min-width: 150px;
+}
+.GamesListItem
+  .GamepadNavigationDropdown
+  .GamepadNavigationDropdownButton.DialogButton {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+.RemoteDownloadClientBar {
+  background-color: var(--color-highlight);
+  color: var(--typography-color-primary);
+  border-radius: 2px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.RemoteDownloadClientBar .RemoteDownloadHeader {
+  font-size: 14px;
+  font-weight: 700;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.RemoteDownloadClientBar .InfoIcon svg {
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+}
+.RemoteDownloadClientBar .InfoIcon svg circle {
+  stroke: #fff;
+}
+.RemoteDownloadClientBar .ClientIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+.RemoteDownloadClientBar.NoConnection {
+  background-color: rgba(24, 26, 33, 0.5);
+  color: var(--typography-color-neutral);
+  position: relative;
+  top: unset;
+}
+.RemoteDownloadClientBar.NoConnection .RemoteDownloadHeader {
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+  cursor: pointer;
+}
+.RemoteDownloadClientBar .RemoteDownloadStatus {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  gap: .5rem;
+}
+.RemoteDownloadClientBar .RemoteDownloadHelp {
+  font-size: var(--typography-font-size-body);
+  font-weight: 400;
+  text-align: center;
+  display: none;
+}
+.RemoteDownloadClientBar[open] .RemoteDownloadHelp {
+  display: block;
+}
+.RemoteDownloadClientBar .NoConnectionText {
+  font-weight: 400;
+}
+.RemoteDownloadClientBar .LearnMoreCta {
+  font-weight: 400;
+  display: inline-flex;
+  gap: .25rem;
+  align-items: center;
+  color: #fff;
+}
+.RemoteDownloadClientBar .LearnMoreCta svg {
+  width: 12px;
+  transition: transform 120ms ease-in-out;
+}
+.RemoteDownloadClientBar[open] .LearnMoreCta svg {
+  transform: scaleY(-1);
+}
+@media (max-width: 910px) {
+  .RemoteDownloadClientBar {
+    position: relative;
+  }
+}
+@media (max-width: 30rem) {
+  .RemoteDownloadClientBar .RemoteDownloadHeader {
+    flex-direction: column;
+    gap: unset;
+  }
+  .RemoteDownloadClientBar .RemoteDownloadStatus {
+    flex-wrap: wrap;
+    gap: unset;
+  }
+  .RemoteDownloadClientBar .RemoteDownloadStatus .NoConnectionText {
+    margin-left: .5rem;
+  }
+  .RemoteDownloadClientBar.NoConnection .RemoteDownloadHeader {
+    display: flex;
+    gap: 4px;
+    text-align: center;
+  }
+}
+.DownloadBarWithLabel {
+  display: grid;
+  grid-template-areas: "status status" "bar bar" "progress estimate";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  gap: 4px;
+  align-items: center;
+  width: 100%;
+}
+.DownloadBarWithLabel .DownloadStatus,
+.DownloadBarWithLabel .DownloadPaused {
+  grid-area: status;
+  justify-self: end;
+  color: var(--color-info);
+  font-size: var(--typography-font-size-medium);
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+.DownloadBarWithLabel .DownloadProgress {
+  grid-area: progress;
+  justify-self: start;
+  font-size: var(--typography-font-size-small);
+}
+.DownloadBarWithLabel .DownloadProgress .CurrentSpace {
+  font-weight: 700;
+  color: var(--typography-color-primary);
+}
+.DownloadBarWithLabel .DownloadEstimate {
+  grid-area: estimate;
+  justify-self: end;
+  font-size: var(--typography-font-size-small);
+}
+.DownloadBar {
+  grid-area: bar;
+  --color-progress-bar-background: var(--color-backdrop);
+  --color-progress-bar-foreground: var(--color-info);
+}
+.RemoteControls .ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  box-sizing: border-box;
+  gap: 16px;
+}
+.RemoteControls .NoRemoteControl {
+  font-weight: 500;
+  font-size: var(--typography-font-size-medium);
+  letter-spacing: .5px;
+  color: var(--typography-color-neutral);
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  text-align: end;
+}
+.RemoteControls .DownloadSize {
+  font-weight: 700;
+  font-size: var(--typography-font-size-medium);
+  white-space: nowrap;
+}
+.RemoteControls .UpdateSchedule {
+  font-weight: 700;
+  font-size: var(--typography-font-size-medium);
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+@media (max-width: 37rem) {
+  .RemoteControls .UpdateSchedule {
+    display: none;
+  }
+}
+.RemoteControls .DownloadIconButton {
+  align-self: flex-end;
+}
+.DownloadBarContainer {
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  box-sizing: border-box;
+  background-color: rgba(61, 68, 80, 0.5);
+  padding: 10px;
+  gap: 16px;
+  white-space: nowrap;
+}
+.DownloadBarContainer .DownloadSize {
+  font-weight: 700;
+  font-size: var(--typography-font-size-medium);
+}
+.DownloadIconButton {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+  background-color: var(--color-info);
+  color: var(--typography-color-primary);
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  border-radius: 2px;
+}
+.DownloadIconButton svg {
+  width: 1rem;
+  color: var(--typography-color-primary);
+  fill: var(--typography-color-primary);
+}
+.DownloadIconButton:hover {
+  background: #0bf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.sectionTab.WishlistTab {
+  transform: translateY(-6px);
+  margin-left: auto;
+}
+.tabList {
+  display: flex;
+}
+.tabList .sectionTab {
+  white-space: nowrap;
+}
+.GamepadMode .WishlistTab {
+  top: unset;
+  position: unset;
+  margin-bottom: unset;
+  right: unset;
+}
+.TabBaseline,
+.SelectBaseline {
+  margin-bottom: 14px;
+}

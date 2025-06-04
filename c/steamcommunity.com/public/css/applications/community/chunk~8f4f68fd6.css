@@ -1,0 +1,2722 @@
+.WebPinnedNotification:last-child > div {
+  margin-bottom: 8px;
+}
+@keyframes BackgroundAnimation {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey-nocolor {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-grey {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnimBorder-darkGrey {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes ItemFocusAnim-green {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes focusAnimation {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes hoverAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.StandardTemplateContainer {
+  cursor: pointer;
+}
+.BasicUI .StandardTemplateContainer:hover,
+.BasicUI .StandardTemplateContainer.gpfocus {
+  background-color: #3d4450;
+  animation-name: ItemFocusAnim-darkerGrey;
+  z-index: 1;
+}
+.BasicUI .StandardTemplateContainer:hover .Timestamp,
+.BasicUI .StandardTemplateContainer.gpfocus .Timestamp {
+  color: #67707b;
+}
+.StandardTemplate,
+.PinnedTemplate {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  transition-property: transform, background-color;
+  transition-duration: .32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
+}
+.StandardTemplate:hover,
+.PinnedTemplate:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
+.StandardTemplate.gpfocus,
+.PinnedTemplate.gpfocus {
+  background-color: #3d4450;
+  animation-name: ItemFocusAnim-darkerGrey;
+  z-index: 1;
+}
+.StandardTemplate .StandardLogoDimensions,
+.PinnedTemplate .StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.StandardTemplate .Content,
+.PinnedTemplate .Content {
+  margin-left: 12px;
+  min-width: 0;
+  overflow: hidden;
+}
+.StandardTemplate .Header,
+.PinnedTemplate .Header {
+  display: flex;
+  flex-direction: row;
+  height: 14px;
+  line-height: 14px;
+}
+.StandardTemplate .Icon,
+.PinnedTemplate .Icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+  color: #fff;
+}
+.StandardTemplate .Icon > svg,
+.PinnedTemplate .Icon > svg {
+  width: 13px;
+  height: 13px;
+}
+.StandardTemplate .Title,
+.PinnedTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: .5em;
+  color: #fff;
+}
+.StandardTemplate .StandardNotificationDescription,
+.StandardTemplate .StandardNotificationSubText,
+.PinnedTemplate .StandardNotificationDescription,
+.PinnedTemplate .StandardNotificationSubText {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+}
+.StandardTemplate .StandardNotificationDescription:not(.Multiline),
+.StandardTemplate .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplate .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplate .StandardNotificationSubText:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.StandardTemplate .StandardNotificationDescription.Multiline,
+.StandardTemplate .StandardNotificationSubText.Multiline,
+.PinnedTemplate .StandardNotificationDescription.Multiline,
+.PinnedTemplate .StandardNotificationSubText.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.StandardTemplate .StandardNotificationDescription,
+.PinnedTemplate .StandardNotificationDescription {
+  color: #b8bcbf;
+}
+.StandardTemplate .StandardNotificationSubText,
+.PinnedTemplate .StandardNotificationSubText {
+  color: #67707b;
+}
+.StandardTemplate .Count,
+.PinnedTemplate .Count {
+  background-color: #1a9fff;
+  color: #fff;
+  border-radius: 26px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 8px;
+  margin-right: -8px;
+}
+.StandardTemplate .Timestamp,
+.PinnedTemplate .Timestamp {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3d4450;
+  flex-shrink: 0;
+}
+.StandardTemplate:hover .Timestamp,
+.StandardTemplate.gpfocus .Timestamp,
+.PinnedTemplate:hover .Timestamp,
+.PinnedTemplate.gpfocus .Timestamp {
+  color: #67707b;
+}
+.PinnedTemplate {
+  height: 16px;
+  cursor: pointer;
+}
+.PinnedTemplate .PinnedBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AllNotificationsTemplate,
+.StandardTemplateDesktop,
+.DesktopToastTemplate,
+.PinnedTemplateWeb,
+.PinnedTemplateDesktop {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  transition-property: transform, background-color;
+  transition-duration: .32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+}
+.AllNotificationsTemplate:hover,
+.StandardTemplateDesktop:hover,
+.DesktopToastTemplate:hover,
+.PinnedTemplateWeb:hover,
+.PinnedTemplateDesktop:hover {
+  cursor: pointer;
+}
+.AllNotificationsTemplate .StandardLogoDimensions,
+.StandardTemplateDesktop .StandardLogoDimensions,
+.DesktopToastTemplate .StandardLogoDimensions,
+.PinnedTemplateWeb .StandardLogoDimensions,
+.PinnedTemplateDesktop .StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.AllNotificationsTemplate .Content,
+.StandardTemplateDesktop .Content,
+.DesktopToastTemplate .Content,
+.PinnedTemplateWeb .Content,
+.PinnedTemplateDesktop .Content {
+  margin-left: 12px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.AllNotificationsTemplate .Header,
+.StandardTemplateDesktop .Header,
+.DesktopToastTemplate .Header,
+.PinnedTemplateWeb .Header,
+.PinnedTemplateDesktop .Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.AllNotificationsTemplate .Icon,
+.StandardTemplateDesktop .Icon,
+.DesktopToastTemplate .Icon,
+.PinnedTemplateWeb .Icon,
+.PinnedTemplateDesktop .Icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  color: #8b929a;
+  fill: #8b929a;
+  display: flex;
+}
+.AllNotificationsTemplate .Icon > svg,
+.StandardTemplateDesktop .Icon > svg,
+.DesktopToastTemplate .Icon > svg,
+.PinnedTemplateWeb .Icon > svg,
+.PinnedTemplateDesktop .Icon > svg {
+  width: 13px;
+  height: 13px;
+  font-size: 13px;
+}
+.AllNotificationsTemplate .Title,
+.StandardTemplateDesktop .Title,
+.DesktopToastTemplate .Title,
+.PinnedTemplateWeb .Title,
+.PinnedTemplateDesktop .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8b929a;
+  margin-right: .5em;
+}
+.AllNotificationsTemplate .StandardNotificationDescription:not(.Multiline),
+.AllNotificationsTemplate .StandardNotificationSubText:not(.Multiline),
+.StandardTemplateDesktop .StandardNotificationDescription:not(.Multiline),
+.StandardTemplateDesktop .StandardNotificationSubText:not(.Multiline),
+.DesktopToastTemplate .StandardNotificationDescription:not(.Multiline),
+.DesktopToastTemplate .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplateWeb .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplateWeb .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplateDesktop .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplateDesktop .StandardNotificationSubText:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AllNotificationsTemplate .StandardNotificationDescription.Multiline,
+.AllNotificationsTemplate .StandardNotificationSubText.Multiline,
+.StandardTemplateDesktop .StandardNotificationDescription.Multiline,
+.StandardTemplateDesktop .StandardNotificationSubText.Multiline,
+.DesktopToastTemplate .StandardNotificationDescription.Multiline,
+.DesktopToastTemplate .StandardNotificationSubText.Multiline,
+.PinnedTemplateWeb .StandardNotificationDescription.Multiline,
+.PinnedTemplateWeb .StandardNotificationSubText.Multiline,
+.PinnedTemplateDesktop .StandardNotificationDescription.Multiline,
+.PinnedTemplateDesktop .StandardNotificationSubText.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 15px;
+}
+.AllNotificationsTemplate .StandardNotificationDescription,
+.StandardTemplateDesktop .StandardNotificationDescription,
+.DesktopToastTemplate .StandardNotificationDescription,
+.PinnedTemplateWeb .StandardNotificationDescription,
+.PinnedTemplateDesktop .StandardNotificationDescription {
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+}
+.AllNotificationsTemplate .StandardNotificationSubText,
+.StandardTemplateDesktop .StandardNotificationSubText,
+.DesktopToastTemplate .StandardNotificationSubText,
+.PinnedTemplateWeb .StandardNotificationSubText,
+.PinnedTemplateDesktop .StandardNotificationSubText {
+  color: #8b929a;
+  font-size: 11px;
+}
+.AllNotificationsTemplate .Count,
+.StandardTemplateDesktop .Count,
+.DesktopToastTemplate .Count,
+.PinnedTemplateWeb .Count,
+.PinnedTemplateDesktop .Count {
+  background-color: #1a9fff;
+  color: #fff;
+  border-radius: 26px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 8px;
+  margin-right: -8px;
+}
+.AllNotificationsTemplate .Timestamp,
+.StandardTemplateDesktop .Timestamp,
+.DesktopToastTemplate .Timestamp,
+.PinnedTemplateWeb .Timestamp,
+.PinnedTemplateDesktop .Timestamp {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8b929a;
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+.AppLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.AppLogo .AppLogoBackgroundImage {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  transform: scale(6);
+  transform-origin: 50% 50%;
+  top: 6px;
+  filter: contrast(1) saturate(7) brightness(2) blur(3px);
+}
+.AppLogo > img {
+  position: relative;
+  width: 32px;
+  height: 31px;
+  border-radius: 2px;
+  border: 1px solid #0000009c;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.StandardTemplateDesktop {
+  background-color: rgba(35, 38, 46, 0.5);
+}
+.StandardTemplateDesktop:hover {
+  background: rgba(35, 38, 46, 0.8);
+}
+@keyframes markReadBackground {
+  0% {
+    background-color: #3d4450;
+  }
+  100% {
+    background-color: unset;
+  }
+}
+.StandardTemplateDesktop.MarkedRead {
+  animation: markReadBackground 1s ease-out;
+}
+.StandardTemplateDesktop.Unread {
+  background: #323640;
+}
+.StandardTemplateDesktop.Unread:hover {
+  background: #3d4450;
+}
+.PinnedTemplateWeb,
+.PinnedTemplateDesktop {
+  height: 36px;
+  padding: 0px;
+  position: relative;
+  background-color: #3d4450;
+  border-radius: 2px;
+  margin: 0 auto 2px auto;
+}
+.PinnedTemplateWeb:hover,
+.PinnedTemplateDesktop:hover {
+  background: #474f5c;
+}
+.PinnedTemplateWeb .Icon,
+.PinnedTemplateDesktop .Icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  padding-left: 2px;
+  color: #dcdedf;
+}
+.PinnedTemplateWeb .Icon > svg,
+.PinnedTemplateDesktop .Icon > svg {
+  width: 18px;
+  height: 18px;
+}
+.PinnedTemplateWeb .PinnedBody,
+.PinnedTemplateDesktop .PinnedBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #dcdedf;
+  font-size: 12px;
+  font-weight: 400;
+}
+.PinnedTemplateDesktop:last-child {
+  margin-bottom: 8px;
+}
+.AllNotificationsTemplate {
+  background: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  cursor: pointer;
+  height: 70px;
+  box-sizing: border-box;
+}
+.AllNotificationsTemplate:hover {
+  background: #474f5c;
+}
+.AllNotificationsTemplate.Unread {
+  background-color: #3d4450;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.AllNotificationsTemplate.Unread.StandardNotificationDescription {
+  color: #fff;
+  font-weight: 400;
+}
+.AllNotificationsTemplate.Unread:hover {
+  background: #474f5c;
+}
+.AllNotificationsTemplate .StandardNotificationDescription {
+  color: #dcdedf;
+  font-weight: 400;
+  letter-spacing: none;
+  font-size: 14px;
+  margin-right: 50px;
+}
+.AllNotificationsTemplate .StandardNotificationSubText {
+  color: #8b929a;
+  font-size: 12px;
+}
+.AllNotificationsTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+}
+.AllNotificationsTemplate .Timestamp {
+  color: #67707b;
+}
+.AllNotificationsTemplate .Content {
+  margin-left: 14px;
+}
+.AllNotificationsTemplate .Icon {
+  color: #8b929a;
+}
+.AllNotificationsTemplate .Icon svg {
+  color: #8b929a;
+  fill: #8b929a;
+}
+.PlayerNickName {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.PlayerNickName.FullName {
+  margin-left: 5px;
+}
+.DesktopToastTemplate {
+  background: none;
+}
+.DesktopToastTemplate:hover {
+  background: none;
+}
+.DesktopToastTemplate .Content {
+  justify-content: center;
+  flex: 1;
+}
+.DesktopToastTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DesktopToastTemplate .IngameTitle {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #e3ffc2;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .OnlineTitle {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #6dcff6;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .GroupMessageTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .GroupMessageUserName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 12px;
+}
+.DesktopToastTemplate .GroupMessageBody {
+  color: #b8bcbf;
+  font-size: 12px;
+  align-items: center;
+}
+.DesktopToastTemplate .GroupMessageBody:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DesktopToastTemplate .GroupMessageBody.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.DesktopToastTemplate .GroupMessageBody .GroupMessageIcon {
+  vertical-align: middle;
+  display: inline;
+}
+.DesktopToastTemplate .Body {
+  font-size: 11px;
+}
+.DesktopToastTemplate .StandardNotificationDescription.Multiline,
+.DesktopToastTemplate .StandardNotificationSubText.Multiline {
+  line-height: 15px;
+}
+.DesktopToastTemplate .FriendInGameAppColor {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #91c257;
+  font-size: 11px;
+}
+.WishlistBlurImage {
+  filter: brightness(40%) blur(2px);
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+}
+.AvatarStatus {
+  width: 3px;
+  flex-shrink: 0;
+  box-shadow: -1px 0px 1px #000a;
+  align-self: stretch;
+}
+.IncomingCallToast .AvatarStatus {
+  border-right: 1px solid #236c39;
+}
+.AvatarStatus.online {
+  background-color: #4cb4ff;
+}
+.AvatarStatus.ingame {
+  background-color: #59bf40;
+}
+.AvatarStatus.awayOrSnooze {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  -webkit-mask-size: 6px 6px;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  mask-size: 6px 6px;
+  opacity: 1;
+}
+.AvatarStatus.offline {
+  background-color: #67707b;
+}
+.StandardTemplate .AvatarStatus,
+.DesktopToastTemplate .AvatarStatus,
+.AllNotificationsTemplate .AvatarStatus,
+.StandardTemplateDesktop .AvatarStatus {
+  height: 44px;
+  align-self: auto;
+}
+.StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.ShortLogoDimensions {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.LoadingTemplate {
+  position: absolute;
+  align-items: center;
+  left: 0;
+  top: 0;
+  padding: 10px 0px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  transition: opacity 500ms;
+  background-color: #323640;
+}
+.BasicUI .LoadingTemplate {
+  background-color: #0e141b;
+}
+.LoadingTemplate:hover:not(.Hide) {
+  cursor: default;
+}
+.LoadingTemplate.Hide {
+  opacity: 0;
+}
+.ShimmerLogo {
+  margin-left: 10px;
+}
+.ShimmerBody {
+  width: 160px;
+  height: 29px;
+  margin-top: 5px;
+}
+.ShimmerHeader {
+  width: 120px;
+  height: 10px;
+}
+.ShimmerLogo,
+.ShimmerHeader,
+.ShimmerBody {
+  background: linear-gradient(
+    to right,
+    transparent 33.33%,
+    #bff6ab 50%,
+    transparent 66.66%
+  );
+  background-size: 600px 100%;
+  background-repeat: repeat-x;
+  animation: loading 1s;
+  animation-iteration-count: 20;
+}
+@keyframes loading {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 0px 0;
+  }
+}
+.BottomBar {
+  background-color: #000;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b8bcbf;
+  line-height: 20px;
+  font-size: 10px;
+  text-align: center;
+}
+.NewIndicator {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.NewIndicator svg {
+  width: 6px;
+  height: 6px;
+  color: #57a11c;
+}
+@keyframes BackgroundAnimation {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey-nocolor {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-grey {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnimBorder-darkGrey {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes ItemFocusAnim-green {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes focusAnimation {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes hoverAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.StandardTemplateContainer {
+  cursor: pointer;
+}
+.BasicUI .StandardTemplateContainer:hover,
+.BasicUI .StandardTemplateContainer.gpfocus {
+  background-color: #3d4450;
+  animation-name: ItemFocusAnim-darkerGrey;
+  z-index: 1;
+}
+.BasicUI .StandardTemplateContainer:hover .Timestamp,
+.BasicUI .StandardTemplateContainer.gpfocus .Timestamp {
+  color: #67707b;
+}
+.StandardTemplate,
+.PinnedTemplate {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  transition-property: transform, background-color;
+  transition-duration: .32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
+}
+.StandardTemplate:hover,
+.PinnedTemplate:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
+.StandardTemplate.gpfocus,
+.PinnedTemplate.gpfocus {
+  background-color: #3d4450;
+  animation-name: ItemFocusAnim-darkerGrey;
+  z-index: 1;
+}
+.StandardTemplate .StandardLogoDimensions,
+.PinnedTemplate .StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.StandardTemplate .Content,
+.PinnedTemplate .Content {
+  margin-left: 12px;
+  min-width: 0;
+  overflow: hidden;
+}
+.StandardTemplate .Header,
+.PinnedTemplate .Header {
+  display: flex;
+  flex-direction: row;
+  height: 14px;
+  line-height: 14px;
+}
+.StandardTemplate .Icon,
+.PinnedTemplate .Icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+  color: #fff;
+}
+.StandardTemplate .Icon > svg,
+.PinnedTemplate .Icon > svg {
+  width: 13px;
+  height: 13px;
+}
+.StandardTemplate .Title,
+.PinnedTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: .5em;
+  color: #fff;
+}
+.StandardTemplate .StandardNotificationDescription,
+.StandardTemplate .StandardNotificationSubText,
+.PinnedTemplate .StandardNotificationDescription,
+.PinnedTemplate .StandardNotificationSubText {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+}
+.StandardTemplate .StandardNotificationDescription:not(.Multiline),
+.StandardTemplate .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplate .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplate .StandardNotificationSubText:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.StandardTemplate .StandardNotificationDescription.Multiline,
+.StandardTemplate .StandardNotificationSubText.Multiline,
+.PinnedTemplate .StandardNotificationDescription.Multiline,
+.PinnedTemplate .StandardNotificationSubText.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.StandardTemplate .StandardNotificationDescription,
+.PinnedTemplate .StandardNotificationDescription {
+  color: #b8bcbf;
+}
+.StandardTemplate .StandardNotificationSubText,
+.PinnedTemplate .StandardNotificationSubText {
+  color: #67707b;
+}
+.StandardTemplate .Count,
+.PinnedTemplate .Count {
+  background-color: #1a9fff;
+  color: #fff;
+  border-radius: 26px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 8px;
+  margin-right: -8px;
+}
+.StandardTemplate .Timestamp,
+.PinnedTemplate .Timestamp {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3d4450;
+  flex-shrink: 0;
+}
+.StandardTemplate:hover .Timestamp,
+.StandardTemplate.gpfocus .Timestamp,
+.PinnedTemplate:hover .Timestamp,
+.PinnedTemplate.gpfocus .Timestamp {
+  color: #67707b;
+}
+.PinnedTemplate {
+  height: 16px;
+  cursor: pointer;
+}
+.PinnedTemplate .PinnedBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AllNotificationsTemplate,
+.StandardTemplateDesktop,
+.DesktopToastTemplate,
+.PinnedTemplateWeb,
+.PinnedTemplateDesktop {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  transition-property: transform, background-color;
+  transition-duration: .32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+}
+.AllNotificationsTemplate:hover,
+.StandardTemplateDesktop:hover,
+.DesktopToastTemplate:hover,
+.PinnedTemplateWeb:hover,
+.PinnedTemplateDesktop:hover {
+  cursor: pointer;
+}
+.AllNotificationsTemplate .StandardLogoDimensions,
+.StandardTemplateDesktop .StandardLogoDimensions,
+.DesktopToastTemplate .StandardLogoDimensions,
+.PinnedTemplateWeb .StandardLogoDimensions,
+.PinnedTemplateDesktop .StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.AllNotificationsTemplate .Content,
+.StandardTemplateDesktop .Content,
+.DesktopToastTemplate .Content,
+.PinnedTemplateWeb .Content,
+.PinnedTemplateDesktop .Content {
+  margin-left: 12px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.AllNotificationsTemplate .Header,
+.StandardTemplateDesktop .Header,
+.DesktopToastTemplate .Header,
+.PinnedTemplateWeb .Header,
+.PinnedTemplateDesktop .Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.AllNotificationsTemplate .Icon,
+.StandardTemplateDesktop .Icon,
+.DesktopToastTemplate .Icon,
+.PinnedTemplateWeb .Icon,
+.PinnedTemplateDesktop .Icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  color: #8b929a;
+  fill: #8b929a;
+  display: flex;
+}
+.AllNotificationsTemplate .Icon > svg,
+.StandardTemplateDesktop .Icon > svg,
+.DesktopToastTemplate .Icon > svg,
+.PinnedTemplateWeb .Icon > svg,
+.PinnedTemplateDesktop .Icon > svg {
+  width: 13px;
+  height: 13px;
+  font-size: 13px;
+}
+.AllNotificationsTemplate .Title,
+.StandardTemplateDesktop .Title,
+.DesktopToastTemplate .Title,
+.PinnedTemplateWeb .Title,
+.PinnedTemplateDesktop .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8b929a;
+  margin-right: .5em;
+}
+.AllNotificationsTemplate .StandardNotificationDescription:not(.Multiline),
+.AllNotificationsTemplate .StandardNotificationSubText:not(.Multiline),
+.StandardTemplateDesktop .StandardNotificationDescription:not(.Multiline),
+.StandardTemplateDesktop .StandardNotificationSubText:not(.Multiline),
+.DesktopToastTemplate .StandardNotificationDescription:not(.Multiline),
+.DesktopToastTemplate .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplateWeb .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplateWeb .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplateDesktop .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplateDesktop .StandardNotificationSubText:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AllNotificationsTemplate .StandardNotificationDescription.Multiline,
+.AllNotificationsTemplate .StandardNotificationSubText.Multiline,
+.StandardTemplateDesktop .StandardNotificationDescription.Multiline,
+.StandardTemplateDesktop .StandardNotificationSubText.Multiline,
+.DesktopToastTemplate .StandardNotificationDescription.Multiline,
+.DesktopToastTemplate .StandardNotificationSubText.Multiline,
+.PinnedTemplateWeb .StandardNotificationDescription.Multiline,
+.PinnedTemplateWeb .StandardNotificationSubText.Multiline,
+.PinnedTemplateDesktop .StandardNotificationDescription.Multiline,
+.PinnedTemplateDesktop .StandardNotificationSubText.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 15px;
+}
+.AllNotificationsTemplate .StandardNotificationDescription,
+.StandardTemplateDesktop .StandardNotificationDescription,
+.DesktopToastTemplate .StandardNotificationDescription,
+.PinnedTemplateWeb .StandardNotificationDescription,
+.PinnedTemplateDesktop .StandardNotificationDescription {
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+}
+.AllNotificationsTemplate .StandardNotificationSubText,
+.StandardTemplateDesktop .StandardNotificationSubText,
+.DesktopToastTemplate .StandardNotificationSubText,
+.PinnedTemplateWeb .StandardNotificationSubText,
+.PinnedTemplateDesktop .StandardNotificationSubText {
+  color: #8b929a;
+  font-size: 11px;
+}
+.AllNotificationsTemplate .Count,
+.StandardTemplateDesktop .Count,
+.DesktopToastTemplate .Count,
+.PinnedTemplateWeb .Count,
+.PinnedTemplateDesktop .Count {
+  background-color: #1a9fff;
+  color: #fff;
+  border-radius: 26px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 8px;
+  margin-right: -8px;
+}
+.AllNotificationsTemplate .Timestamp,
+.StandardTemplateDesktop .Timestamp,
+.DesktopToastTemplate .Timestamp,
+.PinnedTemplateWeb .Timestamp,
+.PinnedTemplateDesktop .Timestamp {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8b929a;
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+.AppLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.AppLogo .AppLogoBackgroundImage {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  transform: scale(6);
+  transform-origin: 50% 50%;
+  top: 6px;
+  filter: contrast(1) saturate(7) brightness(2) blur(3px);
+}
+.AppLogo > img {
+  position: relative;
+  width: 32px;
+  height: 31px;
+  border-radius: 2px;
+  border: 1px solid #0000009c;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.StandardTemplateDesktop {
+  background-color: rgba(35, 38, 46, 0.5);
+}
+.StandardTemplateDesktop:hover {
+  background: rgba(35, 38, 46, 0.8);
+}
+@keyframes markReadBackground {
+  0% {
+    background-color: #3d4450;
+  }
+  100% {
+    background-color: unset;
+  }
+}
+.StandardTemplateDesktop.MarkedRead {
+  animation: markReadBackground 1s ease-out;
+}
+.StandardTemplateDesktop.Unread {
+  background: #323640;
+}
+.StandardTemplateDesktop.Unread:hover {
+  background: #3d4450;
+}
+.PinnedTemplateWeb,
+.PinnedTemplateDesktop {
+  height: 36px;
+  padding: 0px;
+  position: relative;
+  background-color: #3d4450;
+  border-radius: 2px;
+  margin: 0 auto 2px auto;
+}
+.PinnedTemplateWeb:hover,
+.PinnedTemplateDesktop:hover {
+  background: #474f5c;
+}
+.PinnedTemplateWeb .Icon,
+.PinnedTemplateDesktop .Icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  padding-left: 2px;
+  color: #dcdedf;
+}
+.PinnedTemplateWeb .Icon > svg,
+.PinnedTemplateDesktop .Icon > svg {
+  width: 18px;
+  height: 18px;
+}
+.PinnedTemplateWeb .PinnedBody,
+.PinnedTemplateDesktop .PinnedBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #dcdedf;
+  font-size: 12px;
+  font-weight: 400;
+}
+.PinnedTemplateDesktop:last-child {
+  margin-bottom: 8px;
+}
+.AllNotificationsTemplate {
+  background: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  cursor: pointer;
+  height: 70px;
+  box-sizing: border-box;
+}
+.AllNotificationsTemplate:hover {
+  background: #474f5c;
+}
+.AllNotificationsTemplate.Unread {
+  background-color: #3d4450;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.AllNotificationsTemplate.Unread.StandardNotificationDescription {
+  color: #fff;
+  font-weight: 400;
+}
+.AllNotificationsTemplate.Unread:hover {
+  background: #474f5c;
+}
+.AllNotificationsTemplate .StandardNotificationDescription {
+  color: #dcdedf;
+  font-weight: 400;
+  letter-spacing: none;
+  font-size: 14px;
+  margin-right: 50px;
+}
+.AllNotificationsTemplate .StandardNotificationSubText {
+  color: #8b929a;
+  font-size: 12px;
+}
+.AllNotificationsTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+}
+.AllNotificationsTemplate .Timestamp {
+  color: #67707b;
+}
+.AllNotificationsTemplate .Content {
+  margin-left: 14px;
+}
+.AllNotificationsTemplate .Icon {
+  color: #8b929a;
+}
+.AllNotificationsTemplate .Icon svg {
+  color: #8b929a;
+  fill: #8b929a;
+}
+.PlayerNickName {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.PlayerNickName.FullName {
+  margin-left: 5px;
+}
+.DesktopToastTemplate {
+  background: none;
+}
+.DesktopToastTemplate:hover {
+  background: none;
+}
+.DesktopToastTemplate .Content {
+  justify-content: center;
+  flex: 1;
+}
+.DesktopToastTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DesktopToastTemplate .IngameTitle {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #e3ffc2;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .OnlineTitle {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #6dcff6;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .GroupMessageTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .GroupMessageUserName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 12px;
+}
+.DesktopToastTemplate .GroupMessageBody {
+  color: #b8bcbf;
+  font-size: 12px;
+  align-items: center;
+}
+.DesktopToastTemplate .GroupMessageBody:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DesktopToastTemplate .GroupMessageBody.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.DesktopToastTemplate .GroupMessageBody .GroupMessageIcon {
+  vertical-align: middle;
+  display: inline;
+}
+.DesktopToastTemplate .Body {
+  font-size: 11px;
+}
+.DesktopToastTemplate .StandardNotificationDescription.Multiline,
+.DesktopToastTemplate .StandardNotificationSubText.Multiline {
+  line-height: 15px;
+}
+.DesktopToastTemplate .FriendInGameAppColor {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #91c257;
+  font-size: 11px;
+}
+.WishlistBlurImage {
+  filter: brightness(40%) blur(2px);
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+}
+.AvatarStatus {
+  width: 3px;
+  flex-shrink: 0;
+  box-shadow: -1px 0px 1px #000a;
+  align-self: stretch;
+}
+.IncomingCallToast .AvatarStatus {
+  border-right: 1px solid #236c39;
+}
+.AvatarStatus.online {
+  background-color: #4cb4ff;
+}
+.AvatarStatus.ingame {
+  background-color: #59bf40;
+}
+.AvatarStatus.awayOrSnooze {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  -webkit-mask-size: 6px 6px;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  mask-size: 6px 6px;
+  opacity: 1;
+}
+.AvatarStatus.offline {
+  background-color: #67707b;
+}
+.StandardTemplate .AvatarStatus,
+.DesktopToastTemplate .AvatarStatus,
+.AllNotificationsTemplate .AvatarStatus,
+.StandardTemplateDesktop .AvatarStatus {
+  height: 44px;
+  align-self: auto;
+}
+.StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.ShortLogoDimensions {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.LoadingTemplate {
+  position: absolute;
+  align-items: center;
+  left: 0;
+  top: 0;
+  padding: 10px 0px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  transition: opacity 500ms;
+  background-color: #323640;
+}
+.BasicUI .LoadingTemplate {
+  background-color: #0e141b;
+}
+.LoadingTemplate:hover:not(.Hide) {
+  cursor: default;
+}
+.LoadingTemplate.Hide {
+  opacity: 0;
+}
+.ShimmerLogo {
+  margin-left: 10px;
+}
+.ShimmerBody {
+  width: 160px;
+  height: 29px;
+  margin-top: 5px;
+}
+.ShimmerHeader {
+  width: 120px;
+  height: 10px;
+}
+.ShimmerLogo,
+.ShimmerHeader,
+.ShimmerBody {
+  background: linear-gradient(
+    to right,
+    transparent 33.33%,
+    #bff6ab 50%,
+    transparent 66.66%
+  );
+  background-size: 600px 100%;
+  background-repeat: repeat-x;
+  animation: loading 1s;
+  animation-iteration-count: 20;
+}
+@keyframes loading {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 0px 0;
+  }
+}
+.BottomBar {
+  background-color: #000;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b8bcbf;
+  line-height: 20px;
+  font-size: 10px;
+  text-align: center;
+}
+.NewIndicator {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.NewIndicator svg {
+  width: 6px;
+  height: 6px;
+  color: #57a11c;
+}
+.ShortTemplate {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #0e141b;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: 40px;
+  transition: background-color 50ms ease-out;
+}
+.ShortTemplate.TwoLine {
+  height: auto;
+  max-height: 60px;
+}
+.ShortTemplate:hover {
+  background-color: #23262e;
+  transition: background-color 200ms ease-in;
+}
+.ShortTemplate.IncomingCallToast {
+  background: radial-gradient(
+    ellipse 80px 80px at 60px 12px,
+    #59bf40 0%,
+    #236c39 70%
+  );
+  border-left: 1px solid #000;
+}
+.ShortTemplate.IncomingCallToast .Body {
+  color: #fff;
+}
+.ShortTemplate .ShortLogoDimensions {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.ShortTemplate .Content {
+  margin: 5px 12px;
+  min-width: 0;
+}
+.ShortTemplate .Content.FullWidth {
+  flex-grow: 1;
+}
+.ShortTemplate .Header {
+  display: flex;
+  flex-direction: row;
+  height: 14px;
+  line-height: 14px;
+}
+.ShortTemplate .Icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+  color: #fff;
+}
+.ShortTemplate .Icon > svg {
+  width: 13px;
+  height: 13px;
+}
+.ShortTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+.ShortTemplate .Body {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #b8bcbf;
+  height: 16px;
+}
+.ShortTemplate.TwoLine .Body {
+  height: auto;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+.ShortTemplate .Count {
+  background-color: #1a9fff;
+  color: #fff;
+  border-radius: 26px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 8px;
+  margin-right: -8px;
+}
+@keyframes BackgroundAnimation {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey-nocolor {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-grey {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnimBorder-darkGrey {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes ItemFocusAnim-green {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes focusAnimation {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes hoverAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.StandardTemplateContainer {
+  cursor: pointer;
+}
+.BasicUI .StandardTemplateContainer:hover,
+.BasicUI .StandardTemplateContainer.gpfocus {
+  background-color: #3d4450;
+  animation-name: ItemFocusAnim-darkerGrey;
+  z-index: 1;
+}
+.BasicUI .StandardTemplateContainer:hover .Timestamp,
+.BasicUI .StandardTemplateContainer.gpfocus .Timestamp {
+  color: #67707b;
+}
+.StandardTemplate,
+.PinnedTemplate {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  transition-property: transform, background-color;
+  transition-duration: .32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
+}
+.StandardTemplate:hover,
+.PinnedTemplate:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
+.StandardTemplate.gpfocus,
+.PinnedTemplate.gpfocus {
+  background-color: #3d4450;
+  animation-name: ItemFocusAnim-darkerGrey;
+  z-index: 1;
+}
+.StandardTemplate .StandardLogoDimensions,
+.PinnedTemplate .StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.StandardTemplate .Content,
+.PinnedTemplate .Content {
+  margin-left: 12px;
+  min-width: 0;
+  overflow: hidden;
+}
+.StandardTemplate .Header,
+.PinnedTemplate .Header {
+  display: flex;
+  flex-direction: row;
+  height: 14px;
+  line-height: 14px;
+}
+.StandardTemplate .Icon,
+.PinnedTemplate .Icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 8px;
+  color: #fff;
+}
+.StandardTemplate .Icon > svg,
+.PinnedTemplate .Icon > svg {
+  width: 13px;
+  height: 13px;
+}
+.StandardTemplate .Title,
+.PinnedTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: .5em;
+  color: #fff;
+}
+.StandardTemplate .StandardNotificationDescription,
+.StandardTemplate .StandardNotificationSubText,
+.PinnedTemplate .StandardNotificationDescription,
+.PinnedTemplate .StandardNotificationSubText {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+}
+.StandardTemplate .StandardNotificationDescription:not(.Multiline),
+.StandardTemplate .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplate .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplate .StandardNotificationSubText:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.StandardTemplate .StandardNotificationDescription.Multiline,
+.StandardTemplate .StandardNotificationSubText.Multiline,
+.PinnedTemplate .StandardNotificationDescription.Multiline,
+.PinnedTemplate .StandardNotificationSubText.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.StandardTemplate .StandardNotificationDescription,
+.PinnedTemplate .StandardNotificationDescription {
+  color: #b8bcbf;
+}
+.StandardTemplate .StandardNotificationSubText,
+.PinnedTemplate .StandardNotificationSubText {
+  color: #67707b;
+}
+.StandardTemplate .Count,
+.PinnedTemplate .Count {
+  background-color: #1a9fff;
+  color: #fff;
+  border-radius: 26px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 8px;
+  margin-right: -8px;
+}
+.StandardTemplate .Timestamp,
+.PinnedTemplate .Timestamp {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3d4450;
+  flex-shrink: 0;
+}
+.StandardTemplate:hover .Timestamp,
+.StandardTemplate.gpfocus .Timestamp,
+.PinnedTemplate:hover .Timestamp,
+.PinnedTemplate.gpfocus .Timestamp {
+  color: #67707b;
+}
+.PinnedTemplate {
+  height: 16px;
+  cursor: pointer;
+}
+.PinnedTemplate .PinnedBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AllNotificationsTemplate,
+.StandardTemplateDesktop,
+.DesktopToastTemplate,
+.PinnedTemplateWeb,
+.PinnedTemplateDesktop {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  transition-property: transform, background-color;
+  transition-duration: .32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+}
+.AllNotificationsTemplate:hover,
+.StandardTemplateDesktop:hover,
+.DesktopToastTemplate:hover,
+.PinnedTemplateWeb:hover,
+.PinnedTemplateDesktop:hover {
+  cursor: pointer;
+}
+.AllNotificationsTemplate .StandardLogoDimensions,
+.StandardTemplateDesktop .StandardLogoDimensions,
+.DesktopToastTemplate .StandardLogoDimensions,
+.PinnedTemplateWeb .StandardLogoDimensions,
+.PinnedTemplateDesktop .StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.AllNotificationsTemplate .Content,
+.StandardTemplateDesktop .Content,
+.DesktopToastTemplate .Content,
+.PinnedTemplateWeb .Content,
+.PinnedTemplateDesktop .Content {
+  margin-left: 12px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.AllNotificationsTemplate .Header,
+.StandardTemplateDesktop .Header,
+.DesktopToastTemplate .Header,
+.PinnedTemplateWeb .Header,
+.PinnedTemplateDesktop .Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.AllNotificationsTemplate .Icon,
+.StandardTemplateDesktop .Icon,
+.DesktopToastTemplate .Icon,
+.PinnedTemplateWeb .Icon,
+.PinnedTemplateDesktop .Icon {
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  color: #8b929a;
+  fill: #8b929a;
+  display: flex;
+}
+.AllNotificationsTemplate .Icon > svg,
+.StandardTemplateDesktop .Icon > svg,
+.DesktopToastTemplate .Icon > svg,
+.PinnedTemplateWeb .Icon > svg,
+.PinnedTemplateDesktop .Icon > svg {
+  width: 13px;
+  height: 13px;
+  font-size: 13px;
+}
+.AllNotificationsTemplate .Title,
+.StandardTemplateDesktop .Title,
+.DesktopToastTemplate .Title,
+.PinnedTemplateWeb .Title,
+.PinnedTemplateDesktop .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8b929a;
+  margin-right: .5em;
+}
+.AllNotificationsTemplate .StandardNotificationDescription:not(.Multiline),
+.AllNotificationsTemplate .StandardNotificationSubText:not(.Multiline),
+.StandardTemplateDesktop .StandardNotificationDescription:not(.Multiline),
+.StandardTemplateDesktop .StandardNotificationSubText:not(.Multiline),
+.DesktopToastTemplate .StandardNotificationDescription:not(.Multiline),
+.DesktopToastTemplate .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplateWeb .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplateWeb .StandardNotificationSubText:not(.Multiline),
+.PinnedTemplateDesktop .StandardNotificationDescription:not(.Multiline),
+.PinnedTemplateDesktop .StandardNotificationSubText:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AllNotificationsTemplate .StandardNotificationDescription.Multiline,
+.AllNotificationsTemplate .StandardNotificationSubText.Multiline,
+.StandardTemplateDesktop .StandardNotificationDescription.Multiline,
+.StandardTemplateDesktop .StandardNotificationSubText.Multiline,
+.DesktopToastTemplate .StandardNotificationDescription.Multiline,
+.DesktopToastTemplate .StandardNotificationSubText.Multiline,
+.PinnedTemplateWeb .StandardNotificationDescription.Multiline,
+.PinnedTemplateWeb .StandardNotificationSubText.Multiline,
+.PinnedTemplateDesktop .StandardNotificationDescription.Multiline,
+.PinnedTemplateDesktop .StandardNotificationSubText.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 15px;
+}
+.AllNotificationsTemplate .StandardNotificationDescription,
+.StandardTemplateDesktop .StandardNotificationDescription,
+.DesktopToastTemplate .StandardNotificationDescription,
+.PinnedTemplateWeb .StandardNotificationDescription,
+.PinnedTemplateDesktop .StandardNotificationDescription {
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+}
+.AllNotificationsTemplate .StandardNotificationSubText,
+.StandardTemplateDesktop .StandardNotificationSubText,
+.DesktopToastTemplate .StandardNotificationSubText,
+.PinnedTemplateWeb .StandardNotificationSubText,
+.PinnedTemplateDesktop .StandardNotificationSubText {
+  color: #8b929a;
+  font-size: 11px;
+}
+.AllNotificationsTemplate .Count,
+.StandardTemplateDesktop .Count,
+.DesktopToastTemplate .Count,
+.PinnedTemplateWeb .Count,
+.PinnedTemplateDesktop .Count {
+  background-color: #1a9fff;
+  color: #fff;
+  border-radius: 26px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  margin-left: 8px;
+  margin-right: -8px;
+}
+.AllNotificationsTemplate .Timestamp,
+.StandardTemplateDesktop .Timestamp,
+.DesktopToastTemplate .Timestamp,
+.PinnedTemplateWeb .Timestamp,
+.PinnedTemplateDesktop .Timestamp {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8b929a;
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+.AppLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.AppLogo .AppLogoBackgroundImage {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  transform: scale(6);
+  transform-origin: 50% 50%;
+  top: 6px;
+  filter: contrast(1) saturate(7) brightness(2) blur(3px);
+}
+.AppLogo > img {
+  position: relative;
+  width: 32px;
+  height: 31px;
+  border-radius: 2px;
+  border: 1px solid #0000009c;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.StandardTemplateDesktop {
+  background-color: rgba(35, 38, 46, 0.5);
+}
+.StandardTemplateDesktop:hover {
+  background: rgba(35, 38, 46, 0.8);
+}
+@keyframes markReadBackground {
+  0% {
+    background-color: #3d4450;
+  }
+  100% {
+    background-color: unset;
+  }
+}
+.StandardTemplateDesktop.MarkedRead {
+  animation: markReadBackground 1s ease-out;
+}
+.StandardTemplateDesktop.Unread {
+  background: #323640;
+}
+.StandardTemplateDesktop.Unread:hover {
+  background: #3d4450;
+}
+.PinnedTemplateWeb,
+.PinnedTemplateDesktop {
+  height: 36px;
+  padding: 0px;
+  position: relative;
+  background-color: #3d4450;
+  border-radius: 2px;
+  margin: 0 auto 2px auto;
+}
+.PinnedTemplateWeb:hover,
+.PinnedTemplateDesktop:hover {
+  background: #474f5c;
+}
+.PinnedTemplateWeb .Icon,
+.PinnedTemplateDesktop .Icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  padding-left: 2px;
+  color: #dcdedf;
+}
+.PinnedTemplateWeb .Icon > svg,
+.PinnedTemplateDesktop .Icon > svg {
+  width: 18px;
+  height: 18px;
+}
+.PinnedTemplateWeb .PinnedBody,
+.PinnedTemplateDesktop .PinnedBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #dcdedf;
+  font-size: 12px;
+  font-weight: 400;
+}
+.PinnedTemplateDesktop:last-child {
+  margin-bottom: 8px;
+}
+.AllNotificationsTemplate {
+  background: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  cursor: pointer;
+  height: 70px;
+  box-sizing: border-box;
+}
+.AllNotificationsTemplate:hover {
+  background: #474f5c;
+}
+.AllNotificationsTemplate.Unread {
+  background-color: #3d4450;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.AllNotificationsTemplate.Unread.StandardNotificationDescription {
+  color: #fff;
+  font-weight: 400;
+}
+.AllNotificationsTemplate.Unread:hover {
+  background: #474f5c;
+}
+.AllNotificationsTemplate .StandardNotificationDescription {
+  color: #dcdedf;
+  font-weight: 400;
+  letter-spacing: none;
+  font-size: 14px;
+  margin-right: 50px;
+}
+.AllNotificationsTemplate .StandardNotificationSubText {
+  color: #8b929a;
+  font-size: 12px;
+}
+.AllNotificationsTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+}
+.AllNotificationsTemplate .Timestamp {
+  color: #67707b;
+}
+.AllNotificationsTemplate .Content {
+  margin-left: 14px;
+}
+.AllNotificationsTemplate .Icon {
+  color: #8b929a;
+}
+.AllNotificationsTemplate .Icon svg {
+  color: #8b929a;
+  fill: #8b929a;
+}
+.PlayerNickName {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #999;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.PlayerNickName.FullName {
+  margin-left: 5px;
+}
+.DesktopToastTemplate {
+  background: none;
+}
+.DesktopToastTemplate:hover {
+  background: none;
+}
+.DesktopToastTemplate .Content {
+  justify-content: center;
+  flex: 1;
+}
+.DesktopToastTemplate .Title {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DesktopToastTemplate .IngameTitle {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #e3ffc2;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .OnlineTitle {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #6dcff6;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .GroupMessageTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  letter-spacing: .03em;
+}
+.DesktopToastTemplate .GroupMessageUserName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 12px;
+}
+.DesktopToastTemplate .GroupMessageBody {
+  color: #b8bcbf;
+  font-size: 12px;
+  align-items: center;
+}
+.DesktopToastTemplate .GroupMessageBody:not(.Multiline) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.DesktopToastTemplate .GroupMessageBody.Multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.DesktopToastTemplate .GroupMessageBody .GroupMessageIcon {
+  vertical-align: middle;
+  display: inline;
+}
+.DesktopToastTemplate .Body {
+  font-size: 11px;
+}
+.DesktopToastTemplate .StandardNotificationDescription.Multiline,
+.DesktopToastTemplate .StandardNotificationSubText.Multiline {
+  line-height: 15px;
+}
+.DesktopToastTemplate .FriendInGameAppColor {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #91c257;
+  font-size: 11px;
+}
+.WishlistBlurImage {
+  filter: brightness(40%) blur(2px);
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+}
+.AvatarStatus {
+  width: 3px;
+  flex-shrink: 0;
+  box-shadow: -1px 0px 1px #000a;
+  align-self: stretch;
+}
+.IncomingCallToast .AvatarStatus {
+  border-right: 1px solid #236c39;
+}
+.AvatarStatus.online {
+  background-color: #4cb4ff;
+}
+.AvatarStatus.ingame {
+  background-color: #59bf40;
+}
+.AvatarStatus.awayOrSnooze {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  -webkit-mask-size: 6px 6px;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  mask-size: 6px 6px;
+  opacity: 1;
+}
+.AvatarStatus.offline {
+  background-color: #67707b;
+}
+.StandardTemplate .AvatarStatus,
+.DesktopToastTemplate .AvatarStatus,
+.AllNotificationsTemplate .AvatarStatus,
+.StandardTemplateDesktop .AvatarStatus {
+  height: 44px;
+  align-self: auto;
+}
+.StandardLogoDimensions {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+.ShortLogoDimensions {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.LoadingTemplate {
+  position: absolute;
+  align-items: center;
+  left: 0;
+  top: 0;
+  padding: 10px 0px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  transition: opacity 500ms;
+  background-color: #323640;
+}
+.BasicUI .LoadingTemplate {
+  background-color: #0e141b;
+}
+.LoadingTemplate:hover:not(.Hide) {
+  cursor: default;
+}
+.LoadingTemplate.Hide {
+  opacity: 0;
+}
+.ShimmerLogo {
+  margin-left: 10px;
+}
+.ShimmerBody {
+  width: 160px;
+  height: 29px;
+  margin-top: 5px;
+}
+.ShimmerHeader {
+  width: 120px;
+  height: 10px;
+}
+.ShimmerLogo,
+.ShimmerHeader,
+.ShimmerBody {
+  background: linear-gradient(
+    to right,
+    transparent 33.33%,
+    #bff6ab 50%,
+    transparent 66.66%
+  );
+  background-size: 600px 100%;
+  background-repeat: repeat-x;
+  animation: loading 1s;
+  animation-iteration-count: 20;
+}
+@keyframes loading {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 0px 0;
+  }
+}
+.BottomBar {
+  background-color: #000;
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b8bcbf;
+  line-height: 20px;
+  font-size: 10px;
+  text-align: center;
+}
+.NewIndicator {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  filter: drop-shadow(0px 0px 4px rgba(87, 161, 28, 0.8));
+}
+.NewIndicator svg {
+  width: 6px;
+  height: 6px;
+  color: #57a11c;
+}
+.AllNotificationsCommentPlus {
+  position: absolute;
+  right: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+svg.FriendIndicator {
+  position: absolute;
+  left: 32px;
+  top: 28px;
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+  color: #dcdedf;
+}
+svg.FriendIndicator .Outline {
+  stroke: #1b2838;
+  fill: #1b2838;
+  stroke-width: 2;
+}
+.HideButton {
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+.HideButton svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+.HideButton path {
+  stroke: #8b929a;
+}
+.HideButton :hover path {
+  stroke: #8a220f;
+}
+.SteamNotificationWrapper {
+  position: relative;
+}
+.SteamNotificationWrapper:hover .HideButton {
+  display: block;
+}

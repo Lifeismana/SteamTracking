@@ -1,0 +1,4021 @@
+.ClipDetails {
+  display: flex;
+  flex-direction: column;
+}
+.ClipDetails .VideoContainer {
+  position: relative;
+}
+.PinnedTimeline .GoLiveButtonCtn {
+  display: none;
+}
+.GoLiveButtonCtn {
+  padding-top: 24px;
+  background: none;
+  width: 48x;
+  overflow: visible;
+  margin-left: 4px;
+}
+.GoLiveButtonCtn .GoLiveButton {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin: 4px 4px 0px 4px;
+}
+.GoLiveButtonCtn .GoLiveButton.IsLive {
+  pointer-events: none;
+  background: none;
+  cursor: default;
+  filter: brightness(0.8);
+  opacity: 0.5;
+}
+.GoLiveButtonCtn .GoLiveButton .JumpToEndIcon {
+  color: rgba(255, 255, 255, 0.7);
+  transition-property: color, transform, opacity;
+  transition-duration: .08s;
+  transition-timing-function: ease-out;
+}
+.GoLiveButtonCtn .GoLiveButton .JumpToEndIcon:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.06);
+}
+.GoLiveButtonCtn .GoLiveButton .JumpToEndIcon:hover:active {
+  color: rgba(255, 255, 255, 0.4);
+  transform: scale(0.96);
+}
+.Dummy {
+  color: hotpink;
+}
+.RecordingIconContainer {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+.RecordingIconContainer > svg {
+  height: 16px;
+  width: 16px;
+}
+.RecordingIconContainer .Outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.RecordingIconContainer .Inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@font-face {
+  src: url(../../../images/applications/community/RobotoMono-VariableFont_wght.ttf?v=e14e25b7c497634efdfef3a67da27ae1)
+    format("truetype");
+  font-family: "Roboto-Mono";
+  font-style: normal;
+  font-weight: 100 700;
+}
+@font-face {
+  src: url(../../../images/applications/community/RobotoMono-Italic-VariableFont_wght.ttf?v=a53103a7b0e22765d7ffa6dbc4cfcf87)
+    format("truetype");
+  font-family: "Roboto-Mono";
+  font-style: italic;
+  font-weight: 100 700;
+}
+.GameRecordingPlayer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.GameRecordingPlayer:not(.Overlay) {
+  box-shadow: inset 0 0 80px #000000bb;
+}
+.GameRecordingPlayer.NoVideo {
+  box-shadow: none;
+}
+.GameRecordingPlayer.PositionAbsolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.GameRecordingPlayer video {
+  max-width: 100%;
+  height: fit-content;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.BasicUI .GameRecordingPlayer video {
+  height: 100%;
+}
+.GameRecordingPlayer.Overlay video {
+  object-position: top;
+  -webkit-app-region: no-drag;
+  background-color: #0e141b;
+  animation-duration: .15s;
+  animation-name: VideoFadeIn;
+  animation-iteration-count: 1;
+}
+@keyframes VideoFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.GameRecordingPlayer video:focus {
+  outline: none;
+}
+.GameRecordingPlayer.PlayingClippedRegion {
+  margin: 2px;
+}
+.GameRecordingPlayer.PlayingClippedRegion video {
+  outline: 2px dashed #ffd55f;
+  box-sizing: border-box;
+}
+.BasicUI .GameRecordingPlayer {
+  background-color: #000;
+}
+.BasicUI .GameRecordingPlayer.ClippingMode video {
+  margin-top: 1px;
+}
+.PlayerError {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000000ee;
+}
+.PlayerError .Title {
+  color: #67707b;
+  opacity: 1;
+  backdrop-filter: blur(4px);
+  font-size: 24px;
+  font-weight: 800;
+  text-shadow: 0px 0px 48px #000;
+  max-width: 700px;
+  text-align: center;
+}
+.PlayerError .Description {
+  color: #8b929a;
+  opacity: 0.8;
+  backdrop-filter: blur(4px);
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: 0px 0px 48px #000;
+  max-width: 700px;
+  text-align: center;
+  padding-bottom: 32px;
+}
+.PlayerError a {
+  color: #8b929a;
+}
+.PlayerError a:hover {
+  color: #fff;
+}
+.PlayerError .Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.PlayerError .Buttons .Button {
+  background-color: #3d4450bb;
+  box-shadow: 0px 4px 24px #00000088, inset 0px 0px 32px #00000088;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: fit-content;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  letter-spacing: .5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 24px 4px 24px;
+  border-radius: 3px;
+  transition-property: background-color, color;
+  transition-duration: .08s;
+  transition-timing-function: ease-out;
+}
+.PlayerError .Buttons .Button.DisableButton {
+  pointer-events: none;
+}
+.PlayerError .Buttons .Button:hover {
+  background-color: #3d4450cc;
+  color: #8b929a;
+}
+.PerfCtnVideo {
+  background-color: #00000088;
+  color: red;
+  font-size: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Roboto-Mono";
+}
+.PerfCtnThumbnails {
+  background-color: #00000088;
+  color: #adff2f;
+  font-size: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Roboto-Mono";
+}
+.LoadingSpinner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LoadingSpinner > svg {
+  height: 50px;
+  width: 50px;
+  color: #0bf;
+}
+.TimelineContextMenuItem .MenuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TimelineContextMenuItem .MenuItem > svg {
+  height: 18px;
+  width: 18px;
+}
+.TimelineContextMenuItem .MenuItem.AddUserMarker > svg {
+  color: #1a9fff;
+}
+.TimelineContextMenuItem .MenuItem.TakeScreenshot > svg {
+  color: #b8bcbf;
+}
+.TimelineContextMenuItem .MenuItem.StartEndClip > svg {
+  color: #ffd55f;
+}
+.TimelineContextMenuItem .MenuItem.ViewClip > svg {
+  color: #ffd55f;
+}
+.TimelineContextMenuItem .MenuItem.ClipPhase > svg {
+  color: #ffd55f;
+}
+.TimelineContextMenuItem:hover .StartEndClip,
+.TimelineContextMenuItem.active .StartEndClip {
+  color: #3d4450;
+}
+.TimelineContextMenuItem:hover .ViewClip,
+.TimelineContextMenuItem.active .ViewClip {
+  color: #3d4450;
+}
+.MouseListenerContainer {
+  height: 100%;
+  width: 100%;
+}
+.BannerVideoOverlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.PlayerHighlightBanner {
+  display: flex;
+  background: #0c0e0f88;
+  backdrop-filter: blur(6px);
+  height: fit-content;
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  animation-name: fadeInOut;
+  animation-duration: 2000ms;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.BannerContents {
+  display: flex;
+  position: relative;
+  width: fit-content;
+}
+.HighlightIcon {
+  position: relative;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.HighlightIcon img,
+.HighlightIcon svg {
+  height: 36px;
+  width: 36px;
+  fill: currentColor;
+  color: currentColor;
+}
+.InfoBox {
+  display: flex;
+  flex-direction: column;
+  color: #b8bcbf;
+  justify-content: center;
+  text-shadow: 1px 1px 6px #000;
+}
+.InfoBox .HighlightTitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.InfoBox .HighlightDesc {
+  font-size: 14px;
+  color: #8b929a;
+  line-height: 16px;
+  font-weight: 400;
+}
+.Dummy {
+  background: hotpink;
+}
+.Selected {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+.HighlightIcon:hover .Selected {
+  transform: scale(1.2);
+}
+.CustomMarker {
+  color: #1a9fff;
+}
+.MarkerBacking .CustomMarker {
+  color: currentColor;
+}
+.HighlightIcon {
+  position: absolute;
+  color: #dcdedf;
+  overflow: visible;
+}
+.HighlightIcon .HighlightIconSVG {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  color: currentColor;
+}
+.HighlightIcon svg,
+.HighlightIcon img {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  filter: drop-shadow(0px 0px 3px #00000044);
+}
+.Faded.HighlightIcon {
+  opacity: 25%;
+  z-index: -1;
+}
+.Marker {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: drop-shadow(0px 0px 3px #00000044);
+}
+.Marker image {
+  height: 36px;
+  width: 36px;
+}
+.GameMarkerSVG image {
+  width: 36px;
+  height: 36px;
+}
+.RelativeTimeContainer {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+.RelativeTime {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  margin: 8px 0px 0px 8px;
+  padding: 6px 20px 8px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #dcdedf;
+  text-shadow: 0px 0px 24px #000000aa;
+  animation-name: fadeInOut;
+  animation-duration: 2000ms;
+  transition-property: background-color, opacity;
+  border-radius: 5px;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    background-color: none;
+  }
+  25% {
+    opacity: 1;
+    background: #060a0eaa;
+  }
+  75% {
+    opacity: 1;
+    background: #060a0eaa;
+  }
+  100% {
+    opacity: 0;
+    background-color: none;
+  }
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.TimelineBacking {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 12px;
+  position: absolute;
+  bottom: 25%;
+}
+.TimeTick {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  top: 75%;
+  justify-content: flex-start;
+}
+.TimeTick .TickLine {
+  margin-top: 2px;
+}
+.TimeTick .TickLine.Major {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 2px;
+  height: 6px;
+}
+.TimeTick .TickLine.Minor {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 2px;
+  width: 1px;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.MarkerAndDropline {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  align-items: center;
+  z-index: 1;
+  width: 22px;
+  height: 100%;
+}
+.MarkerAndDropline.Faded {
+  z-index: -1;
+}
+.MarkerAndDropline.NoPointer {
+  pointer-events: none;
+}
+.TimelineMarkerCtn {
+  pointer-events: all;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+}
+.TimelineMarkerCtn.Faded {
+  z-index: -1;
+}
+.TimelineMarker {
+  width: fit-content;
+  position: unset;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.4));
+}
+.DroplineCtn {
+  bottom: 0px;
+}
+.DroplineCtn .TimelineMarkerDropLine {
+  width: 2px;
+  height: 12px;
+  background: linear-gradient(to bottom, #85ccff66, #85ccff44);
+  box-shadow: 0px 0px 3px #00000088;
+  backdrop-filter: blur(1px);
+}
+.DroplineCtn > svg {
+  position: absolute;
+  top: -4px;
+  height: 16px;
+  width: 16px;
+}
+.TimelineMarker svg:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+}
+.TimelineMarkerCtn:hover + .RangeSelector {
+  display: block;
+}
+.RangeSelector {
+  display: none;
+}
+.HighlightContextMenuItem .MenuItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HighlightContextMenuItem .MenuItem > svg {
+  height: 16px;
+  width: 16px;
+}
+.HighlightContextMenuItem .MenuItem.EditMarker {
+  color: #b8bcbf;
+}
+.HighlightContextMenuItem .MenuItem.CreateClip {
+  color: #ffd55f;
+}
+.HighlightContextMenuItem .MenuItem.DeleteMarker {
+  color: #ef806c;
+}
+.HighlightContextMenuItem .MenuItem.ViewScreenshot {
+  color: #b8bcbf;
+}
+.HighlightContextMenuItem .MenuItem.ViewClip {
+  color: #ffd55f;
+}
+.HighlightContextMenuItem:hover .EditMarker,
+.HighlightContextMenuItem.active .EditMarker {
+  color: #3d4450;
+}
+.HighlightContextMenuItem:hover .CreateClip,
+.HighlightContextMenuItem.active .CreateClip {
+  color: #3d4450;
+}
+.HighlightContextMenuItem:hover .DeleteMarker,
+.HighlightContextMenuItem.active .DeleteMarker {
+  color: #3d4450;
+}
+.HighlightContextMenuItem:hover .ViewScreenshot,
+.HighlightContextMenuItem.active .ViewScreenshot {
+  color: #3d4450;
+}
+.HighlightContextMenuItem:hover .ViewClip,
+.HighlightContextMenuItem.active .ViewClip {
+  color: #3d4450;
+}
+.ErrorStyles,
+.ErrorStylesWithIcon {
+  color: #c44848;
+}
+.ErrorIconLayout,
+.ErrorStylesWithIcon,
+.ErrorStylesBackground {
+  display: block;
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 6px;
+}
+.ErrorStylesBackground {
+  background-color: #472025;
+}
+.ErrorStylesWithIcon.ErrorFloatBelow {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #682d2c;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
+}
+.ErrorStyles > div,
+.ErrorStylesWithIcon > div {
+  display: inline;
+  color: #d78484;
+}
+.WarningStyles,
+.WarningStylesWithIcon {
+  color: #b8860b;
+}
+.WarningIconLayout,
+.WarningStylesWithIcon,
+.WarningStylesBackground {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.WarningStylesBackground {
+  background-color: #b8860b;
+  color: #fff;
+}
+.WarningStylesBackground .Stuck {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.WarningStylesWithIcon.WarningFloatBelow {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #523d07;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
+}
+.InfoStyles,
+.InfoStylesWithIcon {
+  color: #556b2f;
+}
+.InfoIconLayout,
+.InfoStylesWithIcon,
+.InfoStylesBackground {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images//sharedfiles/icons/icon_spoiler_tag.png);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.InfoStylesBackground {
+  background-color: #556b2f;
+  color: #fff;
+}
+.InfoStylesBackground .Stuck {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.Padding {
+  padding-top: 10px;
+}
+.ModalPosition_Content .NotTooWideModal.DialogContent {
+  width: initial;
+}
+.ModalPosition_Content
+  .NotTooWideModal.DialogContent
+  .DialogContent_InnerWidth
+  > form {
+  padding-right: 8px;
+}
+.ImageManageDialog .DialogFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.ImageManageDialog .DialogFooter button.DialogButton {
+  margin-left: 8px;
+  width: fit-content;
+}
+.SuccessErrorDialog .DialogFooter .DialogTwoColLayout {
+  gap: 8px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._1QfwpLmLTSuiIRLDzdY_7l {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._1QfwpLmLTSuiIRLDzdY_7l * {
+  animation-name: _1F0lzP-Krz_y5P9ewZEvBD !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._1QfwpLmLTSuiIRLDzdY_7l ._2qjZm0dB7I6lcRkZhNTqvD path {
+  stroke-width: 0 !important;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._1Sy0pXVZOdWbgouFyD2zJj {
+  flex-direction: row;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .lYUEjD8Qh3GM_ZrZeLwpI,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .lYUEjD8Qh3GM_ZrZeLwpI {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._2zbyh5jEDlV5HVD3iUve-k .lYUEjD8Qh3GM_ZrZeLwpI {
+  width: 32px;
+  height: 32px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._2CphUsHNDgIWItNIzeIldY .lYUEjD8Qh3GM_ZrZeLwpI {
+  width: 64px;
+  height: 64px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._1x18vR7Qop8v8_G8qSR6CL .lYUEjD8Qh3GM_ZrZeLwpI {
+  width: 92px;
+  height: 92px;
+}
+._3IYPzqtvB2ZE7x710d5x2C {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+._21nVi2jNuF_prxLY1mAaKK,
+._2wAKy-0ZkO_vhbiQCP9MgE ._21nVi2jNuF_prxLY1mAaKK {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._2CphUsHNDgIWItNIzeIldY ._21nVi2jNuF_prxLY1mAaKK {
+  margin-top: 4px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE._2zbyh5jEDlV5HVD3iUve-k ._21nVi2jNuF_prxLY1mAaKK {
+  margin-top: 2px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber._1ctjA2yjeB21eCDj_r1mVz {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber._1ctjA2yjeB21eCDj_r1mVz path {
+  stroke: #4375fd;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
+  animation-duration: .7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1Vv--mA6PueyEKXXMTwljt,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2K0LzwjOXDopMHoqY_v_CO {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2K0LzwjOXDopMHoqY_v_CO {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1Vv--mA6PueyEKXXMTwljt {
+  display: none;
+}
+@keyframes _1O-cWE6nuIVO3x6-Onw0IU {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._3sQFkavAEPhliH6DiFmHRH {
+  animation-name: ofdi9VLSRZ5W98WsXVHiq;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes ofdi9VLSRZ5W98WsXVHiq {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+._2wAKy-0ZkO_vhbiQCP9MgE
+  .SVGIcon_Throbber
+  ._1LZffuoDq-N25wNHckxsf
+  ._1XN6ZJ1l8nVoUxp1WnOBqw,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1LZffuoDq-N25wNHckxsf circle {
+  stroke: #67c1f5;
+  animation-name: _1jALk36CiS_T9Pg7vBjpIQ;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1LZffuoDq-N25wNHckxsf circle {
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2qjZm0dB7I6lcRkZhNTqvD path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: _1KvOgdKiNE9XuSYUau3hKW;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes _1jALk36CiS_T9Pg7vBjpIQ {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes _1KvOgdKiNE9XuSYUau3hKW {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2LGHpu_-ihfOhQwdfR3Kiy,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2FGCneH2AemMrIrZnZskw_,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1X-5j16jaQntVrZfadibyc,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1pj1Q3Ef4FdHDdl9QEtpxp,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber .xFmZaMe5nZpoTc5PQBKn3,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._3MGYowzMQ6TwbH3fu9SVjt,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber .ktVJ42jiVhWEVV9O6z2FK,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._3s_7my869lIOj-1vnqJ39y,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._11MVp53Me_frOuaJfsQ4FE,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2cl-maglen-RF0YQjShgqG,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._3-JE0FpIzECzeqtd5cyjGI,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1xNIKvHdzLhBldONo6yIZs,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1S17yicfcrPc11m83ydGp3,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J,
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
+  animation-name: _1fs4RGcMBRzbQQirDBiFoM;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: .5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1S17yicfcrPc11m83ydGp3 {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1xNIKvHdzLhBldONo6yIZs {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._3-JE0FpIzECzeqtd5cyjGI {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2cl-maglen-RF0YQjShgqG {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._11MVp53Me_frOuaJfsQ4FE {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._3s_7my869lIOj-1vnqJ39y {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber .ktVJ42jiVhWEVV9O6z2FK {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._3MGYowzMQ6TwbH3fu9SVjt {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber .xFmZaMe5nZpoTc5PQBKn3 {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1pj1Q3Ef4FdHDdl9QEtpxp {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1X-5j16jaQntVrZfadibyc {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2FGCneH2AemMrIrZnZskw_ {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2LGHpu_-ihfOhQwdfR3Kiy {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes _1fs4RGcMBRzbQQirDBiFoM {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+._2zbyh5jEDlV5HVD3iUve-k {
+  width: 36px;
+  height: 36px;
+}
+._2CphUsHNDgIWItNIzeIldY {
+  width: 64px;
+  height: 64px;
+}
+._1x18vR7Qop8v8_G8qSR6CL {
+  width: 92px;
+  height: 92px;
+}
+._1gYeZMYKBDqNpVuw58_LCl {
+  width: 120px;
+  height: 120px;
+}
+._3j-p4JOqdpaF4obGtIeAB {
+  width: 240px;
+  height: 240px;
+}
+.I3aEq3lbK7Pm8ujENvtri {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.I3aEq3lbK7Pm8ujENvtri._2SwSJd-DlX2dRiDGxZWHI5 {
+  opacity: 1;
+}
+._1m8iQOSVziKDHiInrfskv_ img {
+  width: 100%;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.GameModeMarker {
+  position: absolute;
+  bottom: 0;
+  height: 12px;
+  opacity: 0.3;
+  box-shadow: inset 0px 2px 6px #00000088;
+}
+.GameModeMarker.Playing {
+  background: #ffffff66;
+}
+.GameModeMarker.Staging {
+  background: repeating-linear-gradient(
+    120deg,
+    #00000088,
+    #00000088 2px,
+    #ffffff88 2px,
+    #ffffff88 4px
+  );
+}
+.GameModeMarker.Menus {
+  background: repeating-linear-gradient(
+    120deg,
+    #000000ee,
+    #000000ee 2px,
+    #00000055 2px,
+    #00000055 4px
+  );
+}
+.GameModeMarker.Unspecified {
+  background: #ffffff66;
+}
+.GameModeMarkerClip {
+  position: absolute;
+  bottom: 0;
+  height: 12px;
+  opacity: 0.3;
+  box-shadow: inset 0px 2px 6px #00000088;
+}
+.GameModeMarkerClip.Playing {
+  background: #ffffff66;
+}
+.GameModeMarkerClip.Staging {
+  background: repeating-linear-gradient(
+    120deg,
+    #00000088,
+    #00000088 2px,
+    #ffffff88 2px,
+    #ffffff88 4px
+  );
+}
+.GameModeMarkerClip.Menus {
+  background: repeating-linear-gradient(
+    120deg,
+    #000000ee,
+    #000000ee 2px,
+    #00000055 2px,
+    #00000055 4px
+  );
+}
+.GameModeMarkerClip.Unspecified {
+  background: #ffffff66;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.PlayheadInteractionCtn {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.PlayheadInteractionCtn.ActiveCtn {
+  pointer-events: all;
+}
+.PlayHeadContainer {
+  position: absolute;
+  width: fit-content;
+  bottom: 0px;
+}
+.PlayHeadContainer .TooltipSource {
+  min-width: 320px;
+}
+.PlayHeadContainer.Active {
+  color: #dcdedf;
+}
+.PlayHeadContainer.Active .PlayHeadContent {
+  color: #dcdedf;
+}
+.PlayHeadContainer.Active .PlayHeadContent .PlayHeadCurrentTimeContainer {
+  background-color: #dcdedf;
+  color: #dcdedf;
+}
+.PlayHeadContainer .PlayHeadContent {
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: #dcdedf;
+  display: flex;
+  filter: drop-shadow(0px 0px 4px #000000cc);
+}
+.PlayHeadContainer .PlayHeadContent .PlayHead {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.PlayHeadContainer .PlayHeadContent .PlayHead.NoPointer {
+  pointer-events: none;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.RangeControls {
+  height: 20px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.RangeSelectorCtn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.RangeSelectorCtn.Active {
+  pointer-events: auto;
+  cursor: ew-resize;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl {
+  z-index: 2;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl .SelectedRangeMask {
+  z-index: 2;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl .RangeIcon {
+  pointer-events: auto;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl .RangeIcon.Hide {
+  pointer-events: none;
+}
+.TrackRangeControls {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  bottom: 1px;
+  height: 100%;
+}
+.RangeControl {
+  color: #3d4450;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 16px;
+  position: absolute;
+}
+.RangeIcon {
+  height: 24px;
+  width: 16px;
+  color: #ffd55f;
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 0 4px #000000dd);
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+}
+.RangeIcon > svg {
+  height: 100%;
+  width: 16px;
+}
+.RangeMask {
+  position: absolute;
+  background-color: #ffd55f;
+  backdrop-filter: blur(8px);
+  opacity: 0.4;
+  height: 18px;
+  margin-top: 3px;
+}
+.RangeMask.FullMask {
+  top: 76%;
+  height: 24%;
+}
+.GhostPlayheadCtn {
+  width: fit-content;
+  position: absolute;
+  bottom: 0px;
+  pointer-events: auto;
+  cursor: pointer;
+  height: 100%;
+}
+.TooltipHoverSource {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  height: 100%;
+}
+.GhostPlayhead {
+  opacity: 0;
+  position: absolute;
+  color: #aadbff;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: none;
+  filter: drop-shadow(0px 0px 12px #00000088);
+}
+.GhostPlayhead.Show {
+  opacity: 0.5;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.PlayheadInteractionCtn {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+.PlayheadInteractionCtn.ActiveCtn {
+  pointer-events: all;
+}
+.PlayHeadContainer {
+  position: absolute;
+  width: fit-content;
+  bottom: 0px;
+}
+.PlayHeadContainer .TooltipSource {
+  min-width: 320px;
+}
+.PlayHeadContainer.Active {
+  color: #dcdedf;
+}
+.PlayHeadContainer.Active .PlayHeadContent {
+  color: #dcdedf;
+}
+.PlayHeadContainer.Active .PlayHeadContent .PlayHeadCurrentTimeContainer {
+  background-color: #dcdedf;
+  color: #dcdedf;
+}
+.PlayHeadContainer .PlayHeadContent {
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: #dcdedf;
+  display: flex;
+  filter: drop-shadow(0px 0px 4px #000000cc);
+}
+.PlayHeadContainer .PlayHeadContent .PlayHead {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.PlayHeadContainer .PlayHeadContent .PlayHead.NoPointer {
+  pointer-events: none;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.PinnedTimeline .TooltipOffset {
+  display: none;
+}
+.ThumbnailContainerOffset {
+  -webkit-app-region: no-drag;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 0px 16px;
+}
+.ThumbnailContainerOffset .ThumbnailContents {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 12px #00000088;
+  opacity: 1;
+  position: relative;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.ThumbnailContainerOffset .ThumbnailContents.Hide {
+  opacity: 0;
+  box-shadow: none;
+}
+.ThumbnailContainerOffset .ImageAndInfoBoxContainer {
+  position: relative;
+}
+.ThumbnailContainerOffset .ImageAndInfoBoxContainer .ImageContainer {
+  position: absolute;
+  height: fit-content;
+  background: #23262e;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  -webkit-app-region: no-drag;
+  box-shadow: 0px 0px 12px #00000088;
+}
+.ThumbnailContainerOffset
+  .ImageAndInfoBoxContainer
+  .ImageContainer
+  .ThumbnailImage {
+  width: 100%;
+  box-sizing: content-box;
+  height: fit-content;
+  display: block;
+}
+.ThumbnailContainerOffset
+  .ImageAndInfoBoxContainer
+  .ImageContainer
+  .NoRecordedContent {
+  height: 180px;
+  background: #0e141b;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: inset 0px 0px 20px #00000088;
+  text-shadow: 0px 0px 6px #00000088;
+  color: #67707b;
+}
+.ThumbnailContainerOffset .ImageAndInfoBoxContainer .InfoBoxContainer {
+  background: linear-gradient(to bottom, #00000000 0%, #000000ee 100%);
+  backdrop-filter: blur(1px);
+  padding: 8px 4px 6px 4px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.ThumbnailContainerOffset .ImageAndInfoBoxContainer .InfoBoxContainer .Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ThumbnailContainerOffset .ImageAndInfoBoxContainer .InfoBoxContainer .Icon {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ThumbnailContainerOffset .ImageAndInfoBoxContainer .InfoBoxContainer .Icon img,
+.ThumbnailContainerOffset
+  .ImageAndInfoBoxContainer
+  .InfoBoxContainer
+  .Icon
+  svg {
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+  color: currentColor;
+  transform: translateX(90%);
+  filter: drop-shadow(0px 0px 6px #00000088);
+}
+.ThumbnailContainerOffset
+  .ImageAndInfoBoxContainer
+  .InfoBoxContainer
+  .DescriptionBlock {
+  padding: 0px 4px;
+}
+.ThumbnailContainerOffset .ImageAndInfoBoxContainer .InfoBoxContainer .Title {
+  color: #dcdedf;
+  padding: 0px 8px 2px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0px 0px 8px #000000cc;
+}
+.ThumbnailContainerOffset
+  .ImageAndInfoBoxContainer
+  .InfoBoxContainer
+  .Description {
+  color: #8b929a;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -7px;
+  text-align: center;
+  text-shadow: 0px 0px 6px #00000088;
+}
+.ThumbnailContainerOffset .ThumbnailHitBoxPadding {
+  width: 320px;
+}
+.ThumbnailContainerOffset.Overlay {
+  padding: 0px 16px 16px 16px;
+  flex-direction: column-reverse;
+}
+.ThumbnailContainerOffset.Overlay .ThumbnailContents {
+  flex-direction: column-reverse;
+}
+.ThumbnailContainerOffset.Overlay .ImageContainer {
+  top: 0;
+  bottom: unset;
+}
+.ThumbnailContainerOffset.Overlay .ThumbnailHitBoxPadding {
+  height: 68px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ThumbnailContainerOffset.Overlay .TooltipContents {
+  flex-direction: column-reverse;
+}
+.ThumbnailContainerOffset.Overlay .TooltipChildren {
+  flex-direction: column-reverse;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.ThumbnailContainerOffset.Overlay .TooltipImage {
+  top: 0;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.TooltipImageCtn {
+  position: relative;
+}
+.TooltipImage {
+  -webkit-app-region: no-drag;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  border-color: #23262e;
+  border-width: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  box-shadow: 0px 0px 12px #00000088;
+}
+.TooltipChildren {
+  overflow: hidden;
+  pointer-events: auto;
+  width: 320px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #23262e;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.ThumbnailTooltip.Highlight .TimeDisplayContainer,
+.ThumbnailTooltip.Playhead .TimeDisplayContainer {
+  color: #dcdedf;
+}
+.ThumbnailTooltip.RangeLeft .TimeDisplayContainer,
+.ThumbnailTooltip.RangeRight .TimeDisplayContainer {
+  color: #ffd55f;
+}
+.ThumbnailTooltip .TimeDisplayContainer {
+  pointer-events: none;
+  color: #8b929a;
+  padding: 2px 8px;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-family: "Roboto Mono", monospace;
+  align-items: left;
+  left: 8px;
+  position: absolute;
+  display: flex;
+}
+.ThumbnailTooltip .TimeDisplayContainer .Timestamp {
+  flex: 0;
+}
+.TooltipInteractionRegion {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.StateDescription {
+  text-align: center;
+  padding: 4px 4px;
+  background: #3d4450;
+  color: #8b929a;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  box-shadow: inset 0 0 20px #23262e;
+  text-shadow: 0px 0px 8px #000000aa;
+  overflow: hidden;
+}
+.TooltipButtons {
+  display: flex;
+  gap: 6px;
+  padding: 4px 8px;
+  margin-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 26px;
+}
+.TooltipButtons .Button {
+  background: none;
+  padding: 0px 0px;
+  display: flex;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.TooltipButtons .Button > svg {
+  opacity: 0.5;
+  height: 22px;
+  width: 22px;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
+  transition-property: color, transform, opacity;
+  transition-duration: .08s;
+  transition-timing-function: ease-out;
+  color: rgba(255, 255, 255, 0.2);
+  align-items: center;
+  padding: 2px 0px 0px;
+}
+.TooltipButtons .Button > svg:hover {
+  transform: scale(1.06);
+  opacity: 1;
+}
+.TooltipButtons .Button > svg:hover:active {
+  transform: scale(0.96);
+  opacity: 1;
+}
+.TooltipButtons .AddMarker > svg {
+  color: #1a9fff;
+  opacity: 0.5;
+}
+.TooltipButtons .GoToClip > svg {
+  color: #d2b76a;
+}
+.TooltipButtons .GoToClip > svg:hover {
+  color: #ffd55f;
+  transform: scale(1.06);
+}
+.TooltipButtons .CreateClipButton > svg {
+  color: #ffd55f;
+  height: 26px;
+  width: 26px;
+  padding: 0px 4px;
+}
+.TooltipButtons .EditMarker > svg {
+  color: #b8bcbf;
+}
+.TooltipButtons .DeleteMarker > svg {
+  color: #ef806c;
+  height: 21px;
+  width: 21px;
+}
+.TooltipButtons .GoToClipFromMarker > svg {
+  color: #ffd55f;
+  height: 26px;
+  width: 26px;
+  padding: 0px 4px;
+}
+.TooltipButtons .ViewScreenshot > svg {
+  color: #b8bcbf;
+  height: 26px;
+  width: 26px;
+  padding: 0px 4px;
+}
+.TooltipOffset {
+  -webkit-app-region: no-drag;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 16px 16px 0px 16px;
+}
+.TooltipOffset .TooltipHitBox {
+  width: 328px;
+}
+.TooltipOffset .TooltipHitBox.Overlay {
+  height: 108px;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.TooltipOffset.Overlay {
+  top: 0;
+  bottom: unset;
+  flex-direction: column-reverse;
+  padding: 0px 16px 16px 16px;
+}
+.TooltipOffset.Overlay .TooltipContainer {
+  flex-direction: column-reverse;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-bottom: 4px;
+}
+.TooltipOffset.Overlay .TooltipContainer .TooltipContents {
+  flex-direction: column-reverse;
+}
+.TooltipOffset.Overlay
+  .TooltipContainer
+  .ImageHighlightPosition
+  .ImageHighlightBlock {
+  top: 0;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top: unset;
+}
+.TooltipOffset.Overlay {
+  top: 0;
+  bottom: unset;
+  flex-direction: column-reverse;
+}
+.TooltipOffset.Overlay .TooltipContainer {
+  flex-direction: column-reverse;
+}
+.TooltipRangeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 4px;
+  font-size: 14px;
+  background-color: #645a3f;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25) inset;
+  font-family: "Motiva Sans";
+}
+.TooltipRangeContainer:hover {
+  cursor: pointer;
+  background-color: #736746;
+}
+.TooltipRangeContainer .Title {
+  font-weight: 700;
+  color: #fff;
+}
+.TooltipRangeContainer .Duration {
+  color: #ffc82c;
+  font-weight: 800;
+  letter-spacing: 1.12px;
+  font-family: "Roboto Mono", monospace;
+}
+.TooltipRangeContainer .RangeIcon {
+  width: 24px;
+  height: 24px;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.RangeControls {
+  height: 20px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+.RangeSelectorCtn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.RangeSelectorCtn.Active {
+  pointer-events: auto;
+  cursor: ew-resize;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl {
+  z-index: 2;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl .SelectedRangeMask {
+  z-index: 2;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl .RangeIcon {
+  pointer-events: auto;
+}
+.RangeSelectorCtn .InactiveSelectedRangeControl .RangeIcon.Hide {
+  pointer-events: none;
+}
+.TrackRangeControls {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  bottom: 1px;
+  height: 100%;
+}
+.RangeControl {
+  color: #3d4450;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 16px;
+  position: absolute;
+}
+.RangeIcon {
+  height: 24px;
+  width: 16px;
+  color: #ffd55f;
+  cursor: ew-resize;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 0 4px #000000dd);
+  transition-property: color;
+  transition-timing-function: ease-in-out;
+}
+.RangeIcon > svg {
+  height: 100%;
+  width: 16px;
+}
+.RangeMask {
+  position: absolute;
+  background-color: #ffd55f;
+  backdrop-filter: blur(8px);
+  opacity: 0.4;
+  height: 18px;
+  margin-top: 3px;
+}
+.RangeMask.FullMask {
+  top: 76%;
+  height: 24%;
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.TimelineRelativeDate {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.15);
+  height: fit-content;
+  padding: 0px 2px 4px 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  letter-spacing: .7px;
+  position: absolute;
+  bottom: calc(27% + 12px);
+}
+.TimelineRelativeDate.Overlay {
+  color: rgba(255, 255, 255, 0.15);
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.RecordingDecorator {
+  background: linear-gradient(180deg, #144b75 0%, #0172ac 80%);
+  height: 12px;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+}
+.RecordingDecorator.Clip:not(.ClipMode),
+.RecordingDecorator.Manual:not(.ClipMode) {
+  background: linear-gradient(180deg, #8e7120 0%, #c6a750 80%);
+}
+.RecordingDecoratorClip {
+  background: linear-gradient(180deg, #8e7120 0%, #c6a750 80%);
+  height: 12px;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+}
+.LiveRecordingBuffer {
+  background: linear-gradient(270deg, #dcdedf00 0%, #23262e00 80%);
+  height: 12px;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: 24px;
+}
+.LiveRecordingBuffer.IsLive {
+  background: linear-gradient(270deg, #dcdedf 0%, #dcdedf00 100%);
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.ClipDecorator {
+  background: #ffd55faa;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  background-size: 200% 200%;
+  animation: gradient 2.5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.LoadingTimeline {
+  min-height: 68px;
+}
+.ScrollAndControlsCtn {
+  display: flex;
+  flex-direction: column;
+  min-height: 68px;
+}
+.ScrollAndControlsCtn.GamepadMode {
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.Controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: min-content;
+  gap: 8px;
+}
+.TimelineScrollContainer {
+  text-align: end;
+  flex: 1;
+}
+.TimelineScrollContainer::-webkit-scrollbar-thumb {
+  background-color: #23262e;
+  height: 15px;
+  width: 20px;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: inset 1px 1px 2px 0px rgba(255, 255, 255, 0.1);
+  cursor: grab;
+}
+.TimelineScrollContainer::-webkit-scrollbar {
+  background-color: #0e141b;
+  border-radius: 16px;
+  height: 0px;
+  padding: 16px;
+  box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.ContentContainer {
+  display: inline-block;
+  position: relative;
+  height: 68px;
+  box-sizing: content-box;
+}
+.AbsoluteLayer {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.AbsoluteLayer.HideOverflow {
+  overflow: hidden;
+}
+.AbsoluteLayer .RelativeLayer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+.AbsoluteLayer .RelativeLayer.WithPointerEvents {
+  pointer-events: all;
+}
+.RecordingDecorators {
+  bottom: 25%;
+  z-index: 1;
+}
+.ClipDecorators {
+  bottom: calc(25% - 4px);
+  z-index: 2;
+}
+.GameModes {
+  top: 0%;
+  bottom: 25%;
+  z-index: 1;
+}
+.DateDecorator {
+  overflow: hidden;
+  top: 0%;
+  z-index: 2;
+}
+.BackgroundTicks {
+  bottom: 0%;
+  z-index: 0;
+}
+.Highlights {
+  z-index: 4;
+  overflow: visible;
+  margin-top: 0%;
+  bottom: 25%;
+}
+.RangeHighlights {
+  z-index: 4;
+  bottom: calc(25% - 10px);
+}
+.Timestamps {
+  z-index: 4;
+  overflow: hidden;
+  top: 74%;
+  bottom: 0px;
+}
+.RangeSelector {
+  z-index: 5;
+  top: 0%;
+  bottom: 21%;
+}
+.SeekScrubber {
+  bottom: 2%;
+  z-index: 3;
+  overflow: hidden;
+}
+.PlayHead {
+  z-index: 4;
+  bottom: 2%;
+}
+.Thumbnails {
+  top: 0px;
+  bottom: 0px;
+}
+.PositionLeft {
+  top: 26px;
+  left: 20px;
+}
+.PositionRight {
+  top: 26px;
+  right: 20px;
+}
+.Phases {
+  z-index: 4;
+}
+.ContentAndGradient {
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+  height: 68px;
+}
+.ScrollbarPlaceholder {
+  flex: 1;
+}
+.LeftControlsAndContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ScrollGradientCtn {
+  height: 68px;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 6;
+  top: 28px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.ScrollGradientCtn .FrontGradient {
+  float: left;
+  background-color: unset;
+  height: 100%;
+  width: 28px;
+  -webkit-mask-image: linear-gradient(to left, transparent 8px, black 20px);
+  mask-image: linear-gradient(to left, transparent 8px, black 20px);
+  transition: width ease .3s;
+}
+.ScrollGradientCtn .FrontGradient.HideGradient {
+  width: 0px;
+}
+.ScrollGradientCtn .EndGradient {
+  float: right;
+  background-color: unset;
+  height: 100%;
+  width: 28px;
+  -webkit-mask-image: linear-gradient(to right, transparent 8px, black 20px);
+  mask-image: linear-gradient(to right, transparent 8px, black 20px);
+  transition: width ease .3s;
+}
+.ScrollGradientCtn .EndGradient.HideGradient {
+  width: 0px;
+}
+.ScrollbarAndSiblings {
+  position: relative;
+  align-items: center;
+  padding-top: 6px;
+}
+.ScrollbarAndSiblings .ScrollBarCtn {
+  position: relative;
+  flex: 1;
+}
+.ScrollbarAndSiblings .ScrollBarCtn.HideScrollBar {
+  opacity: 0;
+  pointer-events: none;
+}
+.ScrollbarAndSiblings .ScrollBarCtn .ScrollTrack {
+  background-color: #171d25;
+  box-shadow: rgba(0, 0, 0, 0.34) 1px 1px 2px 1px inset;
+  height: 7px;
+  border-radius: 6px;
+  position: relative;
+}
+.ScrollbarAndSiblings .ScrollBarCtn .PlayHeadAnnotation {
+  position: absolute;
+  width: 0;
+  height: 8px;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 1;
+}
+.ScrollbarAndSiblings .ScrollBarCtn .PlayHeadAnnotation > svg {
+  display: block;
+  opacity: 0.7;
+  height: 6px;
+  width: 12px;
+  color: #67707b;
+  transform: translateX(-50%);
+}
+.ScrollbarAndSiblings .ScrollBarCtn .PlayHeadAnnotation:hover > svg {
+  opacity: 1;
+  filter: brightness(1);
+  color: #dcdedf;
+}
+.ScrollbarAndSiblings .ScrollBarCtn .RangeAnnotation {
+  position: absolute;
+  top: 0px;
+  height: 7px;
+  background-color: #d2b76a;
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 9;
+  transition-property: background-color;
+  transition-duration: .15s;
+}
+.ScrollbarAndSiblings .ScrollBarCtn .RangeAnnotation:hover {
+  opacity: 1;
+  filter: brightness(1);
+}
+.ScrollbarAndSiblings .ScrollBarCtn .ScrollThumb {
+  position: absolute;
+  background-color: #8b929a;
+  filter: brightness(0.8);
+  height: 4px;
+  top: 1px;
+  left: 0;
+  min-width: 7px;
+  border-radius: 6px;
+  cursor: grab;
+  z-index: 11;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+  transition-property: filter;
+  box-shadow: 0 0 8px #06080b44;
+  backdrop-filter: blur(0.3px);
+  border-top: 1px solid #fffffffa;
+  border-bottom: 1px solid #00000085;
+  opacity: 0.5;
+}
+.ScrollbarAndSiblings .ScrollBarCtn .ScrollThumb.Highlight {
+  filter: brightness(1.1);
+}
+.ScrollbarAndSiblings .ScrollBarCtn .ScrollThumb:active {
+  cursor: grabbing;
+}
+.ScrollbarAndSiblings .ScrollBarCtn .ScrollThumb:hover,
+.ScrollbarAndSiblings .ScrollBarCtn .ScrollThumb:active {
+  filter: brightness(1.1);
+}
+.PinnedTimeline .ScrollbarAndSiblings {
+  display: none;
+}
+@keyframes BackgroundAnimation {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey-nocolor {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes ItemFocusAnim-darkerGrey {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-darkGrey {
+  from {
+    background: rgba(255, 255, 255, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-grey {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnimBorder-darkGrey {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes ItemFocusAnim-green {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+.TourPositioner {
+  position: fixed;
+  z-index: 10000;
+  -webkit-app-region: no-drag;
+}
+.TourBox {
+  position: relative;
+  padding: 20px;
+  background-color: #3d4450;
+  border-radius: 2px;
+  min-width: 240px;
+  max-width: 308px;
+}
+.TourBox .CloseButton {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+.TourBox .CloseButton .X {
+  width: 16px;
+  height: 16px;
+}
+.TourBox .Title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 14px;
+}
+.TourBox .Content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  color: #dcdedf;
+}
+.TourBox .Content img {
+  border: 1px solid #626468;
+}
+.TourBox .Action {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+}
+.TourBox .Action button {
+  width: fit-content;
+  padding: 0 20px;
+  align-items: center;
+}
+.TourBox .TipCount {
+  font-size: 14px;
+  color: #8b929a;
+}
+.TourStopArrow {
+  background-color: #3d4450;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 1;
+}
+.Positioner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  --indicatorColor: #67707b;
+  pointer-events: all;
+}
+.Positioner.MouseWithin {
+  opacity: 0.8;
+}
+.Positioner.Highlight {
+  --indicatorColor: #ffc82c;
+  animation: PhaseHighlight 1s infinite ease-in-out;
+}
+.Positioner.MouseWithin .Body {
+  border-bottom: 1px dashed var(--indicatorColor);
+}
+.Positioner.MouseWithin .Edge {
+  border-left: 1px dashed var(--indicatorColor);
+}
+.Body {
+  flex: 1;
+  height: 12px;
+  box-sizing: border-box;
+  border-bottom: 1px dashed var(--indicatorColor);
+}
+.Edge {
+  border-left: 1px dashed var(--indicatorColor);
+  height: 12px;
+}
+@keyframes PhaseHighlight {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.RangeHighlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  opacity: 0.7;
+}

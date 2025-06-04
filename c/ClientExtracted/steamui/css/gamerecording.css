@@ -1,0 +1,42 @@
+.ClipUploadStatus {
+  position: absolute;
+  bottom: 72px;
+  left: 16px;
+  min-width: 260px;
+  background: #2c3036;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 10px 32px 0px #000000ab;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ClipDetails {
+  display: flex;
+  flex-direction: column;
+  word-break: normal;
+}
+.ClipDetails .VideoContainer {
+  position: relative;
+}
+.ClipPreview {
+  position: relative;
+  width: fit-content;
+}
+.ClipPreview .Thumbnail {
+  z-index: 0;
+}
+.ClipPreview .PlayContainer {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.ClipPreview .PlayContainer .Button {
+  width: 40px;
+}
