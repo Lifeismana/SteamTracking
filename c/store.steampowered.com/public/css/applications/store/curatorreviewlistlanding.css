@@ -1,0 +1,327 @@
+.VideoReviewCtn {
+  max-width: 940px;
+  padding-bottom: 20px;
+}
+.VideoReviewCtn .YouTubePreviewImage {
+  height: 100%;
+}
+.VideoReviewCtn .YouTubePreviewImage .YoutubePreviewPlay {
+  width: 15%;
+}
+.TwitchPlayer {
+  width: 100%;
+  position: relative;
+}
+.TwitchPlayer iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.YoutubePreviewImage {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.YoutubePreviewImage img {
+  transition: opacity .24s ease-in-out;
+  opacity: 0.6;
+  display: block;
+}
+.YoutubePreviewImage .YoutubePreviewImage {
+  height: 100%;
+}
+.YoutubePreviewImage .YoutubePreviewPlay {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.YoutubePreviewImage .YoutubePreviewPlay svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+.YoutubePreviewImage .VideoHintText {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  top: 55px;
+  right: 50%;
+  transform: translate(50%);
+  border-radius: 2px;
+  padding: 0 6px;
+  opacity: 0;
+  transition: opacity .24s ease-in-out, transform .24s ease-in-out;
+}
+.YoutubePreviewImage:hover img {
+  opacity: 1;
+}
+.YoutubePreviewImage:hover .YoutubePreviewPlay {
+  opacity: 1;
+}
+.YoutubePreviewImage:hover .YoutubePreviewPlay svg {
+  filter: drop-shadow(0 0 5px black);
+}
+.YoutubePreviewImage:hover .YoutubePreviewImage {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+.YoutubePreviewImage:hover .VideoHintText {
+  transform: translate(50%, -10px);
+  opacity: 1;
+}
+.YoutubePlayer {
+  width: 100%;
+  position: relative;
+  padding: 56.25% 0 0 0;
+}
+.YoutubePlayer iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.CuratorListCtn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.CuratorListCtn .CuratorMoreCtn {
+  margin-top: 60px;
+}
+.CuratorListCtn .CuratorMoreCtn a {
+  text-decoration: underline;
+  font-size: 14px;
+}
+.TopReviewInfo {
+  font-size: 25px;
+  padding-bottom: 40px;
+}
+.BasicUI .TopReviewInfo {
+  padding-bottom: 24px;
+}
+.SaleBanner {
+  margin-top: 20px;
+  max-width: 100%;
+  transform: scale(1);
+  transition: transform .21s ease-in-out;
+}
+.SaleBanner:hover {
+  transform: scale(1.03);
+}
+.Title,
+.Blurb {
+  color: #fff;
+  font-family: "Motiva Sans", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.BasicUI .Title,
+.BasicUI .Blurb {
+  text-shadow: unset;
+}
+.Title {
+  font-size: 46px;
+  line-height: 49px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+.BasicUI .Title {
+  font: var(--gpText-HeadingLarge);
+  margin: 16px 0px 4px;
+}
+.Blurb {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+.BasicUI .Blurb {
+  font: var(--gpText-BodyLarge);
+  color: var(--gpStoreLightestGrey);
+  margin: 0px;
+}
+.VideoReviewCtn {
+  max-width: 940px;
+  padding-bottom: 20px;
+}
+.VideoReviewCtn .YouTubePreviewImage {
+  height: 100%;
+}
+.VideoReviewCtn .YouTubePreviewImage .YoutubePreviewPlay {
+  width: 15%;
+}
+.CuratorList {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+}
+.CuratorList.CuratorListGrid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px 16px;
+}
+.BasicUI .CuratorList {
+  grid-gap: 12px;
+}
+.CuratorReview {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  display: flex;
+  margin: 0px;
+  background: linear-gradient(195deg, #323c41, #15161a);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+.CuratorReview .CapsuleCtn {
+  width: 350px;
+  flex: none;
+}
+.CuratorListGrid .CuratorReview {
+  flex-direction: column;
+}
+.CuratorListGrid .CuratorReview .CapsuleCtn {
+  width: 100%;
+}
+.BasicUI .CuratorReview {
+  background: var(--gpStoreDarkestGrey);
+  box-shadow: var(--gpShadow-Medium);
+}
+.YouTubeCapsule .YouTubeCtn {
+  position: relative;
+  height: 0;
+  padding: 46.7391304348% 0 0 0;
+  overflow: hidden;
+}
+.YouTubeCapsule .YouTubeCtn:hover {
+  overflow: unset;
+}
+.YouTubeCapsule .YouTubeCtn .YouTubePreviewImage,
+.YouTubeCapsule .YouTubeCtn .YoutubePlayer {
+  position: absolute;
+  top: 0;
+}
+.YouTubeCapsule .YouTubeCtn .YouTubePreviewImage:hover,
+.YouTubeCapsule .YouTubeCtn .YoutubePlayer:hover {
+  z-index: 3;
+}
+.YouTubeCapsule .YouTubeCapsuleBottomBar {
+  position: relative;
+  display: flex;
+  padding-left: 12px;
+  height: 30px;
+  background-color: #000;
+}
+.YouTubeCapsule .YouTubeCapsuleBottomBar .GameImageCtn {
+  width: 20%;
+  position: relative;
+  margin-right: 4px;
+}
+.YouTubeCapsule
+  .YouTubeCapsuleBottomBar
+  .GameImageCtn
+  .GameImage {
+  position: absolute;
+  bottom: -12px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.YouTubeCapsule .YouTubeCapsuleBottomBar .FullWidth {
+  flex: 1;
+}
+.ReviewTextSection {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 20px 12px 12px 12px;
+  flex-shrink: 1;
+  margin-left: 8px;
+}
+.BasicUI .ReviewTextSection {
+  padding: 16px 12px;
+}
+.CuratorListGrid .ReviewTextSection {
+  margin-left: 0;
+  margin-bottom: 16px;
+}
+.ReviewTextSection .GameTitle {
+  font-size: 22px;
+  font-weight: 500;
+}
+.BasicUI .ReviewTextSection .GameTitle {
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+  color: #fff;
+}
+.ReviewTextSection .RecommendationTypeAndDate {
+  display: flex;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+.ReviewTextSection .RecommendationTypeAndDate .Recommended {
+  color: #66c0f4;
+}
+.ReviewTextSection .RecommendationTypeAndDate .NotRecommended {
+  color: #f49866;
+}
+.ReviewTextSection .RecommendationTypeAndDate .Informational {
+  color: #f5df67;
+}
+.ReviewTextSection .RecommendationTypeAndDate .Recommended,
+.ReviewTextSection .RecommendationTypeAndDate .NotRecommended,
+.ReviewTextSection .RecommendationTypeAndDate .Informational {
+  margin-right: 8px;
+}
+.ReviewTextSection .RecommendationTypeAndDate .ReviewDate {
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.ReviewTextSection .ReviewBlurb {
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 19px;
+  color: #bdc1ca;
+}
+.FullReviewLink {
+  display: flex;
+  font-size: 11px;
+}
+.FullReviewLink .FullReviewAnchor {
+  text-decoration: underline;
+}
+.FullReviewLink .FullReviewDomain {
+  margin-left: 6px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.BreadContainer {
+  color: #56707f;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  padding-top: 0;
+  padding-bottom: 24px;
+}
+.BreadContainer a {
+  color: #8f98a0;
+}
+.BreadContainer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.BreadContainer {
+  padding-top: 0px;
+  margin-top: -2px;
+  margin-bottom: -4px;
+}

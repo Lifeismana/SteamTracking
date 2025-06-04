@@ -1,0 +1,300 @@
+.EventList .SectionTitleHeader {
+  margin-top: 0px;
+}
+.EventList .EventEditorTextTitle {
+  text-transform: unset;
+  letter-spacing: 0;
+}
+.EventRow {
+  display: flex;
+  flex-direction: column;
+  background: #2c2e35;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+.EventMainDetails {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.EventMainDetails .Title {
+  color: #fff;
+  font-size: 21px;
+  margin-right: 4px;
+}
+.EventMainDetails .StartDate {
+  margin-left: 10px;
+}
+.EventMainDetails .TitleLine {
+  display: flex;
+  align-items: baseline;
+}
+.EventMainDetails .ActionLine {
+  display: flex;
+}
+.CapacityBarMax {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #000;
+  height: 10px;
+}
+.CapacityBarMax .CapacityBarCurrent {
+  background: #549ef1;
+  height: 10px;
+}
+.CapacityBarMax .CapacityBarCurrent.Full {
+  background: #a4d007;
+}
+.MonthTitle {
+  font-size: 18px;
+}
+.MonthEvents {
+  padding-left: 20px;
+}
+.ImportButtonLabel {
+  display: block;
+}
+.FancyTableRow {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: var(--fancy-table-row-background, #444);
+}
+.FancyTableRow[data-even="true"] {
+  background-color: var(--fancy-table-even-row-background, #666);
+}
+.ExpandableRow {
+  background-color: var(--fancy-table-expandable-row-background, #303238);
+  color: var(--fancy-table-expandable-row-color, #8f96a3);
+  padding-top: 8px;
+  padding-bottom: 2px;
+}
+.ExpandableRow[data-even="true"] {
+  background-color: var(--fancy-table-expandable-even-row-background, #303238);
+}
+.FancyTableHeader {
+  background-color: var(--fancy-table-header-background, #333);
+}
+.StickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+:where(.FancyTableCell) {
+  padding: var(--fancy-table-cell-padding, 4px);
+  box-sizing: border-box;
+  background-color: var(--fancy-table-row-background, #444);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 100%;
+}
+[data-even="true"] > :where(.FancyTableCell) {
+  background-color: var(--fancy-table-even-row-background, #666);
+}
+:where(.FancyTableCell):not(
+    :nth-last-child(1 of .FancyTableCell)
+  ) {
+  border-right: var(--fancy-table-cell-border, 1px solid #aaa);
+}
+:where(.FancyTableCell) input {
+  scroll-margin: var(--fancy-table-scroll-margin);
+}
+.SortButton {
+  padding: 0;
+  text-align: initial;
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+.ColumnHeader {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: var(--fancy-table-column-header-align-items, center);
+  justify-content: center;
+  padding: var(--fancy-table-column-header-padding, 4px);
+  font-weight: bold;
+  box-sizing: border-box;
+  text-shadow: var(--fancy-table-header-text-shadow, none);
+  background-color: var(--fancy-table-header-background, #333);
+}
+.ColumnHeader[aria-sort] {
+  background-color: var(--fancy-table-column-header-sorted-background, #9297a5);
+}
+.ColumnHeader[data-pinned="true"] {
+  background-color: var(
+    --fancy-table-pinned-column-header-background,
+    var(--fancy-table-header-background, #333)
+  );
+}
+.ColumnHeader:not(:nth-last-child(1 of .ColumnHeader)) {
+  border-right: var(--fancy-table-cell-border, 1px solid #aaa);
+}
+.ColumnHeader:hover {
+  background-color: var(--fancy-table-header-hover, #1a1a1a);
+}
+.ResizeHandle {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
+  width: 5px;
+  padding: 0;
+  opacity: 0;
+  border: none;
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+}
+.ResizeHandle.PrevResizeHandle {
+  right: unset;
+  left: 0;
+}
+.SortIndicator {
+  margin-left: auto;
+  margin-right: 5px;
+}
+.SortIndicator::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: none;
+  border-bottom: 6px solid var(--fancy-table-sort-arrow-color, currentColor);
+}
+[aria-sort="descending"] > .SortIndicator::after {
+  border-bottom: none;
+  border-top: 6px solid var(--fancy-table-sort-arrow-color, currentColor);
+  color: var(--fancy-table-sort-arrow-color, currentColor);
+}
+.GroupExpandIndicator {
+  margin-inline-start: auto;
+  margin-inline-end: 10px;
+}
+.GroupExpandIndicator::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: none;
+  border-bottom: 6px solid var(--fancy-table-sort-arrow-color, currentColor);
+  transition: transform 80ms linear;
+  transform: rotate(90deg);
+}
+[aria-expanded="true"] > .GroupExpandIndicator::after {
+  transform: rotate(180deg);
+}
+.RowGroup {
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: inherit;
+  border: none;
+  position: sticky;
+  left: 0;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+.ExportToCSV {
+  font-size: 12px;
+}
+.Table {
+  user-select: text;
+}
+.SectionTitleHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.SectionTitleHeader .DialogButton {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.SectionTitleHeader .DialogButton SVG {
+  width: 16px;
+  height: 16px;
+}
+.SectionTitleButtons {
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
+}
+.required_title {
+  display: flex;
+}
+.required_title:not(:first-child) {
+  margin-top: 60px;
+}
+.SectionTitleHeader .EventEditorTextTitle {
+  padding-top: 6px;
+}
+.Ctn table tr:nth-child(odd) td {
+  background: #3b3e47;
+}
+.Ctn table td {
+  background: #32353c;
+}
+.Ctn table td svg {
+  width: 40px;
+  height: 40px;
+  color: #3081bb;
+}
+.Ctn .Indicator {
+  color: #189cff;
+  font-size: 30px;
+  line-height: 30px;
+}
+.EmailInfoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.EmailInfoRow .EmailField {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+.RadioButtons {
+  line-height: 24px;
+}
+.RadioButtonCtn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 16px;
+  background: linear-gradient(90deg, #353b45, transparent);
+  padding: 8px;
+  border-radius: 5px;
+}
+.Ctn textarea {
+  width: 100%;
+}
+.Ctn table tr:nth-child(odd) td {
+  background: #3b3e47;
+}
+.Ctn table td {
+  background: #32353c;
+}
+.Ctn table td svg {
+  width: 40px;
+  height: 40px;
+  color: #3081bb;
+}
+.Ctn .Indicator {
+  color: #189cff;
+  font-size: 30px;
+  line-height: 30px;
+}
+.FeedbackText {
+  font-size: 14px;
+  color: #fff;
+}

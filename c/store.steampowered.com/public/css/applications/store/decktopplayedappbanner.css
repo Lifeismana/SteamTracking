@@ -1,0 +1,469 @@
+.TopPlayedBannerCtn {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  min-height: 102px;
+  font-family: "Motiva Sans", sans-serif;
+  display: flex;
+  justify-content: end;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  transition: border .3s ease;
+  border: 2px solid #2b4155;
+}
+.TopPlayedBannerCtn:hover {
+  border: 2px solid #415a72;
+}
+.DeckLogo {
+  display: inline-block;
+  margin: 0px 6px 2px 2px;
+  width: 12px;
+  height: 20px;
+  background-image: url(https://cdn.akamai.steamstatic.com/store/steamdeck/decklogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: text-top;
+}
+.BannerTitle {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: .03em;
+  padding-top: 2px;
+  margin-bottom: 2px;
+}
+.BannerRightContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin-top: 8px;
+}
+.BannerHeader {
+  font-size: 21px;
+  padding: 4px 4px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 800;
+}
+.BannerGameText {
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 0px 10px;
+  font-weight: 500;
+  line-height: 18px;
+  text-shadow: 1px 1px 2px #00000033;
+}
+.BannerGameText span {
+  font-weight: 800;
+}
+@media screen and (max-width: 500px) {
+  .TopPlayedBannerCtn {
+    flex-direction: column;
+  }
+  .BannerRightContent {
+    margin-top: 145px;
+    max-width: 95%;
+    align-self: center;
+  }
+  .BannerHeader {
+    font-size: 24px;
+  }
+  .BannerGameText {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 22px;
+  }
+}
+.Adventurer {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner.png?v=1")
+    center / contain no-repeat,
+    linear-gradient(
+      90deg,
+      #3e3274 0%,
+      #8dc095 20.9%,
+      #8dc193 28.9%,
+      #3e3274 45.9%
+    );
+  background-position: top;
+}
+.Adventurer .BannerHeader {
+  color: #3e3274;
+  background-color: #fff4c7;
+}
+.Adventurer .BannerGameText {
+  color: #fff4c7;
+}
+@media screen and (max-width: 500px) {
+  .Adventurer {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner_mobile.png?v=1")
+      center / contain no-repeat, #3e3274;
+    background-position: top;
+  }
+}
+.Anime {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner.png?v=1")
+    center / contain no-repeat, #f8aba5;
+  background-position: top;
+}
+.Anime .BannerHeader {
+  color: #f8dcac;
+  background-color: #724cae;
+}
+.Anime .BannerGameText {
+  color: #361665;
+}
+@media screen and (max-width: 500px) {
+  .Anime {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner_mobile.png?v=1")
+      center / contain no-repeat, #f8aba5;
+    background-position: top;
+  }
+}
+.Apocalypse {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner.png?v=1")
+    center / contain no-repeat,
+    linear-gradient(90deg, #ff8031 54.5%, #de3748 78.5%);
+  background-position: top;
+}
+.Apocalypse .BannerHeader {
+  color: #ffe6a3;
+  background-color: #17103c;
+}
+.Apocalypse .BannerGameText {
+  color: #17103c;
+}
+@media screen and (max-width: 500px) {
+  .Apocalypse {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner_mobile.png?v=1")
+      center / contain no-repeat, #ff8031;
+    background-position: top;
+  }
+}
+.Astronaut {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner.png?v=1")
+    center / contain no-repeat, #fff;
+  background-position: top;
+}
+.Astronaut .BannerHeader {
+  color: #fff;
+  background-color: #14183e;
+}
+.Astronaut .BannerGameText {
+  color: #14183e;
+}
+@media screen and (max-width: 500px) {
+  .Astronaut {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner_mobile.png?v=1")
+      center / contain no-repeat, #fff;
+    background-position: top;
+  }
+}
+.Beach {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner.png?v=1")
+    center / contain no-repeat,
+    linear-gradient(90deg, #f1d1d4 46.5%, #eaeceb 79%);
+  background-position: top;
+}
+.Beach .BannerHeader {
+  color: #e9e9e9;
+  background-color: #455e94;
+}
+.Beach .BannerGameText {
+  color: #312b51;
+}
+@media screen and (max-width: 500px) {
+  .Beach {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner_mobile.png?v=1")
+      center / contain no-repeat, #f1d1d4;
+    background-position: top;
+  }
+}
+.Bed {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner.png?v=1")
+    center / contain no-repeat, #fef1e9;
+  background-position: top;
+}
+.Bed .BannerHeader {
+  color: #fffbf2;
+  background-color: #f26a78;
+}
+.Bed .BannerGameText {
+  color: #132e49;
+}
+@media screen and (max-width: 500px) {
+  .Bed {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner_mobile.png?v=1")
+      center / contain no-repeat, #fef1e9;
+    background-position: top;
+  }
+}
+.Bus {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner.png?v=1")
+    center / contain no-repeat,
+    linear-gradient(90deg, #115352 32.5%, #017f7e 57.5%);
+  background-position: top;
+}
+.Bus .BannerHeader {
+  color: #252d2f;
+  background-color: #ff8989;
+}
+.Bus .BannerGameText {
+  color: #fededf;
+}
+@media screen and (max-width: 500px) {
+  .Bus {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner_mobile.png?v=1")
+      center / contain no-repeat, #017f7e;
+    background-position: top;
+  }
+}
+.BusStop {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner.png?v=2")
+    center / contain no-repeat,
+    linear-gradient(90deg, #abe2ba 75.5%, #fcf2b7 100%);
+  background-position: top;
+}
+.BusStop .BannerHeader {
+  color: #fcf2b7;
+  background-color: #233f66;
+}
+.BusStop .BannerGameText {
+  color: #233f66;
+}
+@media screen and (max-width: 500px) {
+  .BusStop {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner_mobile.png?v=1")
+      center / contain no-repeat, #abe2ba;
+    background-position: top;
+  }
+}
+.Campfire {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner.png?v=1")
+    center / contain no-repeat, #171128;
+  background-position: top;
+}
+.Campfire .BannerHeader {
+  color: #18183e;
+  background-color: #fff0ad;
+}
+.Campfire .BannerGameText {
+  color: #fff0ad;
+}
+@media screen and (max-width: 500px) {
+  .Campfire {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner_mobile.png?v=1")
+      center / contain no-repeat, #171128;
+    background-position: top;
+  }
+}
+.Car {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner.png?v=1")
+    center / contain no-repeat, #01346d;
+  background-position: top;
+}
+.Car .BannerHeader {
+  color: #002044;
+  background-color: #f35652;
+}
+.Car .BannerGameText {
+  color: #ffe8d3;
+}
+@media screen and (max-width: 500px) {
+  .Car {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner_mobile.png?v=1")
+      center / contain no-repeat, #01346d;
+    background-position: top;
+  }
+}
+.City {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner.png?v=1")
+    center / contain no-repeat, #2f294d;
+  background-position: top;
+}
+.City .BannerHeader {
+  color: #2f294d;
+  background-color: #fff6cf;
+}
+.City .BannerGameText {
+  color: #fff6cf;
+}
+@media screen and (max-width: 500px) {
+  .City {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner_mobile.png?v=1")
+      center / contain no-repeat, #2f294d;
+    background-position: top;
+  }
+}
+.Family {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner.png?v=1")
+    center / contain no-repeat, #e5e59b;
+  background-position: top;
+}
+.Family .BannerHeader {
+  color: #f2f2d0;
+  background-color: #cb225d;
+}
+.Family .BannerGameText {
+  color: #3e2f58;
+}
+@media screen and (max-width: 500px) {
+  .Family {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner_mobile.png?v=1")
+      center / contain no-repeat, #e5e59b;
+    background-position: top;
+  }
+}
+.Farmer {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner.png?v=1")
+    center / contain no-repeat, #c5b730;
+  background-position: top;
+}
+.Farmer .BannerHeader {
+  color: #fae9b1;
+  background-color: #453341;
+}
+.Farmer .BannerGameText {
+  color: #453341;
+}
+@media screen and (max-width: 500px) {
+  .Farmer {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner_mobile.png?v=1")
+      center / contain no-repeat, #c5b730;
+    background-position: top;
+  }
+}
+.Knight {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner.png?v=1")
+    center / contain no-repeat, #161a3d;
+  background-position: top;
+}
+.Knight .BannerHeader {
+  color: #161a3d;
+  background-color: #ff737e;
+}
+.Knight .BannerGameText {
+  color: #f8ffdb;
+}
+@media screen and (max-width: 500px) {
+  .Knight {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner_mobile.png?v=1")
+      center / contain no-repeat, #161a3d;
+    background-position: top;
+  }
+}
+.Miner {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner.png?v=1")
+    center / contain no-repeat, #3d4a90;
+  background-position: top;
+}
+.Miner .BannerHeader {
+  color: #1b081e;
+  background-color: #4dc5c0;
+}
+.Miner .BannerGameText {
+  color: #e1f2ac;
+}
+@media screen and (max-width: 500px) {
+  .Miner {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner_mobile.png?v=1")
+      center / contain no-repeat, #3d4a90;
+    background-position: top;
+  }
+}
+.Porch {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner.png?v=1")
+    center / contain no-repeat, #fea190;
+  background-position: top;
+}
+.Porch .BannerHeader {
+  color: #ffeeba;
+  background-color: #402351;
+}
+.Porch .BannerGameText {
+  color: #402351;
+}
+@media screen and (max-width: 500px) {
+  .Porch {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner_mobile.png?v=1")
+      center / contain no-repeat, #fea190;
+    background-position: top;
+  }
+}
+.Robot {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner.png?v=1")
+    center / contain no-repeat, #2b2227;
+  background-position: top;
+}
+.Robot .BannerHeader {
+  color: #4c3136;
+  background-color: #fce9bf;
+}
+.Robot .BannerGameText {
+  color: #f9f5c7;
+}
+@media screen and (max-width: 500px) {
+  .Robot {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner_mobile.png?v=1")
+      center / contain no-repeat, #2b2227;
+    background-position: top;
+  }
+}
+.Superhero {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner.png?v=1")
+    center / contain no-repeat, #3279ad;
+  background-position: top;
+}
+.Superhero .BannerHeader {
+  color: #f4e3c7;
+  background-color: #1b3252;
+}
+.Superhero .BannerGameText {
+  color: #1b3252;
+}
+@media screen and (max-width: 500px) {
+  .Superhero {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner_mobile.png?v=1")
+      center / contain no-repeat, #3279ad;
+    background-position: top;
+  }
+}
+.Woodsman {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner.png?v=1")
+    center / contain no-repeat, #1d3132;
+  background-position: top;
+}
+.Woodsman .BannerHeader {
+  color: #1d3132;
+  background-color: #fffae3;
+}
+.Woodsman .BannerGameText {
+  color: #fffae3;
+}
+@media screen and (max-width: 500px) {
+  .Woodsman {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner_mobile.png?v=1")
+      center / contain no-repeat, #1d3132;
+    background-position: top;
+  }
+}
+.Zombies {
+  background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner.png?v=1")
+    center / contain no-repeat, #220445;
+  background-position: top;
+}
+.Zombies .BannerHeader {
+  color: #220344;
+  background-color: #eff4f7;
+}
+.Zombies .BannerGameText {
+  color: #eff4f7;
+}
+@media screen and (max-width: 500px) {
+  .Zombies {
+    background: url("https://cdn.cloudflare.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner_mobile.png?v=1")
+      center / contain no-repeat, #220445;
+    background-position: top;
+  }
+}

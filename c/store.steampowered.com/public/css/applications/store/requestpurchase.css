@@ -1,0 +1,37 @@
+.CartCard {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+.PurchaseRequestBanner {
+  padding: 10px 15px;
+  margin: 20px 0px;
+  background-color: #1a9fff;
+  color: #fff;
+}
+.PurchaseRequestBanner a {
+  color: #fff;
+  text-decoration: underline;
+}
+.PurchaseRequestInfoPage {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.PurchaseRequestInfoPage .Header {
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.PurchaseRequestInfoPage .ButtonContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.PurchaseRequestInfoPage .PrimaryButton {
+  background-color: #1a9fff;
+  width: fit-content;
+  padding: 2px 20px;
+  margin-top: 40px;
+}

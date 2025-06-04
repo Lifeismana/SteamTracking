@@ -1,0 +1,353 @@
+.SteamAwardContainer {
+  margin-right: 24px;
+  margin-left: 24px;
+  margin-top: 24px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  position: relative;
+  background-size: cover;
+  color: #fff;
+  background-repeat: no-repeat;
+  min-height: 290px;
+  padding: 16px 0 16px 16px;
+}
+.InLibraryView .SteamAwardContainer {
+  margin: 24px;
+}
+.SteamAwardContainer .SVGIcon_DialogCheck {
+  fill: #fad569;
+}
+.SteamAwardContainer .SteamAwardHeader {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 60px 5px 0;
+  font-size: 12px;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderImage {
+  position: absolute;
+  right: -10px;
+  max-width: 65px;
+  top: -30px;
+  z-index: 1;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardMainCtn {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardMainTitle {
+  position: relative;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  padding-right: 90px;
+  padding-bottom: 5px;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardSubTitle {
+  position: relative;
+  text-transform: uppercase;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardLearnMore {
+  color: #c9d3d9;
+  margin-left: 12px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardLearnMore:hover {
+  color: #fff;
+}
+.SteamAwardContainer
+  .SteamAwardHeader
+  .SteamAwardLearnMore.BottomRight {
+  margin-left: auto;
+}
+.SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderText {
+  position: relative;
+  padding-top: 15px;
+  width: 85%;
+  font-size: 14px;
+  font-style: italic;
+  display: flex;
+}
+.SteamAwardContainer
+  .SteamAwardHeader
+  .SteamAwardHeaderText
+  .LinkText {
+  color: #ebebeb;
+  font-style: normal;
+}
+.SteamAwardContainer
+  .SteamAwardHeader
+  .SteamAwardHeaderText
+  .LinkText:hover {
+  color: #fff;
+}
+@media screen and (max-width: 620px) {
+  .SteamAwardContainer .SteamAwardHeader .SteamAwardHeaderText {
+    display: none;
+  }
+}
+.SteamAwardContainer .SteamAwardVoteWidget {
+  padding: 10px;
+  color: #fff;
+  font-size: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  max-width: 90%;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardVotePrompt {
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: .05em;
+  margin-left: 15px;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardCategoryTitle {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  margin: auto 0 auto 6px;
+  flex: 1 0 25%;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardCategoryTitle.VotingTitle {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 0;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardCategoryDesc {
+  margin-bottom: 10px;
+}
+.SteamAwardContainer .SteamAwardVoteWidget .SteamAwardVoteButtonArea {
+  border-radius: 4px;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButton {
+  border: none;
+  margin: 15px 0px 6px;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 13px;
+  background: transparent;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButton
+  .SteamAwardVoteButtonText {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: #fff;
+}
+@media screen and (max-width: 620px) {
+  .SteamAwardContainer
+    .SteamAwardVoteWidget
+    .SteamAwardVoteButtonArea
+    .SteamAwardVoteButton
+    .SteamAwardVoteButtonText {
+    padding: 5px;
+  }
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButton:hover
+  .SteamAwardVoteButtonText {
+  border: 2px solid #fff;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButtonSubmitted {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  border: none;
+  margin: 15px 0px 6px;
+  padding: 0px;
+  cursor: default;
+  font-size: 13px;
+  background: transparent;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardVoteButtonSubmitted
+  .SteamAwardVoteButtonText {
+  border: 2px solid #fff;
+  background: #fff;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: #355a5f;
+}
+@media screen and (max-width: 620px) {
+  .SteamAwardContainer
+    .SteamAwardVoteWidget
+    .SteamAwardVoteButtonArea
+    .SteamAwardVoteButtonSubmitted
+    .SteamAwardVoteButtonText {
+    padding: 5px;
+  }
+}
+.SteamAwardContainer .SteamAwardVoteWidget .NominateCtn {
+  display: flex;
+  flex-direction: column;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 8px 8px 0px;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton:hover {
+  border: 1px solid #fff;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton.Nominated {
+  border: unset;
+  padding-left: 0;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton.Nominated:hover {
+  border: unset;
+  cursor: text;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardNominateButton
+  .DialogCheckbox {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  margin: auto 0;
+  max-width: 22px;
+  width: 100%;
+}
+.SteamAwardContainer
+  .SteamAwardVoteWidget
+  .NominateCtn
+  .SteamAwardCategoryDesc {
+  margin-left: 0px;
+  background: #ffffff1a;
+  color: #fff;
+  padding: 8px;
+  font-size: 14px;
+}
+.SteamAwardContainer .SteamAwardNominationWidget {
+  padding: 0;
+}
+.SteamAwardLinkToNominationPage {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.SteamAwardLinkToNominationPage a {
+  color: #c9d3d9;
+  font-size: 12px;
+}
+.SteamAwardLinkToNominationPage a:hover {
+  color: #fff;
+}
+.SteamAwardVoteCheckBox {
+  display: flex;
+}
+.SteamAwardVoteCheckBox.Nominated {
+  cursor: default;
+}
+.SteamAwardModalGameTitle {
+  color: #fff;
+}
+.ExpiredEventHeader {
+  font-size: 16px;
+  color: #c9d3d9;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: rgba(30, 33, 38, 0.5);
+}
+.EventDetail .SteamAwardContainer {
+  max-width: 713px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.steam_awards_vote_section .SteamAwardContainer {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.steam_awards_vote_section
+  .SteamAwardContainer
+  .SteamAwardHeader
+  .SteamAwardHeaderImage {
+  height: 180px;
+}
+.steam_awards_vote_section
+  .SteamAwardContainer
+  .SteamAwardHeader
+  .SteamAwardMainTitle {
+  font-size: 28px;
+  line-height: 28px;
+}
+.steam_awards_vote_section .AwardCategoriesCtn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 85%;
+}
+@media screen and (max-width: 620px) {
+  .steam_awards_vote_section .AwardCategoriesCtn {
+    max-width: 100%;
+  }
+}
+.steam_awards_vote_section .AwardCategoriesCtn .SteamAwardVoteWidget {
+  flex-grow: 1;
+}
+.steam_awards_vote_section
+  .AwardCategoriesCtn
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0px;
+}
+.steam_awards_vote_section
+  .AwardCategoriesCtn
+  .SteamAwardVoteWidget
+  .SteamAwardVoteButtonArea
+  .SteamAwardCategoryTitle {
+  padding-left: 8px;
+}
+.SteamAwardConflictModal {
+  min-width: 600px;
+}
+.ConflictBody {
+  min-height: 190px;
+}
+.NominationSwitchCtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}

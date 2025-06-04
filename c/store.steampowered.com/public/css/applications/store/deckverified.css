@@ -1,0 +1,203 @@
+.ReleaseDateInfoCtn {
+  display: flex;
+  flex-direction: row;
+  max-width: 320px;
+}
+.ReleaseDateInfoCtn.GameEditCtn {
+  max-width: 320px;
+  background: #000;
+  padding: 16px;
+}
+.ReleaseDateInfoCtn .ReleaseDateContent {
+  flex: 1;
+}
+.ReleaseDateInfoCtn .EditButton {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.ReleaseDateInfoCtn .EditButton .Spacer {
+  flex: 1;
+  margin-right: 16px;
+}
+.ReleaseDateInfoCtn
+  .EditButton
+  .Spacer.Top {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  margin-bottom: 12px;
+}
+.ReleaseDateInfoCtn
+  .EditButton
+  .Spacer.Bottom {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 12px;
+}
+.ReleaseDateInfoCtn .EditButton .EditButtonIcon {
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  background: linear-gradient(to right, #47bfff 5%, #1a8cc2 60%);
+  border-radius: 3px;
+}
+.LabelField {
+  margin-bottom: 15px;
+}
+.LabelField .Label {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #808285;
+  margin-bottom: 3px;
+}
+.LabelField .BigField {
+  line-height: 21px;
+  font-size: 20px;
+}
+.LabelField .Set {
+  color: #fff;
+}
+.DescText {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 23px;
+  margin-bottom: 23px;
+  color: #dedede;
+}
+.StatusText {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #dedede;
+}
+button.DialogButton.StartWizardButton {
+  width: 140px;
+}
+.ControllerSupportLevelString {
+  color: #8f98a0;
+  margin-bottom: 6px;
+}
+.InfoRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.LocSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(103, 193, 245, 0.1);
+  color: #66c0f4;
+}
+.LocSection.HighlightText {
+  color: #82f466;
+}
+.LocSection.GamepadRequired {
+  color: #ffc82c;
+}
+.LocSection.Personalized {
+  color: #82f466;
+}
+.LocSection.HighlightRow {
+  background: #9d8b5e;
+  color: #fff;
+}
+.LocSection:hover,
+:hover > .LocSection {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  background: #67c1f5;
+  background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+}
+.LocString {
+  font-weight: 400;
+  font-size: 12px;
+  padding: 6px 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.LocString.Personalized {
+  color: #69a712;
+}
+.ImgSection {
+  padding: 0px 6px;
+  display: flex;
+  color: #fff;
+  background: #101822;
+}
+.ImgSection.HighlightRow {
+  background: #7c6e4a;
+}
+.ImgSection.GamepadRequired {
+  background: #ffc82c;
+}
+.ImgSection > svg {
+  width: 26px;
+  height: 16px;
+  align-self: center;
+}
+.ImgSection > svg.SmallerSVG {
+  height: 20px;
+}
+.ImgSection > svg.BiggerSVG {
+  width: 22px;
+  padding-left: 2px;
+  padding-right: 2px;
+  transition: none;
+}
+.PreviewContainer {
+  padding: 5%;
+  background: linear-gradient(90deg, #15202d 0%, #0e141c 100%);
+}
+.StoreSidebarContainer {
+  margin-top: 12px;
+}
+.PurchaseNoticeContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  height: 32px;
+}
+.PurchaseNoticeImage {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+.NoticeContainer {
+  margin-top: 14px;
+  margin-bottom: 2px;
+}
+.ControllerRequiredImage {
+  padding: 0px 6px;
+  display: flex;
+  width: 26px;
+  height: 16px;
+  align-self: center;
+}
+.Tilt {
+  transform: rotate(-15deg);
+}
+.ToolTipControl {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.1);
+}
+.ToolTipContainer {
+  color: #fff;
+  margin-right: 2px;
+}

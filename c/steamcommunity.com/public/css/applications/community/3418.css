@@ -1,0 +1,476 @@
+.mentionDialogPosition {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.mentionDialogPosition.GamepadMode,
+.GamepadMode .mentionDialogPosition {
+  bottom: 40px;
+  z-index: 10;
+}
+.mentionDialog {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  background: #2c3036;
+  padding: 12px 0px 12px 12px;
+  box-shadow: 0 0 32px 0px #000000ab;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mentionDialog.GamepadMode,
+.GamepadMode .mentionDialog {
+  padding: 4px 0px 2px 4px;
+}
+.mentionDialog:focus {
+  outline: none;
+}
+.mentionSearchText {
+  color: #818181;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.suggestOption {
+  color: #adaeaf;
+  transition-property: padding-left, color;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+  line-height: 26px;
+  cursor: pointer;
+  margin-top: 0px;
+  padding-left: 22px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+.suggestOption.GamepadMode,
+.GamepadMode .suggestOption {
+  margin-bottom: 4px;
+  font-size: 10px;
+  line-height: 12px;
+  padding-left: 20px;
+  overflow: visible;
+}
+.suggestOption.GamepadMode.mentionSearchOption.manyMatches,
+.GamepadMode
+  .suggestOption.mentionSearchOption.manyMatches {
+  font-size: 10px;
+  line-height: 12px;
+}
+.suggestOption.GamepadMode.selected,
+.GamepadMode .suggestOption.selected {
+  padding-left: 24px;
+}
+.suggestOption .nickname {
+  color: #6e6e6e;
+}
+.suggestOption.selected {
+  color: #dfe3e6;
+  background-color: #434953;
+  padding-left: 30px;
+}
+span.mentionSearchMatch {
+  color: #dfe3e6;
+}
+.Emoticon_Toggle {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.Emoticon_Toggle.Active {
+  background: #777;
+}
+.Emoticon {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.BBCode_Toggle {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.BBCode_Toggle.Active {
+  background: #777;
+}
+.BBCode {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.WhitelistCtn {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  border-top: 2px solid #333740;
+  border-bottom: 2px solid #333740;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.WhitelistCtn .WhitelistRow {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2b2e36;
+  padding: 4px;
+  margin-bottom: 2px;
+  user-select: none;
+  box-sizing: border-box;
+}
+.WhitelistCtn .WhitelistRow .WhitelistNumber {
+  width: 34px;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #2a2e34;
+  margin-right: 8px;
+  padding: 0 4px 0 6px;
+}
+.WhitelistCtn
+  .WhitelistRow
+  .WhitelistNumber.Disabled {
+  cursor: not-allowed;
+}
+.WhitelistCtn
+  .WhitelistRow
+  .WhitelistNumber.Grabbing {
+  opacity: 0.5;
+}
+.WhitelistCtn .WhitelistRow.DragActive {
+  pointer-events: none;
+}
+.WhitelistCtn .WhitelistRow.Dropped {
+  animation: oABTo2lkoYYI5YMYaeq_Q .5s ease-out;
+}
+@keyframes oABTo2lkoYYI5YMYaeq_Q {
+  0% {
+    background-color: #b0b0b0;
+  }
+  100% {
+    background-color: #333740;
+  }
+}
+.WhitelistCtn .WhitelistRow.BeingDragged {
+  opacity: 0.5;
+}
+.WhitelistCtn .DragGhost {
+  pointer-events: none;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3), 0 -6px 12px rgba(0, 0, 0, 0.15);
+}
+.Grabbable {
+  cursor: grab;
+}
+.Grabbing {
+  cursor: grabbing;
+}
+.DisabledGrab {
+  cursor: not-allowed;
+}
+.WhitelistAvatar {
+  margin-right: 8px;
+}
+.WhitelistAvatar.Grabbing {
+  opacity: 0.5;
+}
+.ButtonCtn {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+.DragHighlightContainer {
+  position: relative;
+  height: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.DragHighlightContainer .DragHighlight {
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+  top: -1;
+}
+:root {
+  --main-text-color: #dbe2e6;
+  --main-light-blue-background: #93b3c8;
+  --main-text-on-light-blue: rgb(209, 209, 209);
+  --main-top-image-bg: #1f2126;
+  --main-editor-bg-color: #363a43;
+  --main-editor-text-color: #e6e7e8;
+  --main-editor-input-bg-color: #30333b;
+  --main-editor-section-title-color: #a3a3a3;
+}
+.DragTarget {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.DragOnTopOfMe {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.DescriptionCtn {
+  border: 2px solid transparent;
+  margin: -2px;
+}
+.DescriptionCtn.DragTarget {
+  border: 2px dashed #06beff;
+}
+.EventEditorLinkInput {
+  position: relative;
+  width: 600px;
+  margin-right: 14px;
+  margin-top: 20px;
+}
+.EventEditorLinkInput input {
+  width: calc(100% - 20px);
+  color: #dfe3e6;
+  background: rgba(59, 63, 72, 0.5);
+  border: none;
+  box-shadow: inset 0px 0px 0px #0000;
+  border-radius: 3px;
+}
+.EventEditorLinkInput input:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  padding-left: 11px;
+  outline: none;
+}
+.DefaultEditor {
+  border: none;
+  outline-width: 0;
+  padding: 10px;
+  background-color: var(--main-editor-input-bg-color);
+  box-shadow: 0 0 5px #000 inset;
+  color: var(--main-editor-text-color);
+  font-size: 14px;
+  overflow-x: hidden;
+}
+.ImportHTMLCtn {
+  position: relative;
+  margin-right: 14px;
+  min-width: calc(40vw - 40px);
+}
+.ImportHTMLCtn .ImportHTMLTextArea {
+  width: calc(100% - 12px);
+  height: 200px;
+  margin: 4px 0px;
+  background-color: #1e2025;
+  border: solid 1px #000;
+  outline-width: 0;
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: gray;
+}
+.ImportHTMLCtn .ImportHTMLConvertButtons {
+  padding: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  width: 30%;
+  line-height: 22px;
+}
+.ImportHTMLCtn .ImportHTMLCheckBoxLine {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.ImportHTMLCtn .OptionRow {
+  display: flex;
+  flex-direction: column;
+}
+.TextEditorToolBarContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.TextEditorToolBarContainer > span,
+.TextEditorToolBarContainer > img.EmoteOuter {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 2px;
+  color: #afafaf;
+  background-color: #3d4450;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+.TextEditorToolBarContainer > span:hover,
+.TextEditorToolBarContainer > img.EmoteOuter:hover {
+  background-color: #4f5763;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.TextEditorToolBarContainer > span img,
+.TextEditorToolBarContainer > img.EmoteOuter {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.YouTubeInput {
+  position: relative;
+  width: 600px;
+  margin-right: 14px;
+}
+.YouTubeInput input[type="text"] {
+  width: calc(100% - 20px);
+  color: #dfe3e6;
+  background: rgba(59, 63, 72, 0.5);
+  border: none;
+  box-shadow: inset 0px 0px 0px #0000;
+  border-radius: 3px;
+}
+.YouTubeInput input[type="text"]:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  padding-left: 11px;
+  outline: none;
+}
+.YouTubePreviewInsertOption {
+  padding: 2px;
+  margin-bottom: 2px;
+  background-color: rgba(57, 61, 71, 0.5);
+  color: #e5e5e5;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.YouTubePreviewInsertOption input {
+  margin-right: 5px;
+}
+.YouTubePreviewInsertOption span {
+  padding-left: 10px;
+}
+.YouTubePreviewInsertOption label {
+  cursor: pointer;
+}
+.YouTubePreviewInsertOption label > span {
+  vertical-align: super;
+}
+.EmoteOuter {
+  min-width: initial;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  display: unset;
+  cursor: hand;
+}
+.DropDownScroll {
+  max-height: 400px;
+  overflow: hidden scroll;
+}
+.InsertSpeakerCtn {
+  margin-top: 16px;
+}
+.InsertSpeakerCtn .TitleGroup {
+  display: flex;
+  flex-direction: row;
+}
+.InsertSpeakerCtn .TitleGroup > div {
+  flex-grow: 1;
+}
+.InsertSpeakerCtn .TitleGroup > div:not(:first-of-type) {
+  margin-left: 10px;
+}
+.InsertSpeakerCtn .AssociateRowCtn {
+  display: flex;
+  flex-direction: row;
+}
+.InsertSpeakerCtn .AssociateRowCtn button:not(:first-of-type) {
+  margin-left: 10px;
+}
+.InsertSpeakerCtn .PhotoCtn {
+  margin-top: 16px;
+}
+.InsertSpeakerCtn .AboutCtn {
+  margin-top: 16px;
+}
+.InsertSpeakerCtn .PreviewCtn {
+  margin-top: 16px;
+}
+.BBCodeEditorInputStyles textarea {
+  color: #cfcfcf;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.BBCodeEditorInputStyles input {
+  color: #cfcfcf;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 7px;
+}
+.ImagesOuterContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 732px;
+  background: #000;
+}
+.ImagesOuterContainer::-webkit-scrollbar-thumb {
+  background: #3d4450;
+}
+.Hilight {
+  font-weight: bold;
+  color: green;
+}
+.ImageContainer {
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  max-height: 168px;
+  overflow: hidden;
+  padding: 4px;
+}
+.Image {
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.ImageFilename {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 12px;
+}
+.Image {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.Container {
+  background-color: #1c1e26;
+  padding: 10px;
+}
+.SmallAvatar {
+  max-width: 32px;
+  max-height: 32px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+  border-radius: 3px;
+}
+.ShareDescription {
+  width: calc(100% - 20px);
+  height: 200px;
+}
+.ShareLink {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

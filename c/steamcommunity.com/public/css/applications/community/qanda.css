@@ -1,0 +1,640 @@
+.DateAndTime,
+.DateAndTimeInline {
+  display: inline-flex;
+  white-space: nowrap;
+}
+.DateAndTime span.At,
+.DateAndTimeInline span.At {
+  margin: 0px 4px;
+  color: #6c767f;
+}
+.DateAndTimeInline {
+  display: inline-flex;
+}
+.ActiveEvent {
+  color: #a3cf06;
+  display: flex;
+}
+.ActiveEvent .ActiveEventCallOut {
+  background: #a3cf06;
+  font-size: 11px;
+  color: #222;
+  padding: 0px 5px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 4px;
+  margin-top: 1px;
+}
+.RightSideTitles {
+  font-size: 12px;
+  font-weight: 200;
+  color: #b1b4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.DateToolTip {
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: #5e6068;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.ShortDateAndTime {
+  margin: 0px 4px;
+  text-transform: initial;
+  color: #868f98;
+  letter-spacing: normal;
+}
+.ShortDateRange {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  .ShortDateRange {
+    flex-direction: column;
+  }
+}
+.ShortDateRange .RightSideTitles {
+  display: flex;
+  flex-wrap: wrap;
+}
+.SectionTitleHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.SectionTitleHeader .DialogButton {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.SectionTitleHeader .DialogButton SVG {
+  width: 16px;
+  height: 16px;
+}
+.SectionTitleButtons {
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
+}
+.required_title {
+  display: flex;
+}
+.required_title:not(:first-child) {
+  margin-top: 60px;
+}
+.SectionTitleHeader .EventEditorTextTitle {
+  padding-top: 6px;
+}
+body.qanda {
+  background-color: #111113;
+}
+.QAFullPageView {
+  max-width: 2000px;
+  margin: auto;
+}
+.QAFullPageView .QAName {
+  padding: 10px 30px 4px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+.QAColumns {
+  display: flex;
+  justify-content: space-between;
+}
+.QAColumns .QAMainCtn,
+.QAColumns .QAModeratorColumn {
+  padding: 16px 30px;
+}
+.QAColumns .QAModeratorColumn {
+  border-left: 1px solid gray;
+}
+.QAColumns .QASplitColumns {
+  width: 50%;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: unset;
+}
+.QAColumns .ModeratorInstructions,
+.QAColumns .AnsweredSectionHeader {
+  background: #2d6586;
+  padding: 6px;
+  margin-top: 40px;
+}
+.QAColumns .ModeratorInstructions div,
+.QAColumns .AnsweredSectionHeader div {
+  font-size: 16px;
+  padding-top: 10px;
+}
+.QAColumns .ModeratorInstructions .DialogButton,
+.QAColumns .AnsweredSectionHeader .DialogButton {
+  width: 32px;
+  min-width: 32px;
+  height: 30px;
+  margin-left: auto;
+}
+.QAMainCtn,
+.QAModeratorColumn {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 940px;
+  margin: auto;
+  color: #fff;
+}
+.QAMainCtn button.InputButton,
+.QAModeratorColumn button.InputButton {
+  width: fit-content;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0;
+}
+.QAMainCtn button.InputButton:disabled,
+.QAMainCtn button.InputButton:disabled:hover,
+.QAModeratorColumn button.InputButton:disabled,
+.QAModeratorColumn button.InputButton:disabled:hover {
+  background-color: #3d4450;
+  color: #94959c;
+}
+.QAMainCtn button.InputButton.Reload,
+.QAModeratorColumn button.InputButton.Reload {
+  grid-area: reload;
+  height: 34px;
+  width: 34px;
+  box-sizing: border-box;
+}
+.QAMainCtn
+  button.InputButton.Reload
+  svg,
+.QAModeratorColumn
+  button.InputButton.Reload
+  svg {
+  height: 16px;
+  width: 16px;
+  transition: transform 0s linear;
+}
+.QAMainCtn
+  button.InputButton.Reload.Reloading,
+.QAModeratorColumn
+  button.InputButton.Reload.Reloading {
+  background: #393f49;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+  transition-duration: .04s;
+}
+.QAMainCtn
+  button.InputButton.Reload.Reloading
+  svg,
+.QAModeratorColumn
+  button.InputButton.Reload.Reloading
+  svg {
+  transform: rotate(360deg);
+  transition: transform .2s linear;
+}
+.QAMainCtn button.InputButton.SignInButton,
+.QAModeratorColumn button.InputButton.SignInButton {
+  height: auto;
+  padding: 0 16px;
+  margin: auto;
+}
+.QAHeader {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 34px;
+  grid-template-rows: auto;
+  grid-template-areas: "desc reload" "entry entry";
+  row-gap: 8px;
+  padding: 8px;
+  background-color: #22252b;
+}
+.QuestionACK {
+  position: absolute;
+  font-size: 13px;
+  top: 20px;
+  right: 8px;
+  background-color: #036081;
+  color: #06beff;
+  padding: 3px 26px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  box-shadow: 2px 2px 10px #000;
+}
+.QuestionACK.Visible {
+  opacity: 1;
+}
+.QATitleRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.QATitle {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #969696;
+}
+.Description {
+  padding: 0 12px 0 0;
+  font-size: 12px;
+  grid-area: desc;
+  color: #b9b9b9;
+}
+.InputCtn {
+  grid-area: entry;
+  display: flex;
+  flex-grow: 1;
+}
+.InputCtn .DialogInput_Wrapper {
+  flex-grow: 1;
+}
+.LogInPrompt {
+  padding: 8px;
+}
+.ButtonCtn {
+  position: relative;
+  margin-left: 8px;
+}
+.SaveSpinner {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.QuestionsCtn {
+  overflow-y: scroll;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.QuestionsCtn .InsetShadowTopCtn {
+  position: relative;
+  height: 0;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.QuestionsCtn .InsetShadowTopCtn .InsetShadowTop {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-shrink: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.QuestionsHeader {
+  display: flex;
+  padding: 12px;
+}
+.QuestionsTitle {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #969696;
+}
+.QuestionList {
+  padding-top: 10px;
+}
+.AnsweredSectionHeader {
+  color: #67c1f5;
+  padding: 24px 0 0 8px;
+}
+.AnsweredSectionHeader div {
+  font-size: 24px;
+  padding: 0;
+}
+.AnsweredSectionHeader .DialogButton {
+  width: 40px;
+  margin-left: auto;
+}
+.NoQuestions {
+  font-size: 1.2em;
+  margin: 0 auto;
+  padding: 24px 0 0 8px;
+}
+.Question {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 1px 3px;
+  background: linear-gradient(
+    135deg,
+    transparent 50%,
+    rgba(42, 42, 45, 0.35) 100%
+  );
+}
+.Question.Hidden {
+  opacity: 0.6;
+  border: 1px dashed #ddd;
+}
+.QuestionCtn {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.Hidden .QuestionCtn:after {
+  content: "Question hidden from public view";
+  position: absolute;
+  right: -6px;
+  top: -6px;
+  font-size: 12px;
+  padding: 0 4px;
+  z-index: 2;
+  pointer-events: none;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  background: #fff;
+  width: fit-content;
+  height: fit-content;
+}
+.UserAvatar {
+  display: block;
+  flex-shrink: 0;
+  height: 32px;
+  width: 32px;
+  margin-top: 6px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.UserAvatar:hover {
+  box-shadow: 1px 1px 10px #000;
+}
+.UserAvatar img {
+  border-radius: 3px;
+}
+.PersonaName {
+  color: #6dcff6;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #6dcff63d;
+  width: fit-content;
+}
+.PersonaName:active,
+.PersonaName:hover {
+  color: #9edff8;
+  text-decoration-color: #6dcff6b4;
+}
+.QuestionText {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.QuestionText .QuestionAndVotes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.QuestionText .QuestionTitle {
+  font-size: 16px;
+  font-weight: 300;
+  flex-grow: 1;
+  padding-right: 12px;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+.QuestionStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.PostTime {
+  margin-right: 8px;
+  font-size: 12px;
+  color: #5a5a5e;
+}
+.Votes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #32353f;
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+.Votes.Vote_Ready:hover,
+.Votes.Vote_Positive:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.RateIcon {
+  fill: #8c8c8c;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.Vote_CannotVote {
+  color: gray;
+  opacity: 0.5;
+}
+.Vote_Ready {
+  color: #fff;
+}
+.Vote_Positive svg.RateIcon {
+  fill: #06beff;
+}
+.DateAndTime {
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: #5e6068;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.Answer {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  margin: 21px 8px 8px 44px;
+  border: 1px solid #2f313d;
+  border-radius: 6px;
+}
+.Answer .QuestionStats {
+  margin-left: 8px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.AnswerTitle {
+  font-size: 11px;
+  margin: 8px 0 8px 32px;
+  background-color: #111113;
+  width: fit-content;
+  padding: 0 6px;
+  color: #737373;
+  display: flex;
+}
+.Answer .AnswerTitle {
+  margin: -12px 0 8px 2px;
+}
+.AnswerCheck {
+  height: 12px;
+  width: 12px;
+  margin: 1px 4px 0 0;
+}
+.AnswerText {
+  padding: 2px 6px 0px 8px;
+  font-size: 16px;
+  font-style: italic;
+}
+.ModerationHeader {
+  background: #622;
+  display: flex;
+  padding: 4px;
+  gap: 24px;
+  align-items: center;
+}
+.ModeratorSection {
+  margin: 12px 6px 6px 44px;
+  padding: 6px;
+  border: 1px solid #622;
+  background: #2e1919;
+  color: #9e6767;
+}
+.ModeratorSection input.DialogTextInputBase.DialogInput {
+  padding: 4px 4px;
+  font-size: 13px;
+}
+.ModeratorSection .DialogButton {
+  font-size: 12px;
+  line-height: 24px;
+}
+.ToolRow {
+  margin-top: 8px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.ToolLabel {
+  margin-right: 6px;
+}
+.QADashboardCtn {
+  padding: 12px;
+}
+.QADashboardCtn .DashboardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.QADashboardCtn .DashboardHeader .DashboardHeaderTitle {
+  font-size: 24px;
+  margin-right: 8px;
+  color: #fff;
+}
+.QADashboardCtn .DashboardHeader .DashboardHeaderButtonCtn {
+  display: flex;
+}
+.QADashboardCtn
+  .DashboardHeader
+  .DashboardHeaderButtonCtn
+  button.DialogButton {
+  padding: 6px 30px;
+  box-sizing: border-box;
+  margin-right: 24px;
+  white-space: nowrap;
+}
+.QADashboardCtn .DashboardRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  margin: 4px 0;
+  background-color: #40454f;
+}
+.QADashboardCtn .DashboardRow .GIDSession,
+.QADashboardCtn .DashboardRow .QuestionCount {
+  padding: 4px;
+  width: 20%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.QADashboardCtn .DashboardRow .QAndADeleteColumn {
+  padding: 0 4px;
+  width: 10%;
+  box-sizing: border-box;
+  text-align: right;
+}
+.QADashboardCtn .DashboardRow .QAndADeleteColumn svg {
+  height: 20px;
+  width: 20px;
+}
+.QADashboardCtn .DashboardRow .QAndAName {
+  padding: 4px 8px;
+  width: 50%;
+  box-sizing: border-box;
+  cursor: text;
+}
+.QADashboardCtn
+  .DashboardRow
+  .QAndAName
+  .Prompt {
+  font-style: italic;
+  color: gray;
+}
+.QADashboardCtn
+  .DashboardRow
+  .QAndAName.Editing {
+  padding: 0px;
+}
+.QADashboardCtn
+  .DashboardRow
+  .QAndAName.Editing
+  .NameInput {
+  display: flex;
+}
+.QADashboardCtn
+  .DashboardRow
+  .QAndAName.Editing
+  .InputButton {
+  margin: 0 0 0 8px;
+  line-height: 28px;
+  padding: 0 16px;
+  width: unset;
+}
+.QADashboardCtn
+  .DashboardRow
+  .QAndAName.Editing
+  .DialogInput_Wrapper {
+  flex: 1;
+}
+.QADashboardCtn
+  .DashboardRow
+  .QAndAName.Editing
+  .DialogInput_Wrapper
+  .DialogInput {
+  padding: 2px 7px;
+}
+.QADashboardCtn .DashboardRow .DeleteButton {
+  box-sizing: border-box;
+  padding: 4px;
+  height: 28px;
+  width: 28px;
+  margin: 0 16px 0 auto;
+}
+.QADashboardCtn .DashboardColumnHeaders {
+  background-color: none;
+}
+.CreateQAndADialog .NameInput {
+  margin-top: 12px;
+}
+.DeleteQAndADialog .DeleteInfo {
+  padding: 8px 12px 0px 12px;
+}

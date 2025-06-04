@@ -1,0 +1,215 @@
+.TabCtn {
+  display: flex;
+  flex-direction: column;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 64px;
+}
+.TabHeaderCtn {
+  display: flex;
+  flex-direction: row;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.TabHeaderCtn .TabHeader {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.15ch;
+  color: rgba(255, 255, 255, 0.4);
+  flex-grow: 1;
+}
+.TabHeaderCtn .TabHeaderSelected {
+  color: rgba(255, 255, 255, 0.9);
+}
+.TabHeaderSearchCtn {
+  display: flex;
+}
+.TabHeaderSearchCtn div > input {
+  padding: 4px;
+}
+.TabHeaderSearchCtn svg {
+  width: 24px;
+  height: 24px;
+  margin: auto 8px;
+}
+.FacetAndPageCtn {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+}
+.PagedItemsCtn {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.PagingCtn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+.ItemCount {
+  margin: auto 0;
+}
+.PagingNumCtn {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+.PageNumCtn {
+  display: flex;
+  flex-direction: row;
+}
+.PageNumber {
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.PageSelectedNumber {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+}
+.PagingButton {
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.ContentsList {
+  position: relative;
+}
+.FacetMenuCtn {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  display: inline-block;
+  max-width: 200px;
+  margin-top: 30px;
+}
+.FacetMenuOverride {
+  background: none;
+  box-shadow: none;
+}
+.FacetMenuTitleOverride {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.25ch;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.FacetMenuMatchCountOverride {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  letter-spacing: 0.15ch;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.FacetMenuResetOverride {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  letter-spacing: 0.15ch;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.FacetNameOverride {
+  color: rgba(102, 192, 244, 0.9);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.2ch;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  margin-right: 16px;
+}
+.FacetValueOverride {
+  padding-left: 8px;
+  margin: 2px 0;
+}
+.FacetValueEnabledOverride {
+  margin: 2px 0;
+  font-weight: bold;
+  border-left: 4px solid rgba(102, 192, 244, 0.9);
+  padding-left: 4px;
+}
+.FacetValueDeactivatedOverride {
+  padding-left: 8px;
+  margin: 2px 0;
+  opacity: 70%;
+}
+.FacetValueNameOverride {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+}
+.FacetValueNameOverride:hover {
+  color: rgba(102, 192, 244, 0.9);
+}
+.FacetValueDescOverride {
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  opacity: 50%;
+}
+.FacetShowMoreOverride {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  cursor: pointer;
+}
+.ShowMoreCtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.ShowMoreCtn .ShowMore {
+  border: none;
+  line-height: 32px;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 40%;
+  white-space: nowrap;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.ShowMoreCtn .ShowMore:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.TabHeaderInner {
+  display: flex;
+  flex-grow: 1;
+}
+.HeaderOptionsCtn {
+  min-width: 15%;
+  display: flex;
+}
+.HeaderOptionsCtn div {
+  margin-bottom: 0;
+}
+.GridView {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  grid-gap: 16px;
+  padding-bottom: 14px;
+}
+.ContentHubStorePrefsLink {
+  min-height: 30px;
+  margin-left: auto;
+}
+.ContentHubStorePrefsLinkInner {
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  margin-left: auto;
+  margin-bottom: 6px;
+  padding: 4px 6px;
+}

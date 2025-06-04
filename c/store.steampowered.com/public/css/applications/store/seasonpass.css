@@ -1,0 +1,125 @@
+.StoreItemCtn {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.StoreItemCtn .StoreItemRow {
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  background-color: #313c4a;
+  transition: background-color .2s ease-in-out;
+}
+.StoreItemCtn .StoreItemRow:hover {
+  background-color: #435164;
+}
+.StoreItemCtn a {
+  display: block;
+  padding: 12px;
+}
+.StoreItemCtn a:hover .StoreItemDescription {
+  color: #fff;
+}
+.StoreItemCtn img {
+  max-width: 42%;
+  display: block;
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 7px;
+}
+.StoreItemDescription {
+  position: relative;
+  font-size: 13px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+.StoreImage {
+  max-width: 100%;
+}
+.SeasonPass {
+  color: #dcdcdc;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+  background: radial-gradient(
+    156.1% 79.95% at 10.31% 0%,
+    #1b2838 0%,
+    #313c4a 100%
+  );
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.SeasonPass .Description {
+  color: #bbbfc1;
+  padding: 16px 16px 20px 16px;
+}
+.SeasonPass .Description a {
+  text-decoration: underline;
+}
+.Title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: radial-gradient(
+    156.1% 79.95% at 10.31% 0%,
+    #364659 0%,
+    #4b5a6c 100%
+  );
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.Title.Shipped {
+  background: radial-gradient(
+    156.1% 79.95% at 10.31% 0%,
+    #2b371b 0%,
+    #4c6b22 100%
+  );
+  color: #bce681;
+}
+.DateAndControl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 300;
+  color: #bbbfc1;
+  text-align: right;
+}
+.DateAndControl .Upcoming {
+  line-height: 16px;
+}
+.DateAndControl .Shipped {
+  color: #bce681;
+  line-height: 14px;
+  font-size: 12px;
+}
+.Status {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #191f27;
+}
+.Content {
+  background-color: #33363a;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #1e2124;
+  margin-top: 10px;
+}
+.Text {
+  font-style: italic;
+  margin-top: 10px;
+}
+.Padding {
+  margin-right: 8px;
+}
+.Strike {
+  text-decoration: line-through;
+}
+.Chevron {
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  margin-left: 4px;
+  transition: opacity .3s ease-in-out;
+}

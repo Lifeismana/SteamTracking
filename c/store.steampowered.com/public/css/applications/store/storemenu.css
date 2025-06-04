@@ -1,0 +1,1230 @@
+.StoreMenuLegacyWrapper {
+  display: contents;
+}
+.StoreMenuContainer {
+  position: relative;
+  height: 0;
+}
+.StoreMenuContainer:not(.GamepadUI) {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.StoreMenuBackdropContainer {
+  display: flex;
+  flex-direction: column;
+}
+.StoreMenuBackdropContainer .Backdrop {
+  flex: 1;
+  background: rgba(25, 29, 37, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 100ms ease-out;
+}
+.StoreMenuBackdropContainer.BackdropActive {
+  height: 100vh;
+}
+.StoreMenuBackdropContainer.BackdropActive .Backdrop {
+  background: rgba(25, 29, 37, 0.6);
+  opacity: 1;
+  pointer-events: initial;
+}
+.StoreMenu {
+  border-bottom: 1px solid rgba(126, 126, 126, 0.17);
+  background: rgba(12, 26, 36, 0.75);
+  backdrop-filter: blur(50px);
+  z-index: 1;
+  padding: 0 1%;
+  color: #dcdedf;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  --store-menu-content-width: 1100px;
+}
+html.client .StoreMenu {
+  border-left: 1px solid rgba(61, 68, 80, 0.75);
+}
+.StoreMenu,
+.StoreMenu button,
+.StoreMenu input {
+  font-family: "Motiva Sans", Arial, sans-serif;
+}
+.StoreMenu .Content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  max-width: calc(var(--store-menu-content-width) + 16px);
+  height: 46px;
+}
+.StoreMenu a {
+  text-decoration: none;
+}
+.StoreMenu a:hover {
+  color: #fff;
+}
+.NoSearchBarSpacer {
+  flex: 1;
+}
+a.MenuButton,
+button.MenuButton {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  color: #fff;
+  font-family: "Motiva Sans", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  padding: 0 10px;
+  align-items: center;
+  white-space: nowrap;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition-property: box-shadow, color;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+a.MenuButton.Hidden,
+button.MenuButton.Hidden {
+  display: none;
+}
+a.MenuButton .ItemCount,
+button.MenuButton .ItemCount {
+  color: #dcdedf;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2px;
+}
+a.MenuButton.CartButton,
+button.MenuButton.CartButton {
+  border-radius: 1px;
+  background: #1a9fff;
+  margin: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: none;
+  transition-property: background, box-shadow;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+a.MenuButton.CartButton .ItemCount,
+button.MenuButton.CartButton .ItemCount {
+  color: #fff;
+}
+a.MenuButton.CartButton:hover,
+button.MenuButton.CartButton:hover {
+  background: #45acff;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.5);
+}
+a.MenuButton.Active,
+button.MenuButton.Active {
+  color: #51b6ff;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+a.MenuButton svg,
+button.MenuButton svg {
+  width: 14px;
+}
+a.MenuButton.FlyoutMenuButton,
+button.MenuButton.FlyoutMenuButton {
+  gap: 10px;
+}
+a.MenuButton .MenuLabel,
+button.MenuButton .MenuLabel {
+  display: inline-block;
+  position: relative;
+}
+a.MenuButton .MenuLabel .MenuUnderscoreCtn,
+button.MenuButton .MenuLabel .MenuUnderscoreCtn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 3px;
+}
+a.MenuButton
+  .MenuLabel
+  .MenuUnderscoreCtn
+  .MenuUnderscore,
+button.MenuButton
+  .MenuLabel
+  .MenuUnderscoreCtn
+  .MenuUnderscore {
+  border-radius: 3px;
+  background: #1a9fff;
+  height: 3px;
+  margin: 0 auto;
+  width: 0;
+  opacity: 0;
+  transition-property: opacity, width;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+a.MenuButton.Active
+  .MenuLabel
+  .MenuUnderscoreCtn
+  .MenuUnderscore,
+button.MenuButton.Active
+  .MenuLabel
+  .MenuUnderscoreCtn
+  .MenuUnderscore {
+  opacity: 1;
+  width: 100%;
+}
+.Separator {
+  width: 1px;
+  height: 30px;
+  opacity: 0.6;
+  background: #353c48;
+  margin-top: 8px;
+}
+.ValveOnlyNotice {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #ff6f6f;
+}
+.ValveOnlyNotice a {
+  color: #dcdedf;
+}
+.ValveOnlyNotice a:hover {
+  color: #fff;
+}
+.SearchBar {
+  flex: 1;
+  border-radius: 2px;
+  margin: 0 2%;
+  height: 34px;
+  width: 500px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  background: #353c48;
+  position: relative;
+}
+.SearchBar .SearchInput {
+  color: #fff;
+  flex: 1;
+  min-width: 0;
+  background: #353c48;
+  border: none;
+  padding: 0 10px;
+  border-radius: 2px;
+  border: 1px solid #353c48;
+}
+.SearchBar .SearchInput:hover {
+  border: 1px solid rgba(26, 159, 255, 0.25);
+  background: #404857;
+}
+.SearchBar .SearchInput::placeholder {
+  color: var(--Neutrals-lightestGrey, #dcdedf);
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.SearchBar .SearchInput:focus-visible {
+  border: 1px solid #1a9fff;
+  outline: none;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.SearchBar .SearchIcon {
+  border-radius: 1px;
+  background: #1a9fff;
+  width: 34px;
+  justify-items: center;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition-property: background, box-shadow, transform;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+.SearchBar .SearchIcon svg {
+  width: 18px;
+  display: flex;
+  transform: scale(1);
+  transition: transform .2s ease-out;
+}
+html.client .SearchBar .SearchIcon svg {
+  display: unset;
+  margin-top: 4px;
+}
+.SearchBar .SearchIcon:hover {
+  background: #45acff;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.SearchBar .SearchIcon:hover svg {
+  transform: scale(1.2);
+}
+.SuggestionsPosition {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.SuggestionsPosition .InnerPosition {
+  position: absolute;
+  left: 0;
+  right: 0px;
+  top: 1px;
+}
+.Suggestions {
+  display: flex;
+  padding: 10px 10px 20px 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #404655 0%, #262a32 100%);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.Suggestions .SuggestionSection {
+  align-self: stretch;
+}
+.Suggestions .SuggestionSection .SectionTitle {
+  color: #dcdedf;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+.Suggestions .SuggestionSection .SuggestionList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.Suggestions
+  .SuggestionSection.Horizontal
+  .SuggestionList {
+  flex-direction: row;
+}
+.Suggestions .SuggestionSection .SuggestionTextList {
+  color: #7f7f7f;
+}
+.Suggestions
+  .SuggestionSection
+  .SuggestionTextList
+  .Label {
+  font-weight: bold;
+}
+.Suggestions
+  .SuggestionSection
+  .SuggestionTextList
+  a.TextLink {
+  color: #1a9fff;
+}
+.Suggestions
+  .SuggestionSection
+  .SuggestionTextList
+  a.TextLink:hover {
+  text-decoration: underline;
+}
+.CategorySuggestion {
+  display: flex;
+  height: 63px;
+  padding: 8px 15px;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 0 0;
+  border-radius: 2px;
+  background: var(--Neutrals-grey, #67707b);
+}
+.CategorySuggestion.Active {
+  background: linear-gradient(90deg, #67707b 0%, #8d9db0 100%);
+}
+.CategorySuggestion .CategoryIcon {
+  width: 57px;
+  height: 42px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.CategorySuggestion .Content {
+  color: var(--Neutrals-white, #fff);
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+}
+.DiscountBlock {
+  display: flex;
+  background: #344654;
+}
+.DiscountBlock.Transparent {
+  background: transparent;
+}
+.DiscountBlock.SizeLarge {
+  min-height: 36px;
+  --original-price-font-size: 11px;
+  --original-price-color: #738895;
+  --final-price-font-size: 15px;
+  --final-price-color: #ffffff;
+}
+.DiscountBlock.SizeInline {
+  gap: 3px;
+  --original-price-color: #7193a6;
+  --final-price-color: #def3ff;
+}
+.Discount {
+  background: rgba(76, 107, 34, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #beee11;
+}
+.Discount.Icon {
+  background: #4c6b22;
+}
+.Discount.Icon > svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 3px;
+}
+.Discount .DiscountPct {
+  font-weight: 500;
+}
+.SizeLarge .Discount .DiscountPct {
+  font-size: 26px;
+  padding: 0 5px;
+  line-height: 34px;
+}
+.SizeInline .Discount .DiscountPct {
+  font-size: 12px;
+  padding: 0 5px;
+  line-height: 19px;
+}
+.Prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.SizeLarge .Prices {
+  padding: 0 8px;
+}
+.SizeInline .Prices {
+  flex-direction: row;
+  gap: 3px;
+}
+.Prices.WithOriginalPrice {
+  justify-content: end;
+}
+.Prices .OriginalPrice {
+  position: relative;
+  font-size: var(--original-price-font-size, inherit);
+  color: var(--original-price-color, inherit);
+}
+.Prices .OriginalPrice::before {
+  content: "";
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  top: 43%;
+  border-bottom: 1.5px solid #738895;
+  transform: skewY(-8deg);
+  box-shadow: 0 0 2px #000;
+}
+.Prices .FinalPrice {
+  font-size: var(--final-price-font-size, inherit);
+  color: var(--final-price-color, inherit);
+}
+.CapsuleList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ItemCapsule {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 56px;
+  gap: 10px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 20, 27, 0.2) 0%,
+    rgba(163, 186, 211, 0.2) 100%
+  );
+}
+.ItemCapsule.Active,
+.ItemCapsule.Hover:hover,
+.ItemCapsule.gpfocus {
+  background: linear-gradient(
+    90deg,
+    rgba(14, 20, 27, 0.6) 0%,
+    rgba(163, 186, 211, 0.6) 100%
+  );
+}
+.ItemCapsule .Capsule {
+  width: 148px;
+  min-height: 56px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.ItemCapsule .Capsule.Ghost {
+  background: rgba(0, 0, 0, 0.2);
+}
+.ItemCapsule .Capsule > img {
+  width: 100%;
+  display: block;
+}
+.ItemCapsule .Content {
+  flex: 1;
+  min-width: 0;
+}
+.ItemCapsule .Content .Title,
+.ItemCapsule .Content .DiscountCtn {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ItemCapsule .Content .Title {
+  color: #fff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.ItemCapsule .Content .DiscountCtn {
+  color: #def3ff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+.Popover {
+  padding: 0 2%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.46);
+}
+.Popover .PopoverContent {
+  max-width: var(--store-menu-content-width);
+  margin: 0 auto;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.StaticMenu {
+  width: 159px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 15px 12px 0;
+  justify-content: space-between;
+  align-self: stretch;
+  color: var(--Neutrals-lightestGrey, #dcdedf);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.StaticMenu .MenuItem {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+}
+.StaticMenu .MenuItem:hover {
+  color: #fff;
+}
+.Section {
+  flex: 1;
+  min-width: 0;
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+}
+.SectionTitle {
+  height: 24px;
+  color: var(--Neutrals-white, #fff);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.SectionTitleWithLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.SectionTitleWithLink .SectionTitle {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+.SectionTitleWithLink .LinkContainer {
+  display: block;
+}
+.SectionWithLinkColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.SectionContent {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+.LinkColumn {
+  min-width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.Section.Wide .LinkColumn {
+  min-width: 15%;
+}
+.LinkColumn .Link {
+  color: var(--Neutrals-lightestGrey, #dcdedf);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-decoration: none;
+}
+.LinkColumn .Link:hover {
+  color: var(--Neutrals-white, #fff);
+}
+.LinkColumn .HorizontalRule {
+  height: 1px;
+  opacity: 0.5;
+  background: linear-gradient(90deg, #737373 42.5%, rgba(115, 115, 115, 0) 100%);
+  border: none;
+  margin: 4px 0;
+}
+.GridSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.GridSection .Row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.GridSection .Row .Button {
+  display: flex;
+  padding: 9px 15px;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  align-self: stretch;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--Colors-blue, #1a9fff);
+  color: var(--Blues-darkestGrey, #000f18);
+  transition: color 100ms ease-out;
+}
+.GridSection .Row .Button:hover,
+.GridSection .Row .Button.gpfocus {
+  color: #fff;
+}
+.GridSection
+  .Row
+  .Button:not(.WithIcon) {
+  text-align: center;
+}
+.GridSection
+  .Row
+  .Button
+  span.Icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+}
+.GridSection
+  .Row
+  .Button
+  span.Label {
+  flex: 1;
+  display: block;
+  min-width: 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .GridSection .Row .Button {
+    text-align: center;
+  }
+  .GridSection
+    .Row
+    .Button
+    span.Icon {
+    display: none;
+  }
+}
+.ViewAllLink {
+  color: var(--Colors-blue, #1a9fff);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin-left: 8px;
+}
+.ViewAllLink:hover,
+.ViewAllLink.gpfocus {
+  color: #fff;
+}
+.ViewAllLink > svg {
+  height: 13px;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.BrowseLinkSection {
+  margin-bottom: 18px;
+}
+.BrowseLinkGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.BrowseLinkGrid .BrowseLinkButton {
+  padding: 10px 20px;
+  border-radius: 2px;
+  background: rgba(221, 221, 221, 0.2);
+  color: var(--Neutrals-lightestGrey, #dcdedf);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition-property: color, background-color;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+.BrowseLinkGrid .BrowseLinkButton:hover {
+  color: #fff;
+  background: rgba(221, 221, 221, 0.4);
+}
+.RecommendationTwoCol {
+  display: flex;
+  gap: 8px;
+}
+.RecommendationTwoCol > div {
+  flex: 1;
+  min-width: 0;
+}
+.DiscoveryQueue {
+  position: relative;
+  padding: 20px 8px;
+  border-radius: 4px;
+  background: linear-gradient(138deg, #54bbf626 28.48%, #3c76e263 93.87%);
+}
+.DiscoveryQueue .Background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.DiscoveryQueue .Background .BackgroundOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    60.65% 60.65% at 50% 50%,
+    rgba(24, 26, 33, 0) 0%,
+    rgba(24, 26, 33, 0.8) 90%
+  );
+}
+.DiscoveryQueue .Content {
+  position: relative;
+  width: 407px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.DiscoveryQueue .Content .Title {
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 7px;
+}
+.DiscoveryQueue .Content .Description {
+  color: var(--Neutrals-lighterGrey, #b8bcbf);
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  min-width: 0;
+  margin: 0px 12px 25px 12px;
+}
+.DiscoveryQueue .Content .ActionButton {
+  display: inline-flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  border-radius: 2px;
+  background: var(
+    --Blue-gredient,
+    linear-gradient(90deg, #06bfff 0%, #2d73ff 100%)
+  );
+}
+.DiscoveryQueue
+  .Content
+  .ActionButton
+  .ButtonText {
+  color: var(--Text-Main, #f3f3f3);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.DiscoveryQueue .Content .ActionButton svg {
+  fill: var(--Neutrals-white, #fff);
+  width: 16px;
+  height: 16.85px;
+}
+.IR .Background .BackgroundImage {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.DiscoveryQueueWidgetCtn {
+  height: 200px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: var(--gpShadow-Medium);
+  background: #386483;
+  transition: transform .2s ease-in-out;
+}
+.DiscoveryQueueWidgetCtn:hover,
+.DiscoveryQueueWidgetCtn.gpfocus {
+  box-shadow: 0px 6px 12px 0px #0000003d;
+  transform: scale(1.05);
+}
+.DiscoveryQueueWidgetCtn:hover .WidgetHeaderCtn,
+.DiscoveryQueueWidgetCtn.gpfocus .WidgetHeaderCtn {
+  filter: brightness(1.2);
+}
+.AppCarouselPosition {
+  width: 50%;
+  margin-left: auto;
+  position: relative;
+  background-color: #386483;
+  transform: rotateZ(-11deg) translateX(14px);
+  --capsule-width: 320px;
+}
+.DiscoveryQueueWidgetCtn:not(.Initialized) .AppCarouselPosition {
+  display: flex;
+}
+.AppCarouselPosition .Spinner {
+  margin: auto;
+  margin-right: 90px;
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+@keyframes Qc0gimNJ0GLAPE87EH3Gp {
+  from {
+    opacity: 0;
+  }
+}
+.AppCarouselCtn {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: Qc0gimNJ0GLAPE87EH3Gp;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  gap: 8px;
+}
+.AppCapsuleCtn {
+  width: var(--capsule-width);
+  height: calc(var(--capsule-width) / 1.6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+  align-items: flex-end;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 80%;
+  box-shadow: 0 0 10px #000;
+}
+.AppName {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+.LibraryImage {
+  display: flex;
+}
+.LibraryImage img {
+  width: 50px;
+}
+.CapsuleColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.TopCategories {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 8px;
+  max-width: 100%;
+  margin-bottom: 21px;
+}
+.CategoryLink {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 126px;
+  height: 126px;
+  min-width: 0;
+}
+.CategoryLink .CategoryTileImage {
+  display: block;
+  filter: saturate(0.7);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  transition: transform .2s ease-in-out, filter .2s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.CategoryLink .Gradient {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity .2s ease-in-out;
+}
+.CategoryLink:nth-child(4n + 1) .Gradient {
+  background: linear-gradient(
+      155deg,
+      rgba(0, 0, 0, 0) 15.03%,
+      rgba(74, 14, 15, 0.45) 48.83%,
+      rgba(61, 8, 9, 0.6) 84.73%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0) 9.72%,
+      rgba(115, 11, 13, 0.26) 30.04%,
+      rgba(238, 23, 27, 0.38) 51.69%,
+      rgba(255, 0, 4, 0.5) 92.99%
+    );
+}
+.CategoryLink:nth-child(4n + 2) .Gradient {
+  background: linear-gradient(
+      155deg,
+      rgba(0, 0, 0, 0) 15.03%,
+      rgba(74, 55, 14, 0.45) 48.83%,
+      rgba(61, 38, 8, 0.6) 84.73%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0) 9.72%,
+      rgba(115, 75, 11, 0.26) 30.04%,
+      rgba(238, 149, 23, 0.38) 51.69%,
+      rgba(255, 94, 0, 0.5) 92.99%
+    );
+}
+.CategoryLink:nth-child(4n + 3) .Gradient {
+  background: linear-gradient(
+      155deg,
+      rgba(0, 0, 0, 0) 15.03%,
+      rgba(41, 143, 25, 0.45) 48.83%,
+      rgba(86, 85, 33, 0.6) 84.73%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0) 9.72%,
+      rgba(243, 240, 19, 0.26) 30.04%,
+      rgba(124, 114, 178, 0.38) 51.69%,
+      rgba(251, 255, 0, 0.5) 92.99%
+    );
+}
+.CategoryLink:nth-child(4n) .Gradient {
+  background: linear-gradient(
+      155deg,
+      rgba(0, 0, 0, 0) 15.03%,
+      rgba(14, 59, 74, 0.45) 48.83%,
+      rgba(88, 155, 165, 0.6) 84.73%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0) 9.72%,
+      rgba(11, 74, 115, 0.26) 30.04%,
+      rgba(23, 217, 238, 0.38) 51.69%,
+      rgba(54, 159, 170, 0.5) 92.99%
+    );
+}
+.CategoryLink .CategoryTitleAlign {
+  position: absolute;
+  bottom: 26px;
+  left: 8%;
+  right: 8%;
+  text-align: center;
+  pointer-events: none;
+  transition: transform .2s ease-in-out;
+}
+.CategoryLink .CategoryTitleAlign .CategoryTitle {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 0 3px;
+  border-radius: 1.25px;
+  color: var(--Blues-darkestGrey, #000f18);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.CategoryLink:hover .CategoryTileImage,
+.CategoryLink.gpfocus .CategoryTileImage {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+.CategoryLink:hover .Gradient,
+.CategoryLink.gpfocus .Gradient {
+  opacity: 0.5;
+}
+.CategoryLink:hover .CategoryTitleAlign,
+.CategoryLink.gpfocus .CategoryTitleAlign {
+  transform: translateY(20px);
+}
+.TagLinksContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.TagLinksContainer .TagLinks {
+  display: flex;
+  flex: 1;
+  gap: 7px;
+  min-width: 0;
+  height: 20px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.TagLinksContainer .TagLinks .TagLink {
+  display: block;
+  height: 20px;
+  padding: 0 12px;
+  line-height: 20px;
+  border-radius: 3px;
+  background: rgba(26, 159, 255, 0.2);
+  color: #67c1f5;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.TagLinksContainer .TagLinks .TagLink:hover,
+.TagLinksContainer
+  .TagLinks
+  .TagLink.gpfocus {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+}
+.FeaturedHardwareRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.FeaturedHardwareRow .FeaturedHardware {
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
+.FeaturedHardwareRow .FeaturedHardware:nth-child(1) {
+  background: linear-gradient(180deg, #dad5da 0%, #ce69ee 158.49%);
+}
+.FeaturedHardwareRow .FeaturedHardware:nth-child(2) {
+  background: linear-gradient(90deg, #44a5dd 28.48%, #4275d3 93.87%);
+}
+.FeaturedHardwareRow .FeaturedHardware .Image {
+  position: absolute;
+  display: block;
+  height: 110px;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  object-fit: cover;
+}
+.FeaturedHardwareRow .FeaturedHardware .TitleContainer {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 20px;
+  text-align: center;
+}
+.FeaturedHardwareRow
+  .FeaturedHardware
+  .TitleContainer
+  .Title {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 2px;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.DynamicMenu {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  padding: 12px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(126, 171, 255, 0.1) 0%,
+    #29303e00 100%
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 22px;
+  min-height: 210px;
+}
+.DynamicMenu .MenuOptions {
+  width: 185px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+.DynamicMenu .MenuSection {
+  flex: 1;
+  min-width: 0;
+}
+.MenuItem {
+  border: none;
+  background: transparent;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 8px;
+  color: var(--Neutrals-lightestGrey, #dcdedf);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: background-color 80ms ease-out 10ms, font-weight 80ms ease-out
+    10ms;
+}
+.MenuItem .ChevronSpacer {
+  flex-grow: 0;
+  width: 4px;
+  transition-delay: 10ms;
+  transition: flex-grow 80ms ease-out 10ms;
+}
+.MenuItem .Chevron {
+  width: 12px;
+  height: 12px;
+}
+.MenuItem.Active {
+  background-color: rgba(26, 159, 255, 0.3);
+  border-radius: 2px;
+}
+.MenuItem.Active .ChevronSpacer {
+  flex-grow: 1;
+}
+.MenuItem.Active,
+.MenuItem:hover {
+  color: #fff;
+}
+.TransitionContainer {
+  flex: 1;
+  min-width: 0;
+  align-self: stretch;
+  position: relative;
+}
+.Up > .SectionTransition.Enter {
+  transform: translateY(-12%);
+  opacity: 0;
+}
+.Up > .SectionTransition.EnterActive {
+  transform: translateY(0);
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 160ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.1, 1);
+  transition-delay: 80ms;
+}
+.Up > .SectionTransition.Exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.Up > .SectionTransition.ExitActive {
+  transform: translateY(8%);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 80ms;
+  transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+}
+.Down > .SectionTransition.Enter {
+  transform: translateY(12%);
+  opacity: 0;
+}
+.Down > .SectionTransition.EnterActive {
+  transform: translateY(0);
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 160ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.1, 1);
+  transition-delay: 80ms;
+}
+.Down > .SectionTransition.Exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.Down > .SectionTransition.ExitActive {
+  transform: translateY(-8%);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 80ms;
+  transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+}

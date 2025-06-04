@@ -1,0 +1,1121 @@
+html.responsive body.MarketingMessagePage .responsive_page_template_content {
+  padding-bottom: 0;
+  min-height: auto;
+}
+html.responsive
+  body.MarketingMessagePage
+  .responsive_page_template_content
+  div:focus,
+html.responsive
+  body.MarketingMessagePage
+  .responsive_page_template_content
+  a:focus,
+html.responsive
+  body.MarketingMessagePage
+  .responsive_page_template_content
+  span:focus {
+  outline: none;
+}
+.MessageListPage {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+      circle at top left,
+      rgba(74, 81, 92, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(175, 81, 92, 0) 60%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    #25282e;
+  display: flex;
+  flex-direction: column;
+}
+.MessageListPage .MessageListScroll {
+  flex: auto;
+  min-height: 0;
+  overflow: hidden;
+}
+.CarouselBar {
+  margin-bottom: 10px;
+}
+.CarouselBar .Content {
+  max-width: 570px;
+  padding: 8px 20px;
+  margin: 0 auto;
+  height: 40px;
+  display: flex;
+}
+.CarouselBar .Content .LeftArrow,
+.CarouselBar .Content .RightArrow {
+  opacity: 0.1;
+  width: 42px;
+  height: 42px;
+  color: #c6d4df;
+}
+.CarouselBar
+  .Content
+  .LeftArrow.Active,
+.CarouselBar
+  .Content
+  .RightArrow.Active {
+  cursor: pointer;
+  opacity: 1;
+}
+.CarouselBar
+  .Content
+  .LeftArrow.Active:hover,
+.CarouselBar
+  .Content
+  .RightArrow.Active:hover {
+  color: #fff;
+}
+.CarouselBar .Content .Spacer {
+  flex: auto;
+}
+.CarouselBar .Content .PipContainer {
+  display: flex;
+}
+.CarouselBar
+  .Content
+  .PipContainer
+  .Pips {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.Pip {
+  width: 12px;
+  height: 5px;
+  margin: 0 2px;
+  background: rgba(198, 212, 223, 0.5);
+  border-radius: 1px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.Pip.Active,
+.Pip:hover {
+  background: #fff;
+}
+.Pip.Active {
+  cursor: default;
+}
+.MessageListContainer {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+}
+.MessageListContainer.Loading {
+  height: 656px;
+  display: flex;
+  align-items: center;
+}
+.MessageWrapper {
+  display: none;
+}
+.MessageWrapper.Active {
+  display: block;
+}
+.MessageWrapper.Enter {
+  display: block;
+  opacity: 1;
+}
+.MessageWrapper.EnterActive {
+  display: block;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.MessageWrapper.EnterDone {
+  display: block;
+  opacity: 1;
+}
+.MessageWrapper.Exit,
+.MessageWrapper.ExitActive {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  z-index: 1;
+}
+.MessageWrapper.ExitActive {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.MessageWrapper.ExitDone {
+  display: none;
+}
+.UpdateEventCtn {
+  position: relative;
+  width: 100%;
+}
+.BasicUI .UpdateEventCtn {
+  padding: 14px;
+  box-sizing: border-box;
+}
+.UpdateEventCtn .EventType {
+  text-align: left;
+  font-size: 17px;
+  color: #ffffffa3;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.BasicUI .UpdateEventCtn .EventType {
+  font-size: 12px;
+  font-weight: 400;
+}
+.UpdateEventCtn .EventTitle {
+  text-align: left;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.BasicUI .UpdateEventCtn .EventTitle {
+  font-size: 16px;
+  font-weight: 400;
+}
+.UpdateEventCtn .EventImage {
+  cursor: pointer;
+  box-shadow: 0 6px 10px #000a;
+  font-size: 0px;
+}
+.UpdateEventCtn .EventImage img {
+  width: 100%;
+}
+.All {
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+A:visited {
+  color: #fff;
+  text-decoration: none;
+}
+A:link {
+  color: #fff;
+  text-decoration: none;
+}
+A:hover {
+  color: #fff;
+  text-decoration: none;
+}
+A:active {
+  color: #000;
+  text-decoration: none;
+}
+.MessageFooter {
+  position: relative;
+  width: 100%;
+  min-height: 45px;
+  margin-top: 11px;
+  display: flex;
+  flex-direction: column;
+}
+.MessageFooter .ButtonAndPriceCtn {
+  font-family: "Motiva Sans", Sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.MessageFooter .Legal {
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 11px;
+  width: 100%;
+  color: #58636a;
+  text-align: left;
+}
+.BasicUI .MessageFooter .Legal {
+  display: none;
+}
+.NoButton {
+  flex-direction: row-reverse;
+}
+.NoButton .Btn {
+  display: none;
+}
+.NoButton .Legal {
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.Btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Motiva Sans", Sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #56627b;
+  border-radius: 3px;
+  font-weight: 400;
+  padding: 0px 30px 0px;
+  height: 46px;
+  width: fit-content;
+  flex-grow: 1;
+  line-height: 19px;
+  transition: box-shadow .25s ease-out, background-color .25s ease-out;
+}
+.Btn:hover {
+  background-color: #427d9f;
+  box-shadow: 2px 2px 10px #000;
+  cursor: pointer;
+}
+.MessagePriceCtn {
+  margin-left: 12px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.MessagePriceCtn .StoreSalePriceWidgetContainer {
+  height: 46px;
+  margin-top: 0px;
+}
+.MessagePriceCtn .StoreSalePriceWidgetContainer:not(.Discounted) {
+  padding: 4px 8px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+}
+.Price {
+  height: 59px;
+  width: 145px;
+  display: inline-table;
+  vertical-align: middle;
+  position: absolute;
+  text-align: center;
+  right: 0px;
+}
+.NoPrice {
+  width: 0px;
+  float: right;
+}
+.PriceReal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+  height: 33px;
+  margin-top: 10px;
+}
+.PriceRealShort {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  height: 33px;
+  margin-top: 10px;
+}
+.PriceRegular {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #999;
+  text-decoration: line-through;
+  position: relative;
+  top: -10px;
+}
+.Strike {
+  font-size: 14px;
+  color: #666;
+  text-decoration: line-through;
+}
+.MessageContent {
+  font-family: "Motiva Sans", Sans-serif;
+  text-align: center;
+  margin: 0px auto;
+  max-width: 570px;
+  width: calc(100vh - 150px);
+  padding: 0;
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.BasicUI .MessageContent {
+  padding: 0;
+  max-width: 400px;
+  width: 400px;
+}
+.MessageContent:hover .IsBlur img {
+  filter: brightness(1.6) saturate(1.2);
+  box-shadow: inset 0 6px 10px #000a;
+}
+.MessageBody {
+  height: 600px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.BasicUI .MessageBody {
+  position: relative;
+  width: 401px;
+  height: 422px;
+}
+.MessageImage {
+  box-sizing: content-box;
+  cursor: pointer;
+  width: auto;
+  position: relative;
+  box-shadow: 0 6px 10px #000a;
+  font-size: 0px;
+  transition: box-shadow .15s ease-out;
+}
+.MessageImage.IsBlur {
+  pointer-events: none;
+  filter: blur(20px);
+  transform: scaleX(1.27) scaleY(1.22);
+  position: absolute;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 75%
+  );
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 35%,
+    transparent 75%
+  );
+}
+.MessageImage img {
+  max-width: 570px;
+  width: calc(100vh - 150px);
+  transition-property: filter, transform, box-shadow;
+  transition-duration: .25s;
+  transition-timing-function: ease-out;
+}
+.MessageImage video {
+  width: 100%;
+  height: 100%;
+}
+.VideoImageContainer {
+  position: relative;
+}
+.GameImage {
+  top: -20%;
+  height: 100%;
+}
+.GameImage img {
+  height: 100%;
+  width: 100%;
+}
+.BaseCtn {
+  display: flex;
+  flex-direction: row;
+  width: 570px;
+  margin: 21px auto;
+  padding-bottom: 21px;
+  background: radial-gradient(
+    50.51% 50.51% at 50% 87.88%,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.BasicUI .BaseCtn {
+  width: 100%;
+  margin: 14px;
+  padding-bottom: 14px;
+}
+.BaseCtn .CapsuleCtn {
+  width: 78px;
+  margin-right: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.BasicUI .BaseCtn .CapsuleCtn {
+  width: 40px;
+}
+.BaseCtn
+  .CapsuleCtn
+  .HeroCapsuleImageContainer::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(235, 245, 255, 0.25) 0%,
+    rgba(10, 10, 10, 0) 40%,
+    rgba(10, 10, 10, 0) 65%,
+    rgba(10, 10, 10, 0.8) 100%
+  );
+  transition: opacity .3s;
+  opacity: 0.5;
+}
+.BaseCtn .DescCtn {
+  display: flex;
+  flex-direction: column;
+}
+.BaseCtn .DescCtn .GameNameCtn {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
+}
+.BaseCtn .DescCtn .GameName {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #fff;
+  font-weight: 300;
+  text-align: left;
+  cursor: pointer;
+}
+.BasicUI
+  .BaseCtn
+  .DescCtn
+  .GameName {
+  font-size: 18px;
+}
+.BaseCtn .DescCtn .LibraryDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #c6d4df;
+  gap: 0 30px;
+}
+.BasicUI
+  .BaseCtn
+  .DescCtn
+  .LibraryDetails
+  .Btn {
+  display: none;
+}
+.BaseCtn
+  .DescCtn
+  .LibraryDetails
+  .Button {
+  background: linear-gradient(to right, #465064, #56627b);
+  padding: 7px 16px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.BaseCtn
+  .DescCtn
+  .LibraryDetails
+  .Button:hover {
+  background: linear-gradient(to right, #6c778d, #6a7488);
+}
+.BasicUI
+  .BaseCtn
+  .DescCtn
+  .LibraryDetails
+  .Button.ViewInLibrary {
+  display: none;
+}
+.BaseCtn
+  .DescCtn
+  .LibraryDetails
+  .PlayDetailCtn {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: left;
+}
+.BaseCtn
+  .DescCtn
+  .LibraryDetails
+  .PlayDetailCtn
+  span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 200;
+}
+@media screen and (max-height: 540px) {
+  .All {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .MessageContent {
+    width: 330px;
+    padding: 8px;
+  }
+  .BasicUI .MessageContent {
+    width: 100%;
+    height: 422px;
+  }
+  .MessageImage {
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 6px #000;
+  }
+  .MessageImage img {
+    max-width: 330px;
+    width: 100%;
+  }
+  .BasicUI .MessageImage img {
+    max-width: 100%;
+  }
+  .TextTop,
+  .TextBottom {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px 6px 0px 6px;
+    box-sizing: border-box;
+  }
+  .ButtonContainer {
+    height: 32px;
+    padding-top: 5px;
+  }
+  .Btn {
+    font-size: 12px;
+    margin: 2px auto;
+    padding: 9px 12px 0px;
+    height: 17px;
+    line-height: 9px;
+  }
+  .BasicUI .Btn {
+    display: none;
+  }
+  .MessagePriceCtn .StoreSalePriceWidgetContainer {
+    height: 30px;
+  }
+  .Btn:hover {
+    box-shadow: 2px 2px 6px #000;
+  }
+  .Price {
+    height: 34px;
+  }
+  .NoPrice,
+  .Price {
+    width: 81px;
+  }
+  .PriceReal,
+  .PriceRealShort {
+    font-size: 12px;
+    height: 19px;
+    margin-top: 6px;
+  }
+  .PriceRealShort {
+    font-size: 7px;
+  }
+  .PriceRegular {
+    font-size: 7px;
+    top: -6px;
+  }
+  .Legal {
+    font-size: 7px;
+    padding-bottom: 5px;
+    width: 100%;
+    margin-top: 4px;
+    flex-grow: 1;
+  }
+}
+.BackgroundImage {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  filter: blur(20px);
+}
+.BackgroundImage img {
+  position: absolute;
+  transform: scale(1.5) translateY(50px);
+}
+.BackgroundImage img:first-child {
+  filter: opacity(0.2);
+  -webkit-mask-image: radial-gradient(
+    at 50% 37%,
+    rgba(0, 0, 0, 0.98),
+    rgba(0, 0, 0, 0) 44%
+  );
+  mask-image: radial-gradient(at 50% 37%, black, rgba(0, 0, 0, 0) 44%);
+}
+.BackgroundImage img:last-child {
+  filter: opacity(0.8) blur(30px);
+  -webkit-mask-image: radial-gradient(at 50% 45%, black, rgba(0, 0, 0, 0) 37%);
+  mask-image: radial-gradient(at 50% 45%, black, rgba(0, 0, 0, 0) 37%);
+}
+.DlcCtn {
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+  margin: 0 auto;
+}
+.BasicUI .DlcCtn {
+  width: 100%;
+  padding: 0 14px 14px 14px;
+  box-sizing: border-box;
+}
+.DlcCtn .Type {
+  width: 100%;
+  text-align: left;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.DlcCtn .DealDesc {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.1;
+  color: #dee6ed;
+  font-weight: 200;
+}
+.BasicUI .DlcCtn .DealDesc {
+  font-size: 14px;
+}
+.DlcCtn .OneItemRow {
+  width: 100%;
+  margin-top: 12px;
+}
+.DlcCtn .OneBigItem {
+  margin-top: 12px;
+}
+.DlcCtn .OneBigItem .CapsuleImageCtn {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6666666667);
+}
+.DlcCtn .TwoCapsuleRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+}
+.DlcCtn .TwoCapsuleRow .CapsuleImageCtn {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6666666667);
+}
+.DlcCtn .TwoCapsuleRow .DlcCtn {
+  width: calc(50% - 6px);
+}
+.DlcCtn
+  .TwoCapsuleRow
+  .DlcCtn:first-child {
+  margin-right: 12px;
+}
+.DlcCtn .CapsuleImageCtn::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(235, 245, 255, 0.25) 0%,
+    rgba(10, 10, 10, 0) 40%,
+    rgba(10, 10, 10, 0) 65%,
+    rgba(10, 10, 10, 0.8) 100%
+  );
+  transition: opacity .3s;
+  opacity: 0.5;
+}
+.DlcCtn .CapsuleBottomBar {
+  background-color: transparent;
+}
+div.StoreSaleWidgetTitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  -webkit-line-clamp: 2;
+}
+.PosterCtn {
+  position: absolute;
+  bottom: 120px;
+  width: 528px;
+  height: 297px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow .25s ease-out;
+}
+.BasicUI .PosterCtn {
+  padding-top: 56.25%;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.PosterCtn:hover {
+  box-shadow: 0 0 10px #000;
+}
+.PosterCtn:hover svg {
+  opacity: 1;
+}
+.PosterCtn svg {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  fill: #fff;
+  opacity: 0.8;
+  transition: opacity .25s ease-out;
+}
+.BasicUI .PosterCtn svg {
+  width: 50px;
+  height: 50px;
+  top: 33%;
+}
+.Poster {
+  width: 528px;
+  height: 297px;
+}
+.BasicUI .Poster {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.Video {
+  width: 528px;
+  height: 297px;
+}
+.BasicUI .Video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.MediaContainer {
+  width: 100%;
+  --gap-size: 4px;
+}
+@media screen and (max-width: 800px) {
+  .MediaContainer {
+    display: none;
+  }
+}
+.MediaContainerMM {
+  width: 570px;
+  --gap-size: 8px;
+}
+.BasicUI .MediaContainerMM {
+  width: 370px;
+  margin: 0 auto;
+}
+.BasicUI .MediaContainerMM .ScreenshotThumbnailRow {
+  display: none;
+}
+.HilightGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-size);
+}
+.MainMediaCtn {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 57.3%;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 1px 2px 10px #000a;
+}
+.MainMediaCtn .VideoThumbnail > img {
+  border-radius: 3px;
+  width: 100%;
+  object-fit: cover;
+}
+.MainMediaCtn .ScreenshotDisplayCtn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.MainMediaCtn .ScreenshotDisplayCtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.MainCapsuleWithHover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.MainCapsuleWithHover:hover {
+  cursor: pointer;
+}
+.MainCapsuleWithHover:hover .MainCapsule {
+  filter: blur(20px);
+}
+.MainCapsuleWithHover:hover .AppDetails {
+  opacity: 1;
+}
+.MainCapsuleWithHover .MainCapsule {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  transition: filter .2s ease-in-out;
+  filter: blur(0px);
+}
+.MainCapsuleWithHover .AppDetails {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  background: #324966ab;
+  gap: 12px;
+}
+.MainCapsuleWithHover .AppDetails .GameName {
+  font-size: 26px;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #fff;
+  text-align: left;
+}
+.MainCapsuleWithHover .AppDetails .ShortDesc {
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+.ScreenshotThumbnailRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-size);
+}
+.ScreenshotThumbnailRow .ThumbnialClickable {
+  cursor: pointer;
+}
+.ScreenshotThumbnailRow .ThumbnailCtn {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: calc((56.25% - 16px) / 3);
+}
+.ScreenshotThumbnailRow .ThumbnailCtn img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.VideoThumbnail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition-property: transform, opacity;
+  transition-duration: .21s;
+  transition-timing-function: ease-out;
+}
+.VideoThumbnail img {
+  width: 100%;
+  height: auto;
+}
+.VideoThumbnail.videoPlaying {
+  opacity: 0;
+  transform: translateX(-198px) scale(1.7) translateY(5px);
+}
+.VideoPlayButton {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #0006;
+  border: 1px solid #aaa3;
+  opacity: 0.75;
+  transition-property: opacity;
+  transition-duration: .16s;
+  transition-timing-function: ease-in-out;
+}
+.VideoThumbnail:hover .VideoPlayButton {
+  opacity: 1;
+}
+.VideoThumbnail:hover .VideoPlayButton .SVGIcon_Play {
+  fill: #fff;
+}
+.VideoPlayButton .SVGIcon_Play {
+  fill: #ccc;
+  width: 50%;
+  height: 50%;
+  margin-left: 18px;
+  margin-top: 15px;
+  transition-property: fill;
+  transition-duration: .16s;
+  transition-timing-function: ease-in-out;
+}
+.VideoLargeContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: .26s;
+  transition-timing-function: ease-in-out;
+}
+.VideoLargeContainer.videoPlaying {
+  opacity: 1;
+  pointer-events: initial;
+}
+.VideoLargeContainer .SVGIcon_X_Line {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+.VideoLargeContainer .SVGIcon_X_Line line {
+  stroke-width: 30px;
+  stroke: #aaa;
+}
+.VideoLargeContainer .SVGIcon_X_Line:hover line {
+  stroke: #fff;
+}
+.VideoPopupContainers {
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  top: 8px;
+  left: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-property: width;
+  transition-duration: .26s;
+  transition-timing-function: ease-in-out;
+}
+.PopupFullWindow .VideoPopupContainers {
+  width: calc(100vw - 48px);
+}
+.VideoLarge {
+  max-width: 84vw;
+  max-height: 80vh;
+  object-fit: contain;
+  align-self: center;
+  flex: 1;
+}
+.VideoLarge:focus {
+  outline: none;
+}
+.TrailerTitle {
+  position: absolute;
+  z-index: 11;
+  top: -20px;
+  left: 0;
+  padding: 3px 4px;
+  color: #fff;
+  background-color: #333;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  user-select: none;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+.TrailerTitle .Category {
+  font-weight: 600;
+}
+.TrailerTitle.Visible {
+  top: 0;
+  opacity: 1;
+}
+.AutoRenderContents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.BasicUI .AutoRenderContents {
+  height: 370px;
+}
+.TitleContainer {
+  height: 166px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 0;
+}
+.TypeTitle {
+  max-width: 570px;
+  overflow-wrap: break-word;
+  hyphens: manual;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.3;
+  font-weight: 800;
+  background: linear-gradient(180deg, #dee1e8 28.66%, #c9ced9 75.61%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.BasicUI .TypeTitle {
+  font-size: 33px;
+}
+.TypeSubTitle {
+  font-size: 16px;
+  color: #dee1e8;
+}

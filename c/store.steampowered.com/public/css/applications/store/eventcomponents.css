@@ -1,0 +1,287 @@
+.ModeratorAuditActionCtn {
+  margin-bottom: 10px;
+}
+.ModeratorAuditActionCtn > div {
+  display: inline;
+}
+.ModeratorAuditActionCtn > span {
+  display: block;
+}
+.ExpandModActions {
+  cursor: pointer;
+}
+.AnalysisCtn {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 6px;
+}
+.AnalysisMissing {
+  color: darkred;
+}
+.ModerationContainer {
+  padding: 10px;
+}
+.ModerationContainer
+  .FilterContainer {
+  min-width: 160px;
+}
+.Tile {
+  background-color: #a9a9a9;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+}
+.Tile a:hover {
+  color: aqua;
+}
+.Tile
+  .DetailsMiddle
+  .EventModerateMarkReview,
+.Tile
+  .DetailsMiddle
+  .EventModerateMarkReReview {
+  background: #800;
+}
+.Tile
+  .DetailsMiddle
+  .EventModerateMarkReview:hover,
+.Tile
+  .DetailsMiddle
+  .EventModerateMarkReReview:hover {
+  background: #a00;
+}
+.TileEventOtherType {
+  color: darkred;
+}
+.TileCapsule {
+  height: fit-content;
+  position: relative;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.TileCapsule img {
+  width: 400px;
+  height: 255px;
+}
+.TileCapsule:hover {
+  box-shadow: 0 0 12px #000;
+}
+.NoCapsuleFallback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #eaa;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #000;
+}
+.NoCapsule {
+  box-sizing: border-box;
+  width: 400px;
+  height: 255px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #eaa;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #000;
+}
+.TileDetails {
+  display: flex;
+  flex-direction: row;
+  color: #000;
+  padding: 12px;
+  width: 100%;
+}
+.DetailsLeft {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  width: 33%;
+}
+.DetailsLeft .EventTitle {
+  font-size: 21px;
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #000;
+}
+.DetailsLeft .EventTitle:hover {
+  color: #008;
+}
+.DetailsRight {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  width: 33%;
+  padding-left: 10px;
+}
+.DetailsRight .ArtHeader {
+  color: green;
+}
+.DetailsRight .ArtSpotlight {
+  color: #ff0;
+}
+.DetailsMiddle {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  width: 33%;
+  padding-left: 10px;
+}
+.DetailsMiddle button {
+  margin-bottom: 10px;
+}
+.ModeratedFlagCtn {
+  margin-top: 15px;
+}
+.ModeratedFlagCtn input[type="checkbox"] + label {
+  background-color: tan;
+  padding: 4px;
+  color: #000;
+}
+.ModeratedFlagCtn input[type="checkbox"]:checked + label {
+  background-color: green;
+  padding: 4px;
+  color: #fff;
+}
+.TitleLink {
+  font-size: 25px;
+}
+.TileAppInfo {
+  padding: 0px;
+}
+.TileAppInfoTitle {
+  font-weight: bolder;
+}
+.TileAppInfoTitle div {
+  width: fit-content;
+}
+.TileAppInfoTitle a {
+  color: #000;
+  font-size: 14px;
+  display: inline-block;
+}
+.TileAppInfoTitle a:hover {
+  color: #008;
+}
+.TileAppInfoImage {
+  width: 150px;
+  height: auto;
+}
+.TileAppInfoImage:hover {
+  box-shadow: 0 0 12px #000;
+}
+.TileSplit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TileTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
+.TimeWidth {
+  max-width: 200px;
+}
+.CategoryChangeDialog {
+  height: 400px;
+}
+h4 {
+  margin-bottom: 5px;
+}
+.Button {
+  border: 1px gray outset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.RightSideTitles {
+  text-transform: uppercase;
+}
+.DateAndTime {
+  display: flex;
+}
+@media screen and (max-width: 910px) {
+  .StoreHeaderAdjust {
+    margin-top: 58px;
+  }
+}
+.LastUpdateTime {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.EventTimingBlock {
+  padding: 8px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  background-color: #888;
+}
+.TileEventType {
+  font-size: 16px;
+}
+.ChannelInfo {
+  margin-top: auto;
+}
+.HasAdultContent {
+  background-color: #400;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 4px;
+  padding: 6px;
+  width: fit-content;
+}
+.Error {
+  color: darkred;
+}
+.ErrorMsg {
+  padding: 40px;
+  font-size: 33px;
+  font-weight: 200;
+}
+.SectionContainer {
+  min-height: 250px;
+}
+.ModSectionTitle {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.ResizeButton {
+  max-width: 50px;
+}
+.TileContainer {
+  width: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  background: #262626;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  padding: 12px;
+}
+.TileContainer .CreatorCtn {
+  max-width: 600px;
+  min-width: 300px;
+}
+.TileSpread {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

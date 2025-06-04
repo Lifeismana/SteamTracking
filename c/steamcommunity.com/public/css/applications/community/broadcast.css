@@ -1,0 +1,56 @@
+.StoreSaleWidgetContainer_mini {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 158px;
+  background: #000;
+}
+.StoreSaleWidgetContainer_mini .Action,
+.StoreSaleWidgetContainer_mini .WishList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 24px;
+  line-height: 9px;
+  font-size: 11px;
+  margin-top: 2px;
+}
+.StoreSaleWidgetContainer_mini .StoreSaleWidgetTitle {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+@media screen and (max-width: 620px) {
+  .StoreSaleWidgetContainer_mini {
+    max-width: unset;
+    flex-direction: row;
+  }
+}
+.StoreSaleWidgetImage_mini {
+  cursor: pointer;
+  max-width: 155px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.StoreSaleImage_mini {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+.StoreSaleWidgetShortDesc_mini {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  padding-bottom: 8px;
+  overflow: hidden;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13px;
+  font-size: 11px;
+}
+@media screen and (max-width: 620px) {
+  .StoreSaleWidgetShortDesc_mini {
+    display: none;
+  }
+}

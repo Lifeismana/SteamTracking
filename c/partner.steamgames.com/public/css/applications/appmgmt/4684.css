@@ -1,0 +1,258 @@
+.Details {
+  overflow: hidden;
+  flex-grow: 1;
+}
+.Summary {
+  display: flex;
+}
+.FeatureList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.CategoryIcon {
+  width: 26px;
+  height: 16px;
+}
+.FeatureNameContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(103, 193, 245, 0.1);
+  color: #66c0f4;
+  padding-right: 8px;
+}
+.FeatureNameContainer:hover,
+:hover > .FeatureNameContainer {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  background: #67c1f5;
+  background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+}
+.GroupLabel {
+  color: #8f98a0;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  display: inline-block;
+  padding-left: 38px;
+}
+.FeatureGroupItems {
+  list-style-type: none;
+  padding-left: 0;
+}
+.InfoRow {
+  padding-left: 38px;
+  display: flex;
+  text-decoration: none;
+}
+.FeatureName {
+  font-weight: 400;
+  font-size: 12px;
+  padding: 6px 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ImageContainer {
+  padding: 0px 6px;
+  display: flex;
+  color: #fff;
+  background: #101822;
+  align-items: center;
+}
+a.InfoLink {
+  color: #fff;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.1);
+}
+.ProgressBar {
+  height: 10px;
+  background: #40474c;
+  position: relative;
+}
+.ProgressBar.ProgressBarComplete {
+  background: #73ff70;
+}
+.ProgressBarFillComponent {
+  background: #70c3ff;
+  height: 100%;
+}
+.WizardModal {
+  height: 100vh;
+  max-height: 780px;
+}
+.WizardModal > .DialogContent_InnerWidth {
+  width: 900px;
+  min-width: 900px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 17px;
+  padding-right: 17px;
+  box-sizing: border-box;
+}
+.WizardModal .Shared_Radio_Group {
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+.WizardModal .Shared_Radio_Group .RadioButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: relative;
+}
+.WizardModal
+  .Shared_Radio_Group
+  .RadioButton
+  .GameName {
+  margin-left: 4px;
+}
+.WizardButtons {
+  flex-direction: row-reverse;
+}
+.WizardContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.WizardTitle {
+  position: relative;
+  font-size: 16px;
+  height: 23px;
+  line-height: 23px;
+  color: #dedede;
+  margin-bottom: 9px;
+}
+.StepRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 36px;
+  flex-basis: 0;
+}
+.StepLabel {
+  margin-top: 36px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.RadioButton {
+  box-sizing: border-box;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  border: 1px solid #000;
+}
+.RadioButton.Selected {
+  background: #23262e;
+  box-shadow: inset 0 0 0 2px #d9d9d9;
+}
+.OptionLabel {
+  margin-left: 20px;
+  text-align: left;
+}
+.CheckboxComplexLabel {
+  display: flex;
+  flex-direction: column;
+  color: #dedede;
+}
+.Question {
+  margin-bottom: 11px;
+  color: #dedede;
+}
+.Instructions {
+  white-space: break-spaces;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: #dedede;
+  max-width: 900px;
+}
+.Instructions p {
+  color: #dedede;
+  font-size: 16px;
+}
+.Instructions li {
+  margin-bottom: 4px;
+}
+.WizardTooltip {
+  max-width: 600px;
+}
+.AccessibilityFeatureDescription {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 23px;
+  margin-bottom: 23px;
+  color: #dedede;
+}
+.AccessibilityFeatureInfoCtn {
+  display: flex;
+  flex-direction: row;
+  max-width: 328px;
+  margin-bottom: 8px;
+}
+.AccessibilityFeatureInfoCtn.GameEditCtn {
+  max-width: 320px;
+  background: #000;
+  padding: 16px;
+}
+.AccessibilityFeatureInfoCtn .AccessibilityFeatureContent {
+  flex: 1;
+}
+.AccessibilityFeatureInfoCtn .EditButton {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.AccessibilityFeatureInfoCtn .EditButton .Spacer {
+  flex: 1;
+  margin-right: 16px;
+}
+.AccessibilityFeatureInfoCtn
+  .EditButton
+  .Spacer.Top {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  margin-bottom: 12px;
+}
+.AccessibilityFeatureInfoCtn
+  .EditButton
+  .Spacer.Bottom {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 12px;
+}
+.AccessibilityFeatureInfoCtn .EditButton .EditButtonIcon {
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  background: linear-gradient(to right, #47bfff 5%, #1a8cc2 60%);
+  border-radius: 3px;
+}
+button.DialogButton.StartWizardButton {
+  width: 140px;
+}
+.ButtonRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.PreviewContainer {
+  padding: 5%;
+  background: linear-gradient(90deg, #15202d 0%, #0e141c 100%);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}

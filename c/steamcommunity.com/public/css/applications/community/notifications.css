@@ -1,0 +1,160 @@
+.NotificationPageCtn {
+  position: relative;
+  margin: 0 auto;
+  max-width: 980px;
+}
+@media screen and (max-width: 980px) {
+  .NotificationPageCtn {
+    margin: 0 20px;
+  }
+}
+.NotificationsBody {
+  min-height: 224px;
+  display: flex;
+  gap: 20px;
+}
+.NotificationsHeader {
+  display: block;
+  font-size: 18px;
+  padding: 5px 0px;
+  color: #fff;
+}
+.NotificationsHeader .NotificationsHeaderTitle {
+  padding-right: 5px;
+}
+.NotificationsHeader .NotificationsHeaderUnread {
+  font-size: 16px;
+}
+.NotificationListCtn {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 77%;
+  min-width: 0;
+}
+.NotificationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.AllNotificationsRowCtn {
+  height: 70px;
+}
+.NotificationFiltersCtn {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  position: sticky;
+  top: 20px;
+  z-index: 1;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 33%;
+  min-width: 200px;
+  max-width: 340px;
+}
+@media screen and (max-width: 910px) {
+  .NotificationFiltersCtn {
+    top: 80px;
+  }
+}
+html.responsive.touch .NotificationFiltersCtn {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop) .NotificationFiltersCtn {
+    display: none;
+  }
+}
+.EmptyNotifications {
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(58, 62, 71, 0.5);
+  min-height: 200px;
+}
+.EmptyNotifications .EmptyNotificationsTitle {
+  padding-top: 50px;
+  font-weight: 500;
+  text-align: center;
+}
+.EmptyNotifications .EmptyNotificationsBody {
+  padding: 20px;
+  font-weight: 200;
+  text-align: center;
+  color: #dfe3e6;
+}
+.SettingsButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.SettingsTooltip {
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 0;
+  white-space: nowrap;
+  display: flex;
+}
+button.DialogButton.MarkAllReadButton,
+button.DialogButton.SettingsButton {
+  padding: 0px 14px;
+  width: auto;
+  flex-grow: 1;
+}
+button.DialogButton.MarkAllReadButton .SettingsImg,
+button.DialogButton.SettingsButton .SettingsImg {
+  height: 16px !important;
+  width: 16px !important;
+  padding-right: 5px;
+}
+.MarkAllReadButton {
+  width: unset !important;
+}
+.SettingsFiltersTitle {
+  padding-top: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #9298a0;
+}
+.SettingsFilters {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.FilterCheckbox {
+  padding-left: 10px !important;
+  color: #9298a0;
+}
+.ResetButton {
+  margin-top: 10px !important;
+  width: unset !important;
+  padding: 0px 20px !important;
+}
+.CommentIcon {
+  fill: #8c8c8c;
+  width: 24px;
+  height: 24px;
+}
+.CommentFilterCtn {
+  position: relative;
+  padding-left: 40px;
+}
+.CommentFilterCtn .AdvancedCommentFilters {
+  max-height: 0px;
+  overflow: hidden;
+}
+.CommentFilterCtn .AdvancedCommentFilters.Expanded {
+  max-height: none;
+}
+.CommentFilterCtn .CommentRadioGroup {
+  flex-direction: column !important;
+  gap: 4px;
+  background: none !important;
+  box-shadow: none !important;
+  position: relative;
+}
+.Expander {
+  transition: height .3s ease-in-out;
+  overflow: hidden;
+}

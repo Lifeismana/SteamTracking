@@ -1,0 +1,1186 @@
+.SectionContainer {
+  display: flex;
+  flex-direction: row;
+}
+.CalendarContainer {
+  position: relative;
+}
+.CalendarMovingRegion {
+  display: inline-block;
+}
+.CalendarMovingRegion.Sticky {
+  position: sticky;
+  top: 0;
+}
+.ListArea {
+  width: 100%;
+}
+.FilterHeader {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  gap: 12;
+}
+.FilterOptionsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border-bottom: 1px solid #fff;
+  gap: 4px;
+  flex: 1;
+  margin: 0 24px 0 24px;
+}
+.FilterOption {
+  cursor: pointer;
+  padding: 0 8px 2px 8px;
+  font-size: 14px;
+  border-bottom: 3px solid transparent;
+  text-wrap: nowrap;
+}
+.FilterOption.Highlighted {
+  border-bottom: 3px solid #fff;
+  color: #fff;
+}
+.FilterTextArea {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+  margin-bottom: 8px;
+}
+.FilterTextInput {
+  flex: 1;
+  padding: 6px 40px 6px 32px;
+  background: #00000080;
+  border: none;
+}
+.FilterTextIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.FilterTextClearButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.ListContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.List {
+  width: 100%;
+  min-height: 600px;
+  max-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.List.Overflows {
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  pointer-events: auto;
+}
+.List.Expanded {
+  max-height: none;
+}
+.ListMonthContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  background: linear-gradient(186deg, #ffffff14 0px, transparent 140px);
+  padding-top: 18px;
+  margin-right: -16px;
+  padding-right: 16px;
+  align-items: stretch;
+}
+.ListMonthContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ffffff40);
+}
+.ListMonthCalendarMovingContainer {
+  position: relative;
+}
+.ListMonthCalendar {
+  margin: 0 20px 0 0px;
+  height: min-content;
+  position: sticky;
+  top: 0;
+}
+.ListMonthCalendarAlt {
+  margin: 0 20px 0 0px;
+  width: 237px;
+  height: min-content;
+  position: sticky;
+  top: 0;
+}
+.ListMonthCalendarAltFlag {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.ListMonthCalendarAltFlag.Live {
+  background: linear-gradient(133deg, #b2d7643b, #7a9f2d36);
+}
+.ListMonthCalendarAltFlag.Past {
+  background: linear-gradient(133deg, #e3df62, #bcb728);
+}
+.ListMonthCalendarAltFlag .ListMonthCalendarAltLiveText,
+.ListMonthCalendarAltFlag .ListMonthCalendarAltPastText {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #b0d75f;
+}
+.ListMonthCalendarAltFlag .ListMonthCalendarAltPastText {
+  color: #000;
+}
+.ListMonth {
+  width: 100%;
+  position: relative;
+}
+.EmptyMonth {
+  width: 100%;
+  font-size: 1.2em;
+  margin-left: 30px;
+}
+.ListDay {
+  margin-bottom: 16px;
+}
+.ListDayGroup {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+.ListEvent {
+  margin-bottom: 1px;
+  background: linear-gradient(45deg, #3c3f45, #2a2d32);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+  transition: box-shadow .3s ease-in-out;
+}
+.ListEvent.Dimmed {
+  opacity: 0.75;
+}
+.ListEvent:hover {
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.8) inset;
+}
+.ListEvent.DeadlineUrgent .ListEventEventElement {
+  background: radial-gradient(
+    62.67% 62.67% at 62.67% 100%,
+    #c64e0c5c 0%,
+    #c84f0c0f 100%
+  );
+}
+.ListEventHeader {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  height: 28px;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  background-color: #bad1e721;
+}
+.ListEventHeader .ValveOnly {
+  color: #ca5029;
+  margin-left: 4px;
+}
+.ListEventHeader .Edit {
+  font-size: .8em;
+  margin-right: 18px;
+  text-align: right;
+  color: #a7afb3;
+}
+.ListEventHeader .Spacer {
+  flex: 1;
+}
+.ListEventHeader .Dismiss {
+  cursor: pointer;
+  font-size: .8em;
+  margin-right: 4px;
+  text-align: right;
+  color: #a7afb3;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.ListEventHeader .Dismiss:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+.ListDayNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29px;
+  height: 28px;
+  font-size: 14px;
+  text-shadow: 0 0 11px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+}
+.ListDayNumber.Deadline {
+  background-color: #cf980c;
+}
+.ListDayNumber.DeadlineUrgent {
+  background-color: #cf520c;
+}
+.ListDayNumber.DLCRelease {
+  background-color: #a655b2;
+}
+.ListDayNumber.GameRelease {
+  background-color: #426283;
+}
+.ListDayNumber.Event {
+  background-color: #657f2d;
+}
+.ListEventType {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  padding: 0px 0px 0px 8px;
+  flex: 1;
+  text-align: left;
+  backdrop-filter: blur(8px);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a6b3c1;
+}
+.ListEventEventSection {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  padding: 0;
+  position: relative;
+}
+.ListEventEventGutter {
+  width: 29px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.ListEventEventGutter > div {
+  visibility: collapse;
+}
+.ListEventEventGutter.Loading > div {
+  visibility: unset;
+  transform: scale(0.7) translateX(-4px);
+}
+.ListEventEventElement {
+  flex: 1;
+  padding: 8px;
+}
+.ExpandButton {
+  align-self: center;
+  background: #505962;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: 0 0 30px #000, 0 0 30px #000;
+}
+.ExpandButton:hover {
+  background: #747d86;
+}
+.AllEventsFiltered {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  margin: 12px;
+  font-size: 14px;
+  background-color: #2a2d32;
+}
+.AllEventsFiltered a {
+  cursor: pointer;
+  padding-left: 4px;
+}
+.GroupPlaceholder {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: fit-content;
+  padding: 8px;
+}
+.GroupPlaceholderCapsules {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  filter: saturate(0.5) brightness(0.5);
+  z-index: 0;
+  gap: 13px;
+}
+.ExpandContainer {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.GroupPlaceholderCapsule {
+  display: flex;
+  min-width: 170px;
+  max-width: 215px;
+  height: 100px;
+  align-items: stretch;
+  justify-content: stretch;
+  overflow: hidden;
+}
+.GroupPlaceholderCapsule > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GroupPlaceholderCapsuleMissing {
+  color: #fff;
+  border: #d3d3d3 1px solid;
+  padding: 5px;
+  text-align: center;
+}
+.Section {
+  margin-bottom: 10px;
+  border: 1px solid #ffffff40;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.Section .Body {
+  font-size: 13px;
+  padding: 5px 0px;
+}
+.Header {
+  display: flex;
+}
+.Header .Title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+.Header .Title .Count {
+  background: #fff;
+  border-radius: 2px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 6px;
+  padding-top: 2px;
+  width: 20px;
+  text-align: center;
+  align-content: center;
+}
+.Header .Title .BetaCallout {
+  background: orange;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 6px;
+}
+.MonthPickerContainer {
+  display: flex;
+  align-items: center;
+}
+.MonthPickerToday {
+  cursor: pointer;
+  user-select: none;
+  width: 50px;
+  text-align: center;
+  color: #d0d0d0;
+  font-size: .9em;
+  background-color: #3d444b;
+  margin: 2px;
+}
+.MonthPickerToday.Inactive {
+  cursor: unset;
+  opacity: 0;
+}
+.MonthPickerDate {
+  flex: 1;
+  flex-shrink: auto;
+  text-align: center;
+  color: #d0d0d0;
+  margin: 2px;
+}
+.Week {
+  display: flex;
+}
+.DayName {
+  display: flex;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 6px 2px 2px 2px;
+}
+.Day {
+  user-select: none;
+  display: flex;
+  width: 30px;
+  height: 29px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #3d444b;
+  margin: 2px;
+}
+.Day.OtherMonth {
+  opacity: 0.5;
+}
+.Day.Inactive {
+  opacity: 0;
+}
+.Day.Note {
+  cursor: pointer;
+  position: relative;
+}
+.Day.Note::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--note-color);
+  border-radius: 2px;
+  transform: translateX(2px) translateY(2px);
+}
+.Day.Today {
+  cursor: pointer;
+  color: #fff;
+  box-shadow: inset 0px 0px 0px 2px #e4be85;
+}
+.Day.Event {
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--day-color1) 50%,
+    var(--day-color2) 50%
+  );
+}
+.Day.Hovered {
+  box-shadow: inset 0px 0px 0px 1px silver;
+  filter: brightness(130%);
+}
+.DayTooltipContainer {
+  background-color: #2a2d32;
+  padding: 4px 6px;
+  border: 1px #434953 solid;
+}
+.DayTooltipDate {
+  background-color: #2a2d32;
+  margin-bottom: 8px;
+}
+.DayTooltipEvent {
+  color: #fff;
+  margin: 4px 0;
+  padding: 0 6px;
+  position: relative;
+  z-index: 1;
+}
+.DayTooltipEvent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--event-color);
+  opacity: 0.5;
+  z-index: -1;
+  pointer-events: none;
+}
+.ReleaseInfoCtn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px 0;
+}
+.ReleaseInfoCtn .ReleaseInfoRow {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+.ReleaseInfoCtn .ReleaseInfoRow .ReleaseDateLabel {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 150px;
+}
+.ReleaseInfoCtn .ReleaseInfoRow .ReleaseDateText {
+  font-size: 12px;
+  color: #fff;
+}
+.ReleaseInfoCtn .ReleaseInfoRow.AdvancedAccess {
+  position: relative;
+  background: #e5cc8b;
+  color: #1b2838;
+}
+.ReleaseInfoCtn
+  .ReleaseInfoRow.AdvancedAccess::before,
+.ReleaseInfoCtn
+  .ReleaseInfoRow.AdvancedAccess::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e5cc8b;
+}
+.ReleaseInfoCtn
+  .ReleaseInfoRow.AdvancedAccess::before {
+  left: -2px;
+}
+.ReleaseInfoCtn
+  .ReleaseInfoRow.AdvancedAccess::after {
+  right: -2px;
+}
+.ReleaseInfoCtn
+  .ReleaseInfoRow.AdvancedAccess
+  .ReleaseDateText {
+  color: #1b2838;
+}
+.ItemReleaseInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.ItemReleaseStatusCtn {
+  display: flex;
+  flex-direction: row;
+}
+.ItemReleaseStatusCtn .ItemReleaseStatusLabel {
+  font-size: 16px;
+  font-weight: 200;
+  margin-right: 4px;
+}
+.ItemReleaseStatusCtn .ItemReleaseStatusText {
+  font-size: 16px;
+  font-weight: 400;
+  color: #acacac;
+}
+.ItemReleaseStatusCtn .ItemReleaseStatusText.Released {
+  color: #a4d007;
+}
+.ItemReleaseStatusCtn .ItemReleaseStatusText.Prerelease {
+  color: #a4d007;
+}
+.ItemDeadlineHeaderText {
+  color: #cf980c;
+  font-weight: 400;
+  font-size: 14px;
+  filter: brightness(1.4) saturate(0.8);
+}
+.ItemDeadlineHeaderText.Urgent {
+  color: #cf520c;
+}
+.ItemWarning {
+  grid-area: warnings;
+  color: #ca5029;
+}
+.StatusItemBox {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff21;
+  box-shadow: 2px 2px 10px #0000002b;
+  width: 110px;
+  height: 60px;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .25s linear;
+}
+.StatusItemBox.Hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.StatusItemBoxLabel {
+  font-size: 12px;
+  color: #fff;
+}
+.StatusItemBoxText {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.OptInGamesToolTipContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #363b42;
+  padding: 4px;
+  border: 1px #434953 solid;
+}
+.OptInGamesToolTipRegistered {
+  opacity: 0.5;
+}
+.AssetRequestDateLabel {
+  font-size: 12px;
+  margin-left: 4px;
+}
+.AssetRequestDate {
+  color: #fff;
+  margin-left: 4px;
+}
+.RecapItemContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 265px 1fr 1.5fr 1fr;
+  grid-template-areas: "image text text text" "image plays conversions wishlists" "survey survey survey survey";
+  gap: 0;
+}
+.RecapItemImage {
+  display: block;
+  position: relative;
+  grid-area: image;
+  justify-content: center;
+  align-items: center;
+}
+.RecapItemImage img {
+  display: block;
+  max-width: 256px;
+  max-height: 144px;
+  height: 100%;
+  width: auto;
+}
+.RecapTextSection {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.RecapTextHeader {
+  font-size: 24px;
+  color: #fff;
+}
+.RecapTextSummary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.RecapTextGameDescription {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.RecapTextGameCount {
+  font-size: 15px;
+  color: #d0d0d0;
+}
+.RecapTextGameAdditionalCount {
+  font-size: 13px;
+  color: #c79433;
+  margin: 4px 0;
+}
+.RecapTextFullSummaryButton {
+  align-self: center;
+  background: #505962;
+  font-size: 12px;
+  margin: 0 0 0 16px;
+  padding: 4px 12px;
+  transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.RecapTextFullSummaryButton:hover {
+  background-color: #64717d;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+.RecapBox {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  color: #5c6d82;
+  padding: 7px 0;
+}
+.RecapBox.Plays {
+  grid-area: plays;
+}
+.RecapBox.Wishlists {
+  grid-area: wishlists;
+}
+.RecapBox.Conversions {
+  grid-area: conversions;
+  background: linear-gradient(90deg, white, #98aac0 20%, #98aac0 80%, white);
+  color: #fff;
+}
+.RecapBox.Conversions .RecapBoxDesc {
+  color: #fff;
+}
+.RecapBox.Disabled {
+  background: rgba(255, 255, 255, 0.2);
+  color: #7d8da1;
+  border-left: 1px solid #2f3137;
+}
+.RecapBox.Disabled .RecapBoxDesc {
+  color: #7d8da1;
+}
+.RecapBoxCount {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.RecapBoxDesc {
+  text-align: center;
+  font-size: 11px;
+  color: #434953;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .1em;
+}
+.RecapSurveyArea {
+  position: relative;
+  margin-top: 6px;
+  grid-area: survey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #a9faf5;
+  border-radius: 4px;
+  width: fit-content;
+}
+.RecapSurveyArea:after {
+  bottom: 100%;
+  left: 100px;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(169, 250, 245, 0);
+  border-bottom-color: #a9faf5;
+  border-width: 15px;
+  margin-left: -15px;
+}
+.RecapSurveyArea .RecapSurveyText {
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  color: #000;
+}
+.RecapSurveyArea .RecapSurveyButton {
+  background: #2daaa2;
+  color: #fff;
+  font-size: 14px;
+  margin: 4px;
+  padding: 4px 12px;
+  transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.RecapSurveyArea .RecapSurveyButton:hover {
+  background-color: #127b75;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+.DeadlineWarning {
+  color: #cf980c;
+}
+.DeadlineWarningUrgent {
+  color: #cf520c;
+}
+.CapsuleTax {
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #cf520c;
+}
+.DateDesc {
+  display: inline-block;
+  text-transform: uppercase;
+  width: 100px;
+}
+.StatusIndicatorSection {
+  width: 206px;
+}
+.StatusIndicator {
+  font-size: 16px;
+  font-weight: 800;
+  color: #d4563b;
+}
+.StatusIndicator.Complete {
+  color: #a4d007;
+}
+.CapsuleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.CapsuleContainer img {
+  width: 256px;
+  height: auto;
+}
+.RecapCapsuleContainer {
+  position: relative;
+  padding: 5px;
+}
+.RecapCapsuleContainer .DailyDealTitle {
+  position: absolute;
+  z-index: 1;
+  font-size: 13px;
+  color: #fff;
+  top: 0px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 1px 5px;
+  background-color: #a4d007;
+}
+.DailyDeal_RecapContainer {
+  font-size: 14px;
+}
+.DailyDeal_RecapContainer .PromoTitle {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+}
+.DailyDeal_RecapContainer .PromoTitle .FeaturedDate {
+  color: #b8bcbf;
+  padding-right: 10px;
+}
+.DailyDeal_RecapContainer .DailyDeal_RecapTable {
+  display: grid;
+  grid-template-columns: 256px 350px 150px auto;
+  grid-auto-rows: auto;
+  column-gap: 10px;
+}
+.DailyDeal_RecapContainer .DailyDeal_RecapTable .Cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell.GameCount {
+  align-items: center;
+  justify-content: center;
+}
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell
+  .SalesRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell
+  .VerticalCell {
+  display: flex;
+  flex-direction: column;
+}
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell
+  .HighlightHeader {
+  text-transform: uppercase;
+  color: #b8bcbf;
+}
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell
+  .HighlightHeader.ActiveSortColumn {
+  color: #fff;
+}
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell
+  .HighlightValue {
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell
+  .HighlightText,
+.DailyDeal_RecapContainer
+  .DailyDeal_RecapTable
+  .Cell
+  .HighlightValue {
+  color: #fff;
+}
+.DailyDeal_RecapContainer .DailyDeal_RecapTable .DailyDealLinkButtonContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 15px;
+}
+.HeaderText {
+  color: #ad998e;
+  font-weight: 400;
+  font-size: 14px;
+  filter: brightness(1.4) saturate(0.8);
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.AppsCountToolTipSource {
+  align-self: flex-start;
+}
+.AppsCount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff21;
+  box-shadow: 2px 2px 10px #0000002b;
+  border-radius: 3px;
+  width: 200px;
+  height: 60px;
+  margin: 2px;
+  text-decoration: none;
+}
+.AppsCount:hover {
+  background-color: #ffffff6e;
+}
+.AppsCountLabel {
+  font-size: 12px;
+  color: #fff;
+}
+.AppsCountText {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.AppsCountTooltip {
+  display: flex;
+  flex-direction: column;
+  background-color: #363b42;
+  padding: 4px;
+  border: 1px #434953 solid;
+  max-height: 600px;
+}
+.YoureRegistered {
+  display: flex;
+  flex-direction: row;
+  background-color: #434953;
+  color: #a4d007;
+  margin-top: 4px;
+  margin-right: auto;
+  padding: 4px 8px;
+}
+.YoureRegistered svg {
+  width: 16px;
+  margin-right: 4px;
+}
+.AppTileContainer {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 13px;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 10px;
+  margin-left: -10px;
+  padding-left: 10px;
+}
+.AppTileContainer .NoRecentApps {
+  font-size: 14px;
+  padding: 12px;
+  background-color: #2a2d32;
+}
+.ViewAppsContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+.ViewAppsLink {
+  padding: 5px 14px 5px 14px;
+  border: 1px #bbb solid;
+  border-radius: 3px;
+}
+.ViewAppsLink a {
+  text-decoration: none;
+}
+.AppTile {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.AppTileImage {
+  display: flex;
+  width: 196px;
+  min-height: 73px;
+  align-items: center;
+}
+.AppTileImage a {
+  display: flex;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  transition: box-shadow .3s ease-in-out;
+}
+.AppTileImage a::before {
+  position: absolute;
+  display: block;
+  content: "";
+  border-radius: 3px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0);
+  transition: box-shadow .3s ease-in-out;
+}
+.AppTileImage a:hover {
+  box-shadow: 2px 2px 10px #000;
+}
+.AppTileImage a:hover::before {
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6);
+}
+.AppTileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 3px;
+}
+.AppTileImagePlaceholder {
+  display: flex;
+  width: 196px;
+  height: 91px;
+  background: linear-gradient(155deg, #3d4249, #272b30);
+  border-radius: 3px;
+  align-items: center;
+  text-align: center;
+}
+.AppTileImagePlaceholder a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.AppLabels {
+  position: absolute;
+  z-index: 3;
+  bottom: -10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
+  pointer-events: none;
+}
+.AppType {
+  padding: 1px 6px;
+  border-radius: 2px;
+  background-color: #426283;
+  box-shadow: 1px 1px 7px #000;
+}
+.AppType.DLC {
+  background-color: #a655b2;
+}
+.AppType.Playtest {
+  background-color: #b8860b;
+}
+.AppType.Demo {
+  background-color: #7ba744;
+}
+.AppType.Music {
+  background-color: #a74260;
+}
+.AppRelease {
+  padding: 1px 6px;
+  border-radius: 2px;
+  background-color: #7f5151;
+  box-shadow: 1px 1px 7px #000;
+  margin-left: 4px;
+}
+.ImportantActions {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.ImportantAction {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 300px;
+  height: 140px;
+  background-color: #2b3036;
+  border-top: #cf520c 1px solid;
+  white-space: initial;
+}
+.ImportantAction.Urgent {
+  border: #cf520c 1px solid;
+}
+.ImportantAction .Header {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+.ImportantAction .Header .Image {
+  width: 40px;
+  margin: 8px 6px;
+  flex-shrink: 0;
+}
+.ImportantAction .Header .Image svg {
+  color: #cf520c;
+}
+.ImportantAction .Header .Body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+.ImportantAction
+  .Header
+  .Body
+  .Title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.ImportantAction
+  .Header
+  .Body
+  .Description {
+  color: #ccc;
+  font-size: 12px;
+  margin-right: 6px;
+}
+.ImportantAction .Button {
+  background: #bad1e738;
+  padding: 3px 12px;
+  font-size: 12px;
+  transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+  align-self: flex-start;
+  margin: 6px 8px;
+}
+.ImportantAction .Button:hover {
+  background-color: #ffffff52;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
