@@ -1,0 +1,1489 @@
+.CategorySectionsCtn {
+  padding: 0px var(--gpSpace-Gutter) var(--gpSpace-Gutter) var(--gpSpace-Gutter);
+}
+.CategorySectionsCtn .CategorySection {
+  margin-bottom: 12px;
+}
+.CategorySectionsCtn .CategorySection .CategorySectionName {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.CategorySectionsCtn .CategorySection .CategoriesCtn::after {
+  content: " ";
+  min-width: var(--gpSpace-Gutter);
+}
+.CategorySectionsCtn .CategorySection .CategoriesCtn {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  flex-wrap: nowrap;
+  padding: 8px var(--gpSpace-Gutter) 12px var(--gpSpace-Gutter);
+  margin-left: calc(0px - var(--gpSpace-Gutter));
+  margin-right: calc(0px - var(--gpSpace-Gutter));
+  scroll-padding: 0px var(--gpSpace-Gutter);
+}
+.CategorySectionsCtn .CategorySection .CategoriesCtn .Category {
+  display: block;
+  position: relative;
+  width: var(--gpWidth-4colcap);
+  overflow: hidden;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+@media screen and (min-width: 1280px) {
+  .CategorySectionsCtn .CategorySection .CategoriesCtn .Category {
+    width: var(--gpWidth-5colcap);
+    height: var(--gpWidth-4colcap);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .CategorySectionsCtn .CategorySection .CategoriesCtn .Category {
+    width: var(--gpWidth-6colcap);
+    height: var(--gpWidth-5colcap);
+  }
+}
+.CategorySectionsCtn .CategorySection .CategoriesCtn .Category .Grid {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.CategorySectionsCtn .CategorySection .CategoriesCtn .Category .Grid img {
+  width: 100%;
+  height: auto;
+  transition: transform .2s ease-in-out, filter .2s ease-in-out;
+}
+.CategorySectionsCtn
+  .CategorySection
+  .CategoriesCtn
+  .Category
+  .CategoryGradient {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), #0b1621 72%);
+  transition: opacity .2s ease-in-out;
+}
+.CategorySectionsCtn .CategorySection .CategoriesCtn .Category:focus .Grid img,
+.CategorySectionsCtn .CategorySection .CategoriesCtn .Category:hover .Grid img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+.CategorySectionsCtn
+  .CategorySection
+  .CategoriesCtn
+  .Category:focus
+  .CategoryGradient,
+.CategorySectionsCtn
+  .CategorySection
+  .CategoriesCtn
+  .Category:hover
+  .CategoryGradient {
+  opacity: 0.8;
+}
+.CategorySectionsCtn
+  .CategorySection
+  .CategoriesCtn
+  .Category:focus
+  .CategoryName,
+.CategorySectionsCtn
+  .CategorySection
+  .CategoriesCtn
+  .Category:hover
+  .CategoryName {
+  color: #fff;
+}
+.CategorySectionsCtn .CategorySection .CategoriesCtn .Category .CategoryName {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.CategorySectionsCtn
+  .CategorySection
+  .CategoriesCtn
+  .Category
+  .CategoryName
+  span {
+  position: absolute;
+  bottom: 10%;
+  font: var(--gpText-BodyLarge);
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  padding: 0px 10%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+.CategorySectionsCtn
+  .CategorySection
+  .CategoriesCtn
+  .TopLevelCategory
+  .CategoryName
+  span {
+  font: var(--gpText-HeadingSmall);
+  text-align: center;
+}
+.SalePageLogoCtn {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  margin-top: 67px;
+}
+.BasicUI .SalePageLogoCtn {
+  max-height: 285px;
+  margin-bottom: 0px;
+  margin-top: 65px;
+}
+html.tablet .SalePageLogoCtn {
+  margin-top: 65px;
+}
+@media screen and (max-width: 910px) {
+  .SalePageLogoCtn {
+    margin-top: 65px;
+  }
+}
+.SalePageLogoCtn img {
+  width: 100%;
+  display: block;
+}
+.BasicUI .SalePageLogoCtn img {
+  max-height: 285px;
+  width: auto;
+}
+@media screen and (max-width: 940px) {
+  .SalePageLogoCtn {
+    margin-top: 45px;
+    margin-bottom: 0px;
+  }
+}
+.SectionTitleHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.SectionTitleHeader .DialogButton {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+.SectionTitleHeader .DialogButton SVG {
+  width: 16px;
+  height: 16px;
+}
+.SectionTitleButtons {
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
+}
+.required_title {
+  display: flex;
+}
+.required_title:not(:first-child) {
+  margin-top: 60px;
+}
+.SectionTitleHeader .EventEditorTextTitle {
+  padding-top: 6px;
+}
+.Ctn,
+.CtnEditor {
+  background-color: #53585f;
+  margin: 6px;
+  padding: 6px;
+  width: 250px;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 120px;
+  box-shadow: 2px 2px 10px #000;
+}
+.SwapColorsCtn button.DialogButton {
+  width: 50%;
+  margin: 0 auto;
+}
+.CtnEditor {
+  top: 0px;
+  z-index: 1000;
+}
+.CtnEditor .EditorTitle {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 13px;
+  font-weight: 500;
+}
+.ConfDialogOptions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.ConfDialogOptions .ImageOptions {
+  flex-grow: 1;
+}
+.ConfDialogOptions .ColorOptions {
+  flex-grow: 1;
+  margin-left: 30px;
+}
+.ColorCtn {
+  display: flex;
+  flex-direction: row;
+}
+.DragAndDropContainer,
+.DragAndDropContainerDragging {
+  border: 1px dashed #06beff;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  margin-top: 10px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(88vw - 48px);
+}
+.DragAndDropContainerDragging {
+  border-color: #add8e6;
+  background: rgba(6, 190, 255, 0.2);
+  box-shadow: 0 0 10px #06beff inset;
+}
+.ImageUploadBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 12px;
+}
+.ImageUploadBar label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.ImageUploadBar label span {
+  margin-right: 8px;
+}
+.SelectImageButton {
+  color: #dfe3e6;
+  transition-property: background, color, box-shadow;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 25%;
+  background-size: 330% 100%;
+  padding: 8px 25px;
+  line-height: 20px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.SelectImageButton:hover {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.ImageDimensionTooSmall {
+  color: #999;
+}
+.UploadPreviewCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.UploadPreviewButtonsCtn {
+  width: 50%;
+  margin: 0px auto;
+}
+.UploadPreviewDelete {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.UploadPreviewButton {
+  margin: 8px;
+}
+.UploadPreviewError {
+  color: #943636;
+  font-size: 12px;
+  font-weight: bold;
+}
+.UploadPreviewWarning {
+  color: #ffb15d;
+  background-color: #707070;
+  padding: 2px 0;
+  font-size: 12px;
+}
+.UploadPreviewMessage {
+  color: silver;
+  background-color: #707070;
+  padding: 2px 0;
+  font-size: 12px;
+}
+.UploadPreview {
+  width: 300px;
+  background-color: gray;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0px 0px 10px #000;
+  margin: 8px;
+  position: relative;
+}
+.UploadPreview > div {
+  margin-bottom: 8px;
+}
+.PreviewImgCtn {
+  height: 120px;
+  background: #000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 8px;
+}
+.PreviewImgInfo {
+  position: absolute;
+  padding: 1px;
+  left: 10px;
+  margin-bottom: 14px;
+  border-top: 1px solid transparent;
+}
+.PreviewImgInfo:hover {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+.ImagesOuterContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 732px;
+  background: #000;
+}
+.ImagesOuterContainer::-webkit-scrollbar-thumb {
+  background: #3d4450;
+}
+.Hilight {
+  font-weight: bold;
+  color: green;
+}
+.ImageContainer {
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  max-height: 168px;
+  overflow: hidden;
+  padding: 4px;
+}
+.Image {
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.ImageFilename {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 12px;
+}
+.ImageWrapperContainer {
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  max-height: 168px;
+  overflow: hidden;
+  padding: 4px;
+}
+.ImageWrapper {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-drag: element;
+}
+.VideoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ImageWrapperFilename {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 12px;
+}
+.ResultNotification {
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.ErrorCode {
+  color: red;
+}
+.Hilight {
+  font-weight: bold;
+  color: green;
+}
+.ImageButton {
+  cursor: pointer;
+}
+.ImageButton .Thumb,
+.ImageButton .Full,
+.ImageButton .Delete,
+.ImageButton .FloatingThrobber,
+.ImageButton .Localized {
+  position: absolute;
+  color: #67c1f5;
+  font-size: 10px;
+  padding: 1px 5px;
+  visibility: hidden;
+}
+.ImageButton .Thumb,
+.ImageButton .Full,
+.ImageButton .Localized {
+  left: 0px;
+  left: -100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.ImageButton .Thumb {
+  top: 25px;
+}
+.ImageButton .Full {
+  top: 5px;
+}
+.ImageButton .Localized {
+  top: 45px;
+}
+.ImageButton .FloatingThrobber {
+  left: 0px;
+  opacity: 1;
+  visibility: visible;
+  top: 5px;
+}
+.ImageButton .Delete {
+  background-image: url(data:image/gif;base64,R0lGODlhEgASANUkALS4r7W5sLzAt7a6sbq+trO3r7u/t73BuLK2roCCfb7Cubm9tbe7sri8tLe7s4GEf4GDfnt+eXx+ebG1rX+Cfb7Cunl8d3t9eXh7doKEf3+BfXx/end6dX1/en1/e4CCfnh6dn6BfHp8eH6AfCYmJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACQALAAAAAASABIAAAaYQBIpkREaj6RMwvipVB5I48P5GSquCijygVUkIIdwGHIEiw/khGC9Xg7ZbSPFQKdT5nUDBakh+P+AGlEkIQuGh4Yhg0IjDY6PI4tCHg6Vlh6SHQybnJsdgxsDoqOkG0gSAampEqiqARJGEQCzsxFCsrQAthcFvb0XR7y+BRcYCMcIIlEiyAgYJCATExaLFtIgRhzUkhYcQkEAOw==);
+  right: 2px;
+  right: -100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 18px;
+}
+.ImageButton:hover {
+  background: #222;
+}
+.ImageButton:hover .Thumb,
+.ImageButton:hover .Full,
+.ImageButton:hover .Localized {
+  left: 0px;
+  opacity: 1;
+  visibility: visible;
+}
+.ImageButton:hover .Delete {
+  right: 2px;
+  opacity: 1;
+  visibility: visible;
+}
+.ImageButton:hover .Thumb:hover,
+.ImageButton:hover .Full:hover,
+.ImageButton:hover .Delete:hover,
+.ImageButton:hover .Localized:hover {
+  opacity: 0.7;
+}
+.ClanImageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.ClanImageGridItem {
+  border: 4px solid transparent;
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  min-height: 60px;
+  flex-direction: column;
+  min-width: 0;
+}
+.ClanImageGridItem.Selected {
+  border-color: #1a44c2;
+}
+.ClanImageGridItem:not(.Selected):hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ClanImageGridItem .ImgCtn {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ClanImageGridItem .ImgCtn img,
+.ClanImageGridItem .ImgCtn video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.ClanImageGridItem .Name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 90%;
+  flex-shrink: 0;
+}
+input.SearchInput {
+  width: -webkit-fill-available;
+  width: calc(100% - 24px);
+  height: 11px;
+  margin-bottom: 4px;
+  padding: 12px;
+  border: none;
+  background: var(#30333b);
+  outline-width: 0;
+  color: var(#d3e0ea);
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 18px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #000 inset;
+}
+.PickerTitle {
+  padding: 3px 0px;
+}
+.TitleImg {
+  width: 100px;
+  max-height: 200px;
+}
+.PreviewImg {
+  max-height: 400px;
+  max-width: calc(100% - 400px);
+}
+.ArtworkBar {
+  width: 1050px;
+}
+.PickerContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 395px;
+}
+input.SearchInput {
+  width: -webkit-fill-available;
+  width: calc(100% - 24px);
+  height: 11px;
+  margin-bottom: 4px;
+  padding: 12px;
+  border: none;
+  background: var(--main-editor-input-bg-color);
+  outline-width: 0;
+  color: var(--main-editor-text-color);
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 18px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #000 inset;
+}
+.Hilight {
+  font-weight: bold;
+  color: green;
+}
+.ImagesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 732px;
+  background: #000;
+}
+.ImagesContainer::-webkit-scrollbar-thumb {
+  background: #3d4450;
+}
+.UploaderContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #323843;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+.UploaderTitle {
+  font-size: 14px;
+  color: #fff;
+}
+.UploaderRunning {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.UploaderDesc {
+  font-size: 12px;
+  color: gray;
+}
+.UploadError {
+  color: red;
+  font-weight: bold;
+}
+.UploadMessageAndButtonsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.UploadSuccess {
+  color: #a3cf06;
+  font-size: 14px;
+}
+.UploadDismissButton {
+  align-self: right;
+}
+:root {
+  --main-text-color: #dbe2e6;
+  --main-light-blue-background: #4582a5;
+  --main-text-on-light-blue: rgb(209, 209, 209);
+  --main-top-image-bg: #1f2126;
+  --main-editor-bg-color: #1b2838;
+  --main-editor-text-color: #e6e7e8;
+  --main-editor-input-bg-color: #30333b;
+  --main-editor-section-title-color: #7e7e7e;
+}
+p a {
+  color: #b0e9ff;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
+}
+p a:hover {
+  color: #fff;
+}
+.EventEditorArtworkCtn {
+  overflow: hidden;
+  height: 25vw;
+  min-height: 350px;
+  width: 100%;
+  position: relative;
+}
+.ArtworkPreview {
+  width: 618px;
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #4e586a;
+}
+.EventEditorArtworkBarContainer > .EventEditorButton {
+  background-color: var(--main-top-image-bg);
+  color: var(--main-editor-text-color);
+}
+.EventEditorInputPaneTopRow .EventEditorButton {
+  background-color: var(--main-editor-bg-color);
+  color: var(--main-editor-text-color);
+}
+.EventEditorArtworkBarContainer {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 100%;
+  min-width: 1400px;
+  top: -23%;
+  position: absolute;
+}
+.EventCoverImageCtn {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.DragTarget {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.DragOnTopOfMe {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.EventEditorArtworkTextCtn {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
+}
+.EventEditorDragTargetArea {
+  width: calc(100% - 20px);
+  border: 2px solid transparent;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 25vw;
+}
+.EventEditorDragTargetArea.DragTarget {
+  border: 2px dashed #06beff;
+  border-radius: 4px;
+}
+.EventEditorArtworkTitle {
+  font-size: 22px;
+  color: var(--main-editor-text-color);
+}
+.EventEditorArtworkSubTitle {
+  font-size: 15px;
+}
+.EventEditorArtworkResolution {
+  font-size: 12px;
+  padding: 5px;
+}
+.ReassignCtn {
+  max-width: 500px;
+}
+.ReassignCtn img {
+  width: 100%;
+  min-height: unset;
+  border: unset;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+.ImagePreviewContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.ImagePreviewContainer.NoneSet {
+  padding: 12px;
+}
+.TitleSafePreview {
+  position: absolute;
+  top: 37px;
+  width: 275px;
+  height: 121px;
+  border: 1px solid red;
+}
+.TitleSafeCaption {
+  display: inline-block;
+  border-left: 1px solid red;
+  padding-left: 8px;
+  margin-top: 8px;
+}
+.LanguageSelector,
+.LanguageSelectorSelected,
+.LanguageSelectorNoData {
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px;
+  line-height: 17px;
+}
+.LanguageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-left: 12px;
+  padding-right: 6px;
+  margin-right: 6px;
+  width: calc(100% - 6px);
+}
+.LanguageContainer:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.LanguageContainer .LanguageOptions {
+  display: flex;
+  flex-direction: row;
+}
+.LanguageContainer .LanguageOptions svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+.LanguageContainer .LanguageOptions img {
+  margin-right: 8px;
+}
+.LanguageContainer .LanguageOptions:hover {
+  cursor: pointer;
+}
+.LanguageContainer:first-child {
+  margin-top: 6px;
+}
+.LanguageContainer:last-child {
+  margin-bottom: 6px;
+}
+.LanguageContainer > img {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+}
+.LanguageSelectorSelected {
+  color: #fff;
+  position: relative;
+}
+.LanguageSelectorSelected:after {
+  right: calc(100% + 1px);
+  top: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #fff;
+  border-width: 7px;
+  margin-top: -7px;
+}
+.LanguageSelectorNoData {
+  font-weight: lighter;
+}
+.LanguageSelector {
+  color: #b0e9ff;
+}
+.LanguageListContainer {
+  overflow: auto;
+  max-height: 213px;
+  padding-left: 0px;
+}
+.SelectImageContainerTopRow,
+.SelectImageContainerBottomRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TextTitle {
+  font-size: 15px;
+  color: #fff;
+}
+.TextSubTitle {
+  font-size: 13px;
+  max-height: 31px;
+  overflow: hidden;
+}
+.ExampleSectionTitle {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #c9c9c9;
+  margin-bottom: 6px;
+}
+.DetailPageExample {
+  width: 500px;
+  height: auto;
+  margin-left: 20px;
+  box-shadow: 0 0 10px #000;
+}
+.DetailExample,
+.DetailExample2 {
+  width: 500px;
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  -webkit-mask-image: linear-gradient(180deg, black 75%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(180deg, black 75%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 4px;
+}
+.DetailExample > div,
+.DetailExample2 > div {
+  margin-top: 0px;
+}
+.DetailExample > div > div:first-child,
+.DetailExample2 > div > div:first-child {
+  background-position-y: -28px;
+  height: 102px;
+}
+.DetailExample .MainImageCtn,
+.DetailExample2 .MainImageCtn {
+  width: 100%;
+  height: 132px;
+  position: absolute;
+  overflow: hidden;
+}
+.DetailExample .MainImageCtn > img,
+.DetailExample2 .MainImageCtn > img {
+  width: 100%;
+  height: auto;
+  top: -29px;
+  position: relative;
+}
+.DetailExample .ExampleBodyPosition,
+.DetailExample2 .ExampleBodyPosition {
+  top: 101px;
+  height: 100%;
+  max-width: 70%;
+  margin: 0px auto;
+  position: relative;
+}
+.DetailExample .ExampleContentCtn,
+.DetailExample2 .ExampleContentCtn {
+  position: absolute;
+  width: calc(100% - 22px);
+  height: 100%;
+  padding: 11px;
+  background-color: #25282e;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+.DetailExample .ExampleContentCtn .TextTitle,
+.DetailExample2 .ExampleContentCtn .TextTitle {
+  font-size: 11px;
+  line-height: 11px;
+  color: #fff;
+}
+.DetailExample .ExampleContentCtn .TextSubTitle,
+.DetailExample2 .ExampleContentCtn .TextSubTitle {
+  font-size: 7px;
+  line-height: 16px;
+  color: #adaeb2;
+}
+.DetailExample .ExampleContentCtn .TextBody,
+.DetailExample2 .ExampleContentCtn .TextBody {
+  font-size: 6px;
+}
+.DetailExample .ExampleContentCtn .TextBody img,
+.DetailExample2 .ExampleContentCtn .TextBody img {
+  max-width: 100%;
+}
+.DetailExample2 {
+  height: 400px;
+}
+.DetailExample *,
+.DetailExample2 * {
+  pointer-events: none;
+}
+.SpotlightExample {
+  width: 778px;
+  height: auto;
+  color: #fff;
+}
+.SpotlightExample img {
+  width: 100%;
+}
+.SelectImageContainerTopRow {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.SelectImageEqualColumns {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.SelectImageEqualColumns:first-child {
+  margin-right: 10px;
+}
+.SelectImageBlock {
+  background-color: #323843;
+  padding: 5px;
+  font-size: 13px;
+}
+.SelectImageBlock.MainPreviewBlock {
+  background-color: #25282e;
+  padding: 16px;
+}
+.SelectImageBlock.Tips {
+  background-color: transparent;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.SelectImageBlock.Tips ul {
+  padding-left: 14px;
+  margin-top: 0px;
+}
+.SelectImageBlock.Tips li {
+  list-style-position: outside;
+}
+.SelectImageBlock.Tips li strong {
+  font-weight: normal;
+  color: #c9c9c9;
+}
+.ExamplesCtn {
+  margin-top: 20px;
+}
+.SelectImageExampleImg {
+  max-width: 248px;
+  max-height: 192px;
+}
+.SelectImageLanguagesCtn {
+  margin-left: 8px;
+  width: 400px;
+  background-color: #25282e;
+}
+.SelectImageTitle {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #c9c9c9;
+}
+.EventEditorButton {
+  background-image: radial-gradient(
+    circle at top left,
+    #399aec 10%,
+    #225dce 80%
+  );
+  background-color: transparent;
+  padding: 4px 20px;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 14px;
+}
+.EventEditorButton:hover {
+  background-image: radial-gradient(
+    circle at top left,
+    #399aec 0%,
+    #225dce 140%
+  );
+  cursor: pointer;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.ArtworkSelectorContainer {
+  box-shadow: 0px 0px 20px #000;
+  border-radius: 4px;
+  margin-top: 16px;
+  background-color: #2e3138;
+}
+.ArtworkSelectorContainer .Title {
+  text-transform: uppercase;
+  padding: 8px 16px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  display: flex;
+  line-height: 36px;
+}
+.ArtworkSelectorContainer .Title .DialogButton {
+  width: 40px;
+  margin-left: auto;
+}
+.BroadcastPreviewContainer {
+  display: flex;
+  height: 337px;
+}
+.SaleHeaderPreviewContainer {
+  width: 600px;
+}
+.SaleHeaderExampleCtn {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+.SaleHeaderExampleCtn .SaleHeaderExampleCol {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.SaleHeaderExampleCtn a {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.SaleHeaderExampleCtn img {
+  display: block;
+  width: 100%;
+}
+.BroadcastPreview {
+  background-color: #000;
+  background-image: url(../../../images/applications/store/broadcast_middle_preview.png?v=valveisgoodatcaching);
+  width: 600px;
+  opacity: 0.1;
+}
+.ExampleSpacer {
+  height: 20px;
+  width: auto;
+  border-top: 1px solid #585d6a;
+  margin-top: 20px;
+}
+.MultipleExampleContainer {
+  display: flex;
+  flex-direction: column;
+}
+.AssetExampleSpotlightCtn {
+  position: relative;
+}
+.BackgroundConfigCtn {
+  margin-top: 8px;
+  border-top: 1px solid #484b53;
+  padding-top: 20px;
+  margin-bottom: 12px;
+}
+.BackgroundConfigCtn .OptionCtn {
+  flex-grow: 1;
+}
+.BackgroundConfigCtn button.DialogButton.BackgroundColorBtn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.ReadMoreLink {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.MajorEventContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-image-source: url(../../../images/applications/store/glassborder_02.png?v=valveisgoodatcaching);
+  border-image-width: 1px;
+  border-image-repeat: stretch;
+  border-image-slice: 7;
+  box-shadow: 0 0 12px #00000025;
+}
+.MajorEventImageContainer {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    black 44px,
+    black calc(100% - 44px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    black 44px,
+    black calc(100% - 44px),
+    transparent 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+.MajorEventImage {
+  object-fit: contain;
+  top: 0;
+  width: 1053px;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  filter: saturate(0.9);
+  transition: transform .21s ease-in-out, filter .21s ease-in-out;
+}
+.MajorEventContainer:hover .MajorEventImage {
+  transform: scale(1.02);
+  filter: saturate(1);
+}
+.BottomShadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 8px,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  height: 12px;
+}
+.MajoreEventImageContentContainer {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+}
+.MajorEventImageTemplate {
+  margin-top: 10px;
+  position: absolute;
+  top: 0;
+  background-image: url(/images/AppDetailsSpotlightTemplate.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 13.6%;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0.5;
+}
+.MajorEventBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.MajorEventImageBackgroundBlur {
+  position: absolute;
+  right: -16px;
+  bottom: -16px;
+  width: 100%;
+  max-height: 100%;
+  filter: blur(12px);
+}
+.MajorEventHeader {
+  top: 0;
+  left: 0;
+  right: 0px;
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: flex-start;
+}
+.BasicUI .MajorEventHeader .PartnerEventLargeImage_Title {
+  margin-top: 2px;
+}
+.MajorEventHeader .EventType {
+  color: #94a1a6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.BasicUI .MajorEventHeader .EventType {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.BasicUI .MajorEventHeader .EventType span {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.MajorEventHeader .GameIconAndName {
+  display: flex;
+  align-items: center;
+}
+.MajorEventHeader .GameIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.MajorEventSpotlightBackground {
+  position: absolute;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 35%,
+    black 45%,
+    black 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 35%,
+    black 45%,
+    black 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  filter: blur(30px);
+  transform: scaleY(2);
+  opacity: 0.7;
+}
+.MajorEventContent {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 11%,
+    rgba(0, 0, 0, 0.7) 45%,
+    rgba(0, 0, 0, 0.5) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.MajorEventContent .MajorEventTextCtn {
+  position: absolute;
+  left: 42%;
+  padding-right: 5%;
+  max-width: 490px;
+}
+.MajorEventTitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #fff;
+  overflow: hidden;
+  margin-top: 4px;
+}
+.MajorEventSummary {
+  color: #dbdbdb;
+  font-size: 13px;
+  padding-top: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0px;
+}
+.MajorEvent_Ctn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.AppDetailsSpotlightContainer {
+  box-shadow: 1px 2px 12px 1px #00000055;
+}
+.AppDetailsSpotlightContainer .BottomShadow {
+  display: none;
+}
+.TabCtn {
+  z-index: 1000;
+}
+.TabHeader {
+  margin-top: 10px !important;
+}
+.PresenterDisclaimer {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.65);
+  margin: auto;
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 4px 32px;
+  width: fit-content;
+  max-width: 940px;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 1px 1px 3px #000;
+  z-index: 2;
+  cursor: default;
+}
+.PresenterDisclaimer .PresenterLabel {
+  color: #fff;
+  font-weight: bold;
+}
+.PresenterDisclaimer .PresenterLabel:hover {
+  text-decoration: underline;
+}
+.countdownCtn {
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    rgba(108, 119, 134, 0.4) 40%,
+    rgba(83, 104, 104, 0.4) 100%
+  );
+  padding: 16px;
+  border-radius: 4px;
+}
+.Closed {
+  position: relative;
+}
+.CountDownCtn {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 11px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.CountDownCtn .CountDownTime {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.CountDownCtn .CountDownText {
+  font-size: 16px;
+  display: inline;
+  margin-left: 8px;
+}
+.LearnMore {
+  position: relative;
+}
+.Throbber {
+  display: flex;
+  color: #80caff;
+  line-height: 37px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.WinnerInfo {
+  display: inline;
+  margin-right: 8px;
+}
+.WinnerInfo .WinnerCount {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.WinnerInfo .WinnerText {
+  display: inline;
+  margin-left: 8px;
+}

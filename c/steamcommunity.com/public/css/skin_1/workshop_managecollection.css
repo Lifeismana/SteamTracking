@@ -1,0 +1,508 @@
+#mainContents {
+  width: 930px;
+  padding-left: 20px;
+}
+.manageCollectionHeader {
+  padding-top: 15px;
+}
+.manageCollectionItemsBody {
+  margin-right: 17px;
+}
+.manageCollectionPageTitle {
+  font-size: 30px;
+  color: #ffffff;
+}
+.newCollectionDesc {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+.createCollectionBody {
+  margin-top: 20px;
+  margin-right: 17px;
+}
+.createCollectionSection {
+  padding: 18px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+.createCollectionSection input[type="text"] {
+  background-color: #1f303f;
+  color: #c6d4df;
+}
+.createCollectionArrow {
+  float: left;
+  width: 23px;
+  height: 13px;
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/workshop_collection_creationBullet.png);
+  background-repeat: no-repeat;
+  padding-right: 10px;
+}
+.title {
+  line-height: 13px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #66c0f4;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+.description {
+  font-size: 14px;
+}
+.titleField {
+  font-size: 14px;
+  line-height: 27px;
+  height: 27px;
+  width: 400px;
+  top: 0px;
+  background-color: #1f303f;
+  border: solid 1px #262627;
+  box-shadow: 1px 1px 0px #39393a;
+  border-radius: 3px;
+  padding: 4px 5px 4px 8px;
+  color: #c6d4df;
+}
+.descField {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  width: 860px;
+  height: 255px;
+  background-color: #1f303f;
+  border: 1px solid #000;
+  box-shadow: 1px 1px 0 0 rgba(91, 132, 181, 0.2);
+  border-radius: 3px;
+  padding: 4px 5px 4px 8px;
+  color: #c6d4df;
+}
+.collectionType {
+  margin-bottom: 20px;
+}
+.collectionTypeLabel {
+  margin-left: 35px;
+  cursor: pointer;
+}
+.collectionTypeLabel .description {
+  color: #ffffff;
+}
+.collectionTypeLabel .collectionTypeDesc {
+  color: #8f98a0;
+}
+.collectionTypeOption {
+  top: 0px;
+  padding: 0px;
+  float: left;
+  width: 25px;
+}
+.collectionTypeDesc {
+  font-size: 14px;
+  color: #61696d;
+}
+.subscribeAllDesc {
+  color: #6c91a0;
+}
+.cancelCollection {
+  float: right;
+}
+.saveCollection {
+  float: right;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+.manageCollectionItemsPageTitle {
+  font-size: 30px;
+  color: #ffffff;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+}
+.manageCollectionItems {
+  padding-top: 20px;
+}
+.manageCollectionItemsNoItems {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.manageCollectionItemsNoItemsDesc {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.collectionAddItemsTitle {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: #66c0f4;
+  padding-bottom: 10px;
+}
+.collectionAddItemsSection {
+  border: 1px solid #66c0f4;
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 17px;
+}
+.collectionChoiceTabs {
+  margin-left: 10px;
+}
+.collectionTabsBar {
+  height: 3px;
+  background-color: #888888;
+}
+.collectionChoiceTab,
+a.collectionChoiceTab {
+  display: block;
+  float: left;
+  color: black;
+  font-size: 14px;
+  background-color: #505051;
+  line-height: 25px;
+  padding: 0px 12px;
+  margin-left: 9px;
+  text-decoration: none;
+}
+.collectionChoiceTab.active {
+  background-color: #888888;
+}
+.collectionChoiceSection {
+}
+.collectionChoiceSectionControls {
+  margin-top: 15px;
+  display: flex;
+  gap: 4px;
+}
+.collectionChoiceSectionControls .filter {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+}
+.collectionChoiceSectionControls .filter input {
+  top: 0px;
+}
+.itemChoice {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  color: #ffffff;
+  background-color: #4d4d4d;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+.itemChoice.filtered {
+  display: none;
+}
+.itemChoiceEmpty {
+  padding-top: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+.itemChoiceEmptyText {
+  padding-bottom: 15px;
+}
+.itemChoice.inCollection {
+  background-color: rgba(84, 133, 183, 0.2);
+}
+.itemChoice:hover {
+  background-color: #888888;
+}
+.itemChoice.inCollection:hover {
+  background-color: rgba(84, 133, 183, 0.5);
+}
+.itemChoice .itemChoiceStatus {
+  height: 30px;
+  width: 16px;
+  padding-left: 5px;
+}
+.itemChoice:hover .itemChoiceStatus {
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.itemChoice.inCollection .itemChoiceStatus {
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png);
+  background-position: 0px -60px;
+  background-repeat: no-repeat;
+}
+.itemChoice.inCollection:hover .itemChoiceStatus {
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ico_subscribe_tiled.png);
+  background-position: 0px -90px;
+  background-repeat: no-repeat;
+}
+.itemChoiceTitle {
+  flex: 1 0 300px;
+  overflow: FAQDashboard_Invisible;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.itemChoiceCreator {
+  overflow: FAQDashboard_Invisible;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+.itemChoiceType {
+  width: 100px;
+}
+.itemChoiceControls {
+  width: 160px;
+  visibility: FAQDashboard_Invisible;
+  text-transform: uppercase;
+}
+.itemChoiceControls .general_btn {
+  margin-top: 3px;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 14px;
+  font-size: 10px;
+}
+.itemChoice:hover .itemChoiceControls {
+  visibility: FAQDashboard_Visible;
+}
+.managedCollectionItemControls {
+  visibility: FAQDashboard_Invisible;
+  position: absolute;
+  float: right;
+  top: 50%;
+  right: 0%;
+  margin-top: -15px;
+  margin-right: 20px;
+}
+.managedCollectionItems {
+  margin-top: 10px;
+}
+.managedCollectionItem {
+  position: relative;
+  width: 638px;
+  background-color: rgba(84, 133, 183, 0.2);
+  margin-bottom: 5px;
+  cursor: move;
+  cursor: -moz-grab;
+  display: flex;
+}
+.managedCollectionItem:hover {
+  outline: 1px solid #66c0f4;
+  background-color: rgba(84, 133, 183, 0.4);
+}
+.managedCollectionItem:hover .managedCollectionItemControls {
+  visibility: FAQDashboard_Visible;
+}
+.managedCollectionItemControls .general_btn {
+  position: relative;
+  float: right;
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+  background-image: url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/btn_imgMgmt_grid.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 30px;
+  text-decoration: none;
+}
+.manageItemsTitle {
+  font-size: 18px;
+  color: #66c0f4;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+}
+.manageItemsDragDesc {
+  line-height: 20px;
+  font-size: 13px;
+}
+.manageItemsSort {
+  padding-top: 10px;
+}
+.manageItemsSort .sort_button i {
+  visibility: FAQDashboard_Invisible;
+}
+.manageItemsSort .sort_button:hover i {
+  visibility: FAQDashboard_Visible;
+}
+.manageItemsSort .sort_button.active_sort i {
+  visibility: FAQDashboard_Visible;
+}
+.workshopItem {
+  height: 50px;
+  width: 50px;
+  min-height: 50px;
+  margin-bottom: 0px;
+}
+.workshopItemPreviewHolder {
+  height: 50px;
+  width: 50px;
+}
+.workshopItemPreviewImage {
+  width: 50px;
+  max-height: 50px;
+}
+.collectionItemDetails {
+  margin-left: 5px;
+}
+.workshopItemTitle {
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.missingCollectionItem {
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff0000;
+}
+.workshopItemAuthor {
+  font-size: 12px;
+}
+.workshopItemAuthorName {
+  color: white;
+}
+.general_btn.delete {
+  background-position: -120px 0px;
+}
+.general_btn.delete:hover {
+  background-position: -120px -30px;
+}
+.checkboxHilight {
+  color: #e69034;
+}
+#distribution_header {
+  margin: 20px 0;
+}
+#distribution_header .screenshot {
+  display: inline-block;
+  padding-right: 20px;
+  vertical-align: middle;
+}
+#distribution_header .text {
+  display: inline-block;
+  vertical-align: middle;
+}
+#distribution_header .super_text {
+  line-height: 20px;
+}
+#distribution_header .title {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 30px;
+  padding: 0;
+}
+.sub_title {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 20px 0 5px 0;
+}
+.sub_title.compact {
+  margin-top: 0;
+}
+#ig_request_header {
+  background: transparent
+    url(https://community.cloudflare.steamstatic.com/public/images/sharedfiles/ig/greenlight_submit_logo.jpg)
+    no-repeat;
+  height: 146px;
+  width: 419px;
+  padding: 30px 30px 0 500px;
+  color: #fff;
+  box-shadow: 0 0 6px #111;
+}
+#ig_request_header h1 {
+  font-size: 22px;
+  color: #8bb006;
+  font-weight: normal;
+}
+#ig_request_header p {
+  margin: 0px;
+  color: #828282;
+  line-height: 18px;
+  font-size: 14px;
+}
+.spacer {
+  height: 50px;
+}
+.titleField.mini {
+  width: 100px;
+}
+.titleField.half {
+  width: 180px;
+}
+.workshopDescContainer {
+  display: inline-block;
+}
+.workshopFormattingHelpContainer {
+  text-align: right;
+}
+.join_now_block {
+  padding: 15px;
+  margin-top: 15px;
+  background: #353537;
+  background: -moz-linear-gradient(top, #353537 0%, #404042 50%, #353537 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #353537),
+    color-stop(50%, #404042),
+    color-stop(100%, #353537)
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #353537 0%,
+    #404042 50%,
+    #353537 100%
+  );
+  background: -o-linear-gradient(top, #353537 0%, #404042 50%, #353537 100%);
+  background: -ms-linear-gradient(top, #353537 0%, #404042 50%, #353537 100%);
+  background: linear-gradient(to bottom, #353537 0%, #404042 50%, #353537 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#353537', endColorstr='#353537',GradientType=0 );
+  border: 1px solid #2f2f31;
+}
+.join_now_block > a {
+  margin-right: 10px;
+}
+#ProgressSection {
+  margin-top: 25px;
+}
+#ProgressBar {
+  height: 25px;
+  border: 1px solid #000;
+  padding: 1px;
+  display: none;
+}
+#ProgressBar > div {
+  height: 25px;
+  background-color: green;
+  text-align: center;
+  color: #fff;
+  width: 0px;
+  padding: 0;
+  margin: 0;
+}
+#ItemsWrapper {
+  position: relative;
+  height: 200px;
+}
+#Sale_Section_Type_items {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+.ui-resizable-s {
+  cursor: s-resize;
+  height: 2px;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  background-color: #888888;
+}

@@ -1,0 +1,267 @@
+.SDRConnectionsAppCtn {
+  border-top: 1px solid #bbed08;
+  background: radial-gradient(
+      circle at top left,
+      rgba(74, 81, 92, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%
+    ), #25282e;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.SDRConnectionsAppCtn .SDRConnectionsAppTitle {
+  font-size: 28px;
+  font-weight: 400;
+  color: #bbed08;
+  margin-bottom: 20px;
+}
+.SDRConnectionsAppCtn .SearchParamsCtr .ConnectionKindGroup {
+  width: 45%;
+}
+.SDRConnectionsAppCtn .SearchParamsCtr .AppFieldPair {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.SDRConnectionsAppCtn .SearchParamsCtr .AppFieldPair .DialogInputLabelGroup {
+  width: 45%;
+  display: inline-block;
+}
+.SDRConnectionsAppCtn
+  .SearchParamsCtr
+  .AppFieldPair
+  .DialogInputLabelGroup
+  .DialogLabel {
+  width: 30%;
+}
+.SDRConnectionsAppCtn .SearchParamsCtr .SubmitButtonCtn {
+  flex-direction: column;
+  margin-left: auto;
+}
+.SDRConnectionsAppCtn .SearchParamsCtr .SubmitButtonCtn button {
+  width: 200px;
+}
+.SDRConnectionsAppCtn .ErrorMsg {
+  color: #f44;
+  font-size: 12px;
+}
+.SDRConnectionsAppCtn .SearchResultsCtr .SearchResultsTitle {
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr {
+  border: 1px solid #bbed08;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .ConnectionHeader {
+  width: 100%;
+  display: flex;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .ConnectionHeader .CxnSummary {
+  display: inline-block;
+  flex-grow: 100;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .ConnectionHeader .GenericLabeledItem {
+  display: inline-block;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .CxnPeersCtr {
+  width: 100%;
+  margin-top: 5px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .ConnectionClientInfo {
+  width: 50%;
+  display: inline-block;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .ConnectionClientInfo .host_id,
+.SDRConnectionsAppCtn
+  .ConnectionCtr
+  .ConnectionClientInfo
+  .GameServerDataCenter {
+  color: #fff;
+}
+.SDRConnectionsAppCtn
+  .ConnectionCtr
+  .HostIsGameserver
+  .HostIDInfo
+  .CxnGenericData {
+  color: inherit;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .ExpandDetailsCheckbox {
+  padding: 0px;
+  margin: 0px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .SessionsGroupHeader {
+  font-size: 20px;
+  font-weight: 200;
+  margin-top: 20px;
+  text-align: center;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .QualityFlowPairCtr {
+  width: 100%;
+  margin-top: 12px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .QualityFlowPairCtr .QualityFlowPairTitle {
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid;
+  padding: 4px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .QualityFlowPairCtr .FlowQualityStats {
+  vertical-align: top;
+  width: 50%;
+  display: inline-block;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .RelaySessionCtr {
+  background: #000;
+  border: 1px solid #fff;
+  margin: 10px 5px 20px 5px;
+  padding: 15px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .CxnCloseInfo {
+  width: 100%;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .AppFieldsCtr {
+  width: 100%;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .AppFieldsCtr .AppFieldsTitle {
+  margin-right: 1em;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowSectionTitle {
+  font-size: 15px;
+  font-weight: 150;
+  margin-top: 10px;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowQualityTitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowQualityStats th {
+  background: none;
+  font-weight: 100;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowQualityStats td {
+  color: #fff;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowQualityStats td.NumPkts {
+  text-align: right;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowQualityStats td.KB {
+  text-align: right;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowQualityStats td.Pct {
+  text-align: right;
+}
+.SDRConnectionsAppCtn .ConnectionCtr .FlowPacketCounts .Spacer {
+  width: 30px;
+}
+.SDRConnectionsAppCtn td,
+.SDRConnectionsAppCtn th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.SDRConnectionsAppCtn .GenericLabeledItem {
+  margin-right: 20px;
+}
+.SDRConnectionsAppCtn .CxnGenericDataLabel::after {
+  content: ":";
+  margin-right: .5em;
+}
+.SDRConnectionsAppCtn .CxnGenericData {
+  color: #fff;
+}
+.SDRConnectionsAppCtn .Histogram {
+  vertical-align: top;
+}
+.SDRConnectionsAppCtn .Histogram td,
+.SDRConnectionsAppCtn .Histogram th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.SDRConnectionsAppCtn .Histogram tr .Pct {
+  text-align: right;
+  width: 4em;
+}
+.SDRConnectionsAppCtn .Histogram tr .Bar {
+  background-color: blue;
+  height: 1em;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.SDRConnectionsAppCtn .Distribution {
+  vertical-align: top;
+}
+.SDRConnectionsAppCtn .Distribution .NTile {
+  text-align: right;
+}
+.SDRConnectionsAppCtn .Distribution td,
+.SDRConnectionsAppCtn .Distribution th {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.SDRConnectionsAppCtn .PingBreakdown {
+  font-size: 10px;
+}
+.SDRConnectionsAppCtn .PingBreakdown .PingSection,
+.SDRConnectionsAppCtn .PingBreakdown .JitterSection {
+  width: 100%;
+  display: block;
+}
+.SDRConnectionsAppCtn .PingBreakdown .JitterSection {
+  margin-top: 1em;
+}
+.SDRConnectionsAppCtn .PingBreakdown .PingSection .Distribution {
+  display: inline-block;
+  width: 40%;
+}
+.SDRConnectionsAppCtn .PingBreakdown .PingSection .Histogram {
+  display: inline-block;
+  width: 50%;
+}
+.SDRConnectionsAppCtn .QualityBreakdown .Distribution {
+  display: inline-block;
+  width: 40%;
+}
+.SDRConnectionsAppCtn .QualityBreakdown .Histogram {
+  display: inline-block;
+  width: 50%;
+}
+.SDRConnectionsAppCtn .ClientIPInfo {
+  width: 100%;
+}
+.SDRConnectionsAppCtn .experience_great,
+.SDRConnectionsAppCtn .flowqualityclass_great {
+  color: lime;
+}
+.SDRConnectionsAppCtn .experience_good,
+.SDRConnectionsAppCtn .flowqualityclass_good {
+  color: #00a000;
+}
+.SDRConnectionsAppCtn .experience_ok,
+.SDRConnectionsAppCtn .flowqualityclass_ok {
+  color: #d0d000;
+}
+.SDRConnectionsAppCtn .experience_poor_connection,
+.SDRConnectionsAppCtn .flowqualityclass_poor {
+  color: orange;
+}
+.SDRConnectionsAppCtn .experience_terrible_connection,
+.SDRConnectionsAppCtn .flowqualityclass_terrible {
+  color: red;
+}
+.SDRConnectionsAppCtn .experience_service_problem {
+  color: red;
+}
+.SDRConnectionsAppCtn .experience_dropped {
+  color: orange;
+}
+.SDRConnectionsAppCtn .experience_app_exception {
+  color: #f0f;
+}

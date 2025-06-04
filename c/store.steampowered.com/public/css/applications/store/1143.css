@@ -1,0 +1,1175 @@
+.Picker {
+  border-radius: 6px;
+  max-width: min(364px, 100vw);
+  max-width: 364px;
+  min-width: min(364px, 100vw);
+  min-width: 364px;
+  max-height: min(364px, 100vh);
+  max-height: 364px;
+  min-height: min(364px, 100vh);
+  min-height: 364px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.BasicUIContextMenu .Picker {
+  background-color: #23262e;
+  border-radius: 0;
+}
+.Tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #2b2c2f;
+}
+.Tab {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+  padding: 2px 2px;
+  cursor: pointer;
+}
+.Tab.Focus .TabContent {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.Tab.Active {
+  border-bottom: 4px solid #4297f8;
+  cursor: default;
+}
+.Tab .TabContent {
+  border-radius: 4px;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  opacity: 0.8;
+}
+.Tab .TabContent:hover:not(.Active) {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.Tab .TabContent.Active {
+  padding: 2px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+  color: #fff;
+}
+.Content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+.ItemList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ItemList .Item {
+  padding: 3px;
+  margin: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.ItemList .Item:hover,
+.ItemList .Item.Focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.SectionedPageTitle,
+.SectionTitle {
+  text-transform: uppercase;
+  color: gray;
+  padding: 8px 0;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+.SectionTitle {
+  font-size: 14px;
+}
+.SectionedPageTitle {
+  font-size: 16px;
+}
+.FilterInputContainer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+}
+.FilterInputContainer .FilterInput {
+  box-sizing: border-box;
+  height: 28px;
+  background-color: #2b2c2f;
+}
+.FilterInputContainer .FilterInput:hover,
+.FilterInputContainer .FilterInput:focus {
+  background-color: #2b2c2f !important;
+}
+.BasicUIContextMenu .FilterInputContainer {
+  display: none;
+}
+.AddonPickerMessage {
+  font-size: 13px;
+  font-style: italic;
+  padding-bottom: 4px;
+}
+.AddonPickerMessage a {
+  color: #4297f8;
+  text-decoration: none;
+}
+.mentionDialogPosition {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.mentionDialogPosition.GamepadMode,
+.GamepadMode .mentionDialogPosition {
+  bottom: 40px;
+  z-index: 10;
+}
+.mentionDialog {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  background: #2c3036;
+  padding: 12px 0px 12px 12px;
+  box-shadow: 0 0 32px 0px #000000ab;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mentionDialog.GamepadMode,
+.GamepadMode .mentionDialog {
+  padding: 4px 0px 2px 4px;
+}
+.mentionDialog:focus {
+  outline: none;
+}
+.mentionSearchText {
+  color: #818181;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.suggestOption {
+  color: #adaeaf;
+  transition-property: padding-left, color;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+  line-height: 26px;
+  cursor: pointer;
+  margin-top: 0px;
+  padding-left: 22px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+.suggestOption.GamepadMode,
+.GamepadMode .suggestOption {
+  margin-bottom: 4px;
+  font-size: 10px;
+  line-height: 12px;
+  padding-left: 20px;
+  overflow: visible;
+}
+.suggestOption.GamepadMode.mentionSearchOption.manyMatches,
+.GamepadMode .suggestOption.mentionSearchOption.manyMatches {
+  font-size: 10px;
+  line-height: 12px;
+}
+.suggestOption.GamepadMode.selected,
+.GamepadMode .suggestOption.selected {
+  padding-left: 24px;
+}
+.suggestOption .nickname {
+  color: #6e6e6e;
+}
+.suggestOption.selected {
+  color: #dfe3e6;
+  background-color: #434953;
+  padding-left: 30px;
+}
+span.mentionSearchMatch {
+  color: #dfe3e6;
+}
+.Emoticon_Toggle {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.Emoticon_Toggle.Active {
+  background: #777;
+}
+.Emoticon {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.BBCode_Toggle {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.BBCode_Toggle.Active {
+  background: #777;
+}
+.BBCode {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px;
+}
+.chatEntryControls {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #1b1c20;
+  box-shadow: inset 0px 0px 4px #000;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  padding-right: 2px;
+}
+.chatTextarea {
+  resize: none;
+  margin-right: 4px;
+  height: 42px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 4px 4px 4px 8px;
+  flex-shrink: 1;
+  width: 100%;
+}
+.chatTextarea.GamepadMode,
+.GamepadMode .chatTextarea {
+  box-shadow: none;
+  font-size: 16px;
+  padding: 10px 0 0 8px;
+  margin-right: 0;
+  max-height: 34px;
+  height: 34px;
+  transition: none;
+}
+.chatTextarea.GamepadMode.gpfocus,
+.GamepadMode .chatTextarea.gpfocus {
+  color: #fff;
+}
+.chatEntryActionsGroup {
+  padding: 2px;
+  box-shadow: #000 0px 0px 4px inset;
+  background-color: #1b1c20;
+  margin-left: 8px;
+}
+.chatEntryActionsContainer,
+.chatEntryActionsGroup {
+  display: flex;
+  flex-direction: row;
+}
+.chatEntryActionsContainer {
+  max-height: 50px;
+  align-self: flex-end;
+}
+.minHeightZero {
+  min-height: 0;
+}
+.compactView .chatTextarea {
+  height: 24px;
+  line-height: 18px;
+}
+.chatSubmitButton {
+  position: relative;
+  border: 1px solid #1b1c20;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 2px;
+  max-width: 46px;
+  max-height: 46px;
+  padding: 0;
+  background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 46px;
+  cursor: pointer;
+}
+.chatSubmitButton.EmbedButton,
+.chatSubmitButton.EmoticonPickerButton {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  background-color: #2c3036;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 46px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatSubmitButton.EmbedButton svg,
+.chatSubmitButton.EmoticonPickerButton svg {
+  width: 24px;
+  height: 24px;
+  color: #898989;
+}
+.chatSubmitButton.EmbedButton {
+  max-width: 46px;
+  max-height: 46px;
+}
+.chatSubmitButton:focus {
+  outline: none;
+}
+.chatSubmitButton.EmbedButton:hover,
+.chatSubmitButton.EmbedButton:focus {
+  background-color: #3d424b;
+  color: #fff;
+}
+.chatSubmitButton:not(.disabled):focus.GamepadMode,
+.GamepadMode .chatSubmitButton:not(.disabled):focus {
+  background: #fff;
+}
+.chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_Button.SVGIcon_Submit path,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_Button.SVGIcon_Submit path,
+.chatSubmitButton:not(.disabled) .SVGIcon_Button.SVGIcon_Submit path {
+  fill: #fff;
+}
+.chatSubmitButton:not(.disabled):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatSubmitButton:not(.disabled):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #000;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_Button,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_Button {
+  fill: #f5ffd7;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_Button.GamepadMode,
+.GamepadMode .chatSubmitButton:not(.disabled):focus .SVGIcon_Button,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_Button.GamepadMode,
+.GamepadMode .chatSubmitButton:not(.disabled):hover .SVGIcon_Button {
+  fill: #000;
+}
+.chatSubmitButton.Inactive .SVGIcon_Microphone_Off {
+  opacity: 1;
+}
+.chatSubmitButton.disabled {
+  color: #898989;
+  cursor: default;
+  background-color: #2c3036;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #f5ffd7;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom .AudioLines,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom .AudioLines {
+  fill: #f5ffd7;
+}
+.Active.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom,
+.Active.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom {
+  fill: #fff;
+  stroke: #000;
+}
+.Active.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom .AudioLines,
+.Active.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom .AudioLines {
+  fill: #000;
+}
+.chatSubmitButton .SVGIcon_Submit {
+  width: 26px;
+  height: 26px;
+  margin-top: 4px;
+}
+.compactView .chatSubmitButton .SVGIcon_Submit {
+  margin-top: 3px;
+}
+.chatSubmitButton .SVGIcon_Submit path {
+  fill: #5f5f5f;
+  stroke-width: 2px;
+}
+.chatSubmitButton .SVGIcon_Submit path.GamepadMode,
+.GamepadMode .chatSubmitButton .SVGIcon_Submit path {
+  stroke-width: 0px;
+  fill: #67707b;
+}
+.chatSubmitButton .SVGIcon_Submit.GamepadMode,
+.GamepadMode .chatSubmitButton .SVGIcon_Submit {
+  margin-top: 4px;
+  margin-left: 2px;
+}
+.EmbedButton {
+  background-image: none;
+  margin-right: 2px;
+  font-size: 28px;
+  text-align: center;
+  color: #8492a4;
+  padding: 0px;
+}
+.EmbedButton .SVGIcon_Paperclip {
+  width: 26px;
+  height: 26px;
+}
+.EmbedButton .SVGIcon_Paperclip path {
+  stroke: #8492a4;
+  stroke-width: 12px;
+}
+.EmbedButton:focus .SVGIcon_Paperclip path,
+.EmbedButton:hover .SVGIcon_Paperclip path,
+.SVGIcon_Paperclip {
+  stroke: #fff;
+}
+.EmoticonPickerButton {
+  margin-right: 1px;
+}
+.EmoticonPickerButton:hover,
+.EmoticonPickerButton:focus {
+  background-color: #3d424b;
+  color: #fff;
+}
+.EmoticonPickerButton .SVGIcon_Emoticon {
+  width: 26px;
+  height: 26px;
+}
+.EmoticonPickerButton .SVGIcon_CSGO {
+  width: 32px;
+  height: 32px;
+  fill: #dfc408;
+  margin-left: 1px;
+  margin-top: 4px;
+}
+.EmoticonPickerButton .SVGIcon_Emoticon line,
+.EmoticonPickerButton .SVGIcon_Emoticon circle,
+.EmoticonPickerButton .SVGIcon_Emoticon path {
+  stroke: #8492a4;
+  stroke-width: 10px;
+}
+.EmoticonPickerButton .SVGIcon_Emoticon line {
+  stroke-width: 16px;
+}
+.EmoticonPickerButton:hover .SVGIcon_Emoticon line,
+.EmoticonPickerButton:focus .SVGIcon_Emoticon line,
+.EmoticonPickerButton:hover .SVGIcon_Emoticon circle,
+.EmoticonPickerButton:focus .SVGIcon_Emoticon circle,
+.EmoticonPickerButton:hover .SVGIcon_Emoticon path,
+.EmoticonPickerButton:focus .SVGIcon_Emoticon path {
+  stroke: #fff;
+}
+.chatEntryControls .chatSubmitButton {
+  align-self: flex-end;
+  min-height: 46px;
+  margin-bottom: 2px;
+  background: #24272b;
+  transition: background .3s ease;
+}
+.chatEntryControls .chatSubmitButton:not(.disabled) {
+  background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
+}
+.chatEntryControls .chatSubmitButton.GamepadMode,
+.GamepadMode .chatEntryControls .chatSubmitButton {
+  min-height: 0px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px solid transparent;
+  background-color: transparent;
+  max-width: 44px;
+  min-width: 0;
+}
+.chatEntryControls .chatSubmitButton.GamepadMode:not(.disabled),
+.GamepadMode .chatEntryControls .chatSubmitButton:not(.disabled) {
+  background-color: #67707b;
+  color: #fff;
+}
+.chatEntryControls .chatSubmitButton.GamepadMode:not(.disabled).gpfocus,
+.GamepadMode .chatEntryControls .chatSubmitButton:not(.disabled).gpfocus {
+  background-color: #fff;
+}
+.compactView .chatEntryControls .chatSubmitButton {
+  height: 28px;
+  min-height: 28px;
+  margin-bottom: 2px;
+}
+.compactView .chatSubmitButton {
+  min-width: 32px;
+}
+.chatEntry.compactView .chatSubmitButton svg {
+  width: 20px;
+  height: 20px;
+}
+.ChatMessageEntryVoice {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  box-shadow: #000 0px 0px 4px inset;
+  transition-property: width, max-width, min-width, border-radius,
+    background-position;
+  transition-duration: .3s, .3s, .3s, .6s;
+  background: radial-gradient(
+    128px 128px at 20% 50%,
+    #1da834 0%,
+    rgba(27, 28, 32, 0) 100%
+  );
+  background-position: -190px 0px;
+  background-color: #1b1c20;
+  background-repeat: no-repeat;
+  background-size: 256px 128px;
+  overflow: hidden;
+}
+.friendListHeaderContainer .activeVoicePushToTalk,
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  font-size: 11px;
+  margin-top: 12px;
+  margin-bottom: -18px;
+  opacity: 1;
+  transition: opacity .3s ease-out;
+  white-space: nowrap;
+  user-select: none;
+}
+.ChatMessageEntryVoice.Disabled {
+  opacity: 0.2;
+  border: 1px dashed #000;
+  outline: 2px solid #0007;
+}
+.ChatMessageEntryVoice.Active {
+  min-width: 136px;
+  max-width: 136px;
+  width: 136px;
+  background-position: 0px 0px;
+}
+.ChatMessageEntryVoice .buttonsContainer {
+  display: flex;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  position: absolute;
+  top: 33px;
+  left: 49px;
+  width: 87px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0005;
+  font-size: 10px;
+  margin-top: 0px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
+  margin-top: -8px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.ChatMessageEntryVoice .activeVoiceButtons {
+  min-width: 0px;
+  width: 84px;
+}
+.ChatMessageEntryVoice .activeVoiceControls {
+  min-width: 0px;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  background: none;
+}
+.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
+  pointer-events: none;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
+  background-color: rgba(197, 23, 11, 0.5);
+  transition-duration: 0s;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
+  transform: translateX(-64px) scale(0.5);
+  transition-property: transform, opacity;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
+  transform: translateX(-32px) scale(0.5);
+  transition-property: transform, opacity;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
+  opacity: 1;
+  transform: translateX(0px) scale(1);
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
+  display: none;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
+.VoiceControlPanelButton:active {
+  background-color: rgba(97, 253, 151, 0.5);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: rgba(200, 241, 194, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: rgba(0, 0, 0, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: #000;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: #c8f1c2;
+}
+.chatEntry.compactView .VoiceToggle {
+  height: 28px;
+}
+.VoiceIconCtn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  color: #c8f1c2;
+}
+.VoiceIconCtn:hover SVG {
+  color: #fff;
+}
+.VoiceIconCtn .NoMicrophone SVG {
+  color: #f43;
+}
+.VoiceToggleIconCtn {
+  color: #898989;
+}
+.VoiceControlPanelButton.chatEndVoiceChat:hover .VoiceIconCtn {
+  color: #fff;
+}
+.chatEntry.compactView .VoiceToggleIconCtn {
+  height: 24px;
+  top: 3px;
+}
+.chatEntry.compactView .activeVoiceFlexBox {
+  height: 28px;
+}
+.chatEntry.compactView .activeVoiceButtons button {
+  max-width: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  margin-top: 2px;
+}
+.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
+  top: 6px;
+  left: 10px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Headphones.SVGIcon_Shadow {
+  top: 3px;
+  left: 7px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleVoiceOutputButton
+  .SVGIcon_Headphones,
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  padding-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+.VoiceToggle.Inactive:hover {
+  background-color: #3d424b;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice.Active {
+  min-width: 114px;
+  max-width: 114px;
+  width: 114px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons {
+  margin-top: -2px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
+  top: 18px;
+  right: 0px;
+  width: 66px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0000;
+}
+.WhitelistCtn {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  border-top: 2px solid #333740;
+  border-bottom: 2px solid #333740;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.WhitelistCtn .WhitelistRow {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2b2e36;
+  padding: 4px;
+  margin-bottom: 2px;
+  user-select: none;
+  box-sizing: border-box;
+}
+.WhitelistCtn .WhitelistRow .WhitelistNumber {
+  width: 34px;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #2a2e34;
+  margin-right: 8px;
+  padding: 0 4px 0 6px;
+}
+.WhitelistCtn .WhitelistRow .WhitelistNumber.Disabled {
+  cursor: not-allowed;
+}
+.WhitelistCtn .WhitelistRow .WhitelistNumber.Grabbing {
+  opacity: 0.5;
+}
+.WhitelistCtn .WhitelistRow.DragActive {
+  pointer-events: none;
+}
+.WhitelistCtn .WhitelistRow.Dropped {
+  animation: JumpToSection .5s ease-out;
+}
+@keyframes JumpToSection {
+  0% {
+    background-color: #b0b0b0;
+  }
+  100% {
+    background-color: #333740;
+  }
+}
+.WhitelistCtn .WhitelistRow.BeingDragged {
+  opacity: 0.5;
+}
+.WhitelistCtn .DragGhost {
+  pointer-events: none;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3), 0 -6px 12px rgba(0, 0, 0, 0.15);
+}
+.Grabbable {
+  cursor: grab;
+}
+.Grabbing {
+  cursor: grabbing;
+}
+.DisabledGrab {
+  cursor: not-allowed;
+}
+.WhitelistAvatar {
+  margin-right: 8px;
+}
+.WhitelistAvatar.Grabbing {
+  opacity: 0.5;
+}
+.ButtonCtn {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+.DragHighlightContainer {
+  position: relative;
+  height: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.DragHighlightContainer .DragHighlight {
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+  top: -1;
+}
+:root {
+  --main-text-color: #dbe2e6;
+  --main-light-blue-background: #93b3c8;
+  --main-text-on-light-blue: rgb(209, 209, 209);
+  --main-top-image-bg: #1f2126;
+  --main-editor-bg-color: #363a43;
+  --main-editor-text-color: #e6e7e8;
+  --main-editor-input-bg-color: #30333b;
+  --main-editor-section-title-color: #a3a3a3;
+}
+.DragTarget {
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.DragOnTopOfMe {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.DescriptionCtn {
+  border: 2px solid transparent;
+  margin: -2px;
+}
+.DescriptionCtn.DragTarget {
+  border: 2px dashed #06beff;
+}
+.EventEditorLinkInput {
+  position: relative;
+  width: 600px;
+  margin-right: 14px;
+  margin-top: 20px;
+}
+.EventEditorLinkInput input {
+  width: calc(100% - 20px);
+  color: #dfe3e6;
+  background: rgba(59, 63, 72, 0.5);
+  border: none;
+  box-shadow: inset 0px 0px 0px #0000;
+  border-radius: 3px;
+}
+.EventEditorLinkInput input:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  padding-left: 11px;
+  outline: none;
+}
+.DefaultEditor {
+  border: none;
+  outline-width: 0;
+  padding: 10px;
+  background-color: var(--main-editor-input-bg-color);
+  box-shadow: 0 0 5px #000 inset;
+  color: var(--main-editor-text-color);
+  font-size: 14px;
+  overflow-x: hidden;
+}
+.ImportHTMLCtn {
+  position: relative;
+  margin-right: 14px;
+  min-width: calc(40vw - 40px);
+}
+.ImportHTMLCtn .ImportHTMLTextArea {
+  width: calc(100% - 12px);
+  height: 200px;
+  margin: 4px 0px;
+  background-color: #1e2025;
+  border: solid 1px #000;
+  outline-width: 0;
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: gray;
+}
+.ImportHTMLCtn .ImportHTMLConvertButtons {
+  padding: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  width: 30%;
+  line-height: 22px;
+}
+.ImportHTMLCtn .ImportHTMLCheckBoxLine {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.ImportHTMLCtn .OptionRow {
+  display: flex;
+  flex-direction: column;
+}
+.TextEditorToolBarContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.TextEditorToolBarContainer > span,
+.TextEditorToolBarContainer > img.EmoteOuter {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 2px;
+  color: #afafaf;
+  background-color: #3d4450;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+.TextEditorToolBarContainer > span:hover,
+.TextEditorToolBarContainer > img.EmoteOuter:hover {
+  background-color: #4f5763;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.TextEditorToolBarContainer > span img,
+.TextEditorToolBarContainer > img.EmoteOuter {
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.YouTubeInput {
+  position: relative;
+  width: 600px;
+  margin-right: 14px;
+}
+.YouTubeInput input[type="text"] {
+  width: calc(100% - 20px);
+  color: #dfe3e6;
+  background: rgba(59, 63, 72, 0.5);
+  border: none;
+  box-shadow: inset 0px 0px 0px #0000;
+  border-radius: 3px;
+}
+.YouTubeInput input[type="text"]:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  padding-left: 11px;
+  outline: none;
+}
+.YouTubePreviewInsertOption {
+  padding: 2px;
+  margin-bottom: 2px;
+  background-color: rgba(57, 61, 71, 0.5);
+  color: #e5e5e5;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.YouTubePreviewInsertOption input {
+  margin-right: 5px;
+}
+.YouTubePreviewInsertOption span {
+  padding-left: 10px;
+}
+.YouTubePreviewInsertOption label {
+  cursor: pointer;
+}
+.YouTubePreviewInsertOption label > span {
+  vertical-align: super;
+}
+.EmoteOuter {
+  min-width: initial;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  display: unset;
+  cursor: hand;
+}
+.DropDownScroll {
+  max-height: 400px;
+  overflow: hidden scroll;
+}
+.InsertSpeakerCtn {
+  margin-top: 16px;
+}
+.InsertSpeakerCtn .TitleGroup {
+  display: flex;
+  flex-direction: row;
+}
+.InsertSpeakerCtn .TitleGroup > div {
+  flex-grow: 1;
+}
+.InsertSpeakerCtn .TitleGroup > div:not(:first-of-type) {
+  margin-left: 10px;
+}
+.InsertSpeakerCtn .AssociateRowCtn {
+  display: flex;
+  flex-direction: row;
+}
+.InsertSpeakerCtn .AssociateRowCtn button:not(:first-of-type) {
+  margin-left: 10px;
+}
+.InsertSpeakerCtn .PhotoCtn {
+  margin-top: 16px;
+}
+.InsertSpeakerCtn .AboutCtn {
+  margin-top: 16px;
+}
+.InsertSpeakerCtn .PreviewCtn {
+  margin-top: 16px;
+}
+.BBCodeEditorInputStyles textarea {
+  color: #cfcfcf;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.BBCodeEditorInputStyles input {
+  color: #cfcfcf;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 7px;
+}
+.ImagesOuterContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 732px;
+  background: #000;
+}
+.ImagesOuterContainer::-webkit-scrollbar-thumb {
+  background: #3d4450;
+}
+.Hilight {
+  font-weight: bold;
+  color: green;
+}
+.ImageContainer {
+  text-align: center;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+  max-height: 168px;
+  overflow: hidden;
+  padding: 4px;
+}
+.Image {
+  height: 100px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.ImageFilename {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
+  font-size: 12px;
+}
+.Image {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.Container {
+  background-color: #1c1e26;
+  padding: 10px;
+}
+.SmallAvatar {
+  max-width: 32px;
+  max-height: 32px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+  border-radius: 3px;
+}
+.ShareDescription {
+  width: calc(100% - 20px);
+  height: 200px;
+}
+.ShareLink {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

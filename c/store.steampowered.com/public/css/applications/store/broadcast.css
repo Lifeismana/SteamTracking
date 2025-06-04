@@ -1,0 +1,3063 @@
+.chatEntryControls {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: #1b1c20;
+  box-shadow: inset 0px 0px 4px #000;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  padding-right: 2px;
+}
+.chatTextarea {
+  resize: none;
+  margin-right: 4px;
+  height: 42px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 4px 4px 4px 8px;
+  flex-shrink: 1;
+  width: 100%;
+}
+.chatTextarea.GamepadMode,
+.GamepadMode .chatTextarea {
+  box-shadow: none;
+  font-size: 16px;
+  padding: 10px 0 0 8px;
+  margin-right: 0;
+  max-height: 34px;
+  height: 34px;
+  transition: none;
+}
+.chatTextarea.GamepadMode.gpfocus,
+.GamepadMode .chatTextarea.gpfocus {
+  color: #fff;
+}
+.chatEntryActionsGroup {
+  padding: 2px;
+  box-shadow: #000 0px 0px 4px inset;
+  background-color: #1b1c20;
+  margin-left: 8px;
+}
+.chatEntryActionsContainer,
+.chatEntryActionsGroup {
+  display: flex;
+  flex-direction: row;
+}
+.chatEntryActionsContainer {
+  max-height: 50px;
+  align-self: flex-end;
+}
+.minHeightZero {
+  min-height: 0;
+}
+.compactView .chatTextarea {
+  height: 24px;
+  line-height: 18px;
+}
+.chatSubmitButton {
+  position: relative;
+  border: 1px solid #1b1c20;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 2px;
+  max-width: 46px;
+  max-height: 46px;
+  padding: 0;
+  background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 46px;
+  cursor: pointer;
+}
+.chatSubmitButton.EmbedButton,
+.chatSubmitButton.EmoticonPickerButton {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  background-color: #2c3036;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 46px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatSubmitButton.EmbedButton svg,
+.chatSubmitButton.EmoticonPickerButton svg {
+  width: 24px;
+  height: 24px;
+  color: #898989;
+}
+.chatSubmitButton.EmbedButton {
+  max-width: 46px;
+  max-height: 46px;
+}
+.chatSubmitButton:focus {
+  outline: none;
+}
+.chatSubmitButton.EmbedButton:hover,
+.chatSubmitButton.EmbedButton:focus {
+  background-color: #3d424b;
+  color: #fff;
+}
+.chatSubmitButton:not(.disabled):focus.GamepadMode,
+.GamepadMode .chatSubmitButton:not(.disabled):focus {
+  background: #fff;
+}
+.chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #fff;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_Button.SVGIcon_Submit path,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_Button.SVGIcon_Submit path,
+.chatSubmitButton:not(.disabled) .SVGIcon_Button.SVGIcon_Submit path {
+  fill: #fff;
+}
+.chatSubmitButton:not(.disabled):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled):focus
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatSubmitButton:not(.disabled):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatSubmitButton:not(.disabled)
+  .SVGIcon_Button.SVGIcon_Submit
+  path {
+  fill: #000;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_Button,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_Button {
+  fill: #f5ffd7;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_Button.GamepadMode,
+.GamepadMode .chatSubmitButton:not(.disabled):focus .SVGIcon_Button,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_Button.GamepadMode,
+.GamepadMode .chatSubmitButton:not(.disabled):hover .SVGIcon_Button {
+  fill: #000;
+}
+.chatSubmitButton.Inactive .SVGIcon_Microphone_Off {
+  opacity: 1;
+}
+.chatSubmitButton.disabled {
+  color: #898989;
+  cursor: default;
+  background-color: #2c3036;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #f5ffd7;
+}
+.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom .AudioLines,
+.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom .AudioLines {
+  fill: #f5ffd7;
+}
+.Active.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom,
+.Active.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom {
+  fill: #fff;
+  stroke: #000;
+}
+.Active.chatSubmitButton:not(.disabled):focus .SVGIcon_VoiceRoom .AudioLines,
+.Active.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom .AudioLines {
+  fill: #000;
+}
+.chatSubmitButton .SVGIcon_Submit {
+  width: 26px;
+  height: 26px;
+  margin-top: 4px;
+}
+.compactView .chatSubmitButton .SVGIcon_Submit {
+  margin-top: 3px;
+}
+.chatSubmitButton .SVGIcon_Submit path {
+  fill: #5f5f5f;
+  stroke-width: 2px;
+}
+.chatSubmitButton .SVGIcon_Submit path.GamepadMode,
+.GamepadMode .chatSubmitButton .SVGIcon_Submit path {
+  stroke-width: 0px;
+  fill: #67707b;
+}
+.chatSubmitButton .SVGIcon_Submit.GamepadMode,
+.GamepadMode .chatSubmitButton .SVGIcon_Submit {
+  margin-top: 4px;
+  margin-left: 2px;
+}
+.EmbedButton {
+  background-image: none;
+  margin-right: 2px;
+  font-size: 28px;
+  text-align: center;
+  color: #8492a4;
+  padding: 0px;
+}
+.EmbedButton .SVGIcon_Paperclip {
+  width: 26px;
+  height: 26px;
+}
+.EmbedButton .SVGIcon_Paperclip path {
+  stroke: #8492a4;
+  stroke-width: 12px;
+}
+.EmbedButton:focus .SVGIcon_Paperclip path,
+.EmbedButton:hover .SVGIcon_Paperclip path,
+.SVGIcon_Paperclip {
+  stroke: #fff;
+}
+.EmoticonPickerButton {
+  margin-right: 1px;
+}
+.EmoticonPickerButton:hover,
+.EmoticonPickerButton:focus {
+  background-color: #3d424b;
+  color: #fff;
+}
+.EmoticonPickerButton .SVGIcon_Emoticon {
+  width: 26px;
+  height: 26px;
+}
+.EmoticonPickerButton .SVGIcon_CSGO {
+  width: 32px;
+  height: 32px;
+  fill: #dfc408;
+  margin-left: 1px;
+  margin-top: 4px;
+}
+.EmoticonPickerButton .SVGIcon_Emoticon line,
+.EmoticonPickerButton .SVGIcon_Emoticon circle,
+.EmoticonPickerButton .SVGIcon_Emoticon path {
+  stroke: #8492a4;
+  stroke-width: 10px;
+}
+.EmoticonPickerButton .SVGIcon_Emoticon line {
+  stroke-width: 16px;
+}
+.EmoticonPickerButton:hover .SVGIcon_Emoticon line,
+.EmoticonPickerButton:focus .SVGIcon_Emoticon line,
+.EmoticonPickerButton:hover .SVGIcon_Emoticon circle,
+.EmoticonPickerButton:focus .SVGIcon_Emoticon circle,
+.EmoticonPickerButton:hover .SVGIcon_Emoticon path,
+.EmoticonPickerButton:focus .SVGIcon_Emoticon path {
+  stroke: #fff;
+}
+.chatEntryControls .chatSubmitButton {
+  align-self: flex-end;
+  min-height: 46px;
+  margin-bottom: 2px;
+  background: #24272b;
+  transition: background .3s ease;
+}
+.chatEntryControls .chatSubmitButton:not(.disabled) {
+  background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
+}
+.chatEntryControls .chatSubmitButton.GamepadMode,
+.GamepadMode .chatEntryControls .chatSubmitButton {
+  min-height: 0px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px solid transparent;
+  background-color: transparent;
+  max-width: 44px;
+  min-width: 0;
+}
+.chatEntryControls .chatSubmitButton.GamepadMode:not(.disabled),
+.GamepadMode .chatEntryControls .chatSubmitButton:not(.disabled) {
+  background-color: #67707b;
+  color: #fff;
+}
+.chatEntryControls .chatSubmitButton.GamepadMode:not(.disabled).gpfocus,
+.GamepadMode .chatEntryControls .chatSubmitButton:not(.disabled).gpfocus {
+  background-color: #fff;
+}
+.compactView .chatEntryControls .chatSubmitButton {
+  height: 28px;
+  min-height: 28px;
+  margin-bottom: 2px;
+}
+.compactView .chatSubmitButton {
+  min-width: 32px;
+}
+.chatEntry.compactView .chatSubmitButton svg {
+  width: 20px;
+  height: 20px;
+}
+.ChatMessageEntryVoice {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  box-shadow: #000 0px 0px 4px inset;
+  transition-property: width, max-width, min-width, border-radius,
+    background-position;
+  transition-duration: .3s, .3s, .3s, .6s;
+  background: radial-gradient(
+    128px 128px at 20% 50%,
+    #1da834 0%,
+    rgba(27, 28, 32, 0) 100%
+  );
+  background-position: -190px 0px;
+  background-color: #1b1c20;
+  background-repeat: no-repeat;
+  background-size: 256px 128px;
+  overflow: hidden;
+}
+.friendListHeaderContainer .activeVoicePushToTalk,
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  font-size: 11px;
+  margin-top: 12px;
+  margin-bottom: -18px;
+  opacity: 1;
+  transition: opacity .3s ease-out;
+  white-space: nowrap;
+  user-select: none;
+}
+.ChatMessageEntryVoice.Disabled {
+  opacity: 0.2;
+  border: 1px dashed #000;
+  outline: 2px solid #0007;
+}
+.ChatMessageEntryVoice.Active {
+  min-width: 136px;
+  max-width: 136px;
+  width: 136px;
+  background-position: 0px 0px;
+}
+.ChatMessageEntryVoice .buttonsContainer {
+  display: flex;
+}
+.ChatMessageEntryVoice .activeVoicePushToTalk {
+  position: absolute;
+  top: 33px;
+  left: 49px;
+  width: 87px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0005;
+  font-size: 10px;
+  margin-top: 0px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons {
+  margin-top: -8px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.ChatMessageEntryVoice .activeVoiceButtons {
+  min-width: 0px;
+  width: 84px;
+}
+.ChatMessageEntryVoice .activeVoiceControls {
+  min-width: 0px;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  background: none;
+}
+.ChatMessageEntryVoice.Inactive .VoiceControlPanelButton {
+  pointer-events: none;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
+  background-color: rgba(197, 23, 11, 0.5);
+  transition-duration: 0s;
+}
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
+  transform: translateX(-64px) scale(0.5);
+  transition-property: transform, opacity;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
+  transform: translateX(-32px) scale(0.5);
+  transition-property: transform, opacity;
+  opacity: 0;
+  cursor: pointer;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleVoiceOutputButton,
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
+  opacity: 1;
+  transform: translateX(0px) scale(1);
+}
+.ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
+  display: none;
+}
+.ChatMessageEntryVoice.Active .VoiceControlPanelButton:active,
+.VoiceControlPanelButton:active {
+  background-color: rgba(97, 253, 151, 0.5);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: rgba(200, 241, 194, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: rgba(0, 0, 0, 0.2);
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone.SVGIcon_Shadow {
+  fill: #000;
+}
+.ChatMessageEntryVoice.pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone,
+.friendListHeaderContainer
+  .pushToTalkEnabled.pushToTalkKeyDown
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  fill: #c8f1c2;
+}
+.chatEntry.compactView .VoiceToggle {
+  height: 28px;
+}
+.VoiceIconCtn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  color: #c8f1c2;
+}
+.VoiceIconCtn:hover SVG {
+  color: #fff;
+}
+.VoiceIconCtn .NoMicrophone SVG {
+  color: #f43;
+}
+.VoiceToggleIconCtn {
+  color: #898989;
+}
+.VoiceControlPanelButton.chatEndVoiceChat:hover .VoiceIconCtn {
+  color: #fff;
+}
+.chatEntry.compactView .VoiceToggleIconCtn {
+  height: 24px;
+  top: 3px;
+}
+.chatEntry.compactView .activeVoiceFlexBox {
+  height: 28px;
+}
+.chatEntry.compactView .activeVoiceButtons button {
+  max-width: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-height: 28px;
+  margin-top: 2px;
+}
+.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow {
+  top: 6px;
+  left: 10px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Microphone.SVGIcon_Shadow,
+.chatEntry.compactView
+  .VoiceControlPanelButton:active
+  .SVGIcon_Headphones.SVGIcon_Shadow {
+  top: 3px;
+  left: 7px;
+}
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleVoiceOutputButton
+  .SVGIcon_Headphones,
+.chatEntry.compactView
+  .VoiceControlPanelButton.ToggleMicrophoneButton
+  .SVGIcon_Microphone {
+  padding-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+.VoiceToggle.Inactive:hover {
+  background-color: #3d424b;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls {
+  width: 64px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice.Active {
+  min-width: 114px;
+  max-width: 114px;
+  width: 114px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons {
+  margin-top: -2px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .VoiceControlPanelButton {
+  min-height: 14px;
+}
+.chatEntry.compactView
+  .ChatMessageEntryVoice.pushToTalkEnabled
+  .activeVoiceButtons
+  .SVGIcon_Button.SVGIcon_Shadow {
+  top: 2px;
+}
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk {
+  top: 18px;
+  right: 0px;
+  width: 66px;
+  text-align: center;
+  color: #74c069;
+  background-color: #0000;
+}
+.NewEmoticonIndicator {
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 50%,
+    rgba(255, 153, 0, 0.8) 0%,
+    rgba(233, 154, 35, 0.2) 45%,
+    rgba(233, 154, 35, 0) 85%
+  );
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  left: 55%;
+  bottom: 55%;
+  display: flex;
+  align-items: center;
+}
+.NewEmoticonIndicator .NewEmoticonCircle {
+  width: 5px;
+  height: 5px;
+  background-color: #ff0;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+.EmoticonSelector {
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 302px;
+}
+.EmoticonSelector img.emoticon.large {
+  width: 27px;
+  height: 27px;
+}
+.EmoticonSelector_Emoticons {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  flex: 1;
+}
+.EmoticonSelector_Separator {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+.EmoticonSelector_Separator .EmoticonSelector_SeparatorBackground {
+  height: 2px;
+  background: #8492a4;
+}
+.EmoticonSelector_Controls {
+  display: flex;
+  align-content: flex-start;
+  padding: 5px;
+  flex-shrink: 0;
+}
+.EmoticonSelector_Item {
+  margin: 2px;
+  width: 28px;
+  height: 28px;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: center;
+}
+.EmoticonSelector_Item:hover .emoticon.large {
+  transform: scale(1.25);
+  filter: brightness(1.25);
+}
+.EmoticonSelector_Item_New {
+  position: relative;
+}
+img.emoticon {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  transition-property: width, height, margin-top, margin-bottom;
+  transition-duration: .1s;
+  transition-timing-function: ease-in-out;
+}
+img.emoticon.large {
+  width: 32px;
+  height: 32px;
+  margin-top: -14px;
+  margin-bottom: -14px;
+}
+.EffectHeading,
+.StickerHeading {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 10px;
+  padding: 5px;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+.GetFestive {
+  padding: 5px;
+}
+.GetFestive > a {
+  color: #fff;
+  text-decoration: none;
+}
+.TopDivider {
+  height: 2px;
+  width: 90%;
+  background-color: #2b2c2f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+}
+.BottomDivider {
+  height: 2px;
+  width: 90%;
+  background-color: #2b2c2f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  margin-top: 5px;
+}
+.StickerButton {
+  width: 40px;
+  height: 40px;
+}
+.EffectButton {
+  width: 64px;
+  height: 64px;
+}
+.emoticon_hover_arrow {
+  width: 13px;
+  height: 26px;
+  background-image: url(https://steamcommunity-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 26px;
+}
+.emoticon_hover_arrow.left {
+  background-position: left top;
+  left: .5px;
+}
+.emoticon_hover_arrow.right {
+  background-position: right top;
+  right: .5px;
+}
+.hover_arrow {
+  position: absolute;
+  top: 30px;
+}
+.emoticon_hover_content {
+  padding: 6px 10px 6px 6px;
+  background-color: #3b3938;
+  border: 1px solid #797979;
+  margin: 12px;
+  box-shadow: 0 0 12px #000;
+  white-space: nowrap;
+}
+.emoticon_hover_content.client {
+  margin: 0;
+  box-shadow: none;
+  display: inline-block;
+}
+.emoticon_hover_content_inner {
+  position: relative;
+  min-height: 54px;
+  padding-left: 62px;
+  font-size: 13px;
+}
+.emoticon_hover_content_inner img.emoticon_large {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.emoticon_hover_title {
+  padding-top: 8px;
+  color: #898989;
+}
+.emoticon_hover_desc {
+  color: #686868;
+}
+.EmoticonHover {
+  margin: 0 4px;
+  padding: 8px;
+  min-width: 160px;
+  min-height: 54px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1c1d22;
+  border-radius: 4px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.EmoticonHover .Info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 8px;
+}
+.EmoticonHover .Info .Name {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+.EmoticonHover .Info .AppName {
+  font-size: 12px;
+}
+.StickerHoverSticker,
+.EffectHoverEffect {
+  max-width: 80px;
+  max-height: 80px;
+}
+.PickerTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+.PickerTab svg {
+  width: 100%;
+  height: 100%;
+}
+.PickerTab.Clock {
+  padding: 2px;
+}
+.EmoticonItem {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Picker {
+  border-radius: 6px;
+  max-width: min(364px, 100vw);
+  max-width: 364px;
+  min-width: min(364px, 100vw);
+  min-width: 364px;
+  max-height: min(364px, 100vh);
+  max-height: 364px;
+  min-height: min(364px, 100vh);
+  min-height: 364px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.BasicUIContextMenu .Picker {
+  background-color: #23262e;
+  border-radius: 0;
+}
+.Tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #2b2c2f;
+}
+.Tab {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+  padding: 2px 2px;
+  cursor: pointer;
+}
+.Tab.Focus .TabContent {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.Tab.Active {
+  border-bottom: 4px solid #4297f8;
+  cursor: default;
+}
+.Tab .TabContent {
+  border-radius: 4px;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  opacity: 0.8;
+}
+.Tab .TabContent:hover:not(.Active) {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.Tab .TabContent.Active {
+  padding: 2px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+  color: #fff;
+}
+.Content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 12px;
+}
+.ItemList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ItemList .Item {
+  padding: 3px;
+  margin: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.ItemList .Item:hover,
+.ItemList .Item.Focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.SectionedPageTitle,
+.SectionTitle {
+  text-transform: uppercase;
+  color: gray;
+  padding: 8px 0;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+.SectionTitle {
+  font-size: 14px;
+}
+.SectionedPageTitle {
+  font-size: 16px;
+}
+.FilterInputContainer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+}
+.FilterInputContainer .FilterInput {
+  box-sizing: border-box;
+  height: 28px;
+  background-color: #2b2c2f;
+}
+.FilterInputContainer .FilterInput:hover,
+.FilterInputContainer .FilterInput:focus {
+  background-color: #2b2c2f !important;
+}
+.BasicUIContextMenu .FilterInputContainer {
+  display: none;
+}
+.AddonPickerMessage {
+  font-size: 13px;
+  font-style: italic;
+  padding-bottom: 4px;
+}
+.AddonPickerMessage a {
+  color: #4297f8;
+  text-decoration: none;
+}
+.LoadingWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.LoadingWrapper.Static {
+  animation-name: none;
+}
+.LoadingWrapper.Static * {
+  animation-name: none !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.LoadingWrapper.Static .bottomCircle path {
+  stroke-width: 0 !important;
+}
+.LoadingWrapper.noString {
+  flex-direction: row;
+}
+.LoadingWrapper .Throbber,
+.LoadingWrapper .SVGIcon_Throbber,
+.LoadingWrapper .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.LoadingWrapper .Throbber {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.LoadingWrapper.throbber_small .Throbber {
+  width: 32px;
+  height: 32px;
+}
+.LoadingWrapper.throbber_medium .Throbber {
+  width: 64px;
+  height: 64px;
+}
+.LoadingWrapper.throbber_large .Throbber {
+  width: 92px;
+  height: 92px;
+}
+.throbber_center_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ThrobberText,
+.LoadingWrapper .ThrobberText {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.LoadingWrapper.throbber_medium .ThrobberText {
+  margin-top: 4px;
+}
+.LoadingWrapper.throbber_small .ThrobberText {
+  margin-top: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.LoadingWrapper .SVGIcon_Throbber.blur path {
+  stroke: #4375fd;
+}
+.LoadingWrapper .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: ThrobberRoundLoop;
+  animation-duration: .7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline,
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuter {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundOuterOutline {
+  display: none;
+}
+@keyframes ThrobberRoundLoop {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundFill {
+  animation-name: ThrobberFillLoop;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes ThrobberFillLoop {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle .circlePulse,
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  stroke: #67c1f5;
+  animation-name: ThrobberTopCircleLoop;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.LoadingWrapper .SVGIcon_Throbber .topCircle circle {
+  animation-name: ThrobberBottomCircleLoop;
+}
+.LoadingWrapper .SVGIcon_Throbber .bottomCircle path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: ThrobberBottomCircleLoop;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes ThrobberTopCircleLoop {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes ThrobberBottomCircleLoop {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02,
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-name: ThrobberRoundLoopThickness;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber01 {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: .5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber02 {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber03 {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber04 {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber05 {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber06 {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber07 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber08 {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber09 {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber10 {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber11 {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber12 {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber13 {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber14 {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+.LoadingWrapper .SVGIcon_Throbber .roundThrobber15 {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes ThrobberRoundLoopThickness {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+.throbber_small {
+  width: 36px;
+  height: 36px;
+}
+.throbber_medium {
+  width: 64px;
+  height: 64px;
+}
+.throbber_large {
+  width: 92px;
+  height: 92px;
+}
+.throbber_xlarge {
+  width: 120px;
+  height: 120px;
+}
+.throbber_xxlarge {
+  width: 240px;
+  height: 240px;
+}
+.ThrobberDelayAppear {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.ThrobberDelayAppear.Visible {
+  opacity: 1;
+}
+.NewThrobber img {
+  width: 100%;
+}
+.avatarHolder {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  margin: 0px 0px;
+  transform: scale(0.86, 0.86) translateX(0px);
+  transition-property: transform;
+  transition-duration: .34s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.avatarHolder.X-Small {
+  height: 28px;
+  width: 28px;
+}
+.avatarHolder.Medium {
+  height: 36px;
+  width: 36px;
+}
+.avatarHolder.MediumLarge {
+  height: 48px;
+  width: 48px;
+}
+.avatarHolder.Large {
+  height: 84px;
+  width: 84px;
+}
+.avatarHolder.X-Large {
+  height: 92px;
+  width: 92px;
+}
+.avatarHolder.FillArea {
+  height: 100%;
+  width: 100%;
+}
+.ChatSpeaker.ChatRoomSpeaker .avatarHolder {
+  transform: scale(1, 1) translateX(0px);
+}
+.avatarHolder .avatarStatus.right,
+.avatarHolder .avatarStatus.bottom {
+  display: block !important;
+}
+.ingame .avatarStatus {
+  background: linear-gradient(
+    to bottom,
+    #8cd61d 0%,
+    #a1f410 30%,
+    #a1f410 70%,
+    #8cd61d 100%
+  );
+}
+.ingame .avatarStatus.GamepadMode,
+.GamepadMode .ingame .avatarStatus {
+  background: #59bf40;
+}
+.offline .avatarStatus.GamepadMode,
+.GamepadMode .offline .avatarStatus {
+  background: #67707b;
+}
+.ingame .X-Large .avatarStatus {
+  background: #bff02b;
+}
+.watchingbroadcast .avatarStatus {
+  background: linear-gradient(
+    to bottom,
+    #9c8fd4 0%,
+    #9c8fd4 30%,
+    #9c8fd4 70%,
+    #9c8fd4 100%
+  );
+}
+.online .avatarStatus {
+  background: linear-gradient(
+    to bottom,
+    #6dcff6 0%,
+    #6dcff6 30%,
+    #6dcff6 70%,
+    #6dcff6 100%
+  );
+}
+.online .avatarStatus.GamepadMode,
+.GamepadMode .online .avatarStatus {
+  background: #4cb4ff;
+}
+.awayOrSnooze .avatarStatus {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  -webkit-mask-size: 5px 5px;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-y;
+  mask-size: 5px 5px;
+  opacity: 0.75;
+}
+.awayOrSnooze .avatarStatus.GamepadMode,
+.GamepadMode .awayOrSnooze .avatarStatus {
+  opacity: 1;
+}
+.avatarStatus.right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+}
+.avatarStatus.right.GamepadMode,
+.GamepadMode .avatarStatus.right {
+  width: 3px;
+  right: -3px;
+}
+.avatarStatus.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+.avatarStatus.bottom.GamepadMode,
+.GamepadMode .avatarStatus.bottom {
+  height: 3px;
+  bottom: -3px;
+}
+.awayOrSnooze .avatarStatus.bottom {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-x;
+  mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC)
+    repeat-x;
+}
+.awayOrSnooze .X-Large .avatarStatus.bottom {
+  mask-size: 6px 6px;
+  opacity: 1;
+}
+.avatar {
+  border: 1px solid #383c43;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  transition: filter .24s ease-in-out;
+}
+.avatar.GamepadMode,
+.GamepadMode .avatar {
+  border: 0px solid transparent;
+  height: 100%;
+  width: 100%;
+}
+.avatarFrame {
+  position: absolute;
+  top: 0;
+}
+.avatarFrame .avatarFrameImg {
+  width: 100%;
+  height: 100%;
+}
+.avatarHolder .avatarFrame {
+  transform: scale(1.2);
+}
+.SpeakerOuter {
+  display: block;
+}
+.Speaker {
+  margin-bottom: 16px;
+  font-size: 12px;
+  flex: 1;
+  display: inline-block;
+}
+.SpeakerPopup {
+  font-size: 14px;
+  background-color: #383e47;
+  box-shadow: 0 0 12px #00000066;
+  border: 1px solid #404754;
+  border-radius: 2px;
+  padding: 8px;
+  max-width: 370px;
+}
+@media only screen and (min-width: 400px) {
+  .SpeakerInfoOuter {
+    display: flex;
+  }
+}
+.SpeakerInfoOuter img {
+  max-width: 128px;
+  width: 128px;
+  margin-right: 8px;
+}
+@media only screen and (min-width: 400px) {
+  .SpeakerInfoOuter img {
+    flex: 1;
+  }
+}
+.SpeakerInfoInner {
+  font-size: 14px;
+  padding: 8px 8px 8px 0px;
+}
+@media only screen and (min-width: 400px) {
+  .SpeakerInfoInner {
+    flex: 2;
+  }
+}
+.SpeakerTitle {
+  font-weight: bold;
+}
+.SpeakerBio {
+  padding: 8px 8px 8px 0px;
+}
+.SpeakerHover {
+  display: inline-block;
+  margin-right: 12px;
+}
+.FriendsListInsetShadowCtn {
+  position: relative;
+  height: 0;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.FriendListInsetShadowTop {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-shrink: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.FriendListInsetShadowTop.GamepadMode,
+.GamepadMode .FriendListInsetShadowTop {
+  height: 8px;
+  background: linear-gradient(
+    to bottom,
+    #0e141b 0%,
+    rgba(14, 20, 27, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.GamepadMode .multiChatDialog.gpfocuswithin .FriendListInsetShadowTop {
+  background: linear-gradient(
+    to bottom,
+    #23262e 0%,
+    rgba(35, 38, 46, 0.5) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.FriendListInsetShadowBottom {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 16px;
+  position: absolute;
+  flex-shrink: 0;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.BroadcastChat {
+  max-width: 194px;
+  min-width: 0;
+}
+.ChatEntry {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: 6px;
+  padding-bottom: 8px;
+  background-color: #22252b;
+  transition-property: padding;
+  transition-duration: .21s;
+  transition-timing-function: ease-in-out;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ChatPanel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #1b1c20;
+  position: relative;
+}
+.ChatMessages {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+  flex-basis: 1px;
+  position: relative;
+  padding: 8px;
+}
+.EmoticonContainer {
+  width: 15%;
+  height: 10%;
+}
+.ChatSend {
+  width: 15%;
+  height: 10%;
+}
+.ChatBox {
+  width: 70%;
+  height: 10%;
+}
+.ChatControls {
+  display: flex;
+}
+.MessageChat {
+  padding: 4px;
+  color: #c1c6cf;
+  word-break: break-word;
+}
+.MessageChat:hover {
+  background: #24262e;
+}
+.MessageName {
+  color: #6dcff6;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #6dcff63d;
+}
+.MessageName:hover,
+.MessageName:active {
+  color: #9edff8;
+  text-decoration-color: #6dcff6b4;
+}
+.MessageContents {
+  font-size: 14px;
+}
+.MessageContents a {
+  color: #fff;
+}
+.MessageContents img.emoticon.large {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  pointer-events: all;
+  margin-top: -3px;
+  margin-bottom: -3px;
+  margin-right: -3px;
+}
+.EmoticonsOnly {
+  line-height: 32px;
+}
+.MessageNotification {
+  color: gray;
+  padding: 6px;
+}
+.MessageError {
+  color: #812819;
+  padding: 6px;
+  border: 1px dashed rgba(255, 58, 58, 0.15);
+  box-shadow: 2px 3px 14px 1px #00000066 inset;
+  margin: 8px;
+}
+.minHeightZero {
+  min-height: 0;
+  flex: 1;
+}
+.ChatLoginButton {
+  background: linear-gradient(to right, #3366ff, #7d6ebc);
+  display: inline-block;
+  padding: 0;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  height: 42px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 340px;
+}
+.RateLimitProgressBarContainer {
+  width: 100%;
+  height: 8px;
+}
+.RateLimitProgressBar {
+  background-color: #7d6ebc;
+  height: 100%;
+  width: 0%;
+}
+.TimedProgressBarContainer {
+  width: 44px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #2c3036;
+  z-index: 2;
+}
+.wrapper {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background: #2c3036;
+}
+.wrapper .SVGIcon_Submit {
+  z-index: 500;
+}
+.pie {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #2c3036;
+  border: 2px solid #0cf;
+  box-sizing: border-box;
+}
+.spinner {
+  border-radius: 45px 0 0 45px;
+  z-index: 200;
+  border-right: none;
+  animation: rota 0s linear infinite;
+  transform-origin: 100% 50%;
+}
+.filler {
+  border-radius: 0 45px 45px 0;
+  z-index: 100;
+  border-left: none;
+  animation: fill 0s steps(1, end) infinite;
+  transform-origin: 50% 50%;
+  left: 50%;
+  opacity: 0;
+}
+.mask {
+  width: calc(50% + 1px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  position: absolute;
+  z-index: 300;
+  opacity: 1;
+  background: inherit;
+  animation: mask 0s steps(1, end) infinite;
+  transform-origin: 50% 50%;
+}
+.SelectedUserNameCtn {
+  padding: 4px 8px;
+  background: #2c2f35;
+}
+.SelectedUserNameCtn .SelectedUserName {
+  color: #9edff8;
+  font-size: 14px;
+}
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mask {
+  0% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.FlairContainer {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+.FlairContainer img.emoticon.large {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 4px;
+  pointer-events: all;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+@media screen and (max-aspect-ratio: 10 / 9), screen and (max-width: 910px) {
+  .ChatEntry {
+    padding: 6px 0px;
+  }
+}
+.RoleFlairContainer {
+  padding-right: 4px;
+}
+.RoleFlairContainer svg {
+  width: 16px;
+  height: 16px;
+}
+.Description {
+  padding: 0 12px 0 0;
+  font-size: 12px;
+  grid-area: desc;
+  color: #b9b9b9;
+}
+.LogInPrompt {
+  padding: 8px;
+}
+.SignInButton {
+  height: auto;
+  padding: 0 16px;
+  margin: auto;
+}
+.GiveawayWinnerBox {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  background: linear-gradient(120deg, #1b9fff 0%, #8e00d1 100%);
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 3px 5px #000000aa;
+  transition: filter .25s ease-in-out 100ms;
+  filter: hue-rotate(0deg);
+}
+.GiveawayWinnerBox.GiveawayWinnerAnnounced {
+  animation-name: WinnerFlash;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes WinnerFlash {
+  0% {
+    filter: brightness(4.5);
+  }
+  10% {
+    filter: brightness(8.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+.GiveawayWinnerBox:hover {
+  filter: hue-rotate(15deg) !important;
+  color: #fff;
+}
+.GiveawayWinnerBoxRight {
+  padding: 10px;
+}
+.GiveawayWinnerText {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.GiveawayWinnerCountdown {
+  font-size: 10px;
+  margin-top: 3px;
+}
+.GiveawayWinnerBoxLeft {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.GiveawayWinnerArt {
+  width: 90px;
+  margin-left: 5px;
+}
+.GiveawayWinnerQuestion {
+  height: 14px;
+  width: 14px;
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0px 4px 4px 0px;
+}
+.InViewerBar {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-top: 30px;
+  right: 0;
+  width: 100%;
+}
+.InViewerBar .GiveawayWinnerBox {
+  border-radius: 3px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.InViewerBar .GiveawayWinnerCountdown {
+  margin-top: 0px;
+}
+.InViewerBar .GiveawayWinnerArt {
+  width: 60px;
+}
+.InViewerBar .GiveawayWinnerQuestion {
+  visibility: collapse;
+}
+.GiveawayRegisterButton,
+.GiveawayAlreadyRegistered {
+  display: flex;
+  margin: 10px;
+  border-radius: 3px;
+  background: linear-gradient(120deg, #1a9fff 0%, #0056d6 100%);
+  transition: filter .25s ease-out 100ms;
+  padding: 5px 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.GiveawayAlreadyRegistered {
+  background: linear-gradient(120deg, #62aadf88 0%, #e34bba88 100%);
+}
+.GiveawayRegisterButton:hover {
+  filter: brightness(1.3);
+  color: #fff;
+}
+.ErrorDiv {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px;
+}
+.PopupScreenshotModal .DialogContentFullSize .DialogContent_InnerWidth {
+  overflow: hidden;
+}
+.PopupScreenshotContainer {
+  width: fit-content;
+  height: fit-content;
+}
+.PopupFullWindow .PopupScreenshotContainer {
+  width: calc(100vw - 48px);
+}
+.PopupScreenshot {
+  width: auto;
+  height: auto;
+  max-height: 90vh;
+  max-width: 80vw;
+}
+.ButtonCtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+.ButtonIcon {
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border-radius: 50%;
+  margin: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.ButtonIcon:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.ButtonIcon.Disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.PreviewCtn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.PreviewCtn img {
+  display: block;
+}
+.PreviewCtn .SVG {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 5px 5px 1px 5px;
+}
+.PreviewCtn:hover {
+  cursor: pointer;
+}
+.PreviewCtn:hover .SVG {
+  opacity: 0.5;
+}
+.Link {
+  display: block;
+  margin-bottom: 16px;
+}
+.Banner {
+  object-fit: contain;
+  display: block;
+  width: 100%;
+  top: 0;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  transform: scale(1);
+  filter: saturate(0.85);
+  transition: transform .21s ease-in-out, filter .21s ease-in-out;
+}
+.Banner:hover {
+  filter: saturate(1);
+  transform: scale(1.03);
+}
+.Big {
+  width: 1053px;
+}
+.Mobile {
+  display: none;
+}
+@media screen and (max-width: 940px) {
+  .Link {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Big {
+    display: none;
+  }
+  .Mobile {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+.StoreSaleWidgetContainer_mini {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 158px;
+  background: #000;
+}
+.StoreSaleWidgetContainer_mini .Action,
+.StoreSaleWidgetContainer_mini .WishList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 24px;
+  line-height: 9px;
+  font-size: 11px;
+  margin-top: 2px;
+}
+.StoreSaleWidgetContainer_mini .StoreSaleWidgetTitle {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+@media screen and (max-width: 620px) {
+  .StoreSaleWidgetContainer_mini {
+    max-width: unset;
+    flex-direction: row;
+  }
+}
+.StoreSaleWidgetImage_mini {
+  cursor: pointer;
+  max-width: 155px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.StoreSaleImage_mini {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+.StoreSaleWidgetShortDesc_mini {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  padding-bottom: 8px;
+  overflow: hidden;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 13px;
+  font-size: 11px;
+}
+@media screen and (max-width: 620px) {
+  .StoreSaleWidgetShortDesc_mini {
+    display: none;
+  }
+}
+.bordered_container {
+  padding: 15px;
+  text-align: left;
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    rgba(108, 119, 134, 0.4) 40%,
+    rgba(83, 104, 104, 0.4) 100%
+  );
+}
+@media screen and (max-width: 620px) {
+  .bordered_container {
+    padding: 1px;
+  }
+}
+.bordered_container .video_placeholder,
+.bordered_container .embedded_player {
+  height: 337px;
+  padding-right: 0;
+}
+@media screen and (max-width: 620px) {
+  .bordered_container .video_placeholder,
+  .bordered_container .embedded_player {
+    height: 54vw;
+  }
+}
+.bordered_container .WidePlayer {
+  height: 529px;
+}
+.bordered_container .store_chat_ctn {
+  max-width: 310px;
+}
+.item_drop_ctn {
+  background: rgba(70, 81, 88, 0.4);
+  padding: 10px 13px;
+  color: #ccc;
+  font-size: 13px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.item_drop_ctn a {
+  text-decoration: underline;
+  margin-left: 6px;
+  color: #ccc;
+}
+.item_drop_ctn a:hover {
+  color: #fff;
+}
+.BorderedContainerPromotion {
+  border: 2px solid #000;
+  margin-bottom: 8px;
+}
+.bordered_title {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+}
+.bordered_title .streamTitle {
+  display: inline-block;
+}
+@media screen and (max-width: 620px) {
+  .bordered_title {
+    padding: 5px;
+  }
+  .bordered_title .streamTitle {
+    display: none;
+  }
+}
+.bordered_subtitle {
+  color: #a8a8a8;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 250;
+  position: relative;
+  letter-spacing: 1px;
+  padding-left: 70px;
+}
+.bordered_corner_container {
+  float: right;
+  display: flex;
+  flex-direction: row;
+}
+.bordered_corner_container a {
+  letter-spacing: 0px;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: 200;
+  color: #67c1f5;
+}
+.bordered_corner_container a:hover {
+  color: #fff;
+}
+.bordered_corner_expanded,
+.bordered_corner_shrinked {
+  width: 13px;
+  height: 10px;
+  padding: 4px;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: center;
+}
+.bordered_corner_expanded:hover,
+.bordered_corner_shrinked:hover {
+  cursor: pointer;
+}
+.bordered_corner_shrinked {
+  background-image: url(../../../images/applications/store/icon_expand_large.png?v=valveisgoodatcaching);
+}
+.bordered_corner_shrinked:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowNzkxNEI3Mzg0MDZFQTExQjcyMTg3QjA3NEE1Njc2RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREQ5OTFBOTA2ODQxMUVBQTIwRUU3RTNEMTU2NUVCNyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREQ5OTFBODA2ODQxMUVBQTIwRUU3RTNEMTU2NUVCNyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA3OTE0QjczODQwNkVBMTFCNzIxODdCMDc0QTU2NzZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA3OTE0QjczODQwNkVBMTFCNzIxODdCMDc0QTU2NzZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/GA38QAAAZlJREFUeNq8lb9KA0EQxu8SOYhNtAzYCol9QPMCAaNN3sA0KfIEapNnEJtYpdVCtNJSTB5ASGwVTWkMCGohF9dv8Ftcz9v7EyQLP7ib+WYmzM1kXaWUM4+TCbwvgC44BNkZ8mUZ22Uua6EpeAEtcAy8FEU8xrSY4/OXV1oXwq76Plcgb9GY5KlVjP2jiQreAT64AYUIXYEanzFOVKGcRVAD7+AOrIb4xXZPTc2SI6cLVcETqFuEG+CZmrJhL9M2piYstk5NVV4u2dspaFoCSuARvPKHCW+0lSwxTeaUcyEGD5yon9O2BK6AIfggA9rCtG0jn+T2tCMLDgxnh7ZggiXQBz0+B/0Sc2TkkZyZsKnbN0SnliFZtNhzjNFnL268G0Zvr1PsUc/41o2ke7TNkVUx30J/uwG1ErOVdmErYMIED6AYoily8hRXoBK3sDbWwIiJZF/WA/s1pm9ErTNrId2aW6M1m0S3dhjT2sSFhGWOteJ/ms/nPn3OfxXSY31ujO8ZbYni3ZQ3rFxsHT43eX8lOu68rvIvAQYAEyEC4mNB4vMAAAAASUVORK5CYII=);
+}
+.bordered_corner_expanded {
+  background-image: url(../../../images/applications/store/icon_collapse_large.png?v=valveisgoodatcaching);
+}
+.bordered_corner_expanded:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowNjkxNEI3Mzg0MDZFQTExQjcyMTg3QjA3NEE1Njc2RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCOUM4N0IzNDA2ODQxMUVBQUQyRDgxNkFENTJCRTUwMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCOUM4N0IzMzA2ODQxMUVBQUQyRDgxNkFENTJCRTUwMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA2OTE0QjczODQwNkVBMTFCNzIxODdCMDc0QTU2NzZEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA2OTE0QjczODQwNkVBMTFCNzIxODdCMDc0QTU2NzZEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mRO7xwAAAYdJREFUeNq8lb1KA0EUhZNdWFibmDKQVjDpA8YXCBht0lhrk2eINnkFAykUn0BEtNIyaB5AMLaKWmqsNMWSMJ6Bs3gNs7szKln4YLlzzrns/OzklVK5RTyeo94Hx8R3cuovsmQJnKvv54I1K79tkyIYssGUKNaK/9WoDEYMnoANMmHtnpo/NaqCFwa+gboYW2NNUVP9baN1MGbQM1g1aHTtiZp3epwabYqpucuYmjI18dRu2TbaBTMab0DBYh215pqeGTNSG+2J7XsGQkNomLCtQ3riZ9/UyAM9IToCviFsmV855Pv8uPYcipxenKMHA3AiBrsZaxGRUcradUWezg508VLMbTvBWOHO+wQN8sFaJcHTFmt9laPpFbQSDHWeF62piXqNtfHc+ZK0qGnIhTQJm9yyj2DFMK5rD9Q0EzLCrAO7w3/aLSil6ErUTOlxOrAdzu3A4RwN6OnYNNLb/ICGU+5I2z98QI9iRl6Oe4aLsAD6YBtEDldbRE+fGT8uxvyirvIvAQYAkm1Mw61wC10AAAAASUVORK5CYII=);
+}
+.broadcast_settings_icon {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzRDMDY4MzUwNjg1MTFFQUExQUFCNUI0QjMzRTNDNEIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzRDMDY4MzYwNjg1MTFFQUExQUFCNUI0QjMzRTNDNEIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNEMwNjgzMzA2ODUxMUVBQTFBQUI1QjRCMzNFM0M0QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNEMwNjgzNDA2ODUxMUVBQTFBQUI1QjRCMzNFM0M0QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhS5lDcAAALPSURBVHjavJZBSJRBFMe/3RYyQVIIUsmjsNKSnby5uxfFS+h20sNeTFFZ2VCxi2dPYYelJRPzIqG3Lbp5ctVTICStIF4z9SBoRLWBS/0f/Qdes/PZh0gPfuzszJv35s17M/OFRorfvIAyAHLgFv+fgOx8vHYlyOSwF1zmQAS8JdfYF0gijr46MATOwDI4B1HQBF5xTGQejIxufI8iqj38iq00qAeL6Pt6UUSNYBM8A0vgA0iAbo6vK13T7oaTBHWXOHcLfY3acEjlqI5O2sFTRpvlFhlpAQdsN4PPaqzCHMoOTIMd0Gki01s3rJw8YZ+sMA/K3KoDpX8IHoJRUAMyMFqSAUTj0dkwI/zL0akjbyVunZ8UYLxwQe5PXTmSxO9yu2LeJQXRxGhjlzarHMneZpiTvMNGB1gF+2SVfbbkaUO28tzlKMocecyJlnEpWfAa3CPSXkQE45aumdsupa+rboAHr0kpS5ILKhJx0gm+WEZvslKHsPr33Lo+NVfkCEyFWZI3eBjTLGGtOAlmHE489s1Q588pjte+4aIlgJesyJxE9ItXSp9Pfve5VWWfcTH0EQ5afYpDHPcGuetC3hVIhLdwgnlYJ/pgboMu8M7HRhd1dBR38JMkYvskzJr/AR6x7j+BlJonJ3uWifccxTBrTj+dpGhjmTbFdlYcrfDeagOPqT+mjEk1LbC6HjAnNWxL34KpOOOLv2KrDWPN8mbp62YP3Gb7urXy53Q4qVa/rcvaKg6RHXk+XAc2wlNd4Q1hixjsB62kn322ZGgjzzeqypGcobs8V6XLVhdv8BxtpV0vbIO684zEGOVP8MI6yCIprLrqmVA2Gv77w6e3Tjp6qCCKEyyQpKrGpNKPq+pKUndCOenR3w32zXDMy1OqaxDcB0Ww5nBk2mswWKTuIOdKJMd+3wz/kkNevkUVUVnOyVV/101x/3tJhX2B5LcAAwAQm+d6bNBMjQAAAABJRU5ErkJggg==);
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  margin-right: 10px;
+}
+.broadcast_settings_icon:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0FGOUExMkUwNjg1MTFFQUI1M0VCMDgwOTkyMTNBQ0UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0FGOUExMkYwNjg1MTFFQUI1M0VCMDgwOTkyMTNBQ0UiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQUY5QTEyQzA2ODUxMUVBQjUzRUIwODA5OTIxM0FDRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQUY5QTEyRDA2ODUxMUVBQjUzRUIwODA5OTIxM0FDRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkpNtH8AAAHcSURBVHjaxJYxawIxFMej3GAHkW5F/AA3HHXr2Jschd6m4OIugn4MB+cOroJbu+p2H6Bg5aa6uyh1dTi4vsA/7fM1DSdWDPw88/Lyf5fkJTmVZZnKSZvYZj9lC1uu/gX9k7NsiBsiRv2ROBDVXL0t0cvEgOgSHmw+RjFhfs+w+ah76DOAxpGuDHJHLNn0JERI9FHvMN8WbH34JKzfO7SsgcosyIgYE2l2XGrMvyraUvQZob7kI+OBhiyIsQVETMyJyDLNEdpi+Bq7CTY0No8t1x5PbkuI0LHEL0AWT2gejcjDPKfi7U4lgEbCkulXMoQYcmwReCBmxAeYwSb9YmiE3F5kw/WJOv4fxFT0iAkxJe7BFLae8DV969D8njq9uzcigyIxkhVRsbx9BW18ZE9CS2u3FY6SPTZjR6SwwhQ1HWvShI/cjy1s6k8dQyHqq0NIr0fJ0a7b1o52rZ0Vc5xSBfUPRQfaYa/ohe0QNeHzRjQcGg348FKD1gTau0skQ/RXMih2QpvDcyEEexBsYk1K+L9CG/eds8PWP2fDrsFJG/YqR1AXbzI+I4hhDK2u7Qi6xTNltgBX94KILBmnbXP4BMyeCs3rXHz/eZUvXVf5RT9Orvq5dZEPyC8BBgCnZHx5xIExDwAAAABJRU5ErkJggg==);
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: space-between;
+}
+@media screen and (max-width: 620px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.side_panels {
+  max-width: 155px;
+  max-height: 337px;
+  overflow: scroll;
+}
+.side_panels.multistream {
+  max-width: 155px;
+}
+.side_panels::-webkit-scrollbar {
+  height: 0px;
+}
+.side_panels::-webkit-scrollbar-thumb {
+  background-color: #7581a3;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 100 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.video_placeholder,
+.embedded_player {
+  border: none;
+  width: 100%;
+  overflow: hidden;
+  height: calc((100vw - 340px) * 0.5625);
+  padding-right: 340px;
+}
+.video_placeholder.NoChat,
+.embedded_player.NoChat {
+  height: 56.25vw;
+  padding-right: unset;
+}
+@media screen and (max-width: 620px) {
+  .video_placeholder,
+  .embedded_player {
+    height: 50vw;
+  }
+}
+.video_container {
+  height: 100%;
+}
+.BorderedContainerPromotion .video_placeholder {
+  height: 530px;
+}
+.viewer_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.viewer_bar .viewer_links {
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.viewer_bar .viewer_links .chat_link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+.viewer_bar .viewer_links .chat_link svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  fill: #fff;
+}
+@media screen and (max-width: 768px) {
+  .viewer_bar .viewer_links .chat_link {
+    display: none;
+  }
+}
+.viewer_bar .viewer_links .settings_link {
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+}
+.viewer_bar .viewer_links .settings_link svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  color: #fff;
+}
+.viewer_bar .viewer_links .external_link {
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+}
+.viewer_bar .viewer_links .external_link svg {
+  width: 12px;
+  height: 12px;
+  fill: #fff;
+}
+.viewer_bar .viewer_links > a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+  text-decoration: underline;
+}
+.viewer_bar .viewer_links > a:hover {
+  color: #fff;
+}
+.viewer_count {
+  font-size: 11px;
+  letter-spacing: 0px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: 3px center;
+  text-decoration: none;
+  max-width: 105px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+.viewer_count svg {
+  width: 16px;
+  margin-right: 8px;
+  color: #fff;
+}
+.viewer_count svg .frontGuy {
+  fill: rgba(255, 255, 255, 0.5);
+}
+.viewer_count svg .backGuy {
+  fill: #fff;
+}
+div.viewer_count.vod_title {
+  display: block;
+  padding-left: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stream_icon_and_viewer_container {
+  display: grid;
+  grid-template-columns: 136px 8px;
+  grid-template-rows: 68px 22px;
+  grid-template-areas: "icon arrow" "viewbar viewbar";
+  height: 90px;
+  padding-bottom: 12px;
+  position: relative;
+  box-sizing: border-box;
+}
+.stream_icon_and_viewer_container.display_capsule_art {
+  height: 90px;
+}
+.stream_icon_and_viewer_container > div {
+  grid-area: icon;
+}
+.stream_icon_and_viewer_container .viewer_count {
+  grid-area: viewbar;
+}
+.stream_icon_and_viewer_container:hover {
+  cursor: pointer;
+}
+.stream_icon_and_viewer_container:hover
+  .stream_icon_container
+  .stream_icon_hide_on_hover {
+  display: none;
+}
+.stream_icon_and_viewer_container:hover
+  .stream_icon_container
+  .stream_icon_show_on_hover {
+  display: block;
+}
+.stream_icon_and_viewer_container .stream_icon_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  background: #fff;
+  position: relative;
+}
+.stream_icon_and_viewer_container
+  .stream_icon_container
+  .stream_icon_show_on_hover {
+  display: none;
+}
+.stream_icon_and_viewer_container .viewer_count {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin: 0px;
+}
+.stream_icon,
+.stream_icon_selected {
+  max-width: 136px;
+  max-height: 64px;
+  overflow: hidden;
+  display: block;
+  height: auto;
+  width: 100%;
+  border-width: 0px;
+  border-style: solid;
+  transition: transform .1s ease-out;
+}
+.stream_icon {
+  border-color: #000;
+}
+.stream_icon:hover {
+  transform: scaleX(0.96) scaleY(0.93);
+  cursor: pointer;
+}
+.multistream {
+  overflow: hidden;
+}
+.multistream .viewer_count {
+  max-width: calc(100% - 8px);
+  padding-left: 3px;
+  box-sizing: border-box;
+}
+.scrollingstreams {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 136px;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+}
+.scrollingstreams .viewer_count {
+  max-width: 136px;
+  margin-bottom: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  box-sizing: border-box;
+  height: 22px;
+}
+.scrollingstreams .stream_icon,
+.scrollingstreams .stream_icon_selected {
+  max-width: 136px;
+}
+.stream_icon_selected {
+  transform: scaleX(0.96) scaleY(0.93);
+}
+.stream_icon_arrow {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 8px solid #fff;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  right: -7px;
+}
+.clear_div {
+  clear: both;
+  height: 30px;
+}
+.NoSelect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.broadcast_floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 213px;
+  width: 325px;
+  z-index: 100;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #747b86;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+}
+.broadcast_floating .PopOutVideoTitleBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 30px;
+  background: #747b86;
+}
+.broadcast_floating .PopOutVideoTitleBar .PopOutVideoTitleText {
+  height: 20px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  margin: 4px 0px 6px 8px;
+  font-size: 14px;
+}
+#game_highlights
+  .broadcast_floating
+  .PopOutVideoTitleBar
+  .PopOutVideoTitleText {
+  color: #fff;
+}
+.broadcast_floating .PopOutVideoTitleBar .PopOutVideoCloseButton {
+  margin: 6px;
+  background: none;
+  border: none;
+  width: 25px;
+}
+.broadcast_floating .PopOutVideoTitleBar .PopOutVideoCloseButton:hover {
+  cursor: pointer;
+}
+.broadcast_floating .videoContainer {
+  position: relative;
+  flex-grow: 1;
+}
+.broadcast_floating .STV_BroadcastSettings {
+  display: none;
+}
+.BroadcastPlayerContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #18181d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.ChatContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.ChatContainer ::-webkit-scrollbar {
+  height: 12px;
+  width: 14px;
+  background: transparent;
+  z-index: 12;
+  overflow: visible;
+}
+.ChatContainer ::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #434953;
+  border-radius: 10px;
+  z-index: 12;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  transition: background-color .32s ease-in-out;
+  margin: 4px;
+  min-height: 32px;
+  min-width: 32px;
+}
+.BroadcastAndChat {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.BroadcastAndChat .video_placeholder {
+  background: #000;
+  display: flex;
+}
+@media screen and (max-width: 620px) {
+  .BroadcastAndChat .video_placeholder {
+    height: calc((100vw - 30px) * 0.552);
+    min-height: unset;
+  }
+}
+.broadcast_watch_iframe_page .BroadcastAndChat {
+  margin: 0px;
+}
+.broadcast_watch_iframe_page .BroadcastAndChat .embedded_player,
+.broadcast_watch_iframe_page .BroadcastAndChat .video_placeholder {
+  height: 100vh;
+}
+.detail_chat_ctn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 340px;
+}
+@media screen and (max-aspect-ratio: 10 / 9), screen and (max-width: 910px) {
+  .BroadcastAndChat {
+    flex-direction: column;
+    margin: 24px 24px 12px 24px;
+    box-shadow: none;
+  }
+  .BroadcastAndChat .video_placeholder,
+  .BroadcastAndChat .embedded_player {
+    padding-right: 0px;
+    height: calc((100vw - 48px) * 0.5625);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  .detail_chat_ctn {
+    width: auto;
+    position: relative;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .BroadcastAndChat {
+    margin: 0px;
+  }
+  .BroadcastAndChat .video_placeholder,
+  .BroadcastAndChat .video_container,
+  .BroadcastAndChat .embedded_player {
+    height: 56.25vw;
+  }
+  .BroadcastAndChat .ChatEntry {
+    padding: 6px;
+  }
+}
+.WideBroadcastCtn .bordered_container {
+  background: unset;
+  padding: 0px 0px 15px 0px;
+}
+.WideBroadcastCtn
+  .bordered_container.Event
+  .container.broadcast_right_panel_simple {
+  grid-template-rows: auto 30px;
+  grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar";
+}
+.WideBroadcastNoChatCtn .viewer_bar .viewer_links .chat_link {
+  display: none;
+}
+.bordered_container .container {
+  display: grid;
+  grid-template-columns: 155px calc(100% - 310px) 155px;
+  grid-template-rows: auto 30px;
+  grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar viewbar";
+}
+@media screen and (min-width: 768px) {
+  .bordered_container .container:not(.multistream) {
+    grid-template-rows: 337px 30px;
+    grid-template-areas: "left-panel livestream right-panel" "viewbar viewbar viewbar";
+  }
+}
+@media screen and (max-width: 940px) and (min-width: 768px) {
+  .bordered_container .container.broadcast_right_panel_simple {
+    grid-template-areas: "left-panel livestream livestream" "left-panel viewbar viewbar";
+  }
+  .bordered_container
+    .container.broadcast_right_panel_simple:not(.multistream) {
+    grid-template-areas: "left-panel livestream livestream" "viewbar viewbar viewbar";
+  }
+  .bordered_container .container.broadcast_right_panel_simple .rightPanel {
+    display: none;
+  }
+}
+.bordered_container .container.broadcast_chat_expanded {
+  grid-template-columns: calc(100% - 312px) 312px;
+  grid-template-rows: auto 30px;
+  grid-template-areas: "livestream store-chat" "viewbar viewbar";
+}
+.bordered_container .container .side_panels:not(img) {
+  grid-area: left-panel;
+  max-height: 367px;
+}
+.bordered_container .container .wrapper {
+  grid-area: livestream;
+}
+.bordered_container .container .viewer_bar {
+  display: flex;
+  grid-area: viewbar;
+  background: linear-gradient(to bottom, #2b2f36, #22252b);
+  padding-left: 8px;
+}
+.bordered_container .container .rightPanel {
+  grid-area: right-panel;
+}
+.bordered_container .container .store_chat_ctn {
+  grid-area: store-chat;
+  max-width: 316px;
+}
+.bordered_container .container .ChatContainer .ChatEntry {
+  padding: 4px;
+}
+@media screen and (max-width: 768px) {
+  .bordered_container .container {
+    grid-template-rows: 337px 30px;
+    grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar";
+  }
+  .Event.bordered_container .container {
+    grid-template-rows: 337px 30px 84px;
+    grid-template-areas: "livestream livestream livestream" "viewbar viewbar viewbar" "gameinfo gameinfo gameinfo";
+  }
+  .bordered_container .container .side_panels {
+    display: none;
+  }
+  .bordered_container .container .StoreSaleWidgetContainer_mini {
+    grid-area: gameinfo;
+    display: flex;
+    flex-direction: row;
+    max-width: unset;
+  }
+}
+@media screen and (max-width: 620px) {
+  .bordered_container .container {
+    display: flex;
+  }
+}
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+  background-image: radial-gradient(
+    ellipse at top center,
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+@media screen and (max-width: 600px) {
+  .Container {
+    padding: 4px;
+  }
+}
+.VoteContainer,
+.DiscussContainer,
+.ShareContainer,
+.InnerContainer {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
+.VoteContainer,
+.ShareContainer,
+.DiscussContainer {
+  padding: 10px;
+  background-color: rgba(30, 33, 38, 0.5);
+}
+@media screen and (max-width: 910px) {
+  .VoteContainer,
+  .ShareContainer,
+  .DiscussContainer {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 910px) {
+  .VoteContainer .DiscussionButton {
+    margin-left: 0px;
+  }
+}
+.DiscussContainer {
+  margin-right: 0px;
+}
+@media screen and (max-width: 910px) {
+  .DiscussContainer .DiscussionButton {
+    padding: 6px 11px 8px 11px;
+    margin-left: 0px;
+  }
+}
+.ShareContainer {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  margin-right: 0px;
+}
+.DiscussIcon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 910px) {
+  .DiscussIcon {
+    margin-right: 0px;
+    margin-left: 0px;
+    left: 15px;
+  }
+}
+.linkField {
+  font-size: 12px;
+  align-items: center;
+  margin-top: 10px;
+}
+.linkField span {
+  padding-right: 10px;
+  padding-left: 2px;
+  white-space: nowrap;
+}
+.ShareButtonContainer {
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .LinkInputLabel {
+    display: none;
+  }
+  .ShareButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .LinkButton {
+    display: none !important;
+  }
+}
+.ShareSteamBtn {
+  height: 33px;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 700px) {
+  .ShareSteamBtn {
+    height: 30px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 2px;
+  }
+}
+.ClipboardText {
+  text-align: center;
+  min-height: 30px;
+  padding-top: 10px;
+}
+.LinkInput {
+  flex-grow: 10;
+  width: 485px;
+  height: 32px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #909090;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #000;
+  border-radius: 3px;
+  outline: none;
+  font-family: "Motiva Sans", Sans-serif;
+  resize: none;
+  line-height: 14px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 700px) {
+  .LinkInput {
+    min-width: 250px;
+    min-height: 80px;
+  }
+}
+.ShareIcon {
+  width: 19px;
+  height: 19px;
+  margin-right: 12px;
+  margin-top: 1px;
+  margin-left: -10px;
+  fill: rgba(255, 255, 255, 0.66);
+}
+@media screen and (max-width: 500px) {
+  .ShareIcon {
+    margin-right: -7px;
+  }
+}
+.ClipboardIcon {
+  height: 18px;
+  margin-top: 0px;
+}
+.SteamIcon {
+  height: 30px;
+  margin-top: 1px;
+  margin-left: -10px;
+  margin-bottom: -8px;
+  margin-right: 4px;
+}
+@media screen and (max-width: 700px) {
+  .SteamIcon {
+    height: 26px !important;
+    padding-top: 0px;
+    margin: 0px;
+  }
+}
+.share_controls_ctn {
+  background-color: rgba(59, 63, 72, 0.5);
+  border-radius: 3px;
+  padding: 10px;
+  text-align: left;
+  margin-top: 16px;
+}
+@media screen and (max-width: 700px) {
+  .share_controls_ctn {
+    margin-top: 2px;
+    padding: 0px;
+    background: none;
+  }
+}
+.ShareLanguagePicker {
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px 8px;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .ShareLanguagePicker {
+    flex-direction: column;
+  }
+}
+.ShareLanguagePicker .LanguageLabel {
+  padding: 0px 8px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+.ShareBtn:not(:first-child) {
+  margin-left: 8px;
+}
+@media screen and (max-width: 700px) {
+  .ShareBtn:not(:first-child) {
+    margin-left: 2px;
+  }
+}
+.ShareBtn > img {
+  height: 33px;
+  padding-bottom: 8px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 700px) {
+  .ShareBtn > img {
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+  }
+}
+.ShareBtn > span {
+  line-height: 33px;
+}
+@media screen and (max-width: 700px) {
+  .ShareBtn > span {
+    display: none;
+  }
+}
+.VoteCount,
+.DiscussionCount {
+  color: #399aec;
+  font-size: 17px;
+  font-weight: 800;
+  padding-top: 7px;
+  margin-right: 12px;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  height: 20px;
+  position: relative;
+  display: flex;
+}
+@media screen and (max-width: 910px) {
+  .VoteCount,
+  .DiscussionCount {
+    margin-right: 6px;
+  }
+}
+.DiscussionCount {
+  display: flex;
+}
+.DiscussionCount > svg {
+  margin-left: -1px;
+  margin-right: 5px;
+  margin-top: -1px;
+  width: 26px;
+  height: 26px;
+  fill: #399aec;
+}
+@media screen and (max-width: 500px) {
+  .DiscussionCount > svg {
+    display: none;
+  }
+}
+.DiscussionButton {
+  display: flex;
+  white-space: nowrap;
+  margin: 5px;
+}
+.DiscussionButton .SVGIcon_ChatBubble {
+  width: 21px;
+  height: 21px;
+  fill: rgba(255, 255, 255, 0.66);
+  display: none;
+}
+.DiscussionButton .DiscussionButtonText {
+  line-height: 22px;
+}
+@media screen and (max-width: 500px) {
+  .DiscussionButton .DiscussionButtonText {
+    display: none;
+  }
+  .DiscussionButton .SVGIcon_ChatBubble {
+    display: block;
+  }
+}
+.VoteDownIcon,
+.VoteDownSelectedIcon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: -4px;
+  bottom: 3px;
+  left: 9px;
+  position: absolute;
+  transform: scaleY(-1);
+}
+@media screen and (max-width: 500px) {
+  .VoteDownIcon,
+  .VoteDownSelectedIcon {
+    margin-bottom: -2px;
+  }
+}
+.VoteDownIcon {
+  fill: rgba(255, 255, 255, 0.66);
+}
+.VoteDownSelectedIcon {
+  fill: #9cccf5;
+}
+.VoteUpIcon,
+.VoteUpSelectedIcon {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  margin-bottom: -4px;
+  margin-top: -6px;
+  margin-left: -20px;
+}
+@media screen and (max-width: 500px) {
+  .VoteUpIcon,
+  .VoteUpSelectedIcon {
+    margin-top: initial;
+    margin-left: initial;
+    margin-bottom: -1px;
+    bottom: 3px;
+    left: 9px;
+    position: absolute;
+  }
+}
+.VoteUpIcon {
+  fill: rgba(255, 255, 255, 0.66);
+}
+.VoteUpSelectedIcon {
+  fill: #9cccf5;
+}
+.VoteUpStaticIcon {
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+  margin-bottom: -4px;
+  margin-top: -6px;
+  margin-left: -5px;
+  fill: #399aec;
+}
+@media screen and (max-width: 500px) {
+  .VoteUpStaticIcon {
+    display: none;
+  }
+}
+.VoteButtonSelected {
+  background-color: #399aec;
+}

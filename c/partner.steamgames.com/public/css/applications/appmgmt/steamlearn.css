@@ -1,0 +1,4529 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.DashboardPage {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px;
+}
+.DashboardPage .ProjectListContainer {
+  flex-grow: 1;
+  flex-basis: 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.DashboardPage .EventsContainer {
+  flex-grow: 1;
+  flex-basis: 1px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.DashboardHeader {
+  font-size: 18px;
+  color: #ac966a;
+}
+.DashboardUnderline {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 8px;
+  background: linear-gradient(to right, #a97950, #61491b);
+}
+.ProjectList,
+.EventList {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.DashboardProjectList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.DashboardProjectList .ListFilter {
+  margin-bottom: 8px;
+}
+.DashboardProjectList .ListContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectEntry {
+  width: 100%;
+  min-height: 60px;
+  max-height: 90px;
+  background-color: #363636;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 10px;
+  transition-property: filter, max-height, min-height, padding-top,
+    padding-bottom, margin-bottom;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  margin-bottom: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+.ProjectEntry.Hidden {
+  max-height: 0px;
+  min-height: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.ProjectEntry .ProjectName {
+  font-size: 18px;
+  color: #67c1f5;
+}
+.ProjectEntry .ProjectDescription {
+  font-size: 13px;
+}
+.ProjectEntry .ProjectID {
+  font-size: 13px;
+  color: #ac966a;
+}
+.ProjectEntry:hover {
+  filter: brightness(1.3);
+}
+.DashboardEventList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.DashboardEventList .EventsListContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.DashboardEventList .EventsListContainer .WeekSelector {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  background-color: #222;
+  border-radius: 5px;
+  color: #ddd;
+}
+.DashboardEventList .EventsListContainer .WeekSelector .LeftArrow,
+.DashboardEventList .EventsListContainer .WeekSelector .RightArrow {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ccc;
+  text-align: center;
+  padding: 0px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.DashboardEventList .EventsListContainer .WeekSelector .LeftArrow:hover,
+.DashboardEventList .EventsListContainer .WeekSelector .RightArrow:hover {
+  filter: brightness(1.3);
+}
+.DashboardEventList .EventsListContainer .WeekSelector .DateRange {
+  font-size: 16px;
+}
+.EventEntry {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #363636;
+  border-radius: 3px;
+  padding: 6px 10px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.EventEntry.IsLive {
+  background-color: #454545;
+}
+.EventEntry .Timestamp {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+.EventEntry .Name {
+  font-size: 16px;
+  color: #fff;
+}
+.EventEntry .ProjectID {
+  font-size: 13px;
+  color: #ac966a;
+}
+.EventEntry .Title {
+  font-size: 14px;
+  color: #67c1f5;
+}
+.EventEntry .Status {
+  font-size: 13px;
+  color: #888;
+}
+.EventEntry .Status .ProjectStatusInfo {
+  color: #b1f3bf;
+}
+.EventEntry .Status .CompletedDetails.Gold {
+  color: #ac966a;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectSelector {
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+  background-color: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectSelector .ProjectSelectorInner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.ProjectSelector .ProjectSelectorInner .ProjectSection {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+  gap: 4px;
+}
+.ProjectSelector
+  .ProjectSelectorInner
+  .ProjectSection
+  .ProjectIDAndVersionSection {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.ProjectSelector
+  .ProjectSelectorInner
+  .ProjectSection
+  .ProjectIDAndVersionSection
+  .ProjectIDInput {
+  width: 300px;
+}
+.ProjectSelector
+  .ProjectSelectorInner
+  .ProjectSection
+  .ProjectIDAndVersionSection
+  .PublishedVersionInput {
+  width: 200px;
+}
+.ProjectSelector
+  .ProjectSelectorInner
+  .ProjectSection
+  .ProjectIDAndVersionSection
+  .EditButton {
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+}
+.ProjectSelector .ProjectSelectorInner .ProjectSection .Description {
+  font-weight: bold;
+  color: #ccc;
+  font-size: 12px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+.ProjectSelector .ProjectSelectorInner .ProjectSection .ProjectID {
+  font-size: 12px;
+  margin-left: 4px;
+}
+.ProjectSelector .ProjectSelectorInner .StatusSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 3;
+  align-items: flex-end;
+}
+.ProjectSelector .ProjectSelectorInner .StatusSection button.Disabled {
+  color: #aaa !important;
+}
+.ProjectSelector .ProjectSelectorInner .StatusSection button.Warning {
+  background: linear-gradient(to right, #c32929 0%, #7a1616 60%);
+}
+.ShowChangesButton {
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 20px;
+}
+.ShowChangesButton:hover {
+  color: #fff;
+}
+.DiffTableContainer {
+  width: 1000px;
+  max-height: 700px;
+  overflow-y: scroll;
+  margin: 8px 0px;
+  border: 1px solid #000;
+  background-color: #222;
+  padding: 4px;
+}
+.DiscardChangesPopup .DialogContent .DialogContent_InnerWidth {
+  max-width: 100%;
+}
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: space-around;
+}
+.Buttons .DialogButton {
+  flex-grow: 1;
+}
+.json-diff-viewer {
+  table-layout: auto !important;
+}
+.json-diff-viewer tr .line-modify {
+  background-color: #47453f !important;
+}
+.json-diff-viewer tr .line-add {
+  background-color: #1e411f !important;
+}
+.json-diff-viewer tr .line-remove {
+  background-color: #3d1818 !important;
+}
+.CreateOrEditProjectPopup .DialogContent {
+  width: 600px;
+}
+.CreateOrEditProjectPopup .DialogContent .Guidance {
+  font-size: 14px;
+}
+.CreateOrEditProjectPopup .DialogContent .EditSection {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  padding-bottom: 10px;
+}
+.CreateOrEditProjectPopup .DialogContent .EditSection .EditSectionTitle {
+  color: #67c1f5;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.CreateOrEditProjectPopup .DialogContent .EditSection .InputTitle {
+  color: #fff;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.CreateOrEditProjectPopup .DialogContent .EditSection .InputWide {
+  width: 300px;
+}
+.CreateOrEditProjectPopup .DialogContent .EditSection .InputAreaWide {
+  width: 100%;
+  height: 100px;
+}
+.CreateOrEditProjectPopup .DialogContent .ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 8px;
+}
+.json-diff-viewer {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+.json-diff-viewer tr {
+  vertical-align: top;
+}
+.json-diff-viewer tr .line-add {
+  background: #a5d6a7;
+}
+.json-diff-viewer tr .line-remove {
+  background: #ef9a9a;
+}
+.json-diff-viewer tr .line-modify {
+  background: #ffe082;
+}
+.json-diff-viewer tr:hover td {
+  position: relative;
+}
+.json-diff-viewer tr:hover td::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  content: "";
+  pointer-events: none;
+}
+.json-diff-viewer tr.expand-line {
+  text-align: center;
+}
+.json-diff-viewer tr.expand-line td {
+  padding: 4px 0;
+}
+.json-diff-viewer tr.expand-line:hover td:before {
+  background: transparent;
+}
+.json-diff-viewer tr.expand-line .has-lines-before {
+  border-bottom: 1px solid;
+}
+.json-diff-viewer tr.expand-line .has-lines-after {
+  border-top: 1px solid;
+}
+.json-diff-viewer tr.expand-line button {
+  margin: 0 .5em;
+  padding: 0;
+  color: #2196f3;
+  font-family: sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 12px;
+  border: none;
+  background: transparent;
+  user-select: none;
+  cursor: pointer;
+}
+.json-diff-viewer tr.expand-line button:hover {
+  text-decoration: underline;
+}
+.json-diff-viewer td {
+  padding: 1px;
+  font-size: 0;
+}
+.json-diff-viewer td.line-number {
+  border-right: 1px solid;
+  box-sizing: content-box;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 0 8px;
+  text-align: right;
+  user-select: none;
+}
+.json-diff-viewer pre {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.json-diff-viewer pre .inline-diff-add {
+  background: rgba(0, 0, 0, 0.08);
+  text-decoration: underline;
+  word-break: break-all;
+}
+.json-diff-viewer pre .inline-diff-remove {
+  background: rgba(0, 0, 0, 0.08);
+  text-decoration: line-through;
+  word-break: break-all;
+}
+.json-diff-viewer-virtual pre {
+  white-space: pre;
+  overflow-x: auto;
+}
+.json-diff-viewer-virtual pre::-webkit-scrollbar {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectCreatePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ProjectCreatePage .EditSection {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  padding-bottom: 10px;
+}
+.ProjectCreatePage .EditSection .EditSectionTitle {
+  color: #67c1f5;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.ProjectCreatePage .EditSection .InputTitle {
+  color: #fff;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.ProjectCreatePage .EditSection .InputWide {
+  width: 300px;
+}
+.ProjectCreatePage .EditSection .InputAreaWide {
+  width: 300px;
+  height: 100px;
+}
+.ProjectCreatePage button {
+  width: fit-content !important;
+  padding: 4px 12px !important;
+}
+.CreateProjectResultDialog {
+  width: 400px;
+  height: 150px;
+}
+.CreateProjectResultDialog .CreateProjectResultDialogContents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.DataSourcesPage {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 10px;
+}
+.DataSourceList {
+  flex-grow: 1;
+  flex-basis: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.DataSourceList .DataSourceOption {
+  max-width: 500px;
+  background-color: #313131;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 4px;
+  user-select: none;
+  cursor: pointer;
+}
+.DataSourceList .DataSourceOption:hover {
+  filter: brightness(1.1);
+}
+.DataSourceList .DataSourceOption.Selected {
+  background-color: #444;
+  border: 1px solid #666;
+}
+.DataSourceList .DataSourceOption .Name {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.DataSourceList .DataSourceOption .KeyType {
+  color: #ac966a;
+  font-size: 12px;
+}
+.DataSourceList .DataSourceOption .Version {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 12px;
+  color: #999;
+}
+.DataSourceList .DataSourceOption .Description {
+  color: #999;
+  font-size: 13px;
+}
+.DataSourceList .DataSourceOption .ID {
+  color: #666;
+  position: absolute;
+  top: 6px;
+  right: 40px;
+  font-size: 10px;
+}
+.DataSourceDetails {
+  flex-grow: 1;
+  flex-basis: 1px;
+  display: flex;
+  flex-direction: column;
+}
+.DataSourceDetails .DataSourceElement {
+  display: flex;
+  flex-direction: column;
+  background-color: #313131;
+  padding: 2px 8px;
+}
+.DataSourceDetails .DataSourceElement .Name {
+  font-size: 14px;
+  color: #ddd;
+}
+.DataSourceDetails .DataSourceElement .Type {
+  font-size: 13px;
+  color: #acacac;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #666;
+}
+.DataSourceDetails .DataSourceElement .Type .Array {
+  margin-left: 4px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectDataSourcesPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectDataSourcesPage .DataSourceList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.AddDataSourceDialog {
+  width: 600px;
+  height: 500px;
+}
+.AddDataSourceDialog .AddDataSourceDialogContents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.AddDataSourceDialog .AddDataSourceDialogContents .Header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.AddDataSourceDialog .AddDataSourceDialogContents .Header .TypeLimit {
+  font-size: 14px;
+  color: orange;
+  font-weight: 100;
+  text-align: center;
+}
+.AddDataSourceDialog .AddDataSourceDialogContents .DataSourceListContainer {
+  width: 100%;
+  height: calc(100% - 30px);
+  gap: 6px;
+  padding: 8px;
+  background-color: #222;
+  border: 1px solid #111;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption {
+  width: 100%;
+  background-color: #313131;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 4px;
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption:hover {
+  filter: brightness(1.1);
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption.Selected {
+  background-color: #444;
+  border: 1px solid #666;
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption.Disabled {
+  filter: brightness(0.5);
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption
+  .TitleRow {
+  display: flex;
+  flex-direction: row;
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption
+  .TitleRow
+  .Name {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption
+  .TitleRow
+  .Type {
+  font-size: 12px;
+  padding-left: 8px;
+  align-content: center;
+  color: #999;
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption
+  .TitleRow
+  .Version {
+  flex-grow: 1;
+  text-align: right;
+  font-size: 12px;
+  align-content: center;
+  color: #999;
+}
+.AddDataSourceDialog
+  .AddDataSourceDialogContents
+  .DataSourceListContainer
+  .DataSourceOption
+  .Description {
+  color: #999;
+  font-size: 13px;
+}
+.ProjectConfigDataSourceElement {
+  width: 600px;
+  background-color: #313131;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  padding: 4px 10px;
+}
+.ProjectConfigDataSourceElement.IsOldDataSourceVersion {
+  background-color: #443131;
+}
+.ProjectConfigDataSourceElement.IsOldDataSourceVersion .Version {
+  color: #d44;
+}
+.ProjectConfigDataSourceElement .NameAndID {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.ProjectConfigDataSourceElement .NameAndID .Name {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.ProjectConfigDataSourceElement .NameAndID .ID {
+  color: #666;
+  font-size: 13px;
+}
+.ProjectConfigDataSourceElement .Description {
+  color: #999;
+  font-size: 13px;
+}
+.ProjectConfigDataSourceElement .Version {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+.ProjectConfigDataSourceElement .Remove {
+  width: fit-content;
+  color: #c44;
+  font-size: 13px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.ProjectConfigDataSourceElement .Remove:hover {
+  color: #e66;
+}
+.ProjectConfigDataSourceElement .Update {
+  width: fit-content;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.ProjectConfigDataSourceElement .Update:hover {
+  color: #ddd;
+}
+.ProjectConfigDataSourceDataElementRoutingList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ProjectConfigDataSourceElementRoutingWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 10px;
+  border-radius: 2px;
+  background-color: #313131;
+}
+.ProjectConfigDataSourceElementRoutingWrapper .DataSourceName {
+  font-size: 20px;
+  color: #ddd;
+  border-bottom: 1px solid #666;
+}
+.ProjectConfigDataSourceElementRouting {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 4px 0px;
+  border-bottom: 1px solid #444;
+}
+.ProjectConfigDataSourceElementRouting .LeftSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px;
+  padding-right: 30px;
+}
+.ProjectConfigDataSourceElementRouting .LeftSection .Name {
+  font-size: 14px;
+  color: #ddd;
+  display: flex;
+  flex-direction: row;
+}
+.ProjectConfigDataSourceElementRouting .LeftSection .Name .Array {
+  font-size: 14px;
+  color: #ddd;
+}
+.ProjectConfigDataSourceElementRouting .LeftSection .TypeAndExpandCollapse {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.ProjectConfigDataSourceElementRouting
+  .LeftSection
+  .TypeAndExpandCollapse
+  .Type {
+  display: flex;
+  flex-direction: row;
+}
+.ProjectConfigDataSourceElementRouting
+  .LeftSection
+  .TypeAndExpandCollapse
+  .Explode,
+.ProjectConfigDataSourceElementRouting
+  .LeftSection
+  .TypeAndExpandCollapse
+  .Collapse {
+  font-size: 10px;
+  color: #666;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: -1px;
+}
+.ProjectConfigDataSourceElementRouting
+  .LeftSection
+  .TypeAndExpandCollapse
+  .Explode:hover,
+.ProjectConfigDataSourceElementRouting
+  .LeftSection
+  .TypeAndExpandCollapse
+  .Collapse:hover {
+  color: #aaa;
+}
+.ProjectConfigDataSourceElementRouting .InputSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  min-width: 100px;
+}
+.ProjectConfigDataSourceElementRouting .InputSection .InputSelect {
+  width: 100px;
+}
+.ProjectConfigDataSourceElementRouting .NormalizeSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 30px;
+}
+.ProjectConfigDataSourceElementRouting .NormalizeSection .PreprocessingDetails {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  gap: 4px;
+}
+.ProjectConfigDataSourceElementRouting
+  .NormalizeSection
+  .PreprocessingDetails
+  .PreprocessingOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  background-color: #383838;
+  padding: 2px 4px;
+}
+.ProjectConfigDataSourceElementRouting
+  .NormalizeSection
+  .PreprocessingDetails
+  .PreprocessingOptions
+  .Label,
+.ProjectConfigDataSourceElementRouting
+  .NormalizeSection
+  .PreprocessingDetails
+  .PreprocessingOptions
+  label {
+  min-width: 230px;
+}
+.ProjectConfigDataSourceElementRouting
+  .NormalizeSection
+  .PreprocessingDetails
+  .PreprocessingOptions
+  .ValueInput {
+  width: 150px;
+  height: 20px;
+  text-align: right;
+}
+.ProjectConfigDataSourceElementRouting
+  .NormalizeSection
+  .PreprocessingDetails
+  .PreprocessingOptions
+  .ValueInput.Invalid {
+  color: red;
+}
+.ProjectConfigDataSourceElementRouting .RightSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Warning {
+  background-color: #500101;
+  border: red solid 2px;
+  padding: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectInferenceTesterPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectInferenceTesterPage .ProjectInferenceTesterBody {
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  padding: 20px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectInferenceTesterPage .ProjectInferenceTesterBody .DataSourceElement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.ProjectInferenceTesterPage
+  .ProjectInferenceTesterBody
+  .DataSourceElement
+  .Name {
+  min-width: 200px;
+}
+.ProjectInferenceTesterPage .ProjectInferenceTesterBody .Separator {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0px;
+  background-color: #444;
+}
+.ProjectInferenceTesterPage .ProjectInferenceTesterBody .OptionHeader {
+  font-size: 18px;
+  color: #67c1f5;
+}
+.ProjectInferenceTesterPage .ProjectInferenceTesterBody .OptionDesc {
+  font-size: 15px;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+.ProjectInferenceTesterPage .ProjectInferenceTesterBody .OptionBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+}
+.ProjectInferenceTesterPage
+  .ProjectInferenceTesterBody
+  .OptionBlock
+  .OptionDetails {
+  font-size: 14px;
+  color: #ac966a;
+}
+.ProjectInferenceTesterPage
+  .ProjectInferenceTesterBody
+  .OptionBlock
+  .ValueInput {
+  width: 70px;
+  height: 20px;
+  text-align: right;
+}
+.ProjectInferenceTesterPage
+  .ProjectInferenceTesterBody
+  .OptionBlock
+  .ValueInput
+  .Wide {
+  width: 100px;
+}
+.ProjectInferenceTesterPage
+  .ProjectInferenceTesterBody
+  .OptionBlock
+  .ValueInput.Invalid {
+  color: red;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.FlowNode {
+  border: 2px solid #000;
+  color: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  background: radial-gradient(
+      circle at top left,
+      rgba(98, 106, 118, 0.4) 0%,
+      rgba(117, 139, 177, 0) 60%
+    ), #2c2f34;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+}
+.FlowNode .Title {
+  padding: 0px 4px;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.FlowNode .Title .TitleText {
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  flex-grow: 1;
+}
+.FlowNode .Title .NodeID {
+  display: none;
+  font-size: 12px;
+  color: #ff0;
+  margin-right: 4px;
+  margin-top: 2px;
+}
+.FlowNode .Title .EditGear {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzRDMDY4MzUwNjg1MTFFQUExQUFCNUI0QjMzRTNDNEIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzRDMDY4MzYwNjg1MTFFQUExQUFCNUI0QjMzRTNDNEIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNEMwNjgzMzA2ODUxMUVBQTFBQUI1QjRCMzNFM0M0QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNEMwNjgzNDA2ODUxMUVBQTFBQUI1QjRCMzNFM0M0QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhS5lDcAAALPSURBVHjavJZBSJRBFMe/3RYyQVIIUsmjsNKSnby5uxfFS+h20sNeTFFZ2VCxi2dPYYelJRPzIqG3Lbp5ctVTICStIF4z9SBoRLWBS/0f/Qdes/PZh0gPfuzszJv35s17M/OFRorfvIAyAHLgFv+fgOx8vHYlyOSwF1zmQAS8JdfYF0gijr46MATOwDI4B1HQBF5xTGQejIxufI8iqj38iq00qAeL6Pt6UUSNYBM8A0vgA0iAbo6vK13T7oaTBHWXOHcLfY3acEjlqI5O2sFTRpvlFhlpAQdsN4PPaqzCHMoOTIMd0Gki01s3rJw8YZ+sMA/K3KoDpX8IHoJRUAMyMFqSAUTj0dkwI/zL0akjbyVunZ8UYLxwQe5PXTmSxO9yu2LeJQXRxGhjlzarHMneZpiTvMNGB1gF+2SVfbbkaUO28tzlKMocecyJlnEpWfAa3CPSXkQE45aumdsupa+rboAHr0kpS5ILKhJx0gm+WEZvslKHsPr33Lo+NVfkCEyFWZI3eBjTLGGtOAlmHE489s1Q588pjte+4aIlgJesyJxE9ItXSp9Pfve5VWWfcTH0EQ5afYpDHPcGuetC3hVIhLdwgnlYJ/pgboMu8M7HRhd1dBR38JMkYvskzJr/AR6x7j+BlJonJ3uWifccxTBrTj+dpGhjmTbFdlYcrfDeagOPqT+mjEk1LbC6HjAnNWxL34KpOOOLv2KrDWPN8mbp62YP3Gb7urXy53Q4qVa/rcvaKg6RHXk+XAc2wlNd4Q1hixjsB62kn322ZGgjzzeqypGcobs8V6XLVhdv8BxtpV0vbIO684zEGOVP8MI6yCIprLrqmVA2Gv77w6e3Tjp6qCCKEyyQpKrGpNKPq+pKUndCOenR3w32zXDMy1OqaxDcB0Ww5nBk2mswWKTuIOdKJMd+3wz/kkNevkUVUVnOyVV/101x/3tJhX2B5LcAAwAQm+d6bNBMjQAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: center;
+  cursor: pointer;
+}
+.FlowNode .Title .EditGear:hover {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0FGOUExMkUwNjg1MTFFQUI1M0VCMDgwOTkyMTNBQ0UiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0FGOUExMkYwNjg1MTFFQUI1M0VCMDgwOTkyMTNBQ0UiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQUY5QTEyQzA2ODUxMUVBQjUzRUIwODA5OTIxM0FDRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQUY5QTEyRDA2ODUxMUVBQjUzRUIwODA5OTIxM0FDRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkpNtH8AAAHcSURBVHjaxJYxawIxFMej3GAHkW5F/AA3HHXr2Jschd6m4OIugn4MB+cOroJbu+p2H6Bg5aa6uyh1dTi4vsA/7fM1DSdWDPw88/Lyf5fkJTmVZZnKSZvYZj9lC1uu/gX9k7NsiBsiRv2ROBDVXL0t0cvEgOgSHmw+RjFhfs+w+ah76DOAxpGuDHJHLNn0JERI9FHvMN8WbH34JKzfO7SsgcosyIgYE2l2XGrMvyraUvQZob7kI+OBhiyIsQVETMyJyDLNEdpi+Bq7CTY0No8t1x5PbkuI0LHEL0AWT2gejcjDPKfi7U4lgEbCkulXMoQYcmwReCBmxAeYwSb9YmiE3F5kw/WJOv4fxFT0iAkxJe7BFLae8DV969D8njq9uzcigyIxkhVRsbx9BW18ZE9CS2u3FY6SPTZjR6SwwhQ1HWvShI/cjy1s6k8dQyHqq0NIr0fJ0a7b1o52rZ0Vc5xSBfUPRQfaYa/ohe0QNeHzRjQcGg348FKD1gTau0skQ/RXMih2QpvDcyEEexBsYk1K+L9CG/eds8PWP2fDrsFJG/YqR1AXbzI+I4hhDK2u7Qi6xTNltgBX94KILBmnbXP4BMyeCs3rXHz/eZUvXVf5RT9Orvq5dZEPyC8BBgCnZHx5xIExDwAAAABJRU5ErkJggg==);
+}
+.FlowNode .Title .Delete {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  margin-left: 2px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPRJREFUeNpi/P//PwO5gImBAkCRZhYYo6+n+72ysorAjh3bEq9eubIAWZGYmJhBWHjk/suXLwk0t7YxYth8YP9+x58/f37w8PCar62jk4CukZ2dXeDmjRuJWJ394cP7C6tWLkcxAFkjyEUvXjxHcREjLLTtrC0xbAKZCcQoXjl09DjuAHv16tWF/fv3FkK5AiBN6GGAUzPIZkdH536Yb0DORw4DnJrR/bh40QKsgYihmYeHxyA2LmEKkPlgy5ZNESCngrwADcSjQAPyJSQkE7BqNjYxnQOkrIH+nQiMkpXIYQA0IAdogIK6hkYF1tAeWmkbIMAAz32J2DK/DLkAAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: center;
+  cursor: pointer;
+  filter: sepia(1) hue-rotate(310deg) saturate(10);
+}
+.FlowNode .Title .Delete:hover {
+  filter: sepia(1) hue-rotate(310deg) saturate(10) brightness(2);
+}
+.FlowNode.Preprocessing .Title {
+  background: radial-gradient(
+      circle at top left,
+      rgba(40, 122, 245, 0.4) 0%,
+      #0e2247 60%
+    ), #2c2f34;
+}
+.FlowNode.Keras .Title {
+  background: radial-gradient(circle at top left, #736548 0%, #574b32 60%),
+    #2c2f34;
+}
+.FlowNode.Trainer .Title {
+  background: radial-gradient(circle at top left, #5d7348 0%, #415732 60%),
+    #2c2f34;
+}
+.FlowNode .TitleUnderBar {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+.FlowNode .Body {
+  font-size: 13px;
+  padding: 8px 10px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.FlowNode .Body .SideSection {
+  min-width: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.FlowNode .Body .SideSection.Left {
+  border-right: 1px solid #222;
+}
+.FlowNode .Body .SideSection.Right {
+  border-left: 1px solid #222;
+  text-align: right;
+}
+.FlowNode .Body .CenterSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  flex-grow: 1;
+  height: 100%;
+}
+.FlowNode .Body .CenterSection .Comment {
+  font-size: 12px;
+  font-style: italic;
+  color: #ac966a;
+  margin-bottom: 10px;
+  width: 180px;
+}
+.FlowNode .Body .CenterSection .LabelValue {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.FlowNode .Body .CenterSection .LabelValue .Label {
+  font-size: 13px;
+  color: #aaa;
+}
+.FlowNode .Body .CenterSection .LabelValue .Value {
+  font-size: 13px;
+  color: #fff;
+}
+.DebugEnabled .FlowNode .NodeID {
+  display: block;
+}
+.TrainNode {
+  min-width: 400px;
+}
+.NodeEditDialog .DialogContent {
+  padding: 12px;
+}
+.NodeEditDialog .NodeHeader {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.NodeEditDialog .NodeHeader .SubHeader {
+  font-size: 13px;
+  color: #95825b;
+  font-weight: initial;
+  letter-spacing: initial;
+  text-transform: none;
+  margin-top: 2px;
+}
+.NodeEditDialog .NodeBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.NodeEditDialog .NodeBody .NodeOptionBlock {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.NodeEditDialog .NodeBody .NodeOptionBlock .NodeOptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+}
+.NodeEditDialog .NodeBody .NodeOptionBlock .NodeOptionDesc {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.NodeEditDialog .NodeBody .NodeOptionBlock .OptionDescSub {
+  font-size: 12px;
+  color: #8caeb9;
+  margin-left: 8px;
+}
+.NodeEditDialog .NodeBody .NodeOptionBlock .CheckboxWithLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.NodeEditDialog .NodeBody .NodeOptionBlock .CheckboxWithLabel label {
+  font-size: 13px;
+}
+.NodeEditDialog .NodeBody .Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #242424;
+  margin: 0px;
+}
+.NodeEditDialog .Buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 12px;
+}
+.NodeEditDialog .Buttons .DialogButton {
+  flex-grow: 1;
+}
+.GenericConfirmDialog .SubHeader {
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #99a;
+  line-height: 16px;
+  text-transform: initial;
+  margin-bottom: 10px;
+}
+.GenericConfirmDialog .EditOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.GenericConfirmDialog .EditOptions .Option {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.GenericConfirmDialog .EditOptions .Option .OptionTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.GenericConfirmDialog .EditOptions .Option .OptionDesc {
+  font-size: 13px;
+  color: #888;
+  white-space: pre-wrap;
+}
+.GenericConfirmDialog .EditOptions .Option .OptionDescSub {
+  font-size: 12px;
+  color: #ac966a;
+  margin-left: 20px;
+}
+.GenericConfirmDialog .EditOptions .Option .CheckboxWithLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.GenericConfirmDialog .EditOptions .Option .CheckboxWithLabel label {
+  font-size: 13px;
+}
+.GenericConfirmDialog .EditOptions .Option .OptionInput {
+  width: 80px;
+  height: 26px;
+}
+.GenericConfirmDialog .EditOptions .Option .OptionInput.VeryWide {
+  width: 400px;
+}
+.GenericConfirmDialog .EditOptions .Option .OptionInput.Invalid {
+  color: #f33;
+}
+.GenericConfirmDialog .EditOptions .Option .InputSelect {
+  width: 200px;
+}
+.GenericConfirmDialog .EditOptions .Title {
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #777;
+  background-color: #444;
+  padding: 0px 4px;
+}
+.GenericConfirmDialog .EditOptions .Body {
+  font-size: 13px;
+  padding: 8px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.GenericConfirmDialog .EditOptions .Body .Shape {
+  width: 100%;
+  text-align: center;
+  color: #888;
+}
+.GenericConfirmDialog .EditOptions .Body .Option {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.GenericConfirmDialog .EditOptions .Body .Option .OptionInput {
+  width: 60px;
+  height: 26px;
+}
+.GenericConfirmDialog .EditOptions .Body .Option .OptionInput.Invalid {
+  color: #f33;
+}
+.TrainNodeEditDialog .DialogContent_InnerWidth {
+  max-width: 800px;
+}
+.ConnectorID {
+  display: none;
+  color: aqua;
+  text-shadow: 0px 0px 8px #000;
+}
+.DebugEnabled .ConnectorID {
+  display: block;
+}
+div.react-flow__handle {
+  color: #000;
+  background: #000;
+  border: 2px solid #666;
+  border-radius: 0px;
+  width: 12px;
+  height: 12px;
+}
+div.react-flow__handle-bottom {
+  border-top-color: #000;
+  bottom: -4px;
+}
+div.react-flow__handle-left {
+  border-right-color: #000;
+  left: -4px;
+}
+div.react-flow__handle-top {
+  border-bottom-color: #000;
+  top: -4px;
+}
+div.react-flow__handle-right {
+  border-left-color: #000;
+  right: -4px;
+}
+.InputOption {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.InputOption .Name {
+  font-size: 14px;
+  color: #ac966a;
+  min-width: 200px;
+}
+.InputOption .Name.Small {
+  font-size: 13px;
+}
+.InputOption label {
+  font-size: 14px;
+  color: #ac966a;
+}
+.InputOption .ValueInput {
+  width: 70px;
+  height: 20px;
+  text-align: right;
+}
+.InputOption .ValueInput .Wide {
+  width: 100px;
+}
+.InputOption .ValueInput.Invalid {
+  color: red;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectModelPage {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectModelPage .ProjectModelReactFlow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.ProjectModelPage .ProjectModelReactFlow .ReactFlowWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectModelPage .ProjectModelReactFlow .ReactFlowWrapper .react-flow {
+  background-color: #151515;
+  border: 1px solid #000;
+}
+.ProjectModelPage .ProjectModelReactFlow .DragSourcePanel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 16px;
+}
+.ProjectModelPage .ProjectModelReactFlow .DragSourcePanel .DragRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowTitle {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowTitle
+  .Title {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowTitle.Preprocessing {
+  color: #00a3cb;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowTitle.Preprocessing
+  .SpacerLine {
+  background-color: #005a70;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowTitle.Keras {
+  color: #95825b;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowTitle.Keras
+  .SpacerLine {
+  background-color: #5a4f38;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowTitle
+  .SpacerLine {
+  flex-grow: 1;
+  height: 1px;
+  margin-right: 4px;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowElements {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowElements.Preprocessing
+  .DragSource {
+  border: 1px solid #1a405f;
+  background-color: #143059;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowElements.Keras
+  .DragSource {
+  border: 1px solid #453c28;
+  background-color: #332d20;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DragRowElements
+  .DragSource {
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 11px;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DebugToggle {
+  flex-grow: 1;
+  text-align: right;
+  color: #a9a9a9;
+  cursor: pointer;
+  user-select: none;
+}
+.ProjectModelPage
+  .ProjectModelReactFlow
+  .DragSourcePanel
+  .DragRow
+  .DebugToggle.Enabled {
+  color: #fff;
+}
+.EditOptions {
+  border: 2px solid #000;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  min-height: 80px;
+}
+.EditOptions .Title {
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #777;
+  background-color: #444;
+  padding: 0px 4px;
+}
+.EditOptions .Body {
+  font-size: 13px;
+  padding: 8px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.EditOptions .Body .Shape {
+  width: 100%;
+  text-align: center;
+  color: #888;
+}
+.EditOptions .Body .Option {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.EditOptions .Body .Option .OptionInput {
+  width: 60px;
+  height: 26px;
+}
+.EditOptions .Body .Option .OptionInput.Invalid {
+  color: #f33;
+}
+.CheckboxWithLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+.react-flow {
+  direction: ltr;
+  --xy-edge-stroke-default: #b1b1b7;
+  --xy-edge-stroke-width-default: 1;
+  --xy-edge-stroke-selected-default: #555;
+  --xy-connectionline-stroke-default: #b1b1b7;
+  --xy-connectionline-stroke-width-default: 1;
+  --xy-attribution-background-color-default: rgba(255, 255, 255, 0.5);
+  --xy-minimap-background-color-default: #fff;
+  --xy-minimap-mask-background-color-default: rgb(240, 240, 240, 0.6);
+  --xy-minimap-mask-stroke-color-default: transparent;
+  --xy-minimap-mask-stroke-width-default: 1;
+  --xy-minimap-node-background-color-default: #e2e2e2;
+  --xy-minimap-node-stroke-color-default: transparent;
+  --xy-minimap-node-stroke-width-default: 2;
+  --xy-background-color-default: transparent;
+  --xy-background-pattern-dots-color-default: #91919a;
+  --xy-background-pattern-lines-color-default: #eee;
+  --xy-background-pattern-cross-color-default: #e2e2e2;
+  background-color: var(
+    --xy-background-color,
+    var(--xy-background-color-default)
+  );
+  --xy-node-color-default: inherit;
+  --xy-node-border-default: 1px solid #1a192b;
+  --xy-node-background-color-default: #fff;
+  --xy-node-group-background-color-default: rgba(240, 240, 240, 0.25);
+  --xy-node-boxshadow-hover-default: 0 1px 4px 1px rgba(0, 0, 0, 0.08);
+  --xy-node-boxshadow-selected-default: 0 0 0 0.5px #1a192b;
+  --xy-node-border-radius-default: 3px;
+  --xy-handle-background-color-default: #1a192b;
+  --xy-handle-border-color-default: #fff;
+  --xy-selection-background-color-default: rgba(0, 89, 220, 0.08);
+  --xy-selection-border-default: 1px dotted rgba(0, 89, 220, 0.8);
+  --xy-controls-button-background-color-default: #fefefe;
+  --xy-controls-button-background-color-hover-default: #f4f4f4;
+  --xy-controls-button-color-default: inherit;
+  --xy-controls-button-color-hover-default: inherit;
+  --xy-controls-button-border-color-default: #eee;
+  --xy-controls-box-shadow-default: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+  --xy-edge-label-background-color-default: #ffffff;
+  --xy-edge-label-color-default: inherit;
+  --xy-resize-background-color-default: #3367d9;
+}
+.react-flow.dark {
+  --xy-edge-stroke-default: #3e3e3e;
+  --xy-edge-stroke-width-default: 1;
+  --xy-edge-stroke-selected-default: #727272;
+  --xy-connectionline-stroke-default: #b1b1b7;
+  --xy-connectionline-stroke-width-default: 1;
+  --xy-attribution-background-color-default: rgba(150, 150, 150, 0.25);
+  --xy-minimap-background-color-default: #141414;
+  --xy-minimap-mask-background-color-default: rgb(60, 60, 60, 0.6);
+  --xy-minimap-mask-stroke-color-default: transparent;
+  --xy-minimap-mask-stroke-width-default: 1;
+  --xy-minimap-node-background-color-default: #2b2b2b;
+  --xy-minimap-node-stroke-color-default: transparent;
+  --xy-minimap-node-stroke-width-default: 2;
+  --xy-background-color-default: #141414;
+  --xy-background-pattern-dots-color-default: #777;
+  --xy-background-pattern-lines-color-default: #777;
+  --xy-background-pattern-cross-color-default: #777;
+  --xy-node-color-default: #f8f8f8;
+  --xy-node-border-default: 1px solid #3c3c3c;
+  --xy-node-background-color-default: #1e1e1e;
+  --xy-node-group-background-color-default: rgba(240, 240, 240, 0.25);
+  --xy-node-boxshadow-hover-default: 0 1px 4px 1px rgba(255, 255, 255, 0.08);
+  --xy-node-boxshadow-selected-default: 0 0 0 0.5px #999;
+  --xy-handle-background-color-default: #bebebe;
+  --xy-handle-border-color-default: #1e1e1e;
+  --xy-selection-background-color-default: rgba(200, 200, 220, 0.08);
+  --xy-selection-border-default: 1px dotted rgba(200, 200, 220, 0.8);
+  --xy-controls-button-background-color-default: #2b2b2b;
+  --xy-controls-button-background-color-hover-default: #3e3e3e;
+  --xy-controls-button-color-default: #f8f8f8;
+  --xy-controls-button-color-hover-default: #fff;
+  --xy-controls-button-border-color-default: #5b5b5b;
+  --xy-controls-box-shadow-default: 0 0 2px 1px rgba(0, 0, 0, 0.08);
+  --xy-edge-label-background-color-default: #141414;
+  --xy-edge-label-color-default: #f8f8f8;
+}
+.react-flow__background {
+  background-color: var(
+    --xy-background-color,
+    var(--xy-background-color-props, var(--xy-background-color-default))
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+.react-flow__container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.react-flow__pane {
+  z-index: 1;
+}
+.react-flow__pane.draggable {
+  cursor: grab;
+}
+.react-flow__pane.dragging {
+  cursor: grabbing;
+}
+.react-flow__pane.selection {
+  cursor: pointer;
+}
+.react-flow__viewport {
+  transform-origin: 0 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.react-flow__renderer {
+  z-index: 4;
+}
+.react-flow__selection {
+  z-index: 6;
+}
+.react-flow__nodesselection-rect:focus,
+.react-flow__nodesselection-rect:focus-visible {
+  outline: none;
+}
+.react-flow__edge-path {
+  stroke: var(--xy-edge-stroke, var(--xy-edge-stroke-default));
+  stroke-width: var(--xy-edge-stroke-width, var(--xy-edge-stroke-width-default));
+  fill: none;
+}
+.react-flow__connection-path {
+  stroke: var(
+    --xy-connectionline-stroke,
+    var(--xy-connectionline-stroke-default)
+  );
+  stroke-width: var(
+    --xy-connectionline-stroke-width,
+    var(--xy-connectionline-stroke-width-default)
+  );
+  fill: none;
+}
+.react-flow .react-flow__edges {
+  position: absolute;
+}
+.react-flow .react-flow__edges svg {
+  overflow: visible;
+  position: absolute;
+  pointer-events: none;
+}
+.react-flow__edge {
+  pointer-events: visibleStroke;
+}
+.react-flow__edge.selectable {
+  cursor: pointer;
+}
+.react-flow__edge.animated path {
+  stroke-dasharray: 5;
+  animation: dashdraw .5s linear infinite;
+}
+.react-flow__edge.animated path.react-flow__edge-interaction {
+  stroke-dasharray: none;
+  animation: none;
+}
+.react-flow__edge.inactive {
+  pointer-events: none;
+}
+.react-flow__edge.selected,
+.react-flow__edge:focus,
+.react-flow__edge:focus-visible {
+  outline: none;
+}
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge.selectable:focus .react-flow__edge-path,
+.react-flow__edge.selectable:focus-visible .react-flow__edge-path {
+  stroke: var(--xy-edge-stroke-selected, var(--xy-edge-stroke-selected-default));
+}
+.react-flow__edge-textwrapper {
+  pointer-events: all;
+}
+.react-flow__edge .react-flow__edge-text {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.react-flow__connection {
+  pointer-events: none;
+}
+.react-flow__connection .animated {
+  stroke-dasharray: 5;
+  animation: dashdraw .5s linear infinite;
+}
+svg.react-flow__connectionline {
+  z-index: 1001;
+  overflow: visible;
+  position: absolute;
+}
+.react-flow__nodes {
+  pointer-events: none;
+  transform-origin: 0 0;
+}
+.react-flow__node {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: all;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+.react-flow__node.selectable {
+  cursor: pointer;
+}
+.react-flow__node.draggable {
+  cursor: grab;
+  pointer-events: all;
+}
+.react-flow__node.draggable.dragging {
+  cursor: grabbing;
+}
+.react-flow__nodesselection {
+  z-index: 3;
+  transform-origin: left top;
+  pointer-events: none;
+}
+.react-flow__nodesselection-rect {
+  position: absolute;
+  pointer-events: all;
+  cursor: grab;
+}
+.react-flow__handle {
+  position: absolute;
+  pointer-events: none;
+  min-width: 5px;
+  min-height: 5px;
+  width: 6px;
+  height: 6px;
+  background-color: var(
+    --xy-handle-background-color,
+    var(--xy-handle-background-color-default)
+  );
+  border: 1px solid
+    var(--xy-handle-border-color, var(--xy-handle-border-color-default));
+  border-radius: 100%;
+}
+.react-flow__handle.connectingfrom {
+  pointer-events: all;
+}
+.react-flow__handle.connectionindicator {
+  pointer-events: all;
+  cursor: crosshair;
+}
+.react-flow__handle-bottom {
+  top: auto;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+.react-flow__handle-top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.react-flow__handle-left {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.react-flow__handle-right {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.react-flow__edgeupdater {
+  cursor: move;
+  pointer-events: all;
+}
+.react-flow__panel {
+  position: absolute;
+  z-index: 5;
+  margin: 15px;
+}
+.react-flow__panel.top {
+  top: 0;
+}
+.react-flow__panel.bottom {
+  bottom: 0;
+}
+.react-flow__panel.left {
+  left: 0;
+}
+.react-flow__panel.right {
+  right: 0;
+}
+.react-flow__panel.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.react-flow__attribution {
+  font-size: 10px;
+  background: var(
+    --xy-attribution-background-color,
+    var(--xy-attribution-background-color-default)
+  );
+  padding: 2px 3px;
+  margin: 0;
+}
+.react-flow__attribution a {
+  text-decoration: none;
+  color: #999;
+}
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 10;
+  }
+}
+.react-flow__edgelabel-renderer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  left: 0;
+  top: 0;
+}
+.react-flow__viewport-portal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.react-flow__minimap {
+  background: var(
+    --xy-minimap-background-color-props,
+    var(
+      --xy-minimap-background-color,
+      var(--xy-minimap-background-color-default)
+    )
+  );
+}
+.react-flow__minimap-svg {
+  display: block;
+}
+.react-flow__minimap-mask {
+  fill: var(
+    --xy-minimap-mask-background-color-props,
+    var(
+      --xy-minimap-mask-background-color,
+      var(--xy-minimap-mask-background-color-default)
+    )
+  );
+  stroke: var(
+    --xy-minimap-mask-stroke-color-props,
+    var(
+      --xy-minimap-mask-stroke-color,
+      var(--xy-minimap-mask-stroke-color-default)
+    )
+  );
+  stroke-width: var(
+    --xy-minimap-mask-stroke-width-props,
+    var(
+      --xy-minimap-mask-stroke-width,
+      var(--xy-minimap-mask-stroke-width-default)
+    )
+  );
+}
+.react-flow__minimap-node {
+  fill: var(
+    --xy-minimap-node-background-color-props,
+    var(
+      --xy-minimap-node-background-color,
+      var(--xy-minimap-node-background-color-default)
+    )
+  );
+  stroke: var(
+    --xy-minimap-node-stroke-color-props,
+    var(
+      --xy-minimap-node-stroke-color,
+      var(--xy-minimap-node-stroke-color-default)
+    )
+  );
+  stroke-width: var(
+    --xy-minimap-node-stroke-width-props,
+    var(
+      --xy-minimap-node-stroke-width,
+      var(--xy-minimap-node-stroke-width-default)
+    )
+  );
+}
+.react-flow__background-pattern.dots {
+  fill: var(
+    --xy-background-pattern-color-props,
+    var(
+      --xy-background-pattern-color,
+      var(--xy-background-pattern-dots-color-default)
+    )
+  );
+}
+.react-flow__background-pattern.lines {
+  stroke: var(
+    --xy-background-pattern-color-props,
+    var(
+      --xy-background-pattern-color,
+      var(--xy-background-pattern-lines-color-default)
+    )
+  );
+}
+.react-flow__background-pattern.cross {
+  stroke: var(
+    --xy-background-pattern-color-props,
+    var(
+      --xy-background-pattern-color,
+      var(--xy-background-pattern-cross-color-default)
+    )
+  );
+}
+.react-flow__controls {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(
+    --xy-controls-box-shadow,
+    var(--xy-controls-box-shadow-default)
+  );
+}
+.react-flow__controls.horizontal {
+  flex-direction: row;
+}
+.react-flow__controls-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  width: 26px;
+  padding: 4px;
+  border: none;
+  background: var(
+    --xy-controls-button-background-color,
+    var(--xy-controls-button-background-color-default)
+  );
+  border-bottom: 1px solid
+    var(
+      --xy-controls-button-border-color-props,
+      var(
+        --xy-controls-button-border-color,
+        var(--xy-controls-button-border-color-default)
+      )
+    );
+  color: var(
+    --xy-controls-button-color-props,
+    var(--xy-controls-button-color, var(--xy-controls-button-color-default))
+  );
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.react-flow__controls-button svg {
+  width: 100%;
+  max-width: 12px;
+  max-height: 12px;
+  fill: currentColor;
+}
+.react-flow__edge.updating .react-flow__edge-path {
+  stroke: #777;
+}
+.react-flow__edge-text {
+  font-size: 10px;
+}
+.react-flow__node.selectable:focus,
+.react-flow__node.selectable:focus-visible {
+  outline: none;
+}
+.react-flow__node-input,
+.react-flow__node-default,
+.react-flow__node-output,
+.react-flow__node-group {
+  padding: 10px;
+  border-radius: var(
+    --xy-node-border-radius,
+    var(--xy-node-border-radius-default)
+  );
+  width: 150px;
+  font-size: 12px;
+  color: var(--xy-node-color, var(--xy-node-color-default));
+  text-align: center;
+  border: var(--xy-node-border, var(--xy-node-border-default));
+  background-color: var(
+    --xy-node-background-color,
+    var(--xy-node-background-color-default)
+  );
+}
+.react-flow__node-input.selectable:hover,
+.react-flow__node-default.selectable:hover,
+.react-flow__node-output.selectable:hover,
+.react-flow__node-group.selectable:hover {
+  box-shadow: var(
+    --xy-node-boxshadow-hover,
+    var(--xy-node-boxshadow-hover-default)
+  );
+}
+.react-flow__node-input.selectable.selected,
+.react-flow__node-input.selectable:focus,
+.react-flow__node-input.selectable:focus-visible,
+.react-flow__node-default.selectable.selected,
+.react-flow__node-default.selectable:focus,
+.react-flow__node-default.selectable:focus-visible,
+.react-flow__node-output.selectable.selected,
+.react-flow__node-output.selectable:focus,
+.react-flow__node-output.selectable:focus-visible,
+.react-flow__node-group.selectable.selected,
+.react-flow__node-group.selectable:focus,
+.react-flow__node-group.selectable:focus-visible {
+  box-shadow: var(
+    --xy-node-boxshadow-selected,
+    var(--xy-node-boxshadow-selected-default)
+  );
+}
+.react-flow__node-group {
+  background-color: var(
+    --xy-node-group-background-color,
+    var(--xy-node-group-background-color-default)
+  );
+}
+.react-flow__nodesselection-rect,
+.react-flow__selection {
+  background: var(
+    --xy-selection-background-color,
+    var(--xy-selection-background-color-default)
+  );
+  border: var(--xy-selection-border, var(--xy-selection-border-default));
+}
+.react-flow__nodesselection-rect:focus,
+.react-flow__nodesselection-rect:focus-visible,
+.react-flow__selection:focus,
+.react-flow__selection:focus-visible {
+  outline: none;
+}
+.react-flow__controls-button:hover {
+  background: var(
+    --xy-controls-button-background-color-hover-props,
+    var(
+      --xy-controls-button-background-color-hover,
+      var(--xy-controls-button-background-color-hover-default)
+    )
+  );
+  color: var(
+    --xy-controls-button-color-hover-props,
+    var(
+      --xy-controls-button-color-hover,
+      var(--xy-controls-button-color-hover-default)
+    )
+  );
+}
+.react-flow__controls-button:disabled {
+  pointer-events: none;
+}
+.react-flow__controls-button:disabled svg {
+  fill-opacity: 0.4;
+}
+.react-flow__controls-button:last-child {
+  border-bottom: none;
+}
+.react-flow__resize-control {
+  position: absolute;
+}
+.react-flow__resize-control.left,
+.react-flow__resize-control.right {
+  cursor: ew-resize;
+}
+.react-flow__resize-control.top,
+.react-flow__resize-control.bottom {
+  cursor: ns-resize;
+}
+.react-flow__resize-control.top.left,
+.react-flow__resize-control.bottom.right {
+  cursor: nwse-resize;
+}
+.react-flow__resize-control.bottom.left,
+.react-flow__resize-control.top.right {
+  cursor: nesw-resize;
+}
+.react-flow__resize-control.handle {
+  width: 4px;
+  height: 4px;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  background-color: var(
+    --xy-resize-background-color,
+    var(--xy-resize-background-color-default)
+  );
+  transform: translate(-50%, -50%);
+}
+.react-flow__resize-control.handle.left {
+  left: 0;
+  top: 50%;
+}
+.react-flow__resize-control.handle.right {
+  left: 100%;
+  top: 50%;
+}
+.react-flow__resize-control.handle.top {
+  left: 50%;
+  top: 0;
+}
+.react-flow__resize-control.handle.bottom {
+  left: 50%;
+  top: 100%;
+}
+.react-flow__resize-control.handle.top.left {
+  left: 0;
+}
+.react-flow__resize-control.handle.bottom.left {
+  left: 0;
+}
+.react-flow__resize-control.handle.top.right {
+  left: 100%;
+}
+.react-flow__resize-control.handle.bottom.right {
+  left: 100%;
+}
+.react-flow__resize-control.line {
+  border-color: var(
+    --xy-resize-background-color,
+    var(--xy-resize-background-color-default)
+  );
+  border-width: 0;
+  border-style: solid;
+}
+.react-flow__resize-control.line.left,
+.react-flow__resize-control.line.right {
+  width: 1px;
+  transform: translate(-50%, 0);
+  top: 0;
+  height: 100%;
+}
+.react-flow__resize-control.line.left {
+  left: 0;
+  border-left-width: 1px;
+}
+.react-flow__resize-control.line.right {
+  left: 100%;
+  border-right-width: 1px;
+}
+.react-flow__resize-control.line.top,
+.react-flow__resize-control.line.bottom {
+  height: 1px;
+  transform: translate(0, -50%);
+  left: 0;
+  width: 100%;
+}
+.react-flow__resize-control.line.top {
+  top: 0;
+  border-top-width: 1px;
+}
+.react-flow__resize-control.line.bottom {
+  border-bottom-width: 1px;
+  top: 100%;
+}
+.react-flow__edge-textbg {
+  fill: var(
+    --xy-edge-label-background-color,
+    var(--xy-edge-label-background-color-default)
+  );
+}
+.react-flow__edge-text {
+  fill: var(--xy-edge-label-color, var(--xy-edge-label-color-default));
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectSnapshotFilterPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectSnapshotFilterPage .ProjectConfigBody {
+  display: flex;
+  flex-direction: column;
+}
+.SnapshotStatus {
+  display: flex;
+  flex-direction: column;
+}
+.SnapshotStatus .StatusRow {
+  display: flex;
+  flex-direction: row;
+}
+.SnapshotStatus .StatusRow .StatusLabel {
+  min-width: 205px;
+  font-size: 14px;
+  color: #ac966a;
+}
+.SnapshotStatus .StatusRow .StatusValue {
+  font-size: 14px;
+  color: #fff;
+}
+.ShowExamplesButton {
+  width: max-content;
+}
+.SnapshotExample {
+  display: flex;
+  flex-direction: column;
+}
+.SnapshotExample .ExampleHeader {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #ac966a;
+}
+.SnapshotExample .ExampleValues {
+  margin-left: 10px;
+}
+.SnapshotExample .ExampleValues .SnapshotExampleEntry {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.SnapshotExample .ExampleValues .SnapshotExampleEntry .DataElementPath {
+  min-width: 350px;
+  color: #aaa;
+}
+.SnapshotExample .ExampleValues .SnapshotExampleEntry .DataElementValue {
+  color: #ddd;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectTrainSettingsPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.CheckboxWithLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.CheckboxWithLabel label {
+  font-size: 14px;
+  color: #ac966a;
+  min-width: 200px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectTrainStatusPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectTrainStatusPage .ProjectTrainStatusBody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.StatusMessage {
+  font-size: 20px;
+  color: #aaa;
+}
+.FetchStatusPanel {
+  display: flex;
+  flex-direction: column;
+}
+.FetchStatusPanel .TopSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.FetchStatusPanel .TopSection .TopLeft {
+  display: flex;
+  flex-direction: column;
+}
+.FetchStatusPanel .TopSection .TopLeft .OverallStatus {
+  font-size: 24px;
+  font-weight: bold;
+  color: #67c1f5;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.FetchStatusPanel .TopSection .TopLeft .StatusString {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 6px;
+}
+.FetchStatusPanel .TopSection .TopLeft .StatusString.Unknown {
+  color: gray;
+}
+.FetchStatusPanel .TopSection .TopLeft .StatusString.Unstarted {
+  color: gray;
+}
+.FetchStatusPanel .TopSection .TopLeft .StatusString.InProgress {
+  color: #7aa383;
+}
+.FetchStatusPanel .TopSection .TopLeft .StatusString.Complete {
+  color: #b1f3bf;
+}
+.FetchStatusPanel .TopSection .TopLeft .StatusString.Error {
+  color: #8a2525;
+}
+.FetchStatusPanel .TopSection .TopRight {
+  color: red;
+}
+.FetchStatusPanel .StatusProgress {
+  display: flex;
+  flex-direction: column;
+}
+.FetchStatusPanel .StatusProgress .RowProgress {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.FetchStatusPanel .StatusProgress .RowProgress .RowCurrent {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+.FetchStatusPanel .StatusProgress .RowProgress .RowSlash {
+  font-size: 14px;
+  color: gray;
+}
+.FetchStatusPanel .StatusProgress .RowProgress .RowTotal {
+  font-size: 14px;
+  color: #d3d3d3;
+  margin-right: 10px;
+}
+.FetchStatusPanel .StatusProgress .RowProgress .ProgressPct {
+  font-size: 16px;
+  color: #ac966a;
+}
+.FetchStatusPanel .ShowWorkers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.FetchStatusPanel .ShowWorkers .WorkersContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  padding-left: 30px;
+}
+.FetchStatusPanel .ShowWorkers .WorkersContainer .Worker {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.FetchStatusPanel .ShowWorkers .WorkersContainer .Worker .WorkerNumber {
+  font-size: 14px;
+  color: #ddd;
+  width: 20px;
+}
+.FetchStatusPanel .ShowWorkers .WorkersContainer .Worker .ProgressBar {
+  width: 270px;
+  height: 5px;
+  border: 1px solid #6c6c6c;
+}
+.FetchStatusPanel
+  .ShowWorkers
+  .WorkersContainer
+  .Worker
+  .ProgressBar
+  .ProgressBarInner {
+  height: 100%;
+  background-color: #535353;
+  transition-property: width;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+.FetchStatusPanel .ShowWorkers .ShowWorkersTextButton {
+  font-size: 14px;
+  color: #666;
+  width: fit-content;
+  user-select: none;
+  cursor: pointer;
+}
+.FetchStatusPanel .ShowWorkers .ShowWorkersTextButton:hover {
+  color: #999;
+}
+.ProgressBar {
+  border: 1px solid #9b9b9b;
+  width: 300px;
+  height: 10px;
+  margin-right: 5px;
+}
+.ProgressBar.Green {
+  border: 1px solid #849483;
+}
+.ProgressBar.Green .ProgressBarInner {
+  background-color: #586658;
+}
+.ProgressBar .ProgressBarInner {
+  height: 100%;
+  background-color: #686868;
+  transition-property: width;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+.MetadataProcessingStatus {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.MetadataProcessingStatus .MetadataEntry {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.MetadataProcessingStatus .MetadataEntry .MetadataEntryType {
+  min-width: 230px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: #7aa383;
+}
+.MetadataProcessingStatus .MetadataEntry .ProgressValue {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: #a8d1b1;
+}
+.TrainStatusPanel {
+  display: flex;
+  flex-direction: column;
+}
+.TrainStatusPanel .TopSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.TrainStatusPanel .TopSection .TopLeft {
+  display: flex;
+  flex-direction: column;
+}
+.TrainStatusPanel .TopSection .TopLeft .OverallStatus {
+  font-size: 24px;
+  font-weight: bold;
+  color: #67c1f5;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.TrainStatusPanel .TopSection .TopLeft .StatusString {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.TrainStatusPanel .TopSection .TopLeft .StatusString.Unknown {
+  color: gray;
+}
+.TrainStatusPanel .TopSection .TopLeft .StatusString.Unstarted {
+  color: gray;
+}
+.TrainStatusPanel .TopSection .TopLeft .StatusString.InProgress {
+  color: #7aa383;
+}
+.TrainStatusPanel .TopSection .TopLeft .StatusString.Complete {
+  color: #b1f3bf;
+}
+.TrainStatusPanel .TopSection .TopLeft .StatusString.Error {
+  color: #8a2525;
+}
+.TrainStatusPanel .TopSection .TopLeft .Timinginfo {
+  margin-bottom: 10px;
+}
+.TrainStatusPanel .TopSection .TopLeft .TrainLive {
+  font-size: 16px;
+  margin-bottom: 6px;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 6px 10px;
+  width: fit-content;
+}
+.TrainStatusPanel .EpochSelectorSection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 0px;
+}
+.TrainStatusPanel .EpochSelectorSection .EpochOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #2c4858;
+  border-radius: 2px;
+}
+.TrainStatusPanel .EpochSelectorSection .EpochOption:hover {
+  background-color: #335568;
+}
+.TrainStatusPanel .EpochSelectorSection .EpochOption.Selected {
+  background-color: #417a9b;
+}
+.TrainStatusPanel .BatchStatus {
+  display: flex;
+  flex-direction: column;
+}
+.TrainStatusPanel .BatchStatus .BatchStatusRow {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  font-size: 15px;
+}
+.TrainStatusPanel .BatchStatus .BatchStatusRow .PhaseLabel {
+  color: #999;
+}
+.TrainStatusPanel .BatchStatus .BatchStatusRow .PhaseValues {
+  color: #aaa;
+}
+.TrainStatusPanel .BatchStatus .BatchStatusRow .PhaseValues .Total {
+  color: #ddd;
+}
+.TrainStatusPanel .CurrentEpoch {
+  display: flex;
+  flex-direction: column;
+}
+.TrainStatusPanel .CurrentEpoch .RowProgress {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.TrainStatusPanel .CurrentEpoch .RowProgress .RowCurrent {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+.TrainStatusPanel .CurrentEpoch .RowProgress .RowSlash {
+  font-size: 14px;
+  color: gray;
+}
+.TrainStatusPanel .CurrentEpoch .RowProgress .RowTotal {
+  font-size: 14px;
+  color: #d3d3d3;
+  margin-right: 10px;
+}
+.TrainStatusPanel .CurrentEpoch .GraphPair {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.TrainGraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TrainGraph .GraphTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.TrainGraph .LineValues {
+  display: flex;
+  flex-direction: column;
+}
+.TrainGraph .LineValues .Value {
+  font-weight: bold;
+}
+.LogSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.LogSection .ButtonRow {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.LogSection .WorkerLogs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.LogSection .WorkerLogs .WorkerLogHeader {
+  font-size: 18px;
+  color: #fff;
+}
+.LogSection .LogContainer {
+  border: 1px solid #313131;
+  padding: 10px;
+  background-color: #131518;
+  white-space: pre-wrap;
+  font-size: 11px;
+  font-family: monospace;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.SteamLearnApp {
+  display: flex;
+  flex-direction: column;
+  max-width: 1380px;
+  margin: 40px auto 0px auto;
+  padding: 0px 20px;
+  padding-bottom: 20px;
+}
+.MainAppContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.ProjectTabContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.ProjectTabContainer .TabAndSpacer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.ProjectTabContainer .TabAndSpacer .Tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+  padding: 8px 12px;
+  background-color: #262626;
+  border-bottom: 1px solid #67c1f5;
+  color: #ddd;
+  padding-bottom: 7px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  text-transform: uppercase;
+  transition-property: color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+}
+.ProjectTabContainer .TabAndSpacer .Tab.Active {
+  color: #fff;
+  background-color: #363636;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #67c1f5;
+}
+.ProjectTabContainer .TabAndSpacer .Tab:hover {
+  color: #ddd;
+  background-color: #2f2f2f;
+}
+.ProjectTabContainer .TabAndSpacer .Tab.Disabled {
+  color: #999;
+  pointer-events: none;
+}
+.ProjectTabContainer .TabAndSpacer .TabSpacer {
+  border-bottom: 1px solid #67c1f5;
+  width: 8px;
+}
+.LeftMenuBar {
+  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
+  flex-grow: 1;
+  background-color: #242424;
+  border-right: 1px solid #000;
+  text-align: left;
+}
+.LeftMenuBarSectionHeader {
+  width: 100%;
+  height: 40px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+  color: #ddd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #323940;
+  border-bottom: 1px solid #335d74;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+.LeftMenuBarItem {
+  width: 100%;
+  height: 30px;
+  padding: 0px 20px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+.LeftMenuBarItem.Disabled {
+  color: #555;
+  pointer-events: none;
+}
+.LeftMenuBarItem.Active {
+  color: #67c1f5;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectTrainPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectTrainPage .FetchTrainOptionContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.ProjectTrainPage .StatusMessage {
+  font-size: 20px;
+  color: #aaa;
+}
+.ProjectTrainPage .SaveWarning {
+  font-size: 20px;
+  color: #ad4b4b;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style-type: square;
+}
+hr {
+  height: 0px;
+  border-bottom: 2px solid #67c1f5;
+  margin-bottom: 4px;
+}
+hr.VO {
+  border-bottom: 2px solid #e26748;
+}
+select {
+  width: fit-content !important;
+}
+button.Warning {
+  background-color: red;
+}
+#application_root {
+  min-height: inherit;
+}
+button.DialogButton {
+  width: fit-content !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+._DialogColLayout {
+  gap: 8px;
+}
+.Separator {
+  width: 100%;
+  height: 1px;
+  background-color: #444;
+  margin: 10px 0px;
+}
+.TextButton {
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  color: #999;
+}
+.TextButton:hover {
+  color: #fff;
+}
+.OptionBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.OptionBlock .OptionHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.OptionBlock .OptionDesc {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.SteamLearnButton {
+  width: fit-content;
+  padding: 2px 6px;
+  border-radius: 2px;
+  user-select: none;
+  transition-property: color, background-color, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.SteamLearnButton:not(.Disabled) {
+  cursor: pointer;
+}
+.SteamLearnButton.Hidden {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.SteamLearnButton.Large {
+  font-size: 14px;
+}
+.SteamLearnButton.Medium {
+  font-size: 13px;
+}
+.SteamLearnButton.Blue {
+  background-color: #417a9b;
+  color: #dbdbdb;
+}
+.SteamLearnButton.Red {
+  background-color: #c64444;
+  color: #000;
+}
+.SteamLearnButton.Disabled {
+  background-color: #4e4e4e;
+  color: #888;
+}
+.SteamLearnButton:hover.Blue:not(.Disabled) {
+  background-color: #57a3cf;
+  color: #fff;
+}
+.SteamLearnButton:hover.Red:not(.Disabled) {
+  background-color: #f93d3d;
+  color: #000;
+}
+.ProjectOverviewPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectOverviewPage .OverviewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide,
+.ProjectOverviewPage .OverviewContainer .RightSide {
+  flex-grow: 1;
+  flex-basis: 1px;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .LiveTrainSection,
+.ProjectOverviewPage .OverviewContainer .RightSide .LiveTrainSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectOverviewPage
+  .OverviewContainer
+  .LeftSide
+  .LiveTrainSection
+  .LiveTrainHeader,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .LiveTrainSection
+  .LiveTrainHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .AllTrains,
+.ProjectOverviewPage .OverviewContainer .RightSide .AllTrains {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .AllTrains .AllTrainsHeader,
+.ProjectOverviewPage .OverviewContainer .RightSide .AllTrains .AllTrainsHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .AllTrains .EventList,
+.ProjectOverviewPage .OverviewContainer .RightSide .AllTrains .EventList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .InProgressTrains,
+.ProjectOverviewPage .OverviewContainer .RightSide .InProgressTrains {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ProjectOverviewPage
+  .OverviewContainer
+  .LeftSide
+  .InProgressTrains
+  .InProgressTrainsHeader,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .InProgressTrains
+  .InProgressTrainsHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .InProgressTrains .EventList,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .InProgressTrains
+  .EventList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .AccessTokensContainer,
+.ProjectOverviewPage .OverviewContainer .RightSide .AccessTokensContainer {
+  display: flex;
+  flex-direction: column;
+}
+.ProjectOverviewPage
+  .OverviewContainer
+  .LeftSide
+  .AccessTokensContainer
+  .AccessTokensHeader,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .AccessTokensContainer
+  .AccessTokensHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.ProjectOverviewPage
+  .OverviewContainer
+  .LeftSide
+  .AccessTokensContainer
+  .AccessToken,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .AccessTokensContainer
+  .AccessToken {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.ProjectOverviewPage
+  .OverviewContainer
+  .LeftSide
+  .AccessTokensContainer
+  .AccessToken
+  .TokenName,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .AccessTokensContainer
+  .AccessToken
+  .TokenName {
+  min-width: 150px;
+  font-size: 14px;
+}
+.ProjectOverviewPage
+  .OverviewContainer
+  .LeftSide
+  .AccessTokensContainer
+  .AccessToken
+  .TokenString,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .AccessTokensContainer
+  .AccessToken
+  .TokenString {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ddd;
+}
+.ProjectOverviewPage .OverviewContainer .LeftSide .DataSourcesContainer,
+.ProjectOverviewPage .OverviewContainer .RightSide .DataSourcesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ProjectOverviewPage
+  .OverviewContainer
+  .LeftSide
+  .DataSourcesContainer
+  .DataSourcesHeader,
+.ProjectOverviewPage
+  .OverviewContainer
+  .RightSide
+  .DataSourcesContainer
+  .DataSourcesHeader {
+  font-size: 16px;
+  color: #67c1f5;
+  margin-bottom: 6px;
+}
+.LiveTrain {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #454545;
+  border-radius: 3px;
+  padding: 6px 10px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.LiveTrain .LeftSide,
+.LiveTrain .RightSide {
+  flex-grow: 1;
+  flex-basis: 1px;
+}
+.LiveTrain .LeftSide {
+  display: flex;
+  flex-direction: column;
+}
+.LiveTrain .LeftSide .Time {
+  font-size: 16px;
+  color: #fff;
+}
+.LiveTrain .LeftSide .TrainID {
+  font-size: 14px;
+  color: #67c1f5;
+}
+.LiveTrain .LeftSide .LossAccuracy {
+  color: #ac966a;
+}
+.LiveTrain .RightSide {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}

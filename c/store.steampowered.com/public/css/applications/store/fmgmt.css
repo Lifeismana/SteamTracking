@@ -1,0 +1,2211 @@
+.IncomingInviteRow {
+  background-color: #0e141b;
+  margin: 10px;
+  padding: 20px;
+}
+.IncomingInviteRow .InviteRowHeader {
+  color: #fff;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.IncomingInviteRow .InviteRowHeader .Avatar {
+  display: inline-block;
+  vertical-align: middle;
+}
+.IncomingInviteRow .InviteRowHeader .PersonaName {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.IncomingInviteRow .InviteRowHeader .FamilyName {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #1a9fff;
+}
+.IncomingInviteRow .InviteRowHeader .RoleIcon {
+  margin-right: 3px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+.IncomingInviteRow .InviteRowHeader .RoleBlock {
+  display: inline;
+  white-space: nowrap;
+}
+.IncomingInviteRow .RoleName {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+.IncomingInviteRow .RoleDescriptionShort {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.IncomingInviteRow .RoleDescriptionList {
+  font-weight: bold;
+  margin-left: 16px;
+}
+.IncomingInviteRow .LearnMoreLink {
+  cursor: pointer;
+  color: #1a9fff;
+}
+.IncomingInviteRow .Buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.IncomingInviteRow .Buttons .AcceptInviteButton {
+  flex-basis: 120px;
+}
+.IncomingInviteRow .Buttons .AcceptInviteButton:hover {
+  background-color: #1a9fff;
+}
+.IncomingInviteRow .Buttons .DeclineInviteButton {
+  flex-basis: 120px;
+}
+.IncomingInviteRow .Buttons .DeclineInviteButton:hover {
+  background-color: #de3618;
+}
+.IncomingInviteRow .WallOfText {
+  font-size: 16px;
+  line-height: 18px;
+}
+.IncomingInviteRow .WallOfText p {
+  margin-bottom: 6px;
+}
+.FamilyIncomingInvites {
+  background-color: #1f2a39;
+  padding-bottom: 5px;
+}
+.FamilyIncomingInvites .IncomingInvitesHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.FamilyIncomingInvites .IncomingInvitesDescription {
+  padding: 10px 10px;
+}
+.FamilyIncomingInvites .DimChildren {
+  filter: brightness(40%);
+}
+.FamilyIncomingInvites .IncomingInviteGone {
+  background-color: #0e141b;
+  margin: 10px;
+  padding: 16px;
+  color: #fff;
+  font-size: 16px;
+}
+.FamilyIncomingInvites .AcceptInviteButton {
+  width: auto;
+  background-color: #1a9fff;
+  padding: 2px 20px;
+}
+.FamilyIncomingInvites .DeclineInviteButton {
+  width: auto;
+  background-color: #de3618;
+  padding: 2px 20px;
+  margin-left: 10px;
+}
+.FamilyIncomingInvites .ThrobberContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.DialogText {
+  padding: 10px 0;
+}
+.InviteButtonCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  background-color: #0e141b;
+  padding: 8px 24px;
+  height: 84px;
+}
+.InviteButtonCtn .InviteButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 8px 24px;
+  margin: 8px;
+  max-width: 200px;
+}
+.InviteButtonCtn .InviteButton svg {
+  height: 32px;
+  width: auto;
+}
+a:hover {
+  color: #fff;
+}
+.SelectAccountContainer,
+.SelectRoleContainer {
+  background-color: #0e141b;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  padding: 12px 12px 18px 12px;
+  display: flex;
+  flex-direction: column;
+}
+.SelectAccountContainer .CloseButton,
+.SelectRoleContainer .CloseButton {
+  display: flex;
+  align-self: flex-end;
+  cursor: pointer;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: transparent;
+  transition: background-color 80ms ease-in;
+  width: 24px;
+}
+.SelectAccountContainer .CloseButton svg,
+.SelectRoleContainer .CloseButton svg {
+  height: 18px;
+  width: 18px;
+  margin-right: 0px;
+}
+.SelectAccountContainer .CloseButton:hover,
+.SelectRoleContainer .CloseButton:hover {
+  background-color: #de3618;
+}
+.SelectAccountContainer .Text,
+.SelectRoleContainer .Text {
+  text-align: center;
+  color: #fff;
+  margin: 18px;
+}
+.SelectAccountContainer .Header {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.SelectAccountContainer .MethodButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+}
+.SelectAccountContainer .MethodButtons button {
+  flex: 1 1 5em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+}
+.SelectAccountContainer .MethodButtons button:hover {
+  background-color: #1a9fff;
+}
+.SelectRoleContainer .Header {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  align-items: center;
+}
+.SelectRoleContainer .Header .Invite {
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.SelectRoleContainer .Header .PlayerName {
+  font-size: 20px;
+  color: #1a9fff;
+}
+.SelectRoleContainer .InviteRoles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.SelectRoleContainer .InviteRole {
+  display: flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-style: none;
+  border-width: thin;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+.SelectRoleContainer .InviteRole input {
+  margin-left: 5px;
+}
+.SelectRoleContainer .RoleIcon {
+  margin-right: 8px;
+}
+.ProfilePlusRole {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ProfilePlusRole .PlayerName {
+  font-size: 20px;
+  color: #1a9fff;
+}
+.ProfilePlusRole .RoleIcon {
+  margin-right: 8px;
+  margin-left: 20px;
+}
+.ProfilePlusRole .RoleName {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.ProfileSelector {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  gap: 10px;
+}
+.ProfileSelector .ProfileChoice {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  cursor: pointer;
+}
+.ProfileSelector .ProfileChoice .PlayerName {
+  color: #59bf40;
+}
+.InviteFamilyMember .InviteMemberExpandButton {
+  display: flex;
+  justify-content: center;
+  background-color: #1f2a39;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.InviteFamilyMember .InviteMemberExpandButton .SVGIcon_Button {
+  width: 40px;
+  height: 40px;
+  fill: rgba(255, 255, 255, 0.66);
+  padding: 20px 0px;
+}
+.InviteFamilyMember .InviteSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f2a39;
+  border-style: dotted;
+  border-color: #87cefa;
+  border-width: thin;
+  padding: 20px 20px;
+}
+.InviteFamilyMember .InviteSection .CloseInviteSection {
+  align-self: flex-end;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.InviteFamilyMember .InviteSection .Header {
+  padding: 10px 0px 20px 0px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.InviteFamilyMember .InviteSection .GroupSlotCooldownDescription {
+  color: crimson;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.InviteFamilyMember .InviteSection .InviteRoleDescription {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.InviteFamilyMember .InviteSection .InviteRoles {
+  display: flex;
+  align-items: center;
+}
+.InviteFamilyMember .InviteSection .ActiveRole {
+  border: 1px solid #1a9fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+.InviteFamilyMember .InviteSection .InviteMethodHeader {
+  margin-top: 10px;
+}
+.InviteFamilyMember .InviteSection .InviteMethods {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 10px;
+}
+.InviteFamilyMember .InviteSection .InviteMethodButton {
+  background-color: green;
+  margin-top: 10px;
+}
+.InviteFamilyMember .InviteSection .SelectedFriend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.InviteFamilyMember .InviteSection .SelectedFriend .Avatar {
+  margin-right: 10px;
+}
+.InviteFamilyMember .InviteSection .SelectedFriend .RemoveSelection {
+  margin-left: 40px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.InviteFamilyMember .InviteSection .InviteSectionButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.InviteFamilyMember .InviteButton {
+  padding: 0px 20px;
+  width: auto;
+  margin-right: 20px;
+  background-color: #006400;
+}
+.InviteFamilyMember .CancelButton {
+  padding: 0px 20px;
+  width: auto;
+}
+.SelectFriendModal.SelectFriendModal {
+  min-width: 35vw;
+}
+.InviteFriendSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.InviteFriendSelector .InputContainer {
+  margin-top: 10px;
+  width: 100%;
+}
+.InviteFriendSelector .InviteFriendInput {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.InviteFriendSelector .FriendList {
+  width: 100%;
+  height: 505px;
+  overflow-y: scroll;
+  display: inline-block;
+  position: relative;
+}
+.FriendSelectorRow {
+  display: flex;
+}
+.FriendSelectorRow .FriendSelectorInner {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.InviteCodeSelector {
+  margin-top: 10px;
+}
+.InviteCodeSelector .InviteFriendCode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+@media screen and (max-width: 500px) {
+  .InviteCodeSelector .InviteFriendCode {
+    flex-direction: column;
+  }
+}
+.InviteCodeSelector .InviteFriendCode .InviteFriendCodeInput {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  max-width: 200px;
+}
+.InviteCodeSelector .InviteFriendCode .SetFriendCodeButton {
+  padding: 0px 20px;
+  width: auto;
+}
+.InviteCodeSelector .FriendSelectorRow {
+  justify-content: center;
+}
+.InviteText {
+  text-align: center;
+}
+.ThrobberContainer {
+  display: flex;
+  justify-content: center;
+}
+.FriendSelectorPlaceholder {
+  height: 84px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.FriendSelectorPlaceholder.Error {
+  color: #de3618;
+}
+.FamilyManagementHeader {
+  position: relative;
+}
+.SectionDescription {
+  padding: 0px 0px 10px 0px;
+}
+.AccountHeader {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  gap: 8px;
+  height: 31px;
+}
+.AccountHeader .BetaBadge {
+  flex-grow: 1;
+  padding-left: 3px;
+}
+.PreferencesHeader svg {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+.FamilyContainer {
+  margin-top: 10px;
+}
+.FamilyContainer .FamilySubsection {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: left;
+  color: #fff;
+}
+.FamilyContainer .FamilyTabs {
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  text-transform: none;
+  border-bottom: 1px solid #1a9fff;
+}
+.FamilyContainer .FamilyTabs::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .FamilyContainer .FamilyTabs {
+    margin-right: -6vw;
+  }
+  .FamilyContainer .FamilyTabs .FamilyTab {
+    color: #fff;
+    border-bottom: 0px;
+    text-transform: none;
+    letter-spacing: unset;
+  }
+  .FamilyContainer .FamilyTabs .FamilyTab.ActiveTab {
+    color: #67c1f5;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(to top, #223d5a, transparent);
+    font-weight: 600;
+  }
+}
+.ThrobberContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.ManageFamily .FamilyNameAndSlots {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+  padding-bottom: 16px;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  height: 34px;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor > * {
+  display: inline;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .YourFamily {
+  display: inline;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .FamilyName {
+  color: #1a9fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .FamilyNameButton {
+  padding: 4px 10px;
+  border-radius: 2px;
+  background-color: #f0f8ff12;
+  display: flex;
+  align-items: center;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .FamilyNameButton:hover {
+  background-color: rgba(240, 248, 255, 0.151);
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .EditNameInput {
+  color: #fff;
+  background-color: #3d4450;
+  font-size: 16px;
+  padding: 4px;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .EditButton {
+  margin: 4px 0px 0px 10px;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .EditButton > svg {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .SaveButton {
+  margin-left: 10px;
+  background-color: #1a9fff;
+  padding: 2px 10px;
+  width: unset;
+  line-height: unset;
+}
+.ManageFamily .FamilyNameAndSlots .FamilyNameEditor .CancelButton {
+  margin-left: 10px;
+  padding: 2px 10px;
+  width: unset;
+  line-height: unset;
+}
+.ManageFamily .ExpandedPendingInvite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.ManageFamily .ExpandedPendingInvite .InviteDescription {
+  text-align: center;
+  width: 80%;
+}
+@media screen and (max-width: 500px) {
+  .ManageFamily .ExpandedPendingInvite .InviteDescription {
+    width: auto;
+  }
+}
+.ManageFamily .ExpandedPendingInvite .Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: 8px;
+}
+@media screen and (max-width: 500px) {
+  .ManageFamily .ExpandedPendingInvite .Buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.ManageFamily .ExpandedPendingInvite .Buttons .ManagementButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 24px;
+  width: fit-content;
+}
+.ManageFamily .ExpandedPendingInvite .Buttons .ManagementButton svg {
+  width: 20px;
+  height: 20px;
+}
+.ManageFamily .CancelInviteButton:hover {
+  background-color: #de3618;
+}
+.ManageFamily .ResendInviteButton:hover {
+  background-color: #1a9fff;
+}
+.OnboardSplashContainer .WallOfText {
+  max-width: 45em;
+  margin: 8px auto;
+}
+.OnboardSplashContainer .SplashCooldown {
+  max-width: 45em;
+  margin: 18px auto;
+  text-align: left;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.OnboardSplashContainer .SplashCooldown svg {
+  height: 48px;
+  width: 48px;
+}
+.OnboardSplashContainer .SplashCooldown .UndeleteSplashButton {
+  max-width: fit-content;
+  padding: 8px 18px;
+  margin: 0px auto;
+}
+.OnboardSplashContainer .OnboardSplashButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.OnboardSplashContainer .OnboardSplashButtons .OnboardSplashButton {
+  text-align: center;
+  padding: 16px 8px;
+  margin: 16px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 500px) {
+  .OnboardSplashContainer .OnboardSplashButtons .OnboardSplashButton {
+    margin: 3px;
+  }
+}
+.OnboardSplashContainer
+  .OnboardSplashButtons
+  .OnboardSplashButton
+  .OnboardSplashButtonLabel {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+.OnboardSplashContainer .OnboardSplashButtons .OnboardSplashButton svg {
+  height: 32px;
+  width: auto;
+}
+.OnboardSplashContainer
+  .OnboardSplashButtons
+  .OnboardSplashButton
+  .OnboardSplashButtonBadge {
+  height: 16px;
+  position: relative;
+  top: -16px;
+  background: #1a9fff;
+  color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  line-height: 16px;
+  margin-top: 8px;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  padding: 2px;
+  margin-right: auto;
+}
+.FamilySettingsContainer {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  padding: 8px 25px 25px 25px;
+  font-size: 14px;
+}
+@media screen and (max-width: 500px) {
+  .FamilySettingsContainer {
+    padding: 8px 0px 25px 0px;
+  }
+}
+.FamilySettingsContainer hr {
+  border: 0;
+  height: 0;
+  border-top: 0px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 16px;
+}
+.FamilyHistory .Entry {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #464d58;
+  padding: 10px 0;
+  gap: 10px;
+}
+.FamilyHistory .Entry .Timestamp {
+  align-self: flex-start;
+  width: 170px;
+  flex: none;
+}
+.FamilyHistory .Entry .EntryText {
+  align-self: flex-start;
+  flex-grow: 1;
+}
+.IncomingInviteGone {
+  background-color: #0e141b;
+  padding: 16px;
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 18px;
+}
+.IncomingInviteGone svg {
+  width: 48px;
+  height: 48px;
+}
+.CreateFamilyContainer .CreateFamilyForm {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin: 16px 8px;
+  padding: 16px 8px;
+}
+.CreateFamilyContainer .CreateFamilyForm input {
+  padding: 10px;
+  flex-grow: 1;
+  background-color: #0e141b;
+  color: #99d4ff;
+  font-weight: 500;
+  border: none;
+}
+.CreateFamilyContainer .CreateFamilyForm button {
+  flex-grow: 0;
+  flex-basis: 80px;
+}
+.JoinFamilyContainer .FriendCodeContainer {
+  padding: 16px 0px;
+  display: flex;
+  justify-content: left;
+  gap: 16px;
+  align-items: center;
+}
+.JoinFamilyContainer .FriendCodeContainer .FriendCodeDisplay {
+  font-size: 16px;
+  background-color: #0e141b;
+  color: #99d4ff;
+  font-weight: 500;
+  flex-grow: 1;
+  padding: 8px;
+  text-align: center;
+  max-width: 200px;
+}
+.JoinFamilyContainer .FriendCodeContainer .FriendCodeCopyButton {
+  flex-basis: 80px;
+}
+.JoinFamilyContainer .FriendCodeContainer .YourFriendCode {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+}
+.JoinWarning {
+  color: #ffc82c;
+  font-weight: 500;
+}
+.DialogText {
+  padding: 10px 0;
+}
+.ManagementLabel {
+  font-size: 16px;
+  color: #b8bcbf;
+  margin: 10px 5px;
+}
+@media screen and (max-width: 500px) {
+  .ManagementLabel {
+    text-align: center;
+  }
+}
+.FamilyMemberActions {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 5px;
+  margin-left: 5px;
+  margin-bottom: 12px;
+}
+.FamilyMemberActions .ManagementButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 10px;
+  width: fit-content;
+}
+.FamilyMemberActions .ManagementButton svg {
+  width: 15px;
+  height: 15px;
+  padding-top: 2px;
+}
+.FamilyMemberActions .Remove:hover {
+  background-color: #de3618;
+}
+.FamilyMemberActions .DeleteFamily:hover {
+  background-color: #de3618;
+}
+@media screen and (max-width: 500px) {
+  .FamilyMemberActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .FamilyMemberActions .ManagementButton {
+    width: 250px;
+    padding: 3px 0px;
+  }
+  .FamilyMemberActions .ManagementButton svg {
+    padding-top: 0px;
+  }
+}
+.FamilyMemberActions .Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 10px;
+  width: fit-content;
+}
+@media screen and (max-width: 500px) {
+  .FamilyMemberActions .Link {
+    width: 250px;
+    padding: 3px 0px;
+  }
+}
+.FamilyManagementButtonPanel {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 5px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 500px) {
+  .FamilyManagementButtonPanel {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+}
+.FamilyMemberManagementButtons {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 6px;
+  margin-right: 5px;
+  margin-bottom: 8px;
+}
+.FamilyMemberManagementButtons .ManagementButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 24px;
+  width: fit-content;
+}
+.FamilyMemberManagementButtons .ManagementButton svg {
+  width: 20px;
+  height: 20px;
+}
+.FamilyMemberManagementButtons .Remove:hover {
+  background-color: #de3618;
+}
+.FamilyMemberManagementButtons .DeleteFamily:hover {
+  background-color: #de3618;
+}
+@media screen and (max-width: 500px) {
+  .FamilyMemberManagementButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.FamilyMemberParentalSettingsInner {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 500px) {
+  .FamilyMemberParentalSettingsInner .DropDownCtn > div {
+    flex-direction: column;
+  }
+}
+.FamilyMemberParentalSettingsInner .DropDownCtn,
+.FamilyMemberParentalSettingsInner .ToggleCtn,
+.FamilyMemberParentalSettingsInner .ButtonCtn {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.ParentalGameListHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 8px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #23262e;
+}
+@media screen and (max-width: 500px) {
+  .ParentalGameListHeader {
+    flex-direction: column;
+  }
+}
+.ParentalGameListHeader .Title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.ParentalGameListHeader .SearchCtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ParentalGameListHeader .SelectorCtn {
+  display: flex;
+  gap: 8px;
+}
+.ParentalGameListHeader .SelectorCtn button {
+  background-color: transparent;
+  padding: 3px;
+  height: 18px;
+  width: 18px;
+}
+.ParentalGameListHeader .SelectorCtn button:hover {
+  background-color: #1a9fff;
+}
+.ParentalGameListHeader .SelectorCtn .Selector {
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+}
+.ParentalGameListOuter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+.ParentalGameListOuter .Content {
+  max-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2px 10px 2px 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  gap: 20px;
+}
+.ParentalGameListOuter .Content .Empty {
+  display: flex;
+  justify-content: center;
+}
+.BasicUI .ParentalGameListOuter .Content {
+  max-height: unset;
+  overflow-y: hidden;
+}
+.ParentalGameSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ParentalGameSection .SectionHeader {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (max-width: 910px) {
+  .ParentalGameSection .SectionHeader {
+    flex-direction: column;
+  }
+}
+.ParentalGameSection .SectionHeader .Title {
+  flex-grow: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.ParentalGameSection .SectionHeader .SelectorCtn {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 25%;
+  justify-content: flex-end;
+  text-transform: capitalize;
+}
+.ParentalGameSection .SectionHeader .SelectorCtn button {
+  padding: 0px 10px;
+  box-sizing: border-box;
+  text-wrap: nowrap;
+}
+@media screen and (max-width: 910px) {
+  .ParentalGameSection .SectionHeader .SelectorCtn {
+    width: 100%;
+  }
+}
+.ParentalGameRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  padding: 4px;
+  box-sizing: border-box;
+  transition: background-color 100ms ease-in-out;
+  border-bottom: 2px solid #0e141b;
+}
+.ParentalGameRow .Name {
+  flex-grow: 1;
+}
+.ParentalGameRow.Allowed {
+  background-color: #23262e;
+}
+.ParentalGameRow.Allowed .Name {
+  color: #fff;
+}
+.ParentalGameRow .Icon {
+  height: 32px;
+  width: 32px;
+}
+.ParentalGameRow .RoundCheckbox .DialogRoundCheckboxField {
+  width: 16px;
+  height: 16px;
+}
+.ParentalGameRow:hover {
+  background-color: #23262e;
+}
+.ParentalFeatures {
+  margin-bottom: 12px;
+}
+.ParentalPlaytimeInner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.ParentalPlaytimeRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 100ms ease-in-out;
+  padding: 4px;
+}
+@media screen and (max-width: 500px) {
+  .ParentalPlaytimeRow {
+    flex-direction: column;
+    background-color: #23262e;
+    border-radius: 3px;
+  }
+}
+.ParentalPlaytimeRow .Day {
+  color: #1a9fff;
+  font-weight: 600;
+  flex: 0 0 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ParentalPlaytimeRow .Windows {
+  flex-grow: 1;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 500px) {
+  .ParentalPlaytimeRow .Windows {
+    text-wrap: wrap;
+  }
+}
+.ParentalPlaytimeRow .Minutes {
+  flex: 0 0 25%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ParentalPlaytimeRow:hover {
+  background-color: #23262e;
+}
+.ParentalPlaytimeWindowsDialog .Title {
+  font-size: 28px;
+  margin-right: 0px;
+  text-transform: none;
+  font-weight: bold;
+}
+.ParentalPlaytimeWindowsDialog .DialogContent_InnerWidth {
+  max-width: 672px;
+}
+@media screen and (min-width: 910px) {
+  .ParentalPlaytimeWindowsDialog {
+    width: 672px;
+  }
+}
+.ParentalPlaytimeWindowsDialog .DialogBodyText {
+  margin-bottom: 0px;
+}
+.ParentalPlaytimeWindows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (min-width: 620px) {
+  .ParentalPlaytimeWindows {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ParentalPlaytimeWindows .Grid {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) {
+  .ParentalPlaytimeWindows .Input {
+    display: none;
+  }
+}
+.ParentalPlaytimeGrid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(48, 2%);
+  grid-template-rows: 30px 10px auto;
+  justify-content: center;
+}
+.ParentalPlaytimeGrid .Minutes {
+  font-size: 10px;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+}
+.ParentalPlaytimeGrid .Hours {
+  font-size: 10px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 8px;
+}
+.ParentalPlaytimeGrid .HourMarker {
+  font-size: 12px;
+  grid-row: 3;
+  text-align: center;
+}
+.ParentalPlaytimeGrid .Hour0 {
+  text-align: left;
+}
+.ParentalPlaytimeGrid .Hour48 {
+  text-align: right;
+}
+.ParentalPlaytimeGrid .HashMark {
+  grid-row: 2;
+  border-left: 1px solid #3d4450;
+}
+.ParentalPlaytimeGrid .HashMark40 {
+  border-right: 1px solid #3d4450;
+}
+.ParentalPlaytimeWindowSelector {
+  cursor: pointer;
+  touch-action: none;
+  background-color: rgba(61, 68, 80, 0.5);
+}
+.ParentalPlaytimeWindowSelector:nth-child(odd) {
+  background-color: #3d4450;
+}
+.ParentalPlaytimeWindowSelector.Enabled {
+  background-color: rgba(26, 159, 255, 0.8);
+}
+.ParentalPlaytimeWindowSelector.Enabled:nth-child(odd) {
+  background-color: #1a9fff;
+}
+.ParentalPlaytimeWindowSelector.Locked {
+  background-color: rgba(26, 159, 255, 0.6);
+  cursor: default;
+}
+.ParentalPlaytimeWindowSelector.Locked:nth-child(odd) {
+  background-color: rgba(26, 159, 255, 0.8);
+}
+.ParentalPlaytimeWindowsDialogInner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ParentalPlaytimeWindowsDialogInner .TopRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 500px) {
+  .ParentalPlaytimeWindowsDialogInner .TopRow {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ParentalPlaytimeWindowsDialogInner .TopRow .DaySelector {
+    min-width: 30%;
+  }
+}
+.ParentalPlaytimeWindowsDialogInner .Right {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  .ParentalPlaytimeWindowsDialogInner .Right {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ParentalPlaytimeWindowsDialogInner .Right .PlaytimeDescription {
+    text-align: left;
+    overflow: hidden;
+    white-space: normal;
+    flex-grow: 1;
+  }
+  .ParentalPlaytimeWindowsDialogInner .Right .PlaytimeButtons {
+    flex-shrink: 0;
+  }
+}
+.ParentalPlaytimeWindowsDialogInner .DaySelector {
+  flex: 0 0 20%;
+}
+.ParentalPlaytimeWindowsDialogInner .PlaytimeDescription {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #fff;
+  text-align: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ParentalPlaytimeWindowsDialogInner .PlaytimeButtons {
+  display: flex;
+  justify-content: flex-end;
+}
+.ParentalPlaytimeWindowsDialogInner .PlaytimeButtons a {
+  color: #a7bacc;
+  text-decoration: underline;
+  font-size: 14px;
+}
+.ParentalCopySelector {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.ParentalCopySelector .DropDown,
+.ParentalCopySelector .ButtonCtn {
+  flex-grow: 1;
+}
+.ParentalCopySelector .DropdownButton {
+  margin-right: 5px;
+}
+.ParentalCopySelector .Button {
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+.ParentalApp {
+  opacity: 0.5;
+  position: relative;
+  transition: opacity 100ms ease-in-out;
+}
+.ParentalApp:hover {
+  opacity: 1;
+}
+.ParentalApp.Allowed {
+  opacity: 1;
+  outline: 2px solid #1a9fff;
+}
+.ParentalApp .Children {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.ViewSelector {
+  cursor: pointer;
+  color: #67707b;
+  height: 18px;
+  width: 18px;
+}
+.ViewSelector.Selected {
+  color: #fff;
+}
+.ViewSelector:hover {
+  color: #fff;
+}
+.FilterDropdownCtn {
+  max-width: 350px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.FilterSection {
+  display: table;
+  padding: 12px 0px;
+}
+.FilterSection .FilterRow {
+  display: table-row;
+}
+.FilterSection .FilterRow .FilterInfo {
+  display: table-cell;
+  padding-bottom: 18px;
+}
+.FilterSection .FilterRow .FilterToggle {
+  padding-bottom: 18px;
+  font-size: 12px;
+  display: table-cell;
+  margin-left: 21px;
+}
+.FilterModalButtons {
+  gap: 18px;
+}
+.FilterDropdownButton {
+  cursor: pointer;
+  color: #fff;
+  height: 18px;
+  width: 18px;
+}
+.FilterDropdownButton svg path {
+  fill: #67707b;
+}
+.FilterDropdownButton svg:hover path {
+  fill: #fff;
+}
+.ParentalPlaytimeInput {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 5px;
+}
+.ParentalPlaytimeInput .Button.Button {
+  min-width: auto;
+  width: 32px;
+}
+.ParentalPlaytimeInput .ButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Datetime.rdtOpen .rdtPicker {
+  min-width: auto;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  position: relative;
+  background: #3d4450;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Datetime.rdtOpen .rdtPicker .rdtTime .rdtCounters .rdtCounter {
+  width: 30px;
+  padding: 2px;
+}
+.Datetime.rdtOpen .rdtPicker .rdtTime .rdtCounters .rdtCounter .rdtCount {
+  font-size: 1em;
+}
+.ContentDescriptorParentalSettings .ContentDescriptorParentalSettingsInner {
+  width: calc(100% - 30px);
+  background: #23262e;
+  padding: 12px;
+  align-items: center;
+}
+.ContentDescriptorParentalSettings
+  .ContentDescriptorParentalSettingsInner
+  .ContentDescriptorRow {
+  display: flex;
+  border-bottom: 1px solid #3d4450;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+.ContentDescriptorParentalSettings
+  .ContentDescriptorParentalSettingsInner
+  .ContentDescriptorRow
+  .ContentDescriptorInfo {
+  display: table-cell;
+  flex-grow: 1;
+}
+.ContentDescriptorParentalSettings
+  .ContentDescriptorParentalSettingsInner
+  .ContentDescriptorRow
+  .ContentDescriptorInfo
+  .ContentDescriptorName {
+  display: block;
+  font-size: 13px;
+}
+.ContentDescriptorParentalSettings
+  .ContentDescriptorParentalSettingsInner
+  .ContentDescriptorRow
+  .ContentDescriptorInfo
+  .ContentDescriptorDescription {
+  font-size: 12px;
+  display: block;
+  margin-left: 21px;
+}
+.ContentDescriptorParentalSettings
+  .ContentDescriptorParentalSettingsInner
+  .ContentDescriptorRow
+  .ContentDescriptorInfo
+  .ContentDescriptorDescription
+  a {
+  cursor: pointer;
+}
+.ContentDescriptorParentalSettings
+  .ContentDescriptorParentalSettingsInner
+  .ContentDescriptorRow
+  .ContentDescriptorToggle {
+  width: 80px;
+  text-align: center;
+  flex: 0 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ContentDescriptorExampleApp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.ContentDescriptorExampleApp img {
+  width: 120px;
+  height: 45px;
+}
+.ContentDescriptorExampleApp div {
+  display: block;
+  font-size: 14px;
+  margin-left: 20px;
+  overflow-wrap: break-word;
+  max-width: 200px;
+}
+.FamilyGames {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.FamilyGames > .Header {
+  display: flex;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+.Buttons .ButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+.Buttons .Button {
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.FamilyGamesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.FamilyGamesSection .Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: normal;
+}
+.FamilyGamesSection .Label {
+  font-size: 18px;
+  color: #fff;
+}
+.FamilyGamesSection .Count {
+  font-size: 14px;
+}
+.FamilyGameItem.Selectable {
+  cursor: pointer;
+}
+.FamilyGameItem .HoverSource {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.FamilyGameItem .LicenseCount {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  font-size: 13px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid;
+  color: #fff;
+}
+.FamilyGamesSearchBox .Input {
+  height: 24px;
+  box-sizing: border-box;
+  background: #171d25;
+}
+.FamilyGamesControls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.FamilyGamesControls .FamilyGamesSearchBox {
+  max-width: 50%;
+}
+.FamilyGamesSort {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.FamilyGamesSortSelector {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  color: #8b929a;
+  cursor: pointer;
+}
+.FamilyGamesSortSelector.Selected {
+  color: #fff;
+}
+.FamilyGamesSortSelector .DirectionIndicator {
+  height: 16px;
+  width: 16px;
+}
+.AdditionalHoverCtn {
+  font-size: 11px;
+  padding: 0px 4px 2px 4px;
+}
+.Loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Error {
+  color: #de3618;
+}
+.AppGridItem {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.AppGridItem.NoImage {
+  border: 1px solid #fff;
+}
+.AppGridItem .Capsule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.AppGridItem.Loaded .Capsule {
+  opacity: 1;
+}
+.Label {
+  position: relative;
+  background-color: transparent;
+  padding: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.VirtualizedGridWrapper {
+  box-sizing: border-box;
+  height: 100%;
+}
+.VirtualizedGridRow {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  box-sizing: border-box;
+  height: 100%;
+} /*!
+ * https://github.com/arqex/react-datetime
+ */
+.rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: "";
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker td span.rdtOld {
+  color: #999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+  cursor: default;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-of-type th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-of-type th:hover {
+  background: #eee;
+}
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+.rdtCounters {
+  display: inline-block;
+}
+.rdtCounters > div {
+  float: left;
+}
+.rdtCounter {
+  height: 100px;
+}
+.rdtCounter {
+  width: 40px;
+}
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+.rdtTime td {
+  cursor: default;
+}
+.InlineContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.RemoveOnEmpty:empty {
+  display: none;
+}
+.FamilyRequests {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.FamilyRequestItem {
+  padding: 4px;
+  background-color: #1f2a39;
+  min-height: 72px;
+}
+.FamilyRequestItem .RequestInfo {
+  flex-grow: 1;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+@media screen and (max-width: 500px) {
+  .FamilyRequestItem .RequestInfo {
+    align-items: center;
+    gap: 10px;
+  }
+}
+.FamilyRequestItem .RequestInfo .Feature {
+  font-weight: 500;
+}
+.FamilyRequestItem .RequestInfo .FeatureList,
+.FamilyRequestItem .RequestInfo .CartSummary {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (max-width: 500px) {
+  .FamilyRequestItem .RequestInfo .FeatureList,
+  .FamilyRequestItem .RequestInfo .CartSummary {
+    align-items: center;
+    gap: 5px;
+  }
+}
+.FamilyRequestItem .RequestInfo .SelfRequested {
+  flex-grow: 1;
+  font-weight: 500;
+}
+.FamilyRequestItem .RequestInfo .TimeResponded {
+  color: #8b929a;
+  padding-left: 20px;
+}
+@media screen and (max-width: 500px) {
+  .FamilyRequestItem .RequestInfo .TimeResponded {
+    padding-left: 0px;
+  }
+}
+.FamilyRequestItem .StatusCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.FamilyRequestItem .StatusCtn .Pending {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: #ffc82c;
+  color: #0e141b;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.FamilyRequestItem .StatusCtn .Buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+}
+.FamilyRequestItem .StatusCtn .Buttons button {
+  width: fit-content;
+  padding: 0px 20px;
+}
+.FamilyRequestItem .AvatarAndPersona {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding-right: 5px;
+}
+.FamilyRequestItem .Buttons {
+  flex-grow: 0;
+  flex-basis: 25%;
+}
+.FamilyRequestItem .RequestResponse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-grow: 0;
+  flex-basis: 25%;
+  gap: 5px;
+}
+@media screen and (max-width: 500px) {
+  .FamilyRequestItem .RequestResponse {
+    align-items: center;
+  }
+}
+.FamilyRequestItem .RequestResponse .TimeResponded {
+  color: #8b929a;
+}
+.ParentalFeatureRequestItem,
+.ParentalPlaytimeRequestItem,
+.PurchaseRequestItem {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+.ParentalFeatureRequestItem .FeatureList,
+.ParentalFeatureRequestItem .CartSummary,
+.ParentalPlaytimeRequestItem .FeatureList,
+.ParentalPlaytimeRequestItem .CartSummary,
+.PurchaseRequestItem .FeatureList,
+.PurchaseRequestItem .CartSummary {
+  padding-left: 40px;
+}
+@media screen and (max-width: 500px) {
+  .ParentalFeatureRequestItem .FeatureList,
+  .ParentalFeatureRequestItem .CartSummary,
+  .ParentalPlaytimeRequestItem .FeatureList,
+  .ParentalPlaytimeRequestItem .CartSummary,
+  .PurchaseRequestItem .FeatureList,
+  .PurchaseRequestItem .CartSummary {
+    padding-left: 0px;
+  }
+}
+.ParentalFeatureRequestItem .HoverSource,
+.ParentalPlaytimeRequestItem .HoverSource,
+.PurchaseRequestItem .HoverSource {
+  display: inline;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .ParentalFeatureRequestItem,
+  .ParentalPlaytimeRequestItem,
+  .PurchaseRequestItem {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.PackageLinks {
+  display: inline;
+  padding-left: 40px;
+}
+@media screen and (max-width: 500px) {
+  .PackageLinks {
+    padding-left: 0px;
+  }
+}
+.PackageLinkItem {
+  color: #1a9fff;
+  display: inline;
+}
+.PackageLinkItemText {
+  display: inline;
+}
+.PackageShowMore {
+  display: inline;
+  color: #1a9fff;
+  cursor: pointer;
+}
+.ApprovePlaytimeDialog {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.ApprovePlaytimeDialog .CurrentHours {
+  padding-top: 10px;
+}
+.ApprovePlaytimeDialog .Text {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #fff;
+  text-align: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 8px;
+}
+.ThrobberContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.FamilyPlaytime {
+  display: flex;
+  flex-direction: column;
+}
+.ThrobberContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.PlaytimeHistoryBrowser {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.PlaytimeHistoryDay {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.PlaytimeHistoryDay.Empty {
+  cursor: default;
+}
+.PlaytimeOnDay {
+  display: flex;
+  flex-direction: row;
+  background-color: #0e141b;
+  padding: 12px;
+  padding-left: 14px;
+  cursor: pointer;
+}
+.Empty .PlaytimeOnDay {
+  cursor: default;
+}
+.PlaytimeOnDay:hover {
+  background-color: #111820;
+}
+@media screen and (max-width: 500px) {
+  .PlaytimeOnDay {
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .PlaytimeOnDay .DateColumn {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: calc(100% - 15px);
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .PlaytimeOnDay .DateColumn .TotalTimePlayed {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .PlaytimeOnDay {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  .PlaytimeOnDay .DateColumn {
+    flex: 2 0 30%;
+    text-align: left;
+    margin-right: 24px;
+    align-self: start;
+  }
+}
+.PlaytimeOnDay .DateColumn {
+  height: 40px;
+}
+.PlaytimeOnDay .DateColumn .TotalTimePlayed {
+  font-size: 12px;
+  font-weight: bold;
+}
+.PlaytimeOnDay .PlaytimeHistoryBin {
+  margin-bottom: 30px;
+}
+.PlaytimeOnDay > div,
+.PlaytimeOnDay .PlaytimeHistoryBin {
+  flex: 1 1 0;
+  height: 30px;
+  border-left: 1px solid #0e141b;
+  border-right: 1px solid #0e141b;
+}
+.PlaytimeOnDay > div .TimeLabel,
+.PlaytimeOnDay .PlaytimeHistoryBin .TimeLabel {
+  display: block;
+  position: absolute;
+  transform: translate(0%, 32px);
+  font-size: 8px;
+  text-wrap: nowrap;
+}
+@media screen and (max-width: 500px) {
+  .PlaytimeOnDay > div .TimeLabel,
+  .PlaytimeOnDay .PlaytimeHistoryBin .TimeLabel {
+    display: none;
+  }
+}
+.TimeRangeTooltip {
+  font-size: 12px;
+  font-weight: bold;
+}
+.PlaytimeSessionRows {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0px 8px;
+}
+.SessionRow {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  background-color: #0e141baa;
+  cursor: pointer;
+  padding-top: 4px;
+}
+.SessionRow .GameIcon {
+  flex-basis: 36px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 4px;
+  margin-right: 12px;
+}
+.SessionRow .GameIcon img {
+  height: 48px;
+  width: 32px;
+}
+.SessionRow .SessionRowTimeRange {
+  flex-basis: 130px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.SessionRow .SessionRowGameName {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.AppListTooltipApps {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.AppListTooltipApps a {
+  box-sizing: border-box;
+}
+.AppListTooltipApps img {
+  width: 100%;
+  height: 100%;
+}
+.AppListTooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #0e141b;
+  padding: 4px;
+  background: #3d4450;
+}
+.AppListTooltip img {
+  height: 120px;
+  width: 80px;
+}
+.AppImage {
+  opacity: 0;
+}
+.AppImage.Loaded {
+  opacity: 1;
+}

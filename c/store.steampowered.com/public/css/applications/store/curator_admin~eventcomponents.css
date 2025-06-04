@@ -1,0 +1,218 @@
+:root {
+  --basicui-header-height: 0px;
+}
+.Container {
+  padding-top: 5px;
+}
+.Container h2 {
+  font-family: "Motiva Sans", Arial, Sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  padding-top: 2px;
+}
+@media screen and (max-width: 910px) {
+  .StoreHeaderAdjust {
+    margin-top: 58px;
+  }
+}
+.SectionButtonCtn {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: -21px;
+  margin-top: -5px;
+}
+.SectionButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 15px;
+  line-height: normal;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  bottom: 30px;
+}
+.SectionButton:hover {
+  border: 1px solid #fff;
+}
+.EventsSummariesCtn {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  overflow-x: auto;
+}
+.BasicUI .EventsSummariesCtn {
+  margin: unset;
+  gap: var(--gpSpace-Gap);
+}
+.LatestUpdateButtonCtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.LatestUpdateIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.LatestUpdateIcon svg {
+  height: 20px;
+  width: 20px;
+  fill: #fff;
+}
+.LatestUpdateButton {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 15px;
+  line-height: normal;
+  width: fit-content;
+  cursor: pointer;
+}
+.LatestUpdateButton:hover {
+  border: 1px solid #fff;
+}
+.Ctn {
+  position: relative;
+}
+.RssInput {
+  position: relative;
+}
+.PreviewListCtn {
+  position: relative;
+  border-top: 1px solid #3d4450;
+  padding-top: 10px;
+}
+.PostCtn {
+  width: 100%;
+  padding: 20px 10px 10px 10px;
+  box-sizing: border-box;
+  background: rgba(59, 63, 72, 0.5);
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+.PostCtn .PostTitle {
+  font-size: 19px;
+  color: #fff;
+  line-height: 19px;
+  font-weight: 300;
+  margin-right: 12px;
+}
+.PostCtn.ActivePost {
+  background: rgba(57, 78, 38, 0.5);
+}
+.PostCtn.ActivePost .PostDate {
+  display: block;
+}
+.PostCtn.ErrorPost {
+  background: rgba(157, 78, 38, 0.5);
+}
+.PostCtn.ErrorPost .PostDate {
+  display: block;
+}
+.PostDate {
+  color: #d2e885;
+  font-size: 11px;
+}
+.PostDraft {
+  color: #e8bd85;
+  font-size: 11px;
+}
+.PostDraft.PostStaged {
+  display: block;
+}
+.PreviewListBtn {
+  min-width: 150px;
+  width: 30%;
+  margin-bottom: 8px;
+}
+.PreviewButtons {
+  min-width: 150px;
+}
+.UrlSettingCtn {
+  width: 100%;
+  align-items: center;
+}
+.UrlSettingCtn > div {
+  flex-grow: 1;
+}
+.UrlSettingCtn > a {
+  height: fit-content;
+  margin-left: 12px;
+}
+.Error {
+  color: darkred;
+}
+.DialogPostTitle {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin: 8px 0px;
+  color: #fff;
+}
+.DashboardBtn a {
+  margin-top: 8px;
+  display: inline-block;
+}
+.admin_content textarea.RawRSS {
+  width: 80vw;
+  max-width: 570px;
+  height: 400px;
+  cursor: text;
+  background: transparent;
+  color: wheat;
+  font-size: 14px;
+  border: 1px solid #464c58;
+  padding: 10px;
+  border-radius: 4px;
+}
+.ButtonCtn {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+  justify-content: start;
+}
+.ButtonCtn .PreviewBtn {
+  margin-right: 4px;
+  display: block;
+}
+.ButtonCtn .ViewRaw {
+  margin-left: auto;
+  text-decoration: underline;
+}
+.ButtonCtn .ViewRaw:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.LanguageRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 14px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0px 0px 16px 0px;
+  padding: 6px 6px 6px 12px;
+  border: none;
+  border-radius: 3px;
+}
+.LanguageRow .LanguageTitle {
+  font-weight: 400;
+  margin-right: 4px;
+}
+.LanguageRow .LanguageSet {
+  flex-grow: 1;
+  text-transform: capitalize;
+}

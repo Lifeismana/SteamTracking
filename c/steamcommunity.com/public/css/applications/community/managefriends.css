@@ -1,0 +1,243 @@
+.Heading {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #f5f5f5;
+  margin-bottom: -7px;
+  max-width: 620px;
+}
+.BasicUI .Heading {
+  letter-spacing: unset;
+  text-transform: unset;
+  margin: unset;
+  font: var(--gpText-HeadingSmall);
+  font-weight: 500;
+}
+.Body {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #8f98a0;
+  letter-spacing: .02em;
+  max-width: 620px;
+}
+.BasicUI .Body {
+  letter-spacing: unset;
+  text-transform: unset;
+  margin: 8px 0px;
+  font: var(--gpText-BodyMedium);
+  color: var(--gpStoreLightestGrey);
+}
+.HeaderBlock {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #015e80;
+  padding: 10px 20px 10px 20px;
+}
+.BasicUI .HeaderBlock {
+  letter-spacing: unset;
+  background-color: unset;
+  padding: unset;
+  text-transform: unset;
+  font: var(--gpText-HeadingLarge);
+}
+.Background {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 20px 20px 20px;
+}
+.BasicUI .Background {
+  background-color: unset;
+  padding: 16px 0px;
+}
+.DimBackground {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.BasicUI .DimBackground {
+  background-color: unset;
+  padding: 16px 0px;
+  border-top: 1px solid var(--gpBackground-LightMedium);
+}
+.Input {
+  max-width: 598px;
+}
+.CopyContainer {
+  background-color: rgba(144, 144, 144, 0.1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  min-width: 320px;
+  max-width: 620px;
+}
+.BasicUI .CopyContainer {
+  background-color: var(--gpBackground-DarkSoft);
+  border-radius: unset;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 380px) {
+  .CopyContainer {
+    min-width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.CopyContainer .Text {
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #f5f5f5;
+  letter-spacing: .02em;
+  padding: 14px;
+}
+.BasicUI .CopyContainer .Text {
+  padding: unset;
+}
+.CopyContainer .Link {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #f5f5f5;
+  letter-spacing: .02em;
+  padding: 14px;
+  overflow-wrap: break-word;
+  overflow: FAQDashboard_Invisible;
+}
+.BasicUI .CopyContainer .Link {
+  padding: unset;
+}
+.CopyContainer .Button {
+  background-color: rgba(144, 144, 144, 0.2);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #f5f5f5;
+  letter-spacing: .02em;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 7px 7px 7px auto;
+  text-transform: uppercase;
+  width: fit-content;
+}
+@media screen and (max-width: 380px) {
+  .CopyContainer .Button {
+    width: 100%;
+  }
+}
+.BasicUI .CopyContainer .Button {
+  font: var(--gpText-BodyLarge);
+  background: var(--gpColor-Blue);
+  border-radius: var(--gpCorner-Medium);
+  letter-spacing: unset;
+  text-transform: unset;
+  padding: 10px 24px;
+  box-shadow: var(--gpShadow-Medium);
+  margin: unset;
+  color: #fff;
+}
+.BasicUI .CopyContainer .Button:hover {
+  background: var(--gpColor-BlueHi);
+}
+.BasicUI .CopyContainer .Button:active {
+  background: var(--gpColor-Blue) !important;
+  color: #fff !important;
+}
+.BasicUI .CopyContainer .Button.gpfocus {
+  color: #000;
+  background: #fff;
+  border-radius: unset;
+}
+.GenerateLinkButton {
+  width: fit-content !important;
+  padding: 0px 16px !important;
+}
+.BasicUI .GenerateLinkButton {
+  background: var(--gpBackground-LightSoft);
+  box-shadow: unset;
+}
+.BasicUI .GenerateLinkButton:hover {
+  background: var(--gpBackground-LightMedium);
+  box-shadow: unset;
+}
+.BasicUI .GenerateLinkButton.gpfocus {
+  color: #000;
+  background: #fff;
+  border-radius: unset;
+  box-shadow: var(--gpShadow-Medium);
+}
+.ProfileCard {
+  background: #2c3842;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  border-radius: 4px;
+  max-width: 590px;
+}
+.ProfileCard .UserContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+.ProfileCard .Image {
+  width: 80px;
+  height: 80px;
+  border-radius: 2px;
+  min-width: 80px;
+}
+.ProfileCard .ProfileContent {
+  margin-left: 20px;
+}
+@media screen and (max-width: 380px) {
+  .ProfileCard .ProfileContent {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
+.ProfileLink {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  letter-spacing: .02em;
+  color: #fff;
+}
+.ProfileLink a {
+  color: #09b9ff;
+}
+.ProfileLink .Failure {
+  color: #c44848;
+}
+.ProfileLink .Success {
+  color: #95d83b;
+}
+.friends_nav .SVGIcon_Button {
+  width: 24px;
+  height: 24px;
+}
+#searchIcon svg {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+.FriendCodeSelector .SendInviteButton {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 20px 0px 20px;
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 380px) {
+  .FriendCodeSelector .SendInviteButton {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

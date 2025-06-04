@@ -1,0 +1,764 @@
+body.SteamAwardsNominations {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+body.SteamAwardsNominations .responsive_page_frame {
+  background: linear-gradient(to bottom right, #21081f, #843873);
+}
+body.v6.SteamAwardsNominations #footer_spacer {
+  height: 183px;
+}
+.NominationsPageContent {
+  width: 100%;
+}
+.SectionContent {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.SteamAwardCategories {
+  position: relative;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 850px) {
+  .SteamAwardCategories {
+    padding-right: 0;
+  }
+}
+.NominationCategory {
+  display: flex;
+}
+.BackgroundDark {
+  background: #21081f;
+  box-sizing: border-box;
+  padding: 1px;
+}
+.NominationsHeaderCtn {
+  position: relative;
+  background: url(https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2)
+    no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #21081f;
+}
+.NominationsHeaderCtn .FAQHeaderArea {
+  padding: 30px 3% 30px 3%;
+  min-height: 457px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  max-width: 970px;
+  line-height: 20px;
+}
+@media screen and (max-width: 910px) {
+  .NominationsHeaderCtn .FAQHeaderArea {
+    min-height: unset;
+  }
+}
+.NominationsHeaderCtn .FAQHeaderArea .FAQHeaderCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 70%;
+  padding: 20px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 500;
+  color: #0f1522;
+}
+@media screen and (max-width: 910px) {
+  .NominationsHeaderCtn .FAQHeaderArea .FAQHeaderCtn {
+    max-width: 60%;
+    padding-left: 0;
+  }
+}
+.NominationsHeaderCtn .FAQHeaderArea.FriendsHeader {
+  min-height: 300px;
+}
+.NominationsHeaderCtn .FAQSaletitle {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+  color: #e5c6df;
+  line-height: 71px;
+  margin: 15px 0;
+  text-shadow: 0 0 16px rgba(34, 19, 27, 0.4588235294);
+}
+@media screen and (max-width: 910px) {
+  .NominationsHeaderCtn .FAQSaletitle {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+}
+.NominationsHeaderCtn .FAQComingsoon {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #e5c6df;
+  letter-spacing: 1px;
+  margin: 5px 0;
+  text-shadow: 0 0 16px rgba(34, 19, 27, 0.4588235294);
+}
+.NominationsFAQCtn {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  padding: 12px;
+}
+@media screen and (max-width: 910px) {
+  .NominationsFAQCtn {
+    flex-direction: column;
+  }
+}
+.NominationsFAQCtn h3.FaqSectionTitle {
+  color: #ffb335;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.NominationsFAQCtn .LeftCol {
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+@media screen and (max-width: 910px) {
+  .NominationsFAQCtn .LeftCol {
+    width: 100%;
+  }
+}
+.NominationsFAQCtn .RightCol {
+  width: 50%;
+}
+@media screen and (max-width: 910px) {
+  .NominationsFAQCtn .RightCol {
+    width: 100%;
+  }
+}
+.NominationsFAQCtn .FaqEntry {
+  margin-bottom: 50px;
+}
+.NominationsFAQCtn .FaqEntry .FAQ_Q {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e3d1e0;
+}
+.NominationsFAQCtn .FaqEntry .FAQ_A {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 4px;
+  color: #e3d1e0;
+  margin-bottom: 12px;
+}
+.NominationsFAQCtn .FaqEntry .FAQ_A a {
+  text-decoration: underline;
+  color: #e3d1e0;
+}
+.SteamAwardCategory {
+  margin-top: 20px;
+  padding: 25px;
+  background: #21081f;
+  color: #fff;
+  position: relative;
+}
+@media screen and (max-width: 850px) {
+  .SteamAwardCategory {
+    margin-left: 2%;
+  }
+}
+.SteamAwardCategory.Nominated {
+  box-shadow: 0 0 10px #000;
+}
+.SteamAwardCategory.Nominated .SteamAwardCategoryBackground {
+  opacity: 1;
+  z-index: 1;
+  filter: unset;
+  box-shadow: 1px 1px 0px rgba(255, 255, 255, 0.0784313725) inset;
+}
+.SteamAwardCategory.Nominated .SteamAwardCategoryBlurryBackground {
+  opacity: 1;
+}
+.SteamAwardCategory .SteamAwardCategoryBackground,
+.SteamAwardCategory .SteamAwardCategoryBlurryBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+  filter: brightness(0.5) saturate(0.4);
+}
+.SteamAwardCategory .SteamAwardCategoryBlurryBackground {
+  z-index: 0;
+  transform: scaleX(1.03) scaleY(0.7);
+  filter: blur(30px) saturate(3.5);
+  opacity: 0;
+}
+.SteamAwardCategory .CategoryRow {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 850px) {
+  .SteamAwardCategory .CategoryRow {
+    flex-direction: column;
+  }
+}
+.SteamAwardCategory .CategoryRow .LeftColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+.SteamAwardCategory .CategoryRow .LeftColumn .CategoryTitleRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+}
+.SteamAwardCategory .CategoryRow .LeftColumn .CategoryTitleRow .Checkbox {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  width: 21px;
+  height: 21px;
+  margin-top: 4px;
+  margin-right: 10px;
+}
+.SteamAwardCategory .CategoryRow .LeftColumn .Checkbox {
+  position: relative;
+}
+.SteamAwardCategory .CategoryRow .LeftColumn .CategoryTitle {
+  font-size: 24px;
+  font-weight: 900;
+  text-shadow: 1px 1px 8px #000;
+}
+.SteamAwardCategory .CategoryRow .LeftColumn .CategoryDescription {
+  position: relative;
+  font-size: 16px;
+  text-shadow: 1px 1px 8px #000;
+}
+@media screen and (max-width: 910px) {
+  .SteamAwardCategory .CategoryRow .LeftColumn {
+    margin-bottom: 12px;
+    margin-right: unset;
+  }
+}
+.SteamAwardCategory .CategoryRow .RightColumn {
+  max-width: 330px;
+  position: relative;
+}
+.SteamAwardCategory .CategoryRow .NominateBtnCtn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.SteamAwardCategory .CategoryRow .NominateBtnCtn .NominateButton {
+  background-color: #cc8ec0;
+  border-radius: 3px;
+  width: fit-content;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  transition: background-color 0.3s ease-in-out;
+}
+.SteamAwardCategory .CategoryRow .NominateBtnCtn .NominateButton:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+.SteamAwardCategory .CategoryRow .NominateBtnCtn.PickerShown .NominateButton {
+  opacity: 0.3;
+}
+.SteamAwardCategory .CategoryRow .NominateBtnCtn.ActionLogin .NominateButton {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 8px;
+  background-color: #a18f9d;
+}
+.SteamAwardCategory .CategoryRow .NominateBtnCtn.ActionEdit {
+  align-items: flex-end;
+}
+.SteamAwardCategory .CategoryRow .NominateBtnCtn.ActionEdit .NominateButton {
+  position: absolute;
+  bottom: -20px;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 8px;
+  background-color: #a18f9d;
+}
+.SteamAwardCategory .CategoryRow .PickerOpen .NominateButton {
+  display: none;
+}
+.SteamAwardCategory .CapsuleContainer {
+  width: 330px;
+  height: 150px;
+  background: #000;
+  box-shadow: 0 0 10px #000;
+}
+.SteamAwardCategory .CapsuleContainer a {
+  display: block;
+}
+.SteamAwardCategory .CapsuleContainer img {
+  display: block;
+  width: 100%;
+}
+.SteamAwardCategory .CapsuleBlurryContainer {
+  position: absolute;
+  filter: blur(30px);
+  width: 330px;
+  height: 150px;
+  z-index: -1;
+}
+.SteamAwardCategory .CapsuleBlurryContainer a {
+  display: block;
+}
+.SteamAwardCategory .CapsuleBlurryContainer img {
+  display: block;
+  width: 100%;
+}
+.SectionTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.BadgeSectionCtn {
+  margin-top: 40px;
+}
+.BadgeSectionCtn .BadgeTasksCtn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.BadgeSectionCtn .BadgeTasksCtn .BadgeTask {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  line-height: 17px;
+}
+.BadgeSectionCtn .BadgeTasksCtn .Checkbox {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  border: 3px solid #c6d5e0;
+  margin-right: 10px;
+}
+.BadgeSectionCtn .BadgeTasksCtn .TaskTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+.BadgeSectionCtn .BadgeStatusCtn {
+  background: #dfb6d7;
+  padding: 22px;
+  margin-top: 20px;
+}
+.BadgeSectionCtn .BadgeStatusCtn .BadgeStatusTitle {
+  color: #0f1522;
+  font-size: 20px;
+  font-weight: 700;
+}
+.BadgeSectionCtn .BadgeStatusCtn .BadgeStatusDesc {
+  color: #0f1522;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.BadgeSectionCtn .BadgeStatusCtn .BadgeImageRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 910px) {
+  .BadgeSectionCtn .BadgeStatusCtn .BadgeImageRow {
+    flex-wrap: wrap;
+  }
+}
+.BadgeSectionCtn .BadgeStatusCtn .BadgeImageRow .BadgeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.4;
+  filter: saturate(0.1);
+}
+.BadgeSectionCtn .BadgeStatusCtn .BadgeImageRow .BadgeItem .BadgeImage {
+  border: 1px solid rgba(0, 0, 0, 0);
+  margin-bottom: 18px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.BadgeSectionCtn .BadgeStatusCtn .BadgeImageRow .BadgeItem .BadgeDesc {
+  color: #0f1522;
+}
+.BadgeSectionCtn .BadgeStatusCtn .BadgeImageRow .BadgeItem.Active {
+  opacity: 1;
+  filter: saturate(1);
+}
+.NominationPickerCtn {
+  margin-top: 24px;
+  position: relative;
+  z-index: 2;
+}
+.NominationPickerCtn .CarouselView {
+  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.NominationPickerCtn .BottomRow {
+  margin-top: 20px;
+}
+.NominationPickerCtn .TopRow {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(9px);
+  background-color: rgba(255, 255, 255, 0.13);
+}
+@media screen and (max-width: 910px) {
+  .NominationPickerCtn .TopRow {
+    flex-direction: column;
+    padding: 8px;
+  }
+  .NominationPickerCtn .TopRow .CloseButton {
+    position: absolute;
+    top: -9px;
+    right: 10px;
+  }
+}
+.NominationPickerCtn .TopRow:after {
+  bottom: 100%;
+  left: 82%;
+  border: solid rgba(0, 0, 0, 0);
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.13);
+  border-width: 15px;
+  margin-left: -15px;
+}
+@media screen and (max-width: 850px) {
+  .NominationPickerCtn .TopRow:after {
+    left: 22%;
+  }
+}
+.NominationPickerCtn .TopRow .TopBarText {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  flex-grow: 1;
+  color: #fff;
+}
+.NominationPickerCtn .TopRow .SearchBarCtn {
+  flex-grow: 1;
+}
+@media screen and (max-width: 910px) {
+  .NominationPickerCtn .TopRow .SearchBarCtn {
+    min-width: 70%;
+  }
+}
+.NominationPickerCtn .TopRow .CloseButton {
+  flex-grow: 0;
+  font-size: 17px;
+  margin-left: 16px;
+  color: #fff;
+  background: #585560;
+  padding: 6px 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+.NominationPickerCtn .TopRow .CloseButton:hover {
+  cursor: pointer;
+  background: #73707c;
+  color: #fff;
+}
+.NominationPickerCtn .RecommendationRow {
+  padding: 16px;
+}
+.NominationPickerCtn .RecommendationRow .AppCapsuleCtn {
+  top: -18px;
+}
+.NominationPickerCtn .RecommendationRow .AppCapsuleCtn > div {
+  width: 80%;
+}
+.NominationPickerCtn .RecommendationRow .AppCapsuleCtn img {
+  width: 100%;
+  margin-right: 6px;
+}
+.NominationPickerCtn .RecommendationRow .OtherEvents_EventCtn {
+  filter: saturate(0);
+  transition: filter 0.3s ease-in-out;
+}
+.NominationPickerCtn .RecommendationRow .OtherEvents_EventCtn .UpcomingCtn {
+  display: none;
+}
+.NominationPickerCtn .RecommendationRow .OtherEvents_EventCtn:hover {
+  filter: saturate(1);
+}
+.NominationPickerCtn .RecommendationRow .RecommendationRowTitle {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #fff;
+  font-weight: 300;
+}
+.NominationPickerCtn .RecommendationRow .RecommendationRowSubtitle {
+  margin-bottom: 6px;
+  font-weight: 200;
+}
+.NominationPickerCtn
+  .RecommendationRow.Events
+  .ScrollSnapCarousel
+  .AppCapsuleCtn {
+  display: none;
+}
+.NominationPickerCtn .RecommendationRow.Games {
+  min-height: 200px;
+}
+.NominationPickerCtn .RecommendationRow.NoEligibleGamesCtn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.NominationPickerCtn .SearchResultsContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 19px;
+  row-gap: 25px;
+  padding: 24px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.NominationPickerCtn .SearchResultsContainer .SearchResultApp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.NominationPickerCtn .SearchResultsContainer .SearchResultApp img {
+  transform: scale(1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.NominationPickerCtn .SearchResultsContainer .SearchResultApp a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+.NominationPickerCtn .SearchResultsContainer .NominateGameButton {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.NominationPickerCtn .GameCarouselItemCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.NominationPickerCtn .GameCarouselItemCtn a {
+  display: block;
+  margin-bottom: 8px;
+}
+.NominationPickerCtn .GameCarouselItemCtn img {
+  display: block;
+}
+.NominationPickerCtn .GameCarouselItemCtn .NominateGameButton {
+  width: 231px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.NominationPickerCtn .GameCarouselItemCtn .PlaytimeIndicator {
+  background-color: rgba(0, 0, 0, 0.5098039216);
+  color: #fff;
+  position: absolute;
+  font-size: 11px;
+  padding: 2px 6px;
+  top: -1px;
+}
+.BadgeSectionTitle {
+  color: #ffb335;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+button.DialogButton.NominateGameButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #cc8ec0;
+  border-radius: 3px;
+  width: fit-content;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+button.DialogButton.NominateGameButton svg {
+  height: 18px;
+  width: 18px;
+  margin-right: 8px;
+}
+button.DialogButton.NominateGameButton.White {
+  color: #fff;
+}
+button.DialogButton.NominateGameButton.Nominated {
+  cursor: default;
+  opacity: 0.5;
+}
+button.DialogButton.NominateGameButton.Nominated:hover {
+  background-color: #cc8ec0;
+}
+button.DialogButton.NominateGameButton:hover {
+  background-color: #fff;
+  color: #000;
+}
+.NoResultsCtn {
+  padding: 24px;
+  font-size: 20px;
+  font-weight: 300;
+  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0.36);
+}
+.ShareLinkCtn {
+  font-size: 15px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+html.tablet .carousel__slider-tray-wrapper {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+@media screen and (max-width: 910px) {
+  .carousel__slider-tray-wrapper {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+  }
+}
+.FriendsHeaderCtn {
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+.FriendsHeaderCtn .FriendsTitleCtn {
+  margin-left: 20px;
+}
+.FriendsHeaderCtn .FriendsTitle {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 44px;
+}
+.ProgressAndShareCtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 910px) {
+  .ProgressAndShareCtn {
+    padding-left: 3%;
+  }
+}
+.ProgressAndShareCtn .ProgressTitle {
+  font-size: 20px;
+  color: #e5c6df;
+}
+.ProgressAndShareCtn .ShareBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease-in-out;
+}
+.ProgressAndShareCtn .ShareBtn svg {
+  fill: #fff;
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+}
+.ProgressAndShareCtn .ShareBtn:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+}
+.ProgressAndShareCtn .ShareBtn:hover svg {
+  fill: #000;
+}
+.HeaderButtonCtn {
+  position: absolute;
+  bottom: 20px;
+}
+.Gold {
+  color: #ffb335;
+}
+.EventCarousel {
+  min-height: 315px;
+}
+.ShareModalBody {
+  width: fit-content;
+}
+.ShareModalBody .DialogTextInputBase:read-only {
+  color: #fff;
+}
+.ShareModalBody .ShareModalText {
+  user-select: none;
+}
+.ShareModalBody .ShareModalText.IntroText {
+  margin-bottom: 20px;
+}
+.ShareModalBody .Button {
+  width: fit-content;
+}
+.ShareModalBody .UrlContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.ShareModalBody .UrlContainer .DialogInput_Wrapper {
+  flex-grow: 1;
+}
+.ShareModalBody .UrlContainer .Url {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 8px;
+  box-sizing: border-box;
+}
+.ShareModalBody .GenerateShareLinkBtn {
+  display: inline-block;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  color: #fff;
+  margin-top: 8px;
+}
+.SteamAwardsNominations .DialogFooter .DialogButton.Primary {
+  width: fit-content;
+}
