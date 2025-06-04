@@ -10,7 +10,7 @@
     "@biomejs/biome": "^2.0",
     "astring": "^1.9.0",
     "espree": "^11.0.0",
-    "estraverse": "^5.3.0",
+    "estraverse": "github:Lifeismana\/estraverse#static-block"
     "xmlbuilder2": "^4.0.0"
   }
 }
