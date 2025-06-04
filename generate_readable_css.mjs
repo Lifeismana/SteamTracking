@@ -3,6 +3,8 @@ import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 import { resolve as pathResolve, basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parse as cssParse, walk as cssWalk, generate as cssGenerate } from "css-tree";
+import { exec } from "node:child_process";
 
 const CLASS_SELECTOR_REGEX = /(\.[a-zA-Z0-9_-]+)/g;
 
@@ -57,20 +59,24 @@ async function ParseJsFile(file, classNames) {
 
 async function FixCssFile(path, classNames) {
 	try {
-		const css = (await readFile(path)).toString();
-		let output = css;
-		const matches = [...new Set(css.match(CLASS_SELECTOR_REGEX))];
-		if (matches) {
-			for (const match of matches) {
-				if (Object.hasOwn(classNames, match.slice(1))) {
-					output = output.replaceAll(match, `.${classNames[match.slice(1)]}`);
+		const code = await readFile(path, 'utf8');
+		const css = cssParse(code);
+		let modified = false;
+		cssWalk(css, {
+			visit: Syntax.ClassSelector,
+			enter: (node) => {
+				if (node.name && Object.hasOwn(classNames, node.name)) {
+					node.name = classNames[node.name];
+					modified = true;
 				}
-			}
-		}
-		const outputPath = join(__dirname, "/c/", path.replace(__dirname, ""));
-		if (output !== css) {
+			},
+		});
+		
+		if (modified) {
+			const outputPath = join(__dirname, "/c/", path.replace(__dirname, ""));
 			await mkdir(dirname(outputPath), { recursive: true });
-			await writeFile(outputPath, output);
+			await writeFile(outputPath, cssGenerate(css));
+			exec(`npx biome format --write ${outputPath}`);
 		}
 	} catch (e) {
 		console.error(`Unable to fix "${path}":`, e);
@@ -89,7 +95,8 @@ async function* GetRecursiveFiles(dir, ext) {
 	}
 }
 
-function isProbablyNumeric(string, nbrRecursiceSlice) {
+// used to detect numbers & pixel values (e.g. "100px", "50%")
+function isProbablyNumeric(string) {
 	if (!Number.isNaN(Number(string))) {
 		return true;
 	}
@@ -145,4 +152,5 @@ for (const path of paths) {
 	for await (const file of GetRecursiveFiles(path, ".css")) {
 		await FixCssFile(file, classNames);
 	}
+
 }
