@@ -1,7 +1,7 @@
 import { readFile, writeFile, readdir as readDir, rm, mkdir } from "node:fs/promises";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
-import { resolve as pathResolve, basename, dirname, join } from "node:path";
+import { resolve as pathResolve, normalize as pathNormalize, basename, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as cssParse, walk as cssWalk, generate as cssGenerate } from "css-tree";
 import { exec } from "node:child_process";
@@ -11,13 +11,13 @@ const CLASS_SELECTOR_REGEX = /(\.[a-zA-Z0-9_-]+)/g;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
-async function ParseJsFile(file, classNames) {
-	//TODO remove /c. once it's not needed
+async function ParseJsFile(file) {
 	if (file.endsWith("licenses.js")) {
 		return;
 	}
 
 	try {
+		const classNames = {};
 		const code = await readFile(file);
 		const ast = parse(code, {
 			ecmaVersion: latestEcmaVersion,
@@ -52,6 +52,7 @@ async function ParseJsFile(file, classNames) {
 				}
 			},
 		});
+		return classNames;
 	} catch (e) {
 		console.error(`Unable to parse "${file}":`, e);
 	}
@@ -81,6 +82,42 @@ async function FixCssFile(path, classNames) {
 	} catch (e) {
 		console.error(`Unable to fix "${path}":`, e);
 	}
+}
+
+async function findFileRecursive(dir, filename){
+	const dirents = await readDir(dir, { withFileTypes: true });
+	for (const dirent of dirents) {
+		const res = pathResolve(dir, dirent.name);
+		if (dirent.isDirectory()) {
+			const found = await findFileRecursive(res, filename);
+			if (found) {
+				return found;
+			}
+		} else if (dirent.isFile() && dirent.name === filename) {
+			return res;
+		}
+	}
+	return null;
+}
+
+async function findFileGoingUp(filename, startDir) {
+	let currentDir = pathResolve(startDir);
+	while (depth(currentDir) > (depth(__dirname))) {
+		const filePath = await findFileRecursive(currentDir, filename);
+		if (filePath) return filePath;
+		currentDir = pathResolve(currentDir, '..');
+	}
+	return null;
+}
+
+function depth(dir) {
+	let count = 0;
+	let currentDir = dir;
+	while (currentDir !== pathNormalize(pathResolve(currentDir, '..'))) {
+		count++;
+		currentDir = pathResolve(currentDir, '..');
+	}
+	return count;
 }
 
 async function* GetRecursiveFiles(dir, ext) {
@@ -141,16 +178,16 @@ else {
 
 
 for (const path of paths) {
-	const classNames = {};
-
 	cleanPreviousRun(path);
 
-	for await (const file of GetRecursiveFiles(path, ".js")) {
-		await ParseJsFile(file, classNames);
-	}
-
 	for await (const file of GetRecursiveFiles(path, ".css")) {
-		await FixCssFile(file, classNames);
+		console.log(`Processing CSS file: ${file}`);
+		const jsFile = await findFileGoingUp(basename(file).replace(/\.css$/, ".js"), dirname(file));
+		console.log(`Associated JS file: ${jsFile}`);
+		if (jsFile) {
+			const className = await ParseJsFile(jsFile);
+			await FixCssFile(file, className);
+		}
 	}
 
 }
