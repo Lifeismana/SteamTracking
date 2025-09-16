@@ -964,7 +964,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
-${MEDIA_CDN_URL}${asset_url}
 ${MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
@@ -2909,7 +2908,6 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
-https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke
