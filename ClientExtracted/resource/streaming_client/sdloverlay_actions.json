@@ -1,0 +1,181 @@
+{
+  "category": "steamvr_input",
+  "default_bindings": [
+      {
+        "controller_type" : "knuckles",
+        "binding_url" : "sdloverlay_bindings_knuckles.json"
+      },
+      {
+        "controller_type" : "frame_controller",
+        "binding_url" : "sdloverlay_bindings_frame_controller.json"
+      }
+  ],
+  "action_sets" : [
+    {
+      "name" : "/actions/virtualgamepad",
+      "usage" : "single"
+    }
+  ],
+  "actions": [
+    {
+      "name": "/actions/virtualgamepad/in/stick_left",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/stick_right",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/trigger_left",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/trigger_right",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/a",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/b",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/x",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/y",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/back",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/guide",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/start",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/stick_click_left",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/stick_click_right",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/shoulder_left",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/shoulder_right",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/dpad_up",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/dpad_down",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/dpad_left",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/dpad_right",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/misc_1",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/paddle_1",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/paddle_2",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/paddle_3",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/paddle_4",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/touchpad_click",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/misc_2",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/misc_3",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/misc_4",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/misc_5",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/in/misc_6",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/virtualgamepad/out/haptic_left",
+      "type": "vibration"
+    },
+    {
+      "name": "/actions/virtualgamepad/out/haptic_right",
+      "type": "vibration"
+    }
+  ],
+    "localization" : [
+        {
+            "language_tag": "en_US",
+            "/actions/virtualgamepad/in/stick_left" : "Left Analog Stick",
+            "/actions/virtualgamepad/in/stick_right" : "Right Analog Stick",
+            "/actions/virtualgamepad/in/trigger_left" : "Left Trigger",
+            "/actions/virtualgamepad/in/trigger_right" : "Right Trigger",
+            "/actions/virtualgamepad/in/a" : "A",
+            "/actions/virtualgamepad/in/b" : "B",
+            "/actions/virtualgamepad/in/x" : "X",
+            "/actions/virtualgamepad/in/y" : "Y",
+            "/actions/virtualgamepad/in/back" : "Back",
+            "/actions/virtualgamepad/in/guide" : "Guide",
+            "/actions/virtualgamepad/in/start" : "Start",
+            "/actions/virtualgamepad/in/stick_click_left" : "Left Stick Click",
+            "/actions/virtualgamepad/in/stick_click_right" : "Right Stick Click",
+            "/actions/virtualgamepad/in/shoulder_left" : "Left Shoulder",
+            "/actions/virtualgamepad/in/shoulder_right" : "Right Shoulder",
+            "/actions/virtualgamepad/in/dpad_up" : "DPad Up",
+            "/actions/virtualgamepad/in/dpad_down" : "DPad Down",
+            "/actions/virtualgamepad/in/dpad_left" : "DPad Left",
+            "/actions/virtualgamepad/in/dpad_right" : "DPad Right",
+            "/actions/virtualgamepad/in/misc_1" : "Misc (Share/Mic/Capture)",
+            "/actions/virtualgamepad/in/paddle_1" : "Paddle 1",
+            "/actions/virtualgamepad/in/paddle_2" : "Paddle 2",
+            "/actions/virtualgamepad/in/paddle_3" : "Paddle 3",
+            "/actions/virtualgamepad/in/paddle_4" : "Paddle 4",
+            "/actions/virtualgamepad/in/touchpad_click" : "Touchpad Click",
+            "/actions/virtualgamepad/out/haptic_left" : "Left Haptic Feedback",
+            "/actions/virtualgamepad/out/haptic_right" : "Right Haptic Feedback"
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+   "bindings": {
+      "/actions/virtualgamepad": {
+         "haptics": [
+            {
+               "output": "/actions/virtualgamepad/out/haptic_right",
+               "path": "/user/hand/right/output/haptic"
+            },
+            {
+               "output": "/actions/virtualgamepad/out/haptic_left",
+               "path": "/user/hand/left/output/haptic"
+            }
+         ],
+         "sources": [
+            {
+               "inputs": {
+                  "pull": {
+                     "output": "/actions/virtualgamepad/in/trigger_left"
+                  }
+               },
+               "mode": "trigger",
+               "path": "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs": {
+                  "pull": {
+                     "output": "/actions/virtualgamepad/in/trigger_right"
+                  }
+               },
+               "mode": "trigger",
+               "path": "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/stick_click_left"
+                  },
+                  "position": {
+                     "output": "/actions/virtualgamepad/in/stick_left"
+                  }
+               },
+               "mode": "joystick",
+               "path": "/user/hand/left/input/thumbstick"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/stick_click_right"
+                  },
+                  "position": {
+                     "output": "/actions/virtualgamepad/in/stick_right"
+                  }
+               },
+               "mode": "joystick",
+               "path": "/user/hand/right/input/thumbstick"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/start"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/right/input/menu"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/back"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/left/input/view"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/a"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/right/input/a"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/b"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/right/input/b"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/x"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/right/input/x"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/y"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/right/input/y"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/dpad_up"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/left/input/dpad_up"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/dpad_down"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/left/input/dpad_down"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/dpad_left"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/left/input/dpad_left"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/dpad_right"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/left/input/dpad_right"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/shoulder_left"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/left/input/bumper"
+            },
+            {
+               "inputs": {
+                  "click": {
+                     "output": "/actions/virtualgamepad/in/shoulder_right"
+                  }
+               },
+               "mode": "button",
+               "path": "/user/hand/right/input/bumper"
+            }
+         ]
+      }
+   },
+   "controller_type": "frame_controller",
+   "description": "SDL Virtual Gamepad bindings for Steam Frame Controllers",
+   "name": "SDL Virtual Gamepad bindings for Steam Frame Controllers"
+}
