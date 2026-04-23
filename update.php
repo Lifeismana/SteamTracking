@@ -20,7 +20,6 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		private array $ClientArchiveFolder =
 		[
 			'ClientManifest/steam_client_publicbeta_ubuntu12' => 'linux_archives',
-			'ClientManifest/steam_cmd_publicbeta_linux'       => 'linux_archives',
 		];
 
 		/** @var array<string, string> */
