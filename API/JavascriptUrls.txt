@@ -1988,7 +1988,6 @@ ${linkurl}${}
 ${m_creatorURL}list/${listid}
 ${m_strActionURL}${action}/
 ${m_strBaseURL}${strClosedCaptionFile}
-${m_strBaseURL}${}
 ${m_strBaseURL}/actions/EmoticonList
 ${m_strBaseURL}/app/${appid}/broadcasts
 ${m_strBaseURL}/broadcast/getbroadcastinfo/
@@ -2079,7 +2078,6 @@ http://
 http://${}
 http://dashif.org/guidelines/thumbnail_tile${}
 http://help.steampowered.com/
-http://localhost:${}/
 http://proxy
 http://qr.weibo.cn/g/7kla92
 http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
@@ -2378,7 +2376,6 @@ https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
 https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436
 https://help.steampowered.com/faqs/view/17DA-EC4C-7D5B-8266
 https://help.steampowered.com/faqs/view/1E45-57ED-9153-7EF4
-https://help.steampowered.com/faqs/view/2EA8-4D75-DA21-31EB
 https://help.steampowered.com/faqs/view/3462-CD4C-36BD-5767
 https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8
 https://help.steampowered.com/faqs/view/5E0D-522A-4E62-B6EF
@@ -2472,7 +2469,6 @@ https://learn.microsoft.com/windows/win32/winauto/entry-uiauto-win32
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
 https://login.steampowered.com/jwt/ajaxrefresh
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
-https://partner.steamgames.com
 https://partner.steamgames.com//apps/landing/${appid}
 https://partner.steamgames.com/actions/setlanguage/
 https://partner.steamgames.com/actions/waitforedits
@@ -2620,7 +2616,6 @@ https://partner.steamgames.com/store/updatereleaseoverridekv/${packageid}
 https://partner.steamgames.com/tagdata/forcetagranking
 https://partner.steamgames.com/tagdata/simpletagprofile
 https://partner.steamgames.com/tagdata/tagassociations
-https://partner.steamgames.com/walletfunding/approval/
 https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.community
 https://play.google.com/store/apps/details?id=com.valvesoftware.steamlink
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
@@ -2978,7 +2973,6 @@ https://store.steampowered.com/login?redir=app/${appid}
 https://store.steampowered.com/logout/
 https://store.steampowered.com/mobile
 https://store.steampowered.com/news/app/${appid}/view/${announcementid}/
-https://store.steampowered.com/pccafe/
 https://store.steampowered.com/pub/${vanity_url}
 https://store.steampowered.com/public/captcha.php?gid=${gid}
 https://store.steampowered.com/public/data/widevine/cert_license_widevine_com.bin
