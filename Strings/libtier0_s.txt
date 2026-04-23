@@ -13,15 +13,11 @@
  KiB
  MiB
  [clone
- _Complex
- _Imaginary
  __vector(
  bytes
- class
  const
  for
  noexcept
- requires
  restrict
  throw
  transaction_safe
@@ -48,9 +44,7 @@ $ORIGIN
 %s/.steam/steam
 %s: %d, %d, %d
 %s: '%s', '%s'
-%s: __pos (which is %zu) > this->size() (which is %zu)
 %s: no such process %d\n
-']48D
 ( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
 ( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 (%zu) Descend: %s, (%s), %s\n
@@ -58,13 +52,6 @@ $ORIGIN
 (anonymous namespace)
 (iub & (m_nSizeWithStack-1)) == 0
 ***** OUT OF MEMORY! attempted allocation size: %zu ****\n
-*N12_GLOBAL__N_121system_error_categoryE
-*N12_GLOBAL__N_122generic_error_categoryE
-++CCUNG
-++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGIF
-++CCUNGnN
-++CCUNGstd::exception
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -87,20 +74,20 @@ $ORIGIN
 -steamos
 -steamos3
 -tesla
-../public/tier0/memblockhdr.h
-../public/tier0/vprof.h
-../tier0/cpu.cpp
-../tier0/dbg.cpp
-../tier0/memblockhdr.cpp
-../tier0/memstd.cpp
-../tier0/minidump.cpp
-../tier0/platform_posix.cpp
-../tier0/threadtools.cpp
-../tier0/typechecks.cpp
-../tier0/validator.cpp
-../tier0/vprof.cpp
+./obj_tier0_s_steamrtarm64/release/tier0_s.so
 /bin/sh
-/dev/random
+/data/src/public/tier0/memblockhdr.h
+/data/src/public/tier0/vprof.h
+/data/src/tier0/cpu.cpp
+/data/src/tier0/dbg.cpp
+/data/src/tier0/memblockhdr.cpp
+/data/src/tier0/memstd.cpp
+/data/src/tier0/minidump.cpp
+/data/src/tier0/platform_posix.cpp
+/data/src/tier0/threadtools.cpp
+/data/src/tier0/typechecks.cpp
+/data/src/tier0/validator.cpp
+/data/src/tier0/vprof.cpp
 /dev/urandom
 /etc/steamos-oobe-image
 /proc/%d/status
@@ -112,17 +99,17 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
-0123456789
 0123456789ABCDEF
-11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-18:46:38
+18:47:20
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
 <no address info>
 <unknown>
+>N16SteamThreadTools7CThreadE
+ARM-64
 AllocateCrashMemoryReserve
 Anonymous mutex cannot have bAllAccess == true
 Apr 21 2026
@@ -137,7 +124,6 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-AuthenticAMD
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock
 BGetLocalFQDN
@@ -220,13 +206,6 @@ CrackSmokingCompiler
 CreateInterface
 CreateSimpleProcess
 DBG_PATHMATCH
-DF128_
-DF16_
-DF16b
-DF32_
-DF32x
-DF64_
-DF64x
 DLog
 DONT_BREAK_ON_ASSERT
 DWarning
@@ -272,20 +251,8 @@ Fatal assert; application exiting
 FileSystem
 FreeCrashMemoryReserve
 GAMESCOPE_WAYLAND_DISPLAY
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
-GLIBCXX_TUNABLES
-GLIBC_2.12
-GLIBC_2.14
+GCC: (Debian 9.3.0-22) 9.3.0
 GLIBC_2.17
-GLIBC_2.2.5
-GLIBC_2.25
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.3
-GLIBC_2.3.4
-GLIBC_2.4
-GLIBC_2.7
-GLIBC_2.9
 GameOverlayUI
 GetAvailableRAM
 GetCPUInformation()
@@ -327,6 +294,7 @@ Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
+MbP?
 MemFree:
 MemTotal:
 MiniDumpUnlock
@@ -342,11 +310,9 @@ N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
-N16SteamThreadTools7CThreadE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NSt3_V214error_categoryE
 NULL != m_pValObjectCur
 Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
@@ -358,23 +324,10 @@ Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput
 OverlayRendering
-PDF128_
-PDF16_
-PDF16b
-PDF32_
-PDF32x
-PDF64_
-PDF64x
-PKDF128_
-PKDF16_
-PKDF16b
-PKDF32_
-PKDF32x
-PKDF64_
-PKDF64x
 PKDd
 PKDe
 PKDf
+PKDh
 PKDi
 PKDn
 PKDs
@@ -477,20 +430,9 @@ SpewAndLogChangeIfStillDefault
 SpewChangeIfStillDefault
 SpewOutputFunc
 SpewWrittenMiniDumps
-St10bad_typeid
 St11logic_error
-St11range_error
-St12domain_error
 St12length_error
-St12out_of_range
-St12system_error
 St13bad_exception
-St13runtime_error
-St14overflow_error
-St15underflow_error
-St16invalid_argument
-St20bad_array_new_length
-St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
@@ -717,6 +659,7 @@ Tried to create a thread that has already been created!
 USER
 Unable to determine CPU Frequency. Try defining CPU_MHZ.\n
 Unaccounted
+Unknown
 Unmatched %s\n
 VGUI
 VPROF Report for Thread: %d - %s\n
@@ -740,15 +683,15 @@ WriteMiniDump
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [abi:
-[friend]
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n
 \tValidate Failed: leaked connection to %s\n
 \tValidate Failed: leaked file '%s'\n
 \tValidate Failed: leaked socket remote address %s\n
+_Accum
 _DMsg
 _ExitOnFatalAssert\n
-_Float
+_Fract
 _GLOBAL_
 _ITM_RU1
 _ITM_RU8
@@ -757,14 +700,15 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_Sat
 _SpewMessageType
 _SpewMessageTypeSourceFmt
 _SpewMessageTypeSourceV
+__bss_start
 __ctype_b_loc
 __ctype_tolower_loc
 __cxa_atexit
 __cxa_finalize
-__cxa_pure_virtual
 __errno_location
 __float128
 __gmon_start__
@@ -775,9 +719,6 @@ __isoc99_sscanf
 __lxstat
 __lxstat64
 __pthread_key_create
-__stack_chk_fail
-__test_and_acquire(long*)
-__tls_get_addr
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -819,6 +760,8 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_edata
+_end
 _exit
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
@@ -842,28 +785,9 @@ basic_iostream
 basic_istream
 basic_ostream
 basic_string
-basic_string: construction from null is not valid
-basic_string::_M_create
-basic_string::_M_replace
-basic_string::_M_replace_aux
 basic_string::_S_construct null not valid
 basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
-basic_string::basic_string
-basic_string::compare
-basic_string::copy
-basic_string::erase
-basic_string::insert
-basic_string::replace
-basic_string::resize
-basic_string::substr
-basic_string_view::substr
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
-bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 boolean
 byte
 cefwebhelper
@@ -878,8 +802,8 @@ chromehtml.so
 clock_gettime
 close
 closedir
-co_await
 com.valvesoftware.steam
+complex
 console
 const_cast
 construction vtable for
@@ -897,7 +821,6 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-default
 delete
 delete[]
 dl_iterate_phdr
@@ -941,15 +864,13 @@ g_VProfProfilesRunningCount
 g_VProfile
 g_bInException
 g_pMemAllocSteam
-generic
-getentropy
 getenv
 gethostbyname
 gethostname
 getpid
 getpriority
+gettext
 gettimeofday
-glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 gmtime_r
@@ -957,16 +878,14 @@ gnu_get_libc_version
 gsoapwrapper.so
 guard variable for
 half
-hardware
 hidden alias for
-initializer for module
-ioctl
+imaginary
 item %p sentinel corrupted. skipping.\n
 java Class for
 java resource
 kill
 lchown
-ld-linux-x86-64.so.2
+ld-linux-aarch64.so.1
 libSDL3.so.0
 libc.so.6
 libdl.so.2
@@ -999,20 +918,15 @@ misc.h
 mkdir
 mkfifo
 mmap
-mold 2.36.0 (compatible with GNU ld)
 mount
 mprotect
-mt19937
 munmap
 nanosleep
 nattypeprobe.so
 new
 new[]
-noexcept
 non-transaction clone for
 non-virtual thunk to
-obj_count
-obj_size
 open
 open64
 opendir
@@ -1067,15 +981,7 @@ pthread_self
 pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
-random_device could not be read
-random_device: getentropy failed
-random_device: rdrand failed
-random_device: rdseed failed
-random_device::random_device(const std::string&): device not available
-random_device::random_device(const std::string&): unsupported token
-rdrand
-rdrnd
-rdseed
+pure virtual method called\n
 read
 readdir
 readdir64
@@ -1094,7 +1000,6 @@ sched_get_priority_max
 sched_get_priority_min
 sched_yield
 secblock.h
-secure_getenv
 semaphore creation failed %s
 semctl
 semget
@@ -1120,16 +1025,13 @@ statvfs
 statvfs64
 std::allocator
 std::bad_alloc
-std::bad_array_new_length
-std::bad_cast
 std::bad_exception
-std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::bfloat16_t
+std::exception
 std::iostream
 std::istream
 std::ostream
@@ -1147,9 +1049,7 @@ strcmp
 strcpy
 strdup
 strerror
-strerror_r
 string literal
-string::string
 strlen
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 strncasecmp
@@ -1164,7 +1064,6 @@ strtoul
 symlink
 syscall
 system
-template
 template parameter object for
 tenfoot.so
 terminate called after throwing an instance of '
@@ -1178,7 +1077,6 @@ tier1
 time
 timegm
 timezone
-tolower
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -1188,24 +1086,6 @@ typeinfo for
 typeinfo for CAdHocValidation
 typeinfo for CAdHocValidation_SimpleCallback
 typeinfo for SteamThreadTools::CThread
-typeinfo for _Float128
-typeinfo for _Float128 const*
-typeinfo for _Float128*
-typeinfo for _Float16
-typeinfo for _Float16 const*
-typeinfo for _Float16*
-typeinfo for _Float32
-typeinfo for _Float32 const*
-typeinfo for _Float32*
-typeinfo for _Float32x
-typeinfo for _Float32x const*
-typeinfo for _Float32x*
-typeinfo for _Float64
-typeinfo for _Float64 const*
-typeinfo for _Float64*
-typeinfo for _Float64x
-typeinfo for _Float64x const*
-typeinfo for _Float64x*
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -1214,9 +1094,6 @@ typeinfo for __cxxabiv1::__pbase_type_info
 typeinfo for __cxxabiv1::__pointer_to_member_type_info
 typeinfo for __cxxabiv1::__pointer_type_info
 typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __float128
-typeinfo for __float128 const*
-typeinfo for __float128*
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
@@ -1253,6 +1130,9 @@ typeinfo for double*
 typeinfo for float
 typeinfo for float const*
 typeinfo for float*
+typeinfo for half
+typeinfo for half const*
+typeinfo for half*
 typeinfo for int
 typeinfo for int const*
 typeinfo for int*
@@ -1271,9 +1151,6 @@ typeinfo for short*
 typeinfo for signed char
 typeinfo for signed char const*
 typeinfo for signed char*
-typeinfo for std::bfloat16_t
-typeinfo for std::bfloat16_t const*
-typeinfo for std::bfloat16_t*
 typeinfo for std::nullptr_t
 typeinfo for std::nullptr_t const*
 typeinfo for std::nullptr_t*
@@ -1306,24 +1183,6 @@ typeinfo name for CAdHocValidation
 typeinfo name for CAdHocValidation_SimpleCallback
 typeinfo name for SteamThreadTools::CThread
 typeinfo name for SteamVProf::CVProfManager
-typeinfo name for _Float128
-typeinfo name for _Float128 const*
-typeinfo name for _Float128*
-typeinfo name for _Float16
-typeinfo name for _Float16 const*
-typeinfo name for _Float16*
-typeinfo name for _Float32
-typeinfo name for _Float32 const*
-typeinfo name for _Float32*
-typeinfo name for _Float32x
-typeinfo name for _Float32x const*
-typeinfo name for _Float32x*
-typeinfo name for _Float64
-typeinfo name for _Float64 const*
-typeinfo name for _Float64*
-typeinfo name for _Float64x
-typeinfo name for _Float64x const*
-typeinfo name for _Float64x*
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
@@ -1332,9 +1191,6 @@ typeinfo name for __cxxabiv1::__pbase_type_info
 typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 typeinfo name for __cxxabiv1::__pointer_type_info
 typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __float128
-typeinfo name for __float128 const*
-typeinfo name for __float128*
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
@@ -1371,6 +1227,9 @@ typeinfo name for double*
 typeinfo name for float
 typeinfo name for float const*
 typeinfo name for float*
+typeinfo name for half
+typeinfo name for half const*
+typeinfo name for half*
 typeinfo name for int
 typeinfo name for int const*
 typeinfo name for int*
@@ -1389,9 +1248,6 @@ typeinfo name for short*
 typeinfo name for signed char
 typeinfo name for signed char const*
 typeinfo name for signed char*
-typeinfo name for std::bfloat16_t
-typeinfo name for std::bfloat16_t const*
-typeinfo name for std::bfloat16_t*
 typeinfo name for std::nullptr_t
 typeinfo name for std::nullptr_t const*
 typeinfo name for std::nullptr_t*
@@ -1419,7 +1275,6 @@ typeinfo name for void*
 typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
-typename
 uname
 unknown
 unlink
@@ -1434,7 +1289,7 @@ urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 usleep
 utime
 utimes
-vector::_M_realloc_append
+vector::_M_realloc_insert
 vector::reserve
 vfprintf
 vgui2_s.so
@@ -1467,6 +1322,6 @@ x86_64
 xlocale
 xmemory
 {default arg#
-{lambda
+{lambda(
 {parm#
 {unnamed type#

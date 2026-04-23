@@ -3091,6 +3091,7 @@
     "GamePerformanceStats_NoData": "No data available",
     "GamePerformanceStats_Feedback_Agree": "%1$s of respondents agree with this game's %2$s rating. For context, the average agreement rating across all Deck Verified games is 95%.",
     "GamePerformanceStats_Feedback_AgreePercentage": "%1$s%",
+    "GamePerformanceStats_Feedback_PercentageTooltip": "We're providing this data because while customers overwhelmingly agree with the Verified rating for titles (>95%), it can be valuable to better understand the experiences of customers who disagree, especially in the context of a specific title or update.",
     "GamePerformanceStats_OverwhelminglyAgree": "overwhelmingly agree",
     "GamePerformanceStats_StronglyAgree": "strongly agree",
     "GamePerformanceStats_Mixed": "mixed",

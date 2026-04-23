@@ -6,20 +6,15 @@
   what():
  2>/dev/null
  [clone
- _Complex
- _Imaginary
  __vector(
- class
  const
  for
  noexcept
- requires
  restrict
  throw
  transaction_safe
  volatile
 !! Last miles service delay: %u\n
-!"_msize_dbg unsupported"
 !m_data.HasError()
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
@@ -56,51 +51,67 @@ $ORIGIN
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (anonymous namespace)
+*N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *ZL19RunCommandGetOutput10StringViewR10CUtlStringbbEUlS_E_
-++CCUNG
-++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGstd::exception
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-0123456789
 -chromeosdiskmanagement
 -chromeosnopreallocate
 -chromeosverbose
 -clientbeta
-../common/audio/audiocontroller.cpp
-../common/audio/audiosink_pulse.cpp
-../common/audio/milesaudiodevice.cpp
-../common/audio/milesaudiooutputstream.cpp
-../common/audio/milesaudiosound.cpp
-../common/audio/mileswrapper.cpp
-../external/picojson/picojson.h
-../public/tier0/memoverride.cpp
-../public/tier0/tslist.h
-../public/tier1/interface.h
-../public/tier1/utlbuffer.h
-../public/tier1/utllinkedlist.h
-../public/tier1/utlmemory.h
-../public/tier1/utlrbtree.h
-../public/tier1/utlstring.h
-../public/tier1/utlsymbol.h
-../public/tier1/utlvector.h
-../tier1/fileio.cpp
-../tier1/interface.cpp
-../tier1/utlbuffer.cpp
-../tier1/utlmemory.cpp
-../tier1/utlstring.cpp
-../tier1/utlsymbol.cpp
+-extra
+./obj_libaudio_steamrtarm64/release/audio.so
 .cpl
 .mp3
 .steam_exec_test.sh
+/data/src/common/audio/audiocontroller.cpp
+/data/src/common/audio/audiosink_pulse.cpp
+/data/src/common/audio/milesaudiodevice.cpp
+/data/src/common/audio/milesaudiooutputstream.cpp
+/data/src/common/audio/milesaudiosound.cpp
+/data/src/common/audio/mileswrapper.cpp
+/data/src/external/picojson/picojson.h
+/data/src/public/tier0/tslist.h
+/data/src/public/tier1/interface.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlsymbol.h
+/data/src/public/tier1/utlvector.h
+/data/src/tier1/fileio.cpp
+/data/src/tier1/interface.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/tier1/utlsymbol.cpp
 /dev
 /dev/
 /dev/disk/by-uuid
-/dev/random
-/dev/urandom
 /etc/mtab
 /proc/mounts
 /proc/self/maps
-/steamrt64
+/steamrtarm64
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_64/disk-free
@@ -190,7 +201,6 @@ $ORIGIN
 17CStreamReaderBase
 18CUtlCharConversion
 18IAudioOutputStream
-19CDirContentsWatcher
 19CUtlNoEscConversion
 20CIAudioSinkListPulse
 21CUtlCStringConversion
@@ -250,11 +260,16 @@ AIL_shutdown
 AIL_start_sample
 AIL_startup
 AIL_stop_sample
+AKST
+ASCII
+ASCII//TRANSLIT
+April
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 Assertion failed: length > k_cchMaxString
 Attempted to set the volume without the service running
 AudioSinkList
+August
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
@@ -301,6 +316,7 @@ CreateMilesVoiceAudioDevice
 DBG_PATHMATCH
 DBG_STAT
 DLOPEN Error:%s\n
+December
 Don't know how to check filesystem type on POSIX!
 Element( i )
 Error
@@ -345,21 +361,13 @@ Failed to set sink input by index\n
 Failed to set source output by index\n
 Failed to subscribe pulse context
 Failed to subscribe to pulse device restore ext\n
+February
 File change notification for %s but no file contents changed based on hash\n
 Free disk space for %s would overflow
 FreeAudioDevice
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
-GLIBCXX_TUNABLES
-GLIBC_2.10
-GLIBC_2.14
+Friday
+GCC: (Debian 9.3.0-22) 9.3.0
 GLIBC_2.17
-GLIBC_2.2.5
-GLIBC_2.25
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.4
-GLIBC_2.4
-GLIBC_2.7
 GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
 HOME
@@ -373,6 +381,9 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
+January
+July
+June
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio true
@@ -387,18 +398,45 @@ LOCK_SH
 LoadFileRangeIntoBuffer_Internal
 Lowered '%s' -> '%s'\n
 MUSIC
+March
 Matched '%s' -> '%s'\n
 MilesLoader
+Monday
 N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
 N17CFileWriterThread19CFileWriterWorkItemE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt3_V214error_categoryE
-PS3 Unattributed
+NSt6locale5facet6__shimE
+NSt6locale5facetE
+NSt7__cxx1110moneypunctIcLb0EEE
+NSt7__cxx1110moneypunctIcLb1EEE
+NSt7__cxx1110moneypunctIwLb0EEE
+NSt7__cxx1110moneypunctIwLb1EEE
+NSt7__cxx117collateIcEE
+NSt7__cxx117collateIwEE
+NSt7__cxx118messagesIcEE
+NSt7__cxx118messagesIwEE
+NSt7__cxx118numpunctIcEE
+NSt7__cxx118numpunctIwEE
+NSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8ios_base7failureB5cxx11E
+NSt8ios_base7failureE
+November
+October
 PULSE_0
 Plat_CommandLineParamExists
 Plat_FloatTime
@@ -429,25 +467,83 @@ Received pulse event with no info: %s\n
 Received pulse event with no userdata: %s\n
 RunCommand
 SOUND
+Saturday
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
-St10bad_typeid
+September
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11__timepunctIcE
+St11__timepunctIwE
 St11logic_error
-St11range_error
-St12domain_error
+St12codecvt_base
 St12length_error
 St12out_of_range
 St12system_error
+St13__ios_failure
 St13bad_exception
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
 St13runtime_error
-St14overflow_error
-St15underflow_error
-St16invalid_argument
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
 St17bad_function_call
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St19__iosfail_type_info
 St20bad_array_new_length
+St21__ctype_abstract_baseIwE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
 St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+St9type_info
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -473,6 +569,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
+Sunday
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for
 TLS wrapper function for
@@ -493,9 +590,13 @@ ThreadInterlockedExchangeAdd
 ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadSleep
+Thursday
+Tuesday
+UTF-8
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unhandled pulse event facility:%d\n
+Unknown error
 Unmatched %s\n
 VOICE
 VProfInternalEnterScopeCurrentThread
@@ -540,12 +641,13 @@ Volume Ramp Filter
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 WeakRandomUint32
+Wednesday
 XXXXXX
 [abi:
-[friend]
 \t(%zu) comparing %s with %s\n
 \u%04x
-_Float
+_Accum
+_Fract
 _GLOBAL_
 _ITM_RU1
 _ITM_RU8
@@ -556,13 +658,17 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
+_Sat
+__bss_start
 __ctype_b_loc
+__ctype_get_mb_cur_max
 __ctype_tolower_loc
 __cxa_atexit
 __cxa_finalize
-__cxa_pure_virtual
+__duplocale
 __errno_location
 __float128
+__freelocale
 __fxstat64
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
@@ -570,12 +676,24 @@ __gnu_cxx::__concurrence_unlock_error
 __int128
 __isoc99_fscanf
 __isoc99_sscanf
+__iswctype_l
 __lxstat
 __lxstat64
+__newlocale
+__nl_langinfo_l
 __pthread_key_create
-__stack_chk_fail
-__test_and_acquire(long*)
-__tls_get_addr
+__strcoll_l
+__strftime_l
+__strtod_l
+__strtof_l
+__strxfrm_l
+__towlower_l
+__towupper_l
+__uselocale
+__wcscoll_l
+__wcsftime_l
+__wcsxfrm_l
+__wctype_l
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -617,6 +735,8 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_edata
+_end
 _strlwr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
@@ -635,23 +755,28 @@ alcOpenDevice
 alcSuspendContext
 alignof
 allocator
+alnum
+alpha
 alphasort64
+alse
 analog
 application.icon_name
 application.id
 application.name
 application.process.id
 application.version
+array
 audio.channels.detected
 auto
 auto:
 availableSpace
 bad_function_call
+basic_ios::clear
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
-basic_string: construction from null is not valid
+basic_string::_M_construct null not valid
 basic_string::_M_create
 basic_string::_M_replace
 basic_string::_M_replace_aux
@@ -659,25 +784,21 @@ basic_string::_S_construct null not valid
 basic_string::_S_create
 basic_string::append
 basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
-basic_string::basic_string
-basic_string::compare
 basic_string::copy
 basic_string::erase
-basic_string::insert
-basic_string::replace
 basic_string::resize
-basic_string::substr
-basic_string_view::substr
 bin64
+bind_textdomain_codeset
+bindtextdomain
+blank
 bluetooth
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
 boolean
+btowc
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 byte
 cActualReplacements == cReplacements
+cannot create shim for unknown locale::facet
 card.profile.port
 cbActual < (uint32)nBufSizeWithTerminator
 char
@@ -690,7 +811,8 @@ chown
 clock_gettime
 close
 closedir
-co_await
+cntrl
+complex
 const_cast
 construction vtable for
 count >= 0
@@ -704,11 +826,12 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-default
 delete
 delete[]
 device.bus
 device.description
+dgettext
+digit
 disk-free command failed\n
 diskSize
 dl_iterate_phdr
@@ -734,6 +857,7 @@ false
 fclose
 fcntl
 fdatasync
+fdopen
 feof
 fflush
 fgetc
@@ -757,6 +881,7 @@ free
 freopen
 fscanf disk-free output failed\n
 fseek
+fseeko64
 fsync %s failed, errno = %d\n
 ftello64
 ftruncate64
@@ -770,31 +895,37 @@ g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
 generic
 get_disk_info
+getc
 getcwd
-getentropy
 getenv
 getmntent
-glibcxx.eh_pool
+gettext
+getwc
 global constructors keyed to
 global destructors keyed to
+graph
 guard variable for
 half
 handset
 handsfree
-hardware
 hdmi
 headphones
 headset
 hidden alias for
 hifi
+iconv
+iconv_close
+iconv_open
+imaginary
 info.m_pReplacementString == 0
-initializer for module
 ioctl
+iostream
+iostream error
 isspace
 java Class for
 java resource
 lchown
-ld-linux-x86-64.so.2
+ld-linux-aarch64.so.1
 len > 0 || HasError()
 libc.so.6
 libdl.so.2
@@ -807,10 +938,12 @@ libtier0_s.so
 libvstdlib_s.so
 line
 link
+locale::facet::_S_create_c_locale name not valid
 localeconv
 long
 long double
 long long
+lower
 lseek64
 m_Count == 0
 m_Elements
@@ -848,6 +981,9 @@ m_vecDevices
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
 malloc
+mbrtowc
+mbsnrtowcs
+mbsrtowcs
 memchr
 memcmp
 memcpy
@@ -859,10 +995,8 @@ mkstemp
 mkstemp errno %d\n
 mmap64
 modf
-mold 2.36.0 (compatible with GNU ld)
 mount
 msync
-mt19937
 munmap
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nChannels == 1 || nChannels == 2
@@ -878,13 +1012,13 @@ nTargetLength > 0
 network
 new
 new[]
-noexcept
 non-transaction clone for
 non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
+null
 num > 0
 numElements >= 0
-obj_count
-obj_size
+object
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
@@ -974,32 +1108,27 @@ pa_threaded_mainloop_unlock
 pclose
 phone
 playback
+poll
 popen
 port.type
 portable
 posix_fadvise
 pread64
+print
 printf
 pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pthread_cond_broadcast
-pthread_cond_wait
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+punct
+pure virtual method called\n
+putc
+putwc
 pwrite64
 radio
-random_device could not be read
-random_device: getentropy failed
-random_device: rdrand failed
-random_device: rdseed failed
-random_device::random_device(const std::string&): device not available
-random_device::random_device(const std::string&): unsupported token
-rdrand
-rdrnd
-rdseed
 read
 readdir64
 readlink
@@ -1018,14 +1147,16 @@ s_pSymbolTable
 scandir
 scandir64
 sched_yield
-secure_getenv
 sendfile64
+setlocale
 setmntent
+setvbuf
 short
 signed char
 sizeof
 sizeof...
 snprintf
+space
 spaceGranted
 spaceReleased
 spdif
@@ -1045,19 +1176,21 @@ std::bad_alloc
 std::bad_array_new_length
 std::bad_cast
 std::bad_exception
-std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::bfloat16_t
+std::exception
 std::iostream
 std::istream
 std::ostream
 std::string
 stderr
+stdin
+stdout
 steam
+stereo
 strcasecmp
 strcasestr
 strchr
@@ -1065,10 +1198,8 @@ strcmp
 strcpy
 strdup
 strerror
-strerror_r
 strftime
 string literal
-string::string
 strlen
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 strncasecmp
@@ -1080,13 +1211,14 @@ strrchr
 strstr
 strtod
 strtol
+strtold_l
 strtoll
 strtoul
+surround71
 symlink
 syntax error at line %d near:
 syscall
 system
-template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -1094,7 +1226,6 @@ terminate called without an active exception\n
 this
 throw
 time
-tolower
 transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -1102,20 +1233,26 @@ true
 typeinfo fn for
 typeinfo for
 typeinfo for SteamThreadTools::CThread
+typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
+typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
-typename
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
+ungetc
+ungetwc
+uninitialized __any_string
 unlink
 unsigned
 unsigned __int128
@@ -1125,11 +1262,12 @@ unsigned long
 unsigned long long
 unsigned short
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+upper
 usleep
 utime
 utimes
 vasprintf
-vector::_M_realloc_append
+vector::_M_realloc_insert
 video
 virtual thunk to
 void
@@ -1139,17 +1277,30 @@ vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 wchar_t
+wcrtomb
+wcscmp
+wcslen
+wcsnrtombs
+wctob
+wmemchr
+wmemcmp
+wmemcpy
+wmemmove
+wmemset
 wpctl settings bluetooth.autoswitch-to-headset-profile
 wpctl settings node.features.audio.mono
 wpctl settings node.stream.spatial-audio
 wpctl settings node.stream.spatial-audio-surround
 write
 write %s failed, errno = %d\n
+writev
+xdigit
 {default arg#
-{lambda
+{lambda(
 {parm#
 {unnamed type#

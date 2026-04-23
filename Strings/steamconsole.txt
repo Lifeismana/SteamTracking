@@ -1,0 +1,4461 @@
+       documentation here: https://partner.steamgames.com/doc/features/drm\n
+  f_bavail: %lu\n
+  f_bfree : %lu\n
+  f_blocks: %lu\n
+  f_bsize : %lu\n
+  f_frsize: %lu\n
+  or:\tsteamcmd +runscript SCRIPTFILE
+  what():
+ %.1fMB (%d%%)\n
+ %12.06fs %s%s\n
+ (repeat period: %lldms)
+ - local build
+ - version %llu\n
+ 2>/dev/null
+ = %-12s : %s\n
+ ReadToken overflow
+ Update state (0x%X) %s, progress: %.2f (%llu / %llu)\n
+ Update state (0x%X) : Timed out waiting for update to start, bailing.\n
+ [clone
+ __vector(
+ const
+ fnumber=%d ofs=0x%x sz=%d
+ for
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+!"Not implemented"
+!"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
+!( m_nFlags & FCVAR_NEVER_AS_STRING )
+!= and not NULL
+!AxU
+!BStringEquals( pathAlreadyLoaded.GetUTF8Path(), pathSDKModulePath.GetUTF8Path() )
+!m_data.HasError()
+!m_pInt
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
+!pszString || pszString[nChars] == '\0'
+!sm_bShutDown
+!sm_bShuttingDown
+!sm_pLogInstance
+"%s" = "%s"\n
+"10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+"type mismatch! call is<type>() before get<type>()" && is<array>()
+"type mismatch! call is<type>() before get<type>()" && is<object>()
+"type mismatch! call is<type>() before get<type>()" && is<std::string>()
+#!/bin/sh\nexit 0\n
+#FLR
+#Panorama_Lang_Arabic
+#Panorama_Lang_Brazilian
+#Panorama_Lang_Bulgarian
+#Panorama_Lang_Czech
+#Panorama_Lang_Danish
+#Panorama_Lang_Dutch
+#Panorama_Lang_English
+#Panorama_Lang_Finnish
+#Panorama_Lang_French
+#Panorama_Lang_German
+#Panorama_Lang_Greek
+#Panorama_Lang_Hungarian
+#Panorama_Lang_Indonesian
+#Panorama_Lang_Italian
+#Panorama_Lang_Japanese
+#Panorama_Lang_Korean
+#Panorama_Lang_Latam_Spanish
+#Panorama_Lang_Norwegian
+#Panorama_Lang_Polish
+#Panorama_Lang_Portuguese
+#Panorama_Lang_Romanian
+#Panorama_Lang_Russian
+#Panorama_Lang_Simplified_Chinese
+#Panorama_Lang_Spanish
+#Panorama_Lang_Swedish
+#Panorama_Lang_Thai
+#Panorama_Lang_Traditional_Chinese
+#Panorama_Lang_Turkish
+#Panorama_Lang_Ukrainian
+#Panorama_Lang_Vietnamese
+#Panorama_Selection_Arabic
+#Panorama_Selection_Brazilian
+#Panorama_Selection_Bulgarian
+#Panorama_Selection_Czech
+#Panorama_Selection_Danish
+#Panorama_Selection_Dutch
+#Panorama_Selection_English
+#Panorama_Selection_Finnish
+#Panorama_Selection_French
+#Panorama_Selection_German
+#Panorama_Selection_Greek
+#Panorama_Selection_Hungarian
+#Panorama_Selection_Indonesian
+#Panorama_Selection_Italian
+#Panorama_Selection_Japanese
+#Panorama_Selection_Korean
+#Panorama_Selection_Latam_Spanish
+#Panorama_Selection_Norwegian
+#Panorama_Selection_Polish
+#Panorama_Selection_Portuguese
+#Panorama_Selection_Romanian
+#Panorama_Selection_Russian
+#Panorama_Selection_Simplified_Chinese
+#Panorama_Selection_Spanish
+#Panorama_Selection_Swedish
+#Panorama_Selection_Thai
+#Panorama_Selection_Traditional_Chinese
+#Panorama_Selection_Turkish
+#Panorama_Selection_Ukrainian
+#Panorama_Selection_Vietnamese
+#SteamUI_Selection_Arabic
+#SteamUI_Selection_Brazilian
+#SteamUI_Selection_Bulgarian
+#SteamUI_Selection_Czech
+#SteamUI_Selection_Danish
+#SteamUI_Selection_Dutch
+#SteamUI_Selection_English
+#SteamUI_Selection_Finnish
+#SteamUI_Selection_French
+#SteamUI_Selection_German
+#SteamUI_Selection_Greek
+#SteamUI_Selection_Hungarian
+#SteamUI_Selection_Indonesian
+#SteamUI_Selection_Italian
+#SteamUI_Selection_Japanese
+#SteamUI_Selection_Korean
+#SteamUI_Selection_Latam_Spanish
+#SteamUI_Selection_Norwegian
+#SteamUI_Selection_Polish
+#SteamUI_Selection_Portuguese
+#SteamUI_Selection_Romanian
+#SteamUI_Selection_Russian
+#SteamUI_Selection_Simplified_Chinese
+#SteamUI_Selection_Spanish
+#SteamUI_Selection_Swedish
+#SteamUI_Selection_Thai
+#SteamUI_Selection_Traditional_Chinese
+#SteamUI_Selection_Turkish
+#SteamUI_Selection_Ukrainian
+#SteamUI_Selection_Vietnamese
+#include
+#include is NULL
+#tDq
+$$$$$$$HighlyUnlikelyPathForInitializationPurposes#######
+$ORIGIN
+$\nY8O
+%.17g
+%.18g
+%02d/%02d/%02d
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+%04u%02u%02u
+%04u%02u%02u%02u%02u%02u
+%04u%02u%02uT%02u%02u%02uZ
+%04u-%02u-%02u
+%04u-%02u-%02u %02u:%02u:%02u
+%1.4lfms
+%40s
+%Y%m%d%H%M%S
+%Y%m%dT%H%M%SZ
+%Y-%m-%d %H:%M:%S
+%Y-%m-%dT%H:%M:%S+00:00
+%Y-%m-%dT%H:%M:%SZ
+%a, %e %b %Y %H:%M:%S
+%a, %e-%b-%Y %H:%M:%S
+%a, %e-%b-%y %H:%M:%S
+%d MB avail\n
+%d MB free space\n
+%d MB total space\n
+%d.%d.%d.%d:%d
+%d:00
+%f %f %f %f
+%hu:%u:%u%c
+%i.%i.%i.%i
+%i.%i.%i.%i:%i
+%lld
+%llu
+%llx
+%lx-%lx %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
+%s : %lld (%d/sec)\n
+%s [%s]%-*s
+%s overflow!\n
+%s%02d:%02d:%02d
+%s%c.temp_write_%x
+%s%capp_build_%u.log
+%s%cdepot_build_%d.vdf
+%s%d:VP%d_%sprecomp_%s
+%s%s%s crc=0x%x metadatasz=%d
+%s%s_full.jpg
+%s.%10u.txt
+%s.%u.tmp
+%s.async%u.tmp
+%s.current.txt
+%s/%s/%s.previous.txt
+%s/%s/%s.txt
+%s/.steam/%s
+%s/.steam/steam
+%s/depot_build_output
+%s/incoming/app_%u/bucket_%llu
+%s/incoming/app_%u/bucket_%llu.tcdepotmanifestcache
+%s/outgoing/app_%u/bucket_%llu
+%s/precomp
+%s/steamXXXXXX
+%s/swarm_shader_download.vdf
+%s/swarm_tc_download.vdf
+%s: __pos (which is %zu) > this->size() (which is %zu)
+%s_%03d.vpk
+%s_dir.vpk
+&bzi
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
+( elem == Count() ) || IsValidIndex( elem )
+( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+(DEPRECATED) Friends-of-friends-only
+(DEPRECATED) Logged-in users only
+(Validated)
+(anonymous namespace)
+(eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
+(null)
+*N12_GLOBAL__N_117io_error_categoryE
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
+*ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
+*ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
+*pBaseFrameFunction->GetName()
+*pchMsg && *pchMsg == '%'
++quit
++ulsX
+, %1.4lfms
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-- Building Steam Applications --\n\nFull documentation of this process is beyond the scope of this little 'help' system, and so it is provided as part of the Steam SDK.\n\nIf you are a licensed Steam Application Developer, then you will be using this tool to 'build' your game or application and create update patches in the Steam system. In that case, the 'app_build' command is the one you're looking for.\n\n
+-- Console Variables --\n\nConVars are variables used to set options and program behavior. Often, but not always, Steam client ConVars are named beginning with the '@' character. The '@' character is simply part of their name, it is not a directive itself.\n\nTo see the current value of a ConVar, simply type its name into the console and hit enter. To change the value, type the name of the ConVar followed by the desired value, and hit enter.\n\n
+-- Directly invoking commands at program execution time using the command-line\n\nThis can be done using the '+' directive: Any command (including convars) which you can type at the Steam> prompt may also be passed in via the program command-line after the '+' character.\n\nIf the command takes more than one argument, you must wrap the entire command (including the '+' character) in quotes. Additionally, if any arguments include spaces, they should themselves be wrapped in quotes. In the case where outer and inner quotes are necessary, escape the inner qotes with the backslash ('\') character.\n\nYou can include as many '+' directives on the command-line as you want, they will be executed sequentially in order.\n\nExamples:\n\n * to invoke 'some_command' run:\n\n\tsteamcmd +some_command\n\n * to invoke 'some_command arg1' run:\n\n\tsteamcmd +some_command arg1\n\n * to invoke 'some_command arg1 arg2' run:\n\n\tsteamcmd "+some_command arg1 arg2"\n\n * to invoke 'some_command arg1 "arg with spaces"' run:\n\n\tsteamcmd "+some_command arg1 \"arg with spaces\""\n\n
+-- Downloading and updating Steam applications installed on the local machine --\n\nUse the 'app_update' command to download and update Steam games and applications on this computer. This is generally intended for game dedicated server installations, and will only work for games that have been converted to the new Steam HTTP download system - for games that haven't been converted yet, you should use the older 'HldsUpdateTool' (Windows) / 'steam' (linux) command-line tool.\n\nBy default, the game is downloaded to the folder "./SteamApps/common/<gamename>". To change this location, use the 'force_install_dir' command to set the target directory BEFORE running app_update. Note: Steam will create a directory within the target directory for storing state information and temporary files; the name of this folder will be a string of numbers and letters 40 characters long.\n\nYou will first need to login to Steam using an account which has access to the game, or anonymously - type 'help login' for more information.\n\nIt's likely you'll want to put all of the necessary calls into a script file (see "runscript"); here is an example file: \n\n @ShutdownOnFailedCommand 1\n @NoPromptForPassword 1\n force_install_dir ../Ricochet/\n login anonymous\n app_update 60 validate\n quit\n\n\n
+-- Logging in to Steam --\n\nConnecting to your Steam account using steamcmd is similar to using the regular Steam client UI. You can login, logout, and set your Steam Guard email code. Any other account management should be done using the Steam client UI.\n\nThe first time logging in to a given account on this machine, you'll need to specify the password. For subsequent sessions you can omit the password; using the 'logout' command will clear those cached credentials (your password is never stored locally) and require a password on the next login. If the password is required but not supplied as part of the 'login' command, you will be prompted for a password. To disable this prompt, first set the '@NoPromptForPassword' ConVar to 1 (see the help topic 'convars' for more info). If the prompt is disabled and the password is required, the login command will fail.\n\nNote: you may login anonymously using "login anonymous" if the content you wish to download is available for anonymous access.\n\nCommon commands:\n\n               login : Login to Steam\n              logout : Disconnect from Steam\nset_steam_guard_code : Enter the Steam Guard code that was emailed to you for authorizing this machine\n\n
+-- type 'quit' to exit --
+--- %d scheduled functions\n
+--help
+--non-interactive
+-0123456789
+-attachui
+-chromeosdiskmanagement
+-chromeosnopreallocate
+-chromeosverbose
+-clientbeta
+-debugoutputlogs
+-devsites
+-devsiteshost
+-globaluser
+-gui
+-help
+-master_ipc_name_override
+-nodebug
+-quicklogin
+-sitelicense
+-steamdeckdisplay
+-steammachinedisplay
+./depotscripts
+./obj_steamconsole_steamrtarm64/release/steamconsole.so
+.cpl
+.current.txt
+.steam_exec_test.sh
+.vpk
+.y4w
+/data/src/common/enum_names.cpp
+/data/src/common/filesystem_helpers.cpp
+/data/src/common/framefunction.cpp
+/data/src/common/language.cpp
+/data/src/common/logfile.cpp
+/data/src/common/logger.cpp
+/data/src/common/scheduledfunction.cpp
+/data/src/common/scheduledfunction.h
+/data/src/common/steam/client_api.cpp
+/data/src/common/steamid.cpp
+/data/src/common/string_misc.cpp
+/data/src/common/urlhelper.cpp
+/data/src/external/picojson/picojson.h
+/data/src/public/rtime.cpp
+/data/src/public/tier0/tslist.h
+/data/src/public/tier1/bitstring.h
+/data/src/public/tier1/netadr.h
+/data/src/public/tier1/smartptr.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utlhashmap.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlqueue.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlvector.h
+/data/src/steamconsole/appupdater.cpp
+/data/src/steamconsole/depotbuilder.cpp
+/data/src/tier1/KeyValues.cpp
+/data/src/tier1/bitstring.cpp
+/data/src/tier1/checksum_md5.cpp
+/data/src/tier1/convar.cpp
+/data/src/tier1/fileio.cpp
+/data/src/tier1/interface.cpp
+/data/src/tier1/netadr.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlqueue.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/vpklib/packedstore.cpp
+/dev
+/dev/
+/dev/disk/by-uuid
+/etc/mtab
+/proc/device-tree/compatible
+/proc/device-tree/model
+/proc/mounts
+/proc/self/maps
+/steamrtarm64
+/tmp
+/tmp/disk-free.XXXXXX
+/ubuntu12_64/disk-free
+/usr/bin/crosdisk %s
+/usr/bin/xdg-open
+0 != m_rgchPrefixFileName[0]
+0 == m_ThreadLocalSpewReentrancyGuardInstance.Get()
+0 == sm_ThreadSafeQueueLogEvents.Count()
+0 == sm_ThreadSafeQueueLogMsgSpew.Count()
+0000000000000000000000000000000000000000
+00:00:00
+01/01/00
+0123456789ABCDEF
+0123456789abcdef
+0F`8
+1000
+0123456789
+10CSteamUser
+10CUtlMemoryI13ModuleCount_tE
+10CUtlMemoryI20ModuleAddressRange_tE
+10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE6Node_tEE
+10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI12CWatchingLogiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI14CLogWatchParamiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListIP22CBaseScheduledFunctioniE10ListElem_tEE
+10CUtlMemoryIN21CScheduledFunctionMgr15ScheduledItem_tEE
+10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
+10CUtlMemoryIP12ILogListenerE
+10CUtlMemoryIP18CBaseFrameFunctionE
+10CUtlMemoryIPK11CFileWriterE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
+10CUtlMemoryIPcE
+10CUtlMemoryIhE
+10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
+10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
+10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
+10CUtlString
+10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
+10CUtlVectorIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlVectorIN21CScheduledFunctionMgr15ScheduledItem_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
+10CUtlVectorIP12ILogListener10CUtlMemoryIS1_EE
+10CUtlVectorIP18CBaseFrameFunction10CUtlMemoryIS1_EE
+10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
+10CUtlVectorIPc10CUtlMemoryIS0_EE
+10ConCommand
+11CDirWatcher
+11CFileWriter
+11CPathString
+11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS0_19SpewThrottleEntry_tE10CDefEqualsIS1_ENS0_23SpewLocationHashFunctorES1_E
+11CUtlHashMapIPKci10CDefEqualsIS1_E11HashFunctorIS1_ES1_E
+11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE
+11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
+11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
+12CLogInstance
+13CCallbackBase
+13CCallbackImplILi12EE
+13CCallbackImplILi16EE
+13CCallbackImplILi1EE
+13CCallbackImplILi200EE
+13CCallbackImplILi20EE
+13CCallbackImplILi2EE
+13CCallbackImplILi40EE
+13CCallbackImplILi4EE
+13CCallbackImplILi8EE
+13CStatsMonitor
+14CFrameFunctionI19CQueuedLambdaRunnerE
+14CFrameFunctionI21CScheduledFunctionMgrE
+14CUtlLinkedListI10CUtlStringiE
+14CUtlLinkedListI12CWatchingLogiE
+14CUtlLinkedListI14CLogWatchParamiE
+14CUtlLinkedListIP22CBaseScheduledFunctioniE
+14ConCommandBase
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+17CFileWriterThread
+17CFrameFunctionMgr
+17CStreamReaderBase
+17CUtlPriorityQueueIN21CScheduledFunctionMgr15ScheduledItem_tEPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
+18CBaseFrameFunction
+18CScheduledFunctionI13CStatsMonitorE
+18CUtlCharConversion
+19CConsoleInputThread
+19CUtlNoEscConversion
+20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
+20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
+20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
+20CStaticFrameFunction
+21CLogFileAsyncCallback
+21CScheduledFunctionMgr
+21CUtlCStringConversion
+22CBaseScheduledFunction
+23IConCommandBaseAccessor
+24CDirWatcherPollingThread
+25SteamClientConVarAccessor
+30!]^JV
+3pay
+49fN
+5000
+52F*
+5T&w&
+6 PQ
+6ConVar
+7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
+7CUtlMapI10CUtlStringli8CDefLessE
+7CUtlSetI10CUtlStringi8CDefLessE
+7CUtlSetIyi8CDefLessE
+7~8A
+83L3
+83N6
+83Q2
+83Q3
+8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
+8CAutoPtrI7CUtlSetIyi8CDefLessEE
+8CLogFile
+8\foQS
+9CCallbackI11CAppUpdater30CheckAppBetaPasswordResponse_tLb0EE
+9CCallbackI12CAppLauncher19AppLifetimeNotice_tLb0EE
+9CCallbackI12CAppLauncher23AppInfoUpdateComplete_tLb0EE
+9CCallbackI12CAppLauncher28AppOwnershipTicketReceived_tLb0EE
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+9CCallbackI13CAppUninstall16AppUninstalled_tLb0EE
+9CCallbackI13CAppUninstall20AppUninstallFailed_tLb0EE
+9CCallbackI16CCallbackHandler26SteamServersDisconnected_tLb0EE
+9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
+9CCallbackI23CWorkshopItemDownloader20DownloadItemResult_tLb0EE
+9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
+9CUtlQueueIP9CLogEventE
+9a&g
+< or is NULL
+<= or is NULL
+<AppID> - Issue an appinfo request for the given appid. Does not wait for results from the server.
+<AppID> - Requests a free licenses for this app if not already owned.
+<AppID> [uninstall:0|1]- Runs app install script.
+<SpewLevel LogLevel> Sets spew and log level for all groups
+<appId>
+<appId> [<path>] - app debug install
+<appId> [LaunchOptionIndex] [Arguments]
+<appid> <bucket_hw_id> <bucket_sw_id> - query Swarm bucket depot manifest, if depot built
+<appid> <target folder> [max folder size MB]
+<code> - authorize this computer by adding the Steam Guard email code
+<empty>\n
+<group> <level> <loglevel> set spew levels for the given group
+<name> <value>- Set the value of a Cvar
+<optional_url> test HTTP connectivity via specified URL
+<project file> <target folder> [beta key] [beta pwd]
+<scriptfile> - runs a console command script
+<seconds> profile for N seconds
+<src_bucket_hw_id> <src_bucketsw_id> <dst_bucket_hw_id> <dst_bucket_sw_id> <work_dir> <appid> <bucketid>
+<username> - login to Steam in offline mode
+<username> [<password>] [<Steam guard code>] - login to Steam
+<work_dir>
+<work_dir> <threadCount>
+= or is NULL
+> or is NULL
+>= or is NULL
+@DepotBuilderConfigRoot
+@DepotBuilderContentRoot
+@DepotBuilderNoReslist
+@DepotBuilderOutputRoot
+@DepotBuilderProgressTimeout
+@LogFileFolderName
+@NoPromptForPassword
+@ShutdownOnFailedCommand
+@bEnableFrameFuncOverageWarnings
+@bEnableLogTearOff
+@bEnableSpewThrottle
+@bSiteLicenseServer
+@bSiteLicenseServerGUI
+@nSpewThrottleNagFrequencyMs
+@nSpewThrottlePeriodMs
+@nSpewThrottleResumeThreshold
+@nSpewThrottleTriggerThreshold
+@nSpewThrottleUnconditionalResumeMs
+@nSpewThrottleUnconditionalTriggerCount
+@sStartupScript
+A reservation already exists
+A@qVc"
+ACHIEVEMENTS
+AKST
+AMD OpenSource
+AMD RADV
+ANDROID
+ANDROID32
+ANDROID64
+ASCII
+ASCII//TRANSLIT
+AUDIO
+AVGRATE
+AVS Failure
+Abuse reporter's UGC Image
+Accepted
+AcceptedForGameRankedByAcceptanceDate
+Access Denied
+Account Disabled
+Account Locked Down
+Account Logon Denied
+Account Logon Denied Verified Email Required
+Account Logon Denied no mail sent
+Account Not Featured
+Account Not Found
+Account Termination
+Account associated with multiple players
+Account has an existing user cancelled license
+Account has been deleted
+Account is blocked
+Account is not allowed
+Account is restricted from purchasing adult content
+Account locked
+Account logon denied, need two-factor code
+Account not verified
+Account: %s \n
+Accounts not friends
+AchievementUnlocked
+Active
+AddedGameToWishlist
+Address is invalid or contains invalid characters
+Address too small!
+Admin
+Administrator OK
+Adult Content
+Advertisement
+Afrikaans
+Akbank
+Albanian
+Alfa-Click
+AliPay
+AliPayHK
+All Friends
+AllGuides
+Allowed playtime exceeded
+Already Active
+Already Logged In Elsewhere
+Already Owned
+Already Purchased
+Already Redeemed
+Always Blocked
+American Express
+Amex (BoaCompra)
+Amharic
+Android
+AndroidExternalData
+AndroidInternalData
+AndroidSteamPackageRoot
+Announcement
+Anonymous Game Server
+Anonymous User
+App Running
+App info request sent.\n
+AppID %u already owned.\n
+AppendedSHA
+Application running
+Approved Friends
+April
+Arabic
+Armenian
+Artwork
+ArtworkPublished
+Ascending
+Assamese
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+Assertion failed: length > k_cchMaxString
+Attempt to create persistent logs with no end date!
+Attempt to schedule '%s' %lldusec in the past
+Attempted to change replicated CVar when you are not the GM\n
+Attempting to purchase same app in different packages
+AttribCapabilityGroup
+Audio Behind
+Audio Init Failed
+August
+Aura
+Authorize
+Authorized Device
+Auto Grant
+Auto Moderation
+AutoDeny
+Avatar Image
+Away
+Azerbaijani
+BBVA Continental
+BCreateDirectory
+BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
+BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
+BIPFamiliesOverlap - unknown eServerFamilies value %d
+BIsOpen()
+BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
+BResolveHostString - unexpected DNS lookup flag '%d'\n
+BSaveBufferToFileWithTemporary() failed to find unused file temp name
+BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BWritingFatalMiniDump
+BWritingMiniDump
+Backup Running
+Bad Gateway
+Bad Request
+Bad activation code
+Bad expression token: %c %c\n
+Bad expression token: %c at %d in %s\n
+Bad flag in RTime32DateAdd
+Bad response
+Balota
+Banco Credito de Peru
+Banco Nacional de Costa Rica
+Banco Poplar
+Banco do Brasil Online
+Bandwidth Exceeded
+Bangla
+Bank Asya
+Bank Transfer (Degica)
+Banned
+Basque
+Beeline
+Belarusian
+Benchmark
+Beta
+Billing agreement cancelled
+Billing name is invalid because it looks like it contains credit card data
+BitCash
+Bitcoin
+Blik
+Blocked
+Blocked arguments
+Blocked because user is not a commercial partner
+Blocked by U.S. government regulations
+BoaCompra Gold
+Boleto Bancario
+Boleto Flash
+Book Voucher
+Borrowed
+Bosnian
+Bounce
+Bradesco Online
+Brazilian
+Breaking '%s' in '%s'\n
+Broadcom
+Browser
+Building Steam application content (only for licensed Steam application developers)
+Building depot %u from '%s'.
+Building depot %u...\n
+Building depot for %s / %s\n
+Building file mapping...\n
+Bulgarian
+Business account not allowed to purchase
+Busy
+C-Yn
+CASCADE
+CAppInstallerBuilder::OnAppBackupStatus
+CAppLauncher::OnAppInfoUpdate
+CAppLauncher::OnAppLifetimeNotice
+CAppLauncher::OnAppOwnershipTicketReceived
+CAppUninstall::OnAppUninstallFailed
+CAppUninstall::OnAppUninstalled
+CAppUpdater::OnCheckAppBetaPasswordResponse
+CBaseScheduledFunction
+CCallbackHandler::OnLoggedOff
+CD Key
+CDNAuth
+CEG wrap completed successfully\n
+CEG wrap failed to start job\n
+CEG wrap failed with EResult %d (%s)\n
+CFileReader
+CFileReader::BOpenFile - %s
+CFileReader::Read
+CFileWriter::BOpenFileInternal
+CFileWriter::Close
+CFileWriter::FlushInternal
+CFileWriter::Write
+CFileWriterThread
+CFrameFunctionMgr::BRun
+CFrameFunctionMgr::BRun - DeletePass
+CFrameFunctionMgr::BRun - OverageWarning
+CFrameFunctionMgr::BRun - SingleFunc
+CFrameFunctionMgr::Deregister: function to deregister not found
+CFrameFunctionMgr::~CFrameFunctionMgr: non static FrameFunction[%s] still registered
+CHROMEOS
+CIPAndPort::GetIPv4 called on IPv6 address
+CLIENTENGINE_INTERFACE_VERSION005
+CLegacy
+CLogEvent
+CLogFile::LogLine
+CLogInstance::EmitEventNow
+CLogInstance::WriteToLog
+CLogger class statics
+CLogger::DeserializeVaArgs
+CLogger::EmitEventInternal
+CLogger::FlushEventQueue
+CLogger::FlushLog()
+CLogger::FlushLogIfNecessary
+CLogger::GeneratePrefixFromLogWatchParam
+CLogger::PublishLogEvent
+CLogger::PublishMsgSpew
+CPathString
+CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
+CRC32_ProcessBuffer
+CSHA1::Update
+CSPAuth
+CScheduledFunctionMgr::BFrameFuncRun
+CSteamUser::OnLoggedOff
+CSteamUser::OnLogonFailure
+CSteamUser::OnPeerContentServerChange
+CSteamUser::OnPostLogonState
+CSteamUser::OnShutdownLauncher
+CSteamUser::OnSteamLogon
+CUtlBuffer
+CUtlBuffer::GetStringFast: binary buffers only
+CUtlHashMap::RemoveAt - Invalid index
+CUtlHashMap::RemoveAt - couldn't find bucket for item
+CUtlString::ReplaceInternal
+CUtlString::SetValue
+CUtlString::VAppendFormat
+CUtlString::VFormat
+CUtlStringBuilder::Data::MoveToHeap
+CUtlStringBuilder::InternalPrepareBuffer
+CUtlStringBuilder::ReplaceInternal
+CUtlSymbolTable
+CVProfile_ExitScope
+CValidator::ClaimArrayMemory(void const*, bool)
+CValidator::ClaimMemory(void const*, bool)
+CValidator::DumpDoubleClaim(char const*) const
+CValidator::IsClaimed(void const*, bool) const
+CValidator::Pop()
+CValidator::Push(char const*, void*, char const*)
+CVariableBitStringBase
+CWorkshopItemDownloader::OnDownloadItemResult
+Cabal
+Cached credential is invalid
+Cached credentials not found.\n
+Cafe Funded
+Call Mismatch
+Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
+Canceled
+Canceled by new transaction
+Cancelled by Admin
+Cancelled by Friendly Fraud Lock
+Cancelled by Partner
+Cancelled by User
+Cannot Use Old Password
+Cannot gift physical goods
+Cannot ship goods internationally
+Cannot ship to APO/FPO
+Cannot ship to PO Box
+Cannot ship to country because shipping is not defined
+Cant remove item
+CaptivePortal
+CaptivePortal_InPlace
+CaptivePortal_Redirected
+Carnet
+Cart is not valid for purchase
+Carte Bleue
+Cash Card (Nodwin)
+Cash Options (Thailand)
+Cash on Delivery
+Cash-In CIS
+CashU
+Catalan
+CellID: %u\n
+Cencosud
+Chargedback
+Charger required
+Chat
+Cheat
+Cheating
+Cherokee
+Chunk download failed : %s\n
+Chunk download to "%s"\n
+Chunk store "%s" successfully verified. %u of %u chunks failed\n
+Clan
+Clear cached credentials for current user. The next login will require authentication including an email or mobile confirmation.
+Click&Buy
+Client no longer supported
+Client version:
+ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientAudio returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientConfigStore returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientController returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameCoordinator returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameNotifications returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTMLSurface returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTTP returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMusic returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParentalSettings returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteClientManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteStorage returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientScreenshots returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShortcuts returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientStreamClient returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemAudioManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDisplayManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientTimeline returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUGC returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUnifiedMessages returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUserStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVR returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVideo returned NULL.
+ClientAPI_Init: Cannot create pipe.  Steam not running?\n
+ClientAPI_Init: InternalAPI_Init_Internal failed.\n
+ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.so (the Steam client is a 32-bit app).\n
+ClientAPI_RunCallbacks
+Clip
+Close before rename failed. Log will keep its old name\n
+Closed
+CodeSignature
+Collection
+CollectionEligible
+CollectionPublished
+Collections
+Command not found: %s\n
+Commands:\n
+Comments by user
+Committing
+Community
+Compat tool failed
+CompatibleLobby
+CompileShaders ERROR!
+CompileShaders success
+Compiling shaders for AppID: '%llu' Path: '%s' CompatToolHash (optional): '%s', this may take a while...\n
+Complete-the-set bundles cannot be gifted
+Complimentary
+Component In Use
+Computer
+ConCommand '%s' not currently supported in config file\n
+ConVar
+ConVar::InternalSetValue: called with NULL
+ConVars:\n
+Concept
+Concepts
+Config
+Conflict
+Connected
+Connecting
+Connection Failed
+Connection closed
+Connection timeout
+Console
+Console User
+Contact Support
+Content Server
+Content Version
+Content unavailable
+ContentRoot
+Continue
+Controller Binding
+ControllerBindings
+Convars
+Convenient Store Voucher
+Copying
+Copyright Violation
+Corrupt depot cache
+Corrupt disk
+Corrupt download
+Corrupt file signature
+Corrupt game files
+Corrupt update files
+Corrupted or unrecoverable data error
+Couldn't write %s: %s\n
+Coupon has expired
+Create new workshop item ( PublishFileID %llu).\n
+Create process failed
+CreateInterface
+Created
+CreatedByFollowedUsersRankedByPublicationDate
+CreatedByFriendsRankedByPublicationDate
+Credit Card
+Credit Card (Degica)
+Credit Card (Nodwin)
+Credit card number is invalid (does not pass LUHN checksum)
+Credit card number provided does not match the credit card type
+Credit would exceed max allowed wallet balance
+Croatian
+Crypto
+Culture Voucher
+CuratorRecommendedGame
+Currency Conversion
+Currency of purchase does not match currency of wallet
+Current downloaded manifest matches, skipping download.
+Custom CSS
+Cyber cafe accounts can't purchase
+Czech
+DB Lookup CD-Key
+DBG_PATHMATCH
+DBG_STAT
+DELETE
+DLOPEN Error:%s\n
+DRM wrap completed; output is in %s\n
+DRM wrap failed to start job\n
+DRM wrap failed with EResult %d (%s)\n
+D\vvf:
+Dana
+Danish
+Dankort
+Dari
+Data Exploit
+Debit Card (Nodwin)
+Debug
+DebugStatsSystem
+December
+Deckard
+Default
+Deleted
+Denied by support
+Denied due to community cooldown
+DenizBank
+Deny
+Dependency failure
+Deploy
+Deposit is not required to purchase
+Depot
+DepotID
+Descending
+DetectNow failed
+Device Corrupt
+Device Error
+Device Not Found
+Dialog
+Diner's Card (BoaCompra)
+Diners Club
+Direct Friends: %d \n
+Disabled
+Disabled/Blocklist
+Disabled/ChildCommandLine
+Disabled/CommandLine
+Disabled/CompositingCommandLine
+Disabled/CrashCount
+Disabled/JSRequest
+Disabled/Off
+Disabled/OffOk
+Disabled/RuntimeDetect
+Disabled/Software
+Disabled/Unknown
+Disconnect from Steam and revoke saved login information
+Disconnected By Remote Host
+Discover
+Discussion Posts
+Disk Full
+Disk read failure
+Disk write failure
+Distance
+Do Not Revive
+Does not own required app
+Don't know how to check filesystem type on POSIX!
+Done. No more bucket to transcode
+Done. No more shader bucket to compile
+Doom3 CD-Key
+Down
+Download depot version %llu .\n
+Download disabled
+Download failed
+DownloadDepot ERROR %s!\n
+DownloadDepot success: %s\n
+DownloadDepot[existing precompiled depot] ERROR %s!\n
+DownloadDepot[existing precompiled depot] success: %s\n
+Downloading
+Downloading item %llu ...
+Dump various Steam info
+Duplicate Name
+Duplicate activation code
+Duplicated Request
+Dutch
+EAbuseReportType
+EAccountFlags
+EAccountServed
+EAccountType
+EActivationCodeClass
+EAppControllerSupport
+EAppDownloadQueuePlacement
+EAppInfoSection
+EAppInfoSectionPropagationType
+EAppOwnershipFlags
+EAppReleaseState
+EAppState
+EAppType
+EAppUpdateError
+EAppUpdateProgressType
+EAppUpdateState
+EAsyncGameSessionUserState
+EAuthTokenPermission
+EBluetoothDeviceType
+EBroadcastPermission
+EBroadcastUploadResult
+EBrowserFeatureStatus
+EBrowserGPUStatus
+ECDNPropertyType
+ECDNProviders
+EChildProcessQueryCommand
+EClanAccountType
+EClanAction
+EClanEventType
+EClanPermission
+EClanRank
+EClanRelationship
+EClientDatacenterRoute
+ECloudStorageActorTypes
+ECloudStorageProviders
+EClub Points
+ECommunityContentType
+ECommunityPrivacyState
+ECommunityProfileState
+ECompare
+EConnectionMode
+EConnectionState
+EConnectionType
+EConnectivityTestResult
+EContentCorruptionType
+EContentDownloadSourceType
+EContentDownloadType
+EControllerConfigFeature
+EControllerType
+ECreditCardType
+ECurrencyCode
+EDRMWrapLocation
+EDownloadSourceHTTPSSupport
+EDurationControlProgress
+EFileIOError
+EForeignKeyAction
+EFriendRelationship
+EGCAction
+EGCStatus
+EGamingDeviceType
+EGpuDriverId
+EHTTPMethod
+EHTTPStatusCode
+EHostIPFamilies
+EKeyType
+ELanguage_ISO639
+ELaunchOptionType
+ELauncherType
+ELeaderboardDataRequest
+ELeaderboardDisplayType
+ELeaderboardSortMethod
+ELeaderboardUploadScoreMethod
+ELegacyKeyRegistrationMethod
+ELicenseFlags
+ELicenseType
+ELobbyFilter
+ELogonState
+EMicroTxnAuthResponse
+ENetFakeLocalSystemState
+ENetQOSLevel
+EOSType
+EParentalFeature
+EPassphrase
+EPaymentMethod
+EPersonaState
+EPersonalQuestion
+EPlatformType
+EPublishedFileInfoMatchingFileType
+EPublishedFileQueryType
+EPurchaseResultDetail
+EPurchaseStatus
+ERROR %u!\n
+ERROR (%s)\n
+ERROR (%u)\n
+ERROR! (Timed out)\n
+ERROR! App build file  has invalid format: %s.
+ERROR! App build file %s has invalid appid.
+ERROR! App build file %s has no depots section.
+ERROR! App build file does not exist: %s.
+ERROR! AppId %u launch failed (%s)
+ERROR! AppId %u launch failed (no default launch option)
+ERROR! Backup build failed (%s)
+ERROR! Build for depot %u failed : %s\n
+ERROR! Build for depot failed : %s\n
+ERROR! ClientRemoteStorage()->FileShare() failed (%s).\n
+ERROR! ClientRemoteStorage()->FileShare() failed.\n
+ERROR! ClientRemoteStorage()->FileWrite failed (%s).
+ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed (%s).\n
+ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.\n
+ERROR! Content root folder does not exist: %s.
+ERROR! Depot config file does not exist %s.
+ERROR! Depot config file does not exist: %s.
+ERROR! Depot config file has invalid format: %s.
+ERROR! Depot config file specifies wrong DepotID: %s.
+ERROR! Depot config root folder does not exist: %s.
+ERROR! Download item %llu failed (%s).
+ERROR! Empty depot section for app %d (you must add at least one depot)
+ERROR! Failed getting bucket : %s\n
+ERROR! Failed getting license for appID %u (%s).\n
+ERROR! Failed running install script for appID %u.\n
+ERROR! Failed to begin backup build (%s)
+ERROR! Failed to begin installer build (%s)
+ERROR! Failed to commit build for AppID %u : %s\n
+ERROR! Failed to commit build for appid %u : %s\n
+ERROR! Failed to create new workshop item (%s).\n
+ERROR! Failed to create new workshop item.\n
+ERROR! Failed to get application info for app %d (check login and subscription)
+ERROR! Failed to get bucket from vulkandriverquery : %s\n
+ERROR! Failed to get bucket to process : %s\n
+ERROR! Failed to get install info for item %llu.
+ERROR! Failed to install app '%u' (%s)\n
+ERROR! Failed to load build config file "%s".\n
+ERROR! Failed to load platform info\n
+ERROR! Failed to parse application info for app %d
+ERROR! Failed to parse build config file "%s".\n
+ERROR! Failed to parse parameters\n
+ERROR! Failed to report shader build : %s\n
+ERROR! Failed to request AppInfo for appID %d\n.
+ERROR! Failed to request app info update, not online or not logged in to Steam.\n
+ERROR! Failed to set beta '%s'\n
+ERROR! Failed to start downloading item %llu.
+ERROR! Failed to uninstall appID %u (%s).\n
+ERROR! Failed to update new workshop item\n.
+ERROR! Failed to update workshop item (%s).\n
+ERROR! Failed to write swarm_shader_download.vdf
+ERROR! Failed to write swarm_tc_download.vdf
+ERROR! Found multiple entries for depot ID %u.
+ERROR! Info request for AppId %d returned error %s.\n
+ERROR! Installer build failed (%s)
+ERROR! Invalid appID.
+ERROR! Invalid appid\n
+ERROR! Invalid depot ID: %s.
+ERROR! Invalid stale bucket!
+ERROR! Missing AppID in build config file "%s".\n
+ERROR! Missing build config file.\n
+ERROR! Missing parameters.\n
+ERROR! No depots defined for appID %d.
+ERROR! No valid depot specified for AppID %u
+ERROR! Not logged on.\n
+ERROR! Not logged on\n.
+ERROR! Password check for AppId %d failed to start.\n
+ERROR! Password check for AppId %d returned error %s.\n
+ERROR! Shader conversion failed!
+ERROR! Shader download failed : %s\n
+ERROR! Ticket request for AppId %d returned error %s.\n
+ERROR! Timed out waiting for password check.\n
+ERROR! Timeout downloading item %llu
+ERROR! Unknown app '%u'\n
+ERROR. Shader processing failed!
+ERegKeyRoot
+ERemoteStorageFileRoot
+ERemoteStoragePlatform
+EResult
+EShellConfigUpdateSection
+ESignatureClass
+ESteamControllerConfigTemplateWorkshopFileID
+ESteamIPv6ConnectivityProtocol
+ESteamIPv6ConnectivityState
+ESteamRealm
+ESteamUserStatType
+EStorageBlockContentType
+EStorageBlockFileSystemType
+EStoreCategory
+ESupportCompanyDomain
+ETWBegin
+ETWEnd
+ETWIsTracingEnabled
+ETW_Steamworks_DispatchCallback_End_
+ETW_Steamworks_DispatchCallback_Start
+ETW_Steamworks_RunCallbacks_End_
+ETW_Steamworks_RunCallbacks_Start
+ETimeUnit
+ETransportError
+EUFSFileFlags
+EUFSPartitionEnrollmentStatus
+EUFSPartitionSegmentStatus
+EUFSPartitionType
+EUniverse
+EUserNewsEventType
+EVideoEncryptionKeyTrackType
+EVideoFileFormat
+EVideoPermissions
+EVideoTrackContents
+EWUCriticalUpdateCountResult
+EWUInstallCriticalUpdatesResult
+EWURequiresRebootResult
+EWalletSource
+EWorkshopFileType
+EZipFormat
+Editor
+Efecty
+Ekonomi Bank
+Element( i )
+Email Validated
+Email not validated
+Email: %s %s \n
+Empty VPK
+Enabled
+Enabled/Force
+Enabled/ForceOn
+Enabled/On
+Enabled/Readback
+Encryption Failure
+End of File
+English
+Error
+Error State on string being set.
+Error while parsing text KeyValues for resource %s
+Error! App '%u' state is 0x%X after update job.\n
+Estonian
+Event Text
+Exceeded limit of number of vpk files supported (%d)!\n
+Exec contents of this convar as a script at startup
+Execute: %s\n
+Executing a sequence of commands via a script file
+Executing commands directly via the OS command line
+Existing cancelled license
+Exit steamcmd immediately upon any failed console command
+Exito
+Expectation Failed
+Expected %lld but got %lld!
+Expired
+Expired Login Auth Code
+Expired card
+Extended
+External
+External Account is not linked to a Steam account
+External Account linked to another Steam account
+FAILED (%s)\n
+FAILED (No cached credentials and @NoPromptForPassword is set)\n
+FAILED! Can't go offline (no cached credentials)\n
+FAILED! Failed to go offline (%s)\n
+FAILED! Unable to go offline (%s)\n
+FCVAR_NEVER_AS_STRING
+FCZ&
+FLOAT
+Facebook query returned an error
+Failed
+Failed CRC for %s\n
+Failed Dependency
+Failed reading %s\n
+Failed setting downloads
+Failed setting updates
+Failed system(%s) in execute test: %d %s\n
+Failed system(%s) in execute test: %d\n
+Failed to close logfile with prefix %s during BTearOffLogFile call!
+Failed to find time in logfile name
+Failed to get IAutomaticUpdates
+Failed to get ISystemInformation
+Failed to get IUpdateDownloader
+Failed to get IUpdateInstallationResult
+Failed to get IUpdateInstaller
+Failed to get IUpdateSearcher
+Failed to get IUpdateSession
+Failed to get update result code
+Failed to init COM
+Failed to load file to buffer %s\n
+Failed to load optional module %s\n
+Failed to load script file '%s'
+Failed to parse KV %s\n
+Failed to parse input
+Failed to remove log event from threadsafe queue!
+Failed to start Addl Log Instance for prefix %s
+Failed to verify chunk store "%s".\n
+Failure
+Family Group
+FavoritedByFriendsRankedByPublicationDate
+Feature Disabled
+February
+File Locked
+File Not Found
+File change notification for %s but no file contents changed based on hash\n
+File locked
+FilePublished_Screenshot_Tagged
+FileSystem
+Files Corrupt
+Files Missing
+Filipino
+Finansbank
+Finished uploading depot ( manifest: %llu, size: %llu )\n
+Finnish
+FiveHours
+Forbidden
+Force Bounce
+Force Password Change
+Force Run Restriction
+Force canceled while pending
+ForceUpdate
+Forced Off
+Found
+Frame Failed
+Fraud Check Failed
+Free
+Free Weekend
+Free disk space for %s would overflow
+Fremont
+French
+FrenemyFilter
+Friday
+Friend
+Friend-only
+FriendAdded
+Friends
+Full
+Fully Installed
+G7:VulkanPipelinesV%u%%
+GAME_
+GCC: (Debian 9.3.0-22) 9.3.0
+GCash
+GLIBC_2.17
+Galician
+Game
+Game Managed Item
+Game Release
+Game Server
+Game Voucher
+GameInstall
+GameManagedItems
+GameServer
+GameStop
+Gamepad
+Games
+Gameserver login token denied
+Gameserver login token expired
+Gameserver login token owner denied
+Garanti
+Gateway Time-out
+Georgian
+German
+GetBootstrapperVersion
+GetBucketManifest ERROR %s (this is normal if it's the first time built)\n
+GetBucketManifest SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu\n
+GetBucketManifest[existing precompiled depot] ERROR %s (this is normal if it's the first time built)\n
+GetBucketManifest[existing precompiled depot] SUCCESS: baseline manifest: %llu size: %llu bucketID: %llu\n
+GetFileSystemStableId requires a valid path
+GetFileSystemStableId requires a valid path: %s\n
+GetFloatFromString() did not get correct peCS parameter
+GetInt64FromString() did not get correct peCS parameter
+GetIntFromString() did not get correct peCS parameter
+GetInts()
+GetOSType
+GetPlatformFromOS
+GetShaderBucketForGraphicsAPI success: appID: GPUDesc: %s DriverDesc: %s\n
+GetSpewOutputFunc
+GetStaleBucket success: appID: %u manifest: %llu bucketID: %llu GPUDesc: %s DriverDesc: %s\n
+GetUint64FromString() did not get correct peCS parameter
+Getting manifest for existing precompiled depot for %s / %s\n
+Gift
+Giropay
+Global Collect unknown error
+Global Moderator
+Gone
+Google Swiftshader
+GpuTopology
+GrabPay
+Greek
+Greenlight Items
+GreenlightItems
+GroupCreated
+Groups
+Groups Friends: %d \n
+Guest Account
+Guest Pass
+Guides
+Gujarati
+H$6t
+H*0"ZOW
+HEAD
+HKEY_CLASSES_ROOT
+HKEY_CLASSES_ROOT (force 32Bit)
+HKEY_CLASSES_ROOT (force 64Bit)
+HKEY_CURRENT_USER
+HKEY_CURRENT_USER (force 32Bit)
+HKEY_CURRENT_USER (force 64Bit)
+HKEY_LOCAL_MACHINE
+HKEY_LOCAL_MACHINE (force 32Bit)
+HKEY_LOCAL_MACHINE (force 64Bit)
+HOME
+HTTP Version not supported
+HTTPMirror
+HWID Set
+Halkbank
+Handheld
+Handshake Failed
+Happymoney Voucher
+Harassment
+Hardware Promo
+Hardware not capable of IPT
+Has not logged in on PS3 with required app
+Hausa
+Headphones
+Headset
+Hebrew
+Hindi
+Hipercard
+Hit absolute maximum emit event queue size -- NOT adding this event
+Hung transaction cancelled
+Hungarian
+I/O Operation Failed
+INVALID
+IP Address Banned
+IP Address Not Found
+IP Login Restriction Failed
+IPCountry: %s \n
+IPT init error
+IVALIDATE001
+Icelandic
+If using cached credentials, this may indicate your client cannot renew its token.\n
+Igbo
+Ignored
+IgnoredFriend
+Illegal password
+In dispute
+Inappropriate
+Incompatible
+IncompatibleCheat
+Incorrect Parameter
+Incorrect number of arguments.  %d arguments required, %d were given.\n
+Individual
+Indonesian
+Infinite time value
+Init
+Init Failed
+Install failed
+Install failed for one or more updates
+Install path removed
+Install script signing completed; output is in %s\n
+Install script signing failed with EResult %d (%s)\n
+InstallPath: %s \n
+Installing/updating a Steam application on the local filesystem (EG dedicated servers)
+Insufficient Funds
+Insufficient Privilege
+Insufficient Storage
+Insufficient battery charge
+Insufficient funds
+Integrated Guide
+IntegratedGuides
+Intel
+Intel ANV
+Interac
+Internal
+Internal Error
+Internal Server Error
+Invalid
+Invalid CD-Key
+Invalid CEG Submission
+Invalid Data
+Invalid Driver
+Invalid Email
+Invalid FileWriterItem_t
+Invalid Handle
+Invalid Login Auth Code
+Invalid Name
+Invalid OS Type
+Invalid Package
+Invalid Parameter
+Invalid Passcode
+Invalid Password
+Invalid Payment Method
+Invalid Platform
+Invalid Protocol
+Invalid State
+Invalid Steam ID
+Invalid account
+Invalid application configuration
+Invalid backup path
+Invalid content configuration
+Invalid coupon
+Invalid file system
+Invalid index %u
+Invalid install path
+Invalid item type
+Invalid number of parameters
+Invalid parameters
+Invalid platform
+Invalid shipping address
+Invalid spew group
+Invalid tax address
+Invalid time value
+Invisible
+InviteOnly
+Invited
+Irish
+Is Bank
+Is64BitOS
+IsPowerOfTwo( nNewCapacity )
+IsText()
+IsValidIndex( elem )
+IsValidIndex( idx )
+IsValidIndex(elem)
+Italian
+Itau Online
+Item download to "%s" finish (%s)\n
+Item or entry has been deleted
+Items
+Items_Mtx
+Items_ReadyToUse
+JArray
+JZJ{.
+January
+Japanese
+JoinedGroup
+Joystick
+July
+June
+K'iche'
+KakaoPay
+Kannada
+Kazakh
+KeepBest
+KeyValues
+KeyValues Error: %s in file %s [offset: %d]\n
+KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
+KeyValues::ReadAsBinary - Set name
+KeyValues::ReadAsBinary - TYPE_BINARY_STRING
+KeyValues::ReadAsBinary - TYPE_COLOR
+KeyValues::ReadAsBinary - TYPE_FLOAT
+KeyValues::ReadAsBinary - TYPE_INT
+KeyValues::ReadAsBinary - TYPE_INT64
+KeyValues::ReadAsBinary - TYPE_NONE
+KeyValues::ReadAsBinary - TYPE_PTR
+KeyValues::ReadAsBinary - TYPE_STRING
+KeyValues::ReadAsBinary - TYPE_UINT64
+KeyValues::ReadAsBinary - TYPE_WSTRING
+KeyValues::ReadAsBinary() stack depth > 100
+KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
+KeyValues::WriteAsBinary() called with a text buffer\n
+KeyValues::WriteAsBinary() called with an invalid buffer\n
+KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
+KeyValuesSystemSteam
+Keyboard
+Khmer
+Kicked
+KickedAcknowledged
+Kinyarwanda
+Kiosk
+Konbini
+Konkani
+Korean
+Kuveyt Turk Bank
+Kyrgyz
+LANCache
+LANPeer
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LINUX
+LINUX32
+LINUX64
+LINUXARM64
+LLVMPipe Mesa
+LOCK_EX
+LOCK_SH
+Language
+Language: %s \n
+Laser
+Last Message Repeated %d times.\n%s
+Latam_Spanish
+Latvian
+Legacy Free Sub
+LegionGoS
+Length Required
+Library
+License Imported From Steam2
+License expired
+Licensed Site
+Lider
+Limit exceeded
+Limited User
+Limited User (forced)
+Limited use, delayed activation
+Limited user account
+LimitedLocal
+LinePay
+Linkaja
+Linux
+LinuxHome
+LinuxXdgConfigHome
+LinuxXdgDataHome
+Lithuanian
+Live Broadcast
+LoadFileIntoBuffer: NULL parameters
+LoadFileRangeIntoBuffer_Internal
+LoadFromBuffer: missing {   (current key: '%s')
+Loading Steam API...
+Locked
+Locking Failed
+Log event queue grew unreasonably large in a short time!
+Log started.\n
+Log stopped.\n
+Logged In Elsewhere
+Logged Off
+Logged On
+Logger
+Logger does not handle * char as used for a width specifier (where width is a param)
+Logging Off
+Logging On
+Logging in to Steam
+Logging in user '%s' %s to Steam %s...
+Logging in using cached credentials.\n
+Logging in using username/password.\n
+Logging off current session...
+Logging set (%s/%s).\n
+Logon Extra Security
+Logon Extra Security Disabled
+Logon state: %s \n
+Looking to Play
+Looking to Trade
+Loop Detected
+Low FPS
+Low Violence
+Lowered '%s' -> '%s'\n
+Luxembourgish
+MGiI
+MOL Points
+MacAppSupport
+MacCaches
+MacDocuments
+MacHome
+MacOS
+Macedonian
+Maestro
+Malay
+Malayalam
+Maltese
+MangirKart
+Manifest unavailable
+ManifestSignature
+Manual
+Maori
+Marathi
+March
+Mark updated with no data ( AppID: %u, BucketID: %llu Manifest: %llu ) Src: %s / %s\n
+Master App Editor
+Master Subscription
+MasterCard
+Mastercard (BoaCompra)
+Matched '%s' -> '%s'\n
+MaxResults
+Maximum family size exceeded
+Meeting
+Member
+Members
+MerPay
+MercadoPago
+Merch
+Mesa Dozen
+Mesa HoneyKrisp
+Mesa NVK
+Mesa PanVK
+Mesa Turnip
+Mesa Venus
+Method Not Allowed
+Method Not Found
+Microtransaction
+Migrate
+MilliSeconds
+Mirror
+MirroredNotStriped
+Misdirected Request
+Missing Audio
+Missing Key Frames
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
+Missing configuration
+Missing decryption key
+Missing executable
+Missing file permissions
+Missing game files
+Missing update files
+Mobile (Degica)
+Mobile Wallet (Japan)
+Moderator
+Moderators
+MoltenVK
+Monday
+MoneyBookers
+Mongolian
+Mouse
+Moved Permanently
+Moving Folder
+MrCash
+Multibanco
+Multicaja
+Multiplayer
+Multiple Choices
+Multiseat
+Music And Arts
+Must agree to SSA
+N10CSteamUser29CCallbackInternal_OnLoggedOffE
+N10CSteamUser30CCallbackInternal_OnSteamLogonE
+N10CSteamUser32CCallbackInternal_OnLogonFailureE
+N10CSteamUser34CCallbackInternal_OnPostLogonStateE
+N10CSteamUser36CCallbackInternal_OnShutdownLauncherE
+N10CSteamUser43CCallbackInternal_OnPeerContentServerChangeE
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
+N11CAppUpdater40CCallback_OnCheckAppBetaPasswordResponseE
+N12CAppLauncher25CCallback_OnAppInfoUpdateE
+N12CAppLauncher29CCallback_OnAppLifetimeNoticeE
+N12CAppLauncher38CCallback_OnAppOwnershipTicketReceivedE
+N13CAppUninstall26CCallback_OnAppUninstalledE
+N13CAppUninstall30CCallback_OnAppUninstallFailedE
+N16CCallbackHandler21CCallback_OnLoggedOffE
+N17CFileWriterThread14CFileWriteItemE
+N17CFileWriterThread16CLogFileWorkItemE
+N17CFileWriterThread19CFileWriterWorkItemE
+N19CQueuedLambdaRunner16QueuedFunction_tE
+N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
+N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NO ACTION
+NSt3_V214error_categoryE
+NSt6locale5facet6__shimE
+NSt6locale5facetE
+NSt7__cxx1110moneypunctIcLb0EEE
+NSt7__cxx1110moneypunctIcLb1EEE
+NSt7__cxx1110moneypunctIwLb0EEE
+NSt7__cxx1110moneypunctIwLb1EEE
+NSt7__cxx117collateIcEE
+NSt7__cxx117collateIwEE
+NSt7__cxx118messagesIcEE
+NSt7__cxx118messagesIwEE
+NSt7__cxx118numpunctIcEE
+NSt7__cxx118numpunctIwEE
+NSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8ios_base7failureB5cxx11E
+NSt8ios_base7failureE
+NULL
+NULL != pchFileName
+NULL != pchPrefixPassed
+NULL == m_pFile
+NVIDIA
+Nanaco
+Naranja
+NaverPay
+NearRank
+NearValue
+Needs SSA Next Logon
+Needs captcha
+Needs pre-approval
+Nepali
+Net Banking (Nodwin)
+NetCash
+Network Authentication Required
+Network send exceeded
+News
+Next schedule deadline: %lldus\n
+Night
+Nil time value
+No Connection
+No Content
+No Detail
+No Error
+No Result
+No account or email was specified to send the gift
+No billing agreement exists for recurring option
+No connection
+No connection to content servers
+No launcher specified
+No match
+No matching URL
+No mobile device available
+No payment provider is configured to handle the transaction
+No site licenses found
+No specific help topic found for '%s', returning 'find' results. . .\n
+No subscription
+No verified phone number
+NoInternet
+NoLAN
+NoSteam
+Nobody
+Non Permanent
+Non-Authoritative Information
+Non-user command %s received at console; ignoring\n
+NonMembers
+None
+Normal
+Norwegian
+Not Acceptable
+Not Extended
+Not Found
+Not Implemented
+Not Logged On
+Not Modified
+Not Supported
+Not activated
+Not allowed to play
+Not created
+Not enough disk quota
+Not enough disk space
+Not enough free disk space
+Not for anonymous users.\n
+Not installed
+Not logged on.\n
+Not released
+NotYetRated
+November
+Numeric
+NumericalCompare
+OEM Ticket
+OPTIONS
+OSX1010
+OXXO
+October
+Odia
+Offensive Avatar
+Offensive Persona Name
+Offensive Profile
+Offensive UGC
+Officer
+Officers
+Official
+Offline
+Offline App Cache invalid
+Offline Mode: %s\n
+OneCard
+Online
+Online Banking (Thailand)
+Open
+OpenCache
+Operation failed due to parental control restrictions for current user
+Option1
+Option2
+Option3
+Options and settings that affect this program session
+Other
+Other abortable transaction in progress
+Other session playing
+OtherAudio
+Others In Progress
+Out of Resources
+Out of stock
+Over consumption limit
+Owner
+PATCH
+POLi
+POSA code is not activated
+POSIX
+POST
+PSN Ticket is invalid
+Package requires an invitation for a reservation to purchase
+Pago Facil
+PagoEfectivo
+Pagseguro
+Parental Settings
+Parental control blocked
+ParentalSetup
+ParityStripe
+Partial Content
+Partial refund
+Partner Member
+Partner needs VAT ID set to purchase commercial licenses
+Party
+Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
+Password Set
+Password is not set
+Password reentry required
+Password required to kick session
+Paused
+Pay Easy (Degica)
+PayNow
+PayPal
+PayPal internal error
+PayPay
+PaySafeCard
+PayU
+Payco
+Payment Required
+Payment method allows multiple pending transactions, but there is an overlap of packages in both transactions
+Payment method is disabled
+Payment method is not allowed for this purchase
+Payment requires additional authentication step
+PaymentInfo
+Payshop
+Peer Content Server stopped\n
+Peer Server
+PeerServer
+Pending
+Pending (Invitee)
+Pending (Inviter)
+Pending Gift
+Pending Log Request Active
+Pending Refund
+PendingApproval
+Permanent
+Permanent Redirect
+Persian
+Persistence Failed
+Persistent Logfiles created which have no cleanup limit specified!
+Persistent logfile %s is past the keep until date - cleaning up\n
+Persona Name
+Persona Name: %s \n
+Persona Set
+Persona State: %s \n
+Phone
+Phone number is Voice Over IP
+Physical product limit exceeded
+Pichincha
+Pichincha Cash
+PinValidda
+Ping
+Piracy or Cheats
+Plat_CommandLineParamExists
+Plat_FloatTime
+Plat_GetExecutablePathUTF8
+Plat_IsChromeOS
+Plat_IsInDebugSession
+Plat_IsSteamOS
+Plat_IsTesla
+Plat_MSTime
+Plat_OutputDebugString
+Plat_OutputDebugStringRaw
+Plat_RelativeTickFrequency
+Plat_RelativeTicks
+Plat_VirtualAccessFlags
+Plat_ctime
+Plat_gmtime
+Plat_localtime
+Plat_timegm
+Player Name History
+Please check your email for the message from Steam, and enter the Steam Guard\n code from that message.\nYou can also enter this code at any time using 'set_steam_guard_code'\n at the console.\nSteam Guard code:
+Please check your email for the message from Steam, and use\nthe command 'set_steam_guard_code' to enter the code here.\n
+Please use force_install_dir before logon!\n
+Polish
+Portuguese
+PostedAnnouncement
+Preallocating
+Precondition Failed
+Precondition Required
+Preferred Owner
+Prefetch
+Prefetching Info
+PrepareBuffer( nNewLength ) == pstrNew
+Preparing update...\n
+PrepopulatePrecompiledCache ERROR %s\n
+Priority Auto Update
+Priority Down
+Priority First
+Priority Manual
+Priority None
+Priority Paused
+Priority Up
+Priority User Initiated
+Private
+Profile
+Profile Showcases
+Profile Text
+Profile URL
+Prohibited
+PromotedNewAdmin
+ProtectedStore
+Provider doesn't support currency
+Proxy
+Proxy Authentication Required
+Przelewy24
+Public
+Punjabi (Gurmukhi)
+Punjabi (Shahmukhi)
+Purchase
+Purchase not yet settled
+Purchase pending
+QIWI
+Qkkbal
+Qualcomm
+Quechua
+R1h58
+RGBA: %.2X %.2X %.2X %.2X
+RackSystem
+Raid
+RankedByAveragePlaytimeTrend
+RankedByBanContentCheck
+RankedByInappropriateContentRating
+RankedByLastUpdatedDate
+RankedByLifetimeAveragePlaytime
+RankedByLifetimePlaytimeSessions
+RankedByNumTimesReported
+RankedByPlaytimeSessionsTrend
+RankedByPlaytimeTrend
+RankedByPublicationDate
+RankedByTextSearch
+RankedByTotalPlaytime
+RankedByTotalUniqueSubscriptions
+RankedByTotalVotesAsc
+RankedByTrend
+RankedByVote
+RankedByVotesUp
+Rapipago
+Rate Limit Exceeded
+Read Failed
+Rebuild
+ReceivedNewGame
+ReceivesGroupComment
+Recent Runtimes(
+RecommendedGame
+Reconfiguring
+Recurring
+Recurring Charge
+Recurring option does not allow gifting
+Recurring option does not allow stacking
+Recurring option is not valid for billing agreement
+Recurring option will stack time beyond our maximum limit
+Recurring payment option
+RecursiveLoadFromBuffer:  got EOF instead of keyname
+RecursiveLoadFromBuffer:  got NULL key
+RecursiveLoadFromBuffer:  got conditional between key and value
+RecursiveLoadFromBuffer:  got empty keyname
+RecursiveLoadFromBuffer:  got } in key
+Red Pagos
+RedCompra
+Refunded
+Refunded to wallet
+Region Locked
+Region Restriction Expired
+Region not supported
+Region restricted
+Relay Failed
+Release State Override
+Relying on scheduled functions in a dll that doesn't run the scheduled function managers frame loop?
+Remote File Conflict
+Remote call failed
+Renew failed
+Renew next period
+Request Entity Too Large
+Request Header Fields Too Large
+Request Not Sent
+Request Timeout
+Request has been canceled
+Request revoked
+Request suspended/paused
+Request-URI Too Large
+RequestAroundUser
+RequestDenied
+RequestFriends
+RequestGlobal
+Requested range not satisfiable
+Requesting license for AppID %u ...
+Requires 64bit operating system
+Reset Content
+Response Not Received
+Restricted country
+Restricted device
+Retail
+Retired
+Retry later
+Retrying... \n
+Reviews
+Revive
+Revoked
+Romanian
+RuPay
+RunOnce
+RunUntilCompleted
+RunUntilCompletedLowPri
+Running Script
+Running Update
+Russian
+SET NULL
+SITE_SERVER_GUI
+SKyu
+SM8650
+SMS code failed
+SPEI
+STEAM_
+STEAM_CLIENT_LOG_FOLDER
+SUCCESS: manifest: %llu size: %llu bucketID: %llu\n
+SafeMode
+SafetyPay
+Same as previous value
+Santander Rio
+Saturday
+SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+Sberbank
+Scanning content\n
+ScheduledEvent
+Scots
+Screenshot
+ScreenshotPublished
+Screenshots
+Seconds
+SecretServer
+See Other
+Seek Failed
+Seeking to a position not supported with async io
+Seeking to a position which is not sector aligned will break unbuffered io
+SelectedNewPOTW
+Self updating
+Sending of an email failed
+September
+Serbian
+Server
+Server Busy
+Server Shutdown
+Server Time: %s \n
+Service Read Only
+Service Unavailable
+Session Replaced
+Set the base used to construct quick login URLs
+Settings
+Settings Changed
+Setup Error
+Shader
+Shader upload complete ( AppID: %u, BucketID: %llu Manifest: %llu ) Dest: %s / %s Src: %s / %s\n
+Shared Only
+Shared library locked
+Shipping address failed validation
+ShopeePay
+Shopping Cart Not Found
+Show help information
+Sign installscript failed to start job\n
+Signature check failed
+Signing install script\n
+Simple
+Simplified_Chinese
+Sindhi
+Single Purchase
+Single Purchase, Limited Use
+Sinhala
+Site License
+Site License locked
+SiteLicense
+Size() == operand.Size()
+SlotsAvailable
+Slovak
+Slovenian
+Sm"\vg
+Snooze
+Sofort
+Software
+Solo
+Sorani
+Sotho
+Spamming
+Spanish
+Speakers
+Special Cause
+Spending limit exceeded
+SpewAndLogActivate
+SpewAndLogChangeIfStillDefault
+SpewOutputFunc
+Split
+Spoofing
+Sports
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11__timepunctIcE
+St11__timepunctIwE
+St11logic_error
+St12codecvt_base
+St12length_error
+St12out_of_range
+St12system_error
+St13__ios_failure
+St13bad_exception
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
+St13runtime_error
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St17bad_function_call
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St19__iosfail_type_info
+St20bad_array_new_length
+St21__ctype_abstract_baseIwE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+St9type_info
+Staging
+StandardPC
+StartDepotBuild success. manifest: %llu size: %llu\n
+Starting AppID %u build (flags 0x%x).
+Startup
+StaticFileWriterThread()
+Steam - DirWatcher
+Steam Console Client (c) Valve Corporation
+Steam Guard code provided.\n
+Steam ID does not pass strict parsing: '%s'
+Steam Video
+Steam client out of date
+Steam/Press Master
+Steam2 Migration Complete
+Steam2010 CD-Key
+SteamAppId
+SteamBox
+SteamCache
+SteamChina_SChinese
+SteamCloudDocuments
+SteamDeck
+SteamDllMain
+SteamDllMainEx
+SteamExe::RunFrame()
+SteamID: %s \n
+SteamOSGeneric
+SteamRealPath
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+SteamStdLib::CommandLine()
+SteamSwarm
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThread::GetThreadProc()
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::IsAlive() const
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::Join(unsigned int)
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::Start(unsigned long)
+SteamThreadTools::CThread::Terminate(int)
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadEvent::Set()
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+SteamThreadTools::CThreadFullMutex::Release()
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+SteamThreadTools::CThreadLocalBase::Get() const
+SteamThreadTools::CThreadLocalBase::Set(void*)
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
+SteamThreadTools::CThreadMutex::CThreadMutex()
+SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadRWLock::LockForWrite()
+SteamThreadTools::CThreadRWLock::UnlockWrite()
+SteamThreadTools::CThreadRWLock::WaitForRead()
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamUser
+SteamUserBaseStorage
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
+SteamVProf::CVProfManager::StopProfilingAllThreads()
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+SteamVProf::CVProfile::ExitScope()
+Steam_BGetCallback
+Steam_FreeLastCallback
+Steam_GetAPICallResult
+Steamworks Access Invite
+SteamworksAccessInvites
+Still busy
+Stop using I64/I32 - use lld or d, respectively
+Stopping
+Stops Steam client console
+Store
+Store / Billing country code mismatch
+Store / Business country code mismatch
+Store Promotion
+StringAfterPrefix
+StringAfterPrefixCaseSensitive
+StringCompare
+StringFindSuffix
+StringFindSuffixCaseSensitive
+Subscribed
+Subscribers
+Succeeded
+Success! App '%u' already up to date.\n
+Success! App '%u' fully installed.\n
+Success.
+Success. Created new item, PublishedFileId %llu
+Success. Downloaded item %llu to "%s" (%llu bytes)
+Success.\n
+Successfully finished AppID %u build (BuildID %d).
+Successfully finished AppID %u build preview.
+Successfully finished appID %u build (BuildID %d).
+SuggestedFriend
+Sunday
+Supervisor
+Support
+Suspect
+Suspected Hijacker
+Suspended
+Swahili
+Swedish
+Swish
+Switch
+Switching Protocols
+System
+TLS init function for
+TLS wrapper function for
+TMPDIR
+TSListBase_Init
+TSListBase_Pop
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
+Tajik
+Tamil
+Tatar
+Telugu
+Temporary Redirect
+Tenpay
+Terminating
+Tesla
+Test
+Test CD-Key
+Thai
+The current Steam realm does not match the requested resource
+The data being accessed is not supported by this API
+The gift is not valid for the recipient's region
+The gift recipient already owns the gift
+The gift's price is significantly higher in the recipient's region, so the purchase is blocked
+The original purchase cannot be replayed
+The purchase is still in progress, but waiting for success status from provider
+The value of the cart in local currency is too high
+This can occur if steamcmd cannot write the machine auth token to its config.vdf.\n
+This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
+ThreadGetCurrentId
+ThreadGetCurrentProcessId
+ThreadInMainThread
+ThreadInMainThread()
+ThreadInterlockedAssignIf
+ThreadInterlockedDecrement
+ThreadInterlockedExchange
+ThreadInterlockedExchangeAdd
+ThreadInterlockedExchangeAdd64
+ThreadInterlockedIncrement
+ThreadShellExecute
+ThreadSleep
+ThreeHours
+Thursday
+Tigrinya
+Time is out of sync
+Timed Trial
+TimedOut
+Timeout
+Tinkoff
+Todito Cash
+Too Early
+Too Far behind
+Too Many Requests
+Too many accounts access this resource
+Too many arguments. %d arguments at most.
+Too many bad activation code attempts in period
+Too many changes to this account
+Too many changes to this phone number
+Too many logon attempts
+Too many pending
+Toss
+Touch'n Go
+Trade
+Trade Fee
+Trade Scam
+Trade Scam Old
+Trading
+Traditional_Chinese
+Transaction expired
+Transcode Behind
+Transcode upload complete ( AppID: %u, BucketID: %llu ) ulTranscodedSizeBytes %llu\n
+Trip
+TrueMoney
+Trustly
+Trustpay
+Try another CM
+Tswana
+Tuesday
+Turkish
+Turkmen
+Two-factor activation code mismatch
+Two-factor code mismatch
+UGC Image
+UTF-8
+Ukrainian
+Unauthorized
+Unavailable For Legal Reasons
+Unavailable/Off
+Unavailable/OffOk
+Unavailable/Software
+Unbannable
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unexpected error
+Uninitialized
+Uninstalled
+Uninstalling
+UnionPay
+Universe
+Universe: %s \n
+Unknown
+Unknown Driver
+Unknown GameID type
+Unknown HTTP 4xx
+Unknown HTTP 5xx
+Unknown destination '%s' - use 'local' or 'cloud'\n
+Unknown error
+Unknown version %d for vpk %s
+Unloading Steam API...
+UnlockedGroupAchievement
+Unmatched %s\n
+Unprocessable Content
+Unrecognized character code '%c' in format string, ignoring
+Unrecognized character code (%c) in format string, ignoring
+Unspecified
+Unspecified Error
+Unsupported Media Type
+Unsupported format qualifier %c%c
+Unsupported format qualifier l%c
+Unsupported format qualifier z%c
+Update Optional
+Update Paused
+Update Queued
+Update Required
+Update Running
+Update Started
+Update required
+Update search failed
+Updated Disabled by app
+Updating Workshop items for App '%u'.\n
+Updating depot %u from %llu to %llu .\n
+Updating local CS\n
+Upgrade Required
+Upload Disconnected
+Upload Timeout
+Uploaded from steamcmd
+Uploading content...\n
+Urdu
+UsableInGame
+Usage: api_logging <enabled> <verbose>\n
+Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>\n
+Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags> [<destination>]\n
+Usage: force_install_dir <directory>\n
+Usage: set_var <name> <value>
+Usage: sign_install_script <appid> <filename> <output filename>\n
+Usage:\n\tapp_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>\n
+Usage:\n\tfind <keyword>\n
+Usage:\n\tlogin <username> [<password>] [<Steam guard code>]\n
+Usage:\n\tlogin_offline <username>\n
+Usage:\n\trun_app_build [-preview] [-desc <text>] <appbuildfile>\n
+Usage:\n\tset_spew <group> <level> <loglevel>\n
+Usage:\n\tset_steam_guard_code <code>\n
+Usage:\n\tswarm_get_bucket_manifest <appid> <bucket_hw_id> <bucket_sw_id>
+Usage:\n\tswarm_shader_compile <work_dir> <threadCount>
+Usage:\n\tswarm_shader_download <work_dir>
+Usage:\n\tswarm_shader_prepopulate <work_dir>
+Usage:\n\tswarm_shader_upload <work_dir>
+Use Proxy
+Use local dev websites
+Use other funding source
+Use other payment method
+Use something other than 'logs' as the folder for log files
+User already has an existing billing agreement for a package in this transaction
+User cannot complete purchase with provider because the amount is not supported
+User cannot purchase due to owning excluded app
+User cannot redeem this code from the steam client
+User does not have a cached payment method
+User does not have a wallet
+User has already recently changed their country via purchase
+User is associated with multiple cafes
+User is not associated with any cafes
+UserStatus
+Using baseline bucket manifest %llu size: %llu\n
+Using compat tool hash: %s\n
+Using no baseline manifest for upload
+UtlThreadSafeQueue
+Uyghur
+Uzbek
+VAC beta
+VISTA
+VProfInternalEnterScopeCurrentThread
+VProfInternalGetProfileForCurrentThread
+VTC Pay Cards
+VTC Pay Online Banking
+VTC Pay Wallet
+VTT for
+V_AppendSlash
+V_ComposeFileName
+V_CopyAndFixSlashes
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
+V_ExtractFileExtension
+V_ExtractFilePath
+V_FileBase
+V_FixDoubleSlashes
+V_FixSlashes
+V_FormatAndAppend
+V_IsAbsolutePath
+V_MakeAbsolutePath
+V_RemoveDotSlashes
+V_RemoveDotSlashes failed for "%s".
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
+V_StrTrim
+V_StrTrimAsciiSpaceChar
+V_StripExtension
+V_StripFilename
+V_URLContainsDomain
+V_UTF16ToUTF32
+V_UTF32ToUTF16
+V_UTF32ToUTF8
+V_UTF8ToUTF32
+V_UnqualifiedFileName
+V_atof
+V_atoi
+V_atoui64
+V_binarytohex
+V_hextobinary
+V_isnumeric
+V_isvalidhex
+V_snprintf
+V_strcat
+V_stristr(char const*, char const*)
+V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
+V_strlen( pchTime ) == 25
+V_strlower_fast
+V_strncat
+V_strncat_length
+V_strnchr
+V_strncmp
+V_strncpy
+V_strnicmp
+V_strnistr
+V_strtoi64
+V_strtoui64
+V_tolower
+V_vsnprintf
+V_vsnprintfRet
+V_wcstoi64
+V_wcstoui64
+Vakiflar Bank
+Valencian
+Valid
+Validated Valve Email
+Value is out of range
+Valve
+Valve CD-Key
+ValveOfficial
+Variants Also Negotiates
+Vc0a
+Verifying Installed
+Verifying Staged
+Video
+Video Init Failed
+VideoPublished
+Videos
+Vietnamese
+Visa
+Visa (BoaCompra)
+Visa Electron (BoaCompra)
+WARNING: unable to link %s and %s because one or more is a ConCommand.\n
+WIN32
+WIN64
+WIN7
+WINDOWS
+WON CD-Key
+WORKAROUND_GdbSymbolLoadHook
+Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+Waiting for client config...
+Waiting for disk
+Waiting for user info...
+Wallet
+Wallet (Nodwin)
+Warning
+Warning (invalid cached credentials)\n
+Warning! Application info is very large for app %d. This can be resolved by disabling or deleting private branches.
+WeChat
+WeakRandomInt
+WeakRandomUint32
+Web API key registration ban
+Web Guide
+Web Link Deprecated
+WebGuidePublished
+WebGuides
+WebMoney
+WebMoney (Degica)
+WebMoney Steam Card (Japan)
+WebMoney Steam Card Top Up (Japan)
+WebSocket
+Wednesday
+Welsh
+What city were you born in?
+What is the name of your pet?
+What is the name of your school?
+What is your favorite team?
+What is your mother's maiden name?
+Whitelist
+Who was your childhood hero?
+WifiDisabled
+WinAppDataLocal
+WinAppDataLocalLow
+WinAppDataRoaming
+WinMyDocuments
+WinProgramData
+WinSavedGames
+Windows
+WindowsHome
+Wolof
+Workshop
+Workshop Items
+WorkshopItemPublished
+WorkshopShowcase
+Write Failed
+WritePrecompiledCache ERROR!
+WritePrecompiledCache returned result '%s'. foz file missing from depot or no full pipelines in it.\n
+WritePrecompiledCache success for GPU(s): '%s' Driver(s): '%s' CacheType: %d\n
+Wrong Price
+X360
+XXXXXX
+Xhosa
+YYYY
+Yandex
+Yapi Kredi
+YooMoney
+Yoruba
+You can use the 'runscript' command to execute a text-file script. The file should have each desired command listed sequentially on a new line. The filename and extension do not matter; you only need 'read' access to the file. Each line of the file will be executed sequentially.\n\n
+You must refund this transaction to wallet
+You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
+Z0000
+Ziraat Bank
+Zjz\v
+Zong
+Zulu
+[%s] %.*s\r\n
+[%s][%0.6f] %.*s\r\n
+[31m
+[33;1m
+[A:%u:%u:%u]
+[M:%u:%u:%u]
+[TXN:%llu]
+[abi:
+\n%u frame functions of type %s:\n\n
+\nCommitting update...
+\nConnecting anonymously to Steam %s...
+\nEnter the current code from your Steam Guard Mobile Authenticator app\nTwo-factor code:
+\nHelp topics - type "help <topic>" or run with "--help <topic>" for more information:\n
+\nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
+\nPeer Content Server uploading AppID %u to "%s"\n
+\nPreparing content...
+\nPreparing update...
+\nProceeding with login using username/password.\n
+\nRun non-interactively; exiting.\n
+\nRunning as Site License provider\n
+\nStarting Steam in Offline mode ...
+\nSteam>
+\nThat Steam Guard code was invalid.\n
+\nThis computer has not been authenticated for your account using Steam Guard.\n
+\nUploading content...
+\nUploading preview image...
+\nUsage:\tsteamcmd ["+COMMAND [ARG]..."]...
+\nWarning: Login token expires at %s\n
+\nYg:a
+\nYou can also type "find <string>" to see a list of all commands and convars that contain or reference <string>.\n
+\nYou must login to Steam for the Site License functionality to work.\n
+\npassword:
+\nsteamcmd has been disconnected from steam with result %d (%s)\n
+\nsteamcmd run with --non-interactive on command line; cannot prompt for Steam Guard code. Exiting.\n
+\nsteamcmd run with --non-interactive on command line; cannot prompt for password. Exiting.\n
+\nsteamcmd run with --non-interactive on command line; cannot prompt for two-factor code. Exiting.\n
+\nsteamcmd run with --non-interactive on its command line; cannot read from the console. Exiting.\n
+\rRoOs
+\t(%zu) comparing %s with %s\n
+\t*** %s - %s - (had more work last frame!!) ***\n
+\u%04x
+\u000
+\u001
+]JldN
+_Accum
+_DMsg
+_Fract
+_GLOBAL_
+_ITM_RU1
+_ITM_RU8
+_ITM_addUserCommitAction
+_ITM_deregisterTMCloneTable
+_ITM_memcpyRnWt
+_ITM_memcpyRtWn
+_ITM_registerTMCloneTable
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
+_Sat
+_SpewMessageType
+__bss_start
+__ctype_b_loc
+__ctype_get_mb_cur_max
+__ctype_tolower_loc
+__cxa_atexit
+__cxa_finalize
+__duplocale
+__errno_location
+__float128
+__freelocale
+__fxstat64
+__gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__int128
+__isoc99_fscanf
+__isoc99_sscanf
+__iswctype_l
+__lxstat
+__lxstat64
+__newlocale
+__nl_langinfo_l
+__pthread_key_create
+__stack_chk_fail
+__stack_chk_guard
+__strcoll_l
+__strftime_l
+__strtod_l
+__strtof_l
+__strxfrm_l
+__towlower_l
+__towupper_l
+__uselocale
+__wcscoll_l
+__wcsftime_l
+__wcsxfrm_l
+__wctype_l
+__wrap___lxstat
+__wrap___lxstat64
+__wrap___xstat
+__wrap___xstat64
+__wrap_access
+__wrap_chdir
+__wrap_chmod
+__wrap_chown
+__wrap_dlmopen
+__wrap_dlopen
+__wrap_fopen
+__wrap_fopen64
+__wrap_freopen
+__wrap_lchown
+__wrap_link
+__wrap_lstat
+__wrap_lstat64
+__wrap_mkdir
+__wrap_mkfifo
+__wrap_mknod
+__wrap_mount
+__wrap_open
+__wrap_open64
+__wrap_opendir
+__wrap_rename
+__wrap_rmdir
+__wrap_scandir
+__wrap_scandir64
+__wrap_stat
+__wrap_stat64
+__wrap_statfs
+__wrap_statfs64
+__wrap_statvfs
+__wrap_statvfs64
+__wrap_symlink
+__wrap_unlink
+__wrap_utime
+__wrap_utimes
+__xmknod
+__xstat
+__xstat64
+_edata
+_end
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
+`tun%
+a\rxg[
+abort
+about to perform blocking dns call from the main thread.  consider refactoring.\n
+absolute_mouse.vdf
+access
+account
+account flags changed
+afrikaans
+airtel
+akamai
+albanian
+albummetadata
+alicloud
+alignof
+allocator
+allotmswe
+alnum
+alpha
+alphasort64
+alse
+amazon
+amazon.com
+amharic
+android
+android32
+android6
+android64
+android7
+android8
+android9
+announcement created
+announcement deleted
+announcement failed content check
+announcement updated
+anonymous
+aperturescience.com
+api_logging
+api_logging <enabled> <verbose> : enable/disable verbose API logging in steamcmd
+app_backup
+app_build
+app_build_all_depots
+app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>  : Build all depots for one app
+app_debug_install
+app_info_print
+app_info_print <appid> [section] : print app info for appID
+app_info_request
+app_install_script
+app_launch
+app_license_request
+app_run
+app_uninstall
+app_update
+app_update <appid> [-validate] [-language <lang>] [-beta <betaname>] [-betapassword <pwd>] make sure a Steam application is up-to-date
+appbuild
+appid
+application
+ar_AE
+arabic
+armenian
+array
+assamese
+au PAY
+audio
+auto
+auto:
+availableSpace
+azerbaijani
+azure
+b,uZ
+bad_function_call
+baidu.com
+baishancloud
+bangla
+banned from chat
+baseIP.GetType() == k_EIPTypeV4
+baseIP.GetType() == k_EIPTypeV6
+baseline
+baselinemanifest
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string
+basic_string::_M_construct null not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::copy
+basic_string::erase
+basic_string::resize
+basque
+bbc.co.uk
+belarusian
+bellcanada
+beta
+betapassword
+between
+bg_BG
+bind_textdomain_codeset
+bindtextdomain
+bitNum >= 0 && bitNum < this->Size()
+blank
+blogger.com
+bool
+boolean
+bootstrap
+bosnian
+bpcs.com
+brazilian
+brief
+broadcast
+broadcastchat
+broadcastgamedata
+broadcastmanifests
+broadcastorigin
+browser
+btowc
+bucketid
+buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
+build_installer
+buildoutput
+buildvpk
+bulgarian
+bwiO'
+byte
+cActualReplacements == cReplacements
+cDaysKeepPersistentLogFiles > 0
+cSecs >= 0
+calloc
+can't convert int64 to uint64 (negative number)
+can't convert uint64 to int32 (data loss)
+can't convert uint64 to int64 (data loss)
+canceled the join request
+cannot create shim for unknown locale::facet
+catalan
+category_1
+category_10
+category_11
+category_13
+category_14
+category_15
+category_16
+category_17
+category_18
+category_19
+category_2
+category_20
+category_21
+category_22
+category_23
+category_24
+category_25
+category_26
+category_27
+category_28
+category_29
+category_30
+category_31
+category_32
+category_33
+category_34
+category_35
+category_36
+category_37
+category_38
+category_39
+category_40
+category_41
+category_42
+category_43
+category_44
+category_45
+category_46
+category_47
+category_48
+category_49
+category_50
+category_51
+category_52
+category_53
+category_54
+category_55
+category_56
+category_57
+category_58
+category_59
+category_6
+category_60
+category_61
+category_62
+category_63
+category_64
+category_65
+category_66
+category_67
+category_68
+category_69
+category_7
+category_70
+category_71
+category_72
+category_73
+category_74
+category_75
+category_76
+category_77
+category_78
+category_79
+category_8
+category_80
+category_81
+category_82
+category_9
+cbActual < (uint32)nBufSizeWithTerminator
+cdkeyrestrictions
+cdninfo
+ceg_wrap
+ceg_wrap <appid> <orig filename> <stripped filename> <strips filename> : upload executable to back end for CEG wrapping
+cellmap
+changed the POTW
+changenote
+char
+char16_t
+char32_t
+char8_t
+chat
+chdir
+checkout
+checksum_error
+cherokee
+china
+chinacache
+chinatelecom
+chmod
+chown
+chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
+clear_credentials
+client
+clientui
+clientui.so
+clientupdatehosts
+clock_gettime
+close
+closedir
+cloud
+clping
+cnet.com
+cnn.com
+cntrl
+codeweavers.com
+comcast
+comcastoffnet
+comic
+commandline
+committing
+common
+community
+community.csgo.com.cn
+community_assets/
+compat_tool_hash
+complex
+computed
+config
+configstore
+connected
+connecting
+console
+console_log
+const_cast
+construction vtable for
+content
+contentfolder
+contenthubs
+contentregionsandsources
+contentroot
+contentserver
+context.m_vecStack.Count() <= 1
+controller
+controller_8bitdo
+controller_android
+controller_apple
+controller_front_panel_board
+controller_generic
+controller_hori_steam
+controller_keyboard_generic
+controller_legion_go
+controller_legion_go_s
+controller_mobile_touch
+controller_mouse_generic
+controller_native
+controller_neptune
+controller_none
+controller_ps3
+controller_ps4
+controller_ps5
+controller_ps5_edge
+controller_rog_ally
+controller_steamcontroller_gordon
+controller_steamcontroller_headcrab
+controller_steamcontroller_unknown
+controller_steamos_handheld
+controller_switch2_pro
+controller_switch_joycon_left
+controller_switch_joycon_pair
+controller_switch_joycon_right
+controller_switch_pro
+controller_switch_pro_generic
+controller_triton
+controller_ui
+controller_unknown
+controller_wii
+controller_xbox360
+controller_xboxelite
+controller_xboxone
+controller_zotac_zone
+convar_
+convars
+count >= 0
+countrycodes
+covalensolutions.com
+covariant return thunk to
+crc_header_mismatch
+croatian
+crypto
+cs_CZ
+cubBytesToRead < INT32_MAX
+cubData < FIO_MAX_IO_BYTES
+cubData < INT32_MAX
+currencies
+current_manifest
+czech
+dQy/
+da_DK
+danish
+dari
+datacoll
+dayofdefeat.com
+de_DE
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+decompress_failed
+default
+deflate_gzip
+deflate_raw
+deflate_zip
+deflate_zlib
+delete
+delete[]
+deltabranch
+demo
+demoted from moderator
+demoted from officer
+depotconfigpath
+depotdeltapatch
+depotfromapp
+depotingest
+depotpath
+depots
+derive
+desc
+description
+dfxp
+dgettext
+digg.com
+digit
+disabled
+disabled group
+disablelzma
+disconnected
+disk
+disk-free command failed\n
+diskSize
+dl_iterate_phdr
+dlclose
+dlerror
+dlmopen
+dlmopen %s failed: %s\n
+dlopen
+dlsym
+dns_failed
+done
+dota2.com
+double
+download_chunk
+download_chunk <appid> <depotid> <sha>: download a single chunk from a depot
+download_depot
+download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<destination folder>]: download a single depot
+download_item
+download_item <appid> <PublishedFileId> : download a workshop item directly
+downloading
+driver
+driver_desc
+drm_wrap
+drm_wrap <appid> <input filename> <output filename> <toolname> <flags> [<destination>]: upload executable to back end for DRM wrapping
+dual_stack
+dutch
+dynamic_cast
+eFrameType < k_EFrameTypeMax
+eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
+eRet != k_ESteamRealmUnknown
+ebay.com
+edgenext
+edgio
+el_GR
+elem + num <= Count()
+elem >= 0 && num >= 0 && INT_MAX - elem >= num
+embedded_unknown
+en-US
+en_US
+enabled
+enablelzma
+enablesymlinks
+endmntent
+engadget.com
+english
+error
+es-419
+es_419
+es_ES
+estonian
+eurotransit
+event created
+event deleted
+event updated
+existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
+exit
+expandableSpace
+ext4
+extended
+external
+f.N%H
+faccessat
+facebook.com
+fallocate64
+false
+fastly
+fclose
+fcntl
+fdatasync
+fdopen
+feature_LEDColors
+feature_actionset
+feature_activator
+feature_gamepad
+feature_gyro
+feature_keboard
+feature_modeshift
+feature_mouse
+feature_mouseregion
+feature_none
+feature_radialmenu
+feature_touchmenu
+feof
+fflush
+fgets
+fi_FI
+filemapping
+fileno
+fileop
+fileplanet.com
+filesystem
+filetx
+filetype
+filipino
+finalizing
+find
+find substrings in console commands
+finnish
+flickr.com
+float
+flock
+flock %s %s failed. errno = %d
+flock LOCK_EX %s failed, errno = %d\n
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
+fnmatch
+fopen
+fopen tmpfile failed\n
+fopen64
+force_install_dir
+force_install_dir <directory>
+forever
+fotolog.net
+foxsports.com
+fprintf
+fputc
+fputs
+fr-FR
+fr_FR
+franchise
+fread
+fread() failed\n
+free
+freeaddrinfo
+fremont
+french
+freopen
+friends
+friendster.com
+fscanf disk-free output failed\n
+fseek
+fseeko64
+fsync %s failed, errno = %d\n
+ftell
+ftello64
+ftruncate64
+full
+futimes
+fwrite
+gAY:
+g_ClockSpeedSecondsMultiplier
+g_VProfManager
+g_VProfProfilesRunningCount
+g_VProfile
+g_VecLoadedModules
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_pFioAsyncEnqueue == NULL
+g_pFioAsyncFinalize == NULL
+g_pMemAllocSteam
+g_vecTempTextBuffer
+galician
+galileo
+game
+gameoverlayrenderer.so
+gamepad+mouse.vdf
+gamepad_flickstick.vdf
+gamepad_fps.vdf
+gamepad_joystick.vdf
+gamepad_platformer.vdf
+gameserver
+gamesforwindows.com
+gamespot.com
+gamesradar.com
+gametap.com
+gamezone.com
+gamingheads.com
+gcore
+generic
+georgian
+german
+get_Count failed
+get_RebootRequired failed
+get_Updates failed
+get_disk_info
+getaddrinfo
+getc
+getcwd
+getenv
+getmntent
+getpid
+getsockname
+gettext
+getwc
+gizmodo.com
+global constructors keyed to
+global destructors keyed to
+good
+google
+google.fr
+got empty manifest from GetStaleBucket!
+gpu_desc
+graph
+greek
+group details changed
+group was created
+guard variable for
+guest
+guestpass
+guide
+gujarati
+gurmukhi
+half
+half-life2.com
+hardware
+hashlen <= 32
+hausa
+hebrew
+help
+hi5.com
+hidden alias for
+high
+highwinds
+hindi
+host
+hour
+html
+http
+http://
+http://localhost:27100/siteserver/
+http://test.steampowered.com/
+http_test
+httpclient
+https://
+https://%s-china.%s.steam.dev/
+https://%s-china.beta.valve.org/
+https://%s.%s.steam.dev/
+https://%s.beta.steampowered.com/
+https://%s.steamchina.com/
+https://%s.steampowered.com/
+https://appmgmt.%s.steam.dev/
+https://avatars.beta.steamstatic.com/
+https://avatars.cdn.steamchina.eccdnx.com/
+https://avatars.steamstatic.com/
+https://beta.steamcommunity.com/
+https://cdn.beta.steampowered.com/store
+https://cdn.steamchina.eccdnx.com/store
+https://cdn.steamstatic.com/store
+https://clan.beta.steamstatic.com/
+https://clan.cdn.steamchina.eccdnx.com/
+https://clan.steamstatic.com/
+https://community-china.%s.steam.dev/
+https://community-china.beta.valve.org/
+https://community.%s.steam.dev/
+https://community.csgo.com.cn/
+https://community.steamstatic.com/
+https://my.steamchina.com/
+https://my.steamchina.eccdnx.com/
+https://partner.steamgames.com/
+https://s.team/q/
+https://shared.beta.steamstatic.com/
+https://shared.beta.steamstatic.com/store_item_assets/steam/apps
+https://shared.cdn.steamchina.eccdnx.com/
+https://shared.cdn.steamchina.eccdnx.com/store_item_assets/steam/apps
+https://shared.steamstatic.com/
+https://shared.steamstatic.com/store_item_assets/steam/apps
+https://steam-chat.com/
+https://steamcommunity.com/
+https://steamloopback.host
+https://steampublishbeta.valve.org/
+https://store.steamchina.com/qr/
+https://video.beta.steamstatic.com/
+https://video.cdn.steamchina.eccdnx.com/
+https://video.steamstatic.com/
+httpserver
+hu_HU
+hungarian
+iDEAL
+iPhoneOS
+i]Wb
+icelandic
+iconv
+iconv_close
+iconv_open
+id_ID
+ig,o
+igbo
+ign.com
+imaginary
+incoming_path
+indonesian
+info
+info.m_pReplacementString == 0
+input
+install
+interaction.ie
+internode
+invalid
+inventory
+inventoryservicepricesheet
+inventoryvalvegcpricesheet
+invited user
+ioctl
+ios32
+ios64
+iostream
+iostream error
+ipv4_only
+ipv6_only
+irish
+is NULL
+isalnum
+isalpha
+isspace
+it_IT
+italian
+items
+ixaustralia
+ja_JP
+japanese
+jastel
+java Class for
+java resource
+joined the group
+json
+jupiter
+k2U\v
+k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
+k_EIPTypeV4 == addr.GetType()
+kannada
+kazakh
+keywordsstudios.com
+khmer
+kiche
+kicked from chat
+kicked off the group
+kickstarter.com
+kill
+kingsoftcloud
+kinyarwanda
+ko_KR
+konkani
+koreana
+kotaku.com
+kvtags
+kyrgyz
+l4d.com
+lDa>
+lEd/
+language
+latam
+latvian
+lchown
+ld-linux-aarch64.so.1
+left the group
+len > 0 || HasError()
+lenovo
+level3
+libaudio.so
+libc.so.6
+libdl.so.2
+libm.so.6
+libpthread.so.0
+libsteam.so
+libtier0_s.so
+libvstdlib_s.so
+license
+like
+link
+linux
+linux22
+linux24
+linux26
+linux310
+linux316
+linux318
+linux32
+linux35
+linux36
+linux3x
+linux41
+linux414
+linux419
+linux44
+linux49
+linux4x
+linux510
+linux54
+linux5x
+linux64
+linux6x
+linux7x
+linux_arm64_beta_861407927dc8efb407da7cf
+lithuanian
+live.com
+llnw
+local
+localcspath
+locale::facet::_S_create_c_locale name not valid
+localeconv
+localization
+localpath
+log_files_always_flush
+login
+login_offline
+logoff
+logon
+logout
+logs
+long
+long double
+long long
+loopback
+lower
+lseek64
+lumen
+luxembourgish
+lzma_dict_valve
+lzma_valve
+m_BaseIP.GetType() == k_EIPTypeV4
+m_Count == 0
+m_Elements
+m_Filenames
+m_Func
+m_ListScheduledFunctions
+m_LogEventPrev
+m_Lookup
+m_Memory
+m_QueueScheduledItems
+m_QueueScheduledItems.Count() >= m_ListScheduledFunctions.Count()
+m_SpewThrottle
+m_StringPools
+m_TotalElements != InvalidIndex()
+m_Tree
+m_VecPFrameFunction[iFrameType]
+m_bAllowUnstableRemoval
+m_bitsMigratedBuckets
+m_buffer
+m_bufferVarArgs
+m_configOverride
+m_eCallbackResult != k_EResultPending
+m_errorIndex>=0
+m_fileReader
+m_fnCompletionCallback
+m_heap
+m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
+m_lMaxSize <= INT_MAX
+m_listChangedFiles
+m_listLogWatchParams
+m_mapAPICalls
+m_mapFileTimes
+m_mapFileWatchData
+m_mapFileWatchData.Key( i )
+m_memNodes
+m_nAllocationCount >= 0
+m_p == NULL
+m_pLogInstance
+m_pObj
+m_pParent == this
+m_pSetIntValue
+m_pSetStringValue
+m_pkvLastKeyAdded != NULL
+m_pthreadWatcher
+m_queueItemsPending.Count() == 0
+m_sCurrentFilename
+m_sPreviousFilename
+m_strAccountName
+m_strConvertedDefaultValue
+m_strDirectory
+m_strFileName
+m_strFileNamePrevious
+m_strLogLine
+m_strWatchPath
+m_tree
+m_unInCounter == m_unOutCounter
+m_usType == k_EIPTypeV6
+m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
+m_vecCallbacks
+m_vecCallbacks.Count() == 0
+m_vecCallbacks.Count() == 0 || !callback
+m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
+m_vecHashBuckets
+m_vecRegisteredWriters
+m_vecRegisteredWriters.HasElement( pFile )
+macedonian
+machine
+macos
+macos1010
+macos1011
+macos1012
+macos1013
+macos1014
+macos1015
+macos1016
+macos1017
+macos1018
+macos1019
+macos1020
+macos1021
+macos1022
+macos1023
+macos104
+macos105
+macos1058
+macos106
+macos1063
+macos1064_slgu
+macos1067
+macos1067_unused
+macos106_unused1
+macos106_unused2
+macos106_unused3
+macos107
+macos108
+macos109
+macos11
+macos11.1
+macos12
+macos13
+macos14
+macos15
+macos26
+macos27
+macos28
+made clan invite only and private
+made group private
+made group public
+malay
+malayalam
+malloc
+maltese
+mandatory
+manifest
+maori
+marathi
+mbrtowc
+mbsnrtowcs
+mbsrtowcs
+media
+medium
+megaupload.com
+memchr
+memcmp
+memcpy
+memmove
+memset
+mergebaseline
+metacritic.com
+metrics
+microsoft.com
+mileweb
+minute
+mkdir
+mkfifo
+mkstemp
+mkstemp errno %d\n
+mktime
+mmap64
+mobile
+mobilechat
+modf
+mongolian
+month
+mopay
+mount
+mp4-single
+msn.com
+msync
+munmap
+music
+mustownapp
+mwa!
+myspace.com
+nBytes
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+nDay < 32
+nDay > 0
+nGrowSize >= 0
+nMinCapacity <= k_nMaxStringSize
+nMinCapacity > Capacity()
+nMinCapacity >= nChars
+nMonth == 1 || nMonth == 3 || nMonth == 5 || nMonth == 7 || nMonth == 8 || nMonth == 10 || nMonth == 12
+nPreSplit > 0 && nPreSplit + nPostSplit == nCount
+nPut + nPutDelta <= outBuf.TellMaxPut()
+nRead == nNumBytes
+nSize != 0
+nSize >= 0
+nTargetLength > 0
+nYear > 1712
+nYear >= 1900 && nMonth >= 1 && nMonth <= 12
+nepali
+netfilter
+network
+networkmgr
+new
+new[]
+news/
+nexon_dota2
+ngaa
+nl_NL
+no bootstrapper found
+no_NO
+nobaseline
+nocegsniff
+non-transaction clone for
+non-virtual thunk to
+none
+nonsegmentedvideo
+norwegian
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
+not in
+null
+num > 0
+numElements >= 0
+nytimes.com
+oauthclient
+object
+odia
+offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+offset >= -m_Put && offset <= INT_MAX-m_Put
+offset >= 0
+open
+open64
+opendir
+openvroverlay
+openxr
+operator
+operator""
+optional
+oracle
+orkut.com
+osvr
+othervr
+outgoing_path
+pBaseFrameFunction
+pBaseScheduledFunction->GetDeadlineTime().LTime() >= m_lTimeNextDeadline
+pBaseScheduledFunction->Run()
+pCRF
+pConv && pConv->GetDelimiterLength() > 0
+pData
+pDefaultValue
+pEndingDelim && pEndingDelim[0]
+pFile->m_hFileDest != INVALID_OSFILEHANDLE
+pFmt
+pKeyValuesTextParser
+pLogInstance == sm_pLogInstance
+pName
+pNode && pNode->Next == QueueEnd()
+pOut - pBuf == nTotalHeaderSize
+pToken
+pWatcher != NULL
+parental
+parsing_failed
+partial
+pcgamer.com
+pcgames.gwn.com
+pchBaseFileName
+pchBuffer
+pchMsg
+pchName
+pchSteam2ID
+pch[cub - 1] != '\0' && pch[cub] == '\0'
+pclose
+pcmag.com
+peering
+perfectworld
+permissions changed
+persian
+pl_PL
+playdota.com
+plogs
+plugin
+policies
+polish
+poll
+popconfig
+popen
+port
+portuguese
+posix_fadvise
+pread64
+preallocating
+preloadonly
+prerelease
+preview
+previewfast
+previewfile
+print
+printf
+profile
+promoted to moderator
+promoted to officer
+promoted to owner
+ps3os
+pstrDest[nNewLength] == '\0'
+pstrNew + nNewLength == pstrDestination + 1
+pstrNew == pstrDestination
+pstrNew == pszString
+pt-BR
+pt-br
+pt_BR
+pt_PT
+pthread_mutex_lock
+pthread_mutex_unlock
+pthread_once
+public
+publish
+publishedfileid
+punct
+purchase
+pure virtual method called\n
+putc
+putchar
+puts
+putwc
+pvecAddressesOut != nullptr || pSingleOutput != nullptr
+pw_csgo
+pw_dota2
+pwrd.com
+pwrd_telecom
+pwrd_unicom
+pwrite64
+qR5FE%
+qcom
+quantil
+quechua
+quit
+qwest
+qwilt
+rack
+rackspace
+rapidshare.com
+read
+readdir64
+readlink
+ready
+realloc
+realpath
+received
+reconfiguring
+recursive
+reddit.com
+reference temporary #
+regions
+registry
+reinterpret_cast
+relative_mouse.vdf
+release_space %llu
+released
+reliance
+remove
+rename
+renew
+request_space %llu
+requested to join a private group
+resizeNumBits >= 0
+retn
+rmdir
+ro_RO
+romanian
+root
+ru&o
+ru_RU
+run_app_build
+run_app_build [-preview] [-desc <text>] <appbuildfile> : run app depot build as specified in appbuildfile
+run_app_build_http
+run_app_build_http : alias for run_app_build
+running
+running profile for %d seconds...\n
+runscript
+runscript <scriptfile> - runs console script file
+russian
+s_VecModuleAddressRanges
+s_hashMapIPWatches
+s_hashMapServerTypeWatches
+s_hashMapSteamIDWatches
+s_hashMapTxnIDWatches
+s_pSymbolTable
+s_treeThreadLocalAddressRanges
+s_treeThreadLocalAddressRanges[i]
+s_treeThreadLocalIPAddressMaps
+s_treeThreadLocalIPAddressMaps[i]
+s_treeThreadLocalServerTypeMaps
+s_treeThreadLocalServerTypeMaps[i]
+s_treeThreadLocalSteamIDMaps
+s_treeThreadLocalSteamIDMaps[i]
+s_treeThreadLocalTxnIDMaps
+s_treeThreadLocalTxnIDMaps[i]
+sc_schinese
+scandir
+scandir64
+sched_yield
+scheduledItem.m_ulTime
+schinese
+scots
+scripts
+sdkarm64
+second
+see 'login'
+sendfile64
+serbian
+series
+serverandwgonly
+serverondemand
+serveronly
+service
+set_app_beta_password
+set_app_beta_password <appid> -beta <name> -betapassword <pwd>  -- opt-in to the app beta with the given password
+set_spew
+set_spew_level
+set_steam_guard_code
+set_var
+set_var used with no parameters
+set_var variable is not found
+setenv
+setlive
+setlocale
+setmntent
+setpublic
+setvbuf
+sha_header_mismatch
+shacknews.com
+shader_process
+shader_process <appId> <bucketID> <optionalOverrideBasePath>
+shaderbuild
+shaderserver
+shahmukhi
+short
+shortcut
+sign_install_script
+sign_install_script <appid> <input filename> <output filename> : upload install script to back end for signing
+signed char
+sindhi
+singleapp
+sinhala
+sizeof
+sizeof...
+slovak
+slovenian
+sm_ListWatchingLogs
+sm_ThreadSafeQueueLogEvents
+sm_ThreadSafeQueueLogEvents.GetQueue()[ iLogEvent ]
+sm_ThreadSafeQueueLogMsgSpew
+sm_bShuttingDown
+sm_bShuttingDown && sm_pLogInstance
+sm_cRef == 0
+sm_cRef > 0
+sm_msgSpewThrottle
+sm_pLogInstance
+sm_vecLogListeners
+smtp
+snprintf
+solrconfig
+sorani
+sotho
+space
+spaceGranted
+spaceReleased
+spanish
+sprintf
+srvping
+stackLevel >= 0 && stackLevel < m_errorIndex
+stackpath
+staging
+stale_driver_desc
+stale_gpu_desc
+startup
+statfs
+statfs64
+static_cast
+static_cast<Node_t*>(pNode)->elem
+staticvideo
+stats
+stats_dump
+stats_dump [filter] : dumps matching debug stats
+stats_monitor
+stats_monitor <stat name> : monitor a debug stat value
+stats_reset
+stats_reset [filter] : set matching stats back to 0
+statvfs
+statvfs64
+statvfs64 failed for %s, errno %d %s
+statvfs64 reports success but zero free space\n
+statvfs64: ret %d errno %d\n
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
+stdin
+stdout
+steam
+steam.pid
+steam://
+steamIDChat.GetEAccountType() == k_EAccountTypeChat
+steamIDClan.GetEAccountType() == k_EAccountTypeClan
+steam_appid.txt
+steam_dev.cfg
+steam_master_ipc_name_override
+steambeta://
+steamchina
+steamchina.com
+steamchina://
+steamchinabeta://
+steamclient
+steamclient.so
+steamcmd
+steamcommunity.com
+steamconsole.cfg
+steamconsole.so
+steamdeck_stable
+steamgames.com
+steamglobal
+steamhdl
+steamlink://
+steampipe
+steampipepeering
+steampowered.com
+steamtranslation.ru
+steamui.so
+steamworks_drm
+stop using I64/I32, use lld or d respectively
+stopping
+store
+strOut.BEndsWith( "/" )
+strcasecmp
+strcasestr
+strchr
+strcmp
+strcpy
+strdup
+streaming
+streaming_steamdesktop.vdf
+strerror
+strftime
+string literal
+strlen
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
+strncasecmp
+strncat
+strncmp
+strncpy
+strpbrk
+strptime
+strrchr
+strstr
+strtod
+strtol
+strtold_l
+strtoll
+strtoul
+strtoull
+subtitles
+support changed ownership
+support cleared content
+support locked group
+support unlocked group
+sv_SE
+svcm
+swahili
+swarm_get_bucket_manifest
+swarm_shader_compile
+swarm_shader_download
+swarm_shader_prepopulate
+swarm_shader_upload
+swarm_tc_download
+swarm_tc_download <src_bucket_hw_id> <src_bucketsw_id> <work_dir>
+swarm_tc_upload
+swedish
+swprintf
+symlink
+syntax error at line %d near:
+syscall
+sysreqs
+system
+tajik
+tamil
+taskus.com
+tata
+tatar
+tc_depot_manifest_cache
+tcgetattr
+tchinese
+tcsetattr
+teamfortress.com
+teliasonera
+telugu
+telus
+template parameter object for
+tencent
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+test
+tf2.com
+th_TH
+thai
+the join request was approved by a mod
+the join request was denied by a mod
+thirdparty
+this
+threads
+throw
+tigrinya
+time
+tinet
+title
+tool
+towerattack
+tr_TR
+transaction clone for
+transaction clone for operator delete(void*)
+transaction clone for operator new[](unsigned long)
+transit
+true
+tswana
+turkish
+turkmen
+tvos64
+typeinfo fn for
+typeinfo for
+typeinfo for SteamThreadTools::CThread
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+uk_UA
+ukrainian
+un-banned from chat
+unNetworkBitsIPv4 <= 32
+unNetworkBitsIPv4 >= 8
+unNetworkBitsIPv6 <= 64
+unNetworkBitsIPv6 >= 32
+unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize should be zero when using bUnbuffered = true
+unavailable
+unconnected
+unexpected_size
+ungetc
+ungetwc
+uninitialized __any_string
+unknown
+unlink
+unset
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unspecified
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+upper
+urdu
+usleep
+utime
+utimes
+uyghur
+uzbek
+valencian
+validate
+valve
+valvesoftware.com
+vasprintf
+vector::_M_realloc_insert
+veoh.com
+verbose
+verify_chunk_store
+verify_chunk_store <appid> <depotid> <datafile> : run app depot build as specified in appbuildfile
+verify_vpk
+verify_vpk <datafile> : verifies content of given VPK
+verifying install
+verifying update
+vfat
+vi_VN
+video
+videomanager
+vietnamese
+virtual thunk to
+visibility
+vmc.com
+void
+vsnprintf
+vtable for
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+w+OQvr
+wXR\r
+waiting
+wasd.vdf
+wchar_t
+wcrtomb
+wcscasecmp
+wcscmp
+wcslen
+wcsnrtombs
+wcstol
+wctob
+weak
+web links changed
+web:checkout
+web:community
+web:dev
+web:help
+web:internalstats
+web:ops
+web:partner
+web:stats
+web:steamtv
+web:store
+web:support
+webm
+webm-segmented
+websocket
+websockets
+week
+welsh
+wikipedia.org
+win10
+win11
+win200
+win2003
+win2008
+win2012
+win2012R2
+win2016
+win2019
+win2022
+win311
+win32
+win64
+win7
+win8
+win8.1
+win95
+win98
+winME
+winNT
+winVista
+winXP
+windows
+wmemchr
+wmemcmp
+wmemcpy
+wmemmove
+wmemset
+wn>Jj
+wolof
+workshop_build_item
+workshop_build_item <build config filename> : build a workshop item
+workshop_create_legacy_item
+workshop_create_legacy_item <appid> <workshop file> : build a legacy workshop item
+workshop_download_item
+workshop_download_item <appid> <PublishedFileId> : download an item using the workshop system
+workshopdepot
+workshopitem
+write
+write %s failed, errno = %d\n
+writev
+xbox.com
+xdigit
+xfire.com
+xhosa
+y9*O
+year
+yoruba
+youtube.com
+zC`G;
+zh-cn
+zh-tw
+zh-xc
+zh_CN
+zh_TW
+zh_XC
+zstd_dict_valve
+zstd_valve
+zulu
+{default arg#
+{kHw
+{lambda(
+{parm#
+{unnamed type#

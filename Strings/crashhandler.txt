@@ -24,22 +24,17 @@
  Mbps
  MiB
  [clone
- _Complex
- _Imaginary
  __vector(
  bps
  bytes
- class
  const
  for
  noexcept
- requires
  restrict
  throw
  transaction_safe
  volatile
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!4AJW
 !V_isempty( prefix )
 !V_isempty( suffix )
 !directory.empty()
@@ -239,13 +234,28 @@ $ORIGIN
 (anonymous namespace)
 (iub & (m_nSizeWithStack-1)) == 0
 ***** OUT OF MEMORY! attempted allocation size: %zu ****\n
+*N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
-++CCUNG
-++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGpure virtual method called\n
-++CCUNGstd::exception
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
+*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
+*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -256,6 +266,7 @@ $ORIGIN
 -- Summary --\n
 -----BEGIN BREAKPAD MICRODUMP-----
 -----END BREAKPAD MICRODUMP-----
+-0123456789
 -chromeos
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -272,33 +283,7 @@ $ORIGIN
 -steamframe
 -steamos3
 -tesla
-../common/environmentmanager.cpp
-../crashhandler/breakpad_linux.cpp
-../external/picojson/picojson.h
-../public/tier0/memblockhdr.h
-../public/tier0/tslist.h
-../public/tier0/vprof.h
-../public/tier1/utlbuffer.h
-../public/tier1/utldict.h
-../public/tier1/utllinkedlist.h
-../public/tier1/utlmemory.h
-../public/tier1/utlrbtree.h
-../public/tier1/utlstring.h
-../public/tier1/utlvector.h
-../tier0/dbg.cpp
-../tier0/memblockhdr.cpp
-../tier0/memstd.cpp
-../tier0/minidump.cpp
-../tier0/platform_posix.cpp
-../tier0/threadtools.cpp
-../tier0/validator.cpp
-../tier0/vprof.cpp
-../tier1/fileio.cpp
-../tier1/utlbuffer.cpp
-../tier1/utlmemory.cpp
-../tier1/utlstring.cpp
-../vstdlib/strtools.cpp
-../vstdlib/strtools_unicode.cpp
+./obj_crashhandler_steamrtarm64/release/crashhandler.so
 ./src/client/linux/handler/minidump_descriptor.h
 ./src/client/linux/minidump_writer/directory_reader.h
 ./src/client/linux/minidump_writer/line_reader.h
@@ -313,14 +298,41 @@ $ORIGIN
 .text
 /bin/sh
 /bin/steamerrorreporter
+/data/src/common/environmentmanager.cpp
+/data/src/crashhandler/breakpad_linux.cpp
+/data/src/external/picojson/picojson.h
+/data/src/public/tier0/memblockhdr.h
+/data/src/public/tier0/tslist.h
+/data/src/public/tier0/vprof.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlvector.h
+/data/src/tier0/dbg.cpp
+/data/src/tier0/memblockhdr.cpp
+/data/src/tier0/memstd.cpp
+/data/src/tier0/minidump.cpp
+/data/src/tier0/platform_posix.cpp
+/data/src/tier0/threadtools.cpp
+/data/src/tier0/validator.cpp
+/data/src/tier0/vprof.cpp
+/data/src/tier1/fileio.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/vstdlib/strtools.cpp
+/data/src/vstdlib/strtools_unicode.cpp
 /dev
 /dev/
 /dev/disk/by-uuid
-/dev/random
 /dev/urandom
 /etc/lsb-release
 /etc/mtab
 /etc/steamos-oobe-image
+/proc/
 /proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
@@ -329,6 +341,8 @@ $ORIGIN
 /proc/self/exe
 /proc/self/fd
 /steamerrorreporter
+/sys/devices/system/cpu/possible
+/sys/devices/system/cpu/present
 /tmp
 /tmp/.steam-sem-names
 /tmp/disk-free.XXXXXX
@@ -360,9 +374,8 @@ $ORIGIN
 16IBreakpadFactory
 17CFileWriterThread
 17CStreamReaderBase
-18:46:36
+18:47:13
 18CUtlCharConversion
-19CDirContentsWatcher
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
@@ -373,13 +386,18 @@ $ORIGIN
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
 9IMemAlloc
+</script>
 <empty>
 <family %u, %u bytes>
 <no address info>
 <unknown>
+AKST
 ALL_PROXY
+ASCII
+ASCII//TRANSLIT
 Anonymous mutex cannot have bAllAccess == true
 Apr 21 2026
+April
 Assert
 Assert( %s ):%s:%d\n
 Assertion Failed: stack%2d: %s
@@ -387,6 +405,7 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
+August
 Average %.2f fps, %.2f ms per frame\n
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
@@ -404,6 +423,7 @@ Breaking '%s' in '%s'\n
 Breakpad/1.0 (Linux)
 Breakpad_FilterCallback
 Breakpad_MinidumpCallback
+BuildID
 Busy, please retry.\n
 C-runtime internal
 CFileReader
@@ -415,6 +435,11 @@ CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
 CLcx
+CPU architecture
+CPU implementer
+CPU part
+CPU revision
+CPU variant
 CPathString
 CProcessEnvironmentManager ERROR: InitFromDll sees no confirmation that the primary is ready, disabling.\n
 CProcessEnvironmentManager ERROR: dlsym 'setenv' failed.\n
@@ -457,6 +482,7 @@ Calling Tell on an async file writer is unsafe, will race with thread and may co
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
+ClientDLL
 Could not find steamerrorreporter binary. Any minidumps will be uploaded in-process
 Could not read /proc/self/cmdline when trying to find steamerrorreporter
 Couldn't write %s: %s\n
@@ -464,14 +490,8 @@ CrashTime
 CreateInterface
 DBG_PATHMATCH
 DBG_STAT
-DF128_
-DF16_
-DF16b
-DF32_
-DF32x
-DF64_
-DF64x
 DONT_BREAK_ON_ASSERT
+December
 Deleting thread object from the thread, this is bad
 Don't know how to check filesystem type on POSIX!
 DumpMemTrackingStats %d %d \n
@@ -482,6 +502,7 @@ ERROR: Could not run steamerrorreporter binary. Uploading minidump in-process\n
 ERROR: execv failed when trying to send minidump\n
 ERROR: waitpid() on child forked process failed when uploading minidump: %d\n
 Element( i )
+Encryption
 Error State on string being set.
 Error decoding string1: %s
 Error decoding string2: %s
@@ -503,28 +524,20 @@ Failed writing minidump, nothing to upload.\n
 Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
+Features
+February
 File change notification for %s but no file contents changed based on hash\n
+FileSystem
 FilterCallback
 Free disk space for %s would overflow
+Friday
 GAMESCOPE_WAYLAND_DISPLAY
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GLIBCXX_TUNABLES
-GLIBC_2.10
-GLIBC_2.12
-GLIBC_2.14
+GCC: (Debian 9.3.0-22) 9.3.0
+GCC: (SteamRT 10.3.0-3+steamrt3.1+bsrt3c.1) 10.3.0
 GLIBC_2.17
-GLIBC_2.2.5
-GLIBC_2.25
-GLIBC_2.27
 GLIBC_2.29
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.3
-GLIBC_2.3.4
-GLIBC_2.4
-GLIBC_2.7
-GLIBC_2.9
+GLIBC_2.30
+GameOverlayUI
 GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
 HOME
@@ -546,21 +559,29 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
+January
+Jobs/Coroutines
+July
+June
 LOCK_EX
 LOCK_SH
 Leaked mem: %s %s\n
 Linux
 LoadFileRangeIntoBuffer_Internal
+Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
+March
 Matched '%s' -> '%s'\n
+MbP?H
 MemFree:
 MemTotal:
 MinidumpCallback
 Minidumps written:\n
 Mismatched thread handle during thread Start()
 Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
+Monday
 Must Start() thread before setting priority
 N10SteamVProf13CVProfManagerE
 N10__cxxabiv115__forced_unwindE
@@ -569,6 +590,7 @@ N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
 N15google_breakpad17LinuxPtraceDumperE
@@ -577,10 +599,32 @@ N16SteamThreadTools7CThreadE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
 N17CFileWriterThread19CFileWriterWorkItemE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NSt3_V214error_categoryE
+NSt6locale5facet6__shimE
+NSt6locale5facetE
+NSt7__cxx1110moneypunctIcLb0EEE
+NSt7__cxx1110moneypunctIcLb1EEE
+NSt7__cxx1110moneypunctIwLb0EEE
+NSt7__cxx1110moneypunctIwLb1EEE
+NSt7__cxx117collateIcEE
+NSt7__cxx117collateIwEE
+NSt7__cxx118messagesIcEE
+NSt7__cxx118messagesIwEE
+NSt7__cxx118numpunctIcEE
+NSt7__cxx118numpunctIwEE
+NSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
+NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8ios_base7failureB5cxx11E
+NSt8ios_base7failureE
 NULL != m_pValObjectCur
 NULL buffer passed to V_atof()
 NULL buffer passed to V_atoi()
@@ -588,26 +632,17 @@ No Error
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
+November
 OUT OF MEMORY
 Object
+October
 Only thread can stop self: Use a higher-level protocol
-PDF128_
-PDF16_
-PDF16b
-PDF32_
-PDF32x
-PDF64_
-PDF64x
-PKDF128_
-PKDF16_
-PKDF16b
-PKDF32_
-PKDF32x
-PKDF64_
-PKDF64x
+OverlayInput
+OverlayRendering
 PKDd
 PKDe
 PKDf
+PKDh
 PKDi
 PKDn
 PKDs
@@ -616,46 +651,108 @@ POSIX does not support inheriting full mutexes
 PPid:\t
 PS3 Unattributed
 Peak %.2f ms frame\n
+Platform
 PrepareBuffer( nNewLength ) == pstrNew
 Probably deadlock or failure waiting for thread to initialize.
+ProductName
 Public
 QkkXa
 Root
+RunCallbacks
 SDL_GetError
 SDL_SetCurrentThreadPriority
 STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
+Saturday
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 SendCrashReport
 SendExistingMinidump
+September
+ServerMain
 SetAppID
 SetComment
 SetSteamID
 Setting Steam ID: %llu\n
 Setting SteamUniverse: %d = %s\n
 Size
+Sleeping
 Someone called ClearWritingMinidump without holding the minidump lock.
 Someone called SetWritingMinidump without holding the minidump lock.
 Spew Globals
 Spew globals
-St10bad_typeid
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11__timepunctIcE
+St11__timepunctIwE
 St11logic_error
-St11range_error
-St12domain_error
+St12codecvt_base
 St12length_error
 St12out_of_range
 St12system_error
+St13__ios_failure
 St13bad_exception
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
 St13runtime_error
-St14overflow_error
-St15underflow_error
-St16invalid_argument
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St19__iosfail_type_info
 St20bad_array_new_length
+St21__ctype_abstract_baseIwE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
 St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
 St9type_info
 Stack%2d: %s\n
 Stack%2d: 0x%llX\n
@@ -667,7 +764,10 @@ Steam - DirWatcher
 Steam Helper
 Steam3Master
 SteamRealPath
+SteamUniverse
 SteamUser
+Streaming
+Sunday
 TLS init function for
 TLS wrapper function for
 TMPDIR
@@ -681,19 +781,27 @@ Thread failed to initialize\n
 Thread synchronization object is unuseable
 Thread(0x%p/0x%p/0x%x)
 ThreadGetProcessExitCode
+ThreadWorkItem
+Thursday
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
 TracerPid:
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
+Tuesday
 USER
+UTF-8
 Unable to write failure log\n
+Unaccounted
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unknown
+Unknown error
 Unknown universe %d, assuming public\n
 Unmatched %s\n
 Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
+UserID
+VGUI
 VPROF Report for Thread: %d - %s\n
 VTT for
 V_AppendSlash: ran out of space on %s.
@@ -708,6 +816,8 @@ Validate Failed: Leaked connection %u\n
 Validate Failed: Leaked file %p\n
 Validate Failed: Leaked socket %p\n
 Valve
+Vendor
+Version
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WSL_DISTRO_NAME
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
@@ -716,13 +826,13 @@ Warning: failed to set thread priority: set failed for %d: %s\n
 Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
+Wednesday
 WriteMiniDump
 WriteMinidump
 XXXXXX
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [abi:
-[friend]
 \nFATAL: Steam cannot run. Please delete some %s* directories or change their ownership to the local user.\n
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n
@@ -730,8 +840,9 @@ XXXXXX
 \tValidate Failed: leaked file '%s'\n
 \tValidate Failed: leaked socket remote address %s\n
 \u%04x
+_Accum
 _ExitOnFatalAssert\n
-_Float
+_Fract
 _GLOBAL_
 _ITM_RU1
 _ITM_RU8
@@ -742,15 +853,21 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( y, unNodeSize, pMemBase )
 _STEAM_SETENV_MANAGER
+_Sat
 __assert_fail
+__bss_start
 __ctype_b_loc
+__ctype_get_mb_cur_max
 __ctype_tolower_loc
 __ctype_toupper_loc
 __cxa_atexit
 __cxa_finalize
+__duplocale
 __errno_location
 __float128
+__freelocale
 __fxstat64
+__getauxval
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
@@ -758,14 +875,24 @@ __int128
 __isoc99_fscanf
 __isoc99_sscanf
 __isoc99_swscanf
+__iswctype_l
 __lxstat
 __lxstat64
-__memcpy_chk
+__newlocale
+__nl_langinfo_l
 __pthread_key_create
-__snprintf_chk
-__stack_chk_fail
-__test_and_acquire(long*)
-__tls_get_addr
+__strcoll_l
+__strftime_l
+__strtod_l
+__strtof_l
+__strxfrm_l
+__towlower_l
+__towupper_l
+__uselocale
+__wcscoll_l
+__wcsftime_l
+__wcsxfrm_l
+__wctype_l
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -807,6 +934,8 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_edata
+_end
 _exit
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
@@ -824,8 +953,13 @@ all_proxy
 allocation_state_ == ARRAY
 allocation_state_ == SINGLE_OBJECT_WITH_ARRAY
 allocator
+alnum
+alpha
 alphasort64
+alse
 argLen < 0x10000000u
+arm64
+array
 asctime
 asctime_r
 assert
@@ -836,11 +970,12 @@ auxv
 availableSpace
 backtrace
 backtrace_symbols
+basic_ios::clear
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
-basic_string: construction from null is not valid
+basic_string::_M_construct null not valid
 basic_string::_M_create
 basic_string::_M_replace
 basic_string::_M_replace_aux
@@ -848,20 +983,13 @@ basic_string::_S_construct null not valid
 basic_string::_S_create
 basic_string::append
 basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
-basic_string::basic_string
-basic_string::compare
 basic_string::copy
 basic_string::erase
-basic_string::insert
-basic_string::replace
 basic_string::resize
-basic_string::substr
-basic_string_view::substr
+bind_textdomain_codeset
+bindtextdomain
+blank
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
-bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool google_breakpad::DirectoryReader::GetNextEntry(const char**)
 bool google_breakpad::FindElfSection(const void*, const char*, uint32_t, const void**, size_t*, int*)
 bool google_breakpad::FindElfSegment(const void*, uint32_t, const void**, size_t*, int*)
@@ -887,15 +1015,17 @@ bool {anonymous}::MinidumpWriter::WriteFile(MDLocationDescriptor*, const char*)
 boolean
 breakpad_testfile
 breakpad_verbose
+btowc
 buf_used_ > 0
 buf_used_ >= len + 1
 bufferLen == 0 || pDest != NULL
 bufferLen > 0 && bufferLen <= INT_MAX
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
-buffers->next == __null
+buffers->next == NULL
 byte
 cActualReplacements == cReplacements
 calloc
+cannot create shim for unknown locale::facet
 cbActual < (uint32)nBufSizeWithTerminator
 ccMax >= 1
 cefwebhelper
@@ -912,10 +1042,12 @@ clock_gettime
 close
 closedir
 cmdline
-co_await
+cntrl
 com.valvesoftware.steam
+complex
 components.Count() == 0
 console
+const char* google_breakpad::ProcCpuInfoReader::GetValue()
 const char* google_breakpad::ProcCpuInfoReader::GetValueAndLen(size_t*)
 const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Shdr = Elf32_Shdr; typename ElfClass::Word = unsigned int]
 const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Shdr = Elf64_Shdr; typename ElfClass::Word = unsigned int]
@@ -926,7 +1058,6 @@ count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 count >= 0
 covariant return thunk to
-cpu family
 crash
 crashhandler.so
 crashhandler001
@@ -959,14 +1090,14 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-default
 delete
 delete[]
-deleted virtual method called\n
 descriptor.path_.empty()
 dest != NULL
 destCapacity != 0
 destSize >= 1
+dgettext
+digit
 dirName
 disk-free command failed\n
 diskSize
@@ -982,7 +1113,7 @@ double
 dprintf
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
-elf_header->e_ident[4] == ElfClass::kClass
+elf_header->e_ident[EI_CLASS] == ElfClass::kClass
 elf_mapped_base
 endmntent
 environ
@@ -1004,6 +1135,7 @@ fcntl
 fd_ != -1 || minidump_path
 fd_ == -1 || !minidump_path
 fdatasync
+fdopen
 feof
 fflush
 fgets
@@ -1033,6 +1165,7 @@ freopen
 friendsui.so
 fscanf disk-free output failed\n
 fseek
+fseeko64
 fsync %s failed, errno = %d\n
 ftello64
 ftruncate
@@ -1044,10 +1177,10 @@ g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
 generic
 get_disk_info
+getc
 getcontext
 getcwd
 getegid
-getentropy
 getenv
 geteuid
 gethostbyname
@@ -1056,8 +1189,9 @@ getmntent
 getpagesize
 getpid
 getpriority
+gettext
 gettimeofday
-glibcxx.eh_pool
+getwc
 global constructors keyed to
 global destructors keyed to
 gmtime
@@ -1067,19 +1201,24 @@ google_breakpad::MinidumpDescriptor& google_breakpad::MinidumpDescriptor::operat
 google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const google_breakpad::MinidumpDescriptor&)
 google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const string&)
 gp_regs || size
+graph
 gsoapwrapper.so
 guard variable for
 half
-hardware
 hidden alias for
 http_proxy
 https://crash.steampowered.com/submit
+iconv
+iconv_close
+iconv_open
+imaginary
 in != out
-info != 0
+info != NULL
 info.m_pReplacementString == 0
-initializer for module
 invalid input pointer
 ioctl
+iostream
+iostream error
 isspace
 iswalnum
 iswalpha
@@ -1089,7 +1228,7 @@ java Class for
 java resource
 kill
 lchown
-ld-linux-x86-64.so.2
+ld-linux-aarch64.so.1
 len < maxlen
 len > 0 || HasError()
 libSDL3.so.0
@@ -1103,14 +1242,15 @@ libm.so.6
 libpthread.so.0
 link
 linux-gate.so
+locale::facet::_S_create_c_locale name not valid
 localeconv
 localtime
 localtime_r
 location
-logf
 long
 long double
 long long
+lower
 lseek
 lseek64
 m_Count == 0
@@ -1158,6 +1298,9 @@ maxLen > 0 && maxLen <= INT_MAX
 maxLenInBytes == 0 || pDest != NULL
 maxLenInBytes >= 0
 maxlen >= 1
+mbrtowc
+mbsnrtowcs
+mbsrtowcs
 memchr
 memcmp
 memcpy
@@ -1172,15 +1315,12 @@ mkstemp errno %d\n
 mmap
 mmap64
 mode_ == kWriteMinidumpToFile && !directory_.empty()
-model
 modf
-mold 2.36.0 (compatible with GNU ld)
 mount
 mprotect
 msync
-mt19937
 munmap
-my_strncmp(elf_base, "\177ELF", 4) == 0
+my_strncmp(elf_base, ELFMAG, SELFMAG) == 0
 n == 0 || s1 != NULL
 n == 0 || s2 != NULL
 nBytes
@@ -1195,19 +1335,19 @@ nSize != 0
 nSize >= 0
 nTargetLength > 0
 nValue >= 0 && nValue <= 15
-name != __null
+name != NULL
 nanosleep
 nattypeprobe.so
 new
 new[]
-noexcept
 non-transaction clone for
 non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 nsection > 0
+null
 num > 0
 numElements >= 0
-obj_count
-obj_size
+object
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
@@ -1253,6 +1393,7 @@ pchNeedle != NULL
 pchOut
 pclose
 pipe2
+poll
 popen
 pos + size <= position_ + size_
 posix_fadvise
@@ -1260,8 +1401,8 @@ posix_memalign
 ppFrames[iFrame] != NULL
 ppath
 pread64
+print
 printf
-processor
 propack.so
 pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
@@ -1300,16 +1441,11 @@ pthread_self
 pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
+punct
+pure virtual method called\n
+putc
+putwc
 pwrite64
-random_device could not be read
-random_device: getentropy failed
-random_device: rdrand failed
-random_device: rdseed failed
-random_device::random_device(const std::string&): device not available
-random_device::random_device(const std::string&): unsupported token
-rdrand
-rdrnd
-rdseed
 read
 readdir
 readdir64
@@ -1333,12 +1469,12 @@ scandir64
 sched_get_priority_max
 sched_get_priority_min
 sched_yield
-sdk32
+script
+sdkarm64
 secblock.h
 section_size
 section_start
-sections != __null
-secure_getenv
+sections != NULL
 segment_size
 segment_start
 semaphore creation failed %s
@@ -1349,9 +1485,11 @@ sendfile64
 server.so
 serverbrowser.so
 setenv
+setlocale
 setmntent
 setpriority
 setsid
+setvbuf
 short
 sigaction
 sigaddset
@@ -1363,6 +1501,7 @@ size
 sizeof
 sizeof...
 snprintf
+space
 spaceGranted
 spaceReleased
 sprintf
@@ -1393,18 +1532,18 @@ std::bad_alloc
 std::bad_array_new_length
 std::bad_cast
 std::bad_exception
-std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::bfloat16_t
+std::exception
 std::iostream
 std::istream
 std::ostream
 std::string
 stderr
+stdin
 stdout
 steam://close
 steam://close/
@@ -1414,7 +1553,6 @@ steamclient.so
 steamservice.so
 steamui.so
 steamwebhelper
-stepping
 str != nullptr
 strcasecmp
 strcasestr
@@ -1423,10 +1561,8 @@ strcmp
 strcpy
 strdup
 strerror
-strerror_r
 strftime
 string literal
-string::string
 strlen
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 strncasecmp
@@ -1438,6 +1574,7 @@ strrchr
 strstr
 strtod
 strtol
+strtold_l
 strtoll
 strtoul
 strtoull
@@ -1450,21 +1587,21 @@ sysconf
 system
 szDomainName != nullptr
 task
-template
 template parameter object for
 tenfoot.so
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
+tgkill
 the
 the same event name (%s) was created as both manual and auto reset, something's fubar'd
 this
 throw
 tid(%u) pthread_key_create failed: %s\n
+tier1
 time
 timegm
 timezone
-tolower
 towupper
 transaction clone for
 transaction clone for operator delete(void*)
@@ -1472,24 +1609,6 @@ transaction clone for operator new[](unsigned long)
 true
 typeinfo fn for
 typeinfo for
-typeinfo for _Float128
-typeinfo for _Float128 const*
-typeinfo for _Float128*
-typeinfo for _Float16
-typeinfo for _Float16 const*
-typeinfo for _Float16*
-typeinfo for _Float32
-typeinfo for _Float32 const*
-typeinfo for _Float32*
-typeinfo for _Float32x
-typeinfo for _Float32x const*
-typeinfo for _Float32x*
-typeinfo for _Float64
-typeinfo for _Float64 const*
-typeinfo for _Float64*
-typeinfo for _Float64x
-typeinfo for _Float64x const*
-typeinfo for _Float64x*
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -1498,9 +1617,7 @@ typeinfo for __cxxabiv1::__pbase_type_info
 typeinfo for __cxxabiv1::__pointer_to_member_type_info
 typeinfo for __cxxabiv1::__pointer_type_info
 typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __float128
-typeinfo for __float128 const*
-typeinfo for __float128*
+typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
@@ -1537,6 +1654,9 @@ typeinfo for double*
 typeinfo for float
 typeinfo for float const*
 typeinfo for float*
+typeinfo for half
+typeinfo for half const*
+typeinfo for half*
 typeinfo for int
 typeinfo for int const*
 typeinfo for int*
@@ -1555,9 +1675,6 @@ typeinfo for short*
 typeinfo for signed char
 typeinfo for signed char const*
 typeinfo for signed char*
-typeinfo for std::bfloat16_t
-typeinfo for std::bfloat16_t const*
-typeinfo for std::bfloat16_t*
 typeinfo for std::nullptr_t
 typeinfo for std::nullptr_t const*
 typeinfo for std::nullptr_t*
@@ -1586,24 +1703,6 @@ typeinfo for wchar_t
 typeinfo for wchar_t const*
 typeinfo for wchar_t*
 typeinfo name for
-typeinfo name for _Float128
-typeinfo name for _Float128 const*
-typeinfo name for _Float128*
-typeinfo name for _Float16
-typeinfo name for _Float16 const*
-typeinfo name for _Float16*
-typeinfo name for _Float32
-typeinfo name for _Float32 const*
-typeinfo name for _Float32*
-typeinfo name for _Float32x
-typeinfo name for _Float32x const*
-typeinfo name for _Float32x*
-typeinfo name for _Float64
-typeinfo name for _Float64 const*
-typeinfo name for _Float64*
-typeinfo name for _Float64x
-typeinfo name for _Float64x const*
-typeinfo name for _Float64x*
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
@@ -1612,9 +1711,7 @@ typeinfo name for __cxxabiv1::__pbase_type_info
 typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 typeinfo name for __cxxabiv1::__pointer_type_info
 typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __float128
-typeinfo name for __float128 const*
-typeinfo name for __float128*
+typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
@@ -1651,6 +1748,9 @@ typeinfo name for double*
 typeinfo name for float
 typeinfo name for float const*
 typeinfo name for float*
+typeinfo name for half
+typeinfo name for half const*
+typeinfo name for half*
 typeinfo name for int
 typeinfo name for int const*
 typeinfo name for int*
@@ -1669,9 +1769,6 @@ typeinfo name for short*
 typeinfo name for signed char
 typeinfo name for signed char const*
 typeinfo name for signed char*
-typeinfo name for std::bfloat16_t
-typeinfo name for std::bfloat16_t const*
-typeinfo name for std::bfloat16_t*
 typeinfo name for std::nullptr_t
 typeinfo name for std::nullptr_t const*
 typeinfo name for std::nullptr_t*
@@ -1699,11 +1796,13 @@ typeinfo name for void*
 typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
-typename
 ucontext_
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 uname
+ungetc
+ungetwc
+uninitialized __any_string
 unknown
 unlink
 unsigned
@@ -1714,6 +1813,8 @@ unsigned long
 unsigned long long
 unsigned short
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+upload_file_minidump
+upper
 uptime
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 usleep
@@ -1723,10 +1824,8 @@ value_
 vasprintf
 vector::_M_default_append
 vector::_M_fill_insert
-vector::_M_realloc_append
 vector::_M_realloc_insert
 vector::reserve
-vendor_id
 vfork
 vfprintf
 vgui2_s.so
@@ -1757,28 +1856,40 @@ vtable for __cxxabiv1::__pbase_type_info
 vtable for __cxxabiv1::__pointer_to_member_type_info
 vtable for __cxxabiv1::__pointer_type_info
 vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 waitid
 waitpid
 wchar_t
+wcrtomb
+wcscmp
 wcslen
 wcsncasecmp
 wcsncat
 wcsncpy
+wcsnrtombs
 wcstoll
 wcstoull
+wctob
+wmemchr
+wmemcmp
+wmemcpy
+wmemmove
+wmemset
 write
 write %s failed, errno = %d\n
+writev
 www.steampowered.com
 x86_64
+xdigit
 xlocale
 xmemory
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
 {anonymous}::MinidumpWriter::MinidumpWriter(const char*, int, const google_breakpad::ExceptionHandler::CrashContext*, const MappingList&, const AppMemoryList&, google_breakpad::LinuxDumper*)
 {default arg#
-{lambda
+{lambda(
 {parm#
 {unnamed type#

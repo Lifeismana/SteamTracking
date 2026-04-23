@@ -662,6 +662,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { dataprops: _ } = _;
@@ -947,21 +948,30 @@
       }
       function _(_) {
         const { nAgreePercent: _ } = _;
-        return (0, _.jsx)("div", {
+        return (0, _.jsxs)("div", {
           className: _.FeedbackAgree,
-          children: (0, _._)(
-            "#GamePerformanceStats_Feedback_Agree",
-            (0, _.jsx)("span", {
-              className: (0, _._)(_.Percentage, _.DescriptionEmphasis),
-              children: (0, _._)(
-                "#GamePerformanceStats_Feedback_AgreePercentage",
-                _.toFixed(0),
-              ),
+          children: [
+            (0, _._)(
+              "#GamePerformanceStats_Feedback_Agree",
+              (0, _.jsx)("span", {
+                className: (0, _._)(_.Percentage, _.DescriptionEmphasis),
+                children: (0, _._)(
+                  "#GamePerformanceStats_Feedback_AgreePercentage",
+                  _.toFixed(0),
+                ),
+              }),
+              (0, _.jsx)("span", {
+                children: (0, _._)("#SteamDeckVerified_Category_Verified"),
+              }),
+            ),
+            (0, _.jsx)(_._, {
+              tooltip: (0, _.jsx)("div", {
+                children: (0, _._)(
+                  "#GamePerformanceStats_Feedback_PercentageTooltip",
+                ),
+              }),
             }),
-            (0, _.jsx)("span", {
-              children: (0, _._)("#SteamDeckVerified_Category_Verified"),
-            }),
-          ),
+          ],
         });
       }
       function _(_) {

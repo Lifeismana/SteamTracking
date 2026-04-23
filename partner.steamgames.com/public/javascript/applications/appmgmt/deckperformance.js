@@ -438,7 +438,7 @@
           [b, w] = a.useState(""),
           [S, T] = a.useState(0),
           [k, A] = a.useState(!1),
-          [y, N] = a.useState(0);
+          [y, G] = a.useState(0);
         return (
           a.useEffect(() => {
             const e = b?.trim().length > 2,
@@ -514,13 +514,13 @@
                       placeholder: "search by app name, description",
                       value: b,
                       onChange: (e) => {
-                        w(e.target.value), N(1);
+                        w(e.target.value), G(1);
                       },
                     }),
                     (0, s.jsx)(g, {
                       setFilterTagIDs: v,
                       fnUpdateSetFilterTagIDs: (e) => {
-                        x(e), N(1);
+                        x(e), G(1);
                       },
                       rgAppIDs: t,
                       bLoading: h,
@@ -532,14 +532,14 @@
                       nEarliestTime: 0,
                       fnGetTimeToUpdate: () => S,
                       fnSetTimeToUpdate: (e) => {
-                        T(e), N(1);
+                        T(e), G(1);
                       },
                     }),
                     Boolean(i?.length > 0) &&
                       (0, s.jsx)(l.Yh, {
                         checked: k,
                         onChange: (e) => {
-                          A(e), N(1);
+                          A(e), G(1);
                         },
                         tooltip:
                           "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
@@ -615,7 +615,7 @@
     },
     15898: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => T });
+      n.r(t), n.d(t, { default: () => k });
       var s = n(7850),
         a = n(90626),
         i = n(84811),
@@ -636,8 +636,9 @@
         x = n(67361),
         b = n(61859),
         w = n(11577),
-        S = n(52038);
-      function T(e) {
+        S = n(52038),
+        T = n(26408);
+      function k(e) {
         const { dataprops: t } = e;
         return t?.framerate || t?.feedback
           ? (0, s.jsx)(w.m, {
@@ -655,12 +656,12 @@
                       ],
                     }),
                     Boolean(t?.framerate) &&
-                      (0, s.jsx)(A, {
+                      (0, s.jsx)(y, {
                         appId: Number(e.appId),
                         frameRateData: t.framerate,
                       }),
                     Boolean(t?.feedback) &&
-                      (0, s.jsx)(k, {
+                      (0, s.jsx)(A, {
                         appId: Number(e.appId),
                         feedbackData: t.feedback,
                       }),
@@ -670,7 +671,7 @@
             })
           : null;
       }
-      function k(e) {
+      function A(e) {
         const { feedbackData: t } = e;
         if (!t || !t.daily?.length)
           return (0, s.jsx)("div", {
@@ -749,7 +750,7 @@
                     }),
                   ),
                 }),
-                (0, s.jsx)(G, { feedback: t }),
+                (0, s.jsx)(D, { feedback: t }),
               ],
             }),
             (0, s.jsx)(c.u, {
@@ -763,19 +764,19 @@
                 children: [
                   (0, s.jsx)(u.W, {
                     dataKey: "date",
-                    tickFormatter: y,
+                    tickFormatter: G,
                     stroke: "white",
                   }),
                   (0, s.jsx)(m.h, {
                     stroke: "white",
                     domain: [() => 0, (e) => Math.max(e, 20)],
                   }),
-                  (0, s.jsx)(f.m, { labelFormatter: y }),
+                  (0, s.jsx)(f.m, { labelFormatter: G }),
                   n.map((e) =>
                     (0, s.jsx)(
                       h.y,
                       {
-                        shape: (0, s.jsx)(D, { fill: e.fill }),
+                        shape: (0, s.jsx)(C, { fill: e.fill }),
                         fill: e.fill,
                         dataKey: e.key,
                         stackId: "day",
@@ -791,7 +792,7 @@
           ],
         });
       }
-      function A(e) {
+      function y(e) {
         const { appId: t, frameRateData: n } = e,
           [i, d] = (0, o.t7)(t, l.L),
           h = a.useMemo(() => {
@@ -876,11 +877,11 @@
                   (0, s.jsx)(j.d, { strokeDasharray: "3 3", color: "red" }),
                   (0, s.jsx)(u.W, {
                     dataKey: "date",
-                    tickFormatter: y,
+                    tickFormatter: G,
                     stroke: "white",
                   }),
                   (0, s.jsx)(m.h, { stroke: "white" }),
-                  (0, s.jsx)(f.m, { labelFormatter: y }),
+                  (0, s.jsx)(f.m, { labelFormatter: G }),
                   (0, s.jsx)(g.N, {
                     type: "natural",
                     dataKey: "mean",
@@ -894,29 +895,38 @@
           ],
         });
       }
-      function y(e) {
+      function G(e) {
         return (0, x._l)(e);
       }
       function N(e) {
         const { nAgreePercent: t } = e;
-        return (0, s.jsx)("div", {
+        return (0, s.jsxs)("div", {
           className: r.FeedbackAgree,
-          children: (0, b.PP)(
-            "#GamePerformanceStats_Feedback_Agree",
-            (0, s.jsx)("span", {
-              className: (0, S.A)(r.Percentage, r.DescriptionEmphasis),
-              children: (0, b.PP)(
-                "#GamePerformanceStats_Feedback_AgreePercentage",
-                t.toFixed(0),
-              ),
+          children: [
+            (0, b.PP)(
+              "#GamePerformanceStats_Feedback_Agree",
+              (0, s.jsx)("span", {
+                className: (0, S.A)(r.Percentage, r.DescriptionEmphasis),
+                children: (0, b.PP)(
+                  "#GamePerformanceStats_Feedback_AgreePercentage",
+                  t.toFixed(0),
+                ),
+              }),
+              (0, s.jsx)("span", {
+                children: (0, b.we)("#SteamDeckVerified_Category_Verified"),
+              }),
+            ),
+            (0, s.jsx)(T.o, {
+              tooltip: (0, s.jsx)("div", {
+                children: (0, b.we)(
+                  "#GamePerformanceStats_Feedback_PercentageTooltip",
+                ),
+              }),
             }),
-            (0, s.jsx)("span", {
-              children: (0, b.we)("#SteamDeckVerified_Category_Verified"),
-            }),
-          ),
+          ],
         });
       }
-      function G(e) {
+      function D(e) {
         const { feedback: t } = e;
         let n = new Array(
           {
@@ -975,7 +985,7 @@
           })
         );
       }
-      const D = (e) => {
+      const C = (e) => {
         const { fill: t, x: n, y: a, width: i, height: r } = e;
         return (0, s.jsx)("rect", { x: n, y: a, width: i, height: r, fill: t });
       };
@@ -1167,7 +1177,7 @@
             include_included_items: k,
             include_assets_without_overrides: A,
             apply_user_filters: y,
-            include_links: N,
+            include_links: G,
           } = n;
         if (
           ((0, i.useEffect)(() => {
@@ -1187,7 +1197,7 @@
               include_included_items: k,
               include_assets_without_overrides: A,
               apply_user_filters: y,
-              include_links: N,
+              include_links: G,
             };
             let i = null;
             return (
@@ -1204,15 +1214,15 @@
                   })),
               () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, u, f, h, _, p, j, g, v, x, b, w, S, T, k, A, y, N, d]),
+          }, [e, t, s, u, f, h, _, p, j, g, v, x, b, w, S, T, k, A, y, G, d]),
           !e)
         )
           return [null, 2];
         if (!1 === u) return [void 0, 2];
         if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const G = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return G ? [G, 3] : [null, 2];
+        const N = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return N ? [N, 3] : [null, 2];
       }
       function c(e, t, n) {
         return l(e, 0, t, n);
@@ -1341,17 +1351,17 @@
           strDescToolTip: k,
           strDescription: A,
           bShowTimeZone: y,
-          strInvalidDateTimeLocalizedMsg: N,
-          fnIsValidDateTime: G,
+          strInvalidDateTimeLocalizedMsg: G,
+          fnIsValidDateTime: N,
           bWeekdaysOnly: D,
           fnSetTimeToUpdate: C,
-          bForce24HourFormat: I,
+          bForce24HourFormat: P,
         } = e;
-        let P =
+        let I =
           (function () {
             const e = j()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
-          })() || I
+          })() || P
             ? v
             : g;
         const F = i(),
@@ -1378,7 +1388,7 @@
               }, [c, i]),
               c
             );
-          })(O, L, N, G, c),
+          })(O, L, G, N, c),
           V = !c && M;
         let W, U;
         if (t && n && t == n && n > l.HD.GetTimeNowWithOverride()) {
@@ -1389,7 +1399,7 @@
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (P = v);
+            (I = v);
         }
         F || !n || x || (U = j().unix(n));
         const H = j().tz.guess(),
@@ -1514,7 +1524,7 @@
                     (0, s.jsx)(r(), {
                       onChange: $,
                       dateFormat: !1,
-                      timeFormat: P,
+                      timeFormat: I,
                       timeConstraints: W,
                       value: null != O ? O : E,
                       inputProps: {

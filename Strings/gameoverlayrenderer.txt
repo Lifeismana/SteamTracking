@@ -3,16 +3,12 @@
   using display %p window 0x%lx key input win 0x%lx (event mask 0x%x)\n
   what():
  [clone
- _Complex
- _Imaginary
  __vector(
  asimd
- class
  const
  for
  neon
  noexcept
- requires
  restrict
  throw
  transaction_safe
@@ -28,8 +24,8 @@
 #version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
 #version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
 $ORIGIN
-%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %d %H:%M:%S %Y UTC
+%llu
 %s begin_ctx=%lld
 %s end_ctx=%lld
 %s: %d, %d, %d
@@ -44,22 +40,16 @@ $ORIGIN
 (anonymous namespace)
 (dst_width % 2 == 0) && (dst_width >= 0)
 (dst_width % 3 == 0) && (dst_width > 0)
-*N12_GLOBAL__N_121system_error_categoryE
-*N12_GLOBAL__N_122generic_error_categoryE
-*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
-++CCUNG
-++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGq
-++CCUNGstd::exception
 ----------------------------\n
+./obj_gameoverlayrenderer_steamrtarm64/release/gameoverlayrenderer.so
 /ValveIPCSHM_%d
 /bin/sh
+/data/thirdparty/libyuv/libyuv/source/planar_functions.cc
+/data/thirdparty/libyuv/libyuv/source/row_common.cc
+/data/thirdparty/libyuv/libyuv/source/scale_common.cc
+/dev/input/event
+/dev/input/js
 /dev/null
-/dev/random
-/dev/urandom
-/home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
-/home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
-/home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
 /proc/self/exe
 /proc/self/fd
 /sys/kernel/debug/tracing/trace_marker
@@ -70,7 +60,6 @@ $ORIGIN
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10IMemStream
 12CIMENullImpl
 15CSavedMemStream
@@ -82,10 +71,6 @@ $ORIGIN
 24CGameStreamGameMemStream
 25CGameStreamSteamMemStream
 4IIME
-5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
-@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@std::bad_alloc
 ASEs implemented
 Applying steamclient.so path workaround.\n
 Asked to unlock memory for write.. but wasn't locked
@@ -130,13 +115,6 @@ Corrupt shared texture stream (texture data)\n
 Couldn't create movie stream %s\n
 Created mapping %s when set to fail if created\n
 Created movie stream %s\n
-DF128_
-DF16_
-DF16b
-DF32_
-DF32x
-DF64_
-DF64x
 Deleting movie stream\n
 Destroy GLX window 0x%lx\n
 Destroy window 0x%lx\n
@@ -199,21 +177,10 @@ Force release of key 0x%x\n
 Forced create but already created for SharedObjectEvent\n
 Forcing internal overlay disable and requesting ui disable\n
 Frame time: %f ms\n
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
-GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
+GCC: (Debian 11.2.0-12) 11.2.0
+GCC: (Debian 9.3.0-22) 9.3.0
 GL extensions: %s\n
-GLIBCXX_TUNABLES
-GLIBC_2.12
-GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.2.5
-GLIBC_2.25
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.3
-GLIBC_2.4
-GLIBC_2.7
-GLIBC_2.9
 GLOVERLAYCOREPROFILE
 GLSL Fragment Shader log:\n
 GLSL Program log:\n
@@ -227,6 +194,9 @@ Game Delayed OpenGL NV12
 Game Delayed OpenGL RGB
 Game OpenGL NV12
 Game OpenGL RGB
+Game Vulkan NV12
+Game Vulkan RGB
+Game Vulkan Shared
 Game process locale is '%s'\n
 GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s\n
 GameOverlayRender_PIDStream
@@ -257,16 +227,14 @@ Left render loop without EndFrame!\n
 Loongson-2K
 Loongson-3
 MajorCode
+MbP?H
 Mismatched chrome paint texture width/height!\n
 Missing texture: %d which was used in DrawTexturedRect()\n
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
-N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
-N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
-N10__cxxabiv129__pointer_to_member_type_infoE
 N16SteamThreadTools7CThreadE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
@@ -278,7 +246,7 @@ N3IPC6IMutexE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NSt3_V214error_categoryE
+NV12
 Need to force key focus to overlay key window 0x%lx\n
 Not enough room in mem stream for video frame\n
 One-time initialization: pid %d for game %llu\n
@@ -291,27 +259,7 @@ OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
 Opening display '%s', process %d returned %p\n
 Overlay pid %d dpy %p: An X Error occurred\n
 OverlayFrameMark
-PDF128_
-PDF16_
-PDF16b
-PDF32_
-PDF32x
-PDF64_
-PDF64x
-PKDF128_
-PKDF16_
-PKDF16b
-PKDF32_
-PKDF32x
-PKDF64_
-PKDF64x
-PKDd
-PKDe
-PKDf
-PKDi
-PKDn
-PKDs
-PKDu
+P010
 Previous renderer inactive, force releasing video stream\n
 Process %d failed to shm_open %s\n
 Process was forked: %d -> %d, follow new process in the new log file!\n
@@ -341,20 +289,10 @@ SetNotificationInset
 SetNotificationPosition
 SetScaleFactors( %1.2f, %1.2f, %1.2f, %1.2f)\n
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-St10bad_typeid
 St11logic_error
-St11range_error
-St12domain_error
 St12length_error
 St12out_of_range
-St12system_error
 St13bad_exception
-St13runtime_error
-St14overflow_error
-St15underflow_error
-St16invalid_argument
-St20bad_array_new_length
-St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
@@ -399,7 +337,6 @@ Track %p win 0x%lx (parent 0x%lx), cursor 0x%lx (valid %d), events 0x%x, top %d\
 Track GLX win 0x%lx for X window 0x%lx\n
 Track win 0x%lx cursor 0x%lx\n
 USER
-UUUU
 Unable to write to video stream: dst not aligned!\n
 Unable to write to video stream: dst stride (stride=%u)!\n
 Unable to write to video stream: output not aligned!\n
@@ -519,10 +456,8 @@ XkbKeycodeToKeysym
 XlibMessage
 XwcLookupString
 [abi:
-[friend]
-\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*
-\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%
-_Float
+_Accum
+_Fract
 _GLOBAL_
 _ITM_RU1
 _ITM_RU8
@@ -531,11 +466,11 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_Sat
 __assert_fail
 __ctype_b_loc
 __cxa_atexit
 __cxa_finalize
-__cxa_pure_virtual
 __errno_location
 __float128
 __fxstat
@@ -546,8 +481,6 @@ __int128
 __isoc99_sscanf
 __pthread_key_create
 __register_atfork
-__stack_chk_fail
-__tls_get_addr
 __xstat64
 _exit
 abort
@@ -562,24 +495,9 @@ basic_iostream
 basic_istream
 basic_ostream
 basic_string
-basic_string: construction from null is not valid
-basic_string::_M_create
-basic_string::_M_replace
-basic_string::_M_replace_aux
 basic_string::_S_construct null not valid
 basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
-basic_string::basic_string
-basic_string::compare
-basic_string::copy
-basic_string::erase
 basic_string::insert
-basic_string::replace
-basic_string::resize
-basic_string::substr
-basic_string_view::substr
 bind
 bool
 boolean
@@ -595,8 +513,8 @@ clientWindow
 clock_gettime
 close
 closedir
-co_await
 compatibility
+complex
 connect
 const_cast
 construction vtable for
@@ -611,7 +529,6 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-default
 delete
 delete[]
 depth <= 16
@@ -628,15 +545,14 @@ double
 dst_height > 0
 dst_width % 3 == 0
 dst_width > 0
-dx != __null
-dy != __null
+dx != NULL
+dy != NULL
 dynamic_cast
 en_US.UTF-8
 enable
 exec
 execv
 execvp
-f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 false
 fclose
 fcntl
@@ -658,12 +574,11 @@ ftruncate
 futex robust_list not initialized by pthreads
 futex robust_list not pthreads-compatible
 fwrite
-generic
-getentropy
 getenv
 getpid
 getpriority
 getrlimit
+gettext
 gettimeofday
 getuid
 glActiveTexture
@@ -790,25 +705,23 @@ glXGetProcAddress
 glXGetProcAddressARB
 glXMakeCurrent
 glXSwapBuffers
-glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 gmtime_r
 guard variable for
 half
-hardware
 height > 0
 hidden alias for
+imaginary
 in external stream
 in saved stream
-initializer for module
 inputStyle
 ioctl
 java Class for
 java resource
-k;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 kill
-ld-linux-x86-64.so.2
+ld-linux-aarch64.so.1
+lf`ZTNHB<60*$
 libGL.so.1
 libSDL3.so.0
 libc.so.6
@@ -833,17 +746,13 @@ memcpy
 memmove
 memset
 mmap
-mold 2.36.0 (compatible with GNU ld)
-mt19937
 munmap
 nanosleep
 new
 new[]
-noexcept
 non-transaction clone for
 non-virtual thunk to
-obj_count
-obj_size
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 open
 opendir
 operator
@@ -882,15 +791,7 @@ pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
 pthreads futex robust_list is corrupt
-random_device could not be read
-random_device: getentropy failed
-random_device: rdrand failed
-random_device: rdseed failed
-random_device::random_device(const std::string&): device not available
-random_device::random_device(const std::string&): unsupported token
-rdrand
-rdrnd
-rdseed
+pure virtual method called\n
 read
 readdir
 readlink
@@ -903,13 +804,11 @@ reinterpret_cast
 render stream
 resourceClass
 resourceName
-s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 scale <= 32768
 scale >= 256
 sched_get_priority_max
 sched_get_priority_min
 sched_yield
-secure_getenv
 semctl
 semget
 semop
@@ -941,16 +840,14 @@ src_width != 0
 src_width > 0
 static_cast
 std::allocator
-std::bad_array_new_length
-std::bad_cast
+std::bad_alloc
 std::bad_exception
-std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::bfloat16_t
+std::exception
 std::iostream
 std::istream
 std::ostream
@@ -961,10 +858,8 @@ strchr
 strcmp
 strcpy
 strerror
-strerror_r
 strftime
 string literal
-string::string
 strlen
 strncat
 strncmp
@@ -976,7 +871,6 @@ strtoul
 strtoull
 syscall
 system
-template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -993,7 +887,6 @@ true
 typeinfo fn for
 typeinfo for
 typeinfo name for
-typename
 ubuntu12_32/steamclient.so
 ubuntu12_64/steamclient.so
 uniform bool bFlipRendering;\nvoid main()\n{\n\tgl_TexCoord[0] = gl_MultiTexCoord0;\n   gl_Position = gl_Vertex;\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n}
@@ -1008,7 +901,7 @@ unsigned long long
 unsigned short
 usleep
 valid
-vector::_M_realloc_append
+vector::_M_realloc_insert
 vfprintf
 video capture behind
 video frame behind
@@ -1064,12 +957,12 @@ waitpid
 wchar_t
 wpp >= 1 && wpp <= 2
 write
-x != __null
+x != NULL
 xcb_change_property
 xcb_create_window
 xcb_create_window_checked
-y != __null
+y != NULL
 {default arg#
-{lambda
+{lambda(
 {parm#
 {unnamed type#

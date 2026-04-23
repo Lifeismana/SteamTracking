@@ -12,8 +12,6 @@
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
  [clone
  [default = $0
- _Complex
- _Imaginary
  __vector(
  a protocol
  args were given.  Full format string was: "
@@ -22,7 +20,6 @@
  bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
  bytes.
  cannot be required.
- class
  conflicts with an existing enum type.
  conflicts with an existing field.
  conflicts with an existing nested message type.
@@ -41,7 +38,6 @@
  not found
  of the Protocol Buffer runtime library, but the installed version is
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
- requires
  restrict
  stack frames not accounted for stack unwind.
  throw
@@ -51,6 +47,8 @@
  wZiK
  was modified concurrently during serialization.
  with type
+!,7BMM
+!6,@ZKe
 !AxU
 !H88p
 !is_large()
@@ -130,6 +128,7 @@
 "e" must be followed by exponent.
 #FLR
 #tDq
+$'24A
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
 $0  reserved
@@ -142,8 +141,8 @@ $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
 $\nY8O
-%I:%M:%S %p
-%a %b %e %T %Y
+%0MM
+%0VV
 %lld
 %llu
 %s/.steam/steam
@@ -201,18 +200,13 @@ $\nY8O
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-++CCUNG
-++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGL6\f
-++CCUNGpure virtual method called\n
-++CCUNGstd::exception
++2D9
 +2Hp
 +HpXhE
 +\n\rReservedRange
 +ulsX
 , but was
 , not just within "
-,std::bad_alloc
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 -0123456789
@@ -238,6 +232,7 @@ $\nY8O
 ./google/protobuf/repeated_field.h
 ./google/protobuf/stubs/stringpiece.h
 ./google/protobuf/unknown_field_set.h
+./obj_sdkencryptedappticket_steamrtarm64/release/sdkencryptedappticket.so
 .PLACEHOLDER_VALUE
 .dummy
 .foo = value".
@@ -250,11 +245,10 @@ $\nY8O
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
 .placeholder.proto
-/dev/random
-/dev/urandom
 0 Umv
+0)AA7A
+000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789abcdef
 0F`8
 0`P0
@@ -267,10 +261,14 @@ $\nY8O
 2+.google.protobuf.FieldDescriptorProto.Label
 2+ss
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+2<QF
 2Ht\l
 2dV2:tN:\n
+3+C;SSKS
 30!]^JV
+30>9
 33fU
+44,4
 456789:;<=
 49fN
 4h\4
@@ -300,7 +298,7 @@ $\nY8O
 ==zGdd
 =j&&LZ66lA??~
 ?456789:;<=
-???\f???????\n???\r?\t?\v
+???\f???????\n???\r?\t?\vN6google8protobuf2io14ErrorCollectorE
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than
 A@qVc"
@@ -314,7 +312,6 @@ ASCII//TRANSLIT
 A\n\nannotation
 AddAllocatedMessage
 AddBool
-AddCleared() can only be used on a RepeatedPtrField not on an arena.
 AddDouble
 AddEnum
 AddFloat
@@ -408,7 +405,6 @@ CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
-CHECK failed: (current_size_) < (total_size_):
 CHECK failed: (current_size_) > (0):
 CHECK failed: (descriptor->field(field_count - 1)) == (end - 1):
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
@@ -442,10 +438,7 @@ CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::
 CHECK failed: (n & (n - 1)) == (0):
 CHECK failed: (n) >= (0):
 CHECK failed: (new_num_buckets) >= (kMinTableSize):
-CHECK failed: (new_size) <= (current_size_):
 CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit):
-CHECK failed: (new_size) >= (0):
-CHECK failed: (num) >= (0):
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
 CHECK failed: (out) == (begin + result->size()):
 CHECK failed: (out) == (begin + result.size()):
@@ -453,14 +446,10 @@ CHECK failed: (overrun) <= (kSlopBytes):
 CHECK failed: (pos) <= (x.length_):
 CHECK failed: (recursion_budget_) < (recursion_limit_):
 CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u):
-CHECK failed: (rep_->allocated_size) > (current_size_):
 CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
 CHECK failed: (size) <= (6):
 CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)):
 CHECK failed: (size) > (0):
-CHECK failed: (start + num) <= (size()):
-CHECK failed: (start + num) <= (this->current_size_):
-CHECK failed: (start) >= (0):
 CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
 CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
 CHECK failed: (str.size()) <= (kuint32max):
@@ -559,7 +548,6 @@ CHECK failed: ptr < end_:
 CHECK failed: ptr <= buffer_end_ + kSlopBytes:
 CHECK failed: ptr <= end_ + kSlopBytes:
 CHECK failed: reflection:
-CHECK failed: rep_ != NULL:
 CHECK failed: result != nullptr:
 CHECK failed: s != nullptr:
 CHECK failed: s >= 0:
@@ -673,10 +661,10 @@ ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
-ExtractSubrange() when arena is non-NULL is only supported when
 FAILED_PRECONDITION
 FATAL
 FCZ&
+FILT
 F\n\foptimize_for
 False
 FastHexToBuffer() wants non-negative integers, not
@@ -723,18 +711,9 @@ First argument to SwapFields() (of type "
 Found invalid proto option data for:
 Friday
 F~Tb
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
-GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GLIBCXX_TUNABLES
-GLIBC_2.14
+GCC: (Debian 10.2.1-6) 10.2.1 20210110
+GCC: (Debian 9.3.0-22) 9.3.0
 GLIBC_2.17
-GLIBC_2.2.5
-GLIBC_2.25
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.4
-GLIBC_2.4
 GeneratedCodeInfo
 GetBool
 GetDouble
@@ -814,18 +793,7 @@ KwZi
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
-LC_ADDRESS
-LC_COLLATE
-LC_CTYPE
-LC_IDENTIFICATION
-LC_MEASUREMENT
-LC_MESSAGES
-LC_MONETARY
-LC_NAME
-LC_NUMERIC
-LC_PAPER
-LC_TELEPHONE
-LC_TIME
+LEZShnat7{
 Label
 Lj&&lZ66~A??
 Location
@@ -888,7 +856,6 @@ MutableMessage
 MutableRawRepeatedField
 MutableRepeatedMessage
 N10__cxxabiv115__forced_unwindE
-N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
@@ -904,7 +871,6 @@ N6google8protobuf11MessageLiteE
 N6google8protobuf12FieldOptionsE
 N6google8protobuf12OneofOptionsE
 N6google8protobuf13MethodOptionsE
-N6google8protobuf14DescriptorPool14ErrorCollectorE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf14FatalExceptionE
 N6google8protobuf14MessageFactoryE
@@ -936,7 +902,6 @@ N6google8protobuf25EncodedDescriptorDatabaseE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf28UninterpretedOption_NamePartE
 N6google8protobuf29DescriptorProto_ReservedRangeE
-N6google8protobuf2io14ErrorCollectorE
 N6google8protobuf2io15FileInputStream22CopyingFileInputStreamE
 N6google8protobuf2io15FileInputStreamE
 N6google8protobuf2io16ArrayInputStreamE
@@ -958,14 +923,11 @@ N6google8protobuf2io25CopyingInputStreamAdaptorE
 N6google8protobuf2io26CopyingOutputStreamAdaptorE
 N6google8protobuf30DescriptorProto_ExtensionRangeE
 N6google8protobuf37EnumDescriptorProto_EnumReservedRangeE
-N6google8protobuf7ClosureE
 N6google8protobuf7MessageE
-N6google8protobuf8internal12ExtensionSet20LazyMessageExtensionE
 N6google8protobuf8internal12FieldSkipperE
 N6google8protobuf8internal12MapFieldBaseE
 N6google8protobuf8internal15DynamicMapFieldE
 N6google8protobuf8internal15ExtensionFinderE
-N6google8protobuf8internal16FunctionClosure0E
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16MapFieldAccessorE
@@ -996,14 +958,11 @@ N6google8protobuf8internal30RepeatedFieldPrimitiveAccessorImEE
 N6google8protobuf8internal30RepeatedPtrFieldStringAccessorE
 N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
 N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
-N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
-N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NO=s&CU
 NOT_FOUND
 NO_SIDE_EFFECTS
 NSt3_V214error_categoryE
@@ -1013,18 +972,6 @@ NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
 NSt7__cxx1110moneypunctIwLb0EEE
 NSt7__cxx1110moneypunctIwLb1EEE
-NSt7__cxx1114collate_bynameIcEE
-NSt7__cxx1114collate_bynameIwEE
-NSt7__cxx1115messages_bynameIcEE
-NSt7__cxx1115messages_bynameIwEE
-NSt7__cxx1115numpunct_bynameIcEE
-NSt7__cxx1115numpunct_bynameIwEE
-NSt7__cxx1115time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
-NSt7__cxx1115time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
-NSt7__cxx1117moneypunct_bynameIcLb0EEE
-NSt7__cxx1117moneypunct_bynameIcLb1EEE
-NSt7__cxx1117moneypunct_bynameIwLb0EEE
-NSt7__cxx1117moneypunct_bynameIwLb1EEE
 NSt7__cxx117collateIcEE
 NSt7__cxx117collateIwEE
 NSt7__cxx118messagesIcEE
@@ -1039,6 +986,7 @@ NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
+N[i4A
 NamePart
 Need space between identifier and decimal point.
 Need space between number and identifier.
@@ -1068,8 +1016,9 @@ P00`
 P<xD<
 PERMISSION_DENIED
 PLACEHOLDER_VALUE
-POSIX
 PPxD<<%
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Label_IsValid(value)
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Type_IsValid(value)
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
@@ -1080,11 +1029,11 @@ R##Fe
 R1h58
 R;vM;
 RESOURCE_EXHAUSTED
+RGh]
 RRvM;;
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Recursion limit at end of parse should be
-ReleaseCleared() can only be used on a RepeatedPtrField not on
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
 ReleaseMessage
@@ -1130,7 +1079,6 @@ Should not reach here.
 Sm"\vg
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 SourceCodeInfo
-St10bad_typeid
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -1140,75 +1088,30 @@ St10moneypunctIwLb1EE
 St11__timepunctIcE
 St11__timepunctIwE
 St11logic_error
-St11range_error
 St12codecvt_base
-St12ctype_bynameIcE
-St12ctype_bynameIwE
-St12domain_error
 St12length_error
 St12out_of_range
 St12system_error
 St13__ios_failure
 St13bad_exception
-St13basic_filebufIcSt11char_traitsIcEE
-St13basic_filebufIwSt11char_traitsIwEE
-St13basic_fstreamIcSt11char_traitsIcEE
-St13basic_fstreamIwSt11char_traitsIwEE
 St13basic_istreamIwSt11char_traitsIwEE
 St13basic_ostreamIwSt11char_traitsIwEE
 St13messages_base
 St13runtime_error
-St14basic_ifstreamIcSt11char_traitsIcEE
-St14basic_ifstreamIwSt11char_traitsIwEE
-St14basic_iostreamIwSt11char_traitsIwEE
-St14basic_ofstreamIcSt11char_traitsIcEE
-St14basic_ofstreamIwSt11char_traitsIwEE
-St14codecvt_bynameIcc11__mbstate_tE
-St14codecvt_bynameIwc11__mbstate_tE
-St14collate_bynameIcE
-St14collate_bynameIwE
-St14overflow_error
 St15basic_streambufIcSt11char_traitsIcEE
 St15basic_streambufIwSt11char_traitsIwEE
 St15basic_stringbufIcSt11char_traitsIcESaIcEE
-St15basic_stringbufIwSt11char_traitsIwESaIwEE
-St15messages_bynameIcE
-St15messages_bynameIwE
-St15numpunct_bynameIcE
-St15numpunct_bynameIwE
-St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St15underflow_error
 St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
-St16invalid_argument
 St17__timepunct_cacheIcE
 St17__timepunct_cacheIwE
-St17moneypunct_bynameIcLb0EE
-St17moneypunct_bynameIcLb1EE
-St17moneypunct_bynameIwLb0EE
-St17moneypunct_bynameIwLb1EE
 St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
 St18__moneypunct_cacheIwLb1EE
-St18basic_stringstreamIcSt11char_traitsIcESaIcEE
-St18basic_stringstreamIwSt11char_traitsIwESaIwEE
-St19__codecvt_utf8_baseIDiE
-St19__codecvt_utf8_baseIDsE
-St19__codecvt_utf8_baseIwE
 St19__iosfail_type_info
-St19basic_istringstreamIcSt11char_traitsIcESaIcEE
-St19basic_istringstreamIwSt11char_traitsIwESaIwEE
 St19basic_ostringstreamIcSt11char_traitsIcESaIcEE
-St19basic_ostringstreamIwSt11char_traitsIwESaIwEE
-St20__codecvt_utf16_baseIDiE
-St20__codecvt_utf16_baseIDsE
-St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
-St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
@@ -1216,9 +1119,6 @@ St23__codecvt_abstract_baseIDsDu11__mbstate_tE
 St23__codecvt_abstract_baseIDsc11__mbstate_tE
 St23__codecvt_abstract_baseIcc11__mbstate_tE
 St23__codecvt_abstract_baseIwc11__mbstate_tE
-St25__codecvt_utf8_utf16_baseIDiE
-St25__codecvt_utf8_utf16_baseIDsE
-St25__codecvt_utf8_utf16_baseIwE
 St5ctypeIcE
 St5ctypeIwE
 St7codecvtIDiDu11__mbstate_tE
@@ -1340,7 +1240,6 @@ Z-google.golang.org/protobuf/types/descriptorpb
 ZiKw
 Zjz\v
 [abi:
-[friend]
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
 [packed = true] can only be specified for repeated primitive fields.
@@ -1414,7 +1313,8 @@ Zjz\v
 \x%02x
 ]JldN
 _55j
-_Float
+_Accum
+_Fract
 _GLOBAL_
 _ITM_RU1
 _ITM_RU8
@@ -1423,24 +1323,20 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_Sat
 _TbF~
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
-_ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
-_ZSt10__exchangeIPKcDnET_RS3_OT0_
-_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
-_ZSt10__exchangeIPcDnET_RS2_OT0_
-_ZSt10__exchangeIPwDnET_RS2_OT0_
 __assert_fail
+__bss_start
 __ctype_get_mb_cur_max
+__ctype_tolower_loc
 __cxa_atexit
 __cxa_finalize
 __duplocale
 __errno_location
 __float128
-__fprintf_chk
 __freelocale
-__fxstat
+__fxstat64
+__getauxval
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
@@ -1448,25 +1344,17 @@ __int128
 __iswctype_l
 __lxstat
 __lxstat64
-__memcpy_chk
 __newlocale
 __nl_langinfo_l
-__printf_chk
 __pthread_key_create
-__snprintf_chk
-__sprintf_chk
-__stack_chk_fail
 __strcoll_l
 __strftime_l
 __strtod_l
 __strtof_l
 __strxfrm_l
-__test_and_acquire(long*)
-__tls_get_addr
 __towlower_l
 __towupper_l
 __uselocale
-__vsnprintf_chk
 __wcscoll_l
 __wcsftime_l
 __wcsxfrm_l
@@ -1512,6 +1400,8 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_edata
+_end
 _jbF~T
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
@@ -1537,23 +1427,16 @@ allocator
 allowed in proto3.
 alnum
 alpha
-an arena.
 auto
 auto:
 b,uZ
 bS11*?
-basic_filebuf::_M_convert_to_external conversion error
-basic_filebuf::underflow codecvt::max_length() is not valid
-basic_filebuf::underflow error reading the file
-basic_filebuf::underflow incomplete character in file
-basic_filebuf::underflow invalid byte sequence in file
-basic_filebuf::xsgetn error reading the file
 basic_ios::clear
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
-basic_string: construction from null is not valid
+basic_string::_M_construct null not valid
 basic_string::_M_create
 basic_string::_M_replace
 basic_string::_M_replace_aux
@@ -1563,24 +1446,17 @@ basic_string::append
 basic_string::assign
 basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
 basic_string::basic_string
-basic_string::compare
 basic_string::copy
 basic_string::erase
 basic_string::insert
 basic_string::replace
 basic_string::resize
 basic_string::substr
-basic_string_view::substr
 begin
 bind_textdomain_codeset
 bindtextdomain
 blank
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
-bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
-bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
-bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 boolean
 btowc
@@ -1590,7 +1466,7 @@ byte
 bytes
 bytes.
 c!!B0
-cU!\f}QP
+cU!\f}N10__cxxabiv117__class_type_infoE
 can't reach here.
 cannot create shim for unknown locale::facet
 cannot create std::vector larger than max_size()
@@ -1611,8 +1487,8 @@ close
 close() failed:
 closedir
 cntrl
-co_await
 com.google.protobufB
+complex
 const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
 const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
 const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
@@ -1633,10 +1509,8 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-default
 delete
 delete[]
-deleted virtual method called\n
 dgettext
 digit
 dl_iterate_phdr
@@ -1680,10 +1554,9 @@ gAY:
 gK99r
 generic
 getc
-getentropy
 getenv
+gettext
 getwc
-glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 google.protobuf"G\n
@@ -1784,8 +1657,6 @@ google/protobuf/text_format.cc
 google/protobuf/unknown_field_set.cc
 google/protobuf/wire_format.cc
 google/protobuf/wire_format_lite.cc
-google::protobuf::FieldDescriptorProto_Label_IsValid(value)
-google::protobuf::FieldDescriptorProto_Type_IsValid(value)
 google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
 google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int)
 google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
@@ -1801,9 +1672,9 @@ h8,4$
 hHpX
 h\44Q
 half
-hardware
 hidden alias for
 i < length_
+i[mpppp
 i]Wb
 iconv
 iconv_close
@@ -1811,18 +1682,16 @@ iconv_open
 idempotency_level
 identifier_value
 ig,o
+imaginary
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
 infinity
-initializer for module
 int google::protobuf::CalculateBase64EscapedLen(int, bool)
 int32
 int64
 internal error in map key sorting
 ioctl
-ios_base::_M_grow_words allocation failed
-ios_base::_M_grow_words is not valid
 iostream
 iostream error
 is_large()
@@ -1844,7 +1713,7 @@ lNrZ
 label
 lazy
 lchown
-ld-linux-x86-64.so.2
+ld-linux-aarch64.so.1
 leading_comments
 leading_detached_comments
 len >= input_len
@@ -1853,11 +1722,7 @@ libc.so.6
 libdl.so.2
 libpthread.so.0
 link
-locale::_Impl::_M_replace_facet
-locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
-locale::facet::_S_lc_ctype_c_locale duplocale error
-locale::facet::_S_lc_ctype_c_locale newlocale error
 location
 long
 long double
@@ -1865,6 +1730,7 @@ long long
 lower
 lpHP
 lseek
+lseek64
 malloc
 map keys are not unique
 map<$0, $1>
@@ -1882,9 +1748,7 @@ message_set_wire_format
 method
 mkdir
 mkfifo
-mold 2.36.0 (compatible with GNU ld)
 mount
-mt19937
 mwa!
 nY77
 name
@@ -1892,14 +1756,12 @@ negative_int_value
 new
 new[]
 no_standard_descriptor_accessor
-noexcept
 non-transaction clone for
 non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 null
 nullptr output boolean given.
 number
-obj_count
-obj_size
 objc_class_prefix
 open
 open64
@@ -1929,32 +1791,23 @@ poll
 positive_int_value
 pp|B>>q
 print
+printf
 proto
 proto2
 proto3
 proto3_optional
-pthread_cond_broadcast
-pthread_cond_wait
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 public_dependency
 punct
+pure virtual method called\n
 putc
 putwc
 py_generic_services
 qR5FE%
 rK99
 rZlN
-random_device could not be read
-random_device: getentropy failed
-random_device: rdrand failed
-random_device: rdseed failed
-random_device::random_device(const std::string&): device not available
-random_device::random_device(const std::string&): unsupported token
-rdrand
-rdrnd
-rdseed
 read
 readdir64
 realloc
@@ -1972,7 +1825,6 @@ ru&o
 s11bS
 scandir
 scandir64
-secure_getenv
 serialize
 serializing
 server_streaming
@@ -2001,19 +1853,19 @@ statfs64
 static_cast
 statvfs
 statvfs64
-std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
-std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
+std::__once_call
+std::__once_callable
 std::allocator
+std::bad_alloc
 std::bad_array_new_length
 std::bad_cast
 std::bad_exception
-std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::bfloat16_t
+std::exception
 std::iostream
 std::istream
 std::ostream
@@ -2029,10 +1881,8 @@ strcpy
 strdup
 stream
 strerror
-strerror_r
 string
 string literal
-string::string
 strings::Substitute format string invalid: asked for "$
 strlen
 strncasecmp
@@ -2053,19 +1903,16 @@ syntax = "$0";\n\n
 syscall
 system
 t\lHBW
-template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 text format contains deprecated field "
-the Element type supplies a MergeFrom() operation to make copies.
 the actual field type (for enums T should be the generated enum
 the global scope
 this
 throw
 ticket_version_no
-tolower
 trailing_comments
 transaction clone for
 transaction clone for operator delete(void*)
@@ -2099,7 +1946,6 @@ typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
-typename
 u!!Bc
 uint32
 uint64
@@ -2122,7 +1968,6 @@ utimes
 value
 vector::_M_default_append
 vector::_M_range_insert
-vector::_M_realloc_append
 vector::_M_realloc_insert
 vector::reserve
 virtual thunk to
@@ -2145,7 +1990,6 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 w+OQvr
-w+bx
 wXR\r
 wchar_t
 wcrtomb
@@ -2172,7 +2016,7 @@ y9*O
 zC`G;
 {default arg#
 {kHw
-{lambda
+{lambda(
 {parm#
 {unnamed type#
 ~SeA

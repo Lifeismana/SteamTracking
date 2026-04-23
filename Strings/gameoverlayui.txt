@@ -1,12 +1,6 @@
-        %3d %3d %3d %3d %3d %3d %3d %3d
-        %4u %4u %4u %4u %4u %4u %4u %4u
-    Component %d: %dhx%dv q=%d
-    Component %d: dc=%d ac=%d
-    with %d x %d thumbnail image
   Actual   :
   Comment started here.
   Expected :
-  Ss=%d, Se=%d, Ah=%d, Al=%d
   f_bavail: %lu\n
   f_bfree : %lu\n
   f_blocks: %lu\n
@@ -21,6 +15,9 @@
  --enable-duplicate-detection
  --force
  --label '%s'
+ --mock-up-to-date
+ --mock-update-available
+ --mock-update-error
  2>/dev/null
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
@@ -33,8 +30,6 @@
  [clone
  [default = $0
  \n\vinitial_top
- _Complex
- _Imaginary
  __vector(
  a protocol
  args were given.  Full format string was: "
@@ -44,7 +39,8 @@
  bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
  bytes.
  cannot be required.
- class
+ check
+ check 2>&1
  conflicts with an existing enum type.
  conflicts with an existing field.
  conflicts with an existing nested message type.
@@ -66,7 +62,6 @@
  not found
  of the Protocol Buffer runtime library, but the installed version is
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
- requires
  restrict
  stack frames not accounted for stack unwind.
  throw
@@ -78,21 +73,19 @@
  with type
 !"Not implemented"
 !"Unable to get home directory"
-!"_msize_dbg unsupported"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !("Invalid number of parameters")
 !("No handler for vgui message function")
 !(cascadeMenu && checkable)
+!,7BMM
 !1AQaq
+!6,@ZKe
 != and not NULL
 !AxU
 !BStringEquals( pathAlreadyLoaded.GetUTF8Path(), pathSDKModulePath.GetUTF8Path() )
 !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !\n\finitial_left
-!bSuccess || bufOutput.TellPut() == width*height*3
-!bSuccess || bufOutput.TellPut() == width*height*4
-!bUsePartnerWebAPI
 !is_large()
 !m_SelectedItems.HasElement( itemID )
 !m_data.HasError()
@@ -167,7 +160,6 @@
 ". Value: "
 "/*" inside block comment.  Block comments cannot be nested.
 "0x" must be followed by hex digits.
-"10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "2BRbr
 "????'????????????????????????????????????????????????????\????
 "DeleteMapValue"
@@ -284,14 +276,6 @@
 #PerfMon_Units_TB
 #PerfMon_Units_THz
 #QueryBox_Cancel
-#SettingsController_Shutdown_10
-#SettingsController_Shutdown_120
-#SettingsController_Shutdown_15
-#SettingsController_Shutdown_30
-#SettingsController_Shutdown_5
-#SettingsController_Shutdown_60
-#SettingsController_Shutdown_Never
-#SettingsDownloads_No_Throttle
 #SteamUI_Selection_Arabic
 #SteamUI_Selection_Brazilian
 #SteamUI_Selection_Bulgarian
@@ -325,11 +309,6 @@
 #Steam_Browser_Disabled
 #Steam_Browser_Disabled_KB
 #Steam_Browser_Disabled_KB_URL
-#Steam_Settings_Ingame_ShowFPS_LeftBottom
-#Steam_Settings_Ingame_ShowFPS_LeftTop
-#Steam_Settings_Ingame_ShowFPS_Off
-#Steam_Settings_Ingame_ShowFPS_RightBottom
-#Steam_Settings_Ingame_ShowFPS_RightTop
 #SysMenu_Close
 #SysMenu_Maximize
 #SysMenu_Minimize
@@ -379,6 +358,7 @@
 #vgui_cancel
 #vgui_choosedirectoryname
 #vgui_ok
+$'24A
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
 $0  reserved
@@ -389,7 +369,6 @@ $0message $1
 $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
-$3br
 $4DTdt
 $HOME/
 $ORIGIN
@@ -424,7 +403,6 @@ $\n k_EStorageFormatStage_NotRunning
 $\n k_SystemAudioChannel_FrontCenter
 $\n k_SystemAudioPortDirection_Input
 $\nY8O
-%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 %.17g
 %.18g
 %02d/%02d/%02d
@@ -435,8 +413,9 @@ $\nY8O
 %04u%02u%02uT%02u%02u%02uZ
 %04u-%02u-%02u
 %04u-%02u-%02u %02u:%02u:%02u
+%0MM
+%0VV
 %5EUeu
-%I:%M:%S %p
 %Y%m%d%H%M%S
 %Y%m%dT%H%M%SZ
 %Y-%m-%d %H:%M:%S
@@ -467,7 +446,6 @@ $\nY8O
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
 %a %b %d %H:%M:%S %Y UTC
-%a %b %e %T %Y
 %a, %e %b %Y %H:%M:%S
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
@@ -485,7 +463,6 @@ $\nY8O
 %hu:%u:%u%c
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
-%ld%c
 %lld
 %llu
 %llx
@@ -546,7 +523,6 @@ $\nY8O
 %s_written
 %store%
 %storehttps%
-&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 &6FVfv
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
@@ -789,11 +765,7 @@ $\nY8O
 *pchMsg && *pchMsg == '%'
 *pcubDecodedData
 *|\n\fECPUGovernor
-++CCUNG
-++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGpure virtual method called\n
-++CCUNGs
-++CCUNGstd::exception
++2D9
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
 +\n'k_EChildProcessQueryCommand_GpuTopology
@@ -869,10 +841,8 @@ $\nY8O
 -------------------\n
 -----CJSArray-----\n
 -----CJSObject-----\n
---alongside-steam
 --disable
 --enable
---env-fd=%d
 -0123456789
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
@@ -917,98 +887,6 @@ $\nY8O
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of
 ...<truncated>...
-../common/../common/clientdirectories.h
-../common/crypto_textencode.cpp
-../common/enum_names.cpp
-../common/filesystem_helpers.cpp
-../common/friendsuihelpers.cpp
-../common/html_jstypes.cpp
-../common/imageloadwrapper.cpp
-../common/jpegloader.cpp
-../common/jpegloader_common.cpp
-../common/language.cpp
-../common/linuxhelpers.cpp
-../common/logfile.cpp
-../common/logger.cpp
-../common/messageobjects.cpp
-../common/platformhelpers.cpp
-../common/registry.cpp
-../common/steam/client_api.cpp
-../common/steamid.cpp
-../common/steamui/urlmanager.cpp
-../common/string_misc.cpp
-../common/urlhelper.cpp
-../common/urlhelper_webapihost.cpp
-../external/picojson/picojson.h
-../overlay/common/shmemstream.cpp
-../overlay/common/videomemstream.cpp
-../overlay/gameoverlayui/BasePanel.cpp
-../overlay/gameoverlayui/main.cpp
-../overlay/gameoverlayui/main_serialized.cpp
-../overlay/gameoverlayui/screenshotthread.cpp
-../public/html/htmlpaintbuffer.h
-../public/html/htmlprotobuf.cpp
-../public/rtime.cpp
-../public/tier0/memoverride.cpp
-../public/tier0/tslist.h
-../public/tier1/bitstring.h
-../public/tier1/interface.h
-../public/tier1/netadr.h
-../public/tier1/refcount.h
-../public/tier1/smartptr.h
-../public/tier1/utlbuffer.h
-../public/tier1/utldict.h
-../public/tier1/utlflags.h
-../public/tier1/utlhandletable.h
-../public/tier1/utlhashmap.h
-../public/tier1/utllinkedlist.h
-../public/tier1/utlmemory.h
-../public/tier1/utlqueue.h
-../public/tier1/utlrbtree.h
-../public/tier1/utlstring.h
-../public/tier1/utlsymbol.h
-../public/tier1/utlvector.h
-../public/vgui_controls/Image.h
-../public/vgui_controls/MenuItem.h
-../tier1/KeyValues.cpp
-../tier1/bitstring.cpp
-../tier1/convar.cpp
-../tier1/fileio.cpp
-../tier1/interface.cpp
-../tier1/mempool.cpp
-../tier1/netadr.cpp
-../tier1/shared_memory.cpp
-../tier1/utlbuffer.cpp
-../tier1/utlmemory.cpp
-../tier1/utlqueue.cpp
-../tier1/utlstring.cpp
-../tier1/utlsymbol.cpp
-../vgui2/controls/AnimationController.cpp
-../vgui2/controls/BuildFactoryHelper.cpp
-../vgui2/controls/BuildGroup.cpp
-../vgui2/controls/EditablePanel.cpp
-../vgui2/controls/FileOpenDialog.cpp
-../vgui2/controls/Frame.cpp
-../vgui2/controls/GraphPanel.cpp
-../vgui2/controls/HTML.cpp
-../vgui2/controls/HotKeyEntry.cpp
-../vgui2/controls/ImageList.cpp
-../vgui2/controls/ImagePanel.cpp
-../vgui2/controls/Label.cpp
-../vgui2/controls/ListPanel.cpp
-../vgui2/controls/ListViewPanel.cpp
-../vgui2/controls/Menu.cpp
-../vgui2/controls/MenuItem.cpp
-../vgui2/controls/Panel.cpp
-../vgui2/controls/PropertySheet.cpp
-../vgui2/controls/RichText.cpp
-../vgui2/controls/TextEntry.cpp
-../vgui2/controls/TextImage.cpp
-../vgui2/controls/ToolWindow.cpp
-../vgui2/controls/TreeView.cpp
-../vgui2/controls/TreeViewListControl.cpp
-../vgui2/controls/controls.cpp
-../vgui2/controls/wrappanel.cpp
 ..Too many IDATs found
 ./google/protobuf/arena_impl.h
 ./google/protobuf/arenastring.h
@@ -1028,6 +906,7 @@ $\nY8O
 ./google/protobuf/repeated_field.h
 ./google/protobuf/stubs/stringpiece.h
 ./google/protobuf/unknown_field_set.h
+./obj_gameoverlayui_steamrtarm64/release/gameoverlayui.so
 .CCookie"
 .CHTMLPageSecurityInfo"n\n
 .CHistoryEntry"c\n\rCMsgLoadError
@@ -1085,6 +964,8 @@ $\nY8O
 .steam_exec_test.sh
 .webm
 .y4w
+/.config/user-dirs.dirs
+/Desktop
 /P8i
 /Steam3PosixRegistryManager
 /ValveIPCSHM_%d
@@ -1100,29 +981,117 @@ $\nY8O
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
 /\n+k_PublishedFileQueryType_RankedByTextSearch
+/autostart/steam.desktop
+/autostart/steambeta.desktop
 /bin/lsof
+/data/src/common/../common/clientdirectories.h
+/data/src/common/crypto_textencode.cpp
+/data/src/common/enum_names.cpp
+/data/src/common/filesystem_helpers.cpp
+/data/src/common/html_jstypes.cpp
+/data/src/common/language.cpp
+/data/src/common/linuxhelpers.cpp
+/data/src/common/logfile.cpp
+/data/src/common/logger.cpp
+/data/src/common/messageobjects.cpp
+/data/src/common/platformhelpers.cpp
+/data/src/common/registry.cpp
+/data/src/common/steam/client_api.cpp
+/data/src/common/steamid.cpp
+/data/src/common/steamui/urlmanager.cpp
+/data/src/common/string_misc.cpp
+/data/src/common/urlhelper.cpp
+/data/src/external/picojson/picojson.h
+/data/src/overlay/common/shmemstream.cpp
+/data/src/overlay/gameoverlayui/BasePanel.cpp
+/data/src/overlay/gameoverlayui/main.cpp
+/data/src/overlay/gameoverlayui/main_serialized.cpp
+/data/src/overlay/gameoverlayui/screenshotthread.cpp
+/data/src/public/html/htmlpaintbuffer.h
+/data/src/public/html/htmlprotobuf.cpp
+/data/src/public/rtime.cpp
+/data/src/public/tier0/tslist.h
+/data/src/public/tier1/bitstring.h
+/data/src/public/tier1/interface.h
+/data/src/public/tier1/netadr.h
+/data/src/public/tier1/refcount.h
+/data/src/public/tier1/smartptr.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utlhandletable.h
+/data/src/public/tier1/utlhashmap.h
+/data/src/public/tier1/utllinkedlist.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlqueue.h
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlsymbol.h
+/data/src/public/tier1/utlvector.h
+/data/src/public/vgui_controls/Image.h
+/data/src/public/vgui_controls/MenuItem.h
+/data/src/tier1/KeyValues.cpp
+/data/src/tier1/bitstring.cpp
+/data/src/tier1/convar.cpp
+/data/src/tier1/fileio.cpp
+/data/src/tier1/interface.cpp
+/data/src/tier1/mempool.cpp
+/data/src/tier1/netadr.cpp
+/data/src/tier1/shared_memory.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlqueue.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/tier1/utlsymbol.cpp
+/data/src/vgui2/controls/AnimationController.cpp
+/data/src/vgui2/controls/BuildFactoryHelper.cpp
+/data/src/vgui2/controls/BuildGroup.cpp
+/data/src/vgui2/controls/EditablePanel.cpp
+/data/src/vgui2/controls/FileOpenDialog.cpp
+/data/src/vgui2/controls/Frame.cpp
+/data/src/vgui2/controls/GraphPanel.cpp
+/data/src/vgui2/controls/HTML.cpp
+/data/src/vgui2/controls/HotKeyEntry.cpp
+/data/src/vgui2/controls/ImageList.cpp
+/data/src/vgui2/controls/ImagePanel.cpp
+/data/src/vgui2/controls/Label.cpp
+/data/src/vgui2/controls/ListPanel.cpp
+/data/src/vgui2/controls/ListViewPanel.cpp
+/data/src/vgui2/controls/Menu.cpp
+/data/src/vgui2/controls/MenuItem.cpp
+/data/src/vgui2/controls/Panel.cpp
+/data/src/vgui2/controls/PropertySheet.cpp
+/data/src/vgui2/controls/RichText.cpp
+/data/src/vgui2/controls/TextEntry.cpp
+/data/src/vgui2/controls/TextImage.cpp
+/data/src/vgui2/controls/ToolWindow.cpp
+/data/src/vgui2/controls/TreeView.cpp
+/data/src/vgui2/controls/TreeViewListControl.cpp
+/data/src/vgui2/controls/controls.cpp
+/data/src/vgui2/controls/wrappanel.cpp
 /dev
 /dev/
 /dev/disk/by-uuid
 /dev/null
-/dev/random
-/dev/urandom
 /etc/mtab
+/in_illuminance_input
+/in_illuminance_integration_time
+/in_illuminance_raw
 /name
+/proc/device-tree/compatible
+/proc/device-tree/model
 /proc/meminfo
 /proc/mounts
 /proc/self/maps
 /proc/stat
 /sbin/lsof
-/steamrt64
+/steamrtarm64
 /sys/bus/iio/devices
 /sys/class/drm
 /sys/class/drm/card0/card0-eDP-1/edid
 /sys/class/hwmon
+/sys/devices/soc0/serial_number
 /sys/devices/system/cpu/cpu%d/cpufreq/%s
-/sys/devices/virtual/dmi/id/product_name
-/sys/devices/virtual/dmi/id/product_serial
-/sys/devices/virtual/dmi/id/sys_vendor
+/temp1_input
 /tmp
 /tmp/cmd-stderr.XXXXXX
 /tmp/cmd-stdout.XXXXXX
@@ -1132,9 +1101,9 @@ $\nY8O
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 /ubuntu12_64/disk-free
+/user-dirs.dirs
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam-runtime-launch-client
 /usr/bin/steam_serialnumber.sh
 /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -1163,9 +1132,10 @@ $\nY8O
 0 == m_ThreadLocalSpewReentrancyGuardInstance.Get()
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
+0)AA7A
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
 0123456789
@@ -1187,10 +1157,7 @@ $\nY8O
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0x%llx
-1 Mbps
 1.2.11
-1.5 Mbps
-1.5M
 1.6.37
 1000
 10BlankImage
@@ -1308,6 +1275,7 @@ $\nY8O
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 10CUtlString
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
@@ -1380,10 +1348,7 @@ $\nY8O
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11KeyValuesAD
-12 Mbps
 123456789
-128 Kbps
-128K
 12CAddressInfo
 12CAutoReleaseI15CJSCallbackFuncE
 12CDynamicFuncIPF15nvmlReturn_enumP13nvmlDevice_st27nvmlTemperatureSensors_enumPjEE
@@ -1393,10 +1358,6 @@ $\nY8O
 12CDynamicFuncIPF15nvmlReturn_enumPjEE
 12CDynamicFuncIPF15nvmlReturn_enumjPP13nvmlDevice_stEE
 12CDynamicFuncIPF15nvmlReturn_enumvEE
-12CDynamicFuncIPFP11SDL_SurfaceP12SDL_IOStreambEE
-12CDynamicFuncIPFP11SDL_SurfaceS1_15SDL_PixelFormatEE
-12CDynamicFuncIPFP12SDL_IOStreamPKvmEE
-12CDynamicFuncIPFvP11SDL_SurfaceEE
 12CIntProperty
 12CLicenseInfo
 12CLogInstance
@@ -1482,7 +1443,6 @@ $\nY8O
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 15IGPUStatsReader
 15IOverlayOSPumps
-16 Mbps
 16AppModalQueryBox
 16CHTMLProtoBufMsgI10CMsgGoBackE
 16CHTMLProtoBufMsgI10CMsgReloadE
@@ -1577,7 +1537,7 @@ $\nY8O
 17CStreamReaderBase
 17DirectoryTreeView
 17LayoutDebugDialog
-18:46:50
+18:47:43
 18CGPUStatsReaderDrm
 18CJSCallbackPromise
 18CMsgBlockedRequest
@@ -1627,15 +1587,12 @@ $\nY8O
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
 1\n-k_ESteamDeckCompatibilityTestResult_FailMinor
 1wsHp
-2 Mbps
 2#.google.protobuf.FieldOptions.CType:
 2$.google.protobuf.FieldOptions.JSType:\tJS_NORMAL
 2).google.protobuf.FileOptions.OptimizeMode:
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
-200 Mbps
-200M
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -1658,7 +1615,6 @@ $\nY8O
 20IJSMethodCallHandler
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
-21CLogFileAsyncCallback
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
 21CMsgFavIconURLChanged
@@ -1691,7 +1647,6 @@ $\nY8O
 23CMsgSteamAuthCookiesSet
 23CVGUIApplicationOverlay
 23IConCommandBaseAccessor
-24 Mbps
 24CDirWatcherPollingThread
 24CMsgClearAllBrowsingData
 24CMsgImeCancelComposition
@@ -1700,8 +1655,6 @@ $\nY8O
 24CMsgStartRequestResponse
 24CMsgZoomToFocusedElement
 24CProportionalIntProperty
-256 Kbps
-256K
 25CIngameFPSPresentationFPS
 25CMsgAckSharedPaintBuffers
 25CMsgBrowserCreateResponse
@@ -1739,6 +1692,7 @@ $\nY8O
 28CMsgScreenInformationChanged
 28CMsgSetAccessibilitySettings
 28CMsgSetTouchGesturesToCancel
+2<QF
 2>/dev/null
 2\n.k_ECommentThreadTypePublishedFile_Announcement
 2\n.k_EContentReportReason_BullyingAndIntimidation
@@ -1753,8 +1707,9 @@ $\nY8O
 2\n.k_PublishedFileQueryType_RankedByPlaytimeTrend
 2\n.k_PublishedFileQueryType_RankedByTotalPlaytime
 2\n.k_PublishedFileQueryType_RankedByTotalVotesAsc
-3 Mbps
+3+C;SSKS
 30!]^JV
+30>9
 30CMsgImeCompositionRangeChanged
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
@@ -1765,19 +1720,16 @@ $\nY8O
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgZoomToElementAtPositionResponse
-384 Kbps
-384K
 38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 3pay
-4 Mbps
-40 Mbps
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgShowBrowserContextMenu_ContextCommand
 42CMsgDraggableRegionsChanged_DraggableRects
+44,4
 456789:;<=
 46CMsgSetLocalFileRequestMapping_AdditionalRoute
 49fN
@@ -1794,10 +1746,7 @@ $\nY8O
 4\n0k_PublishedFileQueryType_RankedByPublicationDate
 4i5U6B738%9
 5000
-512 Kbps
-512K
 52F*
-56 Mbps
 5T&w&
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
@@ -1809,7 +1758,6 @@ $\nY8O
 5\n1k_ESystemDisplayCompatibilityMode_MinimalBandwith
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\vnested_type
-6 Mbps
 6 PQ
 6ConVar
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
@@ -1820,8 +1768,6 @@ $\nY8O
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
 6\n\fmessage_type
-768 Kbps
-768K
 7CCookie
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringli8CDefLessE
@@ -1848,8 +1794,6 @@ $\nY8O
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
 7\n\tenum_type
 7~8A
-8 Mbps
-80 Mbps
 83L3
 83N6
 83Q2
@@ -1857,7 +1801,6 @@ $\nY8O
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CJSArray
-8CLogFile
 8CMsgCopy
 8CMsgFind
 8\foQS
@@ -1868,7 +1811,6 @@ $\nY8O
 8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
 8\n4k_EWindowsUpdateInstallationImpact_ExclusiveHandling
 8\n\textension
-8b  16-May-2010
 9CCallbackI10CBasePanelK14OverlayState_tLb0EE
 9CCallbackI10CBasePanelK24OverlaySettingsChanged_tLb0EE
 9CCallbackI10CBasePanelK30GameOverlayActivateRequested_tLb0EE
@@ -1918,10 +1860,12 @@ $\nY8O
 >/dev/null
 >= or is NULL
 >\n:k_EContentReportReason_NoncomplianceWithPricingRegulations
+>internal error: array alloc
 ?456789:;<=
-???\f???????\n???\r?\t?\v
+???\f???????\n???\r?\t?\vN6google8protobuf2io14ErrorCollectorE
 ?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
+@33V@
 @bEnableLogTearOff
 @bEnableSpewThrottle
 @durationControlInitialNotification
@@ -1935,7 +1879,6 @@ $\nY8O
 A file with this name is already in the pool.
 A protocol message was rejected because it was too big (more than
 A reservation already exists
-A!;I2
 A@qVc"
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
@@ -1943,7 +1886,6 @@ ABORTED
 ACCEPT
 ACHIEVEMENTS
 AKST
-ALIGN_TYPE is wrong, please fix
 ALREADY_EXISTS
 AMD OpenSource
 AMD RADV
@@ -1996,7 +1938,6 @@ Active
 AddActionSignalTarget
 AddAllocatedMessage
 AddBool
-AddCleared() can only be used on a RepeatedPtrField not on an arena.
 AddDouble
 AddEnum
 AddFloat
@@ -2016,7 +1957,6 @@ Address1
 Address2
 Admin
 Administrator OK
-Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 Adult Content
 Advertisement
 Afrikaans
@@ -2060,8 +2000,6 @@ Application built with libpng-
 Application jmp_buf size changed
 Application must supply a known background gamma
 Application running
-Application transferred too few scanlines
-Application transferred too many scanlines
 ApplyButtonEnable
 ApplyChanges
 ApplySchemeSettings did not chain back to base class: %s
@@ -2069,7 +2007,6 @@ Approved Friends
 Apr 21 2026
 April
 Arabic
-Arithmetic table 0x%02x was not defined
 ArmItem
 Armenian
 Artwork
@@ -2080,7 +2017,6 @@ Assamese
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 Assertion failed: length > k_cchMaxString
-At marker 0x%02x, recovery action %d
 Attempt to create persistent logs with no end date!
 Attempted to change replicated CVar when you are not the GM\n
 Attempting to purchase same app in different packages
@@ -2109,9 +2045,7 @@ BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
 BIsOpen()
-BKbhTb~XBK!;
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
-BResizeImageRGBA
 BResolveHostString - unexpected DNS lookup flag '%d'\n
 BRunFrame()
 BSR_ANYCRLF)
@@ -2125,7 +2059,6 @@ BWritingMiniDump
 B\n>k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate
 BackButton
 BackUp() can only be called after a successful Next().
-Backing store not supported
 Backspace
 Backup Running
 Bad Access flag on shared mem create: %s: %u\n
@@ -2175,18 +2108,6 @@ Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
 BoaCompra Gold
 Body
-Bogus DAC index %d
-Bogus DAC value 0x%x
-Bogus DHT index %d
-Bogus DQT index %d
-Bogus Huffman table definition
-Bogus JPEG colorspace
-Bogus buffer control mode
-Bogus input colorspace
-Bogus marker length
-Bogus message code %d
-Bogus sampling factors
-Bogus virtual array access
 Boleto Bancario
 Boleto Flash
 Book Voucher
@@ -2214,7 +2135,6 @@ BrowserResizeGripChanged
 BrowserSetForegroundWindow
 BrowserSetWindowPosition
 BrowserShowWindow
-Buffer passed to JPEG library is too small
 Buginese
 Buhid
 BuildGroup::ValidateGlobals
@@ -2240,7 +2160,6 @@ CBasePanel::OnOverlayStateChanged
 CBasePanel::ShellExecuteHook
 CBitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
-CCIR601 sampling not implemented yet
 CCookie
 CCrypto::Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
@@ -2334,7 +2253,6 @@ CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
 CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
-CHECK failed: (current_size_) < (total_size_):
 CHECK failed: (current_size_) > (0):
 CHECK failed: (descriptor->field(field_count - 1)) == (end - 1):
 CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
@@ -2368,10 +2286,7 @@ CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::
 CHECK failed: (n & (n - 1)) == (0):
 CHECK failed: (n) >= (0):
 CHECK failed: (new_num_buckets) >= (kMinTableSize):
-CHECK failed: (new_size) <= (current_size_):
 CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit):
-CHECK failed: (new_size) >= (0):
-CHECK failed: (num) >= (0):
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
 CHECK failed: (out) == (begin + result->size()):
 CHECK failed: (out) == (begin + result.size()):
@@ -2379,14 +2294,10 @@ CHECK failed: (overrun) <= (kSlopBytes):
 CHECK failed: (pos) <= (x.length_):
 CHECK failed: (recursion_budget_) < (recursion_limit_):
 CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u):
-CHECK failed: (rep_->allocated_size) > (current_size_):
 CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
 CHECK failed: (size) <= (6):
 CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)):
 CHECK failed: (size) > (0):
-CHECK failed: (start + num) <= (size()):
-CHECK failed: (start + num) <= (this->current_size_):
-CHECK failed: (start) >= (0):
 CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
 CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
 CHECK failed: (str.size()) <= (kuint32max):
@@ -2485,7 +2396,6 @@ CHECK failed: ptr < end_:
 CHECK failed: ptr <= buffer_end_ + kSlopBytes:
 CHECK failed: ptr <= end_ + kSlopBytes:
 CHECK failed: reflection:
-CHECK failed: rep_ != NULL:
 CHECK failed: result != nullptr:
 CHECK failed: s != nullptr:
 CHECK failed: s >= 0:
@@ -2673,7 +2583,6 @@ CMsgVerticalScrollBarSize
 CMsgViewSource
 CMsgZoomToElementAtPosition
 CMsgZoomToFocusedElement
-CNotificationClickPanel
 COMMIT
 CONFIG
 CORD
@@ -2783,15 +2692,11 @@ Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You m
 Cannot copy json_name to a proto of a different size.
 Cannot get here
 Cannot gift physical goods
-Cannot quantize more than %d color components
-Cannot quantize to fewer than %d colors
-Cannot quantize to more than %d colors
 Cannot ship goods internationally
 Cannot ship to APO/FPO
 Cannot ship to PO Box
 Cannot ship to country because shipping is not defined
 Cannot skip field value, unexpected token:
-Cannot transcode due to multiple use of quantization table %d
 Cant remove item
 Caps Lock
 Caps Lock Toggle
@@ -2819,7 +2724,6 @@ Cash-In CIS
 CashU
 Catalan
 CatchAndWriteMiniDumpForVoidPtrFn
-Caution: quantization tables are too coarse for baseline JPEG
 Cencosud
 Chakma
 Cham
@@ -2854,6 +2758,7 @@ ClearSchemeSettings
 Click&Buy
 ClickPanel
 Client no longer supported
+Client version:
 ClientAPI_Init()
 ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
@@ -2915,7 +2820,6 @@ CloseImmediately
 CloseMenu
 CloseModal
 Closed
-Closed temporary file %s
 CodeSignature
 CollapserChanged
 Collection
@@ -2943,9 +2847,9 @@ CompatibleLobby
 Complete-the-set bundles cannot be gifted
 Complimentary
 Component In Use
-Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
 Compression buffer size cannot be changed because it is in use
 Compression buffer size cannot be reduced below 6
+Compression buffer size limited to system maximum
 Computer
 ConCommand '%s' not currently supported in config file\n
 ConVar
@@ -2981,13 +2885,7 @@ ConversionModeMenu
 Coptic
 Copy
 Copying
-Copyright (C) 2010, Thomas G. Lane, Guido Vollbeding
 Copyright Violation
-Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
-Corrupt JPEG data: bad Huffman code
-Corrupt JPEG data: bad arithmetic code
-Corrupt JPEG data: found marker 0x%02x instead of RST%d
-Corrupt JPEG data: premature end of data segment
 Corrupt depot cache
 Corrupt disk
 Corrupt download
@@ -3055,8 +2953,6 @@ DATA_LOSS
 DB Lookup CD-Key
 DBG_PATHMATCH
 DBG_STAT
-DCT coefficient out of range
-DCT scaled block size %dx%d not supported
 DDDDUUUU
 DEADLINE_EXCEEDED
 DEFINE
@@ -3086,10 +2982,6 @@ Default value for an enum field must be an identifier.
 DefaultFixed
 DefaultUnderline
 DefaultVerySmall
-Define Arithmetic Table 0x%02x: 0x%02x
-Define Huffman Table 0x%02x
-Define Quantization Table %d  precision %d
-Define Restart Interval %u
 DelayedClose
 Delete
 DeletePanel
@@ -3119,7 +3011,6 @@ Device Not Found
 Dialog
 DialogConfigOverlay_%dx%d.vdf
 DialogVariables
-Didn't expect more than one scan
 Diner's Card (BoaCompra)
 Diners Club
 DirTree
@@ -3392,15 +3283,12 @@ Element( i )
 Email Validated
 Email not validated
 Empty
-Empty JPEG image (DNL not supported)
-Empty input file
 Enabled
 Enabled/Force
 Enabled/ForceOn
 Enabled/On
 Enabled/Readback
 Encryption Failure
-End Of Image
 End of File
 End-of-file inside block comment.
 EndDrag
@@ -3434,6 +3322,7 @@ Error text not found (please report)
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error: %s: empty address field
+Error: %s: failed to enumerate GPU devices\n
 Error: %s: failed to get NVML device by index: %d\n
 Error: %s: failed to get NVML device count: %d\n
 Error: %s: failed to initialize CPU stats parser\n
@@ -3447,6 +3336,8 @@ Error: %s: failed to write to %s: %s\n
 Error: %s: invalid address
 Error: %s: popen failed
 Error: %s: steamos-priv-write failed %s: %s\n
+Error: CLinuxSystemHWMonitorThread: failed to initialize\n
+Error: CLinuxSystemHWMonitorThread: frame error, exiting\n
 Error: failed to disable wireless power management: %d\n
 Error: failed to open: %s\n
 ErrorAppID
@@ -3507,12 +3398,12 @@ External Account is not linked to a Steam account
 External Account linked to another Steam account
 ExternalValidation
 Extra compressed data
-ExtractSubrange() when arena is non-NULL is only supported when
 FAIL
 FAILED_PRECONDITION
 FATAL
 FCVAR_NEVER_AS_STRING
 FCZ&
+FILT
 FLOAT
 FPSGraph.ColorFPSAvg
 FPSGraph.ColorFPSBad
@@ -3547,7 +3438,6 @@ Failed to bind server addres for shared fd: %d\n
 Failed to close logfile with prefix %s during BTearOffLogFile call!
 Failed to create socket for shared fd id: 0x%lx\n
 Failed to create socket for shared fd: %d\n
-Failed to create temporary file %s
 Failed to find time in logfile name
 Failed to finish encoder: %u
 Failed to get IAutomaticUpdates
@@ -3672,7 +3562,6 @@ Forced create but already created for SharedObjectEvent\n
 ForwardButton
 Found
 Found invalid proto option data for:
-Fractional sampling not implemented yet
 Frame
 Frame (vgui panel zoo)
 Frame Failed
@@ -3702,8 +3591,6 @@ Fraud Check Failed
 Free
 Free Weekend
 Free disk space for %s would overflow
-Freed EMS handle %u
-Freed XMS handle %u
 Fremont
 French
 FrenemyFilter
@@ -3717,25 +3604,15 @@ FullPathEdit
 Fully Installed
 GAMEOVERLAY
 GAME_
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
-GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
-GCC: (crosstool-NG 1.17.0) 4.6.3
+GCC: (Debian 10.2.1-6) 10.2.1 20210110
+GCC: (Debian 11.2.0-9) 11.2.0
+GCC: (Debian 9.3.0-22) 9.3.0
+GCC: (Ubuntu/Linaro 7.3.0-16ubuntu3) 7.3.0
 GCash
 GIF Image (*.gif)
-GLIBCXX_TUNABLES
-GLIBC_2.10
-GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.2.5
-GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.29
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.4
-GLIBC_2.4
-GLIBC_2.7
 GPUInfo
 GPULabel
 GPUTemp
@@ -3793,8 +3670,6 @@ German
 GetAnimationController()
 GetBool
 GetBootstrapperVersion
-GetCPUInformation()
-GetCPUInformation().m_bSSE3
 GetCommand
 GetCrashHandlerFactory
 GetDouble
@@ -3942,8 +3817,6 @@ Hotkey
 HotkeyEntryClearButton
 HtmlFramelessPopup
 HtmlPopup
-Huffman code size table overflow
-Huffman table 0x%02x was not defined
 Hung transaction cancelled
 Hungarian
 I/O Operation Failed
@@ -3959,7 +3832,6 @@ IMECandidatesMenu
 IMEConversionModes
 IMELanguageList
 IMESentenceModes
-IMG_Load_IO
 INFO
 INTERNAL
 INVALID
@@ -3993,8 +3865,8 @@ Image
 Image height exceeds user limit in IHDR
 Image height is zero in IHDR
 Image is too high to process with png_read_png()
-Image too wide for this implementation
 Image width exceeds user limit in IHDR
+Image width is too large for this architecture
 Image width is zero in IHDR
 ImagePanel
 ImeCancelComposition
@@ -4004,7 +3876,6 @@ Imperial_Aramaic
 Implement me
 Import
 Import "
-Improper call to JPEG library in state %d
 In dispute
 InGameOverlayAllowKMDriveOnWindows
 InGameOverlayScreenshotEnableAVIF
@@ -4023,7 +3894,6 @@ InGameOverlayShowFPSScaling
 Inappropriate
 Incompatible
 IncompatibleCheat
-Inconsistent progression sequence for component %d coefficient %d
 Incorrect Parameter
 Incorrect number of arguments.  %d arguments required, %d were given.\n
 Index must be -1 for non-repeated fields
@@ -4041,7 +3911,6 @@ Init Failed
 InitialPeriod
 InitialTimeUnit
 InitializingRenderStream()
-Input file read error
 Input size too large:
 InputCanceled
 InputCompleted
@@ -4059,7 +3928,6 @@ Insufficient Privilege
 Insufficient Storage
 Insufficient battery charge
 Insufficient funds
-Insufficient memory (case %d)
 Insufficient memory for eXIf chunk data
 Insufficient memory for hIST chunk data
 Insufficient memory for pCAL parameter
@@ -4090,10 +3958,6 @@ Invalid Email
 Invalid FileWriterItem_t
 Invalid Handle
 Invalid IHDR data
-Invalid JPEG file structure: SOS before SOF
-Invalid JPEG file structure: missing SOS marker
-Invalid JPEG file structure: two SOF markers
-Invalid JPEG file structure: two SOI markers
 Invalid Login Auth Code
 Invalid Name
 Invalid OS Type
@@ -4104,7 +3968,6 @@ Invalid Password
 Invalid Payment Method
 Invalid Platform
 Invalid Protocol
-Invalid SOS parameters for sequential JPEG
 Invalid State
 Invalid Steam ID
 Invalid account
@@ -4118,15 +3981,12 @@ Invalid bit depth for grayscale image
 Invalid bit depth for grayscale+alpha image
 Invalid bit depth for paletted image
 Invalid bit depth in IHDR
-Invalid color quantization mode change
 Invalid color type in IHDR
 Invalid color type/bit depth combination in IHDR
-Invalid component ID %d in SOS
 Invalid compression type specified
 Invalid content configuration
 Invalid control characters encountered in text.
 Invalid coupon
-Invalid crop request
 Invalid descriptor
 Invalid escape sequence in string literal.
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
@@ -4146,7 +4006,6 @@ Invalid install path
 Invalid interlace type specified
 Invalid item type
 Invalid key for map field.
-Invalid memory pool code %d
 Invalid message set extension.
 Invalid number of colors in palette
 Invalid number of histogram entries specified
@@ -4159,8 +4018,6 @@ Invalid palette length
 Invalid palette size, hIST allocation skipped
 Invalid parent region %s specified for region %s in panel %s
 Invalid platform
-Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d
-Invalid progressive parameters at scan script entry %d
 Invalid proto descriptor for file "
 Invalid public dependency index.
 Invalid sBIT depth specified
@@ -4170,7 +4027,6 @@ Invalid sCAL unit
 Invalid sCAL width
 Invalid sCAL width ignored
 Invalid sRGB rendering intent specified
-Invalid scan script at entry %d
 Invalid shipping address
 Invalid socket name parameters for shared fd\n
 Invalid spew group
@@ -4194,8 +4050,6 @@ Invited
 Irish
 Is Bank
 Is64BitOS
-Is64BitOS()
-IsARM64() || GetCPUInformation().m_bSSE2
 IsGift
 IsLabelEditingAllowed()
 IsPointInCaptureRegion
@@ -4221,16 +4075,8 @@ ItemsChecked
 Items_Mtx
 Items_ReadyToUse
 JArray
-JFIF APP0 marker: version %d.%02d, density %dx%d  %d
-JFIF extension marker: JPEG-compressed thumbnail image, length %u
-JFIF extension marker: RGB thumbnail image, length %u
-JFIF extension marker: palette thumbnail image, length %u
-JFIF extension marker: type 0x%02x, length %u
 JPEG Image (*.jpeg)
 JPEG Image (*.jpg)
-JPEG datastream contains no image
-JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
-JPEGMEM
 JSObjectProperty
 JSType
 JZJ{.
@@ -4385,7 +4231,6 @@ KEY_W
 KEY_X
 KEY_Y
 KEY_Z
-KNQ\r
 Kaithi
 KakaoPay
 Kannada
@@ -4468,23 +4313,15 @@ LABEL_REPEATED
 LABEL_REQUIRED
 LANCache
 LANPeer
-LC_ADDRESS
-LC_COLLATE
-LC_CTYPE
-LC_IDENTIFICATION
-LC_MEASUREMENT
-LC_MESSAGES
-LC_MONETARY
-LC_NAME
-LC_NUMERIC
-LC_PAPER
-LC_TELEPHONE
-LC_TIME
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
+LEZShnat7{
 LIMIT_MATCH=
 LIMIT_RECURSION=
 LINUX
 LINUX32
 LINUX64
+LINUXARM64
 LLVMPipe Mesa
 LOCK_EX
 LOCK_SH
@@ -4578,7 +4415,6 @@ LoadDefaultControlSettings
 LoadFileIntoBuffer: NULL parameters
 LoadFileRangeIntoBuffer_Internal
 LoadFromBuffer: missing {   (current key: '%s')
-LoadTGA: Only type 2 and 10 targa RGB images supported\n
 Localization
 LocalizationFileChanged
 Location
@@ -4609,7 +4445,6 @@ Lycian
 Lydian
 M8MF
 MARK
-MAX_ALLOC_CHUNK is wrong, please fix
 MGiI
 MNG features are not allowed in a PNG datastream
 MOL Points
@@ -4685,7 +4520,6 @@ MaxResults
 MaxUseCount
 Maximize
 Maximum family size exceeded
-Maximum supported image dimension is %u pixels
 MaybeAllocateAligned cannot fail here.
 Meetei_Mayek
 Meeting
@@ -4758,10 +4592,8 @@ MinuteLimit
 MinutesUsed
 Mirror
 MirroredNotStriped
-Miscellaneous marker 0x%02x, length %u
 Misdirected Request
 Missing Audio
-Missing Huffman code table entry
 Missing IHDR before IDAT
 Missing Key Frames
 Missing PLTE before IDAT
@@ -4821,7 +4653,6 @@ N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
-N10__cxxabiv121__vmi_class_type_infoE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
 N17CFileWriterThread19CFileWriterWorkItemE
@@ -4901,7 +4732,6 @@ N4vgui21ListPanelColumnHeaderE
 N4vgui22HotkeyEntryClearButtonE
 N4vgui22ListPanelCollapserBaseE
 N4vgui22ListPanelSectionHeaderE
-N4vgui23CNotificationClickPanelE
 N4vgui25ListPanelSectionCollapserE
 N4vgui32IPanelAnimationPropertyConverterE
 N4vgui4HTML12CHTMLFindBarE
@@ -4949,7 +4779,6 @@ N6google8protobuf11MessageLiteE
 N6google8protobuf12FieldOptionsE
 N6google8protobuf12OneofOptionsE
 N6google8protobuf13MethodOptionsE
-N6google8protobuf14DescriptorPool14ErrorCollectorE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf14FatalExceptionE
 N6google8protobuf14MessageFactoryE
@@ -4981,7 +4810,6 @@ N6google8protobuf25EncodedDescriptorDatabaseE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf28UninterpretedOption_NamePartE
 N6google8protobuf29DescriptorProto_ReservedRangeE
-N6google8protobuf2io14ErrorCollectorE
 N6google8protobuf2io15FileInputStream22CopyingFileInputStreamE
 N6google8protobuf2io15FileInputStreamE
 N6google8protobuf2io16ArrayInputStreamE
@@ -5003,16 +4831,11 @@ N6google8protobuf2io25CopyingInputStreamAdaptorE
 N6google8protobuf2io26CopyingOutputStreamAdaptorE
 N6google8protobuf30DescriptorProto_ExtensionRangeE
 N6google8protobuf37EnumDescriptorProto_EnumReservedRangeE
-N6google8protobuf7ClosureE
 N6google8protobuf7MessageE
-N6google8protobuf8internal12ExtensionSet20LazyMessageExtensionE
 N6google8protobuf8internal12FieldSkipperE
 N6google8protobuf8internal12MapFieldBaseE
 N6google8protobuf8internal15DynamicMapFieldE
 N6google8protobuf8internal15ExtensionFinderE
-N6google8protobuf8internal16FunctionClosure0E
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16MapFieldAccessorE
 N6google8protobuf8internal19ImplicitWeakMessageE
 N6google8protobuf8internal20RepeatedFieldWrapperIbEE
@@ -5043,8 +4866,6 @@ N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
 N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
 N9OaP
 N9ZooDialog15ZooPropertyPageE
-N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
-N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
@@ -5063,18 +4884,6 @@ NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
 NSt7__cxx1110moneypunctIwLb0EEE
 NSt7__cxx1110moneypunctIwLb1EEE
-NSt7__cxx1114collate_bynameIcEE
-NSt7__cxx1114collate_bynameIwEE
-NSt7__cxx1115messages_bynameIcEE
-NSt7__cxx1115messages_bynameIwEE
-NSt7__cxx1115numpunct_bynameIcEE
-NSt7__cxx1115numpunct_bynameIwEE
-NSt7__cxx1115time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
-NSt7__cxx1115time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
-NSt7__cxx1117moneypunct_bynameIcLb0EEE
-NSt7__cxx1117moneypunct_bynameIcLb1EEE
-NSt7__cxx1117moneypunct_bynameIwLb0EEE
-NSt7__cxx1117moneypunct_bynameIwLb1EEE
 NSt7__cxx117collateIcEE
 NSt7__cxx117collateIwEE
 NSt7__cxx118messagesIcEE
@@ -5092,11 +4901,13 @@ NSt8ios_base7failureE
 NULL
 NULL != pchFileName
 NULL != pchPrefixPassed
+NULL == "Unexpected return value from pcre_config(NEWLINE)"
 NULL == m_pFile
 NULL output buffer with non-zero size passed to Base64Decode
 NULL output buffer with non-zero size passed to Base64Encode
 NULL row buffer
 NVIDIA
+N[i4A
 Name
 NameEntry
 NamePart
@@ -5167,7 +4978,6 @@ Not Implemented
 Not Logged On
 Not Modified
 Not Supported
-Not a JPEG file: starts with 0x%02x 0x%02x
 Not a PNG file
 Not activated
 Not allowed to play
@@ -5177,7 +4987,6 @@ Not enough disk space
 Not enough free disk space
 Not enough image data
 Not implemented field number
-Not implemented yet
 Not installed
 Not recognizing known sRGB profile that has been edited
 Not released
@@ -5213,8 +5022,6 @@ OUT_OF_RANGE
 OXXO
 OZw3(?
 O\n\nAnnotation
-Obtained EMS handle %u
-Obtained XMS handle %u
 October
 Odia
 Offensive Avatar
@@ -5269,7 +5076,6 @@ OpenFileForEdit
 OpenSteamDialog
 OpenTabPage
 OpenVRSessionDetails
-Opened temporary file %s
 Operation failed due to parental control restrictions for current user
 Option "
 Option field "
@@ -5290,7 +5096,6 @@ Out of Memory
 Out of Resources
 Out of memory
 Out of stock
-Output file write error --- out of disk space?
 Over consumption limit
 Overlay Web Popup Container
 Overlay disable requested by game\n
@@ -5313,8 +5118,7 @@ PLACEHOLDER_VALUE
 PLATFORM
 PNG Image (*.png)
 PNG file corrupted by ASCII conversion
-PNG load error %s\n
-PNG load warning %s\n
+PNG fixed point integer out of range
 PNG unsigned integer out of range
 PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
 POLi
@@ -5323,8 +5127,9 @@ POSIX
 POSIX collating elements are not supported
 POSIX named classes are supported only within a class
 POST
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Label_IsValid(value)
+PROTOBUF_NAMESPACE_ID::FieldDescriptorProto_Type_IsValid(value)
 PRUNE
-PS3 Unattributed
 PSN Ticket is invalid
 Package id 0
 Package requires an invitation for a reservation to purchase
@@ -5473,8 +5278,6 @@ Precondition Required
 Preferred Owner
 Prefetch
 Prefetching Info
-Premature end of JPEG file
-Premature end of input file
 PrepareBuffer( nNewLength ) == pstrNew
 PresentationFPS
 PresentationFPSLabel
@@ -5495,6 +5298,7 @@ Profile
 Profile Showcases
 Profile Text
 Profile URL
+Profile length does not match profile
 ProgressBar
 Prohibited
 PromotedNewAdmin
@@ -5523,14 +5327,10 @@ Purchase pending
 PurchaseCountryCode
 PurchaseStatus
 PutInternal: Not enough space for put when locked\n
-QC,A
 QIWI
 QkkXa
 Qkkbal
 Qualcomm
-Quantization table 0x%02x was not defined
-Quantizing to %d = %d*%d*%d colors
-Quantizing to %d colors
 Quechua
 QueryBox
 QuickAccess
@@ -5547,7 +5347,7 @@ RAMUsed
 RESOURCE_EXHAUSTED
 RGB color space not permitted on grayscale PNG
 RGBA: %.2X %.2X %.2X %.2X
-RST%d
+RGh]
 RackSystem
 RadioButton
 RadioButton::OnThink()
@@ -5578,10 +5378,7 @@ Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Read Error
 Read Failed
-Read failed on temporary file
 Read failure in png_handle_zTXt
-Read from EMS failed
-Read from XMS failed
 Read palette index exceeding num_palette
 Rebuild
 ReceivedNewGame
@@ -5615,7 +5412,6 @@ Registry
 Rejang
 Relay Failed
 Release State Override
-ReleaseCleared() can only be used on a RepeatedPtrField not on
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
 ReleaseMessage
@@ -5643,7 +5439,6 @@ RequestFocus
 RequestFriends
 RequestGlobal
 Requested Force create but SharedObjectMutex already created\n
-Requested feature was omitted at compile time
 Requested range not satisfiable
 Requested size is too large to fit into size_t.
 Required fields are not allowed in proto3.
@@ -5687,15 +5482,13 @@ Runic
 Running Script
 Running Update
 Russian
-SDL_ConvertSurface
-SDL_DestroySurface
-SDL_IOFromConstMem
 SET NULL
 SHMemStream header is corrupt in GetInternal()\n
 SHMemStream header is corrupt in PutInternal()\n
 SKIN
 SKIP
 SKyu
+SM8650
 SMS code failed
 SPEED
 SPEI
@@ -5710,7 +5503,6 @@ SalesTerritoryCode
 SalesTerritoryCodeFromKey
 Samaritan
 Same as previous value
-Sampling factors too large for interleaved scan
 Sandbox
 Santander Rio
 Saturday
@@ -5718,7 +5510,6 @@ Saurashtra
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Saving unknown chunk:
 Sberbank
-Scan script does not transmit all data
 ScheduledEvent
 ScheduledSendOnDate
 Score
@@ -5752,12 +5543,10 @@ SecretServer
 SecurityStatus
 See Other
 Seek Failed
-Seek failed on temporary file
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 Select
 SelectButton
-Selected %d colors for quantization
 SelectedImage
 SelectedNewPOTW
 Self updating
@@ -5870,7 +5659,6 @@ SlotsAvailable
 Slovak
 Slovenian
 Sm"\vg
-Smoothing not supported with nonstandard sampling ratios
 SnapRange
 Snooze
 Sofort
@@ -5895,7 +5683,6 @@ Spline
 Split
 Spoofing
 Sports
-St10bad_typeid
 St10ctype_base
 St10money_base
 St10moneypunctIcLb0EE
@@ -5905,76 +5692,31 @@ St10moneypunctIwLb1EE
 St11__timepunctIcE
 St11__timepunctIwE
 St11logic_error
-St11range_error
 St12codecvt_base
-St12ctype_bynameIcE
-St12ctype_bynameIwE
-St12domain_error
 St12length_error
 St12out_of_range
 St12system_error
 St13__ios_failure
 St13bad_exception
-St13basic_filebufIcSt11char_traitsIcEE
-St13basic_filebufIwSt11char_traitsIwEE
-St13basic_fstreamIcSt11char_traitsIcEE
-St13basic_fstreamIwSt11char_traitsIwEE
 St13basic_istreamIwSt11char_traitsIwEE
 St13basic_ostreamIwSt11char_traitsIwEE
 St13messages_base
 St13runtime_error
-St14basic_ifstreamIcSt11char_traitsIcEE
-St14basic_ifstreamIwSt11char_traitsIwEE
-St14basic_iostreamIwSt11char_traitsIwEE
-St14basic_ofstreamIcSt11char_traitsIcEE
-St14basic_ofstreamIwSt11char_traitsIwEE
-St14codecvt_bynameIcc11__mbstate_tE
-St14codecvt_bynameIwc11__mbstate_tE
-St14collate_bynameIcE
-St14collate_bynameIwE
-St14overflow_error
 St15basic_streambufIcSt11char_traitsIcEE
 St15basic_streambufIwSt11char_traitsIwEE
 St15basic_stringbufIcSt11char_traitsIcESaIcEE
-St15basic_stringbufIwSt11char_traitsIwESaIwEE
-St15messages_bynameIcE
-St15messages_bynameIwE
-St15numpunct_bynameIcE
-St15numpunct_bynameIwE
-St15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St15underflow_error
 St16__numpunct_cacheIcE
 St16__numpunct_cacheIwE
-St16invalid_argument
 St17__timepunct_cacheIcE
 St17__timepunct_cacheIwE
 St17bad_function_call
-St17moneypunct_bynameIcLb0EE
-St17moneypunct_bynameIcLb1EE
-St17moneypunct_bynameIwLb0EE
-St17moneypunct_bynameIwLb1EE
 St18__moneypunct_cacheIcLb0EE
 St18__moneypunct_cacheIcLb1EE
 St18__moneypunct_cacheIwLb0EE
 St18__moneypunct_cacheIwLb1EE
-St18basic_stringstreamIcSt11char_traitsIcESaIcEE
-St18basic_stringstreamIwSt11char_traitsIwESaIwEE
-St19__codecvt_utf8_baseIDiE
-St19__codecvt_utf8_baseIDsE
-St19__codecvt_utf8_baseIwE
 St19__iosfail_type_info
-St19basic_istringstreamIcSt11char_traitsIcESaIcEE
-St19basic_istringstreamIwSt11char_traitsIwESaIwEE
 St19basic_ostringstreamIcSt11char_traitsIcESaIcEE
-St19basic_ostringstreamIwSt11char_traitsIwESaIwEE
-St20__codecvt_utf16_baseIDiE
-St20__codecvt_utf16_baseIDsE
-St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
-St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
@@ -5982,9 +5724,6 @@ St23__codecvt_abstract_baseIDsDu11__mbstate_tE
 St23__codecvt_abstract_baseIDsc11__mbstate_tE
 St23__codecvt_abstract_baseIcc11__mbstate_tE
 St23__codecvt_abstract_baseIwc11__mbstate_tE
-St25__codecvt_utf8_utf16_baseIDiE
-St25__codecvt_utf8_utf16_baseIDsE
-St25__codecvt_utf8_utf16_baseIwE
 St5ctypeIcE
 St5ctypeIwE
 St7codecvtIDiDu11__mbstate_tE
@@ -6021,9 +5760,6 @@ St9time_base
 St9type_info
 Staging
 StandardPC
-Start Of Frame 0x%02x: width=%u, height=%u, components=%d
-Start Of Scan: %d components
-Start of Image
 Startup
 State
 StaticFileWriterThread()
@@ -6126,7 +5862,6 @@ Supported Types (%s)
 Suspect
 Suspected Hijacker
 Suspended
-Suspension not allowed here
 Swahili
 Swap
 SwappingStreamBuffers
@@ -6195,7 +5930,6 @@ TextEscape
 TextImage::Paint()
 TextKillFocus
 TextNewLine
-Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)\n
 Thaana
 Thai
 The JSON camel-case name of field "
@@ -6273,7 +6007,6 @@ Too many bad activation code attempts in period
 Too many bytes for PNG signature
 Too many changes to this account
 Too many changes to this phone number
-Too many color components: %d, max %d
 Too many logon attempts
 Too many pending
 Too much image data
@@ -6357,7 +6090,6 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unexpected end of string.
 Unexpected error
 Unexpected failure while serializing option submessage
-Unexpected marker 0x%02x
 Unexpected number of glibc version components
 Unexpected number of glibc version components: %d
 Unhandled serialized input msg(%d)\n
@@ -6371,9 +6103,6 @@ UninterpretedOption
 UnionPay
 Universe
 Unknown
-Unknown APP0 marker (not JFIF), length %u
-Unknown APP14 marker (not Adobe), length %u
-Unknown Adobe color transform code %d
 Unknown Driver
 Unknown GameID type
 Unknown HDR colorspace %d
@@ -6399,7 +6128,6 @@ UnpinnedCornerOffsetY
 Unprocessable Content
 Unrecognized character code '%c' in format string, ignoring
 Unrecognized character code (%c) in format string, ignoring
-Unrecognized component IDs %d %d %d, assuming YCbCr
 Unrecognized equation type for pCAL chunk
 Unrecognized field type: %d
 Unrecognized syntax:
@@ -6408,14 +6136,10 @@ Unrecognized unit type for pHYs chunk
 Unspecified
 Unspecified Error
 Unsupported
-Unsupported JPEG data precision %d
-Unsupported JPEG process: SOF type 0x%02x
 Unsupported Media Type
-Unsupported color conversion request
 Unsupported format qualifier %c%c
 Unsupported format qualifier l%c
 Unsupported format qualifier z%c
-Unsupported marker type 0x%02x
 Unsupported: type mismatch
 Update Optional
 Update Paused
@@ -6466,7 +6190,6 @@ VGUI_Setup001
 VGUI_Surface039
 VGUI_System011
 VGUI_ivgui007
-VGy#
 VIDEOS
 VISTA
 VPanel
@@ -6496,7 +6219,6 @@ V_GetFileExtension
 V_IsAbsolutePath
 V_IsSteamCloseProtocol
 V_IsValidURLCharacter
-V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_MakeAbsolutePath
 V_ParseURLQueryString
 V_RemoveDotSlashes
@@ -6585,15 +6307,9 @@ Verifying Staged
 VertScrollBar
 Video
 Video Init Failed
-Video memory stream frame cancel without lock!\n
-Video memory stream frame commit without lock!\n
-Video memory stream frame free without lock!\n
-Video memory stream reader destroyed with frame lock!\n
-Video memory stream writer destroyed with frame lock!\n
 VideoPublished
 Videos
 Vietnamese
-Virtual array controller messed up
 Visa
 Visa (BoaCompra)
 Visa Electron (BoaCompra)
@@ -6633,8 +6349,6 @@ Warning: Game claims to have rendered, but render stream is not empty.\n
 Warning: Memory was locked for put while destructing!\n
 Warning: The game hasn't rendered a frame from us in over 10 seconds.\n
 Warning: Tried to clear, but game started reading right as we would have done so. Last game frame rendered was %d ms ago\n
-Warning: thumbnail image size does not match data length %u
-Warning: unknown JFIF revision number %d.%02d
 WeChat
 WeakRandomFloat
 WeakRandomInt
@@ -6688,11 +6402,7 @@ WrapPanelItem
 WrapPanelItemVisibility
 Write Error
 Write Failed
-Write failed on temporary file --- out of disk space?
-Write to EMS failed
-Write to XMS failed
 Writing zero-length unknown chunk
-Wrong JPEG library version: library is %d, caller expects %d
 Wrong Price
 Wrote palette index exceeding num_palette
 X360
@@ -6725,7 +6435,6 @@ Zulu
 [M:%u:%u:%u]
 [TXN:%llu]
 [abi:
-[friend]
 [h1R
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
@@ -6930,9 +6639,10 @@ Zulu
 ] is an invalid data character in JavaScript compatibility mode
 ]JldN
 ^oEZ_
+_Accum
 _DIR
 _DMsg
-_Float
+_Fract
 _GLOBAL_
 _ITM_RU1
 _ITM_RU8
@@ -6943,16 +6653,11 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
+_Sat
 _SpewMessageType
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
-_ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
-_ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
-_ZSt10__exchangeIPKcDnET_RS3_OT0_
-_ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
-_ZSt10__exchangeIPcDnET_RS2_OT0_
-_ZSt10__exchangeIPwDnET_RS2_OT0_
 ________________________________
 __assert_fail
+__bss_start
 __ctype_b_loc
 __ctype_get_mb_cur_max
 __ctype_tolower_loc
@@ -6961,10 +6666,10 @@ __cxa_finalize
 __duplocale
 __errno_location
 __float128
-__fprintf_chk
 __freelocale
 __fxstat
 __fxstat64
+__getauxval
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
@@ -6974,27 +6679,20 @@ __isoc99_sscanf
 __iswctype_l
 __lxstat
 __lxstat64
-__memcpy_chk
 __newlocale
 __nl_langinfo_l
-__null == "Unexpected return value from pcre_config(NEWLINE)"
-__printf_chk
 __pthread_key_create
 __register_atfork
-__snprintf_chk
-__sprintf_chk
 __stack_chk_fail
+__stack_chk_guard
 __strcoll_l
 __strftime_l
 __strtod_l
 __strtof_l
 __strxfrm_l
-__test_and_acquire(long*)
-__tls_get_addr
 __towlower_l
 __towupper_l
 __uselocale
-__vsnprintf_chk
 __wcscoll_l
 __wcsftime_l
 __wcsxfrm_l
@@ -7045,6 +6743,8 @@ _actionSignalTargetDar
 _associateName
 _blank
 _clickableTextPanels
+_edata
+_end
 _imageDar
 _imageDar.IsValidIndex( index )
 _input
@@ -7080,6 +6780,10 @@ acpitz
 active
 additional_includes
 addressinfo
+adler32
+adler32_combine
+adler32_combine64
+adler32_z
 afrikaans
 aggregate_value
 airtel
@@ -7097,6 +6801,7 @@ allowed_extensions
 alnum
 alpha
 alphasort64
+alse
 amazon
 amazon.com
 amharic
@@ -7105,7 +6810,6 @@ amt.GetCurrencyCode() == GetCurrency()
 amtInitial.GetCurrencyCode() == GetCurrency()
 amtRecurring.GetCurrencyCode() == GetCurrency()
 amtrecurring
-an arena.
 an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)
 android
 android32
@@ -7135,6 +6839,7 @@ assamese
 assertion expected after (?(
 associate
 asusec
+atof
 attributes
 au PAY
 audio
@@ -7177,6 +6882,7 @@ bad height format
 bad keyword
 bad longjmp:
 bad parameters to zlib
+bad processing option (internal error)
 bad width format
 bad_function_call
 bad_url
@@ -7189,18 +6895,12 @@ base style
 baseIP.GetType() == k_EIPTypeV4
 baseIP.GetType() == k_EIPTypeV6
 baseline
-basic_filebuf::_M_convert_to_external conversion error
-basic_filebuf::underflow codecvt::max_length() is not valid
-basic_filebuf::underflow error reading the file
-basic_filebuf::underflow incomplete character in file
-basic_filebuf::underflow invalid byte sequence in file
-basic_filebuf::xsgetn error reading the file
 basic_ios::clear
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
-basic_string: construction from null is not valid
+basic_string::_M_construct null not valid
 basic_string::_M_create
 basic_string::_M_replace
 basic_string::_M_replace_aux
@@ -7210,14 +6910,12 @@ basic_string::append
 basic_string::assign
 basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
 basic_string::basic_string
-basic_string::compare
 basic_string::copy
 basic_string::erase
 basic_string::insert
 basic_string::replace
 basic_string::resize
 basic_string::substr
-basic_string_view::substr
 basque
 bbc.co.uk
 begin
@@ -7240,11 +6938,6 @@ blobSize <= nMaxBlobSize
 blogger.com
 bold
 bool
-bool __gnu_cxx::__is_null_pointer<char const>(char const*)
-bool __gnu_cxx::__is_null_pointer<char>(char*)
-bool __gnu_cxx::__is_null_pointer<wchar_t const>(wchar_t const*)
-bool __gnu_cxx::__is_null_pointer<wchar_t>(wchar_t*)
-bool __gnu_cxx::__ops::_Iter_less_val::operator()<unsigned long const*, unsigned long const>(unsigned long const*, unsigned long const&) const
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 bool pcrecpp::RE::DoMatch(const pcrecpp::StringPiece&, pcrecpp::RE::Anchor, int*, const pcrecpp::Arg* const*, int) const
 bool pcrecpp::RE::DoMatchImpl(const pcrecpp::StringPiece&, pcrecpp::RE::Anchor, int*, const pcrecpp::Arg* const*, int, int*, int) const
@@ -7272,8 +6965,6 @@ bsuccess
 btowc
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 buf.IsText()
-bufRGB.TellPut() == nWidth*nHeight*3
-bufRGBA.TellPut() == nWidth*nHeight * 4
 buffer error
 buffer. Use the 'bytes' type if you intend to send raw
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
@@ -7453,7 +7144,6 @@ clping
 cnet.com
 cnn.com
 cntrl
-co_await
 code
 codeweavers.com
 col < m_CurrentColumns.Count()
@@ -7469,6 +7159,8 @@ command
 common
 community
 community.csgo.com.cn
+community_assets/
+complex
 compressed data too long
 computed
 conditional group contains more than two branches
@@ -7554,6 +7246,10 @@ cpu %llu %llu %llu %llu %llu %llu %llu %llu %llu %llu
 cpu%d %llu %llu %llu %llu %llu %llu %llu %llu %llu %llu
 cpuinfo_min_freq
 crashhandler004
+crc32
+crc32_combine
+crc32_combine64
+crc32_z
 crc_header_mismatch
 created
 created64
@@ -7600,14 +7296,29 @@ decltype(nullptr)
 decompress_failed
 default
 default_local_path
+deflate
+deflateBound
+deflateCopy
+deflateEnd
 deflateEnd failed (ignored)
+deflateGetDictionary
+deflateInit2_
+deflateInit_
+deflateParams
+deflatePending
+deflatePrime
+deflateReset
+deflateResetKeep
+deflateSetDictionary
+deflateSetHeader
+deflateTune
+deflate_copyright
 deflate_gzip
 deflate_raw
 deflate_zip
 deflate_zlib
 delete
 delete[]
-deleted virtual method called\n
 delta
 deltax
 deltay
@@ -7673,11 +7384,9 @@ dynamic_cast
 eCmd > 0 && eCmd < eHTMLCommands_None
 eCurrencyCode
 eCurrencyCodeDelayed
-eFlag != FlagType{}
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 eRet != k_ESteamRealmUnknown
 eXIf
-eaFO
 east
 ebay.com
 echar >= schar
@@ -7812,7 +7521,7 @@ flock %s %s failed. errno = %d
 flock LOCK_EX %s failed, errno = %d\n
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 floor
-fmodf
+fmod
 fnmatch
 focus
 focused
@@ -7916,7 +7625,6 @@ gamma value
 gamma value does not match libpng estimate
 gamma value does not match sRGB
 gamma value out of range
-gc^A
 gcore
 generic
 georgian
@@ -7926,20 +7634,20 @@ gestures
 get_Count failed
 get_RebootRequired failed
 get_Updates failed
+get_crc_table
 get_disk_info
 getaddrinfo
 getc
 getcwd
-getentropy
 getenv
 getmntent
 getpid
 getpwuid
 getsockname
+gettext
 getuid
 getwc
 gizmodo.com
-glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 gmtime
@@ -8045,8 +7753,6 @@ google/protobuf/text_format.cc
 google/protobuf/unknown_field_set.cc
 google/protobuf/wire_format.cc
 google/protobuf/wire_format_lite.cc
-google::protobuf::FieldDescriptorProto_Label_IsValid(value)
-google::protobuf::FieldDescriptorProto_Type_IsValid(value)
 google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
 google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int)
 google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
@@ -8120,7 +7826,6 @@ htmlpopupchild
 http
 http:
 http://
-http://10.1.1.18:8282
 http\:
 httpclient
 httponly
@@ -8132,10 +7837,6 @@ https://%s.%s.steam.dev/
 https://%s.beta.steampowered.com/
 https://%s.steamchina.com/
 https://%s.steampowered.com/
-https://api-china.beta.valve.org
-https://api.beta.steampowered.com
-https://api.steamchina.com
-https://api.steampowered.com
 https://appmgmt.%s.steam.dev/
 https://avatars.beta.steamstatic.com/
 https://avatars.cdn.steamchina.eccdnx.com/
@@ -8152,10 +7853,8 @@ https://community-china.beta.valve.org/
 https://community.%s.steam.dev/
 https://community.csgo.com.cn/
 https://community.steamstatic.com/
-https://local.steam.dev:8283
 https://my.steamchina.com/
 https://my.steamchina.eccdnx.com/
-https://partner.steam-api.com
 https://partner.steamgames.com/
 https://s.team/q/
 https://shared.beta.steamstatic.com/
@@ -8193,6 +7892,7 @@ iTXt
 iTXt: invalid compression
 iTXt: invalid keyword
 iTXt: uncompressed text too long
+i[mpppp
 i]Wb
 icelandic
 iconv
@@ -8201,7 +7901,6 @@ iconv_open
 id_ID
 idempotency_level
 identifier_value
-if1R
 ig,o
 igbo
 ign.com
@@ -8215,6 +7914,7 @@ image-width-only
 imageAlignment
 imageSelected
 imagecolor
+imaginary
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
@@ -8234,10 +7934,28 @@ index >= 0 && index < kb->m_Panels.Count()
 indonesian
 infind
 infinity
+inflate
+inflateCodesUsed
+inflateCopy
+inflateEnd
+inflateGetDictionary
+inflateGetHeader
+inflateInit2_
+inflateInit_
+inflateMark
+inflatePrime
+inflateReset
+inflateReset2
+inflateResetKeep
+inflateSetDictionary
+inflateSync
+inflateSyncPoint
+inflateUndermine
+inflateValidate
+inflate_copyright
 info change after png_start_read_image or png_read_update_info
 info.m_pReplacementString == 0
 initial_height
-initializer for module
 input
 inputData
 inspectelement
@@ -8257,7 +7975,6 @@ internal error checking chromaticities
 internal error handling cHRM coefficients
 internal error handling cHRM->XYZ
 internal error in map key sorting
-internal error: array alloc
 internal error: array realloc
 internal error: code overflow
 internal error: overran compiling workspace
@@ -8326,8 +8043,6 @@ invited user
 ioctl
 ios32
 ios64
-ios_base::_M_grow_words allocation failed
-ios_base::_M_grow_words is not valid
 iostream
 iostream error
 ipv4_only
@@ -8377,6 +8092,7 @@ jupiter
 justify
 k10temp
 k2U\v
+k\fC0123456789ABCDEFfixed point overflow in
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
 k_BluetoothDeviceType_Headset
@@ -8650,7 +8366,6 @@ keycode
 keyword "@1": bad character '0x@2'
 keyword truncated
 keywordsstudios.com
-kh9F
 khmer
 kiche
 kicked from chat
@@ -8680,7 +8395,7 @@ latvian
 layout_tab
 lazy
 lchown
-ld-linux-x86-64.so.2
+ld-linux-aarch64.so.1
 leading_comments
 leading_detached_comments
 led_brightness
@@ -8696,13 +8411,10 @@ length exceeds PNG maximum
 length_ >= n
 lenovo
 level3
-libSDL3.so.0
-libSDL3_image.so.0
 libaudio.so
 libavif.so.16
 libc.so.6
 libdl.so.2
-libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
 libm.so.6
 libnvidia-ml.so.1
 libpng does not support gamma+background+rgb_to_gray
@@ -8744,16 +8456,13 @@ linux5x
 linux64
 linux6x
 linux7x
+linux_arm64_beta_861407927dc8efb407da7cf
 list
 lithuanian
 live.com
 llnw
 local
-locale::_Impl::_M_replace_facet
-locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
-locale::facet::_S_lc_ctype_c_locale duplocale error
-locale::facet::_S_lc_ctype_c_locale newlocale error
 localeconv
 localization
 localization_path
@@ -8963,6 +8672,7 @@ m_tree
 m_unInCounter == m_unOutCounter
 m_unused
 m_usType == k_EIPTypeV6
+m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
 m_vecAllWGAuthedURLs
 m_vecAllWGAuthedURLs[i]
 m_vecCallbacks
@@ -9102,7 +8812,6 @@ modf
 modified
 modified64
 modifiers
-mold 2.36.0 (compatible with GNU ld)
 mongolian
 month
 mopay
@@ -9111,7 +8820,6 @@ mouseinputenabled
 mp4-single
 msn.com
 msync
-mt19937
 multiple_raster_threads
 munmap
 music
@@ -9125,9 +8833,7 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nDay < 32
 nDay > 0
 nGrowSize >= 0
-nImageHeight == nOutputHeight
 nIndex < ( unsigned int )m_list.Count()
-nMaximumX <= 0xFFFF && nMaximumY <= 0xFFFF
 nMinCapacity <= k_nMaxStringSize
 nMinCapacity > Capacity()
 nMinCapacity >= nChars
@@ -9142,7 +8848,6 @@ nSize > 0
 nSize >= 0
 nTargetFrameRate
 nTargetLength > 0
-nWidth >= 0 && nHeight >= 0
 nYear > 1712
 nYear >= 1900 && nMonth >= 1 && nMonth <= 12
 name
@@ -9156,11 +8861,13 @@ network
 networkmgr
 new
 new[]
+news/
 nexon_dota2
 next
 ngaa
 nl_NL
 no associated editable control
+no bootstrapper found
 no color-map for color-mapped image
 no control selected
 no error
@@ -9171,7 +8878,6 @@ no space in chunk cache
 no style configured
 no_NO
 no_standard_descriptor_accessor
-noexcept
 non-hex character in \x{} (closing brace missing?)
 non-octal character in \o{} (closing brace missing?)
 non-positive height
@@ -9186,6 +8892,7 @@ north-west
 northeast
 northwest
 norwegian
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 not in
 nothing to repeat
 notificationtoasts
@@ -9209,8 +8916,6 @@ nvmlShutdown
 nytimes.com
 oFFs
 oauthclient
-obj_count
-obj_size
 objc_class_prefix
 object
 object_properties
@@ -9219,7 +8924,6 @@ odia
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
-okOP
 oldtall
 oldwide
 only_allow_trusted_popups
@@ -9252,7 +8956,6 @@ othervr
 out of memory
 out of place
 out-of-date sRGB profile with no signature
-outEnvFD != -1
 output gamma out of expected range
 output specified is nullptr
 outputData
@@ -9280,9 +8983,6 @@ pName
 pNode && pNode->Next == QueueEnd()
 pPool->m_SpaceUsed < 0xFFFF
 pScheme
-pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 3) || pDest > pSrc + (srcWidth * srcHeight * 4)
-pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
-pSurface->pitch == pSurface->w * 4
 pTemperature is a required paramater
 pToken
 pToolWindow
@@ -9340,6 +9040,8 @@ pcre_stack_free
 pcre_stack_guard
 pcre_stack_malloc
 pcrecpp.cc
+pcrecpp::Arg::Arg(void*)
+pcrecpp::Arg::Parse(char const*, int) const
 pcrecpp::Arg::parse_char(char const*, int, void*)
 pcrecpp::Arg::parse_double(char const*, int, void*)
 pcrecpp::Arg::parse_float(char const*, int, void*)
@@ -9417,51 +9119,439 @@ player
 please implement MergeFrom for your type.
 plogs
 plugin
-pm"U
+png_access_version_number
+png_app_error
+png_app_warning
+png_ascii_from_fixed
+png_ascii_from_fp
+png_benign_error
+png_build_gamma_table
+png_build_grayscale_palette
+png_calculate_crc
+png_calloc
+png_check_IHDR
+png_check_chunk_length
+png_check_chunk_name
+png_check_fp_number
+png_check_fp_string
+png_check_keyword
+png_chunk_benign_error
+png_chunk_error
+png_chunk_report
+png_chunk_unknown_handling
+png_chunk_warning
+png_colorspace_set_ICC
+png_colorspace_set_chromaticities
+png_colorspace_set_endpoints
+png_colorspace_set_gamma
+png_colorspace_set_rgb_coefficients
+png_colorspace_set_sRGB
+png_colorspace_sync
+png_colorspace_sync_info
+png_combine_row
+png_compress_IDAT
+png_convert_from_struct_tm
+png_convert_from_time_t
+png_convert_to_rfc1123
+png_convert_to_rfc1123_buffer
+png_crc_error
+png_crc_finish
+png_crc_read
+png_create_info_struct
+png_create_png_struct
+png_create_read_struct
+png_create_read_struct_2
+png_create_write_struct
+png_create_write_struct_2
+png_data_freer
+png_default_flush
+png_default_read_data
+png_default_write_data
+png_destroy_gamma_table
+png_destroy_info_struct
+png_destroy_png_struct
+png_destroy_read_struct
+png_destroy_write_struct
+png_do_bgr
+png_do_check_palette_indexes
 png_do_encode_alpha: unexpected call
+png_do_expand_palette_rgb8_neon
+png_do_expand_palette_rgba8_neon
+png_do_invert
+png_do_packswap
 png_do_quantize returned rowbytes=0
+png_do_read_interlace
+png_do_read_transformations
 png_do_rgb_to_gray found nongray pixel
+png_do_strip_channel
+png_do_swap
+png_do_write_interlace
+png_do_write_transformations
+png_error
+png_fixed
+png_fixed_error
+png_flush
+png_format_number
+png_formatted_warning
+png_free
+png_free_buffer_list
+png_free_data
+png_free_default
+png_free_jmpbuf
+png_gamma_16bit_correct
+png_gamma_8bit_correct
+png_gamma_correct
+png_gamma_significant
+png_get_IHDR
+png_get_PLTE
+png_get_bKGD
+png_get_bit_depth
+png_get_cHRM
+png_get_cHRM_XYZ
+png_get_cHRM_XYZ_fixed
+png_get_cHRM_fixed
+png_get_channels
+png_get_chunk_cache_max
+png_get_chunk_malloc_max
+png_get_color_type
+png_get_compression_buffer_size
+png_get_compression_type
+png_get_copyright
+png_get_current_pass_number
+png_get_current_row_number
+png_get_eXIf
 png_get_eXIf does not work; use png_get_eXIf_1
+png_get_eXIf_1
+png_get_error_ptr
+png_get_filter_type
+png_get_gAMA
+png_get_gAMA_fixed
+png_get_hIST
+png_get_header_ver
+png_get_header_version
+png_get_iCCP
+png_get_image_height
+png_get_image_width
+png_get_int_32
+png_get_interlace_type
+png_get_io_chunk_type
+png_get_io_ptr
+png_get_io_state
+png_get_libpng_ver
+png_get_mem_ptr
+png_get_oFFs
+png_get_pCAL
+png_get_pHYs
+png_get_pHYs_dpi
+png_get_palette_max
+png_get_pixel_aspect_ratio
+png_get_pixel_aspect_ratio_fixed
+png_get_pixels_per_inch
+png_get_pixels_per_meter
+png_get_rgb_to_gray_status
+png_get_rowbytes
+png_get_rows
+png_get_sBIT
+png_get_sCAL
+png_get_sCAL_fixed
+png_get_sCAL_s
+png_get_sPLT
+png_get_sRGB
+png_get_signature
+png_get_tIME
+png_get_tRNS
+png_get_text
+png_get_uint_16
+png_get_uint_31
+png_get_uint_32
+png_get_unknown_chunks
+png_get_user_chunk_ptr
+png_get_user_height_max
+png_get_user_transform_ptr
+png_get_user_width_max
+png_get_valid
+png_get_x_offset_inches
+png_get_x_offset_inches_fixed
+png_get_x_offset_microns
+png_get_x_offset_pixels
+png_get_x_pixels_per_inch
+png_get_x_pixels_per_meter
+png_get_y_offset_inches
+png_get_y_offset_inches_fixed
+png_get_y_offset_microns
+png_get_y_offset_pixels
+png_get_y_pixels_per_inch
+png_get_y_pixels_per_meter
+png_handle_IEND
+png_handle_IHDR
+png_handle_PLTE
+png_handle_as_unknown
+png_handle_bKGD
+png_handle_cHRM
+png_handle_eXIf
+png_handle_gAMA
+png_handle_hIST
+png_handle_iCCP
+png_handle_iTXt
+png_handle_oFFs
+png_handle_pCAL
+png_handle_pHYs
+png_handle_sBIT
+png_handle_sCAL
+png_handle_sPLT
+png_handle_sRGB
+png_handle_tEXt
+png_handle_tIME
+png_handle_tRNS
+png_handle_unknown
+png_handle_zTXt
+png_icc_check_header
+png_icc_check_length
+png_icc_check_tag_table
+png_icc_set_sRGB
+png_image_begin_read_from_file
 png_image_begin_read_from_file: incorrect PNG_IMAGE_VERSION
 png_image_begin_read_from_file: invalid argument
+png_image_begin_read_from_memory
 png_image_begin_read_from_memory: incorrect PNG_IMAGE_VERSION
 png_image_begin_read_from_memory: invalid argument
+png_image_begin_read_from_stdio
 png_image_begin_read_from_stdio: incorrect PNG_IMAGE_VERSION
 png_image_begin_read_from_stdio: invalid argument
+png_image_error
+png_image_finish_read
 png_image_finish_read: damaged PNG_IMAGE_VERSION
 png_image_finish_read: image too large
 png_image_finish_read: invalid argument
 png_image_finish_read: row_stride too large
 png_image_finish_read[color-map]: no color-map
+png_image_free
 png_image_read: alpha channel lost
 png_image_read: opaque pointer not NULL
 png_image_read: out of memory
 png_image_write_: out of memory
+png_image_write_to_file
 png_image_write_to_file: incorrect PNG_IMAGE_VERSION
 png_image_write_to_file: invalid argument
+png_image_write_to_memory
 png_image_write_to_memory: PNG too big
 png_image_write_to_memory: incorrect PNG_IMAGE_VERSION
 png_image_write_to_memory: invalid argument
+png_image_write_to_stdio
 png_image_write_to_stdio: incorrect PNG_IMAGE_VERSION
 png_image_write_to_stdio: invalid argument
+png_info_init_3
+png_init_filter_functions_neon
+png_init_io
+png_init_read_transformations
+png_longjmp
+png_malloc
+png_malloc_array
+png_malloc_base
+png_malloc_default
+png_malloc_warn
+png_muldiv
+png_muldiv_warn
+png_permit_mng_features
+png_read_IDAT_data
+png_read_chunk_header
+png_read_data
+png_read_end
+png_read_filter_row
+png_read_filter_row_avg3_neon
+png_read_filter_row_avg4_neon
+png_read_filter_row_paeth3_neon
+png_read_filter_row_paeth4_neon
+png_read_filter_row_sub3_neon
+png_read_filter_row_sub4_neon
+png_read_filter_row_up_neon
+png_read_finish_IDAT
+png_read_finish_row
+png_read_image
 png_read_image: invalid transformations
 png_read_image: unsupported transformation
+png_read_info
+png_read_png
+png_read_row
+png_read_rows
+png_read_sig
+png_read_start_row
+png_read_transform_info
+png_read_update_info
 png_read_update_info/png_start_read_image: duplicate call
+png_realloc_array
+png_reciprocal
+png_reciprocal2
+png_reset_crc
+png_reset_zstream
+png_riffle_palette_neon
+png_sRGB_base
+png_sRGB_delta
+png_sRGB_table
+png_safe_error
+png_safe_execute
+png_safe_warning
+png_safecat
+png_save_int_32
+png_save_uint_16
+png_save_uint_32
+png_set_IHDR
+png_set_PLTE
+png_set_add_alpha
+png_set_alpha_mode
+png_set_alpha_mode_fixed
+png_set_bKGD
 png_set_background
+png_set_background_fixed
+png_set_benign_errors
+png_set_bgr
+png_set_cHRM
+png_set_cHRM_XYZ
+png_set_cHRM_XYZ_fixed
+png_set_cHRM_fixed
+png_set_check_for_invalid_index
+png_set_chunk_cache_max
+png_set_chunk_malloc_max
+png_set_compression_buffer_size
+png_set_compression_level
+png_set_compression_mem_level
+png_set_compression_method
+png_set_compression_strategy
+png_set_compression_window_bits
+png_set_crc_action
+png_set_eXIf
 png_set_eXIf does not work; use png_set_eXIf_1
+png_set_eXIf_1
+png_set_error_fn
+png_set_expand
+png_set_expand_16
+png_set_expand_gray_1_2_4_to_8
+png_set_filler
 png_set_filler is invalid for low bit depth gray output
 png_set_filler: inappropriate color type
+png_set_filter
 png_set_filter: UP/AVG/PAETH cannot be added after start
+png_set_filter_heuristics
+png_set_filter_heuristics_fixed
+png_set_flush
 png_set_gAMA
+png_set_gAMA_fixed
+png_set_gamma
+png_set_gamma_fixed
+png_set_gray_to_rgb
+png_set_hIST
+png_set_iCCP
+png_set_interlace_handling
+png_set_invalid
+png_set_invert_alpha
+png_set_invert_mono
+png_set_keep_unknown_chunks
 png_set_keep_unknown_chunks: invalid keep
 png_set_keep_unknown_chunks: no chunk list
 png_set_keep_unknown_chunks: too many chunks
+png_set_longjmp_fn
+png_set_mem_fn
+png_set_oFFs
+png_set_option
+png_set_pCAL
+png_set_pHYs
+png_set_packing
+png_set_packswap
+png_set_palette_to_rgb
+png_set_quantize
+png_set_read_fn
+png_set_read_status_fn
+png_set_read_user_chunk_fn
+png_set_read_user_transform_fn
+png_set_rgb_to_gray
+png_set_rgb_to_gray_fixed
+png_set_rows
+png_set_sBIT
+png_set_sCAL
+png_set_sCAL_fixed
+png_set_sCAL_s
+png_set_sPLT
 png_set_sPLT: invalid sPLT
+png_set_sRGB
+png_set_sRGB_gAMA_and_cHRM
+png_set_scale_16
+png_set_shift
+png_set_sig_bytes
+png_set_strip_16
+png_set_strip_alpha
+png_set_swap
+png_set_swap_alpha
+png_set_tIME
+png_set_tRNS
+png_set_tRNS_to_alpha
+png_set_text
+png_set_text_2
+png_set_text_compression_level
+png_set_text_compression_mem_level
+png_set_text_compression_method
+png_set_text_compression_strategy
+png_set_text_compression_window_bits
+png_set_unknown_chunk_location
+png_set_unknown_chunks
 png_set_unknown_chunks now expects a valid location
+png_set_user_limits
+png_set_user_transform_info
+png_set_write_fn
+png_set_write_status_fn
+png_set_write_user_transform_fn
+png_sig_cmp
+png_start_read_image
 png_start_read_image/png_read_update_info: duplicate call
+png_user_version_check
+png_warning
+png_warning_parameter
+png_warning_parameter_signed
+png_warning_parameter_unsigned
+png_write_IEND
+png_write_IHDR
+png_write_PLTE
+png_write_bKGD
+png_write_cHRM_fixed
+png_write_chunk
+png_write_chunk_data
+png_write_chunk_end
+png_write_chunk_start
+png_write_data
+png_write_eXIf
+png_write_end
+png_write_find_filter
+png_write_finish_row
+png_write_flush
+png_write_gAMA_fixed
+png_write_hIST
+png_write_iCCP
+png_write_iTXt
+png_write_image
 png_write_image: internal call error
 png_write_image: unsupported transformation
+png_write_info
 png_write_info was never called before png_write_row
+png_write_info_before_PLTE
+png_write_oFFs
+png_write_pCAL
+png_write_pHYs
+png_write_png
+png_write_row
+png_write_rows
+png_write_sBIT
+png_write_sCAL_s
+png_write_sPLT
+png_write_sRGB
+png_write_sig
+png_write_start_row
+png_write_tEXt
+png_write_tIME
+png_write_tRNS
+png_write_zTXt
+png_zalloc
+png_zfree
+png_zlib_inflate
+png_zstream_error
 policies
 polish
 poll
@@ -9514,9 +9604,6 @@ pt-BR
 pt-br
 pt_BR
 pt_PT
-pthread_cancel
-pthread_cond_broadcast
-pthread_cond_wait
 pthread_create
 pthread_detach
 pthread_mutex_lock
@@ -9531,6 +9618,7 @@ public_dependency
 publish
 punct
 purchase
+pure virtual method called\n
 putc
 putwc
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -9542,6 +9630,7 @@ pwrd_unicom
 pwrite64
 py_generic_services
 qR5FE%
+qcom
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 qsort
 quantil
@@ -9554,18 +9643,9 @@ qwilt
 rFilePatterns
 rack
 rackspace
-random_device could not be read
-random_device: getentropy failed
-random_device: rdrand failed
-random_device: rdseed failed
-random_device::random_device(const std::string&): device not available
-random_device::random_device(const std::string&): unsupported token
 range out of order in character class
 rapidshare.com
 raw_draw
-rdrand
-rdrnd
-rdseed
 read
 read beyond end of data
 readdir64
@@ -9662,18 +9742,13 @@ rmdir
 ro_RO
 romanian
 root
-round
-roundf
 routes
-row_stride == (int)( nImageWidth * jpegInfo.output_components )
-row_stride_out >= row_stride
 rowheight
 ru&o
 ru_RU
 runevent
 rungame
 russian
-sAmTb
 sBIT
 sCAL
 sCAL height
@@ -9681,6 +9756,7 @@ sCAL width
 sPLT
 sPLT chunk has bad length
 sPLT chunk requires too much memory
+sPLT chunk too long
 sPLT out of memory
 sPLT: invalid keyword
 sRGB
@@ -9723,13 +9799,12 @@ scroll
 scrollbar
 scrollx
 scrolly
-sdk64
+sdkarm64
 searchbuttontext
 second
 section
 sections
 secure
-secure_getenv
 sel->IsLabelEditingAllowed()
 selected
 selection_class
@@ -9848,20 +9923,19 @@ statvfs64
 statvfs64 failed for %s, errno %d %s
 statvfs64 reports success but zero free space\n
 statvfs64: ret %d errno %d\n
-std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
-std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
+std::__once_call
+std::__once_callable
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
 std::bad_cast
 std::bad_exception
-std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::bfloat16_t
+std::exception
 std::iostream
 std::istream
 std::ostream
@@ -9872,8 +9946,6 @@ stdin
 stdio
 stdout
 steam
-steam-runtime-launch-client --alongside-steam --
-steam-runtime-launch-client --alongside-steam -- sudo -n jupiter-biosupdate
 steam.pid
 steam/cached/icon_tab_placement_arrow
 steam:
@@ -9933,12 +10005,10 @@ stream error
 streaming
 streaming_steamdesktop.vdf
 strerror
-strerror_r
 strftime
 string
 string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext, string appearance
 string literal
-string::string
 strings::Substitute format string invalid: asked for "$
 strlen
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
@@ -10029,7 +10099,6 @@ telugu
 telus
 temp*
 temp1_input
-template
 template parameter object for
 tencent
 terminate called after throwing an instance of '
@@ -10050,7 +10119,6 @@ textureid
 tf2.com
 th_TH
 thai
-the Element type supplies a MergeFrom() operation to make copies.
 the actual field type (for enums T should be the generated enum
 the global scope
 the join request was approved by a mod
@@ -10068,7 +10136,6 @@ tinet
 title
 tlGrip
 toggledevtools
-tolower
 too many forward references
 too many length or distance symbols
 too many named subpatterns (maximum 10000)
@@ -10119,7 +10186,6 @@ typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
@@ -10128,11 +10194,9 @@ typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
-typename
 ui_mode
 uint
 uint32
@@ -10141,7 +10205,6 @@ uk_UA
 ukrainian
 ulValue < k_nMaxJSNumber
 un-banned from chat
-unFrameSize % 16 == 0
 unNetworkBitsIPv4 <= 32
 unNetworkBitsIPv4 >= 8
 unNetworkBitsIPv6 <= 64
@@ -10227,7 +10290,6 @@ vec[0] >= 0
 vec[1] >= 0
 vector::_M_default_append
 vector::_M_range_insert
-vector::_M_realloc_append
 vector::_M_realloc_insert
 vector::reserve
 vendor
@@ -10301,7 +10363,6 @@ vtable for __gnu_cxx::recursive_init_error
 vtw\nx
 vulkan
 w+OQvr
-w+bx
 w3Xc
 wXR\r
 waiting
@@ -10404,9 +10465,11 @@ yoruba
 youtube.com
 ypos
 zC`G;
+zError
 zTXt
 zTXt: invalid compression type
 zTXt: invalid keyword
+z_errmsg
 zenpower
 zh-cn
 zh-tw
@@ -10415,6 +10478,8 @@ zh_CN
 zh_TW
 zh_XC
 zlib IO error
+zlibCompileFlags
+zlibVersion
 zoom
 zpos
 zstd_dict_valve
@@ -10423,7 +10488,7 @@ zstream unclaimed
 zulu
 {default arg#
 {kHw
-{lambda
+{lambda(
 {parm#
 {unnamed type#
 {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{

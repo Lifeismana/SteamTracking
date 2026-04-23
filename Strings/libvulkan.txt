@@ -1,0 +1,2494 @@
+
+               Disable Env Var:  %s
+               [%u] %s
+               [%u] %s %p %s
+           Group %u
+           Library:  %s
+           Manifest: %s
+           Type: %s
+           [%u] %s
+           [%u] %s  %s
+       Using "%s" with driver: "%s"
+     Original order:
+     Sorted order:
+   <Application>
+   <Device>
+   <Drivers>
+   <Loader>
+   Found no files
+   Found the following files:
+   In following locations:
+ with error 193
+ with error 8
+%s: Unable to load implicit layer library "%s"
+%s: Unable to resolve symbol "%s" in implicit layer library "%s"
+'9Ee#
+---- Layer Configuration [%d] ----
+---------------------------------
+--Override layer found but not used because app '%s' is not in 'app_keys' list!
+.json
+/.config
+/.local/share
+/.local/share/vulkan/loader_settings.d/vk_loader_settings.json
+/etc
+/etc/xdg
+/proc/self/exe
+/usr/local/share:/usr/share
+/vulkan/loader_settings.d/vk_loader_settings.json
+>override
+AcquireDrmDisplayEXT
+AcquireNextImage2KHR
+AcquireNextImageKHR
+AcquirePerformanceConfigurationINTEL
+AcquireProfilingLockKHR
+AcquireXlibDisplayEXT
+AllocateCommandBuffers
+AllocateDescriptorSets
+AllocateMemory
+AntiLagUpdateAMD
+Bad destination in loader trampoline dispatch,Are layers and extensions that you are calling enabled?
+BeginCommandBuffer
+BindAccelerationStructureMemoryNV
+BindBufferMemory
+BindBufferMemory2
+BindBufferMemory2KHR
+BindImageMemory
+BindImageMemory2
+BindImageMemory2KHR
+BindOpticalFlowSessionImageNV
+BindVideoSessionMemoryKHR
+BuildAccelerationStructuresKHR
+BuildMicromapsEXT
+CmdBeginConditionalRenderingEXT
+CmdBeginDebugUtilsLabelEXT
+CmdBeginQuery
+CmdBeginQueryIndexedEXT
+CmdBeginRenderPass
+CmdBeginRenderPass2
+CmdBeginRenderPass2KHR
+CmdBeginRendering
+CmdBeginRenderingKHR
+CmdBeginTransformFeedbackEXT
+CmdBeginVideoCodingKHR
+CmdBindDescriptorBufferEmbeddedSamplers2EXT
+CmdBindDescriptorBufferEmbeddedSamplersEXT
+CmdBindDescriptorBuffersEXT
+CmdBindDescriptorSets
+CmdBindDescriptorSets2KHR
+CmdBindIndexBuffer
+CmdBindIndexBuffer2KHR
+CmdBindInvocationMaskHUAWEI
+CmdBindPipeline
+CmdBindPipelineShaderGroupNV
+CmdBindShadersEXT
+CmdBindShadingRateImageNV
+CmdBindTransformFeedbackBuffersEXT
+CmdBindVertexBuffers
+CmdBindVertexBuffers2
+CmdBindVertexBuffers2EXT
+CmdBlitImage
+CmdBlitImage2
+CmdBlitImage2KHR
+CmdBuildAccelerationStructureNV
+CmdBuildAccelerationStructuresIndirectKHR
+CmdBuildAccelerationStructuresKHR
+CmdBuildMicromapsEXT
+CmdClearAttachments
+CmdClearColorImage
+CmdClearDepthStencilImage
+CmdControlVideoCodingKHR
+CmdCopyAccelerationStructureKHR
+CmdCopyAccelerationStructureNV
+CmdCopyAccelerationStructureToMemoryKHR
+CmdCopyBuffer
+CmdCopyBuffer2
+CmdCopyBuffer2KHR
+CmdCopyBufferToImage
+CmdCopyBufferToImage2
+CmdCopyBufferToImage2KHR
+CmdCopyImage
+CmdCopyImage2
+CmdCopyImage2KHR
+CmdCopyImageToBuffer
+CmdCopyImageToBuffer2
+CmdCopyImageToBuffer2KHR
+CmdCopyMemoryIndirectNV
+CmdCopyMemoryToAccelerationStructureKHR
+CmdCopyMemoryToImageIndirectNV
+CmdCopyMemoryToMicromapEXT
+CmdCopyMicromapEXT
+CmdCopyMicromapToMemoryEXT
+CmdCopyQueryPoolResults
+CmdCuLaunchKernelNVX
+CmdCudaLaunchKernelNV
+CmdDebugMarkerBeginEXT
+CmdDebugMarkerEndEXT
+CmdDebugMarkerInsertEXT
+CmdDecodeVideoKHR
+CmdDecompressMemoryIndirectCountNV
+CmdDecompressMemoryNV
+CmdDispatch
+CmdDispatchBase
+CmdDispatchBaseKHR
+CmdDispatchGraphAMDX
+CmdDispatchGraphIndirectAMDX
+CmdDispatchGraphIndirectCountAMDX
+CmdDispatchIndirect
+CmdDraw
+CmdDrawClusterHUAWEI
+CmdDrawClusterIndirectHUAWEI
+CmdDrawIndexed
+CmdDrawIndexedIndirect
+CmdDrawIndexedIndirectCount
+CmdDrawIndexedIndirectCountAMD
+CmdDrawIndexedIndirectCountKHR
+CmdDrawIndirect
+CmdDrawIndirectByteCountEXT
+CmdDrawIndirectCount
+CmdDrawIndirectCountAMD
+CmdDrawIndirectCountKHR
+CmdDrawMeshTasksEXT
+CmdDrawMeshTasksIndirectCountEXT
+CmdDrawMeshTasksIndirectCountNV
+CmdDrawMeshTasksIndirectEXT
+CmdDrawMeshTasksIndirectNV
+CmdDrawMeshTasksNV
+CmdDrawMultiEXT
+CmdDrawMultiIndexedEXT
+CmdEncodeVideoKHR
+CmdEndConditionalRenderingEXT
+CmdEndDebugUtilsLabelEXT
+CmdEndQuery
+CmdEndQueryIndexedEXT
+CmdEndRenderPass
+CmdEndRenderPass2
+CmdEndRenderPass2KHR
+CmdEndRendering
+CmdEndRenderingKHR
+CmdEndTransformFeedbackEXT
+CmdEndVideoCodingKHR
+CmdExecuteCommands
+CmdExecuteGeneratedCommandsEXT
+CmdExecuteGeneratedCommandsNV
+CmdFillBuffer
+CmdInitializeGraphScratchMemoryAMDX
+CmdInsertDebugUtilsLabelEXT
+CmdNextSubpass
+CmdNextSubpass2
+CmdNextSubpass2KHR
+CmdOpticalFlowExecuteNV
+CmdPipelineBarrier
+CmdPipelineBarrier2
+CmdPipelineBarrier2KHR
+CmdPreprocessGeneratedCommandsEXT
+CmdPreprocessGeneratedCommandsNV
+CmdPushConstants
+CmdPushConstants2KHR
+CmdPushDescriptorSet2KHR
+CmdPushDescriptorSetKHR
+CmdPushDescriptorSetWithTemplate2KHR
+CmdPushDescriptorSetWithTemplateKHR
+CmdResetEvent
+CmdResetEvent2
+CmdResetEvent2KHR
+CmdResetQueryPool
+CmdResolveImage
+CmdResolveImage2
+CmdResolveImage2KHR
+CmdSetAlphaToCoverageEnableEXT
+CmdSetAlphaToOneEnableEXT
+CmdSetAttachmentFeedbackLoopEnableEXT
+CmdSetBlendConstants
+CmdSetCheckpointNV
+CmdSetCoarseSampleOrderNV
+CmdSetColorBlendAdvancedEXT
+CmdSetColorBlendEnableEXT
+CmdSetColorBlendEquationEXT
+CmdSetColorWriteEnableEXT
+CmdSetColorWriteMaskEXT
+CmdSetConservativeRasterizationModeEXT
+CmdSetCoverageModulationModeNV
+CmdSetCoverageModulationTableEnableNV
+CmdSetCoverageModulationTableNV
+CmdSetCoverageReductionModeNV
+CmdSetCoverageToColorEnableNV
+CmdSetCoverageToColorLocationNV
+CmdSetCullMode
+CmdSetCullModeEXT
+CmdSetDepthBias
+CmdSetDepthBias2EXT
+CmdSetDepthBiasEnable
+CmdSetDepthBiasEnableEXT
+CmdSetDepthBounds
+CmdSetDepthBoundsTestEnable
+CmdSetDepthBoundsTestEnableEXT
+CmdSetDepthClampEnableEXT
+CmdSetDepthClampRangeEXT
+CmdSetDepthClipEnableEXT
+CmdSetDepthClipNegativeOneToOneEXT
+CmdSetDepthCompareOp
+CmdSetDepthCompareOpEXT
+CmdSetDepthTestEnable
+CmdSetDepthTestEnableEXT
+CmdSetDepthWriteEnable
+CmdSetDepthWriteEnableEXT
+CmdSetDescriptorBufferOffsets2EXT
+CmdSetDescriptorBufferOffsetsEXT
+CmdSetDeviceMask
+CmdSetDeviceMaskKHR
+CmdSetDiscardRectangleEXT
+CmdSetDiscardRectangleEnableEXT
+CmdSetDiscardRectangleModeEXT
+CmdSetEvent
+CmdSetEvent2
+CmdSetEvent2KHR
+CmdSetExclusiveScissorEnableNV
+CmdSetExclusiveScissorNV
+CmdSetExtraPrimitiveOverestimationSizeEXT
+CmdSetFragmentShadingRateEnumNV
+CmdSetFragmentShadingRateKHR
+CmdSetFrontFace
+CmdSetFrontFaceEXT
+CmdSetLineRasterizationModeEXT
+CmdSetLineStippleEXT
+CmdSetLineStippleEnableEXT
+CmdSetLineStippleKHR
+CmdSetLineWidth
+CmdSetLogicOpEXT
+CmdSetLogicOpEnableEXT
+CmdSetPatchControlPointsEXT
+CmdSetPerformanceMarkerINTEL
+CmdSetPerformanceOverrideINTEL
+CmdSetPerformanceStreamMarkerINTEL
+CmdSetPolygonModeEXT
+CmdSetPrimitiveRestartEnable
+CmdSetPrimitiveRestartEnableEXT
+CmdSetPrimitiveTopology
+CmdSetPrimitiveTopologyEXT
+CmdSetProvokingVertexModeEXT
+CmdSetRasterizationSamplesEXT
+CmdSetRasterizationStreamEXT
+CmdSetRasterizerDiscardEnable
+CmdSetRasterizerDiscardEnableEXT
+CmdSetRayTracingPipelineStackSizeKHR
+CmdSetRenderingAttachmentLocationsKHR
+CmdSetRenderingInputAttachmentIndicesKHR
+CmdSetRepresentativeFragmentTestEnableNV
+CmdSetSampleLocationsEXT
+CmdSetSampleLocationsEnableEXT
+CmdSetSampleMaskEXT
+CmdSetScissor
+CmdSetScissorWithCount
+CmdSetScissorWithCountEXT
+CmdSetShadingRateImageEnableNV
+CmdSetStencilCompareMask
+CmdSetStencilOp
+CmdSetStencilOpEXT
+CmdSetStencilReference
+CmdSetStencilTestEnable
+CmdSetStencilTestEnableEXT
+CmdSetStencilWriteMask
+CmdSetTessellationDomainOriginEXT
+CmdSetVertexInputEXT
+CmdSetViewport
+CmdSetViewportShadingRatePaletteNV
+CmdSetViewportSwizzleNV
+CmdSetViewportWScalingEnableNV
+CmdSetViewportWScalingNV
+CmdSetViewportWithCount
+CmdSetViewportWithCountEXT
+CmdSubpassShadingHUAWEI
+CmdTraceRaysIndirect2KHR
+CmdTraceRaysIndirectKHR
+CmdTraceRaysKHR
+CmdTraceRaysNV
+CmdUpdateBuffer
+CmdUpdatePipelineIndirectBufferNV
+CmdWaitEvents
+CmdWaitEvents2
+CmdWaitEvents2KHR
+CmdWriteAccelerationStructuresPropertiesKHR
+CmdWriteAccelerationStructuresPropertiesNV
+CmdWriteBufferMarker2AMD
+CmdWriteBufferMarkerAMD
+CmdWriteMicromapsPropertiesEXT
+CmdWriteTimestamp
+CmdWriteTimestamp2
+CmdWriteTimestamp2KHR
+CompileDeferredNV
+Control: %s
+CopyAccelerationStructureKHR
+CopyAccelerationStructureToMemoryKHR
+CopyImageToImageEXT
+CopyImageToMemoryEXT
+CopyMemoryToAccelerationStructureKHR
+CopyMemoryToImageEXT
+CopyMemoryToMicromapEXT
+CopyMicromapEXT
+CopyMicromapToMemoryEXT
+Copying old device %u into new device %u
+CreateAccelerationStructureKHR
+CreateAccelerationStructureNV
+CreateBuffer
+CreateBufferView
+CreateCommandPool
+CreateComputePipelines
+CreateCuFunctionNVX
+CreateCuModuleNVX
+CreateCudaFunctionNV
+CreateCudaModuleNV
+CreateDebugReportCallbackEXT
+CreateDebugUtilsMessengerEXT
+CreateDeferredOperationKHR
+CreateDescriptorPool
+CreateDescriptorSetLayout
+CreateDescriptorUpdateTemplate
+CreateDescriptorUpdateTemplateKHR
+CreateDevice
+CreateDisplayModeKHR
+CreateDisplayPlaneSurfaceKHR
+CreateEvent
+CreateExecutionGraphPipelinesAMDX
+CreateFence
+CreateFramebuffer
+CreateGraphicsPipelines
+CreateHeadlessSurfaceEXT
+CreateImage
+CreateImageView
+CreateIndirectCommandsLayoutEXT
+CreateIndirectCommandsLayoutNV
+CreateIndirectExecutionSetEXT
+CreateInstance
+CreateMicromapEXT
+CreateOpticalFlowSessionNV
+CreatePipelineBinariesKHR
+CreatePipelineCache
+CreatePipelineLayout
+CreatePrivateDataSlot
+CreatePrivateDataSlotEXT
+CreateQueryPool
+CreateRayTracingPipelinesKHR
+CreateRayTracingPipelinesNV
+CreateRenderPass
+CreateRenderPass2
+CreateRenderPass2KHR
+CreateSampler
+CreateSamplerYcbcrConversion
+CreateSamplerYcbcrConversionKHR
+CreateSemaphore
+CreateShaderModule
+CreateShadersEXT
+CreateSharedSwapchainsKHR
+CreateSwapchainKHR
+CreateValidationCacheEXT
+CreateVideoSessionKHR
+CreateVideoSessionParametersKHR
+CreateWaylandSurfaceKHR
+CreateXcbSurfaceKHR
+CreateXlibSurfaceKHR
+DEBUG
+DEVICE
+DRIVER
+DebugMarkerSetObjectNameEXT
+DebugMarkerSetObjectNameEXT: Invalid device handle
+DebugMarkerSetObjectTagEXT
+DebugMarkerSetObjectTagEXT: Invalid device handle
+DebugReportMessageEXT
+DeferredOperationJoinKHR
+DestroyAccelerationStructureKHR
+DestroyAccelerationStructureNV
+DestroyBuffer
+DestroyBufferView
+DestroyCommandPool
+DestroyCuFunctionNVX
+DestroyCuModuleNVX
+DestroyCudaFunctionNV
+DestroyCudaModuleNV
+DestroyDebugReportCallbackEXT
+DestroyDebugUtilsMessengerEXT
+DestroyDeferredOperationKHR
+DestroyDescriptorPool
+DestroyDescriptorSetLayout
+DestroyDescriptorUpdateTemplate
+DestroyDescriptorUpdateTemplateKHR
+DestroyDevice
+DestroyEvent
+DestroyFence
+DestroyFramebuffer
+DestroyImage
+DestroyImageView
+DestroyIndirectCommandsLayoutEXT
+DestroyIndirectCommandsLayoutNV
+DestroyIndirectExecutionSetEXT
+DestroyInstance
+DestroyMicromapEXT
+DestroyOpticalFlowSessionNV
+DestroyPipeline
+DestroyPipelineBinaryKHR
+DestroyPipelineCache
+DestroyPipelineLayout
+DestroyPrivateDataSlot
+DestroyPrivateDataSlotEXT
+DestroyQueryPool
+DestroyRenderPass
+DestroySampler
+DestroySamplerYcbcrConversion
+DestroySamplerYcbcrConversionKHR
+DestroySemaphore
+DestroyShaderEXT
+DestroyShaderModule
+DestroySurfaceKHR
+DestroySwapchainKHR
+DestroyValidationCacheEXT
+DestroyVideoSessionKHR
+DestroyVideoSessionParametersKHR
+Device layers are deprecated. Skipping this layer
+DeviceWaitIdle
+Didn't find required layer child value disable_environment in manifest JSON file, skipping this layer (Policy #LLP_LAYER_9)
+Didn't find required layer object disable_environment in manifest JSON file, skipping this layer
+DisplayPowerControlEXT
+Driver "%s" ignored because it was disabled by env var '%s'
+Driver "%s" ignored because not selected by env var '%s'
+ERROR
+Encountered meta-layer "%s"
+Encountered the vkEnumerateDeviceLayerProperties terminator.  This means a layer improperly continued.
+EndCommandBuffer
+EnumerateDeviceExtensionProperties
+EnumerateDeviceLayerProperties
+EnumerateInstanceExtensionProperties
+EnumerateInstanceLayerProperties
+EnumerateInstanceVersion
+EnumeratePhysicalDeviceGroups
+EnumeratePhysicalDeviceGroupsKHR
+EnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR
+EnumeratePhysicalDevices
+Explicit
+Failed to find layer name "%s" component layer "%s" to activate (Policy #LLP_LAYER_7)
+Failed to find vkGetDeviceProcAddr in layer "%s"
+FlushMappedMemoryRanges
+Found ICD manifest file %s, version %s
+Found manifest file %s (file version %s)
+Found pre_instance_functions section in explicit layer from "%s". This section is only valid in implicit layers. The section will be ignored
+Found pre_instance_functions section in layer from "%s". This section is only valid in manifest version 1.1.2 or later. The section will be ignored
+FreeCommandBuffers
+FreeDescriptorSets
+FreeMemory
+Function %s not supported for this physical device
+GLIBC_2.17
+GLIBC_2.29
+GLIBC_2.33
+GLIBC_2.34
+GLIBC_2.38
+GLOBAL
+GetAccelerationStructureBuildSizesKHR
+GetAccelerationStructureDeviceAddressKHR
+GetAccelerationStructureHandleNV
+GetAccelerationStructureMemoryRequirementsNV
+GetAccelerationStructureOpaqueCaptureDescriptorDataEXT
+GetBufferDeviceAddress
+GetBufferDeviceAddressEXT
+GetBufferDeviceAddressKHR
+GetBufferMemoryRequirements
+GetBufferMemoryRequirements2
+GetBufferMemoryRequirements2KHR
+GetBufferOpaqueCaptureAddress
+GetBufferOpaqueCaptureAddressKHR
+GetBufferOpaqueCaptureDescriptorDataEXT
+GetCalibratedTimestampsEXT
+GetCalibratedTimestampsKHR
+GetCudaModuleCacheNV
+GetDeferredOperationMaxConcurrencyKHR
+GetDeferredOperationResultKHR
+GetDescriptorEXT
+GetDescriptorSetHostMappingVALVE
+GetDescriptorSetLayoutBindingOffsetEXT
+GetDescriptorSetLayoutHostMappingInfoVALVE
+GetDescriptorSetLayoutSizeEXT
+GetDescriptorSetLayoutSupport
+GetDescriptorSetLayoutSupportKHR
+GetDeviceAccelerationStructureCompatibilityKHR
+GetDeviceBufferMemoryRequirements
+GetDeviceBufferMemoryRequirementsKHR
+GetDeviceFaultInfoEXT
+GetDeviceGroupPeerMemoryFeatures
+GetDeviceGroupPeerMemoryFeaturesKHR
+GetDeviceGroupPresentCapabilitiesKHR
+GetDeviceGroupSurfacePresentModesKHR
+GetDeviceImageMemoryRequirements
+GetDeviceImageMemoryRequirementsKHR
+GetDeviceImageSparseMemoryRequirements
+GetDeviceImageSparseMemoryRequirementsKHR
+GetDeviceImageSubresourceLayoutKHR
+GetDeviceMemoryCommitment
+GetDeviceMemoryOpaqueCaptureAddress
+GetDeviceMemoryOpaqueCaptureAddressKHR
+GetDeviceMicromapCompatibilityEXT
+GetDeviceProcAddr
+GetDeviceQueue
+GetDeviceQueue2
+GetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI
+GetDisplayModeProperties2KHR
+GetDisplayModePropertiesKHR
+GetDisplayPlaneCapabilities2KHR
+GetDisplayPlaneCapabilitiesKHR
+GetDisplayPlaneSupportedDisplaysKHR
+GetDrmDisplayEXT
+GetDynamicRenderingTilePropertiesQCOM
+GetEncodedVideoSessionParametersKHR
+GetEventStatus
+GetExecutionGraphPipelineNodeIndexAMDX
+GetExecutionGraphPipelineScratchSizeAMDX
+GetFenceFdKHR
+GetFenceStatus
+GetFramebufferTilePropertiesQCOM
+GetGeneratedCommandsMemoryRequirementsEXT
+GetGeneratedCommandsMemoryRequirementsNV
+GetImageDrmFormatModifierPropertiesEXT
+GetImageMemoryRequirements
+GetImageMemoryRequirements2
+GetImageMemoryRequirements2KHR
+GetImageOpaqueCaptureDescriptorDataEXT
+GetImageSparseMemoryRequirements
+GetImageSparseMemoryRequirements2
+GetImageSparseMemoryRequirements2KHR
+GetImageSubresourceLayout
+GetImageSubresourceLayout2EXT
+GetImageSubresourceLayout2KHR
+GetImageViewAddressNVX
+GetImageViewHandleNVX
+GetImageViewOpaqueCaptureDescriptorDataEXT
+GetInstanceProcAddr
+GetLatencyTimingsNV
+GetMemoryFdKHR
+GetMemoryFdPropertiesKHR
+GetMemoryHostPointerPropertiesEXT
+GetMemoryRemoteAddressNV
+GetMicromapBuildSizesEXT
+GetPastPresentationTimingGOOGLE
+GetPerformanceParameterINTEL
+GetPhysicalDeviceCalibrateableTimeDomainsEXT
+GetPhysicalDeviceCalibrateableTimeDomainsKHR
+GetPhysicalDeviceCooperativeMatrixPropertiesKHR
+GetPhysicalDeviceCooperativeMatrixPropertiesNV
+GetPhysicalDeviceDisplayPlaneProperties2KHR
+GetPhysicalDeviceDisplayPlanePropertiesKHR
+GetPhysicalDeviceDisplayProperties2KHR
+GetPhysicalDeviceDisplayPropertiesKHR
+GetPhysicalDeviceExternalBufferProperties
+GetPhysicalDeviceExternalBufferPropertiesKHR
+GetPhysicalDeviceExternalFenceProperties
+GetPhysicalDeviceExternalFencePropertiesKHR
+GetPhysicalDeviceExternalImageFormatPropertiesNV
+GetPhysicalDeviceExternalSemaphoreProperties
+GetPhysicalDeviceExternalSemaphorePropertiesKHR
+GetPhysicalDeviceFeatures
+GetPhysicalDeviceFeatures2
+GetPhysicalDeviceFeatures2KHR
+GetPhysicalDeviceFormatProperties
+GetPhysicalDeviceFormatProperties2
+GetPhysicalDeviceFormatProperties2KHR
+GetPhysicalDeviceFragmentShadingRatesKHR
+GetPhysicalDeviceImageFormatProperties
+GetPhysicalDeviceImageFormatProperties2
+GetPhysicalDeviceImageFormatProperties2KHR
+GetPhysicalDeviceMemoryProperties
+GetPhysicalDeviceMemoryProperties2
+GetPhysicalDeviceMemoryProperties2KHR
+GetPhysicalDeviceMultisamplePropertiesEXT
+GetPhysicalDeviceOpticalFlowImageFormatsNV
+GetPhysicalDevicePresentRectanglesKHR
+GetPhysicalDeviceProperties
+GetPhysicalDeviceProperties2
+GetPhysicalDeviceProperties2KHR
+GetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR
+GetPhysicalDeviceQueueFamilyProperties
+GetPhysicalDeviceQueueFamilyProperties2
+GetPhysicalDeviceQueueFamilyProperties2KHR
+GetPhysicalDeviceSparseImageFormatProperties
+GetPhysicalDeviceSparseImageFormatProperties2
+GetPhysicalDeviceSparseImageFormatProperties2KHR
+GetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV
+GetPhysicalDeviceSurfaceCapabilities2EXT
+GetPhysicalDeviceSurfaceCapabilities2KHR
+GetPhysicalDeviceSurfaceCapabilitiesKHR
+GetPhysicalDeviceSurfaceFormats2KHR
+GetPhysicalDeviceSurfaceFormatsKHR
+GetPhysicalDeviceSurfacePresentModesKHR
+GetPhysicalDeviceSurfaceSupportKHR
+GetPhysicalDeviceToolProperties
+GetPhysicalDeviceToolPropertiesEXT
+GetPhysicalDeviceVideoCapabilitiesKHR
+GetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR
+GetPhysicalDeviceVideoFormatPropertiesKHR
+GetPhysicalDeviceWaylandPresentationSupportKHR
+GetPhysicalDeviceXcbPresentationSupportKHR
+GetPhysicalDeviceXlibPresentationSupportKHR
+GetPipelineBinaryDataKHR
+GetPipelineCacheData
+GetPipelineExecutableInternalRepresentationsKHR
+GetPipelineExecutablePropertiesKHR
+GetPipelineExecutableStatisticsKHR
+GetPipelineIndirectDeviceAddressNV
+GetPipelineIndirectMemoryRequirementsNV
+GetPipelineKeyKHR
+GetPipelinePropertiesEXT
+GetPrivateData
+GetPrivateDataEXT
+GetQueryPoolResults
+GetQueueCheckpointData2NV
+GetQueueCheckpointDataNV
+GetRandROutputDisplayEXT
+GetRayTracingCaptureReplayShaderGroupHandlesKHR
+GetRayTracingShaderGroupHandlesKHR
+GetRayTracingShaderGroupHandlesNV
+GetRayTracingShaderGroupStackSizeKHR
+GetRefreshCycleDurationGOOGLE
+GetRenderAreaGranularity
+GetRenderingAreaGranularityKHR
+GetSamplerOpaqueCaptureDescriptorDataEXT
+GetSemaphoreCounterValue
+GetSemaphoreCounterValueKHR
+GetSemaphoreFdKHR
+GetShaderBinaryDataEXT
+GetShaderInfoAMD
+GetShaderModuleCreateInfoIdentifierEXT
+GetShaderModuleIdentifierEXT
+GetSwapchainCounterEXT
+GetSwapchainImagesKHR
+GetSwapchainStatusKHR
+GetValidationCacheDataEXT
+GetVideoSessionMemoryRequirementsKHR
+HOME
+ICD "%s" associated with VkPhysicalDevice does not support vkReleaseDisplayEXT - Consequently, the call is invalid because it should not be possible to acquire a display on this device
+ICD associated with VkPhysicalDevice does not support AcquireDrmDisplayEXT
+ICD associated with VkPhysicalDevice does not support EnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR
+ICD associated with VkPhysicalDevice does not support GetDrmDisplayEXT
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceCalibrateableTimeDomainsEXT
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceCalibrateableTimeDomainsKHR
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceCooperativeMatrixPropertiesKHR
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceCooperativeMatrixPropertiesNV
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceFragmentShadingRatesKHR
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceMultisamplePropertiesEXT
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceOpticalFlowImageFormatsNV
+ICD associated with VkPhysicalDevice does not support GetPhysicalDevicePresentRectanglesKHX
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceVideoCapabilitiesKHR
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR
+ICD associated with VkPhysicalDevice does not support GetPhysicalDeviceVideoFormatPropertiesKHR
+ICD for selected physical device does not export vkCreateDisplayModeKHR!
+ICD for selected physical device does not export vkGetDisplayModePropertiesKHR!
+ICD for selected physical device does not export vkGetDisplayPlaneCapabilitiesKHR!
+ICD for selected physical device does not export vkGetDisplayPlaneSupportedDisplaysKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceDisplayPlanePropertiesKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceDisplayPropertiesKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceSurfaceCapabilitiesKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceSurfacePresentModesKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceSurfaceSupportKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceWaylandPresentationSupportKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceXcbPresentationSupportKHR!
+ICD for selected physical device does not export vkGetPhysicalDeviceXlibPresentationSupportKHR!
+INFO
+INSTANCE
+Ignoring VK_LAYER_PATH. The Override layer is active and has override paths set, which takes priority. VK_LAYER_PATH is set to %s
+Implicit
+Implicit layer "%s" forced disabled because name matches filter of env var '%s'.
+Implicit layer "%s" forced enabled due to env var '%s'.
+Implicit layer "%s" missing disabled environment variable!
+ImportFenceFdKHR
+ImportSemaphoreFdKHR
+Indicating meta-layer-specific component_layers, but also defining layer library path.  Both are not compatible, so skipping this layer
+Indicating meta-layer-specific component_layers, but using older JSON file version.
+Indicating meta-layer-specific override paths, but using older JSON file version.
+InitializePerformanceApiINTEL
+Insert instance layer "%s" (%s)
+Inserted device layer "%s" (%s)
+InvalidateMappedMemoryRanges
+LAYER
+LatencySleepNV
+Layer "%s" forced disabled because name matches filter of env var '%s'.
+Layer "%s" forced enabled due to env var '%s'
+Layer "%s" has an 'api_version' field which contains a non-zero variant value of %d.  Skipping Layer.
+Layer "%s" ignored because it has been disabled by env var '%s'
+Layer "%s" using deprecated 'vkGetDeviceProcAddr' tag which was deprecated starting with JSON file version 1.1.0. The new vkNegotiateLoaderLayerInterfaceVersion function is preferred, though for compatibility reasons it may be desirable to continue using the deprecated tag.
+Layer "%s" using deprecated 'vkGetInstanceProcAddr' tag which was deprecated starting with JSON file version 1.1.0. The new vkNegotiateLoaderLayerInterfaceVersion function is preferred, though for compatibility reasons it may be desirable to continue using the deprecated tag.
+Layer "%s" was not found but was requested by env var VK_INSTANCE_LAYERS!
+Layer %s contains app_keys, but any app_keys can only be provided by the override meta layer. These will be ignored.
+Layer %s uses API version %u.%u which is older than the application specified API version of %u.%u. May cause issues.
+Layer Configurations count = %d
+Layer library architecture doesn't match the current running architecture, skipping this layer
+Layer located at %s didn't find required layer value "api_version" in manifest JSON file, skipping this layer
+Layer located at %s didn't find required layer value "description" in manifest JSON file, skipping this layer
+Layer located at %s didn't find required layer value "implementation_version" in manifest JSON file, skipping this layer
+Layer located at %s didn't find required layer value "name" in manifest JSON file, skipping this layer
+Layer located at %s didn't find required layer value "type" in manifest JSON file, skipping this layer
+Layer missing both library_path and component_layers fields.  One or the other MUST be defined.  Skipping this layer
+Layer name %s does not conform to naming standard (Policy #LLP_LAYER_3)
+Loader Message
+Loading layer library %s
+MapMemory
+MapMemory2KHR
+MergePipelineCaches
+MergeValidationCachesEXT
+Meta Layer "%s" component layer "%s" disabled.
+Meta-layer "%s" API version %u.%u, component layer "%s" version %u.%u, may have incompatibilities (Policy #LLP_LAYER_8)!
+Meta-layer "%s" all %d component layers appear to be valid.
+Meta-layer %s component layer %s adding device extension %s
+Meta-layer %s component layer %s adding instance extension %s
+Meta-layer %s component layer %s can not find all component layers.  Skipping this layer.
+NULL pointer passed into vkGetPhysicalDeviceSurfaceCapabilitiesKHR for pSurfaceCapabilities!
+NULL pointer passed into vkGetPhysicalDeviceSurfaceFormatsKHR for pSurfaceFormatCount!
+NULL pointer passed into vkGetPhysicalDeviceSurfacePresentModesKHR for pPresentModeCount!
+NULL pointer passed into vkGetPhysicalDeviceSurfaceSupportKHR for pSupported!
+Name: %s
+Override layer has override paths set to %s
+PERF
+Path: %s
+Portability enumeration bit was set, enumerating portability drivers.
+QueueBeginDebugUtilsLabelEXT
+QueueBindSparse
+QueueEndDebugUtilsLabelEXT
+QueueInsertDebugUtilsLabelEXT
+QueueNotifyOutOfBandNV
+QueuePresentKHR
+QueueSetPerformanceConfigurationINTEL
+QueueSubmit
+QueueSubmit2
+QueueSubmit2KHR
+QueueWaitIdle
+RegisterDeviceEventEXT
+RegisterDisplayEventEXT
+ReleaseCapturedPipelineDataKHR
+ReleaseDisplayEXT
+ReleasePerformanceConfigurationINTEL
+ReleaseProfilingLockKHR
+ReleaseSwapchainImagesEXT
+Removing driver %s due to not having any physical devices
+Removing meta-layer %s from instance layer list since it appears invalid.
+Requested ICD %s was wrong bit-type. Ignoring this JSON
+Requested layer "%s" failed to load%c
+Requested layer "%s" was not loaded%c
+Requested layer "%s" was wrong bit-type%c
+ResetCommandBuffer
+ResetCommandPool
+ResetDescriptorPool
+ResetEvent
+ResetFences
+ResetQueryPool
+ResetQueryPoolEXT
+Searching for %s layer manifest files
+Searching for ICD drivers named %s
+Searching for driver manifest files
+SetDebugUtilsObjectNameEXT
+SetDebugUtilsObjectNameEXT: Invalid device handle
+SetDebugUtilsObjectTagEXT
+SetDebugUtilsObjectTagEXT: Invalid device handle
+SetDeviceMemoryPriorityEXT
+SetEvent
+SetHdrMetadataEXT
+SetLatencyMarkerNV
+SetLatencySleepModeNV
+SetLocalDimmingAMD
+SetPrivateData
+SetPrivateDataEXT
+Shouldn't reach this. A valid version of requested ICD %s was loaded but something bad happened afterwards.
+Shouldn't reach this. A valid version of requested layer %s was loaded but was not found in the list of activated layers%c
+SignalSemaphore
+SignalSemaphoreKHR
+Skipping layer due to problem accessing the library_path value in manifest JSON file %s
+SubmitDebugUtilsMessageEXT
+The icd's vkGetPhysicalDeviceImageFormatProperties was null, returning with VK_ERROR_INITIALIZATION_FAILED instead.
+TransitionImageLayoutEXT
+TrimCommandPool
+TrimCommandPoolKHR
+UNKNOWN_LAYER_CONTROl
+Unable to load %s from ICD %s
+UninitializePerformanceApiINTEL
+Unknown
+Unloading layer library %s
+UnmapMemory
+UnmapMemory2KHR
+UpdateDescriptorSetWithTemplate
+UpdateDescriptorSetWithTemplateKHR
+UpdateDescriptorSets
+UpdateIndirectExecutionSetPipelineEXT
+UpdateIndirectExecutionSetShaderEXT
+UpdateVideoSessionParametersKHR
+Using layer configurations found in loader settings from %s
+Using the global override layer
+Using the override layer for app key %s
+VK_ADD_DRIVER_FILES
+VK_ADD_IMPLICIT_LAYER_PATH
+VK_ADD_LAYER_PATH
+VK_DRIVER_FILES
+VK_EXT_acquire_drm_display
+VK_EXT_acquire_xlib_display
+VK_EXT_debug_marker
+VK_EXT_debug_report
+VK_EXT_debug_utils
+VK_EXT_debug_utils: Invalid device handle
+VK_EXT_direct_mode_display
+VK_EXT_directfb_surface
+VK_EXT_display_surface_counter
+VK_EXT_headless_surface
+VK_EXT_headless_surface extension not enabled.  vkCreateHeadlessSurfaceEXT not executed!
+VK_EXT_layer_settings
+VK_EXT_pci_bus_info
+VK_EXT_surface_maintenance1
+VK_EXT_swapchain_colorspace
+VK_EXT_tooling_info
+VK_EXT_validation_features
+VK_EXT_validation_flags
+VK_GOOGLE_surfaceless_query
+VK_ICD_FILENAMES
+VK_IMPLICIT_LAYER_PATH
+VK_INSTANCE_LAYERS
+VK_KHR_device_group
+VK_KHR_device_group_creation
+VK_KHR_display
+VK_KHR_display extension not enabled. vkCreateDisplayModeKHR not executed!
+VK_KHR_display extension not enabled. vkGetDisplayModePropertiesKHR not executed!
+VK_KHR_display extension not enabled. vkGetDisplayPlaneCapabilitiesKHR not executed!
+VK_KHR_display extension not enabled. vkGetDisplayPlaneSupportedDisplaysKHR not executed!
+VK_KHR_display extension not enabled. vkGetPhysicalDeviceDisplayPlanePropertiesKHR not executed!
+VK_KHR_display extension not enabled. vkGetPhysicalDeviceDisplayPropertiesKHR not executed!
+VK_KHR_display_swapchain
+VK_KHR_external_fence_capabilities
+VK_KHR_external_memory_capabilities
+VK_KHR_external_semaphore_capabilities
+VK_KHR_get_display_properties2
+VK_KHR_get_physical_device_properties2
+VK_KHR_get_surface_capabilities2
+VK_KHR_maintenance5
+VK_KHR_portability_enumeration
+VK_KHR_surface
+VK_KHR_surface extension not enabled. vkCreateDisplayPlaneSurfaceKHR not executed!
+VK_KHR_surface extension not enabled. vkGetPhysicalDeviceSurfaceCapabilities2KHR not executed!
+VK_KHR_surface extension not enabled. vkGetPhysicalDeviceSurfaceCapabilitiesKHR not executed!
+VK_KHR_surface extension not enabled. vkGetPhysicalDeviceSurfaceFormats2KHR not executed!
+VK_KHR_surface extension not enabled. vkGetPhysicalDeviceSurfaceFormatsKHR not executed!
+VK_KHR_surface extension not enabled. vkGetPhysicalDeviceSurfacePresentModesKHR not executed!
+VK_KHR_surface extension not enabled. vkGetPhysicalDeviceSurfaceSupportKHR not executed!
+VK_KHR_surface_protected_capabilities
+VK_KHR_swapchain
+VK_KHR_wayland_surface
+VK_KHR_wayland_surface extension not enabled. vkCreateWaylandSurfaceKHR not executed!
+VK_KHR_wayland_surface extension not enabled. vkGetPhysicalDeviceWaylandPresentationSupportKHR not executed!
+VK_KHR_xcb_surface
+VK_KHR_xcb_surface extension not enabled. vkCreateXcbSurfaceKHR not executed!
+VK_KHR_xcb_surface extension not enabled. vkGetPhysicalDeviceXcbPresentationSupportKHR not executed!
+VK_KHR_xlib_surface
+VK_KHR_xlib_surface extension not enabled. vkCreateXlibSurfaceKHR not executed!
+VK_KHR_xlib_surface extension not enabled. vkGetPhysicalDeviceXlibPresentationSupportKHR not executed!
+VK_LAYER_
+VK_LAYER_LUNARG_
+VK_LAYER_LUNARG_override
+VK_LAYER_PATH
+VK_LOADER_DEBUG
+VK_LOADER_DEVICE_SELECT
+VK_LOADER_DISABLE_DYNAMIC_LIBRARY_UNLOADING
+VK_LOADER_DISABLE_INST_EXT_FILTER
+VK_LOADER_DISABLE_SELECT
+VK_LOADER_DRIVERS_DISABLE
+VK_LOADER_DRIVERS_SELECT
+VK_LOADER_LAYERS_ALLOW
+VK_LOADER_LAYERS_DISABLE
+VK_LOADER_LAYERS_ENABLE
+VK_LUNARG_direct_driver_loading
+VK_NV_external_memory_capabilities
+VK_QNX_screen_surface
+VkInstanceCreateInfo: If flags has the VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR bit set, the list of enabled extensions in ppEnabledExtensionNames must contain VK_KHR_portability_enumeration [VUID-VkInstanceCreateInfo-flags-06559 ]Applications that wish to enumerate portability drivers must enable the VK_KHR_portability_enumeration instance extension.
+VkInstanceCreateInfo::pApplicationInfo::apiVersion has value of %u which is not permitted. If apiVersion is not 0, then it must be greater than or equal to the value of VK_API_VERSION_1_0 [VUID-VkApplicationInfo-apiVersion]
+Vulkan Loader Version %d.%d.%d
+Vulkan Loader: library unloading is disabled
+WaitForFences
+WaitForPresentKHR
+WaitSemaphores
+WaitSemaphoresKHR
+WriteAccelerationStructuresPropertiesKHR
+WriteMicromapsPropertiesEXT
+XDG_CONFIG_DIRS
+XDG_CONFIG_HOME
+XDG_DATA_DIRS
+XDG_DATA_HOME
+[default]
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__ctype_tolower_loc
+__cxa_finalize
+__gmon_start__
+__isoc23_sscanf
+__isoc23_strtol
+__snprintf_chk
+__stack_chk_fail
+__stack_chk_guard
+__vsnprintf_chk
+abort
+access
+add_data_files: Path to %s too long
+api_version
+app_keys
+auto
+blacklisted_layers
+calloc
+check_and_add_to_new_phys_devs:  Failed to allocate physical device terminator object %d
+closedir
+component_layers
+control
+debug
+description
+destinations
+device_extensions
+disable_environment
+dlclose
+dlerror
+dlopen
+dlsym
+driver
+enable_environment
+enabled
+entrypoints
+env var '%s' defined and adding layers "%s"
+env var '%s' defined and adding layers: %s
+error
+explicit
+false
+fclose
+file_format_version
+fileno
+filters
+fopen
+fputc
+fputs
+fread
+free
+fstat
+functions
+getegid
+geteuid
+getgid
+getuid
+implem
+implementation_version
+implicit
+info
+instance_extensions
+is_portability_driver
+layers
+ld-linux-aarch64.so.1
+libc.so.6
+libm.so.6
+library_arch
+library_path
+libvulkan.so.1
+linux_env_var_default_device:  Found 'VK_LOADER_DEVICE_SELECT' set to %s
+linux_env_var_default_device:  Found default at index %u '%s'
+linux_read_sorted_physical_devices:
+linux_sort_physical_device_groups:  Original order:
+linux_sort_physical_device_groups:  Sorted order:
+loader_add_device_extensions: Error getting physical device extension info count from library %s
+loader_add_direct_driver: Adding driver found in index %d of VkDirectDriverLoadingListLUNARG::pDrivers structure. pfnGetInstanceProcAddr was set to %p
+loader_add_direct_driver: Could not get 'vkCreateInstance' from VkDirectDriverLoadingInfoLUNARG structure at index %d, skipping.
+loader_add_direct_driver: Could not get 'vkEnumerateInstanceExtensionProperties' from VkDirectDriverLoadingInfoLUNARG structure at index %d, skipping.
+loader_add_direct_driver: Could not get 'vk_icdNegotiateLoaderICDInterfaceVersion' from VkDirectDriverLoadingInfoLUNARG structure at index %d, skipping.
+loader_add_direct_driver: Realloc failed on icd library list for ICD index %u
+loader_add_direct_driver: VkDirectDriverLoadingInfoLUNARG structure at index %d contains a NULL pointer for the pfnGetInstanceProcAddr member, skipping.
+loader_add_direct_driver: VkDirectDriverLoadingInfoLUNARG structure at index %d supports interface version %d, which is incompatible with the Loader Driver Interface version that supports the VK_LUNARG_direct_driver_loading extension, skipping.
+loader_add_instance_extensions: %s's vkEnumerateInstanceExtensionProperties points to the loader, this would lead to infinite recursion.
+loader_add_instance_extensions: Error getting Instance extension count from %s
+loader_add_instance_extensions: Error getting Instance extensions from %s
+loader_add_layer_names_to_list: Unable to find layer "%s"
+loader_add_layer_properties: %s has unknown layer manifest file version %d.%d.%d.  May cause errors.
+loader_add_layer_properties: 'layers' tag not supported until file version 1.0.1, but %s is reporting version %s
+loader_add_layer_properties: Can not find 'layer' object in manifest JSON file %s.  Skipping this file.
+loader_add_layer_properties: Can not find 'layers' array element %d object in manifest JSON file %s.  Skipping this file
+loader_add_layer_properties: Multiple 'layer' nodes are deprecated starting in file version "1.0.1".  Please use 'layers' : [] array instead in %s.
+loader_add_layer_properties_to_list: Realloc failed for when attempting to add new layer
+loader_add_to_dev_ext_list: Failed to reallocate space for device extension list
+loader_add_to_ext_list: Failed to reallocate space for extension list
+loader_append_layer_property: realloc failed for layer list
+loader_create_device_chain: Failed to find 'vkCreateDevice' in layers or ICD
+loader_create_device_chain: Failed to find 'vkGetInstanceProcAddr' in layer "%s".  Skipping layer.
+loader_create_device_chain: Using deprecated and ignored 'ppEnabledLayerNames' member of 'VkDeviceCreateInfo' when creating a Vulkan device.
+loader_create_instance_chain: Failed to find '%s' in layer "%s"
+loader_create_instance_chain: Failed to find 'vkCreateInstance'
+loader_create_instance_chain: Failed to find 'vkGetInstanceProcAddr' in layer "%s"
+loader_create_logical_device: Failed to alloc struct loader_device
+loader_dev_ext_gpa: Exhausted the unknown device function array!
+loader_dev_ext_gpa: Exhausted the unknown physical device function array!
+loader_enable_instance_layers: Failed to initialize application version of the layer list
+loader_enable_instance_layers: Failed to initialize expanded version of the layer list
+loader_get_json: Failed to allocate memory to read JSON file %s
+loader_get_json: Failed to open JSON file %s
+loader_get_json: Failed to read entire JSON file %s
+loader_get_json: Failed to read file size of JSON file %s
+loader_get_json: Invalid JSON file %s.
+loader_get_json: Out of Memory error occurred while parsing JSON file %s.
+loader_gpa_instance_terminator() unrecognized name %s
+loader_gpdpa_instance_terminator() unrecognized name %s
+loader_icd_scan: Failed loading library associated with ICD JSON %s. Ignoring this JSON
+loader_init_generic_list: Failed to allocate space for generic list
+loader_init_scanned_icd_list: Realloc failed for layer list when attempting to add new layer
+loader_parse_icd_manifest: %s has unknown icd manifest file version %d.%d.%d. May cause errors.
+loader_parse_icd_manifest: Can not find 'ICD' object in ICD JSON file %s. Skipping ICD JSON
+loader_parse_icd_manifest: Driver library architecture doesn't match the current running architecture, skipping this driver
+loader_parse_icd_manifest: Driver's ICD JSON %s 'api_version' field contains a non-zero variant value of %d.  Skipping ICD JSON.
+loader_parse_icd_manifest: Failed retrieving ICD JSON %s 'api_version' field. Skipping ICD JSON.
+loader_parse_icd_manifest: Failed retrieving ICD JSON %s 'file_format_version' field. Skipping ICD JSON
+loader_parse_icd_manifest: Failed retrieving ICD JSON %s 'library_path' field. Skipping ICD JSON.
+loader_parse_icd_manifest: Failed to find 'library_path' object in ICD JSON file %s. Skipping ICD JSON.
+loader_parse_icd_manifest: ICD JSON %s 'library_path' field is empty. Skipping ICD JSON.
+loader_parse_icd_manifest: ICD JSON %s does not have a 'file_format_version' field. Skipping ICD JSON.
+loader_parse_icd_manifest: ICD JSON %s does not have an 'api_version' field. Skipping ICD JSON.
+loader_phys_dev_ext_gpa: Adding unknown physical function %s to internal store at index %u
+loader_phys_dev_ext_gpa: Driver %s returned ptr %p for %s
+loader_phys_dev_ext_gpa: Layer %s returned ptr %p for %s
+loader_remove_layers_in_blacklist: Override layer is active and layer %s is in the blacklist inside of it. Removing that layer from current layer list.
+loader_remove_layers_not_in_implicit_meta_layers : Implicit meta-layers are active, and layer %s is not list inside of any.  So removing layer from current layer list.
+loader_resize_generic_list: Failed to allocate space for generic list
+loader_scan_for_direct_drivers: The VK_LUNARG_direct_driver_loading extension is active and specified VK_DIRECT_DRIVER_LOADING_MODE_EXCLUSIVE_LUNARG, skipping system and environment variable driver search mechanisms.
+loader_scan_for_direct_drivers: The VK_LUNARG_direct_driver_loading extension was enabled but the pNext chain of VkInstanceCreateInfo did not contain the VkDirectDriverLoadingListLUNARG structure.
+loader_scan_for_direct_drivers: The VkDirectDriverLoadingListLUNARG structure in the pNext chain of VkInstanceCreateInfo has a NULL pDrivers member.
+loader_scan_for_direct_drivers: The VkDirectDriverLoadingListLUNARG structure in the pNext chain of VkInstanceCreateInfo has a non-null pDrivers member but a driverCount member with a value of zero.
+loader_scan_for_direct_drivers: The pNext chain of VkInstanceCreateInfo contained the VkDirectDriverLoadingListLUNARG structure, but the VK_LUNARG_direct_driver_loading extension was not enabled.
+loader_scanned_icd_add:  Failed querying 'vkCreateInstance' via dlsym/LoadLibrary for ICD %s
+loader_scanned_icd_add: A NULL filename was used, skipping this ICD
+loader_scanned_icd_add: Attempt to retrieve either 'vkGetInstanceProcAddr' or 'vk_icdGetInstanceProcAddr' from ICD %s failed.
+loader_scanned_icd_add: Could not get 'vkCreateInstance' via 'vk_icdGetInstanceProcAddr' for ICD %s
+loader_scanned_icd_add: Could not get 'vkEnumerateInstanceExtensionProperties' via 'vk_icdGetInstanceProcAddr' for ICD %s
+loader_scanned_icd_add: Could not get 'vkEnumerateInstanceExtensionProperties' via dlsym/LoadLibrary for ICD %s
+loader_scanned_icd_add: Driver %s supports Vulkan %u.%u, but only supports loader interface version %u. Interface version 5 or newer required to support this version of Vulkan (Policy #LDP_DRIVER_7)
+loader_scanned_icd_add: ICD %s doesn't support interface version compatible with loader, skip this ICD.
+loader_scanned_icd_add: ICD %s reports an interface version of %d but doesn't export vk_icdGetInstanceProcAddr, skip this ICD.
+loader_scanned_icd_add: Out of memory can't add ICD %s
+loader_scanned_icd_add: Realloc failed on icd library list for ICD %s
+loader_scanned_icd_add: Using deprecated ICD interface of 'vkGetInstanceProcAddr' instead of 'vk_icdGetInstanceProcAddr' for ICD %s
+loader_validate_device_extensions: Device extension %s not supported by selected physical device or enabled layers.
+loader_validate_device_extensions: Device ppEnabledExtensionNames contains string that is too long or is badly formed
+loader_validate_instance_extensions: Extension %s not found in list of known instance extensions.
+loader_validate_instance_extensions: Instance extension %s not supported by available ICDs or enabled layers.
+loader_validate_instance_extensions: Instance ppEnabledExtensionNames contains string that is too long or is badly formed
+loader_validate_instance_extensions: Instance ppEnabledExtensionNames is NULL but enabledExtensionCount is greater than zero
+loader_validate_layers: Layer %d does not exist in the list of available layers
+loader_validate_layers: Layer %d was explicitly prevented from being enabled by the loader settings file
+loader_validate_layers: ppEnabledLayerNames contains string that is too long or is badly formed
+loader_validate_layers: ppEnabledLayerNames is NULL but enabledLayerCount is greater than zero
+log_locations
+malloc
+memcpy
+memmove
+memset
+name
+null
+opendir
+override_paths
+parse_generic_filter_environment_var: Failed to allocate space for parsing env var '%s'
+parse_layers_disable_filter_environment_var: Failed to allocate space for parsing env var 'VK_LAYERS_DISABLE_ENV_VAR'
+perf
+pre_instance_functions
+pthread_mutex_destroy
+pthread_mutex_init
+pthread_mutex_lock
+pthread_mutex_unlock
+qsort
+read_data_files_in_search_paths: Failed to allocate space for search path of length %d
+readdir
+readlink
+realloc
+remove_all_non_valid_override_layers: Multiple global override layers found. Using the first global layer found
+remove_all_non_valid_override_layers: Multiple override layers where the same path in app_keys was found. Using the first layer found
+secure_getenv
+settings
+settings_array
+setup_loader_term_phys_devs:  Failed to allocate new physical device array of size %d
+setup_loader_term_phys_devs:  Failed to allocate physical device terminator object %d
+setup_loader_term_phys_devs:  Failed to detect any valid GPUs in the current config
+setup_loader_term_phys_devs: Call to 'vkEnumeratePhysicalDevices' in ICD %s failed with error code %d
+setup_loader_term_phys_devs: Call to 'vkEnumeratePhysicalDevices' in ICD %s failed with error code VK_ERROR_OUT_OF_HOST_MEMORY
+setup_loader_tramp_phys_devs:  Failed to allocate new physical device array of size %d
+setup_loader_tramp_phys_devs:  Failed to allocate new trampoline physical device
+snprintf
+spec_version
+stderr
+stderr_log
+strchr
+strcmp
+strcspn
+strlen
+strncat
+strncmp
+strncpy
+strrchr
+strstr
+strtok_r
+terminator_CreateDevice: Device pointer (%p) has invalid MAGIC value 0x%08lx. The expected value is 0x10ADED040410ADED. Device value possibly corrupted by active layer (Policy #LLP_LAYER_22).
+terminator_CreateDevice: Failed in ICD %s vkCreateDevice call
+terminator_CreateDevice: Loader device pointer null encountered.  Possibly set by active layer. (Policy #LLP_LAYER_22)
+terminator_CreateDevice: No vkCreateDevice command exposed by ICD %s
+terminator_CreateInstance: Driver %s supports interface version %u but still exposes VkSurfaceKHR create/destroy entrypoints (Policy #LDP_DRIVER_8)
+terminator_CreateInstance: Failed to add ICD %d to ICD trampoline list.
+terminator_CreateInstance: Failed to find required entrypoints in ICD %s. Skipping this driver.
+terminator_CreateInstance: Found no drivers!
+terminator_CreateInstance: ICD "%s" vkEnumerateInstanceVersion returned error. The ICD will be treated as a 1.0 ICD
+terminator_CreateInstance: Instance pointer (%p) has invalid MAGIC value 0x%08lx. Instance value possibly corrupted by active layer (Policy #LLP_LAYER_21).
+terminator_CreateInstance: Loader instance pointer null encountered.  Possibly set by active layer. (Policy #LLP_LAYER_21)
+terminator_CreateInstance: Manifest ICD for "%s" contained a 1.1 or greater API version, but does not support vkEnumerateInstanceVersion, treating as a 1.0 ICD
+terminator_CreateInstance: Manifest ICD for "%s" contained a 1.1 or greater API version, but vkEnumerateInstanceVersion returned 1.0, treating as a 1.0 ICD
+terminator_CreateInstance: Received return code %i from call to vkCreateInstance in ICD %s. Skipping this driver.
+terminator_EnumeratePhysicalDeviceGroups : Trimming device count from %d to %d.
+terminator_EnumeratePhysicalDeviceGroups:  Failed during dispatch call of 'EnumeratePhysicalDeviceGroups' to ICD %s  to get group information for temp data.
+terminator_EnumeratePhysicalDeviceGroups:  Failed during dispatch call of 'EnumeratePhysicalDeviceGroups' to ICD %s to get count.
+terminator_EnumeratePhysicalDeviceGroups:  Failed during dispatch call of 'EnumeratePhysicalDeviceGroups' to ICD %s to get group count.
+terminator_EnumeratePhysicalDeviceGroups:  Failed during dispatch call of 'EnumeratePhysicalDeviceGroups' to ICD %s to get group information.
+terminator_EnumeratePhysicalDeviceGroups:  Failed during dispatch call of 'EnumeratePhysicalDevices' to ICD %s to get plain phys dev count.
+terminator_EnumeratePhysicalDeviceGroups:  Failed to allocate new physical device group array of size %d
+terminator_EnumeratePhysicalDeviceGroups:  Failed to allocate physical device group Terminator object %d
+terminator_EnumeratePhysicalDeviceGroups:  Failed to find GPU %d in group %d returned by 'EnumeratePhysicalDeviceGroups' in list returned by 'EnumeratePhysicalDevices'
+terminator_EnumeratePhysicalDevices : Trimming device count from %d to %d.
+terminator_GetPhysicalDeviceToolProperties: The ICD's vkGetPhysicalDeviceToolProperties was NULL yet the physical device supports Vulkan API Version 1.3.
+treat_as_implicit_manifest
+true
+type
+u%04x
+unordered_layer_location
+validation
+verify_meta_layer_component_layers: Adding meta-layer %s which also contains meta-layer %s
+verify_meta_layer_component_layers: Meta-layer %s can't find component layer %s at index %d.  Skipping this layer.
+verify_meta_layer_component_layers: Meta-layer %s lists itself in its component layer list at index %d.  Skipping this layer.
+verify_meta_layer_component_layers: Meta-layer uses API version %d.%d, but component layer %d has API version %d.%d that is lower.  Skipping this layer.
+vkAcquireDrmDisplayEXT
+vkAcquireDrmDisplayEXT: Invalid physicalDevice [VUID-vkAcquireDrmDisplayEXT-physicalDevice-parameter]
+vkAcquireNextImage2KHR
+vkAcquireNextImage2KHR: Invalid device [VUID-vkAcquireNextImage2KHR-device-parameter]
+vkAcquireNextImageKHR
+vkAcquireNextImageKHR: Invalid device [VUID-vkAcquireNextImageKHR-device-parameter]
+vkAcquirePerformanceConfigurationINTEL
+vkAcquirePerformanceConfigurationINTEL: Invalid device [VUID-vkAcquirePerformanceConfigurationINTEL-device-parameter]
+vkAcquireProfilingLockKHR
+vkAcquireProfilingLockKHR: Invalid device [VUID-vkAcquireProfilingLockKHR-device-parameter]
+vkAcquireXLibDisplayEXT: Emulating call in ICD "%s" by returning error
+vkAcquireXlibDisplayEXT
+vkAcquireXlibDisplayEXT: Invalid physicalDevice [VUID-vkAcquireXlibDisplayEXT-physicalDevice-parameter]
+vkAllocateCommandBuffers
+vkAllocateCommandBuffers: Invalid device [VUID-vkAllocateCommandBuffers-device-parameter]
+vkAllocateDescriptorSets
+vkAllocateDescriptorSets: Invalid device [VUID-vkAllocateDescriptorSets-device-parameter]
+vkAllocateMemory
+vkAllocateMemory: Invalid device [VUID-vkAllocateMemory-device-parameter]
+vkAntiLagUpdateAMD
+vkAntiLagUpdateAMD: Invalid device [VUID-vkAntiLagUpdateAMD-device-parameter]
+vkBeginCommandBuffer
+vkBeginCommandBuffer: Invalid commandBuffer [VUID-vkBeginCommandBuffer-commandBuffer-parameter]
+vkBindAccelerationStructureMemoryNV
+vkBindAccelerationStructureMemoryNV: Invalid device [VUID-vkBindAccelerationStructureMemoryNV-device-parameter]
+vkBindBufferMemory
+vkBindBufferMemory2
+vkBindBufferMemory2: Invalid device [VUID-vkBindBufferMemory2-device-parameter]
+vkBindBufferMemory2KHR
+vkBindBufferMemory2KHR: Invalid device [VUID-vkBindBufferMemory2KHR-device-parameter]
+vkBindBufferMemory: Invalid device [VUID-vkBindBufferMemory-device-parameter]
+vkBindImageMemory
+vkBindImageMemory2
+vkBindImageMemory2: Invalid device [VUID-vkBindImageMemory2-device-parameter]
+vkBindImageMemory2KHR
+vkBindImageMemory2KHR: Invalid device [VUID-vkBindImageMemory2KHR-device-parameter]
+vkBindImageMemory: Invalid device [VUID-vkBindImageMemory-device-parameter]
+vkBindOpticalFlowSessionImageNV
+vkBindOpticalFlowSessionImageNV: Invalid device [VUID-vkBindOpticalFlowSessionImageNV-device-parameter]
+vkBindVideoSessionMemoryKHR
+vkBindVideoSessionMemoryKHR: Invalid device [VUID-vkBindVideoSessionMemoryKHR-device-parameter]
+vkBuildAccelerationStructuresKHR
+vkBuildAccelerationStructuresKHR: Invalid device [VUID-vkBuildAccelerationStructuresKHR-device-parameter]
+vkBuildMicromapsEXT
+vkBuildMicromapsEXT: Invalid device [VUID-vkBuildMicromapsEXT-device-parameter]
+vkCmdBeginConditionalRenderingEXT
+vkCmdBeginConditionalRenderingEXT: Invalid commandBuffer [VUID-vkCmdBeginConditionalRenderingEXT-commandBuffer-parameter]
+vkCmdBeginDebugUtilsLabelEXT
+vkCmdBeginDebugUtilsLabelEXT: Invalid commandBuffer [VUID-vkCmdBeginDebugUtilsLabelEXT-commandBuffer-parameter]
+vkCmdBeginQuery
+vkCmdBeginQuery: Invalid commandBuffer [VUID-vkCmdBeginQuery-commandBuffer-parameter]
+vkCmdBeginQueryIndexedEXT
+vkCmdBeginQueryIndexedEXT: Invalid commandBuffer [VUID-vkCmdBeginQueryIndexedEXT-commandBuffer-parameter]
+vkCmdBeginRenderPass
+vkCmdBeginRenderPass2
+vkCmdBeginRenderPass2: Invalid commandBuffer [VUID-vkCmdBeginRenderPass2-commandBuffer-parameter]
+vkCmdBeginRenderPass2KHR
+vkCmdBeginRenderPass2KHR: Invalid commandBuffer [VUID-vkCmdBeginRenderPass2KHR-commandBuffer-parameter]
+vkCmdBeginRenderPass: Invalid commandBuffer [VUID-vkCmdBeginRenderPass-commandBuffer-parameter]
+vkCmdBeginRendering
+vkCmdBeginRenderingKHR
+vkCmdBeginRenderingKHR: Invalid commandBuffer [VUID-vkCmdBeginRenderingKHR-commandBuffer-parameter]
+vkCmdBeginTransformFeedbackEXT
+vkCmdBeginTransformFeedbackEXT: Invalid commandBuffer [VUID-vkCmdBeginTransformFeedbackEXT-commandBuffer-parameter]
+vkCmdBeginVideoCodingKHR
+vkCmdBeginVideoCodingKHR: Invalid commandBuffer [VUID-vkCmdBeginVideoCodingKHR-commandBuffer-parameter]
+vkCmdBindDescriptorBufferEmbeddedSamplers2EXT
+vkCmdBindDescriptorBufferEmbeddedSamplers2EXT: Invalid commandBuffer [VUID-vkCmdBindDescriptorBufferEmbeddedSamplers2EXT-commandBuffer-parameter]
+vkCmdBindDescriptorBufferEmbeddedSamplersEXT
+vkCmdBindDescriptorBufferEmbeddedSamplersEXT: Invalid commandBuffer [VUID-vkCmdBindDescriptorBufferEmbeddedSamplersEXT-commandBuffer-parameter]
+vkCmdBindDescriptorBuffersEXT
+vkCmdBindDescriptorBuffersEXT: Invalid commandBuffer [VUID-vkCmdBindDescriptorBuffersEXT-commandBuffer-parameter]
+vkCmdBindDescriptorSets
+vkCmdBindDescriptorSets2KHR
+vkCmdBindDescriptorSets2KHR: Invalid commandBuffer [VUID-vkCmdBindDescriptorSets2KHR-commandBuffer-parameter]
+vkCmdBindDescriptorSets: Invalid commandBuffer [VUID-vkCmdBindDescriptorSets-commandBuffer-parameter]
+vkCmdBindIndexBuffer
+vkCmdBindIndexBuffer2KHR
+vkCmdBindIndexBuffer2KHR: Invalid commandBuffer [VUID-vkCmdBindIndexBuffer2KHR-commandBuffer-parameter]
+vkCmdBindIndexBuffer: Invalid commandBuffer [VUID-vkCmdBindIndexBuffer-commandBuffer-parameter]
+vkCmdBindInvocationMaskHUAWEI
+vkCmdBindInvocationMaskHUAWEI: Invalid commandBuffer [VUID-vkCmdBindInvocationMaskHUAWEI-commandBuffer-parameter]
+vkCmdBindPipeline
+vkCmdBindPipeline: Invalid commandBuffer [VUID-vkCmdBindPipeline-commandBuffer-parameter]
+vkCmdBindPipelineShaderGroupNV
+vkCmdBindPipelineShaderGroupNV: Invalid commandBuffer [VUID-vkCmdBindPipelineShaderGroupNV-commandBuffer-parameter]
+vkCmdBindShadersEXT
+vkCmdBindShadersEXT: Invalid commandBuffer [VUID-vkCmdBindShadersEXT-commandBuffer-parameter]
+vkCmdBindShadingRateImageNV
+vkCmdBindShadingRateImageNV: Invalid commandBuffer [VUID-vkCmdBindShadingRateImageNV-commandBuffer-parameter]
+vkCmdBindTransformFeedbackBuffersEXT
+vkCmdBindTransformFeedbackBuffersEXT: Invalid commandBuffer [VUID-vkCmdBindTransformFeedbackBuffersEXT-commandBuffer-parameter]
+vkCmdBindVertexBuffers
+vkCmdBindVertexBuffers2
+vkCmdBindVertexBuffers2EXT
+vkCmdBindVertexBuffers2EXT: Invalid commandBuffer [VUID-vkCmdBindVertexBuffers2EXT-commandBuffer-parameter]
+vkCmdBindVertexBuffers: Invalid commandBuffer [VUID-vkCmdBindVertexBuffers-commandBuffer-parameter]
+vkCmdBlitImage
+vkCmdBlitImage2
+vkCmdBlitImage2KHR
+vkCmdBlitImage2KHR: Invalid commandBuffer [VUID-vkCmdBlitImage2KHR-commandBuffer-parameter]
+vkCmdBlitImage: Invalid commandBuffer [VUID-vkCmdBlitImage-commandBuffer-parameter]
+vkCmdBuildAccelerationStructureNV
+vkCmdBuildAccelerationStructureNV: Invalid commandBuffer [VUID-vkCmdBuildAccelerationStructureNV-commandBuffer-parameter]
+vkCmdBuildAccelerationStructuresIndirectKHR
+vkCmdBuildAccelerationStructuresIndirectKHR: Invalid commandBuffer [VUID-vkCmdBuildAccelerationStructuresIndirectKHR-commandBuffer-parameter]
+vkCmdBuildAccelerationStructuresKHR
+vkCmdBuildAccelerationStructuresKHR: Invalid commandBuffer [VUID-vkCmdBuildAccelerationStructuresKHR-commandBuffer-parameter]
+vkCmdBuildMicromapsEXT
+vkCmdBuildMicromapsEXT: Invalid commandBuffer [VUID-vkCmdBuildMicromapsEXT-commandBuffer-parameter]
+vkCmdClearAttachments
+vkCmdClearAttachments: Invalid commandBuffer [VUID-vkCmdClearAttachments-commandBuffer-parameter]
+vkCmdClearColorImage
+vkCmdClearColorImage: Invalid commandBuffer [VUID-vkCmdClearColorImage-commandBuffer-parameter]
+vkCmdClearDepthStencilImage
+vkCmdClearDepthStencilImage: Invalid commandBuffer [VUID-vkCmdClearDepthStencilImage-commandBuffer-parameter]
+vkCmdControlVideoCodingKHR
+vkCmdControlVideoCodingKHR: Invalid commandBuffer [VUID-vkCmdControlVideoCodingKHR-commandBuffer-parameter]
+vkCmdCopyAccelerationStructureKHR
+vkCmdCopyAccelerationStructureKHR: Invalid commandBuffer [VUID-vkCmdCopyAccelerationStructureKHR-commandBuffer-parameter]
+vkCmdCopyAccelerationStructureNV
+vkCmdCopyAccelerationStructureNV: Invalid commandBuffer [VUID-vkCmdCopyAccelerationStructureNV-commandBuffer-parameter]
+vkCmdCopyAccelerationStructureToMemoryKHR
+vkCmdCopyAccelerationStructureToMemoryKHR: Invalid commandBuffer [VUID-vkCmdCopyAccelerationStructureToMemoryKHR-commandBuffer-parameter]
+vkCmdCopyBuffer
+vkCmdCopyBuffer2
+vkCmdCopyBuffer2KHR
+vkCmdCopyBuffer2KHR: Invalid commandBuffer [VUID-vkCmdCopyBuffer2KHR-commandBuffer-parameter]
+vkCmdCopyBuffer: Invalid commandBuffer [VUID-vkCmdCopyBuffer-commandBuffer-parameter]
+vkCmdCopyBufferToImage
+vkCmdCopyBufferToImage2
+vkCmdCopyBufferToImage2KHR
+vkCmdCopyBufferToImage2KHR: Invalid commandBuffer [VUID-vkCmdCopyBufferToImage2KHR-commandBuffer-parameter]
+vkCmdCopyBufferToImage: Invalid commandBuffer [VUID-vkCmdCopyBufferToImage-commandBuffer-parameter]
+vkCmdCopyImage
+vkCmdCopyImage2
+vkCmdCopyImage2KHR
+vkCmdCopyImage2KHR: Invalid commandBuffer [VUID-vkCmdCopyImage2KHR-commandBuffer-parameter]
+vkCmdCopyImage: Invalid commandBuffer [VUID-vkCmdCopyImage-commandBuffer-parameter]
+vkCmdCopyImageToBuffer
+vkCmdCopyImageToBuffer2
+vkCmdCopyImageToBuffer2KHR
+vkCmdCopyImageToBuffer2KHR: Invalid commandBuffer [VUID-vkCmdCopyImageToBuffer2KHR-commandBuffer-parameter]
+vkCmdCopyImageToBuffer: Invalid commandBuffer [VUID-vkCmdCopyImageToBuffer-commandBuffer-parameter]
+vkCmdCopyMemoryIndirectNV
+vkCmdCopyMemoryIndirectNV: Invalid commandBuffer [VUID-vkCmdCopyMemoryIndirectNV-commandBuffer-parameter]
+vkCmdCopyMemoryToAccelerationStructureKHR
+vkCmdCopyMemoryToAccelerationStructureKHR: Invalid commandBuffer [VUID-vkCmdCopyMemoryToAccelerationStructureKHR-commandBuffer-parameter]
+vkCmdCopyMemoryToImageIndirectNV
+vkCmdCopyMemoryToImageIndirectNV: Invalid commandBuffer [VUID-vkCmdCopyMemoryToImageIndirectNV-commandBuffer-parameter]
+vkCmdCopyMemoryToMicromapEXT
+vkCmdCopyMemoryToMicromapEXT: Invalid commandBuffer [VUID-vkCmdCopyMemoryToMicromapEXT-commandBuffer-parameter]
+vkCmdCopyMicromapEXT
+vkCmdCopyMicromapEXT: Invalid commandBuffer [VUID-vkCmdCopyMicromapEXT-commandBuffer-parameter]
+vkCmdCopyMicromapToMemoryEXT
+vkCmdCopyMicromapToMemoryEXT: Invalid commandBuffer [VUID-vkCmdCopyMicromapToMemoryEXT-commandBuffer-parameter]
+vkCmdCopyQueryPoolResults
+vkCmdCopyQueryPoolResults: Invalid commandBuffer [VUID-vkCmdCopyQueryPoolResults-commandBuffer-parameter]
+vkCmdCuLaunchKernelNVX
+vkCmdCuLaunchKernelNVX: Invalid commandBuffer [VUID-vkCmdCuLaunchKernelNVX-commandBuffer-parameter]
+vkCmdCudaLaunchKernelNV
+vkCmdCudaLaunchKernelNV: Invalid commandBuffer [VUID-vkCmdCudaLaunchKernelNV-commandBuffer-parameter]
+vkCmdDebugMarkerBeginEXT
+vkCmdDebugMarkerBeginEXT: Invalid commandBuffer [VUID-vkCmdDebugMarkerBeginEXT-commandBuffer-parameter]
+vkCmdDebugMarkerEndEXT
+vkCmdDebugMarkerEndEXT: Invalid commandBuffer [VUID-vkCmdDebugMarkerEndEXT-commandBuffer-parameter]
+vkCmdDebugMarkerInsertEXT
+vkCmdDebugMarkerInsertEXT: Invalid commandBuffer [VUID-vkCmdDebugMarkerInsertEXT-commandBuffer-parameter]
+vkCmdDecodeVideoKHR
+vkCmdDecodeVideoKHR: Invalid commandBuffer [VUID-vkCmdDecodeVideoKHR-commandBuffer-parameter]
+vkCmdDecompressMemoryIndirectCountNV
+vkCmdDecompressMemoryIndirectCountNV: Invalid commandBuffer [VUID-vkCmdDecompressMemoryIndirectCountNV-commandBuffer-parameter]
+vkCmdDecompressMemoryNV
+vkCmdDecompressMemoryNV: Invalid commandBuffer [VUID-vkCmdDecompressMemoryNV-commandBuffer-parameter]
+vkCmdDispatch
+vkCmdDispatch: Invalid commandBuffer [VUID-vkCmdDispatch-commandBuffer-parameter]
+vkCmdDispatchBase
+vkCmdDispatchBase: Invalid commandBuffer [VUID-vkCmdDispatchBase-commandBuffer-parameter]
+vkCmdDispatchBaseKHR
+vkCmdDispatchBaseKHR: Invalid commandBuffer [VUID-vkCmdDispatchBaseKHR-commandBuffer-parameter]
+vkCmdDispatchGraphAMDX
+vkCmdDispatchGraphAMDX: Invalid commandBuffer [VUID-vkCmdDispatchGraphAMDX-commandBuffer-parameter]
+vkCmdDispatchGraphIndirectAMDX
+vkCmdDispatchGraphIndirectAMDX: Invalid commandBuffer [VUID-vkCmdDispatchGraphIndirectAMDX-commandBuffer-parameter]
+vkCmdDispatchGraphIndirectCountAMDX
+vkCmdDispatchGraphIndirectCountAMDX: Invalid commandBuffer [VUID-vkCmdDispatchGraphIndirectCountAMDX-commandBuffer-parameter]
+vkCmdDispatchIndirect
+vkCmdDispatchIndirect: Invalid commandBuffer [VUID-vkCmdDispatchIndirect-commandBuffer-parameter]
+vkCmdDraw
+vkCmdDraw: Invalid commandBuffer [VUID-vkCmdDraw-commandBuffer-parameter]
+vkCmdDrawClusterHUAWEI
+vkCmdDrawClusterHUAWEI: Invalid commandBuffer [VUID-vkCmdDrawClusterHUAWEI-commandBuffer-parameter]
+vkCmdDrawClusterIndirectHUAWEI
+vkCmdDrawClusterIndirectHUAWEI: Invalid commandBuffer [VUID-vkCmdDrawClusterIndirectHUAWEI-commandBuffer-parameter]
+vkCmdDrawIndexed
+vkCmdDrawIndexed: Invalid commandBuffer [VUID-vkCmdDrawIndexed-commandBuffer-parameter]
+vkCmdDrawIndexedIndirect
+vkCmdDrawIndexedIndirect: Invalid commandBuffer [VUID-vkCmdDrawIndexedIndirect-commandBuffer-parameter]
+vkCmdDrawIndexedIndirectCount
+vkCmdDrawIndexedIndirectCount: Invalid commandBuffer [VUID-vkCmdDrawIndexedIndirectCount-commandBuffer-parameter]
+vkCmdDrawIndexedIndirectCountAMD
+vkCmdDrawIndexedIndirectCountAMD: Invalid commandBuffer [VUID-vkCmdDrawIndexedIndirectCountAMD-commandBuffer-parameter]
+vkCmdDrawIndexedIndirectCountKHR
+vkCmdDrawIndexedIndirectCountKHR: Invalid commandBuffer [VUID-vkCmdDrawIndexedIndirectCountKHR-commandBuffer-parameter]
+vkCmdDrawIndirect
+vkCmdDrawIndirect: Invalid commandBuffer [VUID-vkCmdDrawIndirect-commandBuffer-parameter]
+vkCmdDrawIndirectByteCountEXT
+vkCmdDrawIndirectByteCountEXT: Invalid commandBuffer [VUID-vkCmdDrawIndirectByteCountEXT-commandBuffer-parameter]
+vkCmdDrawIndirectCount
+vkCmdDrawIndirectCount: Invalid commandBuffer [VUID-vkCmdDrawIndirectCount-commandBuffer-parameter]
+vkCmdDrawIndirectCountAMD
+vkCmdDrawIndirectCountAMD: Invalid commandBuffer [VUID-vkCmdDrawIndirectCountAMD-commandBuffer-parameter]
+vkCmdDrawIndirectCountKHR
+vkCmdDrawIndirectCountKHR: Invalid commandBuffer [VUID-vkCmdDrawIndirectCountKHR-commandBuffer-parameter]
+vkCmdDrawMeshTasksEXT
+vkCmdDrawMeshTasksEXT: Invalid commandBuffer [VUID-vkCmdDrawMeshTasksEXT-commandBuffer-parameter]
+vkCmdDrawMeshTasksIndirectCountEXT
+vkCmdDrawMeshTasksIndirectCountEXT: Invalid commandBuffer [VUID-vkCmdDrawMeshTasksIndirectCountEXT-commandBuffer-parameter]
+vkCmdDrawMeshTasksIndirectCountNV
+vkCmdDrawMeshTasksIndirectCountNV: Invalid commandBuffer [VUID-vkCmdDrawMeshTasksIndirectCountNV-commandBuffer-parameter]
+vkCmdDrawMeshTasksIndirectEXT
+vkCmdDrawMeshTasksIndirectEXT: Invalid commandBuffer [VUID-vkCmdDrawMeshTasksIndirectEXT-commandBuffer-parameter]
+vkCmdDrawMeshTasksIndirectNV
+vkCmdDrawMeshTasksIndirectNV: Invalid commandBuffer [VUID-vkCmdDrawMeshTasksIndirectNV-commandBuffer-parameter]
+vkCmdDrawMeshTasksNV
+vkCmdDrawMeshTasksNV: Invalid commandBuffer [VUID-vkCmdDrawMeshTasksNV-commandBuffer-parameter]
+vkCmdDrawMultiEXT
+vkCmdDrawMultiEXT: Invalid commandBuffer [VUID-vkCmdDrawMultiEXT-commandBuffer-parameter]
+vkCmdDrawMultiIndexedEXT
+vkCmdDrawMultiIndexedEXT: Invalid commandBuffer [VUID-vkCmdDrawMultiIndexedEXT-commandBuffer-parameter]
+vkCmdEncodeVideoKHR
+vkCmdEncodeVideoKHR: Invalid commandBuffer [VUID-vkCmdEncodeVideoKHR-commandBuffer-parameter]
+vkCmdEndConditionalRenderingEXT
+vkCmdEndConditionalRenderingEXT: Invalid commandBuffer [VUID-vkCmdEndConditionalRenderingEXT-commandBuffer-parameter]
+vkCmdEndDebugUtilsLabelEXT
+vkCmdEndDebugUtilsLabelEXT: Invalid commandBuffer [VUID-vkCmdEndDebugUtilsLabelEXT-commandBuffer-parameter]
+vkCmdEndQuery
+vkCmdEndQuery: Invalid commandBuffer [VUID-vkCmdEndQuery-commandBuffer-parameter]
+vkCmdEndQueryIndexedEXT
+vkCmdEndQueryIndexedEXT: Invalid commandBuffer [VUID-vkCmdEndQueryIndexedEXT-commandBuffer-parameter]
+vkCmdEndRenderPass
+vkCmdEndRenderPass2
+vkCmdEndRenderPass2: Invalid commandBuffer [VUID-vkCmdEndRenderPass2-commandBuffer-parameter]
+vkCmdEndRenderPass2KHR
+vkCmdEndRenderPass2KHR: Invalid commandBuffer [VUID-vkCmdEndRenderPass2KHR-commandBuffer-parameter]
+vkCmdEndRenderPass: Invalid commandBuffer [VUID-vkCmdEndRenderPass-commandBuffer-parameter]
+vkCmdEndRendering
+vkCmdEndRenderingKHR
+vkCmdEndRenderingKHR: Invalid commandBuffer [VUID-vkCmdEndRenderingKHR-commandBuffer-parameter]
+vkCmdEndTransformFeedbackEXT
+vkCmdEndTransformFeedbackEXT: Invalid commandBuffer [VUID-vkCmdEndTransformFeedbackEXT-commandBuffer-parameter]
+vkCmdEndVideoCodingKHR
+vkCmdEndVideoCodingKHR: Invalid commandBuffer [VUID-vkCmdEndVideoCodingKHR-commandBuffer-parameter]
+vkCmdExecuteCommands
+vkCmdExecuteCommands: Invalid commandBuffer [VUID-vkCmdExecuteCommands-commandBuffer-parameter]
+vkCmdExecuteGeneratedCommandsEXT
+vkCmdExecuteGeneratedCommandsEXT: Invalid commandBuffer [VUID-vkCmdExecuteGeneratedCommandsEXT-commandBuffer-parameter]
+vkCmdExecuteGeneratedCommandsNV
+vkCmdExecuteGeneratedCommandsNV: Invalid commandBuffer [VUID-vkCmdExecuteGeneratedCommandsNV-commandBuffer-parameter]
+vkCmdFillBuffer
+vkCmdFillBuffer: Invalid commandBuffer [VUID-vkCmdFillBuffer-commandBuffer-parameter]
+vkCmdInitializeGraphScratchMemoryAMDX
+vkCmdInitializeGraphScratchMemoryAMDX: Invalid commandBuffer [VUID-vkCmdInitializeGraphScratchMemoryAMDX-commandBuffer-parameter]
+vkCmdInsertDebugUtilsLabelEXT
+vkCmdInsertDebugUtilsLabelEXT: Invalid commandBuffer [VUID-vkCmdInsertDebugUtilsLabelEXT-commandBuffer-parameter]
+vkCmdNextSubpass
+vkCmdNextSubpass2
+vkCmdNextSubpass2: Invalid commandBuffer [VUID-vkCmdNextSubpass2-commandBuffer-parameter]
+vkCmdNextSubpass2KHR
+vkCmdNextSubpass2KHR: Invalid commandBuffer [VUID-vkCmdNextSubpass2KHR-commandBuffer-parameter]
+vkCmdNextSubpass: Invalid commandBuffer [VUID-vkCmdNextSubpass-commandBuffer-parameter]
+vkCmdOpticalFlowExecuteNV
+vkCmdOpticalFlowExecuteNV: Invalid commandBuffer [VUID-vkCmdOpticalFlowExecuteNV-commandBuffer-parameter]
+vkCmdPipelineBarrier
+vkCmdPipelineBarrier2
+vkCmdPipelineBarrier2KHR
+vkCmdPipelineBarrier2KHR: Invalid commandBuffer [VUID-vkCmdPipelineBarrier2KHR-commandBuffer-parameter]
+vkCmdPipelineBarrier: Invalid commandBuffer [VUID-vkCmdPipelineBarrier-commandBuffer-parameter]
+vkCmdPreprocessGeneratedCommandsEXT
+vkCmdPreprocessGeneratedCommandsEXT: Invalid commandBuffer [VUID-vkCmdPreprocessGeneratedCommandsEXT-commandBuffer-parameter]
+vkCmdPreprocessGeneratedCommandsNV
+vkCmdPreprocessGeneratedCommandsNV: Invalid commandBuffer [VUID-vkCmdPreprocessGeneratedCommandsNV-commandBuffer-parameter]
+vkCmdPushConstants
+vkCmdPushConstants2KHR
+vkCmdPushConstants2KHR: Invalid commandBuffer [VUID-vkCmdPushConstants2KHR-commandBuffer-parameter]
+vkCmdPushConstants: Invalid commandBuffer [VUID-vkCmdPushConstants-commandBuffer-parameter]
+vkCmdPushDescriptorSet2KHR
+vkCmdPushDescriptorSet2KHR: Invalid commandBuffer [VUID-vkCmdPushDescriptorSet2KHR-commandBuffer-parameter]
+vkCmdPushDescriptorSetKHR
+vkCmdPushDescriptorSetKHR: Invalid commandBuffer [VUID-vkCmdPushDescriptorSetKHR-commandBuffer-parameter]
+vkCmdPushDescriptorSetWithTemplate2KHR
+vkCmdPushDescriptorSetWithTemplate2KHR: Invalid commandBuffer [VUID-vkCmdPushDescriptorSetWithTemplate2KHR-commandBuffer-parameter]
+vkCmdPushDescriptorSetWithTemplateKHR
+vkCmdPushDescriptorSetWithTemplateKHR: Invalid commandBuffer [VUID-vkCmdPushDescriptorSetWithTemplateKHR-commandBuffer-parameter]
+vkCmdResetEvent
+vkCmdResetEvent2
+vkCmdResetEvent2KHR
+vkCmdResetEvent2KHR: Invalid commandBuffer [VUID-vkCmdResetEvent2KHR-commandBuffer-parameter]
+vkCmdResetEvent: Invalid commandBuffer [VUID-vkCmdResetEvent-commandBuffer-parameter]
+vkCmdResetQueryPool
+vkCmdResetQueryPool: Invalid commandBuffer [VUID-vkCmdResetQueryPool-commandBuffer-parameter]
+vkCmdResolveImage
+vkCmdResolveImage2
+vkCmdResolveImage2KHR
+vkCmdResolveImage2KHR: Invalid commandBuffer [VUID-vkCmdResolveImage2KHR-commandBuffer-parameter]
+vkCmdResolveImage: Invalid commandBuffer [VUID-vkCmdResolveImage-commandBuffer-parameter]
+vkCmdSetAlphaToCoverageEnableEXT
+vkCmdSetAlphaToCoverageEnableEXT: Invalid commandBuffer [VUID-vkCmdSetAlphaToCoverageEnableEXT-commandBuffer-parameter]
+vkCmdSetAlphaToOneEnableEXT
+vkCmdSetAlphaToOneEnableEXT: Invalid commandBuffer [VUID-vkCmdSetAlphaToOneEnableEXT-commandBuffer-parameter]
+vkCmdSetAttachmentFeedbackLoopEnableEXT
+vkCmdSetAttachmentFeedbackLoopEnableEXT: Invalid commandBuffer [VUID-vkCmdSetAttachmentFeedbackLoopEnableEXT-commandBuffer-parameter]
+vkCmdSetBlendConstants
+vkCmdSetBlendConstants: Invalid commandBuffer [VUID-vkCmdSetBlendConstants-commandBuffer-parameter]
+vkCmdSetCheckpointNV
+vkCmdSetCheckpointNV: Invalid commandBuffer [VUID-vkCmdSetCheckpointNV-commandBuffer-parameter]
+vkCmdSetCoarseSampleOrderNV
+vkCmdSetCoarseSampleOrderNV: Invalid commandBuffer [VUID-vkCmdSetCoarseSampleOrderNV-commandBuffer-parameter]
+vkCmdSetColorBlendAdvancedEXT
+vkCmdSetColorBlendAdvancedEXT: Invalid commandBuffer [VUID-vkCmdSetColorBlendAdvancedEXT-commandBuffer-parameter]
+vkCmdSetColorBlendEnableEXT
+vkCmdSetColorBlendEnableEXT: Invalid commandBuffer [VUID-vkCmdSetColorBlendEnableEXT-commandBuffer-parameter]
+vkCmdSetColorBlendEquationEXT
+vkCmdSetColorBlendEquationEXT: Invalid commandBuffer [VUID-vkCmdSetColorBlendEquationEXT-commandBuffer-parameter]
+vkCmdSetColorWriteEnableEXT
+vkCmdSetColorWriteEnableEXT: Invalid commandBuffer [VUID-vkCmdSetColorWriteEnableEXT-commandBuffer-parameter]
+vkCmdSetColorWriteMaskEXT
+vkCmdSetColorWriteMaskEXT: Invalid commandBuffer [VUID-vkCmdSetColorWriteMaskEXT-commandBuffer-parameter]
+vkCmdSetConservativeRasterizationModeEXT
+vkCmdSetConservativeRasterizationModeEXT: Invalid commandBuffer [VUID-vkCmdSetConservativeRasterizationModeEXT-commandBuffer-parameter]
+vkCmdSetCoverageModulationModeNV
+vkCmdSetCoverageModulationModeNV: Invalid commandBuffer [VUID-vkCmdSetCoverageModulationModeNV-commandBuffer-parameter]
+vkCmdSetCoverageModulationTableEnableNV
+vkCmdSetCoverageModulationTableEnableNV: Invalid commandBuffer [VUID-vkCmdSetCoverageModulationTableEnableNV-commandBuffer-parameter]
+vkCmdSetCoverageModulationTableNV
+vkCmdSetCoverageModulationTableNV: Invalid commandBuffer [VUID-vkCmdSetCoverageModulationTableNV-commandBuffer-parameter]
+vkCmdSetCoverageReductionModeNV
+vkCmdSetCoverageReductionModeNV: Invalid commandBuffer [VUID-vkCmdSetCoverageReductionModeNV-commandBuffer-parameter]
+vkCmdSetCoverageToColorEnableNV
+vkCmdSetCoverageToColorEnableNV: Invalid commandBuffer [VUID-vkCmdSetCoverageToColorEnableNV-commandBuffer-parameter]
+vkCmdSetCoverageToColorLocationNV
+vkCmdSetCoverageToColorLocationNV: Invalid commandBuffer [VUID-vkCmdSetCoverageToColorLocationNV-commandBuffer-parameter]
+vkCmdSetCullMode
+vkCmdSetCullModeEXT
+vkCmdSetCullModeEXT: Invalid commandBuffer [VUID-vkCmdSetCullModeEXT-commandBuffer-parameter]
+vkCmdSetDepthBias
+vkCmdSetDepthBias2EXT
+vkCmdSetDepthBias2EXT: Invalid commandBuffer [VUID-vkCmdSetDepthBias2EXT-commandBuffer-parameter]
+vkCmdSetDepthBias: Invalid commandBuffer [VUID-vkCmdSetDepthBias-commandBuffer-parameter]
+vkCmdSetDepthBiasEnable
+vkCmdSetDepthBiasEnableEXT
+vkCmdSetDepthBiasEnableEXT: Invalid commandBuffer [VUID-vkCmdSetDepthBiasEnableEXT-commandBuffer-parameter]
+vkCmdSetDepthBounds
+vkCmdSetDepthBounds: Invalid commandBuffer [VUID-vkCmdSetDepthBounds-commandBuffer-parameter]
+vkCmdSetDepthBoundsTestEnable
+vkCmdSetDepthBoundsTestEnableEXT
+vkCmdSetDepthBoundsTestEnableEXT: Invalid commandBuffer [VUID-vkCmdSetDepthBoundsTestEnableEXT-commandBuffer-parameter]
+vkCmdSetDepthClampEnableEXT
+vkCmdSetDepthClampEnableEXT: Invalid commandBuffer [VUID-vkCmdSetDepthClampEnableEXT-commandBuffer-parameter]
+vkCmdSetDepthClampRangeEXT
+vkCmdSetDepthClampRangeEXT: Invalid commandBuffer [VUID-vkCmdSetDepthClampRangeEXT-commandBuffer-parameter]
+vkCmdSetDepthClipEnableEXT
+vkCmdSetDepthClipEnableEXT: Invalid commandBuffer [VUID-vkCmdSetDepthClipEnableEXT-commandBuffer-parameter]
+vkCmdSetDepthClipNegativeOneToOneEXT
+vkCmdSetDepthClipNegativeOneToOneEXT: Invalid commandBuffer [VUID-vkCmdSetDepthClipNegativeOneToOneEXT-commandBuffer-parameter]
+vkCmdSetDepthCompareOp
+vkCmdSetDepthCompareOpEXT
+vkCmdSetDepthCompareOpEXT: Invalid commandBuffer [VUID-vkCmdSetDepthCompareOpEXT-commandBuffer-parameter]
+vkCmdSetDepthTestEnable
+vkCmdSetDepthTestEnableEXT
+vkCmdSetDepthTestEnableEXT: Invalid commandBuffer [VUID-vkCmdSetDepthTestEnableEXT-commandBuffer-parameter]
+vkCmdSetDepthWriteEnable
+vkCmdSetDepthWriteEnableEXT
+vkCmdSetDepthWriteEnableEXT: Invalid commandBuffer [VUID-vkCmdSetDepthWriteEnableEXT-commandBuffer-parameter]
+vkCmdSetDescriptorBufferOffsets2EXT
+vkCmdSetDescriptorBufferOffsets2EXT: Invalid commandBuffer [VUID-vkCmdSetDescriptorBufferOffsets2EXT-commandBuffer-parameter]
+vkCmdSetDescriptorBufferOffsetsEXT
+vkCmdSetDescriptorBufferOffsetsEXT: Invalid commandBuffer [VUID-vkCmdSetDescriptorBufferOffsetsEXT-commandBuffer-parameter]
+vkCmdSetDeviceMask
+vkCmdSetDeviceMask: Invalid commandBuffer [VUID-vkCmdSetDeviceMask-commandBuffer-parameter]
+vkCmdSetDeviceMaskKHR
+vkCmdSetDeviceMaskKHR: Invalid commandBuffer [VUID-vkCmdSetDeviceMaskKHR-commandBuffer-parameter]
+vkCmdSetDiscardRectangleEXT
+vkCmdSetDiscardRectangleEXT: Invalid commandBuffer [VUID-vkCmdSetDiscardRectangleEXT-commandBuffer-parameter]
+vkCmdSetDiscardRectangleEnableEXT
+vkCmdSetDiscardRectangleEnableEXT: Invalid commandBuffer [VUID-vkCmdSetDiscardRectangleEnableEXT-commandBuffer-parameter]
+vkCmdSetDiscardRectangleModeEXT
+vkCmdSetDiscardRectangleModeEXT: Invalid commandBuffer [VUID-vkCmdSetDiscardRectangleModeEXT-commandBuffer-parameter]
+vkCmdSetEvent
+vkCmdSetEvent2
+vkCmdSetEvent2KHR
+vkCmdSetEvent2KHR: Invalid commandBuffer [VUID-vkCmdSetEvent2KHR-commandBuffer-parameter]
+vkCmdSetEvent: Invalid commandBuffer [VUID-vkCmdSetEvent-commandBuffer-parameter]
+vkCmdSetExclusiveScissorEnableNV
+vkCmdSetExclusiveScissorEnableNV: Invalid commandBuffer [VUID-vkCmdSetExclusiveScissorEnableNV-commandBuffer-parameter]
+vkCmdSetExclusiveScissorNV
+vkCmdSetExclusiveScissorNV: Invalid commandBuffer [VUID-vkCmdSetExclusiveScissorNV-commandBuffer-parameter]
+vkCmdSetExtraPrimitiveOverestimationSizeEXT
+vkCmdSetExtraPrimitiveOverestimationSizeEXT: Invalid commandBuffer [VUID-vkCmdSetExtraPrimitiveOverestimationSizeEXT-commandBuffer-parameter]
+vkCmdSetFragmentShadingRateEnumNV
+vkCmdSetFragmentShadingRateEnumNV: Invalid commandBuffer [VUID-vkCmdSetFragmentShadingRateEnumNV-commandBuffer-parameter]
+vkCmdSetFragmentShadingRateKHR
+vkCmdSetFragmentShadingRateKHR: Invalid commandBuffer [VUID-vkCmdSetFragmentShadingRateKHR-commandBuffer-parameter]
+vkCmdSetFrontFace
+vkCmdSetFrontFaceEXT
+vkCmdSetFrontFaceEXT: Invalid commandBuffer [VUID-vkCmdSetFrontFaceEXT-commandBuffer-parameter]
+vkCmdSetLineRasterizationModeEXT
+vkCmdSetLineRasterizationModeEXT: Invalid commandBuffer [VUID-vkCmdSetLineRasterizationModeEXT-commandBuffer-parameter]
+vkCmdSetLineStippleEXT
+vkCmdSetLineStippleEXT: Invalid commandBuffer [VUID-vkCmdSetLineStippleEXT-commandBuffer-parameter]
+vkCmdSetLineStippleEnableEXT
+vkCmdSetLineStippleEnableEXT: Invalid commandBuffer [VUID-vkCmdSetLineStippleEnableEXT-commandBuffer-parameter]
+vkCmdSetLineStippleKHR
+vkCmdSetLineStippleKHR: Invalid commandBuffer [VUID-vkCmdSetLineStippleKHR-commandBuffer-parameter]
+vkCmdSetLineWidth
+vkCmdSetLineWidth: Invalid commandBuffer [VUID-vkCmdSetLineWidth-commandBuffer-parameter]
+vkCmdSetLogicOpEXT
+vkCmdSetLogicOpEXT: Invalid commandBuffer [VUID-vkCmdSetLogicOpEXT-commandBuffer-parameter]
+vkCmdSetLogicOpEnableEXT
+vkCmdSetLogicOpEnableEXT: Invalid commandBuffer [VUID-vkCmdSetLogicOpEnableEXT-commandBuffer-parameter]
+vkCmdSetPatchControlPointsEXT
+vkCmdSetPatchControlPointsEXT: Invalid commandBuffer [VUID-vkCmdSetPatchControlPointsEXT-commandBuffer-parameter]
+vkCmdSetPerformanceMarkerINTEL
+vkCmdSetPerformanceMarkerINTEL: Invalid commandBuffer [VUID-vkCmdSetPerformanceMarkerINTEL-commandBuffer-parameter]
+vkCmdSetPerformanceOverrideINTEL
+vkCmdSetPerformanceOverrideINTEL: Invalid commandBuffer [VUID-vkCmdSetPerformanceOverrideINTEL-commandBuffer-parameter]
+vkCmdSetPerformanceStreamMarkerINTEL
+vkCmdSetPerformanceStreamMarkerINTEL: Invalid commandBuffer [VUID-vkCmdSetPerformanceStreamMarkerINTEL-commandBuffer-parameter]
+vkCmdSetPolygonModeEXT
+vkCmdSetPolygonModeEXT: Invalid commandBuffer [VUID-vkCmdSetPolygonModeEXT-commandBuffer-parameter]
+vkCmdSetPrimitiveRestartEnable
+vkCmdSetPrimitiveRestartEnableEXT
+vkCmdSetPrimitiveRestartEnableEXT: Invalid commandBuffer [VUID-vkCmdSetPrimitiveRestartEnableEXT-commandBuffer-parameter]
+vkCmdSetPrimitiveTopology
+vkCmdSetPrimitiveTopologyEXT
+vkCmdSetPrimitiveTopologyEXT: Invalid commandBuffer [VUID-vkCmdSetPrimitiveTopologyEXT-commandBuffer-parameter]
+vkCmdSetProvokingVertexModeEXT
+vkCmdSetProvokingVertexModeEXT: Invalid commandBuffer [VUID-vkCmdSetProvokingVertexModeEXT-commandBuffer-parameter]
+vkCmdSetRasterizationSamplesEXT
+vkCmdSetRasterizationSamplesEXT: Invalid commandBuffer [VUID-vkCmdSetRasterizationSamplesEXT-commandBuffer-parameter]
+vkCmdSetRasterizationStreamEXT
+vkCmdSetRasterizationStreamEXT: Invalid commandBuffer [VUID-vkCmdSetRasterizationStreamEXT-commandBuffer-parameter]
+vkCmdSetRasterizerDiscardEnable
+vkCmdSetRasterizerDiscardEnableEXT
+vkCmdSetRasterizerDiscardEnableEXT: Invalid commandBuffer [VUID-vkCmdSetRasterizerDiscardEnableEXT-commandBuffer-parameter]
+vkCmdSetRayTracingPipelineStackSizeKHR
+vkCmdSetRayTracingPipelineStackSizeKHR: Invalid commandBuffer [VUID-vkCmdSetRayTracingPipelineStackSizeKHR-commandBuffer-parameter]
+vkCmdSetRenderingAttachmentLocationsKHR
+vkCmdSetRenderingAttachmentLocationsKHR: Invalid commandBuffer [VUID-vkCmdSetRenderingAttachmentLocationsKHR-commandBuffer-parameter]
+vkCmdSetRenderingInputAttachmentIndicesKHR
+vkCmdSetRenderingInputAttachmentIndicesKHR: Invalid commandBuffer [VUID-vkCmdSetRenderingInputAttachmentIndicesKHR-commandBuffer-parameter]
+vkCmdSetRepresentativeFragmentTestEnableNV
+vkCmdSetRepresentativeFragmentTestEnableNV: Invalid commandBuffer [VUID-vkCmdSetRepresentativeFragmentTestEnableNV-commandBuffer-parameter]
+vkCmdSetSampleLocationsEXT
+vkCmdSetSampleLocationsEXT: Invalid commandBuffer [VUID-vkCmdSetSampleLocationsEXT-commandBuffer-parameter]
+vkCmdSetSampleLocationsEnableEXT
+vkCmdSetSampleLocationsEnableEXT: Invalid commandBuffer [VUID-vkCmdSetSampleLocationsEnableEXT-commandBuffer-parameter]
+vkCmdSetSampleMaskEXT
+vkCmdSetSampleMaskEXT: Invalid commandBuffer [VUID-vkCmdSetSampleMaskEXT-commandBuffer-parameter]
+vkCmdSetScissor
+vkCmdSetScissor: Invalid commandBuffer [VUID-vkCmdSetScissor-commandBuffer-parameter]
+vkCmdSetScissorWithCount
+vkCmdSetScissorWithCountEXT
+vkCmdSetScissorWithCountEXT: Invalid commandBuffer [VUID-vkCmdSetScissorWithCountEXT-commandBuffer-parameter]
+vkCmdSetShadingRateImageEnableNV
+vkCmdSetShadingRateImageEnableNV: Invalid commandBuffer [VUID-vkCmdSetShadingRateImageEnableNV-commandBuffer-parameter]
+vkCmdSetStencilCompareMask
+vkCmdSetStencilCompareMask: Invalid commandBuffer [VUID-vkCmdSetStencilCompareMask-commandBuffer-parameter]
+vkCmdSetStencilOp
+vkCmdSetStencilOpEXT
+vkCmdSetStencilOpEXT: Invalid commandBuffer [VUID-vkCmdSetStencilOpEXT-commandBuffer-parameter]
+vkCmdSetStencilReference
+vkCmdSetStencilReference: Invalid commandBuffer [VUID-vkCmdSetStencilReference-commandBuffer-parameter]
+vkCmdSetStencilTestEnable
+vkCmdSetStencilTestEnableEXT
+vkCmdSetStencilTestEnableEXT: Invalid commandBuffer [VUID-vkCmdSetStencilTestEnableEXT-commandBuffer-parameter]
+vkCmdSetStencilWriteMask
+vkCmdSetStencilWriteMask: Invalid commandBuffer [VUID-vkCmdSetStencilWriteMask-commandBuffer-parameter]
+vkCmdSetTessellationDomainOriginEXT
+vkCmdSetTessellationDomainOriginEXT: Invalid commandBuffer [VUID-vkCmdSetTessellationDomainOriginEXT-commandBuffer-parameter]
+vkCmdSetVertexInputEXT
+vkCmdSetVertexInputEXT: Invalid commandBuffer [VUID-vkCmdSetVertexInputEXT-commandBuffer-parameter]
+vkCmdSetViewport
+vkCmdSetViewport: Invalid commandBuffer [VUID-vkCmdSetViewport-commandBuffer-parameter]
+vkCmdSetViewportShadingRatePaletteNV
+vkCmdSetViewportShadingRatePaletteNV: Invalid commandBuffer [VUID-vkCmdSetViewportShadingRatePaletteNV-commandBuffer-parameter]
+vkCmdSetViewportSwizzleNV
+vkCmdSetViewportSwizzleNV: Invalid commandBuffer [VUID-vkCmdSetViewportSwizzleNV-commandBuffer-parameter]
+vkCmdSetViewportWScalingEnableNV
+vkCmdSetViewportWScalingEnableNV: Invalid commandBuffer [VUID-vkCmdSetViewportWScalingEnableNV-commandBuffer-parameter]
+vkCmdSetViewportWScalingNV
+vkCmdSetViewportWScalingNV: Invalid commandBuffer [VUID-vkCmdSetViewportWScalingNV-commandBuffer-parameter]
+vkCmdSetViewportWithCount
+vkCmdSetViewportWithCountEXT
+vkCmdSetViewportWithCountEXT: Invalid commandBuffer [VUID-vkCmdSetViewportWithCountEXT-commandBuffer-parameter]
+vkCmdSubpassShadingHUAWEI
+vkCmdSubpassShadingHUAWEI: Invalid commandBuffer [VUID-vkCmdSubpassShadingHUAWEI-commandBuffer-parameter]
+vkCmdTraceRaysIndirect2KHR
+vkCmdTraceRaysIndirect2KHR: Invalid commandBuffer [VUID-vkCmdTraceRaysIndirect2KHR-commandBuffer-parameter]
+vkCmdTraceRaysIndirectKHR
+vkCmdTraceRaysIndirectKHR: Invalid commandBuffer [VUID-vkCmdTraceRaysIndirectKHR-commandBuffer-parameter]
+vkCmdTraceRaysKHR
+vkCmdTraceRaysKHR: Invalid commandBuffer [VUID-vkCmdTraceRaysKHR-commandBuffer-parameter]
+vkCmdTraceRaysNV
+vkCmdTraceRaysNV: Invalid commandBuffer [VUID-vkCmdTraceRaysNV-commandBuffer-parameter]
+vkCmdUpdateBuffer
+vkCmdUpdateBuffer: Invalid commandBuffer [VUID-vkCmdUpdateBuffer-commandBuffer-parameter]
+vkCmdUpdatePipelineIndirectBufferNV
+vkCmdUpdatePipelineIndirectBufferNV: Invalid commandBuffer [VUID-vkCmdUpdatePipelineIndirectBufferNV-commandBuffer-parameter]
+vkCmdWaitEvents
+vkCmdWaitEvents2
+vkCmdWaitEvents2KHR
+vkCmdWaitEvents2KHR: Invalid commandBuffer [VUID-vkCmdWaitEvents2KHR-commandBuffer-parameter]
+vkCmdWaitEvents: Invalid commandBuffer [VUID-vkCmdWaitEvents-commandBuffer-parameter]
+vkCmdWriteAccelerationStructuresPropertiesKHR
+vkCmdWriteAccelerationStructuresPropertiesKHR: Invalid commandBuffer [VUID-vkCmdWriteAccelerationStructuresPropertiesKHR-commandBuffer-parameter]
+vkCmdWriteAccelerationStructuresPropertiesNV
+vkCmdWriteAccelerationStructuresPropertiesNV: Invalid commandBuffer [VUID-vkCmdWriteAccelerationStructuresPropertiesNV-commandBuffer-parameter]
+vkCmdWriteBufferMarker2AMD
+vkCmdWriteBufferMarker2AMD: Invalid commandBuffer [VUID-vkCmdWriteBufferMarker2AMD-commandBuffer-parameter]
+vkCmdWriteBufferMarkerAMD
+vkCmdWriteBufferMarkerAMD: Invalid commandBuffer [VUID-vkCmdWriteBufferMarkerAMD-commandBuffer-parameter]
+vkCmdWriteMicromapsPropertiesEXT
+vkCmdWriteMicromapsPropertiesEXT: Invalid commandBuffer [VUID-vkCmdWriteMicromapsPropertiesEXT-commandBuffer-parameter]
+vkCmdWriteTimestamp
+vkCmdWriteTimestamp2
+vkCmdWriteTimestamp2KHR
+vkCmdWriteTimestamp2KHR: Invalid commandBuffer [VUID-vkCmdWriteTimestamp2KHR-commandBuffer-parameter]
+vkCmdWriteTimestamp: Invalid commandBuffer [VUID-vkCmdWriteTimestamp-commandBuffer-parameter]
+vkCompileDeferredNV
+vkCompileDeferredNV: Invalid device [VUID-vkCompileDeferredNV-device-parameter]
+vkCopyAccelerationStructureKHR
+vkCopyAccelerationStructureKHR: Invalid device [VUID-vkCopyAccelerationStructureKHR-device-parameter]
+vkCopyAccelerationStructureToMemoryKHR
+vkCopyAccelerationStructureToMemoryKHR: Invalid device [VUID-vkCopyAccelerationStructureToMemoryKHR-device-parameter]
+vkCopyImageToImageEXT
+vkCopyImageToImageEXT: Invalid device [VUID-vkCopyImageToImageEXT-device-parameter]
+vkCopyImageToMemoryEXT
+vkCopyImageToMemoryEXT: Invalid device [VUID-vkCopyImageToMemoryEXT-device-parameter]
+vkCopyMemoryToAccelerationStructureKHR
+vkCopyMemoryToAccelerationStructureKHR: Invalid device [VUID-vkCopyMemoryToAccelerationStructureKHR-device-parameter]
+vkCopyMemoryToImageEXT
+vkCopyMemoryToImageEXT: Invalid device [VUID-vkCopyMemoryToImageEXT-device-parameter]
+vkCopyMemoryToMicromapEXT
+vkCopyMemoryToMicromapEXT: Invalid device [VUID-vkCopyMemoryToMicromapEXT-device-parameter]
+vkCopyMicromapEXT
+vkCopyMicromapEXT: Invalid device [VUID-vkCopyMicromapEXT-device-parameter]
+vkCopyMicromapToMemoryEXT
+vkCopyMicromapToMemoryEXT: Invalid device [VUID-vkCopyMicromapToMemoryEXT-device-parameter]
+vkCreateAccelerationStructureKHR
+vkCreateAccelerationStructureKHR: Invalid device [VUID-vkCreateAccelerationStructureKHR-device-parameter]
+vkCreateAccelerationStructureNV
+vkCreateAccelerationStructureNV: Invalid device [VUID-vkCreateAccelerationStructureNV-device-parameter]
+vkCreateBuffer
+vkCreateBuffer: Invalid device [VUID-vkCreateBuffer-device-parameter]
+vkCreateBufferView
+vkCreateBufferView: Invalid device [VUID-vkCreateBufferView-device-parameter]
+vkCreateCommandPool
+vkCreateCommandPool: Invalid device [VUID-vkCreateCommandPool-device-parameter]
+vkCreateComputePipelines
+vkCreateComputePipelines: Invalid device [VUID-vkCreateComputePipelines-device-parameter]
+vkCreateCuFunctionNVX
+vkCreateCuFunctionNVX: Invalid device [VUID-vkCreateCuFunctionNVX-device-parameter]
+vkCreateCuModuleNVX
+vkCreateCuModuleNVX: Invalid device [VUID-vkCreateCuModuleNVX-device-parameter]
+vkCreateCudaFunctionNV
+vkCreateCudaFunctionNV: Invalid device [VUID-vkCreateCudaFunctionNV-device-parameter]
+vkCreateCudaModuleNV
+vkCreateCudaModuleNV: Invalid device [VUID-vkCreateCudaModuleNV-device-parameter]
+vkCreateDebugReportCallbackEXT
+vkCreateDebugUtilsMessengerEXT
+vkCreateDeferredOperationKHR
+vkCreateDeferredOperationKHR: Invalid device [VUID-vkCreateDeferredOperationKHR-device-parameter]
+vkCreateDescriptorPool
+vkCreateDescriptorPool: Invalid device [VUID-vkCreateDescriptorPool-device-parameter]
+vkCreateDescriptorSetLayout
+vkCreateDescriptorSetLayout: Invalid device [VUID-vkCreateDescriptorSetLayout-device-parameter]
+vkCreateDescriptorUpdateTemplate
+vkCreateDescriptorUpdateTemplate: Invalid device [VUID-vkCreateDescriptorUpdateTemplate-device-parameter]
+vkCreateDescriptorUpdateTemplateKHR
+vkCreateDescriptorUpdateTemplateKHR: Invalid device [VUID-vkCreateDescriptorUpdateTemplateKHR-device-parameter]
+vkCreateDevice
+vkCreateDevice extension %s not available for devices associated with ICD %s
+vkCreateDevice layer callstack setup to:
+vkCreateDevice:  Failed to create device chain.
+vkCreateDevice: Emulating handling of VkPhysicalDeviceFeatures2 in pNext chain for ICD "%s"
+vkCreateDevice: Emulating handling of VkPhysicalDeviceGroupProperties in pNext chain for ICD "%s"
+vkCreateDevice: Emulation failed to create device from device group info
+vkCreateDevice: Failed to add extensions to list
+vkCreateDevice: Failed to create ICD extension list
+vkCreateDevice: Failed to validate extensions in list
+vkCreateDevice: Invalid physicalDevice [VUID-vkCreateDevice-physicalDevice-parameter]
+vkCreateDisplayModeKHR
+vkCreateDisplayModeKHR: Invalid physicalDevice [VUID-vkCreateDisplayModeKHR-physicalDevice-parameter]
+vkCreateDisplayPlaneSurfaceKHR
+vkCreateDisplayPlaneSurfaceKHR: Invalid instance [VUID-vkCreateDisplayPlaneSurfaceKHR-instance-parameter]
+vkCreateEvent
+vkCreateEvent: Invalid device [VUID-vkCreateEvent-device-parameter]
+vkCreateExecutionGraphPipelinesAMDX
+vkCreateExecutionGraphPipelinesAMDX: Invalid device [VUID-vkCreateExecutionGraphPipelinesAMDX-device-parameter]
+vkCreateFence
+vkCreateFence: Invalid device [VUID-vkCreateFence-device-parameter]
+vkCreateFramebuffer
+vkCreateFramebuffer: Invalid device [VUID-vkCreateFramebuffer-device-parameter]
+vkCreateGraphicsPipelines
+vkCreateGraphicsPipelines: Invalid device [VUID-vkCreateGraphicsPipelines-device-parameter]
+vkCreateHeadlessSurfaceEXT
+vkCreateHeadlessSurfaceEXT: Invalid instance [VUID-vkCreateHeadlessSurfaceEXT-instance-parameter]
+vkCreateImage
+vkCreateImage: Invalid device [VUID-vkCreateImage-device-parameter]
+vkCreateImageView
+vkCreateImageView: Invalid device [VUID-vkCreateImageView-device-parameter]
+vkCreateIndirectCommandsLayoutEXT
+vkCreateIndirectCommandsLayoutEXT: Invalid device [VUID-vkCreateIndirectCommandsLayoutEXT-device-parameter]
+vkCreateIndirectCommandsLayoutNV
+vkCreateIndirectCommandsLayoutNV: Invalid device [VUID-vkCreateIndirectCommandsLayoutNV-device-parameter]
+vkCreateIndirectExecutionSetEXT
+vkCreateIndirectExecutionSetEXT: Invalid device [VUID-vkCreateIndirectExecutionSetEXT-device-parameter]
+vkCreateInstance
+vkCreateInstance 'pInstance' not valid (VUID-vkCreateInstance-pInstance-parameter)
+vkCreateInstance layer callstack setup to:
+vkCreateInstance:  Failed to allocate Loader's full Instance dispatch table.
+vkCreateInstance: 'pCreateInfo' is NULL (VUID-vkCreateInstance-pCreateInfo-parameter)
+vkCreateInstance: Found drivers that contain devices which support the portability subset, but the instance does not enumerate portability drivers! Applications that wish to enumerate portability drivers must set the VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR bit in the VkInstanceCreateInfo flags and enable the VK_KHR_portability_enumeration instance extension.
+vkCreateInstance: Found drivers that contain devices which support the portability subset, but the instance does not enumerate portability drivers! Applications that wish to enumerate portability drivers must set the VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR bit in the VkInstanceCreateInfo flags.
+vkCreateInstance: Found no drivers!
+vkCreateInstance: Layer returning invalid extension error not triggered by ICD/Loader (Policy #LLP_LAYER_17).
+vkCreateInstance: The API Variant specified in pCreateInfo->pApplicationInfo.apiVersion is %d instead of the expected value of %d.
+vkCreateMicromapEXT
+vkCreateMicromapEXT: Invalid device [VUID-vkCreateMicromapEXT-device-parameter]
+vkCreateOpticalFlowSessionNV
+vkCreateOpticalFlowSessionNV: Invalid device [VUID-vkCreateOpticalFlowSessionNV-device-parameter]
+vkCreatePipelineBinariesKHR
+vkCreatePipelineBinariesKHR: Invalid device [VUID-vkCreatePipelineBinariesKHR-device-parameter]
+vkCreatePipelineCache
+vkCreatePipelineCache: Invalid device [VUID-vkCreatePipelineCache-device-parameter]
+vkCreatePipelineLayout
+vkCreatePipelineLayout: Invalid device [VUID-vkCreatePipelineLayout-device-parameter]
+vkCreatePrivateDataSlot
+vkCreatePrivateDataSlotEXT
+vkCreatePrivateDataSlotEXT: Invalid device [VUID-vkCreatePrivateDataSlotEXT-device-parameter]
+vkCreateQueryPool
+vkCreateQueryPool: Invalid device [VUID-vkCreateQueryPool-device-parameter]
+vkCreateRayTracingPipelinesKHR
+vkCreateRayTracingPipelinesKHR: Invalid device [VUID-vkCreateRayTracingPipelinesKHR-device-parameter]
+vkCreateRayTracingPipelinesNV
+vkCreateRayTracingPipelinesNV: Invalid device [VUID-vkCreateRayTracingPipelinesNV-device-parameter]
+vkCreateRenderPass
+vkCreateRenderPass2
+vkCreateRenderPass2: Invalid device [VUID-vkCreateRenderPass2-device-parameter]
+vkCreateRenderPass2KHR
+vkCreateRenderPass2KHR: Invalid device [VUID-vkCreateRenderPass2KHR-device-parameter]
+vkCreateRenderPass: Invalid device [VUID-vkCreateRenderPass-device-parameter]
+vkCreateSampler
+vkCreateSampler: Invalid device [VUID-vkCreateSampler-device-parameter]
+vkCreateSamplerYcbcrConversion
+vkCreateSamplerYcbcrConversion: Invalid device [VUID-vkCreateSamplerYcbcrConversion-device-parameter]
+vkCreateSamplerYcbcrConversionKHR
+vkCreateSamplerYcbcrConversionKHR: Invalid device [VUID-vkCreateSamplerYcbcrConversionKHR-device-parameter]
+vkCreateSemaphore
+vkCreateSemaphore: Invalid device [VUID-vkCreateSemaphore-device-parameter]
+vkCreateShaderModule
+vkCreateShaderModule: Invalid device [VUID-vkCreateShaderModule-device-parameter]
+vkCreateShadersEXT
+vkCreateShadersEXT: Invalid device [VUID-vkCreateShadersEXT-device-parameter]
+vkCreateSharedSwapchainsKHR
+vkCreateSharedSwapchainsKHR Terminator: Driver's function pointer was NULL, returning VK_SUCCESS. Was the VK_KHR_display_swapchain extension enabled?
+vkCreateSharedSwapchainsKHR Terminator: Invalid device handle. This is likely the result of a layer wrapping device handles and failing to unwrap them in all functions. [VUID-vkCreateSharedSwapchainsKHR-device-parameter]
+vkCreateSharedSwapchainsKHR Terminator: No VkSurfaceKHR objects were created, indicating an application bug. Returning VK_SUCCESS.
+vkCreateSharedSwapchainsKHR: Invalid device [VUID-vkCreateSharedSwapchainsKHR-device-parameter]
+vkCreateSwapchainKHR
+vkCreateSwapchainKHR Terminator: device handle. This is likely the result of a layer wrapping device handles and failing to unwrap them in all functions. [VUID-vkCreateSwapchainKHR-device-parameter]
+vkCreateSwapchainKHR: Driver's function pointer was NULL, returning VK_SUCCESS. Was the VK_KHR_swapchain extension enabled?
+vkCreateSwapchainKHR: Invalid device [VUID-vkCreateSwapchainKHR-device-parameter]
+vkCreateSwapchainKHR: Invalid pCreateInfo pointer [VUID-vkCreateSwapchainKHR-pCreateInfo-parameter]
+vkCreateValidationCacheEXT
+vkCreateValidationCacheEXT: Invalid device [VUID-vkCreateValidationCacheEXT-device-parameter]
+vkCreateVideoSessionKHR
+vkCreateVideoSessionKHR: Invalid device [VUID-vkCreateVideoSessionKHR-device-parameter]
+vkCreateVideoSessionParametersKHR
+vkCreateVideoSessionParametersKHR: Invalid device [VUID-vkCreateVideoSessionParametersKHR-device-parameter]
+vkCreateWaylandSurfaceKHR
+vkCreateWaylandSurfaceKHR: Invalid instance [VUID-vkCreateWaylandSurfaceKHR-instance-parameter]
+vkCreateXcbSurfaceKHR
+vkCreateXcbSurfaceKHR: Invalid instance [VUID-vkCreateXcbSurfaceKHR-instance-parameter]
+vkCreateXlibSurfaceKHR
+vkCreateXlibSurfaceKHR: Invalid instance [VUID-vkCreateXlibSurfaceKHR-instance-parameter]
+vkDebugMarkerSetObjectNameEXT
+vkDebugMarkerSetObjectNameEXT: Invalid device [VUID-vkDebugMarkerSetObjectNameEXT-device-parameter]
+vkDebugMarkerSetObjectTagEXT
+vkDebugMarkerSetObjectTagEXT: Invalid device [VUID-vkDebugMarkerSetObjectTagEXT-device-parameter]
+vkDebugReportMessageEXT
+vkDeferredOperationJoinKHR
+vkDeferredOperationJoinKHR: Invalid device [VUID-vkDeferredOperationJoinKHR-device-parameter]
+vkDestroyAccelerationStructureKHR
+vkDestroyAccelerationStructureKHR: Invalid device [VUID-vkDestroyAccelerationStructureKHR-device-parameter]
+vkDestroyAccelerationStructureNV
+vkDestroyAccelerationStructureNV: Invalid device [VUID-vkDestroyAccelerationStructureNV-device-parameter]
+vkDestroyBuffer
+vkDestroyBuffer: Invalid device [VUID-vkDestroyBuffer-device-parameter]
+vkDestroyBufferView
+vkDestroyBufferView: Invalid device [VUID-vkDestroyBufferView-device-parameter]
+vkDestroyCommandPool
+vkDestroyCommandPool: Invalid device [VUID-vkDestroyCommandPool-device-parameter]
+vkDestroyCuFunctionNVX
+vkDestroyCuFunctionNVX: Invalid device [VUID-vkDestroyCuFunctionNVX-device-parameter]
+vkDestroyCuModuleNVX
+vkDestroyCuModuleNVX: Invalid device [VUID-vkDestroyCuModuleNVX-device-parameter]
+vkDestroyCudaFunctionNV
+vkDestroyCudaFunctionNV: Invalid device [VUID-vkDestroyCudaFunctionNV-device-parameter]
+vkDestroyCudaModuleNV
+vkDestroyCudaModuleNV: Invalid device [VUID-vkDestroyCudaModuleNV-device-parameter]
+vkDestroyDebugReportCallbackEXT
+vkDestroyDebugUtilsMessengerEXT
+vkDestroyDeferredOperationKHR
+vkDestroyDeferredOperationKHR: Invalid device [VUID-vkDestroyDeferredOperationKHR-device-parameter]
+vkDestroyDescriptorPool
+vkDestroyDescriptorPool: Invalid device [VUID-vkDestroyDescriptorPool-device-parameter]
+vkDestroyDescriptorSetLayout
+vkDestroyDescriptorSetLayout: Invalid device [VUID-vkDestroyDescriptorSetLayout-device-parameter]
+vkDestroyDescriptorUpdateTemplate
+vkDestroyDescriptorUpdateTemplate: Invalid device [VUID-vkDestroyDescriptorUpdateTemplate-device-parameter]
+vkDestroyDescriptorUpdateTemplateKHR
+vkDestroyDescriptorUpdateTemplateKHR: Invalid device [VUID-vkDestroyDescriptorUpdateTemplateKHR-device-parameter]
+vkDestroyDevice
+vkDestroyDevice: Invalid device [VUID-vkDestroyDevice-device-parameter]
+vkDestroyEvent
+vkDestroyEvent: Invalid device [VUID-vkDestroyEvent-device-parameter]
+vkDestroyFence
+vkDestroyFence: Invalid device [VUID-vkDestroyFence-device-parameter]
+vkDestroyFramebuffer
+vkDestroyFramebuffer: Invalid device [VUID-vkDestroyFramebuffer-device-parameter]
+vkDestroyImage
+vkDestroyImage: Invalid device [VUID-vkDestroyImage-device-parameter]
+vkDestroyImageView
+vkDestroyImageView: Invalid device [VUID-vkDestroyImageView-device-parameter]
+vkDestroyIndirectCommandsLayoutEXT
+vkDestroyIndirectCommandsLayoutEXT: Invalid device [VUID-vkDestroyIndirectCommandsLayoutEXT-device-parameter]
+vkDestroyIndirectCommandsLayoutNV
+vkDestroyIndirectCommandsLayoutNV: Invalid device [VUID-vkDestroyIndirectCommandsLayoutNV-device-parameter]
+vkDestroyIndirectExecutionSetEXT
+vkDestroyIndirectExecutionSetEXT: Invalid device [VUID-vkDestroyIndirectExecutionSetEXT-device-parameter]
+vkDestroyInstance
+vkDestroyInstance: Invalid instance [VUID-vkDestroyInstance-instance-parameter]
+vkDestroyMicromapEXT
+vkDestroyMicromapEXT: Invalid device [VUID-vkDestroyMicromapEXT-device-parameter]
+vkDestroyOpticalFlowSessionNV
+vkDestroyOpticalFlowSessionNV: Invalid device [VUID-vkDestroyOpticalFlowSessionNV-device-parameter]
+vkDestroyPipeline
+vkDestroyPipeline: Invalid device [VUID-vkDestroyPipeline-device-parameter]
+vkDestroyPipelineBinaryKHR
+vkDestroyPipelineBinaryKHR: Invalid device [VUID-vkDestroyPipelineBinaryKHR-device-parameter]
+vkDestroyPipelineCache
+vkDestroyPipelineCache: Invalid device [VUID-vkDestroyPipelineCache-device-parameter]
+vkDestroyPipelineLayout
+vkDestroyPipelineLayout: Invalid device [VUID-vkDestroyPipelineLayout-device-parameter]
+vkDestroyPrivateDataSlot
+vkDestroyPrivateDataSlotEXT
+vkDestroyPrivateDataSlotEXT: Invalid device [VUID-vkDestroyPrivateDataSlotEXT-device-parameter]
+vkDestroyQueryPool
+vkDestroyQueryPool: Invalid device [VUID-vkDestroyQueryPool-device-parameter]
+vkDestroyRenderPass
+vkDestroyRenderPass: Invalid device [VUID-vkDestroyRenderPass-device-parameter]
+vkDestroySampler
+vkDestroySampler: Invalid device [VUID-vkDestroySampler-device-parameter]
+vkDestroySamplerYcbcrConversion
+vkDestroySamplerYcbcrConversion: Invalid device [VUID-vkDestroySamplerYcbcrConversion-device-parameter]
+vkDestroySamplerYcbcrConversionKHR
+vkDestroySamplerYcbcrConversionKHR: Invalid device [VUID-vkDestroySamplerYcbcrConversionKHR-device-parameter]
+vkDestroySemaphore
+vkDestroySemaphore: Invalid device [VUID-vkDestroySemaphore-device-parameter]
+vkDestroyShaderEXT
+vkDestroyShaderEXT: Invalid device [VUID-vkDestroyShaderEXT-device-parameter]
+vkDestroyShaderModule
+vkDestroyShaderModule: Invalid device [VUID-vkDestroyShaderModule-device-parameter]
+vkDestroySurfaceKHR
+vkDestroySurfaceKHR: Invalid instance [VUID-vkDestroySurfaceKHR-instance-parameter]
+vkDestroySwapchainKHR
+vkDestroySwapchainKHR: Invalid device [VUID-vkDestroySwapchainKHR-device-parameter]
+vkDestroyValidationCacheEXT
+vkDestroyValidationCacheEXT: Invalid device [VUID-vkDestroyValidationCacheEXT-device-parameter]
+vkDestroyVideoSessionKHR
+vkDestroyVideoSessionKHR: Invalid device [VUID-vkDestroyVideoSessionKHR-device-parameter]
+vkDestroyVideoSessionParametersKHR
+vkDestroyVideoSessionParametersKHR: Invalid device [VUID-vkDestroyVideoSessionParametersKHR-device-parameter]
+vkDeviceWaitIdle
+vkDeviceWaitIdle: Invalid device [VUID-vkDeviceWaitIdle-device-parameter]
+vkDisplayPowerControlEXT
+vkDisplayPowerControlEXT: Invalid device [VUID-vkDisplayPowerControlEXT-device-parameter]
+vkEndCommandBuffer
+vkEndCommandBuffer: Invalid commandBuffer [VUID-vkEndCommandBuffer-commandBuffer-parameter]
+vkEnumerateDeviceExtensionProperties
+vkEnumerateDeviceExtensionProperties:  pLayerName is too long or is badly formed
+vkEnumerateDeviceExtensionProperties: Invalid physicalDevice [VUID-vkEnumerateDeviceExtensionProperties-physicalDevice-parameter]
+vkEnumerateDeviceLayerProperties
+vkEnumerateDeviceLayerProperties: Invalid physicalDevice [VUID-vkEnumerateDeviceLayerProperties-physicalDevice-parameter]
+vkEnumerateInstanceExtensionProperties
+vkEnumerateInstanceLayerProperties
+vkEnumerateInstanceVersion
+vkEnumerateInstanceVersion: 'pApiVersion' must not be NULL (VUID-vkEnumerateInstanceVersion-pApiVersion-parameter
+vkEnumeratePhysicalDeviceGroups
+vkEnumeratePhysicalDeviceGroupsKHR
+vkEnumeratePhysicalDeviceGroupsKHR: Invalid instance [VUID-vkEnumeratePhysicalDeviceGroups-instance-parameter]
+vkEnumeratePhysicalDeviceGroupsKHR: Received NULL pointer for physical device group count return value.
+vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR
+vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR: Invalid physicalDevice [VUID-vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR-physicalDevice-parameter]
+vkEnumeratePhysicalDevices
+vkEnumeratePhysicalDevices: Invalid instance [VUID-vkEnumeratePhysicalDevices-instance-parameter]
+vkEnumeratePhysicalDevices: Received NULL pointer for physical device count return value. [VUID-vkEnumeratePhysicalDevices-pPhysicalDeviceCount-parameter]
+vkFlushMappedMemoryRanges
+vkFlushMappedMemoryRanges: Invalid device [VUID-vkFlushMappedMemoryRanges-device-parameter]
+vkFreeCommandBuffers
+vkFreeCommandBuffers: Invalid device [VUID-vkFreeCommandBuffers-device-parameter]
+vkFreeDescriptorSets
+vkFreeDescriptorSets: Invalid device [VUID-vkFreeDescriptorSets-device-parameter]
+vkFreeMemory
+vkFreeMemory: Invalid device [VUID-vkFreeMemory-device-parameter]
+vkGetAccelerationStructureBuildSizesKHR
+vkGetAccelerationStructureBuildSizesKHR: Invalid device [VUID-vkGetAccelerationStructureBuildSizesKHR-device-parameter]
+vkGetAccelerationStructureDeviceAddressKHR
+vkGetAccelerationStructureDeviceAddressKHR: Invalid device [VUID-vkGetAccelerationStructureDeviceAddressKHR-device-parameter]
+vkGetAccelerationStructureHandleNV
+vkGetAccelerationStructureHandleNV: Invalid device [VUID-vkGetAccelerationStructureHandleNV-device-parameter]
+vkGetAccelerationStructureMemoryRequirementsNV
+vkGetAccelerationStructureMemoryRequirementsNV: Invalid device [VUID-vkGetAccelerationStructureMemoryRequirementsNV-device-parameter]
+vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT
+vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT: Invalid device [VUID-vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT-device-parameter]
+vkGetBufferDeviceAddress
+vkGetBufferDeviceAddress: Invalid device [VUID-vkGetBufferDeviceAddress-device-parameter]
+vkGetBufferDeviceAddressEXT
+vkGetBufferDeviceAddressEXT: Invalid device [VUID-vkGetBufferDeviceAddressEXT-device-parameter]
+vkGetBufferDeviceAddressKHR
+vkGetBufferDeviceAddressKHR: Invalid device [VUID-vkGetBufferDeviceAddressKHR-device-parameter]
+vkGetBufferMemoryRequirements
+vkGetBufferMemoryRequirements2
+vkGetBufferMemoryRequirements2: Invalid device [VUID-vkGetBufferMemoryRequirements2-device-parameter]
+vkGetBufferMemoryRequirements2KHR
+vkGetBufferMemoryRequirements2KHR: Invalid device [VUID-vkGetBufferMemoryRequirements2KHR-device-parameter]
+vkGetBufferMemoryRequirements: Invalid device [VUID-vkGetBufferMemoryRequirements-device-parameter]
+vkGetBufferOpaqueCaptureAddress
+vkGetBufferOpaqueCaptureAddress: Invalid device [VUID-vkGetBufferOpaqueCaptureAddress-device-parameter]
+vkGetBufferOpaqueCaptureAddressKHR
+vkGetBufferOpaqueCaptureAddressKHR: Invalid device [VUID-vkGetBufferOpaqueCaptureAddressKHR-device-parameter]
+vkGetBufferOpaqueCaptureDescriptorDataEXT
+vkGetBufferOpaqueCaptureDescriptorDataEXT: Invalid device [VUID-vkGetBufferOpaqueCaptureDescriptorDataEXT-device-parameter]
+vkGetCalibratedTimestampsEXT
+vkGetCalibratedTimestampsEXT: Invalid device [VUID-vkGetCalibratedTimestampsEXT-device-parameter]
+vkGetCalibratedTimestampsKHR
+vkGetCalibratedTimestampsKHR: Invalid device [VUID-vkGetCalibratedTimestampsKHR-device-parameter]
+vkGetCudaModuleCacheNV
+vkGetCudaModuleCacheNV: Invalid device [VUID-vkGetCudaModuleCacheNV-device-parameter]
+vkGetDeferredOperationMaxConcurrencyKHR
+vkGetDeferredOperationMaxConcurrencyKHR: Invalid device [VUID-vkGetDeferredOperationMaxConcurrencyKHR-device-parameter]
+vkGetDeferredOperationResultKHR
+vkGetDeferredOperationResultKHR: Invalid device [VUID-vkGetDeferredOperationResultKHR-device-parameter]
+vkGetDescriptorEXT
+vkGetDescriptorEXT: Invalid device [VUID-vkGetDescriptorEXT-device-parameter]
+vkGetDescriptorSetHostMappingVALVE
+vkGetDescriptorSetHostMappingVALVE: Invalid device [VUID-vkGetDescriptorSetHostMappingVALVE-device-parameter]
+vkGetDescriptorSetLayoutBindingOffsetEXT
+vkGetDescriptorSetLayoutBindingOffsetEXT: Invalid device [VUID-vkGetDescriptorSetLayoutBindingOffsetEXT-device-parameter]
+vkGetDescriptorSetLayoutHostMappingInfoVALVE
+vkGetDescriptorSetLayoutHostMappingInfoVALVE: Invalid device [VUID-vkGetDescriptorSetLayoutHostMappingInfoVALVE-device-parameter]
+vkGetDescriptorSetLayoutSizeEXT
+vkGetDescriptorSetLayoutSizeEXT: Invalid device [VUID-vkGetDescriptorSetLayoutSizeEXT-device-parameter]
+vkGetDescriptorSetLayoutSupport
+vkGetDescriptorSetLayoutSupport: Invalid device [VUID-vkGetDescriptorSetLayoutSupport-device-parameter]
+vkGetDescriptorSetLayoutSupportKHR
+vkGetDescriptorSetLayoutSupportKHR: Invalid device [VUID-vkGetDescriptorSetLayoutSupportKHR-device-parameter]
+vkGetDeviceAccelerationStructureCompatibilityKHR
+vkGetDeviceAccelerationStructureCompatibilityKHR: Invalid device [VUID-vkGetDeviceAccelerationStructureCompatibilityKHR-device-parameter]
+vkGetDeviceBufferMemoryRequirements
+vkGetDeviceBufferMemoryRequirementsKHR
+vkGetDeviceBufferMemoryRequirementsKHR: Invalid device [VUID-vkGetDeviceBufferMemoryRequirementsKHR-device-parameter]
+vkGetDeviceFaultInfoEXT
+vkGetDeviceFaultInfoEXT: Invalid device [VUID-vkGetDeviceFaultInfoEXT-device-parameter]
+vkGetDeviceGroupPeerMemoryFeatures
+vkGetDeviceGroupPeerMemoryFeatures: Invalid device [VUID-vkGetDeviceGroupPeerMemoryFeatures-device-parameter]
+vkGetDeviceGroupPeerMemoryFeaturesKHR
+vkGetDeviceGroupPeerMemoryFeaturesKHR: Invalid device [VUID-vkGetDeviceGroupPeerMemoryFeaturesKHR-device-parameter]
+vkGetDeviceGroupPresentCapabilitiesKHR
+vkGetDeviceGroupPresentCapabilitiesKHR: Invalid device [VUID-vkGetDeviceGroupPresentCapabilitiesKHR-device-parameter]
+vkGetDeviceGroupSurfacePresentModesKHR
+vkGetDeviceGroupSurfacePresentModesKHR: Driver's function pointer was NULL, returning VK_SUCCESS. Was either Vulkan 1.1 and VK_KHR_swapchain enabled or both the VK_KHR_device_group and VK_KHR_surface extensions enabled when using Vulkan 1.0?
+vkGetDeviceGroupSurfacePresentModesKHR: Invalid device [VUID-vkGetDeviceGroupSurfacePresentModesKHR-device-parameter]
+vkGetDeviceImageMemoryRequirements
+vkGetDeviceImageMemoryRequirementsKHR
+vkGetDeviceImageMemoryRequirementsKHR: Invalid device [VUID-vkGetDeviceImageMemoryRequirementsKHR-device-parameter]
+vkGetDeviceImageSparseMemoryRequirements
+vkGetDeviceImageSparseMemoryRequirementsKHR
+vkGetDeviceImageSparseMemoryRequirementsKHR: Invalid device [VUID-vkGetDeviceImageSparseMemoryRequirementsKHR-device-parameter]
+vkGetDeviceImageSubresourceLayoutKHR
+vkGetDeviceImageSubresourceLayoutKHR: Invalid device [VUID-vkGetDeviceImageSubresourceLayoutKHR-device-parameter]
+vkGetDeviceMemoryCommitment
+vkGetDeviceMemoryCommitment: Invalid device [VUID-vkGetDeviceMemoryCommitment-device-parameter]
+vkGetDeviceMemoryOpaqueCaptureAddress
+vkGetDeviceMemoryOpaqueCaptureAddress: Invalid device [VUID-vkGetDeviceMemoryOpaqueCaptureAddress-device-parameter]
+vkGetDeviceMemoryOpaqueCaptureAddressKHR
+vkGetDeviceMemoryOpaqueCaptureAddressKHR: Invalid device [VUID-vkGetDeviceMemoryOpaqueCaptureAddressKHR-device-parameter]
+vkGetDeviceMicromapCompatibilityEXT
+vkGetDeviceMicromapCompatibilityEXT: Invalid device [VUID-vkGetDeviceMicromapCompatibilityEXT-device-parameter]
+vkGetDeviceProcAddr
+vkGetDeviceQueue
+vkGetDeviceQueue2
+vkGetDeviceQueue2: Invalid device [VUID-vkGetDeviceQueue2-device-parameter]
+vkGetDeviceQueue: Invalid device [VUID-vkGetDeviceQueue-device-parameter]
+vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI
+vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI: Invalid device [VUID-vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI-device-parameter]
+vkGetDisplayModeProperties2KHR
+vkGetDisplayModeProperties2KHR: Emulating call in ICD "%s"
+vkGetDisplayModeProperties2KHR: Invalid physicalDevice [VUID-vkGetDisplayModeProperties2KHR-physicalDevice-parameter]
+vkGetDisplayModePropertiesKHR
+vkGetDisplayModePropertiesKHR: Invalid physicalDevice [VUID-vkGetDisplayModePropertiesKHR-physicalDevice-parameter]
+vkGetDisplayPlaneCapabilities2KHR
+vkGetDisplayPlaneCapabilities2KHR: Emulating call in ICD "%s"
+vkGetDisplayPlaneCapabilities2KHR: Invalid physicalDevice [VUID-vkGetDisplayPlaneCapabilities2KHR-physicalDevice-parameter]
+vkGetDisplayPlaneCapabilitiesKHR
+vkGetDisplayPlaneCapabilitiesKHR: Invalid physicalDevice [VUID-vkGetDisplayPlaneCapabilitiesKHR-physicalDevice-parameter]
+vkGetDisplayPlaneSupportedDisplaysKHR
+vkGetDisplayPlaneSupportedDisplaysKHR: Invalid physicalDevice [VUID-vkGetDisplayPlaneSupportedDisplaysKHR-physicalDevice-parameter]
+vkGetDrmDisplayEXT
+vkGetDrmDisplayEXT: Invalid physicalDevice [VUID-vkGetDrmDisplayEXT-physicalDevice-parameter]
+vkGetDynamicRenderingTilePropertiesQCOM
+vkGetDynamicRenderingTilePropertiesQCOM: Invalid device [VUID-vkGetDynamicRenderingTilePropertiesQCOM-device-parameter]
+vkGetEncodedVideoSessionParametersKHR
+vkGetEncodedVideoSessionParametersKHR: Invalid device [VUID-vkGetEncodedVideoSessionParametersKHR-device-parameter]
+vkGetEventStatus
+vkGetEventStatus: Invalid device [VUID-vkGetEventStatus-device-parameter]
+vkGetExecutionGraphPipelineNodeIndexAMDX
+vkGetExecutionGraphPipelineNodeIndexAMDX: Invalid device [VUID-vkGetExecutionGraphPipelineNodeIndexAMDX-device-parameter]
+vkGetExecutionGraphPipelineScratchSizeAMDX
+vkGetExecutionGraphPipelineScratchSizeAMDX: Invalid device [VUID-vkGetExecutionGraphPipelineScratchSizeAMDX-device-parameter]
+vkGetFenceFdKHR
+vkGetFenceFdKHR: Invalid device [VUID-vkGetFenceFdKHR-device-parameter]
+vkGetFenceStatus
+vkGetFenceStatus: Invalid device [VUID-vkGetFenceStatus-device-parameter]
+vkGetFramebufferTilePropertiesQCOM
+vkGetFramebufferTilePropertiesQCOM: Invalid device [VUID-vkGetFramebufferTilePropertiesQCOM-device-parameter]
+vkGetGeneratedCommandsMemoryRequirementsEXT
+vkGetGeneratedCommandsMemoryRequirementsEXT: Invalid device [VUID-vkGetGeneratedCommandsMemoryRequirementsEXT-device-parameter]
+vkGetGeneratedCommandsMemoryRequirementsNV
+vkGetGeneratedCommandsMemoryRequirementsNV: Invalid device [VUID-vkGetGeneratedCommandsMemoryRequirementsNV-device-parameter]
+vkGetImageDrmFormatModifierPropertiesEXT
+vkGetImageDrmFormatModifierPropertiesEXT: Invalid device [VUID-vkGetImageDrmFormatModifierPropertiesEXT-device-parameter]
+vkGetImageMemoryRequirements
+vkGetImageMemoryRequirements2
+vkGetImageMemoryRequirements2: Invalid device [VUID-vkGetImageMemoryRequirements2-device-parameter]
+vkGetImageMemoryRequirements2KHR
+vkGetImageMemoryRequirements2KHR: Invalid device [VUID-vkGetImageMemoryRequirements2KHR-device-parameter]
+vkGetImageMemoryRequirements: Invalid device [VUID-vkGetImageMemoryRequirements-device-parameter]
+vkGetImageOpaqueCaptureDescriptorDataEXT
+vkGetImageOpaqueCaptureDescriptorDataEXT: Invalid device [VUID-vkGetImageOpaqueCaptureDescriptorDataEXT-device-parameter]
+vkGetImageSparseMemoryRequirements
+vkGetImageSparseMemoryRequirements2
+vkGetImageSparseMemoryRequirements2: Invalid device [VUID-vkGetImageSparseMemoryRequirements2-device-parameter]
+vkGetImageSparseMemoryRequirements2KHR
+vkGetImageSparseMemoryRequirements2KHR: Invalid device [VUID-vkGetImageSparseMemoryRequirements2KHR-device-parameter]
+vkGetImageSparseMemoryRequirements: Invalid device [VUID-vkGetImageSparseMemoryRequirements-device-parameter]
+vkGetImageSubresourceLayout
+vkGetImageSubresourceLayout2EXT
+vkGetImageSubresourceLayout2EXT: Invalid device [VUID-vkGetImageSubresourceLayout2EXT-device-parameter]
+vkGetImageSubresourceLayout2KHR
+vkGetImageSubresourceLayout2KHR: Invalid device [VUID-vkGetImageSubresourceLayout2KHR-device-parameter]
+vkGetImageSubresourceLayout: Invalid device [VUID-vkGetImageSubresourceLayout-device-parameter]
+vkGetImageViewAddressNVX
+vkGetImageViewAddressNVX: Invalid device [VUID-vkGetImageViewAddressNVX-device-parameter]
+vkGetImageViewHandleNVX
+vkGetImageViewHandleNVX: Invalid device [VUID-vkGetImageViewHandleNVX-device-parameter]
+vkGetImageViewOpaqueCaptureDescriptorDataEXT
+vkGetImageViewOpaqueCaptureDescriptorDataEXT: Invalid device [VUID-vkGetImageViewOpaqueCaptureDescriptorDataEXT-device-parameter]
+vkGetInstanceProcAddr
+vkGetInstanceProcAddr: Invalid instance [VUID-vkGetInstanceProcAddr-instance-parameter]
+vkGetLatencyTimingsNV
+vkGetLatencyTimingsNV: Invalid device [VUID-vkGetLatencyTimingsNV-device-parameter]
+vkGetMemoryFdKHR
+vkGetMemoryFdKHR: Invalid device [VUID-vkGetMemoryFdKHR-device-parameter]
+vkGetMemoryFdPropertiesKHR
+vkGetMemoryFdPropertiesKHR: Invalid device [VUID-vkGetMemoryFdPropertiesKHR-device-parameter]
+vkGetMemoryHostPointerPropertiesEXT
+vkGetMemoryHostPointerPropertiesEXT: Invalid device [VUID-vkGetMemoryHostPointerPropertiesEXT-device-parameter]
+vkGetMemoryRemoteAddressNV
+vkGetMemoryRemoteAddressNV: Invalid device [VUID-vkGetMemoryRemoteAddressNV-device-parameter]
+vkGetMicromapBuildSizesEXT
+vkGetMicromapBuildSizesEXT: Invalid device [VUID-vkGetMicromapBuildSizesEXT-device-parameter]
+vkGetPastPresentationTimingGOOGLE
+vkGetPastPresentationTimingGOOGLE: Invalid device [VUID-vkGetPastPresentationTimingGOOGLE-device-parameter]
+vkGetPerformanceParameterINTEL
+vkGetPerformanceParameterINTEL: Invalid device [VUID-vkGetPerformanceParameterINTEL-device-parameter]
+vkGetPhysicalDeviceCalibrateableTimeDomainsEXT
+vkGetPhysicalDeviceCalibrateableTimeDomainsEXT: Invalid physicalDevice [VUID-vkGetPhysicalDeviceCalibrateableTimeDomainsEXT-physicalDevice-parameter]
+vkGetPhysicalDeviceCalibrateableTimeDomainsKHR
+vkGetPhysicalDeviceCalibrateableTimeDomainsKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceCalibrateableTimeDomainsKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR
+vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceCooperativeMatrixPropertiesNV
+vkGetPhysicalDeviceCooperativeMatrixPropertiesNV: Invalid physicalDevice [VUID-vkGetPhysicalDeviceCooperativeMatrixPropertiesNV-physicalDevice-parameter]
+vkGetPhysicalDeviceDisplayPlaneProperties2KHR
+vkGetPhysicalDeviceDisplayPlaneProperties2KHR: Emulating call in ICD "%s"
+vkGetPhysicalDeviceDisplayPlaneProperties2KHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceDisplayPlaneProperties2KHR-physicalDevice-parameter]
+vkGetPhysicalDeviceDisplayPlanePropertiesKHR
+vkGetPhysicalDeviceDisplayPlanePropertiesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceDisplayPlanePropertiesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceDisplayProperties2KHR
+vkGetPhysicalDeviceDisplayProperties2KHR: Emulating call in ICD "%s"
+vkGetPhysicalDeviceDisplayProperties2KHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceDisplayProperties2KHR-physicalDevice-parameter]
+vkGetPhysicalDeviceDisplayPropertiesKHR
+vkGetPhysicalDeviceDisplayPropertiesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceDisplayPropertiesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceExternalBufferProperties
+vkGetPhysicalDeviceExternalBufferProperties: Emulating call in ICD "%s"
+vkGetPhysicalDeviceExternalBufferProperties: Emulation found unrecognized structure type in pExternalBufferInfo->pNext - this struct will be ignored
+vkGetPhysicalDeviceExternalBufferProperties: Emulation found unrecognized structure type in pExternalBufferProperties->pNext - this struct will be ignored
+vkGetPhysicalDeviceExternalBufferProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceExternalBufferProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceExternalBufferPropertiesKHR
+vkGetPhysicalDeviceExternalFenceProperties
+vkGetPhysicalDeviceExternalFenceProperties: Emulating call in ICD "%s"
+vkGetPhysicalDeviceExternalFenceProperties: Emulation found unrecognized structure type in pExternalFenceInfo->pNext - this struct will be ignored
+vkGetPhysicalDeviceExternalFenceProperties: Emulation found unrecognized structure type in pExternalFenceProperties->pNext - this struct will be ignored
+vkGetPhysicalDeviceExternalFenceProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceExternalFenceProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceExternalFencePropertiesKHR
+vkGetPhysicalDeviceExternalImageFormatPropertiesNV
+vkGetPhysicalDeviceExternalImageFormatPropertiesNV: Invalid physicalDevice [VUID-vkGetPhysicalDeviceExternalImageFormatPropertiesNV-physicalDevice-parameter]
+vkGetPhysicalDeviceExternalImageFormatPropertiesNV: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSurfaceCapabilities2EXT-physicalDevice-parameter]
+vkGetPhysicalDeviceExternalSemaphoreProperties
+vkGetPhysicalDeviceExternalSemaphoreProperties: Emulating call in ICD "%s"
+vkGetPhysicalDeviceExternalSemaphoreProperties: Emulation found unrecognized structure type in pExternalSemaphoreInfo->pNext - this struct will be ignored
+vkGetPhysicalDeviceExternalSemaphoreProperties: Emulation found unrecognized structure type in pExternalSemaphoreProperties->pNext - this struct will be ignored
+vkGetPhysicalDeviceExternalSemaphoreProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceExternalSemaphoreProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceExternalSemaphorePropertiesKHR
+vkGetPhysicalDeviceFeatures
+vkGetPhysicalDeviceFeatures2
+vkGetPhysicalDeviceFeatures2: Emulating call in ICD "%s" using vkGetPhysicalDeviceFeatures
+vkGetPhysicalDeviceFeatures2: Emulation found unrecognized structure type in pFeatures->pNext - this struct will be ignored
+vkGetPhysicalDeviceFeatures2: Invalid physicalDevice [VUID-vkGetPhysicalDeviceFeatures2-physicalDevice-parameter]
+vkGetPhysicalDeviceFeatures2KHR
+vkGetPhysicalDeviceFeatures: Invalid physicalDevice [VUID-vkGetPhysicalDeviceFeatures-physicalDevice-parameter]
+vkGetPhysicalDeviceFormatProperties
+vkGetPhysicalDeviceFormatProperties2
+vkGetPhysicalDeviceFormatProperties2: Emulating call in ICD "%s" using vkGetPhysicalDeviceFormatProperties
+vkGetPhysicalDeviceFormatProperties2: Emulation found unrecognized structure type in pFormatProperties->pNext - this struct will be ignored
+vkGetPhysicalDeviceFormatProperties2: Invalid physicalDevice [VUID-vkGetPhysicalDeviceFormatProperties2-physicalDevice-parameter]
+vkGetPhysicalDeviceFormatProperties2KHR
+vkGetPhysicalDeviceFormatProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceFormatProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceFragmentShadingRatesKHR
+vkGetPhysicalDeviceFragmentShadingRatesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceFragmentShadingRatesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceImageFormatProperties
+vkGetPhysicalDeviceImageFormatProperties2
+vkGetPhysicalDeviceImageFormatProperties2: Emulating call in ICD "%s" using vkGetPhysicalDeviceImageFormatProperties
+vkGetPhysicalDeviceImageFormatProperties2: Invalid physicalDevice [VUID-vkGetPhysicalDeviceImageFormatProperties2-physicalDevice-parameter]
+vkGetPhysicalDeviceImageFormatProperties2KHR
+vkGetPhysicalDeviceImageFormatProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceImageFormatProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceMemoryProperties
+vkGetPhysicalDeviceMemoryProperties2
+vkGetPhysicalDeviceMemoryProperties2: Emulating call in ICD "%s" using vkGetPhysicalDeviceMemoryProperties
+vkGetPhysicalDeviceMemoryProperties2: Emulation found unrecognized structure type in pMemoryProperties->pNext - this struct will be ignored
+vkGetPhysicalDeviceMemoryProperties2: Invalid physicalDevice [VUID-vkGetPhysicalDeviceMemoryProperties2-physicalDevice-parameter]
+vkGetPhysicalDeviceMemoryProperties2KHR
+vkGetPhysicalDeviceMemoryProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceMemoryProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceMultisamplePropertiesEXT
+vkGetPhysicalDeviceMultisamplePropertiesEXT: Invalid physicalDevice [VUID-vkGetPhysicalDeviceMultisamplePropertiesEXT-physicalDevice-parameter]
+vkGetPhysicalDeviceOpticalFlowImageFormatsNV
+vkGetPhysicalDeviceOpticalFlowImageFormatsNV: Invalid physicalDevice [VUID-vkGetPhysicalDeviceOpticalFlowImageFormatsNV-physicalDevice-parameter]
+vkGetPhysicalDevicePresentRectanglesKHR
+vkGetPhysicalDevicePresentRectanglesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDevicePresentRectanglesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceProperties
+vkGetPhysicalDeviceProperties2
+vkGetPhysicalDeviceProperties2: Emulating call in ICD "%s" using vkGetPhysicalDeviceProperties
+vkGetPhysicalDeviceProperties2: Emulation cannot generate unique IDs for struct VkPhysicalDeviceIDProperties - setting IDs to zero instead
+vkGetPhysicalDeviceProperties2: Invalid physicalDevice [VUID-vkGetPhysicalDeviceProperties2-physicalDevice-parameter]
+vkGetPhysicalDeviceProperties2KHR
+vkGetPhysicalDeviceProperties2KHR: Emulation found unrecognized structure type in pProperties->pNext - this struct will be ignored
+vkGetPhysicalDeviceProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR
+vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceQueueFamilyProperties
+vkGetPhysicalDeviceQueueFamilyProperties2
+vkGetPhysicalDeviceQueueFamilyProperties2: Emulating call in ICD "%s" using vkGetPhysicalDeviceQueueFamilyProperties
+vkGetPhysicalDeviceQueueFamilyProperties2: Emulation found unrecognized structure type in pQueueFamilyProperties[%d].pNext - this struct will be ignored
+vkGetPhysicalDeviceQueueFamilyProperties2: Invalid physicalDevice [VUID-vkGetPhysicalDeviceQueueFamilyProperties2-physicalDevice-parameter]
+vkGetPhysicalDeviceQueueFamilyProperties2KHR
+vkGetPhysicalDeviceQueueFamilyProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceQueueFamilyProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceSparseImageFormatProperties
+vkGetPhysicalDeviceSparseImageFormatProperties2
+vkGetPhysicalDeviceSparseImageFormatProperties2: Emulating call in ICD "%s" using vkGetPhysicalDeviceSparseImageFormatProperties
+vkGetPhysicalDeviceSparseImageFormatProperties2: Emulation found unrecognized structure type in pFormatInfo->pNext - this struct will be ignored
+vkGetPhysicalDeviceSparseImageFormatProperties2: Emulation found unrecognized structure type in pProperties[%d].pNext - this struct will be ignored
+vkGetPhysicalDeviceSparseImageFormatProperties2: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSparseImageFormatProperties2-physicalDevice-parameter]
+vkGetPhysicalDeviceSparseImageFormatProperties2KHR
+vkGetPhysicalDeviceSparseImageFormatProperties: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSparseImageFormatProperties-physicalDevice-parameter]
+vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV
+vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV-physicalDevice-parameter]
+vkGetPhysicalDeviceSurfaceCapabilities2EXT
+vkGetPhysicalDeviceSurfaceCapabilities2EXT: Emulating call in ICD "%s" using vkGetPhysicalDeviceSurfaceCapabilitiesKHR
+vkGetPhysicalDeviceSurfaceCapabilities2EXT: Emulation found unrecognized structure type in pSurfaceCapabilities->pNext - this struct will be ignored
+vkGetPhysicalDeviceSurfaceCapabilities2KHR
+vkGetPhysicalDeviceSurfaceCapabilities2KHR: Emulating call in ICD "%s" using vkGetPhysicalDeviceSurfaceCapabilitiesKHR
+vkGetPhysicalDeviceSurfaceCapabilities2KHR: Emulation found unrecognized structure type in pSurfaceCapabilities->pNext - this struct will be ignored
+vkGetPhysicalDeviceSurfaceCapabilities2KHR: Emulation found unrecognized structure type in pSurfaceInfo->pNext - this struct will be ignored
+vkGetPhysicalDeviceSurfaceCapabilities2KHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSurfaceCapabilities2KHR-physicalDevice-parameter]
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSurfaceCapabilitiesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceSurfaceFormats2KHR
+vkGetPhysicalDeviceSurfaceFormats2KHR: Emulating call in ICD "%s" using vkGetPhysicalDeviceSurfaceFormatsKHR
+vkGetPhysicalDeviceSurfaceFormats2KHR: Emulation found unrecognized structure type in pSurfaceFormats[%d].pNext - this struct will be ignored
+vkGetPhysicalDeviceSurfaceFormats2KHR: Emulation found unrecognized structure type in pSurfaceInfo->pNext - this struct will be ignored
+vkGetPhysicalDeviceSurfaceFormats2KHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSurfaceFormats2KHR-physicalDevice-parameter]
+vkGetPhysicalDeviceSurfaceFormatsKHR
+vkGetPhysicalDeviceSurfaceFormatsKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSurfaceFormatsKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceSurfacePresentModesKHR
+vkGetPhysicalDeviceSurfacePresentModesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSurfacePresentModesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceSurfaceSupportKHR
+vkGetPhysicalDeviceSurfaceSupportKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceSurfaceSupportKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceToolProperties
+vkGetPhysicalDeviceToolPropertiesEXT
+vkGetPhysicalDeviceToolPropertiesEXT: Invalid physicalDevice [VUID-vkGetPhysicalDeviceToolPropertiesEXT-physicalDevice-parameter]
+vkGetPhysicalDeviceVideoCapabilitiesKHR
+vkGetPhysicalDeviceVideoCapabilitiesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceVideoCapabilitiesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR
+vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceVideoFormatPropertiesKHR
+vkGetPhysicalDeviceVideoFormatPropertiesKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceVideoFormatPropertiesKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceWaylandPresentationSupportKHR
+vkGetPhysicalDeviceWaylandPresentationSupportKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceWaylandPresentationSupportKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceXcbPresentationSupportKHR
+vkGetPhysicalDeviceXcbPresentationSupportKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceXcbPresentationSupportKHR-physicalDevice-parameter]
+vkGetPhysicalDeviceXlibPresentationSupportKHR
+vkGetPhysicalDeviceXlibPresentationSupportKHR: Invalid physicalDevice [VUID-vkGetPhysicalDeviceXlibPresentationSupportKHR-physicalDevice-parameter]
+vkGetPipelineBinaryDataKHR
+vkGetPipelineBinaryDataKHR: Invalid device [VUID-vkGetPipelineBinaryDataKHR-device-parameter]
+vkGetPipelineCacheData
+vkGetPipelineCacheData: Invalid device [VUID-vkGetPipelineCacheData-device-parameter]
+vkGetPipelineExecutableInternalRepresentationsKHR
+vkGetPipelineExecutableInternalRepresentationsKHR: Invalid device [VUID-vkGetPipelineExecutableInternalRepresentationsKHR-device-parameter]
+vkGetPipelineExecutablePropertiesKHR
+vkGetPipelineExecutablePropertiesKHR: Invalid device [VUID-vkGetPipelineExecutablePropertiesKHR-device-parameter]
+vkGetPipelineExecutableStatisticsKHR
+vkGetPipelineExecutableStatisticsKHR: Invalid device [VUID-vkGetPipelineExecutableStatisticsKHR-device-parameter]
+vkGetPipelineIndirectDeviceAddressNV
+vkGetPipelineIndirectDeviceAddressNV: Invalid device [VUID-vkGetPipelineIndirectDeviceAddressNV-device-parameter]
+vkGetPipelineIndirectMemoryRequirementsNV
+vkGetPipelineIndirectMemoryRequirementsNV: Invalid device [VUID-vkGetPipelineIndirectMemoryRequirementsNV-device-parameter]
+vkGetPipelineKeyKHR
+vkGetPipelineKeyKHR: Invalid device [VUID-vkGetPipelineKeyKHR-device-parameter]
+vkGetPipelinePropertiesEXT
+vkGetPipelinePropertiesEXT: Invalid device [VUID-vkGetPipelinePropertiesEXT-device-parameter]
+vkGetPrivateData
+vkGetPrivateDataEXT
+vkGetPrivateDataEXT: Invalid device [VUID-vkGetPrivateDataEXT-device-parameter]
+vkGetQueryPoolResults
+vkGetQueryPoolResults: Invalid device [VUID-vkGetQueryPoolResults-device-parameter]
+vkGetQueueCheckpointData2NV
+vkGetQueueCheckpointData2NV: Invalid queue [VUID-vkGetQueueCheckpointData2NV-queue-parameter]
+vkGetQueueCheckpointDataNV
+vkGetQueueCheckpointDataNV: Invalid queue [VUID-vkGetQueueCheckpointDataNV-queue-parameter]
+vkGetRandROutputDisplayEXT
+vkGetRandROutputDisplayEXT: Emulating call in ICD "%s" by returning null display
+vkGetRandROutputDisplayEXT: Invalid physicalDevice [VUID-vkGetRandROutputDisplayEXT-physicalDevice-parameter]
+vkGetRayTracingCaptureReplayShaderGroupHandlesKHR
+vkGetRayTracingCaptureReplayShaderGroupHandlesKHR: Invalid device [VUID-vkGetRayTracingCaptureReplayShaderGroupHandlesKHR-device-parameter]
+vkGetRayTracingShaderGroupHandlesKHR
+vkGetRayTracingShaderGroupHandlesKHR: Invalid device [VUID-vkGetRayTracingShaderGroupHandlesKHR-device-parameter]
+vkGetRayTracingShaderGroupHandlesNV
+vkGetRayTracingShaderGroupHandlesNV: Invalid device [VUID-vkGetRayTracingShaderGroupHandlesNV-device-parameter]
+vkGetRayTracingShaderGroupStackSizeKHR
+vkGetRayTracingShaderGroupStackSizeKHR: Invalid device [VUID-vkGetRayTracingShaderGroupStackSizeKHR-device-parameter]
+vkGetRefreshCycleDurationGOOGLE
+vkGetRefreshCycleDurationGOOGLE: Invalid device [VUID-vkGetRefreshCycleDurationGOOGLE-device-parameter]
+vkGetRenderAreaGranularity
+vkGetRenderAreaGranularity: Invalid device [VUID-vkGetRenderAreaGranularity-device-parameter]
+vkGetRenderingAreaGranularityKHR
+vkGetRenderingAreaGranularityKHR: Invalid device [VUID-vkGetRenderingAreaGranularityKHR-device-parameter]
+vkGetSamplerOpaqueCaptureDescriptorDataEXT
+vkGetSamplerOpaqueCaptureDescriptorDataEXT: Invalid device [VUID-vkGetSamplerOpaqueCaptureDescriptorDataEXT-device-parameter]
+vkGetSemaphoreCounterValue
+vkGetSemaphoreCounterValue: Invalid device [VUID-vkGetSemaphoreCounterValue-device-parameter]
+vkGetSemaphoreCounterValueKHR
+vkGetSemaphoreCounterValueKHR: Invalid device [VUID-vkGetSemaphoreCounterValueKHR-device-parameter]
+vkGetSemaphoreFdKHR
+vkGetSemaphoreFdKHR: Invalid device [VUID-vkGetSemaphoreFdKHR-device-parameter]
+vkGetShaderBinaryDataEXT
+vkGetShaderBinaryDataEXT: Invalid device [VUID-vkGetShaderBinaryDataEXT-device-parameter]
+vkGetShaderInfoAMD
+vkGetShaderInfoAMD: Invalid device [VUID-vkGetShaderInfoAMD-device-parameter]
+vkGetShaderModuleCreateInfoIdentifierEXT
+vkGetShaderModuleCreateInfoIdentifierEXT: Invalid device [VUID-vkGetShaderModuleCreateInfoIdentifierEXT-device-parameter]
+vkGetShaderModuleIdentifierEXT
+vkGetShaderModuleIdentifierEXT: Invalid device [VUID-vkGetShaderModuleIdentifierEXT-device-parameter]
+vkGetSwapchainCounterEXT
+vkGetSwapchainCounterEXT: Invalid device [VUID-vkGetSwapchainCounterEXT-device-parameter]
+vkGetSwapchainImagesKHR
+vkGetSwapchainImagesKHR: Invalid device [VUID-vkGetSwapchainImagesKHR-device-parameter]
+vkGetSwapchainStatusKHR
+vkGetSwapchainStatusKHR: Invalid device [VUID-vkGetSwapchainStatusKHR-device-parameter]
+vkGetValidationCacheDataEXT
+vkGetValidationCacheDataEXT: Invalid device [VUID-vkGetValidationCacheDataEXT-device-parameter]
+vkGetVideoSessionMemoryRequirementsKHR
+vkGetVideoSessionMemoryRequirementsKHR: Invalid device [VUID-vkGetVideoSessionMemoryRequirementsKHR-device-parameter]
+vkImportFenceFdKHR
+vkImportFenceFdKHR: Invalid device [VUID-vkImportFenceFdKHR-device-parameter]
+vkImportSemaphoreFdKHR
+vkImportSemaphoreFdKHR: Invalid device [VUID-vkImportSemaphoreFdKHR-device-parameter]
+vkInitializePerformanceApiINTEL
+vkInitializePerformanceApiINTEL: Invalid device [VUID-vkInitializePerformanceApiINTEL-device-parameter]
+vkInvalidateMappedMemoryRanges
+vkInvalidateMappedMemoryRanges: Invalid device [VUID-vkInvalidateMappedMemoryRanges-device-parameter]
+vkLatencySleepNV
+vkLatencySleepNV: Invalid device [VUID-vkLatencySleepNV-device-parameter]
+vkMapMemory
+vkMapMemory2KHR
+vkMapMemory2KHR: Invalid device [VUID-vkMapMemory2KHR-device-parameter]
+vkMapMemory: Invalid device [VUID-vkMapMemory-device-parameter]
+vkMergePipelineCaches
+vkMergePipelineCaches: Invalid device [VUID-vkMergePipelineCaches-device-parameter]
+vkMergeValidationCachesEXT
+vkMergeValidationCachesEXT: Invalid device [VUID-vkMergeValidationCachesEXT-device-parameter]
+vkNegotiateLoaderLayerInterfaceVersion
+vkQueueBeginDebugUtilsLabelEXT
+vkQueueBeginDebugUtilsLabelEXT: Invalid queue [VUID-vkQueueBeginDebugUtilsLabelEXT-queue-parameter]
+vkQueueBindSparse
+vkQueueBindSparse: Invalid queue [VUID-vkQueueBindSparse-queue-parameter]
+vkQueueEndDebugUtilsLabelEXT
+vkQueueEndDebugUtilsLabelEXT: Invalid queue [VUID-vkQueueEndDebugUtilsLabelEXT-queue-parameter]
+vkQueueInsertDebugUtilsLabelEXT
+vkQueueInsertDebugUtilsLabelEXT: Invalid queue [VUID-vkQueueInsertDebugUtilsLabelEXT-queue-parameter]
+vkQueueNotifyOutOfBandNV
+vkQueueNotifyOutOfBandNV: Invalid queue [VUID-vkQueueNotifyOutOfBandNV-queue-parameter]
+vkQueuePresentKHR
+vkQueuePresentKHR: Invalid queue [VUID-vkQueuePresentKHR-queue-parameter]
+vkQueueSetPerformanceConfigurationINTEL
+vkQueueSetPerformanceConfigurationINTEL: Invalid queue [VUID-vkQueueSetPerformanceConfigurationINTEL-queue-parameter]
+vkQueueSubmit
+vkQueueSubmit2
+vkQueueSubmit2KHR
+vkQueueSubmit2KHR: Invalid queue [VUID-vkQueueSubmit2KHR-queue-parameter]
+vkQueueSubmit: Invalid queue [VUID-vkQueueSubmit-queue-parameter]
+vkQueueWaitIdle
+vkQueueWaitIdle: Invalid queue [VUID-vkQueueWaitIdle-queue-parameter]
+vkRegisterDeviceEventEXT
+vkRegisterDeviceEventEXT: Invalid device [VUID-vkRegisterDeviceEventEXT-device-parameter]
+vkRegisterDisplayEventEXT
+vkRegisterDisplayEventEXT: Invalid device [VUID-vkRegisterDisplayEventEXT-device-parameter]
+vkReleaseCapturedPipelineDataKHR
+vkReleaseCapturedPipelineDataKHR: Invalid device [VUID-vkReleaseCapturedPipelineDataKHR-device-parameter]
+vkReleaseDisplayEXT
+vkReleaseDisplayEXT: Invalid physicalDevice [VUID-vkReleaseDisplayEXT-physicalDevice-parameter]
+vkReleasePerformanceConfigurationINTEL
+vkReleasePerformanceConfigurationINTEL: Invalid device [VUID-vkReleasePerformanceConfigurationINTEL-device-parameter]
+vkReleaseProfilingLockKHR
+vkReleaseProfilingLockKHR: Invalid device [VUID-vkReleaseProfilingLockKHR-device-parameter]
+vkReleaseSwapchainImagesEXT
+vkReleaseSwapchainImagesEXT: Invalid device [VUID-vkReleaseSwapchainImagesEXT-device-parameter]
+vkResetCommandBuffer
+vkResetCommandBuffer: Invalid commandBuffer [VUID-vkResetCommandBuffer-commandBuffer-parameter]
+vkResetCommandPool
+vkResetCommandPool: Invalid device [VUID-vkResetCommandPool-device-parameter]
+vkResetDescriptorPool
+vkResetDescriptorPool: Invalid device [VUID-vkResetDescriptorPool-device-parameter]
+vkResetEvent
+vkResetEvent: Invalid device [VUID-vkResetEvent-device-parameter]
+vkResetFences
+vkResetFences: Invalid device [VUID-vkResetFences-device-parameter]
+vkResetQueryPool
+vkResetQueryPool: Invalid device [VUID-vkResetQueryPool-device-parameter]
+vkResetQueryPoolEXT
+vkResetQueryPoolEXT: Invalid device [VUID-vkResetQueryPoolEXT-device-parameter]
+vkSetDebugUtilsObjectNameEXT
+vkSetDebugUtilsObjectNameEXT: Invalid device [VUID-vkSetDebugUtilsObjectNameEXT-device-parameter]
+vkSetDebugUtilsObjectTagEXT
+vkSetDebugUtilsObjectTagEXT: Invalid device [VUID-vkSetDebugUtilsObjectTagEXT-device-parameter]
+vkSetDeviceMemoryPriorityEXT
+vkSetDeviceMemoryPriorityEXT: Invalid device [VUID-vkSetDeviceMemoryPriorityEXT-device-parameter]
+vkSetEvent
+vkSetEvent: Invalid device [VUID-vkSetEvent-device-parameter]
+vkSetHdrMetadataEXT
+vkSetHdrMetadataEXT: Invalid device [VUID-vkSetHdrMetadataEXT-device-parameter]
+vkSetInstanceDispatch: Can not retrieve Instance dispatch table.
+vkSetLatencyMarkerNV
+vkSetLatencyMarkerNV: Invalid device [VUID-vkSetLatencyMarkerNV-device-parameter]
+vkSetLatencySleepModeNV
+vkSetLatencySleepModeNV: Invalid device [VUID-vkSetLatencySleepModeNV-device-parameter]
+vkSetLocalDimmingAMD
+vkSetLocalDimmingAMD: Invalid device [VUID-vkSetLocalDimmingAMD-device-parameter]
+vkSetPrivateData
+vkSetPrivateDataEXT
+vkSetPrivateDataEXT: Invalid device [VUID-vkSetPrivateDataEXT-device-parameter]
+vkSignalSemaphore
+vkSignalSemaphore: Invalid device [VUID-vkSignalSemaphore-device-parameter]
+vkSignalSemaphoreKHR
+vkSignalSemaphoreKHR: Invalid device [VUID-vkSignalSemaphoreKHR-device-parameter]
+vkSubmitDebugUtilsMessageEXT
+vkTransitionImageLayoutEXT
+vkTransitionImageLayoutEXT: Invalid device [VUID-vkTransitionImageLayoutEXT-device-parameter]
+vkTrimCommandPool
+vkTrimCommandPool: Invalid device [VUID-vkTrimCommandPool-device-parameter]
+vkTrimCommandPoolKHR
+vkTrimCommandPoolKHR: Invalid device [VUID-vkTrimCommandPoolKHR-device-parameter]
+vkUninitializePerformanceApiINTEL
+vkUninitializePerformanceApiINTEL: Invalid device [VUID-vkUninitializePerformanceApiINTEL-device-parameter]
+vkUnmapMemory
+vkUnmapMemory2KHR
+vkUnmapMemory2KHR: Invalid device [VUID-vkUnmapMemory2KHR-device-parameter]
+vkUnmapMemory: Invalid device [VUID-vkUnmapMemory-device-parameter]
+vkUpdateDescriptorSetWithTemplate
+vkUpdateDescriptorSetWithTemplate: Invalid device [VUID-vkUpdateDescriptorSetWithTemplate-device-parameter]
+vkUpdateDescriptorSetWithTemplateKHR
+vkUpdateDescriptorSetWithTemplateKHR: Invalid device [VUID-vkUpdateDescriptorSetWithTemplateKHR-device-parameter]
+vkUpdateDescriptorSets
+vkUpdateDescriptorSets: Invalid device [VUID-vkUpdateDescriptorSets-device-parameter]
+vkUpdateIndirectExecutionSetPipelineEXT
+vkUpdateIndirectExecutionSetPipelineEXT: Invalid device [VUID-vkUpdateIndirectExecutionSetPipelineEXT-device-parameter]
+vkUpdateIndirectExecutionSetShaderEXT
+vkUpdateIndirectExecutionSetShaderEXT: Invalid device [VUID-vkUpdateIndirectExecutionSetShaderEXT-device-parameter]
+vkUpdateVideoSessionParametersKHR
+vkUpdateVideoSessionParametersKHR: Invalid device [VUID-vkUpdateVideoSessionParametersKHR-device-parameter]
+vkWaitForFences
+vkWaitForFences: Invalid device [VUID-vkWaitForFences-device-parameter]
+vkWaitForPresentKHR
+vkWaitForPresentKHR: Invalid device [VUID-vkWaitForPresentKHR-device-parameter]
+vkWaitSemaphores
+vkWaitSemaphores: Invalid device [VUID-vkWaitSemaphores-device-parameter]
+vkWaitSemaphoresKHR
+vkWaitSemaphoresKHR: Invalid device [VUID-vkWaitSemaphoresKHR-device-parameter]
+vkWriteAccelerationStructuresPropertiesKHR
+vkWriteAccelerationStructuresPropertiesKHR: Invalid device [VUID-vkWriteAccelerationStructuresPropertiesKHR-device-parameter]
+vkWriteMicromapsPropertiesEXT
+vkWriteMicromapsPropertiesEXT: Invalid device [VUID-vkWriteMicromapsPropertiesEXT-device-parameter]
+vk_icdGetInstanceProcAddr
+vk_icdGetPhysicalDeviceProcAddr
+vk_icdNegotiateLoaderICDInterfaceVersion
+vk_layerGetPhysicalDeviceProcAddr
+vulkan/explicit_layer.d
+vulkan/icd.d
+vulkan/implicit_layer.d
+warn
+wrong ELF class:
+~all~
+~explicit~
+~implicit~

@@ -1,0 +1,2381 @@
+ $(,048<\`dhlptxLPTXDH@
+ shm_unlink(%s) failed: %s
+!(_flags & ~(PA_LOG_COLORS|PA_LOG_PRINT_TIME|PA_LOG_PRINT_FILE|PA_LOG_PRINT_META|PA_LOG_PRINT_LEVEL))
+!(mode & ~0777)
+!bq->blocks || (bq->write_index + (int64_t)chunk.length <= bq->blocks->index)
+!c->timeout_event
+!cb || pa_pdispatch_is_pending(pd)
+!cookie_file || *cookie_file
+!e->next
+!h->iterate_list_head
+!l->dead
+!lock_fd_mutex
+!m->current.memblock
+!map || (map->channels == c->channels)
+!map || pa_channel_map_valid(map)
+!p->is_srbpending
+!pa_atomic_load(&control->done)
+!q->back
+!q->front
+!q->next || (bq->write_index + (int64_t)chunk.length <= q->next->index)
+!re->packet && !re->memblock
+!s->iterate_list_head
+!sb->head
+!thread
+!writable || pa_mempool_is_shared(p)
+%0.1f GiB
+%0.1f KiB
+%0.1f MiB
+%0.2f dB
+%08lx
+%lu (lt-%s)
+%s %s %s %s
+%s %uch %uHz
+%s = hex:%s
+%s does not exist, ignoring.
+%s flist is full (don't worry)
+%s is not trapped. This might cause malfunction!
+%s open() failed: %s
+%s%c: %s%s%s%s%s%s\n
+%s%s%s%s%s%s%s\n
+%s%u: %0.2f dB
+%s%u: %3u%%
+%s-by-application-id:%s
+%s-by-application-name:%s
+%s-by-media-name:%s
+%s-by-media-role:%s
+%s-fallback:%s
+%s.tmp
+%s.xx
+%s/%s-runtime
+%s/.config/pulse
+%s/.config/pulse/%s
+%s/.local/share/pulseaudio
+%s/.pulse
+%s/.pulse/%s
+%s/pulse
+%s/pulse-XXXXXXXXXXXX
+%s/pulseaudio
+%slock: %s
+%u / %3u%%%s%s
+%u events suppressed
+(%4llu.%03llu|%4llu.%03llu)
+((flags & 0xFF000000LU) & 0x80000000LU) != 0
+((n) & ~(1U << (sizeof(unsigned)*8U-1))) > 0
+(*__errno_location ()) == 11
+(*__errno_location ()) == 4
+(entries && table) || (!entries && !table)
+(invalid)
+(null)
+(r = PA_REFCNT_VALUE(b)) > 0
+(reply = dbus_message_new_error(in_reply_to, name, message))
+(reply = dbus_message_new_method_return(in_reply_to))
+(signature_from_basic_type
+(size_t) (e-t) <= sb->length
+(uint8_t*) data + b->length <= (uint8_t*) memory->ptr + memory->size
+(uint8_t*) ptr < (uint8_t*) p->memory.ptr + p->memory.size
+(uint8_t*) ptr >= (uint8_t*) p->memory.ptr
+(v = fcntl(fd, F_GETFD, 0)) >= 0
+(v = fcntl(fd, F_GETFL)) >= 0
+*_head == _item
+--log-target=syslog
+../src/pulse/channelmap.c
+../src/pulse/client-conf-x11.c
+../src/pulse/client-conf.c
+../src/pulse/format.c
+../src/pulse/mainloop-api.c
+../src/pulse/proplist.c
+../src/pulse/sample.c
+../src/pulse/timeval.c
+../src/pulse/utf8.c
+../src/pulse/util.c
+../src/pulse/volume.c
+../src/pulse/xmalloc.c
+../src/pulse/xmalloc.h
+../src/pulsecore/aupdate.c
+../src/pulsecore/authkey.c
+../src/pulsecore/bitset.c
+../src/pulsecore/conf-parser.c
+../src/pulsecore/core-error.c
+../src/pulsecore/core-format.c
+../src/pulsecore/core-rtclock.c
+../src/pulsecore/core-util.c
+../src/pulsecore/dbus-util.c
+../src/pulsecore/dynarray.c
+../src/pulsecore/fdsem.c
+../src/pulsecore/flist.c
+../src/pulsecore/hashmap.c
+../src/pulsecore/hashmap.c: entries
+../src/pulsecore/idxset.c
+../src/pulsecore/idxset.c: entries
+../src/pulsecore/iochannel.c
+../src/pulsecore/ioline.c
+../src/pulsecore/ipacl.c
+../src/pulsecore/json.c
+../src/pulsecore/lock-autospawn.c
+../src/pulsecore/log.c
+../src/pulsecore/mcalign.c
+../src/pulsecore/mem.h
+../src/pulsecore/memblock.c
+../src/pulsecore/memblock.c: unused_memblocks
+../src/pulsecore/memblockq.c
+../src/pulsecore/memblockq.c: list_items
+../src/pulsecore/memchunk.c
+../src/pulsecore/memtrap.c
+../src/pulsecore/mutex-posix.c
+../src/pulsecore/native-common.c
+../src/pulsecore/once.c
+../src/pulsecore/packet.c
+../src/pulsecore/packet.c: packets
+../src/pulsecore/parseaddr.c
+../src/pulsecore/pdispatch.c
+../src/pulsecore/pdispatch.c: reply_infos
+../src/pulsecore/pid.c
+../src/pulsecore/proplist-util.c
+../src/pulsecore/pstream-util.c
+../src/pulsecore/pstream.c
+../src/pulsecore/pstream.c: items
+../src/pulsecore/queue.c
+../src/pulsecore/queue.c: entries
+../src/pulsecore/random.c
+../src/pulsecore/ratelimit.c
+../src/pulsecore/sample-util.c
+../src/pulsecore/semaphore-posix.c
+../src/pulsecore/shm.c
+../src/pulsecore/sndfile-util.c
+../src/pulsecore/socket-client.c
+../src/pulsecore/socket-util.c
+../src/pulsecore/srbchannel.c
+../src/pulsecore/strbuf.c
+../src/pulsecore/strlist.c
+../src/pulsecore/tagstruct.c
+../src/pulsecore/tagstruct.c: tagstructs
+../src/pulsecore/thread-posix.c
+../src/pulsecore/time-smoother.c
+../src/pulsecore/time-smoother_2.c
+../src/pulsecore/tokenizer.c
+../src/pulsecore/usergroup.c
+../src/pulsecore/x11prop.c
+.conf
+.include
+.pulse-cookie
+/build/reproducible-path/pulseaudio-16.1+dfsg1/obj-aarch64-linux-gnu
+/dev/null
+/dev/random
+/dev/shm/
+/dev/urandom
+/etc/machine-id
+/etc/pulse/client.conf
+/org/freedesktop/RealtimeKit1
+/proc/%lu/stat
+/proc/self/exe
+/proc/self/fd
+/pulse-shm-%u
+/tmp
+/usr/bin/pulseaudio
+/usr/local/share/:/usr/share/
+/usr/share/locale
+/var/lib/dbus/machine-id
+0123456789abcdef
+<no explanation>
+Access denied
+Asked to handle disabled watch: %p %i
+Assertion '%s' failed at %s:%u, function %s(). Aborting.
+Assertion '%s' failed at %s:%u, function %s.
+Auxiliary 0
+Auxiliary 1
+Auxiliary 10
+Auxiliary 11
+Auxiliary 12
+Auxiliary 13
+Auxiliary 14
+Auxiliary 15
+Auxiliary 16
+Auxiliary 17
+Auxiliary 18
+Auxiliary 19
+Auxiliary 2
+Auxiliary 20
+Auxiliary 21
+Auxiliary 22
+Auxiliary 23
+Auxiliary 24
+Auxiliary 25
+Auxiliary 26
+Auxiliary 27
+Auxiliary 28
+Auxiliary 29
+Auxiliary 3
+Auxiliary 30
+Auxiliary 31
+Auxiliary 4
+Auxiliary 5
+Auxiliary 6
+Auxiliary 7
+Auxiliary 8
+Auxiliary 9
+Bad state
+Bailing out! No cached memimport segment for memfd ID %u
+Bpa_sample_spec_init
+CODE_FILE=%s
+CODE_FUNC=%s
+CODE_LINE=%d
+Cannot access autospawn lock.
+Cannot convert string '%s' to double value
+Cannot convert string '%s' to int64_t value
+Cannot import cached segment in write mode - previously mapped as read-only
+Cannot send block reference with non-registered memfd ID = %u
+Channel map is incompatible with the sample spec.
+Channel map is not compatible with the sample spec.
+Clamping rlimit-rttime to %lld for RealtimeKit
+Client forked
+Code should not be reached at %s:%u, function %s(). Aborting.
+Connection refused
+Connection terminated
+Corrupt PID file, overwriting.
+Could not check to see if pid %lu is a pulseaudio process. Assuming it is and the daemon is already running.
+Could not parse key for object
+Could not parse value for array
+Could not parse value for object
+DISPLAY
+Daemon already running.
+Device or resource busy
+Did the other PA endpoint forget registering its memfd pool?
+Did we reach our open file descriptors limit?
+EWNID
+Entity exists
+Entity killed
+Error writing logs to a file descriptor. Redirect log messages to console.
+Error writing logs to the journal. Redirect log messages to syslog.
+Exceeded maximum permitted nesting depth of objects (%u)
+Expected 1 memfd fd to be received over pipe; got 0
+Failed to access configuration file '%s': %s
+Failed to acquire high-priority scheduling: %s
+Failed to acquire real-time scheduling: %s
+Failed to close '%s': %s
+Failed to close PID file '%s': %s
+Failed to close cookie file: %s
+Failed to close file '%s': %s
+Failed to connect to system bus: %s
+Failed to create lock file '%s': %s
+Failed to create permanent mapping for memfd region with ID = %u
+Failed to create random directory %s: %s
+Failed to create secure directory (%s): %s
+Failed to fstat() PID file '%s': %s
+Failed to fstat() file '%s': %s
+Failed to get home directory.
+Failed to get proper entropy. Falling back to seeding with current time.
+Failed to get proper entropy. Falling back to unsecure pseudo RNG.
+Failed to get the home directory, not an absolute path: %s
+Failed to handle SIGBUS.\n
+Failed to import memory block.
+Failed to load authentication key '%s': %s
+Failed to load cookie file from %s: %s
+Failed to load cookie from %s (configured by the application): %s
+Failed to load cookie from %s (configured in client.conf): %s
+Failed to load cookie from %s (configured with environment variable PULSE_COOKIE): %s
+Failed to load cookie from X11 root window property PULSE_COOKIE: size mismatch.
+Failed to lock file '%s'.
+Failed to open %s: %s
+Failed to open '%s': %s
+Failed to open PID file '%s': %s
+Failed to open configuration file '%s': %s
+Failed to open cookie file '%s': %s
+Failed to open target file '%s'.
+Failed to parse PID file '%s'
+Failed to parse address: %s
+Failed to parse channel map.
+Failed to parse cookie data
+Failed to parse format info property '%s'.
+Failed to parse number of bits: %s
+Failed to parse remainder of string: %s
+Failed to read /dev/shm/: %s
+Failed to read PID file '%s': %s
+Failed to read configuration file '%s': %s
+Failed to read cookie file '%s': %s
+Failed to read from %s: %s
+Failed to remove PID file '%s': %s
+Failed to remove SHM segment %s: %s
+Failed to rename %s to %s: %s
+Failed to stat runtime directory %s: %s
+Failed to symlink %s to %s: %s
+Failed to symlink %s: %s
+Failed to truncate PID file '%s': %s
+Failed to truncate cookie file: %s
+Failed to unlock file '%s'.
+Failed to write PID file.
+Failed to write cookie file: %s
+Failed to write to '%s': %s
+Falling back to copying full block data over socket
+Format info property '%s' is not a valid int array.
+Format info property '%s' is not a valid int range.
+Format info property '%s' is not a valid string array.
+Format info property '%s' type is not int.
+Format info property '%s' type is not string.
+Front Center
+Front Left
+Front Left-of-center
+Front Right
+Front Right-of-center
+GLIBC_2.17
+GLIBC_2.27
+GLIBC_2.28
+GLIBC_2.29
+GLIBC_2.32
+GLIBC_2.33
+GLIBC_2.34
+GLIBC_2.38
+Got %d bytes from cookie file '%s', expected %d
+Got a format type that we don't support
+HOME
+Hmm, runtime path exists, but points to an invalid directory. Changing runtime directory.
+Home directory not accessible: %s
+Host part of ACL entry '%s/%u' is not zero!
+IP_TOS failed: %s
+Ignored non-absolute XDG_DATA_HOME value '%s'
+Ignored non-absolute path '%s' in XDG_DATA_DIRS
+Ignoring received block reference with non-registered memfd ID = %u
+Incompatible protocol version
+Input/Output error
+Internal error
+Invalid JSON string: %s
+Invalid UTF-8 string following below:
+Invalid argument
+Invalid channel count: %i
+Invalid log target.
+Invalid non-ASCII character: 0x%x
+Invalid property list key: '%s'.
+Invalid read from eventfd: %s
+Invalid read from pipe: %s
+Invalid sample format.
+Invalid sample rate: %i
+Invalid server
+Invalid shared memory segment size
+Invalid write to eventfd: %s
+Invalid write to pipe: %s
+JSON encoder is empty.
+JSON parsing failed
+LIBDBUS_1_3
+LIBSYSTEMD_209
+LOGNAME
+MESSAGE=%s
+MakeThreadHighPriority
+MakeThreadRealtime
+MaxRealtimePriority
+Memory block too large for pool: %lu > %lu
+Memory pool destroyed but not all memory blocks freed! %u remain.
+MinNiceLevel
+Missing digits while parsing number
+Missing implementation
+Module initialization failed
+Mono
+No authentication key
+No data
+No data while parsing json string: '%s' till '%s'
+No digit after '.' while parsing fraction
+No digit in exponent while parsing fraction
+No such entity
+No such extension
+Not enough memory\n
+Not supported
+Number of bits out of range: %i
+OVERRIDE
+Obsolete functionality
+Opened target file %s\n
+PA_VOLUME_IS_VALID(a)
+PA_VOLUME_IS_VALID(b)
+PA_VOLUME_IS_VALID(dec)
+PA_VOLUME_IS_VALID(inc)
+PA_VOLUME_IS_VALID(max)
+PA_VOLUME_IS_VALID(v)
+PID file '%s' not mine!
+PRIORITY=%i
+PR_GET_TIMERSLACK/PR_SET_TIMERSLACK not supported.
+PR_SET_TIMERSLACK failed: %s
+PULSE_BACKTRACE=%s
+PULSE_BINARY
+PULSE_CLIENTCONFIG
+PULSE_CONFIG_PATH
+PULSE_COOKIE
+PULSE_LOG
+PULSE_LOG_BACKTRACE
+PULSE_LOG_BACKTRACE_SKIP
+PULSE_LOG_COLORS
+PULSE_LOG_FILE
+PULSE_LOG_JOURNAL
+PULSE_LOG_LEVEL
+PULSE_LOG_META
+PULSE_LOG_NO_RATE_LIMIT
+PULSE_LOG_SYSLOG
+PULSE_LOG_TIME
+PULSE_MEMPOOL_DISABLE
+PULSE_PROP
+PULSE_PROP_
+PULSE_PROP_OVERRIDE
+PULSE_PROP_OVERRIDE_
+PULSE_RUNTIME_PATH
+PULSE_SERVER
+PULSE_SESSION_ID
+PULSE_SINK
+PULSE_SOURCE
+PULSE_STATE_PATH
+PULSE_SYSTEM
+Parsing configuration file '%s'
+Path %s in link %s is not absolute.
+Pool full
+Properties
+Protocol error
+RTTimeUSecMax
+RealtimeKit worked.
+Rear Center
+Rear Left
+Rear Right
+Received SHM frame on a socket where SHM is disabled.
+Received SHM memblock frame with invalid frame length.
+Received invalid frame size: %lu
+Received memblock frame with invalid flags value.
+Received memblock frame with invalid seek mode.
+Received memfd ID registration request over a pipe that does not support memfds
+Received packet frame with invalid flags value.
+Received unsupported command %u
+SCHED_RR worked.
+SCHED_RR|SCHED_RESET_ON_FORK worked.
+SHM block is %d bytes, ringbuffer capacity is 2 * %d bytes
+SIG%i
+SIGABRT
+SIGALRM
+SIGBUS
+SIGCHLD
+SIGCONT
+SIGFPE
+SIGHUP
+SIGINT
+SIGIO
+SIGKILL
+SIGPIPE
+SIGPROF
+SIGPWR
+SIGQUIT
+SIGRTMIN+%i
+SIGSEGV
+SIGSTKFLT
+SIGSTOP
+SIGSYS
+SIGTERM
+SIGTRAP
+SIGTSTP
+SIGTTIN
+SIGTTOU
+SIGULL
+SIGURG
+SIGUSR1
+SIGUSR2
+SIGVTALRM
+SIGWINCH
+SIGXCPU
+SIGXFSZ
+SO_PRIORITY failed: %s
+SO_RCVBUF: %s
+SO_SNDBUF: %s
+SSH_CONNECTION
+STDIN/STDOUT client
+Setting timer slack to %i us.
+Side Left
+Side Right
+Stale PID file, overwriting.
+Stereo
+Subwoofer
+Successfully acquired nice level %i, which is lower than the requested %i.
+Successfully connected to D-Bus %s bus %s as %s
+Successfully enabled SCHED_RR scheduling for thread, with priority %i, which is lower than the requested %i.
+Successfully enabled SCHED_RR scheduling for thread, with priority %i.
+Successfully gained nice level %i.
+Surround 4.0
+Surround 4.1
+Surround 5.0
+Surround 5.1
+Surround 7.1
+TCP/IP client from %i.%i.%i.%i:%u
+TCP/IP client from [%s]:%u
+TCP_NODELAY failed: %s
+TEMP
+TEMPDIR
+TMPDIR
+The per-process limit on the number of open file descriptors has been reached.
+The system-wide limit on the total number of open files has been reached.
+There's a bug report about this: https://gitlab.freedesktop.org/pulseaudio/pulseaudio/issues/824
+Timeout
+Timer slack is set to %i us.
+Too large
+Top Center
+Top Front Center
+Top Front Left
+Top Front Right
+Top Rear Center
+Top Rear Left
+Top Rear Right
+Tried to open target file '%s', '%s.1', '%s.2' ... '%s.%d', but all failed.
+Trying to receive too many file descriptors!
+UNIX socket client
+USB Hack, start time corrected by %0.2f usec
+USER
+USERNAME
+USERPROFILE
+UTF-8
+Uh, personality() failed: %s
+Unable to convert error string to locale, filtering.
+Unable to parse complete JSON string, remainder is: %s
+Unable to remove lock file '%s': %s
+Unable to write cookie to read-only file
+Unexpected escape value: %c
+Unicode code points are currently unsupported
+Unknown client
+Unknown command
+Unknown error
+Unknown error %d
+Unknown error code
+Unknown network client
+Using %s memory pool with %u slots of size %s each, total size is %s, maximum usable slot size is %lu
+XDG_CONFIG_HOME
+XDG_DATA_DIRS
+XDG_DATA_DIRS contains no valid paths
+XDG_DATA_HOME
+XDG_RUNTIME_DIR
+XDG_RUNTIME_DIR (%s) is not owned by us (uid %d), but by uid %d! (This could e.g. happen if you try to connect to a non-root PulseAudio as a root user, over the native protocol. Don't do that.)
+XDG_SESSION_ID
+[%s:%u] "Properties" section is not allowed in this file.
+[%s:%u] Failed to parse a proplist entry: %s = %s
+[%s:%u] Failed to parse boolean value: %s
+[%s:%u] Failed to parse numeric value: %s
+[%s:%u] Invalid section header.
+[%s:%u] Missing '='.
+[%s:%u] Unknown lvalue '%s' in section '%s'.
+[%s][%s:%i %s()]
+[1;31m
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__assert_fail
+__ctype_b_loc
+__cxa_atexit
+__cxa_finalize
+__environ
+__errno_location
+__fprintf_chk
+__getauxval
+__gmon_start__
+__isoc23_strtol
+__isoc23_strtoll
+__isoc23_strtoul
+__isoc23_strtoull
+__libc_current_sigrtmax
+__libc_current_sigrtmin
+__printf_chk
+__stack_chk_fail
+__stack_chk_guard
+__syslog_chk
+__vsnprintf_chk
+_exit
+_item
+_pa_xnew_internal
+_pa_xrenew_internal
+aLaw
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+abort
+ac3-iec61937
+accept
+accept4
+access
+add_timeout
+add_watch
+address
+adjust_time > 0
+alaw
+alphasort64
+ancil->nfd <= 2
+ancil_data
+ancil_data->nfd == 0
+ancil_data->nfd > 0
+append
+application.icon_name
+application.id
+application.language
+application.name
+application.process.binary
+application.process.host
+application.process.id
+application.process.machine_id
+application.process.session_id
+application.process.user
+array
+array || n == 0
+asyncns_cancel
+asyncns_cb
+asyncns_fd
+asyncns_free
+asyncns_freeaddrinfo
+asyncns_getaddrinfo
+asyncns_getaddrinfo_done
+asyncns_isdone
+asyncns_new
+asyncns_wait
+auto-connect-display
+auto-connect-localhost
+autospawn
+autospawn.lock
+aux0
+aux1
+aux10
+aux11
+aux12
+aux13
+aux14
+aux15
+aux16
+aux17
+aux18
+aux19
+aux2
+aux20
+aux21
+aux22
+aux23
+aux24
+aux25
+aux26
+aux27
+aux28
+aux29
+aux3
+aux30
+aux31
+aux4
+aux5
+aux6
+aux7
+aux8
+aux9
+avg_gradient
+a{say}
+b->per_type.imported.segment
+b->per_type.user.free_cb
+b->pool
+b->pool == e->pool
+b->type == PA_MEMBLOCK_FIXED
+b->type == PA_MEMBLOCK_IMPORTED
+b->type == PA_MEMBLOCK_POOL || b->type == PA_MEMBLOCK_POOL_EXTERNAL
+backtrace_symbols
+basic_type_size
+bind_textdomain_codeset
+bindtextdomain
+block_id
+block_size > 0
+bq->blocks == q
+bq->blocks_tail == q
+bq->n_blocks == 0
+bq->n_blocks >= 1
+bq->read_index >= bq->current_read->index
+bq->silence.memblock
+bq->write_index >= q->index + (int64_t)q->chunk.length
+c >= s->min_history
+c->asyncns_io_event == e
+c->asyncns_query = asyncns_getaddrinfo(c->asyncns, a.path_or_host, port, &hints)
+c->callback
+c->connection
+c->defer_event == e
+c->io_event == e
+c->length > 0
+c->mainloop
+c->memblock
+cache
+callback
+calloc
+cbrt
+center
+channel != (uint32_t) -1
+channels
+channels > 0
+chunk
+chunk.length > 0
+client.conf
+clock_getres
+clock_getres(CLOCK_REALTIME, &ts) == 0
+clock_gettime
+clock_gettime(CLOCK_REALTIME, &ts) == 0
+closedir
+cmh->cmsg_len == ((((sizeof (struct cmsghdr)) + sizeof (size_t) - 1) & (size_t) ~(sizeof (size_t) - 1)) + (sizeof(pa_ucred_t)))
+command == PA_COMMAND_REGISTER_MEMFD_SHMID
+conn
+connect(): %s
+connect(): %s (%d)
+connect_defer_cb
+connect_io_cb
+control
+cookie
+cookie-file
+cookie_length > 0
+copy = pa_proplist_new()
+could not attach memfd SHM ID to pipe
+could not extract pool SHM ID
+current_export = p->export
+current_export = pa_memexport_new(current_pool, memexport_revoke_cb, p)
+cvolume
+d->connection
+daemon-binary
+data
+data && length
+data = pa_tagstruct_data(t, &length)
+data >= memory->ptr
+data || nbytes == 0
+data_scan
+dbus_bus_add_match
+dbus_bus_get_private
+dbus_bus_get_unique_name
+dbus_bus_remove_match
+dbus_connection_close
+dbus_connection_dispatch
+dbus_connection_get_is_connected
+dbus_connection_get_server_id
+dbus_connection_read_write_dispatch
+dbus_connection_ref
+dbus_connection_send
+dbus_connection_send(c, reply, NULL)
+dbus_connection_send_with_reply_and_block
+dbus_connection_set_dispatch_status_function
+dbus_connection_set_exit_on_disconnect
+dbus_connection_set_timeout_functions
+dbus_connection_set_wakeup_main_function
+dbus_connection_set_watch_functions
+dbus_connection_unref
+dbus_error_free
+dbus_error_init
+dbus_error_is_set
+dbus_free
+dbus_message_append_args
+dbus_message_append_args(reply, type, data, DBUS_TYPE_INVALID)
+dbus_message_get_args
+dbus_message_get_args(m, NULL, DBUS_TYPE_STRING, &message, DBUS_TYPE_INVALID)
+dbus_message_get_signature
+dbus_message_get_type
+dbus_message_get_type(m) == 3
+dbus_message_iter_append_basic
+dbus_message_iter_append_basic(&array_iter, item_type, &((uint8_t*) array)[i * item_size])
+dbus_message_iter_append_basic(&dict_entry_iter, DBUS_TYPE_STRING, &key)
+dbus_message_iter_append_basic(&variant_iter, type, data)
+dbus_message_iter_append_fixed_array
+dbus_message_iter_append_fixed_array(&array_iter, DBUS_TYPE_BYTE, &value, nbytes)
+dbus_message_iter_close_container
+dbus_message_iter_close_container(&dict_entry_iter, &array_iter)
+dbus_message_iter_close_container(&dict_iter, &dict_entry_iter)
+dbus_message_iter_close_container(&msg_iter, &variant_iter)
+dbus_message_iter_close_container(dict_iter, &dict_entry_iter)
+dbus_message_iter_close_container(iter, &array_iter)
+dbus_message_iter_close_container(iter, &dict_iter)
+dbus_message_iter_close_container(iter, &variant_iter)
+dbus_message_iter_get_arg_type
+dbus_message_iter_get_basic
+dbus_message_iter_get_fixed_array
+dbus_message_iter_get_signature
+dbus_message_iter_init
+dbus_message_iter_init_append
+dbus_message_iter_next
+dbus_message_iter_open_container
+dbus_message_iter_open_container(&dict_entry_iter, DBUS_TYPE_ARRAY, "y", &array_iter)
+dbus_message_iter_open_container(&dict_iter, DBUS_TYPE_DICT_ENTRY, NULL, &dict_entry_iter)
+dbus_message_iter_open_container(&msg_iter, DBUS_TYPE_VARIANT, signature_from_basic_type(type), &variant_iter)
+dbus_message_iter_open_container(dict_iter, DBUS_TYPE_DICT_ENTRY, NULL, &dict_entry_iter)
+dbus_message_iter_open_container(iter, DBUS_TYPE_ARRAY, "{say}", &dict_iter)
+dbus_message_iter_open_container(iter, DBUS_TYPE_ARRAY, signature_from_basic_type(item_type), &array_iter)
+dbus_message_iter_open_container(iter, DBUS_TYPE_VARIANT, "a{say}", &variant_iter)
+dbus_message_iter_open_container(iter, DBUS_TYPE_VARIANT, array_signature, &variant_iter)
+dbus_message_iter_open_container(iter, DBUS_TYPE_VARIANT, signature_from_basic_type(type), &variant_iter)
+dbus_message_iter_recurse
+dbus_message_new_error
+dbus_message_new_method_call
+dbus_message_new_method_return
+dbus_message_unref
+dbus_pending_call_cancel
+dbus_pending_call_unref
+dbus_set_error_from_message
+dbus_timeout_get_data
+dbus_timeout_get_enabled
+dbus_timeout_get_interval
+dbus_timeout_handle
+dbus_timeout_set_data
+dbus_type_is_basic
+dbus_type_is_basic(item_type)
+dbus_type_is_basic(type)
+dbus_watch_get_data
+dbus_watch_get_enabled
+dbus_watch_get_flags
+dbus_watch_get_unix_fd
+dbus_watch_handle
+dbus_watch_set_data
+dcgettext
+def < PA_CHANNEL_MAP_DEF_MAX
+default-dbus-server
+default-server
+default-sink
+default-source
+defer_callback
+delete_events
+dest
+dict_iter
+dirfd
+disable-shm
+dispatch_status
+dladdr
+do_call
+do_connect
+do_pstream_read_write
+do_read
+do_work
+do_write
+drop_block
+dst->length == src->length
+dts-iec61937
+dtshd-iec61937
+e = m->defer_new(m, once_callback, i)
+e == io->input_event
+e == io->output_event
+e == t+sb->length
+eac3-iec61937
+empty_pipe
+enable-memfd
+enable-shm
+enable_events
+encoder
+encoder->context
+encoder->context == ((void *)0)
+encoder->context->type != PA_JSON_CONTEXT_TOP
+encoder->context->type == PA_JSON_CONTEXT_EMPTY || encoder->context->type == PA_JSON_CONTEXT_ARRAY
+encoder->context->type == PA_JSON_CONTEXT_OBJECT
+estimate
+ev = dbus_timeout_get_data(timeout)
+ev = dbus_watch_get_data(watch)
+event_fd >= 0
+eventfd
+expr
+extend
+extra-arguments
+fail_reason
+failure
+fallback_map
+fallback_ss
+false
+fchmod
+fchown
+fclose
+fcntl(fd, F_SETFD, v|FD_CLOEXEC) >= 0
+fcntl(fd, F_SETFL, nv) >= 0
+fcntl64
+fd == dbus_watch_get_unix_fd(watch)
+feof
+fgets
+file:
+file:%s
+filename
+fileno
+first
+fix_current_read
+float
+float32
+float32be
+float32le
+float32ne
+float32re
+flush
+fopen64
+format
+format == PA_SAMPLE_FLOAT32BE
+format.channel_map
+format.channels
+format.rate
+format.sample_format
+fpathconf
+free_callback
+free_cb
+free_events
+freelocale
+from
+front-center
+front-left
+front-left-of-center
+front-right
+front-right-of-center
+fstat() failed: %s
+fstat(fd, &st) == 0
+fstat64
+ftruncate() failed: %s
+ftruncate64
+func
+fwrite
+g_get_application_name
+gdk_display
+generate
+get_avg
+get_pulse_home
+getenv
+getgid
+getgrgid_r
+getgrnam_r
+getgroups
+getgroups(): %s
+gethostid
+gethostname
+getpeername
+getpid
+getpwnam_r
+getpwuid_r
+getrlimit(RLIMIT_MEMLOCK, &rlim) == 0
+getrlimit64
+getsockname
+getsockopt
+getsockopt() returned invalid size.
+getsockopt(): %s
+gettimeofday(tv, NULL) == 0
+getuid
+gtk_window_get_default_icon_name
+h->iterate_list_head
+h->n_entries >= 1
+handle_io_event
+handle_time_event
+hash_scan
+hex:
+history_time > 0
+i->callback
+i->chunk.memblock
+i->packet
+iconv
+iconv_close
+iconv_open
+iconv_simple
+ifd >= 0 || ofd >= 0
+import = segment->import
+in6addr_loopback
+in_reply_to
+inbytes != 0
+inet_ntop
+inet_pton
+internal_thread_func
+io->ifd >= 0
+io->input_event == io->output_event
+io->ofd == io->ifd
+io->ofd >= 0
+io_callback
+is_group
+isatty
+item_free
+iter
+journal
+json_encoder_context_pop
+json_write_string_escaped
+keys
+l < PA_LOG_LEVEL_MAX
+l <= m->current.length
+l->defer_event == e
+l->mainloop == m
+l->name
+l->wbuf_index + l->wbuf_valid_length + len <= l->wbuf_length
+l->wbuf_length >= l->wbuf_valid_length
+ld-linux-aarch64.so.1
+left
+len > 0
+len >= (1024)
+length != (size_t) -1
+level < PA_LOG_LEVEL_MAX
+libX11-xcb.so.1
+libX11.so.6
+libasyncns.so.0
+libc.so.6
+libdbus-1.so.3
+libm.so.6
+libpulsecommon-16.1.so
+libsndfile.so.1
+libsndfile.so.1.0
+libsystemd.so.0
+libxcb.so.1
+llrint
+load
+lock_fd < 0
+lock_fd >= 0
+lock_fd_mutex
+log10
+lround
+lseek64
+lstat64
+m = pa_atomic_ptr_load(&s->ptr)
+m->current.length < m->base && !m->leftover.memblock
+m->current.length >= m->base
+m->defer_free
+m->defer_new
+m->leftover.length < m->base
+m->leftover.length <= m->base
+m->leftover.length <= pa_memblock_get_length(m->leftover.memblock)
+m->leftover.length > 0
+m->ptr
+m->ptr != ((void *) -1)
+m->size > 0
+mainloop
+make_random_dir
+make_random_dir_and_link
+map->channels == v->channels
+media.artist
+media.comment
+media.copyright
+media.date
+media.format
+media.name
+media.role
+media.software
+media.title
+memblock_free
+memblock_make_local
+memblock_replace_import
+memblock_shared_copy
+memblockq requested: maxlength=%lu, tlength=%lu, base=%lu, prebuf=%lu, minreq=%lu maxrewind=%lu
+memblockq sanitized: maxlength=%lu, tlength=%lu, base=%lu, prebuf=%lu, minreq=%lu maxrewind=%lu
+memchr
+memcmp
+memexport_revoke_cb
+memfd_create
+memfd_fd != -1
+memfd_fd == -1
+memimport_release_cb
+memmove
+mempool is not memfd-backed
+mempool is not shared
+mempool_allocate_slot
+mempool_free
+mempool_slot_idx
+memset
+memtrap_link
+min_history <= 64
+min_history >= 2
+mkdir
+mlock
+mlock() failed too (or doesn't exist), giving up: %s
+mlock() worked fine!
+mmap() failed.\n
+mmap() failed: %s
+mmap64
+mode == PA_UPDATE_SET || mode == PA_UPDATE_MERGE || mode == PA_UPDATE_REPLACE
+mode >= 0600
+mono
+mpeg-iec61937
+mpeg2-aac-iec61937
+mulaw
+munlock
+munlock(a, bs) == 0
+munmap
+munmap() failed: %s
+n < INT_MAX/k
+n_values
+n_values > 0
+name
+name && name[0]
+nanosleep
+nbytes
+new_balance <= 1.0f
+new_balance >= -1.0f
+new_fade <= 1.0f
+new_fade >= -1.0f
+newfile:
+newfile:%s
+newindex >= 0 && newindex < (int) flist->size
+newlocale
+nfd > 0
+nl_langinfo
+normal_assignment
+null
+offset
+offset+size <= m->size
+once_callback
+open("/dev/null", O_RDONLY) == STDIN_FILENO
+open("/dev/null", O_WRONLY) == STDERR_FILENO
+open("/dev/null", O_WRONLY) == STDOUT_FILENO
+open_pid_file
+opendir
+openlog
+org.freedesktop.DBus.Error.AccessDenied
+org.freedesktop.DBus.Error.AuthFailed
+org.freedesktop.DBus.Error.InvalidArgs
+org.freedesktop.DBus.Error.NameHasNoOwner
+org.freedesktop.DBus.Error.NoMemory
+org.freedesktop.DBus.Error.ServiceUnknown
+org.freedesktop.DBus.Properties
+org.freedesktop.RealtimeKit1
+other
+p < PA_CHANNEL_POSITION_MAX
+p >= bq->read_index
+p->data
+p->defer_event == e
+p->export
+p->import
+p->io == io
+p->mainloop == m
+p->srb == srb
+p->use_shm
+p->write.current
+p->write.current->chunk.memblock
+p->write.current->packet
+p->write.current->type == PA_PSTREAM_ITEM_MEMBLOCK
+p->write.data || p->write.memchunk.memblock
+p->write_ancil_data->nfd == 0
+pa_accept_cloexec
+pa_append_to_config_home_dir
+pa_append_to_home_dir
+pa_ascii_filter
+pa_ascii_valid
+pa_atod
+pa_atoi
+pa_atoi64
+pa_atol
+pa_atomic_dec(&f->data->waiting) >= 1
+pa_atomic_load(&(b)->_ref) > 0
+pa_atomic_load(&(c)->_ref) >= 1
+pa_atomic_load(&(l)->_ref) >= 1
+pa_atomic_load(&(p)->_ref) > 0
+pa_atomic_load(&(p)->_ref) > 0 || srb == ((void *)0)
+pa_atomic_load(&(p)->_ref) >= 1
+pa_atomic_load(&(pd)->_ref) >= 1
+pa_atomic_load(&b->n_acquired) == 0
+pa_atomic_load(&b->pool->stat.allocated_size) >= (int) b->length
+pa_atomic_load(&b->pool->stat.imported_size) >= (int) b->length
+pa_atomic_load(&b->pool->stat.n_allocated) > 0
+pa_atomic_load(&b->pool->stat.n_imported) > 0
+pa_atomic_load(&e->pool->stat.exported_size) >= (int) b->length
+pa_atomic_load(&e->pool->stat.n_exported) > 0
+pa_atou
+pa_atou64
+pa_aupdate_free
+pa_aupdate_new
+pa_aupdate_read_begin
+pa_aupdate_read_end
+pa_aupdate_write_begin
+pa_aupdate_write_end
+pa_aupdate_write_swap
+pa_aupdate_write_swap(aupdate) == j
+pa_authkey_load
+pa_authkey_save
+pa_autospawn_lock_acquire
+pa_autospawn_lock_done
+pa_autospawn_lock_init
+pa_autospawn_lock_release
+pa_bitset_equals
+pa_bitset_get
+pa_bitset_set
+pa_bytes_per_second
+pa_bytes_snprint
+pa_bytes_to_usec
+pa_bytes_to_usec_round_up
+pa_channel_map_can_balance
+pa_channel_map_can_fade
+pa_channel_map_can_lfe_balance
+pa_channel_map_compatible
+pa_channel_map_equal
+pa_channel_map_has_position
+pa_channel_map_init
+pa_channel_map_init_auto
+pa_channel_map_init_extend
+pa_channel_map_init_mono
+pa_channel_map_init_stereo
+pa_channel_map_mask
+pa_channel_map_parse
+pa_channel_map_snprint
+pa_channel_map_superset
+pa_channel_map_to_name
+pa_channel_map_to_pretty_name
+pa_channel_map_valid
+pa_channel_map_valid(&map_local)
+pa_channel_map_valid(a)
+pa_channel_map_valid(b)
+pa_channel_map_valid(cm)
+pa_channel_map_valid(to)
+pa_channel_position_from_string
+pa_channel_position_to_pretty_string
+pa_channel_position_to_string
+pa_channels_valid
+pa_channels_valid(channels)
+pa_channels_valid(ss_local.channels)
+pa_check_in_group
+pa_check_signal_is_blocked
+pa_client_conf_free
+pa_client_conf_from_x11
+pa_client_conf_load
+pa_client_conf_load_cookie
+pa_client_conf_new
+pa_client_conf_set_cookie_file_from_application
+pa_close
+pa_close(ancil->fds[i]) == 0
+pa_close(fd) == 0
+pa_close(fd) >= 0
+pa_close(fds[0]) == 0
+pa_close(fds[1]) == 0
+pa_close(m->fd) == 0
+pa_close(memfd_fd) == 0
+pa_close_all
+pa_close_allv
+pa_close_pipe
+pa_cmsg_ancil_data_close_fds
+pa_common_command_register_memfd_shmid
+pa_cond_free
+pa_cond_new
+pa_cond_signal
+pa_cond_wait
+pa_config_parse
+pa_config_parse_bool
+pa_config_parse_int
+pa_config_parse_not_bool
+pa_config_parse_size
+pa_config_parse_string
+pa_config_parse_unsigned
+pa_convert_size
+pa_cstrerror
+pa_cvolume_avg
+pa_cvolume_avg_mask
+pa_cvolume_channels_equal_to
+pa_cvolume_compatible
+pa_cvolume_compatible_with_channel_map
+pa_cvolume_compatible_with_channel_map(a, cm)
+pa_cvolume_compatible_with_channel_map(cv, map)
+pa_cvolume_compatible_with_channel_map(v, cm)
+pa_cvolume_compatible_with_channel_map(v, from)
+pa_cvolume_compatible_with_channel_map(v, map)
+pa_cvolume_dec
+pa_cvolume_equal
+pa_cvolume_get_balance
+pa_cvolume_get_fade
+pa_cvolume_get_lfe_balance
+pa_cvolume_get_position
+pa_cvolume_inc
+pa_cvolume_inc_clamp
+pa_cvolume_init
+pa_cvolume_max
+pa_cvolume_max_mask
+pa_cvolume_merge
+pa_cvolume_min
+pa_cvolume_min_mask
+pa_cvolume_remap
+pa_cvolume_scale
+pa_cvolume_scale_mask
+pa_cvolume_set
+pa_cvolume_set_balance
+pa_cvolume_set_fade
+pa_cvolume_set_lfe_balance
+pa_cvolume_set_position
+pa_cvolume_snprint
+pa_cvolume_snprint_verbose
+pa_cvolume_valid
+pa_cvolume_valid(a)
+pa_cvolume_valid(b)
+pa_cvolume_valid(v)
+pa_dbus_add_matches
+pa_dbus_append_basic_array
+pa_dbus_append_basic_array_variant
+pa_dbus_append_basic_array_variant_dict_entry
+pa_dbus_append_basic_variant
+pa_dbus_append_basic_variant_dict_entry
+pa_dbus_append_proplist
+pa_dbus_append_proplist_variant
+pa_dbus_append_proplist_variant_dict_entry
+pa_dbus_free_pending_list
+pa_dbus_get_error_message
+pa_dbus_get_proplist_arg
+pa_dbus_pending_free
+pa_dbus_pending_new
+pa_dbus_remove_matches
+pa_dbus_send_basic_array_variant_reply
+pa_dbus_send_basic_value_reply
+pa_dbus_send_basic_variant_reply
+pa_dbus_send_empty_reply
+pa_dbus_send_error
+pa_dbus_send_proplist_variant_reply
+pa_dbus_sync_pending_list
+pa_dbus_wrap_connection_free
+pa_dbus_wrap_connection_get
+pa_dbus_wrap_connection_new
+pa_dbus_wrap_connection_new_from_existing
+pa_deinterleave
+pa_detect_fork
+pa_disable_sigpipe
+pa_dynarray_append
+pa_dynarray_free
+pa_dynarray_get
+pa_dynarray_insert_by_index
+pa_dynarray_last
+pa_dynarray_new
+pa_dynarray_remove_by_data
+pa_dynarray_remove_by_index
+pa_dynarray_size
+pa_dynarray_steal_last
+pa_encoding_from_string
+pa_encoding_to_string
+pa_endswith
+pa_escape
+pa_fdsem_after_poll
+pa_fdsem_before_poll
+pa_fdsem_free
+pa_fdsem_get
+pa_fdsem_new
+pa_fdsem_new_shm
+pa_fdsem_open_shm
+pa_fdsem_post
+pa_fdsem_try
+pa_fdsem_wait
+pa_find_config_file
+pa_flist_free
+pa_flist_new
+pa_flist_new_with_name
+pa_flist_pop
+pa_flist_push
+pa_fopen_cloexec
+pa_format_info_copy
+pa_format_info_free
+pa_format_info_free_string_array
+pa_format_info_from_sample_spec
+pa_format_info_from_sample_spec2
+pa_format_info_from_string
+pa_format_info_get_channel_map
+pa_format_info_get_channels
+pa_format_info_get_prop_int
+pa_format_info_get_prop_int(f, PA_PROP_FORMAT_RATE, &rate) == 0
+pa_format_info_get_prop_int_array
+pa_format_info_get_prop_int_range
+pa_format_info_get_prop_string
+pa_format_info_get_prop_string_array
+pa_format_info_get_prop_type
+pa_format_info_get_rate
+pa_format_info_get_sample_format
+pa_format_info_is_compatible
+pa_format_info_is_pcm
+pa_format_info_new
+pa_format_info_prop_compatible
+pa_format_info_set_channel_map
+pa_format_info_set_channels
+pa_format_info_set_prop_int
+pa_format_info_set_prop_int_array
+pa_format_info_set_prop_int_range
+pa_format_info_set_prop_string
+pa_format_info_set_prop_string_array
+pa_format_info_set_rate
+pa_format_info_set_sample_format
+pa_format_info_snprint
+pa_format_info_to_sample_spec
+pa_format_info_to_sample_spec2
+pa_format_info_to_sample_spec_fake
+pa_format_info_valid
+pa_frame_align
+pa_frame_aligned
+pa_frame_size
+pa_gcd
+pa_gcd(*num, *den) == 1
+pa_get_binary_name
+pa_get_binary_name_malloc
+pa_get_config_home_dir
+pa_get_data_dirs
+pa_get_data_home_dir
+pa_get_fqdn
+pa_get_gid_of_group
+pa_get_home_dir
+pa_get_home_dir_malloc
+pa_get_host_name
+pa_get_host_name_malloc
+pa_get_runtime_dir
+pa_get_state_dir
+pa_get_temp_dir
+pa_get_user_name
+pa_get_user_name_malloc
+pa_getcwd
+pa_getgrgid_free
+pa_getgrgid_malloc
+pa_getgrgid_malloc(%u): %s
+pa_getgrnam_free
+pa_getgrnam_malloc
+pa_getpwnam_free
+pa_getpwnam_malloc
+pa_getpwuid_free
+pa_getpwuid_malloc
+pa_gettimeofday
+pa_hashmap_first
+pa_hashmap_free
+pa_hashmap_get
+pa_hashmap_isempty
+pa_hashmap_iterate
+pa_hashmap_iterate_backwards
+pa_hashmap_last
+pa_hashmap_new
+pa_hashmap_new_full
+pa_hashmap_put
+pa_hashmap_remove
+pa_hashmap_remove(import->blocks, PA_UINT32_TO_PTR(b->per_type.imported.id))
+pa_hashmap_remove_all
+pa_hashmap_remove_and_free
+pa_hashmap_size
+pa_hashmap_size(i->segments) == 0
+pa_hashmap_steal_first
+pa_hexstr
+pa_idxset_copy
+pa_idxset_first
+pa_idxset_free
+pa_idxset_get_by_data
+pa_idxset_get_by_index
+pa_idxset_isempty
+pa_idxset_iterate
+pa_idxset_new
+pa_idxset_next
+pa_idxset_put
+pa_idxset_put(p->registered_memfd_ids, PA_UINT32_TO_PTR(shm_id), NULL) == 0
+pa_idxset_remove_all
+pa_idxset_remove_by_data
+pa_idxset_remove_by_index
+pa_idxset_rrobin
+pa_idxset_size
+pa_idxset_steal_first
+pa_idxset_string_compare_func
+pa_idxset_string_hash_func
+pa_idxset_trivial_compare_func
+pa_idxset_trivial_hash_func
+pa_in_system_mode
+pa_init_i18n
+pa_init_proplist
+pa_interleave
+pa_iochannel_creds_enable
+pa_iochannel_creds_supported
+pa_iochannel_free
+pa_iochannel_get_mainloop_api
+pa_iochannel_get_recv_fd
+pa_iochannel_get_send_fd
+pa_iochannel_is_hungup
+pa_iochannel_is_readable
+pa_iochannel_is_writable
+pa_iochannel_new
+pa_iochannel_read
+pa_iochannel_read_with_ancil_data
+pa_iochannel_set_callback
+pa_iochannel_set_noclose
+pa_iochannel_socket_is_local
+pa_iochannel_socket_peer_to_string
+pa_iochannel_socket_set_rcvbuf
+pa_iochannel_socket_set_sndbuf
+pa_iochannel_write
+pa_iochannel_write_with_creds
+pa_iochannel_write_with_fds
+pa_ioline_close
+pa_ioline_defer_close
+pa_ioline_detach_iochannel
+pa_ioline_is_drained
+pa_ioline_new
+pa_ioline_printf
+pa_ioline_puts
+pa_ioline_ref
+pa_ioline_set_callback
+pa_ioline_set_drain_callback
+pa_ioline_unref
+pa_ip_acl_check
+pa_ip_acl_free
+pa_ip_acl_new
+pa_is_fd_nonblock
+pa_is_ip6_address
+pa_is_ip_address
+pa_is_path_absolute
+pa_is_regex_valid
+pa_json_encoder_add_element_bool
+pa_json_encoder_add_element_double
+pa_json_encoder_add_element_int
+pa_json_encoder_add_element_null
+pa_json_encoder_add_element_raw_json
+pa_json_encoder_add_element_string
+pa_json_encoder_add_member_bool
+pa_json_encoder_add_member_double
+pa_json_encoder_add_member_int
+pa_json_encoder_add_member_null
+pa_json_encoder_add_member_raw_json
+pa_json_encoder_add_member_string
+pa_json_encoder_begin_element_array
+pa_json_encoder_begin_element_object
+pa_json_encoder_begin_member_array
+pa_json_encoder_begin_member_object
+pa_json_encoder_end_array
+pa_json_encoder_end_object
+pa_json_encoder_free
+pa_json_encoder_is_empty
+pa_json_encoder_new
+pa_json_encoder_to_string_free
+pa_json_escape
+pa_json_is_fixed_type(o1) || pa_json_is_fixed_type(o2)
+pa_json_object_equal
+pa_json_object_free
+pa_json_object_get_array_length
+pa_json_object_get_array_member
+pa_json_object_get_bool
+pa_json_object_get_double
+pa_json_object_get_int
+pa_json_object_get_object_member
+pa_json_object_get_object_member_hashmap
+pa_json_object_get_string
+pa_json_object_get_type
+pa_json_object_get_type(o) == PA_JSON_TYPE_ARRAY
+pa_json_object_get_type(o) == PA_JSON_TYPE_BOOL
+pa_json_object_get_type(o) == PA_JSON_TYPE_DOUBLE
+pa_json_object_get_type(o) == PA_JSON_TYPE_INT
+pa_json_object_get_type(o) == PA_JSON_TYPE_OBJECT
+pa_json_object_get_type(o) == PA_JSON_TYPE_STRING
+pa_json_parse
+pa_locale_to_utf8
+pa_lock_fd
+pa_lock_lockfile
+pa_log_level
+pa_log_level_meta
+pa_log_levelv
+pa_log_levelv_meta
+pa_log_parse_target
+pa_log_ratelimit
+pa_log_set_flags
+pa_log_set_ident
+pa_log_set_level
+pa_log_set_show_backtrace
+pa_log_set_skip_backtrace
+pa_log_set_target
+pa_log_target_free
+pa_log_target_new
+pa_log_target_to_string
+pa_loop_read
+pa_loop_write
+pa_machine_id
+pa_mainloop_api_once
+pa_make_fd_block
+pa_make_fd_cloexec
+pa_make_fd_nonblock
+pa_make_path_absolute
+pa_make_secure_dir
+pa_make_secure_parent_dir
+pa_make_socket_low_delay
+pa_make_tcp_socket_low_delay
+pa_make_udp_socket_low_delay
+pa_match
+pa_maybe_prefix_path
+pa_mcalign_csize
+pa_mcalign_flush
+pa_mcalign_free
+pa_mcalign_new
+pa_mcalign_pop
+pa_mcalign_push
+pa_mem_type_is_shared(type)
+pa_mem_type_to_string
+pa_memblock_acquire
+pa_memblock_acquire_chunk
+pa_memblock_get_length
+pa_memblock_get_pool
+pa_memblock_is_ours
+pa_memblock_is_read_only
+pa_memblock_is_silence
+pa_memblock_new
+pa_memblock_new_fixed
+pa_memblock_new_pool
+pa_memblock_new_user
+pa_memblock_ref
+pa_memblock_ref_is_one
+pa_memblock_release
+pa_memblock_set_is_silence
+pa_memblock_unref
+pa_memblock_unref_fixed
+pa_memblock_will_need
+pa_memblockq_apply_attr
+pa_memblockq_drop
+pa_memblockq_flush_read
+pa_memblockq_flush_write
+pa_memblockq_free
+pa_memblockq_get_attr
+pa_memblockq_get_base
+pa_memblockq_get_length
+pa_memblockq_get_maxlength
+pa_memblockq_get_maxrewind
+pa_memblockq_get_minreq
+pa_memblockq_get_nblocks
+pa_memblockq_get_prebuf
+pa_memblockq_get_read_index
+pa_memblockq_get_tlength
+pa_memblockq_get_write_index
+pa_memblockq_is_empty
+pa_memblockq_is_readable
+pa_memblockq_new
+pa_memblockq_peek
+pa_memblockq_peek_fixed_size
+pa_memblockq_pop_missing
+pa_memblockq_prebuf_active
+pa_memblockq_prebuf_disable
+pa_memblockq_prebuf_force
+pa_memblockq_push
+pa_memblockq_push_align
+pa_memblockq_rewind
+pa_memblockq_seek
+pa_memblockq_set_maxlength
+pa_memblockq_set_maxrewind
+pa_memblockq_set_minreq
+pa_memblockq_set_prebuf
+pa_memblockq_set_silence
+pa_memblockq_set_tlength
+pa_memblockq_silence
+pa_memblockq_splice
+pa_memblockq_willneed
+pa_memchunk_dump_to_file
+pa_memchunk_isset
+pa_memchunk_make_writable
+pa_memchunk_memcpy
+pa_memchunk_reset
+pa_memchunk_sine
+pa_memchunk_will_need
+pa_memexport_free
+pa_memexport_new
+pa_memexport_process_release
+pa_memexport_process_release(current_export, block_id) == 0
+pa_memexport_put
+pa_memimport_attach_memfd
+pa_memimport_free
+pa_memimport_get
+pa_memimport_new
+pa_memimport_process_revoke
+pa_mempool_block_size_max
+pa_mempool_get_memfd_fd
+pa_mempool_get_shm_id
+pa_mempool_get_stat
+pa_mempool_is_global
+pa_mempool_is_global(p)
+pa_mempool_is_memfd_backed
+pa_mempool_is_memfd_backed(p)
+pa_mempool_is_per_client
+pa_mempool_is_per_client(p)
+pa_mempool_is_remote_writable
+pa_mempool_is_shared
+pa_mempool_is_shared(b->pool)
+pa_mempool_is_shared(p)
+pa_mempool_new
+pa_mempool_ref
+pa_mempool_set_is_remote_writable
+pa_mempool_take_memfd_fd
+pa_mempool_unref
+pa_mempool_vacuum
+pa_memtrap_add
+pa_memtrap_install
+pa_memtrap_is_good
+pa_memtrap_remove
+pa_memtrap_update
+pa_msleep
+pa_mutex_free
+pa_mutex_lock
+pa_mutex_new
+pa_mutex_try_lock
+pa_mutex_unlock
+pa_ncpus
+pa_nullify_stdfds
+pa_once_begin
+pa_once_end
+pa_open_cloexec
+pa_open_config_file
+pa_own_uid_in_group
+pa_packet_data
+pa_packet_new
+pa_packet_new_data
+pa_packet_new_dynamic
+pa_packet_ref
+pa_packet_unref
+pa_page_size
+pa_parent_dir
+pa_parse_address
+pa_parse_boolean
+pa_parse_sample_format
+pa_parse_volume
+pa_parsehex
+pa_path_get_filename
+pa_pdispatch_creds
+pa_pdispatch_is_pending
+pa_pdispatch_new
+pa_pdispatch_ref
+pa_pdispatch_register_reply
+pa_pdispatch_run
+pa_pdispatch_set_drain_callback
+pa_pdispatch_take_ancil_data
+pa_pdispatch_unref
+pa_pdispatch_unregister_reply
+pa_pid_file_check_running
+pa_pid_file_create
+pa_pid_file_kill
+pa_pid_file_remove
+pa_pipe_buf
+pa_pipe_cloexec
+pa_proplist_clear
+pa_proplist_contains
+pa_proplist_copy
+pa_proplist_equal
+pa_proplist_free
+pa_proplist_from_string
+pa_proplist_get
+pa_proplist_get(p, k, &d, &l) >= 0
+pa_proplist_get(p, key, &value, &nbytes) == 0
+pa_proplist_get(proplist, key, &value, &nbytes) >= 0
+pa_proplist_get_stream_group
+pa_proplist_gets
+pa_proplist_isempty
+pa_proplist_iterate
+pa_proplist_key_valid
+pa_proplist_new
+pa_proplist_set
+pa_proplist_set(p, k, d, length) >= 0
+pa_proplist_set(p, prop->key, prop->value, prop->nbytes) == 0
+pa_proplist_set(proplist, key, value, value_length) >= 0
+pa_proplist_setf
+pa_proplist_setp
+pa_proplist_sets
+pa_proplist_size
+pa_proplist_to_string
+pa_proplist_to_string_sep
+pa_proplist_unset
+pa_proplist_unset_many
+pa_proplist_update
+pa_pstream_attach_memfd_shmid
+pa_pstream_enable_memfd
+pa_pstream_enable_shm
+pa_pstream_get_memfd
+pa_pstream_get_shm
+pa_pstream_is_pending
+pa_pstream_new
+pa_pstream_ref
+pa_pstream_register_memfd_mempool
+pa_pstream_send_error
+pa_pstream_send_memblock
+pa_pstream_send_packet
+pa_pstream_send_release
+pa_pstream_send_revoke
+pa_pstream_send_simple_ack
+pa_pstream_send_tagstruct_with_ancil_data
+pa_pstream_send_tagstruct_with_creds
+pa_pstream_send_tagstruct_with_fds
+pa_pstream_set_die_callback
+pa_pstream_set_drain_callback
+pa_pstream_set_receive_memblock_callback
+pa_pstream_set_receive_packet_callback
+pa_pstream_set_release_callback
+pa_pstream_set_revoke_callback
+pa_pstream_set_srbchannel
+pa_pstream_unlink
+pa_pstream_unref
+pa_queue_free
+pa_queue_isempty
+pa_queue_new
+pa_queue_pop
+pa_queue_push
+pa_raise_priority
+pa_random
+pa_random_seed
+pa_ratelimit_test
+pa_read
+pa_read_line_from_file
+pa_readlink
+pa_realpath
+pa_reduce
+pa_replace
+pa_reset_personality
+pa_reset_priority
+pa_reset_sigs
+pa_reset_sigsv
+pa_rtclock_age
+pa_rtclock_from_wallclock
+pa_rtclock_get
+pa_rtclock_hrtimer
+pa_rtclock_hrtimer_enable
+pa_rtclock_now
+pa_run_from_build_tree
+pa_run_once
+pa_running_in_vm
+pa_runtime_path
+pa_sample_clamp
+pa_sample_format_is_be
+pa_sample_format_is_le
+pa_sample_format_to_string
+pa_sample_format_valid
+pa_sample_format_valid(f)
+pa_sample_format_valid(ss_local.format)
+pa_sample_rate_valid
+pa_sample_rate_valid(ss_local.rate)
+pa_sample_size
+pa_sample_size_of_format
+pa_sample_spec_equal
+pa_sample_spec_init
+pa_sample_spec_snprint
+pa_sample_spec_valid
+pa_sample_spec_valid(a)
+pa_sample_spec_valid(b)
+pa_sample_spec_valid(spec)
+pa_sample_spec_valid(ss)
+pa_semaphore_free
+pa_semaphore_new
+pa_semaphore_post
+pa_semaphore_wait
+pa_session_id
+pa_set_env
+pa_set_env_and_record
+pa_shm_attach
+pa_shm_cleanup
+pa_shm_create_rw
+pa_shm_free
+pa_shm_punch
+pa_sig2str
+pa_silence_cache_done
+pa_silence_cache_init
+pa_silence_memblock
+pa_silence_memchunk
+pa_silence_memchunk_get
+pa_silence_memory
+pa_smoother_2_free
+pa_smoother_2_get
+pa_smoother_2_get_delay
+pa_smoother_2_new
+pa_smoother_2_pause
+pa_smoother_2_put
+pa_smoother_2_reset
+pa_smoother_2_resume
+pa_smoother_2_set_rate
+pa_smoother_2_set_sample_spec
+pa_smoother_2_translate
+pa_smoother_2_usb_hack_enable
+pa_smoother_fix_now
+pa_smoother_free
+pa_smoother_get
+pa_smoother_new
+pa_smoother_pause
+pa_smoother_put
+pa_smoother_reset
+pa_smoother_resume
+pa_smoother_set_time_offset
+pa_smoother_translate
+pa_sndfile_dump_formats
+pa_sndfile_format_from_string
+pa_sndfile_init_proplist
+pa_sndfile_read_channel_map
+pa_sndfile_read_sample_spec
+pa_sndfile_readf_function
+pa_sndfile_write_channel_map
+pa_sndfile_write_sample_spec
+pa_sndfile_writef_function
+pa_snprintf
+pa_socket_address_is_local
+pa_socket_client_is_local
+pa_socket_client_new_ipv4
+pa_socket_client_new_ipv6
+pa_socket_client_new_sockaddr
+pa_socket_client_new_string
+pa_socket_client_new_unix
+pa_socket_client_ref
+pa_socket_client_set_callback
+pa_socket_client_unref
+pa_socket_cloexec
+pa_socket_is_local
+pa_socket_peer_to_string
+pa_socket_set_rcvbuf
+pa_socket_set_sndbuf
+pa_split
+pa_split_in_place
+pa_split_spaces
+pa_split_spaces_in_place
+pa_split_spaces_strv
+pa_sprintf_malloc
+pa_srbchannel_export
+pa_srbchannel_free
+pa_srbchannel_new
+pa_srbchannel_new_from_template
+pa_srbchannel_read
+pa_srbchannel_set_callback
+pa_srbchannel_write
+pa_startswith
+pa_state_path
+pa_static_mutex_get
+pa_static_semaphore_get
+pa_str_in_list
+pa_str_in_list_spaces
+pa_str_strip_suffix
+pa_strbuf_free
+pa_strbuf_isempty
+pa_strbuf_new
+pa_strbuf_printf
+pa_strbuf_putc
+pa_strbuf_puts
+pa_strbuf_putsn
+pa_strbuf_to_string
+pa_strbuf_to_string_free
+pa_streq(signature, "a{say}")
+pa_strerror
+pa_strip
+pa_strip_nl
+pa_strlcpy
+pa_strlist_data
+pa_strlist_free
+pa_strlist_next
+pa_strlist_parse
+pa_strlist_pop
+pa_strlist_prepend
+pa_strlist_remove
+pa_strlist_reverse
+pa_strlist_to_string
+pa_sw_cvolume_divide
+pa_sw_cvolume_divide_scalar
+pa_sw_cvolume_multiply
+pa_sw_cvolume_multiply_scalar
+pa_sw_cvolume_snprint_dB
+pa_sw_volume_divide
+pa_sw_volume_divide: Volume exceeds maximum allowed value and will be clipped. Please check your volume settings.
+pa_sw_volume_from_dB
+pa_sw_volume_from_linear
+pa_sw_volume_multiply
+pa_sw_volume_multiply: Volume exceeds maximum allowed value and will be clipped. Please check your volume settings.
+pa_sw_volume_snprint_dB
+pa_sw_volume_to_dB
+pa_sw_volume_to_linear
+pa_tagstruct_data
+pa_tagstruct_eof
+pa_tagstruct_free
+pa_tagstruct_get
+pa_tagstruct_get_arbitrary
+pa_tagstruct_get_boolean
+pa_tagstruct_get_channel_map
+pa_tagstruct_get_cvolume
+pa_tagstruct_get_format_info
+pa_tagstruct_get_proplist
+pa_tagstruct_get_sample_spec
+pa_tagstruct_get_timeval
+pa_tagstruct_get_usec
+pa_tagstruct_get_volume
+pa_tagstruct_gets
+pa_tagstruct_gets64
+pa_tagstruct_getu32
+pa_tagstruct_getu64
+pa_tagstruct_getu8
+pa_tagstruct_new
+pa_tagstruct_new_fixed
+pa_tagstruct_put
+pa_tagstruct_put_arbitrary
+pa_tagstruct_put_boolean
+pa_tagstruct_put_channel_map
+pa_tagstruct_put_cvolume
+pa_tagstruct_put_format_info
+pa_tagstruct_put_proplist
+pa_tagstruct_put_sample_spec
+pa_tagstruct_put_timeval
+pa_tagstruct_put_usec
+pa_tagstruct_put_volume
+pa_tagstruct_puts
+pa_tagstruct_puts64
+pa_tagstruct_putu32
+pa_tagstruct_putu64
+pa_tagstruct_putu8
+pa_thread_free
+pa_thread_free_nojoin
+pa_thread_get_data
+pa_thread_get_name
+pa_thread_is_running
+pa_thread_join
+pa_thread_make_realtime
+pa_thread_new
+pa_thread_self
+pa_thread_set_data
+pa_thread_set_name
+pa_thread_yield
+pa_timespec_load
+pa_timespec_store
+pa_timeval_add
+pa_timeval_age
+pa_timeval_cmp
+pa_timeval_diff
+pa_timeval_load
+pa_timeval_rtstore
+pa_timeval_store
+pa_timeval_sub
+pa_tls_free
+pa_tls_get
+pa_tls_new
+pa_tls_set
+pa_tokenizer_free
+pa_tokenizer_get
+pa_tokenizer_new
+pa_truncate_utf8
+pa_uid_in_group
+pa_uname_string
+pa_unblock_sigs
+pa_unblock_sigsv
+pa_unescape
+pa_unlock_lockfile
+pa_unset_env
+pa_unset_env_recorded
+pa_usec_to_bytes
+pa_usec_to_bytes_round_up
+pa_utf8_filter
+pa_utf8_to_locale
+pa_utf8_valid
+pa_utf8_valid(c)
+pa_volume_snprint
+pa_volume_snprint_verbose
+pa_vsnprintf
+pa_vsprintf_malloc
+pa_will_need
+pa_write
+pa_x11_del_prop
+pa_x11_get_prop
+pa_x11_set_prop
+pa_xfree
+pa_xfreev
+pa_xmalloc
+pa_xmalloc0
+pa_xmemdup
+pa_xrealloc
+pa_xstrdup
+pa_xstrndup
+packet
+packet = pa_packet_new_data(data, length)
+pair
+parse
+parse_array
+parse_line
+parse_number
+parse_object
+parse_string
+parse_value
+parsing address failed: %s
+path
+pending
+ping
+pipe does not support memfd transport
+pipe2
+pipe_fd[0] < 0
+pipe_fd[0] >= 0
+pipe_fd[1] < 0
+pipe_fd[1] >= 0
+pool
+port > 0
+posix_madvise
+posix_madvise() failed (or doesn't exist), resource limits don't allow mlock(), can't page in data: %s
+posix_madvise() failed (or doesn't exist), trying mlock(): %s
+posix_madvise() worked fine!
+prctl
+prepare_next_write_item
+prepare_number_string
+previously registered memfd SHM ID = %u
+private
+privatemem_create
+privatemem_free
+proc_name_ours
+prop
+property_free
+proplist
+proplist_assignment
+proplist_sethex
+proplist_setn
+pthread_cond_broadcast
+pthread_cond_broadcast(&c->cond) == 0
+pthread_cond_destroy
+pthread_cond_destroy(&c->cond) == 0
+pthread_cond_init
+pthread_cond_init(&c->cond, NULL) == 0
+pthread_cond_signal
+pthread_cond_signal(&c->cond) == 0
+pthread_cond_wait
+pthread_create
+pthread_getspecific
+pthread_join
+pthread_key_create
+pthread_key_delete
+pthread_key_delete(t->key) == 0
+pthread_mutex_destroy
+pthread_mutex_destroy(&m->mutex) == 0
+pthread_mutex_init
+pthread_mutex_init(&m->mutex, &attr) == 0
+pthread_mutex_lock
+pthread_mutex_lock(&m->mutex) == 0
+pthread_mutex_trylock
+pthread_mutex_unlock
+pthread_mutex_unlock() failed: %s
+pthread_mutexattr_init
+pthread_mutexattr_init(&attr) == 0
+pthread_mutexattr_setprotocol
+pthread_mutexattr_setprotocol(&attr, PTHREAD_PRIO_NONE) == 0
+pthread_mutexattr_settype
+pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE) == 0
+pthread_self
+pthread_setschedparam
+pthread_setspecific
+pthread_setspecific(t->key, userdata) == 0
+pthread_sigmask
+pulse-shm-
+q->front
+q->length == 0
+r == 0 || r == 95
+r == 95 && inherit_priority
+r == m->start
+r->burst > 0
+r->callback
+r->interval > 0
+r->pdispatch
+r->pdispatch->mainloop
+r->pdispatch->mainloop == m
+r->time_event = pd->mainloop->time_new(pd->mainloop, pa_timeval_rtstore(&tv, pa_rtclock_now() + timeout * PA_USEC_PER_SEC, pd->use_rtclock), timeout_callback, r)
+r->time_event == e
+raise
+rate
+rate > 0
+re->data || re->memblock
+read_pid
+readdir64
+rear-center
+rear-left
+rear-right
+recvmsg
+regcomp
+regexec
+regfree
+remove_entry
+remove_timeout
+remove_watch
+rename
+reply_info_free
+result == buf || result == ((void *)0)
+ret_d
+ret_data
+ret_i
+ret_l
+ret_p
+ret_u
+right
+rmap
+rmdir
+root
+rtkit_get_max_realtime_priority
+rtkit_get_min_nice_level
+rtkit_get_rttime_usec_max
+rtkit_make_high_priority
+rtkit_make_realtime
+run_action
+s->iterate_list_head
+s->n_entries >= 1
+s16be
+s16le
+s16ne
+s16re
+s24-32
+s24-32be
+s24-32le
+s24-32ne
+s24-32re
+s24be
+s24le
+s24ne
+s24re
+s32be
+s32le
+s32ne
+s32re
+salen
+salen > 0
+sample_spec
+sb->head
+scan_for_lines
+scandir("%s") failed: %s
+scandir64
+sched_yield
+sched_yield() == 0
+sd_journal_send
+second
+seg->n_blocks == (segment_is_permanent(seg) ? 1u : 0u)
+segment = b->per_type.imported.segment
+segment->n_blocks >= 1
+segment_detach
+segment_is_permanent(seg)
+sem_destroy
+sem_destroy(&s->sem) == 0
+sem_init
+sem_init(&s->sem, 0, value) == 0
+sem_post(&s->sem) == 0
+sendmsg
+session
+set_nice
+set_nonblock
+set_scheduler
+setlocale
+setpriority
+setpriority() worked.
+setrlimit() failed: %s
+setrlimit64
+setsockopt
+setsockopt(SOL_SOCKET, SO_PASSCRED): %s
+sf_command
+sf_command(NULL, SFC_GET_FORMAT_MAJOR, &fi, sizeof(fi)) == 0
+sf_command(NULL, SFC_GET_FORMAT_MAJOR_COUNT, &count, sizeof(int)) == 0
+sf_error_number
+sf_get_string
+sf_readf_float
+sf_readf_int
+sf_readf_short
+sf_writef_float
+sf_writef_int
+sf_writef_short
+shared memfd
+shared posix-shm
+sharedmem_create
+shm-size-bytes
+shm_attach
+shm_id
+shm_open
+shm_open() failed: %s
+shm_unlink
+side-left
+side-right
+sigaction
+sigaction(): %s
+sigaction(SIGBUS, &sa, NULL) == 0
+sigaddset
+sigemptyset
+sigfillset
+sigismember
+signal_handler
+signature = dbus_message_iter_get_signature(iter)
+signature_from_basic_type
+sigprocmask
+sigprocmask(): %s
+silence_byte
+silence_memblock_new
+size < (1024*1024*96)
+size <= (PA_ALIGN(1024*1024*1024))
+size > 0
+skip < l->rbuf_valid_length
+slength > 0
+slot = mempool_slot_by_ptr(b->pool, pa_atomic_ptr_load(&b->data))
+sndfile: %s
+sockaddr_prepare
+socket
+socket(): %s
+socket_client_free
+spec
+srand
+srb_callback
+ss && pa_sample_spec_valid(ss)
+ss_local.channels == map_local.channels
+st_13linear2alaw
+st_14linear2ulaw
+st_alaw2linear16
+st_ulaw2linear16
+stack_push
+start_timeout
+starter
+stat_add
+stat_remove
+state
+state != STATE_TAKEN
+state == STATE_IDLE
+state == STATE_TAKEN
+state->proplist
+stderr
+stereo
+str != ((void *)0)
+strcasecmp
+strchr
+strcmp
+strcpy
+strcspn
+stream
+strerror_r
+string
+strlen
+strncasecmp
+strncmp
+strncpy
+strpbrk
+strrchr
+strspn
+strstr
+strtod
+strtod_l
+subwoofer
+suffix
+surround-21
+surround-40
+surround-41
+surround-50
+surround-51
+surround-71
+symlink
+syscall
+sysconf
+syslog
+system
+t < PA_CHANNEL_POSITION_MAX
+t = pa_tagstruct_new()
+t = va_arg(ap, const char*)
+t->thread_func
+t->type != PA_TAGSTRUCT_FIXED
+tcp4:
+tcp6:
+tcp:
+thread_free_cb
+thread_func
+timeout
+timeout_callback
+timeout_cb
+toggle_timeout
+toggle_watch
+top-center
+top-front-center
+top-front-left
+top-front-right
+top-rear-center
+top-rear-left
+top-rear-right
+true
+truehd-iec61937
+type
+type != NUMTYPE_INT || tmp
+type == DBUS_BUS_SYSTEM || type == DBUS_BUS_SESSION || type == DBUS_BUS_STARTER
+type == PA_JSON_CONTEXT_ARRAY
+type == PA_JSON_CONTEXT_OBJECT
+type == PA_JSON_CONTEXT_TOP || type == PA_JSON_CONTEXT_EMPTY
+uLaw
+uchunk
+uchunk->index % bq->base == 0
+uchunk->index + uchunk->length <= pa_memblock_get_length(uchunk->memblock)
+uchunk->length % bq->base == 0
+uchunk->length > 0
+uchunk->memblock
+ulaw
+umask
+uname
+uname(&u) >= 0
+unix:
+unknown
+unref
+unsetenv
+userdata
+utf8_validate
+value
+value_length >= 0
+values
+volume
+wait_for_ping
+wakeup_main
+watch
+window > 0
+window.x11.display
+write(): %s
+xcb_change_property
+xcb_connect
+xcb_connect() failed
+xcb_connection_has_error
+xcb_connection_has_error() returned true
+xcb_delete_property
+xcb_disconnect
+xcb_get_property
+xcb_get_property_reply
+xcb_get_property_value
+xcb_get_property_value_length
+xcb_get_setup
+xcb_intern_atom
+xcb_intern_atom_reply
+xcb_screen_next
+xcb_setup_roots_iterator
+{ "min": %d, "max": %d }
+{say}

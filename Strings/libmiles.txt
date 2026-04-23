@@ -1,4 +1,5 @@
 
+ (Read only)
 !-Result = %d
 !-Result = %f
 !-Result = %ld
@@ -11,6 +12,7 @@
 !Miles memory allocation failed! (requested %d bytes)
 !RIB: Loaded provider %s = %X
 $ORIGIN
+%00d
 %04x;
 %3.1f
 %d,%d,%d,%s,%d\r\n
@@ -38,18 +40,15 @@ $ORIGIN
 .v29
 .wav
 /proc/%i/exe
+0x%X
 1@B`e>X94<
 ;%s;%s;%f;%s;%x;%x;%x;
 <debug info missing>
 =X94<
->Invalid lock - check GetReadyBytes().
-?Not a WAV file.
 ?X94<
-@@rib.cpp
 @AIL_3D_distance_factor(0x%lX)
 @AIL_3D_doppler_factor(0x%lX)
 @AIL_3D_rolloff_factor(0x%lX)
-@AIL_MMX_available()
 @AIL_WAV_file_write(%s,0x%lX,%ld,%ld,%ld)
 @AIL_WAV_info(0x%lX,0x%lX)
 @AIL_active_sample_count(0x%lX)
@@ -252,13 +251,11 @@ $ORIGIN
 @AIL_stream_user_data(0x%lX,%lu)
 @AIL_update_listener_3D_position(0x%lX,%f)
 @AIL_update_sample_3D_position(0x%lX,%f)
-@Default Miles Mixer
 A8r.-
 AIL_3D_distance_factor
 AIL_3D_doppler_factor
 AIL_3D_rolloff_factor
 AIL_IO_thread_handle
-AIL_MMX_available
 AIL_WAV_file_write
 AIL_WAV_info
 AIL_WAV_marker_by_index
@@ -602,7 +599,6 @@ AIL_us_count
 AIL_us_count64
 AIL_variable_float(0x%lX%s, 0x%lX)
 AIL_variable_int(0x%lX%s, 0x%lX)
-AInsufficient Buffer Space
 AL_FORMAT_51CHN16
 AL_FORMAT_71CHN16
 AL_FORMAT_QUAD16
@@ -620,12 +616,14 @@ ASI_stream_seek
 Additional event systems are addded via AIL_add_event_system.
 Attempt to load obsolete (pre-V1.30) RIB
 Audition bank name provided doesn't match the bank name in the loaded file. Are you loading the bank you think you are?
+Bank Dump:\n
 Bank file version doesn't match this runtime.
 Bink Audio provider failed to initialize.
 Bink Audio provider not found.
 Both indices must refer to installed busses.
 CAT
 CXXABI_1.3
+Can't audition without a sound bank name.
 Channel buffer allocation failed.
 Clear Loop Meta
 CodeLimit
@@ -647,11 +645,13 @@ Couldn't open OAL device.
 Couldn't queue test sample for requested channel count.
 Creative
 Cue point not found
-Current InstanceCurrent PersistsCan't audition without a sound bank name.
+Current Instances:\n
+Current Persists:\n
 Data is not IMA compressed.
 Data length
 Data offset
 Decompression cancelled.
+Default Miles Mixer
 Driver_state_size
 Environment Not Found.
 Error getting sound format.
@@ -678,17 +678,11 @@ Failed to set handle for command buffer.
 FailedEvict
 False
 Flags
-GCC: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
-GCC: (Ubuntu 9.4.0-1ubuntu1~18.04) 9.4.0
+GCC: (Debian 13.2.0-23) 13.2.0
 GCC_3.0
-GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.2.5
 GLIBC_2.27
-GLIBC_2.3.3
-GLIBC_2.3.4
-GLIBC_2.4
-HCX94<
+GLIBC_2.34
 Input
 Input bit rate
 Input channels
@@ -696,9 +690,11 @@ Input file types
 Input sample rate
 Input sample width
 Input wave tag
+Insufficient Buffer Space
 Invalid byte count submitted to hw layer.
 Invalid channel spec for platform.
 Invalid event version - required version is: 4
+Invalid lock - check GetReadyBytes().
 Invalid lock size.
 Invalid sample interval specified.
 LIST
@@ -753,7 +749,6 @@ MilesEvent: The event expected a selection that did not exist.
 MilesEvent: The requested blend has not been set as it doesn't exist.
 MilesEvent: Too many sounds were start in a blended sound.
 MilesEventExec.cpp
-MilesEventHandle.cpp
 MilesEventSetAuditionFunctions
 MilesFindEvent
 MilesGetBankFunctions
@@ -787,11 +782,14 @@ No codec found for requested input type.
 No list chunk found
 No marker or loop information in file.
 No mixer services exist.
-Not a WAVEFORMATNot KSDATAFORMATUnsupported multichannel format.
+Not KSDATAFORMAT_SUBTYPE_PCM.
+Not a WAV file.
+Not a WAVEFORMATPCMEX file.
 Not a filter provider
 OOM allocating event system memory
 OggS
-One or more entrOne or more requested entries no
+One or more entries not found
+One or more requested entries not found
 OpenAL Mixer
 Out of available busses.
 Out of memory
@@ -856,18 +854,19 @@ Sound Instance Count: %d\n
 Sound Preset Error - Filter Not Found.
 Sound Source Count: %d\n
 Sound file isn't a bank.
+Source Dump:\n
 Speex
 Start time: %s
 Stream seek position
 System #%d\n
 True
-UUU@
 Unable to create file.
 Unable to obtain a sample handle.
 Unable to open file.
 Unable to write to file (disk full?).
 Unknown file type.
 Unsupported .WAV format
+Unsupported multichannel format.
 Unsupported wave file format.
 Voice filter driver services
 Voice filter sample services
@@ -878,51 +877,20 @@ XDLS
 [%.02d:%.02d:%.02d.%.03d]
 \t%s, labeled (%s) - status %s\n
 \t%s: refcount: %d\n
+_AuxBusDAC0
+_AuxBusDb0
 _Bus
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 _MainBusDAC
 _MainBusDb
 _Unwind_Resume
-_Unwind_Resume@@GCC_3.0
-__bss_start
 __cxa_finalize
-__cxa_finalize@@GLIBC_2.2.5
 __errno_location
-__errno_location@@GLIBC_2.2.5
-__fprintf_chk
-__fprintf_chk@@GLIBC_2.3.4
 __gmon_start__
 __gxx_personality_v0
-__gxx_personality_v0@@CXXABI_1.3
-__memcpy_chk
-__memcpy_chk@@GLIBC_2.3.4
-__memmove_chk
-__memmove_chk@@GLIBC_2.3.4
-__snprintf_chk
-__snprintf_chk@@GLIBC_2.3.4
-__sprintf_chk
-__sprintf_chk@@GLIBC_2.3.4
-__stack_chk_fail
-__stack_chk_fail@@GLIBC_2.4
-__stpcpy_chk
-__stpcpy_chk@@GLIBC_2.3.4
-__strcpy_chk
-__strcpy_chk@@GLIBC_2.3.4
-__strncpy_chk
-__strncpy_chk@@GLIBC_2.3.4
-__vsnprintf_chk
-__vsnprintf_chk@@GLIBC_2.3.4
-__vsprintf_chk
-__vsprintf_chk@@GLIBC_2.3.4
-_edata
-_end
-_fini
-_init
 `EdFIhJ
 acosf
-acosf@@GLIBC_2.2.5
-adpcm_c.cpp
 adtl
 alBufferData
 alDeleteBuffers
@@ -949,194 +917,111 @@ alcMakeContextCurrent
 alcOpenDevice
 alcSetThreadContext
 asctime
-asctime@@GLIBC_2.2.5
 clock_gettime
-clock_gettime@@GLIBC_2.17
 closedir
-closedir@@GLIBC_2.2.5
 complete
-crtstuff.c
 cue
 data
 dlclose
-dlclose@@GLIBC_2.2.5
 dlopen
-dlopen@@GLIBC_2.2.5
 dlsym
-dlsym@@GLIBC_2.2.5
 fact
 fclose
-fclose@@GLIBC_2.2.5
 flt.cpp
 fmodf
-fmodf@@GLIBC_2.2.5
 fmt
 fopen
-fopen@@GLIBC_2.2.5
-free@@GLIBC_2.2.5
+fprintf
 fwrite
-fwrite@@GLIBC_2.2.5
 genericdig.cpp
 genericmss.cpp
 getpid
-getpid@@GLIBC_2.2.5
 gettimeofday
-gettimeofday@@GLIBC_2.2.5
 hlbank.cpp
-hlparse.cpp
-index,offset,byt
+index,offset,bytes,file,line\r\n
 io.cpp
 labl
 libc.so.6
-libdl.so.2
 libgcc_s.so.1
 libm.so.6
 libopenal.so.1
-libpthread.so.0
 libstdc++.so.6
-linux_rratomics.cpp
-linux_rrcpu.c
-linux_rrthreads.c
-linux_rrtime.cpp
-lnxcmixer.cpp
-lnxsup.cpp
 localtime
-localtime@@GLIBC_2.2.5
 log10f
-log10f@@GLIBC_2.2.5
 lseek
-lseek@@GLIBC_2.2.5
-m3d.cpp
-malloc@@GLIBC_2.2.5
+lvd\RJHB=951-$
 memcpy
-memcpy@@GLIBC_2.14
 memmove
-memmove@@GLIBC_2.2.5
 memset
-memset@@GLIBC_2.2.5
-milesasync.cpp
 mileseventarray.h
-mileseventaudition.cpp
-mileseventbank.cpp
-mileseventqueue.cpp
 mileseventsupport.cpp
 miscutil.cpp
-mix.cpp
 mssdbg.c
-mssevent.cpp
 mssstrm.cpp
 opendir
-opendir@@GLIBC_2.2.5
-outputs.cpp
 pending
 playing
-posixio.cpp
-posixsys.c
 powf
-powf@@GLIBC_2.27
 pthread_attr_destroy
-pthread_attr_destroy@@GLIBC_2.2.5
 pthread_attr_init
-pthread_attr_init@@GLIBC_2.2.5
 pthread_attr_setstacksize
-pthread_attr_setstacksize@@GLIBC_2.2.5
 pthread_create
-pthread_create@@GLIBC_2.2.5
 pthread_detach
-pthread_detach@@GLIBC_2.2.5
 pthread_getschedparam
-pthread_getschedparam@@GLIBC_2.2.5
 pthread_getspecific
-pthread_getspecific@@GLIBC_2.2.5
 pthread_join
-pthread_join@@GLIBC_2.2.5
 pthread_key_create
-pthread_key_create@@GLIBC_2.2.5
 pthread_mutex_destroy
-pthread_mutex_destroy@@GLIBC_2.2.5
 pthread_mutex_init
-pthread_mutex_init@@GLIBC_2.2.5
 pthread_mutex_lock
-pthread_mutex_lock@@GLIBC_2.2.5
 pthread_mutex_timedlock
-pthread_mutex_timedlock@@GLIBC_2.2.5
 pthread_mutex_trylock
-pthread_mutex_trylock@@GLIBC_2.2.5
 pthread_mutex_unlock
-pthread_mutex_unlock@@GLIBC_2.2.5
 pthread_mutexattr_init
-pthread_mutexattr_init@@GLIBC_2.2.5
 pthread_mutexattr_settype
-pthread_mutexattr_settype@@GLIBC_2.2.5
 pthread_self
-pthread_self@@GLIBC_2.2.5
 pthread_setaffinity_np
-pthread_setaffinity_np@@GLIBC_2.3.4
 pthread_setschedparam
-pthread_setschedparam@@GLIBC_2.2.5
 pthread_setspecific
-pthread_setspecific@@GLIBC_2.2.5
 pthread_timedjoin_np
-pthread_timedjoin_np@@GLIBC_2.3.3
 pthread_tryjoin_np
-pthread_tryjoin_np@@GLIBC_2.3.3
-pthread_yield
-pthread_yield@@GLIBC_2.2.5
 puts
-puts@@GLIBC_2.2.5
 raB3G
-radss_oal.c
-read@@GLIBC_2.2.5
 readdir
-readdir@@GLIBC_2.2.5
 readlink
-readlink@@GLIBC_2.2.5
 rib.cpp
 sched_get_priority_max
-sched_get_priority_max@@GLIBC_2.2.5
 sched_get_priority_min
-sched_get_priority_min@@GLIBC_2.2.5
+sched_yield
 sem_destroy
-sem_destroy@@GLIBC_2.2.5
 sem_init
-sem_init@@GLIBC_2.2.5
 sem_post
-sem_post@@GLIBC_2.2.5
 sem_timedwait
-sem_timedwait@@GLIBC_2.2.5
 sem_trywait
-sem_trywait@@GLIBC_2.2.5
 sem_wait
-sem_wait@@GLIBC_2.2.5
 sffd4d4fff
 sinf
-sinf@@GLIBC_2.2.5
 smpl
 sqrtf
-sqrtf@@GLIBC_2.2.5
 ssfsd1d1d1
 sssd1
 ssssd4d4d4c4d4
 sssssc1d1fd1
 ssssssssd4d1d1uuc1c1sfffffd1d1
+stpcpy
 strchr
-strchr@@GLIBC_2.2.5
 strcmp
-strcmp@@GLIBC_2.2.5
 strcpy
-strcpy@@GLIBC_2.2.5
 stringbuilder.h
 strlen
-strlen@@GLIBC_2.2.5
+strncmp
+strncpy
 strrchr
-strrchr@@GLIBC_2.2.5
 sysconf
-sysconf@@GLIBC_2.2.5
 tanf
-tanf@@GLIBC_2.2.5
 usleep
-usleep@@GLIBC_2.2.5
 vH7B
+vsnprintf
+vsprintf
 wavefile.cpp
 yE>H
-zDwavefile.cpp
