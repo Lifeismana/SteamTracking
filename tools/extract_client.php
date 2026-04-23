@@ -248,15 +248,15 @@ class ClientExtractor
 		$this->Log( 'Dumping strings' );
 
 		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings' . ( PHP_OS_FAMILY === 'Windows' ? '.exe' : '' );
-		$SteamRTDir = self::LINUX_BINS_DIR . '/steamrt64';
+		$SteamRTDir = self::LINUX_BINS_DIR . '/steamrtarm64';
 		$SteamBinaries =
 		[
-			self::CLIENT_EXTRACTED_DIR . '/steamrt64/steam',
-			self::LINUX_BINS_DIR . '/steamrt64/steam-launch-wrapper',
-			self::LINUX_BINS_DIR . '/steamrt64/steam_monitor',
-			self::LINUX_BINS_DIR . '/steamrt64/steamsysinfo',
-			self::LINUX_BINS_DIR . '/steamrt64/steamwebhelper',
-			self::LINUX_BINS_DIR . '/steamrt64/streaming_client'
+			self::CLIENT_EXTRACTED_DIR . '/steamrtarm64/steam',
+			self::LINUX_BINS_DIR . '/linuxarm64/steam-launch-wrapper',
+			self::LINUX_BINS_DIR . '/steamrtarm64/steam_monitor',
+			self::LINUX_BINS_DIR . '/steamrtarm64/steamsysinfo',
+			self::LINUX_BINS_DIR . '/steamrtarm64/steamwebhelper',
+			self::LINUX_BINS_DIR . '/steamrtarm64/streaming_client'
 		];
 
 		if( !file_exists( $DumpStrings ) )
