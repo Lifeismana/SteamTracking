@@ -210,8 +210,8 @@ class ClientExtractor
 
 		$Binaries =
 		[
-			self::LINUX_BINS_DIR . '/steamrt64/steamui.so',
-			self::LINUX_BINS_DIR . '/steamrt64/steamclient.so',
+			self::LINUX_BINS_DIR . '/steamrtarm64/steamui.so',
+			self::LINUX_BINS_DIR . '/steamrtarm64/steamclient.so',
 		];
 
 		if( !file_exists( $ProtobufDumper ) )
@@ -251,7 +251,7 @@ class ClientExtractor
 		$SteamRTDir = self::LINUX_BINS_DIR . '/steamrtarm64';
 		$SteamBinaries =
 		[
-			self::CLIENT_EXTRACTED_DIR . '/steamrtarm64/steam',
+			self::LINUX_BINS_DIR . '/steamrtarm64/steam',
 			self::LINUX_BINS_DIR . '/linuxarm64/steam-launch-wrapper',
 			self::LINUX_BINS_DIR . '/steamrtarm64/steam_monitor',
 			self::LINUX_BINS_DIR . '/steamrtarm64/steamsysinfo',
@@ -306,13 +306,13 @@ class ClientExtractor
 		{
 			if( file_exists( $SteamBinary ) )
 			{
-				$Name = $File->getBasename();
+				$Name = basename( $SteamBinary );
 				$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $SteamBinary );
 				exec( $Command, $Output, $ReturnCode );
 
 				if( $ReturnCode !== 0 )
 				{
-					$this->Log( '{lightred}Failed to dump strings from: ' . $File->getFilename() );
+					$this->Log( '{lightred}Failed to dump strings from: ' . $Name );
 					continue;
 				}
 				$Strings = array_unique( $Output );
