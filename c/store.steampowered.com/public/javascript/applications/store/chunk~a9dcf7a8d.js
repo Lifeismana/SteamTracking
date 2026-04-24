@@ -1939,6 +1939,7 @@
         let _ = (0, _._)(),
           _ = (0, _._)(_, "theater");
         if (!_ || !_.bSupportsTheater) return null;
+        _.use(_._.Ready());
         let _ = "theater" == _.strMode,
           _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
@@ -1956,6 +1957,7 @@
         let _ = (0, _._)(),
           _ = (0, _._)(_, "fullscreen");
         if (!_ || !_.bSupportsFullscreen) return null;
+        _.use(_._.Ready());
         let _ = "fullscreen" == _.strMode,
           _ = _ ? (0, _.jsx)(_.JaO, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
@@ -1978,24 +1980,27 @@
             _((_) => !_);
           }, [_]),
           _ = (0, _._)(_().SettingsButton, _ && _().Rotated);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              ref: _,
-              onActivate: _,
-              tooltip: _._.Localize("#TrailerPlayer_Settings_Tooltip"),
-              children: (0, _.jsx)(_.wB_, {
-                className: _,
-              }),
-            }),
-            _ &&
+        return (
+          _.use(_._.Ready()),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
               (0, _.jsx)(_, {
-                player: _,
-                refButton: _,
-                onClose: _,
+                ref: _,
+                onActivate: _,
+                tooltip: _._.Localize("#TrailerPlayer_Settings_Tooltip"),
+                children: (0, _.jsx)(_.wB_, {
+                  className: _,
+                }),
               }),
-          ],
-        });
+              _ &&
+                (0, _.jsx)(_, {
+                  player: _,
+                  refButton: _,
+                  onClose: _,
+                }),
+            ],
+          })
+        );
       }
       function _(_) {
         let { player: _, refButton: _, onClose: _ } = _,
@@ -2101,11 +2106,14 @@
               __webpack_require__.m_fnSetAutoplayEnabled(!_),
               _();
           }, [_, _, _]);
-        return (0, _.jsx)(_, {
-          onClick: _,
-          checked: _,
-          children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
-        });
+        return (
+          _.use(_._.Ready()),
+          (0, _.jsx)(_, {
+            onClick: _,
+            checked: _,
+            children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
+          })
+        );
       }
       function _(_) {
         let { onClick: _, checked: _, children: _ } = _,
@@ -2386,8 +2394,9 @@
       }
       function _(_) {
         let { player: _ } = _,
-          _ = (0, _._)(_),
-          _ = "";
+          _ = (0, _._)(_);
+        _.use(_._.Ready());
+        let _ = "";
         return (
           _ == _._.UnsupportedMediaType
             ? (_ = _._.Localize("#TrailerPlayer_Error_UnsupportedCodec"))
@@ -2405,8 +2414,9 @@
       }
       function _(_) {
         let { player: _ } = _,
-          [_, _, _, _] = (0, _._)(_),
-          _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
+          [_, _, _, _] = (0, _._)(_);
+        _.use(_._.Ready());
+        let _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
           _ = _._.Localize(
             _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
           );
@@ -2418,8 +2428,9 @@
       }
       function _(_) {
         let { player: _ } = _,
-          _ = (0, _._)(_),
-          _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
+          _ = (0, _._)(_);
+        _.use(_._.Ready());
+        let _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
             _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
           ),

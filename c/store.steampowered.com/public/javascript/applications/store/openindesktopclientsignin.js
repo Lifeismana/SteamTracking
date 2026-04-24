@@ -593,65 +593,70 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
           const { fnOpenInSteamClient: _, eClientConnectedState: _ } = (0,
             _.useOpenWebInSteamClient)(),
             _ = 1 == _,
             [_, _, _] = (0, _._)();
-          return (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_._, {
-                toolTipContent: _._.Localize("#AddToWishlist_ttip"),
-                children: (0, _.jsx)(_._, {
-                  onClick: _,
-                  children: (0, _._)("#AddToYourWishlist"),
+          return (
+            (0, _.use)((0, _._)()),
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  toolTipContent: _._.Localize("#AddToWishlist_ttip"),
+                  children: (0, _.jsx)(_._, {
+                    onClick: _,
+                    children: (0, _._)("#AddToYourWishlist"),
+                  }),
                 }),
-              }),
-              (0, _.jsx)(_._, {
-                active: _,
-                children: (0, _.jsxs)(_._, {
-                  strTitle: (0, _._)("#OpenInDesktopAppBanner_NotSignedIn"),
-                  className: _().WishlistModalOverride,
-                  strDescription: _._.Localize("#Wishlist_NotSignedIn"),
-                  closeModal: _,
-                  bAlertDialog: !0,
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      direction: "row",
-                      gap: "4",
-                      paddingTop: "4",
-                      paddingBottom: "4",
-                      children: [
-                        (0, _.jsx)(_._, {
-                          onClick: _,
-                          children: (0, _._)(
-                            "#OpenInDesktopAppBanner_OpenAppButton",
-                          ),
-                        }),
-                        (0, _.jsx)(_._, {
-                          color: "dull",
-                          onClick: _._,
-                          children: _._.Localize("#Login_SignIn"),
-                        }),
-                      ],
-                    }),
-                    !_ &&
-                      (0, _.jsx)(_.Fragment, {
-                        children: (0, _.jsx)(_._, {
-                          children: (0, _._)(
-                            "#GotSteam_NeedSteam",
-                            (0, _.jsx)(_._, {
-                              href: `${_._.STORE_BASE_URL}about`,
-                            }),
-                          ),
-                        }),
+                (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsxs)(_._, {
+                    strTitle: (0, _._)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    className: _().WishlistModalOverride,
+                    strDescription: _._.Localize("#Wishlist_NotSignedIn"),
+                    closeModal: _,
+                    bAlertDialog: !0,
+                    children: [
+                      (0, _.jsxs)(_._, {
+                        direction: "row",
+                        gap: "4",
+                        paddingTop: "4",
+                        paddingBottom: "4",
+                        children: [
+                          (0, _.jsx)(_._, {
+                            onClick: _,
+                            children: (0, _._)(
+                              "#OpenInDesktopAppBanner_OpenAppButton",
+                            ),
+                          }),
+                          (0, _.jsx)(_._, {
+                            color: "dull",
+                            onClick: _._,
+                            children: _._.Localize("#Login_SignIn"),
+                          }),
+                        ],
                       }),
-                  ],
+                      !_ &&
+                        (0, _.jsx)(_.Fragment, {
+                          children: (0, _.jsx)(_._, {
+                            children: (0, _._)(
+                              "#GotSteam_NeedSteam",
+                              (0, _.jsx)(_._, {
+                                href: `${_._.STORE_BASE_URL}about`,
+                              }),
+                            ),
+                          }),
+                        }),
+                    ],
+                  }),
                 }),
-              }),
-            ],
-          });
+              ],
+            })
+          );
         }),
         _ = _;
     },

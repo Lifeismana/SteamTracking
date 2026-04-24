@@ -10201,6 +10201,7 @@ function _(_) {
                     disabled: _ == null,
                     onClick: _,
                     icon: !0,
+                    variant: "ghost",
                     children: (0, _.jsx)(_, {}),
                   }),
                   (0, _.jsxs)("div", {
@@ -10210,6 +10211,7 @@ function _(_) {
                     disabled: _ == null,
                     onClick: _,
                     icon: !0,
+                    variant: "ghost",
                     children: (0, _.jsx)(_, {}),
                   }),
                 ],
@@ -10948,6 +10950,7 @@ function _(_) {
         children: [
           (0, _.jsx)(_, {
             color: "accent",
+            variant: "ghost",
             disabled: _ == 0,
             onClick: () => _(_ - 1),
             size: "3",
@@ -10963,6 +10966,7 @@ function _(_) {
           ),
           (0, _.jsx)(_, {
             color: "accent",
+            variant: "ghost",
             disabled: _ == _.length - 1,
             onClick: () => _(_ + 1),
             size: "3",
@@ -10984,7 +10988,7 @@ var _ = _(_(), 1),
     "#Workshop_SearchTarget_Description",
   ];
 function _(_) {
-  let { appName: _ } = _,
+  let { appName: _, bUseDebouncedValue: _ } = _,
     {
       onBrowseHandler: _,
       searchText: _,
@@ -11020,9 +11024,12 @@ function _(_) {
     }, []),
     _ = _(_.trim(), {
       nTimeoutMS: 1e3,
+      nTimeoutExtensionMS: 500,
+      nMaxTimeoutExtensions: 100,
     });
   (0, _.useEffect)(() => {
     _.current &&
+      _ &&
       (_.length != 0
         ? _({
             browse_sort: "textsearch",
@@ -11031,7 +11038,7 @@ function _(_) {
         : _({
             search_text: _,
           }));
-  }, [_]);
+  }, [_, _]);
   let _ = [0, 1, 2],
     _ = (_) => {
       _(_),
@@ -11406,172 +11413,167 @@ function _(_) {
       break;
   }
   let _ = _.isLoading || _.isPlaceholderData;
-  return (0, _.jsx)(_, {
-    marginTop: "5",
-    marginX: {
-      initial: "3",
-      _: "9",
-    },
-    children: (0, _.jsxs)(_, {
-      minHeight: "calc( 75vh + 100px )",
-      direction: "column",
-      align: "center",
-      children: [
-        (0, _.jsx)("div", {
-          ref: _,
-        }),
-        (0, _.jsx)("div", {
-          className: (0, _.default)(_, _ && _),
-          children: (0, _.jsxs)(_, {
-            children: [
+  return (0, _.jsxs)(_, {
+    minHeight: "calc( 75vh + 100px )",
+    direction: "column",
+    align: "center",
+    children: [
+      (0, _.jsx)("div", {
+        ref: _,
+      }),
+      (0, _.jsx)("div", {
+        className: (0, _.default)(_, _ && _),
+        children: (0, _.jsxs)(_, {
+          children: [
+            (0, _.jsxs)(_, {
+              direction: {
+                initial: "column",
+                _: "row",
+              },
+              align: "start",
+              justify: "between",
+              children: [
+                (0, _.jsx)(_, {
+                  size: {
+                    initial: "4",
+                    _: "5",
+                  },
+                  children: (0, _.jsxs)(_, {
+                    gap: "3",
+                    align: "center",
+                    wrap: "wrap",
+                    marginBottom: "1",
+                    direction: "row",
+                    children: [
+                      _.Localize("#Workshop_Browsing", _),
+                      _ &&
+                        (0, _.jsx)("div", {
+                          className: _,
+                          children: _,
+                        }),
+                      _ &&
+                        (0, _.jsx)(_, {
+                          size: {
+                            initial: "1",
+                            _: "2",
+                          },
+                        }),
+                    ],
+                  }),
+                }),
+                (0, _.jsx)(_, {
+                  browseQuery: _,
+                }),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              browseQuery: _,
+              results: _,
+            }),
+            (_.filters_column == "left" || _.filters_column == "collapsed") &&
               (0, _.jsxs)(_, {
-                direction: {
-                  initial: "column",
-                  _: "row",
-                },
-                align: "start",
                 justify: "between",
+                wrap: "wrap",
+                gap: "1",
+                direction: "row",
                 children: [
                   (0, _.jsx)(_, {
-                    size: {
-                      initial: "4",
-                      _: "5",
-                    },
-                    children: (0, _.jsxs)(_, {
-                      gap: "3",
-                      align: "center",
-                      wrap: "wrap",
-                      marginBottom: "1",
-                      direction: "row",
-                      children: [
-                        _.Localize("#Workshop_Browsing", _),
-                        _ &&
-                          (0, _.jsx)("div", {
-                            className: _,
-                            children: _,
-                          }),
-                        _ &&
-                          (0, _.jsx)(_, {
-                            size: {
-                              initial: "1",
-                              _: "2",
-                            },
-                          }),
-                      ],
-                    }),
+                    appName: _.name,
+                    bUseDebouncedValue: !0,
+                  }),
+                  (0, _.jsx)(_, {
+                    browseQuery: _,
                   }),
                   (0, _.jsx)(_, {
                     browseQuery: _,
                   }),
                 ],
               }),
-              (0, _.jsx)(_, {
-                browseQuery: _,
-                results: _,
-              }),
-              (_.filters_column == "left" || _.filters_column == "collapsed") &&
-                (0, _.jsxs)(_, {
-                  justify: "between",
-                  wrap: "wrap",
-                  gap: "1",
-                  direction: "row",
-                  children: [
-                    (0, _.jsx)(_, {
-                      appName: _.name,
-                    }),
-                    (0, _.jsx)(_, {
-                      browseQuery: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      browseQuery: _,
-                    }),
-                  ],
-                }),
-              _.filters_column == "right" &&
-                (0, _.jsxs)(_, {
-                  justify: "end",
-                  wrap: "wrap",
-                  gap: "1",
-                  direction: "row",
-                  children: [
-                    (0, _.jsx)(_, {
-                      browseQuery: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      browseQuery: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      appName: _.name,
-                    }),
-                  ],
-                }),
-            ],
-          }),
-        }),
-        (0, _.jsxs)(_, {
-          direction: "row",
-          gap: "5",
-          width: "100%",
-          marginTop: "3",
-          children: [
-            _.filters_column == "left" &&
-              (0, _.jsx)(_, {
-                browseQuery: _,
-              }),
-            (0, _.jsxs)(_, {
-              results: _.results,
-              children: [
-                _.section == "collections" &&
-                  (0, _.jsx)(_, {
-                    className: (0, _.default)(_, _ && _),
-                    "flow-children": "grid",
-                    children:
-                      _.isSuccess &&
-                      _.data.results.map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            details: _,
-                          },
-                          _.publishedfileid,
-                        ),
-                      ),
-                  }),
-                _.section !== "collections" &&
-                  (0, _.jsx)(_, {
-                    className: (0, _.default)(_, _ && _),
-                    "flow-children": "grid",
-                    children:
-                      _.isSuccess &&
-                      _.data.results.map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            details: _,
-                          },
-                          _.publishedfileid,
-                        ),
-                      ),
-                  }),
-                (0, _.jsx)(_, {
-                  rgDetails: _.results,
-                }),
-              ],
-            }),
             _.filters_column == "right" &&
-              (0, _.jsx)(_, {
-                browseQuery: _,
+              (0, _.jsxs)(_, {
+                justify: "end",
+                wrap: "wrap",
+                gap: "1",
+                direction: "row",
+                children: [
+                  (0, _.jsx)(_, {
+                    browseQuery: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    browseQuery: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    appName: _.name,
+                    bUseDebouncedValue: !0,
+                  }),
+                ],
               }),
           ],
         }),
-        (0, _.jsx)(_, {
-          bLoading: _,
-          browseQuery: _,
-          results: _,
-          onChangePage: () => _(!0),
-        }),
-      ],
-    }),
+      }),
+      (0, _.jsxs)(_, {
+        direction: "row",
+        gap: "5",
+        width: "100%",
+        marginTop: "3",
+        children: [
+          _.filters_column == "left" &&
+            (0, _.jsx)(_, {
+              browseQuery: _,
+            }),
+          (0, _.jsxs)(_, {
+            results: _.results,
+            children: [
+              _.section == "collections" &&
+                (0, _.jsx)(_, {
+                  className: (0, _.default)(_, _ && _),
+                  "flow-children": "grid",
+                  children:
+                    _.isSuccess &&
+                    _.data.results.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          details: _,
+                        },
+                        _.publishedfileid,
+                      ),
+                    ),
+                }),
+              _.section !== "collections" &&
+                (0, _.jsx)(_, {
+                  className: (0, _.default)(_, _ && _),
+                  "flow-children": "grid",
+                  children:
+                    _.isSuccess &&
+                    _.data.results.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          details: _,
+                        },
+                        _.publishedfileid,
+                      ),
+                    ),
+                }),
+              (0, _.jsx)(_, {
+                rgDetails: _.results,
+              }),
+            ],
+          }),
+          _.filters_column == "right" &&
+            (0, _.jsx)(_, {
+              browseQuery: _,
+            }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        bLoading: _,
+        browseQuery: _,
+        results: _,
+        onChangePage: () => _(!0),
+      }),
+    ],
   });
 }
 function _(_) {
@@ -13506,6 +13508,8 @@ function _(_) {
   );
 }
 export {
+  _,
+  _,
   _,
   _,
   _,

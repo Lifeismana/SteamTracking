@@ -15,24 +15,18 @@
  KiB
  Mbps
  MiB
- ReadToken overflow
  [clone
- _Complex
- _Imaginary
  __vector(
  bps
  bytes
- class
  const
  for
  noexcept
- requires
  restrict
  throw
  transaction_safe
  volatile
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
-!AxU
 !V_isempty( prefix )
 !V_isempty( suffix )
 !g_VProfile
@@ -42,12 +36,7 @@
 !pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pTracker->IsClaimed( pKey )
 !pszString || pszString[nChars] == '\0'
-#FLR
-#include
-#include is NULL
-#tDq
 $ORIGIN
-$\nY8O
 %$%a%b%V%U%c%Q%W%]%\%[%
 %%%ds | %%9s | %%12s\n
 %%-%ds | %%9d | %%12s\n
@@ -66,14 +55,11 @@ $\nY8O
 %d frames sampled for %.2f seconds\n
 %d validator nodes, %d nodes larger than %s\n
 %d.%d.%d.%d:%d
-%f %f %f %f
 %lld
 %llu
-%s %s %s %s
 %s double claimed!\n
 %s not implemented
 %s/.steam/steam
-%s: __pos (which is %zu) > this->size() (which is %zu)
 %s: no such process %d\n
 &AElig;
 &Aacute;
@@ -116,7 +102,6 @@ $\nY8O
 &atilde;
 &auml;
 &brvbar;
-&bzi
 &ccedil;
 &cedil;
 &cent;
@@ -190,12 +175,6 @@ $\nY8O
 (anonymous namespace)
 (iub & (m_nSizeWithStack-1)) == 0
 ***** OUT OF MEMORY! attempted allocation size: %zu ****\n
-*N12_GLOBAL__N_121system_error_categoryE
-*N12_GLOBAL__N_122generic_error_categoryE
-++CCUNG
-++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGstd::exception
-+ulsX
 -- Hierarchical Call Graph --\n
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
@@ -216,100 +195,53 @@ $\nY8O
 -steamframe
 -steamos3
 -tesla
-../common/filesystem_helpers.cpp
-../public/tier0/memblockhdr.h
-../public/tier0/vprof.h
-../public/tier1/utlbuffer.h
-../public/tier1/utldict.h
-../public/tier1/utlmemory.h
-../public/tier1/utlrbtree.h
-../public/tier1/utlstring.h
-../public/tier1/utlvector.h
-../tier0/dbg.cpp
-../tier0/memblockhdr.cpp
-../tier0/memstd.cpp
-../tier0/minidump.cpp
-../tier0/platform_posix.cpp
-../tier0/threadtools.cpp
-../tier0/validator.cpp
-../tier0/vprof.cpp
-../tier1/KeyValues.cpp
-../tier1/mempool.cpp
-../tier1/utlbuffer.cpp
-../tier1/utlmemory.cpp
-../tier1/utlstring.cpp
-../vstdlib/keyvaluessystem.cpp
-../vstdlib/strtools.cpp
-../vstdlib/strtools_unicode.cpp
-.y4w
 /bin/sh
-/dev/random
+/data/src/public/tier0/memblockhdr.h
+/data/src/public/tier0/vprof.h
+/data/src/public/tier1/utlbuffer.h
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlvector.h
+/data/src/tier0/dbg.cpp
+/data/src/tier0/memblockhdr.cpp
+/data/src/tier0/memstd.cpp
+/data/src/tier0/minidump.cpp
+/data/src/tier0/platform_posix.cpp
+/data/src/tier0/threadtools.cpp
+/data/src/tier0/validator.cpp
+/data/src/tier0/vprof.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/vstdlib/strtools.cpp
+/data/src/vstdlib/strtools_unicode.cpp
 /dev/urandom
-/etc/SUSE-release
-/etc/arch-release
-/etc/centos-release
-/etc/debian_release
-/etc/fedora-release
-/etc/gentoo-release
-/etc/lsb-release
-/etc/mandrake-release
-/etc/os-release
-/etc/redhat-release
-/etc/slackware-release
 /etc/steamos-oobe-image
-/etc/yellowdog-release
 /proc/%d/status
 /proc/meminfo
 /proc/self/exe
 /proc/self/fd
-/proc/version
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-0123456789
 0123456789ABCDEF
 0123456789abcdef
-0F`8
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
-10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
-10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 12CStdMemAlloc
 16CAdHocValidation
-16CKeyValuesSystem
-16IKeyValuesSystem
+18:47:13
+18:47:17
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
-23:19:36
-23:19:38
-30!]^JV
 31CAdHocValidation_SimpleCallback
-49fN
-52F*
-5T&w&
-6 PQ
-7CUtlMapIPvii8CDefLessE
-7CUtlMapIjbi8CDefLessE
-7~8A
-8\foQS
 9IMemAlloc
-9a&g
-<empty>\n
+</script>
 <family %u, %u bytes>
 <no address info>
 <unknown>
-A@qVc"
-ANDROID
-ANDROID32
-ANDROID64
-Android
-Android 6.x
-Android 7.x
-Android 8.x
-Android 9.x
 Anonymous mutex cannot have bAllAccess == true
-Apr 20 2026
+Apr 21 2026
 Assert( %s ):%s:%d\n
 Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
@@ -317,28 +249,13 @@ Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
 Average %.2f fps, %.2f ms per frame\n
-Bad expression token: %c %c\n
-Bad expression token: %c at %d in %s\n
 Bad thread local: Get\n
 Bad thread local: Set\n
-Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Blocks
 Breaking '%s' in '%s'\n
-Bucket size : count\n
 Busy, please retry.\n
-C-Yn
 C-runtime internal
-CHROMEOS
-CKeyValuesSystem
-CKeyValuesSystem dumping last %u keys added to system (oldest first):\n
-CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
-CKeyValuesSystem::AddStringToPool: out of memory
-CKeyValuesSystem::AddStringToPool: over 75%% full (%u bytes left)
 CLcx
-CMemoryPool
-CMemoryPool::AddNewBlob: mode == GROW_NONE
-CMemoryPool::Alloc: ran out of memory
-CRC32_ProcessBuffer
 CUtlBuffer::GetStringFast: binary buffers only
 CUtlString::ReplaceInternal
 CUtlString::SetValue
@@ -359,27 +276,19 @@ CValidator::Push
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
+ClientDLL
 Couldn't create process with command line: %s\n
 CreateInterface
 DBG_PATHMATCH
-DF128_
-DF16_
-DF16b
-DF32_
-DF32x
-DF64_
-DF64x
 DONT_BREAK_ON_ASSERT
-D\vvf:
 Deleting thread object from the thread, this is bad
 DumpMemTrackingStats %d %d \n
+Encryption
 Error State on string being set.
 Error decoding string1: %s
 Error decoding string2: %s
-Error while parsing text KeyValues for resource %s
 Exiting on SPEW_ABORT\n
 Expected %lld but got %lld!
-FCZ&
 Failed to capture callstack
 Failed to create thread (error 0x%x)
 Failed to get thread priority: foreign thread unsupported\n
@@ -388,28 +297,12 @@ Failed to set thread local value
 Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
+FileSystem
 GAMESCOPE_WAYLAND_DISPLAY
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
-GLIBCXX_TUNABLES
-GLIBC_2.12
-GLIBC_2.14
+GCC: (Debian 9.3.0-22) 9.3.0
 GLIBC_2.17
-GLIBC_2.2.5
-GLIBC_2.25
 GLIBC_2.29
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.3
-GLIBC_2.3.4
-GLIBC_2.4
-GLIBC_2.7
-GLIBC_2.9
-GetFloatFromString() did not get correct peCS parameter
-GetInt64FromString() did not get correct peCS parameter
-GetIntFromString() did not get correct peCS parameter
-GetUint64FromString() did not get correct peCS parameter
-H$6t
-H*0"ZOW
+GameOverlayUI
 HOME
 IVALIDATE001
 Ignoring resume of count %d\n
@@ -419,192 +312,61 @@ Invalid initial value for semaphore
 Invalid max value for semaphore
 Invalid thread id during thread Start()
 IsSpewActive
-IsValidIndex( elem )
 JArray
-JZJ{.
-KeyValues
-KeyValues Error: %s in file %s [offset: %d]\n
-KeyValues don't support #include anymore, file "%s"
-KeyValues::FindKey( StringView ... )
-KeyValues::FindKey( hks )
-KeyValues::FindKey( hks, bCreate )
-KeyValues::MergeFromBuffer
-KeyValues::ReadAsBinary
-KeyValues::ReadAsBinary - Set name
-KeyValues::ReadAsBinary - TYPE_BINARY_STRING
-KeyValues::ReadAsBinary - TYPE_COLOR
-KeyValues::ReadAsBinary - TYPE_FLOAT
-KeyValues::ReadAsBinary - TYPE_INT
-KeyValues::ReadAsBinary - TYPE_INT64
-KeyValues::ReadAsBinary - TYPE_NONE
-KeyValues::ReadAsBinary - TYPE_PTR
-KeyValues::ReadAsBinary - TYPE_STRING
-KeyValues::ReadAsBinary - TYPE_UINT64
-KeyValues::ReadAsBinary - TYPE_WSTRING
-KeyValues::ReadAsBinary() stack depth > 100
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
-KeyValues::RemoveSubKey
-KeyValues::WriteAsBinary
-KeyValues::WriteAsBinary() called with a text buffer\n
-KeyValues::WriteAsBinary() called with an invalid buffer\n
-KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
-KeyValuesSystem()
-LINUX
-LINUX32
-LINUX64
-Leaked KeyValues (%u):\n
+Jobs/Coroutines
 Leaked mem: %s %s\n
-Linux
-Linux 2.2
-Linux 2.4
-Linux 2.6
-Linux 3.10
-Linux 3.16
-Linux 3.18
-Linux 3.2
-Linux 3.5
-Linux 3.6
-Linux 3.x
-Linux 4.1
-Linux 4.14
-Linux 4.19
-Linux 4.4
-Linux 4.9
-Linux 4.x
-Linux 5.10
-Linux 5.4
-Linux 5.x
-Linux 6.x
-Linux 7.x
-LoadFileIntoBuffer: NULL parameters
-LoadFromBuffer: missing {   (current key: '%s')
+Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
-MGiI
-Mac OS
-MacOS 10.10
-MacOS 10.11
-MacOS 10.12
-MacOS 10.13
-MacOS 10.14
-MacOS 10.15
-MacOS 10.4
-MacOS 10.5
-MacOS 10.5.8
-MacOS 10.6
-MacOS 10.6.3
-MacOS 10.6.4 with Apple's Snow Leopard Graphics Update
-MacOS 10.6.7
-MacOS 10.7
-MacOS 10.8
-MacOS 10.9
-MacOS 11
-MacOS 11 (as 10.16)
-MacOS 11.1
-MacOS 12
-MacOS 12 (as 10.17)
-MacOS 13
-MacOS 13 (as 10.18)
-MacOS 14
-MacOS 14 (as 10.19)
-MacOS 15
-MacOS 15 (as 10.20)
 Matched '%s' -> '%s'\n
+MbP?H
 MemFree:
 MemTotal:
-Memory leak: mempool blocks left in memory: %d\n
 Minidumps written:\n
 Mismatched thread handle during thread Start()
 Must Start() thread before setting priority
 N10SteamVProf13CVProfManagerE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
-N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
-N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
-N10__cxxabiv129__pointer_to_member_type_infoE
 N16SteamThreadTools7CThreadE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NSt3_V214error_categoryE
-NULL
 NULL != m_pValObjectCur
 NULL buffer passed to V_atof()
 NULL buffer passed to V_atoi()
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-OSX1010
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol
-PDF128_
-PDF16_
-PDF16b
-PDF32_
-PDF32x
-PDF64_
-PDF64x
-PKDF128_
-PKDF16_
-PKDF16b
-PKDF32_
-PKDF32x
-PKDF64_
-PKDF64x
-PKDd
-PKDe
-PKDf
-PKDi
-PKDn
-PKDs
-PKDu
-POSIX
+OverlayInput
+OverlayRendering
 POSIX does not support inheriting full mutexes
 PS3 Unattributed
 Peak %.2f ms frame\n
 PrepareBuffer( nNewLength ) == pstrNew
 Probably deadlock or failure waiting for thread to initialize.
 QkkXa
-Qkkbal
-R1h58
-RGBA: %.2X %.2X %.2X %.2X
-RecursiveLoadFromBuffer:  got EOF instead of keyname
-RecursiveLoadFromBuffer:  got NULL key
-RecursiveLoadFromBuffer:  got conditional between key and value
-RecursiveLoadFromBuffer:  got empty keyname
-RecursiveLoadFromBuffer:  got } in key
 Root
+RunCallbacks
 SDL_GetError
 SDL_SetCurrentThreadPriority
-SKyu
-SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Semaphore name (%s) is longer than POSIX can handle, truncating.
+ServerMain
 Size
-Sm"\vg
+Sleeping
 Someone called ClearWritingMinidump without holding the minidump lock.
 Someone called SetWritingMinidump without holding the minidump lock.
 Spew Globals
 Spew globals
-St10bad_typeid
 St11logic_error
-St11range_error
-St12domain_error
 St12length_error
-St12out_of_range
-St12system_error
 St13bad_exception
-St13runtime_error
-St14overflow_error
-St15underflow_error
-St16invalid_argument
-St20bad_array_new_length
-St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
@@ -613,7 +375,8 @@ Stack%2d: 0x%llX\n
 Stack:%2d    %s (%d): %s\n
 Steam
 Steam Helper
-String pool bytes used %u, max %u, %u pools\n
+SteamRealPath
+Streaming
 TLS init function for
 TLS wrapper function for
 Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
@@ -625,18 +388,17 @@ Thread failed to initialize\n
 Thread synchronization object is unuseable
 Thread(0x%p/0x%p/0x%x)
 ThreadGetProcessExitCode
+ThreadWorkItem
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
-Total number of strings %u, longest string size %u, avg size %u\n
-Total of %u buckets with %u hash collisions\n
 TracerPid:
 Tracked allocs currently in use. %d Total %d\n
 Tried to create a thread that has already been created!
 USER
-Unknown
+Unaccounted
 Unmatched %s\n
 Usage: %s PID command [arguments]\n
-VISTA
+VGUI
 VPROF Report for Thread: %d - %s\n
 VTT for
 V_AppendSlash: ran out of space on %s.
@@ -650,59 +412,24 @@ Validate Failed: !!!Leaked:\t%llu %s%s\n
 Validate Failed: Leaked connection %u\n
 Validate Failed: Leaked file %p\n
 Validate Failed: Leaked socket %p\n
-Vc0a
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
-WIN32
-WIN64
-WIN7
-WINDOWS
 WSL_DISTRO_NAME
 Warning: failed to set thread priority: foreign thread unsupported\n
 Warning: failed to set thread priority: set failed for %d: %s\n
 Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
-Web Client
-Windows
-Windows 10
-Windows 11
-Windows 2000
-Windows 2003
-Windows 2008
-Windows 2012
-Windows 2012 R2
-Windows 2016
-Windows 2019
-Windows 2022
-Windows 3.11
-Windows 7
-Windows 8
-Windows 8.1
-Windows 95
-Windows 98
-Windows ME
-Windows NT
-Windows Vista
-Windows XP
-X360
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
-Zjz\v
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [abi:
-[friend]
-\nYg:a
-\rRoOs
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n
 \tValidate Failed: leaked connection to %s\n
 \tValidate Failed: leaked file '%s'\n
 \tValidate Failed: leaked socket remote address %s\n
-\u000
-\u001
-]JldN
+_Accum
 _ExitOnFatalAssert\n
-_Float
+_Fract
 _GLOBAL_
 _ITM_RU1
 _ITM_RU8
@@ -711,13 +438,13 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_IsValidIndex( y, unNodeSize, pMemBase )
+_Sat
+__bss_start
 __ctype_b_loc
 __ctype_tolower_loc
 __ctype_toupper_loc
 __cxa_atexit
 __cxa_finalize
-__cxa_pure_virtual
 __errno_location
 __float128
 __gmon_start__
@@ -726,67 +453,83 @@ __gnu_cxx::__concurrence_unlock_error
 __int128
 __isoc99_sscanf
 __isoc99_swscanf
+__libc_csu_fini
+__libc_csu_init
 __libc_start_main
 __lxstat
 __lxstat64
 __pthread_key_create
 __stack_chk_fail
-__tls_get_addr
+__stack_chk_guard
+__wrap___lxstat
+__wrap___lxstat64
+__wrap___xstat
+__wrap___xstat64
+__wrap_access
+__wrap_chdir
+__wrap_chmod
+__wrap_chown
+__wrap_dlmopen
+__wrap_dlopen
+__wrap_fopen
+__wrap_fopen64
+__wrap_freopen
+__wrap_lchown
+__wrap_link
+__wrap_lstat
+__wrap_lstat64
+__wrap_mkdir
+__wrap_mkfifo
+__wrap_mknod
+__wrap_mount
+__wrap_open
+__wrap_open64
+__wrap_opendir
+__wrap_rename
+__wrap_rmdir
+__wrap_scandir
+__wrap_scandir64
+__wrap_stat
+__wrap_stat64
+__wrap_statfs
+__wrap_statfs64
+__wrap_statvfs
+__wrap_statvfs64
+__wrap_symlink
+__wrap_unlink
+__wrap_utime
+__wrap_utimes
 __xmknod
 __xstat
 __xstat64
+_edata
+_end
 _exit
-`tun%
-a\rxg[
 aarch64
 abort
 access
 alignof
 allocator
-android
 argLen < 0x10000000u
 asctime_r
 audio.so
 auto
 auto:
-b,uZ
 backtrace
 backtrace_symbols
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
-basic_string: construction from null is not valid
-basic_string::_M_create
-basic_string::_M_replace
-basic_string::_M_replace_aux
 basic_string::_S_construct null not valid
 basic_string::_S_create
-basic_string::append
-basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
-basic_string::basic_string
-basic_string::compare
-basic_string::copy
-basic_string::erase
-basic_string::insert
-basic_string::replace
-basic_string::resize
-basic_string::substr
-basic_string_view::substr
-blobSize <= nMaxBlobSize
 bool
 boolean
-buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 bufferLen == 0 || pDest != NULL
 bufferLen > 0 && bufferLen <= INT_MAX
-bwiO'
 byte
 cActualReplacements == cReplacements
 calloc
-can't convert int64 to uint64 (negative number)
-can't convert uint64 to int32 (data loss)
-can't convert uint64 to int64 (data loss)
 ccMax >= 1
 cefwebhelper
 char
@@ -801,13 +544,12 @@ chromehtml.so
 clock_gettime
 close
 closedir
-co_await
 com.valvesoftware.steam
+complex
 components.Count() == 0
 console
 const_cast
 construction vtable for
-context.m_vecStack.Count() <= 1
 count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 count >= 0
@@ -817,7 +559,6 @@ crashhandler002
 crashhandler003
 crashhandler004
 ctime_r
-dQy/
 daylight
 decimal128
 decimal32
@@ -825,7 +566,6 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-default
 delete
 delete[]
 dest != NULL
@@ -849,13 +589,11 @@ existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 extension
 extension[0] == '.'
 externaltests.so
-f.N%H
 faccessat
 false
 fclose
 fflush
 fgets
-filesystem
 filesystem_stdio.so
 filesystem_steam.so
 float
@@ -870,18 +608,15 @@ free
 freopen
 friendsui.so
 fwrite
-gAY:
 g_pMemAllocSteam
-generic
 getcwd
-getentropy
 getenv
 gethostbyname
 gethostname
 getpid
 getpriority
+gettext
 gettimeofday
-glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 gmtime_r
@@ -889,44 +624,11 @@ gnu_get_libc_version
 gsoapwrapper.so
 guard variable for
 half
-hardware
 hidden alias for
-iOS 1
-iOS 10
-iOS 10.1
-iOS 10.2
-iOS 10.3
-iOS 11
-iOS 11.1
-iOS 11.2
-iOS 11.3
-iOS 11.4
-iOS 12
-iOS 12.1
-iOS 2
-iOS 3
-iOS 4
-iOS 5
-iOS 6
-iOS 6.1
-iOS 7
-iOS 7.1
-iOS 8
-iOS 8.1
-iOS 8.2
-iOS 8.3
-iOS 8.4
-iOS 9
-iOS 9.1
-iOS 9.2
-iOS 9_.3
-i]Wb
-ig,o
+imaginary
 in != out
 info.m_pReplacementString == 0
-initializer for module
 invalid input pointer
-ioctl
 isalnum
 isspace
 iswalnum
@@ -935,14 +637,9 @@ iswspace
 item %p sentinel corrupted. skipping.\n
 java Class for
 java resource
-k2U\v
-k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
-k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 kill
-lDa>
-lEd/
 lchown
-ld-linux-x86-64.so.2
+ld-linux-aarch64.so.1
 len < maxlen
 len > 0 || HasError()
 libSDL3.so.0
@@ -951,21 +648,14 @@ libdl.so.2
 libm.so.6
 libpthread.so.0
 link
-linux
 localeconv
 localtime_r
 long
 long double
 long long
-m_Elements
-m_HashItemMemPool
-m_LeakTrack
-m_Tree
 m_bSemOwner
-m_errorIndex>=0
 m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
 m_iThreadMutexValidationLock == 0
-m_mapConditionalSymbolTable
 m_nAllocationCount >= 0
 m_nRecursions > 0
 m_pBudgetGroups
@@ -973,11 +663,9 @@ m_pBudgetGroups == NULL
 m_pChild
 m_pSibling
 m_pValObjects != NULL
-m_pkvLastKeyAdded != NULL
 m_pszName
 m_vecNodeMemBlocks.size() == 1
 m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
-macos
 malloc
 malloc_usable_size
 maxLen <= INT_MAX
@@ -996,12 +684,9 @@ misc.h
 mkdir
 mkfifo
 mmap
-mold 2.36.0 (compatible with GNU ld)
 mount
 mprotect
-mt19937
 munmap
-mwa!
 n == 0 || s1 != NULL
 n == 0 || s2 != NULL
 nBytes
@@ -1015,19 +700,15 @@ nPut + nPutDelta <= outBuf.TellMaxPut()
 nSize != 0
 nSize >= 0
 nTargetLength > 0
-nTotal number of strings %u, longest string size %u, avg size %u\n
 nValue >= 0 && nValue <= 15
 nanosleep
 nattypeprobe.so
 new
 new[]
-noexcept
 non-transaction clone for
 non-virtual thunk to
 num > 0
 numElements >= 0
-obj_count
-obj_size
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
@@ -1042,8 +723,6 @@ p2pcore.so
 p2prelayserver.so
 p2pstunserver.so
 pAllocTracker->m_uSentinel == 0xaa110ced
-pBlob
-pCRF
 pChild
 pConv && pConv->GetDelimiterLength() > 0
 pDest
@@ -1053,7 +732,6 @@ pEndingDelim && pEndingDelim[0]
 pFmt
 pFormat != NULL
 pGroupName
-pKeyValuesTextParser
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 pSearch != NULL
 pSrc != NULL
@@ -1113,16 +791,7 @@ pthread_self
 pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
-qR5FE%
-random_device could not be read
-random_device: getentropy failed
-random_device: rdrand failed
-random_device: rdseed failed
-random_device::random_device(const std::string&): device not available
-random_device::random_device(const std::string&): unsupported token
-rdrand
-rdrnd
-rdseed
+pure virtual method called\n
 read
 readdir
 readdir64
@@ -1134,7 +803,6 @@ reinterpret_cast
 rename
 rewind
 rmdir
-ru&o
 s1 != NULL
 s2 != NULL
 s_dev_urandom_fd >= 0
@@ -1143,8 +811,8 @@ scandir64
 sched_get_priority_max
 sched_get_priority_min
 sched_yield
+script
 secblock.h
-secure_getenv
 semaphore creation failed %s
 semctl
 semget
@@ -1159,13 +827,11 @@ sigaddset
 sigemptyset
 signed char
 sigprocmask
-size < INT_MAX
 sizeof
 sizeof...
 snprintf
 sprintf
 src != NULL
-stackLevel >= 0 && stackLevel < m_errorIndex
 statfs
 statfs64
 static_cast
@@ -1173,16 +839,13 @@ statvfs
 statvfs64
 std::allocator
 std::bad_alloc
-std::bad_array_new_length
-std::bad_cast
 std::bad_exception
-std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::bfloat16_t
+std::exception
 std::iostream
 std::istream
 std::ostream
@@ -1206,10 +869,8 @@ strcmp
 strcpy
 strdup
 strerror
-strerror_r
 strftime
 string literal
-string::string
 strlen
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 strncasecmp
@@ -1229,7 +890,6 @@ symlink
 syscall
 system
 szDomainName != nullptr
-template
 template parameter object for
 tenfoot.so
 terminate called after throwing an instance of '
@@ -1240,10 +900,10 @@ the same event name (%s) was created as both manual and auto reset, something's 
 this
 throw
 tid(%u) pthread_key_create failed: %s\n
+tier1
 time
 timegm
 timezone
-tolower
 towupper
 transaction clone for
 transaction clone for operator delete(void*)
@@ -1251,8 +911,25 @@ transaction clone for operator new[](unsigned long)
 true
 typeinfo fn for
 typeinfo for
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for int
 typeinfo name for
-typename
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for int
 uname
 unknown
 unlink
@@ -1268,7 +945,7 @@ usleep
 utime
 utimes
 vasprintf
-vector::_M_realloc_append
+vector::_M_realloc_insert
 vector::reserve
 vfprintf
 vgui2_s.so
@@ -1281,8 +958,12 @@ vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
 vtable for
-w+OQvr
-wXR\r
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__fundamental_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
 waitid
 waitpid
 wchar_t
@@ -1295,18 +976,13 @@ wcsncpy
 wcstol
 wcstoll
 wcstoull
-windows
-wn>Jj
 write
 x86_64
 xlocale
 xmemory
-y9*O
-zC`G;
 {%0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X}
 {%8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X}
 {default arg#
-{kHw
-{lambda
+{lambda(
 {parm#
 {unnamed type#

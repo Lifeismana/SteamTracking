@@ -12335,7 +12335,7 @@ body.GamepadMode *:focus,
     sans-serif;
   display: flex;
   flex-direction: column;
-  --store-page-width: 1200px;
+  --store-page-width: var(--page-width, 1200px);
 }
 .mO6jvpCl4P8- {
   display: flex;
@@ -12687,7 +12687,6 @@ a.TlSV2TKKPrw- {
 body {
   background: #262b34;
   font-family: "Motiva Sans", Sans-serif;
-  --store-page-width: 1700px;
 }
 .PSdEZ0qz2HI- {
   font-family: "Motiva Sans", Sans-serif;
@@ -13216,6 +13215,7 @@ html.responsive.touch .ZuItuUW6wbA- {
   gap: 20px;
   box-sizing: border-box;
   min-width: 300px;
+  max-width: 300px;
   padding: 10px;
   background: radial-gradient(
     85.9% 84.18% at 34.28% 100%,

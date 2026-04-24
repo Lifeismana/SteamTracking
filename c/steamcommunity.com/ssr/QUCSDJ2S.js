@@ -8673,6 +8673,7 @@ function _({ children: _ }) {
     bShowGlobalHeader: _,
     bShowGlobalFooter: _,
     strHtmlClass: _,
+    cssVars: _,
   } = _.useLoaderData();
   return (0, _.jsx)(_, {
     strWebAPIToken: _,
@@ -8680,6 +8681,7 @@ function _({ children: _ }) {
     children: (0, _.jsxs)("html", {
       lang: _().strISOCode,
       className: _,
+      style: _,
       children: [
         (0, _.jsx)("head", {
           children: (0, _.jsx)(_, {}),

@@ -4056,6 +4056,7 @@
                 .forEach((_) => _.remove());
             }, [_]);
           })(_),
+          _.use(_._.Ready()),
           0 == _.length)
         )
           return null;

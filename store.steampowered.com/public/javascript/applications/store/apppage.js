@@ -3483,6 +3483,7 @@
                 .forEach((e) => e.remove());
             }, [t]);
           })(h),
+          s.use(Pt.n.Ready()),
           0 == h.length)
         )
           return null;
