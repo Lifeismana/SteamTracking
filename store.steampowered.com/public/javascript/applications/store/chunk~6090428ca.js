@@ -82,8 +82,8 @@
         p = n(6379),
         u = n(16021),
         h = n(99032),
-        g = n(81393),
-        _ = n(68797),
+        _ = n(81393),
+        g = n(68797),
         v = n(6419),
         S = n(61859),
         C = n(78327),
@@ -511,7 +511,7 @@
             : this.m_backwardRequestInFlight;
         }
         SetRequestInFlight(e, t) {
-          (0, g.wT)(
+          (0, _.wT)(
             !t || !this.GetRequestInFlight(e),
             "Already have a request in flight for",
             e,
@@ -589,7 +589,7 @@
               })
               .catch((t) => {
                 this.SetRequestInFlight(e, null);
-                let n = (0, _.H)(t);
+                let n = (0, g.H)(t);
                 return (
                   console.error(
                     "LoadAdditionalEvents hit error " + n.strErrorMsg,
@@ -608,7 +608,7 @@
         BInternalInsertCalendarEventItem(e) {
           if (!e.unique_id)
             return (
-              (0, g.wT)(
+              (0, _.wT)(
                 !1,
                 "Attmpted to register a calendar event item with an invalid unique id!",
               ),
@@ -649,7 +649,7 @@
           null != n || null != a
             ? (await A.S.Get().UpdateCommunitionSetting(t, n, a),
               E.V.RecordAppInteractionEvent(n, E.E.k_eMuted))
-            : (0, g.wT)(
+            : (0, _.wT)(
                 !1,
                 "Both clan id and account id are missing, cannot change communication status",
               );
@@ -1138,8 +1138,8 @@
         p = n(51706),
         u = n(88843),
         h = n(64641),
-        g = n.n(h),
-        _ = n(22797),
+        _ = n.n(h),
+        g = n(22797),
         v = n(68797),
         S = n(78327),
         C = n(8527),
@@ -1229,9 +1229,9 @@
             return (0, s.jsx)(p.EN, {
               active: !0,
               children: (0, s.jsx)("div", {
-                className: g().FlexCenter,
+                className: _().FlexCenter,
                 style: { height: "400px" },
-                children: (0, s.jsx)(_.t, {}),
+                children: (0, s.jsx)(g.t, {}),
               }),
             });
           const {
@@ -1276,7 +1276,7 @@
       y = (0, a.Cg)([o.PA], y);
     },
     35685: (e, t, n) => {
-      n.d(t, { kH: () => q, rN: () => U, uY: () => W, zA: () => z });
+      n.d(t, { kH: () => $, rN: () => O, uY: () => z, zA: () => q });
       var a = n(7850),
         s = n(22837),
         i = n(41735),
@@ -1289,8 +1289,8 @@
         p = n(62641),
         u = n(17720),
         h = n(7221),
-        g = n(4796),
-        _ = n(95886),
+        _ = n(4796),
+        g = n(95886),
         v = n(60746),
         S = n(8107),
         C = n(75113),
@@ -1305,18 +1305,19 @@
         D = n(61859),
         k = n(78327),
         b = n(84811),
-        T = n(22797),
-        H = n(33924),
-        F = n.n(H),
-        N = n(706),
-        M = n(18654),
-        x = n.n(M),
-        R = n(84518),
-        j = n(38535),
-        L = n(39777),
-        V = n(35380),
-        P = n(42834);
-      const U = (0, o.PA)((e) => {
+        T = n(3088),
+        H = n(22797),
+        F = n(33924),
+        N = n.n(F),
+        M = n(706),
+        x = n(18654),
+        R = n.n(x),
+        j = n(84518),
+        L = n(38535),
+        V = n(39777),
+        P = n(35380),
+        U = n(42834);
+      const O = (0, o.PA)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: n,
@@ -1326,7 +1327,7 @@
             } = e,
             l = u.b.InitFromClanID(t),
             p = (0, d.useRef)(null),
-            [h, _] = (0, d.useState)(null),
+            [h, g] = (0, d.useState)(null),
             [I, f] = (0, d.useState)(!0),
             [w, y] = (0, d.useState)(!1);
           if (
@@ -1338,7 +1339,7 @@
                   const e = r().CancelToken.source();
                   p.current = e.cancel;
                   const a = u.b.InitFromClanID(t);
-                  await g.ac.LoadClanInfoForClanSteamID(a);
+                  await _.ac.LoadClanInfoForClanSteamID(a);
                   let o = await s.LoadAdjacentPartnerEventsByAnnouncement(
                     n,
                     a,
@@ -1358,7 +1359,7 @@
                       .slice(0, 3)
                       .map((e) => s.GetClanEventFromAnnouncementGID(e))
                       .filter((e) => !!e);
-                    if ((_(t), f(!1), i)) {
+                    if ((g(t), f(!1), i)) {
                       let e = v.KN.Get().GetTracker(),
                         a = !1;
                       if (s.BHasClanAnnouncementGID(n)) {
@@ -1396,12 +1397,12 @@
             ),
             I)
           )
-            return (0, a.jsx)(T.t, { position: "center", size: "medium" });
+            return (0, a.jsx)(H.t, { position: "center", size: "medium" });
           if (0 == h.length) return (0, a.jsx)("div", {});
-          const A = g.ac.GetClanInfoByClanAccountID(t);
+          const A = _.ac.GetClanInfoByClanAccountID(t);
           return (0, a.jsx)(b.tH, {
             children: (0, a.jsxs)("div", {
-              className: (0, B.A)(F().OtherEventsCtn, "OtherEventsCtn"),
+              className: (0, B.A)(N().OtherEventsCtn, "OtherEventsCtn"),
               children: [
                 (0, a.jsxs)("div", {
                   className: E().EventSectionTitleCtn,
@@ -1435,11 +1436,11 @@
                   ],
                 }),
                 (0, a.jsx)(c.Z, {
-                  className: F().OtherEvents,
+                  className: N().OtherEvents,
                   "flow-children": "column",
                   navEntryPreferPosition: m.iU.PREFERRED_CHILD,
                   children: h.map((e) =>
-                    (0, a.jsx)(W, { event: e }, e.AnnouncementGID),
+                    (0, a.jsx)(z, { event: e }, e.AnnouncementGID),
                   ),
                 }),
                 Boolean(w) &&
@@ -1454,8 +1455,8 @@
             }),
           });
         }),
-        O = 30;
-      function W(e) {
+        W = 30;
+      function z(e) {
         const {
             event: t,
             imageURLOverride: n,
@@ -1465,8 +1466,8 @@
             eEventRount: c,
             bHidePrices: m,
           } = e,
-          u = (0, j.Zj)(t.appid),
-          [g, v, S, I, E, f] = (0, l.q3)(() => {
+          u = (0, L.Zj)(t.appid),
+          [_, v, S, I, E, f] = (0, l.q3)(() => {
             const e = r || (0, s.sf)(k.TS.LANGUAGE),
               a = Boolean(void 0 !== n)
                 ? n
@@ -1483,25 +1484,28 @@
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [y, A] = (0, d.useState)(void 0),
-          G =
-            !y || (g !== y && E !== y)
-              ? { src: g, onLoad: () => A(g), onError: () => A(E) }
-              : { src: y };
+          y = (0, P.$5)(t.appid),
+          { data: A } = (0, V.lv)(y),
+          G = [
+            _,
+            E !== _ ? E : void 0,
+            A && (0, U.b0)(A, "main_capsule"),
+          ].filter(Boolean),
+          [D, b] = (0, d.useState)(_);
         if (!t)
-          return (0, a.jsx)("div", { className: F().OtherEvents_EventCtn });
-        const D = (0, _.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          b = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let T = f;
+          return (0, a.jsx)("div", { className: N().OtherEvents_EventCtn });
+        const H = (0, g.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          F = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        let M = f;
         return (
-          f && (f.length > O || v.length > O) && (T = void 0),
+          f && (f.length > W || v.length > W) && (M = void 0),
           (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)(C.tj, {
                 className: (0, B.A)(
-                  F().OtherEvents_EventCtn,
+                  N().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
-                  F().HoversEnabled,
+                  N().HoversEnabled,
                 ),
                 eventModel: t,
                 route: c || C.PH.k_eView,
@@ -1509,55 +1513,58 @@
                 preferredFocus: !0,
                 children: [
                   (0, a.jsxs)("div", {
-                    className: F().EventSummaryContainer,
+                    className: N().EventSummaryContainer,
                     children: [
                       (0, a.jsx)("div", {
-                        className: F().EventSummaryType,
+                        className: N().EventSummaryType,
                         children: S,
                       }),
                       (0, a.jsx)("div", {
-                        className: F().EventSummaryText,
+                        className: N().EventSummaryText,
                         children: I,
                       }),
                     ],
                   }),
                   (0, a.jsx)("div", {
-                    className: F().OtherEvents_BGImage,
+                    className: N().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
-                      backgroundImage: y ? `url(${(0, p.j3)(y)})` : "none",
+                      backgroundImage: D ? `url(${(0, p.j3)(D)})` : "none",
                     },
                   }),
                   (0, a.jsxs)("div", {
-                    className: F().OtherEvents_ContentCtn,
+                    className: N().OtherEvents_ContentCtn,
                     children: [
                       (0, a.jsx)("div", {
                         className: (0, B.A)(
-                          F().OtherEvents_MainImageCtn,
-                          u && F().MaskImages,
+                          N().OtherEvents_MainImageCtn,
+                          u && N().MaskImages,
                         ),
-                        children: (0, a.jsx)("img", {
-                          ...G,
-                          className: F().OtherEvents_MainImage,
+                        children: (0, a.jsx)(T.c, {
+                          rgSources: G,
+                          onIncrementalError: (e, t, n) => {
+                            n >= G.length && b(void 0), b(G[n + 1]);
+                          },
+                          className: N().OtherEvents_MainImage,
                           alt: "",
                         }),
                       }),
                       (0, a.jsxs)("div", {
-                        className: F().OtherEvents_TextCtn,
+                        className: N().OtherEvents_TextCtn,
                         children: [
                           (0, a.jsx)("div", {
-                            className: F().OtherEvents_TextTitle,
+                            className: N().OtherEvents_TextTitle,
                             children: v,
                           }),
-                          Boolean(T) &&
+                          Boolean(M) &&
                             (0, a.jsx)("div", {
-                              className: F().OtherEvents_SubTitle,
-                              children: T,
+                              className: N().OtherEvents_SubTitle,
+                              children: M,
                             }),
-                          Boolean(b > D)
+                          Boolean(F > H)
                             ? (0, a.jsx)("div", {
                                 className: (0, B.A)(
-                                  F().UpcomingCtn,
+                                  N().UpcomingCtn,
                                   "UpcomingCtn",
                                 ),
                                 children: (0, a.jsx)(w.K4, {
@@ -1578,60 +1585,60 @@
                 ],
               }),
               Boolean(i && t.appid) &&
-                (0, a.jsx)(z, { appid: t.appid, bHidePrice: m }),
+                (0, a.jsx)(q, { appid: t.appid, bHidePrice: m }),
             ],
           })
         );
       }
-      function z(e) {
+      function q(e) {
         const { appid: t, bHidePrice: n } = e,
-          s = (0, V.$5)(t),
-          { data: i } = (0, L.J$)(s),
-          { data: r } = (0, L.lv)(s),
-          { data: o } = (0, L.Q_)(s),
+          s = (0, P.$5)(t),
+          { data: i } = (0, V.J$)(s),
+          { data: r } = (0, V.lv)(s),
+          { data: o } = (0, V.Q_)(s),
           l = (0, A.n9)(),
           d = (0, k.Qn)();
         if (!r || !i) return null;
         const m = o && o.hide_discount_pct_for_compliance;
-        return (0, a.jsx)(R.A, {
+        return (0, a.jsx)(j.A, {
           appID: t,
           children: (0, a.jsxs)(c.Z, {
-            className: (0, B.A)(F().AppCapsuleCtn, "AppCapsuleCtn"),
+            className: (0, B.A)(N().AppCapsuleCtn, "AppCapsuleCtn"),
             ...(0, f.S)(i, l, d, !1),
             children: [
-              (0, a.jsx)(N.Q, {
+              (0, a.jsx)(M.Q, {
                 id: s,
                 hoverProps: {
                   direction: "overlay",
                   style: { minWidth: "320px" },
                 },
                 children: (0, a.jsx)("img", {
-                  className: (0, B.A)(F().AppCapsuleImage, F().CapsuleShadow),
-                  src: (0, P.b0)(r, "small_capsule"),
+                  className: (0, B.A)(N().AppCapsuleImage, N().CapsuleShadow),
+                  src: (0, U.b0)(r, "small_capsule"),
                   alt: i.name,
                 }),
               }),
               Boolean(!n && !i.is_free) &&
                 (0, a.jsxs)("span", {
                   className: (0, B.A)(
-                    F().AppCapsulePrice,
-                    Boolean(o?.discount_pct) ? x().Discounted : "",
+                    N().AppCapsulePrice,
+                    Boolean(o?.discount_pct) ? R().Discounted : "",
                   ),
                   children: [
                     Boolean(o?.discount_pct && m) &&
                       (0, a.jsx)("div", {
-                        className: x().DiscountIconCtn,
+                        className: R().DiscountIconCtn,
                         children: (0, a.jsx)(y.XH_, {}),
                       }),
                     Boolean(o?.discount_pct && !m) &&
                       (0, a.jsx)("span", {
-                        className: x().StoreSaleDiscountBox,
+                        className: R().StoreSaleDiscountBox,
                         children: `-${o?.discount_pct}%`,
                       }),
                     o &&
                       o.final_price_in_cents &&
                       (0, a.jsx)("span", {
-                        className: x().StoreSalePriceBox,
+                        className: R().StoreSalePriceBox,
                         children: o.formatted_final_price,
                       }),
                   ],
@@ -1640,93 +1647,96 @@
           }),
         });
       }
-      function q(e) {
+      function $(e) {
         const { event: t, imageURLOverride: n, onClick: i } = e,
-          r = (0, j.Zj)(t.appid),
-          o = (0, s.sf)(k.TS.LANGUAGE),
-          [d, c, m, p, u] = (0, l.q3)(() =>
+          r = (0, L.Zj)(t.appid),
+          o = (0, P.$5)(t.appid),
+          { data: d } = (0, V.lv)(o),
+          c = (0, s.sf)(k.TS.LANGUAGE),
+          [m, p, u, _, g] = (0, l.q3)(() =>
             t
               ? [
                   void 0 !== n
                     ? n
                     : t.GetImageURLWithFallback(
                         "capsule",
-                        o,
+                        c,
                         h.wI.capsule_main,
                       ),
-                  t.GetNameWithFallback(o),
+                  t.GetNameWithFallback(c),
                   t.GetCategoryAsString(),
-                  t.GetSubTitleWithLanguageFallback(o),
-                  t.GetSummaryWithFallback(o),
+                  t.GetSubTitleWithLanguageFallback(c),
+                  t.GetSummaryWithFallback(c),
                 ]
               : [void 0, void 0, void 0, void 0, void 0],
           );
-        return t
-          ? (0, a.jsxs)(C.tj, {
-              className: F().OtherEvents_EventCtn + " " + F().HorizontalEvent,
-              eventModel: t,
-              route: C.PH.k_eView,
-              onClick: i,
-              children: [
-                (0, a.jsx)("div", {
-                  className: F().OtherEvents_ContentCtn,
-                  children: (0, a.jsx)("div", {
-                    className: (0, B.A)(
-                      F().OtherEvents_MainImageCtn,
-                      r && F().MaskImages,
-                    ),
-                    children: (0, a.jsx)("img", {
-                      src: d,
-                      className: F().OtherEvents_MainImage,
-                      alt: "",
-                    }),
-                  }),
+        if (!t)
+          return (0, a.jsx)("div", { className: N().OtherEvents_EventCtn });
+        const v = [m, d && (0, U.b0)(d, "main_capsule")].filter(Boolean);
+        return (0, a.jsxs)(C.tj, {
+          className: N().OtherEvents_EventCtn + " " + N().HorizontalEvent,
+          eventModel: t,
+          route: C.PH.k_eView,
+          onClick: i,
+          children: [
+            (0, a.jsx)("div", {
+              className: N().OtherEvents_ContentCtn,
+              children: (0, a.jsx)("div", {
+                className: (0, B.A)(
+                  N().OtherEvents_MainImageCtn,
+                  r && N().MaskImages,
+                ),
+                children: (0, a.jsx)(T.c, {
+                  rgSources: v,
+                  className: N().OtherEvents_MainImage,
+                  alt: "",
                 }),
+              }),
+            }),
+            (0, a.jsxs)("div", {
+              className: N().OtherEvents_TextCtn,
+              children: [
                 (0, a.jsxs)("div", {
-                  className: F().OtherEvents_TextCtn,
+                  className: N().HorizontalDescriptionCtn,
                   children: [
-                    (0, a.jsxs)("div", {
-                      className: F().HorizontalDescriptionCtn,
-                      children: [
-                        (0, a.jsx)("div", {
-                          className: F().HorizontalDescription,
-                          children: m,
-                        }),
-                        (0, a.jsx)(w.K4, {
-                          bSingleLine: !0,
-                          dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
-                        }),
-                      ],
-                    }),
                     (0, a.jsx)("div", {
-                      className: F().HorizontalTitle,
-                      children: c,
+                      className: N().HorizontalDescription,
+                      children: u,
                     }),
-                    p &&
-                      (0, a.jsx)("div", {
-                        className: F().HorizontalSubTitle,
-                        children: p,
-                      }),
-                    u &&
-                      (0, a.jsx)("div", {
-                        className: F().HorizontalSummary,
-                        children: u,
-                      }),
+                    (0, a.jsx)(w.K4, {
+                      bSingleLine: !0,
+                      dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
+                    }),
                   ],
                 }),
+                (0, a.jsx)("div", {
+                  className: N().HorizontalTitle,
+                  children: p,
+                }),
+                _ &&
+                  (0, a.jsx)("div", {
+                    className: N().HorizontalSubTitle,
+                    children: _,
+                  }),
+                g &&
+                  (0, a.jsx)("div", {
+                    className: N().HorizontalSummary,
+                    children: g,
+                  }),
               ],
-            })
-          : (0, a.jsx)("div", { className: F().OtherEvents_EventCtn });
+            }),
+          ],
+        });
       }
     },
     99032: (e, t, n) => {
       n.d(t, {
         AX: () => S,
-        H2: () => g,
+        H2: () => _,
         Li: () => v,
         S7: () => p,
         a9: () => C,
-        jy: () => _,
+        jy: () => g,
         nt: () => h,
         sd: () => m,
         tJ: () => u,
@@ -1762,7 +1772,7 @@
           t.GetAllLanguagesWithSomeSupport(),
         );
       }
-      async function g(e, t, n) {
+      async function _(e, t, n) {
         if (!e || 0 == e.length) return [];
         const a = e.filter((e) => (0, i.fp)(e.type)).map((e) => e.id),
           s = e.filter((e) => "sub" === e.type).map((e) => e.id),
@@ -1809,7 +1819,7 @@
           return t && !t.GetParentAppID();
         });
       }
-      const _ = {
+      const g = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
@@ -1839,7 +1849,7 @@
         let d = 0,
           c = 0;
         const m = [];
-        await g(e, a.Xh, t);
+        await _(e, a.Xh, t);
         for (const a of e) {
           const e = o.A.Get().GetStoreItem(a.id, (0, s.SW)(a.type));
           if (!e) {

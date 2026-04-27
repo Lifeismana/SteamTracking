@@ -227,10 +227,10 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
+01:44:19
+01:44:22
 12CStdMemAlloc
 16CAdHocValidation
-18:47:13
-18:47:17
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
@@ -241,7 +241,7 @@ $ORIGIN
 <no address info>
 <unknown>
 Anonymous mutex cannot have bAllAccess == true
-Apr 21 2026
+Apr 25 2026
 Assert( %s ):%s:%d\n
 Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s

@@ -805,6 +805,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 ._2ekpT6PjwtcFaT4jLQehUK {
   display: -webkit-box;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   cursor: pointer;
@@ -1154,6 +1155,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   position: relative;
   display: -webkit-box;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   white-space: normal;
   overflow: hidden;

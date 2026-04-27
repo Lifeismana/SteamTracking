@@ -965,8 +965,15 @@
                 return _.avatar_full_url;
               _ = this.jsondata.referenced_appids[0];
             }
+            _._.Get().QueueAppRequest(_, {
+              include_assets: !0,
+            });
             const _ = _._.Get().GetApp(_);
-            return _ && _.GetAssets()
+            return _ &&
+              _.BContainDataRequest({
+                include_assets: !0,
+              }) &&
+              _.GetAssets()
               ? _.GetAssets()?.GetMainCapsuleURL()
               : _?.avatar_full_url
                 ? _.avatar_full_url

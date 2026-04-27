@@ -1300,19 +1300,6 @@ enum UnnamedEnum0558827179236bf8
 	UNBLOCKED = 3;
 }
 
-enum UnnamedEnum06b6bc7982c07224
-{
-	Error = -1;
-	Welcome = 0;
-	PlugInPuck = 1;
-	UpdatePuck = 2;
-	UpdateNereid = 3;
-	PlugInController = 4;
-	UpdateController = 5;
-	PuckIntro = 6;
-	BigPictureIntro = 7;
-}
-
 enum UnnamedEnum0731ad10e9d10396
 {
 	Idle = 0;
@@ -1901,6 +1888,18 @@ enum UnnamedEnum22d3fe70562864f4
 	INTERNATIONAL_2025 = 24;
 }
 
+enum UnnamedEnum24802583f68845ce
+{
+	Error = -1;
+	Welcome = 0;
+	UpdatePuck = 1;
+	UpdateNereid = 2;
+	PlugInController = 3;
+	UpdateController = 4;
+	PuckIntro = 5;
+	BigPictureIntro = 6;
+}
+
 enum UnnamedEnum24822a7e69ba9ab7
 {
 	k_EPending = 0;
@@ -2164,15 +2163,6 @@ enum UnnamedEnum3dd1c4581017d7dd
 	MAINTAIN_X = 2;
 	MAINTAIN_Y = 3;
 	PREFERRED_CHILD = 4;
-}
-
-enum UnnamedEnum3fcaac8de59d5e7c
-{
-	PRE_NAME = 0;
-	IN_NAME = 1;
-	POST_NAME = 2;
-	IN_VALUE = 3;
-	IN_QUOTED_VALUE = 4;
 }
 
 enum UnnamedEnum417b0cbbb904eb0c
@@ -4266,6 +4256,12 @@ enum UnnamedEnumdb303c21506dd3e7
 	MouseDragging = 1;
 	TouchStart = 2;
 	TouchDragging = 3;
+}
+
+enum UnnamedEnumddaf0ae83b825a44
+{
+	Finished = 0;
+	Dismissed = 1;
 }
 
 enum UnnamedEnumddf21b2888ecc060

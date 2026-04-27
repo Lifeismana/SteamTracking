@@ -2045,6 +2045,9 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01:44:19
+01:44:35
+01:44:38
 08bX
 0?0L
 0A/8
@@ -2479,9 +2482,6 @@ $ffn
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
 18446744073709551615
-18:47:13
-18:47:41
-18:47:44
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -3398,7 +3398,7 @@ Application transferred too few scanlines
 Application transferred too many scanlines
 Applying update...
 Approved Friends
-Apr 21 2026
+Apr 25 2026
 April
 Arabic
 Arithmetic table 0x%02x was not defined
@@ -9291,7 +9291,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Apr 21 2026 18:47:34
+Startup - updater built Apr 25 2026 01:44:29
 State
 StaticFileWriterThread()
 Steam

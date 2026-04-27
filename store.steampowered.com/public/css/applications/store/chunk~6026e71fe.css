@@ -2470,7 +2470,7 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 3px;
-  max-width: 300px;
+  width: 300px;
   gap: 24px;
   padding: 20px;
   margin: 10px;
@@ -2564,7 +2564,7 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
   padding: 10px;
   width: 80%;
   text-align: center;
-  color: #fff;
+  color: #000;
   font-size: 18px;
   font-weight: 400;
 }
@@ -2588,21 +2588,30 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
 ._1vJHwybFjHBbNcBpxq2vJO:hover {
   text-decoration: none;
 }
-._2HaOvkwPHDjo-tw2MojOhW button,
-.Cnrm19fZ6RQr1qL0tAjK9 button {
+._10a9BMKHCowrtgelPrWPvh ._2HaOvkwPHDjo-tw2MojOhW button,
+._10a9BMKHCowrtgelPrWPvh .Cnrm19fZ6RQr1qL0tAjK9 button {
   display: flex !important;
   align-items: center;
   justify-content: center;
   gap: 5px;
   text-decoration: underline;
   background: unset !important;
+  color: #555;
 }
-._2HaOvkwPHDjo-tw2MojOhW button::before,
-.Cnrm19fZ6RQr1qL0tAjK9 button::before {
+._10a9BMKHCowrtgelPrWPvh ._2HaOvkwPHDjo-tw2MojOhW button::before,
+._10a9BMKHCowrtgelPrWPvh .Cnrm19fZ6RQr1qL0tAjK9 button::before {
   display: none;
 }
-._2HaOvkwPHDjo-tw2MojOhW button svg,
-.Cnrm19fZ6RQr1qL0tAjK9 button svg {
+._10a9BMKHCowrtgelPrWPvh ._2HaOvkwPHDjo-tw2MojOhW button:hover,
+._10a9BMKHCowrtgelPrWPvh .Cnrm19fZ6RQr1qL0tAjK9 button:hover {
+  color: #000;
+}
+._10a9BMKHCowrtgelPrWPvh ._2HaOvkwPHDjo-tw2MojOhW button:active,
+._10a9BMKHCowrtgelPrWPvh .Cnrm19fZ6RQr1qL0tAjK9 button:active {
+  box-shadow: none;
+}
+._10a9BMKHCowrtgelPrWPvh ._2HaOvkwPHDjo-tw2MojOhW button svg,
+._10a9BMKHCowrtgelPrWPvh .Cnrm19fZ6RQr1qL0tAjK9 button svg {
   width: 20px;
   height: 20px;
 }

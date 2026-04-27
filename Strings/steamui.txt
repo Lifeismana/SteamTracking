@@ -643,7 +643,7 @@
 "-\n+CAuthenticationSupport_RevokeToken_Response"B\n.CAuthenticationSupport_GetTokenHistory_Request
 "-\n+CCommunity_DeleteCommentFromThread_Response"
 "-\n+CQueuedMatchmakingGameHost_EndGame_Response*
-"-\n+CSteamInputService_EnableQosStatus_Response*
+"-\n+CSteamInputService_EnableQosStatus_Response"{\n6CSteamInputService_ControllerBatteryState_Notification
 "-\n+CTransportValidation_ThreadedCount_Response"<\n-CTransportValidation_NotifyCount_Notification
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
@@ -2264,6 +2264,9 @@ ${LANGUAGE}
 %s/video_bitrate
 %s: %s returned %s %d (%s), disconnecting TCP connection. %d sends, %lld bytes outstanding %s\n
 %s: (%d bit)\n
+%s: ----------------------
+%s: ------[ stderr ]------\n%s
+%s: ------[ stdout ]------\n%s
 %s: Command '%s' returned: %d
 %s: Corrupt stream, resetting\n
 %s: Hardware encoding is too slow, disabling\n
@@ -3333,6 +3336,7 @@ ${LANGUAGE}
 (\r"W\n%CClientNotificationBatteryTemperature
 (\r"X\n&CCommunity_GetLinkFilterHashes_Request
 (\r"Y\n"CPublishedFile_GetDetails_Response
+(\r"Y\n'CClientNotificationControllerLowBattery
 (\r"Y\n\rCMsgSizePopup
 (\r"Z\n"CCloud_EnumerateUserFiles_Response
 (\r"Z\n0CContentServerDirectory_GetCDNAuthToken_Response
@@ -7032,8 +7036,8 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/x264wrapper.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp:148
-/data/src/steamUI/hardwareupdatecontroller.cpp:218
-/data/src/steamUI/hardwareupdatecontroller.cpp:255
+/data/src/steamUI/hardwareupdatecontroller.cpp:219
+/data/src/steamUI/hardwareupdatecontroller.cpp:256
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
@@ -10500,6 +10504,7 @@ ${LANGUAGE}
 2\n-k_EStreamControlRemotePlayTogetherGroupUpdate
 2\n.EOSBranch
 2\n.k_EAppGamepadGyroTrackpadSupportLevelNoGamepad
+2\n.k_EClientNotificationType_ControllerLowBattery
 2\n.k_ECloudPendingRemoteOperationAppSessionActive
 2\n.k_ECloudPendingRemoteOperationUploadInProgress
 2\n.k_ECommentThreadTypePublishedFile_Announcement
@@ -10808,7 +10813,7 @@ ${LANGUAGE}
 32CPlayer_GetPostedStatus_Response
 32CPlayer_SetFavoriteBadge_Request
 32CPlayer_SetProfileTheme_Response
-32CProcessWorkItemReadStdOutThread
+32CProcessWorkItemPipeReaderThread
 32CProcessWorkItemWriteStdInThread
 32CPublishedFile_AddChild_Response
 32CPublishedFile_Subscribe_Request
@@ -11363,6 +11368,7 @@ ${LANGUAGE}
 39CChatRoom_GetChatRoomGroupState_Request
 39CChatRoom_UpdateMessageReaction_Request
 39CClientMetrics_AppInterfaceMethodCounts
+39CClientNotificationControllerLowBattery
 39CCloud_AppCloudStateChange_Notification
 39CCommunity_GetBestEventsForUser_Request
 39CCommunity_GetLinkFilterHashes_Response
@@ -12458,6 +12464,7 @@ ${LANGUAGE}
 54CPublishedFile_SetPlaytimeForControllerConfigs_Request
 54CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 54CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+54CSteamInputService_ControllerBatteryState_Notification
 54CSteamInputService_ControllerDisconnected_Notification
 54CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 54CTransportValidation_NotifySyntheticEvent_Notification
@@ -12757,6 +12764,7 @@ ${LANGUAGE}
 7.CPublishedFile_SetPlaytimeForControllerConfigs_Request
 7.CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 7.CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+7.CSteamInputService_ControllerBatteryState_Notification
 7.CSteamInputService_ControllerDisconnected_Notification
 7.CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 7.CTransportValidation_NotifySyntheticEvent_Notification
@@ -13279,7 +13287,6 @@ ${LANGUAGE}
 <0\f<pqA1
 <3"-xwfiDKZU
 <4E87
-<840co
 <84P0,(
 <= or is NULL
 <>|~$`"'\!&*?%#\n\r;
@@ -14487,7 +14494,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 21 2026 18:47:54
+Apr 25 2026 01:44:48
 April
 Arabic
 AreFilesInSubscriptionList
@@ -17508,7 +17515,6 @@ CSteamUIInputController::OnControllerConnected
 CSteamUIInputController::OnControllerDisconnected
 CSteamUIInputController::OnControllerDisplayKeyboard
 CSteamUIInputController::OnControllerPairing
-CSteamUIInputController::OnControllerStatusFlagsChanged
 CSteamUIInputController::OnDismissModalAPIKeyboard
 CSteamUIInputController::OnDispatchDismissGamepadTextInput
 CSteamUIInputController::OnDispatchRequestDismissGamepadTextInput
@@ -18414,6 +18420,7 @@ Comma separated list of metrics catalogs to disable.  This is the last check.
 Comma separated list of metrics operations that are disabled.  This setting has highest priority
 Comma separated list of metrics operations.  Overrides disabled catalogs
 Command
+Command output: %s
 Command: %s\n
 CommandLine static
 CommentCount
@@ -18666,6 +18673,7 @@ Couldn't load %s, DRM support disabled\n
 Couldn't load %s, x264 support disabled
 Couldn't load CreateWebRTCSession()
 Couldn't load Wayland symbols\n
+Couldn't load game config for appID %u, path '%s'
 Couldn't load icon %s
 Couldn't open %s for capture: %s\n
 Couldn't open %s for writing\n
@@ -20056,6 +20064,7 @@ Error in encoding\n
 Error in manifest for appID: %u - no configurations listed\n
 Error on Release(): Not the lock owner\n
 Error parsing text-format
+Error pipe( stderr ) for %s\n
 Error pipe( stdin ) for %s\n
 Error pipe( stdout ) for %s\n
 Error reading from BMP
@@ -23047,7 +23056,6 @@ Input.RegisterForActiveConfigLoadedMessages
 Input.RegisterForActiveControllerChanges
 Input.RegisterForConfigSelectionChanges
 Input.RegisterForControllerAccountChanges
-Input.RegisterForControllerBatteryChanges
 Input.RegisterForControllerCommandMessages
 Input.RegisterForControllerConfigCloudStateChanges
 Input.RegisterForControllerConfigInfoMessages
@@ -24846,6 +24854,7 @@ Method NotifyClientUsabilityMetrics() not implemented.
 Method NotifyClipCreated() not implemented.
 Method NotifyClipDeleted() not implemented.
 Method NotifyCommunityPreferencesChanged() not implemented.
+Method NotifyControllerBatteryState() not implemented.
 Method NotifyControllerDisconnected() not implemented.
 Method NotifyControllerListChanged() not implemented.
 Method NotifyControllerPairingChanged() not implemented.
@@ -25702,7 +25711,6 @@ N23CSteamUIInputController43CCallbackInternal_OnDisplayModalAPIKeyboardE
 N23CSteamUIInputController45CCallbackInternal_OnControllerActionTriggeredE
 N23CSteamUIInputController45CCallbackInternal_OnControllerDisplayKeyboardE
 N23CSteamUIInputController47CCallbackInternal_OnShowControllerLayoutPreviewE
-N23CSteamUIInputController48CCallbackInternal_OnControllerStatusFlagsChangedE
 N23CSteamUIInputController48CCallbackInternal_OnDispatchShowGamepadTextInputE
 N23CSteamUIInputController51CCallbackInternal_OnControllerConfigSelectionChangeE
 N23CSteamUIInputController51CCallbackInternal_OnDispatchDismissGamepadTextInputE
@@ -26645,6 +26653,7 @@ NotifyChatRoomHeaderStateChange
 NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
+NotifyControllerBatteryState
 NotifyControllerDisconnected
 NotifyControllerListChanged
 NotifyControllerPairingChanged
@@ -28907,6 +28916,7 @@ SNILS
 SNMPv2
 SOKGC?;73/
 SOkw#?
+SO{wsokgKG[W
 SP BPM_uid
 SP Controller Configurator_uid
 SP Desktop_uid
@@ -35227,7 +35237,6 @@ _WIN_CLIENT_LIST
 _XGetRequest
 _XReadPad
 _XReply
-_[@HDWSOLwsg
 _\n%gamerecording_export_limit_frame_rate
 _\n(steamos_wifi_reload_wifi_driver_on_sleep
 _\n\vpublic_data
@@ -36133,7 +36142,6 @@ bCaptureButton
 bCenterTrackpad
 bCenterTrackpadTouch
 bChangeBetaEnabled
-bCharging
 bChecking
 bChooseDirectory
 bChordInvoked
@@ -36847,6 +36855,7 @@ c\n#remote_play_wifi_ap_hotspot_routing
 c\n(gamescope_use_game_refresh_rate_in_steam
 c\n)steam_input_configurator_error_msg_enable
 c\n+library_whats_new_show_only_product_updates
+c_?;73/+($
 ca dn length mismatch
 ca key too small
 ca md too weak
@@ -37124,6 +37133,7 @@ characteristic-two-field
 charge_limit_default
 charge_limit_max
 charge_limit_min
+charging
 charset
 charset=ISO-8859-1
 charset=UTF-8
@@ -38925,7 +38935,6 @@ eAppError
 eAppOwnershipFlags
 eAppUpdateError
 eAutoUpdateValue
-eB(5@
 eBackgroundDownloads
 eBatteryState
 eBranch
@@ -47263,6 +47272,7 @@ local://controller_base/basicui_controller_legion_go_s.vdf
 local://controller_base/basicui_gamepad.vdf
 local://controller_base/basicui_neptune.vdf
 local://controller_base/chord%s
+local://controller_base/chord_controller_triton.vdf
 local://controller_base/desktop_neptune.vdf
 local://controller_base/desktop_steamcontroller_gordon.vdf
 local://controller_base/empty.vdf
@@ -48383,7 +48393,6 @@ m_vecAutoDetectedProxyExcludedHosts
 m_vecAvailableBetas
 m_vecAxisState
 m_vecBarriers
-m_vecBatteryStateCallbacks
 m_vecBuffers.Count() == 0
 m_vecButtonPressCallbacks
 m_vecCachedLocalBindings
@@ -53589,6 +53598,7 @@ steamcommunity.com
 steamconsole.so
 steamcontrollerconfigfileids
 steamcontrollertemplateindex
+steamcontrollertouchconfigfile
 steamcontrollertouchtemplateindex
 steamdeck-hwmon
 steamdeck_
@@ -55132,7 +55142,6 @@ ubuntu12_32/libVkLayer_steam_fossilize.so
 ubuntu12_32/steamoverlayvulkanlayer.so
 ubuntu12_64/libVkLayer_steam_fossilize.so
 ubuntu12_64/steamoverlayvulkanlayer.so
-ucBatteryLevel
 udev-events1
 udisks2_block_proxy_get_property
 udisks2_block_proxy_set_property

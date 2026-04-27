@@ -173,9 +173,9 @@
         Ac: () => ce,
         lh: () => ue,
         Hc: () => ie,
-        mz: () => Q,
+        mz: () => Y,
         qQ: () => $,
-        MW: () => Y,
+        MW: () => Q,
         W2: () => q,
         Pm: () => ee,
         qR: () => J,
@@ -293,10 +293,10 @@
       function $(e) {
         return e.carousel_rows || 1;
       }
-      function Y(e) {
+      function Q(e) {
         return e.cap_item_count || 0;
       }
-      function Q(e) {
+      function Y(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
           : "trailercarousel" == e.section_type
@@ -944,8 +944,11 @@
                 return r.avatar_full_url;
               a = this.jsondata.referenced_appids[0];
             }
+            g.A.Get().QueueAppRequest(a, { include_assets: !0 });
             const s = g.A.Get().GetApp(a);
-            return s && s.GetAssets()
+            return s &&
+              s.BContainDataRequest({ include_assets: !0 }) &&
+              s.GetAssets()
               ? s.GetAssets()?.GetMainCapsuleURL()
               : r?.avatar_full_url
                 ? r.avatar_full_url

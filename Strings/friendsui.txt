@@ -634,6 +634,7 @@ $\nY8O
 (\r"P\n\rCMsgMouseMove
 (\r"R\n\fCAudioFormat
 (\r"W\n%CClientNotificationBatteryTemperature
+(\r"Y\n'CClientNotificationControllerLowBattery
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
 (\r"^\n#CMsgZoomToElementAtPositionResponse
@@ -1906,6 +1907,7 @@ $\nY8O
 29CStreamingServerHandshakeInfo
 2<QF
 2\n-k_EStreamControlRemotePlayTogetherGroupUpdate
+2\n.k_EClientNotificationType_ControllerLowBattery
 2\n.k_ECommentThreadTypePublishedFile_Announcement
 2\n.k_EContentReportReason_BullyingAndIntimidation
 2\n.k_EContentReportReason_GenderedOtherHarassment
@@ -1969,6 +1971,7 @@ $\nY8O
 38CClientNotificationOverlaySplashScreen
 38CClientNotificationTimedTrialRemaining
 38CMsgSetBrowserViewDomainRequestMapping
+39CClientNotificationControllerLowBattery
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EClientNotificationType_ClaimSteamDeckRewards
 3\n/k_EClientNotificationType_FamilyPurchaseRequest
@@ -5878,6 +5881,7 @@ controller_name
 controller_overlay_hotkey
 controller_path
 controller_slots
+controller_type
 controller_ui
 controllerconfig/
 controls

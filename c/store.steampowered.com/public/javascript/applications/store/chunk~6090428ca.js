@@ -1362,6 +1362,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1546,17 +1547,14 @@
               _.GetSubTitleWithLanguageFallback(_) || "",
             ];
           }),
-          [_, _] = (0, _.useState)(void 0),
-          _ =
-            !_ || (_ !== _ && _ !== _)
-              ? {
-                  src: _,
-                  onLoad: () => _(_),
-                  onError: () => _(_),
-                }
-              : {
-                  src: _,
-                };
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          _ = [
+            _,
+            _ !== _ ? _ : void 0,
+            _ && (0, _._)(_, "main_capsule"),
+          ].filter(Boolean),
+          [_, _] = (0, _.useState)(_);
         if (!_)
           return (0, _.jsx)("div", {
             className: _().OtherEvents_EventCtn,
@@ -1607,8 +1605,11 @@
                           _().OtherEvents_MainImageCtn,
                           _ && _().MaskImages,
                         ),
-                        children: (0, _.jsx)("img", {
-                          ..._,
+                        children: (0, _.jsx)(_._, {
+                          rgSources: _,
+                          onIncrementalError: (_, _, _) => {
+                            _ >= _.length && _(void 0), _(_[_ + 1]);
+                          },
                           className: _().OtherEvents_MainImage,
                           alt: "",
                         }),
@@ -1719,6 +1720,8 @@
       function _(_) {
         const { event: _, imageURLOverride: _, onClick: _ } = _,
           _ = (0, _._)(_.appid),
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_._.LANGUAGE),
           [_, _, _, _, _] = (0, _._)(() =>
             _
@@ -1733,64 +1736,65 @@
                 ]
               : [void 0, void 0, void 0, void 0, void 0],
           );
-        return _
-          ? (0, _.jsxs)(_._, {
-              className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
-              eventModel: _,
-              route: _._.k_eView,
-              onClick: _,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().OtherEvents_ContentCtn,
-                  children: (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _().OtherEvents_MainImageCtn,
-                      _ && _().MaskImages,
-                    ),
-                    children: (0, _.jsx)("img", {
-                      src: _,
-                      className: _().OtherEvents_MainImage,
-                      alt: "",
-                    }),
-                  }),
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _().OtherEvents_EventCtn,
+          });
+        const _ = [_, _ && (0, _._)(_, "main_capsule")].filter(Boolean);
+        return (0, _.jsxs)(_._, {
+          className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
+          eventModel: _,
+          route: _._.k_eView,
+          onClick: _,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().OtherEvents_ContentCtn,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().OtherEvents_MainImageCtn,
+                  _ && _().MaskImages,
+                ),
+                children: (0, _.jsx)(_._, {
+                  rgSources: _,
+                  className: _().OtherEvents_MainImage,
+                  alt: "",
                 }),
+              }),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().OtherEvents_TextCtn,
+              children: [
                 (0, _.jsxs)("div", {
-                  className: _().OtherEvents_TextCtn,
+                  className: _().HorizontalDescriptionCtn,
                   children: [
-                    (0, _.jsxs)("div", {
-                      className: _().HorizontalDescriptionCtn,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().HorizontalDescription,
-                          children: _,
-                        }),
-                        (0, _.jsx)(_._, {
-                          bSingleLine: !0,
-                          dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
-                        }),
-                      ],
-                    }),
                     (0, _.jsx)("div", {
-                      className: _().HorizontalTitle,
+                      className: _().HorizontalDescription,
                       children: _,
                     }),
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _().HorizontalSubTitle,
-                        children: _,
-                      }),
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _().HorizontalSummary,
-                        children: _,
-                      }),
+                    (0, _.jsx)(_._, {
+                      bSingleLine: !0,
+                      dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                    }),
                   ],
                 }),
+                (0, _.jsx)("div", {
+                  className: _().HorizontalTitle,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().HorizontalSubTitle,
+                    children: _,
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().HorizontalSummary,
+                    children: _,
+                  }),
               ],
-            })
-          : (0, _.jsx)("div", {
-              className: _().OtherEvents_EventCtn,
-            });
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

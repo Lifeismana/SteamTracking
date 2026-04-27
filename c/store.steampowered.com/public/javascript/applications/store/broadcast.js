@@ -911,8 +911,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1322,7 +1320,7 @@
               return (0, _.jsxs)("div", {
                 className: (0, _._)({
                   [_().ExpandSectionBlock]: !0,
-                  [_.style]: null != _.style,
+                  [_.style ?? ""]: null != _.style,
                   [_().ExpandSectionExpanded]: _,
                   [_().ExpandSectionCollapsed]: !_,
                   BBCodeExpanded: _,
@@ -1548,14 +1546,14 @@
         [
           "looping_media",
           {
-            Constructor: _,
+            Constructor: _._,
             autocloses: !1,
           },
         ],
         [
           "video",
           {
-            Constructor: _,
+            Constructor: _._,
             autocloses: !1,
           },
         ],
@@ -1715,18 +1713,32 @@
           })
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        let _ = _(_, "poster");
+        let _ = (0, _._)(_, "poster");
         _ && (_ = (0, _._)(_));
         const _ = new Array();
         {
-          const _ = _(_, "mp4");
+          const _ = (0, _._)(_, "mp4");
           _ &&
             __webpack_require__.push({
               sURL: (0, _._)(_),
               sFormat: "video/mp4",
             });
-          const _ = _(_, "webm");
+          const _ = (0, _._)(_, "webm");
           _ &&
             __webpack_require__.push({
               sURL: (0, _._)(_),
@@ -1737,7 +1749,7 @@
           _ = 0 != _,
           _ = new Array();
         for (let _ = 0; _ < 31; _++) {
-          const _ = _(_, "sub_" + (0, _._)(_));
+          const _ = (0, _._)(_, "sub_" + (0, _._)(_));
           _ &&
             _.push({
               sURL: (0, _._)(_),
@@ -1745,7 +1757,7 @@
               sKind: "subtitles",
               bDefault: _ && _ == _,
             });
-          const _ = _(_, "cap_" + (0, _._)(_));
+          const _ = (0, _._)(_, "cap_" + (0, _._)(_));
           _ &&
             _.push({
               sURL: (0, _._)(_),
@@ -1778,11 +1790,11 @@
             sURL: (0, _._)(_),
             sFormat: "video/webm",
           });
-        const _ = _(_.args, "autoplay"),
+        const _ = (0, _._)(_.args, "autoplay"),
           _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "controls"),
+          _ = (0, _._)(_.args, "controls"),
           _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "loop"),
+          _ = (0, _._)(_.args, "loop"),
           _ = "0" !== _ && "off" !== _ && "false" !== _;
         return (0, _.jsx)(_._, {
           video: _,
@@ -23181,6 +23193,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
