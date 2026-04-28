@@ -978,14 +978,14 @@
               ],
             }),
             (0, _.jsx)(_.Options, {
-              children: _.rgOptions.map((_) =>
+              children: _.rgOptions.map((_, _) =>
                 (0, _.jsx)(
                   _.Option,
                   {
                     value: _,
                     children: _(_),
                   },
-                  _(_),
+                  _,
                 ),
               ),
             }),
@@ -1037,14 +1037,14 @@
                 ],
               }),
               (0, _.jsx)(_.Options, {
-                children: _.rgOptions.map((_) =>
+                children: _.rgOptions.map((_, _) =>
                   (0, _.jsx)(
                     _.Option,
                     {
                       value: _,
                       children: _(_),
                     },
-                    _(_),
+                    _,
                   ),
                 ),
               }),

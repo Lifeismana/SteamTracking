@@ -894,7 +894,6 @@ $\n k_SystemAudioPortDirection_Input
 0\n,k_EPublishedFileInappropriateProvider_Google
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
-1 q0
 10CMsgGoBack
 10CMsgReload
 10CUtlMemoryI13ModuleCount_tE
@@ -5431,7 +5430,6 @@ kicked off the group
 kill
 kingsoftcloud
 kinyarwanda
-kjj_
 ko_KR
 konkani
 koreana

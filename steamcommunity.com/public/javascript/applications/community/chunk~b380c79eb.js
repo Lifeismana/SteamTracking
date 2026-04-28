@@ -870,8 +870,8 @@
               ],
             }),
             (0, r.jsx)(C.Options, {
-              children: c.rgOptions.map((e) =>
-                (0, r.jsx)(C.Option, { value: e, children: l(e) }, l(e)),
+              children: c.rgOptions.map((e, n) =>
+                (0, r.jsx)(C.Option, { value: e, children: l(e) }, n),
               ),
             }),
           ],
@@ -916,8 +916,8 @@
                 ],
               }),
               (0, r.jsx)(b.Options, {
-                children: c.rgOptions.map((e) =>
-                  (0, r.jsx)(b.Option, { value: e, children: l(e) }, l(e)),
+                children: c.rgOptions.map((e, n) =>
+                  (0, r.jsx)(b.Option, { value: e, children: l(e) }, n),
                 ),
               }),
             ],

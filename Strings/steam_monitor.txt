@@ -227,8 +227,8 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
-01:44:19
-01:44:22
+02:38:19
+02:38:22
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
@@ -241,7 +241,7 @@ $ORIGIN
 <no address info>
 <unknown>
 Anonymous mutex cannot have bAllAccess == true
-Apr 25 2026
+Apr 28 2026
 Assert( %s ):%s:%d\n
 Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
@@ -909,6 +909,7 @@ transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 true
+tvHH
 typeinfo fn for
 typeinfo for
 typeinfo for __cxxabiv1::__class_type_info
