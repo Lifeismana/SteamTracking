@@ -51,7 +51,7 @@
         "reqid": 27,
         "name": "Did we miss something?",
         "description": "<div class=\"job_description_intro\"><p>If you don't see your specialty listed, but you have years of professional experience, are really talented at what you do, and possess a set of skills which would help us create better products and experiences for our customers, we hope you'll reach out to us below. </p> <p>We don't hire junior-level professionals or offer internships, but are looking for highly skilled folks who've been in their industry for a few years and can introduce new types of knowledge and expertise to Valve.</p></div>",
-        "extra_question": "How will you apply your expertise at Valve? We use this to ensure your resumé is reviewed by the right people.<br>(If you have a separate cover letter, you can attach it below.)"
+        "extra_question": "How will you apply your expertise at Valve? We use this to ensure your résumé is reviewed by the right people.<br>(If you have a separate cover letter, you can attach it below.)"
     },
     "43": {
         "reqid": 43,
@@ -117,7 +117,7 @@
         "reqid": 41,
         "name": "Software Engineer for HW",
         "description": "<div class=\"job_description_intro\"><p>Though we don’t have a specific position open at this time, and we’re not actively seeking people with any specific qualifications, we’re always looking to add talented individuals to our team.</p><p>Do you love making great gaming hardware? At Valve, we are pushing the boundaries of hardware gaming experiences.</p><p>Exemplified on products like the Steam Deck and the Valve Index, engineers at Valve innovate on technologies that bridge the hazy divide between software and hardware solutions. Our engineers are versatile, self-directed, and empowered to bring the next generation of VR and hand-held gaming products to millions of customers world-wide.</p><p>Our team has senior, world-class experts bringing together the following areas:</p><ul><li>Software Development in C/C++</li><li>Linux &amp; Embedded OSes</li><li>Firmware Development</li><li>Controllers, Haptics, and other gaming inputs</li><li>Low-latency Wireless Controller Technologies</li><li>Low-latency Video Streaming Technologies (for both VR and 2D gaming)</li><li>Hardware Interfaces (cameras, IMUs, audio, USB, mixed signal)</li><li>Core VR Technologies (tracking, optical calibration, display customization)</li></ul></div>",
-        "extra_question": "How will you apply your expertise at Valve? We use this to ensure your resumé is reviewed by the right people.<br>(If you have a separate cover letter, you can attach it below.)"
+        "extra_question": "How will you apply your expertise at Valve? We use this to ensure your résumé is reviewed by the right people.<br>(If you have a separate cover letter, you can attach it below.)"
     },
     "57": {
         "reqid": 57,
