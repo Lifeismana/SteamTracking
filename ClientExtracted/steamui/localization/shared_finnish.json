@@ -791,7 +791,7 @@
     "Tooltip_TextChannel": "Chattaa ryhmän jäsenten kanssa",
     "Tooltip_TextChannelCreate": "Luo uusi tekstikanava",
     "Tooltip_NoPermissionChannelCreate": "Sinulla ei ole oikeutta luoda kanavia tässä ryhmächatissa",
-    "Tooltip_VoiceChannel": "Puhelu näillä kanavilla",
+    "Tooltip_VoiceChannel": "Äänichat näillä kanavilla",
     "Tooltip_VoiceChannelCreate": "Luo uusi äänikanava",
     "Tooltip_DismissVoice": "Hylkää kutsu",
     "Tooltip_MicStatus_Active": "Mikrofoni on päällä",

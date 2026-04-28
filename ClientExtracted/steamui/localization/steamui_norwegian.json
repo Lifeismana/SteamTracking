@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Rediger",
     "Settings_Controller_Config_Edit_Name": "Rediger navn",
     "Settings_Controller_BaseConfigurations": "Kontrolleroppsett utenfor spill",
-    "Settings_Controller_SCPairing": "Sammenkoble ny kontroller",
-    "Settings_Controller_SCPairing_Ibex": "Sammenkoble en ny kontroller",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Sammenkoble",
     "Settings_Controller_SCPairing_Enabled": "Start",
     "Settings_Controller_SCPairing_Accept": "Bekreft sammenkoblede enheter",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Flikkvinkel",
     "ControllerBinding_SnapModeFlickStick_Description": "Velg hvilken vinkel flikkspaken festes til – for en mer bestemt omdreining. Slå den helt av for uendret rotasjon. Eller bruk verdien i dødsone fremover for å kun feste til en vinkel fremover.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Dødsone fremover",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Flikkrotasjon skjer kun hvis den er mindre enn denne vinkelen (fra fremover). Nyttig hvis du vil sveipe uten å flikke.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Flikkrotasjon skjer ikke hvis spaken peker mot nord, innenfor denne vinkelen. Nyttig hvis du vil sveipe uten å flikke.",
     "ControllerBinding_SnapSmoothingFlickStick": "Utjevning ved flikk",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Utjevning ved flikk. Høyere = rask/øyeblikkelig. Lavere = utjevnet/gradvis.",
     "ControllerBinding_SweepSmoothingFlickStick": "Utjevning ved rotasjon",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Spillet lukkes om %1$s minutter",
     "Notification_TimedTrial_Enjoy": "Kos deg med prøveversjonen",
     "Notification_TimedTrial_Offline": "Prøveversjonen mistet forbindelsen",
-    "Notification_BatteryLow": "Lavt batteri – %1$s %",
+    "Notification_BatteryLow": "Enheten har lavt batteri",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s er tilgjengelig for strømming",
     "Notification_RemoteClientDisconnected": "%1$s er ikke lenger tilgjengelig",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Detaljer",
     "Settings_Controller_NoController": "Oppdaget ingen kontrollere. Koble til en kontroller for å behandle innstillingene dens i Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Hvis du har dårlig signal, sørg for at du har fri sikt fra Steam Controller til forsiden av Steam Machine. Wi-Fi-rutere og enkelte USB 3-enheter kan også forårsake signalproblemer hvis de er for nær Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Hvis du har dårlig signal, sørg for at du har fri sikt fra Steam Controller til Steam Controller Puck. Wi-Fi-rutere og enkelte USB 3-enheter kan også forårsake signalproblemer hvis de er for nær pucken."
+    "Settings_Controller_RSSI_Puck_Description": "Hvis du har dårlig signal, sørg for at du har fri sikt fra Steam Controller til Steam Controller Puck. Wi-Fi-rutere og enkelte USB 3-enheter kan også forårsake signalproblemer hvis de er for nær pucken.",
+    "ControllerWelcome_Skip": "Hopp over",
+    "Notification_ControllerBatteryLow": "Lavt batteri – %1$s %"
 }

@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "編集",
     "Settings_Controller_Config_Edit_Name": "名前を編集",
     "Settings_Controller_BaseConfigurations": "ゲーム以外のコントローラのレイアウト",
-    "Settings_Controller_SCPairing": "新しいコントローラをペアリング",
-    "Settings_Controller_SCPairing_Ibex": "新しいコントローラをペアリング",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "ペアリング",
     "Settings_Controller_SCPairing_Enabled": "開始",
     "Settings_Controller_SCPairing_Accept": "ペアリング済みデバイスを確認",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "スナップアングル",
     "ControllerBinding_SnapModeFlickStick_Description": "フリックターンをスナップさせる角度を選択して、より安定した回転を得ます。純粋なターンにするには、完全にオフにします。または、前方向デッドゾーンの値を使用して、調整可能なフロントアングルにのみスナップさせることもできます。",
     "ControllerBinding_ForwardSnapAngleFlickStick": "フロントアングルのデッドゾーン",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "フリックターンは（前方から）この角度以下の場合にのみ発生します。フリックターンなしでスイープしたい場合に有効です。",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "スティックが北を向いている場合、この角度内であれば、フリックターンは発生しません。フリックターンをせずにスイープしたい場合に便利です。",
     "ControllerBinding_SnapSmoothingFlickStick": "フリックターン精度",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "フリックターンのスムージング。高い＝高速／即効。低い＝滑らか／段階的。",
     "ControllerBinding_SweepSmoothingFlickStick": "スイープ精度",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "ゲームは%1$s分後に終了します",
     "Notification_TimedTrial_Enjoy": "トライアルをお楽しみください",
     "Notification_TimedTrial_Offline": "ゲームトライアルの接続が切断されました",
-    "Notification_BatteryLow": "デバイスのバッテリー残量低下－%1$s%",
+    "Notification_BatteryLow": "デバイスのバッテリー残量低下",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$sのストリーミングが可能です",
     "Notification_RemoteClientDisconnected": "%1$sは利用できなくなりました",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "詳細",
     "Settings_Controller_NoController": "コントローラが検出されませんでした。Steamでコントローラの設定を管理するには、コントローラを接続してください。",
     "Settings_Controller_RSSI_Machine_Description": "信号が弱い場合は、Steam ControllerとSteam Machineの前面の間に遮るものがないことを確認してください。また、Wi-Fiルーターや特定のUSB 3周辺機器がSteam Machineの近くにあると、信号の問題が発生する可能性があります。",
-    "Settings_Controller_RSSI_Puck_Description": "信号が弱い場合は、Steam ControllerとSteam Controller Puckの間に遮るものがないことを確認してください。また、Wi-Fiルーターや特定のUSB 3周辺機器がPuckの近くにあると、信号の問題が発生する可能性があります。"
+    "Settings_Controller_RSSI_Puck_Description": "信号が弱い場合は、Steam ControllerとSteam Controller Puckの間に遮るものがないことを確認してください。また、Wi-Fiルーターや特定のUSB 3周辺機器がPuckの近くにあると、信号の問題が発生する可能性があります。",
+    "ControllerWelcome_Skip": "スキップ",
+    "Notification_ControllerBatteryLow": "バッテリー残量低下－%1$s%"
 }

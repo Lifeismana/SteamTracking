@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Modifier",
     "Settings_Controller_Config_Edit_Name": "Modifier le nom",
     "Settings_Controller_BaseConfigurations": "Configuration du contrôleur hors jeu",
-    "Settings_Controller_SCPairing": "Associer un nouveau contrôleur",
-    "Settings_Controller_SCPairing_Ibex": "Associer un nouveau contrôleur",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Associer",
     "Settings_Controller_SCPairing_Enabled": "Démarrer",
     "Settings_Controller_SCPairing_Accept": "Confirmer les périphériques associés",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Angle d'alignement automatique",
     "ControllerBinding_SnapModeFlickStick_Description": "Pour des rotations plus contrôlées, sélectionnez l'angle d'alignement automatique à appliquer lors d'une rotation rapide. Désactivez cette option si vous souhaitez conserver une rotation régulière, ou configurez la valeur de la zone morte frontale pour vous aligner uniquement sur un angle frontal ajustable.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Zone morte de l'angle frontal",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Le mouvement rapide du stick ne se produira que s'il est inférieur à cet angle (en partant de devant). Cela est utile si vous souhaitez regarder autour de vous sans faire de déplacement rapide.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "La rotation rapide ne se produira pas quand le stick est orienté vers le nord, dans les limites de l'angle. Cela est utile si vous souhaitez regarder autour de vous sans faire de déplacement rapide.",
     "ControllerBinding_SnapSmoothingFlickStick": "Fluidité de la rotation rapide",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Fluidité de la rotation rapide. Valeurs élevées = rotation rapide/instantanée. Valeurs réduites = virage fluide/progressif.",
     "ControllerBinding_SweepSmoothingFlickStick": "Fluidité du mouvement circulaire",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Le jeu va se fermer dans %1$ minutes",
     "Notification_TimedTrial_Enjoy": "Profitez bien de votre essai",
     "Notification_TimedTrial_Offline": "La version d'essai du jeu a perdu sa connexion",
-    "Notification_BatteryLow": "Batterie faible (%1$s %)",
+    "Notification_BatteryLow": "Batterie faible",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s est disponible pour le streaming",
     "Notification_RemoteClientDisconnected": "%1$s n'est plus disponible",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Informations",
     "Settings_Controller_NoController": "Aucun contrôleur n'a été détecté. Connectez un contrôleur pour gérer ses paramètres dans Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Si le signal est faible, vérifiez que la ligne de vision entre votre Steam Controller et la façade de votre Steam Machine ne soit pas obstruée. Les routeurs wifi et certains périphériques USB 3 ont aussi parfois une incidence sur le signal s'ils se trouvent trop près de votre Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Si le signal est faible, vérifiez qu'aucun obtacle ne barre la ligne de vision entre votre Steam Controller et le Steam Controller Puck. Les routeurs wifi et certains périphériques USB 3 ont aussi parfois une incidence sur le signal s'ils se trouvent trop près du Steam Controller Puck."
+    "Settings_Controller_RSSI_Puck_Description": "Si le signal est faible, vérifiez qu'aucun obtacle ne barre la ligne de vision entre votre Steam Controller et le Steam Controller Puck. Les routeurs wifi et certains périphériques USB 3 ont aussi parfois une incidence sur le signal s'ils se trouvent trop près du Steam Controller Puck.",
+    "ControllerWelcome_Skip": "Ignorer",
+    "Notification_ControllerBatteryLow": "Batterie faible (%1$s %)"
 }

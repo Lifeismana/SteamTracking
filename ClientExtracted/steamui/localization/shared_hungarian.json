@@ -2629,7 +2629,7 @@
     "SteamDeckFeedback_UserPrefence_Yes": "Igen",
     "SteamDeckFeedback_UserPrefence_No": "Nem, köszönöm",
     "SteamDeckFeedback_UserPrefence_LearnMore": "Tudj meg többet",
-    "GameFrameRateReporting_Question": "Gyűjthetünk névtelenített játékmeneti képkockaszámadatokat a SteamOS-eszközök jobbá tételére minden játékosnak? Ezt később meg tudod változtatni a Beállításokban.",
+    "GameFrameRateReporting_Question": "Gyűjthetünk névtelenített játékmeneti képkockaszámadatokat a SteamOS készülékek jobbá tételére minden játékosnak? Ezt később meg tudod változtatni a Beállításokban.",
     "GameFrameRateReporting_Response_Yes": "Igen",
     "GameFrameRateReporting_Response_No": "Nem, köszönöm",
     "GameFrameRateReporting_Confirmation_Yes": "Köszönjük, ezt bármikor meg tudod változtatni a fiókbeállításokban.",

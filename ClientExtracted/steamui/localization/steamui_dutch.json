@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Bewerken",
     "Settings_Controller_Config_Edit_Name": "Naam bewerken",
     "Settings_Controller_BaseConfigurations": "Niet-spellen-controllerlay-outs",
-    "Settings_Controller_SCPairing": "Nieuwe Controller koppelen",
-    "Settings_Controller_SCPairing_Ibex": "Een nieuwe Controller koppelen",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Koppelen",
     "Settings_Controller_SCPairing_Enabled": "Starten",
     "Settings_Controller_SCPairing_Accept": "Gekoppelde apparaten bevestigen",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Verspringhoek",
     "ControllerBinding_SnapModeFlickStick_Description": "Kies de hoek waarnaar je positie verspringt voor meer controle bij een directe draai. Schakel deze optie volledig uit voor een draai zonder correctie, of stel een voorwaartse dode zone in, om alleen naar een zelf opgegeven voorwaartse hoek te verspringen.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Dode zone: hoek voorwaarts",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "De directe draai wordt alleen uitgevoerd als de hoek kleiner is dan deze waarde (van vooruit gezien). Handig als je langzaam wilt draaien zonder een directe draai uit te voeren.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "De directe draai wordt niet uitgevoerd als de stick in deze hoek naar het noorden gericht wordt. Handig als je een langzame draai wilt uitvoeren in plaats van een directe draai.",
     "ControllerBinding_SnapSmoothingFlickStick": "Vloeiendheid directe draai",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Afvlakken directe draai. Hoger = snel/onmiddellijk. Lager = afgevlakt/geleidelijk.",
     "ControllerBinding_SweepSmoothingFlickStick": "Vloeiendheid langzame draai",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Het spel sluit af over %1$s minuten",
     "Notification_TimedTrial_Enjoy": "Veel plezier met je proefversie",
     "Notification_TimedTrial_Offline": "Verbinding van proefversie verbroken",
-    "Notification_BatteryLow": "Batterij bijna leeg – %1$s%",
+    "Notification_BatteryLow": "Batterij bijna leeg",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s is beschikbaar voor streamen",
     "Notification_RemoteClientDisconnected": "%1$s is niet meer beschikbaar",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Details",
     "Settings_Controller_NoController": "Geen controllers gedetecteerd. Verbind een controller om de instellingen in Steam te beheren.",
     "Settings_Controller_RSSI_Machine_Description": "Als het signaal zwak is, zorg er dan voor dat niets het signaal tussen de Steam Controller en de voorkant van de Steam Machine blokkeert. Wifirouters en bepaalde USB-3-randapparatuur kunnen ook signaalproblemen veroorzaken als ze te dicht bij de Steam Machine in de buurt staan.",
-    "Settings_Controller_RSSI_Puck_Description": "Als het signaal zwak is, zorg er dan voor dat niets het signaal tussen de Steam Controller en de Steam Controller Puck blokkeert. Wifirouters en bepaalde USB-3-randapparatuur kunnen ook signaalproblemen veroorzaken als ze te dicht bij de Puck in de buurt staan."
+    "Settings_Controller_RSSI_Puck_Description": "Als het signaal zwak is, zorg er dan voor dat niets het signaal tussen de Steam Controller en de Steam Controller Puck blokkeert. Wifirouters en bepaalde USB-3-randapparatuur kunnen ook signaalproblemen veroorzaken als ze te dicht bij de Puck in de buurt staan.",
+    "ControllerWelcome_Skip": "Overslaan",
+    "Notification_ControllerBatteryLow": "Batterij bijna leeg – %1$s%"
 }

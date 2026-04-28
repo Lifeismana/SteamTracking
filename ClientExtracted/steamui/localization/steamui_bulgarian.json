@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Редактиране",
     "Settings_Controller_Config_Edit_Name": "Редактиране на име",
     "Settings_Controller_BaseConfigurations": "Неигрални оформления за контролер",
-    "Settings_Controller_SCPairing": "Сдвояване на нов контролер",
-    "Settings_Controller_SCPairing_Ibex": "Сдвояване на нов контролер",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Сдвояване",
     "Settings_Controller_SCPairing_Enabled": "Стартиране",
     "Settings_Controller_SCPairing_Accept": "Потвърждаване на сдвоени устройства",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Ъгъл на прилепване",
     "ControllerBinding_SnapModeFlickStick_Description": "Изберете ъгъла за прилепване на обръщането със запращане за по-постоянно обръщане. Изключете го напълно за неподправени обръщания. Или използвайте стойността за предна мъртва зона с цел прилепване към настройваем преден ъгъл.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Преден ъгъл на мъртвата зона",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Обръщането със запращане ще настъпва само при по-малък от този ъгъл (от запращане напред). Полезно е, ако искате да прокарвате, без да обръщате със запращане.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Обръщането със запращане няма да настъпва, ако стикът е насочен на север, в рамките на този ъгъл. Полезно е, ако искате да прокарвате, без да обръщате със запращане.",
     "ControllerBinding_SnapSmoothingFlickStick": "Обтегнатост на обръщането със запращане",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Заглаждане на обръщането със запращане. По-високо = Бързо/незабавно. По-ниско = Плавно/постепенно.",
     "ControllerBinding_SweepSmoothingFlickStick": "Обтегнатост на прокарване",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Играта ще се затвори след %1$s минути",
     "Notification_TimedTrial_Enjoy": "Насладете се на своя пробен период",
     "Notification_TimedTrial_Offline": "Пробният период за играта загуби връзка",
-    "Notification_BatteryLow": "Ниско ниво на батерията за у-вото — %1$s%",
+    "Notification_BatteryLow": "Ниско ниво на батерията за у-вото",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s е достъпна за излъчване",
     "Notification_RemoteClientDisconnected": "%1$s вече е недостъпна",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Подробности",
     "Settings_Controller_NoController": "Не са засечени контролери. Свържете контролер, за да управлявате настройките му в Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Ако сигналът Ви е слаб, уверете се, че разполагате с пряка видимост между Вашия Steam контролер и предната част на Steam машината. WiFi рутерите и някои USB 3 периферни устройства също могат да причиняват проблеми със сигнала, ако са прекалено близо до Steam машината Ви.",
-    "Settings_Controller_RSSI_Puck_Description": "Ако сигналът Ви е слаб, уверете се, че разполагате с пряка видимост между Вашия Steam контролер и шайбата за Steam контролера. WiFi рутерите и някои USB 3 периферни устройства също могат да причиняват проблеми със сигнала, ако са прекалено близо до шайбата Ви."
+    "Settings_Controller_RSSI_Puck_Description": "Ако сигналът Ви е слаб, уверете се, че разполагате с пряка видимост между Вашия Steam контролер и шайбата за Steam контролера. WiFi рутерите и някои USB 3 периферни устройства също могат да причиняват проблеми със сигнала, ако са прекалено близо до шайбата Ви.",
+    "ControllerWelcome_Skip": "Прескачане",
+    "Notification_ControllerBatteryLow": "Ниско ниво на батерията — %1$s%"
 }

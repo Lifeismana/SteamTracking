@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Змінити",
     "Settings_Controller_Config_Edit_Name": "Редагувати назву",
     "Settings_Controller_BaseConfigurations": "Неігрові розкладки контролера",
-    "Settings_Controller_SCPairing": "Поєднати новий контролер",
-    "Settings_Controller_SCPairing_Ibex": "Поєднати новий контролер",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Поєднати",
     "Settings_Controller_SCPairing_Enabled": "Розпочати",
     "Settings_Controller_SCPairing_Accept": "Підтвердити поєднані пристрої",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Кут фіксації",
     "ControllerBinding_SnapModeFlickStick_Description": "Кут різкого нахилу для плавнішого обертання. Вимкніть повністю для звичайного обертання або використовуйте значення «Лише вперед» для фіксації під переднім кутом, який можна змінити.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Мертва зона переднього кута",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Різкий нахил стіка спрацює лише тоді, якщо його кут менший за це значення (починаючи з руху вперед). Доцільно для обертання без різкого нахилу.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Різкий нахил стіка не спрацює, якщо він направлений вгору в межах цього кута. Доцільно для обертання без різкого нахилу стіка.",
     "ControllerBinding_SnapSmoothingFlickStick": "Поступовість різкого нахилу",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Згладжування різкого нахилу. Вище значення = швидкий/миттєвий. Нижче значення = згладжений/поступовий.",
     "ControllerBinding_SweepSmoothingFlickStick": "Поступовість оберту",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Гра закриється через %1$s хв",
     "Notification_TimedTrial_Enjoy": "Насолоджуйтеся пробною версією",
     "Notification_TimedTrial_Offline": "Пробна версія гри втратила з’єднання",
-    "Notification_BatteryLow": "Низький заряд акумулятора: %1$s%",
+    "Notification_BatteryLow": "Низький заряд акумулятора",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s: є доступ для трансляції",
     "Notification_RemoteClientDisconnected": "%1$s: більше немає доступу",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Деталі",
     "Settings_Controller_NoController": "Контролерів не виявлено. Підключіть контролер для керування його налаштуваннями в Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Якщо у вас слабкий сигнал, переконайтеся, що між Steam Controller і передньою частиною Steam Machine немає перешкод. Маршрутизатори Wi-Fi та деякі підключені через USB 3.0 периферійні пристрої також можуть спричиняти проблеми із сигналом, якщо розташовані занадто близько до Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Якщо у вас слабкий сигнал, переконайтеся, що між Steam Controller та Steam Controller Puck немає перешкод. Маршрутизатори Wi-Fi та деякі підключені через USB 3.0 периферійні пристрої також можуть спричиняти проблеми із сигналом, якщо розташовані занадто близько до Puck."
+    "Settings_Controller_RSSI_Puck_Description": "Якщо у вас слабкий сигнал, переконайтеся, що між Steam Controller та Steam Controller Puck немає перешкод. Маршрутизатори Wi-Fi та деякі підключені через USB 3.0 периферійні пристрої також можуть спричиняти проблеми із сигналом, якщо розташовані занадто близько до Puck.",
+    "ControllerWelcome_Skip": "Пропустити",
+    "Notification_ControllerBatteryLow": "Низький заряд акумулятора: %1$s%"
 }

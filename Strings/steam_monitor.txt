@@ -227,12 +227,12 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
-02:38:19
-02:38:22
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
+20:40:13
+20:40:17
 21CUtlCStringConversion
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
@@ -909,7 +909,6 @@ transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
 true
-tvHH
 typeinfo fn for
 typeinfo for
 typeinfo for __cxxabiv1::__class_type_info

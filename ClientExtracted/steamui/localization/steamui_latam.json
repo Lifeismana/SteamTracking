@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Modificar",
     "Settings_Controller_Config_Edit_Name": "Cambiar nombre",
     "Settings_Controller_BaseConfigurations": "Disposiciones del control fuera del juego",
-    "Settings_Controller_SCPairing": "Emparejar un control nuevo",
-    "Settings_Controller_SCPairing_Ibex": "Emparejar un control nuevo",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Emparejar",
     "Settings_Controller_SCPairing_Enabled": "Iniciar",
     "Settings_Controller_SCPairing_Accept": "Confirmar dispositivos emparejados",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Ajustar ángulo",
     "ControllerBinding_SnapModeFlickStick_Description": "Para una mayor consistencia, elige el ángulo al que los giros súbitos se ajustarán. Apágalo completamente para que los giros no resulten alterados. También puedes utilizar el valor \"Avanzar zona muerta\" para que se ajuste solamente a un ángulo frontal ajustable.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Zona muerta del ángulo delantero",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "El giro súbito solo tendrá lugar si es menor que este ángulo (desde delante). Esto es útil si quieres rotar sin usar el giro súbito.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "El giro súbito no se producirá si el stick apunta hacia arriba, dentro de este ángulo. Es útil si quieres rotar sin giros súbitos.",
     "ControllerBinding_SnapSmoothingFlickStick": "Ajuste del giro súbito",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Suavizado del giro súbito. Más alto = Rápido o instantáneo. Más bajo = Suave o Gradual.",
     "ControllerBinding_SweepSmoothingFlickStick": "Ajuste de la rotación",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "El juego se cerrará dentro de %1$s min",
     "Notification_TimedTrial_Enjoy": "Disfruta de tu prueba",
     "Notification_TimedTrial_Offline": "La prueba del juego perdió la conexión",
-    "Notification_BatteryLow": "Batería baja del dispositivo: %1$s %",
+    "Notification_BatteryLow": "Batería del dispositivo baja",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s está disponible para retransmitir",
     "Notification_RemoteClientDisconnected": "%1$s ya no está disponible",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Detalles",
     "Settings_Controller_NoController": "No se detectó ningún control. Conecta un control para configurarlo en Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Si tienes una señal débil, asegúrate de tener una línea de visión desde tu Steam Controller hacia el frente de tu Steam Machine. Los routers Wi-Fi y ciertos periféricos USB 3 también pueden causar problemas de señal si están demasiado cerca de tu Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Si tienes una señal débil, asegúrate de tener una línea de visión desde tu Steam Controller hacia el frente del Puck de tu Steam Controller. Los routers Wi-Fi y ciertos periféricos USB 3 también pueden causar problemas de señal si están demasiado cerca de tu Puck."
+    "Settings_Controller_RSSI_Puck_Description": "Si tienes una señal débil, asegúrate de tener una línea de visión desde tu Steam Controller hacia el frente del Puck de tu Steam Controller. Los routers Wi-Fi y ciertos periféricos USB 3 también pueden causar problemas de señal si están demasiado cerca de tu Puck.",
+    "ControllerWelcome_Skip": "Saltar",
+    "Notification_ControllerBatteryLow": "Batería baja: %1$s %"
 }

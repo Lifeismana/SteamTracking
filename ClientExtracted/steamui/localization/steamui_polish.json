@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Edytuj",
     "Settings_Controller_Config_Edit_Name": "Edytuj nazwę",
     "Settings_Controller_BaseConfigurations": "Układy kontrolera poza grą",
-    "Settings_Controller_SCPairing": "Sparuj nowy kontroler",
-    "Settings_Controller_SCPairing_Ibex": "Sparuj nowy kontroler",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Sparuj",
     "Settings_Controller_SCPairing_Enabled": "Rozpocznij",
     "Settings_Controller_SCPairing_Accept": "Potwierdź sparowane urządzenia",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Kąt przeskoku",
     "ControllerBinding_SnapModeFlickStick_Description": "Wybierz, do jakiego kąta przeskakuje skręt drążkiem, by osiągnąć bardziej jednolity ruch. Wyłącz tę opcję całkowicie, by ruch nie był modyfikowany w ogóle, lub użyj opcji „Przednia martwa strefa”, by przeskakiwać tylko do przedniego kąta, który możesz dostosować.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Przednia martwa strefa z danym kątem",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Skręt drążkiem nastąpi tylko wtedy, gdy jest on mniejszy niż ten kąt (zaczynając od przodu). Jest to przydatne, jeśli chcesz zatoczyć łuk drążkiem bez skrętu.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Skręt drążkiem nie nastąpi, jeżeli jest on skierowany na północ w obrębie tego kąta. Jest to przydatne, jeśli chcesz zatoczyć łuk drążkiem bez skrętu.",
     "ControllerBinding_SnapSmoothingFlickStick": "Responsywność skrętu drążkiem",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Wygładzanie skrętu drążkiem. Wyższa wartość = szybki/natychmiastowy skręt. Niższa wartość = wygładzony/stopniowy skręt.",
     "ControllerBinding_SweepSmoothingFlickStick": "Responsywność zataczania łuku",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Gra zostanie zamknięta za %1$s min",
     "Notification_TimedTrial_Enjoy": "Miłej zabawy w wersji próbnej",
     "Notification_TimedTrial_Offline": "Wersja próbna gry utraciła połączenie",
-    "Notification_BatteryLow": "Niski stan baterii urządzenia – %1$s%",
+    "Notification_BatteryLow": "Niski stan akumulatora urządzenia",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "Urządzenie %1$s jest dostępne do strumieniowania",
     "Notification_RemoteClientDisconnected": "Urządzenie %1$s nie jest już dostępne",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Szczegóły",
     "Settings_Controller_NoController": "Nie wykryto kontrolerów. Podłącz kontroler, by zarządzać jego ustawieniami na Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Jeśli twój sygnał jest słaby, upewnij się, że nic nie przesłania widoku między Steam Controllerem a przodem Steam Machine. Routery Wi-Fi i niektóre akcesoria na USB 3 mogą również powodować problemy z sygnałem, jeśli są za blisko Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Jeśli twój sygnał jest słaby, upewnij się, że nic nie przesłania widoku między Steam Controllerem a przodem Steam Controller Puckiem. Routery Wi-Fi i niektóre akcesoria na USB 3 mogą również powodować problemy z sygnałem, jeśli są za blisko Pucka."
+    "Settings_Controller_RSSI_Puck_Description": "Jeśli twój sygnał jest słaby, upewnij się, że nic nie przesłania widoku między Steam Controllerem a przodem Steam Controller Puckiem. Routery Wi-Fi i niektóre akcesoria na USB 3 mogą również powodować problemy z sygnałem, jeśli są za blisko Pucka.",
+    "ControllerWelcome_Skip": "Pomiń",
+    "Notification_ControllerBatteryLow": "Niski poziom naładowania akumulatora – %1$s%"
 }

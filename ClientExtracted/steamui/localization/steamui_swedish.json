@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Ändra",
     "Settings_Controller_Config_Edit_Name": "Ändra namn",
     "Settings_Controller_BaseConfigurations": "Handkontrollayouter för annat än spel",
-    "Settings_Controller_SCPairing": "Parkoppla ny kontroll",
-    "Settings_Controller_SCPairing_Ibex": "Parkoppla en ny kontroll",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Parkoppla",
     "Settings_Controller_SCPairing_Enabled": "Starta",
     "Settings_Controller_SCPairing_Accept": "Bekräfta parkopplade enheter",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Förankringsvinkel",
     "ControllerBinding_SnapModeFlickStick_Description": "Välj vilken vinkel Flick Stick-rotationen ska förankras till för att göra rotationen jämnare. Stäng av helt för oförändrad rotation. Eller använd värdet för dödzon framåt för att enbart fästa till en vinkel framåt.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Dödzon framåt",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Flick Stick-rotationen sker endast om den är lägre än denna vinkel (framifrån). Användbart om du vill svepa utan Flick Stick-rotation.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Flick Stick-rotationen sker inte om spaken pekar mot norr inom denna vinkel. Användbart om du vill svepa utan en Flick Stick-rotation.",
     "ControllerBinding_SnapSmoothingFlickStick": "Utjämning vid Flick Stick-rotation",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Utjämning av Flick Stick-rotation. Högre = Snabb/omedelbar. Lägre = utjämnad/gradvis.",
     "ControllerBinding_SweepSmoothingFlickStick": "Utjämning vid svep",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Spelet stängs ned om %1$s minuter",
     "Notification_TimedTrial_Enjoy": "Hoppas du gillar utvärderingsversionen",
     "Notification_TimedTrial_Offline": "Utvärderingsversionen förlorade anslutningen",
-    "Notification_BatteryLow": "Låg batterinivå – %1$s%",
+    "Notification_BatteryLow": "Låg batterinivå på enheten",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s är tillgänglig för streaming",
     "Notification_RemoteClientDisconnected": "%1$s är inte längre tillgänglig",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Detaljer",
     "Settings_Controller_NoController": "Inga handkontroller upptäckta. Anslut en kontroll för att hantera inställningarna i Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Om signalen är svag, se till att du har fri sikt mellan Steam Controller och framsidan av Steam Machine. Wifi-routrar och vissa usb 3-tillbehör kan också orsaka signalproblem om de är för nära Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Om signalen är svag, se till att du har fri sikt mellan Steam Controller och Steam Controller Puck. Wifi-routrar och vissa usb 3-tillbehör kan också orsaka signalproblem om de är för nära pucken."
+    "Settings_Controller_RSSI_Puck_Description": "Om signalen är svag, se till att du har fri sikt mellan Steam Controller och Steam Controller Puck. Wifi-routrar och vissa usb 3-tillbehör kan också orsaka signalproblem om de är för nära pucken.",
+    "ControllerWelcome_Skip": "Hoppa över",
+    "Notification_ControllerBatteryLow": "Låg batterinivå – %1$s %"
 }

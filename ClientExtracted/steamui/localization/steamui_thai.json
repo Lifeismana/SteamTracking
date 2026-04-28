@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "แก้ไข",
     "Settings_Controller_Config_Edit_Name": "แก้ไขชื่อ",
     "Settings_Controller_BaseConfigurations": "รูปแบบของคอนโทรลเลอร์ที่ใช้นอกเกม",
-    "Settings_Controller_SCPairing": "เชื่อมโยงคอนโทรลเลอร์ใหม่",
-    "Settings_Controller_SCPairing_Ibex": "เชื่อมโยงคอนโทรลเลอร์ใหม่",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "เชื่อมโยง",
     "Settings_Controller_SCPairing_Enabled": "เริ่ม",
     "Settings_Controller_SCPairing_Accept": "ยืนยันอุปกรณ์ที่เชื่อมโยงแล้ว",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "มุมสแนป",
     "ControllerBinding_SnapModeFlickStick_Description": "เลือกมุมที่การตวัด-หมุนจะสแนปไปหา เพื่อให้มีการหมุนที่สม่ำเสมอมากขึ้น ปิดค่านี้เพื่อให้หมุนโดยไม่เปลี่ยนแปลง หรือใช้ค่าเดดโซนของมุมด้านหน้า เพื่อสแนปไปยังมุมด้านหน้าที่หมุนได้เท่านั้น",
     "ControllerBinding_ForwardSnapAngleFlickStick": "เดดโซนของมุมด้านหน้า",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "การตวัด-หมุนจะเกิดขึ้นเฉพาะเมื่อค่าต่ำกว่ามุมนี้ (จากข้างหน้า) จะมีประโยชน์ในกรณีที่คุณต้องการสวีปโดยไม่ตวัด-หมุน",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "การตวัดหันจะไม่เกิดขึ้นหากสติกชี้ไปทางทิศเหนือภายในมุมนี้ ซึ่งจะเป็นประโยชน์หากคุณต้องการสวีปโดยไม่ตวัดหัน",
     "ControllerBinding_SnapSmoothingFlickStick": "ความแม่นยำการตวัด-หมุน",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "การปรับเรียบการตวัด-หมุน ค่าสูงขึ้น = รวดเร็ว/ทันที ค่าต่ำลง = ได้รับการปรับเรียบ/เปลี่ยนช้า ๆ",
     "ControllerBinding_SweepSmoothingFlickStick": "ความแม่นยำการสวีป",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "เกมจะปิดลงใน %1$s นาที",
     "Notification_TimedTrial_Enjoy": "ขอให้สนุกกับการทดลองเล่นของคุณ",
     "Notification_TimedTrial_Offline": "การทดลองเล่นเกมขาดการเชื่อมต่อ",
-    "Notification_BatteryLow": "แบตเตอรี่ของอุปกรณ์เหลือน้อย - %1$s%",
+    "Notification_BatteryLow": "แบตเตอรี่ของอุปกรณ์เหลือน้อย",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s พร้อมให้สตรีมแล้ว",
     "Notification_RemoteClientDisconnected": "%1$s ไม่พร้อมใช้งานอีกต่อไป",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "รายละเอียด",
     "Settings_Controller_NoController": "ไม่พบคอนโทรลเลอร์ใด ๆ โปรดเชื่อมต่อคอนโทรลเลอร์เพื่อจัดการการตั้งค่าใน Steam",
     "Settings_Controller_RSSI_Machine_Description": "หากสัญญาณของคุณอ่อน ตรวจสอบให้แน่ใจว่า Steam Controller ของคุณเป็นแนวตรงกับด้านหน้าของ Steam Machine นอกจากนี้เราเตอร์ Wi-Fi และอุปกรณ์ต่อพ่วงบางอย่างที่ใช้สาย USB 3 ยังสามารถทำให้เกิดปัญหาเกี่ยวกับสัญญาณได้ด้วย หากอยู่ใกล้กับ Steam Machine ของคุณมากเกินไป",
-    "Settings_Controller_RSSI_Puck_Description": "หากสัญญาณของคุณอ่อน ตรวจสอบให้แน่ใจว่า Steam Controller ของคุณเป็นแนวตรงกับด้านหน้าของ Steam Controller Puck นอกจากนี้เราเตอร์ Wi-Fi และอุปกรณ์ต่อพ่วงบางอย่างที่ใช้สาย USB 3 ยังสามารถทำให้เกิดปัญหาเกี่ยวกับสัญญาณได้ด้วย หากอยู่ใกล้กับ Puck ของคุณมากเกินไป"
+    "Settings_Controller_RSSI_Puck_Description": "หากสัญญาณของคุณอ่อน ตรวจสอบให้แน่ใจว่า Steam Controller ของคุณเป็นแนวตรงกับด้านหน้าของ Steam Controller Puck นอกจากนี้เราเตอร์ Wi-Fi และอุปกรณ์ต่อพ่วงบางอย่างที่ใช้สาย USB 3 ยังสามารถทำให้เกิดปัญหาเกี่ยวกับสัญญาณได้ด้วย หากอยู่ใกล้กับ Puck ของคุณมากเกินไป",
+    "ControllerWelcome_Skip": "ข้าม",
+    "Notification_ControllerBatteryLow": "แบตเตอรี่เหลือน้อย - %1$s%"
 }

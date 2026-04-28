@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Szerkesztés",
     "Settings_Controller_Config_Edit_Name": "Név szerkesztése",
     "Settings_Controller_BaseConfigurations": "Nem játékvezérlőhöz való elrendezések",
-    "Settings_Controller_SCPairing": "Új játékvezérlő párosítása",
-    "Settings_Controller_SCPairing_Ibex": "Új játékvezérlő párosítása",
+    "Settings_Controller_SCPairing": "Új Steam Játékvezérlő (2015) párosítása",
+    "Settings_Controller_SCPairing_Ibex": "Új Steam Controller párosítása",
     "Settings_Controller_SCPairing_Pair": "Párosítás",
     "Settings_Controller_SCPairing_Enabled": "Indítás",
     "Settings_Controller_SCPairing_Accept": "Párosított eszközök megerősítése",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Igazodási szög",
     "ControllerBinding_SnapModeFlickStick_Description": "Válaszd ki, milyen szöghöz igazodjon a pöccintéses fordulás a következetesebb fordulás érdekében. Korlátozatlan forduláshoz teljesen kapcsold ki, beállítható elülső szöghöz igazításhoz pedig válaszd a „Csak előre holtsáv” értéket.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Elülső szög holtsáv",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "A pöccintéses fordulás csak akkor történik meg, ha az ennél a szögnél kisebb (az előre irányhoz képest). Akkor hasznos, ha pöccintéses fordulás nélkül akarsz körözni.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "A pöccintéses fordulás nem fog megtörténni, ha a kar észak felé mutat e szögön belül. Akkor hasznos, ha pöccintéses fordulás nélkül akarsz körözni.",
     "ControllerBinding_SnapSmoothingFlickStick": "Pöccintéses fordulás keménysége",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "A pöccintéses fordulás simítása. Magasabb = gyors / azonnali. Alacsonyabb = simított / fokozatos.",
     "ControllerBinding_SweepSmoothingFlickStick": "Körözés keménysége",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "A játék %1$s perc múlva bezárul.",
     "Notification_TimedTrial_Enjoy": "Jó szórakozást próbaidőszakodhoz!",
     "Notification_TimedTrial_Offline": "A próbaverzió elvesztette a kapcsolatot.",
-    "Notification_BatteryLow": "Akkumulátortöltöttség alacsony – %1$s%",
+    "Notification_BatteryLow": "Alacsony készüléktöltöttség",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "A(z) %1$s elérhető továbbításra",
     "Notification_RemoteClientDisconnected": "A(z) %1$s már nem érhető el",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Részletek",
     "Settings_Controller_NoController": "Nem észlelhető játékvezérlő. Csatlakoztass egy játékvezérlőt a beállításainak kezelésére a Steamben.",
     "Settings_Controller_RSSI_Machine_Description": "Ha gyenge a jel, győződj meg róla, hogy a Steam Controller rálát a Steam Machine-ed elejére. A WiFi routerek és bizonyos USB 3 perifériák szintén okozhatnak jelproblémákat, ha túl közel vannak a Steam Machine-edhez.",
-    "Settings_Controller_RSSI_Puck_Description": "Ha gyenge a jel, győződj meg róla, hogy a Steam Controller rálát a Steam Controller Puck-odra. A WiFi routerek és bizonyos USB 3 perifériák szintén okozhatnak jelproblémákat, ha túl közel vannak a Puckodhoz."
+    "Settings_Controller_RSSI_Puck_Description": "Ha gyenge a jel, győződj meg róla, hogy a Steam Controller rálát a Steam Controller Puck-odra. A WiFi routerek és bizonyos USB 3 perifériák szintén okozhatnak jelproblémákat, ha túl közel vannak a Puckodhoz.",
+    "ControllerWelcome_Skip": "Kihagyás",
+    "Notification_ControllerBatteryLow": "Alacsony akkumulátortöltöttség – %1$s%"
 }

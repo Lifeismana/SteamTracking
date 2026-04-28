@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Editează",
     "Settings_Controller_Config_Edit_Name": "Editează numele",
     "Settings_Controller_BaseConfigurations": "Configurații pentru controler (în afara jocului)",
-    "Settings_Controller_SCPairing": "Asociază un controler nou",
-    "Settings_Controller_SCPairing_Ibex": "Asociază un controler nou",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Asociază",
     "Settings_Controller_SCPairing_Enabled": "Start",
     "Settings_Controller_SCPairing_Accept": "Confirmă dispozitivele asociate",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Unghiul de aliniere",
     "ControllerBinding_SnapModeFlickStick_Description": "Alege unghiul la care întoarcerea prin smucire determină alinierea rapidă, pentru o rotație mai precisă. Dezactivează opțiunea pentru ca rotirile să nu fie deloc modificate. Sau utilizează valoarea zonei moarte frontale pentru alinierea rapidă în cazul unui unghi frontal care poate fi modificat.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Zona moartă a unghiului frontal",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Întoarcerea prin smucire se produce numai dacă valoarea este mai mică decât acest unghi (pe direcția frontală). Este utilă dacă dorești o scrutare, nu o întoarcere.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Întoarcerea prin smucire nu se va produce dacă stickul este îndreptat spre nord și se încadrează în acest unghi. Este utilă dacă dorești o scrutare fără o întoarcere prin smucire.",
     "ControllerBinding_SnapSmoothingFlickStick": "Rezistența la întoarcerea prin smucire",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Fluiditatea întoarcerii prin smucire. O valoare ridicată = rapidă, instantanee. O valoare scăzută = fluidă, graduală.",
     "ControllerBinding_SweepSmoothingFlickStick": "Rezistența la scrutare",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Jocul se va închide în %1$s minute",
     "Notification_TimedTrial_Enjoy": "Bucură-te de perioada ta de probă",
     "Notification_TimedTrial_Offline": "Jocul aflat în perioada de probă a pierdut conexiunea",
-    "Notification_BatteryLow": "Bateria dispozitivului este aproape descărcată - %1$s%",
+    "Notification_BatteryLow": "Bateria dispozitivului este aproape descărcată",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s este disponibil pentru transmisiune",
     "Notification_RemoteClientDisconnected": "%1$s nu mai este disponibil",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Detalii",
     "Settings_Controller_NoController": "Niciun controler detectat. Conectează un controler pentru a-i gestiona setările în Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Dacă semnalul tău e slab, asigură-te ca nu există niciun obstacol între Steam Controller și partea frontală a sistemului Steam Machine. Routerele Wi-Fi și anumite periferice USB 3 pot provoca, de asemenea, probleme de semnal dacă se află prea aproape de sistemul Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Dacă semnalul tău e slab, asigură-te ca nu există niciun obstacol între Steam Controller și Steam Controller Puck. Routerele Wi-Fi și anumite periferice USB 3 pot provoca, de asemenea, probleme de semnal dacă se află prea aproape de dispozitivul Puck."
+    "Settings_Controller_RSSI_Puck_Description": "Dacă semnalul tău e slab, asigură-te ca nu există niciun obstacol între Steam Controller și Steam Controller Puck. Routerele Wi-Fi și anumite periferice USB 3 pot provoca, de asemenea, probleme de semnal dacă se află prea aproape de dispozitivul Puck.",
+    "ControllerWelcome_Skip": "Omite",
+    "Notification_ControllerBatteryLow": "Baterie aproape descărcată - %1$s%"
 }

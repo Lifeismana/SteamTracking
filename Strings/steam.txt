@@ -2045,10 +2045,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:38:19
-02:38:34
-02:38:36
-02:38:41
 08bX
 0?0L
 0A/8
@@ -2429,7 +2425,6 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
-172.16
 1536
 15000
 155.133.240.0/23
@@ -2459,6 +2454,7 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
+172.16
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2556,6 +2552,9 @@ $ffn
 2048
 208.64.200.0/22
 208.78.164.0/22
+20:40:13
+20:40:29
+20:40:37
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2781,11 +2780,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
+60000000
+604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -9292,7 +9291,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Apr 28 2026 02:38:34
+Startup - updater built Apr 28 2026 20:40:29
 State
 StaticFileWriterThread()
 Steam

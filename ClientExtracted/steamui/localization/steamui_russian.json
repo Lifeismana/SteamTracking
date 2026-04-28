@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Изменить",
     "Settings_Controller_Config_Edit_Name": "Изменить название",
     "Settings_Controller_BaseConfigurations": "Неигровые раскладки контроллера",
-    "Settings_Controller_SCPairing": "Привязать новый контроллер",
-    "Settings_Controller_SCPairing_Ibex": "Привязать новый контроллер",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Привязать",
     "Settings_Controller_SCPairing_Enabled": "Начать",
     "Settings_Controller_SCPairing_Accept": "Подтвердить привязанные устройства",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Угол привязки",
     "ControllerBinding_SnapModeFlickStick_Description": "Для более единообразных поворотов выберите, к какому углу привязываются повороты в режиме Flick Stick. Для свободных поворотов выключите этот параметр. Чтобы привязка работала только в настраиваемом диапазоне спереди, задайте значение параметра «Угол передней мёртвой зоны».",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Угол передней мёртвой зоны",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Резкий поворот произойдёт только в случае, если угол поворота меньше этого значения (считая от направления строго вперёд). Полезно, если вы хотите задействовать резкий поворот не всегда.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Резкий поворот не произойдёт, если стик направлен на север в пределах этого угла. Полезно, если вы хотите выполнить движение без резкого поворота.",
     "ControllerBinding_SnapSmoothingFlickStick": "Резкость резкого поворота",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Сглаживание резкого поворота. Высокое значение — мгновенный поворот, низкое значение — плавный.",
     "ControllerBinding_SweepSmoothingFlickStick": "Резкость разворота",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Игра закроется через %1$s мин.",
     "Notification_TimedTrial_Enjoy": "Наслаждайтесь пробной версией",
     "Notification_TimedTrial_Offline": "Пробная версия игры потеряла соединение",
-    "Notification_BatteryLow": "Низкий заряд батареи: %1$s%",
+    "Notification_BatteryLow": "Низкий заряд батареи устройства",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s: устройство готово к трансляции",
     "Notification_RemoteClientDisconnected": "%1$s: больше нет доступа",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Подробности",
     "Settings_Controller_NoController": "Контроллер не обнаружен. Подключите контроллер для управления его настройками в Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Если сигнал слабый, убедитесь, что Steam Controller находится в прямой видимости от передней панели Steam Machine. Расположенные слишком близко к Steam Machine Wi-Fi-маршрутизаторы и некоторые периферийные устройства с портами USB 3.0 также могут вызывать проблемы с сигналом.",
-    "Settings_Controller_RSSI_Puck_Description": "Если сигнал слабый, убедитесь, что Steam Controller находится в прямой видимости от Steam Controller Puck. Расположенные слишком близко к Puck Wi-Fi-маршрутизаторы и некоторые периферийные устройства с портами USB 3.0 также могут вызывать проблемы с сигналом."
+    "Settings_Controller_RSSI_Puck_Description": "Если сигнал слабый, убедитесь, что Steam Controller находится в прямой видимости от Steam Controller Puck. Расположенные слишком близко к Puck Wi-Fi-маршрутизаторы и некоторые периферийные устройства с портами USB 3.0 также могут вызывать проблемы с сигналом.",
+    "ControllerWelcome_Skip": "Пропустить",
+    "Notification_ControllerBatteryLow": "Низкий заряд батареи — %1$s"
 }

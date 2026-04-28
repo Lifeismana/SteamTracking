@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Επεξεργασία",
     "Settings_Controller_Config_Edit_Name": "Επεξεργασία ονόματος",
     "Settings_Controller_BaseConfigurations": "Διατάξεις χειριστηρίου εκτός παιχνιδιού",
-    "Settings_Controller_SCPairing": "Σύζευξη νέου χειριστηρίου",
-    "Settings_Controller_SCPairing_Ibex": "Σύζευξη ενός νέου χειριστηρίου",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Σύζευξη",
     "Settings_Controller_SCPairing_Enabled": "Εκκίνηση",
     "Settings_Controller_SCPairing_Accept": "Επιβεβαίωση σύζευξης συσκευών",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Γωνία «κουμπώματος»",
     "ControllerBinding_SnapModeFlickStick_Description": "Επιλέξτε σε ποια γωνία θα «κουμπώνει» ο μοχλός τινάγματος, για πιο σταθερές στροφές. Απενεργοποιήστε το τελείως για καθαρές στροφές, ή χρησιμοποιήστε την τιμή «Νεκρή ζώνη μπροστινής γωνίας» για να «κουμπώνει» μόνο σε μία τροποποιήσιμη μπροστινή γωνία.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Νεκρή ζώνη μπροστινής γωνίας",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Η στροφή τινάγματος θα πραγματοποιηθεί μόνο αν είναι μικρότερη από αυτήν τη γωνία (από εμπρός). Χρήσιμο αν θέλετε να σαρώσετε χωρίς να πραγματοποιήσετε μια στροφή τινάγματος.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Η στροφή τινάγματος δεν θα πραγματοποιηθεί αν ο μοχλός είναι στραμμένος βόρεια εντός αυτής της γωνίας. Χρήσιμο σε περιπτώσεις όπου θέλετε να πραγματοποιήσετε ομαλή κίνηση χωρίς στροφή τινάγματος.",
     "ControllerBinding_SnapSmoothingFlickStick": "Ακρίβεια στροφής τινάγματος",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Εξομάλυνση στροφής τινάγματος. Υψηλότερη τιμή = Γρήγορη/Άμεση. Χαμηλότερη τιμή = Εξομαλυμένη/Σταδιακή.",
     "ControllerBinding_SweepSmoothingFlickStick": "Ακρίβεια σάρωσης",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Το παιχνίδι θα κλείσει σε %1$s λεπτά",
     "Notification_TimedTrial_Enjoy": "Καλή διασκέδαση με τη δοκιμή σας",
     "Notification_TimedTrial_Offline": "Η δοκιμή παιχνιδιού αποσυνδέθηκε",
-    "Notification_BatteryLow": "Χαμηλή μπαταρία – %1$s%",
+    "Notification_BatteryLow": "Χαμηλή μπαταρία συσκευής",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "Το %1$s είναι διαθέσιμο για μετάδοση",
     "Notification_RemoteClientDisconnected": "Το %1$s δεν είναι πλέον διαθέσιμο",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Λεπτομέρειες",
     "Settings_Controller_NoController": "Δεν εντοπίστηκαν χειριστήρια. Συνδέστε ένα χειριστήριο για να διαχειριστείτε τις ρυθμίσεις του στο Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Εάν το σήμα σας είναι ασθενές, βεβαιωθείτε ότι το Steam Controller σας έχει οπτική επαφή με το μπροστινό μέρος του Steam Machine σας. Οι δρομολογητές Wi-Fi και ορισμένα περιφερειακά USB 3 μπορούν επίσης να προκαλέσουν προβλήματα με το σήμα, αν βρίσκονται πολύ κοντά στο Steam Machine σας.",
-    "Settings_Controller_RSSI_Puck_Description": "Εάν το σήμα σας είναι ασθενές, βεβαιωθείτε ότι το Steam Controller σας έχει οπτική επαφή με το Steam Controller Puck. Οι δρομολογητές Wi-Fi και ορισμένα περιφερειακά USB 3 μπορούν επίσης να προκαλέσουν προβλήματα με το σήμα, αν βρίσκονται πολύ κοντά στο Puck σας."
+    "Settings_Controller_RSSI_Puck_Description": "Εάν το σήμα σας είναι ασθενές, βεβαιωθείτε ότι το Steam Controller σας έχει οπτική επαφή με το Steam Controller Puck. Οι δρομολογητές Wi-Fi και ορισμένα περιφερειακά USB 3 μπορούν επίσης να προκαλέσουν προβλήματα με το σήμα, αν βρίσκονται πολύ κοντά στο Puck σας.",
+    "ControllerWelcome_Skip": "Παράλειψη",
+    "Notification_ControllerBatteryLow": "Χαμηλή μπαταρία – %1$s%"
 }

@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Editar",
     "Settings_Controller_Config_Edit_Name": "Editar nome",
     "Settings_Controller_BaseConfigurations": "Layouts de comando (fora de jogos)",
-    "Settings_Controller_SCPairing": "Emparelhar outro comando",
-    "Settings_Controller_SCPairing_Ibex": "Emparelhar um comando novo",
+    "Settings_Controller_SCPairing": "Emparelhar um novo Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Emparelhar um novo Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Emparelhar",
     "Settings_Controller_SCPairing_Enabled": "Iniciar",
     "Settings_Controller_SCPairing_Accept": "Confirmar dispositivos emparelhados",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Ângulo de viragem",
     "ControllerBinding_SnapModeFlickStick_Description": "Para uma maior consistência, seleciona o ângulo sobre o qual a câmara se deve virar devido a um movimento brusco. Desativa esta opção se pretendes uma viragem inalterada, sem ajustes adicionais, ou usa o valor \"Só para a frente\" se pretendes uma viragem para um ângulo frontal ajustável.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Zona morta do ângulo frontal",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "A viragem só irá ocorrer se for num ângulo inferior a este (para a frente). Isto é útil caso queiras rodar o stick sem virar a câmara bruscamente.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "A viragem não irá ocorrer se o stick estiver virado para a frente, dentro deste ângulo. Útil caso queiras rodar o stick sem virar a câmara bruscamente.",
     "ControllerBinding_SnapSmoothingFlickStick": "Precisão da viragem",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Suaviza a viragem. Valores mais elevados = viragem rápida/instantânea. Valores mais baixos = viragem suavizada/gradual.",
     "ControllerBinding_SweepSmoothingFlickStick": "Precisão da rotação",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "O jogo vai fechar daqui a %1$s minutos",
     "Notification_TimedTrial_Enjoy": "Diverte-te com o teste",
     "Notification_TimedTrial_Offline": "O teste do jogo perdeu a ligação",
-    "Notification_BatteryLow": "Bateria fraca - %1$s%",
+    "Notification_BatteryLow": "Bateria fraca",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s está disponível para streaming",
     "Notification_RemoteClientDisconnected": "%1$s já não está disponível",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Detalhes",
     "Settings_Controller_NoController": "Nenhum comando detetado. Conecta um comando para gerir as suas definições no Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Se o sinal estiver fraco, certifica-te de que não há obstáculos entre o Steam Controller e a parte frontal da tua Steam Machine. Routers Wi-Fi e certos periféricos USB 3 também podem causar interferências se estiverem demasiado próximos da Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Se o sinal estiver fraco, certifica-te de que não há obstáculos entre o Steam Controller e o Steam Controller Puck. Routers Wi-Fi e certos periféricos USB 3 também podem causar interferências se estiverem demasiado próximos do Puck."
+    "Settings_Controller_RSSI_Puck_Description": "Se o sinal estiver fraco, certifica-te de que não há obstáculos entre o Steam Controller e o Steam Controller Puck. Routers Wi-Fi e certos periféricos USB 3 também podem causar interferências se estiverem demasiado próximos do Puck.",
+    "ControllerWelcome_Skip": "Ignorar",
+    "Notification_ControllerBatteryLow": "Bateria fraca - %1$s%"
 }

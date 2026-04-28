@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Bearbeiten",
     "Settings_Controller_Config_Edit_Name": "Namen bearbeiten",
     "Settings_Controller_BaseConfigurations": "Spielfremde Controller-Layouts",
-    "Settings_Controller_SCPairing": "Neuen Controller koppeln",
-    "Settings_Controller_SCPairing_Ibex": "Einen neuen Controller koppeln",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Koppeln",
     "Settings_Controller_SCPairing_Enabled": "Start",
     "Settings_Controller_SCPairing_Accept": "Gekoppelte Geräte bestätigen",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Einrastwinkel",
     "ControllerBinding_SnapModeFlickStick_Description": "Wählen Sie für konsistentere Drehungen den Winkel aus, an dem die Flick-Drehung einrastet. Schalten Sie diese Einstellung für unverfälschte Drehungen vollständig aus. Verwenden Sie stattdessen den Wert für die Vorwärts-Totzone, um ausschließlich an einem anpassbaren Vorwärtswinkel einzurasten.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Totzone – Vorwärtswinkel",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Die Flick-Drehung wird nur durchgeführt, wenn sie weniger als dieser Winkel (nach vorn) beträgt. Diese Einstellung ist nützlich, wenn Sie ohne eine Flick-Drehung schwenken möchten.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Die Flick-Drehung erfolgt nicht, wenn der Stick in diesem Winkel Richtung Norden ausgerichtet ist. Diese Einstellung ist vor allem dann nützlich, wenn Sie ohne eine Flick-Drehung schwenken möchten.",
     "ControllerBinding_SnapSmoothingFlickStick": "Genauigkeit – Flick-Drehung",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Glättung der Flick-Drehung. Höherer Wert = schnell/unverzüglich. Niedriger Wert = geglättet/allmählich.",
     "ControllerBinding_SweepSmoothingFlickStick": "Genauigkeit – Schwenken",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Das Spiel wird sich in %1$s Minuten schließen",
     "Notification_TimedTrial_Enjoy": "Viel Spaß beim Testen",
     "Notification_TimedTrial_Offline": "Testversion hat die Verbindung verloren",
-    "Notification_BatteryLow": "Akkustand des Geräts niedrig: %1$s %",
+    "Notification_BatteryLow": "Akkustand des Geräts ist niedrig",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s ist zum Streamen verfügbar",
     "Notification_RemoteClientDisconnected": "%1$s ist nicht mehr verfügbar",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Details",
     "Settings_Controller_NoController": "Keine Controller erkannt. Verbinden Sie einen Controller, um dessen Einstellungen in Steam zu verwalten.",
     "Settings_Controller_RSSI_Machine_Description": "Wenn Ihr Signal schwach ist, stellen Sie sicher, dass Sie eine freie Sichtlinie zwischen Ihrem Steam Controller und der Vorderseite Ihrer Steam Machine haben. WLAN-Router und bestimmte USB-3‑Peripheriegeräte können ebenfalls Signalprobleme verursachen, wenn sie zu nah an Ihrer Steam Machine platziert sind.",
-    "Settings_Controller_RSSI_Puck_Description": "Wenn Ihr Signal schwach ist, stellen Sie sicher, dass Sie eine freie Sichtlinie zwischen Ihrem Steam Controller und Ihrem Steam Controller Puck haben. WLAN-Router und bestimmte USB-3‑Peripheriegeräte können ebenfalls Signalprobleme verursachen, wenn sie zu nah an Ihrer Steam Machine platziert sind."
+    "Settings_Controller_RSSI_Puck_Description": "Wenn Ihr Signal schwach ist, stellen Sie sicher, dass Sie eine freie Sichtlinie zwischen Ihrem Steam Controller und Ihrem Steam Controller Puck haben. WLAN-Router und bestimmte USB-3‑Peripheriegeräte können ebenfalls Signalprobleme verursachen, wenn sie zu nah an Ihrer Steam Machine platziert sind.",
+    "ControllerWelcome_Skip": "Überspringen",
+    "Notification_ControllerBatteryLow": "Niedriger Akkustand: %1$s %"
 }

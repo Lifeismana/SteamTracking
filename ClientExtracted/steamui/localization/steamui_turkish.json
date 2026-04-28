@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Düzenle",
     "Settings_Controller_Config_Edit_Name": "Adı Düzenle",
     "Settings_Controller_BaseConfigurations": "Oyun Dışı Kontrolcü Düzenleri",
-    "Settings_Controller_SCPairing": "Yeni Kontrolcü Eşleştir",
-    "Settings_Controller_SCPairing_Ibex": "Yeni Bir Kontrolcü Eşleştir",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Eşleştir",
     "Settings_Controller_SCPairing_Enabled": "Başlat",
     "Settings_Controller_SCPairing_Accept": "Eşleştirilmiş Aygıtları Onayla",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Hizalama Açısı",
     "ControllerBinding_SnapModeFlickStick_Description": "Daha tutarlı dönüş için ani dönüşün hangi açıya hizalanacağını seçin. Dönüşleri bu destek olmadan yapmak için bu özelliği tamamen kapatın. Ya da yalnızca bir ayarlanabilir ön açıya hizalanmak için İleri Ölü Bölge değerini kullanın.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Ön Açı Ölü Bölgesi",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Ani dönüş yalnızca bu açıdan (önden gelirken) daha dar olduğunda meydana gelecektir. Ani dönüşü aktive etmeden süpürme hareketi yapmak istediğiniz durumlarda faydalıdır.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Analog çubuk bu açı içinde yukarı itildiğinde ani dönüş gerçekleşmez. Ani dönüşü etkinleştirmeden süpürme hareketi yapmak istediğiniz durumlarda faydalıdır.",
     "ControllerBinding_SnapSmoothingFlickStick": "Ani Dönüş Kesinliği",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Ani Dönüş Yumuşatma. Yüksek değer = Hızlı/Derhal. Düşük değer = Yumuşatılmış/Kademeli.",
     "ControllerBinding_SweepSmoothingFlickStick": "Süpürme Kesinliği",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Bu oyun %1$s dakika sonra kapanacak.",
     "Notification_TimedTrial_Enjoy": "Deneme sürenizin tadını çıkarın.",
     "Notification_TimedTrial_Offline": "Oyun denemesinin bağlantısı kesildi.",
-    "Notification_BatteryLow": "Aygıt şarjı düşük - %%1$s",
+    "Notification_BatteryLow": "Aygıt pil düzeyi düşük",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s yayın için kullanılabilir",
     "Notification_RemoteClientDisconnected": "%1$s artık kullanılabilir değil",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Detaylar",
     "Settings_Controller_NoController": "Kontrolcü algılanmadı. Bir kontrolcüyü bağlayarak Steam üzerinden ayarlarını yönetin.",
     "Settings_Controller_RSSI_Machine_Description": "Sinyaliniz zayıfsa Steam Controller ile Steam Machine'inizin ön yüzü arasında herhangi bir engel bulunmadığından emin olun. Wi-Fi yönlendiricilerinin ve belirli USB 3 çevre birimlerinin Steam Machine'e çok yakın olmaları durumunda da sinyal sorunları ortaya çıkabilir.",
-    "Settings_Controller_RSSI_Puck_Description": "Sinyaliniz zayıfsa Steam Controller ile Steam Controller Puck arasında herhangi bir engel bulunmadığından emin olun. Wi-Fi yönlendiricilerinin ve belirli USB 3 çevre birimlerinin Puck'a çok yakın olmaları durumunda da sinyal sorunları ortaya çıkabilir."
+    "Settings_Controller_RSSI_Puck_Description": "Sinyaliniz zayıfsa Steam Controller ile Steam Controller Puck arasında herhangi bir engel bulunmadığından emin olun. Wi-Fi yönlendiricilerinin ve belirli USB 3 çevre birimlerinin Puck'a çok yakın olmaları durumunda da sinyal sorunları ortaya çıkabilir.",
+    "ControllerWelcome_Skip": "Atla",
+    "Notification_ControllerBatteryLow": "Pil düzeyi düşük - %%1$s"
 }

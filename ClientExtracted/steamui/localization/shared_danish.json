@@ -477,7 +477,7 @@
     "EventDisplay_Reminder_FollowEvent_ErrorDesc": "Der opstod en fejl med at følge begivenheden:",
     "EventDisplay_Reminder_IgnoreEvent_Error": "\"Ignorer begivenhed\" mislykkedes",
     "EventDisplay_Reminder_IgnoreEvent_ErrorDesc": "Der opstod en fejl med at ignorere begivenheden:",
-    "EventDisplay_Reminder_Toast": "Steam-toastbesked ved start",
+    "EventDisplay_Reminder_Toast": "Steam-notifikation ved start",
     "EventDisplay_Reminder_AddToCalendar": "Føj til kalender",
     "EventDisplay_Reminder_AddToApple": "Føj til Apple-kalender",
     "EventDisplay_Reminder_AppleCalendar_Short": "Apple",

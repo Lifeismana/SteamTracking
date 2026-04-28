@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "Rediger",
     "Settings_Controller_Config_Edit_Name": "Rediger navn",
     "Settings_Controller_BaseConfigurations": "Controllerlayout for andet end spil",
-    "Settings_Controller_SCPairing": "Tilknyt ny controller",
-    "Settings_Controller_SCPairing_Ibex": "Tilknyt en ny controller",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "Tilknyt",
     "Settings_Controller_SCPairing_Enabled": "Start",
     "Settings_Controller_SCPairing_Accept": "Bekræft tilknyttede enheder",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "Fastjusteringsvinkel",
     "ControllerBinding_SnapModeFlickStick_Description": "Vælg, hvilken vinkel svirperotationen fastgøres til for en mere jævn omdrejning. Slå den helt fra for upåvirket omdrejning. Eller brug værdien for \"Dødszone fremad\" for kun at fastgøre den til en vinkel fremad.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Dødszone fremad",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Svirperotationen sker kun, hvis den er mindre end denne vinkel (forfra). Nyttig, hvis du vil dreje uden svirperotation.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "Svirperotationen sker ikke, hvis styrepinden peger mod nord indenfor denne vinkel. Nyttigt, hvis du vil dreje uden svirperotation.",
     "ControllerBinding_SnapSmoothingFlickStick": "Svirperotationsstramhed",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Svirperotationsudjævning. Højere = hurtig/øjeblikkelig. Lavere = udjævnet/gravis.",
     "ControllerBinding_SweepSmoothingFlickStick": "Udjævningsstramhed",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "Spillet lukker om %1$s minutter",
     "Notification_TimedTrial_Enjoy": "Nyd din prøveperiode",
     "Notification_TimedTrial_Offline": "Prøveversionen mistede forbindelsen",
-    "Notification_BatteryLow": "Lavt batteriniveau – %1$s%",
+    "Notification_BatteryLow": "Enheden har lavt batteri",
     "Notification_RemotePlay_Title": "Steam Remote Play",
     "Notification_RemoteClientConnected": "%1$s er tilgængelig til streaming",
     "Notification_RemoteClientDisconnected": "%1$s er ikke længere tilgængelig",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "Detaljer",
     "Settings_Controller_NoController": "Ingen controllere registreret. Tilslut en controller for at administrere dens indstillinger i Steam.",
     "Settings_Controller_RSSI_Machine_Description": "Hvis signalet er svagt, skal du sikre, at der er frit udsyn fra Steam Controlleren til forsiden af din Steam Machine. Wi-fi-routere og visse eksterne USB 3-enheder kan også give signalproblemer, hvis de står for tæt på Steam Machine.",
-    "Settings_Controller_RSSI_Puck_Description": "Hvis signalet er svagt, skal du sikre, at der er frit udsyn fra Steam Controlleren til din Steam Controller Puck. Wi-fi-routere og visse eksterne USB 3-enheder kan også give signalproblemer, hvis de står for tæt på pucken."
+    "Settings_Controller_RSSI_Puck_Description": "Hvis signalet er svagt, skal du sikre, at der er frit udsyn fra Steam Controlleren til din Steam Controller Puck. Wi-fi-routere og visse eksterne USB 3-enheder kan også give signalproblemer, hvis de står for tæt på pucken.",
+    "ControllerWelcome_Skip": "Spring over",
+    "Notification_ControllerBatteryLow": "Lavt batteri – %1$s%"
 }

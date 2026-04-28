@@ -3741,8 +3741,8 @@
     "Settings_Controller_Config_Edit": "编辑",
     "Settings_Controller_Config_Edit_Name": "编辑名称",
     "Settings_Controller_BaseConfigurations": "非游戏控制器布局",
-    "Settings_Controller_SCPairing": "配对新的 Steam Controller",
-    "Settings_Controller_SCPairing_Ibex": "配对新的 Steam Controller",
+    "Settings_Controller_SCPairing": "Pair a new Steam Controller (2015)",
+    "Settings_Controller_SCPairing_Ibex": "Pair a new Steam Controller",
     "Settings_Controller_SCPairing_Pair": "配对",
     "Settings_Controller_SCPairing_Enabled": "开始",
     "Settings_Controller_SCPairing_Accept": "确认已配对的设备",
@@ -6212,7 +6212,7 @@
     "ControllerBinding_SnapModeFlickStick": "对齐角度",
     "ControllerBinding_SnapModeFlickStick_Description": "选择快速转向对齐的角度，以获得更为一致的转向。完全关闭此功能可以进行单纯的转向。也可以使用前向死区值来仅对齐可调的前角。",
     "ControllerBinding_ForwardSnapAngleFlickStick": "前向角度死区",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "仅当轻推方向离正前方小于此角度时才会发生快速转向。如果您想在不做快速转向的情况下进行扫动，这会很有用。",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "如果摇杆指向北方且在此角度范围内，则不会发生快速转向。如果您想在不做快速转向的情况下进行扫动，这会很有用。",
     "ControllerBinding_SnapSmoothingFlickStick": "快速转向紧凑度",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "快速转向平滑度。越高 = 快速/即刻。越低 = 平滑/逐渐。",
     "ControllerBinding_SweepSmoothingFlickStick": "扫动紧实度",
@@ -7962,7 +7962,7 @@
     "Notification_TimedTrial_CloseSoon_Plural": "游戏将在 %1$s 分钟后关闭",
     "Notification_TimedTrial_Enjoy": "尽情享受您的试用吧",
     "Notification_TimedTrial_Offline": "游戏试玩连接丢失",
-    "Notification_BatteryLow": "设备电量过低 - %1$s%",
+    "Notification_BatteryLow": "设备电量低",
     "Notification_RemotePlay_Title": "Steam 远程畅玩",
     "Notification_RemoteClientConnected": "%1$s 可用于流式传输",
     "Notification_RemoteClientDisconnected": "%1$s 不再可用",
@@ -9371,5 +9371,7 @@
     "Settings_Controller_Details": "详情",
     "Settings_Controller_NoController": "未检测到控制器。连接控制器以在 Steam 中管理其设置。",
     "Settings_Controller_RSSI_Machine_Description": "如果您的信号较弱，请确保您的 Steam Controller 与 Steam Machine 之间无遮挡。WiFi 路由器和某些 USB 3 外设如果离 Steam Machine 太近，也可能导致信号问题。",
-    "Settings_Controller_RSSI_Puck_Description": "如果您的信号较弱，请确保您的 Steam Controller 与 Steam Controller Puck 之间无遮挡。WiFi 路由器和某些 USB 3 外设如果离 Steam Machine 太近，也可能导致信号问题。"
+    "Settings_Controller_RSSI_Puck_Description": "如果您的信号较弱，请确保您的 Steam Controller 与 Steam Controller Puck 之间无遮挡。WiFi 路由器和某些 USB 3 外设如果离 Steam Machine 太近，也可能导致信号问题。",
+    "ControllerWelcome_Skip": "跳过",
+    "Notification_ControllerBatteryLow": "电量低 - %1$s%"
 }
