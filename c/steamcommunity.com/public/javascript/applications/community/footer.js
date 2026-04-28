@@ -9,6 +9,7 @@
         Rows: "_2QdiX1hDsJmlkrHmcCOMbV",
         AutoColumns: "Cr7YIMQn6_lDRU4-3BR8b",
         AutoRows: "_3kyzvGnYVLT0DW6nzP9n18",
+        AutoFlow: "_3AvZKfpfaIQbfczVRBASsX",
         Areas: "_1-yfCTWkj4tOFfb3EKXx6N",
         Flow: "_1yUwWGTk4IX0IhdJiKfFBf",
         AlignContent: "_2Tglp6488nVBhU976Llfpe",
@@ -94,6 +95,12 @@
           responsive: !0,
           className: _.AutoRows,
           cssProperty: "--grid-auto-rows",
+        },
+        {
+          prop: "autoFlow",
+          responsive: !0,
+          className: _.AutoFlow,
+          cssProperty: "--grid-auto-flow",
         },
         {
           prop: "areas",

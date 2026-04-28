@@ -23,6 +23,7 @@
         BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
         "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
         "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
         "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
         "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
@@ -371,15 +372,15 @@
       var T = s(42060),
         g = s.n(T),
         D = s(51272),
-        P = s(81962);
-      function y(e) {
+        y = s(81962);
+      function P(e) {
         return e.recent_emoticons;
       }
       function v(e) {
         return e.recent_stickers;
       }
       function z(e) {
-        return y(e).length + v(e).length > 0;
+        return P(e).length + v(e).length > 0;
       }
       const b = (0, r.PA)((e) => {
         const {
@@ -642,10 +643,10 @@
             { filter: n } = this.state,
             o = [];
           return (
-            y(e) &&
+            P(e) &&
               o.push({
                 title: (0, h.we)("#AddonPicker_RecentEmoticons"),
-                items: l.pN.FilterEmoticons(y(e), n),
+                items: l.pN.FilterEmoticons(P(e), n),
                 onItemSelect: t,
                 renderItem: (e) => (0, i.jsx)(V, { emoticon: e }),
                 keyExtractor: (e) => e.name,
@@ -832,10 +833,10 @@
             { filter: n } = this.state,
             o = [];
           return (
-            y(e).length &&
+            P(e).length &&
               o.push({
                 title: (0, h.we)("#AddonPicker_RecentEmoticons"),
-                items: l.pN.FilterEmoticons(y(e), n),
+                items: l.pN.FilterEmoticons(P(e), n),
                 onItemSelect: t,
                 renderItem: (e) => (0, i.jsx)(V, { emoticon: e }),
                 keyExtractor: (e) => e.name,
@@ -906,7 +907,7 @@
         return (0, i.jsxs)("div", {
           className: g().EmoticonItem,
           children: [
-            (0, i.jsx)(P.n, { emoticon: t.name, large: s }),
+            (0, i.jsx)(y.n, { emoticon: t.name, large: s }),
             n && (0, i.jsx)(K, {}),
           ],
         });
@@ -939,7 +940,7 @@
             sticker: { name: s, appid: n },
           } = e,
           [o] = (0, a.t7)(n, {});
-        return (0, i.jsx)(P.c, {
+        return (0, i.jsx)(y.c, {
           target: t,
           title: s,
           subtitle: o?.GetName(),
@@ -988,7 +989,7 @@
           } = e,
           r = o[s],
           [c] = (0, a.t7)(n, {});
-        return (0, i.jsx)(P.c, {
+        return (0, i.jsx)(y.c, {
           target: t,
           title: s,
           subtitle: c?.GetName(),

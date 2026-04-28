@@ -45,6 +45,7 @@
     37882: (e) => {
       e.exports = {
         Ctn: "_3sPRGG8vL4sM6N-8FZo5fT",
+        Link: "-YNVdnBAoV2HQCkuR8C1h",
         BackgroundImageCtn: "_31Bm2h6tK_J4K2yYHTtttM",
         BackgroundImageBlurCtn: "_1LzeWsFv8n7BMFyJ1c0bF",
         Headline: "qQs0819GK5nJMJhEfDfqO",
@@ -54,7 +55,6 @@
         VideoDisclaimer: "_2FW4jsZDS7ltbcDrOQStiW",
         DeviceWrapper: "_3DCMQY1PEeYS2E7r8NJXKQ",
         CapsuleWrapper: "_1JhQMb3X6rKYyPqZWOZG5w",
-        Link: "-YNVdnBAoV2HQCkuR8C1h",
         HardwareBannerCtn: "_2L4eqs1UZ1QEjRC1S8qiJA",
         TrailerCtn: "_3LbKJsBRhn7hEnOSlKZd64",
       };

@@ -4286,6 +4286,16 @@ html:not(.touch)
     color: #fff;
   }
 }
+@keyframes _2kXRPMPgy0P9b0CoapcXw7 {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _3eSI5prhRv2g28mH4BvfI1 {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -4498,6 +4508,16 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes Y4bvEiSraTDYjd2Nd9Mwc {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

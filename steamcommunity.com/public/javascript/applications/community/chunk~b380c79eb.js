@@ -94,6 +94,7 @@
             s || (t && t(!!g || !n));
           };
         return (0, r.jsxs)(o.s, {
+          align: "center",
           ref: h,
           role: "checkbox",
           "aria-checked": g ? "mixed" : n,
@@ -148,24 +149,30 @@
             valueFromString: c,
             checkValidText: a,
             onBlur: u,
-            ...d
+            onKeyDown: d,
+            ...h
           } = e,
-          [h, f] = (0, o.useState)(null),
-          p = null != h ? h : void 0 === n ? "" : s(n);
+          [f, p] = (0, o.useState)(null),
+          x = null != f ? f : void 0 === n ? "" : s(n),
+          g = () => {
+            if (null !== f) {
+              const e = c(f);
+              e !== l && t(e), p(null);
+            }
+          };
         return (0, r.jsx)(i.k, {
-          value: p,
+          value: x,
           onTextChange: (e) => {
             const n = c(e);
-            n !== l && e === s(n) ? (f(null), t(n)) : (a && !a(e, n)) || f(e);
+            n !== l && e === s(n) ? (p(null), t(n)) : (a && !a(e, n)) || p(e);
+          },
+          onKeyDown: (e) => {
+            "Enter" === e.key && g(), d && d(e);
           },
           onBlur: (e) => {
-            if (null !== h) {
-              const e = c(h);
-              e !== l && t(e), f(null);
-            }
-            u && u(e);
+            g(), u && u(e);
           },
-          ...d,
+          ...h,
         });
       }
     },
@@ -364,13 +371,13 @@
           {
             getFloatingProps: O,
             getReferenceProps: L,
-            getItemProps: P,
+            getItemProps: y,
           } = (0, i.bv)([k, g, v, C, m, S]);
         return {
           floating: x,
           getFloatingProps: O,
           getReferenceProps: L,
-          getItemProps: P,
+          getItemProps: y,
           open: p,
           activeIndex: r,
           selectedIndex: c,
@@ -686,11 +693,12 @@
               state: t,
               placement: l = "bottom-end",
               popoverWidth: s = "dropdown",
-              ...c
+              popoverMaxHeight: c,
+              ...a
             } = e,
-            [a, u] = (0, o.useState)(null),
-            [d, h] = (0, o.useState)(null),
-            f = (0, o.useMemo)(
+            [u, d] = (0, o.useState)(null),
+            [h, f] = (0, o.useState)(null),
+            p = (0, o.useMemo)(
               () =>
                 t.rgOptions.findIndex((e) =>
                   t.multiselect
@@ -699,37 +707,38 @@
                 ),
               [t.selectedValue, t.rgOptions, t.multiselect],
             ),
-            p = (0, o.useRef)(null),
-            x = {
+            x = (0, o.useRef)(null),
+            g = {
               ...t,
-              ...c,
-              focusedValue: a,
-              onFocusChange: u,
-              refPopover: p,
+              ...a,
+              focusedValue: u,
+              onFocusChange: d,
+              refPopover: x,
               setOpen: (e) => {
-                e && u(t.multiselect ? t.selectedValue[0] : t.selectedValue),
+                e && d(t.multiselect ? t.selectedValue[0] : t.selectedValue),
                   t.setOpen(e);
               },
-              focusedIndex: d,
-              onFocusedIndexChange: h,
+              focusedIndex: h,
+              onFocusedIndexChange: f,
             },
-            g = (0, i.T)({
+            v = (0, i.T)({
               open: t.bOpen,
               onOpenChange: t.setOpen,
               width: s,
+              maxHeight: c,
               placement: l,
-              selectedIndex: f,
+              selectedIndex: p,
               setSelectedIndex: (e) => t.onItemSelectionChange(t.rgOptions[e]),
-              activeIndex: d,
-              setActiveIndex: h,
+              activeIndex: h,
+              setActiveIndex: f,
               gutter: "4",
               interactions: { click: !0, typeahead: !0 },
               role: "select",
               scroll: !0,
             });
           return (0, r.jsx)(j.Provider, {
-            value: x,
-            children: (0, r.jsx)(i.k.Root, { state: g, children: n }),
+            value: g,
+            children: (0, r.jsx)(i.k.Root, { state: v, children: n }),
           });
         },
         Option: function (e) {
@@ -785,18 +794,18 @@
               onItemSelectionChange: k,
               onFocusedIndexChange: O,
               refPopover: L,
-              placeholder: P,
-              ...V
+              placeholder: y,
+              ...P
             } = S("<SelectTrigger>"),
-            y = {
+            w = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => c(!o),
               children: n,
             },
-            w = g ? Array.isArray(d) && d.length > 0 : !!d,
+            V = g ? Array.isArray(d) && d.length > 0 : !!d,
             z =
-              w && b
+              V && b
                 ? (0, r.jsx)(a.g, {
                     onClick: v,
                     cursor: "pointer",
@@ -808,11 +817,11 @@
               variant: h,
               size: f,
               radius: p,
-              hasValue: w,
+              hasValue: V,
               tabIndex: 0,
-              ...V,
+              ...P,
             }),
-            R = (0, u.Q)(t, _, y, void 0);
+            R = (0, u.Q)(t, _, w, void 0);
           return (0, r.jsx)(i.k.Anchor, { children: R });
         },
         Value: function (e) {
@@ -960,10 +969,10 @@
             inputRef: k,
             ref: O,
             disabled: L,
-            gamepadFocusable: P = !0,
-            ...V
+            gamepadFocusable: y = !0,
+            ...P
           } = t,
-          y = {
+          w = {
             ...n,
             variant: m,
             size: b,
@@ -982,16 +991,16 @@
             ref: O,
             disabled: L,
           },
-          w = (0, o.useRef)(null),
-          z = P && p.TS.IN_GAMEPADUI ? f.BA : "input";
+          V = (0, o.useRef)(null),
+          z = y && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
-          ...y,
+          ...w,
           onClick: (e) => {
-            w.current && e.target !== w.current && w.current.focus();
+            V.current && e.target !== V.current && V.current.focus();
           },
           children: (0, r.jsx)(z, {
-            ref: (0, h.Ue)(k, w),
+            ref: (0, h.Ue)(k, V),
             type: "text",
             "aria-disabled": L,
             readOnly: L,
@@ -1000,7 +1009,7 @@
             onChange: (e) => {
               L || (x(e.target.value), C && C(e));
             },
-            ...V,
+            ...P,
           }),
         });
       }

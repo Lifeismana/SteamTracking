@@ -198,31 +198,43 @@
             (0, C.Ej)({
               apply: (n) => {
                 const { rects: s, elements: o, availableHeight: a } = n,
-                  r =
-                    "number" == typeof t
-                      ? a - t + "px"
-                      : `calc( ${a}px - var(--spacing-${t}) )`,
-                  i = { maxHeight: r, boxSizing: "border-box", zIndex: "1" };
-                switch ((e.scroll && (i.overflowY = "auto"), e.width)) {
+                  r = { boxSizing: "border-box", zIndex: "1" };
+                switch ((e.scroll && (r.overflowY = "auto"), e.width)) {
                   case "target":
-                    i.width = `${s.reference.width}px`;
+                    r.width = `${s.reference.width}px`;
                     break;
                   case "content":
-                    i.width = `${s.floating.width}px`;
+                    r.width = `${s.floating.width}px`;
                     break;
                   case "dropdown": {
                     let e = s.reference.width;
                     s.floating.width > e && e < 200 && (e = s.floating.width),
-                      (i.width = `${e}px`);
+                      (r.width = `${e}px`);
                   }
                 }
                 "function" == typeof e.width &&
-                  (i.width = e.width({
+                  (r.width = e.width({
                     unContentWidth: s.floating.width,
                     unTargetWidth: s.reference.width,
-                  })),
-                  Object.assign(o.floating.style, i),
-                  o.floating.style.setProperty("--popover-max-height", r);
+                  }));
+                const i =
+                  "number" == typeof t ? `${t}px` : `var(--spacing-${t})`;
+                "function" == typeof e.maxHeight
+                  ? (r.maxHeight = e.maxHeight({
+                      unAvailableHeight: a,
+                      gutter: i,
+                    }))
+                  : "number" == typeof e.maxHeight
+                    ? (r.maxHeight = `min( calc( ${a}px - ${i} ), ${e.maxHeight}px )`)
+                    : (r.maxHeight =
+                        "number" == typeof t
+                          ? a - t + "px"
+                          : `calc( ${a}px - var(--spacing-${t}) )`),
+                  Object.assign(o.floating.style, r),
+                  o.floating.style.setProperty(
+                    "--popover-max-height",
+                    r.maxHeight,
+                  );
               },
             }),
           ),
@@ -439,14 +451,14 @@
           },
           D.h.find(({ prop: e }) => "cursor" === e),
         ],
-        U = {
+        H = {
           up: "rotate( 180, 10, 10 )",
           left: "rotate( 90, 10, 10 )",
           right: "rotate( 270, 10, 10 )",
         };
-      function G(e) {
+      function U(e) {
         const { direction: t = "down" } = e,
-          n = U[t];
+          n = H[t];
         return (0, s.jsx)(E, {
           ...e,
           children: (0, s.jsx)("path", {
@@ -456,8 +468,8 @@
           }),
         });
       }
-      var W = n(20187);
-      function H(e) {
+      var G = n(20187);
+      function W(e) {
         return (0, s.jsx)(E, {
           ...e,
           viewBoxSize: 12,
@@ -496,6 +508,7 @@
             o || (n && n(!!d || !t));
           };
         return (0, s.jsxs)(z.s, {
+          align: "center",
           ref: r,
           role: "checkbox",
           "aria-checked": d ? "mixed" : t,
@@ -578,11 +591,12 @@
               state: n,
               placement: o = "bottom-end",
               popoverWidth: a = "dropdown",
-              ...r
+              popoverMaxHeight: r,
+              ...i
             } = e,
-            [i, l] = (0, u.useState)(null),
-            [c, d] = (0, u.useState)(null),
-            g = (0, u.useMemo)(
+            [l, c] = (0, u.useState)(null),
+            [d, g] = (0, u.useState)(null),
+            x = (0, u.useMemo)(
               () =>
                 n.rgOptions.findIndex((e) =>
                   n.multiselect
@@ -591,21 +605,21 @@
                 ),
               [n.selectedValue, n.rgOptions, n.multiselect],
             ),
-            x = (0, u.useRef)(null),
-            m = {
+            m = (0, u.useRef)(null),
+            f = {
               ...n,
-              ...r,
-              focusedValue: i,
-              onFocusChange: l,
-              refPopover: x,
+              ...i,
+              focusedValue: l,
+              onFocusChange: c,
+              refPopover: m,
               setOpen: (e) => {
-                e && l(n.multiselect ? n.selectedValue[0] : n.selectedValue),
+                e && c(n.multiselect ? n.selectedValue[0] : n.selectedValue),
                   n.setOpen(e);
               },
-              focusedIndex: c,
-              onFocusedIndexChange: d,
+              focusedIndex: d,
+              onFocusedIndexChange: g,
             },
-            f = (function (e) {
+            C = (function (e) {
               const {
                 open: t,
                 onOpenChange: n,
@@ -672,19 +686,20 @@
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: a,
+              maxHeight: r,
               placement: o,
-              selectedIndex: g,
+              selectedIndex: x,
               setSelectedIndex: (e) => n.onItemSelectionChange(n.rgOptions[e]),
-              activeIndex: c,
-              setActiveIndex: d,
+              activeIndex: d,
+              setActiveIndex: g,
               gutter: "4",
               interactions: { click: !0, typeahead: !0 },
               role: "select",
               scroll: !0,
             });
           return (0, s.jsx)(oe.Provider, {
-            value: m,
-            children: (0, s.jsx)(A, { state: f, children: t }),
+            value: f,
+            children: (0, s.jsx)(A, { state: C, children: t }),
           });
         },
         Option: function (e) {
@@ -749,8 +764,8 @@
             I = u ? Array.isArray(r) && r.length > 0 : !!r,
             k =
               I && f
-                ? (0, s.jsx)(H, { onClick: h, cursor: "pointer", hitSlop: !0 })
-                : (0, s.jsx)(G, {}),
+                ? (0, s.jsx)(W, { onClick: h, cursor: "pointer", hitSlop: !0 })
+                : (0, s.jsx)(U, {}),
             w = (0, s.jsx)(F, {
               afterContent: k,
               variant: i,
@@ -764,7 +779,7 @@
           return (0, s.jsx)(T, { children: A });
         },
         Value: function (e) {
-          return (0, s.jsx)(W.EY, {
+          return (0, s.jsx)(G.EY, {
             weight: "medium",
             truncate: !0,
             contrast: "title",
@@ -772,7 +787,7 @@
           });
         },
         Placeholder: function (e) {
-          return (0, s.jsx)(W.EY, {
+          return (0, s.jsx)(G.EY, {
             contrast: "description",
             truncate: !0,
             children: e.children,
@@ -820,8 +835,8 @@
               ],
             }),
             (0, s.jsx)(te.Options, {
-              children: l.rgOptions.map((e) =>
-                (0, s.jsx)(te.Option, { value: e, children: r(e) }, r(e)),
+              children: l.rgOptions.map((e, t) =>
+                (0, s.jsx)(te.Option, { value: e, children: r(e) }, t),
               ),
             }),
           ],
@@ -867,8 +882,8 @@
                 ],
               }),
               (0, s.jsx)(se.Options, {
-                children: l.rgOptions.map((e) =>
-                  (0, s.jsx)(se.Option, { value: e, children: r(e) }, r(e)),
+                children: l.rgOptions.map((e, t) =>
+                  (0, s.jsx)(se.Option, { value: e, children: r(e) }, t),
                 ),
               }),
             ],

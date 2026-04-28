@@ -2294,7 +2294,7 @@ function PreloadImages( elElement )
 
 
 // Common glue logic for a carousel of some kind
-var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnClickThumb, bNoWrap, bAllowWideScreenMode, bPreloadNearbyItems )
+var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnClickThumb, bNoWrap, bPreloadNearbyItems )
 {
 	this.$elContainer = $elContainer;
 	this.nSpeed = nSpeed;
@@ -2304,8 +2304,7 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.bNoWrap = bNoWrap;
 	this.nIndex = 0;
 	this.bIsAnimating = false;
-	this.bAllowWideScreenMode = bAllowWideScreenMode;
-	this.bPreloadNearbyItems = bPreloadNearbyItems || this.bIsWideScreenMode();
+	this.bPreloadNearbyItems = bPreloadNearbyItems;
 
 	this.$elArrowLeft = $J('.arrow.left', this.$elContainer);
 	this.$elArrowRight = $J('.arrow.right', this.$elContainer);
@@ -2317,11 +2316,6 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		PreloadImages( $elContainer );
-	}
-
-	if ( this.bIsWideScreenMode() )
-	{
-		this.$elContainer.addClass( 'carousel_wide_mode' );
 	}
 
 	// get ready to preload images when we scroll.  Delay this a bit because these are low priority
@@ -2535,11 +2529,6 @@ CGenericCarousel.prototype.bIsResponsive = function( )
 	return window.UseSmallScreenMode && window.UseSmallScreenMode();
 }
 
-CGenericCarousel.prototype.bIsWideScreenMode = function( )
-{
-	return this.bAllowWideScreenMode && window.UseWideScreenMode && window.UseWideScreenMode() && !window.UseGamepadScreenMode();
-}
-
 CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 {
 		if( this.bIsResponsive() && !window.UseGamepadScreenMode() )
@@ -2553,12 +2542,6 @@ CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 	var nNextIndex = this.GetNextValidIndex( nNewIndex );
 	if( nNextIndex == this.nIndex || nNextIndex === false )
 		return;
-
-	if ( false && this.bIsWideScreenMode() )
-	{
-		const bGoForward = nNewIndex !== -1;
-		return this.WideModeAdvance( nNextIndex, bGoForward ) ;
-	}
 
 	this.fnOnBlur( this.nIndex );
 	this.fnOnFocus( nNextIndex );
@@ -2673,7 +2656,7 @@ CGenericCarousel.prototype.ResponsiveAdvance = function( nNewIndex )
 }
 
 // Carousel which adds the 'focus' class to the active element. Can be used for fading carousels
-function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap, fnOnBlur, bAllowWideScreenMode, bPreloadNearbyItems )
+function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap, fnOnBlur, bAllowWideScreenMode )
 {
 
 	var fnOnFocus = function(  nIndex )
@@ -2695,7 +2678,7 @@ function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap, fnOnBlur, bAllowWi
 	if( !fnOnBlur )
 		fnOnBlur = function(){};
 
-	return new CGenericCarousel( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb, bNoWrap, bAllowWideScreenMode, bPreloadNearbyItems );
+	return new CGenericCarousel( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnMouseOverThumb, bNoWrap, bAllowWideScreenMode );
 
 }
 

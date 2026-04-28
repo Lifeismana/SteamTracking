@@ -12,6 +12,7 @@
         BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
         "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
         "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
+        "ItemFocusAnim-darkGreySettings": "Y4bvEiSraTDYjd2Nd9Mwc",
         "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
         "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
         "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
@@ -55,6 +56,7 @@
         BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
         "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
         "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
+        "ItemFocusAnim-darkGreySettings": "_2kXRPMPgy0P9b0CoapcXw7",
         "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
         "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
         "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
@@ -504,7 +506,7 @@
         V = t(84547),
         X = t(32545),
         K = t.n(X);
-      function J(e) {
+      function Y(e) {
         const { appID: n, classOverride: t, styleOverride: o } = e,
           [s, a] = (0, r.useState)(!1),
           i = (0, Z.m)("GameHoverFollowButton"),
@@ -537,10 +539,10 @@
           ],
         });
       }
-      function Y(e) {
+      function J(e) {
         const { appid: n, color: t, bgcolor: o } = e;
         (0, B.n9)();
-        return (0, d.jsx)(J, {
+        return (0, d.jsx)(Y, {
           appID: n,
           classOverride: (0, F.A)(
             A().FollowGameButtonNotTop,
@@ -554,7 +556,7 @@
         if (!n) return null;
         const t = (0, L.O)(e.args.color, "black"),
           o = (0, L.O)(e.args.bgcolor, "white");
-        return (0, d.jsx)(Y, { appid: n, color: t, bgcolor: o });
+        return (0, d.jsx)(J, { appid: n, color: t, bgcolor: o });
       }
       var ne = t(94057),
         te = t(29868),

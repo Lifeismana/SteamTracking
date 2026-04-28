@@ -73,6 +73,7 @@
         BackgroundAnimation: "_3MYFEzuIRKobkUk2lRYnMK",
         "ItemFocusAnim-darkerGrey-nocolor": "_2kV5gJ25r4jzVp6GOhkWG-",
         "ItemFocusAnim-darkerGrey": "_1mVubTLYQisF99MISwRIo",
+        "ItemFocusAnim-darkGreySettings": "_1Tb26ceanbGuyZ6jycWrEs",
         "ItemFocusAnim-darkGrey": "_3_oq3m-Z6TMDFjOzy3surq",
         "ItemFocusAnim-grey": "_3xhE-V84LKk359-l85lTcw",
         "ItemFocusAnim-translucent-white-10": "_3ZQWNeAUeyaGGIpkI8ItwX",
@@ -91,6 +92,7 @@
         BackgroundAnimation: "_1xc_h6g1jbrfqXQXHDA2eY",
         "ItemFocusAnim-darkerGrey-nocolor": "_32Qiunpe7Bq8tRMP7zANIV",
         "ItemFocusAnim-darkerGrey": "_1jLvKsCp-1NNukUKFcJBiF",
+        "ItemFocusAnim-darkGreySettings": "_2oonpIg6GiNC1fFwAuTeY1",
         "ItemFocusAnim-darkGrey": "_25MzDFkbrWeDNWxcpYDDqL",
         "ItemFocusAnim-grey": "_24xCtEhvscRzLJyaNWLeUa",
         "ItemFocusAnim-translucent-white-10": "_191r_XeIDZJjVtYMrw4vZN",
@@ -121,6 +123,7 @@
         BackgroundAnimation: "_1PMJYtmG-0LXiCIzsf7hHH",
         "ItemFocusAnim-darkerGrey-nocolor": "_1fYjwZXV0mHTRHEYcE_jQ8",
         "ItemFocusAnim-darkerGrey": "_1LEV1gSZkd--onnkOFZYRV",
+        "ItemFocusAnim-darkGreySettings": "_1KeeNieYRA1IvOs_hjx2Fk",
         "ItemFocusAnim-darkGrey": "_2Gt-Rn_dZpXo5pADmd7xgt",
         "ItemFocusAnim-grey": "_1NQuzlTuuuY5E17W1_Dnvp",
         "ItemFocusAnim-translucent-white-10": "qPLst3oEHDXrPYy7-xr5r",
@@ -142,6 +145,7 @@
         BackgroundAnimation: "_3--8dqRLvQdQpxNt3iZ2Ci",
         "ItemFocusAnim-darkerGrey-nocolor": "fZuuzaBtgr14k-PQsJpWW",
         "ItemFocusAnim-darkerGrey": "_2aV5_tetZEzX88CDjEbCdk",
+        "ItemFocusAnim-darkGreySettings": "_3Ufmk5x68umUvjrbPjHwoq",
         "ItemFocusAnim-darkGrey": "fojjsnGqkNFh7TEC5Ed2g",
         "ItemFocusAnim-grey": "dXvi2hnxKE2qCZdVqrR-d",
         "ItemFocusAnim-translucent-white-10": "_3o6uxDJJj4OaDSP8EcAvO2",
@@ -211,6 +215,7 @@
         BackgroundAnimation: "_26VKCvvlOekXO3gQ4lt52K",
         "ItemFocusAnim-darkerGrey-nocolor": "_3wTkpIb4XE7F7ZZDUXHgm_",
         "ItemFocusAnim-darkerGrey": "_2JTxWE9ODcqL4KEwAQsSC5",
+        "ItemFocusAnim-darkGreySettings": "_1t6voKc6Z9o4Tv6RxMOxKZ",
         "ItemFocusAnim-darkGrey": "_3hNDwFLzATB9Rlsqzdi0SL",
         "ItemFocusAnim-grey": "DO3pGo-5_dzvOUiQSw2fW",
         "ItemFocusAnim-translucent-white-10": "_1yAke0XKqQ2OeiVkyNRJPm",
@@ -239,6 +244,7 @@
         BackgroundAnimation: "_2Si3s9AMZo3G3PNFeyF410",
         "ItemFocusAnim-darkerGrey-nocolor": "Jepw2U5yCjXuQaD9GNy9I",
         "ItemFocusAnim-darkerGrey": "_1KTjwdebdzpOWcR7v-ASHd",
+        "ItemFocusAnim-darkGreySettings": "_2wNIBB1zc7I0kzNubVuspq",
         "ItemFocusAnim-darkGrey": "_26_GPi_u8yOfyv0CLxZgjQ",
         "ItemFocusAnim-grey": "_3X-YvqmKMxmmdA75nG5Oov",
         "ItemFocusAnim-translucent-white-10": "_10oNTN-UmUNRMAzKyzDgPT",
@@ -268,6 +274,7 @@
         BackgroundAnimation: "_15xQUUqj7qcbJuv9NFxFOj",
         "ItemFocusAnim-darkerGrey-nocolor": "_2NRljfOn9Bd5Z5IG7T4Epx",
         "ItemFocusAnim-darkerGrey": "_1jOANrTQ1AakQtclgFxP4",
+        "ItemFocusAnim-darkGreySettings": "_3wMBQj1rLpOf0ba_gLqlH-",
         "ItemFocusAnim-darkGrey": "_2-duIrOzfzCQHG3_UJ7jSC",
         "ItemFocusAnim-grey": "_2xdvUl8e7TUDI3bqiX9kbo",
         "ItemFocusAnim-translucent-white-10": "aoPzySIAG6FOtxxmcsyDp",
@@ -312,6 +319,7 @@
         BackgroundAnimation: "Uwgkqeb94UMwmyJ_dUvKp",
         "ItemFocusAnim-darkerGrey-nocolor": "_2fOUgihscvE65oigXmaKB1",
         "ItemFocusAnim-darkerGrey": "_2Zz5YKG-AtieYorMauAzsN",
+        "ItemFocusAnim-darkGreySettings": "_3LGTy6zChHph675eNQUXkq",
         "ItemFocusAnim-darkGrey": "_3Clab3jPQdWdPjgkUVd_xv",
         "ItemFocusAnim-grey": "_3nkj24RHleWUwg-w5PZLID",
         "ItemFocusAnim-translucent-white-10": "_2hSev8SqoBLyqKXG9DVTKf",
@@ -431,6 +439,7 @@
         BackgroundAnimation: "_9eScBs0QLgLg6VMskUG44",
         "ItemFocusAnim-darkerGrey-nocolor": "_1uEHEXdxI0bl8BOMg0qJKG",
         "ItemFocusAnim-darkerGrey": "kb_mKEW1Trrm9nSwJMvBA",
+        "ItemFocusAnim-darkGreySettings": "_1kVXULGIgIT2L7XpUEOZ3T",
         "ItemFocusAnim-darkGrey": "_2VF8pxWWbLemKsq4puU1Wr",
         "ItemFocusAnim-grey": "_3FPCibIlrpZF1BA75jCWUj",
         "ItemFocusAnim-translucent-white-10": "_3_HSK9IXZsjy9nj2VWiJi9",
@@ -467,6 +476,7 @@
         BackgroundAnimation: "_1jkwQ_5dtvUqcR17Ni8gH7",
         "ItemFocusAnim-darkerGrey-nocolor": "eJD8k-9VTnfw5SKDeQlGl",
         "ItemFocusAnim-darkerGrey": "_1baqDGxThcAePgI3jhhJkS",
+        "ItemFocusAnim-darkGreySettings": "_12880UgR1fxST3Wm0d9Ew3",
         "ItemFocusAnim-darkGrey": "_1UwkCmGYqqKEAek4YGnKP_",
         "ItemFocusAnim-grey": "nQumUwdpEoKiUzjyDI3lo",
         "ItemFocusAnim-translucent-white-10": "_2o8r_8LAMGBe_v0EG0wG6-",
@@ -500,6 +510,7 @@
         BackgroundAnimation: "_1yMm_mTIDmBvJKeCv0umgv",
         "ItemFocusAnim-darkerGrey-nocolor": "egyi2eVoAnG85NUOofeNG",
         "ItemFocusAnim-darkerGrey": "qXZt3LJP32658eNH5LunZ",
+        "ItemFocusAnim-darkGreySettings": "_21rtsL9xHjvsEMm3sZQAg4",
         "ItemFocusAnim-darkGrey": "uj8Xd4dFY6rbvtVvhTfXM",
         "ItemFocusAnim-grey": "_3uxF9dglNUFm-sYeIoYw9D",
         "ItemFocusAnim-translucent-white-10": "_2Yt3xxreXLPaY7JVPihcb5",
@@ -591,6 +602,7 @@
         BackgroundAnimation: "_2holOneB70LvCFJe2r1g9e",
         "ItemFocusAnim-darkerGrey-nocolor": "_3r1v3otuzMbNJnjxSL-5v7",
         "ItemFocusAnim-darkerGrey": "_1Pz-mADDSz8Fpzz7oTuCvR",
+        "ItemFocusAnim-darkGreySettings": "_2bN4Yf2daAATVe-idmqX8F",
         "ItemFocusAnim-darkGrey": "_3sncBNWLivrnj23D5ketFk",
         "ItemFocusAnim-grey": "B7JcTATlUFsQZSQlhyIAo",
         "ItemFocusAnim-translucent-white-10": "_7UnHbXS3CAyfX2N-aWCiv",
@@ -643,6 +655,7 @@
         BackgroundAnimation: "_8_3_M592XNR4DsMQ_Sdvz",
         "ItemFocusAnim-darkerGrey-nocolor": "_2_jIt9nCSopNXe4_3NeR6a",
         "ItemFocusAnim-darkerGrey": "_3p60BZKcebqjGnIjRBOlMw",
+        "ItemFocusAnim-darkGreySettings": "_2ZQrCJY7WBczlOmmZQHMzx",
         "ItemFocusAnim-darkGrey": "_2M-BLV3qJBFtW7L-6M49jP",
         "ItemFocusAnim-grey": "ff_f9PCg5owcTXqjoWDE7",
         "ItemFocusAnim-translucent-white-10": "_2yA2_SkK8J5R_DLYh4o7Cy",
@@ -679,6 +692,7 @@
         BackgroundAnimation: "_3CxKZ4N0RhDFwPqdzAtrMl",
         "ItemFocusAnim-darkerGrey-nocolor": "_3pZA6QmunSvkjmZI9Ndmcu",
         "ItemFocusAnim-darkerGrey": "_3BffASPCHFV0VAgmPVl_kc",
+        "ItemFocusAnim-darkGreySettings": "qkh264Vz9Pv5rr6YfKhh1",
         "ItemFocusAnim-darkGrey": "qD2mZ6w2eEWm1PhMc6xb6",
         "ItemFocusAnim-grey": "_2mW-vk-aE8tlHuAW0uXkit",
         "ItemFocusAnim-translucent-white-10": "_2b2eos74MIDM6zKt-lSfM4",
@@ -731,6 +745,7 @@
         BackgroundAnimation: "_2NvCWp6KWza717c2q7D6ko",
         "ItemFocusAnim-darkerGrey-nocolor": "_2POOztmd1ONGjK8fHCV5iD",
         "ItemFocusAnim-darkerGrey": "_3X7A1Ec0LK2lN02eH5nbEi",
+        "ItemFocusAnim-darkGreySettings": "_3MbAGf606eAnNA_kucsuEn",
         "ItemFocusAnim-darkGrey": "_3AcX9y0dDWaCFiXq2jIcU_",
         "ItemFocusAnim-grey": "_3N1W0jPMb91CnnuRmTxLeO",
         "ItemFocusAnim-translucent-white-10": "_3tNx72scoGHqNU1o7HM5I1",
@@ -832,6 +847,7 @@
         BackgroundAnimation: "_2cFMsY_RJyXJuF73RDcR6w",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tfth69ODAh7Vxzei2PsNy",
         "ItemFocusAnim-darkerGrey": "_13s4PV24HDIzJjXkUqHl5B",
+        "ItemFocusAnim-darkGreySettings": "_3moml_kGno0CLfo4uS0F64",
         "ItemFocusAnim-darkGrey": "_2j2T6CdMdBrozoESg_T2fz",
         "ItemFocusAnim-grey": "_212THIOmifqlNdSf_xaZGC",
         "ItemFocusAnim-translucent-white-10": "EYDRZ35WXIJWLd6nRhxF_",
@@ -937,6 +953,7 @@
         BackgroundAnimation: "_2-SCxC1my6FrH3aDEzPwlp",
         "ItemFocusAnim-darkerGrey-nocolor": "_3imOd9Zme0cKg033W9R6vV",
         "ItemFocusAnim-darkerGrey": "_39CSDSVCyQTDyfQlZX_eMG",
+        "ItemFocusAnim-darkGreySettings": "_3vaD1GloPppN9D4XWfGnw2",
         "ItemFocusAnim-darkGrey": "_2onns6LUXpYqxhK4fGf3NX",
         "ItemFocusAnim-grey": "_4Kw4wiHjF-6BJhWxpY1ny",
         "ItemFocusAnim-translucent-white-10": "_3OJltj5_RbXofYDZrl6cfP",
@@ -973,6 +990,7 @@
         BackgroundAnimation: "_1rhJfCNCZyBG_ErjP8cbJN",
         "ItemFocusAnim-darkerGrey-nocolor": "_2Wn0xk5y_QYuqwvMUgCS_q",
         "ItemFocusAnim-darkerGrey": "_1If8jrRruIrjSp8OaAnnTv",
+        "ItemFocusAnim-darkGreySettings": "_2n4FOOcmVUKefrAz9nzF7g",
         "ItemFocusAnim-darkGrey": "_18vHojgZL-LOjT6CdBetmW",
         "ItemFocusAnim-grey": "_3tz51q-WjCFwQbG3Z3idxV",
         "ItemFocusAnim-translucent-white-10": "eMzjYbN-S8IR6m_x4JUhk",
@@ -1009,6 +1027,7 @@
         BackgroundAnimation: "_1BygdMVbHp4UClANjStGo9",
         "ItemFocusAnim-darkerGrey-nocolor": "_3pIKV-kCrU2q99tCLoOD-6",
         "ItemFocusAnim-darkerGrey": "OgzJ6LmEUtmpf0GQsD7Vo",
+        "ItemFocusAnim-darkGreySettings": "_41HuR0jEUjSpy915lvI0-",
         "ItemFocusAnim-darkGrey": "_3GG7KC5ZHbAn80ZwU94AGH",
         "ItemFocusAnim-grey": "_2vCJ0TzuZNRRjxTZxrTZgc",
         "ItemFocusAnim-translucent-white-10": "_3LSZycr3qnPrQPVjt2oj-9",
@@ -1031,6 +1050,7 @@
         BackgroundAnimation: "_3B8qOyTqC7rzOP_X5kvWK-",
         "ItemFocusAnim-darkerGrey-nocolor": "_2wYIdqvoWTU_8MPGJtV4j",
         "ItemFocusAnim-darkerGrey": "_5noNLXRGVi51cgI8nYBAm",
+        "ItemFocusAnim-darkGreySettings": "_3UqXfp4k1blu2wv57exkEd",
         "ItemFocusAnim-darkGrey": "_6iLF1QqShrpEW0UiF0x2o",
         "ItemFocusAnim-grey": "PuZXrV7q9vI7p-jK9x2pN",
         "ItemFocusAnim-translucent-white-10": "_2RwwslrDVdOXePDy6QCEkZ",
@@ -1059,6 +1079,7 @@
         BackgroundAnimation: "_3qHy0ZfVKo5p8TWje-jtAG",
         "ItemFocusAnim-darkerGrey-nocolor": "_2ysW7cifFEEfft88AcXQ77",
         "ItemFocusAnim-darkerGrey": "_1sDFTD6HQbSYSYfAeHxdfc",
+        "ItemFocusAnim-darkGreySettings": "VVWIBS9xCTuHNuOqAeZgl",
         "ItemFocusAnim-darkGrey": "_3o-jWjx0jwVTFKTTeS0T03",
         "ItemFocusAnim-grey": "_1hRqeCN67Ga45VdF6Q6cgA",
         "ItemFocusAnim-translucent-white-10": "_2f5q2Audp6Dn4k8WoktvHn",
@@ -6263,6 +6284,20 @@
         return "invalid";
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return () =>
+          ((_ = (1664525 * _ + 1013904223) % 4294967296) >>> 0) / 4294967296;
+      }
+      function _() {
+        return Math.floor(4294967296 * Math.random());
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
     },
@@ -16566,13 +16601,13 @@
           (function (_, _) {
             var _;
             const _ = _.findIndex((_) => "tabs" === _.section_type);
-            if (_ >= 0) {
+            if (_ >= 0 && void 0 !== _) {
               const _ = _[_],
                 _ =
                   null === (_ = _.tabs) || void 0 === _
                     ? void 0
                     : __webpack_require__.findIndex((_) => _.unique_id === _);
-              if (_ >= 0)
+              if (_ && _ >= 0 && _.tabs)
                 return {
                   selectedTabBackgroundDef: _.tabs[_].tab_background_img_groups,
                   nTabSaleSectionIndex: _,
@@ -16626,7 +16661,7 @@
                   }
               }),
             _ < _.length && (!_ || _ < _) && (_ = _[_].unique_id),
-            null == _ ? void 0 : _.enabled)
+            (null == _ ? void 0 : _.enabled) && void 0 !== _)
           ) {
             let _ = _;
             const _ = _.groups.length;
@@ -16679,8 +16714,12 @@
           nFirstTabSectionIDWithoutGroup: _,
         };
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
         var _, _, _;
         let _ = _.jsondata.sale_background_img_groups.groups.find(
           (_) => _.background_id === _.groupID,
@@ -16708,10 +16747,32 @@
             eventModel: _,
             displayDef: _,
             derivedGroupInfo: _.derivedGroupInfo,
-            children: _.elSaleSections,
+            children:
+              _ &&
+              _.randomize_section_order &&
+              _ !== _._.EPreviewMode_EditBackground
+                ? (0, _.jsx)(_, {
+                    clanEventGID: _.GID,
+                    elSaleSections: _.elSaleSections,
+                  })
+                : _.elSaleSections,
           },
           "background_group_" + _.groupID,
         );
+      }
+      function _(_) {
+        const { clanEventGID: _, elSaleSections: _ } = _,
+          [_, _] = (0, _._)(`sale_section_seed_${_}`, (0, _._)());
+        if (!_ || 0 === _.length) return null;
+        if (_.length > 1 && void 0 !== _) {
+          const _ = (0, _._)(_);
+          return (0, _.jsx)(_.Fragment, {
+            children: _._(_, 0, _),
+          });
+        }
+        return (0, _.jsx)(_.Fragment, {
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -16728,7 +16789,7 @@
             [_],
           ),
           _ = (0, _._)(_);
-        if (!_ || 0 == _.length) return null;
+        if (!_ || (Array.isArray(_) && 0 == _.length)) return null;
         if (!_)
           return (0, _.jsx)(_.Fragment, {
             children: _,
@@ -17317,6 +17378,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -17326,7 +17388,7 @@
             eventModel: _,
           } = _,
           [_, _] = (0, _.useState)(() => _),
-          [_, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.repeat_setting,
             _.scaling_setting,
             _.background_color1,
@@ -17334,6 +17396,7 @@
             _.gradient_setting,
             _.position_setting,
             _.GetIncludedRealmList(),
+            _.randomize_section_order,
           ]),
           [_] = (0, _.useState)(() => {
             var _;
@@ -17350,7 +17413,7 @@
                 : {},
             );
           });
-        return (0, _.jsx)(_._, {
+        return (0, _.jsxs)(_._, {
           strLocalizedTitle: (0, _._)("#BackgroundGroups_Configure"),
           strLocalizedDescription: (0, _._)("#BackgroundGroups_DialogDesc"),
           appid: _.appid,
@@ -17389,110 +17452,57 @@
               ),
             );
           },
-          children: (0, _.jsxs)("div", {
-            className: _().ConfDialogOptions,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().ImageOptions,
-                children: [
-                  (0, _.jsx)(_._, {
-                    setting: _,
-                    fnUpdateSetting: (_) => {
-                      _(
-                        "no-repeat" !== _
-                          ? {
-                              ..._,
-                              repeat_setting: _,
-                              scaling_setting: "auto",
-                            }
-                          : {
-                              ..._,
-                              repeat_setting: _,
-                            },
-                      );
-                    },
-                    label: (0, _._)("#BackgroundGroups_Repeating"),
-                  }),
-                  (0, _.jsx)(_, {
-                    scaling_setting: null != _ ? _ : "contain",
-                    disable: "no-repeat" !== _,
-                    fnUpdateSetting: (_) =>
-                      _({
-                        ..._,
-                        scaling_setting: _,
-                      }),
-                  }),
-                  Boolean("cover" != _) &&
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().ConfDialogOptions,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().ImageOptions,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      setting: _,
+                      fnUpdateSetting: (_) => {
+                        _(
+                          "no-repeat" !== _
+                            ? {
+                                ..._,
+                                repeat_setting: _,
+                                scaling_setting: "auto",
+                              }
+                            : {
+                                ..._,
+                                repeat_setting: _,
+                              },
+                        );
+                      },
+                      label: (0, _._)("#BackgroundGroups_Repeating"),
+                    }),
                     (0, _.jsx)(_, {
-                      position_settings: _,
+                      scaling_setting: null != _ ? _ : "contain",
+                      disable: "no-repeat" !== _,
                       fnUpdateSetting: (_) =>
                         _({
                           ..._,
-                          position_setting: _,
+                          scaling_setting: _,
                         }),
                     }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _().ColorOptions,
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)("#BackgroundGroups_Color"),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().ColorCtn,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        style: {
-                          backgroundColor: _,
-                        },
-                        onClick: (_) => {
-                          var _;
-                          (0, _._)(
-                            (0, _.jsx)(_, {
-                              color: null != _ ? _ : "",
-                              setColor: (_) =>
-                                _({
-                                  ..._,
-                                  background_color1: _,
-                                }),
-                            }),
-                            null !== (_ = (0, _._)(_)) && void 0 !== _
-                              ? _
-                              : window,
-                          );
-                        },
-                        children: (0, _._)(
-                          void 0 === _
-                            ? "#BackgroundGroups_ColorNum_unset"
-                            : "#BackgroundGroups_ColorNum",
-                          1,
-                        ),
-                      }),
-                      " ",
-                      (0, _.jsx)(_._, {
-                        onClick: () =>
+                    Boolean("cover" != _) &&
+                      (0, _.jsx)(_, {
+                        position_settings: _,
+                        fnUpdateSetting: (_) =>
                           _({
                             ..._,
-                            background_color1: void 0,
+                            position_setting: _,
                           }),
-                        children: (0, _._)("#BackgroundGroups_Color_Clear"),
                       }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().SwapColorsCtn,
-                    children: (0, _.jsx)(_._, {
-                      onClick: () =>
-                        _({
-                          ..._,
-                          background_color1: _,
-                          background_color2: _,
-                        }),
-                      children: (0, _._)("#BackgroundGroups_Color_Swap"),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().ColorOptions,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _._)("#BackgroundGroups_Color"),
                     }),
-                  }),
-                  Boolean("single-color" !== _) &&
                     (0, _.jsxs)("div", {
                       className: _().ColorCtn,
                       children: [
@@ -17508,7 +17518,7 @@
                                 setColor: (_) =>
                                   _({
                                     ..._,
-                                    background_color2: _,
+                                    background_color1: _,
                                   }),
                               }),
                               null !== (_ = (0, _._)(_)) && void 0 !== _
@@ -17520,7 +17530,7 @@
                             void 0 === _
                               ? "#BackgroundGroups_ColorNum_unset"
                               : "#BackgroundGroups_ColorNum",
-                            2,
+                            1,
                           ),
                         }),
                         " ",
@@ -17528,24 +17538,89 @@
                           onClick: () =>
                             _({
                               ..._,
-                              background_color2: void 0,
+                              background_color1: void 0,
                             }),
                           children: (0, _._)("#BackgroundGroups_Color_Clear"),
                         }),
                       ],
                     }),
-                  (0, _.jsx)(_, {
-                    gradient: null != _ ? _ : "top-to-bottom",
-                    fnUpdateSetting: (_) =>
-                      _({
-                        ..._,
-                        gradient_setting: _,
+                    (0, _.jsx)("div", {
+                      className: _().SwapColorsCtn,
+                      children: (0, _.jsx)(_._, {
+                        onClick: () =>
+                          _({
+                            ..._,
+                            background_color1: _,
+                            background_color2: _,
+                          }),
+                        children: (0, _._)("#BackgroundGroups_Color_Swap"),
                       }),
-                  }),
-                ],
+                    }),
+                    Boolean("single-color" !== _) &&
+                      (0, _.jsxs)("div", {
+                        className: _().ColorCtn,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            style: {
+                              backgroundColor: _,
+                            },
+                            onClick: (_) => {
+                              var _;
+                              (0, _._)(
+                                (0, _.jsx)(_, {
+                                  color: null != _ ? _ : "",
+                                  setColor: (_) =>
+                                    _({
+                                      ..._,
+                                      background_color2: _,
+                                    }),
+                                }),
+                                null !== (_ = (0, _._)(_)) && void 0 !== _
+                                  ? _
+                                  : window,
+                              );
+                            },
+                            children: (0, _._)(
+                              void 0 === _
+                                ? "#BackgroundGroups_ColorNum_unset"
+                                : "#BackgroundGroups_ColorNum",
+                              2,
+                            ),
+                          }),
+                          " ",
+                          (0, _.jsx)(_._, {
+                            onClick: () =>
+                              _({
+                                ..._,
+                                background_color2: void 0,
+                              }),
+                            children: (0, _._)("#BackgroundGroups_Color_Clear"),
+                          }),
+                        ],
+                      }),
+                    (0, _.jsx)(_, {
+                      gradient: null != _ ? _ : "top-to-bottom",
+                      fnUpdateSetting: (_) =>
+                        _({
+                          ..._,
+                          gradient_setting: _,
+                        }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              clanSteamID: _.clanSteamID,
+              children: (0, _.jsx)(_._, {
+                checked: !!_,
+                onChange: (_) => {
+                  _.randomize_section_order = _;
+                },
+                children: (0, _._)("#BackgroundGroups_RandomizeSectionOrder"),
               }),
-            ],
-          }),
+            }),
+          ],
         });
       }
       function _(_) {
@@ -18150,8 +18225,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25993,13 +26066,7 @@
           _
         );
       }
-      function _(_) {
-        return () =>
-          ((_ = (1664525 * _ + 1013904223) % 4294967296) >>> 0) / 4294967296;
-      }
-      function _() {
-        return Math.floor(4294967296 * Math.random());
-      }
+      var _ = __webpack_require__("chunkid");
       const _ = 1;
       function _(_, _, _, _) {
         const _ = _(
@@ -26013,7 +26080,7 @@
         if (_)
           for (const _ of _.data.groups) {
             const _ = __webpack_require__.splice(0, _.nCount),
-              _ = _(_.nSeed);
+              _ = _._(_.nSeed);
             (0, _._)(_, Math.min(_, _.length), _),
               (_ -= Math.min(_, _.length)),
               _.push(..._),
@@ -26023,9 +26090,9 @@
           if (_ > 0) {
             const _ = {
                 nCount: _,
-                nSeed: _(),
+                nSeed: _._(),
               },
-              _ = _(_.nSeed);
+              _ = _._(_.nSeed);
             (0, _._)(_, _, _),
               _.push(..._),
               _.push(_),
@@ -26049,8 +26116,8 @@
             _.rtime32_last_modified,
             (_) => "nSeed" in _ && Number.isInteger(_.nSeed),
           ),
-          _ = _ ? _.data.nSeed : _(),
-          _ = _(_),
+          _ = _ ? _.data.nSeed : _._(),
+          _ = _._(_),
           _ = null !== (_ = _.random_order_top_x) && void 0 !== _ ? _ : 0,
           _ = JSON.parse(JSON.stringify(_));
         return (
@@ -28603,6 +28670,7 @@
                   _: _,
                   bSingleLineMode: !0,
                   bHidePrePurchase: 10 == _.type,
+                  bPreferWholeNumbers: 10 == _.type,
                   strContainerClassName: _().PriceCtn,
                   strDiscountAndPriceClassName: _().PriceDiscount,
                   strPriceFormattedClassName: _().PriceFormatted,
@@ -28655,6 +28723,7 @@
                           strContainerClassName: _().PriceCtn,
                           strDiscountAndPriceClassName: _().PriceDiscount,
                           bHidePrePurchase: 10 == _.type,
+                          bPreferWholeNumbers: 10 == _.type,
                           strPriceFormattedClassName: _().PriceFormatted,
                         }),
                       ],
@@ -28687,22 +28756,33 @@
                 children: _._.Localize("#Sale_default_label_18"),
               }),
             }),
-            _.requires_reservation &&
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _.expecteddate,
-                  "ReservationExpectedDateCtn",
-                ),
-                children: (0, _.jsx)("div", {
+            _.requires_reservation
+              ? (0, _.jsx)("div", {
                   className: (0, _._)(
-                    _.expecteddate_str,
-                    "ReservationExpectedDate",
+                    _.expecteddate,
+                    "ReservationExpectedDateCtn",
                   ),
-                  children: _
-                    ? _._.Localize("#Sale_Reservation_Available_Date", _)
-                    : _._.Localize("#Sale_default_label_18"),
+                  children: (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _.expecteddate_str,
+                      "ReservationExpectedDate",
+                    ),
+                    children: _
+                      ? _._.Localize("#Sale_Reservation_Available_Date", _)
+                      : _._.Localize("#Sale_default_label_18"),
+                  }),
+                })
+              : (0, _.jsx)(_.Fragment, {
+                  children:
+                    _.length > 0 &&
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.expecteddate_str),
+                      children: _._.Localize(
+                        "#Sale_Reservation_Available_Date",
+                        _,
+                      ),
+                    }),
                 }),
-              }),
           ],
         });
       }
@@ -28731,9 +28811,14 @@
                   ),
                 })
               : _ && _.is_coming_soon
-                ? (0, _.jsx)(_, {
-                    hardwareDetail: _,
-                    storeItemReleaseInfo: _,
+                ? (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsx)("div", {
+                      className: _.purchaseaction,
+                      children: (0, _.jsx)(_, {
+                        hardwareDetail: _,
+                        storeItemReleaseInfo: _,
+                      }),
+                    }),
                   })
                 : (0, _.jsx)(_.Fragment, {
                     children: (0, _.jsxs)("div", {
@@ -28859,288 +28944,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-          [_._.k_ECurrencyCodeInvalid]: {},
-          [_._.k_ECurrencyCodeUSD]: {
-            strSymbol: "$",
-          },
-          [_._.k_ECurrencyCodeGBP]: {
-            strSymbol: "£",
-          },
-          [_._.k_ECurrencyCodeEUR]: {
-            strSymbol: "€",
-          },
-          [_._.k_ECurrencyCodeCHF]: {
-            strSymbol: "CHF",
-          },
-          [_._.k_ECurrencyCodeRUB]: {
-            strSymbol: "руб.",
-            bSuffixSymbol: !0,
-            bWholeUnitsOnly: !0,
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: "",
-          },
-          [_._.k_ECurrencyCodePLN]: {
-            strSymbol: "zł",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: " ",
-          },
-          [_._.k_ECurrencyCodeBRL]: {
-            strSymbol: "R$",
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeJPY]: {
-            strSymbol: "¥",
-            bWholeUnitsOnly: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeNOK]: {
-            strSymbol: "kr",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeIDR]: {
-            strSymbol: "Rp",
-            bWholeUnitsOnly: !0,
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ".",
-            strThousandsSeparator: " ",
-          },
-          [_._.k_ECurrencyCodeMYR]: {
-            strSymbol: "RM",
-          },
-          [_._.k_ECurrencyCodePHP]: {
-            strSymbol: "P",
-          },
-          [_._.k_ECurrencyCodeSGD]: {
-            strSymbol: "S$",
-          },
-          [_._.k_ECurrencyCodeTHB]: {
-            strSymbol: "฿",
-          },
-          [_._.k_ECurrencyCodeVND]: {
-            strSymbol: "₫",
-            bWholeUnitsOnly: !0,
-            bSuffixSymbol: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeKRW]: {
-            strSymbol: "₩",
-            bWholeUnitsOnly: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeTRY]: {
-            strSymbol: "TL",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeUAH]: {
-            strSymbol: "₴",
-            bSuffixSymbol: !0,
-            bWholeUnitsOnly: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: " ",
-          },
-          [_._.k_ECurrencyCodeMXN]: {
-            strSymbol: "Mex$",
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeCAD]: {
-            strSymbol: "CDN$",
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeAUD]: {
-            strSymbol: "A$",
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeNZD]: {
-            strSymbol: "NZ$",
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeCNY]: {
-            strSymbol: "¥",
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeINR]: {
-            strSymbol: "₹",
-            bSpaceForSymbol: !0,
-            bWholeUnitsOnly: !0,
-          },
-          [_._.k_ECurrencyCodeCLP]: {
-            strSymbol: "CLP$",
-            bSpaceForSymbol: !0,
-            bWholeUnitsOnly: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodePEN]: {
-            strSymbol: "S/.",
-          },
-          [_._.k_ECurrencyCodeCOP]: {
-            strSymbol: "COL$",
-            bSpaceForSymbol: !0,
-            bWholeUnitsOnly: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeZAR]: {
-            strSymbol: "R",
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ".",
-            strThousandsSeparator: " ",
-          },
-          [_._.k_ECurrencyCodeHKD]: {
-            strSymbol: "HK$",
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeTWD]: {
-            strSymbol: "NT$",
-            bWholeUnitsOnly: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeSAR]: {
-            strSymbol: "SR",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeAED]: {
-            strSymbol: "AED",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeSEK]: {
-            strSymbol: "kr",
-            bSpaceForSymbol: !0,
-            bSuffixSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeARS]: {
-            strSymbol: "ARS$",
-            bSpaceForSymbol: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeILS]: {
-            strSymbol: "₪",
-          },
-          [_._.k_ECurrencyCodeBYN]: {
-            strSymbol: "Br",
-          },
-          [_._.k_ECurrencyCodeKZT]: {
-            strSymbol: "₸",
-            bSuffixSymbol: !0,
-            bWholeUnitsOnly: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: " ",
-          },
-          [_._.k_ECurrencyCodeKWD]: {
-            strSymbol: "KD",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeQAR]: {
-            strSymbol: "QR",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeCRC]: {
-            strSymbol: "₡",
-            bWholeUnitsOnly: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeUYU]: {
-            strSymbol: "$U",
-            bWholeUnitsOnly: !0,
-            strDecimalSymbol: ",",
-            strThousandsSeparator: ".",
-          },
-          [_._.k_ECurrencyCodeBGN]: {
-            strSymbol: "лв",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeHRK]: {
-            strSymbol: "kn",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeCZK]: {
-            strSymbol: "Kč",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeDKK]: {
-            strSymbol: "kr.",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeHUF]: {
-            strSymbol: "Ft",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeRON]: {
-            strSymbol: "lei",
-            bSuffixSymbol: !0,
-            bSpaceForSymbol: !0,
-          },
-          [_._.k_ECurrencyCodeMax]: {},
-        },
-        _ = {
-          strSymbol: "",
-          bSuffixSymbol: !1,
-          bSpaceForSymbol: !1,
-          bWholeUnitsOnly: !1,
-          eCurrency: _._.k_ECurrencyCodeInvalid,
-          strDecimalSymbol: ".",
-          strThousandsSeparator: ",",
-        };
-      function _(_, _) {
-        const _ = (function (_) {
-            return {
-              ..._,
-              ..._[_],
-              eCurrency: _,
-            };
-          })(_),
-          {
-            strSymbol: _,
-            bSuffixSymbol: _,
-            bSpaceForSymbol: _,
-            bWholeUnitsOnly: _,
-            strDecimalSymbol: _,
-            strThousandsSeparator: _,
-          } = _,
-          _ = _ < 0,
-          _ = _ && _ % 100 == 0;
-        _ && (_ = -_);
-        const _ = [];
-        for (let _ = 0; _ < 2; _++)
-          _ || _.push(_ % 10), (_ = Math.floor(_ / 10));
-        !_ && _ && _.push(_);
-        let _ = 0;
-        do {
-          _++ % 3 == 0 && _ > 2 && _ && _.push(_),
-            _.push(_ % 10),
-            (_ = Math.floor(_ / 10));
-        } while (_ > 0);
-        const _ = _.reverse().join(""),
-          _ = _ ? " " : "",
-          _ = _ ? "-" : "";
-        return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -29180,8 +28985,32 @@
                 void 0 !== _
                 ? _
                 : _[0];
-          });
-        if (((0, _.useEffect)(() => {}, [_]), !_ || !_ || !_)) return null;
+          }),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        if (
+          ((0, _.useEffect)(() => {
+            if (_ && _.length > 0) {
+              const _ = new Set(
+                _.map((_) => _.reservation_package).filter((_) => !!_),
+              );
+              if (_.size > 0) {
+                Array.from(_).forEach((_) => {
+                  if (_) {
+                    const _ = {
+                      packageid: _,
+                    };
+                    _.prefetchQuery((0, _._)(_, _)),
+                      _.prefetchQuery((0, _._)(_, _)),
+                      _.prefetchQuery((0, _._)(_, _));
+                  }
+                });
+              }
+            }
+          }, [_, _, _]),
+          !_ || !_ || !_)
+        )
+          return null;
         const _ =
           null == _
             ? void 0
@@ -29444,42 +29273,66 @@
               Number(_.final_price_in_cents) - Number(_.final_price_in_cents),
             _ = (0, _._)(_._.country_code.toUpperCase());
           return (0, _.jsx)("div", {
-            children: _(_, _),
+            children: (0, _._)(_, _),
           });
         }
         return null;
       }
-      _._.EUNIVERSE;
-      const _ = ["HK", "JP", "KR", "TW"],
+      const _ = 2 == _._.EUNIVERSE ? 404860 : 1675200,
+        _ =
+          (_._.EUNIVERSE,
+          _._.EUNIVERSE,
+          _._.EUNIVERSE,
+          ["HK", "JP", "KR", "TW"]),
         _ =
           2 == _._.EUNIVERSE
-            ? [501556, 501557, 501558, 502103, 502106]
-            : [595603, 595604, 595605, 946113, 946114];
-      function _(_, _, _) {
-        let _ = null;
+            ? [
+                501556, 501557, 501558, 502103, 502106, 502996, 502998, 503e3,
+                503002, 503004, 502878,
+              ]
+            : [
+                595603, 595604, 595605, 946113, 946114, 1558609, 1629447,
+                1629446, 1629458, 1629460, 1629484, 1629486,
+              ];
+      function _(_, _, _, _, _) {
+        let _ = null,
+          _ = !1;
         return (
           _ == _._.k_LoadFailure
             ? (_ = (0, _._)("#Sale_Reservation_Too_Busy"))
             : _.some((_) => _.includes(_)) && _.includes(_._.country_code)
-              ? (_ = (0, _._)(
-                  "#Sale_Reservation_Komodo",
-                  (0, _.jsx)("a", {
-                    className: _.Link,
-                    href: "https://steamdeck.komodo.jp",
-                  }),
-                ))
-              : _ &&
-                  __webpack_require__.some((_) => !_.allow_purchase_in_country)
-                ? (_ = (0, _._)("#Sale_Reservation_NotAvailableCountry"))
+              ? ((_ = !0),
+                (_ =
+                  _ === _
+                    ? (0, _._)(
+                        "#Sale_Reservation_Komodo",
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://steamdeck.komodo.jp",
+                        }),
+                      )
+                    : (0, _._)(
+                        "#Sale_Reservation_Komodo_Generic",
+                        null != _ ? _ : (0, _._)("#AppTypeLabel_hardware"),
+                        (0, _.jsx)("a", {
+                          className: _.Link,
+                          href: "https://komodostation.com/",
+                          children: "komodostation.com",
+                        }),
+                      )))
+              : _ && _.some((_) => !_.allow_purchase_in_country)
+                ? ((_ = !0),
+                  (_ = (0, _._)("#Sale_Reservation_NotAvailableCountry")))
                 : _ &&
-                  __webpack_require__.some(
-                    (_) => _.account_restricted_from_purchasing,
-                  ) &&
+                  _.some((_) => _.account_restricted_from_purchasing) &&
                   _._.logged_in &&
-                  (_ = __webpack_require__.some((_) => _.requires_reservation)
+                  (_ = _.some((_) => _.requires_reservation)
                     ? (0, _._)("#Sale_Reservation_NotAllowedAccount")
                     : (0, _._)("#Sale_Purchase_NotAllowedAccount")),
-          _
+          {
+            elReservationSystemMessage: _,
+            bHidePackageDisplay: _,
+          }
         );
       }
       const _ = _.Fragment;
@@ -29592,7 +29445,7 @@
             });
       }
       function _(_) {
-        var _, _;
+        var _, _, _, _, _;
         const { section: _ } = _,
           _ =
             null === (_ = _.internal_section_data) || void 0 === _
@@ -29621,6 +29474,12 @@
               ? void 0
               : _.reservation_options,
           ]),
+          _ =
+            null === (_ = _.internal_section_data) || void 0 === _
+              ? void 0
+              : _.reservation_appid_wishlist,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { rgHardwareDetails: _, eHardwareLoadingState: _ } = (0, _._)(_);
         if (!_ && _ == _._.k_Loading)
           return (0, _.jsx)(_._, {
@@ -29628,19 +29487,40 @@
             position: "center",
             string: _._.Localize("#Loading"),
           });
-        let _ = _(_, _, _);
+        const { elReservationSystemMessage: _, bHidePackageDisplay: _ } = _(
+          _,
+          null == _ ? void 0 : _.name,
+          _,
+          _,
+          _,
+        );
+        let _ = !0;
+        if (_) {
+          _ = !(
+            null !==
+              (_ =
+                null === (_ = _.internal_section_data) || void 0 === _
+                  ? void 0
+                  : _.reservation_options) && void 0 !== _
+              ? _
+              : []
+          ).some((_) => _.use_package_description);
+        }
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (null == _ ? void 0 : _.show_product_configs)
-              ? (0, _.jsx)(_, {
-                  ..._,
-                  disabled: !!_,
-                  reservationLayout: _,
-                })
-              : (0, _.jsx)(_, {
-                  ..._,
-                  disabled: !!_,
-                }),
+            _ &&
+              (0, _.jsx)(_.Fragment, {
+                children: (null == _ ? void 0 : _.show_product_configs)
+                  ? (0, _.jsx)(_, {
+                      ..._,
+                      disabled: !!_,
+                      reservationLayout: _,
+                    })
+                  : (0, _.jsx)(_, {
+                      ..._,
+                      disabled: !!_,
+                    }),
+              }),
             !!_ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(_.noreserve, "NoReserverMsg"),

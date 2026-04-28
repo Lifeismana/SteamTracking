@@ -47,6 +47,7 @@
         BackgroundAnimation: "_2hlRK2hm0pHy1YSxwknFCj",
         "ItemFocusAnim-darkerGrey-nocolor": "_3Ye-Lgym31_-ibnmbFywrn",
         "ItemFocusAnim-darkerGrey": "_1klcEk0V0JFATe7imIRZ1C",
+        "ItemFocusAnim-darkGreySettings": "_1o29CI_yDNVtgTV1cxDqGZ",
         "ItemFocusAnim-darkGrey": "_2BtPOA0wSbFULgc-Zh-0_x",
         "ItemFocusAnim-grey": "_24LF-yODOtVFSuejuQ_xu2",
         "ItemFocusAnim-translucent-white-10": "uTNXVgYo8JPxZgJyTl9LQ",
@@ -68,6 +69,7 @@
         BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
         "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
         "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
         "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
         "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
         "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
@@ -141,8 +143,8 @@
       g = (0, i.Cg)([n.PA], g);
       var B = r(12155),
         y = r(70342),
-        M = r.n(y),
-        _ = r(97232);
+        _ = r.n(y),
+        M = r(97232);
       const f = (0, n.PA)((e) => {
         const { persona: t, className: r, ...i } = e;
         if (!t) return null;
@@ -158,20 +160,20 @@
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().MobilePhoneIcon,
+                  _().PersonaStatusIcon,
+                  _().MobilePhoneIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, c.we)("#Platform_Hint_Mobile"),
                 ...i,
-                children: (0, s.jsx)(_.rf, {}),
+                children: (0, s.jsx)(M.rf, {}),
               }),
             o &&
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().VRIcon,
+                  _().PersonaStatusIcon,
+                  _().VRIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, c.we)("#Platform_Hint_VR"),
@@ -182,8 +184,8 @@
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().BigPictureIcon,
+                  _().PersonaStatusIcon,
+                  _().BigPictureIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, c.we)("#Platform_Hint_BigPicture"),
@@ -194,8 +196,8 @@
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().SteamDeckIcon,
+                  _().PersonaStatusIcon,
+                  _().SteamDeckIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, c.we)("#Platform_Hint_SteamDeck"),
@@ -206,8 +208,8 @@
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  M().PersonaStatusIcon,
-                  M().SteamDeckIcon,
+                  _().PersonaStatusIcon,
+                  _().SteamDeckIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, c.we)("#Platform_Hint_LegionGoS"),
@@ -244,8 +246,8 @@
             strNickname: u,
             bCompactView: d,
             bHideGameName: y,
-            bHideEnhancedRichPresenceLabel: M,
-            bHideSnooze: _,
+            bHideEnhancedRichPresenceLabel: _,
+            bHideSnooze: M,
             bHideStatus: b,
             renderStatus: z,
             renderRichPresence: F,
@@ -285,8 +287,8 @@
                   (O = (0, c.we)("#PersonaStateWatchingBroadcast")),
             O || (O = r.GetLocalizedOnlineStatus()),
             z && (O = z());
-          let C = !j && !_;
-          !1 === _ && (C = !0),
+          let C = !j && !M;
+          !1 === M && (C = !0),
             r.is_awayOrSnooze && C && (W = (0, s.jsx)(g, { persona: r }));
           let G = null;
           t
@@ -300,12 +302,12 @@
             F && (P = F()),
             (!y && P) || T.push(p().twoLine);
           const A = !r.is_ingame && !b,
-            L = !M && P,
-            k = O && (!y || !L),
+            k = !_ && P,
+            L = O && (!y || !k),
             q = (0, o.ID)(h.TS.LAUNCHER_TYPE);
           let U = u && !n,
             D = U ? u : r.m_strPlayerName,
-            Z = !j && (k || A) && L;
+            Z = !j && (L || A) && k;
           return (0, s.jsxs)("div", {
             ...x,
             className: (0, m.A)(...T),
@@ -354,7 +356,7 @@
                 (0, s.jsxs)("div", {
                   className: p().richPresenceContainer,
                   children: [
-                    (k || A) &&
+                    (L || A) &&
                       (0, s.jsxs)("div", {
                         className: (0, m.A)(
                           p().gameName,
@@ -372,7 +374,7 @@
                           O,
                         ],
                       }),
-                    L &&
+                    k &&
                       (0, s.jsxs)("div", {
                         className: (0, m.A)(p().richPresenceLabel, "no-drag"),
                         children: [P, " "],
@@ -608,20 +610,20 @@
       u.Message;
       u.Message;
       u.Message;
-      class M extends u.Message {
+      class _ extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            M.prototype.groupid || g.Sg(M.M()),
+            _.prototype.groupid || g.Sg(_.M()),
             u.Message.initialize(this, e, 0, -1, [3], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
                 fields: {
                   groupid: { n: 1, br: g.qM.readUint32, bw: g.gp.writeUint32 },
                   name: { n: 2, br: g.qM.readString, bw: g.gp.writeString },
@@ -635,57 +637,20 @@
                   },
                 },
               }),
-            M.sm_m
+            _.sm_m
           );
         }
         static MBF() {
-          return M.sm_mbf || (M.sm_mbf = g.w0(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return g.BT(M.M(), e, t);
-        }
-        static fromObject(e) {
-          return g.Uq(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (d().BinaryReader)(e),
-            r = new M();
-          return M.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return g.zj(M.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (d().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          g.i0(M.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (d().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendsListCategory";
-        }
-      }
-      class _ extends u.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), u.Message.initialize(this, e, 0, -1, void 0, null);
+          return _.sm_mbf || (_.sm_mbf = g.w0(_.M())), _.sm_mbf;
         }
         toObject(e = !1) {
           return _.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return g.BT(_.M(), e, t);
         }
         static fromObject(e) {
-          return new _();
+          return g.Uq(_.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (d().BinaryReader)(e),
@@ -693,16 +658,53 @@
           return _.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return g.zj(_.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (d().BinaryWriter)();
           return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          g.i0(_.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (d().BinaryWriter)();
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendsListCategory";
+        }
+      }
+      class M extends u.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), u.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new M();
+        }
+        static deserializeBinary(e) {
+          let t = new (d().BinaryReader)(e),
+            r = new M();
+          return M.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (d().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (d().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFriendsList_GetCategories_Request";
@@ -722,7 +724,7 @@
             f.sm_m ||
               (f.sm_m = {
                 proto: f,
-                fields: { categories: { n: 1, c: M, r: !0, q: !0 } },
+                fields: { categories: { n: 1, c: _, r: !0, q: !0 } },
               }),
             f.sm_m
           );
@@ -1148,7 +1150,7 @@
       }
       !(function (e) {
         (e.GetCategories = function (e, t) {
-          return e.SendMsg("FriendsList.GetCategories#1", (0, l.I8)(_, t), f, {
+          return e.SendMsg("FriendsList.GetCategories#1", (0, l.I8)(M, t), f, {
             bConstMethod: !0,
             ePrivilege: 1,
           });

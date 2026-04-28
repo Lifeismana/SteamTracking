@@ -117,6 +117,7 @@
         BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
         "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
         "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
         "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
         "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
         "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
@@ -142,6 +143,7 @@
         BackgroundAnimation: "_15yvWK6GCakW5yZ0YB66fv",
         "ItemFocusAnim-darkerGrey-nocolor": "Eu2HOvMbunn7MzCLIJ5ES",
         "ItemFocusAnim-darkerGrey": "DvP1wiF6eV9afdQaEkods",
+        "ItemFocusAnim-darkGreySettings": "_2MNkLvIOgwx0GSMCjDlkL8",
         "ItemFocusAnim-darkGrey": "_2tQsBdyAzzF2_nY65OSwNm",
         "ItemFocusAnim-grey": "Qg-4WEghuaXqBRIE-lEVs",
         "ItemFocusAnim-translucent-white-10": "_18ENJxMfn40_y_8CMeuuMm",
@@ -168,7 +170,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { bHideTour: _ } = _,
+        const { bHideTour: _, fnConversionMethodSelected: _ } = _,
           {
             eConversionMethod: _,
             setConversionMethod: _,
@@ -274,7 +276,7 @@
                         },
                         selectedOption: _,
                         onChange: (_) => {
-                          _(_.data);
+                          _(_.data), _ && __webpack_require__(_.data);
                         },
                       }),
                     }),

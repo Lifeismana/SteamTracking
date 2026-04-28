@@ -118,6 +118,7 @@
         BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
         "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
         "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
         "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
         "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
         "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
@@ -170,13 +171,13 @@
             include_screenshots: x,
             include_trailers: f,
             include_ratings: k,
-            include_tag_count: h,
-            include_reviews: g,
+            include_tag_count: g,
+            include_reviews: h,
             include_basic_info: I,
             include_supported_languages: E,
             include_full_description: b,
-            include_included_items: C,
-            include_assets_without_overrides: A,
+            include_included_items: A,
+            include_assets_without_overrides: C,
             apply_user_filters: B,
             include_links: T,
           } = n;
@@ -190,13 +191,13 @@
               include_screenshots: x,
               include_trailers: f,
               include_ratings: k,
-              include_tag_count: h,
-              include_reviews: g,
+              include_tag_count: g,
+              include_reviews: h,
               include_basic_info: I,
               include_supported_languages: E,
               include_full_description: b,
-              include_included_items: C,
-              include_assets_without_overrides: A,
+              include_included_items: A,
+              include_assets_without_overrides: C,
               apply_user_filters: B,
               include_links: T,
             };
@@ -215,7 +216,7 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, _, p, m, v, S, x, f, k, h, g, I, E, b, C, A, B, T, u]),
+          }, [e, t, i, _, p, m, v, S, x, f, k, g, h, I, E, b, A, C, B, T, u]),
           !e)
         )
           return [null, 2];
@@ -258,8 +259,8 @@
             include_reviews: x,
             include_basic_info: f,
             include_supported_languages: k,
-            include_full_description: h,
-            include_included_items: g,
+            include_full_description: g,
+            include_included_items: h,
             include_assets_without_overrides: I,
             apply_user_filters: E,
             include_links: b,
@@ -279,8 +280,8 @@
                 include_reviews: x,
                 include_basic_info: f,
                 include_supported_languages: k,
-                include_full_description: h,
-                include_included_items: g,
+                include_full_description: g,
+                include_included_items: h,
                 include_assets_without_overrides: I,
                 apply_user_filters: E,
                 include_links: b,
@@ -301,7 +302,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, c, o, u, _, d, p, m, v, S, x, f, k, h, g, I, E, b]),
+          }, [e, t, i, c, o, u, _, d, p, m, v, S, x, f, k, g, h, I, E, b]),
           !e)
         )
           return 2;
@@ -334,7 +335,7 @@
     },
     18663: (e, t, n) => {
       "use strict";
-      n.d(t, { D1: () => I, lS: () => x, lz: () => h, nK: () => k });
+      n.d(t, { D1: () => I, lS: () => x, lz: () => g, nK: () => k });
       var i = n(7850),
         r = n(90626);
       function s(e) {
@@ -445,7 +446,7 @@
           [e],
         );
       }
-      function h(e) {
+      function g(e) {
         const { gidClanEvent: t, rgSocial: n, bIsCreatorHomeEvent: r } = e,
           s = k(n);
         return s && 0 != s.length && p.TS.IMG_URL
@@ -465,14 +466,14 @@
             })
           : null;
       }
-      const g = [6, 23, 18, 8, 9, 19, 24];
+      const h = [6, 23, 18, 8, 9, 19, 24];
       function I(e) {
         const { id: t, rgSocialMedia: n, className: r } = e,
           s = (0, p.Y2)();
         return (0, i.jsx)("div", {
           className: (0, u.A)(S().AppSocialLinks, r),
           children: n
-            .filter((e) => !s || g.includes(e.link_type || 0))
+            .filter((e) => !s || h.includes(e.link_type || 0))
             .map((e) =>
               e.url
                 ? (0, i.jsx)(
@@ -497,7 +498,7 @@
               rel: "noopener noreferrer",
               children: (0, i.jsx)(m.he, {
                 toolTipContent: t.url,
-                children: (0, i.jsx)(C, { social: t }),
+                children: (0, i.jsx)(A, { social: t }),
               }),
             })
           : null;
@@ -509,7 +510,7 @@
           children: [
             (0, i.jsx)(m.he, {
               toolTipContent: t.text,
-              children: (0, i.jsx)(C, { social: t }),
+              children: (0, i.jsx)(A, { social: t }),
             }),
             (0, i.jsx)("div", {
               className: S().AppSocialText,
@@ -518,14 +519,14 @@
           ],
         });
       }
-      function C(e) {
+      function A(e) {
         const { social: t } = e;
-        return (0, i.jsx)(A, {
+        return (0, i.jsx)(C, {
           linkType: t.link_type || 0,
           className: S().AppSocialLinkIcon,
         });
       }
-      function A(e) {
+      function C(e) {
         const { linkType: t, ...n } = e;
         switch (t) {
           case 1:

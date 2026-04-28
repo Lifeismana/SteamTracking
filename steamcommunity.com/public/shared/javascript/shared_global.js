@@ -4,6 +4,7 @@ Steam = {
 	sm_bUserInClient: false,
 	sm_bUserInGameOverlay: false,
 	sm_bUserInTenfootBrowser: false,
+	sm_bUserInGamepadUI: false,
 	sm_bUserInMobileChat: false,
 	sm_bUserInMobileApp: false,
 
@@ -13,6 +14,14 @@ Steam = {
 			Steam.Init();
 
 		return Steam.sm_bUserInClient;
+	},
+
+	BIsUserInGamepadUI: function()
+	{
+		if ( !Steam.sm_bInitialized )
+			Steam.Init();
+
+		return Steam.sm_bUserInGamepadUI;
 	},
 
 	BIsUserInGameOverlay: function()
@@ -83,9 +92,10 @@ Steam = {
 			return false;
 		};
 
+		Steam.sm_bUserInGamepadUI = fnCheckAgent( 'Valve Steam Gamepad', 'force_tenfoot_client_view' );
 		Steam.sm_bUserInTenfootBrowser = fnCheckAgent( 'Valve Steam Tenfoot', 'force_tenfoot_client_view' );
 		Steam.sm_bUserInGameOverlay = fnCheckAgent( 'Valve Steam GameOverlay', 'force_overlay_view' );
-		Steam.sm_bUserInClient = Steam.sm_bUserInTenfootBrowser || fnCheckAgent( 'Valve Steam Client', 'force_client_view' );
+		Steam.sm_bUserInClient = Steam.sm_bUserInTenfootBrowser || Steam.sm_bUserInGamepadUI || fnCheckAgent( 'Valve Steam Client', 'force_client_view' );
 		Steam.sm_bUserInMobileChat = fnCheckAgent( 'Valve Steam Mobile Chat', 'force_mobile_chat_view' );
 		Steam.sm_bUserInMobileApp = fnCheckAgent( 'Valve Steam App', 'force_mobile_app_view' );
 

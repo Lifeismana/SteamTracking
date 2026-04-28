@@ -48,7 +48,7 @@
     },
     19378: (e, n, i) => {
       "use strict";
-      i.r(n), i.d(n, { default: () => fe });
+      i.r(n), i.d(n, { default: () => Re });
       var r = i(7850),
         c = i(90626),
         t = i(92757);
@@ -119,8 +119,8 @@
         y = i(39049),
         D = i(75659),
         w = i(20187),
-        R = i(41324);
-      const f = c.createContext({ depth: 0 });
+        f = i(41324);
+      const R = c.createContext({ depth: 0 });
       var v = i(11820),
         I = i(64238),
         L = i.n(I);
@@ -140,9 +140,9 @@
                   ),
                   "h1");
             return "h" + i;
-          })(n, (0, c.useContext)(f).depth);
+          })(n, (0, c.useContext)(R).depth);
         return (0, r.jsx)(a, {
-          ...(0, R.mz)({ ...e, className: L()((0, v.T)(), y.Heading, i) }, E),
+          ...(0, f.mz)({ ...e, className: L()((0, v.T)(), y.Heading, i) }, E),
         });
       }
       const E = [
@@ -161,11 +161,11 @@
         F = i(29848),
         O = i(87700),
         B = i(42836),
-        Y = i(17084),
-        G = i(81393);
+        G = i(17084),
+        Y = i(81393);
       var $ = i(84811),
-        K = i(9154),
-        M = i(61859),
+        M = i(9154),
+        K = i(61859),
         q = i(88152),
         W = i.n(q),
         V = i(96434),
@@ -209,7 +209,7 @@
       const re = (0, P.l)(async function (e) {
         if (ie[e]) return ie[e]();
       });
-      var ce = i(87864),
+      var ce = i(61459),
         te = i(52038);
       function ae(e) {
         return -1 != e.getValue() && e.getValue()
@@ -243,9 +243,9 @@
         ue = i(86762);
       function Pe(e) {
         const { nPackageID: n } = e,
-          i = (0, Y.d$)(n),
+          i = (0, G.d$)(n),
           [t, a, s] = (0, z.uD)(),
-          o = (0, Y.fr)(n),
+          o = (0, G.fr)(n),
           [d, l] = (0, c.useState)(!1);
         return i
           ? (0, r.jsx)("div", {
@@ -257,17 +257,17 @@
                   (0, r.jsx)(ge.$n, {
                     onClick: a,
                     className: (0, te.A)(le().Button),
-                    children: (0, M.we)(
+                    children: (0, K.we)(
                       "#PricingDashboard_CancelPriceProposal",
                     ),
                   }),
-                  (0, r.jsx)(K.EN, {
+                  (0, r.jsx)(M.EN, {
                     active: t,
-                    children: (0, r.jsx)(K.o0, {
-                      strTitle: (0, M.we)(
+                    children: (0, r.jsx)(M.o0, {
+                      strTitle: (0, K.we)(
                         "#PricingDashboard_CancelPriceProposal",
                       ),
-                      strDescription: (0, M.we)("#Dialog_AreYouSure"),
+                      strDescription: (0, K.we)("#Dialog_AreYouSure"),
                       closeModal: s,
                       onOK: async () => {
                         l(!0), await o(), l(!1), window.location.reload();
@@ -275,7 +275,7 @@
                       children:
                         d &&
                         (0, r.jsx)(he.t, {
-                          string: (0, M.we)("#ImageUpload_Processing"),
+                          string: (0, K.we)("#ImageUpload_Processing"),
                         }),
                     }),
                   }),
@@ -291,7 +291,7 @@
         const { underline: n = "auto", ...i } = e,
           c = _e.TS.IN_GAMEPADUI ? Ce.Ii : "a";
         return (0, r.jsx)(c, {
-          ...(0, R.mz)({ ...i, underline: n, className: pe.TextLink }, be),
+          ...(0, f.mz)({ ...i, underline: n, className: pe.TextLink }, be),
         });
       }
       const be = [
@@ -324,7 +324,7 @@
               paddingBottom: "4",
               children: [
                 (0, r.jsx)(A, {
-                  size: "6",
+                  size: "7",
                   children: h.g.Localize(
                     "#SinglePackagePricing_Right_Help_Title",
                   ),
@@ -344,7 +344,7 @@
               direction: "column",
               children: [
                 (0, r.jsx)(A, {
-                  size: "6",
+                  size: "7",
                   children: h.g.Localize("#SinglePackagePricing_Right_FAQ"),
                 }),
                 (0, r.jsxs)(je.az, {
@@ -442,7 +442,7 @@
       const Se = (0, d.FB)();
       function ze(e) {
         const { nPackageID: n, appids: i } = e,
-          c = (0, Y.Zz)();
+          c = (0, G.Zz)();
         (0, J.h)(c);
         const t = (0, ne.cK)(),
           a = Number.parseInt(n),
@@ -487,7 +487,7 @@
                       className: "panel",
                       children: [
                         (0, r.jsx)(A, {
-                          size: "6",
+                          size: "7",
                           children: h.g.Localize(
                             "#SinglePackagePricing_Right_Convert_Title",
                           ),
@@ -509,7 +509,7 @@
                           children: [
                             (0, r.jsx)(w.EY, {
                               size: "3",
-                              children: (0, M.we)(
+                              children: (0, K.we)(
                                 "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
                               ),
                             }),
@@ -544,7 +544,7 @@
                 s = new Array();
               if (e) {
                 const o = (0, _.pd)(H.AI.k_ECurrencyCodeUSD).toUpperCase(),
-                  d = (0, Y.Dl)(n, o) || (0, Y.Oc)(n, o) || (0, Y.mv)(n, o);
+                  d = (0, G.Dl)(n, o) || (0, G.Oc)(n, o) || (0, G.mv)(n, o);
                 for (
                   let a = H.AI.k_ECurrencyCodeUSD;
                   a < H.AI.k_ECurrencyCodeMax;
@@ -552,9 +552,9 @@
                 ) {
                   if (!e.BIsSupportCurrencyAndOrRegion(a)) continue;
                   const s = (0, _.pd)(a).toUpperCase(),
-                    o = (0, Y.mv)(n, s),
-                    l = (0, Y.Oc)(n, s),
-                    g = (0, Y.Dl)(n, s),
+                    o = (0, G.mv)(n, s),
+                    l = (0, G.Oc)(n, s),
+                    g = (0, G.Dl)(n, s),
                     h = e.GetScaledRecommendedPrice(d, a, void 0, r).price;
                   c.push({
                     packageID: n,
@@ -580,9 +580,9 @@
                   )
                     continue;
                   const t = (0, _.pd)(H.AI.k_ECurrencyCodeUSD, c).toUpperCase(),
-                    s = (0, Y.mv)(n, t),
-                    o = (0, Y.Oc)(n, t),
-                    l = (0, Y.Dl)(n, t),
+                    s = (0, G.mv)(n, t),
+                    o = (0, G.Oc)(n, t),
+                    l = (0, G.Dl)(n, t),
                     g = e.GetScaledRecommendedPrice(
                       d,
                       H.AI.k_ECurrencyCodeUSD,
@@ -603,27 +603,27 @@
                     appids: i,
                   });
                 }
-                const l = (0, Y.Y2)(n);
+                const l = (0, G.Y2)(n);
                 l.length > 0 &&
                   l.forEach((e) => {
                     const { eCurrencyCode: r, strCountryCode: c } = (0, _.gM)(
                         e,
                       ),
                       t = (0, _.rt)(c);
-                    (0, G.wT)(
+                    (0, Y.wT)(
                       r == t,
                       `Unexpected currency ${r} for country ${c} when expecting ${t} `,
                     );
-                    const a = (0, Y.Oc)(n, e);
+                    const a = (0, G.Oc)(n, e);
                     s.push({
                       packageID: n,
                       strPriceKey: e,
                       eCurrencyCode: r,
                       eRegionCode: void 0,
                       strCountryOverride: c,
-                      nPublishedPrice: (0, Y.oL)(n, e),
+                      nPublishedPrice: (0, G.oL)(n, e),
                       nProposedPrice: a,
-                      nLocalPrice: (0, Y.Dl)(n, e),
+                      nLocalPrice: (0, G.Dl)(n, e),
                       nSuggestedPrice: void 0,
                       bCanSetToFree: !1,
                       appids: i,
@@ -637,19 +637,20 @@
               };
             }, [e, n, t, r, i]);
           })(t, n, i),
-          d = !!(0, Y.d$)(n);
+          d = !!(0, G.d$)(n),
+          { fnApplyGuidelines: P } = (0, g.gC)((0, G.$i)());
         (0, c.useEffect)(() => {
           (0, U.Sm)([n]);
         }, [n]);
-        const P = [
+        const p = [
           Se.accessor("nPublishedPrice", {
-            header: (0, M.we)("#PackagePricing_Col_CurPrice"),
+            header: (0, K.we)("#PackagePricing_Col_CurPrice"),
             meta: { cellClassname: L()(W().CurrentPrice) },
             size: 150,
             cell: ae,
           }),
           Se.accessor(d ? "nProposedPrice" : "strPriceKey", {
-            header: (0, M.we)("#PackagePricing_Col_Proposal"),
+            header: (0, K.we)("#PackagePricing_Col_Proposal"),
             meta: { cellClassname: L()(W().ProposedPrice) },
             size: 280,
             cell: d ? se : ee.sh,
@@ -666,7 +667,7 @@
                         children: (0, r.jsx)(w.EY, {
                           size: "4",
                           color: "green-9",
-                          children: (0, M.we)(
+                          children: (0, K.we)(
                             "#PricingDashboard_ProposedPrice_CallOut",
                           ),
                         }),
@@ -678,7 +679,11 @@
                         children: (0, r.jsxs)(N.s, {
                           direction: "row",
                           children: [
-                            (0, r.jsx)(u.J, {}),
+                            (0, r.jsx)(u.J, {
+                              fnConversionMethodSelected: (e) => {
+                                P(n, (0, G.FR)(n, "USD"), e);
+                              },
+                            }),
                             (0, r.jsxs)(N.s, {
                               direction: "column",
                               paddingLeft: "5",
@@ -710,11 +715,11 @@
                       ),
                       columns: [
                         Se.accessor("eCurrencyCode", {
-                          header: (0, M.we)("#PackagePricing_Col_Currency"),
+                          header: (0, K.we)("#PackagePricing_Col_Currency"),
                           size: 200,
                           cell: b,
                         }),
-                        ...P,
+                        ...p,
                       ],
                       getRowKey: (e, n) => `${n.eCurrencyCode}`,
                       nItemHeight: 20,
@@ -729,16 +734,16 @@
                       ),
                       columns: [
                         Se.accessor("eRegionCode", {
-                          header: (0, M.we)("#PackagePricing_Col_Region"),
+                          header: (0, K.we)("#PackagePricing_Col_Region"),
                           size: 200,
                           cell: j,
                         }),
                         Se.accessor("eCurrencyCode", {
-                          header: (0, M.we)("#PackagePricing_Col_Currency"),
+                          header: (0, K.we)("#PackagePricing_Col_Currency"),
                           size: 100,
                           cell: b,
                         }),
-                        ...P,
+                        ...p,
                       ],
                       getRowKey: (e, n) => `${n.eRegionCode}`,
                       nItemHeight: 20,
@@ -754,16 +759,16 @@
                         ),
                         columns: [
                           Se.accessor("strCountryOverride", {
-                            header: (0, M.we)("#PackagePricing_Col_Country"),
+                            header: (0, K.we)("#PackagePricing_Col_Country"),
                             size: 200,
                             cell: oe,
                           }),
                           Se.accessor("eCurrencyCode", {
-                            header: (0, M.we)("#PackagePricing_Col_Currency"),
+                            header: (0, K.we)("#PackagePricing_Col_Currency"),
                             size: 100,
                             cell: b,
                           }),
-                          ...P,
+                          ...p,
                         ],
                         getRowKey: (e, n) => `${n.strCountryOverride}`,
                         nItemHeight: 20,
@@ -778,13 +783,13 @@
       }
       function De(e) {
         const { usdRow: n } = e,
-          { fnApplyGuidelines: i } = (0, g.gC)((0, Y.$i)());
+          { fnApplyGuidelines: i } = (0, g.gC)((0, G.$i)());
         return (0, r.jsx)(m.e, {
           strButton: h.g.Localize("#PricingDashboard_Select_Price_button"),
           strTooltip: h.g.Localize(
             "#PricingDashboard_Select_Price_button_ttip",
           ),
-          fnGetUSDPriceInCents: () => (0, Y.FR)(n.packageID, "USD"),
+          fnGetUSDPriceInCents: () => (0, G.FR)(n.packageID, "USD"),
           fnOnUpdate: (e) => i(n.packageID, e),
           strDescription: h.g.Localize(
             "#PricingDashboard_GuidelinesPickerDescription_New",
@@ -802,11 +807,11 @@
           children: [
             (0, r.jsx)(T.$, {
               onClick: t,
-              children: (0, M.we)(
+              children: (0, K.we)(
                 "#PricingDashboard_ApplyGuidelinesDialog_Button",
               ),
             }),
-            (0, r.jsx)(K.EN, {
+            (0, r.jsx)(M.EN, {
               active: c,
               children: (0, r.jsx)(Z.i, {
                 closeModal: a,
@@ -817,10 +822,10 @@
           ],
         });
       }
-      var Re = i(92724);
-      function fe(e) {
+      var fe = i(92724);
+      function Re(e) {
         return (
-          c.use((0, Re.u)()),
+          c.use((0, fe.u)()),
           (0, r.jsx)(t.dO, {
             children: (0, r.jsxs)(O.jY, {
               children: [

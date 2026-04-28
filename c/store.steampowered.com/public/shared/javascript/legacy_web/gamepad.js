@@ -3689,12 +3689,15 @@
         m_bMounted = !0;
         m_schDeferredActivate = new _();
         m_FocusChangedCallbacks = new _._();
+        m_NavTreeActivatedOrReactivatedCallbacks = new _._();
         m_bIsGamepadInputSuppressed = !1;
-        constructor(_, _, _) {
+        m_bVR = !1;
+        constructor(_, _, _, _) {
           (this.m_controller = _),
             (this.m_rootWindow = _),
             (this.m_activeWindow = _),
-            (this.m_bIsGamepadInputSuppressed = _);
+            (this.m_bIsGamepadInputSuppressed = _),
+            (this.m_bVR = _);
         }
         get RootWindow() {
           return this.m_rootWindow;
@@ -3712,6 +3715,16 @@
             if (_.Window?.document.hasFocus()) return _;
           }
         }
+        FindNavTreeInWindow(_, _ = !0) {
+          for (
+            let _ = this.m_rgGamepadNavigationTrees.length - 1;
+            _ >= 0;
+            _--
+          ) {
+            const _ = this.m_rgGamepadNavigationTrees[_];
+            if ((!_ || _.BIsEnabled()) && _.Window == _) return _;
+          }
+        }
         OnMount(_) {
           _ == this.m_rootWindow && (this.m_bMounted = !0);
         }
@@ -3726,6 +3739,10 @@
         }
         SetActive(_, _, _ = void 0) {
           this.m_controller.BatchedUpdate(() => {
+            if (_ && !this.m_controller.BCanActivateContext(this))
+              return void _(
+                `${this.LogName(_)} Skipping context activation due to CFocusNavWindowContext`,
+              );
             const _ = this.m_valueIsActive.Value != _;
             _
               ? ((this.m_activeWindow = _),
@@ -3769,6 +3786,9 @@
         BIsGamepadInputSuppressed() {
           return this.m_bIsGamepadInputSuppressed;
         }
+        BIsVR() {
+          return this.m_bVR;
+        }
         BIsActive() {
           return this.m_valueIsActive.Value;
         }
@@ -3795,7 +3815,10 @@
           }
         }
         SetActiveNavTree(_, _ = !1) {
-          if (_ && this.m_LastActiveNavTree == _) return;
+          if (_ && this.m_LastActiveNavTree == _)
+            return void this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(
+              _,
+            );
           const _ = this.m_LastActiveNavTree;
           _ && _._(this.m_rgGamepadNavigationTrees, _),
             _ || (_ = this.FindNavTreeToActivate());
@@ -3812,7 +3835,8 @@
               _ ||
                 !_ ||
                 _.DeferredFocus.BHasQueuedFocusNode() ||
-                _.DeferredFocus.RequestFocus(_.Root)),
+                _.DeferredFocus.RequestFocus(_.Root),
+              this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(_)),
             _ &&
               _ != this.m_LastActiveFocusNavTree &&
               __webpack_require__.OnDeactivate(_),
@@ -3838,6 +3862,9 @@
         }
         get FocusChangedCallbacks() {
           return this.m_FocusChangedCallbacks;
+        }
+        get NavTreeActivatedOrReactivatedCallbacks() {
+          return this.m_NavTreeActivatedOrReactivatedCallbacks;
         }
         m_iFocusChangeStack = 0;
         m_ActiveFocusChange;
@@ -3887,6 +3914,7 @@
         m_rgAllContexts = [];
         m_ActiveContext;
         m_LastActiveContext;
+        m_ContextSetChangedCallbacks = new _._();
         m_fnCatchAllGamepadInput = null;
         m_UnhandledButtonEventsCallbacks = new _._();
         m_navigationSource = _(
@@ -3918,29 +3946,45 @@
         Init() {
           this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(_));
         }
-        CreateContext(_, _) {
-          const _ = new _(this, _, _);
-          return this.m_rgAllContexts.push(_), _;
+        CreateContext(_, _, _) {
+          const _ = new _(this, _, _, _);
+          return (
+            this.m_rgAllContexts.push(_),
+            this.m_ContextSetChangedCallbacks.Dispatch(),
+            _
+          );
         }
         DestroyContext(_) {
-          _._(this.m_rgAllContexts, _);
+          _._(this.m_rgAllContexts, _),
+            this.m_ContextSetChangedCallbacks.Dispatch();
         }
         GetDefaultContext() {
           return (
             this.m_DefaultContext ||
-              (this.m_DefaultContext = this.CreateContext(window, !1)),
+              (this.m_DefaultContext = this.CreateContext(window, !1, !1)),
             this.m_DefaultContext
           );
         }
         GetActiveContext() {
           return this.m_ActiveContext;
         }
+        BHasVRGamepadNavigationContext() {
+          return this.m_rgAllContexts?.some(
+            (_) => _.BIsVR() && !_.BIsGamepadInputSuppressed(),
+          );
+        }
+        FindContextForRootWindow(_) {
+          return this.m_rgAllContexts?.find((_) => _.RootWindow == _);
+        }
+        BCanActivateContext(_) {
+          return !!_ && !(this.BHasVRGamepadNavigationContext() && !_.BIsVR());
+        }
         FindAnActiveContext() {
           if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const _ of this.m_rgAllContexts) {
               const _ = _.FindNavTreeInFocusedWindow();
-              if (_) {
+              if (_ && this.BCanActivateContext(_)) {
                 _(
                   `${_.LogName(_.Window)} Found a focused window; setting this context as active.`,
                 ),
@@ -3953,6 +3997,7 @@
           return (
             !this.m_ActiveContext &&
               this.m_LastActiveContext &&
+              this.BCanActivateContext(this.m_LastActiveContext) &&
               (_(
                 `Failed to find an active context, will fall back to ${this.m_LastActiveContext.LogName()}`,
               ),
@@ -4150,7 +4195,7 @@
         OnNavigationTypeChange(_) {
           if (
             this.ChangeNavigationSource(_, -1) &&
-            document.hasFocus() &&
+            (document.hasFocus() || this.m_LastActiveContext?.BIsVR()) &&
             (_ == _._.MOUSE || _ == _._.TOUCH) &&
             this.m_ActiveContext?.m_LastActiveNavTree
           ) {
@@ -4207,7 +4252,8 @@
           return (
             !_.Parent &&
               _.BIsEnabled() &&
-              ((this.m_LastActiveContext = this.m_ActiveContext = _),
+              (this.BCanActivateContext(_) &&
+                (this.m_LastActiveContext = this.m_ActiveContext = _),
               __webpack_require__.SetActiveNavTree(_, !0)),
             () => {
               __webpack_require__
@@ -4259,6 +4305,9 @@
         }
         RegisterForUnhandledButtonDownEvents(_) {
           return this.m_UnhandledButtonEventsCallbacks.Register(_);
+        }
+        get ContextSetChangedCallbacks() {
+          return this.m_ContextSetChangedCallbacks;
         }
         FireUnhandledGamepadEventCallbacks(_) {
           return (

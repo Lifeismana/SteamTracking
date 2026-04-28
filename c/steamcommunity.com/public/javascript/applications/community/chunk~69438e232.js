@@ -56,6 +56,7 @@
         BackgroundAnimation: "_2-NF7UzSGK3WLmqugAW3EM",
         "ItemFocusAnim-darkerGrey-nocolor": "bfQTK-Cop8MYUAa9j7rQb",
         "ItemFocusAnim-darkerGrey": "_1_wN_hVuLwcfYlTDIE-HTs",
+        "ItemFocusAnim-darkGreySettings": "YO_BEpx_0vuXWdgMFEjkL",
         "ItemFocusAnim-darkGrey": "_32cDe-nAMlG7JYrA6niEGN",
         "ItemFocusAnim-grey": "_2LnPTi1cPqqxqvII8cqnlh",
         "ItemFocusAnim-translucent-white-10": "-jNJst4AtmAMI-o6ETEiC",
@@ -75,6 +76,7 @@
         BackgroundAnimation: "_10sTNSs7WhNZPw6GdPTOJX",
         "ItemFocusAnim-darkerGrey-nocolor": "_1MdU34KFhJRKlGMaHngbls",
         "ItemFocusAnim-darkerGrey": "G_fmZBeNGKwyXP6EjOOZ_",
+        "ItemFocusAnim-darkGreySettings": "_3n4qtxFhgpKOJlGlGVcI1H",
         "ItemFocusAnim-darkGrey": "_20-FW4mkUJEpsgtwPjoMD6",
         "ItemFocusAnim-grey": "_1QVohJAkrDR6QXMK3fZLMu",
         "ItemFocusAnim-translucent-white-10": "_2vttABcjIJHbd-xXLvTfgb",
@@ -273,6 +275,7 @@
         BackgroundAnimation: "_2hlRK2hm0pHy1YSxwknFCj",
         "ItemFocusAnim-darkerGrey-nocolor": "_3Ye-Lgym31_-ibnmbFywrn",
         "ItemFocusAnim-darkerGrey": "_1klcEk0V0JFATe7imIRZ1C",
+        "ItemFocusAnim-darkGreySettings": "_1o29CI_yDNVtgTV1cxDqGZ",
         "ItemFocusAnim-darkGrey": "_2BtPOA0wSbFULgc-Zh-0_x",
         "ItemFocusAnim-grey": "_24LF-yODOtVFSuejuQ_xu2",
         "ItemFocusAnim-translucent-white-10": "uTNXVgYo8JPxZgJyTl9LQ",
@@ -312,6 +315,7 @@
         BackgroundAnimation: "_25VCY5c_WxOmDf5rM9ytzl",
         "ItemFocusAnim-darkerGrey-nocolor": "_3Wd6R5ArXmgfz1dMwANtD7",
         "ItemFocusAnim-darkerGrey": "_2mepLvzcUGS8PS7_cO5A4C",
+        "ItemFocusAnim-darkGreySettings": "KiXqOP4sNGGqLzPFjAa3D",
         "ItemFocusAnim-darkGrey": "_3NRkgxBrOQc_fQX1HvTkk3",
         "ItemFocusAnim-grey": "SAxIC6YdDjzPzIqw_aS4s",
         "ItemFocusAnim-translucent-white-10": "_-1Vlo_3w2uf9fF1-AU1F4",
@@ -388,6 +392,7 @@
         BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
         "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
         "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
+        "ItemFocusAnim-darkGreySettings": "_1rM6kybplpPqKeO6oRkrNQ",
         "ItemFocusAnim-darkGrey": "_2FbbkQw3hYI7YAtytr5IDn",
         "ItemFocusAnim-grey": "_2suu44WFaHB4fkFfIvCI7U",
         "ItemFocusAnim-translucent-white-10": "_2j1TKoZjmYdt4yBTKkRCgR",
@@ -462,6 +467,7 @@
         BackgroundAnimation: "_2-llXPi4w88rsWfJFYSLHB",
         "ItemFocusAnim-darkerGrey-nocolor": "_2eejrtSFYCSnzH8C6-WC3a",
         "ItemFocusAnim-darkerGrey": "oMlqiiSY2Eqr2ln_FmAg4",
+        "ItemFocusAnim-darkGreySettings": "AcW48fP-EnfyD8bO6anBj",
         "ItemFocusAnim-darkGrey": "_3lAc02j3vPGIoXryYyGTZR",
         "ItemFocusAnim-grey": "_388VkzVpUFRuQ1HZEymCy",
         "ItemFocusAnim-translucent-white-10": "tK-6xcUa6TrN9X1V5zj25",
@@ -830,6 +836,7 @@
         BackgroundAnimation: "_1iEXo2C5dYh1sLdEds2zo_",
         "ItemFocusAnim-darkerGrey-nocolor": "_6ALY2cB6oP10XwjHy38XP",
         "ItemFocusAnim-darkerGrey": "_15R1kTQu4fktTozfpKwx_x",
+        "ItemFocusAnim-darkGreySettings": "_25-J06c8AyBhzEbrxt0OlL",
         "ItemFocusAnim-darkGrey": "_3yxHI8TA-jq3Ka361SNOoS",
         "ItemFocusAnim-grey": "HdE5j3QJ5wzLUrUd8A9S6",
         "ItemFocusAnim-translucent-white-10": "_3Pg_mdzZKHlcgBMGWoeuM-",
@@ -879,6 +886,7 @@
         BackgroundAnimation: "TqTKL7i3GSFlH_ZgPVf1z",
         "ItemFocusAnim-darkerGrey-nocolor": "cm_5koVmrBLuCZgPBCMie",
         "ItemFocusAnim-darkerGrey": "PnVMlqvX5SCAvSN6U3hb9",
+        "ItemFocusAnim-darkGreySettings": "_3WN-nRn7q-FIwR4QBoVI_u",
         "ItemFocusAnim-darkGrey": "_3y6HrP9DK-Ttsri2UnKeJ4",
         "ItemFocusAnim-grey": "_3adXp5-v5skt9f-KA1WB_8",
         "ItemFocusAnim-translucent-white-10": "_1981I-jlGsaAi65IqAxEdm",
@@ -1022,6 +1030,7 @@
         BackgroundAnimation: "_1k6sq680iiVKySIMXNcHkL",
         "ItemFocusAnim-darkerGrey-nocolor": "_34Tp7N_mW2y7TOcBFxCQVo",
         "ItemFocusAnim-darkerGrey": "WQW1YbFeZjtPKckWVFjzB",
+        "ItemFocusAnim-darkGreySettings": "_2hTOwEn75PZ0XqJLLH6Yzc",
         "ItemFocusAnim-darkGrey": "_3T33tEqMtzz3ijG8DkMXYZ",
         "ItemFocusAnim-grey": "_1VqQfVz7N0T1g4AHmuCQu8",
         "ItemFocusAnim-translucent-white-10": "jiBNibpWxZkJeyBzbrB5j",
@@ -1159,21 +1168,6 @@
         TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
         Category: "_2YhOhoyYNbue9fEPMYPiq2",
         Visible: "_2cpBClyttSkWAsgMArc0BM",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        narrowWidth: "500px",
-        GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
-        GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
-        Active: "_8XjrTFzaSA8ubHvHCu44L",
-        GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
-        GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
-        GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
-        StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
-        StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
-        StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
       };
     },
     chunkid: (module) => {
@@ -1359,138 +1353,299 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 6696, 19))),
-        (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 58906, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 53473, 19))),
-        (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 83899, 19))),
-        (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 84925, 19))),
-        (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 69902, 19))),
-        (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 80716, 19))),
-        (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 81663, 19))),
-        (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 48484, 19))),
-        (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 66810, 19))),
-        (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 13744, 19))),
-        (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62101, 19))),
-        (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 68948, 19))),
-        (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 2916, 19))),
-        (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 40195, 19))),
-        (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 84259, 19))),
-        (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 24475, 19))),
-        (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 36884, 19))),
-        (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 15269, 19))),
-        (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 96865, 19))),
-        (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 71391, 19))),
-        (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 64933, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 27503, 19))),
-        (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 44768, 19))),
-        (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 20876, 19))),
-        (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75181, 19))),
-        (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 89779, 19))),
-        (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 98970, 19))),
-        (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 87996, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 47306, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 72539, 19)));
-      const _ = (0, __webpack_require__("chunkid")._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
-      var _,
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-          ..._,
+      const _ = {
+          [_._.k_ECurrencyCodeInvalid]: {},
+          [_._.k_ECurrencyCodeUSD]: {
+            strSymbol: "$",
+          },
+          [_._.k_ECurrencyCodeGBP]: {
+            strSymbol: "£",
+          },
+          [_._.k_ECurrencyCodeEUR]: {
+            strSymbol: "€",
+          },
+          [_._.k_ECurrencyCodeCHF]: {
+            strSymbol: "CHF",
+          },
+          [_._.k_ECurrencyCodeRUB]: {
+            strSymbol: "руб.",
+            bSuffixSymbol: !0,
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: "",
+          },
+          [_._.k_ECurrencyCodePLN]: {
+            strSymbol: "zł",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeBRL]: {
+            strSymbol: "R$",
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeJPY]: {
+            strSymbol: "¥",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeNOK]: {
+            strSymbol: "kr",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeIDR]: {
+            strSymbol: "Rp",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ".",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeMYR]: {
+            strSymbol: "RM",
+          },
+          [_._.k_ECurrencyCodePHP]: {
+            strSymbol: "P",
+          },
+          [_._.k_ECurrencyCodeSGD]: {
+            strSymbol: "S$",
+          },
+          [_._.k_ECurrencyCodeTHB]: {
+            strSymbol: "฿",
+          },
+          [_._.k_ECurrencyCodeVND]: {
+            strSymbol: "₫",
+            bWholeUnitsOnly: !0,
+            bSuffixSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeKRW]: {
+            strSymbol: "₩",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeTRY]: {
+            strSymbol: "TL",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeUAH]: {
+            strSymbol: "₴",
+            bSuffixSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeMXN]: {
+            strSymbol: "Mex$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCAD]: {
+            strSymbol: "CDN$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeAUD]: {
+            strSymbol: "A$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeNZD]: {
+            strSymbol: "NZ$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCNY]: {
+            strSymbol: "¥",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeINR]: {
+            strSymbol: "₹",
+            bSpaceForSymbol: !0,
+            bWholeUnitsOnly: !0,
+          },
+          [_._.k_ECurrencyCodeCLP]: {
+            strSymbol: "CLP$",
+            bSpaceForSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodePEN]: {
+            strSymbol: "S/.",
+          },
+          [_._.k_ECurrencyCodeCOP]: {
+            strSymbol: "COL$",
+            bSpaceForSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeZAR]: {
+            strSymbol: "R",
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ".",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeHKD]: {
+            strSymbol: "HK$",
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeTWD]: {
+            strSymbol: "NT$",
+            bWholeUnitsOnly: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeSAR]: {
+            strSymbol: "SR",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeAED]: {
+            strSymbol: "AED",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeSEK]: {
+            strSymbol: "kr",
+            bSpaceForSymbol: !0,
+            bSuffixSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeARS]: {
+            strSymbol: "ARS$",
+            bSpaceForSymbol: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeILS]: {
+            strSymbol: "₪",
+          },
+          [_._.k_ECurrencyCodeBYN]: {
+            strSymbol: "Br",
+          },
+          [_._.k_ECurrencyCodeKZT]: {
+            strSymbol: "₸",
+            bSuffixSymbol: !0,
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
+          [_._.k_ECurrencyCodeKWD]: {
+            strSymbol: "KD",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeQAR]: {
+            strSymbol: "QR",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCRC]: {
+            strSymbol: "₡",
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeUYU]: {
+            strSymbol: "$U",
+            bWholeUnitsOnly: !0,
+            strDecimalSymbol: ",",
+            strThousandsSeparator: ".",
+          },
+          [_._.k_ECurrencyCodeBGN]: {
+            strSymbol: "лв",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeHRK]: {
+            strSymbol: "kn",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeCZK]: {
+            strSymbol: "Kč",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeDKK]: {
+            strSymbol: "kr.",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeHUF]: {
+            strSymbol: "Ft",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeRON]: {
+            strSymbol: "lei",
+            bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
+          },
+          [_._.k_ECurrencyCodeMax]: {},
+        },
+        _ = {
+          strSymbol: "",
+          bSuffixSymbol: !1,
+          bSpaceForSymbol: !1,
+          bWholeUnitsOnly: !1,
+          eCurrency: _._.k_ECurrencyCodeInvalid,
+          strDecimalSymbol: ".",
+          strThousandsSeparator: ",",
         };
-        return new Date(1e3 * _).toLocaleDateString((0, _._)(), _);
-      }
       function _(_) {
-        const _ = Math.floor(_ / _._.PerYear),
-          _ = Math.floor(_ / _._.PerMonth),
-          _ = Math.floor((_ % _._.PerMonth) / _._.PerDay),
-          _ = Math.floor((_ % _._.PerDay) / _._.PerHour),
-          _ = Math.floor((_ % _._.PerHour) / _._.PerMinute);
-        return (
-          (_ %= _._.PerMinute),
-          _ > 0
-            ? _.Localize("#TimeRemaining_MoreThanOneYear")
-            : _ > 0
-              ? _.Localize("#TimeRemaining_MonthsDays", _, _)
-              : _ > 0
-                ? _.Localize(
-                    "#TimeRemaining_DaysHoursMinutes",
-                    _,
-                    _.toString().padStart(2, "0"),
-                    _.toString().padStart(2, "0"),
-                  )
-                : _ > 0
-                  ? _.Localize(
-                      "#TimeRemaining_HoursMinutesSeconds",
-                      _.toString().padStart(2, "0"),
-                      _.toString().padStart(2, "0"),
-                      _.toString().padStart(2, "0"),
-                    )
-                  : _.Localize(
-                      "#TimeRemaining_MinutesSeconds",
-                      _.toString().padStart(2, "0"),
-                      _.toString().padStart(2, "0"),
-                    )
-        );
+        return {
+          ..._,
+          ..._[_],
+          eCurrency: _,
+        };
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Ago = 1)] = "Ago"),
-          (_[(_.Remaining = 2)] = "Remaining");
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
-      const _ = {
-        PerYear: 31536e3,
-        PerMonth: 2628e3,
-        PerWeek: 604800,
-        PerDay: 86400,
-        PerHour: 3600,
-        PerMinute: 60,
-      };
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _(_, (0, _._)(_));
+      }
+      function _(_, _) {
+        const {
+            strSymbol: _,
+            bSuffixSymbol: _,
+            bSpaceForSymbol: _,
+            bWholeUnitsOnly: _,
+            strDecimalSymbol: _,
+            strThousandsSeparator: _,
+          } = _,
+          _ = _ < 0,
+          _ = _ && _ % 100 == 0;
+        _ && (_ = -_);
+        const _ = [];
+        for (let _ = 0; _ < 2; _++)
+          _ || _.push(_ % 10), (_ = Math.floor(_ / 10));
+        !_ && _ && _.push(_);
+        let _ = 0;
+        do {
+          _++ % 3 == 0 && _ > 2 && _ && _.push(_),
+            _.push(_ % 10),
+            (_ = Math.floor(_ / 10));
+        } while (_ > 0);
+        const _ = _.reverse().join(""),
+          _ = _ ? " " : "",
+          _ = _ ? "-" : "";
+        return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -14336,6 +14491,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -14348,6 +14506,7 @@
             strContainerClassName: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
+            bPreferWholeNumbers: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
@@ -14438,6 +14597,14 @@
         let _ = _.discount_pct || 0,
           _ = _ || 2 != _.item_type ? 0 : _.bundle_discount_pct || 0,
           _ = _.formatted_final_price;
+        if (_) {
+          const _ = (0, _._)(_._.country_code.toUpperCase()),
+            _ = {
+              ...(0, _._)(_),
+              bWholeUnitsOnly: !0,
+            };
+          _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
+        }
         const _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
           bSingleLineMode: Boolean(_),
@@ -15042,82 +15209,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (_[_]) {
-          if ("community_icon" == _) {
-            const _ = _.asset_url_format
-              .replace(/^steam\//, "images/")
-              .replace("${FILENAME}", `${_[_]}.jpg`)
-              .replace(/\?.*$/, "");
-            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
-          }
-          {
-            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
-            return `${_._.STORE_ITEM_BASE_URL}${_}`;
-          }
-        }
-      }
-      function _(_, _ = "full") {
-        let _ = "";
-        switch (_) {
-          case "thumb":
-            _ = ".116x65";
-            break;
-          case "600x338":
-            _ = ".600x338";
-            break;
-          case "1920x1080":
-            _ = ".1920x1080";
-            break;
-          case "full":
-            _ = "";
-            break;
-          default:
-            (0, _._)(_, `Invalid size: ${_}`);
-        }
-        return (
-          _._.STORE_ITEM_BASE_URL +
-          _.filename.replace(/\.([^.]+)(\?.*)?$/, `${_}.$1$2`)
-        );
-      }
-      function _(_) {
-        const { data: _ } = (0, _._)(_),
-          _ = (0, _._)();
-        if (_)
-          return [
-            ...(_.all_ages_screenshots || []),
-            ...(!_ && _.mature_content_screenshots
-              ? _.mature_content_screenshots
-              : []),
-          ].sort((_, _) => _.ordinal - _.ordinal);
-      }
-      function _(_, _ = !1) {
-        const { data: _ } = (0, _._)({
-          appid: _,
-        });
-        return void 0 === _
-          ? void 0
-          : null === _
-            ? null
-            : _ && _.library_capsule_2x
-              ? _(_, "library_capsule_2x")
-              : _.library_capsule
-                ? _(_, "library_capsule")
-                : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
         _: () => _,
       });
       __webpack_require__("chunkid");
@@ -15339,22 +15430,6 @@
       });
       function _() {
         return _.useContext(_);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return (0, _._)(
-          _ ? `${_._.STORE_BASE_URL}${_.store_url_path}` : void 0,
-          _,
-          _,
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -15799,86 +15874,6 @@
                 bIsOwned: !_.some((_) => !__webpack_require__.has(_)),
                 unAppID: _[0],
               }
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        eAdultOnlyMediaBehavior: "masked",
-      });
-      function _() {
-        const { eAdultOnlyMediaBehavior: _ } = _.useContext(_),
-          _ = (function () {
-            const { data: _ } = (0, _._)({
-              queryKey: ["AOWarningCookie"],
-              queryFn: () => _(),
-              placeholderData: () => _(),
-              staleTime: 0,
-            });
-            return _ && _ > Date.now() / 1e3;
-          })();
-        return _.useMemo(() => {
-          const _ = (0, _._)("forceallages");
-          return (
-            !(!_ || "0" === _) ||
-            !(!_._.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
-          );
-        }, []) ||
-          ("masked" == _ &&
-            (_._.excluded_content_descriptors.includes(4) ||
-              _._.excluded_content_descriptors.includes(3)))
-          ? "blocked"
-          : "masked" == _ && _
-            ? "allowed"
-            : _;
-      }
-      function _() {
-        return "allowed" != _();
-      }
-      const _ = "bDisableAOWarning",
-        _ = 2 * _._.PerDay;
-      function _() {
-        const _ = (0, _._)();
-        return _.useCallback(() => {
-          (0, _._)(_, String(Math.floor(Date.now() / 1e3) + _)),
-            _.invalidateQueries({
-              queryKey: ["AOWarningCookie"],
-            });
-        }, [_]);
-      }
-      function _() {
-        const _ = (0, _._)(_),
-          _ = _ ? parseInt(_) : 0;
-        return 0 != _ ? _ : null;
-      }
-      function _(_) {
-        const _ = "blocked" == _() && !!_,
-          { data: _ } = (0, _._)(
-            _
-              ? {
-                  appid: _,
-                }
-              : void 0,
-          );
-        return (
-          !!_ &&
-          (!_ ||
-            _.content_descriptorids.includes(3) ||
-            _.content_descriptorids.includes(4))
         );
       }
     },
@@ -16880,6 +16875,7 @@
         let _ = _(),
           _ = _(_, "theater");
         if (!_ || !_.bSupportsTheater) return null;
+        _.use(_._.Ready());
         let _ = "theater" == _.strMode,
           _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
@@ -16897,6 +16893,7 @@
         let _ = _(),
           _ = _(_, "fullscreen");
         if (!_ || !_.bSupportsFullscreen) return null;
+        _.use(_._.Ready());
         let _ = "fullscreen" == _.strMode,
           _ = _ ? (0, _.jsx)(_.JaO, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
@@ -16919,24 +16916,27 @@
             _((_) => !_);
           }, [_]),
           _ = (0, _._)(_().SettingsButton, _ && _().Rotated);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              ref: _,
-              onActivate: _,
-              tooltip: _._.Localize("#TrailerPlayer_Settings_Tooltip"),
-              children: (0, _.jsx)(_.wB_, {
-                className: _,
-              }),
-            }),
-            _ &&
+        return (
+          _.use(_._.Ready()),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
               (0, _.jsx)(_, {
-                player: _,
-                refButton: _,
-                onClose: _,
+                ref: _,
+                onActivate: _,
+                tooltip: _._.Localize("#TrailerPlayer_Settings_Tooltip"),
+                children: (0, _.jsx)(_.wB_, {
+                  className: _,
+                }),
               }),
-          ],
-        });
+              _ &&
+                (0, _.jsx)(_, {
+                  player: _,
+                  refButton: _,
+                  onClose: _,
+                }),
+            ],
+          })
+        );
       }
       function _(_) {
         let { player: _, refButton: _, onClose: _ } = _,
@@ -17052,11 +17052,14 @@
               __webpack_require__.m_fnSetAutoplayEnabled(!_),
               _();
           }, [_, _, _]);
-        return (0, _.jsx)(_, {
-          onClick: _,
-          checked: _,
-          children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
-        });
+        return (
+          _.use(_._.Ready()),
+          (0, _.jsx)(_, {
+            onClick: _,
+            checked: _,
+            children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
+          })
+        );
       }
       function _(_) {
         let { onClick: _, checked: _, children: _ } = _,
@@ -17339,8 +17342,9 @@
         let { player: _ } = _,
           _ = (function (_) {
             return (0, _._)(() => _.GetFailureReason());
-          })(_),
-          _ = "";
+          })(_);
+        _.use(_._.Ready());
+        let _ = "";
         return (
           _ == _._.UnsupportedMediaType
             ? (_ = _._.Localize("#TrailerPlayer_Error_UnsupportedCodec"))
@@ -17358,8 +17362,9 @@
       }
       function _(_) {
         let { player: _ } = _,
-          [_, _, _, _] = _(_),
-          _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
+          [_, _, _, _] = _(_);
+        _.use(_._.Ready());
+        let _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
           _ = _._.Localize(
             _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
           );
@@ -17371,8 +17376,9 @@
       }
       function _(_) {
         let { player: _ } = _,
-          _ = _(_),
-          _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
+          _ = _(_);
+        _.use(_._.Ready());
+        let _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
             _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
           ),
@@ -18239,7 +18245,8 @@
           })(_, !!_),
           _ = _ ? void 0 : _,
           _ = {};
-        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
+          _.use(_._.Ready());
         let _ = (0, _._)(_().TrailerPlayer, _);
         return (0, _.jsxs)("div", {
           ref: _,
@@ -38501,6 +38508,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -39013,7 +39023,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -39037,6 +39046,7 @@
             bgcolor: _,
             children: _,
             trailerBaseID: _,
+            subtitles: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useMemo)(
@@ -39154,6 +39164,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
@@ -39387,6 +39398,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -39405,8 +39418,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -39440,8 +39451,6 @@
             });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = null;
       function _(_) {
@@ -39522,7 +39531,8 @@
             : _.k_TrailerAsFull;
         _ = Object.values(_).includes(_) ? _ : _.k_TrailerAsFull;
         const _ = (0, _._)(_.args.color, "black"),
-          _ = (0, _._)(_.args.bgcolor, "white");
+          _ = (0, _._)(_.args.bgcolor, "white"),
+          _ = (0, _._)(_.args);
         return (0, _.jsx)(_, {
           appid: _,
           trailerBaseID: _,
@@ -39531,6 +39541,7 @@
           color: _,
           bgcolor: _,
           children: _.children,
+          subtitles: _.rgVideoTracks,
         });
       }
       function _(_) {
@@ -44415,13 +44426,14 @@
             style: _,
             children: _,
             bSkipForcingStoreLink: _,
+            bOpenInline: _,
           } = _,
           _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
           _ = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               href: _,
-              target: _._.IN_CLIENT ? void 0 : "_blank",
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
               className: _,
               style: _,
               rel: "noopener noreferrer",
@@ -46899,159 +46911,6 @@
             }),
             _,
           ),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            tabs: _,
-            bDisableRouting: _,
-            startingTab: _,
-            classNameCtn: _,
-            classNameTab: _,
-            classNameTabContent: _,
-            preferredFocus: _,
-            bVerticalTabs: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(() => {
-            var _;
-            return (
-              _ ||
-              (!_ &&
-              (0, _._)(_, "tab") &&
-              null !== (_ = (0, _._)(_, "tab")) &&
-              void 0 !== _
-                ? _
-                : "")
-            );
-          });
-        (0, _.useEffect)(() => {
-          if (!_.bDisableRouting && _) {
-            const _ = (0, _._)(_, "tab");
-            _ && _(_);
-          }
-        }, [_, _.key, _.bDisableRouting, _]);
-        const _ = _.useCallback(
-            (_) => {
-              _(_.key),
-                _ || (0, _._)(_, "tab", _.key),
-                _.onClick && _.onClick(_);
-            },
-            [_, _],
-          ),
-          _ = _.filter((_) => !_.hidden);
-        if (!_.length) return null;
-        const _ = _.find((_) => _.key === _) || _[0],
-          _ = _ ? (null != _ ? _ : _[0].key) : void 0,
-          _ = (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_._, {
-                className: (0, _._)(
-                  _().GraphicalAssetsTabs,
-                  _ && _().GraphicalAssetsTabsVertical,
-                  _,
-                ),
-                navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
-                children: _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      tab: _,
-                      OnTabClick: _,
-                      classNameTab: _,
-                      active: _.key === _.key,
-                      preferredFocus: _ === _.key,
-                    },
-                    _.key,
-                  ),
-                ),
-              }),
-              _ &&
-                (0, _.jsx)(_._, {
-                  className: _,
-                  children: _.contents,
-                }),
-            ],
-          });
-        return _
-          ? (0, _.jsx)(_._, {
-              className: (0, _._)(_().GraphicalAssetsTabsLayoutVertical),
-              children: _,
-            })
-          : _;
-      }
-      function _(_) {
-        const { statusType: _ = "success", children: _ } = _;
-        let _ = "";
-        return (
-          "success" === _
-            ? (_ = _().StatusSuccess)
-            : "danger" === _
-              ? (_ = _().StatusDanger)
-              : "caution" === _ && (_ = _().StatusCaution),
-          (0, _.jsx)("div", {
-            className: (0, _._)(_().GraphicalAssetStatus, _),
-            children: _,
-          })
-        );
-      }
-      function _(_) {
-        const {
-          tab: _,
-          OnTabClick: _,
-          classNameTab: _,
-          active: _,
-          preferredFocus: _,
-        } = _;
-        return (0, _.jsx)(_._, {
-          condition: Boolean(_.statusToolTip || _.tooltip),
-          wrap: (_) =>
-            (0, _.jsx)(_._, {
-              toolTipContent: _.statusToolTip || _.tooltip,
-              children: _,
-            }),
-          children: (0, _.jsxs)(_._, {
-            className: (0, _._)(
-              _().GraphicalAssetsTab,
-              _ && _().Active,
-              _ && "ActiveTab",
-              _,
-            ),
-            onActivate: () => __webpack_require__(_),
-            preferredFocus: _,
-            children: [
-              Boolean(_.vo_warning) &&
-                (0, _.jsx)(_._, {
-                  toolTipContent: _.vo_warning,
-                  children: (0, _.jsx)("div", {
-                    className: _().VOWarning,
-                    children: (0, _._)("#EventEditor_VOWarning"),
-                  }),
-                }),
-              _.status,
-              _.name,
-            ],
-          }),
         });
       }
     },

@@ -76,6 +76,7 @@
     ArrayWithoutElement: () => _,
     ArrayWithoutFalsyValues: () => _,
     BInsertBeforeElement: () => _,
+    CountBy: () => _,
     CountMatches: () => _,
     DiffArrays: () => _,
     FilterInPlace: () => _,
@@ -262,6 +263,17 @@
       removed: _,
       added: _,
     };
+  }
+  function _(_, _) {
+    let _ = new Map();
+    for (let _ of _) {
+      let _ = _(_);
+      if (_.has(_)) {
+        let _ = _.get(_);
+        _.set(_, _ + 1);
+      } else _.set(_, 1);
+    }
+    return [..._.entries()];
   }
   var _ = _(() => {
     "use strict";
@@ -27286,6 +27298,7 @@ Error generating stack: ` +
     _,
     _,
     _,
+    _,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -31159,6 +31172,78 @@ Error generating stack: ` +
           getClassName() {
             return "CSteamInputService_EnableQosStatus_Response";
           }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    battery_level: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    charging: {
+                      _: 3,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_ControllerBatteryState_Notification";
+          }
         });
       ((_) => {
         _.NotifyButtonStateChangedHandler = {
@@ -31959,6 +32044,63 @@ Error generating stack: ` +
           );
         }
         (_.SendMsgNotifyControllerListChanged = _),
+          (_.NotifyControllerBatteryStateHandler = {
+            name: "SteamInputManager.NotifyControllerBatteryState#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyControllerBatteryStateHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyControllerBatteryState = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerBatteryState#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyControllerBatteryState = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyControllerBatteryState#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyControllerBatteryState = _),
           (_.NotifyFirstSteamControllerConnectionHandler = {
             name: "SteamInputManager.NotifyFirstSteamControllerConnection#1",
             request: _,
@@ -35032,6 +35174,7 @@ Error generating stack: ` +
                     },
                     package_group: {
                       _: 49,
+                      _: "default",
                       _: _.readString,
                       _: _.writeString,
                     },
@@ -35039,6 +35182,22 @@ Error generating stack: ` +
                       _: 50,
                       _: _.readBool,
                       _: _.writeBool,
+                    },
+                    free_to_keep_base_package: {
+                      _: 51,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    price_cannot_be_displayed_as_discount: {
+                      _: 52,
+                      _: !1,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                    price_to_base_discount_on: {
+                      _: 53,
+                      _: _.readInt64String,
+                      _: _.writeInt64String,
                     },
                   },
                 }),
@@ -54200,8 +54359,9 @@ Error generating stack: ` +
     _,
     _ = _(() => {
       "use strict";
+      _ = _(_(), 1);
+      _();
       (_ = _(_(), 1)),
-        (_ = _(_(), 1)),
         (_ = _.default.createContext({
           focusNavWindow: null,
           bSupportsFocus: !0,

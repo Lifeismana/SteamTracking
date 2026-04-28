@@ -132,10 +132,10 @@
     "Wishlist_Categories_Suggested_Discount": "Odotetaan alennusta",
     "Wishlist_Categories_Suggested_Birthday": "Syntymäpäivälista",
     "Wishlist_Categories_Suggested_Recommended": "Kavereiden suosittelemat",
-    "Price_History_Normal_Price": "NORMAALIHINTA",
-    "Price_History_Recent_Low_Price": "30 PÄIVÄN ALIN HINTA",
+    "Price_History_Normal_Price": "NORMAALI",
+    "Price_History_Recent_Low_Price": "30 PÄIVÄN ALIN",
     "Price_History_Recent_Low_Price_Ttip": "Peli oli saatavilla hintaan %1$s viimeisen %2$s päivän aikana.",
-    "Price_History_Current_Low_Price_Ttip": "Pelin nykyinen hinta on alempi kuin edelllisen %1$s päivän aikana.",
-    "Price_History_Current_Price": "HINTA NYT",
-    "Price_History_Lowest_Previous_30": "Alimpaan hintaan perustuva alennus viimeisen 30 päivän aikana"
+    "Price_History_Current_Low_Price_Ttip": "Pelin hinta on tällä hetkellä alin viimeisen %1$s päivän aikana.",
+    "Price_History_Current_Price": "NYT",
+    "Price_History_Lowest_Previous_30": "Alennus alimman hinnan mukaan viimeisen 30 päivän aikana"
 }

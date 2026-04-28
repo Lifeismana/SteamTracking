@@ -29,6 +29,7 @@
         BackgroundAnimation: "_3yBb7Zq-JsZsUC7j0xfwNs",
         "ItemFocusAnim-darkerGrey-nocolor": "_3mEJMPBWqIai6TZ5Asmwzc",
         "ItemFocusAnim-darkerGrey": "_1bq8dQKi1_Y3Cx4SqKPEbe",
+        "ItemFocusAnim-darkGreySettings": "_3HZYqGe5_hsFFJcgBTMMSW",
         "ItemFocusAnim-darkGrey": "qqYMXWoOu5it3a3atTegO",
         "ItemFocusAnim-grey": "ULAazkgE1qcpwKYFDQ6cA",
         "ItemFocusAnim-translucent-white-10": "_2_8edxNWb8zuaY6iv3wJSx",
@@ -71,7 +72,7 @@
     },
     19369: (e, t, i) => {
       "use strict";
-      i.d(t, { jl: () => F, Bv: () => k });
+      i.d(t, { jl: () => k, Bv: () => F });
       var s = i(34629),
         n = i(7850),
         a = i(90626),
@@ -164,7 +165,7 @@
       const C = new g();
       var I = i(12155),
         x = i(45699);
-      class k extends a.Component {
+      class F extends a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -275,7 +276,7 @@
                     className: u().Body,
                     children: (0, c.we)("#ManageFriends_EnterFriendCode"),
                   }),
-                  (0, n.jsx)(F, {
+                  (0, n.jsx)(k, {
                     onButtonClick: this.OnAddFriend,
                     buttonText: (0, c.we)("#ManageFriends_SendInvite"),
                     bDisableForSelf: !0,
@@ -368,13 +369,13 @@
           });
         }
       }
-      (0, s.Cg)([r.oI], k.prototype, "OnCreateInviteLink", null),
-        (0, s.Cg)([r.oI], k.prototype, "OnCopy", null),
-        (0, s.Cg)([r.oI], k.prototype, "OnAddFriend", null),
-        (0, s.Cg)([r.oI], k.prototype, "OnSearchChange", null),
-        (0, s.Cg)([r.oI], k.prototype, "OnSearchKeyDown", null),
-        (0, s.Cg)([r.oI], k.prototype, "OnSearchSubmit", null);
-      class F extends a.Component {
+      (0, s.Cg)([r.oI], F.prototype, "OnCreateInviteLink", null),
+        (0, s.Cg)([r.oI], F.prototype, "OnCopy", null),
+        (0, s.Cg)([r.oI], F.prototype, "OnAddFriend", null),
+        (0, s.Cg)([r.oI], F.prototype, "OnSearchChange", null),
+        (0, s.Cg)([r.oI], F.prototype, "OnSearchKeyDown", null),
+        (0, s.Cg)([r.oI], F.prototype, "OnSearchSubmit", null);
+      class k extends a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -439,7 +440,7 @@
                   "#ManageFriends_EnterFriendCodePlaceholder",
                 ),
               }),
-              (0, n.jsx)(w, {
+              (0, n.jsx)(y, {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
                 bShowStatus: this.props.bShowStatus,
@@ -455,10 +456,10 @@
           });
         }
       }
-      (0, s.Cg)([r.oI], F.prototype, "OnFriendCodeChange", null),
-        (0, s.Cg)([r.oI], F.prototype, "LoadProfile", null),
-        (0, s.Cg)([r.oI], F.prototype, "OnActionClick", null);
-      const w = (e) => {
+      (0, s.Cg)([r.oI], k.prototype, "OnFriendCodeChange", null),
+        (0, s.Cg)([r.oI], k.prototype, "LoadProfile", null),
+        (0, s.Cg)([r.oI], k.prototype, "OnActionClick", null);
+      const y = (e) => {
         const {
             searchResult: t,
             invite_status: i,

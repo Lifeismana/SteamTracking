@@ -41,6 +41,7 @@
         BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
         "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
         "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
         "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
         "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
         "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
@@ -148,6 +149,7 @@
         BackgroundAnimation: "_2LOnSlelExzMt5V4a0dNMM",
         "ItemFocusAnim-darkerGrey-nocolor": "_1HvhiBok8gSNZxjvKJodk_",
         "ItemFocusAnim-darkerGrey": "_27N4Tx9ZkLoouSi6u2L0Rj",
+        "ItemFocusAnim-darkGreySettings": "_3BuduqT5jtwJUrO_Rlx9pN",
         "ItemFocusAnim-darkGrey": "_1t5LnzcxRDUwMaXczWLvT9",
         "ItemFocusAnim-grey": "UvYtyIHWLaxtSAiaOZoaD",
         "ItemFocusAnim-translucent-white-10": "_2Ze0Xg_Rmw0Fw4dtnjqu06",
@@ -274,6 +276,7 @@
         BackgroundAnimation: "_1seXoMt6Gw5ShAn1fMGCk1",
         "ItemFocusAnim-darkerGrey-nocolor": "_2Pfbc5UJLub15f3GMuUOpu",
         "ItemFocusAnim-darkerGrey": "_1zD-uKidolXqoKdiqmbZmN",
+        "ItemFocusAnim-darkGreySettings": "_1CaH5L10wLn4wyijOgOTH6",
         "ItemFocusAnim-darkGrey": "_3Hclo3bSXjWjLg7ak63JZU",
         "ItemFocusAnim-grey": "_276KuR-DDgs7rfFECDuv2Q",
         "ItemFocusAnim-translucent-white-10": "_1yYdEMizQD0Hu99aKPdShy",
@@ -533,7 +536,7 @@
             appid: _,
             bIsFree: v,
             bIsComingSoon: C,
-            className: j,
+            className: N,
             bTextMode: F,
           } = e,
           f = (0, c.$5)(_),
@@ -542,7 +545,7 @@
           { mutateAsync: k } = (0, l.s)(_, !I, (0, m.L3)(s)),
           { elDialogElement: T, fnShowLogonDialog: b } = (0, x.E)();
         if (y || (!C && v))
-          return v ? (0, n.jsx)(N, { possibleDemoAppID: _ }) : null;
+          return v ? (0, n.jsx)(j, { possibleDemoAppID: _ }) : null;
         let Q = null;
         return (
           a && !F
@@ -557,7 +560,7 @@
               (0, n.jsx)(w.he, {
                 toolTipContent: (0, p.we)("#AddToWishlist_ttip"),
                 children: (0, n.jsx)("div", {
-                  className: (0, A.A)(u().WishList, j),
+                  className: (0, A.A)(u().WishList, N),
                   onClick: async () => {
                     S.iA.logged_in ? a || (t(!0), await k(), t(!1)) : b();
                   },
@@ -569,20 +572,20 @@
           })
         );
       }
-      function N(e) {
+      function j(e) {
         const { possibleDemoAppID: a, className: t } = e,
           r = (0, c.$5)(a),
           { data: i } = (0, s.J$)(r);
         return i
           ? (1 != i.type && 12 != i.type) || !i.related_items?.parent_appid
             ? null
-            : (0, n.jsx)(j, {
+            : (0, n.jsx)(N, {
                 parentAppID: i.related_items?.parent_appid,
                 className: t,
               })
           : null;
       }
-      function j(e) {
+      function N(e) {
         const { parentAppID: a, className: t } = e,
           r = (0, c.$5)(a),
           { data: i } = (0, s.J$)(r),
@@ -620,8 +623,8 @@
         x = t(51706),
         v = t(738),
         C = t(82477),
-        N = t(22797),
-        j = t(55263),
+        j = t(22797),
+        N = t(55263),
         F = t(32630),
         f = t(75933),
         y = t(43568),
@@ -646,7 +649,7 @@
         const { category: a, fnShowPicker: t, rgPrevLaborOfLoveWinners: s } = e,
           [r, o] = i.useState("");
         if (!(0, _.jT)(a.voteid).data)
-          return (0, n.jsx)(N.t, {
+          return (0, n.jsx)(j.t, {
             size: "medium",
             position: "center",
             msDelayAppear: 200,
@@ -808,7 +811,7 @@
             className: l().SearchContainer,
             ref: o,
             children: Boolean(r.isLoading)
-              ? (0, n.jsx)(N.t, {
+              ? (0, n.jsx)(j.t, {
                   className: l().SearchThrobber,
                   size: "large",
                   position: "center",
@@ -878,7 +881,7 @@
             eSteamAwardCategoryID: t,
             eNominatonSource: s,
           } = e,
-          r = (0, j.zX)(
+          r = (0, N.zX)(
             a?.map((e) => e.appID),
             H,
           ),
@@ -996,11 +999,11 @@
           }, [r, a]),
           v = (0, _.$d)(a, t, s, h, g);
         let C = (0, p.we)("#Steamawards_Nominate"),
-          N = null;
+          j = null;
         return (
           m
             ? ((C = (0, p.we)("#Steamawards_Skip_Btn")),
-              (N = (0, n.jsx)(A.MOk, {})))
+              (j = (0, n.jsx)(A.MOk, {})))
             : u && (C = (0, p.we)("#Steamawards_Nominated")),
           (0, n.jsxs)(w.$n, {
             onClick: (e) => {
@@ -1013,7 +1016,7 @@
                     );
             },
             className: (0, S.A)(l().NominateGameButton, u && l().Nominated),
-            children: [N, C],
+            children: [j, C],
           })
         );
       }
@@ -1079,7 +1082,7 @@
                     }),
                   }),
                 })
-              : (0, n.jsx)(N.t, {
+              : (0, n.jsx)(j.t, {
                   className: l().EventCarousel,
                   size: "xlarge",
                   position: "center",
@@ -1844,8 +1847,8 @@
       var xe = t(4775),
         ve = t.n(xe),
         Ce = t(60383),
-        Ne = t(60014),
-        je = t(84811),
+        je = t(60014),
+        Ne = t(84811),
         Fe = t(8812),
         fe = t(10050),
         ye = t(38535);
@@ -2066,7 +2069,7 @@
             bIsVotingOpen: s,
             bIsVotingPast: r,
           } = e,
-          o = (0, j.zX)(
+          o = (0, N.zX)(
             a.app_discounts.map((e) => e.appid),
             Ie,
           ),
@@ -2143,7 +2146,7 @@
             y(0), v(h[d.current]);
           }, [h]);
         if (1 == o)
-          return (0, n.jsx)(N.t, {
+          return (0, n.jsx)(j.t, {
             position: "center",
             size: "large",
             msDelayAppear: 300,
@@ -2182,7 +2185,7 @@
           a.winner_appid && r
             ? (Y = (0, n.jsx)(De, { unAppID: a.winner_appid }))
             : l && (Y = (0, n.jsx)(Re, { unAppID: l })),
-          (0, n.jsx)(je.tH, {
+          (0, n.jsx)(Ne.tH, {
             children: (0, n.jsx)(Ce.J, {
               thresholds: [0.4],
               rootMargin: T,
@@ -2301,8 +2304,8 @@
       }
       function Re(e) {
         const { unAppID: a } = e,
-          [t] = (0, j.t7)(a, Ie),
-          s = (0, Ne.aL)(t?.GetStorePageURL(), "nominee_capsule");
+          [t] = (0, N.t7)(a, Ie),
+          s = (0, je.aL)(t?.GetStorePageURL(), "nominee_capsule");
         return t
           ? (0, n.jsxs)(n.Fragment, {
               children: [
@@ -2322,8 +2325,8 @@
       }
       function De(e) {
         const { unAppID: a } = e,
-          [t] = (0, j.t7)(a, Ie),
-          s = (0, Ne.aL)(t?.GetStorePageURL(), "winner_capsule");
+          [t] = (0, N.t7)(a, Ie),
+          s = (0, je.aL)(t?.GetStorePageURL(), "winner_capsule");
         return t
           ? (0, n.jsxs)(n.Fragment, {
               children: [
@@ -2350,7 +2353,7 @@
             bPlayMicrotrailers: r,
             bHoveringApp: o,
           } = e,
-          [l] = (0, j.t7)(a, Ie),
+          [l] = (0, N.t7)(a, Ie),
           d = i.useRef(void 0),
           c = (0, ye.dy)();
         i.useEffect(() => {
@@ -2386,9 +2389,9 @@
             bIsVotingOpen: d,
             bIsCurrentVoteApp: m,
           } = e,
-          [u] = (0, j.t7)(a, Ie),
+          [u] = (0, N.t7)(a, Ie),
           h = (0, _.ZB)(a, s, t),
-          g = (0, Ne.aL)(u?.GetStorePageURL(), "nominee_capsule"),
+          g = (0, je.aL)(u?.GetStorePageURL(), "nominee_capsule"),
           A = (0, _.Vz)(s),
           x = A && A.currentNomination?.appid === a,
           v = i.useCallback(() => {

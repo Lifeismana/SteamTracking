@@ -727,6 +727,16 @@ input.z7qI4Gjuleb-g6osRQpw2 {
     color: #fff;
   }
 }
+@keyframes _3oEDNw_jLfiO2KEnzqXvWj {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _2_svdWFQrIOwj-IleWJR6L {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -1794,6 +1804,16 @@ p a:hover {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _23bSFoV4nDLAGl_G32zEdY {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

@@ -11,6 +11,7 @@
         Rows: "_2QdiX1hDsJmlkrHmcCOMbV",
         AutoColumns: "Cr7YIMQn6_lDRU4-3BR8b",
         AutoRows: "_3kyzvGnYVLT0DW6nzP9n18",
+        AutoFlow: "_3AvZKfpfaIQbfczVRBASsX",
         Areas: "_1-yfCTWkj4tOFfb3EKXx6N",
         Flow: "_1yUwWGTk4IX0IhdJiKfFBf",
         AlignContent: "_2Tglp6488nVBhU976Llfpe",
@@ -87,6 +88,12 @@
           cssProperty: "--grid-auto-rows",
         },
         {
+          prop: "autoFlow",
+          responsive: !0,
+          className: l.AutoFlow,
+          cssProperty: "--grid-auto-flow",
+        },
+        {
           prop: "areas",
           responsive: !0,
           className: l.Areas,
@@ -161,11 +168,11 @@
       function m() {
         return "desktop" === (0, x.j_)(H.k1);
       }
-      function j() {
+      function _() {
         m() && (0, x.Y1)(H.k1), "location" in window && location.reload();
       }
-      var L = s(8527),
-        _ = s(60014),
+      var j = s(8527),
+        L = s(60014),
         g = s(64238),
         f = s.n(g),
         u = s(90626),
@@ -287,10 +294,10 @@
       }
       function E(e) {
         let { href: t, ...s } = e;
-        const r = (0, _.n9)();
+        const r = (0, L.n9)();
         return (
-          (null == t ? void 0 : t.startsWith(L.TS.STORE_BASE_URL)) &&
-            (t = (0, _.bV)(r, t)),
+          (null == t ? void 0 : t.startsWith(j.TS.STORE_BASE_URL)) &&
+            (t = (0, L.bV)(r, t)),
           (0, n.jsx)(C.Y, {
             href: t,
             color: "dull-11",
@@ -314,7 +321,7 @@
                     justify: "between",
                     children: [
                       (0, n.jsx)(E, {
-                        href: L.TS.STORE_BASE_URL,
+                        href: j.TS.STORE_BASE_URL,
                         children: (0, n.jsx)(z, {}),
                       }),
                       (0, n.jsxs)(v.az, {
@@ -326,27 +333,27 @@
                           }),
                           "  |  ",
                           (0, n.jsx)(E, {
-                            href: L.TS.STORE_BASE_URL + "about",
+                            href: j.TS.STORE_BASE_URL + "about",
                             children: "关于蒸汽平台",
                           }),
                           "  |  ",
                           (0, n.jsx)(E, {
-                            href: L.TS.STORE_BASE_URL + "steam_refunds",
+                            href: j.TS.STORE_BASE_URL + "steam_refunds",
                             children: "退款政策",
                           }),
                           "  |  ",
                           (0, n.jsx)(E, {
-                            href: L.TS.STORE_BASE_URL + "subscriber_agreement",
+                            href: j.TS.STORE_BASE_URL + "subscriber_agreement",
                             children: "软件许可服务协议",
                           }),
                           "  |  ",
                           (0, n.jsx)(E, {
-                            href: L.TS.STORE_BASE_URL + "privacy_agreement",
+                            href: j.TS.STORE_BASE_URL + "privacy_agreement",
                             children: "个人信息保护政策",
                           }),
                           "  |  ",
                           (0, n.jsx)(E, {
-                            href: L.TS.STORE_BASE_URL + "data_outbound",
+                            href: j.TS.STORE_BASE_URL + "data_outbound",
                             children: "个人信息出境告知书",
                           }),
                           "  |  ",
@@ -394,7 +401,7 @@
                             hoverContent: (0, n.jsx)("img", {
                               alt: "",
                               src:
-                                L.TS.STORE_CDN_URL +
+                                j.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/Weibo-QR.png?v=2",
                             }),
                             children: (0, n.jsxs)(r.s, {
@@ -403,7 +410,7 @@
                                 (0, n.jsx)("img", {
                                   alt: "微博",
                                   src:
-                                    L.TS.STORE_CDN_URL +
+                                    j.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
                                 (0, n.jsx)(o.EY, { children: "微博" }),
@@ -414,7 +421,7 @@
                             hoverContent: (0, n.jsx)("img", {
                               alt: "",
                               src:
-                                L.TS.STORE_CDN_URL +
+                                j.TS.STORE_CDN_URL +
                                 "public/shared/images/footer/WeChat-QR.png?v=2",
                             }),
                             children: (0, n.jsxs)(r.s, {
@@ -423,7 +430,7 @@
                                 (0, n.jsx)("img", {
                                   alt: "微信",
                                   src:
-                                    L.TS.STORE_CDN_URL +
+                                    j.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
                                 (0, n.jsx)(o.EY, { children: "微信" }),
@@ -629,10 +636,10 @@
           }),
         });
       }
-      function G(e) {
+      function F(e) {
         return (0, n.jsx)(r.s, { direction: "column", gap: "4", ...e });
       }
-      function F(e) {
+      function G(e) {
         return (0, n.jsx)(i.D, {
           level: "3",
           color: "dull-12",
@@ -643,10 +650,10 @@
       }
       function D(e) {
         let { href: t, ...s } = e;
-        const r = (0, _.n9)();
+        const r = (0, L.n9)();
         return (
-          (null == t ? void 0 : t.startsWith(L.TS.STORE_BASE_URL)) &&
-            (t = (0, _.bV)(r, t)),
+          (null == t ? void 0 : t.startsWith(j.TS.STORE_BASE_URL)) &&
+            (t = (0, L.bV)(r, t)),
           (0, n.jsx)(C.Y, {
             href: t,
             color: "dull-11",
@@ -669,7 +676,7 @@
               align: "center",
               children: [
                 (0, n.jsx)(D, {
-                  href: L.TS.STORE_BASE_URL,
+                  href: j.TS.STORE_BASE_URL,
                   children: (0, n.jsx)(B, {}),
                 }),
                 (0, n.jsx)(D, {
@@ -713,15 +720,15 @@
               gap: "5",
               children: [
                 "initial" === e &&
-                  !L.TS.IN_MOBILE_WEBVIEW &&
+                  !j.TS.IN_MOBILE_WEBVIEW &&
                   (0, n.jsx)(l.v, {
-                    href: L.TS.STORE_BASE_URL + "mobile/",
+                    href: j.TS.STORE_BASE_URL + "mobile/",
                     children: k.Localize("#footer_link_get_mobile_apps"),
                   }),
                 m() &&
                   (0, n.jsx)(l.$, {
                     color: "dull",
-                    onClick: j,
+                    onClick: _,
                     children: k.Localize("#footer_view_mobile_website"),
                   }),
               ],
@@ -754,38 +761,38 @@
               textAlign: "start",
               children: [
                 (0, n.jsx)(W, {}),
-                (0, n.jsxs)(G, {
+                (0, n.jsxs)(F, {
                   gridArea: "steam",
                   children: [
-                    (0, n.jsx)(F, {
+                    (0, n.jsx)(G, {
                       children: k.Localize("#footer_link_header_steam"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "about/",
+                      href: j.TS.STORE_BASE_URL + "about/",
                       children: k.Localize("#footer_link_about_steam"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "subscriber_agreement/",
+                      href: j.TS.STORE_BASE_URL + "subscriber_agreement/",
                       children: k.Localize("#footer_link_steam_ssa"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.PARTNER_BASE_URL,
+                      href: j.TS.PARTNER_BASE_URL,
                       children: k.Localize("#footer_link_steamworks"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.PARTNER_BASE_URL + "steamdirect",
+                      href: j.TS.PARTNER_BASE_URL + "steamdirect",
                       children: k.Localize("#footer_link_steam_distribution"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "digitalgiftcards/",
+                      href: j.TS.STORE_BASE_URL + "digitalgiftcards/",
                       children: k.Localize("#footer_link_gift_cards"),
                     }),
                   ],
                 }),
-                (0, n.jsxs)(G, {
+                (0, n.jsxs)(F, {
                   gridArea: "valve",
                   children: [
-                    (0, n.jsx)(F, {
+                    (0, n.jsx)(G, {
                       children: k.Localize("#footer_link_header_valve"),
                     }),
                     (0, n.jsx)(D, {
@@ -797,23 +804,23 @@
                       children: k.Localize("#footer_link_jobs"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "hardware/",
+                      href: j.TS.STORE_BASE_URL + "hardware/",
                       children: k.Localize("#footer_link_hardware"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "hardware_recycling/",
+                      href: j.TS.STORE_BASE_URL + "hardware_recycling/",
                       children: k.Localize("#footer_link_recycling"),
                     }),
                   ],
                 }),
-                (0, n.jsxs)(G, {
+                (0, n.jsxs)(F, {
                   gridArea: "legal",
                   children: [
-                    (0, n.jsx)(F, {
+                    (0, n.jsx)(G, {
                       children: k.Localize("#footer_link_header_legal"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "privacy_agreement/",
+                      href: j.TS.STORE_BASE_URL + "privacy_agreement/",
                       children: k.Localize("#footer_link_privacy"),
                     }),
                     (0, n.jsx)(D, {
@@ -821,39 +828,39 @@
                       children: k.Localize("#footer_link_accessibility"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "legal/",
+                      href: j.TS.STORE_BASE_URL + "legal/",
                       children: k.Localize("#footer_link_notices_and_policies"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "account/cookiepreferences/",
+                      href: j.TS.STORE_BASE_URL + "account/cookiepreferences/",
                       children: k.Localize("#footer_link_cookies"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "steam_refunds/",
+                      href: j.TS.STORE_BASE_URL + "steam_refunds/",
                       children: k.Localize("#footer_link_refunds"),
                     }),
                   ],
                 }),
-                (0, n.jsxs)(G, {
+                (0, n.jsxs)(F, {
                   gridArea: "more",
                   children: [
-                    (0, n.jsx)(F, {
+                    (0, n.jsx)(G, {
                       children: k.Localize("#footer_link_header_more"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "about/",
+                      href: j.TS.STORE_BASE_URL + "about/",
                       children: k.Localize("#footer_link_get_steam"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "mobile/",
+                      href: j.TS.STORE_BASE_URL + "mobile/",
                       children: k.Localize("#footer_link_get_mobile_apps"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.HELP_BASE_URL,
+                      href: j.TS.HELP_BASE_URL,
                       children: k.Localize("#footer_link_get_support"),
                     }),
                     (0, n.jsx)(D, {
-                      href: L.TS.STORE_BASE_URL + "account/",
+                      href: j.TS.STORE_BASE_URL + "account/",
                       children: k.Localize("#footer_link_my_account"),
                     }),
                   ],
@@ -864,11 +871,11 @@
         );
       }
       function J(e) {
-        if (L.TS.IN_GAMEPADUI) return null;
-        const t = (0, d.nA)(L.TS.EREALM)
+        if (j.TS.IN_GAMEPADUI) return null;
+        const t = (0, d.nA)(j.TS.EREALM)
           ? (0, n.jsx)(y, { ...e })
           : (0, n.jsx)(Y, { ...e });
-        return (0, n.jsx)(_.nn, {
+        return (0, n.jsx)(L.nn, {
           controller: "footer",
           method: "footer",
           children: t,

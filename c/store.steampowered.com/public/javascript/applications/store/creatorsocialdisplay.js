@@ -116,6 +116,7 @@
         BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
         "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
         "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
         "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
         "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
         "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",

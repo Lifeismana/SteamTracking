@@ -24,6 +24,16 @@
     color: #fff;
   }
 }
+@keyframes _3BuduqT5jtwJUrO_Rlx9pN {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _1t5LnzcxRDUwMaXczWLvT9 {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -997,6 +1007,16 @@ html.responsive.GamepadMode .carousel__slider-tray-wrapper {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _1CaH5L10wLn4wyijOgOTH6 {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

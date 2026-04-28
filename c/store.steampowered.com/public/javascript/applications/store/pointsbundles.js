@@ -22,6 +22,7 @@
         BackgroundAnimation: "_2oXEvfMhDhEcaBr5PRy7d7",
         "ItemFocusAnim-darkerGrey-nocolor": "_16nKUyCgdygsMvgtHYnA_I",
         "ItemFocusAnim-darkerGrey": "_3S9V6HG-yV7cLmXIn7O8AO",
+        "ItemFocusAnim-darkGreySettings": "_33WcxDSoXyTOyaJarLRYDB",
         "ItemFocusAnim-darkGrey": "VeFWruyg6ctHtRkiUXTkH",
         "ItemFocusAnim-grey": "_24duhYi8RTD4Eew8C3KB_c",
         "ItemFocusAnim-translucent-white-10": "_3lteHrpkDJZkvRG_ffVoBy",

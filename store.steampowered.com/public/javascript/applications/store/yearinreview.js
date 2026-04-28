@@ -18,6 +18,7 @@
         BackgroundAnimation: "_2jC4Eqt8IrbRbM81zvxlnW",
         "ItemFocusAnim-darkerGrey-nocolor": "_3jGCeVy7OzY5pw0Rpx0z8-",
         "ItemFocusAnim-darkerGrey": "_2Jqi29kzJtRTafvIOPyvAW",
+        "ItemFocusAnim-darkGreySettings": "_2tg8Ji5QTXXXSzn1Q0HRa2",
         "ItemFocusAnim-darkGrey": "T-2rsbY05mXhgaIQkf73x",
         "ItemFocusAnim-grey": "_1WGat3-0-TCDKEtg7LEoB5",
         "ItemFocusAnim-translucent-white-10": "RkktEhJT7jnAfvbEiNBBH",
@@ -48,6 +49,7 @@
         BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
         "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
         "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
         "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
         "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
@@ -951,6 +953,7 @@
         BackgroundAnimation: "_14OuUh1QjZE3TsW4NZNR2T",
         "ItemFocusAnim-darkerGrey-nocolor": "_34-QNskZMB7mEWsqhnZP6b",
         "ItemFocusAnim-darkerGrey": "_2mYgNS2XvBpQoFx7GpbaE8",
+        "ItemFocusAnim-darkGreySettings": "_2A4pb12mtvU-l5nClt2fv-",
         "ItemFocusAnim-darkGrey": "_2wJw5tkwjDagaHTwWVdn1u",
         "ItemFocusAnim-grey": "_1flpMlWbeXKOl-WYA3Xem3",
         "ItemFocusAnim-translucent-white-10": "_2Du1mKAGG_7kB5hkqpPOqX",
@@ -1045,6 +1048,7 @@
         BackgroundAnimation: "Uwk2oDOlH9H45uB6SckjX",
         "ItemFocusAnim-darkerGrey-nocolor": "_1HzbepuV2ne3fOiiw4M6L2",
         "ItemFocusAnim-darkerGrey": "_3jhvEXbsQ8rwLbzgIG2YKY",
+        "ItemFocusAnim-darkGreySettings": "_22jVwj2EIKxChqvLWQbXuN",
         "ItemFocusAnim-darkGrey": "_3E-Kmphz35Z5zxRRLBBv__",
         "ItemFocusAnim-grey": "_1MX1VV5l2Txw56HFd3WETD",
         "ItemFocusAnim-translucent-white-10": "_6H60CwBcO9kk4y1pOFm21",
@@ -1890,7 +1894,7 @@
                 title: (0, h.we)("#AddonPicker_RecentStickers"),
                 items: l.pN.FilterStickers(G(e), s),
                 onItemSelect: a,
-                renderItem: (e) => (0, n.jsx)(K, { sticker: e }),
+                renderItem: (e) => (0, n.jsx)(Q, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
                   (0, n.jsx)(k, {
@@ -1972,7 +1976,7 @@
             title: (0, h.we)("#EmoticonPicker_StickerHeading"),
             items: s,
             onItemSelect: t,
-            renderItem: (e) => (0, n.jsx)(K, { sticker: e }),
+            renderItem: (e) => (0, n.jsx)(Q, { sticker: e }),
             keyExtractor: ({ name: e }) => e,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: a,
@@ -2137,7 +2141,7 @@
           ],
         });
       };
-      class K extends o.Component {
+      class Q extends o.Component {
         state = { showHover: !1 };
         m_ref = o.createRef();
         render() {
@@ -2154,12 +2158,12 @@
             children: [
               (0, n.jsx)("img", { style: { width: "100%" }, src: s }),
               this.state.showHover &&
-                (0, n.jsx)(Q, { target: this.m_ref.current, sticker: e }),
+                (0, n.jsx)(K, { target: this.m_ref.current, sticker: e }),
             ],
           });
         }
       }
-      const Q = (0, i.PA)((e) => {
+      const K = (0, i.PA)((e) => {
         const {
             target: t,
             sticker: { name: a, appid: s },
@@ -3126,8 +3130,8 @@
         W = a(78327);
       var z = a(26505),
         Z = a(14336),
-        K = a(60155),
-        Q = a(48079),
+        Q = a(60155),
+        K = a(48079),
         X = a(22797),
         q = a(32754),
         J = a(99312),
@@ -4374,7 +4378,7 @@
                     className: "DialogLabel",
                     children: (0, B.we)("#Button_Preview"),
                   }),
-                  (0, s.jsx)(Q.$k, {
+                  (0, s.jsx)(K.$k, {
                     company: i,
                     name: t,
                     title: n,
@@ -4399,7 +4403,7 @@
       function ye(e) {
         const { steamid: t, setSteamID: a } = e,
           { data: n } = (0, Z.js)(t);
-        return (0, s.jsx)(K.kt, {
+        return (0, s.jsx)(Q.kt, {
           onSelected: () => a(new m.b(t)),
           children: (0, s.jsxs)("div", {
             style: { display: "flex", alignItems: "center" },
@@ -6374,8 +6378,8 @@
       }
       (0, o.Cg)([T.sH], H.prototype, "m_GameDetailPopupData", void 0);
       var Z = a(58632),
-        K = a.n(Z);
-      class Q {
+        Q = a.n(Z);
+      class K {
         m_SteamInterface;
         m_steamid;
         m_year;
@@ -6384,7 +6388,7 @@
           (this.m_SteamInterface = e),
             (this.m_steamid = t),
             (this.m_year = a),
-            (this.m_DataLoader = new (K())(
+            (this.m_DataLoader = new (Q())(
               (e) => this.InternalLoadScreenshots(e),
               { cache: !1 },
             ));
@@ -7183,8 +7187,8 @@
       }
       var ze = a(46079),
         Ze = a.n(ze);
-      const Ke = 9e3,
-        Qe = 1,
+      const Qe = 9e3,
+        Ke = 1,
         Xe = 50;
       function qe(e) {
         const { userYearInReview: t, children: a } = e,
@@ -7200,7 +7204,7 @@
           );
         if (!n || 0 == n.length) return (0, s.jsx)(et, { children: a });
         const r = n[0].total_playtime_percentagex100;
-        return t.GetPlayTimeStats().game_summary.length < Qe || r >= Ke
+        return t.GetPlayTimeStats().game_summary.length < Ke || r >= Qe
           ? (0, s.jsx)($e, {
               appid: n[0].parent_appid || n[0].appid,
               children: a,
@@ -8466,7 +8470,7 @@
                                 ),
                               ),
                             }),
-                            (0, s.jsx)(Ut.m, { content: (0, s.jsx)(Kt, {}) }),
+                            (0, s.jsx)(Ut.m, { content: (0, s.jsx)(Qt, {}) }),
                             (0, s.jsx)(Ht.s, {}),
                           ],
                         }),
@@ -8501,7 +8505,7 @@
         }
         return null;
       }
-      function Kt(e) {
+      function Qt(e) {
         const { active: t, payload: a } = e;
         if (t && a && a.length) {
           const e = a[0].value,
@@ -8524,7 +8528,7 @@
           (e.mac = "mac"),
           (e.vr = "vr");
       })(Wt || (Wt = {}));
-      const Qt = 100;
+      const Kt = 100;
       function Xt(e) {
         const { userYearInReview: t } = e;
         return (0, s.jsxs)(s.Fragment, {
@@ -8677,8 +8681,8 @@
       }
       function Jt(e) {
         return {
-          bDeck: e.deck_playtime_percentagex100 > Qt,
-          bVR: e.vr_playtime_percentagex100 > Qt,
+          bDeck: e.deck_playtime_percentagex100 > Kt,
+          bVR: e.vr_playtime_percentagex100 > Kt,
         };
       }
       function $t(e) {
@@ -8756,7 +8760,7 @@
           );
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            Boolean(n > Qt) &&
+            Boolean(n > Kt) &&
               (0, s.jsxs)(je, {
                 className: (0, he.A)(Ie().Section, Ie().Demo),
                 children: [
@@ -8769,7 +8773,7 @@
                   }),
                 ],
               }),
-            Boolean(r > Qt) &&
+            Boolean(r > Kt) &&
               (0, s.jsxs)(je, {
                 className: (0, he.A)(Ie().Section, Ie().Playtest),
                 children: [
@@ -10294,8 +10298,8 @@
         Wa = a(56555),
         za = a(49953),
         Za = a(55241),
-        Ka = a(62059),
-        Qa = a(36058),
+        Qa = a(62059),
+        Ka = a(36058),
         Xa = a(39743);
       const qa = l.memo((e) => {
           const { data: t, topMonthlyAppsAndRanks: a } = e,
@@ -10326,7 +10330,7 @@
                   offset: 0,
                   content: (0, s.jsx)($a, { hoveredBarIDRef: i }),
                 }),
-                (0, s.jsx)(Ka.y, {
+                (0, s.jsx)(Qa.y, {
                   barSize: 60,
                   dataKey: `topPlayedPercentBreakdownPerMonth.${k}`,
                   name: k,
@@ -10337,7 +10341,7 @@
                 }),
                 a.map((e, t) =>
                   (0, s.jsx)(
-                    Ka.y,
+                    Qa.y,
                     {
                       barSize: 60,
                       dataKey: `topPlayedPercentBreakdownPerMonth.${e.appid}`,
@@ -10350,7 +10354,7 @@
                     `${t}`,
                   ),
                 ),
-                (0, s.jsx)(Qa.W, {
+                (0, s.jsx)(Ka.W, {
                   interval: 0,
                   tick: (0, s.jsx)(rs, {}),
                   tickFormatter: r,
@@ -10565,12 +10569,12 @@
                 tick: { fill: "white" },
                 axisLine: !0,
               }),
-              (0, s.jsx)(Ka.y, {
+              (0, s.jsx)(Qa.y, {
                 barSize: 60,
                 dataKey: "percent",
                 fill: n ?? r.chartAccentColorAlt,
               }),
-              (0, s.jsx)(Qa.W, {
+              (0, s.jsx)(Ka.W, {
                 interval: 0,
                 tick: (0, s.jsx)(rs, {}),
                 tickFormatter: i,
@@ -11607,7 +11611,7 @@
                 focusable: !1,
                 children: (0, s.jsx)("div", {
                   className: Se().YearInReviewContainer,
-                  children: (0, s.jsx)(Qs, {
+                  children: (0, s.jsx)(Ks, {
                     userYearInReview: i,
                     avatarAndPersona: n,
                   }),
@@ -11620,7 +11624,7 @@
         Screenshots: void 0,
         themeStyle: {},
       });
-      function Ks(e) {
+      function Qs(e) {
         const {
             viewAsUser: t,
             avatarAndPersona: a,
@@ -11635,7 +11639,7 @@
         (m.current &&
           m.current.steamid.GetAccountID() == o.GetAccountID() &&
           m.current.year == c) ||
-          (m.current = new Q(H.Get().SteamInterface, o, c));
+          (m.current = new K(H.Get().SteamInterface, o, c));
         const h = m.current,
           p = l.useMemo(
             () => ({
@@ -11654,7 +11658,7 @@
           }),
         });
       }
-      function Qs(e) {
+      function Ks(e) {
         const { userYearInReview: t, avatarAndPersona: a } = e,
           n = t.GetSteamID(),
           r = t.GetYear(),
@@ -11674,7 +11678,7 @@
           [m, h] = (0, l.useState)(d),
           [p, u] = (0, l.useState)(r),
           _ = t.GetPlayTimeStats().game_summary?.length;
-        return (0, s.jsxs)(Ks, {
+        return (0, s.jsxs)(Qs, {
           viewAsUser: m,
           userYearInReview: t,
           avatarAndPersona: a,

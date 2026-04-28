@@ -2335,7 +2335,7 @@ GHomepage = {
 		}
 
 		GDynamicStore.DecorateDynamicItems( $Spotlights );
-		CreateFadingCarousel( $Spotlights, 0, false, null, false, $Spotlights.hasClass( 'v2' ) );
+		CreateFadingCarousel( $Spotlights, 0, false, null, $Spotlights.hasClass( 'v2' ) );
 		$Parent.css( 'minHeight', '' );
 		$Spotlights.css( 'visibility', '' );
 	},

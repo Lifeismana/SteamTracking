@@ -38,6 +38,7 @@
         BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
         "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
         "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
         "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
         "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
         "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
@@ -60,6 +61,7 @@
         BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
         "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
         "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
+        "ItemFocusAnim-darkGreySettings": "_2cAK7l3w0qC8uv5uzKjusc",
         "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
         "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
         "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
@@ -284,7 +286,7 @@
     },
     22687: (e, t, n) => {
       "use strict";
-      n.d(t, { W: () => F, J: () => W });
+      n.d(t, { W: () => M, J: () => W });
       var a = n(7850),
         r = n(45699),
         s = n(76217),
@@ -312,16 +314,16 @@
         P = n(54492),
         y = n(49411),
         D = n(52038),
-        H = n(61859),
-        N = n(61336),
-        T = n(78327),
-        E = n(91291),
-        B = n.n(E),
+        N = n(61859),
+        H = n(61336),
+        E = n(78327),
+        T = n(91291),
+        B = n.n(T),
         k = n(90421),
         O = n(5309),
-        M = n(71420);
+        F = n(71420);
       const W = "capsule_index_";
-      function F(e) {
+      function M(e) {
         const {
             capsule: t,
             bShowParentApp: n,
@@ -406,7 +408,7 @@
             bPreferDemoStorePage: i,
           } = e,
           c = (0, _.n9)(),
-          d = (0, T.Qn)(),
+          d = (0, E.Qn)(),
           { data: u } = (0, h.lv)(n);
         return u
           ? (0, a.jsx)(r.ml, {
@@ -417,7 +419,7 @@
                 children: [
                   (0, a.jsx)("div", {
                     className: w().ParentType,
-                    children: (0, H.we)(
+                    children: (0, N.we)(
                       11 == o
                         ? "#SalePage_ParentApp_SoundTrack"
                         : "#SalePage_ParentApp_DLC",
@@ -459,20 +461,20 @@
           S = (0, b._)(t),
           { data: w } = (0, h.J$)(t);
         if (!w) return null;
-        const g = (0, N.NT)(
-          (0, f.It)(`${(0, M._)(w, m)}${s ? `?${s}` : ""}`, A, v),
+        const g = (0, H.NT)(
+          (0, f.It)(`${(0, F._)(w, m)}${s ? `?${s}` : ""}`, A, v),
         );
         let C;
-        const H = !!u;
+        const N = !!u;
         return (0, a.jsxs)(a.Fragment, {
           children: [
             (0, a.jsxs)("div", {
-              className: (0, D.A)({ [B().TwoWidthCtn]: H }),
+              className: (0, D.A)({ [B().TwoWidthCtn]: N }),
               children: [
                 (0, a.jsxs)(r.Ii, {
                   href: C ? void 0 : g,
                   style: { display: "block", cursor: "pointer" },
-                  className: (0, D.A)({ [B().TwoWidthCapsule]: H }),
+                  className: (0, D.A)({ [B().TwoWidthCapsule]: N }),
                   preferredFocus: l,
                   onClick: C,
                   children: [
@@ -491,7 +493,7 @@
                     (0, a.jsx)(p.m, { id: t, active: d, bIsHoverMode: !0 }),
                   ],
                 }),
-                H &&
+                N &&
                   (0, a.jsx)(L, {
                     id: t,
                     strDoubleCapsuleMessage: u,
@@ -606,16 +608,16 @@
           { bIsOwned: P } = (0, o.ZJ)(C),
           y = (0, i.bB)(m),
           { mutateAsync: D } = (0, l.s)(m, !y, (0, u.L3)(r)),
-          { elDialogElement: H, fnShowLogonDialog: N } = (0, f.E)();
+          { elDialogElement: N, fnShowLogonDialog: H } = (0, f.E)();
         if (P || (!S && v))
           return v ? (0, a.jsx)(w, { possibleDemoAppID: m }) : null;
-        let T = null;
+        let E = null;
         return (
           t && !g
-            ? (T = (0, a.jsx)(h.k, { size: 18 }))
+            ? (E = (0, a.jsx)(h.k, { size: 18 }))
             : y
-              ? y && (T = g ? (0, x.we)("#OnWishlist") : (0, a.jsx)(b.qnF, {}))
-              : (T = g
+              ? y && (E = g ? (0, x.we)("#OnWishlist") : (0, a.jsx)(b.qnF, {}))
+              : (E = g
                   ? (0, x.we)("#wishlist_add_to_wishlist")
                   : (0, a.jsx)(b.T4m, {})),
           (0, a.jsxs)(a.Fragment, {
@@ -625,12 +627,12 @@
                 children: (0, a.jsx)("div", {
                   className: (0, I.A)(p().WishList, j),
                   onClick: async () => {
-                    A.iA.logged_in ? t || (n(!0), await D(), n(!1)) : N();
+                    A.iA.logged_in ? t || (n(!0), await D(), n(!1)) : H();
                   },
-                  children: T,
+                  children: E,
                 }),
               }),
-              H,
+              N,
             ],
           })
         );

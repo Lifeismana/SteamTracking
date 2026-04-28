@@ -175,32 +175,40 @@
 	background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
 	background: linear-gradient( to bottom, #8f98a0 5%, #b1bcc4 95%);
 	border-radius: 0 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
+	box-sizing: border-box;
 	list-style-type: none;
 	margin: 0;
+	max-height: 306px;
 	overflow: hidden auto;
 	padding: 5px;
 	position: absolute;
-	z-index: 999999;
+	width: 100%;
+	z-index: 2000;
+}
+
+html.GamepadMode .dselect_container .dropcontainer ul {
+	border-radius: 3px;
+	padding: 0;
 }
 
 .dselect_container .dropcontainer ul.dropdownhidden {
 	display: none;
 }
 
-.dselect_container .dropcontainer ul.dropdownvisible {
-	top: -4px;
-}
-
 .dselect_container .dropcontainer ul li a {
 	color: #333333;
 	display: block;
+}
 
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
 	font-size: 12px;
 	line-height: 22px;
 	padding-inline: 2px;
 }
 
-.dselect_container .dropcontainer ul li a.highlighted_selection {
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
 	background: #3196FF;
 }
 
@@ -210,18 +218,20 @@
 	border-radius: 3px;
 	color: #333333;
 	font-size: 12px;
-	line-height: 19px;
-	margin: 3px 8px 3px 0px;
+	line-height: 22px;
+	margin: 3px 0;
 	overflow: hidden;
 	padding-left: 8px;
 	padding-right: 26px !important;
 	position: relative;
 	text-align: start;
-	width: 97%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
 }
 
-html:not(.GamepadMode) .dselect_container .trigger {
-	height: 22px;
+html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
+	border-radius: 3px 3px 0 0;
 }
 
 .dselect_container .trigger::after {
@@ -229,7 +239,7 @@ html:not(.GamepadMode) .dselect_container .trigger {
 	content: '';
 	inset: 0 0 0 auto;
 	position: absolute;
-	width: 15.5px;
+	width: 16px;
 }
 
 .review_page_content {

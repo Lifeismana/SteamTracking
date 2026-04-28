@@ -396,10 +396,8 @@ textarea.forumtopic_reply_textarea {
 
 .forum_op {
 	position: relative;
-	padding: 7px 12px 21px 63px;
+	padding: 12px;
 	margin-bottom: 8px;
-
-	max-width: 565px;
 
 	background-color: #212f43;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images//skin_1/forum_op_gradient.png?v=3' );
@@ -411,12 +409,6 @@ textarea.forumtopic_reply_textarea {
 }
 .forum_op.locked {
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images//skin_1/forum_op_gradient_locked.png?v=3' );
-}
-
-.forum_op_avatar {
-	position: absolute;
-	left: 12px;
-	top: 12px;
 }
 
 .forum_op .commentthread_comment_friendindicator {
@@ -436,21 +428,9 @@ textarea.forumtopic_reply_textarea {
 	visibility: visible;
 }
 
-.forum_op .authorline {
-	line-height: 40px;
-}
-
-
 .forum_op .authorline .inlibrary {
-	top: 5px;
 	position: relative;
 	width: 20px;
-}
-
-
-.forum_op .community_award_ctn,
-.commentthread_comment_content .community_award_ctn {
-	display: inline-flex;
 }
 
 /* hide some awards */
@@ -497,13 +477,25 @@ textarea.forumtopic_reply_textarea {
 	margin-right: 0px;
 }
 
+.forum_op_footer {
+	text-align: right;
+	color: #56636b;
+	font-size: 11px;
+}
+
+.forum_op_footer a {
+	color: #56636b;
+}
+
 
 .commentthread_moderatormessages {
-	display: inline-block;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 4px;
 	padding: 0 6px;
 	border-radius: 3px;
 	line-height: 22px;
-	margin: 0 4px;
 }
 
 .commentthread_moderatormessages.unread, .forum_banuser_header.warning, .infractions_flexbox_history > .warning {
@@ -535,6 +527,7 @@ textarea.forumtopic_reply_textarea {
 
 	margin-bottom: 12px;
 	margin-top: 7px;
+	margin-left: 50px;
 
 	word-wrap: break-word;
 
@@ -544,6 +537,7 @@ textarea.forumtopic_reply_textarea {
 	font-size: 14px;
 	line-height: 20px;
 	color: #dbdbdb;
+	margin-left: 50px;
 
 	word-wrap: break-word;
 	overflow: hidden;
@@ -570,14 +564,18 @@ textarea.forumtopic_reply_textarea {
 }
 
 .forumtopic_comments .commentthread_answer_bar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	background: #41749b;
 	color: #FFFFFF;
 	padding: 8px;
+	gap: 10px;
 }
 
 .forumtopic_comments .commentthread_answer_bar img {
-	vertical-align: top;
-	margin-right: 10px;
+	height: 19px;
+	width: 19px;
 }
 .forumtopic_comments .commentthread_answer_bar span {
 	padding-top: 2px;
@@ -594,7 +592,7 @@ textarea.forumtopic_reply_textarea {
 	background-color: rgba( 32, 47, 67, 0.8);
 	color: #acb2b8;
 	margin-bottom: 2px;
-	padding: 12px 8px 20px 60px;
+	padding: 12px;
 	border: 1px solid #26384f;
 	box-shadow: 0 0 5px #000;
 
@@ -621,16 +619,13 @@ textarea.forumtopic_reply_textarea {
 	font-size: 12px;
 }
 
-.forumtopic_comments .commentthread_comment_timestamp {
-	color: #999999;
-}
-
 .forumtopic_comments .commentthread_comment_text {
 	max-height: none;
 	color: #acb2b8;
 
 	overflow: visible;
 	overflow-y: visible;
+	margin-top: 12px;
 }
 
 .forumtopic_comments .commentthread_comment_text .content_check_warning,
@@ -681,21 +676,14 @@ textarea.forumtopic_reply_textarea {
 	color: #909092;
 }
 
-
-.forumtopic_comments .commentthread_comment .commentthread_comment_avatar {
-	top: 11px;
-	left: 11px;
-}
-
 .forumtopic_comments .commentthread_comment .commentthread_comment_author {
-	line-height: 32px;
-	margin-bottom: 16px;
-	opacity: 0.25;
+	line-height: 1.3;
+	opacity: 0.5;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
 	filter: alpha(opacity=25);
 	display: flex;
-    align-items: center;
-    column-gap: 8px;
+    align-items: flex-start;
+    column-gap: 16px;
 }
 
 .forumtopic_comments .commentthread_comment .commentthread_comment_author img.inlibrary {
@@ -830,19 +818,22 @@ a.commentthread_author_officer {
 }
 
 .forum_op_header {
-	display: flex;
-	align-items: center;
+	margin-bottom: 20px;
 }
 
 .forum_comment_actions {
 	margin-top: 6px;
-	float: right;
 	visibility: hidden;
-	line-height: 28px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 
 .forum_comment_actions_ctn {
 	margin-left: auto;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
 }
 
 .commentthread_comment .forum_comment_action_trigger,
@@ -905,7 +896,12 @@ a.forum_comment_action {
 
 	html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_author {
 		opacity: 1;
+		column-gap: 6px;
 	}
+
+   html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_text {
+	   padding-left: 42px;
+   }
 
 	html.responsive .forum_comment_action_menu > .forum_comment_action.reply,
 	html.responsive .forum_comment_action_menu > .forum_comment_action.award
@@ -926,7 +922,12 @@ a.forum_comment_action {
 
 	html.responsive.touch .forumtopic_comments .commentthread_comment .commentthread_comment_author {
 		opacity: 1;
+		column-gap: 6px;
 	}
+
+   html.responsive.touch .forumtopic_comments .commentthread_comment .commentthread_comment_text {
+	   padding-left: 42px;
+   }
 
 	html.responsive.touch .forum_comment_action_menu > .forum_comment_action.reply,
 	html.responsive.touch .forum_comment_action_menu > .forum_comment_action.award
@@ -1182,7 +1183,8 @@ a.forum_comment_action:hover {
 
 .forum_audit {
 	position: relative;
-	top: 17px;
+	max-width: 50%;
+	padding-top: 16px;
 	color: #56636b;
 	font-style: italic;
 	font-size: 12px;
@@ -2064,32 +2066,16 @@ select.subforum_select_control {
 		display: block;
 	}
 
-	html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_avatar,
-	html.responsive .forum_op_avatar  {
-		position: static;
-		float: left;
-		margin-right: 12px;
-		margin-bottom: 8px;
-	}
-
 	html.responsive .forumtopic_comments .commentthread_comment .commentthread_comment_author,
 	html.responsive .forum_op .authorline {
 		overflow: hidden;
 		margin-bottom: 2px;
 		line-height: normal;
-		padding-top: 8px;
 	}
 
 	html.responsive .forumtopic_comments .commentthread_comment,
 	html.responsive .forum_op {
 		padding-left: 11px;
-	}
-
-	html.responsive .forumtopic_comments .commentthread_comment_text,
-	html.responsive .forum_op .topic,
-	html.responsive .forum_op .content {
-		clear: left;
-		padding: 0 8px;
 	}
 
 	html.responsive .forum_op_header {
@@ -2169,7 +2155,7 @@ h2.forum_modal_detailtitle {
 	.forum_op {
 		max-width: none;
         background: linear-gradient(155deg, #425174, transparent);
-		padding: 7px 32px 21px 63px;
+		padding: 11px;
 	}
 
 }

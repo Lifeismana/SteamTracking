@@ -1248,6 +1248,12 @@ h2.incomplete {
         color: #acb2b8;
     }
 
+	.modal p.notice {
+	color: #e66e34;
+	font-size: 14px;
+	margin-left: 0;
+	}
+
 	.modal .hr {
 		background-color: #4c4c4c;
 		height: 1px;

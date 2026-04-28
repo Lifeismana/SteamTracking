@@ -24,6 +24,16 @@
     color: #fff;
   }
 }
+@keyframes _3a9Z1ZIsMkaKPGnbs2nxYH {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _2mP9oADy7mRytC1Pn0bpY4 {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -764,6 +774,16 @@ div.HighPerfMode ._1IX7FPSY9Jb82KhBVBSkZa {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _2gt9V0RJbJDAxgjiI0W--m {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

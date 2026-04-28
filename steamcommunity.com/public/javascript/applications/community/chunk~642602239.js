@@ -79,6 +79,7 @@
         BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
         "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
         "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
         "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
         "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
         "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
@@ -119,6 +120,7 @@
         BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
         "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
         "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
         "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
         "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
@@ -2235,17 +2237,15 @@
     59952: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $A: () => P,
-        B8: () => x,
+        B8: () => D,
         N2: () => A,
-        Pk: () => D,
+        Pk: () => j,
         Sz: () => G,
         Tu: () => B,
-        UT: () => U,
         W4: () => w,
         ZS: () => k,
         Zb: () => T,
-        _J: () => j,
+        _J: () => x,
         ck: () => M,
         d$: () => R,
         j$: () => I,
@@ -2261,15 +2261,15 @@
         u = n(15759),
         m = n(55963),
         _ = n(74410),
-        p = n(42951),
-        h = n(93267),
+        p = n(90622),
+        h = n(42951),
         g = n(12155),
         v = n(32754),
         f = n(52038),
         y = n(61859),
         S = n(61336),
         E = n(30470),
-        b = n(90622);
+        b = n(84958);
       const w = new Map([
           [
             "b",
@@ -2417,10 +2417,10 @@
             "url",
             {
               Constructor: function (e) {
-                let t = (0, b.J)(I(e.args));
+                let t = (0, p.J)(I(e.args));
                 if (!t) {
                   const n = e.children;
-                  "string" == typeof n && (0, S.DZ)(n) && (t = (0, b.J)(n));
+                  "string" == typeof n && (0, S.DZ)(n) && (t = (0, p.J)(n));
                 }
                 const n =
                     "button" == I(e.args, "style") ? a().LinkButton : void 0,
@@ -2452,7 +2452,7 @@
               autocloses: !1,
             },
           ],
-          ["quote", { Constructor: D, autocloses: !1 }],
+          ["quote", { Constructor: j, autocloses: !1 }],
           [
             "pullquote",
             {
@@ -2489,10 +2489,10 @@
               autocloses: !1,
             },
           ],
-          ["list", { Constructor: x, autocloses: !1, skipInternalNewline: !0 }],
+          ["list", { Constructor: D, autocloses: !1, skipInternalNewline: !0 }],
           [
             "olist",
-            { Constructor: j, autocloses: !1, skipInternalNewline: !0 },
+            { Constructor: x, autocloses: !1, skipInternalNewline: !0 },
           ],
           ["*", { Constructor: M, autocloses: !0, skipInternalNewline: !0 }],
           [
@@ -2564,12 +2564,13 @@
             "expand",
             {
               Constructor: function (e) {
-                const t = Boolean(I(e.args, "expanded")),
-                  [n, r] = d.useState(t),
-                  s = I(e.args, "title"),
-                  o = I(e.args, "collapsed_str"),
-                  l = I(e.args, "expanded_str"),
-                  c = (function (e, t, n, i) {
+                var t;
+                const n = Boolean(I(e.args, "expanded")),
+                  [r, s] = d.useState(n),
+                  o = I(e.args, "title"),
+                  l = I(e.args, "collapsed_str"),
+                  c = I(e.args, "expanded_str"),
+                  u = (function (e, t, n, i) {
                     switch (e) {
                       case "details":
                         return {
@@ -2598,29 +2599,30 @@
                           style: a().ExpandSection_ShowMore,
                         };
                     }
-                  })(I(e.args, "type"), s, o, l);
+                  })(I(e.args, "type"), o, l, c);
                 return (0, i.jsxs)("div", {
                   className: (0, f.A)({
                     [a().ExpandSectionBlock]: !0,
-                    [c.style]: null != c.style,
-                    [a().ExpandSectionExpanded]: n,
-                    [a().ExpandSectionCollapsed]: !n,
-                    BBCodeExpanded: n,
-                    BBCodeCollapsed: !n,
+                    [null !== (t = u.style) && void 0 !== t ? t : ""]:
+                      null != u.style,
+                    [a().ExpandSectionExpanded]: r,
+                    [a().ExpandSectionCollapsed]: !r,
+                    BBCodeExpanded: r,
+                    BBCodeCollapsed: !r,
                   }),
                   children: [
                     (0, i.jsxs)("div", {
                       className: a().ExpandSectionHeader,
-                      onClick: () => r(!n),
+                      onClick: () => s(!r),
                       children: [
-                        (0, y.we)(n ? c.expanded : c.collapsed),
+                        (0, y.we)(r ? u.expanded : u.collapsed),
                         (0, i.jsx)("div", {
                           className: a().EmbedArrow,
-                          children: (0, i.jsx)(g.DK4, { angle: n ? 180 : 0 }),
+                          children: (0, i.jsx)(g.DK4, { angle: r ? 180 : 0 }),
                         }),
                       ],
                     }),
-                    n &&
+                    r &&
                       (0, i.jsx)("div", {
                         className: a().ExpandSectionBody,
                         children: e.children,
@@ -2639,10 +2641,10 @@
               Constructor: function (e) {
                 const { event: t, showErrorInfo: n } = e.context,
                   r = I(e.args);
-                if (r) return (0, i.jsx)(p.y, { eventGID: r, bPreviewMode: n });
+                if (r) return (0, i.jsx)(h.y, { eventGID: r, bPreviewMode: n });
                 if (t) {
                   const e = (0, s.sf)(E.TS.LANGUAGE);
-                  return (0, i.jsx)(p.j, { eventModel: t, lang: e });
+                  return (0, i.jsx)(h.j, { eventModel: t, lang: e });
                 }
                 return null;
               },
@@ -2700,12 +2702,12 @@
                 } catch (e) {
                   console.error(e);
                 }
-                let D =
+                let j =
                   "https://calendar.google.com/calendar/render?action=TEMPLATE";
-                (D += `&text=${encodeURI(l)}`),
-                  (D += `&details=${encodeURI(m)}`),
-                  (D += `&dates=${encodeURI(b + "/" + k)}`);
-                const x = (e) => {
+                (j += `&text=${encodeURI(l)}`),
+                  (j += `&details=${encodeURI(m)}`),
+                  (j += `&dates=${encodeURI(b + "/" + k)}`);
+                const D = (e) => {
                   if ("ReactNativeWebView" in window) {
                     const t = window.ReactNativeWebView,
                       n = {
@@ -2733,7 +2735,7 @@
                           a().CalendarEventLink,
                         ),
                         href: R,
-                        onClick: x,
+                        onClick: D,
                         download: "calendar.ics",
                         children: "Apple",
                       }),
@@ -2742,7 +2744,7 @@
                         "SaleSectionCalendarEventLink",
                         a().CalendarEventLink,
                       ),
-                      href: D,
+                      href: j,
                       children: "Google",
                     }),
                     R &&
@@ -2752,7 +2754,7 @@
                           a().CalendarEventLink,
                         ),
                         href: R,
-                        onClick: x,
+                        onClick: D,
                         download: "calendar.ics",
                         children: "Outlook",
                       }),
@@ -2820,8 +2822,8 @@
           ],
         ]),
         A = new Map([
-          ["looping_media", { Constructor: P, autocloses: !1 }],
-          ["video", { Constructor: U, autocloses: !1 }],
+          ["looping_media", { Constructor: b.$A, autocloses: !1 }],
+          ["video", { Constructor: b.UT, autocloses: !1 }],
           ["youtubeorvideo", { Constructor: _.Eo, autocloses: !1 }],
           ["previewyoutube", { Constructor: _.gH, autocloses: !1 }],
         ]);
@@ -2884,7 +2886,7 @@
           }),
         });
       };
-      function D(e) {
+      function j(e) {
         const t = I(e.args, "author");
         return (0, i.jsxs)("blockquote", {
           className: (0, f.A)(a().BlockQuote, e.className),
@@ -2902,13 +2904,13 @@
           ],
         });
       }
-      function x(e) {
+      function D(e) {
         return (0, i.jsx)("ul", {
           className: (0, f.A)(a().List, "bullets"),
           children: e.children,
         });
       }
-      function j(e) {
+      function x(e) {
         return (0, i.jsx)("ol", {
           className: a().OrderedList,
           children: e.children,
@@ -2953,65 +2955,75 @@
           })
         );
       }
-      function N(e) {
-        let t = I(e, "poster");
-        t && (t = (0, S.L$)(t));
+    },
+    84958: (e, t, n) => {
+      "use strict";
+      n.d(t, { $A: () => d, UT: () => u, g4: () => c });
+      var i = n(7850),
+        r = n(22837),
+        a = n(93267),
+        s = n(61336),
+        o = n(30470),
+        l = n(59952);
+      function c(e) {
+        let t = (0, l.j$)(e, "poster");
+        t && (t = (0, s.L$)(t));
         const n = new Array();
         {
-          const t = I(e, "mp4");
-          t && n.push({ sURL: (0, S.L$)(t), sFormat: "video/mp4" });
-          const i = I(e, "webm");
-          i && n.push({ sURL: (0, S.L$)(i), sFormat: "video/webm" });
+          const t = (0, l.j$)(e, "mp4");
+          t && n.push({ sURL: (0, s.L$)(t), sFormat: "video/mp4" });
+          const i = (0, l.j$)(e, "webm");
+          i && n.push({ sURL: (0, s.L$)(i), sFormat: "video/webm" });
         }
-        const i = (0, s.sf)(E.TS.LANGUAGE),
-          r = 0 != i,
-          a = new Array();
+        const i = (0, r.sf)(o.TS.LANGUAGE),
+          a = 0 != i,
+          c = new Array();
         for (let t = 0; t < 31; t++) {
-          const n = I(e, "sub_" + (0, s.ww)(t));
+          const n = (0, l.j$)(e, "sub_" + (0, r.ww)(t));
           n &&
-            a.push({
-              sURL: (0, S.L$)(n),
+            c.push({
+              sURL: (0, s.L$)(n),
               eLanguage: t,
               sKind: "subtitles",
-              bDefault: r && t == i,
+              bDefault: a && t == i,
             });
-          const o = I(e, "cap_" + (0, s.ww)(t));
+          const o = (0, l.j$)(e, "cap_" + (0, r.ww)(t));
           o &&
-            a.push({
-              sURL: (0, S.L$)(o),
+            c.push({
+              sURL: (0, s.L$)(o),
               eLanguage: t,
               sKind: "captions",
-              bDefault: r && t == i,
+              bDefault: a && t == i,
             });
         }
-        return { sPoster: t, rgVideoSources: n, rgVideoTracks: a };
+        return { sPoster: t, rgVideoSources: n, rgVideoTracks: c };
       }
-      function P(e) {
-        const t = N(e.args);
-        return (0, i.jsx)(h.L, {
+      function d(e) {
+        const t = c(e.args);
+        return (0, i.jsx)(a.L, {
           video: t,
           bAutoPlay: !0,
           bControls: !1,
           bLoop: !0,
         });
       }
-      function U(e) {
-        const t = N(e.args),
+      function u(e) {
+        const t = c(e.args),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, S.L$)(n), sFormat: "video/webm" });
-        const r = I(e.args, "autoplay"),
-          a = "0" !== r && "off" !== r && "false" !== r,
-          s = I(e.args, "controls"),
-          o = "0" !== s && "off" !== s && "false" !== s,
-          l = I(e.args, "loop"),
-          c = "0" !== s && "off" !== s && "false" !== s;
-        return (0, i.jsx)(h.L, {
+          t.rgVideoSources.push({ sURL: (0, s.L$)(n), sFormat: "video/webm" });
+        const r = (0, l.j$)(e.args, "autoplay"),
+          o = "0" !== r && "off" !== r && "false" !== r,
+          d = (0, l.j$)(e.args, "controls"),
+          u = "0" !== d && "off" !== d && "false" !== d,
+          m = (0, l.j$)(e.args, "loop"),
+          _ = "0" !== d && "off" !== d && "false" !== d;
+        return (0, i.jsx)(a.L, {
           video: t,
-          bAutoPlay: a,
-          bControls: o,
-          bLoop: l ? c : a,
+          bAutoPlay: o,
+          bControls: u,
+          bLoop: m ? _ : o,
         });
       }
     },
@@ -3182,7 +3194,7 @@
         A4: () => k,
         iy: () => T,
         ZA: () => F,
-        g8: () => D,
+        g8: () => j,
         Dn: () => N,
         CU: () => te,
         Ay: () => ee,
@@ -3217,8 +3229,8 @@
         Pd: () => _e,
         p$: () => pe,
         dm: () => me,
-        DU: () => x,
-        qF: () => j,
+        DU: () => D,
+        qF: () => x,
         cB: () => ue,
       });
       var i = n(34629),
@@ -3280,13 +3292,13 @@
         return !G.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       const R = [12, 34];
-      function D(e) {
+      function j(e) {
         return !R.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      const x = 593110,
-        j = 1675200,
-        M = [x, 766, 221410],
+      const D = 593110,
+        x = 1675200,
+        M = [D, 766, 221410],
         L = [12, 34];
       function F(e) {
         return !L.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
@@ -4041,8 +4053,11 @@
                 return c.avatar_full_url;
               n = this.jsondata.referenced_appids[0];
             }
+            g.A.Get().QueueAppRequest(n, { include_assets: !0 });
             const o = g.A.Get().GetApp(n);
-            return o && o.GetAssets()
+            return o &&
+              o.BContainDataRequest({ include_assets: !0 }) &&
+              o.GetAssets()
               ? null === (s = o.GetAssets()) || void 0 === s
                 ? void 0
                 : s.GetMainCapsuleURL()
@@ -8097,31 +8112,32 @@
     },
     74410: (e, t, n) => {
       "use strict";
-      n.d(t, { Eo: () => p, V2: () => i, gH: () => m, j6: () => _ });
+      n.d(t, { Eo: () => h, V2: () => i, gH: () => _, j6: () => p });
       var i,
         r = n(7850),
         a = n(90626),
         s = n(59952),
-        o = n(88527),
-        l = n(78327),
-        c = n(73662),
-        d = n(70995);
-      function u(e) {
+        o = n(84958),
+        l = n(88527),
+        c = n(78327),
+        d = n(73662),
+        u = n(70995);
+      function m(e) {
         return {
-          sizeStr: e == i.full ? c.sizeFull : c.sizeThumb,
-          alignStr: e == i.full ? "" : e == i.left ? c.floatLeft : c.floatRight,
+          sizeStr: e == i.full ? d.sizeFull : d.sizeThumb,
+          alignStr: e == i.full ? "" : e == i.left ? d.floatLeft : d.floatRight,
         };
       }
-      function m(e) {
-        if ((0, l.Y2)()) return null;
+      function _(e) {
+        if ((0, c.Y2)()) return null;
         let t = (0, s.j$)(e.args);
         if (t) {
           let e = t.split(";");
           if (2 == e.length) {
             let t = e[0],
               n = e[1].toLocaleLowerCase();
-            const { sizeStr: i, alignStr: a } = u(n);
-            return (0, r.jsx)(o.A, {
+            const { sizeStr: i, alignStr: a } = m(n);
+            return (0, r.jsx)(l.A, {
               videoID: t,
               classNameAlign: a,
               classNameSize: i,
@@ -8131,30 +8147,30 @@
         }
         return (0, r.jsx)(a.Fragment, {});
       }
-      function _(e) {
-        if ((0, l.Y2)()) return null;
-        const t = (0, d.XU)(e);
+      function p(e) {
+        if ((0, c.Y2)()) return null;
+        const t = (0, u.XU)(e);
         return void 0 !== (null == t ? void 0 : t.strVideoID)
-          ? (0, r.jsx)(o.A, {
+          ? (0, r.jsx)(l.A, {
               videoID: t.strVideoID,
               nStartSeconds: t.nStartSeconds,
               classNameAlign: "",
-              classNameSize: c.sizeFull,
+              classNameSize: d.sizeFull,
               bShowVideoImmediately: !1,
             })
           : e;
       }
-      function p(e) {
-        if ((0, l.Y2)() || "CN" == l.TS.COUNTRY.toLocaleUpperCase())
-          return (0, s.UT)(e);
+      function h(e) {
+        if ((0, c.Y2)() || "CN" == c.TS.COUNTRY.toLocaleUpperCase())
+          return (0, o.UT)(e);
         const t = (0, s.j$)(e.args, "youtubeid"),
           n = (0, s.j$)(e.args, "size"),
           i = (0, s.j$)(e.args, "seconds"),
-          { sizeStr: a, alignStr: c } = u(n);
-        return (0, r.jsx)(o.A, {
+          { sizeStr: a, alignStr: d } = m(n);
+        return (0, r.jsx)(l.A, {
           videoID: t,
           nStartSeconds: i ? Number.parseInt(i) : void 0,
-          classNameAlign: c,
+          classNameAlign: d,
           classNameSize: a,
           bShowVideoImmediately: !0,
         });
@@ -8602,15 +8618,15 @@
       var G = n(42060),
         k = n.n(G),
         R = n(51272),
-        D = n(81962);
-      function x(e) {
+        j = n(81962);
+      function D(e) {
         return e.recent_emoticons;
       }
-      function j(e) {
+      function x(e) {
         return e.recent_stickers;
       }
       function M(e) {
-        return x(e).length + j(e).length > 0;
+        return D(e).length + x(e).length > 0;
       }
       const L = (0, s.PA)((e) => {
         const {
@@ -8872,10 +8888,10 @@
             { filter: i } = this.state,
             a = [];
           return (
-            x(e) &&
+            D(e) &&
               a.push({
                 title: (0, m.we)("#AddonPicker_RecentEmoticons"),
-                items: l.pN.FilterEmoticons(x(e), i),
+                items: l.pN.FilterEmoticons(D(e), i),
                 onItemSelect: t,
                 renderItem: (e) => (0, r.jsx)(Q, { emoticon: e }),
                 keyExtractor: (e) => e.name,
@@ -8889,10 +8905,10 @@
                         ),
                   }),
               }),
-            j(e).length &&
+            x(e).length &&
               a.push({
                 title: (0, m.we)("#AddonPicker_RecentStickers"),
-                items: l.pN.FilterStickers(j(e), i),
+                items: l.pN.FilterStickers(x(e), i),
                 onItemSelect: n,
                 renderItem: (e) => (0, r.jsx)(K, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
@@ -9070,10 +9086,10 @@
             { filter: i } = this.state,
             a = [];
           return (
-            x(e).length &&
+            D(e).length &&
               a.push({
                 title: (0, m.we)("#AddonPicker_RecentEmoticons"),
-                items: l.pN.FilterEmoticons(x(e), i),
+                items: l.pN.FilterEmoticons(D(e), i),
                 onItemSelect: t,
                 renderItem: (e) => (0, r.jsx)(Q, { emoticon: e }),
                 keyExtractor: (e) => e.name,
@@ -9146,7 +9162,7 @@
         return (0, r.jsxs)("div", {
           className: k().EmoticonItem,
           children: [
-            (0, r.jsx)(D.n, { emoticon: t.name, large: n }),
+            (0, r.jsx)(j.n, { emoticon: t.name, large: n }),
             i && (0, r.jsx)($, {}),
           ],
         });
@@ -9182,7 +9198,7 @@
             sticker: { name: n, appid: i },
           } = e,
           [a] = (0, c.t7)(i, {});
-        return (0, r.jsx)(D.c, {
+        return (0, r.jsx)(j.c, {
           target: t,
           title: n,
           subtitle: null == a ? void 0 : a.GetName(),
@@ -9234,7 +9250,7 @@
           } = e,
           s = a[n],
           [o] = (0, c.t7)(i, {});
-        return (0, r.jsx)(D.c, {
+        return (0, r.jsx)(j.c, {
           target: t,
           title: n,
           subtitle: null == o ? void 0 : o.GetName(),
@@ -9800,9 +9816,9 @@
         G = n(14771),
         k = n(61336),
         R = n(78327),
-        D = n(6878),
-        x = n.n(D),
-        j = n(3919),
+        j = n(6878),
+        D = n.n(j),
+        x = n(3919),
         M = n(1078),
         L = n(95695),
         F = n(82477),
@@ -9925,7 +9941,7 @@
             : (0, r.jsxs)("div", {
                 className: (0, B.A)({
                   [M.ReminderCheckBox]: !0,
-                  [x().ReminderCtn]: !0,
+                  [D().ReminderCtn]: !0,
                   [M.IconMode]: e,
                   [M.TextMode]: !e,
                   ReminderSet: t,
@@ -10001,9 +10017,9 @@
                 ),
                   e &&
                     (i === h.Nh.k_ENotifyFlagByEmail
-                      ? D(_.E.k_eReminder_Email)
+                      ? j(_.E.k_eReminder_Email)
                       : i === h.Nh.k_ENotifyFlagByPush &&
-                        D(_.E.k_eReminder_MobilePush));
+                        j(_.E.k_eReminder_MobilePush));
               } catch (e) {
                 (0, E.HT)(
                   (0, r.jsx)(S.KG, {
@@ -10025,19 +10041,19 @@
               v(!1);
             }
           },
-          D = (e) => {
+          j = (e) => {
             _.V.RecordAppInteractionEvent(t.appid, e);
           },
-          x = t.jsondata.bSaleEnabled
-            ? j.PH.k_eStoreSalePage
-            : j.PH.k_eStoreView,
-          F = (0, j.Bw)(t, x, "forceAbsolute"),
+          D = t.jsondata.bSaleEnabled
+            ? x.PH.k_eStoreSalePage
+            : x.PH.k_eStoreView,
+          F = (0, x.Bw)(t, D, "forceAbsolute"),
           N = (e) => {
             const n = t.appid
                 ? "app/" + t.appid
                 : "group/" + t.clanSteamID.GetAccountID(),
               i = "l=" + (0, l.Lg)(u);
-            return `${R.TS.STORE_BASE_URL}${(0, j.LJ)()}/download/${n}/${e}/${t.GID}?${i}`;
+            return `${R.TS.STORE_BASE_URL}${(0, x.LJ)()}/download/${n}/${e}/${t.GID}?${i}`;
           },
           P = g.O.BHasValidatedEmail(),
           U = g.O.BHasPushNotification(),
@@ -10133,7 +10149,7 @@
                         children: (0, r.jsx)("a", {
                           href: R.TS.STORE_BASE_URL + "account/",
                           target: R.TS.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () => D(_.E.k_eReminder_EmailUnverified),
+                          onClick: () => j(_.E.k_eReminder_EmailUnverified),
                           children: (0, C.we)(
                             "#EventReminder_NotifyByEmail_Missing_Add",
                           ),
@@ -10171,7 +10187,7 @@
                         children: (0, r.jsx)("a", {
                           href: R.TS.STORE_BASE_URL + "mobile/?show=steamapp",
                           target: R.TS.IN_CLIENT ? void 0 : "_blank",
-                          onClick: () => D(_.E.k_eReminder_MobilePushMissing),
+                          onClick: () => j(_.E.k_eReminder_MobilePushMissing),
                           children: (0, C.we)(
                             "#EventReminder_NotifyByMobile_Install",
                           ),
@@ -10193,7 +10209,7 @@
                         (0, r.jsx)("a", {
                           className: M.ReminderOption,
                           href: N("ics"),
-                          onClick: () => D(_.E.k_eReminder_CalendarApple),
+                          onClick: () => j(_.E.k_eReminder_CalendarApple),
                           children: (0, C.we)(
                             "#EventDisplay_Reminder_AppleCalendar_Short",
                           ),
@@ -10237,7 +10253,7 @@
                                 `https://calendar.google.com/calendar/r/eventedit?text=${e}&details=${n}&dates=${r}/${a}`;
                             return (0, k.k2)(s);
                           })(),
-                          onClick: () => D(_.E.k_eReminder_CalendarGoogle),
+                          onClick: () => j(_.E.k_eReminder_CalendarGoogle),
                           children: (0, C.we)(
                             "#EventDisplay_Reminder_GoogleCalendar_Short",
                           ),
@@ -10245,7 +10261,7 @@
                         (0, r.jsx)("a", {
                           className: M.ReminderOption,
                           href: N("outlook"),
-                          onClick: () => D(_.E.k_eReminder_CalendarOutlook),
+                          onClick: () => j(_.E.k_eReminder_CalendarOutlook),
                           children: (0, C.we)(
                             "#EventDisplay_Reminder_OutlookCalendar_Short",
                           ),

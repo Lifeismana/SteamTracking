@@ -806,6 +806,7 @@
         BackgroundAnimation: "_21xdD3y0DJeYvUehUMcPwg",
         "ItemFocusAnim-darkerGrey-nocolor": "_3rNPhT088-82kayyY9jWT9",
         "ItemFocusAnim-darkerGrey": "HqpHRy29WMHs-c-YLSIrq",
+        "ItemFocusAnim-darkGreySettings": "_3pULdRtegOO_LMg25FyoCA",
         "ItemFocusAnim-darkGrey": "_2-jSn0eV92zh4AG5bspmdQ",
         "ItemFocusAnim-grey": "_1pfDYeJhusNZse6yV1ylkM",
         "ItemFocusAnim-translucent-white-10": "BNT9Di7wydWf5sVgthF_S",
@@ -828,6 +829,7 @@
         BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
         "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
         "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
+        "ItemFocusAnim-darkGreySettings": "_2cAK7l3w0qC8uv5uzKjusc",
         "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
         "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
         "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
@@ -942,6 +944,7 @@
         BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
         "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
         "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
+        "ItemFocusAnim-darkGreySettings": "_3bomS6MjDv4c5XbYu2Caqu",
         "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
         "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
         "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
@@ -19427,8 +19430,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
       function _(_) {
@@ -19745,6 +19746,7 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20345,48 +20347,94 @@
       function _(_) {
         const { editModel: _, link: _, closeModal: _ } = _,
           [_, _] = (0, _.useState)(() => (null == _ ? void 0 : _.url)),
+          [_, _] = (0, _.useState)(() => (null == _ ? void 0 : _.sc_url)),
           _ = (0, _._)(() => (null == _ ? void 0 : _.url)),
-          _ = (0, _._)(_.GetClanAccountID());
+          [_, _] = (0, _._)(() => [
+            _.BHasTag("enable_steam_china"),
+            _.BHasTag("disable_steam_global"),
+          ]),
+          _ = Boolean(
+            ((null == _ ? void 0 : _.length) > 8 &&
+              (null == _
+                ? void 0
+                : _.startsWith("https://store.steampowered.com/"))) ||
+              (null == _
+                ? void 0
+                : _.startsWith("https://steamcommunity.com/")),
+          ),
+          _ = Boolean(
+            (null == _ ? void 0 : _.length) > 8 &&
+              (null == _
+                ? void 0
+                : _.startsWith("https://store.steamchina.com/")),
+          );
         return (0, _.jsxs)(_._, {
           className: _.DialogSize,
           strTitle: (0, _._)(_ ? "#Sale_EditLinkURL" : "#Sale_AddLinkURL"),
-          bOKDisabled:
-            !_ ||
-            0 == _.trim().length ||
-            (!_.startsWith(_._.STORE_BASE_URL) && !_.valve_admin),
+          bOKDisabled: !(_ || _) || !(!_ || _),
           closeModal: _,
           onOK: () => {
-            (_.url = _), _.SetDirty(_._.jsondata_sales);
+            _.url != _ && ((_.url = _), _.SetDirty(_._.jsondata_sales)),
+              _.sc_url != _ && ((_.sc_url = _), _.SetDirty(_._.jsondata_sales));
           },
           bAllowFullSize: !0,
           children: [
-            (0, _.jsx)(_._, {
-              type: "text",
-              value: _,
-              label: (0, _._)("#Sale_LinkURL"),
-              onChange: (_) => {
-                var _;
-                return _(
-                  (null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                  void 0 === _
-                    ? void 0
-                    : _.value) || "",
-                );
-              },
-              placeholder: (0, _._)("#Sale_AddLink_Placeholder"),
-            }),
-            Boolean(
-              (null == _ ? void 0 : _.length) > 8 &&
-                !(null == _ ? void 0 : _.startsWith(_._.STORE_BASE_URL)) &&
-                !_.valve_admin,
-            ) &&
-              (0, _.jsx)("div", {
-                className: _.ErrorStylesWithIcon,
-                children: (0, _._)("#Sale_LinkImageUrl_warn"),
+            Boolean(!_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    type: "text",
+                    value: _,
+                    label: (0, _._)("#Sale_LinkURL"),
+                    onChange: (_) => {
+                      var _;
+                      return _(
+                        (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                        void 0 === _
+                          ? void 0
+                          : _.value) || "",
+                      );
+                    },
+                    placeholder: (0, _._)("#Sale_AddLink_Placeholder"),
+                  }),
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _.ErrorStylesWithIcon,
+                      children: (0, _._)("#Sale_LinkImageUrl_warn"),
+                    }),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#Sale_LinkImageUrl"),
+                  }),
+                ],
               }),
-            (0, _.jsx)("p", {
-              children: (0, _._)("#Sale_LinkImageUrl"),
-            }),
+            Boolean(_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    type: "text",
+                    value: _,
+                    label: (0, _._)("#Sale_LinkURL_SC"),
+                    onChange: (_) => {
+                      var _;
+                      return _(
+                        (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                        void 0 === _
+                          ? void 0
+                          : _.value) || "",
+                      );
+                    },
+                    placeholder: (0, _._)("#Sale_AddLink_Placeholder_SC"),
+                  }),
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _.ErrorStylesWithIcon,
+                      children: (0, _._)("#Sale_LinkImageUrl_SC_warn"),
+                    }),
+                  (0, _.jsx)("p", {
+                    children: (0, _._)("#Sale_LinkImageUrl_SC"),
+                  }),
+                ],
+              }),
           ],
         });
       }
@@ -21956,6 +22004,7 @@
       (0, _._)([_._], _.prototype, "SetSaleItemRewardDef", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       const _ = "socialcontent_";
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
@@ -32443,6 +32492,49 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function _(_, _) {
+        let _ = "0000000000000000000000000000000000000000";
+        var _;
+        "string" == typeof _
+          ? (_ = _)
+          : _ &&
+            ((_ = _),
+            (_ = [..._].map((_) => _.toString(16).padStart(2, "0")).join("")));
+        let _ = ".jpg";
+        "0000000000000000000000000000000000000000" === _ && (_ = _),
+          44 == _.length &&
+            ((_ = __webpack_require__.slice(-4)),
+            (_ = __webpack_require__.slice(0, 40)));
+        let _ = _._.AVATAR_BASE_URL;
+        switch (
+          (_ ||
+            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (_ += __webpack_require__.slice(0, 2) + "/")),
+          (_ += _),
+          _)
+        ) {
+          case "X-Small":
+          case "Small":
+            break;
+          case "Medium":
+          case "MediumLarge":
+            _ += "_medium";
+            break;
+          case "Large":
+          case "X-Large":
+          case "FillArea":
+            _ += "_full";
+        }
+        return (_ += _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38735,6 +38827,7 @@
           url: _,
           className: _.strClassName,
           bSkipForcingStoreLink: !1,
+          bOpenInline: !!_.open_in_place,
           children: (0, _.jsxs)("div", {
             className: (0, _._)(
               _().CapsuleContainer,
@@ -41439,9 +41532,8 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -41554,43 +41646,7 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (function (_, _) {
-            let _ = "0000000000000000000000000000000000000000";
-            var _;
-            "string" == typeof _
-              ? (_ = _)
-              : _ &&
-                ((_ = _),
-                (_ = [..._]
-                  .map((_) => _.toString(16).padStart(2, "0"))
-                  .join("")));
-            let _ = ".jpg";
-            "0000000000000000000000000000000000000000" === _ && (_ = _),
-              44 == _.length &&
-                ((_ = __webpack_require__.slice(-4)),
-                (_ = __webpack_require__.slice(0, 40)));
-            let _ = _._.AVATAR_BASE_URL;
-            switch (
-              (_ ||
-                ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-                (_ += __webpack_require__.slice(0, 2) + "/")),
-              (_ += _),
-              _)
-            ) {
-              case "X-Small":
-              case "Small":
-                break;
-              case "Medium":
-              case "MediumLarge":
-                _ += "_medium";
-                break;
-              case "Large":
-              case "X-Large":
-              case "FillArea":
-                _ += "_full";
-            }
-            return (_ += _), _;
-          })(null == _ ? void 0 : _.clan_avatar, "Medium"),
+        const _ = (0, _._)(null == _ ? void 0 : _.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),

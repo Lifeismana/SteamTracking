@@ -132,10 +132,10 @@
     "Wishlist_Categories_Suggested_Discount": "En attente de promotion",
     "Wishlist_Categories_Suggested_Birthday": "Liste d'anniversaire",
     "Wishlist_Categories_Suggested_Recommended": "Recommandé par vos contacts",
-    "Price_History_Normal_Price": "HABITUEL",
-    "Price_History_Recent_Low_Price": "PLUS BAS (30 DERNIERS JOURS)",
+    "Price_History_Normal_Price": "NORMALEMENT",
+    "Price_History_Recent_Low_Price": "PLUS BAS (30 DER. JOURS)",
     "Price_History_Recent_Low_Price_Ttip": "Ce jeu était en réduction au prix de %1$s lors des %2$s derniers jours.",
     "Price_History_Current_Low_Price_Ttip": "Ce jeu est actuellement au prix le plus bas de ces %1$s derniers jours.",
-    "Price_History_Current_Price": "EN CE MOMENT",
+    "Price_History_Current_Price": "ACTUELLEMENT",
     "Price_History_Lowest_Previous_30": "Remise basée sur le prix le plus bas des 30 derniers jours"
 }

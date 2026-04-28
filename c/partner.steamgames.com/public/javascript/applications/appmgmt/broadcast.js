@@ -153,6 +153,7 @@
         BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
         "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
         "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
         "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
         "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",

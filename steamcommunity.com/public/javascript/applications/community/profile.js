@@ -118,6 +118,7 @@
         BackgroundAnimation: "_2KBoHhvcLeo2vQwWuj0IRb",
         "ItemFocusAnim-darkerGrey-nocolor": "tmP6KcnuW7UY3GT67_yjy",
         "ItemFocusAnim-darkerGrey": "_2z9xuC0Na9M0VX4xEFjoSR",
+        "ItemFocusAnim-darkGreySettings": "_2AOpRetkacszHSv5tq9OQa",
         "ItemFocusAnim-darkGrey": "_1X0OQa5fPKjWOsHz5d-xAO",
         "ItemFocusAnim-grey": "X_zua7jreE_f2rGbT4l-O",
         "ItemFocusAnim-translucent-white-10": "_3PmOIuJLR5U9VhCcOub_Uz",
@@ -183,6 +184,7 @@
         BackgroundAnimation: "iQhnWyYlwgFi5YWYBMwJ4",
         "ItemFocusAnim-darkerGrey-nocolor": "_12rtn7LW8NeHZuOZRYrQUr",
         "ItemFocusAnim-darkerGrey": "_3ASpBDSwq0FQWK7k3PCaCE",
+        "ItemFocusAnim-darkGreySettings": "_2imfEHKAKkMI4e0U6blAKg",
         "ItemFocusAnim-darkGrey": "_2eY89CR3ALmqkaa5c8qJnd",
         "ItemFocusAnim-grey": "mGBoBubSOBDji6ZhWGlSk",
         "ItemFocusAnim-translucent-white-10": "jQ_HCKVuc3Rbnyna4TT6k",
@@ -889,7 +891,7 @@
         }
       }
       (0, s.Cg)([l.sH], M.prototype, "m_rgPreviousAvatars", void 0);
-      class D {
+      class O {
         constructor() {
           (this.m_AvatarData = void 0), (0, l.Gn)(this);
         }
@@ -969,7 +971,7 @@
           });
         }
       }
-      function O(e) {
+      function D(e) {
         switch (e) {
           case 1:
             return (0, v.we)("#Privacy_Private");
@@ -984,7 +986,7 @@
       function H(e, t) {
         return e < t ? e : t;
       }
-      (0, s.Cg)([l.sH.shallow], D.prototype, "m_AvatarData", void 0);
+      (0, s.Cg)([l.sH.shallow], O.prototype, "m_AvatarData", void 0);
       class U {
         constructor(e, t) {
           (this.m_PrivacySettings = void 0),
@@ -1122,8 +1124,8 @@
               let i;
               (i =
                 "communityitemid" in t
-                  ? new K(t, this.m_AppInfoStore)
-                  : new z(t)),
+                  ? new z(t, this.m_AppInfoStore)
+                  : new K(t)),
                 this.m_rgBadges.push(i),
                 a &&
                   i.BIsFavoriteBadge(a) &&
@@ -1205,7 +1207,7 @@
           return !1;
         }
       }
-      class z extends Y {
+      class K extends Y {
         constructor(e) {
           super(e), (this.m_unBadgeID = e.badgeid);
         }
@@ -1216,7 +1218,7 @@
           return e.badgeid && e.badgeid == this.m_unBadgeID;
         }
       }
-      class K extends Y {
+      class z extends Y {
         constructor(e, t) {
           super(e),
             (this.m_ulCommunityItemID = e.communityitemid),
@@ -2131,7 +2133,7 @@
       }
       class de {
         constructor(e, t, i) {
-          (this.m_OGGAvatars = new D()),
+          (this.m_OGGAvatars = new O()),
             (this.m_EmoticonStore = new F.T()),
             (this.m_Profile = new me(e)),
             (this.m_WebAPI = i),
@@ -2824,7 +2826,7 @@
                 (0, r.jsx)(Te, {
                   children: (0, v.we)("#Profile_Edit_Avatar_YourAvatars"),
                 }),
-                (0, r.jsx)(Oe, {
+                (0, r.jsx)(De, {
                   rgAnimatedAvatars: this.m_rgAvatars,
                   OGGAvatars: i,
                   AvatarHistory: a,
@@ -2870,7 +2872,7 @@
                               h.Fragment,
                               {
                                 children: [
-                                  (0, r.jsx)(De, {
+                                  (0, r.jsx)(Oe, {
                                     hash: e.avatar_hash,
                                     onSelected: this.SelectPreviousAvatar,
                                     large: !0,
@@ -2886,7 +2888,7 @@
                               h.Fragment,
                               {
                                 children: [
-                                  (0, r.jsx)(De, {
+                                  (0, r.jsx)(Oe, {
                                     hash: e.avatar_hash,
                                     onSelected: this.SelectOGGAvatar,
                                     large: !0,
@@ -2934,7 +2936,7 @@
           className: (0, p.A)(Ce.AvatarPreview, Ce.Animated, a && Ce.Large),
         });
       }
-      const De = ({ hash: e, onSelected: t, large: i }) =>
+      const Oe = ({ hash: e, onSelected: t, large: i }) =>
           (0, r.jsx)(ye.Z, {
             className: (0, p.A)(Ce.AvatarPreview, Ce.Static, i && Ce.Large),
             onClick: () => t(e),
@@ -2944,7 +2946,7 @@
               loading: "lazy",
             }),
           }),
-        Oe = (0, c.PA)(
+        De = (0, c.PA)(
           ({
             rgAnimatedAvatars: e,
             OGGAvatars: t,
@@ -3015,7 +3017,7 @@
                     className: Ce.CollectionGroupAvatars,
                     children: e.map((e) =>
                       (0, r.jsx)(
-                        De,
+                        Oe,
                         { hash: e.avatar_hash, onSelected: t },
                         e.avatar_hash,
                       ),
@@ -3077,7 +3079,7 @@
               children: [
                 d.map((e) =>
                   (0, r.jsx)(
-                    De,
+                    Oe,
                     { hash: e.avatar_hash, onSelected: i },
                     e.avatar_hash,
                   ),
@@ -3156,7 +3158,7 @@
                     ),
                     "flow-children": "row",
                     children: [
-                      (0, r.jsx)(Ke, {
+                      (0, r.jsx)(ze, {
                         onSelected: this.SelectFrame,
                         large: !0,
                         ProfileItems: t,
@@ -3168,7 +3170,7 @@
                             h.Fragment,
                             {
                               children: [
-                                (0, r.jsx)(ze, {
+                                (0, r.jsx)(Ke, {
                                   frame: e,
                                   onSelected: this.SelectFrame,
                                   large: !0,
@@ -3198,7 +3200,7 @@
           }
         }
       }
-      function ze(e) {
+      function Ke(e) {
         const { frame: t, onSelected: i, large: a } = e;
         return (0, r.jsx)(Le, {
           image: t,
@@ -3207,7 +3209,7 @@
         });
       }
       (0, s.Cg)([fe.oI], Ye.prototype, "SelectFrame", null);
-      const Ke = (0, c.PA)(({ onSelected: e, ProfileItems: t, large: i }) => {
+      const ze = (0, c.PA)(({ onSelected: e, ProfileItems: t, large: i }) => {
           let a = t.GetProfileModifierAvatarFrameURL();
           return a
             ? (0, r.jsx)(ye.Z, {
@@ -3242,10 +3244,10 @@
                 className: Ce.CollectionGroupAvatars,
                 "flow-children": "grid",
                 children: [
-                  (0, r.jsx)(Ke, { onSelected: i, ProfileItems: t }),
+                  (0, r.jsx)(ze, { onSelected: i, ProfileItems: t }),
                   e.map((e) =>
                     (0, r.jsx)(
-                      ze,
+                      Ke,
                       { frame: e, onSelected: i },
                       e.communityitemid,
                     ),
@@ -4451,7 +4453,7 @@
                 children: (0, v.we)("#Profile_Edit_Group_Instructions"),
               }),
               (0, r.jsx)(Ee, { strHTMLError: i }),
-              s && (0, r.jsx)(Ot, { group: s }),
+              s && (0, r.jsx)(Dt, { group: s }),
               (0, r.jsx)(Be, {
                 getSearchFields: Ht,
                 getItems: async () => (
@@ -4474,8 +4476,8 @@
       (0, s.Cg)([fe.oI], Mt.prototype, "CommitFavoriteGroup", null),
         (0, s.Cg)([fe.oI], Mt.prototype, "RevertFavoriteGroup", null),
         (Mt = (0, s.Cg)([c.PA], Mt));
-      const Dt = Mt,
-        Ot = ({ group: e, children: t }) =>
+      const Ot = Mt,
+        Dt = ({ group: e, children: t }) =>
           (0, r.jsxs)("div", {
             className: (0, p.A)(Tt.Group, Tt.FavoriteGroup),
             children: [
@@ -4537,10 +4539,10 @@
                 children: (0, r.jsx)(Wt, { Item: e, small: i }),
               })
             : null;
-      function zt(e) {
+      function Kt(e) {
         e.currentTarget.querySelector("video").play();
       }
-      function Kt(e) {
+      function zt(e) {
         e.detail.focusedNode.Element.querySelector("video").play();
       }
       function Xt(e) {
@@ -4651,7 +4653,7 @@
               a && qt.Active,
             ),
             onActivate: t,
-            onMouseEnter: o ? zt : void 0,
+            onMouseEnter: o ? Kt : void 0,
             children: [
               (0, r.jsxs)("div", {
                 className: qt.Preview,
@@ -4734,7 +4736,7 @@
               (0, r.jsx)(ai, {
                 PrivacyStore: e,
                 strLabel: (0, v.we)("#ProfilePrivacy_BasicDetails"),
-                strReadOnlySetting: O(3),
+                strReadOnlySetting: D(3),
                 children: (0, v.we)("#ProfilePrivacy_BasicDetails_Desc"),
               }),
               (0, r.jsx)("div", { className: "ProfilePrivacyHR" }),
@@ -4900,7 +4902,7 @@
             [t, i],
           );
         let l = t.GetPrivacySetting(i);
-        O(l);
+        D(l);
         const d = (function (e) {
           const t = [
               { label: (0, v.we)("#Privacy_Public"), data: 3 },
@@ -5608,8 +5610,8 @@
             ),
             onClick: t,
             onActivate: t,
-            onGamepadFocus: s ? Kt : void 0,
-            onMouseEnter: s ? zt : void 0,
+            onGamepadFocus: s ? zt : void 0,
+            onMouseEnter: s ? Kt : void 0,
             focusable: !0,
             children: [
               (0, r.jsxs)("div", {
@@ -5820,7 +5822,7 @@
         render() {
           const { ProfileItems: e } = this.props;
           return e.BHasAnyProfileModifiers()
-            ? (0, r.jsx)(Oi, {
+            ? (0, r.jsx)(Di, {
                 active: this.state.bDialogActive,
                 ProfileItems: e,
                 onDismiss: this.HideDialog,
@@ -5842,7 +5844,7 @@
               })
             : null;
         }),
-        Di = ({ ProfileModifier: e }) => {
+        Oi = ({ ProfileModifier: e }) => {
           const t = e
               ? Q(e)
               : `${S.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
@@ -5870,7 +5872,7 @@
             }),
           });
         };
-      let Oi = class extends h.Component {
+      let Di = class extends h.Component {
         OnDismiss() {
           this.props.ProfileItems.RevertProfileModifierChanges(),
             this.props.onDismiss();
@@ -5900,14 +5902,14 @@
                   (0, r.jsx)(Ui, { onSelected: e, active: t }),
                 ActiveItem: e.GetEquippedProfileModifier(),
                 fnIsSameItem: Zt,
-                fnRenderPreview: (e) => (0, r.jsx)(Di, { ProfileModifier: e }),
+                fnRenderPreview: (e) => (0, r.jsx)(Oi, { ProfileModifier: e }),
               }),
             ],
           });
         }
       };
-      (0, s.Cg)([fe.oI], Oi.prototype, "OnDismiss", null),
-        (Oi = (0, s.Cg)([c.PA], Oi));
+      (0, s.Cg)([fe.oI], Di.prototype, "OnDismiss", null),
+        (Di = (0, s.Cg)([c.PA], Di));
       const Hi = ({ Item: e, onSelected: t, children: i, active: a }) =>
           (0, r.jsxs)(ye.Z, {
             className: (0, p.A)(Fi.ProfileModifierOption, a && Fi.Active),
@@ -6007,7 +6009,7 @@
                 fnCommitChanges: this.CommitChanges,
                 fnRevertChanges: this.RevertChanges,
                 fnRenderPreview: (e) =>
-                  (0, r.jsx)(Ki, { Theme: e, ProfileItems: t }),
+                  (0, r.jsx)(zi, { Theme: e, ProfileItems: t }),
                 fnIsSameItem: Xi,
                 ItemComponent: Zi,
                 classNameItemPicker: qi.ProfileThemePicker,
@@ -6021,7 +6023,7 @@
         (0, s.Cg)([fe.oI], Wi.prototype, "RevertChanges", null),
         (Wi = (0, s.Cg)([c.PA], Wi));
       const Yi = Wi,
-        zi = ({ Theme: e, children: t }) => {
+        Ki = ({ Theme: e, children: t }) => {
           let i;
           return (
             (i =
@@ -6031,7 +6033,7 @@
             (0, r.jsx)("div", { className: pi[i], children: t })
           );
         },
-        Ki = (0, c.PA)(({ Theme: e, ProfileItems: t }) =>
+        zi = (0, c.PA)(({ Theme: e, ProfileItems: t }) =>
           (0, r.jsx)("div", {
             className: qi.ProfileThemePreviewCtn,
             children: (0, r.jsx)(fi, { ProfileItems: t, theme: e.theme_id }),
@@ -6175,7 +6177,7 @@
         render() {
           const { bSaving: e, strHTMLError: t } = this.state,
             { ProfileTheme: i } = this.props;
-          return (0, r.jsx)(zi, {
+          return (0, r.jsx)(Ki, {
             Theme: i.ActiveTheme,
             children: (0, r.jsxs)("form", {
               onSubmit: this.OnSubmit,
@@ -6306,7 +6308,7 @@
                   !(0, he.nA)(S.TS.EREALM) &&
                     (0, r.jsx)(ce.qh, {
                       path: `${o}${u.FavoriteGroup()}`,
-                      children: (0, r.jsx)(Dt, { Profile: l }),
+                      children: (0, r.jsx)(Ot, { Profile: l }),
                     }),
                   (0, r.jsx)(ce.qh, {
                     path: `${o}${u.Privacy()}`,
@@ -6334,7 +6336,7 @@
         (0, s.Cg)([fe.oI], Qi.prototype, "RevertChanges", null);
       var ir = i(50050),
         rr = i(6813),
-        ar = i(38455);
+        ar = i(65781);
       const sr = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",

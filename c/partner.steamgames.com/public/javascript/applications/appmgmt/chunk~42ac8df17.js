@@ -52,6 +52,7 @@
         BackgroundAnimation: "_2-NF7UzSGK3WLmqugAW3EM",
         "ItemFocusAnim-darkerGrey-nocolor": "bfQTK-Cop8MYUAa9j7rQb",
         "ItemFocusAnim-darkerGrey": "_1_wN_hVuLwcfYlTDIE-HTs",
+        "ItemFocusAnim-darkGreySettings": "YO_BEpx_0vuXWdgMFEjkL",
         "ItemFocusAnim-darkGrey": "_32cDe-nAMlG7JYrA6niEGN",
         "ItemFocusAnim-grey": "_2LnPTi1cPqqxqvII8cqnlh",
         "ItemFocusAnim-translucent-white-10": "-jNJst4AtmAMI-o6ETEiC",
@@ -71,6 +72,7 @@
         BackgroundAnimation: "_10sTNSs7WhNZPw6GdPTOJX",
         "ItemFocusAnim-darkerGrey-nocolor": "_1MdU34KFhJRKlGMaHngbls",
         "ItemFocusAnim-darkerGrey": "G_fmZBeNGKwyXP6EjOOZ_",
+        "ItemFocusAnim-darkGreySettings": "_3n4qtxFhgpKOJlGlGVcI1H",
         "ItemFocusAnim-darkGrey": "_20-FW4mkUJEpsgtwPjoMD6",
         "ItemFocusAnim-grey": "_1QVohJAkrDR6QXMK3fZLMu",
         "ItemFocusAnim-translucent-white-10": "_2vttABcjIJHbd-xXLvTfgb",
@@ -288,6 +290,7 @@
         BackgroundAnimation: "_1iEXo2C5dYh1sLdEds2zo_",
         "ItemFocusAnim-darkerGrey-nocolor": "_6ALY2cB6oP10XwjHy38XP",
         "ItemFocusAnim-darkerGrey": "_15R1kTQu4fktTozfpKwx_x",
+        "ItemFocusAnim-darkGreySettings": "_25-J06c8AyBhzEbrxt0OlL",
         "ItemFocusAnim-darkGrey": "_3yxHI8TA-jq3Ka361SNOoS",
         "ItemFocusAnim-grey": "HdE5j3QJ5wzLUrUd8A9S6",
         "ItemFocusAnim-translucent-white-10": "_3Pg_mdzZKHlcgBMGWoeuM-",
@@ -431,6 +434,7 @@
         BackgroundAnimation: "_1k6sq680iiVKySIMXNcHkL",
         "ItemFocusAnim-darkerGrey-nocolor": "_34Tp7N_mW2y7TOcBFxCQVo",
         "ItemFocusAnim-darkerGrey": "WQW1YbFeZjtPKckWVFjzB",
+        "ItemFocusAnim-darkGreySettings": "_2hTOwEn75PZ0XqJLLH6Yzc",
         "ItemFocusAnim-darkGrey": "_3T33tEqMtzz3ijG8DkMXYZ",
         "ItemFocusAnim-grey": "_1VqQfVz7N0T1g4AHmuCQu8",
         "ItemFocusAnim-translucent-white-10": "jiBNibpWxZkJeyBzbrB5j",
@@ -8275,6 +8279,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -8287,6 +8294,7 @@
             strContainerClassName: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
+            bPreferWholeNumbers: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
@@ -8377,6 +8385,14 @@
         let _ = _.discount_pct || 0,
           _ = _ || 2 != _.item_type ? 0 : _.bundle_discount_pct || 0,
           _ = _.formatted_final_price;
+        if (_) {
+          const _ = (0, _._)(_._.country_code.toUpperCase()),
+            _ = {
+              ...(0, _._)(_),
+              bWholeUnitsOnly: !0,
+            };
+          _ = (0, _._)(Number.parseInt(_.final_price_in_cents || "0"), _);
+        }
         const _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
           bSingleLineMode: Boolean(_),
@@ -14722,13 +14738,14 @@
             style: _,
             children: _,
             bSkipForcingStoreLink: _,
+            bOpenInline: _,
           } = _,
           _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
           _ = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               href: _,
-              target: _._.IN_CLIENT ? void 0 : "_blank",
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
               className: _,
               style: _,
               rel: "noopener noreferrer",

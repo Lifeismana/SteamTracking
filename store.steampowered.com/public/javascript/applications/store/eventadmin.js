@@ -23,6 +23,7 @@
         BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
         "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
         "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
         "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
         "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
         "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
@@ -3280,8 +3281,8 @@
         (0, O.Cg)([z.XI], V.prototype, "StartBackfill", null),
         (0, O.Cg)([z.XI], V.prototype, "CompleteBackfill", null),
         (0, O.Cg)([z.XI], V.prototype, "CloseProgress", null);
-      const Y = new V();
-      var X = n(45559),
+      const X = new V();
+      var Y = n(45559),
         K = n(73744),
         Q = n(75113),
         J = n(28954),
@@ -3336,8 +3337,8 @@
               a.strErrorMsg;
           console.error(r, a),
             s
-              ? ((s.bFailed = !0), (s.strMessage = r), Y.CloseProgress(e, s))
-              : Y.CompleteBackfill("resize_image");
+              ? ((s.bFailed = !0), (s.strMessage = r), X.CloseProgress(e, s))
+              : X.CompleteBackfill("resize_image");
         }
         async HandleResizeForImageType(e, t, n, s, a) {
           for (let r = 0; r < e.length && r < 31; ++r)
@@ -3416,9 +3417,9 @@
             }
         }
         async RunArtworkResizeBackfill() {
-          Y.StartBackfill("resize_image");
+          X.StartBackfill("resize_image");
           let e = 0;
-          for (; Y.BIsBackkFillInProgress(); ) {
+          for (; X.BIsBackkFillInProgress(); ) {
             let t = await q
               .Get()
               .LoadPartnerEventForQueryIncremental(this.m_cancelSignal, e, 25)
@@ -3430,18 +3431,18 @@
                 ),
               );
             if (!t || 0 == t.length) {
-              Y.CompleteBackfill("resize_image"),
+              X.CompleteBackfill("resize_image"),
                 console.log("Compelted the backfill");
               break;
             }
             e += t.length;
             for (let e = 0; e < t.length; ++e) {
               let n = t[e],
-                s = Y.CreateOrGetBackfillProgess(n.unique_id);
+                s = X.CreateOrGetBackfillProgess(n.unique_id);
               if (!n.announcement_gid || 0 == n.announcement_gid.length) {
                 (s.bSkipped = !0),
                   (s.bWarning = !0),
-                  Y.CloseProgress(n.unique_id, s);
+                  X.CloseProgress(n.unique_id, s);
                 continue;
               }
               if (
@@ -3463,14 +3464,14 @@
               let a = H.O3.GetClanEventFromAnnouncementGID(n.announcement_gid);
               if (a)
                 if (s.bSucceeded || s.bFailed || s.bAlreadyProcessed)
-                  (s.bAlreadyProcessed = !0), Y.CloseProgress(n.unique_id, s);
+                  (s.bAlreadyProcessed = !0), X.CloseProgress(n.unique_id, s);
                 else {
                   if (
                     ((s.bAnalysing = !0),
                     this.setState({
                       strInfo:
                         "Processing " +
-                        Y.GetBackfillGIDs().length +
+                        X.GetBackfillGIDs().length +
                         " Appid: " +
                         a.appid +
                         " Event " +
@@ -3531,17 +3532,17 @@
                     );
                   }
                   if (
-                    (Y.CloseProgress(n.unique_id, s),
-                    !Y.BIsBackkFillInProgress())
+                    (X.CloseProgress(n.unique_id, s),
+                    !X.BIsBackkFillInProgress())
                   )
                     break;
                 }
               else
                 (s.bFailed = !0),
                   (s.strMessage = "Failed to load the event: " + n.unique_id),
-                  Y.CloseProgress(n.unique_id, s);
+                  X.CloseProgress(n.unique_id, s);
             }
-            if (Y.m_nFailures > 5e3) {
+            if (X.m_nFailures > 5e3) {
               console.log("Hit too many errors, stoppinng the backfill");
               break;
             }
@@ -3550,9 +3551,9 @@
         RenderFailure() {
           let e = new Array();
           return (
-            Y.m_nFailures > 0 &&
-              Y.GetBackfillGIDs().forEach((t) => {
-                let n = Y.GetEventBackfillProgress().get(t);
+            X.m_nFailures > 0 &&
+              X.GetBackfillGIDs().forEach((t) => {
+                let n = X.GetEventBackfillProgress().get(t);
                 if (n && n.bFailed) {
                   let a = H.O3.GetClanEventModel(t);
                   a &&
@@ -3567,7 +3568,7 @@
                               children: a.GetNameWithFallback(0),
                             }),
                             (0, s.jsx)("div", {
-                              className: X.Error,
+                              className: Y.Error,
                               children: n.strMessage,
                             }),
                           ],
@@ -3644,7 +3645,7 @@
                 }),
               (0, s.jsx)("div", {
                 children: (0, s.jsx)("button", {
-                  onClick: () => Y.CompleteBackfill("resize_image"),
+                  onClick: () => X.CompleteBackfill("resize_image"),
                   children: "Stop Backfill",
                 }),
               }),
@@ -3653,19 +3654,19 @@
                   children: ["Processing: ", this.state.strInfo],
                 }),
               (0, s.jsxs)("div", {
-                children: ["Events Processed: ", Y.m_nProcessed],
+                children: ["Events Processed: ", X.m_nProcessed],
               }),
               (0, s.jsxs)("div", {
-                children: ["Events Succeeded: ", Y.m_nSuccesses],
+                children: ["Events Succeeded: ", X.m_nSuccesses],
               }),
               (0, s.jsxs)("div", {
-                children: ["Events Warning: ", Y.m_nWarning],
+                children: ["Events Warning: ", X.m_nWarning],
               }),
               (0, s.jsxs)("div", {
-                children: ["Events Failed: ", Y.m_nFailures],
+                children: ["Events Failed: ", X.m_nFailures],
               }),
               (0, s.jsxs)("div", {
-                children: ["Events Skipped: ", Y.m_nSkipped],
+                children: ["Events Skipped: ", X.m_nSkipped],
               }),
               e.length > 0 &&
                 (0, s.jsxs)(m.Fragment, {
@@ -4701,12 +4702,12 @@
         OnChangeCategory(e) {
           const { solrData: t } = this.props;
           let n = H.O3.GetClanEventModel(t.unique_id);
-          (0, C.pg)((0, s.jsx)(Ye, { eventModel: n }), (0, y.uX)(e));
+          (0, C.pg)((0, s.jsx)(Xe, { eventModel: n }), (0, y.uX)(e));
         }
         OnUpdateSeasonalTag(e) {
           const { solrData: t } = this.props;
           let n = H.O3.GetClanEventModel(t.unique_id);
-          (0, C.pg)((0, s.jsx)(Xe, { eventModel: n }), (0, y.uX)(e));
+          (0, C.pg)((0, s.jsx)(Ye, { eventModel: n }), (0, y.uX)(e));
         }
         render() {
           const { solrData: e } = this.props,
@@ -5240,7 +5241,7 @@
         }
       };
       Ve = (0, O.Cg)([u.PA], Ve);
-      let Ye = class extends m.Component {
+      let Xe = class extends m.Component {
         state = {
           bUpdating: !1,
           newCategoryOption: {
@@ -5398,10 +5399,10 @@
           );
         }
       };
-      (0, O.Cg)([N.oI], Ye.prototype, "ChangeCategoryForEvent", null),
-        (0, O.Cg)([N.oI], Ye.prototype, "OnChangeSelection", null),
-        (Ye = (0, O.Cg)([u.PA], Ye));
-      class Xe extends m.Component {
+      (0, O.Cg)([N.oI], Xe.prototype, "ChangeCategoryForEvent", null),
+        (0, O.Cg)([N.oI], Xe.prototype, "OnChangeSelection", null),
+        (Xe = (0, O.Cg)([u.PA], Xe));
+      class Ye extends m.Component {
         state = {
           bUpdating: !1,
           bAccept: this.props.eventModel.BHasTag("halloween2019"),
@@ -5514,10 +5515,10 @@
           });
         }
       }
-      (0, O.Cg)([N.oI], Xe.prototype, "ChangeAcceptance", null),
-        (0, O.Cg)([N.oI], Xe.prototype, "ChangeHorror", null),
-        (0, O.Cg)([N.oI], Xe.prototype, "ChangeCute", null),
-        (0, O.Cg)([N.oI], Xe.prototype, "ApplyAction", null);
+      (0, O.Cg)([N.oI], Ye.prototype, "ChangeAcceptance", null),
+        (0, O.Cg)([N.oI], Ye.prototype, "ChangeHorror", null),
+        (0, O.Cg)([N.oI], Ye.prototype, "ChangeCute", null),
+        (0, O.Cg)([N.oI], Ye.prototype, "ApplyAction", null);
       let Ke = class extends m.Component {
         state = { bLoadingEvent: !0 };
         m_cancelSignal = l().CancelToken.source();

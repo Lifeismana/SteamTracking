@@ -3,6 +3,33 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
+        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
+        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
+        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
+        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
+        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
+        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
+        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
+        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
+        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
+        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
+        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
+        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SalePageHiddenWarning: "_2h9U3L_8MxvbQ6TGGaeBYa",
         WarningText: "_2iB5yR1rkdynH8-UFCwUty",
       };
@@ -15,6 +42,7 @@
         BackgroundAnimation: "_1xc_h6g1jbrfqXQXHDA2eY",
         "ItemFocusAnim-darkerGrey-nocolor": "_32Qiunpe7Bq8tRMP7zANIV",
         "ItemFocusAnim-darkerGrey": "_1jLvKsCp-1NNukUKFcJBiF",
+        "ItemFocusAnim-darkGreySettings": "_2oonpIg6GiNC1fFwAuTeY1",
         "ItemFocusAnim-darkGrey": "_25MzDFkbrWeDNWxcpYDDqL",
         "ItemFocusAnim-grey": "_24xCtEhvscRzLJyaNWLeUa",
         "ItemFocusAnim-translucent-white-10": "_191r_XeIDZJjVtYMrw4vZN",
@@ -219,6 +247,7 @@
         BackgroundAnimation: "_3CxKZ4N0RhDFwPqdzAtrMl",
         "ItemFocusAnim-darkerGrey-nocolor": "_3pZA6QmunSvkjmZI9Ndmcu",
         "ItemFocusAnim-darkerGrey": "_3BffASPCHFV0VAgmPVl_kc",
+        "ItemFocusAnim-darkGreySettings": "qkh264Vz9Pv5rr6YfKhh1",
         "ItemFocusAnim-darkGrey": "qD2mZ6w2eEWm1PhMc6xb6",
         "ItemFocusAnim-grey": "_2mW-vk-aE8tlHuAW0uXkit",
         "ItemFocusAnim-translucent-white-10": "_2b2eos74MIDM6zKt-lSfM4",
@@ -257,6 +286,7 @@
         BackgroundAnimation: "_2zmvTGYcnxB2bhgSNFXnSi",
         "ItemFocusAnim-darkerGrey-nocolor": "_2DCLV3hUeBViGvq3yTsiQE",
         "ItemFocusAnim-darkerGrey": "_1iMoXsAEHqrsXXcoaw1SIy",
+        "ItemFocusAnim-darkGreySettings": "_23bSFoV4nDLAGl_G32zEdY",
         "ItemFocusAnim-darkGrey": "_1_Uo-zxJJlBTZyvRjgeG4_",
         "ItemFocusAnim-grey": "_3AjpDoqzZuBj6F7fMiO2Q-",
         "ItemFocusAnim-translucent-white-10": "_3PpKBwmAjZpmyTB-ooDvNd",
@@ -273,6 +303,134 @@
         SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          ..._,
+          viewBoxSize: 16,
+          children: (0, _.jsx)("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            checked: _,
+            onChange: _,
+            disabled: _,
+            children: _,
+            ref: _,
+            variant: _ = "default",
+            color: _,
+            ..._
+          } = _,
+          _ = "indeterminate" === _,
+          _ = _ ? _ : _,
+          _ = () => {
+            _ || (_ && __webpack_require__(!!_ || !_));
+          };
+        return (0, _.jsxs)(_._, {
+          align: "center",
+          ref: _,
+          role: "checkbox",
+          "aria-checked": _ ? "mixed" : _,
+          "data-state": _(_),
+          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
+          onClick: _,
+          tabIndex: 0,
+          onKeyDown: (_) => {
+            _ ||
+              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
+          },
+          cursor: "default",
+          "aria-disabled": _,
+          "data-accent-color": _,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.Checkbox,
+              children:
+                _ &&
+                (0, _.jsx)(_, {
+                  className: _.Icon,
+                }),
+            }),
+            _,
+          ],
+        });
+      }
+      function _(_) {
+        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
+      }
+      function _(_) {
+        return (0, _.jsx)("svg", {
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
+            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { viewBoxSize: _ = 20, ..._ } = _,
+          _ = _.size ? void 0 : _.IconSizeDefault;
+        return (0, _.jsx)("svg", {
+          viewBox: `0 0 ${_} ${_}`,
+          ...(0, _._)(
+            {
+              className: _,
+              ..._,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`IconSize-${_}`],
+        },
+        {
+          prop: "color",
+          className: _.Color,
+          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
+        },
+        {
+          prop: "hitSlop",
+          className: _.HitSlop,
+          cssProperty: (_) => [
+            "--hit-slop-custom",
+            "string" == typeof _ ? _ : "",
+          ],
+        },
+        _._.find(({ prop: _ }) => "cursor" === _),
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -763,10 +921,10 @@
         const { selectedTabBackgroundDef: _, nTabSaleSectionIndex: _ } =
           (function (_, _) {
             const _ = _.findIndex((_) => "tabs" === _.section_type);
-            if (_ >= 0) {
+            if (_ >= 0 && void 0 !== _) {
               const _ = _[_],
                 _ = _.tabs?.findIndex((_) => _.unique_id === _);
-              if (_ >= 0)
+              if (_ && _ >= 0 && _.tabs)
                 return {
                   selectedTabBackgroundDef: _.tabs[_].tab_background_img_groups,
                   nTabSaleSectionIndex: _,
@@ -813,7 +971,7 @@
                 }
             }),
             _ < _.length && (!_ || _ < _) && (_ = _[_].unique_id),
-            _?.enabled)
+            _?.enabled && void 0 !== _)
           ) {
             let _ = _;
             const _ = _.groups.length;
@@ -862,8 +1020,12 @@
           nFirstTabSectionIDWithoutGroup: _,
         };
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
         let _ = _.jsondata.sale_background_img_groups.groups.find(
           (_) => _.background_id === _.groupID,
         );
@@ -880,10 +1042,32 @@
             eventModel: _,
             displayDef: _,
             derivedGroupInfo: _.derivedGroupInfo,
-            children: _.elSaleSections,
+            children:
+              _ &&
+              _.randomize_section_order &&
+              _ !== _._.EPreviewMode_EditBackground
+                ? (0, _.jsx)(_, {
+                    clanEventGID: _.GID,
+                    elSaleSections: _.elSaleSections,
+                  })
+                : _.elSaleSections,
           },
           "background_group_" + _.groupID,
         );
+      }
+      function _(_) {
+        const { clanEventGID: _, elSaleSections: _ } = _,
+          [_, _] = (0, _._)(`sale_section_seed_${_}`, (0, _._)());
+        if (!_ || 0 === _.length) return null;
+        if (_.length > 1 && void 0 !== _) {
+          const _ = (0, _._)(_);
+          return (0, _.jsx)(_.Fragment, {
+            children: _._(_, 0, _),
+          });
+        }
+        return (0, _.jsx)(_.Fragment, {
+          children: _,
+        });
       }
       function _(_) {
         const {
@@ -900,7 +1084,7 @@
             [_],
           ),
           _ = (0, _._)(_);
-        if (!_ || 0 == _.length) return null;
+        if (!_ || (Array.isArray(_) && 0 == _.length)) return null;
         if (!_)
           return (0, _.jsx)(_.Fragment, {
             children: _,
@@ -4036,7 +4220,8 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             closeModal: _,
@@ -4045,7 +4230,7 @@
             eventModel: _,
           } = _,
           [_, _] = (0, _.useState)(() => _),
-          [_, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.repeat_setting,
             _.scaling_setting,
             _.background_color1,
@@ -4053,6 +4238,7 @@
             _.gradient_setting,
             _.position_setting,
             _.GetIncludedRealmList(),
+            _.randomize_section_order,
           ]),
           [_] = (0, _.useState)(() =>
             (function (_) {
@@ -4064,7 +4250,7 @@
               return _;
             })(_.localized_background_art ?? {}),
           );
-        return (0, _.jsx)(_, {
+        return (0, _.jsxs)(_, {
           strLocalizedTitle: (0, _._)("#BackgroundGroups_Configure"),
           strLocalizedDescription: (0, _._)("#BackgroundGroups_DialogDesc"),
           appid: _.appid,
@@ -4103,107 +4289,57 @@
               ),
             );
           },
-          children: (0, _.jsxs)("div", {
-            className: _().ConfDialogOptions,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().ImageOptions,
-                children: [
-                  (0, _.jsx)(_, {
-                    setting: _,
-                    fnUpdateSetting: (_) => {
-                      _(
-                        "no-repeat" !== _
-                          ? {
-                              ..._,
-                              repeat_setting: _,
-                              scaling_setting: "auto",
-                            }
-                          : {
-                              ..._,
-                              repeat_setting: _,
-                            },
-                      );
-                    },
-                    label: (0, _._)("#BackgroundGroups_Repeating"),
-                  }),
-                  (0, _.jsx)(_, {
-                    scaling_setting: _ ?? "contain",
-                    disable: "no-repeat" !== _,
-                    fnUpdateSetting: (_) =>
-                      _({
-                        ..._,
-                        scaling_setting: _,
-                      }),
-                  }),
-                  Boolean("cover" != _) &&
+          children: [
+            (0, _.jsxs)("div", {
+              className: _().ConfDialogOptions,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().ImageOptions,
+                  children: [
                     (0, _.jsx)(_, {
-                      position_settings: _,
+                      setting: _,
+                      fnUpdateSetting: (_) => {
+                        _(
+                          "no-repeat" !== _
+                            ? {
+                                ..._,
+                                repeat_setting: _,
+                                scaling_setting: "auto",
+                              }
+                            : {
+                                ..._,
+                                repeat_setting: _,
+                              },
+                        );
+                      },
+                      label: (0, _._)("#BackgroundGroups_Repeating"),
+                    }),
+                    (0, _.jsx)(_, {
+                      scaling_setting: _ ?? "contain",
+                      disable: "no-repeat" !== _,
                       fnUpdateSetting: (_) =>
                         _({
                           ..._,
-                          position_setting: _,
+                          scaling_setting: _,
                         }),
                     }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _().ColorOptions,
-                children: [
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)("#BackgroundGroups_Color"),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _().ColorCtn,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        style: {
-                          backgroundColor: _,
-                        },
-                        onClick: (_) => {
-                          (0, _._)(
-                            (0, _.jsx)(_, {
-                              color: _ ?? "",
-                              setColor: (_) =>
-                                _({
-                                  ..._,
-                                  background_color1: _,
-                                }),
-                            }),
-                            (0, _._)(_) ?? window,
-                          );
-                        },
-                        children: (0, _._)(
-                          void 0 === _
-                            ? "#BackgroundGroups_ColorNum_unset"
-                            : "#BackgroundGroups_ColorNum",
-                          1,
-                        ),
-                      }),
-                      " ",
-                      (0, _.jsx)(_._, {
-                        onClick: () =>
+                    Boolean("cover" != _) &&
+                      (0, _.jsx)(_, {
+                        position_settings: _,
+                        fnUpdateSetting: (_) =>
                           _({
                             ..._,
-                            background_color1: void 0,
+                            position_setting: _,
                           }),
-                        children: (0, _._)("#BackgroundGroups_Color_Clear"),
                       }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().SwapColorsCtn,
-                    children: (0, _.jsx)(_._, {
-                      onClick: () =>
-                        _({
-                          ..._,
-                          background_color1: _,
-                          background_color2: _,
-                        }),
-                      children: (0, _._)("#BackgroundGroups_Color_Swap"),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().ColorOptions,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _._)("#BackgroundGroups_Color"),
                     }),
-                  }),
-                  Boolean("single-color" !== _) &&
                     (0, _.jsxs)("div", {
                       className: _().ColorCtn,
                       children: [
@@ -4218,7 +4354,7 @@
                                 setColor: (_) =>
                                   _({
                                     ..._,
-                                    background_color2: _,
+                                    background_color1: _,
                                   }),
                               }),
                               (0, _._)(_) ?? window,
@@ -4228,7 +4364,7 @@
                             void 0 === _
                               ? "#BackgroundGroups_ColorNum_unset"
                               : "#BackgroundGroups_ColorNum",
-                            2,
+                            1,
                           ),
                         }),
                         " ",
@@ -4236,24 +4372,86 @@
                           onClick: () =>
                             _({
                               ..._,
-                              background_color2: void 0,
+                              background_color1: void 0,
                             }),
                           children: (0, _._)("#BackgroundGroups_Color_Clear"),
                         }),
                       ],
                     }),
-                  (0, _.jsx)(_, {
-                    gradient: _ ?? "top-to-bottom",
-                    fnUpdateSetting: (_) =>
-                      _({
-                        ..._,
-                        gradient_setting: _,
+                    (0, _.jsx)("div", {
+                      className: _().SwapColorsCtn,
+                      children: (0, _.jsx)(_._, {
+                        onClick: () =>
+                          _({
+                            ..._,
+                            background_color1: _,
+                            background_color2: _,
+                          }),
+                        children: (0, _._)("#BackgroundGroups_Color_Swap"),
                       }),
-                  }),
-                ],
+                    }),
+                    Boolean("single-color" !== _) &&
+                      (0, _.jsxs)("div", {
+                        className: _().ColorCtn,
+                        children: [
+                          (0, _.jsx)(_._, {
+                            style: {
+                              backgroundColor: _,
+                            },
+                            onClick: (_) => {
+                              (0, _._)(
+                                (0, _.jsx)(_, {
+                                  color: _ ?? "",
+                                  setColor: (_) =>
+                                    _({
+                                      ..._,
+                                      background_color2: _,
+                                    }),
+                                }),
+                                (0, _._)(_) ?? window,
+                              );
+                            },
+                            children: (0, _._)(
+                              void 0 === _
+                                ? "#BackgroundGroups_ColorNum_unset"
+                                : "#BackgroundGroups_ColorNum",
+                              2,
+                            ),
+                          }),
+                          " ",
+                          (0, _.jsx)(_._, {
+                            onClick: () =>
+                              _({
+                                ..._,
+                                background_color2: void 0,
+                              }),
+                            children: (0, _._)("#BackgroundGroups_Color_Clear"),
+                          }),
+                        ],
+                      }),
+                    (0, _.jsx)(_, {
+                      gradient: _ ?? "top-to-bottom",
+                      fnUpdateSetting: (_) =>
+                        _({
+                          ..._,
+                          gradient_setting: _,
+                        }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              clanSteamID: _.clanSteamID,
+              children: (0, _.jsx)(_._, {
+                checked: !!_,
+                onChange: (_) => {
+                  _.randomize_section_order = _;
+                },
+                children: (0, _._)("#BackgroundGroups_RandomizeSectionOrder"),
               }),
-            ],
-          }),
+            }),
+          ],
         });
       }
       function _(_) {
@@ -4821,7 +5019,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -4882,7 +5079,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");

@@ -699,7 +699,7 @@
     "FamilyManagement_ParentalControls": "Parental Controls",
     "FamilyManagement_ManageDialogTitle": "Manage %1$s",
     "FamilyManagement_Cancel": "Cancel",
-    "FamilyManagement_CancelInvitationConfirmationTitle": "Cancel Inviation",
+    "FamilyManagement_CancelInvitationConfirmationTitle": "Cancel Invitation",
     "FamilyManagement_CancelInvitationConfirmationText": "Are you sure you want to withdraw your Steam Family invitation to %1$s?",
     "FamilyManagement_InviteeAlreadyMember": "Friend code %1$s is already a member of the family.",
     "FamilyManagement_InviteeAlreadyInvited": "Friend code %1$s already has a pending invitation to the family.",

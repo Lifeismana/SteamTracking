@@ -30,6 +30,7 @@
         BackgroundAnimation: "TqTKL7i3GSFlH_ZgPVf1z",
         "ItemFocusAnim-darkerGrey-nocolor": "cm_5koVmrBLuCZgPBCMie",
         "ItemFocusAnim-darkerGrey": "PnVMlqvX5SCAvSN6U3hb9",
+        "ItemFocusAnim-darkGreySettings": "_3WN-nRn7q-FIwR4QBoVI_u",
         "ItemFocusAnim-darkGrey": "_3y6HrP9DK-Ttsri2UnKeJ4",
         "ItemFocusAnim-grey": "_3adXp5-v5skt9f-KA1WB_8",
         "ItemFocusAnim-translucent-white-10": "_1981I-jlGsaAi65IqAxEdm",
@@ -42,7 +43,7 @@
     },
     2921: (e, a, t) => {
       "use strict";
-      t.d(a, { PE: () => O, qP: () => I, Yg: () => B });
+      t.d(a, { PE: () => G, qP: () => B, Yg: () => I });
       var n = t(7850),
         i = t(76217),
         s = t(86927),
@@ -55,9 +56,9 @@
         h = t(92834),
         m = t(1078),
         g = t(12155),
-        p = t(52038),
-        x = t(78327),
-        _ = t(51706),
+        _ = t(52038),
+        p = t(78327),
+        x = t(51706),
         f = t(46253),
         v = t(22797),
         j = t(44433),
@@ -68,8 +69,8 @@
         M = t(32754),
         A = t(61859),
         N = t(30470),
-        P = t(24484);
-      function k(e) {
+        k = t(24484);
+      function P(e) {
         const { id: a } = e,
           { data: t } = (0, o.J$)(a),
           i = (0, u.useMemo)(() => {
@@ -87,10 +88,10 @@
           }, [t]);
         return i && 0 != i.length
           ? (0, n.jsx)("div", {
-              className: (0, p.A)(T().SaleTagBlockCtn, "SaleTagBlockCtn"),
+              className: (0, _.A)(T().SaleTagBlockCtn, "SaleTagBlockCtn"),
               children: Boolean(i?.length > 0)
                 ? (0, n.jsx)("div", {
-                    className: (0, p.A)(T().TagBox, T().Categories),
+                    className: (0, _.A)(T().TagBox, T().Categories),
                     children: i.map((e) =>
                       (0, n.jsx)(V, { categoryID: e }, "cat_" + e),
                     ),
@@ -102,7 +103,7 @@
       class S {
         m_rgCategories;
         constructor() {
-          this.m_rgCategories = (0, P.Tc)(
+          this.m_rgCategories = (0, k.Tc)(
             "feature_categories",
             "application_config",
           );
@@ -131,7 +132,7 @@
           : null;
       }
       var F = t(90421);
-      function B(e) {
+      function I(e) {
         const { id: a, bPopOutTrailerPlayback: t } = e,
           { data: i } = (0, o.Yo)(a),
           { data: s } = (0, o.j4)(a),
@@ -139,40 +140,40 @@
           [l, c] = (0, u.useState)(!1),
           [h, m] = (0, u.useState)(!1),
           g = (0, d.dy)(),
-          x = i?.highlights?.filter((e) => !g || e.all_ages),
-          _ = x && x?.length > 0 ? x[0] : void 0,
+          p = i?.highlights?.filter((e) => !g || e.all_ages),
+          x = p && p?.length > 0 ? p[0] : void 0,
           f = u.useCallback(() => {
-            _ && (t ? m(!0) : c((e) => !e));
-          }, [_, t]);
+            x && (t ? m(!0) : c((e) => !e));
+          }, [x, t]);
         if (!r)
           return (0, n.jsx)("div", {
-            className: (0, p.A)(b().HilightGrid, b().MediaContainer),
+            className: (0, _.A)(b().HilightGrid, b().MediaContainer),
             children: (0, n.jsx)(v.t, { size: "medium" }),
           });
-        const j = _
-          ? (0, n.jsx)(G, { trailer: _, bPlayVideo: l, fnTogglePlayTrailer: f })
+        const j = x
+          ? (0, n.jsx)(O, { trailer: x, bPlayVideo: l, fnTogglePlayTrailer: f })
           : null;
-        return _ ||
+        return x ||
           (s && s.all_ages_screenshots && s.all_ages_screenshots.length > 0)
           ? (0, n.jsxs)("div", {
-              className: (0, p.A)(b().HilightGrid, b().MediaContainer),
+              className: (0, _.A)(b().HilightGrid, b().MediaContainer),
               children: [
                 (0, n.jsx)(E, {
                   elFeaturedInCenter: j,
                   storeItemScreenshots: s,
-                  trailer: _,
+                  trailer: x,
                   id: a,
                   name: r.name || "",
                 }),
                 Boolean(t)
-                  ? (0, n.jsx)(O, {
+                  ? (0, n.jsx)(G, {
                       id: a,
                       bShowModal: h,
                       hideModal: () => m(!1),
                     })
                   : (0, n.jsx)(L, {
                       name: r.name || "",
-                      trailer: _,
+                      trailer: x,
                       bPlayVideo: l,
                       fnTogglePlayTrailer: f,
                       bControls: !0,
@@ -181,7 +182,7 @@
             })
           : null;
       }
-      function I(e) {
+      function B(e) {
         const {
             id: a,
             fnOnClickButton: t,
@@ -194,10 +195,10 @@
           u = (0, l.kB)(a);
         return void 0 !== !d && r && c
           ? (0, n.jsx)("div", {
-              className: (0, p.A)(b().HilightGrid, b().MediaContainerMM),
+              className: (0, _.A)(b().HilightGrid, b().MediaContainerMM),
               children: (0, n.jsx)(E, {
                 id: a,
-                elFeaturedInCenter: (0, n.jsx)(D, {
+                elFeaturedInCenter: (0, n.jsx)(w, {
                   id: a,
                   bUseAssetWithoutOverride: Boolean(s),
                   fnOnClickButton: t,
@@ -211,7 +212,7 @@
               }),
             })
           : (0, n.jsx)("div", {
-              className: (0, p.A)(b().HilightGrid, b().MediaContainerMM),
+              className: (0, _.A)(b().HilightGrid, b().MediaContainerMM),
               children: (0, n.jsx)(v.t, { size: "medium" }),
             });
       }
@@ -226,25 +227,25 @@
             bUseTrailerAsFirstThumb: h,
             bNoScreenShotModals: g,
           } = e,
-          [x, _] = u.useState(void 0),
+          [p, x] = u.useState(void 0),
           [f, v] = (0, m.XC)(),
           j = (0, d.dy)(),
           C = (0, u.useRef)(null),
           [y, T] = (0, u.useState)(0);
         if (!t) return null;
-        const M = a || (void 0 !== x && -1 !== x) ? x : 0,
+        const M = a || (void 0 !== p && -1 !== p) ? p : 0,
           A = new Array(),
           N = new Array();
         h &&
           s &&
           (A.push(
             (0, n.jsx)(
-              G,
+              O,
               {
                 trailer: s,
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
-                onMouseEnter: () => _(0),
+                onMouseEnter: () => x(0),
                 onMouseLeave: () => {
                   const e = C.current;
                   e && T(e.currentTime);
@@ -268,11 +269,11 @@
               "trail_inline",
             ),
           ));
-        const P = (
+        const k = (
           j ? l?.all_ages_screenshots : l?.mature_content_screenshots
         )?.filter(Boolean);
         if (
-          (P?.forEach((e, t) => {
+          (k?.forEach((e, t) => {
             if ((a || t > 0) && A.length < 3) {
               const a = (0, r.bu)(e, "thumb"),
                 i = (0, r.bu)(e, "600x338"),
@@ -281,7 +282,7 @@
                 (0, n.jsx)(
                   "div",
                   {
-                    className: (0, p.A)({
+                    className: (0, _.A)({
                       [b().ThumbnailCtn]: !0,
                       [b().ThumbnialClickable]: !g,
                     }),
@@ -290,7 +291,7 @@
                       onClick: g
                         ? void 0
                         : () => {
-                            const e = [...(P || [])];
+                            const e = [...(k || [])];
                             if (e.length > 0) {
                               for (let a = 0; a < t; ++a) {
                                 const a = e.shift();
@@ -299,7 +300,7 @@
                               f(e.map((e) => (0, r.bu)(e, "full")));
                             }
                           },
-                      onMouseEnter: () => _(s),
+                      onMouseEnter: () => x(s),
                     }),
                   },
                   t + "_small_" + a,
@@ -320,8 +321,8 @@
           !(a || (N && 0 != N.length)))
         )
           return null;
-        const k = A.slice(0, 3),
-          S = Array.from({ length: Math.max(0, 3 - k.length) });
+        const P = A.slice(0, 3),
+          S = Array.from({ length: Math.max(0, 3 - P.length) });
         return (0, n.jsxs)(n.Fragment, {
           children: [
             v,
@@ -331,12 +332,12 @@
                 ? (0, n.jsx)(n.Fragment, { children: a })
                 : (0, n.jsx)(n.Fragment, { children: void 0 !== M && N[M] }),
             }),
-            Boolean(k.length > 0) &&
+            Boolean(P.length > 0) &&
               (0, n.jsxs)("div", {
                 className: b().ScreenshotThumbnailRow,
-                onMouseLeave: () => _(-1),
+                onMouseLeave: () => x(-1),
                 children: [
-                  k,
+                  P,
                   S.map((e, a) =>
                     (0, n.jsx)(
                       "div",
@@ -377,7 +378,7 @@
           !i)
         )
           return null;
-        let d = (0, p.A)(b().VideoLargeContainer, r && b().videoPlaying);
+        let d = (0, _.A)(b().VideoLargeContainer, r && b().videoPlaying);
         return (0, n.jsxs)("div", {
           className: d,
           onClick: o,
@@ -398,7 +399,7 @@
                 muted: !0,
                 poster: null != c && c > 0 ? void 0 : i.screenshot_full,
                 children: i.microtrailer?.map((e) =>
-                  x.TS.IN_CLIENT && "video/mp4" == e.type
+                  p.TS.IN_CLIENT && "video/mp4" == e.type
                     ? null
                     : (0, n.jsx)(
                         "source",
@@ -415,7 +416,7 @@
           ],
         });
       }
-      function O(e) {
+      function G(e) {
         const { id: a, bShowModal: t, trailerBaseID: i, hideModal: s } = e,
           { data: r } = (0, o.J$)(a),
           c = (0, l.kB)(a),
@@ -431,12 +432,12 @@
           m = u.useId(),
           g = u.useId();
         if (!d || !d.adaptive_trailers) return null;
-        const { rgDashTrailers: p, rgHlsTrailers: x } = (0, l.hg)(d);
-        return 0 == p?.length
+        const { rgDashTrailers: _, rgHlsTrailers: p } = (0, l.hg)(d);
+        return 0 == _?.length
           ? null
-          : (0, n.jsx)(_.EN, {
+          : (0, n.jsx)(x.EN, {
               active: t,
-              children: (0, n.jsxs)(_.eV, {
+              children: (0, n.jsxs)(x.eV, {
                 "aria-labelledby": (0, h.q)(m, g),
                 bAllowFullSize: !0,
                 bOKDisabled: !0,
@@ -445,8 +446,8 @@
                   (0, n.jsx)("div", {
                     className: b().VideoPopupContainers,
                     children: (0, n.jsx)(j.P, {
-                      dashManifests: p || [],
-                      hlsManifest: (x.length > 0 && x?.[0]) || "",
+                      dashManifests: _ || [],
+                      hlsManifest: (p.length > 0 && p?.[0]) || "",
                       screenshot: (0, l.hl)(d),
                       altText: d.trailer_name,
                       muteWhenAutoplayBlocked: !0,
@@ -466,7 +467,7 @@
               }),
             });
       }
-      function G(e) {
+      function O(e) {
         const {
           trailer: a,
           fnTogglePlayTrailer: t,
@@ -475,7 +476,7 @@
           onMouseLeave: r,
         } = e;
         return (0, n.jsxs)("div", {
-          className: (0, p.A)({
+          className: (0, _.A)({
             [b().VideoThumbnail]: !i,
             [b().videoPlaying]: i,
             [b().ThumbnailCtn]: !0,
@@ -492,7 +493,7 @@
           ],
         });
       }
-      function D(e) {
+      function w(e) {
         const { id: a, fnOnClickButton: t, bUseAssetWithoutOverride: l } = e,
           [c, d] = (0, s.OP)(),
           { data: u } = (0, o.lv)(a, l),
@@ -500,7 +501,7 @@
           { data: m } = (0, o.wl)(a),
           { data: g } = (0, o.xz)(a);
         if (!u || !m || !h) return null;
-        const x = (0, r.b0)(u, "main_capsule");
+        const p = (0, r.b0)(u, "main_capsule");
         return (0, n.jsxs)(i.Z, {
           focusable: !0,
           noFocusRing: !0,
@@ -508,12 +509,12 @@
           ...d,
           onActivate: t,
           children: [
-            (0, n.jsx)("img", { className: b().MainCapsule, src: x }),
+            (0, n.jsx)("img", { className: b().MainCapsule, src: p }),
             (0, n.jsxs)("div", {
               className: b().AppDetails,
               children: [
                 (0, n.jsx)("div", {
-                  className: (0, p.A)(b().GameName),
+                  className: (0, _.A)(b().GameName),
                   children: h.name || "",
                 }),
                 (0, n.jsxs)("div", {
@@ -527,7 +528,7 @@
                   bHideTitle: !0,
                   bNoStoreLinks: !0,
                 }),
-                (0, n.jsx)(k, { id: a }),
+                (0, n.jsx)(P, { id: a }),
               ],
             }),
           ],

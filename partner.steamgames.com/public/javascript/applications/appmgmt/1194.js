@@ -119,6 +119,7 @@
         BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
         "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
         "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGreySettings": "_1ex6ItU2bR-tAYkBYAfqnF",
         "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
         "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
         "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
@@ -144,6 +145,7 @@
         BackgroundAnimation: "_15yvWK6GCakW5yZ0YB66fv",
         "ItemFocusAnim-darkerGrey-nocolor": "Eu2HOvMbunn7MzCLIJ5ES",
         "ItemFocusAnim-darkerGrey": "DvP1wiF6eV9afdQaEkods",
+        "ItemFocusAnim-darkGreySettings": "_2MNkLvIOgwx0GSMCjDlkL8",
         "ItemFocusAnim-darkGrey": "_2tQsBdyAzzF2_nY65OSwNm",
         "ItemFocusAnim-grey": "Qg-4WEghuaXqBRIE-lEVs",
         "ItemFocusAnim-translucent-white-10": "_18ENJxMfn40_y_8CMeuuMm",
@@ -167,40 +169,40 @@
         u = n(95695),
         d = n.n(u);
       function _(t) {
-        const { bHideTour: e } = t,
+        const { bHideTour: e, fnConversionMethodSelected: n } = t,
           {
-            eConversionMethod: n,
-            setConversionMethod: u,
-            rgAvailableConversionMethods: _,
+            eConversionMethod: u,
+            setConversionMethod: _,
+            rgAvailableConversionMethods: m,
           } = (0, c.MA)(),
-          m = (0, i.useMemo)(() => {
+          h = (0, i.useMemo)(() => {
             const t = new Array();
             return (
-              _.findIndex((t) => 1 == t) >= 0 &&
+              m.findIndex((t) => 1 == t) >= 0 &&
                 t.push({
                   label: r.g.Localize("#ConversionMethod_Nuanced"),
                   data: 1,
                 }),
-              _.findIndex((t) => 2 == t) >= 0 &&
+              m.findIndex((t) => 2 == t) >= 0 &&
                 t.push({
                   label: r.g.Localize("#ConversionMethod_PPP"),
                   data: 2,
                 }),
-              _.findIndex((t) => 3 == t) >= 0 &&
+              m.findIndex((t) => 3 == t) >= 0 &&
                 t.push({
                   label: r.g.Localize("#ConversionMethod_FX"),
                   data: 3,
                 }),
               t
             );
-          }, [_]);
-        return m.length <= 1
+          }, [m]);
+        return h.length <= 1
           ? s.iA.is_support
             ? (0, o.jsxs)("div", {
                 className: d().ValveOnlyBackground,
                 children: [
                   "Hiding Converison Method Widget; only have ",
-                  m.length,
+                  h.length,
                   " method in guideline.",
                 ],
               })
@@ -264,11 +266,11 @@
                     options: { position: "below", offset: 18 },
                     children: (0, o.jsx)("div", {
                       children: (0, o.jsx)(a.ZU, {
-                        rgOptions: m,
+                        rgOptions: h,
                         contextMenuPositionOptions: { bMatchWidth: !1 },
-                        selectedOption: n,
+                        selectedOption: u,
                         onChange: (t) => {
-                          u(t.data);
+                          _(t.data), n && n(t.data);
                         },
                       }),
                     }),
@@ -280,7 +282,7 @@
     },
     38917: (t, e, n) => {
       "use strict";
-      n.d(e, { dD: () => k, fX: () => S });
+      n.d(e, { dD: () => k, fX: () => T });
       var o = n(34629),
         i = n(7850),
         r = n(90626),
@@ -338,10 +340,10 @@
             this.m_strActiveTour === t && (this.m_strActiveTour = ""));
         }
         MarkTourSeen(t) {
-          return C(this.m_storage, t, Date.now());
+          return g(this.m_storage, t, Date.now());
         }
         MarkTourUnseen(t) {
-          return C(this.m_storage, t, void 0);
+          return g(this.m_storage, t, void 0);
         }
       }
       (0, o.Cg)([m.sH], v.prototype, "m_tours", void 0),
@@ -355,21 +357,21 @@
         const e = await t.GetObject(x);
         return e && "object" == typeof e ? e : {};
       }
-      async function C(t, e, n) {
+      async function g(t, e, n) {
         const o = await f(t);
         return t.StoreObject(x, { ...o, [e]: n });
       }
-      const g = new v();
+      const C = new v();
       function b() {
         const t = (0, _.rX)();
         return (
           (0, r.useEffect)(() => {
-            g.Init(t);
+            C.Init(t);
           }, [t]),
-          g
+          C
         );
       }
-      function T(t) {
+      function S(t) {
         const e = b(),
           { bShowTour: n, stopElems: o } = (0, h.q3)(() => ({
             bShowTour: !e.BHasSeenTour(t),
@@ -384,32 +386,32 @@
           updateStop: e.UpdateStop,
         };
       }
-      function S(t) {
+      function T(t) {
         const { children: e } = t;
         return (0, i.jsxs)(i.Fragment, {
-          children: [e, (0, i.jsx)(E, { ...t })],
+          children: [e, (0, i.jsx)(A, { ...t })],
         });
       }
-      function E(t) {
+      function A(t) {
         const { active: e, name: n, stops: o } = t,
-          { bShowTour: a, onInteraction: u, onDismiss: d, stopElems: _ } = T(n),
+          { bShowTour: a, onInteraction: u, onDismiss: d, stopElems: _ } = S(n),
           [m, h] = (0, r.useState)(0);
         if (!a || !e || m >= o.length) return null;
         const { id: p, title: v, content: x } = o[m],
           f = _[p];
         if (!f || !f.elem) return null;
-        let C = x;
+        let g = x;
         return (
           Array.isArray(x) &&
-            (C = x.map((t, e) => (0, i.jsx)("div", { children: t }, e))),
+            (g = x.map((t, e) => (0, i.jsx)("div", { children: t }, e))),
           (0, i.jsx)(w, {
             ...f,
-            children: (0, i.jsxs)(A, {
+            children: (0, i.jsxs)(E, {
               tour: n,
               title: v,
               onRequestClose: d,
               children: [
-                C,
+                g,
                 (0, i.jsxs)("div", {
                   className: s.Action,
                   children: [
@@ -510,9 +512,9 @@
           r.document.body,
         );
       }
-      function A(t) {
+      function E(t) {
         const { tour: e, title: n, onRequestClose: o, children: l } = t,
-          { onActivate: c } = T(e);
+          { onActivate: c } = S(e);
         return (
           (0, r.useEffect)(() => c(), [c]),
           (0, i.jsxs)("div", {
@@ -531,7 +533,7 @@
       }
       function k(t) {
         const { name: e, tour: n, options: o, children: i } = t,
-          { updateStop: s } = T(n),
+          { updateStop: s } = S(n),
           a = (0, r.useCallback)((t) => s(n, e, o, t), [s, n, e]),
           l = r.Children.only(i),
           c = (0, p.Ue)(a, l.props.ref);

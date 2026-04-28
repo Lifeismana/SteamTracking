@@ -407,18 +407,34 @@ function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalM
 	});
 }
 
+var g_mqlPointer;
 function Responsive_InitTouchDetection( $ )
 {
 	var $HTML= $J('html');
-	if ( !$HTML.hasClass('touch') && $HTML.hasClass('responsive') )
+	if ( $HTML.hasClass('responsive') )
 	{
-		$J(window ).one('touchstart', function() {
-			// user is on a touch device - enable touch-friendly accessors and
-			// remember for the rest of this session
+		// To update touch mode state, both set/clear the class on the current page, and set/clear a session cookie
+		// (observed by php code) so the behavior persists across subsequent loads/reloads.
+		const fnUpdateTouch = ( touch ) => {
+			if (touch) {
+				if (!$HTML.hasClass('touch')) {
+					$HTML.addClass('touch');
+				}
+				V_SetCookie( "strResponsiveViewPrefs", 'touch', 0 );
+			} else {
+				if ($HTML.hasClass('touch')) {
+					$HTML.removeClass('touch');
+				}
+				V_SetCookie( "strResponsiveViewPrefs", null, -1 );
+			}
+		}
 
-			$HTML.addClass('touch');
-			V_SetCookie( "strResponsiveViewPrefs", 'touch', 0 );
-		} );
+		// Detect if we're in touch mode by looking for a coarse pointer.
+		g_mqlPointer = window.matchMedia("(pointer: coarse)");
+
+		// Force an immediate update, then update on any future changes.
+		fnUpdateTouch(g_mqlPointer.matches);
+		g_mqlPointer.onchange = (e) => fnUpdateTouch(e.matches);
 	}
 }
 

@@ -10,7 +10,7 @@ function BrowserViewHandleMessageFromParent( strMessage, strArguments )
 
 function OnAddNewHardware()
 {
-	if ( Steam.BIsUserInSteamClient() && Steam.GetClientPackageVersion() >= 1770934110 )
+	if ( Steam.BIsUserInSteamClient() && ( Steam.GetClientPackageVersion() == 0 || Steam.GetClientPackageVersion() >= 1770934110 ) )
 	{
 		g_dialogSavedHardware.Dismiss();
 		window.SteamClient.BrowserView.RegisterForMessageFromParent( BrowserViewHandleMessageFromParent );

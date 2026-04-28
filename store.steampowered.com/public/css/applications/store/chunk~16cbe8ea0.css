@@ -24,6 +24,16 @@
     color: #fff;
   }
 }
+@keyframes AcW48fP-EnfyD8bO6anBj {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _3lAc02j3vPGIoXryYyGTZR {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -2330,6 +2340,16 @@ html.responsive.GamepadMode ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _3oEDNw_jLfiO2KEnzqXvWj {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

@@ -1293,6 +1293,7 @@
         BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
         "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
         "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
         "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
         "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
@@ -1436,6 +1437,7 @@
         BackgroundAnimation: "_2-llXPi4w88rsWfJFYSLHB",
         "ItemFocusAnim-darkerGrey-nocolor": "_2eejrtSFYCSnzH8C6-WC3a",
         "ItemFocusAnim-darkerGrey": "oMlqiiSY2Eqr2ln_FmAg4",
+        "ItemFocusAnim-darkGreySettings": "AcW48fP-EnfyD8bO6anBj",
         "ItemFocusAnim-darkGrey": "_3lAc02j3vPGIoXryYyGTZR",
         "ItemFocusAnim-grey": "_388VkzVpUFRuQ1HZEymCy",
         "ItemFocusAnim-translucent-white-10": "tK-6xcUa6TrN9X1V5zj25",
@@ -1529,6 +1531,7 @@
         BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
         "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
         "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
         "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
         "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
         "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
@@ -1579,6 +1582,7 @@
         BackgroundAnimation: "Uwgkqeb94UMwmyJ_dUvKp",
         "ItemFocusAnim-darkerGrey-nocolor": "_2fOUgihscvE65oigXmaKB1",
         "ItemFocusAnim-darkerGrey": "_2Zz5YKG-AtieYorMauAzsN",
+        "ItemFocusAnim-darkGreySettings": "_3LGTy6zChHph675eNQUXkq",
         "ItemFocusAnim-darkGrey": "_3Clab3jPQdWdPjgkUVd_xv",
         "ItemFocusAnim-grey": "_3nkj24RHleWUwg-w5PZLID",
         "ItemFocusAnim-translucent-white-10": "_2hSev8SqoBLyqKXG9DVTKf",
@@ -1840,6 +1844,7 @@
         BackgroundAnimation: "_1jkwQ_5dtvUqcR17Ni8gH7",
         "ItemFocusAnim-darkerGrey-nocolor": "eJD8k-9VTnfw5SKDeQlGl",
         "ItemFocusAnim-darkerGrey": "_1baqDGxThcAePgI3jhhJkS",
+        "ItemFocusAnim-darkGreySettings": "_12880UgR1fxST3Wm0d9Ew3",
         "ItemFocusAnim-darkGrey": "_1UwkCmGYqqKEAek4YGnKP_",
         "ItemFocusAnim-grey": "nQumUwdpEoKiUzjyDI3lo",
         "ItemFocusAnim-translucent-white-10": "_2o8r_8LAMGBe_v0EG0wG6-",
@@ -1923,6 +1928,7 @@
         BackgroundAnimation: "_21xdD3y0DJeYvUehUMcPwg",
         "ItemFocusAnim-darkerGrey-nocolor": "_3rNPhT088-82kayyY9jWT9",
         "ItemFocusAnim-darkerGrey": "HqpHRy29WMHs-c-YLSIrq",
+        "ItemFocusAnim-darkGreySettings": "_3pULdRtegOO_LMg25FyoCA",
         "ItemFocusAnim-darkGrey": "_2-jSn0eV92zh4AG5bspmdQ",
         "ItemFocusAnim-grey": "_1pfDYeJhusNZse6yV1ylkM",
         "ItemFocusAnim-translucent-white-10": "BNT9Di7wydWf5sVgthF_S",
@@ -1945,6 +1951,7 @@
         BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
         "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
         "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
+        "ItemFocusAnim-darkGreySettings": "_2cAK7l3w0qC8uv5uzKjusc",
         "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
         "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
         "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
@@ -1990,6 +1997,7 @@
         BackgroundAnimation: "_3yBb7Zq-JsZsUC7j0xfwNs",
         "ItemFocusAnim-darkerGrey-nocolor": "_3mEJMPBWqIai6TZ5Asmwzc",
         "ItemFocusAnim-darkerGrey": "_1bq8dQKi1_Y3Cx4SqKPEbe",
+        "ItemFocusAnim-darkGreySettings": "_3HZYqGe5_hsFFJcgBTMMSW",
         "ItemFocusAnim-darkGrey": "qqYMXWoOu5it3a3atTegO",
         "ItemFocusAnim-grey": "ULAazkgE1qcpwKYFDQ6cA",
         "ItemFocusAnim-translucent-white-10": "_2_8edxNWb8zuaY6iv3wJSx",
@@ -2122,6 +2130,7 @@
         BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
         "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
         "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
+        "ItemFocusAnim-darkGreySettings": "_3bomS6MjDv4c5XbYu2Caqu",
         "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
         "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
         "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
@@ -2689,9 +2698,9 @@
             storeItemType: -1,
             isInvalid: !0,
           },
-          12: {
+          13: {
             ..._,
-            type: 12,
+            type: 13,
             label: "Invalid type",
             storeItemType: -1,
             isInvalid: !0,
@@ -2764,12 +2773,23 @@
           11: {
             ..._,
             type: 11,
-            label: "Plays Similar Apps",
+            label: "Plays similar apps (tag-based)",
             tooltip:
               "Algorithmically targets players who play apps with similar tags to the selected app(s)",
             storeItemType: 0,
             storeItemBinding: 1,
             canModifyStoreItems: !1,
+          },
+          12: {
+            ..._,
+            type: 12,
+            label: "Similar players (by playtime) also played",
+            tooltip:
+              "Algorithmically targets players who also played apps similar to the selected app(s), based on shared playtime patterns",
+            storeItemType: 0,
+            storeItemBinding: 1,
+            canModifyStoreItems: !1,
+            isInvalid: !0,
           },
         };
       function _(_) {
@@ -84365,6 +84385,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -84545,17 +84566,14 @@
               _.GetSubTitleWithLanguageFallback(_) || "",
             ];
           }),
-          [_, _] = (0, _.useState)(void 0),
-          _ =
-            !_ || (_ !== _ && _ !== _)
-              ? {
-                  src: _,
-                  onLoad: () => _(_),
-                  onError: () => _(_),
-                }
-              : {
-                  src: _,
-                };
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          _ = [
+            _,
+            _ !== _ ? _ : void 0,
+            _ && (0, _._)(_, "main_capsule"),
+          ].filter(Boolean),
+          [_, _] = (0, _.useState)(_);
         if (!_)
           return (0, _.jsx)("div", {
             className: _().OtherEvents_EventCtn,
@@ -84606,8 +84624,11 @@
                           _().OtherEvents_MainImageCtn,
                           _ && _().MaskImages,
                         ),
-                        children: (0, _.jsx)("img", {
-                          ..._,
+                        children: (0, _.jsx)(_._, {
+                          rgSources: _,
+                          onIncrementalError: (_, _, _) => {
+                            _ >= _.length && _(void 0), _(_[_ + 1]);
+                          },
                           className: _().OtherEvents_MainImage,
                           alt: "",
                         }),
@@ -86561,7 +86582,6 @@
         (0, _._)([_._], _.prototype, "BDisplayStyleIsCompact", null),
         (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

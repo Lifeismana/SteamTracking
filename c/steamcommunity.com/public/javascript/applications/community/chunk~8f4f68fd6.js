@@ -58,6 +58,7 @@
         FullWidth: "_6EcDVXFHtdirTkETQjKOK",
         BackgroundAnimation: "_3w9sEc9GApj44Kg099SX99",
         "ItemFocusAnim-darkerGrey-nocolor": "_3zMKq0Ov9QZXkvzuZaEgKn",
+        "ItemFocusAnim-darkGreySettings": "qadlYXxqgL7iZI-3WagQW",
         "ItemFocusAnim-darkGrey": "_1bS3_eEfJQL1uvh9ueXwHc",
         "ItemFocusAnim-grey": "K14jHOeux9t-cKLHsLZ_R",
         "ItemFocusAnim-translucent-white-10": "_14krbCetggqySSjN1tprjy",
@@ -122,6 +123,7 @@
         NewIndicator: "_1pIhbqWsrCVPaGGYc6fT-H",
         BackgroundAnimation: "_2THWJm_DP4_8_21tEsXSSj",
         "ItemFocusAnim-darkerGrey-nocolor": "_3TDFCqwgSFsXL90HH5PmyQ",
+        "ItemFocusAnim-darkGreySettings": "_2V49icFFKCzM2imCbWVQKz",
         "ItemFocusAnim-darkGrey": "_22M7t0tCHSgmIcx2rwkyDn",
         "ItemFocusAnim-grey": "lhtmiPnDLy_PH3nWN5N8F",
         "ItemFocusAnim-translucent-white-10": "xPu5sAUAb9KZcZojHZeok",
@@ -190,6 +192,7 @@
         SteamNotificationWrapper: "UmtNgXD92RoDeYjxKEskk",
         BackgroundAnimation: "CHduhRYQLY29chQ5oLbsR",
         "ItemFocusAnim-darkerGrey-nocolor": "_3bOlzQnTJZnV9rTU3NSxJh",
+        "ItemFocusAnim-darkGreySettings": "_1bdnqXVo31tiUrXoxNB3wW",
         "ItemFocusAnim-darkGrey": "uOdBxiMFNvmWe8MWKL2vT",
         "ItemFocusAnim-grey": "_9s1knb2MNj9uD9M1SCh2u",
         "ItemFocusAnim-translucent-white-10": "_1YVG7HtpgQ26Yx-8ZWKCBi",
@@ -2559,9 +2562,15 @@
         );
       }
       function _(_) {
-        return (0, _.jsx)("div", {
-          className: _().Icon,
-          children: _.icon,
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !!_.icon &&
+              (0, _.jsx)("div", {
+                className: _().Icon,
+                children: _.icon,
+              }),
+            " ",
+          ],
         });
       }
       function _(_) {
@@ -2668,10 +2677,11 @@
                 (0, _.jsxs)("div", {
                   className: _().Header,
                   children: [
-                    (0, _.jsx)("div", {
-                      className: _().Icon,
-                      children: _,
-                    }),
+                    !!_ &&
+                      (0, _.jsx)("div", {
+                        className: _().Icon,
+                        children: _,
+                      }),
                     (0, _.jsx)("div", {
                       className: _().Title,
                       children: _,

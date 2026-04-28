@@ -17,6 +17,7 @@
         BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
         "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
         "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGreySettings": "ekd5ku98aKtUXOuTnlUpj",
         "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
         "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
         "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
@@ -393,7 +394,7 @@
               }),
             k &&
               !!A &&
-              (0, o.jsx)(U, {
+              (0, o.jsx)(N, {
                 nUpdateTime: I.rtime,
                 announcementGID: A,
                 onClick: D,
@@ -401,7 +402,7 @@
             k &&
               !A &&
               !v.TS.IN_GAMEPADUI &&
-              (0, o.jsx)(N, { nUpdateTime: I.rtime, onClick: D }),
+              (0, o.jsx)(U, { nUpdateTime: I.rtime, onClick: D }),
           ],
         });
       }
@@ -426,7 +427,7 @@
           closeModal: r,
         });
       }
-      function N(e) {
+      function U(e) {
         return (0, o.jsxs)("div", {
           className: y.LatestUpdateButtonCtn,
           children: [
@@ -445,7 +446,7 @@
           ],
         });
       }
-      function U(e) {
+      function N(e) {
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
           s = n ? p.O3.GetClanEventFromAnnouncementGID(n) : null,
           i = window.screen.width > 500 ? C.kH : C.uY;
@@ -480,11 +481,11 @@
         });
       }
       var F = n(25888),
-        H = n(44165);
-      class T extends a.Component {
+        T = n(44165);
+      class H extends a.Component {
         render() {
           const { appid: e } = this.props;
-          let t = H.HD.GetTimeNowWithOverrideAsDate(),
+          let t = T.HD.GetTimeNowWithOverrideAsDate(),
             n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
             a = Math.floor(n.getTime() / 1e3);
           return (0, o.jsx)("div", {
@@ -540,7 +541,7 @@
                       exact: !0,
                       path: s.g5.WorkshopHub(":appid(\\d+)"),
                       render: (e) =>
-                        (0, a.createElement)(T, {
+                        (0, a.createElement)(H, {
                           ...e,
                           appid: +e.match.params.appid,
                           key: "Workshop" + e.match.params.appid,

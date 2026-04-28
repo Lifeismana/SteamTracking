@@ -95,6 +95,16 @@
     color: #fff;
   }
 }
+@keyframes _1t6voKc6Z9o4Tv6RxMOxKZ {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _3hNDwFLzATB9Rlsqzdi0SL {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -796,6 +806,16 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
     color: #fff;
   }
 }
+@keyframes _3oEDNw_jLfiO2KEnzqXvWj {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _2_svdWFQrIOwj-IleWJR6L {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -1300,6 +1320,16 @@ html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _2cAK7l3w0qC8uv5uzKjusc {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

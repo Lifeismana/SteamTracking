@@ -135,7 +135,7 @@
     "Price_History_Normal_Price": "ตามปกติ",
     "Price_History_Recent_Low_Price": "ต่ำสุดใน 30 วัน",
     "Price_History_Recent_Low_Price_Ttip": "เกมนี้เคยลดราคา %1$s มาก่อนภายในเวลา %2$s วันที่ผ่านมา",
-    "Price_History_Current_Low_Price_Ttip": "ขณะนี้เกมนี้มีราคาต่ำสุดในรอบ %1$s วันที่ผ่านมา",
-    "Price_History_Current_Price": "ตอนนี้",
-    "Price_History_Lowest_Previous_30": "ส่วนลดตามราคาต่ำสุดในรอบ 30 วันที่ผ่านมา"
+    "Price_History_Current_Low_Price_Ttip": "ขณะนี้เกมนี้มีราคาต่ำสุดในช่วงเวลา %1$s วันที่ผ่านมา",
+    "Price_History_Current_Price": "ขณะนี้",
+    "Price_History_Lowest_Previous_30": "ส่วนลดตามราคาต่ำสุดในช่วง 30 วันที่ผ่านมา"
 }

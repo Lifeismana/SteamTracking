@@ -297,6 +297,16 @@
     color: #fff;
   }
 }
+@keyframes _27pb_HIkONceiGG5UIoqY9 {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _2WHt-XB4uzgTCI4w5ZfQM7 {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -1295,6 +1305,16 @@ button.vDtJqUVxjZtCpsN9muEoX.DialogButton.-ycr5X2s8Env2lwBiW1Gf.gpfocus {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes HEYNYwmGnFOfnMkG7Az1U {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }
@@ -2351,6 +2371,16 @@ td.rdtYear:hover {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _3ssmTtvWPb13bQl5_2beiv {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

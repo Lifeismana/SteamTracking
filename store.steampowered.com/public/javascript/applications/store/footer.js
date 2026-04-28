@@ -11,6 +11,7 @@
         Rows: "_2QdiX1hDsJmlkrHmcCOMbV",
         AutoColumns: "Cr7YIMQn6_lDRU4-3BR8b",
         AutoRows: "_3kyzvGnYVLT0DW6nzP9n18",
+        AutoFlow: "_3AvZKfpfaIQbfczVRBASsX",
         Areas: "_1-yfCTWkj4tOFfb3EKXx6N",
         Flow: "_1yUwWGTk4IX0IhdJiKfFBf",
         AlignContent: "_2Tglp6488nVBhU976Llfpe",
@@ -59,21 +60,21 @@
         NavLinks: "_2hZemvW0chMhSn36Vr0RF9",
       };
     },
-    49560: (e, n, t) => {
+    49560: (e, t, n) => {
       "use strict";
-      t.d(n, { A: () => j, p: () => H });
-      var s = t(7850),
-        r = t(90626),
-        o = t(73788),
-        i = t(28505),
-        c = t(94621),
-        l = t(8871),
-        a = t(32754),
-        h = t(45699),
-        C = t(85585),
-        d = t(7445),
-        p = t(8527),
-        u = t(81393);
+      n.d(t, { A: () => j, p: () => H });
+      var s = n(7850),
+        r = n(90626),
+        o = n(73788),
+        i = n(28505),
+        c = n(94621),
+        l = n(8871),
+        a = n(32754),
+        h = n(45699),
+        C = n(85585),
+        d = n(7445),
+        p = n(8527),
+        u = n(81393);
       const g = (0, r.createContext)(null);
       function f(e) {
         return p.TS.IN_GAMEPADUI
@@ -81,10 +82,10 @@
           : (0, s.jsx)(m, { ...e });
       }
       function x(e) {
-        const { children: n } = e,
-          t = (0, r.useContext)(g);
+        const { children: t } = e,
+          n = (0, r.useContext)(g);
         (0, u.wT)(
-          !!t,
+          !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
         const o = r.useRef(void 0);
@@ -92,75 +93,87 @@
           (0, h.O7)(o, !!o.current, !1),
           (0, s.jsx)(C.D6, {
             navID: "Popover",
-            onCancelButton: () => t.floating.context.onOpenChange(!1),
+            onCancelButton: () => n.floating.context.onOpenChange(!1),
             modal: !0,
             navTreeRef: o,
             children: (0, s.jsx)("div", {
               style: { display: "contents" },
-              children: (0, s.jsx)(d.q, { children: n }),
+              children: (0, s.jsx)(d.q, { children: t }),
             }),
           })
         );
       }
       function m(e) {
-        const { children: n } = e,
-          t = (0, r.useContext)(g);
+        const { children: t } = e,
+          n = (0, r.useContext)(g);
         return (
           (0, u.wT)(
-            !!t,
+            !!n,
             "<Popover.Positioner> must be a child of <Popover.Root>.",
           ),
           (0, s.jsx)(o.s3, {
-            context: t.floating.context,
+            context: n.floating.context,
             initialFocus: -1,
             returnFocus: !1,
-            children: n,
+            children: t,
           })
         );
       }
       function H(e) {
-        const { gutter: n = 0, placement: t } = e,
+        const { gutter: t = 0, placement: n } = e,
           s = [],
-          r = t && "object" == typeof t;
+          r = n && "object" == typeof n;
         return (
-          r && t.offset
-            ? s.push((0, c.cY)(t.offset))
-            : (r && void 0 !== t.offset) || s.push((0, c.cY)(2)),
-          r && t.flip
-            ? s.push((0, c.UU)(t.flip))
-            : (r && void 0 !== t.flip) || s.push((0, c.UU)()),
-          r && t.shift
-            ? s.push((0, c.BN)(t.shift))
-            : (r && void 0 !== t.shift) || s.push((0, c.BN)()),
+          r && n.offset
+            ? s.push((0, c.cY)(n.offset))
+            : (r && void 0 !== n.offset) || s.push((0, c.cY)(2)),
+          r && n.flip
+            ? s.push((0, c.UU)(n.flip))
+            : (r && void 0 !== n.flip) || s.push((0, c.UU)()),
+          r && n.shift
+            ? s.push((0, c.BN)(n.shift))
+            : (r && void 0 !== n.shift) || s.push((0, c.BN)()),
           s.push(
             (0, c.Ej)({
-              apply: (t) => {
-                const { rects: s, elements: r, availableHeight: o } = t,
-                  i =
-                    "number" == typeof n
-                      ? o - n + "px"
-                      : `calc( ${o}px - var(--spacing-${n}) )`,
-                  c = { maxHeight: i, boxSizing: "border-box", zIndex: "1" };
-                switch ((e.scroll && (c.overflowY = "auto"), e.width)) {
+              apply: (n) => {
+                const { rects: s, elements: r, availableHeight: o } = n,
+                  i = { boxSizing: "border-box", zIndex: "1" };
+                switch ((e.scroll && (i.overflowY = "auto"), e.width)) {
                   case "target":
-                    c.width = `${s.reference.width}px`;
+                    i.width = `${s.reference.width}px`;
                     break;
                   case "content":
-                    c.width = `${s.floating.width}px`;
+                    i.width = `${s.floating.width}px`;
                     break;
                   case "dropdown": {
                     let e = s.reference.width;
                     s.floating.width > e && e < 200 && (e = s.floating.width),
-                      (c.width = `${e}px`);
+                      (i.width = `${e}px`);
                   }
                 }
                 "function" == typeof e.width &&
-                  (c.width = e.width({
+                  (i.width = e.width({
                     unContentWidth: s.floating.width,
                     unTargetWidth: s.reference.width,
-                  })),
-                  Object.assign(r.floating.style, c),
-                  r.floating.style.setProperty("--popover-max-height", i);
+                  }));
+                const c =
+                  "number" == typeof t ? `${t}px` : `var(--spacing-${t})`;
+                "function" == typeof e.maxHeight
+                  ? (i.maxHeight = e.maxHeight({
+                      unAvailableHeight: o,
+                      gutter: c,
+                    }))
+                  : "number" == typeof e.maxHeight
+                    ? (i.maxHeight = `min( calc( ${o}px - ${c} ), ${e.maxHeight}px )`)
+                    : (i.maxHeight =
+                        "number" == typeof t
+                          ? o - t + "px"
+                          : `calc( ${o}px - var(--spacing-${t}) )`),
+                  Object.assign(r.floating.style, i),
+                  r.floating.style.setProperty(
+                    "--popover-max-height",
+                    i.maxHeight,
+                  );
               },
             }),
           ),
@@ -169,19 +182,19 @@
       }
       const j = {
         Root: function (e) {
-          const { children: n, ...t } = e,
+          const { children: t, ...n } = e,
             r = (function (e) {
               const {
-                open: n,
-                onOpenChange: t,
+                open: t,
+                onOpenChange: n,
                 placement: s,
                 interactions: r = {},
               } = e;
-              let c = n;
+              let c = t;
               0;
               const l = (0, o.we)({
                   open: c,
-                  onOpenChange: t,
+                  onOpenChange: n,
                   middleware: H(e),
                   whileElementsMounted: i.ll,
                   placement: s && "object" == typeof s ? s.initial : s,
@@ -204,18 +217,18 @@
                 getReferenceProps: f,
                 open: c,
               };
-            })(t);
-          return (0, s.jsx)(g.Provider, { value: r, children: n });
+            })(n);
+          return (0, s.jsx)(g.Provider, { value: r, children: t });
         },
         Anchor: function (e) {
-          const { children: n } = e,
-            t = r.Children.only(n),
+          const { children: t } = e,
+            n = r.Children.only(t),
             s = (0, r.useContext)(g);
-          return t
+          return n
             ? s
-              ? (0, r.cloneElement)(t, {
-                  ...s.getReferenceProps(t.props),
-                  ref: (0, l.XB)(t.props.ref, s.floating.refs.setReference),
+              ? (0, r.cloneElement)(n, {
+                  ...s.getReferenceProps(n.props),
+                  ref: (0, l.XB)(n.props.ref, s.floating.refs.setReference),
                 })
               : (console.error(
                   "<PopoverAnchor> must be a child of <PopoverRoot>.",
@@ -224,7 +237,7 @@
             : null;
         },
         Positioner: function (e) {
-          const { children: n, className: t, ref: i } = e,
+          const { children: t, className: n, ref: i } = e,
             c = (0, r.useContext)(g),
             l = (0, o.SV)([i, c?.floating.refs.setFloating]),
             h = (0, a.gK)();
@@ -236,14 +249,14 @@
               null
             );
           if (!c.open) return null;
-          let C = r.Children.only(n),
+          let C = r.Children.only(t),
             d = r.Fragment;
           C.type == j.FocusManager &&
             ((C = r.Children.only(C.props.children)), (d = f));
           const p = (0, r.cloneElement)(C, {
             ref: l,
             style: c.floating.floatingStyles,
-            className: t,
+            className: n,
             ...c.getFloatingProps(),
           });
           return (0, s.jsx)(o.XF, {
@@ -254,38 +267,38 @@
         FocusManager: f,
       };
     },
-    59805: (e, n, t) => {
+    59805: (e, t, n) => {
       "use strict";
-      t.d(n, { D: () => p });
-      var s = t(7850),
-        r = t(39049),
-        o = t(75659),
-        i = t(20187),
-        c = t(41324),
-        l = t(90626);
+      n.d(t, { D: () => p });
+      var s = n(7850),
+        r = n(39049),
+        o = n(75659),
+        i = n(20187),
+        c = n(41324),
+        l = n(90626);
       const a = l.createContext({ depth: 0 });
-      var h = t(11820),
-        C = t(64238),
-        d = t.n(C);
+      var h = n(11820),
+        C = n(64238),
+        d = n.n(C);
       function p(e) {
-        const { level: n = "auto", className: t, color: o } = e,
-          i = (function (e, n) {
-            if ("auto" === e && 0 === n) return "h1";
-            const t = "auto" === e ? n.toString() : e;
-            if (!/^[1-6]$/.test(t))
+        const { level: t = "auto", className: n, color: o } = e,
+          i = (function (e, t) {
+            if ("auto" === e && 0 === t) return "h1";
+            const n = "auto" === e ? t.toString() : e;
+            if (!/^[1-6]$/.test(n))
               return "auto" === e
                 ? (console.error(
                     '<Section> nesting has exceeded "h6" for headings.',
                   ),
                   "h6")
                 : (console.error(
-                    `Attempt to render invalid heading level, "${t}".`,
+                    `Attempt to render invalid heading level, "${n}".`,
                   ),
                   "h1");
-            return "h" + t;
-          })(n, (0, l.useContext)(a).depth);
+            return "h" + n;
+          })(t, (0, l.useContext)(a).depth);
         return (0, s.jsx)(i, {
-          ...(0, c.mz)({ ...e, className: d()((0, h.T)(), r.Heading, t) }, u),
+          ...(0, c.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, u),
         });
       }
       const u = [
@@ -298,20 +311,20 @@
         },
       ];
     },
-    28491: (e, n, t) => {
+    28491: (e, t, n) => {
       "use strict";
-      t.d(n, { Y: () => a });
-      var s = t(7850),
-        r = t(20187),
-        o = t(41324),
-        i = t(50122),
-        c = t(8527),
-        l = t(45699);
+      n.d(t, { Y: () => a });
+      var s = n(7850),
+        r = n(20187),
+        o = n(41324),
+        i = n(50122),
+        c = n(8527),
+        l = n(45699);
       function a(e) {
-        const { underline: n = "auto", ...t } = e,
+        const { underline: t = "auto", ...n } = e,
           r = c.TS.IN_GAMEPADUI ? l.Ii : "a";
         return (0, s.jsx)(r, {
-          ...(0, o.mz)({ ...t, underline: n, className: i.TextLink }, h),
+          ...(0, o.mz)({ ...n, underline: t, className: i.TextLink }, h),
         });
       }
       const h = [
@@ -319,30 +332,30 @@
         { prop: "underline", className: (e) => i[`Underline-${e}`] },
       ];
     },
-    17223: (e, n, t) => {
+    17223: (e, t, n) => {
       "use strict";
-      t.r(n), t.d(n, { GlobalFooter: () => Q });
-      var s = t(7850),
-        r = t(83392),
-        o = t(59805),
-        i = t(28491),
-        c = t(10430),
-        l = t(20187),
-        a = t(53965),
-        h = t(37603),
-        C = t(39479),
-        d = t(64238),
-        p = t.n(d),
-        u = t(75659),
-        g = t(41324),
-        f = t(75180);
+      n.r(t), n.d(t, { GlobalFooter: () => Q });
+      var s = n(7850),
+        r = n(83392),
+        o = n(59805),
+        i = n(28491),
+        c = n(10430),
+        l = n(20187),
+        a = n(53965),
+        h = n(37603),
+        C = n(39479),
+        d = n(64238),
+        p = n.n(d),
+        u = n(75659),
+        g = n(41324),
+        f = n(75180);
       function x(e) {
-        const { as: n = "div", ref: t, ...r } = e,
+        const { as: t = "div", ref: n, ...r } = e,
           o = (0, g.mz)({ ...r, className: p()(f.Grid, e.className) }, m),
-          i = n;
+          i = t;
         return (0, s.jsx)(C.J, {
           "flow-children": "grid",
-          children: (0, s.jsx)(i, { ref: t, ...o }),
+          children: (0, s.jsx)(i, { ref: n, ...o }),
         });
       }
       const m = [
@@ -376,6 +389,12 @@
           responsive: !0,
           className: f.AutoRows,
           cssProperty: "--grid-auto-rows",
+        },
+        {
+          prop: "autoFlow",
+          responsive: !0,
+          className: f.AutoFlow,
+          cssProperty: "--grid-auto-flow",
         },
         {
           prop: "areas",
@@ -432,13 +451,13 @@
           cssProperty: (e) => ["--grid-gap-y", `var(--spacing-${e})`],
         },
       ];
-      var H = t(2160),
-        j = t(90626);
-      function _(e, n = ["b", "i", "br"]) {
-        const t = n.join("|"),
+      var H = n(2160),
+        j = n(90626);
+      function _(e, t = ["b", "i", "br"]) {
+        const n = t.join("|"),
           s = [],
           r = new RegExp(
-            `(?<before>.*?)<(?<tagname>${t})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
+            `(?<before>.*?)<(?<tagname>${n})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
             "gs",
           );
         let o,
@@ -448,39 +467,39 @@
           if (!o.groups?.endtag) {
             const e = o.groups.before.length + o.groups.tagname.length + 2;
             (i += e), (r.lastIndex = o.index + e), s.push(o.groups.before);
-            const n = o[2],
-              t = j.createElement(n);
-            s.push(t);
+            const t = o[2],
+              n = j.createElement(t);
+            s.push(n);
             continue;
           }
           (i += o[0].length), s.push(o.groups.before);
           const e = o.groups.tagname,
-            t = o.groups.contents || "";
+            n = o.groups.contents || "";
           let c = null;
-          t && (c = _(t, n));
+          n && (c = _(n, t));
           const l = j.createElement(e, {}, c);
           s.push(l);
         }
         return s.push(e.slice(i)), j.createElement(j.Fragment, null, ...s);
       }
-      var v = t(91933),
-        L = t(38861);
+      var v = n(91933),
+        L = n(38861);
       function w() {
         return "desktop" === (0, v.j_)(L.k1);
       }
       function V() {
         w() && (0, v.Y1)(L.k1), "location" in window && location.reload();
       }
-      var b = t(8527),
-        M = t(60014),
-        S = t(74840),
-        z = t(90534),
-        R = t(49560);
-      t(42327);
+      var b = n(8527),
+        M = n(60014),
+        S = n(74840),
+        z = n(90534),
+        R = n(49560);
+      n(42327);
       function y(e) {
         const {
-            children: n,
-            hoverContent: t,
+            children: t,
+            hoverContent: n,
             nDelayShowMS: r,
             bTooltipMode: o,
             popoverProps: i,
@@ -491,21 +510,21 @@
           onOpenChange: l,
           interactions: {
             hover: (e) => {
-              let n = { ...e, delay: { open: r, close: 0 } };
-              return o && (n = { ...n, handleClose: null }), n;
+              let t = { ...e, delay: { open: r, close: 0 } };
+              return o && (t = { ...t, handleClose: null }), t;
             },
           },
           ...i,
           children: [
-            (0, s.jsx)(R.A.Anchor, { children: n }),
+            (0, s.jsx)(R.A.Anchor, { children: t }),
             (0, s.jsx)(R.A.Positioner, {
-              children: (0, s.jsx)(z.az, { children: t }),
+              children: (0, s.jsx)(z.az, { children: n }),
             }),
           ],
         });
       }
-      var T = t(60859),
-        E = t.n(T);
+      var T = n(60859),
+        E = n.n(T);
       function A() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -590,22 +609,22 @@
         });
       }
       function P(e) {
-        let { href: n, ...t } = e;
+        let { href: t, ...n } = e;
         const r = (0, M.n9)();
         return (
-          n?.startsWith(b.TS.STORE_BASE_URL) && (n = (0, M.bV)(r, n)),
+          t?.startsWith(b.TS.STORE_BASE_URL) && (t = (0, M.bV)(r, t)),
           (0, s.jsx)(i.Y, {
-            href: n,
+            href: t,
             color: "dull-11",
             target: "_blank",
             whiteSpace: "nowrap",
-            ...t,
+            ...n,
           })
         );
       }
       function N(e) {
-        const n = (0, c.xC)();
-        return "initial" === n || "sm" === n
+        const t = (0, c.xC)();
+        return "initial" === t || "sm" === t
           ? null
           : (0, s.jsx)("footer", {
               className: p()(E().SteamChinaFooter, e.className),
@@ -775,38 +794,38 @@
               }),
             });
       }
-      var U = t(48891);
+      var U = n(48891);
       const B = {};
-      (B.arabic = () => t.e(6939).then(t.t.bind(t, 36939, 19))),
-        (B.brazilian = () => t.e(3095).then(t.t.bind(t, 83095, 19))),
-        (B.bulgarian = () => t.e(864).then(t.t.bind(t, 864, 19))),
-        (B.czech = () => t.e(3910).then(t.t.bind(t, 73910, 19))),
-        (B.danish = () => t.e(7098).then(t.t.bind(t, 27098, 19))),
-        (B.dutch = () => t.e(4847).then(t.t.bind(t, 84847, 19))),
-        (B.english = () => t.e(3621).then(t.t.bind(t, 53621, 19))),
-        (B.finnish = () => t.e(9058).then(t.t.bind(t, 29058, 19))),
-        (B.french = () => t.e(2683).then(t.t.bind(t, 82683, 19))),
-        (B.german = () => t.e(9209).then(t.t.bind(t, 49209, 19))),
-        (B.greek = () => t.e(2933).then(t.t.bind(t, 42933, 19))),
-        (B.hungarian = () => t.e(6740).then(t.t.bind(t, 66740, 19))),
-        (B.indonesian = () => t.e(4631).then(t.t.bind(t, 4631, 19))),
-        (B.italian = () => t.e(517).then(t.t.bind(t, 10517, 19))),
-        (B.japanese = () => t.e(4788).then(t.t.bind(t, 24788, 19))),
-        (B.koreana = () => t.e(3838).then(t.t.bind(t, 83838, 19))),
-        (B.latam = () => t.e(1990).then(t.t.bind(t, 91990, 19))),
-        (B.norwegian = () => t.e(8953).then(t.t.bind(t, 18953, 19))),
-        (B.polish = () => t.e(8766).then(t.t.bind(t, 58766, 19))),
-        (B.portuguese = () => t.e(3110).then(t.t.bind(t, 93110, 19))),
-        (B.romanian = () => t.e(7384).then(t.t.bind(t, 67384, 19))),
-        (B.russian = () => t.e(8928).then(t.t.bind(t, 28928, 19))),
-        (B.schinese = () => t.e(8787).then(t.t.bind(t, 98787, 19))),
-        (B.spanish = () => t.e(6421).then(t.t.bind(t, 96421, 19))),
-        (B.swedish = () => t.e(7524).then(t.t.bind(t, 17524, 19))),
-        (B.tchinese = () => t.e(7248).then(t.t.bind(t, 67248, 19))),
-        (B.thai = () => t.e(6085).then(t.t.bind(t, 46085, 19))),
-        (B.turkish = () => t.e(7997).then(t.t.bind(t, 37997, 19))),
-        (B.ukrainian = () => t.e(7247).then(t.t.bind(t, 47247, 19))),
-        (B.vietnamese = () => t.e(3092).then(t.t.bind(t, 3092, 19)));
+      (B.arabic = () => n.e(6939).then(n.t.bind(n, 36939, 19))),
+        (B.brazilian = () => n.e(3095).then(n.t.bind(n, 83095, 19))),
+        (B.bulgarian = () => n.e(864).then(n.t.bind(n, 864, 19))),
+        (B.czech = () => n.e(3910).then(n.t.bind(n, 73910, 19))),
+        (B.danish = () => n.e(7098).then(n.t.bind(n, 27098, 19))),
+        (B.dutch = () => n.e(4847).then(n.t.bind(n, 84847, 19))),
+        (B.english = () => n.e(3621).then(n.t.bind(n, 53621, 19))),
+        (B.finnish = () => n.e(9058).then(n.t.bind(n, 29058, 19))),
+        (B.french = () => n.e(2683).then(n.t.bind(n, 82683, 19))),
+        (B.german = () => n.e(9209).then(n.t.bind(n, 49209, 19))),
+        (B.greek = () => n.e(2933).then(n.t.bind(n, 42933, 19))),
+        (B.hungarian = () => n.e(6740).then(n.t.bind(n, 66740, 19))),
+        (B.indonesian = () => n.e(4631).then(n.t.bind(n, 4631, 19))),
+        (B.italian = () => n.e(517).then(n.t.bind(n, 10517, 19))),
+        (B.japanese = () => n.e(4788).then(n.t.bind(n, 24788, 19))),
+        (B.koreana = () => n.e(3838).then(n.t.bind(n, 83838, 19))),
+        (B.latam = () => n.e(1990).then(n.t.bind(n, 91990, 19))),
+        (B.norwegian = () => n.e(8953).then(n.t.bind(n, 18953, 19))),
+        (B.polish = () => n.e(8766).then(n.t.bind(n, 58766, 19))),
+        (B.portuguese = () => n.e(3110).then(n.t.bind(n, 93110, 19))),
+        (B.romanian = () => n.e(7384).then(n.t.bind(n, 67384, 19))),
+        (B.russian = () => n.e(8928).then(n.t.bind(n, 28928, 19))),
+        (B.schinese = () => n.e(8787).then(n.t.bind(n, 98787, 19))),
+        (B.spanish = () => n.e(6421).then(n.t.bind(n, 96421, 19))),
+        (B.swedish = () => n.e(7524).then(n.t.bind(n, 17524, 19))),
+        (B.tchinese = () => n.e(7248).then(n.t.bind(n, 67248, 19))),
+        (B.thai = () => n.e(6085).then(n.t.bind(n, 46085, 19))),
+        (B.turkish = () => n.e(7997).then(n.t.bind(n, 37997, 19))),
+        (B.ukrainian = () => n.e(7247).then(n.t.bind(n, 47247, 19))),
+        (B.vietnamese = () => n.e(3092).then(n.t.bind(n, 3092, 19)));
       const O = (0, U.l)(async function (e) {
         if (B[e]) return B[e]();
       });
@@ -932,10 +951,10 @@
           }),
         });
       }
-      function X(e) {
+      function $(e) {
         return (0, s.jsx)(r.s, { direction: "column", gap: "4", ...e });
       }
-      function $(e) {
+      function X(e) {
         return (0, s.jsx)(o.D, {
           level: "3",
           color: "dull-12",
@@ -945,20 +964,20 @@
         });
       }
       function J(e) {
-        let { href: n, ...t } = e;
+        let { href: t, ...n } = e;
         const r = (0, M.n9)();
         return (
-          n?.startsWith(b.TS.STORE_BASE_URL) && (n = (0, M.bV)(r, n)),
+          t?.startsWith(b.TS.STORE_BASE_URL) && (t = (0, M.bV)(r, t)),
           (0, s.jsx)(i.Y, {
-            href: n,
+            href: t,
             color: "dull-11",
             target: "_blank",
             whiteSpace: "nowrap",
-            ...t,
+            ...n,
           })
         );
       }
-      function q() {
+      function K() {
         const e = (0, c.xC)();
         return (0, s.jsxs)(r.s, {
           gridArea: "main",
@@ -1031,7 +1050,7 @@
           ],
         });
       }
-      function K(e) {
+      function q(e) {
         return (
           (0, j.use)(O.Ready()),
           (0, s.jsx)(h.N, {
@@ -1055,11 +1074,11 @@
               zIndex: "1",
               textAlign: "start",
               children: [
-                (0, s.jsx)(q, {}),
-                (0, s.jsxs)(X, {
+                (0, s.jsx)(K, {}),
+                (0, s.jsxs)($, {
                   gridArea: "steam",
                   children: [
-                    (0, s.jsx)($, {
+                    (0, s.jsx)(X, {
                       children: O.Localize("#footer_link_header_steam"),
                     }),
                     (0, s.jsx)(J, {
@@ -1084,10 +1103,10 @@
                     }),
                   ],
                 }),
-                (0, s.jsxs)(X, {
+                (0, s.jsxs)($, {
                   gridArea: "valve",
                   children: [
-                    (0, s.jsx)($, {
+                    (0, s.jsx)(X, {
                       children: O.Localize("#footer_link_header_valve"),
                     }),
                     (0, s.jsx)(J, {
@@ -1108,10 +1127,10 @@
                     }),
                   ],
                 }),
-                (0, s.jsxs)(X, {
+                (0, s.jsxs)($, {
                   gridArea: "legal",
                   children: [
-                    (0, s.jsx)($, {
+                    (0, s.jsx)(X, {
                       children: O.Localize("#footer_link_header_legal"),
                     }),
                     (0, s.jsx)(J, {
@@ -1136,10 +1155,10 @@
                     }),
                   ],
                 }),
-                (0, s.jsxs)(X, {
+                (0, s.jsxs)($, {
                   gridArea: "more",
                   children: [
-                    (0, s.jsx)($, {
+                    (0, s.jsx)(X, {
                       children: O.Localize("#footer_link_header_more"),
                     }),
                     (0, s.jsx)(J, {
@@ -1167,13 +1186,13 @@
       }
       function Q(e) {
         if (b.TS.IN_GAMEPADUI) return null;
-        const n = (0, H.nA)(b.TS.EREALM)
+        const t = (0, H.nA)(b.TS.EREALM)
           ? (0, s.jsx)(N, { ...e })
-          : (0, s.jsx)(K, { ...e });
+          : (0, s.jsx)(q, { ...e });
         return (0, s.jsx)(M.nn, {
           controller: "footer",
           method: "footer",
-          children: n,
+          children: t,
         });
       }
     },

@@ -187,10 +187,13 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 }
 
 .review_box .control_block {
-	padding: 8px;
-	line-height: 22px;
-	font-size: 12px;
+	align-items: center;
 	color: #8f98a0;
+	display: flex;
+	font-size: 12px;
+	gap: 3.5px;
+	line-height: 22px;
+	padding: 8px;
 }
 
 .review_box .control_block .text {
@@ -299,7 +302,8 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 .dselect_container .dropcontainer ul {
 	background-color: #000000;
-	border-radius: 0 0 3px 3px;
+	border-radius: 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
 	list-style-type: none;
 	margin: 0;
 	max-height: 306px;
@@ -307,26 +311,31 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	padding: 5px;
 	position: absolute;
 	white-space: nowrap;
-	z-index: 999999;
+	z-index: 2000;
+}
+
+html.GamepadMode .dselect_container .dropcontainer ul {
+	border-radius: 3px;
+	padding: 0;
 }
 
 .dselect_container .dropcontainer ul.dropdownhidden {
 	display: none;
 }
 
-.dselect_container .dropcontainer ul.dropdownvisible {
-	top: -4px;
-}
-
 .dselect_container .dropcontainer ul li a {
 	color: #e1e1e1;
 	display: block;
+}
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
 	font-size: 12px;
 	line-height: 22px;
 	padding-inline: 2px;
 }
 
-.dselect_container .dropcontainer ul li a.highlighted_selection {
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
 	background: #3196FF;
 	color: #FFFFFF;
 }
@@ -337,16 +346,16 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	border-radius: 3px;
 	color: #e1e1e1;
 	font-size: 12px;
-	line-height: 21px;
+	line-height: 22px;
 	overflow: hidden;
 	padding-left: 8px;
-	padding-right: 26.45px !important;
+	padding-right: 26px !important;
 	position: relative;
 	vertical-align: middle;
 }
 
-html:not(.GamepadMode) .dselect_container .trigger {
-	height: 22px;
+html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
+	border-radius: 3px 3px 0 0;
 }
 
 .dselect_container .trigger::after {
@@ -354,7 +363,7 @@ html:not(.GamepadMode) .dselect_container .trigger {
 	content: '';
 	inset: 0 0 0 auto;
 	position: absolute;
-	width: 15.5px;
+	width: 16px;
 }
 
 @media screen and (max-width: 910px)

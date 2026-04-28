@@ -409,6 +409,7 @@
         BackgroundAnimation: "_2uOgp6viCndXuqbh5K6oj2",
         "ItemFocusAnim-darkerGrey-nocolor": "_9B8ICY6Oo0c30ezPxO0Z_",
         "ItemFocusAnim-darkerGrey": "_1Xqj0mDS9JNyCPKAWoAToR",
+        "ItemFocusAnim-darkGreySettings": "_1w6Lzcv_0r4ltB3J0eyPkz",
         "ItemFocusAnim-darkGrey": "_3Dp8rud7c_UMhzMi0aoSOB",
         "ItemFocusAnim-grey": "_2YgKF8YUTgdNlK6XXn3TRU",
         "ItemFocusAnim-translucent-white-10": "_1qgSBZEjQU4y0QLXRHj5Pv",
@@ -463,6 +464,7 @@
         BackgroundAnimation: "-ipp2QE1_kU6DTe9nmRRp",
         "ItemFocusAnim-darkerGrey-nocolor": "_2UkB7RAKrJ6HiA1CJGk-F1",
         "ItemFocusAnim-darkerGrey": "_15rEZFrkU0SBrMZVF6-6Mr",
+        "ItemFocusAnim-darkGreySettings": "ajRiFwyYbclt4xwkyqu3l",
         "ItemFocusAnim-darkGrey": "_2kImwWhC-tb2H6I99ndnAP",
         "ItemFocusAnim-grey": "_27Bdvmqrm5bgsPLD_22h53",
         "ItemFocusAnim-translucent-white-10": "_3vEbBKWxD-rEJWNp299K_k",
@@ -494,6 +496,7 @@
         BackgroundAnimation: "_1bThz3qdu8FEDUhblPrqi5",
         "ItemFocusAnim-darkerGrey-nocolor": "_2ukneD9j0NJdCUY9d0WE4F",
         "ItemFocusAnim-darkerGrey": "_1fArijzDHP1CXifgnKdmHv",
+        "ItemFocusAnim-darkGreySettings": "_1VMAs4BWw-banmr1e94Jrl",
         "ItemFocusAnim-darkGrey": "_29aEvbT3uKb0j4YDCcuH-n",
         "ItemFocusAnim-grey": "EEcTlJAis5J33-H61rQjM",
         "ItemFocusAnim-translucent-white-10": "_2w1nSidx_OQXvBLGEotrPX",
@@ -524,6 +527,7 @@
         BackgroundAnimation: "_28UdAwJL1VVNIhToTVkbzn",
         "ItemFocusAnim-darkerGrey-nocolor": "_1qCZl4y_2oHrrYZI9Hibra",
         "ItemFocusAnim-darkerGrey": "BWhWNNktZxzexLOsIcbZY",
+        "ItemFocusAnim-darkGreySettings": "_3HUuLrH4odZLiP9dxRicVX",
         "ItemFocusAnim-darkGrey": "_2aCcnrjhXGo4bFOX9hqx79",
         "ItemFocusAnim-grey": "_1nYlSZZ9jBVou7McpZBX5-",
         "ItemFocusAnim-translucent-white-10": "_3mjaRD07EQNBZmbGtP1-FX",
@@ -558,6 +562,7 @@
         BackgroundAnimation: "_2wkaLTk9SmV_u4ZHstmlSJ",
         "ItemFocusAnim-darkerGrey-nocolor": "_31zN1d6H6K0tF5idJm3paY",
         "ItemFocusAnim-darkerGrey": "_1LfZVHlVf77A_er0HCiVK3",
+        "ItemFocusAnim-darkGreySettings": "XQS7iveLneKXomk_ReDoF",
         "ItemFocusAnim-darkGrey": "_34Eq9-X4jq5rmkwMwv8Ymi",
         "ItemFocusAnim-grey": "_3ywoHgZlDMw2J1XU2BCYXd",
         "ItemFocusAnim-translucent-white-10": "_1GF0iBfeo_kfHsAWYDHIiC",
@@ -606,6 +611,7 @@
         BackgroundAnimation: "_3ZhKghHKiEoYopTsZKPlOu",
         "ItemFocusAnim-darkerGrey-nocolor": "_1X-gv48clp-W7ekh8RhZpS",
         "ItemFocusAnim-darkerGrey": "_20uaFxoUUSH1KxRwt8-eI",
+        "ItemFocusAnim-darkGreySettings": "_2AXaukKUAwVTf1D0N9E3qa",
         "ItemFocusAnim-darkGrey": "_9RYslq7SlUYzCp0EU3l69",
         "ItemFocusAnim-grey": "G2bZ8HxRp72vmjXBfy7-x",
         "ItemFocusAnim-translucent-white-10": "dmoeNG_z_D7ykrd4Bo278",
@@ -647,6 +653,7 @@
         BackgroundAnimation: "_375cQ8FmE8BgJE77tuipIf",
         "ItemFocusAnim-darkerGrey-nocolor": "opbJ3m-yDGEVxryg4WY8-",
         "ItemFocusAnim-darkerGrey": "_1XUgeIEn3o_04GAMhl7xSv",
+        "ItemFocusAnim-darkGreySettings": "_2tWuiPFmbG8rPTNGtdPscl",
         "ItemFocusAnim-darkGrey": "_9cKQt2YPvr9KrQHiG4nLX",
         "ItemFocusAnim-grey": "_2sFi6kDbLCLJRc8Ypoghsl",
         "ItemFocusAnim-translucent-white-10": "_1JkulQf7Q7sJEl9MX6dUg1",
@@ -688,6 +695,7 @@
         BackgroundAnimation: "_2DoHl9fOHLtQkJ2pJxTboJ",
         "ItemFocusAnim-darkerGrey-nocolor": "_1Mi5wtTGbcvGWKdmMn3tk1",
         "ItemFocusAnim-darkerGrey": "_3NJob8sEWSYkde3eHQ93-E",
+        "ItemFocusAnim-darkGreySettings": "_13rah3OuxMQNX8VUP4vB03",
         "ItemFocusAnim-darkGrey": "_24CEGZhdSEOnbOXyQAej5K",
         "ItemFocusAnim-grey": "_3JIUTBdPImT1FVCWdHwPBX",
         "ItemFocusAnim-translucent-white-10": "_31GRmKSe8UiygqWJWjM98x",
@@ -825,6 +833,7 @@
         BackgroundAnimation: "_2qpjzIdNNgP3z2l3UWROEB",
         "ItemFocusAnim-darkerGrey-nocolor": "-IsMyprEstj11hBrNQ-KR",
         "ItemFocusAnim-darkerGrey": "_2XxOQFNd4CnajOqLBv-i5W",
+        "ItemFocusAnim-darkGreySettings": "AqMi4ObfRgO_TS-O4IwNl",
         "ItemFocusAnim-darkGrey": "_3IO5aDCt-UnWHDc2f76BlU",
         "ItemFocusAnim-grey": "_21Xnwo44Ghddi9lXAqodn3",
         "ItemFocusAnim-translucent-white-10": "_2DmiSIzSyFuvAxTp3DroWW",
@@ -895,6 +904,7 @@
         BackgroundAnimation: "_1d8eTDZ5xZBczD6PKxTaTU",
         "ItemFocusAnim-darkerGrey-nocolor": "_2JZGG7-Ia_90Kay_tcOTQz",
         "ItemFocusAnim-darkerGrey": "FVOrp2CBQuVmN48aQtl75",
+        "ItemFocusAnim-darkGreySettings": "_3aPfksRWQGfh_vKaSHiAh6",
         "ItemFocusAnim-darkGrey": "IlxfrAr3w61RoxS7mlVDR",
         "ItemFocusAnim-grey": "_3WdJdCPEzGTJ4nL48WgaLv",
         "ItemFocusAnim-translucent-white-10": "_2QPbYVa2PSRR4A-zvoVa5J",
@@ -918,6 +928,7 @@
         BackgroundAnimation: "YP90WLVdeEGY0X9rxN1I4",
         "ItemFocusAnim-darkerGrey-nocolor": "_2NOI6WOZFh_sJu9IbK4TD",
         "ItemFocusAnim-darkerGrey": "_2Og5Fv2lBl-pBA07_kZLwr",
+        "ItemFocusAnim-darkGreySettings": "_1YowsimLJZRNE_uj2y4CwN",
         "ItemFocusAnim-darkGrey": "_4IgdOZMfUbaGnc2xy7z7_",
         "ItemFocusAnim-grey": "_1bBi0gzMWDF2_RQMCVXhdm",
         "ItemFocusAnim-translucent-white-10": "MvMeOTXNHHylMs272gYJg",
@@ -954,6 +965,7 @@
         BackgroundAnimation: "_2_dbMnIf_4y-JuJqZPYF2_",
         "ItemFocusAnim-darkerGrey-nocolor": "_3-VXH54VFRTZYQ_x5mozwM",
         "ItemFocusAnim-darkerGrey": "_1X1ASoW1QaZzBcxT8-IcEM",
+        "ItemFocusAnim-darkGreySettings": "_33Iipaz0_1WLhrAgoWBlWf",
         "ItemFocusAnim-darkGrey": "_1VOu_fBH85UcywUkShbJVJ",
         "ItemFocusAnim-grey": "_2bvy7JKRs_uPtQiFepxqpp",
         "ItemFocusAnim-translucent-white-10": "_3Vtgi78kFrv1NJXRpj4p7N",
@@ -991,6 +1003,7 @@
         BackgroundAnimation: "_3WTclVbHyztmZGAdhryyKa",
         "ItemFocusAnim-darkerGrey-nocolor": "_2IIOl8apowCn9wwSjdcI8X",
         "ItemFocusAnim-darkerGrey": "VcnTHzR7EZsCQ4bvhW79E",
+        "ItemFocusAnim-darkGreySettings": "qn0qFipOMXD0xZIBdQj0M",
         "ItemFocusAnim-darkGrey": "_1zRcvLP-RPxfWUzpQvwE_W",
         "ItemFocusAnim-grey": "_1N-5ZejTb7mx-hBD0Jrtxa",
         "ItemFocusAnim-translucent-white-10": "_2a7brG42GaZB7LhEWYdB-b",
@@ -1025,6 +1038,7 @@
         BackgroundAnimation: "_1WlCEPAox_gLXs_1gQopXd",
         "ItemFocusAnim-darkerGrey-nocolor": "M2jHEVZcNWgf3m9RqEBQA",
         "ItemFocusAnim-darkerGrey": "S4ZdIgjj8HG4SpINCswEd",
+        "ItemFocusAnim-darkGreySettings": "_1QOb_ENu9_zinBFVPHdBSh",
         "ItemFocusAnim-darkGrey": "_3tDihFPnnTgNjEOuVMa3x9",
         "ItemFocusAnim-grey": "_3IKIFF_wwfDopC7Irn5OPX",
         "ItemFocusAnim-translucent-white-10": "_2rfgxI-zIiT9yVy3P-SVS",
@@ -1061,6 +1075,7 @@
         BackgroundAnimation: "lPImFt2IEcrCe3ZggeLoL",
         "ItemFocusAnim-darkerGrey-nocolor": "_29MogmEonZprflz36Y7HKu",
         "ItemFocusAnim-darkerGrey": "_1WmFb5_5fubgMmgB4VMvH2",
+        "ItemFocusAnim-darkGreySettings": "_3uAHzQ33mv-3u2u5WlPH72",
         "ItemFocusAnim-darkGrey": "_2V4XjQuZvZnw0wH1F7jsp",
         "ItemFocusAnim-grey": "_1f5Wt-yMcACXU5B0De5xx7",
         "ItemFocusAnim-translucent-white-10": "_11asHiM8NKR0ipmYWDQiR2",
@@ -1154,6 +1169,7 @@
         BackgroundAnimation: "_3Y8yA_7-GVQX7gCQvFXM29",
         "ItemFocusAnim-darkerGrey-nocolor": "ASYOY-ScnNwVcgERA8BlY",
         "ItemFocusAnim-darkerGrey": "_1w2Sb9TMRsuWIMVZbt_4SX",
+        "ItemFocusAnim-darkGreySettings": "YVgcC-MwM3-D66DrQhM5",
         "ItemFocusAnim-darkGrey": "_158F2Fis-BlMC8f3Osfq3t",
         "ItemFocusAnim-grey": "_1B12faVExLUgmBlOcuz0PE",
         "ItemFocusAnim-translucent-white-10": "_3C_7jJPFHmVXhBHm1LmkE7",
@@ -1239,6 +1255,7 @@
         BackgroundAnimation: "_1ymKWv42z0aE0xTToWtVRP",
         "ItemFocusAnim-darkerGrey-nocolor": "_21NW6WUbNFxExDM-kwUfez",
         "ItemFocusAnim-darkerGrey": "_1-1YaVLp_RYVZfUzhnEeUA",
+        "ItemFocusAnim-darkGreySettings": "_3OOHoeyg_v_4BewjZToPRP",
         "ItemFocusAnim-darkGrey": "FjTuOsA5YWqQJ734mIpJ-",
         "ItemFocusAnim-grey": "_3dvlfksypIFgBlX3z1RxeB",
         "ItemFocusAnim-translucent-white-10": "_1Q7-IQw61FJGRrjzZqNl7y",
@@ -1251,7 +1268,7 @@
     },
     17083: (e, t, i) => {
       "use strict";
-      i.d(t, { N_: () => h, k2: () => w });
+      i.d(t, { N_: () => _, k2: () => w });
       var s = i(92757),
         r = i(42891),
         n = i(90626),
@@ -1296,24 +1313,24 @@
           });
         return (d.ref = (u !== p && t) || i), n.createElement("a", d);
       });
-      var h = p(function (e, t) {
+      var _ = p(function (e, t) {
           var i = e.component,
             r = void 0 === i ? g : i,
-            h = e.replace,
-            _ = e.to,
+            _ = e.replace,
+            h = e.to,
             f = e.innerRef,
             w = (0, l.A)(e, ["component", "replace", "to", "innerRef"]);
           return n.createElement(s.XZ.Consumer, null, function (e) {
             e || (0, c.A)(!1);
             var i = e.history,
-              s = m(d(_, e.location), e.location),
+              s = m(d(h, e.location), e.location),
               l = s ? i.createHref(s) : "",
               g = (0, o.A)({}, w, {
                 href: l,
                 navigate: function () {
-                  var t = d(_, e.location),
+                  var t = d(h, e.location),
                     s = (0, a.AO)(e.location) === (0, a.AO)(m(t));
-                  (h || s ? i.replace : i.push)(t);
+                  (_ || s ? i.replace : i.push)(t);
                 },
               });
             return (
@@ -1322,11 +1339,11 @@
             );
           });
         }),
-        _ = function (e) {
+        h = function (e) {
           return e;
         },
         f = n.forwardRef;
-      void 0 === f && (f = _);
+      void 0 === f && (f = h);
       var w = f(function (e, t) {
         var i = e["aria-current"],
           r = void 0 === i ? "page" : i,
@@ -1393,7 +1410,7 @@
             v,
           );
           return (
-            _ !== f ? (R.ref = t || S) : (R.innerRef = S), n.createElement(h, R)
+            h !== f ? (R.ref = t || S) : (R.innerRef = S), n.createElement(_, R)
           );
         });
       });
@@ -1761,7 +1778,7 @@
     },
     82477: (e, t, i) => {
       "use strict";
-      i.d(t, { Cg: () => p, pZ: () => h, vg: () => g });
+      i.d(t, { Cg: () => p, pZ: () => _, vg: () => g });
       var s = i(7850),
         r = i(90626),
         n = i(738),
@@ -1775,7 +1792,7 @@
         return (0, s.jsx)(n.x_, {
           onEscKeypress: e.closeModal,
           bDisableBackgroundDismiss: !0,
-          children: (0, s.jsx)(_, {
+          children: (0, s.jsx)(h, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
@@ -1798,14 +1815,14 @@
           { strTitle: (0, a.we)("#Login_SignInTitle") },
         );
       }
-      function h(e, t) {
+      function _(e, t) {
         (0, n.pg)(
           (0, s.jsx)(u, { ownerWin: window, redirectURL: e, guestOption: t }),
           window,
           { strTitle: (0, a.we)("#Login_SignInTitle") },
         );
       }
-      function _(e) {
+      function h(e) {
         const { redirectURL: t, guestOption: i } = e,
           [n] = (0, r.useState)(
             new c.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
@@ -2043,8 +2060,8 @@
                       ],
                       p = m * (s <= 1e3 ? 1 : s / 1e3) * (t == l.Gold ? 2 : 1),
                       g = (Math.random() - 0.5) * s,
-                      h = (Math.random() - 0.5) * s,
-                      _ = [h, g + h],
+                      _ = (Math.random() - 0.5) * s,
+                      h = [_, g + _],
                       f = c(t),
                       w = d(t);
                     i.push({
@@ -2053,7 +2070,7 @@
                       rotationRatioX: e,
                       rotationRatioZ: a,
                       yRange: u,
-                      xRange: _,
+                      xRange: h,
                       scale: p,
                       colorHue: f,
                       filter: w,
@@ -2144,17 +2161,17 @@
             { rgParticleStyles: a, rgStreamerStyles: o } = m(t, e);
           switch (e) {
             case l.Gold:
-              n = a.map((e, t) => (0, s.jsx)(_, { style: e }, t));
+              n = a.map((e, t) => (0, s.jsx)(h, { style: e }, t));
               break;
             case l.LNY2020:
               n = a.map((e, t) =>
                 t % 2
-                  ? (0, s.jsx)(h, { style: e }, t)
+                  ? (0, s.jsx)(_, { style: e }, t)
                   : (0, s.jsx)(f, { style: e }, t),
               );
               break;
             case l.Default:
-              n = a.map((e, t) => (0, s.jsx)(h, { style: e }, t));
+              n = a.map((e, t) => (0, s.jsx)(_, { style: e }, t));
           }
           return (0, s.jsxs)("div", {
             style: {
@@ -2176,8 +2193,8 @@
             ],
           });
         },
-        h = ({ style: e }) => (0, s.jsx)(n.CS.div, { style: { ...p, ...e } }),
-        _ = ({ style: e }) => {
+        _ = ({ style: e }) => (0, s.jsx)(n.CS.div, { style: { ...p, ...e } }),
+        h = ({ style: e }) => {
           const [t] = (0, r.useState)(Math.floor(Math.random() * I.length)),
             i = I[t];
           return (0, s.jsx)(i, {
@@ -2414,8 +2431,8 @@
         u = i(68797),
         p = i(84933),
         g = i(56545),
-        h = i(83935),
-        _ = i(17645),
+        _ = i(83935),
+        h = i(17645),
         f = i(58222),
         w = i(37735),
         y = i(80613),
@@ -2930,6 +2947,7 @@
                     br: M.qM.readBool,
                     bw: M.gp.writeBool,
                   },
+                  is_self: { n: 21, br: M.qM.readBool, bw: M.gp.writeBool },
                 },
               }),
             B.sm_m
@@ -4736,9 +4754,9 @@
           (e) => e.toString(),
         );
         m_batchedRewardItemLoader = new Se(
-          (e) => h.a9.BatchedQueryRewardItems(this.m_anonymousTransport, e),
+          (e) => _.a9.BatchedQueryRewardItems(this.m_anonymousTransport, e),
           (e) => {
-            const t = g.w.Init(h.Dj);
+            const t = g.w.Init(_.Dj);
             return t.Body().set_requests(e), t;
           },
           (e) =>
@@ -4847,9 +4865,9 @@
         }
         async GetLoyaltyRewardsSummary() {
           if (!this.BIsLoggedIn()) return;
-          const e = g.w.Init(h.pt);
+          const e = g.w.Init(_.pt);
           e.SetBodyFields({ steamid: m.iA.steamid });
-          let t = await h.a9.GetSummary(this.m_transport, e);
+          let t = await _.a9.GetSummary(this.m_transport, e);
           1 == t.GetEResult()
             ? (this.m_lPointsAvailable = a.A.fromString(
                 t.Body().summary().points(),
@@ -4866,8 +4884,8 @@
         }
         async LoadAwardCost() {
           this.m_bLoadedAwardCost = !0;
-          const e = g.w.Init(h.Sm);
-          let t = await h.a9.GetReactionConfig(this.m_transport, e);
+          const e = g.w.Init(_.Sm);
+          let t = await _.a9.GetReactionConfig(this.m_transport, e);
           1 == t.GetEResult()
             ? ((this.m_unAwardPointsTransferred = 0),
               t
@@ -4984,7 +5002,7 @@
             .filter(Boolean);
         }
         async LoadRewardDefinitions(...e) {
-          const t = new h.GB();
+          const t = new _.GB();
           t.set_language(m.TS.LANGUAGE),
             t.set_include_direct_purchase_disabled(!0),
             e.forEach((e) => t.add_definitionids(e));
@@ -5197,22 +5215,22 @@
               searchTerm: p,
             } = e,
             g = we(n),
-            _ = new h.GB();
-          r.forEach((e) => _.add_appids(e)),
-            _.set_language(m.TS.LANGUAGE),
-            _.set_count(t),
-            _.set_sort(g.sort),
-            _.set_sort_descending(g.sort_descending),
-            _.set_community_item_classes(a),
-            _.set_filters(o),
-            _.set_filter_match_any_category_tags(l),
-            _.set_excluded_content_descriptors(c),
-            _.set_excluded_store_tagids(d),
-            _.set_excluded_appids(u),
-            _.set_search_term(p),
-            s && _.set_reward_types(s),
-            i && _.set_cursor(i);
-          const f = await this.m_batchedRewardItemLoader.Load(_);
+            h = new _.GB();
+          r.forEach((e) => h.add_appids(e)),
+            h.set_language(m.TS.LANGUAGE),
+            h.set_count(t),
+            h.set_sort(g.sort),
+            h.set_sort_descending(g.sort_descending),
+            h.set_community_item_classes(a),
+            h.set_filters(o),
+            h.set_filter_match_any_category_tags(l),
+            h.set_excluded_content_descriptors(c),
+            h.set_excluded_store_tagids(d),
+            h.set_excluded_appids(u),
+            h.set_search_term(p),
+            s && h.set_reward_types(s),
+            i && h.set_cursor(i);
+          const f = await this.m_batchedRewardItemLoader.Load(h);
           return 1 == f.eresult
             ? f.response
             : (console.error(
@@ -5261,7 +5279,7 @@
           );
         }
         async LoadSeasonalBadgeDefinition() {
-          const e = new h.GB();
+          const e = new _.GB();
           e.set_appids([this.GetCurrentSeasonalAppID()]),
             e.set_community_item_classes([1]),
             e.set_count(1),
@@ -5287,7 +5305,7 @@
           );
         }
         async LoadGoldenProfileDefinition() {
-          const e = new h.GB();
+          const e = new _.GB();
           e.set_appids([this.GetCurrentSeasonalAppID()]),
             e.set_community_item_classes([8]),
             e.set_count(1),
@@ -5322,7 +5340,7 @@
           );
         }
         async LoadCouponDefinitions() {
-          const e = new h.GB();
+          const e = new _.GB();
           e.set_appids([this.GetCurrentSeasonalAppID()]),
             e.set_reward_types([4]),
             e.set_count(10),
@@ -5478,8 +5496,8 @@
         }
         async LoadActiveBonuses() {
           this.m_bLoadedActiveBonuses = !0;
-          const e = g.w.Init(h.L),
-            t = await h.a9.GetActivePurchaseBonuses(this.m_transport, e);
+          const e = g.w.Init(_.L),
+            t = await _.a9.GetActivePurchaseBonuses(this.m_transport, e);
           1 == t.GetEResult()
             ? this.m_rgActiveBonuses.push(
                 ...t
@@ -5600,10 +5618,10 @@
             return (
               (s = { eResult: 21, strMessage: (0, l.we)("#Redeem_SignIn") }), s
             );
-          const r = g.w.Init(h.Cs);
+          const r = g.w.Init(_.Cs);
           r.Body().set_defid(e),
             r.Body().set_expected_points_cost(i.toString());
-          const n = await h.a9.RedeemPoints(this.m_transport, r);
+          const n = await _.a9.RedeemPoints(this.m_transport, r);
           return (
             (s.eResult = n.GetEResult()),
             1 == n.GetEResult()
@@ -5622,9 +5640,9 @@
             return (
               (i = { eResult: 21, strMessage: (0, l.we)("#Redeem_SignIn") }), i
             );
-          const s = g.w.Init(h.mo);
+          const s = g.w.Init(_.mo);
           s.Body().set_defid(e), s.Body().set_num_levels(t);
-          const r = await h.a9.RedeemPointsForBadgeLevel(this.m_transport, s);
+          const r = await _.a9.RedeemPointsForBadgeLevel(this.m_transport, s);
           return (
             (i.eResult = r.GetEResult()),
             1 == r.GetEResult()
@@ -5641,9 +5659,9 @@
           let t = { eResult: 2, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: 21, strMessage: "Not logged on" }), t;
-          const i = g.w.Init(h.P$);
+          const i = g.w.Init(_.P$);
           i.Body().set_customization_type(e);
-          const s = await h.a9.RedeemPointsForProfileCustomization(
+          const s = await _.a9.RedeemPointsForProfileCustomization(
             this.m_transport,
             i,
           );
@@ -5664,9 +5682,9 @@
             return (
               (i = { eResult: 21, strMessage: (0, l.we)("#Redeem_SignIn") }), i
             );
-          const s = g.w.Init(h.jK);
+          const s = g.w.Init(_.jK);
           s.SetBodyFields({ customization_type: e, new_level: t });
-          const r = await h.a9.RedeemPointsForProfileCustomizationUpgrade(
+          const r = await _.a9.RedeemPointsForProfileCustomizationUpgrade(
             this.m_transport,
             s,
           );
@@ -5878,8 +5896,8 @@
         async LoadEligibleApps() {
           if (((this.m_bLoadedEligibleApps = !0), !this.BIsLoggedIn()))
             return [];
-          const e = g.w.Init(h.IL),
-            t = await h.a9.GetEligibleApps(this.m_transport, e);
+          const e = g.w.Init(_.IL),
+            t = await _.a9.GetEligibleApps(this.m_transport, e);
           return 1 == t.GetEResult()
             ? t.Body().toObject().apps
             : (console.error(
@@ -5917,9 +5935,9 @@
         }
         async GetEquippedProfileItems(e) {
           let t = { eResult: 2 };
-          const i = g.w.Init(h.zq);
+          const i = g.w.Init(_.zq);
           i.Body().set_steamid(e), i.Body().set_language(m.TS.LANGUAGE);
-          const s = await h.a9.GetEquippedProfileItems(this.m_transport, i);
+          const s = await _.a9.GetEquippedProfileItems(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             1 != s.GetEResult() &&
@@ -5985,7 +6003,7 @@
           };
         }
         async LoadRewardItem(e) {
-          const t = new h.GB();
+          const t = new _.GB();
           t.set_language(m.TS.LANGUAGE),
             t.set_count(1),
             t.set_definitionids([e]);
@@ -6002,9 +6020,9 @@
         m_mapPages = o.sH.map({}, { deep: !1 });
         GetPageDescriptor(e) {
           return (
-            this.m_mapPages.has(he(e)) ||
-              this.m_mapPages.set(he(e), this.BuildPage(e)),
-            this.m_mapPages.get(he(e))
+            this.m_mapPages.has(_e(e)) ||
+              this.m_mapPages.set(_e(e), this.BuildPage(e)),
+            this.m_mapPages.get(_e(e))
           );
         }
         BuildPage(e) {
@@ -6072,7 +6090,7 @@
                 },
               };
             },
-            s = (e) => this.m_mapPages.set(he(e.params), e),
+            s = (e) => this.m_mapPages.set(_e(e.params), e),
             r = e(
               (0, l.we)(
                 "#RewardCluster_Popular_Title",
@@ -6127,12 +6145,12 @@
               (0, l.we)("#RewardCluster_AvatarFrames_Subtitle"),
               { itemclass: [14] },
             ),
-            h = e(
+            _ = e(
               (0, l.we)("#RewardCluster_All_Title", de(16, !0)),
               (0, l.we)("#RewardCluster_SteamDeckKeyboardSkins_Subtitle"),
               { itemclass: [16] },
             ),
-            _ = e(
+            h = e(
               (0, l.we)("#RewardCluster_All_Title", de(17, !0)),
               (0, l.we)("#RewardCluster_SteamDeckStartupMovies_Subtitle"),
               { itemclass: [17] },
@@ -6195,7 +6213,7 @@
             x = [
               { cluster: C, type: 1 },
               {
-                cluster: _,
+                cluster: h,
                 type: 1,
                 linkedPage: {
                   type: "custom",
@@ -6321,8 +6339,8 @@
             new je(
               "steamdeck",
               [
-                { cluster: h, type: 1 },
                 { cluster: _, type: 1 },
+                { cluster: h, type: 1 },
               ],
               (0, l.we)("#ShopPageTitle_SteamDeckItems"),
               void 0,
@@ -6332,7 +6350,7 @@
             s(
               new je(
                 "keyboard",
-                [{ cluster: h, type: 0 }],
+                [{ cluster: _, type: 0 }],
                 (0, l.we)("#ShopPageTitle_SteamDeckKeyboardSkin"),
                 void 0,
                 (0, l.we)("#SearchPlaceholder_SteamDeckKeyboardSkin"),
@@ -6343,7 +6361,7 @@
                 "startupmovie",
                 [
                   { cluster: f, type: 1 },
-                  { cluster: _, type: 0 },
+                  { cluster: h, type: 0 },
                 ],
                 (0, l.we)("#ShopPageTitle_SteamDeckStartupMovie"),
                 void 0,
@@ -6432,7 +6450,7 @@
                     break;
                 }
                 this.m_mapPages.set(
-                  he({ type: "custom", pageid: me }),
+                  _e({ type: "custom", pageid: me }),
                   new xe(me, S),
                 );
               });
@@ -6451,10 +6469,10 @@
             return console.error(`Unknown page type ${e.type}`), t;
         }
       }
-      function he(e) {
+      function _e(e) {
         return btoa(JSON.stringify(e));
       }
-      function _e(e, t) {
+      function he(e, t) {
         return `${e.join("_")}__${fe(t)}`;
       }
       function fe(e) {
@@ -6536,7 +6554,7 @@
           (this.m_filter = i),
             (this.m_strTitle = e),
             (this.m_strSubtitle = t),
-            (this.m_strId = _e([], i));
+            (this.m_strId = he([], i));
         }
         get id() {
           return this.m_strId;
@@ -6563,7 +6581,7 @@
             (this.m_strSubtitle = t || ""),
             (this.m_additionalFilter = i || {}),
             ae.Vw.GetAppInfo(this.m_appid),
-            (this.m_strId = _e([this.m_appid], this.m_additionalFilter));
+            (this.m_strId = he([this.m_appid], this.m_additionalFilter));
         }
         get id() {
           return this.m_strId;
@@ -6608,7 +6626,7 @@
               type: 1,
               linkedPage: null,
               cluster: {
-                id: he({ eventname: this.m_strEventName, type: "event" }),
+                id: _e({ eventname: this.m_strEventName, type: "event" }),
                 title: (0, l.we)("#RewardCluster_FeaturedItems"),
                 subtitle: "",
                 GetRewards: (e, t, i) =>
@@ -6633,7 +6651,7 @@
                 type: 1,
                 linkedPage: null,
                 cluster: {
-                  id: he({
+                  id: _e({
                     eventname: this.m_strEventName,
                     type: "event",
                     itemclass: e,
@@ -6691,7 +6709,7 @@
               view: {
                 type: 1,
                 cluster: {
-                  id: _e([this.m_appid], { rewardtype: [5] }),
+                  id: he([this.m_appid], { rewardtype: [5] }),
                   title: (0, l.we)("#RewardItemType_Bundle_plural"),
                   subtitle: "",
                   GetRewards: (e, t, i) =>
@@ -6712,7 +6730,7 @@
             view: {
               type: 1,
               cluster: {
-                id: _e([this.m_appid], { itemclass: [e] }),
+                id: he([this.m_appid], { itemclass: [e] }),
                 title: de(e, !0),
                 subtitle: "",
                 GetRewards: (t, i, s) =>
@@ -6944,8 +6962,8 @@
         }
         async LoadCanClaimFreeSticker() {
           if (!pe.Get().BIsLoggedIn()) return;
-          const e = g.w.Init(_.c3);
-          let t = await _.Qm.CanClaimItem(pe.Get().GetServiceTransport(), e);
+          const e = g.w.Init(h.c3);
+          let t = await h.Qm.CanClaimItem(pe.Get().GetServiceTransport(), e);
           1 == t.GetEResult()
             ? this.InitFreeItemReward(t.Body().toObject())
             : console.error(
@@ -6958,8 +6976,8 @@
             return (
               (e = { eResult: 21, strMessage: (0, l.we)("#Redeem_SignIn") }), e
             );
-          const t = g.w.Init(_.wt),
-            i = await _.Qm.ClaimItem(pe.Get().GetServiceTransport(), t);
+          const t = g.w.Init(h.wt),
+            i = await h.Qm.ClaimItem(pe.Get().GetServiceTransport(), t);
           return (
             (e.eResult = i.GetEResult()),
             1 == i.GetEResult()
@@ -7026,8 +7044,8 @@
           ...i,
           children: ["-", e, "%"],
         });
-      var h = i(96259),
-        _ = i(6519);
+      var _ = i(96259),
+        h = i(6519);
       function f({ definition: e, theme: t, ...i }) {
         const { icon_url: s, name: r } = a.Vw.GetAppInfo(e.appid),
           n = e.internal_description,
@@ -7057,8 +7075,8 @@
               attributes: d,
               className: p,
               style: g,
-              onClick: h,
-              ..._
+              onClick: _,
+              ...h
             } = e,
             f = j(n);
           return (0, s.jsxs)(c.Kt, {
@@ -7066,8 +7084,8 @@
             flexDirection: "column",
             className: (0, u.A)(m.BundleContainer, p),
             style: { ...g, width: "524px" },
-            onActivate: h,
-            ..._,
+            onActivate: _,
+            ...h,
             children: [
               i &&
                 (0, s.jsx)("img", { title: t, src: i, className: m.AppIcon }),
@@ -7115,13 +7133,13 @@
                         className: m.AlreadyOwned,
                         children: (0, l.we)("#Redeem_BundleItemOwned"),
                       }),
-                      (0, s.jsx)(_.wK, { className: m.CheckmarkCircle }),
+                      (0, s.jsx)(h.wK, { className: m.CheckmarkCircle }),
                     ],
                   })
                 : (0, s.jsxs)(s.Fragment, {
                     children: [
                       (0, s.jsx)(g, { value: t, className: m.BundleDiscount }),
-                      (0, s.jsx)(h.Y, { amount: e }),
+                      (0, s.jsx)(_.Y, { amount: e }),
                     ],
                   }),
             ],
@@ -7152,7 +7170,7 @@
                 style: C(i, o.length, r, a, n),
                 children: [
                   t.mapItemOwnership.get(e.defid) &&
-                    (0, s.jsx)(_.wK, {
+                    (0, s.jsx)(h.wK, {
                       className: (0, u.A)(m.CheckmarkCircle, m.OwnedItem),
                     }),
                   (0, s.jsx)("img", {
@@ -7219,8 +7237,8 @@
         u = i(99428),
         p = i(13112),
         g = i(60383),
-        h = i(76217),
-        _ = i(30470);
+        _ = i(76217),
+        h = i(30470);
       const f = "none";
       function w(e, t, i = {}) {
         const {
@@ -7232,26 +7250,26 @@
           c = s || 10,
           d = a || 10,
           [p, g] = (0, n.useState)(c + d);
-        let h = e(0, p).map((e) => t(e));
-        const _ = 0 === h.length;
-        if (_) for (let e = 0; e < p; e++) h.push(o());
+        let _ = e(0, p).map((e) => t(e));
+        const h = 0 === _.length;
+        if (h) for (let e = 0; e < p; e++) _.push(o());
         const w = (function (e, t = {}, i = !1) {
           const s = e.length,
             [a, o] = (0, n.useState)(0),
             [l, c] = M(),
             [d, p] = M(),
             g = (0, u.Th)("padding-right", f),
-            h = (0, u.mG)().spacing[f];
-          let _ = 1;
+            _ = (0, u.mG)().spacing[f];
+          let h = 1;
           c.width &&
             void 0 !== p.width &&
-            (_ = Math.floor((p.width + h) / c.width));
-          const w = !i && a + _ < s,
-            y = () => w && o(a + _),
+            (h = Math.floor((p.width + _) / c.width));
+          const w = !i && a + h < s,
+            y = () => w && o(a + h),
             I = a > 0,
-            C = () => I && o(Math.max(0, a - _)),
+            C = () => I && o(Math.max(0, a - h)),
             x = a,
-            j = a + _,
+            j = a + h,
             S = e
               .slice(x, j)
               .map((e, i) =>
@@ -7260,7 +7278,7 @@
                   {
                     ref: 0 === i ? l : void 0,
                     className: (0, m.A)(
-                      0 === i || i < _ - 1 ? g : void 0,
+                      0 === i || i < h - 1 ? g : void 0,
                       t.itemClassName,
                     ),
                     children: e,
@@ -7277,7 +7295,7 @@
             fnPrev: C,
             iPosition: a,
           };
-        })(h, l, _);
+        })(_, l, h);
         return {
           ...w,
           fnNext: () => {
@@ -7299,7 +7317,7 @@
             iPosition: c,
             ...u
           } = e;
-          return (0, r.jsx)(h.Z, {
+          return (0, r.jsx)(_.Z, {
             className: (0, m.A)(d.Container, t),
             ref: i,
             "flow-children": "row",
@@ -7394,12 +7412,12 @@
           bLoadingMore: n,
           style: a,
         } = e;
-        return (0, r.jsx)(h.Z, {
+        return (0, r.jsx)(_.Z, {
           className: d.MobileContainer,
-          children: (0, r.jsxs)(h.Z, {
+          children: (0, r.jsxs)(_.Z, {
             "flow-children": "row",
             className: (0, m.A)(d.Container, d.Mobile),
-            style: _.TS.IN_GAMEPADUI ? null : a,
+            style: h.TS.IN_GAMEPADUI ? null : a,
             children: [
               t.map(i),
               (0, r.jsx)(g.J, {
@@ -7436,7 +7454,7 @@
               ...p
             } = e,
             g = `url(${l})`,
-            h = "mobile" === (0, u.xC)();
+            _ = "mobile" === (0, u.xC)();
           return (0, r.jsxs)(u.az, {
             padding: ["small", "large"],
             flexGrow: 1,
@@ -7482,7 +7500,7 @@
               }),
               (0, r.jsx)(u.cV, {
                 spacing: ["xsmall", "small"],
-                style: { alignSelf: h ? "flex-start" : "flex-end" },
+                style: { alignSelf: _ ? "flex-start" : "flex-end" },
                 itemClassName: o,
                 children: n,
               }),
@@ -7589,9 +7607,9 @@
             d = (0, o.W6)(),
             [m, u] = n.useState(10),
             p = a(0, m),
-            { rewards: g, bLoadingMore: h, cTotalMatching: _ } = p,
+            { rewards: g, bLoadingMore: _, cTotalMatching: h } = p,
             f = (0, E.S1)();
-          if (0 === _) return null;
+          if (0 === h) return null;
           const w = !c && !s && H(p);
           return (0, r.jsx)(b.Gq, {
             title: t,
@@ -7609,7 +7627,7 @@
               children: (0, r.jsx)(v, {
                 items: g,
                 loadMore: () => u(m + 10),
-                bLoadingMore: h,
+                bLoadingMore: _,
                 renderItem: (e) => (0, r.jsx)(J, { definition: e }, e.defid),
                 style: f,
               }),
@@ -7651,7 +7669,7 @@
           const u = !d || !s,
             p = !a && u && W(o);
           let g = [],
-            h = [];
+            _ = [];
           return (
             !u &&
               g.push(
@@ -7661,13 +7679,13 @@
                   "SeeAll",
                 ),
               ),
-            d && h.push((0, r.jsx)(I, { ...c }, "CarouselControls")),
-            p && (0 == h.length ? h.push(p) : 0 == g.length && g.push(p)),
+            d && _.push((0, r.jsx)(I, { ...c }, "CarouselControls")),
+            p && (0 == _.length ? _.push(p) : 0 == g.length && g.push(p)),
             (0, r.jsx)(b.Gq, {
               title: t,
               subtitle: i,
               leftActions: g,
-              rightActions: h,
+              rightActions: _,
               children: (0, r.jsx)(y, {
                 style: { width: "100%", flexWrap: "wrap" },
                 ...c,
@@ -7719,10 +7737,10 @@
               theme: d,
               title: m,
               subtitle: u,
-              cluster: { title: p, subtitle: g, GetRewards: h },
+              cluster: { title: p, subtitle: g, GetRewards: _ },
             } = t,
-            _ = s ? (0, c.bp)(s) : void 0,
-            f = h(0, n ? 4 : 3, i),
+            h = s ? (0, c.bp)(s) : void 0,
+            f = _(0, n ? 4 : 3, i),
             w =
               f.bLoadingMore && 0 === f.rewards.length
                 ? [
@@ -7742,7 +7760,7 @@
               style: { width: "100%" },
               itemClassName: L.ItemHover,
               actions: (0, r.jsx)(l.N_, {
-                to: _,
+                to: h,
                 children: (0, r.jsx)(T, {
                   theme: d,
                   children: (0, P.we)("#SeeAllButton"),
@@ -7768,7 +7786,7 @@
               theme: m,
               title: u,
               subtitle: p,
-              cluster: { title: g, subtitle: h, GetRewards: _ },
+              cluster: { title: g, subtitle: _, GetRewards: h },
             } = t,
             f = s ? (0, c.bp)(s) : void 0;
           return (0, r.jsx)(b.Gq, {
@@ -7789,7 +7807,7 @@
                 }),
               }),
               children: (0, r.jsx)(v, {
-                items: _(0, 6, i).rewards,
+                items: h(0, 6, i).rewards,
                 loadMore: () => {},
                 renderItem: (e) =>
                   (0, r.jsx)(J, { definition: e, theme: m }, e.defid),
@@ -7886,7 +7904,7 @@
         Yp: () => f,
         az: () => d,
         cV: () => m,
-        mG: () => _,
+        mG: () => h,
         tv: () => C,
         xC: () => x,
       });
@@ -7909,8 +7927,8 @@
               paddingBottom: u,
               margin: p,
               marginX: g,
-              marginY: h,
-              marginLeft: _,
+              marginY: _,
+              marginLeft: h,
               marginTop: f,
               marginRight: w,
               marginBottom: y,
@@ -7932,10 +7950,10 @@
               I("padding-top", m || l || r),
               I("padding-right", c || n || r),
               I("padding-bottom", u || l || r),
-              I("margin-left", _ || g || p),
-              I("margin-top", f || h || p),
+              I("margin-left", h || g || p),
+              I("margin-top", f || _ || p),
               I("margin-right", w || g || p),
-              I("margin-bottom", y || h || p),
+              I("margin-bottom", y || _ || p),
               A,
             ),
             z = {
@@ -7966,16 +7984,16 @@
               verticalSpacing: m,
               itemClassName: u,
               "flow-children": g = "row",
-              ...h
+              ..._
             } = e,
-            f = _(),
+            f = h(),
             w = f.spacing[C(c || l || "none")],
             y = f.spacing[C(m || l || "none")];
           return (0, s.jsx)(o.Z, {
             "flow-children": g,
             ref: t,
             style: { ...(a || {}), marginTop: p(-y) },
-            ...h,
+            ..._,
             children: (0, s.jsx)("div", {
               style: { marginLeft: p(-w) },
               className: n.InlineContainer,
@@ -8032,8 +8050,8 @@
           },
           breakpoint: { mobile: 0, tablet: 740, desktop: 965 },
         },
-        h = (0, r.createContext)(g),
-        _ = () => (0, r.useContext)(h),
+        _ = (0, r.createContext)(g),
+        h = () => (0, r.useContext)(_),
         f = (e) => {
           const { config: t, children: i } = e,
             n = t || g,
@@ -8079,7 +8097,7 @@
           return t ? w(e, i) : "";
         };
       function M(e) {
-        const t = _(),
+        const t = h(),
           i = C(e);
         return (e && t.spacing[i]) || 0;
       }
@@ -8092,7 +8110,7 @@
       function x() {
         const {
             breakpoint: { tablet: e, desktop: t },
-          } = _(),
+          } = h(),
           i = (0, c.h)(`(min-width: ${e}px)`),
           s = (0, c.h)(`(min-width: ${t}px)`);
         return l.TS.IN_GAMEPADUI
@@ -8204,7 +8222,7 @@
         Fq: () => d,
         GP: () => m,
         Ji: () => u,
-        Js: () => h,
+        Js: () => _,
         Kd: () => o,
         Nu: () => b,
         R2: () => j,
@@ -8224,7 +8242,7 @@
         qY: () => N,
         sC: () => I,
         wK: () => n,
-        xh: () => _,
+        xh: () => h,
       });
       var s = i(7850),
         r = i(52038);
@@ -8484,7 +8502,7 @@
           }),
         });
       }
-      function h(e) {
+      function _(e) {
         const { className: t, ...i } = e;
         return (0, s.jsx)("svg", {
           className: (0, r.A)(t, "SVGIcon_Button"),
@@ -8501,7 +8519,7 @@
           }),
         });
       }
-      function _(e) {
+      function h(e) {
         const { className: t, ...i } = e;
         return (0, s.jsx)("svg", {
           className: (0, r.A)(t, "SVGIcon_Button"),
@@ -8898,7 +8916,7 @@
         ZI: () => ce,
         Qs: () => ie,
         jy: () => oe,
-        Ch: () => he,
+        Ch: () => _e,
       });
       var s = i(7850),
         r = i(90626),
@@ -8935,17 +8953,17 @@
       var u = i(52038),
         p = i(40617),
         g = i(79333);
-      let h = "",
-        _ = null,
+      let _ = "",
+        h = null,
         f = null,
         w = null;
       function y() {
-        (h = ""),
-          null !== _ && _.disconnect(),
+        (_ = ""),
+          null !== h && h.disconnect(),
           null !== f && (window.clearTimeout(f), (f = null));
       }
       function I() {
-        const e = document.getElementById(h);
+        const e = document.getElementById(_);
         return null !== e && (w(e), y(), !0);
       }
       function M(e) {
@@ -8957,11 +8975,11 @@
               y(),
                 t.onClick && t.onClick(e),
                 "string" == typeof t.to
-                  ? (h = t.to.split("#").slice(1).join("#"))
+                  ? (_ = t.to.split("#").slice(1).join("#"))
                   : "object" == typeof t.to &&
                     "string" == typeof t.to.hash &&
-                    (h = t.to.hash.replace("#", "")),
-                "" !== h &&
+                    (_ = t.to.hash.replace("#", "")),
+                "" !== _ &&
                   ((w =
                     t.scroll ||
                     ((e) =>
@@ -8970,8 +8988,8 @@
                         : e.scrollIntoView())),
                   window.setTimeout(() => {
                     !1 === I() &&
-                      (null === _ && (_ = new MutationObserver(I)),
-                      _.observe(document, {
+                      (null === h && (h = new MutationObserver(I)),
+                      h.observe(document, {
                         attributes: !0,
                         childList: !0,
                         subtree: !0,
@@ -9042,7 +9060,7 @@
               },
               [n, d],
             ),
-            [g, h] = r.useState(0);
+            [g, _] = r.useState(0);
           return (
             r.useEffect(() => {
               if (g) {
@@ -9617,7 +9635,7 @@
           }),
         });
       }
-      function he(e) {
+      function _e(e) {
         const { title: t, subtitle: i, headerImage: r } = e,
           n = ne();
         return (0, s.jsxs)(s.Fragment, {
@@ -9653,8 +9671,8 @@
         u = i(20312),
         p = i(15962),
         g = i(96259),
-        h = i(52038),
-        _ = i(6519),
+        _ = i(52038),
+        h = i(6519),
         f = i(11774),
         w = i(19939);
       const y = s.createContext(!1);
@@ -9696,7 +9714,7 @@
               attributes: m,
               className: p,
               style: g,
-              ...h
+              ..._
             } = e,
             f = n.community_item_data.item_title;
           return (0, r.jsx)(d.kn, {
@@ -9704,11 +9722,11 @@
             cost: a,
             attributes: m,
             appIcon: i,
-            iconComponent: _.CF,
+            iconComponent: h.CF,
             desc: c,
             className: p,
             appName: t,
-            ...h,
+            ..._,
             children: (0, r.jsx)("img", {
               src: (0, u.u)(n),
               style: { width: "100%", height: "100%" },
@@ -9728,7 +9746,7 @@
               attributes: d,
               className: u,
               style: g,
-              onClick: _,
+              onClick: h,
               ...y
             } = e,
             I = n.community_item_data.item_title,
@@ -9736,9 +9754,9 @@
           return (0, r.jsxs)(m.Kt, {
             display: "flex",
             flexDirection: "column",
-            className: (0, h.A)(p.ProfileBundleContainer, u),
+            className: (0, _.A)(p.ProfileBundleContainer, u),
             style: { ...g, width: "524px" },
-            onActivate: _,
+            onActivate: h,
             ...y,
             children: [
               i &&
@@ -9780,7 +9798,7 @@
                         className: p.AlreadyOwned,
                         children: (0, c.we)("#Redeem_BundleItemOwned"),
                       }),
-                      (0, r.jsx)(_.wK, { className: p.CheckmarkCircle }),
+                      (0, r.jsx)(h.wK, { className: p.CheckmarkCircle }),
                     ],
                   })
                 : (0, r.jsx)(r.Fragment, {
@@ -9831,7 +9849,7 @@
               justifyContent: "center",
               alignItems: "center",
               ...a,
-              className: (0, h.A)(n, p.ItemCard),
+              className: (0, _.A)(n, p.ItemCard),
               key: i.defid,
             },
             o &&
@@ -9871,8 +9889,8 @@
         u = i(84933),
         p = i(17083),
         g = i(51819),
-        h = i(51706),
-        _ = i(61859),
+        _ = i(51706),
+        h = i(61859),
         f = i(22580),
         w = i(738),
         y = i(56011),
@@ -10712,15 +10730,15 @@
       (0, n.Cg)([c.sH], ue.prototype, "m_rgRunningEffects", void 0);
       var pe = i(6519),
         ge = i(1035),
-        he = i(51006),
-        _e = i(22797),
+        _e = i(51006),
+        he = i(22797),
         fe = i(12711),
         we = i(64812);
       function ye(e) {
         const { link: t, className: i, ...s } = e,
           [r, n] = o.useState(!1);
         return (0, a.jsx)("div", {
-          title: (0, _.we)("#ToolTip_CopyLinkToClipboard"),
+          title: (0, h.we)("#ToolTip_CopyLinkToClipboard"),
           className: (0, L.A)(we.Button, i),
           onClick: () => (n(!0), void navigator.clipboard.writeText(t)),
           children: (0, a.jsx)(pe.qY, {
@@ -10962,11 +10980,11 @@
         }
         ShowGenericError() {
           this.ShowError(
-            (0, _.PP)(
+            (0, h.PP)(
               "#Redeem_Error_Generic",
               (0, a.jsx)("a", {
                 href: I.TS.HELP_BASE_URL,
-                children: (0, _.we)("#Redeem_Error_SteamSupport"),
+                children: (0, h.we)("#Redeem_Error_SteamSupport"),
               }),
             ),
           );
@@ -11181,7 +11199,7 @@
           const t = We(this.props.definition),
             i = Ze(this.props.definition),
             s = this.props.definition.rewardDefinition
-              ? he.Vw.GetAppInfo(this.props.definition.rewardDefinition.appid)
+              ? _e.Vw.GetAppInfo(this.props.definition.rewardDefinition.appid)
               : null;
           let r = "";
           if (
@@ -11249,7 +11267,7 @@
           const { definition: t, closeModal: i } = e,
             s = () => {},
             r = t.rewardDefinition
-              ? he.Vw.GetAppInfo(t.rewardDefinition.appid)
+              ? _e.Vw.GetAppInfo(t.rewardDefinition.appid)
               : null;
           return (0, a.jsx)(vt, {
             onEscKeypress: i,
@@ -11335,7 +11353,7 @@
                         children: [
                           (0, a.jsx)("div", {
                             className: g.Balance,
-                            children: (0, _.we)("#YourBalance"),
+                            children: (0, h.we)("#YourBalance"),
                           }),
                           (0, a.jsx)("div", {
                             className: g.CurrentPoints,
@@ -11352,9 +11370,9 @@
         ),
         We = (e) =>
           2 == e.type || 3 == e.type
-            ? (0, _.we)(
+            ? (0, h.we)(
                 "#ProfileShowcases_ShowcaseName",
-                (0, _.we)(
+                (0, h.we)(
                   "#ProfileShowcases_Type_" + e.profileCustomizationType,
                 ),
               )
@@ -11368,11 +11386,11 @@
               ),
               e.community_item_data.item_title
             );
-          if (2 == e.type) return (0, _.we)("#Redeem_Badge_PrestigeBadge");
+          if (2 == e.type) return (0, h.we)("#Redeem_Badge_PrestigeBadge");
           if (5 == e.type) return e.community_item_data.item_title;
           if (6 == e.type) {
-            const t = he.Vw.GetAppInfo(e.appid).name || "";
-            return (0, _.we)("#RewardBundle_AutoGeneratedBundleName", t);
+            const t = _e.Vw.GetAppInfo(e.appid).name || "";
+            return (0, h.we)("#RewardBundle_AutoGeneratedBundleName", t);
           }
           return "Unknown";
         },
@@ -11386,19 +11404,19 @@
           switch (t) {
             case 2:
               return Ge(e)
-                ? (0, _.we)("#ProfileShowcases_UpgradeLevel", i, s)
-                : (0, _.we)("#ProfileShowcases_UpgradeAtMaxLevel", i);
+                ? (0, h.we)("#ProfileShowcases_UpgradeLevel", i, s)
+                : (0, h.we)("#ProfileShowcases_UpgradeAtMaxLevel", i);
             case 3:
-              return (0, _.we)("#ProfileShowcases_AdditionalSlot");
+              return (0, h.we)("#ProfileShowcases_AdditionalSlot");
             case 1:
               if (1 == r.type || 2 == r.type)
                 return r.appid != f.DZ.Get().GetCurrentSeasonalAppID() &&
                   8 == r.community_item_class &&
                   0 != r.bundle_defids?.length
-                  ? (0, _.we)("#RewardItemType_ProfileBundle")
+                  ? (0, h.we)("#RewardItemType_ProfileBundle")
                   : (0, f.uv)(r.community_item_class);
               if (5 == r.type || 6 == r.type)
-                return (0, _.we)("#RewardItemType_Bundle");
+                return (0, h.we)("#RewardItemType_Bundle");
           }
           return "";
         },
@@ -11438,17 +11456,17 @@
       class Qe extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Chat")
+            ? (0, h.we)("#Redeem_Equip_Chat")
             : "saleitem" == this.props.step
               ? (0, a.jsxs)("div", {
                   children: [
-                    (0, _.we)("#LunarSale2022_Redeem_Desc1"),
+                    (0, h.we)("#LunarSale2022_Redeem_Desc1"),
                     (0, a.jsx)("br", {}),
                     (0, a.jsx)("br", {}),
-                    (0, _.we)("#LunarSale2022_Redeem_Desc2"),
+                    (0, h.we)("#LunarSale2022_Redeem_Desc2"),
                   ],
                 })
-              : (0, _.we)("#Redeem_UsePoints_Sticker");
+              : (0, h.we)("#Redeem_UsePoints_Sticker");
         }
         GetModalPreview() {
           if ("saleitem" == this.props.step)
@@ -11510,11 +11528,11 @@
       class Ye extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Profile")
+            ? (0, h.we)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
               ? (0, a.jsx)("div", {
                   className: g.EquippedDesc,
-                  children: (0, _.PP)(
+                  children: (0, h.PP)(
                     "#Redeem_Equipped_Background",
                     (0, a.jsx)("span", {
                       children:
@@ -11523,7 +11541,7 @@
                     }),
                   ),
                 })
-              : (0, _.we)("#Redeem_UsePoints_Background");
+              : (0, h.we)("#Redeem_UsePoints_Background");
         }
         GetPreview() {
           const e = this.props.definition.rewardDefinition;
@@ -11566,12 +11584,12 @@
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -11608,8 +11626,8 @@
       class Xe extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Chat")
-            : (0, _.we)("#Redeem_UsePoints_Emoticon");
+            ? (0, h.we)("#Redeem_Equip_Chat")
+            : (0, h.we)("#Redeem_UsePoints_Emoticon");
         }
         render() {
           const e = this.props.definition.rewardDefinition;
@@ -11691,8 +11709,8 @@
         }
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Chat")
-            : (0, _.we)("#Redeem_UsePoints_ChatEffect");
+            ? (0, h.we)("#Redeem_Equip_Chat")
+            : (0, h.we)("#Redeem_UsePoints_ChatEffect");
         }
         render() {
           return (0, a.jsxs)(St, {
@@ -11737,11 +11755,11 @@
       class Je extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Profile")
+            ? (0, h.we)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
               ? (0, a.jsx)("div", {
                   className: g.EquippedDesc,
-                  children: (0, _.PP)(
+                  children: (0, h.PP)(
                     "#Redeem_Equipped_MiniProfile",
                     (0, a.jsx)("span", {
                       children:
@@ -11750,18 +11768,18 @@
                     }),
                   ),
                 })
-              : (0, _.we)("#Redeem_UsePoints_MiniProfile");
+              : (0, h.we)("#Redeem_UsePoints_MiniProfile");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
               ? (0, a.jsx)(xe, {
                   onClick: this.props.closeModal,
-                  children: (0, _.we)("#Button_Close"),
+                  children: (0, h.we)("#Button_Close"),
                 })
               : null;
         }
@@ -11843,11 +11861,11 @@
       class $e extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Profile")
+            ? (0, h.we)("#Redeem_Equip_Profile")
             : "equipped" == this.props.step
               ? (0, a.jsx)("div", {
                   className: g.EquippedDesc,
-                  children: (0, _.PP)(
+                  children: (0, h.PP)(
                     "#Redeem_Equipped_AvatarFrame",
                     (0, a.jsx)("span", {
                       children:
@@ -11856,16 +11874,16 @@
                     }),
                   ),
                 })
-              : (0, _.we)("#Redeem_UsePoints_AvatarFrame");
+              : (0, h.we)("#Redeem_UsePoints_AvatarFrame");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -11902,7 +11920,7 @@
                   }),
                   (0, a.jsx)("div", {
                     className: g.CurrentlyEquippedAvatarAndFrameDesc,
-                    children: (0, _.we)("#Redeem_Equipped_CurrentAvatarFrame"),
+                    children: (0, h.we)("#Redeem_Equipped_CurrentAvatarFrame"),
                   }),
                 ],
               })),
@@ -11947,11 +11965,11 @@
       class et extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_AnimatedAvatar")
+            ? (0, h.we)("#Redeem_Equip_AnimatedAvatar")
             : "equipped" == this.props.step
               ? (0, a.jsx)("div", {
                   className: g.EquippedDesc,
-                  children: (0, _.PP)(
+                  children: (0, h.PP)(
                     "#Redeem_Equipped_AnimatedAvatar",
                     (0, a.jsx)("span", {
                       children:
@@ -11960,16 +11978,16 @@
                     }),
                   ),
                 })
-              : (0, _.we)("#Redeem_UsePoints_AnimatedAvatar");
+              : (0, h.we)("#Redeem_UsePoints_AnimatedAvatar");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -12006,7 +12024,7 @@
                   }),
                   (0, a.jsx)("div", {
                     className: g.CurrentlyEquippedAvatarAndFrameDesc,
-                    children: (0, _.we)("#Redeem_Equipped_CurrentAvatar"),
+                    children: (0, h.we)("#Redeem_Equipped_CurrentAvatar"),
                   }),
                 ],
               })),
@@ -12051,12 +12069,12 @@
       class tt extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_SteamDeckKeyboardSkin")
-            : (0, _.we)("#Redeem_UsePoints_SteamDeckKeyboardSkin");
+            ? (0, h.we)("#Redeem_Equip_SteamDeckKeyboardSkin")
+            : (0, h.we)("#Redeem_UsePoints_SteamDeckKeyboardSkin");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
@@ -12099,12 +12117,12 @@
         m_rtMinClientVersion = 1757452101;
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_SteamDeckStartupMovie")
-            : (0, _.we)("#Redeem_UsePoints_SteamDeckStartupMovie");
+            ? (0, h.we)("#Redeem_Equip_SteamDeckStartupMovie")
+            : (0, h.we)("#Redeem_UsePoints_SteamDeckStartupMovie");
         }
         GetButtons() {
           if ("equip" == this.props.step)
-            return (0, a.jsx)(ht, {
+            return (0, a.jsx)(_t, {
               closeModal: this.props.closeModal,
               equipItem: this.props.equipItem,
             });
@@ -12163,9 +12181,9 @@
                   this.BShowClientMinVersionWarning() &&
                   (0, a.jsx)("div", {
                     className: (0, L.A)(g.Bold, g.NeedAppOwnership),
-                    children: (0, _.we)(
+                    children: (0, h.we)(
                       "#Redeem_Warning_LatestClient",
-                      (0, _.TW)(this.m_rtMinClientVersion, !1, !0),
+                      (0, h.TW)(this.m_rtMinClientVersion, !1, !0),
                     ),
                   }),
               }),
@@ -12184,11 +12202,11 @@
       }
       let st = class extends o.Component {
         GetDescription() {
-          return (0, _.we)("#Redeem_UsePoints_Badge");
+          return (0, h.we)("#Redeem_UsePoints_Badge");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+            ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
             : null;
         }
         GetPreviewForLevel() {
@@ -12197,20 +12215,20 @@
             ? (0, a.jsx)(xt, {
                 definition: this.props.definition.rewardDefinition,
                 badgeLevel: e,
-                title: (0, _.we)("#Redeem_Badge_CurrentLevel"),
+                title: (0, h.we)("#Redeem_Badge_CurrentLevel"),
               })
             : 0 == e
               ? (0, a.jsx)(xt, {
                   definition: this.props.definition.rewardDefinition,
                   badgeLevel: this.props.definition.itemLevel,
-                  title: (0, _.we)("#Redeem_Badge_AfterPoints"),
+                  title: (0, h.we)("#Redeem_Badge_AfterPoints"),
                 })
               : (0, a.jsxs)(a.Fragment, {
                   children: [
                     (0, a.jsx)(xt, {
                       definition: this.props.definition.rewardDefinition,
                       badgeLevel: e,
-                      title: (0, _.we)("#Redeem_Badge_CurrentLevel"),
+                      title: (0, h.we)("#Redeem_Badge_CurrentLevel"),
                     }),
                     (0, a.jsx)("div", {
                       className: (0, L.A)(g.BadgeColumn, g.ArrowColumn),
@@ -12219,7 +12237,7 @@
                     (0, a.jsx)(xt, {
                       definition: this.props.definition.rewardDefinition,
                       badgeLevel: this.props.definition.itemLevel,
-                      title: (0, _.we)("#Redeem_Badge_AfterPoints"),
+                      title: (0, h.we)("#Redeem_Badge_AfterPoints"),
                     }),
                   ],
                 });
@@ -12261,17 +12279,17 @@
       class rt extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Coupon")
-            : (0, _.we)("#Redeem_UsePoints_Coupon");
+            ? (0, h.we)("#Redeem_Equip_Coupon")
+            : (0, h.we)("#Redeem_UsePoints_Coupon");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -12304,19 +12322,19 @@
       class nt extends o.Component {
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_GoldenProfile")
+            ? (0, h.we)("#Redeem_Equip_GoldenProfile")
             : "equipped" == this.props.step
-              ? (0, _.we)("#Redeem_Equipped_GoldenProfile")
-              : (0, _.we)("#Redeem_UsePoints_GoldenProfile");
+              ? (0, h.we)("#Redeem_Equipped_GoldenProfile")
+              : (0, h.we)("#Redeem_UsePoints_GoldenProfile");
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
               : null;
         }
         render() {
@@ -12363,7 +12381,7 @@
                 step: this.props.step,
                 description: this.GetDescription(),
                 children: (0, a.jsx)(mt, {
-                  children: (0, _.we)("#Redeem_GoldenProfile_Expiration"),
+                  children: (0, h.we)("#Redeem_GoldenProfile_Expiration"),
                 }),
               }),
               (0, a.jsx)(It, {
@@ -12398,34 +12416,34 @@
           this.setState({ bLoadedIFrame: !0 });
         }
         GetDescription() {
-          const e = (0, _.we)(
+          const e = (0, h.we)(
             "#ProfileShowcases_Type_" +
               this.props.definition.profileCustomizationType,
           );
           if ("equipped" == this.props.step)
             return 2 == this.props.definition.type
-              ? (0, _.we)(
+              ? (0, h.we)(
                   "#Redeem_Equipped_ProfileShowcaseUpgraded",
                   e,
                   this.props.definition.itemLevel,
                 )
-              : (0, _.we)("#Redeem_Equipped_ProfileShowcaseSlotPurchased", e);
+              : (0, h.we)("#Redeem_Equipped_ProfileShowcaseSlotPurchased", e);
           if (2 == this.props.definition.type)
-            return (0, _.we)(
+            return (0, h.we)(
               "#Redeem_UsePoints_ProfileShowcaseUpgrade",
               this.props.definition.desiredItemLevel,
             );
           const t = f.DZ.Get().GetMaxProfileShowcaseSlots();
-          return (0, _.we)("#Redeem_UsePoints_ProfileShowcaseSlot", e, t + 1);
+          return (0, h.we)("#Redeem_UsePoints_ProfileShowcaseSlot", e, t + 1);
         }
         GetButtons() {
           return "equip" == this.props.step
-            ? (0, a.jsx)(ht, {
+            ? (0, a.jsx)(_t, {
                 closeModal: this.props.closeModal,
                 equipItem: this.props.equipItem,
               })
             : "equipped" == this.props.step
-              ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+              ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
               : null;
         }
         GetProfileSteamID() {
@@ -12464,12 +12482,12 @@
                   !e &&
                     (0, a.jsx)("div", {
                       className: g.ProfileThrobber,
-                      children: (0, a.jsx)(_e.t, {
+                      children: (0, a.jsx)(he.t, {
                         position: "center",
                         size: "xlarge",
-                        string: (0, _.we)(
+                        string: (0, h.we)(
                           "#ProfileShowcases_LoadingPreview",
-                          (0, _.we)("#ProfileShowcases_Type_" + i),
+                          (0, h.we)("#ProfileShowcases_Type_" + i),
                         ),
                       }),
                     }),
@@ -12518,12 +12536,12 @@
         }
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_Bundle")
-            : (0, _.we)("#Redeem_UsePoints_Bundle");
+            ? (0, h.we)("#Redeem_Equip_Bundle")
+            : (0, h.we)("#Redeem_UsePoints_Bundle");
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+            ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
@@ -12569,7 +12587,7 @@
                         children: [
                           (0, a.jsx)(pe.wK, { className: g.OwnedCheckmark }),
                           "redeem" == this.props.step &&
-                            (0, _.we)("#Redeem_BundleItemOwned"),
+                            (0, h.we)("#Redeem_BundleItemOwned"),
                         ],
                       }),
                   ],
@@ -12619,12 +12637,12 @@
         }
         GetDescription() {
           return "equip" == this.props.step
-            ? (0, _.we)("#Redeem_Equip_ProfileBundle")
-            : (0, _.we)("#Redeem_UsePoints_ProfileBundle");
+            ? (0, h.we)("#Redeem_Equip_ProfileBundle")
+            : (0, h.we)("#Redeem_UsePoints_ProfileBundle");
         }
         GetButtons() {
           return "equip" == this.props.step || "equipped" == this.props.step
-            ? (0, a.jsx)(_t, { closeModal: this.props.closeModal })
+            ? (0, a.jsx)(ht, { closeModal: this.props.closeModal })
             : null;
         }
         render() {
@@ -12669,7 +12687,7 @@
                         children: [
                           (0, a.jsx)(pe.wK, { className: g.OwnedCheckmark }),
                           "redeem" == this.props.step &&
-                            (0, _.we)("#Redeem_ProfileBundleItemOwned"),
+                            (0, h.we)("#Redeem_ProfileBundleItemOwned"),
                         ],
                       }),
                   ],
@@ -12695,10 +12713,10 @@
               !e &&
                 (0, a.jsx)("div", {
                   className: g.ProfileThrobber,
-                  children: (0, a.jsx)(_e.t, {
+                  children: (0, a.jsx)(he.t, {
                     position: "center",
                     size: "xlarge",
-                    string: (0, _.we)(
+                    string: (0, h.we)(
                       "#ProfileBundle_LoadingPreview",
                       qe(this.props.definition.rewardDefinition),
                     ),
@@ -12725,7 +12743,7 @@
                     href: n,
                     target: "_blank",
                     className: g.PreviewLink,
-                    children: (0, _.we)("#ProfileModifier_PreviewLinkText"),
+                    children: (0, h.we)("#ProfileModifier_PreviewLinkText"),
                   }),
                 }),
               (0, a.jsx)("div", {
@@ -12815,7 +12833,7 @@
               }),
               (0, a.jsx)(xe, {
                 onClick: n,
-                children: (0, _.we)("#Button_Cancel"),
+                children: (0, h.we)("#Button_Cancel"),
               }),
             ],
           });
@@ -12839,17 +12857,17 @@
                           " ",
                           e,
                           " ",
-                          (0, _.we)("#Rewards_Points"),
+                          (0, h.we)("#Rewards_Points"),
                           " ",
                         ],
                       }),
                       (0, a.jsxs)(R.Y, {
                         amount: t,
-                        children: [" ", t > 0 && (0, _.we)("#Rewards_Points")],
+                        children: [" ", t > 0 && (0, h.we)("#Rewards_Points")],
                       }),
                     ],
                   })
-                : (0, a.jsx)("span", { children: (0, _.we)("#Button_Login") });
+                : (0, a.jsx)("span", { children: (0, h.we)("#Button_Login") });
             return (0, a.jsxs)(l.Z, {
               focusable: !0,
               className: (0, L.A)(g.RedeemButton, n),
@@ -12867,9 +12885,9 @@
             ? (0, a.jsxs)(R.Y, {
                 size: 1.125,
                 amount: t,
-                children: [" ", t > 0 && (0, _.we)("#Rewards_Points")],
+                children: [" ", t > 0 && (0, h.we)("#Rewards_Points")],
               })
-            : (0, a.jsx)("span", { children: (0, _.we)("#Button_Login") });
+            : (0, a.jsx)("span", { children: (0, h.we)("#Button_Login") });
           return (0, a.jsx)(l.Z, {
             focusable: !0,
             className: (0, L.A)(g.RedeemButton, n),
@@ -12909,11 +12927,11 @@
                 children: [
                   (0, a.jsx)(Se, {
                     onClick: i,
-                    children: (0, _.we)("#Button_Goto_Chat"),
+                    children: (0, h.we)("#Button_Goto_Chat"),
                   }),
                   (0, a.jsx)(xe, {
                     onClick: t,
-                    children: (0, _.we)("#Button_Later"),
+                    children: (0, h.we)("#Button_Later"),
                   }),
                 ],
               })
@@ -12921,46 +12939,46 @@
                 children: [
                   (0, a.jsx)(Se, {
                     onClick: s,
-                    children: (0, _.we)("#Button_Goto_WebChat"),
+                    children: (0, h.we)("#Button_Goto_WebChat"),
                   }),
                   (0, a.jsx)(je, {
                     onClick: r,
-                    children: (0, _.we)("#Button_Goto_ClientChat"),
+                    children: (0, h.we)("#Button_Goto_ClientChat"),
                   }),
                   (0, a.jsx)(xe, {
                     onClick: t,
-                    children: (0, _.we)("#Button_Later"),
+                    children: (0, h.we)("#Button_Later"),
                   }),
                 ],
               });
         },
-        ht = (e) => {
+        _t = (e) => {
           const { equipItem: t, closeModal: i } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsx)(Se, {
                 onClick: t,
-                children: (0, _.we)("#Button_Equip"),
+                children: (0, h.we)("#Button_Equip"),
               }),
               (0, a.jsx)(xe, {
                 onClick: i,
-                children: (0, _.we)("#Button_Later"),
+                children: (0, h.we)("#Button_Later"),
               }),
             ],
           });
         },
-        _t = (e) => {
+        ht = (e) => {
           const { closeModal: t } = e;
           return (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsx)(je, {
                 onClick: () =>
                   (window.location.href = I.TS.COMMUNITY_BASE_URL + "my"),
-                children: (0, _.we)("#Button_Goto_Profile"),
+                children: (0, h.we)("#Button_Goto_Profile"),
               }),
               (0, a.jsx)(xe, {
                 onClick: t,
-                children: (0, _.we)("#Button_Close"),
+                children: (0, h.we)("#Button_Close"),
               }),
             ],
           });
@@ -12973,12 +12991,12 @@
                 onClick: t,
                 children: (0, a.jsx)(p.N_, {
                   to: z.B.LoyaltyHowItWorks(),
-                  children: (0, _.we)("#Redeem_NeedToOwnApp"),
+                  children: (0, h.we)("#Redeem_NeedToOwnApp"),
                 }),
               }),
               (0, a.jsx)(xe, {
                 onClick: t,
-                children: (0, _.we)("#Button_Cancel"),
+                children: (0, h.we)("#Button_Cancel"),
               }),
             ],
           });
@@ -12991,12 +13009,12 @@
                 onClick: t,
                 children: (0, a.jsx)(p.N_, {
                   to: z.B.LoyaltyHowItWorks(),
-                  children: (0, _.we)("#Redeem_HowToGetPoints"),
+                  children: (0, h.we)("#Redeem_HowToGetPoints"),
                 }),
               }),
               (0, a.jsx)(xe, {
                 onClick: t,
-                children: (0, _.we)("#Button_Cancel"),
+                children: (0, h.we)("#Button_Cancel"),
               }),
             ],
           });
@@ -13007,11 +13025,11 @@
             children: [
               (0, a.jsx)(je, {
                 onClick: i,
-                children: (0, _.we)("#Redeem_PriceChange"),
+                children: (0, h.we)("#Redeem_PriceChange"),
               }),
               (0, a.jsx)(xe, {
                 onClick: t,
-                children: (0, _.we)("#Button_Cancel"),
+                children: (0, h.we)("#Button_Cancel"),
               }),
             ],
           });
@@ -13028,14 +13046,14 @@
           } = e;
           let d = e.children;
           if (n)
-            d = (0, a.jsx)(_e.t, {
+            d = (0, a.jsx)(he.t, {
               className: g.RedeemThrobber,
               size: "medium",
             });
           else if ("preview" == t)
             d = (0, a.jsx)(xe, {
               onClick: s,
-              children: (0, _.we)("#Button_Close"),
+              children: (0, h.we)("#Button_Close"),
             });
           else if ("redeem" == t) {
             const e = Ee(i),
@@ -13089,11 +13107,11 @@
                       children: [
                         (0, a.jsx)(je, {
                           onClick: r,
-                          children: (0, _.we)("#SummerSale_Redeem_Btn"),
+                          children: (0, h.we)("#SummerSale_Redeem_Btn"),
                         }),
                         (0, a.jsx)(xe, {
                           onClick: s,
-                          children: (0, _.we)("#Button_Cancel"),
+                          children: (0, h.we)("#Button_Cancel"),
                         }),
                       ],
                     }))
@@ -13186,23 +13204,23 @@
             if ("cantredeemforapp" == i) {
               let e = (0, a.jsx)("span", {
                 className: g.NeedAppOwnership,
-                children: he.Vw.GetAppInfo(t.rewardDefinition.appid).name || "",
+                children: _e.Vw.GetAppInfo(t.rewardDefinition.appid).name || "",
               });
               o = (0, a.jsx)("div", {
                 className: (0, L.A)(g.Bold, g.Opacity),
-                children: (0, _.PP)("#Redeem_CantRedeemItemForApp", e),
+                children: (0, h.PP)("#Redeem_CantRedeemItemForApp", e),
               });
             } else if ("cantafford" == i) {
               let e = Ee(t) - f.DZ.Get().GetPointsAvailable().getLowBits();
               o = (0, a.jsx)("div", {
                 className: (0, L.A)(g.Bold, g.Opacity),
-                children: (0, _.we)("#Redeem_CantAfford", (0, Ne.Dq)(e)),
+                children: (0, h.we)("#Redeem_CantAfford", (0, Ne.Dq)(e)),
               });
             }
           } else
             n = (0, a.jsx)("div", {
               className: g.Bold,
-              children: (0, _.we)("#Redeem_YoursToOwn", qe(t.rewardDefinition)),
+              children: (0, h.we)("#Redeem_YoursToOwn", qe(t.rewardDefinition)),
             });
           return (0, a.jsxs)("div", {
             className: g.ItemDescription,
@@ -13214,7 +13232,7 @@
               o,
               (0, a.jsx)("div", {
                 className: g.Small,
-                children: (0, _.we)("#Redeem_RefundWarning"),
+                children: (0, h.we)("#Redeem_RefundWarning"),
               }),
             ],
           });
@@ -13230,7 +13248,7 @@
         });
       function vt(e) {
         const { children: t, destructive: i, onEscKeypress: s } = e;
-        return (0, a.jsx)(h.x_, {
+        return (0, a.jsx)(_.x_, {
           onEscKeypress: s,
           bHideCloseIcon: !0,
           bDestructiveWarning: i,
@@ -13269,8 +13287,8 @@
         u = i(22580),
         p = i(88584),
         g = i(6519),
-        h = i(84811),
-        _ = i(51006),
+        _ = i(84811),
+        h = i(51006),
         f = i(60383),
         w = i(71866);
       function y(e) {
@@ -13300,7 +13318,7 @@
         const r = [];
         e.community_item_data.animated &&
           r.push((0, s.jsx)(g.kh, { className: l.IconAnimated }, "animated"));
-        const { icon_url: n, name: a } = _.Vw.GetAppInfo(e.appid),
+        const { icon_url: n, name: a } = h.Vw.GetAppInfo(e.appid),
           o = e.community_item_data.item_title
             ? e.community_item_data.item_title
             : e.community_item_data.item_name;
@@ -13629,8 +13647,8 @@
               iconComponent: d,
               name: m,
               desc: u,
-              className: h,
-              style: _,
+              className: _,
+              style: h,
               theme: f,
               styleOverride: w,
               strPriceOverride: y,
@@ -13645,7 +13663,7 @@
             className: l.ItemContainer,
             children: (0, s.jsxs)(p.B9, {
               ...C,
-              className: (0, c.A)(h, l.Item, w),
+              className: (0, c.A)(_, l.Item, w),
               style: v,
               children: [
                 (0, s.jsxs)(p.Bb, {
@@ -13723,8 +13741,8 @@
               iconComponent: d,
               name: m,
               desc: u,
-              className: h,
-              style: _,
+              className: _,
+              style: h,
               theme: f,
               styleOverride: w,
               strPriceOverride: y,
@@ -13738,7 +13756,7 @@
             className: l.ItemWideContainer,
             children: (0, s.jsxs)(p.B9, {
               ...M,
-              className: (0, c.A)(h, l.Item, w),
+              className: (0, c.A)(_, l.Item, w),
               style: S,
               children: [
                 (0, s.jsxs)(p.Bb, {
@@ -13810,7 +13828,7 @@
             r = u.DZ.Get().BRewardOwnedByUser(e.definition),
             n = (0, c.A)(t, r && l.OwnedItem);
           if (5 == e.definition.type || 6 == e.definition.type)
-            return (0, s.jsx)(h.tH, {
+            return (0, s.jsx)(_.tH, {
               fallback: null,
               children: (0, s.jsx)(I.B, {
                 ...i,
@@ -13822,7 +13840,7 @@
             8 == e.definition.community_item_class &&
             0 != e.definition.bundle_defids?.length
           )
-            return (0, s.jsx)(h.tH, {
+            return (0, s.jsx)(_.tH, {
               fallback: null,
               children: (0, s.jsx)(M.y, {
                 ...i,
@@ -13832,7 +13850,7 @@
             });
           const a = H[e.definition.community_item_class];
           return a
-            ? (0, s.jsx)(h.tH, {
+            ? (0, s.jsx)(_.tH, {
                 fallback: null,
                 children: (0, s.jsx)(a, {
                   ...i,
@@ -13840,7 +13858,7 @@
                   onClick: e.onClick,
                 }),
               })
-            : (0, s.jsx)(h.tH, {
+            : (0, s.jsx)(_.tH, {
                 fallback: null,
                 children: (0, s.jsx)(S, {
                   ...i,
@@ -13969,9 +13987,9 @@
             ...u
           } = e,
           p = d || 20,
-          [g, h] = (0, r.useState)(p),
-          { rewards: _, bLoadingMore: f } = t(0, g),
-          w = _.map(i);
+          [g, _] = (0, r.useState)(p),
+          { rewards: h, bLoadingMore: f } = t(0, g),
+          w = h.map(i);
         return (0, s.jsx)(s.Fragment, {
           children: (0, s.jsxs)(a.cV, {
             verticalSpacing: "large",
@@ -13982,7 +14000,7 @@
               f && m && c(m, p),
               (0, s.jsx)(o.J, {
                 trigger: "repeated",
-                onVisibilityChange: (e) => e && h(g + p),
+                onVisibilityChange: (e) => e && _(g + p),
               }),
             ],
           }),
@@ -14081,8 +14099,8 @@
         u = i(2160),
         p = i(61859);
       var g = i(6519),
-        h = i(12155),
-        _ = i(52038);
+        _ = i(12155),
+        h = i(52038);
       const f =
         i.p + "images/applications/store/game_tiles.png?v=valveisgoodatcaching";
       i.p, i.p;
@@ -14210,7 +14228,7 @@
             focusable: !0,
             noFocusRing: !0,
             children: (0, s.jsxs)("div", {
-              className: (0, _.A)(k.ConvertionSectionTextContainer),
+              className: (0, h.A)(k.ConvertionSectionTextContainer),
               children: [
                 (0, s.jsx)("div", {
                   className: k.PointsConvertion,
@@ -14245,79 +14263,79 @@
                 noFocusRing: !0,
                 children: [
                   (0, s.jsx)(g.eu, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim1),
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim1),
                   }),
-                  (0, s.jsx)(h.yHA, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim2),
+                  (0, s.jsx)(_.yHA, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim2),
                   }),
-                  (0, s.jsx)(h.Exy, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim3),
-                  }),
-                  (0, s.jsx)(g.Ji, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim4),
-                  }),
-                  (0, s.jsx)(h.EEf, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim5),
-                  }),
-                  (0, s.jsx)(h.oY9, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim6),
-                  }),
-                  (0, s.jsx)(h.ZTc, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim7),
-                  }),
-                  (0, s.jsx)(g.W_, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim8),
-                  }),
-                  (0, s.jsx)(g.eu, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim1),
-                  }),
-                  (0, s.jsx)(h.yHA, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim2),
-                  }),
-                  (0, s.jsx)(h.Exy, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim3),
+                  (0, s.jsx)(_.Exy, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim3),
                   }),
                   (0, s.jsx)(g.Ji, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim4),
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim4),
                   }),
-                  (0, s.jsx)(h.EEf, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim5),
+                  (0, s.jsx)(_.EEf, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim5),
                   }),
-                  (0, s.jsx)(h.oY9, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim6),
+                  (0, s.jsx)(_.oY9, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim6),
                   }),
-                  (0, s.jsx)(h.ZTc, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim7),
+                  (0, s.jsx)(_.ZTc, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim7),
                   }),
                   (0, s.jsx)(g.W_, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim8),
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim8),
                   }),
                   (0, s.jsx)(g.eu, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim1),
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim1),
                   }),
-                  (0, s.jsx)(h.yHA, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim2),
+                  (0, s.jsx)(_.yHA, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim2),
                   }),
-                  (0, s.jsx)(h.Exy, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim3),
+                  (0, s.jsx)(_.Exy, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim3),
                   }),
                   (0, s.jsx)(g.Ji, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim4),
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim4),
                   }),
-                  (0, s.jsx)(h.EEf, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim5),
+                  (0, s.jsx)(_.EEf, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim5),
                   }),
-                  (0, s.jsx)(h.oY9, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim6),
+                  (0, s.jsx)(_.oY9, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim6),
                   }),
-                  (0, s.jsx)(h.ZTc, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim7),
+                  (0, s.jsx)(_.ZTc, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim7),
                   }),
                   (0, s.jsx)(g.W_, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim8),
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim8),
                   }),
                   (0, s.jsx)(g.eu, {
-                    className: (0, _.A)(k.UsePointsSvg, k.UsePointsAnim1),
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim1),
+                  }),
+                  (0, s.jsx)(_.yHA, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim2),
+                  }),
+                  (0, s.jsx)(_.Exy, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim3),
+                  }),
+                  (0, s.jsx)(g.Ji, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim4),
+                  }),
+                  (0, s.jsx)(_.EEf, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim5),
+                  }),
+                  (0, s.jsx)(_.oY9, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim6),
+                  }),
+                  (0, s.jsx)(_.ZTc, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim7),
+                  }),
+                  (0, s.jsx)(g.W_, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim8),
+                  }),
+                  (0, s.jsx)(g.eu, {
+                    className: (0, h.A)(k.UsePointsSvg, k.UsePointsAnim1),
                   }),
                 ],
               }),
@@ -14512,7 +14530,7 @@
                         flexDirection: "column",
                         children: [
                           (0, s.jsx)("div", {
-                            className: (0, _.A)(
+                            className: (0, h.A)(
                               k.SectionSubtitle,
                               k.SectionSubtitleLeftAlign,
                             ),
@@ -14544,7 +14562,7 @@
                         flexDirection: "column",
                         children: [
                           (0, s.jsx)("div", {
-                            className: (0, _.A)(
+                            className: (0, h.A)(
                               k.SectionSubtitle,
                               k.SectionSubtitleLeftAlign,
                             ),
@@ -14573,7 +14591,7 @@
                         display: "flex",
                         flexDirection: "column",
                         children: (0, s.jsx)("div", {
-                          className: (0, _.A)(
+                          className: (0, h.A)(
                             k.SectionSubtitle,
                             k.SectionSubtitleLeftAlign,
                           ),
@@ -15014,7 +15032,7 @@
         ue = i(6708),
         pe = i(17720),
         ge = i(12711);
-      function he(e) {
+      function _e(e) {
         const { steamid: t } = e,
           i = new pe.b(t),
           n = (0, re.I)({
@@ -15075,7 +15093,7 @@
                 ),
             },
           },
-          h = (0, s.jsxs)(s.Fragment, {
+          _ = (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsxs)("a", {
                 className: de.Header,
@@ -15106,7 +15124,7 @@
             spacing: "xlarge",
             children: [
               (0, s.jsx)(d.Ch, {
-                title: h,
+                title: _,
                 subtitle: (0, p.we)("#EquippedProfile_Header_Desc"),
               }),
               u && (0, s.jsx)("div", { className: de.ErrorCtn, children: u }),
@@ -15155,7 +15173,7 @@
           }),
         });
       }
-      var _e,
+      var he,
         fe = i(42626),
         we = i(56545),
         ye = i(80613),
@@ -16196,7 +16214,7 @@
               ePrivilege: 0,
             });
           });
-      })(_e || (_e = {}));
+      })(he || (he = {}));
       var Ge = i(14947);
       class Ee {
         constructor() {
@@ -16222,7 +16240,7 @@
           if (!G.DZ.Get().BIsLoggedIn()) return [];
           const e = we.w.Init(Be);
           e.SetBodyFields({ steamid: o.iA.steamid });
-          let t = await _e.GetBidsForUser(this.m_transport, e);
+          let t = await he.GetBidsForUser(this.m_transport, e);
           return 1 == t.GetEResult()
             ? t.Body().toObject().bids
             : (console.error(
@@ -16243,7 +16261,7 @@
         }
         async LoadAllItems() {
           const e = we.w.Init(Le);
-          let t = await _e.GetAllItems(this.m_anonymousTransport, e);
+          let t = await he.GetAllItems(this.m_anonymousTransport, e);
           return 1 == t.GetEResult()
             ? t.Body().toObject().items
             : (console.error(
@@ -16267,7 +16285,7 @@
         }
         async GetUserBidForItem(e) {
           const t = we.w.Init(Re);
-          let i = await _e.GetUserBidForItem(this.m_transport, t);
+          let i = await he.GetUserBidForItem(this.m_transport, t);
           return 1 == i.GetEResult()
             ? i.Body().toObject().bid
             : (console.error(
@@ -16285,7 +16303,7 @@
             amount_bid: t,
             expected_amount_remaining: i,
           });
-          const n = await _e.PlaceBid(this.m_transport, r);
+          const n = await he.PlaceBid(this.m_transport, r);
           return (
             (s.eResult = n.GetEResult()),
             1 == n.GetEResult()
@@ -16303,7 +16321,7 @@
             return (t = { eResult: 21, strMessage: "Not logged on" }), t;
           const i = we.w.Init(ve);
           i.SetBodyFields({ auctiondescriptionid: e });
-          const s = await _e.CancelBid(this.m_transport, i);
+          const s = await he.CancelBid(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             1 == s.GetEResult()
@@ -16347,7 +16365,7 @@
                     (0, s.jsx)(n.qh, {
                       path: a.B.LoyaltyEquippedProfile(":steamid"),
                       render: (e) =>
-                        (0, s.jsx)(he, { steamid: e.match.params.steamid }),
+                        (0, s.jsx)(_e, { steamid: e.match.params.steamid }),
                     }),
                     (0, s.jsx)(n.qh, {
                       children: (0, s.jsx)(n.rd, { to: a.B.LoyaltyStore() }),
@@ -16410,8 +16428,8 @@
         u = i(22580),
         p = i(43527),
         g = i(99428),
-        h = i(61859),
-        _ = i(67388),
+        _ = i(61859),
+        h = i(67388),
         f = i(13112),
         w = i(79333),
         y = i(81435),
@@ -16480,7 +16498,7 @@
       const Z = (0, a.PA)((e) => {
           const t = {
               item_name: "Free Item",
-              item_title: (0, h.we)("#SummerSale_ItemTitle"),
+              item_title: (0, _.we)("#SummerSale_ItemTitle"),
               animated: !0,
             },
             i = {
@@ -16497,12 +16515,12 @@
             r = null,
             a = (e) => (0, N.U$)(e, i, null, !0),
             o = E,
-            l = (0, h.we)("#SummerSale_ItemName");
+            l = (0, _.we)("#SummerSale_ItemName");
           const d = u.tP.Get().BCanClaimFreeSaleReward();
           if (!d) {
             (r = (0, n.jsx)("div", {
               className: U.ClaimedText,
-              children: (0, h.we)("#Rewards_Claimed"),
+              children: (0, _.we)("#Rewards_Claimed"),
             })),
               (s = (0, B.A)(G.SaleRewardItemOwned, U.OwnedItem)),
               (a = null);
@@ -16536,7 +16554,7 @@
                       children: [
                         (0, n.jsx)("div", {
                           className: G.SaleRewardSubHeader,
-                          children: (0, h.we)("#SummerSale_FreeDesc_2"),
+                          children: (0, _.we)("#SummerSale_FreeDesc_2"),
                         }),
                         !d &&
                           (0, n.jsx)("div", {
@@ -16546,7 +16564,7 @@
                         (0, n.jsx)(c.N_, {
                           className: G.RulesLink,
                           to: p.B.LoyaltyGiveawayRules(),
-                          children: (0, h.we)("#SummerSale_Redeem_Rules"),
+                          children: (0, _.we)("#SummerSale_Redeem_Rules"),
                         }),
                       ],
                     }),
@@ -16566,7 +16584,7 @@
                     ],
                     iconComponent: H.EEf,
                     styleOverride: s,
-                    desc: (0, h.we)("#CommunityItemClass_Sticker"),
+                    desc: (0, _.we)("#CommunityItemClass_Sticker"),
                     strPriceOverride: r,
                     onClick: a,
                     children: (0, n.jsx)("img", {
@@ -16587,7 +16605,7 @@
                 children: [
                   (0, n.jsx)("span", {
                     className: G.Title,
-                    children: (0, h.we)("#SummerSale_NextStop"),
+                    children: (0, _.we)("#SummerSale_NextStop"),
                   }),
                   (0, n.jsx)(Q, { className: G.Timer, time: e.getTime() }),
                 ],
@@ -16641,7 +16659,7 @@
             (0, n.jsx)(O.RE, { className: m.Sparkles }),
             (0, n.jsxs)("div", {
               className: m.PageHomeBranding,
-              children: [" ", (0, h.we)("#ShopLink"), " "],
+              children: [" ", (0, _.we)("#ShopLink"), " "],
             }),
           ],
         });
@@ -16734,18 +16752,18 @@
                     (0, n.jsx)(ae, {}),
                     (0, n.jsx)("div", {
                       className: m.PageHomeTopSubTitle,
-                      children: (0, h.we)("#ShopHome_UseRewardPoints"),
+                      children: (0, _.we)("#ShopHome_UseRewardPoints"),
                     }),
                     (0, n.jsx)("div", {
                       className: m.PageHomeTopSubTitle,
-                      children: (0, h.we)("#ShopHome_UseRewardPoints_Subtitle"),
+                      children: (0, _.we)("#ShopHome_UseRewardPoints_Subtitle"),
                     }),
                     (0, n.jsx)(c.N_, {
                       className: m.PageHomeTopLink,
                       to: p.B.LoyaltyHowItWorks(),
                       children: (0, n.jsxs)(d.N, {
                         className: m.PageHomeHowItWorks,
-                        children: [" ", (0, h.we)("#ShopHome_HowLinkBtn")],
+                        children: [" ", (0, _.we)("#ShopHome_HowLinkBtn")],
                       }),
                     }),
                   ],
@@ -16793,7 +16811,7 @@
               (0, n.jsx)(l.qh, {
                 path: p.B.LoyaltyEvents(":eventname"),
                 render: (e) =>
-                  (0, n.jsx)(he, { eventname: e.match.params.eventname }),
+                  (0, n.jsx)(_e, { eventname: e.match.params.eventname }),
               }),
               (0, n.jsx)(l.qh, {
                 path: `${p.B.LoyaltyStore()}/app/:appid/cluster/:clusterindex`,
@@ -16879,7 +16897,7 @@
                     });
                   case "clusterview":
                     return (0, n.jsx)(
-                      _.d,
+                      h.d,
                       {
                         descriptor: e.view,
                         additionalFilter: d,
@@ -16947,7 +16965,7 @@
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              children: (0, n.jsx)(_.d, { descriptor: e, additionalFilter: r }),
+              children: (0, n.jsx)(h.d, { descriptor: e, additionalFilter: r }),
             }),
           });
         }
@@ -16975,7 +16993,7 @@
             })
           : null;
       }
-      function he(e) {
+      function _e(e) {
         const { eventname: t } = e,
           i = (0, te.f1)(),
           [s, a] = r.useState(5),
@@ -17003,7 +17021,7 @@
           d = l.data?.details?.radial_color_override,
           p = l.data?.details?.radial_edge_color_override,
           g = l.data?.details?.rtime_event_end,
-          _ = (0, $.n9)();
+          h = (0, $.n9)();
         if (
           ((0, r.useEffect)(() => {
             const e = document.documentElement.style.getPropertyValue(
@@ -17036,7 +17054,7 @@
           });
         let y = (0, n.jsx)(v.Ch, {
           title: w,
-          subtitle: i > g ? (0, h.we)("#PointShop_Event_Over") : void 0,
+          subtitle: i > g ? (0, _.we)("#PointShop_Event_Over") : void 0,
         });
         return (
           l.data?.details?.strPageHeader &&
@@ -17049,7 +17067,7 @@
                 Boolean(i > g) &&
                   (0, n.jsx)("div", {
                     className: m.PageSubtitle,
-                    children: (0, h.we)("#PointShop_Event_Over"),
+                    children: (0, _.we)("#PointShop_Event_Over"),
                   }),
               ],
             })),
@@ -17060,7 +17078,7 @@
                 header: (0, n.jsx)("a", {
                   href: (0, ee.wJ)(
                     k.TS.STORE_BASE_URL + l.data?.details?.url,
-                    _,
+                    h,
                   ),
                   children: y,
                 }),
@@ -17076,7 +17094,7 @@
         );
       }
       pe = (0, s.Cg)([a.PA], pe);
-      class _e extends r.Component {
+      class he extends r.Component {
         render() {
           return u.DZ.Get().BIsLoggedIn()
             ? this.props.children
@@ -17091,7 +17109,7 @@
                     },
                     children: [
                       (0, n.jsx)("div", {
-                        children: (0, h.we)("#RequiresLogin_Desc"),
+                        children: (0, _.we)("#RequiresLogin_Desc"),
                       }),
                       (0, n.jsx)("div", {
                         style: { paddingTop: "10px" },
@@ -17102,7 +17120,7 @@
                           ),
                           onClick: () => u.DZ.Get().ShowLoginDialog(),
                           children: (0, n.jsx)("span", {
-                            children: (0, h.we)("#RequiresLogin_Button"),
+                            children: (0, _.we)("#RequiresLogin_Button"),
                           }),
                         }),
                       }),
@@ -17127,9 +17145,9 @@
             };
           0 != t.size && (i = i.filter((e) => t.has(e)));
           const a = {
-            title: (0, h.we)("#ShopPageTitle_ByGame"),
-            subtitle: (0, h.we)("#ShopPageTitle_ByGame_Subtitle"),
-            searchPlaceholder: (0, h.we)("#SearchPlaceholder_ByGame"),
+            title: (0, _.we)("#ShopPageTitle_ByGame"),
+            subtitle: (0, _.we)("#ShopPageTitle_ByGame_Subtitle"),
+            searchPlaceholder: (0, _.we)("#SearchPlaceholder_ByGame"),
             items: i
               .slice(0, e)
               .map((e) => ({
@@ -17142,7 +17160,7 @@
               })),
             params: { type: "custom", pageid: "bygame" },
           };
-          return (0, n.jsx)(_e, {
+          return (0, n.jsx)(he, {
             descriptor: a,
             children: (0, n.jsxs)(v.jy, {
               children: [
@@ -17165,9 +17183,9 @@
           const { cVisible: e } = this.state,
             t = u.DZ.Get().GetSortedEventAppsWithRewards(),
             i = {
-              title: (0, h.we)("#ShopPageTitle_ByEvent"),
-              subtitle: (0, h.we)("#ShopPageTitle_ByEvent_Subtitle"),
-              searchPlaceholder: (0, h.we)("#SearchPlaceholder_ByGame"),
+              title: (0, _.we)("#ShopPageTitle_ByEvent"),
+              subtitle: (0, _.we)("#ShopPageTitle_ByEvent_Subtitle"),
+              searchPlaceholder: (0, _.we)("#SearchPlaceholder_ByGame"),
               items: t
                 .slice(0, e)
                 .map((e) => ({
@@ -17180,7 +17198,7 @@
                 })),
               params: { type: "custom", pageid: "byevent" },
             };
-          return (0, n.jsx)(_e, {
+          return (0, n.jsx)(he, {
             descriptor: i,
             children: (0, n.jsxs)(v.jy, {
               children: [
@@ -17213,8 +17231,8 @@
         u = i(6519),
         p = i(22580),
         g = i(78327),
-        h = i(59707),
-        _ = i(99428);
+        _ = i(59707),
+        h = i(99428);
       const f = (e, t) =>
           `${g.TS.MEDIA_CDN_COMMUNITY_URL}/images/items/${e}/${t}`,
         w = (0, r.PA)(() => {
@@ -17231,7 +17249,7 @@
                 )
               : [];
           return (0, s.jsx)(m.jy, {
-            children: (0, s.jsxs)(_.az, {
+            children: (0, s.jsxs)(h.az, {
               paddingY: "xlarge",
               display: "flex",
               flexDirection: "column",
@@ -17246,7 +17264,7 @@
                     children: i.map((t) =>
                       (0, s.jsx)(
                         I,
-                        { ...t, onClick: (i) => (0, h.U$)(i, e, t.level) },
+                        { ...t, onClick: (i) => (0, _.U$)(i, e, t.level) },
                         t.level,
                       ),
                     ),
@@ -17257,7 +17275,7 @@
           });
         }),
         y = ({ children: e }) =>
-          (0, s.jsx)(_.cV, {
+          (0, s.jsx)(h.cV, {
             className: l.BadgeGrid,
             verticalSpacing: "large",
             "flow-children": "grid",

@@ -592,12 +592,7 @@
             (0, _._)({
               apply: (_) => {
                 const { rects: _, elements: _, availableHeight: _ } = _,
-                  _ =
-                    "number" == typeof _
-                      ? _ - _ + "px"
-                      : `calc( ${_}px - var(--spacing-${_}) )`,
                   _ = {
-                    maxHeight: _,
                     boxSizing: "border-box",
                     zIndex: "1",
                   };
@@ -618,9 +613,25 @@
                   (_.width = _.width({
                     unContentWidth: _.floating.width,
                     unTargetWidth: _.reference.width,
-                  })),
+                  }));
+                const _ =
+                  "number" == typeof _ ? `${_}px` : `var(--spacing-${_})`;
+                "function" == typeof _.maxHeight
+                  ? (_.maxHeight = _.maxHeight({
+                      unAvailableHeight: _,
+                      gutter: _,
+                    }))
+                  : "number" == typeof _.maxHeight
+                    ? (_.maxHeight = `min( calc( ${_}px - ${_} ), ${_.maxHeight}px )`)
+                    : (_.maxHeight =
+                        "number" == typeof _
+                          ? _ - _ + "px"
+                          : `calc( ${_}px - var(--spacing-${_}) )`),
                   Object.assign(_.floating.style, _),
-                  _.floating.style.setProperty("--popover-max-height", _);
+                  _.floating.style.setProperty(
+                    "--popover-max-height",
+                    _.maxHeight,
+                  );
               },
             }),
           ),

@@ -300,6 +300,7 @@
         BackgroundAnimation: "_3MYFEzuIRKobkUk2lRYnMK",
         "ItemFocusAnim-darkerGrey-nocolor": "_2kV5gJ25r4jzVp6GOhkWG-",
         "ItemFocusAnim-darkerGrey": "_1mVubTLYQisF99MISwRIo",
+        "ItemFocusAnim-darkGreySettings": "_1Tb26ceanbGuyZ6jycWrEs",
         "ItemFocusAnim-darkGrey": "_3_oq3m-Z6TMDFjOzy3surq",
         "ItemFocusAnim-grey": "_3xhE-V84LKk359-l85lTcw",
         "ItemFocusAnim-translucent-white-10": "_3ZQWNeAUeyaGGIpkI8ItwX",
@@ -324,6 +325,7 @@
         BackgroundAnimation: "_1PMJYtmG-0LXiCIzsf7hHH",
         "ItemFocusAnim-darkerGrey-nocolor": "_1fYjwZXV0mHTRHEYcE_jQ8",
         "ItemFocusAnim-darkerGrey": "_1LEV1gSZkd--onnkOFZYRV",
+        "ItemFocusAnim-darkGreySettings": "_1KeeNieYRA1IvOs_hjx2Fk",
         "ItemFocusAnim-darkGrey": "_2Gt-Rn_dZpXo5pADmd7xgt",
         "ItemFocusAnim-grey": "_1NQuzlTuuuY5E17W1_Dnvp",
         "ItemFocusAnim-translucent-white-10": "qPLst3oEHDXrPYy7-xr5r",
@@ -384,6 +386,7 @@
         BackgroundAnimation: "_3--8dqRLvQdQpxNt3iZ2Ci",
         "ItemFocusAnim-darkerGrey-nocolor": "fZuuzaBtgr14k-PQsJpWW",
         "ItemFocusAnim-darkerGrey": "_2aV5_tetZEzX88CDjEbCdk",
+        "ItemFocusAnim-darkGreySettings": "_3Ufmk5x68umUvjrbPjHwoq",
         "ItemFocusAnim-darkGrey": "fojjsnGqkNFh7TEC5Ed2g",
         "ItemFocusAnim-grey": "dXvi2hnxKE2qCZdVqrR-d",
         "ItemFocusAnim-translucent-white-10": "_3o6uxDJJj4OaDSP8EcAvO2",
@@ -443,6 +446,7 @@
         BackgroundAnimation: "_26VKCvvlOekXO3gQ4lt52K",
         "ItemFocusAnim-darkerGrey-nocolor": "_3wTkpIb4XE7F7ZZDUXHgm_",
         "ItemFocusAnim-darkerGrey": "_2JTxWE9ODcqL4KEwAQsSC5",
+        "ItemFocusAnim-darkGreySettings": "_1t6voKc6Z9o4Tv6RxMOxKZ",
         "ItemFocusAnim-darkGrey": "_3hNDwFLzATB9Rlsqzdi0SL",
         "ItemFocusAnim-grey": "DO3pGo-5_dzvOUiQSw2fW",
         "ItemFocusAnim-translucent-white-10": "_1yAke0XKqQ2OeiVkyNRJPm",
@@ -471,6 +475,7 @@
         BackgroundAnimation: "_2Si3s9AMZo3G3PNFeyF410",
         "ItemFocusAnim-darkerGrey-nocolor": "Jepw2U5yCjXuQaD9GNy9I",
         "ItemFocusAnim-darkerGrey": "_1KTjwdebdzpOWcR7v-ASHd",
+        "ItemFocusAnim-darkGreySettings": "_2wNIBB1zc7I0kzNubVuspq",
         "ItemFocusAnim-darkGrey": "_26_GPi_u8yOfyv0CLxZgjQ",
         "ItemFocusAnim-grey": "_3X-YvqmKMxmmdA75nG5Oov",
         "ItemFocusAnim-translucent-white-10": "_10oNTN-UmUNRMAzKyzDgPT",
@@ -505,6 +510,7 @@
         BackgroundAnimation: "_15xQUUqj7qcbJuv9NFxFOj",
         "ItemFocusAnim-darkerGrey-nocolor": "_2NRljfOn9Bd5Z5IG7T4Epx",
         "ItemFocusAnim-darkerGrey": "_1jOANrTQ1AakQtclgFxP4",
+        "ItemFocusAnim-darkGreySettings": "_3wMBQj1rLpOf0ba_gLqlH-",
         "ItemFocusAnim-darkGrey": "_2-duIrOzfzCQHG3_UJ7jSC",
         "ItemFocusAnim-grey": "_2xdvUl8e7TUDI3bqiX9kbo",
         "ItemFocusAnim-translucent-white-10": "aoPzySIAG6FOtxxmcsyDp",
@@ -549,6 +555,7 @@
         BackgroundAnimation: "Uwgkqeb94UMwmyJ_dUvKp",
         "ItemFocusAnim-darkerGrey-nocolor": "_2fOUgihscvE65oigXmaKB1",
         "ItemFocusAnim-darkerGrey": "_2Zz5YKG-AtieYorMauAzsN",
+        "ItemFocusAnim-darkGreySettings": "_3LGTy6zChHph675eNQUXkq",
         "ItemFocusAnim-darkGrey": "_3Clab3jPQdWdPjgkUVd_xv",
         "ItemFocusAnim-grey": "_3nkj24RHleWUwg-w5PZLID",
         "ItemFocusAnim-translucent-white-10": "_2hSev8SqoBLyqKXG9DVTKf",
@@ -636,6 +643,7 @@
         BackgroundAnimation: "_9eScBs0QLgLg6VMskUG44",
         "ItemFocusAnim-darkerGrey-nocolor": "_1uEHEXdxI0bl8BOMg0qJKG",
         "ItemFocusAnim-darkerGrey": "kb_mKEW1Trrm9nSwJMvBA",
+        "ItemFocusAnim-darkGreySettings": "_1kVXULGIgIT2L7XpUEOZ3T",
         "ItemFocusAnim-darkGrey": "_2VF8pxWWbLemKsq4puU1Wr",
         "ItemFocusAnim-grey": "_3FPCibIlrpZF1BA75jCWUj",
         "ItemFocusAnim-translucent-white-10": "_3_HSK9IXZsjy9nj2VWiJi9",
@@ -672,6 +680,7 @@
         BackgroundAnimation: "_1jkwQ_5dtvUqcR17Ni8gH7",
         "ItemFocusAnim-darkerGrey-nocolor": "eJD8k-9VTnfw5SKDeQlGl",
         "ItemFocusAnim-darkerGrey": "_1baqDGxThcAePgI3jhhJkS",
+        "ItemFocusAnim-darkGreySettings": "_12880UgR1fxST3Wm0d9Ew3",
         "ItemFocusAnim-darkGrey": "_1UwkCmGYqqKEAek4YGnKP_",
         "ItemFocusAnim-grey": "nQumUwdpEoKiUzjyDI3lo",
         "ItemFocusAnim-translucent-white-10": "_2o8r_8LAMGBe_v0EG0wG6-",
@@ -714,6 +723,7 @@
         BackgroundAnimation: "_1yMm_mTIDmBvJKeCv0umgv",
         "ItemFocusAnim-darkerGrey-nocolor": "egyi2eVoAnG85NUOofeNG",
         "ItemFocusAnim-darkerGrey": "qXZt3LJP32658eNH5LunZ",
+        "ItemFocusAnim-darkGreySettings": "_21rtsL9xHjvsEMm3sZQAg4",
         "ItemFocusAnim-darkGrey": "uj8Xd4dFY6rbvtVvhTfXM",
         "ItemFocusAnim-grey": "_3uxF9dglNUFm-sYeIoYw9D",
         "ItemFocusAnim-translucent-white-10": "_2Yt3xxreXLPaY7JVPihcb5",
@@ -805,6 +815,7 @@
         BackgroundAnimation: "_2holOneB70LvCFJe2r1g9e",
         "ItemFocusAnim-darkerGrey-nocolor": "_3r1v3otuzMbNJnjxSL-5v7",
         "ItemFocusAnim-darkerGrey": "_1Pz-mADDSz8Fpzz7oTuCvR",
+        "ItemFocusAnim-darkGreySettings": "_2bN4Yf2daAATVe-idmqX8F",
         "ItemFocusAnim-darkGrey": "_3sncBNWLivrnj23D5ketFk",
         "ItemFocusAnim-grey": "B7JcTATlUFsQZSQlhyIAo",
         "ItemFocusAnim-translucent-white-10": "_7UnHbXS3CAyfX2N-aWCiv",
@@ -871,6 +882,7 @@
         BackgroundAnimation: "_21xdD3y0DJeYvUehUMcPwg",
         "ItemFocusAnim-darkerGrey-nocolor": "_3rNPhT088-82kayyY9jWT9",
         "ItemFocusAnim-darkerGrey": "HqpHRy29WMHs-c-YLSIrq",
+        "ItemFocusAnim-darkGreySettings": "_3pULdRtegOO_LMg25FyoCA",
         "ItemFocusAnim-darkGrey": "_2-jSn0eV92zh4AG5bspmdQ",
         "ItemFocusAnim-grey": "_1pfDYeJhusNZse6yV1ylkM",
         "ItemFocusAnim-translucent-white-10": "BNT9Di7wydWf5sVgthF_S",
@@ -914,6 +926,7 @@
         BackgroundAnimation: "_8_3_M592XNR4DsMQ_Sdvz",
         "ItemFocusAnim-darkerGrey-nocolor": "_2_jIt9nCSopNXe4_3NeR6a",
         "ItemFocusAnim-darkerGrey": "_3p60BZKcebqjGnIjRBOlMw",
+        "ItemFocusAnim-darkGreySettings": "_2ZQrCJY7WBczlOmmZQHMzx",
         "ItemFocusAnim-darkGrey": "_2M-BLV3qJBFtW7L-6M49jP",
         "ItemFocusAnim-grey": "ff_f9PCg5owcTXqjoWDE7",
         "ItemFocusAnim-translucent-white-10": "_2yA2_SkK8J5R_DLYh4o7Cy",
@@ -977,6 +990,7 @@
         BackgroundAnimation: "_2NvCWp6KWza717c2q7D6ko",
         "ItemFocusAnim-darkerGrey-nocolor": "_2POOztmd1ONGjK8fHCV5iD",
         "ItemFocusAnim-darkerGrey": "_3X7A1Ec0LK2lN02eH5nbEi",
+        "ItemFocusAnim-darkGreySettings": "_3MbAGf606eAnNA_kucsuEn",
         "ItemFocusAnim-darkGrey": "_3AcX9y0dDWaCFiXq2jIcU_",
         "ItemFocusAnim-grey": "_3N1W0jPMb91CnnuRmTxLeO",
         "ItemFocusAnim-translucent-white-10": "_3tNx72scoGHqNU1o7HM5I1",
@@ -1078,6 +1092,7 @@
         BackgroundAnimation: "_2cFMsY_RJyXJuF73RDcR6w",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tfth69ODAh7Vxzei2PsNy",
         "ItemFocusAnim-darkerGrey": "_13s4PV24HDIzJjXkUqHl5B",
+        "ItemFocusAnim-darkGreySettings": "_3moml_kGno0CLfo4uS0F64",
         "ItemFocusAnim-darkGrey": "_2j2T6CdMdBrozoESg_T2fz",
         "ItemFocusAnim-grey": "_212THIOmifqlNdSf_xaZGC",
         "ItemFocusAnim-translucent-white-10": "EYDRZ35WXIJWLd6nRhxF_",
@@ -1183,6 +1198,7 @@
         BackgroundAnimation: "_2-SCxC1my6FrH3aDEzPwlp",
         "ItemFocusAnim-darkerGrey-nocolor": "_3imOd9Zme0cKg033W9R6vV",
         "ItemFocusAnim-darkerGrey": "_39CSDSVCyQTDyfQlZX_eMG",
+        "ItemFocusAnim-darkGreySettings": "_3vaD1GloPppN9D4XWfGnw2",
         "ItemFocusAnim-darkGrey": "_2onns6LUXpYqxhK4fGf3NX",
         "ItemFocusAnim-grey": "_4Kw4wiHjF-6BJhWxpY1ny",
         "ItemFocusAnim-translucent-white-10": "_3OJltj5_RbXofYDZrl6cfP",
@@ -1219,6 +1235,7 @@
         BackgroundAnimation: "_1rhJfCNCZyBG_ErjP8cbJN",
         "ItemFocusAnim-darkerGrey-nocolor": "_2Wn0xk5y_QYuqwvMUgCS_q",
         "ItemFocusAnim-darkerGrey": "_1If8jrRruIrjSp8OaAnnTv",
+        "ItemFocusAnim-darkGreySettings": "_2n4FOOcmVUKefrAz9nzF7g",
         "ItemFocusAnim-darkGrey": "_18vHojgZL-LOjT6CdBetmW",
         "ItemFocusAnim-grey": "_3tz51q-WjCFwQbG3Z3idxV",
         "ItemFocusAnim-translucent-white-10": "eMzjYbN-S8IR6m_x4JUhk",
@@ -3847,11 +3864,21 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = 2 == _._.EUNIVERSE ? 404860 : 1675200,
-        _ = ["HK", "JP", "KR", "TW"],
+        _ =
+          (_._.EUNIVERSE,
+          _._.EUNIVERSE,
+          _._.EUNIVERSE,
+          ["HK", "JP", "KR", "TW"]),
         _ =
           2 == _._.EUNIVERSE
-            ? [501556, 501557, 501558, 502103, 502106]
-            : [595603, 595604, 595605, 946113, 946114];
+            ? [
+                501556, 501557, 501558, 502103, 502106, 502996, 502998, 503e3,
+                503002, 503004, 502878,
+              ]
+            : [
+                595603, 595604, 595605, 946113, 946114, 1558609, 1629447,
+                1629446, 1629458, 1629460, 1629484, 1629486,
+              ];
       function _(_) {
         return _.some((_) => _.includes(_)) && _.includes(_._.country_code);
       }
@@ -4744,6 +4771,63 @@
           }),
         });
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => null != _;
+      function _(_, _) {
+        const [_, _] = _.useState(
+            () => window.localStorage.getItem(_) ?? void 0,
+          ),
+          _ = _.useRef(_),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _(_) ? String(_) : void 0;
+              void 0 === _
+                ? window.localStorage.removeItem(_)
+                : window.localStorage.setItem(_, _),
+                _(_),
+                _.Get().GetLocalStoreChangeCallback(_).Dispatch(_);
+            },
+            [_, _],
+          );
+        _.useEffect(() => {
+          _ != _.current &&
+            (_(window.localStorage.getItem(_) ?? void 0), (_.current = _));
+        }, [_]);
+        const _ = _ == _.current ? _ : window.localStorage.getItem(_);
+        let _ = _;
+        return (
+          _(_) &&
+            (_(_)
+              ? "boolean" == typeof _
+                ? (_ = _.constructor("false" !== _))
+                : null != _ && null != _ && (_ = _.constructor(_))
+              : (_ = _)),
+          (0, _._)(_.Get().GetLocalStoreChangeCallback(_), _),
+          [_, _]
+        );
+      }
+      class _ {
+        m_mapChangeCallback = new Map();
+        GetLocalStoreChangeCallback(_) {
+          return (
+            this.m_mapChangeCallback.has(_) ||
+              this.m_mapChangeCallback.set(_, new _._()),
+            this.m_mapChangeCallback.get(_)
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+        }
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -8684,23 +8768,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => null != _;
-      class _ {
-        m_mapChangeCallback = new Map();
-        GetLocalStoreChangeCallback(_) {
-          return (
-            this.m_mapChangeCallback.has(_) ||
-              this.m_mapChangeCallback.set(_, new _._()),
-            this.m_mapChangeCallback.get(_)
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8744,39 +8812,7 @@
             bWideBroadcastPermitChat: _,
           } = _,
           [_, _] = _.useState(!_),
-          [_, _] = (function (_, _) {
-            const [_, _] = _.useState(
-                () => window.localStorage.getItem(_) ?? void 0,
-              ),
-              _ = _.useRef(_),
-              _ = _.useCallback(
-                (_) => {
-                  const _ = _(_) ? String(_) : void 0;
-                  void 0 === _
-                    ? window.localStorage.removeItem(_)
-                    : window.localStorage.setItem(_, _),
-                    _(_),
-                    _.Get().GetLocalStoreChangeCallback(_).Dispatch(_);
-                },
-                [_, _],
-              );
-            _.useEffect(() => {
-              _ != _.current &&
-                (_(window.localStorage.getItem(_) ?? void 0), (_.current = _));
-            }, [_]);
-            const _ = _ == _.current ? _ : window.localStorage.getItem(_);
-            let _ = _;
-            return (
-              _(_) &&
-                (_(_)
-                  ? "boolean" == typeof _
-                    ? (_ = _.constructor("false" !== _))
-                    : null != _ && null != _ && (_ = _.constructor(_))
-                  : (_ = _)),
-              (0, _._)(_.Get().GetLocalStoreChangeCallback(_), _),
-              [_, _]
-            );
-          })(_ + _.broadcastEmbedContext.nAppIDVOD),
+          [_, _] = (0, _._)(_ + _.broadcastEmbedContext.nAppIDVOD),
           _ = Boolean(_),
           _ = _ == _,
           _ = (0, _._)(() => "show" === _._.Get().GetChatVisibility()),
@@ -8890,6 +8926,7 @@
           url: _,
           className: _.strClassName,
           bSkipForcingStoreLink: !1,
+          bOpenInline: !!_.open_in_place,
           children: (0, _.jsxs)("div", {
             className: (0, _._)(
               _().CapsuleContainer,
@@ -17900,7 +17937,9 @@
         return _.tuple_id.split("_").map((_) => Number(_));
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             section: _,
@@ -17917,8 +17956,32 @@
           [_, _] = (0, _.useState)(() => {
             if (_ && _.length > 0)
               return _.find((_) => _.tuple_id == _.default_tuple_id) ?? _[0];
-          });
-        if (((0, _.useEffect)(() => {}, [_]), !_ || !_ || !_)) return null;
+          }),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        if (
+          ((0, _.useEffect)(() => {
+            if (_ && _.length > 0) {
+              const _ = new Set(
+                _.map((_) => _.reservation_package).filter((_) => !!_),
+              );
+              if (_.size > 0) {
+                Array.from(_).forEach((_) => {
+                  if (_) {
+                    const _ = {
+                      packageid: _,
+                    };
+                    _.prefetchQuery((0, _._)(_, _)),
+                      _.prefetchQuery((0, _._)(_, _)),
+                      _.prefetchQuery((0, _._)(_, _));
+                  }
+                });
+              }
+            }
+          }, [_, _, _]),
+          !_ || !_ || !_)
+        )
+          return null;
         const _ = _?.find((_) => _.reservation_package == _.package_id);
         return (0, _.jsxs)(_, {
           reservationLayout: _,
@@ -18253,6 +18316,9 @@
                 .filter(Boolean),
             [_.internal_section_data?.reservation_options],
           ),
+          _ = _.internal_section_data?.reservation_appid_wishlist,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { rgHardwareDetails: _, eHardwareLoadingState: _ } = (0, _._)(_);
         if (!_ && _ == _._.k_Loading)
           return (0, _.jsx)(_._, {
@@ -18260,47 +18326,69 @@
             position: "center",
             string: _._.Localize("#Loading"),
           });
-        let _ = (function (_, _, _) {
-          let _ = null;
-          return (
-            _ == _._.k_LoadFailure
-              ? (_ = (0, _._)("#Sale_Reservation_Too_Busy"))
-              : (0, _._)(_)
-                ? (_ = (0, _._)(
-                    "#Sale_Reservation_Komodo",
-                    (0, _.jsx)("a", {
-                      className: _.Link,
-                      href: "https://steamdeck.komodo.jp",
-                    }),
-                  ))
-                : _ &&
-                    __webpack_require__.some(
-                      (_) => !_.allow_purchase_in_country,
-                    )
-                  ? (_ = (0, _._)("#Sale_Reservation_NotAvailableCountry"))
-                  : _ &&
-                    __webpack_require__.some(
-                      (_) => _.account_restricted_from_purchasing,
-                    ) &&
-                    _._.logged_in &&
-                    (_ = __webpack_require__.some((_) => _.requires_reservation)
-                      ? (0, _._)("#Sale_Reservation_NotAllowedAccount")
-                      : (0, _._)("#Sale_Purchase_NotAllowedAccount")),
-            _
+        const { elReservationSystemMessage: _, bHidePackageDisplay: _ } =
+          (function (_, _, _, _, _) {
+            let _ = null,
+              _ = !1;
+            return (
+              _ == _._.k_LoadFailure
+                ? (_ = (0, _._)("#Sale_Reservation_Too_Busy"))
+                : (0, _._)(_)
+                  ? ((_ = !0),
+                    (_ =
+                      _ === _._
+                        ? (0, _._)(
+                            "#Sale_Reservation_Komodo",
+                            (0, _.jsx)("a", {
+                              className: _.Link,
+                              href: "https://steamdeck.komodo.jp",
+                            }),
+                          )
+                        : (0, _._)(
+                            "#Sale_Reservation_Komodo_Generic",
+                            _ ?? (0, _._)("#AppTypeLabel_hardware"),
+                            (0, _.jsx)("a", {
+                              className: _.Link,
+                              href: "https://komodostation.com/",
+                              children: "komodostation.com",
+                            }),
+                          )))
+                  : _ && _.some((_) => !_.allow_purchase_in_country)
+                    ? ((_ = !0),
+                      (_ = (0, _._)("#Sale_Reservation_NotAvailableCountry")))
+                    : _ &&
+                      _.some((_) => _.account_restricted_from_purchasing) &&
+                      _._.logged_in &&
+                      (_ = _.some((_) => _.requires_reservation)
+                        ? (0, _._)("#Sale_Reservation_NotAllowedAccount")
+                        : (0, _._)("#Sale_Purchase_NotAllowedAccount")),
+              {
+                elReservationSystemMessage: _,
+                bHidePackageDisplay: _,
+              }
+            );
+          })(_, _?.name, _, _, _);
+        let _ = !0;
+        if (_) {
+          _ = !(_.internal_section_data?.reservation_options ?? []).some(
+            (_) => _.use_package_description,
           );
-        })(_, _, _);
+        }
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            _?.show_product_configs
-              ? (0, _.jsx)(_, {
-                  ..._,
-                  disabled: !!_,
-                  reservationLayout: _,
-                })
-              : (0, _.jsx)(_, {
-                  ..._,
-                  disabled: !!_,
-                }),
+            _ &&
+              (0, _.jsx)(_.Fragment, {
+                children: _?.show_product_configs
+                  ? (0, _.jsx)(_, {
+                      ..._,
+                      disabled: !!_,
+                      reservationLayout: _,
+                    })
+                  : (0, _.jsx)(_, {
+                      ..._,
+                      disabled: !!_,
+                    }),
+              }),
             !!_ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(_.noreserve, "NoReserverMsg"),

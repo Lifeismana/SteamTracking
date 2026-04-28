@@ -58,6 +58,7 @@
         Rows: "_2QdiX1hDsJmlkrHmcCOMbV",
         AutoColumns: "Cr7YIMQn6_lDRU4-3BR8b",
         AutoRows: "_3kyzvGnYVLT0DW6nzP9n18",
+        AutoFlow: "_3AvZKfpfaIQbfczVRBASsX",
         Areas: "_1-yfCTWkj4tOFfb3EKXx6N",
         Flow: "_1yUwWGTk4IX0IhdJiKfFBf",
         AlignContent: "_2Tglp6488nVBhU976Llfpe",
@@ -109,9 +110,9 @@
         Silhouette: "NLSqZ9dW14eyrJHMGtMXq",
       };
     },
-    43082: (t, c, n) => {
+    36080: (t, c, n) => {
       "use strict";
-      n.r(c), n.d(c, { default: () => Bt });
+      n.r(c), n.d(c, { default: () => Pt });
       var e = n(7850),
         l = n(83392),
         s = n(90534),
@@ -200,10 +201,10 @@
         (V.turkish = () => n.e(8670).then(n.t.bind(n, 38670, 19))),
         (V.ukrainian = () => n.e(4088).then(n.t.bind(n, 44088, 19))),
         (V.vietnamese = () => n.e(5345).then(n.t.bind(n, 25345, 19)));
-      const _ = (0, C.l)(async function (t) {
+      const j = (0, C.l)(async function (t) {
           if (V[t]) return V[t]();
         }),
-        j = _.Localize;
+        _ = j.Localize;
       var w = n(20187),
         b = n(3049);
       const y = {
@@ -224,7 +225,7 @@
           : (0, e.jsx)(w.EY, {
               as: "div",
               ...l,
-              children: _.LocalizeReact(
+              children: j.LocalizeReact(
                 "#ItemDescription_AssetPropertyLabelColonValue",
                 a.localized_label,
                 (0, e.jsx)(w.EY, {
@@ -264,7 +265,7 @@
         k = n(49845),
         L = n(58632),
         I = n.n(L);
-      function T(t, c) {
+      function H(t, c) {
         const n = (function (t, c, n, e = h.tB.GetAssetClassInfo) {
           return (0, k.V)(`AssetClassInfo_${c}_${n}`, () =>
             (function (t, c, n, e = h.tB.GetAssetClassInfo) {
@@ -300,7 +301,7 @@
           })(n, t, c),
         );
       }
-      var H = n(49560),
+      var T = n(49560),
         O = n(86927);
       function A(t) {
         const { children: c, ...n } = t,
@@ -316,25 +317,25 @@
           }, []),
           r = (0, O.xA)("wheel", v, { passive: !1 }),
           [o, h] = i.useState(!1);
-        return (0, e.jsxs)(H.A.Root, {
+        return (0, e.jsxs)(T.A.Root, {
           open: o,
           onOpenChange: h,
           width: a,
           placement: "right",
           interactions: { hover: (t) => ({ ...t, delay: 250 }) },
           children: [
-            (0, e.jsx)(H.A.Anchor, { children: i.cloneElement(c, { ref: r }) }),
-            (0, e.jsx)(H.A.Positioner, {
+            (0, e.jsx)(T.A.Anchor, { children: i.cloneElement(c, { ref: r }) }),
+            (0, e.jsx)(T.A.Positioner, {
               children: (0, e.jsx)(s.az, {
                 marginX: "2",
-                children: (0, e.jsx)(E, { ...n, refHover: l }),
+                children: (0, e.jsx)(Y, { ...n, refHover: l }),
               }),
             }),
           ],
         });
       }
       const R = 346;
-      function E(t) {
+      function Y(t) {
         var c;
         const { description: n, asset: l, bHideImage: s = !1, refHover: a } = t;
         let i,
@@ -342,76 +343,76 @@
         "identifiers" in t &&
           ((i = t.identifiers),
           (v = null !== (c = i.appid) && void 0 !== c ? c : v));
-        const { data: r } = T(v, n ? void 0 : i),
+        const { data: r } = H(v, n ? void 0 : i),
           o = null != n ? n : r;
         return o
-          ? (0, e.jsx)(At.Root, {
+          ? (0, e.jsx)(Tt.Root, {
               description: o,
               asset: l,
               bInteractable: !1,
-              children: (0, e.jsxs)(At.Container, {
+              children: (0, e.jsxs)(Tt.Container, {
                 maxHeight: "90vh",
                 overflow: "auto",
                 ref: a,
                 children: [
-                  (0, e.jsxs)(At.Content, {
+                  (0, e.jsxs)(Tt.Content, {
                     children: [
                       !s &&
                         (0, e.jsxs)(e.Fragment, {
                           children: [
-                            (0, e.jsx)(At.Image, {}),
-                            (0, e.jsx)(At.Separator, {}),
+                            (0, e.jsx)(Tt.Image, {}),
+                            (0, e.jsx)(Tt.Separator, {}),
                           ],
                         }),
-                      (0, e.jsx)(At.Name, {}),
-                      (0, e.jsx)(At.GameInfo, {}),
-                      (0, e.jsx)(At.Descriptions, {}),
-                      (0, e.jsx)(At.OwnerDescriptions, {}),
-                      (0, e.jsx)(At.Tags, {}),
-                      (0, e.jsx)(At.AssetProperties, {}),
+                      (0, e.jsx)(Tt.Name, {}),
+                      (0, e.jsx)(Tt.GameInfo, {}),
+                      (0, e.jsx)(Tt.Descriptions, {}),
+                      (0, e.jsx)(Tt.OwnerDescriptions, {}),
+                      (0, e.jsx)(Tt.Tags, {}),
+                      (0, e.jsx)(Tt.AssetProperties, {}),
                     ],
                   }),
-                  (0, e.jsx)(At.SellOnMarket, {}),
+                  (0, e.jsx)(Tt.SellOnMarket, {}),
                 ],
               }),
             })
           : null;
       }
-      var Y = n(28491),
-        P = n(6083);
-      function B(t, c) {
+      var P = n(28491),
+        E = n(6083);
+      function G(t, c) {
         return t.name_color ? `#${t.name_color}` : c;
       }
-      function G(t, c) {
+      function N(t, c) {
         const n =
           "string" == typeof (null == c ? void 0 : c.amount)
             ? parseInt(c.amount)
             : null == c
               ? void 0
               : c.amount;
-        return (n && n > 1 ? `${(0, P.D)(n)} ` : "") + t.name;
+        return (n && n > 1 ? `${(0, E.D)(n)} ` : "") + t.name;
       }
-      function N(t) {
+      function B(t) {
         const { description: c, asset: n, style: l = {}, ...s } = t;
         return (0, e.jsx)(w.EY, {
           contrast: "note",
           ...s,
-          style: { ...(null != l ? l : {}), color: B(c) },
-          children: G(c, n),
+          style: { ...(null != l ? l : {}), color: G(c) },
+          children: N(c, n),
         });
       }
-      function $(t) {
+      function F(t) {
         const { description: c, asset: n, style: l = {}, ...s } = t;
-        return (0, e.jsx)(Y.Y, {
+        return (0, e.jsx)(P.Y, {
           contrast: "note",
           underline: "hover",
           ...s,
-          style: { ...(null != l ? l : {}), color: B(c) },
-          children: G(c, n),
+          style: { ...(null != l ? l : {}), color: G(c) },
+          children: N(c, n),
         });
       }
-      var F = n(67603);
-      function W(t) {
+      var W = n(67603);
+      function $(t) {
         var c;
         const n = t.context.itemDescription;
         if (
@@ -430,18 +431,18 @@
       }
       function D(t) {
         const { appid: c, contained_item: n } = t,
-          { data: l } = T(c, n);
+          { data: l } = H(c, n);
         return l
           ? (0, e.jsx)("li", {
               children: (0, e.jsx)(A, {
                 description: l,
                 children:
                   l.marketable && l.market_hash_name
-                    ? (0, e.jsx)($, {
+                    ? (0, e.jsx)(F, {
                         description: l,
-                        href: F.N.Item(c, l.market_hash_name),
+                        href: W.N.Item(c, l.market_hash_name),
                       })
-                    : (0, e.jsx)(N, { description: l }),
+                    : (0, e.jsx)(B, { description: l }),
               }),
             })
           : null;
@@ -463,57 +464,8 @@
             );
       }
       var U = n(29233),
-        q = n(11333);
-      function Z(t) {
-        return ["PlayerLinkDetails", t];
-      }
-      function K(t) {
-        const c = (0, u.KV)(),
-          n = (0, q.L)(c);
-        return (0, f.I)(
-          (function (t, c) {
-            const n =
-              "number" == typeof c
-                ? U.b2
-                    .InitFromAccountID(c, d.TS.EUNIVERSE)
-                    .ConvertTo64BitString()
-                : c;
-            return {
-              queryKey: Z(n),
-              queryFn: async () => {
-                var c, e, l, s, a;
-                if (n) {
-                  const i = await t.load(n);
-                  return (
-                    null === (c = null == i ? void 0 : i.private_data) ||
-                      void 0 === c ||
-                      delete c.account_name,
-                    null === (e = null == i ? void 0 : i.public_data) ||
-                      void 0 === e ||
-                      delete e.account_flags,
-                    null === (l = null == i ? void 0 : i.public_data) ||
-                      void 0 === l ||
-                      delete l.ban_expires_time,
-                    null === (s = null == i ? void 0 : i.public_data) ||
-                      void 0 === s ||
-                      delete s.privacy_state,
-                    1 !==
-                      (null === (a = null == i ? void 0 : i.public_data) ||
-                      void 0 === a
-                        ? void 0
-                        : a.profile_state) &&
-                      (null == i || delete i.private_data),
-                    i
-                  );
-                }
-                return null;
-              },
-              enabled: !!n,
-            };
-          })(n, t),
-        );
-      }
-      function X(t) {
+        Z = n(62220);
+      function q(t) {
         var c, n;
         const l = parseInt(
             null !==
@@ -525,39 +477,39 @@
               : "0",
           ),
           s = U.b2.InitFromAccountID(l, d.TS.EUNIVERSE).ConvertTo64BitString(),
-          { data: a, isLoading: i } = K(s);
+          { data: a, isLoading: i } = (0, Z.jn)(s);
         if (!a && i) return null;
         const v = J(a, s);
-        return (0, e.jsx)(Y.Y, {
+        return (0, e.jsx)(P.Y, {
           href: v,
           "data-miniprofile": l,
           children: a ? a.public_data.persona_name : l,
         });
       }
-      var Q = n(52967),
-        tt = n(42780),
-        ct = n(47535),
-        nt = n(78312),
-        et = n(1736),
-        lt = n(60869);
-      function st(t) {
+      var K = n(52967),
+        X = n(42780),
+        Q = n(47535),
+        tt = n(78312),
+        ct = n(1736),
+        nt = n(60869);
+      function et(t) {
         const { itemDescription: c, bbcode: n = "" } = t,
           e = i.useMemo(() => {
             const t = {
-              ...ct.L,
-              ...lt.I,
-              ...nt.F,
-              url: { Constructor: et._ },
-              container_item_list: { Constructor: W },
-              persona: { Constructor: X },
-              date: { Constructor: at },
+              ...Q.L,
+              ...nt.I,
+              ...tt.F,
+              url: { Constructor: ct._ },
+              container_item_list: { Constructor: $ },
+              persona: { Constructor: q },
+              date: { Constructor: lt },
             };
-            return new Q.B(t, (t) => new tt.R8(), d.TS.LANGUAGE);
+            return new K.B(t, (t) => new X.R8(), d.TS.LANGUAGE);
           }, []),
           l = i.useMemo(() => ({ itemDescription: c }), [c]);
         return i.useMemo(() => e.ParseBBCode(n, l), [e, n, l]);
       }
-      function at(t) {
+      function lt(t) {
         var c, n;
         const e = parseInt(
           null !==
@@ -571,7 +523,7 @@
         if (!e) return null;
         return new Date(1e3 * e).toLocaleString((0, b.J)());
       }
-      function it(t) {
+      function st(t) {
         const { description: c, type: n = "descriptions", ...s } = t,
           a = c[n];
         return (0, e.jsx)(l.s, {
@@ -580,11 +532,11 @@
             null == a
               ? void 0
               : a.map((t, n) =>
-                  (0, e.jsx)(vt, { line: t, description: c, ...s }, n),
+                  (0, e.jsx)(at, { line: t, description: c, ...s }, n),
                 ),
         });
       }
-      function vt(t) {
+      function at(t) {
         var c, n;
         const { line: l, description: s, ...a } = t,
           i = {
@@ -611,26 +563,26 @@
           case "bbcode":
             return (0, e.jsx)(w.EY, {
               ...i,
-              children: (0, e.jsx)(st, { itemDescription: s, bbcode: v }),
+              children: (0, e.jsx)(et, { itemDescription: s, bbcode: v }),
             });
           default:
             return (0, e.jsx)(w.EY, { ...i, children: v });
         }
       }
-      const rt = i.createContext(void 0);
+      const it = i.createContext(void 0);
+      function vt() {
+        return i.useContext(it).description;
+      }
+      function rt() {
+        return i.useContext(it).asset;
+      }
       function ot() {
-        return i.useContext(rt).description;
+        return i.useContext(it).bInteractable;
       }
-      function ht() {
-        return i.useContext(rt).asset;
-      }
-      function dt() {
-        return i.useContext(rt).bInteractable;
-      }
-      var ut = n(64753);
-      function pt(t) {
+      var ht = n(64753);
+      function dt(t) {
         const { action: c } = t,
-          n = ht();
+          n = rt();
         if (!n) return null;
         const l = c.link.match(
             /GetGooValue\(\s*'?[^']*'?\s*,\s*'?[^']*'?\s*,\s*'?(?<appid>[0-9]+)'?\s*,\s*'?(?<item_type>[0-9]+)'?\s*,\s*'?(?<border_color>[0-9]+)'?/,
@@ -649,7 +601,7 @@
         )
           return null;
         const { appid: v, item_type: r, border_color: o } = s;
-        return (0, e.jsx)(ft, {
+        return (0, e.jsx)(ut, {
           contextid: a,
           assetid: i,
           appid: parseInt(v),
@@ -657,7 +609,7 @@
           border_color: parseInt(o),
         });
       }
-      function ft(t) {
+      function ut(t) {
         var c;
         const {
             contextid: n,
@@ -696,11 +648,11 @@
                 (0, e.jsx)(w.EY, {
                   as: "div",
                   contrast: "body",
-                  children: _.LocalizeReact(
+                  children: j.LocalizeReact(
                     "#ItemDescription_ThisItemIsWorthGems",
                     (0, e.jsx)(w.EY, {
                       color: "sky-11",
-                      children: _.Localize(
+                      children: j.Localize(
                         "#ItemDescription_XGems",
                         null !==
                           (c =
@@ -717,14 +669,14 @@
                   color: "green",
                   onClick: () => window.GrindIntoGoo(i, n, s),
                   size: "1",
-                  children: j("#ItemDescription_TurnIntoGemsButton"),
+                  children: _("#ItemDescription_TurnIntoGemsButton"),
                 }),
                 (0, e.jsx)(w.EY, {
                   as: "div",
                   contrast: "body",
-                  children: (0, ut.xh)(
-                    j("#ItemDescription_GemDescription"),
-                    (0, e.jsx)(Y.Y, {
+                  children: (0, ht.xh)(
+                    _("#ItemDescription_GemDescription"),
+                    (0, e.jsx)(P.Y, {
                       underline: "auto",
                       color: "greyneutral-12",
                       href: `${d.TS.COMMUNITY_BASE_URL}tradingcards/boostercreator/`,
@@ -735,7 +687,7 @@
             })
           : null;
       }
-      function gt(t) {
+      function pt(t) {
         const { actions: c } = t,
           [n, s] = i.useMemo(() => {
             let t = [],
@@ -748,8 +700,8 @@
                     ? void 0
                     : s.startsWith("javascript:GetGooValue")
                 )
-                  ? n.push((0, e.jsx)(pt, { action: c }, l))
-                  : t.push((0, e.jsx)(mt, { action: c }, l));
+                  ? n.push((0, e.jsx)(dt, { action: c }, l))
+                  : t.push((0, e.jsx)(ft, { action: c }, l));
               }),
               [t, n]
             );
@@ -761,12 +713,12 @@
           ],
         });
       }
-      function mt(t) {
+      function ft(t) {
         const c = r(),
-          n = ot(),
-          l = ht(),
-          s = i.useContext(rt).listingID;
-        return (0, e.jsx)(xt, {
+          n = vt(),
+          l = rt(),
+          s = i.useContext(it).listingID;
+        return (0, e.jsx)(gt, {
           ...t,
           ownerSteamID: c,
           description: n,
@@ -774,7 +726,7 @@
           listingID: s,
         });
       }
-      function xt(t) {
+      function gt(t) {
         const {
             action: c,
             description: n,
@@ -828,8 +780,8 @@
           children: c.name,
         });
       }
-      var Ct = n(72255);
-      function Vt(t) {
+      var mt = n(72255);
+      function xt(t) {
         const {
             eWalletCurrency: c,
             appid: n,
@@ -875,7 +827,7 @@
                   color: "dull",
                   href: `${d.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}${r ? `?sellorderassetid=${r}` : ""}`,
                   size: "1",
-                  children: j("#SellOnMarket_ViewListing"),
+                  children: _("#SellOnMarket_ViewListing"),
                 }),
               })
             : (0, e.jsxs)(l.s, {
@@ -884,20 +836,20 @@
                 gapY: "3",
                 direction: "column",
                 children: [
-                  (0, e.jsx)(_t, { isLoading: h, priceOverview: o }),
+                  (0, e.jsx)(Ct, { isLoading: h, priceOverview: o }),
                   i &&
                     (0, e.jsx)(a.v, {
                       size: "1",
                       color: "dull",
                       href: `${d.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}`,
-                      children: j("#SellOnMarket_View"),
+                      children: _("#SellOnMarket_View"),
                     }),
-                  i && !v && (0, e.jsx)(jt, {}),
+                  i && !v && (0, e.jsx)(Vt, {}),
                 ],
               })
           : null;
       }
-      function _t(t) {
+      function Ct(t) {
         const { isLoading: c, priceOverview: n } = t;
         return c ||
           (null == n ? void 0 : n.lowest_price) ||
@@ -908,20 +860,20 @@
                 (0, e.jsx)(w.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.lowest_price)
-                    ? j("#SellOnMarket_LowestPrice", n.lowest_price)
+                    ? _("#SellOnMarket_LowestPrice", n.lowest_price)
                     : " ",
                 }),
                 (0, e.jsx)(w.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.volume)
-                    ? j("#SellOnMarket_Volume", n.volume)
+                    ? _("#SellOnMarket_Volume", n.volume)
                     : " ",
                 }),
               ],
             })
           : null;
       }
-      function jt() {
+      function Vt() {
         const t = r();
         return d.iA.logged_in && t && t == d.iA.steamid
           ? (0, e.jsx)(s.az, {
@@ -929,55 +881,55 @@
                 color: "green",
                 onClick: () => window.SellCurrentSelection(),
                 size: "1",
-                children: j("#SellOnMarket_SellThisItem"),
+                children: _("#SellOnMarket_SellThisItem"),
               }),
             })
           : null;
       }
-      var wt = n(58256),
-        bt = n(11685);
-      function yt() {
+      var jt = n(58256),
+        _t = n(11685);
+      function wt() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: j("#ItemDescription_TradeProtectedTooltip"),
+          title: _("#ItemDescription_TradeProtectedTooltip"),
           children: [
             (0, e.jsx)(s.az, {
-              className: bt.TradeProtectionLabel,
-              children: j("#ItemDescription_TradeProtected"),
+              className: _t.TradeProtectionLabel,
+              children: _("#ItemDescription_TradeProtected"),
             }),
-            (0, e.jsx)(wt._, {
-              className: bt.TradeProtectionIcon,
-              alt: j("#ItemDescription_TradeProtected"),
+            (0, e.jsx)(jt._, {
+              className: _t.TradeProtectionIcon,
+              alt: _("#ItemDescription_TradeProtected"),
               src: `${d.TS.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
             }),
           ],
         });
       }
-      var St = n(43694);
-      function zt() {
+      var bt = n(43694);
+      function yt() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: j("#ItemDescription_ListedItemTooltip"),
+          title: _("#ItemDescription_ListedItemTooltip"),
           children: [
             (0, e.jsx)(s.az, {
-              className: St.ListedItemLabel,
-              children: j("#ItemDescription_ListedItem"),
+              className: bt.ListedItemLabel,
+              children: _("#ItemDescription_ListedItem"),
             }),
-            (0, e.jsx)(wt._, {
-              className: St.ListedItemIcon,
-              alt: j("#ItemDescription_ListedItem"),
+            (0, e.jsx)(jt._, {
+              className: bt.ListedItemIcon,
+              alt: _("#ItemDescription_ListedItem"),
               src: `${d.TS.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
             }),
           ],
         });
       }
-      var Mt = n(65646),
-        kt = n(59805),
-        Lt = n(42834),
-        It = n(69345),
-        Tt = n(39777),
-        Ht = n(45179);
-      const Ot = {
+      var St = n(65646),
+        zt = n(59805),
+        Mt = n(42834),
+        kt = n(69345),
+        Lt = n(39777),
+        It = n(45179);
+      const Ht = {
         Root: function (t) {
           const {
               description: c,
@@ -995,15 +947,15 @@
               }),
               [c, n, l, s],
             );
-          return (0, e.jsx)(rt.Provider, { value: v, children: a });
+          return (0, e.jsx)(it.Provider, { value: v, children: a });
         },
         Container: function (t) {
           const { children: c, ...n } = t,
-            s = ot();
+            s = vt();
           return (0, e.jsx)(l.s, {
             direction: "column",
-            border: `2px solid ${B(s, "#3A3A3A")}`,
-            className: Ht.ItemDescription,
+            border: `2px solid ${G(s, "#3A3A3A")}`,
+            className: It.ItemDescription,
             ...n,
             children: c,
           });
@@ -1020,7 +972,7 @@
         },
         Image: function (t) {
           const { bAllowAnimatedIcon: c = !0 } = t,
-            n = ot(),
+            n = vt(),
             a =
               `${d.TS.COMMUNITY_CDN_URL}economy/image/${n.icon_url_large || n.icon_url}/330x192` +
               (c ? "?allow_animated=1" : "");
@@ -1036,35 +988,36 @@
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
-                  children: (0, e.jsx)(yt, {}),
+                  children: (0, e.jsx)(wt, {}),
                 }),
               !!n.sealed &&
                 1 == n.sealed_type &&
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
-                  children: (0, e.jsx)(zt, {}),
+                  children: (0, e.jsx)(yt, {}),
                 }),
             ],
           });
         },
         Separator: function () {
-          return (0, e.jsx)(Mt.w, {
+          return (0, e.jsx)(St.w, {
             color: "dull-10",
             size: "4",
             marginY: "2",
           });
         },
         Name: function () {
-          const t = ot(),
-            c = ht();
-          return (0, e.jsx)(kt.D, {
-            size: "6",
-            children: (0, e.jsx)(N, { description: t, asset: c }),
+          const t = vt(),
+            c = rt();
+          return (0, e.jsx)(zt.D, {
+            size: "7",
+            weight: "heavy",
+            children: (0, e.jsx)(B, { description: t, asset: c }),
           });
         },
         FraudWarnings: function () {
-          const { fraudwarnings: t } = ot();
+          const { fraudwarnings: t } = vt();
           return t && 0 != t.length
             ? (0, e.jsx)(s.az, {
                 borderColor: "dull-6",
@@ -1077,7 +1030,7 @@
                       color: "red-9",
                       as: "div",
                       children: [
-                        (0, e.jsx)(Et, {
+                        (0, e.jsx)(At, {
                           style: {
                             height: "1.25em",
                             verticalAlign: "text-bottom",
@@ -1096,13 +1049,13 @@
         GameInfo: function (t) {
           var c;
           const { hrefGame: n } = t,
-            a = ot(),
+            a = vt(),
             i = a.appid,
-            { data: v } = (0, Tt.lv)({ appid: i }),
-            { data: r } = (0, Tt.J$)({ appid: i }),
+            { data: v } = (0, Lt.lv)({ appid: i }),
+            { data: r } = (0, Lt.J$)({ appid: i }),
             o =
-              v && v.community_icon ? (0, Lt.b0)(v, "community_icon") : void 0,
-            h = (0, It.n)(r),
+              v && v.community_icon ? (0, Mt.b0)(v, "community_icon") : void 0,
+            h = (0, kt.n)(r),
             d =
               null != n
                 ? n
@@ -1115,25 +1068,25 @@
             gapX: "2",
             align: "center",
             children: [
-              (0, e.jsx)(Rt, {
+              (0, e.jsx)(Ot, {
                 href: d,
                 children: o
-                  ? (0, e.jsx)(wt._, {
+                  ? (0, e.jsx)(jt._, {
                       alt:
                         null !== (c = null == r ? void 0 : r.name) &&
                         void 0 !== c
                           ? c
                           : "",
                       src: o,
-                      className: Ht.GameImage,
+                      className: It.GameImage,
                     })
-                  : (0, e.jsx)(s.az, { className: Ht.GameImagePlaceholder }),
+                  : (0, e.jsx)(s.az, { className: It.GameImagePlaceholder }),
               }),
               (0, e.jsxs)(l.s, {
                 direction: "column",
                 children: [
                   d
-                    ? (0, e.jsx)(Y.Y, {
+                    ? (0, e.jsx)(P.Y, {
                         href: d,
                         size: "3",
                         contrast: "note",
@@ -1156,9 +1109,9 @@
           });
         },
         Descriptions: function () {
-          const t = ot();
+          const t = vt();
           return (0, e.jsx)(e.Fragment, {
-            children: (0, e.jsx)(it, {
+            children: (0, e.jsx)(st, {
               description: t,
               contrast: "description",
               size: "3",
@@ -1166,14 +1119,14 @@
           });
         },
         Actions: function () {
-          const t = ot(),
-            c = dt(),
+          const t = vt(),
+            c = ot(),
             { actions: n } = t;
-          return c ? n && (0, e.jsx)(gt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(pt, { actions: n }) : null;
         },
         OwnerDescriptions: function () {
-          const t = ot();
-          return (0, e.jsx)(it, {
+          const t = vt();
+          return (0, e.jsx)(st, {
             description: t,
             type: "owner_descriptions",
             contrast: "description",
@@ -1181,26 +1134,26 @@
           });
         },
         OwnerActions: function () {
-          const t = ot(),
-            c = dt(),
+          const t = vt(),
+            c = ot(),
             { owner_actions: n } = t;
-          return c ? n && (0, e.jsx)(gt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(pt, { actions: n }) : null;
         },
         MarketActions: function () {
-          const t = ot(),
-            c = dt(),
+          const t = vt(),
+            c = ot(),
             { market_actions: n } = t;
-          return c ? n && (0, e.jsx)(gt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(pt, { actions: n }) : null;
         },
         Tags: function () {
-          const t = ot(),
+          const t = vt(),
             { tags: c } = t;
           return c && c.length
             ? (0, e.jsxs)(w.EY, {
                 size: "3",
                 contrast: "note",
                 children: [
-                  j("#ItemDescription_Tags"),
+                  _("#ItemDescription_Tags"),
                   " ",
                   " ",
                   c.map((t) => t.localized_tag_name).join(", "),
@@ -1209,7 +1162,7 @@
             : null;
         },
         AssetProperties: function () {
-          const t = ht();
+          const t = rt();
           return t && t.asset_properties && 0 != t.asset_properties.length
             ? (0, e.jsx)(l.s, {
                 direction: "column",
@@ -1224,15 +1177,15 @@
             : null;
         },
         SellOnMarket: function () {
-          const t = ot(),
-            c = ht(),
-            n = dt(),
-            l = (0, Ct.rt)(d.iA.country_code),
+          const t = vt(),
+            c = rt(),
+            n = ot(),
+            l = (0, mt.rt)(d.iA.country_code),
             s = !!t.sealed && 1 == t.sealed_type;
           if (!t.marketable && 1 != t.sealed_type) return null;
           const a = t.market_hash_name || t.market_name || t.name;
           return a
-            ? (0, e.jsx)(Vt, {
+            ? (0, e.jsx)(xt, {
                 eWalletCurrency: l,
                 appid: t.appid,
                 hashName: a,
@@ -1243,44 +1196,44 @@
             : null;
         },
       };
-      const At = Object.assign(function (t) {
+      const Tt = Object.assign(function (t) {
         const {
           description: c,
           asset: n,
           bInteractable: l = !0,
           bIncludeMarketInfo: s = !0,
         } = t;
-        return (0, e.jsx)(At.Root, {
+        return (0, e.jsx)(Tt.Root, {
           description: c,
           asset: n,
           bInteractable: l,
-          children: (0, e.jsxs)(At.Container, {
+          children: (0, e.jsxs)(Tt.Container, {
             children: [
-              (0, e.jsxs)(At.Content, {
+              (0, e.jsxs)(Tt.Content, {
                 children: [
-                  (0, e.jsx)(At.Image, {}),
-                  (0, e.jsx)(At.Separator, {}),
-                  (0, e.jsx)(At.Name, {}),
-                  (0, e.jsx)(At.FraudWarnings, {}),
-                  (0, e.jsx)(At.GameInfo, {}),
-                  (0, e.jsx)(At.Descriptions, {}),
-                  (0, e.jsx)(At.Actions, {}),
-                  (0, e.jsx)(At.OwnerDescriptions, {}),
-                  (0, e.jsx)(At.OwnerActions, {}),
-                  (0, e.jsx)(At.Tags, {}),
-                  (0, e.jsx)(At.AssetProperties, {}),
+                  (0, e.jsx)(Tt.Image, {}),
+                  (0, e.jsx)(Tt.Separator, {}),
+                  (0, e.jsx)(Tt.Name, {}),
+                  (0, e.jsx)(Tt.FraudWarnings, {}),
+                  (0, e.jsx)(Tt.GameInfo, {}),
+                  (0, e.jsx)(Tt.Descriptions, {}),
+                  (0, e.jsx)(Tt.Actions, {}),
+                  (0, e.jsx)(Tt.OwnerDescriptions, {}),
+                  (0, e.jsx)(Tt.OwnerActions, {}),
+                  (0, e.jsx)(Tt.Tags, {}),
+                  (0, e.jsx)(Tt.AssetProperties, {}),
                 ],
               }),
-              s && (0, e.jsx)(At.SellOnMarket, {}),
+              s && (0, e.jsx)(Tt.SellOnMarket, {}),
             ],
           }),
         });
-      }, Ot);
-      function Rt(t) {
+      }, Ht);
+      function Ot(t) {
         const { children: c, href: n } = t;
         return n ? (0, e.jsx)("a", { href: n, children: c }) : c;
       }
-      function Et(t) {
+      function At(t) {
         return (0, e.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 20 20",
@@ -1294,9 +1247,9 @@
           }),
         });
       }
-      var Yt = n(81393),
-        Pt = n(84811);
-      function Bt(t) {
+      var Rt = n(81393),
+        Yt = n(84811);
+      function Pt(t) {
         const {
             name: c,
             bIsMarket: n,
@@ -1315,10 +1268,10 @@
                 const e = window;
                 e.UpdateReactItemInfo ||
                   (e.UpdateReactItemInfo = (t, c, n) => {
-                    const e = Ft.get(t);
+                    const e = Bt.get(t);
                     e
                       ? e(c, n)
-                      : (0, Yt.wT)(!1, `Updater not registered: ${t}`);
+                      : (0, Rt.wT)(!1, `Updater not registered: ${t}`);
                   });
                 if (
                   null === (n = e.g_mapPendingItemInfo) || void 0 === n
@@ -1330,9 +1283,9 @@
                   c(n, l), e.g_mapPendingItemInfo.delete(t);
                 }
                 return (
-                  Ft.set(t, c),
+                  Bt.set(t, c),
                   () => {
-                    Ft.delete(t);
+                    Bt.delete(t);
                   }
                 );
               })(c, (t, c) => d(t && { description: t, asset: c })),
@@ -1341,14 +1294,14 @@
           h
             ? (0, e.jsx)(o, {
                 steamidOwner: v,
-                children: (0, e.jsx)(Pt.tH, {
+                children: (0, e.jsx)(Yt.tH, {
                   children: n
-                    ? (0, e.jsx)($t, {
+                    ? (0, e.jsx)(Nt, {
                         description: h.description,
                         asset: h.asset,
                         bHideActionsForUnique: a,
                       })
-                    : (0, e.jsx)(Gt, {
+                    : (0, e.jsx)(Et, {
                         description: h.description,
                         asset: h.asset,
                         bInteractable: l,
@@ -1360,7 +1313,7 @@
             : null
         );
       }
-      function Gt(t) {
+      function Et(t) {
         const {
           description: c,
           asset: n,
@@ -1368,34 +1321,34 @@
           bIncludeMarketInfo: s,
           strSelectItemAction: a,
         } = t;
-        return (0, e.jsx)(At.Root, {
+        return (0, e.jsx)(Tt.Root, {
           description: c,
           asset: n,
           bInteractable: l,
-          children: (0, e.jsxs)(At.Container, {
+          children: (0, e.jsxs)(Tt.Container, {
             children: [
-              (0, e.jsxs)(At.Content, {
+              (0, e.jsxs)(Tt.Content, {
                 children: [
-                  (0, e.jsx)(At.Image, {}),
-                  (0, e.jsx)(At.Separator, {}),
-                  (0, e.jsx)(At.Name, {}),
-                  (0, e.jsx)(At.FraudWarnings, {}),
-                  (0, e.jsx)(At.GameInfo, {}),
-                  (0, e.jsx)(At.Descriptions, {}),
-                  (0, e.jsx)(At.Actions, {}),
-                  (0, e.jsx)(At.OwnerDescriptions, {}),
-                  (0, e.jsx)(At.OwnerActions, {}),
-                  (0, e.jsx)(At.Tags, {}),
-                  (0, e.jsx)(At.AssetProperties, {}),
+                  (0, e.jsx)(Tt.Image, {}),
+                  (0, e.jsx)(Tt.Separator, {}),
+                  (0, e.jsx)(Tt.Name, {}),
+                  (0, e.jsx)(Tt.FraudWarnings, {}),
+                  (0, e.jsx)(Tt.GameInfo, {}),
+                  (0, e.jsx)(Tt.Descriptions, {}),
+                  (0, e.jsx)(Tt.Actions, {}),
+                  (0, e.jsx)(Tt.OwnerDescriptions, {}),
+                  (0, e.jsx)(Tt.OwnerActions, {}),
+                  (0, e.jsx)(Tt.Tags, {}),
+                  (0, e.jsx)(Tt.AssetProperties, {}),
                 ],
               }),
-              s && !a && (0, e.jsx)(At.SellOnMarket, {}),
-              !!a && (0, e.jsx)(Nt, { strLabel: a }),
+              s && !a && (0, e.jsx)(Tt.SellOnMarket, {}),
+              !!a && (0, e.jsx)(Gt, { strLabel: a }),
             ],
           }),
         });
       }
-      function Nt(t) {
+      function Gt(t) {
         const { strLabel: c } = t;
         return (0, e.jsx)(l.s, {
           background: "greyneutral-3",
@@ -1412,11 +1365,11 @@
           }),
         });
       }
-      function $t(t) {
+      function Nt(t) {
         var c;
         const { description: n, asset: s, bHideActionsForUnique: a } = t,
           i = !(a && !n.commodity);
-        return (0, e.jsx)(At.Root, {
+        return (0, e.jsx)(Tt.Root, {
           description: n,
           asset: s,
           children: (0, e.jsxs)(l.s, {
@@ -1437,7 +1390,7 @@
                 align: "center",
                 minHeight: "360px",
                 justify: "center",
-                children: (0, e.jsx)(At.Image, {}),
+                children: (0, e.jsx)(Tt.Image, {}),
               }),
               (0, e.jsxs)(l.s, {
                 flexGrow: "1",
@@ -1447,19 +1400,19 @@
                 gapY: "2",
                 minWidth: "0",
                 children: [
-                  (0, e.jsx)(At.Name, {}),
-                  (0, e.jsx)(At.GameInfo, {
+                  (0, e.jsx)(Tt.Name, {}),
+                  (0, e.jsx)(Tt.GameInfo, {
                     hrefGame: `${d.TS.COMMUNITY_BASE_URL}market/search?appid=${null !== (c = n.appid) && void 0 !== c ? c : 0}`,
                   }),
-                  (0, e.jsx)(At.Descriptions, {}),
-                  i && (0, e.jsx)(At.MarketActions, {}),
+                  (0, e.jsx)(Tt.Descriptions, {}),
+                  i && (0, e.jsx)(Tt.MarketActions, {}),
                 ],
               }),
             ],
           }),
         });
       }
-      const Ft = new Map();
+      const Bt = new Map();
     },
     65423: (t, c, n) => {
       "use strict";
@@ -1695,6 +1648,12 @@
           cssProperty: "--grid-auto-rows",
         },
         {
+          prop: "autoFlow",
+          responsive: !0,
+          className: r.AutoFlow,
+          cssProperty: "--grid-auto-flow",
+        },
+        {
           prop: "areas",
           responsive: !0,
           className: r.Areas,
@@ -1784,6 +1743,64 @@
         return (0, l.V)("PlayerLinkDetails", () => i(t));
       }
     },
+    62220: (t, c, n) => {
+      "use strict";
+      n.d(c, { jn: () => r });
+      var e = n(29233),
+        l = n(8527),
+        s = n(23809),
+        a = n(88942),
+        i = n(11333);
+      function v(t) {
+        return ["PlayerLinkDetails", t];
+      }
+      function r(t) {
+        const c = (0, s.KV)(),
+          n = (0, i.L)(c);
+        return (0, a.I)(
+          (function (t, c) {
+            const n =
+              "number" == typeof c
+                ? e.b2
+                    .InitFromAccountID(c, l.TS.EUNIVERSE)
+                    .ConvertTo64BitString()
+                : c;
+            return {
+              queryKey: v(n),
+              queryFn: async () => {
+                var c, e, l, s, a;
+                if (n) {
+                  const i = await t.load(n);
+                  return (
+                    null === (c = null == i ? void 0 : i.private_data) ||
+                      void 0 === c ||
+                      delete c.account_name,
+                    null === (e = null == i ? void 0 : i.public_data) ||
+                      void 0 === e ||
+                      delete e.account_flags,
+                    null === (l = null == i ? void 0 : i.public_data) ||
+                      void 0 === l ||
+                      delete l.ban_expires_time,
+                    null === (s = null == i ? void 0 : i.public_data) ||
+                      void 0 === s ||
+                      delete s.privacy_state,
+                    1 !==
+                      (null === (a = null == i ? void 0 : i.public_data) ||
+                      void 0 === a
+                        ? void 0
+                        : a.profile_state) &&
+                      (null == i || delete i.private_data),
+                    i
+                  );
+                }
+                return null;
+              },
+              enabled: !!n,
+            };
+          })(n, t),
+        );
+      }
+    },
     6083: (t, c, n) => {
       "use strict";
       n.d(c, { D: () => l });
@@ -1843,7 +1860,7 @@
     },
     32763: (t, c, n) => {
       "use strict";
-      n.d(c, { nk: () => Qn, Tx: () => de, D: () => he, xs: () => ne });
+      n.d(c, { nk: () => te, Tx: () => ge, D: () => fe, xs: () => le });
       var e = n(7850),
         l = n(90626),
         s = n(8527),
@@ -1990,8 +2007,8 @@
         return (0, p.wT)(c, `${t} must be used within an <Autocomplete>!`), c;
       }
       var V = n(58256),
-        _ = n(77914),
-        j = n(20187),
+        j = n(77914),
+        _ = n(20187),
         w = n(81122);
       function b(t) {
         return (0, e.jsx)(i.az, { ...t, className: w.Skeleton });
@@ -2003,8 +2020,8 @@
         k = n(80797),
         L = n(52038),
         I = n(14181),
-        T = n(82277);
-      function H(t) {
+        H = n(82277);
+      function T(t) {
         const {
             refPopover: c,
             inputValue: n,
@@ -2017,7 +2034,7 @@
             filterPlaceholder: d,
             onIndexSelected: p,
             refScrollElement: g,
-          } = W("<Combobox.Options>"),
+          } = $("<Combobox.Options>"),
           m = a.startsWith("top"),
           x = (0, e.jsx)(i.az, {
             overflow: "auto",
@@ -2034,7 +2051,7 @@
               m && x,
               (0, e.jsx)(i.az, {
                 flexShrink: "0",
-                className: (0, L.A)(T.FilterBorder, m ? T.Top : T.Bottom),
+                className: (0, L.A)(H.FilterBorder, m ? H.Top : H.Bottom),
                 children: (0, e.jsx)(u.k, {
                   margin: "3",
                   variant: "inset",
@@ -2072,7 +2089,7 @@
             onItemSelectionChange: s,
             selectedValue: a,
             multiselect: i,
-          } = W("<ComboboxTrigger>");
+          } = $("<ComboboxTrigger>");
         let v = !1;
         return (
           (v = i ? Array.isArray(a) && a.includes(c) : c === a),
@@ -2110,10 +2127,10 @@
           !1
         );
       }
-      function E(t) {
-        return Y(t, !1);
+      function Y(t) {
+        return P(t, !1);
       }
-      function Y(t, c) {
+      function P(t, c) {
         const {
             rgOptions: n,
             filter: e = R,
@@ -2176,45 +2193,47 @@
           multiselect: c,
         };
       }
-      const P = {
+      const E = {
         Root: function (t) {
           const {
               children: c,
               state: n,
               placement: a = "bottom-end",
               popoverWidth: i = "dropdown",
-              ...v
+              popoverMaxHeight: v,
+              ...r
             } = t,
-            [r, o] = (0, l.useState)(void 0);
-          (0, l.useEffect)(() => o(void 0), [n.bOpen]);
-          const h = (0, l.useRef)(null),
-            d = (0, l.useRef)(null),
-            u = (0, l.useMemo)(
+            [o, h] = (0, l.useState)(void 0);
+          (0, l.useEffect)(() => h(void 0), [n.bOpen]);
+          const d = (0, l.useRef)(null),
+            u = (0, l.useRef)(null),
+            p = (0, l.useMemo)(
               () => n.rgFilteredOptions.findIndex((t) => t === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            p = (0, f.T)({
+            g = (0, f.T)({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: i,
+              maxHeight: v,
               placement: a,
               gutter: "4",
               activeIndex: n.activeIndex,
               setActiveIndex: n.setActiveIndex,
-              selectedIndex: u,
+              selectedIndex: p,
               setSelectedIndex: (t) =>
                 n.onItemSelectionChange(n.rgFilteredOptions[t]),
               interactions: { click: !0, virtualItemFocus: !s.TS.IN_GAMEPADUI },
               role: "combobox",
               scroll: !1,
             }),
-            g = {
+            m = {
               ...n,
-              ...v,
-              focusedValue: r,
-              onFocusChange: o,
-              refPopover: h,
-              refScrollElement: d,
+              ...r,
+              focusedValue: o,
+              onFocusChange: h,
+              refPopover: d,
+              refScrollElement: u,
               setOpen: (t) => {
                 if (t) {
                   let t = null;
@@ -2223,33 +2242,33 @@
                       ? n.selectedValue[0]
                       : null
                     : n.selectedValue),
-                    o(t),
+                    h(t),
                     n.onInputChange("");
                 }
                 n.setOpen(t);
               },
               onIndexSelected: (t) => {
-                const c = p.elementsRef.current;
+                const c = g.elementsRef.current;
                 if (c && c[t]) {
                   c[t].click();
                 }
               },
-              popoverPlacement: p.floating.placement,
+              popoverPlacement: g.floating.placement,
             };
-          return (0, e.jsx)(F.Provider, {
-            value: g,
-            children: (0, e.jsx)(f.k.Root, { state: p, children: c }),
+          return (0, e.jsx)(W.Provider, {
+            value: m,
+            children: (0, e.jsx)(f.k.Root, { state: g, children: c }),
           });
         },
         Option: A,
-        Options: H,
+        Options: T,
         VirtualizedOptions: function (t) {
           const { items: c, renderItem: n, overscan: s = 5, ...a } = t,
             {
               bOpen: v,
               refPopover: r,
               refScrollElement: o,
-            } = W("<ComboboxVirtualizedOptions>"),
+            } = $("<ComboboxVirtualizedOptions>"),
             [h, d] = (0, l.useState)(!1),
             u = v && !!r.current && !!o.current;
           (0, l.useEffect)(() => {
@@ -2262,7 +2281,7 @@
             measureElement: M.ZO,
             ...a,
           });
-          return (0, e.jsx)(H, {
+          return (0, e.jsx)(T, {
             children: (0, e.jsx)(O, {
               value: p,
               children: (0, e.jsx)(i.az, {
@@ -2307,18 +2326,18 @@
               onSelectionChange: x,
               multiselect: C,
               onClear: V,
-              refPopover: j,
+              refPopover: _,
               clearable: w,
               filterPlaceholder: b,
               onIndexSelected: z,
               popoverPlacement: M,
               ...L
-            } = W("<ComboboxTrigger>"),
+            } = $("<ComboboxTrigger>"),
             I = { tabIndex: 0, children: c },
-            T = C ? Array.isArray(r) && r.length > 0 : !!r,
-            H =
-              T && w
-                ? (0, e.jsx)(_.g, {
+            H = C ? Array.isArray(r) && r.length > 0 : !!r,
+            T =
+              H && w
+                ? (0, e.jsx)(j.g, {
                     onClick: V,
                     cursor: "pointer",
                     hitSlop: !0,
@@ -2326,8 +2345,8 @@
                 : (0, e.jsx)(S.V, {}),
             O = (0, e.jsx)(y.j, {
               beforeContent: n,
-              afterContent: H,
-              hasValue: T,
+              afterContent: T,
+              hasValue: H,
               cursor: "pointer",
               tabIndex: 0,
               ...L,
@@ -2337,7 +2356,7 @@
         },
         DefaultOptionFilter: R,
         Value: function (t) {
-          return (0, e.jsx)(j.EY, {
+          return (0, e.jsx)(_.EY, {
             weight: "medium",
             truncate: !0,
             contrast: "title",
@@ -2345,14 +2364,14 @@
           });
         },
         Placeholder: function (t) {
-          return (0, e.jsx)(j.EY, {
+          return (0, e.jsx)(_.EY, {
             contrast: "description",
             truncate: !0,
             ...t,
           });
         },
       };
-      function B(t) {
+      function G(t) {
         return t
           ? "string" == typeof t
             ? t
@@ -2365,7 +2384,7 @@
                 "")
           : "";
       }
-      const G = Object.assign(function (t) {
+      const N = Object.assign(function (t) {
         const {
             selectedValue: c,
             onSelectionChange: n,
@@ -2373,10 +2392,10 @@
             filter: s,
             filterPlaceholder: a,
             placeholder: i,
-            getOptionLabel: v = B,
+            getOptionLabel: v = G,
             ...r
           } = t,
-          o = E({
+          o = Y({
             onSelectionChange: n,
             selectedValue: c,
             rgOptions: l,
@@ -2384,28 +2403,28 @@
             filterPlaceholder: a,
           }),
           h = null != c;
-        return (0, e.jsxs)(G.Root, {
+        return (0, e.jsxs)(N.Root, {
           state: o,
           ...r,
           children: [
-            (0, e.jsxs)(G.Trigger, {
+            (0, e.jsxs)(N.Trigger, {
               children: [
-                h && (0, e.jsx)(G.Value, { children: v(c) }),
-                !h && (0, e.jsx)(G.Placeholder, { children: i }),
+                h && (0, e.jsx)(N.Value, { children: v(c) }),
+                !h && (0, e.jsx)(N.Placeholder, { children: i }),
               ],
             }),
-            (0, e.jsx)(G.Options, {
+            (0, e.jsx)(N.Options, {
               children: o.rgFilteredOptions.map((t) =>
                 (0, e.jsx)(A, { value: t, children: v(t) }, v(t)),
               ),
             }),
           ],
         });
-      }, P);
-      function N(t) {
-        return Y(t, !0);
+      }, E);
+      function B(t) {
+        return P(t, !0);
       }
-      const $ = Object.assign(function (t) {
+      const F = Object.assign(function (t) {
           const {
               selectedValue: c,
               onSelectionChange: n,
@@ -2413,10 +2432,10 @@
               filter: s,
               filterPlaceholder: a,
               placeholder: i,
-              getOptionLabel: v = B,
+              getOptionLabel: v = G,
               ...r
             } = t,
-            o = N({
+            o = B({
               onSelectionChange: n,
               selectedValue: c,
               rgOptions: l,
@@ -2432,34 +2451,34 @@
                 ? new Intl.ListFormat((0, I.ZO)().strISOCode).format(t)
                 : t.join(", ");
           }
-          return (0, e.jsxs)(G.Root, {
+          return (0, e.jsxs)(N.Root, {
             state: o,
             ...r,
             children: [
-              (0, e.jsxs)(G.Trigger, {
+              (0, e.jsxs)(N.Trigger, {
                 children: [
-                  h && (0, e.jsx)(G.Value, { children: d }),
-                  !h && (0, e.jsx)(G.Placeholder, { children: i }),
+                  h && (0, e.jsx)(N.Value, { children: d }),
+                  !h && (0, e.jsx)(N.Placeholder, { children: i }),
                 ],
               }),
-              (0, e.jsx)(G.Options, {
+              (0, e.jsx)(N.Options, {
                 children: o.rgFilteredOptions.map((t) =>
-                  (0, e.jsx)(G.Option, { value: t, children: v(t) }, v(t)),
+                  (0, e.jsx)(N.Option, { value: t, children: v(t) }, v(t)),
                 ),
               }),
             ],
           });
-        }, P),
-        F = (0, l.createContext)(null);
-      function W(t) {
-        const c = (0, l.useContext)(F);
+        }, E),
+        W = (0, l.createContext)(null);
+      function $(t) {
+        const c = (0, l.useContext)(W);
         return c || console.error(`${t} must be used within a <Combobox>!`), c;
       }
       var D = n(55348),
         J = n(62463),
         U = n(11967);
-      const q = (0, l.createContext)(null),
-        Z = Object.assign(
+      const Z = (0, l.createContext)(null),
+        q = Object.assign(
           function (t) {
             const {
                 selected: c,
@@ -2481,7 +2500,7 @@
                 disabled: s,
               },
               o = "row" === a;
-            return (0, e.jsx)(q.Provider, {
+            return (0, e.jsx)(Z.Provider, {
               value: v,
               children: (0, e.jsx)(r.s, {
                 direction: a,
@@ -2495,7 +2514,7 @@
           {
             Item: function (t) {
               const { value: c, children: n } = t,
-                s = (0, l.useContext)(q);
+                s = (0, l.useContext)(Z);
               if (!s)
                 return (
                   console.error(
@@ -2508,7 +2527,7 @@
                 checked: !!a[c],
                 disabled: v,
                 onChange: (t) => i(c, t),
-                children: !!n && (0, e.jsx)(j.EY, { children: n }),
+                children: !!n && (0, e.jsx)(_.EY, { children: n }),
               });
             },
           },
@@ -2644,7 +2663,7 @@
                     children: [
                       n,
                       ": ",
-                      (0, e.jsx)(j.EY, { color: "accent-8", children: pt(i) }),
+                      (0, e.jsx)(_.EY, { color: "accent-8", children: pt(i) }),
                     ],
                   }),
               ],
@@ -2675,7 +2694,7 @@
             () => c.filter((t) => s[t.facet] && s[t.facet][t.tag]),
             [c, s],
           ),
-          v = N({
+          v = B({
             rgOptions: c,
             selectedValue: i,
             onSelectionChange: (t) => a(i, t),
@@ -2684,28 +2703,29 @@
             ),
           }),
           r = i.length > 0;
-        return (0, e.jsxs)($.Root, {
+        return (0, e.jsxs)(F.Root, {
           state: v,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
-            (0, e.jsxs)($.Trigger, {
+            (0, e.jsxs)(F.Trigger, {
               children: [
-                !r && (0, e.jsx)($.Value, { children: n }),
+                !r && (0, e.jsx)(F.Value, { children: n }),
                 r &&
-                  (0, e.jsxs)($.Value, {
+                  (0, e.jsxs)(F.Value, {
                     children: [
                       n,
                       ": ",
-                      (0, e.jsx)(j.EY, { color: "accent-8", children: pt(i) }),
+                      (0, e.jsx)(_.EY, { color: "accent-8", children: pt(i) }),
                     ],
                   }),
               ],
             }),
-            (0, e.jsx)($.Options, {
+            (0, e.jsx)(F.Options, {
               children: v.rgFilteredOptions.map((t) =>
                 (0, e.jsx)(
-                  $.Option,
+                  F.Option,
                   {
                     value: t,
                     disabled: !r && 0 === t.matches,
@@ -2729,12 +2749,12 @@
           align: "center",
           children: [
             c && (0, e.jsx)(ft, { color: c }),
-            (0, e.jsxs)(j.EY, {
+            (0, e.jsxs)(_.EY, {
               children: [
                 l,
                 " ",
                 void 0 !== n && n >= 1
-                  ? (0, e.jsxs)(j.EY, {
+                  ? (0, e.jsxs)(_.EY, {
                       contrast: "description",
                       children: ["(", Intl.NumberFormat().format(n), ")"],
                     })
@@ -2763,12 +2783,12 @@
         return (0, e.jsxs)(i.az, {
           marginBottom: "4",
           children: [
-            (0, e.jsx)(j.EY, {
+            (0, e.jsx)(_.EY, {
               weight: "medium",
               contrast: "title",
               children: n,
             }),
-            (0, e.jsx)(Z, {
+            (0, e.jsx)(q, {
               marginTop: "2",
               selected: v,
               onItemChange: (t, n) => {
@@ -2793,9 +2813,9 @@
       }
       function mt(t) {
         const { value: c, checked: n, children: l } = t;
-        return (0, e.jsx)(Z.Item, {
+        return (0, e.jsx)(q.Item, {
           value: c,
-          children: (0, e.jsx)(j.EY, {
+          children: (0, e.jsx)(_.EY, {
             color: n ? "accent-11" : void 0,
             contrast: n ? void 0 : "title",
             children: l,
@@ -2810,7 +2830,7 @@
           paddingX: "2",
           paddingY: "2",
           children: [
-            (0, e.jsx)(j.EY, { weight: "medium", children: c }),
+            (0, e.jsx)(_.EY, { weight: "medium", children: c }),
             (0, e.jsx)(tt, { value: n, onChange: l }),
           ],
         });
@@ -2828,7 +2848,7 @@
           ...a,
           children: [
             n && (0, e.jsx)(n, { className: vt.Icon }),
-            (0, e.jsx)(j.EY, {
+            (0, e.jsx)(_.EY, {
               weight: "medium",
               contrast: "title",
               children: c,
@@ -2855,7 +2875,7 @@
                   active: l.facets[t.facet] && l.facets[t.facet][t.tag],
                   onActiveChange: (c) =>
                     ((t, c, e) => {
-                      const a = jt(l, t, c, e);
+                      const a = _t(l, t, c, e);
                       n(s(l.facets, a.facets));
                     })(t.facet, t.tag, c),
                   label: t.strLabel,
@@ -2865,7 +2885,7 @@
             ),
         });
       }
-      function _t(t) {
+      function jt(t) {
         return (0, e.jsx)(et.x, {
           gapY: "2",
           gapX: "2",
@@ -2877,7 +2897,7 @@
           ...t,
         });
       }
-      function jt(t, c, n, e) {
+      function _t(t, c, n, e) {
         const l = {
           ...t,
           facets: { ...t.facets, [c]: { ...t.facets[c], [n]: !0 } },
@@ -2894,7 +2914,7 @@
         const { facet: c, state: n, onStateChange: l } = t;
         switch (c.fieldType) {
           case "checkbox": {
-            const t = (t, c, e) => l(jt(n, t, c, e), !0);
+            const t = (t, c, e) => l(_t(n, t, c, e), !0);
             return (0, e.jsx)(gt, { ...c, value: n.facets, onChange: t });
           }
           case "select": {
@@ -2903,16 +2923,16 @@
               let s = { ...n, facets: { ...n.facets } };
               for (const c of t) e[`${c.facet}_${c.tag}`] = c;
               for (const t of c)
-                e[`${t.facet}_${t.tag}`] || (s = jt(s, t.facet, t.tag, !0)),
+                e[`${t.facet}_${t.tag}`] || (s = _t(s, t.facet, t.tag, !0)),
                   delete e[`${t.facet}_${t.tag}`];
-              for (const t of Object.values(e)) s = jt(s, t.facet, t.tag, !1);
+              for (const t of Object.values(e)) s = _t(s, t.facet, t.tag, !1);
               l(s, !0);
             };
             return (0, e.jsx)(ot, { ...c, value: n.facets, onChange: t });
           }
           case "toggle":
           case "togglebutton": {
-            const t = (t) => l(jt(n, c.facet, c.tag, t), !0),
+            const t = (t) => l(_t(n, c.facet, c.tag, t), !0),
               s = n.facets[c.facet] && n.facets[c.facet][c.tag];
             return "toggle" === c.fieldType
               ? (0, e.jsx)(xt, {
@@ -3003,22 +3023,22 @@
             onValueSettled: o,
             value: v,
             children: [
-              (0, e.jsx)(Tt, {
-                children: (0, e.jsx)(Ht, { start: a, end: c }),
+              (0, e.jsx)(Ht, {
+                children: (0, e.jsx)(Tt, { start: a, end: c }),
               }),
               (0, e.jsx)(Ot, {}),
             ],
           });
         },
-        { Root: Lt, Track: Tt, Range: Ht, Handle: Ot },
+        { Root: Lt, Track: Ht, Range: Tt, Handle: Ot },
       );
       function Mt(t) {
         const { value: c } = t;
         return (0, e.jsxs)(Lt, {
           ...t,
           children: [
-            (0, e.jsx)(Tt, {
-              children: (0, e.jsx)(Ht, { start: c[0], end: c[1] }),
+            (0, e.jsx)(Ht, {
+              children: (0, e.jsx)(Tt, { start: c[0], end: c[1] }),
             }),
             (0, e.jsx)(Ot, {}),
             (0, e.jsx)(Ot, {}),
@@ -3103,7 +3123,7 @@
         }
         return n;
       }
-      function Tt(t) {
+      function Ht(t) {
         const { render: c, ...n } = t;
         return (0, k.Q)(
           c,
@@ -3112,13 +3132,13 @@
           void 0,
         );
       }
-      function Ht(t) {
+      function Tt(t) {
         const { start: c, end: n, render: s } = t,
           a = (0, l.useContext)(kt);
         (0, p.wT)(a, "SliderRange must be used within a SliderRoot!");
         const { min: i, max: v } = a,
-          r = Et(c, i, v),
-          o = 100 - Et(n, i, v);
+          r = Yt(c, i, v),
+          o = 100 - Yt(n, i, v);
         return (0, k.Q)(
           s,
           (0, e.jsx)("div", {
@@ -3149,7 +3169,7 @@
           [d, i],
         );
         const m = f > -1,
-          x = { "--handle-pct": `${Et(m ? v[f] : s, s, a)}%` };
+          x = { "--handle-pct": `${Yt(m ? v[f] : s, s, a)}%` };
         m || (x.display = "none");
         const C = {
           ref: u,
@@ -3208,26 +3228,26 @@
           s = Math.round((c - n) / l);
         return St.OQ(s * l + n, n, e);
       }
-      function Et(t, c, n) {
+      function Yt(t, c, n) {
         return ((t - c) / (n - c)) * 100;
       }
-      var Yt = n(48906);
-      function Pt(t) {
+      var Pt = n(48906);
+      function Et(t) {
         const { defaultValue: c = 0, currency: n, ...l } = t;
-        return (0, e.jsx)(Yt.I, {
+        return (0, e.jsx)(Pt.I, {
           valueToString: (t) =>
             (function (t, c) {
               return void 0 === t
                 ? ""
                 : t === 1 / 0
-                  ? Bt
+                  ? Gt
                   : c
                     ? Math.round(t / 100).toString()
                     : (t / 100).toFixed(2);
             })(t, n.bWholeUnitsOnly),
           valueFromString: (t) =>
             (function (t, c, n) {
-              return t === Bt
+              return t === Gt
                 ? 1 / 0
                 : "" === t
                   ? c
@@ -3235,26 +3255,26 @@
                     ? 100 * parseInt(t)
                     : Math.round(100 * parseFloat(t));
             })(t, c, n.bWholeUnitsOnly),
-          checkValidText: (t, c) => !t || (c !== Yt.C && !isNaN(c)),
+          checkValidText: (t, c) => !t || (c !== Pt.C && !isNaN(c)),
           beforeContent: n.bSuffixSymbol ? void 0 : n.strSymbol,
           afterContent: n.bSuffixSymbol ? n.strSymbol : void 0,
           ...l,
         });
       }
-      const Bt = "∞";
-      const Gt = (0, l.createContext)(null);
-      function Nt(t) {
+      const Gt = "∞";
+      const Nt = (0, l.createContext)(null);
+      function Bt(t) {
         const { state: c, onStateChange: n } = t;
-        return (0, e.jsx)($t, {
+        return (0, e.jsx)(Ft, {
           price: c.price,
           onPriceChange: (t) => n({ ...c, price: t }, !1),
           onPriceSettled: (t) => n({ ...c, price: t }, !0),
         });
       }
-      function $t(t) {
+      function Ft(t) {
         const { price: c, onPriceChange: n, onPriceSettled: s } = t,
           { maxPrice: a, currency: i } = (function () {
-            const t = (0, l.useContext)(Gt);
+            const t = (0, l.useContext)(Nt);
             return (0, p.wT)(t, "No filter config provider found!"), t;
           })(),
           [v, o] = (0, l.useState)(!1),
@@ -3311,20 +3331,21 @@
           x = f(c[1]),
           C = m && x && !v,
           V = m && !v ? void 0 : c[0];
-        let _ = c[1];
+        let j = c[1];
         return (
-          x && (_ = v ? 1 / 0 : void 0),
+          x && (j = v ? 1 / 0 : void 0),
           a <= 0
             ? null
             : (0, e.jsxs)(r.s, {
                 direction: "column",
                 gap: "2",
+                paddingBottom: "2",
                 children: [
                   (0, e.jsxs)(r.s, {
                     gap: "2",
                     align: "center",
                     children: [
-                      (0, e.jsx)(Ft, {
+                      (0, e.jsx)(Wt, {
                         currency: i,
                         value: V,
                         onValueChange: d(0),
@@ -3332,14 +3353,14 @@
                           "#AdvancedSearch_MinPricePlaceholder",
                         ),
                       }),
-                      (0, e.jsx)(j.EY, {
+                      (0, e.jsx)(_.EY, {
                         size: "4",
                         weight: "medium",
                         children: "-",
                       }),
-                      (0, e.jsx)(Ft, {
+                      (0, e.jsx)(Wt, {
                         currency: i,
-                        value: _,
+                        value: j,
                         onValueChange: d(1),
                         placeholder: it.Localize(
                           "#AdvancedSearch_MaxPricePlaceholder",
@@ -3353,26 +3374,26 @@
               })
         );
       }
-      function Ft(t) {
+      function Wt(t) {
         return (0, e.jsx)(i.az, {
           flexGrow: "1",
-          children: (0, e.jsx)(Pt, { variant: "inset-focus", ...t }),
+          children: (0, e.jsx)(Et, { variant: "inset-focus", ...t }),
         });
       }
-      const Wt = 3;
+      const $t = 3;
       function Dt(t, c) {
         return t.map(c);
       }
       function Jt(t) {
-        return Math.pow(t, 1 / Wt);
+        return Math.pow(t, 1 / $t);
       }
       function Ut(t) {
-        return Math.round(Math.pow(t, Wt));
+        return Math.round(Math.pow(t, $t));
       }
-      const qt =
+      const Zt =
           n.p +
           "images/applications/community/knife.png?v=valveisgoodatcaching",
-        Zt =
+        qt =
           n.p + "images/applications/community/mg.png?v=valveisgoodatcaching",
         Kt =
           n.p +
@@ -3437,10 +3458,10 @@
         Vc =
           n.p +
           "images/applications/community/deagle.png?v=valveisgoodatcaching",
-        _c =
+        jc =
           n.p +
           "images/applications/community/glock.png?v=valveisgoodatcaching",
-        jc =
+        _c =
           n.p +
           "images/applications/community/usp_silencer.png?v=valveisgoodatcaching",
         wc =
@@ -3467,10 +3488,10 @@
           n.p + "images/applications/community/mag7.png?v=valveisgoodatcaching",
         Ic =
           n.p + "images/applications/community/nova.png?v=valveisgoodatcaching",
-        Tc =
+        Hc =
           n.p +
           "images/applications/community/sawedoff.png?v=valveisgoodatcaching",
-        Hc =
+        Tc =
           n.p +
           "images/applications/community/xm1014.png?v=valveisgoodatcaching",
         Oc =
@@ -3481,31 +3502,31 @@
         Rc =
           n.p +
           "images/applications/community/knife_push.png?v=valveisgoodatcaching",
-        Ec =
-          n.p +
-          "images/applications/community/knife_survival_bowie.png?v=valveisgoodatcaching",
         Yc =
           n.p +
-          "images/applications/community/knife_gypsy_jackknife.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_survival_bowie.png?v=valveisgoodatcaching",
         Pc =
           n.p +
-          "images/applications/community/knife_falchion.png?v=valveisgoodatcaching",
-        Bc =
+          "images/applications/community/knife_gypsy_jackknife.png?v=valveisgoodatcaching",
+        Ec =
           n.p +
-          "images/applications/community/knife_tactical.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_falchion.png?v=valveisgoodatcaching",
         Gc =
           n.p +
-          "images/applications/community/knife_gut.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_tactical.png?v=valveisgoodatcaching",
         Nc =
           n.p +
-          "images/applications/community/knife_kukri.png?v=valveisgoodatcaching",
-        $c =
+          "images/applications/community/knife_gut.png?v=valveisgoodatcaching",
+        Bc =
           n.p +
-          "images/applications/community/knife_canis.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_kukri.png?v=valveisgoodatcaching",
         Fc =
           n.p +
-          "images/applications/community/knife_cord.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_canis.png?v=valveisgoodatcaching",
         Wc =
+          n.p +
+          "images/applications/community/knife_cord.png?v=valveisgoodatcaching",
+        $c =
           n.p +
           "images/applications/community/knife_ursus.png?v=valveisgoodatcaching",
         Dc =
@@ -3517,10 +3538,10 @@
         Uc =
           n.p +
           "images/applications/community/knife_css.png?v=valveisgoodatcaching",
-        qc =
+        Zc =
           n.p +
           "images/applications/community/knife_skeleton.png?v=valveisgoodatcaching",
-        Zc =
+        qc =
           n.p +
           "images/applications/community/knife_stiletto.png?v=valveisgoodatcaching",
         Kc =
@@ -3559,8 +3580,8 @@
           fiveseven: (0, s.YJ)(xc),
           revolver: (0, s.YJ)(Cc),
           deagle: (0, s.YJ)(Vc),
-          glock: (0, s.YJ)(_c),
-          usp_silencer: (0, s.YJ)(jc),
+          glock: (0, s.YJ)(jc),
+          usp_silencer: (0, s.YJ)(_c),
           elite: (0, s.YJ)(wc),
           hkp2000: (0, s.YJ)(bc),
           cz75a: (0, s.YJ)(yc),
@@ -3570,25 +3591,25 @@
           awp: (0, s.YJ)(kc),
           mag7: (0, s.YJ)(Lc),
           nova: (0, s.YJ)(Ic),
-          sawedoff: (0, s.YJ)(Tc),
-          xm1014: (0, s.YJ)(Hc),
+          sawedoff: (0, s.YJ)(Hc),
+          xm1014: (0, s.YJ)(Tc),
           negev: (0, s.YJ)(Oc),
           m249: (0, s.YJ)(Ac),
           knife_push: (0, s.YJ)(Rc),
-          knife_survival_bowie: (0, s.YJ)(Ec),
-          knife_gypsy_jackknife: (0, s.YJ)(Yc),
-          knife_falchion: (0, s.YJ)(Pc),
-          knife_tactical: (0, s.YJ)(Bc),
-          knife_gut: (0, s.YJ)(Gc),
-          knife_kukri: (0, s.YJ)(Nc),
-          knife_canis: (0, s.YJ)($c),
-          knife_cord: (0, s.YJ)(Fc),
-          knife_ursus: (0, s.YJ)(Wc),
+          knife_survival_bowie: (0, s.YJ)(Yc),
+          knife_gypsy_jackknife: (0, s.YJ)(Pc),
+          knife_falchion: (0, s.YJ)(Ec),
+          knife_tactical: (0, s.YJ)(Gc),
+          knife_gut: (0, s.YJ)(Nc),
+          knife_kukri: (0, s.YJ)(Bc),
+          knife_canis: (0, s.YJ)(Fc),
+          knife_cord: (0, s.YJ)(Wc),
+          knife_ursus: (0, s.YJ)($c),
           knife_flip: (0, s.YJ)(Dc),
           knife_outdoor: (0, s.YJ)(Jc),
           knife_css: (0, s.YJ)(Uc),
-          knife_skeleton: (0, s.YJ)(qc),
-          knife_stiletto: (0, s.YJ)(Zc),
+          knife_skeleton: (0, s.YJ)(Zc),
+          knife_stiletto: (0, s.YJ)(qc),
           knife_widowmaker: (0, s.YJ)(Kc),
           knife_butterfly: (0, s.YJ)(Xc),
           knife_m9_bayonet: (0, s.YJ)(Qc),
@@ -4209,12 +4230,12 @@
         return (0, e.jsx)(r.s, {
           gap: "2",
           align: "center",
-          children: (0, e.jsxs)(j.EY, {
+          children: (0, e.jsxs)(_.EY, {
             children: [
               n,
               " ",
               void 0 !== c && c >= 1
-                ? (0, e.jsxs)(j.EY, {
+                ? (0, e.jsxs)(_.EY, {
                     contrast: "description",
                     children: ["(", Intl.NumberFormat().format(c), ")"],
                   })
@@ -4223,7 +4244,9 @@
           }),
         });
       }
-      function an(t) {
+      const an = (t) =>
+        `min( calc( ${t.unAvailableHeight}px - ${t.gutter} ), 500px )`;
+      function vn(t) {
         const {
             facets: c,
             localized_type: n,
@@ -4235,7 +4258,7 @@
             () => c.filter((t) => a[s] && a[s][t.localized_facet]),
             [s, c, a],
           ),
-          r = N({
+          r = B({
             rgOptions: c,
             selectedValue: v,
             onSelectionChange: (t) => i(v, t),
@@ -4249,26 +4272,28 @@
             ),
           }),
           o = v.length > 0;
-        return (0, e.jsxs)($.Root, {
+        return (0, e.jsxs)(F.Root, {
           state: r,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
+          popoverMaxHeight: an,
           children: [
-            (0, e.jsxs)($.Trigger, {
+            (0, e.jsxs)(F.Trigger, {
               children: [
                 !o &&
-                  (0, e.jsx)($.Value, {
+                  (0, e.jsx)(F.Value, {
                     children: it.Localize(
                       "#AccessorySearch_AttachedAccessoryType",
                       n,
                     ),
                   }),
                 o &&
-                  (0, e.jsxs)($.Value, {
+                  (0, e.jsxs)(F.Value, {
                     children: [
                       it.Localize("#AccessorySearch_AttachedAccessoryType", n),
                       ": ",
-                      (0, e.jsx)(j.EY, {
+                      (0, e.jsx)(_.EY, {
                         color: "accent-8",
                         children:
                           ((h = v), h.map((t) => t.localized_facet).join(", ")),
@@ -4277,12 +4302,12 @@
                   }),
               ],
             }),
-            (0, e.jsx)($.VirtualizedOptions, {
+            (0, e.jsx)(F.VirtualizedOptions, {
               estimateSize: () => 36,
               items: r.rgFilteredOptions,
               renderItem: (t, c) =>
                 (0, e.jsx)(
-                  $.VirtualizedOption,
+                  F.VirtualizedOption,
                   {
                     value: t,
                     virtualItem: c,
@@ -4298,9 +4323,9 @@
         });
         var h;
       }
-      function vn(t) {
+      function rn(t) {
         const { facet: c, state: n, onStateChange: l } = t;
-        return (0, e.jsx)(an, {
+        return (0, e.jsx)(vn, {
           ...c,
           value: n.accessories,
           onChange: (t = [], e = []) => {
@@ -4316,7 +4341,7 @@
           },
         });
       }
-      const rn = [
+      const on = [
           "weapon_knife_push",
           "weapon_knife_survival_bowie",
           "weapon_knife_gypsy_jackknife",
@@ -4338,7 +4363,7 @@
           "weapon_knife_karambit",
           "weapon_bayonet",
         ],
-        on = [
+        hn = [
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Pistol" },
@@ -4455,17 +4480,17 @@
                 facet: "Type",
                 tag: "CSGO_Type_Knife",
               },
-              ...rn.map((t) => ({ facet: "Weapon", tag: t })),
+              ...on.map((t) => ({ facet: "Weapon", tag: t })),
             ],
           },
           { type: "facet", facet: "ItemSet" },
         ],
-        hn = [
+        dn = [
           { facet: "Type", tag: "CSGO_Type_WeaponCase" },
           { facet: "Type", tag: "CSGO_Tool_Sticker" },
           { facet: "Type", tag: "Type_Hands" },
         ],
-        dn = [
+        un = [
           "CSGO_Type_Machinegun",
           "CSGO_Type_Pistol",
           "CSGO_Type_Rifle",
@@ -4473,13 +4498,13 @@
           "CSGO_Type_Shotgun",
           "CSGO_Type_SniperRifle",
         ],
-        un = ["CSGO_Type_Knife", ...dn],
-        pn = [
+        pn = ["CSGO_Type_Knife", ...un],
+        fn = [
           {
             facet: "Exterior",
             trigger: [
               { facet: "Weapon" },
-              { facet: "Type", tag: [...un, "Type_Hands"] },
+              { facet: "Type", tag: [...pn, "Type_Hands"] },
               { facet: "ItemSet" },
             ],
           },
@@ -4526,7 +4551,7 @@
               {
                 facet: "Type",
                 tag: [
-                  ...un,
+                  ...pn,
                   "CSGO_Tool_Keychain",
                   "CSGO_Tool_Sticker",
                   "Type_CustomPlayer",
@@ -4539,7 +4564,7 @@
             facet: "Quality",
             trigger: [
               { facet: "Weapon" },
-              { facet: "Type", tag: [...un, "CSGO_Type_MusicKit"] },
+              { facet: "Type", tag: [...pn, "CSGO_Type_MusicKit"] },
               { facet: "ItemSet" },
             ],
           },
@@ -4548,15 +4573,15 @@
             trigger: { facet: "Type", tag: "CSGO_Type_WeaponCase" },
           },
         ];
-      const fn = {
+      const gn = {
           facet: "",
           trigger: [
             { facet: "Weapon" },
-            { facet: "Type", tag: dn },
+            { facet: "Type", tag: un },
             { facet: "ItemSet" },
           ],
         },
-        gn = {
+        mn = {
           Exterior: [
             "WearCategory0",
             "WearCategory1",
@@ -4566,11 +4591,11 @@
             "WearCategoryNA",
           ],
         },
-        mn = [
+        xn = [
           {
             items: [
-              { facet: "Weapon", exclude: rn },
-              { facet: "Type", tag: dn },
+              { facet: "Weapon", exclude: on },
+              { facet: "Type", tag: un },
             ],
             rarities: [
               "Rarity_Common_Weapon",
@@ -4632,7 +4657,7 @@
             ],
           },
         ];
-      function xn(t) {
+      function Cn(t) {
         const c = {};
         for (const [n, e] of Object.entries(t)) {
           const t = n.indexOf("_"),
@@ -4644,8 +4669,8 @@
             n[t] || (n[t] = []), n[t].push(c);
           },
           l = {
-            Knife: (0, s.YJ)(qt),
-            MG: (0, s.YJ)(Zt),
+            Knife: (0, s.YJ)(Zt),
+            MG: (0, s.YJ)(qt),
             Pistol: (0, s.YJ)(Kt),
             Rifle: (0, s.YJ)(Xt),
             Shotgun: (0, s.YJ)(Qt),
@@ -4653,18 +4678,18 @@
             Sniper: (0, s.YJ)(cc),
           },
           a = [];
-        for (const t of on)
+        for (const t of hn)
           if ("select" === t.type) {
             const n = {
                 fieldType: "select",
-                strLabel: Vn(t.label, c),
+                strLabel: jn(t.label, c),
                 rgOptions: t.options.map(
                   ({ facet: t, tag: n, label: l }) => (
                     e(t, n),
                     {
                       facet: t,
                       tag: n,
-                      strLabel: Vn(l || { facet: t, tag: n }, c),
+                      strLabel: jn(l || { facet: t, tag: n }, c),
                     }
                   ),
                 ),
@@ -4686,14 +4711,14 @@
             for (const t of Object.keys(n.tags || {})) e(n.name, t);
           }
         const i = [];
-        for (const t of hn) {
+        for (const t of dn) {
           const { facet: n, tag: l } = t;
           e(n, l),
             i.push({
               fieldType: "togglebutton",
               facet: n,
               tag: l,
-              strLabel: Vn({ facet: n, tag: l }, c),
+              strLabel: jn({ facet: n, tag: l }, c),
             });
         }
         const v = {
@@ -4717,7 +4742,7 @@
         return {
           rgGroups: a,
           rgToggles: i,
-          rgConditional: pn
+          rgConditional: fn
             .flatMap((t) => {
               const c = r[t.facet];
               if (!c) return [];
@@ -4725,7 +4750,7 @@
                 const n = c.tags && c.tags.strange,
                   e = c.tags && c.tags.tournament;
                 (0, p.wT)(n && e, "Could not find expected toggle tags");
-                const l = Cn(t.trigger);
+                const l = Vn(t.trigger);
                 return {
                   facet: {
                     strLabel: c.localized_name,
@@ -4740,9 +4765,9 @@
                         facet: c.name,
                         tag: "tournament",
                         strLabel: e.localized_name,
-                        condition: Cn([
-                          { facet: "Type", tag: dn },
-                          { facet: "Weapon", exclude: rn },
+                        condition: Vn([
+                          { facet: "Type", tag: un },
+                          { facet: "Weapon", exclude: on },
                           { facet: "ItemSet" },
                         ]),
                       },
@@ -4766,8 +4791,8 @@
               }
               if ("Rarity" === c.name && c.tags) {
                 const t = [];
-                for (const n of mn) {
-                  const e = Cn(n.items),
+                for (const n of xn) {
+                  const e = Vn(n.items),
                     l = [];
                   for (const t of n.rarities) {
                     const n = c.tags[t];
@@ -4785,8 +4810,8 @@
                 return t;
               }
               let n;
-              if (gn[c.name]) {
-                const t = gn[c.name].reduce((t, c, n) => ((t[c] = n), t), {});
+              if (mn[c.name]) {
+                const t = mn[c.name].reduce((t, c, n) => ((t[c] = n), t), {});
                 n = (c, n) => {
                   const e = t[c.tag],
                     l = t[n.tag];
@@ -4801,14 +4826,14 @@
               }
               const e = bt(c, "select", n);
               if (!e) return null;
-              return { facet: e, condition: Cn(t.trigger) };
+              return { facet: e, condition: Vn(t.trigger) };
             })
             .filter((t) => !!t),
           otherFacet: v,
           rgFacetsWithCustomDisplay: Object.keys(n),
         };
       }
-      function Cn(t) {
+      function Vn(t) {
         const c = Array.isArray(t) ? t : [t];
         return (t) =>
           c.some((c) =>
@@ -4834,7 +4859,7 @@
             })(c, t),
           );
       }
-      function Vn(t, c) {
+      function jn(t, c) {
         if ("string" == typeof t) return it.Localize(t);
         const n = c[t.facet];
         return n && n.tags && n.tags[t.tag]
@@ -4850,9 +4875,9 @@
             rgConditional: f,
             otherFacet: g,
             rgFacetsWithCustomDisplay: m,
-          } = (0, l.useMemo)(() => xn(t.facets), [t.facets]),
+          } = (0, l.useMemo)(() => Cn(t.facets), [t.facets]),
           [x, C] = (0, l.useState)(() => f.filter((t) => t.condition(v))),
-          V = (0, l.useMemo)(() => Cn(fn.trigger), []);
+          V = (0, l.useMemo)(() => Vn(gn.trigger), []);
         (0, l.useEffect)(() => {
           let t = null;
           const c = f.filter((t) => t.condition(v)),
@@ -4892,18 +4917,41 @@
               s || (s = l()),
                 (s[c] && s[c][n]) ||
                   (t || (t = { ...v, facets: { ...v.facets } }),
-                  (t = jt(t, c, n, !1)));
+                  (t = _t(t, c, n, !1)));
           C(e), t && h(t, !0);
         }, [f, v, h, d, u, g]);
-        const _ = (t = []) => {
-            const c = { ...v, facets: { ...v.facets } };
-            m.forEach((t) => delete c.facets[t]);
-            for (const n of t)
-              c.facets[n.facet] || (c.facets[n.facet] = {}),
-                (c.facets[n.facet] = { ...c.facets[n.facet], [n.tag]: !0 });
-            h(c, !0);
+        const j = (t = [], c = []) => {
+            const n = { ...v, facets: { ...v.facets } };
+            let e = !0;
+            const l = Object.keys(v.facets.Type || {}),
+              s = c.filter(({ facet: t }) => "Type" === t);
+            if (
+              ((t.length > 0 && 0 === c.length) ||
+              c.some(({ facet: t }) => "ItemSet" === t)
+                ? (e = !1)
+                : l.length > 0 &&
+                  s.length > 0 &&
+                  (e =
+                    l.some((t) => !pn.includes(t)) ||
+                    s.some(({ tag: t }) => !pn.includes(t))),
+              e)
+            )
+              m.forEach((t) => delete n.facets[t]);
+            else
+              for (const e of t) {
+                !c.find(
+                  ({ facet: t, tag: c }) => e.facet === t && e.tag === c,
+                ) &&
+                  n.facets[e.facet] &&
+                  n.facets[e.facet][e.tag] &&
+                  delete n.facets[e.facet][e.tag];
+              }
+            for (const t of c)
+              n.facets[t.facet] || (n.facets[t.facet] = {}),
+                (n.facets[t.facet] = { ...n.facets[t.facet], [t.tag]: !0 });
+            h(n, !0);
           },
-          j = (t, c) => _(c),
+          _ = (t, c) => j(t, c),
           w = [
             ...Object.values(v.facets.Type || {}),
             ...Object.values(v.facets.Weapon || {}),
@@ -4911,14 +4959,14 @@
           ].some((t) => t);
         return (0, e.jsxs)(e.Fragment, {
           children: [
-            (0, e.jsx)(_t, {
+            (0, e.jsx)(jt, {
               minWidth: s,
               children: d.map(({ facet: t, img: c, toggle: n }) =>
                 (0, e.jsx)(
-                  bn,
+                  yn,
                   {
                     ...t,
-                    onChange: j,
+                    onChange: _,
                     value: v.facets,
                     img: c,
                     toggle: n,
@@ -4938,16 +4986,19 @@
               children: [
                 u.map((t) =>
                   (0, e.jsx)(
-                    jn,
+                    wn,
                     {
                       active: v.facets[t.facet] && v.facets[t.facet][t.tag],
                       onActiveChange: (c) => {
                         return (
                           (n = t.facet),
                           (e = t.tag),
-                          _(c ? [{ facet: n, tag: e }] : void 0)
+                          j(
+                            (l = c) ? void 0 : [{ facet: n, tag: e }],
+                            l ? [{ facet: n, tag: e }] : void 0,
+                          )
                         );
-                        var n, e;
+                        var n, e, l;
                       },
                       muted:
                         w && !(v.facets[t.facet] && v.facets[t.facet][t.tag]),
@@ -4961,9 +5012,9 @@
                     t.strLabel,
                   ),
                 ),
-                (0, e.jsx)(Sn, {
+                (0, e.jsx)(zn, {
                   ...g,
-                  onChange: j,
+                  onChange: _,
                   value: v.facets,
                   hasTypeSelected: w,
                   mini: a,
@@ -4971,11 +5022,11 @@
               ],
             }),
             (0, e.jsx)(o.w, { size: "4", color: "dull-9", marginTop: "4" }),
-            (0, e.jsxs)(_t, {
+            (0, e.jsxs)(jt, {
               minHeight: "88px",
               minWidth: s,
               children: [
-                (0, e.jsx)(Nt, { ...i }),
+                (0, e.jsx)(Bt, { ...i }),
                 (0, e.jsxs)(r.s, {
                   gap: "2",
                   direction: "column",
@@ -4989,7 +5040,7 @@
                     ),
                     V(v) &&
                       n.map((t) =>
-                        (0, e.jsx)(vn, { facet: t, ...i }, t.internal_type),
+                        (0, e.jsx)(rn, { facet: t, ...i }, t.internal_type),
                       ),
                   ],
                 }),
@@ -4998,7 +5049,7 @@
           ],
         });
       }
-      function jn(t) {
+      function wn(t) {
         const {
             active: c,
             muted: n,
@@ -5018,7 +5069,7 @@
           "data-active": !!c,
           "data-muted": !!n,
           className: ln.ToggleButton,
-          children: (0, e.jsx)(j.EY, {
+          children: (0, e.jsx)(_.EY, {
             weight: "medium",
             color: c ? "accent-8" : void 0,
             contrast: "title",
@@ -5026,7 +5077,7 @@
           }),
         });
       }
-      const wn = l.forwardRef(function (t, c) {
+      const bn = l.forwardRef(function (t, c) {
         const {
             img: n,
             active: l,
@@ -5057,7 +5108,7 @@
               ? (0, e.jsx)(r.s, {
                   align: "center",
                   justify: "center",
-                  children: (0, e.jsx)(_.g, { onClick: o }),
+                  children: (0, e.jsx)(j.g, { onClick: o }),
                 })
               : (0, e.jsx)(S.V, {}),
           ],
@@ -5138,7 +5189,7 @@
           })
         );
       });
-      function bn(t) {
+      function yn(t) {
         const { toggle: c, onChange: n, ...l } = t,
           s = (t, e) => {
             if (e && c && e.length > 1) {
@@ -5155,10 +5206,10 @@
             n(t, e);
           };
         return t.rgOptions.length > 15
-          ? (0, e.jsx)(Ln, { toggle: c, onChange: s, ...l })
-          : (0, e.jsx)(yn, { toggle: c, onChange: s, ...l });
+          ? (0, e.jsx)(In, { toggle: c, onChange: s, ...l })
+          : (0, e.jsx)(Sn, { toggle: c, onChange: s, ...l });
       }
-      function yn(t) {
+      function Sn(t) {
         const {
             rgOptions: c,
             strLabel: n,
@@ -5199,9 +5250,10 @@
           state: f,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
             (0, e.jsxs)(U.uh.Trigger, {
-              render: (0, e.jsx)(wn, {
+              render: (0, e.jsx)(bn, {
                 img: u,
                 active: g,
                 muted: o && !g,
@@ -5220,14 +5272,14 @@
                         children: [
                           n,
                           ": ",
-                          (0, e.jsx)(j.EY, { color: "accent-8", children: x }),
+                          (0, e.jsx)(_.EY, { color: "accent-8", children: x }),
                         ],
                       }),
                       m &&
                         (0, e.jsx)(r.s, {
                           align: "center",
                           justify: "center",
-                          children: (0, e.jsx)(_.g, {}),
+                          children: (0, e.jsx)(j.g, {}),
                         }),
                     ],
                   }),
@@ -5240,8 +5292,8 @@
                   {
                     value: t,
                     children: t
-                      ? (0, e.jsx)(kn, { label: t.strLabel, icon: zn(t) })
-                      : (0, e.jsx)(Mn, {}),
+                      ? (0, e.jsx)(Ln, { label: t.strLabel, icon: Mn(t) })
+                      : (0, e.jsx)(kn, {}),
                   },
                   ((t) => (t ? `${t.facet}_${t.tag}` : "clear"))(t),
                 ),
@@ -5250,7 +5302,7 @@
           ],
         });
       }
-      function Sn(t) {
+      function zn(t) {
         const {
             rgOptions: c,
             strLabel: n,
@@ -5286,9 +5338,10 @@
           state: f,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
             (0, e.jsxs)(U.l6.Trigger, {
-              render: (0, e.jsx)(wn, {
+              render: (0, e.jsx)(bn, {
                 img: u,
                 active: !!d,
                 muted: o && !d,
@@ -5303,13 +5356,13 @@
                     children: [
                       n,
                       ": ",
-                      (0, e.jsx)(j.EY, {
+                      (0, e.jsx)(_.EY, {
                         color: "accent-8",
                         children: (0, e.jsxs)(r.s, {
                           inline: !0,
                           align: "center",
                           gap: "2",
-                          children: [d.strLabel, g && (0, e.jsx)(_.g, {})],
+                          children: [d.strLabel, g && (0, e.jsx)(j.g, {})],
                         }),
                       }),
                     ],
@@ -5323,8 +5376,8 @@
                   {
                     value: t,
                     children: t
-                      ? (0, e.jsx)(kn, { label: t.strLabel, icon: zn(t) })
-                      : (0, e.jsx)(Mn, {}),
+                      ? (0, e.jsx)(Ln, { label: t.strLabel, icon: Mn(t) })
+                      : (0, e.jsx)(kn, {}),
                   },
                   ((t) => (t ? `${t.facet}_${t.tag}` : "clear"))(t),
                 ),
@@ -5333,22 +5386,22 @@
           ],
         });
       }
-      function zn(t) {
+      function Mn(t) {
         if (!t.tag || !t.tag.startsWith("weapon_")) return;
         const c = t.tag.slice(7);
         return c in en ? en[c] : void 0;
       }
-      function Mn() {
+      function kn() {
         return (0, e.jsxs)(r.s, {
           align: "center",
           gap: "1",
           children: [
-            (0, e.jsx)(_.g, {}),
+            (0, e.jsx)(j.g, {}),
             it.Localize("#AdvancedSearch_AppSelect_Clear"),
           ],
         });
       }
-      function kn(t) {
+      function Ln(t) {
         const { label: c, icon: n } = t;
         return (0, e.jsxs)(r.s, {
           align: "center",
@@ -5357,7 +5410,7 @@
           children: [c, n && (0, e.jsx)(n, { height: "14px" })],
         });
       }
-      function Ln(t) {
+      function In(t) {
         const {
             rgOptions: c,
             strLabel: n,
@@ -5379,7 +5432,7 @@
             c = nn();
           t in c && (u = c[t]);
         }
-        const f = N({
+        const f = B({
             rgOptions: c,
             selectedValue: d,
             onSelectionChange: (t) => a(d, t),
@@ -5395,13 +5448,14 @@
               ? new Intl.ListFormat((0, I.ZO)().strISOCode).format(t)
               : t.join(", ");
         }
-        return (0, e.jsxs)($.Root, {
+        return (0, e.jsxs)(F.Root, {
           state: f,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
-            (0, e.jsxs)($.Trigger, {
-              render: (0, e.jsx)(wn, {
+            (0, e.jsxs)(F.Trigger, {
+              render: (0, e.jsx)(bn, {
                 img: u,
                 active: g,
                 muted: o && !g,
@@ -5410,7 +5464,7 @@
                 mini: h,
               }),
               children: [
-                !g && (0, e.jsx)($.Value, { children: n }),
+                !g && (0, e.jsx)(F.Value, { children: n }),
                 g &&
                   (0, e.jsxs)(r.s, {
                     align: "center",
@@ -5420,28 +5474,28 @@
                         children: [
                           n,
                           ": ",
-                          (0, e.jsx)(j.EY, { color: "accent-8", children: x }),
+                          (0, e.jsx)(_.EY, { color: "accent-8", children: x }),
                         ],
                       }),
                       m &&
                         (0, e.jsx)(r.s, {
                           align: "center",
                           justify: "center",
-                          children: (0, e.jsx)(_.g, {}),
+                          children: (0, e.jsx)(j.g, {}),
                         }),
                     ],
                   }),
               ],
             }),
-            (0, e.jsx)($.Options, {
+            (0, e.jsx)(F.Options, {
               children: f.rgFilteredOptions.map((t) =>
                 (0, e.jsx)(
-                  $.Option,
+                  F.Option,
                   {
                     value: t,
                     children: t
-                      ? (0, e.jsx)(kn, { label: t.strLabel, icon: zn(t) })
-                      : (0, e.jsx)(Mn, {}),
+                      ? (0, e.jsx)(Ln, { label: t.strLabel, icon: Mn(t) })
+                      : (0, e.jsx)(kn, {}),
                   },
                   ((t) => (t ? `${t.facet}_${t.tag}` : "clear"))(t),
                 ),
@@ -5450,42 +5504,42 @@
           ],
         });
       }
-      var In = n(83281),
+      var Hn = n(83281),
         Tn = n(2627),
-        Hn = n(96678),
-        On = n(67603),
-        An = n(86632);
-      function Rn(t) {
+        On = n(96678),
+        An = n(67603),
+        Rn = n(86632);
+      function Yn(t) {
         const { showSteamItems: c, onShowSteamItemsChange: n } = t;
-        return (0, e.jsxs)(An.I.Root, {
+        return (0, e.jsxs)(Rn.I.Root, {
           value: c ? "on" : "off",
           onValueChange: (t) => n("on" === t),
           variant: "inset",
           radius: "full",
           children: [
-            (0, e.jsx)(An.I.Item, {
+            (0, e.jsx)(Rn.I.Item, {
               value: "off",
               children: it.Localize("#AdvancedSearch_TypeSwitch_InGame"),
             }),
-            (0, e.jsx)(An.I.Item, {
+            (0, e.jsx)(Rn.I.Item, {
               value: "on",
               children: it.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
             }),
           ],
         });
       }
-      const En = 2;
-      function Yn(t, c, n) {
+      const Pn = 2;
+      function En(t, c, n) {
         return (0, l.useMemo)(() => {
           if (!c) return [];
-          const e = Bn[t];
-          return e ? e(c, n) : Gn(c, void 0, n);
+          const e = Nn[t];
+          return e ? e(c, n) : Bn(c, void 0, n);
         }, [c, n, t]);
       }
-      const Pn = 753,
-        Bn = { [Pn]: (t, c) => Gn(t, 3, c) };
-      function Gn(t, c, n) {
-        const e = "number" == typeof c ? c : En,
+      const Gn = 753,
+        Nn = { [Gn]: (t, c) => Bn(t, 3, c) };
+      function Bn(t, c, n) {
+        const e = "number" == typeof c ? c : Pn,
           l = [],
           s = [];
         if (!t) return [];
@@ -5498,12 +5552,12 @@
         }
         return [l, s].filter((t) => t.length > 0);
       }
-      function Nn(t) {
+      function Fn(t) {
         const { facets: c, state: n, onStateChange: l } = t;
         return (0, e.jsx)(e.Fragment, {
           children: c.flatMap((t, s) => [
             (0, e.jsxs)(
-              _t,
+              jt,
               {
                 children: [
                   t.map((t) =>
@@ -5514,7 +5568,7 @@
                     ),
                   ),
                   s === c.length - 1 &&
-                    (0, e.jsx)(Nt, { state: n, onStateChange: l }),
+                    (0, e.jsx)(Bt, { state: n, onStateChange: l }),
                 ],
               },
               `facets_${s}`,
@@ -5529,10 +5583,10 @@
           ]),
         });
       }
-      const $n = 753,
-        Fn = `${$n}_item_class`,
-        Wn = `${$n}_Event`;
-      function Dn(t) {
+      const Wn = 753,
+        $n = `${Wn}_item_class`,
+        Dn = `${Wn}_Event`;
+      function Jn(t) {
         const {
             facets: c,
             state: n,
@@ -5541,20 +5595,20 @@
             ...a
           } = t,
           v = { ...c },
-          r = v[Fn];
-        delete v[Fn];
-        !n.app || delete v[Wn];
-        const o = Yn($n, v, s);
+          r = v[$n];
+        delete v[$n];
+        !n.app || delete v[Dn];
+        const o = En(Wn, v, s);
         return (0, e.jsxs)(i.az, {
           ...a,
           children: [
             r && (0, e.jsx)(qn, { facet: r, state: n, onStateChange: l }),
-            (0, e.jsx)(Nn, { facets: o, state: n, onStateChange: l }),
+            (0, e.jsx)(Fn, { facets: o, state: n, onStateChange: l }),
           ],
         });
       }
-      const Jn = ["item_class_10", "item_class_6"],
-        Un = {
+      const Un = ["item_class_10", "item_class_6"],
+        Zn = {
           item_class_2: function (t) {
             return (0, e.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5642,11 +5696,11 @@
             state: s,
             onStateChange: a,
           } = t,
-          i = Object.keys(l).filter((t) => Jn.indexOf(t) < 1),
+          i = Object.keys(l).filter((t) => Un.indexOf(t) < 1),
           v = s.facets[n] || {};
         return (0, e.jsxs)(e.Fragment, {
           children: [
-            (0, e.jsx)(j.EY, {
+            (0, e.jsx)(_.EY, {
               weight: "medium",
               size: "3",
               children: it.Localize("#AdvancedSearch_SteamItems_TypeLabel"),
@@ -5662,14 +5716,14 @@
                     active: v[t],
                     onActiveChange: (c) =>
                       ((t, c) => {
-                        if (Jn.includes(t)) {
+                        if (Un.includes(t)) {
                           let t = s;
-                          for (const e of Jn) t = jt(t, n, e, c);
+                          for (const e of Un) t = _t(t, n, e, c);
                           a(t, !0);
-                        } else a(jt(s, n, t, c), !0);
+                        } else a(_t(s, n, t, c), !0);
                       })(t, c),
                     label: l[t].localized_name,
-                    icon: Un[t],
+                    icon: Zn[t],
                   },
                   t,
                 ),
@@ -5678,27 +5732,28 @@
           ],
         });
       }
-      var Zn = n(40236);
-      const Kn = "4",
-        Xn = (0, l.createContext)({});
-      function Qn(t) {
+      var Kn = n(40236);
+      const Xn = "4",
+        Qn = (0, l.createContext)({});
+      function te(t) {
         const {
             filter: c,
             onFilterChange: n,
             config: l,
             preload: s = {},
             debugMode: a,
-            onSearch: h,
-            ...d
+            onSearch: d,
+            ...u
           } = t,
-          u = c.bSteamItems,
-          p = (0, Hn.LT)("sm"),
-          f = u ? d.rgAppData && d.rgAppData[ae] : c.filterInGame.app;
-        return (0, e.jsx)(In.u.Provider, {
+          p = c.bSteamItems,
+          f = (0, On.LT)("sm"),
+          g = p ? u.rgAppData && u.rgAppData[oe] : c.filterInGame.app,
+          m = ce(g);
+        return (0, e.jsx)(Hn.u.Provider, {
           value: !!a,
-          children: (0, e.jsx)(Gt.Provider, {
+          children: (0, e.jsx)(Nt.Provider, {
             value: l,
-            children: (0, e.jsx)(Xn.Provider, {
+            children: (0, e.jsx)(Qn.Provider, {
               value: s,
               children: (0, e.jsx)(i.az, {
                 minWidth: { initial: void 0, sm: "min( 75vw, 800px )" },
@@ -5709,25 +5764,25 @@
                   children: [
                     !l.bNewMarket &&
                       (0, e.jsx)(v.D, {
-                        size: "6",
+                        size: "7",
                         weight: "heavy",
                         children: it.Localize("#AdvancedSearch_Heading"),
                       }),
                     (0, e.jsxs)(r.s, {
-                      gap: Kn,
+                      gap: Xn,
                       align: { initial: "stretch", sm: "start" },
-                      marginY: Kn,
+                      marginY: Xn,
                       direction: { initial: "column", sm: "row" },
                       children: [
                         (0, e.jsx)(i.az, {
                           flexGrow: "0",
-                          children: (0, e.jsx)(Rn, {
-                            showSteamItems: u,
+                          children: (0, e.jsx)(Yn, {
+                            showSteamItems: p,
                             onShowSteamItemsChange: (t) =>
                               n({ ...c, bSteamItems: t }),
                           }),
                         }),
-                        p &&
+                        f &&
                           (0, e.jsx)(i.az, {
                             style: { marginTop: "10px" },
                             children: (0, e.jsx)(o.w, {
@@ -5741,39 +5796,51 @@
                           flexGrow: "1",
                           gap: "2",
                           children: [
-                            (0, e.jsx)(ce, {
-                              app: f || void 0,
+                            (0, e.jsx)(ee, {
+                              app: g || void 0,
                               value: c.strSearch || "",
                               onTextChange: (t) => n({ ...c, strSearch: t }),
                             }),
-                            false,
+                            m &&
+                              (0, e.jsx)(h.S, {
+                                marginLeft: "4",
+                                checked: !!c.bSearchDescriptions,
+                                onChange: (t) =>
+                                  n({ ...c, bSearchDescriptions: t }),
+                                title: it.Localize(
+                                  "#AdvancedSearch_IncludeDescriptions_Tooltip",
+                                ),
+                                children: it.Localize(
+                                  "#AdvancedSearch_IncludeDescriptions",
+                                ),
+                              }),
                           ],
                         }),
                       ],
                     }),
-                    (0, e.jsxs)(oe, {
+                    (0, e.jsxs)(pe, {
                       children: [
-                        !u &&
-                          (0, e.jsx)(se, {
-                            ...d,
+                        !p &&
+                          (0, e.jsx)(re, {
+                            ...u,
                             filter: c.filterInGame,
                             onFilterChange: (t) => n({ ...c, filterInGame: t }),
                             suggestedInitialApp: c.filterSteam.app,
                           }),
-                        u &&
-                          (0, e.jsx)(ve, {
-                            ...d,
+                        p &&
+                          (0, e.jsx)(de, {
+                            ...u,
                             filter: c.filterSteam,
                             onFilterChange: (t) => n({ ...c, filterSteam: t }),
                             suggestedInitialApp: c.filterInGame.app,
                           }),
                       ],
                     }),
-                    (0, e.jsx)(te, {
+                    (0, e.jsx)(ne, {
                       filter: c,
                       onFilterChange: n,
                       config: l,
-                      onSearch: h,
+                      onSearch: d,
                     }),
                   ],
                 }),
@@ -5782,7 +5849,10 @@
           }),
         });
       }
-      function te(t) {
+      function ce(t) {
+        return !!t;
+      }
+      function ne(t) {
         const { filter: c, onFilterChange: n, config: a, onSearch: i } = t,
           v = c.bSteamItems,
           [h, u] = (0, l.useState)(!1),
@@ -5791,7 +5861,7 @@
             0 !== p.price[0] ||
             p.price[1] !== a.maxPrice ||
             Object.keys(p.facets).length > 0,
-          g = (0, Hn.LT)("sm"),
+          g = (0, On.LT)("sm"),
           m = (0, e.jsx)(d.$, {
             type: "submit",
             onClick: () => {
@@ -5802,7 +5872,7 @@
           });
         return (0, e.jsxs)(r.s, {
           justify: g ? "between" : void 0,
-          marginTop: Kn,
+          marginTop: Xn,
           direction: g ? "row" : "column",
           gap: "2",
           children: [
@@ -5836,7 +5906,7 @@
                 }),
             g &&
               (0, e.jsxs)(r.s, {
-                gap: Kn,
+                gap: Xn,
                 justify: "end",
                 children: [
                   g &&
@@ -5876,10 +5946,10 @@
           ],
         });
       }
-      function ce(t) {
+      function ee(t) {
         const { value: c, onTextChange: n, app: s } = t,
           [a, i] = (0, l.useState)(!0);
-        return (0, e.jsx)(ne, {
+        return (0, e.jsx)(le, {
           radius: "full",
           variant: "inset",
           app: a ? s : void 0,
@@ -5888,62 +5958,72 @@
           onTextChange: n,
         });
       }
-      function ne(t) {
-        var c, n;
+      function le(t) {
+        var c, n, s;
         const {
-            value: s,
-            onTextChange: i,
-            app: v,
-            onClearApp: o,
-            popoverWidth: h,
-            ...d
+            value: i,
+            onTextChange: v,
+            app: o,
+            onClearApp: h,
+            popoverWidth: d,
+            ...u
           } = t,
-          u = (0, In.b)(),
-          p = null == v ? void 0 : v.appid,
-          f = (0, a.I)({
-            queryKey: ["market_search_suggestions", s, p],
+          p = (0, Hn.b)(),
+          f = null == o ? void 0 : o.appid,
+          x = (0, a.I)({
+            queryKey: ["market_search_suggestions", i, f],
             queryFn: async () => {
               const t = await fetch(
-                `/market/searchsuggestionsresults?q=${s}${p ? `&appid=${p}` : ""}${u ? "&debug=1" : ""}`,
+                `/market/searchsuggestionsresults?q=${i}${f ? `&appid=${f}` : ""}${p ? "&debug=1" : ""}`,
               );
               return await t.json();
             },
             placeholderData: (t) => t,
-            enabled: !!s && s.length >= 2,
-            staleTime: u ? 0 : 1 / 0,
+            enabled: !!i && i.length >= 2,
+            staleTime: p ? 0 : 1 / 0,
           }),
-          x = (
-            (null === (c = f.data) || void 0 === c ? void 0 : c.results) || []
-          ).map((t) => t.market_hash_name),
           C = (
-            (null === (n = f.data) || void 0 === n ? void 0 : n.results) || []
+            (null === (c = x.data) || void 0 === c ? void 0 : c.results) || []
+          ).map((t) => t.market_hash_name),
+          _ = (null === (n = x.data) || void 0 === n ? void 0 : n.apps) || [],
+          w = (
+            (null === (s = x.data) || void 0 === s ? void 0 : s.results) || []
           ).slice(0, 10),
-          j = g({
-            onTextChange: i,
-            suggestions: x,
+          b = g({
+            onTextChange: v,
+            suggestions: C,
             onSuggestionSelected: (t, c) => {
-              const n = C.find((c) => c.market_hash_name === t);
-              n &&
-                ((window.location.href = On.N.Item(
-                  n.app_id,
-                  n.market_hash_name,
-                )),
-                c.preventDefault());
+              const [n, e] = t.split("|");
+              if ("item" === n) {
+                const t = w.find((t) => t.market_hash_name === e);
+                t &&
+                  ((window.location.href = An.N.Item(
+                    t.app_id,
+                    t.market_hash_name,
+                  )),
+                  c.preventDefault());
+              } else if ("app" === n) {
+                const t = _.find((t) => t.appid === Number(e));
+                t &&
+                  (window.location.href = An.N.Search({
+                    search: `appid=${t.appid}`,
+                  }));
+              }
             },
           }),
-          [w, b] = (0, l.useState)(!1),
           [y, S] = (0, l.useState)(!1),
-          z = w || !y,
-          M = (0, Zn.wY)(
+          [z, M] = (0, l.useState)(!1),
+          k = y || !z,
+          L = (0, Kn.wY)(
             (0, l.useCallback)((t) => {
               const c = t.contentRect.width < 300;
-              b(c);
+              S(c);
             }, []),
           ),
-          k = v
+          I = o
             ? (0, e.jsxs)(r.s, {
                 cursor: "pointer",
-                radius: d.radius || "sm",
+                radius: u.radius || "sm",
                 background: "dull-6",
                 paddingY: "1",
                 paddingX: "2",
@@ -5951,84 +6031,77 @@
                 gap: "1",
                 role: "button",
                 maxWidth: "24ch",
-                onMouseDown: o,
+                onMouseDown: h,
                 children: [
                   (0, e.jsx)(V._, {
                     height: "20px",
                     objectFit: "contain",
-                    src: v.icon,
+                    src: o.icon,
                     alt: "",
                   }),
-                  (0, e.jsx)(ee, { visible: !z, children: v.name }),
-                  (0, e.jsx)(_.g, {}),
+                  (0, e.jsx)(se, { visible: !k, children: o.name }),
+                  (0, e.jsx)(j.g, {}),
                 ],
               })
             : null,
-          L =
-            v && !z
+          H =
+            o && !k
               ? it.Localize(
                   "#AdvancedSearch_TextSearch_PlaceholderWithApp",
-                  v.name,
+                  o.name,
                 )
               : it.Localize("#AdvancedSearch_TextSearch_Placeholder");
         return (0, e.jsxs)(m.Root, {
-          state: j,
-          popoverWidth: h,
+          state: b,
+          popoverWidth: d,
           children: [
             (0, e.jsx)(m.TextInput, {
-              value: s,
-              placeholder: L,
-              ...d,
+              value: i,
+              placeholder: H,
+              ...u,
               title: it.Localize("#AdvancedSearch_TextSearch_Tooltip"),
-              beforeContent: k,
-              ref: M,
-              onFocus: () => S(!0),
-              onBlur: () => S(!1),
+              beforeContent: I,
+              ref: L,
+              onFocus: () => M(!0),
+              onBlur: () => M(!1),
               clearable: !0,
             }),
-            (0, e.jsx)(m.Suggestions, {
-              children: C.map((t, c) =>
-                (0, e.jsx)(
-                  le,
-                  {
-                    name: t.market_name,
-                    hashName: t.market_hash_name,
-                    appName: t.app_name,
-                    appid: t.app_id,
-                    img: t.icon_url,
-                    searchScore: t.search_score,
-                  },
-                  t.market_hash_name + c,
+            (0, e.jsxs)(m.Suggestions, {
+              children: [
+                _.map((t) => (0, e.jsx)(ie, { ...t }, t.appid)),
+                w.map((t, c) =>
+                  (0, e.jsx)(
+                    ae,
+                    {
+                      name: t.market_name,
+                      hashName: t.market_hash_name,
+                      appName: t.app_name,
+                      appid: t.app_id,
+                      img: t.icon_url,
+                      searchScore: t.search_score,
+                    },
+                    t.market_hash_name + c,
+                  ),
                 ),
-              ),
+              ],
             }),
           ],
         });
       }
-      function ee(t) {
+      function se(t) {
         const { visible: c, children: n } = t;
         return (0, e.jsx)(i.az, {
           className: vt.Collapse,
           "data-visible": !!c,
-          children: (0, e.jsx)(j.EY, { truncate: !0, children: n }),
+          children: (0, e.jsx)(_.EY, { truncate: !0, children: n }),
         });
       }
-      function le(t) {
+      function ae(t) {
         const { name: c, hashName: n, img: l, appName: s, searchScore: a } = t,
-          i = (0, In.b)();
+          i = (0, Hn.b)();
         return (0, e.jsxs)(m.Suggestion, {
-          value: n,
-          render: (t, c) =>
-            (0, e.jsx)(r.s, {
-              align: "center",
-              gap: "2",
-              className: vt.SearchSuggestion,
-              radius: "sm",
-              margin: "2",
-              "data-focused": c.focused,
-              paddingLeft: "2",
-              ...t,
-            }),
+          value: `item|${n}`,
+          render: (t, c) => (0, e.jsx)(ve, { focused: c.focused, ...t }),
           children: [
             (0, e.jsx)("img", {
               style: {
@@ -6046,25 +6119,70 @@
               gap: "1",
               minWidth: "0",
               children: [
-                (0, e.jsx)(j.EY, {
+                (0, e.jsx)(_.EY, {
                   size: "3",
                   weight: "medium",
                   truncate: !0,
                   contrast: "title",
                   children: c,
                 }),
-                (0, e.jsx)(j.EY, { size: "1", truncate: !0, children: s }),
+                (0, e.jsx)(_.EY, { size: "1", truncate: !0, children: s }),
               ],
             }),
             i &&
               (0, e.jsx)(e.Fragment, {
                 children:
-                  a > 0 ? (0, e.jsx)(j.EY, { size: "1", children: a }) : null,
+                  a > 0 ? (0, e.jsx)(_.EY, { size: "1", children: a }) : null,
               }),
           ],
         });
       }
-      function se(t) {
+      function ie(t) {
+        const { name: c, icon: n, appid: l } = t;
+        return (0, e.jsxs)(m.Suggestion, {
+          value: `app|${l}`,
+          render: (t, c) => (0, e.jsx)(ve, { focused: c.focused, ...t }),
+          children: [
+            (0, e.jsx)("img", {
+              style: {
+                margin: "8px",
+                height: "24px",
+                width: "24px",
+                objectFit: "contain",
+                filter: "drop-shadow( 0 0 1px rgba( 0, 0, 0, .5) )",
+              },
+              src: n,
+              alt: "",
+            }),
+            (0, e.jsx)(r.s, {
+              direction: "column",
+              gap: "1",
+              minWidth: "0",
+              children: (0, e.jsx)(_.EY, {
+                size: "2",
+                weight: "medium",
+                truncate: !0,
+                contrast: "title",
+                children: c,
+              }),
+            }),
+          ],
+        });
+      }
+      function ve(t) {
+        const { focused: c, ...n } = t;
+        return (0, e.jsx)(r.s, {
+          align: "center",
+          gap: "2",
+          className: vt.SearchSuggestion,
+          radius: "sm",
+          margin: "2",
+          "data-focused": c,
+          paddingLeft: "2",
+          ...n,
+        });
+      }
+      function re(t) {
         var c;
         const {
             rgApps: n = [],
@@ -6078,20 +6196,20 @@
           r || (o(!0), v && s[v.appid] && i({ ...a, app: s[v.appid] }));
         }, [i, a, v, s, r]);
         const h = !a.app && r,
-          d = me(h),
+          d = je(h),
           u = (0, l.useMemo)(
-            () => n.filter((t) => t !== ae && s[t]).map((t) => s[t]),
+            () => n.filter((t) => t !== oe && s[t]).map((t) => s[t]),
             [n, s],
           );
         return (0, e.jsxs)(e.Fragment, {
           children: [
-            (0, e.jsx)(xe, {
+            (0, e.jsx)(_e, {
               apps: u,
               selectedApp: a.app,
               onSelectionChange: (t) => i({ ...a, app: t, facets: {} }),
             }),
             h &&
-              (0, e.jsx)(re, {
+              (0, e.jsx)(ue, {
                 loading: d.isLoading,
                 apps:
                   null === (c = d.data) || void 0 === c ? void 0 : c.rgInGame,
@@ -6099,7 +6217,7 @@
                 onSelect: (t) => i({ ...a, app: s[t] || null, facets: {} }),
               }),
             !!a.app &&
-              (0, e.jsx)(pe, {
+              (0, e.jsx)(xe, {
                 appid: a.app.appid,
                 state: a,
                 onStateChange: i,
@@ -6107,26 +6225,26 @@
           ],
         });
       }
-      const ae = 753,
-        ie = `${ae}_Game`;
-      function ve(t) {
+      const oe = 753,
+        he = `${oe}_Game`;
+      function de(t) {
         var c, n, i;
         const { filter: v, onFilterChange: r, suggestedInitialApp: o } = t,
           [h, d] = (0, l.useState)(!1),
           u = !v.app && h,
-          p = me(u),
+          p = je(u),
           f = (0, a.I)(
-            ((g = ge),
+            ((g = Ve),
             {
-              queryKey: ["marketfilters", ae],
+              queryKey: ["marketfilters", oe],
               queryFn: async () => {
-                const t = await g(ae);
+                const t = await g(oe);
                 if (!t)
                   throw new Error(
                     "Failed to load market facets for Steam Inventory items",
                   );
-                const c = t[ie];
-                if ((delete t[ie], !c.tags))
+                const c = t[he];
+                if ((delete t[he], !c.tags))
                   return { rgApps: [], facets: {}, mapAppIDs: {} };
                 const n = {},
                   e = [];
@@ -6158,15 +6276,15 @@
           }, [h, o, C, r, v]),
           f.isLoading)
         )
-          return (0, e.jsx)(je, {});
+          return (0, e.jsx)(Se, {});
         if (f.isError || !f.data || !x || !m)
-          return (0, e.jsx)(ue, {
-            children: (0, e.jsx)(j.EY, {
+          return (0, e.jsx)(me, {
+            children: (0, e.jsx)(_.EY, {
               size: "4",
               children: it.Localize("#AdvancedSearch_FacetLoadError"),
             }),
           });
-        const _ = (
+        const j = (
           null === (c = p.data) || void 0 === c
             ? void 0
             : c.rgPlaytime.length
@@ -6180,16 +6298,16 @@
         return (0, e.jsxs)(e.Fragment, {
           children: [
             V &&
-              (0, e.jsx)(xe, {
+              (0, e.jsx)(_e, {
                 apps: x,
                 selectedApp: v.app,
                 onSelectionChange: (t) => r({ ...v, app: t, facets: {} }),
               }),
             V &&
               u &&
-              (0, e.jsx)(re, {
+              (0, e.jsx)(ue, {
                 loading: p.isLoading,
-                apps: _,
+                apps: j,
                 filterBy: C,
                 onSelect: (t) =>
                   r({
@@ -6198,8 +6316,8 @@
                     facets: {},
                   }),
               }),
-            (0, e.jsx)(Dn, {
-              marginTop: Kn,
+            (0, e.jsx)(Jn, {
+              marginTop: Xn,
               facets: m,
               state: v,
               onStateChange: r,
@@ -6207,9 +6325,9 @@
           ],
         });
       }
-      function re(t) {
+      function ue(t) {
         const { apps: c = [], filterBy: n = {}, onSelect: a, loading: v } = t,
-          o = !(0, Hn.LT)("sm"),
+          o = !(0, On.LT)("sm"),
           h = (0, l.useMemo)(
             () =>
               Array.isArray(n)
@@ -6224,7 +6342,7 @@
             u.push((0, e.jsx)(b, { width: "92px", height: "138px" }, t));
         const p = s.iA.logged_in,
           [f, g] = (0, l.useState)(null),
-          m = (0, Zn.wY)(g);
+          m = (0, Kn.wY)(g);
         let x = d;
         if (!o) {
           const t = f ? Math.floor((f.contentRect.width - 10) / 104) : 0;
@@ -6235,7 +6353,7 @@
           marginTop: "3",
           marginBottom: "2",
           children: [
-            (0, e.jsx)(j.EY, {
+            (0, e.jsx)(_.EY, {
               weight: "medium",
               size: "3",
               contrast: "title",
@@ -6282,14 +6400,14 @@
           ],
         });
       }
-      function oe(t) {
+      function pe(t) {
         return (0, e.jsx)(r.s, {
           minHeight: "min(400px, 30vh)",
           direction: "column",
           children: t.children,
         });
       }
-      function he(t) {
+      function fe(t) {
         const c = {
           strSearch: "",
           bSearchDescriptions: t.bSearchDescriptions,
@@ -6318,7 +6436,7 @@
         } = t;
         "number" == typeof l &&
           a[l] &&
-          (l === ae
+          (l === oe
             ? ((c.bSteamItems = !0), (n = c.filterSteam))
             : (n.app = a[l])),
           "string" == typeof e && (c.strSearch = e);
@@ -6346,10 +6464,10 @@
           "number" == typeof t.unFilterMaxPrice &&
             t.unFilterMaxPrice < t.config.maxPrice &&
             (n.price[1] = t.unFilterMaxPrice),
-          c.bSteamItems && s && s[ie] && n.facets.Game)
+          c.bSteamItems && s && s[he] && n.facets.Game)
         ) {
           const t = Object.keys(n.facets.Game)[0],
-            c = s[ie].tags;
+            c = s[he].tags;
           if (c && t) {
             const e = c[t];
             if (e) {
@@ -6362,7 +6480,7 @@
         }
         return { state: c, config: t.config };
       }
-      function de(t, c) {
+      function ge(t, c) {
         const {
             strSearch: n,
             bSearchDescriptions: e,
@@ -6375,7 +6493,7 @@
                 let c = { ...t, facets: { ...t.facets } };
                 return (
                   t.app && (c.facets.Game = { [`app_${t.app.appid}`]: !0 }),
-                  (c.app = { appid: ae, name: "", icon: "" }),
+                  (c.app = { appid: oe, name: "", icon: "" }),
                   c
                 );
               })(a)
@@ -6389,7 +6507,7 @@
           u = new FormData();
         v && u.set("appid", v.appid.toString()),
           n && u.set("q", n),
-          n && e && (i.app, 0) && u.set("descriptions", "1");
+          n && e && ce(i.app) && u.set("descriptions", "1");
         for (const t of Object.keys(r))
           if (r[t])
             for (const c of Object.keys(r[t]))
@@ -6401,10 +6519,10 @@
         return (
           h > 0 && u.append("price_min", h.toString()),
           d > h && d < c.maxPrice && u.append("price_max", d.toString()),
-          On.N.Search({ search: new URLSearchParams(u) })
+          An.N.Search({ search: new URLSearchParams(u) })
         );
       }
-      function ue(t) {
+      function me(t) {
         return (0, e.jsx)(r.s, {
           flexGrow: "1",
           radius: "sm",
@@ -6413,20 +6531,20 @@
           justify: "center",
           marginTop: "2",
           className: vt.NoFilters,
-          children: (0, e.jsx)(j.EY, {
+          children: (0, e.jsx)(_.EY, {
             align: "center",
             as: "div",
-            marginTop: Kn,
+            marginTop: Xn,
             children: t.children,
           }),
         });
       }
-      function pe(t) {
+      function xe(t) {
         const { appid: c, ...n } = t,
           l = (function (t) {
             return (0, a.I)({
               queryKey: ["marketfilters", t],
-              queryFn: () => ge(t),
+              queryFn: () => Ve(t),
               enabled: !!t,
             });
           })(c),
@@ -6460,10 +6578,10 @@
               })(t),
             );
           })(c);
-        if (l.isLoading || i.isLoading) return (0, e.jsx)(je, {});
+        if (l.isLoading || i.isLoading) return (0, e.jsx)(Se, {});
         if (l.isError || !l.data || i.isError || !i.data)
-          return (0, e.jsx)(ue, {
-            children: (0, e.jsx)(j.EY, {
+          return (0, e.jsx)(me, {
+            children: (0, e.jsx)(_.EY, {
               size: "4",
               children: it.Localize("#AdvancedSearch_FacetLoadError"),
             }),
@@ -6473,7 +6591,7 @@
             return 2 === s.TS.EUNIVERSE ? 710 === t : 730 === t;
           })(t) && 1 === s.TS.EUNIVERSE
             ? _n
-            : fe;
+            : Ce;
         })(c);
         return (0, e.jsx)(v, {
           appid: c,
@@ -6482,34 +6600,34 @@
           ...n,
         });
       }
-      function fe(t) {
+      function Ce(t) {
         const { appid: c, facets: n, ...l } = t,
-          s = Yn(c, n);
+          s = En(c, n);
         return 0 === s.length
           ? (0, e.jsx)(e.Fragment, {
-              children: (0, e.jsxs)(ue, {
+              children: (0, e.jsxs)(me, {
                 children: [
-                  (0, e.jsx)(j.EY, {
+                  (0, e.jsx)(_.EY, {
                     align: "center",
                     as: "div",
-                    marginTop: Kn,
-                    size: "6",
+                    marginTop: Xn,
+                    size: "7",
                     weight: "heavy",
                     children: it.Localize("#AdvancedSearch_NoFacetsSearch"),
                   }),
-                  (0, e.jsx)(j.EY, {
+                  (0, e.jsx)(_.EY, {
                     align: "center",
                     as: "div",
-                    marginTop: Kn,
+                    marginTop: Xn,
                     size: "4",
                     children: it.Localize("#AdvancedSearch_NoFacets"),
                   }),
                 ],
               }),
             })
-          : (0, e.jsx)(Nn, { facets: s, ...l });
+          : (0, e.jsx)(Fn, { facets: s, ...l });
       }
-      async function ge(t) {
+      async function Ve(t) {
         const c = await fetch(
           `${s.TS.COMMUNITY_BASE_URL}market/appfilters/${t}`,
         );
@@ -6520,8 +6638,8 @@
           throw new Error(`Loaded malformed market filters for app ${t}`);
         return n.facets;
       }
-      function me(t = !0) {
-        const { suggestedApps: c } = (0, l.useContext)(Xn);
+      function je(t = !0) {
+        const { suggestedApps: c } = (0, l.useContext)(Qn);
         return (0, a.I)({
           queryKey: ["marketsuggestedapps"],
           queryFn: async () => {
@@ -6537,7 +6655,7 @@
           initialData: c,
         });
       }
-      function xe(t) {
+      function _e(t) {
         const {
             selectedApp: c,
             apps: n,
@@ -6545,7 +6663,7 @@
             size: s = "3",
             clearable: a = !0,
           } = t,
-          i = E({
+          i = Y({
             rgOptions: n,
             selectedValue: c || null,
             onSelectionChange: l,
@@ -6555,18 +6673,18 @@
               "#AdvancedSearch_AppSelect_FilterPlaceholder",
             ),
           });
-        return (0, e.jsxs)(G.Root, {
+        return (0, e.jsxs)(N.Root, {
           state: i,
           size: s,
           radius: "sm",
           marginBottom: "2",
           clearable: a,
           children: [
-            (0, e.jsxs)(G.Trigger, {
+            (0, e.jsxs)(N.Trigger, {
               children: [
-                c && (0, e.jsx)(Ce, { app: c, size: s }),
+                c && (0, e.jsx)(we, { app: c, size: s }),
                 !c &&
-                  (0, e.jsx)(G.Placeholder, {
+                  (0, e.jsx)(N.Placeholder, {
                     weight: "medium",
                     contrast: "title",
                     children: it.Localize(
@@ -6575,16 +6693,16 @@
                   }),
               ],
             }),
-            (0, e.jsx)(G.VirtualizedOptions, {
+            (0, e.jsx)(N.VirtualizedOptions, {
               estimateSize: () => 48,
               items: i.rgFilteredOptions,
               renderItem: (t, n) =>
                 (0, e.jsx)(
-                  G.VirtualizedOption,
+                  N.VirtualizedOption,
                   {
                     value: t,
                     virtualItem: n,
-                    children: (0, e.jsx)(Ce, {
+                    children: (0, e.jsx)(we, {
                       app: t,
                       active: t === c,
                       size: s,
@@ -6596,7 +6714,7 @@
           ],
         });
       }
-      function Ce(t) {
+      function we(t) {
         const {
           app: { icon: c, name: n },
           active: l,
@@ -6606,8 +6724,8 @@
           align: "center",
           gap: "2",
           children: [
-            c && (0, e.jsx)(_e, { icon: c, size: s }),
-            (0, e.jsx)(j.EY, {
+            c && (0, e.jsx)(ye, { icon: c, size: s }),
+            (0, e.jsx)(_.EY, {
               color: l ? "accent-8" : void 0,
               contrast: l ? void 0 : "title",
               children: n,
@@ -6615,10 +6733,10 @@
           ],
         });
       }
-      const Ve = {};
-      function _e(t) {
+      const be = {};
+      function ye(t) {
         const { icon: c, size: n } = t,
-          [s, a] = (0, l.useState)(!!Ve[c]);
+          [s, a] = (0, l.useState)(!!be[c]);
         (0, l.useEffect)(() => {
           let t = !0;
           return (
@@ -6630,7 +6748,7 @@
             }
           );
         }, []),
-          s && (Ve[c] = !0);
+          s && (be[c] = !0);
         const v = (0, D.n)(n),
           r = `var(--spacing-${parseInt(v) + 3})`;
         return s
@@ -6641,7 +6759,7 @@
             })
           : (0, e.jsx)(i.az, { width: r, height: r, background: "dull-10" });
       }
-      function je() {
+      function Se() {
         return (0, e.jsx)(r.s, {
           justify: "center",
           align: "center",
@@ -6733,154 +6851,6 @@
             : c
         )();
         return ((null != v ? v : e).instances[i] = r), r;
-      }
-    },
-    42834: (t, c, n) => {
-      "use strict";
-      n.d(c, { DT: () => r, b0: () => i, bu: () => v, pd: () => o });
-      var e = n(8527),
-        l = n(39777),
-        s = n(81393),
-        a = n(38535);
-      function i(t, c) {
-        if (t[c]) {
-          if ("community_icon" == c) {
-            const n = t.asset_url_format
-              .replace(/^steam\//, "images/")
-              .replace("${FILENAME}", `${t[c]}.jpg`)
-              .replace(/\?.*$/, "");
-            return `${e.TS.MEDIA_CDN_COMMUNITY_URL}${n}`;
-          }
-          {
-            const n = t.asset_url_format.replace("${FILENAME}", t[c]);
-            return `${e.TS.STORE_ITEM_BASE_URL}${n}`;
-          }
-        }
-      }
-      function v(t, c = "full") {
-        let n = "";
-        switch (c) {
-          case "thumb":
-            n = ".116x65";
-            break;
-          case "600x338":
-            n = ".600x338";
-            break;
-          case "1920x1080":
-            n = ".1920x1080";
-            break;
-          case "full":
-            n = "";
-            break;
-          default:
-            (0, s.z_)(c, `Invalid size: ${c}`);
-        }
-        return (
-          e.TS.STORE_ITEM_BASE_URL +
-          t.filename.replace(/\.([^.]+)(\?.*)?$/, `${n}.$1$2`)
-        );
-      }
-      function r(t) {
-        const { data: c } = (0, l.j4)(t),
-          n = (0, a.dy)();
-        if (c)
-          return [
-            ...(c.all_ages_screenshots || []),
-            ...(!n && c.mature_content_screenshots
-              ? c.mature_content_screenshots
-              : []),
-          ].sort((t, c) => t.ordinal - c.ordinal);
-      }
-      function o(t, c = !1) {
-        const { data: n } = (0, l.lv)({ appid: t });
-        return void 0 === n
-          ? void 0
-          : null === n
-            ? null
-            : c && n.library_capsule_2x
-              ? i(n, "library_capsule_2x")
-              : n.library_capsule
-                ? i(n, "library_capsule")
-                : `${e.TS.STORE_ITEM_BASE_URL}steam/apps/${t}/portrait.png`;
-      }
-    },
-    69345: (t, c, n) => {
-      "use strict";
-      n.d(c, { n: () => s });
-      n(7850);
-      var e = n(60014),
-        l = n(8527);
-      function s(t, c, n) {
-        return (0, e.aL)(
-          t ? `${l.TS.STORE_BASE_URL}${t.store_url_path}` : void 0,
-          c,
-          n,
-        );
-      }
-    },
-    38535: (t, c, n) => {
-      "use strict";
-      n.d(c, { $9: () => h, AS: () => f, Zj: () => m, dy: () => d });
-      var e = n(90626),
-        l = n(30470),
-        s = n(14771),
-        a = n(2627),
-        i = n(29385),
-        v = n(88942),
-        r = n(39777);
-      const o = e.createContext({ eAdultOnlyMediaBehavior: "masked" });
-      function h() {
-        const { eAdultOnlyMediaBehavior: t } = e.useContext(o),
-          c = (function () {
-            const { data: t } = (0, v.I)({
-              queryKey: ["AOWarningCookie"],
-              queryFn: () => g(),
-              placeholderData: () => g(),
-              staleTime: 0,
-            });
-            return t && t > Date.now() / 1e3;
-          })();
-        return e.useMemo(() => {
-          const t = (0, a.VY)("forceallages");
-          return (
-            !(!t || "0" === t) ||
-            !(!l.TS.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
-          );
-        }, []) ||
-          ("masked" == t &&
-            (l.iA.excluded_content_descriptors.includes(4) ||
-              l.iA.excluded_content_descriptors.includes(3)))
-          ? "blocked"
-          : "masked" == t && c
-            ? "allowed"
-            : t;
-      }
-      function d() {
-        return "allowed" != h();
-      }
-      const u = "bDisableAOWarning",
-        p = 2 * s.Kp.PerDay;
-      function f() {
-        const t = (0, i.jE)();
-        return e.useCallback(() => {
-          (0, a.lc)(u, String(Math.floor(Date.now() / 1e3) + p)),
-            t.invalidateQueries({ queryKey: ["AOWarningCookie"] });
-        }, [t]);
-      }
-      function g() {
-        const t = (0, a.VY)(u),
-          c = t ? parseInt(t) : 0;
-        return 0 != c ? c : null;
-      }
-      function m(t) {
-        const c = "blocked" == h() && !!t,
-          { data: n } = (0, r.J$)(c ? { appid: t } : void 0);
-        return (
-          !!c &&
-          (!n ||
-            n.content_descriptorids.includes(3) ||
-            n.content_descriptorids.includes(4))
-        );
       }
     },
   },

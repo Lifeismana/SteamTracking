@@ -2543,6 +2543,12 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	border-radius: 3px;
 }
 
+.profile_comment_area .author_name_group {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1px;
+}
+
 .profile_comment_area .commentthread_entry {
 	margin: 10px;
 }

@@ -722,16 +722,16 @@ a.commentthread_allcommentslink:hover {
 
 .commentthread_comment_container {
 	margin-top: 19px;
-	padding: 10px;
+	padding: 10px 10px 10px 0;
 }
 
 .commentthread_comment {
 	position: relative;
 	padding-bottom: 8px;
 	padding-top: 8px;
+	padding-left: 11px;
 	margin-bottom: 8px;
 	min-height: 40px;
-	padding-left: 58px;
 
 	/* The descendant comment text element has overflow set, but a chrome bug allows some unicode characters to spill out of that.  overflow at this level seems to stop it */
 	overflow: hidden;
@@ -756,12 +756,6 @@ a.commentthread_allcommentslink:hover {
 
 }
 
-.commentthread_comment_avatar {
-	position: absolute;
-	left: 5px;
-	top: 8px;
-}
-
 .commentthread_valve_icon
 {
 	vertical-align: middle;
@@ -770,9 +764,44 @@ a.commentthread_allcommentslink:hover {
 	height: 16px;
 }
 
+.commentthread_comment_content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
 .commentthread_comment_author {
-	margin-bottom: 2px;
 	line-height: 16px;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+}
+
+.commentthread_comment_author .left_group {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.commentthread_comment_author .left_group .avatar_group {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+.author_name_group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.commentthread_comment_author .flex_row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
 }
 
 .commentthread_comment_author a {
@@ -788,12 +817,15 @@ a.commentthread_allcommentslink:hover {
 .commentthread_comment_author a.actionlink:hover {
 	text-decoration: underline;
 }
-.commentthread_comment_author .commentthread_comment_actions {
-	float: right;
+.commentthread_comment_actions {
 	margin-right: 8px;
+	display: flex;
+	flex-grow: 1;
+	justify-content: flex-end;
+	align-items: flex-start;
 }
 
-.commentthread_comment_author .commentthread_comment_actions a.actionlink {
+.commentthread_comment_actions a.actionlink {
 	margin-left: 10px;
 }
 
@@ -808,7 +840,7 @@ a.commentthread_allcommentslink:hover {
 .commentthread_comment_timestamp {
 	font-size: 13px;
 	color: #56707f;
-	margin-left: 4px;
+	flex-grow: 1;
 }
 
 .commentthread_comment_reportprob {
@@ -830,6 +862,15 @@ a.commentthread_allcommentslink:hover {
 	overflow-y: auto;
 	max-height: 400px;
 	line-height: 18px;
+	padding-left: 52px;
+}
+
+@media screen and (max-width: 480px )
+{
+	html.responsive .commentthread_comment_text {
+		padding-left: 0;
+		margin-top: 6px;
+	}
 }
 
 .commentthread_comment_text a {
@@ -907,7 +948,6 @@ a.commentthread_allcommentslink:hover {
 	padding: 0 6px;
 	border-radius: 3px;
 	line-height: 22px;
-	margin: 0 4px;
 	background-color: #AC966A;
 }
 

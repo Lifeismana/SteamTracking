@@ -56,6 +56,7 @@
         Rows: "_2QdiX1hDsJmlkrHmcCOMbV",
         AutoColumns: "Cr7YIMQn6_lDRU4-3BR8b",
         AutoRows: "_3kyzvGnYVLT0DW6nzP9n18",
+        AutoFlow: "_3AvZKfpfaIQbfczVRBASsX",
         Areas: "_1-yfCTWkj4tOFfb3EKXx6N",
         Flow: "_1yUwWGTk4IX0IhdJiKfFBf",
         AlignContent: "_2Tglp6488nVBhU976Llfpe",
@@ -545,53 +546,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return ["PlayerLinkDetails", _];
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(_);
-        return (0, _._)(
-          (function (_, _) {
-            const _ =
-              "number" == typeof _
-                ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
-                : _;
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                var _, _, _, _, _;
-                if (_) {
-                  const _ = await _.load(_);
-                  return (
-                    null === (_ = null == _ ? void 0 : _.private_data) ||
-                      void 0 === _ ||
-                      delete _.account_name,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.account_flags,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.ban_expires_time,
-                    null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _ ||
-                      delete _.privacy_state,
-                    1 !==
-                      (null === (_ = null == _ ? void 0 : _.public_data) ||
-                      void 0 === _
-                        ? void 0
-                        : _.profile_state) &&
-                      (null == _ || delete _.private_data),
-                    _
-                  );
-                }
-                return null;
-              },
-              enabled: !!_,
-            };
-          })(_, _),
-        );
-      }
-      function _(_) {
         var _, _;
         const _ = parseInt(
             null !==
@@ -603,7 +557,7 @@
               : "0",
           ),
           _ = _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString(),
-          { data: _, isLoading: _ } = _(_);
+          { data: _, isLoading: _ } = (0, _._)(_);
         if (!_ && _) return null;
         const _ = _(_, _);
         return (0, _.jsx)(_._, {
@@ -1209,7 +1163,8 @@
           const _ = _(),
             _ = _();
           return (0, _.jsx)(_._, {
-            size: "6",
+            size: "7",
+            weight: "heavy",
             children: (0, _.jsx)(_, {
               description: _,
               asset: _,
@@ -1951,6 +1906,12 @@
           cssProperty: "--grid-auto-rows",
         },
         {
+          prop: "autoFlow",
+          responsive: !0,
+          className: _.AutoFlow,
+          cssProperty: "--grid-auto-flow",
+        },
+        {
           prop: "areas",
           responsive: !0,
           className: _.Areas,
@@ -2046,6 +2007,64 @@
       }
       function _(_) {
         return (0, _._)("PlayerLinkDetails", () => _(_));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return ["PlayerLinkDetails", _];
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_);
+        return (0, _._)(
+          (function (_, _) {
+            const _ =
+              "number" == typeof _
+                ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
+                : _;
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                var _, _, _, _, _;
+                if (_) {
+                  const _ = await _.load(_);
+                  return (
+                    null === (_ = null == _ ? void 0 : _.private_data) ||
+                      void 0 === _ ||
+                      delete _.account_name,
+                    null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _ ||
+                      delete _.account_flags,
+                    null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _ ||
+                      delete _.ban_expires_time,
+                    null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _ ||
+                      delete _.privacy_state,
+                    1 !==
+                      (null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _
+                        ? void 0
+                        : _.profile_state) &&
+                      (null == _ || delete _.private_data),
+                    _
+                  );
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_, _),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2498,6 +2517,7 @@
               state: _,
               placement: _ = "bottom-end",
               popoverWidth: _ = "dropdown",
+              popoverMaxHeight: _,
               ..._
             } = _,
             [_, _] = (0, _.useState)(void 0);
@@ -2512,6 +2532,7 @@
               open: _.bOpen,
               onOpenChange: _.setOpen,
               width: _,
+              maxHeight: _,
               placement: _,
               gutter: "4",
               activeIndex: _.activeIndex,
@@ -3121,6 +3142,7 @@
           state: _,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
             (0, _.jsxs)(_.Trigger, {
               children: [
@@ -3875,6 +3897,7 @@
             : (0, _.jsxs)(_._, {
                 direction: "column",
                 gap: "2",
+                paddingBottom: "2",
                 children: [
                   (0, _.jsxs)(_._, {
                     gap: "2",
@@ -4799,6 +4822,8 @@
           }),
         });
       }
+      const _ = (_) =>
+        `min( calc( ${_.unAvailableHeight}px - ${_.gutter} ), 500px )`;
       function _(_) {
         const {
             facets: _,
@@ -4829,6 +4854,8 @@
           state: _,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
+          popoverMaxHeight: _,
           children: [
             (0, _.jsxs)(_.Trigger, {
               children: [
@@ -5741,14 +5768,37 @@
                   (_ = _(_, _, _, !1)));
           _(_), _ && _(_, !0);
         }, [_, _, _, _, _, _]);
-        const _ = (_ = []) => {
+        const _ = (_ = [], _ = []) => {
             const _ = {
               ..._,
               facets: {
                 ..._.facets,
               },
             };
-            _.forEach((_) => delete _.facets[_]);
+            let _ = !0;
+            const _ = Object.keys(_.facets.Type || {}),
+              _ = _.filter(({ facet: _ }) => "Type" === _);
+            if (
+              ((_.length > 0 && 0 === _.length) ||
+              _.some(({ facet: _ }) => "ItemSet" === _)
+                ? (_ = !1)
+                : _.length > 0 &&
+                  _.length > 0 &&
+                  (_ =
+                    _.some((_) => !_.includes(_)) ||
+                    _.some(({ tag: _ }) => !_.includes(_))),
+              _)
+            )
+              _.forEach((_) => delete _.facets[_]);
+            else
+              for (const _ of _) {
+                !_.find(
+                  ({ facet: _, tag: _ }) => _.facet === _ && _.tag === _,
+                ) &&
+                  _.facets[_.facet] &&
+                  _.facets[_.facet][_.tag] &&
+                  delete _.facets[_.facet][_.tag];
+              }
             for (const _ of _)
               _.facets[_.facet] || (_.facets[_.facet] = {}),
                 (_.facets[_.facet] = {
@@ -5757,7 +5807,7 @@
                 });
             _(_, !0);
           },
-          _ = (_, _) => _(_),
+          _ = (_, _) => _(_, _),
           _ = [
             ...Object.values(_.facets.Type || {}),
             ...Object.values(_.facets.Weapon || {}),
@@ -5803,6 +5853,14 @@
                           (_ = _.facet),
                           (_ = _.tag),
                           _(
+                            (_ = _)
+                              ? void 0
+                              : [
+                                  {
+                                    facet: _,
+                                    tag: _,
+                                  },
+                                ],
                             _
                               ? [
                                   {
@@ -5813,7 +5871,7 @@
                               : void 0,
                           )
                         );
-                        var _, _;
+                        var _, _, _;
                       },
                       muted:
                         _ && !(_.facets[_.facet] && _.facets[_.facet][_.tag]),
@@ -6102,6 +6160,7 @@
           state: _,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
             (0, _.jsxs)(_._.Trigger, {
               render: (0, _.jsx)(_, {
@@ -6198,6 +6257,7 @@
           state: _,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
             (0, _.jsxs)(_._.Trigger, {
               render: (0, _.jsx)(_, {
@@ -6323,6 +6383,7 @@
           state: _,
           variant: "highlight",
           radius: "sm",
+          clearable: !0,
           children: [
             (0, _.jsxs)(_.Trigger, {
               render: (0, _.jsx)(_, {
@@ -6650,7 +6711,8 @@
           } = _,
           _ = _.bSteamItems,
           _ = (0, _._)("sm"),
-          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app;
+          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app,
+          _ = _(_);
         return (0, _.jsx)(_._.Provider, {
           value: !!_,
           children: (0, _.jsx)(_.Provider, {
@@ -6669,7 +6731,7 @@
                   children: [
                     !_.bNewMarket &&
                       (0, _.jsx)(_._, {
-                        size: "6",
+                        size: "7",
                         weight: "heavy",
                         children: _.Localize("#AdvancedSearch_Heading"),
                       }),
@@ -6721,7 +6783,22 @@
                                   strSearch: _,
                                 }),
                             }),
-                            false,
+                            _ &&
+                              (0, _.jsx)(_._, {
+                                marginLeft: "4",
+                                checked: !!_.bSearchDescriptions,
+                                onChange: (_) =>
+                                  __webpack_require__({
+                                    ..._,
+                                    bSearchDescriptions: _,
+                                  }),
+                                title: _.Localize(
+                                  "#AdvancedSearch_IncludeDescriptions_Tooltip",
+                                ),
+                                children: _.Localize(
+                                  "#AdvancedSearch_IncludeDescriptions",
+                                ),
+                              }),
                           ],
                         }),
                       ],
@@ -6764,6 +6841,9 @@
             }),
           }),
         });
+      }
+      function _(_) {
+        return !!_;
       }
       function _(_) {
         const { filter: _, onFilterChange: _, config: _, onSearch: _ } = _,
@@ -6872,7 +6952,7 @@
         });
       }
       function _(_) {
-        var _, _;
+        var _, _, _;
         const {
             value: _,
             onTextChange: _,
@@ -6898,6 +6978,7 @@
           _ = (
             (null === (_ = _.data) || void 0 === _ ? void 0 : _.results) || []
           ).map((_) => _.market_hash_name),
+          _ = (null === (_ = _.data) || void 0 === _ ? void 0 : _.apps) || [],
           _ = (
             (null === (_ = _.data) || void 0 === _ ? void 0 : _.results) || []
           ).slice(0, 10),
@@ -6905,13 +6986,22 @@
             onTextChange: _,
             suggestions: _,
             onSuggestionSelected: (_, _) => {
-              const _ = _.find((_) => _.market_hash_name === _);
-              _ &&
-                ((window.location.href = _._.Item(
-                  _.app_id,
-                  _.market_hash_name,
-                )),
-                _.preventDefault());
+              const [_, _] = _.split("|");
+              if ("item" === _) {
+                const _ = _.find((_) => _.market_hash_name === _);
+                _ &&
+                  ((window.location.href = _._.Item(
+                    _.app_id,
+                    _.market_hash_name,
+                  )),
+                  _.preventDefault());
+              } else if ("app" === _) {
+                const _ = _.find((_) => _.appid === Number(_));
+                _ &&
+                  (window.location.href = _._.Search({
+                    search: `appid=${_.appid}`,
+                  }));
+              }
             },
           }),
           [_, _] = (0, _.useState)(!1),
@@ -6972,21 +7062,32 @@
               onBlur: () => _(!1),
               clearable: !0,
             }),
-            (0, _.jsx)(_.Suggestions, {
-              children: _.map((_, _) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    name: _.market_name,
-                    hashName: _.market_hash_name,
-                    appName: _.app_name,
-                    appid: _.app_id,
-                    img: _.icon_url,
-                    searchScore: _.search_score,
-                  },
-                  _.market_hash_name + _,
+            (0, _.jsxs)(_.Suggestions, {
+              children: [
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      ..._,
+                    },
+                    _.appid,
+                  ),
                 ),
-              ),
+                _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      name: _.market_name,
+                      hashName: _.market_hash_name,
+                      appName: _.app_name,
+                      appid: _.app_id,
+                      img: _.icon_url,
+                      searchScore: _.search_score,
+                    },
+                    _.market_hash_name + _,
+                  ),
+                ),
+              ],
             }),
           ],
         });
@@ -7006,16 +7107,10 @@
         const { name: _, hashName: _, img: _, appName: _, searchScore: _ } = _,
           _ = (0, _._)();
         return (0, _.jsxs)(_.Suggestion, {
-          value: _,
+          value: `item|${_}`,
           render: (_, _) =>
-            (0, _.jsx)(_._, {
-              align: "center",
-              gap: "2",
-              className: _.SearchSuggestion,
-              radius: "sm",
-              margin: "2",
-              "data-focused": _.focused,
-              paddingLeft: "2",
+            (0, _.jsx)(_, {
+              focused: _.focused,
               ..._,
             }),
           children: [
@@ -7060,6 +7155,55 @@
                     : null,
               }),
           ],
+        });
+      }
+      function _(_) {
+        const { name: _, icon: _, appid: _ } = _;
+        return (0, _.jsxs)(_.Suggestion, {
+          value: `app|${_}`,
+          render: (_, _) =>
+            (0, _.jsx)(_, {
+              focused: _.focused,
+              ..._,
+            }),
+          children: [
+            (0, _.jsx)("img", {
+              style: {
+                margin: "8px",
+                height: "24px",
+                width: "24px",
+                objectFit: "contain",
+                filter: "drop-shadow( 0 0 1px rgba( 0, 0, 0, .5) )",
+              },
+              src: _,
+              alt: "",
+            }),
+            (0, _.jsx)(_._, {
+              direction: "column",
+              gap: "1",
+              minWidth: "0",
+              children: (0, _.jsx)(_._, {
+                size: "2",
+                weight: "medium",
+                truncate: !0,
+                contrast: "title",
+                children: _,
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { focused: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          align: "center",
+          gap: "2",
+          className: _.SearchSuggestion,
+          radius: "sm",
+          margin: "2",
+          "data-focused": _,
+          paddingLeft: "2",
+          ..._,
         });
       }
       function _(_) {
@@ -7460,7 +7604,7 @@
           _ = new FormData();
         _ && _.set("appid", _.appid.toString()),
           _ && _.set("q", _),
-          _ && _ && (_.app, 0) && _.set("descriptions", "1");
+          _ && _ && _(_.app) && _.set("descriptions", "1");
         for (const _ of Object.keys(_))
           if (_[_])
             for (const _ of Object.keys(_[_]))
@@ -7566,7 +7710,7 @@
                     align: "center",
                     _: "div",
                     marginTop: _,
-                    size: "6",
+                    size: "7",
                     weight: "heavy",
                     children: _.Localize("#AdvancedSearch_NoFacetsSearch"),
                   }),
@@ -7841,178 +7985,6 @@
             : _
         )();
         return ((null != _ ? _ : _).instances[_] = _), _;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (_[_]) {
-          if ("community_icon" == _) {
-            const _ = _.asset_url_format
-              .replace(/^steam\//, "images/")
-              .replace("${FILENAME}", `${_[_]}.jpg`)
-              .replace(/\?.*$/, "");
-            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
-          }
-          {
-            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
-            return `${_._.STORE_ITEM_BASE_URL}${_}`;
-          }
-        }
-      }
-      function _(_, _ = "full") {
-        let _ = "";
-        switch (_) {
-          case "thumb":
-            _ = ".116x65";
-            break;
-          case "600x338":
-            _ = ".600x338";
-            break;
-          case "1920x1080":
-            _ = ".1920x1080";
-            break;
-          case "full":
-            _ = "";
-            break;
-          default:
-            (0, _._)(_, `Invalid size: ${_}`);
-        }
-        return (
-          _._.STORE_ITEM_BASE_URL +
-          _.filename.replace(/\.([^.]+)(\?.*)?$/, `${_}.$1$2`)
-        );
-      }
-      function _(_) {
-        const { data: _ } = (0, _._)(_),
-          _ = (0, _._)();
-        if (_)
-          return [
-            ...(_.all_ages_screenshots || []),
-            ...(!_ && _.mature_content_screenshots
-              ? _.mature_content_screenshots
-              : []),
-          ].sort((_, _) => _.ordinal - _.ordinal);
-      }
-      function _(_, _ = !1) {
-        const { data: _ } = (0, _._)({
-          appid: _,
-        });
-        return void 0 === _
-          ? void 0
-          : null === _
-            ? null
-            : _ && _.library_capsule_2x
-              ? _(_, "library_capsule_2x")
-              : _.library_capsule
-                ? _(_, "library_capsule")
-                : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return (0, _._)(
-          _ ? `${_._.STORE_BASE_URL}${_.store_url_path}` : void 0,
-          _,
-          _,
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        eAdultOnlyMediaBehavior: "masked",
-      });
-      function _() {
-        const { eAdultOnlyMediaBehavior: _ } = _.useContext(_),
-          _ = (function () {
-            const { data: _ } = (0, _._)({
-              queryKey: ["AOWarningCookie"],
-              queryFn: () => _(),
-              placeholderData: () => _(),
-              staleTime: 0,
-            });
-            return _ && _ > Date.now() / 1e3;
-          })();
-        return _.useMemo(() => {
-          const _ = (0, _._)("forceallages");
-          return (
-            !(!_ || "0" === _) ||
-            !(!_._.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
-          );
-        }, []) ||
-          ("masked" == _ &&
-            (_._.excluded_content_descriptors.includes(4) ||
-              _._.excluded_content_descriptors.includes(3)))
-          ? "blocked"
-          : "masked" == _ && _
-            ? "allowed"
-            : _;
-      }
-      function _() {
-        return "allowed" != _();
-      }
-      const _ = "bDisableAOWarning",
-        _ = 2 * _._.PerDay;
-      function _() {
-        const _ = (0, _._)();
-        return _.useCallback(() => {
-          (0, _._)(_, String(Math.floor(Date.now() / 1e3) + _)),
-            _.invalidateQueries({
-              queryKey: ["AOWarningCookie"],
-            });
-        }, [_]);
-      }
-      function _() {
-        const _ = (0, _._)(_),
-          _ = _ ? parseInt(_) : 0;
-        return 0 != _ ? _ : null;
-      }
-      function _(_) {
-        const _ = "blocked" == _() && !!_,
-          { data: _ } = (0, _._)(
-            _
-              ? {
-                  appid: _,
-                }
-              : void 0,
-          );
-        return (
-          !!_ &&
-          (!_ ||
-            _.content_descriptorids.includes(3) ||
-            _.content_descriptorids.includes(4))
-        );
       }
     },
   },

@@ -2887,17 +2887,16 @@ body.v6 #footer_nav .popup_menu .hr{
 .community_award_ctn {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 3px;
 }
 
 .community_award {
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
-	padding: 0px 3px 0px 3px;
-	margin: 0 1px;
-	line-height: 28px;
-	height: 28px;
+	padding: 2px 5px 2px 3px;
 	cursor: pointer;
+	line-height: 22px;
 }
 .community_award:hover {
 	background-color: rgba(255, 255, 255, 0.2);

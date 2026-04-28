@@ -6582,14 +6582,31 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (!_ || !_.BIsClanAccount()) return !1;
         const _ = _._.Get().GetPartnerEventPermissions(_);
         return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+      }
+      function _(_) {
+        const { clanSteamID: _, _: _ } = _;
+        return _(_, _.requireAdmin)
+          ? (0, _.jsx)("div", {
+              _: _,
+              className: (0, _._)(
+                _.className,
+                _.requireAdmin
+                  ? _.ValveOnlyAdminBackground
+                  : _.ValveOnlyBackground,
+              ),
+              children: _.children,
+            })
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

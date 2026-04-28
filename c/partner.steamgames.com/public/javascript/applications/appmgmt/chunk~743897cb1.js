@@ -163,6 +163,7 @@
         BackgroundAnimation: "_2hlRK2hm0pHy1YSxwknFCj",
         "ItemFocusAnim-darkerGrey-nocolor": "_3Ye-Lgym31_-ibnmbFywrn",
         "ItemFocusAnim-darkerGrey": "_1klcEk0V0JFATe7imIRZ1C",
+        "ItemFocusAnim-darkGreySettings": "_1o29CI_yDNVtgTV1cxDqGZ",
         "ItemFocusAnim-darkGrey": "_2BtPOA0wSbFULgc-Zh-0_x",
         "ItemFocusAnim-grey": "_24LF-yODOtVFSuejuQ_xu2",
         "ItemFocusAnim-translucent-white-10": "uTNXVgYo8JPxZgJyTl9LQ",
@@ -184,6 +185,7 @@
         BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
         "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
         "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
         "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
         "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
         "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
@@ -457,6 +459,7 @@
         BackgroundAnimation: "TqTKL7i3GSFlH_ZgPVf1z",
         "ItemFocusAnim-darkerGrey-nocolor": "cm_5koVmrBLuCZgPBCMie",
         "ItemFocusAnim-darkerGrey": "PnVMlqvX5SCAvSN6U3hb9",
+        "ItemFocusAnim-darkGreySettings": "_3WN-nRn7q-FIwR4QBoVI_u",
         "ItemFocusAnim-darkGrey": "_3y6HrP9DK-Ttsri2UnKeJ4",
         "ItemFocusAnim-grey": "_3adXp5-v5skt9f-KA1WB_8",
         "ItemFocusAnim-translucent-white-10": "_1981I-jlGsaAi65IqAxEdm",
@@ -12850,6 +12853,7 @@
         let _ = _(),
           _ = _(_, "theater");
         if (!_ || !_.bSupportsTheater) return null;
+        _.use(_._.Ready());
         let _ = "theater" == _.strMode,
           _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
@@ -12867,6 +12871,7 @@
         let _ = _(),
           _ = _(_, "fullscreen");
         if (!_ || !_.bSupportsFullscreen) return null;
+        _.use(_._.Ready());
         let _ = "fullscreen" == _.strMode,
           _ = _ ? (0, _.jsx)(_.JaO, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
@@ -12889,24 +12894,27 @@
             _((_) => !_);
           }, [_]),
           _ = (0, _._)(_().SettingsButton, _ && _().Rotated);
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              ref: _,
-              onActivate: _,
-              tooltip: _._.Localize("#TrailerPlayer_Settings_Tooltip"),
-              children: (0, _.jsx)(_.wB_, {
-                className: _,
-              }),
-            }),
-            _ &&
+        return (
+          _.use(_._.Ready()),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
               (0, _.jsx)(_, {
-                player: _,
-                refButton: _,
-                onClose: _,
+                ref: _,
+                onActivate: _,
+                tooltip: _._.Localize("#TrailerPlayer_Settings_Tooltip"),
+                children: (0, _.jsx)(_.wB_, {
+                  className: _,
+                }),
               }),
-          ],
-        });
+              _ &&
+                (0, _.jsx)(_, {
+                  player: _,
+                  refButton: _,
+                  onClose: _,
+                }),
+            ],
+          })
+        );
       }
       function _(_) {
         let { player: _, refButton: _, onClose: _ } = _,
@@ -13020,11 +13028,14 @@
               __webpack_require__.m_fnSetAutoplayEnabled(!_),
               _();
           }, [_, _, _]);
-        return (0, _.jsx)(_, {
-          onClick: _,
-          checked: _,
-          children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
-        });
+        return (
+          _.use(_._.Ready()),
+          (0, _.jsx)(_, {
+            onClick: _,
+            checked: _,
+            children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
+          })
+        );
       }
       function _(_) {
         let { onClick: _, checked: _, children: _ } = _,
@@ -13307,8 +13318,9 @@
         let { player: _ } = _,
           _ = (function (_) {
             return (0, _._)(() => _.GetFailureReason());
-          })(_),
-          _ = "";
+          })(_);
+        _.use(_._.Ready());
+        let _ = "";
         return (
           _ == _._.UnsupportedMediaType
             ? (_ = _._.Localize("#TrailerPlayer_Error_UnsupportedCodec"))
@@ -13326,8 +13338,9 @@
       }
       function _(_) {
         let { player: _ } = _,
-          [_, _, _, _] = _(_),
-          _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
+          [_, _, _, _] = _(_);
+        _.use(_._.Ready());
+        let _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
           _ = _._.Localize(
             _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
           );
@@ -13339,8 +13352,9 @@
       }
       function _(_) {
         let { player: _ } = _,
-          _ = _(_),
-          _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
+          _ = _(_);
+        _.use(_._.Ready());
+        let _ = _ ? (0, _.jsx)(_._, {}) : (0, _.jsx)(_._, {}),
           _ = _._.Localize(
             _ ? "#TrailerPlayer_Play_Tooltip" : "#TrailerPlayer_Pause_Tooltip",
           ),
@@ -14207,7 +14221,8 @@
           })(_, !!_),
           _ = _ ? void 0 : _,
           _ = {};
-        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
+          _.use(_._.Ready());
         let _ = (0, _._)(_().TrailerPlayer, _);
         return (0, _.jsxs)("div", {
           ref: _,
@@ -14333,8 +14348,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -14754,7 +14767,7 @@
               return (0, _.jsxs)("div", {
                 className: (0, _._)({
                   [_().ExpandSectionBlock]: !0,
-                  [_.style]: null != _.style,
+                  [_.style ?? ""]: null != _.style,
                   [_().ExpandSectionExpanded]: _,
                   [_().ExpandSectionCollapsed]: !_,
                   BBCodeExpanded: _,
@@ -14980,14 +14993,14 @@
         [
           "looping_media",
           {
-            Constructor: _,
+            Constructor: _._,
             autocloses: !1,
           },
         ],
         [
           "video",
           {
-            Constructor: _,
+            Constructor: _._,
             autocloses: !1,
           },
         ],
@@ -15147,18 +15160,32 @@
           })
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        let _ = _(_, "poster");
+        let _ = (0, _._)(_, "poster");
         _ && (_ = (0, _._)(_));
         const _ = new Array();
         {
-          const _ = _(_, "mp4");
+          const _ = (0, _._)(_, "mp4");
           _ &&
             __webpack_require__.push({
               sURL: (0, _._)(_),
               sFormat: "video/mp4",
             });
-          const _ = _(_, "webm");
+          const _ = (0, _._)(_, "webm");
           _ &&
             __webpack_require__.push({
               sURL: (0, _._)(_),
@@ -15169,7 +15196,7 @@
           _ = 0 != _,
           _ = new Array();
         for (let _ = 0; _ < 31; _++) {
-          const _ = _(_, "sub_" + (0, _._)(_));
+          const _ = (0, _._)(_, "sub_" + (0, _._)(_));
           _ &&
             _.push({
               sURL: (0, _._)(_),
@@ -15177,7 +15204,7 @@
               sKind: "subtitles",
               bDefault: _ && _ == _,
             });
-          const _ = _(_, "cap_" + (0, _._)(_));
+          const _ = (0, _._)(_, "cap_" + (0, _._)(_));
           _ &&
             _.push({
               sURL: (0, _._)(_),
@@ -15210,11 +15237,11 @@
             sURL: (0, _._)(_),
             sFormat: "video/webm",
           });
-        const _ = _(_.args, "autoplay"),
+        const _ = (0, _._)(_.args, "autoplay"),
           _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "controls"),
+          _ = (0, _._)(_.args, "controls"),
           _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "loop"),
+          _ = (0, _._)(_.args, "loop"),
           _ = "0" !== _ && "off" !== _ && "false" !== _;
         return (0, _.jsx)(_._, {
           video: _,
@@ -16146,8 +16173,15 @@
                 return _.avatar_full_url;
               _ = this.jsondata.referenced_appids[0];
             }
+            _._.Get().QueueAppRequest(_, {
+              include_assets: !0,
+            });
             const _ = _._.Get().GetApp(_);
-            return _ && _.GetAssets()
+            return _ &&
+              _.BContainDataRequest({
+                include_assets: !0,
+              }) &&
+              _.GetAssets()
               ? _.GetAssets()?.GetMainCapsuleURL()
               : _?.avatar_full_url
                 ? _.avatar_full_url
@@ -23231,6 +23265,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33389,6 +33424,9 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33878,7 +33916,6 @@
         (0, _._)([_._], _.prototype, "ClearFileUploadError", null),
         (0, _._)([_._], _.prototype, "Reset", null);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -34745,7 +34782,6 @@
       }
       var _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -34766,6 +34802,7 @@
             bgcolor: _,
             children: _,
             trailerBaseID: _,
+            subtitles: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useMemo)(
@@ -34878,6 +34915,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
@@ -35097,565 +35135,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(_._),
-          _ = "true" === String((0, _._)(_.args, "autoadvance")).toLowerCase();
-        return (0, _.jsx)(_._, {
-          hideArrows: !_,
-          hidePips: _,
-          visibleElements: 1,
-          useTestScrollbar: !1,
-          bLazyRenderChildren: !0,
-          screenIsWide: _,
-          bAutoAdvance: _,
-          className: _().ScreenshotCarousel,
-          children: _.children,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapInventoryByApp = new Map();
-        m_mapPromises = new Map();
-        m_listChangeCallback = new Map();
-        m_SteamInterface = null;
-        GetInventoryForApp(_) {
-          return this.m_mapInventoryByApp.get(_);
-        }
-        GetItemDefsChangeForAppID(_) {
-          return (
-            this.m_listChangeCallback.has(_) ||
-              this.m_listChangeCallback.set(_, new _._()),
-            this.m_listChangeCallback.get(_)
-          );
-        }
-        BHasLoadedDef(_) {
-          return this.m_mapPromises.has(_);
-        }
-        SetTestAppCommunityItems(_, _) {
-          this.m_mapInventoryByApp.set(_, _),
-            this.GetItemDefsChangeForAppID(_).Dispatch(_),
-            this.m_mapPromises.set(_, Promise.resolve(1));
-        }
-        async LoadCommunityInventory(_) {
-          return _
-            ? (this.m_mapPromises.has(_) ||
-                this.m_mapPromises.set(
-                  _,
-                  this.InternalLoadCommunityInventory(_),
-                ),
-              this.m_mapPromises.get(_))
-            : 2;
-        }
-        async InternalLoadCommunityInventory(_) {
-          const _ = _._.Init(_._);
-          _.Body().set_filter_appids([_]);
-          let _ = null;
-          try {
-            const _ = await _._.GetCommunityInventory(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (1 == _.GetEResult()) {
-              const _ = new Array();
-              return (
-                _.Body()
-                  .items()
-                  .forEach((_) => _.push(_.toObject())),
-                this.m_mapInventoryByApp.set(_, _),
-                this.GetItemDefsChangeForAppID(_).Dispatch(_),
-                1
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CQuestCommunityInventoryStore.InternalLoadCommunityInventory failed: on appid " +
-                _ +
-                " error: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            2
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_QuestCommunityInventoryStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {
-          const _ = (0, _._)("read_inventory_token", "application_config");
-          (0, _._)(
-            _,
-            "CQuestCommunityInventoryStore: missing read_inventory:steam oauth permission",
-          ),
-            (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
-        }
-      }
-      function _(_) {
-        const [_, _] = (0, _.useState)(_.Get().GetInventoryForApp(_));
-        return (
-          (0, _.useEffect)(() => {
-            _ && !_.Get().BHasLoadedDef(_) && _.Get().LoadCommunityInventory(_);
-          }, [_]),
-          (0, _._)(_.Get().GetItemDefsChangeForAppID(_), _),
-          _
-        );
-      }
-      (0, _._)([_._], _.prototype, "SetTestAppCommunityItems", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapAppToDefs = new Map();
-        m_mapPromises = new Map();
-        m_listChangeCallback = new Map();
-        GetItemDefForAppID(_) {
-          return this.m_mapAppToDefs.get(_);
-        }
-        GetItemDefsChangeForEventID(_) {
-          return (
-            this.m_listChangeCallback.has(_) ||
-              this.m_listChangeCallback.set(_, new _._()),
-            this.m_listChangeCallback.get(_)
-          );
-        }
-        BHasLoadedDef(_) {
-          return this.m_mapPromises.has(_);
-        }
-        SetTestItemDefs(_, _) {
-          this.m_mapAppToDefs.set(_, _),
-            this.GetItemDefsChangeForEventID(_).Dispatch(_),
-            this.m_mapPromises.set(_, Promise.resolve(1));
-        }
-        async LoadAppCommunityItems(_, _) {
-          return _
-            ? (this.m_mapPromises.has(_) ||
-                this.m_mapPromises.set(
-                  _,
-                  this.InternalLoadAppCommunityItems(_, _),
-                ),
-              this.m_mapPromises.get(_))
-            : 2;
-        }
-        async InternalLoadAppCommunityItems(_, _) {
-          let _ = null;
-          try {
-            const _ =
-                _._.COMMUNITY_BASE_URL +
-                (_
-                  ? "minigame/ajaxgetgameitemdefsforeditor"
-                  : "minigame/ajaxgetgameitemdefs"),
-              _ = {
-                appid: _,
-                origin: self.origin,
-                _: _._.LANGUAGE,
-                sessionid: _ ? _._.SESSIONID : void 0,
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: _,
-              });
-            if (
-              200 == _?.status &&
-              1 == _?.data?.success &&
-              _?.data?.item_definitions
-            )
-              return (
-                this.m_mapAppToDefs.set(_, _.data.item_definitions),
-                this.GetItemDefsChangeForEventID(_).Dispatch(
-                  _.data.item_definitions,
-                ),
-                1
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleMiniGameItemDefStore.InternalLoadAppCommunityItems failed: on appid " +
-                _ +
-                " edit? " +
-                _ +
-                " error: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            2
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {}
-      }
-      function _(_, _, _) {
-        const _ = (function (_, _) {
-            const [_, _] = (0, _.useState)(_.Get().GetItemDefForAppID(_));
-            return (
-              (0, _.useEffect)(() => {
-                _ &&
-                  !_.Get().BHasLoadedDef(_) &&
-                  _.Get().LoadAppCommunityItems(_, _);
-              }, [_, _]),
-              (0, _._)(_.Get().GetItemDefsChangeForEventID(_), _),
-              _
-            );
-          })(_, _),
-          [_, _] = (0, _.useState)(null);
-        return (
-          (0, _.useEffect)(() => {
-            if (_ && _ && null == _) {
-              const _ = _.find(
-                (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
-              );
-              _ && _(_);
-            }
-          }, [_, _, _, _, _]),
-          _
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          appid: _,
-          item_image_small: _,
-          item_image_large: _,
-          item_movie_mp4: _,
-          item_movie_webm: _,
-          item_title: _,
-        } = _;
-        if (_?.length > 0 && _?.length > 0) {
-          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
-            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
-            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
-          return (0, _.jsx)(_.Fragment, {
-            children: (0, _.jsxs)("video", {
-              muted: !0,
-              controls: !1,
-              autoPlay: !0,
-              loop: !0,
-              poster: _,
-              playsInline: !0,
-              className: _.videoClassName,
-              children: [
-                (0, _.jsx)("source", {
-                  src: _,
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  (0, _.jsx)("source", {
-                    src: _,
-                    type: "video/mp4",
-                  }),
-              ],
-            }),
-          });
-        }
-        {
-          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_ || _}`;
-          return (0, _.jsx)("img", {
-            className: _.className,
-            src: _,
-            alt: _,
-          });
-        }
-      }
-      function _(_) {
-        const { appid: _, community_item_type: _, bForEdit: _ } = _,
-          _ = _(_, _, _),
-          _ =
-            _ && !_.active
-              ? (0, _.jsx)("div", {
-                  className: _.WarningStylesBackground,
-                  children: (0, _._)(
-                    "#Sale_Section_RewardShelf_ItemInActiveWarning",
-                  ),
-                })
-              : void 0;
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_, {
-                  ..._,
-                }),
-                _,
-              ],
-            })
-          : (0, _.jsx)(_._, {
-              size: "small",
-              string: (0, _._)("#Loading"),
-            });
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          { bLoading: _ } = _,
-          { className: _, bPreviewMode: _, rewardType: _ } = _;
-        return (0, _.jsx)(_._, {
-          className: (0, _._)("CSSClaimItemButton", _),
-          onClick: (_) => {
-            _.bCanClaimNewItem
-              ? (0, _._)(
-                  (0, _.jsx)(_, {
-                    rewardType: _,
-                  }),
-                  (0, _._)(_),
-                )
-              : ("dev" == _._.WEB_UNIVERSE ||
-                  "beta" == _._.WEB_UNIVERSE ||
-                  _) &&
-                ((0, _._)(
-                  (0, _.jsx)(_, {
-                    rewardType: _,
-                  }),
-                  (0, _._)(_),
-                ),
-                console.log(
-                  "Show dialog for debugging, since already claimed: ",
-                  (0, _._)(_),
-                ));
-          },
-          disabled: _,
-          children: Boolean(_)
-            ? (0, _.jsx)(_._, {
-                string: (0, _._)("#Loading"),
-                size: "small",
-              })
-            : (0, _.jsx)(_, {
-                claimState: _,
-              }),
-        });
-      }
-      function _(_) {
-        const { claimState: _, strButtonOverride: _, rewardType: _ } = _;
-        if (_.bAlreadyClaimedCurrentItem)
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.CheckMark, "CSSClaimedState"),
-            children: [
-              (0, _.jsx)(_.Jlk, {}),
-              (0, _.jsxs)("span", {
-                children: [
-                  " ",
-                  _?.length > 0
-                    ? _
-                    : (0, _._)("#Sale_ClaimableReward_AlreadyClaimed"),
-                ],
-              }),
-            ],
-          });
-        let _ = (0, _._)("#Sale_ClaimableReward_generic");
-        switch (_?.community_item_class || _) {
-          case 11:
-            _ = (0, _._)("#Sale_ClaimableReward_sticker");
-            break;
-          case 8:
-            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
-            break;
-          case 15:
-            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
-        }
-        return (0, _.jsx)("span", {
-          className: "CSSUnclaimedState",
-          children: _,
-        });
-      }
-      function _(_) {
-        const { closeModal: _, rewardType: _ } = _,
-          { fnClaimItem: _ } = (0, _._)(),
-          _ = (0, _._)(),
-          [_, _] = _.useState(null);
-        _.useEffect(() => {
-          _.bLoading ||
-            (_.fnSetLoading(!0),
-            _()
-              .then((_) => {
-                if (
-                  (_(_), console.log("claim response", (0, _._)(_)), _.appid)
-                ) {
-                  let _ = (0, _._)("#Sale_ClaimableReward_completed_generic");
-                  const _ = _?.community_item_class || _;
-                  switch (_) {
-                    case 11:
-                      _ = (0, _._)("#Sale_ClaimableReward_completed_sticker");
-                      break;
-                    case 8:
-                      _ = (0, _._)(
-                        "#Sale_ClaimableReward_completed_profilemodifier",
-                      );
-                      break;
-                    case 15:
-                      _ = (0, _._)(
-                        "#Sale_ClaimableReward_completed_animatedavatar",
-                      );
-                  }
-                  _.fnSetStrSuccess("   "),
-                    _.fnSetElSuccess(
-                      (0, _.jsxs)("div", {
-                        className: _.DialogCtn,
-                        children: [
-                          (0, _.jsx)("span", {
-                            children: _,
-                          }),
-                          (0, _.jsx)(_, {
-                            appid: _.appid,
-                            community_item_type: _.community_item_type,
-                            rewardType: _,
-                          }),
-                        ],
-                      }),
-                    );
-                } else _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy"));
-              })
-              .catch((_) =>
-                _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy")),
-              ));
-        }, [_?.community_item_class, _, _, _]);
-        let _ = (0, _._)("#Sale_ClaimableReward_generic");
-        switch (_?.community_item_class || _) {
-          case 11:
-            _ = (0, _._)("#Sale_ClaimableReward_sticker");
-            break;
-          case 8:
-            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
-            break;
-          case 15:
-            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
-        }
-        return (0, _.jsx)(_._, {
-          state: _,
-          strDialogTitle: _,
-          closeModal: _,
-        });
-      }
-      function _(_) {
-        const { appid: _, community_item_type: _, rewardType: _ } = _;
-        return _ && _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_, {
-                  appid: _,
-                  community_item_type: _,
-                }),
-                Boolean(8 == _) &&
-                  (0, _.jsx)(_, {
-                    appid: _,
-                    community_item_type: _,
-                  }),
-              ],
-            })
-          : null;
-      }
-      function _(_) {
-        const { appid: _, community_item_type: _ } = _,
-          _ = _(_),
-          [_, _] = _.useState(!1);
-        if (!_) return null;
-        const _ = _.find((_) => _.item_type == _);
-        return _
-          ? (0, _.jsxs)("div", {
-              className: _.EquipCtn,
-              children: [
-                Boolean(_)
-                  ? (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#Sale_ClaimableReward_profilemodifier_apply_success",
-                      ),
-                    })
-                  : (0, _.jsx)(_._, {
-                      onClick: (_) => {
-                        (0, _._)(_).then((_) => {
-                          1 == _ && _(!0);
-                        });
-                      },
-                      children: (0, _._)(
-                        "#Sale_ClaimableReward_profilemodifier_apply",
-                      ),
-                    }),
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
-                  children: (0, _._)(
-                    "#Sale_ClaimableReward_profilemodifier_view",
-                  ),
-                }),
-              ],
-            })
-          : (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/edit/goldenprofile`,
-                  children: (0, _._)(
-                    "#Sale_ClaimableReward_profilemodifier_choose",
-                  ),
-                }),
-                (0, _.jsx)(_._, {
-                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
-                  children: (0, _._)(
-                    "#Sale_ClaimableReward_profilemodifier_view",
-                  ),
-                }),
-              ],
-            });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { strURL: _, children: _ } = _;
-        return (
-          "string" == typeof _
-            ? !(0, _._)(_)
-            : _.some((_) => !(0, _._)(_))
-        )
-          ? (0, _.jsx)(_, {
-              children: _,
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children: _,
-            });
-      }
-      function _(_) {
-        const { children: _ } = _;
-        return (0, _._)()
-          ? (0, _.jsx)(_.Fragment, {
-              children: _,
-            })
-          : (0, _.jsx)("div", {
-              className: _().ImageBlocked,
-              children: (0, _._)(
-                "#Image_Externally_Hosted_Hidden",
-                (0, _.jsx)("a", {
-                  href: _._.STORE_BASE_URL + "account/cookiepreferences",
-                }),
-              ),
-            });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -35729,13 +35208,6 @@
         return _;
       }
       var _, _;
-      function _(_, _) {
-        return _
-          ? _.startsWith("https://") || _.startsWith("http://")
-            ? _
-            : `${_._.CLAN_CDN_ASSET_URL}images/clan/${_}/${_}`
-          : _;
-      }
       !(function (_) {
         (_.k_EPollResult_NotVisible = "not_visible"),
           (_.k_EPollResult_Visible_After_Vote = "after_vote"),
@@ -35749,6 +35221,14 @@
             (_.k_EPollVoter_MinPlayTime = "min_play_time"),
             (_.k_EPollVoter_MemberOfGroup = "member_of_group");
         })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _
+          ? _.startsWith("https://") || _.startsWith("http://")
+            ? _
+            : `${_._.CLAN_CDN_ASSET_URL}images/clan/${_}/${_}`
+          : _;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -36034,7 +35514,564 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_._),
+          _ = "true" === String((0, _._)(_.args, "autoadvance")).toLowerCase();
+        return (0, _.jsx)(_._, {
+          hideArrows: !_,
+          hidePips: _,
+          visibleElements: 1,
+          useTestScrollbar: !1,
+          bLazyRenderChildren: !0,
+          screenIsWide: _,
+          bAutoAdvance: _,
+          className: _().ScreenshotCarousel,
+          children: _.children,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { strURL: _, children: _ } = _;
+        return (
+          "string" == typeof _
+            ? !(0, _._)(_)
+            : _.some((_) => !(0, _._)(_))
+        )
+          ? (0, _.jsx)(_, {
+              children: _,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: _,
+            });
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return (0, _._)()
+          ? (0, _.jsx)(_.Fragment, {
+              children: _,
+            })
+          : (0, _.jsx)("div", {
+              className: _().ImageBlocked,
+              children: (0, _._)(
+                "#Image_Externally_Hosted_Hidden",
+                (0, _.jsx)("a", {
+                  href: _._.STORE_BASE_URL + "account/cookiepreferences",
+                }),
+              ),
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapInventoryByApp = new Map();
+        m_mapPromises = new Map();
+        m_listChangeCallback = new Map();
+        m_SteamInterface = null;
+        GetInventoryForApp(_) {
+          return this.m_mapInventoryByApp.get(_);
+        }
+        GetItemDefsChangeForAppID(_) {
+          return (
+            this.m_listChangeCallback.has(_) ||
+              this.m_listChangeCallback.set(_, new _._()),
+            this.m_listChangeCallback.get(_)
+          );
+        }
+        BHasLoadedDef(_) {
+          return this.m_mapPromises.has(_);
+        }
+        SetTestAppCommunityItems(_, _) {
+          this.m_mapInventoryByApp.set(_, _),
+            this.GetItemDefsChangeForAppID(_).Dispatch(_),
+            this.m_mapPromises.set(_, Promise.resolve(1));
+        }
+        async LoadCommunityInventory(_) {
+          return _
+            ? (this.m_mapPromises.has(_) ||
+                this.m_mapPromises.set(
+                  _,
+                  this.InternalLoadCommunityInventory(_),
+                ),
+              this.m_mapPromises.get(_))
+            : 2;
+        }
+        async InternalLoadCommunityInventory(_) {
+          const _ = _._.Init(_._);
+          _.Body().set_filter_appids([_]);
+          let _ = null;
+          try {
+            const _ = await _._.GetCommunityInventory(
+              this.m_SteamInterface.GetServiceTransport(),
+              _,
+            );
+            if (1 == _.GetEResult()) {
+              const _ = new Array();
+              return (
+                _.Body()
+                  .items()
+                  .forEach((_) => _.push(_.toObject())),
+                this.m_mapInventoryByApp.set(_, _),
+                this.GetItemDefsChangeForAppID(_).Dispatch(_),
+                1
+              );
+            }
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CQuestCommunityInventoryStore.InternalLoadCommunityInventory failed: on appid " +
+                _ +
+                " error: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            2
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_QuestCommunityInventoryStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+        Init() {
+          const _ = (0, _._)("read_inventory_token", "application_config");
+          (0, _._)(
+            _,
+            "CQuestCommunityInventoryStore: missing read_inventory:steam oauth permission",
+          ),
+            (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
+        }
+      }
+      function _(_) {
+        const [_, _] = (0, _.useState)(_.Get().GetInventoryForApp(_));
+        return (
+          (0, _.useEffect)(() => {
+            _ && !_.Get().BHasLoadedDef(_) && _.Get().LoadCommunityInventory(_);
+          }, [_]),
+          (0, _._)(_.Get().GetItemDefsChangeForAppID(_), _),
+          _
+        );
+      }
+      (0, _._)([_._], _.prototype, "SetTestAppCommunityItems", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapAppToDefs = new Map();
+        m_mapPromises = new Map();
+        m_listChangeCallback = new Map();
+        GetItemDefForAppID(_) {
+          return this.m_mapAppToDefs.get(_);
+        }
+        GetItemDefsChangeForEventID(_) {
+          return (
+            this.m_listChangeCallback.has(_) ||
+              this.m_listChangeCallback.set(_, new _._()),
+            this.m_listChangeCallback.get(_)
+          );
+        }
+        BHasLoadedDef(_) {
+          return this.m_mapPromises.has(_);
+        }
+        SetTestItemDefs(_, _) {
+          this.m_mapAppToDefs.set(_, _),
+            this.GetItemDefsChangeForEventID(_).Dispatch(_),
+            this.m_mapPromises.set(_, Promise.resolve(1));
+        }
+        async LoadAppCommunityItems(_, _) {
+          return _
+            ? (this.m_mapPromises.has(_) ||
+                this.m_mapPromises.set(
+                  _,
+                  this.InternalLoadAppCommunityItems(_, _),
+                ),
+              this.m_mapPromises.get(_))
+            : 2;
+        }
+        async InternalLoadAppCommunityItems(_, _) {
+          let _ = null;
+          try {
+            const _ =
+                _._.COMMUNITY_BASE_URL +
+                (_
+                  ? "minigame/ajaxgetgameitemdefsforeditor"
+                  : "minigame/ajaxgetgameitemdefs"),
+              _ = {
+                appid: _,
+                origin: self.origin,
+                _: _._.LANGUAGE,
+                sessionid: _ ? _._.SESSIONID : void 0,
+              },
+              _ = await _().get(_, {
+                params: _,
+                withCredentials: _,
+              });
+            if (
+              200 == _?.status &&
+              1 == _?.data?.success &&
+              _?.data?.item_definitions
+            )
+              return (
+                this.m_mapAppToDefs.set(_, _.data.item_definitions),
+                this.GetItemDefsChangeForEventID(_).Dispatch(
+                  _.data.item_definitions,
+                ),
+                1
+              );
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CSaleMiniGameItemDefStore.InternalLoadAppCommunityItems failed: on appid " +
+                _ +
+                " edit? " +
+                _ +
+                " error: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            2
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_SaleMiniGameItemDefStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+        Init() {}
+      }
+      function _(_, _, _) {
+        const _ = (function (_, _) {
+            const [_, _] = (0, _.useState)(_.Get().GetItemDefForAppID(_));
+            return (
+              (0, _.useEffect)(() => {
+                _ &&
+                  !_.Get().BHasLoadedDef(_) &&
+                  _.Get().LoadAppCommunityItems(_, _);
+              }, [_, _]),
+              (0, _._)(_.Get().GetItemDefsChangeForEventID(_), _),
+              _
+            );
+          })(_, _),
+          [_, _] = (0, _.useState)(null);
+        return (
+          (0, _.useEffect)(() => {
+            if (_ && _ && null == _) {
+              const _ = _.find(
+                (_) => (_ || _.active) && _.appid == _ && _.item_type == _,
+              );
+              _ && _(_);
+            }
+          }, [_, _, _, _, _]),
+          _
+        );
+      }
+      function _(_) {
+        const {
+          appid: _,
+          item_image_small: _,
+          item_image_large: _,
+          item_movie_mp4: _,
+          item_movie_webm: _,
+          item_title: _,
+        } = _;
+        if (_?.length > 0 && _?.length > 0) {
+          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
+            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`,
+            _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
+          return (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsxs)("video", {
+              muted: !0,
+              controls: !1,
+              autoPlay: !0,
+              loop: !0,
+              poster: _,
+              playsInline: !0,
+              className: _.videoClassName,
+              children: [
+                (0, _.jsx)("source", {
+                  src: _,
+                  type: "video/webm",
+                }),
+                Boolean(!_._.IN_CLIENT) &&
+                  (0, _.jsx)("source", {
+                    src: _,
+                    type: "video/mp4",
+                  }),
+              ],
+            }),
+          });
+        }
+        {
+          const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_ || _}`;
+          return (0, _.jsx)("img", {
+            className: _.className,
+            src: _,
+            alt: _,
+          });
+        }
+      }
+      function _(_) {
+        const { appid: _, community_item_type: _, bForEdit: _ } = _,
+          _ = _(_, _, _),
+          _ =
+            _ && !_.active
+              ? (0, _.jsx)("div", {
+                  className: _.WarningStylesBackground,
+                  children: (0, _._)(
+                    "#Sale_Section_RewardShelf_ItemInActiveWarning",
+                  ),
+                })
+              : void 0;
+        return _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+                _,
+              ],
+            })
+          : (0, _.jsx)(_._, {
+              size: "small",
+              string: (0, _._)("#Loading"),
+            });
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          { bLoading: _ } = _,
+          { className: _, bPreviewMode: _, rewardType: _ } = _;
+        return (0, _.jsx)(_._, {
+          className: (0, _._)("CSSClaimItemButton", _),
+          onClick: (_) => {
+            _.bCanClaimNewItem
+              ? (0, _._)(
+                  (0, _.jsx)(_, {
+                    rewardType: _,
+                  }),
+                  (0, _._)(_),
+                )
+              : ("dev" == _._.WEB_UNIVERSE ||
+                  "beta" == _._.WEB_UNIVERSE ||
+                  _) &&
+                ((0, _._)(
+                  (0, _.jsx)(_, {
+                    rewardType: _,
+                  }),
+                  (0, _._)(_),
+                ),
+                console.log(
+                  "Show dialog for debugging, since already claimed: ",
+                  (0, _._)(_),
+                ));
+          },
+          disabled: _,
+          children: Boolean(_)
+            ? (0, _.jsx)(_._, {
+                string: (0, _._)("#Loading"),
+                size: "small",
+              })
+            : (0, _.jsx)(_, {
+                claimState: _,
+              }),
+        });
+      }
+      function _(_) {
+        const { claimState: _, strButtonOverride: _, rewardType: _ } = _;
+        if (_.bAlreadyClaimedCurrentItem)
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.CheckMark, "CSSClaimedState"),
+            children: [
+              (0, _.jsx)(_.Jlk, {}),
+              (0, _.jsxs)("span", {
+                children: [
+                  " ",
+                  _?.length > 0
+                    ? _
+                    : (0, _._)("#Sale_ClaimableReward_AlreadyClaimed"),
+                ],
+              }),
+            ],
+          });
+        let _ = (0, _._)("#Sale_ClaimableReward_generic");
+        switch (_?.community_item_class || _) {
+          case 11:
+            _ = (0, _._)("#Sale_ClaimableReward_sticker");
+            break;
+          case 8:
+            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case 15:
+            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
+        }
+        return (0, _.jsx)("span", {
+          className: "CSSUnclaimedState",
+          children: _,
+        });
+      }
+      function _(_) {
+        const { closeModal: _, rewardType: _ } = _,
+          { fnClaimItem: _ } = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = _.useState(null);
+        _.useEffect(() => {
+          _.bLoading ||
+            (_.fnSetLoading(!0),
+            _()
+              .then((_) => {
+                if (
+                  (_(_), console.log("claim response", (0, _._)(_)), _.appid)
+                ) {
+                  let _ = (0, _._)("#Sale_ClaimableReward_completed_generic");
+                  const _ = _?.community_item_class || _;
+                  switch (_) {
+                    case 11:
+                      _ = (0, _._)("#Sale_ClaimableReward_completed_sticker");
+                      break;
+                    case 8:
+                      _ = (0, _._)(
+                        "#Sale_ClaimableReward_completed_profilemodifier",
+                      );
+                      break;
+                    case 15:
+                      _ = (0, _._)(
+                        "#Sale_ClaimableReward_completed_animatedavatar",
+                      );
+                  }
+                  _.fnSetStrSuccess("   "),
+                    _.fnSetElSuccess(
+                      (0, _.jsxs)("div", {
+                        className: _.DialogCtn,
+                        children: [
+                          (0, _.jsx)("span", {
+                            children: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            appid: _.appid,
+                            community_item_type: _.community_item_type,
+                            rewardType: _,
+                          }),
+                        ],
+                      }),
+                    );
+                } else _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy"));
+              })
+              .catch((_) =>
+                _.fnSetStrError((0, _._)("#Sale_ClaimableReward_Busy")),
+              ));
+        }, [_?.community_item_class, _, _, _]);
+        let _ = (0, _._)("#Sale_ClaimableReward_generic");
+        switch (_?.community_item_class || _) {
+          case 11:
+            _ = (0, _._)("#Sale_ClaimableReward_sticker");
+            break;
+          case 8:
+            _ = (0, _._)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case 15:
+            _ = (0, _._)("#Sale_ClaimableReward_animatedavatar");
+        }
+        return (0, _.jsx)(_._, {
+          state: _,
+          strDialogTitle: _,
+          closeModal: _,
+        });
+      }
+      function _(_) {
+        const { appid: _, community_item_type: _, rewardType: _ } = _;
+        return _ && _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_, {
+                  appid: _,
+                  community_item_type: _,
+                }),
+                Boolean(8 == _) &&
+                  (0, _.jsx)(_, {
+                    appid: _,
+                    community_item_type: _,
+                  }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        const { appid: _, community_item_type: _ } = _,
+          _ = _(_),
+          [_, _] = _.useState(!1);
+        if (!_) return null;
+        const _ = _.find((_) => _.item_type == _);
+        return _
+          ? (0, _.jsxs)("div", {
+              className: _.EquipCtn,
+              children: [
+                Boolean(_)
+                  ? (0, _.jsx)("div", {
+                      children: (0, _._)(
+                        "#Sale_ClaimableReward_profilemodifier_apply_success",
+                      ),
+                    })
+                  : (0, _.jsx)(_._, {
+                      onClick: (_) => {
+                        (0, _._)(_).then((_) => {
+                          1 == _ && _(!0);
+                        });
+                      },
+                      children: (0, _._)(
+                        "#Sale_ClaimableReward_profilemodifier_apply",
+                      ),
+                    }),
+                (0, _.jsx)(_._, {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
+                  children: (0, _._)(
+                    "#Sale_ClaimableReward_profilemodifier_view",
+                  ),
+                }),
+              ],
+            })
+          : (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)(_._, {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/edit/goldenprofile`,
+                  children: (0, _._)(
+                    "#Sale_ClaimableReward_profilemodifier_choose",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}`,
+                  children: (0, _._)(
+                    "#Sale_ClaimableReward_profilemodifier_view",
+                  ),
+                }),
+              ],
+            });
+      }
       let _ = null;
       function _() {
         return (
@@ -36305,7 +36342,8 @@
           (0, _._)(_.args, "style")?.toLocaleLowerCase() ?? _.k_TrailerAsFull;
         _ = Object.values(_).includes(_) ? _ : _.k_TrailerAsFull;
         const _ = _(_.args.color, "black"),
-          _ = _(_.args.bgcolor, "white");
+          _ = _(_.args.bgcolor, "white"),
+          _ = (0, _._)(_.args);
         return (0, _.jsx)(_, {
           appid: _,
           trailerBaseID: _,
@@ -36314,6 +36352,7 @@
           color: _,
           bgcolor: _,
           children: _.children,
+          subtitles: _.rgVideoTracks,
         });
       }
       function _(_) {

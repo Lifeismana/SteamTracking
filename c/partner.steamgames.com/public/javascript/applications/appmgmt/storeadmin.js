@@ -25,6 +25,7 @@
         BackgroundAnimation: "C8N8hRwMeVp1tGShuVkOh",
         "ItemFocusAnim-darkerGrey-nocolor": "_3OSHg17hDa1n_a1p8YV6NJ",
         "ItemFocusAnim-darkerGrey": "_3vw4cd5iGVZPXAkYQdwc1O",
+        "ItemFocusAnim-darkGreySettings": "_35jKmGtukgtSVCv-o2sAWJ",
         "ItemFocusAnim-darkGrey": "_2p57_OuvuARn5uJAZrKT9D",
         "ItemFocusAnim-grey": "_1IsFUDfyU05AFfhOv9ZaFq",
         "ItemFocusAnim-translucent-white-10": "_1-27hJIgX5EtEpiO8ruDs1",
@@ -89,6 +90,7 @@
         BackgroundAnimation: "_25lkDWhF0bwre6OQT8g7w0",
         "ItemFocusAnim-darkerGrey-nocolor": "_2UZY54l1AJ5zxBJhmYf490",
         "ItemFocusAnim-darkerGrey": "hlnkWGoujK0WgKsCnBOcK",
+        "ItemFocusAnim-darkGreySettings": "_3uPCzxcRrrgoi-gsTfxgRQ",
         "ItemFocusAnim-darkGrey": "_2u7cTUci-zR4zqevKlTsfz",
         "ItemFocusAnim-grey": "_3PcMUvLdjJe0fnIkVlDHNa",
         "ItemFocusAnim-translucent-white-10": "_1uSV29xzSfh0VWP4fBLSwy",
@@ -525,6 +527,7 @@
         BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
         "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
         "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGreySettings": "_3oEDNw_jLfiO2KEnzqXvWj",
         "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
         "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
         "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
@@ -547,6 +550,7 @@
         BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
         "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
         "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
+        "ItemFocusAnim-darkGreySettings": "_2cAK7l3w0qC8uv5uzKjusc",
         "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
         "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
         "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
@@ -596,6 +600,7 @@
         BackgroundAnimation: "_32I7Uh1ZWySd7VGW50f5IC",
         "ItemFocusAnim-darkerGrey-nocolor": "_3dzJEyM6opBkmIeARAGlYr",
         "ItemFocusAnim-darkerGrey": "_2dbsn-sR5AlFKEgCU0FBbT",
+        "ItemFocusAnim-darkGreySettings": "_2gCU5HJBuDk1vxRMJhwFGE",
         "ItemFocusAnim-darkGrey": "_39KmlfhlZwkINJt9fdyKbw",
         "ItemFocusAnim-grey": "_1X5Siupo5N_ZVuGesoYV0t",
         "ItemFocusAnim-translucent-white-10": "_3aZcpOjRI-YzMZmhCRiFjd",
@@ -9625,7 +9630,7 @@
               nGuidancePrice: _.price,
               nOriginalPrice: _(_, _, _.amount.currency_code),
             })
-          : _.price / _._ > _.amount.amount &&
+          : _.price * _._ > _.amount.amount &&
             _.push({
               strCurrency: _ ? (0, _._)(_) : (0, _._)(_.amount.currency_code),
               nAmountCents: _.amount.amount,
@@ -10366,7 +10371,7 @@
                     }),
                     (0, _.jsx)("li", {
                       className: _.AboveAutoPublish,
-                      children: "USD Price above 80$ USD",
+                      children: "USD Price above 200$ USD",
                     }),
                     (0, _.jsx)("li", {
                       className: _.CloseToLaunch,

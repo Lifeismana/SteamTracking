@@ -77,6 +77,7 @@
         BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
         "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
         "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGreySettings": "_1tKhhjTYPWAz5_eQe91O1A",
         "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
         "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
         "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
@@ -117,6 +118,7 @@
         BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
         "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
         "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGreySettings": "BSoZ5uHW-lcSEjyeNZol4",
         "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
         "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
         "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
@@ -2800,8 +2802,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3174,6 +3174,7 @@
             "expand",
             {
               Constructor: function (_) {
+                var _;
                 const _ = Boolean(_(_.args, "expanded")),
                   [_, _] = _.useState(_),
                   _ = _(_.args, "title"),
@@ -3212,7 +3213,8 @@
                 return (0, _.jsxs)("div", {
                   className: (0, _._)({
                     [_().ExpandSectionBlock]: !0,
-                    [_.style]: null != _.style,
+                    [null !== (_ = _.style) && void 0 !== _ ? _ : ""]:
+                      null != _.style,
                     [_().ExpandSectionExpanded]: _,
                     [_().ExpandSectionCollapsed]: !_,
                     BBCodeExpanded: _,
@@ -3448,14 +3450,14 @@
           [
             "looping_media",
             {
-              Constructor: _,
+              Constructor: _._,
               autocloses: !1,
             },
           ],
           [
             "video",
             {
-              Constructor: _,
+              Constructor: _._,
               autocloses: !1,
             },
           ],
@@ -3615,18 +3617,32 @@
           })
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        let _ = _(_, "poster");
+        let _ = (0, _._)(_, "poster");
         _ && (_ = (0, _._)(_));
         const _ = new Array();
         {
-          const _ = _(_, "mp4");
+          const _ = (0, _._)(_, "mp4");
           _ &&
             __webpack_require__.push({
               sURL: (0, _._)(_),
               sFormat: "video/mp4",
             });
-          const _ = _(_, "webm");
+          const _ = (0, _._)(_, "webm");
           _ &&
             __webpack_require__.push({
               sURL: (0, _._)(_),
@@ -3637,7 +3653,7 @@
           _ = 0 != _,
           _ = new Array();
         for (let _ = 0; _ < 31; _++) {
-          const _ = _(_, "sub_" + (0, _._)(_));
+          const _ = (0, _._)(_, "sub_" + (0, _._)(_));
           _ &&
             _.push({
               sURL: (0, _._)(_),
@@ -3645,7 +3661,7 @@
               sKind: "subtitles",
               bDefault: _ && _ == _,
             });
-          const _ = _(_, "cap_" + (0, _._)(_));
+          const _ = (0, _._)(_, "cap_" + (0, _._)(_));
           _ &&
             _.push({
               sURL: (0, _._)(_),
@@ -3678,11 +3694,11 @@
             sURL: (0, _._)(_),
             sFormat: "video/webm",
           });
-        const _ = _(_.args, "autoplay"),
+        const _ = (0, _._)(_.args, "autoplay"),
           _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "controls"),
+          _ = (0, _._)(_.args, "controls"),
           _ = "0" !== _ && "off" !== _ && "false" !== _,
-          _ = _(_.args, "loop"),
+          _ = (0, _._)(_.args, "loop"),
           _ = "0" !== _ && "off" !== _ && "false" !== _;
         return (0, _.jsx)(_._, {
           video: _,
@@ -4747,8 +4763,15 @@
                 return _.avatar_full_url;
               _ = this.jsondata.referenced_appids[0];
             }
+            _._.Get().QueueAppRequest(_, {
+              include_assets: !0,
+            });
             const _ = _._.Get().GetApp(_);
-            return _ && _.GetAssets()
+            return _ &&
+              _.BContainDataRequest({
+                include_assets: !0,
+              }) &&
+              _.GetAssets()
               ? null === (_ = _.GetAssets()) || void 0 === _
                 ? void 0
                 : _.GetMainCapsuleURL()
@@ -8984,6 +9007,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

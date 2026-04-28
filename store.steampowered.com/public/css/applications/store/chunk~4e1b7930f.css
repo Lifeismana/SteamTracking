@@ -444,13 +444,15 @@ a._1IGURymjmwZOxJLS-9BWKA:hover {
   width: 100%;
 }
 .rUASsQgg0rvqoACIDRygZ._2OWxr5tZIjB4gTfA3vE2Gc {
-  float: left;
   padding-right: 8px;
   padding-top: 4px;
   padding-bottom: 4px;
+  margin-left: 0;
+  margin-right: auto;
 }
 .rUASsQgg0rvqoACIDRygZ.om0Rs75g2ScLGnDWC76IQ {
-  float: right;
+  margin-right: 0;
+  margin-left: auto;
   padding-left: 8px;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2231,6 +2233,16 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes KiXqOP4sNGGqLzPFjAa3D {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

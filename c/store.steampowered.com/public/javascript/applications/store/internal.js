@@ -375,6 +375,88 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          ..._,
+          viewBoxSize: 16,
+          children: (0, _.jsx)("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            checked: _,
+            onChange: _,
+            disabled: _,
+            children: _,
+            ref: _,
+            variant: _ = "default",
+            color: _,
+            ..._
+          } = _,
+          _ = "indeterminate" === _,
+          _ = _ ? _ : _,
+          _ = () => {
+            _ || (_ && __webpack_require__(!!_ || !_));
+          };
+        return (0, _.jsxs)(_._, {
+          align: "center",
+          ref: _,
+          role: "checkbox",
+          "aria-checked": _ ? "mixed" : _,
+          "data-state": _(_),
+          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
+          onClick: _,
+          tabIndex: 0,
+          onKeyDown: (_) => {
+            _ ||
+              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
+          },
+          cursor: "default",
+          "aria-disabled": _,
+          "data-accent-color": _,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.Checkbox,
+              children:
+                _ &&
+                (0, _.jsx)(_, {
+                  className: _.Icon,
+                }),
+            }),
+            _,
+          ],
+        });
+      }
+      function _(_) {
+        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
+      }
+      function _(_) {
+        return (0, _.jsx)("svg", {
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, _.jsx)("path", {
+            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -459,12 +541,7 @@
             (0, _._)({
               apply: (_) => {
                 const { rects: _, elements: _, availableHeight: _ } = _,
-                  _ =
-                    "number" == typeof _
-                      ? _ - _ + "px"
-                      : `calc( ${_}px - var(--spacing-${_}) )`,
                   _ = {
-                    maxHeight: _,
                     boxSizing: "border-box",
                     zIndex: "1",
                   };
@@ -485,9 +562,25 @@
                   (_.width = _.width({
                     unContentWidth: _.floating.width,
                     unTargetWidth: _.reference.width,
-                  })),
+                  }));
+                const _ =
+                  "number" == typeof _ ? `${_}px` : `var(--spacing-${_})`;
+                "function" == typeof _.maxHeight
+                  ? (_.maxHeight = _.maxHeight({
+                      unAvailableHeight: _,
+                      gutter: _,
+                    }))
+                  : "number" == typeof _.maxHeight
+                    ? (_.maxHeight = `min( calc( ${_}px - ${_} ), ${_.maxHeight}px )`)
+                    : (_.maxHeight =
+                        "number" == typeof _
+                          ? _ - _ + "px"
+                          : `calc( ${_}px - var(--spacing-${_}) )`),
                   Object.assign(_.floating.style, _),
-                  _.floating.style.setProperty("--popover-max-height", _);
+                  _.floating.style.setProperty(
+                    "--popover-max-height",
+                    _.maxHeight,
+                  );
               },
             }),
           ),
@@ -594,6 +687,52 @@
         },
         FocusManager: _,
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { viewBoxSize: _ = 20, ..._ } = _,
+          _ = _.size ? void 0 : _.IconSizeDefault;
+        return (0, _.jsx)("svg", {
+          viewBox: `0 0 ${_} ${_}`,
+          ...(0, _._)(
+            {
+              className: _,
+              ..._,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`IconSize-${_}`],
+        },
+        {
+          prop: "color",
+          className: _.Color,
+          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
+        },
+        {
+          prop: "hitSlop",
+          className: _.HitSlop,
+          cssProperty: (_) => [
+            "--hit-slop-custom",
+            "string" == typeof _ ? _ : "",
+          ],
+        },
+        _._.find(({ prop: _ }) => "cursor" === _),
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1905,51 +2044,15 @@
           });
         };
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { viewBoxSize: _ = 20, ..._ } = _,
-          _ = _.size ? void 0 : _.IconSizeDefault;
-        return (0, _.jsx)("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ...(0, _._)(
-            {
-              className: _,
-              ..._,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`IconSize-${_}`],
-          },
-          {
-            prop: "color",
-            className: _.Color,
-            cssProperty: (_) => ["--icon-color", (0, _._)(_)],
-          },
-          {
-            prop: "hitSlop",
-            className: _.HitSlop,
-            cssProperty: (_) => [
-              "--hit-slop-custom",
-              "string" == typeof _ ? _ : "",
-            ],
-          },
-          _._.find(({ prop: _ }) => "cursor" === _),
-        ],
-        _ = {
-          _: "rotate( 180, 10, 10 )",
-          left: "rotate( 90, 10, 10 )",
-          right: "rotate( 270, 10, 10 )",
-        };
+      const _ = {
+        _: "rotate( 180, 10, 10 )",
+        left: "rotate( 90, 10, 10 )",
+        right: "rotate( 270, 10, 10 )",
+      };
       function _(_) {
         const { direction: _ = "down" } = _,
           _ = _[_];
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           ..._,
           children: (0, _.jsx)("path", {
             transform: _,
@@ -1960,7 +2063,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           ..._,
           viewBoxSize: 12,
           children: (0, _.jsx)("path", {
@@ -1970,76 +2073,7 @@
         });
       }
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.jsx)(_, {
-          ..._,
-          viewBoxSize: 16,
-          children: (0, _.jsx)("path", {
-            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        });
-      }
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            checked: _,
-            onChange: _,
-            disabled: _,
-            children: _,
-            ref: _,
-            variant: _ = "default",
-            color: _,
-            ..._
-          } = _,
-          _ = "indeterminate" === _,
-          _ = _ ? _ : _,
-          _ = () => {
-            _ || (_ && __webpack_require__(!!_ || !_));
-          };
-        return (0, _.jsxs)(_._, {
-          ref: _,
-          role: "checkbox",
-          "aria-checked": _ ? "mixed" : _,
-          "data-state": _(_),
-          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
-          onClick: _,
-          tabIndex: 0,
-          onKeyDown: (_) => {
-            _ ||
-              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
-          },
-          cursor: "default",
-          "aria-disabled": _,
-          "data-accent-color": _,
-          ..._,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.Checkbox,
-              children:
-                _ &&
-                (0, _.jsx)(_, {
-                  className: _.Icon,
-                }),
-            }),
-            _,
-          ],
-        });
-      }
-      function _(_) {
-        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
-      }
-      function _(_) {
-        return (0, _.jsx)("svg", {
-          viewBox: "0 0 16 16",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: (0, _.jsx)("path", {
-            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        });
-      }
       function _(_, _) {
         const { onSelectionChange: _, selectedValue: _, ..._ } = _,
           [_, _] = (0, _.useState)(!1),
@@ -2084,6 +2118,7 @@
               state: _,
               placement: _ = "bottom-end",
               popoverWidth: _ = "dropdown",
+              popoverMaxHeight: _,
               ..._
             } = _,
             [_, _] = (0, _.useState)(null),
@@ -2184,6 +2219,7 @@
               open: _.bOpen,
               onOpenChange: _.setOpen,
               width: _,
+              maxHeight: _,
               placement: _,
               selectedIndex: _,
               setSelectedIndex: (_) =>
@@ -2227,7 +2263,7 @@
                   gap: "2",
                   align: "center",
                   children: [
-                    (0, _.jsx)(_, {
+                    (0, _.jsx)(_._, {
                       checked: _,
                       variant: "dark",
                     }),
@@ -2360,14 +2396,14 @@
               ],
             }),
             (0, _.jsx)(_.Options, {
-              children: _.rgOptions.map((_) =>
+              children: _.rgOptions.map((_, _) =>
                 (0, _.jsx)(
                   _.Option,
                   {
                     value: _,
                     children: _(_),
                   },
-                  _(_),
+                  _,
                 ),
               ),
             }),
@@ -2420,14 +2456,14 @@
                 ],
               }),
               (0, _.jsx)(_.Options, {
-                children: _.rgOptions.map((_) =>
+                children: _.rgOptions.map((_, _) =>
                   (0, _.jsx)(
                     _.Option,
                     {
                       value: _,
                       children: _(_),
                     },
-                    _(_),
+                    _,
                   ),
                 ),
               }),

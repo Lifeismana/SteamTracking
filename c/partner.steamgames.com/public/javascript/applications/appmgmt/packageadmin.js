@@ -412,7 +412,7 @@
               paddingBottom: "4",
               children: [
                 (0, _.jsx)(_, {
-                  size: "6",
+                  size: "7",
                   children: _._.Localize(
                     "#SinglePackagePricing_Right_Help_Title",
                   ),
@@ -432,7 +432,7 @@
               direction: "column",
               children: [
                 (0, _.jsx)(_, {
-                  size: "6",
+                  size: "7",
                   children: _._.Localize("#SinglePackagePricing_Right_FAQ"),
                 }),
                 (0, _.jsxs)(_._, {
@@ -577,7 +577,7 @@
                       className: "panel",
                       children: [
                         (0, _.jsx)(_, {
-                          size: "6",
+                          size: "7",
                           children: _._.Localize(
                             "#SinglePackagePricing_Right_Convert_Title",
                           ),
@@ -725,7 +725,8 @@
               };
             }, [_, _, _, _, _]);
           })(_, _, _),
-          _ = !!(0, _._)(_);
+          _ = !!(0, _._)(_),
+          { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
         (0, _.useEffect)(() => {
           (0, _._)([_]);
         }, [_]);
@@ -770,7 +771,11 @@
                         children: (0, _.jsxs)(_._, {
                           direction: "row",
                           children: [
-                            (0, _.jsx)(_._, {}),
+                            (0, _.jsx)(_._, {
+                              fnConversionMethodSelected: (_) => {
+                                _(_, (0, _._)(_, "USD"), _);
+                              },
+                            }),
                             (0, _.jsxs)(_._, {
                               direction: "column",
                               paddingLeft: "5",

@@ -92,8 +92,8 @@
       function I(e) {
         return "object" == typeof e && null !== e && e.$$typeof === n;
       }
-      var F = /\/+/g;
-      function T(e, t) {
+      var T = /\/+/g;
+      function F(e, t) {
         return "object" == typeof e && null !== e && null != e.key
           ? ((n = "" + e.key),
             (o = { "=": "=0", ":": "=2" }),
@@ -132,10 +132,10 @@
         if (u)
           return (
             (r = r(e)),
-            (u = "" === s ? "." + T(e, 0) : s),
+            (u = "" === s ? "." + F(e, 0) : s),
             A(r)
               ? ((i = ""),
-                null != u && (i = u.replace(F, "$&/") + "/"),
+                null != u && (i = u.replace(T, "$&/") + "/"),
                 E(r, t, i, "", function (e) {
                   return e;
                 }))
@@ -146,7 +146,7 @@
                     i +
                     (null == r.key || (e && e.key === r.key)
                       ? ""
-                      : ("" + r.key).replace(F, "$&/") + "/") +
+                      : ("" + r.key).replace(T, "$&/") + "/") +
                     u),
                   (r = R(c.type, l, void 0, 0, 0, c.props))),
                 t.push(r)),
@@ -157,7 +157,7 @@
           g = "" === s ? "." : s + ":";
         if (A(e))
           for (var p = 0; p < e.length; p++)
-            u += E((s = e[p]), t, i, (a = g + T(s, p)), r);
+            u += E((s = e[p]), t, i, (a = g + F(s, p)), r);
         else if (
           "function" ==
           typeof (p =
@@ -168,7 +168,7 @@
                 : null)
         )
           for (e = p.call(e), p = 0; !(s = e.next()).done; )
-            u += E((s = s.value), t, i, (a = g + T(s, p++)), r);
+            u += E((s = s.value), t, i, (a = g + F(s, p++)), r);
         else if ("object" === a) {
           if ("function" == typeof e.then)
             return E(
@@ -283,13 +283,13 @@
       "use strict";
       n(745);
     },
-    641: (e, t, n) => {
+    942: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => Et });
       var o,
         i = n(669),
         s = n.n(i),
-        r = n(495);
+        r = n(618);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -352,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(134),
-        p = n(57),
-        _ = n(278),
-        f = n(141);
+        g = n(452),
+        p = n(431),
+        _ = n(284),
+        f = n(843);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -493,15 +493,15 @@
       }
       let R;
       function I() {
-        if (!S()) return R || (R = F()), R;
+        if (!S()) return R || (R = T()), R;
         let e = (function (e) {
           if (!S() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         })("sessionid");
-        return e || (e = F()), e;
+        return e || (e = T()), e;
       }
-      function F() {
+      function T() {
         const e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += A(0, 35).toString(36);
@@ -529,7 +529,7 @@
         );
       }
       new Set();
-      const T = {
+      const F = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -633,7 +633,7 @@
             (this.m_lastButtonDown = r.pR.INVALID));
         }
         GetKeycodeFromEvent(e) {
-          return "linux" === T.PLATFORM && e.key.length > 1
+          return "linux" === F.PLATFORM && e.key.length > 1
             ? e.key || e.code
             : e.code || e.key;
         }
@@ -754,8 +754,8 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(567),
-        y = n(93);
+        D = n(885),
+        y = n(867);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -1755,7 +1755,7 @@
       function Ie(e) {
         return e > -1 && e < 1;
       }
-      function Fe(e, t, n, o, i) {
+      function Te(e, t, n, o, i) {
         _e(
           "----------------------------------------------------------------------------------",
         ),
@@ -1833,7 +1833,7 @@
               ));
         }
       }
-      function Te(e, t) {
+      function Fe(e, t) {
         const { top: n, left: o, behavior: i } = t,
           s = De(e);
         s.scrollTo({
@@ -2552,7 +2552,7 @@
                 )
                   return (
                     Le(`Element too far away, scrolling ${o} on ${n} axis `),
-                    Fe(i.Element, i.Element, "smooth", n, o),
+                    Te(i.Element, i.Element, "smooth", n, o),
                     !0
                   );
               }
@@ -2896,12 +2896,12 @@
                     n && (ve = performance.now()),
                       e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
                       a
-                        ? Fe(0, r, s)
+                        ? Te(0, r, s)
                         : r.scrollIntoView({ behavior: s, block: "nearest" });
                   } else
                     _e("No previous element for scrolling, will jump"),
                       a
-                        ? Fe(0, r, "auto")
+                        ? Te(0, r, "auto")
                         : r?.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
@@ -3513,12 +3513,15 @@
         m_bMounted = !0;
         m_schDeferredActivate = new G();
         m_FocusChangedCallbacks = new y.l();
+        m_NavTreeActivatedOrReactivatedCallbacks = new y.l();
         m_bIsGamepadInputSuppressed = !1;
-        constructor(e, t, n) {
+        m_bVR = !1;
+        constructor(e, t, n, o) {
           (this.m_controller = e),
             (this.m_rootWindow = t),
             (this.m_activeWindow = t),
-            (this.m_bIsGamepadInputSuppressed = n);
+            (this.m_bIsGamepadInputSuppressed = n),
+            (this.m_bVR = o);
         }
         get RootWindow() {
           return this.m_rootWindow;
@@ -3536,6 +3539,16 @@
             if (t.Window?.document.hasFocus()) return t;
           }
         }
+        FindNavTreeInWindow(e, t = !0) {
+          for (
+            let n = this.m_rgGamepadNavigationTrees.length - 1;
+            n >= 0;
+            n--
+          ) {
+            const o = this.m_rgGamepadNavigationTrees[n];
+            if ((!t || o.BIsEnabled()) && o.Window == e) return o;
+          }
+        }
         OnMount(e) {
           e == this.m_rootWindow && (this.m_bMounted = !0);
         }
@@ -3550,6 +3563,10 @@
         }
         SetActive(e, t, n = void 0) {
           this.m_controller.BatchedUpdate(() => {
+            if (e && !this.m_controller.BCanActivateContext(this))
+              return void et(
+                `${this.LogName(t)} Skipping context activation due to CFocusNavWindowContext`,
+              );
             const o = this.m_valueIsActive.Value != e;
             e
               ? ((this.m_activeWindow = t),
@@ -3593,6 +3610,9 @@
         BIsGamepadInputSuppressed() {
           return this.m_bIsGamepadInputSuppressed;
         }
+        BIsVR() {
+          return this.m_bVR;
+        }
         BIsActive() {
           return this.m_valueIsActive.Value;
         }
@@ -3619,7 +3639,10 @@
           }
         }
         SetActiveNavTree(e, t = !1) {
-          if (e && this.m_LastActiveNavTree == e) return;
+          if (e && this.m_LastActiveNavTree == e)
+            return void this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(
+              e,
+            );
           const n = this.m_LastActiveNavTree;
           n && D.x9(this.m_rgGamepadNavigationTrees, n),
             e || (e = this.FindNavTreeToActivate());
@@ -3636,7 +3659,8 @@
               o ||
                 !t ||
                 e.DeferredFocus.BHasQueuedFocusNode() ||
-                e.DeferredFocus.RequestFocus(e.Root)),
+                e.DeferredFocus.RequestFocus(e.Root),
+              this.m_NavTreeActivatedOrReactivatedCallbacks.Dispatch(e)),
             n && n != this.m_LastActiveFocusNavTree && n.OnDeactivate(e),
             e && !o && e.OnActivate(n);
         }
@@ -3660,6 +3684,9 @@
         }
         get FocusChangedCallbacks() {
           return this.m_FocusChangedCallbacks;
+        }
+        get NavTreeActivatedOrReactivatedCallbacks() {
+          return this.m_NavTreeActivatedOrReactivatedCallbacks;
         }
         m_iFocusChangeStack = 0;
         m_ActiveFocusChange;
@@ -3713,6 +3740,7 @@
         m_rgAllContexts = [];
         m_ActiveContext;
         m_LastActiveContext;
+        m_ContextSetChangedCallbacks = new y.l();
         m_fnCatchAllGamepadInput = null;
         m_UnhandledButtonEventsCallbacks = new y.l();
         m_navigationSource = B(
@@ -3741,29 +3769,45 @@
         Init() {
           this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(it));
         }
-        CreateContext(e, t) {
-          const n = new tt(this, e, t);
-          return this.m_rgAllContexts.push(n), n;
+        CreateContext(e, t, n) {
+          const o = new tt(this, e, t, n);
+          return (
+            this.m_rgAllContexts.push(o),
+            this.m_ContextSetChangedCallbacks.Dispatch(),
+            o
+          );
         }
         DestroyContext(e) {
-          D.x9(this.m_rgAllContexts, e);
+          D.x9(this.m_rgAllContexts, e),
+            this.m_ContextSetChangedCallbacks.Dispatch();
         }
         GetDefaultContext() {
           return (
             this.m_DefaultContext ||
-              (this.m_DefaultContext = this.CreateContext(window, !1)),
+              (this.m_DefaultContext = this.CreateContext(window, !1, !1)),
             this.m_DefaultContext
           );
         }
         GetActiveContext() {
           return this.m_ActiveContext;
         }
+        BHasVRGamepadNavigationContext() {
+          return this.m_rgAllContexts?.some(
+            (e) => e.BIsVR() && !e.BIsGamepadInputSuppressed(),
+          );
+        }
+        FindContextForRootWindow(e) {
+          return this.m_rgAllContexts?.find((t) => t.RootWindow == e);
+        }
+        BCanActivateContext(e) {
+          return !!e && !(this.BHasVRGamepadNavigationContext() && !e.BIsVR());
+        }
         FindAnActiveContext() {
           if (!this.m_ActiveContext && 0 != this.m_rgAllContexts.length) {
             console.warn("No active context; finding one");
             for (const e of this.m_rgAllContexts) {
               const t = e.FindNavTreeInFocusedWindow();
-              if (t) {
+              if (t && this.BCanActivateContext(e)) {
                 nt(
                   `${e.LogName(t.Window)} Found a focused window; setting this context as active.`,
                 ),
@@ -3776,6 +3820,7 @@
           return (
             !this.m_ActiveContext &&
               this.m_LastActiveContext &&
+              this.BCanActivateContext(this.m_LastActiveContext) &&
               (nt(
                 `Failed to find an active context, will fall back to ${this.m_LastActiveContext.LogName()}`,
               ),
@@ -3971,7 +4016,7 @@
         OnNavigationTypeChange(e) {
           if (
             this.ChangeNavigationSource(e, -1) &&
-            document.hasFocus() &&
+            (document.hasFocus() || this.m_LastActiveContext?.BIsVR()) &&
             (e == r.Vz.MOUSE || e == r.Vz.TOUCH) &&
             this.m_ActiveContext?.m_LastActiveNavTree
           ) {
@@ -4028,7 +4073,8 @@
           return (
             !e.Parent &&
               e.BIsEnabled() &&
-              ((this.m_LastActiveContext = this.m_ActiveContext = n),
+              (this.BCanActivateContext(n) &&
+                (this.m_LastActiveContext = this.m_ActiveContext = n),
               n.SetActiveNavTree(e, !0)),
             () => {
               n.UnregisterGamepadNavigationTree(e).then(() => o());
@@ -4078,6 +4124,9 @@
         }
         RegisterForUnhandledButtonDownEvents(e) {
           return this.m_UnhandledButtonEventsCallbacks.Register(e);
+        }
+        get ContextSetChangedCallbacks() {
+          return this.m_ContextSetChangedCallbacks;
         }
         FireUnhandledGamepadEventCallbacks(e) {
           return (
@@ -4374,19 +4423,19 @@
         switch (e.detail.button) {
           case r.pR.DIR_UP:
             if (s.scrollY > 3)
-              return Te(s, { top: -s.innerHeight / n, behavior: o }), !0;
+              return Fe(s, { top: -s.innerHeight / n, behavior: o }), !0;
             break;
           case r.pR.DIR_RIGHT:
             if (s.scrollX + s.innerWidth < i.body.clientWidth - 3)
-              return Te(s, { left: s.innerWidth / n, behavior: o }), !0;
+              return Fe(s, { left: s.innerWidth / n, behavior: o }), !0;
             break;
           case r.pR.DIR_DOWN:
             if (s.scrollY + s.innerHeight < i.body.clientHeight - 3)
-              return Te(s, { top: s.innerHeight / n, behavior: o }), !0;
+              return Fe(s, { top: s.innerHeight / n, behavior: o }), !0;
             break;
           case r.pR.DIR_LEFT:
             if (s.scrollX > 3)
-              return Te(s, { left: s.innerWidth / n, behavior: o }), !0;
+              return Fe(s, { left: s.innerWidth / n, behavior: o }), !0;
         }
         return !1;
       }
@@ -4398,17 +4447,17 @@
           (e[(e.InReactTree = 2)] = "InReactTree");
       })(Rt || (Rt = {}));
       const It = new ut();
-      let Ft,
-        Tt = !1,
+      let Tt,
+        Ft = !1,
         Nt = null;
       function Et(e) {
-        Tt ||
+        Ft ||
           ((Nt = new rt()),
-          (Ft = new v(Nt)),
-          Ft.RegisterForFocusChanged(Nt.GetDefaultContext()),
+          (Tt = new v(Nt)),
+          Tt.RegisterForFocusChanged(Nt.GetDefaultContext()),
           It.Init(window),
-          Ft.BIsGamepadInputExternallyControlled() || Nt.RegisterInputSource(e),
-          (Ft.BIsGamepadInputExternallyControlled() ||
+          Tt.BIsGamepadInputExternallyControlled() || Nt.RegisterInputSource(e),
+          (Tt.BIsGamepadInputExternallyControlled() ||
             navigator.userAgent.includes("Valve Steam Gamepad")) &&
             Nt.RegisterInputSource(new N(window)),
           (function (e) {
@@ -4460,7 +4509,7 @@
               })(),
               !1;
           })(Nt)),
-          (Tt = !0);
+          (Ft = !0);
       }
       function Dt(e) {
         for (const t of e) {
@@ -4606,8 +4655,8 @@
             onMenuActionDescription: S,
             actionDescriptionMap: R,
             onOKButton: I,
-            onCancelButton: F,
-            onSecondaryButton: T,
+            onCancelButton: T,
+            onSecondaryButton: F,
             onOptionsButton: N,
             onMenuButton: E,
             onMoveUp: D,
@@ -4620,8 +4669,8 @@
             ...G
           } = a,
           x = _t(I),
-          k = _t(F),
-          U = _t(T),
+          k = _t(T),
+          U = _t(F),
           W = _t(N),
           V = _t(E),
           H = _t(M);
@@ -4825,7 +4874,7 @@
         },
       };
     },
-    57: (e, t, n) => {
+    431: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4838,12 +4887,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    141: (e, t, n) => {
+    843: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(134),
-        s = n(57);
+        i = n(452),
+        s = n(431);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

@@ -64,6 +64,7 @@
         BackgroundAnimation: "_1skXl8WnIZKGbIikWx5BQ-",
         "ItemFocusAnim-darkerGrey-nocolor": "_1-51lPwmuvdjQkvcL4mg0p",
         "ItemFocusAnim-darkerGrey": "_2zLHr0TQ3Cw2_wBzgQqi1u",
+        "ItemFocusAnim-darkGreySettings": "_3ssmTtvWPb13bQl5_2beiv",
         "ItemFocusAnim-darkGrey": "_1R0sxt2GyuTiRYm0lI8lJv",
         "ItemFocusAnim-grey": "_34M9qiJoSUi5SHy4MZsgPR",
         "ItemFocusAnim-translucent-white-10": "MIFiVCx0d1Zy-bjTA_w1X",
@@ -182,6 +183,7 @@
         BackgroundAnimation: "_2gMFjtI3Npavu3drgAC-AR",
         "ItemFocusAnim-darkerGrey-nocolor": "_15Cg2WWyrbx6rCN-pmv59J",
         "ItemFocusAnim-darkerGrey": "_2rRq8Gy9yiXoX8z6rDNWVn",
+        "ItemFocusAnim-darkGreySettings": "_27pb_HIkONceiGG5UIoqY9",
         "ItemFocusAnim-darkGrey": "_2WHt-XB4uzgTCI4w5ZfQM7",
         "ItemFocusAnim-grey": "_3vZZjLOqYQmrrgAPi_7AiJ",
         "ItemFocusAnim-translucent-white-10": "y9mw3g-UiKMQ_H2lckG0Q",
@@ -337,6 +339,7 @@
         BackgroundAnimation: "_3d47hDyXHjImQ-0sBNKN4m",
         "ItemFocusAnim-darkerGrey-nocolor": "_2Va_HlTCtMyS00qHlQAUEM",
         "ItemFocusAnim-darkerGrey": "_3p3wgY2eTPLi2hqQpaK9p2",
+        "ItemFocusAnim-darkGreySettings": "HEYNYwmGnFOfnMkG7Az1U",
         "ItemFocusAnim-darkGrey": "_2i-dF3_dt4Ic_OSaazxG3w",
         "ItemFocusAnim-grey": "_3SyVw-_Wu7fZM8KhSrs9rO",
         "ItemFocusAnim-translucent-white-10": "_20DNPKptIqSEKzhV0GH0xW",
@@ -763,8 +766,8 @@
           D = (0, h.fO)(a, c),
           [M, A] = (0, s.useState)(!1),
           [k, R] = (0, s.useState)(!1),
-          [T, E] = (0, s.useState)(""),
-          { setErrorMessage: G } = (0, h.RC)();
+          [T, G] = (0, s.useState)(""),
+          { setErrorMessage: E } = (0, h.RC)();
         (0, h.p8)(P, "#FamilyManagement_ErrorLoadFamilyInviteGeneric");
         const B = (0, f.W6)(),
           L = !!v((0, f.zy)(), C);
@@ -817,7 +820,7 @@
                     closeModal: O,
                     onCancel: O,
                     onOK: () => {
-                      G(null),
+                      E(null),
                         u.mutate(null, {
                           onSuccess: (e) => {
                             e.cooldown_skip_granted() && R(!0),
@@ -914,7 +917,7 @@
                           className: _.EditNameInput,
                           type: "text",
                           onChange: (e) => {
-                            E(e.target.value), G(null);
+                            G(e.target.value), E(null);
                           },
                           value: T,
                           placeholder: (0, p.we)(
@@ -1067,7 +1070,7 @@
                 (0, n.jsx)(o.$n, {
                   className: _.DeclineInviteButton,
                   onClick: () => {
-                    G(null),
+                    E(null),
                       b.mutate(),
                       L && B.push("/account/familymanagement");
                   },
@@ -1150,8 +1153,8 @@
         k = a(34181),
         R = a(83137),
         T = a(88268),
-        E = a(23310),
-        G = a(8871),
+        G = a(23310),
+        E = a(8871),
         B = a(94104),
         L = a(9646);
       const q = s.memo(function (e) {
@@ -1206,7 +1209,7 @@
               },
               [u],
             ),
-            C = (0, G.Ue)(v, t),
+            C = (0, E.Ue)(v, t),
             S = {
               nRows: a,
               nItemHeight: i,
@@ -1256,8 +1259,8 @@
             overscan: l,
             initialOffset: o,
             initialRect: void 0,
-            observeElementOffset: V,
-            observeElementRect: z,
+            observeElementOffset: z,
+            observeElementRect: V,
             onChange(e, t) {
               c?.(e.scrollOffset);
             },
@@ -1299,7 +1302,7 @@
                   width: p.viewportWidth?.value ?? 1e3,
                 },
             initialOffset: c,
-            observeElementOffset: V,
+            observeElementOffset: z,
             observeElementRect: K,
             onChange(e, t) {
               m?.(e.scrollOffset);
@@ -1321,7 +1324,7 @@
           o = Math.max(0, t.getTotalSize());
         return (0, n.jsx)(F.Z, {
           "flow-children": "column",
-          navEntryPreferPosition: E.iU.MAINTAIN_Y,
+          navEntryPreferPosition: G.iU.MAINTAIN_Y,
           style: { height: `${o}px`, width: "100%", position: "relative" },
           children: (0, n.jsx)("div", {
             style: {
@@ -1356,7 +1359,7 @@
           });
         };
       }
-      function V(e, t) {
+      function z(e, t) {
         const a = e.scrollElement;
         if (!a) return;
         let n;
@@ -1377,7 +1380,7 @@
           }
         );
       }
-      function z(e, t) {
+      function V(e, t) {
         const a = e.scrollElement;
         if (!a) return;
         const n = U(() => t({ width: a.innerWidth, height: a.innerHeight }));
@@ -2557,8 +2560,8 @@
         ke = a(62490),
         Re = a(81393),
         Te = a(92298),
-        Ee = a.n(Te),
-        Ge = a(73712),
+        Ge = a.n(Te),
+        Ee = a(73712),
         Be = a(42834),
         Le = a(64238),
         qe = a.n(Le),
@@ -2585,7 +2588,7 @@
           children: o,
         });
       }
-      function Ve(e) {
+      function ze(e) {
         const {
             nItems: t,
             renderItem: a,
@@ -2631,7 +2634,7 @@
             ),
         });
       }
-      function ze(e) {
+      function Ve(e) {
         const { app: t, width: a, index: i, renderItem: r } = e,
           [l, o] = s.useState("loading"),
           c = (0, Be.pd)(t.appid);
@@ -2670,14 +2673,14 @@
             (e, s) => {
               const i = t[e];
               return (0, n.jsx)(
-                ze,
+                Ve,
                 { app: i, width: s, index: e, renderItem: a },
                 i.appid,
               );
             },
             [t, a],
           );
-        return (0, n.jsx)(Ve, {
+        return (0, n.jsx)(ze, {
           nItems: t.length,
           renderItem: r,
           nAspectRatio: 600 / 900,
@@ -3330,7 +3333,7 @@
         kt = a(72839),
         Rt = a(23809),
         Tt = a(16021);
-      function Et(e, t) {
+      function Gt(e, t) {
         const a = Ae()()
             .startOf("day")
             .add(30 * e, "minutes"),
@@ -3347,7 +3350,7 @@
           s.format(n.toDate()).replace(" ", " ")
         );
       }
-      function Gt(e) {
+      function Et(e) {
         if (e == BigInt(0)) return (0, p.we)("#Parental_Playtime_Never");
         if (e == BigInt(0xffffffffffff))
           return (0, p.we)("#Parental_Playtime_AnyTime");
@@ -3356,8 +3359,8 @@
         for (let n = 0; n < 48; n++)
           e & (BigInt(1) << BigInt(n))
             ? -1 == a && (a = n)
-            : -1 != a && (t.push(Et(a, n)), (a = -1));
-        return -1 != a && (t.push(Et(a, 48)), (a = -1)), t.join(", ");
+            : -1 != a && (t.push(Gt(a, n)), (a = -1));
+        return -1 != a && (t.push(Gt(a, 48)), (a = -1)), t.join(", ");
       }
       var Bt = a(41735),
         Lt = a.n(Bt);
@@ -3464,14 +3467,14 @@
         let j = a.is_enabled ? "enabled" : "disabled";
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            (0, n.jsx)(Vt, {
+            (0, n.jsx)(zt, {
               steamid: t,
               otherChildrenQuery: _,
               confirmCopy: m,
               setConfirmCopy: d,
             }),
             (0, n.jsx)(o.Vb, {
-              strClassName: Ge.DropDownCtn,
+              strClassName: Ee.DropDownCtn,
               controlled: !0,
               bottomSeparator: "none",
               label: (0, p.we)("#Parental_EnableDropdown"),
@@ -3483,7 +3486,7 @@
           ],
         });
       }
-      function Vt(e) {
+      function zt(e) {
         const {
             steamid: t,
             otherChildrenQuery: a,
@@ -3514,13 +3517,13 @@
             onOK: c,
             strTitle: (0, p.we)("#Parental_CopySettingsConfirmation_Title"),
             children: (0, n.jsx)("div", {
-              className: Ge.ConfirmCopyDescription,
+              className: Ee.ConfirmCopyDescription,
               children: u,
             }),
           }),
         });
       }
-      function zt(e) {
+      function Vt(e) {
         const { steamid: t, settings: a } = e,
           i = (0, Se.At)(t),
           { setErrorMessage: r } = (0, h.RC)();
@@ -3540,7 +3543,7 @@
           );
         return (0, n.jsx)(o.Vb, {
           focusable: !0,
-          strClassName: Ge.DropDownCtn,
+          strClassName: Ee.DropDownCtn,
           bottomSeparator: "none",
           label: (0, p.we)("#Parental_Baselist_Label"),
           rgOptions: l,
@@ -3569,15 +3572,15 @@
             d(null), (0, Se.qR)(a, !p, [c]), l.mutate(a);
           }, [c, a, l, d, p]);
         return (0, n.jsxs)(F.Z, {
-          className: (0, u.A)(Ge.ParentalGameRow, p && Ge.Allowed),
+          className: (0, u.A)(Ee.ParentalGameRow, p && Ee.Allowed),
           onActivate: g,
           ...r,
           children: [
-            _ && (0, n.jsx)("img", { className: Ge.Icon, src: _ }),
-            !_ && (0, n.jsx)("div", { className: Ge.Icon }),
-            (0, n.jsx)("div", { className: Ge.Name, children: i.name }),
+            _ && (0, n.jsx)("img", { className: Ee.Icon, src: _ }),
+            !_ && (0, n.jsx)("div", { className: Ee.Icon }),
+            (0, n.jsx)("div", { className: Ee.Name, children: i.name }),
             (0, n.jsx)(o.Od, {
-              className: Ge.RoundCheckbox,
+              className: Ee.RoundCheckbox,
               checked: p,
               onChange: g,
             }),
@@ -3615,7 +3618,7 @@
               ),
             }),
             (0, n.jsx)(F.Z, {
-              className: Ge.FilterDropdownCtn,
+              className: Ee.FilterDropdownCtn,
               children: (0, n.jsx)(o.ZU, {
                 focusable: !0,
                 rgOptions: d,
@@ -3629,7 +3632,7 @@
               ),
             }),
             (0, n.jsx)(F.Z, {
-              className: Ge.FilterSection,
+              className: Ee.FilterSection,
               children: qt.map((e) => {
                 const t = c.includes(e),
                   a = ((e) => (t) => {
@@ -3648,14 +3651,14 @@
                 return (0, n.jsxs)(
                   F.Z,
                   {
-                    className: Ge.FilterRow,
+                    className: Ee.FilterRow,
                     children: [
                       (0, n.jsx)(F.Z, {
-                        className: Ge.FilterInfo,
+                        className: Ee.FilterInfo,
                         children: Zt(e),
                       }),
                       (0, n.jsx)(F.Z, {
-                        className: Ge.FilterToggle,
+                        className: Ee.FilterToggle,
                         children: (0, n.jsx)(o.Yh, { checked: t, onChange: a }),
                       }),
                     ],
@@ -3670,7 +3673,7 @@
                 t(c), l();
               },
               strOKText: (0, p.we)("#Parental_GameList_Button_Apply"),
-              className: Ge.FilterModalButtons,
+              className: Ee.FilterModalButtons,
             }),
           ],
         });
@@ -3692,7 +3695,7 @@
             (0, n.jsx)(j.mt, {
               active: _,
               onDismiss: () => h(!1),
-              className: Ge.FilterModal,
+              className: Ee.FilterModal,
               children: (0, n.jsx)(Jt, {
                 selectedContentDescriptors: o,
                 setContentDescriptors: l,
@@ -3702,22 +3705,22 @@
               }),
             }),
             (0, n.jsxs)(F.Z, {
-              className: Ge.ParentalGameListHeader,
+              className: Ee.ParentalGameListHeader,
               children: [
                 (0, n.jsx)("div", {
-                  className: Ge.Title,
+                  className: Ee.Title,
                   children: (0, p.we)("#Parental_GameList_Header"),
                 }),
                 (0, n.jsxs)(F.Z, {
-                  className: Ge.SearchCtn,
+                  className: Ee.SearchCtn,
                   children: [
                     (0, n.jsxs)("div", {
-                      className: Ge.SelectorCtn,
+                      className: Ee.SelectorCtn,
                       children: [
                         (0, n.jsx)(F.Z, {
                           className: (0, u.A)(
-                            Ge.ViewSelector,
-                            "list" == i && Ge.Selected,
+                            Ee.ViewSelector,
+                            "list" == i && Ee.Selected,
                           ),
                           onActivate: () => r("list"),
                           children: (0, n.jsx)(Nt.he, {
@@ -3729,8 +3732,8 @@
                         }),
                         (0, n.jsx)(F.Z, {
                           className: (0, u.A)(
-                            Ge.ViewSelector,
-                            "grid" == i && Ge.Selected,
+                            Ee.ViewSelector,
+                            "grid" == i && Ee.Selected,
                           ),
                           onActivate: () => r("grid"),
                           children: (0, n.jsx)(Nt.he, {
@@ -3744,7 +3747,7 @@
                     }),
                     (0, n.jsx)(wt, { strFilter: t, setFilter: a }),
                     (0, n.jsx)(F.Z, {
-                      className: Ge.FilterDropdownButton,
+                      className: Ee.FilterDropdownButton,
                       onActivate: () => h(!0),
                       children: (0, n.jsx)(Nt.he, {
                         toolTipContent: (0, p.we)("#Parental_GameList_Filter"),
@@ -3868,15 +3871,15 @@
           } = e,
           l = ut(a);
         return (0, n.jsxs)("div", {
-          className: Ge.SectionHeader,
+          className: Ee.SectionHeader,
           children: [
             (0, n.jsx)("div", {
-              className: Ge.Title,
+              className: Ee.Title,
               children: (0, p.we)(t + (i ? "_Count" : ""), s, i, l),
             }),
             r &&
               (0, n.jsxs)(F.Z, {
-                className: Ge.SelectorCtn,
+                className: Ee.SelectorCtn,
                 children: [
                   (0, n.jsx)(o.$n, {
                     onClick: () => r(!0),
@@ -3913,7 +3916,7 @@
           0 == c.length
             ? null
             : (0, n.jsxs)("div", {
-                className: Ge.ParentalGameSection,
+                className: Ee.ParentalGameSection,
                 children: [
                   (0, n.jsx)(Xt, {
                     strToken: t,
@@ -3969,7 +3972,7 @@
               : "show_denied_only" === d &&
                 (g = g.filter((e) => !f.has(e.appid))),
             (0, n.jsxs)("div", {
-              className: Ge.ParentalGameListOuter,
+              className: Ee.ParentalGameListOuter,
               children: [
                 (0, n.jsx)(Qt, {
                   strFilter: l,
@@ -3982,7 +3985,7 @@
                   setShowFilter: u,
                 }),
                 (0, n.jsxs)("div", {
-                  className: Ge.Content,
+                  className: Ee.Content,
                   children: [
                     (0, n.jsx)($t, {
                       strTitleToken: "#Parental_GameList_Library",
@@ -4003,7 +4006,7 @@
                     }),
                     g.length + y.length == 0 &&
                       (0, n.jsx)("div", {
-                        className: Ge.Empty,
+                        className: Ee.Empty,
                         children: (0, p.we)("#Parental_GameList_Empty"),
                       }),
                   ],
@@ -4014,7 +4017,7 @@
       }
       function ta(e) {
         const { steamid: t, settings: a, rgSortedGames: i } = e,
-          r = parseInt(Ge.nParentalListRowHeight),
+          r = parseInt(Ee.nParentalListRowHeight),
           l = s.useCallback(
             (e) => (0, n.jsx)(Kt, { steamid: t, settings: a, game: i[e] }, e),
             [t, a, i],
@@ -4037,7 +4040,7 @@
           ...o
         } = e;
         return (0, n.jsx)(F.Z, {
-          className: (0, u.A)(r, Ge.ParentalApp, s && Ge.Allowed),
+          className: (0, u.A)(r, Ee.ParentalApp, s && Ee.Allowed),
           focusable: !0,
           onActivate: () => i(t, !s),
           ...o,
@@ -4089,7 +4092,7 @@
         const { steamid: t, settings: a, mapAppsAllowed: s } = e;
         return (0, n.jsxs)("div", {
           children: [
-            (0, n.jsx)(zt, { steamid: t, settings: a }),
+            (0, n.jsx)(Vt, { steamid: t, settings: a }),
             0 != a.applist_base_id &&
               (0, n.jsx)(ea, { steamid: t, settings: a, mapAppsAllowed: s }),
           ],
@@ -4107,7 +4110,7 @@
             [c, a, i],
           );
         return (0, n.jsx)(o.y4, {
-          className: Ge.ToggleCtn,
+          className: Ee.ToggleCtn,
           bottomSeparator: "none",
           label: (0, p.we)(r),
           checked: l,
@@ -4186,7 +4189,7 @@
             (r.includes(e) || i.current & (1 << e)) &&
             o.push(e);
         return (0, n.jsxs)("div", {
-          className: Ge.ParentalFeatures,
+          className: Ee.ParentalFeatures,
           children: [
             (0, n.jsx)("hr", {}),
             o.map((e) =>
@@ -4229,9 +4232,9 @@
           ...m,
           className: (0, u.A)(
             t,
-            Ge.ParentalPlaytimeWindowSelector,
-            a && Ge.Enabled,
-            i && Ge.Locked,
+            Ee.ParentalPlaytimeWindowSelector,
+            a && Ee.Enabled,
+            i && Ee.Locked,
           ),
           onActivate: () => {
             i || d || l(r), c(null), p(!1);
@@ -4282,7 +4285,7 @@
           l.push(
             (0, n.jsx)(
               "div",
-              { className: (0, u.A)(Ge.HashMark, "HashMark" + e), style: t },
+              { className: (0, u.A)(Ee.HashMark, "HashMark" + e), style: t },
               "HashMark" + e,
             ),
           );
@@ -4301,7 +4304,7 @@
             (0, n.jsx)(
               "div",
               {
-                className: (0, u.A)(Ge.HourMarker, "Hour" + e),
+                className: (0, u.A)(Ee.HourMarker, "Hour" + e),
                 style: i,
                 children: a,
               },
@@ -4310,7 +4313,7 @@
           );
         }
         return (0, n.jsx)(F.Z, {
-          className: (0, u.A)(Ge.ParentalPlaytimeGrid, t),
+          className: (0, u.A)(Ee.ParentalPlaytimeGrid, t),
           onMouseLeave: () => m(null),
           children: l,
         });
@@ -4321,13 +4324,13 @@
           m = s.useRef(Object.assign({}, a)),
           d = (0, Se.At)(t);
         return (0, n.jsx)(j.o0, {
-          className: Ge.ParentalPlaytimeWindowsDialog,
+          className: Ee.ParentalPlaytimeWindowsDialog,
           closeModal: r,
           onOK: () => {
             d.mutate(m.current), r();
           },
           strTitle: (0, n.jsx)(o.Y9, {
-            className: Ge.Title,
+            className: Ee.Title,
             children: (0, p.we)("#Parental_PlaytimeWindows_Title"),
           }),
           children: (0, n.jsx)(ua, {
@@ -4350,8 +4353,8 @@
           rgOptions: r,
           selectedOption: t,
           onChange: i,
-          strDropDownButtonClassName: Ge.DaySelector,
-          arrowClassName: Ge.Arrow,
+          strDropDownButtonClassName: Ee.DaySelector,
+          arrowClassName: Ee.Arrow,
           contextMenuPositionOptions: {
             bMatchWidth: !0,
             bDisablePopTop: !0,
@@ -4386,21 +4389,21 @@
             [t],
           );
         return (0, n.jsxs)("div", {
-          className: Ge.ParentalPlaytimeWindowsDialogInner,
+          className: Ee.ParentalPlaytimeWindowsDialogInner,
           children: [
             (0, n.jsxs)(F.Z, {
-              className: Ge.TopRow,
+              className: Ee.TopRow,
               children: [
                 (0, n.jsx)(da, { dayIndex: a, onChange: i }),
                 (0, n.jsxs)("div", {
-                  className: Ge.Right,
+                  className: Ee.Right,
                   children: [
                     (0, n.jsx)("div", {
-                      className: Ge.PlaytimeDescription,
-                      children: Gt(l),
+                      className: Ee.PlaytimeDescription,
+                      children: Et(l),
                     }),
                     (0, n.jsxs)(F.Z, {
-                      className: Ge.PlaytimeButtons,
+                      className: Ee.PlaytimeButtons,
                       children: [
                         l == BigInt(0) &&
                           (0, n.jsx)(r.Ii, {
@@ -4423,16 +4426,16 @@
               ],
             }),
             (0, n.jsxs)("div", {
-              className: Ge.ParentalPlaytimeWindows,
+              className: Ee.ParentalPlaytimeWindows,
               children: [
                 (0, n.jsx)(ca, {
-                  className: Ge.Grid,
+                  className: Ee.Grid,
                   nWindows: l,
                   onToggle: m,
                 }),
                 !c &&
                   (0, n.jsx)(_a, {
-                    className: Ge.Input,
+                    className: Ee.Input,
                     nWindows: l,
                     onSet: d,
                   }),
@@ -4490,7 +4493,7 @@
             [_],
           );
         return (0, n.jsxs)("div", {
-          className: (0, u.A)(Ge.ParentalPlaytimeInput, t),
+          className: (0, u.A)(Ee.ParentalPlaytimeInput, t),
           ...r,
           children: [
             (0, n.jsx)("div", {
@@ -4500,8 +4503,8 @@
               children: (0, p.we)("#Parental_PlaytimeWindows_To"),
             }),
             (0, n.jsx)("div", {}),
-            (0, n.jsx)(Ee(), {
-              className: Ge.Datetime,
+            (0, n.jsx)(Ge(), {
+              className: Ee.Datetime,
               value: _,
               onChange: j,
               dateFormat: !1,
@@ -4509,8 +4512,8 @@
               input: !1,
               timeConstraints: { minutes: { min: 0, max: 59, step: 30 } },
             }),
-            (0, n.jsx)(Ee(), {
-              className: Ge.Datetime,
+            (0, n.jsx)(Ge(), {
+              className: Ee.Datetime,
               value: h,
               onChange: w,
               dateFormat: !1,
@@ -4519,21 +4522,21 @@
               timeConstraints: { minutes: { min: 0, max: 59, step: 30 } },
             }),
             (0, n.jsxs)("div", {
-              className: Ge.ButtonCtn,
+              className: Ee.ButtonCtn,
               children: [
                 (0, n.jsx)("div", {
-                  className: Ge.ButtonWrapper,
+                  className: Ee.ButtonWrapper,
                   children: (0, n.jsx)(o.$n, {
-                    className: Ge.Button,
+                    className: Ee.Button,
                     disabled: g >= y,
                     onClick: x,
                     children: "+",
                   }),
                 }),
                 (0, n.jsx)("div", {
-                  className: Ge.ButtonWrapper,
+                  className: Ee.ButtonWrapper,
                   children: (0, n.jsx)(o.$n, {
-                    className: Ge.Button,
+                    className: Ee.Button,
                     disabled: g >= y,
                     onClick: f,
                     children: "-",
@@ -4581,8 +4584,8 @@
           rgOptions: d,
           selectedOption: Math.floor(a / 60),
           onChange: m,
-          strDropDownButtonClassName: Ge.HoursSelector,
-          arrowClassName: Ge.Arrow,
+          strDropDownButtonClassName: Ee.HoursSelector,
+          arrowClassName: Ee.Arrow,
           contextMenuPositionOptions: {
             bMatchWidth: !0,
             bDisablePopTop: !0,
@@ -4604,13 +4607,13 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)(F.Z, {
-              className: Ge.ParentalPlaytimeRow,
+              className: Ee.ParentalPlaytimeRow,
               onActivate: () => o(!0),
               children: [
-                (0, n.jsx)("div", { className: Ge.Day, children: r }),
-                (0, n.jsx)("div", { className: Ge.Windows, children: Gt(c) }),
+                (0, n.jsx)("div", { className: Ee.Day, children: r }),
+                (0, n.jsx)("div", { className: Ee.Windows, children: Et(c) }),
                 (0, n.jsxs)("div", {
-                  className: Ge.Minutes,
+                  className: Ee.Minutes,
                   children: [
                     (0, n.jsxs)("div", {
                       children: [(0, p.we)("#Parental_Playtime_Limit"), ":"],
@@ -4654,7 +4657,7 @@
             ),
           );
         return (0, n.jsx)("div", {
-          className: Ge.ParentalPlaytimeInner,
+          className: Ee.ParentalPlaytimeInner,
           children: s,
         });
       }
@@ -4677,10 +4680,10 @@
           ),
           l = a.playtime_restrictions.apply_playtime_restrictions;
         return (0, n.jsxs)("div", {
-          className: Ge.ParentalPlaytime,
+          className: Ee.ParentalPlaytime,
           children: [
             (0, n.jsx)(o.y4, {
-              className: Ge.ToggleCtn,
+              className: Ee.ToggleCtn,
               bottomSeparator: "none",
               label: (0, p.we)("#Parental_EnablePlaytimeRestrictions"),
               checked: l,
@@ -4758,23 +4761,23 @@
           u = !s.excluded_store_content_descriptors.includes(a.valueOf()),
           _ = !s.excluded_community_content_descriptors.includes(a.valueOf());
         return (0, n.jsxs)(F.Z, {
-          className: Ge.ContentDescriptorRow,
-          navEntryPreferPosition: E.iU.MAINTAIN_X,
+          className: Ee.ContentDescriptorRow,
+          navEntryPreferPosition: G.iU.MAINTAIN_X,
           children: [
             (0, n.jsxs)(F.Z, {
-              className: Ge.ContentDescriptorInfo,
+              className: Ee.ContentDescriptorInfo,
               children: [
                 (0, n.jsx)("div", {
-                  className: Ge.ContentDescriptorName,
+                  className: Ee.ContentDescriptorName,
                   children: c,
                 }),
                 (0, n.jsxs)("div", {
-                  className: Ge.ContentDescriptorDescription,
+                  className: Ee.ContentDescriptorDescription,
                   children: [
                     m,
                     (0, n.jsx)("br", {}),
                     (0, n.jsx)(r.Ii, {
-                      className: Ge.ContentDescriptorViewExamples,
+                      className: Ee.ContentDescriptorViewExamples,
                       onClick: () => i(a),
                       children: (0, p.we)(
                         "#ContentDescriptors_ViewExampleProducts",
@@ -4785,7 +4788,7 @@
               ],
             }),
             (0, n.jsx)(F.Z, {
-              className: Ge.ContentDescriptorToggle,
+              className: Ee.ContentDescriptorToggle,
               children: (0, n.jsx)(o.Yh, {
                 checked: u,
                 onChange: d(
@@ -4797,7 +4800,7 @@
               }),
             }),
             (0, n.jsx)(F.Z, {
-              className: Ge.ContentDescriptorToggle,
+              className: Ee.ContentDescriptorToggle,
               children: (0, n.jsx)(o.Yh, {
                 checked: _,
                 onChange: d(
@@ -4814,7 +4817,7 @@
       function va(e) {
         const { strName: t, strLogoUrl: a } = e;
         return (0, n.jsxs)(F.Z, {
-          className: Ge.ContentDescriptorExampleApp,
+          className: Ee.ContentDescriptorExampleApp,
           focusable: !0,
           children: [
             (0, n.jsx)("img", { src: a }),
@@ -4880,28 +4883,28 @@
               fnSelectDescriptor: r,
             }),
             (0, n.jsxs)(F.Z, {
-              className: Ge.ContentDescriptorParentalSettings,
+              className: Ee.ContentDescriptorParentalSettings,
               children: [
                 (0, n.jsx)("p", {
                   children: (0, p.we)("#Parental_ContentDescriptors_Intro"),
                 }),
                 (0, n.jsxs)(F.Z, {
-                  className: Ge.ContentDescriptorParentalSettingsInner,
+                  className: Ee.ContentDescriptorParentalSettingsInner,
                   children: [
                     (0, n.jsxs)(F.Z, {
-                      className: Ge.ContentDescriptorRow,
+                      className: Ee.ContentDescriptorRow,
                       children: [
                         (0, n.jsx)(F.Z, {
-                          className: Ge.ContentDescriptorInfo,
+                          className: Ee.ContentDescriptorInfo,
                         }),
                         (0, n.jsx)(F.Z, {
-                          className: Ge.ContentDescriptorToggle,
+                          className: Ee.ContentDescriptorToggle,
                           children: (0, p.we)(
                             "#Parental_ContentDescriptors_Store",
                           ),
                         }),
                         (0, n.jsx)(F.Z, {
-                          className: Ge.ContentDescriptorToggle,
+                          className: Ee.ContentDescriptorToggle,
                           children: (0, p.we)(
                             "#Parental_ContentDescriptors_Community",
                           ),
@@ -4929,7 +4932,7 @@
       }
       function ba(e) {
         return (0, n.jsx)("div", {
-          className: Ge.ErrorLoading,
+          className: Ee.ErrorLoading,
           children: (0, p.we)("#Parental_Settings_PageError"),
         });
       }
@@ -4953,17 +4956,17 @@
         const { settings: j, mapAppsAllowed: w } = o.data,
           v = c.data;
         return (0, n.jsxs)("div", {
-          className: Ge.FamilyMemberParentalSettings,
+          className: Ee.FamilyMemberParentalSettings,
           children: [
             (0, n.jsx)(F.Z, {
-              className: Ge.ReturnToFamily,
+              className: Ee.ReturnToFamily,
               onActivate: () => {
                 r.push("/account/familymanagement");
               },
               children: (0, p.we)("#Parental_Settings_Return"),
             }),
             (0, n.jsxs)("div", {
-              className: Ge.HeaderContainer,
+              className: Ee.HeaderContainer,
               children: [
                 (0, n.jsx)(Ia, { member: y, persona: v }),
                 (0, n.jsx)(Ut, { steamid: s, settings: j, familyGroup: _ }),
@@ -4977,10 +4980,10 @@
       function Ia(e) {
         const { member: t, persona: a } = e;
         return (0, n.jsxs)("div", {
-          className: Ge.ParentalHeader,
+          className: Ee.ParentalHeader,
           children: [
             (0, n.jsx)("div", {
-              className: Ge.Title,
+              className: Ee.Title,
               children: (0, p.we)("#Parental_Settings_For"),
             }),
             (0, n.jsx)(g.ff, { persona: a, role: t.role() }),
@@ -5120,7 +5123,7 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: Ie().Text,
-                      children: Gt(l),
+                      children: Et(l),
                     }),
                     (0, n.jsx)(ca, {
                       nWindows: l,
@@ -5197,7 +5200,7 @@
           }),
         });
       }
-      function Ea(e) {
+      function Ga(e) {
         let { steamIDResponder: t, resultMessage: a, timeResponded: s } = e;
         const i = (0, x.js)(t.ConvertTo64BitString()),
           r = i?.data,
@@ -5236,7 +5239,7 @@
           })
         );
       }
-      function Ga(e) {
+      function Ea(e) {
         const { steamID: t, locToken: a, locTokenPlurality: s } = e,
           i = (0, x.js)(t.ConvertTo64BitString()),
           r = i?.data,
@@ -5309,7 +5312,7 @@
                         ),
                       }),
                     !m &&
-                      (0, n.jsx)(Ga, {
+                      (0, n.jsx)(Ea, {
                         steamID: new A.b(t.steamid()),
                         locToken: d
                           ? "#PlaytimeRequest_UserRequested"
@@ -5361,7 +5364,7 @@
                         children: (0, p.we)("#ParentalRequest_Pending"),
                       }),
                     !!t.time_responded() &&
-                      (0, n.jsx)(Ea, {
+                      (0, n.jsx)(Ga, {
                         steamIDResponder: new A.b(t.steamid_responder()),
                         resultMessage: (0, p.we)(
                           t.approved()
@@ -5501,14 +5504,14 @@
       function Za(e) {
         const { packageID: t } = e,
           [a] = (0, De.Gg)(t, {});
-        return (0, n.jsx)(Va, { storeItem: a });
+        return (0, n.jsx)(za, { storeItem: a });
       }
       function Ua(e) {
         const { bundleID: t } = e,
           [a] = (0, De.Ow)(t, {});
-        return (0, n.jsx)(Va, { storeItem: a });
+        return (0, n.jsx)(za, { storeItem: a });
       }
-      function Va(e) {
+      function za(e) {
         const { storeItem: t } = e,
           a = (0, Aa.DJ)(t),
           i = s.useCallback(
@@ -5538,7 +5541,7 @@
           }),
         });
       }
-      function za(e) {
+      function Va(e) {
         const { item: t, familyGroupID: a } = e,
           s = (0, i.LH)(),
           r = t.requester_steamid() === s,
@@ -5598,7 +5601,7 @@
                       ),
                     }),
                   !r &&
-                    (0, n.jsx)(Ga, {
+                    (0, n.jsx)(Ea, {
                       steamID: new A.b(t.requester_steamid()),
                       locToken: "#PurchaseRequest_UserRequested",
                       locTokenPlurality: t.requested_packageids()?.length,
@@ -5644,7 +5647,7 @@
                       ],
                     }),
                   t.time_responded() &&
-                    (0, n.jsx)(Ea, {
+                    (0, n.jsx)(Ga, {
                       steamIDResponder: new A.b(t.responder_steamid()),
                       resultMessage: d,
                       timeResponded: t.time_responded(),
@@ -5666,7 +5669,7 @@
             s = (0, n.jsx)(qa, { item: t.data });
             break;
           case Ma.k_PurchaseRequest:
-            s = (0, n.jsx)(za, { item: t.data, familyGroupID: a });
+            s = (0, n.jsx)(Va, { item: t.data, familyGroupID: a });
             break;
           default:
             s = null;

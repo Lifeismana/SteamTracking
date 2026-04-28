@@ -844,6 +844,16 @@
     color: #fff;
   }
 }
+@keyframes _2A4pb12mtvU-l5nClt2fv- {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _2wJw5tkwjDagaHTwWVdn1u {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -1278,6 +1288,16 @@
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _22jVwj2EIKxChqvLWQbXuN {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

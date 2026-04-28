@@ -96,6 +96,7 @@
             _ || (_ && __webpack_require__(!!_ || !_));
           };
         return (0, _.jsxs)(_._, {
+          align: "center",
           ref: _,
           role: "checkbox",
           "aria-checked": _ ? "mixed" : _,
@@ -157,10 +158,17 @@
             valueFromString: _,
             checkValidText: _,
             onBlur: _,
+            onKeyDown: _,
             ..._
           } = _,
           [_, _] = (0, _.useState)(null),
-          _ = null != _ ? _ : void 0 === _ ? "" : _(_);
+          _ = null != _ ? _ : void 0 === _ ? "" : _(_),
+          _ = () => {
+            if (null !== _) {
+              const _ = _(_);
+              _ !== _ && __webpack_require__(_), _(null);
+            }
+          };
         return (0, _.jsx)(_._, {
           value: _,
           onTextChange: (_) => {
@@ -169,12 +177,11 @@
               ? (_(null), __webpack_require__(_))
               : (_ && !_(_, _)) || _(_);
           },
+          onKeyDown: (_) => {
+            "Enter" === _.key && _(), _ && _(_);
+          },
           onBlur: (_) => {
-            if (null !== _) {
-              const _ = _(_);
-              _ !== _ && __webpack_require__(_), _(null);
-            }
-            _ && _(_);
+            _(), _ && _(_);
           },
           ..._,
         });
@@ -773,6 +780,7 @@
               state: _,
               placement: _ = "bottom-end",
               popoverWidth: _ = "dropdown",
+              popoverMaxHeight: _,
               ..._
             } = _,
             [_, _] = (0, _.useState)(null),
@@ -804,6 +812,7 @@
               open: _.bOpen,
               onOpenChange: _.setOpen,
               width: _,
+              maxHeight: _,
               placement: _,
               selectedIndex: _,
               setSelectedIndex: (_) =>

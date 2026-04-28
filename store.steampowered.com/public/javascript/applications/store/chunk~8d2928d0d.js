@@ -1504,20 +1504,20 @@
           return "CPromotionPlanning_GetAllPlansForPartner_Response";
         }
       }
-      class L extends b.Message {
+      class V extends b.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            L.prototype.input_access_key || y.Sg(L.M()),
+            V.prototype.input_access_key || y.Sg(V.M()),
             b.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
+            V.sm_m ||
+              (V.sm_m = {
+                proto: V,
                 fields: {
                   input_access_key: {
                     n: 1,
@@ -1526,56 +1526,6 @@
                   },
                 },
               }),
-            L.sm_m
-          );
-        }
-        static MBF() {
-          return L.sm_mbf || (L.sm_mbf = y.w0(L.M())), L.sm_mbf;
-        }
-        toObject(e = !1) {
-          return L.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return y.BT(L.M(), e, t);
-        }
-        static fromObject(e) {
-          return y.Uq(L.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (p().BinaryReader)(e),
-            r = new L();
-          return L.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return y.zj(L.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (p().BinaryWriter)();
-          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          y.i0(L.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (p().BinaryWriter)();
-          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_GetPlanByInputAccessKey_Request";
-        }
-      }
-      class V extends b.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            V.prototype.plan || y.Sg(V.M()),
-            b.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            V.sm_m || (V.sm_m = { proto: V, fields: { plan: { n: 1, c: M } } }),
             V.sm_m
           );
         }
@@ -1609,6 +1559,56 @@
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
           return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlanning_GetPlanByInputAccessKey_Request";
+        }
+      }
+      class L extends b.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            L.prototype.plan || y.Sg(L.M()),
+            b.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            L.sm_m || (L.sm_m = { proto: L, fields: { plan: { n: 1, c: M } } }),
+            L.sm_m
+          );
+        }
+        static MBF() {
+          return L.sm_mbf || (L.sm_mbf = y.w0(L.M())), L.sm_mbf;
+        }
+        toObject(e = !1) {
+          return L.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return y.BT(L.M(), e, t);
+        }
+        static fromObject(e) {
+          return y.Uq(L.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (p().BinaryReader)(e),
+            r = new L();
+          return L.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return y.zj(L.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (p().BinaryWriter)();
+          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          y.i0(L.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (p().BinaryWriter)();
+          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPromotionPlanning_GetPlanByInputAccessKey_Response";
@@ -5153,8 +5153,8 @@
           (e.GetPlanByInputAccessKey = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.GetPlanByInputAccessKey#1",
-              (0, _.I8)(L, t),
-              V,
+              (0, _.I8)(V, t),
+              L,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
@@ -5308,8 +5308,8 @@
           };
         })(a || (a = {}));
       var ke = r(80902),
-        Le = r(72034),
-        Ve = r(30470),
+        Ve = r(72034),
+        Le = r(30470),
         He = r(24484);
       function Ke(e, t) {
         const [r] = (0, m.useState)(() =>
@@ -5324,7 +5324,7 @@
                 "GetPromotionWriteAccess: promotion operation token is missing",
               ),
               e
-                ? new Le.D(Ve.TS.WEBAPI_BASE_URL, e).GetServiceTransport()
+                ? new Ve.D(Le.TS.WEBAPI_BASE_URL, e).GetServiceTransport()
                 : null
             );
           })(),
@@ -6155,14 +6155,30 @@
       }
     },
     64846: (e, t, r) => {
-      r.d(t, { m: () => n });
-      r(7850);
-      var i = r(60746);
-      r(95695);
-      function n(e, t) {
+      r.d(t, { E: () => l, m: () => o });
+      var i = r(7850),
+        n = r(60746),
+        a = r(95695),
+        s = r(52038);
+      function o(e, t) {
         if (!e || !e.BIsClanAccount()) return !1;
-        const r = i.KN.Get().GetPartnerEventPermissions(e);
+        const r = n.KN.Get().GetPartnerEventPermissions(e);
         return !!r && (t ? r.valve_admin : r.valve_admin || r.support_user);
+      }
+      function l(e) {
+        const { clanSteamID: t, id: r } = e;
+        return o(t, e.requireAdmin)
+          ? (0, i.jsx)("div", {
+              id: r,
+              className: (0, s.A)(
+                e.className,
+                e.requireAdmin
+                  ? a.ValveOnlyAdminBackground
+                  : a.ValveOnlyBackground,
+              ),
+              children: e.children,
+            })
+          : null;
       }
     },
     44894: (e, t, r) => {

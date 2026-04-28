@@ -51,6 +51,7 @@
         BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
         "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
         "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
+        "ItemFocusAnim-darkGreySettings": "_1rM6kybplpPqKeO6oRkrNQ",
         "ItemFocusAnim-darkGrey": "_2FbbkQw3hYI7YAtytr5IDn",
         "ItemFocusAnim-grey": "_2suu44WFaHB4fkFfIvCI7U",
         "ItemFocusAnim-translucent-white-10": "_2j1TKoZjmYdt4yBTKkRCgR",
@@ -832,7 +833,7 @@
               "aria-label": (0, b.we)("#ControllerButton_R2"),
             });
           case s.LeftStick:
-            return (0, l.jsx)(W, {
+            return (0, l.jsx)(O, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, b.we)("#ControllerButton_LS"),
@@ -880,7 +881,7 @@
               "aria-label": (0, b.we)("#ControllerButton_RPad_Click"),
             });
           case s.RearLeftUpper:
-            return (0, l.jsx)(O, {
+            return (0, l.jsx)(W, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, b.we)("#ControllerButton_L4"),
@@ -1708,7 +1709,7 @@
               ],
             });
       }
-      function W({ bIsKnockout: e, ...t }) {
+      function O({ bIsKnockout: e, ...t }) {
         return e
           ? (0, l.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -1755,7 +1756,7 @@
               ],
             });
       }
-      function O({ bIsKnockout: e, ...t }) {
+      function W({ bIsKnockout: e, ...t }) {
         return e
           ? (0, l.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",

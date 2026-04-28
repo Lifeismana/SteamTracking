@@ -750,6 +750,16 @@ img.ProseMirror-separator {
     color: #fff;
   }
 }
+@keyframes _2gCU5HJBuDk1vxRMJhwFGE {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _39KmlfhlZwkINJt9fdyKbw {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -1081,6 +1091,16 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _3pEtHMkdw57n0C8DKxtXPb {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }
