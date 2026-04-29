@@ -2552,9 +2552,6 @@ $ffn
 2048
 208.64.200.0/22
 208.78.164.0/22
-20:40:13
-20:40:29
-20:40:37
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2581,6 +2578,10 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:17:27
+22:17:41
+22:17:42
+22:17:44
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3398,7 +3399,7 @@ Application transferred too few scanlines
 Application transferred too many scanlines
 Applying update...
 Approved Friends
-Apr 28 2026
+Apr 29 2026
 April
 Arabic
 Arithmetic table 0x%02x was not defined
@@ -9291,7 +9292,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Apr 28 2026 20:40:29
+Startup - updater built Apr 29 2026 22:17:38
 State
 StaticFileWriterThread()
 Steam

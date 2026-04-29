@@ -3712,7 +3712,7 @@ $steammessages_parental_objects.proto"
 (\r"7\n%CMsgRemoteClientAppUpdateInfoComplete
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
-(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
+(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"5\n3CSteamInputService_SteamDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"7\n\rCMsgWasHidden
 (\r"8\n%CGameRecording_StartRecording_Request
 (\r"8\n%CMsgRemoteClientSuspendLanPeerContent
@@ -8053,10 +8053,15 @@ $steammessages_parental_objects.proto"
 00000000
 0000000000000000
 00000001
+1024
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
+1000
+10000
+1000000
+10000000
 0123456789
 0123456789.
 0123456789.:abcdefABCDEF
@@ -8214,11 +8219,6 @@ $steammessages_parental_objects.proto"
 100 127.0.0.1 stale
 100-continue
 100.64.0.0/10
-1000
-1024
-10000
-1000000
-10000000
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -11582,11 +11582,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
-200M
 2019
 2048
+20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -14577,6 +14577,7 @@ $steammessages_parental_objects.proto"
 4.CSteamInputService_ForgetDonglePairingBond_Response
 4.CSteamInputService_ForgetTritonPairingBond_Response
 4.CSteamInputService_GyroSoftwareCalibration_Response
+4.CSteamInputService_SteamDonglesChanged_Notification
 4.CTransportValidation_TriggerSyntheticEvents_Request
 40 Mbps
 4000
@@ -15476,7 +15477,6 @@ $steammessages_parental_objects.proto"
 5.CQueuedMatchmakingGameHost_SearchForPlayers_Response
 5.CSteamEngine_UpdateTextFilterDictionary_Notification
 5.CSteamInputService_PairDongleTritonConnected_Request
-5.CSteamInputService_TritonDonglesChanged_Notification
 5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
 5.ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -15556,6 +15556,7 @@ $steammessages_parental_objects.proto"
 51CSteamInputService_ForgetDonglePairingBond_Response
 51CSteamInputService_ForgetTritonPairingBond_Response
 51CSteamInputService_GyroSoftwareCalibration_Response
+51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
 524288
@@ -15581,7 +15582,6 @@ $steammessages_parental_objects.proto"
 52CQueuedMatchmakingGameHost_SearchForPlayers_Response
 52CSteamEngine_UpdateTextFilterDictionary_Notification
 52CSteamInputService_PairDongleTritonConnected_Request
-52CSteamInputService_TritonDonglesChanged_Notification
 52CSteamInputService_UnpairedTritonDocked_Notification
 52CTransportValidation_TriggerSyntheticEvents_Response
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -16221,6 +16221,7 @@ $steammessages_parental_objects.proto"
 7\n\tdeveloper
 7\n\tenum_type
 7\n\tstats_udp
+7fgH
 7nY7m
 7v= DOL
 7~8A
@@ -29892,6 +29893,7 @@ Method NotifyShowPowerMenu() not implemented.
 Method NotifyStartShutdown() not implemented.
 Method NotifyStateChanged() not implemented.
 Method NotifySteamBroadcastPacket() not implemented.
+Method NotifySteamDonglesChanged() not implemented.
 Method NotifySteamToSteamPacket() not implemented.
 Method NotifyStopBroadcastUpload() not implemented.
 Method NotifyStorePreferencesChanged() not implemented.
@@ -29903,7 +29905,6 @@ Method NotifyTextFilterWordsChanged() not implemented.
 Method NotifyTimelineChanged() not implemented.
 Method NotifyTimelineEntryChanged() not implemented.
 Method NotifyTimelineEntryRemoved() not implemented.
-Method NotifyTritonDonglesChanged() not implemented.
 Method NotifyTritonQos() not implemented.
 Method NotifyTritonUndocked() not implemented.
 Method NotifyUnlock() not implemented.
@@ -31606,6 +31607,7 @@ NotifyShowPowerMenu
 NotifyStartShutdown
 NotifyStateChanged
 NotifySteamBroadcastPacket
+NotifySteamDonglesChanged
 NotifySteamEngineGotLocationString
 NotifySteamToSteamPacket
 NotifyStopBroadcastUpload
@@ -31616,7 +31618,6 @@ NotifyTextFilterWordsChanged
 NotifyTimelineChanged
 NotifyTimelineEntryChanged
 NotifyTimelineEntryRemoved
-NotifyTritonDonglesChanged
 NotifyTritonQos
 NotifyTritonUndocked
 NotifyUIOfMenuChange
@@ -36454,7 +36455,7 @@ SteamInputManager.NotifyGyroAccelerometerStateChanged#1
 SteamInputManager.NotifyGyroCalibrationStateChanged#1
 SteamInputManager.NotifyGyroQuaternionStateChanged#1
 SteamInputManager.NotifyGyroSpeedStateChanged#1
-SteamInputManager.NotifyTritonDonglesChanged#1
+SteamInputManager.NotifySteamDonglesChanged#1
 SteamInputManager.NotifyTritonQos#1
 SteamInputManager.NotifyTritonUndocked#1
 SteamInputManager.NotifyUnpairedTritonDocked#1
@@ -60384,7 +60385,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr 28 2026 20:40:51
+steam Apr 29 2026 22:17:59
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -2153,8 +2153,6 @@ $d`D-laM
 2+ss
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2048
-20:40:13
-20:40:27
 20CHTMLBaseProtoBufMsg
 20CIBusCallbackManager
 20CMsgGetCookiesForURL
@@ -2191,6 +2189,8 @@ $d`D-laM
 21CUtlCStringConversion
 21CefCompletionCallback
 21CefContextMenuHandler
+22:17:27
+22:17:39
 22CBrowserComposerSystem
 22CFrameEventPerfTracker
 22CMsgAckPIDShuttingDown
@@ -2927,7 +2927,7 @@ ApplyBrightnessLevel
 Applying safe browser shutdown workaround
 Applying workarounds due to GPU process restarts: browser:%d gpu:%d uptime:%f
 Approved Friends
-Apr 28 2026
+Apr 29 2026
 April
 Arabic
 Arithmetic table 0x%02x was not defined

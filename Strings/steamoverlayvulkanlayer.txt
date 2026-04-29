@@ -203,6 +203,7 @@ VulkanSteamOverlayDeleteTexture(int)
 VulkanSteamOverlayDrawTexturedRect
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlaySetWindowType
 VulkanSteamOverlayStartCaptureFrame
 VulkanSteamOverlayStopRendering
 VulkanSteamOverlayTextureExists
@@ -409,7 +410,6 @@ nits
 non-transaction clone for
 non-virtual thunk to
 not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
-o>6KR_
 operator
 operator""
 outHeight
@@ -840,6 +840,7 @@ vkCreateSwapchainKHR
 vkCreateValidationCacheEXT
 vkCreateVideoSessionKHR
 vkCreateVideoSessionParametersKHR
+vkCreateWaylandSurfaceKHR
 vkCreateXcbSurfaceKHR
 vkCreateXlibSurfaceKHR
 vkDebugMarkerSetObjectNameEXT
@@ -1029,6 +1030,7 @@ vkGetPhysicalDeviceToolProperties
 vkGetPhysicalDeviceToolPropertiesEXT
 vkGetPhysicalDeviceVideoCapabilitiesKHR
 vkGetPhysicalDeviceVideoFormatPropertiesKHR
+vkGetPhysicalDeviceWaylandPresentationSupportKHR
 vkGetPhysicalDeviceXcbPresentationSupportKHR
 vkGetPhysicalDeviceXlibPresentationSupportKHR
 vkGetPipelineCacheData

@@ -814,6 +814,7 @@
 "A\n+CMsgRemoteClientBroadcastClientIDDeconflict
 "A\n2CMarketingMessages_CreateMarketingMessage_Response
 "B\n%CBroadcast_GetBuildClipStatus_Request
+"B\n&CClientNotificationControllerConnected
 "B\n-CTransportValidation_GetLargeResponse_Request
 "B\n.CFriendMessages_UpdateMessageReaction_Response
 "B\n/CClientNotificationGameRecordingUserMarkerAdded
@@ -3260,7 +3261,7 @@ ${LANGUAGE}
 (\r"7\n%CMsgRemoteClientAppUpdateInfoComplete
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
-(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
+(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"5\n3CSteamInputService_SteamDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"7\n\rCMsgWasHidden
 (\r"8\n%CGameRecording_StartRecording_Request
 (\r"8\n%CMsgRemoteClientSuspendLanPeerContent
@@ -3346,6 +3347,7 @@ ${LANGUAGE}
 (\r"\\n\fCMsgCellList
 (\r"]\n&CClientMetrics_IPv6Connectivity_Result
 (\r"]\n'CCommunity_VerifyClanMembership_Request
+(\r"]\n)CClientNotificationControllerDisconnected
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
 (\r"^\n,CParental_GetSignedParentalSettings_Response
@@ -9249,6 +9251,7 @@ ${LANGUAGE}
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
 1\n,k_eMsgRemoteClientRestrictAutoUpdatesChanged
+1\n-k_EClientNotificationType_ControllerConnected
 1\n-k_EClientNotificationType_OverlaySplashScreen
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_EClientSettingStore_ConfigStore_UserRoaming
@@ -11290,6 +11293,7 @@ ${LANGUAGE}
 38CChatRoom_RenameChatRoomGroup_Response
 38CClientMetrics_ClientBootstrap_Summary
 38CClientMetrics_IPv6Connectivity_Result
+38CClientNotificationControllerConnected
 38CClientNotificationOverlaySplashScreen
 38CClientNotificationTimedTrialRemaining
 38CCloudGaming_GetTimeRemaining_Response
@@ -11511,6 +11515,7 @@ ${LANGUAGE}
 4.CSteamInputService_ForgetDonglePairingBond_Response
 4.CSteamInputService_ForgetTritonPairingBond_Response
 4.CSteamInputService_GyroSoftwareCalibration_Response
+4.CSteamInputService_SteamDonglesChanged_Notification
 4.CTransportValidation_TriggerSyntheticEvents_Request
 4.hr\F
 40 Mbps
@@ -11630,6 +11635,7 @@ ${LANGUAGE}
 41CChatRoom_SetChatRoomGroupTagline_Request
 41CChat_RequestFriendPersonaStates_Response
 41CClientMetrics_DownloadRates_Notification
+41CClientNotificationControllerDisconnected
 41CClientNotificationRemoteClientConnection
 41CCommunity_GetClanCrowdInMetadata_Request
 41CCommunity_GetClanLocGroupImages_Response
@@ -12263,6 +12269,7 @@ ${LANGUAGE}
 4\n/k_EMsgTestWorkerProcessServiceModuleCallRequest
 4\n/k_EStreamControlControllerPersonalizationUpdate
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
+4\n0k_EClientNotificationType_ControllerDisconnected
 4\n0k_EClientNotificationType_ParentalFeatureRequest
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
@@ -12313,7 +12320,6 @@ ${LANGUAGE}
 5.CQueuedMatchmakingGameHost_SearchForPlayers_Response
 5.CSteamEngine_UpdateTextFilterDictionary_Notification
 5.CSteamInputService_PairDongleTritonConnected_Request
-5.CSteamInputService_TritonDonglesChanged_Notification
 5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
 5.ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -12387,6 +12393,7 @@ ${LANGUAGE}
 51CSteamInputService_ForgetDonglePairingBond_Response
 51CSteamInputService_ForgetTritonPairingBond_Response
 51CSteamInputService_GyroSoftwareCalibration_Response
+51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
 524288
@@ -12408,7 +12415,6 @@ ${LANGUAGE}
 52CQueuedMatchmakingGameHost_SearchForPlayers_Response
 52CSteamEngine_UpdateTextFilterDictionary_Notification
 52CSteamInputService_PairDongleTritonConnected_Request
-52CSteamInputService_TritonDonglesChanged_Notification
 52CSteamInputService_UnpairedTritonDocked_Notification
 52CTransportValidation_TriggerSyntheticEvents_Response
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -14233,7 +14239,7 @@ AddedGameToWishlist
 Adding connection back to pool, but not found in in use list or waiting list
 Adding preview config for appid: %u\n
 Adding process %u for gameID %llu\n
-Adding window %llu for process %u and gameID %llu\n
+Adding window %llu (%d) for process %u and gameID %llu\n
 AdditionalRoute
 Address
 Address is invalid or contains invalid characters
@@ -14494,7 +14500,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 28 2026 20:40:51
+Apr 29 2026 22:17:53
 April
 Arabic
 AreFilesInSubscriptionList
@@ -24913,6 +24919,7 @@ Method NotifyShowPowerMenu() not implemented.
 Method NotifyStartShutdown() not implemented.
 Method NotifyStateChanged() not implemented.
 Method NotifySteamBroadcastPacket() not implemented.
+Method NotifySteamDonglesChanged() not implemented.
 Method NotifySteamToSteamPacket() not implemented.
 Method NotifyStopBroadcastUpload() not implemented.
 Method NotifyStorePreferencesChanged() not implemented.
@@ -24924,7 +24931,6 @@ Method NotifyTextFilterWordsChanged() not implemented.
 Method NotifyTimelineChanged() not implemented.
 Method NotifyTimelineEntryChanged() not implemented.
 Method NotifyTimelineEntryRemoved() not implemented.
-Method NotifyTritonDonglesChanged() not implemented.
 Method NotifyTritonQos() not implemented.
 Method NotifyTritonUndocked() not implemented.
 Method NotifyUnlock() not implemented.
@@ -26697,6 +26703,7 @@ NotifyShowPowerMenu
 NotifyStartShutdown
 NotifyStateChanged
 NotifySteamBroadcastPacket
+NotifySteamDonglesChanged
 NotifySteamToSteamPacket
 NotifyStopBroadcastUpload
 NotifyStorePreferencesChanged
@@ -26707,7 +26714,6 @@ NotifyTextFilterWordsChanged
 NotifyTimelineChanged
 NotifyTimelineEntryChanged
 NotifyTimelineEntryRemoved
-NotifyTritonDonglesChanged
 NotifyTritonQos
 NotifyTritonUndocked
 NotifyUnlockedH264

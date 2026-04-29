@@ -160,6 +160,7 @@
 ";\n\vCSetIconMsg
 "????'????????????????????????????????????????????????????\????
 "A\n%CClientNotificationFriendInviteRollup
+"B\n&CClientNotificationControllerConnected
 "B\n/CClientNotificationGameRecordingUserMarkerAdded
 "DeleteMapValue"
 "GetMapData"
@@ -637,6 +638,7 @@ $\nY8O
 (\r"Y\n'CClientNotificationControllerLowBattery
 (\r"Y\n\rCMsgSizePopup
 (\r"\\n&CMsgSetBrowserViewDomainRequestMapping
+(\r"]\n)CClientNotificationControllerDisconnected
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"f\n%CClientNotificationGameRecordingError
 (\r"i\n:CClientNotificationFamilySharingDeviceAuthorizationChanged
@@ -1697,6 +1699,7 @@ $\nY8O
 19CUtlQueueDeprecatedIiE
 19ParentalPlaytimeDay
 1A26b
+1\n-k_EClientNotificationType_ControllerConnected
 1\n-k_EClientNotificationType_OverlaySplashScreen
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
@@ -1968,6 +1971,7 @@ $\nY8O
 37CClientNotificationGameRecordingError
 37CClientNotificationGameRecordingStart
 37ParentalTemporaryPlaytimeRestrictions
+38CClientNotificationControllerConnected
 38CClientNotificationOverlaySplashScreen
 38CClientNotificationTimedTrialRemaining
 38CMsgSetBrowserViewDomainRequestMapping
@@ -1982,6 +1986,7 @@ $\nY8O
 40CClientNotificationClaimSteamDeckRewards
 40CClientNotificationHardwareSurveyPending
 40CRemotePlayTogetherGroupUpdateMsg_Player
+41CClientNotificationControllerDisconnected
 41CClientNotificationRemoteClientConnection
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgShowBrowserContextMenu_ContextCommand
@@ -2006,6 +2011,7 @@ $\nY8O
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n/k_EStreamControlControllerPersonalizationUpdate
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
+4\n0k_EClientNotificationType_ControllerDisconnected
 4\n0k_EClientNotificationType_ParentalFeatureRequest
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
