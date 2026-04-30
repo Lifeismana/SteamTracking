@@ -8006,8 +8006,11 @@ $steammessages_parental_objects.proto"
 0.0333
 0.050
 0.13.15.106
-0.15
 0.3.19
+0000000000000000000000000000000000000000
+00000000
+0000000000000000
+0.15
 0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -8049,19 +8052,11 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-00000000
-0000000000000000
 00000001
-1024
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
-1000
-10000
-1000000
-10000000
 0123456789
 0123456789.
 0123456789.:abcdefABCDEF
@@ -8219,6 +8214,11 @@ $steammessages_parental_objects.proto"
 100 127.0.0.1 stale
 100-continue
 100.64.0.0/10
+1000
+1024
+10000
+1000000
+10000000
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -11582,11 +11582,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16221,7 +16221,6 @@ $steammessages_parental_objects.proto"
 7\n\tdeveloper
 7\n\tenum_type
 7\n\tstats_udp
-7fgH
 7nY7m
 7v= DOL
 7~8A
@@ -41142,6 +41141,7 @@ Zulu
 \n\fvr_hmd_model
 \n\fwake_allowed
 \n\fwallet_state
+\n\fwindow_width
 \n\fwine_version
 \n\fwordban_list
 \n\fx_normalized
@@ -41728,6 +41728,7 @@ Zulu
 \n\rwebapi_key_id
 \n\rwebsite_title
 \n\rweighted_load
+\n\rwindow_height
 \n\rworkshop_file
 \n\tAppStatus
 \n\tBasicInfo
@@ -60385,7 +60386,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr 29 2026 22:17:59
+steam Apr 30 2026 19:54:52
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -62984,6 +62985,12 @@ winME
 winNT
 winVista
 winXP
+window_frame_offset_x
+window_frame_offset_y
+window_pixel_density
+window_position_x
+window_position_y
+windowed
 windows
 windows,
 windowsize

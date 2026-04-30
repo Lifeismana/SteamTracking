@@ -39,6 +39,7 @@
   Comment started here.
   Created %lldms ago, current wait %lldms for %s\n
   Created %lldms ago\n
+  Dongle Version: %u\n
   Expected :
   Ss=%d, Se=%d, Ah=%d, Al=%d
   attempted to delete %s - entire folder
@@ -4188,6 +4189,8 @@ ${LANGUAGE}
 )\n\vimage_types
 )haI
 )n/h%fPn
+)system\ControllerConnectNotificationSound
+)system\ControllerConnectNotificationToast
 )system\InGameOverlayAllowKMDriveOnWindows
 )zKIx+
 *%*/*O*U*_*e*k*m*s*
@@ -12661,7 +12664,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-60000000
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
@@ -12672,6 +12674,7 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -14500,7 +14503,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 29 2026 22:17:53
+Apr 30 2026 19:56:46
 April
 Arabic
 AreFilesInSubscriptionList
@@ -34001,6 +34004,7 @@ Zulu
 \n\fvr_supported
 \n\fwake_allowed
 \n\fwallet_state
+\n\fwindow_width
 \n\fwordban_list
 \n\fx_normalized
 \n\fxinput_index
@@ -34491,6 +34495,7 @@ Zulu
 \n\rwebapi_key_id
 \n\rwebsite_title
 \n\rweighted_load
+\n\rwindow_height
 \n\rworkshop_file
 \n\tAppStatus
 \n\tBasicInfo
@@ -34985,6 +34990,7 @@ Zulu
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \noxAV<+
 \ntfPB
+\nu\ne\nM\nC\n[\n9\n+\n
 \nzjZJ
 \p{Xan}
 \p{Xps}
@@ -38266,6 +38272,8 @@ dSAQuality
 dV22tN::
 dZ!2.
 dZK<),F8
+d\n$controllerconnect_notification_sound
+d\n$controllerconnect_notification_toast
 d\n%overlay_fps_counter_saturation_factor
 d`\XTPLHD@<840,($
 da_DK
@@ -52347,6 +52355,7 @@ sTmpSubdir[5 + pchFilename - pchSubdir - 1] == '\0'
 sUIL\s
 sVideoCardName
 sVideoDriverVersion
+sWmG
 s_CallbackTracker
 s_VecModuleAddressRanges
 s_bAllowStaticSymbolTable
@@ -56166,6 +56175,12 @@ winVista
 winXP
 window
 windowType
+window_frame_offset_x
+window_frame_offset_y
+window_pixel_density
+window_position_x
+window_position_y
+windowed
 windowid
 windows
 wired

@@ -4442,16 +4442,18 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
+0000000000000000000000000000000000000000
 0.06
 0/bu^U
 0/gge
-0000000000000000000000000000000000000000
 00000001
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00\fo
 01%3
 01%6
 01%66754&#"
+0123456789
+0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -4896,6 +4898,7 @@ ${FILENAME}
 17CSystemSuspendMsg
 17CUtlPriorityQueueIPN25SteamNetworkingSocketsLib8IThinkerENS0_11ThinkerLessENS0_15ThinkerSetIndexEE
 17StoreItem_Reviews
+18446744073709551615
 18CControllerOverlay
 18CFrameStatsListMsg
 18CGetCursorImageMsg
@@ -4930,6 +4933,8 @@ ${FILENAME}
 18StoreItem_Trailers
 196?
 198
+19:53:49
+19:54:52
 19CActivationCodeInfo
 19CClientHandshakeMsg
 19CClientMicroTxnInfo
@@ -5204,8 +5209,6 @@ ${FILENAME}
 21StoreItem_Screenshots
 21UserSystemInformation
 21\oi
-22:17:27
-22:17:35
 22AES_ECB_EncryptContext
 22AES_GCM_DecryptContext
 22AES_GCM_EncryptContext
@@ -5574,6 +5577,8 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
+32654.
+32655
 32655&
 32655&&
 326554&"
@@ -5588,6 +5593,7 @@ ${FILENAME}
 3267!5!&&#"
 3267&'^7l
 3267.
+32675
 32675#5!
 32675&&#"
 326754&
@@ -5595,6 +5601,7 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
+32677
 326=
 326B|
 327&
@@ -5603,10 +5610,7 @@ ${FILENAME}
 3275!5!
 3275#5!
 3276
-32654.
-32655
-32675
-32677
+327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
 32CMsgSteamDatagramP2PRoutes_Route
@@ -5977,10 +5981,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-4632
-467&&54632
 467.
+4632
 46632
+467&&54632
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6215,28 +6219,6 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
-663
-754.
-5467.
-5467
-6144
-6632
-6636
-6653
-6675
-6753
-6786
-7524
-7623.
-8192
-54632
-54663
-327675.
-532654.
-546632
-0123456789
-0123456789.
-18446744073709551615
 5467!
 5467#".
 5467#5!
@@ -6244,6 +6226,12 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
+5467.
+5467
+54632
+54663
+532654.
+546632
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6434,6 +6422,7 @@ ${FILENAME}
 6. makr
 600MiD
 60>T
+6144
 61iz
 62d&
 63Y>
@@ -6449,13 +6438,20 @@ ${FILENAME}
 65R=
 65c\r
 66(YP_
+663
+6632
+6636
+6653
 6654#"
 6654&#"
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+6675
 67!5!
 675!
+6753
 6754&#"
 67547&55&'7
+6786
 67Zc
 68Jy
 699[
@@ -6643,11 +6639,14 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
+754.
+7524
 74632
 75#5!
 75pRD
 75th
 76&'3
+7623.
 7664&#"
 76653
 76654&#"
@@ -6840,6 +6839,7 @@ ${FILENAME}
 8.Vi
 8/A0
 807R
+8192
 81_2;
 82Bz
 82\n:XPH
@@ -8696,7 +8696,7 @@ Appuyez sur F8 ou sur RETOUR+X pour enregistrer une capture d'
 Appuyez sur F8 ou sur START+X pour enregistrer une capture d'
 Appuyez sur F8 pour enregistrer une capture d'
 Appuyez sur une nouvelle touche
-Apr 29 2026
+Apr 30 2026
 April
 AqJ/S\v
 Arabic
@@ -23026,6 +23026,7 @@ Z~5pW3Y
 \n\ftrailer_name
 \n\fuse_age_gate
 \n\fvirtual_port
+\n\fwindow_width
 \n\fx_normalized
 \n\fy_normalized
 \n\n"CMsgSteamDatagramLinkLifetimeStats
@@ -31515,7 +31516,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib Apr 29 2026 22:17:34
+lib Apr 30 2026 19:53:58
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -39134,6 +39135,12 @@ win32_merger
 win32_name_converter
 win32_splitter
 win32_unload
+window_frame_offset_x
+window_frame_offset_y
+window_pixel_density
+window_position_x
+window_position_y
+windowed
 windows
 with a type that does not implement MergeFrom. This is unsafe;
 wiz-

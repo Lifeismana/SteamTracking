@@ -2499,6 +2499,10 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
+19:53:49
+19:54:13
+19:54:14
+19:54:17
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -2578,10 +2582,6 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
-22:17:27
-22:17:41
-22:17:42
-22:17:44
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2782,10 +2782,10 @@ $ffn
 6*Fc7
 6-nn
 6144
+65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
-65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -3399,7 +3399,7 @@ Application transferred too few scanlines
 Application transferred too many scanlines
 Applying update...
 Approved Friends
-Apr 29 2026
+Apr 30 2026
 April
 Arabic
 Arithmetic table 0x%02x was not defined
@@ -9292,7 +9292,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Apr 29 2026 22:17:38
+Startup - updater built Apr 30 2026 19:54:13
 State
 StaticFileWriterThread()
 Steam

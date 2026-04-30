@@ -375,11 +375,11 @@ $ORIGIN
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
+19:53:49
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
-22:17:27
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -396,7 +396,7 @@ ALL_PROXY
 ASCII
 ASCII//TRANSLIT
 Anonymous mutex cannot have bAllAccess == true
-Apr 29 2026
+Apr 30 2026
 April
 Assert
 Assert( %s ):%s:%d\n
@@ -833,6 +833,7 @@ XXXXXX
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [abi:
+\frf9
 \nFATAL: Steam cannot run. Please delete some %s* directories or change their ownership to the local user.\n
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n

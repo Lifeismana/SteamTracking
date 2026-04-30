@@ -10333,6 +10333,7 @@
           ],
         });
       }
+      const _ = 2e4;
       function _(_) {
         const {
             rgProposals: _,
@@ -10511,10 +10512,10 @@
             )?.amount;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            Boolean(_ > 8e3) &&
+            Boolean(_ > _) &&
               (0, _.jsxs)("div", {
                 className: _.AboveAutoPublish,
-                children: ["USD Price $", _(_), " is above $80 USD Threshold"],
+                children: ["USD Price $", _(_), " is above $200 USD Threshold"],
               }),
             Boolean(_ && _ > 2 * _) &&
               (0, _.jsxs)("div", {
@@ -10706,7 +10707,7 @@
           const _ = _(_);
           return (0, _.jsxs)(_.Fragment, {
             children: [
-              Boolean(_ > 8e3) &&
+              Boolean(_ > _) &&
                 (0, _.jsxs)("div", {
                   className: _.AutoPublishCeiling,
                   children: [

@@ -2150,6 +2150,7 @@
     "NotificationsSettings_Column_Notification": "Show Toast",
     "NotificationsSettings_Column_Sound": "Play Sound",
     "NotificationsSettings_Notification_UnlockAchievement": "When I unlock an achievement",
+    "NotificationsSettings_Notification_ControllerConnect": "When I connect or disconnect a controller",
     "NotificationsSettings_Notification_FriendJoins": "When a friend joins a game",
     "NotificationsSettings_Notification_FriendOnline": "When a friend comes online",
     "NotificationsSettings_Notification_ChatMessage": "When I receive a direct chat message",

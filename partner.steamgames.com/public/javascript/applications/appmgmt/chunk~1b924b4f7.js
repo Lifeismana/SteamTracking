@@ -314,7 +314,7 @@
             })
           : null;
       }
-      const v = 2.25,
+      const v = 2,
         w = 0.5;
       function T(e, n) {
         const {
