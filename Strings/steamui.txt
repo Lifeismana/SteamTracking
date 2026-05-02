@@ -5402,6 +5402,8 @@ ${LANGUAGE}
 ,steammessages_unified_base.steamclient.proto"b\n0CAccountHardware_RegisterSteamController_Request
 ,steammessages_unified_base.steamclient.proto"i\n4CContentServerDirectory_ConnectedSteamPipeServerInfo
 ,steammessages_unified_base.steamclient.proto"y\n
+,system\ControllerLowBatteryNotificationSound
+,system\ControllerLowBatteryNotificationToast
 ,value:
 - Timing for jumping packet: [present=%llu][capture=%llu][pipe=%llu][convert=%llu][encode=%llu]
 -"ke6
@@ -12664,6 +12666,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+60000000
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
@@ -12674,7 +12677,6 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -14503,7 +14505,6 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 30 2026 19:56:46
 April
 Arabic
 AreFilesInSubscriptionList
@@ -24281,6 +24282,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
+May  2 2026 20:11:32
 MaybeAllocateAligned cannot fail here.
 MbP?
 Media
@@ -34990,7 +34992,6 @@ Zulu
 \nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
 \noxAV<+
 \ntfPB
-\nu\ne\nM\nC\n[\n9\n+\n
 \nzjZJ
 \p{Xan}
 \p{Xps}
@@ -37204,6 +37205,7 @@ chinatelecom
 chmod
 choose_directory
 chord.vdf
+chord_*.vdf
 chord_neptune.vdf
 chose_local_files
 chown
@@ -46987,6 +46989,8 @@ lNrZ
 lRecorded >= m_lFirstAudioPTS
 l\n NotifyGyroQuaternionStateChanged
 l\n!system_enable_low_power_downloads
+l\n)controller_low_battery_notification_sound
+l\n)controller_low_battery_notification_toast
 l\n\npromotions
 l\vDZ2\fs
 l`UROM=;98310-*)(&$"
@@ -47286,7 +47290,8 @@ local://controller_base/basicui_controller_legion_go_s.vdf
 local://controller_base/basicui_gamepad.vdf
 local://controller_base/basicui_neptune.vdf
 local://controller_base/chord%s
-local://controller_base/chord_controller_triton.vdf
+local://controller_base/chord_controller_neptune.vdf
+local://controller_base/chord_triton.vdf
 local://controller_base/desktop_neptune.vdf
 local://controller_base/desktop_steamcontroller_gordon.vdf
 local://controller_base/empty.vdf
@@ -52101,6 +52106,7 @@ return_previews
 return_reactions
 return_short_description
 return_vote_data
+reupload_requested
 reused
 reverse
 reverse_diamond_button_layout
@@ -52355,7 +52361,6 @@ sTmpSubdir[5 + pchFilename - pchSubdir - 1] == '\0'
 sUIL\s
 sVideoCardName
 sVideoDriverVersion
-sWmG
 s_CallbackTracker
 s_VecModuleAddressRanges
 s_bAllowStaticSymbolTable

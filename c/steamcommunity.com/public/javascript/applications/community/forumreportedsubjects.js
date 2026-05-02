@@ -6,6 +6,7 @@
         FloatingSubjectListCtn: "_2Z4y2kIderxN4_alSJYYh8",
         SplitHeader: "_2B88BA7YbropfCtjJdn1yD",
         PopoutButton: "_3cujMozXvwTlTehPQtPJ7F",
+        ReportedSubjectRow: "_32u0ZJiVZP0gaSLs5sdhUy",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -17,6 +18,7 @@
           useCommentThread: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -96,6 +98,15 @@
         });
       }
       function _(_) {
+        for (;;) {
+          const _ = _.indexOf("[/quote]");
+          if (-1 === _) break;
+          _ = _.slice(_ + 8);
+        }
+        return _.slice(0, 35);
+      }
+      function _(_) {
+        var _, _;
         const { subject: _ } = _,
           _ = _(_.subject),
           _ = _(_.clanSteamId, 7, _.forumId, _.subject_group_id);
@@ -103,15 +114,19 @@
           return null;
         let _ = null;
         if (("0" === _.subject_id && (_ = "Topic"), null === _ && _.isSuccess))
-          for (const _ of _.data.comments)
+          for (const _ of null !== (_ = _.data.comments) && void 0 !== _
+            ? _
+            : [])
             if (_.gidcomment === _.subject_id) {
-              _ = _.text.slice(0, 35) + (_.text.length > 35 ? "..." : "");
+              _ = _(_.text);
               break;
             }
         if (null === _ && _.isSuccess)
-          for (const _ of _.data.deleted_comments)
+          for (const _ of null !== (_ = _.data.deleted_comments) && void 0 !== _
+            ? _
+            : [])
             if (_.gidcomment === _.subject_id) {
-              _ = _.text.slice(0, 35) + (_.text.length > 35 ? "..." : "");
+              _ = _(_.text);
               break;
             }
         null === _ && (_ = "[Comment]");
@@ -120,7 +135,7 @@
             ? `#forum_op_${_.subject_group_id}`
             : `#c${_.subject_id}`;
         return (0, _.jsx)("div", {
-          className: "moderatorToolLink",
+          className: (0, _._)("moderatorToolLink", _.ReportedSubjectRow),
           children: (0, _.jsxs)("a", {
             href: _,
             children: [

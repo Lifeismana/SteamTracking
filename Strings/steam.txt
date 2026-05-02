@@ -2425,8 +2425,6 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
-1536
-15000
 155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
@@ -2455,6 +2453,8 @@ $ffn
 16ITCPHostCallback
 16JobStatsBucket_t
 172.16
+1536
+15000
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2499,10 +2499,6 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
-19:53:49
-19:54:13
-19:54:14
-19:54:17
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -2556,6 +2552,10 @@ $ffn
 2048
 208.64.200.0/22
 208.78.164.0/22
+20:11:00
+20:11:24
+20:11:26
+20:11:29
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2781,11 +2781,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-6144
-65536
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -3399,7 +3399,6 @@ Application transferred too few scanlines
 Application transferred too many scanlines
 Applying update...
 Approved Friends
-Apr 30 2026
 April
 Arabic
 Arithmetic table 0x%02x was not defined
@@ -7282,6 +7281,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
+May  2 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -9292,7 +9292,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Apr 30 2026 19:54:13
+Startup - updater built May  2 2026 20:11:18
 State
 StaticFileWriterThread()
 Steam

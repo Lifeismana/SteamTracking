@@ -3986,6 +3986,7 @@ UserStatus
 Uyghur
 Uzbek
 V4L2VideoDecode
+V=N)C
 VAC beta
 VALVE
 VProfInternalEnterScopeCurrentThread
@@ -4299,7 +4300,6 @@ Zulu
 \n\vunlock_code
 \n\vurl_rewrite
 \n\vwindow_icon
-\rYW^k
 \r\n\tCODE_SIZE
 \r\n\tJS_NORMAL
 \r\n\tJS_NUMBER

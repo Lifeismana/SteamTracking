@@ -8006,11 +8006,8 @@ $steammessages_parental_objects.proto"
 0.0333
 0.050
 0.13.15.106
-0.3.19
-0000000000000000000000000000000000000000
-00000000
-0000000000000000
 0.15
+0.3.19
 0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -8052,6 +8049,9 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+0000000000000000000000000000000000000000
+00000000
+0000000000000000
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
@@ -8157,6 +8157,7 @@ $steammessages_parental_objects.proto"
 0x%llX,
 0x%x 0x%x
 0x2808/0x1015,
+0x28DE/0x11E0,
 0|t?L
 0|t?uj
 1 == pBeaconData->m_vecLocations.Count()
@@ -13616,6 +13617,7 @@ $steammessages_parental_objects.proto"
 32CRemoteClient_GetReplies_Request
 32CRemotePlayTogether_Notification
 32CSteamControllerChellAbstraction
+32CSteamDongleDisconnectedWorkItem
 32CSteamOSManager_GetState_Request
 32CSteamOS_SetUserPassword_Request
 32CStorageDeviceManagerBlockDevice
@@ -13779,7 +13781,6 @@ $steammessages_parental_objects.proto"
 33CSystemManager_WriteFile_Response
 33CTimedTrial_ResetPlaytime_Request
 33CTransportSignalMsg_WebRTCMessage
-33CTritonDongleDisconnectedWorkItem
 33CVDFControllerMappingErrorHandler
 33CVideo_ClientGetVideoURL_Response
 33CVideo_GetVideoBookmarks_Response
@@ -25096,7 +25097,6 @@ Failed to finalize manifest
 Failed to find all chunks for %s (%llu/%llu, flags %u)
 Failed to find chunk in file %s!
 Failed to find configset for serial: %s\n
-Failed to find configset when setting saved binding\n
 Failed to find delta sha reference in file %s!
 Failed to find time in logfile name
 Failed to find user in m_vecPUsers on DisconnectUser
@@ -39798,6 +39798,7 @@ Zulu
 [AppID %u]     Watching file %s
 [AppID %u] %s %s for file %s
 [AppID %u] %s -> SetFileLocalChanges(%s) - pending changes in cloud, creating a conflict
+[AppID %u] %s Server has requested re-upload, setting local changes. Local/Remote SHA: %s / %s, Timestamps: %lld / %lld
 [AppID %u] %s already marked as conflicting. Local/Remote SHA: %s / %s, Local/Remote persist state: %d / %d
 [AppID %u] %s already marked as conflicting. Remote state 'forgotten', setting to 'local changes'
 [AppID %u] %s has local changes but mismatch - creating a conflict. Local/Remote SHA: %s / %s, Timestamps: %lld / %lld, persist state: %d / %d
@@ -50315,6 +50316,7 @@ k_EFamilyGroupRole_Adult
 k_EFamilyGroupRole_Child
 k_EFamilyGroupRole_MAX
 k_EFamilyGroupRole_None
+k_EFileRemotePersistStatePersisted == eRemotePersistState
 k_EFileTransferNone == m_eFileTransferMode
 k_EFileTransferReceive == m_eFileTransferMode
 k_EFileTransferReceive == m_eFileTransferMode || k_EFileTransferReceiveMessagelessAsync == m_eFileTransferMode || k_EFileTransferReceiveMessageless == m_eFileTransferMode
@@ -52565,9 +52567,9 @@ loopback
 lost network device
 lost rgb to gray
 lost/gained channels
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1609
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1759
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1964
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1633
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1786
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1991
 low-pri yield - /data/src/clientdll/appdatacache.cpp:884
 low-pri yield - /data/src/clientdll/autocloud.cpp:591
 low-pri yield - /data/src/clientdll/autocloud.cpp:670
@@ -58902,6 +58904,7 @@ return_previews
 return_reactions
 return_short_description
 return_vote_data
+reupload_requested
 reused
 reverse
 reverse_button_diamond_layout_v2
@@ -60386,7 +60389,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr 30 2026 19:54:52
+steam May  2 2026 20:13:47
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

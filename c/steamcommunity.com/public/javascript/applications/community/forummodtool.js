@@ -890,7 +890,6 @@
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        var _;
         const [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)("main"),
           [_, _] = (0, _.useState)(!1),
@@ -918,6 +917,15 @@
               },
             }));
         var _;
+        let _ = 0;
+        if (_.isSuccess) {
+          const _ = _.data;
+          void 0 !== _.pref_primary_language && -1 !== _.pref_primary_language
+            ? (_ = _.pref_primary_language)
+            : void 0 !== _.last_logon_langauge &&
+              -1 !== _.last_logon_langauge &&
+              (_ = _.last_logon_langauge);
+        }
         const _ = (function (_, _) {
           const _ = (0, _._)();
           return (0, _._)({
@@ -935,12 +943,7 @@
             },
             enabled: void 0 !== _,
           });
-        })(
-          (0, _._)(_),
-          null === (_ = _.data) || void 0 === _
-            ? void 0
-            : _.pref_primary_language,
-        );
+        })((0, _._)(_), _);
         (0, _.useEffect)(() => {
           var _, _, _, _, _, _, _;
           _(
@@ -970,7 +973,7 @@
               ? _
               : "",
           );
-        }, [_.data]);
+        }, [_.data, _.data]);
         const _ = !1,
           _ = !1,
           _ = !1;
@@ -980,7 +983,7 @@
               (0, _.jsx)(_, {
                 reasons: _._,
                 onSelect: (_) => {
-                  _(_), _("main");
+                  __webpack_require__(_), _("main");
                 },
               }),
             "main" === _ &&
@@ -1219,35 +1222,35 @@
                           );
                           const _ = [];
                           _ &&
-                            _.push({
+                            __webpack_require__.push({
                               sanction: 1,
                             }),
                             _ &&
-                              _.push({
+                              __webpack_require__.push({
                                 sanction: 8,
                               }),
                             _ &&
-                              _.push({
+                              __webpack_require__.push({
                                 sanction: 3,
                                 days: _,
                               }),
                             _ &&
-                              _.push({
+                              __webpack_require__.push({
                                 sanction: 2,
                                 days: _,
                               }),
                             _ &&
-                              _.push({
+                              __webpack_require__.push({
                                 sanction: 5,
                                 days: _,
                               }),
                             _ &&
-                              _.push({
+                              __webpack_require__.push({
                                 sanction: 4,
                                 days: -1,
                               }),
                             _ &&
-                              _.push({
+                              __webpack_require__.push({
                                 sanction: 7,
                               }),
                             _.onOK(_, _.trim(), _);

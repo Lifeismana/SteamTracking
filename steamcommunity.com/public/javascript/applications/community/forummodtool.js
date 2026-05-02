@@ -70,8 +70,8 @@
         d = n(28395),
         m = n(63987),
         p = n(63275),
-        h = n(30770),
-        g = n.n(h),
+        g = n(30770),
+        h = n.n(g),
         j = n(45699),
         B = n(76217);
       function A(e) {
@@ -79,13 +79,13 @@
           [i, a] = (0, s.useState)(10),
           o = (0, u.lY)(t.subject_type, t.subject_group_id, t.subject_id);
         return (0, r.jsxs)(B.Z, {
-          className: g().EscalateSubjectDialogCtn,
+          className: h().EscalateSubjectDialogCtn,
           children: [
             (0, r.jsx)(B.Z, {
               children: d.T.Localize("#moderation_escalation_description"),
             }),
             (0, r.jsxs)("select", {
-              className: g().EscalationLevelSelect,
+              className: h().EscalationLevelSelect,
               value: i,
               onChange: (e) => a(parseInt(e.target.value)),
               children: [
@@ -106,7 +106,7 @@
               ],
             }),
             (0, r.jsxs)(B.Z, {
-              className: g().BottomButtons,
+              className: h().BottomButtons,
               children: [
                 (0, r.jsx)(j.fu, {
                   onClick: async () => {
@@ -126,8 +126,8 @@
       var v = n(98580),
         _ = n.n(v),
         x = n(55388),
-        b = n(59884),
-        f = n.n(b);
+        f = n(59884),
+        b = n.n(f);
       function y(e) {
         const [t, n] = (0, s.useState)(null),
           [i, a] = (0, s.useState)([]),
@@ -135,8 +135,8 @@
           [c, u] = (0, s.useState)(!1);
         let d = e.reasons;
         for (const e of i) d = d[e].children;
-        const h = null !== t ? (0, m.V$)(t) : null,
-          g = null !== t ? (0, m.GA)(t) : null,
+        const g = null !== t ? (0, m.V$)(t) : null,
+          h = null !== t ? (0, m.GA)(t) : null,
           A = () => {
             null !== t
               ? n(null)
@@ -150,7 +150,7 @@
               (0, r.jsxs)(r.Fragment, {
                 children: [
                   (0, r.jsx)("div", {
-                    className: f().BlockList,
+                    className: b().BlockList,
                     children: d.map((t, s) => {
                       const o = () => {
                         if ((0, m.Ju)(t)) {
@@ -168,7 +168,7 @@
                         ? (0, r.jsx)(
                             j.Ii,
                             {
-                              className: f().BlockListItem,
+                              className: b().BlockListItem,
                               href: t.url,
                               children: p.u.Localize(t.strLocToken),
                             },
@@ -178,7 +178,7 @@
                             B.Z,
                             {
                               onActivate: o,
-                              className: f().BlockListItem,
+                              className: b().BlockListItem,
                               children: [
                                 (0, r.jsx)("span", {
                                   children: (0, m.Ju)(t)
@@ -198,13 +198,13 @@
               }),
             null !== t &&
               (0, r.jsxs)("div", {
-                className: f().BlockList,
+                className: b().BlockList,
                 children: [
                   (0, r.jsx)("div", {
-                    className: f().BlockListItem,
+                    className: b().BlockListItem,
                     children: (0, m.Jt)(t),
                   }),
-                  null !== h &&
+                  null !== g &&
                     (0, r.jsxs)("label", {
                       children: [
                         (0, r.jsx)("input", {
@@ -215,7 +215,7 @@
                         " Targeted at women",
                       ],
                     }),
-                  null !== g &&
+                  null !== h &&
                     (0, r.jsxs)("label", {
                       children: [
                         (0, r.jsx)("input", {
@@ -227,7 +227,7 @@
                       ],
                     }),
                   (0, r.jsxs)("div", {
-                    className: f().BottomButtons,
+                    className: b().BottomButtons,
                     children: [
                       (0, r.jsx)(x.n9, { onClick: A, children: "Back" }),
                       (0, r.jsx)(x.n9, {
@@ -818,25 +818,24 @@
         })(M || (M = {}));
       var D = n(23809);
       function K(e) {
-        var t;
-        const [n, i] = (0, s.useState)(null),
-          [o, l] = (0, s.useState)("main"),
-          [c, u] = (0, s.useState)(!1),
-          [p, h] = (0, s.useState)(!1),
-          [g, j] = (0, s.useState)(null),
-          [A, v] = (0, s.useState)(null),
-          [b, f] = (0, s.useState)(null),
-          [M, z] = (0, s.useState)(!1),
-          [U, k] = (0, s.useState)(!1),
-          [Q, L] = (0, s.useState)(""),
-          q = c || p || g || A || b || M || U,
-          E =
-            ((O = e.authorSteamId),
+        const [t, n] = (0, s.useState)(null),
+          [i, o] = (0, s.useState)("main"),
+          [l, c] = (0, s.useState)(!1),
+          [u, p] = (0, s.useState)(!1),
+          [g, h] = (0, s.useState)(null),
+          [j, A] = (0, s.useState)(null),
+          [v, f] = (0, s.useState)(null),
+          [b, M] = (0, s.useState)(!1),
+          [z, U] = (0, s.useState)(!1),
+          [k, Q] = (0, s.useState)(""),
+          L = l || u || g || j || v || b || z,
+          q =
+            ((E = e.authorSteamId),
             (0, T.I)({
-              queryKey: ["get_primary_language_for_user", O],
+              queryKey: ["get_primary_language_for_user", E],
               queryFn: async () => {
                 const e = await fetch(
-                    `${a.TS.COMMUNITY_BASE_URL}profiles/${O}/ajaxlanguagepreferences`,
+                    `${a.TS.COMMUNITY_BASE_URL}profiles/${E}/ajaxlanguagepreferences`,
                   ),
                   t = await e.json();
                 if (1 === t.success) return t.preferences;
@@ -845,7 +844,16 @@
                 );
               },
             }));
-        var O;
+        var E;
+        let O = 0;
+        if (q.isSuccess) {
+          const e = q.data;
+          void 0 !== e.pref_primary_language && -1 !== e.pref_primary_language
+            ? (O = e.pref_primary_language)
+            : void 0 !== e.last_logon_langauge &&
+              -1 !== e.last_logon_langauge &&
+              (O = e.last_logon_langauge);
+        }
         const N = (function (e, t) {
           const n = (0, D.KV)();
           return (0, T.I)({
@@ -863,15 +871,10 @@
             },
             enabled: void 0 !== e,
           });
-        })(
-          (0, m.AH)(n),
-          null === (t = E.data) || void 0 === t
-            ? void 0
-            : t.pref_primary_language,
-        );
+        })((0, m.AH)(t), O);
         (0, s.useEffect)(() => {
           var e, t, n, r, i, s, a;
-          L(
+          Q(
             null !==
               (a =
                 null !==
@@ -898,20 +901,20 @@
               ? a
               : "",
           );
-        }, [N.data]);
+        }, [N.data, q.data]);
         const W = !1,
           K = !1,
           P = !1;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            "reason" === o &&
+            "reason" === i &&
               (0, r.jsx)(y, {
                 reasons: m.UL,
                 onSelect: (e) => {
-                  i(e), l("main");
+                  n(e), o("main");
                 },
               }),
-            "main" === o &&
+            "main" === i &&
               (0, r.jsxs)(B.Z, {
                 children: [
                   (0, r.jsxs)(B.Z, {
@@ -924,21 +927,21 @@
                       (0, r.jsx)("button", {
                         id: "reason",
                         className: _().ClickableText,
-                        onClick: () => l("reason"),
+                        onClick: () => o("reason"),
                         children:
-                          null === n
+                          null === t
                             ? d.T.Localize(
                                 "#commentsanctiondialog_selectreason",
                               )
-                            : (0, m.Jt)(n),
+                            : (0, m.Jt)(t),
                       }),
                       (0, r.jsxs)("label", {
                         className: _().OneColumn,
                         children: [
                           (0, r.jsx)("input", {
                             type: "checkbox",
-                            checked: c,
-                            onChange: (e) => u(e.target.checked),
+                            checked: l,
+                            onChange: (e) => c(e.target.checked),
                           }),
                           " Delete",
                         ],
@@ -948,8 +951,8 @@
                         children: [
                           (0, r.jsx)("input", {
                             type: "checkbox",
-                            checked: p,
-                            onChange: (e) => h(e.target.checked),
+                            checked: u,
+                            onChange: (e) => p(e.target.checked),
                           }),
                           "Issue Warning",
                         ],
@@ -961,7 +964,7 @@
                       (0, r.jsxs)("select", {
                         id: "hubban",
                         onChange: (e) =>
-                          j(
+                          h(
                             "0" === e.target.value
                               ? null
                               : parseInt(e.target.value),
@@ -1014,12 +1017,12 @@
                       (0, r.jsxs)("select", {
                         id: "communityban",
                         onChange: (e) =>
-                          v(
+                          A(
                             "0" === e.target.value
                               ? null
                               : parseInt(e.target.value),
                           ),
-                        value: null != A ? A : 0,
+                        value: null != j ? j : 0,
                         children: [
                           (0, r.jsx)("option", {
                             value: "0",
@@ -1066,14 +1069,14 @@
                       }),
                       (0, r.jsxs)("select", {
                         id: "deletecomments",
-                        disabled: U,
+                        disabled: z,
                         onChange: (e) =>
                           f(
                             "-1" === e.target.value
                               ? null
                               : parseInt(e.target.value),
                           ),
-                        value: null != b ? b : -1,
+                        value: null != v ? v : -1,
                         children: [
                           (0, r.jsx)("option", {
                             value: "-1",
@@ -1106,8 +1109,8 @@
                         children: [
                           (0, r.jsx)("input", {
                             type: "checkbox",
-                            checked: M,
-                            onChange: (e) => z(e.target.checked),
+                            checked: b,
+                            onChange: (e) => M(e.target.checked),
                           }),
                           " Permanent trade ban",
                         ],
@@ -1118,8 +1121,8 @@
                         children: [
                           (0, r.jsx)("input", {
                             type: "checkbox",
-                            checked: U,
-                            onChange: (e) => k(e.target.checked),
+                            checked: z,
+                            onChange: (e) => U(e.target.checked),
                           }),
                           " Mark as suspicious",
                         ],
@@ -1127,8 +1130,8 @@
                       (0, r.jsx)("textarea", {
                         className: (0, w.A)(_().OneColumn, _().MessageTextArea),
                         placeholder: "Message to send",
-                        value: Q,
-                        onChange: (e) => L(e.target.value),
+                        value: k,
+                        onChange: (e) => Q(e.target.value),
                       }),
                     ],
                   }),
@@ -1142,20 +1145,20 @@
                       (0, r.jsx)(x.n9, {
                         onClick: () => {
                           (0, C.wT)(
-                            null !== n,
+                            null !== t,
                             "eReason must be non-null to sanction",
                           );
-                          const t = [];
-                          c && t.push({ sanction: 1 }),
-                            p && t.push({ sanction: 8 }),
-                            g && t.push({ sanction: 3, days: g }),
-                            A && t.push({ sanction: 2, days: A }),
-                            b && t.push({ sanction: 5, days: b }),
-                            M && t.push({ sanction: 4, days: -1 }),
-                            U && t.push({ sanction: 7 }),
-                            e.onOK(t, Q.trim(), n);
+                          const n = [];
+                          l && n.push({ sanction: 1 }),
+                            u && n.push({ sanction: 8 }),
+                            g && n.push({ sanction: 3, days: g }),
+                            j && n.push({ sanction: 2, days: j }),
+                            v && n.push({ sanction: 5, days: v }),
+                            b && n.push({ sanction: 4, days: -1 }),
+                            z && n.push({ sanction: 7 }),
+                            e.onOK(n, k.trim(), t);
                         },
-                        disabled: null === n || !q,
+                        disabled: null === t || !L,
                         children: "Sanction",
                       }),
                     ],
@@ -1267,7 +1270,7 @@
           size: m,
           ...p
         } = e;
-        let h = (0, oe.t)(
+        let g = (0, oe.t)(
           null === (t = c.public_data) || void 0 === t
             ? void 0
             : t.sha_digest_avatar,
@@ -1277,9 +1280,9 @@
           (null === (n = null == u ? void 0 : u.image_small) || void 0 === n
             ? void 0
             : n.length) &&
-            (h = re.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + u.image_small),
+            (g = re.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + u.image_small),
           (0, r.jsx)(le, {
-            avatarURL: h,
+            avatarURL: g,
             size: m,
             isOnline:
               1 ===
@@ -1422,7 +1425,7 @@
                                   : s.entries) || void 0 === a
                               ? void 0
                               : a.map((e) =>
-                                  (0, r.jsx)(he, { entry: e }, e.timestamp),
+                                  (0, r.jsx)(ge, { entry: e }, e.timestamp),
                                 )),
                         ],
                       }),
@@ -1432,7 +1435,7 @@
             }),
         });
       }
-      function he(e) {
+      function ge(e) {
         var t, n;
         const { entry: i } = e,
           s = (0, Z.jn)(i.actor_steamid);
@@ -1472,7 +1475,7 @@
                   ],
                 }),
                 (0, r.jsx)("td", {
-                  children: (0, r.jsx)(ge, {
+                  children: (0, r.jsx)(he, {
                     eAction: i.action,
                     jsonData: i.additional_json_data,
                   }),
@@ -1481,7 +1484,7 @@
             })
           : null;
       }
-      function ge(e) {
+      function he(e) {
         const { eAction: t, jsonData: n } = e;
         let i = {};
         switch ((n && (i = JSON.parse(n)), t)) {
@@ -1688,10 +1691,10 @@
           });
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            t && (0, r.jsx)(fe, { onClose: () => n(!1), ...e, subject: l }),
+            t && (0, r.jsx)(be, { onClose: () => n(!1), ...e, subject: l }),
             l &&
               (0, r.jsx)(i.Gq, {
-                toolTipContent: (0, r.jsx)(be, { subject: l }),
+                toolTipContent: (0, r.jsx)(fe, { subject: l }),
                 direction: "bottom",
                 nDelayShowMS: 0,
                 children: m,
@@ -1700,7 +1703,7 @@
           ],
         });
       }
-      function be(e) {
+      function fe(e) {
         const { subject: t } = e;
         if (!t || !t.reports) return null;
         const n = (0, G.D5)(t.reports, (e) => e.report_reason);
@@ -1728,7 +1731,7 @@
           })
         );
       }
-      function fe(e) {
+      function be(e) {
         var t, n;
         const { subject: i } = e,
           [a, u] = (0, s.useState)("main"),
@@ -1749,12 +1752,12 @@
               }),
             },
           ];
-        let h = 0,
-          g = 0;
+        let g = 0,
+          h = 0;
         if (i)
           for (const e of i.reports)
-            e.time_resolved && !e.time_disputed && h++,
-              e.time_dispute_resolved && g++;
+            e.time_resolved && !e.time_disputed && g++,
+              e.time_dispute_resolved && h++;
         return (0, r.jsx)(c.w, {
           onlyPopoutIfNeeded: !0,
           popupHeight: 340,
@@ -1789,7 +1792,7 @@
                                     ? t
                                     : 0,
                                   " unresolved / ",
-                                  h,
+                                  g,
                                   " resolved / ",
                                   null !==
                                     (n =
@@ -1800,7 +1803,7 @@
                                     ? n
                                     : 0,
                                   " disputed / ",
-                                  g,
+                                  h,
                                   " disputes resolved",
                                 ],
                               }),
