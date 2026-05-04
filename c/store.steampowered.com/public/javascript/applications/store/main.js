@@ -272,6 +272,7 @@
         FeaturedHardware: "_23ZVj5bpOrPKV-d5CWG7lu",
         TitleContainer: "_2Cc-FLjIFWZwBaGz0TSrW8",
         Image: "_2YW7iSUhkhAU2OZIFBgSbN",
+        Icon: "hlEGLU-ZscbJacgSMROK-",
         Title: "_11IYP42PAMrnzCjJnoaZAH",
         NoSectionTitleSpacer: "_1Fqo2kNzNurFUNgfiAt636",
         HardwareLinkMargin: "_2R0q5t8YlHVQKecbX-loln",
@@ -78345,7 +78346,13 @@
           "images/applications/store/steam_deck.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/hwFamilyMenu.png?v=valveisgoodatcaching",
+          "images/applications/store/steam_controller.png?v=valveisgoodatcaching",
+        _ =
+          __webpack_require__._ +
+          "images/applications/store/steam_machine.png?v=valveisgoodatcaching",
+        _ =
+          __webpack_require__._ +
+          "images/applications/store/steam_frame.png?v=valveisgoodatcaching",
         _ = {
           appid: 1675200,
         },
@@ -78357,6 +78364,15 @@
         },
         _ = {
           packageid: 354231,
+        },
+        _ = {
+          appid: 4165870,
+        },
+        _ = {
+          appid: 4165910,
+        },
+        _ = {
+          appid: 4165890,
         },
         _ = [
           "AT",
@@ -78415,11 +78431,22 @@
       }
       function _() {
         return (
-          (0, _._)(_), (0, _._)(_), (0, _._)(_), (0, _._)(_), (0, _._)(), null
+          (0, _._)(_),
+          (0, _._)(_),
+          (0, _._)(_),
+          (0, _._)(_),
+          (0, _._)(_),
+          (0, _._)(_),
+          (0, _._)(_),
+          (0, _._)(),
+          null
         );
       }
       function _() {
         const { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = _(),
@@ -78427,34 +78454,56 @@
             {
               storeItem: _ ? _ : void 0,
               image: (0, _._)(_),
+              icon: (0, _._)(
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAetJREFUeAHtme1xwjAMhhWu/0s38Ah0g4zQDZoNoBNAN2gngE5QNiDdoBsknaBhAlcC+84EmRZ+9Ez8PnfCTiScWP5SbCIAAAAAAAAAAABki7V2xtLY4dOwPPp6F67yFSdLyounoihevAMaTgzlRccOuPMOsHQ+LcuK0qAivQFXtH9PVc8O2NWf7GVsKBHkXZT3Wwb6UquA6EaRMjuWBcs9S0nptPQ5fAb57qSl4pyJYjO7kh7w7dLGtbwJ9E2/B/gC1K6jPKhJ3AFzd20CR3imfZ1ca0OgPfGsmhKG57Rnl7acrANVy/deA13tFZoDxhTHUMJIlw8uw7y0unE2Ur9J/4+2N4aMUvjEXscc8B50/7l0fTd0m54uOgdYZ1wG+tIej6lBLIM3kTINy8ZeFB8lQxfJHxBzwBCouAElFtiyzGNGQ3aATHar34xGlDlwAGUOHECZo60Csmaulfsyqz7QdVDT8TeND4HNkXUvQIqumS6UTD0S3Jywq/qR4LlDoKOBgUmQMgcOcOlfx/aYBoZfBuWrqXR5mSm/FNtbOtxJkV2WitIgbBjZuJH9v61iNw3ytfz4g5GSk2SWtX+i4v3Bt90Q4ExN+3OAXFhI5SVThHddl5aT05KGSU37yn8QAAAAAAAAAAAAQK78AAT+RfVfmgXsAAAAAElFTkSuQmCC",
+              ),
+              name: _("#Menu_Section_Hardware_SteamDeck"),
             },
             {
               storeItem: _ ? _ : void 0,
               image: (0, _._)(_),
-              name: _("#Menu_Section_Hardware_Family"),
+              icon: (0, _._)(
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAApNJREFUeAHtmY1xqzAMgJV3b4BsUG/weBMknaDZIBmhGyQbtBukG/Q6Ad0AOgF0gmQDVTqci49iI1MMbU/fnQ4ulpARsvwTAEVRFEVRFEVRFEVRlIEg4prkSFJhWgrrx8B3gDtCkuM8HL8aiAV8AXKe0SUnWcJ81CS3i8WihgH8gYHYyD9D+pd/JTmQlJ52Y/sxLTb9UlM5/pYkp4DuHqYCm3Ef4plkRZKR7HB4YSxafouA7gmmAsNffw/dATuhnJOjf7D2jx1tbe5gCjD8RY3HZo8ycpKltXlotXFmLa3kXbaQGnKyQT9VwG6NMrYBm5XTtvPYRxXlIbNAKM1Czg3IyJz7datt49yvoJstpAT7x/K9x65COTleU5zTfmuv7bZOW0gFytOYC9dlHGc4fKVYQVzwL6RZm+DnopSadgAqoZ14GMTWgAymhac/Djpn3iMMqyNBovYCHFr4GZS0N/gvUfwLQvgrCFUPJC8kN9B8CRYD8dlzhmajU1rh+3cSXmhtemwNjA2G53+XzGMfsxosAv3YCZ9xAwJiasA/iRKlXun5vYZxdo6lUG8tUYoJgCSFvZ3zZYYHE2irQYYo2DEBkDzwHGgzEOHLl8KUSeceP1H+YgJgBDqh9BQNIYdQxtTQzywZENKJnQVM14/YrPIkfTECHfk0KHTKFXoH12mLr2+2LTYA/Cy2NdBkj4HrlDoa4oXQD1oEXXilenHbpzT4UPS3EDMEYpFWaykG5iRiFZejc3Izch9iDljHPRdA2Z7+CInBZkldCfryAGOC/WvwClMdRHzuS9+xPGNgbOihTx5nPDwmPSsgf/eBl0/3J4nNhMJ58Rxn+qcWm4OS3Hlxvk9SfxRFURRFURRFURRFUX4NH6D9eWUSMFMJAAAAAElFTkSuQmCC",
+              ),
+              name: _("#Menu_Section_Hardware_SteamController"),
+            },
+            {
+              storeItem: _ ? _ : void 0,
+              image: (0, _._)(_),
+              icon: (0, _._)(
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARlJREFUeAHt2sGNwjAQheHn1d53S2BL2AqgA1qADugAOoAOSAtUAFQALVABdBDG4oK4gDHgJPN/0ggORglPmdhRLAEAAAC4p67ridWxbq6lEoWUwfEIar7/EML+0cFf6p6flMFdDCAJAcg5ApBzBCDnCEDOEYCcIwA5RwByjgDkHAHIOQKQcwQg5whAzrkP4Ft5ZlYblfNnNbXq6RNy38S+g53H4Oa8+im/z2mBkzogpwVGlnZ8DX1QOb9Wc2XICSAevFLLtXkWqKwWymzF3FmglCqEMI5frA1X9rHWk9p6BVxvgXF5BcTNWltd/nyxm2BJPaudXoBnAaXZqNliSyStS5L2CUbWe0Nd1gBNtLLZoRMrVAAAAODNztcA6o+RBpmkAAAAAElFTkSuQmCC",
+              ),
+              name: _("#Menu_Section_Hardware_SteamMachine"),
+            },
+            {
+              storeItem: _ ? _ : void 0,
+              image: (0, _._)(_),
+              icon: (0, _._)(
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAhFJREFUeAHt2YFRwjAUANBfJ2CEOgE4gTCBbCBOIE5AmUA3wA3UCcAJ0AnoBrrB9/9rvPPoT0nStFfDf3e53KXAb35/UwgASimllFJKKaWUOjcZBELEKXXcxtQm1HLoT2naK7X3LMs+oC88cWpbHJY9tVsI4FwBFCCnbgPVVR+qktqMKqJ0fYNTAmjyC+oeqY3AzTe1Z9PHsPSMvaYkPEEMNPkC/QWVY8M5zNFfAW3RhywxzA1EhNW6E+LkhcgagubU7cG99P7iVfkO4twCHJ/Xngn44/hXTWtCUwIO0O+jrSs7SsDMdvBCGsRq0cshDXz7TG0HxQqgN3Dph5TcUFmroFYBNHmeeEqTZ9YqkG6Ba0jTWBqUEjCHNE2lQSkBIY+9/0C8rWuLIH97gETRQlib7wWcOU2AMFZCmkppUEpAf7sr/SqlQSkBO0jTThqUEvAJaXqTBm2/BbYw7K0vXyU9AS+lA7anwBq6xb/TectqYfoSulWAL+xu5/dAbXQUKzfjncSDEOakvjAu/ry8x3hoi/fL+kXIbCM9QFyFbXvKjMfZyXWI54wyuMI4TpYivWaE8apgBbFgtTvc9sSc9hkwbAv82D3Ehu0WKq+rgeFVx3+RdbuhQwEWJpALrpqgq+GZhOD/BoNRwAlPDqvH5eFo0nszgRxawKrqNlhPOMd7MTFS3cJTSimllFJKKaWU6sYPmoOPtIp7mO8AAAAASUVORK5CYII=",
+              ),
+              name: _("#Menu_Section_Hardware_SteamFrame"),
             },
             {
               storeItem: _,
             },
           ]
             .filter(({ storeItem: _ }) => _ && _.visible)
-            .slice(0, 2);
-        return (0, _.jsxs)(_, {
+            .slice(0, 4);
+        return (0, _.jsx)(_, {
           className: _.FeaturedHardwareRow,
-          children: [
-            _.length >= 1 &&
-              (0, _.jsx)(_, {
-                ..._[0],
-              }),
-            _.length >= 2 &&
-              (0, _.jsx)(_, {
-                ..._[1],
-              }),
-          ],
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                ..._,
+              },
+              _.image,
+            ),
+          ),
         });
       }
       function _(_) {
-        const { storeItem: _, image: _, name: _ = _.name } = _;
+        const { storeItem: _, image: _, icon: _, name: _ = _.name } = _;
         return (0, _.jsxs)(_._, {
           className: _.FeaturedHardware,
           storeItem: _,
@@ -78462,6 +78511,12 @@
             _ &&
               (0, _.jsx)("img", {
                 className: _.Image,
+                src: _,
+                alt: _,
+              }),
+            _ &&
+              (0, _.jsx)("img", {
+                className: _.Icon,
                 src: _,
                 alt: _,
               }),
@@ -78486,6 +78541,7 @@
             _ &&
               (0, _.jsx)(_, {
                 storeItem: _,
+                name: _("#Menu_Section_Hardware_Family"),
               }),
             _ &&
               (0, _.jsx)(_, {
@@ -78493,7 +78549,7 @@
               }),
             (0, _.jsx)(_, {
               storeItem: _,
-              name: _("#Menu_Section_Hardware_VRHardware"),
+              name: _("#Menu_Section_Hardware_ValveIndex"),
             }),
             (0, _.jsx)(_, {}),
             _ &&
@@ -83445,7 +83501,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 59817), _((_._ = _));
+      return (_ = 65180), _((_._ = _));
       var _;
     });
     _._();

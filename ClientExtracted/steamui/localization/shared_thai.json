@@ -2018,7 +2018,7 @@
     "Sale_BrowserSortOption_PopularPurchased_ttip": "เกมยอดนิยมสูงสุดในขณะนี้ตามข้อมูลการสั่งซื้อ",
     "Sale_BrowserSortOption_TagRecommender": "โปรแกรมแนะนำแท็ก",
     "Sale_BrowserSortOption_TagRecommender_ttip": "เกมที่แสดงบนหน้าการลดราคานี้เรียงลำดับตามแท็กร้านค้าในตอนแรก โดยเทียบกับแท็กที่แนะนำสำหรับผู้ใช้",
-    "Sale_BrowserSortOption_PopularPurchasedDiscounted": "ส่วนลดยอดนิยม",
+    "Sale_BrowserSortOption_PopularPurchasedDiscounted": "เกมที่มอบส่วนลดยอดนิยม",
     "Sale_BrowserSortOption_PopularPurchasedDiscounted_ttip": "เกมยอดนิยมสูงสุดตามการสั่งซื้อ ซึ่งมีส่วนลดในขณะนี้ด้วย",
     "Sale_BrowserSortOption_Discounted": "จำนวนส่วนลด",
     "Sale_BrowserSortOption_Discounted_ttip": "เกมที่ลดราคามากที่สุดในขณะนี้",

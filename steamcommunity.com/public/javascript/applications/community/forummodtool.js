@@ -126,8 +126,8 @@
       var v = n(98580),
         _ = n.n(v),
         x = n(55388),
-        f = n(59884),
-        b = n.n(f);
+        b = n(59884),
+        f = n.n(b);
       function y(e) {
         const [t, n] = (0, s.useState)(null),
           [i, a] = (0, s.useState)([]),
@@ -150,7 +150,7 @@
               (0, r.jsxs)(r.Fragment, {
                 children: [
                   (0, r.jsx)("div", {
-                    className: b().BlockList,
+                    className: f().BlockList,
                     children: d.map((t, s) => {
                       const o = () => {
                         if ((0, m.Ju)(t)) {
@@ -168,7 +168,7 @@
                         ? (0, r.jsx)(
                             j.Ii,
                             {
-                              className: b().BlockListItem,
+                              className: f().BlockListItem,
                               href: t.url,
                               children: p.u.Localize(t.strLocToken),
                             },
@@ -178,7 +178,7 @@
                             B.Z,
                             {
                               onActivate: o,
-                              className: b().BlockListItem,
+                              className: f().BlockListItem,
                               children: [
                                 (0, r.jsx)("span", {
                                   children: (0, m.Ju)(t)
@@ -198,10 +198,10 @@
               }),
             null !== t &&
               (0, r.jsxs)("div", {
-                className: b().BlockList,
+                className: f().BlockList,
                 children: [
                   (0, r.jsx)("div", {
-                    className: b().BlockListItem,
+                    className: f().BlockListItem,
                     children: (0, m.Jt)(t),
                   }),
                   null !== g &&
@@ -227,7 +227,7 @@
                       ],
                     }),
                   (0, r.jsxs)("div", {
-                    className: b().BottomButtons,
+                    className: f().BottomButtons,
                     children: [
                       (0, r.jsx)(x.n9, { onClick: A, children: "Back" }),
                       (0, r.jsx)(x.n9, {
@@ -824,11 +824,11 @@
           [u, p] = (0, s.useState)(!1),
           [g, h] = (0, s.useState)(null),
           [j, A] = (0, s.useState)(null),
-          [v, f] = (0, s.useState)(null),
-          [b, M] = (0, s.useState)(!1),
+          [v, b] = (0, s.useState)(null),
+          [f, M] = (0, s.useState)(!1),
           [z, U] = (0, s.useState)(!1),
           [k, Q] = (0, s.useState)(""),
-          L = l || u || g || j || v || b || z,
+          L = l || u || g || j || v || f || z,
           q =
             ((E = e.authorSteamId),
             (0, T.I)({
@@ -1071,7 +1071,7 @@
                         id: "deletecomments",
                         disabled: z,
                         onChange: (e) =>
-                          f(
+                          b(
                             "-1" === e.target.value
                               ? null
                               : parseInt(e.target.value),
@@ -1109,24 +1109,25 @@
                         children: [
                           (0, r.jsx)("input", {
                             type: "checkbox",
-                            checked: b,
+                            checked: f,
                             onChange: (e) => M(e.target.checked),
                           }),
                           " Permanent trade ban",
                         ],
                       }),
                       P,
-                      (0, r.jsxs)("span", {
-                        className: _().OneColumn,
-                        children: [
-                          (0, r.jsx)("input", {
-                            type: "checkbox",
-                            checked: z,
-                            onChange: (e) => U(e.target.checked),
-                          }),
-                          " Mark as suspicious",
-                        ],
-                      }),
+                      "0" === e.subject.subject_id &&
+                        (0, r.jsxs)("span", {
+                          className: _().OneColumn,
+                          children: [
+                            (0, r.jsx)("input", {
+                              type: "checkbox",
+                              checked: z,
+                              onChange: (e) => U(e.target.checked),
+                            }),
+                            " Mark as suspicious",
+                          ],
+                        }),
                       (0, r.jsx)("textarea", {
                         className: (0, w.A)(_().OneColumn, _().MessageTextArea),
                         placeholder: "Message to send",
@@ -1154,7 +1155,7 @@
                             g && n.push({ sanction: 3, days: g }),
                             j && n.push({ sanction: 2, days: j }),
                             v && n.push({ sanction: 5, days: v }),
-                            b && n.push({ sanction: 4, days: -1 }),
+                            f && n.push({ sanction: 4, days: -1 }),
                             z && n.push({ sanction: 7 }),
                             e.onOK(n, k.trim(), t);
                         },
@@ -1691,10 +1692,10 @@
           });
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            t && (0, r.jsx)(be, { onClose: () => n(!1), ...e, subject: l }),
+            t && (0, r.jsx)(fe, { onClose: () => n(!1), ...e, subject: l }),
             l &&
               (0, r.jsx)(i.Gq, {
-                toolTipContent: (0, r.jsx)(fe, { subject: l }),
+                toolTipContent: (0, r.jsx)(be, { subject: l }),
                 direction: "bottom",
                 nDelayShowMS: 0,
                 children: m,
@@ -1703,7 +1704,7 @@
           ],
         });
       }
-      function fe(e) {
+      function be(e) {
         const { subject: t } = e;
         if (!t || !t.reports) return null;
         const n = (0, G.D5)(t.reports, (e) => e.report_reason);
@@ -1731,7 +1732,7 @@
           })
         );
       }
-      function be(e) {
+      function fe(e) {
         var t, n;
         const { subject: i } = e,
           [a, u] = (0, s.useState)("main"),

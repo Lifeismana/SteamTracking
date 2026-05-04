@@ -499,5 +499,6 @@
     "ControllerWelcome_BigPictureIntro_Title": "蒸汽平台键",
     "ControllerWelcome_BigPictureIntro_Body_KnownHardware": "这是蒸汽平台键。按下该键即可启动控制器。\n\n再按一次可打开大屏幕模式——它是专为游戏手柄优化的蒸汽平台版本，也是在您的 %1$s 上使用 Steam Controller 的最佳方式。",
     "ControllerWelcome_BigPictureIntro_Body_UnknownHardware": "这是蒸汽平台键。按下该键即可启动控制器。\n\n再按一次可打开大屏幕模式——它是专为游戏手柄优化的蒸汽平台版本，也是在您的 PC 上使用 Steam Controller 的最佳方式。",
-    "Settings_Controller_NoController": "未检测到控制器。连接控制器以在蒸汽平台中管理其设置。"
+    "Settings_Controller_NoController": "未检测到控制器。连接控制器以在蒸汽平台中管理其设置。",
+    "Settings_Controller_SCPairing": "与新的蒸汽平台控制器（2015 版）配对"
 }

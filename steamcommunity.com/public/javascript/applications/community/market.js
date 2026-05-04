@@ -5993,17 +5993,20 @@
             onTextChange: v,
             suggestions: C,
             onSuggestionSelected: (t, c) => {
-              const [n, e] = t.split("|");
-              if ("item" === n) {
-                const t = w.find((t) => t.market_hash_name === e);
+              const n = t.indexOf("|");
+              if (-1 === n) return;
+              const e = t.slice(0, n),
+                l = t.slice(n + 1);
+              if ("item" === e) {
+                const t = w.find((t) => t.market_hash_name === l);
                 t &&
                   ((window.location.href = An.N.Item(
                     t.app_id,
                     t.market_hash_name,
                   )),
                   c.preventDefault());
-              } else if ("app" === n) {
-                const t = _.find((t) => t.appid === Number(e));
+              } else if ("app" === e) {
+                const t = _.find((t) => t.appid === Number(l));
                 t &&
                   (window.location.href = An.N.Search({
                     search: `appid=${t.appid}`,

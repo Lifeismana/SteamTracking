@@ -1188,17 +1188,18 @@
                         ],
                       }),
                       _,
-                      (0, _.jsxs)("span", {
-                        className: _().OneColumn,
-                        children: [
-                          (0, _.jsx)("input", {
-                            type: "checkbox",
-                            checked: _,
-                            onChange: (_) => _(_.target.checked),
-                          }),
-                          " Mark as suspicious",
-                        ],
-                      }),
+                      "0" === _.subject.subject_id &&
+                        (0, _.jsxs)("span", {
+                          className: _().OneColumn,
+                          children: [
+                            (0, _.jsx)("input", {
+                              type: "checkbox",
+                              checked: _,
+                              onChange: (_) => _(_.target.checked),
+                            }),
+                            " Mark as suspicious",
+                          ],
+                        }),
                       (0, _.jsx)("textarea", {
                         className: (0, _._)(_().OneColumn, _().MessageTextArea),
                         placeholder: "Message to send",

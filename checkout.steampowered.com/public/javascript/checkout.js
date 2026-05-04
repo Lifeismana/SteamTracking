@@ -1069,6 +1069,10 @@ function OnInitializeTransactionFailure( detail, result )
 		{
 			error_text = result.specificerrortext;
 		}
+		else if ( result.success == 10 )
+		{
+			error_text = 'Sorry, we\'re experiencing a high volume of purchase requests and your transaction could not be completed. Please try again in a few minutes.';
+		}
 		else
 		{
 			switch ( detail )

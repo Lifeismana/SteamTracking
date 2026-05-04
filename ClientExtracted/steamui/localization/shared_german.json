@@ -2542,7 +2542,7 @@
     "SteamDeckVerified_TestResult_NativeResolutionNotDefault": "Dieses Spiel unterstützt die native Auflösung des Steam Deck, legt diese aber nicht standardmäßig fest und erfordert ggf., dass Sie die Auflösung manuell konfigurieren.",
     "SteamDeckVerified_TestResult_DisplayOutputHasNonblockingIssues": "Es treten auf dem Steam Deck geringfügige Grafik-/Anzeigeprobleme im Spiel auf.",
     "SteamDeckVerified_TestResult_AudioOutputHasNonblockingIssues": "Es treten auf dem Steam Deck geringfügige Audioprobleme im Spiel auf.",
-    "SteamDeckVerified_TestResult_DeviceCompatibilityWarningsShown": "Dieses Spiel zeigt bei der Ausführung des Steam Decks Kompatibilitätswarnungen an, funktioniert aber ordnungsgemäß.",
+    "SteamDeckVerified_TestResult_DeviceCompatibilityWarningsShown": "Dieses Spiel zeigt bei der Ausführung auf dem Steam Deck Kompatibilitätswarnungen an, funktioniert aber ordnungsgemäß.",
     "SteamDeckVerified_TestResult_LauncherInteractionIssues": "Der Launcher / das Einrichtungswerkzeug dieses Spiels erfordert die Verwendung des Touchscreens / der virtuellen Tastatur oder die Texte sind nur schwer lesbar.",
     "SteamDeckVerified_TestResult_VideoPlaybackHasNonblockingIssues": "Einige Filminhalte im Spiel fehlen möglicherweise oder haben Wiedergabeprobleme.",
     "SteamDeckVerified_TestResult_GameOrLauncherDoesntExitCleanly": "Das Spiel schließt nicht korrekt und erfordert ggf. ein manuelles Beenden über das Steam-Overlay.",

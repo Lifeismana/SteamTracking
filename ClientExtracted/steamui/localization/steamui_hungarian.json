@@ -3623,7 +3623,7 @@
     "Settings_Internet_Captive_Portal_Detected": "A hálózat további bejelentkezési adatokat igényel.",
     "Settings_Internet_Captive_Portal_Header_Title": "Belépés a hálózatra",
     "Settings_Internet_Captive_Portal_Login_Button": "Belépés",
-    "Settings_Internet_Connect_Advanced_Enable": "Haladó beállítások mutatása",
+    "Settings_Internet_Connect_Advanced_Enable": "Mutatás",
     "Settings_Internet_WebBrowserDataDelete": "Webböngészőadatok törlése",
     "Settings_Internet_WebBrowserDataDeleteButton": "Törlés",
     "Settings_Internet_WebBrowserDataDelete_Desc": "Törölsz minden gyorsítótár-fájlt, sütit és előzményt a webböngészőből?",
@@ -9345,7 +9345,6 @@
     "ControllerWelcome_UpdateController_Title": "Steam Controller frissítése",
     "ControllerWelcome_UpdateController_Body_KnownHardware": "Épp frissítjük a Steam Controlleredet. Kérjük, a frissítés befejeződésig hagyd a(z) %1$s készülékedhez csatlakoztatva.",
     "ControllerWelcome_UpdateController_Body_UnknownHardware": "Épp frissítjük a Steam Controlleredet. Kérjük, a frissítés befejeződésig hagyd a PC-dhez csatlakoztatva.",
-    "ControllerWelcome_PuckIntro_Title": "Elkészültél!",
     "ControllerWelcome_PuckIntro_Body_KnownHardware": "Most már visszacsatlakoztathatod a Puckot USB-C-n keresztül.\n\nA Steam Controller Puck egy vezeték nélküli adó, amely összeköti a játékvezérlődet a(z) %1$s készülékeddel, és egyben a játékvezérlőd töltőállomása is.",
     "ControllerWelcome_PuckIntro_Body_UnknownHardware": "Most már visszacsatlakoztathatod a Puckot USB-C-n keresztül.\n\nA Steam Controller Puck egy vezeték nélküli adó, amely összeköti a játékvezérlődet a PC-ddel, és egyben a játékvezérlőd töltőállomása is.",
     "ControllerWelcome_PuckIntro_BodyWithPuck_KnownHardware": "Egy gyors megjegyzés a Puckodról.\n\nA Steam Controller Puck egy vezeték nélküli adó, amely összeköti a játékvezérlődet a(z) %1$s készülékeddel, és egyben a játékvezérlőd töltőállomása is.",
@@ -9373,5 +9372,15 @@
     "Settings_Controller_RSSI_Machine_Description": "Ha gyenge a jel, győződj meg róla, hogy a Steam Controller rálát a Steam Machine-ed elejére. A WiFi routerek és bizonyos USB 3 perifériák szintén okozhatnak jelproblémákat, ha túl közel vannak a Steam Machine-edhez.",
     "Settings_Controller_RSSI_Puck_Description": "Ha gyenge a jel, győződj meg róla, hogy a Steam Controller rálát a Steam Controller Puck-odra. A WiFi routerek és bizonyos USB 3 perifériák szintén okozhatnak jelproblémákat, ha túl közel vannak a Puckodhoz.",
     "ControllerWelcome_Skip": "Kihagyás",
-    "Notification_ControllerBatteryLow": "Alacsony akkumulátortöltöttség – %1$s%"
+    "Notification_ControllerBatteryLow": "Alacsony akkumulátortöltöttség – %1$s%",
+    "NotificationsSettings_Notification_ControllerConnect": "Amikor csatlakoztatok vagy leválasztok egy játékvezérlőt",
+    "NotificationsSettings_Notification_ControllerLowBattery": "Amikor egy játékvezérlő töltöttsége alacsony",
+    "Settings_Controller_AddANewController": "Új játékvezérlő hozzáadása",
+    "Settings_Controller_AddANewController_Button": "Játékvezérlő hozzáadása",
+    "Settings_Controller_NoBluetooth": "Ha Bluetoothon keresztül szeretnél játékvezérlőt párosítani, használd az operációs rendszered beállításaid. Közvetlenül USB-n keresztül is csatlakoztathatsz játékvezérlőt.",
+    "Settings_Controller_NoDongle": "Steam Controller hozzáadásához csatlakoztass USB-n keresztül egy Steam Controller Puckot, és kapcsold be a játékvezérlődet.",
+    "Settings_Controller_PuckDetected": "Steam Controller Puck észlelhető",
+    "Settings_Controller_PuckDetectedNoIbex": "Steam Controller Puck észlelhető. Új Steam Controller Puckodhoz párosításához csatlakoztasd azt USB-n keresztül a készülékedhez.",
+    "Notification_ControllerConnected": "Játékvezérlő csatlakoztatva",
+    "Notification_ControllerDisconnected": "Játékvezérlő leválasztva"
 }

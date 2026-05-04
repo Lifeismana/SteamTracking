@@ -6986,7 +6986,10 @@
             onTextChange: _,
             suggestions: _,
             onSuggestionSelected: (_, _) => {
-              const [_, _] = _.split("|");
+              const _ = _.indexOf("|");
+              if (-1 === _) return;
+              const _ = _.slice(0, _),
+                _ = _.slice(_ + 1);
               if ("item" === _) {
                 const _ = _.find((_) => _.market_hash_name === _);
                 _ &&

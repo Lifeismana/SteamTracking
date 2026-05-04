@@ -1617,7 +1617,6 @@ $Number%05d$
 $ORIGIN
 $O\tdwR\rox\\r*
 $RepresentationID$
-$SteamInput/Configurator/ShowIbexTour
 $UI/Display/Current/IsExternalDisplay
 $V7E
 $XI(6
@@ -4513,6 +4512,7 @@ ${LANGUAGE}
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE1_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlfE3_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUljE2_
+*ZN19CSettingsController23RegisterSettingHandlersEvEUlvE4_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlvE_
 *ZN19CSettingsController29SetForeignDefaultValueHandlerE10StringViewOSt8functionIFvP18CMsgSettingVariantEEEUlvE_
 *ZN19CStreamTransportSDR22BHandleTransportSignalERK19CTransportSignalMsgE33CStreamTransportSDR_SignalContext
@@ -24282,7 +24282,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  2 2026 20:11:32
+May  4 2026 17:48:24
 MaybeAllocateAligned cannot fail here.
 MbP?
 Media
@@ -29786,6 +29786,7 @@ ShowEula
 ShowFirstTime
 ShowGameArgs
 ShowIMECandidates
+ShowIbexWelcomeTour
 ShowInterstitials
 ShowJumpList: %s
 ShowLaunchOption
@@ -30217,6 +30218,7 @@ SteamInput/ChatRadialMenu/5
 SteamInput/ChatRadialMenu/6
 SteamInput/ChatRadialMenu/7
 SteamInput/Configurator/ErrorMsgEnabled
+SteamInput/Configurator/ShowIbexTour
 SteamInputManager
 SteamLibrary
 SteamNetworkingSockets %s\n

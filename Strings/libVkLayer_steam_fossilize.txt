@@ -1,5 +1,7 @@
   what():
  (pNext->sType chain: [
+ ... error spam detected at %s:%d, silencing.\n
+ ... warning spam detected at %s:%d, silencing.\n
  [clone
  __vector(
  const
@@ -47,6 +49,11 @@ $bucketdir
 ./obj_fossilize_layer_steamrtarm64/release/VkLayer_steam_fossilize.so
 .foz
 .wN\f9
+/data/src/external/fossilize/fossilize.cpp
+/data/src/external/fossilize/fossilize_db.cpp
+/data/src/external/fossilize/fossilize_errors.hpp
+/data/src/external/fossilize/layer/dispatch.cpp
+/data/src/external/fossilize/layer/instance.cpp
 /fossilize-replayer-%d-%u
 /proc/self/%s
 0123456789
@@ -197,6 +204,8 @@ Fossilize INFO: applicationVersion %u is too low for pApplicationName %s. Skippi
 Fossilize INFO: engineVersion %u is too low for pEngineName %s. Skipping.\n
 Fossilize INFO: pApplicationName %s is blacklisted for recording. Skipping.\n
 Fossilize INFO: pEngineName %s is blacklisted for recording. Skipping.\n
+Fossilize WARN:  ... error spam detected at %s:%d, silencing.\n
+Fossilize WARN:  ... warning spam detected at %s:%d, silencing.\n
 Fossilize WARN: %s handle 0x%016lx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
 Fossilize WARN: %s\n
 Fossilize WARN: Archive %s could not be prepared, skipping.\n
@@ -1029,6 +1038,7 @@ stride
 string literal
 strlen
 strncmp
+strrchr
 strstr
 strtol
 strtold_l
