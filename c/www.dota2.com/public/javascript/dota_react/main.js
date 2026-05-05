@@ -3913,6 +3913,28 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Tooltip: "_3g9jZjWhLTrj3WnKZaRVQu",
+        CarouselFade: "_1Umzv9Xr-mSAbQAIyb1b5m",
+        StandardButton: "JxqQH6G0PnTGxUA8AO_7T",
+        ButtonText: "_1EnUpVxieJdIFRQ4wd7y_x",
+        Icon: "Jg3P7V4of6MsPkBCivOnP",
+        Play: "_2bWeZItHTleoVP3DlAYtWk",
+        SteamLogo: "_33DebtX1e3QN4sW4_Qy3Pd",
+        ToolTip: "_2cBw02uXhkbkW_yDbZ1W4R",
+        PlayerReportTooltip: "_1S0ehyW27Pvf8-gaJ-_6HA",
+        RegistrationGuidelinesPage: "_3MdQUFwsMebwrb1dP-7yxY",
+        Header: "_3SWg7w2slnxK2mD1qmPDUo",
+        Title: "_2k1r_U-0yVjsf32JF0DybS",
+        Content: "_2dDhAgswsV1PmhCHBOdMLk",
+        SubHeader: "YQ9y2aNxK43DXusmIlpH6",
+        Description: "U6g4iKhiX7f6Og1FQStEX",
+        AdditionalIndent: "_2XayJ-GSOq466cw62ODmvI",
+        SelectionPriority: "A6NKVnOP54P6ApSWn_XCQ",
+        TiebreakerList: "Yuciyh-Ce5_b_iXvv5kHN",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Tooltip: "_2BPN686uhd-7rcZe5a1AdF",
         CarouselFade: "_29yCU6Ise8QPMes6AHgWSM",
         StandardButton: "_2Dn39MYOkNba2-Ca2X_OxT",
@@ -62329,6 +62351,55 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      const _ = (0, _._)(() =>
+          (0, _.jsx)("div", {
+            className: _().RegistrationGuidelinesPage,
+            style: {
+              backgroundImage: `url( ${_._.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
+            },
+            children: (0, _.jsxs)("div", {
+              className: _().Header,
+              style: {
+                backgroundImage: `url( ${_._.IMG_URL}dpc/top_block.jpg )`,
+              },
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().Title,
+                  children:
+                    "THE INTERNATIONAL FOR DOTA 2 TERMS FOR PARTICIPATION",
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Content,
+                  children: (0, _.jsx)("div", {
+                    className: _().Description,
+                    children: (0, _._)(
+                      "Thanks for applying to participate either (1) as an individual player (“Player”) or (2) as the named representative of a team (“Team”) in The International for Dota 2 tournament (“TI”) sponsored by Valve Corporation ('Valve”).  You must agree to these terms (“Terms”) to be considered for participation in TI.<br><br><b>Acceptance of Terms:</b><br>By clicking “I Agree,” you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, do not proceed.<br><br><b>Terms Applicable to Both Players and Teams:</b><br><br>Event Operators. If you are selected for one or more events during TI, you may have to enter separate agreements with the event operators. In particular, you should look to the event operators for event schedule, rules, expenses and prizes.<br><br>Release. You grant Valve the right to distribute, exhibit, and otherwise utilize throughout the world during TI your appearance, performance, name, biographical information, statements and any other aural or visual effect produced by you, as well as your Team name, logo, and player roster (collectively, your “Likeness”) in any and all manner and media related to TI, including without limitation, computer games, video, promotional materials and advertising, without further compensation by Valve. After TI, Valve may also reuse such materials it may have created during TI, for archival, product, or promotional purposes. You agree that any audio, video, or other data taken by or for Valve and relating to your participation in TI will be owned by Valve.<br><br><b>Terms Applicable to Teams:</b><br><br>Sponsors. The Team will not accept sponsorships from sponsors that generate revenue through activities that violate applicable Valve agreements or violate local law or rely on Valve's game economies. This includes, but is not limited to, key resellers or companies that interact with players' Valve game inventories.<br><br>Team Name and Digital Assets. Without limiting the foregoing, your Team must not use, display, or submit any digital assets, including but not limited to Team name, Team banner, and/or Team logo, that (1) contain any reference to a sponsor, directly or indirectly, whose goods, services, or activities are illegal to display or use in any jurisdiction or territory where TI will be broadcast, or (2) violate any Valve intellectual property, or advertise or are associated with case opening sites or skin trading sites.<br><br>Equal Treatment. Your Team will provide equal treatment to every  participating Player (e.g. travel reimbursements, accommodations, practice opportunities) associated with TI.<br><br><b>General:</b><br>You make these statements and promises on your own behalf and on behalf of your family, heirs, successors, assigns, and any others who may claim rights through you, for the benefit of Valve, its successors and assigns. You represent that you have the authority to agree to these Terms on your own behalf as a Player or on behalf of a Team, as applicable. You represent that all information you provide is accurate and truthful.  You agree to engage respectfully, avoid disruptive behavior, and comply with all applicable laws and guidelines provided by Valve or the TI organizer.  Valve may change or cancel TI at any time in its sole discretion. These Terms have been prepared in the English language and the English language shall control their interpretation. These Terms are governed by the laws of the State of Washington, USA, and you consent to jurisdiction and venue in the state or federal courts sitting in King County, Washington, USA in the event of any dispute relating to these Terms. These Terms supersede any prior agreements between the parties with respect to the subject matter hereof.",
+                    ),
+                  }),
+                }),
+              ],
+            }),
+          }),
+        ),
+        _ = (0, _._)(() =>
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                bOverlapping: !1,
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)("title", {
+                  children:
+                    "Dota 2 - The International Terms For Participation",
+                }),
+              }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)(_._, {}),
+            ],
+          }),
+        );
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = (0, _._)((_) =>
         (0, _.jsxs)("div", {
           className: _().ControllerFAQPage,
@@ -65229,6 +65300,10 @@
                             }),
                             (0, _.jsx)(_, {
                               path: _._.voicelineguidelines(),
+                              component: _,
+                            }),
+                            (0, _.jsx)(_, {
+                              path: _._.registrationguidelines(),
                               component: _,
                             }),
                             (0, _.jsx)(_, {
@@ -79545,6 +79620,7 @@
         autographguidelines: () => "/autographguidelines",
         portraitguidelines: () => "/portraitguidelines",
         voicelineguidelines: () => "/voicelineguidelines",
+        registrationguidelines: () => "/registrationguidelines",
         proregistration_requestforproposal: () =>
           "/proregistration/requestforproposal",
         proregistration_autographs: () => "/proregistration/autographupload",
@@ -96953,7 +97029,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 70595), _((_._ = _));
+      return (_ = 47496), _((_._ = _));
       var _;
     });
     _._();

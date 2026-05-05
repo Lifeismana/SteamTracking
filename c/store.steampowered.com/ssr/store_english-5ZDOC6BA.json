@@ -392,6 +392,8 @@
     "pressoutlets_button_show_history": "Show history",
     "pressoutlets_header_account": "Account",
     "trailerassets_invalidfile": "Trailer not found",
+    "trailerassets_trailer": "Trailer",
+    "trailerassets_microtrailer": "Microtrailer",
     "account_notification_settings_error_saving": "There was an error saving your notification settings",
     "account_notification_settings_error_loading": "There was an error loading your notification settings",
     "account_notification_settings_error_invalidoptouttoken": "This unsubscribe link is invalid or expired. Please login and visit <1>Notification Settings</1>",

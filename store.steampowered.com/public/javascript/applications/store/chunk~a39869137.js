@@ -94,13 +94,13 @@
           n
         );
       }
-      function w(e, t) {
+      function v(e, t) {
         let i = e.getAttribute(t);
         return i
           ? ((i = i.toLowerCase()), "true" == i || ("false" != i && null))
           : null;
       }
-      function v(e, t) {
+      function w(e, t) {
         let i = e.getAttribute(t);
         return i ? parseInt(i) : null;
       }
@@ -109,12 +109,12 @@
         return i || "";
       }
       function C(e, t, i) {
-        let n = v(e, "timescale");
+        let n = w(e, "timescale");
         if ((t.bContainsThumbnails && null == n && (n = 1), !n)) return null;
         let s = {
           nTimeScale: n,
-          nDuration: v(e, "duration") || 0,
-          nStartNumber: v(e, "startNumber") || 0,
+          nDuration: w(e, "duration") || 0,
+          nStartNumber: w(e, "startNumber") || 0,
           strMedia: B(e, "media"),
           strInitialization: B(e, "initialization"),
         };
@@ -122,8 +122,8 @@
           s.nStartNumber &&
           s.strMedia &&
           (t.bContainsThumbnails || s.strInitialization)
-          ? ((s.strMedia = R(s.strMedia, i)),
-            (s.strInitialization = R(s.strInitialization, i)),
+          ? ((s.strMedia = k(s.strMedia, i)),
+            (s.strInitialization = k(s.strInitialization, i)),
             s)
           : null;
       }
@@ -148,10 +148,10 @@
         let n = t.startsWith("/") ? 1 : 0;
         return i + t.substring(n);
       }
-      function R(e, t) {
+      function k(e, t) {
         return e && !P(e) && P(t) ? A(t, e) : e;
       }
-      function k(e) {
+      function R(e) {
         return (
           0 == e.rgRoles.length || e.rgRoles.findIndex((e) => "main" == e) >= 0
         );
@@ -163,16 +163,16 @@
           ? t.nDuration
           : (t.nDuration / t.nTimeScale) * 1e3;
       }
-      function V(e, t, i) {
+      function L(e, t, i) {
         i -= 1e3 * e.GetStartTime();
         let n = G(t),
-          s = L(e, n, i);
+          s = I(e, n, i);
         return Math.floor(s / n) + t.segmentTemplate.nStartNumber;
       }
-      function I(e, t) {
+      function V(e, t) {
         return (t - e.segmentTemplate.nStartNumber) * (G(e) / 1e3);
       }
-      function L(e, t, i) {
+      function I(e, t, i) {
         return i + ((1e3 * e.GetStartTime()) % t);
       }
       function x(e) {
@@ -235,14 +235,14 @@
           if (0 == this.m_rgPeriods.length) return null;
           let e = this.m_rgPeriods[0];
           for (let t of e.rgAdaptationSets)
-            if (k(t) && t.bContainsVideo) return t;
+            if (R(t) && t.bContainsVideo) return t;
           return null;
         }
         GetMainAudioAdaption() {
           if (0 == this.m_rgPeriods.length) return null;
           let e = this.m_rgPeriods[0];
           for (let t of e.rgAdaptationSets)
-            if (k(t) && t.bContainsAudio) return t;
+            if (R(t) && t.bContainsAudio) return t;
           return null;
         }
         GetThumbnailAdaptation() {
@@ -294,7 +294,7 @@
           let t = this.GetThumbnailAdaptation();
           if (!t || 0 == t.rgRepresentations.length) return null;
           let i = t.rgRepresentations[0],
-            n = V(this, i, e);
+            n = L(this, i, e);
           if (
             void 0 === i.nTileWidthCount ||
             void 0 === i.nTileHeightCount ||
@@ -348,14 +348,14 @@
             strID: B(e, "id"),
             strMimeType: B(e, "mimeType"),
             strCodecs: B(e, "codecs"),
-            nBandwidth: v(e, "bandwidth") || 0,
+            nBandwidth: w(e, "bandwidth") || 0,
             segmentTemplate: r,
           };
           if ((!o.strMimeType && s && (o.strMimeType = s), t.bContainsVideo)) {
             if (
-              ((o.nWidth = v(e, "width") || 0),
-              (o.nHeight = v(e, "height") || 0),
-              (o.nFrameRate = v(e, "frameRate") || 0),
+              ((o.nWidth = w(e, "width") || 0),
+              (o.nHeight = w(e, "height") || 0),
+              (o.nFrameRate = w(e, "frameRate") || 0),
               (0, g.q_)(
                 `representation: ${o.nWidth}w x ${o.nHeight}h x ${o.nFrameRate} fps`,
               ),
@@ -363,10 +363,10 @@
             )
               return (0, g.q_)("MPD - Representation Video Data Missing"), null;
           } else if (t.bContainsAudio) {
-            o.nAudioSamplingRate = v(e, "audioSamplingRate") || 0;
+            o.nAudioSamplingRate = w(e, "audioSamplingRate") || 0;
             let t = T(e, "AudioChannelConfiguration");
             if (
-              (t && (o.nAudioChannels = v(t, "value") || 0),
+              (t && (o.nAudioChannels = w(t, "value") || 0),
               o.nAudioChannels || (o.nAudioChannels = 2),
               !(
                 o.strID &&
@@ -391,7 +391,7 @@
                 ),
                 null
               );
-            (o.nWidth = v(e, "width") || 0), (o.nHeight = v(e, "height") || 0);
+            (o.nWidth = w(e, "width") || 0), (o.nHeight = w(e, "height") || 0);
             let t = T(e, "EssentialProperty");
             if (!t)
               return (
@@ -432,7 +432,7 @@
             let i = n[t],
               s = {
                 strID: B(i, "id"),
-                nBandwidth: v(i, "bandwidth") || 0,
+                nBandwidth: w(i, "bandwidth") || 0,
                 strClosedCaptionFile: "",
                 strMimeType: "text/vtt",
                 segmentTemplate: {
@@ -549,7 +549,7 @@
               i = B(t, "description"),
               n = B(t, "lang"),
               s = {
-                bSegmentAlignment: w(t, "segmentAlignment") || !1,
+                bSegmentAlignment: v(t, "segmentAlignment") || !1,
                 bIsTimedText: "text/vtt" == B(t, "mimeType"),
                 strLanguage: B(t, "lang"),
                 bContainsVideo: !1,
@@ -876,7 +876,7 @@
                 if (e.IsLiveContent()) return Number.MAX_VALUE;
                 let i = 1e3 * (e.GetEndTime() - e.GetStartTime()),
                   n = G(t),
-                  s = L(e, n, i);
+                  s = I(e, n, i);
                 return Math.ceil(s / n) + t.segmentTemplate.nStartNumber - 1;
               })(this.m_mpd, this.m_representation)
             : 0;
@@ -996,7 +996,7 @@
           if (!this.m_representation) return;
           let e = this.m_callbacks.GetCurrentPlayTime(),
             t = "[",
-            i = V(this.m_mpd, this.m_representation, 1e3 * e);
+            i = L(this.m_mpd, this.m_representation, 1e3 * e);
           for (let e of this.m_rgBufferedSegments)
             (t += e.representation.strID),
               e.nSegmentIndex == i && (t += "|"),
@@ -1184,7 +1184,7 @@
               );
             if (i) (i.representation = e), (i.data = p);
             else {
-              let i = I(e, t),
+              let i = V(e, t),
                 n = this.m_mpd.GetEndTime(),
                 s = G(e);
               (s = Math.min(1e3 * (n - i), s)),
@@ -1240,7 +1240,7 @@
             return void (0, g.ZI)("Update buffer - no representation?");
           let e = this.m_callbacks.GetCurrentPlayTime(),
             t = this.m_sourceBuffer.GetAmountBufferedInPlayerMS(e) / 1e3,
-            i = V(this.m_mpd, this.m_representation, 1e3 * e),
+            i = L(this.m_mpd, this.m_representation, 1e3 * e),
             s = this.m_rgBufferedSegments.find(
               (e) => e.data && e.nSegmentIndex >= i,
             ),
@@ -1278,8 +1278,8 @@
           let o = this.m_bSourceBufferQuotaExceeded ? 1 : 10,
             d = this.m_sourceBuffer.GetBufferedStartSec();
           if (this.m_sourceBuffer.GetBufferedEndSec() - d && e - d >= o) {
-            let t = V(this.m_mpd, this.m_representation, 1e3 * (e - o)),
-              i = I(this.m_representation, t) - 0.01;
+            let t = L(this.m_mpd, this.m_representation, 1e3 * (e - o)),
+              i = V(this.m_representation, t) - 0.01;
             if (i > d)
               return (
                 this.m_sourceBuffer.Remove(0, i),
@@ -1324,7 +1324,7 @@
             return void this.ScheduleNextDownload();
           if (!this.m_representation)
             return void (0, g.ZI)("Seek without representation?");
-          let s = V(this.m_mpd, this.m_representation, 1e3 * e),
+          let s = L(this.m_mpd, this.m_representation, 1e3 * e),
             r = this.m_rgBufferedSegments.findIndex(
               (e) => e.data && e.nSegmentIndex == s,
             );
@@ -1343,7 +1343,7 @@
               );
           else {
             this.ForceStopDownloads(), (this.m_rgBufferedSegments = []);
-            let t = V(this.m_mpd, this.m_representation, 1e3 * e);
+            let t = L(this.m_mpd, this.m_representation, 1e3 * e);
             (this.m_nNextSegment = Math.min(t, this.GetMaxSegment())),
               (0, g.q_)(
                 "Seek To Next Segment: " +
@@ -1371,7 +1371,7 @@
           if (!this.m_representation) return;
           let e = G(this.m_representation),
             t = 1e3 * this.m_callbacks.GetCurrentPlayTime(),
-            i = V(this.m_mpd, this.m_representation, t + e),
+            i = L(this.m_mpd, this.m_representation, t + e),
             n = this.m_rgBufferedSegments.find(
               (e) => e.nSegmentIndex >= i && this.BCanUpgradeBufferedSegment(e),
             );
@@ -1472,12 +1472,14 @@
         m_elVideo;
         m_strMPD = "";
         m_strHLS = "";
+        m_strCaptions = "";
         m_strCDNAuthURLParameters = "";
         m_bTimeoutAfterFailedDownload = !0;
         m_bAlwaysStartWithSubtitles = !1;
         m_bMuteOnAutoplayBlocked = !1;
         m_schUpdateMPD = new m.LU();
         m_xhrUpdateMPD = null;
+        m_xhrCaptionManifest = null;
         m_mpd = null;
         m_bUseHLSManifest = !1;
         m_strVideoAdaptationID = "";
@@ -1497,11 +1499,12 @@
         m_bPlaybackEnded = !1;
         m_nLastPlaytimeLoaders = 0;
         m_nTimedText = 0;
+        m_strActiveTextTrack = null;
         m_schReportPlayerTrigger = new m.LU();
         m_bStatsViewVisible = !1;
         m_schCaptureDisplayStatsTrigger = new m.LU();
         m_videoRepSelected = null;
-        m_timedTextRepSelected = null;
+        m_rgCaptions = null;
         m_stats = new c._L();
         m_bClosing = !1;
         m_hlsTimeOffset = 0;
@@ -1510,7 +1513,7 @@
         m_schFirstFrameThrottler = new m.LU();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new m.LU();
-        m_watchedIntervals = new Y();
+        m_watchedIntervals = new K();
         constructor(e) {
           (0, o.Gn)(this),
             (this.m_elVideo = e),
@@ -1544,11 +1547,11 @@
         SetMuteOnAutoplayBlocked(e) {
           this.m_bMuteOnAutoplayBlocked = e;
         }
-        async PlayMPD(e, t, i) {
+        async PlayMPD(e, t, i, n) {
           (e = Array.isArray(e) ? e : [e]),
             this.m_stats.StartingPlayback(),
-            (this.m_strCDNAuthURLParameters = i || "");
-          let n = null;
+            (this.m_strCDNAuthURLParameters = n || "");
+          let s = null;
           for (let t of e) {
             let [e, i] = await this.DownloadMPD(
               t,
@@ -1561,19 +1564,19 @@
                   : "Timed out downloading MPD";
               return void this.CloseWithError(W.PlaybackError, t);
             }
-            let s = new F();
-            if (!s.BParse(i.data, t))
+            let n = new F();
+            if (!n.BParse(i.data, t))
               return void this.CloseWithError(
                 W.PlaybackError,
                 "Failed to parse MPD file",
                 this.m_strMPD,
               );
-            let r = X(s),
+            let r = X(n),
               a = Z(r);
             if (
-              ((n = {
+              ((s = {
                 strMPD: t,
-                mpd: s,
+                mpd: n,
                 strServerTime: i.headers.date,
                 strCanPlay: r,
                 bCanPlay: a,
@@ -1582,9 +1585,9 @@
             )
               break;
           }
-          if (n) {
+          if (s) {
             if (
-              ((this.m_strMPD = n.strMPD), (this.m_mpd = n.mpd), !n.bCanPlay)
+              ((this.m_strMPD = s.strMPD), (this.m_mpd = s.mpd), !s.bCanPlay)
             ) {
               if (
                 !t ||
@@ -1599,14 +1602,15 @@
               (this.m_strHLS = t), (this.m_bUseHLSManifest = !0);
             }
             if (
-              (this.DispatchEvent("valve-metadatachanged"),
+              (i && (await this.DownloadCaptionManifest(i)),
+              this.DispatchEvent("valve-metadatachanged"),
               this.IsLiveContent() &&
                 (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
                   this.m_schUpdateMPD.Schedule(
                     1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
                     this.UpdateMPD,
                   ),
-                this.CalcVideoStartRelativeToSystemClock(n.strServerTime)),
+                this.CalcVideoStartRelativeToSystemClock(s.strServerTime)),
               this.IsLiveContent() || this.m_watchedIntervals.Enable(),
               this.m_bUseHLSManifest)
             )
@@ -1652,6 +1656,11 @@
                   "ended",
                   this.OnEndedForHLS,
                 ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo.textTracks,
+                  "change",
+                  this.CheckActiveTextTrack,
+                ),
                 void console.assert(this.BInitialized())
               );
             this.BCreateLoaders()
@@ -1665,52 +1674,55 @@
           } else this.CloseWithError(W.PlaybackError, "Invalid manifest");
         }
         InitTimedText() {
-          z(this.m_mpd),
-            (this.m_nTimedText = 0),
-            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((e) => {
-              let t = (0, d.sf)(f.TS.LANGUAGE);
-              if (
-                e.rgRepresentations.length > 0 &&
-                e.rgRepresentations[0].strClosedCaptionFile &&
-                e.strLanguage in h.bi
-              ) {
-                const i = document.createElement("track");
-                (i.kind = "subtitles"),
-                  (i.label = (0, h.we)(
-                    "#Language_" + (0, d.Lg)(h.bi[e.strLanguage]),
-                  )),
-                  (i.srclang = e.strLanguage),
-                  (i.src = e.rgRepresentations[0].strClosedCaptionFile),
-                  (this.m_nTimedText += 1),
-                  (!this.m_bAlwaysStartWithSubtitles && 0 == t) ||
-                    h.bi[e.strLanguage] != t ||
-                    ((i.default = !0),
-                    (this.m_timedTextRepSelected = e.rgRepresentations[0])),
-                  this.m_elVideo.appendChild(i);
-              }
-            });
+          z(this.m_mpd);
+          let e = [];
+          if (this.m_rgCaptions) e = this.m_rgCaptions;
+          else
+            for (let t of this.m_mpd.GetTimedTextAdaptionSet(0))
+              0 != t.rgRepresentations.length &&
+                t.rgRepresentations[0].strClosedCaptionFile &&
+                t.strLanguage in h.bi &&
+                e.push({
+                  m_strURL: t.rgRepresentations[0].strClosedCaptionFile,
+                  m_strLanguageBCP47: t.strLanguage,
+                });
+          this.m_nTimedText = 0;
+          let t = (0, d.sf)(f.TS.LANGUAGE);
+          for (let i of e) {
+            const e = document.createElement("track");
+            (e.kind = "captions"),
+              (e.label = Y(i.m_strLanguageBCP47)),
+              (e.srclang = i.m_strLanguageBCP47),
+              (e.src = i.m_strURL),
+              (!this.m_bAlwaysStartWithSubtitles && 0 == t) ||
+                h.bi[i.m_strLanguageBCP47] != t ||
+                (e.default = !0),
+              this.m_elVideo.appendChild(e),
+              (this.m_nTimedText += 1);
+          }
         }
         SetSubtitles(e) {
-          let t = null;
-          for (let i = 0; i < this.m_elVideo.textTracks.length; i++) {
-            const n = this.m_elVideo.textTracks[i];
-            if (h.bi[n.language] == e) {
-              let e = this.GetTimeTextAdaptions(0).filter(
-                (e) => e.strLanguage == n.language,
-              );
-              e &&
-                e.length > 0 &&
-                e[0].rgRepresentations &&
-                (t = e[0].rgRepresentations[0]),
-                (n.mode = "showing");
-            } else n.mode = "disabled";
+          for (let t = 0; t < this.m_elVideo.textTracks.length; t++) {
+            const i = this.m_elVideo.textTracks[t],
+              n = h.bi[i.language] == e ? "showing" : "disabled";
+            i.mode = n;
           }
-          this.m_timedTextRepSelected = t;
+        }
+        CheckActiveTextTrack() {
+          let e = "";
+          for (let t = 0; t < this.m_elVideo.textTracks.length; t++) {
+            const i = this.m_elVideo.textTracks[t];
+            "showing" == i.mode && (e = i.language);
+          }
+          e !== this.m_strActiveTextTrack &&
+            ((this.m_strActiveTextTrack = e),
+            this.DispatchEvent("valve-captionschange"));
         }
         OnLoadedMetadataForHLS() {
           this.m_bUseHLSManifest &&
             ((this.m_bIsBuffering = !1),
             this.BeginPlaybackHLS(),
+            this.CheckActiveTextTrack(),
             this.DispatchEvent("valve-bufferupdate"));
         }
         OnVisibilityChangeForHLS() {
@@ -1750,6 +1762,7 @@
           (this.m_bIsBuffering = !0),
             (this.m_strMPD = ""),
             (this.m_mpd = null),
+            (this.m_strCaptions = ""),
             (this.m_bUseHLSManifest = !1),
             (this.m_strVideoAdaptationID = ""),
             (this.m_strAudioAdaptationID = ""),
@@ -1758,18 +1771,23 @@
             (this.m_seekingToTime = null),
             (this.m_bStatsViewVisible = !1),
             (this.m_videoRepSelected = null),
+            (this.m_rgCaptions = null),
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
             (this.m_stats = new c._L()),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
             (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
+            (this.m_strActiveTextTrack = null),
             this.m_watchedIntervals.Clear(),
             console.assert(!this.BInitialized());
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
             (this.m_xhrUpdateMPD.cancel(), (this.m_xhrUpdateMPD = null)),
+            this.m_xhrCaptionManifest &&
+              (this.m_xhrCaptionManifest.cancel(),
+              (this.m_xhrCaptionManifest = null)),
             this.m_schUpdateMPD.Cancel(),
             this.m_schReportPlayerTrigger.Cancel(),
             this.m_schCaptureDisplayStatsTrigger.Cancel(),
@@ -1842,6 +1860,32 @@
                 "Failed to download MPD: 410 Gone",
               );
         }
+        async DownloadCaptionManifest(e) {
+          let t = null;
+          try {
+            (this.m_xhrCaptionManifest = a().CancelToken.source()),
+              (t = await a().get(e, {
+                cancelToken: this.m_xhrCaptionManifest.token,
+              }));
+          } catch (e) {
+            return;
+          }
+          if (((this.m_xhrCaptionManifest = null), !t || 200 != t.status))
+            return;
+          let i = "string" == typeof t.data ? JSON.parse(t.data) : t.data;
+          if (i && Array.isArray(i.captions)) {
+            this.m_rgCaptions = [];
+            for (let t of i.captions) {
+              if (!t.url || !t.lang || !(t.lang in h.bi)) continue;
+              let i = new URL(t.url, e).href;
+              this.m_rgCaptions.push({
+                m_strURL: i,
+                m_strLanguageBCP47: t.lang,
+              });
+            }
+            this.m_strCaptions = e;
+          }
+        }
         CloseWithError(e, ...t) {
           this.DispatchEvent("valve-downloadfailed", e),
             this.Close(),
@@ -1859,11 +1903,11 @@
             if (
               (!this.m_strVideoAdaptationID &&
                 e.bContainsVideo &&
-                k(e) &&
+                R(e) &&
                 ((t = e), (this.m_strVideoAdaptationID = e.strID)),
               !this.m_strAudioAdaptationID &&
                 e.bContainsAudio &&
-                k(e) &&
+                R(e) &&
                 ((t = e), (this.m_strAudioAdaptationID = e.strID)),
               t)
             ) {
@@ -1944,6 +1988,16 @@
               this.m_elVideo,
               "seeked",
               this.OnVideoSeeked,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo.textTracks,
+              "change",
+              this.CheckActiveTextTrack,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "loadedmetadata",
+              this.OnLoadedMetadata,
             ),
             (this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
             (this.m_resizeObserver = (0, U.Fd)(
@@ -2082,6 +2136,9 @@
         OnVideoCanPlayHLS() {
           this.m_stats.LogVideoOnCanPlay();
         }
+        OnLoadedMetadata() {
+          this.CheckActiveTextTrack();
+        }
         GetCurrentPlayTime() {
           if (!this.BInitialized()) return 0;
           if (this.m_seekingToTime) {
@@ -2157,10 +2214,8 @@
             let t = this.GetCurrentVideoAdaptation(),
               i = t && t.strID ? t.strID : "",
               n = this.GetCurrentAudioAdaptationfunction(),
-              s = n && n.strID ? n.strID : "",
-              r = this.GetCurrentTimedTextRepresentation(),
-              a = r && r.strID ? r.strID : "";
-            this.m_bookMarkAdapter.SetBookmark(e, i, s, a),
+              s = n && n.strID ? n.strID : "";
+            this.m_bookMarkAdapter.SetBookmark(e, i, s, ""),
               this.IsPaused()
                 ? this.m_schBookmarkUpdater.Cancel()
                 : this.m_schBookmarkUpdater.Schedule(
@@ -2168,9 +2223,6 @@
                     this.SendUpdateToBookmarkServiceIfNeeded,
                   );
           }
-        }
-        GetCurrentTimedTextRepresentation() {
-          return this.m_timedTextRepSelected;
         }
         OnVideoPlay() {
           this.m_bUseHLSManifest ||
@@ -2692,6 +2744,16 @@
         BHasTimedText() {
           return this.m_nTimedText > 0;
         }
+        IsShowingCaption() {
+          return !!this.m_strActiveTextTrack;
+        }
+        GetCaptionRepresentations() {
+          if (!this.m_mpd) return [];
+          let e = [];
+          for (let t of this.m_elVideo.textTracks)
+            e.push({ m_eLanguage: h.bi[t.language], m_strLabel: t.label });
+          return e;
+        }
         GetMaxWidthAndHeight() {
           if (!this.m_mpd) return null;
           let e = this.m_mpd.GetMainVideoAdaption();
@@ -2728,8 +2790,12 @@
       function J(e) {
         return !!e && e instanceof Error && "NotAllowedError" == e.name;
       }
+      function Y(e) {
+        return e in h.bi ? (0, h.we)("#Language_" + (0, d.Lg)(h.bi[e])) : "";
+      }
       (0, s.Cg)([o.sH], Q.prototype, "m_nTimedText", void 0),
         (0, s.Cg)([o.XI], Q.prototype, "InitTimedText", null),
+        (0, s.Cg)([_.o], Q.prototype, "CheckActiveTextTrack", null),
         (0, s.Cg)([_.o], Q.prototype, "OnLoadedMetadataForHLS", null),
         (0, s.Cg)([_.o], Q.prototype, "OnVisibilityChangeForHLS", null),
         (0, s.Cg)([_.o], Q.prototype, "OnEndedForHLS", null),
@@ -2745,6 +2811,7 @@
         (0, s.Cg)([_.o], Q.prototype, "OnVideoError", null),
         (0, s.Cg)([_.o], Q.prototype, "OnVideoCanPlay", null),
         (0, s.Cg)([_.o], Q.prototype, "OnVideoCanPlayHLS", null),
+        (0, s.Cg)([_.o], Q.prototype, "OnLoadedMetadata", null),
         (0, s.Cg)([_.o], Q.prototype, "GetCurrentPlayTime", null),
         (0, s.Cg)([_.o], Q.prototype, "GetBufferedEndTime", null),
         (0, s.Cg)([_.o], Q.prototype, "OnVideoTimeUpdate", null),
@@ -2775,7 +2842,7 @@
         ),
         (0, s.Cg)([_.o], Q.prototype, "ReportPlayerStats", null),
         (0, s.Cg)([o.XI.bound], Q.prototype, "CaptureStatsForDisplay", null);
-      class Y {
+      class K {
         m_bEnabled = !1;
         m_rgIntervals = [];
         m_nWatchStart = void 0;
@@ -3700,14 +3767,14 @@
         T = i(55672),
         b = i(42834),
         y = i(52541),
-        w = i(58918),
-        v = i(706);
+        v = i(58918),
+        w = i(706);
       const B = 6;
       function C(e) {
         const { id: t, bHideInLibraryApps: i } = e,
           { data: s } = (0, m.J$)(t),
           r = 2 == s?.item_type,
-          { data: a } = (0, w.$Y)(),
+          { data: a } = (0, v.$Y)(),
           o = _.useMemo(() => {
             if (s)
               return 1 === s.item_type || 2 === s.item_type
@@ -3757,7 +3824,7 @@
           { data: s } = (0, m.U2)(t);
         if (!i || !s) return null;
         const r = (0, b.b0)(i, "small_capsule");
-        return (0, n.jsx)(v.Q, {
+        return (0, n.jsx)(w.Q, {
           id: t,
           className: f().PreviewItem,
           hoverProps: { direction: "right", style: { minWidth: "350px" } },
@@ -3771,12 +3838,12 @@
       }
       var P = i(12424),
         A = i(3740),
-        R = i(80696),
-        k = i(62349),
+        k = i(80696),
+        R = i(62349),
         G = i(5309),
-        V = i(30020),
-        I = i(14987),
-        L = i(60014),
+        L = i(30020),
+        V = i(14987),
+        I = i(60014),
         x = i(35380),
         F = i(91822),
         E = i(96006),
@@ -3801,7 +3868,7 @@
             bHidePlatforms: S,
             bHideContainedApps: T,
             bAllowTwoLinesForHeader: b,
-            bShowReviewSummary: v,
+            bShowReviewSummary: w,
             bShowDeckCompatibilityDialog: B,
             bAutoFocus: M,
             fnOnClickOverride: G,
@@ -3810,12 +3877,12 @@
           } = e,
           X = (0, x.zl)(t, i),
           [K, ee] = (0, _.useState)(!1),
-          te = (0, L.n9)(),
+          te = (0, I.n9)(),
           { data: ie } = (0, m.U2)(X),
           { data: ne } = (0, m.Q_)(X),
           { data: se } = (0, m.by)(X),
-          { data: re } = (0, w.$Y)(),
-          ae = (0, I._)(X),
+          { data: re } = (0, v.$Y)(),
+          ae = (0, V._)(X),
           oe = (0, _.useRef)(null),
           [de, le] = (0, _.useState)(!1),
           me = (0, Q.Qn)();
@@ -3823,7 +3890,7 @@
           oe.current && le(oe.current.offsetWidth < 370);
         }, [oe]);
         const he = (0, _.useMemo)(
-            () => (u && ie && (0, k.J)(ie) ? { appid: (0, k.S)(ie)[0] } : X),
+            () => (u && ie && (0, R.J)(ie) ? { appid: (0, R.S)(ie)[0] } : X),
             [u, X, ie],
           ),
           { strStoreURL: ue, snr: _e } = (0, o.x)(ie, u);
@@ -3836,8 +3903,8 @@
           De = 0 == ie.item_type || Se,
           Te = Se && ie.appid,
           be = ie.name || "",
-          ye = (0, V.Nq)(se, ne),
-          we = me || !se?.is_coming_soon || ye;
+          ye = (0, L.Nq)(se, ne),
+          ve = me || !se?.is_coming_soon || ye;
         return (0, n.jsxs)(r.Z, {
           className: (0, j.A)({
             [f().StoreSaleWidgetOuterContainer]: !0,
@@ -3876,11 +3943,11 @@
                             bPreferAssetWithoutOverride: z,
                           }),
                           (0, n.jsx)($.J, { id: X }),
-                          (0, n.jsx)(R.m, {
+                          (0, n.jsx)(k.m, {
                             id: X,
                             active: X && K,
                             bIsHoverMode: !0,
-                            eGrowOnHover: R.C.k_ETrailerGrowAmount_Medium,
+                            eGrowOnHover: k.C.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),
@@ -3941,7 +4008,7 @@
                         ],
                       }),
                       !ce &&
-                        v &&
+                        w &&
                         X &&
                         (0, n.jsx)("div", {
                           className: f().ReviewScores,
@@ -3967,7 +4034,7 @@
                                     id: X,
                                     bShowDemoButton: h,
                                     bHidePrice: p,
-                                    bHideWishlistButton: we,
+                                    bHideWishlistButton: ve,
                                     bShowDeckCompatibilityDialog: B,
                                   }),
                           })
@@ -4003,7 +4070,7 @@
       function Z(e) {
         const { id: t, strURL: i, children: s } = e;
         return "appid" in t
-          ? (0, n.jsxs)(v.Q, { id: t, children: [s, " "] })
+          ? (0, n.jsxs)(w.Q, { id: t, children: [s, " "] })
           : (0, n.jsx)("a", { href: i, children: s });
       }
       function J(e) {
@@ -4021,7 +4088,7 @@
           { data: i } = (0, m.U2)(t),
           { data: s } = (0, m.Q_)(t),
           { data: r } = (0, m.wl)(t),
-          { data: a } = (0, w.$Y)();
+          { data: a } = (0, v.$Y)();
         if (!(i && r && r.short_description && a)) return null;
         const o = s?.discount_pct || 0,
           d = i.included_appids?.length || 0,
@@ -4086,25 +4153,25 @@
             className: b,
             bShowCartButton: y,
           } = e,
-          { data: w } = (0, o.J$)(t),
-          { data: v } = (0, o.by)(t),
+          { data: v } = (0, o.J$)(t),
+          { data: w } = (0, o.by)(t),
           { data: B } = (0, o.Q_)(t),
           { bIsOwned: C } = (0, d.ZJ)(t);
-        if (!w) return null;
+        if (!v) return null;
         const M =
-            (1 === w.type && !v?.is_coming_soon) ||
-            (w.related_items?.demo_appid &&
-              w.related_items?.demo_appid.length > 0),
-          P = (0, s.vm)(w.type),
+            (1 === v.type && !w?.is_coming_soon) ||
+            (v.related_items?.demo_appid &&
+              v.related_items?.demo_appid.length > 0),
+          P = (0, s.vm)(v.type),
           A = i && P && M;
-        let R = null;
+        let k = null;
         if (!C && B?.is_free_to_keep && B?.free_to_keep_ends) {
           const e = B.free_to_keep_ends,
             t = (0, f.we)(
               "#Sale_default_label_Free_Promo_Description_Short",
               (0, f.$z)(e) + " @ " + (0, g.KC)(e, { bForce24HourClock: !1 }),
             );
-          R = (0, n.jsxs)("div", {
+          k = (0, n.jsxs)("div", {
             className: u().PurchaseOptionDetails,
             children: [
               t,
@@ -4119,18 +4186,18 @@
         return (0, n.jsxs)("div", {
           className: (0, p.A)(u().StoreActionWidgetContainer, b),
           children: [
-            R,
+            k,
             (0, n.jsxs)("div", {
               className: u().StoreSalePriceActionWidgetContainer,
               children: [
                 Boolean(A) && (0, n.jsx)(r.j, { id: t, className: u().Action }),
                 Boolean(!D) &&
-                  1 !== w.type &&
+                  1 !== v.type &&
                   (0, n.jsxs)(n.Fragment, {
                     children: [
-                      Boolean(h && !w.is_free) &&
+                      Boolean(h && !v.is_free) &&
                         (0, n.jsx)(S, { fnOnPurchaseOptionsClick: c }),
-                      Boolean(y && !w.is_free) &&
+                      Boolean(y && !v.is_free) &&
                         (0, n.jsx)(m.h, { id: t, className: "CartBtn" }),
                     ],
                   }),

@@ -2576,6 +2576,11 @@ var _ = class _ extends _.Message {
                 _: !0,
                 _: !0,
               },
+              captions_manifest: {
+                _: 7,
+                _: _.readString,
+                _: _.writeString,
+              },
               screenshot_medium: {
                 _: 10,
                 _: _.readString,
