@@ -101,8 +101,8 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789ABCDEF
 12CStdMemAlloc
+16:20:48
 16CAdHocValidation
-21:28:49
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -293,7 +293,7 @@ Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-May  4 2026
+May  5 2026
 MbP?
 MemFree:
 MemTotal:

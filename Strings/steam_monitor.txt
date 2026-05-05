@@ -228,11 +228,11 @@ $ORIGIN
 0123456789ABCDEF
 0123456789abcdef
 12CStdMemAlloc
+16:20:44
+16:20:47
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
-21:28:44
-21:28:48
 21CUtlCStringConversion
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
@@ -304,6 +304,7 @@ GLIBC_2.29
 GameOverlayUI
 HOME
 IVALIDATE001
+IgEGw
 Ignoring resume of count %d\n
 Illegal termination of worker thread '%s'
 Invalid flags in %s
@@ -318,7 +319,7 @@ Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-May  4 2026
+May  5 2026
 MbP?H
 MemFree:
 MemTotal:
