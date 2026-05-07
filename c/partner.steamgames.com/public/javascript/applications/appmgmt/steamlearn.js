@@ -38809,7 +38809,7 @@
           });
         },
         _ = {
-          SteamLearnBase: () => "steamlearn",
+          SteamLearnBase: () => "steamlearnold",
           SteamLearnProject: () => "project",
           SteamLearnDashboard: () => "/dashboard2",
           SteamLearnProjects: () => "/projects",

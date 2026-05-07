@@ -16,12 +16,12 @@
       o.r(t),
         o.d(t, {
           default: () => b,
-          readAdditionalDataFromForumPost: () => x,
-          useCommentThread: () => p,
+          readAdditionalDataFromForumPost: () => v,
+          useCommentThread: () => g,
         });
       var s = o(7850),
-        i = o(90182),
-        n = o(28395),
+        n = o(90182),
+        i = o(28395),
         r = o(56545),
         a = o(37403),
         d = o(88942),
@@ -34,56 +34,52 @@
         j = o(52038);
       function b(e) {
         const t = "floatingforumreportedsubjectslist",
-          o = (0, i.kZ)(1, e.gidTopic),
+          o = (0, n.kZ)(1, e.gidTopic),
           [r, a] = (0, _.useState)(() => void 0 !== localStorage[t]);
         if (o.isSuccess && 0 === o.data.subjects.length) return null;
-        return (0, s.jsxs)("div", {
+        return (0, s.jsx)("div", {
           className: r ? m.FloatingSubjectListCtn : "",
-          children: [
-            (0, s.jsx)("div", { className: "rightbox_header" }),
-            (0, s.jsx)("div", {
-              className: "rightbox",
-              children: (0, s.jsxs)("div", {
-                className: "content",
-                children: [
-                  (0, s.jsx)("div", {
-                    className: "rightbox_list_header",
-                    children: (0, s.jsxs)("span", {
-                      className: m.SplitHeader,
-                      children: [
-                        n.T.Localize("#reportedsubjectlist_header"),
-                        " ",
-                        (0, s.jsx)("button", {
-                          className: m.PopoutButton,
-                          onClick: () => {
-                            r
-                              ? localStorage.removeItem(t)
-                              : localStorage.setItem(t, "1"),
-                              a(!r);
-                          },
-                          children: (0, s.jsx)(f.YNO, {}),
-                        }),
-                      ],
-                    }),
+          children: (0, s.jsx)("div", {
+            className: "rightbox",
+            children: (0, s.jsxs)("div", {
+              className: "content",
+              children: [
+                (0, s.jsx)("div", {
+                  className: "rightbox_list_header",
+                  children: (0, s.jsxs)("span", {
+                    className: m.SplitHeader,
+                    children: [
+                      i.T.Localize("#reportedsubjectlist_header"),
+                      " ",
+                      (0, s.jsx)("button", {
+                        className: m.PopoutButton,
+                        onClick: () => {
+                          r
+                            ? localStorage.removeItem(t)
+                            : localStorage.setItem(t, "1"),
+                            a(!r);
+                        },
+                        children: (0, s.jsx)(f.YNO, {}),
+                      }),
+                    ],
                   }),
-                  o.isError &&
-                    (0, s.jsx)("div", {
-                      className: "moderatorToolLink",
-                      children: "Error",
-                    }),
-                  o.isLoading && (0, s.jsx)(l.t, {}),
-                  o.isSuccess &&
-                    (0, s.jsx)("div", {
-                      style: { maxHeight: "20em", overflowY: "scroll" },
-                      children: o.data.subjects.map((e) =>
-                        (0, s.jsx)(g, { subject: e }, e.subject_id),
-                      ),
-                    }),
-                ],
-              }),
+                }),
+                o.isError &&
+                  (0, s.jsx)("div", {
+                    className: "moderatorToolLink",
+                    children: "Error",
+                  }),
+                o.isLoading && (0, s.jsx)(l.t, {}),
+                o.isSuccess &&
+                  (0, s.jsx)("div", {
+                    style: { maxHeight: "20em", overflowY: "scroll" },
+                    children: o.data.subjects.map((e) =>
+                      (0, s.jsx)(p, { subject: e }, e.subject_id),
+                    ),
+                  }),
+              ],
             }),
-            (0, s.jsx)("div", { className: "rightbox_footer" }),
-          ],
+          }),
         });
       }
       function h(e) {
@@ -94,19 +90,19 @@
         }
         return e.slice(0, 35);
       }
-      function g(e) {
+      function p(e) {
         var t, o;
-        const { subject: i } = e,
-          n = x(e.subject),
-          r = p(n.clanSteamId, 7, n.forumId, i.subject_group_id);
-        if (0 === i.unresolved_dispute_count && 0 === i.unresolved_report_count)
+        const { subject: n } = e,
+          i = v(e.subject),
+          r = g(i.clanSteamId, 7, i.forumId, n.subject_group_id);
+        if (0 === n.unresolved_dispute_count && 0 === n.unresolved_report_count)
           return null;
         let a = null;
-        if (("0" === i.subject_id && (a = "Topic"), null === a && r.isSuccess))
+        if (("0" === n.subject_id && (a = "Topic"), null === a && r.isSuccess))
           for (const e of null !== (t = r.data.comments) && void 0 !== t
             ? t
             : [])
-            if (e.gidcomment === i.subject_id) {
+            if (e.gidcomment === n.subject_id) {
               a = h(e.text);
               break;
             }
@@ -114,15 +110,15 @@
           for (const e of null !== (o = r.data.deleted_comments) && void 0 !== o
             ? o
             : [])
-            if (e.gidcomment === i.subject_id) {
+            if (e.gidcomment === n.subject_id) {
               a = h(e.text);
               break;
             }
         null === a && (a = "[Comment]");
         const d =
-          "0" === i.subject_id
-            ? `#forum_op_${i.subject_group_id}`
-            : `#c${i.subject_id}`;
+          "0" === n.subject_id
+            ? `#forum_op_${n.subject_group_id}`
+            : `#c${n.subject_id}`;
         return (0, s.jsx)("div", {
           className: (0, j.A)("moderatorToolLink", m.ReportedSubjectRow),
           children: (0, s.jsxs)("a", {
@@ -137,46 +133,46 @@
           }),
         });
       }
-      function p(e, t, o, s) {
-        const i = (0, c.KV)();
+      function g(e, t, o, s) {
+        const n = (0, c.KV)();
         return (0, d.I)({
           queryKey: ["comment_thread", e, t, o, s],
           queryFn: async () => {
-            const n = r.w.Init(a.ZP);
-            n.Body().set_steamid(e),
-              n.Body().set_comment_thread_type(t),
-              n.Body().set_gidfeature(o),
-              n.Body().set_gidfeature2(s),
-              n.Body().set_include_deleted(!0),
-              n.Body().set_oldest_first(!0);
-            return (await a.BE.GetCommentThread(i, n)).Body().toObject();
+            const i = r.w.Init(a.ZP);
+            i.Body().set_steamid(e),
+              i.Body().set_comment_thread_type(t),
+              i.Body().set_gidfeature(o),
+              i.Body().set_gidfeature2(s),
+              i.Body().set_include_deleted(!0),
+              i.Body().set_oldest_first(!0);
+            return (await a.BE.GetCommentThread(n, i)).Body().toObject();
           },
         });
       }
-      function x(e) {
+      function v(e) {
         var t, o;
         let s = "",
-          i = "";
+          n = "";
         if (!e.additional_subject_data) return null;
-        for (const n of null !==
+        for (const i of null !==
           (o =
             null === (t = e.additional_subject_data) || void 0 === t
               ? void 0
               : t.data) && void 0 !== o
           ? o
           : [])
-          "clanSteamId" === n.key
-            ? (s = n.value)
-            : "forumId" === n.key
-              ? (i = n.value)
+          "clanSteamId" === i.key
+            ? (s = i.value)
+            : "forumId" === i.key
+              ? (n = i.value)
               : console.error(
-                  `Unknown additional data key ${n.key} in forum post.`,
+                  `Unknown additional data key ${i.key} in forum post.`,
                 );
         if ("" == s)
           return console.error("Missing clanSteamId in additional data."), null;
-        if ("" == i)
+        if ("" == n)
           return console.error("Missing forumId in additional data."), null;
-        return { clanSteamId: s, forumId: i };
+        return { clanSteamId: s, forumId: n };
       }
     },
   },

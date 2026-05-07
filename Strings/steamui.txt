@@ -24282,7 +24282,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  5 2026 16:21:11
+May  7 2026 02:05:55
 MaybeAllocateAligned cannot fail here.
 MbP?
 Media

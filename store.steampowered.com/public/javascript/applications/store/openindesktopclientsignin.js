@@ -6,6 +6,7 @@
     50122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
         Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
         "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
@@ -34,11 +35,11 @@
         s = t(20187),
         o = t(41324),
         r = t(50122),
-        a = t(8527),
-        c = t(45699);
+        c = t(8527),
+        a = t(45699);
       function l(e) {
         const { underline: n = "auto", ...t } = e,
-          s = a.TS.IN_GAMEPADUI ? c.Ii : "a";
+          s = c.TS.IN_GAMEPADUI ? a.Ii : "a";
         return (0, i.jsx)(s, {
           ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, d),
         });
@@ -50,36 +51,39 @@
     },
     84547: (e, n, t) => {
       "use strict";
-      t.d(n, { E: () => d, l: () => h });
+      t.d(n, { E: () => h, l: () => u });
       var i = t(7850),
         s = t(78395),
         o = t(62151),
         r = t(8527),
-        a = t(64753),
-        c = t(21869);
-      function l(e) {
+        c = t(64753),
+        a = t(21869),
+        l = t(55672);
+      function d(e) {
         const { closeModal: n } = e;
         return (0, i.jsx)(s.o0, {
           strTitle: o.F5.Localize("#LoginRedirect_Dialog_Title"),
           strDescription: o.F5.Localize("#LoginRedirect_Dialog_Description"),
-          closeModal: n,
+          onCancel: n,
+          strOKButtonText: l.Z.Localize("#Button_OK"),
           onOK: () => {
-            h();
+            u(), n();
           },
         });
       }
-      function d() {
-        const [e, n, t] = (0, a.uD)();
+      function h() {
+        const [e, n, t] = (0, c.uD)();
         return {
-          elDialogElement: (0, i.jsx)(c.E, {
+          elDialogElement: (0, i.jsx)(a.E, {
             active: e,
-            children: (0, i.jsx)(l, { closeModal: t }),
+            children: (0, i.jsx)(d, { closeModal: t }),
           }),
           fnShowLogonDialog: n,
         };
       }
-      function h() {
-        window.location.href = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+      function u() {
+        const e = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        window.location.href = e;
       }
     },
     62151: (e, n, t) => {
@@ -336,7 +340,7 @@
         eV: () => u.eV,
         KG: () => h.KG,
         Ee: () => h.Ee,
-        x_: () => a.x_,
+        x_: () => c.x_,
         of: () => d,
         pY: () => h.pY,
         EN: () => r.E,
@@ -345,7 +349,7 @@
         s = t(90626),
         o = t(56283),
         r = t(21869),
-        a = t(2654);
+        c = t(2654);
       t(72739),
         t(48902),
         t(60155),
@@ -355,7 +359,7 @@
         t(13871),
         t(78327),
         t(28460);
-      function c(e) {
+      function a(e) {
         const { labelledBy: n } = e || {},
           [t, i] = s.useState(void 0);
         return {
@@ -372,12 +376,12 @@
             children: d,
             ...h
           } = e,
-          { headerId: u, context: p } = c({ labelledBy: e["aria-labelledby"] });
+          { headerId: u, context: p } = a({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(o.t6.Provider, {
           value: p,
           children: (0, i.jsx)(r.E, {
             active: n,
-            children: (0, i.jsx)(a.x_, {
+            children: (0, i.jsx)(c.x_, {
               onEscKeypress: t,
               className: l,
               children: (0, i.jsx)(o.UC, {
@@ -415,30 +419,30 @@
         s = t(90626),
         o = t(30470),
         r = t(84811),
-        a = t(62381),
-        c = t(97824),
+        c = t(62381),
+        a = t(97824),
         l = t(78327),
         d = t(2627),
         h = t(61859);
       const u = (0, r.Nr)(function (e) {
         const { fnOpenInSteamClient: n } = p();
         return (0, i.jsx)("div", {
-          className: c.OpenInBannerContainer,
+          className: a.OpenInBannerContainer,
           children: (0, i.jsxs)("div", {
-            className: c.OpenInBannerContent,
+            className: a.OpenInBannerContent,
             children: [
               (0, i.jsx)("div", {
-                className: c.BannerButtonContainer,
+                className: a.BannerButtonContainer,
                 children: (0, i.jsx)("div", {
                   onClick: n,
-                  className: c.BannerButton,
+                  className: a.BannerButton,
                   children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
               }),
               (0, i.jsx)("div", {
-                className: c.BannerMessage,
+                className: a.BannerMessage,
                 children: (0, i.jsxs)("div", {
-                  className: c.BannerTitle,
+                  className: a.BannerTitle,
                   children: [
                     (0, i.jsx)("b", {
                       children: (0, h.we)(
@@ -460,7 +464,7 @@
           o.TS.IN_CLIENT ||
             o.TS.IN_MOBILE ||
             o.TS.IN_MOBILE_WEBVIEW ||
-            a.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
+            c.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
               n(e ? 1 : 2);
             });
         }, []);
@@ -473,7 +477,7 @@
             i.set("utm_bid", t),
               (n += e.origin + e.pathname + "?" + i.toString() + e.hash);
           } else n += window.location.href;
-          1 == e ? a.W.OpenSteamURL(n) : (window.location.href = n);
+          1 == e ? c.W.OpenSteamURL(n) : (window.location.href = n);
         }, [e]);
         return { eClientConnectedState: e, fnOpenInSteamClient: t };
       }
@@ -481,13 +485,13 @@
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => O, default: () => w });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => O, default: () => k });
       var i = t(7850),
         s = t(53965),
         o = t(83392),
         r = t(20187),
-        a = t(28491),
-        c = t(62151),
+        c = t(28491),
+        a = t(62151),
         l = t(84547),
         d = t(55672),
         h = t(84811),
@@ -505,7 +509,7 @@
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
             p.useOpenWebInSteamClient)(),
             h = 1 == t,
-            [g, O, w] = (0, C.uD)();
+            [g, O, k] = (0, C.uD)();
           return (
             (0, f.use)((0, I.u)()),
             (0, i.jsxs)(i.Fragment, {
@@ -522,8 +526,8 @@
                   children: (0, i.jsxs)(u.o0, {
                     strTitle: (0, _.we)("#OpenInDesktopAppBanner_NotSignedIn"),
                     className: S().WishlistModalOverride,
-                    strDescription: c.F5.Localize("#Wishlist_NotSignedIn"),
-                    closeModal: w,
+                    strDescription: a.F5.Localize("#Wishlist_NotSignedIn"),
+                    closeModal: k,
                     bAlertDialog: !0,
                     children: [
                       (0, i.jsxs)(o.s, {
@@ -550,7 +554,7 @@
                           children: (0, i.jsx)(r.EY, {
                             children: (0, _.oW)(
                               "#GotSteam_NeedSteam",
-                              (0, i.jsx)(a.Y, {
+                              (0, i.jsx)(c.Y, {
                                 href: `${b.TS.STORE_BASE_URL}about`,
                               }),
                             ),
@@ -563,7 +567,7 @@
             })
           );
         }),
-        w = O;
+        k = O;
     },
   },
 ]);

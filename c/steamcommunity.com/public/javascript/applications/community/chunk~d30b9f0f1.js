@@ -19758,15 +19758,17 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const [_, _] = (0, _.useState)(!0);
-        return _
-          ? (0, _.jsx)(_, {
-              ..._,
-              fnShowRichTextEditor: _,
-            })
-          : (0, _.jsx)(_, {
-              ..._,
-              fnShowRichTextEditor: _,
-            });
+        return (0, _.jsx)(_._, {
+          children: _
+            ? (0, _.jsx)(_, {
+                ..._,
+                fnShowRichTextEditor: _,
+              })
+            : (0, _.jsx)(_, {
+                ..._,
+                fnShowRichTextEditor: _,
+              }),
+        });
       }
       function _(_) {
         const {
@@ -19820,73 +19822,26 @@
       }
       function _(_) {
         const {
-            fnGetContent: _,
-            language: _,
-            fnUpdateContent: _,
             label: _,
             tooltip: _,
-            strPlaceholder: _,
             bSingleLine: _,
-            nTitleCharLimit: _,
-            strOverrideBackgroundColor: _,
             rctToolbarControls: _,
-            eTitleDisplaySize: _,
-            eTextAlignment: _,
             fnShowRichTextEditor: _,
           } = _,
-          _ = (function () {
-            const _ = _.useRef(void 0);
-            _.current ||
-              (_.current = (function () {
-                const {
-                    paragraph: _,
-                    bullet_list: _,
-                    list_item: _,
-                  } = _._.nodes,
-                  { strong: _, italic: _, underline: _, strike: _ } = _._.marks,
-                  { link: _ } = _._.marks,
-                  { color: _, bgcolor: _ } = _._.marks;
-                return new _._({
-                  nodes: {
-                    paragraph: _,
-                    bullet_list: _,
-                    list_item: _,
-                  },
-                  marks: {
-                    strong: _,
-                    italic: _,
-                    underline: _,
-                    strike: _,
-                    link: _,
-                    color: _,
-                    bgcolor: _,
-                  },
-                });
-              })());
-            return _.current;
-          })(),
-          [_, _] = _.useState(null),
+          _ = _(),
           [_, _] = _.useState(),
           _ = _.useRef(void 0),
-          _ = (0, _._)();
-        (0, _.useEffect)(() => {
-          _(new _._(_, _(), (_) => _(_)));
-        }, [_, _, _]);
-        const [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           _ = _.useCallback(
             (_) =>
               _.borderBoxSize.length > 0 &&
               _(_.borderBoxSize[0].blockSize > 300),
             [],
-          ),
-          _ = (0, _._)(_);
-        return (
-          (0, _._)(_, {
-            msAutosaveTimeout: 1e3,
-          }),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsxs)("div", {
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("div", {
                 className: _().ToolBarCtn,
                 children: [
                   Boolean(_) &&
@@ -19912,70 +19867,154 @@
                   }),
                 ],
               }),
-              (0, _.jsxs)("div", {
-                className: _().RichTextBackgroundCtn,
-                style: {
-                  backgroundColor:
-                    _.GetEventModel().jsondata.sale_background_color,
-                  backgroundRepeat:
-                    _.GetEventModel().jsondata.sale_background_repeat,
-                },
+            }),
+            (0, _.jsx)(_._, {
+              fallback: (0, _.jsxs)("div", {
                 children: [
-                  " ",
-                  (0, _.jsx)("div", {
-                    className: (0, _._)({
-                      [_().AboutTheGameArea]: !0,
-                      [_().Container]: !0,
-                      [_()._]: _ == _._.k_Header1,
-                      [_()._]: _ == _._.k_Header2,
-                      [_()._]: _ == _._.k_Header3,
-                      [_().Left]: _ == _._.k_Left,
-                      [_().Center]: _ == _._.k_Center,
-                      [_().Right]: _ == _._.k_Right,
-                    }),
-                    ref: _,
-                    style: {
-                      backgroundImage: _,
-                    },
-                    children: (0, _.jsxs)(_._, {
-                      panelProps: {
-                        lang: (0, _._)((0, _._)(_)),
-                        onBlur: () => (null == _ ? void 0 : _.CommitChanges()),
-                      },
-                      className: (0, _._)({
-                        [_().EditorPanel]: !0,
-                        [_().SingleLineProseMirror]: Boolean(_),
-                      }),
-                      pmState: _,
-                      refOnUpdate: _,
-                      refView: _,
-                      bSingleLine: _,
-                      children: [
-                        "color" in _.pm_schema.marks &&
-                          (0, _.jsx)(_, {
-                            colorMarkType: _.pm_schema.marks.color,
-                            schema: _.pm_schema,
-                          }),
-                        "bgcolor" in _.pm_schema.marks &&
-                          (0, _.jsx)(_, {
-                            colorMarkType: _.pm_schema.marks.bgcolor,
-                            schema: _.pm_schema,
-                          }),
-                        Boolean(_) &&
-                          (0, _.jsx)(_._, {
-                            nMaxChars: _,
-                          }),
-                        (0, _.jsx)(_, {
-                          strPlaceholder: _,
-                        }),
-                      ],
-                    }),
+                  "Error Occurred in Rich Text Editor:",
+                  (0, _.jsx)(_, {
+                    fnShowRichTextEditor: _,
                   }),
                 ],
+              }),
+              children: (0, _.jsx)(_, {
+                ..._,
+                onResize: _,
+                setView: _,
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            fnGetContent: _,
+            language: _,
+            fnUpdateContent: _,
+            onResize: _,
+            strPlaceholder: _,
+            bSingleLine: _,
+            nTitleCharLimit: _,
+            strOverrideBackgroundColor: _,
+            setView: _,
+            eTitleDisplaySize: _,
+            eTextAlignment: _,
+            fnShowRichTextEditor: _,
+          } = _,
+          _ = _(),
+          [_, _] = _.useState(null),
+          _ = _.useRef(void 0),
+          _ = (0, _._)();
+        (0, _.useEffect)(() => {
+          _(new _._(_, _(), (_) => _(_)));
+        }, [_, _, _]);
+        const _ = (0, _._)(_);
+        return (
+          (0, _._)(_, {
+            msAutosaveTimeout: 1e3,
+          }),
+          (0, _.jsxs)("div", {
+            className: _().RichTextBackgroundCtn,
+            style: {
+              backgroundColor: _.GetEventModel().jsondata.sale_background_color,
+              backgroundRepeat:
+                _.GetEventModel().jsondata.sale_background_repeat,
+            },
+            children: [
+              " ",
+              (0, _.jsx)("div", {
+                className: (0, _._)({
+                  [_().AboutTheGameArea]: !0,
+                  [_().Container]: !0,
+                  [_()._]: _ == _._.k_Header1,
+                  [_()._]: _ == _._.k_Header2,
+                  [_()._]: _ == _._.k_Header3,
+                  [_().Left]: _ == _._.k_Left,
+                  [_().Center]: _ == _._.k_Center,
+                  [_().Right]: _ == _._.k_Right,
+                }),
+                ref: _,
+                style: {
+                  backgroundImage: _,
+                },
+                children: (0, _.jsxs)(_._, {
+                  panelProps: {
+                    lang: (0, _._)((0, _._)(_)),
+                    onBlur: () => (null == _ ? void 0 : _.CommitChanges()),
+                  },
+                  className: (0, _._)({
+                    [_().EditorPanel]: !0,
+                    [_().SingleLineProseMirror]: Boolean(_),
+                  }),
+                  pmState: _,
+                  refOnUpdate: _,
+                  refView: _,
+                  bSingleLine: _,
+                  children: [
+                    "color" in _.pm_schema.marks &&
+                      (0, _.jsx)(_, {
+                        colorMarkType: _.pm_schema.marks.color,
+                        schema: _.pm_schema,
+                      }),
+                    "bgcolor" in _.pm_schema.marks &&
+                      (0, _.jsx)(_, {
+                        colorMarkType: _.pm_schema.marks.bgcolor,
+                        schema: _.pm_schema,
+                      }),
+                    Boolean(_) &&
+                      (0, _.jsx)(_._, {
+                        nMaxChars: _,
+                      }),
+                    (0, _.jsx)(_, {
+                      strPlaceholder: _,
+                    }),
+                  ],
+                }),
               }),
             ],
           })
         );
+      }
+      function _() {
+        const _ = _.useRef(void 0);
+        return (
+          _.current ||
+            (_.current = (function () {
+              const { paragraph: _, bullet_list: _, list_item: _ } = _._.nodes,
+                { strong: _, italic: _, underline: _, strike: _ } = _._.marks,
+                { link: _ } = _._.marks,
+                { color: _, bgcolor: _ } = _._.marks;
+              return new _._({
+                nodes: {
+                  paragraph: _,
+                  bullet_list: _,
+                  list_item: _,
+                },
+                marks: {
+                  strong: _,
+                  italic: _,
+                  underline: _,
+                  strike: _,
+                  link: _,
+                  color: _,
+                  bgcolor: _,
+                },
+              });
+            })()),
+          _.current
+        );
+      }
+      function _(_) {
+        const { fnShowRichTextEditor: _ } = _;
+        return _._.is_support
+          ? (0, _.jsx)(_._, {
+              className: _().VOBtn,
+              onClick: () => _ && _(!1),
+              toggled: !1,
+              tooltip: "Toggle off the rich text editor",
+              children: "VO",
+            })
+          : null;
       }
       function _(_) {
         const {
@@ -19997,14 +20036,9 @@
               [_().Sticky]: _,
             }),
             children: [
-              _._.is_support &&
-                (0, _.jsx)(_._, {
-                  className: _().VOBtn,
-                  onClick: () => _(!1),
-                  toggled: !1,
-                  tooltip: "Toggle off the rich text editor",
-                  children: "VO",
-                }),
+              (0, _.jsx)(_, {
+                fnShowRichTextEditor: _,
+              }),
               (0, _.jsx)(_._, {
                 schema: _,
               }),
@@ -22771,7 +22805,7 @@
                   ..._,
                   localizedMedia: _.title_media,
                 })
-              : (0, _.jsxs)(_.Fragment, {
+              : (0, _.jsxs)(_._, {
                   children: [
                     _ &&
                       (0, _.jsxs)(_._, {

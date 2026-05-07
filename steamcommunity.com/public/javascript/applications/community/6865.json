@@ -201,6 +201,7 @@
     "moderationaction_released": "Uvolněno",
     "moderationaction_privatemessaged": "Byla odeslána soukromá zpráva",
     "moderationaction_unknown": "Neznámé opatření",
+    "moderationaction_ownerdisputed": "Moderace byla zpochybněna vlastníkem",
     "moderatormessage_count_note": "Upozornění: %1$s",
     "moderatormessage_count_warning": "Varování: %1$s",
     "moderatormessage_count_bannotice": "Bany: %1$s",

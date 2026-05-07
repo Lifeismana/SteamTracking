@@ -6,6 +6,24 @@
   {
     55552: () => {},
     71353: () => {},
+    62759: (e, t, n) => {
+      "use strict";
+      n.d(t, { b: () => l });
+      var o = n(98403),
+        r = n(90865),
+        i = n(90150),
+        s = n(73077),
+        a = n(12260),
+        l = (0, o.gu)({
+          chartName: "LineChart",
+          GraphicalChild: r.N,
+          axisComponents: [
+            { axisType: "xAxis", AxisComp: i.W },
+            { axisType: "yAxis", AxisComp: s.h },
+          ],
+          formatAxisMap: a.pr,
+        });
+    },
     47316: (e, t, n) => {
       "use strict";
       n.d(t, {
@@ -14112,24 +14130,6 @@
           );
         };
       x.displayName = "Viewer";
-    },
-    66251: (e, t, n) => {
-      "use strict";
-      n.d(t, { b: () => l });
-      var o = n(1839),
-        r = n(76549),
-        i = n(36058),
-        s = n(55241),
-        a = n(5608),
-        l = (0, o.gu)({
-          chartName: "LineChart",
-          GraphicalChild: r.N,
-          axisComponents: [
-            { axisType: "xAxis", AxisComp: i.W },
-            { axisType: "yAxis", AxisComp: s.h },
-          ],
-          formatAxisMap: a.pr,
-        });
     },
     50104: (e, t, n) => {
       "use strict";

@@ -201,6 +201,7 @@
     "moderationaction_released": "Utgivet",
     "moderationaction_privatemessaged": "Privatmeddelande skickat",
     "moderationaction_unknown": "Okänd handling",
+    "moderationaction_ownerdisputed": "Modereringen har bestridits av ägaren",
     "moderatormessage_count_note": "Noteringar: %1$s",
     "moderatormessage_count_warning": "Varningar: %1$s",
     "moderatormessage_count_bannotice": "Avstängningar: %1$s",

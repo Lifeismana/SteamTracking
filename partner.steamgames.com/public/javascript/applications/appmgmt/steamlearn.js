@@ -34196,11 +34196,11 @@
           ],
         });
       };
-      var io = a(66251),
-        no = a(85010),
-        so = a(36058),
-        oo = a(55241),
-        co = a(76549),
+      var io = a(62759),
+        no = a(30230),
+        so = a(90150),
+        oo = a(73077),
+        co = a(90865),
         lo = a(86493);
       function mo(e) {
         let t = "";
@@ -36516,7 +36516,7 @@
           });
         },
         Do = {
-          SteamLearnBase: () => "steamlearn",
+          SteamLearnBase: () => "steamlearnold",
           SteamLearnProject: () => "project",
           SteamLearnDashboard: () => "/dashboard2",
           SteamLearnProjects: () => "/projects",

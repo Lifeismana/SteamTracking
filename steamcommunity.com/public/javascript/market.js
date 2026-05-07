@@ -2333,6 +2333,12 @@ function Market_SetActiveLisitingsPerPage( cListings )
 	RefreshMyMarketListings( bDecreasing );
 }
 
+function Market_ClearMarketOptOut()
+{
+	SetCookie( 'bMarketOptOut', '', 0, '/market' );
+	window.location.reload();
+}
+
 $J(function() {
 	$$('a.tooltip').each( function( elem ) {
 		if ( elem.hasClassName( "locked" ) )

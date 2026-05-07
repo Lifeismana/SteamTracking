@@ -35,66 +35,58 @@
           _ = (0, _._)(1, _.gidTopic),
           [_, _] = (0, _.useState)(() => void 0 !== localStorage[_]);
         if (_.isSuccess && 0 === _.data.subjects.length) return null;
-        return (0, _.jsxs)("div", {
+        return (0, _.jsx)("div", {
           className: _ ? _.FloatingSubjectListCtn : "",
-          children: [
-            (0, _.jsx)("div", {
-              className: "rightbox_header",
-            }),
-            (0, _.jsx)("div", {
-              className: "rightbox",
-              children: (0, _.jsxs)("div", {
-                className: "content",
-                children: [
-                  (0, _.jsx)("div", {
-                    className: "rightbox_list_header",
-                    children: (0, _.jsxs)("span", {
-                      className: _.SplitHeader,
-                      children: [
-                        _._.Localize("#reportedsubjectlist_header"),
-                        " ",
-                        (0, _.jsx)("button", {
-                          className: _.PopoutButton,
-                          onClick: () => {
-                            _
-                              ? localStorage.removeItem(_)
-                              : localStorage.setItem(_, "1"),
-                              _(!_);
-                          },
-                          children: (0, _.jsx)(_.YNO, {}),
-                        }),
-                      ],
-                    }),
+          children: (0, _.jsx)("div", {
+            className: "rightbox",
+            children: (0, _.jsxs)("div", {
+              className: "content",
+              children: [
+                (0, _.jsx)("div", {
+                  className: "rightbox_list_header",
+                  children: (0, _.jsxs)("span", {
+                    className: _.SplitHeader,
+                    children: [
+                      _._.Localize("#reportedsubjectlist_header"),
+                      " ",
+                      (0, _.jsx)("button", {
+                        className: _.PopoutButton,
+                        onClick: () => {
+                          _
+                            ? localStorage.removeItem(_)
+                            : localStorage.setItem(_, "1"),
+                            _(!_);
+                        },
+                        children: (0, _.jsx)(_.YNO, {}),
+                      }),
+                    ],
                   }),
-                  _.isError &&
-                    (0, _.jsx)("div", {
-                      className: "moderatorToolLink",
-                      children: "Error",
-                    }),
-                  _.isLoading && (0, _.jsx)(_._, {}),
-                  _.isSuccess &&
-                    (0, _.jsx)("div", {
-                      style: {
-                        maxHeight: "20em",
-                        overflowY: "scroll",
-                      },
-                      children: _.data.subjects.map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            subject: _,
-                          },
-                          _.subject_id,
-                        ),
+                }),
+                _.isError &&
+                  (0, _.jsx)("div", {
+                    className: "moderatorToolLink",
+                    children: "Error",
+                  }),
+                _.isLoading && (0, _.jsx)(_._, {}),
+                _.isSuccess &&
+                  (0, _.jsx)("div", {
+                    style: {
+                      maxHeight: "20em",
+                      overflowY: "scroll",
+                    },
+                    children: _.data.subjects.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          subject: _,
+                        },
+                        _.subject_id,
                       ),
-                    }),
-                ],
-              }),
+                    ),
+                  }),
+              ],
             }),
-            (0, _.jsx)("div", {
-              className: "rightbox_footer",
-            }),
-          ],
+          }),
         });
       }
       function _(_) {

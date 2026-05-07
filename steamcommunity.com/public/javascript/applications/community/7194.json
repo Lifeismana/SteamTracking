@@ -201,6 +201,7 @@
     "moderationaction_released": "Yayınlandı",
     "moderationaction_privatemessaged": "Özel mesaj gönderildi",
     "moderationaction_unknown": "Bilinmeyen eylem",
+    "moderationaction_ownerdisputed": "Düzenlemeye içerik sahibi tarafından itiraz edildi",
     "moderatormessage_count_note": "Notlar: %1$s",
     "moderatormessage_count_warning": "Uyarılar: %1$s",
     "moderatormessage_count_bannotice": "Yasaklamalar: %1$s",

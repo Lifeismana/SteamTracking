@@ -8,6 +8,32 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (0, _._)({
+          chartName: "LineChart",
+          GraphicalChild: _._,
+          axisComponents: [
+            {
+              axisType: "xAxis",
+              AxisComp: _._,
+            },
+            {
+              axisType: "yAxis",
+              AxisComp: _._,
+            },
+          ],
+          formatAxisMap: _._,
+        });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -15800,32 +15826,6 @@
           );
         };
       _.displayName = "Viewer";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (0, _._)({
-          chartName: "LineChart",
-          GraphicalChild: _._,
-          axisComponents: [
-            {
-              axisType: "xAxis",
-              AxisComp: _._,
-            },
-            {
-              axisType: "yAxis",
-              AxisComp: _._,
-            },
-          ],
-          formatAxisMap: _._,
-        });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

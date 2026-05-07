@@ -201,6 +201,7 @@
     "moderationaction_released": "Vrijgegeven",
     "moderationaction_privatemessaged": "Privébericht verzonden",
     "moderationaction_unknown": "Onbekende actie",
+    "moderationaction_ownerdisputed": "Bezwaar aangetekend door eigenaar tegen moderatie",
     "moderatormessage_count_note": "Opmerkingen: %1$s",
     "moderatormessage_count_warning": "Waarschuwingen: %1$s",
     "moderatormessage_count_bannotice": "Verbanningen: %1$s",

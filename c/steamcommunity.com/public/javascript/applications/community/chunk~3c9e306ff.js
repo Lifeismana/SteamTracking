@@ -1483,12 +1483,14 @@
         constructor(_) {
           (this.m_strMPD = ""),
             (this.m_strHLS = ""),
+            (this.m_strCaptions = ""),
             (this.m_strCDNAuthURLParameters = ""),
             (this.m_bTimeoutAfterFailedDownload = !0),
             (this.m_bAlwaysStartWithSubtitles = !1),
             (this.m_bMuteOnAutoplayBlocked = !1),
             (this.m_schUpdateMPD = new _._()),
             (this.m_xhrUpdateMPD = null),
+            (this.m_xhrCaptionManifest = null),
             (this.m_mpd = null),
             (this.m_bUseHLSManifest = !1),
             (this.m_strVideoAdaptationID = ""),
@@ -1508,11 +1510,12 @@
             (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
             (this.m_nTimedText = 0),
+            (this.m_strActiveTextTrack = null),
             (this.m_schReportPlayerTrigger = new _._()),
             (this.m_bStatsViewVisible = !1),
             (this.m_schCaptureDisplayStatsTrigger = new _._()),
             (this.m_videoRepSelected = null),
-            (this.m_timedTextRepSelected = null),
+            (this.m_rgCaptions = null),
             (this.m_stats = new _._()),
             (this.m_bClosing = !1),
             (this.m_hlsTimeOffset = 0),
@@ -1554,7 +1557,7 @@
         SetMuteOnAutoplayBlocked(_) {
           this.m_bMuteOnAutoplayBlocked = _;
         }
-        async PlayMPD(_, _, _) {
+        async PlayMPD(_, _, _, _) {
           (_ = Array.isArray(_) ? _ : [_]),
             this.m_stats.StartingPlayback(),
             (this.m_strCDNAuthURLParameters = _ || "");
@@ -1609,7 +1612,8 @@
               (this.m_strHLS = _), (this.m_bUseHLSManifest = !0);
             }
             if (
-              (this.DispatchEvent("valve-metadatachanged"),
+              (_ && (await this.DownloadCaptionManifest(_)),
+              this.DispatchEvent("valve-metadatachanged"),
               this.IsLiveContent() &&
                 (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
                   this.m_schUpdateMPD.Schedule(
@@ -1662,6 +1666,11 @@
                   "ended",
                   this.OnEndedForHLS,
                 ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo.textTracks,
+                  "change",
+                  this.CheckActiveTextTrack,
+                ),
                 void console.assert(this.BInitialized())
               );
             this.BCreateLoaders()
@@ -1675,52 +1684,55 @@
           } else this.CloseWithError(_.PlaybackError, "Invalid manifest");
         }
         InitTimedText() {
-          _(this.m_mpd),
-            (this.m_nTimedText = 0),
-            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((_) => {
-              let _ = (0, _._)(_._.LANGUAGE);
-              if (
-                _.rgRepresentations.length > 0 &&
+          _(this.m_mpd);
+          let _ = [];
+          if (this.m_rgCaptions) _ = this.m_rgCaptions;
+          else
+            for (let _ of this.m_mpd.GetTimedTextAdaptionSet(0))
+              0 != _.rgRepresentations.length &&
                 _.rgRepresentations[0].strClosedCaptionFile &&
-                _.strLanguage in _._
-              ) {
-                const _ = document.createElement("track");
-                (_.kind = "subtitles"),
-                  (_.label = (0, _._)(
-                    "#Language_" + (0, _._)(_._[_.strLanguage]),
-                  )),
-                  (_.srclang = _.strLanguage),
-                  (_.src = _.rgRepresentations[0].strClosedCaptionFile),
-                  (this.m_nTimedText += 1),
-                  (!this.m_bAlwaysStartWithSubtitles && 0 == _) ||
-                    _._[_.strLanguage] != _ ||
-                    ((_.default = !0),
-                    (this.m_timedTextRepSelected = _.rgRepresentations[0])),
-                  this.m_elVideo.appendChild(_);
-              }
-            });
+                _.strLanguage in _._ &&
+                _.push({
+                  m_strURL: _.rgRepresentations[0].strClosedCaptionFile,
+                  m_strLanguageBCP47: _.strLanguage,
+                });
+          this.m_nTimedText = 0;
+          let _ = (0, _._)(_._.LANGUAGE);
+          for (let _ of _) {
+            const _ = document.createElement("track");
+            (_.kind = "captions"),
+              (_.label = _(_.m_strLanguageBCP47)),
+              (_.srclang = _.m_strLanguageBCP47),
+              (_.src = _.m_strURL),
+              (!this.m_bAlwaysStartWithSubtitles && 0 == _) ||
+                _._[_.m_strLanguageBCP47] != _ ||
+                (_.default = !0),
+              this.m_elVideo.appendChild(_),
+              (this.m_nTimedText += 1);
+          }
         }
         SetSubtitles(_) {
-          let _ = null;
+          for (let _ = 0; _ < this.m_elVideo.textTracks.length; _++) {
+            const _ = this.m_elVideo.textTracks[_],
+              _ = _._[_.language] == _ ? "showing" : "disabled";
+            _.mode = _;
+          }
+        }
+        CheckActiveTextTrack() {
+          let _ = "";
           for (let _ = 0; _ < this.m_elVideo.textTracks.length; _++) {
             const _ = this.m_elVideo.textTracks[_];
-            if (_._[_.language] == _) {
-              let _ = this.GetTimeTextAdaptions(0).filter(
-                (_) => _.strLanguage == _.language,
-              );
-              _ &&
-                _.length > 0 &&
-                _[0].rgRepresentations &&
-                (_ = _[0].rgRepresentations[0]),
-                (_.mode = "showing");
-            } else _.mode = "disabled";
+            "showing" == _.mode && (_ = _.language);
           }
-          this.m_timedTextRepSelected = _;
+          _ !== this.m_strActiveTextTrack &&
+            ((this.m_strActiveTextTrack = _),
+            this.DispatchEvent("valve-captionschange"));
         }
         OnLoadedMetadataForHLS() {
           this.m_bUseHLSManifest &&
             ((this.m_bIsBuffering = !1),
             this.BeginPlaybackHLS(),
+            this.CheckActiveTextTrack(),
             this.DispatchEvent("valve-bufferupdate"));
         }
         OnVisibilityChangeForHLS() {
@@ -1760,6 +1772,7 @@
           (this.m_bIsBuffering = !0),
             (this.m_strMPD = ""),
             (this.m_mpd = null),
+            (this.m_strCaptions = ""),
             (this.m_bUseHLSManifest = !1),
             (this.m_strVideoAdaptationID = ""),
             (this.m_strAudioAdaptationID = ""),
@@ -1768,18 +1781,23 @@
             (this.m_seekingToTime = null),
             (this.m_bStatsViewVisible = !1),
             (this.m_videoRepSelected = null),
+            (this.m_rgCaptions = null),
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
             (this.m_stats = new _._()),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
             (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
+            (this.m_strActiveTextTrack = null),
             this.m_watchedIntervals.Clear(),
             console.assert(!this.BInitialized());
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
             (this.m_xhrUpdateMPD.cancel(), (this.m_xhrUpdateMPD = null)),
+            this.m_xhrCaptionManifest &&
+              (this.m_xhrCaptionManifest.cancel(),
+              (this.m_xhrCaptionManifest = null)),
             this.m_schUpdateMPD.Cancel(),
             this.m_schReportPlayerTrigger.Cancel(),
             this.m_schCaptureDisplayStatsTrigger.Cancel(),
@@ -1853,6 +1871,32 @@
                 _.PlaybackError,
                 "Failed to download MPD: 410 Gone",
               );
+        }
+        async DownloadCaptionManifest(_) {
+          let _ = null;
+          try {
+            (this.m_xhrCaptionManifest = _().CancelToken.source()),
+              (_ = await _().get(_, {
+                cancelToken: this.m_xhrCaptionManifest.token,
+              }));
+          } catch (_) {
+            return;
+          }
+          if (((this.m_xhrCaptionManifest = null), !_ || 200 != _.status))
+            return;
+          let _ = "string" == typeof _.data ? JSON.parse(_.data) : _.data;
+          if (_ && Array.isArray(_.captions)) {
+            this.m_rgCaptions = [];
+            for (let _ of _.captions) {
+              if (!_.url || !_.lang || !(_.lang in _._)) continue;
+              let _ = new URL(_.url, _).href;
+              this.m_rgCaptions.push({
+                m_strURL: _,
+                m_strLanguageBCP47: _.lang,
+              });
+            }
+            this.m_strCaptions = _;
+          }
         }
         CloseWithError(_, ..._) {
           this.DispatchEvent("valve-downloadfailed", _),
@@ -1956,6 +2000,16 @@
               this.m_elVideo,
               "seeked",
               this.OnVideoSeeked,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo.textTracks,
+              "change",
+              this.CheckActiveTextTrack,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "loadedmetadata",
+              this.OnLoadedMetadata,
             ),
             (this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
             (this.m_resizeObserver = (0, _._)(
@@ -2094,6 +2148,9 @@
         OnVideoCanPlayHLS() {
           this.m_stats.LogVideoOnCanPlay();
         }
+        OnLoadedMetadata() {
+          this.CheckActiveTextTrack();
+        }
         GetCurrentPlayTime() {
           if (!this.BInitialized()) return 0;
           if (this.m_seekingToTime) {
@@ -2169,10 +2226,8 @@
             let _ = this.GetCurrentVideoAdaptation(),
               _ = _ && _.strID ? _.strID : "",
               _ = this.GetCurrentAudioAdaptationfunction(),
-              _ = _ && _.strID ? _.strID : "",
-              _ = this.GetCurrentTimedTextRepresentation(),
               _ = _ && _.strID ? _.strID : "";
-            this.m_bookMarkAdapter.SetBookmark(_, _, _, _),
+            this.m_bookMarkAdapter.SetBookmark(_, _, _, ""),
               this.IsPaused()
                 ? this.m_schBookmarkUpdater.Cancel()
                 : this.m_schBookmarkUpdater.Schedule(
@@ -2180,9 +2235,6 @@
                     this.SendUpdateToBookmarkServiceIfNeeded,
                   );
           }
-        }
-        GetCurrentTimedTextRepresentation() {
-          return this.m_timedTextRepSelected;
         }
         OnVideoPlay() {
           this.m_bUseHLSManifest ||
@@ -2713,6 +2765,19 @@
         BHasTimedText() {
           return this.m_nTimedText > 0;
         }
+        IsShowingCaption() {
+          return !!this.m_strActiveTextTrack;
+        }
+        GetCaptionRepresentations() {
+          if (!this.m_mpd) return [];
+          let _ = [];
+          for (let _ of this.m_elVideo.textTracks)
+            _.push({
+              m_eLanguage: _._[_.language],
+              m_strLabel: _.label,
+            });
+          return _;
+        }
         GetMaxWidthAndHeight() {
           if (!this.m_mpd) return null;
           let _ = this.m_mpd.GetMainVideoAdaption();
@@ -2752,8 +2817,12 @@
       function _(_) {
         return !!_ && _ instanceof Error && "NotAllowedError" == _.name;
       }
+      function _(_) {
+        return _ in _._ ? (0, _._)("#Language_" + (0, _._)(_._[_])) : "";
+      }
       (0, _._)([_._], _.prototype, "m_nTimedText", void 0),
         (0, _._)([_._], _.prototype, "InitTimedText", null),
+        (0, _._)([_._], _.prototype, "CheckActiveTextTrack", null),
         (0, _._)([_._], _.prototype, "OnLoadedMetadataForHLS", null),
         (0, _._)([_._], _.prototype, "OnVisibilityChangeForHLS", null),
         (0, _._)([_._], _.prototype, "OnEndedForHLS", null),
@@ -2769,6 +2838,7 @@
         (0, _._)([_._], _.prototype, "OnVideoError", null),
         (0, _._)([_._], _.prototype, "OnVideoCanPlay", null),
         (0, _._)([_._], _.prototype, "OnVideoCanPlayHLS", null),
+        (0, _._)([_._], _.prototype, "OnLoadedMetadata", null),
         (0, _._)([_._], _.prototype, "GetCurrentPlayTime", null),
         (0, _._)([_._], _.prototype, "GetBufferedEndTime", null),
         (0, _._)([_._], _.prototype, "OnVideoTimeUpdate", null),

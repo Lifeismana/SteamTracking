@@ -2102,6 +2102,11 @@
                     br: b.qM.readUint32,
                     bw: b.gp.writeUint32,
                   },
+                  reupload_requested: {
+                    n: 9,
+                    br: b.qM.readBool,
+                    bw: b.gp.writeBool,
+                  },
                 },
               }),
             H.sm_m

@@ -117,10 +117,31 @@ table div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 26px;
+  gap: 36px;
 }
 ._2LegBbkPqIlvkjCfpbo4V1 {
   margin-right: 8px;
+}
+._1WHIJmT4YG0U0TGfx-u93k {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+._2QWA5XBjtoSIM-_eLNiw2a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+._1oiwHOMI9o4tYFhxPeBzdb {
+  padding: 0;
+  margin-left: 8px;
+}
+._1oiwHOMI9o4tYFhxPeBzdb svg {
+  width: 12px;
+  height: 12px;
+  stroke: #000;
+  fill: #000;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE {
   display: flex;

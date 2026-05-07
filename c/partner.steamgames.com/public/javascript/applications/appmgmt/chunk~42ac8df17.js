@@ -4446,15 +4446,21 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: _.Localize("#LoginRedirect_Dialog_Title"),
           strDescription: _.Localize("#LoginRedirect_Dialog_Description"),
-          closeModal: _,
+          onCancel: _,
+          strOKButtonText: _._.Localize("#Button_OK"),
           onOK: () => {
-            window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+            !(function () {
+              const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+              window.location.href = _;
+            })(),
+              _();
           },
         });
       }
@@ -5421,9 +5427,13 @@
         }, [_, _]);
         const _ = (0, _.useCallback)(
           async (_) => {
-            _.preventDefault(),
-              _.stopPropagation(),
-              _._.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _();
+            _._.logged_in
+              ? (_.preventDefault(),
+                _.stopPropagation(),
+                _(!0),
+                await _(),
+                _.token.reason || _(!1))
+              : _();
           },
           [_.token.reason, _, _],
         );
@@ -8767,62 +8777,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { data: _ } = (0, _._)(_),
-          _ = (0, _._)();
-        if (!_) return;
-        const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ ? _.filter((_) => !!_.all_ages) : _;
-      }
-      function _(_) {
-        let _ = _(_);
-        if (_ && 0 != _.length) return _[0];
-      }
-      function _(_) {
-        return `${_._.STORE_ITEM_BASE_URL}${_.trailer_url_format.replace("${FILENAME}", _.screenshot_full ?? _.screenshot_medium ?? "")}`;
-      }
-      function _(_, _) {
-        return `${_._.VIDEO_CDN_URL}store_trailers/${_.trailer_url_format.replace("${FILENAME}", _)}`;
-      }
-      function _(_, _) {
-        return `${_._.VIDEO_CDN_URL}store_trailers/${_}`;
-      }
-      function _(_) {
-        let _ = [];
-        _.adaptive_trailers &&
-          (_ = _.adaptive_trailers
-            .filter(
-              (_) =>
-                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
-                _.cdn_path,
-            )
-            .map((_) => _(0, _.cdn_path || "")));
-        let _ = [];
-        return (
-          _.adaptive_trailers &&
-            (_ = _.adaptive_trailers
-              .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
-              .map((_) => _(0, _.cdn_path || ""))),
-          {
-            rgDashTrailers: _,
-            rgHlsTrailers: _,
-          }
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -10156,74 +10110,6 @@
           (
             Number.parseInt(window.localStorage.getItem(_) || "0") + 1
           ).toString(),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        eAdultOnlyMediaBehavior: "masked",
-      });
-      function _() {
-        const { eAdultOnlyMediaBehavior: _ } = _.useContext(_),
-          _ = (function () {
-            const { data: _ } = (0, _._)({
-              queryKey: ["AOWarningCookie"],
-              queryFn: () => _(),
-              placeholderData: () => _(),
-              staleTime: 0,
-            });
-            return _ && _ > Date.now() / 1e3;
-          })();
-        return _.useMemo(() => {
-          const _ = (0, _._)("forceallages");
-          return (
-            !(!_ || "0" === _) ||
-            !(!_._.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
-          );
-        }, []) ||
-          ("masked" == _ &&
-            (_._.excluded_content_descriptors.includes(4) ||
-              _._.excluded_content_descriptors.includes(3)))
-          ? "blocked"
-          : "masked" == _ && _
-            ? "allowed"
-            : _;
-      }
-      function _() {
-        return "allowed" != _();
-      }
-      const _ = "bDisableAOWarning";
-      _._.PerDay;
-      function _() {
-        const _ = (0, _._)(_),
-          _ = _ ? parseInt(_) : 0;
-        return 0 != _ ? _ : null;
-      }
-      function _(_) {
-        const _ = "blocked" == _() && !!_,
-          { data: _ } = (0, _._)(
-            _
-              ? {
-                  appid: _,
-                }
-              : void 0,
-          );
-        return (
-          !!_ &&
-          (!_ ||
-            _.content_descriptorids.includes(3) ||
-            _.content_descriptorids.includes(4))
         );
       }
     },

@@ -2461,6 +2461,27 @@ function WatchHelpRequest( strHelpRequestReference, bEnable )
 
 }
 
+function SubmitTestResultsToPartner( strHelpRequestReference, bEnable )
+{
+	$J.ajax({
+		type: "POST",
+		url: "https://help.steampowered.com/ticketmaster/AjaxSubmitTestResultsToPartner/",
+		data: {
+			reference_code: strHelpRequestReference
+		}
+		})
+	.fail( function( xhr )
+	{
+		console.log( xhr );
+		ShowAlertDialog( 'Ticketmaster', 'An error occurred attempting to submit this test result to the parter site. Please try again.' ).done( function() { location.reload(); } );
+	})
+	.done( function( data )
+	{
+		location.reload();
+	});
+
+}
+
 function MarkHelpRequestAsViewed( strHelpRequestReference )
 {
 	$J.ajax({

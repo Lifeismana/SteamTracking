@@ -56,10 +56,10 @@
         h = t(92834),
         m = t(1078),
         g = t(12155),
-        _ = t(52038),
-        p = t(78327),
-        x = t(51706),
-        f = t(46253),
+        p = t(52038),
+        _ = t(78327),
+        f = t(51706),
+        x = t(46253),
         v = t(22797),
         j = t(44433),
         C = t(91970),
@@ -88,10 +88,10 @@
           }, [t]);
         return i && 0 != i.length
           ? (0, n.jsx)("div", {
-              className: (0, _.A)(T().SaleTagBlockCtn, "SaleTagBlockCtn"),
+              className: (0, p.A)(T().SaleTagBlockCtn, "SaleTagBlockCtn"),
               children: Boolean(i?.length > 0)
                 ? (0, n.jsx)("div", {
-                    className: (0, _.A)(T().TagBox, T().Categories),
+                    className: (0, p.A)(T().TagBox, T().Categories),
                     children: i.map((e) =>
                       (0, n.jsx)(V, { categoryID: e }, "cat_" + e),
                     ),
@@ -140,28 +140,28 @@
           [l, c] = (0, u.useState)(!1),
           [h, m] = (0, u.useState)(!1),
           g = (0, d.dy)(),
-          p = i?.highlights?.filter((e) => !g || e.all_ages),
-          x = p && p?.length > 0 ? p[0] : void 0,
-          f = u.useCallback(() => {
-            x && (t ? m(!0) : c((e) => !e));
-          }, [x, t]);
+          _ = i?.highlights?.filter((e) => !g || e.all_ages),
+          f = _ && _?.length > 0 ? _[0] : void 0,
+          x = u.useCallback(() => {
+            f && (t ? m(!0) : c((e) => !e));
+          }, [f, t]);
         if (!r)
           return (0, n.jsx)("div", {
-            className: (0, _.A)(b().HilightGrid, b().MediaContainer),
+            className: (0, p.A)(b().HilightGrid, b().MediaContainer),
             children: (0, n.jsx)(v.t, { size: "medium" }),
           });
-        const j = x
-          ? (0, n.jsx)(O, { trailer: x, bPlayVideo: l, fnTogglePlayTrailer: f })
+        const j = f
+          ? (0, n.jsx)(O, { trailer: f, bPlayVideo: l, fnTogglePlayTrailer: x })
           : null;
-        return x ||
+        return f ||
           (s && s.all_ages_screenshots && s.all_ages_screenshots.length > 0)
           ? (0, n.jsxs)("div", {
-              className: (0, _.A)(b().HilightGrid, b().MediaContainer),
+              className: (0, p.A)(b().HilightGrid, b().MediaContainer),
               children: [
                 (0, n.jsx)(E, {
                   elFeaturedInCenter: j,
                   storeItemScreenshots: s,
-                  trailer: x,
+                  trailer: f,
                   id: a,
                   name: r.name || "",
                 }),
@@ -173,9 +173,9 @@
                     })
                   : (0, n.jsx)(L, {
                       name: r.name || "",
-                      trailer: x,
+                      trailer: f,
                       bPlayVideo: l,
-                      fnTogglePlayTrailer: f,
+                      fnTogglePlayTrailer: x,
                       bControls: !0,
                     }),
               ],
@@ -195,7 +195,7 @@
           u = (0, l.kB)(a);
         return void 0 !== !d && r && c
           ? (0, n.jsx)("div", {
-              className: (0, _.A)(b().HilightGrid, b().MediaContainerMM),
+              className: (0, p.A)(b().HilightGrid, b().MediaContainerMM),
               children: (0, n.jsx)(E, {
                 id: a,
                 elFeaturedInCenter: (0, n.jsx)(w, {
@@ -212,7 +212,7 @@
               }),
             })
           : (0, n.jsx)("div", {
-              className: (0, _.A)(b().HilightGrid, b().MediaContainerMM),
+              className: (0, p.A)(b().HilightGrid, b().MediaContainerMM),
               children: (0, n.jsx)(v.t, { size: "medium" }),
             });
       }
@@ -227,13 +227,13 @@
             bUseTrailerAsFirstThumb: h,
             bNoScreenShotModals: g,
           } = e,
-          [p, x] = u.useState(void 0),
-          [f, v] = (0, m.XC)(),
+          [_, f] = u.useState(void 0),
+          [x, v] = (0, m.XC)(),
           j = (0, d.dy)(),
           C = (0, u.useRef)(null),
           [y, T] = (0, u.useState)(0);
         if (!t) return null;
-        const M = a || (void 0 !== p && -1 !== p) ? p : 0,
+        const M = a || (void 0 !== _ && -1 !== _) ? _ : 0,
           A = new Array(),
           N = new Array();
         h &&
@@ -245,7 +245,7 @@
                 trailer: s,
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
-                onMouseEnter: () => x(0),
+                onMouseEnter: () => f(0),
                 onMouseLeave: () => {
                   const e = C.current;
                   e && T(e.currentTime);
@@ -282,7 +282,7 @@
                 (0, n.jsx)(
                   "div",
                   {
-                    className: (0, _.A)({
+                    className: (0, p.A)({
                       [b().ThumbnailCtn]: !0,
                       [b().ThumbnialClickable]: !g,
                     }),
@@ -297,10 +297,10 @@
                                 const a = e.shift();
                                 a && e.push(a);
                               }
-                              f(e.map((e) => (0, r.bu)(e, "full")));
+                              x(e.map((e) => (0, r.bu)(e, "full")));
                             }
                           },
-                      onMouseEnter: () => x(s),
+                      onMouseEnter: () => f(s),
                     }),
                   },
                   t + "_small_" + a,
@@ -335,7 +335,7 @@
             Boolean(P.length > 0) &&
               (0, n.jsxs)("div", {
                 className: b().ScreenshotThumbnailRow,
-                onMouseLeave: () => x(-1),
+                onMouseLeave: () => f(-1),
                 children: [
                   P,
                   S.map((e, a) =>
@@ -378,12 +378,12 @@
           !i)
         )
           return null;
-        let d = (0, _.A)(b().VideoLargeContainer, r && b().videoPlaying);
+        let d = (0, p.A)(b().VideoLargeContainer, r && b().videoPlaying);
         return (0, n.jsxs)("div", {
           className: d,
           onClick: o,
           children: [
-            (0, n.jsx)(f.h, {
+            (0, n.jsx)(x.h, {
               name: t,
               trailerCategory: i.trailer_category,
               trailerDisplay: 1,
@@ -399,7 +399,7 @@
                 muted: !0,
                 poster: null != c && c > 0 ? void 0 : i.screenshot_full,
                 children: i.microtrailer?.map((e) =>
-                  p.TS.IN_CLIENT && "video/mp4" == e.type
+                  _.TS.IN_CLIENT && "video/mp4" == e.type
                     ? null
                     : (0, n.jsx)(
                         "source",
@@ -432,40 +432,41 @@
           m = u.useId(),
           g = u.useId();
         if (!d || !d.adaptive_trailers) return null;
-        const { rgDashTrailers: _, rgHlsTrailers: p } = (0, l.hg)(d);
-        return 0 == _?.length
-          ? null
-          : (0, n.jsx)(x.EN, {
-              active: t,
-              children: (0, n.jsxs)(x.eV, {
-                "aria-labelledby": (0, h.q)(m, g),
-                bAllowFullSize: !0,
-                bOKDisabled: !0,
-                closeModal: s,
-                children: [
-                  (0, n.jsx)("div", {
-                    className: b().VideoPopupContainers,
-                    children: (0, n.jsx)(j.P, {
-                      dashManifests: _ || [],
-                      hlsManifest: (p.length > 0 && p?.[0]) || "",
-                      screenshot: (0, l.hl)(d),
-                      altText: d.trailer_name,
-                      muteWhenAutoplayBlocked: !0,
-                    }),
-                  }),
-                  (0, n.jsx)("div", {
-                    id: m,
-                    style: { display: "none" },
-                    children: r?.name || "",
-                  }),
-                  (0, n.jsx)("div", {
-                    id: g,
-                    style: { display: "none" },
-                    children: d.trailer_name,
-                  }),
-                ],
+        const { rgDashTrailers: p, rgHlsTrailers: _ } = (0, l.hg)(d);
+        if (0 == p?.length) return null;
+        let x = (0, l.Wv)(d);
+        return (0, n.jsx)(f.EN, {
+          active: t,
+          children: (0, n.jsxs)(f.eV, {
+            "aria-labelledby": (0, h.q)(m, g),
+            bAllowFullSize: !0,
+            bOKDisabled: !0,
+            closeModal: s,
+            children: [
+              (0, n.jsx)("div", {
+                className: b().VideoPopupContainers,
+                children: (0, n.jsx)(j.P, {
+                  dashManifests: p || [],
+                  hlsManifest: (_.length > 0 && _?.[0]) || "",
+                  screenshot: (0, l.hl)(d),
+                  altText: d.trailer_name,
+                  muteWhenAutoplayBlocked: !0,
+                  captionManifest: x,
+                }),
               }),
-            });
+              (0, n.jsx)("div", {
+                id: m,
+                style: { display: "none" },
+                children: r?.name || "",
+              }),
+              (0, n.jsx)("div", {
+                id: g,
+                style: { display: "none" },
+                children: d.trailer_name,
+              }),
+            ],
+          }),
+        });
       }
       function O(e) {
         const {
@@ -476,7 +477,7 @@
           onMouseLeave: r,
         } = e;
         return (0, n.jsxs)("div", {
-          className: (0, _.A)({
+          className: (0, p.A)({
             [b().VideoThumbnail]: !i,
             [b().videoPlaying]: i,
             [b().ThumbnailCtn]: !0,
@@ -501,7 +502,7 @@
           { data: m } = (0, o.wl)(a),
           { data: g } = (0, o.xz)(a);
         if (!u || !m || !h) return null;
-        const p = (0, r.b0)(u, "main_capsule");
+        const _ = (0, r.b0)(u, "main_capsule");
         return (0, n.jsxs)(i.Z, {
           focusable: !0,
           noFocusRing: !0,
@@ -509,12 +510,12 @@
           ...d,
           onActivate: t,
           children: [
-            (0, n.jsx)("img", { className: b().MainCapsule, src: p }),
+            (0, n.jsx)("img", { className: b().MainCapsule, src: _ }),
             (0, n.jsxs)("div", {
               className: b().AppDetails,
               children: [
                 (0, n.jsx)("div", {
-                  className: (0, _.A)(b().GameName),
+                  className: (0, p.A)(b().GameName),
                   children: h.name || "",
                 }),
                 (0, n.jsxs)("div", {

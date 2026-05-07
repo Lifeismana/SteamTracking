@@ -2348,6 +2348,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  reupload_requested: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m

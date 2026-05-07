@@ -201,6 +201,7 @@
     "moderationaction_released": "發行日",
     "moderationaction_privatemessaged": "私人訊息已傳送",
     "moderationaction_unknown": "未知行動",
+    "moderationaction_ownerdisputed": "擁有者已對處理提出爭議",
     "moderatormessage_count_note": "註記：%1$s",
     "moderatormessage_count_warning": "警告：%1$s",
     "moderatormessage_count_bannotice": "封鎖：%1$s",

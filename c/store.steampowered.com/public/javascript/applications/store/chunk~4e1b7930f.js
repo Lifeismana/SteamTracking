@@ -12811,8 +12811,13 @@
       }
       var _,
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -12876,39 +12881,23 @@
         }
       }
       function _(_) {
-        const [_, _] = (0, _.useState)(!0),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(void 0);
+        const { appid: _, trailerBaseID: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _] = (0, _.useState)(() =>
+            _ && _ ? null : (0, _._)("#TrailerPlayer_ID_NotProvided"),
+          ),
+          _ = (0, _._)(_),
+          _ = (0, _.useMemo)(
+            () => (_ ? _.find((_) => _.trailer_base_id === _) : null),
+            [_, _],
+          );
         if (
           ((0, _.useEffect)(() => {
-            if (0 == _.appid || 0 == _.trailerBaseID)
-              return void _((0, _._)("#TrailerPlayer_ID_NotProvided"));
-            (async () => {
-              if (
-                (await _._.Get().QueueAppRequest(_.appid, {
-                  include_trailers: !0,
-                }),
-                _._.Get().BHasApp(_.appid))
-              ) {
-                const _ = _._.Get().GetApp(_.appid),
-                  _ = _?.GetAllTrailers()?.GetTrailerByID(_.trailerBaseID);
-                _ ||
-                  (console.error(
-                    "Trailer " +
-                      _.trailerBaseID +
-                      " doesn't existed within appid " +
-                      _.appid,
-                  ),
-                  _(
-                    (0, _._)(
-                      "#TrailerPlayer_CouldNotLoad",
-                      _.appid,
-                      _.trailerBaseID,
-                    ),
-                  )),
-                  _(_),
-                  __webpack_require__(!1);
-              } else
+            _?.unvailable_for_country_restriction &&
+              _((0, _._)("#TrailerPlayer_CouldNotLoad", _, _)),
+              _ &&
+                !_ &&
                 _(
                   (0, _._)(
                     "#TrailerPlayer_CouldNotLoad",
@@ -12916,8 +12905,15 @@
                     _.trailerBaseID,
                   ),
                 );
-            })();
-          }, [_.appid, _.trailerBaseID]),
+          }, [
+            _,
+            _.appid,
+            _.trailerBaseID,
+            _?.unvailable_for_country_restriction,
+            _,
+            _,
+            _,
+          ]),
           _)
         )
           return _.bIsPreviewMode
@@ -12926,21 +12922,24 @@
                 children: _,
               })
             : null;
-        if (_)
+        if (!_)
           return (0, _.jsx)(_._, {
             string: (0, _._)("#Loading"),
             size: "small",
           });
-        if (!_) return null;
-        const _ = _.GetTrailersDash(),
-          _ = _.GetTrailerHls();
-        return (0, _.jsx)(_._, {
-          dashManifests: _ || [],
-          hlsManifest: _ || "",
-          forcePause: !0,
-          screenshot: _.GetScreenshot() || "",
-          altText: _.GetName(),
-          muteWhenAutoplayBlocked: !0,
+        const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
+        if (0 == _?.length) return null;
+        const _ = (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: _().VideoPopupContainers,
+          children: (0, _.jsx)(_._, {
+            dashManifests: _ || [],
+            hlsManifest: (_.length > 0 && _?.[0]) || "",
+            screenshot: (0, _._)(_),
+            altText: _.trailer_name,
+            muteWhenAutoplayBlocked: !0,
+            captionManifest: _,
+          }),
         });
       }
       var _ = __webpack_require__("chunkid"),

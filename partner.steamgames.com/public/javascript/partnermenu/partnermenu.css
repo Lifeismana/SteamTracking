@@ -64,7 +64,6 @@
   left: 0;
   right: 0;
   height: 50px;
-  background-color: #00000080;
   display: flex;
   justify-content: space-between;
 }

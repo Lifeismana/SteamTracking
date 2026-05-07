@@ -32931,73 +32931,6 @@ div:hover > .BBCodeCollapseControl {
 .trailerplayershared_SettingsButton_3ds1F.trailerplayershared_Rotated_3JIjy {
   transform: rotate(90deg);
 }
-.trailerplayershared_SettingsMenu_2KpxN {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  background: linear-gradient(
-    135deg,
-    rgba(33, 39, 44, 0.5803921569),
-    rgba(42, 44, 47, 0.3019607843)
-  );
-  backdrop-filter: blur(10px);
-  border-radius: 4px;
-  min-width: 150px;
-  width: fit-content;
-  padding: 6px;
-  align-self: center;
-  color: #eee;
-  font-family: "Motiva Sans", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  text-align: left;
-  white-space: nowrap;
-  user-select: none;
-}
-.trailerplayershared_SettingsMenu_2KpxN .trailerplayershared_MenuItem_1m5_C {
-  cursor: pointer;
-  padding: 4px 6px;
-  border-radius: 2px;
-  display: flex;
-  gap: 24px;
-  justify-content: space-between;
-}
-.trailerplayershared_SettingsMenu_2KpxN
-  .trailerplayershared_MenuItem_1m5_C.trailerplayershared_Checked_1g618
-  svg {
-  max-width: 18px;
-}
-.trailerplayershared_SettingsMenu_2KpxN
-  .trailerplayershared_MenuItem_1m5_C:hover {
-  background-color: #1a9fff;
-}
-.trailerplayershared_SettingsMenu_2KpxN .trailerplayershared_Separator_2kzb- {
-  height: 10px;
-  position: relative;
-  width: 100%;
-}
-.trailerplayershared_SettingsMenu_2KpxN
-  .trailerplayershared_Separator_2kzb-::before,
-.trailerplayershared_SettingsMenu_2KpxN
-  .trailerplayershared_Separator_2kzb-::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-}
-.trailerplayershared_SettingsMenu_2KpxN
-  .trailerplayershared_Separator_2kzb-::before {
-  top: 6px;
-  background-color: rgba(0, 0, 0, 0.65);
-}
-.trailerplayershared_SettingsMenu_2KpxN
-  .trailerplayershared_Separator_2kzb-::after {
-  top: 7px;
-  background-color: hsla(0, 0%, 100%, 0.35);
-}
 .trailerplayershared_Timeline_11VWk {
   position: relative;
   padding-top: 14px;
@@ -33119,6 +33052,78 @@ div:hover > .BBCodeCollapseControl {
   text-overflow: ellipsis;
   text-wrap: nowrap;
   overflow: hidden;
+}
+.trailerplayermenus_SettingsMenu_10UNx {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(33, 39, 44, 0.5803921569),
+    rgba(42, 44, 47, 0.3019607843)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+  min-width: 150px;
+  width: fit-content;
+  padding: 6px;
+  align-self: center;
+  color: #eee;
+  font-family: "Motiva Sans", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  white-space: nowrap;
+  user-select: none;
+}
+.trailerplayermenus_SettingsMenu_10UNx.trailerplayermenus_Scroll_KSlMe {
+  max-height: 200px;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+}
+.trailerplayermenus_SettingsMenu_10UNx .trailerplayermenus_MenuItem_2Qsf4 {
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 2px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+.trailerplayermenus_SettingsMenu_10UNx
+  .trailerplayermenus_MenuItem_2Qsf4.trailerplayermenus_Checked_3LsAR
+  svg {
+  max-width: 18px;
+}
+.trailerplayermenus_SettingsMenu_10UNx
+  .trailerplayermenus_MenuItem_2Qsf4:hover {
+  background-color: #1a9fff;
+}
+.trailerplayermenus_SettingsMenu_10UNx .trailerplayermenus_Separator_1vN6I {
+  height: 10px;
+  position: relative;
+  flex-shrink: 0;
+}
+.trailerplayermenus_SettingsMenu_10UNx
+  .trailerplayermenus_Separator_1vN6I::before,
+.trailerplayermenus_SettingsMenu_10UNx
+  .trailerplayermenus_Separator_1vN6I::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+.trailerplayermenus_SettingsMenu_10UNx
+  .trailerplayermenus_Separator_1vN6I::before {
+  top: 6px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.trailerplayermenus_SettingsMenu_10UNx
+  .trailerplayermenus_Separator_1vN6I::after {
+  top: 7px;
+  background-color: hsla(0, 0%, 100%, 0.35);
 }
 .trailerplayertouch_PlayerControls_QC2HL {
   position: absolute;

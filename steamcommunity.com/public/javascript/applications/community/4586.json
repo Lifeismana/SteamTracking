@@ -201,6 +201,7 @@
     "moderationaction_released": "Disponibles",
     "moderationaction_privatemessaged": "Message privé envoyé",
     "moderationaction_unknown": "Action inconnue",
+    "moderationaction_ownerdisputed": "Modération contestée par la personne propriétaire",
     "moderatormessage_count_note": "Notes : %1$s",
     "moderatormessage_count_warning": "Avertissements : %1$s",
     "moderatormessage_count_bannotice": "Bannissements : %1$s",

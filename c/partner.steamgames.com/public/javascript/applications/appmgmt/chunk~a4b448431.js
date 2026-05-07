@@ -8,8 +8,147 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)();
+        if (!_) return;
+        const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
+        return _ ? _.filter((_) => !!_.all_ages) : _;
+      }
+      function _(_) {
+        let _ = _(_);
+        if (_ && 0 != _.length) return _[0];
+      }
+      function _(_) {
+        return `${_._.STORE_ITEM_BASE_URL}${_.trailer_url_format.replace("${FILENAME}", _.screenshot_full ?? _.screenshot_medium ?? "")}`;
+      }
+      function _(_, _) {
+        return `${_._.VIDEO_CDN_URL}store_trailers/${_.trailer_url_format.replace("${FILENAME}", _)}`;
+      }
+      function _(_, _) {
+        return `${_._.VIDEO_CDN_URL}store_trailers/${_}`;
+      }
+      function _(_) {
+        let _ =
+          "function" == typeof _.captions_manifest
+            ? _.captions_manifest()
+            : _.captions_manifest;
+        if (!_) return;
+        let _,
+          _ = _._;
+        return (
+          _.MEDIA_CDN_URL
+            ? (_ = _.MEDIA_CDN_URL)
+            : _.CDN_HOST_MEDIA && (_ = _.CDN_HOST_MEDIA),
+          _ ? `${_}/${_}` : void 0
+        );
+      }
+      function _(_) {
+        let _ = [];
+        _.adaptive_trailers &&
+          (_ = _.adaptive_trailers
+            .filter(
+              (_) =>
+                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
+                _.cdn_path,
+            )
+            .map((_) => _(0, _.cdn_path || "")));
+        let _ = [];
+        return (
+          _.adaptive_trailers &&
+            (_ = _.adaptive_trailers
+              .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
+              .map((_) => _(0, _.cdn_path || ""))),
+          {
+            rgDashTrailers: _,
+            rgHlsTrailers: _,
+          }
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        eAdultOnlyMediaBehavior: "masked",
+      });
+      function _() {
+        const { eAdultOnlyMediaBehavior: _ } = _.useContext(_),
+          _ = (function () {
+            const { data: _ } = (0, _._)({
+              queryKey: ["AOWarningCookie"],
+              queryFn: () => _(),
+              placeholderData: () => _(),
+              staleTime: 0,
+            });
+            return _ && _ > Date.now() / 1e3;
+          })();
+        return _.useMemo(() => {
+          const _ = (0, _._)("forceallages");
+          return (
+            !(!_ || "0" === _) ||
+            !(!_._.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
+          );
+        }, []) ||
+          ("masked" == _ &&
+            (_._.excluded_content_descriptors.includes(4) ||
+              _._.excluded_content_descriptors.includes(3)))
+          ? "blocked"
+          : "masked" == _ && _
+            ? "allowed"
+            : _;
+      }
+      function _() {
+        return "allowed" != _();
+      }
+      const _ = "bDisableAOWarning";
+      _._.PerDay;
+      function _() {
+        const _ = (0, _._)(_),
+          _ = _ ? parseInt(_) : 0;
+        return 0 != _ ? _ : null;
+      }
+      function _(_) {
+        const _ = "blocked" == _() && !!_,
+          { data: _ } = (0, _._)(
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          );
+        return (
+          !!_ &&
+          (!_ ||
+            _.content_descriptorids.includes(3) ||
+            _.content_descriptorids.includes(4))
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -890,6 +1029,7 @@
         m_strScreenshotMedium;
         m_strScreenshotFull;
         m_bIsAllAges;
+        m_strCaptionManifest;
         constructor(_) {
           (this.m_strTrailerName = _.trailer_name()),
             (this.m_nBaseID = _.trailer_base_id()),
@@ -921,7 +1061,8 @@
             let _ = this.ExtractAdaptiveTrailers(_.adaptive_trailers(), "hls");
             _.length > 0 && (this.m_rgHlsTrailer = _[0]);
           }
-          this.m_bIsAllAges = _.all_ages() ?? !0;
+          (this.m_bIsAllAges = _.all_ages() ?? !0),
+            (this.m_strCaptionManifest = (0, _._)(_));
         }
         GetName() {
           return this.m_strTrailerName;
@@ -948,6 +1089,9 @@
         }
         BIsAllAges() {
           return this.m_bIsAllAges;
+        }
+        GetCaptionManifest() {
+          return this.m_strCaptionManifest;
         }
         ExtractTrailerFormats(_, _) {
           let _ = {};

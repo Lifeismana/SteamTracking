@@ -1981,23 +1981,8 @@ select.subforum_select_control {
 	background: rgba( 103, 193, 245, 0.2 );
 }
 
-.rightbox_header, .rightbox_footer {
-	/*background: no-repeat url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_box_topbtm.png' );*/
-	width: 295px;
-	height: 4px;
-}
-.rightbox_header {
-	background-position: top;
-}
-.rightbox_footer {
-	background-position: bottom;
-	height: 5px;
-
-	margin-bottom: 18px;
-}
 .rightbox {
-	/*background: repeat-y url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_box_repeat.png' );*/
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .rightbox .content {
 	padding: 16px 14px;

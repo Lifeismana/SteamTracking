@@ -675,22 +675,9 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	width: 295px;
 }
 
-.rightbox_header, .rightbox_footer {
-	/*background: no-repeat url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_box_topbtm.png' );*/
-	width: 295px;
-	height: 4px;
-}
-.rightbox_header {
-	background-position: top;
-}
-.rightbox_footer {
-	background-position: bottom;
-	height: 5px;
-
-	margin-bottom: 18px;
-}
 .rightbox {
 	background: repeat-y url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_box_repeat.png' );
+	margin-bottom: 18px;
 }
 .rightbox .content {
 	padding: 16px 14px;

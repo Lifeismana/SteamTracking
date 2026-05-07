@@ -201,6 +201,7 @@
     "moderationaction_released": "Dirilis",
     "moderationaction_privatemessaged": "Pesan pribadi dikirim",
     "moderationaction_unknown": "Tindakan Tidak Diketahui",
+    "moderationaction_ownerdisputed": "Moderasi disengketakan oleh pemilik",
     "moderatormessage_count_note": "Catatan: %1$s",
     "moderatormessage_count_warning": "Peringatan: %1$s",
     "moderatormessage_count_bannotice": "Ban: %1$s",

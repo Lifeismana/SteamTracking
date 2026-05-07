@@ -1,6 +1,7 @@
 {
     "language": "dutch",
     "TrailerPlayer_Settings_Tooltip": "Instellingen",
+    "TrailerPlayer_Captions_Tooltip": "Ondertiteling/ODS",
     "TrailerPlayer_Play_Tooltip": "Afspelen",
     "TrailerPlayer_Pause_Tooltip": "Pauzeren",
     "TrailerPlayer_Mute_Tooltip": "Dempen",

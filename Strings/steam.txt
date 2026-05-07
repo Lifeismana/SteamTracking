@@ -2045,6 +2045,10 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+02:05:27
+02:05:40
+02:05:41
+02:05:43
 08bX
 0?0L
 0A/8
@@ -2441,9 +2445,6 @@ $ffn
 15IMetricsFactory
 15ISSLCertificate
 15IUpdateStatusUI
-16:20:44
-16:21:03
-16:21:04
 16CAdHocValidation
 16CBilling_Address
 16CConsoleUpdateUI
@@ -7280,7 +7281,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  5 2026
+May  7 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -9291,7 +9292,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May  5 2026 16:20:56
+Startup - updater built May  7 2026 02:05:40
 State
 StaticFileWriterThread()
 Steam

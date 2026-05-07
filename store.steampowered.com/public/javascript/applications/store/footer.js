@@ -38,6 +38,7 @@
     50122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
         Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
         "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
@@ -524,8 +525,8 @@
         });
       }
       var T = n(60859),
-        E = n.n(T);
-      function A() {
+        A = n.n(T);
+      function E() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           width: "142",
@@ -627,9 +628,9 @@
         return "initial" === t || "sm" === t
           ? null
           : (0, s.jsx)("footer", {
-              className: p()(E().SteamChinaFooter, e.className),
+              className: p()(A().SteamChinaFooter, e.className),
               children: (0, s.jsxs)(z.az, {
-                className: E().FooterContent,
+                className: A().FooterContent,
                 children: [
                   (0, s.jsxs)(r.s, {
                     align: "center",
@@ -637,10 +638,10 @@
                     children: [
                       (0, s.jsx)(P, {
                         href: b.TS.STORE_BASE_URL,
-                        children: (0, s.jsx)(A, {}),
+                        children: (0, s.jsx)(E, {}),
                       }),
                       (0, s.jsxs)(z.az, {
-                        className: E().NavLinks,
+                        className: A().NavLinks,
                         children: [
                           (0, s.jsx)(P, {
                             href: "https://about.steamchina.com/upgrade_announcement.html",

@@ -1264,7 +1264,7 @@
             if (t && !t(e)) continue;
             const n = (0, c.Lg)(e),
               a = (0, m.we)("#Language_" + n),
-              r = Boolean(s) && s(e);
+              r = !(!s || !s(e));
             i.push({ eLang: e, sLocName: a, bSupported: r });
           }
           i.sort((e, t) =>
@@ -1365,7 +1365,7 @@
         );
         const n = (0, i.q3)(() => {
           const e = [];
-          for (let n = 0; n < 31; ++n) e[n] = t && t(n);
+          for (let n = 0; n < 31; ++n) e[n] = !(!t || !t(n));
           return e;
         });
         return (

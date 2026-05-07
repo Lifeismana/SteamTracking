@@ -38,18 +38,23 @@
 ._2hZemvW0chMhSn36Vr0RF9 {
   line-height: 24px;
 }
-._1DLGHwAfYnbFVIwbZjO2cn {
+._1DLGHwAfYnbFVIwbZjO2cn,
+._30P9kUCljAZzX5fl1DHGJe {
   color: var(--text-color, var(--color-blue-10));
   box-sizing: border-box;
   font-size: var(--font-size, var(--default-font-size));
   line-height: var(--line-height, var(--default-line-height));
   letter-spacing: var(--letter-spacing, var(--default-letter-spacing));
 }
-._1DLGHwAfYnbFVIwbZjO2cn:where(._1FVRWG5uD8VhzoEiOZWrEo) {
+._1DLGHwAfYnbFVIwbZjO2cn:where(._1FVRWG5uD8VhzoEiOZWrEo),
+._30P9kUCljAZzX5fl1DHGJe:where(._1FVRWG5uD8VhzoEiOZWrEo) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
+}
+._30P9kUCljAZzX5fl1DHGJe {
+  cursor: pointer;
 }
 :where(._3ASRyX4FTT_eMM5S5yrkwK) {
   text-decoration: underline;

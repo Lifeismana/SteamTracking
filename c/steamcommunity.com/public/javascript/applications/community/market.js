@@ -2400,31 +2400,35 @@
             onItemSelectionChange: _,
             selectedValue: _,
             multiselect: _,
+            maxSelected: _,
           } = _("<ComboboxTrigger>");
-        let _ = !1;
-        return (
-          (_ = _ ? Array.isArray(_) && _.includes(_) : _ === _),
-          (0, _.jsxs)(_._.Item, {
-            onSelect: () => _(_),
-            selected: _,
-            disabled: _,
-            children: [
-              _ &&
-                (0, _.jsxs)(_._, {
-                  gap: "2",
-                  align: "center",
-                  children: [
-                    (0, _.jsx)(_._, {
-                      checked: _,
-                      variant: "dark",
-                    }),
-                    _,
-                  ],
-                }),
-              !_ && _,
-            ],
-          })
-        );
+        let _ = !1,
+          _ = !1;
+        _
+          ? ((_ = Array.isArray(_) && _.includes(_)),
+            (_ = !!_ && Array.isArray(_) && _.length >= _))
+          : (_ = _ === _);
+        const _ = _ || (_ && !_);
+        return (0, _.jsxs)(_._.Item, {
+          onSelect: () => _(_),
+          selected: _,
+          disabled: _,
+          children: [
+            _ &&
+              (0, _.jsxs)(_._, {
+                gap: "2",
+                align: "center",
+                children: [
+                  (0, _.jsx)(_._, {
+                    checked: _,
+                    variant: "dark",
+                  }),
+                  _,
+                ],
+              }),
+            !_ && _,
+          ],
+        });
       }
       function _(_, _) {
         if ("string" == typeof _)
@@ -2451,6 +2455,7 @@
             filterPlaceholder: _,
             selectedValue: _,
             onSelectionChange: _,
+            maxSelected: _,
           } = _,
           [_, _] = (0, _.useState)(""),
           [_, _] = (0, _.useState)(!1),
@@ -2508,6 +2513,7 @@
           setOpen: _,
           filterPlaceholder: _,
           multiselect: _,
+          maxSelected: _,
         };
       }
       const _ = {
@@ -2664,6 +2670,7 @@
               filterPlaceholder: _,
               onIndexSelected: _,
               popoverPlacement: _,
+              maxSelected: _,
               ..._
             } = _("<ComboboxTrigger>"),
             _ = {
@@ -2737,7 +2744,10 @@
             onSelectionChange: _,
             selectedValue: _,
             rgOptions: _,
-            filter: _,
+            filter: (0, _.useCallback)(
+              (_, _) => (_ ? _(_, _) : _(_, _(_))),
+              [_, _],
+            ),
             filterPlaceholder: _,
           }),
           _ = null != _;
@@ -2784,14 +2794,19 @@
               filterPlaceholder: _,
               placeholder: _,
               getOptionLabel: _ = _,
+              maxSelected: _,
               ..._
             } = _,
             _ = _({
               onSelectionChange: _,
               selectedValue: _,
               rgOptions: _,
-              filter: _,
+              filter: (0, _.useCallback)(
+                (_, _) => (_ ? _(_, _) : _(_, _(_))),
+                [_, _],
+              ),
               filterPlaceholder: _,
+              maxSelected: _,
             }),
             _ = Array.isArray(_) && _.length > 0;
           let _ = "";
@@ -3066,12 +3081,17 @@
               ..._,
             });
       }
+      function _(_, _) {
+        return (
+          !!_[_.facet] &&
+          ("string" == typeof _.tag
+            ? _[_.facet][_.tag]
+            : _.tag.every((_) => _[_.facet][_]))
+        );
+      }
       function _(_) {
         const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
-          _ = (0, _.useMemo)(
-            () => _.filter((_) => _[_.facet] && _[_.facet][_.tag]),
-            [_, _],
-          ),
+          _ = (0, _.useMemo)(() => _.filter((_) => _(_, _)), [_, _]),
           _ = (0, _._)({
             rgOptions: _,
             selectedValue: _,
@@ -3125,10 +3145,7 @@
       }
       function _(_) {
         const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
-          _ = (0, _.useMemo)(
-            () => _.filter((_) => _[_.facet] && _[_.facet][_.tag]),
-            [_, _],
-          ),
+          _ = (0, _.useMemo)(() => _.filter((_) => _(_, _)), [_, _]),
           _ = _({
             rgOptions: _,
             selectedValue: _,
@@ -3225,7 +3242,7 @@
       function _(_) {
         const { rgOptions: _, strLabel: _, value: _ = {}, onChange: _ } = _,
           _ = (_) => `${_.facet}_${_.tag}`,
-          _ = _.filter((_) => _[_.facet] && _[_.facet][_.tag]).map(_);
+          _ = _.filter((_) => _(_, _)).map(_);
         return (0, _.jsxs)(_._, {
           marginBottom: "4",
           children: [
@@ -3247,7 +3264,7 @@
                   _,
                   {
                     value: _(_),
-                    checked: _[_.facet] && _[_.facet][_.tag],
+                    checked: _(_, _),
                     children: _.strLabel,
                   },
                   _(_),
@@ -3355,22 +3372,20 @@
       }
       function _(_, _, _, _) {
         const _ = {
-          ..._,
-          facets: {
-            ..._.facets,
-            [_]: {
-              ..._.facets[_],
-              [_]: !0,
+            ..._,
+            facets: {
+              ..._.facets,
+              [_]: {
+                ..._.facets[_],
+              },
             },
           },
-        };
-        return (
-          _ ||
-            (1 === Object.keys(_.facets[_]).length
-              ? delete _.facets[_]
-              : delete _.facets[_][_]),
-          _
-        );
+          _ = "string" == typeof _ ? [_] : _;
+        for (const _ of _) _.facets[_][_] = !0;
+        if (!_)
+          if (1 === Object.keys(_.facets[_]).length) delete _.facets[_];
+          else for (const _ of _) delete _.facets[_][_];
+        return _;
       }
       function _(_) {
         const { facet: _, state: _, onStateChange: _ } = _;
@@ -3392,7 +3407,14 @@
                   ..._.facets,
                 },
               };
-              for (const _ of _) _[`${_.facet}_${_.tag}`] = _;
+              for (const _ of _) {
+                const _ = "string" == typeof _.tag ? [_.tag] : _.tag;
+                for (const _ of _)
+                  _[`${_.facet}_${_}`] = {
+                    facet: _.facet,
+                    tag: _,
+                  };
+              }
               for (const _ of _)
                 _[`${_.facet}_${_.tag}`] || (_ = _(_, _.facet, _.tag, !0)),
                   delete _[`${_.facet}_${_.tag}`];
@@ -3443,10 +3465,11 @@
         }
       }
       function _(_, _, _, _) {
-        var _;
+        var _, _, _;
         let _ = [],
           _ = 0;
-        const _ = _.tags || {};
+        const _ = {},
+          _ = _.tags || {};
         for (const _ of Object.keys(_)) {
           let _;
           _ &&
@@ -3457,7 +3480,19 @@
                 : 0),
             (_ += null != _ ? _ : 0);
           const _ = _(_.name, _, _[_], _);
-          _ && _.push(_);
+          if (_)
+            if (_[_.strLabel]) {
+              const _ = _[_.strLabel],
+                _ = "string" == typeof _.tag ? [_.tag] : _.tag,
+                _ = "string" == typeof _.tag ? [_.tag] : _.tag;
+              (_.tag = _.concat(..._)),
+                void 0 !== _.matches &&
+                  void 0 !== _.matches &&
+                  (_.matches =
+                    (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) +
+                    (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)),
+                void 0 === _.color && _.color && (_.color = _.color);
+            } else _.push(_), (_[_.strLabel] = _);
         }
         if (_) _.sort(_);
         else {
@@ -5522,11 +5557,16 @@
               toggle: _,
             });
           } else {
-            const _ = _[_.facet];
-            _.push({
-              facet: _(_, "select"),
-              img: "",
-            });
+            const _ = _[_.facet],
+              _ = _(_, "select");
+            (0, _._)(
+              _.rgOptions.every((_) => "string" == typeof _.tag),
+              `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.strLabel}" facet.`,
+            ),
+              _.push({
+                facet: _,
+                img: "",
+              });
             for (const _ of Object.keys(_.tags || {})) _(_.name, _);
           }
         const _ = [];
@@ -5635,7 +5675,13 @@
                   _ = [];
                 for (const _ of _.rarities) {
                   const _ = _.tags[_];
-                  _ && _.push(_(_.name, _, _));
+                  if (!_) continue;
+                  const _ = _(_.name, _, _);
+                  (0, _._)(
+                    "string" == typeof _.tag,
+                    `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.name}" facet.`,
+                  ),
+                    _.push(_);
                 }
                 _.push({
                   facet: {
@@ -5652,6 +5698,10 @@
             if (_[_.name]) {
               const _ = _[_.name].reduce((_, _, _) => ((_[_] = _), _), {});
               _ = (_, _) => {
+                (0, _._)(
+                  "string" == typeof _.tag && "string" == typeof _.tag,
+                  `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.name}" facet.`,
+                );
                 const _ = _[_.tag],
                   _ = _[_.tag];
                 return void 0 === _ && void 0 === _
@@ -5740,7 +5790,15 @@
                 switch (_.fieldType) {
                   case "checkbox":
                   case "select":
-                    return _.rgOptions.map(({ facet: _, tag: _ }) => [_, _]);
+                    return _.rgOptions.map(
+                      ({ facet: _, tag: _ }) => (
+                        (0, _._)(
+                          "string" == typeof _,
+                          `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.strLabel}" facet.`,
+                        ),
+                        [_, _]
+                      ),
+                    );
                   case "toggle":
                   case "togglebutton":
                     return [[_.facet, _.tag]];
@@ -6963,6 +7021,7 @@
           } = _,
           _ = (0, _._)(),
           _ = null == _ ? void 0 : _.appid,
+          _ = !!_ && _.length > 2,
           _ = (0, _._)({
             queryKey: ["market_search_suggestions", _, _],
             queryFn: async () => {
@@ -6972,7 +7031,7 @@
               return await _.json();
             },
             placeholderData: (_) => _,
-            enabled: !!_ && _.length >= 2,
+            enabled: _,
             staleTime: _ ? 0 : 1 / 0,
           }),
           _ = (
@@ -7067,29 +7126,31 @@
             }),
             (0, _.jsxs)(_.Suggestions, {
               children: [
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      ..._,
-                    },
-                    _.appid,
+                _ &&
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        ..._,
+                      },
+                      _.appid,
+                    ),
                   ),
-                ),
-                _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      name: _.market_name,
-                      hashName: _.market_hash_name,
-                      appName: _.app_name,
-                      appid: _.app_id,
-                      img: _.icon_url,
-                      searchScore: _.search_score,
-                    },
-                    _.market_hash_name + _,
+                _ &&
+                  _.map((_, _) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        name: _.market_name,
+                        hashName: _.market_hash_name,
+                        appName: _.app_name,
+                        appid: _.app_id,
+                        img: _.icon_url,
+                        searchScore: _.search_score,
+                      },
+                      _.market_hash_name + _,
+                    ),
                   ),
-                ),
               ],
             }),
           ],

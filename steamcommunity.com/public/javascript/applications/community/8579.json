@@ -201,6 +201,7 @@
     "moderationaction_released": "Udgivet",
     "moderationaction_privatemessaged": "Privat besked sendt",
     "moderationaction_unknown": "Ukendt handling",
+    "moderationaction_ownerdisputed": "Ejer har gjort indsigelse mod moderering",
     "moderatormessage_count_note": "Bemærkninger: %1$s",
     "moderatormessage_count_warning": "Advarsler: %1$s",
     "moderatormessage_count_bannotice": "Udelukkelser: %1$s",

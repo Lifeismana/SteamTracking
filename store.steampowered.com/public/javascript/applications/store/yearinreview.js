@@ -2514,7 +2514,7 @@
             if (t && !t(e)) continue;
             const a = (0, o.Lg)(e),
               s = (0, h.we)("#Language_" + a),
-              n = Boolean(r) && r(e);
+              n = !(!r || !r(e));
             i.push({ eLang: e, sLocName: s, bSupported: n });
           }
           i.sort((e, t) =>
@@ -7341,14 +7341,14 @@
       var tt = a(7550),
         at = a.n(tt),
         st = a(30470),
-        nt = a(69235),
-        rt = a(91843),
-        it = a(9495),
-        ot = a(49404),
-        lt = a(55709),
-        ct = a(19693),
-        dt = a(79191),
-        mt = a(70365);
+        nt = a(32671),
+        rt = a(74295),
+        it = a(6435),
+        ot = a(72040),
+        lt = a(76721),
+        ct = a(5585),
+        dt = a(66579),
+        mt = a(92665);
       const ht = ({
         spaceAroundCount: e,
         endValue: t,
@@ -8304,8 +8304,8 @@
       var Yt = a(30700),
         Ot = a(59848),
         Ft = a.n(Ot),
-        Ut = a(85010),
-        Ht = a(94075);
+        Ut = a(30230),
+        Ht = a(75620);
       const Vt = 100;
       var Wt;
       function zt(e) {
@@ -10295,11 +10295,11 @@
         });
       }
       var Va = a(37220),
-        Wa = a(56555),
-        za = a(49953),
-        Za = a(55241),
-        Qa = a(62059),
-        Ka = a(36058),
+        Wa = a(61141),
+        za = a(58661),
+        Za = a(73077),
+        Qa = a(20283),
+        Ka = a(90150),
         Xa = a(39743);
       const qa = l.memo((e) => {
           const { data: t, topMonthlyAppsAndRanks: a } = e,

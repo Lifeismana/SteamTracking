@@ -90,5 +90,9 @@
     "moderation_subjectgroupsummary_chatgroup": "%1$s من الإبلاغات عن %2$s من الرسائل الواردة في \"%3$s\"",
     "subject_count": "(موضوع واحد)",
     "subject_count_Plural": "(%1$s من المواضيع)",
-    "moderation_sanction_unknown": "غير معروف"
+    "moderation_sanction_unknown": "غير معروف",
+    "moderation_ownerdispute_cancel": "إلغاء",
+    "moderation_editownerdisputedetails_save": "حفظ",
+    "reasonlist_reasonwithcount": "%1$s (%2$s)",
+    "commentsanctiondialog_moderate": "الإشراف"
 }

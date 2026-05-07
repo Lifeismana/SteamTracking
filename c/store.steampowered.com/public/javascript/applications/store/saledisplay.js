@@ -736,7 +736,7 @@
             if (_ && !_(_)) continue;
             const _ = (0, _._)(_),
               _ = (0, _._)("#Language_" + _),
-              _ = Boolean(_) && _(_);
+              _ = !(!_ || !_(_));
             _.push({
               eLang: _,
               sLocName: _,

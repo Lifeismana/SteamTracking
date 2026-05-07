@@ -5,30 +5,30 @@
   [2162],
   {
     72255: (e, c, r) => {
-      r.d(c, { rt: () => C });
-      var a = r(88267);
-      function C(e) {
+      r.d(c, { rt: () => a });
+      var C = r(88267);
+      function a(e) {
         switch (null == e ? void 0 : e.toUpperCase()) {
           case "AE":
-            return a.AI.k_ECurrencyCodeAED;
+            return C.AI.k_ECurrencyCodeAED;
           case "AU":
-            return a.AI.k_ECurrencyCodeAUD;
+            return C.AI.k_ECurrencyCodeAUD;
           case "BR":
-            return a.AI.k_ECurrencyCodeBRL;
+            return C.AI.k_ECurrencyCodeBRL;
           case "CA":
-            return a.AI.k_ECurrencyCodeCAD;
+            return C.AI.k_ECurrencyCodeCAD;
           case "CH":
           case "LI":
-            return a.AI.k_ECurrencyCodeCHF;
+            return C.AI.k_ECurrencyCodeCHF;
           case "CL":
-            return a.AI.k_ECurrencyCodeCLP;
+            return C.AI.k_ECurrencyCodeCLP;
           case "CN":
           case "XC":
-            return a.AI.k_ECurrencyCodeCNY;
+            return C.AI.k_ECurrencyCodeCNY;
           case "CO":
-            return a.AI.k_ECurrencyCodeCOP;
+            return C.AI.k_ECurrencyCodeCOP;
           case "CR":
-            return a.AI.k_ECurrencyCodeCRC;
+            return C.AI.k_ECurrencyCodeCRC;
           case "AD":
           case "AL":
           case "AT":
@@ -74,57 +74,57 @@
           case "SK":
           case "SM":
           case "VA":
-            return a.AI.k_ECurrencyCodeEUR;
+            return C.AI.k_ECurrencyCodeEUR;
           case "GB":
           case "GG":
           case "GS":
           case "IM":
           case "JE":
-            return a.AI.k_ECurrencyCodeGBP;
+            return C.AI.k_ECurrencyCodeGBP;
           case "HK":
-            return a.AI.k_ECurrencyCodeHKD;
+            return C.AI.k_ECurrencyCodeHKD;
           case "ID":
-            return a.AI.k_ECurrencyCodeIDR;
+            return C.AI.k_ECurrencyCodeIDR;
           case "IL":
-            return a.AI.k_ECurrencyCodeILS;
+            return C.AI.k_ECurrencyCodeILS;
           case "IN":
-            return a.AI.k_ECurrencyCodeINR;
+            return C.AI.k_ECurrencyCodeINR;
           case "JP":
-            return a.AI.k_ECurrencyCodeJPY;
+            return C.AI.k_ECurrencyCodeJPY;
           case "KR":
-            return a.AI.k_ECurrencyCodeKRW;
+            return C.AI.k_ECurrencyCodeKRW;
           case "KW":
-            return a.AI.k_ECurrencyCodeKWD;
+            return C.AI.k_ECurrencyCodeKWD;
           case "KZ":
-            return a.AI.k_ECurrencyCodeKZT;
+            return C.AI.k_ECurrencyCodeKZT;
           case "MX":
-            return a.AI.k_ECurrencyCodeMXN;
+            return C.AI.k_ECurrencyCodeMXN;
           case "MY":
-            return a.AI.k_ECurrencyCodeMYR;
+            return C.AI.k_ECurrencyCodeMYR;
           case "NO":
-            return a.AI.k_ECurrencyCodeNOK;
+            return C.AI.k_ECurrencyCodeNOK;
           case "NZ":
-            return a.AI.k_ECurrencyCodeNZD;
+            return C.AI.k_ECurrencyCodeNZD;
           case "PE":
-            return a.AI.k_ECurrencyCodePEN;
+            return C.AI.k_ECurrencyCodePEN;
           case "PH":
-            return a.AI.k_ECurrencyCodePHP;
+            return C.AI.k_ECurrencyCodePHP;
           case "PL":
-            return a.AI.k_ECurrencyCodePLN;
+            return C.AI.k_ECurrencyCodePLN;
           case "QA":
-            return a.AI.k_ECurrencyCodeQAR;
+            return C.AI.k_ECurrencyCodeQAR;
           case "RU":
-            return a.AI.k_ECurrencyCodeRUB;
+            return C.AI.k_ECurrencyCodeRUB;
           case "SA":
-            return a.AI.k_ECurrencyCodeSAR;
+            return C.AI.k_ECurrencyCodeSAR;
           case "SG":
-            return a.AI.k_ECurrencyCodeSGD;
+            return C.AI.k_ECurrencyCodeSGD;
           case "TH":
-            return a.AI.k_ECurrencyCodeTHB;
+            return C.AI.k_ECurrencyCodeTHB;
           case "TW":
-            return a.AI.k_ECurrencyCodeTWD;
+            return C.AI.k_ECurrencyCodeTWD;
           case "UA":
-            return a.AI.k_ECurrencyCodeUAH;
+            return C.AI.k_ECurrencyCodeUAH;
           case "AF":
           case "AG":
           case "AI":
@@ -281,24 +281,24 @@
           case "YT":
           case "ZM":
           case "ZW":
-            return a.AI.k_ECurrencyCodeUSD;
+            return C.AI.k_ECurrencyCodeUSD;
           case "UY":
-            return a.AI.k_ECurrencyCodeUYU;
+            return C.AI.k_ECurrencyCodeUYU;
           case "VN":
-            return a.AI.k_ECurrencyCodeVND;
+            return C.AI.k_ECurrencyCodeVND;
           case "ZA":
-            return a.AI.k_ECurrencyCodeZAR;
+            return C.AI.k_ECurrencyCodeZAR;
           default:
             return (
               console.assert(!1, `Unhandled country code: ${e}`),
-              a.AI.k_ECurrencyCodeUSD
+              C.AI.k_ECurrencyCodeUSD
             );
         }
       }
     },
     88267: (e, c, r) => {
-      var a;
-      r.d(c, { AI: () => a }),
+      var C;
+      r.d(c, { AI: () => C }),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -349,13 +349,13 @@
             (e[(e.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
             (e[(e.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
             (e[(e.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(a || (a = {}));
-      a.k_ECurrencyCodeTRY, a.k_ECurrencyCodeARS;
+        })(C || (C = {}));
+      C.k_ECurrencyCodeTRY, C.k_ECurrencyCodeARS;
     },
     42834: (e, c, r) => {
-      r.d(c, { DT: () => d, b0: () => u, bu: () => o, pd: () => E });
-      var a = r(8527),
-        C = r(39777),
+      r.d(c, { DT: () => o, b0: () => u, bu: () => E, pd: () => _ });
+      var C = r(8527),
+        a = r(39777),
         s = r(81393),
         n = r(38535);
       function u(e, c) {
@@ -365,15 +365,15 @@
               .replace(/^steam\//, "images/")
               .replace("${FILENAME}", `${e[c]}.jpg`)
               .replace(/\?.*$/, "");
-            return `${a.TS.MEDIA_CDN_COMMUNITY_URL}${r}`;
+            return `${C.TS.MEDIA_CDN_COMMUNITY_URL}${r}`;
           }
           {
             const r = e.asset_url_format.replace("${FILENAME}", e[c]);
-            return `${a.TS.STORE_ITEM_BASE_URL}${r}`;
+            return `${C.TS.STORE_ITEM_BASE_URL}${r}`;
           }
         }
       }
-      function o(e, c = "full") {
+      function E(e, c = "full") {
         let r = "";
         switch (c) {
           case "thumb":
@@ -392,12 +392,12 @@
             (0, s.z_)(c, `Invalid size: ${c}`);
         }
         return (
-          a.TS.STORE_ITEM_BASE_URL +
+          C.TS.STORE_ITEM_BASE_URL +
           e.filename.replace(/\.([^.]+)(\?.*)?$/, `${r}.$1$2`)
         );
       }
-      function d(e) {
-        const { data: c } = (0, C.j4)(e),
+      function o(e) {
+        const { data: c } = (0, a.j4)(e),
           r = (0, n.dy)();
         if (c)
           return [
@@ -407,8 +407,8 @@
               : []),
           ].sort((e, c) => e.ordinal - c.ordinal);
       }
-      function E(e, c = !1) {
-        const { data: r } = (0, C.lv)({ appid: e });
+      function _(e, c = !1) {
+        const { data: r } = (0, a.lv)({ appid: e });
         return void 0 === r
           ? void 0
           : null === r
@@ -417,83 +417,19 @@
               ? u(r, "library_capsule_2x")
               : r.library_capsule
                 ? u(r, "library_capsule")
-                : `${a.TS.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
+                : `${C.TS.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
       }
     },
     69345: (e, c, r) => {
       r.d(c, { n: () => s });
       r(7850);
-      var a = r(60014),
-        C = r(8527);
+      var C = r(60014),
+        a = r(8527);
       function s(e, c, r) {
-        return (0, a.aL)(
-          e ? `${C.TS.STORE_BASE_URL}${e.store_url_path}` : void 0,
+        return (0, C.aL)(
+          e ? `${a.TS.STORE_BASE_URL}${e.store_url_path}` : void 0,
           c,
           r,
-        );
-      }
-    },
-    38535: (e, c, r) => {
-      r.d(c, { $9: () => _, AS: () => A, Zj: () => i, dy: () => y });
-      var a = r(90626),
-        C = r(30470),
-        s = r(14771),
-        n = r(2627),
-        u = r(29385),
-        o = r(88942),
-        d = r(39777);
-      const E = a.createContext({ eAdultOnlyMediaBehavior: "masked" });
-      function _() {
-        const { eAdultOnlyMediaBehavior: e } = a.useContext(E),
-          c = (function () {
-            const { data: e } = (0, o.I)({
-              queryKey: ["AOWarningCookie"],
-              queryFn: () => I(),
-              placeholderData: () => I(),
-              staleTime: 0,
-            });
-            return e && e > Date.now() / 1e3;
-          })();
-        return a.useMemo(() => {
-          const e = (0, n.VY)("forceallages");
-          return (
-            !(!e || "0" === e) ||
-            !(!C.TS.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
-          );
-        }, []) ||
-          ("masked" == e &&
-            (C.iA.excluded_content_descriptors.includes(4) ||
-              C.iA.excluded_content_descriptors.includes(3)))
-          ? "blocked"
-          : "masked" == e && c
-            ? "allowed"
-            : e;
-      }
-      function y() {
-        return "allowed" != _();
-      }
-      const k = "bDisableAOWarning",
-        t = 2 * s.Kp.PerDay;
-      function A() {
-        const e = (0, u.jE)();
-        return a.useCallback(() => {
-          (0, n.lc)(k, String(Math.floor(Date.now() / 1e3) + t)),
-            e.invalidateQueries({ queryKey: ["AOWarningCookie"] });
-        }, [e]);
-      }
-      function I() {
-        const e = (0, n.VY)(k),
-          c = e ? parseInt(e) : 0;
-        return 0 != c ? c : null;
-      }
-      function i(e) {
-        const c = "blocked" == _() && !!e,
-          { data: r } = (0, d.J$)(c ? { appid: e } : void 0);
-        return (
-          !!c &&
-          (!r ||
-            r.content_descriptorids.includes(3) ||
-            r.content_descriptorids.includes(4))
         );
       }
     },

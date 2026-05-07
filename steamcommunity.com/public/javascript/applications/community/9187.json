@@ -3,6 +3,7 @@
     "moderation_moderatorlevel_supervisor": "Supervisor",
     "moderation_moderatorlevel_valveadmin": "Valve admin",
     "moderation_moderatorlevel_unknown": "Unknown",
+    "moderation_statistics": "Statistics",
     "moderation_chatmetadataerror": "The metadata for this chat report could not be retrieved (error: %1$s)",
     "moderation_friendsforduration": "for %1$s",
     "moderation_friends_label": "Friends:",
@@ -107,6 +108,12 @@
     "moderation_sanction_tradebanned": "Trade banned for %1$s days",
     "moderation_sanction_kickedfromgroup": "Kicked from group",
     "moderation_sanction_unknown": "Unknown",
+    "moderation_ownerdispute_description": "Provide the ticket code from TicketMaster that this user submitted.",
+    "moderation_ownerdispute_ticketmastercode": "Ticket code:",
+    "moderation_ownerdispute_dispute": "Dispute",
+    "moderation_ownerdispute_cancel": "Cancel",
+    "moderation_editownerdisputedetails_save": "Save",
+    "moderation_editownerdisputedetails_label": "Ticket code: ",
     "originalresolution_acquitted": "Acquitted on first moderation",
     "originalresolution_sanctioned": "Sanctioned on first moderation",
     "has_trade_offer": "This topic has an attached trade offer",
@@ -122,5 +129,7 @@
     "commentsanctiondialog_selectreason": "Click to select...",
     "commentsanctiondialog_moderate": "Moderate",
     "reportedsubjectlist_header": "Reported subjects",
+    "moderation_already_owner_disputed": "Already disputed",
+    "moderationstats_alltypes": "All subject types",
     "empty_no_trailing_comma": ""
 }

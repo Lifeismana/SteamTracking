@@ -5,8 +5,132 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [5659],
   {
+    52471: (e, t, r) => {
+      r.d(t, {
+        M4: () => _,
+        TH: () => o,
+        Wv: () => c,
+        hg: () => d,
+        hl: () => u,
+        kB: () => n,
+      });
+      r(7850);
+      var s = r(8527),
+        i = r(39777),
+        a = r(38535);
+      function n(e) {
+        const { data: t } = (0, i.Yo)(e),
+          r = (0, a.dy)();
+        if (!t) return;
+        const s = [...(t.highlights || []), ...(t.other_trailers || [])];
+        return r ? s.filter((e) => !!e.all_ages) : s;
+      }
+      function o(e) {
+        let t = n(e);
+        if (t && 0 != t.length) return t[0];
+      }
+      function u(e) {
+        return `${s.TS.STORE_ITEM_BASE_URL}${e.trailer_url_format.replace("${FILENAME}", e.screenshot_full ?? e.screenshot_medium ?? "")}`;
+      }
+      function _(e, t) {
+        return `${s.TS.VIDEO_CDN_URL}store_trailers/${e.trailer_url_format.replace("${FILENAME}", t)}`;
+      }
+      function l(e, t) {
+        return `${s.TS.VIDEO_CDN_URL}store_trailers/${t}`;
+      }
+      function c(e) {
+        let t =
+          "function" == typeof e.captions_manifest
+            ? e.captions_manifest()
+            : e.captions_manifest;
+        if (!t) return;
+        let r,
+          i = s.TS;
+        return (
+          i.MEDIA_CDN_URL
+            ? (r = i.MEDIA_CDN_URL)
+            : i.CDN_HOST_MEDIA && (r = i.CDN_HOST_MEDIA),
+          r ? `${r}/${t}` : void 0
+        );
+      }
+      function d(e) {
+        let t = [];
+        e.adaptive_trailers &&
+          (t = e.adaptive_trailers
+            .filter(
+              (e) =>
+                ("dash_h264" == e.encoding || "dash_av1" == e.encoding) &&
+                e.cdn_path,
+            )
+            .map((e) => l(0, e.cdn_path || "")));
+        let r = [];
+        return (
+          e.adaptive_trailers &&
+            (r = e.adaptive_trailers
+              .filter((e) => "hls_h264" == e.encoding && e.cdn_path)
+              .map((e) => l(0, e.cdn_path || ""))),
+          { rgDashTrailers: t, rgHlsTrailers: r }
+        );
+      }
+    },
+    38535: (e, t, r) => {
+      r.d(t, { Zj: () => m, dy: () => c });
+      var s = r(90626),
+        i = r(30470),
+        a = r(14771),
+        n = r(2627),
+        o = r(20194),
+        u = r(39777);
+      const _ = s.createContext({ eAdultOnlyMediaBehavior: "masked" });
+      function l() {
+        const { eAdultOnlyMediaBehavior: e } = s.useContext(_),
+          t = (function () {
+            const { data: e } = (0, o.I)({
+              queryKey: ["AOWarningCookie"],
+              queryFn: () => h(),
+              placeholderData: () => h(),
+              staleTime: 0,
+            });
+            return e && e > Date.now() / 1e3;
+          })();
+        return s.useMemo(() => {
+          const e = (0, n.VY)("forceallages");
+          return (
+            !(!e || "0" === e) ||
+            !(!i.TS.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
+          );
+        }, []) ||
+          ("masked" == e &&
+            (i.iA.excluded_content_descriptors.includes(4) ||
+              i.iA.excluded_content_descriptors.includes(3)))
+          ? "blocked"
+          : "masked" == e && t
+            ? "allowed"
+            : e;
+      }
+      function c() {
+        return "allowed" != l();
+      }
+      const d = "bDisableAOWarning";
+      a.Kp.PerDay;
+      function h() {
+        const e = (0, n.VY)(d),
+          t = e ? parseInt(e) : 0;
+        return 0 != t ? t : null;
+      }
+      function m(e) {
+        const t = "blocked" == l() && !!e,
+          { data: r } = (0, u.J$)(t ? { appid: e } : void 0);
+        return (
+          !!t &&
+          (!r ||
+            r.content_descriptorids.includes(3) ||
+            r.content_descriptorids.includes(4))
+        );
+      }
+    },
     75279: (e, t, r) => {
-      r.d(t, { Ay: () => c, DJ: () => R, QO: () => I });
+      r.d(t, { Ay: () => d, DJ: () => I, QO: () => f });
       var s = r(15161),
         i = r(62792),
         a = r(81393),
@@ -14,8 +138,9 @@
         o = r(91675),
         u = r(78327),
         _ = r(63369),
-        l = r(62490);
-      class c {
+        l = r(62490),
+        c = r(52471);
+      class d {
         m_eItemType;
         m_unID;
         m_bVisible = !1;
@@ -84,11 +209,11 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new d(e.assets(), e.id())),
+            ((this.m_Assets = new m(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_assets_without_overrides &&
               !this.m_AssetsWithoutOverrides &&
-              ((this.m_AssetsWithoutOverrides = new d(
+              ((this.m_AssetsWithoutOverrides = new m(
                 e.assets_without_overrides(),
                 e.id(),
               )),
@@ -109,11 +234,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new g(e.screenshots())),
+              ((this.m_Screenshots = new R(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new m(e.trailers())),
+              ((this.m_Trailers = new p(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count &&
               t.include_tag_count > this.m_rgStoreTags.length &&
@@ -174,7 +299,7 @@
           );
         }
         BContainDataRequest(e) {
-          return c.BDataRequestContainsOtherDataRequest(
+          return d.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
             e,
           );
@@ -645,7 +770,7 @@
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class d {
+      class m {
         m_strMainCapsuleURL;
         m_strSmallCapsuleURL;
         m_strHeaderURL;
@@ -771,7 +896,7 @@
           return this.m_strCommunityIcon_Full;
         }
       }
-      class m {
+      class p {
         m_mapTrailer;
         m_highlightTrailers;
         m_highlightTrailersAllAges;
@@ -779,12 +904,12 @@
         m_otherTrailersAllAges;
         constructor(e) {
           (this.m_highlightTrailers =
-            e.highlights()?.map((e) => new p(e)) ?? []),
+            e.highlights()?.map((e) => new g(e)) ?? []),
             (this.m_highlightTrailersAllAges = this.m_highlightTrailers.filter(
               (e) => e.BIsAllAges(),
             )),
             (this.m_otherTrailers =
-              e.other_trailers()?.map((e) => new p(e)) ?? []),
+              e.other_trailers()?.map((e) => new g(e)) ?? []),
             (this.m_otherTrailersAllAges = this.m_otherTrailers.filter((e) =>
               e.BIsAllAges(),
             )),
@@ -814,7 +939,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class p {
+      class g {
         m_strTrailerName;
         m_eTrailerCategory;
         m_nBaseID;
@@ -824,6 +949,7 @@
         m_strScreenshotMedium;
         m_strScreenshotFull;
         m_bIsAllAges;
+        m_strCaptionManifest;
         constructor(e) {
           (this.m_strTrailerName = e.trailer_name()),
             (this.m_nBaseID = e.trailer_base_id()),
@@ -855,7 +981,8 @@
             let t = this.ExtractAdaptiveTrailers(e.adaptive_trailers(), "hls");
             t.length > 0 && (this.m_rgHlsTrailer = t[0]);
           }
-          this.m_bIsAllAges = e.all_ages() ?? !0;
+          (this.m_bIsAllAges = e.all_ages() ?? !0),
+            (this.m_strCaptionManifest = (0, c.Wv)(e));
         }
         GetName() {
           return this.m_strTrailerName;
@@ -882,6 +1009,9 @@
         }
         BIsAllAges() {
           return this.m_bIsAllAges;
+        }
+        GetCaptionManifest() {
+          return this.m_strCaptionManifest;
         }
         ExtractTrailerFormats(e, t) {
           let r = {};
@@ -921,7 +1051,7 @@
           );
         }
       }
-      class g {
+      class R {
         m_rgAllScreenshots;
         m_rgOnlyAllAgesScreenshots;
         constructor(e) {
@@ -941,7 +1071,7 @@
           return this.m_rgOnlyAllAgesScreenshots;
         }
       }
-      function R(e) {
+      function I(e) {
         if (e)
           switch (e.GetStoreItemType()) {
             case 0:
@@ -966,7 +1096,7 @@
               );
           }
       }
-      function I(e) {
+      function f(e) {
         if (e)
           switch (e.item_type) {
             case 0:
@@ -1070,7 +1200,7 @@
               ? { item_type: "bundle", id: e.bundleid }
               : null;
       }
-      function h(e, t) {
+      function d(e, t) {
         return 0 == t
           ? { id: e, item_type: "app" }
           : 1 == t
@@ -1083,7 +1213,7 @@
                 ),
                 { id: 0, item_type: "app" });
       }
-      function d(e, t) {
+      function h(e, t) {
         return 0 == t
           ? { appid: e }
           : 1 == t
@@ -1183,7 +1313,7 @@
               ? 1
               : -1;
       }
-      function S(e) {
+      function D(e) {
         return 0 == e
           ? "application"
           : 1 == e
@@ -1192,7 +1322,7 @@
               ? "bundle"
               : null;
       }
-      function D(e) {
+      function S(e) {
         return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
       function y(e) {
@@ -1202,7 +1332,7 @@
         Di: () => l,
         FT: () => p,
         JK: () => i,
-        Je: () => d,
+        Je: () => h,
         M9: () => g,
         Rz: () => n,
         SW: () => o,
@@ -1213,10 +1343,10 @@
         cW: () => f,
         gy: () => I,
         hh: () => c,
-        lY: () => S,
+        lY: () => D,
         pk: () => a,
-        s9: () => D,
-        vo: () => h,
+        s9: () => S,
+        vo: () => d,
         wD: () => m,
         wR: () => _,
       }),

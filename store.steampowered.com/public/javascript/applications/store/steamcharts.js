@@ -1160,7 +1160,7 @@
             if (t && !t(e)) continue;
             const a = (0, i.Lg)(e),
               n = (0, m.we)("#Language_" + a),
-              r = Boolean(s) && s(e);
+              r = !(!s || !s(e));
             o.push({ eLang: e, sLocName: n, bSupported: r });
           }
           o.sort((e, t) =>
@@ -5846,7 +5846,7 @@
         }, [e]);
       }
     },
-    44537: (e, t, a) => {
+    67309: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { SteamChartsRoutes: () => kn, default: () => Tn });
       var n,
@@ -7687,13 +7687,13 @@
       var Ct = a(82227),
         jt = a(55507),
         bt = a.n(jt),
-        vt = a(69235),
-        ft = a(56555),
-        wt = a(49953),
-        yt = a(55241),
-        It = a(85010),
-        kt = a(62059),
-        Tt = a(15708),
+        vt = a(32671),
+        ft = a(61141),
+        wt = a(58661),
+        yt = a(73077),
+        It = a(30230),
+        kt = a(20283),
+        Tt = a(59136),
         At = a(84811),
         Dt = a(3049);
       const Nt = S.memo((e) => {
@@ -8536,10 +8536,10 @@
       }
       var oa = a(16767),
         ia = a.n(oa),
-        la = a(1839),
-        ca = a(76549),
-        da = a(36058),
-        ua = a(5608),
+        la = a(98403),
+        ca = a(90865),
+        da = a(90150),
+        ua = a(12260),
         ma = (0, la.gu)({
           chartName: "LineChart",
           GraphicalChild: ca.N,
@@ -8549,7 +8549,7 @@
           ],
           formatAxisMap: ua.pr,
         }),
-        pa = a(94075);
+        pa = a(75620);
       function ga() {
         const e = (0, o.I)({
           queryKey: ["SupportStatsPage"],

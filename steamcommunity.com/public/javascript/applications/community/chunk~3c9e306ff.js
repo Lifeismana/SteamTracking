@@ -38,7 +38,7 @@
     },
     47143: (e, t, i) => {
       "use strict";
-      i.d(t, { Zn: () => z, N_: () => Z, lU: () => q, Br: () => O });
+      i.d(t, { Zn: () => z, N_: () => Z, lU: () => q, Br: () => N });
       var n,
         s = i(34629),
         r = i(41735),
@@ -1434,8 +1434,8 @@
         (0, s.Cg)([f.o], F.prototype, "DownloadGone", null),
         (0, s.Cg)([f.o], F.prototype, "CurrentTimeChanged", null);
       var U = i(36586),
-        N = i(73745);
-      const O = 5;
+        O = i(73745);
+      const N = 5;
       var j, Z, q, W;
       function $(e) {
         (0, d.wT)(e, "MPD assert failed");
@@ -1468,12 +1468,14 @@
         constructor(e) {
           (this.m_strMPD = ""),
             (this.m_strHLS = ""),
+            (this.m_strCaptions = ""),
             (this.m_strCDNAuthURLParameters = ""),
             (this.m_bTimeoutAfterFailedDownload = !0),
             (this.m_bAlwaysStartWithSubtitles = !1),
             (this.m_bMuteOnAutoplayBlocked = !1),
             (this.m_schUpdateMPD = new h.LU()),
             (this.m_xhrUpdateMPD = null),
+            (this.m_xhrCaptionManifest = null),
             (this.m_mpd = null),
             (this.m_bUseHLSManifest = !1),
             (this.m_strVideoAdaptationID = ""),
@@ -1493,11 +1495,12 @@
             (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
             (this.m_nTimedText = 0),
+            (this.m_strActiveTextTrack = null),
             (this.m_schReportPlayerTrigger = new h.LU()),
             (this.m_bStatsViewVisible = !1),
             (this.m_schCaptureDisplayStatsTrigger = new h.LU()),
             (this.m_videoRepSelected = null),
-            (this.m_timedTextRepSelected = null),
+            (this.m_rgCaptions = null),
             (this.m_stats = new C._L()),
             (this.m_bClosing = !1),
             (this.m_hlsTimeOffset = 0),
@@ -1506,7 +1509,7 @@
             (this.m_schFirstFrameThrottler = new h.LU()),
             (this.m_bookMarkAdapter = null),
             (this.m_schBookmarkUpdater = new h.LU()),
-            (this.m_watchedIntervals = new J()),
+            (this.m_watchedIntervals = new K()),
             (0, a.Gn)(this),
             (this.m_elVideo = e),
             this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats);
@@ -1539,11 +1542,11 @@
         SetMuteOnAutoplayBlocked(e) {
           this.m_bMuteOnAutoplayBlocked = e;
         }
-        async PlayMPD(e, t, i) {
+        async PlayMPD(e, t, i, n) {
           (e = Array.isArray(e) ? e : [e]),
             this.m_stats.StartingPlayback(),
-            (this.m_strCDNAuthURLParameters = i || "");
-          let n = null;
+            (this.m_strCDNAuthURLParameters = n || "");
+          let s = null;
           for (let t of e) {
             let [e, i] = await this.DownloadMPD(
               t,
@@ -1556,19 +1559,19 @@
                   : "Timed out downloading MPD";
               return void this.CloseWithError(Z.PlaybackError, t);
             }
-            let s = new H();
-            if (!s.BParse(i.data, t))
+            let n = new H();
+            if (!n.BParse(i.data, t))
               return void this.CloseWithError(
                 Z.PlaybackError,
                 "Failed to parse MPD file",
                 this.m_strMPD,
               );
-            let r = Q(s),
+            let r = Q(n),
               o = X(r);
             if (
-              ((n = {
+              ((s = {
                 strMPD: t,
-                mpd: s,
+                mpd: n,
                 strServerTime: i.headers.date,
                 strCanPlay: r,
                 bCanPlay: o,
@@ -1577,9 +1580,9 @@
             )
               break;
           }
-          if (n) {
+          if (s) {
             if (
-              ((this.m_strMPD = n.strMPD), (this.m_mpd = n.mpd), !n.bCanPlay)
+              ((this.m_strMPD = s.strMPD), (this.m_mpd = s.mpd), !s.bCanPlay)
             ) {
               if (
                 !t ||
@@ -1594,14 +1597,15 @@
               (this.m_strHLS = t), (this.m_bUseHLSManifest = !0);
             }
             if (
-              (this.DispatchEvent("valve-metadatachanged"),
+              (i && (await this.DownloadCaptionManifest(i)),
+              this.DispatchEvent("valve-metadatachanged"),
               this.IsLiveContent() &&
                 (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
                   this.m_schUpdateMPD.Schedule(
                     1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
                     this.UpdateMPD,
                   ),
-                this.CalcVideoStartRelativeToSystemClock(n.strServerTime)),
+                this.CalcVideoStartRelativeToSystemClock(s.strServerTime)),
               this.IsLiveContent() || this.m_watchedIntervals.Enable(),
               this.m_bUseHLSManifest)
             )
@@ -1647,6 +1651,11 @@
                   "ended",
                   this.OnEndedForHLS,
                 ),
+                this.m_listeners.AddEventListener(
+                  this.m_elVideo.textTracks,
+                  "change",
+                  this.CheckActiveTextTrack,
+                ),
                 void console.assert(this.BInitialized())
               );
             this.BCreateLoaders()
@@ -1660,52 +1669,55 @@
           } else this.CloseWithError(Z.PlaybackError, "Invalid manifest");
         }
         InitTimedText() {
-          $(this.m_mpd),
-            (this.m_nTimedText = 0),
-            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((e) => {
-              let t = (0, l.sf)(g.TS.LANGUAGE);
-              if (
-                e.rgRepresentations.length > 0 &&
-                e.rgRepresentations[0].strClosedCaptionFile &&
-                e.strLanguage in m.bi
-              ) {
-                const i = document.createElement("track");
-                (i.kind = "subtitles"),
-                  (i.label = (0, m.we)(
-                    "#Language_" + (0, l.Lg)(m.bi[e.strLanguage]),
-                  )),
-                  (i.srclang = e.strLanguage),
-                  (i.src = e.rgRepresentations[0].strClosedCaptionFile),
-                  (this.m_nTimedText += 1),
-                  (!this.m_bAlwaysStartWithSubtitles && 0 == t) ||
-                    m.bi[e.strLanguage] != t ||
-                    ((i.default = !0),
-                    (this.m_timedTextRepSelected = e.rgRepresentations[0])),
-                  this.m_elVideo.appendChild(i);
-              }
-            });
+          $(this.m_mpd);
+          let e = [];
+          if (this.m_rgCaptions) e = this.m_rgCaptions;
+          else
+            for (let t of this.m_mpd.GetTimedTextAdaptionSet(0))
+              0 != t.rgRepresentations.length &&
+                t.rgRepresentations[0].strClosedCaptionFile &&
+                t.strLanguage in m.bi &&
+                e.push({
+                  m_strURL: t.rgRepresentations[0].strClosedCaptionFile,
+                  m_strLanguageBCP47: t.strLanguage,
+                });
+          this.m_nTimedText = 0;
+          let t = (0, l.sf)(g.TS.LANGUAGE);
+          for (let i of e) {
+            const e = document.createElement("track");
+            (e.kind = "captions"),
+              (e.label = J(i.m_strLanguageBCP47)),
+              (e.srclang = i.m_strLanguageBCP47),
+              (e.src = i.m_strURL),
+              (!this.m_bAlwaysStartWithSubtitles && 0 == t) ||
+                m.bi[i.m_strLanguageBCP47] != t ||
+                (e.default = !0),
+              this.m_elVideo.appendChild(e),
+              (this.m_nTimedText += 1);
+          }
         }
         SetSubtitles(e) {
-          let t = null;
-          for (let i = 0; i < this.m_elVideo.textTracks.length; i++) {
-            const n = this.m_elVideo.textTracks[i];
-            if (m.bi[n.language] == e) {
-              let e = this.GetTimeTextAdaptions(0).filter(
-                (e) => e.strLanguage == n.language,
-              );
-              e &&
-                e.length > 0 &&
-                e[0].rgRepresentations &&
-                (t = e[0].rgRepresentations[0]),
-                (n.mode = "showing");
-            } else n.mode = "disabled";
+          for (let t = 0; t < this.m_elVideo.textTracks.length; t++) {
+            const i = this.m_elVideo.textTracks[t],
+              n = m.bi[i.language] == e ? "showing" : "disabled";
+            i.mode = n;
           }
-          this.m_timedTextRepSelected = t;
+        }
+        CheckActiveTextTrack() {
+          let e = "";
+          for (let t = 0; t < this.m_elVideo.textTracks.length; t++) {
+            const i = this.m_elVideo.textTracks[t];
+            "showing" == i.mode && (e = i.language);
+          }
+          e !== this.m_strActiveTextTrack &&
+            ((this.m_strActiveTextTrack = e),
+            this.DispatchEvent("valve-captionschange"));
         }
         OnLoadedMetadataForHLS() {
           this.m_bUseHLSManifest &&
             ((this.m_bIsBuffering = !1),
             this.BeginPlaybackHLS(),
+            this.CheckActiveTextTrack(),
             this.DispatchEvent("valve-bufferupdate"));
         }
         OnVisibilityChangeForHLS() {
@@ -1745,6 +1757,7 @@
           (this.m_bIsBuffering = !0),
             (this.m_strMPD = ""),
             (this.m_mpd = null),
+            (this.m_strCaptions = ""),
             (this.m_bUseHLSManifest = !1),
             (this.m_strVideoAdaptationID = ""),
             (this.m_strAudioAdaptationID = ""),
@@ -1753,18 +1766,23 @@
             (this.m_seekingToTime = null),
             (this.m_bStatsViewVisible = !1),
             (this.m_videoRepSelected = null),
+            (this.m_rgCaptions = null),
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
             (this.m_stats = new C._L()),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
             (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
+            (this.m_strActiveTextTrack = null),
             this.m_watchedIntervals.Clear(),
             console.assert(!this.BInitialized());
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
             (this.m_xhrUpdateMPD.cancel(), (this.m_xhrUpdateMPD = null)),
+            this.m_xhrCaptionManifest &&
+              (this.m_xhrCaptionManifest.cancel(),
+              (this.m_xhrCaptionManifest = null)),
             this.m_schUpdateMPD.Cancel(),
             this.m_schReportPlayerTrigger.Cancel(),
             this.m_schCaptureDisplayStatsTrigger.Cancel(),
@@ -1836,6 +1854,32 @@
                 Z.PlaybackError,
                 "Failed to download MPD: 410 Gone",
               );
+        }
+        async DownloadCaptionManifest(e) {
+          let t = null;
+          try {
+            (this.m_xhrCaptionManifest = o().CancelToken.source()),
+              (t = await o().get(e, {
+                cancelToken: this.m_xhrCaptionManifest.token,
+              }));
+          } catch (e) {
+            return;
+          }
+          if (((this.m_xhrCaptionManifest = null), !t || 200 != t.status))
+            return;
+          let i = "string" == typeof t.data ? JSON.parse(t.data) : t.data;
+          if (i && Array.isArray(i.captions)) {
+            this.m_rgCaptions = [];
+            for (let t of i.captions) {
+              if (!t.url || !t.lang || !(t.lang in m.bi)) continue;
+              let i = new URL(t.url, e).href;
+              this.m_rgCaptions.push({
+                m_strURL: i,
+                m_strLanguageBCP47: t.lang,
+              });
+            }
+            this.m_strCaptions = e;
+          }
         }
         CloseWithError(e, ...t) {
           this.DispatchEvent("valve-downloadfailed", e),
@@ -1940,8 +1984,18 @@
               "seeked",
               this.OnVideoSeeked,
             ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo.textTracks,
+              "change",
+              this.CheckActiveTextTrack,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "loadedmetadata",
+              this.OnLoadedMetadata,
+            ),
             (this.m_nPlayerHeightForAuto = this.GetVideoPlayerHeight()),
-            (this.m_resizeObserver = (0, N.Fd)(
+            (this.m_resizeObserver = (0, O.Fd)(
               this.m_elVideo,
               this.OnPlayerResize,
             ));
@@ -2077,6 +2131,9 @@
         OnVideoCanPlayHLS() {
           this.m_stats.LogVideoOnCanPlay();
         }
+        OnLoadedMetadata() {
+          this.CheckActiveTextTrack();
+        }
         GetCurrentPlayTime() {
           if (!this.BInitialized()) return 0;
           if (this.m_seekingToTime) {
@@ -2152,10 +2209,8 @@
             let t = this.GetCurrentVideoAdaptation(),
               i = t && t.strID ? t.strID : "",
               n = this.GetCurrentAudioAdaptationfunction(),
-              s = n && n.strID ? n.strID : "",
-              r = this.GetCurrentTimedTextRepresentation(),
-              o = r && r.strID ? r.strID : "";
-            this.m_bookMarkAdapter.SetBookmark(e, i, s, o),
+              s = n && n.strID ? n.strID : "";
+            this.m_bookMarkAdapter.SetBookmark(e, i, s, ""),
               this.IsPaused()
                 ? this.m_schBookmarkUpdater.Cancel()
                 : this.m_schBookmarkUpdater.Schedule(
@@ -2163,9 +2218,6 @@
                     this.SendUpdateToBookmarkServiceIfNeeded,
                   );
           }
-        }
-        GetCurrentTimedTextRepresentation() {
-          return this.m_timedTextRepSelected;
         }
         OnVideoPlay() {
           this.m_bUseHLSManifest ||
@@ -2532,7 +2584,7 @@
           const s = e;
           (e = u.OQ(e, i, n)) != s &&
             (0, p.q_)(`Seek time ${s} was clamped to the range ${i} to ${n}`),
-            (this.m_bUserLiveEdgeChoice = e >= n - O);
+            (this.m_bUserLiveEdgeChoice = e >= n - N);
           let r = this.m_elVideo.paused;
           if ((r || this.m_elVideo.pause(), this.m_bUseHLSManifest))
             (this.m_elVideo.currentTime = e - this.m_hlsTimeOffset),
@@ -2687,6 +2739,16 @@
         BHasTimedText() {
           return this.m_nTimedText > 0;
         }
+        IsShowingCaption() {
+          return !!this.m_strActiveTextTrack;
+        }
+        GetCaptionRepresentations() {
+          if (!this.m_mpd) return [];
+          let e = [];
+          for (let t of this.m_elVideo.textTracks)
+            e.push({ m_eLanguage: m.bi[t.language], m_strLabel: t.label });
+          return e;
+        }
         GetMaxWidthAndHeight() {
           if (!this.m_mpd) return null;
           let e = this.m_mpd.GetMainVideoAdaption();
@@ -2723,8 +2785,12 @@
       function Y(e) {
         return !!e && e instanceof Error && "NotAllowedError" == e.name;
       }
+      function J(e) {
+        return e in m.bi ? (0, m.we)("#Language_" + (0, l.Lg)(m.bi[e])) : "";
+      }
       (0, s.Cg)([a.sH], z.prototype, "m_nTimedText", void 0),
         (0, s.Cg)([a.XI], z.prototype, "InitTimedText", null),
+        (0, s.Cg)([f.o], z.prototype, "CheckActiveTextTrack", null),
         (0, s.Cg)([f.o], z.prototype, "OnLoadedMetadataForHLS", null),
         (0, s.Cg)([f.o], z.prototype, "OnVisibilityChangeForHLS", null),
         (0, s.Cg)([f.o], z.prototype, "OnEndedForHLS", null),
@@ -2740,6 +2806,7 @@
         (0, s.Cg)([f.o], z.prototype, "OnVideoError", null),
         (0, s.Cg)([f.o], z.prototype, "OnVideoCanPlay", null),
         (0, s.Cg)([f.o], z.prototype, "OnVideoCanPlayHLS", null),
+        (0, s.Cg)([f.o], z.prototype, "OnLoadedMetadata", null),
         (0, s.Cg)([f.o], z.prototype, "GetCurrentPlayTime", null),
         (0, s.Cg)([f.o], z.prototype, "GetBufferedEndTime", null),
         (0, s.Cg)([f.o], z.prototype, "OnVideoTimeUpdate", null),
@@ -2770,7 +2837,7 @@
         ),
         (0, s.Cg)([f.o], z.prototype, "ReportPlayerStats", null),
         (0, s.Cg)([a.XI.bound], z.prototype, "CaptureStatsForDisplay", null);
-      class J {
+      class K {
         constructor() {
           (this.m_bEnabled = !1),
             (this.m_rgIntervals = []),
@@ -3781,7 +3848,7 @@
         gD: () => a,
         i7: () => le,
         jl: () => V,
-        k8: () => N,
+        k8: () => O,
         lM: () => P,
         lN: () => w,
         lQ: () => Z,
@@ -3792,7 +3859,7 @@
         po: () => U,
         pw: () => Q,
         ry: () => D,
-        t4: () => O,
+        t4: () => N,
         tS: () => ie,
         ud: () => J,
         wN: () => ae,
@@ -4380,7 +4447,7 @@
           }),
         });
       }
-      function N(e) {
+      function O(e) {
         return (0, n.jsx)("svg", {
           width: "36",
           height: "36",
@@ -4396,7 +4463,7 @@
           }),
         });
       }
-      function O(e) {
+      function N(e) {
         return (0, n.jsx)("svg", {
           width: "36",
           height: "36",

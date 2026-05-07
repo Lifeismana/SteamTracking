@@ -8,6 +8,9 @@
         ModerateCtn: "_2qBUNFM1eoRvT2ScOKJFUL",
         ModerationActionButtons: "_2xcVcE3CRCIKmxAjIyjoGj",
         ModerateLink: "_2LegBbkPqIlvkjCfpbo4V1",
+        BottomButtons: "_1WHIJmT4YG0U0TGfx-u93k",
+        OwnerDisputeCtn: "_2QWA5XBjtoSIM-_eLNiw2a",
+        EditButton: "_1oiwHOMI9o4tYFhxPeBzdb",
       };
     },
     chunkid: (module) => {
@@ -1650,17 +1653,8 @@
               ],
             });
           case 5:
-            return (0, _.jsxs)(_.Fragment, {
-              children: [
-                "is_csam" in _ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: ["Set CSAM to ", _.is_csam],
-                  }),
-                "is_terrorism" in _ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: ["Set terrorist content to ", _.is_terrorism],
-                  }),
-              ],
+            return (0, _.jsx)(_.Fragment, {
+              children: JSON.stringify(_, null, "\t"),
             });
           case 6:
             return (0, _.jsxs)(_.Fragment, {
@@ -1805,13 +1799,17 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        var _;
         const [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(1, _.topicId);
-        let _ = null;
+        let _;
         if (_.isSuccess)
-          for (const _ of _.data.subjects)
+          for (const _ of null !== (_ = _.data.subjects) && void 0 !== _
+            ? _
+            : [])
             _.subject_id === _.subjectId && (_ = _);
         const _ =
             _ &&
@@ -1819,7 +1817,7 @@
           _ = (0, _.jsx)("span", {
             className: _.ModerateLink,
             children: (0, _.jsxs)("a", {
-              onClick: () => __webpack_require__(!0),
+              onClick: () => _(!0),
               children: [
                 _ &&
                   (0, _.jsxs)(_.Fragment, {
@@ -1839,7 +1837,7 @@
           children: [
             _ &&
               (0, _.jsx)(_, {
-                onClose: () => __webpack_require__(!1),
+                onClose: () => _(!1),
                 ..._,
                 subject: _,
               }),
@@ -1885,7 +1883,7 @@
         );
       }
       function _(_) {
-        var _, _;
+        var _, _, _;
         const { subject: _ } = _,
           [_, _] = (0, _.useState)("main"),
           _ = _(_.clanSteamId, _.forumId, _.topicId, _.subjectId),
@@ -1915,6 +1913,13 @@
           for (const _ of _.reports)
             _.time_resolved && !_.time_disputed && _++,
               _.time_dispute_resolved && _++;
+        const _ = {
+            subject_type: 1,
+            subject_group_id: _.topicId,
+            subject_id: _.subjectId,
+          },
+          _ = void 0 !== _ && !_.owner_dispute_time && 14 === _.resolved,
+          _ = void 0 !== _ && !!_.owner_dispute_time;
         return (0, _.jsx)(_._, {
           onlyPopoutIfNeeded: !0,
           popupHeight: 340,
@@ -1995,6 +2000,29 @@
                                 onClick: () => _("sanction"),
                                 children: "Sanction",
                               }),
+                              !_ &&
+                                (0, _.jsx)("button", {
+                                  disabled: !_,
+                                  onClick: () => _("ownerdispute"),
+                                  children: "Owner Dispute",
+                                }),
+                              _ &&
+                                (0, _.jsxs)("span", {
+                                  children: [
+                                    (0, _.jsx)("a", {
+                                      href: `${_._.HELP_BASE_URL}tickermaster/ticket/${_.owner_dispute_details}`,
+                                      children: _._.Localize(
+                                        "#moderation_already_owner_disputed",
+                                      ),
+                                    }),
+                                    (0, _.jsx)("button", {
+                                      onClick: () =>
+                                        _("editownerdisputedetails"),
+                                      className: _.EditButton,
+                                      children: (0, _.jsx)(_.ffu, {}),
+                                    }),
+                                  ],
+                                }),
                             ],
                           }),
                         ],
@@ -2019,11 +2047,104 @@
                         },
                         onCancel: () => _("main"),
                       }),
+                    "ownerdispute" === _ &&
+                      (0, _.jsx)(_, {
+                        subject: _,
+                        authorSteamId: _.authorSteamId,
+                        onClose: () => _("main"),
+                      }),
+                    "editownerdisputedetails" === _ &&
+                      (0, _.jsx)(_, {
+                        subject: _,
+                        onClose: () => _("main"),
+                        currentDetails:
+                          null !==
+                            (_ =
+                              null == _ ? void 0 : _.owner_dispute_details) &&
+                          void 0 !== _
+                            ? _
+                            : "",
+                      }),
                   ],
                 }),
               }),
             }),
           }),
+        });
+      }
+      function _(_) {
+        const { subject: _, onClose: _, currentDetails: _ } = _,
+          [_, _] = (0, _.useState)(_),
+          _ = (0, _._)(_.subject_type, _.subject_group_id, _.subject_id, _);
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsxs)("label", {
+              children: [
+                _._.Localize("#moderation_editownerdisputedetails_label"),
+                (0, _.jsx)("input", {
+                  type: "text",
+                  value: _,
+                  onChange: (_) => _(_.target.value),
+                }),
+              ],
+            }),
+            (0, _.jsxs)(_._, {
+              className: _.BottomButtons,
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: async () => {
+                    await _.mutateAsync(), __webpack_require__();
+                  },
+                  children: _._.Localize(
+                    "#moderation_editownerdisputedetails_save",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  children: _._.Localize("#moderation_ownerdispute_cancel"),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { authorSteamId: _, subject: _, onClose: _ } = _,
+          [_, _] = (0, _.useState)(""),
+          _ = (0, _._)(_, _.subject_type, _.subject_group_id, _.subject_id, _);
+        return (0, _.jsxs)(_._, {
+          className: _.OwnerDisputeCtn,
+          children: [
+            (0, _.jsx)("div", {
+              children: _._.Localize("#moderation_ownerdispute_description"),
+            }),
+            (0, _.jsxs)("label", {
+              children: [
+                _._.Localize("#moderation_ownerdispute_ticketmastercode"),
+                " ",
+                (0, _.jsx)("input", {
+                  type: "text",
+                  value: _,
+                  onChange: (_) => _(_.target.value),
+                }),
+              ],
+            }),
+            (0, _.jsxs)(_._, {
+              className: _.BottomButtons,
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: async () => {
+                    await _.mutateAsync(), _();
+                  },
+                  children: _._.Localize("#moderation_ownerdispute_dispute"),
+                }),
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  children: _._.Localize("#moderation_ownerdispute_cancel"),
+                }),
+              ],
+            }),
+          ],
         });
       }
       function _(_) {

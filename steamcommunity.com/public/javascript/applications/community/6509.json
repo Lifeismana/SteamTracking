@@ -201,6 +201,7 @@
     "moderationaction_released": "解放済",
     "moderationaction_privatemessaged": "プライベートメッセージ送信済み",
     "moderationaction_unknown": "不明なアクション",
+    "moderationaction_ownerdisputed": "所有者が異議を申し立てたモデレーション",
     "moderatormessage_count_note": "注記：%1$s件",
     "moderatormessage_count_warning": "警告：%1$s件",
     "moderatormessage_count_bannotice": "禁止：%1$s件",

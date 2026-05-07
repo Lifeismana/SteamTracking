@@ -464,43 +464,44 @@
           _ = _.useId();
         if (!_ || !_.adaptive_trailers) return null;
         const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
-        return 0 == _?.length
-          ? null
-          : (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsxs)(_._, {
-                "aria-labelledby": (0, _._)(_, _),
-                bAllowFullSize: !0,
-                bOKDisabled: !0,
-                closeModal: _,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().VideoPopupContainers,
-                    children: (0, _.jsx)(_._, {
-                      dashManifests: _ || [],
-                      hlsManifest: (_.length > 0 && _?.[0]) || "",
-                      screenshot: (0, _._)(_),
-                      altText: _.trailer_name,
-                      muteWhenAutoplayBlocked: !0,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    _: _,
-                    style: {
-                      display: "none",
-                    },
-                    children: _?.name || "",
-                  }),
-                  (0, _.jsx)("div", {
-                    _: _,
-                    style: {
-                      display: "none",
-                    },
-                    children: _.trailer_name,
-                  }),
-                ],
+        if (0 == _?.length) return null;
+        let _ = (0, _._)(_);
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsxs)(_._, {
+            "aria-labelledby": (0, _._)(_, _),
+            bAllowFullSize: !0,
+            bOKDisabled: !0,
+            closeModal: _,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().VideoPopupContainers,
+                children: (0, _.jsx)(_._, {
+                  dashManifests: _ || [],
+                  hlsManifest: (_.length > 0 && _?.[0]) || "",
+                  screenshot: (0, _._)(_),
+                  altText: _.trailer_name,
+                  muteWhenAutoplayBlocked: !0,
+                  captionManifest: _,
+                }),
               }),
-            });
+              (0, _.jsx)("div", {
+                _: _,
+                style: {
+                  display: "none",
+                },
+                children: _?.name || "",
+              }),
+              (0, _.jsx)("div", {
+                _: _,
+                style: {
+                  display: "none",
+                },
+                children: _.trailer_name,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {

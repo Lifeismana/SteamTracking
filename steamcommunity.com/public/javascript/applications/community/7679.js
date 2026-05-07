@@ -3593,7 +3593,7 @@
             if (t && !t(e)) continue;
             const s = (0, o.Lg)(e),
               i = (0, d.we)("#Language_" + s),
-              n = Boolean(a) && a(e);
+              n = !(!a || !a(e));
             r.push({ eLang: e, sLocName: i, bSupported: n });
           }
           r.sort((e, t) =>

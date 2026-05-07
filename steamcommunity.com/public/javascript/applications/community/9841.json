@@ -201,6 +201,7 @@
     "moderationaction_released": "Vapautettu",
     "moderationaction_privatemessaged": "Yksityisviesti lähetetty",
     "moderationaction_unknown": "Tuntematon toimi",
+    "moderationaction_ownerdisputed": "Omistaja on kiistauttanut moderoinnin",
     "moderatormessage_count_note": "Huomautukset: %1$s",
     "moderatormessage_count_warning": "Varoitukset: %1$s",
     "moderatormessage_count_bannotice": "Kiellot: %1$s",

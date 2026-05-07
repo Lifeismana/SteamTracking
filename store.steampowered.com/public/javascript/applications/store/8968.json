@@ -1,6 +1,7 @@
 {
     "language": "french",
     "TrailerPlayer_Settings_Tooltip": "Paramètres",
+    "TrailerPlayer_Captions_Tooltip": "Sous-titres",
     "TrailerPlayer_Play_Tooltip": "Jouer",
     "TrailerPlayer_Pause_Tooltip": "Mettre en pause",
     "TrailerPlayer_Mute_Tooltip": "Désactiver le son",

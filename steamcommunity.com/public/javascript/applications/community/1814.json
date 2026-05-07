@@ -201,6 +201,7 @@
     "moderationaction_released": "Sluppet",
     "moderationaction_privatemessaged": "Privat melding sendt",
     "moderationaction_unknown": "Ukjent handling",
+    "moderationaction_ownerdisputed": "Moderering bestridt av eieren",
     "moderatormessage_count_note": "Merknader: %1$s",
     "moderatormessage_count_warning": "Advarsler: %1$s",
     "moderatormessage_count_bannotice": "Utestengelser: %1$s",

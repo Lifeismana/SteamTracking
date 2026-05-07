@@ -280,6 +280,7 @@
     chunkid: (module) => {
       module.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
         Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
         "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
@@ -3790,7 +3791,7 @@
         }, [_, _, _]);
         let _ = _.k_Loading;
         return (
-          null == _ ? (_ = _.k_LoadFailure) : _ && (_ = _.k_LoadSuccess),
+          null === _ ? (_ = _.k_LoadFailure) : _ && (_ = _.k_LoadSuccess),
           {
             rgHardwareDetails: _,
             eHardwareLoadingState: _,
@@ -9918,12 +9919,12 @@
                       .then((_) => {
                         _?.token?.reason ||
                           (_ ||
-                            _(_._.Localize("#GrantAwardError_PersistFailed")),
+                            _(_._.Localize("#Sale_Reservations_BusyServer")),
                           _(!0));
                       })
                       .catch(() => {
                         _?.token?.reason ||
-                          (_(_._.Localize("#GrantAwardError_PersistFailed")),
+                          (_(_._.Localize("#Sale_Reservations_BusyServer")),
                           _(!0));
                       });
                 },
@@ -10048,13 +10049,12 @@
                 _.mutateAsync()
                   .then((_) => {
                     _?.token?.reason ||
-                      (_ || _(_._.Localize("#GrantAwardError_PersistFailed")),
+                      (_ || _(_._.Localize("#Sale_Reservations_BusyServer")),
                       _(!0));
                   })
                   .catch(() => {
                     _?.token?.reason ||
-                      (_(!0),
-                      _(_._.Localize("#GrantAwardError_PersistFailed")));
+                      (_(!0), _(_._.Localize("#Sale_Reservations_BusyServer")));
                   });
             },
             [_?.token?.reason, _],
@@ -17489,7 +17489,7 @@
             _.hub_description &&
               (0, _.jsx)("div", {
                 className: _.ContentHubSubtitle,
-                children: _.hub_description,
+                children: (0, _._)(_.hub_description),
               }),
           ],
         });
@@ -17956,29 +17956,31 @@
           [_, _] = (0, _.useState)(() => {
             if (_ && _.length > 0)
               return _.find((_) => _.tuple_id == _.default_tuple_id) ?? _[0];
-          }),
-          _ = (0, _._)(),
-          _ = (0, _._)();
+          });
         if (
-          ((0, _.useEffect)(() => {
-            if (_ && _.length > 0) {
-              const _ = new Set(
-                _.map((_) => _.reservation_package).filter((_) => !!_),
-              );
-              if (_.size > 0) {
-                Array.from(_).forEach((_) => {
-                  if (_) {
-                    const _ = {
-                      packageid: _,
-                    };
-                    _.prefetchQuery((0, _._)(_, _)),
+          ((function (_) {
+            const _ = (0, _._)(),
+              _ = (0, _._)();
+            (0, _.useEffect)(() => {
+              if (_ && _.length > 0) {
+                const _ = new Set(
+                  _.map((_) => _.reservation_package).filter((_) => !!_),
+                );
+                if (_.size > 0) {
+                  Array.from(_).forEach((_) => {
+                    if (_) {
+                      const _ = {
+                        packageid: _,
+                      };
                       _.prefetchQuery((0, _._)(_, _)),
-                      _.prefetchQuery((0, _._)(_, _));
-                  }
-                });
+                        _.prefetchQuery((0, _._)(_, _)),
+                        _.prefetchQuery((0, _._)(_, _));
+                    }
+                  });
+                }
               }
-            }
-          }, [_, _, _]),
+            }, [_, _, _]);
+          })(_),
           !_ || !_ || !_)
         )
           return null;
@@ -17986,38 +17988,47 @@
         return (0, _.jsxs)(_, {
           reservationLayout: _,
           children: [
+            (0, _.jsxs)("div", {
+              className: _().Ctn,
+              children: [
+                (0, _.jsxs)("div", {
+                  children: [
+                    _ &&
+                      (0, _.jsx)(_, {
+                        reservationDef: _,
+                      }),
+                    (0, _.jsx)(_, {
+                      rgPackageTuples: _,
+                      rgProductConfigs: _,
+                      language: _,
+                      selected: _,
+                      setSelected: _,
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  children:
+                    _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)(_, {
+                          reservationDef: _,
+                        }),
+                        (0, _.jsx)(_, {
+                          reservationDef: _,
+                        }),
+                      ],
+                    }),
+                }),
+              ],
+            }),
             (0, _.jsx)("div", {
               children:
                 _ &&
                 (0, _.jsx)(_, {
+                  disabled: _,
                   reservationDef: _,
                 }),
-            }),
-            (0, _.jsxs)("div", {
-              children: [
-                _ &&
-                  (0, _.jsx)(_, {
-                    reservationDef: _,
-                  }),
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      config: _,
-                      rgPackageTuples: _,
-                      language: _,
-                      selected: _,
-                      setSelected: _,
-                    },
-                    "" + _.unique_id,
-                  ),
-                ),
-                _ &&
-                  (0, _.jsx)(_, {
-                    disabled: _,
-                    reservationDef: _,
-                  }),
-              ],
             }),
           ],
         });
@@ -18033,7 +18044,6 @@
             (_["--product-config-override-select-color"] =
               _.product_config_selected_color),
           (0, _.jsx)("div", {
-            className: _().Ctn,
             style: _,
             children: _,
           })
@@ -18070,7 +18080,6 @@
         const { reservationDef: _ } = _,
           _ = (0, _._)(_.reservation_package),
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_._.LANGUAGE),
           _ = _._.GetELanguageFallback(_),
           _ =
@@ -18078,18 +18087,46 @@
             _.localized_reservation_desc?.[_] ||
             "",
           _ = (_.use_package_description ? _ : _) ?? "";
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
+        return (0, _.jsx)(_._, {
+          text: _,
+        });
+      }
+      function _(_) {
+        const { reservationDef: _ } = _,
+          _ = (0, _._)(_.reservation_package),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsx)(_.Fragment, {
+          children:
             _ &&
-              (0, _.jsx)(_._, {
-                _: _,
-                imageType: "main",
-                bPreferAssetWithoutOverride: !1,
-              }),
             (0, _.jsx)(_._, {
-              text: _,
+              _: _,
+              imageType: "main",
+              bPreferAssetWithoutOverride: !1,
             }),
-          ],
+        });
+      }
+      function _(_) {
+        const {
+          rgProductConfigs: _,
+          rgPackageTuples: _,
+          language: _,
+          selected: _,
+          setSelected: _,
+        } = _;
+        return (0, _.jsx)(_.Fragment, {
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                config: _,
+                rgPackageTuples: _,
+                language: _,
+                selected: _,
+                setSelected: _,
+              },
+              "" + _.unique_id,
+            ),
+          ),
         });
       }
       function _(_) {
@@ -18332,7 +18369,7 @@
               _ = !1;
             return (
               _ == _._.k_LoadFailure
-                ? (_ = (0, _._)("#Sale_Reservation_Too_Busy"))
+                ? (_ = (0, _._)("#Sale_Reservations_BusyServer"))
                 : (0, _._)(_)
                   ? ((_ = !0),
                     (_ =

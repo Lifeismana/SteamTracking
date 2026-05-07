@@ -171,16 +171,21 @@
       module.exports = {
         nContextMenuEdgePadding: "4",
         nContextMenuVerticalGap: "12px",
+        SettingsMenu: "_10UNx2XXsFmsHb86RCyofu",
+        Scroll: "KSlMeR2__t_l8Bcje0rhx",
+        MenuItem: "_2Qsf4rHzNzK6Z3UYN7tOFx",
+        Checked: "_3LsARNrY1BnB5awNEtG73u",
+        Separator: "_1vN6I6E0CQMQjV8dfSZJaP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         nTimelineHoverEdgePadding: "4px",
         PlaybackButton: "_19irS_a0FK5GG1jWDRv3FC",
         PlaybackTime: "OEPT8AhRvpFM5uWUlRm-V",
         TimeDash: "_1kRok2cvbsviuEoWTNbsmi",
         SettingsButton: "_3ds1FPfTQmWS0YwAlGMj-c",
         Rotated: "_3JIjyte4XlKU6XqBieb3QS",
-        SettingsMenu: "_2KpxNwIOJq2xElKzUwTadQ",
-        MenuItem: "_1m5_CGXeD2EYKUBjfSk05m",
-        Checked: "_1g6189hRsH8zibByQSuRYG",
-        Separator: "_2kzb-QHLIWty5n15SZaVYx",
         Timeline: "_11VWkpWTaRCptZe9_D-Twj",
         Hovered: "EwEQtqX2teG7IjjAI2YRp",
         TimelineBar: "_1Ni5Kqn_Pbfd6nOEYoVE4J",
@@ -194,6 +199,7 @@
         FatalErrorMessage: "_1h9dqa42zo9ZKLEyqbqZ7l",
         TitleRow: "_2zDVM8AJTzHysTViti1Kot",
         Category: "ArOIQvgR0PkwzfWGlNoj5",
+        Separator: "_2kzb-QHLIWty5n15SZaVYx",
         Title: "_2MXuC57mXfDp_pvyrQEx5z",
       };
     },
@@ -9838,15 +9844,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: _._.Localize("#LoginRedirect_Dialog_Title"),
           strDescription: _._.Localize("#LoginRedirect_Dialog_Description"),
-          closeModal: _,
+          onCancel: _,
+          strOKButtonText: _._.Localize("#Button_OK"),
           onOK: () => {
-            window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+            !(function () {
+              const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+              window.location.href = _;
+            })(),
+              _();
           },
         });
       }
@@ -10965,9 +10977,13 @@
         }, [_, _]);
         const _ = (0, _.useCallback)(
           async (_) => {
-            _.preventDefault(),
-              _.stopPropagation(),
-              _._.logged_in ? (_(!0), await _(), _.token.reason || _(!1)) : _();
+            _._.logged_in
+              ? (_.preventDefault(),
+                _.stopPropagation(),
+                _(!0),
+                await _(),
+                _.token.reason || _(!1))
+              : _();
           },
           [_.token.reason, _, _],
         );
@@ -15207,63 +15223,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { data: _ } = (0, _._)(_),
-          _ = (0, _._)();
-        if (!_) return;
-        const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
-        return _ ? _.filter((_) => !!_.all_ages) : _;
-      }
-      function _(_) {
-        let _ = _(_);
-        if (_ && 0 != _.length) return _[0];
-      }
-      function _(_) {
-        var _, _;
-        return `${_._.STORE_ITEM_BASE_URL}${_.trailer_url_format.replace("${FILENAME}", null !== (_ = null !== (_ = _.screenshot_full) && void 0 !== _ ? _ : _.screenshot_medium) && void 0 !== _ ? _ : "")}`;
-      }
-      function _(_, _) {
-        return `${_._.VIDEO_CDN_URL}store_trailers/${_.trailer_url_format.replace("${FILENAME}", _)}`;
-      }
-      function _(_, _) {
-        return `${_._.VIDEO_CDN_URL}store_trailers/${_}`;
-      }
-      function _(_) {
-        let _ = [];
-        _.adaptive_trailers &&
-          (_ = _.adaptive_trailers
-            .filter(
-              (_) =>
-                ("dash_h264" == _.encoding || "dash_av1" == _.encoding) &&
-                _.cdn_path,
-            )
-            .map((_) => _(0, _.cdn_path || "")));
-        let _ = [];
-        return (
-          _.adaptive_trailers &&
-            (_ = _.adaptive_trailers
-              .filter((_) => "hls_h264" == _.encoding && _.cdn_path)
-              .map((_) => _(0, _.cdn_path || ""))),
-          {
-            rgDashTrailers: _,
-            rgHlsTrailers: _,
-          }
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -16114,6 +16073,8 @@
             (this.m_maxDimensions = null),
             (this.m_bPlaybackStarted = !1),
             (this.m_bBuffering = !0),
+            (this.m_bHasCaptions = !1),
+            (this.m_bShowingCaption = !1),
             (this.m_nPlaybackTime = 0),
             (this.m_nVideoStartTime = 0),
             (this.m_nVideoDuration = 0),
@@ -16151,7 +16112,13 @@
         IsBuffering() {
           return this.m_bBuffering;
         }
-        Start(_, _, _, _) {
+        HasCaptions() {
+          return this.m_bHasCaptions;
+        }
+        IsShowingCaption() {
+          return this.m_bShowingCaption;
+        }
+        Start(_, _, _, _, _) {
           this.Stop(),
             (this.m_strStatsURL = _ || ""),
             (this.m_elVideo = _),
@@ -16206,6 +16173,11 @@
               this.OnMetadataChanged,
             ),
             this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-captionschange",
+              this.OnCaptionsChange,
+            ),
+            this.m_listeners.AddEventListener(
               window,
               "pagehide",
               this.SendStats,
@@ -16224,7 +16196,7 @@
             this.m_player.SetMuteOnAutoplayBlocked(
               this.m_bMuteWhenAutoplayBlocked,
             ),
-            this.m_player.PlayMPD(_, _);
+            this.m_player.PlayMPD(_, _, _);
         }
         Stop() {
           this.SendStats(),
@@ -16288,6 +16260,11 @@
               this.m_maxDimensions.nWidth == _.nWidth &&
               this.m_maxDimensions.nHeight == _.nHeight) ||
               (this.m_maxDimensions = _));
+        }
+        OnCaptionsChange() {
+          this.IsInitialized() &&
+            ((this.m_bHasCaptions = this.m_player.BHasTimedText()),
+            (this.m_bShowingCaption = this.m_player.IsShowingCaption()));
         }
         UserInputReceived() {
           this.IsInitialized() &&
@@ -16375,6 +16352,17 @@
         SetVideoRepresentation(_) {
           this.IsInitialized() && this.m_player.SetVideoRepresentation(_);
         }
+        GetCaptionRepresentations() {
+          return this.IsInitialized()
+            ? this.m_player.GetCaptionRepresentations()
+            : [];
+        }
+        SetCaptionRepresentation(_) {
+          this.IsInitialized() && this.m_player.SetSubtitles(_);
+        }
+        DisableCaptions() {
+          this.IsInitialized() && this.m_player.SetSubtitles(-1);
+        }
         GetFailureReason() {
           return this.m_eFailureReason;
         }
@@ -16412,6 +16400,8 @@
         (0, _._)([_._], _.prototype, "m_maxDimensions", void 0),
         (0, _._)([_._], _.prototype, "m_bPlaybackStarted", void 0),
         (0, _._)([_._], _.prototype, "m_bBuffering", void 0),
+        (0, _._)([_._], _.prototype, "m_bHasCaptions", void 0),
+        (0, _._)([_._], _.prototype, "m_bShowingCaption", void 0),
         (0, _._)([_._], _.prototype, "m_nPlaybackTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoStartTime", void 0),
         (0, _._)([_._], _.prototype, "m_nVideoDuration", void 0),
@@ -16425,6 +16415,7 @@
         (0, _._)([_._], _.prototype, "OnDownloadFailed", null),
         (0, _._)([_._], _.prototype, "OnUserInputNeeded", null),
         (0, _._)([_._.bound], _.prototype, "OnMetadataChanged", null),
+        (0, _._)([_._.bound], _.prototype, "OnCaptionsChange", null),
         (0, _._)([_._], _.prototype, "UserInputReceived", null),
         (0, _._)([_._.bound], _.prototype, "SetMuteInternal", null),
         (0, _._)([_._], _.prototype, "SendStats", null);
@@ -16818,18 +16809,214 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = parseInt(_().nContextMenuEdgePadding),
-        _ = parseInt(_().nContextMenuVerticalGap),
-        _ = parseInt(_().nTimelineHoverEdgePadding),
+        _ = parseInt(_().nContextMenuVerticalGap);
+      function _(_) {
+        let { refButton: _, onClose: _, scroll: _, children: _ } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)({
+            nLeft: 0,
+            nTop: 0,
+          }),
+          _ = (function () {
+            let _ = _();
+            (0, _._)(_, "Missing controls context");
+            let _ = _.m_fnSetMenuVisible;
+            return (
+              (0, _.useEffect)(() => (_(!0), () => _(!1)), [_]),
+              _.m_refMenuLayer
+            );
+          })(),
+          _ = (0, _._)(
+            (_) => {
+              if (((_.current = _), !_)) return;
+              let _ = (_) => {
+                let _ = (0, _._)(_, _.target),
+                  _ = (0, _._)(_.current, _.target);
+                _ || _ || __webpack_require__();
+              };
+              return _.ownerDocument.defaultView
+                ? (_.ownerDocument.defaultView.addEventListener("mouseup", _),
+                  () => {
+                    var _;
+                    return null === (_ = _.ownerDocument.defaultView) ||
+                      void 0 === _
+                      ? void 0
+                      : _.removeEventListener("mouseup", _);
+                  })
+                : void 0;
+            },
+            [_, _, _],
+          );
+        if (
+          ((0, _.useLayoutEffect)(() => {
+            if (!_.current || !_.current || !_.current) return;
+            let _ = _.current.getBoundingClientRect(),
+              _ = _.current.getBoundingClientRect(),
+              _ = _.current.getBoundingClientRect(),
+              _ = _.right - _.left,
+              _ = _.right - _.left,
+              _ = _.left - _.left + _ / 2,
+              _ = _.right - _.left,
+              _ = _._(_ - _ / 2, 0 + _, _ - _ - _),
+              _ = _.bottom - _.top,
+              _ = _.top - _ - _ - _.top;
+            _({
+              nLeft: _,
+              nTop: _,
+            });
+          }, [_, _, _]),
+          !_.current || !_)
+        )
+          return null;
+        let _ = {
+            left: _.nLeft,
+            top: _.nTop,
+          },
+          _ = (0, _._)(_().SettingsMenu, !!_ && _().Scroll),
+          _ = (0, _.jsx)("div", {
+            ref: _,
+            style: _,
+            className: _,
+            children: _,
+          });
+        return _.createPortal(_, _.current);
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          className: _().Separator,
+        });
+      }
+      function _(_) {
+        let { onClick: _, checked: _, children: _ } = _,
+          [_, _] = (0, _._)(),
+          _ = (0, _._)(_().MenuItem, _ && _().Checked),
+          _ = "#2d73ff",
+          _ = "#00ccff";
+        return (
+          _ && ((_ = "#eeeeee"), (_ = "#ffffff")),
+          (0, _.jsxs)("div", {
+            className: _,
+            onClick: _,
+            ..._,
+            children: [
+              _,
+              _ &&
+                (0, _.jsx)(_.X4B, {
+                  color: _,
+                  highlightColor: _,
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        let { player: _, refButton: _, onClose: _ } = _,
+          _ = (0, _._)(),
+          _ = _.GetVideoRepresentations().map((_) => {
+            let _ = (function (_) {
+              return (0, _._)(_)
+                ? _._.Localize("#TrailerPlayer_Quality_Auto")
+                : 2160 == _.height
+                  ? "2160p (4k)"
+                  : `${_.height}p`;
+            })(_);
+            return (0, _.jsx)(
+              _,
+              {
+                onClick: () => {
+                  _.SetVideoRepresentation(_), _();
+                },
+                checked: _.selected,
+                children: _,
+              },
+              _._,
+            );
+          }),
+          _ = _.length > 1,
+          _ = !!_.m_fnSetAutoplayEnabled,
+          _ = _ || !_;
+        return (0, _.jsxs)(_, {
+          refButton: _,
+          onClose: _,
+          children: [
+            _ && _,
+            _ && _ && (0, _.jsx)(_, {}),
+            _ &&
+              (0, _.jsx)(_, {
+                onClose: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        let { onClose: _ } = _,
+          _ = (0, _._)(),
+          _ = 1 == _.m_bAutoplayEnabled,
+          _ = (0, _.useCallback)(() => {
+            _.m_fnSetAutoplayEnabled &&
+              __webpack_require__.m_fnSetAutoplayEnabled(!_),
+              _();
+          }, [_, _, _]);
+        return (
+          _.use(_._.Ready()),
+          (0, _.jsx)(_, {
+            onClick: _,
+            checked: _,
+            children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
+          })
+        );
+      }
+      function _(_) {
+        let { player: _, refButton: _, onClose: _ } = _;
+        const _ = (0, _._)(_._.LANGUAGE);
+        let _ = (0, _.useMemo)(() => {
+            let _ = [..._.GetCaptionRepresentations()],
+              _ = _.findIndex((_) => _.m_eLanguage == _);
+            return _ > 0 && _._(_, _, 0), _;
+          }, [_, _]),
+          _ = [];
+        for (let _ of _) {
+          let _ = () => {
+            _.SetCaptionRepresentation(_.m_eLanguage), _();
+          };
+          _.push(
+            (0, _.jsx)(
+              _,
+              {
+                onClick: _,
+                checked: !1,
+                children: _.m_strLabel,
+              },
+              _.m_eLanguage,
+            ),
+          ),
+            _.m_eLanguage == _ && _.push((0, _.jsx)(_, {}));
+        }
+        return 0 == _.length
+          ? null
+          : (0, _.jsx)(_, {
+              refButton: _,
+              onClose: _,
+              scroll: !0,
+              children: _,
+            });
+      }
+      const _ = parseInt(_().nTimelineHoverEdgePadding),
         _ = 130,
         _ = !1,
         _ = _.forwardRef(function (_, _) {
@@ -16939,149 +17126,42 @@
         );
       }
       function _(_) {
-        let { player: _, refButton: _, onClose: _ } = _,
+        let { player: _ } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useCallback)(() => _(!1), [_]),
           _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)({
-            nLeft: 0,
-            nTop: 0,
-          }),
-          _ = (function () {
-            let _ = _();
-            (0, _._)(_, "Missing controls context");
-            let _ = _.m_fnSetMenuVisible;
-            return (
-              (0, _.useEffect)(() => (_(!0), () => _(!1)), [_]),
-              _.m_refMenuLayer
-            );
-          })(),
-          _ = (0, _._)(),
-          _ = (0, _._)(
-            (_) => {
-              if (((_.current = _), !_)) return;
-              let _ = (_) => {
-                let _ = (0, _._)(_, _.target),
-                  _ = (0, _._)(_.current, _.target);
-                _ || _ || _();
-              };
-              return _.ownerDocument.defaultView
-                ? (_.ownerDocument.defaultView.addEventListener("mouseup", _),
-                  () => {
-                    var _;
-                    return null === (_ = _.ownerDocument.defaultView) ||
-                      void 0 === _
-                      ? void 0
-                      : __webpack_require__.removeEventListener("mouseup", _);
-                  })
-                : void 0;
-            },
-            [_, _, _],
-          );
-        if (
-          ((0, _.useLayoutEffect)(() => {
-            if (!_.current || !_.current || !_.current) return;
-            let _ = _.current.getBoundingClientRect(),
-              _ = _.current.getBoundingClientRect(),
-              _ = _.current.getBoundingClientRect(),
-              _ = _.right - _.left,
-              _ = _.right - _.left,
-              _ = _.left - _.left + _ / 2,
-              _ = _.right - _.left,
-              _ = _._(_ - _ / 2, 0 + _, _ - _ - _),
-              _ = _.bottom - _.top,
-              _ = _.top - _ - _ - _.top;
-            _({
-              nLeft: _,
-              nTop: _,
-            });
-          }, [_, _, _]),
-          !_.current)
-        )
-          return null;
-        let _ = _.GetVideoRepresentations().map((_) => {
-            let _ = (function (_) {
-              return (0, _._)(_)
-                ? _._.Localize("#TrailerPlayer_Quality_Auto")
-                : 2160 == _.height
-                  ? "2160p (4k)"
-                  : `${_.height}p`;
-            })(_);
-            return (0, _.jsx)(
-              _,
-              {
-                onClick: () => {
-                  _.SetVideoRepresentation(_), _();
-                },
-                checked: _.selected,
-                children: _,
-              },
-              _._,
-            );
-          }),
-          _ = _.length > 1,
-          _ = !!_.m_fnSetAutoplayEnabled,
-          _ = _ || !_,
-          _ = {
-            left: _.nLeft,
-            top: _.nTop,
-          },
-          _ = (0, _.jsxs)("div", {
-            ref: _,
-            style: _,
-            className: _().SettingsMenu,
-            children: [
-              _ && _,
-              _ &&
-                _ &&
-                (0, _.jsx)("div", {
-                  className: _().Separator,
-                }),
-              _ &&
-                (0, _.jsx)(_, {
-                  onClose: _,
-                }),
-            ],
-          });
-        return _.createPortal(_, _.current);
-      }
-      function _(_) {
-        let { onClose: _ } = _,
-          _ = (0, _._)(),
-          _ = 1 == _.m_bAutoplayEnabled,
+          { bHasCaptions: _, bShowingCaption: _ } = (function (_) {
+            return (0, _._)(() => ({
+              bHasCaptions: _.HasCaptions(),
+              bShowingCaption: _.IsShowingCaption(),
+            }));
+          })(_),
           _ = (0, _.useCallback)(() => {
-            _.m_fnSetAutoplayEnabled &&
-              __webpack_require__.m_fnSetAutoplayEnabled(!_),
-              _();
+            _ ? _.DisableCaptions() : _((_) => !_);
           }, [_, _, _]);
         return (
           _.use(_._.Ready()),
-          (0, _.jsx)(_, {
-            onClick: _,
-            checked: _,
-            children: _._.Localize("#StoreTrailer_AutoPlayVideos"),
-          })
-        );
-      }
-      function _(_) {
-        let { onClick: _, checked: _, children: _ } = _,
-          [_, _] = (0, _._)(),
-          _ = (0, _._)(_().MenuItem, _ && _().Checked),
-          _ = "#2d73ff",
-          _ = "#00ccff";
-        return (
-          _ && ((_ = "#eeeeee"), (_ = "#ffffff")),
-          (0, _.jsxs)("div", {
-            className: _,
-            onClick: _,
-            ..._,
-            children: [
-              _,
-              _ &&
-                (0, _.jsx)(_.X4B, {
-                  color: _,
-                  highlightColor: _,
-                }),
-            ],
-          })
+          _
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsxs)(_, {
+                    ref: _,
+                    onActivate: _,
+                    tooltip: _._.Localize("#TrailerPlayer_Captions_Tooltip"),
+                    children: [
+                      _ && (0, _.jsx)(_.W8t, {}),
+                      !_ && (0, _.jsx)(_.l1R, {}),
+                    ],
+                  }),
+                  _ &&
+                    (0, _.jsx)(_, {
+                      player: _,
+                      refButton: _,
+                      onClose: _,
+                    }),
+                ],
+              })
+            : null
         );
       }
       function _(_) {
@@ -17516,6 +17596,9 @@
                               (0, _.jsx)(_, {
                                 player: _,
                               }),
+                              (0, _.jsx)(_, {
+                                player: _,
+                              }),
                               (0, _.jsx)(_, {}),
                               (0, _.jsx)(_, {}),
                             ],
@@ -17819,6 +17902,9 @@
                               (0, _.jsx)(_, {
                                 player: _,
                               }),
+                              (0, _.jsx)(_, {
+                                player: _,
+                              }),
                               (0, _.jsx)(_, {}),
                             ],
                           }),
@@ -17918,7 +18004,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -18100,6 +18185,7 @@
           ref: _,
           dashManifests: _,
           hlsManifest: _,
+          captionManifest: _,
           screenshot: _,
           forcePause: _,
           onPlaybackEnd: _,
@@ -18115,13 +18201,14 @@
           focus: _,
         } = _;
         (_ = _ || ""), (_ = _ || 0);
-        let [_, _] = (function (_, _, _, _, _, _) {
+        let [_, _] = (function (_, _, _, _, _, _, _) {
           let _ = (0, _._)(),
             _ = (0, _.useRef)(void 0);
           _.current || (_.current = new _(_));
           let _ = (0, _._)(
             (_) => {
-              if (_) return _.current.Start(_, _, _, _), () => _.current.Stop();
+              if (_)
+                return _.current.Start(_, _, _, _, _), () => _.current.Stop();
             },
             [_, _, _, _],
           );
@@ -18141,7 +18228,7 @@
             }, [_]),
             [_, _.current]
           );
-        })(_, _, _, _, _, _);
+        })(_, _, _, _, _, _, _);
         !(function (_, _) {
           (0, _.useImperativeHandle)(
             _,
@@ -18259,6 +18346,7 @@
               controls: !1,
               playsInline: !0,
               "aria-label": _,
+              crossOrigin: "anonymous",
             }),
             (0, _.jsx)(_, {
               player: _,
@@ -39023,14 +39111,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       !(function (_) {
         (_.k_TrailerAsButton = "button"),
           (_.k_TrailerAsPill = "pill"),
@@ -39091,44 +39184,23 @@
         }
       }
       function _(_) {
-        const [_, _] = (0, _.useState)(!0),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(void 0);
+        const { appid: _, trailerBaseID: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          [_, _] = (0, _.useState)(() =>
+            _ && _ ? null : (0, _._)("#TrailerPlayer_ID_NotProvided"),
+          ),
+          _ = (0, _._)(_),
+          _ = (0, _.useMemo)(
+            () => (_ ? _.find((_) => _.trailer_base_id === _) : null),
+            [_, _],
+          );
         if (
           ((0, _.useEffect)(() => {
-            if (0 == _.appid || 0 == _.trailerBaseID)
-              return void _((0, _._)("#TrailerPlayer_ID_NotProvided"));
-            (async () => {
-              var _;
-              if (
-                (await _._.Get().QueueAppRequest(_.appid, {
-                  include_trailers: !0,
-                }),
-                _._.Get().BHasApp(_.appid))
-              ) {
-                const _ = _._.Get().GetApp(_.appid),
-                  _ =
-                    null === (_ = null == _ ? void 0 : _.GetAllTrailers()) ||
-                    void 0 === _
-                      ? void 0
-                      : _.GetTrailerByID(_.trailerBaseID);
-                _ ||
-                  (console.error(
-                    "Trailer " +
-                      _.trailerBaseID +
-                      " doesn't existed within appid " +
-                      _.appid,
-                  ),
-                  _(
-                    (0, _._)(
-                      "#TrailerPlayer_CouldNotLoad",
-                      _.appid,
-                      _.trailerBaseID,
-                    ),
-                  )),
-                  _(_),
-                  __webpack_require__(!1);
-              } else
+            (null == _ ? void 0 : _.unvailable_for_country_restriction) &&
+              _((0, _._)("#TrailerPlayer_CouldNotLoad", _, _)),
+              _ &&
+                !_ &&
                 _(
                   (0, _._)(
                     "#TrailerPlayer_CouldNotLoad",
@@ -39136,8 +39208,15 @@
                     _.trailerBaseID,
                   ),
                 );
-            })();
-          }, [_.appid, _.trailerBaseID]),
+          }, [
+            _,
+            _.appid,
+            _.trailerBaseID,
+            null == _ ? void 0 : _.unvailable_for_country_restriction,
+            _,
+            _,
+            _,
+          ]),
           _)
         )
           return _.bIsPreviewMode
@@ -39146,21 +39225,24 @@
                 children: _,
               })
             : null;
-        if (_)
+        if (!_)
           return (0, _.jsx)(_._, {
             string: (0, _._)("#Loading"),
             size: "small",
           });
-        if (!_) return null;
-        const _ = _.GetTrailersDash(),
-          _ = _.GetTrailerHls();
-        return (0, _.jsx)(_._, {
-          dashManifests: _ || [],
-          hlsManifest: _ || "",
-          forcePause: !0,
-          screenshot: _.GetScreenshot() || "",
-          altText: _.GetName(),
-          muteWhenAutoplayBlocked: !0,
+        const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
+        if (0 == (null == _ ? void 0 : _.length)) return null;
+        const _ = (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: _().VideoPopupContainers,
+          children: (0, _.jsx)(_._, {
+            dashManifests: _ || [],
+            hlsManifest: (_.length > 0 && (null == _ ? void 0 : _[0])) || "",
+            screenshot: (0, _._)(_),
+            altText: _.trailer_name,
+            muteWhenAutoplayBlocked: !0,
+            captionManifest: _,
+          }),
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -43060,44 +43142,45 @@
           _ = _.useId();
         if (!_ || !_.adaptive_trailers) return null;
         const { rgDashTrailers: _, rgHlsTrailers: _ } = (0, _._)(_);
-        return 0 == (null == _ ? void 0 : _.length)
-          ? null
-          : (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsxs)(_._, {
-                "aria-labelledby": _(_, _),
-                bAllowFullSize: !0,
-                bOKDisabled: !0,
-                closeModal: _,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().VideoPopupContainers,
-                    children: (0, _.jsx)(_._, {
-                      dashManifests: _ || [],
-                      hlsManifest:
-                        (_.length > 0 && (null == _ ? void 0 : _[0])) || "",
-                      screenshot: (0, _._)(_),
-                      altText: _.trailer_name,
-                      muteWhenAutoplayBlocked: !0,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    _: _,
-                    style: {
-                      display: "none",
-                    },
-                    children: (null == _ ? void 0 : _.name) || "",
-                  }),
-                  (0, _.jsx)("div", {
-                    _: _,
-                    style: {
-                      display: "none",
-                    },
-                    children: _.trailer_name,
-                  }),
-                ],
+        if (0 == (null == _ ? void 0 : _.length)) return null;
+        let _ = (0, _._)(_);
+        return (0, _.jsx)(_._, {
+          active: _,
+          children: (0, _.jsxs)(_._, {
+            "aria-labelledby": _(_, _),
+            bAllowFullSize: !0,
+            bOKDisabled: !0,
+            closeModal: _,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().VideoPopupContainers,
+                children: (0, _.jsx)(_._, {
+                  dashManifests: _ || [],
+                  hlsManifest:
+                    (_.length > 0 && (null == _ ? void 0 : _[0])) || "",
+                  screenshot: (0, _._)(_),
+                  altText: _.trailer_name,
+                  muteWhenAutoplayBlocked: !0,
+                  captionManifest: _,
+                }),
               }),
-            });
+              (0, _.jsx)("div", {
+                _: _,
+                style: {
+                  display: "none",
+                },
+                children: (null == _ ? void 0 : _.name) || "",
+              }),
+              (0, _.jsx)("div", {
+                _: _,
+                style: {
+                  display: "none",
+                },
+                children: _.trailer_name,
+              }),
+            ],
+          }),
+        });
       }
       function _(_) {
         const {

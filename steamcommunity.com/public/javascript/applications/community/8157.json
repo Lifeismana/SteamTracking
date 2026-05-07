@@ -201,6 +201,7 @@
     "moderationaction_released": "Đã đăng",
     "moderationaction_privatemessaged": "Đã gửi tin nhắn riêng",
     "moderationaction_unknown": "Hành động không xác định",
+    "moderationaction_ownerdisputed": "Chủ sở hữu phản đối kết quả kiểm duyệt",
     "moderatormessage_count_note": "Ghi chú: %1$s",
     "moderatormessage_count_warning": "Cảnh báo: %1$s",
     "moderatormessage_count_bannotice": "Lệnh cấm: %1$s",

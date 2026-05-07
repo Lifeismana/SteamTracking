@@ -4,6 +4,7 @@
     chunkid: (module) => {
       module.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
         Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
         "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
@@ -71,15 +72,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: _._.Localize("#LoginRedirect_Dialog_Title"),
           strDescription: _._.Localize("#LoginRedirect_Dialog_Description"),
-          closeModal: _,
+          onCancel: _,
+          strOKButtonText: _._.Localize("#Button_OK"),
           onOK: () => {
-            _();
+            _(), _();
           },
         });
       }
@@ -96,7 +99,8 @@
         };
       }
       function _() {
-        window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        const _ = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        window.location.href = _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

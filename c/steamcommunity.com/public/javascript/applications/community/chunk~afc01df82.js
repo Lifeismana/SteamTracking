@@ -510,10 +510,14 @@
               ? (0, _.jsx)("img", {
                   src: _.nextSrc,
                 })
-              : _.nextSrc;
+              : _.nextSrc,
+          _ = [
+            _().LightboxDialog,
+            ...(_.backgroundClassName ? [_.backgroundClassName] : []),
+          ];
         return (0, _.jsxs)("dialog", {
           ref: _,
-          className: _().LightboxDialog,
+          className: (0, _._)(..._),
           onClose: (_) => _.onCloseRequest(_),
           onKeyDown: (_) => {
             "ArrowRight" === _.key && _.nextSrc

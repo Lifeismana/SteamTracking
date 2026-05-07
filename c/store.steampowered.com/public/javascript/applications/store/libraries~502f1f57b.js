@@ -1962,10 +1962,9 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = Object.getOwnPropertyNames,
-        _ = Object.getOwnPropertySymbols,
-        _ = Object.prototype.hasOwnProperty;
+        _ = __webpack_require__._(_);
+      const { getOwnPropertyNames: _, getOwnPropertySymbols: _ } = Object,
+        { hasOwnProperty: _ } = Object.prototype;
       function _(_, _) {
         return function (_, _, _) {
           return _(_, _, _) && _(_, _, _);
@@ -1975,34 +1974,44 @@
         return function (_, _, _) {
           if (!_ || !_ || "object" != typeof _ || "object" != typeof _)
             return _(_, _, _);
-          var _ = _.cache,
+          const { cache: _ } = _,
             _ = _.get(_),
             _ = _.get(_);
           if (_ && _) return _ === _ && _ === _;
           _.set(_, _), _.set(_, _);
-          var _ = _(_, _, _);
+          const _ = _(_, _, _);
           return _.delete(_), _.delete(_), _;
         };
       }
       function _(_) {
         return _(_).concat(_(_));
       }
-      var _ =
-        Object.hasOwn ||
-        function (_, _) {
-          return _.call(_, _);
-        };
+      const _ = Object.hasOwn || ((_, _) => _.call(_, _));
       function _(_, _) {
         return _ === _ || (!_ && !_ && _ != _ && _ != _);
       }
-      var _ = Object.getOwnPropertyDescriptor,
-        _ = Object.keys;
+      const { getOwnPropertyDescriptor: _, keys: _ } = Object;
+      function _(_, _) {
+        return (
+          _.byteLength === _.byteLength &&
+          _(new Uint8Array(_), new Uint8Array(_))
+        );
+      }
       function _(_, _, _) {
-        var _ = _.length;
+        let _ = _.length;
         if (_.length !== _) return !1;
         for (; _-- > 0; )
           if (!__webpack_require__.equals(_[_], _[_], _, _, _, _, _)) return !1;
         return !0;
+      }
+      function _(_, _) {
+        return (
+          _.byteLength === _.byteLength &&
+          _(
+            new Uint8Array(_.buffer, _.byteOffset, _.byteLength),
+            new Uint8Array(_.buffer, _.byteOffset, _.byteLength),
+          )
+        );
       }
       function _(_, _) {
         return _(_.getTime(), _.getTime());
@@ -2019,49 +2028,56 @@
         return _ === _;
       }
       function _(_, _, _) {
-        var _ = _.size;
+        const _ = _.size;
         if (_ !== _.size) return !1;
         if (!_) return !0;
-        for (
-          var _, _, _ = new Array(_), _ = _.entries(), _ = 0;
-          (_ = _.next()) && !_.done;
-        ) {
-          for (var _ = _.entries(), _ = !1, _ = 0; (_ = _.next()) && !_.done; )
-            if (_[_]) _++;
-            else {
-              var _ = _.value,
-                _ = _.value;
-              if (
-                __webpack_require__.equals(_[0], _[0], _, _, _, _, _) &&
-                __webpack_require__.equals(_[1], _[1], _[0], _[0], _, _, _)
-              ) {
-                _ = _[_] = !0;
-                break;
-              }
+        const _ = new Array(_),
+          _ = _.entries();
+        let _,
+          _,
+          _ = 0;
+        for (; (_ = _.next()) && !_.done; ) {
+          const _ = _.entries();
+          let _ = !1,
+            _ = 0;
+          for (; (_ = _.next()) && !_.done; ) {
+            if (_[_]) {
               _++;
+              continue;
             }
+            const _ = _.value,
+              _ = _.value;
+            if (
+              __webpack_require__.equals(_[0], _[0], _, _, _, _, _) &&
+              __webpack_require__.equals(_[1], _[1], _[0], _[0], _, _, _)
+            ) {
+              _ = _[_] = !0;
+              break;
+            }
+            _++;
+          }
           if (!_) return !1;
           _++;
         }
         return !0;
       }
-      var _ = _;
+      const _ = _;
       function _(_, _, _) {
-        var _ = _(_),
-          _ = _.length;
+        const _ = _(_);
+        let _ = _.length;
         if (_(_).length !== _) return !1;
         for (; _-- > 0; ) if (!_(_, _, _, _[_])) return !1;
         return !0;
       }
       function _(_, _, _) {
-        var _,
+        const _ = _(_);
+        let _,
           _,
           _,
-          _ = _(_),
           _ = _.length;
         if (_(_).length !== _) return !1;
         for (; _-- > 0; ) {
-          if (!_(_, _, _, (_ = _[_]))) return !1;
+          if (((_ = _[_]), !_(_, _, _, _))) return !1;
           if (
             ((_ = _(_, _)),
             (_ = _(_, _)),
@@ -2083,14 +2099,17 @@
         return _.source === _.source && _.flags === _.flags;
       }
       function _(_, _, _) {
-        var _ = _.size;
+        const _ = _.size;
         if (_ !== _.size) return !1;
         if (!_) return !0;
-        for (
-          var _, _, _ = new Array(_), _ = _.values();
-          (_ = _.next()) && !_.done;
-        ) {
-          for (var _ = _.values(), _ = !1, _ = 0; (_ = _.next()) && !_.done; ) {
+        const _ = new Array(_),
+          _ = _.values();
+        let _, _;
+        for (; (_ = _.next()) && !_.done; ) {
+          const _ = _.values();
+          let _ = !1,
+            _ = 0;
+          for (; (_ = _.next()) && !_.done; ) {
             if (
               !_[_] &&
               __webpack_require__.equals(
@@ -2113,8 +2132,8 @@
         return !0;
       }
       function _(_, _) {
-        var _ = _.length;
-        if (_.length !== _) return !1;
+        let _ = _.byteLength;
+        if (_.byteLength !== _ || _.byteOffset !== _.byteOffset) return !1;
         for (; _-- > 0; ) if (_[_] !== _[_]) return !1;
         return !0;
       }
@@ -2138,14 +2157,89 @@
           (_(_, _) && __webpack_require__.equals(_[_], _[_], _, _, _, _, _))
         );
       }
-      var _ = Array.isArray,
-        _ =
-          "function" == typeof ArrayBuffer && ArrayBuffer.isView
-            ? ArrayBuffer.isView
-            : null,
-        _ = Object.assign,
-        _ = Object.prototype.toString.call.bind(Object.prototype.toString);
-      var _ = _();
+      const _ = {
+          "[object Int8Array]": !0,
+          "[object Uint8Array]": !0,
+          "[object Uint8ClampedArray]": !0,
+          "[object Int16Array]": !0,
+          "[object Uint16Array]": !0,
+          "[object Int32Array]": !0,
+          "[object Uint32Array]": !0,
+          "[object Float16Array]": !0,
+          "[object Float32Array]": !0,
+          "[object Float64Array]": !0,
+          "[object BigInt64Array]": !0,
+          "[object BigUint64Array]": !0,
+        },
+        _ = Object.prototype.toString;
+      function _({
+        areArrayBuffersEqual: _,
+        areArraysEqual: _,
+        areDataViewsEqual: _,
+        areDatesEqual: _,
+        areErrorsEqual: _,
+        areFunctionsEqual: _,
+        areMapsEqual: _,
+        areNumbersEqual: _,
+        areObjectsEqual: _,
+        arePrimitiveWrappersEqual: _,
+        areRegExpsEqual: _,
+        areSetsEqual: _,
+        areTypedArraysEqual: _,
+        areUrlsEqual: _,
+        unknownTagComparators: _,
+      }) {
+        return function (_, _, _) {
+          if (_ === _) return !0;
+          if (null == _ || null == _) return !1;
+          const _ = typeof _;
+          if (_ !== typeof _) return !1;
+          if ("object" !== _)
+            return "number" === _ ? _(_, _, _) : "function" === _ && _(_, _, _);
+          const _ = _.constructor;
+          if (_ !== _.constructor) return !1;
+          if (_ === Object) return _(_, _, _);
+          if (Array.isArray(_)) return _(_, _, _);
+          if (_ === Date) return _(_, _, _);
+          if (_ === RegExp) return _(_, _, _);
+          if (_ === Map) return _(_, _, _);
+          if (_ === Set) return _(_, _, _);
+          const _ = _.call(_);
+          if ("[object Date]" === _) return _(_, _, _);
+          if ("[object RegExp]" === _) return _(_, _, _);
+          if ("[object Map]" === _) return _(_, _, _);
+          if ("[object Set]" === _) return _(_, _, _);
+          if ("[object Object]" === _)
+            return (
+              "function" != typeof _.then &&
+              "function" != typeof _.then &&
+              _(_, _, _)
+            );
+          if ("[object URL]" === _) return _(_, _, _);
+          if ("[object Error]" === _) return _(_, _, _);
+          if ("[object Arguments]" === _) return _(_, _, _);
+          if (_[_]) return _(_, _, _);
+          if ("[object ArrayBuffer]" === _) return _(_, _, _);
+          if ("[object DataView]" === _) return __webpack_require__(_, _, _);
+          if (
+            "[object Boolean]" === _ ||
+            "[object Number]" === _ ||
+            "[object String]" === _
+          )
+            return _(_, _, _);
+          if (_) {
+            let _ = _[_];
+            if (!_) {
+              const _ = null != (_ = _) ? _[Symbol.toStringTag] : void 0;
+              _ && (_ = _[_]);
+            }
+            if (_) return _(_, _, _);
+          }
+          var _;
+          return !1;
+        };
+      }
+      const _ = _();
       _({
         strict: !0,
       }),
@@ -2157,62 +2251,52 @@
           strict: !0,
         }),
         _({
-          createInternalComparator: function () {
-            return _;
-          },
+          createInternalComparator: () => _,
         }),
         _({
           strict: !0,
-          createInternalComparator: function () {
-            return _;
-          },
+          createInternalComparator: () => _,
         }),
         _({
           circular: !0,
-          createInternalComparator: function () {
-            return _;
-          },
+          createInternalComparator: () => _,
         }),
         _({
           circular: !0,
-          createInternalComparator: function () {
-            return _;
-          },
+          createInternalComparator: () => _,
           strict: !0,
         });
-      function _(_) {
-        void 0 === _ && (_ = {});
-        var _,
-          _ = _.circular,
-          _ = void 0 !== _ && _,
-          _ = _.createInternalComparator,
-          _ = _.createState,
-          _ = _.strict,
-          _ = void 0 !== _ && _,
-          _ = (function (_) {
-            var _ = _.circular,
-              _ = _.createCustomConfig,
-              _ = _.strict,
-              _ = {
-                areArraysEqual: _ ? _ : _,
-                areDatesEqual: _,
-                areErrorsEqual: _,
-                areFunctionsEqual: _,
-                areMapsEqual: _ ? _(_, _) : _,
-                areNumbersEqual: _,
-                areObjectsEqual: _ ? _ : _,
-                arePrimitiveWrappersEqual: _,
-                areRegExpsEqual: _,
-                areSetsEqual: _ ? _(_, _) : _,
-                areTypedArraysEqual: _ ? _ : _,
-                areUrlsEqual: _,
-              };
-            if ((_ && (_ = _({}, _, __webpack_require__(_))), _)) {
-              var _ = _(_.areArraysEqual),
+      function _(_ = {}) {
+        const {
+            circular: _ = !1,
+            createInternalComparator: _,
+            createState: _,
+            strict: _ = !1,
+          } = _,
+          _ = (function ({ circular: _, createCustomConfig: _, strict: _ }) {
+            let _ = {
+              areArrayBuffersEqual: _,
+              areArraysEqual: _ ? _ : _,
+              areDataViewsEqual: _,
+              areDatesEqual: _,
+              areErrorsEqual: _,
+              areFunctionsEqual: _,
+              areMapsEqual: _ ? _(_, _) : _,
+              areNumbersEqual: _,
+              areObjectsEqual: _ ? _ : _,
+              arePrimitiveWrappersEqual: _,
+              areRegExpsEqual: _,
+              areSetsEqual: _ ? _(_, _) : _,
+              areTypedArraysEqual: _ ? _(_, _) : _,
+              areUrlsEqual: _,
+              unknownTagComparators: void 0,
+            };
+            if ((_ && (_ = Object.assign({}, _, _(_))), _)) {
+              const _ = _(_.areArraysEqual),
                 _ = _(_.areMapsEqual),
                 _ = _(_.areObjectsEqual),
                 _ = _(_.areSetsEqual);
-              _ = _({}, _, {
+              _ = Object.assign({}, _, {
                 areArraysEqual: _,
                 areMapsEqual: _,
                 areObjectsEqual: _,
@@ -2221,75 +2305,20 @@
             }
             return _;
           })(_),
-          _ = (function (_) {
-            var _ = _.areArraysEqual,
-              _ = _.areDatesEqual,
-              _ = _.areErrorsEqual,
-              _ = _.areFunctionsEqual,
-              _ = _.areMapsEqual,
-              _ = _.areNumbersEqual,
-              _ = _.areObjectsEqual,
-              _ = _.arePrimitiveWrappersEqual,
-              _ = _.areRegExpsEqual,
-              _ = _.areSetsEqual,
-              _ = _.areTypedArraysEqual,
-              _ = _.areUrlsEqual;
-            return function (_, _, _) {
-              if (_ === _) return !0;
-              if (null == _ || null == _) return !1;
-              var _ = typeof _;
-              if (_ !== typeof _) return !1;
-              if ("object" !== _)
-                return "number" === _
-                  ? _(_, _, _)
-                  : "function" === _ && _(_, _, _);
-              var _ = _.constructor;
-              if (_ !== _.constructor) return !1;
-              if (_ === Object) return _(_, _, _);
-              if (_(_)) return _(_, _, _);
-              if (null != _ && _(_)) return _(_, _, _);
-              if (_ === Date) return __webpack_require__(_, _, _);
-              if (_ === RegExp) return _(_, _, _);
-              if (_ === Map) return _(_, _, _);
-              if (_ === Set) return _(_, _, _);
-              var _ = _(_);
-              return "[object Date]" === _
-                ? __webpack_require__(_, _, _)
-                : "[object RegExp]" === _
-                  ? _(_, _, _)
-                  : "[object Map]" === _
-                    ? _(_, _, _)
-                    : "[object Set]" === _
-                      ? _(_, _, _)
-                      : "[object Object]" === _
-                        ? "function" != typeof _.then &&
-                          "function" != typeof _.then &&
-                          _(_, _, _)
-                        : "[object URL]" === _
-                          ? _(_, _, _)
-                          : "[object Error]" === _
-                            ? _(_, _, _)
-                            : "[object Arguments]" === _
-                              ? _(_, _, _)
-                              : ("[object Boolean]" === _ ||
-                                  "[object Number]" === _ ||
-                                  "[object String]" === _) &&
-                                _(_, _, _);
-            };
-          })(_);
-        return (function (_) {
-          var _ = _.circular,
-            _ = _.comparator,
-            _ = _.createState,
-            _ = _.equals,
-            _ = _.strict;
+          _ = _(_);
+        var _;
+        return (function ({
+          circular: _,
+          comparator: _,
+          createState: _,
+          equals: _,
+          strict: _,
+        }) {
           if (_)
             return function (_, _) {
-              var _ = _(),
-                _ = _.cache,
-                _ = void 0 === _ ? (_ ? new WeakMap() : void 0) : _,
-                _ = _.meta;
-              return __webpack_require__(_, _, {
+              const { cache: _ = _ ? new WeakMap() : void 0, meta: _ } =
+                __webpack_require__();
+              return _(_, _, {
                 cache: _,
                 equals: _,
                 meta: _,
@@ -2298,28 +2327,28 @@
             };
           if (_)
             return function (_, _) {
-              return __webpack_require__(_, _, {
+              return _(_, _, {
                 cache: new WeakMap(),
                 equals: _,
                 meta: void 0,
                 strict: _,
               });
             };
-          var _ = {
+          const _ = {
             cache: void 0,
             equals: _,
             meta: void 0,
             strict: _,
           };
           return function (_, _) {
-            return __webpack_require__(_, _, _);
+            return _(_, _, _);
           };
         })({
           circular: _,
           comparator: _,
           createState: _,
           equals: _
-            ? _(_)
+            ? __webpack_require__(_)
             : ((_ = _),
               function (_, _, _, _, _, _, _) {
                 return _(_, _, _);
@@ -4123,7 +4152,8 @@
                           key: "rectangle-"
                             .concat(null == _ ? void 0 : _._, "-")
                             .concat(null == _ ? void 0 : _._, "-")
-                            .concat(null == _ ? void 0 : _.value),
+                            .concat(null == _ ? void 0 : _.value, "-")
+                            .concat(_),
                         },
                       ),
                       _.createElement(_, _),
@@ -4445,7 +4475,7 @@
                     : 0;
                 return function (_, _) {
                   if ("number" == typeof _) return _;
-                  var _ = "number" == typeof _;
+                  var _ = (0, _._)(_) || (0, _._)(_);
                   return _ ? _(_, _) : (_ || (0, _._)(!1), _);
                 };
               })(_, _.defaultProps.minPointSize)(_[1], _);
@@ -4778,10 +4808,31 @@
             {
               key: "renderTickItem",
               value: function (_, _, _) {
+                var _ = (0, _._)(
+                  _.className,
+                  "recharts-cartesian-axis-tick-value",
+                );
                 return _.isValidElement(_)
-                  ? _.cloneElement(_, _)
+                  ? _.cloneElement(
+                      _,
+                      _(
+                        _({}, _),
+                        {},
+                        {
+                          className: _,
+                        },
+                      ),
+                    )
                   : _()(_)
-                    ? _(_)
+                    ? _(
+                        _(
+                          _({}, _),
+                          {},
+                          {
+                            className: _,
+                          },
+                        ),
+                      )
                     : _.createElement(
                         _._,
                         _({}, _, {
@@ -6587,12 +6638,13 @@
                       ),
                       {},
                       {
+                        index: _,
+                        _: _._,
+                        _: _._,
                         value: _.value,
                         dataKey: _,
-                        _: _._,
-                        _: _._,
-                        index: _,
                         payload: _.payload,
+                        points: _,
                       },
                     );
                     return _.renderDotItem(_, _);
@@ -14106,8 +14158,15 @@
                       if (!_) return null;
                       var _ = this.state,
                         _ = _.xAxisMap,
-                        _ = _.yAxisMap;
-                      if ("axis" !== this.getTooltipEventType() && _ && _) {
+                        _ = _.yAxisMap,
+                        _ = this.getTooltipEventType(),
+                        _ = _(
+                          this.state,
+                          this.props.data,
+                          this.props.layout,
+                          _,
+                        );
+                      if ("axis" !== _ && _ && _) {
                         var _ = (0, _._)(_).scale,
                           _ = (0, _._)(_).scale,
                           _ = _ && _.invert ? _.invert(_.chartX) : null,
@@ -14119,14 +14178,9 @@
                             xValue: _,
                             yValue: _,
                           },
+                          _,
                         );
                       }
-                      var _ = _(
-                        this.state,
-                        this.props.data,
-                        this.props.layout,
-                        _,
-                      );
                       return _ ? _(_({}, _), _) : null;
                     },
                   },
@@ -21482,7 +21536,7 @@
             ) {
               var _ = _[1] - _[0],
                 _ = 1 / 0,
-                _ = _.categoricalDomain.sort();
+                _ = _.categoricalDomain.sort(_._);
               if (
                 (_.forEach(function (_, _) {
                   _ > 0 && (_ = Math.min((_ || 0) - (_[_ - 1] || 0), _));
@@ -22741,13 +22795,10 @@
           (this.type = void 0 === _.type ? "" : _.type + "");
       }
       function _(_, _) {
-        if (
-          (_ = (_ = _ ? _.toExponential(_ - 1) : _.toExponential()).indexOf(
+        if (!isFinite(_) || 0 === _) return null;
+        var _ = (_ = _ ? _.toExponential(_ - 1) : _.toExponential()).indexOf(
             "e",
-          )) < 0
-        )
-          return null;
-        var _,
+          ),
           _ = _.slice(0, _);
         return [_.length > 1 ? _[0] + _.slice(2) : _, +_.slice(_ + 1)];
       }
@@ -22799,7 +22850,7 @@
         _: _,
         _: function (_, _) {
           var _ = _(_, _);
-          if (!_) return _ + "";
+          if (!_) return (_ = void 0), _.toPrecision(_);
           var _ = _[0],
             _ = _[1],
             _ = _ - (_ = 3 * Math.max(-8, Math.min(8, Math.floor(_ / 3)))) + 1,
@@ -22879,7 +22930,7 @@
           _ = void 0 === _.percent ? "%" : _.percent + "",
           _ = void 0 === _.minus ? "−" : _.minus + "",
           _ = void 0 === _.nan ? "NaN" : _.nan + "";
-        function _(_) {
+        function _(_, _) {
           var _ = (_ = _(_)).fill,
             _ = _.align,
             _ = _.sign,
@@ -22895,12 +22946,15 @@
             : _[_] || (void 0 === _ && (_ = 12), (_ = !0), (_ = "g")),
             (_ || ("0" === _ && "=" === _)) && ((_ = !0), (_ = "0"), (_ = "="));
           var _ =
-              "$" === _
+              (_ && void 0 !== _.prefix ? _.prefix : "") +
+              ("$" === _
                 ? _
                 : "#" === _ && /[boxX]/.test(_)
                   ? "0" + _.toLowerCase()
-                  : "",
-            _ = "$" === _ ? _ : /[%p]/.test(_) ? _ : "",
+                  : ""),
+            _ =
+              ("$" === _ ? _ : /[%p]/.test(_) ? _ : "") +
+              (_ && void 0 !== _.suffix ? _.suffix : ""),
             _ = _[_],
             _ = /[defgprs%]/.test(_);
           function _(_) {
@@ -22935,7 +22989,7 @@
                   (_ ? ("(" === _ ? _ : _) : "-" === _ || "(" === _ ? "" : _) +
                   _),
                 (_ =
-                  ("s" === _ ? _[8 + _ / 3] : "") +
+                  ("s" !== _ || isNaN(_) || void 0 === _ ? "" : _[8 + _ / 3]) +
                   _ +
                   (_ && "(" === _ ? ")" : "")),
                 _)
@@ -22986,12 +23040,13 @@
         return {
           format: _,
           formatPrefix: function (_, _) {
-            var _ = _((((_ = _(_)).type = "f"), _)),
-              _ = 3 * Math.max(-8, Math.min(8, Math.floor(_(_) / 3))),
+            var _ = 3 * Math.max(-8, Math.min(8, Math.floor(_(_) / 3))),
               _ = Math.pow(10, -_),
-              _ = _[8 + _ / 3];
+              _ = _((((_ = _(_)).type = "f"), _), {
+                suffix: _[8 + _ / 3],
+              });
             return function (_) {
-              return __webpack_require__(_ * _) + _;
+              return _(_ * _);
             };
           },
         };
@@ -26562,8 +26617,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -26579,6 +26638,9 @@
         },
         _ = function (_) {
           return _()(_) && !_()(_);
+        },
+        _ = function (_) {
+          return _()(_);
         },
         _ = function (_) {
           return _(_) || _()(_);
@@ -26632,35 +26694,44 @@
           : null;
       }
       var _ = function (_) {
-        if (!_ || !_.length) return null;
-        for (
-          var _ = _.length,
-            _ = 0,
-            _ = 0,
-            _ = 0,
-            _ = 0,
-            _ = 1 / 0,
-            _ = -1 / 0,
-            _ = 0,
-            _ = 0,
-            _ = 0;
-          _ < _;
-          _++
-        )
-          (_ += _ = _[_]._ || 0),
+          if (!_ || !_.length) return null;
+          for (
+            var _ = _.length,
+              _ = 0,
+              _ = 0,
+              _ = 0,
+              _ = 0,
+              _ = 1 / 0,
+              _ = -1 / 0,
+              _ = 0,
+              _ = 0,
+              _ = 0;
+            _ < _;
+            _++
+          )
             (_ += _ = _[_]._ || 0),
-            (_ += _ * _),
-            (_ += _ * _),
-            (_ = Math.min(_, _)),
-            (_ = Math.max(_, _));
-        var _ = _ * _ !== _ * _ ? (_ * _ - _ * _) / (_ * _ - _ * _) : 0;
-        return {
-          xmin: _,
-          xmax: _,
-          _: _,
-          _: (_ - _ * _) / _,
+              (_ += _ = _[_]._ || 0),
+              (_ += _ * _),
+              (_ += _ * _),
+              (_ = Math.min(_, _)),
+              (_ = Math.max(_, _));
+          var _ = _ * _ !== _ * _ ? (_ * _ - _ * _) / (_ * _ - _ * _) : 0;
+          return {
+            xmin: _,
+            xmax: _,
+            _: _,
+            _: (_ - _ * _) / _,
+          };
+        },
+        _ = function (_, _) {
+          return _(_) && _(_)
+            ? _ - _
+            : _()(_) && _()(_)
+              ? _.localeCompare(_)
+              : _ instanceof Date && _ instanceof Date
+                ? _.getTime() - _.getTime()
+                : String(_).localeCompare(String(_));
         };
-      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -27310,6 +27381,7 @@
                       ? _
                       : [];
                 return (
+                  _.startsWith("data-") ||
                   (!_()(_) && ((_ && _.includes(_)) || _._.includes(_))) ||
                   (_ && _._.includes(_))
                 );
@@ -28090,30 +28162,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_) {
-        var _,
-          _,
-          _ = "";
-        if ("string" == typeof _ || "number" == typeof _) _ += _;
-        else if ("object" == typeof _)
-          if (Array.isArray(_)) {
-            var _ = _.length;
-            for (_ = 0; _ < _; _++)
-              _[_] && (_ = _(_[_])) && (_ && (_ += " "), (_ += _));
-          } else for (_ in _) _[_] && (_ && (_ += " "), (_ += _));
-        return _;
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ = function () {
-        for (var _, _, _ = 0, _ = "", _ = arguments.length; _ < _; _++)
-          (_ = arguments[_]) && (_ = _(_)) && (_ && (_ += " "), (_ += _));
-        return _;
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -28495,6 +28543,30 @@
         );
       }
       _.prototype;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        var _,
+          _,
+          _ = "";
+        if ("string" == typeof _ || "number" == typeof _) _ += _;
+        else if ("object" == typeof _)
+          if (Array.isArray(_)) {
+            var _ = _.length;
+            for (_ = 0; _ < _; _++)
+              _[_] && (_ = _(_[_])) && (_ && (_ += " "), (_ += _));
+          } else for (_ in _) _[_] && (_ && (_ += " "), (_ += _));
+        return _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ = function () {
+        for (var _, _, _ = 0, _ = "", _ = arguments.length; _ < _; _++)
+          (_ = arguments[_]) && (_ = _(_)) && (_ && (_ += " "), (_ += _));
+        return _;
+      };
     },
   },
 ]);

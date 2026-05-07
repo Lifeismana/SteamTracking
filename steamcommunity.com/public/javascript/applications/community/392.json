@@ -201,6 +201,7 @@
     "moderationaction_released": "เผยแพร่แล้ว",
     "moderationaction_privatemessaged": "ส่งข้อความส่วนตัวแล้ว",
     "moderationaction_unknown": "การดำเนินการที่ไม่รู้จัก",
+    "moderationaction_ownerdisputed": "การตรวจสอบถูกยื่นข้อพิพาทโดยเจ้าของ",
     "moderatormessage_count_note": "หมายเหตุ: %1$s",
     "moderatormessage_count_warning": "คำเตือน: %1$s",
     "moderatormessage_count_bannotice": "แบน: %1$s",

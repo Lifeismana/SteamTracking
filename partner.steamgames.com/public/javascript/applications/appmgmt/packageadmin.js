@@ -33,6 +33,7 @@
     50122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
         Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
         "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
@@ -118,8 +119,8 @@
         z = i(64753),
         y = i(39049),
         D = i(75659),
-        w = i(20187),
-        f = i(41324);
+        f = i(20187),
+        w = i(41324);
       const R = c.createContext({ depth: 0 });
       var v = i(11820),
         I = i(64238),
@@ -142,11 +143,11 @@
             return "h" + i;
           })(n, (0, c.useContext)(R).depth);
         return (0, r.jsx)(a, {
-          ...(0, f.mz)({ ...e, className: L()((0, v.T)(), y.Heading, i) }, E),
+          ...(0, w.mz)({ ...e, className: L()((0, v.T)(), y.Heading, i) }, E),
         });
       }
       const E = [
-        ...w.U6,
+        ...f.U6,
         ...D.L,
         {
           prop: "size",
@@ -291,11 +292,11 @@
         const { underline: n = "auto", ...i } = e,
           c = _e.TS.IN_GAMEPADUI ? Ce.Ii : "a";
         return (0, r.jsx)(c, {
-          ...(0, f.mz)({ ...i, underline: n, className: pe.TextLink }, be),
+          ...(0, w.mz)({ ...i, underline: n, className: pe.TextLink }, be),
         });
       }
       const be = [
-        ...w.Ae,
+        ...f.Ae,
         { prop: "underline", className: (e) => pe[`Underline-${e}`] },
       ];
       var je = i(90534);
@@ -312,7 +313,7 @@
                   href: `${_e.TS.PARTNER_BASE_URL}pricing/dashboard/?pn=${n}`,
                   children: h.g.Localize("#SinglePackagePricing_Right_Edit"),
                 }),
-                (0, r.jsx)(w.EY, {
+                (0, r.jsx)(f.EY, {
                   children: h.g.Localize(
                     "#SinglePackagePricing_Right_Edit_desc",
                   ),
@@ -329,7 +330,7 @@
                     "#SinglePackagePricing_Right_Help_Title",
                   ),
                 }),
-                (0, r.jsx)(w.EY, {
+                (0, r.jsx)(f.EY, {
                   children: h.g.Localize(
                     "#SinglePackagePricing_Right_Help_Desc",
                   ),
@@ -349,7 +350,7 @@
                 }),
                 (0, r.jsxs)(je.az, {
                   children: [
-                    (0, r.jsx)(w.EY, {
+                    (0, r.jsx)(f.EY, {
                       size: "4",
                       weight: "medium",
                       children: h.g.Localize(
@@ -357,7 +358,7 @@
                       ),
                     }),
                     (0, r.jsx)("br", {}),
-                    (0, r.jsx)(w.EY, {
+                    (0, r.jsx)(f.EY, {
                       children: h.g.LocalizeReact(
                         "#SinglePackagePricing_Right_FAQ_switching_answer",
                         (0, r.jsx)(xe, {
@@ -382,21 +383,21 @@
             (0, r.jsxs)(je.az, {
               paddingBottom: "4",
               children: [
-                (0, r.jsx)(w.EY, {
+                (0, r.jsx)(f.EY, {
                   as: "p",
                   size: "4",
                   color: "text-body",
                   contrast: "subtitle",
                   children: h.g.Localize("#SinglePricingPackage_Intro_1"),
                 }),
-                (0, r.jsx)(w.EY, {
+                (0, r.jsx)(f.EY, {
                   as: "p",
                   size: "4",
                   color: "text-body",
                   contrast: "subtitle",
                   children: h.g.Localize("#SinglePricingPackage_Intro_2"),
                 }),
-                (0, r.jsx)(w.EY, {
+                (0, r.jsx)(f.EY, {
                   size: "4",
                   color: "text-body",
                   contrast: "subtitle",
@@ -419,7 +420,7 @@
             }),
             (0, r.jsx)(je.az, {
               paddingBottom: "4",
-              children: (0, r.jsx)(w.EY, {
+              children: (0, r.jsx)(f.EY, {
                 children: h.g.LocalizeReact(
                   "#SinglePricingPackage_Desc_2",
                   (0, r.jsx)(xe, {
@@ -432,7 +433,7 @@
               }),
             }),
             (0, r.jsx)(je.az, {
-              children: (0, r.jsx)(w.EY, {
+              children: (0, r.jsx)(f.EY, {
                 children: h.g.Localize("#SinglePricingPackage_Desc_3"),
               }),
             }),
@@ -492,12 +493,12 @@
                             "#SinglePackagePricing_Right_Convert_Title",
                           ),
                         }),
-                        (0, r.jsx)(w.EY, {
+                        (0, r.jsx)(f.EY, {
                           children: h.g.Localize(
                             "#SinglePackagePricing_Right_Custom_Desc",
                           ),
                         }),
-                        (0, r.jsx)(w.EY, {
+                        (0, r.jsx)(f.EY, {
                           children: h.g.Localize(
                             "#SinglePackagePricing_Right_Convert_Desc",
                           ),
@@ -507,13 +508,13 @@
                           paddingTop: "5",
                           align: "start",
                           children: [
-                            (0, r.jsx)(w.EY, {
+                            (0, r.jsx)(f.EY, {
                               size: "3",
                               children: (0, K.we)(
                                 "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
                               ),
                             }),
-                            (0, r.jsx)(we, {
+                            (0, r.jsx)(fe, {
                               nPackageID: a,
                               oPricingGuideline: s,
                             }),
@@ -664,7 +665,7 @@
                   ? (0, r.jsx)(r.Fragment, {
                       children: (0, r.jsx)("div", {
                         className: "colSection",
-                        children: (0, r.jsx)(w.EY, {
+                        children: (0, r.jsx)(f.EY, {
                           size: "4",
                           color: "green-9",
                           children: (0, K.we)(
@@ -688,7 +689,7 @@
                               direction: "column",
                               paddingLeft: "5",
                               children: [
-                                (0, r.jsx)(w.EY, {
+                                (0, r.jsx)(f.EY, {
                                   size: "3",
                                   children: h.g.Localize(
                                     "#PricingDashboard_Select_Price",
@@ -799,7 +800,7 @@
           bCanSetToFree: n.bCanSetToFree,
         });
       }
-      function we(e) {
+      function fe(e) {
         const { nPackageID: n, oPricingGuideline: i } = e,
           [c, t, a] = (0, z.uD)(),
           s = (0, z.CH)();
@@ -822,10 +823,10 @@
           ],
         });
       }
-      var fe = i(92724);
+      var we = i(92724);
       function Re(e) {
         return (
-          c.use((0, fe.u)()),
+          c.use((0, we.u)()),
           (0, r.jsx)(t.dO, {
             children: (0, r.jsxs)(O.jY, {
               children: [

@@ -201,6 +201,7 @@
     "moderationaction_released": "Rilasciati",
     "moderationaction_privatemessaged": "Messaggio privato inviato",
     "moderationaction_unknown": "Azione sconosciuta",
+    "moderationaction_ownerdisputed": "Moderazione contestata dal titolare",
     "moderatormessage_count_note": "Note: %1$s",
     "moderatormessage_count_warning": "Avvisi: %1$s",
     "moderatormessage_count_bannotice": "Ban: %1$s",

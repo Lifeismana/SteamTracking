@@ -322,6 +322,7 @@
     122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
         Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
         "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
         "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
@@ -884,8 +885,8 @@
         ...M,
         { prop: "underline", className: (e) => k[`Underline-${e}`] },
       ];
-      var F = t(9041),
-        B = t(3406),
+      var B = t(9041),
+        F = t(3406),
         W = t(4041);
       function O(e) {
         const { as: s = "div", ref: t, ...n } = e,
@@ -911,7 +912,7 @@
               children: [
                 (0, r.jsx)("div", {
                   "data-visibility": !t,
-                  className: B.ChildContainer,
+                  className: F.ChildContainer,
                   children: n,
                 }),
                 t &&
@@ -930,32 +931,32 @@
         const { className: s, color: t, ...n } = m(e, Q);
         return (0, r.jsx)("div", {
           "data-accent-color": t,
-          className: j()(s, B.Spinner),
+          className: j()(s, F.Spinner),
           ...n,
         });
       }
       const Q = [
         ...x,
-        { prop: "size", responsive: !0, className: (e) => B[`Size-${e}`] },
-        { prop: "variant", className: (e) => B[`Variant-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => F[`Size-${e}`] },
+        { prop: "variant", className: (e) => F[`Variant-${e}`] },
       ];
       function J(e) {
         e.preventDefault();
       }
       const q = [
           ...x,
-          { prop: "size", responsive: !0, className: (e) => F[`Size-${e}`] },
-          { prop: "variant", className: (e) => F[`Variant-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => B[`Size-${e}`] },
+          { prop: "variant", className: (e) => B[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
           {
             prop: "width",
-            className: F.Width,
+            className: B.Width,
             cssProperty: "--width",
             responsive: !0,
           },
           {
             prop: "minWidth",
-            className: F.MinWidth,
+            className: B.MinWidth,
             cssProperty: "--min-width",
             responsive: !0,
           },
@@ -992,7 +993,7 @@
                 size: t,
                 minWidth: n,
                 color: o,
-                className: j()(F.Button, l && F.Icon),
+                className: j()(B.Button, l && B.Icon),
                 onClick: C,
               },
               q,
@@ -1020,7 +1021,7 @@
                 variant: s,
                 size: t,
                 minWidth: n,
-                className: j()(F.Button, i && F.Icon, T()),
+                className: j()(B.Button, i && B.Icon, T()),
               },
               q,
             ),
@@ -1872,7 +1873,7 @@
           ],
         });
       }
-      function Fe() {
+      function Be() {
         return (0, r.jsx)("svg", {
           width: "24",
           height: "22",
@@ -1884,7 +1885,7 @@
           }),
         });
       }
-      function Be() {
+      function Fe() {
         return (0, r.jsx)("svg", {
           width: "22",
           height: "22",
@@ -1987,11 +1988,11 @@
                 }),
                 (0, r.jsx)(Ye, {
                   href: "https://bsky.app/profile/steampowered.com",
-                  children: (0, r.jsx)(Fe, {}),
+                  children: (0, r.jsx)(Be, {}),
                 }),
                 (0, r.jsx)(Ye, {
                   href: "https://facebook.com/steam",
-                  children: (0, r.jsx)(Be, {}),
+                  children: (0, r.jsx)(Fe, {}),
                 }),
                 (0, r.jsx)(Ye, {
                   href: "https://twitter.com/steam",

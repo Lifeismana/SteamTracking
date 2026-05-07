@@ -25,6 +25,7 @@
 	--multi-color-bg-gradient-2:  linear-gradient(0deg, rgba(31, 49, 74, .45) 5%, rgba(33, 54, 77, .65) 20%, rgba(28, 50, 70, 0.5) 65%, rgba(40, 70, 98, 0.45) 95%, rgba(43, 83, 118, 0.55) 100%),  radial-gradient(circle at 10% 0%, rgba(94, 174, 255, 0.2) 0%,rgba(34, 53, 77, 0.05) 50%,rgba(94, 174, 255, 0.00) 90%), radial-gradient(circle at 80% 100%, rgba(94, 174, 255, 0.1) 0%,rgba(94, 174, 255, 0.05) 50%,rgba(94, 174, 255, 0.00) 90%);
 	--multi-color-bg-gradient-3: linear-gradient(315deg, rgb(16 124 101) 5%, rgb(46 121 159) 50%, rgb(55 73 132) 95%);
 	--multi-color-bg-gradient-4: linear-gradient(115deg, rgb(16 124 101 / 25%) 5%, rgb(46 121 159 / 18%) 50%, rgb(55 73 132 / 29%) 95%);
+	--multi-color-bg-gradient-5: linear-gradient(315deg, rgb(183, 37, 90) 5%, rgb(140, 28, 95) 50%, rgb(97, 14, 93) 95%);
 }
 
 /* Color variable overrides for use during a seasonal sale */
@@ -872,6 +873,21 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 .with_microtrailer:hover .ds_flag, .hover_active .ds_flag,
 .hover_active .broadcast_live_stream_icon, .with_microtrailer:hover .broadcast_live_stream_icon {
 	opacity: 0;
+}
+
+.home_capsule_banner {
+	position: absolute;
+	top: -12px;
+	left: -5px;
+	background: var(--multi-color-bg-gradient-5);
+	box-shadow: 2px 2px 10px rgba( 0, 0, 0, 0.75 );
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+	padding: 3px 8px;
+	z-index: 2;
+	transition: opacity 0.6s;
 }
 
 .capsule_hover_screenshots {

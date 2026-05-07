@@ -201,6 +201,7 @@
     "moderationaction_released": "Felszabadítva",
     "moderationaction_privatemessaged": "Privát üzenet küldve",
     "moderationaction_unknown": "Ismeretlen művelet",
+    "moderationaction_ownerdisputed": "Tulajdonos által vitatott moderálás",
     "moderatormessage_count_note": "Megjegyzések: %1$s",
     "moderatormessage_count_warning": "Figyelmeztetések: %1$s",
     "moderatormessage_count_bannotice": "Kitiltások: %1$s",

@@ -283,13 +283,13 @@
       "use strict";
       n(745);
     },
-    376: (e, t, n) => {
+    846: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => Et });
       var o,
         i = n(669),
         s = n.n(i),
-        r = n(149);
+        r = n(972);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -352,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(42),
-        p = n(733),
-        _ = n(970),
-        f = n(281);
+        g = n(261),
+        p = n(550),
+        _ = n(289),
+        f = n(496);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -754,8 +754,8 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(355),
-        y = n(505);
+        D = n(420),
+        y = n(444);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -3607,6 +3607,9 @@
           et(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
             this.m_activeBrowserView == t && this.SetActive(!1, e, t);
         }
+        SetGamepadInputSuppressed(e) {
+          this.m_bIsGamepadInputSuppressed = e;
+        }
         BIsGamepadInputSuppressed() {
           return this.m_bIsGamepadInputSuppressed;
         }
@@ -3773,7 +3776,7 @@
           const o = new tt(this, e, t, n);
           return (
             this.m_rgAllContexts.push(o),
-            this.m_ContextSetChangedCallbacks.Dispatch(),
+            setTimeout(() => this.m_ContextSetChangedCallbacks.Dispatch(), 0),
             o
           );
         }
@@ -4874,7 +4877,7 @@
         },
       };
     },
-    733: (e, t, n) => {
+    550: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4887,12 +4890,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    281: (e, t, n) => {
+    496: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(42),
-        s = n(733);
+        i = n(261),
+        s = n(550);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

@@ -263,11 +263,15 @@ span.motd {
 
 	#landingWelcome .appName {
 		margin-top: 5px;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	#landingWelcome .appNameRetired {
 		margin-top: 5px;
 		color: #ca5029;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.appNameUnlocalized {

@@ -708,21 +708,28 @@
               onItemSelectionChange: r,
               multiselect: i,
               selectedValue: l,
+              maxSelected: c,
             } = ae("<SelectTrigger>"),
-            c = "string" == typeof t ? t : void 0,
-            d = i ? l.includes(t) : l === t;
+            d = "string" == typeof t ? t : void 0;
+          let u = !1,
+            h = !1;
+          i
+            ? ((u = Array.isArray(l) && l.includes(t)),
+              (h = !!c && Array.isArray(l) && l.length >= c))
+            : (u = t === l);
+          const p = o || (h && !u);
           return (0, s.jsxs)(L, {
-            label: c,
+            label: d,
             onSelect: () => r(t),
-            selected: d,
-            disabled: o,
+            selected: u,
+            disabled: p,
             ...a,
             children: [
               i &&
                 (0, s.jsxs)(z.s, {
                   gap: "2",
                   align: "center",
-                  children: [(0, s.jsx)(q, { checked: d, variant: "dark" }), n],
+                  children: [(0, s.jsx)(q, { checked: u, variant: "dark" }), n],
                 }),
               !i && n,
             ],
@@ -753,30 +760,31 @@
               onFocusedIndexChange: v,
               refPopover: j,
               placeholder: y,
-              ...S
+              maxSelected: S,
+              ..._
             } = ae("<SelectTrigger>"),
-            _ = {
+            I = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => a(!o),
               children: t,
             },
-            I = u ? Array.isArray(r) && r.length > 0 : !!r,
-            k =
-              I && f
+            k = u ? Array.isArray(r) && r.length > 0 : !!r,
+            w =
+              k && f
                 ? (0, s.jsx)(W, { onClick: h, cursor: "pointer", hitSlop: !0 })
                 : (0, s.jsx)(U, {}),
-            w = (0, s.jsx)(F, {
-              afterContent: k,
+            A = (0, s.jsx)(F, {
+              afterContent: w,
               variant: i,
               size: l,
               radius: c,
-              hasValue: I,
+              hasValue: k,
               tabIndex: 0,
-              ...S,
+              ..._,
             }),
-            A = (0, x.Q)(n, w, _, void 0);
-          return (0, s.jsx)(T, { children: A });
+            N = (0, x.Q)(n, A, I, void 0);
+          return (0, s.jsx)(T, { children: N });
         },
         Value: function (e) {
           return (0, s.jsx)(G.EY, {
@@ -850,21 +858,23 @@
               options: o,
               placeholder: a,
               getOptionLabel: r = ee,
-              ...i
+              maxSelected: i,
+              ...l
             } = e,
-            l = (function (e) {
+            c = (function (e) {
               return Q(e, !0);
             })({
               onSelectionChange: n,
               selectedValue: t,
               rgOptions: o,
               placeholder: a,
+              maxSelected: i,
             }),
-            c = Array.isArray(t) && t.length > 0;
-          let d = "";
-          if (c) {
+            d = Array.isArray(t) && t.length > 0;
+          let u = "";
+          if (d) {
             const e = t.map((e) => r(e));
-            d =
+            u =
               "ListFormat" in Intl
                 ? new Intl.ListFormat(
                     (0, Y.A)().languages[0].strISOCode,
@@ -872,17 +882,17 @@
                 : e.join(", ");
           }
           return (0, s.jsxs)(se.Root, {
-            state: l,
-            ...i,
+            state: c,
+            ...l,
             children: [
               (0, s.jsxs)(se.Trigger, {
                 children: [
-                  c && (0, s.jsx)(se.Value, { children: d }),
-                  !c && (0, s.jsx)(se.Placeholder, { children: a }),
+                  d && (0, s.jsx)(se.Value, { children: u }),
+                  !d && (0, s.jsx)(se.Placeholder, { children: a }),
                 ],
               }),
               (0, s.jsx)(se.Options, {
-                children: l.rgOptions.map((e, t) =>
+                children: c.rgOptions.map((e, t) =>
                   (0, s.jsx)(se.Option, { value: e, children: r(e) }, t),
                 ),
               }),

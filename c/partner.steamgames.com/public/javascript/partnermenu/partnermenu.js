@@ -28634,7 +28634,7 @@ Error generating stack: ` +
             );
           }
           getClassName() {
-            return "CSteamInputService_TritonDonglesChanged_Notification";
+            return "CSteamInputService_SteamDonglesChanged_Notification";
           }
         }),
         (_ = class _ extends _.Message {
@@ -31816,8 +31816,8 @@ Error generating stack: ` +
           );
         }
         (_.SendMsgNotifyTritonUndocked = _),
-          (_.NotifyTritonDonglesChangedHandler = {
-            name: "SteamInputManager.NotifyTritonDonglesChanged#1",
+          (_.NotifySteamDonglesChangedHandler = {
+            name: "SteamInputManager.NotifySteamDonglesChanged#1",
             request: _,
           });
         function _(_, _) {
@@ -31829,12 +31829,12 @@ Error generating stack: ` +
                 ),
                 null)
               : _.RegisterServiceNotificationHandler(
-                  _.NotifyTritonDonglesChangedHandler,
+                  _.NotifySteamDonglesChangedHandler,
                   _,
                 )
           );
         }
-        _.RegisterForNotifyTritonDonglesChanged = _;
+        _.RegisterForNotifySteamDonglesChanged = _;
         function _(_, _) {
           return (
             (_ = _ || _().GetDefaultTransport()),
@@ -31844,7 +31844,7 @@ Error generating stack: ` +
                 ),
                 !1)
               : _.SendNotification(
-                  "SteamInputManager.NotifyTritonDonglesChanged#1",
+                  "SteamInputManager.NotifySteamDonglesChanged#1",
                   _(_, _),
                   {
                     ePrivilege: 1,
@@ -31853,7 +31853,7 @@ Error generating stack: ` +
                 )
           );
         }
-        _.NotifyTritonDonglesChanged = _;
+        _.NotifySteamDonglesChanged = _;
         function _(_, _) {
           return (
             (_ = _ || _().GetDefaultTransport()),
@@ -31863,7 +31863,7 @@ Error generating stack: ` +
                 ),
                 !1)
               : _.SendNotification(
-                  "SteamInputManager.NotifyTritonDonglesChanged#1",
+                  "SteamInputManager.NotifySteamDonglesChanged#1",
                   _(_, _),
                   {
                     ePrivilege: 1,
@@ -31872,7 +31872,7 @@ Error generating stack: ` +
                 )
           );
         }
-        (_.SendMsgNotifyTritonDonglesChanged = _),
+        (_.SendMsgNotifySteamDonglesChanged = _),
           (_.NotifyControllerDisconnectedHandler = {
             name: "SteamInputManager.NotifyControllerDisconnected#1",
             request: _,
@@ -33511,6 +33511,7 @@ Error generating stack: ` +
     _,
     _,
     _,
+    _,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -33975,8 +33976,75 @@ Error generating stack: ` +
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
+              _.prototype.appid || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    appid: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    is_open: {
+                      _: 2,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_Playtest";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
               _.prototype.parent_appid || _(_._()),
-              _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5], null);
+              _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5, 6], null);
           }
           static sm_m;
           static sm_mbf;
@@ -34015,6 +34083,12 @@ Error generating stack: ` +
                     },
                     standalone_demos: {
                       _: 5,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    playtests: {
+                      _: 6,
                       _: _,
                       _: !0,
                       _: !0,
@@ -35199,6 +35273,11 @@ Error generating stack: ` +
                       _: _.readInt64String,
                       _: _.writeInt64String,
                     },
+                    free_with_master_sub_appid: {
+                      _: 54,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
                   },
                 }),
               _.sm_m
@@ -35780,6 +35859,11 @@ Error generating stack: ` +
                       _: _,
                       _: !0,
                       _: !0,
+                    },
+                    captions_manifest: {
+                      _: 7,
+                      _: _.readString,
+                      _: _.writeString,
                     },
                     screenshot_medium: {
                       _: 10,

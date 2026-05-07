@@ -477,10 +477,14 @@
           s =
             "string" == typeof e.nextSrc
               ? (0, t.jsx)("img", { src: e.nextSrc })
-              : e.nextSrc;
+              : e.nextSrc,
+          i = [
+            U().LightboxDialog,
+            ...(e.backgroundClassName ? [e.backgroundClassName] : []),
+          ];
         return (0, t.jsxs)("dialog", {
           ref: a,
-          className: U().LightboxDialog,
+          className: (0, C.A)(...i),
           onClose: (a) => e.onCloseRequest(a),
           onKeyDown: (a) => {
             "ArrowRight" === a.key && e.nextSrc

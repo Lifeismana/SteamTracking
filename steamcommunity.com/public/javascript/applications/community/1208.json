@@ -1,6 +1,7 @@
 {
     "language": "spanish",
     "TrailerPlayer_Settings_Tooltip": "Ajustes",
+    "TrailerPlayer_Captions_Tooltip": "Subtítulos",
     "TrailerPlayer_Play_Tooltip": "Reproducir",
     "TrailerPlayer_Pause_Tooltip": "Pausar",
     "TrailerPlayer_Mute_Tooltip": "Silenciar",

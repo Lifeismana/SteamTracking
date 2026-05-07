@@ -55,6 +55,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -160,6 +162,42 @@
               throw new Error(
                 `Failed to resolve disputed subject (EResult ${_.GetEResult()})`,
               );
+          },
+          onSuccess: async () => {
+            await _(_, _, _, _);
+          },
+        });
+      }
+      function _(_, _, _, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_steamid(_),
+              _.Body().set_subject_type(_),
+              _.Body().set_subject_group_id(_),
+              _.Body().set_subject_id(_),
+              _.Body().set_details(_);
+            await _._.DisputeModerationForSubject(_, _);
+          },
+          onSuccess: async () => {
+            await _(_, _, _, _);
+          },
+        });
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_subject_type(_),
+              _.Body().set_subject_group_id(_),
+              _.Body().set_subject_id(_),
+              _.Body().set_owner_dispute_details(_);
+            const _ = await _._.UpdateSubject(_, _);
+            if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
           },
           onSuccess: async () => {
             await _(_, _, _, _);

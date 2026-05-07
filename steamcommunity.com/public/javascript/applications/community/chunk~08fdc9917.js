@@ -52,11 +52,13 @@
     90182: (e, t, r) => {
       "use strict";
       r.d(t, {
-        CS: () => p,
+        CS: () => _,
         Kt: () => b,
-        iW: () => u,
-        kZ: () => d,
+        iW: () => d,
+        kZ: () => f,
         lY: () => h,
+        wy: () => m,
+        y4: () => p,
       });
       var c = r(56545),
         s = r(69567),
@@ -65,14 +67,14 @@
         n = r(29385),
         l = r(61739);
       const a = "get_content_report_subject_group",
-        f = "get_content_report_subject_audit_log";
-      async function u(e, t, r, c) {
+        u = "get_content_report_subject_audit_log";
+      async function d(e, t, r, c) {
         return Promise.all([
           e.invalidateQueries({ queryKey: [a, t, r] }),
-          e.invalidateQueries({ queryKey: [f, t, r, c] }),
+          e.invalidateQueries({ queryKey: [u, t, r, c] }),
         ]);
       }
-      function d(e, t) {
+      function f(e, t) {
         const r = (0, o.KV)();
         return (0, i.I)(
           (function (e, t, r) {
@@ -98,7 +100,7 @@
         return (0, i.I)(
           (function (e, t, r, o) {
             return {
-              queryKey: [f, t, r, o],
+              queryKey: [u, t, r, o],
               queryFn: async () => {
                 if (void 0 === t || void 0 === r || void 0 === o) return;
                 const i = c.w.Init(s.Ru);
@@ -129,11 +131,11 @@
               throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);
           },
           onSuccess: async (c, s) => {
-            await u(a, e, t, r);
+            await d(a, e, t, r);
           },
         });
       }
-      function p(e, t, r) {
+      function _(e, t, r) {
         const i = (0, o.KV)(),
           a = (0, n.jE)();
         return (0, l.n)({
@@ -160,7 +162,43 @@
               );
           },
           onSuccess: async () => {
-            await u(a, e, t, r);
+            await d(a, e, t, r);
+          },
+        });
+      }
+      function p(e, t, r, i, a) {
+        const u = (0, o.KV)(),
+          f = (0, n.jE)();
+        return (0, l.n)({
+          mutationFn: async () => {
+            const o = c.w.Init(s.ZV);
+            o.Body().set_steamid(e),
+              o.Body().set_subject_type(t),
+              o.Body().set_subject_group_id(r),
+              o.Body().set_subject_id(i),
+              o.Body().set_details(a);
+            await s.fL.DisputeModerationForSubject(u, o);
+          },
+          onSuccess: async () => {
+            await d(f, t, r, i);
+          },
+        });
+      }
+      function m(e, t, r, i) {
+        const a = (0, n.jE)(),
+          u = (0, o.KV)();
+        return (0, l.n)({
+          mutationFn: async () => {
+            const o = c.w.Init(s.zF);
+            o.Body().set_subject_type(e),
+              o.Body().set_subject_group_id(t),
+              o.Body().set_subject_id(r),
+              o.Body().set_owner_dispute_details(i);
+            const n = await s.fL.UpdateSubject(u, o);
+            if (!n.BSuccess()) throw new Error("EResult " + n.GetEResult());
+          },
+          onSuccess: async () => {
+            await d(a, e, t, r);
           },
         });
       }
@@ -176,7 +214,7 @@
     },
     22797: (e, t, r) => {
       "use strict";
-      r.d(t, { t: () => u });
+      r.d(t, { t: () => d });
       var c = r(7850),
         s = r(90626),
         o = r(52038),
@@ -186,42 +224,42 @@
         r.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
       var a = r(42248),
-        f = r(8527);
-      const u = s.memo(function (e) {
+        u = r(8527);
+      const d = s.memo(function (e) {
         const {
           className: t,
           size: r,
           string: i,
-          position: u,
+          position: d,
           static: b,
           msDelayAppear: h,
         } = e;
-        let p = [n().LoadingWrapper, "SteamLogoThrobber", d(r)];
-        const [_, m] = s.useState(!h),
-          k = !(0, a.q)();
+        let _ = [n().LoadingWrapper, "SteamLogoThrobber", f(r)];
+        const [p, m] = s.useState(!h),
+          j = !(0, a.q)();
         return (
           (0, s.useEffect)(() => {
-            if (_) return;
+            if (p) return;
             const e = setTimeout(() => m(!0), h);
             return () => clearTimeout(e);
-          }, [h, _]),
-          void 0 === i && p.push(n().noString),
-          t && p.push(t),
-          b && p.push(n().Static),
+          }, [h, p]),
+          void 0 === i && _.push(n().noString),
+          t && _.push(t),
+          b && _.push(n().Static),
           (0, c.jsxs)("div", {
             className: (0, o.A)(
-              "center" == u && n().throbber_center_wrapper,
+              "center" == d && n().throbber_center_wrapper,
               !!h && n().ThrobberDelayAppear,
-              _ && n().Visible,
+              p && n().Visible,
             ),
             children: [
-              _ &&
-                k &&
+              p &&
+                j &&
                 (0, c.jsx)("div", {
-                  className: p.join(" "),
+                  className: _.join(" "),
                   children: (0, c.jsx)("div", {
                     className: n().NewThrobber,
-                    children: (0, c.jsx)("img", { src: (0, f.YJ)(l) }),
+                    children: (0, c.jsx)("img", { src: (0, u.YJ)(l) }),
                   }),
                 }),
               Boolean(i) &&
@@ -237,29 +275,29 @@
           string: i,
           position: l,
           static: a,
-          msDelayAppear: f,
+          msDelayAppear: u,
         } = e;
-        let u = [n().LoadingWrapper, "SteamLogoThrobber", d(r)];
-        const [h, p] = s.useState(!f);
+        let d = [n().LoadingWrapper, "SteamLogoThrobber", f(r)];
+        const [h, _] = s.useState(!u);
         return (
           (0, s.useEffect)(() => {
             if (h) return;
-            const e = setTimeout(() => p(!0), f);
+            const e = setTimeout(() => _(!0), u);
             return () => clearTimeout(e);
-          }, [f, h]),
-          void 0 === i && u.push(n().noString),
-          t && u.push(t),
-          a && u.push(n().Static),
+          }, [u, h]),
+          void 0 === i && d.push(n().noString),
+          t && d.push(t),
+          a && d.push(n().Static),
           (0, c.jsxs)("div", {
             className: (0, o.A)(
               "center" == l && n().throbber_center_wrapper,
-              !!f && n().ThrobberDelayAppear,
+              !!u && n().ThrobberDelayAppear,
               h && n().Visible,
             ),
             children: [
               h &&
                 (0, c.jsx)("div", {
-                  className: u.join(" "),
+                  className: d.join(" "),
                   children: (0, c.jsxs)("div", {
                     className: n().Throbber,
                     children: [
@@ -274,7 +312,7 @@
           })
         );
       });
-      function d(e) {
+      function f(e) {
         switch (e) {
           case "small":
             return n().throbber_small;

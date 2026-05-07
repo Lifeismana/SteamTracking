@@ -841,9 +841,16 @@
               onItemSelectionChange: _,
               multiselect: _,
               selectedValue: _,
+              maxSelected: _,
             } = _("<SelectTrigger>"),
-            _ = "string" == typeof _ ? _ : void 0,
-            _ = _ ? _.includes(_) : _ === _;
+            _ = "string" == typeof _ ? _ : void 0;
+          let _ = !1,
+            _ = !1;
+          _
+            ? ((_ = Array.isArray(_) && _.includes(_)),
+              (_ = !!_ && Array.isArray(_) && _.length >= _))
+            : (_ = _ === _);
+          const _ = _ || (_ && !_);
           return (0, _.jsxs)(_._.Item, {
             label: _,
             onSelect: () => _(_),
@@ -895,6 +902,7 @@
               onFocusedIndexChange: _,
               refPopover: _,
               placeholder: _,
+              maxSelected: _,
               ..._
             } = _("<SelectTrigger>"),
             _ = {
@@ -1012,6 +1020,7 @@
               options: _,
               placeholder: _,
               getOptionLabel: _ = _,
+              maxSelected: _,
               ..._
             } = _,
             _ = _({
@@ -1019,6 +1028,7 @@
               selectedValue: _,
               rgOptions: _,
               placeholder: _,
+              maxSelected: _,
             }),
             _ = Array.isArray(_) && _.length > 0;
           let _ = "";

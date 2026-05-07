@@ -201,6 +201,7 @@
     "moderationaction_released": "已解除",
     "moderationaction_privatemessaged": "私信已发送",
     "moderationaction_unknown": "未知操作",
+    "moderationaction_ownerdisputed": "所有者已对处理提出争议",
     "moderatormessage_count_note": "说明：%1$s 份",
     "moderatormessage_count_warning": "警告：%1$s 份",
     "moderatormessage_count_bannotice": "封禁：%1$s 份",

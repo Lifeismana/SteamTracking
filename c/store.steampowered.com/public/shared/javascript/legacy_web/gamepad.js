@@ -3783,6 +3783,9 @@
           _(`${this.LogName(_)} Browser View "${_}" deactivated in context`),
             this.m_activeBrowserView == _ && this.SetActive(!1, _, _);
         }
+        SetGamepadInputSuppressed(_) {
+          this.m_bIsGamepadInputSuppressed = _;
+        }
         BIsGamepadInputSuppressed() {
           return this.m_bIsGamepadInputSuppressed;
         }
@@ -3950,7 +3953,7 @@
           const _ = new _(this, _, _, _);
           return (
             this.m_rgAllContexts.push(_),
-            this.m_ContextSetChangedCallbacks.Dispatch(),
+            setTimeout(() => this.m_ContextSetChangedCallbacks.Dispatch(), 0),
             _
           );
         }

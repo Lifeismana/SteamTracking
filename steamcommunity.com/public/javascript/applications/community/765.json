@@ -201,6 +201,7 @@
     "moderationaction_released": "Renunțat",
     "moderationaction_privatemessaged": "Mesaj privat trimis",
     "moderationaction_unknown": "Acțiune necunoscută",
+    "moderationaction_ownerdisputed": "Moderare contestată de deținător",
     "moderatormessage_count_note": "Note: %1$s",
     "moderatormessage_count_warning": "Avertismente: %1$s",
     "moderatormessage_count_bannotice": "Interdicții: %1$s",

@@ -201,6 +201,7 @@
     "moderationaction_released": "Вивільнено",
     "moderationaction_privatemessaged": "Приватне повідомлення надіслано",
     "moderationaction_unknown": "Невідома дія",
+    "moderationaction_ownerdisputed": "Модерація оспорена власником",
     "moderatormessage_count_note": "Примітки: %1$s",
     "moderatormessage_count_warning": "Попередження: %1$s",
     "moderatormessage_count_bannotice": "Блокування: %1$s",
