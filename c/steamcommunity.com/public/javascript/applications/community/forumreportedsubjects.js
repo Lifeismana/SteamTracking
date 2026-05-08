@@ -7,6 +7,7 @@
         SplitHeader: "_2B88BA7YbropfCtjJdn1yD",
         PopoutButton: "_3cujMozXvwTlTehPQtPJ7F",
         ReportedSubjectRow: "_32u0ZJiVZP0gaSLs5sdhUy",
+        FlagIcon: "_2DMl8RTVaYtsJarLDt3hqF",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -31,10 +32,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        var _, _;
         const _ = "floatingforumreportedsubjectslist",
           _ = (0, _._)(1, _.gidTopic),
           [_, _] = (0, _.useState)(() => void 0 !== localStorage[_]);
-        if (_.isSuccess && 0 === _.data.subjects.length) return null;
+        if (
+          ((0, _.useMemo)(() => {
+            var _, _;
+            null ===
+              (_ =
+                null === (_ = _.data) || void 0 === _ ? void 0 : _.subjects) ||
+              void 0 === _ ||
+              _.sort(_);
+          }, [null === (_ = _.data) || void 0 === _ ? void 0 : _.subjects]),
+          !_.isSuccess ||
+            !(null === (_ = _.data) || void 0 === _ ? void 0 : _.subjects) ||
+            0 === _.data.subjects.length)
+        )
+          return null;
+        let _ = 0;
         return (0, _.jsx)("div", {
           className: _ ? _.FloatingSubjectListCtn : "",
           children: (0, _.jsx)("div", {
@@ -74,20 +90,59 @@
                       maxHeight: "20em",
                       overflowY: "scroll",
                     },
-                    children: _.data.subjects.map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          subject: _,
-                        },
-                        _.subject_id,
-                      ),
-                    ),
+                    children: _.data.subjects.map((_) => {
+                      var _, _;
+                      return (
+                        null ===
+                          (_ =
+                            null === (_ = _.additional_subject_data) ||
+                            void 0 === _
+                              ? void 0
+                              : _.data) || void 0 === _
+                          ? void 0
+                          : _.length
+                      )
+                        ? (0, _.jsx)(
+                            _,
+                            {
+                              subject: _,
+                            },
+                            _.subject_id,
+                          )
+                        : (0, _.jsx)(
+                            "div",
+                            {
+                              className: (0, _._)(
+                                "moderatorToolLink",
+                                _.ReportedSubjectRow,
+                              ),
+                              children: "Bug - inform Valve",
+                            },
+                            "bad-" + _++,
+                          );
+                    }),
                   }),
               ],
             }),
           }),
         });
+      }
+      function _(_, _) {
+        const _ =
+            _.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0,
+          _ =
+            _.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0;
+        return _ === _
+          ? (function (_, _) {
+              if (_.length !== _.length) return _.length - _.length;
+              for (let _ = 0; _ < _.length; _++) {
+                const _ = _.charCodeAt(_),
+                  _ = _.charCodeAt(_);
+                if (_ !== _) return _ - _;
+              }
+              return 0;
+            })(_.subject_id, _.subject_id)
+          : _ - _;
       }
       function _(_) {
         for (;;) {
@@ -102,8 +157,6 @@
         const { subject: _ } = _,
           _ = _(_.subject),
           _ = _(_.clanSteamId, 7, _.forumId, _.subject_group_id);
-        if (0 === _.unresolved_dispute_count && 0 === _.unresolved_report_count)
-          return null;
         let _ = null;
         if (("0" === _.subject_id && (_ = "Topic"), null === _ && _.isSuccess))
           for (const _ of null !== (_ = _.data.comments) && void 0 !== _
@@ -123,17 +176,25 @@
             }
         null === _ && (_ = "[Comment]");
         const _ =
-          "0" === _.subject_id
-            ? `#forum_op_${_.subject_group_id}`
-            : `#c${_.subject_id}`;
+            "0" === _.subject_id
+              ? `#forum_op_${_.subject_group_id}`
+              : `#c${_.subject_id}`,
+          _ = _.unresolved_dispute_count > 0 || _.unresolved_report_count > 0;
         return (0, _.jsx)("div", {
           className: (0, _._)("moderatorToolLink", _.ReportedSubjectRow),
           children: (0, _.jsxs)("a", {
             href: _,
             children: [
-              (0, _.jsx)("img", {
-                src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
-              }),
+              _ &&
+                (0, _.jsx)("img", {
+                  className: _.FlagIcon,
+                  src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                }),
+              !_ &&
+                (0, _.jsx)("span", {
+                  className: _.FlagIcon,
+                  children: " ",
+                }),
               " ",
               _,
             ],

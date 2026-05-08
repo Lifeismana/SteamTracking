@@ -34882,6 +34882,21 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  not_allowed_to_reserved_because_already_owned: {
+                    _: 19,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  appid_ownership_not_allowed_to_reserve: {
+                    _: 20,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  account_first_date_purchase_requirement: {
+                    _: 21,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m

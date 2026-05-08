@@ -25765,6 +25765,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { value: _, onValueChange: _, type: _, label: _, tooltip: _ } = _,
@@ -25864,6 +25866,9 @@
             (0, _.jsx)(_, {
               ..._,
             }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
             (0, _.jsxs)(_, {
               saleSection: _,
               fnOnDirty: _,
@@ -25903,6 +25908,44 @@
                   }),
                 }),
               ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { fnOnDirty: _, saleSection: _ } = _,
+          [_] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = _.internal_section_data) || void 0 === _
+                ? void 0
+                : _.reservation_learn_more_link) || "",
+            ];
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              children: [
+                "Optional Learn More URL ",
+                (0, _.jsx)(_._, {
+                  tooltip:
+                    "This will appear below the reserve/purchase button and beside any message we display to customer about shipping timelines. This will not appear if we do not ship to your country or depend on Komodo to ship.",
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              value: _,
+              onTextChange: (_) => {
+                _.internal_section_data ||
+                  (_.internal_section_data = {
+                    internal_type: "reservation_widget",
+                  }),
+                  (_.internal_section_data.reservation_learn_more_link =
+                    _ || void 0),
+                  _();
+              },
+              clearable: !0,
+              placeholder: "Optional url... start with https://",
             }),
           ],
         });
@@ -27080,8 +27123,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

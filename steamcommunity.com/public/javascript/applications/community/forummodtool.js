@@ -5,6 +5,7 @@
   {
     83077: (e) => {
       e.exports = {
+        ModerateDialogCtn: "_3k-mgkTihlZAexAo8PpuRt",
         Flag: "_3dm-fM55uTgByZNQ-7FQKO",
         ReportList: "hnTX88aagY-cwkiefQvQx",
         ModerateCtn: "_2qBUNFM1eoRvT2ScOKJFUL",
@@ -58,9 +59,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: () => be,
-          useAcquitForumComment: () => Te,
-          useSanctionForumComment: () => ze,
+          default: () => xe,
+          useAcquitForumComment: () => Ce,
+          useSanctionForumComment: () => Te,
         });
       var r = n(7850),
         i = n(32754),
@@ -1176,18 +1177,17 @@
         J = n(84811),
         H = n(83077),
         G = n(62490),
-        V = n(22797),
-        Z = n(62220),
-        Y = n(77490),
-        X = n(17083);
-      const $ =
+        Z = n(22797),
+        V = n(62220),
+        Y = n(77490);
+      const X =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
-        ee =
+        $ =
           n.p +
           "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching",
-        te =
+        ee =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
-      function ne(e) {
+      function te(e) {
         const { rgSources: t, onIncrementalError: n, alt: i, ...a } = e,
           [o, l] = (0, s.useState)(0),
           c = t[o];
@@ -1200,12 +1200,12 @@
           src: c,
         });
       }
-      var re = n(8527),
-        ie = n(64238),
-        se = n.n(ie),
-        ae = n(16339),
-        oe = n(99171);
-      function le(e) {
+      var ne = n(8527),
+        re = n(64238),
+        ie = n.n(re),
+        se = n(16339),
+        ae = n(99171);
+      function oe(e) {
         const {
             avatarURL: t,
             size: n,
@@ -1227,35 +1227,35 @@
               switch (e) {
                 case "X-Small":
                 case "Small":
-                  return (0, re.YJ)($);
+                  return (0, ne.YJ)(X);
                 case "Medium":
                 case "MediumLarge":
-                  return (0, re.YJ)(te);
+                  return (0, ne.YJ)(ee);
                 case "Large":
                 case "X-Large":
                 case "FillArea":
-                  return (0, re.YJ)(ee);
+                  return (0, ne.YJ)($);
               }
             })(null != n ? n : "Medium"),
           ),
           (0, r.jsxs)("div", {
-            className: se()(
-              ae.AvatarHolder,
+            className: ie()(
+              se.AvatarHolder,
               {
-                [ae.Offline]: !l,
-                [ae.Online]: l,
-                [ae.InGame]: c,
-                [ae.WatchingBroadcast]: u,
-                [ae.AwayOrSnooze]: d,
+                [se.Offline]: !l,
+                [se.Online]: l,
+                [se.InGame]: c,
+                [se.WatchingBroadcast]: u,
+                [se.AwayOrSnooze]: d,
               },
               a,
             ),
             "data-size": n,
             "data-status-position": s,
             children: [
-              (0, r.jsx)("div", { className: ae.AvatarStatus, style: i }),
-              (0, r.jsx)(ne, {
-                className: se()(ae.Avatar),
+              (0, r.jsx)("div", { className: se.AvatarStatus, style: i }),
+              (0, r.jsx)(te, {
+                className: ie()(se.Avatar),
                 rgSources: m,
                 draggable: !1,
                 alt: p,
@@ -1265,7 +1265,7 @@
           })
         );
       }
-      function ce(e) {
+      function le(e) {
         var t, n, i, s, a, o, l;
         const {
           playerLinkDetails: c,
@@ -1274,7 +1274,7 @@
           size: p,
           ...m
         } = e;
-        let h = (0, oe.t)(
+        let h = (0, ae.t)(
           null === (t = c.public_data) || void 0 === t
             ? void 0
             : t.sha_digest_avatar,
@@ -1284,8 +1284,8 @@
           (null === (n = null == u ? void 0 : u.image_small) || void 0 === n
             ? void 0
             : n.length) &&
-            (h = re.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + u.image_small),
-          (0, r.jsx)(le, {
+            (h = ne.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + u.image_small),
+          (0, r.jsx)(oe, {
             avatarURL: h,
             size: p,
             isOnline:
@@ -1316,12 +1316,12 @@
           })
         );
       }
-      var ue = n(20609);
-      function de(e) {
+      var ce = n(20609);
+      function ue(e) {
         const { subject: t } = e;
-        return t ? (0, r.jsx)(me, { ...e }) : (0, r.jsx)(pe, {});
+        return t ? (0, r.jsx)(pe, { ...e }) : (0, r.jsx)(de, {});
       }
-      function pe(e) {
+      function de(e) {
         return (0, r.jsx)("div", {
           children: (0, r.jsxs)("table", {
             children: [
@@ -1347,7 +1347,7 @@
           }),
         });
       }
-      function me(e) {
+      function pe(e) {
         var t, n, i, s, a;
         const { subject: o } = e,
           l = (0, u.Kt)(
@@ -1398,7 +1398,7 @@
                             (0, r.jsx)("tr", {
                               children: (0, r.jsx)("td", {
                                 colSpan: 4,
-                                children: (0, r.jsx)(V.t, {}),
+                                children: (0, r.jsx)(Z.t, {}),
                               }),
                             }),
                           l.isError &&
@@ -1429,7 +1429,7 @@
                                   : s.entries) || void 0 === a
                               ? void 0
                               : a.map((e) =>
-                                  (0, r.jsx)(he, { entry: e }, e.timestamp),
+                                  (0, r.jsx)(me, { entry: e }, e.timestamp),
                                 )),
                         ],
                       }),
@@ -1439,10 +1439,10 @@
             }),
         });
       }
-      function he(e) {
+      function me(e) {
         var t, n;
         const { entry: i } = e,
-          s = (0, Z.jn)(i.actor_steamid);
+          s = (0, V.jn)(i.actor_steamid);
         return s.isSuccess && s.data
           ? (0, r.jsxs)("tr", {
               children: [
@@ -1479,7 +1479,7 @@
                   ],
                 }),
                 (0, r.jsx)("td", {
-                  children: (0, r.jsx)(ge, {
+                  children: (0, r.jsx)(he, {
                     eAction: i.action,
                     jsonData: i.additional_json_data,
                   }),
@@ -1488,7 +1488,7 @@
             })
           : null;
       }
-      function ge(e) {
+      function he(e) {
         const { eAction: t, jsonData: n } = e;
         let i = {};
         switch ((n && (i = JSON.parse(n)), t)) {
@@ -1534,12 +1534,12 @@
             return null;
         }
       }
-      function je(e) {
+      function ge(e) {
         var t;
         const { subject: n } = e,
           i = n && n.reports && n.reports.length > 0;
         return (0, r.jsx)("table", {
-          className: ue.ContentReportsTable,
+          className: ce.ContentReportsTable,
           children: (0, r.jsxs)("tbody", {
             children: [
               !i &&
@@ -1552,15 +1552,15 @@
               i &&
                 (null === (t = n.reports) || void 0 === t
                   ? void 0
-                  : t.map((e) => (0, r.jsx)(Be, { report: e }, e.report_id))),
+                  : t.map((e) => (0, r.jsx)(je, { report: e }, e.report_id))),
             ],
           }),
         });
       }
-      function Be(e) {
+      function je(e) {
         var t, n;
         const { report: i } = e,
-          s = (0, Z.jn)(i.reporter_steamid);
+          s = (0, V.jn)(i.reporter_steamid);
         if (!s.isSuccess) return null;
         if (!(null === (t = s.data) || void 0 === t ? void 0 : t.public_data))
           return null;
@@ -1574,17 +1574,17 @@
             (0, r.jsx)("td", { children: (0, Y.P0)(i.time_reported, !1, "") }),
             (0, r.jsxs)("td", {
               children: [
-                (0, r.jsx)(X.N_, {
-                  to: `${a.TS.COMMUNITY_BASE_URL}profiles/${i.reporter_steamid}`,
-                  children: (0, r.jsx)(ce, {
+                (0, r.jsx)("a", {
+                  href: `${a.TS.COMMUNITY_BASE_URL}profiles/${i.reporter_steamid}`,
+                  children: (0, r.jsx)(le, {
                     playerLinkDetails: s.data,
                     size: "X-Small",
                     alt: "Reporter",
                   }),
                 }),
                 " ",
-                (0, r.jsx)(X.N_, {
-                  to: `${a.TS.COMMUNITY_BASE_URL}profiles/${i.reporter_steamid}`,
+                (0, r.jsx)("a", {
+                  href: `${a.TS.COMMUNITY_BASE_URL}profiles/${i.reporter_steamid}`,
                   children: (0, r.jsx)("span", {
                     children:
                       null === (n = s.data.public_data) || void 0 === n
@@ -1652,11 +1652,11 @@
           ],
         });
       }
-      var _e = n(29385),
-        ve = n(61739),
-        Ae = n(60690),
-        xe = n(12155);
-      function be(e) {
+      var Be = n(29385),
+        _e = n(61739),
+        ve = n(60690),
+        Ae = n(12155);
+      function xe(e) {
         var t;
         const [n, o] = (0, s.useState)(!1),
           l = (0, u.kZ)(1, e.topicId);
@@ -1690,10 +1690,10 @@
           });
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            n && (0, r.jsx)(ye, { onClose: () => o(!1), ...e, subject: c }),
+            n && (0, r.jsx)(fe, { onClose: () => o(!1), ...e, subject: c }),
             c &&
               (0, r.jsx)(i.Gq, {
-                toolTipContent: (0, r.jsx)(fe, { subject: c }),
+                toolTipContent: (0, r.jsx)(be, { subject: c }),
                 direction: "bottom",
                 nDelayShowMS: 0,
                 children: m,
@@ -1702,7 +1702,7 @@
           ],
         });
       }
-      function fe(e) {
+      function be(e) {
         const { subject: t } = e;
         if (!t || !t.reports) return null;
         const n = (0, G.D5)(t.reports, (e) => e.report_reason);
@@ -1730,24 +1730,24 @@
           })
         );
       }
-      function ye(e) {
+      function fe(e) {
         var t, n, i;
         const { subject: u } = e,
           [p, m] = (0, s.useState)("main"),
-          h = ze(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
+          h = Te(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
           g = [
             {
               name: "History",
               key: "history",
               contents: (0, r.jsx)(J.tH, {
-                children: (0, r.jsx)(de, { subject: u }),
+                children: (0, r.jsx)(ue, { subject: u }),
               }),
             },
             {
               name: "Reports",
               key: "reports",
               contents: (0, r.jsx)(J.tH, {
-                children: (0, r.jsx)(je, { subject: u }),
+                children: (0, r.jsx)(ge, { subject: u }),
               }),
             },
           ];
@@ -1778,7 +1778,7 @@
             children: (0, r.jsx)(l.f3, {
               children: (0, r.jsx)(l.a3, {
                 children: (0, r.jsxs)("div", {
-                  style: { display: "contents" },
+                  className: H.ModerateDialogCtn,
                   children: [
                     "main" === p &&
                       (0, r.jsxs)("div", {
@@ -1819,12 +1819,12 @@
                           (0, r.jsxs)("div", {
                             className: H.ModerationActionButtons,
                             children: [
-                              (0, r.jsx)(Me, {
+                              (0, r.jsx)(we, {
                                 ...e,
                                 subject: u,
                                 onClose: e.onClose,
                               }),
-                              (0, r.jsx)(Ce, {
+                              (0, r.jsx)(Me, {
                                 ...e,
                                 subject: u,
                                 onClose: e.onClose,
@@ -1859,7 +1859,7 @@
                                       onClick: () =>
                                         m("editownerdisputedetails"),
                                       className: H.EditButton,
-                                      children: (0, r.jsx)(xe.ffu, {}),
+                                      children: (0, r.jsx)(Ae.ffu, {}),
                                     }),
                                   ],
                                 }),
@@ -1885,13 +1885,13 @@
                         onCancel: () => m("main"),
                       }),
                     "ownerdispute" === p &&
-                      (0, r.jsx)(we, {
+                      (0, r.jsx)(Se, {
                         subject: A,
                         authorSteamId: e.authorSteamId,
                         onClose: () => m("main"),
                       }),
                     "editownerdisputedetails" === p &&
-                      (0, r.jsx)(Se, {
+                      (0, r.jsx)(ye, {
                         subject: A,
                         onClose: () => m("main"),
                         currentDetails:
@@ -1909,7 +1909,7 @@
           }),
         });
       }
-      function Se(e) {
+      function ye(e) {
         const { subject: t, onClose: n, currentDetails: i } = e,
           [a, o] = (0, s.useState)(i),
           l = (0, u.wy)(t.subject_type, t.subject_group_id, t.subject_id, a);
@@ -1945,7 +1945,7 @@
           ],
         });
       }
-      function we(e) {
+      function Se(e) {
         const { authorSteamId: t, subject: n, onClose: i } = e,
           [a, o] = (0, s.useState)(""),
           l = (0, u.y4)(t, n.subject_type, n.subject_group_id, n.subject_id, a);
@@ -1984,9 +1984,9 @@
           ],
         });
       }
-      function Me(e) {
+      function we(e) {
         const { subject: t } = e,
-          n = Te(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
+          n = Ce(e.clanSteamId, e.forumId, e.topicId, e.subjectId),
           i =
             t &&
             (t.unresolved_report_count > 0 ||
@@ -2001,7 +2001,7 @@
           children: d.T.Localize("#moderation_actions_acquit"),
         });
       }
-      function Ce(e) {
+      function Me(e) {
         const { subject: t } = e,
           n =
             t &&
@@ -2016,17 +2016,17 @@
           children: d.T.Localize("#moderation_actions_sustain"),
         });
       }
-      function Te(e, t, n, r) {
+      function Ce(e, t, n, r) {
         const i = (0, D.KV)(),
-          s = (0, _e.jE)();
-        return (0, ve.n)({
+          s = (0, Be.jE)();
+        return (0, _e.n)({
           mutationFn: async () => {
-            const s = L.w.Init(Ae.Km);
+            const s = L.w.Init(ve.Km);
             s.Body().set_steamid(e),
               s.Body().set_gidforum(t),
               s.Body().set_gidtopic(n),
               s.Body().set_gidpost(r);
-            const a = await Ae.el.ResolveReportedPost(i, s);
+            const a = await ve.el.ResolveReportedPost(i, s);
             if (!a.BSuccess())
               throw new Error("Failed to acquit forum comment: " + a.GetEMsg());
             return a.Body();
@@ -2036,12 +2036,12 @@
           },
         });
       }
-      function ze(e, t, n, r) {
+      function Te(e, t, n, r) {
         const i = (0, D.KV)(),
-          s = (0, _e.jE)();
-        return (0, ve.n)({
+          s = (0, Be.jE)();
+        return (0, _e.n)({
           mutationFn: async (s) => {
-            const a = L.w.Init(Ae.FD);
+            const a = L.w.Init(ve.FD);
             a.Body().set_steamid(e),
               a.Body().set_gidforum(t),
               a.Body().set_gidtopic(n),
@@ -2049,12 +2049,12 @@
               a.Body().set_reason(s.eReason),
               a.Body().set_note(s.strNote);
             for (const e of s.rgSanctions) {
-              const t = new Ae.RQ();
+              const t = new ve.RQ();
               t.set_sanction(e.sanction),
                 void 0 !== e.days && t.set_days(e.days),
                 a.Body().add_sanctions(t);
             }
-            const o = await Ae.el.SanctionReportedPost(i, a);
+            const o = await ve.el.SanctionReportedPost(i, a);
             if (!o.BSuccess())
               throw new Error(
                 "Failed to sanction forum comment: " + o.GetEResult(),

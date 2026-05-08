@@ -37663,6 +37663,21 @@
                     br: a.qM.readUint32,
                     bw: a.gp.writeUint32,
                   },
+                  not_allowed_to_reserved_because_already_owned: {
+                    n: 19,
+                    br: a.qM.readBool,
+                    bw: a.gp.writeBool,
+                  },
+                  appid_ownership_not_allowed_to_reserve: {
+                    n: 20,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
+                  account_first_date_purchase_requirement: {
+                    n: 21,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
                 },
               }),
             oe.sm_m

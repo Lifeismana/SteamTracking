@@ -3,6 +3,7 @@
   {
     chunkid: (module) => {
       module.exports = {
+        ModerateDialogCtn: "_3k-mgkTihlZAexAo8PpuRt",
         Flag: "_3dm-fM55uTgByZNQ-7FQKO",
         ReportList: "hnTX88aagY-cwkiefQvQx",
         ModerateCtn: "_2qBUNFM1eoRvT2ScOKJFUL",
@@ -1275,7 +1276,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=",
@@ -1714,8 +1714,8 @@
             }),
             (0, _.jsxs)("td", {
               children: [
-                (0, _.jsx)(_._, {
-                  _: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
+                (0, _.jsx)("a", {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
                   children: (0, _.jsx)(_, {
                     playerLinkDetails: _.data,
                     size: "X-Small",
@@ -1723,8 +1723,8 @@
                   }),
                 }),
                 " ",
-                (0, _.jsx)(_._, {
-                  _: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
+                (0, _.jsx)("a", {
+                  href: `${_._.COMMUNITY_BASE_URL}profiles/${_.reporter_steamid}`,
                   children: (0, _.jsx)("span", {
                     children:
                       null === (_ = _.data.public_data) || void 0 === _
@@ -1934,9 +1934,7 @@
             children: (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
                 children: (0, _.jsxs)("div", {
-                  style: {
-                    display: "contents",
-                  },
+                  className: _.ModerateDialogCtn,
                   children: [
                     "main" === _ &&
                       (0, _.jsxs)("div", {

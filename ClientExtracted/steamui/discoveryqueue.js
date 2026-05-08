@@ -740,7 +740,7 @@
         we = n(51816),
         je = n(59578),
         Te = n(27734),
-        Pe = n(93777),
+        Pe = n(57437),
         Ne = n(27343);
       function Re(e) {
         let { children: t } = e;
@@ -2240,4 +2240,4 @@
       }
     },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/discoveryqueue.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-deckard-hotfix/build/client/steamui/sourcemaps/discoveryqueue.js.map

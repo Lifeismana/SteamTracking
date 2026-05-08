@@ -18089,10 +18089,11 @@
             strOutOfStockOverride: l,
             strDeliveryOverride: r,
             bDeliveryOverrideOnlyIfOutOfStock: d,
+            section: c,
           } = e,
-          { data: c } = (0, Tr.DR)(t),
-          { data: _ } = (0, Tr.DR)(o),
-          u = (0, n.useMemo)(
+          { data: _ } = (0, Tr.DR)(t),
+          { data: u } = (0, Tr.DR)(o),
+          h = (0, n.useMemo)(
             () => [
               {
                 unique_id: "reservation_bbcode_" + t,
@@ -18115,41 +18116,42 @@
             ],
             [t, a, l, r, d, o],
           );
-        if (!c || (o && !_))
+        if (!_ || (o && !u))
           return (0, i.jsx)(D.t, {
             string: (0, k.we)("#Loading"),
             size: "small",
             position: "center",
           });
-        const h = !qs.iA.logged_in || !c.account_restricted_from_purchasing;
+        const p = !qs.iA.logged_in || !_.account_restricted_from_purchasing;
         return (0, i.jsxs)(Et.tH, {
           children: [
             (0, i.jsx)(n.Suspense, {
               fallback: null,
               children: (0, i.jsx)(Ar, {
                 bIsPreview: !!s,
-                rgReservationDef: u,
+                rgReservationDef: h,
               }),
             }),
-            Boolean(c.allow_purchase_in_country) &&
+            Boolean(_.allow_purchase_in_country) &&
               (0, i.jsxs)("div", {
-                className: u[0].unique_id,
+                className: h[0].unique_id,
                 children: [
                   (0, i.jsx)(Gr.bk, {
-                    reservationDef: u[0],
-                    hardwareDetail: c,
+                    reservationDef: h[0],
+                    hardwareDetail: _,
                     bPSULessModel: !1,
                   }),
-                  h &&
+                  p &&
                     (0, i.jsx)(Gr.pc, {
-                      reservationDef: u[0],
-                      hardwareDetail: c,
-                    }),
-                  _ &&
-                    (null == _ ? void 0 : _.allow_purchase_in_country) &&
-                    (0, i.jsx)(Gr.bk, {
-                      reservationDef: u[0],
+                      section: c,
+                      reservationDef: h[0],
                       hardwareDetail: _,
+                    }),
+                  u &&
+                    (null == u ? void 0 : u.allow_purchase_in_country) &&
+                    (0, i.jsx)(Gr.bk, {
+                      reservationDef: h[0],
+                      hardwareDetail: u,
                       bPSULessModel: !0,
                     }),
                 ],
@@ -18337,7 +18339,7 @@
         cd = a(99487),
         _d = a(38677),
         ud = a(39199),
-        hd = a(48172),
+        hd = a(9940),
         pd = a(40353);
       function md(e) {
         const { eventModel: t, nEventBadgeID: a } = e,
@@ -18623,21 +18625,41 @@
           : (0, i.jsx)(n.Fragment, {});
       }
       function Rd(e) {
-        const { showErrorInfo: t } = e.context,
-          a = Number.parseInt((0, wr.j$)(e.args));
-        if (a) {
+        const { showErrorInfo: t, event: a } = e.context,
+          s = Number.parseInt((0, wr.j$)(e.args)),
+          o = n.useMemo(() => {
+            var e;
+            return null === (e = a.jsondata.sale_sections) || void 0 === e
+              ? void 0
+              : e.find((e) => {
+                  var t, a;
+                  return (
+                    "vo_internal" == e.section_type &&
+                    ("reservation_widget" ==
+                      (null === (t = e.internal_section_data) || void 0 === t
+                        ? void 0
+                        : t.internal_type) ||
+                      "while_supplies_last" ==
+                        (null === (a = e.internal_section_data) || void 0 === a
+                          ? void 0
+                          : a.internal_type))
+                  );
+                });
+          }, [a]);
+        if (s && o) {
           const t = Number.parseInt((0, wr.j$)(e.args, "depositpackageid")),
-            n = Number.parseInt((0, wr.j$)(e.args, "psulesspackageid")),
-            s = (0, wr.j$)(e.args, "out_of_stock_override"),
-            o = (0, wr.j$)(e.args, "delivery_override"),
-            l = (0, wr.j$)(e.args, "delivery_override_out_of_stock");
+            a = Number.parseInt((0, wr.j$)(e.args, "psulesspackageid")),
+            n = (0, wr.j$)(e.args, "out_of_stock_override"),
+            l = (0, wr.j$)(e.args, "delivery_override"),
+            r = (0, wr.j$)(e.args, "delivery_override_out_of_stock");
           return (0, i.jsx)(Nr, {
-            reservationPackageID: a,
+            section: o,
+            reservationPackageID: s,
             depositPackageID: t,
-            psuLessPackageID: n,
-            strOutOfStockOverride: s,
-            strDeliveryOverride: l || o,
-            bDeliveryOverrideOnlyIfOutOfStock: Boolean(l),
+            psuLessPackageID: a,
+            strOutOfStockOverride: n,
+            strDeliveryOverride: r || l,
+            bDeliveryOverrideOnlyIfOutOfStock: Boolean(r),
           });
         }
         return (0, i.jsx)(i.Fragment, {});

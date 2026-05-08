@@ -37188,8 +37188,7 @@
                 .catch((_) => _(!0)),
               (0, _.jsx)("div", {})
             );
-          const _ = "4238531900078333321",
-            _ = ["512986184073347348"].includes(_.GID);
+          const _ = "4238531900078333321";
           let _ = new Date(1e3 * _.GetStartTimeAndDateUnixSeconds());
           _.GID == _ && (_ = new Date(2024, 5, 11));
           const _ = (0, _._)(_._.LANGUAGE);
@@ -37219,6 +37218,7 @@
               break;
           const _ = _.GetNameWithFallback(_),
             _ = _.GetImageURL("background"),
+            _ = ["512986184073347348"].includes(_.GID) || !_,
             _ = (0, _._)((0, _._)(_));
           return (0, _.jsxs)("div", {
             className: _().BlogEntryPage,

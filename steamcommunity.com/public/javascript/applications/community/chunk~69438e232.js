@@ -9046,22 +9046,22 @@
       "use strict";
       r.d(t, { E: () => u });
       var i = r(7850),
-        n = r(78395),
-        a = r(32469),
-        s = r(8527),
-        o = r(64753),
+        n = r(64753),
+        a = r(8527),
+        s = r(16261),
+        o = r(78395),
         l = r(21869),
-        c = r(16261);
+        c = r(32469);
       function d(e) {
         const { closeModal: t } = e;
-        return (0, i.jsx)(n.o0, {
-          strTitle: a.F5.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: a.F5.Localize("#LoginRedirect_Dialog_Description"),
+        return (0, i.jsx)(o.o0, {
+          strTitle: c.F5.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: c.F5.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: t,
-          strOKButtonText: c.Z.Localize("#Button_OK"),
+          strOKButtonText: s.Z.Localize("#Button_OK"),
           onOK: () => {
             !(function () {
-              const e = `${s.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+              const e = `${a.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
               window.location.href = e;
             })(),
               t();
@@ -9069,7 +9069,7 @@
         });
       }
       function u() {
-        const [e, t, r] = (0, o.uD)();
+        const [e, t, r] = (0, n.uD)();
         return {
           elDialogElement: (0, i.jsx)(l.E, {
             active: e,

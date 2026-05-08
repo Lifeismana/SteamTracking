@@ -1391,6 +1391,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
@@ -1461,6 +1462,25 @@
       });
       var _,
         _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        let _;
+        _ =
+          void 0 === _ || !0 === _ || !1 === _
+            ? {
+                weekday: _ ? "long" : "short",
+                year: _ ? void 0 : "numeric",
+              }
+            : _;
+        let _ = new Date(1e3 * _);
+        const _ = {
+          weekday: "short",
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          ..._,
+        };
+        return _.toLocaleDateString((0, _._)(), _);
+      }
       function _(_, _) {
         const _ = {
           year: "numeric",
@@ -4403,8 +4423,11 @@
       }
       function _(_, _) {
         return _
-          ? (_ = _(_, _)
-              ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)
+          ? (_ = (0, _._)(_)
+              ? _(_, _)
+                ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
+                  (0, _._)(_)
+                : (_._.IN_CLIENT ? "steam://openurl_external/" : "") + _
               : (0, _._)(_))
           : "";
       }

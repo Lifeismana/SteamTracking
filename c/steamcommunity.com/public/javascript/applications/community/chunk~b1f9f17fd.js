@@ -387,9 +387,34 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         Ctn: "aC3xJtB9uI-DeCZk0ihJK",
+        PurchaseCtn: "PGVgnCHfNswq_vIoFkD3o",
+        HeaderCtn: "_11J1o6YVcgh5NvUXq5S4g",
+        PurchaseBtnCtn: "_1ejh04gqbt7l8RmpC-Qe71",
+        Info: "_1YM-FunhvDNQK9Fpw7MzTT",
+        NamePriceCtn: "_3TlzAELQXwxNEr_zx0fpdt",
+        Title: "jlyPzsYVj8L5GVcCvLdPo",
+        SkuTitle: "_1Lou8aBAqYbinVIwM7o3rg",
+        PriceFormatted: "_3uWeWuT1U04p6KTUUbG3oS",
+        description: "gB5zwyCjg9DqIPerBDtWX",
+        OptionsCtn: "_30lciRHRRjTTs2aot0tU6V",
         ProductBox: "Lk8q8Uy8gxBLFRLhl3Qoa",
         Selected: "_2DjLRlJEcM1U34b41Q5nAY",
+        DeltaPrice: "_19cEcW8racpIPjmEfKrMAt",
+        BackgroundAnimation: "_3Rgx01F8-zIdFrK990U9SP",
+        "ItemFocusAnim-darkerGrey-nocolor": "mRVbrH5MtUlWtFC3UGbM7",
+        "ItemFocusAnim-darkerGrey": "_18AEYwk8ONaiyGDU91C0Pl",
+        "ItemFocusAnim-darkGreySettings": "_2So-dCYDfn1qkYFMZ_Wzw8",
+        "ItemFocusAnim-darkGrey": "_1tCxZZuuq9_W9OiIiGXOqT",
+        "ItemFocusAnim-grey": "_2VUiOdzJWx4inOaNfgkVl8",
+        "ItemFocusAnim-translucent-white-10": "_1BmVBVlnV8ICW5NQYxjSVa",
+        "ItemFocusAnim-translucent-white-20": "_1KGSkSXifM3q0YkW5b0JaV",
+        "ItemFocusAnimBorder-darkGrey": "_3N9hl7uH2VANLcLW2uW7EG",
+        "ItemFocusAnim-green": "_2sP6Jfz-Pn-iIANnfO5Qu8",
+        focusAnimation: "NCcNuvZsnMp1KvnlwcT5S",
+        hoverAnimation: "lkdp-Wy33p37LQA19lWkZ",
       };
     },
     chunkid: (module) => {
@@ -414,6 +439,13 @@
         Link: "_1vJHwybFjHBbNcBpxq2vJO",
         ReservationPSULessAddToCart: "_2HaOvkwPHDjo-tw2MojOhW",
         ReservationPSULessOutOfStock: "Cnrm19fZ6RQr1qL0tAjK9",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Link: "_1K4QC6vZ61M5lcIvcCWMEP",
+        UserTooNew: "_20i0fZO4jaOWCaVeAoB6KJ",
+        AlreadyBought: "g1ayBmJ07JAYzenoRRpu5",
       };
     },
     chunkid: (module) => {
@@ -6350,7 +6382,7 @@
         }, [_, _, _]);
         let _ = _.k_Loading;
         return (
-          null == _ ? (_ = _.k_LoadFailure) : _ && (_ = _.k_LoadSuccess),
+          null === _ ? (_ = _.k_LoadFailure) : _ && (_ = _.k_LoadSuccess),
           {
             rgHardwareDetails: _,
             eHardwareLoadingState: _,
@@ -19110,13 +19142,31 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
       }
       function _(_) {
-        const { strToken: _, rtEstimatedNotifcationDate: _ } = _,
-          _ = new Date(1e3 * _),
+        const {
+          strToken: _,
+          rtEstimatedNotifcationDate: _,
+          strUrlLearnMoreLink: _,
+          bInReservationQueue: _,
+        } = _;
+        if (!_ || !_)
+          return (0, _.jsx)("div", {
+            className: _().Ctn,
+            children: (0, _.jsx)(_._, {
+              elReservationMessage: _._.Localize(
+                _
+                  ? "#Sale_Reservation_Fallback_user_V2"
+                  : "#Sale_Reservation_Fallback_V2",
+              ),
+              strUrlLearnMoreLink: _,
+            }),
+          });
+        const _ = new Date(1e3 * _),
           _ = _.getMonth() + 1;
         let _ = "",
           _ = "",
@@ -19169,12 +19219,20 @@
                     (_ = "" + Math.floor(_ / 28 + 1))));
             }
             break;
+          case "#Sale_Reservation_AvailabilityUnknown":
+            _ = _
+              ? "#Sale_Reservation_Fallback_user_V2"
+              : "#Sale_Reservation_Fallback_V2";
+            break;
           default:
             _ = "#Sale_Reservation_Fallback";
         }
         return (0, _.jsx)("div", {
           className: _().Ctn,
-          children: (0, _._)(_, _, _, _, ""),
+          children: (0, _.jsx)(_._, {
+            elReservationMessage: (0, _._)(_, _, _, _, ""),
+            strUrlLearnMoreLink: _,
+          }),
         });
       }
       function _(_) {
@@ -19268,7 +19326,8 @@
         });
       }
       function _(_) {
-        const { hardwareDetail: _, reservationDef: _ } = _,
+        var _;
+        const { hardwareDetail: _, reservationDef: _, section: _ } = _,
           _ = !(
             _.inventory_available ||
             (null != _.reservation_state &&
@@ -19322,6 +19381,8 @@
                   ],
                 }),
           });
+        const _ =
+          _.reservation_state === _._.k_EPurchaseReservationState_Reserved;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.expecteddate, "ReservationExpectedDateCtn"),
           children: (0, _.jsx)("div", {
@@ -19332,16 +19393,26 @@
                 })
               : (0, _.jsxs)(_.Fragment, {
                   children: [
-                    _._.Localize(
-                      _.reservation_state ==
-                        _._.k_EPurchaseReservationState_Reserved
-                        ? "#Sale_Reservation_YourExpectedDate"
-                        : "#Sale_Reservation_ExpectedDate",
-                    ),
+                    _.notificaton_token &&
+                      _.rtime_estimated_notification &&
+                      "#Sale_Reservation_AvailabilityUnknown" !=
+                        _.notificaton_token &&
+                      (0, _.jsx)(_.Fragment, {
+                        children: _._.Localize(
+                          _
+                            ? "#Sale_Reservation_YourExpectedDate"
+                            : "#Sale_Reservation_ExpectedDate",
+                        ),
+                      }),
                     (0, _.jsx)(_, {
+                      strUrlLearnMoreLink:
+                        null === (_ = _.internal_section_data) || void 0 === _
+                          ? void 0
+                          : _.reservation_learn_more_link,
                       rtEstimatedNotifcationDate:
                         _.rtime_estimated_notification,
                       strToken: _.notificaton_token,
+                      bInReservationQueue: _,
                     }),
                   ],
                 }),
@@ -19383,6 +19454,8 @@
                 strDescription: _._.Localize(
                   "#Sale_Reservation_CancelAreYouSure_NoDeposit",
                 ),
+                strOKButtonText: _._.Localize("#Button_Confirm"),
+                strCancelButtonText: _._.Localize("#Button_Dismiss"),
                 onOK: () => {
                   _(!0),
                     __webpack_require__
@@ -19502,9 +19575,7 @@
             children: [
               Boolean(_) && (0, _.jsx)(_.mb7, {}),
               _._.Localize(
-                _
-                  ? "#EventEmail_Button_BuyWithoutPSU"
-                  : "#EventEmail_Button_BuyNow",
+                _ ? "#EventEmail_Button_BuyWithoutPSU" : "#Sale_BuyNow",
               ),
             ],
           }),
@@ -19603,6 +19674,138 @@
               ..._,
             });
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 2 == _._.EUNIVERSE ? 404860 : 1675200,
+        _ =
+          (_._.EUNIVERSE,
+          _._.EUNIVERSE,
+          _._.EUNIVERSE,
+          ["HK", "JP", "KR", "TW"]),
+        _ =
+          2 == _._.EUNIVERSE
+            ? [
+                501556, 501557, 501558, 502103, 502106, 502996, 502998, 503e3,
+                503002, 503004, 502878,
+              ]
+            : [
+                595603, 595604, 595605, 946113, 946114, 1558609, 1629447,
+                1629446, 1629458, 1629460, 1629484, 1629486,
+              ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _, _, _, _, _, _) {
+        var _;
+        let _,
+          _ = null,
+          _ = !1;
+        if (_ == _._.k_LoadFailure)
+          _ = _._.Localize("#Sale_Reservations_BusyServer");
+        else if (_.some((_) => _.includes(_)) && _.includes(_._.country_code))
+          (_ = !0),
+            (_ =
+              _ === _
+                ? (0, _._)(
+                    "#Sale_Reservation_Komodo",
+                    (0, _.jsx)("a", {
+                      className: _.Link,
+                      href: "https://steamdeck.komodo.jp",
+                    }),
+                  )
+                : (0, _._)(
+                    "#Sale_Reservation_Komodo_Generic",
+                    null != _ ? _ : _._.Localize("#AppTypeLabel_hardware"),
+                    (0, _.jsx)("a", {
+                      className: _.Link,
+                      href: "https://komodostation.com/",
+                      children: "komodostation.com",
+                    }),
+                  ));
+        else if (_ && _.some((_) => !_.allow_purchase_in_country))
+          (_ = !0), (_ = _._.Localize("#Sale_Reservation_NotAvailableCountry"));
+        else if (_ && _.some((_) => _.account_restricted_from_purchasing)) {
+          if (_._.logged_in) {
+            const _ = _.some((_) => _.requires_reservation),
+              _ =
+                null ===
+                  (_ = _.find(
+                    (_) =>
+                      _.account_first_date_purchase_requirement &&
+                      _.account_first_date_purchase_requirement > 0,
+                  )) || void 0 === _
+                  ? void 0
+                  : _.account_first_date_purchase_requirement;
+            (_ = _
+              ? _
+                ? _._.Localize(
+                    "#Sale_Reservation_NotAvailale_PreDate",
+                    (0, _._)(_),
+                  )
+                : _._.Localize("#Sale_Reservation_NotAllowedAccount")
+              : _._.Localize("#Sale_Purchase_NotAllowedAccount")),
+              (_ = _().UserTooNew),
+              (_ = (0, _.jsx)(_, {
+                elReservationMessage: _,
+                strUrlLearnMoreLink: _,
+              }));
+          }
+        } else
+          _ &&
+            _.some(
+              (_) =>
+                _.requires_reservation &&
+                _.appid_ownership_not_allowed_to_reserve &&
+                (_.not_allowed_to_reserved_because_already_owned ||
+                  _.has(_.appid_ownership_not_allowed_to_reserve)),
+            ) &&
+            _._.logged_in &&
+            ((_ = (0, _.jsx)(_, {
+              elReservationMessage: _
+                ? _._.Localize(
+                    "#Sale_Reservation_CannotReserveDueToOwnership_Specific",
+                    _,
+                  )
+                : _._.Localize(
+                    "#Sale_Reservation_CannotReserveDueToOwnership_Generic",
+                  ),
+              strUrlLearnMoreLink: _,
+            })),
+            (_ = _().AlreadyBought));
+        return {
+          elReservationSystemMessage: _,
+          bHidePackageDisplay: _,
+          messageDisplayClassNameOverride: _,
+        };
+      }
+      function _(_) {
+        const { elReservationMessage: _, strUrlLearnMoreLink: _ } = _;
+        return _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                _,
+                (0, _.jsx)(_._, {
+                  url: _,
+                  className: _().Link,
+                  children: _._.Localize("#Button_Learn"),
+                }),
+              ],
+            })
+          : _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -28787,7 +28990,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { reservationDef: _, disabled: _ } = _,
+        const { reservationDef: _, disabled: _, section: _ } = _,
           { data: _ } = (0, _._)(_.reservation_package),
           { data: _ } = (0, _._)(_.psu_less_package),
           _ = (0, _._)(_.reservation_package),
@@ -28829,6 +29032,7 @@
                           bPSULessModel: !1,
                         }),
                         (0, _.jsx)(_._, {
+                          section: _,
                           reservationDef: _,
                           hardwareDetail: _,
                         }),
@@ -28932,6 +29136,7 @@
                   }),
             }),
             (0, _.jsx)(_, {
+              section: _,
               disabled: _,
               reservationDef: _,
             }),
@@ -29016,52 +29221,59 @@
           null == _
             ? void 0
             : _.find((_) => _.reservation_package == _.package_id);
-        return (0, _.jsxs)(_, {
+        return (0, _.jsx)(_, {
           reservationLayout: _,
-          children: [
-            (0, _.jsxs)("div", {
-              className: _().Ctn,
-              children: [
-                (0, _.jsxs)("div", {
-                  children: [
-                    _ &&
+          children: (0, _.jsxs)("div", {
+            className: _().Ctn,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().PurchaseCtn,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().OptionsCtn,
+                    children: [
+                      _ &&
+                        (0, _.jsx)(_, {
+                          reservationDef: _,
+                        }),
                       (0, _.jsx)(_, {
-                        reservationDef: _,
+                        rgPackageTuples: _,
+                        rgProductConfigs: _,
+                        language: _,
+                        selected: _,
+                        setSelected: _,
                       }),
-                    (0, _.jsx)(_, {
-                      rgPackageTuples: _,
-                      rgProductConfigs: _,
-                      language: _,
-                      selected: _,
-                      setSelected: _,
-                    }),
-                  ],
-                }),
-                (0, _.jsx)("div", {
-                  children:
-                    _ &&
-                    (0, _.jsxs)(_.Fragment, {
-                      children: [
-                        (0, _.jsx)(_, {
-                          reservationDef: _,
-                        }),
-                        (0, _.jsx)(_, {
-                          reservationDef: _,
-                        }),
-                      ],
-                    }),
-                }),
-              ],
-            }),
-            (0, _.jsx)("div", {
-              children:
-                _ &&
-                (0, _.jsx)(_, {
-                  disabled: _,
-                  reservationDef: _,
-                }),
-            }),
-          ],
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Info,
+                    children:
+                      _ &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)(_, {
+                            reservationDef: _,
+                          }),
+                          (0, _.jsx)(_, {
+                            reservationDef: _,
+                          }),
+                        ],
+                      }),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _().PurchaseBtnCtn,
+                children:
+                  _ &&
+                  (0, _.jsx)(_, {
+                    section: _,
+                    disabled: _,
+                    reservationDef: _,
+                  }),
+              }),
+            ],
+          }),
         });
       }
       function _(_) {
@@ -29093,28 +29305,34 @@
           ),
           { data: _ } = (0, _._)(_);
         return (0, _.jsxs)("div", {
-          className: _().Ctn,
+          className: _().HeaderCtn,
           children: [
             (0, _.jsxs)("div", {
+              className: _().NamePriceCtn,
               children: [
                 (0, _.jsx)("div", {
+                  className: _().Title,
                   children:
                     null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
                       ? _
                       : "",
                 }),
-                (0, _.jsx)("div", {
-                  children:
-                    null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
-                      ? _
-                      : "",
+                (0, _.jsx)(_._, {
+                  _: _,
+                  bSingleLineMode: !0,
+                  strContainerClassName: _().PriceCtn,
+                  strDiscountAndPriceClassName: _().PriceDiscount,
+                  bHidePrePurchase: !0,
+                  strPriceFormattedClassName: _().PriceFormatted,
                 }),
               ],
             }),
-            (0, _.jsx)(_._, {
-              _: _,
-              bSingleLineMode: !0,
-              bHidePrePurchase: !0,
+            (0, _.jsx)("div", {
+              className: _().SkuTitle,
+              children:
+                null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                  ? _
+                  : "",
             }),
           ],
         });
@@ -29138,8 +29356,11 @@
             null !== (_ = _.use_package_description ? _ : _) && void 0 !== _
               ? _
               : "";
-        return (0, _.jsx)(_._, {
-          text: _,
+        return (0, _.jsx)("div", {
+          className: _().description,
+          children: (0, _.jsx)(_._, {
+            text: _,
+          }),
         });
       }
       function _(_) {
@@ -29308,69 +29529,21 @@
           const _ =
               Number(_.final_price_in_cents) - Number(_.final_price_in_cents),
             _ = (0, _._)(_._.country_code.toUpperCase());
-          return (0, _.jsx)("div", {
-            children: (0, _._)(_, _),
+          return (0, _.jsxs)("div", {
+            className: _().DeltaPrice,
+            children: [
+              "(",
+              (0, _.jsxs)("span", {
+                children: [_ > 0 ? "+" : "", (0, _._)(_, _)],
+              }),
+              ")",
+            ],
           });
         }
         return null;
       }
-      const _ = 2 == _._.EUNIVERSE ? 404860 : 1675200,
-        _ =
-          (_._.EUNIVERSE,
-          _._.EUNIVERSE,
-          _._.EUNIVERSE,
-          ["HK", "JP", "KR", "TW"]),
-        _ =
-          2 == _._.EUNIVERSE
-            ? [
-                501556, 501557, 501558, 502103, 502106, 502996, 502998, 503e3,
-                503002, 503004, 502878,
-              ]
-            : [
-                595603, 595604, 595605, 946113, 946114, 1558609, 1629447,
-                1629446, 1629458, 1629460, 1629484, 1629486,
-              ];
-      function _(_, _, _, _, _) {
-        let _ = null,
-          _ = !1;
-        return (
-          _ == _._.k_LoadFailure
-            ? (_ = (0, _._)("#Sale_Reservation_Too_Busy"))
-            : _.some((_) => _.includes(_)) && _.includes(_._.country_code)
-              ? ((_ = !0),
-                (_ =
-                  _ === _
-                    ? (0, _._)(
-                        "#Sale_Reservation_Komodo",
-                        (0, _.jsx)("a", {
-                          className: _.Link,
-                          href: "https://steamdeck.komodo.jp",
-                        }),
-                      )
-                    : (0, _._)(
-                        "#Sale_Reservation_Komodo_Generic",
-                        null != _ ? _ : (0, _._)("#AppTypeLabel_hardware"),
-                        (0, _.jsx)("a", {
-                          className: _.Link,
-                          href: "https://komodostation.com/",
-                          children: "komodostation.com",
-                        }),
-                      )))
-              : _ && _.some((_) => !_.allow_purchase_in_country)
-                ? ((_ = !0),
-                  (_ = (0, _._)("#Sale_Reservation_NotAvailableCountry")))
-                : _ &&
-                  _.some((_) => _.account_restricted_from_purchasing) &&
-                  _._.logged_in &&
-                  (_ = _.some((_) => _.requires_reservation)
-                    ? (0, _._)("#Sale_Reservation_NotAllowedAccount")
-                    : (0, _._)("#Sale_Purchase_NotAllowedAccount")),
-          {
-            elReservationSystemMessage: _,
-            bHidePackageDisplay: _,
-          }
-        );
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
         var _, _, _;
@@ -29481,8 +29654,9 @@
             });
       }
       function _(_) {
-        var _, _, _, _, _;
+        var _, _, _, _, _, _;
         const { section: _ } = _,
+          { data: _ } = (0, _._)(),
           _ =
             null === (_ = _.internal_section_data) || void 0 === _
               ? void 0
@@ -29517,18 +29691,26 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { rgHardwareDetails: _, eHardwareLoadingState: _ } = (0, _._)(_);
-        if (!_ && _ == _._.k_Loading)
+        if ((!_ && _ == _._.k_Loading) || void 0 === _)
           return (0, _.jsx)(_._, {
             size: "medium",
             position: "center",
             string: _._.Localize("#Loading"),
           });
-        const { elReservationSystemMessage: _, bHidePackageDisplay: _ } = _(
+        const {
+          elReservationSystemMessage: _,
+          bHidePackageDisplay: _,
+          messageDisplayClassNameOverride: _,
+        } = (0, _._)(
           _,
           null == _ ? void 0 : _.name,
           _,
           _,
           _,
+          _,
+          null === (_ = _.internal_section_data) || void 0 === _
+            ? void 0
+            : _.reservation_learn_more_link,
         );
         let _ = !0;
         if (_) {
@@ -29559,7 +29741,7 @@
               }),
             !!_ &&
               (0, _.jsx)("div", {
-                className: (0, _._)(_.noreserve, "NoReserverMsg"),
+                className: (0, _._)(_.noreserve, "NoReserverMsg", _),
                 children: _,
               }),
           ],
@@ -34635,7 +34817,6 @@
           });
         });
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = Math.floor(Date.now() / 1e3);

@@ -71,16 +71,16 @@
       "use strict";
       t.d(n, { w: () => p });
       var o = t(34629),
-        r = t(41735),
-        s = t.n(r),
+        s = t(41735),
+        r = t.n(s),
         a = t(14947),
         i = t(65946),
         l = t(90626),
         c = t(6419),
         u = t(6144),
         d = t(84933),
-        m = t(78327);
-      class _ {
+        _ = t(78327);
+      class m {
         constructor() {
           (0, a.Gn)(this);
         }
@@ -100,7 +100,7 @@
           );
         }
         clone() {
-          const e = new _();
+          const e = new m();
           return (
             (e.giveaway_id = this.giveaway_id),
             (e.seconds_until_drawing = this.seconds_until_drawing),
@@ -112,12 +112,12 @@
           );
         }
       }
-      (0, o.Cg)([a.sH], _.prototype, "giveaway_id", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "seconds_until_drawing", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "rtime_start", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "rtime_end", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "closed", void 0),
-        (0, o.Cg)([a.sH], _.prototype, "winner_count", void 0);
+      (0, o.Cg)([a.sH], m.prototype, "giveaway_id", void 0),
+        (0, o.Cg)([a.sH], m.prototype, "seconds_until_drawing", void 0),
+        (0, o.Cg)([a.sH], m.prototype, "rtime_start", void 0),
+        (0, o.Cg)([a.sH], m.prototype, "rtime_end", void 0),
+        (0, o.Cg)([a.sH], m.prototype, "closed", void 0),
+        (0, o.Cg)([a.sH], m.prototype, "winner_count", void 0);
       class g {
         constructor() {
           (0, a.Gn)(this);
@@ -153,15 +153,15 @@
         }
         async ReloadGiveaway(e, n) {
           if (!e) return null;
-          let t = m.TS.STORE_BASE_URL + "prizes/nextdraw/" + e,
+          let t = _.TS.STORE_BASE_URL + "prizes/nextdraw/" + e,
             o = null,
-            r = { origin: self.origin };
+            s = { origin: self.origin };
           return (
-            (o = await s().get(t, { params: r })),
+            (o = await r().get(t, { params: s })),
             (0, a.h5)(() => {
               if (
                 (this.m_mapGiveawayIDToNextDrawInfo.has(e) ||
-                  this.m_mapGiveawayIDToNextDrawInfo.set(e, new _()),
+                  this.m_mapGiveawayIDToNextDrawInfo.set(e, new m()),
                 this.CopyToGiveaway(
                   o.data,
                   this.m_mapGiveawayIDToNextDrawInfo.get(e),
@@ -170,7 +170,7 @@
               ) {
                 const t = this.GetKey(e, n);
                 this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(t) ||
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(t, new _()),
+                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(t, new m()),
                   this.CopyToGiveaway(
                     o.data,
                     this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(t),
@@ -189,16 +189,16 @@
             g.s_Singleton ||
               ((g.s_Singleton = new g()),
               g.s_Singleton.Init(),
-              "dev" == m.TS.WEB_UNIVERSE &&
+              "dev" == _.TS.WEB_UNIVERSE &&
                 (window.g_GiveawayStore = g.s_Singleton)),
             g.s_Singleton
           );
         }
         Init() {
           if (!this.m_bLoadedFromConfig) {
-            let e = (0, m.Tc)("giveawaynextdraw", "application_config");
+            let e = (0, _.Tc)("giveawaynextdraw", "application_config");
             if (e && e.giveaway_id) {
-              let n = new _();
+              let n = new m();
               this.CopyToGiveaway(e, n),
                 this.m_mapGiveawayIDToNextDrawInfo.set(e.giveaway_id, n);
             }
@@ -282,16 +282,16 @@
           [n, e, t],
         );
         const o = g.Get().GetInfoByInstance(e, n.m_myInstanceNumber),
-          [r, s, a] = (0, i.q3)(() => [
+          [s, r, a] = (0, i.q3)(() => [
             o?.winner_count,
             o?.closed,
             o?.seconds_until_drawing,
           ]);
         return {
           bLoadingGiveawayInfo:
-            !o || null == o.giveaway_id || !o.BStarted() || void 0 === r,
-          winner_count: r,
-          closed: s,
+            !o || null == o.giveaway_id || !o.BStarted() || void 0 === s,
+          winner_count: s,
+          closed: r,
           seconds_until_drawing: a,
         };
       }
@@ -304,17 +304,17 @@
       "use strict";
       t.d(n, { d: () => qe });
       var o = t(19367),
-        r = t(90626),
-        s = t(72034),
+        s = t(90626),
+        r = t(72034),
         a = t(51006),
         i = t(60746),
         l = t(6379),
         c = t(61859),
         u = t(78327),
         d = t(7850),
-        m = t(59952),
-        _ = t(41735),
-        g = t.n(_),
+        _ = t(59952),
+        m = t(41735),
+        g = t.n(m),
         w = t(68797);
       class v {
         m_counts = null;
@@ -377,27 +377,28 @@
       var p = t(85320),
         h = t(56631),
         I = t(35400),
-        f = t(6878),
-        y = t(8527),
+        y = t(6878),
+        f = t(8527),
         D = t(67645),
         C = t(62490),
         x = t(84811),
         b = t(22797),
         j = t(37474);
-      const N = r.Fragment;
+      const N = s.Fragment;
       function S(e) {
         const {
             reservationPackageID: n,
             depositPackageID: t,
             bIsPreview: o,
-            psuLessPackageID: s,
+            psuLessPackageID: r,
             strOutOfStockOverride: a,
             strDeliveryOverride: i,
             bDeliveryOverrideOnlyIfOutOfStock: l,
+            section: u,
           } = e,
-          { data: u } = (0, D.DR)(n),
-          { data: m } = (0, D.DR)(s),
-          _ = (0, r.useMemo)(
+          { data: _ } = (0, D.DR)(n),
+          { data: m } = (0, D.DR)(r),
+          g = (0, s.useMemo)(
             () => [
               {
                 unique_id: "reservation_bbcode_" + n,
@@ -415,42 +416,43 @@
                   null,
                 ),
                 override_delivery_only_out_of_stock: Boolean(l),
-                psu_less_package: s,
+                psu_less_package: r,
               },
             ],
-            [n, t, a, i, l, s],
+            [n, t, a, i, l, r],
           );
-        if (!u || (s && !m))
+        if (!_ || (r && !m))
           return (0, d.jsx)(b.t, {
             string: (0, c.we)("#Loading"),
             size: "small",
             position: "center",
           });
-        const g = !y.iA.logged_in || !u.account_restricted_from_purchasing;
+        const w = !f.iA.logged_in || !_.account_restricted_from_purchasing;
         return (0, d.jsxs)(x.tH, {
           children: [
-            (0, d.jsx)(r.Suspense, {
+            (0, d.jsx)(s.Suspense, {
               fallback: null,
-              children: (0, d.jsx)(N, { bIsPreview: !!o, rgReservationDef: _ }),
+              children: (0, d.jsx)(N, { bIsPreview: !!o, rgReservationDef: g }),
             }),
-            Boolean(u.allow_purchase_in_country) &&
+            Boolean(_.allow_purchase_in_country) &&
               (0, d.jsxs)("div", {
-                className: _[0].unique_id,
+                className: g[0].unique_id,
                 children: [
                   (0, d.jsx)(j.bk, {
-                    reservationDef: _[0],
-                    hardwareDetail: u,
+                    reservationDef: g[0],
+                    hardwareDetail: _,
                     bPSULessModel: !1,
                   }),
-                  g &&
+                  w &&
                     (0, d.jsx)(j.pc, {
-                      reservationDef: _[0],
-                      hardwareDetail: u,
+                      section: u,
+                      reservationDef: g[0],
+                      hardwareDetail: _,
                     }),
                   m &&
                     m?.allow_purchase_in_country &&
                     (0, d.jsx)(j.bk, {
-                      reservationDef: _[0],
+                      reservationDef: g[0],
                       hardwareDetail: m,
                       bPSULessModel: !0,
                     }),
@@ -472,14 +474,14 @@
         P = t(35380);
       function R(e) {
         const { appid: n, color: t, bgcolor: o } = e,
-          r = (0, B.n9)(),
-          s = (0, P.$5)(n),
-          a = (0, G.L3)(r);
+          s = (0, B.n9)(),
+          r = (0, P.$5)(n),
+          a = (0, G.L3)(s);
         return (0, d.jsx)("div", {
           className: M().WishlistHoverCtn,
           children: (0, d.jsx)(E.E, {
             snr: a,
-            id: s,
+            id: r,
             classOverride: (0, F.A)(
               A().WishlistButtonNotTop,
               M().BBCodeWishlistButton,
@@ -508,11 +510,11 @@
         K = t.n(X);
       function Y(e) {
         const { appID: n, classOverride: t, styleOverride: o } = e,
-          [s, a] = (0, r.useState)(!1),
+          [r, a] = (0, s.useState)(!1),
           i = (0, Z.m)("GameHoverFollowButton"),
-          { elDialogElement: l, fnShowLogonDialog: m } = (0, V.E)(),
-          _ = (0, $.Fh)(n),
-          { mutateAsync: g } = (0, z.L)(n, !_, void 0);
+          { elDialogElement: l, fnShowLogonDialog: _ } = (0, V.E)(),
+          m = (0, $.Fh)(n),
+          { mutateAsync: g } = (0, z.L)(n, !m, void 0);
         return (0, d.jsxs)(U.Z, {
           className: (0, F.A)(K().FollowButton, t),
           onClick: async (e) => {
@@ -520,19 +522,19 @@
               e.stopPropagation(),
               u.iA.logged_in
                 ? (a(!0), await g(), i.token.reason || a(!1))
-                : m();
+                : _();
           },
           style: o,
           children: [
-            _ ? (0, d.jsx)(Q.pPV, {}) : (0, d.jsx)(Q.c9e, {}),
+            m ? (0, d.jsx)(Q.pPV, {}) : (0, d.jsx)(Q.c9e, {}),
             (0, d.jsx)("div", {
               className: (0, F.A)(
                 K().FollowButtonText,
-                s && K().FollowLoadingText,
+                r && K().FollowLoadingText,
                 "FollowGameButton",
               ),
               children: (0, c.we)(
-                _ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
+                m ? "#Sale_StopFollowingGame" : "#Sale_FollowGame",
               ),
             }),
             l,
@@ -561,15 +563,15 @@
       var ne = t(94057),
         te = t(29868),
         oe = t(6083);
-      function re(e) {
+      function se(e) {
         return e < 10 ? "0" + e : e;
       }
-      function se(e) {
+      function re(e) {
         const { giveawayid: n } = e,
           t = (0, ne.w)(n),
           {
             bLoadingGiveawayInfo: o,
-            winner_count: s,
+            winner_count: r,
             closed: a,
             seconds_until_drawing: i,
           } = t;
@@ -582,12 +584,12 @@
                   (0, d.jsx)("div", {
                     className: te.Closed,
                     children:
-                      s > 0
-                        ? (0, c.we)("#Giveaway_Closed", (0, oe.D)(s))
+                      r > 0
+                        ? (0, c.we)("#Giveaway_Closed", (0, oe.D)(r))
                         : (0, c.we)("#Giveaway_Closed_NoWinnerInfo"),
                   }),
                 Boolean(!a) &&
-                  (0, d.jsxs)(r.Fragment, {
+                  (0, d.jsxs)(s.Fragment, {
                     children: [
                       Boolean(i <= 0)
                         ? (0, d.jsxs)("div", {
@@ -605,7 +607,7 @@
                               (0, d.jsx)("div", {
                                 className: te.CountDownTime,
                                 children:
-                                  re(Math.floor(i / 60)) + ":" + re(i % 60),
+                                  se(Math.floor(i / 60)) + ":" + se(i % 60),
                               }),
                               (0, d.jsxs)("div", {
                                 className: te.CountDownText,
@@ -617,13 +619,13 @@
                               }),
                             ],
                           }),
-                      Boolean(s > 0) &&
+                      Boolean(r > 0) &&
                         (0, d.jsxs)("div", {
                           className: te.WinnerInfo,
                           children: [
                             (0, d.jsx)("div", {
                               className: te.WinnerCount,
-                              children: (0, oe.D)(s),
+                              children: (0, oe.D)(r),
                             }),
                             (0, d.jsx)("div", {
                               className: te.WinnerText,
@@ -642,11 +644,11 @@
         ce = t(82477),
         ue = t(92757),
         de = t(39256),
-        me = t(99487),
-        _e = t(7193),
+        _e = t(99487),
+        me = t(7193),
         ge = t(39199),
         we = t(60860),
-        ve = t(67081),
+        ve = t(28803),
         pe = t(40353);
       function he(e) {
         const { eventModel: n, nEventBadgeID: t } = e,
@@ -656,9 +658,9 @@
           if (n?.BHasSaleEnabled()) {
             const o = n.GetSaleSectionsByType("badge_progress");
             if (1 == o?.length) {
-              const r = o[0].badge_progress;
-              if (r?.event_badgeid == t && r?.granted_by_discovery_queue) {
-                const t = r.levels[r.levels.length - 1].level;
+              const s = o[0].badge_progress;
+              if (s?.event_badgeid == t && s?.granted_by_discovery_queue) {
+                const t = s.levels[s.levels.length - 1].level;
                 return (0, d.jsx)(Ie, {
                   eventModel: n,
                   nBadgeLevel: e,
@@ -676,15 +678,15 @@
       }
       function Ie(e) {
         const { eventModel: n, nBadgeLevel: t, nMaxLevel: o } = e,
-          s = r.useMemo(() => {
+          r = s.useMemo(() => {
             const e = n
               .GetSaleSections()
               .filter((e) => "discoveryqueue" == e.section_type);
             return e?.length > 0 ? e[0] : null;
           }, [n]),
-          { storePageFilter: a, eStoreDiscoveryQueueType: i } = r.useMemo(
-            () => (0, _e.lx)(n, s),
-            [n, s],
+          { storePageFilter: a, eStoreDiscoveryQueueType: i } = s.useMemo(
+            () => (0, me.lx)(n, r),
+            [n, r],
           ),
           l = (0, ge.Uf)(i, a),
           c = Math.min(t + l, o);
@@ -693,31 +695,31 @@
           children: (0, oe.D)(c),
         });
       }
-      function fe(e) {
+      function ye(e) {
         const { event: n } = e.context,
-          t = Number.parseInt((0, m.j$)(e.args, "eventid"));
+          t = Number.parseInt((0, _.j$)(e.args, "eventid"));
         return u.iA.logged_in && t
           ? (0, d.jsx)(he, { nEventBadgeID: t, eventModel: n })
           : null;
       }
-      function ye(e) {
+      function fe(e) {
         const { nDoorIndex: n, children: t } = e,
           o = (0, I.OM)(n),
-          { fnOpenDoor: s } = (0, I.OC)(),
-          [a, i] = r.useState(!1),
-          [l, m] = r.useState(!1);
+          { fnOpenDoor: r } = (0, I.OC)(),
+          [a, i] = s.useState(!1),
+          [l, _] = s.useState(!1);
         return (0, d.jsx)(le.$n, {
           disabled: o,
           onClick: (e) => {
             a ||
               (u.iA.logged_in
                 ? (i(!0),
-                  s(n, !0, null, !1)
+                  r(n, !0, null, !1)
                     .then((e) => {
-                      e || m(!0), i(!1);
+                      e || _(!0), i(!1);
                     })
                     .catch(() => {
-                      m(!0), i(!1);
+                      _(!0), i(!1);
                     }))
                 : (0, ce.vg)());
           },
@@ -735,27 +737,27 @@
         });
       }
       function De(e) {
-        const n = Number.parseInt((0, m.j$)(e.args)) || 0;
+        const n = Number.parseInt((0, _.j$)(e.args)) || 0;
         return n >= 0 && n < 32
-          ? (0, d.jsx)(ye, { nDoorIndex: n, children: e.children })
+          ? (0, d.jsx)(fe, { nDoorIndex: n, children: e.children })
           : null;
       }
       const Ce = (0, ue.y)(ve.H);
       function xe(e) {
-        const n = Number.parseInt((0, m.j$)(e.args)),
+        const n = Number.parseInt((0, _.j$)(e.args)),
           { event: t, showErrorInfo: o } = e.context;
         if (n) {
-          const r = t?.jsondata?.sale_sections?.findIndex(
+          const s = t?.jsondata?.sale_sections?.findIndex(
             (e) => e.unique_id == n,
           );
-          if (r >= 0) {
+          if (s >= 0) {
             const n = t.GetDayIndexFromEventStart();
             return (0, d.jsx)(we.Cs, {
               location: o ? 2 : 0,
               children: (0, d.jsx)(Ce, {
                 event: t,
-                section: t.jsondata.sale_sections[r],
-                activeTab: new me.y(null, n),
+                section: t.jsondata.sale_sections[s],
+                activeTab: new _e.y(null, n),
                 language: e.language,
                 nSaleDayIndex: n,
                 promotionName: "",
@@ -781,9 +783,9 @@
       function ke(e) {
         const { clanAccountID: n, color: t, bgcolor: o } = e;
         (0, be.L2)();
-        const [s, a] = r.useState(!1);
+        const [r, a] = s.useState(!1);
         return (0, d.jsx)("div", {
-          className: (0, F.A)(Ne().BBCodeFollowButton, s && Ne().isHovered),
+          className: (0, F.A)(Ne().BBCodeFollowButton, r && Ne().isHovered),
           onMouseEnter: () => a(!0),
           onMouseLeave: () => a(!1),
           children: (0, d.jsx)(Se.Q, {
@@ -799,22 +801,22 @@
           t = Number(e.args.groupid) || n.clanSteamID.GetAccountID();
         if (!t) return null;
         const o = (0, L.O)(e.args.color, "black"),
-          r = (0, L.O)(e.args.bgcolor, "white");
-        return (0, d.jsx)(ke, { clanAccountID: t, color: o, bgcolor: r });
+          s = (0, L.O)(e.args.bgcolor, "white");
+        return (0, d.jsx)(ke, { clanAccountID: t, color: o, bgcolor: s });
       }
       let Ge = null;
       function Te(e) {
         const { event: n } = e.context,
-          t = Number.parseInt((0, m.j$)(e.args, "appid")),
-          o = Number.parseInt((0, m.j$)(e.args, "itemdefid")),
-          r = Number.parseInt((0, m.j$)(e.args, "maxquantity")),
-          s = (0, m.j$)(e.args, "calltoaction");
+          t = Number.parseInt((0, _.j$)(e.args, "appid")),
+          o = Number.parseInt((0, _.j$)(e.args, "itemdefid")),
+          s = Number.parseInt((0, _.j$)(e.args, "maxquantity")),
+          r = (0, _.j$)(e.args, "calltoaction");
         return (0, h.gS)(t, o)
           ? (0, d.jsx)(k.f, {
               language: e.language,
               clanAccountID: n.clanSteamID.GetAccountID(),
-              itemDefSetting: { nAppID: t, nItemDefID: o, max_quantity: r },
-              strCallToAction: s,
+              itemDefSetting: { nAppID: t, nItemDefID: o, max_quantity: s },
+              strCallToAction: r,
             })
           : (0, d.jsx)(b.t, {
               size: "small",
@@ -824,16 +826,16 @@
       }
       function Ae(e) {
         const n = (function () {
-          const [e, n] = r.useState(v.Get().GetCounts());
+          const [e, n] = s.useState(v.Get().GetCounts());
           return (
-            r.useEffect(() => {
+            s.useEffect(() => {
               e || v.Get().LoadCounts().then(n);
             }, []),
             e
           );
         })();
         if (!n) return (0, d.jsx)(b.t, { size: "small" });
-        const t = Number.parseInt((0, m.j$)(e.args));
+        const t = Number.parseInt((0, _.j$)(e.args));
         let o = n.verified;
         switch (t) {
           case 2:
@@ -847,7 +849,7 @@
       function Fe(e) {
         const n = (0, p.j)("library");
         if (!n) return (0, d.jsx)(b.t, { size: "small" });
-        const t = Number.parseInt((0, m.j$)(e.args));
+        const t = Number.parseInt((0, _.j$)(e.args));
         let o = n.verifiedList?.length || 0;
         switch (t) {
           case 2:
@@ -862,40 +864,40 @@
         return (0, d.jsx)("span", { children: (0, oe.D)(Number(o)) });
       }
       function Ee(e) {
-        const n = Number.parseInt((0, m.j$)(e.args)),
+        const n = Number.parseInt((0, _.j$)(e.args)),
           t =
             "hide" in e.args &&
-            Boolean(Number.parseInt((0, m.j$)(e.args, "hide")));
+            Boolean(Number.parseInt((0, _.j$)(e.args, "hide")));
         return n >= 0
           ? (0, d.jsx)(Le, { nDoorIndex: n, bHide: t, children: e.children })
           : null;
       }
       function Le(e) {
         const { nDoorIndex: n, bHide: t, children: o } = e,
-          r = (0, I.OM)(n);
-        return null == r
+          s = (0, I.OM)(n);
+        return null == s
           ? null
-          : (r && !t) || (!r && t)
+          : (s && !t) || (!s && t)
             ? (0, d.jsx)(d.Fragment, { children: e.children })
             : null;
       }
       function Oe(e) {
         if (u.iA.logged_in) {
-          const n = Number.parseInt((0, m.j$)(e.args)),
-            t = Number.parseInt((0, m.j$)(e.args, "mod"));
+          const n = Number.parseInt((0, _.j$)(e.args)),
+            t = Number.parseInt((0, _.j$)(e.args, "mod"));
           if (t > 0 && n < t && u.iA.accountid % t == n) return e.children;
         }
         return null;
       }
       function Me(e) {
-        const n = (0, m.j$)(e.args);
+        const n = (0, _.j$)(e.args);
         return n?.trim().length > 0
           ? (0, d.jsx)("div", { className: n.trim(), children: e.children })
           : (0, d.jsx)(d.Fragment, { children: e.children });
       }
       function Pe(e) {
         return (0, d.jsx)("span", {
-          className: f.LocalizeBlock,
+          className: y.LocalizeBlock,
           children: (0, c.oW)(
             e.children,
             (0, d.jsx)("b", {}),
@@ -906,27 +908,40 @@
         });
       }
       function Re(e) {
-        let n = (0, m.j$)(e.args);
+        let n = (0, _.j$)(e.args);
         return n
-          ? (0, d.jsx)(se, { giveawayid: n })
-          : (0, d.jsx)(r.Fragment, {});
+          ? (0, d.jsx)(re, { giveawayid: n })
+          : (0, d.jsx)(s.Fragment, {});
       }
       function He(e) {
-        const { showErrorInfo: n } = e.context,
-          t = Number.parseInt((0, m.j$)(e.args));
-        if (t) {
-          const n = Number.parseInt((0, m.j$)(e.args, "depositpackageid")),
-            o = Number.parseInt((0, m.j$)(e.args, "psulesspackageid")),
-            r = (0, m.j$)(e.args, "out_of_stock_override"),
-            s = (0, m.j$)(e.args, "delivery_override"),
-            a = (0, m.j$)(e.args, "delivery_override_out_of_stock");
+        const { showErrorInfo: n, event: t } = e.context,
+          o = Number.parseInt((0, _.j$)(e.args)),
+          r = s.useMemo(
+            () =>
+              t.jsondata.sale_sections?.find(
+                (e) =>
+                  "vo_internal" == e.section_type &&
+                  ("reservation_widget" ==
+                    e.internal_section_data?.internal_type ||
+                    "while_supplies_last" ==
+                      e.internal_section_data?.internal_type),
+              ),
+            [t],
+          );
+        if (o && r) {
+          const n = Number.parseInt((0, _.j$)(e.args, "depositpackageid")),
+            t = Number.parseInt((0, _.j$)(e.args, "psulesspackageid")),
+            s = (0, _.j$)(e.args, "out_of_stock_override"),
+            a = (0, _.j$)(e.args, "delivery_override"),
+            i = (0, _.j$)(e.args, "delivery_override_out_of_stock");
           return (0, d.jsx)(S, {
-            reservationPackageID: t,
+            section: r,
+            reservationPackageID: o,
             depositPackageID: n,
-            psuLessPackageID: o,
-            strOutOfStockOverride: r,
-            strDeliveryOverride: a || s,
-            bDeliveryOverrideOnlyIfOutOfStock: Boolean(a),
+            psuLessPackageID: t,
+            strOutOfStockOverride: s,
+            strDeliveryOverride: i || a,
+            bDeliveryOverrideOnlyIfOutOfStock: Boolean(i),
           });
         }
         return (0, d.jsx)(d.Fragment, {});
@@ -934,10 +949,10 @@
       var We = t(32337);
       function qe(e) {
         const { bSalePage: n } = e,
-          [t, d] = r.useState(i.KN.IsInitialized());
+          [t, d] = s.useState(i.KN.IsInitialized());
         return (
-          r.useEffect(() => {
-            a.Vw.Init(new s.D(u.TS.WEBAPI_BASE_URL)),
+          s.useEffect(() => {
+            a.Vw.Init(new r.D(u.TS.WEBAPI_BASE_URL)),
               l.O3.Init(),
               n &&
                 We.us.AddDictionary(
@@ -970,7 +985,7 @@
                       ["chooseaccount", { Constructor: Oe, autocloses: !1 }],
                       [
                         "badgecurrentlevel",
-                        { Constructor: fe, autocloses: !1 },
+                        { Constructor: ye, autocloses: !1 },
                       ],
                       ["optindoorquest", { Constructor: De, autocloses: !1 }],
                       ["classname", { Constructor: Me, autocloses: !1 }],
@@ -985,7 +1000,7 @@
                 ),
               i.KN.InitGlobal().then(() => d(!0));
           }, [n]),
-          r.useEffect(() => {
+          s.useEffect(() => {
             const e = (0, c.l4)();
             e && o.locale(e);
           }, []),

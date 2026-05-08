@@ -19210,6 +19210,7 @@
             strOutOfStockOverride: _,
             strDeliveryOverride: _,
             bDeliveryOverrideOnlyIfOutOfStock: _,
+            section: _,
           } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -19263,6 +19264,7 @@
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
+                      section: _,
                       reservationDef: _[0],
                       hardwareDetail: _,
                     }),
@@ -19801,15 +19803,35 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { showErrorInfo: _ } = _.context,
-          _ = Number.parseInt((0, _._)(_.args));
-        if (_) {
+        const { showErrorInfo: _, event: _ } = _.context,
+          _ = Number.parseInt((0, _._)(_.args)),
+          _ = _.useMemo(() => {
+            var _;
+            return null === (_ = _.jsondata.sale_sections) || void 0 === _
+              ? void 0
+              : _.find((_) => {
+                  var _, _;
+                  return (
+                    "vo_internal" == _.section_type &&
+                    ("reservation_widget" ==
+                      (null === (_ = _.internal_section_data) || void 0 === _
+                        ? void 0
+                        : _.internal_type) ||
+                      "while_supplies_last" ==
+                        (null === (_ = _.internal_section_data) || void 0 === _
+                          ? void 0
+                          : _.internal_type))
+                  );
+                });
+          }, [_]);
+        if (_ && _) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
             _ = Number.parseInt((0, _._)(_.args, "psulesspackageid")),
             _ = (0, _._)(_.args, "out_of_stock_override"),
             _ = (0, _._)(_.args, "delivery_override"),
             _ = (0, _._)(_.args, "delivery_override_out_of_stock");
           return (0, _.jsx)(_, {
+            section: _,
             reservationPackageID: _,
             depositPackageID: _,
             psuLessPackageID: _,

@@ -53,26 +53,26 @@
       "use strict";
       t.d(n, { E: () => h, l: () => u });
       var i = t(7850),
-        s = t(78395),
-        o = t(62151),
-        r = t(8527),
-        c = t(64753),
+        s = t(64753),
+        o = t(8527),
+        r = t(55672),
+        c = t(78395),
         a = t(21869),
-        l = t(55672);
+        l = t(62151);
       function d(e) {
         const { closeModal: n } = e;
-        return (0, i.jsx)(s.o0, {
-          strTitle: o.F5.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: o.F5.Localize("#LoginRedirect_Dialog_Description"),
+        return (0, i.jsx)(c.o0, {
+          strTitle: l.F5.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: l.F5.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: n,
-          strOKButtonText: l.Z.Localize("#Button_OK"),
+          strOKButtonText: r.Z.Localize("#Button_OK"),
           onOK: () => {
             u(), n();
           },
         });
       }
       function h() {
-        const [e, n, t] = (0, c.uD)();
+        const [e, n, t] = (0, s.uD)();
         return {
           elDialogElement: (0, i.jsx)(a.E, {
             active: e,
@@ -82,7 +82,7 @@
         };
       }
       function u() {
-        const e = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
       }
     },

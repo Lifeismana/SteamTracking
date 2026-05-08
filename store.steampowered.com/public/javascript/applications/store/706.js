@@ -1325,7 +1325,7 @@
     },
     99116: (e, t, r) => {
       "use strict";
-      r.d(t, { $z: () => l, _l: () => c, R2: () => u });
+      r.d(t, { TW: () => l, $z: () => c, _l: () => u, R2: () => d });
       var n = r(3049);
       const o = {};
       (o.arabic = () => r.e(6696).then(r.t.bind(r, 6696, 19))),
@@ -1364,33 +1364,49 @@
       });
       var i,
         s = r(83710);
-      function l(e, t) {
+      function l(e, t, r) {
+        let o;
+        o =
+          void 0 === t || !0 === t || !1 === t
+            ? { weekday: r ? "long" : "short", year: t ? void 0 : "numeric" }
+            : t;
+        let a = new Date(1e3 * e);
+        const i = {
+          weekday: "short",
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          ...o,
+        };
+        return a.toLocaleDateString((0, n.J)(), i);
+      }
+      function c(e, t) {
         const r = { year: "numeric", month: "short", day: "numeric", ...t };
         return new Date(1e3 * e).toLocaleDateString((0, n.J)(), r);
       }
-      function c(e, t) {
+      function u(e, t) {
         const {
             fullmonthname: r = !1,
             bUseRelativeNames: o = !0,
             bIncludeDayName: i = !1,
           } = t ?? {},
           s = new Date(),
-          c = new Date(1e3 * e);
-        if (c.getFullYear() != s.getFullYear())
-          return l(e, { month: r ? "long" : "short" });
+          l = new Date(1e3 * e);
+        if (l.getFullYear() != s.getFullYear())
+          return c(e, { month: r ? "long" : "short" });
         const u = new Date();
         if ((u.setHours(0, 0, 0, 0), o))
-          if (c >= u) {
-            if ((u.setDate(u.getDate() + 1), c < u))
+          if (l >= u) {
+            if ((u.setDate(u.getDate() + 1), l < u))
               return a.Localize("#Time_Today");
-            if ((u.setDate(u.getDate() + 1), c < u))
+            if ((u.setDate(u.getDate() + 1), l < u))
               return a.Localize("#Time_Tomorrow");
-          } else if ((u.setDate(u.getDate() - 1), c >= u))
+          } else if ((u.setDate(u.getDate() - 1), l >= u))
             return a.Localize("#Time_Yesterday");
         const d = { month: r ? "long" : "short", day: "numeric" };
-        return i && (d.weekday = "long"), c.toLocaleDateString((0, n.J)(), d);
+        return i && (d.weekday = "long"), l.toLocaleDateString((0, n.J)(), d);
       }
-      function u(e) {
+      function d(e) {
         const t = Math.floor(e / s.Kp.PerYear),
           r = Math.floor(e / s.Kp.PerMonth),
           n = Math.floor((e % s.Kp.PerMonth) / s.Kp.PerDay),
@@ -1445,26 +1461,26 @@
       "use strict";
       r.d(t, { E: () => d, l: () => C });
       var n = r(7850),
-        o = r(78395),
-        a = r(62151),
-        i = r(8527),
-        s = r(64753),
+        o = r(64753),
+        a = r(8527),
+        i = r(55672),
+        s = r(78395),
         l = r(21869),
-        c = r(55672);
+        c = r(62151);
       function u(e) {
         const { closeModal: t } = e;
-        return (0, n.jsx)(o.o0, {
-          strTitle: a.F5.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: a.F5.Localize("#LoginRedirect_Dialog_Description"),
+        return (0, n.jsx)(s.o0, {
+          strTitle: c.F5.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: c.F5.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: t,
-          strOKButtonText: c.Z.Localize("#Button_OK"),
+          strOKButtonText: i.Z.Localize("#Button_OK"),
           onOK: () => {
             C(), t();
           },
         });
       }
       function d() {
-        const [e, t, r] = (0, s.uD)();
+        const [e, t, r] = (0, o.uD)();
         return {
           elDialogElement: (0, n.jsx)(l.E, {
             active: e,
@@ -1474,7 +1490,7 @@
         };
       }
       function C() {
-        const e = `${i.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        const e = `${a.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
       }
     },
@@ -1582,8 +1598,8 @@
         D = r(39777),
         N = r(7338),
         E = r(54806),
-        R = r(61855),
-        T = r(35380),
+        T = r(61855),
+        R = r(35380),
         M = r(75279),
         F = r(6144),
         V = r(84933),
@@ -1641,7 +1657,7 @@
         return (0, n.jsx)("img", {
           className: Z().FullDivImage,
           loading: "lazy",
-          src: (0, L.YJ)(R.A),
+          src: (0, L.YJ)(T.A),
           alt: "default",
         });
       }
@@ -1713,7 +1729,7 @@
       }
       function X(e) {
         const { parentAppID: t, demoID: r, demoItemDefaultInfo: o } = e,
-          a = (0, T.$5)(t),
+          a = (0, R.$5)(t),
           i = (0, B.DT)(r),
           s = (0, B.DT)(a),
           l = (0, I.TH)(a),
@@ -2668,8 +2684,8 @@
         });
       }
       var E = r(51706),
-        R = r(12155),
-        T = r(22797),
+        T = r(12155),
+        R = r(22797),
         M = r(30470),
         F = r(39285),
         V = r.n(F);
@@ -2699,7 +2715,7 @@
                       }
                     },
                     children: [
-                      u && (0, n.jsx)(T.t, { size: "small" }),
+                      u && (0, n.jsx)(R.t, { size: "small" }),
                       (0, k.we)("#Sale_AddToLibrary_NoPlus"),
                     ],
                   }),
@@ -2827,7 +2843,7 @@
                 a.mutateAsync(), o(!0);
               },
               children: [
-                (0, n.jsx)(R.f5X, {}),
+                (0, n.jsx)(T.f5X, {}),
                 (0, k.we)("#Button_StartDownload"),
               ],
             }),
@@ -4067,9 +4083,11 @@
       }
       function d(e, t) {
         return e
-          ? (e = u(e, t)
-              ? (l.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
-                (0, o.E)(e)
+          ? (e = (0, o.p)(e)
+              ? u(e, t)
+                ? (l.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+                  (0, o.E)(e)
+                : (l.TS.IN_CLIENT ? "steam://openurl_external/" : "") + e
               : (0, s.NT)(e))
           : "";
       }
@@ -4481,8 +4499,8 @@
       "use strict";
       r.d(t, {
         Ez: () => H,
-        Dy: () => R,
-        wW: () => T,
+        Dy: () => T,
+        wW: () => R,
         UN: () => N,
         Q8: () => B,
         Tz: () => I,
@@ -4768,7 +4786,7 @@
         }
         const l = (0, n.jsx)("span", {
             className: s,
-            children: (0, v.we)(R(r)),
+            children: (0, v.we)(T(r)),
           }),
           c = (0, n.jsx)("span", {
             className: L().CompatibilityDetailRatingSummary,
@@ -4813,7 +4831,7 @@
         }
         const l = (0, n.jsx)("span", {
             className: s,
-            children: (0, v.we)(T(r)),
+            children: (0, v.we)(R(r)),
           }),
           c = (0, n.jsx)("span", {
             className: L().CompatibilityDetailRatingSummary,
@@ -4833,7 +4851,7 @@
           children: u,
         });
       }
-      function R(e) {
+      function T(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -4845,7 +4863,7 @@
             return "#SteamDeckVerified_Category_Unknown";
         }
       }
-      function T(e) {
+      function R(e) {
         switch (e) {
           case 2:
             return "#SteamOSCompatibility_Category_Compatible";
@@ -5658,13 +5676,13 @@
               "aria-label": (0, u.we)("#ControllerButton_L4"),
             });
           case i.g4.RearRightUpper:
-            return (0, a.jsx)(T, {
+            return (0, a.jsx)(R, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_R4"),
             });
           case i.g4.RearLeftLower:
-            return (0, a.jsx)(R, {
+            return (0, a.jsx)(T, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_L5"),
@@ -6565,7 +6583,7 @@
               ],
             });
       }
-      function R({ bIsKnockout: e, ...t }) {
+      function T({ bIsKnockout: e, ...t }) {
         return e
           ? (0, a.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -6603,7 +6621,7 @@
               ],
             });
       }
-      function T({ bIsKnockout: e, ...t }) {
+      function R({ bIsKnockout: e, ...t }) {
         return e
           ? (0, a.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
