@@ -4378,7 +4378,7 @@ a8e523d8 linux64/steamclient.so
 00000000 linuxarm64/
 cd1877ab linuxarm64/crashhandler.so
 d496a150 linuxarm64/pw-audio-namespace
-f52b7bd8 linuxarm64/steam-launch-wrapper
+a307af6e linuxarm64/steam-launch-wrapper
 1443f06d linuxarm64/steamclient.so
 aeb4a8aa linuxarm64/steamerrorreporter
 00000000 public/
@@ -12202,8 +12202,8 @@ c11aa6fb steamui/9661.js
 1159a3c3 steamui/awardicon.js
 e6525e97 steamui/broadcast.js
 630c66e3 steamui/broadcastapp.js
-c18138e8 steamui/changelist.txt
-4ddf7ded steamui/chunk~2dcc5aaf7.js
+18c154b7 steamui/changelist.txt
+8025cdd9 steamui/chunk~2dcc5aaf7.js
 96eb6f27 steamui/chunk~87fd721f7.js
 41b13bdc steamui/css/9441.css
 db726bfd steamui/css/awardicon.css
@@ -12595,9 +12595,9 @@ f11d799e steamui/images/tvnoise.png
 6c038289 steamui/images/whatsnew_playnext.jpg
 ee9f76ea steamui/images/workshopbackground.png
 26108669 steamui/index.html
-1ba04caf steamui/libraries/libraries~00299a408.js
+75efb102 steamui/libraries/libraries~00299a408.js
 dab67466 steamui/libraries/libraries~2dcc5aaf7.js
-b0614bd3 steamui/library.js
+7c4535bb steamui/library.js
 4a75e649 steamui/licenses.js
 c3a7b7b4 steamui/licenses.txt
 6bbfa39d steamui/localization/friendsui_arabic-json.js

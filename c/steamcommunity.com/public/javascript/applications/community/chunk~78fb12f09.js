@@ -1233,9 +1233,9 @@
               }
               if (_.cssProperty)
                 if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_, _);
+                  const _ = _.cssProperty(_, _, _.formFactor);
                   if (_.length && Array.isArray(_[0]))
-                    __webpack_require__.forEach(([_, _]) => (_[_] = _));
+                    _.forEach(([_, _]) => (_[_] = _));
                   else {
                     const _ = _;
                     _[_[0]] = _[1];
@@ -1368,6 +1368,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1399,25 +1400,31 @@
           },
           {
             prop: "color",
-            cssProperty: (_, _) => {
+            responsive: !0,
+            cssProperty: (_, _, _) => {
               var _;
               return [
                 "--text-color",
                 (0, _._)(
                   _,
-                  null !== (_ = _.contrast) && void 0 !== _ ? _ : "body",
+                  null !== (_ = (0, _._)(_.contrast, _)) && void 0 !== _
+                    ? _
+                    : "body",
                 ),
               ];
             },
           },
           {
             prop: "contrast",
-            cssProperty: (_, _) => {
+            responsive: !0,
+            cssProperty: (_, _, _) => {
               var _;
               return [
                 "--text-color",
                 (0, _._)(
-                  null !== (_ = _.color) && void 0 !== _ ? _ : "text-body",
+                  null !== (_ = (0, _._)(_.color, _)) && void 0 !== _
+                    ? _
+                    : "text-body",
                   _,
                 ),
               ];

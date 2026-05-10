@@ -51,8 +51,8 @@ STEAM_LAUNCH_WRAPPER_AUDIO_NAMESPACE
 STEAM_LAUNCH_WRAPPER_DEBUG
 STEAM_LAUNCH_WRAPPER_FDM
 STEAM_LAUNCH_WRAPPER_GAME_BIN
-STEAM_LAUNCH_WRAPPER_GGF
 STEAM_LAUNCH_WRAPPER_JOURNAL
+STEAM_LAUNCH_WRAPPER_RPO
 STEAM_LAUNCH_WRAPPER_SCOPE
 STEAM_RUNTIME
 STEAM_RUNTIME not in use
@@ -94,7 +94,7 @@ Unable to set up logging: required libsystemd method not found
 Unrecognised option %s
 VK_INSTANCE_LAYERS
 VK_LAYER_VALVE_fdm_injection
-VK_LAYER_VALVE_gamesgofast
+VK_LAYER_VALVE_rpo
 WINEDEBUG
 Waiting for transient unit to be set up
 XDG_RUNTIME_DIR
@@ -240,7 +240,7 @@ ssa(sv)a(sa(sv))
 stderr
 stderr@GLIBC_2.17
 steam-app%s
-steam-launch-wrapper version 0.20241025.0-12-g9f2c06e
+steam-launch-wrapper version 0.20241025.0-13-ge6bc415
 steam-launch-wrapper: AppId = %s, TU_DEBUG = %s\n
 steam-launch-wrapper: VK_INSTANCE_LAYERS=%s\n
 strchr

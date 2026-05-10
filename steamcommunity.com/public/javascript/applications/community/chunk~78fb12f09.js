@@ -1098,11 +1098,11 @@
               }
               if (i.cssProperty)
                 if ("function" == typeof i.cssProperty) {
-                  const s = i.cssProperty(r, e);
-                  if (s.length && Array.isArray(s[0]))
-                    s.forEach(([e, r]) => (n[e] = r));
+                  const t = i.cssProperty(r, e, s.formFactor);
+                  if (t.length && Array.isArray(t[0]))
+                    t.forEach(([e, r]) => (n[e] = r));
                   else {
-                    const e = s;
+                    const e = t;
                     n[e[0]] = e[1];
                   }
                 } else n[i.cssProperty] = r;
@@ -1204,80 +1204,87 @@
     },
     20187: (e, r, s) => {
       "use strict";
-      s.d(r, { Ae: () => m, EY: () => c, U6: () => l });
+      s.d(r, { Ae: () => d, EY: () => l, U6: () => m });
       var t = s(7850),
-        o = s(11526),
-        n = s(75659),
-        i = s(64238),
-        p = s.n(i),
-        a = s(65274);
-      function c(e) {
-        const { as: r = "span", ref: s, className: n, ...i } = e,
-          c = r;
-        return (0, t.jsx)(c, {
+        o = s(55348),
+        n = s(11526),
+        i = s(75659),
+        p = s(64238),
+        a = s.n(p),
+        c = s(65274);
+      function l(e) {
+        const { as: r = "span", ref: s, className: o, ...i } = e,
+          p = r;
+        return (0, t.jsx)(p, {
           ref: s,
-          ...(0, o.mz)({ ...i, className: p()(a.Text, n) }, m),
+          ...(0, n.mz)({ ...i, className: a()(c.Text, o) }, d),
         });
       }
-      const l = [
+      const m = [
           {
             prop: "weight",
             responsive: !0,
-            className: a.TextWeight,
+            className: c.TextWeight,
             cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: a.TextAlign,
+            className: c.TextAlign,
             cssProperty: "--text-align",
           },
           {
             prop: "color",
-            cssProperty: (e, r) => {
-              var s;
+            responsive: !0,
+            cssProperty: (e, r, s) => {
+              var t;
               return [
                 "--text-color",
-                (0, o.To)(
+                (0, n.To)(
                   e,
-                  null !== (s = r.contrast) && void 0 !== s ? s : "body",
+                  null !== (t = (0, o.I)(r.contrast, s)) && void 0 !== t
+                    ? t
+                    : "body",
                 ),
               ];
             },
           },
           {
             prop: "contrast",
-            cssProperty: (e, r) => {
-              var s;
+            responsive: !0,
+            cssProperty: (e, r, s) => {
+              var t;
               return [
                 "--text-color",
-                (0, o.To)(
-                  null !== (s = r.color) && void 0 !== s ? s : "text-body",
+                (0, n.To)(
+                  null !== (t = (0, o.I)(r.color, s)) && void 0 !== t
+                    ? t
+                    : "text-body",
                   e,
                 ),
               ];
             },
           },
-          { prop: "truncate", className: a.Truncate },
+          { prop: "truncate", className: c.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: a.LineClamp,
+            className: c.LineClamp,
             cssProperty: "--line-clamp",
           },
           {
             prop: "whiteSpace",
-            className: a.WhiteSpace,
+            className: c.WhiteSpace,
             cssProperty: "--white-space",
           },
         ],
-        m = [
-          ...l,
-          ...n.L,
+        d = [
+          ...m,
+          ...i.L,
           {
             prop: "size",
             responsive: !0,
-            className: (e) => a[`TextSize-${e}`],
+            className: (e) => c[`TextSize-${e}`],
           },
         ];
     },

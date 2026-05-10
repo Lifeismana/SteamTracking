@@ -924,6 +924,7 @@
 }
 ._0BH1ydyFmSnUvoVK2hIc:where(._3QKUrmKA1DptBhihc8GSAF) {
   height: var(--control-height-1);
+  min-height: var(--control-height-1);
   padding-left: var(--spacing-3);
   padding-right: var(--spacing-3);
   border-radius: var(--radius-sm);
@@ -938,6 +939,7 @@
 }
 ._0BH1ydyFmSnUvoVK2hIc:where(._2rbqjlRz2ShvIiYodebfc2) {
   height: var(--control-height-2);
+  min-height: var(--control-height-2);
   padding-left: var(--spacing-4);
   padding-right: var(--spacing-4);
   border-radius: var(--radius-sm);
@@ -952,6 +954,7 @@
 }
 ._0BH1ydyFmSnUvoVK2hIc:where(._2WV0DrM2sIAtg0N1lOU26f) {
   height: var(--control-height-3);
+  min-height: var(--control-height-3);
   padding-left: var(--spacing-5);
   padding-right: var(--spacing-5);
   border-radius: var(--radius-sm);

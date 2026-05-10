@@ -2338,6 +2338,11 @@ p a:hover {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  ._2EbKH8e98l6jfPsQZbpF5d {
+    padding-right: 40px;
+  }
+}
 ._3V6J1j2mWeEq42tDXjdlyT {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj48cGF0aCBkPSJtIDEsMyAxLjI1LC0xLjI1IDcuNSw3LjUgNy41LC03LjUgMS4yNSwxLjI1IC03LjUsNy41IDcuNSw3LjUgLTEuMjUsMS4yNSAtNy41LC03LjUgLTcuNSw3LjUgLTEuMjUsLTEuMjUgNy41LC03LjUgLTcuNSwtNy41IHoiIGZpbGw9IiNGRkYiLz48L3N2Zz4=")
     no-repeat center;
@@ -2359,6 +2364,13 @@ p a:hover {
   cursor: pointer;
   opacity: 0.7;
   border: none;
+}
+@media screen and (max-width: 768px) {
+  ._1Pkq-IzPmH3SL1Ch4rxT7E,
+  ._3hJAw5_2ezz8JlA8lniMOV {
+    height: auto;
+    padding: 0 20px;
+  }
 }
 ._1Pkq-IzPmH3SL1Ch4rxT7E {
   left: 0;

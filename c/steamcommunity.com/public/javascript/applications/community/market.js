@@ -95,6 +95,7 @@
         NoFilters: "_3g3vv3kHTPCWqMi7peBikQ",
         SearchSuggestion: "_2gmdvGWIS321h7LVeTHB4w",
         Collapse: "_3mYz6ZF851JdnrGU3Lo-8",
+        UndecoratedLink: "_3WQHXUuRRrVY0Xkb98Oafq",
       };
     },
     chunkid: (module) => {
@@ -1159,12 +1160,13 @@
             marginY: "2",
           });
         },
-        Name: function () {
+        Name: function (_) {
           const _ = _(),
             _ = _();
           return (0, _.jsx)(_._, {
             size: "7",
             weight: "heavy",
+            ..._,
             children: (0, _.jsx)(_, {
               description: _,
               asset: _,
@@ -1202,25 +1204,8 @@
             : null;
         },
         GameInfo: function (_) {
-          var _;
-          const { hrefGame: _ } = _,
-            _ = _(),
-            _ = _.appid,
-            { data: _ } = (0, _._)({
-              appid: _,
-            }),
-            { data: _ } = (0, _._)({
-              appid: _,
-            }),
-            _ = _ && _.community_icon ? (0, _._)(_, "community_icon") : void 0,
-            _ = (0, _._)(_),
-            _ =
-              null != _
-                ? _
-                : (null == _ ? void 0 : _.visible) &&
-                    14 !== (null == _ ? void 0 : _.type)
-                  ? _
-                  : void 0;
+          const _ = _(),
+            { gameURL: _, strName: _, iconURL: _ } = _(_.hrefGame);
           return (0, _.jsxs)(_._, {
             direction: "row",
             gapX: "2",
@@ -1230,11 +1215,7 @@
                 href: _,
                 children: _
                   ? (0, _.jsx)(_._, {
-                      alt:
-                        null !== (_ = null == _ ? void 0 : _.name) &&
-                        void 0 !== _
-                          ? _
-                          : "",
+                      alt: null != _ ? _ : "",
                       src: _,
                       className: _.GameImage,
                     })
@@ -1245,22 +1226,12 @@
               (0, _.jsxs)(_._, {
                 direction: "column",
                 children: [
-                  _
-                    ? (0, _.jsx)(_._, {
-                        href: _,
-                        size: "3",
-                        contrast: "note",
-                        underline: "hover",
-                        children: null == _ ? void 0 : _.name,
-                      })
-                    : (0, _.jsx)(_._, {
-                        size: "3",
-                        contrast: "note",
-                        children: null == _ ? void 0 : _.name,
-                      }),
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
                   (0, _.jsx)(_._, {
                     size: "3",
-                    contrast: "note",
+                    contrast: "description",
                     children: _.type,
                   }),
                 ],
@@ -1268,12 +1239,13 @@
             ],
           });
         },
+        GameName: _,
         Descriptions: function () {
           const _ = _();
           return (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(_, {
               description: _,
-              contrast: "description",
+              contrast: "body",
               size: "3",
             }),
           });
@@ -1294,7 +1266,7 @@
           return (0, _.jsx)(_, {
             description: _,
             type: "owner_descriptions",
-            contrast: "description",
+            contrast: "body",
             size: "3",
           });
         },
@@ -1408,6 +1380,44 @@
           }),
         });
       }, _);
+      function _(_) {
+        const _ = _().appid,
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          { data: _ } = (0, _._)({
+            appid: _,
+          }),
+          _ = _ && _.community_icon ? (0, _._)(_, "community_icon") : void 0,
+          _ = (0, _._)(_);
+        return {
+          gameURL:
+            null != _
+              ? _
+              : (null == _ ? void 0 : _.visible) &&
+                  14 !== (null == _ ? void 0 : _.type)
+                ? _
+                : void 0,
+          iconURL: _,
+          strName: null == _ ? void 0 : _.name,
+        };
+      }
+      function _(_) {
+        const { gameURL: _, strName: _ } = _(_.hrefGame);
+        return _
+          ? (0, _.jsx)(_._, {
+              href: _,
+              size: "3",
+              contrast: "description",
+              underline: "hover",
+              children: _,
+            })
+          : (0, _.jsx)(_._, {
+              size: "3",
+              contrast: "description",
+              children: _,
+            });
+      }
       function _(_) {
         const { children: _, href: _ } = _;
         return _
@@ -2158,6 +2168,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { onTextChange: _, suggestions: _, onSuggestionSelected: _ } = _,
@@ -2310,7 +2321,6 @@
         return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -3464,10 +3474,11 @@
             );
         }
       }
-      function _(_, _, _, _) {
+      function _(_, _, _, _, _) {
         var _, _, _;
         let _ = [],
-          _ = 0;
+          _ = 0,
+          _ = 2;
         const _ = {},
           _ = _.tags || {};
         for (const _ of Object.keys(_)) {
@@ -3481,18 +3492,37 @@
             (_ += null != _ ? _ : 0);
           const _ = _(_.name, _, _[_], _);
           if (_)
-            if (_[_.strLabel]) {
-              const _ = _[_.strLabel],
-                _ = "string" == typeof _.tag ? [_.tag] : _.tag,
-                _ = "string" == typeof _.tag ? [_.tag] : _.tag;
-              (_.tag = _.concat(..._)),
-                void 0 !== _.matches &&
+            if (_[_.strLabel])
+              if (_) {
+                const _ = _[_.strLabel],
+                  _ = "string" == typeof _.tag ? [_.tag] : _.tag,
+                  _ = "string" == typeof _.tag ? [_.tag] : _.tag;
+                (_.tag = _.concat(..._)),
                   void 0 !== _.matches &&
-                  (_.matches =
-                    (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) +
-                    (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)),
-                void 0 === _.color && _.color && (_.color = _.color);
-            } else _.push(_), (_[_.strLabel] = _);
+                    void 0 !== _.matches &&
+                    (_.matches =
+                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) +
+                      (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)),
+                  void 0 === _.color && _.color && (_.color = _.color);
+              } else {
+                let _;
+                do {
+                  (_ = `${_.strLabel} (?${_}?)`), _++;
+                } while (_[_]);
+                (0, _._)(
+                  !1,
+                  "Forced to assign a unique label to option",
+                  _,
+                  _,
+                  _[_.strLabel],
+                );
+                const _ = {
+                  ..._,
+                  strLabel: _,
+                };
+                _.push(_), (_[_.strLabel] = _);
+              }
+            else _.push(_), (_[_.strLabel] = _);
         }
         if (_) _.sort(_);
         else {
@@ -4838,127 +4868,6 @@
         },
       };
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { matches: _, children: _ } = _;
-        return (0, _.jsx)(_._, {
-          gap: "2",
-          align: "center",
-          children: (0, _.jsxs)(_._, {
-            children: [
-              _,
-              " ",
-              void 0 !== _ && _ >= 1
-                ? (0, _.jsxs)(_._, {
-                    contrast: "description",
-                    children: ["(", Intl.NumberFormat().format(_), ")"],
-                  })
-                : void 0,
-            ],
-          }),
-        });
-      }
-      const _ = (_) =>
-        `min( calc( ${_.unAvailableHeight}px - ${_.gutter} ), 500px )`;
-      function _(_) {
-        const {
-            facets: _,
-            localized_type: _,
-            internal_type: _,
-            value: _ = {},
-            onChange: _,
-          } = _,
-          _ = (0, _.useMemo)(
-            () => _.filter((_) => _[_] && _[_][_.localized_facet]),
-            [_, _, _],
-          ),
-          _ = _({
-            rgOptions: _,
-            selectedValue: _,
-            onSelectionChange: (_) => _(_, _),
-            filter: (_, _) =>
-              _ &&
-              _.localized_facet
-                .toLocaleLowerCase()
-                .includes(_.toLocaleLowerCase()),
-            filterPlaceholder: _.Localize(
-              "#AdvancedSearch_FilterGeneric_Placeholder",
-            ),
-          }),
-          _ = _.length > 0;
-        return (0, _.jsxs)(_.Root, {
-          state: _,
-          variant: "highlight",
-          radius: "sm",
-          clearable: !0,
-          popoverMaxHeight: _,
-          children: [
-            (0, _.jsxs)(_.Trigger, {
-              children: [
-                !_ &&
-                  (0, _.jsx)(_.Value, {
-                    children: _.Localize(
-                      "#AccessorySearch_AttachedAccessoryType",
-                      _,
-                    ),
-                  }),
-                _ &&
-                  (0, _.jsxs)(_.Value, {
-                    children: [
-                      _.Localize("#AccessorySearch_AttachedAccessoryType", _),
-                      ": ",
-                      (0, _.jsx)(_._, {
-                        color: "accent-8",
-                        children:
-                          ((_ = _), _.map((_) => _.localized_facet).join(", ")),
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-            (0, _.jsx)(_.VirtualizedOptions, {
-              estimateSize: () => 36,
-              items: _.rgFilteredOptions,
-              renderItem: (_, _) =>
-                (0, _.jsx)(
-                  _.VirtualizedOption,
-                  {
-                    value: _,
-                    virtualItem: _,
-                    children: (0, _.jsx)(_, {
-                      matches: void 0,
-                      children: _.localized_facet,
-                    }),
-                  },
-                  _.localized_facet,
-                ),
-            }),
-          ],
-        });
-        var _;
-      }
-      function _(_) {
-        const { facet: _, state: _, onStateChange: _ } = _;
-        return (0, _.jsx)(_, {
-          ..._,
-          value: _.accessories,
-          onChange: (_ = [], _ = []) => {
-            let _ = {
-              ..._.accessories,
-            };
-            _.length > 0
-              ? ((_[_.internal_type] = {}),
-                _.forEach((_) => {
-                  _[_.internal_type][_.localized_facet] = !0;
-                }))
-              : delete _[_.internal_type];
-            const _ = {
-              ..._,
-              accessories: _,
-            };
-            _(_, !0);
-          },
-        });
-      }
       const _ = [
           "weapon_knife_push",
           "weapon_knife_survival_bowie",
@@ -5378,21 +5287,6 @@
           },
         ];
       const _ = {
-          facet: "",
-          trigger: [
-            {
-              facet: "Weapon",
-            },
-            {
-              facet: "Type",
-              tag: _,
-            },
-            {
-              facet: "ItemSet",
-            },
-          ],
-        },
-        _ = {
           Exterior: [
             "WearCategory0",
             "WearCategory1",
@@ -5558,7 +5452,7 @@
             });
           } else {
             const _ = _[_.facet],
-              _ = _(_, "select");
+              _ = _(_, "select", !1);
             (0, _._)(
               _.rgOptions.every((_) => "string" == typeof _.tag),
               `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${_.strLabel}" facet.`,
@@ -5713,7 +5607,7 @@
                       : _ - _;
               };
             }
-            const _ = _(_, "select", _);
+            const _ = _(_, "select", !1, _);
             if (!_) return null;
             return {
               facet: _,
@@ -5758,7 +5652,7 @@
           : (console.error("Could not find tag for label!", _), _.tag);
       }
       function _(_) {
-        const { facets: _, accessories: _, minWidth: _, mini: _, ..._ } = _,
+        const { facets: _, minWidth: _, mini: _, ..._ } = _,
           { state: _, onStateChange: _ } = _,
           {
             rgGroups: _,
@@ -5767,8 +5661,7 @@
             otherFacet: _,
             rgFacetsWithCustomDisplay: _,
           } = (0, _.useMemo)(() => _(_.facets), [_.facets]),
-          [_, _] = (0, _.useState)(() => _.filter((_) => _.condition(_))),
-          _ = (0, _.useMemo)(() => _(_.trigger), []);
+          [_, _] = (0, _.useState)(() => _.filter((_) => _.condition(_)));
         (0, _.useEffect)(() => {
           let _ = null;
           const _ = _.filter((_) => _.condition(_)),
@@ -5964,32 +5857,19 @@
                 (0, _.jsx)(_, {
                   ..._,
                 }),
-                (0, _.jsxs)(_._, {
+                (0, _.jsx)(_._, {
                   gap: "2",
                   direction: "column",
-                  children: [
-                    _.map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          facet: _.facet,
-                          ..._,
-                        },
-                        _.facet.strLabel,
-                      ),
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        facet: _.facet,
+                        ..._,
+                      },
+                      _.facet.strLabel,
                     ),
-                    _(_) &&
-                      __webpack_require__.map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            facet: _,
-                            ..._,
-                          },
-                          _.internal_type,
-                        ),
-                      ),
-                  ],
+                  ),
                 }),
               ],
             }),
@@ -6547,7 +6427,7 @@
           const _ = _[_];
           if (!_.tags) continue;
           const _ = Object.keys(_.tags).length < _,
-            _ = _(_, _ ? "checkbox" : "select", void 0, _);
+            _ = _(_, _ ? "checkbox" : "select", !0, void 0, _);
           _ && (_ ? _.push(_) : _.push(_));
         }
         return [_, _].filter((_) => _.length > 0);
@@ -6853,9 +6733,12 @@
                                 title: _.Localize(
                                   "#AdvancedSearch_IncludeDescriptions_Tooltip",
                                 ),
-                                children: _.Localize(
-                                  "#AdvancedSearch_IncludeDescriptions",
-                                ),
+                                children: (0, _.jsx)(_._, {
+                                  contrast: "description",
+                                  children: _.Localize(
+                                    "#AdvancedSearch_IncludeDescriptions",
+                                  ),
+                                }),
                               }),
                           ],
                         }),
@@ -6912,13 +6795,19 @@
             0 !== _.price[0] ||
             _.price[1] !== _.maxPrice ||
             Object.keys(_.facets).length > 0,
+          _ =
+            !_.strSearch &&
+            !_.app &&
+            !Object.keys(_.facets).length &&
+            0 === _.price[0] &&
+            _.price[1] === _.maxPrice,
           _ = (0, _._)("sm"),
           _ = (0, _.jsx)(_._, {
             type: "submit",
             onClick: () => {
               _(!0), _(_, _);
             },
-            disabled: _,
+            disabled: _ || _,
             children: _.Localize("#AdvancedSearch_Search"),
           });
         return (0, _.jsxs)(_._, {
@@ -7010,7 +6899,7 @@
         });
       }
       function _(_) {
-        var _, _, _;
+        var _, _;
         const {
             value: _,
             onTextChange: _,
@@ -7034,17 +6923,17 @@
             enabled: _,
             staleTime: _ ? 0 : 1 / 0,
           }),
-          _ = (
-            (null === (_ = _.data) || void 0 === _ ? void 0 : _.results) || []
-          ).map((_) => _.market_hash_name),
           _ = (null === (_ = _.data) || void 0 === _ ? void 0 : _.apps) || [],
           _ = (
             (null === (_ = _.data) || void 0 === _ ? void 0 : _.results) || []
           ).slice(0, 10),
           _ = _({
             onTextChange: _,
-            suggestions: _,
+            suggestions: _.map((_) => `app|${_.appid}`).concat(
+              _.map((_) => `item|${_.market_hash_name}`),
+            ),
             onSuggestionSelected: (_, _) => {
+              _.preventDefault();
               const _ = _.indexOf("|");
               if (-1 === _) return;
               const _ = _.slice(0, _),
@@ -7052,11 +6941,10 @@
               if ("item" === _) {
                 const _ = _.find((_) => _.market_hash_name === _);
                 _ &&
-                  ((window.location.href = _._.Item(
+                  (window.location.href = _._.Item(
                     _.app_id,
                     _.market_hash_name,
-                  )),
-                  _.preventDefault());
+                  ));
               } else if ("app" === _) {
                 const _ = _.find((_) => _.appid === Number(_));
                 _ &&
@@ -7168,13 +7056,21 @@
         });
       }
       function _(_) {
-        const { name: _, hashName: _, img: _, appName: _, searchScore: _ } = _,
+        const {
+            name: _,
+            hashName: _,
+            img: _,
+            appName: _,
+            searchScore: _,
+            appid: _,
+          } = _,
           _ = (0, _._)();
         return (0, _.jsxs)(_.Suggestion, {
           value: `item|${_}`,
           render: (_, _) =>
             (0, _.jsx)(_, {
               focused: _.focused,
+              link: _._.Item(_, _),
               ..._,
             }),
           children: [
@@ -7228,6 +7124,9 @@
           render: (_, _) =>
             (0, _.jsx)(_, {
               focused: _.focused,
+              link: _._.Search({
+                search: `appid=${_}`,
+              }),
               ..._,
             }),
           children: [
@@ -7258,16 +7157,20 @@
         });
       }
       function _(_) {
-        const { focused: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          align: "center",
-          gap: "2",
-          className: _.SearchSuggestion,
-          radius: "sm",
-          margin: "2",
-          "data-focused": _,
-          paddingLeft: "2",
-          ..._,
+        const { focused: _, link: _, ..._ } = _;
+        return (0, _.jsx)("a", {
+          href: _,
+          className: _.UndecoratedLink,
+          children: (0, _.jsx)(_._, {
+            align: "center",
+            gap: "2",
+            className: _.SearchSuggestion,
+            radius: "sm",
+            margin: "2",
+            "data-focused": _,
+            paddingLeft: "2",
+            ..._,
+          }),
         });
       }
       function _(_) {
@@ -7710,39 +7613,9 @@
               queryFn: () => _(_),
               enabled: !!_,
             });
-          })(_),
-          _ = (function (_) {
-            return (0, _._)(
-              (function (_) {
-                return {
-                  queryKey: ["marketaccessories", _],
-                  queryFn: async () => {
-                    const _ = await fetch(
-                      `${_._.COMMUNITY_BASE_URL}market/appaccessories/${_}`,
-                    );
-                    if (!_ || !_._)
-                      throw new Error(
-                        `Failed to load market filters for app ${_}`,
-                      );
-                    const _ = await _.json();
-                    if (!_.success || !_.facets)
-                      throw new Error(
-                        `Loaded malformed market filters for app ${_}`,
-                      );
-                    return _.facets.map((_) => ({
-                      facets: [],
-                      internal_type: "",
-                      localized_type: "",
-                      ..._,
-                    }));
-                  },
-                  enabled: !!_,
-                };
-              })(_),
-            );
           })(_);
-        if (_.isLoading || _.isLoading) return (0, _.jsx)(_, {});
-        if (_.isError || !_.data || _.isError || !_.data)
+        if (_.isLoading) return (0, _.jsx)(_, {});
+        if (_.isError || !_.data)
           return (0, _.jsx)(_, {
             children: (0, _.jsx)(_._, {
               size: "4",
@@ -7759,7 +7632,6 @@
         return (0, _.jsx)(_, {
           appid: _,
           facets: _.data,
-          accessories: _.data,
           ..._,
         });
       }
