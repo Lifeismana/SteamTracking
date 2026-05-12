@@ -724,11 +724,7 @@ html.responsive body.movescrolltocontent {
 		display: none;
 	}
 
-	html.responsive h2.nonresponsive_hidden {
-		display: block;
-	}
-
-	html.responsive div.nonresponsive_hidden {
+	html.responsive .nonresponsive_hidden {
 		display: block;
 	}
 
@@ -785,11 +781,7 @@ html.responsive body.movescrolltocontent {
 		display: none;
 	}
 
-	html.responsive.touch h2.nonresponsive_hidden {
-		display: block;
-	}
-
-	html.responsive.touch div.nonresponsive_hidden {
+	html.responsive.touch .nonresponsive_hidden {
 		display: block;
 	}
 
@@ -963,13 +955,6 @@ html.force_desktop body #footer_responsive_optin_spacer {
         display: none;
     }
 
-
-@media screen and (max-width: 910px)
-{
-
-
-
-}
 
 html.responsive body.OverlayWindowPinned div.responsive_header {
 	display: none;

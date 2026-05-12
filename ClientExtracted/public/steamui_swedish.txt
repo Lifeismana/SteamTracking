@@ -4018,7 +4018,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 
 "SteamUI_ValveSurvey_Summary_Software"	"Installerad programvara:"
 "steam_systeminfo_info"			"Steam har upptäckt följande hård- och programvara i din dator:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Svara gärna på denna korta enkät om du har lite tid till övers. Varje månad samlar Steam in information om vad för sorts maskinvara och programvara som våra kunder använder. Enkätinformationen hjälper oss att säkerställa att vi tar bra beslut gällande vilken teknologi vi bör investera i och vilka produkter vi bör erbjuda.\nInformationen vi samlar in är anonym och kommer inte kopplas till ditt konto."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Svara gärna på denna korta undersökning om du har lite tid till övers. Varje månad samlar Steam in information om vad för sorts maskinvara och programvara som våra kunder använder. Undersökningsinformationen hjälper oss att säkerställa att vi tar bra beslut gällande vilken teknologi vi bör investera i och vilka produkter vi bör erbjuda.\nInformationen vi samlar in är anonym och kommer inte kopplas till ditt konto."
 
 "steam_statuslabel"	"Status"
 

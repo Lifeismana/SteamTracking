@@ -143,6 +143,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _ = _._.LANGUAGE) {
         const _ = (0, _._)(),
@@ -171,7 +172,7 @@
               appid: _,
               language: _,
             });
-            if (!_.BSuccess() && 42 != _.GetEResult())
+            if (!_.BSuccess() && _.GetEResult() != _._)
               throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
             return {
               property_schemas:
@@ -330,7 +331,7 @@
                     _.set_classid(_), _.set_instanceid(_);
                   });
                 const _ = await _(_, _);
-                if (1 != _.GetEResult())
+                if (_.GetEResult() != _._)
                   throw `Error loading econ items: ${_.GetErrorMessage()}`;
                 return null !== (_ = _.Body().toObject().descriptions) &&
                   void 0 !== _
@@ -1069,6 +1070,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         Root: function (_) {
@@ -1395,7 +1397,7 @@
             null != _
               ? _
               : (null == _ ? void 0 : _.visible) &&
-                  14 !== (null == _ ? void 0 : _.type)
+                  (null == _ ? void 0 : _.type) !== _._._
                 ? _
                 : void 0,
           iconURL: _,
@@ -1815,6 +1817,21 @@
           cssProperty: "--object-position",
         },
       ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          ..._,
+          className: _.Skeleton,
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2322,14 +2339,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          ..._,
-          className: _.Skeleton,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4867,7 +4878,8 @@
           });
         },
       };
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = [
           "weapon_knife_push",
           "weapon_knife_survival_bowie",
@@ -5968,6 +5980,7 @@
                   "data-active": !!_,
                   "data-muted": !!_,
                   overflow: "hidden",
+                  minWidth: "0",
                   children: [
                     (0, _.jsx)(_._, {
                       overflow: "hidden",
@@ -6385,7 +6398,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { showSteamItems: _, onShowSteamItemsChange: _ } = _;
@@ -6605,6 +6617,7 @@
             (0, _.jsx)(_._, {
               weight: "medium",
               size: "3",
+              contrast: "title",
               children: _.Localize("#AdvancedSearch_SteamItems_TypeLabel"),
             }),
             (0, _.jsx)(_._, {
@@ -6818,31 +6831,15 @@
           children: [
             _.bNewMarket
               ? (0, _.jsx)("div", {})
-              : (0, _.jsxs)(_._, {
+              : (0, _.jsx)(_._, {
                   gap: "2",
                   align: "center",
                   justify: "between",
-                  children: [
-                    (0, _.jsx)("a", {
-                      href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
-                      className: _.BetaLink,
-                      children: _.Localize("#AdvancedSearch_BetaTag"),
-                    }),
-                    _ &&
-                      (0, _.jsx)(_._, {
-                        size: "1",
-                        orientation: "vertical",
-                        color: "dull-9",
-                      }),
-                    (0, _.jsx)("span", {
-                      onClick: () => {
-                        (0, _._)("marketFiltersBeta", "0", 30),
-                          window.location.reload();
-                      },
-                      className: _.BetaLink,
-                      children: _.Localize("#AdvancedSearch_Beta_OptOut"),
-                    }),
-                  ],
+                  children: (0, _.jsx)("a", {
+                    href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
+                    className: _.BetaLink,
+                    children: _.Localize("#AdvancedSearch_BetaTag"),
+                  }),
                 }),
             _ &&
               (0, _.jsxs)(_._, {
@@ -7345,7 +7342,7 @@
                   }),
               }),
             (0, _.jsx)(_, {
-              marginTop: _,
+              marginTop: "3",
               facets: _,
               state: _,
               onStateChange: _,
@@ -7375,7 +7372,7 @@
           for (let _ = 0; _ < 20; _++)
             _.push(
               (0, _.jsx)(
-                _,
+                _._,
                 {
                   width: "92px",
                   height: "138px",
@@ -7624,8 +7621,8 @@
           });
         const _ = (function (_) {
           return (function (_) {
-            return 2 === _._.EUNIVERSE ? 710 === _ : 730 === _;
-          })(_) && 1 === _._.EUNIVERSE
+            return _._.EUNIVERSE === _._ ? 710 === _ : 730 === _;
+          })(_) && _._.EUNIVERSE === _.wLO
             ? _
             : _;
         })(_);

@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Rechter JoyCon-Gyroskop (Gieren)"
 	"origin_switch_r_gyro_roll"					"Rechter JoyCon-Gyroskop (Rollen)"
 	"origin_switch_button_dpad_move"			"Steuerkreuzbewegung"
+	"origin_switch_button_gl"					"GL-Taste"
+	"origin_switch_button_gr"					"GR-Taste"
+	"origin_switch_button_button_c"				"C-Taste"
 }

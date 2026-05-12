@@ -10,25 +10,25 @@
       function _(_) {
         switch (null == _ ? void 0 : _.toUpperCase()) {
           case "AE":
-            return _._.k_ECurrencyCodeAED;
+            return _._;
           case "AU":
-            return _._.k_ECurrencyCodeAUD;
+            return _._;
           case "BR":
-            return _._.k_ECurrencyCodeBRL;
+            return _._;
           case "CA":
-            return _._.k_ECurrencyCodeCAD;
+            return _._;
           case "CH":
           case "LI":
-            return _._.k_ECurrencyCodeCHF;
+            return _._;
           case "CL":
-            return _._.k_ECurrencyCodeCLP;
+            return _._;
           case "CN":
           case "XC":
-            return _._.k_ECurrencyCodeCNY;
+            return _._;
           case "CO":
-            return _._.k_ECurrencyCodeCOP;
+            return _._;
           case "CR":
-            return _._.k_ECurrencyCodeCRC;
+            return _._;
           case "AD":
           case "AL":
           case "AT":
@@ -74,57 +74,57 @@
           case "SK":
           case "SM":
           case "VA":
-            return _._.k_ECurrencyCodeEUR;
+            return _._;
           case "GB":
           case "GG":
           case "GS":
           case "IM":
           case "JE":
-            return _._.k_ECurrencyCodeGBP;
+            return _._;
           case "HK":
-            return _._.k_ECurrencyCodeHKD;
+            return _._;
           case "ID":
-            return _._.k_ECurrencyCodeIDR;
+            return _._;
           case "IL":
-            return _._.k_ECurrencyCodeILS;
+            return _._;
           case "IN":
-            return _._.k_ECurrencyCodeINR;
+            return _._;
           case "JP":
-            return _._.k_ECurrencyCodeJPY;
+            return _._;
           case "KR":
-            return _._.k_ECurrencyCodeKRW;
+            return _._;
           case "KW":
-            return _._.k_ECurrencyCodeKWD;
+            return _._;
           case "KZ":
-            return _._.k_ECurrencyCodeKZT;
+            return _._;
           case "MX":
-            return _._.k_ECurrencyCodeMXN;
+            return _._;
           case "MY":
-            return _._.k_ECurrencyCodeMYR;
+            return _._;
           case "NO":
-            return _._.k_ECurrencyCodeNOK;
+            return _._;
           case "NZ":
-            return _._.k_ECurrencyCodeNZD;
+            return _._;
           case "PE":
-            return _._.k_ECurrencyCodePEN;
+            return _._;
           case "PH":
-            return _._.k_ECurrencyCodePHP;
+            return _._;
           case "PL":
-            return _._.k_ECurrencyCodePLN;
+            return _._;
           case "QA":
-            return _._.k_ECurrencyCodeQAR;
+            return _._;
           case "RU":
-            return _._.k_ECurrencyCodeRUB;
+            return _._;
           case "SA":
-            return _._.k_ECurrencyCodeSAR;
+            return _._;
           case "SG":
-            return _._.k_ECurrencyCodeSGD;
+            return _._;
           case "TH":
-            return _._.k_ECurrencyCodeTHB;
+            return _._;
           case "TW":
-            return _._.k_ECurrencyCodeTWD;
+            return _._;
           case "UA":
-            return _._.k_ECurrencyCodeUAH;
+            return _._;
           case "AF":
           case "AG":
           case "AI":
@@ -281,78 +281,119 @@
           case "YT":
           case "ZM":
           case "ZW":
-            return _._.k_ECurrencyCodeUSD;
+            return _._;
           case "UY":
-            return _._.k_ECurrencyCodeUYU;
+            return _._;
           case "VN":
-            return _._.k_ECurrencyCodeVND;
+            return _._;
           case "ZA":
-            return _._.k_ECurrencyCodeZAR;
+            return _._;
           default:
-            return (
-              console.assert(!1, `Unhandled country code: ${_}`),
-              _._.k_ECurrencyCodeUSD
-            );
+            return console.assert(!1, `Unhandled country code: ${_}`), _._;
         }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      var _;
       __webpack_require__._(module_exports, {
         _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
-            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
-            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
-            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
-            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
-            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
-            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
-            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
-            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
-            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
-            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
-            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
-            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
-            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
-            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
-            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
-            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
-            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
-            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
-            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
-            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
-            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
-            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
-            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
-            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
-            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
-            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
-            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
-            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
-            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
-            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
-            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
-            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
-            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
-            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
-            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
-            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
-            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
-            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
-            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
-            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
-            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
-            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
-            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
-            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
-            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
-            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
-            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
-            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(_ || (_ = {}));
-      _.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS;
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 8,
+        _ = 9,
+        _ = 10,
+        _ = 11,
+        _ = 12,
+        _ = 13,
+        _ = 14,
+        _ = 15,
+        _ = 16,
+        _ = 17,
+        _ = 18,
+        _ = 19,
+        _ = 20,
+        _ = 21,
+        _ = 22,
+        _ = 23,
+        _ = 24,
+        _ = 25,
+        _ = 26,
+        _ = 27,
+        _ = 28,
+        _ = 29,
+        _ = 30,
+        _ = 31,
+        _ = 32,
+        _ = 33,
+        _ = 34,
+        _ = 35,
+        _ = 36,
+        _ = 37,
+        _ = 38,
+        _ = 39,
+        _ = 40,
+        _ = 41,
+        _ = 42,
+        _ = 43,
+        _ = 44,
+        _ = 45,
+        _ = 46,
+        _ = 47,
+        _ = 48;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {

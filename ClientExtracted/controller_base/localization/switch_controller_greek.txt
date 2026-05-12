@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Εκτροπή δεξιού γυροσκοπίου Joy-Con"
 	"origin_switch_r_gyro_roll"					"Στροφή δεξιού γυροσκοπίου Joy-Con"
 	"origin_switch_button_dpad_move"			"Κίνηση D-Pad"
+	"origin_switch_button_gl"					"Κουμπί GL"
+	"origin_switch_button_gr"					"Κουμπί GR"
+	"origin_switch_button_button_c"				"Κουμπί C"
 }

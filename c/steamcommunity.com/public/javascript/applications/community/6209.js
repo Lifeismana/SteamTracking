@@ -20,6 +20,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "23B7-49AD-4A28-9590";
       class _ {
@@ -142,27 +143,27 @@
             _ = _.Body().timeline_id(),
             _ = _.Body().game_id();
           switch (_) {
-            case 1:
-            case 4: {
+            case _._._:
+            case _._._: {
               let _ = this.GetTimelineLoaderForGame(_);
               this.m_mapActiveTimelines.set(_, _),
                 _.loader.AddRunningTimeline(_, _, _.Body().start_time());
               break;
             }
-            case 2: {
+            case _._._: {
               let _ = this.m_mapActiveTimelines.get(_);
               _ &&
                 (_.loader.RunningTimelineStopped(_, _.Body().duration_ms()),
                 _.release());
               break;
             }
-            case 3: {
+            case _._._: {
               let _ = this.m_mapTimelineLoaders.get(_);
               _ && _.loader.TimelineDeleted(_);
               break;
             }
           }
-          return 1;
+          return _._;
         }
         OnRecordingSessionChanged(_) {
           const _ = _.Body().toObject(),
@@ -173,16 +174,16 @@
               this.m_mapManualRecordingCallbacks.get(_)(_),
             _)
           ) {
-            case 1:
+            case _._._:
               this.m_recordingState = {
                 m_gameID: _,
               };
               break;
-            case 2:
+            case _._._:
               this.m_recordingState = null;
           }
           let _ = this.m_mapTimelineLoaders.get(_);
-          return _ ? (_.loader.RecordingSessionChanged(_), 1) : 1;
+          return _ ? (_.loader.RecordingSessionChanged(_), _._) : _._;
         }
         OnTimelineEntryChanged(_) {
           if (!_.Body().entry(!1))
@@ -191,7 +192,7 @@
                 !1,
                 "OnTimelineEntryChanged received an invalid protobuf",
               ),
-              1
+              _._
             );
           const { entry: _ } = _.Body().toObject();
           if (!_)
@@ -200,13 +201,13 @@
                 !1,
                 "OnTimelineEntryChanged received an invalid protobuf after conversion",
               ),
-              1
+              _._
             );
           const _ = this.m_mapActiveTimelines.get(_.timeline_id);
           if (_) {
             const _ = _.loader;
             if (_.BIsTimelineRunning(_.timeline_id))
-              return _.AddRunningTimelineEntry(_), 1;
+              return _.AddRunningTimelineEntry(_), _._;
           }
           if (_.Body().game_id()) {
             let _ = this.m_mapTimelineLoaders.get(_.Body().game_id());
@@ -222,11 +223,11 @@
                   _.marker_description,
                   parseInt(_.range_duration),
                 ),
-                1
+                _._
               );
             }
           }
-          return 1;
+          return _._;
         }
         OnTimelineEntryRemoved(_) {
           const {
@@ -240,12 +241,12 @@
               _.loader.RemoveTimelineEvent(_, _);
             }
           }
-          return 1;
+          return _._;
         }
         OnClipCreated(_) {
           const _ = _.Body().summary().toObject();
           return (
-            this.InternalAddClipSummary(_), (0, _._)("New clip saved:", _), 1
+            this.InternalAddClipSummary(_), (0, _._)("New clip saved:", _), _._
           );
         }
         async UploadClip(_, _, _, _) {
@@ -256,7 +257,7 @@
             visibility: _,
           });
           let _;
-          if (1 == _.GetEResult()) {
+          if (_.GetEResult() == _._) {
             const _ = _.Body().summary().toObject();
             this.InternalAddClipSummary(_),
               (_ = `${_._.COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${_.published_file_id}`);
@@ -291,10 +292,14 @@
           let _ = _.Body().game_id();
           (function (_, _) {
             switch (_) {
-              case 1:
+              case _._._:
                 return !_;
-              case 3:
+              case _._._:
                 return _;
+              case _._._:
+              case _._._:
+              case _._._:
+              case _._._:
               default:
                 return !0;
             }
@@ -330,7 +335,7 @@
             temporary: _,
             force_thumbnail: _,
           });
-          if (1 == _.GetEResult()) {
+          if (_.GetEResult() == _._) {
             const _ = _.Body().summary().toObject();
             return (
               this.InternalAddClipSummary(_),
@@ -338,7 +343,7 @@
               (this.m_strLastClipID = _.clip_id),
               {
                 clipSummary: _,
-                result: 1,
+                result: _._,
               }
             );
           }
@@ -353,7 +358,7 @@
           const _ = await _._.DeleteClip({
             clip_id: _,
           });
-          if (1 == _.GetEResult()) {
+          if (_.GetEResult() == _._) {
             const _ = this.m_clips.get(_);
             this.m_clips.delete(_);
             let _ = this.m_clipsGroupByGame.get(_.game_id),
@@ -365,12 +370,12 @@
         async ExportClip(_, _, _, _) {
           if (this.m_currentlyExportingClip)
             return (
-              (0, _._)("Export in progress, cannot start another one", _), 10
+              (0, _._)("Export in progress, cannot start another one", _), _._
             );
           this.m_clipExportProgress.set(_, {
             exportPath: _,
             progress: 0,
-            resultStatus: 22,
+            resultStatus: _._,
           }),
             (this.m_currentlyExportingClip = _);
           const _ = await _._.ExportClip({
@@ -380,13 +385,13 @@
             use_unique_filename: _,
           });
           return (
-            1 === _.GetEResult()
+            _.GetEResult() === _._
               ? ((0, _._)(`Exporting clip ${_} to ${_}`),
                 (this.m_currentlyExportingClip = null),
                 this.m_clipExportProgress.set(_, {
                   exportPath: _,
                   progress: 1,
-                  resultStatus: 1,
+                  resultStatus: _._,
                 }))
               : (this.m_clipExportProgress.set(_, {
                   exportPath: _,
@@ -420,13 +425,13 @@
                   ..._,
                   progress: _.Body().progress(),
                 }),
-                1)
-              : 1 === _.Body().progress() && 1 === _
+                _._)
+              : 1 === _.Body().progress() && _ === _._
                 ? ((this.m_currentlyExportingClip = null),
                   this.m_clipExportProgress.set(_, {
                     ..._,
                     progress: _.Body().progress(),
-                    resultStatus: 1,
+                    resultStatus: _._,
                   }),
                   _)
                 : ((this.m_currentlyExportingClip = null),
@@ -437,7 +442,7 @@
                   }),
                   _);
           }
-          return 8;
+          return _._;
         }
         GetClipExportProgress(_) {
           return this.m_clipExportProgress.get(_);
@@ -452,11 +457,11 @@
             timeline_offset_ms: Math.floor(_).toString(),
             source_clip_id: _,
           });
-          if (1 == _.GetEResult()) {
+          if (_.GetEResult() == _._) {
             _.Body().toObject();
             return {
               handle: parseInt(_.Body().screenshot_id()),
-              result: 1,
+              result: _._,
             };
           }
           return (
@@ -567,7 +572,7 @@
             entry: _,
           });
           return (
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? (0, _._)("User Marker Created: ", _)
               : (0, _._)(
                   `Failed to create User Marker at ${_.time} for game ${_} with error code ${_.GetEResult()}`,
@@ -585,7 +590,7 @@
             entry: _,
           });
           return (
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? (0, _._)("User Marker Updated: ", _)
               : (0, _._)(
                   `Failed to Update existing User Marker ${_.entry_id} at ${_.time} time under timeline ${_.timeline_id} for game ${_} with error code ${_.GetEResult()}`,
@@ -601,7 +606,7 @@
             timeline_id: _,
           });
           return (
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? (0, _._)("User Marker remove at " + _)
               : (0, _._)(
                   `Failed to remove User Marker id ${_} for game ${_} on timeline ${_} with error code ${_.GetEResult()}`,
@@ -617,7 +622,7 @@
               timeline_id: _,
               start_offset_us: _.map((_) => Math.floor(_).toString()),
               major_axis: _,
-              time_precision: _ ? 0 : 1,
+              time_precision: _ ? _._._ : _._._,
             })
           )
             .Body()
@@ -643,7 +648,7 @@
           });
         }
         async GetTotalDiskSpaceUsage(_, _) {
-          const _ = _ ? 0 : 1,
+          const _ = _ ? _._._ : _._._,
             _ = await _._.GetTotalDiskSpaceUsage({
               folder_path: _,
               type: _,
@@ -689,7 +694,7 @@
           return this.m_bEnoughDiskSpace;
         }
         OnLowDiskSpace(_) {
-          return (this.m_bEnoughDiskSpace = !1), 1;
+          return (this.m_bEnoughDiskSpace = !1), _._;
         }
         async CheckEnoughDiskSpace() {
           const _ = await _._.GetEnoughDiskSpace({});

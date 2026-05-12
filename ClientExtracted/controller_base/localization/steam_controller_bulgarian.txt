@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Наклон на жироскопа"
 	"origin_SteamDeck_Gyro_Yaw"					"Ъглово завъртане на жироскопа"
 	"origin_SteamDeck_Gyro_Roll"				"Преобръщане на жироскопа"
+	"origin_SteamDeck_LGrip"					"Допир на левия захват"
+	"origin_SteamDeck_RGrip"					"Допир на десния захват"
 
 	"origin_horipad_m1"							"Бутон M1"
 	"origin_horipad_m2"							"Бутон M2"

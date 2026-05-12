@@ -7,8 +7,21 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+      const _ = 1,
+        _ = 2,
+        _ = 4,
+        _ = 1073741824;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
@@ -43,7 +56,7 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return 4 == this.apptype || 2 == this.apptype;
+          return this.apptype == _._ || this.apptype == _._;
         }
         BuildAppURL(_, _) {
           return _
@@ -63,7 +76,7 @@
             (this.m_eAppType = _.app_type());
         }
         DeserializeFromAppOverview(_) {
-          _.icon_hash() && 1073741824 != _.app_type()
+          _.icon_hash() && _.app_type() != _._
             ? ((this.m_bInitialized = !0),
               (this.m_strName = _.display_name()),
               (this.m_strIconURL = _.icon_hash()),
@@ -104,6 +117,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -179,7 +193,7 @@
               "Fallback:",
               _,
             ),
-          _ && 1 != _._.EUNIVERSE)
+          _ && _._.EUNIVERSE != _.wLO)
         )
           return _;
         return _;
@@ -288,7 +302,7 @@
                 ? void 0
                 : _.WaitUntilLoggedOn());
             let _ = _._.Init(_._);
-            _.Body().set_language((0, _._)(_._.LANGUAGE));
+            _.Body().set_language((0, _.sfN)(_._.LANGUAGE));
             const _ = 50;
             for (; _.length > 0; ) {
               const _ = Math.min(_, _.length),
@@ -298,7 +312,7 @@
                 this.m_CMInterface.GetServiceTransport(),
                 _,
               );
-              1 == _.GetEResult()
+              _.GetEResult() == _._
                 ? this.OnGetAppsResponse(_)
                 : console.error(
                     `Error when calling CommunityService.GetApps: EResult=${_.GetEResult()}, AppIDs:`,
@@ -412,7 +426,7 @@
           const _ = this.GetRichPresenceLoc(_);
           return _
             ? _.Localize(_, _)
-            : 1 != _._.EUNIVERSE
+            : _._.EUNIVERSE != _.wLO
               ? (console.log(
                   `Unable to find app localization information for app ${_} token ${_}, this may not have had a chance to load yet`,
                 ),
@@ -471,7 +485,7 @@
                 .then(
                   (_) => (
                     (_.m_fetching = null),
-                    1 != _.GetEResult()
+                    _.GetEResult() != _._
                       ? Promise.reject()
                       : (this.OnRichPresenceLocUpdate(
                           _,

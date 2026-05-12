@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Тангаж гіроскопа"
 	"origin_SteamDeck_Gyro_Yaw"					"Рискання гіроскопа"
 	"origin_SteamDeck_Gyro_Roll"				"Крен гіроскопа"
+	"origin_SteamDeck_LGrip"					"Дотик до лівого хвату"
+	"origin_SteamDeck_RGrip"					"Дотик до правого хвату"
 
 	"origin_horipad_m1"							"Кнопка M1"
 	"origin_horipad_m2"							"Кнопка M2"

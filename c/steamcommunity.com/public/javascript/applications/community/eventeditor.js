@@ -654,14 +654,14 @@
         let _ = new _._();
         if (_) {
           let _ = _.GetEventModel();
-          for (let _ = 0; _ < 31; ++_)
-            (_.BHasLanguageTitle(_) || 0 == _) &&
+          for (let _ = _.Bhc; _ < _.bP9; ++_)
+            (_.BHasLanguageTitle(_) || _ == _.Bhc) &&
               _.SetLocalization("title", _, _.GetName(_)),
-              (_.BHasSubTitle(_) || 0 == _) &&
+              (_.BHasSubTitle(_) || _ == _.Bhc) &&
                 _.SetLocalization("subtitle", _, _.GetSubTitle(_)),
-              (_.BHasLanguageDescription(_) || 0 == _) &&
+              (_.BHasLanguageDescription(_) || _ == _.Bhc) &&
                 _.SetLocalization("body", _, _.GetDescription(_)),
-              (_.BHasSummary(_) || 0 == _) &&
+              (_.BHasSummary(_) || _ == _.Bhc) &&
                 _.SetLocalization("summary", _, _.GetSummary(_)),
               _.GetEventModel().jsondata.meet_steam_groups &&
                 _.GetEventModel().jsondata.meet_steam_groups.forEach((_) => {
@@ -714,13 +714,13 @@
           const _ = _.GetEmailSettings();
           if (_._.IS_VALVE_GROUP) {
             let _ = new _._(_.GetEmailSettings());
-            for (let _ = 0; _ < 31; ++_)
+            for (let _ = _.Bhc; _ < _.bP9; ++_)
               _.BHasLocalizedSubject(_) &&
                 _.SetLocalization(_, _, _.GetLocalizedSubject(_));
           }
           _.sections.forEach((_, _) => {
             let _ = new _._(_);
-            for (let _ = 0; _ < 31; ++_)
+            for (let _ = _.Bhc; _ < _.bP9; ++_)
               __webpack_require__.BHasHeadlineInLanguage(_) &&
                 _.SetLocalization(_ + _, _, __webpack_require__.GetHeadline(_)),
                 __webpack_require__.BHasBodyInLanguage(_) &&
@@ -735,7 +735,7 @@
             ? void 0
             : _.length) > 0
         )
-          for (let _ = 0; _ < 31; ++_)
+          for (let _ = _.Bhc; _ < _.bP9; ++_)
             if (Boolean(_._.Get(_.localized_broadcast_title, _))) {
               const _ = _.localized_broadcast_title[_];
               _.SetLocalization(_, _, _);
@@ -746,7 +746,7 @@
               0 &&
             _.user_polls.forEach((_) => {
               var _;
-              for (let _ = 0; _ < 31; ++_)
+              for (let _ = _.Bhc; _ < _.bP9; ++_)
                 _.localized_poll_description &&
                   Boolean(_._.Get(_.localized_poll_description, _)) &&
                   _.SetLocalization(
@@ -774,7 +774,7 @@
               ? void 0
               : _.length
           )
-            for (let _ = 0; _ < 31; ++_)
+            for (let _ = _.Bhc; _ < _.bP9; ++_)
               _.sale_presenters.forEach((_) => {
                 if (Boolean(_._.Get(_.localized_presenter_name, _))) {
                   const _ = _.localized_presenter_name[_];
@@ -798,7 +798,7 @@
                 );
               })
               .map((_) => {
-                for (let _ = 0; _ < 31; ++_)
+                for (let _ = _.Bhc; _ < _.bP9; ++_)
                   _.localized_sub_menu_name &&
                     Boolean(_._.Get(_.localized_sub_menu_name, _)) &&
                     _.SetLocalization(
@@ -832,7 +832,7 @@
                   _,
                   _;
                 const _ = _.GetSaleSectionIndexByID(_.unique_id);
-                for (let _ = 0; _ < 31; ++_) {
+                for (let _ = _.Bhc; _ < _.bP9; ++_) {
                   if (
                     (_.BHasSaleSectionLabelLocalization(_, _) &&
                       _.SetLocalization(
@@ -2493,7 +2493,7 @@
         }
         GetLocalizationFilePrefix() {
           const { editModel: _ } = this.props;
-          let _ = _.GetName(0);
+          let _ = _.GetName(_.Bhc);
           return (_ && "" != _.trim()) || (_ = "event"), _;
         }
         GetLocalizationModel() {
@@ -2683,8 +2683,8 @@
               _ = __webpack_require__.GetLanguagesWithTokens();
             _.length > 1
               ? (_.sort((_, _) =>
-                  (0, _._)("#Language_" + (0, _._)(_)).localeCompare(
-                    (0, _._)("#Language_" + (0, _._)(_)),
+                  (0, _._)("#Language_" + (0, _.LgB)(_)).localeCompare(
+                    (0, _._)("#Language_" + (0, _.LgB)(_)),
                   ),
                 ),
                 (0, _._)(
@@ -2732,7 +2732,7 @@
       }
       function _(_) {
         const { langs: _, locData: _, closeModal: _, fnOnGotoPage: _ } = _,
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           [_, _] = _.useState(new Set(_.filter((_) => _ != _)));
         return (0, _.jsxs)(_._, {
           strTitle: (0, _._)("#Button_Clone"),
@@ -2758,7 +2758,7 @@
                         : __webpack_require__.add(_),
                         _(_);
                     },
-                    label: (0, _._)("#Language_" + (0, _._)(_)),
+                    label: (0, _._)("#Language_" + (0, _.LgB)(_)),
                     checked: !_.has(_),
                   },
                   _,
@@ -2785,6 +2785,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -2793,9 +2794,9 @@
         if (
           !(function (_) {
             switch (_) {
-              case 12:
-              case 13:
-              case 14:
+              case _.Fwr:
+              case _._:
+              case _.zeJ:
                 return !0;
             }
             return !1;
@@ -2884,11 +2885,10 @@
                       var _;
                       if (!_.token.reason) {
                         const _ =
-                          1 ==
                           (null === (_ = null == _ ? void 0 : _.data) ||
                           void 0 === _
                             ? void 0
-                            : _.success);
+                            : _.success) == _._;
                         __webpack_require__(
                           _
                             ? _.data.branches.sort((_, _) => _.date - _.date)
@@ -3045,8 +3045,9 @@
                     this.state.redirectTarget,
                 );
             }
-          let _ = (0, _._)(_._.LANGUAGE);
-          _.BIsLanguageValidForRealms(_) || (_ = _.BInRealmGlobal() ? 0 : 29);
+          let _ = (0, _.sfN)(_._.LANGUAGE);
+          _.BIsLanguageValidForRealms(_) ||
+            (_ = _.BInRealmGlobal() ? _.Bhc : _.ZLm);
           let _ = [_.GetImageURLWithFallback("capsule", _)],
             _ = _.GetNameWithFallback(_);
           const _ = _.BHasSubTitle(_),
@@ -3543,7 +3544,7 @@
               !_ || _.every((_) => null != _),
               "draftClanEvents has a null event",
             );
-            const _ = (_) => _ || 36 != _.GetEventType(),
+            const _ = (_) => _ || _.GetEventType() != _.ajI,
               _ = new Map(),
               _ =
                 null == _
@@ -3592,7 +3593,7 @@
                   !(
                     Boolean(_) &&
                     !(null ===
-                      (_ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE))) ||
+                      (_ = _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE))) ||
                     void 0 === _
                       ? void 0
                       : __webpack_require__.toLocaleLowerCase().includes(_))
@@ -3961,6 +3962,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor() {
@@ -3980,7 +3982,7 @@
           const { mode: _ } = this.props;
           if ("view" === _) {
             let _ = _._.GetEditModel().GetEventModel(),
-              _ = (0, _._)(_._.LANGUAGE);
+              _ = (0, _.sfN)(_._.LANGUAGE);
             return _.BHasSaleEnabled()
               ? (0, _.jsx)(_._, {
                   children: (0, _.jsx)(_._, {
@@ -4001,7 +4003,7 @@
                     }),
                     otherEventRow: (0, _.jsx)(_._, {
                       clanAccountID: _.clanSteamID.GetAccountID(),
-                      trackingLocation: 6,
+                      trackingLocation: _._._,
                       gidAnnouncement: _.AnnouncementGID,
                       partnerEventStore: _._,
                       bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
@@ -4023,7 +4025,51 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _, _;
+      !(function (_) {
+        (_[(_.k_EClanAccountTypePrivate = 0)] = "k_EClanAccountTypePrivate"),
+          (_[(_.k_EClanAccountTypePublic = 1)] = "k_EClanAccountTypePublic"),
+          (_[(_.k_EClanAccountTypeLocked = 2)] = "k_EClanAccountTypeLocked"),
+          (_[(_.k_EClanAccountTypeDisabled = 3)] =
+            "k_EClanAccountTypeDisabled"),
+          (_[(_.k_EClanAccountTypeOfficial = 4)] =
+            "k_EClanAccountTypeOfficial"),
+          (_[(_.k_EClanAccountTypeDeleted = 5)] = "k_EClanAccountTypeDeleted"),
+          (_[(_.k_EClanAccountTypeValveOfficial = 6)] =
+            "k_EClanAccountTypeValveOfficial"),
+          (_[(_.k_EClanAccountTypeInviteOnly = 7)] =
+            "k_EClanAccountTypeInviteOnly");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAMFindAccountTypeInvalid = 0)] =
+            "k_EAMFindAccountTypeInvalid"),
+            (_[(_.k_EAMFindAccountTypeAccountName = 1)] =
+              "k_EAMFindAccountTypeAccountName"),
+            (_[(_.k_EAMFindAccountTypeEmail = 2)] =
+              "k_EAMFindAccountTypeEmail"),
+            (_[(_.k_EAMFindAccountTypePersonaName = 3)] =
+              "k_EAMFindAccountTypePersonaName"),
+            (_[(_.k_EAMFindAccountTypeURL = 4)] = "k_EAMFindAccountTypeURL"),
+            (_[(_.k_EAMFindAccountTypeAllOnline_Obsolete = 5)] =
+              "k_EAMFindAccountTypeAllOnline_Obsolete"),
+            (_[(_.k_EAMFindAccountTypeAll = 6)] = "k_EAMFindAccountTypeAll"),
+            (_[(_.k_EAMFindClanTypeClanName = 7)] =
+              "k_EAMFindClanTypeClanName"),
+            (_[(_.k_EAMFindClanTypeURL = 8)] = "k_EAMFindClanTypeURL"),
+            (_[(_.k_EAMFindClanTypeOfficialURL = 9)] =
+              "k_EAMFindClanTypeOfficialURL"),
+            (_[(_.k_EAMFindClanTypeAppID = 10)] = "k_EAMFindClanTypeAppID"),
+            (_[(_.k_EAMFindCheckAccountNameInUse = 11)] =
+              "k_EAMFindCheckAccountNameInUse"),
+            (_[(_.k_EAMFindCheckEmailAddressInUse = 12)] =
+              "k_EAMFindCheckEmailAddressInUse"),
+            (_[(_.k_EAMNotFindCreateAccount = 13)] =
+              "k_EAMNotFindCreateAccount"),
+            (_[(_.k_EAMFindClanTypeCreatorVanity = 14)] =
+              "k_EAMFindClanTypeCreatorVanity");
+        })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4946,7 +4992,7 @@
             label: (0, _._)(
               _.eLocation,
               _,
-              (0, _._)(_._.LANGUAGE),
+              (0, _.sfN)(_._.LANGUAGE),
               _.GetEventModel(),
               _,
             ),
@@ -5670,7 +5716,7 @@
               _.BHasSomeImage("product_mobile_banner") &&
                 _.GetEventModel().BHasTag("hide_store"),
             ),
-            _ = 36 == _,
+            _ = _ == _.ajI,
             _ = (_, _ = !1) => (0, _._)(_, _),
             _ = (_, _ = !1) => (0, _._)(_, _),
             _ =
@@ -5931,10 +5977,8 @@
               if (
                 !_ ||
                 200 != _.status ||
-                1 !=
-                  (null === (_ = _.data) || void 0 === _
-                    ? void 0
-                    : _.success) ||
+                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) !=
+                  _._ ||
                 !(null === (_ = _.data) || void 0 === _ ? void 0 : _.partners)
               )
                 throw `Load single user partner info failed ${((0, _._))(_).strErrorMsg}`;
@@ -6407,7 +6451,7 @@
                 _.fnSetLoading(!0),
                   _(_)
                     .then((_) => {
-                      1 == _
+                      _ == _._
                         ? _()
                         : (_(),
                           _.fnSetError(!0),
@@ -6454,7 +6498,7 @@
               _(_._.accountid),
               _(_)
                 .then((_) => {
-                  1 == _
+                  _ == _._
                     ? _()
                     : (_(),
                       _.fnSetError(!0),
@@ -6560,13 +6604,13 @@
                       let _ = await _().post(_, _, {
                         withCredentials: !0,
                       });
-                      return _ && 200 == _.status && 1 == _.data.success
+                      return _ && 200 == _.status && _.data.success == _._
                         ? _.data
                         : (console.error(
                             "CreateReviewRequestTicket failed.",
                             _ && (0, _._)(_),
                           ),
-                          29 == _.data.success ? _.data : null);
+                          _.data.success == _._ ? _.data : null);
                     } catch (_) {
                       const _ = (0, _._)(_);
                       console.error(
@@ -6577,7 +6621,7 @@
                     return null;
                   })(_, _, _, _)
                     .then((_) => {
-                      _ && 1 == _.success
+                      _ && _.success == _._
                         ? (_({
                             ..._,
                             strSalePageApprovalHelpTicketReferenceCode:
@@ -6602,7 +6646,7 @@
                               ],
                             }),
                           ))
-                        : 29 == _.success
+                        : _.success == _._
                           ? (_.fnSetError(!0),
                             _.fnSetStrError(
                               (0, _._)(
@@ -6676,7 +6720,7 @@
           _ = Boolean(_);
         return _ ||
           (_ && (!_ || (null == _ ? void 0 : _.length) >= 1)) ||
-          36 == _.GetEventType()
+          _.GetEventType() == _.ajI
           ? (0, _.jsx)(_.Fragment, {
               children: _.children,
             })
@@ -6920,7 +6964,7 @@
               _(_._.accountid),
               _(_)
                 .then((_) => {
-                  1 == _
+                  _ == _._
                     ? _()
                     : (_(),
                       _.fnSetError(!0),
@@ -7147,7 +7191,8 @@
               _.some((_) => {
                 var _;
                 return !(
-                  (null === (_ = _.localized_presenter_name[0]) || void 0 === _
+                  (null === (_ = _.localized_presenter_name[_.Bhc]) ||
+                  void 0 === _
                     ? void 0
                     : _.length) > 0
                 );
@@ -7160,7 +7205,7 @@
           children: [
             (0, _.jsx)(_._, {
               editModel: _,
-              eInitLangLanguage: 0,
+              eInitLangLanguage: _.Bhc,
             }),
             (0, _.jsx)(_._, {
               items: _,
@@ -7186,7 +7231,7 @@
                   ..._,
                   {
                     unique_id: _,
-                    localized_presenter_name: new Array(31),
+                    localized_presenter_name: new Array(_.bP9),
                     url: "",
                   },
                 ]);
@@ -8324,7 +8369,7 @@
               !(null === (_ = _._.GetCreatorHome(_.GetClanSteamID())) ||
               void 0 === _
                 ? void 0
-                : __webpack_require__.BHasClanAccountFlagSet("chunkid")),
+                : __webpack_require__.BHasClanAccountFlagSet(_._._)),
             _ = Math.floor(Date.now() / 1e3),
             _ = new Date();
           _.setHours(10), _.setMinutes(0), _.setSeconds(0);
@@ -8536,7 +8581,7 @@
           _ = !(
             __webpack_require__.BIsSourceEventSaleEnabled() ||
             2 == _ ||
-            (_ && _.BHasClanAccountFlagSet(32)) ||
+            (_ && _.BHasClanAccountFlagSet(_._._)) ||
             _
           ),
           _ = 2 != _;
@@ -8931,7 +8976,7 @@
                         strLabel: (0, _._)(
                           (null === (_ = _.localized_label) || void 0 === _
                             ? void 0
-                            : _[0]) || _.default_label,
+                            : _[_.Bhc]) || _.default_label,
                         ),
                       };
                       __webpack_require__.push(_),
@@ -8949,8 +8994,8 @@
                         type: "section",
                         unique_id: _.unique_id,
                         strLabel: (0, _._)(
-                          (0, _._)(_, _.GetEventModel(), 1) ||
-                            _.localized_label[0] ||
+                          (0, _._)(_, _.GetEventModel(), _._) ||
+                            _.localized_label[_.Bhc] ||
                             _.default_label,
                         ),
                       };
@@ -9171,7 +9216,7 @@
             ),
           );
         });
-        const _ = 36 == _.eventType;
+        const _ = _.eventType == _.ajI;
         return (0, _.jsxs)("div", {
           className: _.TableOfContentsContainer,
           children: [
@@ -9309,7 +9354,7 @@
       }
       function _(_) {
         return (0, _.jsx)(_._, {
-          location: 3,
+          location: _._,
           children: (0, _.jsx)(_, {
             ..._,
           }),
@@ -9324,7 +9369,7 @@
               Boolean(_.GetEventModel().jsondata.sale_sub_menu),
               _.GetEventType(),
             ]),
-            _ = 36 == _,
+            _ = _ == _.ajI,
             _ = (_, _, _, _ = !1, _) => {
               _.push({
                 strLabel: _,
@@ -9566,7 +9611,7 @@
         _.useEffect(() => (_([..._]), () => _(null)), [_]);
         const _ = (0, _._)();
         return (0, _.jsx)(_._, {
-          location: 4,
+          location: _._,
           children: (0, _.jsx)(_._, {
             strTitle: (0, _._)("#Sale_ReorderSections"),
             onOK: () => {
@@ -9781,7 +9826,7 @@
             _ = _.BPublished(),
             _ = _.BUnlisted(),
             _ = _.BVisible(),
-            _ = 36 == _;
+            _ = _ == _.ajI;
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _.EventEditorTopBarContainer,
@@ -9820,7 +9865,7 @@
                       route: _._.k_eCommunityPreview,
                       className: _().EditPreviewButton,
                       children:
-                        28 == _
+                        _ == _.uYK
                           ? (0, _._)("#EventEditor_Preview_News")
                           : (0, _._)("#EventEditor_Preview"),
                     }),
@@ -9849,7 +9894,7 @@
           const { setAdditionalContentDiv: _ } = _,
             _ = _._.GetEditModel(),
             _ = __webpack_require__.GetEventModel(),
-            _ = 36 == __webpack_require__.GetEventType(),
+            _ = __webpack_require__.GetEventType() == _.ajI,
             { creatorHome: _ } = (0, _._)(
               __webpack_require__.GetClanAccountID(),
             ),
@@ -10060,7 +10105,7 @@
       }
       function _(_) {
         const { editModel: _ } = _;
-        return 36 == (0, _._)(() => _.GetEventType())
+        return (0, _._)(() => _.GetEventType()) == _.ajI
           ? (0, _.jsx)(_, {
               editModel: _,
             })
@@ -10240,15 +10285,16 @@
                     params: _,
                   });
                 return 200 == (null == _ ? void 0 : _.status) &&
-                  1 ==
-                    (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+                  (null === (_ = _.data) || void 0 === _
+                    ? void 0
+                    : _.success) == _._
                   ? _.data
                   : (console.error(
                       "useSocialMediaSupports:",
                       null == _ ? void 0 : _.status,
                     ),
                     {
-                      success: 2,
+                      success: _._,
                     });
               },
             });
@@ -10263,7 +10309,7 @@
           ),
           [_, _] = (0, _.useState)(() => _);
         return _
-          ? 1 != _.success
+          ? _.success != _._
             ? (0, _.jsx)("div", {
                 className: _().ErrorContainer,
                 children: (0, _.jsx)("div", {
@@ -10499,10 +10545,10 @@
                 const _ = _.currentTarget.value;
                 _ !== _ &&
                   ((!_.localized_sub_menu_name ||
-                    _.localized_sub_menu_name.length < 31) &&
+                    _.localized_sub_menu_name.length < _.bP9) &&
                     (_.localized_sub_menu_name = (0, _._)(
                       _.localized_sub_menu_name || [],
-                      31,
+                      _.bP9,
                       null,
                     )),
                   (_.localized_sub_menu_name[_] = _),
@@ -10605,7 +10651,7 @@
                     (_ = null == _ ? void 0 : _.localized_sub_menu_name) ||
                   void 0 === _
                     ? void 0
-                    : _[0]),
+                    : _[_.Bhc]),
                 bAlertDialog: !0,
                 closeModal: _,
                 children: (0, _.jsx)(_._, {
@@ -11204,9 +11250,9 @@
         let _ = (0, _._)("#EventEditor_EventTitle"),
           _ = (0, _._)("#EventEditor_Title_General_ttip");
         return (
-          28 == _
+          _ == _.uYK
             ? (_ = (0, _._)("#EventEditor_AnnouncementTitle"))
-            : 36 == _ &&
+            : _ == _.ajI &&
               ((_ = (0, _._)("#EventEditor_CreatorHomeTitle")),
               (_ = (0, _._)("#EventEditor_Title_CreatorHome_ttip"))),
           (0, _.jsxs)(_.Fragment, {
@@ -11558,7 +11604,7 @@
             (0, _.jsx)("div", {
               className: _().EventEditorTextTitle,
               children:
-                28 == _
+                _ == _.uYK
                   ? (0, _._)("#EventEditor_DescriptionNews")
                   : (0, _._)("#EventEditor_Description"),
             }),
@@ -11823,16 +11869,19 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _, mode: _ } = _,
           [_, _] = (0, _._)(() => [_.GetGID(), _.GetEventType()]);
         return _
-          ? (0, _.jsx)(_, {
-              editModel: _,
-              mode: _,
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
+                editModel: _,
+                mode: _,
+              }),
             })
-          : 36 == _
+          : _ == _.ajI
             ? (0, _.jsx)(_, {
                 editModel: _,
               })
@@ -11861,7 +11910,7 @@
           { creatorHome: _ } = (0, _._)(_.GetAccountID()),
           { bRequiresHostDisclaimer: _ } = (0, _._)(_.GetAccountID(), _),
           _ = _._.includes(_.GetAccountID()),
-          _ = 36 == _;
+          _ = _ == _.ajI;
         (0, _.useEffect)(() => {
           _._.Get().EnsureLoaded(_),
             !_._.Get().BHasExplicitSettings(_) &&
@@ -11875,7 +11924,7 @@
           !_.BIsSourceEventSaleEnabled() &&
           _.clone_from_event_gid &&
           _.clone_from_sale_enabled &&
-          (!_ || !_.BHasClanAccountFlagSet(32))
+          (!_ || !_.BHasClanAccountFlagSet(_._._))
         )
           return (0, _.jsxs)("div", {
             className: (0, _._)(_.SaleContainer, "SaleContainer"),
@@ -12070,7 +12119,7 @@
           return (0, _.jsx)(_._, {
             size: "small",
           });
-        const _ = 36 == _;
+        const _ = _ == _.ajI;
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)(_, {
             strSectionId: "SalePageEdit_TaggedItems",
@@ -12145,7 +12194,7 @@
                   _.section_type.includes(_)
                 )
                   return !0;
-                const _ = (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), 1);
+                const _ = (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _._);
                 return "string" == typeof _ && _.toLowerCase().includes(_);
               })(_),
           ),
@@ -12688,14 +12737,15 @@
           if (_ < 0) return;
           if (_ < this.GetJSONData().broadcast_whitelist.length) {
             if (!this.GetJSONData().broadcast_language) {
-              if (-1 == _) return;
+              if (_ == _.xPp) return;
               this.GetJSONData().broadcast_language = new Array();
             }
             const _ = this.GetJSONData().broadcast_language;
-            if (_.length < _ && -1 == _) return;
-            for (; _.length <= _; ) _.push(-1);
+            if (_.length < _ && _ == _.xPp) return;
+            for (; _.length <= _; ) _.push(_.xPp);
             if (_[_] != _) {
-              for (_[_] = _; _.length > 0 && -1 == _[_.length - 1]; ) _.pop();
+              for (_[_] = _; _.length > 0 && _[_.length - 1] == _.xPp; )
+                _.pop();
               0 == _.length
                 ? (this.GetJSONData().broadcast_language = void 0)
                 : (this.GetJSONData().broadcast_language = [
@@ -12844,8 +12894,8 @@
             );
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._ &&
               (null === (_ = _.data) || void 0 === _ ? void 0 : _.friends)
             )
               return (
@@ -12890,7 +12940,7 @@
           super(...arguments),
             (this.state = {
               strCustomTitle: "",
-              customTitleLanguage: 0,
+              customTitleLanguage: _.Bhc,
               whitelistSteamID: "",
             });
         }
@@ -12984,7 +13034,7 @@
             _ = _._.GetLanguageListForRealms([_._.k_ESteamRealmGlobal]);
           for (const _ of _) {
             const _ = {
-              label: (0, _._)("#language_selection_" + (0, _._)(_)),
+              label: (0, _._)("#language_selection_" + (0, _.LgB)(_)),
               data: _,
             };
             _.push(_);
@@ -13132,7 +13182,7 @@
                                             " (",
                                             (0, _._)(
                                               "#language_selection_" +
-                                                (0, _._)(_),
+                                                (0, _.LgB)(_),
                                             ),
                                             ")",
                                             (0, _.jsx)("div", {
@@ -13600,7 +13650,7 @@
           _ = (0, _._)(() => _.jsondata.broadcast_whitelist.indexOf(_)),
           _ = (0, _._)(() => {
             let _ = _.jsondata.broadcast_language,
-              _ = -1;
+              _ = _.xPp;
             return (
               _ >= 0 && _ && _ < _.length && void 0 !== _[_] && (_ = _[_]), _
             );
@@ -14469,9 +14519,9 @@
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA8FJREFUeNrsWltIVEEYXs28ZPebEVq+BBGZIl1ALc0LaDd9q8gi6yl66LGgh24PPddDPkVXlCDIzbByqcwoSsEsWB80NKxIpIhKKiTdvh/+iZ/D6ZxZ3KNnaT74dmbOzM6emf8652xCJBIJGPgTiWYLjHAMjHCMcAwmCUn0sXN37VuzFRNCKxgEq8DeG43Xz8dMOMBys78TwmJwNvgLnBNTyxFoBDvMXmvjILia66/AMXDEK+G0wiQvmz3XA8JBiRIO9q0HRU/MY47LDexBMR0cxg20WPoyUZRzM4z+Tod5trD5K1zD+DGN369EsQQcxfgGl7GLUGzlZg/Gd1j681DkcTOE/g+W/vkodthM3Y2x3VOSELjgAFgKfqObt2xoLXiW67vAzn9sWgopFzhTXO4Fn2n8/jGwGPwKNriM/QnWg6lgG7jZ0n8CrAHHLYqisAy8ZHP9FAnIj6l0E5cU8NZZ+sq4HAVbHOYotggmIDQ8ZoDikL8PcbMASjFDKMg0FCXcbMfYzw5TUV+dYNOUpdIuoBRRpYbkwp7zYpNRFPL1B1jsd4c5lCA+gQMs5G3gcQ/WdAvcDiazUtzl6/ngXDHGCSN+iL2JGto4iOKlEI5CAZimuVjlxx8JC1sDAWd5sKbb7LYIFTZWHtCwhEw6+wmu8vMTgqCNq1AuIiL67eINLSxbWZjQ5ABbT6xdG7mkdhtlUvUuVrj4eEKgGXdOcta2CbwnFvsUix12+K4UAAmnn336AnZ39R65NlKeHChHBicThZpWTniPNWX73q2xNtIBSz3iKceC01Gu13QRKt4MYp434LgI2mWYK82Ddcl7qmAXnBqFcFLpDCOY7We3Jl0bWcxGtiLHxfK5oYibs9BuI6K+QW2CJRbEyrWR2+oSwinleh/6whpTZHB8VNzvZ7emtPEImMtnGsJrLLbf4TuVQgHmcfZkZ1l3PHJt+axM7zStZojPNFa0+V04T8AvvMl7NRcr481h8IdonwazeMwhj4RzBlzKdHXBULQhjq1xlRDQjY/BJTWjuk9Yg5NLo0NflXAnFyz9a1lglLbmclxzQjrG2W1uM7570eZ+wxjfh+oKvvQRfBFPz+6ifdkmU+YBlw0tEoe+kE3//ShTalKkahvmuFjP3/MPJyNxg6Qox9OGnuO626uF38J/252DHoq5nFLxmy7PtR479F0BU7h+NRBnSKC/RsH81f+j6swrA32wmyXrDWLfary2nJX8jsJADwsn060dZRrEYUJgMNkxx8BYjoERjhGOgRHO/40/AgwA6Pwl5bmDALcAAAAASUVORK5CYII=";
       var _ = __webpack_require__("chunkid");
       const _ = {
-        localized_headline: new Array(31),
-        localized_body: new Array(31),
-        localized_image: new Array(31),
+        localized_headline: new Array(_.bP9),
+        localized_body: new Array(_.bP9),
+        localized_image: new Array(_.bP9),
         button_destination: _._.k_EEventPage,
         button_loc_token: "EventEmail_Button_ClickForMoreDetails",
         video_link: "",
@@ -15146,10 +15196,9 @@
               cancelToken: _.token,
             });
             if (
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success) &&
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._ &&
               !_.token.reason
             )
               return (
@@ -16454,6 +16503,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
         const { editModel: _ } = _;
@@ -16861,17 +16911,17 @@
                 Boolean(_._.IS_OGG) &&
                   (0, _.jsx)(_._, {
                     onChange: (_) => {
-                      _ && (_.setEventType(14), _.SetSteamStoreSpotlight(_)),
+                      _ && (_.setEventType(_.zeJ), _.SetSteamStoreSpotlight(_)),
                         _.SetTag("vo_marketing_message", _);
                     },
                     label: "(VO) Marketing Message Major Update",
                     disabled:
                       !_.GetEventModel().BHasTag("vo_marketing_message") &&
-                      14 != _,
+                      _ != _.zeJ,
                     checked: _.GetEventModel().BHasTag("vo_marketing_message"),
                     description:
                       "This will surface on the event editor the rules and requirements behind being featured in a marketing message to better align them with customer information." +
-                      (14 != _
+                      (_ != _.zeJ
                         ? " This can only be enable for Major Update Type."
                         : ""),
                   }),
@@ -16884,7 +16934,7 @@
                 }),
                 Boolean(
                   _.GetClanAccountID() == _._ ||
-                    ((2 == _._.EUNIVERSE || 4 == _._.EUNIVERSE) &&
+                    ((_._.EUNIVERSE == _._ || _._.EUNIVERSE == _.CII) &&
                       _.GetClanAccountID() == _._),
                 ) &&
                   (0, _.jsx)(_._, {
@@ -16896,7 +16946,7 @@
                   }),
                 Boolean(
                   _.GetClanAccountID() == _._ ||
-                    ((2 == _._.EUNIVERSE || 4 == _._.EUNIVERSE) &&
+                    ((_._.EUNIVERSE == _._ || _._.EUNIVERSE == _.CII) &&
                       _.GetClanAccountID() == _._),
                 ) &&
                   (0, _.jsx)(_._, {
@@ -17091,7 +17141,7 @@
               _.GetCurEditLanguage(),
               _._.k_ESteamRealmGlobal,
             );
-        _ || _ || _.SetCurEditLanguage(_.BInRealmChina() ? 29 : 0);
+        _ || _ || _.SetCurEditLanguage(_.BInRealmChina() ? _.ZLm : _.Bhc);
       }
       const _ = (0, _._)((_) => {
           const { editModel: _ } = _;
@@ -17147,7 +17197,7 @@
           const { editModel: _ } = _;
           return ((_) => {
             const [_] = (0, _._)(_, _._.k_DataRequest_CommonOnly);
-            return Boolean(_ && _.HasContentDescriptorID(3));
+            return Boolean(_ && _.HasContentDescriptorID(_._));
           })(_.GetAppID())
             ? (0, _.jsx)(_._, {
                 onChange: (_) => _.SetTag("adult_only_content", _),
@@ -17189,7 +17239,7 @@
         _.useEffect(() => {
           _ && (null == _ ? void 0 : _.current) && _.current.click();
         }, [_]);
-        const _ = 36 == _.GetEventType(),
+        const _ = _.GetEventType() == _.ajI,
           _ = _.GetAccountID() == (0, _._)() || _,
           _ = !_ && (0, _._)(_, !0),
           _ = (_, _) => {
@@ -17352,16 +17402,17 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       class _ {
         GetVisibilityRounds(_, _) {
-          return 0 == _
+          return _ == _._._
             ? this.m_mapVisibilityUpdateRounds.get(_)
             : this.m_mapVisibilityLaunchRounds.get(_);
         }
         GetVisibilityRoundsChangeCallback(_, _) {
           const _ =
-            0 == _
+            _ == _._._
               ? this.m_mapVisibilityUpdateChangeCallback
               : this.m_mapVisibilityLaunchChangeCallback;
           return (
@@ -17371,7 +17422,7 @@
         }
         async LoadVisibilityRounds(_, _) {
           const _ =
-            0 == _
+            _ == _._._
               ? this.m_mapVisibilityUpdateLoadPromises
               : this.m_mapVisibilityLaunchLoadPromises;
           return (
@@ -17397,12 +17448,11 @@
               });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success)
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._
             ) {
-              const _ = Boolean(0 == _)
+              const _ = Boolean(_ == _._._)
                   ? this.m_mapVisibilityUpdateRounds
                   : this.m_mapVisibilityLaunchRounds,
                 _ = _.data.data || [];
@@ -17840,13 +17890,13 @@
                       let _ = await _().post(_, _, {
                         withCredentials: !0,
                       });
-                      return _ && 200 == _.status && 1 == _.data.success
+                      return _ && 200 == _.status && _.data.success == _._
                         ? _.data
                         : (console.error(
                             "CreateMarketingMessageMajorUpdateReviewRequestTicket failed.",
                             _ && (0, _._)(_),
                           ),
-                          29 == _.data.success ? _.data : null);
+                          _.data.success == _._ ? _.data : null);
                     } catch (_) {
                       const _ = (0, _._)(_);
                       console.error(
@@ -17951,7 +18001,7 @@
             }));
         }
         render() {
-          if (36 == this.props.eventType) return;
+          if (this.props.eventType == _.ajI) return;
           if (this.state.bLoadingClanInfo)
             return (0, _.jsx)("div", {
               className: "ReachCtn",
@@ -18156,7 +18206,7 @@
                                   }),
                                 ],
                               }),
-                              14 == _ && (0, _.jsx)(_, {}),
+                              _ == _.zeJ && (0, _.jsx)(_, {}),
                               (0, _.jsxs)("div", {
                                 className: (0, _._)(_.ReachSubject),
                                 children: [
@@ -18264,7 +18314,7 @@
               (0, _._)(_.Get().GetVisibilityRoundsChangeCallback(_, _), _),
               _
             );
-          })(0, _.GetAppID());
+          })(_._._, _.GetAppID());
         return (0, _.jsxs)("div", {
           className: _.ReachSubject,
           children: [
@@ -18304,7 +18354,7 @@
             _.GetEventVisibilityStartTime(),
             _.GetVisibilitySetting(),
             _.GetEventModel().GetVisibilityStartTimeAndDateUnixSeconds(),
-            36 == _.GetEventType(),
+            _.GetEventType() == _.ajI,
           ]);
         let _;
         if (!_)
@@ -18491,9 +18541,9 @@
               _
             ) {
               return !(
-                _.BHasClanAccountFlagSet(2) ||
-                _.BHasClanAccountFlagSet(1) ||
-                _.BHasClanAccountFlagSet(4) ||
+                _.BHasClanAccountFlagSet(_._._) ||
+                _.BHasClanAccountFlagSet(_._._) ||
+                _.BHasClanAccountFlagSet(_._._) ||
                 _.GetNumFollowers() >= 15e3
               );
             }
@@ -18866,7 +18916,7 @@
             (this.m_bRedirect = !1),
             (this.m_bRedirect =
               void 0 === _._.GetEditModel() ||
-              1 == _._.GetEditModel().GetCategoryAsType());
+              _._.GetEditModel().GetCategoryAsType() == _.DRF);
         }
         render() {
           return this.m_bRedirect
@@ -18890,7 +18940,7 @@
               _.GetClanSteamID(),
               _.GetEventModel().vecTags,
               _.GetIncludedRealmList(),
-              34 === _.GetEventType(),
+              _.GetEventType() === _.HFK,
               ((_ = _.GetEventModel().jsondata.localized_spotlight_image),
               _ ? _.filter(Boolean).length : 0),
               _.BAllowedSteamStoreSpotlight(),
@@ -19128,6 +19178,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetCounts() {
@@ -19148,8 +19199,8 @@
               _ = await _().get(_, {});
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._ &&
               (null === (_ = _.data) || void 0 === _ ? void 0 : _.counts)
             )
               return (this.m_counts = _.data.counts), this.m_counts;
@@ -19199,6 +19250,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
@@ -19220,15 +19272,15 @@
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
                 deposit_package: _,
-                localized_reservation_desc: (0, _._)([], 31, null),
+                localized_reservation_desc: (0, _._)([], _.bP9, null),
                 localized_out_of_stock_override: (0, _._)(
                   [_ || null],
-                  31,
+                  _.bP9,
                   null,
                 ),
                 localized_delivery_override_desc: (0, _._)(
                   [_ || null],
-                  31,
+                  _.bP9,
                   null,
                 ),
                 override_delivery_only_out_of_stock: Boolean(_),
@@ -19243,7 +19295,11 @@
             size: "small",
             position: "center",
           });
-        const _ = !_._.logged_in || !_.account_restricted_from_purchasing;
+        const _ = !_._.logged_in || !_.account_restricted_from_purchasing,
+          _ =
+            _.reservation_state == _._.k_EPurchaseReservationState_Reserved
+              ? _
+              : void 0;
         return (0, _.jsxs)(_._, {
           children: [
             (0, _.jsx)(_.Suspense, {
@@ -19261,6 +19317,7 @@
                     reservationDef: _[0],
                     hardwareDetail: _,
                     bPSULessModel: !1,
+                    reservedHardwareDetail: _,
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
@@ -19274,6 +19331,7 @@
                       reservationDef: _[0],
                       hardwareDetail: _,
                       bPSULessModel: !0,
+                      reservedHardwareDetail: void 0,
                     }),
                 ],
               }),
@@ -19597,7 +19655,7 @@
           if (_ >= 0) {
             const _ = _.GetDayIndexFromEventStart();
             return (0, _.jsx)(_._, {
-              location: _ ? 2 : 0,
+              location: _ ? _._ : _._,
               children: (0, _.jsx)(_, {
                 event: _,
                 section: _.jsondata.sale_sections[_],
@@ -19695,10 +19753,10 @@
         const _ = Number.parseInt((0, _._)(_.args));
         let _ = _.verified;
         switch (_) {
-          case 2:
+          case _._:
             _ = _.playable;
             break;
-          case 1:
+          case _._:
             _ = _.unsupported;
         }
         return (0, _.jsx)("span", {
@@ -19707,7 +19765,7 @@
       }
       function _(_) {
         var _, _, _, _;
-        const _ = (0, _._)("library");
+        const _ = (0, _._)(_._.accountid, "library");
         if (!_)
           return (0, _.jsx)(_._, {
             size: "small",
@@ -19717,19 +19775,19 @@
           (null === (_ = _.verifiedList) || void 0 === _ ? void 0 : _.length) ||
           0;
         switch (_) {
-          case 2:
+          case _._:
             _ =
               (null === (_ = _.playableList) || void 0 === _
                 ? void 0
                 : _.length) || 0;
             break;
-          case 1:
+          case _._:
             _ =
               (null === (_ = _.unsupportedList) || void 0 === _
                 ? void 0
                 : _.length) || 0;
             break;
-          case 0:
+          case _._:
             _ =
               (null === (_ = _.unknownList) || void 0 === _
                 ? void 0
@@ -20645,6 +20703,8 @@
       (0, _._)([_._], _.prototype, "m_mapProfiles", void 0);
       const _ = new _();
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -20725,7 +20785,7 @@
               _._.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
               _,
             );
-            return _ && _.data && 1 == _.data.success;
+            return _ && _.data && _.data.success == _._;
           } catch {
             return !1;
           }
@@ -20736,7 +20796,7 @@
           });
         }
         OnSearchKeyDown(_) {
-          13 === _.keyCode && this.OnSearchSubmit();
+          _.keyCode === _._ && this.OnSearchSubmit();
         }
         OnSearchSubmit() {
           window.open(

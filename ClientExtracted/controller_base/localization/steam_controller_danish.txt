@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyro-hældning"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyro-drejning"
 	"origin_SteamDeck_Gyro_Roll"				"Gyro-rulning"
+	"origin_SteamDeck_LGrip"					"Venstre greb, berøring"
+	"origin_SteamDeck_RGrip"					"Højre greb, berøring"
 
 	"origin_horipad_m1"							"M1-knap"
 	"origin_horipad_m2"							"M2-knap"

@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"ジャイロピッチ"
 	"origin_SteamDeck_Gyro_Yaw"					"ジャイロヨー"
 	"origin_SteamDeck_Gyro_Roll"				"ジャイロロール"
+	"origin_SteamDeck_LGrip"					"左グリップタッチ"
+	"origin_SteamDeck_RGrip"					"右グリップタッチ"
 
 	"origin_horipad_m1"							"M1ボタン"
 	"origin_horipad_m2"							"M2ボタン"

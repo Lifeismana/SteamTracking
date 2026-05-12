@@ -3473,7 +3473,7 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 "Steam_TextFilterSettingURL"									"Alterar preferências de filtragem do chat"
 
 "Steam_SettingsInGameScreenshotFolder"	"Pasta de capturas de ecrã"
-"Steam_SettingsInGameTitle"	"O Painel Steam"
+"Steam_SettingsInGameTitle"	"Painel Steam"
 
 "SteamUI_JoinDialog_PreparingToPlay" 	"A preparar para iniciar %game% %dots%"
 "SteamUI_JoinDialog_Title"		"%game% - Steam"

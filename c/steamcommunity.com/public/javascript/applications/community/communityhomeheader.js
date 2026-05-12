@@ -116,10 +116,9 @@
             if (_.length)
               return {
                 isLoading:
-                  1 ===
                   (0, _._)(_, {
                     include_assets: !0,
-                  }),
+                  }) === _._,
                 data: {
                   personalAppIds: _,
                   popularAppIds: _,

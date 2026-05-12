@@ -461,9 +461,9 @@ body.v6 {
 }
 
 .profile_friends.search_results {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 8px 0px 0px 0px;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 8px 0px 0px 0px;
 }
 
 .friend_block_v2 .friend_block_content {
@@ -549,11 +549,11 @@ body.v6 {
 /* --- Title bar and search box --- */
 .profile_friends.title_bar,
 .profile_groups.title_bar {
-    width: 100%;
-    display: flex;
-    align-items: center;
+	align-items: center;
+	background-color: #015e80;
+	display: flex;
 	padding: 5px 10px;
-    background-color: #015e80;
+	width: 100%;
 }
 
 .profile_friends.title,

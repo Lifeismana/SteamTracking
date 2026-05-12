@@ -53,6 +53,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -75,47 +76,47 @@
             }),
             (this.k_rgFilterCheckboxes = [
               {
-                type: 3,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_Comments"),
                 hash: "comments",
               },
               {
-                type: 8,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_Wishlist"),
                 hash: "wishlist",
               },
               {
-                type: 5,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_FriendRequest"),
                 hash: "invites",
               },
               {
-                type: 2,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_Gifts"),
                 hash: "gifts",
               },
               {
-                type: 4,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_Inventory"),
                 hash: "inventory",
               },
               {
-                type: 12,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_AsyncGame"),
                 hash: "asyncgame",
               },
               {
-                type: 11,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_HelpRequest"),
                 hash: "help",
               },
               {
-                type: 9,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_TradeOffer"),
                 hash: "trade",
               },
               {
-                type: 10,
+                type: _._._,
                 display: (0, _._)("#NotificationsFilters_General"),
                 hash: "general",
               },
@@ -160,7 +161,7 @@
               -1 !== _
                 ? this.rgFilterState.set(this.k_rgFilterCheckboxes[_].type, !0)
                 : (0, _._)(_) &&
-                  this.rgFilterState.has(3) &&
+                  this.rgFilterState.has(_._._) &&
                   this.commentFilter.setItemTypes.add(parseInt(_));
             });
           }
@@ -171,7 +172,7 @@
             this.commentFilter.setItemTypes.clear()),
             _ &&
               (this.rgFilterState.set(_, _),
-              3 != _ || _ || this.commentFilter.setItemTypes.clear()),
+              _ != _._._ || _ || this.commentFilter.setItemTypes.clear()),
             this.UpdateLocationHash();
         }
         SetCommentFilter(_) {
@@ -198,7 +199,7 @@
                   ? void 0
                   : _.hash));
           }),
-            this.rgFilterState.has(3) &&
+            this.rgFilterState.has(_._._) &&
               this.commentFilter.setItemTypes.forEach(
                 (_) => (_ += (_ ? "," : "") + _),
               ),
@@ -229,7 +230,7 @@
         return _.useMemo(() => {
           const _ = new Map();
           for (const _ of _.m_rgNotificationRollups.filter(
-            (_) => 3 == _.type,
+            (_) => _.type == _._._,
           )) {
             const _ = (0, _._)(_);
             _.set(_.comment_type, 1 + (_.get(_.comment_type) || 0));
@@ -250,7 +251,7 @@
             if ((0, _._)(_.type, _, _)) return !1;
             if (
               _ &&
-              3 == _.type &&
+              _.type == _._._ &&
               (_.type != _.k_All || _.setItemTypes.size > 0)
             ) {
               const _ = (0, _._)(_);
@@ -455,7 +456,7 @@
       function _(_) {
         const { filterOptions: _ } = _,
           { filters: _ } = _();
-        return 3 == _.type
+        return _.type == _._._
           ? (0, _.jsx)(_, {
               filterOptions: _,
               checked: __webpack_require__.get(_.type),
@@ -535,7 +536,7 @@
               const _ = new Map();
               for (const _ of _.k_rgCommentFilters)
                 for (const _ of _.m_rgNotificationRollups.filter(
-                  (_) => 3 == _.type,
+                  (_) => _.type == _._._,
                 )) {
                   const _ = (0, _._)(_);
                   __webpack_require__.fnFilter(_, _) &&
@@ -602,16 +603,16 @@
             _.MarkItemHidden(_.item.notification_id);
           }, [_.item.notification_id]);
         if (_.item.hidden) return null;
-        if (_.item.hidden && 5 == _.type) {
+        if (_.item.hidden && _.type == _._._) {
           const _ = (0, _._)(_);
-          if ((0, _._)(_.state) || 1 == _.state) return null;
+          if ((0, _.aPS)(_.state) || _.state == _.Yjh) return null;
         }
         const _ = (0, _._)(_.type);
         return _
           ? (0, _.jsx)(_._, {
               controller: "notification",
-              method: (0, _._)(3),
-              submethod: (0, _._)(4),
+              method: (0, _.fLp)(_.yrU),
+              submethod: (0, _.ey3)(_.oYe),
               children: (0, _.jsx)(_, {
                 ref: _,
                 children:
@@ -620,8 +621,8 @@
                     rollup: _,
                     onNotificationClick: _,
                     onHide: _,
-                    location: 4,
-                    uimode: 3,
+                    location: _.oYe,
+                    uimode: _.yrU,
                   }),
               }),
             })

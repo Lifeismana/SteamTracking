@@ -1784,13 +1784,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const [_, _] = _.useState(void 0),
+          _ = _.useRef(null),
           _ = _.useCallback(
             (_) => {
-              const { state: _, dispatch: _ } = _,
+              _.current = _;
+              const { state: _ } = _,
                 _ = _.selection;
               let { from: _, _: _, empty: _ } = _;
               const _ = _ ? _.marks.color : _.marks.bgcolor;
@@ -1823,7 +1824,7 @@
                   _[_] = _;
                 }
               _({
-                view: _,
+                viewRef: _,
                 strColor: _,
                 strTargetText: _,
                 bIsUpdate: _,
@@ -1835,10 +1836,13 @@
             },
             [_, _, _.marks.bgcolor, _.marks.color],
           ),
-          _ = null == _ ? void 0 : _.view,
           _ = _.useCallback(() => {
-            window.setTimeout(() => _.focus(), 1), _(void 0);
-          }, [_]);
+            const _ = _.current;
+            window.setTimeout(() => {
+              _ && !_.isDestroyed && _.focus();
+            }, 1),
+              _(void 0);
+          }, []);
         return [
           _,
           _ &&
@@ -1863,7 +1867,7 @@
             addtlAttrs: _,
             addtlAttrsValues: _,
             closeModal: _,
-            view: _,
+            viewRef: _,
             from: _,
             _: _,
           } = _,
@@ -1871,43 +1875,31 @@
           _ = _.useRef(null),
           [_, _] = _.useState(_),
           _ = _.useCallback(() => {
-            const { state: _, dispatch: _ } = _,
-              _ = _ ? _.marks.color : _.marks.bgcolor;
-            if (!_) return void console.log("debug: no markType");
-            if (!_ || !_.startsWith("#") || 7 !== _.length)
-              return void console.log("debug: invalid color text: " + _);
-            if (_ < 0 || _ > _.doc.content.size || _ > _)
-              return void console.error("Invalid selection range:", _, _);
-            let _;
             try {
-              if (
-                ((_ = _.create({
-                  color: _,
-                  ..._,
-                })),
-                !_)
-              )
-                return void console.error(
-                  "Failed to create mark — mark is null",
+              const _ = _.current;
+              if (!_ || _.isDestroyed)
+                return void console.warn(
+                  "Editor view is destroyed; skipping color insert",
                 );
-            } catch (_) {
-              return void console.error("Failed to create color mark:", _);
-            }
-            let _ = _._;
-            _ === _
-              ? (_ = _.addStoredMark(_))
-              : ((_ = _.removeMark(_, _, _)),
-                (_ = _.addMark(_, _, _)),
-                (_ = _.setSelection(_._.create(_.doc, _)))),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "Dispatching transaction:",
-                  _.steps.map((_) => _.toJSON()),
-                  _,
-                  _,
-                );
-            try {
-              (_.docChanged || _.steps.length > 0) && __webpack_require__(_);
+              const { state: _, dispatch: _ } = _,
+                _ = _ ? _.marks.color : _.marks.bgcolor;
+              if (!_) return void console.log("debug: no markType");
+              if (!_ || !/^#[0-9a-fA-F]{6}$/.test(_))
+                return void console.log("debug: invalid color text: " + _);
+              const _ = Math.max(0, Math.min(_, _.doc.content.size));
+              if (_ > Math.max(0, Math.min(_, _.doc.content.size)))
+                return void console.error("Invalid selection range:", _, _);
+              const _ = _.create({
+                color: _,
+                ..._,
+              });
+              let _ = _._;
+              _ === _
+                ? (_ = _.addStoredMark(_))
+                : ((_ = _.removeMark(_, _, _)),
+                  (_ = _.addMark(_, _, _)),
+                  (_ = _.setSelection(_._.create(_.doc, _)))),
+                _(_.scrollIntoView());
             } catch (_) {
               console.error(_);
             } finally {

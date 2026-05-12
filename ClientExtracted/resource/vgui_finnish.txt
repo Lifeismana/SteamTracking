@@ -112,7 +112,7 @@
 "SMPStats_EventTitle"		"Tapahtuma"
 "SMPStats_TimeTitle"		"Aika (ms)"
 "SMPStats_PositionTitle"	"Sijainti (ms)"
-"SMPStats_DialogTitle"		"Tietojen keräämisen asetukset"
+"SMPStats_DialogTitle"		"Tietojen keräysasetukset"
 "SMPStats_DontAskAgain"		"Älä kysy uudelleen"
 
 "vgui_Accept"	"Hyväksy"

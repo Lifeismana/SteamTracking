@@ -85,7 +85,7 @@
 "vgui_FileCopy_Ovewwrite_Prompt" "'%filename%'에 덮어쓰시겠습니까?"
 
 "SMPEvent_AppLaunch"		"App 시작"
-"SMPEvent_AppExit"		"App 끝내기"
+"SMPEvent_AppExit"		"App 종료"
 "SMPEvent_Close"		"닫기"
 "SMPEvent_FadeOut"		"페이드 아웃"
 "SMPEvent_MediaBegin"		"미디어 시작"

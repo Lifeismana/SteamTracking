@@ -179,7 +179,6 @@ $\nY8O
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (anonymous namespace)
-(int)(intp)m_hParam != -1
 (main)
 (none)
 *N12_GLOBAL__N_117io_error_categoryE
@@ -1846,6 +1845,7 @@ m_configOverride
 m_errorIndex>=0
 m_fileReader
 m_fnCompletionCallback
+m_hParam != ICommandLine::InvalidHParam()
 m_listChangedFiles
 m_listCommandLineOption
 m_mapConditionalSymbolTable

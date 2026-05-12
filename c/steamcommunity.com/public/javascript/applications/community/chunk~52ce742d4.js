@@ -109,6 +109,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -1811,9 +1812,9 @@
               ));
         }
         OnKeyDown(_) {
-          37 == _.keyCode
+          _.keyCode == _._
             ? (this.props.video.JumpTime(-15), _.preventDefault())
-            : 39 == _.keyCode &&
+            : _.keyCode == _._ &&
               (this.props.video.JumpTime(15), _.preventDefault());
         }
         AdjustSliderForClientX(_) {
@@ -2411,6 +2412,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return Boolean(_ && _.thumbnail_http_address);
@@ -2787,14 +2790,14 @@
             this.m_playReadyStream.set(_, _);
           else {
             const _ = await this.m_mapBroadcastChecked.get(_.accountid);
-            if (1 != (null == _ ? void 0 : _.success)) return null;
+            if ((null == _ ? void 0 : _.success) != _._) return null;
             (_.steamid = _.steamid),
               this.m_playReadyStream.set(_, _),
               this.GetConcurrentStreams(_) > 1
                 ? (this.m_streamChatStatus = "hide")
                 : (this.m_streamChatStatus = _.broadcast_chat_visibility),
               this.m_setStreamChangedListeners.forEach((_) => _(_));
-            _(_._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID, 1, _.snr);
+            _(_._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID, _._._, _.snr);
           }
           return _;
         }
@@ -3282,6 +3285,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
@@ -3359,7 +3363,7 @@
                     )
                     .then((_) => {
                       const _ = _.data;
-                      (_.success && 1 == _.success) ||
+                      (_.success && _.success == _._) ||
                         console.log(
                           "Failed to add a WebRTC session ICE candidate: " +
                             String(_.success),
@@ -3402,7 +3406,7 @@
                     )
                     .then((_) => {
                       const _ = _.data;
-                      if (!_.success || 1 != _.success)
+                      if (!_.success || _.success != _._)
                         throw new Error(String(_.success));
                     });
                 } catch (_) {
@@ -3437,7 +3441,7 @@
               .then((_) => {
                 const _ = _.data,
                   _ = _.data;
-                if (!_.success || 1 != _.success)
+                if (!_.success || _.success != _._)
                   throw new Error(String(_.success));
                 _.candidate_generation > this.m_nHostCandidateGeneration
                   ? (_.candidates.forEach((_) => {
@@ -3612,6 +3616,8 @@
         (0, _._)([_._], _.prototype, "OnVideoPause", null),
         (0, _._)([_._], _.prototype, "OnVideoResize", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3995,7 +4001,7 @@
                 params: _,
               },
             );
-            if (!_ || !_.data || !_.data.success || 1 != _.data.success)
+            if (!_ || !_.data || !_.data.success || _.data.success != _._)
               return void (_.m_bInitialized = !0);
             const _ = _.data;
             (0, _._)(() => {
@@ -4169,7 +4175,7 @@
               (0, _._)("#BroadcastWatch_RequestFailed"),
             );
           let _ = _.data;
-          1 == _.success
+          _.success == _._
             ? (_.SetState(_.Ready), (_.m_data = _), this.LoadClip(_))
             : _.SetState(_.Error, (0, _._)("#BroadcastWatch_RequestFailed"));
         }
@@ -4276,7 +4282,7 @@
             (this.m_player = null),
             (this.m_listeners = new _._()),
             (this.m_gameDataParser = null),
-            (this.m_eWatchLocation = 0),
+            (this.m_eWatchLocation = _._._),
             (this.m_bStartWithSubtitles = !1),
             (this.m_steamIDBroadcast = null),
             (this.m_BroadcastInfo = null),
@@ -4399,7 +4405,7 @@
           return null;
         }
         SetSubtitles(_) {
-          let _ = _ ? _._[_] : -1;
+          let _ = _ ? _._[_] : _.xPp;
           this.m_player.SetSubtitles(_);
         }
         SetStartWithSubtitles(_) {

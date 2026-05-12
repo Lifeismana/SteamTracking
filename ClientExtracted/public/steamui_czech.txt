@@ -210,7 +210,7 @@ Tato operace zabere jenom okamžik."
 "SteamUI_JoinDialog_OverrideThrottle"	"Ignorovat aktuální omezení rychlosti stahování"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Přeskočit aktualizaci a hrát ihned"
 
-"SteamUI_JoinDialog_ProcessingShaderCache" "Probíhá zpracování shaderů pro Vulkan..."
+"SteamUI_JoinDialog_ProcessingShaderCache" "Zpracovávání shaderů pro Vulkan..."
 "SteamUI_JoinDialog_SkipShaderProcessing" "Přeskočit"
 
 "SteamUI_JoinDialog_UpdateAvailable_Title"				"Je dostupná aktualizace"
@@ -4565,7 +4565,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_SteamInputDisableDualSenseUpdates"	"Zakázat v desktopovém klientu upozornění na nový firmware ovladače DualSense"
 
 "Steam_Settings_ShaderCache"			"Přednačítání shaderů"
-"Steam_Settings_ShaderCache_Info"		"Přednačítání shaderů umožňuje klientu služby Steam stáhnout předem zkompilované shadery odpovídající konfiguraci Vašeho zařízení. Hry poháněné technologií Vulkan nebo OpenGL se díky tomu budou rychleji načítat a obecně bude zlepšena stabilita počtu snímků za sekundu.\n\nPokud je tato možnost povolena, bude klient služby Steam v případě potřeby vyžadovat shadery od Vašeho systému. Záporem je o trochu větší využití disku a sítě."
+"Steam_Settings_ShaderCache_Info"		"Přednačítání shaderů umožňuje klientu služby Steam stáhnout předem zkompilované shadery odpovídající konfiguraci Vašeho zařízení. Hry využívající rozhraní Vulkan nebo OpenGL se díky tomu budou rychleji načítat a obecně bude zlepšena stabilita snímkové frekvence.\n\nPokud je tato možnost povolena, bude klient služby Steam v případě potřeby vyžadovat shadery od Vašeho systému. Záporem je o trochu větší využití disku a sítě."
 "Steam_Settings_ShaderCache_Enable"		"Povolit přednačítání shaderů (momentálně je přednačteno %shaderdiskusagemb% MB)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Povolit zpracování shaderů pro Vulkan na pozadí"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Probíhá zpracování – %shaderapp%... (%shaderpercent%%)"

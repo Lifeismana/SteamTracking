@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyroscope : tangage"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyroscope : axe de lacet"
 	"origin_SteamDeck_Gyro_Roll"				"Gyroscope : roulis"
+	"origin_SteamDeck_LGrip"					"Poignée gauche : toucher"
+	"origin_SteamDeck_RGrip"					"Poignée droite : toucher"
 
 	"origin_horipad_m1"							"Bouton M1"
 	"origin_horipad_m2"							"Bouton M2"

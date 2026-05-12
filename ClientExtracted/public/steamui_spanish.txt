@@ -176,7 +176,7 @@
 "SteamUI_GamesDialog_RightClick_Renew" "Renovar..."
 "SteamUI_GamesDialog_RightClick_ViewScreenshots" "Ver capturas"
 "SteamUI_GamesDialog_RightClick_ViewStorePage" "Ver página de la tienda"
-"SteamUI_GamesDialog_RightClick_ViewGameHub" "Ver punto de encuentro"
+"SteamUI_GamesDialog_RightClick_ViewGameHub" "Ver centro de la comunidad"
 "SteamUI_GamesDialog_RightClick_ViewForumPage"	"Ver foro"
 "SteamUI_GamesDialog_RightClick_ViewDLC" "Ver contenido descargable"
 "SteamUI_GamesDialog_RightClick_SetCustomImage" "Elegir imagen personalizada..."
@@ -1175,7 +1175,7 @@
 "SteamUI_ForgottenPasswordEnterCDKey" "Para recuperar el nombre de la cuenta, introduce la clave de producto que activaste en la cuenta de Steam."
 "SteamUI_ForgottenPasswordOtherText" "Para recuperar la información de la cuenta necesitas saber la dirección de correo electrónico de contacto o la clave de producto que utilizaste durante el proceso de activación de la misma."
 "SteamUI_ForgottenPasswordSentEmailEmail" "Te hemos enviado un correo electrónico que incluye el nombre de tu cuenta de Steam.\n\nCuando lo recibas, puedes hacer clic de nuevo en el botón Recuperar cuenta perdida para restablecer tu contraseña."
-"SteamUI_ForgottenPasswordSentEmailCDKey" "Hemos enviado un correo electrónico al propietario de la clave de producto que has introducido. Cuando recibas el nombre de la cuenta, puedes hacer clic de nuevo en el botón Recuperar cuenta perdida para restablecer tu contraseña."
+"SteamUI_ForgottenPasswordSentEmailCDKey" "Hemos enviado un correo electrónico al propietario de la clave de producto que has introducido. Cuando recibas el nombre de la cuenta, puedes hacer clic de nuevo en el botón «Recuperar cuenta perdida» para restablecer tu contraseña."
 "Steam_ForgottenPassword_RequestFailed" "La operación ha fallado. Inténtalo de nuevo."
 
 "Steam_CreateNewAccount_EmailAddrAlreadyInUse" "Ya existe una cuenta de Steam con esa dirección de correo electrónico de contacto. Si has creado una cuenta de Steam con anterioridad, debes utilizar dicha cuenta en lugar de crear una nueva."
@@ -1202,12 +1202,12 @@
 "Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538&l=spanish/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "¡Activación completada!"
-"Steam_SubscriptionSuccess_CDKey" "La clave de producto se ha activado con éxito. Los siguientes productos están ahora asociados permanentemente con tu cuenta de Steam. Deberás iniciar sesión en esta cuenta para acceder a los artículos que acabas de activar en Steam.\nImprime un recibo de esta transacción para que puedas recordar los datos de tu cuenta en el futuro."
+"Steam_SubscriptionSuccess_CDKey" "La clave de producto se ha activado con éxito. Los siguientes productos están ahora asociados permanentemente con tu cuenta de Steam. Deberás iniciar sesión en esta cuenta para acceder a los artículos que acabas de activar en Steam.\n\nImprime un recibo de esta transacción para que puedas recordar los datos de tu cuenta en el futuro."
 
-"Steam_SubscriptionSuccess_ComingSoonOnly" "Tu clave de producto ha sido activada con éxito. A partir de ahora, este contenido estará asociado a tu cuenta de forma permanente y estará disponible una vez se haya lanzado el juego en Steam. Debes iniciar sesión en esta cuenta para poder acceder a los artículos que acabas de activar en Steam."
+"Steam_SubscriptionSuccess_ComingSoonOnly" "La clave de producto se ha activado con éxito. A partir de ahora, este contenido estará asociado a tu cuenta de forma permanente y estará disponible una vez que se haya lanzado el juego en Steam. Debes iniciar sesión en esta cuenta para poder acceder a los artículos que acabas de activar en Steam."
 
 "Steam_Subscription_Rejected_Cdkey_Headline" "Clave de producto duplicada"
-"Steam_Subscription_Rejected_Cdkey" "La clave de producto que has introducido ya ha sido activada por otra cuenta de Steam y no puede utilizarse de nuevo. Contacta con la tienda donde la adquiriste para recibir ayuda."
+"Steam_Subscription_Rejected_Cdkey" "La clave de producto que has introducido ya se ha activado en otra cuenta de Steam y no puede utilizarse de nuevo. Contacta con la tienda donde la adquiriste para recibir ayuda."
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "Demasiados intentos de activación"
 "Steam_Subscription_RateLimitedCDKey" "Ha habido demasiados intentos de activación desde esta cuenta o dirección de internet recientemente. Inténtalo de nuevo más tarde."
@@ -1220,7 +1220,7 @@
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "La clave de producto que has introducido requiere que tengas otro producto antes de activarla.\n\nSi estás intentando activar una expansión o un contenido descargable, activa primero el juego original para poder activar el contenido adicional."
 
 "Steam_SubscriptionCancelled_CDKey_MustLoginPS3_Headline" "No has jugado a %gamename% con tu cuenta en la PlayStation®3"
-"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Debes jugar a %gamename% en la PlayStation®3 antes de poder registrar la clave de producto que has introducido.\n\nSigue estos pasos:\n\n- Inicia %gamename% en tu PlayStation®3.\n\n- Vincula tu cuenta de Steam a tu cuenta de PlayStation®3 Network.\n\n- Conéctate a Steam mientras juegas a %gamename% en la PlayStation®3.\n\n- Registra esta clave de producto en Steam."
+"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Debes jugar a «%gamename%» en la PlayStation®3 antes de poder registrar la clave de producto que has introducido.\n\nSigue estos pasos:\n\n- Inicia «%gamename%» en tu PlayStation®3.\n\n- Vincula tu cuenta de Steam a tu cuenta de PlayStation®3 Network.\n\n- Conéctate a Steam mientras juegas a «%gamename%» en la PlayStation®3.\n\n- Registra esta clave de producto en Steam."
 
 "Steam_SubscriptionSuccess_Headline" "Gracias, tu transacción se ha completado."
 "Steam_SubscriptionSuccess$purchasetype=regular" "Se ha completado correctamente tu suscripción a %subscription%. Tu suscripción está registrada en esta cuenta de Steam: %accountName%. A partir de ahora, deberás conectarte a esta cuenta para poder acceder a tus juegos. ¡Gracias por el pedido!"
@@ -1350,11 +1350,11 @@
 "Steam_App_LegacyKey_Denied_Title" "Steam - Advertencia"
 
 "Steam_App_LegacyKey_Failed_Text"  "Error en la solicitud de la clave de producto. Inténtalo de nuevo en unos minutos."
-"Steam_App_LegacyKey_NoResponse_Text" "Error en contactar con el servidor de las claves de productos de Steam. Verifica tu conexión a internet e inténtalo de nuevo."
+"Steam_App_LegacyKey_NoResponse_Text" "No se ha podido contactar con el servidor de claves de producto de Steam. Comprueba tu conexión a internet e inténtalo de nuevo."
 "Steam_App_LegacyKey_Denied_Text"  "Steam no ha podido verificar la propiedad del producto para poder solicitar una clave del mismo. Por favor, ponte en contacto con el equipo de Soporte de Steam."
 "Steam_App_LegacyKey_Denied_Borrowed_Text" "El contenido de %game%, o parte de él, solo está disponible mediante una conexión a un servicio de terceros, por ejemplo Uplay o Origin.\nEl propietario debe estar registrado con este servicio para acceder a dicho contenido."
 "Steam_App_LegacyKey_Pending_Text" "La solicitud de la clave de producto está pendiente de aprobación por parte del equipo de Soporte de Steam. Inténtalo de nuevo en unas horas."
-"Steam_App_LegacyKey_OutOfKeys_Text" "Steam tiene agotadas temporalmente la claves de %game%.\n\nTe enviaremos una clave de producto cuando recibamos más claves del editor.\nPor favor, vuelve más tarde o solicita un reembolso ya."
+"Steam_App_LegacyKey_OutOfKeys_Text" "Steam tiene agotadas temporalmente la claves de «%game%».\n\nTe enviaremos una clave de producto cuando recibamos más claves del editor.\nVuelve más tarde o puedes solicitar un reembolso ahora."
 
 "Steam_App_Update_Failed_Title"	"Steam - Error"
 "Steam_App_Update_Failed_Text" "Se ha producido un error al actualizar %game% (%reason%)"
@@ -1681,7 +1681,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 
 "SteamUI_SSA_Agree"				"Por favor, lee este acuerdo en su totalidad. Debes aceptar las condiciones del Acuerdo de Suscriptor a Steam para continuar."
 "SteamUI_SSA_CybercafeAgree"		"Dispongo de la licencia correspondiente de operador de cibercafé y acepto los términos especificados"
-"SteamUI_SSA_ActivateProduct"		"Para registrar el producto en Steam y añadirlo a tu biblioteca, introduce la clave proporcionada con el CD/DVD u otra clave de producto de Steam aquí. Haz clic en Siguiente para continuar."
+"SteamUI_SSA_ActivateProduct"		"Para registrar el producto en Steam y añadirlo a tu biblioteca, introduce la clave proporcionada con el CD/DVD u otra clave de producto de Steam aquí. Haz clic en «Siguiente» para continuar."
 "SteamUI_ActivateProductLockedDown"		"Tu cuenta se encuentra actualmente autobloqueada o ha sido bloqueada por el Soporte de Steam. No puedes activar ningún producto nuevo en esta cuenta hasta que no se haya resuelto el problema."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Ver alertas activas del Soporte de Steam"
 
@@ -1947,7 +1947,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_Game_HardwarePromo"		"Promoción de hardware"
 "Steam_Game_SteamStore"			"Tienda de Steam"
 "Steam_Game_SteamStorePage"		"Página de la tienda"
-"Steam_Game_GameHub"			"Punto de encuentro"
+"Steam_Game_GameHub"			"Centro de la comunidad"
 
 "Steam_Game_RecommendGame"		"Escribir una reseña"
 
@@ -2356,12 +2356,12 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_MoreInfoLink"				"Más información sobre Steam"
 
 "Steam_RegisterCDKey_ExampleRetail"		"Los códigos de producto utilizan:\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE"
-"Steam_RegisterCDKey_InfoRetail"			"Escribe la clave de producto que quieras activar. La encontrarás en la caja del DVD, en la portada del manual, impresa en el disco o en el interior de la caja bajo el disco."
+"Steam_RegisterCDKey_InfoRetail"			"Introduce la clave de producto que quieras activar. La encontrarás en la caja del DVD, en la portada del manual, impresa en el disco o en el interior de la caja bajo el disco."
 
 "Steam_Decrypting"				"Descifrando"
 
 "Steam_CDKeyAlreadyRegistered_Title"	"Steam - Advertencia de clave de producto"
-"Steam_CDKeyAlreadyRegistered_Info"	"Ya has activado los productos asociados a este clave.\nNo necesitas volver a introducir la clave de producto; solo tienes que iniciar sesión en esta cuenta de Steam para acceder a los elementos."
+"Steam_CDKeyAlreadyRegistered_Info"	"Ya has activado los productos asociados a este clave.\nNo necesitas volver a introducir la clave de producto; solo tienes que iniciar sesión en esta cuenta de Steam para acceder a los artículos."
 
 "Steam_InstallComplete_RetailInstall"		"Ahora puedes acceder a los juegos seleccionados en la biblioteca de productos de Steam. Las actualizaciones se están descargando en segundo plano."
 "Steam_InstallComplete_RetailInstall_GamesAlwaysAvailable"	"Puedes volver a acceder a estos juegos cuando quieras desde cualquier ordenador iniciando sesión en tu cuenta de Steam '%account%'."
@@ -2479,7 +2479,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_Games"								"Juegos"
 
 "Steam_RegionRestricted_Title"			"Steam - Juego no disponible"
-"Steam_RegionRestrictedPurchase_Info"				"Este juego se activó con una clave de producto que solo es válida en una región geográfica específica. Al no encontrarte actualmente en esa región, no podrás jugar a %game%."
+"Steam_RegionRestrictedPurchase_Info"				"Este juego se activó con una clave de producto que solo es válida en una región geográfica específica. Al no encontrarte actualmente en esa región, no podrás jugar a «%game%»."
 "Steam_RegionRestricted_SupportLink"		"Visita el sitio web del Soporte de Steam para más información"
 "Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=spanish/"
 "Steam_RegionRestricted_Info"				"%game% no está disponible en tu territorio."
@@ -2934,12 +2934,12 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "SteamUI_ValveSurvey_MicrophoneNo"		"No, no lo tengo."
 "SteamUI_ValveSurvey_Summary_Microphone"	"Micrófono:  %s1"
 
-"SteamUI_ValveSurvey_ControllerCradleLabel"		"¿Utilizas la base del extensor inalámbrico para mejorar la conexión inalámbrica de tu Steam Controller (como se muestra abajo)?"
+"SteamUI_ValveSurvey_ControllerCradleLabel"		"¿Utilizas la base del extensor inalámbrico para mejorar la conexión inalámbrica de tu Steam Controller (como se muestra abajo)?"
 "SteamUI_ValveSurvey_ControllerCradleDontHave"	"No tengo un extensor inalámbrico."
 "SteamUI_ValveSurvey_ControllerCradleYes"		"Sí, uso el extensor inalámbrico como se muestra."
 "SteamUI_ValveSurvey_ControllerCradleNo"		"No, conecto el receptor inalámbrico en un puerto USB."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"No hay receptor inalámbrico."
-"SteamUI_ValveSurvey_Summary_ControllerCradle"	"Cable y base del Steam Controller: %s1"
+"SteamUI_ValveSurvey_Summary_ControllerCradle"	"Cable y base del Steam Controller: %s1"
 
 "SteamUI_ValveSurvey_Linux_Runtime_Info" "Información de tiempo de ejecución de Linux en Steam:"
 
@@ -3215,7 +3215,7 @@ La beta ya ha acabado: reinicia Steam para volver a la versión actual."
 "Steam_CDKeyDisplayReasonNoCopy" "Esta es la clave de activación para %game%. Tendrás que introducir esta clave una vez iniciada la aplicación. Anota la clave para poder introducirla posteriormente."
 
 "Steam_RequestingLegacyKey" "Solicitando clave..."
-"Steam_LegacyCDKey_Title" "Clave de producto de %game%"
+"Steam_LegacyCDKey_Title" "Clave de producto de «%game%»"
 "Steam_CopyLegacyKey_ToClipboard" "Copiar clave en el portapapeles"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Lanzar editor de personalización de construcciones"
@@ -3798,11 +3798,11 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_viewallfriends"		"Ver todos los amigos que juegan a este juego"
 "steam_friendsplayingnowapplication"	"¡Tienes %friendsplayingnow% amigos utilizando %gamename% en este momento!"
 "steam_friendplayingnowapplication"	"¡Tienes %friendsplayingnow% amigo utilizando %gamename% en este momento!"
-"steam_morefriendswhoplayapplication"		"Tienes %friendswhoplay% amigos más que utilizan %gamename%"
+"steam_morefriendswhoplayapplication"		"Tienes %friendswhoplay% amigos más que utilizan «%gamename%»"
 "steam_morefriendwhoplaysapplication"		"Tienes %friendswhoplay% amigo más que utiliza %gamename%"
-"steam_friendswhoplayapplication"		"Tienes %friendswhoplay% amigos que utilizan %gamename%"
+"steam_friendswhoplayapplication"		"Tienes %friendswhoplay% amigos que utilizan «%gamename%»"
 "steam_friendwhoplaysapplication"		"Tienes %friendswhoplay% amigo que utiliza %gamename%"
-"steam_nofriendswhoplayapplication"	"No tienes amigos que utilicen %gamename%"
+"steam_nofriendswhoplayapplication"	"No tienes amigos que utilicen «%gamename%»"
 "steam_viewallfriendsapplication"		"Ver todos los amigos que utilizan esta aplicación"
 "steam_RecentNews"		"Últimas noticias"
 "Steam_Screenshots"		"Capturas"
@@ -3845,7 +3845,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "steam_community_files"		"Workshop"
 "steam_community_files_info"		"Crea, descubre y juega con contenido creado por la comunidad de Steam."
-"steam_community_files_info_error"		"Conexión a los servidores de Steam Workshop no disponible."
+"steam_community_files_info_error"		"Conexión a los servidores de Steam Workshop no disponible."
 "steam_community_files_view_all"		"Explorar Workshop"
 "steam_paginationtext"	"Mostrando %start%-%end% de %total%"
 
@@ -3897,7 +3897,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_details_tags"	"Categorías"
 "steam_details_edittags"	"Asignar categorías..."
 
-"steam_configurecontroller_menuitem"	"Editar configuración de Steam Controller..."
+"steam_configurecontroller_menuitem"	"Editar configuración de Steam Controller..."
 
 "steam_client_edit_categories" "Asigna una categoría a este juego para que te resulte más fácil encontrarlo y organizar tu biblioteca. Los juegos de tu lista se agruparán según la categoría asignada."
 
@@ -4040,7 +4040,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_screenshots_upload_info" "Cargando %upload_screenshot_count% capturas a Steam Cloud"
 "steam_also_delete_from_cloud" "Eliminar de Steam Cloud también"
 "steam_screenshots_error_info" "Se ha producido un error al cargar %ScreenshotsErrors% capturas. Es posible que Steam Cloud no esté disponible temporalmente."
-"steam_screenshots_error_accountban" "No se te permite cargar contenido a este punto de encuentro debido a un bloqueo activo en tu cuenta."
+"steam_screenshots_error_accountban" "No se te permite cargar contenido a este centro de la comunidad debido a un bloqueo activo en tu cuenta."
 "steam_screenshots_limited_user" "Tu cuenta se encuentra actualmente limitada debido a que aún no has gastado 5 dólares estadounidenses (o lo equivalente en tu moneda) en Steam. Mientras esté limitada, no podrás cargar capturas públicas."
 "steam_are_you_sure_delete_screenshot" "¿Seguro que quieres eliminar permanentemente esta captura de tu disco duro?"
 "steam_are_you_sure_delete_screenshots" "¿Seguro que quieres eliminar permanentemente estas %delete_screenshot_count% capturas de tu disco duro?"
@@ -4150,9 +4150,9 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_nav_discussions"	"Discusiones"
 "steam_nav_groups"	"Grupos"
 "steam_nav_profile"		"Perfil"
-"steam_nav_gamehubs"	"Puntos de encuentro"
+"steam_nav_gamehubs"	"Centros de la comunidad"
 "steam_nav_friends"		"Amigos"
-"steam_gamehub"		"Punto de encuentro"
+"steam_gamehub"		"Centro de la comunidad"
 "steam_details_contributioncount"	"Contribuciones"
 
 "steam_subscribed_files" "%name% - Contenido de Workshop"
@@ -4583,11 +4583,11 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Transmite juegos entre este ordenador y otros dispositivos. Para conectarte, inicia sesión en esta cuenta de Steam en otro ordenador o elige «Otro ordenador» en tu Steam Link."
+"Steam_Settings_Streaming_Description" "Transmite juegos entre este ordenador y otros dispositivos. Para conectarte, inicia sesión en esta cuenta de Steam en otro ordenador o elige «Otro ordenador» en tu Steam Link."
 "Steam_Settings_Streaming_DeviceName" "NOMBRE DEL DISPOSITIVO"
 "Steam_Settings_Streaming_Status" "ESTADO"
 "Steam_Settings_Streaming_EnableStreaming" "Activar Remote Play"
-"Steam_Settings_Streaming_Pair" "Emparejar Steam Link"
+"Steam_Settings_Streaming_Pair" "Emparejar Steam Link"
 "Steam_Settings_Streaming_Unpair" "Desemparejar todo"
 "Steam_Settings_Streaming_UnpairConfirmation" "¿Seguro que quieres desemparejar todos los dispositivos?"
 "Steam_Settings_Streaming_SetPIN" "Definir cód. de seguridad"
@@ -4684,8 +4684,8 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Settings_Streaming_Disabled" "Transmisión desactivada"
 "Steam_Settings_Streaming_Unsupported" "No disponible"
 
-"Steam_Settings_Streaming_PIN_Title" "Establecer código de seguridad para Steam Link"
-"Steam_Settings_Streaming_PIN_Text" "Establece un código pin numérico que deberá ser introducido en Steam Link cada vez que vayas a transmitir desde este equipo:"
+"Steam_Settings_Streaming_PIN_Title" "Establecer código de seguridad para Steam Link"
+"Steam_Settings_Streaming_PIN_Text" "Establece un código pin numérico que deberá ser introducido en Steam Link cada vez que vayas a transmitir desde este equipo:"
 
 "Steam_Settings_ShareIPNetworking_Label" "Conectividad de red de Steam"
 "Steam_Settings_ShareIPNetworking_Info" "Permitir que los juegos que utilizan la conectividad de red de Steam compartan mi dirección IP para una conexión más rápida"
@@ -4709,18 +4709,18 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_UpdateControllerFirmware_Cancel"	"Ahora no"
 "SteamUI_UpdateControllerFirmware_Continue"	"Siguiente"
 "SteamUI_UpdateControllerFirmware_Done"		"Aceptar"
-"SteamUI_UpdateControllerFirmware_Title"	"Actualizar firmware del Steam Controller"
-"SteamUI_UpdateControllerFirmware_Intro"	"Hay un nuevo firmware disponible para tu Steam Controller. Ahora te guiaremos por los pasos para actualizarlo."
+"SteamUI_UpdateControllerFirmware_Title"	"Actualizar firmware del Steam Controller"
+"SteamUI_UpdateControllerFirmware_Intro"	"Hay un nuevo firmware disponible para tu Steam Controller. Ahora te guiaremos por los pasos para actualizarlo."
 "SteamUI_UpdateControllerFirmware_Install"	"Se está instalando el nuevo firmware en el mando.\nPor favor, no lo desconectes."
-"SteamUI_UpdateControllerFirmware_Finished"	"El firmware de tu Steam Controller ha sido actualizado."
+"SteamUI_UpdateControllerFirmware_Finished"	"El firmware de tu Steam Controller ha sido actualizado."
 "SteamUI_UpdateControllerFirmware_Fallback"	"Steam necesita utilizar el modo de recuperación para instalar el firmware en tu mando:\n\n 1) Desconecta el cable USB del mando.\n 2) Mantén pulsado el GATILLO DERECHO y vuelve a conectar el mando.\n 3) Espera un poco (hasta 30-60 segundos) para que el sistema operativo detecte y monte el volumen de la actualización del firmware del mando.\n\nUna vez que hayas completado estas indicaciones, el mando volverá a conectarse en modo de actualización de firmware y avanzaremos al siguiente paso."
 "SteamUI_UpdateControllerFirmware_Fallback_Finished" "Tu firmware ha sido actualizado. Por favor, haz lo siguiente:\n\n 1) Desconecta el cable USB del mando\n 2) Vuelve a conectar el cable USB sin pulsar ningún botón\n 3) Selecciona Aceptar abajo para finalizar este asistente"
-"SteamUI_UpdateControllerFirmware_Disconnect"	"El Steam Controller se ha desconectado durante el proceso de actualización del firmware. Tendrás otra oportunidad de actualizarlo cuando vuelvas a conectar el mando."
-"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Existe una actualización de firmware disponible para tu Steam Controller. Tu mando requiere una actualización mediante cable, la cual se realiza una sola vez.\nCuando estés listo, conecta el mando vía USB y el proceso de actualización comenzará automáticamente."
+"SteamUI_UpdateControllerFirmware_Disconnect"	"El Steam Controller se ha desconectado durante el proceso de actualización del firmware. Tendrás otra oportunidad de actualizarlo cuando vuelvas a conectar el mando."
+"SteamUI_UpdateControllerFirmware_WiredUpdate"	"Existe una actualización de firmware disponible para tu Steam Controller. Tu mando requiere una actualización mediante cable, la cual se realiza una sola vez.\nCuando estés listo, conecta el mando vía USB y el proceso de actualización comenzará automáticamente."
 "SteamUI_UpdateControllerFirmware_WiredUpdate_Title" "Actualización del firmware del mando"
-"SteamUI_UpdateControllerFirmware_HardFailure" "Aviso: Uno de tus Steam Controllers ha sido deshabilitado y no va a ser reconfigurado o reprogramado para juegos porque su firmware no está actualizado y Steam no ha podido obtener información actualizada del mando."
+"SteamUI_UpdateControllerFirmware_HardFailure" "Aviso: Uno de tus Steam Controllers ha sido deshabilitado y no va a ser reconfigurado o reprogramado para juegos porque su firmware no está actualizado y Steam no ha podido obtener información actualizada del mando."
 "SteamUI_UpdateControllerFirmware_Required_Title" "Nuevo firmware del mando disponible"
-"SteamUI_UpdateControllerFirmware_Required" "Existe un nuevo firmware disponible para tu Steam Controller. Por favor, cambia al modo Big Picture para iniciar el proceso de actualización."
+"SteamUI_UpdateControllerFirmware_Required" "Existe un nuevo firmware disponible para tu Steam Controller. Por favor, cambia al modo Big Picture para iniciar el proceso de actualización."
 "SteamUI_UpdateControllerMigration_Title"	"Es necesario volver a migrar el mando"
 "SteamUI_UpdateControllerMigration"			"Hemos corregido un problema en el proceso de migración del mando relacionado con juegos que no son de Steam. Por favor, cambia al modo Big Picture para volver a migrar las configuraciones de tu mando."
 
@@ -4804,8 +4804,8 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_LaunchSteamVR" "Iniciar SteamVR"
 
 "Steam_BLEControllerFirmware_Title" "Actualización de firmware de Bluetooth"
-"Steam_BLEControllerFirmware_Header" "Aplicación de Steam Link"
-"Steam_BLEControllerFirmware_Body" "Amplía la experiencia de juego de Steam a tu teléfono, tableta o TV a través de tu red local.\n\nPara usar el Steam Controller con la aplicación de Steam Link, necesitarás la nueva actualización de firmware de Bluetooth."
+"Steam_BLEControllerFirmware_Header" "Aplicación de Steam Link"
+"Steam_BLEControllerFirmware_Body" "Amplía la experiencia de juego de Steam a tu teléfono, tableta o TV a través de tu red local.\n\nPara usar el Steam Controller con la aplicación de Steam Link, necesitarás la nueva actualización de firmware de Bluetooth."
 "Steam_BLEControllerFirmware_LearnMore" "Más información"
 "Steam_BLEControllerFirmware_UpdateNow" "Actualizar firmware ahora"
 

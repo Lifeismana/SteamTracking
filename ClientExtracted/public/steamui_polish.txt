@@ -1871,8 +1871,8 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_CloudFile_SyncState_Conflict"	"Problem"
 "Steam_CloudFile_SyncState_Unknown"	"Nieznany"
 
-"Steam_PublishFile_Title"						"Podziel się plikiem ze społecznością: %filename%"
-"Steam_PublishFile_Description"			"Podzielić się plikiem ze Społecznością Steam?"
+"Steam_PublishFile_Title"						"Udostępnij plik społeczności: %filename%"
+"Steam_PublishFile_Description"			"Udostępnić plik Społeczności Steam?"
 "Steam_PublishFile_TitleLabel"			"Nazwa:"
 "Steam_PublishFile_DescriptionLabel"	"Opis:"
 "Steam_PublishFile_VisibilityLabel"	"Widoczność:"
@@ -3016,7 +3016,7 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "steam_ClientUpdateAvailableDownloadedInfo"		"Czy chcesz zrestartować Steam teraz, aby zainstalować aktualizację?"
 "Steam_NoClientUpdateAvailable"					"Twój klient Steam jest już aktualny."
 "Steam_NotEnoughDiskSpaceCheckingForUpdates"		"Steam wymaga więcej wolnej przestrzeni dyskowej do sprawdzania oraz instalacji aktualizacji."
-"Steam_ClientUpdateSuppressed"						"Aktualizacje klienta Steam zostały wyłączone przez przełącznik w linii poleceń lub plik konfiguracyjny. Usuń blokadę, zrestartuj klienta i spróbuj ponownie."
+"Steam_ClientUpdateSuppressed"						"Aktualizacje klienta Steam zostały wyłączone przez przełącznik we wierszu poleceń lub plik konfiguracyjny. Usuń blokadę, zrestartuj klienta i spróbuj ponownie."
 
 "steam_menu_updatevendorgraphicscard"			"Aktualizuj sterowniki do karty graficznej firmy %graphics_vendor%…"
 "steam_menu_checkforvideodriverupdates"			"Sprawdź dostępność aktualizacji sterowników graficznych…"

@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"右Joy-Conジャイロ ヨー"
 	"origin_switch_r_gyro_roll"					"右Joy-Conジャイロ ロール"
 	"origin_switch_button_dpad_move"			"方向パッドの動作"
+	"origin_switch_button_gl"					"GLボタン"
+	"origin_switch_button_gr"					"GRボタン"
+	"origin_switch_button_button_c"				"Cボタン"
 }

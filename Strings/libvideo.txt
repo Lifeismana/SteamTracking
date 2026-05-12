@@ -444,6 +444,9 @@ $RepresentationID$
 $XI(6
 $\n k_EClanInGameContentReleaseEvent
 $\n k_ECodecUsageReasonGameRecording
+$\n k_EGamePerformanceSetting_Custom
+$\n k_EGamePerformanceSetting_Medium
+$\n k_EGamePerformanceSetting_NotSet
 $\n k_ESteamReviewScore_VeryNegative
 $\n k_ESteamReviewScore_VeryPositive
 $\nY8O
@@ -621,6 +624,7 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAcceptAllEULAs
 %\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
@@ -1739,14 +1743,17 @@ $ffn
 0.15
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:14:43
 01/01/00
+1000
+1024
+10000
 0123456789
 0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+06:46:10
 08bX
 0?0L
 0A/8
@@ -1787,9 +1794,6 @@ $ffn
 1.5.6
 10.0.0.0/8
 100 127.0.0.1 stale
-1000
-1024
-10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2247,6 +2251,7 @@ $ffn
 2+ss
 2,THh
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20.GamePerformanceSettings.EGamePerformanceSetting
 2000
 2048
 208.64.200.0/22
@@ -2287,6 +2292,7 @@ $ffn
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
+23GamePerformanceSettings
 23IUnbufferedSendCallback
 24CCryptoKeyBase_RawBuffer
 24CDirWatcherPollingThread
@@ -2339,7 +2345,6 @@ $ffn
 3-WH
 30!]^JV
 3072
-30000
 30>9
 30CWorkItemNetFilterOnDisconnect
 31CAdHocValidation_SimpleCallback
@@ -2375,6 +2380,7 @@ $ffn
 3|rN>
 4000
 4096
+30000
 41CHTTPDefaultRedirectEnableHandlerInternal
 41CNetConnectionImmediateDisconnectWorkItem
 44,4
@@ -2402,8 +2408,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-6144
-65536
 524288
 52F*
 55Ly
@@ -2425,8 +2429,10 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
+6144
 64CK\vH
+65536
+60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -5223,6 +5229,7 @@ EForeignKeyAction
 EFriendRelationship
 EGCAction
 EGCStatus
+EGamePerformanceSetting
 EGamingDeviceType
 EGetFrameFromMPD
 EGetFramesFromVideo
@@ -5826,6 +5833,7 @@ Game Voucher
 GameInstall
 GameManagedItems
 GameOverlayUI
+GamePerformanceSettings
 GameServer
 GameStop
 Gamepad
@@ -6887,7 +6895,7 @@ Max block allocation size for PB arena
 MaxProtocol
 MaxResults
 Maximum family size exceeded
-May  8 2026
+May 12 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -8286,6 +8294,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -8705,6 +8715,7 @@ SSLv3/TLS write server done
 SSLv3/TLS write server hello
 SSLv3/TLS write session ticket
 STEAM_
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STORE lib
 STORE routines
 STREAM_CLOSED
@@ -10568,6 +10579,7 @@ Zulu
 \n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
+\n\rrtime_created
 \n\rscreen_height
 \n\rserver_secret
 \n\rsize_unzipped
@@ -13214,7 +13226,6 @@ f&dy
 f.N%H
 f;\fu8
 fC\tc
-fEd4
 fG;P^
 fNt7
 faccessat
@@ -13404,6 +13415,8 @@ g_vecTempTextBuffer
 gai_strerror
 galician
 game
+game_resolution_height
+game_resolution_width
 gameid
 gamepad+mouse.vdf
 gamepad_flickstick.vdf
@@ -14536,6 +14549,9 @@ k_EConnectionTypeWebSocket == GetConnectionType( hConnection )
 k_EEventBroadcastStart
 k_EEventMatchStart
 k_EEventPartnerMaxType
+k_EGamePerformanceSetting_High
+k_EGamePerformanceSetting_Low
+k_EGamePerformanceSetting_Ultra
 k_EHandshakeStateComplete == m_EHandshakeState
 k_EHandshakeStateInProgress == m_EHandshakeState
 k_EIPTypeV4 == addr.GetType()
@@ -15974,7 +15990,6 @@ m_hConnection != 0xdddddddd
 m_hSocket == INVALID_SOCKET
 m_hashMap
 m_heap
-m_heap.IsValidIndex( index )
 m_iAudioTrack >= 0
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000
@@ -17285,6 +17300,7 @@ pPendingMsg == m_pPendingMsgFirst
 pPendingMsg->GetPUDPConnection() == this
 pPendingMsg->GetSeqEnd() >= m_nOurSeqCur
 pPendingMsgAcked
+pPlayer
 pPlayer->GetNextRunFrameUS() >= 0
 pPool->m_SpaceUsed < 0xFFFF
 pPrivateKey->GetPublicKey( pPublicKey )
@@ -17585,6 +17601,7 @@ pq->q[item->index] == item
 pqualid
 pqueue_new
 pread64
+precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 preloadonly
@@ -18092,6 +18109,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheduledItem.m_ulTime
 scheme=
@@ -18379,6 +18397,7 @@ setmntent
 setpriority
 setsid
 setsockopt
+setting
 settings.m_eHardware != k_EVideoEncoderHardware_Unknown
 settings.m_timeBase.num == 1
 setup_tbuf

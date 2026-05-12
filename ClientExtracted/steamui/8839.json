@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Steam Deck -banneri: \"Pelit mukana kaikkialla\"",
     "VerifiedProgram_DeckDisclaimer": "Traileri ei välttämättä edusta todellista pelikokemusta Steam Deckillä",
+    "StoreItemFound": "%1$s Löydettiin %2$s",
+    "StoreItemNotFound": "Ei löydetty %1$s",
     "Dummy": "dummy"
 }

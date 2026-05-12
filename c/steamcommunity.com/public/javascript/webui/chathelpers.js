@@ -312,6 +312,7 @@ var CLSTAMP = "steamdb";
           else _ && console.error("Missing config element #", _);
         }
         const _ = "presentation_mode";
+        var _ = __webpack_require__("chunkid");
         const _ = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -402,7 +403,7 @@ var CLSTAMP = "steamdb";
             is_valve_email: !1,
             short_url: "",
             country_code: "",
-            excluded_content_descriptors: [3, 4, 1],
+            excluded_content_descriptors: [_._, _._, _._],
           },
           _ = {
             steamid: "",
@@ -784,7 +785,7 @@ var CLSTAMP = "steamdb";
               return _;
           }
         }
-        var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+        var _, _, _, _, _, _, _, _;
         !(function (_) {
           (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -880,47 +881,16 @@ var CLSTAMP = "steamdb";
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(_ || (_ = {})),
-          (function (_) {
-            (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
-              (_[(_.k_ELoginUIStyleNewWithoutQRCode = 1)] =
-                "k_ELoginUIStyleNewWithoutQRCode"),
-              (_[(_.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(_ || (_ = {})),
-          (function (_) {
-            (_[(_.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
-              "k_ECommunityProfileItemProperty_ImageSmall"),
-              (_[(_.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
-                "k_ECommunityProfileItemProperty_ImageLarge"),
-              (_[(_.k_ECommunityProfileItemProperty_InternalName = 2)] =
-                "k_ECommunityProfileItemProperty_InternalName"),
-              (_[(_.k_ECommunityProfileItemProperty_Title = 3)] =
-                "k_ECommunityProfileItemProperty_Title"),
-              (_[(_.k_ECommunityProfileItemProperty_Description = 4)] =
-                "k_ECommunityProfileItemProperty_Description"),
-              (_[(_.k_ECommunityProfileItemProperty_AppID = 5)] =
-                "k_ECommunityProfileItemProperty_AppID"),
-              (_[(_.k_ECommunityProfileItemProperty_TypeID = 6)] =
-                "k_ECommunityProfileItemProperty_TypeID"),
-              (_[(_.k_ECommunityProfileItemProperty_Class = 7)] =
-                "k_ECommunityProfileItemProperty_Class"),
-              (_[(_.k_ECommunityProfileItemProperty_MovieWebM = 8)] =
-                "k_ECommunityProfileItemProperty_MovieWebM"),
-              (_[(_.k_ECommunityProfileItemProperty_MovieMP4 = 9)] =
-                "k_ECommunityProfileItemProperty_MovieMP4"),
-              (_[(_.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
-                "k_ECommunityProfileItemProperty_MovieWebMSmall"),
-              (_[(_.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
-                "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(_ || (_ = {})),
-          (function (_) {
-            (_[(_.k_ERaiseGameWindowResult_NotRunning = 1)] =
-              "k_ERaiseGameWindowResult_NotRunning"),
-              (_[(_.k_ERaiseGameWindowResult_Success = 2)] =
-                "k_ERaiseGameWindowResult_Success"),
-              (_[(_.k_ERaiseGameWindowResult_Failure = 3)] =
-                "k_ERaiseGameWindowResult_Failure");
-          })(_ || (_ = {})),
+          })(_ || (_ = {}));
+        var _, _, _, _, _, _;
+        !(function (_) {
+          (_[(_.k_ERaiseGameWindowResult_NotRunning = 1)] =
+            "k_ERaiseGameWindowResult_NotRunning"),
+            (_[(_.k_ERaiseGameWindowResult_Success = 2)] =
+              "k_ERaiseGameWindowResult_Success"),
+            (_[(_.k_ERaiseGameWindowResult_Failure = 3)] =
+              "k_ERaiseGameWindowResult_Failure");
+        })(_ || (_ = {})),
           (function (_) {
             (_[(_.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (_[(_.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
@@ -988,12 +958,13 @@ var CLSTAMP = "steamdb";
                 "k_EWindowBringToFrontAndForceOS"),
               (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS");
-          })(_ || (_ = {})),
-          (function (_) {
-            (_[(_.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-              (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-              (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
           })(_ || (_ = {}));
+        var _;
+        !(function (_) {
+          (_[(_.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+            (_[(_.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+            (_[(_.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+        })(_ || (_ = {}));
         function _(_, _, ..._) {
           console.assert
             ? 0 == _.length
@@ -2103,66 +2074,66 @@ var CLSTAMP = "steamdb";
       {
         43: "93cb79b044e7536c3480",
         762: "8a41f18c9f3ef97f5303",
-        976: "1177abdd4336cf5b53e4",
-        1225: "701402b2ab602f3ae109",
-        1449: "91fbdb40c5e3ccf5b421",
-        1499: "8776c19ba8a29410ef31",
-        1973: "539a1124ea0edd760cb8",
-        2256: "879e37c64c4202c9f0e7",
-        2320: "a6a325a8d62373d35ef4",
-        2435: "7565cbff27e94257d39b",
-        2632: "068f647e1d55474d75ae",
-        2749: "3df6af0ac75fc8500862",
+        976: "92b79cbacc4a5258a450",
+        1225: "817f50bd9ba997c838b0",
+        1449: "030042150de7fcad3649",
+        1499: "9fe8b05c384130e7eefa",
+        1973: "454589a57cea1f3667ec",
+        2256: "c203526c44cd1b4b8943",
+        2320: "86f1a1628648ed8dc076",
+        2435: "5b35d5c49d9760f6e703",
+        2632: "d20b1071a2b48fb5cb2b",
+        2749: "a3417cec96e229131e3b",
         2945: "2895f4933307edc83db3",
-        2954: "30e48b77f8780c11f003",
+        2954: "c53088849e5d9bc2079d",
         3e3: "f25eceb68319028bebb7",
         3016: "5350f4e10ad588ceb109",
         3232: "24d7f289046539df24da",
         3415: "af0a539ae9a2911a881f",
         3485: "dc24d873e5b1cbdc703a",
-        3710: "05dc9b5e078762eca0e9",
+        3710: "0bf1657c5bfcd040f7e1",
         3789: "054d0d1457e489ab83cd",
-        3912: "4d41191a4ce3aa89265f",
+        3912: "e225abdf4af01a0d2cd2",
         4154: "a42f5c8a931faec32b3e",
         4302: "5f96b098b87755d88881",
         4434: "a4963ad2ec6ec578498d",
         4488: "6fc4650152e31925c959",
         4776: "fcef25c79464d2dab63c",
         4787: "f933b9746b9145fdf8c7",
-        5018: "6de196f4488bb8356a57",
-        5110: "8e922b31e8507f248365",
-        5241: "01a5638d20391f49c56f",
+        5018: "9637e641f3a60cd176bf",
+        5110: "0b13b179809acfa0f695",
+        5241: "734629cb6994f49391cc",
         5341: "7a78f0e1927e9759e826",
         5480: "d623db031a5e27e6bd30",
-        6031: "07845382322c932553f6",
+        6031: "184f1c86446a8551dfe3",
         6127: "079be2dc7d25f9ce1c8d",
-        6149: "8b43fa9eac519c223f71",
-        6165: "2354840550bf5378a308",
-        6208: "293eab586fbd31cb2144",
-        6239: "f47f3141ee553bfa08cb",
+        6149: "e761a0cd6e7ee5250a4a",
+        6165: "2da29a24139e3bbbead6",
+        6208: "c8d441c5129d534b2941",
+        6239: "7da5d7e571e576dc4512",
         6385: "f66f814b48e10c54f083",
         6518: "c15de94ae757264a6aa2",
-        6523: "149fbd88270cfd61fe26",
-        6562: "eb1d55a631e27c233267",
+        6523: "de0a494a1b8066691cf3",
+        6562: "a41402dac93023c2be12",
         6609: "e86f870358e54ad3dfa0",
         6888: "2ae8e28929899aaa51ef",
-        6971: "bfe028a323583ce69801",
+        6971: "927e8e6288879eb94909",
         7487: "57b6d1e2b2714ad59b41",
-        7539: "bd86aad2048e668c35cc",
-        7591: "243bf1fceb4b9b5f63d8",
-        7786: "88e9e10aa45277a12909",
+        7539: "5231c6a527fa802afe1d",
+        7591: "ac3a377f7219b23d21b5",
+        7786: "022105c954193499e7f2",
         7861: "2a1b2fbd3a988273124b",
-        8025: "b046bcbc9df84001e81a",
+        8025: "ffd5e60b3844b27c7d87",
         8194: "0919c0bfecd38a2be954",
-        8306: "8d5b307d48058d5f2151",
+        8306: "10ac91d9c63510ea64e7",
         8759: "ea1ea31bf8c3bbce45b3",
         8766: "62af14dba1cfc865f4aa",
-        8967: "f5a6d55a4e8042857719",
+        8967: "e5e80da4e3d4a5a28336",
         9027: "d1188c30e2da82f8146e",
-        9152: "8158d6e229a83d03e185",
-        9712: "cac4b3a663dfc2f8ec15",
+        9152: "2b2aea3da7e7009cbba1",
+        9712: "b491d16bc5dc529882c9",
         9746: "e66c1783691186eb564b",
-        9808: "5b208a4b05c2291700a7",
+        9808: "e4839ddff0a542d52a00",
       }[_]),
     (_.miniCssF = (_) => {}),
     (_._ = (function () {
@@ -2308,6 +2279,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(65846));
+  var _ = _._(void 0, [9489, 1068], () => _(44065));
   _ = _._(_);
 })();

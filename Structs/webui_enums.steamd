@@ -1,3 +1,11 @@
+enum $6p
+{
+	k_EAppUpdateContentType_Content = 0;
+	k_EAppUpdateContentType_Workshop = 1;
+	k_EAppUpdateContentType_Shader = 2;
+	k_EAppUpdateContentType_Max = 3;
+}
+
 enum AudioPlayback
 {
 	AudioPlayback_Undefined = 0;
@@ -18,6 +26,17 @@ enum by
 	by_player = 1;
 	by_wishlist = 2;
 	by_play_wish = 3;
+}
+
+enum ckP
+{
+	k_EConnectivityTestResult_Unknown = 0;
+	k_EConnectivityTestResult_Connected = 1;
+	k_EConnectivityTestResult_CaptivePortal = 2;
+	k_EConnectivityTestResult_TimedOut = 3;
+	k_EConnectivityTestResult_Failed = 4;
+	k_EConnectivityTestResult_WifiDisabled = 5;
+	k_EConnectivityTestResult_NoLAN = 6;
 }
 
 enum CM_EDITFLAG
@@ -167,6 +186,25 @@ enum EAllowShareIP
 	k_EAllowShareIP_Anyone = 3;
 }
 
+enum EAM
+{
+	k_EAMFindAccountTypeInvalid = 0;
+	k_EAMFindAccountTypeAccountName = 1;
+	k_EAMFindAccountTypeEmail = 2;
+	k_EAMFindAccountTypePersonaName = 3;
+	k_EAMFindAccountTypeURL = 4;
+	k_EAMFindAccountTypeAllOnline_Obsolete = 5;
+	k_EAMFindAccountTypeAll = 6;
+	k_EAMFindClanTypeClanName = 7;
+	k_EAMFindClanTypeURL = 8;
+	k_EAMFindClanTypeOfficialURL = 9;
+	k_EAMFindClanTypeAppID = 10;
+	k_EAMFindCheckAccountNameInUse = 11;
+	k_EAMFindCheckEmailAddressInUse = 12;
+	k_EAMNotFindCreateAccount = 13;
+	k_EAMFindClanTypeCreatorVanity = 14;
+}
+
 enum EAppReleaseState
 {
 	k_EAppReleaseState_Unknown = 0;
@@ -242,11 +280,31 @@ enum EButton
 	k_EButton_Max = 64;
 }
 
+enum ECategoryButtonAction
+{
+	k_ECategoryButtonAction_None = 0;
+	k_ECategoryButtonAction_Filter = 1;
+	k_ECategoryButtonAction_Add = 2;
+	k_ECategoryButtonAction_Remove = 3;
+}
+
 enum EChatFontSize
 {
 	k_EChatFontSizeSmall = 1;
 	k_EChatFontSizeDefault = 2;
 	k_EChatFontSizeLarge = 3;
+}
+
+enum EClanAccountType
+{
+	k_EClanAccountTypePrivate = 0;
+	k_EClanAccountTypePublic = 1;
+	k_EClanAccountTypeLocked = 2;
+	k_EClanAccountTypeDisabled = 3;
+	k_EClanAccountTypeOfficial = 4;
+	k_EClanAccountTypeDeleted = 5;
+	k_EClanAccountTypeValveOfficial = 6;
+	k_EClanAccountTypeInviteOnly = 7;
 }
 
 enum EClientUINotification
@@ -546,67 +604,67 @@ enum EHTTPProxyMode
 
 enum EInputMode
 {
-	k_EInputMode_None = 1;
-	k_EInputMode_Dpad = 2;
-	k_EInputMode_Buttons = 4;
-	k_EInputMode_FourButtons = 8;
-	k_EInputMode_AbsoluteMouse = 16;
-	k_EInputMode_JoystickMouse = 128;
-	k_EInputMode_JoystickCamera = 256;
-	k_EInputMode_ScrollWheel = 512;
-	k_EInputMode_Trigger = 1024;
-	k_EInputMode_TouchMenu = 2048;
-	k_EInputMode_MouseJoystick = 4096;
-	k_EInputMode_MouseRegion = 8192;
-	k_EInputMode_RadialMenu = 16384;
-	k_EInputMode_SingleButton = 32768;
-	k_EInputMode_Switches = 65536;
-	k_EInputMode_FlickStick = 131072;
-	k_EInputMode_2DScrollwheel = 262144;
-	k_EInputMode_Hotbar = 524288;
-	k_EInputMode_GyroToMouse = 4194304;
-	k_EInputMode_GyroToJoystickCamera = 8388608;
-	k_EInputMode_GyroToJoystickDeflection = 16777216;
-	k_EInputMode_GyroToCameraAngles = 33554432;
-	k_EInputMode_FlickStickToCameraAngles = 134217728;
-	k_EInputMode_JoystickToCameraAngles = 67108864;
-	k_EInputMode_TrackPadToCameraAngles = 268435456;
-	k_EInputMode_All = 1073741823;
+	k_EInputMode_None = BinaryExpression;
+	k_EInputMode_Dpad = BinaryExpression;
+	k_EInputMode_Buttons = BinaryExpression;
+	k_EInputMode_FourButtons = BinaryExpression;
+	k_EInputMode_AbsoluteMouse = BinaryExpression;
+	k_EInputMode_JoystickMouse = BinaryExpression;
+	k_EInputMode_JoystickCamera = BinaryExpression;
+	k_EInputMode_ScrollWheel = BinaryExpression;
+	k_EInputMode_Trigger = BinaryExpression;
+	k_EInputMode_TouchMenu = BinaryExpression;
+	k_EInputMode_MouseJoystick = BinaryExpression;
+	k_EInputMode_MouseRegion = BinaryExpression;
+	k_EInputMode_RadialMenu = BinaryExpression;
+	k_EInputMode_SingleButton = BinaryExpression;
+	k_EInputMode_Switches = BinaryExpression;
+	k_EInputMode_FlickStick = BinaryExpression;
+	k_EInputMode_2DScrollwheel = BinaryExpression;
+	k_EInputMode_Hotbar = BinaryExpression;
+	k_EInputMode_GyroToMouse = BinaryExpression;
+	k_EInputMode_GyroToJoystickCamera = BinaryExpression;
+	k_EInputMode_GyroToJoystickDeflection = BinaryExpression;
+	k_EInputMode_GyroToCameraAngles = BinaryExpression;
+	k_EInputMode_FlickStickToCameraAngles = BinaryExpression;
+	k_EInputMode_JoystickToCameraAngles = BinaryExpression;
+	k_EInputMode_TrackPadToCameraAngles = BinaryExpression;
+	k_EInputMode_All = UnaryExpression;
 }
 
 enum EInputSource
 {
-	k_EInputSource_None = 1;
-	k_EInputSource_ABXY = 16;
-	k_EInputSource_Dpad = 8192;
-	k_EInputSource_LeftBumper = 256;
-	k_EInputSource_RightBumper = 512;
-	k_EInputSource_Switch = 32;
-	k_EInputSource_LeftJoystick = 8;
-	k_EInputSource_RightJoystick = 4096;
-	k_EInputSource_LeftTrackpad = 2;
-	k_EInputSource_CenterTrackpad = 2048;
-	k_EInputSource_RightTrackpad = 4;
-	k_EInputSource_LeftGyro = 65536;
-	k_EInputSource_Gyro = 1024;
-	k_EInputSource_LeftTrigger = 64;
-	k_EInputSource_RightTrigger = 128;
-	k_EInputSource_Key = 16384;
-	k_EInputSource_Mouse = 32768;
-	k_EInputSource_CapJoystickRight = 131072;
-	k_EInputSource_CapJoystickLeft = 262144;
-	k_EInputSource_All = 524287;
-	k_EInputSource_Gyros = 66560;
-	k_EInputSource_Trackpads = 2054;
-	k_EInputSource_Joysticks = 397320;
-	k_EInputSource_Touch = 395270;
-	k_EInputSource_Triggers = 192;
-	k_EInputSource_NonGyro = -66561;
-	k_EInputSource_NonTrackpad = -2055;
-	k_EInputSource_NonJoystick = -397321;
-	k_EInputSource_NonTouch = -395271;
-	k_EInputSource_Digital = 25392;
-	k_EInputSource_Analog = 466126;
+	k_EInputSource_None = BinaryExpression;
+	k_EInputSource_ABXY = BinaryExpression;
+	k_EInputSource_Dpad = BinaryExpression;
+	k_EInputSource_LeftBumper = BinaryExpression;
+	k_EInputSource_RightBumper = BinaryExpression;
+	k_EInputSource_Switch = BinaryExpression;
+	k_EInputSource_LeftJoystick = BinaryExpression;
+	k_EInputSource_RightJoystick = BinaryExpression;
+	k_EInputSource_LeftTrackpad = BinaryExpression;
+	k_EInputSource_CenterTrackpad = BinaryExpression;
+	k_EInputSource_RightTrackpad = BinaryExpression;
+	k_EInputSource_LeftGyro = BinaryExpression;
+	k_EInputSource_Gyro = BinaryExpression;
+	k_EInputSource_LeftTrigger = BinaryExpression;
+	k_EInputSource_RightTrigger = BinaryExpression;
+	k_EInputSource_Key = BinaryExpression;
+	k_EInputSource_Mouse = BinaryExpression;
+	k_EInputSource_CapJoystickRight = BinaryExpression;
+	k_EInputSource_CapJoystickLeft = BinaryExpression;
+	k_EInputSource_All = UnaryExpression;
+	k_EInputSource_Gyros = BinaryExpression;
+	k_EInputSource_Trackpads = BinaryExpression;
+	k_EInputSource_Joysticks = BinaryExpression;
+	k_EInputSource_Touch = BinaryExpression;
+	k_EInputSource_Triggers = BinaryExpression;
+	k_EInputSource_NonGyro = UnaryExpression;
+	k_EInputSource_NonTrackpad = UnaryExpression;
+	k_EInputSource_NonJoystick = UnaryExpression;
+	k_EInputSource_NonTouch = UnaryExpression;
+	k_EInputSource_Digital = BinaryExpression;
+	k_EInputSource_Analog = BinaryExpression;
 }
 
 enum EInstallMgrState
@@ -726,6 +784,34 @@ enum ENoiseGateLevel
 	k_ENoiseGateLevel_Low = 1;
 	k_ENoiseGateLevel_Medium = 2;
 	k_ENoiseGateLevel_High = 3;
+}
+
+enum ENotificationEmail
+{
+	k_ENotificationEmail_Invalid = 0;
+	k_ENotificationEmail_WishlistSale = 1;
+	k_ENotificationEmail_SeasonalPromo = 2;
+	k_ENotificationEmail_WishlistReleases = 3;
+	k_ENotificationEmail_CuratorConnect = 5;
+	k_ENotificationEmail_CreatorHomeReleases = 6;
+	k_ENotificationEmail_InLibraryEvent = 7;
+	k_ENotificationEmail_LoyaltyAwardsReceived = 8;
+	k_ENotificationEmail_PartnerMessages = 9;
+	k_ENotificationEmail_YearInReview = 10;
+	k_ENotificationEmail_WishlistDemoReleases = 11;
+	k_ENotificationEmail_CreatorHomeDemoReleases = 12;
+	k_ENotificationEmail_SeasonPassShip = 13;
+	k_ENotificationEmail_RoadmapShip = 14;
+}
+
+enum ENotificationGroup
+{
+	k_ENotificationGroup_Invalid = 0;
+	k_ENotificationGroup_StoreNews = 1;
+	k_ENotificationGroup_DeveloperGameNews = 2;
+	k_ENotificationGroup_Family = 3;
+	k_ENotificationGroup_Wishlist = 4;
+	k_ENotificationGroup_Personal = 5;
 }
 
 enum ENotifyFlag
@@ -869,14 +955,6 @@ enum ERemoteClientLaunch
 	k_ERemoteClientLaunchInvisible = 27;
 	k_ERemoteClientLaunchRestrictedCountry = 28;
 	k_ERemoteClientLaunchUnauthorized = 29;
-}
-
-enum ESection
-{
-	k_ESectionInvalid = 0;
-	k_ESectionDefault = 1;
-	k_ESectionFamily = 2;
-	k_ESectionMax = 3;
 }
 
 enum ESortFacets
@@ -1051,6 +1129,27 @@ enum GAMEPAD
 	GAMEPAD_ANALOG_LAST = 50;
 }
 
+enum H24
+{
+	k_EInstallMgrStateNone = 0;
+	k_EInstallMgrStateSetup = 1;
+	k_EInstallMgrStateWaitLicense = 2;
+	k_EInstallMgrStateFreeLicense = 3;
+	k_EInstallMgrStateShowCDKey = 4;
+	k_EInstallMgrStateWaitAppInfo = 5;
+	k_EInstallMgrStateShowPassword = 6;
+	k_EInstallMgrStateShowConfig = 7;
+	k_EInstallMgrStateShowEULAs = 8;
+	k_EInstallMgrStateCreateApps = 9;
+	k_EInstallMgrStateReadFromMedia = 10;
+	k_EInstallMgrStateShowChangeMedia = 11;
+	k_EInstallMgrStateWaitLegacyCDKeys = 12;
+	k_EInstallMgrStateShowSignup = 13;
+	k_EInstallMgrStateComplete = 14;
+	k_EInstallMgrStateFailed = 15;
+	k_EInstallMgrStateCanceled = 16;
+}
+
 enum HAVE
 {
 	HAVE_NOTHING = 0;
@@ -1060,6 +1159,13 @@ enum HAVE
 	HAVE_ENOUGH_DATA = 4;
 }
 
+enum iEc
+{
+	k_EWindowBringToFrontInvalid = 0;
+	k_EWindowBringToFrontAndForceOS = 1;
+	k_EWindowBringToFrontWithoutForcingOS = 2;
+}
+
 enum ITEM_OPTIONS
 {
 	ITEM_OPTIONS_ALL = 1;
@@ -1067,6 +1173,26 @@ enum ITEM_OPTIONS
 	ITEM_OPTIONS_LATE = 3;
 	ITEM_OPTIONS_EARLY_LATE = 4;
 	ITEM_OPTIONS_NOT_EARLY_LATE = 5;
+}
+
+enum jHX
+{
+	k_ESuspendResumeProgressState_Invalid = 0;
+	k_ESuspendResumeProgressState_Complete = 1;
+	k_ESuspendResumeProgressState_CloudSync = 2;
+	k_ESuspendResumeProgressState_LoggingIn = 3;
+	k_ESuspendResumeProgressState_WaitingForApp = 4;
+	k_ESuspendResumeProgressState_Working = 5;
+}
+
+enum jrQ
+{
+	k_ENetFakeLocalSystemState_Normal = 0;
+	k_ENetFakeLocalSystemState_NoLAN = 1;
+	k_ENetFakeLocalSystemState_CaptivePortal_Redirected = 2;
+	k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3;
+	k_ENetFakeLocalSystemState_NoInternet = 4;
+	k_ENetFakeLocalSystemState_NoSteam = 5;
 }
 
 enum kPFIFlag
@@ -1129,6 +1255,16 @@ enum Layout
 	Layout_Numeric = 1;
 	Layout_Emoji = 2;
 	Layout_SteamItems = 3;
+}
+
+enum lcX
+{
+	k_EAppReleaseState_Unknown = 0;
+	k_EAppReleaseState_Unavailable = 1;
+	k_EAppReleaseState_Prerelease = 2;
+	k_EAppReleaseState_PreloadOnly = 3;
+	k_EAppReleaseState_Released = 4;
+	k_EAppReleaseState_Disabled = 5;
 }
 
 enum LEAGUE_BROADCAST
@@ -1195,6 +1331,13 @@ enum Preview
 	k_PreviewGamepad = 3;
 }
 
+enum Rhn
+{
+	k_EGameIDTypeApp = 0;
+	k_EGameIDTypeGameMod = 1;
+	k_EGameIDTypeShortcut = 2;
+}
+
 enum ShowGripButtons
 {
 	k_ShowGripButtons_None = 0;
@@ -1211,6 +1354,13 @@ enum SortBy
 	k_SortByStartDate = 1;
 }
 
+enum SSr
+{
+	k_EOverlayToStoreFlag_None = 0;
+	k_EOverlayToStoreFlag_AddToCart = 1;
+	k_EOverlayToStoreFlag_AddToCartAndShow = 2;
+}
+
 enum STORAGE
 {
 	STORAGE_DOES_NOT_EXIST = 0;
@@ -1225,6 +1375,24 @@ enum Store
 	k_StoreComingSoon = 3;
 	k_StoreEarlyAccess = 4;
 	k_StoreGeneralAvailability = 5;
+}
+
+enum Sxg
+{
+	k_EActivateGameOverlayToWebPageMode_Default = 0;
+	k_EActivateGameOverlayToWebPageMode_Modal = 1;
+}
+
+enum tgE
+{
+	k_EAppUpdateProgress_VerifyingInstalledFiles = 0;
+	k_EAppUpdateProgress_Preallocating = 1;
+	k_EAppUpdateProgress_Download = 2;
+	k_EAppUpdateProgress_Staging = 3;
+	k_EAppUpdateProgress_VerifyingStagedFiles = 4;
+	k_EAppUpdateProgress_Copying = 5;
+	k_EAppUpdateProgress_Committing = 6;
+	k_EAppUpdateProgress_Max = 7;
 }
 
 enum UnnamedEnum001b037885a2ecde
@@ -4130,6 +4298,14 @@ enum UnnamedEnumb58cf35b311fefd7
 	ALIGN = 1;
 }
 
+enum UnnamedEnumb632ef12e6907daa
+{
+	Other = 0;
+	Stereo = 1;
+	Surround51 = 2;
+	Surround71 = 3;
+}
+
 enum UnnamedEnumb63e83b815d09ed1
 {
 	None = 0;
@@ -5124,5 +5300,14 @@ enum VRMouseButton
 	VRMouseButton_Left = 1;
 	VRMouseButton_Right = 2;
 	VRMouseButton_Middle = 4;
+}
+
+enum WU6
+{
+	k_EPositionInvalid = -1;
+	k_EPositionTopLeft = 0;
+	k_EPositionTopRight = 1;
+	k_EPositionBottomLeft = 2;
+	k_EPositionBottomRight = 3;
 }
 

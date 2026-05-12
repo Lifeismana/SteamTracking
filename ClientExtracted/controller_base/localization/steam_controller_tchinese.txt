@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"陀螺儀俯仰"
 	"origin_SteamDeck_Gyro_Yaw"					"陀螺儀偏擺"
 	"origin_SteamDeck_Gyro_Roll"				"陀螺儀翻滾"
+	"origin_SteamDeck_LGrip"					"左握持觸控	"
+	"origin_SteamDeck_RGrip"					"右握持觸控"
 
 	"origin_horipad_m1"							"M1 鍵"
 	"origin_horipad_m2"							"M2 鍵"

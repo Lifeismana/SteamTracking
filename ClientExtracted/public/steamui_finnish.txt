@@ -3948,7 +3948,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_Tooltip_Offline" "Steam - offline-tilassa"
 "Steam_Tooltip_Syncing" "Steam - synkronoidaan"
 "Steam_Tooltip_Downloading" "Steam - ladataan (%s1/s)"
-"Steam_Tooltip_VoiceActive" "Steam - puhelussa"
+"Steam_Tooltip_VoiceActive" "Steam – äänichatissa"
 "Steam_Tooltip_UnreadMessageS" "Steam - lukemattomat viestit"
 
 "Friends_online"			"Paikalla"
@@ -4495,7 +4495,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Music_Settings_Volume_Header" "Äänenvoimakkuus"
 "Music_Settings_PauseMusic_Header" "Keskeytä musiikki"
 "Music_Settings_PauseMusicWhenStartingApplication" "Kun käynnistän ohjelman"
-"Music_Settings_PauseMusicWhenVoiceChat" "Kun olen äänipuhelussa"
+"Music_Settings_PauseMusicWhenVoiceChat" "Kun olen äänichatissa"
 "Music_Settings_Logging_Header" "Loki"
 "Music_Settings_NotificationPlaylistNowPlaying" "Kun uusi kappale alkaa"
 "Music_Settings_EnableMediaKeys" "Salli medianäppäimet"

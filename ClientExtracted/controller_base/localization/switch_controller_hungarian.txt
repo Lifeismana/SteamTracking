@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Jobb Joy-Con giro oldalszög"
 	"origin_switch_r_gyro_roll"					"Jobb Joy-Con giro elfordulás"
 	"origin_switch_button_dpad_move"			"Iránygombos mozgás"
+	"origin_switch_button_gl"					"„GL” gomb"
+	"origin_switch_button_gr"					"„GR” gomb"
+	"origin_switch_button_button_c"				"„C” gomb"
 }

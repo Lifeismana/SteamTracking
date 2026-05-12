@@ -131,5 +131,6 @@
     "reportedsubjectlist_header": "已檢舉的主題",
     "moderation_already_owner_disputed": "已提出爭議",
     "moderationstats_alltypes": "所有主題類型",
+    "moderation_alternateforumtool": "Alternate tool",
     "empty_no_trailing_comma": ""
 }

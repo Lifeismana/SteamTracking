@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Axe de lacet du gyroscope du Joy-Con droit"
 	"origin_switch_r_gyro_roll"					"Gyroscope du Joy-Con droit : roulis"
 	"origin_switch_button_dpad_move"			"D-pad : mouvement"
+	"origin_switch_button_gl"					"Bouton GL"
+	"origin_switch_button_gr"					"Bouton GR"
+	"origin_switch_button_button_c"				"Bouton C"
 }

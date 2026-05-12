@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Højre JoyCon, gyro-drejning"
 	"origin_switch_r_gyro_roll"					"Højre Joy-Con, gyro-rulning"
 	"origin_switch_button_dpad_move"			"Retningsknap, bevægelse"
+	"origin_switch_button_gl"					"GL-knap"
+	"origin_switch_button_gr"					"GR-knap"
+	"origin_switch_button_button_c"				"C-knap"
 }

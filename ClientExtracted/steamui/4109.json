@@ -5,11 +5,13 @@
     "Wishlist_NotSignedIn": "Meld je aan of open deze pagina in de Steam-app om dit artikel te volgen, te kopen of op je verlanglijst te zetten.",
     "VerifiedProgram_DeckTitle": "%1$s is %2$s op Steam Deck",
     "VerifiedProgram_DeckTitle_Verified": "Geverifieerd",
-    "VerifiedProgram_DeckSubTitle": "This game and many more have been fully tested and run %1$s.",
-    "VerifiedProgram_GreatOnDeck": "Great On Deck",
+    "VerifiedProgram_DeckSubTitle": "Dit spel en nog vele andere zijn volledig getest en draaien %1$s.",
+    "VerifiedProgram_GreatOnDeck": "Geweldig op Deck",
     "VerifiedProgram_DeckAlt": "Geverifieerd-vinkje",
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Steam Deck-banner: 'Jouw spellen, overal'",
     "VerifiedProgram_DeckDisclaimer": "De trailer geeft mogelijk niet de daadwerkelijke gameplay op een Steam Deck weer",
+    "StoreItemFound": "%1$s Gevonden (%2$s)",
+    "StoreItemNotFound": "Niet gevonden (%1$s)",
     "Dummy": "dummy"
 }

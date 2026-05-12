@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Giroskop (Pitch)"
 	"origin_SteamDeck_Gyro_Yaw"					"Giroskop (Yaw)"
 	"origin_SteamDeck_Gyro_Roll"				"Giroskop (Roll)"
+	"origin_SteamDeck_LGrip"					"Grip Kiri (Sentuh)"
+	"origin_SteamDeck_RGrip"					"Grip Kanan (Sentuh)"
 
 	"origin_horipad_m1"							"Tombol M1"
 	"origin_horipad_m2"							"Tombol M2"

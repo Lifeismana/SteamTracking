@@ -146,7 +146,7 @@
 "Friends_NotifyFriendOnline_Info"		"Twój znajomy %friend% jest online."
 
 "Friends_RefreshLogin_Title"			"Steam — Odśwież login"
-"Friends_RefreshLogin"				"Podaj ponownie szczegóły logowania do Steam, aby zapisać się do Znajomych."
+"Friends_RefreshLogin"				"Podaj ponownie szczegóły logowania do Steam, by zalogować się do listy znajomych."
 "Friends_AccountName"					"Nazwa konta"
 "Friends_Login_Btn"					"Zaloguj"
 "Friends_Login_Password"				"Hasło"

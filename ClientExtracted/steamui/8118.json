@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Banner Steam Deck: „Jocurile tale, accesibile de oriunde”",
     "VerifiedProgram_DeckDisclaimer": "Este posibil ca trailerul să nu conțină secvențe de joc reale de pe Steam Deck",
+    "StoreItemFound": "%1$s găsit (%2$s)",
+    "StoreItemNotFound": "Niciun rezultat (%1$s)",
     "Dummy": "dummy"
 }

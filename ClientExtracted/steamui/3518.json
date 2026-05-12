@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Ảnh biểu ngữ Steam Deck: \"Trò chơi của bạn, đi muôn nơi\"",
     "VerifiedProgram_DeckDisclaimer": "Trailer có thể không đại diện cho trải nghiệm chơi thực trên Steam Deck",
+    "StoreItemFound": "Tìm thấy: %1$s (%2$s)",
+    "StoreItemNotFound": "Không tìm thấy (%1$s)",
     "Dummy": "dummy"
 }

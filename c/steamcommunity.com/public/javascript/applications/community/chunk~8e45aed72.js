@@ -2701,6 +2701,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_, _) {
@@ -2710,7 +2712,7 @@
             (this.m_summary = _),
             (this.m_mapStoredDrafts = _),
             (this.m_mapLocalUpdates = new Map());
-          for (let _ = 0; _ < 31; _++) this.m_mapLocalUpdates.set(_, {});
+          for (let _ = _.Bhc; _ < _.bP9; _++) this.m_mapLocalUpdates.set(_, {});
         }
         BNeedsSaving(_) {
           if (void 0 !== _) {
@@ -2729,9 +2731,9 @@
             ),
             "Attempting to save when we lack a FaqID in the summary object",
           );
-          let _ = 1,
+          let _ = _._,
             _ = new Array();
-          for (let _ = 0; _ < 31; ++_)
+          for (let _ = _.Bhc; _ < _.bP9; ++_)
             if (
               (this.m_mapLocalUpdates.get(_).strTitle &&
                 this.m_mapLocalUpdates.get(_).strTitle !==
@@ -2755,7 +2757,7 @@
                   _,
                 );
               _.then((_) => {
-                1 == _.eResult
+                _.eResult == _._
                   ? (0, _._)(() => {
                       this.m_mapStoredDrafts.has(_) ||
                         this.m_mapStoredDrafts.set(_, {}),
@@ -2782,7 +2784,7 @@
                             last_update_timestamp: _.rtUpdateTime,
                           });
                     })
-                  : 1 == _ &&
+                  : _ == _._ &&
                     (console.error(
                       "FAQModel.SaveDraft: Response not ok " + _.eResult,
                       _,
@@ -2792,7 +2794,7 @@
                 console.error(
                   "FAQModel.SaveDrafts: Hit error " + (0, _._)(_).strErrorMsg,
                 ),
-                  1 == _ && (_ = 2);
+                  _ == _._ && (_ = _._);
               }),
                 _.push(_);
             }
@@ -2824,7 +2826,7 @@
         }
         GetDraftTitleWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
           var _, _, _, _, _, _;
-          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
+          const _ = _ == _._.k_ESteamRealmChina ? _.NFp : _.Bhc;
           return null !==
             (_ =
               null !==
@@ -2850,7 +2852,7 @@
         }
         GetDraftContentWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
           var _, _, _, _, _, _;
-          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
+          const _ = _ == _._.k_ESteamRealmChina ? _.NFp : _.Bhc;
           return null !==
             (_ =
               null !==
@@ -2959,7 +2961,7 @@
         }
         async UpdateJsonData(_) {
           const _ = await _.Get().UpdateJsonData(this.GetFAQID(), _);
-          return 1 === _ && (this.m_summary.json_data = JSON.stringify(_)), _;
+          return _ === _._ && (this.m_summary.json_data = JSON.stringify(_)), _;
         }
       }
       (0, _._)([_._], _.prototype, "m_summary", void 0),
@@ -3041,13 +3043,13 @@
           const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_internal_name(_);
           let _,
-            _ = 2;
+            _ = _._;
           try {
             const _ = await _._.Create(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (((_ = _.GetEResult()), 1 == _)) {
+            if (((_ = _.GetEResult()), _ == _._)) {
               _ = _.Body().faq_id();
               const _ = {
                 faq_id: _,
@@ -3075,7 +3077,7 @@
             _.Body().set_language(_),
             _.Body().set_content(_),
             _.Body().set_title(_);
-          let _ = 2,
+          let _ = _._,
             _ = 0;
           try {
             const _ = await _._.UpdateDraft(
@@ -3083,7 +3085,7 @@
               _,
             );
             (_ = _.GetEResult()),
-              1 != _
+              _ != _._
                 ? console.error("FAQStore.UpdateDraft request failed:", _)
                 : (_ = _.Body().last_update_timestamp());
           } catch (_) {
@@ -3104,7 +3106,7 @@
           _.Body().set_steamid(_._.CLANSTEAMID),
             _.Body().set_faq_id(_),
             _.Body().set_json_data(_);
-          let _ = 2;
+          let _ = _._;
           try {
             (_ = (
               await _._.UpdateJsonData(
@@ -3112,7 +3114,7 @@
                 _,
               )
             ).GetEResult()),
-              1 != _
+              _ != _._
                 ? console.error("FAQStore.UpdateJsonData request failed:", _)
                 : (this.m_mapFAQSummaries.get(_).json_data = _);
           } catch (_) {
@@ -3136,7 +3138,7 @@
                 _,
               ),
               _ = _.GetEResult();
-            if (1 == _) return _.Body().faq().toObject();
+            if (_ == _._) return _.Body().faq().toObject();
             console.error("FAQStore.GetFAQVersion request failed:", _);
           } catch (_) {
             const _ = (0, _._)(_);
@@ -3150,12 +3152,12 @@
         async DeleteFAQ(_) {
           const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_faq_id(_);
-          let _ = 2;
+          let _ = _._;
           try {
             (_ = (
               await _._.Delete(this.m_steamInterface.GetServiceTransport(), _)
             ).GetEResult()),
-              1 != _
+              _ != _._
                 ? console.error("FAQStore.DeleteFAQ request failed:", _)
                 : (this.m_mapFAQDrafts.delete(_),
                   this.m_mapFAQPublishedContent.delete(_),
@@ -3178,9 +3180,9 @@
               _.sm_mapFallbackLanguages.has(_) &&
               (_ = __webpack_require__.get(_.sm_mapFallbackLanguages.get(_))),
             _ ||
-              0 == _ ||
+              _ == _.Bhc ||
               (0, _._)() ||
-              (_ = __webpack_require__.get("chunkid")),
+              (_ = __webpack_require__.get(_.Bhc)),
             _
           );
         }
@@ -3197,13 +3199,13 @@
           if (this.m_mapFAQDrafts.has(_)) return this.m_mapFAQDrafts.get(_);
           const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_faq_id(_);
-          let _ = 2;
+          let _ = _._;
           try {
             const _ = await _._.GetAllDrafts(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (((_ = _.GetEResult()), 1 != _))
+            if (((_ = _.GetEResult()), _ != _._))
               return (
                 console.error(
                   "FaqStore.LoadFAQDraftContent request failed:",
@@ -3238,7 +3240,7 @@
             _.Body().set_faq_id(_),
             _.Body().set_visible_in_global_realm(_),
             _.Body().set_visible_in_china_realm(_);
-          let _ = 2;
+          let _ = _._;
           try {
             if (
               ((_ = (
@@ -3247,7 +3249,7 @@
                   _,
                 )
               ).GetEResult()),
-              1 === _)
+              _ === _._)
             ) {
               const _ = this.m_mapFAQSummaries.get(_);
               _ &&
@@ -3265,18 +3267,18 @@
           return _;
         }
         async PublishDraftByLanguage(_, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = _._.Init(_._);
           __webpack_require__.Body().set_steamid(_._.CLANSTEAMID),
             __webpack_require__.Body().set_faq_id(_),
             _.forEach((_) => __webpack_require__.Body().add_language(_));
-          let _ = 2;
+          let _ = _._;
           try {
             const _ = await _._.PublishDraft(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (((_ = _.GetEResult()), 1 === _)) {
+            if (((_ = _.GetEResult()), _ === _._)) {
               const _ = this.m_mapFAQSummaries.get(_);
               _ &&
                 (0, _._)(() => {
@@ -3315,7 +3317,7 @@
           __webpack_require__.Body().set_steamid(_._.CLANSTEAMID),
             __webpack_require__.Body().set_faq_id(_),
             __webpack_require__.Body().set_internal_name(_);
-          let _ = 2;
+          let _ = _._;
           try {
             (_ = (
               await _._.UpdateInternalName(
@@ -3323,7 +3325,7 @@
                 _,
               )
             ).GetEResult()),
-              1 === _
+              _ === _._
                 ? (0, _._)(() => {
                     var _, _, _;
                     (null === (_ = this.m_mapFAQSummaries.get(_)) ||
@@ -3399,7 +3401,8 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._
             ) {
               const _ = _.data.updated,
                 _ =
@@ -3431,7 +3434,7 @@
           return this.m_mapFAQSummaries
             .get(_)
             .per_language_info.some(
-              (_) => 0 == _.language && _.last_publish_timestamp > 0,
+              (_) => _.language == _.Bhc && _.last_publish_timestamp > 0,
             );
         }
         GetNonEnglishDraftsToPublish(_) {
@@ -3440,7 +3443,7 @@
             .per_language_info.filter((_) => {
               var _;
               return (
-                0 != _.language &&
+                _.language != _.Bhc &&
                 _.last_update_timestamp >
                   (null !== (_ = _.last_publish_timestamp) && void 0 !== _
                     ? _
@@ -3451,9 +3454,9 @@
         }
       }
       (_.sm_mapFallbackLanguages = new Map([
-        [5, 27],
-        [27, 5],
-        [29, 6],
+        [_.HkE, _.FHN],
+        [_.FHN, _.HkE],
+        [_.ZLm, _.NFp],
       ])),
         (0, _._)([_._], _.prototype, "m_mapFAQSummaries", void 0),
         (0, _._)([_._], _.prototype, "RemoveAllDirtyDrafts", null);

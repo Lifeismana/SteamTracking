@@ -867,6 +867,29 @@ a.item_market_action_button_disabled {
 	white-space: nowrap;
 }
 
+
+#marketBetaNoteCtn {
+	border-radius: 5px;
+	background: rgba(26, 159, 255, 0.20);
+	padding: 10px;
+	margin-top: 20px;;
+}
+
+.marketBetaNoteText {
+	text-align: center;
+	color: #c6d4df;
+}
+
+#marketBetaNoteCtn .marketBetaNoteText a{
+	color: #92b8d6;
+}
+
+#marketBetaNoteCtn .marketBetaNoteText a:hover {
+	cursor: pointer;
+	color: #ceeaff;
+	text-decoration: underline;
+}
+
 .market_tab_well_tab {
 	display: inline-block;
 	position: relative;
@@ -2081,11 +2104,6 @@ input.filter_search_box:focus {
 	align-items: center;
 	justify-content: flex-end;
 	gap: 30px;
-}
-
-.market_bottombuttons_optin {
-	flex: 1;
-	cursor: pointer;
 }
 
 .market_advancedsearch_bottombuttons > div {

@@ -242,7 +242,7 @@
     },
     22145: (t, e, o) => {
       "use strict";
-      o.d(e, { KF: () => f, Ot: () => p, c$: () => b, Hd: () => v });
+      o.d(e, { KF: () => f, Ot: () => p, c$: () => b, Hd: () => C });
       var r = o(7850),
         s = o(12362),
         n = o(15024),
@@ -389,7 +389,7 @@
           if (e && t) return e.InstallPlugin(t);
         }, [t, e]);
       }
-      function v() {
+      function C() {
         var t;
         return null === (t = i.useContext(g)) || void 0 === t ? void 0 : t.view;
       }
@@ -748,12 +748,12 @@
     },
     90286: (t, e, o) => {
       "use strict";
-      o.d(e, { n: () => b, u: () => v });
+      o.d(e, { n: () => b, u: () => C });
       var r = o(91986),
         s = o(64753),
         n = o(98724),
         a = o(52893),
-        l = o(95742),
+        l = o(49693),
         i = o(57053),
         c = o(81393);
       class d {
@@ -1179,7 +1179,7 @@
             });
         }
       }
-      function v(t, e) {
+      function C(t, e) {
         (0, s.hL)(null == t ? void 0 : t.OnStateChangedCallbacks, e);
       }
     },
@@ -1463,7 +1463,7 @@
     },
     60637: (t, e, o) => {
       "use strict";
-      o.d(e, { J: () => m });
+      o.d(e, { J: () => u });
       var r = o(7850),
         s = o(37834),
         n = o(52893),
@@ -1471,19 +1471,20 @@
         l = o(64046),
         i = o(9154),
         c = o(72421),
-        d = o(61859),
-        u = o(30470);
-      function m(t, e, o) {
+        d = o(61859);
+      function u(t, e, o) {
         const [n, l] = a.useState(void 0),
-          c = a.useCallback(
+          c = a.useRef(null),
+          d = a.useCallback(
             (r) => {
-              const { state: n, dispatch: a } = r,
-                i = n.selection;
-              let { from: c, to: d, empty: u } = i;
+              c.current = r;
+              const { state: n } = r,
+                a = n.selection;
+              let { from: i, to: d, empty: u } = a;
               const m = e ? t.marks.color : t.marks.bgcolor;
               let h = "",
                 g = "";
-              const p = u ? i.$from : n.doc.resolve(c),
+              const p = u ? a.$from : n.doc.resolve(i),
                 f = (0, s.vn)(n, m, p),
                 b = !!f;
               b
@@ -1493,45 +1494,48 @@
                         0,
                         f.slice.content.size,
                       )),
-                      (c = f.from),
+                      (i = f.from),
                       (d = f.to))
-                    : ((c = Math.max(f.from, c)),
+                    : ((i = Math.max(f.from, i)),
                       (d = Math.min(f.to, d)),
                       (g = f.slice.content.textBetween(
-                        c - f.from,
+                        i - f.from,
                         d - f.from,
                       ))))
-                : u || (g = n.doc.cut(c, d).textContent);
-              let v = {};
+                : u || (g = n.doc.cut(i, d).textContent);
+              let C = {};
               if (o)
                 for (const t in o) {
                   const e = o[t],
                     r = f ? e.fnReadValue(f.mark) : e.defaultValue;
-                  v[t] = r;
+                  C[t] = r;
                 }
               l({
-                view: r,
+                viewRef: c,
                 strColor: h,
                 strTargetText: g,
                 bIsUpdate: b,
                 addtlAttrs: o,
-                addtlAttrsValues: v,
-                from: c,
+                addtlAttrsValues: C,
+                from: i,
                 to: d,
               });
             },
             [o, e, t.marks.bgcolor, t.marks.color],
           ),
-          d = null == n ? void 0 : n.view,
           u = a.useCallback(() => {
-            window.setTimeout(() => d.focus(), 1), l(void 0);
-          }, [d]);
+            const t = c.current;
+            window.setTimeout(() => {
+              t && !t.isDestroyed && t.focus();
+            }, 1),
+              l(void 0);
+          }, []);
         return [
-          c,
+          d,
           n &&
             (0, r.jsx)(i.EN, {
               active: !0,
-              children: (0, r.jsx)(h, {
+              children: (0, r.jsx)(m, {
                 schema: t,
                 bColor: e,
                 closeModal: u,
@@ -1540,94 +1544,85 @@
             }),
         ];
       }
-      const h = a.memo(function (t) {
+      const m = a.memo(function (t) {
         const {
             schema: e,
             strColor: o,
             bIsUpdate: s,
             strTargetText: i,
-            bColor: m,
-            addtlAttrs: h,
-            addtlAttrsValues: g,
-            closeModal: p,
-            view: f,
-            from: b,
-            to: v,
+            bColor: u,
+            addtlAttrs: m,
+            addtlAttrsValues: h,
+            closeModal: g,
+            viewRef: p,
+            from: f,
+            to: b,
           } = t,
-          [C, _] = a.useState(o),
-          k = a.useRef(null),
-          [T, B] = a.useState(g),
+          [C, v] = a.useState(o),
+          _ = a.useRef(null),
+          [k, T] = a.useState(h),
           w = a.useCallback(() => {
-            const { state: t, dispatch: o } = f,
-              r = m ? e.marks.color : e.marks.bgcolor;
-            if (!r) return void console.log("debug: no markType");
-            if (!C || !C.startsWith("#") || 7 !== C.length)
-              return void console.log("debug: invalid color text: " + C);
-            if (b < 0 || v > t.doc.content.size || b > v)
-              return void console.error("Invalid selection range:", b, v);
-            let s;
             try {
-              if (((s = r.create({ color: C, ...T })), !s))
-                return void console.error(
-                  "Failed to create mark — mark is null",
+              const t = p.current;
+              if (!t || t.isDestroyed)
+                return void console.warn(
+                  "Editor view is destroyed; skipping color insert",
                 );
-            } catch (t) {
-              return void console.error("Failed to create color mark:", t);
-            }
-            let a = t.tr;
-            b === v
-              ? (a = a.addStoredMark(s))
-              : ((a = a.removeMark(b, v, r)),
-                (a = a.addMark(b, v, s)),
-                (a = a.setSelection(n.U3.create(a.doc, v)))),
-              "dev" == u.TS.WEB_UNIVERSE &&
-                console.log(
-                  "Dispatching transaction:",
-                  a.steps.map((t) => t.toJSON()),
-                  v,
-                  b,
-                );
-            try {
-              (a.docChanged || a.steps.length > 0) && o(a);
+              const { state: o, dispatch: r } = t,
+                s = u ? e.marks.color : e.marks.bgcolor;
+              if (!s) return void console.log("debug: no markType");
+              if (!C || !/^#[0-9a-fA-F]{6}$/.test(C))
+                return void console.log("debug: invalid color text: " + C);
+              const a = Math.max(0, Math.min(f, o.doc.content.size));
+              if (a > Math.max(0, Math.min(b, o.doc.content.size)))
+                return void console.error("Invalid selection range:", f, b);
+              const l = s.create({ color: C, ...k });
+              let i = o.tr;
+              f === b
+                ? (i = i.addStoredMark(l))
+                : ((i = i.removeMark(f, b, s)),
+                  (i = i.addMark(f, b, l)),
+                  (i = i.setSelection(n.U3.create(i.doc, b)))),
+                r(i.scrollIntoView());
             } catch (t) {
               console.error(t);
             } finally {
-              requestAnimationFrame(() => p());
+              requestAnimationFrame(() => g());
             }
-          }, [T, m, p, C, b, e.marks.bgcolor, e.marks.color, v, f]);
+          }, [k, u, g, C, f, e.marks.bgcolor, e.marks.color, b, p]);
         a.useLayoutEffect(() => {
           var t, e, o;
           (
             null ===
               (e =
-                null === (t = k.current) || void 0 === t ? void 0 : t.value) ||
+                null === (t = _.current) || void 0 === t ? void 0 : t.value) ||
             void 0 === e
               ? void 0
               : e.length
           )
-            ? k.current.focus()
-            : null === (o = k.current) || void 0 === o || o.focus();
+            ? _.current.focus()
+            : null === (o = _.current) || void 0 === o || o.focus();
         }, []);
-        const x = (0, d.we)(
-            m ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
+        const B = (0, d.we)(
+            u ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
           ),
-          y = s
+          x = s
             ? (0, d.we)("#Button_Save")
             : (0, d.we)(
-                m ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
+                u ? "#FormattingToolbar_Color" : "#FormattingToolbar_BgColor",
               );
         return (0, r.jsx)(c._, {
           onOK: w,
-          closeModal: p,
-          strTitle: x,
-          strOKText: y,
+          closeModal: g,
+          strTitle: B,
+          strOKText: x,
           bOKDisabled: !C || 0 == C.length,
           children: (0, r.jsx)(l.s, {
             color: C,
-            strTitle: x,
+            strTitle: B,
             disableAlpha: !0,
             onChange: (t) =>
-              _(
+              v(
                 (function (t) {
                   const e = t.match(
                     /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
@@ -1730,19 +1725,19 @@
             closeModal: p,
             view: f,
             from: b,
-            to: v,
+            to: C,
           } = t,
-          [C, _] = a.useState(o),
+          [v, _] = a.useState(o),
           [k, T] = a.useState(s),
-          B = a.useRef(null),
           w = a.useRef(null),
+          B = a.useRef(null),
           [x, y] = a.useState(h);
         a.useLayoutEffect(() => {
           var t, e, o, r, s;
           (
             null ===
               (e =
-                null === (t = B.current) || void 0 === t ? void 0 : t.value) ||
+                null === (t = w.current) || void 0 === t ? void 0 : t.value) ||
             void 0 === e
               ? void 0
               : e.length
@@ -1750,15 +1745,15 @@
             ? (
                 null ===
                   (r =
-                    null === (o = w.current) || void 0 === o
+                    null === (o = B.current) || void 0 === o
                       ? void 0
                       : o.value) || void 0 === r
                   ? void 0
                   : r.length
               )
-              ? (B.current.Focus(), B.current.element.select())
-              : w.current.Focus()
-            : null === (s = B.current) || void 0 === s || s.Focus();
+              ? (w.current.Focus(), w.current.element.select())
+              : B.current.Focus()
+            : null === (s = w.current) || void 0 === s || s.Focus();
         }, []);
         const A = i
             ? (0, d.we)("#FormattingToolbar_EditLink")
@@ -1775,7 +1770,7 @@
                 "dev" != u.TS.WEB_UNIVERSE ||
                 (f &&
                   null != b &&
-                  null != v &&
+                  null != C &&
                   (null === (t = null == e ? void 0 : e.marks) || void 0 === t
                     ? void 0
                     : t.link))
@@ -1784,7 +1779,7 @@
               return void console.warn("Missing required data in insertLink", {
                 view: f,
                 from: b,
-                to: v,
+                to: C,
                 schema: e,
               });
             const i = { href: k };
@@ -1798,7 +1793,7 @@
                 "Failed to create link mark with attrs",
                 i,
               );
-            const d = e.text(C || k, [c]);
+            const d = e.text(v || k, [c]);
             "dev" == u.TS.WEB_UNIVERSE &&
               (console.log(
                 "Replacement node:",
@@ -1806,20 +1801,20 @@
                   ? void 0
                   : r.call(d)) || d,
               ),
-              console.log("Transaction range from-to:", { from: b, to: v }),
+              console.log("Transaction range from-to:", { from: b, to: C }),
               console.log(
                 "Document slice at range:",
                 (null ===
                   (a =
-                    null === (s = f.state.doc.slice(b, v).content) ||
+                    null === (s = f.state.doc.slice(b, C).content) ||
                     void 0 === s
                       ? void 0
                       : s.toJSON) || void 0 === a
                   ? void 0
-                  : a.call(s)) || f.state.doc.slice(b, v),
+                  : a.call(s)) || f.state.doc.slice(b, C),
               ));
             try {
-              (l = l.replaceRangeWith(b, v, d)),
+              (l = l.replaceRangeWith(b, C, d)),
                 (l = l.setSelection(
                   n.U3.create(l.doc, b + d.nodeSize, b + d.nodeSize),
                 )),
@@ -1835,13 +1830,13 @@
           bOKDisabled: 0 == k.length,
           children: [
             (0, r.jsx)(l.pd, {
-              ref: B,
-              value: C,
+              ref: w,
+              value: v,
               onChange: (t) => _(t.currentTarget.value),
               label: (0, d.we)("#FormattingToolbar_LinkText"),
             }),
             (0, r.jsx)(l.pd, {
-              ref: w,
+              ref: B,
               value: k,
               placeholder: "https://",
               onChange: (t) => T(t.currentTarget.value),
@@ -1879,7 +1874,7 @@
     },
     1805: (t, e, o) => {
       "use strict";
-      o.d(e, { l: () => w });
+      o.d(e, { l: () => B });
       var r = o(7850),
         s = o(76217),
         n = o(63512),
@@ -1895,8 +1890,8 @@
         p = o.n(g),
         f = o(38539),
         b = o(9024),
-        v = o(52038);
-      const C = m.memo(function (t) {
+        C = o(52038);
+      const v = m.memo(function (t) {
         const { schema: e } = t,
           o = !(!("table" in e.nodes) || !e.nodes.table.spec.tableRole);
         return (
@@ -1913,7 +1908,7 @@
           return !!super.update(t) && (this.SetTableClass(t), !0);
         }
         SetTableClass(t) {
-          this.table.className = (0, v.A)(
+          this.table.className = (0, C.A)(
             p().Table,
             t.attrs[b.w.NoBorder] && p().NoBorder,
             t.attrs[b.w.EqualCells] && p().EqualCells,
@@ -1922,8 +1917,8 @@
       }
       var k = o(61859),
         T = o(73745),
-        B = o(73309);
-      const w = (0, h.Nr)(function (t) {
+        w = o(73309);
+      const B = (0, h.Nr)(function (t) {
         const {
             pmState: e,
             className: o,
@@ -1935,12 +1930,12 @@
             children: f,
           } = t,
           [b, _] = m.useState(),
-          [w, y] = m.useState();
+          [B, y] = m.useState();
         m.useEffect(() => {
           e && b && y(new l.Lz(b, { state: e.state }));
         }, [e, b]),
-          m.useEffect(() => () => (null == w ? void 0 : w.destroy()), [w]),
-          (0, T.D5)(u, w);
+          m.useEffect(() => () => (null == B ? void 0 : B.destroy()), [B]),
+          (0, T.D5)(u, B);
         const {
             refDiv: A,
             onActivate: S,
@@ -1969,21 +1964,21 @@
               s = m.useCallback((t) => t.currentTarget == t.target, []),
               l = (0, n.ak)(e, null, null, s);
             return { refDiv: e, onActivate: r, onGamepadDirection: l };
-          })(w),
+          })(B),
           j = (0, T.Ue)(A, _);
         if (!e) return null;
         const { schemaConfig: F, bbcodeParser: O } = e;
         return (0, r.jsxs)(i.Ot, {
-          view: w,
+          view: B,
           pmState: e,
           children: [
             (0, r.jsx)(
               s.Z,
               {
-                className: (0, v.A)({
+                className: (0, C.A)({
                   ["" + o]: !!o,
-                  [B.Container]: !0,
-                  [B.SingleLine]: !!g,
+                  [w.Container]: !0,
+                  [w.SingleLine]: !!g,
                 }),
                 ref: j,
                 spellCheck: h,
@@ -2001,7 +1996,7 @@
               bSingleLine: g,
             }),
             (0, r.jsx)(x, { parser: O, schema: F.pm_schema }),
-            (0, r.jsx)(C, { schema: F.pm_schema }),
+            (0, r.jsx)(v, { schema: F.pm_schema }),
             f,
           ],
         });
@@ -2040,11 +2035,11 @@
       "use strict";
       o.d(e, {
         Km: () => b,
-        WJ: () => C,
+        WJ: () => v,
         z9: () => T,
         C$: () => _,
-        Hz: () => v,
-        Nt: () => B,
+        Hz: () => C,
+        Nt: () => w,
         MV: () => f,
       });
       var r = o(7850),
@@ -2174,7 +2169,7 @@
           ],
         });
       }
-      function v(t) {
+      function C(t) {
         const { schema: e } = t;
         return (0, r.jsx)(d.u3, {
           tooltip: "#FormattingToolbar_Paragraph",
@@ -2183,7 +2178,7 @@
           children: (0, r.jsx)(i.iYj, {}),
         });
       }
-      function C(t) {
+      function v(t) {
         const { schema: e, maxLevel: o = 1, levels: s } = t,
           n = o + s - 1;
         return (0, r.jsxs)(r.Fragment, {
@@ -2323,7 +2318,7 @@
           children: (0, r.jsx)(i.YqK, {}),
         });
       }
-      function B(t) {
+      function w(t) {
         const { bSpellcheckEnabled: e, setSpellcheckEnabled: o } = t;
         return (0, r.jsx)(d.ff, {
           tooltip: e
@@ -2339,10 +2334,10 @@
       "use strict";
       o.d(e, {
         Ez: () => k,
-        GY: () => B,
-        XQ: () => C,
+        GY: () => w,
+        XQ: () => v,
         bI: () => b,
-        cQ: () => w,
+        cQ: () => B,
         ff: () => x,
         hK: () => _,
         u3: () => T,
@@ -2361,7 +2356,7 @@
         h = o(73745),
         g = o(30470),
         p = o(73309);
-      const f = () => l.useContext(v);
+      const f = () => l.useContext(C);
       function b(t) {
         const { view: e, refUpdateToolbar: o, children: s } = t,
           n = l.useRef(void 0);
@@ -2374,10 +2369,10 @@
             [e, o],
           );
         const a = l.useMemo(() => ({ callbacks: n.current, view: e }), [e]);
-        return e ? (0, r.jsx)(v.Provider, { value: a, children: s }) : null;
+        return e ? (0, r.jsx)(C.Provider, { value: a, children: s }) : null;
       }
-      const v = l.createContext(void 0);
-      function C() {
+      const C = l.createContext(void 0);
+      function v() {
         return (0, r.jsx)("div", { className: p.Gap });
       }
       function _() {
@@ -2400,18 +2395,18 @@
           g = l.useCallback((t) => m((0, n.gj)(t.state, e, o)), [e, o]);
         (0, h.hL)(c, g);
         const p = l.useMemo(() => a.y_(e, o), [o, e]);
-        return (0, r.jsx)(w, { ...i, command: p, toggled: u, children: s });
+        return (0, r.jsx)(B, { ...i, command: p, toggled: u, children: s });
       }
-      function B(t) {
+      function w(t) {
         const { mark: e, children: o, ...s } = t,
           { callbacks: i, view: c } = f(),
           [d, u] = l.useState(() => (0, n.Cd)(c.state, e)),
           m = l.useCallback((t) => u((0, n.Cd)(t.state, e)), [e]);
         (0, h.hL)(i, m);
         const g = l.useMemo(() => a.wh(e), [e]);
-        return (0, r.jsx)(w, { ...s, command: g, toggled: d, children: o });
+        return (0, r.jsx)(B, { ...s, command: g, toggled: d, children: o });
       }
-      function w(t) {
+      function B(t) {
         const { command: e, toggled: o, children: s, ...n } = t,
           { view: a, callbacks: c } = f(),
           [d, m] = l.useState(() => e(a.state));

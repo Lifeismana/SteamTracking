@@ -32,11 +32,8 @@
     "moderation_statementofreasons_visibilityrestriction_removed": "محتوى مخفي",
     "moderation_statementofreasons_factsandcircumstances_text": "عند اتخاذ قرارات بشأن محتوى أو حسابات، فإننا نأخذ في الاعتبار المحتوى محل النظر ومعلومات الحساب المرتبطة به والمعلومات المُقدمة عبر آليات الإبلاغ وتحقيقنا الخاص.",
     "moderation_outofcourtsettlement": "(placeholder for out of court settlement info)",
-    "moderation_cancelreport": "إلغاء الإبلاغ",
-    "moderation_details": "التفاصيل",
     "moderation_yes": "نعم",
     "moderation_no": "لا",
-    "moderation_confirmcancel": "هل ترغب في إلغاء البلاغ؟",
     "moderation_submit": "إرسال",
     "moderation_cancel": "إلغاء",
     "moderation_dispute_title": "إدارة النزاعات",
@@ -206,5 +203,8 @@
     "anonymousreport_signin": "تسجيل الدخول",
     "anonymousreport_join": "انضم إلى Steam",
     "anonymousreport_createaccount": "إنشاء حساب",
-    "anonymousreport_signin_or_join": "%1$s أو %2$s"
+    "anonymousreport_signin_or_join": "%1$s أو %2$s",
+    "setcooldown_days": "أيام",
+    "setcooldown_clearcooldown": "مسح",
+    "setcooldown_cooldownsummary": "(%1$s أيام)"
 }

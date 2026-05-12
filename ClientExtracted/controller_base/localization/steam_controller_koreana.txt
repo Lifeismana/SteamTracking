@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"자이로 피치"
 	"origin_SteamDeck_Gyro_Yaw"					"자이로 요"
 	"origin_SteamDeck_Gyro_Roll"				"자이로 롤"
+	"origin_SteamDeck_LGrip"					"왼쪽 그립 터치"
+	"origin_SteamDeck_RGrip"					"오른쪽 그립 터치"
 
 	"origin_horipad_m1"							"M1 버튼"
 	"origin_horipad_m2"							"M2 버튼"

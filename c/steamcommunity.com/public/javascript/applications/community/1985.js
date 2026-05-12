@@ -123,6 +123,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -162,7 +163,7 @@
                   _._.CMInterface.GetServiceTransport(),
                   _,
                 );
-                if (1 != __webpack_require__.GetEResult()) {
+                if (__webpack_require__.GetEResult() != _._) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -182,10 +183,9 @@
                 });
                 if (
                   200 != _.status ||
-                  1 !=
-                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                      ? void 0
-                      : _.success)
+                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                    ? void 0
+                    : _.success) != _._
                 ) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
@@ -379,10 +379,10 @@
             fnShareOnSteamActivityFeed: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _.useState)((0, _._)(_._.LANGUAGE)),
+          [_, _] = (0, _.useState)((0, _.sfN)(_._.LANGUAGE)),
           _ = (0, _.useMemo)(() => {
             const _ = new URL(_);
-            return _.searchParams.set("l", (0, _._)(_)), _.href;
+            return _.searchParams.set("l", (0, _.LgB)(_)), _.href;
           }, [_, _]);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().FlexColumnContainer, _().share_controls_ctn),

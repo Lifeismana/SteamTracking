@@ -1351,6 +1351,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = (0, _._)();
@@ -1365,7 +1366,7 @@
             _.Body().set_steamid(_.ConvertTo64BitString()),
               _.Body().set_itemid(_);
             const _ = await _._.GetClanEventCrowdInMetadata(_, _);
-            return 1 != _.GetEResult() ? null : _.Body().toObject();
+            return _.GetEResult() != _._ ? null : _.Body().toObject();
           },
         });
       }
@@ -1373,13 +1374,13 @@
         const _ = _._.Init(_._);
         __webpack_require__.Body().set_steamid(_);
         const _ = await _._.GetClanCrowdInMetadata(_, _);
-        if (42 === _.GetEResult())
+        if (_.GetEResult() === _._)
           return {
             crowdin_project_id: null,
             crowdin_directory_id: null,
             push_by_default: !1,
           };
-        if (1 !== _.GetEResult()) throw _.GetEResult();
+        if (_.GetEResult() !== _._) throw _.GetEResult();
         return _.Body().toObject();
       }
       function _(_) {
@@ -1430,7 +1431,7 @@
                 _.Body().set_steamid(_),
                 _.Body().set_itemid(_);
               const _ = await _._.FetchTranslationFromCrowdIn(_, _);
-              if (1 != _.GetEResult())
+              if (_.GetEResult() != _._)
                 throw new Error(
                   `Error from FetchLocalizationForClanEventFromCrowdIn: ${_.GetErrorMessage()} (${_.GetEResult()})`,
                 );
@@ -1449,6 +1450,7 @@
           default: () => _,
         });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1675,8 +1677,8 @@
                         (function (_, _) {
                           var _, _;
                           let _ = new _._();
-                          for (let _ = 0; _ < 31; ++_)
-                            (_.BHasSomeTextForLanguage(_) || 0 == _) &&
+                          for (let _ = _.Bhc; _ < _.bP9; ++_)
+                            (_.BHasSomeTextForLanguage(_) || _.Bhc == _) &&
                               (_.SetLocalization(
                                 _,
                                 _,
@@ -1713,8 +1715,34 @@
           19, 25, 18, 1, 10, 28, 26, 22, 27, 29, 30,
         ],
         _ = [
-          23, 6, 7, 19, 13, 14, 15, 2, 1, 24, 18, 3, 10, 4, 16, 12, 11, 22, 20,
-          8, 5, 27, 17, 9, 21, 26, 28, 30,
+          _.Uu1,
+          _.NFp,
+          _.A4L,
+          _.m2$,
+          _.iQT,
+          _.L3y,
+          _.egf,
+          _.xcz,
+          _.FH6,
+          _.dZ5,
+          _.K91,
+          _.dFE,
+          _.OFl,
+          _.Pn1,
+          _.JBx,
+          _._Q1,
+          _.QT4,
+          _.Lzz,
+          _.kG6,
+          _.GXE,
+          _.HkE,
+          _.FHN,
+          _.wWt,
+          _.$ys,
+          _.RhO,
+          _.JOj,
+          _.kSD,
+          _.Ze9,
         ],
         _ = (_) => {
           const {
@@ -1808,7 +1836,7 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _.Language,
-                  children: (0, _._)("#Language_" + (0, _._)(_)),
+                  children: (0, _._)("#Language_" + (0, _.LgB)(_)),
                 }),
                 (0, _.jsx)("div", {
                   className: _.Timestamp,
@@ -1895,7 +1923,7 @@
                               console.log(
                                 "Going to publish FAQ",
                                 _.faq_id,
-                                _.current[_].map((_) => (0, _._)(_)),
+                                _.current[_].map((_) => (0, _.LgB)(_)),
                               ))
                             : console.log(
                                 "No live english version for:",
@@ -1912,7 +1940,7 @@
                             _,
                           );
                           if (_.token.reason) return;
-                          if (1 != _)
+                          if (_ != _._)
                             return void _(
                               (0, _._)("#FAQDashboard_PublishFailed"),
                             );
@@ -1971,7 +1999,7 @@
             _.map((_, _) => {
               const _ = _[_];
               if (0 == _.length) return null;
-              const _ = _.map((_) => (0, _._)(_)).join(",");
+              const _ = _.map((_) => (0, _.wwZ)(_)).join(",");
               return (0, _.jsx)(
                 "div",
                 {
@@ -2027,11 +2055,11 @@
           const [_, _] = (0, _._)(),
             [_, _] = _.useState(1),
             _ = _.map((_) => {
-              const _ = _.per_language_info.find((_) => 0 == _.language),
+              const _ = _.per_language_info.find((_) => _.language == _.Bhc),
                 _ = (null == _ ? void 0 : _.last_update_timestamp) || 0,
                 _ = Array.from(
                   _.per_language_info.filter(
-                    (_) => 0 != _.language && _.last_update_timestamp >= _,
+                    (_) => _.language != _.Bhc && _.last_update_timestamp >= _,
                   ),
                 ).length,
                 _ = Array.from(
@@ -2459,7 +2487,7 @@
                             _._.Get()
                               .DeleteFAQ(_.GetFAQID())
                               .then((_) => {
-                                if (1 == _) {
+                                if (_ == _._) {
                                   const _ =
                                     _._.COMMUNITY_BASE_URL.substr(
                                       0,
@@ -2476,7 +2504,7 @@
                                     _.strErrorMsg,
                                   _,
                                 ),
-                                  _(2);
+                                  _(_._);
                               })
                               .finally(() => _(!1));
                         },
@@ -2610,7 +2638,7 @@
                               _,
                             )
                             .then((_) => {
-                              1 == _ && _(!0), _(_);
+                              _ == _._ && _(!0), _(_);
                             })
                             .catch((_) => {
                               const _ = (0, _._)(_);
@@ -2618,7 +2646,7 @@
                                 "FAQPublishDialog: hit error: " + _.strErrorMsg,
                                 _,
                               ),
-                                _(2);
+                                _(_._);
                             })
                             .finally(() => _(!1));
                       },
@@ -2717,7 +2745,7 @@
                             _._.Get()
                               .UpdateVisibility(_.GetFAQID(), _, _)
                               .then((_) => {
-                                1 == _ && _(!0), _(_);
+                                _ == _._ && _(!0), _(_);
                               })
                               .catch((_) => {
                                 const _ = (0, _._)(_);
@@ -2726,7 +2754,7 @@
                                     _.strErrorMsg,
                                   _,
                                 ),
-                                  _(2);
+                                  _(_._);
                               })
                               .finally(() => _(!1));
                         },
@@ -2755,7 +2783,7 @@
                   null === (_ = null == _ ? void 0 : _.per_language_info) ||
                   void 0 === _
                     ? void 0
-                    : _.find((_) => 0 == _.language)) || void 0 === _
+                    : _.find((_) => _.language == _.Bhc)) || void 0 === _
                 ? void 0
                 : _.last_update_timestamp,
             _ =
@@ -2980,7 +3008,7 @@
                   },
                 });
               })(_.GetFAQID())),
-            [_, _] = (0, _.useState)(-1);
+            [_, _] = (0, _.useState)(_.xPp);
           let _ = "";
           return (
             _.isSuccess &&
@@ -2996,7 +3024,7 @@
           return (0, _.jsxs)("tr", {
             children: [
               (0, _.jsx)("td", {
-                children: (0, _._)("#Language_" + (0, _._)(_.language)),
+                children: (0, _._)("#Language_" + (0, _.LgB)(_.language)),
               }),
               (0, _.jsx)("td", {
                 children: (0, _.jsx)(_, {
@@ -3054,7 +3082,7 @@
                 const _ = await _.SaveDrafts();
                 _(_);
               } catch (_) {
-                _(2),
+                _(_._),
                   console.log(
                     "FAQSaveProgressDialog hit exception " +
                       (0, _._)(_).strErrorMsg,
@@ -3080,7 +3108,7 @@
                   : (0, _.jsxs)("div", {
                       children: [
                         (0, _._)(
-                          Boolean(1 == _)
+                          Boolean(_ == _._)
                             ? "#FAQSave_SaveSuccess"
                             : "#FAQSave_Error",
                         ),
@@ -3095,7 +3123,7 @@
                       position: "center",
                     })
                   : (0, _.jsx)("div", {
-                      children: Boolean(1 == _)
+                      children: Boolean(_ == _._)
                         ? (0, _.jsx)("div", {
                             children: (0, _._)("#FAQSave_SaveSuccess_desc"),
                           })
@@ -3197,7 +3225,7 @@
           const { closeModal: _, draft: _ } = _,
             [_, _] = _.useState(__webpack_require__.GetFAQInternalName() || ""),
             [_, _] = _.useState(!1),
-            [_, _] = _.useState(1),
+            [_, _] = _.useState(_._),
             [_, _] = _.useState(!1);
           return (0, _.jsxs)(_._, {
             title: (0, _._)("#FAQEditor_ChangeInternalName"),
@@ -3228,7 +3256,7 @@
                   _ &&
                     (0, _.jsx)("span", {
                       children:
-                        1 == _
+                        _ == _._
                           ? (0, _._)("#EventDisplay_Share_Success")
                           : (0, _._)(
                               "#Error_Description",
@@ -3709,7 +3737,7 @@
         _ = __webpack_require__._(_);
       const _ = (_) => {
           const { faqid: _ } = _,
-            [_, _] = (0, _._)(_, (0, _._)(_._.LANGUAGE));
+            [_, _] = (0, _._)(_, (0, _.sfN)(_._.LANGUAGE));
           return _
             ? _
               ? (0, _.jsx)(_, {

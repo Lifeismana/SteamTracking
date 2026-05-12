@@ -35,6 +35,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) =>
         (0, _.createElement)(_._, {
@@ -442,16 +443,18 @@
             closeModal: _,
           } = _,
           _ = (0, _._)();
-        return (0, _.jsx)(_._, {
-          className: _ ? void 0 : _.StoreHeaderAdjust,
-          eventClassName: _ ? _.GamePadUIWidthAdjust : void 0,
-          appid: _,
-          trackingLocation: _,
-          announcementGID: _,
-          partnerEventStore: _,
-          eventModel: _,
-          closeModal: _,
-        });
+        return null === _
+          ? null
+          : (0, _.jsx)(_._, {
+              className: _ ? void 0 : _.StoreHeaderAdjust,
+              eventClassName: _ ? _.GamePadUIWidthAdjust : void 0,
+              appid: _,
+              trackingLocation: _,
+              announcementGID: _,
+              partnerEventStore: _,
+              eventModel: _,
+              closeModal: _,
+            });
       }
       function _(_) {
         return (0, _.jsxs)("div", {
@@ -527,7 +530,7 @@
                 rtime_oldestevent: _,
               },
               strClassName: _.Container,
-              trackingLocation: 6,
+              trackingLocation: _._._,
               bViewAllShowInfiniteScroll: !0,
             }),
           });
@@ -571,7 +574,7 @@
                           {
                             ..._,
                             bPreventDismiss: !0,
-                            trackingLocation: 6,
+                            trackingLocation: _._._,
                           },
                           "InfScroll_NoDismissApp_" + _.match.params.appid,
                         ),
@@ -592,7 +595,7 @@
                         (0, _.createElement)(_, {
                           ..._,
                           key: "InfScroll_App_" + _.match.params.appid,
-                          trackingLocation: 6,
+                          trackingLocation: _._._,
                         }),
                     }),
                     (0, _.jsx)(_._, {
@@ -601,7 +604,7 @@
                         (0, _.createElement)(_, {
                           ..._,
                           key: "InfScroll_App_" + _.match.params.group_vanity,
-                          trackingLocation: 6,
+                          trackingLocation: _._._,
                         }),
                     }),
                     (0, _.jsx)(_._, {

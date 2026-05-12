@@ -282,6 +282,7 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 SHMemStream header is corrupt in GetInternal()\n
 SHMemStream header is corrupt in PutInternal()\n
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STEAM_GAME
 STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
 STEAM_OVERLAY_FRAME_TIME_LOGGING
@@ -819,6 +820,7 @@ scale <= 32768
 scale >= 256
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 semctl
 semget

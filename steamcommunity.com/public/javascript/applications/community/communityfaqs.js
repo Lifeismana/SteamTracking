@@ -485,7 +485,7 @@ License: MIT
               if (
                 (x &&
                   i &&
-                  (j(
+                  (C(
                     "Delimiter",
                     "UndetectableDelimiter",
                     "Unable to auto-detect delimiting character; defaulted to '" +
@@ -497,11 +497,11 @@ License: MIT
                   (x.data = x.data.filter(function (e) {
                     return !w(e);
                   })),
-                C())
+                j())
               ) {
                 if (x)
                   if (Array.isArray(x.data[0])) {
-                    for (var t = 0; C() && t < x.data.length; t++)
+                    for (var t = 0; j() && t < x.data.length; t++)
                       x.data[t].forEach(n);
                     x.data.splice(0, 1);
                   } else x.data.forEach(n);
@@ -553,7 +553,7 @@ License: MIT
                 return (
                   e.header &&
                     (s > p.length
-                      ? j(
+                      ? C(
                           "FieldMismatch",
                           "TooManyFields",
                           "Too many fields: expected " +
@@ -563,7 +563,7 @@ License: MIT
                           h + n,
                         )
                       : s < p.length &&
-                        j(
+                        C(
                           "FieldMismatch",
                           "TooFewFields",
                           "Too few fields: expected " +
@@ -585,10 +585,10 @@ License: MIT
                 e.header && x.meta && (x.meta.fields = p),
                 (h += c));
             }
-            function C() {
+            function j() {
               return e.header && 0 === p.length;
             }
-            function j(e, t, n, i) {
+            function C(e, t, n, i) {
               (e = { type: e, code: t, message: n }),
                 void 0 !== i && (e.row = i),
                 x.errors.push(e);
@@ -597,7 +597,7 @@ License: MIT
               ((s = e.step),
               (e.step = function (t) {
                 (x = t),
-                  C()
+                  j()
                     ? A()
                     : (A(),
                       0 !== x.data.length &&
@@ -754,8 +754,8 @@ License: MIT
                 v = n.length,
                 w = i.length,
                 A = b(s),
-                C = [],
                 j = [],
+                C = [],
                 E = [],
                 F = (h = 0);
               if (!o) return P();
@@ -766,9 +766,9 @@ License: MIT
                   else if (g) return P();
                   if (!i || E.substring(0, w) !== i) {
                     if (A) {
-                      if (((C = []), k(E.split(t)), G(), m)) return P();
+                      if (((j = []), k(E.split(t)), G(), m)) return P();
                     } else k(E.split(t));
-                    if (r && r <= y) return (C = C.slice(0, r)), P(!0);
+                    if (r && r <= y) return (j = j.slice(0, r)), P(!0);
                   }
                 }
                 return P();
@@ -785,11 +785,11 @@ License: MIT
                     if (-1 === (T = o.indexOf(c, T + 1)))
                       return (
                         g ||
-                          j.push({
+                          C.push({
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
-                            row: C.length,
+                            row: j.length,
                             index: h,
                           }),
                         R()
@@ -823,14 +823,14 @@ License: MIT
                           A && (G(), m))
                         )
                           return P();
-                        if (r && C.length >= r) return P(!0);
+                        if (r && j.length >= r) return P(!0);
                         break;
                       }
-                      j.push({
+                      C.push({
                         type: "Quotes",
                         code: "InvalidQuotes",
                         message: "Trailing quote on quoted field is malformed",
-                        row: C.length,
+                        row: j.length,
                         index: h,
                       }),
                         T++;
@@ -845,11 +845,11 @@ License: MIT
                   if (-1 === L) break;
                   if ((E.push(o.substring(h, L)), B(L + v), A && (G(), m)))
                     return P();
-                  if (r && C.length >= r) return P(!0);
+                  if (r && j.length >= r) return P(!0);
                 }
               return R();
               function k(e) {
-                C.push(e), (F = h);
+                j.push(e), (F = h);
               }
               function Q(e) {
                 var t = 0;
@@ -874,8 +874,8 @@ License: MIT
                 (h = e), k(E), (E = []), (L = o.indexOf(n, h));
               }
               function P(i) {
-                if (e.header && !_ && C.length && !d) {
-                  var s = C[0],
+                if (e.header && !_ && j.length && !d) {
+                  var s = j[0],
                     r = Object.create(null),
                     a = new Set(s);
                   let t = !1;
@@ -901,8 +901,8 @@ License: MIT
                     (d = !0);
                 }
                 return {
-                  data: C,
-                  errors: j,
+                  data: j,
+                  errors: C,
                   meta: {
                     delimiter: t,
                     linebreak: n,
@@ -914,7 +914,7 @@ License: MIT
                 };
               }
               function G() {
-                s(P()), (C = []), (j = []);
+                s(P()), (j = []), (C = []);
               }
             }),
               (this.abort = function () {
@@ -1293,78 +1293,79 @@ License: MIT
     41756: (e, t, n) => {
       "use strict";
       n.d(t, {
-        IB: () => u,
-        IW: () => _,
-        Wj: () => d,
-        X0: () => h,
-        r$: () => f,
-        yW: () => m,
+        IB: () => h,
+        IW: () => g,
+        Wj: () => c,
+        X0: () => m,
+        r$: () => _,
+        yW: () => f,
       });
       var i = n(7850),
-        s = n(56545),
-        r = n(88942),
-        a = n(61739),
-        o = n(23809),
-        l = n(37403);
-      function d(e, t) {
-        const n = (0, o.KV)();
-        return (0, r.I)({
+        s = n(37085),
+        r = n(56545),
+        a = n(88942),
+        o = n(61739),
+        l = n(23809),
+        d = n(34214);
+      function c(e, t) {
+        const n = (0, l.KV)();
+        return (0, a.I)({
           queryKey: [
             "crowdin_metadata_for_clan_event",
             e.ConvertTo64BitString(),
             t,
           ],
           queryFn: async () => {
-            const i = s.w.Init(l.$5);
+            const i = r.w.Init(d.$5);
             i.Body().set_steamid(e.ConvertTo64BitString()),
               i.Body().set_itemid(t);
-            const r = await l.BE.GetClanEventCrowdInMetadata(n, i);
-            return 1 != r.GetEResult() ? null : r.Body().toObject();
+            const a = await d.BE.GetClanEventCrowdInMetadata(n, i);
+            return a.GetEResult() != s.R ? null : a.Body().toObject();
           },
         });
       }
-      async function c(e, t) {
-        const n = s.w.Init(l.hA);
+      async function u(e, t) {
+        const n = r.w.Init(d.hA);
         n.Body().set_steamid(t);
-        const i = await l.BE.GetClanCrowdInMetadata(e, n);
-        if (42 === i.GetEResult())
+        const i = await d.BE.GetClanCrowdInMetadata(e, n);
+        if (i.GetEResult() === s.p)
           return {
             crowdin_project_id: null,
             crowdin_directory_id: null,
             push_by_default: !1,
           };
-        if (1 !== i.GetEResult()) throw i.GetEResult();
+        if (i.GetEResult() !== s.R) throw i.GetEResult();
         return i.Body().toObject();
       }
-      function u(e) {
-        const t = (0, o.KV)();
-        return (0, r.I)({
+      function h(e) {
+        const t = (0, l.KV)();
+        return (0, a.I)({
           queryKey: ["clan_crowdin_mapping", e],
-          queryFn: async () => await c(t, e),
+          queryFn: async () => await u(t, e),
         });
       }
-      function h(e) {
+      function m(e) {
         return (function (e) {
-          const t = (0, o.KV)(),
-            n = (0, r.I)({
+          const t = (0, l.KV)(),
+            n = (0, a.I)({
               queryKey: e.queryKey,
               queryFn: async () => e.queryFn(t, ...e.args),
             });
           return e.children(n);
         })({
           queryKey: ["clan_crowdin_mapping", e.clanSteamId],
-          queryFn: c,
+          queryFn: u,
           args: [e.clanSteamId],
           children: e.children,
         });
       }
-      const m = (0, n(90626).createContext)(null);
-      function f(e) {
-        const t = u(e.clanInfo.clanSteamID.ConvertTo64BitString());
+      const f = (0, n(90626).createContext)(null);
+      function _(e) {
+        const t = h(e.clanInfo.clanSteamID.ConvertTo64BitString());
         let n = !1;
         return (
           t.isSuccess && (n = t.data.push_by_default),
-          (0, i.jsx)(m.Provider, {
+          (0, i.jsx)(f.Provider, {
             value: {
               clanSteamId: e.clanInfo.clanSteamID,
               bPushToCrowdInByDefault: n,
@@ -1373,22 +1374,22 @@ License: MIT
           })
         );
       }
-      function _(e, t, n) {
-        const i = (0, o.KV)();
-        return (0, a.n)({
+      function g(e, t, n) {
+        const i = (0, l.KV)();
+        return (0, o.n)({
           mutationKey: ["fetch_translation_for_clan_event", e, t, n],
           mutationFn: async function () {
             return await (async function (e, t, n, i) {
-              const r = s.w.Init(l.v7);
-              r.Body().set_language(i),
-                r.Body().set_steamid(t),
-                r.Body().set_itemid(n);
-              const a = await l.BE.FetchTranslationFromCrowdIn(e, r);
-              if (1 != a.GetEResult())
+              const a = r.w.Init(d.v7);
+              a.Body().set_language(i),
+                a.Body().set_steamid(t),
+                a.Body().set_itemid(n);
+              const o = await d.BE.FetchTranslationFromCrowdIn(e, a);
+              if (o.GetEResult() != s.R)
                 throw new Error(
-                  `Error from FetchLocalizationForClanEventFromCrowdIn: ${a.GetErrorMessage()} (${a.GetEResult()})`,
+                  `Error from FetchLocalizationForClanEventFromCrowdIn: ${o.GetErrorMessage()} (${o.GetEResult()})`,
                 );
-              return a.Body().toObject();
+              return o.Body().toObject();
             })(i, e, t, n);
           },
           retry: !1,
@@ -1397,16 +1398,17 @@ License: MIT
     },
     70450: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { FAQRoutes: () => wt, default: () => bt });
+      n.r(t), n.d(t, { FAQRoutes: () => bt, default: () => At });
       var i,
         s = n(7850),
         r = n(75844),
         a = n(90626),
-        o = n(87231),
-        l = n(68255),
-        d = n(92757),
-        c = n(17083),
-        u = n(78327);
+        o = n(22837),
+        l = n(87231),
+        d = n(68255),
+        c = n(92757),
+        u = n(17083),
+        h = n(78327);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
@@ -1414,92 +1416,92 @@ License: MIT
           (e.k_eCommunityDashboard = "dashboard"),
           (e.k_eCommunityPreview = "preview");
       })(i || (i = {}));
-      const h = (e) => {
+      const m = (e) => {
         const { route: t, faqid: n } = e,
-          i = m(t, n);
+          i = f(t, n);
         return e.bForceRedirect
-          ? (0, s.jsx)(d.rd, { push: !0, to: i })
+          ? (0, s.jsx)(c.rd, { push: !0, to: i })
           : e.bForceAnchor
             ? (0, s.jsx)("a", {
-                href: u.TS.COMMUNITY_BASE_URL.slice(0, -1) + i,
+                href: h.TS.COMMUNITY_BASE_URL.slice(0, -1) + i,
                 className: e.className,
                 children: e.children,
               })
-            : (0, s.jsx)(c.N_, {
+            : (0, s.jsx)(u.N_, {
                 to: i,
                 className: e.className,
                 children: e.children,
               });
       };
-      function m(e, t) {
-        let n = "/faqs/" + u.UF.VANITY_ID + "/";
+      function f(e, t) {
+        let n = "/faqs/" + h.UF.VANITY_ID + "/";
         switch (e) {
           case i.k_eView:
           case i.k_eCommunityView:
-            n += "view/" + (0, o.Wj)(t);
+            n += "view/" + (0, l.Wj)(t);
             break;
           case i.k_eCommunityEdit:
-            n += "edit/" + (0, o.Wj)(t);
+            n += "edit/" + (0, l.Wj)(t);
             break;
           case i.k_eCommunityDashboard:
             n += "dashboard";
             break;
           case i.k_eCommunityPreview:
-            n += "preview/" + (0, o.Wj)(t);
+            n += "preview/" + (0, l.Wj)(t);
         }
         return n;
       }
-      var f = n(9154),
-        _ = n(738),
-        g = n(12155),
-        p = n(22797),
-        x = n(32754),
-        v = n(52038),
-        w = n(61859),
-        b = n(41338),
-        A = n(11259),
-        C = n.n(A),
-        j = n(14947),
-        E = n(22837),
-        F = n(37739),
-        S = n.n(F),
-        y = n(17720),
-        D = n(95695),
-        L = n.n(D),
-        N = n(25228),
-        T = n(4434),
-        I = n(56011),
-        k = n(91675),
-        Q = n(87669),
-        R = n(93084),
-        B = n(41471);
-      const P = "title",
-        G = "content";
-      const O = (e) => {
+      var _ = n(9154),
+        g = n(738),
+        p = n(12155),
+        x = n(22797),
+        v = n(32754),
+        w = n(52038),
+        b = n(61859),
+        A = n(41338),
+        j = n(11259),
+        C = n.n(j),
+        E = n(14947),
+        F = n(37085),
+        S = n(37739),
+        y = n.n(S),
+        D = n(17720),
+        L = n(95695),
+        N = n.n(L),
+        T = n(25228),
+        I = n(4434),
+        k = n(56011),
+        Q = n(91675),
+        R = n(87669),
+        B = n(93084),
+        P = n(41471);
+      const G = "title",
+        O = "content";
+      const M = (e) => {
           const { draft: t, eLanguage: n } = e;
           return (0, s.jsxs)("div", {
-            className: D.FlexRowContainer,
+            className: L.FlexRowContainer,
             children: [
-              (0, s.jsx)(V, { draft: t, eLanguage: n }),
-              (0, s.jsx)(N.t3, {
-                strToolTip: (0, w.we)("#FAQEditor_Loc_Import_ttip"),
-                strLabel: (0, w.we)("#EventEditor_Loc_Import_Short"),
+              (0, s.jsx)(H, { draft: t, eLanguage: n }),
+              (0, s.jsx)(T.t3, {
+                strToolTip: (0, b.we)("#FAQEditor_Loc_Import_ttip"),
+                strLabel: (0, b.we)("#EventEditor_Loc_Import_Short"),
                 fnOnImportLocData: (e, n) =>
                   (function (e, t, n) {
                     const i = new Set(),
                       s = t.GetSortedTokenList();
                     return (
-                      (0, j.h5)(() => {
+                      (0, E.h5)(() => {
                         n.forEach((n) => {
                           let r = !1;
                           s.forEach((i) => {
                             const s = t.GetLocalization(i, n) || "";
-                            if (i === P) {
+                            if (i === G) {
                               const t = e.GetDraftTitle(n);
                               (s || (t && t.length > 0)) &&
                                 (e.SetDraftTitle(n, s), (r = !0));
                             }
-                            if (i === G) {
+                            if (i === O) {
                               const t = e.GetDraftContent(n);
                               (s || (t && t.length > 0)) &&
                                 (e.SetDraftContent(n, s), (r = !0));
@@ -1515,54 +1517,54 @@ License: MIT
             ],
           });
         },
-        M = (e) => {
+        U = (e) => {
           const { draft: t } = e;
           return (0, s.jsxs)("div", {
-            className: D.FlexRowContainer,
+            className: L.FlexRowContainer,
             children: [
               (0, s.jsx)("div", {
-                className: D.EditPreviewButton,
+                className: L.EditPreviewButton,
                 onClick: (e) => {
-                  (0, _.pg)(
-                    (0, s.jsx)(U, {
+                  (0, g.pg)(
+                    (0, s.jsx)(V, {
                       direction: "export",
                       draft: t,
                       children: " ",
                     }),
-                    (0, I.uX)(e),
+                    (0, k.uX)(e),
                   );
                 },
-                children: (0, w.we)("#EventEditor_Loc_Export_Short"),
+                children: (0, b.we)("#EventEditor_Loc_Export_Short"),
               }),
               (0, s.jsx)("div", {
-                className: D.EditPreviewButton,
+                className: L.EditPreviewButton,
                 onClick: (e) => {
-                  (0, _.pg)(
-                    (0, s.jsx)(U, {
+                  (0, g.pg)(
+                    (0, s.jsx)(V, {
                       direction: "import",
                       draft: t,
                       children: " ",
                     }),
-                    (0, I.uX)(e),
+                    (0, k.uX)(e),
                   );
                 },
-                children: (0, w.we)("#EventEditor_Loc_Import_Short"),
+                children: (0, b.we)("#EventEditor_Loc_Import_Short"),
               }),
             ],
           });
         },
-        U = (e) => {
+        V = (e) => {
           const { closeModal: t, direction: n, draft: i } = e,
-            [r, l] = a.useState(!1),
+            [r, o] = a.useState(!1),
             [d, c] = a.useState(new Array()),
             u =
               (r || d.length,
-              (0, w.we)(
+              (0, b.we)(
                 "import" == n
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
                   : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
               )),
-            h = (0, w.we)(
+            h = (0, b.we)(
               "import" == n
                 ? "#EventEditor_Loc_Import_Crowdin_Confirm"
                 : "#EventEditor_Loc_Export_Crowdin_Confirm",
@@ -1571,53 +1573,53 @@ License: MIT
               "import" == n
                 ? (0, s.jsx)(W, {
                     draft: i,
-                    rgAllLanguages: q,
+                    rgAllLanguages: z,
                     rgLanguagesSelected: d,
                     fnSelectLanguages: c,
                   })
                 : null;
-          return (0, s.jsx)(f.o0, {
-            className: R.LanguageListDialog,
+          return (0, s.jsx)(_.o0, {
+            className: B.LanguageListDialog,
             closeModal: t,
             strTitle: u,
             strDescription: h,
             onOK: async () => {
-              l(!0);
+              o(!0);
               try {
                 "import" == n
-                  ? await o.pN
+                  ? await l.pN
                       .Get()
                       .ImportNonEnglishDraftsFromCrowdin(i.GetFAQID(), d)
-                  : await o.pN.Get().ExportEnglishDraftToCrowdin(i.GetFAQID());
+                  : await l.pN.Get().ExportEnglishDraftToCrowdin(i.GetFAQID());
               } catch (e) {
                 console.error(e);
               }
-              l(!1);
+              o(!1);
             },
             bOKDisabled: r,
-            children: r ? (0, s.jsx)(p.t, { position: "center" }) : m,
+            children: r ? (0, s.jsx)(x.t, { position: "center" }) : m,
           });
         },
-        V = (e) => {
+        H = (e) => {
           const { draft: t, eLanguage: n } = e;
-          return (0, s.jsx)(x.he, {
-            toolTipContent: (0, w.we)("#FAQEditor_Loc_Export_ttip"),
+          return (0, s.jsx)(v.he, {
+            toolTipContent: (0, b.we)("#FAQEditor_Loc_Export_ttip"),
             children: (0, s.jsx)("div", {
-              className: D.EditPreviewButton,
+              className: L.EditPreviewButton,
               onClick: (e) => {
-                (0, _.pg)(
-                  (0, s.jsx)(f.o0, {
-                    strTitle: (0, w.we)("#EventEditor_Loc_Export"),
+                (0, g.pg)(
+                  (0, s.jsx)(_.o0, {
+                    strTitle: (0, b.we)("#EventEditor_Loc_Export"),
                     bAlertDialog: !0,
-                    children: (0, s.jsx)(N.Yg, {
+                    children: (0, s.jsx)(T.Yg, {
                       fnGetLocData: () =>
                         (function (e, t) {
                           var n, i;
-                          let s = new Q.G();
-                          for (let r = 0; r < 31; ++r)
-                            (e.BHasSomeTextForLanguage(r) || 0 == t) &&
+                          let s = new R.G();
+                          for (let r = o.Bhc; r < o.bP9; ++r)
+                            (e.BHasSomeTextForLanguage(r) || o.Bhc == t) &&
                               (s.SetLocalization(
-                                P,
+                                G,
                                 r,
                                 null !== (n = e.GetDraftTitle(r)) &&
                                   void 0 !== n
@@ -1625,7 +1627,7 @@ License: MIT
                                   : "",
                               ),
                               s.SetLocalization(
-                                G,
+                                O,
                                 r,
                                 null !== (i = e.GetDraftContent(r)) &&
                                   void 0 !== i
@@ -1640,20 +1642,46 @@ License: MIT
                       lang: n,
                     }),
                   }),
-                  (0, I.uX)(e),
+                  (0, k.uX)(e),
                 );
               },
-              children: (0, w.we)("#EventEditor_Loc_Export_Short"),
+              children: (0, b.we)("#EventEditor_Loc_Export_Short"),
             }),
           });
         },
-        H = [
+        q = [
           0, 9, 8, 12, 14, 21, 2, 3, 20, 24, 13, 17, 16, 5, 6, 7, 15, 23, 11, 4,
           19, 25, 18, 1, 10, 28, 26, 22, 27, 29, 30,
         ],
-        q = [
-          23, 6, 7, 19, 13, 14, 15, 2, 1, 24, 18, 3, 10, 4, 16, 12, 11, 22, 20,
-          8, 5, 27, 17, 9, 21, 26, 28, 30,
+        z = [
+          o.Uu1,
+          o.NFp,
+          o.A4L,
+          o.m2$,
+          o.iQT,
+          o.L3y,
+          o.egf,
+          o.xcz,
+          o.FH6,
+          o.dZ5,
+          o.K91,
+          o.dFE,
+          o.OFl,
+          o.Pn1,
+          o.JBx,
+          o._Q1,
+          o.QT4,
+          o.Lzz,
+          o.kG6,
+          o.GXE,
+          o.HkE,
+          o.FHN,
+          o.wWt,
+          o.$ys,
+          o.RhO,
+          o.JOj,
+          o.kSD,
+          o.Ze9,
         ],
         W = (e) => {
           const {
@@ -1673,10 +1701,10 @@ License: MIT
               }
             },
             o = n
-              .sort((e, t) => H[e] - H[t])
+              .sort((e, t) => q[e] - q[t])
               .map((e) =>
                 (0, s.jsx)(
-                  z,
+                  K,
                   {
                     draft: t,
                     eLang: e,
@@ -1689,234 +1717,234 @@ License: MIT
           return (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsxs)("div", {
-                className: R.ChecklistHeader,
+                className: B.ChecklistHeader,
                 children: [
                   (0, s.jsx)("div", {
-                    className: R.Language,
-                    children: (0, w.we)("#FAQCrowdin_LanguageHeader"),
+                    className: B.Language,
+                    children: (0, b.we)("#FAQCrowdin_LanguageHeader"),
                   }),
                   (0, s.jsx)("div", {
-                    className: R.Timestamp,
-                    children: (0, w.we)("#FAQCrowdin_DraftTimestampHeader"),
+                    className: B.Timestamp,
+                    children: (0, b.we)("#FAQCrowdin_DraftTimestampHeader"),
                   }),
                 ],
               }),
-              (0, s.jsx)(l.Yh, {
-                className: R.CheckAll,
-                label: (0, w.we)("#FAQCrowdin_SelectAllCheckboxes"),
+              (0, s.jsx)(d.Yh, {
+                className: B.CheckAll,
+                label: (0, b.we)("#FAQCrowdin_SelectAllCheckboxes"),
                 onChange: (e) => {
                   r(e ? n.slice() : []);
                 },
               }),
               (0, s.jsx)("div", {
-                className: R.ChecklistRows,
+                className: B.ChecklistRows,
                 children:
                   null != o
                     ? o
                     : (0, s.jsx)("div", {
-                        children: (0, w.we)("#FAQCrowdin_NoDraftFound"),
+                        children: (0, b.we)("#FAQCrowdin_NoDraftFound"),
                       }),
               }),
             ],
           });
         },
-        z = (e) => {
+        K = (e) => {
           var t;
           const { draft: n, eLang: i, bInitialState: r, fnOnChecked: a } = e,
-            o = n.GetLastSavedDraftVersion(i),
-            d = o
-              ? y.b.InitFromAccountID(Number.parseInt(o.author_account_id))
+            l = n.GetLastSavedDraftVersion(i),
+            c = l
+              ? D.b.InitFromAccountID(Number.parseInt(l.author_account_id))
               : null,
-            { data: c } = (0, B.js)(null == d ? void 0 : d.GetAccountID()),
-            u = o
-              ? (0, w.we)(
+            { data: u } = (0, P.js)(null == c ? void 0 : c.GetAccountID()),
+            h = l
+              ? (0, b.we)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
-                  (0, w.TW)(o.timestamp) +
+                  (0, b.TW)(l.timestamp) +
                     " @ " +
-                    (0, k.KC)(o.timestamp, { bForce24HourClock: !1 }),
-                  null !== (t = null == c ? void 0 : c.m_strPlayerName) &&
+                    (0, Q.KC)(l.timestamp, { bForce24HourClock: !1 }),
+                  null !== (t = null == u ? void 0 : u.m_strPlayerName) &&
                     void 0 !== t
                     ? t
-                    : o.author_account_id,
+                    : l.author_account_id,
                 )
-              : (0, w.we)("#FAQCrowdin_NoDraftFound"),
-            h = (0, s.jsxs)("div", {
-              className: R.LanguageCheckboxLabel,
+              : (0, b.we)("#FAQCrowdin_NoDraftFound"),
+            m = (0, s.jsxs)("div", {
+              className: B.LanguageCheckboxLabel,
               children: [
                 (0, s.jsx)("div", {
-                  className: R.Language,
-                  children: (0, w.we)("#Language_" + (0, E.Lg)(i)),
+                  className: B.Language,
+                  children: (0, b.we)("#Language_" + (0, o.LgB)(i)),
                 }),
-                (0, s.jsx)("div", { className: R.Timestamp, children: u }),
+                (0, s.jsx)("div", { className: B.Timestamp, children: h }),
               ],
             });
-          return (0, s.jsx)(l.Yh, {
-            className: R.LanguageCheckbox,
-            label: h,
+          return (0, s.jsx)(d.Yh, {
+            className: B.LanguageCheckbox,
+            label: m,
             checked: r,
             onChange: (e) => a(e, i),
           });
         };
-      function K(e) {
-        const [t, n] = (0, o.cf)(),
+      function Y(e) {
+        const [t, n] = (0, l.cf)(),
           [i, r] = a.useState(0),
-          [d, c] = a.useState(!1),
-          [u, h] = a.useState(!1),
-          [m, _] = a.useState(null),
-          g = (0, T.m)("CrowdinImportDialog"),
-          p = a.useRef([]);
-        if (m)
-          return (0, s.jsx)(f.o0, {
-            strTitle: (0, w.we)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: m,
+          [c, u] = a.useState(!1),
+          [h, m] = a.useState(!1),
+          [f, g] = a.useState(null),
+          p = (0, I.m)("CrowdinImportDialog"),
+          x = a.useRef([]);
+        if (f)
+          return (0, s.jsx)(_.o0, {
+            strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: f,
             bAlertDialog: !0,
             bDestructiveWarning: !0,
             closeModal: e.closeModal,
           });
-        if (u)
-          return (0, s.jsx)(f.o0, {
-            strTitle: (0, w.we)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: (0, w.we)("#FAQDashboard_PublishComplete"),
+        if (h)
+          return (0, s.jsx)(_.o0, {
+            strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: (0, b.we)("#FAQDashboard_PublishComplete"),
             bAlertDialog: !0,
             closeModal: e.closeModal,
           });
-        const x = (100 * (i + 0.5)) / t.length,
-          v = t[i].internal_name;
-        return (0, s.jsx)(f.eV, {
-          title: (0, w.we)("#FAQDashboard_CrowdinToolTitle"),
+        const v = (100 * (i + 0.5)) / t.length,
+          w = t[i].internal_name;
+        return (0, s.jsx)(_.eV, {
+          title: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
           ...e,
-          onCancel: () => g.cancel("CrowdinImportDialog cancelled"),
-          children: (0, s.jsxs)(l.nB, {
+          onCancel: () => p.cancel("CrowdinImportDialog cancelled"),
+          children: (0, s.jsxs)(d.nB, {
             children: [
-              (0, s.jsxs)(l.a3, {
+              (0, s.jsxs)(d.a3, {
                 children: [
-                  (0, w.we)(
+                  (0, b.we)(
                     "#FAQDashboard_CrowdinToolInstructionsWithCount",
                     t.length,
                   ),
                   (0, s.jsx)("div", {
-                    className: R.Warning,
-                    children: (0, w.we)("#FAQDashboard_CrowdinToolWarning"),
+                    className: B.Warning,
+                    children: (0, b.we)("#FAQDashboard_CrowdinToolWarning"),
                   }),
                 ],
               }),
-              (0, s.jsxs)(l.a3, {
+              (0, s.jsxs)(d.a3, {
                 children: [
-                  (0, s.jsx)(l.$n, {
+                  (0, s.jsx)(d.$n, {
                     onClick: async () => {
-                      c(!0);
+                      u(!0);
                       for (let e = 0; e < t.length; e++) {
                         r(e);
                         const n = t[e],
                           i = [],
                           s = 5;
-                        for (let e = 0; e < q.length; e += s) {
-                          const t = q.slice(e, e + s);
+                        for (let e = 0; e < z.length; e += s) {
+                          const t = z.slice(e, e + s);
                           i.push(
-                            o.pN
+                            l.pN
                               .Get()
                               .ImportNonEnglishDraftsFromCrowdin(
                                 n.faq_id,
                                 t,
-                                g,
+                                p,
                               ),
                           );
                         }
                         await Promise.all(i),
-                          o.pN.Get().BHasLiveEnglishVersion(n.faq_id)
-                            ? ((p.current[e] = o.pN
+                          l.pN.Get().BHasLiveEnglishVersion(n.faq_id)
+                            ? ((x.current[e] = l.pN
                                 .Get()
                                 .GetNonEnglishDraftsToPublish(n.faq_id)),
                               console.log(
                                 "Going to publish FAQ",
                                 n.faq_id,
-                                p.current[e].map((e) => (0, E.Lg)(e)),
+                                x.current[e].map((e) => (0, o.LgB)(e)),
                               ))
                             : console.log(
                                 "No live english version for:",
                                 n.faq_id,
                               );
                       }
-                      for (let e = 0; e < p.current.length; e++) {
+                      for (let e = 0; e < x.current.length; e++) {
                         const n = t[e],
-                          i = p.current[e];
+                          i = x.current[e];
                         if ((null == i ? void 0 : i.length) > 0) {
                           r(e);
-                          const t = await o.pN
+                          const t = await l.pN
                             .Get()
                             .PublishDraftByLanguage(n.faq_id, i);
-                          if (g.token.reason) return;
-                          if (1 != t)
-                            return void _(
-                              (0, w.we)("#FAQDashboard_PublishFailed"),
+                          if (p.token.reason) return;
+                          if (t != F.R)
+                            return void g(
+                              (0, b.we)("#FAQDashboard_PublishFailed"),
                             );
                         }
                       }
-                      h(!0), c(!1);
+                      m(!0), u(!1);
                     },
-                    disabled: d,
-                    children: (0, w.we)("#FAQDashboard_UpdateAllFAQsButton"),
+                    disabled: c,
+                    children: (0, b.we)("#FAQDashboard_UpdateAllFAQsButton"),
                   }),
-                  d && (0, s.jsx)(Y, { nProgressPct: x, strCurrentLabel: v }),
-                  p.current.length > 0 &&
-                    (0, s.jsx)(Z, { rgUpdatedLanguagesForAllFAQs: p.current }),
+                  c && (0, s.jsx)(Z, { nProgressPct: v, strCurrentLabel: w }),
+                  x.current.length > 0 &&
+                    (0, s.jsx)(J, { rgUpdatedLanguagesForAllFAQs: x.current }),
                 ],
               }),
             ],
           }),
         });
       }
-      function Y(e) {
+      function Z(e) {
         const { nProgressPct: t, strCurrentLabel: n } = e;
         return (0, s.jsxs)("div", {
           children: [
             (0, s.jsx)("div", {
-              className: R.ImportProgressBar,
+              className: B.ImportProgressBar,
               children: (0, s.jsx)("div", {
-                className: R.ProgressMarker,
+                className: B.ProgressMarker,
                 style: { width: t + "%" },
               }),
             }),
             (0, s.jsx)("div", {
-              className: R.CurrentFAQ,
-              children: (0, w.we)("#FAQDashboard_CrowdinToolProgress", n),
+              className: B.CurrentFAQ,
+              children: (0, b.we)("#FAQDashboard_CrowdinToolProgress", n),
             }),
           ],
         });
       }
-      function Z(e) {
+      function J(e) {
         const { rgUpdatedLanguagesForAllFAQs: t } = e,
-          [n, i] = (0, o.cf)();
+          [n, i] = (0, l.cf)();
         return (0, s.jsxs)("div", {
-          className: R.ImportResults,
+          className: B.ImportResults,
           children: [
             (0, s.jsx)("div", {
-              className: R.ImportResultLabel,
-              children: (0, w.we)("#FAQDashboard_CrowdinToolResultsLabel"),
+              className: B.ImportResultLabel,
+              children: (0, b.we)("#FAQDashboard_CrowdinToolResultsLabel"),
             }),
             t.map((e, t) => {
               const i = n[t];
               if (0 == e.length) return null;
-              const r = e.map((e) => (0, E.ww)(e)).join(",");
+              const r = e.map((e) => (0, o.wwZ)(e)).join(",");
               return (0, s.jsx)(
                 "div",
                 {
                   children: (0, s.jsxs)("div", {
-                    className: R.ImportResult,
+                    className: B.ImportResult,
                     children: [
-                      (0, s.jsx)(x.he, {
+                      (0, s.jsx)(v.he, {
                         toolTipContent: i.internal_name,
-                        strTooltipClassname: S().HoverAboveModal,
+                        strTooltipClassname: y().HoverAboveModal,
                         nAllowOffscreenPx: 4e4,
-                        className: R.UrlCode,
+                        className: B.UrlCode,
                         children: i.url_code + ": ",
                       }),
-                      (0, s.jsx)(x.he, {
+                      (0, s.jsx)(v.he, {
                         toolTipContent: r,
-                        strTooltipClassname: S().HoverAboveModal,
+                        strTooltipClassname: y().HoverAboveModal,
                         nAllowOffscreenPx: 4e4,
                         direction: "left",
-                        className: R.LanguageList,
+                        className: B.LanguageList,
                         children: r,
                       }),
                     ],
@@ -1928,37 +1956,38 @@ License: MIT
           ],
         });
       }
-      var J = n(76684),
-        X = n(55351),
-        $ = n.n(X),
-        ee = n(3063),
-        te = n.n(ee);
-      const ne = (e) => {
+      var X = n(76684),
+        $ = n(55351),
+        ee = n.n($),
+        te = n(3063),
+        ne = n.n(te);
+      const ie = (e) => {
           const { rtTimestamp: t, bShowAsWarning: n } = e;
           if (!t)
             return (0, s.jsx)("div", {
-              className: te().Never,
-              children: (0, w.we)("#FAQDashboard_TimeNever"),
+              className: ne().Never,
+              children: (0, b.we)("#FAQDashboard_TimeNever"),
             });
           const i = Date.now() / 1e3 - t,
-            r = i < 86400 ? (0, w.Hq)(i, !1, !0) : (0, w.$z)(t);
-          return (0, s.jsx)(J.gS, {
-            className: n && te().Warning,
+            r = i < 86400 ? (0, b.Hq)(i, !1, !0) : (0, b.$z)(t);
+          return (0, s.jsx)(X.gS, {
+            className: n && ne().Warning,
             rtFullDate: t,
-            stylesmodule: $(),
+            stylesmodule: ee(),
             children: r,
           });
         },
-        ie = (0, r.PA)((e) => {
-          const [t, n] = (0, o.cf)(),
+        se = (0, r.PA)((e) => {
+          const [t, n] = (0, l.cf)(),
             [i, r] = a.useState(1),
-            l = t
+            d = t
               .map((e) => {
-                const t = e.per_language_info.find((e) => 0 == e.language),
+                const t = e.per_language_info.find((e) => e.language == o.Bhc),
                   n = (null == t ? void 0 : t.last_update_timestamp) || 0,
                   i = Array.from(
                     e.per_language_info.filter(
-                      (e) => 0 != e.language && e.last_update_timestamp >= n,
+                      (e) =>
+                        e.language != o.Bhc && e.last_update_timestamp >= n,
                     ),
                   ).length,
                   s = Array.from(
@@ -1989,44 +2018,44 @@ License: MIT
                   e.visible_in_china_realm,
                 ];
               })
-              .sort((e, t) => (1 == i ? (0, b.lY)(e[1], t[1]) : t[i] - e[i]));
+              .sort((e, t) => (1 == i ? (0, A.lY)(e[1], t[1]) : t[i] - e[i]));
           return (
             (0, a.useEffect)(() => {
-              o.pN.Get().RemoveAllDirtyDrafts();
+              l.pN.Get().RemoveAllDirtyDrafts();
             }, []),
             (0, s.jsx)("div", {
               className: C().FAQDashboardPage,
               children: (0, s.jsxs)("div", {
                 className: C().FAQDashboard,
                 children: [
-                  (0, s.jsx)(se, {}),
-                  (0, s.jsx)(ae, { eCurrentSortColumn: i, SetSortColumn: r }),
+                  (0, s.jsx)(re, {}),
+                  (0, s.jsx)(oe, { eCurrentSortColumn: i, SetSortColumn: r }),
                   0 == t.length &&
                     (0, s.jsx)("div", {
                       className: C().ErrorMsg,
-                      children: (0, w.we)("#FAQDashboard_Empty"),
+                      children: (0, b.we)("#FAQDashboard_Empty"),
                     }),
-                  l.map((e) => (0, s.jsx)(ce, { rgColumns: e }, e[0])),
-                  !n && (0, s.jsx)(p.t, { position: "center", size: "xlarge" }),
+                  d.map((e) => (0, s.jsx)(ue, { rgColumns: e }, e[0])),
+                  !n && (0, s.jsx)(x.t, { position: "center", size: "xlarge" }),
                 ],
               }),
             })
           );
         }),
-        se = (e) => {
+        re = (e) => {
           const t = a.useCallback(
               () =>
-                (0, _.mK)((0, s.jsx)(re, {}), window, {
-                  strTitle: (0, w.we)("#FAQDashboard_CreateFAQButton"),
+                (0, g.mK)((0, s.jsx)(ae, {}), window, {
+                  strTitle: (0, b.we)("#FAQDashboard_CreateFAQButton"),
                 }),
               [],
             ),
             n = a.useCallback(
               () =>
-                (0, _.mK)(
-                  (0, s.jsx)(K, { bDisableBackgroundDismiss: !0 }),
+                (0, g.mK)(
+                  (0, s.jsx)(Y, { bDisableBackgroundDismiss: !0 }),
                   window,
-                  { strTitle: (0, w.we)("#FAQDashboard_CrowdinToolTitle") },
+                  { strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle") },
                 ),
               [],
             );
@@ -2035,46 +2064,46 @@ License: MIT
             children: [
               (0, s.jsx)("div", {
                 className: C().DashboardHeaderTitle,
-                children: (0, w.we)("#FAQDashboard_Header"),
+                children: (0, b.we)("#FAQDashboard_Header"),
               }),
               (0, s.jsxs)("div", {
                 className: C().DashboardHeaderButtonCtn,
                 children: [
-                  (0, s.jsx)(l.$n, {
+                  (0, s.jsx)(d.$n, {
                     onClick: n,
-                    children: (0, w.we)("#FAQDashboard_CrowdinToolButton"),
+                    children: (0, b.we)("#FAQDashboard_CrowdinToolButton"),
                   }),
-                  (0, s.jsx)(l.jn, {
+                  (0, s.jsx)(d.jn, {
                     onClick: t,
-                    children: (0, w.we)("#FAQDashboard_CreateFAQButton"),
+                    children: (0, b.we)("#FAQDashboard_CreateFAQButton"),
                   }),
                 ],
               }),
             ],
           });
         },
-        re = (e) => {
+        ae = (e) => {
           const [t, n] = a.useState("");
-          return (0, s.jsxs)(f.o0, {
+          return (0, s.jsxs)(_.o0, {
             onOK: () => {
-              o.pN.Get().CreateFAQ(t);
+              l.pN.Get().CreateFAQ(t);
             },
             bOKDisabled: 0 == t.length,
             closeModal: e.closeModal,
             className: C().CreateFAQDialog,
             children: [
-              (0, s.jsx)(l.Y9, {
-                children: (0, w.we)("#FAQDashboard_CreateFAQButton"),
+              (0, s.jsx)(d.Y9, {
+                children: (0, b.we)("#FAQDashboard_CreateFAQButton"),
               }),
-              (0, s.jsx)(l.nB, {
-                children: (0, s.jsxs)(l.a3, {
+              (0, s.jsx)(d.nB, {
+                children: (0, s.jsxs)(d.a3, {
                   children: [
-                    (0, w.we)("#FAQDashboard_CreateFAQInstructions"),
+                    (0, b.we)("#FAQDashboard_CreateFAQInstructions"),
                     (0, s.jsx)("input", {
                       type: "text",
                       className: C().NameInput,
                       value: t,
-                      placeholder: (0, w.we)("#FAQDashboard_NamePlaceHolder"),
+                      placeholder: (0, b.we)("#FAQDashboard_NamePlaceHolder"),
                       onFocus: (e) => e.target.select(),
                       onChange: (e) => n(e.currentTarget.value),
                       maxLength: 120,
@@ -2085,54 +2114,54 @@ License: MIT
             ],
           });
         },
-        ae = (e) =>
+        oe = (e) =>
           (0, s.jsxs)("div", {
             className: C().DashboardListHeaderRow,
             children: [
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_NameColumn",
                 bIsNameColumn: !0,
                 eThisColumn: 1,
                 ...e,
               }),
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
                 eThisColumn: 2,
                 ...e,
               }),
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
                 eThisColumn: 3,
                 ...e,
               }),
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
                 eThisColumn: 4,
                 ...e,
               }),
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
                 eThisColumn: 5,
                 ...e,
               }),
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
                 eThisColumn: 6,
                 ...e,
               }),
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_VisibilityColumn",
                 eThisColumn: 7,
                 ...e,
               }),
-              (0, s.jsx)(oe, {
+              (0, s.jsx)(le, {
                 strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
                 eThisColumn: 8,
                 ...e,
               }),
             ],
           }),
-        oe = (e) => {
+        le = (e) => {
           const {
               strLabelLocToken: t,
               bIsNameColumn: n,
@@ -2140,95 +2169,95 @@ License: MIT
               eCurrentSortColumn: r,
               SetSortColumn: a,
             } = e,
-            o = (0, v.A)(
+            o = (0, w.A)(
               C().EntryColumn,
               C().ClickableHeader,
               n ? C().NameCol : C().DataCol,
               r == i && C().Selected,
             );
-          return (0, s.jsxs)(x.he, {
-            toolTipContent: (0, w.we)(t + "_ttip"),
+          return (0, s.jsxs)(v.he, {
+            toolTipContent: (0, b.we)(t + "_ttip"),
             direction: "top",
             className: o,
             onClick: () => a(i),
             children: [
-              (0, w.we)(t),
+              (0, b.we)(t),
               (0, s.jsx)("div", {
                 className: C().DownArrow,
-                children: (0, s.jsx)(g.GB9, {}),
+                children: (0, s.jsx)(p.GB9, {}),
               }),
             ],
           });
         },
-        le = (e) => {
+        de = (e) => {
           const { nCount: t, nTotal: n, nGoal: i } = e;
           return (0, s.jsx)("div", {
             className: t == i ? C().GoodCount : C().BadCount,
             children: t + " / " + n,
           });
         },
-        de = (e) => {
+        ce = (e) => {
           const { bIsVisible: t } = e;
           return (0, s.jsx)("div", {
             className: t ? C().Visible : C().Hidden,
-            children: (0, w.we)(
+            children: (0, b.we)(
               t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible",
             ),
           });
         },
-        ce = (e) => {
+        ue = (e) => {
           const [t, n, r, a, o, l, d, c, u] = e.rgColumns,
-            m = l + d,
+            h = l + d,
             f = a + o;
-          return (0, s.jsxs)(h, {
+          return (0, s.jsxs)(m, {
             route: i.k_eCommunityEdit,
             faqid: t,
             className: C().DashboardEntry,
             children: [
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().NameCol),
+                className: (0, w.A)(C().EntryColumn, C().NameCol),
                 children: (0, s.jsx)("div", {
                   className: C().EntryInternalName,
                   children: n,
                 }),
               }),
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().DataCol),
-                children: (0, s.jsx)(ne, { rtTimestamp: r }),
+                className: (0, w.A)(C().EntryColumn, C().DataCol),
+                children: (0, s.jsx)(ie, { rtTimestamp: r }),
               }),
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().DataCol),
-                children: (0, s.jsx)(le, { nCount: a, nTotal: f, nGoal: f }),
+                className: (0, w.A)(C().EntryColumn, C().DataCol),
+                children: (0, s.jsx)(de, { nCount: a, nTotal: f, nGoal: f }),
               }),
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().DataCol),
-                children: (0, s.jsx)(le, { nCount: o, nTotal: f, nGoal: 0 }),
+                className: (0, w.A)(C().EntryColumn, C().DataCol),
+                children: (0, s.jsx)(de, { nCount: o, nTotal: f, nGoal: 0 }),
               }),
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().DataCol),
-                children: (0, s.jsx)(le, { nCount: l, nTotal: m, nGoal: m }),
+                className: (0, w.A)(C().EntryColumn, C().DataCol),
+                children: (0, s.jsx)(de, { nCount: l, nTotal: h, nGoal: h }),
               }),
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().DataCol),
-                children: (0, s.jsx)(le, { nCount: d, nTotal: m, nGoal: 0 }),
+                className: (0, w.A)(C().EntryColumn, C().DataCol),
+                children: (0, s.jsx)(de, { nCount: d, nTotal: h, nGoal: 0 }),
               }),
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().DataCol),
-                children: (0, s.jsx)(de, { bIsVisible: c }),
+                className: (0, w.A)(C().EntryColumn, C().DataCol),
+                children: (0, s.jsx)(ce, { bIsVisible: c }),
               }),
               (0, s.jsx)("div", {
-                className: (0, v.A)(C().EntryColumn, C().DataCol),
-                children: (0, s.jsx)(de, { bIsVisible: u }),
+                className: (0, w.A)(C().EntryColumn, C().DataCol),
+                children: (0, s.jsx)(ce, { bIsVisible: u }),
               }),
             ],
           });
         },
-        ue = (e) => {
+        he = (e) => {
           a.useEffect(
             () => (
               (window.onbeforeunload = () => {
                 var e;
-                const t = o.pN.Get().GetLoadedDraftObjs();
+                const t = l.pN.Get().GetLoadedDraftObjs();
                 return Boolean(
                   (null ===
                     (e =
@@ -2237,7 +2266,7 @@ License: MIT
                     ? void 0
                     : e.length) > 0,
                 )
-                  ? (0, w.we)("#EventEditor_UnsavedChanges")
+                  ? (0, b.we)("#EventEditor_UnsavedChanges")
                   : null;
               }),
               () => {
@@ -2246,10 +2275,10 @@ License: MIT
             ),
             [],
           );
-          return (0, s.jsx)(d.XG, {
+          return (0, s.jsx)(c.XG, {
             message: (e) => {
               var t, n;
-              const i = o.pN.Get().GetLoadedDraftObjs();
+              const i = l.pN.Get().GetLoadedDraftObjs();
               return (
                 !Boolean(
                   (null ===
@@ -2259,107 +2288,107 @@ License: MIT
                     ? void 0
                     : t.length) > 0,
                 ) ||
-                (e.pathname != wt.DashboardFAQ(u.UF.VANITY_ID) &&
+                (e.pathname != bt.DashboardFAQ(h.UF.VANITY_ID) &&
                   !(null === (n = e.pathname) || void 0 === n
                     ? void 0
                     : n.startsWith(
-                        wt.ViewFAQ(u.UF.VANITY_ID, "").slice(0, -1),
+                        bt.ViewFAQ(h.UF.VANITY_ID, "").slice(0, -1),
                       ))) ||
-                (0, w.we)("#EventEditor_UnsavedChanges")
+                (0, b.we)("#EventEditor_UnsavedChanges")
               );
             },
           });
         };
-      var he = n(81047),
-        me = n(7221),
-        fe = n(68359),
-        _e = n(63556),
-        ge = n(9239),
-        pe = n(84811),
-        xe = n(33494),
-        ve = n(63280),
-        we = n.n(ve),
-        be = n(64372),
-        Ae = n(68797);
+      var me = n(81047),
+        fe = n(7221),
+        _e = n(68359),
+        ge = n(63556),
+        pe = n(9239),
+        xe = n(84811),
+        ve = n(33494),
+        we = n(63280),
+        be = n.n(we),
+        Ae = n(64372),
+        je = n(68797);
       const Ce = (e) =>
-          (0, s.jsx)(x.he, {
-            toolTipContent: (0, w.we)("#FAQEditor_DeleteAction_ttip"),
+          (0, s.jsx)(v.he, {
+            toolTipContent: (0, b.we)("#FAQEditor_DeleteAction_ttip"),
             children: (0, s.jsx)("div", {
-              className: (0, v.A)(D.EditPreviewButton, D.Delete),
+              className: (0, w.A)(L.EditPreviewButton, L.Delete),
               onClick: (t) => {
-                (0, _.pg)((0, s.jsx)(je, { draft: e.draft }), (0, I.uX)(t));
+                (0, g.pg)((0, s.jsx)(Ee, { draft: e.draft }), (0, k.uX)(t));
               },
-              children: (0, w.we)("#FAQEditor_DeleteAction"),
+              children: (0, b.we)("#FAQEditor_DeleteAction"),
             }),
           }),
-        je = (e) => {
+        Ee = (e) => {
           const { draft: t } = e,
             n = () => e.closeModal && e.closeModal(),
-            [r, d] = a.useState(!1),
-            [c, h] = a.useState(void 0);
-          let _ = (0, s.jsx)("div", {
-            children: (0, w.we)("#FAQEditor_DeleteDesc"),
+            [r, o] = a.useState(!1),
+            [c, u] = a.useState(void 0);
+          let m = (0, s.jsx)("div", {
+            children: (0, b.we)("#FAQEditor_DeleteDesc"),
           });
           return (
             r
-              ? (_ = (0, s.jsx)(p.t, {
+              ? (m = (0, s.jsx)(x.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, w.we)("#FAQEditor_DeletingInProgress"),
+                  string: (0, b.we)("#FAQEditor_DeletingInProgress"),
                 }))
               : c &&
-                (_ = (0, s.jsx)("div", {
-                  children: (0, w.we)(
+                (m = (0, s.jsx)("div", {
+                  children: (0, b.we)(
                     "Error_Description",
                     c,
-                    (0, w.we)("#Error_GenericFailureDescription"),
+                    (0, b.we)("#Error_GenericFailureDescription"),
                   ),
                 })),
-            (0, s.jsx)(pe.tH, {
-              children: (0, s.jsx)(f.x_, {
+            (0, s.jsx)(xe.tH, {
+              children: (0, s.jsx)(_.x_, {
                 onEscKeypress: n,
-                children: (0, s.jsxs)(l.UC, {
+                children: (0, s.jsxs)(d.UC, {
                   children: [
-                    (0, s.jsx)(l.Y9, {
-                      children: (0, w.we)("#FAQEditor_DeleteAction"),
+                    (0, s.jsx)(d.Y9, {
+                      children: (0, b.we)("#FAQEditor_DeleteAction"),
                     }),
-                    (0, s.jsx)(l.nB, {
-                      children: (0, s.jsx)(l.a3, { children: _ }),
+                    (0, s.jsx)(d.nB, {
+                      children: (0, s.jsx)(d.a3, { children: m }),
                     }),
-                    (0, s.jsx)(l.wi, {
-                      children: (0, s.jsx)(l.CB, {
+                    (0, s.jsx)(d.wi, {
+                      children: (0, s.jsx)(d.CB, {
                         onCancel: n,
                         bOKDisabled: Boolean(r || c),
-                        strOKText: (0, w.we)("#FAQEditor_DeleteAction"),
+                        strOKText: (0, b.we)("#FAQEditor_DeleteAction"),
                         strCancelText: Boolean(r || c)
-                          ? (0, w.we)("#Button_OK")
+                          ? (0, b.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
-                          d(!0),
-                            o.pN
+                          o(!0),
+                            l.pN
                               .Get()
                               .DeleteFAQ(t.GetFAQID())
                               .then((e) => {
-                                if (1 == e) {
+                                if (e == F.R) {
                                   const e =
-                                    u.TS.COMMUNITY_BASE_URL.substr(
+                                    h.TS.COMMUNITY_BASE_URL.substr(
                                       0,
-                                      u.TS.COMMUNITY_BASE_URL.length - 1,
-                                    ) + m(i.k_eCommunityDashboard);
+                                      h.TS.COMMUNITY_BASE_URL.length - 1,
+                                    ) + f(i.k_eCommunityDashboard);
                                   window.location.href = e;
                                 }
-                                h(e);
+                                u(e);
                               })
                               .catch((e) => {
-                                const t = (0, Ae.H)(e);
+                                const t = (0, je.H)(e);
                                 console.error(
                                   "FAQDeleteDialog: hit error: " +
                                     t.strErrorMsg,
                                   t,
                                 ),
-                                  h(2);
+                                  u(F.zi);
                               })
-                              .finally(() => d(!1));
+                              .finally(() => o(!1));
                         },
                       }),
                     }),
@@ -2369,64 +2398,64 @@ License: MIT
             })
           );
         },
-        Ee = (0, r.PA)((e) => {
+        Fe = (0, r.PA)((e) => {
           const { draft: t, bDisabled: n } = e,
             i = t.BNeedsSaving();
-          return (0, s.jsx)(x.he, {
-            toolTipContent: (0, w.we)(
+          return (0, s.jsx)(v.he, {
+            toolTipContent: (0, b.we)(
               i ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
             ),
             children: (0, s.jsx)("div", {
-              className: (0, v.A)(D.EditPreviewButton, n && D.Disabled),
+              className: (0, w.A)(L.EditPreviewButton, n && L.Disabled),
               onClick: (t) => {
                 n ||
-                  (0, _.pg)(
+                  (0, g.pg)(
                     i
-                      ? (0, s.jsx)(f.KG, {
-                          strDescription: (0, w.we)(
+                      ? (0, s.jsx)(_.KG, {
+                          strDescription: (0, b.we)(
                             "#FAQPublish_SaveRequire_ttip",
                           ),
                         })
-                      : (0, s.jsx)(Fe, { draft: e.draft }),
-                    (0, I.uX)(t),
+                      : (0, s.jsx)(Se, { draft: e.draft }),
+                    (0, k.uX)(t),
                   );
               },
-              children: (0, w.we)("#FAQPublish_Publish"),
+              children: (0, b.we)("#FAQPublish_Publish"),
             }),
           });
         }),
-        Fe = (e) => {
+        Se = (e) => {
           var t;
           const { draft: n } = e,
             i = () => e.closeModal && e.closeModal(),
-            [r, d] = a.useState(!1),
+            [r, o] = a.useState(!1),
             [c, u] = a.useState(void 0),
             [h, m] = a.useState(void 0),
-            [_, g] = (0, o.g5)(n.GetFAQID()),
-            [x, v] = a.useState(new Array());
-          let b = null;
+            [f, g] = (0, l.g5)(n.GetFAQID()),
+            [p, v] = a.useState(new Array());
+          let w = null;
           if (g)
             if (r)
-              b = (0, s.jsx)(p.t, {
+              w = (0, s.jsx)(x.t, {
                 position: "center",
                 size: "medium",
-                string: (0, w.we)("#FAQPublish_Publishing"),
+                string: (0, b.we)("#FAQPublish_Publishing"),
               });
             else if (c)
-              b = (0, s.jsx)("div", {
-                children: (0, w.we)("#FAQPublish_Success"),
+              w = (0, s.jsx)("div", {
+                children: (0, b.we)("#FAQPublish_Success"),
               });
             else if (h)
-              b = (0, s.jsx)("div", {
-                children: (0, w.we)(
+              w = (0, s.jsx)("div", {
+                children: (0, b.we)(
                   "#Error_Description",
                   h,
-                  (0, w.we)("#Error_GenericFailureDescription"),
+                  (0, b.we)("#Error_GenericFailureDescription"),
                 ),
               });
-            else if (_) {
+            else if (f) {
               const e =
-                null === (t = _.per_language_info) || void 0 === t
+                null === (t = f.per_language_info) || void 0 === t
                   ? void 0
                   : t
                       .filter(
@@ -2434,71 +2463,71 @@ License: MIT
                           e.last_publish_timestamp < e.last_update_timestamp,
                       )
                       .map((e) => e.language);
-              b = (0, s.jsxs)(s.Fragment, {
+              w = (0, s.jsxs)(s.Fragment, {
                 children: [
                   (0, s.jsx)("div", {
-                    children: (0, w.we)("#FAQPublish_Desc"),
+                    children: (0, b.we)("#FAQPublish_Desc"),
                   }),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("div", {
-                    children: (0, w.we)("#FAQPublish_Desc2"),
+                    children: (0, b.we)("#FAQPublish_Desc2"),
                   }),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)(W, {
                     draft: n,
                     rgAllLanguages: e,
-                    rgLanguagesSelected: x,
+                    rgLanguagesSelected: p,
                     fnSelectLanguages: v,
                   }),
                 ],
               });
             } else
-              b = (0, s.jsx)("div", {
-                children: (0, w.we)("#FAQPublish_LoadError"),
+              w = (0, s.jsx)("div", {
+                children: (0, b.we)("#FAQPublish_LoadError"),
               });
           else
-            b = (0, s.jsx)(p.t, {
+            w = (0, s.jsx)(x.t, {
               size: "small",
               position: "center",
-              string: (0, w.we)("#FAQPublish_PublishWait"),
+              string: (0, b.we)("#FAQPublish_PublishWait"),
             });
-          return (0, s.jsx)(pe.tH, {
-            children: (0, s.jsx)(f.x_, {
+          return (0, s.jsx)(xe.tH, {
+            children: (0, s.jsx)(_.x_, {
               onEscKeypress: i,
-              children: (0, s.jsxs)(l.UC, {
-                className: R.LanguageListDialog,
+              children: (0, s.jsxs)(d.UC, {
+                className: B.LanguageListDialog,
                 children: [
-                  (0, s.jsx)(l.Y9, {
-                    children: (0, w.we)("#FAQPublish_Publish"),
+                  (0, s.jsx)(d.Y9, {
+                    children: (0, b.we)("#FAQPublish_Publish"),
                   }),
-                  (0, s.jsx)(l.nB, {
-                    children: (0, s.jsx)(l.a3, { children: b }),
+                  (0, s.jsx)(d.nB, {
+                    children: (0, s.jsx)(d.a3, { children: w }),
                   }),
-                  (0, s.jsx)(l.wi, {
-                    children: (0, s.jsx)(l.CB, {
+                  (0, s.jsx)(d.wi, {
+                    children: (0, s.jsx)(d.CB, {
                       onCancel: i,
-                      bOKDisabled: Boolean(r || c || h || 0 == x.length),
-                      strOKText: (0, w.we)("#FAQPublish_Publish"),
+                      bOKDisabled: Boolean(r || c || h || 0 == p.length),
+                      strOKText: (0, b.we)("#FAQPublish_Publish"),
                       strCancelText: Boolean(r || c || h)
-                        ? (0, w.we)("#Button_OK")
+                        ? (0, b.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
-                        d(!0),
-                          o.pN
+                        o(!0),
+                          l.pN
                             .Get()
-                            .PublishDraftByLanguage(n.GetFAQID(), x)
+                            .PublishDraftByLanguage(n.GetFAQID(), p)
                             .then((e) => {
-                              1 == e && u(!0), m(e);
+                              e == F.R && u(!0), m(e);
                             })
                             .catch((e) => {
-                              const t = (0, Ae.H)(e);
+                              const t = (0, je.H)(e);
                               console.error(
                                 "FAQPublishDialog: hit error: " + t.strErrorMsg,
                                 t,
                               ),
-                                m(2);
+                                m(F.zi);
                             })
-                            .finally(() => d(!1));
+                            .finally(() => o(!1));
                       },
                     }),
                   }),
@@ -2507,98 +2536,98 @@ License: MIT
             }),
           });
         },
-        Se = (e) =>
-          (0, s.jsx)(x.he, {
-            toolTipContent: (0, w.we)("#FAQEditor_ChangeVisible_ttip"),
+        ye = (e) =>
+          (0, s.jsx)(v.he, {
+            toolTipContent: (0, b.we)("#FAQEditor_ChangeVisible_ttip"),
             children: (0, s.jsx)("div", {
-              className: D.EditPreviewButton,
+              className: L.EditPreviewButton,
               onClick: (t) => {
-                (0, _.pg)((0, s.jsx)(ye, { draft: e.draft }), (0, I.uX)(t));
+                (0, g.pg)((0, s.jsx)(De, { draft: e.draft }), (0, k.uX)(t));
               },
-              children: (0, w.we)("#FAQEditor_EditVisible"),
+              children: (0, b.we)("#FAQEditor_EditVisible"),
             }),
           }),
-        ye = (e) => {
+        De = (e) => {
           const { draft: t } = e,
             n = () => e.closeModal && e.closeModal(),
             [i, r] = a.useState(!1),
-            [d, c] = a.useState(void 0),
+            [o, c] = a.useState(void 0),
             [u, h] = a.useState(void 0),
-            m = o.pN.Get().GetFAQArticleSummary(t.GetFAQID()),
-            [_, g] = a.useState(m.visible_in_global_realm),
-            [x, v] = a.useState(m.visible_in_china_realm);
-          let b = (0, s.jsxs)(s.Fragment, {
+            m = l.pN.Get().GetFAQArticleSummary(t.GetFAQID()),
+            [f, g] = a.useState(m.visible_in_global_realm),
+            [p, v] = a.useState(m.visible_in_china_realm);
+          let w = (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsx)("div", {
-                children: (0, w.we)("#FAQEditor_ChangeVisible_Desc"),
+                children: (0, b.we)("#FAQEditor_ChangeVisible_Desc"),
               }),
-              (0, s.jsx)(l.Yh, {
-                label: (0, w.we)("#FAQEditor_VisibleInGlobal"),
-                checked: _,
+              (0, s.jsx)(d.Yh, {
+                label: (0, b.we)("#FAQEditor_VisibleInGlobal"),
+                checked: f,
                 onChange: (e) => g(e),
               }),
-              (0, s.jsx)(l.Yh, {
-                label: (0, w.we)("#FAQEditor_VisibleInChina"),
-                checked: x,
-                tooltip: (0, w.we)("#FAQEditor_VisibleInChina_ttip"),
+              (0, s.jsx)(d.Yh, {
+                label: (0, b.we)("#FAQEditor_VisibleInChina"),
+                checked: p,
+                tooltip: (0, b.we)("#FAQEditor_VisibleInChina_ttip"),
                 onChange: (e) => v(e),
               }),
             ],
           });
           return (
             i
-              ? (b = (0, s.jsx)(p.t, {
+              ? (w = (0, s.jsx)(x.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, w.we)("#FAQEditor_ChangeVisible_InProgress"),
+                  string: (0, b.we)("#FAQEditor_ChangeVisible_InProgress"),
                 }))
-              : d
-                ? (b = (0, s.jsx)("div", {
-                    children: (0, w.we)("#FAQEditor_ChangeVisible_Success"),
+              : o
+                ? (w = (0, s.jsx)("div", {
+                    children: (0, b.we)("#FAQEditor_ChangeVisible_Success"),
                   }))
                 : u &&
-                  (b = (0, s.jsx)("div", {
-                    children: (0, w.we)(
+                  (w = (0, s.jsx)("div", {
+                    children: (0, b.we)(
                       "Error_Description",
                       u,
-                      (0, w.we)("#Error_GenericFailureDescription"),
+                      (0, b.we)("#Error_GenericFailureDescription"),
                     ),
                   })),
-            (0, s.jsx)(pe.tH, {
-              children: (0, s.jsx)(f.x_, {
+            (0, s.jsx)(xe.tH, {
+              children: (0, s.jsx)(_.x_, {
                 onEscKeypress: n,
-                children: (0, s.jsxs)(l.UC, {
+                children: (0, s.jsxs)(d.UC, {
                   children: [
-                    (0, s.jsx)(l.Y9, {
-                      children: (0, w.we)("#FAQEditor_ChangeVisible"),
+                    (0, s.jsx)(d.Y9, {
+                      children: (0, b.we)("#FAQEditor_ChangeVisible"),
                     }),
-                    (0, s.jsx)(l.nB, {
-                      children: (0, s.jsx)(l.a3, { children: b }),
+                    (0, s.jsx)(d.nB, {
+                      children: (0, s.jsx)(d.a3, { children: w }),
                     }),
-                    (0, s.jsx)(l.wi, {
-                      children: (0, s.jsx)(l.CB, {
+                    (0, s.jsx)(d.wi, {
+                      children: (0, s.jsx)(d.CB, {
                         onCancel: n,
-                        bOKDisabled: Boolean(i || d || u),
-                        strOKText: (0, w.we)("#FAQEditor_ChangeVisible"),
-                        strCancelText: Boolean(i || d || u)
-                          ? (0, w.we)("#Button_OK")
+                        bOKDisabled: Boolean(i || o || u),
+                        strOKText: (0, b.we)("#FAQEditor_ChangeVisible"),
+                        strCancelText: Boolean(i || o || u)
+                          ? (0, b.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
                           r(!0),
-                            o.pN
+                            l.pN
                               .Get()
-                              .UpdateVisibility(t.GetFAQID(), _, x)
+                              .UpdateVisibility(t.GetFAQID(), f, p)
                               .then((e) => {
-                                1 == e && c(!0), h(e);
+                                e == F.R && c(!0), h(e);
                               })
                               .catch((e) => {
-                                const t = (0, Ae.H)(e);
+                                const t = (0, je.H)(e);
                                 console.error(
                                   "FAQChangeVisibilityDialog: hit error: " +
                                     t.strErrorMsg,
                                   t,
                                 ),
-                                  h(2);
+                                  h(F.zi);
                               })
                               .finally(() => r(!1));
                         },
@@ -2610,122 +2639,122 @@ License: MIT
             })
           );
         };
-      var De = n(35707),
-        Le = (n(42519), n(23809)),
-        Ne = n(61739),
-        Te = n(88942),
-        Ie = n(56545);
-      const ke = (0, r.PA)((e) => {
+      var Le = n(35707),
+        Ne = (n(42519), n(23809)),
+        Te = n(61739),
+        Ie = n(88942),
+        ke = n(56545);
+      const Qe = (0, r.PA)((e) => {
           var t, n, i, r, a;
-          const { draft: l, eLanguage: d } = e,
-            c = l.GetFAQID(),
-            [u, h] = (0, o.g5)(c);
-          if (!h) return null;
-          const m =
+          const { draft: d, eLanguage: c } = e,
+            u = d.GetFAQID(),
+            [h, m] = (0, l.g5)(u);
+          if (!m) return null;
+          const f =
               null ===
                 (n =
-                  null === (t = null == u ? void 0 : u.per_language_info) ||
+                  null === (t = null == h ? void 0 : h.per_language_info) ||
                   void 0 === t
                     ? void 0
-                    : t.find((e) => 0 == e.language)) || void 0 === n
+                    : t.find((e) => e.language == o.Bhc)) || void 0 === n
                 ? void 0
                 : n.last_update_timestamp,
-            f =
-              null === (i = null == u ? void 0 : u.per_language_info) ||
+            _ =
+              null === (i = null == h ? void 0 : h.per_language_info) ||
               void 0 === i
                 ? void 0
                 : i.some(
                     (e) => e.last_publish_timestamp < e.last_update_timestamp,
                   ),
-            _ =
+            g =
               null ===
                 (a =
-                  null === (r = null == u ? void 0 : u.per_language_info) ||
+                  null === (r = null == h ? void 0 : h.per_language_info) ||
                   void 0 === r
                     ? void 0
                     : r
                         .slice()
-                        .sort((e, t) => H[e.language] - H[t.language])) ||
+                        .sort((e, t) => q[e.language] - q[t.language])) ||
               void 0 === a
                 ? void 0
                 : a.map((e) =>
                     (0, s.jsx)(
-                      Re,
-                      { info: e, rtEnglishUpdateTime: m },
+                      Be,
+                      { info: e, rtEnglishUpdateTime: f },
                       e.language,
                     ),
                   );
-          return (0, s.jsx)(pe.tH, {
+          return (0, s.jsx)(xe.tH, {
             children: (0, s.jsxs)("div", {
-              className: De.LeftMenu,
+              className: Le.LeftMenu,
               children: [
                 (0, s.jsxs)("div", {
-                  className: De.Section,
+                  className: Le.Section,
                   children: [
                     (0, s.jsxs)("div", {
-                      className: De.SectionTitle,
+                      className: Le.SectionTitle,
                       children: [
-                        (0, w.we)("#FAQDashboard_VisibilityColumn"),
+                        (0, b.we)("#FAQDashboard_VisibilityColumn"),
                         " ",
                       ],
                     }),
                     (0, s.jsxs)("div", {
-                      className: De.SectionContents,
+                      className: Le.SectionContents,
                       children: [
                         (0, s.jsxs)("div", {
-                          className: De.VisibilityCtn,
+                          className: Le.VisibilityCtn,
                           children: [
                             (0, s.jsxs)("div", {
-                              className: (0, v.A)(De.StatusRow, De.Global),
+                              className: (0, w.A)(Le.StatusRow, Le.Global),
                               children: [
-                                (0, w.we)(
+                                (0, b.we)(
                                   "#FAQDashboard_VisibleInGlobalRealmLabel",
                                 ),
                                 " ",
-                                (0, s.jsx)(de, {
-                                  bIsVisible: u.visible_in_global_realm,
+                                (0, s.jsx)(ce, {
+                                  bIsVisible: h.visible_in_global_realm,
                                 }),
                               ],
                             }),
                             (0, s.jsxs)("div", {
-                              className: (0, v.A)(De.StatusRow, De.China),
+                              className: (0, w.A)(Le.StatusRow, Le.China),
                               children: [
-                                (0, w.we)(
+                                (0, b.we)(
                                   "#FAQDashboard_VisibleInChinaRealmLabel",
                                 ),
                                 " ",
-                                (0, s.jsx)(de, {
-                                  bIsVisible: u.visible_in_china_realm,
+                                (0, s.jsx)(ce, {
+                                  bIsVisible: h.visible_in_china_realm,
                                 }),
                               ],
                             }),
                             (0, s.jsx)("div", {
-                              className: De.StatusBtnCtn,
-                              children: (0, s.jsx)(Se, { draft: l }),
+                              className: Le.StatusBtnCtn,
+                              children: (0, s.jsx)(ye, { draft: d }),
                             }),
                           ],
                         }),
                         (0, s.jsxs)("div", {
-                          className: De.PublishCtn,
+                          className: Le.PublishCtn,
                           children: [
-                            f
+                            _
                               ? (0, s.jsx)("div", {
-                                  className: De.PublishStatus,
-                                  children: (0, w.we)(
+                                  className: Le.PublishStatus,
+                                  children: (0, b.we)(
                                     "#FAQStatus_DraftVersionsDesc",
                                   ),
                                 })
                               : (0, s.jsx)("div", {
-                                  className: De.PublishStatus,
-                                  children: (0, w.we)(
+                                  className: Le.PublishStatus,
+                                  children: (0, b.we)(
                                     "#FAQStatus_NothingToPublish",
                                   ),
                                 }),
                             (0, s.jsx)("div", {
-                              className: De.PublishBtn,
-                              children: (0, s.jsx)(Ee, {
-                                draft: l,
-                                bDisabled: !f,
+                              className: Le.PublishBtn,
+                              children: (0, s.jsx)(Fe, {
+                                draft: d,
+                                bDisabled: !_,
                               }),
                             }),
                           ],
@@ -2735,109 +2764,109 @@ License: MIT
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: De.Section,
+                  className: Le.Section,
                   children: [
                     (0, s.jsx)("div", {
-                      className: De.SectionTitle,
-                      children: (0, w.we)("#FAQDashboard_LocalizationSection"),
+                      className: Le.SectionTitle,
+                      children: (0, b.we)("#FAQDashboard_LocalizationSection"),
                     }),
-                    (0, s.jsx)(Qe, { draft: l }),
+                    (0, s.jsx)(Re, { draft: d }),
                     (0, s.jsxs)("div", {
-                      className: De.SectionContents,
+                      className: Le.SectionContents,
                       children: [
                         (0, s.jsx)("div", {
-                          className: De.SectionDescription,
-                          children: (0, w.we)(
+                          className: Le.SectionDescription,
+                          children: (0, b.we)(
                             "#FAQDashboard_LocalizationSectionDesc",
                           ),
                         }),
-                        (0, s.jsx)(O, { draft: l, eLanguage: d }),
+                        (0, s.jsx)(M, { draft: d, eLanguage: c }),
                       ],
                     }),
                     (0, s.jsxs)("div", {
-                      className: De.SectionContents,
+                      className: Le.SectionContents,
                       children: [
                         (0, s.jsx)("div", {
-                          className: De.SectionDescription,
-                          children: (0, w.we)(
+                          className: Le.SectionDescription,
+                          children: (0, b.we)(
                             "#EventEditor_Loc_CrowdinIntegration_Desc",
                           ),
                         }),
-                        (0, s.jsx)(M, { draft: l }),
+                        (0, s.jsx)(U, { draft: d }),
                       ],
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: De.Section,
+                  className: Le.Section,
                   children: [
                     (0, s.jsx)("div", {
-                      className: De.SectionTitle,
-                      children: (0, w.we)(
+                      className: Le.SectionTitle,
+                      children: (0, b.we)(
                         "#FAQStatus_LocalizedVersionStatusHeader",
                       ),
                     }),
                     (0, s.jsxs)("table", {
-                      className: De.FaqStatusTable,
+                      className: Le.FaqStatusTable,
                       children: [
                         (0, s.jsx)("thead", {
                           children: (0, s.jsxs)("tr", {
                             children: [
                               (0, s.jsx)("th", {
-                                children: (0, w.we)("#LanguageTitle"),
+                                children: (0, b.we)("#LanguageTitle"),
                               }),
                               (0, s.jsx)("th", {
-                                children: (0, w.we)("#FAQStatus_LastUpdated"),
+                                children: (0, b.we)("#FAQStatus_LastUpdated"),
                               }),
                               (0, s.jsx)("th", {
-                                children: (0, w.we)("#FAQStatus_LastPublished"),
+                                children: (0, b.we)("#FAQStatus_LastPublished"),
                               }),
                             ],
                           }),
                         }),
-                        (0, s.jsx)("tbody", { children: _ }),
+                        (0, s.jsx)("tbody", { children: g }),
                       ],
                     }),
                   ],
                 }),
                 (0, s.jsx)("div", {
-                  className: De.Section,
-                  children: (0, s.jsx)(Ce, { draft: l }),
+                  className: Le.Section,
+                  children: (0, s.jsx)(Ce, { draft: d }),
                 }),
               ],
             }),
           });
         }),
-        Qe = (0, r.PA)((e) => {
+        Re = (0, r.PA)((e) => {
           const { draft: t } = e,
             n =
               ((function (e) {
-                const t = (0, Le.KV)();
-                (0, Ne.n)({
+                const t = (0, Ne.KV)();
+                (0, Te.n)({
                   mutationKey: ["fetch_faq_translation", e],
                   mutationFn: async (n) => {
-                    const i = Ie.w.Init(be.PS);
+                    const i = ke.w.Init(Ae.PS);
                     i.Body().set_faq_id(e), i.Body().set_language(n);
                     return (
-                      await be.RD.FetchLocalizationFromCrowdIn(t, i)
+                      await Ae.RD.FetchLocalizationFromCrowdIn(t, i)
                     ).GetEResult();
                   },
                 });
               })(t.GetFAQID()),
               (function (e) {
-                const t = (0, Le.KV)();
-                return (0, Te.I)({
+                const t = (0, Ne.KV)();
+                return (0, Ie.I)({
                   queryKey: ["get_faq_crowdin_metadata", e],
                   queryFn: async () => {
-                    const n = Ie.w.Init(be.lk);
+                    const n = ke.w.Init(Ae.lk);
                     n.Body().set_faq_id(e);
-                    return (await be.RD.GetCrowdInMetadata(t, n))
+                    return (await Ae.RD.GetCrowdInMetadata(t, n))
                       .Body()
                       .toObject();
                   },
                 });
               })(t.GetFAQID())),
-            [i, s] = (0, a.useState)(-1);
+            [i, s] = (0, a.useState)(o.xPp);
           let r = "";
           return (
             n.isSuccess &&
@@ -2846,23 +2875,23 @@ License: MIT
             null
           );
         }),
-        Re = (0, r.PA)((e) => {
+        Be = (0, r.PA)((e) => {
           const { info: t, rtEnglishUpdateTime: n } = e,
             i = !!n && n > t.last_update_timestamp,
             r = t.last_update_timestamp > t.last_publish_timestamp;
           return (0, s.jsxs)("tr", {
             children: [
               (0, s.jsx)("td", {
-                children: (0, w.we)("#Language_" + (0, E.Lg)(t.language)),
+                children: (0, b.we)("#Language_" + (0, o.LgB)(t.language)),
               }),
               (0, s.jsx)("td", {
-                children: (0, s.jsx)(ne, {
+                children: (0, s.jsx)(ie, {
                   rtTimestamp: t.last_update_timestamp,
                   bShowAsWarning: i,
                 }),
               }),
               (0, s.jsx)("td", {
-                children: (0, s.jsx)(ne, {
+                children: (0, s.jsx)(ie, {
                   rtTimestamp: t.last_publish_timestamp,
                   bShowAsWarning: r,
                 }),
@@ -2870,43 +2899,43 @@ License: MIT
             ],
           });
         });
-      var Be = n(2160),
-        Pe = n(1909),
-        Ge = n(26759),
-        Oe = n(54736),
-        Me = n(59461),
-        Ue = n(51520);
-      const Ve = (0, r.PA)((e) => {
+      var Pe = n(2160),
+        Ge = n(1909),
+        Oe = n(26759),
+        Me = n(54736),
+        Ue = n(59461),
+        Ve = n(51520);
+      const He = (0, r.PA)((e) => {
           const { draft: t } = e,
             n = t.BNeedsSaving();
           return (0, s.jsx)("div", {
             className: "btn_green_steamui btn_medium",
             onClick: (t) =>
-              (0, _.pg)((0, s.jsx)(He, { draft: e.draft }), (0, I.uX)(t)),
+              (0, g.pg)((0, s.jsx)(qe, { draft: e.draft }), (0, k.uX)(t)),
             children: (0, s.jsxs)("span", {
               children: [
                 !n &&
-                  (0, s.jsx)("img", { className: Ue.SavedImage, src: Me.A }),
-                (0, w.we)(n ? "#Button_Save" : "#Button_Saved"),
+                  (0, s.jsx)("img", { className: Ve.SavedImage, src: Ue.A }),
+                (0, b.we)(n ? "#Button_Save" : "#Button_Saved"),
               ],
             }),
           });
         }),
-        He = (e) => {
+        qe = (e) => {
           const { draft: t, closeModal: n } = e,
             [i, r] = a.useState(!0),
-            [o, d] = a.useState(void 0);
+            [o, l] = a.useState(void 0);
           a.useEffect(() => {
             (async () => {
               r(!0);
               try {
                 const e = await t.SaveDrafts();
-                d(e);
+                l(e);
               } catch (e) {
-                d(2),
+                l(F.zi),
                   console.log(
                     "FAQSaveProgressDialog hit exception " +
-                      (0, Ae.H)(e).strErrorMsg,
+                      (0, je.H)(e).strErrorMsg,
                   );
               } finally {
                 r(!1);
@@ -2914,22 +2943,22 @@ License: MIT
             })();
           }, [t]);
           const c = a.useId();
-          return (0, s.jsxs)(f.eV, {
+          return (0, s.jsxs)(_.eV, {
             "aria-labelledby": c,
             bAllowFullSize: !0,
             onCancel: n,
             closeModal: n,
             children: [
-              (0, s.jsx)(l.Y9, {
+              (0, s.jsx)(d.Y9, {
                 id: c,
                 children: i
                   ? (0, s.jsx)("div", {
-                      children: (0, w.we)("#FAQSave_Saving"),
+                      children: (0, b.we)("#FAQSave_Saving"),
                     })
                   : (0, s.jsxs)("div", {
                       children: [
-                        (0, w.we)(
-                          Boolean(1 == o)
+                        (0, b.we)(
+                          Boolean(o == F.R)
                             ? "#FAQSave_SaveSuccess"
                             : "#FAQSave_Error",
                         ),
@@ -2937,53 +2966,53 @@ License: MIT
                       ],
                     }),
               }),
-              (0, s.jsx)(l.nB, {
+              (0, s.jsx)(d.nB, {
                 children: i
-                  ? (0, s.jsx)(p.t, { size: "medium", position: "center" })
+                  ? (0, s.jsx)(x.t, { size: "medium", position: "center" })
                   : (0, s.jsx)("div", {
-                      children: Boolean(1 == o)
+                      children: Boolean(o == F.R)
                         ? (0, s.jsx)("div", {
-                            children: (0, w.we)("#FAQSave_SaveSuccess_desc"),
+                            children: (0, b.we)("#FAQSave_SaveSuccess_desc"),
                           })
                         : (0, s.jsx)("div", {
-                            children: (0, w.we)(
+                            children: (0, b.we)(
                               "#Error_Description",
                               o,
-                              (0, w.we)("#Error_GenericFailureDescription"),
+                              (0, b.we)("#Error_GenericFailureDescription"),
                             ),
                           }),
                     }),
               }),
-              (0, s.jsx)(l.wi, {
+              (0, s.jsx)(d.wi, {
                 children:
                   !i &&
-                  (0, s.jsx)(l.jn, {
+                  (0, s.jsx)(d.jn, {
                     onClick: n,
-                    children: (0, w.we)("#Button_OK"),
+                    children: (0, b.we)("#Button_OK"),
                   }),
               }),
             ],
           });
         };
-      var qe = n(66444),
-        We = n.n(qe);
-      const ze = (0, r.PA)((e) => {
+      var ze = n(66444),
+        We = n.n(ze);
+      const Ke = (0, r.PA)((e) => {
           const { draft: t, bPreview: n } = e,
             r = t.BHasPublished();
-          return (0, s.jsx)(pe.tH, {
+          return (0, s.jsx)(xe.tH, {
             children: (0, s.jsxs)("div", {
-              className: (0, v.A)({
-                [Oe.EventEditorTopBarContainer]: !0,
-                [Oe.EventUnPublished]: !n && !r,
-                [Oe.EventPublished]: !n && r,
+              className: (0, w.A)({
+                [Me.EventEditorTopBarContainer]: !0,
+                [Me.EventUnPublished]: !n && !r,
+                [Me.EventPublished]: !n && r,
                 [We().FAQPreview]: n,
               }),
               children: [
-                (0, s.jsx)(h, {
+                (0, s.jsx)(m, {
                   route: n ? i.k_eCommunityEdit : i.k_eCommunityDashboard,
                   faqid: t.GetFAQID(),
-                  className: L().EditPreviewButton,
-                  children: (0, w.we)(
+                  className: N().EditPreviewButton,
+                  children: (0, b.we)(
                     n ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
                   ),
                 }),
@@ -2991,7 +3020,7 @@ License: MIT
                   children: [
                     (0, s.jsx)("div", {
                       className: We().EditorInternalNameLabel,
-                      children: (0, w.we)(
+                      children: (0, b.we)(
                         n
                           ? "#FAQEditor_InternalName_Preview"
                           : "#FAQEditor_InternalName",
@@ -3002,11 +3031,11 @@ License: MIT
                       children: [
                         t.GetFAQInternalName(),
                         (0, s.jsx)("img", {
-                          src: Ge.A,
+                          src: Oe.A,
                           onClick: (e) =>
-                            (0, _.pg)(
-                              (0, s.jsx)(Ke, { draft: t }),
-                              (0, I.uX)(e),
+                            (0, g.pg)(
+                              (0, s.jsx)(Ye, { draft: t }),
+                              (0, k.uX)(e),
                             ),
                         }),
                       ],
@@ -3014,25 +3043,25 @@ License: MIT
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: L().EventOptions,
+                  className: N().EventOptions,
                   children: [
-                    (0, s.jsx)(Pe.Ng, {
-                      selectedLang: _e.O.Get().GetCurEditLanguage(),
-                      fnOnLanguageChanged: _e.O.Get().SetCurEditLanguage,
+                    (0, s.jsx)(Ge.Ng, {
+                      selectedLang: ge.O.Get().GetCurEditLanguage(),
+                      fnOnLanguageChanged: ge.O.Get().SetCurEditLanguage,
                       fnLangHasData: t.BHasSomeTextForLanguage,
                       fnIsLangSupported: (e) => !0,
                       fnLastUpdateRTime: t.GetLastTimeLanguageUpdated,
                       realms: [
-                        Be.TU.k_ESteamRealmGlobal,
-                        Be.TU.k_ESteamRealmChina,
+                        Pe.TU.k_ESteamRealmGlobal,
+                        Pe.TU.k_ESteamRealmChina,
                       ],
                     }),
                     !n &&
-                      (0, s.jsx)(h, {
+                      (0, s.jsx)(m, {
                         route: i.k_eCommunityPreview,
                         faqid: t.GetFAQID(),
-                        className: L().EditPreviewButton,
-                        children: (0, w.we)("#Button_Preview"),
+                        className: N().EditPreviewButton,
+                        children: (0, b.we)("#Button_Preview"),
                       }),
                   ],
                 }),
@@ -3040,66 +3069,66 @@ License: MIT
             }),
           });
         }),
-        Ke = (e) => {
+        Ye = (e) => {
           const { closeModal: t, draft: n } = e,
             [i, r] = a.useState(n.GetFAQInternalName() || ""),
-            [d, c] = a.useState(!1),
-            [u, h] = a.useState(1),
-            [m, _] = a.useState(!1);
-          return (0, s.jsxs)(f.eV, {
-            title: (0, w.we)("#FAQEditor_ChangeInternalName"),
+            [o, c] = a.useState(!1),
+            [u, h] = a.useState(F.R),
+            [m, f] = a.useState(!1);
+          return (0, s.jsxs)(_.eV, {
+            title: (0, b.we)("#FAQEditor_ChangeInternalName"),
             bAllowFullSize: !0,
             onCancel: t,
             closeModal: t,
             children: [
-              (0, s.jsxs)(l.nB, {
+              (0, s.jsxs)(d.nB, {
                 children: [
                   (0, s.jsx)("div", {
-                    children: (0, w.we)("#FAQEditor_ChangeInternalName_desc"),
+                    children: (0, b.we)("#FAQEditor_ChangeInternalName_desc"),
                   }),
                   (0, s.jsx)("input", {
                     type: "text",
                     value: i,
-                    placeholder: (0, w.we)("#FAQEditor_ChangeInternalName"),
+                    placeholder: (0, b.we)("#FAQEditor_ChangeInternalName"),
                     onFocus: (e) => e.target.select(),
                     onChange: (e) => r(e.currentTarget.value),
                     maxLength: 240,
-                    disabled: d,
+                    disabled: o,
                   }),
-                  Boolean(d && !m) &&
-                    (0, s.jsx)(p.t, {
-                      string: (0, w.we)("#Updating"),
+                  Boolean(o && !m) &&
+                    (0, s.jsx)(x.t, {
+                      string: (0, b.we)("#Updating"),
                       position: "center",
                       size: "medium",
                     }),
                   m &&
                     (0, s.jsx)("span", {
                       children:
-                        1 == u
-                          ? (0, w.we)("#EventDisplay_Share_Success")
-                          : (0, w.we)(
+                        u == F.R
+                          ? (0, b.we)("#EventDisplay_Share_Success")
+                          : (0, b.we)(
                               "#Error_Description",
                               u,
-                              (0, w.we)("#Error_GenericFailureDescription"),
+                              (0, b.we)("#Error_GenericFailureDescription"),
                             ),
                     }),
                 ],
               }),
-              (0, s.jsx)(l.wi, {
-                children: (0, s.jsx)(l.CB, {
-                  bOKDisabled: 0 == i.trim().length || d,
+              (0, s.jsx)(d.wi, {
+                children: (0, s.jsx)(d.CB, {
+                  bOKDisabled: 0 == i.trim().length || o,
                   onCancel: t,
                   strCancelText: m
-                    ? (0, w.we)("#Button_Close")
-                    : (0, w.we)("#Button_Cancel"),
+                    ? (0, b.we)("#Button_Close")
+                    : (0, b.we)("#Button_Cancel"),
                   onOK: async () => {
                     c(!0),
-                      o.pN
+                      l.pN
                         .Get()
                         .UpdateInternalName(n.GetFAQID(), i)
                         .then((e) => h(e))
                         .finally(() => {
-                          _(!0);
+                          f(!0);
                         });
                   },
                 }),
@@ -3107,32 +3136,32 @@ License: MIT
             ],
           });
         },
-        Ye = (0, r.PA)((e) => {
+        Ze = (0, r.PA)((e) => {
           const { draft: t, eLanguage: n } = e,
             i = t.GetFAQID(),
-            [r, a] = (0, o.g5)(i),
-            l = a && r.per_language_info.find((e) => e.language == n),
+            [r, a] = (0, l.g5)(i),
+            o = a && r.per_language_info.find((e) => e.language == n),
             d =
               a &&
-              ((u.TS.EREALM == Be.TU.k_ESteamRealmGlobal &&
+              ((h.TS.EREALM == Pe.TU.k_ESteamRealmGlobal &&
                 r.visible_in_global_realm) ||
-                (u.TS.EREALM == Be.TU.k_ESteamRealmChina &&
+                (h.TS.EREALM == Pe.TU.k_ESteamRealmChina &&
                   r.visible_in_china_realm)) &&
-              !!(null == l ? void 0 : l.last_publish_timestamp);
-          return (0, s.jsx)(pe.tH, {
+              !!(null == o ? void 0 : o.last_publish_timestamp);
+          return (0, s.jsx)(xe.tH, {
             children: (0, s.jsx)("div", {
-              className: (0, v.A)(L().SaveBackground),
+              className: (0, w.A)(N().SaveBackground),
               children: (0, s.jsxs)("div", {
-                className: L().FlexRowWrapFlexStartContainer,
+                className: N().FlexRowWrapFlexStartContainer,
                 style: { width: "unset", justifyContent: "center" },
                 children: [
-                  (0, s.jsx)(Ve, { draft: t }),
+                  (0, s.jsx)(He, { draft: t }),
                   Boolean(d) &&
                     (0, s.jsx)("div", {
-                      className: L().EditPreviewButton,
+                      className: N().EditPreviewButton,
                       children: (0, s.jsx)("a", {
-                        href: u.TS.HELP_BASE_URL + "faqs/view/" + r.url_code,
-                        children: (0, w.we)("#FAQEditir_ViewLiveFAQ"),
+                        href: h.TS.HELP_BASE_URL + "faqs/view/" + r.url_code,
+                        children: (0, b.we)("#FAQEditir_ViewLiveFAQ"),
                       }),
                     }),
                 ],
@@ -3140,54 +3169,54 @@ License: MIT
             }),
           });
         });
-      var Ze = n(91254);
-      const Je = (0, r.PA)((e) => {
+      var Je = n(91254);
+      const Xe = (0, r.PA)((e) => {
           const { faqid: t } = e,
-            [n, i] = (0, o.z5)(t),
+            [n, i] = (0, l.z5)(t),
             r = a.useRef(void 0);
           if (!i)
-            return (0, s.jsx)(p.t, {
+            return (0, s.jsx)(x.t, {
               position: "center",
               size: "xlarge",
-              string: (0, w.we)("#Loading"),
+              string: (0, b.we)("#Loading"),
             });
           if (!n)
-            return (0, s.jsx)(tt, {
-              strError: (0, w.we)("#FAQEditor_NoFAQFound"),
+            return (0, s.jsx)(nt, {
+              strError: (0, b.we)("#FAQEditor_NoFAQFound"),
             });
-          const l = _e.O.Get().GetCurEditLanguage();
+          const o = ge.O.Get().GetCurEditLanguage();
           return (0, s.jsxs)("div", {
             children: [
-              (0, s.jsx)(ze, { draft: n }),
+              (0, s.jsx)(Ke, { draft: n }),
               (0, s.jsxs)("div", {
-                className: we().FAQEditPage,
+                className: be().FAQEditPage,
                 children: [
                   (0, s.jsx)("div", {
-                    className: we().FAQMenuCtn,
-                    children: (0, s.jsx)(ke, { draft: n, eLanguage: l }),
+                    className: be().FAQMenuCtn,
+                    children: (0, s.jsx)(Qe, { draft: n, eLanguage: o }),
                   }),
                   (0, s.jsx)("div", {
-                    className: we().FAQEditorCtn,
+                    className: be().FAQEditorCtn,
                     children: (0, s.jsx)("div", {
-                      className: we().FAQEditor,
+                      className: be().FAQEditor,
                       children: (0, s.jsxs)("div", {
-                        className: (0, v.A)(L().Columns, we().Columns),
+                        className: (0, w.A)(N().Columns, be().Columns),
                         children: [
                           (0, s.jsxs)("div", {
-                            className: (0, v.A)(L().LeftCol, we().LeftCol),
+                            className: (0, w.A)(N().LeftCol, be().LeftCol),
                             children: [
-                              (0, s.jsx)($e, { draft: n, eLanguage: l }),
-                              (0, s.jsx)(et, {
+                              (0, s.jsx)(et, { draft: n, eLanguage: o }),
+                              (0, s.jsx)(tt, {
                                 bbcodeEditorRef: r,
                                 draft: n,
-                                eLanguage: l,
+                                eLanguage: o,
                               }),
                             ],
                           }),
-                          (0, s.jsx)(Xe, {
+                          (0, s.jsx)($e, {
                             draft: n,
                             bbcodeEditorRef: r,
-                            className: (0, v.A)(L().RightCol, we().RightCol),
+                            className: (0, w.A)(N().RightCol, be().RightCol),
                           }),
                         ],
                       }),
@@ -3195,58 +3224,58 @@ License: MIT
                   }),
                 ],
               }),
-              (0, s.jsx)(Ye, { draft: n, eLanguage: l }),
+              (0, s.jsx)(Ze, { draft: n, eLanguage: o }),
             ],
           });
         }),
-        Xe = (e) => {
-          const t = (0, a.useMemo)(() => new y.b(u.UF.CLANSTEAMID), []);
-          if (!Boolean(u.UF.CAN_UPLOAD_IMAGES)) return null;
+        $e = (e) => {
+          const t = (0, a.useMemo)(() => new D.b(h.UF.CLANSTEAMID), []);
+          if (!Boolean(h.UF.CAN_UPLOAD_IMAGES)) return null;
           const { draft: n, bbcodeEditorRef: i } = e;
-          return (0, s.jsx)(pe.tH, {
+          return (0, s.jsx)(xe.tH, {
             children: (0, s.jsxs)("div", {
               className: e.className,
               children: [
                 (0, s.jsx)("div", {
-                  children: (0, w.we)("#FAQEditor_ImageTitle"),
+                  children: (0, b.we)("#FAQEditor_ImageTitle"),
                 }),
-                (0, s.jsx)(xe.G, {
+                (0, s.jsx)(ve.G, {
                   bShowLightBox: !0,
                   appid: void 0,
                   clanSteamID: t,
                   imageInsertCallBack: (e, t) =>
                     i.current &&
-                    (0, he.fW)(null == i ? void 0 : i.current, e, t),
+                    (0, me.fW)(null == i ? void 0 : i.current, e, t),
                   fnSetImageURL: () => {},
                   rgRealmList: n.GetIncludedRealmList(),
                   fnLangHasData: n.BHasSomeTextForLanguage,
                   fnGetImageHash: (e, t) => {
-                    if (me.pb.includes(e)) {
-                      const e = fe.R.GetAllLocalizedGroupImages();
+                    if (fe.pb.includes(e)) {
+                      const e = _e.R.GetAllLocalizedGroupImages();
                       return e && e.length > t && null != e[t] ? e[t] : null;
                     }
                     return null;
                   },
-                  partnerEventStore: Ze.O3,
+                  partnerEventStore: Je.O3,
                 }),
               ],
             }),
           });
         },
-        $e = (0, r.PA)((e) => {
+        et = (0, r.PA)((e) => {
           const { draft: t, eLanguage: n } = e;
           return (0, s.jsxs)("div", {
-            className: we().EditorTitleField,
+            className: be().EditorTitleField,
             children: [
               (0, s.jsx)("div", {
-                className: we().EditorLabel,
-                children: (0, w.we)("#FAQEditor_TitleLabel"),
+                className: be().EditorLabel,
+                children: (0, b.we)("#FAQEditor_TitleLabel"),
               }),
               (0, s.jsx)("input", {
                 type: "text",
-                className: we().EditorTitleFieldInput,
+                className: be().EditorTitleFieldInput,
                 value: t.GetDraftTitle(n) || "",
-                placeholder: (0, w.we)("#FAQEditor_TitlePlaceHolder"),
+                placeholder: (0, b.we)("#FAQEditor_TitlePlaceHolder"),
                 onFocus: (e) => e.target.select(),
                 onChange: (e) => t.SetDraftTitle(n, e.currentTarget.value),
                 maxLength: 120,
@@ -3254,48 +3283,48 @@ License: MIT
             ],
           });
         }),
-        et = (0, r.PA)((e) => {
+        tt = (0, r.PA)((e) => {
           const { draft: t, eLanguage: n, bbcodeEditorRef: i } = e;
           return (0, s.jsxs)("div", {
-            className: we().EditorPane,
+            className: be().EditorPane,
             children: [
               (0, s.jsx)("div", {
-                className: we().EditorLabel,
-                children: (0, w.we)("#FAQEditor_ContentLabel"),
+                className: be().EditorLabel,
+                children: (0, b.we)("#FAQEditor_ContentLabel"),
               }),
-              (0, s.jsx)(ge.I, {
+              (0, s.jsx)(pe.I, {
                 ref: i,
                 fnGetCurText: () => t.GetDraftContent(n) || "",
                 fnOnTextChange: (e) =>
                   t.SetDraftContent(n, e.currentTarget.value),
                 fnSetText: (e) => t.SetDraftContent(n, e),
-                strPlaceholder: (0, w.we)("#FAQEditor_ContentPlaceHolder"),
+                strPlaceholder: (0, b.we)("#FAQEditor_ContentPlaceHolder"),
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
-                className: we().TextPaneContainer,
-                classNameForTextArea: we().EditorPaneTextArea,
+                className: be().TextPaneContainer,
+                classNameForTextArea: be().EditorPaneTextArea,
               }),
             ],
           });
         }),
-        tt = (e) =>
+        nt = (e) =>
           (0, s.jsxs)("div", {
-            className: we().ErrorCtn,
+            className: be().ErrorCtn,
             children: [
               (0, s.jsx)("div", {
-                className: we().ErrorMsg,
+                className: be().ErrorMsg,
                 children: e.strError,
               }),
-              (0, s.jsx)(h, {
+              (0, s.jsx)(m, {
                 route: i.k_eCommunityDashboard,
-                className: we().EscapeLink,
-                children: (0, w.we)("#FAQEditor_GoToDashboard"),
+                className: be().EscapeLink,
+                children: (0, b.we)("#FAQEditor_GoToDashboard"),
               }),
             ],
           });
-      var nt = n(17909),
-        it = n(28735);
-      const st = (e) => {
+      var it = n(17909),
+        st = n(28735);
+      const rt = (e) => {
           const {
               title: t,
               content: n,
@@ -3303,7 +3332,7 @@ License: MIT
               elSideBars: r,
               version: o,
             } = e,
-            l = (0, d.zy)();
+            l = (0, c.zy)();
           return (
             a.useEffect(() => {
               var e, t, n;
@@ -3325,32 +3354,32 @@ License: MIT
                   n.scrollIntoView({ block: "start", behavior: "smooth" }));
             }, [l]),
             (0, s.jsxs)("div", {
-              className: (0, v.A)(it.FAQViewPage, u.TS.LANGUAGE),
+              className: (0, w.A)(st.FAQViewPage, h.TS.LANGUAGE),
               children: [
                 (0, s.jsx)("a", {
-                  className: it.SupportTitle,
-                  href: `${u.TS.HELP_BASE_URL}`,
-                  children: (0, w.we)("#FAQViewer_SteamSupport"),
+                  className: st.SupportTitle,
+                  href: `${h.TS.HELP_BASE_URL}`,
+                  children: (0, b.we)("#FAQViewer_SteamSupport"),
                 }),
                 (0, s.jsxs)("div", {
-                  className: it.Columns,
+                  className: st.Columns,
                   children: [
                     (0, s.jsxs)("div", {
-                      className: (0, v.A)(it.LeftCol),
+                      className: (0, w.A)(st.LeftCol),
                       children: [
-                        (0, s.jsx)("div", { className: it.TopColorBar }),
+                        (0, s.jsx)("div", { className: st.TopColorBar }),
                         (0, s.jsxs)("div", {
-                          className: it.FAQTopicCtn,
+                          className: st.FAQTopicCtn,
                           children: [
                             (0, s.jsx)("div", {
-                              className: it.FAQTitle,
+                              className: st.FAQTitle,
                               role: "heading",
                               "aria-level": 1,
                               children: t,
                             }),
                             (0, s.jsx)("div", {
-                              className: it.FAQContent,
-                              children: (0, s.jsx)(nt.u, {
+                              className: st.FAQContent,
+                              children: (0, s.jsx)(it.u, {
                                 text: n,
                                 bShowErrorInfo: i,
                                 version: o || "0",
@@ -3361,9 +3390,9 @@ License: MIT
                       ],
                     }),
                     (0, s.jsx)("div", {
-                      className: it.RightCol,
+                      className: st.RightCol,
                       children: (0, s.jsx)("div", {
-                        className: it.SectionCtn,
+                        className: st.SectionCtn,
                         children: r,
                       }),
                     }),
@@ -3373,56 +3402,56 @@ License: MIT
             })
           );
         },
-        rt = (e) =>
+        at = (e) =>
           (0, s.jsx)("div", {
-            className: it.FAQViewPage,
+            className: st.FAQViewPage,
             children: e.children,
           });
-      var at = n(85890),
-        ot = n(20572),
-        lt = n(66891);
-      const dt = (e) => {
+      var ot = n(85890),
+        lt = n(20572),
+        dt = n(66891);
+      const ct = (e) => {
           const { faqContent: t } = e,
-            [n, r] = (0, o.W)(t.faq_id, t.version, t.language);
-          return o.pN.Get().BHasFAQEdit()
+            [n, r] = (0, l.W)(t.faq_id, t.version, t.language);
+          return l.pN.Get().BHasFAQEdit()
             ? (0, s.jsxs)("div", {
-                className: (0, v.A)(lt.Section, D.ValveOnlyBackground),
+                className: (0, w.A)(dt.Section, L.ValveOnlyBackground),
                 children: [
                   (0, s.jsx)("div", {
-                    className: lt.TopicHeader,
-                    children: (0, w.we)("#FAQViewer_AdminLinks"),
+                    className: dt.TopicHeader,
+                    children: (0, b.we)("#FAQViewer_AdminLinks"),
                   }),
                   (0, s.jsx)("div", {
-                    className: ot.InfoRow,
-                    children: (0, w.PP)(
+                    className: lt.InfoRow,
+                    children: (0, b.PP)(
                       "#FAQViewer_Admin_LastUpdate",
                       (null == n ? void 0 : n.author_account_id)
-                        ? (0, s.jsx)(at.p, {
+                        ? (0, s.jsx)(ot.p, {
                             accountID: Number.parseInt(n.author_account_id),
                           })
-                        : (0, w.we)("#FAQViewer_UnknownUser"),
+                        : (0, b.we)("#FAQViewer_UnknownUser"),
                       (0, s.jsx)("span", {
                         children:
-                          (0, w.TW)(t.timestamp) +
+                          (0, b.TW)(t.timestamp) +
                           "@" +
-                          (0, k.KC)(t.timestamp, { bForce24HourClock: !1 }),
+                          (0, Q.KC)(t.timestamp, { bForce24HourClock: !1 }),
                       }),
                     ),
                   }),
-                  (0, s.jsx)(ct, { faqContent: t }),
-                  (0, s.jsx)(h, {
+                  (0, s.jsx)(ut, { faqContent: t }),
+                  (0, s.jsx)(m, {
                     faqid: t.faq_id,
                     route: i.k_eCommunityEdit,
                     bForceAnchor: !0,
-                    children: (0, w.we)("#FAQViewer_GotoEditor"),
+                    children: (0, b.we)("#FAQViewer_GotoEditor"),
                   }),
                 ],
               })
             : null;
         },
-        ct = (e) => {
+        ut = (e) => {
           const { faqContent: t } = e,
-            [n, i] = (0, o.z5)(t.faq_id);
+            [n, i] = (0, l.z5)(t.faq_id);
           if (
             !n ||
             !i ||
@@ -3431,51 +3460,51 @@ License: MIT
             return null;
           const r = n.GetLastSavedDraftVersion(t.language);
           return (0, s.jsx)("div", {
-            className: ot.InfoRow,
-            children: (0, w.PP)(
+            className: lt.InfoRow,
+            children: (0, b.PP)(
               "#FAQViewer_DraftNewer",
-              (0, s.jsx)(at.p, {
+              (0, s.jsx)(ot.p, {
                 accountID: Number.parseInt(r.author_account_id),
               }),
               (0, s.jsx)("span", {
                 children:
-                  (0, w.TW)(r.timestamp) +
+                  (0, b.TW)(r.timestamp) +
                   "@" +
-                  (0, k.KC)(r.timestamp, { bForce24HourClock: !1 }),
+                  (0, Q.KC)(r.timestamp, { bForce24HourClock: !1 }),
               }),
             ),
           });
         },
-        ut = (e) =>
+        ht = (e) =>
           (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsxs)("div", {
-                className: (0, v.A)(lt.Section, lt.NeedHelp),
+                className: (0, w.A)(dt.Section, dt.NeedHelp),
                 children: [
                   (0, s.jsx)("div", {
-                    className: lt.LeftCol,
-                    children: (0, s.jsx)(g._VW, { role: "presentation" }),
+                    className: dt.LeftCol,
+                    children: (0, s.jsx)(p._VW, { role: "presentation" }),
                   }),
                   (0, s.jsxs)("div", {
-                    className: lt.RightCol,
+                    className: dt.RightCol,
                     children: [
                       (0, s.jsx)("div", {
-                        className: lt.TopicHeader,
-                        children: (0, w.we)(
+                        className: dt.TopicHeader,
+                        children: (0, b.we)(
                           "#FAQViewer_SideBar_ProblemWithSteam_Title",
                         ),
                       }),
                       (0, s.jsx)("div", {
-                        children: (0, w.we)(
+                        children: (0, b.we)(
                           "#FAQViewer_SideBar_ProblemWithSteam_Desc",
                         ),
                       }),
                       (0, s.jsx)("div", {
-                        className: lt.CenterButtonCtn,
+                        className: dt.CenterButtonCtn,
                         children: (0, s.jsx)("a", {
-                          href: u.TS.HELP_BASE_URL,
-                          className: D.EditPreviewButton,
-                          children: (0, w.we)(
+                          href: h.TS.HELP_BASE_URL,
+                          className: L.EditPreviewButton,
+                          children: (0, b.we)(
                             "#FAQViewer_SideBar_ProblemWithSteam_Link",
                           ),
                         }),
@@ -3484,34 +3513,34 @@ License: MIT
                   }),
                 ],
               }),
-              !(0, u.Y2)() &&
+              !(0, h.Y2)() &&
                 (0, s.jsxs)("div", {
-                  className: (0, v.A)(lt.Section, lt.CommunityHelp),
+                  className: (0, w.A)(dt.Section, dt.CommunityHelp),
                   children: [
                     (0, s.jsx)("div", {
-                      className: lt.LeftCol,
-                      children: (0, s.jsx)(g.ROZ, { role: "presentation" }),
+                      className: dt.LeftCol,
+                      children: (0, s.jsx)(p.ROZ, { role: "presentation" }),
                     }),
                     (0, s.jsxs)("div", {
-                      className: lt.RightCol,
+                      className: dt.RightCol,
                       children: [
                         (0, s.jsx)("div", {
-                          className: lt.TopicHeader,
-                          children: (0, w.we)(
+                          className: dt.TopicHeader,
+                          children: (0, b.we)(
                             "#FAQViewer_SideBar_CommunityHelp_Title",
                           ),
                         }),
                         (0, s.jsx)("div", {
-                          children: (0, w.we)(
+                          children: (0, b.we)(
                             "#FAQViewer_SideBar_CommunityHelp_Desc",
                           ),
                         }),
                         (0, s.jsx)("div", {
-                          className: lt.CenterButtonCtn,
+                          className: dt.CenterButtonCtn,
                           children: (0, s.jsx)("a", {
-                            href: u.TS.COMMUNITY_BASE_URL + "discussions",
-                            className: D.EditPreviewButton,
-                            children: (0, w.we)(
+                            href: h.TS.COMMUNITY_BASE_URL + "discussions",
+                            className: L.EditPreviewButton,
+                            children: (0, b.we)(
                               "#FAQViewer_SideBar_CommunityHelp_Link",
                             ),
                           }),
@@ -3522,171 +3551,171 @@ License: MIT
                 }),
             ],
           });
-      var ht = n(25651),
-        mt = n.n(ht);
-      const ft = (e) => {
+      var mt = n(25651),
+        ft = n.n(mt);
+      const _t = (e) => {
           const { faqid: t } = e,
-            [n, i] = (0, o.Kv)(t, (0, E.sf)(u.TS.LANGUAGE));
+            [n, i] = (0, l.Kv)(t, (0, o.sfN)(h.TS.LANGUAGE));
           return i
             ? n
-              ? (0, s.jsx)(st, {
+              ? (0, s.jsx)(rt, {
                   title: n.title,
                   content: n.content,
                   version: n.version,
                   elSideBars: [
-                    (0, s.jsx)(ut, { faqContent: n }, "sidebar"),
-                    (0, s.jsx)(dt, { faqContent: n }, "adminbar"),
+                    (0, s.jsx)(ht, { faqContent: n }, "sidebar"),
+                    (0, s.jsx)(ct, { faqContent: n }, "adminbar"),
                   ],
                 })
-              : (0, s.jsx)(rt, {
-                  children: (0, s.jsx)(_t, {
-                    strError: (0, w.we)("#FAQViewer_NoFAQFound"),
+              : (0, s.jsx)(at, {
+                  children: (0, s.jsx)(gt, {
+                    strError: (0, b.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
-            : (0, s.jsx)(rt, {
-                children: (0, s.jsx)(p.t, {
+            : (0, s.jsx)(at, {
+                children: (0, s.jsx)(x.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, w.we)("#Loading"),
+                  string: (0, b.we)("#Loading"),
                 }),
               });
         },
-        _t = (e) => {
+        gt = (e) => {
           var t;
           const n =
-            u.TS.COMMUNITY_BASE_URL +
-            (u.UF.APPID
+            h.TS.COMMUNITY_BASE_URL +
+            (h.UF.APPID
               ? "app/" +
-                (null !== (t = u.UF.VANITY_ID) && void 0 !== t ? t : u.UF.APPID)
-              : "gid/" + u.UF.CLANSTEAMID);
+                (null !== (t = h.UF.VANITY_ID) && void 0 !== t ? t : h.UF.APPID)
+              : "gid/" + h.UF.CLANSTEAMID);
           return (0, s.jsxs)("div", {
-            className: mt().ErrorCtn,
+            className: ft().ErrorCtn,
             children: [
               (0, s.jsx)("div", {
-                className: mt().ErrorMsg,
+                className: ft().ErrorMsg,
                 children: e.strError,
               }),
               (0, s.jsx)("a", {
-                className: mt().EscapeLink,
+                className: ft().EscapeLink,
                 href: n,
-                children: (0, w.we)("#FAQViewer_GoToHomepage"),
+                children: (0, b.we)("#FAQViewer_GoToHomepage"),
               }),
             ],
           });
         },
-        gt = (0, r.PA)((e) => {
+        pt = (0, r.PA)((e) => {
           const { faqid: t } = e,
-            [n, i] = (0, o.z5)(t),
-            r = _e.O.Get().GetCurEditLanguage();
+            [n, i] = (0, l.z5)(t),
+            r = ge.O.Get().GetCurEditLanguage();
           return i
             ? n
               ? (0, s.jsxs)(s.Fragment, {
                   children: [
-                    (0, s.jsx)(ze, { draft: n, bPreview: !0 }),
-                    (0, s.jsx)(st, {
-                      title: n.GetDraftTitleWithFallback(r, u.TS.EREALM),
-                      content: n.GetDraftContentWithFallback(r, u.TS.EREALM),
+                    (0, s.jsx)(Ke, { draft: n, bPreview: !0 }),
+                    (0, s.jsx)(rt, {
+                      title: n.GetDraftTitleWithFallback(r, h.TS.EREALM),
+                      content: n.GetDraftContentWithFallback(r, h.TS.EREALM),
                       version: "" + n.GetLastTimeLanguageUpdated(r),
                     }),
-                    (0, s.jsx)(Ye, { draft: n, eLanguage: r }),
+                    (0, s.jsx)(Ze, { draft: n, eLanguage: r }),
                   ],
                 })
-              : (0, s.jsx)(rt, {
-                  children: (0, s.jsx)(_t, {
-                    strError: (0, w.we)("#FAQViewer_NoFAQFound"),
+              : (0, s.jsx)(at, {
+                  children: (0, s.jsx)(gt, {
+                    strError: (0, b.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
-            : (0, s.jsx)(rt, {
-                children: (0, s.jsx)(p.t, {
+            : (0, s.jsx)(at, {
+                children: (0, s.jsx)(x.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, w.we)("#Loading"),
+                  string: (0, b.we)("#Loading"),
                 }),
               });
         });
-      var pt = n(60746),
-        xt = n(6813),
-        vt = n(97058);
-      const wt = {
+      var xt = n(60746),
+        vt = n(6813),
+        wt = n(97058);
+      const bt = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,
           DashboardFAQ: (e) => `/faqs/${e}/dashboard`,
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
         },
-        bt = (0, r.PA)((e) => {
+        At = (0, r.PA)((e) => {
           const [t, n] = a.useState(!0);
           return (
             a.useEffect(() => {
               (async () => {
-                await pt.KN.InitGlobal(), n(!1);
+                await xt.KN.InitGlobal(), n(!1);
               })();
             }, []),
             t
-              ? (0, s.jsx)(p.t, {
+              ? (0, s.jsx)(x.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, w.we)("#Loading"),
+                  string: (0, b.we)("#Loading"),
                 })
               : (0, s.jsxs)(s.Fragment, {
                   children: [
-                    (0, s.jsx)(ue, {}),
-                    (0, s.jsxs)(d.dO, {
+                    (0, s.jsx)(he, {}),
+                    (0, s.jsxs)(c.dO, {
                       children: [
-                        (0, s.jsx)(d.qh, {
-                          path: wt.ViewFAQ(":vanity_str", ":faqid"),
+                        (0, s.jsx)(c.qh, {
+                          path: bt.ViewFAQ(":vanity_str", ":faqid"),
                           render: (e) =>
-                            (0, s.jsx)(xt.X, {
+                            (0, s.jsx)(vt.X, {
                               config: {
                                 "faqs-root": () => {
                                   const { faqid: t } = e.match.params,
-                                    n = (0, o.CJ)(t);
-                                  return (0, s.jsx)(ft, { faqid: n });
+                                    n = (0, l.CJ)(t);
+                                  return (0, s.jsx)(_t, { faqid: n });
                                 },
                               },
                             }),
                         }),
-                        (0, s.jsx)(d.qh, {
-                          path: wt.EditFAQ(":vanity_str", ":faqid"),
+                        (0, s.jsx)(c.qh, {
+                          path: bt.EditFAQ(":vanity_str", ":faqid"),
                           render: (e) =>
-                            (0, s.jsx)(xt.X, {
+                            (0, s.jsx)(vt.X, {
                               config: {
                                 "faqs-root": () => {
                                   const { faqid: t } = e.match.params;
                                   if (t) {
-                                    const e = (0, o.CJ)(t);
+                                    const e = (0, l.CJ)(t);
                                     return e
-                                      ? (0, s.jsx)(Je, { faqid: e })
-                                      : (0, s.jsx)(d.rd, {
+                                      ? (0, s.jsx)(Xe, { faqid: e })
+                                      : (0, s.jsx)(c.rd, {
                                           push: !0,
-                                          to: m(i.k_eCommunityDashboard),
+                                          to: f(i.k_eCommunityDashboard),
                                         });
                                   }
-                                  return (0, s.jsx)(ie, {});
+                                  return (0, s.jsx)(se, {});
                                 },
                               },
                             }),
                         }),
-                        (0, s.jsx)(d.qh, {
-                          path: wt.DashboardFAQ(":vanity_str"),
+                        (0, s.jsx)(c.qh, {
+                          path: bt.DashboardFAQ(":vanity_str"),
                           render: (e) =>
-                            (0, s.jsx)(xt.X, {
-                              config: { "faqs-root": () => (0, s.jsx)(ie, {}) },
+                            (0, s.jsx)(vt.X, {
+                              config: { "faqs-root": () => (0, s.jsx)(se, {}) },
                             }),
                         }),
-                        (0, s.jsx)(d.qh, {
-                          path: wt.PreviewFAQ(":vanity_str", ":faqid"),
+                        (0, s.jsx)(c.qh, {
+                          path: bt.PreviewFAQ(":vanity_str", ":faqid"),
                           render: (e) =>
-                            (0, s.jsx)(xt.X, {
+                            (0, s.jsx)(vt.X, {
                               config: {
                                 "faqs-root": () => {
                                   const { faqid: t } = e.match.params,
-                                    n = (0, o.CJ)(t);
-                                  return (0, s.jsx)(gt, { faqid: n });
+                                    n = (0, l.CJ)(t);
+                                  return (0, s.jsx)(pt, { faqid: n });
                                 },
                               },
                             }),
                         }),
-                        (0, s.jsx)(d.qh, { component: vt.a }),
+                        (0, s.jsx)(c.qh, { component: wt.a }),
                       ],
                     }),
                   ],

@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Steam Deck Afişi: \"Oyunlarınız Her Yerde\"",
     "VerifiedProgram_DeckDisclaimer": "Fragman, Steam Deck'teki gerçek oynanışı yansıtmayabilir.",
+    "StoreItemFound": "%1$s Bulundu (%2$s)",
+    "StoreItemNotFound": "Bulunamadı (%1$s)",
     "Dummy": "dummy"
 }

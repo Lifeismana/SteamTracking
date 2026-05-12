@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyron kallistus eteen tai taakse"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyron kääntäminen kulmasta kulmaan vaakatasossa (ei kallistusta)"
 	"origin_SteamDeck_Gyro_Roll"				"Gyron kallistaminen sivulle"
+	"origin_SteamDeck_LGrip"					"Vasen kosketussensori"
+	"origin_SteamDeck_RGrip"					"Oikea kosketussensori"
 
 	"origin_horipad_m1"							"M1-painike"
 	"origin_horipad_m2"							"M2-painike"

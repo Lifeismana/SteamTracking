@@ -55,7 +55,7 @@
       var c = r(78327),
         s = r(22837);
       function o() {
-        return c.TS.IN_CLIENT && (0, s.DO)(c.TS.LAUNCHER_TYPE);
+        return c.TS.IN_CLIENT && (0, s.DOG)(c.TS.LAUNCHER_TYPE);
       }
     },
     61788: (e, t, r) => {
@@ -63,7 +63,7 @@
       r.d(t, { y: () => d });
       var c = r(34629),
         s = r(56545),
-        o = r(59134),
+        o = r(68336),
         i = r(60778),
         n = r(14771),
         l = r(6419);

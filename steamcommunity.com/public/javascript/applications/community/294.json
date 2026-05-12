@@ -131,5 +131,6 @@
     "reportedsubjectlist_header": "報告された案件",
     "moderation_already_owner_disputed": "異議申し立て済み",
     "moderationstats_alltypes": "すべての案件タイプ",
+    "moderation_alternateforumtool": "代替ツール",
     "empty_no_trailing_comma": ""
 }

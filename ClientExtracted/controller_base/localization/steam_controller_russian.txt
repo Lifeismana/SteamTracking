@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Гироскоп: тангаж"
 	"origin_SteamDeck_Gyro_Yaw"					"Гироскоп: рыскание"
 	"origin_SteamDeck_Gyro_Roll"				"Гироскоп: крен"
+	"origin_SteamDeck_LGrip"					"Касание левого датчика хвата"
+	"origin_SteamDeck_RGrip"					"Касание правого датчика хвата"
 
 	"origin_horipad_m1"							"Кнопка M1"
 	"origin_horipad_m2"							"Кнопка M2"

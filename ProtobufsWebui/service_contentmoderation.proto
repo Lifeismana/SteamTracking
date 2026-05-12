@@ -191,6 +191,14 @@ message CContentModeration_GetReportedSubjectsByOwner_Response {
 	repeated .ContentReportSubject subject = 1;
 }
 
+message CContentModeration_GetReporterCooldown_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CContentModeration_GetReporterCooldown_Response {
+	optional uint32 rtime_cooldown_ends = 1;
+}
+
 message CContentModeration_GetReportsSubmittedByUser_Request {
 	optional uint64 steamid = 1;
 	optional uint32 start = 2;
@@ -294,6 +302,14 @@ message CContentModeration_SetModeratorPreferences_Request_SubjectTypeList {
 }
 
 message CContentModeration_SetModeratorPreferences_Response {
+}
+
+message CContentModeration_UpdateReporterCooldown_Request {
+	optional fixed64 steamid = 1;
+	optional uint32 rtime_cooldown_ends = 2;
+}
+
+message CContentModeration_UpdateReporterCooldown_Response {
 }
 
 message CContentModeration_UpdateSubject_Request {
@@ -424,6 +440,8 @@ service ContentModeration {
 	// bConstMethod=true, ePrivilege=1
 	rpc GetReportedSubjectsByOwner (.CContentModeration_GetReportedSubjectsByOwner_Request) returns (.CContentModeration_GetReportedSubjectsByOwner_Response);
 	// bConstMethod=true, ePrivilege=1
+	rpc GetReporterCooldown (.CContentModeration_GetReporterCooldown_Request) returns (.CContentModeration_GetReporterCooldown_Response);
+	// bConstMethod=true, ePrivilege=1
 	rpc GetReportsSubmittedByUser (.CContentModeration_GetReportsSubmittedByUser_Request) returns (.CContentModeration_GetReportsSubmittedByUser_Response);
 	// ePrivilege=5
 	rpc GetSubjectOverview (.CContentModeration_GetSubjectOverview_Request) returns (.CContentModeration_GetSubjectOverview_Response);
@@ -439,6 +457,8 @@ service ContentModeration {
 	rpc ResolveSubjectGroup (.CContentModeration_ResolveSubjectGroup_Request) returns (.CContentModeration_ResolveSubjectGroup_Response);
 	// ePrivilege=5
 	rpc SetModeratorPreferences (.CContentModeration_SetModeratorPreferences_Request) returns (.CContentModeration_SetModeratorPreferences_Response);
+	// ePrivilege=1
+	rpc UpdateReporterCooldown (.CContentModeration_UpdateReporterCooldown_Request) returns (.CContentModeration_UpdateReporterCooldown_Response);
 	// ePrivilege=5
 	rpc UpdateSubject (.CContentModeration_UpdateSubject_Request) returns (.CContentModeration_UpdateSubject_Response);
 	// ePrivilege=5

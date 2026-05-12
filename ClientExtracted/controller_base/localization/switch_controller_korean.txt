@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"오른쪽 Joy-Con 자이로 요"
 	"origin_switch_r_gyro_roll"					"오른쪽 Joy-Con 자이로 롤"
 	"origin_switch_button_dpad_move"			"방향 패드 조작"
+	"origin_switch_button_gl"					"GL 버튼"
+	"origin_switch_button_gr"					"GR 버튼"
+	"origin_switch_button_button_c"				"C 버튼"
 }

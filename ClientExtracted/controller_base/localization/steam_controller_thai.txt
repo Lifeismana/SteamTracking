@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"ไจโร เงย"
 	"origin_SteamDeck_Gyro_Yaw"					"ไจโร หัน"
 	"origin_SteamDeck_Gyro_Roll"				"ไจโร ม้วน"
+	"origin_SteamDeck_LGrip"					"กริปซ้าย สัมผัส	"
+	"origin_SteamDeck_RGrip"					"กริปขวา สัมผัส"
 
 	"origin_horipad_m1"							"ปุ่ม M1"
 	"origin_horipad_m2"							"ปุ่ม M2"

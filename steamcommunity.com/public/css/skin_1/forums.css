@@ -559,8 +559,8 @@ textarea.forumtopic_reply_textarea {
 	margin-top: 0px;
 
 	/* hack in some space for the friend indicator */
-	margin-left: -22px;
-	padding-left: 22px;
+	margin-inline-start: -22px;
+	padding-inline-start: 22px;
 }
 
 .forumtopic_comments .commentthread_answer_bar {
@@ -1257,14 +1257,13 @@ a.forum_comment_action:hover {
 
 .discussionSearchTextContainer
 {
-	position:relative;
-	width:296px;
-	height:46px;
 	background-image: url(https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png?v=1);
-	background-repeat:no-repeat;
-	padding:0;
-	margin:0;
-	padding-top: 0px;
+	background-repeat: no-repeat;
+	height: 46px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 296px;
 }
 
 input.discussionSearchText
@@ -1291,7 +1290,6 @@ input.discussionSearchText:-moz-placeholder {
 	color: #555555;
 	font-style: italic;
 }
-
 
 .discussionSearchTextSubmitImg
 {
@@ -2086,10 +2084,10 @@ select.subforum_select_control {
 }
 
 .responsive_tab_ctn.forumselector:not(.sharedfiles_responsive_tab) .formselector_select_ctn select {
-	max-width: 99%;
-    box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.3);
+	box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.3);
 	height: 32px;
-    padding: 6px;
+	max-width: 99%;
+	padding: 6px;
 }
 
 .discussions_page .responsive_tab_baseline {

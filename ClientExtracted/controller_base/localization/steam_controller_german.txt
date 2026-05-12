@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyroskop neigen"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyroskop gieren"
 	"origin_SteamDeck_Gyro_Roll"				"Gyroskop rollen"
+	"origin_SteamDeck_LGrip"					"Linker Stick (kann gedrückt werden)"
+	"origin_SteamDeck_RGrip"					"Rechter Stick (kann gedrückt werden)"
 
 	"origin_horipad_m1"							"M1-Taste"
 	"origin_horipad_m2"							"M2-Taste"

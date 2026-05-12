@@ -700,7 +700,6 @@
 	"Steam_Screenshots_UploadProgress" "正上传截图至蒸汽平台社区…"
 	"Steam_WindowsCompat_Title" "蒸汽平台错误"
 	"Steam_WindowsCompat_Description" "Windows 目前正在以 Windows 兼容模式运行蒸汽平台，这会导致在运行某些游戏或者在使用某些蒸汽平台功能时出现问题。请按照以下的指示来移除兼容模式。"
-	"Steam_WindowsCompat_SupportLink" "https://help.steamchina.com/zh/kb/7153-AHJV-4256"
 	"Steam_WindowsCompat_CloseSteam" "关闭蒸汽平台"
 	"Steam_WindowsCompat_RestartSteam" "重启蒸汽平台"
 	"Steam_WindowsCompat_BigPicture" "蒸汽平台目前正运行在 Windows 兼容模式下。这可能会阻止大屏幕启动，蒸汽平台会告知您正在使用 Windows XP 及以下的版本。"
@@ -729,7 +728,7 @@
 	"RescueDialog_RestartSteam_NoGPU" "在禁用 GPU 加速的情况下重新启动蒸汽平台"
 	"RescueDialog_RestartSteam_NoSandbox" "在禁用浏览器沙盒的情况下重新启动蒸汽平台"
 	"RescueDialog_ExitSteam" "退出蒸汽平台"
-	"TransportDialog_Explanation" "蒸汽平台启动时发生意外错误（0x%errorCount%）。点击<a href=steam://openurl_external/https://help.steamchina.com/faqs/view/7516-B23C-D572-5B0E>此处</a>获取更多信息。"
+	"TransportDialog_Explanation" "蒸汽平台启动时发生意外错误（0x%errorCount%）。"
 	"TransportDialog_RestartSteam" "重启蒸汽平台"
 	"TransportDialog_ExitSteam" "退出蒸汽平台"
 }

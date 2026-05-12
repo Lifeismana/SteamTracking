@@ -84,6 +84,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -674,7 +675,7 @@
         constructor(_) {
           super(_),
             (window.fnLoyalty_ShowAwardModal = (_, _, _, _, _) => {
-              _ || (_ = 0),
+              _ || (_ = _._._),
                 this.setState({
                   bShowModal: !0,
                   fnSuccessFunc: _,
@@ -687,7 +688,7 @@
             (this.state = {
               bShowModal: !1,
               targetid: "",
-              targetType: 0,
+              targetType: _._._,
             });
         }
         render() {
@@ -705,7 +706,7 @@
                 {
                   targetid: _,
                   active: _,
-                  targetType: null != _ ? _ : 0,
+                  targetType: null != _ ? _ : _._._,
                   ugcType: _,
                   onDismiss: () =>
                     this.setState({
@@ -720,7 +721,7 @@
         }
       }
       _.defaultProps = {
-        targetType: 1,
+        targetType: _._._,
       };
       const _ = _;
       function _(_) {
@@ -734,21 +735,22 @@
             onSuccess: _,
             onDismiss: _,
           } = _,
-          [_, _] = _.useState(_ || 0),
+          [_, _] = _.useState(_ || _._._),
           [_, _] = _.useState(_.SELECTING),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(2),
+          [_, _] = _.useState(_._),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (function (_, _, _, _) {
             return (0, _._)({
               queryKey: ["UserReactions", _, _],
               queryFn: async () => {
-                if (!_._.logged_in) throw 21;
+                if (!_._.logged_in) throw _._;
                 const _ = _._.Init(_._);
                 _.Body().set_target_type(_), _.Body().set_targetid(_);
                 let _ = await _._.GetReactions(_, _);
-                if (1 == _.GetEResult()) return new Set(_.Body().reactionids());
+                if (_.GetEResult() == _._)
+                  return new Set(_.Body().reactionids());
                 throw _.GetEResult();
               },
               enabled: _,
@@ -762,9 +764,9 @@
                 const _ = _._.Init(_._);
                 __webpack_require__
                   .Body()
-                  .set_elanguage((0, _._)(_._.LANGUAGE));
+                  .set_elanguage((0, _.sfN)(_._.LANGUAGE));
                 let _ = await _._.GetReactionConfig(_, _);
-                if (1 == _.GetEResult()) {
+                if (_.GetEResult() == _._) {
                   const _ = new Map();
                   let _ =
                     null !== (_ = _.Body().toObject().reactions) && void 0 !== _
@@ -783,12 +785,12 @@
               queryKey: ["UserPointBalance"],
               queryFn: async () => {
                 var _, _;
-                if (!_._.logged_in) throw 21;
+                if (!_._.logged_in) throw _._;
                 const _ = _._.steamid,
                   _ = _._.Init(_._);
                 _.Body().set_steamid(_);
                 let _ = await _._.GetSummary(_, _);
-                if (1 == _.GetEResult())
+                if (_.GetEResult() == _._)
                   return _._.fromString(
                     null !==
                       (_ =
@@ -808,14 +810,14 @@
             const _ = (0, _._)();
             return (0, _._)({
               mutationFn: async (_) => {
-                if (!_._.logged_in) throw 21;
+                if (!_._.logged_in) throw _._;
                 const { targetid: _, targetType: _, nReactionId: _ } = _;
                 let _ = _._.Init(_._);
                 _.Body().set_target_type(_),
                   _.Body().set_targetid(_),
                   _.Body().set_reactionid(_);
                 const _ = await _._.AddReaction(_, _);
-                if (1 != _.GetEResult()) throw _.GetEResult();
+                if (_.GetEResult() != _._) throw _.GetEResult();
               },
               onSuccess: () => {
                 _.invalidateQueries({
@@ -847,49 +849,51 @@
                   _.reactionid
                 )
                   switch (_) {
-                    case 1:
-                    case 3:
-                    case 4:
-                    case 5:
+                    case _._._:
                       _.push(_.reactionid);
                       break;
-                    case 2:
+                    case _._._:
                       void 0 !== _ &&
                         (null === (_ = _.valid_ugc_types) || void 0 === _
                           ? void 0
                           : _.includes(_)) &&
                         _.push(_.reactionid);
+                      break;
+                    case _._._:
+                    case _._._:
+                    case _._._:
+                      _.push(_.reactionid);
                   }
               }),
               _
             );
           })(_, _, _),
-          _ = 0 === _ ? null : _.get(_),
+          _ = _ === _._._ ? null : _.get(_),
           _ = _ ? _.points_cost : 0,
           _ = _ ? _.points_transferred : 0;
         let _,
           _ = "";
         switch (_) {
-          case 1:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_Review");
             break;
-          case 2:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_UGC");
             break;
-          case 3:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_Profile");
             break;
-          case 4:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_ForumTopic");
             break;
-          case 5:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_Comment");
         }
         switch (_) {
           case _.SELECTING:
             {
               const _ =
-                  0 === _ ||
+                  _ === _._._ ||
                   (null === (_ = _.data) || void 0 === _ ? void 0 : _.has(_)),
                 _ = !_ || _.greaterThanOrEqual(_),
                 _ = (0, _.jsx)(_._, {
@@ -952,7 +956,7 @@
                               var _;
                               (null === (_ = _.data) || void 0 === _
                                 ? void 0
-                                : _.has(_)) || _(_ === _ ? 0 : _);
+                                : _.has(_)) || _(_ === _ ? _._._ : _);
                             },
                           },
                           _,
@@ -1014,7 +1018,7 @@
                   (0, _.jsx)(_._, {
                     onClick: async function () {
                       null !== _ &&
-                        0 != _ &&
+                        _ != _._._ &&
                         (_(_.SUBMITTING),
                         await _.mutate(
                           {
@@ -1151,28 +1155,28 @@
             {
               let _ = "";
               switch (_) {
-                case 10:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_Busy");
                   break;
-                case 32:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_PersistFailed");
                   break;
-                case 8:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_InvalidParam");
                   break;
-                case 42:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_NoMatch");
                   break;
-                case 107:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_InsufficientFunds");
                   break;
-                case 15:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_AccessDenied");
                   break;
-                case 21:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_NotLoggedOn");
                   break;
-                case 29:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_DuplicateRequest");
                   break;
                 default:
@@ -1211,10 +1215,10 @@
           case _.LOADING_ERROR: {
             let _ = "";
             switch (_) {
-              case 10:
+              case _._:
                 _ = (0, _._)("#GrantAwardError_Busy");
                 break;
-              case 21:
+              case _._:
                 _ = (0, _._)("#GrantAwardError_NotLoggedOn");
                 break;
               default:

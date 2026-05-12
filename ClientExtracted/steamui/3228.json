@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Banner zařízení Steam Deck: „Vaše hry všude s Vámi“",
     "VerifiedProgram_DeckDisclaimer": "Upoutávka nemusí odpovídat skutečnému zážitku na zařízení Steam Deck",
+    "StoreItemFound": "%1$s Nalezeno (%2$s)",
+    "StoreItemNotFound": "Nenalezeno (%1$s)",
     "Dummy": "dummy"
 }

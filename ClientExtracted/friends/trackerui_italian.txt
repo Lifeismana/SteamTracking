@@ -784,7 +784,7 @@
 "Broadcast_Upload_Result_4"  "tempo scaduto"
 "Broadcast_Upload_Result_5"  "troppi dati"
 "Broadcast_Upload_Result_6"  "FPS bassi"
-"Broadcast_Upload_Result_7"  "fotogrammi chiave mancanti"
+"Broadcast_Upload_Result_7"  "frame chiave mancanti"
 "Broadcast_Upload_Result_8"  "nessuna connessione"
 "Broadcast_Upload_Result_9"  "errore nel relè"
 "Broadcast_Upload_Result_10" "impostazioni modificate"

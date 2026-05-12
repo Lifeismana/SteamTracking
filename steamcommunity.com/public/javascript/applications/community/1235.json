@@ -131,5 +131,6 @@
     "reportedsubjectlist_header": "หัวข้อที่ถูกรายงาน",
     "moderation_already_owner_disputed": "ถูกยื่นข้อพิพาทไปแล้ว",
     "moderationstats_alltypes": "ประเภทหัวข้อทั้งหมด",
+    "moderation_alternateforumtool": "เครื่องมือรอง",
     "empty_no_trailing_comma": ""
 }

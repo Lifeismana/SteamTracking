@@ -8,30 +8,31 @@
     },
     42144: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { default: () => l });
+      t.r(n), t.d(n, { default: () => S });
       var r = t(7850),
         o = t(90626),
         i = t(97436),
-        s = t(96059),
-        a = t(78327),
-        c = t(28240),
-        u = t(9211);
-      function l(e) {
-        const { redirectUrl: n = a.TS.COMMUNITY_BASE_URL } = e,
+        s = t(99532),
+        a = t(96059),
+        c = t(78327),
+        u = t(28240),
+        l = t(9211);
+      function S(e) {
+        const { redirectUrl: n = c.TS.COMMUNITY_BASE_URL } = e,
           [t] = (0, o.useState)(
-            new s.D(a.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new a.D(c.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [l, m] = (0, o.useState)(!1);
+          [S, m] = (0, o.useState)(!1);
         return (0, r.jsx)("div", {
-          className: u.LoginContainer,
-          children: l
+          className: l.LoginContainer,
+          children: S
             ? (0, r.jsx)(i.Fn, {})
             : (0, r.jsx)(i.YN, {
                 autoFocus: !0,
                 transport: t,
-                platform: 2,
+                platform: s.SS.tS,
                 onComplete: (e) => {
-                  e == c.wI.k_PrimaryDomainFail
+                  e == u.wI.k_PrimaryDomainFail
                     ? m(!0)
                     : window.location.assign(n);
                 },

@@ -97,6 +97,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -132,7 +133,7 @@
           return (0, _.jsx)("div", {
             className: _.StoreSaleWidgetEmptyContainer,
           });
-        const _ = 8 != _.type,
+        const _ = _.type != _._._,
           _ = (0, _._)((0, _._)(_), _);
         return (0, _.jsxs)("div", {
           className: _,
@@ -192,6 +193,9 @@
         if (_) return _();
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -520,8 +524,8 @@
             _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
               _.steamid,
             ).m_nAppID;
-          (0, _._)(_, _ ? 2 : 3, _.snr),
-            _ && _() && _().AddEvent(1005),
+          (0, _._)(_, _ ? _._._ : _._._, _.snr),
+            _ && _() && _().AddEvent(_._._),
             window.setTimeout(
               () =>
                 this.setState({
@@ -642,7 +646,7 @@
         }
         MarkBroadcastSeen() {
           this.m_bMarkedUsabilitySeen ||
-            ((this.m_bMarkedUsabilitySeen = !0), _() && _().AddEvent(1004));
+            ((this.m_bMarkedUsabilitySeen = !0), _() && _().AddEvent(_._._));
         }
         render() {
           if (this.state.bLoadingPreference) return null;
@@ -660,14 +664,14 @@
                 ..._,
                 left_panel: __webpack_require__.GetImageURL(
                   "broadcast_left",
-                  _ || (0, _._)(_._.LANGUAGE),
+                  _ || (0, _.sfN)(_._.LANGUAGE),
                 ),
                 right_panel: __webpack_require__.GetImageURL(
                   "broadcast_right",
-                  _ || (0, _._)(_._.LANGUAGE),
+                  _ || (0, _.sfN)(_._.LANGUAGE),
                 ),
                 store_title: __webpack_require__.GetBroadcastTitle(
-                  _ || (0, _._)(_._.LANGUAGE),
+                  _ || (0, _.sfN)(_._.LANGUAGE),
                 ),
                 broadcast_chat_visibility:
                   __webpack_require__.GetBroadcastChatVisibility(),
@@ -815,8 +819,8 @@
           const _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
             this.props.stream.steamid,
           ).m_nAppID;
-          (0, _._)(_, 7, this.props.stream.snr),
-            _() && _().AddEvent(1006),
+          (0, _._)(_, _._._, this.props.stream.snr),
+            _() && _().AddEvent(_._._),
             this.setState({
               bPopout: !1,
               bPreventPopup: !0,
@@ -865,7 +869,7 @@
                     className: _().BroadcastPlayerContainer,
                     children: (0, _.jsx)(_.default, {
                       steamIDBroadcast: this.props.stream.steamid,
-                      watchLocation: 6,
+                      watchLocation: _._._,
                       bStartMuted: this.props.bStartMuted,
                       fnRenderBroadcastContext:
                         this.props.fnRenderBroadcastContext,
@@ -926,7 +930,7 @@
           ).m_nAppID;
           (0, _._)(
             _,
-            "show" === _._.Get().GetChatVisibility() ? 5 : 4,
+            "show" === _._.Get().GetChatVisibility() ? _._._ : _._._,
             this.props.stream.snr,
           ),
             _._.Get().ToggleChatVisibility();
@@ -935,7 +939,7 @@
           const _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
             this.props.stream.steamid,
           ).m_nAppID;
-          (0, _._)(_, 9, this.props.stream.snr);
+          (0, _._)(_, _._._, this.props.stream.snr);
         }
         render() {
           const _ = "remove" != _._.Get().GetChatVisibility(),
@@ -1262,7 +1266,7 @@
                 className: _().ChatContainer,
                 children: (0, _.jsx)(_._, {
                   emoticonStore: _._,
-                  watchLocation: 6,
+                  watchLocation: _._._,
                   steamID: _,
                   broadcastID: _,
                 }),

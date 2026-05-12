@@ -10,6 +10,8 @@
     "Header_MarketTitle": "سوق مجتمع Steam",
     "Header_LearnMore": "اعرف أكثر",
     "Header_Search_Filters": "عامل التصفية",
+    "Header_GiveFeedback": "إرسال ملاحظات",
+    "SortBy_Label": "التصنيف حسب:",
     "Search_Button": "بحث",
     "Search_Placeholder": "البحث...",
     "Button_Buy": "شراء",
@@ -76,6 +78,8 @@
     "AssetProperty_Range_MaxPlaceholder": "الحد الأقصى",
     "Accessories_FieldSectionLabel": "الملحقات",
     "AccessoriesList_Title": "الملحقات",
+    "Filter_ViewResults": "عرض النتائج",
+    "Market_AppUnplayedAndUnvetted_Dismiss": "انقر هنا لعرض هذا العنصر على أي حال",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "معلومات أكثر...",
     "Economy_Market_TopLevelReason_InvalidCookie": "يواجه Steam مشكلة في استخدام ملفات تعريف الارتباط الخاصة بمتصفحك."
 }

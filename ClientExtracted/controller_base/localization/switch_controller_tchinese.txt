@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"右 Joy-Con 陀螺儀偏擺"
 	"origin_switch_r_gyro_roll"					"右 Joy-Con 陀螺儀翻滾"
 	"origin_switch_button_dpad_move"			"方向鍵移動"
+	"origin_switch_button_gl"					"GL 鍵"
+	"origin_switch_button_gr"					"GR 鍵"
+	"origin_switch_button_button_c"				"C 鍵"
 }

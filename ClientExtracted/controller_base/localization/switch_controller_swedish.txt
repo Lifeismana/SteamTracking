@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Höger Joy-Con – Gyrogirning"
 	"origin_switch_r_gyro_roll"					"Höger Joy-Con – Gyrorullning"
 	"origin_switch_button_dpad_move"			"Riktningsknappar – Rörelse"
+	"origin_switch_button_gl"					"GL-knapp"
+	"origin_switch_button_gr"					"GR-knapp"
+	"origin_switch_button_button_c"				"C-knapp"
 }

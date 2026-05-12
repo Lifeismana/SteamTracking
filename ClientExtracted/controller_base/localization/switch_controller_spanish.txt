@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Guiñada de giroscopio de Joy-Con derecho"
 	"origin_switch_r_gyro_roll"					"Alabeo de giroscopio de Joy-Con derecho"
 	"origin_switch_button_dpad_move"			"Movimiento de cruceta"
+	"origin_switch_button_gl"					"Botón GL"
+	"origin_switch_button_gr"					"Botón GR"
+	"origin_switch_button_button_c"				"Botón C"
 }

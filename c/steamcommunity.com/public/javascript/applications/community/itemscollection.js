@@ -130,6 +130,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -372,7 +373,7 @@
       }
       function _(_) {
         const { itemClass: _, nAppID: _ } = _;
-        return 2 !== _
+        return _ !== _._
           ? null
           : (0, _.jsx)(_._, {
               className: _().HowToGet,
@@ -386,7 +387,7 @@
           bViewingOwnProfile: _,
           bHideItemStore: _,
         } = _;
-        return 2 == _ && _
+        return _ == _._ && _
           ? (0, _.jsx)(_._, {
               href: `${_._.COMMUNITY_BASE_URL}my/gamecards/${_}`,
               className: _().PointShopLink,
@@ -406,7 +407,8 @@
           _ = _.user_has_item || _,
           _ = !_,
           _ =
-            (!_ && 2 != _.item_class && 8 != _.item_class) || 4 == _.item_class
+            (!_ && _.item_class != _._ && _.item_class != _._) ||
+            _.item_class == _._
               ? void 0
               : _.item_image_small;
         return (0, _.jsx)(_._, {
@@ -496,7 +498,7 @@
                   _.active &&
                   !_.deleted &&
                   !_.has(_.item_type) &&
-                  1 != _.item_class,
+                  _.item_class != _._,
               )
                 .sort((_, _) => {
                   const _ = _.has(`${_.appid}_${_.item_type}`),
@@ -519,8 +521,8 @@
             );
           }, [_, _, _]),
           _ = (0, _.useMemo)(() => {
-            if (_.has(3)) {
-              const _ = _.get(3).filter((_) => {
+            if (_.has(_._)) {
+              const _ = _.get(_._).filter((_) => {
                 JSON.parse(_.item_key_values);
                 return _.item_movie_webm && _.item_movie_mp4;
               });
@@ -547,9 +549,9 @@
                   ? void 0
                   : _.filter((_) => {
                       const _ = _.get(_.item_type);
-                      return !_ || (2 != _.item_class && 1 != _.item_class);
+                      return !_ || (_.item_class != _._ && _.item_class != _._);
                     }),
-              _ = _.filter((_) => 2 != _.item_class && 1 != _.item_class),
+              _ = _.filter((_) => _.item_class != _._ && _.item_class != _._),
               _ = _.length || 0,
               _ = _.length || 0;
             return [_ ? Math.floor((100 * _) / _) : 0, _, _];
@@ -636,7 +638,7 @@
                             itemClass: _,
                             rgItems: _.get(_),
                             bViewingOwnProfile: _,
-                            bHideItemStore: 2 == _,
+                            bHideItemStore: _ == _._,
                           },
                           "item_class_" + _,
                         ),
@@ -681,6 +683,45 @@
           }),
         });
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 8,
+        _ = 9,
+        _ = 10,
+        _ = 11,
+        _ = 12,
+        _ = 13,
+        _ = 14,
+        _ = 15,
+        _ = 16;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -748,7 +789,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _._.IN_CLIENT && (0, _._)(_._.LAUNCHER_TYPE);
+        return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -758,6 +799,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -780,7 +822,7 @@
         SetTestItemDefs(_, _) {
           this.m_mapAppToDefs.set(_, _),
             this.GetItemDefsChangeForEventID(_).Dispatch(_),
-            this.m_mapPromises.set(_, Promise.resolve(1));
+            this.m_mapPromises.set(_, Promise.resolve(_._));
         }
         async LoadAppCommunityItems(_, _) {
           return _
@@ -790,7 +832,7 @@
                   this.InternalLoadAppCommunityItems(_, _),
                 ),
               this.m_mapPromises.get(_))
-            : 2;
+            : _._;
         }
         async InternalLoadAppCommunityItems(_, _) {
           var _, _;
@@ -813,10 +855,9 @@
               });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success) &&
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._ &&
               (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                 ? void 0
                 : _.item_definitions)
@@ -826,7 +867,7 @@
                 this.GetItemDefsChangeForEventID(_).Dispatch(
                   _.data.item_definitions,
                 ),
-                1
+                _._
               );
             _ = (0, _._)(_);
           } catch (_) {
@@ -842,7 +883,7 @@
                 (null == _ ? void 0 : _.strErrorMsg),
               _,
             ),
-            2
+            _._
           );
         }
         static Get() {
@@ -897,6 +938,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -992,21 +1034,21 @@
           });
         let _;
         switch (_.community_class) {
-          case 14:
-          case 15:
+          case _._:
+          case _._:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/avatar`;
             break;
-          case 1:
+          case _._:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
             break;
-          case 3:
-          case 8:
+          case _._:
+          case _._:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/background`;
             break;
-          case 13:
+          case _._:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/miniprofile`;
             break;
-          case 11:
+          case _._:
             _ = `${_._.COMMUNITY_BASE_URL}chat`;
         }
         return (0, _.jsxs)("a", {

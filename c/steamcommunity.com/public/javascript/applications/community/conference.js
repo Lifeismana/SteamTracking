@@ -195,7 +195,7 @@
         async Init() {
           let _ = (0, _._)("conferenceinfo", "application_config");
           if (this.ValidateStoreDefault(_)) {
-            const _ = (0, _._)(_._.LANGUAGE),
+            const _ = (0, _.sfN)(_._.LANGUAGE),
               _ = (0, _._)(_.clan_faq_about_page),
               _ = _._.Get().GetFAQPublishedContent(_, _),
               _ = {
@@ -253,6 +253,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { conferenceInfo: _ } = _,
@@ -260,7 +261,7 @@
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)(_.default, {
             steamIDBroadcast: _,
-            watchLocation: 5,
+            watchLocation: _._._,
             bStartMuted: !0,
           }),
         });
@@ -276,7 +277,7 @@
           children: (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
               emoticonStore: _._,
-              watchLocation: 5,
+              watchLocation: _._._,
               steamID: _,
               globalChat: !0,
               bPartnerMemberOnlyChat: _.bPartnerOnly,
@@ -366,6 +367,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -779,7 +781,7 @@
             }
           }, [_.clanInfo]);
         const _ = _._.Get(),
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = "capsule",
           [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.has_live_stream,
@@ -795,7 +797,7 @@
             _.GetSummaryWithFallback(_),
           ]),
           [_, _] = _.useState(() =>
-            (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+            (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
           ),
           _ = (0, _._)(),
           _ = (0, _._)(() =>
@@ -809,10 +811,10 @@
               const { video_preview_type: _, video_preview_id: _, type: _ } = _,
                 _ = _.appid;
               if (!_) return null;
-              if (12 === _) return null;
+              if (_ === _.Fwr) return null;
               if ("youtube" === _) {
-                const _ = (0, _._)(_._.LANGUAGE),
-                  _ = (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+                const _ = (0, _.sfN)(_._.LANGUAGE),
+                  _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
                   _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
                 if ("carousel" === _)
                   return (0, _.jsx)(_, {
@@ -867,13 +869,14 @@
             strCapsuleImgURLForBackground: _,
             fnSetCoverSize: _,
           }),
-          _ = _ && 14 != _ && !(_ && "carousel" !== _),
+          _ = _ && "carousel" !== _,
+          _ = _ && _ != _.zeJ && !_,
           _ = _ && _,
           _ = !_ && _,
           _ = "wide" !== _ || _,
           _ =
-            28 !== _ &&
-            12 !== _ &&
+            _ !== _.uYK &&
+            _ !== _.Fwr &&
             _._.GetTimeNowWithOverride() < _ &&
             (0, _.jsx)("div", {
               className: (0, _._)(_().ReminderContainer, _ && _().OnlyIcon),
@@ -885,7 +888,7 @@
                 bExpandLeft: _,
               }),
             }),
-          _ = Boolean(12 !== _ && _),
+          _ = Boolean(_ !== _.Fwr && _),
           _ = Boolean(
             _ &&
               (!_ ||
@@ -914,7 +917,7 @@
                     _.preventDefault();
                 },
                 children: [
-                  14 === _ &&
+                  _ === _.zeJ &&
                     (0, _.jsx)("div", {
                       className: (0, _._)(
                         _().TileBackgroundImage,
@@ -931,7 +934,7 @@
                       (0, _.jsxs)("div", {
                         className: _().TileTextContainer,
                         children: [
-                          Boolean(12 == _) &&
+                          Boolean(_ == _.Fwr) &&
                             (0, _.jsx)("div", {
                               className: _().PatchIconCtn,
                               children: (0, _.jsx)(_.vjL, {}),
@@ -1015,7 +1018,7 @@
             strCapsuleImgURLForBackground: _,
             fnSetCoverSize: _,
           } = _,
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = !_ && "upcoming" !== _,
           [_, _, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetEventType(),
@@ -1045,7 +1048,7 @@
               _ &&
                 (0, _.jsxs)(_.Fragment, {
                   children: [
-                    12 === _ &&
+                    _ === _.Fwr &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("div", {
@@ -1067,7 +1070,7 @@
                           }),
                         ],
                       }),
-                    12 !== _ &&
+                    _ !== _.Fwr &&
                       (0, _.jsxs)("div", {
                         className: (0, _._)({
                           [_().EventCapsuleCtn]: !0,
@@ -1415,7 +1418,7 @@
               className: _.EventsScheduleCtn,
               children: [
                 (0, _.jsx)(_, {
-                  displayLocation: 6,
+                  displayLocation: _._._,
                   fnChangeModalEvent: _,
                 }),
                 (0, _.jsx)(_, {
@@ -1487,7 +1490,7 @@
             rtNow: _,
           } = _,
           _ = _._.GetClanEventModel(_.unique_id),
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = _.GetStartTimeAndDateUnixSeconds(),
           _ = (0, _._)(new Date(1e3 * _), new Date(1e3 * _));
         return (0, _.jsxs)("div", {
@@ -1537,7 +1540,7 @@
         const { rgActiveEvents: _, fnDisplayModalEvent: _ } = _;
         if (!_ || 0 == _.length) return null;
         const _ = _[0],
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = _._.ParseEventModelPresenters(_, _);
         return (0, _.jsxs)("div", {
           className: _.ActiveEventCtn,
@@ -1605,7 +1608,7 @@
               className: _.PastEventsCtn,
               children: [
                 (0, _.jsx)(_, {
-                  displayLocation: 6,
+                  displayLocation: _._._,
                   fnChangeModalEvent: _,
                 }),
                 _.map((_) => {
@@ -2099,6 +2102,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         async DeleteOldAnnouncement(_, _) {
@@ -2111,7 +2115,7 @@
               "/announcements/ajaxdeleteannouncement/" +
               _,
             _ = await _().post(_, _);
-          if (1 != _.data.success) throw _.data;
+          if (_.data.success != _._) throw _.data;
           return this.RemoveGIDFromList(_, _._ + _), _.data;
         }
         static Get() {
@@ -2219,6 +2223,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -2251,7 +2256,7 @@
             _ && _.m_fnSubmit && (_.m_fnSubmit.Cancel(), (_.m_fnSubmit = null));
           }
           ReportImpression(_, _) {
-            _._.Get().RecordEventShown(_, 8),
+            _._.Get().RecordEventShown(_, _._._),
               _ && _._.RecordViewedEvent((0, _._)(), _.GID);
             const _ = this.m_mapEvents.get(_.GID);
             _ &&

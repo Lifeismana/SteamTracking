@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Πρόνευση γυροσκοπίου"
 	"origin_SteamDeck_Gyro_Yaw"					"Εκτροπή γυροσκοπίου"
 	"origin_SteamDeck_Gyro_Roll"				"Διατοιχισμός γυροσκοπίου"
+	"origin_SteamDeck_LGrip"					"Άγγιγμα αριστερής λαβής"
+	"origin_SteamDeck_RGrip"					"Άγγιγμα δεξιάς λαβής"
 
 	"origin_horipad_m1"							"Κουμπί M1"
 	"origin_horipad_m2"							"Κουμπί M2"

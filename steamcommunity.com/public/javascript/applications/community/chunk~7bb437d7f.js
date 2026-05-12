@@ -405,29 +405,30 @@
     },
     82477: (e, s, t) => {
       "use strict";
-      t.d(s, { vg: () => j });
+      t.d(s, { vg: () => u });
       var n = t(7850),
         i = t(90626),
         a = t(738),
         r = t(61859),
         l = t(78327),
         o = t(97436),
-        d = t(96059),
-        c = t(28240);
+        d = t(99532),
+        c = t(96059),
+        m = t(28240);
       t(9154);
-      function m(e) {
+      function j(e) {
         return (0, n.jsx)(a.x_, {
           onEscKeypress: e.closeModal,
           bDisableBackgroundDismiss: !0,
-          children: (0, n.jsx)(u, {
+          children: (0, n.jsx)(h, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
         });
       }
-      function j() {
+      function u() {
         (0, a.pg)(
-          (0, n.jsx)(m, {
+          (0, n.jsx)(j, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -435,22 +436,22 @@
           { strTitle: (0, r.we)("#Login_SignInTitle") },
         );
       }
-      function u(e) {
+      function h(e) {
         const { redirectURL: s, guestOption: t } = e,
           [a] = (0, i.useState)(
-            new d.D(l.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new c.D(l.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [r, m] = (0, i.useState)(!1);
+          [r, j] = (0, i.useState)(!1);
         return (0, n.jsx)("div", {
           children: r
             ? (0, n.jsx)(o.Fn, {})
             : (0, n.jsx)(o.YN, {
                 autoFocus: !0,
                 transport: a,
-                platform: 2,
+                platform: d.SS.tS,
                 onComplete: (e) => {
-                  e == c.wI.k_PrimaryDomainFail
-                    ? m(!0)
+                  e == m.wI.k_PrimaryDomainFail
+                    ? j(!0)
                     : window.location.assign(s);
                 },
                 redirectUrl: s,

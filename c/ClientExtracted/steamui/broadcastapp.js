@@ -201,6 +201,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -435,7 +436,7 @@
         });
       }
       function _() {
-        return _._.STEAM_TV ? 1 : 3;
+        return _._.STEAM_TV ? _._._ : _._._;
       }
       let _ = class extends _.Component {
         m_broadcastInfo = null;

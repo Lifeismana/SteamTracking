@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Odchylenie żyroskopu prawego Joy-Cona"
 	"origin_switch_r_gyro_roll"					"Przechylenie żyroskopu prawego Joy-Cona"
 	"origin_switch_button_dpad_move"			"Krzyżak – ruch"
+	"origin_switch_button_gl"					"Przycisk GL"
+	"origin_switch_button_gr"					"Przycisk GR"
+	"origin_switch_button_button_c"				"Przycisk C"
 }

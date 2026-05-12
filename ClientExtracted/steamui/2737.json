@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Банер Steam Deck: «Ваші ігри завжди з вами»",
     "VerifiedProgram_DeckDisclaimer": "Трейлер може не демонструвати реальний ігролад на Steam Deck",
+    "StoreItemFound": "Знайдено: %1$s (%2$s)",
+    "StoreItemNotFound": "Не знайдено (%1$s)",
     "Dummy": "dummy"
 }

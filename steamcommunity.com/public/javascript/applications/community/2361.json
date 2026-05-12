@@ -131,5 +131,6 @@
     "reportedsubjectlist_header": "已举报的对象",
     "moderation_already_owner_disputed": "已提出争议",
     "moderationstats_alltypes": "所有对象类型",
+    "moderation_alternateforumtool": "备用工具",
     "empty_no_trailing_comma": ""
 }

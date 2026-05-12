@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Gyroskop pravého Joy-Conu – otáčení"
 	"origin_switch_r_gyro_roll"					"Gyroskop pravého Joy-Conu – naklánění"
 	"origin_switch_button_dpad_move"			"Směrový kříž – pohyb"
+	"origin_switch_button_gl"					"Tlačítko GL"
+	"origin_switch_button_gr"					"Tlačítko GR"
+	"origin_switch_button_button_c"				"Tlačítko C"
 }

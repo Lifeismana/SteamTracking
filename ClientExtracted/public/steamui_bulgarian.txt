@@ -1046,7 +1046,7 @@
 "SteamUI_ValveSurvey_Summary_SteamRuntimeVersion"			"Steam версия на изпълнимата среда: %s1"
 
 "SteamUI_ValveSurvey_Summary_SoundCard"						"Аудио устройство: %s1"
-"SteamUI_ValveSurvey_Summary_GameController"			"Игрален контролер: %s1 засечен"
+"SteamUI_ValveSurvey_Summary_GameController"			"Игрален контролер: %s1 — засечен"
 "SteamUI_ValveSurvey_Summary_GameController_None" "Игрален контролер: Няма засечен"
 
 "SteamUI_ValveSurvey_Summary_VRHeadset_None"				"ВР шлем: Няма засечен"
@@ -1215,7 +1215,7 @@
 "Steam_SubscriptionSuccess_ComingSoonOnly" "Продуктовият Ви код беше активиран успешно. Това съдържание ще стане достъпно за Вас, след като играта се издаде в Steam. То вече е перманентно асоциирано със Steam акаунта Ви. Трябва да влезете в него, за да имате достъп до артикулите, които току-що активирахте в Steam."
 
 "Steam_Subscription_Rejected_Cdkey_Headline" "Дублиращ се продуктов код"
-"Steam_Subscription_Rejected_Cdkey" "Продуктовият код, който въведохте, вече е бил активиран от друг Steam акаунт. Той не може да бъде използван отново. Моля, свържете се с търговеца или продавача на линия, от когото сте закупили кода, относно получаване на помощ."
+"Steam_Subscription_Rejected_Cdkey" "Продуктовият код, който въведохте, вече е бил активиран от друг Steam акаунт. Той не може да бъде използван отново. Моля, свържете се с търговеца или продавача на линия, от когото сте закупили кода, относно съдействие."
 
 "Steam_Subscription_RateLimitedCDKey_Headline" "Прекалено много опити за активация"
 "Steam_Subscription_RateLimitedCDKey" "Имало е прекалено много скорошни опити за активация от този акаунт или интернет адрес. Моля, изчакайте и опитайте своя продуктов код по-късно."
@@ -3509,7 +3509,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "SteamUI_ValidateEmailDescription" "Кликнете върху бутона „Следващ“, за да потвърдите своята е-поща със Steam.\nПотвърденият адрес ще се използва за потвърждаване на всякакви промени по сведенията на Вашия акаунт, като само Вие ще можете да променяте тайния въпрос или парола."
 "SteamUI_ValidateEmailSent" "Беше изпратено съобщение до: %s1.\nМоля, проверете е-пощата си и кликнете върху връзката в е-писмото, за да завършите потвърждаването към Steam."
 "SteamUI_ValidateEmailNotReceived" "Не получавате нашето съобщение?"
-"SteamUI_VisitSteamSupport" "Посетете Steam поддръжката за помощ"
+"SteamUI_VisitSteamSupport" "Посетете Steam поддръжката за съдействие"
 "SteamUI_ValidateEmailWorking" "Свързване със Steam сървърите за изпращане на е-писмо."
 "SteamUI_VerifyEmail_Title" "Потвърждаване на е-пощата"
 "SteamUI_VerifyEmail_Verified" " | Потвърдена"

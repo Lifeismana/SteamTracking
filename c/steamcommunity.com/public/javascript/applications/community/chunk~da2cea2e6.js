@@ -1,23 +1,8 @@
+"use strict";
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [7387],
+  [6377],
   {
-    chunkid: (module) => {
-      module.exports = {
-        narrowWidth: "500px",
-        GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
-        GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
-        Active: "_8XjrTFzaSA8ubHvHCu44L",
-        GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
-        GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
-        GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
-        StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
-        StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
-        StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -210,7 +195,6 @@
       })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -222,159 +206,6 @@
         PerHour: 3600,
         PerMinute: 60,
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            tabs: _,
-            bDisableRouting: _,
-            startingTab: _,
-            classNameCtn: _,
-            classNameTab: _,
-            classNameTabContent: _,
-            preferredFocus: _,
-            bVerticalTabs: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(() => {
-            var _;
-            return (
-              _ ||
-              (!_ &&
-              (0, _._)(_, "tab") &&
-              null !== (_ = (0, _._)(_, "tab")) &&
-              void 0 !== _
-                ? _
-                : "")
-            );
-          });
-        (0, _.useEffect)(() => {
-          if (!_.bDisableRouting && _) {
-            const _ = (0, _._)(_, "tab");
-            _ && _(_);
-          }
-        }, [_, _.key, _.bDisableRouting, _]);
-        const _ = _.useCallback(
-            (_) => {
-              _(_.key),
-                _ || (0, _._)(_, "tab", _.key),
-                _.onClick && _.onClick(_);
-            },
-            [_, _],
-          ),
-          _ = _.filter((_) => !_.hidden);
-        if (!_.length) return null;
-        const _ = _.find((_) => _.key === _) || _[0],
-          _ = _ ? (null != _ ? _ : _[0].key) : void 0,
-          _ = (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_._, {
-                className: (0, _._)(
-                  _().GraphicalAssetsTabs,
-                  _ && _().GraphicalAssetsTabsVertical,
-                  _,
-                ),
-                navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
-                children: _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      tab: _,
-                      OnTabClick: _,
-                      classNameTab: _,
-                      active: _.key === _.key,
-                      preferredFocus: _ === _.key,
-                    },
-                    _.key,
-                  ),
-                ),
-              }),
-              _ &&
-                (0, _.jsx)(_._, {
-                  className: _,
-                  children: _.contents,
-                }),
-            ],
-          });
-        return _
-          ? (0, _.jsx)(_._, {
-              className: (0, _._)(_().GraphicalAssetsTabsLayoutVertical),
-              children: _,
-            })
-          : _;
-      }
-      function _(_) {
-        const { statusType: _ = "success", children: _ } = _;
-        let _ = "";
-        return (
-          "success" === _
-            ? (_ = _().StatusSuccess)
-            : "danger" === _
-              ? (_ = _().StatusDanger)
-              : "caution" === _ && (_ = _().StatusCaution),
-          (0, _.jsx)("div", {
-            className: (0, _._)(_().GraphicalAssetStatus, _),
-            children: _,
-          })
-        );
-      }
-      function _(_) {
-        const {
-          tab: _,
-          OnTabClick: _,
-          classNameTab: _,
-          active: _,
-          preferredFocus: _,
-        } = _;
-        return (0, _.jsx)(_._, {
-          condition: Boolean(_.statusToolTip || _.tooltip),
-          wrap: (_) =>
-            (0, _.jsx)(_._, {
-              toolTipContent: _.statusToolTip || _.tooltip,
-              children: _,
-            }),
-          children: (0, _.jsxs)(_._, {
-            className: (0, _._)(
-              _().GraphicalAssetsTab,
-              _ && _().Active,
-              _ && "ActiveTab",
-              _,
-            ),
-            onActivate: () => __webpack_require__(_),
-            preferredFocus: _,
-            children: [
-              Boolean(_.vo_warning) &&
-                (0, _.jsx)(_._, {
-                  toolTipContent: _.vo_warning,
-                  children: (0, _.jsx)("div", {
-                    className: _().VOWarning,
-                    children: (0, _._)("#EventEditor_VOWarning"),
-                  }),
-                }),
-              _.status,
-              _.name,
-            ],
-          }),
-        });
-      }
     },
   },
 ]);

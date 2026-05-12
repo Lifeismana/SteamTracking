@@ -34850,7 +34850,7 @@ var CLSTAMP = "steamdb";
           ),
           {},
         ).exports;
-      } catch (_) {}
+      } catch {}
       function _(_, _, _) {
         (this.low = 0 | _), (this.high = 0 | _), (this.unsigned = !!_);
       }
@@ -34996,6 +34996,15 @@ var CLSTAMP = "steamdb";
             _--
           );
           return 0 != this.high ? _ + 33 : _ + 1;
+        }),
+        (_.isSafeInteger = function () {
+          var _ = this.high >> 21;
+          return (
+            !_ ||
+            (!this.unsigned &&
+              -1 === _ &&
+              !(0 === this.low && -2097152 === this.high))
+          );
         }),
         (_.isZero = function () {
           return 0 === this.high && 0 === this.low;
@@ -35414,7 +35423,26 @@ var CLSTAMP = "steamdb";
             (_[0] << 24) | (_[1] << 16) | (_[2] << 8) | _[3],
             _,
           );
-        });
+        }),
+        "function" == typeof BigInt &&
+          ((_.fromBigInt = function (_, _) {
+            return _(
+              Number(BigInt.asIntN(32, _)),
+              Number(BigInt.asIntN(32, _ >> BigInt(32))),
+              _,
+            );
+          }),
+          (_.fromValue = function (_, _) {
+            return "bigint" == typeof _ ? _.fromBigInt(_, _) : _(_, _);
+          }),
+          (_.toBigInt = function () {
+            var _ = BigInt(this.low >>> 0);
+            return (
+              (BigInt(this.unsigned ? this.high >>> 0 : this.high) <<
+                BigInt(32)) |
+              _
+            );
+          }));
       const _ = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {

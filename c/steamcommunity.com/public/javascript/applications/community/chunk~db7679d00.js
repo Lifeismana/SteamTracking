@@ -21,6 +21,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -835,7 +836,7 @@
           (this.m_Transport = null),
             (this.m_Storage = null),
             (this.m_TextFilterPreferences = {
-              eTextFilterSetting: 3,
+              eTextFilterSetting: _._._,
               bIgnoreFriends: !1,
             }),
             (this.m_mapPlayerCache = new Map()),
@@ -892,7 +893,7 @@
             this.m_bInitialized
               ? this.InitFiltersWithRetry()
               : (this.m_bFilterChangedWhileLoading = !0),
-            1
+            _._
           );
         }
         async InitFiltersWithRetry() {
@@ -1191,10 +1192,10 @@
             _ = [],
             _ = [];
           switch (this.m_TextFilterPreferences.eTextFilterSetting) {
-            case 0:
-            case 3:
+            case _._._:
+            case _._._:
               break;
-            case 2:
+            case _._._:
               _ = _.concat(this.m_strBannedWords.split(_));
               break;
             default:
@@ -1305,7 +1306,7 @@
                     : _.friends) && void 0 !== _
                 ? _
                 : [])
-                (0, _._)(_.efriendrelationship) &&
+                (0, _.S$u)(_.efriendrelationship) &&
                   _.add(new _._(_.ulfriendid).GetAccountID());
             }),
             (_ = (_) => _.has(_));

@@ -72,7 +72,7 @@
     },
     19369: (e, t, i) => {
       "use strict";
-      i.d(t, { jl: () => k, Bv: () => F });
+      i.d(t, { jl: () => y, Bv: () => w });
       var s = i(34629),
         n = i(7850),
         a = i(90626),
@@ -163,9 +163,11 @@
       }
       (0, s.Cg)([v.sH], g.prototype, "m_mapProfiles", void 0);
       const C = new g();
-      var I = i(12155),
-        x = i(45699);
-      class F extends a.Component {
+      var I = i(37085),
+        x = i(12155),
+        F = i(86328),
+        k = i(45699);
+      class w extends a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -220,7 +222,7 @@
               _.TS.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
               t,
             );
-            return e && e.data && 1 == e.data.success;
+            return e && e.data && e.data.success == I.R;
           } catch {
             return !1;
           }
@@ -229,7 +231,7 @@
           this.setState({ input_search: e.target.value });
         }
         OnSearchKeyDown(e) {
-          13 === e.keyCode && this.OnSearchSubmit();
+          e.keyCode === F.wd && this.OnSearchSubmit();
         }
         OnSearchSubmit() {
           window.open(
@@ -276,7 +278,7 @@
                     className: u().Body,
                     children: (0, c.we)("#ManageFriends_EnterFriendCode"),
                   }),
-                  (0, n.jsx)(k, {
+                  (0, n.jsx)(y, {
                     onButtonClick: this.OnAddFriend,
                     buttonText: (0, c.we)("#ManageFriends_SendInvite"),
                     bDisableForSelf: !0,
@@ -359,7 +361,7 @@
                           cursor: "pointer",
                         },
                         onClick: this.OnSearchSubmit,
-                        children: (0, n.jsx)(I.eSy, {}),
+                        children: (0, n.jsx)(x.eSy, {}),
                       }),
                     ],
                   }),
@@ -369,13 +371,13 @@
           });
         }
       }
-      (0, s.Cg)([r.oI], F.prototype, "OnCreateInviteLink", null),
-        (0, s.Cg)([r.oI], F.prototype, "OnCopy", null),
-        (0, s.Cg)([r.oI], F.prototype, "OnAddFriend", null),
-        (0, s.Cg)([r.oI], F.prototype, "OnSearchChange", null),
-        (0, s.Cg)([r.oI], F.prototype, "OnSearchKeyDown", null),
-        (0, s.Cg)([r.oI], F.prototype, "OnSearchSubmit", null);
-      class k extends a.Component {
+      (0, s.Cg)([r.oI], w.prototype, "OnCreateInviteLink", null),
+        (0, s.Cg)([r.oI], w.prototype, "OnCopy", null),
+        (0, s.Cg)([r.oI], w.prototype, "OnAddFriend", null),
+        (0, s.Cg)([r.oI], w.prototype, "OnSearchChange", null),
+        (0, s.Cg)([r.oI], w.prototype, "OnSearchKeyDown", null),
+        (0, s.Cg)([r.oI], w.prototype, "OnSearchSubmit", null);
+      class y extends a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -440,7 +442,7 @@
                   "#ManageFriends_EnterFriendCodePlaceholder",
                 ),
               }),
-              (0, n.jsx)(y, {
+              (0, n.jsx)(B, {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
                 bShowStatus: this.props.bShowStatus,
@@ -456,10 +458,10 @@
           });
         }
       }
-      (0, s.Cg)([r.oI], k.prototype, "OnFriendCodeChange", null),
-        (0, s.Cg)([r.oI], k.prototype, "LoadProfile", null),
-        (0, s.Cg)([r.oI], k.prototype, "OnActionClick", null);
-      const y = (e) => {
+      (0, s.Cg)([r.oI], y.prototype, "OnFriendCodeChange", null),
+        (0, s.Cg)([r.oI], y.prototype, "LoadProfile", null),
+        (0, s.Cg)([r.oI], y.prototype, "OnActionClick", null);
+      const B = (e) => {
         const {
             searchResult: t,
             invite_status: i,
@@ -491,7 +493,7 @@
                         (0, n.jsxs)("div", {
                           className: u().ProfileLink,
                           children: [
-                            (0, n.jsx)(x.Ii, {
+                            (0, n.jsx)(k.Ii, {
                               target: r ? void 0 : "_blank",
                               href:
                                 _.TS.COMMUNITY_BASE_URL +
@@ -524,7 +526,7 @@
                       }),
                     0 != t.friends_in_common &&
                       (0, n.jsx)("div", {
-                        children: (0, n.jsx)(x.Ii, {
+                        children: (0, n.jsx)(k.Ii, {
                           target: r ? void 0 : "_blank",
                           href:
                             _.TS.COMMUNITY_BASE_URL +

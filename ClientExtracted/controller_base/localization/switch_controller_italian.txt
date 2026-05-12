@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Giroscopio del Joy-Con destro (Rotazione)"
 	"origin_switch_r_gyro_roll"					"Giroscopio del Joy-Con destro (Rotolamento)"
 	"origin_switch_button_dpad_move"			"Movimento del pad direzionale"
+	"origin_switch_button_gl"					"Pulsante GL"
+	"origin_switch_button_gr"					"Pulsante GR"
+	"origin_switch_button_button_c"				"Pulsante C"
 }

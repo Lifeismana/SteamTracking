@@ -225,11 +225,19 @@ function WaitForContentToLoad( page )
 
 function ConstructTemplates()
 {
+	const k_nCardBorder = 1;
+	const k_nCardMargin = 5;
 	$J(document.body).css('overflowY','scroll');
-	var pageWidth = $J('#AppHubContent').width();
+	const elContainer = $J('#AppHubContent')[0];
+	// Compute width more precisely than by using `.clientWidth`. This is important, because the rounding that does can
+	// lead to cards being given too much space, and being unexpectedly wrapped.
+	const flContainerClientWidth = elContainer.getBoundingClientRect().width;
+	const style = window.getComputedStyle(elContainer, null);
+	const flAvailableWidth =
+		flContainerClientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) + 2 * k_nCardMargin;
 	$J(document.body).css('overflowY','');
-	var cardMargins = 1 * 2 + 2 * 5 + 1;
-	return ConstructDefaultRowTemplates( pageWidth, cardMargins );
+	const k_nCardMargins = 2 * ( k_nCardBorder + k_nCardMargin );
+	return ConstructDefaultRowTemplates( flAvailableWidth, k_nCardMargins );
 }
 
 function ShowContent( page )

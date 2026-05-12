@@ -433,6 +433,9 @@ $O\tdwR\rox\\r*
 $XI(6
 $\n k_EClanInGameContentReleaseEvent
 $\n k_ECodecUsageReasonGameRecording
+$\n k_EGamePerformanceSetting_Custom
+$\n k_EGamePerformanceSetting_Medium
+$\n k_EGamePerformanceSetting_NotSet
 $\n k_ESteamReviewScore_VeryNegative
 $\n k_ESteamReviewScore_VeryPositive
 $\nY8O
@@ -612,6 +615,7 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAcceptAllEULAs
 %\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
@@ -1098,7 +1102,6 @@ $ffn
 (fS{ggRcjh
 (h`H1pqA
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
-(int)(intp)m_hParam != -1
 (iub & (m_nSizeWithStack-1)) == 0
 (main)
 (merge
@@ -1737,7 +1740,6 @@ $ffn
 00000000
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:14:43
 01/01/00
 0123456789
 0123456789.
@@ -1745,6 +1747,7 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+06:46:10
 08bX
 0?0L
 0A/8
@@ -2128,7 +2131,6 @@ $ffn
 14ConCommandBase
 14ISSLConnection
 1536
-15000
 155.133.240.0/23
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -2170,7 +2172,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18446744073709551615
 18CFutureSharedStateIbE
 18CHTTPClientRequest
 18CHTTPRequestHandle
@@ -2238,6 +2239,7 @@ $ffn
 2+ss
 2,THh
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20.GamePerformanceSettings.EGamePerformanceSetting
 2000
 2048
 208.64.200.0/22
@@ -2281,6 +2283,7 @@ $ffn
 22ISSLConnectionCallback
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
+23GamePerformanceSettings
 23IUnbufferedSendCallback
 24CClientModuleManagerBase
 24CCryptoKeyBase_RawBuffer
@@ -2331,7 +2334,6 @@ $ffn
 3-WH
 30!]^JV
 3072
-30000
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -2430,7 +2432,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2451,11 +2452,9 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
-65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2508,6 +2507,12 @@ $ffn
 8/A0
 8000
 8192
+15000
+30000
+65536
+524288
+60000000
+18446744073709551615
 82\n:XPH
 88n|
 88pH
@@ -5021,6 +5026,7 @@ EForeignKeyAction
 EFriendRelationship
 EGCAction
 EGCStatus
+EGamePerformanceSetting
 EGamingDeviceType
 EGpuDriverId
 EHTTPMethod
@@ -5592,6 +5598,7 @@ Game Voucher
 GameInstall
 GameManagedItems
 GameOverlayUI
+GamePerformanceSettings
 GameServer
 GameStop
 Gamepad
@@ -6461,7 +6468,7 @@ Max block allocation size for PB arena
 MaxProtocol
 MaxResults
 Maximum family size exceeded
-May  8 2026
+May 12 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -7658,6 +7665,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -8076,6 +8085,7 @@ SSLv3/TLS write session ticket
 STEAMVIDEOTOKEN
 STEAM_
 STEAM_BASE_FOLDER
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STORE lib
 STORE routines
 STREAM_CLOSED
@@ -9593,6 +9603,7 @@ Zulu
 \n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
+\n\rrtime_created
 \n\rscreen_height
 \n\rserver_secret
 \n\rsize_unzipped
@@ -12277,6 +12288,8 @@ g_vecTempTextBuffer
 gai_strerror
 galician
 game
+game_resolution_height
+game_resolution_width
 gameid
 gamepad+mouse.vdf
 gamepad_flickstick.vdf
@@ -13372,6 +13385,9 @@ k_EConnectionTypeWebSocket == GetConnectionType( hConnection )
 k_EEventBroadcastStart
 k_EEventMatchStart
 k_EEventPartnerMaxType
+k_EGamePerformanceSetting_High
+k_EGamePerformanceSetting_Low
+k_EGamePerformanceSetting_Ultra
 k_EHandshakeStateComplete == m_EHandshakeState
 k_EHandshakeStateInProgress == m_EHandshakeState
 k_EIPTypeV4 == addr.GetType()
@@ -14820,11 +14836,11 @@ m_fds[1] != k_SOCKET_WRAPPER
 m_fileReader
 m_fnCompletionCallback
 m_hConnection != 0xdddddddd
+m_hParam != ICommandLine::InvalidHParam()
 m_hPipeFd == m_pReadEvent->GetReadFD()
 m_hSocket == INVALID_SOCKET
 m_hashMap
 m_heap
-m_heap.IsValidIndex( index )
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
@@ -16367,6 +16383,7 @@ pq->q[item->index] == item
 pqualid
 pqueue_new
 pread64
+precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 preloadonly
@@ -16869,6 +16886,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheduledItem.m_ulTime
 scheme=
@@ -17156,6 +17174,7 @@ setmntent
 setpriority
 setsid
 setsockopt
+setting
 setup_tbuf
 setvbuf
 sfixed32

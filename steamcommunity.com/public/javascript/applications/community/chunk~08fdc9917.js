@@ -52,34 +52,35 @@
     90182: (e, t, r) => {
       "use strict";
       r.d(t, {
-        CS: () => _,
-        Kt: () => b,
-        iW: () => d,
-        kZ: () => f,
-        lY: () => h,
-        wy: () => m,
-        y4: () => p,
+        CS: () => p,
+        Kt: () => h,
+        iW: () => f,
+        kZ: () => b,
+        lY: () => _,
+        wy: () => j,
+        y4: () => m,
       });
       var c = r(56545),
-        s = r(69567),
+        s = r(99164),
         o = r(23809),
         i = r(88942),
         n = r(29385),
-        l = r(61739);
-      const a = "get_content_report_subject_group",
-        u = "get_content_report_subject_audit_log";
-      async function d(e, t, r, c) {
+        l = r(61739),
+        a = r(37085);
+      const u = "get_content_report_subject_group",
+        d = "get_content_report_subject_audit_log";
+      async function f(e, t, r, c) {
         return Promise.all([
-          e.invalidateQueries({ queryKey: [a, t, r] }),
-          e.invalidateQueries({ queryKey: [u, t, r, c] }),
+          e.invalidateQueries({ queryKey: [u, t, r] }),
+          e.invalidateQueries({ queryKey: [d, t, r, c] }),
         ]);
       }
-      function f(e, t) {
+      function b(e, t) {
         const r = (0, o.KV)();
         return (0, i.I)(
           (function (e, t, r) {
             return {
-              queryKey: [a, t, r],
+              queryKey: [u, t, r],
               queryFn: async () => {
                 const o = c.w.Init(s.ge);
                 o.Body().set_subject_type(t), o.Body().set_subject_group_id(r);
@@ -95,12 +96,12 @@
           })(r, e, t),
         );
       }
-      function b(e, t, r) {
+      function h(e, t, r) {
         const n = (0, o.KV)();
         return (0, i.I)(
           (function (e, t, r, o) {
             return {
-              queryKey: [u, t, r, o],
+              queryKey: [d, t, r, o],
               queryFn: async () => {
                 if (void 0 === t || void 0 === r || void 0 === o) return;
                 const i = c.w.Init(s.Ru);
@@ -115,9 +116,9 @@
           })(n, e, t, r),
         );
       }
-      function h(e, t, r) {
+      function _(e, t, r) {
         const i = (0, o.KV)(),
-          a = (0, n.jE)();
+          u = (0, n.jE)();
         return (0, l.n)({
           mutationFn: async (o) => {
             const n = c.w.Init(s.u5);
@@ -127,15 +128,15 @@
               n.Body().set_required_level(o.eNewLevel),
               o.eReason && n.Body().set_reason(o.eReason);
             const l = await s.fL.EscalateSubject(i, n);
-            if (1 !== l.GetEResult())
+            if (l.GetEResult() !== a.R)
               throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);
           },
           onSuccess: async (c, s) => {
-            await d(a, e, t, r);
+            await f(u, e, t, r);
           },
         });
       }
-      function _(e, t, r) {
+      function p(e, t, r) {
         const i = (0, o.KV)(),
           a = (0, n.jE)();
         return (0, l.n)({
@@ -162,13 +163,13 @@
               );
           },
           onSuccess: async () => {
-            await d(a, e, t, r);
+            await f(a, e, t, r);
           },
         });
       }
-      function p(e, t, r, i, a) {
+      function m(e, t, r, i, a) {
         const u = (0, o.KV)(),
-          f = (0, n.jE)();
+          d = (0, n.jE)();
         return (0, l.n)({
           mutationFn: async () => {
             const o = c.w.Init(s.ZV);
@@ -180,11 +181,11 @@
             await s.fL.DisputeModerationForSubject(u, o);
           },
           onSuccess: async () => {
-            await d(f, t, r, i);
+            await f(d, t, r, i);
           },
         });
       }
-      function m(e, t, r, i) {
+      function j(e, t, r, i) {
         const a = (0, n.jE)(),
           u = (0, o.KV)();
         return (0, l.n)({
@@ -198,7 +199,7 @@
             if (!n.BSuccess()) throw new Error("EResult " + n.GetEResult());
           },
           onSuccess: async () => {
-            await d(a, e, t, r);
+            await f(a, e, t, r);
           },
         });
       }
@@ -209,7 +210,7 @@
       var c = r(78327),
         s = r(22837);
       function o() {
-        return c.TS.IN_CLIENT && (0, s.DO)(c.TS.LAUNCHER_TYPE);
+        return c.TS.IN_CLIENT && (0, s.DOG)(c.TS.LAUNCHER_TYPE);
       }
     },
     22797: (e, t, r) => {

@@ -42,9 +42,12 @@
 	"origin_switch_l_gyro_pitch"				"Ляв Joy-Con наклон на жироскопа"
 	"origin_switch_l_gyro_yaw"					"Ляв Joy-Con ъглово завъртане на жироскопа"
 	"origin_switch_l_gyro_roll"					"Ляв Joy-Con преобръщане на жироскопа"
-	"origin_switch_r_gyro_move"					"Десен Joy-Con: жироскопично движение"
+	"origin_switch_r_gyro_move"					"Десен Joy-Con жироскопично движение"
 	"origin_switch_r_gyro_pitch"				"Десен Joy-Con наклон на жироскопа"
 	"origin_switch_r_gyro_yaw"					"Десен Joy-Con ъглово завъртане на жироскопа"
 	"origin_switch_r_gyro_roll"					"Десен Joy-Con преобръщане на жироскопа"
 	"origin_switch_button_dpad_move"			"Движение на Д-пада"
+	"origin_switch_button_gl"					"Бутон GL"
+	"origin_switch_button_gr"					"Бутон GR"
+	"origin_switch_button_button_c"				"Бутон C"
 }

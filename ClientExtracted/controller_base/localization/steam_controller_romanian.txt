@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Tangaj giroscop"
 	"origin_SteamDeck_Gyro_Yaw"					"Girație giroscop"
 	"origin_SteamDeck_Gyro_Roll"				"Ruliu giroscop"
+	"origin_SteamDeck_LGrip"					"Mânerul stâng – Atingere"
+	"origin_SteamDeck_RGrip"					"Mânerul drept – Atingere"
 
 	"origin_horipad_m1"							"Butonul M1"
 	"origin_horipad_m2"							"Butonul M2"

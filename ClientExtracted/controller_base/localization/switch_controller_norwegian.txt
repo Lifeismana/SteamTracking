@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Høyre JoyCon – Gyro (yaw)"
 	"origin_switch_r_gyro_roll"					"Høyre JoyCon – Gyro (roll)"
 	"origin_switch_button_dpad_move"			"Retningsknapp (bevegelse)"
+	"origin_switch_button_gl"					"GL-knapp"
+	"origin_switch_button_gr"					"GR-knapp"
+	"origin_switch_button_button_c"				"C-knapp"
 }

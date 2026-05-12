@@ -264,6 +264,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           editModel: null,
@@ -293,7 +294,7 @@
             setClanImagesV2: _,
           },
           children: (0, _.jsx)(_._, {
-            location: 1,
+            location: _._,
             children: _,
           }),
         });
@@ -305,7 +306,7 @@
         const _ = _.useContext(_),
           _ =
             ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
-            2 == _._.EUNIVERSE &&
+            _._.EUNIVERSE == _._ &&
             _._.is_support;
         return {
           bClanImagesV2: _.bClanImagesV2 && _,
@@ -320,6 +321,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -538,6 +540,7 @@
                 _().LightboxImageContainer,
                 _().LightboxMainImage,
               ),
+              tabIndex: 0,
               onClick: (_) => {
                 "IMG" !== _.target.nodeName && _.onCloseRequest(_);
               },
@@ -740,7 +743,7 @@
                       _ = Array.from(_);
                     for (let _ = 0; _ && _ < _.length; _++) {
                       let _ = _[_];
-                      (_ = await __webpack_require__.AddImage(_, 0)),
+                      (_ = await __webpack_require__.AddImage(_, _.Bhc)),
                         _ ||
                           (console.error(
                             "ClanImagePicker.OnDropFiles: failed on i=" +
@@ -901,6 +904,7 @@
       });
       var _,
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _ = !1) {
         return _
@@ -912,9 +916,9 @@
         const _ = _(_);
         if (_ == _.k_eInsertVideo)
           (_ = "[video webm="),
-            5 == _.file_type && (_ += _),
+            _.file_type == _._._ && (_ += _),
             (_ += " mp4="),
-            4 == _.file_type && (_ += _),
+            _.file_type == _._._ && (_ += _),
             (_ += " autoplay=true controls=false][/video]");
         else if (_ == _.k_eInsertFullImage) _ = "[img]" + _ + "[/img]";
         else {
@@ -940,25 +944,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -971,12 +956,31 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
           const {
               clanAccountID: _,
@@ -987,7 +991,7 @@
             } = _,
             _ = _._.InitFromClanID(_),
             _ = (0, _.useRef)(null),
-            [_, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)(!0),
             [_, _] = (0, _.useState)(!1);
           if (
@@ -1136,7 +1140,7 @@
           } = _,
           _ = (0, _._)(_.appid),
           [_, _, _, _, _, _] = (0, _._)(() => {
-            const _ = _ || (0, _._)(_._.LANGUAGE),
+            const _ = _ || (0, _.sfN)(_._.LANGUAGE),
               _ = Boolean(void 0 !== _)
                 ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
@@ -1329,7 +1333,7 @@
           _ = (0, _._)(_.appid),
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           [_, _, _, _, _] = (0, _._)(() =>
             _
               ? [
@@ -1554,6 +1558,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1694,7 +1700,7 @@
             let _ = _._.InitFromClanID(_.clanAccountID);
             _._.DeleteClanImage(_, _)
               .then((_) => {
-                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
+                _.success != _._ && _((0, _._)(_).strErrorMsg), _(!1);
               })
               .catch((_) => {
                 _((0, _._)(_).strErrorMsg), _(!1);
@@ -1843,7 +1849,7 @@
               className: _,
               children: (0, _.jsx)("source", {
                 src: _.url,
-                type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
+                type: "video/" + (_.file_type == _._._ ? "mp4" : "webm"),
               }),
             })
           : null;
@@ -2033,6 +2039,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2268,8 +2275,8 @@
                 const _ = [],
                   _ = new Array();
                 for (const _ of _) {
-                  if (25 == _) continue;
-                  const _ = (0, _._)("#Language_" + (0, _._)(_));
+                  if (_ == _.X51) continue;
+                  const _ = (0, _._)("#Language_" + (0, _.LgB)(_));
                   __webpack_require__.push({
                     label: _,
                     data: _,
@@ -2406,7 +2413,7 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType: _.forceFileType || 3,
+                          fileType: _.forceFileType || _._._,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -2544,7 +2551,7 @@
             },
             [_, _],
           ),
-          _ = _ || (0, _._)(_._.LANGUAGE),
+          _ = _ || (0, _.sfN)(_._.LANGUAGE),
           [_, _, _, _] = (0, _._)(() => [
             _.GetSummaryWithFallback(_),
             _.GetNameWithFallback(_),
@@ -2555,7 +2562,7 @@
         (_ =
           void 0 !== _
             ? [_]
-            : 2434320 == _.appid || 2 == _._.EUNIVERSE
+            : 2434320 == _.appid || _._.EUNIVERSE == _._
               ? _
                 ? _.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
@@ -2924,7 +2931,7 @@
                 ],
               }),
             }),
-            12 != _ &&
+            _ != _.Fwr &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)("div", {
@@ -3040,7 +3047,7 @@
       function _(_, _) {
         var _, _;
         let _ = 0;
-        for (let _ = 0; _ < 31; ++_)
+        for (let _ = _.Bhc; _ < _.bP9; ++_)
           (null !==
             (_ = null === (_ = _(_, _)) || void 0 === _ ? void 0 : _.length) &&
           void 0 !== _
@@ -3072,7 +3079,7 @@
             null == _ ? void 0 : _.GetEventType(),
             null == _ ? void 0 : _.BHasTag("vo_marketing_message"),
           ]),
-          _ = 36 == _;
+          _ = _ == _.ajI;
         let _ = null;
         _ === _.k_Required
           ? (_ = (0, _.jsx)("span", {
@@ -3672,7 +3679,7 @@
             _.forEach((_) => {
               var _;
               const { clanImage: _, lang: _ } = _;
-              let _ = (0, _._)("#Language_" + (0, _._)(_));
+              let _ = (0, _._)("#Language_" + (0, _.LgB)(_));
               _.push(
                 (0, _.jsxs)(
                   "div",
@@ -3759,7 +3766,7 @@
             for (const _ of _) {
               const _ = __webpack_require__(_);
               if (_) {
-                const _ = (0, _._)(_),
+                const _ = (0, _.LgB)(_),
                   _ = (0, _._)("#Language_" + _);
                 _.push({
                   lang: _,
@@ -3814,7 +3821,7 @@
                 strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
                 closeModal: _,
                 onOK: () => {
-                  for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
+                  for (let _ = 0; _ < _.bP9; _++) _ && _ && _(_) && _(_);
                 },
               }),
             }),
@@ -3853,7 +3860,7 @@
           _: _.strLang,
           className: _().LanguageContainer,
           onClick: (_) => {
-            let _ = (0, _._)(_.currentTarget._);
+            let _ = (0, _.sfN)(_.currentTarget._);
             _(_);
           },
           children: [
@@ -3953,7 +3960,7 @@
                   strTitle: (0, _._)("#selectimage_remove_image"),
                   strDescription: (0, _._)(
                     "#selectimage_remove_details",
-                    (0, _._)("#Language_" + (0, _._)(_.lang)),
+                    (0, _._)("#Language_" + (0, _.LgB)(_.lang)),
                   ),
                   onOK: () => {
                     _(_.lang);
@@ -4046,6 +4053,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       const _ = new (_())(
@@ -4068,10 +4076,9 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 !=
-                    (null === (_ = _.data) || void 0 === _
-                      ? void 0
-                      : _.success) ||
+                  (null === (_ = _.data) || void 0 === _
+                    ? void 0
+                    : _.success) != _._ ||
                   !(null === (_ = _.data) || void 0 === _ ? void 0 : _.userinfo)
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -4088,10 +4095,9 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 !=
-                    (null === (_ = _.data) || void 0 === _
-                      ? void 0
-                      : _.success) ||
+                  (null === (_ = _.data) || void 0 === _
+                    ? void 0
+                    : _.success) != _._ ||
                   !(null === (_ = _.data) || void 0 === _
                     ? void 0
                     : _.userinfos)

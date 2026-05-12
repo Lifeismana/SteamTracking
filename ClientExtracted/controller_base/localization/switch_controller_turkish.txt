@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Sağ JoyCon Jiroskop Sapması"
 	"origin_switch_r_gyro_roll"					"Sağ Joy-Con Jiroskop Döndürmesi"
 	"origin_switch_button_dpad_move"			"D-Pad Hareketi"
+	"origin_switch_button_gl"					"GL Butonu"
+	"origin_switch_button_gr"					"GR Butonu"
+	"origin_switch_button_button_c"				"C Butonu"
 }

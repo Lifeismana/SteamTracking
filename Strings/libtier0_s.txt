@@ -99,8 +99,8 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
-00:14:46
 0123456789ABCDEF
+06:46:15
 12CStdMemAlloc
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
@@ -293,7 +293,7 @@ Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-May  8 2026
+May 12 2026
 MbP?
 MemFree:
 MemTotal:
@@ -324,7 +324,6 @@ Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput
 OverlayRendering
-PFN/
 PKDd
 PKDe
 PKDf
@@ -400,6 +399,7 @@ RunCallbacks
 RunTypeValidationTests
 SDL_GetError
 SDL_SetCurrentThreadPriority
+STEAM_DESKTOP_APP_AFFINITY_LIST
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 ServerMain
@@ -999,6 +999,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 secblock.h
 semaphore creation failed %s
@@ -1062,6 +1063,7 @@ strrchr
 strstr
 strtol
 strtoul
+strtoull
 symlink
 syscall
 system

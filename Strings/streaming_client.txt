@@ -79,6 +79,8 @@
  %s%lu (%s0x%lx)\n
  &554632
  ' ) - 3 G M Q _ c e i w }
+ '-pipewire'
+ 'streaming_log.txt'
  (%ld unused bits)\n
  (08@HPX`hpx
  (BGP MDT)
@@ -92,6 +94,7 @@
  (Unknown SAFI %u)
  (VPLS)
  (first measurement to %s, estimate was %d)
+ (logs\streaming_log.txt).
  (non-permanent)
  (unknown response type)\n
  + X kombinasyonunu kullan
@@ -106,6 +109,8 @@
  --mock-update-error
  -9bR
  -:7|qfkHER_
+ -pipewire
+ -pipewire,
  0$F2
  1 ng
  1 palcem
@@ -169,6 +174,7 @@
  CONT
  Can't back up over more bytes than were returned by the last call to Next().
  CfE
+ Confidentialit
  DP4
  DTSECST
  Disposition des commandes
@@ -176,6 +182,7 @@
  E80
  Ekran modunda, Kontrolc
  Ekran veya masa
+ Enregistrement de l
  F had
  F6 eller GUIDE + Y f
  F6 eller START + Y f
@@ -259,7 +266,10 @@
  Steam Link
  Steam Remote Play
  Steam Remote Play.
+ Steam logs\streaming_log.txt
+ Steam uudelleen et
  Steam...
+ Steam\logs\streaming_log.txt
  Td]H~8o]
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
@@ -267,6 +277,8 @@
  VIEW-painike painettuna
  VNf
  WRE
+ Wayland
+ Wayland.
  Whs
  XCc
  Y-painike painettuna
@@ -283,15 +295,19 @@
  a comenzilor ap
  a controlerului.
  a fazer um stream de v
+ a po vyzv
  a protocol
+ a zabezpe
  a zastavit streamov
  a8S
+ acest lucru.
  ack_relay
  ack_relay_fwd_target(%d)
  ack_routes(%d)
  acum!
  aggiornato.
  ai un controler!
+ alabilmesi i
  antes de empezar a transmitir.
  anticuado.
  aray
@@ -372,6 +388,7 @@
  czu
  dDM
  dU}J
+ de Steam del host para obtener m
  de configuraci
  de retransmisi
  de transmisi
@@ -380,6 +397,8 @@
  della modalit
  den eksterne datamaskinen
  den eksterne datamaskinen.
+ den eksterne maskinen med kommandolinjealternativet -pipewire og sl
+ den eksterne maskinen med kommandolinjealternativet -pipewire, og gi tillatelse for opptak p
  depuis votre compte sur ce r
  desactualizado.
  desatualizado.
@@ -410,6 +429,7 @@
  ekranow
  ekstern datamaskin
  el tiempo de espera para la autorizaci
+ em "Defini
  em modo de realidade virtual
  en l
  en modo de RV actualmente
@@ -419,6 +439,8 @@
  este momentan
  este ocupat.
  este offline
+ et acceptez les demandes d'autorisation de capture quand elles s'affichent sur le bureau.
+ et s
  etkinle
  exceeded maximum protobuf size of 2GB:
  expire date: %.*s
@@ -434,6 +456,8 @@
  fizycznie na twoim kontrolerze, z poziomu nak
  fjerncomputer
  fjerncomputeren
+ fjerncomputeren med kommandolinjeparameteren -pipewire for at give tilladelse til at optage video under Wayland.
+ fjerncomputeren med kommandolinjeparameteren -pipewire, og giv tilladelse til at optage skrivebordet, n
  fjerncomputeren.
  for
  fwd_target(%d)
@@ -457,6 +481,7 @@
  hiiri pois n
  hw5
  i mysz, sugerujemy pod
+ i ochrona -> Nagrywanie ekranu i d
  i ukry
  i1f\f5
  i8M
@@ -494,6 +519,7 @@
  klient slu
  koble til en kontroller!
  kolor i przezroczysto
+ komentoriviparametria -pipewire. Anna lis
  kontrolera w Ustawieniach > Remote Play > Zaawansowanych ustawieniach klienta przed rozpocz
  kontrolera w ustawieniach strumieniowania przed rozpocz
  kontrolera w zaawansowanych ustawieniach strumieniowania przed rozpocz
@@ -507,6 +533,7 @@
  kullanmak isteyebilirsiniz!
  kursor myszy na i poza ekran z nak
  kurzor
+ l'aide de l'option de ligne de commande
  l'ordinateur de %s. Vous jouez
  lFI
  la Steam...
@@ -517,6 +544,8 @@
  ljud
  loc
  local=%d
+ logs sur le PC h
+ logs\streaming_log.txt
  lpt
  lukke
  lyd
@@ -568,12 +597,15 @@
  necesit
  nedtoningssikonet.
  nen
+ neu und erteilen Sie die Berechtigung zur Desktop-Aufnahme.
+ neu und erteilen Sie die Berechtigung zur Videoaufnahme unter Wayland.
  ngay!
  ngo
  no modo de realidade virtual
  noexcept
  not found
  nu este conectat
+ nytt p
  o nou
  o transmisiune video
  oC"p
@@ -605,8 +637,12 @@
  parmakla dokunarak ekran klavyesini a
  pe care s
  pelaajan %s kanssa
+ pentru a activa
  pentru a comuta comenzile tactile
+ pentru mai multe informa
+ permisiuni pentru
  plassere dem p
+ plik logs\streaming_log.txt na komputerze-ho
  plocha
  poss
  possibile aggiungere un pulsante per la lente d'ingrandimento nel menu delle impostazioni e usarlo per ingrandire.
@@ -620,12 +656,16 @@
  possibile regolare la sensibilit
  possibile visualizzare una tastiera sullo schermo dall'overlay del controller.
  potrz
+ pour permettre la capture vid
+ povol
  prep*v60
  printr-o simpl
+ pro z
  protocol="%ssignature";
  prvk
  prvky m
  prvky.
+ przechwytywanie obrazu pod Waylandem.
  przycisk lupy w menu ustawie
  przycisk wywo
  przyciski kontrolera, kt
@@ -660,6 +700,7 @@
  s ovl
  sL4
  sallay
+ se dozv
  se sv
  selhalo.
  sesj
@@ -672,6 +713,7 @@
  skjermen
  skjermen i kontrolleroverlegget.
  skr
+ skrivebordet n
  smime-type=%s;
  solici
  spou
@@ -704,6 +746,7 @@
  sunetul
  sung tr
  suurennuslasipainikkeen asetusvalikossa ja k
+ syst
  szerver elavult.
  tast
  tasta %s pentru a controla sesiunea la distan
@@ -731,6 +774,7 @@
  trackpad
  transaction_safe
  transmitiendo un v
+ trong Steam\logs\streaming_log.txt tr
  trong Thi
  trong su
  tryb myszy w kontrolerze w nak
@@ -747,16 +791,20 @@
  uma boa ideia conectar um controle!
  umo
  un PIN pentru a
+ un error al hacer la captura
  un ordinateur distant. Vous jouez
  upm
  ustawienia, stukaj
+ utiliz
  utworzy
  uusi kutsu.
  v nastaven
  vQ0
  vek
  verschieben, hinzuf
+ vertsmaskinen for mer informasjon.
  vibrasjonsikonet.
+ videoopptak under Wayland.
  virtu
  virtuaalinen n
  virtual
@@ -776,6 +824,8 @@
  was modified concurrently during serialization.
  wibracje w menu ustawie
  wibracji.
+ wiersza polecenia -pipewire i przyznaj uprawnienia do przechwytywania pulpitu, gdy zostaniesz o to poproszony.
+ wiersza polecenia -pipewire, by w
  wirtualn
  with
  with type
@@ -784,6 +834,7 @@
  xa y
  xzoj/
  y tu amigo est
+ yakalama izinlerini verin.
  yap
  yay
  yok, sunucu
@@ -1556,6 +1607,9 @@ $\n k_EDeviceDisconnectMethodUnknown
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EFrameStatPacketLossPercentage
 $\n k_EGPUPerformanceLevel_Profiling
+$\n k_EGamePerformanceSetting_Custom
+$\n k_EGamePerformanceSetting_Medium
+$\n k_EGamePerformanceSetting_NotSet
 $\n k_EGpuDriverId_GoogleSwiftshader
 $\n k_EGpuDriverId_NvidiaProprietary
 $\n k_EGraphicsPerfOverlayLevel_Full
@@ -2196,6 +2250,7 @@ ${FILENAME}
 &\n"k_EGraphicsPerfOverlayLevel_Hidden
 &\n"k_EGraphicsPerfOverlayLevel_Medium
 &\n"k_EHDRVisualization_HeatmapClassic
+&\n"k_EPackageGroupDisplayType_Default
 &\n"k_EPersonaStateFlag_InJoinableGame
 &\n"k_EProfileCustomizationTypeInvalid
 &\n"k_EPublishedFileStorageSystemDepot
@@ -2221,6 +2276,7 @@ ${FILENAME}
 &\n"k_EStreamDeviceFormFactorVRHeadset
 &\n"k_SystemAudioPortDirection_Invalid
 &\n\tdata_type
+&\n\tplaytests
 &\tqaK
 &aVh
 &aacute;
@@ -2264,6 +2320,7 @@ ${FILENAME}
 &iquest;
 &iuml;
 &j8!UF
+&kKE
 &kP4
 &laquo;
 &lsquo;
@@ -2425,6 +2482,7 @@ ${FILENAME}
 '\n#k_EGraphicsPerfOverlayLevel_Minimal
 '\n#k_EHDRVisualization_HeatmapExtended
 '\n#k_EMouseModeRelativeCursor_OBSOLETE
+'\n#k_EPackageGroupDisplayType_Dropdown
 '\n#k_EPersonaStateFlag_HasRichPresence
 '\n#k_EProfileCustomizationTypeMyGuides
 '\n#k_EProvideDeckFeedbackPreference_No
@@ -2788,7 +2846,6 @@ ${FILENAME}
 (gu\I
 (h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
-(int)(intp)m_hParam != -1
 (int)cbEncrypted <= k_cbSteamNetworkingSocketsMaxEncryptedPayloadSend
 (int)cbEncrypted >= cbPlainText
 (int)pChunks->iov_len == cbSendTotal
@@ -2833,6 +2890,7 @@ ${FILENAME}
 (wMww
 (w~BJ
 (x*u4
+(x86)
 (xYJM
 (|YGNk
 ) povolit dotykov
@@ -3538,6 +3596,7 @@ ${FILENAME}
 --framerate
 --fullscreen
 --gameid
+--geometry
 --hardwarebitratelimit
 --hwaccel
 --locale
@@ -3555,6 +3614,7 @@ ${FILENAME}
 --server
 --settings
 --settingsdata
+--size
 --stats
 --steamid
 --transport
@@ -3580,6 +3640,7 @@ ${FILENAME}
 -8S6
 -9LL99KK
 -;-C-I-M-a-e-q-
+-> Gizlilik ve G
 -?Vb,?H$+?Z
 -A*6O3
 -A[Dv
@@ -3702,6 +3763,7 @@ ${FILENAME}
 -noassert
 -nocrashdialog
 -nojoy
+-pipewire
 -q[xfe
 -qkw
 -quicklogin
@@ -3720,6 +3782,8 @@ ${FILENAME}
 -steamos3
 -te c
 -tesla
+-test-device-type
+-test-glibc-version
 -uY1
 -v71H3}`
 -vR3Gh
@@ -3885,7 +3949,6 @@ ${FILENAME}
 .EStreamVersion
 .EStreamVersion"1\n
 .EStreamVideoCodec
-.EStreamVideoCodec"
 .EStreamingDataType
 .ETrailerCategory
 .EUserReviewScore
@@ -3912,11 +3975,14 @@ ${FILENAME}
 .StoreItem.Assets
 .StoreItem.BasicInfo
 .StoreItem.Categories
+.StoreItem.Demo
 .StoreItem.FreeWeekend
 .StoreItem.IncludedItems
 .StoreItem.Link
+.StoreItem.PackageGroup
 .StoreItem.Platforms
 .StoreItem.Platforms.VRSupport
+.StoreItem.Playtest
 .StoreItem.PurchaseOption
 .StoreItem.RelatedItems
 .StoreItem.ReleaseInfo
@@ -3940,6 +4006,7 @@ ${FILENAME}
 .ZaVf
 .Zv5
 .\fGEcX
+.\n&appid_ownership_not_allowed_to_reserve
 .\n&formatted_price_before_bundle_discount
 .\n)k_EStreamControlStartNeptuneData_OBSOLETE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
@@ -3969,9 +4036,7 @@ ${FILENAME}
 .\n*k_EStreamControlInputGamepadEvent_OBSOLETE
 .\n*k_EnhancedMarketAppearanceStatus_Completed
 .\n\rrelated_items
-.\n\tStoreItem
 .\n\tdirection
-.\n\vaccessories
 .]DI9
 .bAL
 .c-kT
@@ -4077,7 +4142,6 @@ ${FILENAME}
 /IkN
 /J33J/
 /J42S<!
-/Lipe
 /MNH\vU
 /NRz)
 /O9  9O/8/N9
@@ -4104,6 +4168,7 @@ ${FILENAME}
 /\ffJ0F
 /\n enable_touch_controller_OBSOLETE
 /\n hide_discount_pct_for_compliance
+/\n'account_first_date_purchase_requirement
 /\n'estimated_delivery_latest_business_days
 /\n'front_quality_remote_instantaneous_time
 /\n*k_EStreamControlEnableNeptuneData_OBSOLETE
@@ -4118,6 +4183,7 @@ ${FILENAME}
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_EContentReportSubjectAction_BannedFromHub
+/\n+k_EContentReportSubjectAction_OwnerDisputed
 /\n+k_EControllerElementTypeButtonJoystickRight
 /\n+k_ERemoteDeviceStreamingDriversNotInstalled
 /\n+k_ERemoteDeviceStreamingSteamVRNotInstalled
@@ -4321,6 +4387,7 @@ ${FILENAME}
 /jx2
 /l2_a
 /laR
+/lipe
 /lookup/
 /max_brightness
 /name
@@ -4379,7 +4446,6 @@ ${FILENAME}
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
@@ -4448,8 +4514,6 @@ ${FILENAME}
 0000000000000000000000000000000000000000
 00000001
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
-00:14:43
-00:14:51
 00\fo
 01%3
 01%6
@@ -4470,6 +4534,8 @@ ${FILENAME}
 057FW
 05ONA<<
 05W8K
+06:46:10
+06:46:18
 06<:(.$"`fljx~trPV\ZHNDB
 08Sw6
 08bX
@@ -4839,6 +4905,7 @@ ${FILENAME}
 14DRMFrameDesc_t
 14IShakeListener
 14IStreamDecoder
+14StoreItem_Demo
 14StoreItem_Link
 1536
 156q
@@ -4932,6 +4999,7 @@ ${FILENAME}
 18H[v
 18IStreamDataBuffers
 18StoreBrowseContext
+18StoreItem_Playtest
 18StoreItem_Trailers
 196?
 198
@@ -5162,6 +5230,8 @@ ${FILENAME}
 2/N5P
 2/YDc~-0
 20.CAuthenticationResponseMsg.AuthenticationResult
+20.GamePerformanceSettings.EGamePerformanceSetting
+20.StoreItem.PackageGroup.EPackageGroupDisplayType
 20/33001
 2048
 20CCDDBAppDetailCommon
@@ -5232,6 +5302,7 @@ ${FILENAME}
 22CStreamingSessionStats
 22CVirtualHereRequestMsg
 22IClientNetworkingUtils
+22StoreItem_PackageGroup
 22StoreItem_RelatedItems
 232>
 23CActivationCodeItemInfo
@@ -5245,6 +5316,7 @@ ${FILENAME}
 23CToggleMagnificationMsg
 23CVirtualControllerColor
 23CVirtualControllerLabel
+23GamePerformanceSettings
 23ISteamNetworkingSockets
 23StoreItem_IncludedItems
 23ZMb(
@@ -5295,7 +5367,6 @@ ${FILENAME}
 2675#"
 26754&#"
 2677
-26754.
 26CActivationCodePackageInfo
 26CAuthenticationResponseMsg
 26CFrameStatAccumulatedValue
@@ -5538,7 +5609,9 @@ ${FILENAME}
 3254&+
 3254'
 3254''3654&##
+467.
 3255
+26754.
 3255!
 32554&"
 32554&#"
@@ -5601,15 +5674,15 @@ ${FILENAME}
 326754&#"
 326754&'c
 32676'!
-32677
 326=
 326B|
 327&
 327'7
 327'Z
-3275!5!
 3275#5!
 3276
+32677
+3275!5!
 327675.
 32:B\n
 32CMsgRemoteDeviceStreamingRequest
@@ -5833,6 +5906,7 @@ ${FILENAME}
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EStreamControllerConfigMsg_ActiveConfigChange
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
+3\n/k_PublishedFileQueryType_RankedByNumParentItems
 3\n\vXs
 3\ntmDX.
 3\r56M
@@ -5981,7 +6055,6 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-467.
 4632
 46632
 467&&54632
@@ -6083,6 +6156,7 @@ ${FILENAME}
 4Yg\v
 4\0mbb
 4\fZQ
+4\n%price_cannot_be_displayed_as_discount
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n/k_EStreamControlControllerPersonalizationUpdate
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
@@ -6219,6 +6293,12 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
+5467.
+5467
+54632
+54663
+532654.
+546632
 5467!
 5467#".
 5467#5!
@@ -6226,12 +6306,6 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
-5467.
-5467
-54632
-54663
-532654.
-546632
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6324,6 +6398,7 @@ ${FILENAME}
 5\SKJI(p~
 5\fikB
 5\fyV
+5\n-not_allowed_to_reserved_because_already_owned
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
 5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
@@ -6336,6 +6411,7 @@ ${FILENAME}
 5\n1k_ESystemDisplayCompatibilityMode_MinimalBandwith
 5\n1k_PublishedFileQueryType_RankedByNumTimesReported
 5\n\fmicrotrailer
+5\n\tStoreItem
 5\n\vStoreFilter
 5\n\vnested_type
 5\n\vsale_filter
@@ -6639,14 +6715,14 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
+75#5!
 754.
 7524
-74632
-75#5!
 75pRD
 75th
 76&'3
 7623.
+74632
 7664&#"
 76653
 76654&#"
@@ -7183,6 +7259,7 @@ ${FILENAME}
 9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
+9\n5k_PublishedFileQueryType_RankedByNumParentCollections
 9\n\noneof_decl
 9\v\nUc$NL\n
 9]dh
@@ -7647,7 +7724,7 @@ ${FILENAME}
 <layout>\n\t<template id="button" background="button" background_selected="button_selected" background_pressed="button_pressed" interactible="true"/>\n\t<template id="player" width="70" height="112" width_mobile="80" height_mobile="150">\n\t\t<elements>\n\t\t\t<element id="name" textsize="10" textsize_mobile="18" textcolor="#b8bcbf">\n\t\t\t\t<anchor here="N"/>\n\t\t\t</element>\n\t\t\t<element id="avatar" width="70" height="70" width_mobile="80" height_mobile="80">\n\t\t\t\t<anchor here="N" y="16" y_mobile="30"/>\n\t\t\t</element>\n\t\t\t<horizontal height="40" align="center">\n\t\t\t\t<anchor here="N" target="avatar" there="S" y="4"/>\n\t\t\t\t<elements>\n\t\t\t\t\t<element id="keyboard" width="40" height="40" width_mobile="45" height_mobile="45" image="keyboard"/>\n\t\t\t\t\t<element id="mouse" width="15" height="15" width_mobile="18" height_mobile="18" image="mouse"/>\n\t\t\t\t</elements>\n\t\t\t</horizontal>\n\t\t\t<element id="controller" width="30" height="21" width_mobile="36" height_mobile="27" image="controller">\n\t\t\t\t<anchor here="N" target="avatar" there="S" y="12"/>\n\t\t\t</element>\n\t\t</elements>\n\t</template>\n\t<element background="#00000080"/>\n\t<element width="490" height="404" width_mobile="786" height_mobile="602" image="dialog_background">\n\t\t<elements>\n\t\t\t<element text="RPTConnected_Title" textsize="27" textsize_mobile="36" textstyle="bold">\n\t\t\t\t<anchor here="NW" x="30" y="30" x_mobile="50" y_mobile="50"/>\n\t\t\t</element>\n\t\t\t<element width="34" height="34" width_mobile="54" height_mobile="54" image="steam_logo">\n\t\t\t\t<anchor here="NE" x="-28" y="30" x_mobile="-42" y_mobile="54"/>\n\t\t\t</element>\n\t\t\t<element id="host_avatar" width="36" height="36" width_mobile="56" height_mobile="56">\n\t\t\t\t<anchor here="NW" x="30" y="86" x_mobile="50" y_mobile="142"/>\n\t\t\t</element>\n\t\t\t<element id="description" textsize="12" textsize_mobile="21.6" textalign="left">\n\t\t\t\t<anchor here="W" target="host_avatar" there="E" x="12" x_mobile="20"/>\n\t\t\t\t<anchor here="E" x="-28" x_mobile="-42" anchor_y="false"/>\n\t\t\t</element>\n\t\t\t<element text="RPTConnected_Who" textsize="12" textsize_mobile="20.4">\n\t\t\t\t<anchor here="NW" x="30" y="154" x_mobile="50" y_mobile="242"/>\n\t\t\t</element>\n\t\t\t<element id="player1" inherit="player">\n\t\t\t\t<anchor here="NW" x="30" y="180" x_mobile="50" y_mobile="280"/>\n\t\t\t</element>\n\t\t\t<element id="player2" inherit="player">\n\t\t\t\t<anchor here="W" target="player1" there="E" x="18" x_mobile="30"/>\n\t\t\t</element>\n\t\t\t<element id="player3" inherit="player">\n\t\t\t\t<anchor here="W" target="player2" there="E" x="18" x_mobile="30"/>\n\t\t\t</element>\n\t\t\t<element id="player4" inherit="player">\n\t\t\t\t<anchor here="W" target="player3" there="E" x="18" x_mobile="30"/>\n\t\t\t</element>\n\t\t\t<element id="player5" inherit="player">\n\t\t\t\t<anchor here="W" target="player4" there="E" x="18" x_mobile="30"/>\n\t\t\t</element>\n\t\t\t<horizontal id="OK" inherit="button" padding="0 16" action="okay">\n\t\t\t\t<anchor here="NW" x="30" y="320" x_mobile="50" y_mobile="462"/>\n\t\t\t\t<elements>\n\t\t\t\t\t<element text="RPTConnected_OK" width="106" width_mobile="170" height="54" height_mobile="90" textsize="17" textsize_mobile="26.4"/>\n\t\t\t\t\t<element id="A_button" width="24" height="24" width_mobile="40" height_mobile="40" image="a_button"/>\n\t\t\t\t\t<element id="A_button_PS4" width="24" height="24" width_mobile="40" height_mobile="40" image="a_button_ps4"/>\n\t\t\t\t</elements>\n\t\t\t</horizontal>\n\t\t\t<element id="warning_icon" width="24" height="24" width_mobile="36" height_mobile="36" image="warning_icon" visible="false">\n\t\t\t\t<anchor here="W" target="OK" there="E" x="26" x_mobile="36"/>\n\t\t\t</element>\n\t\t\t<element id="warning_missing_input" text="RPTConnected_MissingInput" textsize="12" textsize_mobile="18" textalign="left" visible="false">\n\t\t\t\t<anchor here="W" target="warning_icon" there="E" x="10" x_mobile="15"/>\n\t\t\t\t<anchor here="E" x="-28" x_mobile="-42" anchor_y="false"/>\n\t\t\t</element>\n\t\t\t<element id="warning_warring_input" text="RPTConnected_WarringInput" textsize="12" textsize_mobile="18" textalign="left" visible="false">\n\t\t\t\t<anchor here="W" target="warning_icon" there="E" x="10" x_mobile="15"/>\n\t\t\t\t<anchor here="E" x="-28" x_mobile="-42" anchor_y="false"/>\n\t\t\t</element>\n\t\t</elements>\n\t</element>\n</layout>\n
 <layout>\n\t<template id="button" background="srp_controlleroverlay_button_default" background_selected="srp_controlleroverlay_button_focused" background_pressed="srp_controlleroverlay_button_pressed" textsize="24" interactible="true"/>\n\t<template id="corner_button" inherit="button" width="60" height="60"/>\n\t<template id="small_button" inherit="button" width="102" height="70"/>\n\t<template id="tray_button" inherit="button" width="200" height="70" textalign="center"/>\n\t<template id="tray_button_wide" inherit="tray_button" width="300"/>\n\t<template id="medium_button" inherit="button" width="326" height="70"/>\n\t<template id="large_button" inherit="button" width="326" height="306" background="link_touch_large_button_default" background_selected="link_touch_large_button_focused" background_pressed="link_touch_large_button_pressed"/>\n\t<template id="audio_button" width="68" height="68" background="srp_controlleroverlay_audiobutton_default" background_selected="srp_controlleroverlay_audiobutton_focused" background_pressed="srp_controlleroverlay_audiobutton_pressed" interactible="true"/>\n\t<template id="audio_slider" orientation="vertical" width="68" height="384" background="link_touch_audiotrack" thumb="srp_controlleroverlay_audioknob" thumbsize="48" progress="#286EAA" padding="33 11" interactible="true"/>\n\t<template id="close_button" inherit="corner_button" image="icon_x">\n\t\t<anchor here="NE" x="-72" y="30"/>\n\t</template>\n\t<template id="button_area" spacing="34">\n\t\t<anchor here="NW" there="SW" x="72" y="-115" />\n\t\t<anchor here="NE" there="SE" x="-72" y="-115" />\n\t</template>\n\t<template id="gesture_text" textsize="18" textcolor="#D4DEE6"/>\n\t<template id="instruction_text" textsize="19" textcolor="#D4DEE6"/>\n\t<template id="circle_control" width="50" height="50" shape="circle" image="circle" textsize="25" textshadow="true" interactible="true"/>\n\t<template id="square_control" width="50" height="50" shape="square" image="square" textsize="25" textshadow="true" interactible="true"/>\n\t<template id="color_label" textsize="25"/>\n\t<template id="color_slider" orientation="vertical" width="80" image="vertical_slider" thumb="srp_controlleroverlay_audioknob" thumbsize="40" interactible="true"/>\n\n\t<element width="1000" height="642" scale_desktop="0.75">\n\t\t<elements>\n\t\t\t<element id="k_EChooseModeElementBackground" background="dialog_background" visible="false">\n\t\t\t\t<elements>\n\t\t\t\t\t<element id="k_EChooseModeElementPowerButton" inherit="corner_button" image="link_touch_iconpower">\n\t\t\t\t\t\t<anchor here="NW" x="72" y="30"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<vertical align="left" spacing="12">\n\t\t\t\t\t\t<anchor here="W" target="k_EChooseModeElementPowerButton" there="E" x="30"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<horizontal spacing="14">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element width="32" height="32" image="steam_logo"/>\n\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementStatus" textsize="21" textalign="left">\n\t\t\t\t\t\t\t\t\t\t<anchor here="E" target="k_EChooseModeElementCloseButton" x="-14" anchor_y="false"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<horizontal spacing="14">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementRPTHostAvatar" width="32" height="32" visible="false"/>\n\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementRPTHostLabel" textsize="21" visible="false"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<element id="k_EChooseModeElementTitle" visible="false"/>\n\t\t\t\t\t<horizontal spacing="34">\n\t\t\t\t\t\t<anchor here="NW" x="72" y="130"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<vertical spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementControllerButton" inherit="large_button">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element text="touch_controller" textsize="24">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" y="15"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementControllerButtonStateLabel" textsize="21">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" y="50"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementControllerButtonIcon" width="208" height="196" image="virtual_controller">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="center" y="28"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementControllerButtonDisabledIcon" width="147" height="147" image="diagonal_line" image_color="#CC1919" visible="false">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="center" y="28"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element width="42" height="42" image="arrow_left">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="W" y="10"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element width="42" height="42" image="arrow_right">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="E" y="10"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementGyroscopeToggleButton" inherit="small_button">\n\t\t\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementGyroscopeToggleButtonIcon" width="48" height="48" image="gyroscope"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementGyroscopeToggleButtonDisabledIcon" width="48" height="48" image="diagonal_line" image_color="#CC1919" visible="false"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementRumbleToggleButton" inherit="small_button">\n\t\t\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementRumbleToggleButtonIcon" width="48" height="48" image="rumble"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementAutoFadeToggleButton" inherit="small_button">\n\t\t\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementAutoFadeToggleButtonIcon" width="48" height="48" image="auto_fade"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t<vertical spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementMouseButton" inherit="large_button">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element text="mouse" textsize="24">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" y="15"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementMouseButtonStateLabel" textsize="21">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" y="50"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementMouseButtonIcon" width="147" height="147" image="mouse">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="center" y="28"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementMouseButtonDisabledIcon" width="147" height="147" image="diagonal_line" image_color="#CC1919" visible="false">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="center" y="28"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element width="42" height="42" image="arrow_left">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="W" y="10"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element width="42" height="42" image="arrow_right">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="E" y="10"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementMouseButtonLeftArrowButton">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="W"/>\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="NE" there="N"/>\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="SE" there="S"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementPinchZoomToggleButton" inherit="small_button">\n\t\t\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementPinchZoomToggleButtonIcon" width="48" height="48" image="pinch_zoom"/>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementPinchZoomToggleButtonDisabledIcon" width="48" height="48" image="diagonal_line" image_color="#CC1919" visible="false"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementTrackpadSensitivityButton" inherit="small_button">\n\t\t\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementTrackpadSensitivityButtonIcon" width="48" height="48" image="trackpad_sensitivity_normal"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementToggleMouseOffscreenButton" inherit="small_button">\n\t\t\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementToggleMouseOffscreenButtonIcon" width="48" height="48" image="mouse_onscreen"/>\n\t\t\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t<anchor here="NE" x="-72" y="130"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<vertical spacing="14">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementAudioButton" inherit="audio_button" image="srp_controlleroverlay_volume_on"/>\n\t\t\t\t\t\t\t\t\t<slider id="k_EChooseModeElementAudioVolumeSlider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t<vertical spacing="14">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementMicrophoneButton" inherit="audio_button" image="srp_controlleroverlay_mic_on"/>\n\t\t\t\t\t\t\t\t\t<slider id="k_EChooseModeElementMicrophoneVolumeSlider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t\t<container id="k_EChooseModeElementExpandedMouseInfoButton" background="link_touch_large_button_default" background_selected="link_touch_large_button_focused" background_pressed="link_touch_large_button_pressed" minwidth="326" padding="0 4" interactible="true">\n\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementMouseButton"/>\n\t\t\t\t\t\t<anchor here="S" target="k_EChooseModeElementTrackpadSensitivityButton"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element text="gesture_list" textsize="24">\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementMouseButton" y="15"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoTitleLabel" textsize="21">\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementMouseButton" y="50"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="16"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<vertical align="right" anchor_y="false">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel1" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="30" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel2" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="66" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel3" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="102" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel4" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="138" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel5" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="174" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel6" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="210" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel7" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="246" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t\t\t<vertical align="left" anchor_y="false">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel8" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="30" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel9" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="66" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel10" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="102" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel11" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="138" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel12" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="174" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel13" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="210" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EChooseModeElementExpandedMouseInfoLabel14" inherit="gesture_text">\n\t\t\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="k_EChooseModeElementExpandedMouseInfoTitleLabel" there="S" y="246" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</container>\n\t\t\t\t\t<horizontal id="button_area" inherit="button_area">\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="k_EChooseModeElementLayoutControlsButton" inherit="medium_button" text="layout_controls"/>\n\t\t\t\t\t\t\t<element id="k_EChooseModeElementMouseInfoButton" inherit="medium_button" text="gesture_list"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t\t<element id="k_EChooseModeElementCloseButton" inherit="close_button"/>\n\t\t\t\t</elements>\n\t\t\t</element>\n\n\t\t\t<element id="k_ETrayElementBackground" background="dialog_background" visible="false">\n\t\t\t\t<elements>\n\t\t\t\t\t<element id="k_ETrayElementTrayMenu" inherit="corner_button" text="..." textsize="30">\n\t\t\t\t\t\t<anchor here="NW" x="72" y="30"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_ETrayElementPreviousButton" inherit="corner_button" image="arrow_left">\n\t\t\t\t\t\t<anchor here="W" target="k_ETrayElementTrayMenu" there="E" x="8"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_ETrayElementNextButton" inherit="corner_button" image="arrow_right">\n\t\t\t\t\t\t<anchor here="E" target="k_ETrayElementCloseButton" there="W" x="-8"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_ETrayElementTitle" textsize="21">\n\t\t\t\t\t\t<anchor here="W" target="k_ETrayElementPreviousButton" there="E" x="8"/>\n\t\t\t\t\t\t<anchor here="E" target="k_ETrayElementNextButton" there="W" x="-8"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_ETrayElementInstructions" inherit="instruction_text" text="tray_instructions1">\n\t\t\t\t\t\t<anchor here="N" target="k_ETrayElementTitle" there="S" y="2"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_ETrayElementInstructions2" inherit="instruction_text" text="tray_instructions2" visible="false">\n\t\t\t\t\t\t<anchor here="N" target="k_ETrayElementInstructions" there="S"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_ETrayElementColorPickerButton" width="100" height="100" image="colorwheel" interactible="true">\n\t\t\t\t\t\t<anchor here="S" target="k_EControllerElementTypeButtonMacro2Finger" there="NW" x="-10" y="-24"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="control_area">\n\t\t\t\t\t\t<anchor here="N" y="110" anchor_x="false"/>\n\t\t\t\t\t\t<anchor here="SW" target="button_area" there="NW" y="-20"/>\n\t\t\t\t\t\t<anchor here="SE" target="button_area" there="NE" y="-20"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeThumb" inherit="square_control" visible="false"/>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonSteam" inherit="circle_control" width="62" height="62" image="steam_logo">\n\t\t\t\t\t\t\t\t<anchor here="N" x="-60" y="34"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonSelect" inherit="square_control" width="50" height="27" image="rectangle">\n\t\t\t\t\t\t\t\t<anchor here="E" target="k_EControllerElementTypeButtonSteam" there="W" x="-20"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonStart" inherit="square_control" width="50" height="27" image="rectangle">\n\t\t\t\t\t\t\t\t<anchor here="W" target="k_EControllerElementTypeButtonSteam" there="E" x="20"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonBumperLeft" inherit="square_control">\n\t\t\t\t\t\t\t\t<anchor here="E" target="k_EControllerElementTypeButtonSteam" there="W" x="-224"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonBumperRight" inherit="square_control">\n\t\t\t\t\t\t\t\t<anchor here="W" target="k_EControllerElementTypeButtonSteam" there="E" x="224"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonTriggerLeft" inherit="square_control">\n\t\t\t\t\t\t\t\t<anchor here="W" target="k_EControllerElementTypeButtonBumperLeft" there="E" x="14" y="-16"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonTriggerRight" inherit="square_control">\n\t\t\t\t\t\t\t\t<anchor here="E" target="k_EControllerElementTypeButtonBumperRight" there="W" x="-14" y="-16"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeTrackpadCenter" inherit="square_control" width="250" height="125" image="trackpad">\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EControllerElementTypeButtonSteam" there="S" y="20"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeTrackpadLeft" inherit="square_control" width="125" height="125" image="trackpad">\n\t\t\t\t\t\t\t\t<anchor here="W" target="k_EControllerElementTypeTrackpadCenter"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeTrackpadRight" inherit="square_control" width="125" height="125" image="trackpad">\n\t\t\t\t\t\t\t\t<anchor here="E" target="k_EControllerElementTypeTrackpadCenter"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeDPad" inherit="square_control" width="150" height="150" image="pad">\n\t\t\t\t\t\t\t\t<anchor here="E" target="k_EControllerElementTypeTrackpadCenter" anchor_x="false"/>\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EControllerElementTypeButtonTriggerLeft" anchor_y="false"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="face_buttons" width="150" height="150">\n\t\t\t\t\t\t\t\t<anchor here="W" target="k_EControllerElementTypeTrackpadCenter" anchor_x="false"/>\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EControllerElementTypeButtonTriggerRight" anchor_y="false"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonA" inherit="circle_control">\n\t\t\t\t\t\t\t\t\t\t<anchor here="S"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonB" inherit="circle_control">\n\t\t\t\t\t\t\t\t\t\t<anchor here="E"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonX" inherit="circle_control">\n\t\t\t\t\t\t\t\t\t\t<anchor here="W"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonY" inherit="circle_control">\n\t\t\t\t\t\t\t\t\t\t<anchor here="N"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeJoystickLeft" inherit="circle_control" width="120" height="120" image="circle_big">\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EControllerElementTypeDPad" there="SE" x="-25" y="14"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonJoystickLeft" inherit="circle_control">\n\t\t\t\t\t\t\t\t<anchor here="SE" target="k_EControllerElementTypeJoystickLeft" there="SW" x="-6"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeJoystickRight" inherit="circle_control" width="120" height="120" image="circle_big">\n\t\t\t\t\t\t\t\t<anchor here="N" target="face_buttons" there="SW" x="25" y="14"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonJoystickRight" inherit="circle_control">\n\t\t\t\t\t\t\t\t<anchor here="SW" target="k_EControllerElementTypeJoystickRight" there="SE" x="6"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<horizontal spacing="8">\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EControllerElementTypeTrackpadCenter" there="S" y="26"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeRecordInput" inherit="square_control" label="record"/>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypePlaybackInput" inherit="square_control" label="playback"/>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypePaste" inherit="square_control" label="clipboard_paste"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<horizontal spacing="8">\n\t\t\t\t\t\t\t\t<anchor here="N" target="k_EControllerElementTypeTrackpadCenter" there="S" y="84"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeKeyboard" inherit="square_control" label="keyboard"/>\n\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeMagnifyingGlass" inherit="square_control" label="magnifying_glass"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<horizontal spacing="20">\n\t\t\t\t\t\t\t\t<anchor here="E" anchor_y="false"/>\n\t\t\t\t\t\t\t\t<anchor here="S" target="button_area" anchor_x="false"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<vertical spacing="20">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro1" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro2" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro3" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro4" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t\t\t<vertical spacing="20">\n\t\t\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro5" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro6" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro7" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro8" inherit="square_control"/>\n\t\t\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro1Finger" inherit="square_control">\n\t\t\t\t\t\t\t\t<anchor here="S" target="k_EControllerElementTypeButtonMacro1" there="N" y="-20"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="k_EControllerElementTypeButtonMacro2Finger" inherit="square_control">\n\t\t\t\t\t\t\t\t<anchor here="S" target="k_EControllerElementTypeButtonMacro5" there="N" y="-20"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</element>\n\t\t\t\t\t<horizontal id="button_area" inherit="button_area">\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="k_ETrayElementEditButton" inherit="tray_button_wide" text="tray_edit_layout"/>\n\t\t\t\t\t\t\t<element id="k_ETrayElementCancelButton" inherit="tray_button_wide" text="tray_cancel"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t\t<element id="k_ETrayElementCloseButton" inherit="close_button"/>\n\n\t\t\t\t\t<vertical id="k_ETrayMenuElementBackground" visible="false">\n\t\t\t\t\t\t<anchor here="NW" target="k_ETrayElementTrayMenu" there="SW"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="k_ETrayMenuElementCopyLayoutButton" inherit="tray_button_wide" text="tray_menu_copy"/>\n\t\t\t\t\t\t\t<element id="k_ETrayMenuElementPasteLayoutButton" inherit="tray_button_wide" text="tray_menu_paste"/>\n\t\t\t\t\t\t\t<element id="k_ETrayMenuElementResetLayoutButton" inherit="tray_button_wide" text="tray_menu_reset"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\n\t\t\t\t\t<element id="k_ETrayElementButtonInspector" width="75" height="150" image="inspector" textsize="25" interactible="true">\n\t\t\t\t\t\t<anchor here="SW" target="control_area" x="-10" y="-10"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_ETrayElementInspectorTooltip" background="tooltip_background" text="inspector_tooltip" textsize="24" padding="12" confine="display">\n\t\t\t\t\t\t<anchor here="E" target="k_ETrayElementButtonInspector" there="NW" x="-2" y="40"/>\n\t\t\t\t\t</element>\n\t\t\t\t</elements>\n\t\t\t</element>\n\n\t\t\t<element id="k_ETrayColorPickerElementBackground" background="dialog_background" visible="false">\n\t\t\t\t<elements>\n\t\t\t\t\t<element inherit="instruction_text" text="colorpicker_instructions">\n\t\t\t\t\t\t<anchor here="N" y="56"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="control_area">\n\t\t\t\t\t\t<anchor here="N" y="110" anchor_x="false"/>\n\t\t\t\t\t\t<anchor here="SW" target="button_area" there="NW" y="-20"/>\n\t\t\t\t\t\t<anchor here="SE" target="button_area" there="NE" y="-20"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element inherit="color_label" text="R">\n\t\t\t\t\t\t\t\t<anchor here="S" target="k_ETrayColorPickerElementSliderR" there="N" y="-15"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element inherit="color_label" text="G">\n\t\t\t\t\t\t\t\t<anchor here="S" target="k_ETrayColorPickerElementSliderG" there="N" y="-15"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element inherit="color_label" text="B">\n\t\t\t\t\t\t\t\t<anchor here="S" target="k_ETrayColorPickerElementSliderB" there="N" y="-15"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element inherit="color_label" text="A">\n\t\t\t\t\t\t\t\t<anchor here="S" target="k_ETrayColorPickerElementSliderA" there="N" y="-15"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<vertical id="color_picker" spacing="20">\n\t\t\t\t\t\t\t\t<anchor here="NW" y="30"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider2d id="k_ETrayColorPickerElementGradientHSV" inherit="color_slider" width="300" height="300" image="hue_gradient"/>\n\t\t\t\t\t\t\t\t\t<slider id="k_ETrayColorPickerElementSliderHue" inherit="color_slider" orientation="horizontal" width="300" height="40" image="hue_gradient"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t<horizontal id="color_sliders" spacing="10">\n\t\t\t\t\t\t\t\t<anchor here="NW" target="k_ETrayColorPickerElementGradientHSV" there="NE" x="30"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider id="k_ETrayColorPickerElementSliderR" inherit="color_slider" image_color="#C42821">\n\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t<anchor here="S" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t</slider>\n\t\t\t\t\t\t\t\t\t<slider id="k_ETrayColorPickerElementSliderG" inherit="color_slider" image_color="#2EF21E">\n\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t<anchor here="S" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t</slider>\n\t\t\t\t\t\t\t\t\t<slider id="k_ETrayColorPickerElementSliderB" inherit="color_slider" image_color="#003DFF">\n\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t<anchor here="S" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t</slider>\n\t\t\t\t\t\t\t\t\t<slider id="k_ETrayColorPickerElementSliderA" inherit="color_slider" image_color="#FFFFFF80">\n\t\t\t\t\t\t\t\t\t\t<anchor here="N" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t\t<anchor here="S" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t\t</slider>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<element id="k_ETrayColorPickerElementButtonSwatchBackground">\n\t\t\t\t\t\t\t\t<anchor here="W" target="color_sliders" there="E" x="30" anchor_y="false"/>\n\t\t\t\t\t\t\t\t<anchor here="E" anchor_y="false"/>\n\t\t\t\t\t\t\t\t<anchor here="N" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t<anchor here="S" target="color_picker" anchor_x="false"/>\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="k_ETrayColorPickerElementButtonSwatch" image="color_swatch" interactible="true"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</element>\n\t\t\t\t\t<horizontal id="button_area" inherit="button_area">\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="k_ETrayColorPickerElementCancelButton" inherit="tray_button_wide" text="tray_cancel"/>\n\t\t\t\t\t\t\t<element id="k_ETrayColorPickerElementLabelRGB" inherit="instruction_text"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t\t<element id="k_ETrayColorPickerElementCloseButton" inherit="close_button"/>\n\t\t\t\t</elements>\n\t\t\t</element>\n\n\t\t\t<vertical id="k_EPowerMenuElementBackground" background="dialog_background" width="408" spacing="10" visible="false">\n\t\t\t\t<anchor here="center"/>\n\t\t\t\t<elements>\n\t\t\t\t\t<element height="100">\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="logo" width="50" height="50" image="steam_logo">\n\t\t\t\t\t\t\t\t<anchor here="center" y="5"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="k_EPowerMenuElementStopStreamingButton" inherit="tray_button_wide" text="menu_stop_streaming"/>\n\t\t\t\t\t<element id="k_EPowerMenuElementStopGameButton" inherit="tray_button_wide" text="menu_stop_game"/>\n\t\t\t\t\t<element id="k_EPowerMenuElementEnableTouchButton" inherit="tray_button_wide" text="menu_enable_touch"/>\n\t\t\t\t\t<element id="k_EPowerMenuElementDisableTouchButton" inherit="tray_button_wide" text="menu_disable_touch"/>\n\t\t\t\t\t<element id="k_EPowerMenuElementCancelButton" inherit="tray_button_wide" text="menu_cancel"/>\n\t\t\t\t\t<element height="36"/>\n\t\t\t\t</elements>\n\t\t\t</vertical>\n\n\t\t</elements>\n\t</element>\n</layout>\n
 <layout>\n\t<template id="button" width="60" height="60" width_mobile="70" height_mobile="70" background="srp_controlleroverlay_button_default" background_selected="srp_controlleroverlay_button_focused" background_pressed="srp_controlleroverlay_button_pressed" interactible="true"/>\n\t<template id="menu_button" width="250" height="40" width_mobile="284" height_mobile="44" background="srp_controlleroverlay_powerbutton_default" background_selected="srp_controlleroverlay_powerbutton_focused" background_pressed="srp_controlleroverlay_powerbutton_pressed" textsize="18" textsize_mobile="21" interactible="true"/>\n\t<template id="audio_button" width="28" height="28" background="srp_controlleroverlay_audiobutton_default" background_selected="srp_controlleroverlay_audiobutton_focused" background_pressed="srp_controlleroverlay_audiobutton_pressed" interactible="true"/>\n\t<template id="audio_slider" orientation="vertical" width="28" height="88" background="srp_controlleroverlay_audiotrack" thumb="srp_controlleroverlay_audioknob" thumbsize="16" progress="#286EAA" padding="14 6" interactible="true" navigable="false"/>\n\t<template id="controller_button" image_selected="controller_button" interactible="true"/>\n\t<element id="background" height="170" image="srp_controlleroverlay_bar">\n\t\t<anchor here="SW"/>\n\t\t<anchor here="SE"/>\n\t\t<elements>\n\t\t\t<element id="panel_buttons" visible="true">\n\t\t\t\t<elements>\n\t\t\t\t\t<element id="power_button" inherit="button" image="srp_controlleroverlay_iconpower_default" image_selected="srp_controlleroverlay_iconpower_focus">\n\t\t\t\t\t\t<anchor here="W" x="30"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<vertical id="status_area" align="left" spacing="10" spacing_mobile="18">\n\t\t\t\t\t\t<anchor here="W" target="power_button" there="E" x="30"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element width="22" height="22" image="steam_logo"/>\n\t\t\t\t\t\t\t\t\t<element id="status" textsize="12" textsize_mobile="20" textalign="left">\n\t\t\t\t\t\t\t\t\t\t<anchor here="E" target="buttons" there="W" x="-30" anchor_y="false"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="RPT_host_avatar" width="22" height="22" visible="false"/>\n\t\t\t\t\t\t\t\t\t<element id="RPT_host_label" textsize="12" textsize_mobile="20" visible="false"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<vertical id="menu" spacing="4" spacing_mobile="5" visible="false">\n\t\t\t\t\t\t<anchor here="W" target="power_button" there="E" x="30"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="menu_stop_streaming" inherit="menu_button" text="menu_stop_streaming"/>\n\t\t\t\t\t\t\t<element id="menu_stop_game" inherit="menu_button" text="menu_stop_game"/>\n\t\t\t\t\t\t\t<element id="menu_cancel" inherit="menu_button" text="menu_cancel"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<horizontal id="buttons" spacing="10" spacing_mobile="16">\n\t\t\t\t\t\t<anchor here="E" target="audio_controls" there="W" x="-40"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="button_paste" inherit="button" image="srp_controlleroverlay_iconpaste_default" image_selected="srp_controlleroverlay_iconpaste_focus"/>\n\t\t\t\t\t\t\t<element id="button_record" inherit="button" image="srp_controlleroverlay_iconrecord_default" image_selected="srp_controlleroverlay_iconrecord_focus"/>\n\t\t\t\t\t\t\t<element id="button_play" inherit="button" image="srp_controlleroverlay_iconplay_default" image_selected="srp_controlleroverlay_iconplay_focus"/>\n\t\t\t\t\t\t\t<element id="button_controller" inherit="button" image="srp_controlleroverlay_iconcontroller_default" image_selected="srp_controlleroverlay_iconcontroller_focus"/>\n\t\t\t\t\t\t\t<element id="button_mousemode" inherit="button" image="srp_controlleroverlay_iconcontrollermouse_default" image_selected="srp_controlleroverlay_iconcontrollermouse_focus"/>\n\t\t\t\t\t\t\t<element id="button_mousespeed" inherit="button" image="srp_controlleroverlay_iconmousespeed2_default" image_selected="srp_controlleroverlay_iconmousespeed2_focus"/>\n\t\t\t\t\t\t\t<element id="button_keyboard" inherit="button" image="srp_controlleroverlay_iconkeyboard_default" image_selected="srp_controlleroverlay_iconkeyboard_focus"/>\n\t\t\t\t\t\t\t<element id="button_movemouse" inherit="button" image="srp_controlleroverlay_iconmovemouseoff_default" image_selected="srp_controlleroverlay_iconmovemouseoff_focus"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t\t<element id="tooltip_area">\n\t\t\t\t\t\t<anchor here="NE" target="buttons" there="SE"/>\n\t\t\t\t\t\t<anchor here="SW"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="tooltip" textsize="12" textsize_mobile="20" confine="tooltip_area">\n\t\t\t\t\t\t<anchor here="N" target="buttons" there="S" y="10"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<horizontal id="audio_controls" spacing="22">\n\t\t\t\t\t\t<anchor here="E" x="-30"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<vertical spacing="4" spacing_mobile="6">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider id="volume_slider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t\t<element id="volume_button" inherit="audio_button" image="srp_controlleroverlay_volume_on"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t<vertical spacing="4" spacing_mobile="6">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider id="microphone_slider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t\t<element id="microphone_button" inherit="audio_button" image="srp_controlleroverlay_mic_on"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t</elements>\n\t\t\t</element>\n\t\t\t<element id="panel_controller" visible="false">\n\t\t\t\t<elements>\n\t\t\t\t\t<vertical align="left" spacing="2">\n\t\t\t\t\t\t<anchor here="W" x="48"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element text="controller_label" textsize="19" textsize_mobile="24"/>\n\t\t\t\t\t\t\t<element text="controller_instructions" textsize="19" textsize_mobile="24"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<element id="controller" width="452" height="312" image="controller_detailed">\n\t\t\t\t\t\t<anchor here="N"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="controller_guide_button" inherit="controller_button" width="48" height="48">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="202" y="79"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_back_button" inherit="controller_button" width="41" height="41">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="163" y="84"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_start_button" inherit="controller_button" width="41" height="41">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="248" y="84"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_left_stick_button" inherit="controller_button" width="48" height="48">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="85" y="88"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_right_stick_button" inherit="controller_button" width="48" height="48">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="319" y="88"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_left_shoulder_button" inherit="controller_button" width="41" height="41">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="85.35" y="34"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_right_shoulder_button" inherit="controller_button" width="41" height="41">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="324" y="34"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_left_trigger_button" inherit="controller_button" width="43" height="43">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="85" y="17"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t<element id="controller_right_trigger_button" inherit="controller_button" width="43" height="43">\n\t\t\t\t\t\t\t\t<anchor here="NW" x="323" y="17"/>\n\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</element>\n\t\t\t\t</elements>\n\t\t\t</element>\n\t\t\t<element id="panel_keyboard" visible="false">\n\t\t\t\t<elements>\n\t\t\t\t\t<vertical align="left" spacing="2">\n\t\t\t\t\t\t<anchor here="W" x="48"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element text="keyboard_label" textsize="19" textsize_mobile="24"/>\n\t\t\t\t\t\t\t<element text="keyboard_instructions" textsize="19" textsize_mobile="24"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<keyboard id="keyboard" width="539.5" height="125"\n\t\t\t\t\t\tkey_image="srp_controlleroverlay_keyboardbutton_default"\n\t\t\t\t\t\tkey_image_selected="srp_controlleroverlay_keyboardbutton_focused"\n\t\t\t\t\t\tkey_image_pressed="srp_controlleroverlay_keyboardbutton_pressed"/>\n\t\t\t\t</elements>\n\t\t\t</element>\n\t\t</elements>\n\t</element>\n</layout>\n
-<layout>\n\t<template id="menu_button" width="200" height="32" background="srp_controlleroverlay_powerbutton_default" background_selected="srp_controlleroverlay_powerbutton_focused" background_pressed="srp_controlleroverlay_powerbutton_pressed" textsize="14" interactible="true"/>\n\t<template id="audio_button" width="28" height="28" background="srp_controlleroverlay_audiobutton_default" background_selected="srp_controlleroverlay_audiobutton_focused" background_pressed="srp_controlleroverlay_audiobutton_pressed" interactible="true"/>\n\t<template id="audio_slider" orientation="vertical" width="28" height="88" background="srp_controlleroverlay_audiotrack" thumb="srp_controlleroverlay_audioknob" thumbsize="16" progress="#286EAA" padding="14 6" interactible="true" navigable="false"/>\n\t<element id="background" width="650" height="150" image="toast_background">\n\t\t<anchor here="SW"/>\n\t\t<elements>\n\t\t\t<element id="content" width="600" height="150">\n\t\t\t\t<elements>\n\t\t\t\t\t<vertical id="menu" spacing="10">\n\t\t\t\t\t\t<anchor here="W"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="menu_stop_streaming" inherit="menu_button" text="menu_stop_streaming"/>\n\t\t\t\t\t\t\t<element id="menu_stop_game" inherit="menu_button" text="menu_stop_game"/>\n\t\t\t\t\t\t\t<element id="menu_change_key_binding" inherit="menu_button" text="menu_change_key_binding"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<vertical id="status_area" align="left" spacing="10" spacing_mobile="18">\n\t\t\t\t\t\t<anchor here="W" target="menu" there="E" x="30"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element width="24" height="24" image="steam_logo"/>\n\t\t\t\t\t\t\t\t\t<element id="status" textsize="14" textsize_mobile="20" textalign="left">\n\t\t\t\t\t\t\t\t\t\t<anchor here="E" target="audio_controls" there="W" x="-30" anchor_y="false"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="RPT_host_avatar" width="24" height="24" visible="false"/>\n\t\t\t\t\t\t\t\t\t<element id="RPT_host_label" textsize="14" textsize_mobile="20" visible="false"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<horizontal id="audio_controls" spacing="22">\n\t\t\t\t\t\t<anchor here="E"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<vertical spacing="4" spacing_mobile="6">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider id="volume_slider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t\t<element id="volume_button" inherit="audio_button" image="srp_controlleroverlay_volume_on"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t<vertical spacing="4" spacing_mobile="6">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider id="microphone_slider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t\t<element id="microphone_button" inherit="audio_button" image="srp_controlleroverlay_mic_on"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t</elements>\n\t\t\t</element>\n\t\t</elements>\n\t</element>\n</layout>\n
+<layout>\n\t<template id="menu_button" width="200" height="32" background="srp_controlleroverlay_powerbutton_default" background_selected="srp_controlleroverlay_powerbutton_focused" background_pressed="srp_controlleroverlay_powerbutton_pressed" textsize="14" interactible="true"/>\n\t<template id="small_button" width="28" height="28" background="srp_controlleroverlay_audiobutton_default" background_selected="srp_controlleroverlay_audiobutton_focused" background_pressed="srp_controlleroverlay_audiobutton_pressed" interactible="true"/>\n\t<template id="audio_slider" orientation="vertical" width="28" height="88" background="srp_controlleroverlay_audiotrack" thumb="srp_controlleroverlay_audioknob" thumbsize="16" progress="#286EAA" padding="14 6" interactible="true" navigable="false"/>\n\t<element id="background" width="650" height="150" image="toast_background">\n\t\t<anchor here="SW"/>\n\t\t<elements>\n\t\t\t<element id="content" width="600" height="150">\n\t\t\t\t<elements>\n\t\t\t\t\t<vertical id="menu" spacing="10">\n\t\t\t\t\t\t<anchor here="W"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<element id="menu_stop_streaming" inherit="menu_button" text="menu_stop_streaming"/>\n\t\t\t\t\t\t\t<element id="menu_stop_game" inherit="menu_button" text="menu_stop_game"/>\n\t\t\t\t\t\t\t<element id="menu_change_key_binding" inherit="menu_button" text="menu_change_key_binding"/>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<vertical id="status_area" align="left" spacing="10" spacing_mobile="18">\n\t\t\t\t\t\t<anchor here="W" target="menu" there="E" x="30"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element width="24" height="24" image="steam_logo"/>\n\t\t\t\t\t\t\t\t\t<element id="status" textsize="14" textsize_mobile="20" textalign="left">\n\t\t\t\t\t\t\t\t\t\t<anchor here="E" target="audio_controls" there="W" x="-30" anchor_y="false"/>\n\t\t\t\t\t\t\t\t\t</element>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t\t<horizontal spacing="10">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<element id="RPT_host_avatar" width="24" height="24" visible="false"/>\n\t\t\t\t\t\t\t\t\t<element id="RPT_host_label" textsize="14" textsize_mobile="20" visible="false"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</horizontal>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</vertical>\n\t\t\t\t\t<horizontal id="audio_controls" spacing="22">\n\t\t\t\t\t\t<anchor here="E"/>\n\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t<vertical spacing="4" spacing_mobile="6">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider id="volume_slider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t\t<element id="volume_button" inherit="small_button" image="srp_controlleroverlay_volume_on"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t\t<vertical spacing="4" spacing_mobile="6">\n\t\t\t\t\t\t\t\t<elements>\n\t\t\t\t\t\t\t\t\t<slider id="microphone_slider" inherit="audio_slider"/>\n\t\t\t\t\t\t\t\t\t<element id="microphone_button" inherit="small_button" image="srp_controlleroverlay_mic_on"/>\n\t\t\t\t\t\t\t\t</elements>\n\t\t\t\t\t\t\t</vertical>\n\t\t\t\t\t\t</elements>\n\t\t\t\t\t</horizontal>\n\t\t\t\t\t<element id="fullscreen_button" inherit="small_button" image="srp_controlleroverlay_volume_on">\n\t\t\t\t\t\t<anchor here="SE" target="audio_controls" there="SW" x="-22"/>\n\t\t\t\t\t</element>\n\t\t\t\t\t<element id="onetoone_button" inherit="small_button" textsize="14" textsize_mobile="20" text="1:1">\n\t\t\t\t\t\t<anchor here="E" target="fullscreen_button" there="W" x="-22"/>\n\t\t\t\t\t</element>\n\t\t\t\t</elements>\n\t\t\t</element>\n\t\t</elements>\n\t</element>\n</layout>\n
 <layout>\r\n\t<element width="300" height="75" width_mobile="480" height_mobile="120" image="toast_background">\r\n\t\t<anchor here="S" y="-170" anchor_x="false"/>\r\n\t\t<elements>\r\n\t\t\t<element id="logo" width="28" height="28" width_mobile="45" height_mobile="45" image="steam_logo">\r\n\t\t\t\t<anchor here="W" x="18" x_mobile="30"/>\r\n\t\t\t</element>\r\n\t\t\t<element id="text" textsize="12" textsize_mobile="20" textalign="left">\r\n\t\t\t\t<anchor here="W" target="logo" there="E" x="14" x_mobile="22"/>\r\n\t\t\t\t<anchor here="E" target="icon" there="W" x="-14" x_mobile="-22"/>\r\n\t\t\t</element>\r\n\t\t\t<element id="icon" width="28" height="28" mobile_width="45" mobile_height="45" visible="false">\r\n\t\t\t\t<anchor here="E" x="-26" x_mobile="-54"/>\r\n\t\t\t</element>\r\n\t\t</elements>\r\n\t</element>\r\n</layout>\r\n
 <layout>\r\n\t<template id="button" background="button" background_selected="button_selected" background_pressed="button_pressed" interactible="true"/>\r\n\t<element background="#00000080"/>\r\n\t<element width="490" height="256" width_mobile="786" height_mobile="425" image="dialog_background">\r\n\t\t<elements>\r\n\t\t\t<element id="title" text="CaptureFailed_Title" textsize="27" textsize_mobile="36" textstyle="bold">\r\n\t\t\t\t<anchor here="NW" x="30" y="30" x_mobile="50" y_mobile="50"/>\r\n\t\t\t</element>\r\n\t\t\t<element id="reason" textsize="14" textsize_mobile="21" textstyle="bold" textcolor="#b6babd" textalign="left" width="430" width_mobile="715">\r\n\t\t\t\t<anchor here="NW" target="title" there="SW" y="15" y_mobile="25"/>\r\n\t\t\t</element>\r\n\t\t\t<horizontal id="OK" inherit="button" padding="0 16" action="quit">\r\n\t\t\t\t<anchor here="S" y="-30" y_mobile="-50"/>\r\n\t\t\t\t<elements>\r\n\t\t\t\t\t<element text="CaptureFailed_Quit" width="106" width_mobile="170" height="54" height_mobile="90" textsize="17" textsize_mobile="26.4"/>\r\n\t\t\t\t\t<element id="A_button" width="24" height="24" width_mobile="40" height_mobile="40" image="a_button"/>\r\n\t\t\t\t\t<element id="A_button_PS4" width="24" height="24" width_mobile="40" height_mobile="40" image="a_button_ps4"/>\r\n\t\t\t\t</elements>\r\n\t\t\t</horizontal>\r\n\t\t</elements>\r\n\t</element>\r\n</layout>\r\n
 <m7.\fyA^0R>
@@ -7698,6 +7775,8 @@ ${FILENAME}
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<linearGradient id="paint0_linear" x1="5.58906" y1="5.11836" x2="53.589" y2="55.5184" gradientUnits="userSpaceOnUse">\n<stop stop-color="#204F97"/>\n<stop offset="1" stop-color="#2974AD"/>\n</linearGradient>\n</defs>\n<rect x="0" y="0" width="32" height="32" rx="2" fill="url(#paint0_linear)"/>\n</svg>\n<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<linearGradient id="paint0_linear" x1="5.75508" y1="5.11836" x2="53.7551" y2="55.5184" gradientUnits="userSpaceOnUse">\n<stop stop-color="#0056D6"/>\n<stop offset="1" stop-color="#1A9FFF"/>\n</linearGradient>\n</defs>\n<rect x="0" y="0" width="32" height="32" rx="2" fill="white"/>\n<rect x="1" y="1" width="30" height="30" rx="2" fill="url(#paint0_linear)"/>\n</svg>\n<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<linearGradient id="paint0_linear" x1="5.26094" y1="5.11836" x2="53.2609" y2="55.5184" gradientUnits="userSpaceOnUse">\n<stop stop-color="#1A6FEF"/>\n<stop offset="1" stop-color="#49B3FF"/>\n</linearGradient>\n</defs>\n<rect x="0" y="0" width="32" height="32" rx="2" fill="url(#paint0_linear)"/>\n</svg>\n
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">\n<rect x="0" y="0" width="31" height="31" rx="2" fill="black"/>\n</svg>\n
 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<clipPath id="clip0">\n<rect width="50" height="50" fill="white"/>\n</clipPath>\n</defs>\n<g clip-path="url(#clip0)">\n<rect x="38.3477" y="9.37793" width="3.22874" height="40.9664" transform="rotate(45 38.3477 9.37793)" fill="white"/>\n<rect x="40.6211" y="38.3457" width="3.22874" height="40.9664" transform="rotate(135 40.6211 38.3457)" fill="white"/>\n</g>\n</svg>\n<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<svg\n   xmlns:dc="http://purl.org/dc/elements/1.1/"\n   xmlns:cc="http://creativecommons.org/ns#"\n   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n   xmlns:svg="http://www.w3.org/2000/svg"\n   xmlns="http://www.w3.org/2000/svg"\n   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"\n   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"\n   width="60"\n   height="60"\n   viewBox="0 0 60 60"\n   fill="none"\n   version="1.1"\n   id="svg14"\n   sodipodi:docname="link_touch_iconpower.svg"\n   inkscape:version="1.0.2 (e86c8708, 2021-01-15)">\n  <metadata\n     id="metadata20">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about="">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <defs\n     id="defs18" />\n  <sodipodi:namedview\n     pagecolor="#ffffff"\n     bordercolor="#666666"\n     borderopacity="1"\n     objecttolerance="10"\n     gridtolerance="10"\n     guidetolerance="10"\n     inkscape:pageopacity="0"\n     inkscape:pageshadow="2"\n     inkscape:window-width="1987"\n     inkscape:window-height="1662"\n     id="namedview16"\n     showgrid="false"\n     inkscape:pagecheckerboard="true"\n     inkscape:zoom="16.8"\n     inkscape:cx="30"\n     inkscape:cy="30"\n     inkscape:window-x="603"\n     inkscape:window-y="256"\n     inkscape:window-maximized="0"\n     inkscape:current-layer="svg14" />\n  <path\n     d="M 29.997947,49.999999 C 26.228301,50.000651 22.553751,48.83155 19.492698,46.657775 16.431646,44.484164 14.138787,41.415497 12.937876,37.88503 11.7368,34.354563 11.688097,30.540588 12.798865,26.981412 c 1.110769,-3.559177 3.324546,-6.683958 6.329301,-8.933095 0.398872,-0.299168 0.901756,-0.429503 1.397871,-0.362296 0.496114,0.06704 0.945011,0.326246 1.247633,0.72035 0.302787,0.394105 0.434864,0.890814 0.366844,1.381161 -0.06802,0.490184 -0.330192,0.933552 -0.729065,1.232719 -2.374417,1.77755 -4.124108,4.246903 -5.001926,7.05963 -0.877652,2.812563 -0.839515,5.826584 0.109459,8.616636 0.948974,2.790053 2.760577,5.215363 5.179404,6.933372 2.418827,1.718173 5.322708,2.642427 8.301542,2.642427 2.978999,0 5.88288,-0.924254 8.301707,-2.642427 2.418662,-1.718009 4.23043,-4.143319 5.179404,-6.933372 0.948974,-2.790052 0.987112,-5.804073 0.109294,-8.616636 -0.877817,-2.812727 -2.627344,-5.28208 -5.00176,-7.05963 -0.398873,-0.299167 -0.661211,-0.742535 -0.729066,-1.232719 -0.06802,-0.490347 0.06389,-0.987056 0.366679,-1.381161 0.302787,-0.394104 0.751684,-0.653307 1.247799,-0.72035 0.496114,-0.06721 0.998998,0.06313 1.397871,0.362296 3.004919,2.249463 5.219027,5.374407 6.32963,8.934073 1.110604,3.559503 1.06157,7.373967 -0.140001,10.904598 -1.201572,3.53063 -3.494926,6.599133 -6.556638,8.772582 -3.061713,2.173448 -6.736924,3.341897 -10.5069,3.340429 z"\n     fill="white"\n     id="path10"\n     style="stroke-width:1.64107" />\n  <path\n     d="m 29.999598,30.887714 c -0.500407,0 -0.980177,-0.196237 -1.333979,-0.545809 -0.353801,-0.349572 -0.552578,-0.82377 -0.552578,-1.318033 V 11.864004 c 0,-0.494425 0.198777,-0.96846 0.552578,-1.318032 C 29.019421,10.1964 29.499191,10 29.999598,10 c 0.500242,0 0.980177,0.1964 1.333979,0.545972 0.353801,0.349572 0.552577,0.823607 0.552577,1.318032 v 17.15579 c 4.96e-4,0.245174 -0.04788,0.487901 -0.142478,0.714478 -0.0946,0.226741 -0.233446,0.432602 -0.408778,0.606165 -0.175168,0.173562 -0.383354,0.311075 -0.612508,0.405034 -0.229154,0.09396 -0.474817,0.142243 -0.722792,0.142243 z"\n     fill="#dcdedf"\n     id="path12"\n     style="stroke-width:1.64107" />\n</svg>\n
+<svg width="518" height="518" viewBox="0 0 518 518" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M79.1668 438.9L146.617 371.45M438.9 79.1666L371.45 146.617M332.579 79.1666H439.167V185.754M185.754 439.167H79.1668V332.579M79.433 79.1666L146.883 146.617M439.166 438.9L371.716 371.45M185.754 79.1666H79.1666V185.754M332.579 439.167H439.167V332.579" stroke="white" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>\n</svg>\n
+<svg width="518" height="518" viewBox="0 0 518 518" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M79.1668 438.9L185.754 332.579M185.754 332.579H79.1667M185.754 332.579V439.167M438.9 79.1666L332.579 185.754M332.579 185.754H439.167M332.579 185.754V79.1667M79.4331 79.1666L185.755 185.754M185.755 185.754H79.1668M185.755 185.754V79.1667M439.167 438.9L332.579 332.579M332.579 332.579H439.167M332.579 332.579V439.167" stroke="white" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>\n</svg>\n
 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<linearGradient id="paint0_linear" x1="5.58906" y1="5.11836" x2="53.589" y2="55.5184" gradientUnits="userSpaceOnUse">\n<stop stop-color="#204F97"/>\n<stop offset="1" stop-color="#2974AD"/>\n</linearGradient>\n</defs>\n<rect x="0" y="0" width="60" height="60" rx="2" fill="url(#paint0_linear)"/>\n</svg>\n<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<linearGradient id="paint0_linear" x1="5.75508" y1="5.11836" x2="53.7551" y2="55.5184" gradientUnits="userSpaceOnUse">\n<stop stop-color="#0056D6"/>\n<stop offset="1" stop-color="#1A9FFF"/>\n</linearGradient>\n</defs>\n<rect x="0" y="0" width="60" height="60" rx="2" fill="white"/>\n<rect x="1" y="1" width="58" height="58" rx="2" fill="url(#paint0_linear)"/>\n</svg>\n<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">\n<defs>\n<linearGradient id="paint0_linear" x1="5.26094" y1="5.11836" x2="53.2609" y2="55.5184" gradientUnits="userSpaceOnUse">\n<stop stop-color="#1A6FEF"/>\n<stop offset="1" stop-color="#49B3FF"/>\n</linearGradient>\n</defs>\n<rect x="0" y="0" width="60" height="60" rx="2" fill="url(#paint0_linear)"/>\n</svg>\n
 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M14.6445 19.8048C14.6445 16.2925 17.3463 13.5006 20.7686 13.2305V16.6527C20.1382 16.8328 19.7779 17.3732 19.7779 18.0937V19.4446C19.7779 20.075 20.2282 20.6153 20.7686 20.8855V23.2271H14.6445V19.8048Z" fill="#DCDEDF"/>\n<path d="M27.8831 28.36C27.8831 32.0524 24.9111 34.9343 21.3087 34.9343C17.7063 34.9343 14.7344 31.9623 14.7344 28.36V24.0371H27.9731V28.36H27.8831Z" fill="#DCDEDF"/>\n<path d="M27.8838 23.1368H21.7598V20.7953C22.3902 20.6151 22.7504 20.0748 22.7504 19.3543V18.0034C22.7504 17.373 22.3001 16.8326 21.7598 16.5625V13.3203C25.182 13.5905 27.8838 16.3823 27.8838 19.8947V23.1368Z" fill="#DCDEDF"/>\n<path d="M21.6705 12.5991C21.5804 10.4377 20.2295 9.71719 19.1488 9.08678C18.0681 8.54642 17.4377 8.18618 17.4377 7.10547H16.5371C16.5371 8.72654 17.7079 9.2669 18.6985 9.80725C19.7793 10.4377 20.7699 10.888 20.7699 12.509" fill="#DCDEDF"/>\n<path d="M47.9676 48.5324C47.8775 48.1722 47.8775 47.812 47.7875 47.4517C47.5173 45.6505 47.2471 43.6692 46.8869 41.778C46.8869 41.778 46.8869 41.778 46.8869 41.6879C46.7068 40.8774 46.5267 40.0668 46.2565 39.2563C46.2565 39.2563 46.2565 39.2563 46.2565 39.1662L46.1664 39.0762L46.0764 38.9861C45.9863 38.8961 45.9863 38.8961 45.8962 38.806C45.4459 37.5452 43.2845 37.0949 41.9336 37.1849C41.7535 37.1849 41.4833 37.275 41.3032 37.4551H34.909C34.7289 37.3651 34.5487 37.275 34.2786 37.1849C32.9277 37.0949 30.7662 37.5452 30.3159 38.806C30.2259 38.8961 30.1358 38.9861 30.0458 39.0762C29.9557 39.1662 29.8656 39.1662 29.8656 39.2563C29.5955 40.0668 29.4153 40.8774 29.2352 41.6879C29.2352 41.6879 29.2352 41.6879 29.2352 41.778C28.7849 43.6692 28.5148 45.5605 28.2446 47.3617L28.0645 48.3523C28.0645 49.1628 28.3346 49.8833 28.875 50.4237C29.1452 50.6939 29.5955 50.874 29.9557 50.874C30.0458 50.874 30.0458 50.874 30.1358 50.874C30.406 50.874 30.6762 50.7839 30.8563 50.6939C31.4867 50.3336 31.847 49.5231 32.2973 48.6225C32.7475 47.7219 33.1078 47.0014 33.5581 46.9114H42.474C42.9243 47.0014 43.2845 47.812 43.7348 48.6225C44.1851 49.433 44.6354 50.3336 45.1758 50.6939C45.3559 50.874 45.6261 50.874 45.8962 50.874C46.3465 50.964 46.7968 50.7839 47.1571 50.4237C47.6974 49.9734 47.9676 49.2529 47.9676 48.5324ZM40.6728 42.4984C41.5734 42.4984 42.2939 43.2189 42.2939 44.1195C42.2939 45.0201 41.5734 45.7406 40.6728 45.7406C39.7722 45.7406 39.0517 45.0201 39.0517 44.1195C39.0517 43.2189 39.7722 42.4984 40.6728 42.4984ZM41.7535 42.2283C41.3032 42.2283 40.943 41.868 40.943 41.4177C40.943 40.9674 41.3032 40.6072 41.7535 40.6072C42.2038 40.6072 42.564 40.9674 42.564 41.4177C42.564 41.868 42.2038 42.2283 41.7535 42.2283ZM42.474 40.0668C42.474 39.6165 42.8342 39.2563 43.2845 39.2563C43.7348 39.2563 44.095 39.6165 44.095 40.0668C44.095 40.5171 43.7348 40.8774 43.2845 40.8774C42.8342 40.8774 42.474 40.5171 42.474 40.0668ZM44.8155 40.6072C45.2658 40.6072 45.6261 40.9674 45.6261 41.4177C45.6261 41.868 45.2658 42.2283 44.8155 42.2283C44.3652 42.2283 44.005 41.868 44.005 41.4177C44.005 40.9674 44.3652 40.6072 44.8155 40.6072ZM33.1078 42.7686C33.1078 42.8587 33.0177 42.8587 33.1078 42.7686L32.0271 42.8587C31.937 42.8587 31.937 42.8587 31.937 42.7686V41.778H30.9464C30.8563 41.778 30.8563 41.778 30.8563 41.6879V40.6973C30.8563 40.6072 30.8563 40.6072 30.9464 40.6072H31.937V39.6165C31.937 39.5265 31.937 39.5265 32.0271 39.5265H33.0177C33.1078 39.5265 33.1078 39.5265 33.1078 39.6165V40.6072H34.0984C34.1885 40.6072 34.1885 40.6072 34.1885 40.6973V41.6879C34.1885 41.778 34.1885 41.778 34.0984 41.778H33.1078V42.7686V42.7686ZM35.3593 42.4984C36.2599 42.4984 36.9803 43.2189 36.9803 44.1195C36.9803 45.0201 36.2599 45.7406 35.3593 45.7406C34.4587 45.7406 33.7382 45.0201 33.7382 44.1195C33.8283 43.2189 34.5487 42.4984 35.3593 42.4984ZM43.2845 41.9581C43.7348 41.9581 44.095 42.3183 44.095 42.7686C44.095 43.2189 43.7348 43.5792 43.2845 43.5792C42.8342 43.5792 42.474 43.2189 42.474 42.7686C42.474 42.3183 42.8342 41.9581 43.2845 41.9581Z" fill="#DCDEDF"/>\n<path d="M26.2626 46.461L23.5608 42.2282L23.1105 43.489C18.9678 42.5884 13.5642 38.986 13.5642 34.5731C13.5642 33.7626 13.5642 32.7719 13.7443 32.0514L12.4835 31.7812C12.2133 32.7719 12.0332 33.8526 12.0332 34.9333C12.0332 40.427 17.0765 44.6598 22.1199 45.9206L21.6696 47.0013L26.2626 46.461Z" fill="#DCDEDF"/>\n<path d="M29.8652 20.2532L32.567 24.486L33.0173 23.2252C37.1601 24.1258 42.5636 27.7282 42.5636 32.1411C42.5636 32.9516 42.5636 33.9423 42.3835 34.6628L43.6443 34.9329C43.9145 33.9423 44.0946 32.8616 44.0946 31.7809C44.0946 26.2872 39.0513 22.0544 34.008 20.7936L34.4583 19.7129L29.8652 20.2532Z" fill="#DCDEDF"/>\n</svg>\n
 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M14.6445 19.8048C14.6445 16.2925 17.3463 13.5006 20.7686 13.2305V16.6527C20.1382 16.8328 19.7779 17.3732 19.7779 18.0937V19.4446C19.7779 20.075 20.2282 20.6153 20.7686 20.8855V23.2271H14.6445V19.8048Z" fill="white"/>\n<path d="M27.8831 28.36C27.8831 32.0524 24.9111 34.9343 21.3087 34.9343C17.7063 34.9343 14.7344 31.9623 14.7344 28.36V24.0371H27.9731V28.36H27.8831Z" fill="white"/>\n<path d="M27.8838 23.1368H21.7598V20.7953C22.3902 20.6151 22.7504 20.0748 22.7504 19.3543V18.0034C22.7504 17.373 22.3001 16.8326 21.7598 16.5625V13.3203C25.182 13.5905 27.8838 16.3823 27.8838 19.8947V23.1368Z" fill="white"/>\n<path d="M21.6705 12.5991C21.5804 10.4377 20.2295 9.71719 19.1488 9.08678C18.0681 8.54642 17.4377 8.18618 17.4377 7.10547H16.5371C16.5371 8.72654 17.7079 9.2669 18.6985 9.80725C19.7793 10.4377 20.7699 10.888 20.7699 12.509" fill="white"/>\n<path d="M47.9676 48.5324C47.8775 48.1722 47.8775 47.812 47.7875 47.4517C47.5173 45.6505 47.2471 43.6692 46.8869 41.778C46.8869 41.778 46.8869 41.778 46.8869 41.6879C46.7068 40.8774 46.5267 40.0668 46.2565 39.2563C46.2565 39.2563 46.2565 39.2563 46.2565 39.1662L46.1664 39.0762L46.0764 38.9861C45.9863 38.8961 45.9863 38.8961 45.8962 38.806C45.4459 37.5452 43.2845 37.0949 41.9336 37.1849C41.7535 37.1849 41.4833 37.275 41.3032 37.4551H34.909C34.7289 37.3651 34.5487 37.275 34.2786 37.1849C32.9277 37.0949 30.7662 37.5452 30.3159 38.806C30.2259 38.8961 30.1358 38.9861 30.0458 39.0762C29.9557 39.1662 29.8656 39.1662 29.8656 39.2563C29.5955 40.0668 29.4153 40.8774 29.2352 41.6879C29.2352 41.6879 29.2352 41.6879 29.2352 41.778C28.7849 43.6692 28.5148 45.5605 28.2446 47.3617L28.0645 48.3523C28.0645 49.1628 28.3346 49.8833 28.875 50.4237C29.1452 50.6939 29.5955 50.874 29.9557 50.874C30.0458 50.874 30.0458 50.874 30.1358 50.874C30.406 50.874 30.6762 50.7839 30.8563 50.6939C31.4867 50.3336 31.847 49.5231 32.2973 48.6225C32.7475 47.7219 33.1078 47.0014 33.5581 46.9114H42.474C42.9243 47.0014 43.2845 47.812 43.7348 48.6225C44.1851 49.433 44.6354 50.3336 45.1758 50.6939C45.3559 50.874 45.6261 50.874 45.8962 50.874C46.3465 50.964 46.7968 50.7839 47.1571 50.4237C47.6974 49.9734 47.9676 49.2529 47.9676 48.5324ZM40.6728 42.4984C41.5734 42.4984 42.2939 43.2189 42.2939 44.1195C42.2939 45.0201 41.5734 45.7406 40.6728 45.7406C39.7722 45.7406 39.0517 45.0201 39.0517 44.1195C39.0517 43.2189 39.7722 42.4984 40.6728 42.4984ZM41.7535 42.2283C41.3032 42.2283 40.943 41.868 40.943 41.4177C40.943 40.9674 41.3032 40.6072 41.7535 40.6072C42.2038 40.6072 42.564 40.9674 42.564 41.4177C42.564 41.868 42.2038 42.2283 41.7535 42.2283ZM42.474 40.0668C42.474 39.6165 42.8342 39.2563 43.2845 39.2563C43.7348 39.2563 44.095 39.6165 44.095 40.0668C44.095 40.5171 43.7348 40.8774 43.2845 40.8774C42.8342 40.8774 42.474 40.5171 42.474 40.0668ZM44.8155 40.6072C45.2658 40.6072 45.6261 40.9674 45.6261 41.4177C45.6261 41.868 45.2658 42.2283 44.8155 42.2283C44.3652 42.2283 44.005 41.868 44.005 41.4177C44.005 40.9674 44.3652 40.6072 44.8155 40.6072ZM33.1078 42.7686C33.1078 42.8587 33.0177 42.8587 33.1078 42.7686L32.0271 42.8587C31.937 42.8587 31.937 42.8587 31.937 42.7686V41.778H30.9464C30.8563 41.778 30.8563 41.778 30.8563 41.6879V40.6973C30.8563 40.6072 30.8563 40.6072 30.9464 40.6072H31.937V39.6165C31.937 39.5265 31.937 39.5265 32.0271 39.5265H33.0177C33.1078 39.5265 33.1078 39.5265 33.1078 39.6165V40.6072H34.0984C34.1885 40.6072 34.1885 40.6072 34.1885 40.6973V41.6879C34.1885 41.778 34.1885 41.778 34.0984 41.778H33.1078V42.7686V42.7686ZM35.3593 42.4984C36.2599 42.4984 36.9803 43.2189 36.9803 44.1195C36.9803 45.0201 36.2599 45.7406 35.3593 45.7406C34.4587 45.7406 33.7382 45.0201 33.7382 44.1195C33.8283 43.2189 34.5487 42.4984 35.3593 42.4984ZM43.2845 41.9581C43.7348 41.9581 44.095 42.3183 44.095 42.7686C44.095 43.2189 43.7348 43.5792 43.2845 43.5792C42.8342 43.5792 42.474 43.2189 42.474 42.7686C42.474 42.3183 42.8342 41.9581 43.2845 41.9581Z" fill="white"/>\n<path d="M26.2626 46.461L23.5608 42.2282L23.1105 43.489C18.9678 42.5884 13.5642 38.986 13.5642 34.5731C13.5642 33.7626 13.5642 32.7719 13.7443 32.0514L12.4835 31.7812C12.2133 32.7719 12.0332 33.8526 12.0332 34.9333C12.0332 40.427 17.0765 44.6598 22.1199 45.9206L21.6696 47.0013L26.2626 46.461Z" fill="white"/>\n<path d="M29.8652 20.2532L32.567 24.486L33.0173 23.2252C37.1601 24.1258 42.5636 27.7282 42.5636 32.1411C42.5636 32.9516 42.5636 33.9423 42.3835 34.6628L43.6443 34.9329C43.9145 33.9423 44.0946 32.8616 44.0946 31.7809C44.0946 26.2872 39.0513 22.0544 34.008 20.7936L34.4583 19.7129L29.8652 20.2532Z" fill="white"/>\n</svg>\n
@@ -8112,11 +8191,13 @@ A Button
 A Sf/4G!
 A Steam Frame hangj
 A Steam Link ind
+A Steamnek enged
 A TRANSMITIR: %dx%d a %2.2f
 A aplica
 A be
 A bevitel
 A bez
+A captura falhou
 A conectar...
 A connection with that ID already exists.
 A estabelecer liga
@@ -8536,6 +8617,7 @@ AckMessages
 AckStats
 AckTimeout
 Acquisisci %dx%d a %2.2f
+Acquisizione non riuscita
 Acties veranderen in controllerconfiguratie van Big Picture
 Activado
 Activar controles t
@@ -8577,6 +8659,8 @@ Af:Cb?
 Afficher le clavier virtuel
 Affiliation Changed
 Afrikaans
+Afsluiten
+Afslut
 Afspil input
 Afspil optaget input
 Ag*g*
@@ -8590,6 +8674,7 @@ Ajuste a sensibilidade do modo mouse na sobreposi
 Ajuste as configura
 Ajuste o volume na sobreposi
 Ajuste o volume no menu de configura
+Ajustes del sistema
 AkA!
 Akg+%
 Aktifkan Kontrol Sentuh
@@ -8755,6 +8840,7 @@ Auf gehts!
 Aufgenommen Eingabe abspielen
 Aufnahme
 Aufnahme %d
+Aufnahme fehlgeschlagen
 Augmenter la vitesse du contr
 August
 Auktorisering
@@ -8810,6 +8896,8 @@ Avancer :
 Avbryt
 Average %.2f fps, %.2f ms per frame\n
 Avkodare: %s
+Avsluta
+Avslutt
 Aw+M(
 Ax8E
 AxS>
@@ -9164,8 +9252,10 @@ BeGF{
 Be\nqB|
 Bearer
 Beaw
+Beenden
 BeginFetchNetworkConfig
 Bekapcsolva
+Bekijk het bestand Steam\logs\streaming_log.txt op de host-pc voor meer informatie.
 Beklenmeyen hata
 Belarusian
 Beni S
@@ -10160,7 +10250,8 @@ CV4L2Accel: Found device %s for %c%c%c%c, flags = 0x%x\n
 CV4L2Accel: Init H264 bitstream object
 CV4L2Accel: Init HEVC bitstream object
 CV4L2Accel: Output buffer too small, was %d, needed %d\n
-CV4L2Accel: Resetting bacause decoded frame ID has failed\n
+CV4L2Accel: Resetting because decoded frame ID has failed\n
+CV4L2Accel: Resetting capture buffers because we had last buffer flagged\n
 CV4L2Accel: Timed out on decode: %s / r = %d
 CV4L2Accel: Unable to render hardware accelerated frame, disabling hardware acceleration.
 CV4L2Accel: WARNING: capture planes has invalid m_fd\n
@@ -10596,6 +10687,11 @@ Connessione a Steam...
 Connessione in corso...
 Connexion
 Connexion en cours...
+Consult
+Consulta Steam\logs\streaming_log.txt no computador transmissor para mais informa
+Consulta el archivo streaming_log.txt en la carpeta
+Consulta el archivo streaming_log.txt en la carpeta "logs" de Steam del equipo remoto para obtener m
+Consultez streaming_log.txt dans Programmes
 Content-Disposition
 Content-Disposition: %s%s%s%s%s%s%s
 Content-Disposition: attachment;
@@ -10637,6 +10733,7 @@ Controle por toque
 Controle virtual
 Controler tactil
 Controler virtual
+Controlla i log di Steam (logs\streaming_log.txt) sull'host per ulteriori informazioni.
 Controller touch
 Controller virtuale
 Controller-layout
@@ -10801,7 +10898,7 @@ Cu ajutorul interfe
 CuC\f
 CuJ+\r
 Cubit/geser (2 jari)
-Culoare/Transparen
+Culoare/transparen
 Currency
 CurrencyCode
 Current primary relay '%s' is no longer eligible for selection.  Deselecting\n
@@ -11131,6 +11228,7 @@ D]zl
 D`5CJ\f
 Da9[
 Daftar Gerakan
+Daha fazla bilgi i
 Danh s
 Danish
 Dari
@@ -11176,6 +11274,7 @@ Dekooderi: %s
 Deleting thread object from the thread, this is bad
 DeliverMsgToPipePartner
 Delta
+Demo
 Dempen van microfoon opheffen
 Dempen van volume opheffen
 Den eksterne Steam-klienten er frakoblet
@@ -11695,8 +11794,10 @@ EGL_EXT_image_dma_buf_import
 EGL_EXT_image_dma_buf_import_modifiers
 EGPUPerformanceLevel
 EGRMode
+EGamePerformanceSetting
 EGameRecordingType
 EGamescopeBlurMode
+EGamingDeviceType override: %d\n
 EGraphicsPerfOverlayLevel
 EH0:a
 EH6+p
@@ -11726,6 +11827,7 @@ EO&u}L3W,
 EOC\r
 EOp~
 EPG;<
+EPackageGroupDisplayType
 EPersonaStateFlag
 EPressOutletAction
 EPressOutletMemberPendingState
@@ -11757,6 +11859,7 @@ ESessionDisposition
 ESessionPersistence
 ESh$
 ESpQ
+ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
 EStartupMovieVariant
@@ -12107,6 +12210,7 @@ Error de transmisi
 Error decoding string1: %s
 Error decoding string2: %s
 Error desconocido
+Error en la captura
 Error getting peer certificate
 Error in encoding\n
 Error in the HTTP2 framing layer
@@ -12137,7 +12241,6 @@ Error: %s: version query error\n
 Error: DisplayManagerInit: XRR unsupported
 Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
-Error: failed to disable wireless power management: %d\n
 Error=%s ErrorID=%d (0x%x) Line number=%d
 ErrorAppID
 ErrorHeadline
@@ -12150,6 +12253,7 @@ Errore sconosciuto
 Erweiterte Clientoptionen
 Er{2
 Er{R
+Esci
 Escolha o modo de entrada para %s
 Escolha o modo de inicializa
 Escolha uma cor para os controles
@@ -12249,7 +12353,6 @@ Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 ExternalValidation
-Extra control data returned besides TOS?  0x%x/0x%x
 Extra text starting with character 0x%02x='%c'
 Ey71}
 EyZ3J>\r
@@ -12389,6 +12492,7 @@ F\JSa
 F\n8\rf
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\nZey?
+F\n\fdisplay_type
 F\n\foptimize_for
 F\n\ncategories
 F\rHm
@@ -12467,7 +12571,7 @@ Failed to resolve "%s" for SOCKS5 connect.
 Failed to resolve host '%s' with timeout after %ld ms
 Failed to send %s: %s
 Failed to send P2P signal
-Failed to serialize identity to %s message.  %s
+Failed to serialize identity to message.  %s
 Failed to set SDR cert.  %s\n
 Failed to set SO_KEEPALIVE on fd %d
 Failed to set TCP_KEEPIDLE on fd %d
@@ -12513,6 +12617,7 @@ FakeRateLimit_Send_Burst
 FakeRateLimit_Send_Rate
 Falha de autentica
 Falha na autentica
+Falha na captura
 Fall
 False
 Farbe f
@@ -12878,6 +12983,7 @@ GameCode
 GameCodeFromKey
 GameItemID
 GameOverlayUI
+GamePerformanceSettings
 Gamma
 Gaqd
 Gast %d
@@ -12900,6 +13006,7 @@ Generator (hybrid):
 Generator (uncompressed):
 Generic joysticks aren't supported as Steam controllers
 Geni
+Genstart Steam p
 Georgian
 Gereed
 Geri
@@ -12971,6 +13078,7 @@ GetWindowSize() == 0 && GetPacketCount() == 0
 Gf06\n
 GfiH
 GgVN-!<?I-^]
+Ghi h
 Ghi l
 Gi!QO3
 Gi4L
@@ -13013,6 +13121,7 @@ Got video sequence %d, expected %d, sending lost data notification\n
 Gotowe
 Goyangkan untuk beralih kontrol sentuh
 Gra z u
+Grabaci
 Grabar entrada
 Grabar entrada para reproducci
 Gravar entrada
@@ -13260,6 +13369,8 @@ Hello request
 Hen\fM
 Hentikan Game
 Hentikan Streaming
+Herstart Steam op de computer op afstand door middel van de opdrachtregeloptie '-pipewire' en verleen toestemming voor schermopname van het bureaublad wanneer daarom wordt gevraagd.
+Herstart Steam op de computer op afstand door middel van de opdrachtregeloptie '-pipewire' om video-opname onder Wayland in te schakelen.
 Hesab
 Het scherm van de computer op afstand is vergrendeld
 Hex and octal numbers must be integers.
@@ -13724,6 +13835,7 @@ InputDisabled
 Inputul este dezactivat temporar atunci c
 Inserisci %s nella finestra del dialogo di autorizzazione sul computer remoto
 Inserisci %s nella finestra di dialogo di associazione sul computer remoto
+Inspelningen misslyckades
 Instalasi driver tambahan di komputer jarak jauh diperlukan untuk streaming.
 InstanceName
 Insufficient randomness
@@ -14276,6 +14388,7 @@ K`Nl
 K`by
 Ka\nTw
 Ka\vPP
+Kaappaus ep
 Kaca Pembesar
 Kamu
 Kamu dan temanmu sedang berbagi keyboard dan mouse. Kamu mungkin ingin menyambungkan kontroler!
@@ -14337,6 +14450,7 @@ Ke'\r7
 Ke\vvz
 Keep sending data to get tossed away
 Keep-Alive
+Keluar
 Kembali
 Keskimm
 Ketik %s di dialog otorisasi pada komputer jarak jauh
@@ -14454,6 +14568,7 @@ Kontroler Sentuh
 Kontroler Virtual
 Kontroler dotykowy
 Kontrollayout
+Kontrollera Steam logs\streaming_log.txt p
 Kontrollerin kaybolmas
 Kontrolleroppsett
 Kopi
@@ -15182,7 +15297,7 @@ MaxProtocol
 MaxUseCount
 Maximum (%ld) redirects followed
 Maximum file size exceeded
-May  8 2026
+May 12 2026
 MaybeAllocateAligned cannot fail here.
 MbP?
 Mb\ni
@@ -16037,6 +16152,8 @@ Nyp/svep med tv
 N}aR
 N~LA
 N~Z3
+O Steam precisa de permiss
+O Steam requer permiss
 O cC^
 O cliente Steam Steam remoto requer c
 O cliente Steam remoto est
@@ -16273,6 +16390,7 @@ Ocircumflex.smcp\vOtilde.smcp
 October
 Ocultar teclado virtual
 Oculte os controles por toque no menu de configura
+Ocurri
 Od9^|
 OdQ\
 Odchozi bitrate: %0.0f kb/s
@@ -16368,12 +16486,15 @@ Operation too slow. Less than %ld bytes/sec transferred the last %ld seconds
 Operation was aborted by an application callback
 Opgenomen invoer afspelen
 Opk\np
+Opname mislukt
 Opname: %dx%d @ %2.2f
 Opptak %dx%d @ %2.2f
+Opptak mislyktes
 Opre
 Opretter forbindelse til Steam...
 Optag input
 Optag input for afspilning
+Optagelse mislykkedes
 Option "
 Option field "
 Option must have a name.
@@ -16408,6 +16529,7 @@ Overlay
 OverlayFrameMark
 OverlayInput
 OverlayRendering
+Override the current EGamingDeviceType (main/dev only)
 Ovu$"
 Ow-p
 Ow4O
@@ -16906,6 +17028,7 @@ Perangkat tidak diotorisasi
 Perbesar:
 Perdita di pacchetti: %2.2f%% (%2.2f%% perdita di fotogrammi)
 Performing ping measurement
+Periksa file Steam logs\streaming_log.txt di PC host untuk info lebih lanjut.
 Permanent Identifier
 Permissions
 Permitted
@@ -16965,6 +17088,7 @@ Playback recorded input
 Player
 Player failed to start video stream: width=%d, height=%d\n
 Playing with %s
+Playtest
 PlaytimeForApp
 Please URL encode %% as %%25, see RFC 6874.
 Please call curl_multi_perform() soon
@@ -16997,6 +17121,7 @@ Podr
 Poista
 Poista kosketusohjaimet k
 Poista mikrofonin mykistys
+Poistu
 Poka
 Policy Qualifier CPS
 Policy Qualifier User Notice
@@ -17103,6 +17228,8 @@ Primary router: %s
 Prime:
 Prin intermediul set
 PrioritizeChaCha
+Privacidad y seguridad
+Privacy and Security
 Private
 Private Key
 Private key does not match the certificate public key
@@ -17113,6 +17240,7 @@ Private-Key: (%d bit, %d primes)\n
 PrivateKey
 Privilege Withdrawn
 Prji
+Pro z
 Probably deadlock or failure waiting for thread to initialize.
 Probe
 Probeer het nu!
@@ -17124,35 +17252,35 @@ Proc-Type:
 Proc-Type: 4,%s\n
 Processed thinkers %d times -- probably one thinker keeps requesting an immediate wakeup call.
 Professional Information or basis for Admission
-Project-Id-Version: 1.1.10\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2018-08-23 17:03-0700\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: English\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-24 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-31 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-31 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-31 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-31 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-31 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-31 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-03-31 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-07 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
-Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-04-28 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: 1.1.10\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2018-08-23 17:03-0700\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: English\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=ASCII\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Bulgarian\nLanguage: bg_BG\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: bg\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Czech\nLanguage: cs_CZ\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: cs\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Danish\nLanguage: da_DK\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: da\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Finnish\nLanguage: fi_FI\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: French\nLanguage: fr_FR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: fr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: German\nLanguage: de_DE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: de\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Greek\nLanguage: el_GR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: el\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Romanian\nLanguage: ro_RO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ro\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:06\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Simplified\nLanguage: zh_CN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-CN\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Chinese Traditional\nLanguage: zh_TW\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: zh-TW\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Dutch\nLanguage: nl_NL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Indonesian\nLanguage: id_ID\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: id\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Italian\nLanguage: it_IT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: it\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Japanese\nLanguage: ja_JP\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ja\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Korean\nLanguage: ko_KR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ko\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Norwegian Bokmal\nLanguage: nb_NO\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: nb\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Polish\nLanguage: pl_PL\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pl\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese, Brazilian\nLanguage: pt_BR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt-BR\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Russian\nLanguage: ru_RU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: ru\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Spanish, Mexico\nLanguage: es_MX\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: es-MX\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Swedish\nLanguage: sv_SE\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: sv\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Thai\nLanguage: th_TH\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: th\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Ukrainian\nLanguage: uk_UA\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: uk\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-01 15:07\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Vietnamese\nLanguage: vi_VN\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: vi\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-05 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Hungarian\nLanguage: hu_HU\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: hu\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-05 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Portuguese\nLanguage: pt_PT\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: pt\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
+Project-Id-Version: c5e90703794bd3e841d8d02074caf66b\nReport-Msgid-Bugs-To: \nPO-Revision-Date: 2026-05-05 12:00\nLast-Translator: Sam Lantinga <saml@valvesoftware.com>\nLanguage-Team: Turkish\nLanguage: tr_TR\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Crowdin-Project: c5e90703794bd3e841d8d02074caf66b\nX-Crowdin-Project-ID: 103\nX-Crowdin-Language: tr\nX-Crowdin-File: /Touch Controller/messages.po\nX-Crowdin-File-ID: 7657\n
 Properties: %d\n
 Prossimo set/layer di azioni
 Prost
@@ -17167,6 +17295,7 @@ Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Prova nu!
 Provalo subito!
+Provide a glibc version for testing
 Proxy
 Proxy CONNECT aborted
 Proxy CONNECT aborted due to timeout
@@ -17179,6 +17308,7 @@ Proxy-Connection: Keep-Alive\r\n
 Proxy-authenticate:
 Proxy-authorization
 Prvky um
+Przechwytywanie nieudane
 Przeci
 Przesu
 Prztrzymaj VIEW, by sterowa
@@ -17487,6 +17617,7 @@ Qu;O
 Quay l
 Quechua
 Quit
+Quitter
 Quote command returned error
 Quuo!
 Qv.g
@@ -17895,6 +18026,10 @@ Registered ID:
 Registered duplicate config value %d
 Registra l'input per la riproduzione
 Registrar entrada para reproducci
+Reinicia Steam en el equipo remoto con la opci
+Reinicia Steam en el ordenador remoto con el par
+Reinicia o Steam no computador remoto com a op
+Reinicie o Steam no computador remoto com a op
 Reject response due to more than %u content encodings
 Rejecting connection request from %s at %s, connection ID %u.  That steamID/ConnectionID pair already has a connection [%s]\n
 Rekam Input
@@ -17918,7 +18053,6 @@ ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena,
 ReleaseMessage
 Reliable message number lurch.  Last reliable %lld, offset %llu, highest seen %lld
-Reliable message size %d too large.
 Reliable message size too large.  (%llu<<5 + %d)
 ReliableAck
 ReliableMessage
@@ -17938,7 +18072,6 @@ Remote Steam client requires a PIN code to start streaming
 Remote file already exists
 Remote file not found
 Remote identity must be known to use symmetric mode
-RemotePlayTogetherWindowed
 Remove From CRL
 RemoveFromPollGroup
 RemoveLast
@@ -17953,6 +18086,7 @@ Renk/Transparanl
 Repeated fields can't have default values.
 Replaced
 Repor disposi
+Reporne
 Reprodu inputul
 Reproducir entrada
 Reproducir entrada grabada
@@ -17993,8 +18127,11 @@ Resolving timed out after %ld milliseconds
 Response Extensions
 Response Single Extensions
 Restablecer disposici
+Restart Steam di komputer jarak jauh dengan opsi baris perintah -pipewire dan berikan izin tangkapan desktop saat diminta.
+Restart Steam di komputer jarak jauh dengan opsi baris perintah -pipewire untuk mengaktifkan tangkapan video di Wayland.
 Restart Steam on the remote computer with the -pipewire command line option and grant desktop capture permissions when prompted.
 Restart Steam on the remote computer with the -pipewire command line option to enable video capture under Wayland.
+Restartujte na vzd
 Restricted outgoing cookies due to header size, '%s' not sent
 ResultDetail
 Retningsknap
@@ -18021,6 +18158,8 @@ RhnD,^(
 Rhua\trsy
 Ri"#H
 Ri$d
+Riavvia Steam sul computer remoto con l'opzione di riga di comando -pipewire e concedi le autorizzazioni di acquisizione del desktop quando richiesto.
+Riavvia Steam sul computer remoto con l'opzione di riga di comando -pipewire per abilitare l'acquisizione video in Wayland.
 Riduci velocit
 Right
 Right Bumper
@@ -18196,6 +18335,7 @@ SDL.texture.opengles2.texture
 SDL.texture.opengles2.texture_u
 SDL.texture.opengles2.texture_uv
 SDL.texture.opengles2.texture_v
+SDL.window.create.curvature
 SDL.window.create.flags
 SDL.window.create.height
 SDL.window.create.title
@@ -18257,7 +18397,6 @@ SDL_GetCurrentAudioDriver
 SDL_GetCurrentRenderOutputSize
 SDL_GetCurrentVideoDriver
 SDL_GetDesktopDisplayMode
-SDL_GetDisplayBounds
 SDL_GetDisplayName
 SDL_GetDisplays
 SDL_GetError
@@ -18314,6 +18453,8 @@ SDL_GetTextureProperties
 SDL_GetTextureSize
 SDL_GetTicks
 SDL_GetWindowFlags
+SDL_GetWindowPixelDensity
+SDL_GetWindowPosition
 SDL_GetWindowProperties
 SDL_GetWindowRelativeMouseMode
 SDL_GetWindowSize
@@ -18400,6 +18541,7 @@ SDL_SetCurrentThreadPriority
 SDL_SetCursor
 SDL_SetError
 SDL_SetEventEnabled
+SDL_SetFloatProperty
 SDL_SetGamepadLED
 SDL_SetGamepadPlayerIndex
 SDL_SetGamepadSensorEnabled
@@ -18416,6 +18558,7 @@ SDL_SetStringProperty
 SDL_SetTextureAlphaMod
 SDL_SetTextureBlendMode
 SDL_SetTextureColorMod
+SDL_SetWindowAspectRatio
 SDL_SetWindowFullscreen
 SDL_SetWindowIcon
 SDL_SetWindowMouseGrab
@@ -18832,8 +18975,10 @@ STEAM-Taste gedr
 STEAMDATAGRAM CERT
 STEAMLINK_SCAN_IFACE
 STEAMLINK_V4L2_BUFFER_COUNT
+STEAMLINK_V4L2_RESET_AFTER_LAST_BUF
 STEAMNETWORKINGSOCKETS_LOG_FILE
 STEAMNETWORKINGSOCKETS_LOG_LEVEL
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_GAME
 STEAM_GAMESCOPE_DYNAMIC_REFRESH_IN_STEAM_SUPPORTED
@@ -18902,11 +19047,13 @@ S`mx\vyr
 S`yn
 Sa?y
 Sacute
+Sair
 SalePageFilter
 SalesTerritoryCode
 SalesTerritoryCodeFromKey
 Salin Tata Letak
 Salin/Tempel/Reset
+Salir
 Sanal Klavye
 Sanal Kontrolc
 Sanal klavyeyi g
@@ -18931,6 +19078,7 @@ Scopelock already holding %s, while trylock %s!  tag=%s
 Score=%d
 Scorrimento (1 dito)
 Scots
+Screen & System Audio Recording
 Scuoti per attivare/disattivare i controlli touch
 Scutur
 Sdk+WYg
@@ -19149,6 +19297,7 @@ Size mismatch after serializing inline stats blob
 Size() == operand.Size()
 Sj0r*2
 Sj\vXB
+Sjekk Steams logs\streaming_log.txt p
 SkI?
 SkS'Z
 Sk\fW
@@ -19210,6 +19359,7 @@ Spiller med %s
 Sposta il mouse fuori schermo
 Sposta il mouse nello schermo
 Spq\
+Sprawd
 Sq2/
 SqD\n
 SqYX/
@@ -19300,8 +19450,11 @@ Stack%2d: %s\n
 Stack%2d: 0x%llX\n
 Stack:%2d    %s (%d): %s\n
 Start
+Start Steam p
 Start date
 StartPairing failed\n
+Starta om Steam p
+Starten Sie Steam auf dem Remote-Computer mit der Befehlszeile
 Starting Streaming\n
 Starting audio stream: frequency=%u, channels=%u\n
 Starting ping collection on '%s'\n
@@ -19326,13 +19479,28 @@ Steam Helper
 Steam In-Home Streaming
 Steam Remote Play
 Steam Remote Play arac
+Steam are nevoie de permisiunea de a
+Steam beh
+Steam ben
+Steam c
 Steam datagram
+Steam doit avoir la permission de faire une capture de  l'
+Steam ha bisogno dell'autorizzazione per catturare lo schermo in Impostazioni di Sistema -> Privacy e sicurezza -> Registrazione schermo e audio di sistema.
+Steam har brug for tilladelse til at optage sk
+Steam heeft toestemming nodig om het scherm op te nemen. Ga hiervoor naar Systeeminstellingen -> Privacy en beveiliging -> Scherm- en systeemaudio-opname.
+Steam memerlukan izin untuk menangkap layar di Pengaturan Sistem -> Privasi & Keamanan -> Perekaman Layar dan Audio Sistem.
+Steam necesita permiso para capturar la pantalla en
 Steam needs permission to capture the screen in System Preferences -> Privacy and Security -> Screen & System Audio Recording.
+Steam potrzebuje uprawnienia do przechwytywania ekranu w Ustawieniach systemowych -> Prywatno
+Steam requiere permisos para capturas de pantalla en "Configuraci
 Steam streamt
 Steam suoratoistossa
+Steam tarvitsee k
 Steam tov
+Steam trenger tillatelser for gj
 Steam wird gestreamt
 Steam'e ba
+Steam'in ekran g
 Steam-fj
 Steam-fjernklient broadcaster i
 Steam-fjernklient er i
@@ -19373,6 +19541,7 @@ SteamNetworkingSockets_Poll
 SteamNetworkingSockets_SetManualPollMode
 SteamRealPath
 SteamRealm
+Steam\logs\streaming_log.txt
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
@@ -19539,6 +19708,7 @@ SymmetricConnect
 SymmetricConnect not supported
 Symw
 Synthetic oneofs must be after all other oneofs
+System Preferences
 SystemSpew
 Sz.S
 S{Pp
@@ -20014,6 +20184,7 @@ Tampilkan keyboard virtual
 Tamu %d
 Tangentbord
 Tangentbord:
+Tangkapan Gagal
 Tap 4 fingers to bring up streaming menu
 Tapp (1 finger)
 Tapp (2 fingre)
@@ -20182,6 +20353,7 @@ Tippen Sie gleichzeitig mit vier Fingern, um das Streaming-Men
 Tippen Sie gleichzeitig mit vier Fingern, um ein Men
 Tippen Sie mit drei Fingern gleichzeitig, um die Bildschirmtastatur ein-/auszublenden.
 Tje*
+Tjek Steams logs\streaming_log.txt p
 TjnX
 TjtK
 Tj|A/r2
@@ -20607,6 +20779,7 @@ UkXm
 Uk_4
 Ukendt fejl
 Ukjent feil
+Ukon
 Ukrainian
 Ukryj wirtualn
 Ukz]
@@ -20786,6 +20959,7 @@ Uzak Steam istemcisi
 Uzak Steam istemcisi yay
 Uzak Steam istemcisinde giri
 Uzak bilgisayarda
+Uzak bilgisayarda Steam'i -pipewire komut sat
 Uzak bilgisayarda ekran g
 Uzak bilgisayardan yay
 Uzaktan ba
@@ -20999,6 +21173,7 @@ Verbindung zu %s nicht m
 Verbindung zu Relais %s nicht m
 Verbindung zu Steam wird hergestellt
 Vergrootglas
+Verifique o arquivo logs\streaming_log.txt na pasta de instala
 Verify error:
 Verify failure\n
 VerifyCAFile
@@ -21306,7 +21481,6 @@ WYda@
 WZ9M\f_
 W[WT
 W\fh,z
-W\n\fRelatedItems
 W\n\tOptInInfo
 W\rds
 W]Dl
@@ -21350,6 +21524,8 @@ Warning: failed to set thread priority: set failed for %d: %s\n
 Warning: failed to set thread priority: set failed for priority %d\n
 Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
 Warning: thread priority outside allowed range %d\n
+Wayland
+Wayland ortam
 Wb49%-w&'
 Wb\tq7
 Wc3F
@@ -21382,6 +21558,7 @@ WebTGWdc[
 Wednesday
 Weird RouterPingReply timestamps from %s.  Reply contained %u, current is %u (elapsed %d)
 Weird server reply
+Weitere Informationen finden Sie in der Datei
 Welsh
 WfZJV
 Wf]8
@@ -21456,6 +21633,7 @@ Wybierz sprz
 Wybierz tryb wprowadzania dla %s
 Wycisz g
 Wycisz mikrofon
+Wyjd
 Wypr
 WzHN
 Wza]lw\t
@@ -22014,6 +22192,7 @@ Y_lQ
 Y`7j
 YaB]
 YaaY
+Yakalama Ba
 Yakalama: %d x %d, %2.2f FPS
 Yava
 Yayin gecikmesi: %2.2f ms girdi, %2.2f ms g
@@ -22234,12 +22413,12 @@ Z]b$O
 Z]k}d
 Z`2B
 Z`NB
-Zachycovani: %dx%d s %2.2f FPS
 Zacute
 Zastavit hru
 Zastavit streamov
 Zatrzymaj gr
 Zatrzymaj strumieniowanie
+Zaznam: %dx%d s %2.2f FPS
 Zb\o
 Zb\vv
 ZcxL
@@ -22307,6 +22486,7 @@ Zqhsbe\v
 ZqrD7
 Zr?J
 Zresetuj schemat
+Zrestartuj Steam na komputerze zdalnym z opcj
 Zr|Ulu
 ZsHO
 Ztraty paketu: %2.2f%% (%2.2f%% ztraty snimku)
@@ -22686,6 +22866,7 @@ Z~5pW3Y
 \S:YE
 \SMh
 \SO7tsG
+\Steam\logs\streaming_log.txt auf dem Host.
 \U%04lX
 \U%08x
 \U0u
@@ -22955,6 +23136,8 @@ Z~5pW3Y
 \n\fFieldOptions
 \n\fGroupUpdated
 \n\fLITE_RUNTIME
+\n\fPackageGroup
+\n\fRelatedItems
 \n\fSTRING_PIECE
 \n\fTYPE_FIXED32
 \n\fTYPE_FIXED64
@@ -23069,6 +23252,7 @@ Z~5pW3Y
 \n\ninput_mark
 \n\ninput_mode
 \n\ninput_type
+\n\nis_edition
 \n\nis_preload
 \n\nis_valveds
 \n\nkludge_pad
@@ -23143,6 +23327,7 @@ Z~5pW3Y
 \n\rmanage_cdkeys
 \n\rmouse_enabled
 \n\rnews_post_gid
+\n\rpackage_group
 \n\rphp_namespace
 \n\rping_interior
 \n\rrelay_tickets
@@ -23152,6 +23337,7 @@ Z~5pW3Y
 \n\rreport_number
 \n\rreserved_name
 \n\rrouting_appid
+\n\rrtime_created
 \n\rscore_penalty
 \n\rscreen_height
 \n\rscreen_locked
@@ -23201,6 +23387,7 @@ Z~5pW3Y
 \n\tfrequency
 \n\tfrom_port
 \n\tgame_name
+\n\theader_2x
 \n\thub_tagid
 \n\timage_url
 \n\tis_online
@@ -24130,6 +24317,8 @@ a suprapus
 a tr
 a!+fE`"Ky
 a!Zn
+a" -> "Grava
+a" > "Grava
 a#34
 a#N7
 a#gR
@@ -24362,6 +24551,7 @@ admin_spoofing_user
 admissionAuthority
 adr.GetType() == k_EIPTypeV4
 adr.HasIP()
+aduje klient slu
 aduje pro streamov
 adult_content_sex
 adult_content_violence
@@ -24619,6 +24809,7 @@ as do comando!
 as?x
 asIg
 asctime_r
+asetukset > Tietosuoja ja suojaus > N
 asetukset, ennen kuin aloitat suoratoiston.
 asetuksista Steam Linkin k
 asetuksista, ennen kuin aloitat suoratoiston.
@@ -25031,6 +25222,7 @@ bb$W
 bb.f
 bbc.co.uk
 bbi illeszt
+bbi inform
 bbtB4
 bc,w
 bc4eY
@@ -25253,7 +25445,9 @@ bxwA
 by Steam je offline
 by Steam je pr
 by Steam nen
+by Steam opr
 by Steam pr
+by Steam s mo
 by Steam vy
 by_file_ctrl
 byte
@@ -25465,6 +25659,7 @@ can't convert uint64 to int32 (data loss)
 can't convert uint64 to int64 (data loss)
 can't find SRP server param
 can't reach here.
+can_toggle_fullscreen
 cancel
 cancel_pairing_request
 cancel_pairing_response
@@ -25485,6 +25680,7 @@ cant check dh key
 cant pack structure
 capslock_keycode
 capsule_headline
+captions_manifest
 captur
 captura
 capture
@@ -25530,12 +25726,14 @@ cd5z
 cdn.beta.steampowered.com
 cdn.steamchina.eccdnx.com
 cdn_path
+ce informac
 ce w
 ceD!
 ceSr
 ce\f3
 cefwebhelper
 ceiiL
+cej.
 cellid
 center
 cert
@@ -25612,6 +25810,7 @@ chat
 chc1
 chdir
 che in den Einstellungen hinzuf
+chec de la capture
 check invalid j value
 check invalid q value
 check p not prime
@@ -25650,6 +25849,7 @@ chuy
 ch|rcF
 cia 3 palcami.
 cia strumieniowania
+cie, by dowiedzie
 cie:
 ciem strumieniowania.
 cifa
@@ -26008,7 +26208,9 @@ crB\v
 crF&Z/
 crLH
 cran
+cran dans les R
 cran de l'ordinateur distant est verrouill
+cran et des sons du syst
 cran ou hors de l'
 cran sur l'ordinateur distant
 cran sur l'ordinateur distant.
@@ -26381,6 +26583,7 @@ cubInput > 0
 cubKey > 0
 cubPlaintextData
 curis
+curit
 curl
 curve
 curve does not support ecdh
@@ -26689,6 +26892,7 @@ dekoding
 dekodovani
 dekodowanie
 delay_time_usec
+delem
 delete
 delete[]
 delta
@@ -26698,8 +26902,12 @@ delta_report_crc
 delta_report_size
 demo
 demo_for_owned_game
+demos
 dent
 deo actualmente
+deo bajo Wayland.
+deo em Wayland.
+deo no Wayland.
 deo: %0.0f kbit/s
 depth exceeded
 derive_secret_key_and_iv
@@ -27022,6 +27230,8 @@ drmSetClientCap(DRM_CLIENT_CAP_ATOMIC) failed\n
 drmSetClientCap(DRM_CLIENT_CAP_UNIVERSAL_PLANES) failed\n
 drmSetMaster
 drmSetMaster failed\n
+dropdown_description_bbcode
+dropdown_title
 dsa routines
 dsaEncryption
 dsaEncryption-old
@@ -27388,6 +27598,7 @@ edit_marketing
 edit_sort_order
 edit_store_display_content
 edit_url
+edition_comparison
 edn$
 ednictv
 edr|
@@ -27577,16 +27788,19 @@ es ant.
 es anterior
 es ao tocar no
 es avan
+es de captura do ambiente de trabalho quando pedido.
 es de streaming enquanto n
 es de transmiss
 es deslizando o controle do volume.
 es deslizando o controlo do volume.
+es do Sistema" -> "Privacidade e seguran
 es do controle virtual
 es du client avant de d
 es e us
 es indispon
 es na configura
 es para (des)ativar o controle por toque e interromper a transmiss
+es para capturar o ecr
 es pendant que l'ordinateur h
 es que n
 es seguinte
@@ -28056,7 +28270,9 @@ framerate_numerator
 frames
 fread
 free
+free_to_keep_base_package
 free_to_keep_ends
+free_with_master_sub_appid
 freeaddrinfo
 freeifaddrs
 fremont
@@ -28099,8 +28315,9 @@ ftp.
 ftp@example.com
 ftruncate64
 fu`z
-full_description
+full_description_bbcode
 fullname
+fullscreen_button
 func(%lu)
 functionality not supported
 futimes
@@ -28259,6 +28476,8 @@ gaj elementy, aby umie
 galician
 galileo
 game
+game_resolution_height
+game_resolution_width
 gameid
 gameitemid
 gameoverlayrenderer.so
@@ -28286,6 +28505,7 @@ gcm_gmult_v8
 gcm_init_v8
 gcokws
 gd1aB
+ge a k
 ge f
 ge i handkontrollens
 ge till Big Picture eller Skrivbord i Avancerade streaminginst
@@ -28392,6 +28612,7 @@ glEGLImageTargetTexture2DOES
 glFinish
 glXChooseFBConfig
 glXGetVisualFromFBConfig
+glages Syst
 gler le volume depuis l'interface du contr
 gler le volume depuis les param
 gler les param
@@ -28759,6 +28980,7 @@ head
 header
 header crc mismatch
 header too long
+heading
 headline
 heartbeat request already pending
 hebrew
@@ -28776,6 +28998,8 @@ hexpass
 hexsalt
 hexsecret
 hexseed
+hez Wayland alatt.
+hez a Rendszerbe
 hez csatlakozva a(z) %s j
 hfdDD
 hgQU;
@@ -28823,6 +29047,7 @@ hnK#
 hnut
 ho okna na vzd
 ho po
+ho zvuku
 ho&q
 hold (1 finger)
 holdInstructionCallIssuer
@@ -28943,9 +29168,12 @@ i %s qua Steam Remote Play.
 i (nebo povolit re
 i < length_
 i Remote Play, vui l
+i Steam tr
 i Thi
+i Wayland.
 i a hrajete hru %s skrze funkci Steam Remote Play.
 i a opri transmisiunea printr-o simpl
+i acord
 i activa butoanele de controler care nu sunt prezente fizic pe controlerul t
 i activa tastatura virtual
 i activa,
@@ -28955,6 +29183,7 @@ i activa/dezactiva microfonul cu ajutorul interfe
 i ad
 i ascunde comenzi ap
 i ascunde comenzile tactile ap
+i audio sistem.
 i ch
 i comuta modul mouse al controlerului cu ajutorul interfe
 i comuta tastatura virtual
@@ -28968,6 +29197,7 @@ i je zamknut
 i joci %s prin intermediul Steam Remote Play.
 i kh
 i kho
+i klienta slu
 i modifica din meniul de set
 i modifica sensibilitatea controlerului din modul mouse prin intermediul interfe
 i modifica set
@@ -28984,6 +29214,8 @@ i ph
 i prietenul t
 i recomand
 i relay %s
+i se solicit
+i securitate ->
 i seta pentru Steam Link,
 i tastatura
 i th
@@ -28991,6 +29223,7 @@ i tr
 i trong Thi
 i trong menu thi
 i tuy
+i v souboru Steam\logs\streaming_log.txt.
 i ve skute
 i zadejte
 i!7FK
@@ -29542,6 +29775,7 @@ ie]R
 ieee
 ieee-siswg
 iekokp
+ierul Steam\logs\streaming_log.txt de pe calculatorul gazd
 if_nametoindex
 if_paired_network_hash_is
 ig,o
@@ -29637,8 +29871,10 @@ in MENU butonuna bas
 in PIN koduna ihtiya
 in START butonuna bas
 in STEAM butonuna bas
+in Sistem Ayarlar
 in VIEW butonuna bas
 in Y butonuna bas
+in ana bilgisayardaki Steam kurulumunda yer alan logs\streaming_log.txt dosyas
 in ayg
 in bir renk se
 in d
@@ -29650,6 +29886,7 @@ in komutlar
 in kullanabilirsiniz.
 in use
 in uzak bilgisayara ek s
+in uzak bilgisayarda Steam'i -pipewire komut sat
 in: F8
 inFlightPkt != m_senderState.m_itNextInFlightPacketToTimeout
 inFlightPkt->first < 0
@@ -29694,6 +29931,7 @@ incorrect file syntax
 incorrect header check
 incorrect length check
 incorrect policy syntax tag
+inde masa
 indent_len > 0
 indent_level > 0
 index too large
@@ -29904,7 +30142,6 @@ invalid utf8string
 invalid value
 invalid window size
 invalid x931 digest
-invalid_purchase_options
 invalidityDate
 inventory
 inventory_available
@@ -29971,6 +30208,8 @@ is_from_external_source
 is_generic_gamepad
 is_generic_joystick
 is_large()
+is_low_spec_hardware
+is_open
 is_steamvr_device
 is_visible_in_steam_china
 is_xinput_device_OBSOLETE
@@ -30032,6 +30271,7 @@ iter->second.m_usecWhenAckPrior == m_receiverState.m_itPendingAck->second.m_usec
 itilde
 itu-t
 iu!r
+iunea de linie de comand
 iuni
 iuni avansate ale clientului po
 iunile
@@ -30042,6 +30282,7 @@ ivytys -kuvaketta.
 iwdv
 ix<v
 iyIY)9\t
+iyle yeniden ba
 i}mNf
 i~wKVA\
 j SZ5-Y
@@ -30201,6 +30442,7 @@ jp\nI
 jq4"
 jqR'W
 jr?z7
+jra a Steamet a t
 jre aftr
 jre skulderknap
 jre styrepind
@@ -30648,6 +30890,9 @@ k_EGPUPerformanceLevel_Manual
 k_EGRMode_Always
 k_EGRMode_Manual
 k_EGRMode_Never
+k_EGamePerformanceSetting_High
+k_EGamePerformanceSetting_Low
+k_EGamePerformanceSetting_Ultra
 k_EGameRecordingType_Clip
 k_EGameRecordingType_Unknown
 k_EGamescopeBlurMode_Always
@@ -30739,6 +30984,10 @@ k_ESessionDispositionDisconnect
 k_ESessionDispositionNormal
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
+k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_71
+k_ESpeakerConfiguration_Other
+k_ESpeakerConfiguration_Stereo
 k_ESplitScalingFilter_Invalid
 k_ESplitScalingFilter_Linear
 k_ESplitScalingFilter_Nearest
@@ -31091,6 +31340,7 @@ keep-alive
 kek_unwrap_key
 kekid
 kenys
+kerhet -> Sk
 kern
 ket a Be
 ket a k
@@ -31200,6 +31450,7 @@ koneen Steam-asiakasohjelma suoratoistaa parhaillaan.
 koneen Steam-asiakasohjelma vaatii suoratoistoon PIN-koodin.
 koneen Steam-asiakasohjelma valtuuttaa parhaillaan toista laitetta.
 koneen Steam-asiakasohjelmaan ei ole kirjauduttu sis
+koneen Steam-tiedostosta logs\streaming_log.txt.
 koneen n
 koneeseen ja pelaatte peli
 koneeseen.
@@ -31223,9 +31474,12 @@ krB<
 krpkiu
 ks'Z
 ks_}c
+ksi oikeudet ty
+ksi oikeudet videon kaappaamiseen Waylandill
 ksz szybko
 ks~V
 ktUJ
+ku systemowego.
 ku v nastaven
 ku ze Steam Frame
 ku]O
@@ -31516,7 +31770,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib May  8 2026 00:14:49
+lib May 12 2026 06:46:16
 lib(%lu)
 libEGL.so.1
 libGL.so.1
@@ -31615,6 +31869,7 @@ lle/pois
 llet tangentbord och mus. Vi rekommenderar att du ansluter en handkontroll.
 lligt inaktiverad medan v
 llio
+llningar -> Integritet och s
 llningar > Remote Play > Avancerade klientinst
 llningar.
 llningarna genom att trycka p
@@ -31670,6 +31925,7 @@ logo de autorizaci
 logo de emparejamiento del equipo remoto
 logo de emparejamiento del ordenador remoto
 logon
+logs
 long
 long double
 long long
@@ -31703,6 +31959,7 @@ lt elind
 lt k
 lt kapcsol
 ltSZ)7x
+lte opr
 ltoztat
 ltoztathatod meg, miel
 ltoztathatsz.
@@ -31718,8 +31975,10 @@ lwUJ
 lw\fy
 lxo6Z
 lyd:{B87_
+lyeket az Asztal r
 lyez
 lyezve
+lyre van sz
 lyyl
 lz@V4"
 lzz9W
@@ -31756,8 +32015,10 @@ m prvk
 m tay c
 m th
 m thanh
+m thanh h
 m thanh t
 m tla
+m tra ghi ch
 m trong thi
 m" F8
 m"bK\t
@@ -31964,11 +32225,11 @@ m_fnCallback
 m_hConnection == k_HSteamNetConnection_Invalid
 m_hConnectionSelf == k_HSteamNetConnection_Invalid
 m_hListenSocketSelf == k_HSteamListenSocket_Invalid
+m_hParam != ICommandLine::InvalidHParam()
 m_hPollGroupSelf == k_HSteamNetPollGroup_Invalid
 m_hSteamListenSocket == k_HSteamListenSocket_Invalid
 m_hashImages
 m_heap
-m_heap.IsValidIndex( index )
 m_iReadBuffer == 0 && m_iReadBufferPos == 0
 m_iReadBufferPos < nCurrentSize
 m_iRefs > 0 && m_iRefs < 0x1000000
@@ -32224,6 +32485,7 @@ magma-ofb
 magnifying_glass
 mail
 mailPreferenceOption
+main_capsule_2x
 main_cxn
 maintenir 1 doigt
 mak i
@@ -32249,6 +32511,7 @@ marathi
 marker.m_nIndirectPing >= 0 && marker.m_nIndirectPing <= SteamNetworkPingLocationInternal_t::k_nMaxReasonablePing
 marrer Steam Link depuis le mode Big
 marrer la session de streaming.
+marrez Steam sur l'ordinateur distant
 mask
 maskGenAlgorithm
 maskGenFunc
@@ -32353,6 +32616,7 @@ metrics.m_nFrontPingLocal >= 0
 metrics.m_nFrontPingRemote >= 0
 metrics.m_nInteriorPing >= 0
 metrics.m_nScore <= sort.m_nPessimisticScore
+metro -pipewire en la l
 metros > Remote Play > Configuraci
 mfH]=
 mfU)
@@ -32530,6 +32794,7 @@ msync
 mtdQl*
 mtiq
 mtjB
+mu > Soukrom
 mu po
 mu se chcete p
 mu?B0u?A
@@ -32604,9 +32869,13 @@ n de escritorio seguro
 n de estad
 n de la retransmisi
 n de la transmisi
+n de lanzamiento "-pipewire" para habilitar la captura de video en Wayland.
+n de lanzamiento "-pipewire" y otorga los permisos de captura de escritorio cuando se te solicite.
 n de los controles
 n de los controles".
 n de lupa en el men
+n de pantalla y audio del sistema".
+n de pantalla y del audio del sistema
 n de tecla
 n de un controlador adicional en el equipo remoto.
 n de un controlador adicional en el ordenador remoto.
@@ -32615,6 +32884,7 @@ n del equipo remoto
 n del mando desde la interfaz del mando.
 n del mando en Big
 n del ordenador remoto
+n del sistema" -> "Privacidad y seguridad" -> "Grabaci
 n del stick derecho
 n del stick izquierdo
 n delar f
@@ -32633,11 +32903,17 @@ n est
 n fereastra de dialog pentru asociere
 n fereastra de dialog pentru autorizarea calculatorului la distan
 n fuera de la pantalla
+n ghi
+n ghi h
+n ghi m
 n ha fallado.
 n hi
 n istemcisi g
 n ja hiiren. Kannattaa kytke
+n ja j
 n joillekin peleille kohdasta Asetukset > Remote Play > Asiakasohjelman lis
+n kaappaamiseen pyydett
+n kaappaamiseen. Asetus l
 n khay nh
 n kosketusohjaimen ja lopetettua suoratoiston.
 n men
@@ -32667,10 +32943,13 @@ n que abre la interfaz del control en Par
 n que abre la interfaz del control en la "Configuraci
 n que abre la interfaz del mando en
 n que abre la interfaz del mando en Par
+n quy
 n re
 n remota
 n requiere la instalaci
+n ri
 n se
+n sis
 n sk
 n sormen napautuksella saat valikosta k
 n sormen napautuksella.
@@ -32692,6 +32971,7 @@ n tr
 n trong menu thi
 n urklipp
 n v re
+n ve istendi
 n y utilizarlo para hacer zoom.
 n yapan bir oyun bulunamad
 n yapmak i
@@ -32890,6 +33170,7 @@ n_6X>!H
 n`r|VXJD
 na ba
 na bas
+na g
 na giderek Steam Link'i Geni
 na giderek kontrolc
 na po
@@ -32948,15 +33229,20 @@ ncia: %2.2f ms (%s)
 ncia: %2.2fms (%s)
 ncia: <1 ms (%s)
 ncia: <1ms (%s)
+nd att spela in sk
 nd butonul pentru configura
 nd calculatorul gazd
+nd op
 nd pictograma aferent
 nd pictograma de scuturare a comenzilor.
 nd pictograma pentru vibra
+nd till skrivbordsinspelning vid uppmaning.
 nd'5
 ndZTNGA:3-'
 nda den f
+nda video yakalamay
 ndan eylemleri de
+nde g
 ndef_prefix
 ndef_suffix
 nden "D
@@ -32966,6 +33252,7 @@ nden b
 nden de
 nden ekran d
 nden ekrana getirebilirsiniz.
+nden izin vermeniz gerekir.
 nden jiroskop simgesine dokunarak jiroskobu devre d
 nden kaybolan kontroller simgesine dokunarak devre d
 nden kontrolc
@@ -32987,6 +33274,8 @@ ndre den knap, som bringer controller-overlayet frem, i Indstillinger > Remote P
 ndre den knap, som bringer controller-overlayet frem, i streamingindstillingerne, f
 ndre den knap, som bringer controller-overlayet frem, under "Avancerede klientindstillinger", f
 ne correspondante.
+nea de comandos para activar la captura de v
+nea de comandos y concede permisos de captura de escritorio cuando se te solicite.
 nea en el ordenador remoto
 nea en la computadora remota
 necessary data rewind wasn't possible
@@ -32999,6 +33288,7 @@ negative_int_value
 negotiation_ms
 nen automaattinen mykistys Steam Framesta
 nen mykistys
+nen tallennus.
 nenvoimakkuuden s
 nenvoimakkuutta asetusvalikosta liu'uttamalla
 nenvoimakkuutta ohjaimen k
@@ -33027,6 +33317,7 @@ nfW8'?90
 nfwx
 ng %s
 ng (Gi
+ng -> Quy
 ng Steam
 ng b
 ng c
@@ -33050,6 +33341,7 @@ ng t
 ng tay c
 ng th
 ng ti
+ng tin.
 ng to.
 ng to:
 ng tr
@@ -33064,10 +33356,14 @@ nga sk
 nga:
 ngkz
 ngsam(t)
+nh -pipewire
+nh -pipewire v
+nh Desktop khi
 nh b
 nh c
 nh ch
 nh d
+nh kh
 nh l
 nh m
 nh n
@@ -33076,7 +33372,9 @@ nh t
 nh th
 nh thi
 nh tr
+nh trong C
 nh vh
+nh video v
 niB\r
 nij B, by zamkn
 nij F6 lub BACK+Y, by prze
@@ -33127,6 +33425,7 @@ nnen eine Steuerung im Einstellungsmen
 nnen eine Vergr
 nnen nicht auf Ihrem Controller vorhandene Controller-Tasten
 nnen vor Beginn Ihres Streams die Touch-Steuerung f
+nnen.
 no accept addr or service specified
 no application protocol
 no cert set for us to verify
@@ -33252,6 +33551,7 @@ nonzero
 nopqrs(
 normal_keycode
 norwegian
+nost
 nosti klienta
 nosti nejsou.
 nosti relace
@@ -33308,7 +33608,12 @@ nqn,
 nrVJ
 nrcOK
 nref_nos
+nregistra ecranul din Configur
 nregistrare
+nregistrare ecran
+nregistrarea desktopului atunci c
+nregistrarea nu a fost posibil
+nregistrarea video folosind protocolul de comunicare Wayland.
 nregistrat
 nregistreaz
 nsBaseUrl
@@ -33395,20 +33700,27 @@ o da alavanca direita
 o da alavanca esquerda
 o da sua conta na rede local.
 o da tecla
+o de arranque -pipewire e concede permiss
+o de arranque -pipewire para permitires a captura de v
 o de comandos do Big Picture
 o de comandos do Big Picture.
 o de drivers adicionais no computador remoto.
+o de linha de comando "-pipewire" e conceda permiss
+o de linha de comando "-pipewire" par ativar a captura de v
 o de lupa no menu de configura
 o de lupa pelo menu de defini
 o de m
 o de v
+o do
 o do Steam Link ("Big Picture" ou "
 o do Steam Link ("Big Picture" ou "Ambiente de trabalho") nas defini
+o do Steam no computador remoto para mais informa
 o do controle para ativar bot
 o do controle para exibir ou ocultar o cursor do mouse.
 o do controle, acesse "Configura
 o do controle, acesse as configura
 o do controle.
+o do ecr
 o do stick direito
 o do stick esquerdo
 o encontrado. Por favor, pede um novo.
@@ -33427,12 +33739,15 @@ o no computador remoto
 o no menu de configura
 o no menu de defini
 o ocupado).
+o para captura da
+o para capturar a tela em "Ajustes do Sistema" > "Privacidade e Seguran
 o que abre a interface de controlos em "Defini
 o que abre a interface de controlos nas defini
 o que abre a sobreposi
 o remota
 o se esque
 o si
+o sous Wayland.
 o sup. direito
 o sup. esquerdo
 o superior dir.
@@ -33596,6 +33911,7 @@ oid_module_init
 oid_section
 oig60
 oigZ|!^k
+oikeuden n
 ojD.bS
 ojIL
 ok_new
@@ -33623,6 +33939,7 @@ one.lnum
 one.onum
 one.smcp
 one.sup
+onetoone_button
 only oneshot supported
 only-if-cached, max-stale=2678400
 onlyAA
@@ -33786,6 +34103,7 @@ p ikont meg
 p is not prime
 p not prime
 p ph
+p quy
 p tay c
 p theo
 p tho
@@ -33945,7 +34263,6 @@ pMsg->m_linksSecondaryQueue.m_pQueue == &m_queueRecvMessages
 pMsg->m_linksSecondaryQueue.m_pQueue == nullptr
 pMsg->m_linksSecondaryQueue.m_pQueue == pCheckQueue
 pMsg->m_nMessageNumber > nLastMsgNumForUnreliable
-pMsgInsertBefore->m_links.m_pQueue == &m_queueRecvMessages
 pMsgInsertBefore->m_linksSecondaryQueue.m_pQueue == nullptr
 pNDm
 pNI{
@@ -34072,6 +34389,7 @@ p`Hl
 paRC
 package
 package $0;\n\n
+package_groups
 package_header
 package_version
 packages
@@ -34185,6 +34503,7 @@ peli
 pelisessiota pit
 pem name bad prefix
 pem name too short
+pen a -pipewire parancssori be
 pen.
 penalty
 pending_callbacks
@@ -34401,6 +34720,7 @@ polygon
 polyline
 ponse : %2.2f ms (%s)
 ponse : <1 ms (%s)
+pontban.
 poor
 pop3
 pop3.
@@ -34438,6 +34758,7 @@ pp|B>>q
 pqualid
 pqueue_new
 pread64
+precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 presentationAddress
@@ -34449,6 +34770,7 @@ prf-gostr3411-94
 prflx
 price
 price_before_bundle_discount
+price_to_base_discount_on
 prim:
 primary
 prime%d:
@@ -34588,6 +34910,7 @@ pthread_setschedparam
 pthread_setspecific
 ptr + escape_overhead < s
 ptr < end && *ptr == '\"'
+ptr->m_links.m_pQueue == &m_queueRecvMessages
 pty<
 pub:
 pubData
@@ -34843,6 +35166,7 @@ r Ihren Account gefunden werden.
 r JX
 r Touch-Steuerung ausw
 r Wiedergabe aufnehmen
+r att aktivera videoinspelning under Wayland.
 r att kontrollera fj
 r att p
 r att placera dem p
@@ -34852,9 +35176,12 @@ r att st
 r att ta fram streamingmenyn
 r att zooma in.
 r den Big Picture-Modus
+r die Aufnahme der Bildschirmanzeige eine Berechtigung, die Sie unter Systemeinstellungen > Datenschutz & Sicherheit > Aufnahme von Bildschirm & Systemaudio erteilen k
 r ditt konto p
 r du begynder at streame.
 r du begynner
+r du blir bedt om det.
+r du bliver bedt om det.
 r einige Spiele in den Steam-Einstellungen unter
 r gyroskop.
 r inaktuell.
@@ -34863,6 +35190,7 @@ r inte inloggad
 r je mezi
 r kontroller i handkontrollens
 r layout
+r mer information.
 r nu ansluten till datorn som tillh
 r nu ansluten till en fj
 r offline
@@ -35045,6 +35373,7 @@ rcaron
 rd be ezt a t
 rdemes lehet csatlakoztatnod egy j
 rden
+rden f
 rder i kontrollkonfigurationen f
 rdida de paquetes: %2.2f %% (%2.2f %% de fotogramas perdidos)
 rdig
@@ -35052,7 +35381,9 @@ rdsset/lager
 re helyez
 re lurt
 re nie znajduj
+re opptak av skjermen i Systeminnstillinger -> Personvern og sikkerhet -> Skjerm- og systemlydopptak.
 rea de trab. protegida
+rea de trabalho quando solicitado.
 rea de trabalho") nas configura
 read
 read bio not set
@@ -35237,8 +35568,10 @@ ri -> Remote Play -> Op
 ri kosketusohjaimille.
 ri po
 ri prin glisarea glisorului de volum.
+ri sistem -> Intimitate
 ri transparen
 ri un buton de tip lup
+ri, adj enged
 ri/l
 riL\n
 riMm7\n
@@ -35271,6 +35604,7 @@ rja streaming
 rja streaming p
 rjar streama kan du aktivera touchkontroller f
 rjar streama kan du st
+rjestelm
 rk$Mx
 rk.f
 rk=r
@@ -35284,6 +35618,8 @@ rlHb
 rlfw
 rlust)
 rlust: %2.2f%% (%2.2f%% bildf
+rm og systemlyd.
+rm- och systemljudsinspelning.
 rm\niAB
 rm`5Z
 rma (1 Parmak)
@@ -35296,6 +35632,8 @@ rmdir
 rmen
 rmen er l
 rmen fra controller-overlayet.
+rmen i Systemindstillinger -> Anonymitet & sikkerhed -> Optagelse af sk
+rmen i Systeminst
 rmen i handkontrollens
 rmen via handkontrollens
 rmtangentbordet med ett tryck med tre fingrar.
@@ -35339,6 +35677,8 @@ rq+rO2Hn7
 rq5g
 rrdator och spelar %s via Steam Remote Play.
 rrdatorn
+rrdatorn med kommandoradsalternativet -pipewire f
+rrdatorn med kommandoradsalternativet -pipewire och ge tillst
 rrdatorn.
 rrelsesglas
 rrelsesglasknap i indstillingsmenuen og bruge den til at zoome ind.
@@ -35400,6 +35740,7 @@ rsebess
 rstoringsglas
 rstoringsglasknapp i inst
 rs~l
+rt n
 rt parma
 rt parmakla dokunarak, dokunmatik kontrolleri etkinle
 rtE1
@@ -35411,6 +35752,7 @@ rtime32_visibility_end
 rtime32_visibility_start
 rtime_estimated_notification
 rtime_mod_reviewed
+rtsmaskinen for mere information.
 rtx9f?
 ru&o
 ru_RU
@@ -35442,26 +35784,32 @@ s a bar
 s a tov
 s ahora conectado a un equipo remoto y jugando a %s a trav
 s ahora conectado al equipo de %s y jugando a %s a trav
+s amikor a rendszer k
 s ap traffic
 s automatisk fra
 s avant de d
 s be-/kikapcsol
 s bekapcsol
+s biztons
 s conectado a un ordenador remoto y jugando a %s a trav
 s conectado al ordenador de %s y jugando a %s a trav
 s de Steam Remote Play.
 s eg
 s elkezd
 s elrejthetsz vez
+s enged
 s felold
 s haszn
 s hs traffic
 s ikon meg
 s ikont meg
+s informaci
 s ki-/bekapcsol
 s kikapcsol
 s le
 s ohjain.
+s rendszerhangfelv
+s sikertelen
 s sikertelen.
 s sz
 s tov
@@ -35642,6 +35990,7 @@ scandir64
 scf])i
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheme=
 schermo
@@ -35971,6 +36320,7 @@ setmntent
 setpriority
 setsid
 setsockopt
+setting
 setup_tbuf
 setvbuf
 severity
@@ -36034,6 +36384,7 @@ short line
 short_description
 should retry
 should_suppress_discount_pct
+show_above_purchase
 show_broadcast
 show_in_search
 shoz
@@ -36138,6 +36489,7 @@ sm4-cfb8
 sm4-ctr
 sm4-ecb
 sm4-ofb
+small_capsule_2x
 smcp
 smime text error
 smime.p7m
@@ -36163,6 +36515,7 @@ socks4a
 socks5
 socks5h
 software_encoding_threads
+sok -> Adatv
 sok > Remote Play > Halad
 sok a Nagy K
 sok men
@@ -36207,6 +36560,7 @@ srp_controlleroverlay_bar
 srp_controlleroverlay_button_default
 srp_controlleroverlay_button_focused
 srp_controlleroverlay_button_pressed
+srp_controlleroverlay_fullscreen
 srp_controlleroverlay_iconcontroller_default
 srp_controlleroverlay_iconcontroller_focus
 srp_controlleroverlay_iconcontrollermouse_default
@@ -36243,6 +36597,7 @@ srp_controlleroverlay_powerbutton_focused
 srp_controlleroverlay_powerbutton_pressed
 srp_controlleroverlay_volume_off
 srp_controlleroverlay_volume_on
+srp_controlleroverlay_windowed
 srp_generate_client_master_secret
 srp_generate_server_master_secret
 srp_username
@@ -36258,6 +36613,8 @@ ss05
 ss06
 ss07
 ssal
+ssal a k
+ssal,
 ssel felhozhatod a tov
 ssel felhozhatsz egy men
 ssel tudod aktiv
@@ -36419,6 +36776,7 @@ stackLevel >= 0 && stackLevel < m_errorIndex
 stale
 standalone
 standalone_demo_appid
+standalone_demos
 start
 start_pairing_request
 start_pairing_response
@@ -36569,6 +36927,7 @@ streaming not supported
 streaming_client
 streaming_client_caps
 streaming_client_config
+streaming_log.txt
 streaming_settings.bin
 streaming_stats.bin
 streaminput.bin
@@ -36708,11 +37067,13 @@ t Iw
 t Nagy K
 t Steam Link
 t a Be
+t a gazdag
 t a j
 t a vez
 t az
 t ch
 t fra Udklipsholder
+t ghi h
 t gyroscope trong menu thi
 t hi
 t ig
@@ -36897,24 +37258,29 @@ tcsetattr
 td t
 tdTD4$
 tdXn
+te Steam pe computerul de la distan
 te configura
 te ei ole hetkellisesti k
 te est occup
 te jocul
 te kl
 te m
+te na hostitelsk
 te nastaven
 te novou kl
 te p
 te po ruce ovlada
+te pour en savoir plus.
 te prost
 te se,
 te stream, m
 te textul
 te transmisiunea
 te viteza mouse-ului controlerului
-te/Reseteaz
+te z
+te/reseteaz
 teamfortress.com
+tel men
 telem sd
 telephoneNumber
 teletexTerminalIdentifier
@@ -36999,10 +37365,13 @@ ticket_appdata
 tid(%u) pthread_key_create failed: %s\n
 tier
 tier1
+tietoa l
+tietokoneella k
 tietokoneen pariliitosikkunaan.
 tietokoneen valtuutusvalintaikkunaan.
 tigrinya
 tigt einen PIN-Code, um mit dem Streaming zu beginnen.
+tigt f
 time
 time not ascii format
 time stamp routines
@@ -37594,6 +37963,7 @@ ts_verify_cert
 ts`_:oh\tD
 tsa name mismatch
 tsa untrusted
+tsd
 tss04
 tst info setup error
 tswana
@@ -37837,7 +38207,9 @@ ubuk Butonu
 ub}u
 uct.\v
 udio
+udio do Sistema e da Tela".
 udio do Steam Frame automaticamente
+udio do sistema".
 ueUE5%
 ue\vk
 uf3=
@@ -38773,6 +39145,7 @@ vbuE'
 vc"j&
 vc_copied.dat
 vc_options.dat
+vci oken Wayland.
 vdE%
 vdg0Z
 vdx?
@@ -38810,10 +39183,12 @@ vel.
 veletk
 veletv
 venli Masa
+venlik -> Ekran ve Sistem Sesi Kayd
 veoh.com
 ver en pinkode for at begynde streaming
 ver installation af yderligere drivere p
 ver pinkod f
+ver tillst
 ver ytterligare installation av drivrutiner p
 verification failure
 verifyCAfile
@@ -39135,6 +39510,7 @@ win32_merger
 win32_name_converter
 win32_splitter
 win32_unload
+window_curvature
 window_frame_offset_x
 window_frame_offset_y
 window_pixel_density
@@ -39565,6 +39941,7 @@ yl|B
 ymq2N
 ynJ&
 ynm+^:1
+ynnist
 ynnistystilaksi televisiotilan tai ty
 yny9
 yn{D
@@ -39604,6 +39981,8 @@ ytkownika %s i grasz w %s poprzez Steam Remote Play.
 ytkownikiem %s
 ytynyt tililt
 ytynyt. Pyyd
+ytyy is
+ytyy kohdasta J
 yuF>
 yuL3
 yu[w
@@ -39626,6 +40005,7 @@ y{uwqsmoikegac
 y{wfG
 y|A6
 y}bx
+z at
 z nincs enged
 z ve %s oynuyorsunuz.
 z!!RK
@@ -39719,13 +40099,13 @@ z_di,yY
 z_errmsg
 z_nF;
 z`bG_
-zachycovani
 zacute\nZdotaccent\nzdotaccent
 zadkn\r
 zat dotykov
 zat re
 zat tak,
 zaton nem tal
+zaznam
 zb9iF
 zbJ8
 zbJR
@@ -39736,6 +40116,7 @@ zc]g
 zcp6
 zc{y
 zd a vez
+zd meg a Steam mappa logs\streaming_log.txt f
 zdan yerel a
 zde fiziksel olarak bulunmayan butonlar
 zeD[
@@ -39790,6 +40171,11 @@ zlibCompileFlags
 zlibVersion
 zmwB#
 znYW&LX~
+znam obrazovky a syst
+znam obrazu vy
+znam plochy.
+znam se nezda
+znam videa ve spr
 zo_y
 zoa`h
 zone

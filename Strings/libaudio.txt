@@ -78,7 +78,6 @@ $ORIGIN
 -chromeosnopreallocate
 -chromeosverbose
 -clientbeta
--extra
 ./obj_libaudio_steamrtarm64/release/audio.so
 .cpl
 .mp3
@@ -111,6 +110,7 @@ $ORIGIN
 /etc/mtab
 /proc/mounts
 /proc/self/maps
+/sink/%s/volume-control
 /steamrtarm64
 /tmp
 /tmp/disk-free.XXXXXX
@@ -385,18 +385,21 @@ January
 July
 June
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save bluetooth.autoswitch-to-headset-profile false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save bluetooth.autoswitch-to-headset-profile true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save monitor.alsa.enable-external-volume-control true
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.features.audio.mono false
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.features.audio.mono true
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio true
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio-surround false
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings --save node.stream.spatial-audio-surround true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings bluetooth.autoswitch-to-headset-profile false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings bluetooth.autoswitch-to-headset-profile true
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono false
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" wpctl settings node.features.audio.mono true
 LOCK_EX
 LOCK_SH
 LoadFileRangeIntoBuffer_Internal
 Lowered '%s' -> '%s'\n
+M;LU}
 MUSIC
 March
 Matched '%s' -> '%s'\n
@@ -760,6 +763,9 @@ alpha
 alphasort64
 alse
 analog
+analog-stereo
+analog-surround-51
+analog-surround-71
 application.icon_name
 application.id
 application.name
@@ -830,6 +836,12 @@ delete
 delete[]
 device.bus
 device.description
+device.volume.read-mute
+device.volume.read-volume
+device.volume.write-mute-toggle
+device.volume.write-mute-value
+device.volume.write-volume-updown
+device.volume.write-volume-value
 dgettext
 digit
 disk-free command failed\n
@@ -909,6 +921,9 @@ half
 handset
 handsfree
 hdmi
+hdmi-stereo
+hdmi-surround
+hdmi-surround71
 headphones
 headset
 hidden alias for
@@ -1028,7 +1043,6 @@ opendir
 operator
 operator""
 org.valvesoftware.steam
-output:hdmi-
 pConv && pConv->GetDelimiterLength() > 0
 pEndingDelim && pEndingDelim[0]
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
@@ -1105,6 +1119,8 @@ pa_threaded_mainloop_new
 pa_threaded_mainloop_start
 pa_threaded_mainloop_stop
 pa_threaded_mainloop_unlock
+pactl send-message %s %s
+pactl send-message %s mute-toggle
 pclose
 phone
 playback
@@ -1190,7 +1206,7 @@ stderr
 stdin
 stdout
 steam
-stereo
+steamos.supports-hdmi-cec
 strcasecmp
 strcasestr
 strchr
@@ -1214,7 +1230,6 @@ strtol
 strtold_l
 strtoll
 strtoul
-surround71
 symlink
 syntax error at line %d near:
 syscall
@@ -1271,6 +1286,8 @@ vector::_M_realloc_insert
 video
 virtual thunk to
 void
+volume-down
+volume-up
 vsnprintf
 vtable for
 vtable for __cxxabiv1::__class_type_info
@@ -1293,6 +1310,7 @@ wmemcpy
 wmemmove
 wmemset
 wpctl settings bluetooth.autoswitch-to-headset-profile
+wpctl settings monitor.alsa.enable-external-volume-control
 wpctl settings node.features.audio.mono
 wpctl settings node.stream.spatial-audio
 wpctl settings node.stream.spatial-audio-surround

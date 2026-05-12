@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "OLED-es Steam Deck",
     "VerifiedProgram_DeckShopBannerAlt": "Steam Deck szalagkép: „A játékaid, bárhol”",
     "VerifiedProgram_DeckDisclaimer": "Az előzetes nem feltétlenül tükrözi a tényleges Steam Deck játékmenetet.",
+    "StoreItemFound": "%1$s Megtalálva (%2$s)",
+    "StoreItemNotFound": "Nem található (%1$s)",
     "Dummy": "üres"
 }

@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Steam Deckバナー：「あなたのゲームに、どこからでもアクセス」",
     "VerifiedProgram_DeckDisclaimer": "予告編は実際のSteam Deckでのゲームプレイを反映していない場合があります",
+    "StoreItemFound": "%1$s 見つかりました（%2$s）",
+    "StoreItemNotFound": "見つかりませんでした（%1$s）",
     "Dummy": "dummy"
 }

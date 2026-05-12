@@ -66,6 +66,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -102,7 +103,7 @@
               cancelToken: _ ? _.token : void 0,
             });
             if (_ && _.token.reason) return null;
-            if (_ && 200 == _.status && _.data && 1 == _.data.success)
+            if (_ && 200 == _.status && _.data && _.data.success == _._)
               return (this.m_curDebugInfo = _.data), this.m_curDebugInfo;
           } catch (_) {
             let _ = (0, _._)(_);
@@ -125,7 +126,7 @@
               cancelToken: _ ? _.token : void 0,
             });
             if (_ && _.token.reason) return !1;
-            if (_ && 200 == _.status && _.data && 1 == _.data.success) {
+            if (_ && 200 == _.status && _.data && _.data.success == _._) {
               const _ = _._.GetOrCreateBroadcastInfo(
                 this.m_steamid.ConvertTo64BitString(),
               );
@@ -221,7 +222,7 @@
               cancelToken: _ ? _.token : void 0,
             });
             if (_ && _.token.reason) return !1;
-            if (_ && 200 == _.status && _.data && 1 == _.data.success)
+            if (_ && 200 == _.status && _.data && _.data.success == _._)
               return !0;
           } catch (_) {
             let _ = (0, _._)(_);
@@ -255,6 +256,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -319,7 +322,7 @@
           return (0, _.jsxs)("div", {
             className: _.DisplaySection,
             children: [
-              Boolean(_.last_error_result && 1 != _.last_error_result) &&
+              Boolean(_.last_error_result && _.last_error_result != _._) &&
                 (0, _.jsxs)("div", {
                   className: _.SubSection,
                   children: [
@@ -1166,7 +1169,7 @@
           _ = null == _ ? void 0 : _.ConvertTo64BitString(),
           _ = (function () {
             const [_] = (0, _.useState)(
-              () => (0, _._)("ewatchlocation", "application_config") || 5,
+              () => (0, _._)("ewatchlocation", "application_config") || _._._,
             );
             return _;
           })(),
@@ -1212,7 +1215,7 @@
                             children: (0, _.jsx)(_._, {
                               children: (0, _.jsx)(_._, {
                                 emoticonStore: _._,
-                                watchLocation: 6,
+                                watchLocation: _._._,
                                 steamID: _,
                                 broadcastID: _ ? _.m_ulBroadcastID : void 0,
                               }),
@@ -1305,7 +1308,7 @@
                     className: _.RelatedEvents,
                     children: (0, _.jsx)(_._, {
                       clanAccountID: _.clanAccountID,
-                      trackingLocation: 6,
+                      trackingLocation: _._._,
                       partnerEventStore: _._,
                       bViewAllShowInfiniteScroll: !0,
                     }),

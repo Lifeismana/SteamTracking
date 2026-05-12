@@ -638,22 +638,23 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRow
 {
+	margin-inline: -5px;
 }
 
 .apphub_Content
 {
-	position: relative;
+	margin: 0 auto;
 	max-width: 948px;
 	padding: 0 1%;
-	margin: 0 auto;
+	position: relative;
 	text-align: left;
 }
 
 .apphub_Discussion_Content
 {
 	position: relative;
-	max-width:948px;
 	margin: 16px auto 0 auto;
+	max-width: 948px;
 	text-align: left;
 }
 
@@ -665,15 +666,13 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_Card
 {
-	position: relative;
-	float: left;
-	text-align: left;
 	background-color: #0d131b;
 	border: 1px solid transparent;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-bottom: 10px;
-	padding: 0px;
+	float: left;
+	margin: 0 5px 10px;
+	padding: 0;
+	position: relative;
+	text-align: left;
 }
 
 .apphub_Card.interactable
@@ -804,7 +803,6 @@ a.apphub_more_friends_who_play:hover
 	vertical-align: middle;
 	margin-right: 5px;
 }
-
 
 .apphub_CardMetaData .review_award_aggregated,
 .apphub_UserReviewCardContent .review_award_aggregated {
@@ -1506,10 +1504,9 @@ h3.apphub_responsive_menu_title {
 }
 
 
-@media screen and ( max-width: 910px ) {
+@media screen and (max-width: 910px) {
 	.apphub_HeaderTop {
-		padding-right: 12px;
-		padding-left: 12px;
+		padding-inline: 12px;
 		padding-bottom: 6px;
 	}
 }

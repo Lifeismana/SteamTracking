@@ -499,6 +499,9 @@ $O\tdwR\rox\\r*
 $XI(6
 $\n k_EClanInGameContentReleaseEvent
 $\n k_ECodecUsageReasonGameRecording
+$\n k_EGamePerformanceSetting_Custom
+$\n k_EGamePerformanceSetting_Medium
+$\n k_EGamePerformanceSetting_NotSet
 $\n k_ESteamReviewScore_VeryNegative
 $\n k_ESteamReviewScore_VeryPositive
 $\nY8O
@@ -679,6 +682,7 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAcceptAllEULAs
 %\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
@@ -1225,7 +1229,6 @@ $ffn
 (h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
-(int)(intp)m_hParam != -1
 (iub & (m_nSizeWithStack-1)) == 0
 (main)
 (merge
@@ -1495,6 +1498,7 @@ $ffn
 ,name:
 ,section=
 ,value:
+,x11,windows
 -"ke6
 -*-bitstream charter-medium-r-normal--*-120-*-*-p-*-iso8859-1
 -*-courier 10 pitch-medium-r-normal--*-120-*-*-m-*-iso8859-1
@@ -1651,6 +1655,8 @@ $ffn
 -steamos3
 -steamrow
 -tesla
+-test-device-type
+-test-glibc-version
 -textclient
 -tryjunction
 -verifyfiles
@@ -1907,7 +1913,7 @@ $ffn
 /data/src/tier1/utlqueue.cpp
 /data/src/tier1/utlstring.cpp
 /data/src/tier1/utlsymbol.cpp
-/data/src/vgui2/src/LocalizedStringTable.cpp
+/data/src/vgui2/src/localizedstringtable.cpp
 /data/src/vstdlib/commandline.cpp
 /data/src/vstdlib/coroutine.cpp
 /data/src/vstdlib/debugstatssystem.cpp
@@ -1985,7 +1991,6 @@ $ffn
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
@@ -2038,10 +2043,6 @@ $ffn
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:14:43
-00:15:01
-00:15:04
-00:15:22
 01/01/00
 0123456789
 0123456789.
@@ -2049,6 +2050,9 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+06:46:10
+06:46:22
+06:46:27
 08bX
 0?0L
 0A/8
@@ -2552,6 +2556,7 @@ $ffn
 2,THh
 2.1 Chromium 1.9
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20.GamePerformanceSettings.EGamePerformanceSetting
 2000
 2048
 208.64.200.0/22
@@ -2592,6 +2597,7 @@ $ffn
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
+23GamePerformanceSettings
 23IUnbufferedSendCallback
 24CCryptoKeyBase_RawBuffer
 24CDirWatcherPollingThread
@@ -2781,11 +2787,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -5560,7 +5566,9 @@ EForeignKeyAction
 EFriendRelationship
 EGCAction
 EGCStatus
+EGamePerformanceSetting
 EGamingDeviceType
+EGamingDeviceType override: %d\n
 EGpuDriverId
 EHTTPMethod
 EHTTPStatusCode
@@ -5810,7 +5818,6 @@ Error: XRRFreeCrtcInfo() is not available\n
 Error: XRRFreeOutputInfo() is not available\n
 Error: XRRGetCrtcInfo() is not available\n
 Error: XRRGetOutputInfo() is not available\n
-Error: failed to disable wireless power management: %d\n
 Error: failed to forward message to bootstrap log: %s\n
 Error: invalid command: %d
 Error: parent failed to provide a valid IPC socket\n
@@ -6263,6 +6270,7 @@ GameInstall
 GameItemID
 GameManagedItems
 GameOverlayUI
+GamePerformanceSettings
 GameServer
 GameStop
 Gamepad
@@ -7281,7 +7289,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  8 2026
+May 12 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -7977,6 +7985,7 @@ Over consumption limit
 OverlayFrameMark
 OverlayInput
 OverlayRendering
+Override the current EGamingDeviceType (main/dev only)
 Overrides Steam client beta for single session
 Overriding client beta for this session from '%s' to '%s' (clientbeta flag)
 Overwriting on-disk registry with newly created registry.
@@ -8369,6 +8378,7 @@ Protocol
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Protocol error
+Provide a glibc version for testing
 Provider doesn't support currency
 Proxy
 Proxy Authentication Required
@@ -8552,6 +8562,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -8751,6 +8763,8 @@ SCT_set_signature_nid
 SCT_set_version
 SDL_GetError
 SDL_SetCurrentThreadPriority
+SDL_VIDEODRIVER
+SDL_VIDEO_DRIVER
 SDQn]
 SECG curve over a 112 bit prime field
 SECG curve over a 113 bit binary field
@@ -9000,6 +9014,7 @@ STEAM_BIGPICTURE
 STEAM_BOOTSTRAP_LOG_VERBOSE
 STEAM_CLIENT_CONFIG_FILE
 STEAM_CLIENT_LOG_FOLDER
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_RUNTIME
 STEAM_STEAMRT_RECURSION_GUARD
@@ -9292,7 +9307,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May  8 2026 00:14:55
+Startup - updater built May 12 2026 06:46:21
 State
 StaticFileWriterThread()
 Steam
@@ -10150,6 +10165,7 @@ Visa Electron (BoaCompra)
 Vql4
 W%0Qv4AV
 WARNING
+WARNING: %s='%s' does not allow fallback. Appending 'x11,windows'\n
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WARNING: setlocale('%s') failed, using locale: '%s'. International characters may not work.\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
@@ -10848,6 +10864,7 @@ Zulu
 \n\rreply_address
 \n\rreserved_name
 \n\rrouting_appid
+\n\rrtime_created
 \n\rscreen_height
 \n\rserver_secret
 \n\rsize_unzipped
@@ -12793,6 +12810,7 @@ d2i_PrivateKey
 d2i_PublicKey
 d2i_SSL_SESSION
 d2i_ocsp_nonce
+d5b4a56add4d2013abf4ac5fc574142af98147e8530c2e8927267c0d35da56f0
 d=%-2d hl=%ld l=%4ld
 d=%-2d hl=%ld l=inf
 dITRedirect
@@ -13715,6 +13733,8 @@ gai_strerror
 galician
 galileo
 game
+game_resolution_height
+game_resolution_width
 gameid
 gameitemid
 gameoverlayrenderer.so
@@ -14970,6 +14990,9 @@ k_EConnectionTypeWebSocket == GetConnectionType( hConnection )
 k_EEventBroadcastStart
 k_EEventMatchStart
 k_EEventPartnerMaxType
+k_EGamePerformanceSetting_High
+k_EGamePerformanceSetting_Low
+k_EGamePerformanceSetting_Ultra
 k_EHandshakeStateComplete == m_EHandshakeState
 k_EHandshakeStateInProgress == m_EHandshakeState
 k_EIPTypeV4 == addr.GetType()
@@ -16443,10 +16466,10 @@ m_errorIndex>=0
 m_fileReader
 m_fnCompletionCallback
 m_hConnection != 0xdddddddd
+m_hParam != ICommandLine::InvalidHParam()
 m_hSocket == INVALID_SOCKET
 m_hashMap
 m_heap
-m_heap.IsValidIndex( index )
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
@@ -18466,6 +18489,7 @@ pq->q[item->index] == item
 pqualid
 pqueue_new
 pread64
+precise_frame_rate
 prediction resistance not supported
 preferredDeliveryMethod
 preloadonly
@@ -19009,6 +19033,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheduledItem.m_ulTime
 scheme=
@@ -19302,6 +19327,7 @@ setpriority
 setrlimit
 setsid
 setsockopt
+setting
 setup_tbuf
 setvbuf
 sfixed32

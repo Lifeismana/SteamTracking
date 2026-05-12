@@ -372,7 +372,7 @@
     "GroupSettings_Permissions_ConfirmDeleteButton": "Eliminar",
     "GroupSettings_Permissions_Heading_General": "Configuración general",
     "GroupSettings_Permissions_Heading_MembersAndRoles": "Miembros y roles",
-    "GroupSettings_Permissions_Heading_RoomManagement": "Gestión de sala de chat",
+    "GroupSettings_Permissions_Heading_RoomManagement": "Administración de sala de chat",
     "GroupSettings_Permissions_CreateRenameDeleteChannel": "Crear y eliminar canales",
     "GroupSettings_Permissions_Ban": "Bloquear miembros",
     "GroupSettings_Permissions_Kick": "Expulsar miembros",

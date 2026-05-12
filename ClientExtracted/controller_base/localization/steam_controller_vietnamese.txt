@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyro - Trục dọc xuống"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyro - Trục đảo"
 	"origin_SteamDeck_Gyro_Roll"				"Gyro - Trục nghiêng"
+	"origin_SteamDeck_LGrip"					"Chạm lưng trái"
+	"origin_SteamDeck_RGrip"					"Chạm lưng phải"
 
 	"origin_horipad_m1"							"Nút M1"
 	"origin_horipad_m2"							"Nút M2"

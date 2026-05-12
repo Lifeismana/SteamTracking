@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyro (helning)"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyro (dreining)"
 	"origin_SteamDeck_Gyro_Roll"				"Gyro (rulling)"
+	"origin_SteamDeck_LGrip"					"Venstre grep (berøring)"
+	"origin_SteamDeck_RGrip"					"Høyre grep (berøring)"
 
 	"origin_horipad_m1"							"M1-knapp"
 	"origin_horipad_m2"							"M2-knapp"

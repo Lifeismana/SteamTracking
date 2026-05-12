@@ -225,10 +225,10 @@ $ORIGIN
 /tmp/.steam-sem-names
 /tmp/steam_monitor.log
 /tmp/steam_monitor.log.last
-00:14:43
-00:14:45
 0123456789ABCDEF
 0123456789abcdef
+06:46:10
+06:46:14
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
@@ -318,7 +318,7 @@ Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-May  8 2026
+May 12 2026
 MbP?H
 MemFree:
 MemTotal:
@@ -356,6 +356,7 @@ Root
 RunCallbacks
 SDL_GetError
 SDL_SetCurrentThreadPriority
+STEAM_DESKTOP_APP_AFFINITY_LIST
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 ServerMain
 Size
@@ -810,6 +811,7 @@ scandir
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 script
 secblock.h

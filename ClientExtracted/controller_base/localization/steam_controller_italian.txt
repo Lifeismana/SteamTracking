@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Giroscopio (Beccheggio)"
 	"origin_SteamDeck_Gyro_Yaw"					"Giroscopio (Imbardata)"
 	"origin_SteamDeck_Gyro_Roll"				"Giroscopio (Rollio)"
+	"origin_SteamDeck_LGrip"					"Tocco impugnatura sinistra	"
+	"origin_SteamDeck_RGrip"					"Tocco impugnatura destra"
 
 	"origin_horipad_m1"							"Pulsante M1"
 	"origin_horipad_m2"							"Pulsante M2"

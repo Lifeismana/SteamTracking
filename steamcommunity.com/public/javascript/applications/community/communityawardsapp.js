@@ -64,7 +64,7 @@
       var t = c(78327),
         s = c(22837);
       function o() {
-        return t.TS.IN_CLIENT && (0, s.DO)(t.TS.LAUNCHER_TYPE);
+        return t.TS.IN_CLIENT && (0, s.DOG)(t.TS.LAUNCHER_TYPE);
       }
     },
     22797: (e, r, c) => {

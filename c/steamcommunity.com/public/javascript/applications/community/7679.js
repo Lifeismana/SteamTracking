@@ -112,6 +112,7 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return Array.isArray(_) ? _[0] : _;
       }
@@ -122,10 +123,12 @@
       function _(_, _) {
         return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
       }
-      const _ = [1, 3, 2],
-        _ = [1, 3],
-        _ = [5, 4],
-        _ = [7, 6],
+      const _ = [_._._, _._._, _._._, _._._],
+        _ = [_._._, _._._, _._._],
+        _ = [_._._, _._._],
+        _ = [_._._, _._._],
+        _ = [_._._, _._._],
+        _ = [_._._, _._._, _._._, _._._, _._._, _._._],
         _ = {
           capsule: {
             width: 800,
@@ -283,7 +286,7 @@
           localized_marketing_message: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [1, 3, 2, 10],
+            rgAcceptableTypes: _,
           },
           localized_optin_banner: {
             width: 1e3,
@@ -293,33 +296,33 @@
           localized_marketingmessage_webm: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           localized_marketingmessage_mp4: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           localized_partnerevent_webm: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           localized_partnerevent_mp4: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           localized_subtitles: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [6, 7],
+            rgAcceptableTypes: [_._._, _._._],
           },
           localized_marketingmessage_poster: {
             width: 528,
             height: 297,
-            rgAcceptableTypes: [1, 3],
+            rgAcceptableTypes: [_._._, _._._],
           },
           localized_marketingmessage_background: {
             width: 570,
@@ -336,7 +339,7 @@
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+            rgAcceptableTypes: _,
           },
           user_poll_background: {
             width: 0,
@@ -377,12 +380,12 @@
           takeover_webm_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           takeover_mp4_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           takeover_mobile_art: {
             width: 500,
@@ -392,12 +395,12 @@
           takeover_webm_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           takeover_mp4_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           takeunder_art: {
             width: 1200,
@@ -464,7 +467,8 @@
       function _(_) {
         const _ = _[_];
         return (
-          _.rgAcceptableTypes.includes(6) || _.rgAcceptableTypes.includes(7)
+          _.rgAcceptableTypes.includes(_._._) ||
+          _.rgAcceptableTypes.includes(_._._)
         );
       }
       function _(_, _) {
@@ -481,6 +485,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -504,7 +509,7 @@
             (this.file = _),
             (this.filename = _),
             (this.fileType =
-              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : 0),
+              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : _._._),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -537,6 +542,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -611,7 +617,7 @@
         GetClanSteamID() {
           return this.m_clanSteamID;
         }
-        async AddImage(_, _ = 0) {
+        async AddImage(_, _ = _.Bhc) {
           const { language: _ } = (0, _._)(_.name, _);
           return this.AddImageForLanguage(_, _);
         }
@@ -632,7 +638,7 @@
           );
           return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
         }
-        async AddExistingClanImage(_, _ = 0) {
+        async AddExistingClanImage(_, _ = _.Bhc) {
           const _ = _._.GetHashAndExt(_);
           if (!_) return !1;
           const _ = _._.GenerateEditableURLFromHashAndExt(
@@ -1115,7 +1121,7 @@
                 const _ = await __webpack_require__(
                   _,
                   _.filename,
-                  null !== (_ = _.language) && void 0 !== _ ? _ : -1,
+                  null !== (_ = _.language) && void 0 !== _ ? _ : _.xPp,
                   _,
                 );
                 (_.status = _.bSuccess ? "success" : "failed"),
@@ -1166,7 +1172,7 @@
                       const _ = await _(
                         _,
                         _.filename,
-                        null !== (_ = _.language) && void 0 !== _ ? _ : -1,
+                        null !== (_ = _.language) && void 0 !== _ ? _ : _.xPp,
                         _,
                       );
                       (_.status = _.bSuccess ? "success" : "failed"),
@@ -1197,22 +1203,24 @@
           return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
+        return __webpack_require__.includes(_._.k_ESteamRealmGlobal)
+          ? _.Bhc
+          : _.ZLm;
       }
-      function _(_, _ = 0) {
+      function _(_, _ = _.Bhc) {
         let _ = _.lastIndexOf(".");
         -1 != _ && (_ = _.slice(0, _).toLowerCase());
         let _ = null,
           _ = 0;
-        _.endsWith("korean") && ((_ = 4), (_ = 6));
-        for (let _ = 0; _ < 31; ++_) {
-          const _ = (0, _._)(_);
+        _.endsWith("korean") && ((_ = _.Pn1), (_ = 6));
+        for (let _ = _.Bhc; _ < _.bP9; ++_) {
+          const _ = (0, _.wwZ)(_);
           if (_.length <= _) continue;
           if (_.endsWith(_) && _.length > _.length + 2) {
             const _ = _[_.length - _.length - 1];
             /\p{Alphabetic}|\p{Number}/u.test(_) || ((_ = _), (_ = _.length));
           }
-          const _ = (0, _._)(_);
+          const _ = (0, _.LgB)(_);
           _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
         }
         return {
@@ -1233,6 +1241,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -1391,7 +1400,7 @@
                 params: _,
               },
             );
-          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
+          if (!_ || 200 != _.status || _.data.success != _._) return _.data;
           let _ = this.m_mapClanToImages.get(_);
           if (_) {
             let _ = _.findIndex((_, _, _) => _.imageid == _);
@@ -1437,25 +1446,26 @@
         _: () => _,
       });
       __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           _.indexOf("?") > 0 && (_ = _.split("?")[0]),
           _.endsWith(".jpg") || _.endsWith(".jpeg")
-            ? 1
+            ? _._._
             : _.endsWith(".png")
-              ? 3
+              ? _._._
               : _.endsWith(".gif")
-                ? 2
+                ? _._._
                 : _.endsWith(".mp4")
-                  ? 4
+                  ? _._._
                   : _.endsWith(".webm")
-                    ? 5
+                    ? _._._
                     : _.endsWith(".vtt")
-                      ? 6
+                      ? _._._
                       : _.endsWith(".srt")
-                        ? 7
+                        ? _._._
                         : _.endsWith(".webp")
-                          ? 10
+                          ? _._._
                           : void 0
         );
       }
@@ -1512,8 +1522,8 @@
           );
         }
         constructor() {
-          (this.m_eCurLang = (0, _._)(_._.LANGUAGE)),
-            (this.m_rgHasData = (0, _._)([], 31, !1)),
+          (this.m_eCurLang = (0, _.sfN)(_._.LANGUAGE)),
+            (this.m_rgHasData = (0, _._)([], _.bP9, !1)),
             (this.m_bHasLocalizationContext = !1),
             (this.m_callback = new _._()),
             (0, _._)(this);
@@ -1552,6 +1562,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -1573,26 +1584,26 @@
         }
         BHandleKeyPress(_) {
           switch (_) {
-            case 38:
+            case _._:
               this.SetSelectedIndexDelta(-1);
               break;
-            case 40:
+            case _._:
               this.SetSelectedIndexDelta(1);
               break;
-            case 36:
+            case _._:
               this.SetSelectedIndex(0);
               break;
-            case 33:
+            case _._:
               this.SetSelectedIndexDelta(-this.GetPageSize());
               break;
-            case 35:
+            case _._:
               this.SetSelectedIndex(-1);
               break;
-            case 34:
+            case _._:
               this.SetSelectedIndexDelta(this.GetPageSize());
               break;
-            case 13:
-            case 9:
+            case _._:
+            case _._:
               if (void 0 === this.state.selectedIndex)
                 return (
                   this.props.onSuggestionSelected(this.props.strSearch), !1
@@ -1601,7 +1612,7 @@
                 this.m_rgCurrentMatches[this.state.selectedIndex],
               );
               break;
-            case 27:
+            case _._:
               this.props.onSuggestionSelected(this.props.strSearch);
               break;
             default:
@@ -1913,7 +1924,7 @@
           !_.ctrlKey &&
           this.m_MentionDialog.BHandleKeyPress(_.keyCode)
             ? _.preventDefault()
-            : (8 != _.keyCode && 46 != _.keyCode) ||
+            : (_.keyCode != _._ && _.keyCode != _._) ||
               (this.m_iMentionSearchCancelledOffset = void 0);
         }
         FindMatchOpener(_, _, _) {
@@ -2094,6 +2105,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -2118,7 +2131,7 @@
             async (_) => {
               if (
                 (_.ClearImages(),
-                _ && (_(!0), await _.AddExistingClanImage(_, 0)))
+                _ && (_(!0), await _.AddExistingClanImage(_, _.Bhc)))
               ) {
                 _(_);
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
@@ -2175,7 +2188,7 @@
                         width: _,
                         height: _,
                       },
-                      fileType: 3,
+                      fileType: _._._,
                     }),
                     _,
                   );
@@ -3851,7 +3864,7 @@
               (0, _.jsx)(
                 "option",
                 {
-                  value: -1,
+                  value: _.xPp,
                   children: (0, _._)("#language_selection_none"),
                 },
                 "langpicker_unset",
@@ -3861,7 +3874,7 @@
           const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
           for (const _ of _._.GetLanguageListForRealms(_)) {
             if (_ && !_(_)) continue;
-            const _ = (0, _._)(_),
+            const _ = (0, _.LgB)(_),
               _ = (0, _._)("#Language_" + _),
               _ = !(!_ || !_(_));
             _.push({
@@ -3970,6 +3983,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -4001,7 +4015,8 @@
                 null == _ || _.drawImage(_, _, _, _, _, _, _, _, _),
                   _.toBlob((_) => {
                     const _ = _.toDataURL(_);
-                    3 !== _ && __webpack_require__.startsWith("data:image/png")
+                    _ !== _._._ &&
+                    __webpack_require__.startsWith("data:image/png")
                       ? _("Unable to encode into the requested file format")
                       : _
                         ? ((_.file = (0, _._)(_, _.filename)),
@@ -4162,9 +4177,9 @@
       }
       function _(_) {
         switch (_) {
-          case 3:
+          case _._._:
             return "image/png";
-          case 1:
+          case _._._:
             return "image/jpeg";
         }
       }

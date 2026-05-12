@@ -30,11 +30,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _, _;
         const _ = "floatingforumreportedsubjectslist",
-          _ = (0, _._)(1, _.gidTopic),
+          _ = (0, _._)(_._, _.gidTopic),
           [_, _] = (0, _.useState)(() => void 0 !== localStorage[_]);
         if (
           ((0, _.useMemo)(() => {
@@ -156,7 +158,7 @@
         var _, _;
         const { subject: _ } = _,
           _ = _(_.subject),
-          _ = _(_.clanSteamId, 7, _.forumId, _.subject_group_id);
+          _ = _(_.clanSteamId, _._, _.forumId, _.subject_group_id);
         let _ = null;
         if (("0" === _.subject_id && (_ = "Topic"), null === _ && _.isSuccess))
           for (const _ of null !== (_ = _.data.comments) && void 0 !== _
@@ -245,6 +247,17 @@
           forumId: _,
         };
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 5,
+        _ = 7,
+        _ = 10;
     },
   },
 ]);

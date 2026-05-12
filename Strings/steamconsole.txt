@@ -271,6 +271,7 @@ $\nY8O
 -sitelicense
 -steamdeckdisplay
 -steammachinedisplay
+-test-device-type
 ./depotscripts
 ./obj_steamconsole_steamrtarm64/release/steamconsole.so
 .cpl
@@ -1098,6 +1099,7 @@ EFriendRelationship
 EGCAction
 EGCStatus
 EGamingDeviceType
+EGamingDeviceType override: %d\n
 EGpuDriverId
 EHTTPMethod
 EHTTPStatusCode
@@ -1909,6 +1911,7 @@ Others In Progress
 Out of Resources
 Out of stock
 Over consumption limit
+Override the current EGamingDeviceType (main/dev only)
 Owner
 PATCH
 POLi
@@ -2051,6 +2054,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -2721,6 +2726,7 @@ Wrong Price
 X360
 XXXXXX
 Xhosa
+YO I
 YYYY
 Yandex
 Yapi Kredi

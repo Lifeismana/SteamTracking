@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Banner do Steam Deck: \"Os seus jogos em todo lugar\"",
     "VerifiedProgram_DeckDisclaimer": "O trailer pode não representar a jogabilidade no Steam Deck",
+    "StoreItemFound": "%1$s encontrados (%2$s)",
+    "StoreItemNotFound": "Não encontrados (%1$s)",
     "Dummy": "dummy"
 }

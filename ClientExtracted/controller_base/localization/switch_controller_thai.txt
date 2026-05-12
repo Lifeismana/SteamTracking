@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Joy-Con ขวา ไจโร หัน"
 	"origin_switch_r_gyro_roll"					"Joy-Con ขวา ไจโร ม้วน"
 	"origin_switch_button_dpad_move"			"การเคลื่อนที่ดีแพด"
+	"origin_switch_button_gl"					"ปุ่ม GL"
+	"origin_switch_button_gr"					"ปุ่ม GR"
+	"origin_switch_button_button_c"				"ปุ่ม C"
 }

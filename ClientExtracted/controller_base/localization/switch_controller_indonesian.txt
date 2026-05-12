@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Joy-Con Kanan - Giroskop (Yaw)"
 	"origin_switch_r_gyro_roll"					"Joy-Con Kanan - Giroskop (Roll)"
 	"origin_switch_button_dpad_move"			"D-Pad (Gerakan)"
+	"origin_switch_button_gl"					"Tombol GL"
+	"origin_switch_button_gr"					"Tombol GR"
+	"origin_switch_button_button_c"				"Tombol C"
 }

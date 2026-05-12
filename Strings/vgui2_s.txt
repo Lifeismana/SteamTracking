@@ -505,6 +505,8 @@ $\nY8O
 -pid
 -steamdeckdisplay
 -steammachinedisplay
+-test-device-type
+-test-glibc-version
 -vguifocus
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -581,6 +583,7 @@ $\nY8O
 /data/src/public/tier1/utlhashmap.h
 /data/src/public/tier1/utllinkedlist.h
 /data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlpriorityqueue.h
 /data/src/public/tier1/utlrbtree.h
 /data/src/public/tier1/utlstring.h
 /data/src/public/tier1/utlsymbol.h
@@ -597,7 +600,6 @@ $\nY8O
 /data/src/tier1/utlmemory.cpp
 /data/src/tier1/utlstring.cpp
 /data/src/tier1/utlsymbol.cpp
-/data/src/vgui2/src/LocalizedStringTable.cpp
 /data/src/vgui2/src/NotificationManager.cpp
 /data/src/vgui2/src/Scheme.cpp
 /data/src/vgui2/src/SerializedSurface.cpp
@@ -606,6 +608,7 @@ $\nY8O
 /data/src/vgui2/src/inputbase.cpp
 /data/src/vgui2/src/inputlinux.cpp
 /data/src/vgui2/src/layoutfile.cpp
+/data/src/vgui2/src/localizedstringtable.cpp
 /data/src/vgui2/src/surface_base.cpp
 /data/src/vgui2/src/surface_base.h
 /data/src/vgui2/src/surface_linux.cpp
@@ -663,7 +666,6 @@ $\nY8O
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
@@ -685,6 +687,7 @@ $\nY8O
 /yQA
 0)AA7A
 0)KEY_0
+3333
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
@@ -918,7 +921,6 @@ $\nY8O
 3+C;SSKS
 30!]^JV
 30>9
-3333
 3333UUUU
 333?333?333?333?
 4$KEY_4
@@ -1550,6 +1552,7 @@ DrawSetSubTextureRGBA out of bounds (height)\n
 DrawSetSubTextureRGBA out of bounds (width)\n
 Dutch
 E=FZGrH
+EGamingDeviceType override: %d\n
 ERROR
 ERROR: %s: failed to set hostname\n
 ERROR: %s: failed to set timezone\n
@@ -1594,7 +1597,6 @@ Error: %s: version query error\n
 Error: DisplayManagerInit: XRR unsupported
 Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
-Error: failed to disable wireless power management: %d\n
 Error: texture file '%s' does not exist or is invalid\n
 ErrorAppID
 ErrorHeadline
@@ -2477,6 +2479,7 @@ Option must not use reserved name "uninterpreted_option".
 OrderID
 Out of Memory
 Out of memory
+Override the current EGamingDeviceType (main/dev only)
 Overwriting on-disk registry with newly created registry.
 OwnerID
 PCS illuminant is not D50
@@ -2546,6 +2549,7 @@ Profile length does not match profile
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
+Provide a glibc version for testing
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
 PurchaseCountryCode
@@ -3138,7 +3142,6 @@ WindowMaximized
 WindowRestored
 WindowsEndSession
 Wolof
-WqqP
 Write Error
 Writing zero-length unknown chunk
 Wrote palette index exceeding num_palette
@@ -5651,6 +5654,7 @@ typeinfo name for __cxxabiv1::__si_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+u'a{E
 uUKEY_U
 uifontfile_format.proto
 uifontfile_format.proto"C\n\rCUIFontFilePB

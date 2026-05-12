@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Joy-Con drept – Girație giroscop"
 	"origin_switch_r_gyro_roll"					"Joy-Con drept – Ruliu giroscop"
 	"origin_switch_button_dpad_move"			"Mișcare D-Pad"
+	"origin_switch_button_gl"					"Butonul GL"
+	"origin_switch_button_gr"					"Butonul GR"
+	"origin_switch_button_button_c"				"Butonul C"
 }

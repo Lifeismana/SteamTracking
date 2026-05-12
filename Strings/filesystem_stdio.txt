@@ -539,6 +539,7 @@ Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 WeakRandomUint32
 Wednesday
 XXXXXX
+XfM}
 [abi:
 \t(%zu) comparing %s with %s\n
 \u%04x

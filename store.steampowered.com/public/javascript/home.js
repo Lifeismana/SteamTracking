@@ -1027,6 +1027,10 @@ GHomepage = {
 			{
 				strStatus = rgItem.status_string;
 			}
+			else if ( rgItemData && rgItemData.coming_soon )
+			{
+				strStatus = 'Pre-Purchase Now';
+			}
 			else if ( rgItemData.early_access )
 			{
 				strStatus = 'Early Access Now Available';
@@ -1039,10 +1043,6 @@ GHomepage = {
 			{
 				strStatus = 'Top Seller';
 				rgRecommendationReasons.top_seller = false; // Don't show this reason twice.
-			}
-			else if ( rgItemData && rgItemData.coming_soon )
-			{
-				strStatus = 'Pre-Purchase Now';
 			}
 			else if ( rgItemData && rgItemData.video )
 			{
@@ -1405,16 +1405,7 @@ GHomepage = {
 			let strStatus = '';
 			let strAdditionalDetail = '';
 			let $ReasonMain = $J('<div/>').addClass('main').addClass('default');
-			if ( rgItemData.early_access )
-			{
-				let $EarlyAccessReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( 'Now available in <strong>Early Access</strong>' );
-				$EarlyAccessReason.appendTo( $ReasonMain );
-			}
-			else if ( rgItemData.popular_new_on_steam )
-			{
-				strStatus = 'New On Steam';
-			}
-			else if ( rgItemData && rgItemData.coming_soon )
+			if ( rgItemData && rgItemData.coming_soon )
 			{
 				let $PrePurchaseReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( '<strong>Pre-Purchase</strong> now' );
 				if ( rgItemData.coming_soon_string )
@@ -1424,6 +1415,15 @@ GHomepage = {
 				}
 
 				$PrePurchaseReason.appendTo( $ReasonMain );
+			}
+			else if ( rgItemData.early_access )
+			{
+				let $EarlyAccessReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( 'Now available in <strong>Early Access</strong>' );
+				$EarlyAccessReason.appendTo( $ReasonMain );
+			}
+			else if ( rgItemData.popular_new_on_steam )
+			{
+				strStatus = 'New On Steam';
 			}
 			else if ( rgItemData && rgItemData.video )
 			{

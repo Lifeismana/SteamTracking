@@ -93,7 +93,6 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyroscoop kantelen"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyroscoop gieren"
 	"origin_SteamDeck_Gyro_Roll"				"Gyroscoop rollen"
-
 	"origin_horipad_m1"							"M1-knop"
 	"origin_horipad_m2"							"M2-knop"
 

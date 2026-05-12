@@ -366,7 +366,7 @@ div.ModalPosition_TopBar {
   margin-inline-end: 26px;
 }
 .SettingsDialogSubHeader {
-  color: #8b929a;
+  color: #dcdedf;
 }
 @media (prefers-contrast: more) {
   .SettingsDialogSubHeader {
@@ -374,11 +374,9 @@ div.ModalPosition_TopBar {
   }
 }
 .SettingsDialogSubHeader {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.5px;
   line-height: 36px;
-  text-transform: uppercase;
   user-select: none;
   margin-inline-end: 26px;
 }
@@ -2340,6 +2338,16 @@ span:focus {
     color: #fff;
   }
 }
+@keyframes _1uSUbmC-8W1-FADNfUsSBP {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
+    color: #fff;
+  }
+}
 @keyframes _2wO0UJLCBVNzypL_1QtVVs {
   from {
     background: hsla(0, 0%, 100%, 0.25);
@@ -2757,6 +2765,16 @@ html._14wqdluDeDnnEcg3OSLEmd body {
   }
   to {
     background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _1a5-ibcS0HyYhRO2QR7x_f {
+  from {
+    background: #23262e;
+    color: #8b929a;
+  }
+  to {
+    background: #383a41;
     color: #fff;
   }
 }

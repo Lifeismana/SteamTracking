@@ -185,11 +185,14 @@ message CPlayer_GetFriendsGameplayInfo_Response_OwnGameplayInfo {
 message CPlayer_GetGameAchievements_Request {
 	optional uint32 appid = 1;
 	optional string language = 2;
+	optional bool hash_only = 3;
 }
 
 message CPlayer_GetGameAchievements_Response {
 	repeated .CPlayer_GetGameAchievements_Response_Achievement achievements = 1;
 	optional int32 schema_version = 2;
+	repeated .CPlayer_GetGameAchievements_Response_Group groups = 3;
+	optional uint32 schema_hash = 4;
 }
 
 message CPlayer_GetGameAchievements_Response_Achievement {
@@ -203,6 +206,17 @@ message CPlayer_GetGameAchievements_Response_Achievement {
 	optional uint32 internal_key = 8;
 	optional uint32 min_progress = 9;
 	optional uint32 max_progress = 10;
+	optional uint32 groupid = 11;
+	optional bool archived = 12;
+}
+
+message CPlayer_GetGameAchievements_Response_Group {
+	optional uint32 groupid = 1;
+	optional string localized_name = 2;
+	optional uint32 dlcappid = 3;
+	optional bool archived = 4;
+	optional bool developeronly = 5;
+	optional uint32 order = 6;
 }
 
 message CPlayer_GetGameBadgeLevels_Request {
@@ -877,7 +891,7 @@ service Player {
 	rpc GetFavoriteBadge (.CPlayer_GetFavoriteBadge_Request) returns (.CPlayer_GetFavoriteBadge_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetFriendsGameplayInfo (.CPlayer_GetFriendsGameplayInfo_Request) returns (.CPlayer_GetFriendsGameplayInfo_Response);
-	// bConstMethod=true, ePrivilege=0, eWebAPIKeyRequirement=1
+	// bConstMethod=true, ePrivilege=2, eWebAPIKeyRequirement=1
 	rpc GetGameAchievements (.CPlayer_GetGameAchievements_Request) returns (.CPlayer_GetGameAchievements_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetGameBadgeLevels (.CPlayer_GetGameBadgeLevels_Request) returns (.CPlayer_GetGameBadgeLevels_Response);

@@ -326,6 +326,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -671,7 +672,7 @@
                     }),
                   ],
                 })),
-            2 == this.props.friend_relationship && (_ = !0),
+            this.props.friend_relationship == _.UXi && (_ = !0),
             (0, _.jsx)(_.Fragment, {
               children: (0, _.jsx)(
                 "div",
@@ -866,6 +867,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
@@ -897,7 +899,7 @@
             _,
           );
           return (
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? ((this.m_rgPreviousAvatars = []),
                 _.Body()
                   .toObject()
@@ -918,7 +920,7 @@
           for (let _ = 0; _ < this.m_rgPreviousAvatars.length; ++_)
             if (this.m_rgPreviousAvatars[_].avatar_hash == _)
               return this.SelectAvatar(_, _);
-          return 42;
+          return _._;
         }
         async SelectAvatar(_, _) {
           let _ = new FormData();
@@ -931,8 +933,8 @@
                 `${_._.COMMUNITY_BASE_URL}actions/selectPreviousAvatar`,
                 _,
               )
-            ).data.success || 2;
-          return 1 == _ && _.CommitAvatarHash(), _;
+            ).data.success || _._;
+          return _ == _._ && _.CommitAvatarHash(), _;
         }
       }
       (0, _._)([_._], _.prototype, "m_rgPreviousAvatars", void 0);
@@ -986,7 +988,7 @@
             let _ = _.avatars.find((_) => _.avatar_hash == _);
             if (_) return this.SelectGameAvatar(_, _.appid, _.ordinal);
           }
-          return 42;
+          return _._;
         }
         async SelectGameAvatar(_, _, _) {
           let _ = new FormData();
@@ -999,8 +1001,8 @@
                 `${_._.COMMUNITY_BASE_URL}ogg/${_}/selectAvatar`,
                 _,
               )
-            ).data.success || 2;
-          return 1 == _ && _.CommitAvatarHash(), _;
+            ).data.success || _._;
+          return _ == _._ && _.CommitAvatarHash(), _;
         }
         UpdateAvatarsForGame(_, _) {
           const _ = ["rgRecentGames", "rgOwnedGames", "rgOtherGames"];
@@ -1016,13 +1018,14 @@
           });
         }
       }
+      (0, _._)([_._.shallow], _.prototype, "m_AvatarData", void 0);
       function _(_) {
         switch (_) {
-          case 1:
+          case _.uvF:
             return (0, _._)("#Privacy_Private");
-          case 2:
+          case _.Snd:
             return (0, _._)("#Privacy_FriendsOnly");
-          case 3:
+          case _.Quy:
             return (0, _._)("#Privacy_Public");
           default:
             return "";
@@ -1031,7 +1034,6 @@
       function _(_, _) {
         return _ < _ ? _ : _;
       }
-      (0, _._)([_._.shallow], _.prototype, "m_AvatarData", void 0);
       class _ {
         constructor(_, _) {
           (this.m_PrivacySettings = void 0),
@@ -1117,7 +1119,7 @@
               .post(_.ProfileURL + "ajaxsetprivacy/", _)
               .then((_) => {
                 let _ = _.data;
-                if (1 != _.success)
+                if (_.success != _._)
                   return (
                     window.ShowAlertDialog(
                       (0, _._)("#Error_Error"),
@@ -1198,7 +1200,7 @@
           return this.m_FavoriteBadge != this.m_CommittedFavoriteBadge;
         }
         async CommitFavoriteBadgeChanges() {
-          if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return 1;
+          if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return _._;
           let _ = this.FavoriteBadgeID,
             _ = _._.Init(_._);
           _.badgeid
@@ -1210,7 +1212,7 @@
             _,
           );
           return (
-            1 == __webpack_require__.GetEResult() &&
+            __webpack_require__.GetEResult() == _._ &&
               (this.m_CommittedFavoriteBadge = this.m_FavoriteBadge),
             __webpack_require__.GetEResult()
           );
@@ -1395,7 +1397,7 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              if (1 != _.GetEResult()) return _.GetEResult();
+              if (_.GetEResult() != _._) return _.GetEResult();
             }
             if (
               this.m_Backgrounds.m_EquippedItem &&
@@ -1410,13 +1412,13 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              1 != _.GetEResult() &&
+              _.GetEResult() != _._ &&
                 console.error(
                   `Error when calling PlayerService.SetEquippedProfileItemFlags: EResult=${_.GetEResult()}`,
                 );
             }
           }
-          return this.m_Backgrounds.SetComitted(), 1;
+          return this.m_Backgrounds.SetComitted(), _._;
         }
         RevertBackgroundChanges() {
           this.m_Backgrounds.Revert();
@@ -1460,12 +1462,12 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 != _.GetEResult()) return _.GetEResult();
+            if (_.GetEResult() != _._) return _.GetEResult();
           }
           return (
             this.m_MiniProfileBackgrounds.SetComitted(),
             this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
-            1
+            _._
           );
         }
         RevertMiniProfileBackgroundChanges() {
@@ -1502,14 +1504,14 @@
               ));
           }
           const [_, _] = await Promise.all([_, _]);
-          return _ && 1 != __webpack_require__.GetEResult()
+          return _ && __webpack_require__.GetEResult() != _._
             ? __webpack_require__.GetEResult()
-            : _ && 1 != _.GetEResult()
+            : _ && _.GetEResult() != _._
               ? _.GetEResult()
               : (this.m_Avatars.SetComitted(),
                 this.m_AvatarFrames.SetComitted(),
                 this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
-                1);
+                _._);
         }
         RevertAvatarChanges() {
           this.m_Avatars.Revert(), this.m_AvatarFrames.Revert();
@@ -1666,7 +1668,7 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              if (1 != __webpack_require__.GetEResult())
+              if (__webpack_require__.GetEResult() != _._)
                 return __webpack_require__.GetEResult();
               _ = !0;
             }
@@ -1683,7 +1685,7 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              if (1 != __webpack_require__.GetEResult())
+              if (__webpack_require__.GetEResult() != _._)
                 return __webpack_require__.GetEResult();
               _ = !0;
             }
@@ -1693,7 +1695,7 @@
                   this.ReloadEquippedItems();
                 });
           }
-          return 1;
+          return _._;
         }
         BIsLegacyGoldenProfile(_) {
           return this.m_mapGoldenProfileConfigByAppID.has(_);
@@ -2040,7 +2042,7 @@
             _,
           );
           return (
-            1 == _.GetEResult() &&
+            _.GetEResult() == _._ &&
               (this.m_ComittedActiveTheme = this.ActiveTheme),
             _.GetEResult()
           );
@@ -2069,7 +2071,7 @@
           };
         } catch (_) {
           return {
-            eResult: 35,
+            eResult: _._,
             strHTMLError: (0, _._)("#ConnectionTrouble_FailedToConnect"),
           };
         }
@@ -2137,7 +2139,7 @@
               .ConvertTo64BitString(),
           });
           return (
-            1 == _.eResult &&
+            _.eResult == _._ &&
               (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup),
             _
           );
@@ -2383,7 +2385,7 @@
         BuildPersonaStateObject() {
           (this.m_persona.m_strPlayerName = this.m_strPersonaName),
             (this.m_persona.m_strAvatarHash = this.m_strAvatarHash),
-            (this.m_persona.m_ePersonaState = 1);
+            (this.m_persona.m_ePersonaState = _.UXk);
         }
         async UploadAvatar(_) {
           let _ = new FormData();
@@ -2477,7 +2479,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ({ title: _, className: _, children: _ }) =>
           (0, _.jsxs)("div", {
@@ -3510,7 +3513,7 @@
               _.RefreshAvatarHistory(),
               this.setState({
                 bHTMLError:
-                  1 !== (await __webpack_require__.CommitAvatarChanges()),
+                  (await __webpack_require__.CommitAvatarChanges()) !== _._,
               }))
             : this.setState({
                 strUploadError: _.strError,
@@ -3527,13 +3530,13 @@
               _.CommitAvatarChanges(),
               _.BHasUncomittedAvatarChanges()
                 ? __webpack_require__.SetPlayerOGGAvatar(_)
-                : Promise.resolve(1),
+                : Promise.resolve(_._),
               _.BHasUncomittedAvatarChanges()
                 ? _.SetPreviousAvatar(_)
-                : Promise.resolve(1),
+                : Promise.resolve(_._),
             ]);
           this.setState({
-            bHTMLError: 1 !== _ || (1 !== _ && 1 !== _),
+            bHTMLError: _ !== _._ || (_ !== _._ && _ !== _._),
           }),
             _.RefreshAvatarHistory();
         }
@@ -4541,7 +4544,7 @@
           this.setState({
             bSaving: !0,
           }),
-            1 != (await _.CommitFavoriteBadgeChanges())
+            (await _.CommitFavoriteBadgeChanges()) != _._
               ? this.setState({
                   strHTMLError: (0, _._)("#ConnectionTrouble_FailedToConnect"),
                 })
@@ -5059,7 +5062,7 @@
               (0, _.jsx)(_, {
                 PrivacyStore: _,
                 strLabel: (0, _._)("#ProfilePrivacy_BasicDetails"),
-                strReadOnlySetting: _(3),
+                strReadOnlySetting: _(_.Quy),
                 children: (0, _._)("#ProfilePrivacy_BasicDetails_Desc"),
               }),
               (0, _.jsx)("div", {
@@ -5088,7 +5091,7 @@
                     LimitPrivacyKey: "PrivacyProfile",
                     children: [
                       (0, _._)("#ProfilePrivacy_GameLibrary_Desc"),
-                      1 != _.GetPrivacySetting("PrivacyOwnedGames") &&
+                      _.GetPrivacySetting("PrivacyOwnedGames") != _.uvF &&
                         (0, _.jsx)(_, {
                           PrivacyStore: _,
                           PrivacyKey: "PrivacyPlaytime",
@@ -5134,7 +5137,7 @@
                           }),
                         ),
                       }),
-                      1 != _.GetPrivacySetting("PrivacyInventory") &&
+                      _.GetPrivacySetting("PrivacyInventory") != _.uvF &&
                         (0, _.jsx)(_, {
                           PrivacyStore: _,
                           PrivacyKey: "PrivacyInventoryGifts",
@@ -5248,18 +5251,18 @@
           const _ = [
               {
                 label: (0, _._)("#Privacy_Public"),
-                data: 3,
+                data: _.Quy,
               },
               {
                 label: (0, _._)("#Privacy_FriendsOnly"),
-                data: 2,
+                data: _.Snd,
               },
               {
                 label: (0, _._)("#Privacy_Private"),
-                data: 1,
+                data: _.uvF,
               },
             ],
-            _ = null != _ ? _ : 3;
+            _ = null != _ ? _ : _.Quy;
           return _.filter((_) => _ >= _.data);
         })(_());
         return (0, _.jsxs)(_.Fragment, {
@@ -5307,12 +5310,12 @@
           } = _,
           _ = _.useCallback(
             (_) => {
-              let _ = _.currentTarget.checked ? 1 : 3;
+              let _ = _.currentTarget.checked ? _.uvF : _.Quy;
               _.ChangePrivacySetting(_, _, _);
             },
             [_, _, _],
           );
-        let _ = 1 == (0, _._)(() => _.GetPrivacySetting(_));
+        let _ = (0, _._)(() => _.GetPrivacySetting(_)) == _.uvF;
         return (0, _.jsx)("div", {
           className: "ProfilePrivacyCheckbox",
           children: (0, _.jsxs)("label", {
@@ -5354,7 +5357,7 @@
                 return (0, _._)("#Privacy_Private");
               default:
             }
-          })(((_ = _), 1 == (_ = _) ? 2 : 2 == _ && 1 == _ ? 0 : _));
+          })(((_ = _), (_ = _) == _.uvF ? 2 : _ == _.Snd && 1 == _ ? 0 : _));
           var _, _;
           const _ = (function (_) {
             const _ = [
@@ -5373,7 +5376,7 @@
                   data: 2,
                 },
               ],
-              _ = null != _ ? _ : 3;
+              _ = null != _ ? _ : _.Quy;
             return _.filter((_) => _ >= _.data);
           })(_);
           return (0, _.jsxs)(_.Fragment, {
@@ -5782,7 +5785,7 @@
           let _ = _ && _.movie_webm,
             _ = _ && _.tiled,
             _ = _ ? _(_) : _(null);
-          const _ = _ && !_ && 1 == _.GetEquippedBackgroundFlags();
+          const _ = _ && !_ && _.GetEquippedBackgroundFlags() == _._._;
           let _ = null;
           return (
             _ &&
@@ -5915,7 +5918,7 @@
           const _ = !_ || (null == _ ? void 0 : _.tiled),
             _ = _.GetEquippedBackgroundFlags();
           let _ = (0, _.jsx)(_, {
-              flag: 1,
+              flag: _._._,
               currentFlag: _,
               onSelect: this.OnChange,
               label: (0, _._)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
@@ -6410,7 +6413,7 @@
             _.SetActiveTheme(_.theme_id);
           let _ = await _.CommitActiveTheme();
           return (
-            1 != _ &&
+            _ != _._ &&
               this.setState({
                 strHTMLError: (0, _._)("#ConnectionTrouble_FailedToConnect"),
               }),
@@ -6825,7 +6828,133 @@
         (0, _._)([_._], _.prototype, "RevertChanges", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, _] = (0, _.useState)(!1),
+          _ = (function (_) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              queryKey: ["reportercooldown", _],
+              queryFn: async () => {
+                var _;
+                const _ = _._.Init(_._);
+                _.Body().set_steamid(_);
+                const _ = await _._.GetReporterCooldown(_, _);
+                if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
+                return null !== (_ = _.Body().rtime_cooldown_ends()) &&
+                  void 0 !== _
+                  ? _
+                  : 0;
+              },
+            });
+          })(_.steamid),
+          _ = (function (_) {
+            const _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                const _ = _._.Init(_._);
+                _.Body().set_steamid(_), _.Body().set_rtime_cooldown_ends(_);
+                const _ = await _._.UpdateReporterCooldown(_, _);
+                if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
+              },
+              onSuccess: async () => {
+                await __webpack_require__.invalidateQueries({
+                  queryKey: ["reportercooldown", _],
+                });
+              },
+            });
+          })(_.steamid),
+          _ = (0, _.useRef)(null);
+        let _ = "";
+        if (_.isSuccess && _.data > 0) {
+          const _ = Math.floor((_.data - new Date().getTime() / 1e3) / 86400);
+          _ = " " + _._.Localize("#setcooldown_cooldownsummary", _);
+        }
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsxs)(_._, {
+                onCancel: () => __webpack_require__(!1),
+                onOK: async () => {
+                  if (!_.current) return;
+                  const _ = _.current.value,
+                    _ = 86400 * parseInt(_),
+                    _ = Math.floor(new Date().getTime() / 1e3) + _;
+                  await _.mutateAsync(_), __webpack_require__(!1);
+                },
+                strTitle: _._.Localize("#setcooldown_dialogtitle"),
+                strDescription: _._.Localize("#setcooldown_dialogdescription"),
+                strOKButtonText: _._.Localize("#setcooldown_setbutton"),
+                children: [
+                  _.isLoading &&
+                    (0, _.jsxs)("p", {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                        " ",
+                        _._.Localize("#setcooldown_loading"),
+                      ],
+                    }),
+                  _.isError &&
+                    (0, _.jsx)("p", {
+                      children: _._.Localize("#setcooldown_errorloading"),
+                    }),
+                  _.isSuccess &&
+                    _.data > 0 &&
+                    (0, _.jsx)("p", {
+                      children: _._.Localize(
+                        "#setcooldown_expireson",
+                        (0, _._)(_.data, !1, ""),
+                      ),
+                    }),
+                  _.isSuccess &&
+                    0 === _.data &&
+                    (0, _.jsx)("p", {
+                      children: _._.Localize("#setcooldown_nocooldown"),
+                    }),
+                  (0, _.jsxs)("p", {
+                    children: [
+                      (0, _.jsxs)("label", {
+                        children: [
+                          _._.Localize("#setcooldown_newcooldownlabel"),
+                          " ",
+                          (0, _.jsx)("input", {
+                            type: "number",
+                            min: "0",
+                            placeholder: _._.Localize("#setcooldown_days"),
+                            ref: _,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("button", {
+                        onClick: async () => {
+                          await _.mutateAsync(0), __webpack_require__(!1);
+                        },
+                        children: _._.Localize("#setcooldown_clearcooldown"),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsxs)("a", {
+              className: "popup_menu_item",
+              onClick: () => __webpack_require__(!0),
+              children: ["Reporting Cooldown", _],
+            }),
+          ],
+        });
+      }
       const _ = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",
@@ -6847,7 +6976,7 @@
       function _(_) {
         return (0, _.jsx)("div", {
           children: (0, _.jsx)(_._, {
-            targetType: 3,
+            targetType: _._._,
           }),
         });
       }
@@ -6877,6 +7006,10 @@
                       }),
                     "comment-content-moderation-report-dialog": (_) =>
                       (0, _.jsx)(_._, {
+                        ..._,
+                      }),
+                    "reporter-cooldown-dialog": (_) =>
+                      (0, _.jsx)(_, {
                         ..._,
                       }),
                   },

@@ -2287,6 +2287,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.None = 0)] = "None"),
@@ -2688,6 +2690,7 @@
         (0, _._)([_._], _.prototype, "OnVolumeChange", null),
         (0, _._)([_._], _.prototype, "OnVideoWaiting", null),
         (0, _._)([_._], _.prototype, "UserInputReceived", null);
+      const _ = 4;
       var _,
         _,
         _,
@@ -3591,11 +3594,11 @@
                 timeline_id: _.strTimelineID,
                 entry_id: "",
                 time: "" + Math.floor(_.nTimelineOffsetMS.valMS + _),
-                type: 5,
+                type: _._._,
                 marker_icon: _,
                 marker_priority: 0,
               });
-            1 == _.eResult &&
+            _.eResult == _._ &&
               (this.m_timelineLoader.AddUserMarker(
                 _.strTimelineID,
                 Math.floor(_.nTimelineOffsetMS.valMS),
@@ -3608,7 +3611,7 @@
         async RemoveUserMarker(_, _) {
           const { fnRemoveUserTimelineMarker: _ } = _(),
             _ = this.m_timelineLoader.GetGameID();
-          return 1 == (await __webpack_require__(_, this.GetClipID(), _, _))
+          return (await __webpack_require__(_, this.GetClipID(), _, _)) == _._
             ? (this.m_timelineLoader.RemoveUserMarker(_, _), !0)
             : ((0, _._)(
                 `Failed to delete user marker for timeline ${_} entry ${_}`,
@@ -3622,13 +3625,13 @@
               timeline_id: _,
               entry_id: _._,
               time: _.time,
-              type: 5,
+              type: _._._,
               marker_icon: _.icon,
               marker_priority: _.priority,
               range_title: _,
               marker_description: _,
             };
-          if (1 == (await _(_, this.GetClipID(), _))) {
+          if ((await _(_, this.GetClipID(), _)) == _._) {
             const _ = {
               strIcon: _.icon,
               name: _,
@@ -4064,7 +4067,8 @@
         })(null == _ ? void 0 : _.data);
       }
       (0, _._)([_._], _.prototype, "m_mapThumbnailImages", void 0);
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = {
           nBeforeMS: 0,
           nAfterMS: 12e3,
@@ -4992,7 +4996,7 @@
       function _() {
         return (0, _.useContext)(_);
       }
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       class _ {
         constructor(_, _, _, _, _, _, _, _) {
@@ -5095,7 +5099,7 @@
                 (0, _._)(_);
               }
               return {
-                result: 2,
+                result: _._,
               };
             })(_, _, _, _, _, _, _, _, _),
           _ / 1e3,
@@ -5347,7 +5351,7 @@
               }),
               (0, _.jsx)(_._, {
                 onSelected: () => {
-                  _(_, 4, _, void 0),
+                  _(_, _._._, _, void 0),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
@@ -5368,7 +5372,7 @@
               }),
               (0, _.jsx)(_._, {
                 onSelected: () => {
-                  _(_, 4, void 0, _),
+                  _(_, _._._, void 0, _),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
@@ -5404,15 +5408,15 @@
                         _,
                         _,
                         _ - _,
-                        7,
+                        _._._,
                         {
-                          latestRangeMethod: 7,
-                          originalRangeMethod: 7,
+                          latestRangeMethod: _._._,
+                          originalRangeMethod: _._._,
                           relativeMS: 0,
                         },
                         {
-                          latestRangeMethod: 7,
-                          originalRangeMethod: 7,
+                          latestRangeMethod: _._._,
+                          originalRangeMethod: _._._,
                           relativeMS: 0,
                         },
                       ).create(!1);
@@ -5505,7 +5509,7 @@
             (0, _.jsx)(_._, {
               onSelected: () => {
                 const _ = _.GetGlobalMSPlaytime();
-                __webpack_require__(_, 4, _, void 0),
+                __webpack_require__(_, _._._, _, void 0),
                   _.SetPlaytimeFromGlobalMS(_),
                   _.FocusGlobalMS(_);
               },
@@ -5523,7 +5527,7 @@
             (0, _.jsx)(_._, {
               onSelected: () => {
                 const _ = _.GetGlobalMSPlaytime();
-                __webpack_require__(_, 4, void 0, _),
+                __webpack_require__(_, _._._, void 0, _),
                   _.SetPlaytimeFromGlobalMS(_),
                   _.FocusGlobalMS(_);
               },
@@ -8598,7 +8602,7 @@
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
-              _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
+              _(_._._, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
           (0, _.jsx)(_, {
             offsetPX: _,
@@ -8731,7 +8735,7 @@
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
-              _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
+              _(_._._, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
           (0, _.jsx)(_, {
             offsetPX: _,
@@ -8941,7 +8945,7 @@
             transform: `translateX(${_}px)`,
           },
           _ = _(),
-          _ = 4 === _,
+          _ = _ === _,
           _ = 2 === _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -9896,7 +9900,7 @@
                 const _ = _._.Init(_);
                 __webpack_require__.Body().set_clip_id(_);
                 const _ = await _.GetSingleSharedClip(_, _);
-                if (1 != _.GetEResult())
+                if (_.GetEResult() != _._)
                   return (
                     (0, _._)("GetSingleSharedClip failed"),
                     void _.DEBUG_LogToConsole()
@@ -9916,7 +9920,7 @@
                       recording_id: _.video_manager_video_id,
                       start_offset_ms: _.start_offset_ms.toFixed(0),
                       duration_ms: _.duration_ms.toFixed(0),
-                      recording_type: 4,
+                      recording_type: _,
                       cdn_manifest_url: _.manifest_url,
                     });
                 return {
@@ -10026,7 +10030,21 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _, _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _,
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return "gamemode" === _.type;
       }
@@ -10058,34 +10076,34 @@
           type: void 0,
         };
         switch (_.type) {
-          case 1: {
+          case _._._: {
             let _ = _;
             (_.type = "gamemode"), (_.mode = _.game_mode);
             break;
           }
-          case 5: {
+          case _._._: {
             let _ = _;
             (_.type = "usermarker"),
               (_.icon = "steam_marker"),
               (_.priority = _.marker_priority);
             break;
           }
-          case 4: {
+          case _._._: {
             let _ = _;
             (_.type = "achievement"), (_.achievement_name = _.achievement_name);
             break;
           }
-          case 7: {
+          case _._._: {
             let _ = _;
             (_.type = "error"), (_.description = _.marker_description);
             break;
           }
-          case 3: {
+          case _._._: {
             let _ = _;
             (_.type = "state_description"), (_.title = _.timestamp_title);
             break;
           }
-          case 2: {
+          case _._._: {
             let _ = _;
             (_.type = "event"),
               (_.icon = _.marker_icon),
@@ -10096,7 +10114,7 @@
               (_.possible_clip = _.range_possible_clip);
             break;
           }
-          case 6: {
+          case _._._: {
             let _ = _;
             (_.type = "screenshot"),
               (_.icon = _.marker_icon),
@@ -10109,24 +10127,12 @@
         }
         return _;
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.Playing = 1)] = "Playing"),
-            (_[(_.Staging = 2)] = "Staging"),
-            (_[(_.Menus = 3)] = "Menus");
-        })(_ || (_ = {})),
+      !(function (_) {
+        (_[(_.Invalid = 0)] = "Invalid"),
+          (_[(_.Playing = 1)] = "Playing"),
+          (_[(_.Staging = 2)] = "Staging"),
+          (_[(_.Menus = 3)] = "Menus");
+      })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.None = 1)] = "None"),
@@ -10184,6 +10190,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10259,7 +10266,8 @@
           const _ = await _._.GetTimelinesForClip({
             clip_id: _,
           });
-          if (1 != _.GetEResult()) throw new Error("Unable to load clip " + _);
+          if (_.GetEResult() != _._)
+            throw new Error("Unable to load clip " + _);
           const {
             timelines: _ = [],
             game_id: _,
@@ -11249,7 +11257,7 @@
         RecordingSessionChanged(_) {
           let _ = _.session_id,
             _ = _.notification_type;
-          if (1 == _) {
+          if (_ == _._._) {
             const _ = this.m_mapRunningTimelines.get(_.timeline_id);
             if (!_)
               return (
@@ -11267,13 +11275,13 @@
               recording_type: _.recording_type,
             };
             _.m_metadata.recordings.push(_), (_.m_runningRecording = _);
-          } else if (2 == _) {
+          } else if (_ == _._._) {
             const _ = this.GetRunningTimelineForRecording(_.timeline_id, _);
             if (!_) return;
             (_.m_runningRecording.duration_ms = _.duration_ms),
               (_.m_runningRecording = null),
               this.FireEvent("OnInvalidateRecording", _.timeline_id, _);
-          } else if (4 == _) {
+          } else if (_ == _._._) {
             const _ = this.GetTimelineMetadata(_.timeline_id);
             if (_) {
               const _ = _.metadata.recordings.find((_) => _.recording_id === _);
@@ -11287,7 +11295,7 @@
             }
             this.GetRunningTimelineForRecording(_.timeline_id, _) ||
               this.FireEvent("OnInvalidateRecording", _.timeline_id, _);
-          } else if (3 == _) {
+          } else if (_ == _._._) {
             const _ = this.GetTimelineMetadata(_.timeline_id);
             if (_) {
               const _ = _.metadata.recordings.filter(
@@ -11449,9 +11457,54 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11493,7 +11546,7 @@
                   },
                   recordings: {
                     _: 5,
-                    _,
+                    _: _,
                     _: !0,
                     _: !0,
                   },
@@ -12049,6 +12102,28 @@
           return "CPhaseAttribute";
         }
       }
+      const _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 0,
+        _ = 1,
+        _ = 0,
+        _ = 1;
+      var _;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -15891,7 +15966,7 @@
                   },
                   time_precision: {
                     _: 6,
-                    _: 0,
+                    _: _,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -19073,36 +19148,36 @@
           return this.m_ulGameID.toString();
         }
         BIsSteamApp() {
-          return this.GetType() === _._.k_EGameIDTypeApp;
+          return this.GetType() === _.Rhn.k_EGameIDTypeApp;
         }
         BIsShortcut() {
-          return this.GetType() === _._.k_EGameIDTypeShortcut;
+          return this.GetType() === _.Rhn.k_EGameIDTypeShortcut;
         }
         BIsMod() {
-          return this.GetType() === _._.k_EGameIDTypeGameMod;
+          return this.GetType() === _.Rhn.k_EGameIDTypeGameMod;
         }
         GetInternalAppID() {
           return this.BIsSteamApp() ? this.GetAppID() : this.GetModID();
         }
         BIsValid() {
           switch (this.GetType()) {
-            case _._.k_EGameIDTypeApp:
+            case _.Rhn.k_EGameIDTypeApp:
               return this.GetAppID() !== _._;
-            case _._.k_EGameIDTypeGameMod:
+            case _.Rhn.k_EGameIDTypeGameMod:
               return (
                 this.GetAppID() !== _._ && !!(2147483648 & this.GetModID())
               );
-            case _._.k_EGameIDTypeShortcut:
+            case _.Rhn.k_EGameIDTypeShortcut:
               return !!(2147483648 & this.GetModID());
             default:
               return (0, _._)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
           }
         }
         static InitFromAppID(_) {
-          return new _(_._.k_EGameIDTypeApp, _, 0);
+          return new _(_.Rhn.k_EGameIDTypeApp, _, 0);
         }
         static InitFromShortcutID(_) {
-          return new _(_._.k_EGameIDTypeShortcut, 0, _);
+          return new _(_.Rhn.k_EGameIDTypeShortcut, 0, _);
         }
       }
     },

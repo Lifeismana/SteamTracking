@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Oikean Joy-Conin gyroskoopin pyöritys"
 	"origin_switch_r_gyro_roll"					"Oikean Joy-Conin gyron kallistus sivulle"
 	"origin_switch_button_dpad_move"			"Ristiohjaimen liike"
+	"origin_switch_button_gl"					"GL-painike"
+	"origin_switch_button_gr"					"GR-painike"
+	"origin_switch_button_button_c"				"C-painike"
 }

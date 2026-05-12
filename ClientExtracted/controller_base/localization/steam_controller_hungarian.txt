@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Giro orrszög"
 	"origin_SteamDeck_Gyro_Yaw"					"Giro oldalszög"
 	"origin_SteamDeck_Gyro_Roll"				"Giro elfordulás"
+	"origin_SteamDeck_LGrip"					"Bal markolat érintés"
+	"origin_SteamDeck_RGrip"					"Jobb markolat érintés"
 
 	"origin_horipad_m1"							"M1 gomb"
 	"origin_horipad_m2"							"M2 gomb"

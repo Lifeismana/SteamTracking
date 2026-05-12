@@ -63,6 +63,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "get_content_report_subject_group",
         _ = "get_content_report_subject_audit_log";
@@ -129,7 +130,7 @@
               _.Body().set_required_level(_.eNewLevel),
               _.eReason && _.Body().set_reason(_.eReason);
             const _ = await _._.EscalateSubject(_, _);
-            if (1 !== _.GetEResult())
+            if (_.GetEResult() !== _._)
               throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);
           },
           onSuccess: async (_, _) => {
@@ -213,7 +214,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _._.IN_CLIENT && (0, _._)(_._.LAUNCHER_TYPE);
+        return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

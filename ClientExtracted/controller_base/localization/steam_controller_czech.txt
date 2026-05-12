@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyroskop – klopení"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyroskop – otáčení"
 	"origin_SteamDeck_Gyro_Roll"				"Gyroskop – naklánění"
+	"origin_SteamDeck_LGrip"					"Levý úchyt – dotek"
+	"origin_SteamDeck_RGrip"					"Pravý úchyt – dotek"
 
 	"origin_horipad_m1"							"Tlačítko M1"
 	"origin_horipad_m2"							"Tlačítko M2"

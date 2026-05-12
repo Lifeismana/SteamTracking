@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Steam Deck 横幅：您的游戏，随身携带",
     "VerifiedProgram_DeckDisclaimer": "宣传片不一定代表实际的 Steam Deck 游戏体验",
+    "StoreItemFound": "%1$s 已找到（%2$s）",
+    "StoreItemNotFound": "未找到（%1$s）",
     "Dummy": "dummy"
 }

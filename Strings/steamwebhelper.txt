@@ -946,7 +946,6 @@ $d`D-laM
 (fS{ggRcjh
 (h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
-(int)(intp)m_hParam != -1
 (iub & (m_nSizeWithStack-1)) == 0
 (merge
 (null)
@@ -1029,7 +1028,6 @@ $d`D-laM
 *ZN12CBrowserView19OnMsgHistoryChangedER16CHTMLProtoBufMsgI18CMsgHistoryChangedEEUl13scoped_refptrI12CefV8ContextEE_
 *ZN12CBrowserView22OnMsgFavIconURLChangedER16CHTMLProtoBufMsgI21CMsgFavIconURLChangedEEUl13scoped_refptrI12CefV8ContextEE_
 *ZN12CBrowserView9EmitEventEPKcRSt6vectorI13scoped_refptrI10CefV8ValueESaIS5_EEEUlS3_I12CefV8ContextEE_
-*ZN12CValveCefAPP24OnProcessMessageReceivedE13scoped_refptrI10CefBrowserES0_I8CefFrameE16cef_process_id_tS0_I17CefProcessMessageEEUlS0_I14CefDOMDocumentEE_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN14CClientHandler15OnAddressChangeE13scoped_refptrI10CefBrowserES0_I8CefFrameERK13CefStringBaseI19CefStringTraitsUTF8EEUlS0_I18CefNavigationEntryEbiiE_
 *ZN14CClientHandler19ScheduleWindowMovedERK10CUtlStringEUlvE_
@@ -1038,6 +1036,7 @@ $d`D-laM
 *ZN19CCompositorGLThread15OnWindowRemovedEmEUlPK19ICompositorDrawableE_
 *ZN19CCompositorGLThread22OnStackingOrderChangedEmmEUlPK19ICompositorDrawableE_
 *ZN19CX11EventDispatcher23UnregisterEventListenerEP24ICompositorEventListenerEUlPKS0_E_
+*ZN21RenderProcessMessagesL20OnGetFocusedNodeTextERKNS_19RenderHandlerParamsEEUl13scoped_refptrI14CefDOMDocumentEE_
 *ZN23CV8ManagerRenderProcess30CreateCallbackUnregisterObjectER13scoped_refptrI10CefV8ValueES0_I10CefBrowserEyEUlvE_
 *ZN23CV8ManagerRenderProcess32BRegisterOverlayCallbackInternalERK13scoped_refptrI12CefV8ContextERKS0_I10CefV8ValueERKSt6vectorIS6_SaIS6_EERS6_P13CefStringBaseI19CefStringTraitsUTF8EPKcP14CUtlLinkedListINS_12CallbackInfoEiEEUlvE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
@@ -1216,6 +1215,8 @@ $d`D-laM
 -steammachinedisplay
 -steamos3
 -tesla
+-test-device-type
+-test-glibc-version
 -use_xcomposite_workaround
 -verbosejslogging
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -1328,6 +1329,7 @@ $d`D-laM
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_EContentReportSubjectAction_BannedFromHub
+/\n+k_EContentReportSubjectAction_OwnerDisputed
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -1499,7 +1501,6 @@ $d`D-laM
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
@@ -1532,8 +1533,6 @@ $d`D-laM
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:14:43
-00:14:57
 01/01/00
 0123456789
 0123456789.
@@ -1541,6 +1540,8 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+06:46:10
+06:46:22
 08bX
 0A/8
 0F`8
@@ -2336,6 +2337,7 @@ $d`D-laM
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
+3\n/k_PublishedFileQueryType_RankedByNumParentItems
 3\v;8BJ\nH
 3ej\n
 3pay
@@ -2497,6 +2499,7 @@ $d`D-laM
 9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
+9\n5k_PublishedFileQueryType_RankedByNumParentCollections
 9\n\noneof_decl
 9a&g
 9rK9J
@@ -3107,6 +3110,7 @@ BResolveHostString - unexpected DNS lookup flag '%d'\n
 BRestoreWindowSizeAndPosition 1 parameter: <restore details: string>
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BShouldBlockNavigation: type:%d  frame:%s  request:%s
 BShouldPresent
 BUF lib
 BUF_MEM_grow
@@ -3162,6 +3166,7 @@ Blocked
 Blocked arguments
 Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
+Blocked navigation of trusted popup to %s
 Blocks
 BoaCompra Gold
 Body
@@ -4827,6 +4832,7 @@ EGRMode
 EGameRecordingType
 EGamescopeBlurMode
 EGamingDeviceType
+EGamingDeviceType override: %d\n
 EGpuDriverId
 EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
@@ -4890,6 +4896,7 @@ ESDCardFormatStage
 ESessionPersistence
 EShellConfigUpdateSection
 ESignatureClass
+ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
 EStartupMovieVariant
@@ -5141,7 +5148,6 @@ Error: Couldn't retrieve overlay metrics for '%s'
 Error: DisplayManagerInit: XRR unsupported
 Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
-Error: failed to disable wireless power management: %d\n
 Error: failed to find required GL entrypoints
 Error: file dialog request to steam failed
 Error: missing section: client_info
@@ -6465,6 +6471,7 @@ IVRSteamPrivate_023
 IVRSteamPrivate_024
 IVRSteamPrivate_025
 IVRSteamPrivate_026
+IVRSteamPrivate_027
 IVRSystem_022
 I\nlQ
 I\tHA\t981G'dc
@@ -7040,7 +7047,8 @@ LoadFromBuffer: missing {   (current key: '%s')
 LoadTGA: Only type 2 and 10 targa RGB images supported\n
 LoadURL
 Loaded GL %d.%d
-Local file request not allowed for %s
+Local file request (%d): type:%d  frame:%s  request:%s
+Local file request not allowed for %s:%d
 LocalKeySet
 Localize
 Location
@@ -7180,7 +7188,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May  8 2026
+May 12 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -7328,6 +7336,7 @@ N2vr19IVRSteamPrivate_023E
 N2vr19IVRSteamPrivate_024E
 N2vr19IVRSteamPrivate_025E
 N2vr19IVRSteamPrivate_026E
+N2vr19IVRSteamPrivate_027E
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
 N3IPC17PosixSharedMemoryE
@@ -7354,7 +7363,7 @@ N5vrapi16IOpenVRInterfaceIN2vr14IVRHeadsetViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr14IVROverlayViewEEE
 N5vrapi16IOpenVRInterfaceIN2vr15IVRApplicationsEEE
 N5vrapi16IOpenVRInterfaceIN2vr16IVRNotificationsEEE
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_026EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_027EEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRInputEEE
 N5vrapi16IOpenVRInterfaceIN2vr8IVRPathsEEE
 N5vrapi16IOpenVRInterfaceIN2vr9IVRSystemEEE
@@ -7382,6 +7391,7 @@ N5vrapi33CVRSteamPrivateAdapter_022_as_023E
 N5vrapi33CVRSteamPrivateAdapter_023_as_024E
 N5vrapi33CVRSteamPrivateAdapter_024_as_025E
 N5vrapi33CVRSteamPrivateAdapter_025_as_026E
+N5vrapi33CVRSteamPrivateAdapter_026_as_027E
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -7812,7 +7822,11 @@ Official
 Offline
 Offline App Cache invalid
 Ogg Media File (*.ogv)
+OnBeforeBrowse: frame:%s  request:%s
 OnFileOpenDialogResult
+OnLoadEnd: status:%d  frame:%s
+OnLoadStart: type:0x%X  frame:%s
+OnLoadingStateChange: frame:%s\n
 OnStackingOrderChanged
 OnWindowAdded
 OnWindowFocused
@@ -7900,6 +7914,7 @@ Over consumption limit
 OverlayFrameMark
 OverlayInput
 OverlayRendering
+Override the current EGamingDeviceType (main/dev only)
 Owner
 OwnerID
 P-192
@@ -8251,6 +8266,7 @@ Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto 
 Protocol
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
+Provide a glibc version for testing
 Provider doesn't support currency
 Proxy
 Proxy Authentication Required
@@ -8422,6 +8438,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -8879,6 +8897,7 @@ STEAMVIDEOTOKEN2
 STEAM_
 STEAM_BROWSER_RESIZE_WORKAROUND
 STEAM_CLIENT_LOG_FOLDER
+STEAM_DESKTOP_APP_AFFINITY_LIST
 STEAM_DISABLE_BROWSER_SHUTDOWN_WORKAROUND
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_ENABLE_XCOMPOSITE_WORKAROUND
@@ -9026,6 +9045,7 @@ SetVRKeyboardVisibility
 SetVisible
 SetWindowIconFromFile
 SetWindowStackingOrder
+Setting browser's expected Gamescope VR Overlay Key to "%s"
 Setting xcomposite workaround enabled via env var: %d
 Settings
 Settings Changed
@@ -9678,6 +9698,7 @@ UTF-8 data when
 UTF8
 UTF8STRING
 UTF8String
+UTF8_STRING
 UUPx((
 UUUU
 UUUUUUUUUUUUUU<o(
@@ -11543,7 +11564,6 @@ can't convert uint64 to int32 (data loss)
 can't convert uint64 to int64 (data loss)
 can't find SRP server param
 can't reach here.
-can't set http allowlist\n
 can-go-back-forward-changed
 canceled the join request
 cannot change cipher
@@ -13229,7 +13249,6 @@ facsimileTelephoneNumber
 failed to create lock
 failed to generate a valid callback handler key
 failed to init async
-failed to set http allowlist (error=%s)\n
 failed to set pool
 failed to swap context
 failure
@@ -17870,6 +17889,10 @@ k_ESLSHelper_Minidump
 k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
+k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_71
+k_ESpeakerConfiguration_Other
+k_ESpeakerConfiguration_Stereo
 k_ESplitScalingFilter_Invalid
 k_ESplitScalingFilter_Linear
 k_ESplitScalingFilter_Nearest
@@ -18241,6 +18264,7 @@ m_errorIndex>=0
 m_fdShMemFDSender > 0
 m_fileReader
 m_fnCompletionCallback
+m_hParam != ICommandLine::InvalidHParam()
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
@@ -18915,6 +18939,7 @@ oeap
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
+oho#
 oid exists
 oid_module_init
 oid_section
@@ -20271,6 +20296,7 @@ scale_page_to_focused_element
 scandir64
 sched_get_priority_max
 sched_get_priority_min
+sched_setaffinity
 sched_yield
 scheme=
 schinese

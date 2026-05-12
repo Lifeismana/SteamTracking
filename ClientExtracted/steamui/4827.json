@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "แบนเนอร์ของ Steam Deck: \"เกมของคุณ ไม่ว่าจะอยู่ที่ไหน\"",
     "VerifiedProgram_DeckDisclaimer": "ตัวอย่างโฆษณาอาจไม่แสดงให้เห็นเกมเพลย์จริงบน Steam Deck",
+    "StoreItemFound": "%1$s พบแล้ว (%2$s)",
+    "StoreItemNotFound": "ไม่พบ (%1$s)",
     "Dummy": "dummy"
 }

@@ -104,6 +104,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       _.Message;
@@ -4688,13 +4689,13 @@
           );
         }
         async WriteNotesFile(_, _) {
-          return this.m_props.uploadFile(_, _), 1;
+          return this.m_props.uploadFile(_, _), _._;
         }
         async GetCloudFileInfo(_) {
           const _ = (await this.GetFiles()).get(_);
           if (!_) return;
           const _ = _._.Init(_);
-          __webpack_require__.Body().set_appid(_._),
+          __webpack_require__.Body().set_appid(_.oez),
             __webpack_require__.Body().set_ugcid(_.ugcid);
           const _ = await _.GetFileDetails(
             this.m_props.steamInterface.GetServiceTransport(),
@@ -4723,9 +4724,9 @@
             _ = !0;
           const _ = new Map();
           for (; _; ) {
-            _(`EnumerateUserFiles for ${_._}, starting at ${_}`);
+            _(`EnumerateUserFiles for ${_.oez}, starting at ${_}`);
             const _ = _._.Init(_);
-            _.Body().set_appid(_._),
+            _.Body().set_appid(_.oez),
               _.Body().set_extended_details(!0),
               _.Body().set_start_index(_);
             const _ = await _.EnumerateUserFiles(
@@ -5128,7 +5129,7 @@
                 let _;
                 _ = _ ? _.map((_) => (_._ == _._ ? _ : _)) : [..._, _];
                 const _ = await _.SaveGameNotes(_, _);
-                if (1 != _) throw `Error saving notes: ${_}`;
+                if (_ != _._) throw `Error saving notes: ${_}`;
                 return _;
               },
               onMutate(_) {
@@ -5393,10 +5394,10 @@
                         const _ = _._.Init(_._);
                         __webpack_require__
                           .Body()
-                          .set_language((0, _._)(_._.LANGUAGE)),
+                          .set_language((0, _.sfN)(_._.LANGUAGE)),
                           __webpack_require__.Body().set_appids(_);
                         const _ = await _._.GetApps(_, _);
-                        if (1 != _.GetEResult()) throw _.GetErrorMessage();
+                        if (_.GetEResult() != _._) throw _.GetErrorMessage();
                         _.Body()
                           .toObject()
                           .apps.forEach((_) => {
@@ -5685,7 +5686,7 @@
                   const _ = _._.Init(_);
                   _.Body().set_appid(_.unAppID),
                     _.Body().set_batch_id(_),
-                    _.Body().set_batch_eresult(_ ? 1 : 2),
+                    _.Body().set_batch_eresult(_ ? _._ : _._),
                     _.CompleteAppUploadBatch(_, _);
                 })(_, _, _, _);
               }
@@ -5757,7 +5758,7 @@
       function _(_) {
         const _ = (function () {
           const _ = (0, _._)(),
-            { mutateAsync: _ } = _(_._, "Steam Community Web Interface", {
+            { mutateAsync: _ } = _(_.oez, "Steam Community Web Interface", {
               bIsPublic: !0,
             }),
             _ = _.useCallback(

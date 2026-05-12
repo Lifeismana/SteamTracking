@@ -1,6 +1,7 @@
 {
     "language": "norwegian",
     "TrailerPlayer_Settings_Tooltip": "Innstillinger",
+    "TrailerPlayer_Captions_Tooltip": "Teksting",
     "TrailerPlayer_Play_Tooltip": "Spill av",
     "TrailerPlayer_Pause_Tooltip": "Pause",
     "TrailerPlayer_Mute_Tooltip": "Demp",

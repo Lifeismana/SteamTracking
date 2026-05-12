@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Guinada do giroscópio do Joy-Con dir."
 	"origin_switch_r_gyro_roll"					"Rolagem do giroscópio do Joy-Con dir."
 	"origin_switch_button_dpad_move"			"Movimento do direcional"
+	"origin_switch_button_gl"					"Botão GL"
+	"origin_switch_button_gr"					"Botão GR"
+	"origin_switch_button_button_c"				"Botão C"
 }

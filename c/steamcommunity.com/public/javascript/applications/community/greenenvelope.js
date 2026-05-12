@@ -48,6 +48,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -67,7 +68,7 @@
                     _ = await (0, _._)(
                       _,
                       _._.steamid,
-                      (0, _._)(_._.LANGUAGE),
+                      (0, _.sfN)(_._.LANGUAGE),
                       void 0,
                       !1,
                       !1,
@@ -257,8 +258,8 @@
                   {
                     rollup: _,
                     onNotificationClick: _,
-                    uimode: 3,
-                    location: 3,
+                    uimode: _.yrU,
+                    location: _.B3I,
                   },
                   _,
                 ),
@@ -272,7 +273,7 @@
           countItem: "pending_gifts",
           icon: _._,
           strLocToken: "#Notification_NewGiftsPinned_Body",
-          feature: 1,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -280,7 +281,7 @@
           countItem: "pending_invites",
           icon: _.sdo,
           strLocToken: "#Notification_FriendInvitePinned_Body",
-          feature: 4,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -288,7 +289,7 @@
           countItem: "comments",
           icon: _.MwB,
           strLocToken: "#Notification_NewCommentPinned_Body",
-          feature: 2,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -296,7 +297,7 @@
           countItem: "inventory_items",
           icon: _.rI_,
           strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
-          feature: 3,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -304,7 +305,7 @@
           countItem: "trade_offers",
           icon: _.h20,
           strLocToken: "#Notification_NewTradeOffersPinned_Body",
-          feature: 6,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -318,7 +319,7 @@
           countItem: "moderator_messages",
           icon: _.hJ4,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
-          feature: 2,
+          feature: _._,
         },
         {
           fnUrl: () => `${_._.HELP_BASE_URL}wizard/HelpRequests`,

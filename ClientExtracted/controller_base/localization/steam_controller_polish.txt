@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Pochylenie żyroskopu"
 	"origin_SteamDeck_Gyro_Yaw"					"Odchylenie żyroskopu"
 	"origin_SteamDeck_Gyro_Roll"				"Przechylenie żyroskopu"
+	"origin_SteamDeck_LGrip"					"Dotknięcie lewego chwytu"
+	"origin_SteamDeck_RGrip"					"Dotknięcie prawego chwytu"
 
 	"origin_horipad_m1"							"Przycisk M1"
 	"origin_horipad_m2"							"Przycisk M2"

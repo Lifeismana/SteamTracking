@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Jiroskop Eğimi"
 	"origin_SteamDeck_Gyro_Yaw"					"Jiroskop Sapması"
 	"origin_SteamDeck_Gyro_Roll"				"Jiroskop Dönüşü"
+	"origin_SteamDeck_LGrip"					"Sol Kavrama (Dokunma)	"
+	"origin_SteamDeck_RGrip"					"Sağ Kavrama (Dokunma)"
 
 	"origin_horipad_m1"							"M1 Butonu"
 	"origin_horipad_m2"							"M2 Butonu"

@@ -11,5 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Banner Steam Deck: \"Game Milikmu, di Mana Saja\"",
     "VerifiedProgram_DeckDisclaimer": "Trailer mungkin tidak mewakili pengalaman bermain yang sebenarnya di Steam Deck",
+    "StoreItemFound": "%1$s Ditemukan (%2$s)",
+    "StoreItemNotFound": "Tidak Ditemukan (%1$s)",
     "Dummy": "dummy"
 }

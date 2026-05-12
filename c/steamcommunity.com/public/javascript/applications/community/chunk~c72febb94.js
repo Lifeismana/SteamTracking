@@ -386,7 +386,8 @@
       class _ extends _._ {
         constructor(_, _, _) {
           super(_, null != _ ? _ : () => new _._()),
-            (this.m_renderingLanguage = "string" == typeof _ ? (0, _._)(_) : _);
+            (this.m_renderingLanguage =
+              "string" == typeof _ ? (0, _.sfN)(_) : _);
         }
         UpdateOverrideLanguage(_) {
           this.m_renderingLanguage = _;

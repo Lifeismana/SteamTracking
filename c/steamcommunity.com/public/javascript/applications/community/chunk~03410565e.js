@@ -97,6 +97,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
         "mousemove",
@@ -155,6 +156,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3;
       class _ {
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
@@ -196,7 +201,7 @@
         }
         async LoadAllSessions(_) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return 15;
+          if (!_._.logged_in || !_._.SESSIONID) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -212,16 +217,15 @@
             if (
               (console.log(_),
               200 == (null == _ ? void 0 : _.status) &&
-                1 ==
-                  (null === (_ = _.data) || void 0 === _
-                    ? void 0
-                    : _.success) &&
+                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                  _._ &&
                 _.data.qandas)
             ) {
               for (const _ of _.data.qandas)
                 this.m_mapQAndASessions.set(_.gidSession, _);
               return (
-                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()), 1
+                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                _._
               );
             }
             _ = {
@@ -248,12 +252,12 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         async CreateNewSession(_, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return 15;
+          if (!_._.logged_in || !_._.SESSIONID) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -269,8 +273,8 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._ &&
               _.data.qanda
             )
               return (
@@ -279,7 +283,7 @@
                   _.data.qanda,
                 ),
                 this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                1
+                _._
               );
             _ = {
               response: _,
@@ -301,12 +305,12 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         async RenameSession(_, _, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return 15;
+          if (!_._.logged_in || !_._.SESSIONID) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -323,7 +327,8 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._
             )
               return (
                 (this.m_mapQAndASessions.get(_).strName = _),
@@ -331,7 +336,7 @@
                   this.m_mapQAndASessions.get(_),
                 ),
                 this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                1
+                _._
               );
             _ = {
               response: _,
@@ -353,12 +358,12 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         async DeleteSession(_, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID) return 15;
+          if (!_._.logged_in || !_._.SESSIONID) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -375,12 +380,13 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._
             )
               return (
                 this.m_mapQAndASessions.delete(_),
                 this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                1
+                _._
               );
             _ = {
               response: _,
@@ -402,7 +408,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         async LoadSession(_, _, _) {
@@ -425,8 +431,8 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._ &&
               _.data.qanda &&
               _.data.questions
             ) {
@@ -475,7 +481,7 @@
                 this.m_mapQAndASessions.set(_, _),
                 this.GetQAndACallbackList(_).Dispatch(_),
                 this.UpdatePendingQuestionList(_.data.qanda.rgQuestionGIDs),
-                1
+                _._
               );
             }
             _ = {
@@ -498,7 +504,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         UpdatePendingQuestionList(_) {
@@ -507,17 +513,16 @@
           for (const _ of _) {
             const _ = this.m_mapQuestions.get(_);
             _.posterAccountID == _._.accountid &&
-              1 == _.eState &&
+              _.eState == _ &&
               __webpack_require__.add(_.gidQuestion);
           }
           if (this.m_rgPendingQuestionGIDs.length > 0) {
             const _ = new Set(_);
             for (const _ of this.m_rgPendingQuestionGIDs)
               _.has(_) &&
-                1 ==
-                  (null === (_ = this.m_mapQuestions.get(_)) || void 0 === _
-                    ? void 0
-                    : _.eState) &&
+                (null === (_ = this.m_mapQuestions.get(_)) || void 0 === _
+                  ? void 0
+                  : _.eState) == _ &&
                 __webpack_require__.add(_);
           }
           this.m_rgPendingQuestionGIDs = Array.from(_);
@@ -531,7 +536,7 @@
               ? void 0
               : _.bUserCanAskQuestions)
           )
-            return 15;
+            return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -548,11 +553,12 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._
             ) {
               this.m_rgPendingQuestionGIDs.push(_.data.gidQuestion);
               const _ = !0;
-              return this.LoadSession(_, _, _), 1;
+              return this.LoadSession(_, _, _), _._;
             }
             _ = {
               response: _,
@@ -574,7 +580,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         async ModerateQuestion(_, _, _, _) {
@@ -586,9 +592,9 @@
               ? void 0
               : _.bUserCanModerate)
           )
-            return 15;
-          if (1 != _ && 3 != _) return 8;
-          if (this.m_mapQuestions.get(_).eState == _) return 1;
+            return _._;
+          if (_ != _ && _ != _) return _._;
+          if (this.m_mapQuestions.get(_).eState == _) return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -598,7 +604,7 @@
             _ = new FormData();
           _.append("sessionid", _._.SESSIONID),
             _.append("gidquestion", _),
-            _.append("action", 1 == _ ? "show" : "hide");
+            _.append("action", _ == _ ? "show" : "hide");
           let _ = null;
           try {
             const _ = await _().post(_, _, {
@@ -607,10 +613,11 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._
             ) {
               const _ = !0;
-              return this.LoadSession(_, _, _), 1;
+              return this.LoadSession(_, _, _), _._;
             }
             _ = {
               response: _,
@@ -639,7 +646,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         async AnswerQuestion(_, _, _, _) {
@@ -651,7 +658,7 @@
               ? void 0
               : _.bUserCanAskQuestions)
           )
-            return 15;
+            return _._;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -670,10 +677,11 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._
             ) {
               const _ = !0;
-              return this.LoadSession(_, _, _), 1;
+              return this.LoadSession(_, _, _), _._;
             }
             _ = {
               response: _,
@@ -695,7 +703,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
         async VoteOnQuestion(_, _, _, _) {
@@ -707,8 +715,8 @@
               ? void 0
               : _.bUserCanAskQuestions)
           )
-            return 15;
-          if (_ === this.m_mapQuestions.get(_).bUserUpVoted) return 1;
+            return _._;
+          if (_ === this.m_mapQuestions.get(_).bUserUpVoted) return _._;
           let _ = this.m_mapQuestions.get(_);
           const _ = _.nVoteCount,
             _ = _ + (_ ? 1 : -1);
@@ -737,9 +745,10 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._
             )
-              return 1;
+              return _._;
             _ = {
               response: _,
             };
@@ -767,7 +776,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : 2
+              : _._
           );
         }
       }
@@ -814,16 +823,16 @@
                 : []) {
                 const _ = _.Get().GetQuestion(_);
                 switch (null == _ ? void 0 : _.eState) {
-                  case 1:
+                  case _:
                     _.push(_);
                     break;
-                  case 2:
+                  case _:
                     _.push(_);
                     break;
-                  case 0:
+                  case _:
                     _.push(_);
                     break;
-                  case 3:
+                  case _:
                     _.push(_);
                 }
               }
@@ -1218,10 +1227,10 @@
             : _().Vote_CannotVote,
           _ = (0, _._)(
             _().Question,
-            3 == _.eState && _().Hidden,
-            1 == _.eState && _().Moderated,
-            0 == _.eState && _().Unmoderated,
-            2 == _.eState && _().Answered,
+            _.eState == _ && _().Hidden,
+            _.eState == _ && _().Moderated,
+            _.eState == _ && _().Unmoderated,
+            _.eState == _ && _().Answered,
           );
         return (0, _.jsxs)("div", {
           className: _,
@@ -1364,9 +1373,9 @@
       function _(_) {
         const { gidSession: _, gidQuestion: _, eState: _ } = _,
           { fnAnswerQuestion: _, fnModerateQuestion: _ } = _(_),
-          _ = 0 == _ || 3 == _,
-          _ = 3 != _,
-          _ = 1 == _;
+          _ = _ == _ || _ == _,
+          _ = _ != _,
+          _ = _ == _;
         return (0, _.jsxs)("div", {
           className: _().ModeratorSection,
           children: [
@@ -1385,7 +1394,7 @@
                 (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)("#QAndA_ModerateApproveButton_ttip"),
                   children: (0, _.jsx)(_._, {
-                    onClick: () => _(_, 1),
+                    onClick: () => _(_, _),
                     className: _().InputButton,
                     disabled: !_,
                     children: (0, _._)("#QAndA_ModerateApproveButton"),
@@ -1394,7 +1403,7 @@
                 (0, _.jsx)(_._, {
                   toolTipContent: (0, _._)("#QAndA_ModerateHideButton_ttip"),
                   children: (0, _.jsx)(_._, {
-                    onClick: () => _(_, 3),
+                    onClick: () => _(_, _),
                     className: _().InputButton,
                     disabled: !_,
                     children: (0, _._)("#QAndA_ModerateHideButton"),
@@ -1547,7 +1556,7 @@
                           children: (0, _.jsx)(_._, {
                             onClick: async () => {
                               for (const _ of [_, _, _])
-                                for (const _ of _) await _(_, 3);
+                                for (const _ of _) await _(_, _);
                             },
                             className: _().InputButton,
                             children: (0, _._)("#QAndA_ModerateHideAllButton"),
@@ -1644,7 +1653,7 @@
               fnSubmit: async (_) => {
                 const _ = await _.fnAskQuestion(_);
                 return (
-                  1 != _ ||
+                  _ != _._ ||
                     _.token.reason ||
                     (__webpack_require__(!0),
                     window.setTimeout(() => {
@@ -1690,7 +1699,7 @@
                   (0, _.jsx)(_._, {
                     onClick: async () => {
                       _(!0);
-                      1 == (await __webpack_require__(_)) && _(""), _(!1);
+                      (await __webpack_require__(_)) == _._ && _(""), _(!1);
                     },
                     disabled: _ || !_,
                     className: _().InputButton,

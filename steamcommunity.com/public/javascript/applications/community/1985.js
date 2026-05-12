@@ -88,7 +88,7 @@
     },
     61985: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => G });
+      s.r(t), s.d(t, { default: () => F });
       var n = s(34629),
         M = s(7850),
         i = s(90626),
@@ -113,21 +113,22 @@
         I = s.n(C),
         E = s(75844),
         g = s(79821),
-        h = s(56545),
-        p = s(51006),
-        m = s(17720),
-        O = s(37735),
-        v = s(9239),
-        A = s(68797),
-        k = s(22797),
-        U = s(94429),
-        b = s(86244),
-        Q = s.n(b),
-        _ = s(41471);
-      const Y = (0, E.PA)((e) => {
+        h = s(37085),
+        p = s(56545),
+        m = s(51006),
+        O = s(17720),
+        v = s(78619),
+        A = s(9239),
+        k = s(68797),
+        U = s(22797),
+        b = s(5058),
+        Q = s(86244),
+        _ = s.n(Q),
+        Y = s(41471);
+      const B = (0, E.PA)((e) => {
         const { appid: t, eventLink: s } = e,
           n = i.useRef(null),
-          { data: a } = (0, _.js)(j.iA.steamid),
+          { data: a } = (0, Y.js)(j.iA.steamid),
           [r, N] = i.useState(""),
           [L, T] = i.useState(!1),
           [u, D] = i.useState(""),
@@ -139,7 +140,7 @@
           [],
         );
         const S = a ? a.avatar_url : null,
-          y = m.b.InitFromAccountID(j.iA.accountid),
+          y = O.b.InitFromAccountID(j.iA.accountid),
           z = async () => {
             var e, M;
             n.current &&
@@ -155,13 +156,13 @@
               "/ajaxpostuserstatus";
             try {
               if (j.TS.IN_STEAMUI) {
-                let e = h.w.Init(O.kV);
+                let e = p.w.Init(v.kV);
                 e.Body().set_appid(t), e.Body().set_status_text(a);
-                let s = await O.xt.PostStatusToFriends(
-                  p.Vw.CMInterface.GetServiceTransport(),
+                let s = await v.xt.PostStatusToFriends(
+                  m.Vw.CMInterface.GetServiceTransport(),
                   e,
                 );
-                if (1 != s.GetEResult()) {
+                if (s.GetEResult() != h.R) {
                   const e =
                     (0, l.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -179,10 +180,9 @@
                 const n = await I().post(o, s, { withCredentials: !0 });
                 if (
                   200 != n.status ||
-                  1 !=
-                    (null === (e = null == n ? void 0 : n.data) || void 0 === e
-                      ? void 0
-                      : e.success)
+                  (null === (e = null == n ? void 0 : n.data) || void 0 === e
+                    ? void 0
+                    : e.success) != h.R
                 ) {
                   const e =
                     (0, l.we)("#EventDisplay_Share_Failure") +
@@ -196,7 +196,7 @@
               i.token.reason ||
                 (w(!0), D((0, l.we)("#EventDisplay_Share_Success")));
             } catch (e) {
-              const t = (0, A.H)(e),
+              const t = (0, k.H)(e),
                 s =
                   (0, l.we)("#EventDisplay_Share_Failure") +
                   "\n\n" +
@@ -220,10 +220,10 @@
                     ),
                   }),
                   (0, M.jsxs)("div", {
-                    className: Q().Container,
+                    className: _().Container,
                     children: [
                       0 == (null == u ? void 0 : u.length)
-                        ? (0, M.jsx)(k.t, { position: "center" })
+                        ? (0, M.jsx)(U.t, { position: "center" })
                         : (0, M.jsx)("div", { children: u }),
                       Boolean(x) &&
                         (0, M.jsx)("a", {
@@ -257,18 +257,18 @@
                     ),
                   }),
                   (0, M.jsxs)("div", {
-                    className: (0, c.A)(Q().Container, o().FlexColumnContainer),
+                    className: (0, c.A)(_().Container, o().FlexColumnContainer),
                     children: [
                       (0, M.jsxs)("div", {
                         children: [
                           (0, M.jsx)("img", {
-                            className: Q().SmallAvatar,
+                            className: _().SmallAvatar,
                             src: S,
                             "data-miniprofile": "s" + j.iA.steamid,
                           }),
                           (0, M.jsx)("div", {
                             className: (0, c.A)(o().FlexColumnContainer),
-                            children: (0, M.jsx)(v.I, {
+                            children: (0, M.jsx)(A.I, {
                               strPlaceholder: (0, l.we)(
                                 "#EventDisplay_Share_OnMyStatus_Placeholder",
                               ),
@@ -279,15 +279,15 @@
                               bSupportHTMLImport: !1,
                               showFormatHelp: "UserStatusPublished",
                               limitBBCode: g.iH,
-                              classNameForTextArea: Q().ShareDescription,
+                              classNameForTextArea: _().ShareDescription,
                               bEmbeddedInDialog: !0,
                             }),
                           }),
                         ],
                       }),
                       (0, M.jsx)("div", {
-                        className: Q().ShareLink,
-                        children: (0, M.jsx)(U.fh, {
+                        className: _().ShareLink,
+                        children: (0, M.jsx)(b.fh, {
                           text: s,
                           event: null,
                           partnerEventStore: e.partnerEventStore,
@@ -299,9 +299,9 @@
               }),
             });
       });
-      var B = s(68255),
-        Z = s(5618);
-      class G extends i.Component {
+      var Z = s(68255),
+        G = s(5618);
+      class F extends i.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -338,7 +338,7 @@
                 onOK: () => (0, N.vg)(),
               })
             : this.state.bShareOnSteamDialog
-              ? (0, M.jsx)(Y, {
+              ? (0, M.jsx)(B, {
                   eventLink: e,
                   appid: s,
                   emoticonStore: i,
@@ -352,7 +352,7 @@
                   onOK: this.props.closeModal,
                   bAlertDialog: !0,
                   modalClassName: "EventDisplay_Share_Dialog",
-                  children: (0, M.jsx)(F, {
+                  children: (0, M.jsx)(H, {
                     eventLink: e,
                     sharePageUrls: t,
                     fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
@@ -360,18 +360,18 @@
                 });
         }
       }
-      (0, n.Cg)([L.oI], G.prototype, "ShareOnSteamActivityFeed", null);
-      const F = (e) => {
+      (0, n.Cg)([L.oI], F.prototype, "ShareOnSteamActivityFeed", null);
+      const H = (e) => {
         const {
             eventLink: t,
             sharePageUrls: s,
             fnShareOnSteamActivityFeed: n,
           } = e,
           r = (0, j.Y2)(),
-          [N, L] = (0, i.useState)((0, a.sf)(j.TS.LANGUAGE)),
+          [N, L] = (0, i.useState)((0, a.sfN)(j.TS.LANGUAGE)),
           d = (0, i.useMemo)(() => {
             const e = new URL(t);
-            return e.searchParams.set("l", (0, a.Lg)(N)), e.href;
+            return e.searchParams.set("l", (0, a.LgB)(N)), e.href;
           }, [N, t]);
         return (0, M.jsxs)("div", {
           className: (0, c.A)(o().FlexColumnContainer, y().share_controls_ctn),
@@ -382,7 +382,7 @@
                   (0, M.jsxs)("div", {
                     className: y().ShareLanguagePicker,
                     children: [
-                      (0, M.jsx)(B.JU, {
+                      (0, M.jsx)(Z.JU, {
                         className: y().LanguageLabel,
                         children: (0, l.we)(
                           "#EventDisplay_Share_LanguageLabel",
@@ -472,7 +472,7 @@
                   (0, M.jsx)("div", { className: o().Divider }),
                 ],
               }),
-            (0, M.jsx)(Z.V, { eventLink: d }),
+            (0, M.jsx)(G.V, { eventLink: d }),
           ],
         });
       };

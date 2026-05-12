@@ -98,7 +98,7 @@
 
 .mainSectionHeader {
 	height:17px;
-	width:669px;		
+	width:669px;
 	font-size:11px;
 	border-top:1px solid #4d4d4e;
 	padding:0;
@@ -110,13 +110,13 @@
 #OnlineStatus{
 	margin:0;
 	padding:0;
-	padding-left:0px;		
+	padding-left:0px;
 	font-size:11px;
 	font-weight:bold;
 	height: 77px;
 }
 
-#statusOfflineText {		
+#statusOfflineText {
 	font-size:11px;
 	font-weight:bold;
 	color:#898989;
@@ -126,7 +126,7 @@
 }
 
 #statusInGameText, #statusInGameText a {
-	color:#8bc53f;		
+	color:#8bc53f;
 	font-size:11px;
 	margin:0;
 	padding:0;
@@ -136,7 +136,7 @@
 #statusOnlineText {
 	margin-bottom:-10px;
 }
-	
+
 #profileBlock,#primaryGroupBlock {
 	float: left;
 	width:647px;
@@ -752,7 +752,7 @@ p.rightText {
 }
 
 .recommendationRowContent {
-	
+
 }
 
 a.recommendation_btn, a.recommendation_imgbtn
@@ -763,7 +763,7 @@ a.recommendation_btn, a.recommendation_imgbtn
 	color: #82807c;
 	font-size: 11px;
 	background-color: #1a1a1a;
-	
+
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 }
@@ -862,7 +862,7 @@ a.pullup_item {
 a.pullup_item:hover {
 	text-decoration: none;
 	color: #939393;
-	
+
 }
 
 .menu_ico {

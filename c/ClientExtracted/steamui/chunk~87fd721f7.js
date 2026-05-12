@@ -77,6 +77,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -1641,9 +1642,9 @@
               ));
         }
         OnKeyDown(_) {
-          37 == _.keyCode
+          _.keyCode == _._
             ? (this.props.video.JumpTime(-15), _.preventDefault())
-            : 39 == _.keyCode &&
+            : _.keyCode == _._ &&
               (this.props.video.JumpTime(15), _.preventDefault());
         }
         AdjustSliderForClientX(_) {

@@ -418,6 +418,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_) {
@@ -454,7 +455,7 @@
             : (0, _.jsx)(_._, {
                 autoFocus: !0,
                 transport: _,
-                platform: 2,
+                platform: _._._,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail
                     ? _(!0)

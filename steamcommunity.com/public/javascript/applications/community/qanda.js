@@ -49,7 +49,7 @@
     },
     11333: (e, t, a) => {
       a.d(t, { L: () => _, c: () => o });
-      var r = a(37735),
+      var r = a(78619),
         n = a(49845),
         s = a(58632),
         i = a.n(s);
@@ -90,7 +90,7 @@
     3049: (e, t, a) => {
       a.d(t, { J: () => s });
       var r = a(8527),
-        n = a(48891);
+        n = a(13843);
       function s() {
         return (0, n.A)().languages.map((e) => {
           return 2 == (t = e.strISOCode).length && r.TS.COUNTRY
@@ -99,6 +99,22 @@
           var t;
         });
       }
+    },
+    38924: (e, t, a) => {
+      a.d(t, {
+        Fj: () => r,
+        R$: () => i,
+        Zx: () => n,
+        hs: () => _,
+        o5: () => s,
+        sr: () => o,
+      });
+      const r = 2,
+        n = 4,
+        s = 8,
+        i = 512,
+        o = 1024,
+        _ = 2048;
     },
     49845: (e, t, a) => {
       function r(e) {
@@ -154,15 +170,17 @@
       }
     },
     10622: (e, t, a) => {
-      a.d(t, { Z: () => l, dV: () => m.d, rO: () => u, tp: () => m.t });
+      a.d(t, { Z: () => d, dV: () => c.d, rO: () => l, tp: () => c.t });
       var r = a(34629),
         n = a(14947),
         s = a(31561),
         i = a(51006),
         o = a(61859),
-        _ = a(78327),
-        m = a(85044);
-      function u(e) {
+        _ = a(22837),
+        m = a(38924),
+        u = a(78327),
+        c = a(85044);
+      function l(e) {
         let t = "offline";
         return (
           e &&
@@ -175,15 +193,15 @@
           t
         );
       }
-      class l {
+      class d {
         constructor(e) {
           (this.m_bInitialized = !1),
-            (this.m_ePersonaState = 0),
+            (this.m_ePersonaState = _.cU3),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_unPersonaStateFlags = 0),
             (this.m_strPlayerName = ""),
-            (this.m_strAvatarHash = m.d),
+            (this.m_strAvatarHash = c.d),
             (this.m_strAccountName = ""),
             (this.m_rtLastSeenOnline = 0),
             (this.m_strGameExtraInfo = ""),
@@ -198,7 +216,7 @@
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
             (this.m_bCommunityBanned = void 0),
-            (this.m_eGamingDeviceType = 0),
+            (this.m_eGamingDeviceType = _.eSB),
             (this.m_mapRichPresence = n.sH.map()),
             (this.m_bNameInitialized = !1),
             (this.m_bStatusInitialized = !1),
@@ -207,7 +225,7 @@
             (this.m_steamid = e);
         }
         Reset() {
-          (this.m_ePersonaState = 0),
+          (this.m_ePersonaState = _.cU3),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -220,7 +238,7 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = 0);
+            (this.m_eGamingDeviceType = _.eSB);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -229,7 +247,7 @@
           return this.m_steamid.ConvertTo64BitString();
         }
         get is_online() {
-          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
+          return this.m_ePersonaState != _.cU3 && this.m_ePersonaState != _._3b;
         }
         get is_ingame() {
           return (
@@ -252,9 +270,12 @@
         }
         get has_joinable_game_flag() {
           var e;
-          return !!(
-            2 &
-            (null !== (e = this.m_unPersonaStateFlags) && void 0 !== e ? e : 0)
+          return (
+            0 !=
+            ((null !== (e = this.m_unPersonaStateFlags) && void 0 !== e
+              ? e
+              : 0) &
+              m.Fj)
           );
         }
         get connect_string() {
@@ -267,7 +288,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
+          return this.m_ePersonaState == _.PrD || this.m_ePersonaState == _.vPz;
         }
         HasStateFlag(e) {
           var t;
@@ -283,10 +304,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          0 != this.m_ePersonaState && this.Reset();
+          this.m_ePersonaState != _.cU3 && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(4);
+          return this.HasStateFlag(m.Zx);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -323,7 +344,7 @@
               let t = this.m_mapRichPresence.get("steam_display");
               return e.Localize(t, this.m_mapRichPresence);
             }
-          } else if (this.HasStateFlag(8))
+          } else if (this.HasStateFlag(m.o5))
             return (0, o.we)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -345,7 +366,7 @@
           if (0 == this.last_seen_online)
             return (0, o.we)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!_.TS.IN_MOBILE || e <= 60) && (0, s.tB)(e);
+          (!u.TS.IN_MOBILE || e <= 60) && (0, s.tB)(e);
           let t = i.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, o.we)("#PersonaStateLastSeen_JustNow")
@@ -353,20 +374,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case 0:
-            case 7:
+            case _.cU3:
+            case _._3b:
               return this.GetOfflineStatusTime();
-            case 1:
+            case _.UXk:
               return (0, o.we)("#PersonaStateOnline");
-            case 2:
+            case _.wcG:
               return (0, o.we)("#PersonaStateBusy");
-            case 3:
+            case _.PrD:
               return (0, o.we)("#PersonaStateAway");
-            case 4:
+            case _.vPz:
               return (0, o.we)("#PersonaStateSnooze");
-            case 5:
+            case _.Hrn:
               return (0, o.we)("#PersonaStateLookingToTrade");
-            case 6:
+            case _.HAb:
               return (0, o.we)("#PersonaStateLookingToPlay");
             default:
               return "";
@@ -397,16 +418,16 @@
             : "offline";
         }
         BHasAvatarSet() {
-          return this.m_strAvatarHash != m.d;
+          return this.m_strAvatarHash != c.d;
         }
         get avatar_url() {
-          return (0, m.t)(this.m_strAvatarHash);
+          return (0, c.t)(this.m_strAvatarHash);
         }
         get avatar_url_medium() {
-          return (0, m.t)(this.m_strAvatarHash, "medium");
+          return (0, c.t)(this.m_strAvatarHash, "medium");
         }
         get avatar_url_full() {
-          return (0, m.t)(this.m_strAvatarHash, "full");
+          return (0, c.t)(this.m_strAvatarHash, "full");
         }
         static SortStatusComparator(e, t, a) {
           if (t.has_public_party_beacon) {
@@ -432,112 +453,113 @@
         }
         GetCommunityProfileURL() {
           return this.m_strProfileURL
-            ? `${_.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${_.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+            ? `${u.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+            : `${u.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, r.Cg)([n.sH], l.prototype, "m_bInitialized", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_ePersonaState", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_unGamePlayedAppID", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_gameid", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_unPersonaStateFlags", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_strPlayerName", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_strAvatarHash", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_strAccountName", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_rtLastSeenOnline", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_strGameExtraInfo", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_unGameServerIP", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_unGameServerPort", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_game_lobby_id", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_bPlayerNamePending", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_bAvatarPending", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_broadcastId", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_broadcastAccountId", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_broadcastAppId", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_broadcastViewerCount", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_eGamingDeviceType", void 0),
-        (0, r.Cg)([n.sH], l.prototype, "m_bNameInitialized", void 0);
+      (0, r.Cg)([n.sH], d.prototype, "m_bInitialized", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_ePersonaState", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_unGamePlayedAppID", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_gameid", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_unPersonaStateFlags", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_strPlayerName", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_strAvatarHash", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_strAccountName", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_rtLastSeenOnline", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_strGameExtraInfo", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_unGameServerIP", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_unGameServerPort", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_game_lobby_id", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_bPlayerNamePending", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_bAvatarPending", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_broadcastId", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_broadcastAccountId", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_broadcastAppId", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_broadcastViewerCount", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_strBroadcastTitle", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_bCommunityBanned", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_eGamingDeviceType", void 0),
+        (0, r.Cg)([n.sH], d.prototype, "m_bNameInitialized", void 0);
     },
     41471: (e, t, a) => {
-      a.d(t, { hW: () => l, js: () => u });
+      a.d(t, { hW: () => l, js: () => c });
       var r = a(90626),
         n = a(88942),
-        s = a(23809),
-        i = a(44654),
-        o = a(10622),
-        _ = a(17720),
-        m = a(11333);
-      function u(e) {
-        const t = (0, s.KV)(),
-          a = r.useContext(c);
-        return (0, n.I)(d(a, t, e));
+        s = a(22837),
+        i = a(23809),
+        o = a(44654),
+        _ = a(10622),
+        m = a(17720),
+        u = a(11333);
+      function c(e) {
+        const t = (0, i.KV)(),
+          a = r.useContext(d);
+        return (0, n.I)(h(a, t, e));
       }
       function l(e) {
         const t = r.useRef(void 0),
-          a = u(e);
+          a = c(e);
         return a.data
           ? a
           : (t.current ||
-              (t.current = new o.Z(
-                "string" == typeof e ? new _.b(e) : _.b.InitFromAccountID(e),
+              (t.current = new _.Z(
+                "string" == typeof e ? new m.b(e) : m.b.InitFromAccountID(e),
               )),
             { ...a, data: t.current });
       }
-      const c = r.createContext({
+      const d = r.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
-            return null != h ? h : (h = (0, m.c)(e));
-          })(t).load(_.b.InitFromAccountID(e).ConvertTo64BitString());
+            return null != p ? p : (p = (0, u.c)(e));
+          })(t).load(m.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
             var a, r;
-            let n = new o.Z(e);
-            const s = null == t ? void 0 : t.public_data,
-              _ = null == t ? void 0 : t.private_data;
+            let n = new _.Z(e);
+            const i = null == t ? void 0 : t.public_data,
+              m = null == t ? void 0 : t.private_data;
             (n.m_bInitialized = !!t),
               (n.m_ePersonaState =
-                null !== (a = null == _ ? void 0 : _.persona_state) &&
+                null !== (a = null == m ? void 0 : m.persona_state) &&
                 void 0 !== a
                   ? a
-                  : 0),
-              (n.m_strAvatarHash = (null == s ? void 0 : s.sha_digest_avatar)
-                ? (0, i.Kx)(s.sha_digest_avatar)
-                : o.dV),
+                  : s.cU3),
+              (n.m_strAvatarHash = (null == i ? void 0 : i.sha_digest_avatar)
+                ? (0, o.Kx)(i.sha_digest_avatar)
+                : _.dV),
               (n.m_strPlayerName =
-                null !== (r = null == s ? void 0 : s.persona_name) &&
+                null !== (r = null == i ? void 0 : i.persona_name) &&
                 void 0 !== r
                   ? r
                   : e.ConvertTo64BitString()),
-              (n.m_strAccountName = null == _ ? void 0 : _.account_name),
-              (null == _ ? void 0 : _.persona_state_flags) &&
+              (n.m_strAccountName = null == m ? void 0 : m.account_name),
+              (null == m ? void 0 : m.persona_state_flags) &&
                 (n.m_unPersonaStateFlags =
-                  null == _ ? void 0 : _.persona_state_flags);
-            (null == _ ? void 0 : _.game_id) &&
-              (n.m_gameid = null == _ ? void 0 : _.game_id);
-            (null == _ ? void 0 : _.game_server_ip_address) &&
+                  null == m ? void 0 : m.persona_state_flags);
+            (null == m ? void 0 : m.game_id) &&
+              (n.m_gameid = null == m ? void 0 : m.game_id);
+            (null == m ? void 0 : m.game_server_ip_address) &&
               (n.m_unGameServerIP =
-                null == _ ? void 0 : _.game_server_ip_address);
-            (null == _ ? void 0 : _.lobby_steam_id) &&
-              (n.m_game_lobby_id = null == _ ? void 0 : _.lobby_steam_id);
-            (null == _ ? void 0 : _.game_extra_info) &&
-              (n.m_strGameExtraInfo = null == _ ? void 0 : _.game_extra_info);
-            (null == s ? void 0 : s.profile_url) &&
-              (n.m_strProfileURL = s.profile_url);
+                null == m ? void 0 : m.game_server_ip_address);
+            (null == m ? void 0 : m.lobby_steam_id) &&
+              (n.m_game_lobby_id = null == m ? void 0 : m.lobby_steam_id);
+            (null == m ? void 0 : m.game_extra_info) &&
+              (n.m_strGameExtraInfo = null == m ? void 0 : m.game_extra_info);
+            (null == i ? void 0 : i.profile_url) &&
+              (n.m_strProfileURL = i.profile_url);
             return n;
-          })(_.b.InitFromAccountID(e), a);
+          })(m.b.InitFromAccountID(e), a);
         },
       });
-      function d(e, t, a) {
-        const r = "string" == typeof a ? new _.b(a).GetAccountID() : a;
+      function h(e, t, a) {
+        const r = "string" == typeof a ? new m.b(a).GetAccountID() : a;
         return {
           queryKey: ["PlayerSummary", r],
           queryFn: () => e.loadPersonaState(r, t),
           enabled: !!r,
         };
       }
-      let h;
+      let p;
     },
   },
 ]);

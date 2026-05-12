@@ -4556,7 +4556,7 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "Steam_SteamInputDisableDualSenseUpdates"	"Deaktiver notifikationer om firmwareopdateringer til DualSense i skrivebordsklienten."
 
 "Steam_Settings_ShaderCache"			"Forudcaching af shadere"
-"Steam_Settings_ShaderCache_Info"		"Forudcaching af shadere tillader Steam at downloade forudkompilerede GPU-shadere, som passer til dine systemkonfigurationer. Dette tillader Vulkan- og OpenGL-spil at indlæse hurtigere og forbedrer billedhastighedens stabilitet under spil.\n\nHvis slået til, vil Steam samle shadere fra dit system, når det er nødvendigt. Ved at aktivere denne funktion, kan disk- og båndbreddeforbrug stige."
+"Steam_Settings_ShaderCache_Info"		"Forudcaching af shadere tillader Steam at downloade forudkompilerede GPU-shadere, som passer til din systemkonfiguration. Dette gør det muligt at indlæse Vulkan- og OpenGL-spil hurtigere og forbedrer billedhastighedens stabilitet under spil.\n\nHvis det er slået til, samler Steam shadere fra dit system, når det er nødvendigt. Ved at aktivere denne funktion kan disk- og båndbreddeforbruget stige en smule."
 "Steam_Settings_ShaderCache_Enable"		"Aktiver forudcaching af shadere (%shaderdiskusagemb% MB forudcachet)"
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"Tillad, at Vulkan-shadere bearbejdes i baggrunden"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"Behandler %shaderapp%... (%shaderpercent%%)"

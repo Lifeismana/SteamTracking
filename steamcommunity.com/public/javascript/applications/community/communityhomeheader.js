@@ -116,7 +116,7 @@
               n = [...e, ...t];
             if (n.length)
               return {
-                isLoading: 1 === (0, _.zX)(n, { include_assets: !0 }),
+                isLoading: (0, _.zX)(n, { include_assets: !0 }) === _.Sq,
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {

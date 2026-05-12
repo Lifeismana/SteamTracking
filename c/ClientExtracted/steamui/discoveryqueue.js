@@ -25,6 +25,7 @@
         BackgroundAnimation: "_1BygdMVbHp4UClANjStGo9",
         "ItemFocusAnim-darkerGrey-nocolor": "_3pIKV-kCrU2q99tCLoOD-6",
         "ItemFocusAnim-darkerGrey": "OgzJ6LmEUtmpf0GQsD7Vo",
+        "ItemFocusAnim-darkGreySettings": "_41HuR0jEUjSpy915lvI0-",
         "ItemFocusAnim-darkGrey": "_3GG7KC5ZHbAn80ZwU94AGH",
         "ItemFocusAnim-grey": "_2vCJ0TzuZNRRjxTZxrTZgc",
         "ItemFocusAnim-translucent-white-10": "_3LSZycr3qnPrQPVjt2oj-9",
@@ -124,6 +125,7 @@
         BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
         "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
         "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
+        "ItemFocusAnim-darkGreySettings": "_3bomS6MjDv4c5XbYu2Caqu",
         "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
         "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
         "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
@@ -145,6 +147,7 @@
         BackgroundAnimation: "_3B8qOyTqC7rzOP_X5kvWK-",
         "ItemFocusAnim-darkerGrey-nocolor": "_2wYIdqvoWTU_8MPGJtV4j",
         "ItemFocusAnim-darkerGrey": "_5noNLXRGVi51cgI8nYBAm",
+        "ItemFocusAnim-darkGreySettings": "_3UqXfp4k1blu2wv57exkEd",
         "ItemFocusAnim-darkGrey": "_6iLF1QqShrpEW0UiF0x2o",
         "ItemFocusAnim-grey": "PuZXrV7q9vI7p-jK9x2pN",
         "ItemFocusAnim-translucent-white-10": "_2RwwslrDVdOXePDy6QCEkZ",
@@ -173,6 +176,7 @@
         BackgroundAnimation: "_3qHy0ZfVKo5p8TWje-jtAG",
         "ItemFocusAnim-darkerGrey-nocolor": "_2ysW7cifFEEfft88AcXQ77",
         "ItemFocusAnim-darkerGrey": "_1sDFTD6HQbSYSYfAeHxdfc",
+        "ItemFocusAnim-darkGreySettings": "VVWIBS9xCTuHNuOqAeZgl",
         "ItemFocusAnim-darkGrey": "_3o-jWjx0jwVTFKTTeS0T03",
         "ItemFocusAnim-grey": "_1hRqeCN67Ga45VdF6Q6cgA",
         "ItemFocusAnim-translucent-white-10": "_2f5q2Audp6Dn4k8WoktvHn",
@@ -190,6 +194,8 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -258,6 +264,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -266,7 +275,7 @@
           __webpack_require__.Body().set_appid(_);
           const _ = await _._.GetFriendsRecommendedApp(_, _),
             _ = _.GetEResult();
-          if (1 == _) return _.Body().toObject();
+          if (_ == _._) return _.Body().toObject();
           throw `Error ${_} failed to call GetFriendsRecommendedApp ${_}`;
         }
         static async LoadStoreRelevanceData(_) {
@@ -289,7 +298,7 @@
           ).data;
           return (
             _ &&
-              1 == _.success &&
+              _.success == _._ &&
               (_.results.similar_played_apps &&
                 (_.arrSimilarPlayedApps = _.results.similar_played_apps.map(
                   (_) => ({
@@ -335,7 +344,7 @@
           })(_),
           _ = (function () {
             const { data: _ } = (0, _._)("App Relevance Store Top Sellers", {
-              sort: 11,
+              sort: _._._,
               start: 0,
               count: 100,
             });
@@ -738,7 +747,7 @@
                 (0, _.jsx)(_._, {
                   className: _().PersonaStatus,
                   persona: _,
-                  eFriendRelationship: 3,
+                  eFriendRelationship: _._UC,
                   bIsSelf: !1,
                   strNickname: null,
                   bParenthesizeNicknames: !1,
@@ -785,6 +794,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let { children: _ } = _;
@@ -822,7 +832,7 @@
           _ = (_ ?? !0) && _ && !_.BIsAllAges() && "masked" == _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(0),
+          [_, _] = _.useState(_._),
           _ = _.useRef(void 0),
           _ = _.useRef(void 0),
           [_, _] = _.useState(),
@@ -851,17 +861,17 @@
           }, [_, _, _, _]);
         const _ = (function (_, _, _, _, _) {
           return _.useCallback(() => {
-            0 == _
+            _ == _._
               ? _(!0)
-              : 1 == _ && _.current
+              : _ == _._ && _.current
                 ? _.current.paused
                   ? _.current.play()
                   : _.current.pause()
-                : 2 == _ && _.current
+                : _ == _._ && _.current
                   ? _.current.IsPaused()
                     ? _.current.Play()
                     : _.current.Pause()
-                  : 2 == _ && _ && _.TogglePlayPause();
+                  : _ == _._ && _ && _.TogglePlayPause();
           }, [_, _, _, _, _]);
         })(_, _, _, _, _);
         _.useEffect(() => {
@@ -875,7 +885,7 @@
           onMouseLeave: () => _(!1),
           children: [
             (0, _.jsx)("img", {
-              className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
+              className: (0, _._)(_().AppMainCap, _ != _._ && _().Hidden),
               src: _,
               onClick: _,
             }),
@@ -962,7 +972,10 @@
           _ = !!_ || !!_;
         _.useEffect(() => {
           let _ = !1;
-          _ && _ && _ && (_ = 0 === _ || (1 === _ && !_) || (2 === _ && !_)),
+          _ &&
+            _ &&
+            _ &&
+            (_ = _ === _._ || (_ === _._ && !_) || (_ === _._ && !_)),
             _(_),
             _?.(_ && _);
         }, [_, _, _, _, _, _, _, _]),
@@ -984,7 +997,7 @@
           })(_, _),
           _.useEffect(() => {
             _ ||
-              (_(0),
+              (_(_._),
               _(!1),
               _(!1),
               _.current && (_.current.pause(), (_.current.currentTime = 0)),
@@ -993,16 +1006,16 @@
         const _ = _.useRef(!1);
         return (
           _.useEffect(() => {
-            if (_ && 0 === _)
+            if (_ && _ === _._)
               if ((_(!0), _))
                 if (_.current) {
-                  _.Debug("Starting microtrailer"), _(1);
+                  _.Debug("Starting microtrailer"), _(_._);
                   const _ = () =>
                     (function (_, _, _) {
                       if (_.current) return;
                       (_.current = !0),
                         _.Debug("Starting main trailer"),
-                        _(2),
+                        _(_._),
                         __webpack_require__.Play();
                     })(_, _, _.current);
                   _ || !_.current
@@ -1017,7 +1030,7 @@
                           _.Warning(`Failed to play ${_}: `, _);
                       }));
                 } else
-                  _ && (_.Debug("Starting broadcast player"), _(2), _.Play());
+                  _ && (_.Debug("Starting broadcast player"), _(_._), _.Play());
               else _.Debug("Showing image");
             var _, _, _;
           }, [_, _, _, _, _, _, _, _, _]),
@@ -1045,18 +1058,18 @@
             const [_, _] = _.useState(!1);
             _.useEffect(() => {
               _ && !_
-                ? 1 == _ && _ && _
+                ? _ == _._ && _ && _
                   ? (__webpack_require__.pause(), _(!0))
-                  : 2 == _ && _ && _
+                  : _ == _._ && _ && _
                     ? (_.Pause(), _(!0))
-                    : 2 == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
+                    : _ == _._ && _ && !_.IsPaused() && (_.Pause(), _(!0))
                 : !_ &&
                   _ &&
-                  (1 == _ && _
+                  (_ == _._ && _
                     ? __webpack_require__.play()
-                    : 2 == _ && _
+                    : _ == _._ && _
                       ? _.Play()
-                      : 2 == _ && _ && _.IsPaused() && _.Play(),
+                      : _ == _._ && _ && _.IsPaused() && _.Play(),
                   _(!1));
             }, [_, _, _, _, _, _, _, _]);
           })(_, _, _.current, _, _.current, _, _),
@@ -1106,7 +1119,7 @@
                     (0, _.jsx)(_.default, {
                       classes: _(!1, _),
                       nAppIDVOD: _.GetAppID(),
-                      watchLocation: 15,
+                      watchLocation: _._._,
                       fnOnVideoEnd: _,
                       fnVideoClick: _,
                       fnSetBroadcastVideo: _,
@@ -1134,7 +1147,7 @@
             _.current.SetVolume(_, _);
           }
         }, [_, _]);
-        let _ = 2 != _,
+        let _ = _ != _._,
           _ = _(!1, _);
         return (0, _.jsx)(_, {
           children: (0, _.jsx)("div", {
@@ -1156,9 +1169,9 @@
       function _(_, _) {
         return (0, _._)({
           [_().AppVideo]: !0,
-          [_().PlayFullTrailer]: 2 == _,
-          [_().PlayMicrotrailer]: 1 == _,
-          [_().NoTrailer]: 0 == _,
+          [_().PlayFullTrailer]: _ == _._,
+          [_().PlayMicrotrailer]: _ == _._,
+          [_().NoTrailer]: _ == _._,
           [_().Microtrailer]: _,
           [_().Trailer]: !_,
         });
@@ -1425,7 +1438,7 @@
         return _.useMemo(() => {
           if (!_) return;
           const _ = (0, _._)(_),
-            _ = _ >= 0 ? "?inqueue=" + _ + (_ ? "_" + _ : "") : "",
+            _ = _ >= _._._ ? "?inqueue=" + _ + (_ ? "_" + _ : "") : "",
             _ = (0, _._)(_, _.GetStorePageURL(_) + _);
           return (0, _._)(_);
         }, [_, _, _, _, _]);
@@ -2071,7 +2084,7 @@
           } = _,
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
-          _ = (0, _._)(2, _._.LANGUAGE, !1),
+          _ = (0, _._)(_._._, _._.LANGUAGE, !1),
           [_, _] = _.useState(0),
           [_, _] = _.useState(0),
           { data: _ } = (0, _._)();
@@ -2293,7 +2306,7 @@
       }
       function _(_) {
         const { summaryCardIdx: _ } = _,
-          _ = (0, _._)(2, _._.LANGUAGE, !1, _.toString()),
+          _ = (0, _._)(_._._, _._.LANGUAGE, !1, _.toString()),
           [_] = (0, _._)(_?.data?.current_def?.appid, {}),
           _ = (0, _._)();
         if (!_?.data?.current_def || !_?.GetName().length)

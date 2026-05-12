@@ -882,6 +882,8 @@ $\nY8O
 -steamdeckdisplay
 -steammachinedisplay
 -steampid
+-test-device-type
+-test-glibc-version
 -toggle-overlay-html-mode
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -977,6 +979,7 @@ $\nY8O
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_EContentReportSubjectAction_BannedFromHub
+/\n+k_EContentReportSubjectAction_OwnerDisputed
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -1110,7 +1113,6 @@ $\nY8O
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
 /usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
-/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
 /usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
 /usr/bin/steamos-polkit-helpers/steamos-format-device
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
@@ -1137,11 +1139,11 @@ $\nY8O
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
-00:15:23
 01/01/00
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+06:46:37
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1725,6 +1727,7 @@ $\nY8O
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
+3\n/k_PublishedFileQueryType_RankedByNumParentItems
 3pay
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgShowBrowserContextMenu_ContextCommand
@@ -1829,6 +1832,7 @@ $\nY8O
 9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
+9\n5k_PublishedFileQueryType_RankedByNumParentCollections
 9\n\noneof_decl
 9a&g
 : Tried to copy from a message with a different type. to:
@@ -3161,6 +3165,7 @@ EGRMode
 EGameRecordingType
 EGamescopeBlurMode
 EGamingDeviceType
+EGamingDeviceType override: %d\n
 EGpuDriverId
 EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
@@ -3215,6 +3220,7 @@ ESDCardFormatStage
 ESessionPersistence
 EShellConfigUpdateSection
 ESignatureClass
+ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
 EStartupMovieVariant
@@ -3337,7 +3343,6 @@ Error: %s: popen failed
 Error: %s: steamos-priv-write failed %s: %s\n
 Error: CLinuxSystemHWMonitorThread: failed to initialize\n
 Error: CLinuxSystemHWMonitorThread: frame error, exiting\n
-Error: failed to disable wireless power management: %d\n
 Error: failed to open: %s\n
 ErrorAppID
 ErrorHeadline
@@ -3410,6 +3415,7 @@ FPSGraph.ColorLegend
 FPSGraph.HeightLarge
 FPSLabel
 FPSNumber
+FXL,
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
 Facebook query returned an error
@@ -4519,7 +4525,7 @@ MaxResults
 MaxUseCount
 Maximize
 Maximum family size exceeded
-May  8 2026
+May 12 2026
 MaybeAllocateAligned cannot fail here.
 Meetei_Mayek
 Meeting
@@ -5106,6 +5112,7 @@ OverlayHidden
 OverlayShown
 OverlayWebFrame
 OverlayWebPopup
+Override the current EGamingDeviceType (main/dev only)
 Overwriting on-disk registry with newly created registry.
 Owner
 OwnerID
@@ -5313,6 +5320,7 @@ ProtectedStore
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
+Provide a glibc version for testing
 Provider doesn't support currency
 Proxy
 Proxy Authentication Required
@@ -5361,6 +5369,8 @@ RankedByInappropriateContentRating
 RankedByLastUpdatedDate
 RankedByLifetimeAveragePlaytime
 RankedByLifetimePlaytimeSessions
+RankedByNumParentCollections
+RankedByNumParentItems
 RankedByNumTimesReported
 RankedByPlaytimeSessionsTrend
 RankedByPlaytimeTrend
@@ -8278,6 +8288,10 @@ k_ESLSHelper_Minidump
 k_ESLSHelper_SystemInfo
 k_ESessionPersistence_Ephemeral
 k_ESessionPersistence_Invalid
+k_ESpeakerConfiguration_51
+k_ESpeakerConfiguration_71
+k_ESpeakerConfiguration_Other
+k_ESpeakerConfiguration_Stereo
 k_ESplitScalingFilter_Invalid
 k_ESplitScalingFilter_Linear
 k_ESplitScalingFilter_Nearest

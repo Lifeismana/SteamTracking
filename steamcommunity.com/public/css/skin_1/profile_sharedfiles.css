@@ -91,15 +91,15 @@
 }
 
 #tabs_basebg_workshop {
-	padding: 0px;
-	width:958px;
 	min-height: 441px;
+	padding: 0px;
+	width: 958px;
 }
 
 #tabs_basebg {
-	padding: 0;
 	max-width:958px;
 	min-height: 441px;
+	padding: 0;
 }
 
 
@@ -256,18 +256,17 @@ a.general_btn:hover {
 }
 
 div.sharedfiles_filterselect {
-	position: relative;
+	border: 1px solid transparent;
+	color: white;
 	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
 	height: 26px;
 	line-height: 26px;
-	color: white;
-	font-size: 12px;
-	display: inline-block;
+	margin-inline: 1px 8px;
+	position: relative;
 	text-align: left;
-	border: 1px solid transparent;
 	user-select: none;
-	margin-left: 1px;
-	margin-right: 8px;
 	-moz-user-select: none;
 	-webkit-user-select: none;
 }
@@ -322,12 +321,11 @@ div.sharedfiles_filterselect.focus .sharedfiles_filterselect_arrow{
 }
 
 div.sharedfiles_filterselect div.option, div.sharedfiles_filterselect_options div.option {
-	padding-left: 7px;
-	padding-right: 7px;
+	border-bottom: none;
+	cursor: default;
 	height: 24px;
 	line-height: 24px;
-	cursor: default;
-	border-bottom: none;
+	padding-inline: 7px;
 }
 
 div.sharedfiles_filterselect_options div.option{
@@ -404,14 +402,14 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 
 #sharedfiles_privacy
 {
-	height: 26px;
-	line-height: 26px;
-	padding-right: 5px;
 	cursor: pointer;
 	color: white;
 	font-size: 12px;
-	text-align: left;
+	height: 26px;
+	line-height: 26px;
 	margin-top: 3px;
+	padding-right: 5px;
+	text-align: left;
 }
 
 #sharedfiles_view

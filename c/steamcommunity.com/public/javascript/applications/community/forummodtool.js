@@ -55,6 +55,21 @@
         ContentReportsTable: "vOw0zIvYhKvicImwO2-XL",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
+        GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
+        Active: "_8XjrTFzaSA8ubHvHCu44L",
+        GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
+        GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
+        StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports),
@@ -75,12 +90,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { subject: _, onClose: _ } = _,
-          [_, _] = (0, _.useState)(10),
+          [_, _] = (0, _.useState)(_._),
           _ = (0, _._)(_.subject_type, _.subject_group_id, _.subject_id);
         return (0, _.jsxs)(_._, {
           className: _().EscalateSubjectDialogCtn,
@@ -94,17 +112,17 @@
               onChange: (_) => _(parseInt(_.target.value)),
               children: [
                 (0, _.jsx)("option", {
-                  value: 0,
+                  value: _._,
                   children: _._.Localize("#moderation_escalationlevel_any"),
                 }),
                 (0, _.jsx)("option", {
-                  value: 1,
+                  value: _._,
                   children: _._.Localize(
                     "#moderation_escalationlevel_supervisor",
                   ),
                 }),
                 (0, _.jsx)("option", {
-                  value: 10,
+                  value: _._,
                   children: _._.Localize("#moderation_escalationlevel_valve"),
                 }),
               ],
@@ -131,6 +149,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -264,6 +283,7 @@
       }
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -914,14 +934,14 @@
                     `${_._.COMMUNITY_BASE_URL}profiles/${_}/ajaxlanguagepreferences`,
                   ),
                   _ = await _.json();
-                if (1 === _.success) return _.preferences;
+                if (_.success === _._) return _.preferences;
                 throw new Error(
                   "Failed GetPrimaryLanguageForUser. EResult: " + _.success,
                 );
               },
             }));
         var _;
-        let _ = 0;
+        let _ = _.Bhc;
         if (_.isSuccess) {
           const _ = _.data;
           void 0 !== _.pref_primary_language && -1 !== _.pref_primary_language
@@ -937,9 +957,10 @@
             queryFn: async () => {
               if (null == _ || void 0 === _) return null;
               const _ = _._.Init(_);
-              _.Body().set_quicktext_id(_), _.Body().set_language((0, _._)(_));
+              _.Body().set_quicktext_id(_),
+                _.Body().set_language((0, _.LgB)(_));
               const _ = await _.GetQuickText(_, _);
-              if (1 !== _.GetEResult())
+              if (_.GetEResult() !== _._)
                 throw new Error(
                   "useQuickText failed with EResult " + _.GetEResult(),
                 );
@@ -1228,35 +1249,35 @@
                           const _ = [];
                           _ &&
                             __webpack_require__.push({
-                              sanction: 1,
+                              sanction: _._,
                             }),
                             _ &&
                               __webpack_require__.push({
-                                sanction: 8,
+                                sanction: _._,
                               }),
                             _ &&
                               __webpack_require__.push({
-                                sanction: 3,
+                                sanction: _._,
                                 days: _,
                               }),
                             _ &&
                               __webpack_require__.push({
-                                sanction: 2,
+                                sanction: _._,
                                 days: _,
                               }),
                             _ &&
                               __webpack_require__.push({
-                                sanction: 5,
+                                sanction: _._,
                                 days: _,
                               }),
                             _ &&
                               __webpack_require__.push({
-                                sanction: 4,
+                                sanction: _._,
                                 days: -1,
                               }),
                             _ &&
                               __webpack_require__.push({
-                                sanction: 7,
+                                sanction: _._,
                               }),
                             _.onOK(_, _.trim(), _);
                         },
@@ -1271,6 +1292,8 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1389,10 +1412,9 @@
             avatarURL: _,
             size: _,
             isOnline:
-              1 ===
               (null === (_ = _.private_data) || void 0 === _
                 ? void 0
-                : _.persona_state),
+                : _.persona_state) === _.UXk,
             isInGame:
               void 0 !==
               (null === (_ = _.private_data) || void 0 === _
@@ -1404,14 +1426,12 @@
                 ? void 0
                 : _.watching_broadcast_accountid),
             isAwayOrSnooze:
-              3 ===
-                (null === (_ = _.private_data) || void 0 === _
-                  ? void 0
-                  : _.persona_state) ||
-              4 ===
-                (null === (_ = _.private_data) || void 0 === _
-                  ? void 0
-                  : _.persona_state),
+              (null === (_ = _.private_data) || void 0 === _
+                ? void 0
+                : _.persona_state) === _.PrD ||
+              (null === (_ = _.private_data) || void 0 === _
+                ? void 0
+                : _.persona_state) === _.vPz,
             ..._,
           })
         );
@@ -1622,19 +1642,17 @@
         const { eAction: _, jsonData: _ } = _;
         let _ = {};
         switch ((_ && (_ = JSON.parse(_)), _)) {
-          case 1:
-          case 4:
-          case 7:
+          case _._:
             return (0, _.jsxs)(_.Fragment, {
               children: ["Report ID: ", _.report_id],
             });
-          case 2:
+          case _._:
             return (0, _.jsxs)(_.Fragment, {
               children: [
                 "Reason: ",
                 (0, _._)(_.reason),
-                1 !== _.resolution &&
-                  14 !== _.resolution &&
+                _.resolution !== _._ &&
+                  _.resolution !== _._ &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)("br", {}),
@@ -1652,13 +1670,21 @@
                   }),
               ],
             });
-          case 5:
+          case _._:
+            return (0, _.jsxs)(_.Fragment, {
+              children: ["Report ID: ", _.report_id],
+            });
+          case _._:
             return (0, _.jsx)(_.Fragment, {
               children: JSON.stringify(_, null, "\t"),
             });
-          case 6:
+          case _._:
             return (0, _.jsxs)(_.Fragment, {
               children: ["New level: ", (0, _._)(_.level)],
+            });
+          case _._:
+            return (0, _.jsxs)(_.Fragment, {
+              children: ["Report ID: ", _.report_id],
             });
           default:
             return null;
@@ -1702,11 +1728,12 @@
         if (!_.isSuccess) return null;
         if (!(null === (_ = _.data) || void 0 === _ ? void 0 : _.public_data))
           return null;
-        const _ = !!_.time_disputed && 0 === _.dispute_resolved,
+        const _ = !!_.time_disputed && _.dispute_resolved === _._,
           _ =
-            0 !== _.resolved && (!_.time_disputed || 0 !== _.dispute_resolved),
+            _.resolved !== _._ &&
+            (!_.time_disputed || _.dispute_resolved !== _._),
           _ = 0 !== _.time_dispute_resolved,
-          _ = 1 === _.resolved;
+          _ = _.resolved === _._;
         return (0, _.jsxs)("tr", {
           children: [
             (0, _.jsx)("td", {
@@ -1736,7 +1763,7 @@
             }),
             (0, _.jsx)("td", {
               children:
-                2 !== _.report_reason &&
+                _.report_reason !== _._ &&
                 (0, _.jsx)("span", {
                   children: (0, _._)(_.report_reason),
                 }),
@@ -1804,7 +1831,7 @@
       function _(_) {
         var _;
         const [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(1, _.topicId);
+          _ = (0, _._)(_._, _.topicId);
         let _;
         if (_.isSuccess)
           for (const _ of null !== (_ = _.data.subjects) && void 0 !== _
@@ -1914,11 +1941,11 @@
             _.time_resolved && !_.time_disputed && _++,
               _.time_dispute_resolved && _++;
         const _ = {
-            subject_type: 1,
+            subject_type: _._,
             subject_group_id: _.topicId,
             subject_id: _.subjectId,
           },
-          _ = void 0 !== _ && !_.owner_dispute_time && 14 === _.resolved,
+          _ = void 0 !== _ && !_.owner_dispute_time && _.resolved === _._,
           _ = void 0 !== _ && !!_.owner_dispute_time;
         return (0, _.jsx)(_._, {
           onlyPopoutIfNeeded: !0,
@@ -2152,8 +2179,8 @@
             _ &&
             (_.unresolved_report_count > 0 ||
               _.unresolved_dispute_count > 0 ||
-              (14 === _.resolved && 1 !== _.dispute_resolved) ||
-              14 === _.dispute_resolved);
+              (_.resolved === _._ && _.dispute_resolved !== _._) ||
+              _.dispute_resolved === _._);
         return (0, _.jsx)("button", {
           onClick: async () => {
             await __webpack_require__.mutateAsync(), _.onClose();
@@ -2166,9 +2193,9 @@
         const { subject: _ } = _,
           _ =
             _ &&
-            0 !== _.resolved &&
+            _.resolved !== _._ &&
             (_.unresolved_dispute_count > 0 || _.unresolved_report_count > 0),
-          _ = (0, _._)(1, _.topicId, _.subjectId);
+          _ = (0, _._)(_._, _.topicId, _.subjectId);
         return (0, _.jsx)("button", {
           onClick: async () => {
             await _.mutateAsync({}), _.onClose();
@@ -2193,7 +2220,7 @@
             return _.Body();
           },
           onSuccess: async (_) => {
-            await (0, _._)(_, 1, _, _);
+            await (0, _._)(_, _._, _, _);
           },
         });
       }
@@ -2223,7 +2250,7 @@
             return _.Body();
           },
           onSuccess: async (_) => {
-            await (0, _._)(_, 1, _, _);
+            await (0, _._)(_, _._, _, _);
           },
         });
       }
@@ -2518,6 +2545,159 @@
               ..._.location.state,
             })
           : _.push(`?${_.toString()}`);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            tabs: _,
+            bDisableRouting: _,
+            startingTab: _,
+            classNameCtn: _,
+            classNameTab: _,
+            classNameTabContent: _,
+            preferredFocus: _,
+            bVerticalTabs: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(() => {
+            var _;
+            return (
+              _ ||
+              (!_ &&
+              (0, _._)(_, "tab") &&
+              null !== (_ = (0, _._)(_, "tab")) &&
+              void 0 !== _
+                ? _
+                : "")
+            );
+          });
+        (0, _.useEffect)(() => {
+          if (!_.bDisableRouting && _) {
+            const _ = (0, _._)(_, "tab");
+            _ && _(_);
+          }
+        }, [_, _.key, _.bDisableRouting, _]);
+        const _ = _.useCallback(
+            (_) => {
+              _(_.key),
+                _ || (0, _._)(_, "tab", _.key),
+                _.onClick && _.onClick(_);
+            },
+            [_, _],
+          ),
+          _ = _.filter((_) => !_.hidden);
+        if (!_.length) return null;
+        const _ = _.find((_) => _.key === _) || _[0],
+          _ = _ ? (null != _ ? _ : _[0].key) : void 0,
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                className: (0, _._)(
+                  _().GraphicalAssetsTabs,
+                  _ && _().GraphicalAssetsTabsVertical,
+                  _,
+                ),
+                navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
+                children: _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      tab: _,
+                      OnTabClick: _,
+                      classNameTab: _,
+                      active: _.key === _.key,
+                      preferredFocus: _ === _.key,
+                    },
+                    _.key,
+                  ),
+                ),
+              }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  className: _,
+                  children: _.contents,
+                }),
+            ],
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              className: (0, _._)(_().GraphicalAssetsTabsLayoutVertical),
+              children: _,
+            })
+          : _;
+      }
+      function _(_) {
+        const { statusType: _ = "success", children: _ } = _;
+        let _ = "";
+        return (
+          "success" === _
+            ? (_ = _().StatusSuccess)
+            : "danger" === _
+              ? (_ = _().StatusDanger)
+              : "caution" === _ && (_ = _().StatusCaution),
+          (0, _.jsx)("div", {
+            className: (0, _._)(_().GraphicalAssetStatus, _),
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const {
+          tab: _,
+          OnTabClick: _,
+          classNameTab: _,
+          active: _,
+          preferredFocus: _,
+        } = _;
+        return (0, _.jsx)(_._, {
+          condition: Boolean(_.statusToolTip || _.tooltip),
+          wrap: (_) =>
+            (0, _.jsx)(_._, {
+              toolTipContent: _.statusToolTip || _.tooltip,
+              children: _,
+            }),
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _().GraphicalAssetsTab,
+              _ && _().Active,
+              _ && "ActiveTab",
+              _,
+            ),
+            onActivate: () => __webpack_require__(_),
+            preferredFocus: _,
+            children: [
+              Boolean(_.vo_warning) &&
+                (0, _.jsx)(_._, {
+                  toolTipContent: _.vo_warning,
+                  children: (0, _.jsx)("div", {
+                    className: _().VOWarning,
+                    children: (0, _._)("#EventEditor_VOWarning"),
+                  }),
+                }),
+              _.status,
+              _.name,
+            ],
+          }),
+        });
       }
     },
   },

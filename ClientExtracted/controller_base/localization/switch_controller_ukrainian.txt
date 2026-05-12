@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Рискання гіроскопа правого Joy-Con"
 	"origin_switch_r_gyro_roll"					"Крен гіроскопа правого Joy-Con"
 	"origin_switch_button_dpad_move"			"Рух хрестовини"
+	"origin_switch_button_gl"					"Кнопка GL"
+	"origin_switch_button_gr"					"Кнопка GR"
+	"origin_switch_button_button_c"				"Кнопка C"
 }

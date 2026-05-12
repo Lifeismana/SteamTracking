@@ -29,6 +29,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clipToUpload: _, finishUpload: _ } = _,
@@ -51,7 +53,7 @@
                     _.clip_id,
                     "",
                     "",
-                    3,
+                    _.wY0,
                   );
                   __webpack_require__(_), _(!1);
                 },
@@ -75,7 +77,7 @@
                 void 0 === _.Body().eresult()
                   ? _(100 * _.Body().progress())
                   : _(void 0),
-                1
+                _._
               ),
             ).unregister,
           [],
@@ -112,6 +114,7 @@
         });
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1725,6 +1728,7 @@
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clipID: _ } = _,
@@ -1736,7 +1740,7 @@
                 const _ = _._.Init(_);
                 __webpack_require__.Body().set_clip_id(_);
                 const _ = await _.GetSingleSharedClip(_, _);
-                if (1 != _.GetEResult())
+                if (_.GetEResult() != _._)
                   throw (
                     ((0, _._)("GetSingleSharedClip failed"),
                     _.DEBUG_LogToConsole(),
@@ -1760,7 +1764,7 @@
                       recording_id: _.video_manager_video_id,
                       start_offset_ms: _.start_offset_ms.toFixed(0),
                       duration_ms: _.duration_ms.toFixed(0),
-                      recording_type: 4,
+                      recording_type: _._,
                       cdn_manifest_url: _.manifest_url,
                     });
                 return {

@@ -546,15 +546,14 @@ td.wordfilter_action a:hover {
 }
 
 
-
 .global_discussion_search_ctn {
 	margin-bottom: 12px;
 }
 
 .discussions_view_more_link {
+	float: right;
 	line-height: 22px;
 	padding-top: 10px;
-	float: right;
 }
 
 .discussions_view_more_link a {

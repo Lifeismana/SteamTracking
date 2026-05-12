@@ -1,6 +1,7 @@
 {
     "language": "danish",
     "TrailerPlayer_Settings_Tooltip": "Indstillinger",
+    "TrailerPlayer_Captions_Tooltip": "Undertekster / tekster for hørehæmmede",
     "TrailerPlayer_Play_Tooltip": "Afspil",
     "TrailerPlayer_Pause_Tooltip": "Pause",
     "TrailerPlayer_Mute_Tooltip": "Slå lyd fra",

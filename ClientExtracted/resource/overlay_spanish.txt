@@ -209,8 +209,8 @@
 "Overlay_Publish_Error_Quota_Plural" "No tienes suficiente espacio disponible en Cloud para cargar estas capturas"
 "Overlay_Delete_Screenshot_Error" "Se ha producido un error al borrar la captura. Por favor, inténtalo de nuevo más tarde."
 "Overlay_Tag_As_Potential_Spoiler" "Etiquetar como posible spoiler"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Acuerdo Legal de Steam Workshop"
-"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Debes aceptar la última versión del Acuerdo Legal de Steam Workshop antes de completar la publicación de tu artículo."
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Acuerdo Legal de Steam Workshop"
+"Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Debes aceptar la última versión del Acuerdo Legal de Steam Workshop antes de completar la publicación de tu artículo."
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_ViewItem" "Ver artículo"
 
 "Overlay_Share"						"Compartir en Facebook"
@@ -219,14 +219,14 @@
 "Overlay_PrivateScreenshot"			"Esta aplicación todavía no ha sido publicada. Las capturas no pueden ser configuradas como públicas ni compartirse en Facebook."
 "Overlay_ScreenshotOnSteam"			"Mira esta captura en Steam"
 "Overlay_ScreenshotOnSteamNamed"	"Mira esta captura de %gamename% en Steam"
-"Overlay_Taskbar_GameHub"		"Punto de encuentro"
+"Overlay_Taskbar_GameHub"		"Centro de la comunidad"
 
 "Overlay_Guides_Panel_Title" "Guías"
 "Overlay_View_Guides" "Ver todas las guías"
 "Overlay_Guides_Panel_NumGuides" "%num_guides% disponible(s)"
 
-"Overlay_CommunityHub_Panel_Title" "Punto de encuentro"
-"Overlay_View_CommunityHub" "Ver punto de encuentro"
+"Overlay_CommunityHub_Panel_Title" "Centro de la comunidad"
+"Overlay_View_CommunityHub" "Ver centro de la comunidad"
 "Overlay_CommunityHub_Panel_NumContributions" "%num_contributions% contribución(es) de la comunidad"
 
 "Overlay_CommunityDiscussions_Panel_Title" "Discusiones"

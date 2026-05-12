@@ -93,6 +93,8 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Arfagem do giroscópio"
 	"origin_SteamDeck_Gyro_Yaw"					"Guinada do giroscópio"
 	"origin_SteamDeck_Gyro_Roll"				"Rolagem do giroscópio"
+	"origin_SteamDeck_LGrip"					"Toque na empunhadura esquerda"
+	"origin_SteamDeck_RGrip"					"Toque na empunhadura direita"
 
 	"origin_horipad_m1"							"Botão M1"
 	"origin_horipad_m2"							"Botão M2"
