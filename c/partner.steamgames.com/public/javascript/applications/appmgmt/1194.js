@@ -168,6 +168,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { bHideTour: _, fnConversionMethodSelected: _ } = _,
@@ -179,20 +180,20 @@
           _ = (0, _.useMemo)(() => {
             const _ = new Array();
             return (
-              _.findIndex((_) => 1 == _) >= 0 &&
+              _.findIndex((_) => _ == _._._) >= 0 &&
                 _.push({
                   label: _._.Localize("#ConversionMethod_Nuanced"),
-                  data: 1,
+                  data: _._._,
                 }),
-              _.findIndex((_) => 2 == _) >= 0 &&
+              _.findIndex((_) => _ == _._._) >= 0 &&
                 _.push({
                   label: _._.Localize("#ConversionMethod_PPP"),
-                  data: 2,
+                  data: _._._,
                 }),
-              _.findIndex((_) => 3 == _) >= 0 &&
+              _.findIndex((_) => _ == _._._) >= 0 &&
                 _.push({
                   label: _._.Localize("#ConversionMethod_FX"),
-                  data: 3,
+                  data: _._._,
                 }),
               _
             );

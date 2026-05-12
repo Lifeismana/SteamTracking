@@ -1539,9 +1539,9 @@ ${STORE_BASE_URL}recommender/
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
 ${STORE_BASE_URL}remoteplay#anywhere
-${STORE_BASE_URL}replay/${steamid}/${}?src=9
+${STORE_BASE_URL}replay/${steamid}/${}?src=${}
 ${STORE_BASE_URL}replay/${}/${}
-${STORE_BASE_URL}replay/${}/${}?src=8
+${STORE_BASE_URL}replay/${}/${}?src=${}
 ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strSalePage}
 ${STORE_BASE_URL}sale/${strVanity}

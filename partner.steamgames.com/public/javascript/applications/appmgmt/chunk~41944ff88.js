@@ -246,7 +246,7 @@
         o = e(39479),
         i = e(64238),
         a = e.n(i),
-        t = e(41324),
+        t = e(11526),
         n = e(75659),
         m = e(44041);
       function c(s) {
@@ -271,7 +271,7 @@
       e.d(r, { s: () => c });
       var p = e(7850),
         o = e(39479),
-        i = e(41324),
+        i = e(11526),
         a = e(75659),
         t = e(64238),
         n = e.n(t),
@@ -339,7 +339,7 @@
     75659: (s, r, e) => {
       "use strict";
       e.d(r, { L: () => i, h: () => a });
-      var p = e(41324),
+      var p = e(11526),
         o = e(88122);
       const i = [
           { prop: "margin", responsive: !0, className: (s) => o[`m-${s}`] },
@@ -590,23 +590,18 @@
           },
         ];
     },
-    41324: (s, r, e) => {
+    11526: (s, r, e) => {
       "use strict";
       e.d(r, {
-        Fd: () => m,
-        ti: () => n,
-        To: () => c,
-        w7: () => l,
-        mz: () => t,
+        Fd: () => n,
+        ti: () => t,
+        To: () => m,
+        w7: () => c,
+        mz: () => a,
       });
-      var p = e(10430);
-      const o = p.IE.reduce((s, r, e) => ((s[r] = e), s), {});
-      function i(s, r) {
-        if ("object" != typeof s) return s;
-        for (let e = o[r]; e >= 0; e--) if (p.IE[e] in s) return s[p.IE[e]];
-        return s.initial;
-      }
-      const a = {
+      var p = e(10430),
+        o = e(55348);
+      const i = {
         0: !0,
         1: !0,
         2: !0,
@@ -618,10 +613,10 @@
         8: !0,
         9: !0,
       };
-      function t(s, r) {
+      function a(s, r) {
         return (function (s, r, e) {
           const p = [],
-            o = {},
+            i = {},
             a = {},
             { extracted: t, remaining: n } = (function (s, r) {
               const e = { remaining: { ...s }, extracted: {} };
@@ -637,7 +632,7 @@
             let r = t[n.prop];
             if (
               void 0 !== r &&
-              (n.responsive && (r = i(r, e.formFactor)), void 0 !== r)
+              (n.responsive && (r = (0, o.I)(r, e.formFactor)), void 0 !== r)
             ) {
               if (n.className) {
                 if (
@@ -655,14 +650,14 @@
               }
               if (n.cssProperty)
                 if ("function" == typeof n.cssProperty) {
-                  const e = n.cssProperty(r, s);
-                  if (e.length && Array.isArray(e[0]))
-                    e.forEach(([s, r]) => (o[s] = r));
+                  const p = n.cssProperty(r, s, e.formFactor);
+                  if (p.length && Array.isArray(p[0]))
+                    p.forEach(([s, r]) => (i[s] = r));
                   else {
-                    const s = e;
-                    o[s[0]] = s[1];
+                    const s = p;
+                    i[s[0]] = s[1];
                   }
-                } else o[n.cssProperty] = r;
+                } else i[n.cssProperty] = r;
               if (n.dataProperty)
                 if ("function" == typeof n.dataProperty) {
                   const [s, e] = n.dataProperty(r);
@@ -677,28 +672,39 @@
             "style" in n &&
               n.style &&
               "object" == typeof n.style &&
-              Object.assign(o, n.style),
-            { ...a, ...n, className: p.join(" "), style: o }
+              Object.assign(i, n.style),
+            { ...a, ...n, className: p.join(" "), style: i }
           );
         })(s, r, { formFactor: (0, p.xC)() });
       }
-      function n(s) {
+      function t(s) {
         return (function (s) {
-          return !!a[s];
+          return !!i[s];
         })(s)
           ? `var(--spacing-${s})`
           : s;
       }
-      function m(s) {
+      function n(s) {
         if (!("%" == s[s.length - 1])) return `var(--color-${s})`;
         const [r, e] = s.split(" ");
         return `rgb( from ${`var(--color-${r})`} r g b / ${e} )`;
       }
-      function c(s, r) {
-        return s.startsWith("text") ? `var(--color-${s}-${r})` : m(s);
+      function m(s, r) {
+        return s.startsWith("text") ? `var(--color-${s}-${r})` : n(s);
       }
-      function l(s) {
-        return s.startsWith("text") ? `var(--color-${s})` : m(s);
+      function c(s) {
+        return s.startsWith("text") ? `var(--color-${s})` : n(s);
+      }
+    },
+    55348: (s, r, e) => {
+      "use strict";
+      e.d(r, { I: () => i });
+      var p = e(10430);
+      const o = p.IE.reduce((s, r, e) => ((s[r] = e), s), {});
+      function i(s, r) {
+        if ("object" != typeof s) return s;
+        for (let e = o[r]; e >= 0; e--) if (p.IE[e] in s) return s[p.IE[e]];
+        return s.initial;
       }
     },
     39479: (s, r, e) => {

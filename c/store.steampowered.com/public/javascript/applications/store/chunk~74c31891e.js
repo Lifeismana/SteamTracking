@@ -321,7 +321,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_counts = null;
@@ -341,7 +343,7 @@
             const _ =
                 _._.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
               _ = await _().get(_, {});
-            if (200 == _?.status && 1 == _.data?.success && _.data?.counts)
+            if (200 == _?.status && _.data?.success == _._ && _.data?.counts)
               return (this.m_counts = _.data.counts), this.m_counts;
             _ = (0, _._)(_);
           } catch (_) {
@@ -390,6 +392,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
@@ -411,15 +415,15 @@
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
                 deposit_package: _,
-                localized_reservation_desc: (0, _._)([], 31, null),
+                localized_reservation_desc: (0, _._)([], _.bP9, null),
                 localized_out_of_stock_override: (0, _._)(
                   [_ || null],
-                  31,
+                  _.bP9,
                   null,
                 ),
                 localized_delivery_override_desc: (0, _._)(
                   [_ || null],
-                  31,
+                  _.bP9,
                   null,
                 ),
                 override_delivery_only_out_of_stock: Boolean(_),
@@ -434,7 +438,11 @@
             size: "small",
             position: "center",
           });
-        const _ = !_._.logged_in || !_.account_restricted_from_purchasing;
+        const _ = !_._.logged_in || !_.account_restricted_from_purchasing,
+          _ =
+            _.reservation_state == _._.k_EPurchaseReservationState_Reserved
+              ? _
+              : void 0;
         return (0, _.jsxs)(_._, {
           children: [
             (0, _.jsx)(_.Suspense, {
@@ -452,6 +460,7 @@
                     reservationDef: _[0],
                     hardwareDetail: _,
                     bPSULessModel: !1,
+                    reservedHardwareDetail: _,
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
@@ -465,6 +474,7 @@
                       reservationDef: _[0],
                       hardwareDetail: _,
                       bPSULessModel: !0,
+                      reservedHardwareDetail: void 0,
                     }),
                 ],
               }),
@@ -786,7 +796,7 @@
           if (_ >= 0) {
             const _ = __webpack_require__.GetDayIndexFromEventStart();
             return (0, _.jsx)(_._, {
-              location: _ ? 2 : 0,
+              location: _ ? _._ : _._,
               children: (0, _.jsx)(_, {
                 event: _,
                 section: _.jsondata.sale_sections[_],
@@ -885,10 +895,10 @@
         const _ = Number.parseInt((0, _._)(_.args));
         let _ = _.verified;
         switch (_) {
-          case 2:
+          case _._:
             _ = _.playable;
             break;
-          case 1:
+          case _._:
             _ = _.unsupported;
         }
         return (0, _.jsx)("span", {
@@ -896,7 +906,7 @@
         });
       }
       function _(_) {
-        const _ = (0, _._)("library");
+        const _ = (0, _._)(_._.accountid, "library");
         if (!_)
           return (0, _.jsx)(_._, {
             size: "small",
@@ -904,13 +914,13 @@
         const _ = Number.parseInt((0, _._)(_.args));
         let _ = _.verifiedList?.length || 0;
         switch (_) {
-          case 2:
+          case _._:
             _ = _.playableList?.length || 0;
             break;
-          case 1:
+          case _._:
             _ = _.unsupportedList?.length || 0;
             break;
-          case 0:
+          case _._:
             _ = _.unknownList?.length || 0;
         }
         return (0, _.jsx)("span", {

@@ -8,6 +8,7 @@ var g_strActiveURL;
 var g_strGroupURL;
 var g_rgPageContentCache = {};
 var g_oRecommendedApps = null;
+var g_IntersectionObserver = null;
 function InitGroupPage( strGroupBaseURL, strActiveTab, rgAJAXSupportedMethods )
 {
 	g_strGroupURL = strGroupBaseURL;
@@ -1068,20 +1069,25 @@ jQuery( function($) {
 	var $MemberTiles = $('.grouppage_member_tiles');
 	if ( $MemberTiles.length )
 	{
-		if ( $MemberTiles.is(':visible') )
+		if ( $MemberTiles[0].checkVisibility() )
 		{
 			LoadDelayedImages( 'member_tiles' );
 		}
 		else
 		{
-			// load the member tiles if the page resizes
-			$(window ).on('resize.GroupMemberTiles', function() {
-				if ( $MemberTiles.is(':visible') )
+			const fnLoadOnVisible = ( entries ) =>
+			{
+				for ( const entry of entries )
 				{
-					LoadDelayedImages( 'member_tiles' );
-					$(window ).off('resize.GroupMemberTiles');
+					if ( entry.isIntersecting )
+					{
+						LoadDelayedImages( 'member_tiles' );
+						g_IntersectionObserver = null;
+					}
 				}
-			});
+			};
+			g_IntersectionObserver = new IntersectionObserver( fnLoadOnVisible );
+			g_IntersectionObserver.observe( $MemberTiles[ 0 ] );
 		}
 	}
 

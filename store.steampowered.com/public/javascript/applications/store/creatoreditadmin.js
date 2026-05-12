@@ -85,7 +85,7 @@
       var i = r(78327),
         o = r(22837);
       function s() {
-        return i.TS.IN_CLIENT && (0, o.DO)(i.TS.LAUNCHER_TYPE);
+        return i.TS.IN_CLIENT && (0, o.DOG)(i.TS.LAUNCHER_TYPE);
       }
     },
     22797: (e, t, r) => {
@@ -429,28 +429,29 @@
     },
     91648: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => D });
+      r.r(t), r.d(t, { default: () => W });
       var i = r(7850),
         o = r(90626),
         s = r(80902),
         c = r(30470),
         n = r(41735),
-        l = r.n(n);
-      var a = r(61859),
-        d = r(47534),
-        u = r(84933);
-      const f =
+        l = r.n(n),
+        a = r(37085);
+      var d = r(61859),
+        u = r(47534),
+        f = r(84933);
+      const h =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
-      var h = r(44894),
-        m = r(62490),
-        b = r(41609),
-        p = r.n(b),
-        g = r(64641),
-        A = r.n(g),
-        x = r(12155),
-        S = r(25489),
-        k = r(52038);
-      function j(e) {
+      var m = r(44894),
+        b = r(62490),
+        p = r(41609),
+        g = r.n(p),
+        A = r(64641),
+        x = r.n(A),
+        S = r(12155),
+        k = r(25489),
+        j = r(52038);
+      function _(e) {
         const {
             items: t,
             render: r,
@@ -459,16 +460,16 @@
             onReorder: n,
             onMove: a,
             bDisabled: d,
-            rowClassName: b,
+            rowClassName: u,
           } = e,
-          [g, j] = o.useState(!1),
-          [M, N] = o.useState(void 0),
+          [p, A] = o.useState(!1),
+          [_, N] = o.useState(void 0),
           [v, T] = o.useState(void 0),
           [L, w] = o.useState(-1),
           [y, C] = o.useState(void 0),
           [D, W] = o.useState(0),
           [E, B] = o.useState(0),
-          [I, R] = o.useState(void 0),
+          [R, I] = o.useState(void 0),
           [V, z] = o.useState(""),
           G = o.useRef(void 0),
           Y = o.useRef([]),
@@ -487,20 +488,20 @@
             (e) => {
               const t = Y.current[L]?.current;
               t
-                ? ((t.style.left = e.clientX - M + "px"),
+                ? ((t.style.left = e.clientX - _ + "px"),
                   (t.style.top = e.clientY - v + "px"))
                 : console.error("update grab element missing element");
             },
-            [L, M, v],
+            [L, _, v],
           ),
           X = o.useCallback(() => {
             const e = Y.current[L]?.current;
             e
               ? ((e.style.position = ""), (e.style.zIndex = ""))
               : console.error("end element drag missing element"),
-              j(!1),
+              A(!1),
               w(-1),
-              R(void 0),
+              I(void 0),
               C(void 0);
           }, [L]),
           q = (e, t) => {
@@ -516,7 +517,7 @@
                   return void console.error(
                     "start element grab missing element at index " + e,
                   );
-                j(!0), w(e), R(void 0), C(e);
+                A(!0), w(e), I(void 0), C(e);
                 const i = t.clientX - r.getBoundingClientRect().left;
                 N(i);
                 const o = t.clientY - r.getBoundingClientRect().top;
@@ -529,12 +530,12 @@
               e.preventDefault());
           },
           J = (e, r) => {
-            const i = S.OQ(r > e ? r - 1 : r, 0, t.length - 1);
-            e != i && (a ? a(e, i) : (0, m.yY)(t, e, i), P(i), n && n(t));
+            const i = k.OQ(r > e ? r - 1 : r, 0, t.length - 1);
+            e != i && (a ? a(e, i) : (0, b.yY)(t, e, i), P(i), n && n(t));
           },
           Z = o.useCallback(
             (e) => {
-              if (!g || H.token.reason) return;
+              if (!p || H.token.reason) return;
               const t = e.clientY;
               let r;
               for (let e = 0; e < O.current.length; e++) {
@@ -550,15 +551,15 @@
               }
               C(r ?? O.current.length), F(e);
             },
-            [g, H, F],
+            [p, H, F],
           );
-        (0, u.l6)(window, "mousemove", g ? Z : void 0),
-          (0, u.l6)(
+        (0, f.l6)(window, "mousemove", p ? Z : void 0),
+          (0, f.l6)(
             window,
             "mouseup",
-            g
+            p
               ? (e) => {
-                  g && !H.token.reason && (X(), J(L, y));
+                  p && !H.token.reason && (X(), J(L, y));
                 }
               : void 0,
           ),
@@ -567,7 +568,7 @@
               Y.current.push(o.createRef()), O.current.push(o.createRef());
           }, [t.length]);
         const U = (e) => {
-            R(void 0);
+            I(void 0);
             const t = V?.trim(),
               r = Number.parseInt(t);
             if (0 == t.length || isNaN(r)) return;
@@ -576,7 +577,7 @@
           },
           [K, P] = o.useState(void 0);
         return (0, i.jsx)("div", {
-          className: p().WhitelistCtn,
+          className: g().WhitelistCtn,
           ref: G,
           children: t.map((e, o) =>
             (0, i.jsxs)(
@@ -584,27 +585,27 @@
               {
                 ref: O.current[o],
                 children: [
-                  o == y && (0, i.jsx)(_, { width: E }),
+                  o == y && (0, i.jsx)(M, { width: E }),
                   (0, i.jsx)("div", {
                     ref: Y.current[o],
-                    className: p().DragGhost,
+                    className: g().DragGhost,
                     children:
                       o == L &&
                       (0, i.jsxs)("div", {
-                        className: (0, k.A)(p().WhitelistRow, b),
+                        className: (0, j.A)(g().WhitelistRow, u),
                         children: [
                           (0, i.jsx)("img", {
-                            className: (0, k.A)(
-                              p().WhitelistAvatar,
-                              p().Grabbing,
+                            className: (0, j.A)(
+                              g().WhitelistAvatar,
+                              g().Grabbing,
                             ),
-                            src: f,
+                            src: h,
                           }),
                           (0, i.jsx)("input", {
-                            className: (0, k.A)(
-                              p().WhitelistNumber,
-                              p().Disabled,
-                              p().Grabbing,
+                            className: (0, j.A)(
+                              g().WhitelistNumber,
+                              g().Disabled,
+                              g().Grabbing,
                             ),
                             type: "text",
                             value: (y > o ? y - 1 : y) + 1,
@@ -615,31 +616,31 @@
                       }),
                   }),
                   (0, i.jsxs)("div", {
-                    className: (0, k.A)(
-                      p().WhitelistRow,
-                      b,
-                      g && p().DragActive,
-                      o == L && p().BeingDragged,
-                      K == o && p().Dropped,
+                    className: (0, j.A)(
+                      g().WhitelistRow,
+                      u,
+                      p && g().DragActive,
+                      o == L && g().BeingDragged,
+                      K == o && g().Dropped,
                     ),
                     onAnimationEnd: () => P(void 0),
                     children: [
                       (0, i.jsx)("img", {
-                        className: (0, k.A)(
-                          p().WhitelistAvatar,
-                          p().Grabbable,
-                          d && p().DisabledGrab,
+                        className: (0, j.A)(
+                          g().WhitelistAvatar,
+                          g().Grabbable,
+                          d && g().DisabledGrab,
                         ),
-                        src: f,
+                        src: h,
                         onMouseDown: Boolean(d) ? void 0 : (e) => q(e, o),
                       }),
                       (0, i.jsx)("input", {
-                        className: (0, k.A)(
-                          p().WhitelistNumber,
-                          d && p().Disabled,
+                        className: (0, j.A)(
+                          g().WhitelistNumber,
+                          d && g().Disabled,
                         ),
                         type: "text",
-                        value: I == o ? V : o + 1,
+                        value: R == o ? V : o + 1,
                         disabled: d || o == L,
                         onChange: (e) => z(e.target.value),
                         onKeyDown: (e) =>
@@ -647,7 +648,7 @@
                             "Enter" === e.key && (U(t), e.currentTarget.blur());
                           })(e, o),
                         onFocus: (e) => {
-                          R(o), z(e.target.value);
+                          I(o), z(e.target.value);
                         },
                         onBlur: () => U(o),
                       }),
@@ -655,18 +656,18 @@
                       Boolean(o != L) &&
                         Boolean(c || s) &&
                         (0, i.jsxs)("div", {
-                          className: p().ButtonCtn,
+                          className: g().ButtonCtn,
                           children: [
                             Boolean(c) &&
                               (0, i.jsx)("div", {
-                                className: A().RemoveIcon,
+                                className: x().RemoveIcon,
                                 onClick: (e) => c(o, e),
-                                children: (0, i.jsx)(x.ffu, {}),
+                                children: (0, i.jsx)(S.ffu, {}),
                               }),
                             Boolean(s) &&
                               (0, i.jsx)("img", {
-                                className: A().RemoveIcon,
-                                src: h.A,
+                                className: x().RemoveIcon,
+                                src: m.A,
                                 onClick: (e) => s(o, e),
                               }),
                           ],
@@ -675,7 +676,7 @@
                   }),
                   y == t.length &&
                     o == t.length - 1 &&
-                    (0, i.jsx)(_, { width: E }),
+                    (0, i.jsx)(M, { width: E }),
                 ],
               },
               o,
@@ -683,20 +684,20 @@
           ),
         });
       }
-      function _(e) {
+      function M(e) {
         const { width: t } = e;
         return (0, i.jsx)("div", {
-          className: p().DragHighlightContainer,
+          className: g().DragHighlightContainer,
           children: (0, i.jsx)("div", {
-            className: p().DragHighlight,
+            className: g().DragHighlight,
             style: { width: t },
           }),
         });
       }
-      var M = r(56283),
-        N = r(45699),
-        v = r(32754);
-      function T(e) {
+      var N = r(56283),
+        v = r(45699),
+        T = r(32754);
+      function L(e) {
         const {
             rgSocialMediaItems: t,
             fnSetItems: r,
@@ -713,7 +714,7 @@
                     "qqlink" === e.type,
                 )
                 .map((e) => ({
-                  label: (0, a.we)(`#StoreAdmin_SocialMedia_Type_${e.type}`),
+                  label: (0, d.we)(`#StoreAdmin_SocialMedia_Type_${e.type}`),
                   data: e.type,
                 }))
                 .sort((e, t) => (e.label < t.label ? -1 : 1)),
@@ -721,14 +722,14 @@
           );
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(L, {
+            (0, i.jsx)(w, {
               options: n,
               onAddLink: (e) => {
                 let i = t.slice();
                 i.push({ type: e, link: "" }), r(i);
               },
             }),
-            (0, i.jsx)(j, {
+            (0, i.jsx)(_, {
               items: t,
               onDelete: (e) => {
                 let i = t.slice();
@@ -736,11 +737,11 @@
               },
               onMove: (e, i) => {
                 let o = t.slice();
-                (0, m.yY)(o, e, i), r(o);
+                (0, b.yY)(o, e, i), r(o);
               },
               render: (e, o) =>
                 (0, i.jsx)(
-                  y,
+                  C,
                   {
                     item: e,
                     onUpdateLink: (e) =>
@@ -758,12 +759,12 @@
           ],
         });
       }
-      function L(e) {
+      function w(e) {
         const { options: t, onAddLink: r } = e;
         return (0, i.jsx)("div", {
-          className: d.AddLinkDropDown,
-          children: (0, i.jsx)(M.ZU, {
-            strDefaultLabel: (0, a.we)("#StoreAdmin_SocialMedia_Add"),
+          className: u.AddLinkDropDown,
+          children: (0, i.jsx)(N.ZU, {
+            strDefaultLabel: (0, d.we)("#StoreAdmin_SocialMedia_Add"),
             controlled: !0,
             rgOptions: t,
             onChange: (e) => {
@@ -774,18 +775,18 @@
           }),
         });
       }
-      function w(e, t) {
+      function y(e, t) {
         let r = !0,
           i = "";
         return (
           t.prefix
             ? ((i =
                 "mastodon" === e.type
-                  ? (0, a.we)(
+                  ? (0, d.we)(
                       "#StoreAdmin_SocialMedia_ValidationMastodon",
                       t.prefix.join(", "),
                     )
-                  : (0, a.we)(
+                  : (0, d.we)(
                       "#StoreAdmin_SocialMedia_ValidationPrefix",
                       t.prefix.join(", "),
                     )),
@@ -795,52 +796,52 @@
                   e.link.startsWith(t) && (r = !0);
                 })))
             : t.number
-              ? ((i = (0, a.we)("#StoreAdmin_SocialMedia_ValidationNumber")),
+              ? ((i = (0, d.we)("#StoreAdmin_SocialMedia_ValidationNumber")),
                 e.link && (r = /^\d+$/.test(e.link)))
               : t.text
-                ? (i = (0, a.we)("#StoreAdmin_SocialMedia_ValidationText"))
+                ? (i = (0, d.we)("#StoreAdmin_SocialMedia_ValidationText"))
                 : t.regex &&
                   "tumblr" === e.type &&
-                  (i = (0, a.we)("#StoreAdmin_SocialMedia_ValidationTumblr")),
+                  (i = (0, d.we)("#StoreAdmin_SocialMedia_ValidationTumblr")),
           { bValid: r, strTooltip: i }
         );
       }
-      function y(e) {
+      function C(e) {
         const { item: t, onUpdateLink: r, validationData: o } = e;
         let s;
         s = o.number
-          ? (0, a.we)("#StoreAdmin_SocialMedia_EnterNumber")
+          ? (0, d.we)("#StoreAdmin_SocialMedia_EnterNumber")
           : o.text
-            ? (0, a.we)("#StoreAdmin_SocialMedia_EnterName")
-            : (0, a.we)("#StoreAdmin_SocialMedia_EnterLink");
-        const { bValid: c, strTooltip: n } = w(t, o);
+            ? (0, d.we)("#StoreAdmin_SocialMedia_EnterName")
+            : (0, d.we)("#StoreAdmin_SocialMedia_EnterLink");
+        const { bValid: c, strTooltip: n } = y(t, o);
         return (0, i.jsxs)("div", {
-          className: d.SocialMediaRow,
+          className: u.SocialMediaRow,
           children: [
             (0, i.jsx)("div", {
-              className: d.SocialMediaType,
-              children: (0, a.we)(`#StoreAdmin_SocialMedia_Type_${t.type}`),
+              className: u.SocialMediaType,
+              children: (0, d.we)(`#StoreAdmin_SocialMedia_Type_${t.type}`),
             }),
-            (0, i.jsx)(N.BA, {
-              className: d.SocialMediaLink,
+            (0, i.jsx)(v.BA, {
+              className: u.SocialMediaLink,
               type: "text",
               value: t.link,
               placeholder: s,
               onChange: (e) => r(e.target.value),
             }),
             n &&
-              (0, i.jsx)(v.he, {
-                className: d.SocialMediaTooltip,
+              (0, i.jsx)(T.he, {
+                className: u.SocialMediaTooltip,
                 toolTipContent: n,
                 children: "(?)",
               }),
             !c &&
-              (0, i.jsx)("div", { className: d.ValidationError, children: n }),
+              (0, i.jsx)("div", { className: u.ValidationError, children: n }),
           ],
         });
       }
-      var C = r(22797);
-      function D(e) {
+      var D = r(22797);
+      function W(e) {
         const { clanAccountID: t, page_config: r } = e,
           n = (function () {
             const e = (0, s.I)({
@@ -849,47 +850,47 @@
                 const e = `${c.TS.COMMUNITY_BASE_URL}sale/ajaxgetsocialmediaeditsettings`,
                   t = { origin: self.origin },
                   r = await l().get(e, { params: t });
-                return 200 == r?.status && 1 == r.data?.success
+                return 200 == r?.status && r.data?.success == a.R
                   ? r.data
                   : (console.error("useSocialMediaSupports:", r?.status),
-                    { success: 2 });
+                    { success: a.zi });
               },
             });
             return e.isLoading ? null : e.data;
           })(),
-          [d, u] = (0, o.useState)(() => r?.social_media ?? []),
-          [f, h] = (0, o.useState)(() => r?.social_media ?? []);
+          [u, f] = (0, o.useState)(() => r?.social_media ?? []),
+          [h, m] = (0, o.useState)(() => r?.social_media ?? []);
         return n
           ? (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)("br", {}),
                 (0, i.jsx)("h4", {
-                  children: (0, a.we)("#CreatorHome_SocialMedia_Title"),
+                  children: (0, d.we)("#CreatorHome_SocialMedia_Title"),
                 }),
                 (0, i.jsx)("p", {
-                  children: (0, a.we)("#CreatorHome_SocialMedia_Desc"),
+                  children: (0, d.we)("#CreatorHome_SocialMedia_Desc"),
                 }),
                 (0, i.jsxs)("blockquote", {
                   children: [
-                    (0, i.jsx)(T, {
+                    (0, i.jsx)(L, {
                       rgValidationData: n.rgValidationData,
                       rgSupportedSocialMediaTypes:
                         n.rgSupportedSocialMediaTypes,
-                      rgSocialMediaItems: d,
+                      rgSocialMediaItems: u,
                       fnSetItems: (e) => {
-                        u(e);
+                        f(e);
                         const t = n.rgValidationData,
                           r = e
                             .filter((e) => Boolean(e.link))
-                            .filter((e) => w(e, t[e.type]).bValid);
-                        h(r);
+                            .filter((e) => y(e, t[e.type]).bValid);
+                        m(r);
                       },
                     }),
-                    f?.length > 0 &&
+                    h?.length > 0 &&
                       (0, i.jsx)("input", {
                         type: "hidden",
                         name: "social_media",
-                        value: JSON.stringify(f),
+                        value: JSON.stringify(h),
                       }),
                     (0, i.jsx)("a", {
                       className: "btnv6_blue_hoverfade btn_medium",
@@ -902,15 +903,15 @@
                           );
                       },
                       children: (0, i.jsx)("span", {
-                        children: (0, a.we)("#Button_Save"),
+                        children: (0, d.we)("#Button_Save"),
                       }),
                     }),
                   ],
                 }),
               ],
             })
-          : (0, i.jsx)(C.t, {
-              string: (0, a.we)("#Loading"),
+          : (0, i.jsx)(D.t, {
+              string: (0, d.we)("#Loading"),
               position: "center",
             });
       }

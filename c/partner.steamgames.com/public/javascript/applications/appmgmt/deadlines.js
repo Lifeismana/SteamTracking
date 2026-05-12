@@ -231,35 +231,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)({
-          queryKey: ["useMilestoneByAppID", _],
-          queryFn: async () => {
-            const _ = `${_._.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
-              _ = {
-                appid: _,
-              },
-              _ = await _().get(_, {
-                params: _,
-              });
-            if (1 == _?.data?.success) return _.data.milestones;
-            throw new Error("failed to load milestonse for appid " + _);
-          },
-          enabled: Boolean(_),
-        });
-        return _.useMemo(() => _?.data, [_, _.isLoading]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -269,12 +240,14 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return 2 == _._.EUNIVERSE ? 12 : 1;
+        return _._.EUNIVERSE == _._ ? 12 : 1;
       }
       class _ {
         m_mapOptInToPartners = new Map();
@@ -304,7 +277,7 @@
               _ = await _().get(_, {
                 params: _,
               });
-            200 == _?.status && 1 == _?.data?.success
+            200 == _?.status && _?.data?.success == _._
               ? _.data.publishers.forEach((_) => {
                   const _ = {
                     partnerid: _.publisherid,
@@ -431,11 +404,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -455,7 +430,7 @@
         include_release: !0,
       };
       function _() {
-        const _ = _(9),
+        const _ = _(_._._),
           [_, _] = (0, _._)("query", ""),
           _ = (0, _.useMemo)(
             () =>
@@ -479,7 +454,7 @@
             return _?.filter(
               (_) =>
                 0 == _.length ||
-                1 == _ ||
+                _ == _._ ||
                 !_ ||
                 _._.Get()
                   .GetApp(_.data.store_item_id)
@@ -655,7 +630,8 @@
               ],
             }),
             (0, _.jsx)("td", {
-              children: _?.title.find((_) => 0 == _.language)?.localized_string,
+              children: _?.title.find((_) => _.language == _.Bhc)
+                ?.localized_string,
             }),
             (0, _.jsx)("td", {
               children: "TODO",
@@ -666,7 +642,7 @@
       var _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = _.useState(0),
-          _ = _(10, _),
+          _ = _(_._._, _),
           _ = _.useRef(0);
         _.useEffect(() => () => window.clearTimeout(_.current), []);
         const _ = _.useMemo(() => {
@@ -825,23 +801,23 @@
         });
       }
       function _(_) {
-        const [_, _] = _.useState((9).toString()),
+        const [_, _] = _.useState(_._._.toString()),
           _ = [
             {
               label: "Season Pass Milestone",
-              data: (9).toString(),
+              data: _._._.toString(),
             },
             {
               label: "Tax Requirement",
-              data: (10).toString(),
+              data: _._._.toString(),
             },
           ];
         let _ = null;
         switch (_) {
-          case (10).toString():
+          case _._._.toString():
             _ = (0, _.jsx)(_, {});
             break;
-          case (9).toString():
+          case _._._.toString():
             _ = (0, _.jsx)(_, {});
             break;
           default:
@@ -915,16 +891,18 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { requirement: _ } = _,
@@ -974,7 +952,7 @@
               const _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-              200 == _?.status && 1 == _.data?.success && _.data.url
+              200 == _?.status && _.data?.success == _._ && _.data.url
                 ? window.open(_.data.url, "_blank")
                 : _("An error occurred. " + (0, _._)(_)?.strErrorMsg);
             } catch (_) {
@@ -2516,7 +2494,7 @@
                   _.append("message", _);
                 const _ = `${_._.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
                   _ = await _().post(_, _);
-                200 == _?.status && 1 == _.data?.success
+                200 == _?.status && _.data?.success == _._
                   ? _(
                       `Your message has been sent.  You should receive an email acknowledgement from TaxIdentity to your Steam account's email address: ${_.data.msg}.`,
                     )
@@ -2574,7 +2552,7 @@
               Boolean(
                 _.find(
                   (_) =>
-                    0 == _.data.status ||
+                    _.data.status == _._._ ||
                     (function (_) {
                       const _ = JSON.parse(_.data.description_jsondata);
                       return (
@@ -2811,12 +2789,20 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3;
       function _(_, _, _, _) {
         const _ = (0, _.useRef)(void 0),
           _ = (0, _.useRef)(void 0),
@@ -2872,28 +2858,28 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                    _?.token.reason || _.current !== _ || _(_ == _._), _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+          return [null, _];
+        if (!1 === _) return [void 0, _];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
+        return _ ? [_, _] : [null, _];
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _, _) {
         const _ = (0, _._)(),
@@ -2955,7 +2941,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return 2;
+          return _;
         if (
           !_.every(
             (_) =>
@@ -2963,21 +2949,21 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return 1;
+          return _;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? 3
-          : 2;
+          ? _
+          : _;
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._._, _, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

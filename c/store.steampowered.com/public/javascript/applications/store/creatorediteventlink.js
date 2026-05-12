@@ -46,103 +46,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const [_, _] = (0, _.useState)(() => Boolean(_)),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(null),
-          [_, _] = (0, _.useState)(null);
-        return {
-          bLoading: _,
-          bError: _,
-          bSuccess: _,
-          strError: _,
-          strSuccess: _,
-          elSuccess: _,
-          elError: _,
-          strThrobber: _,
-          fnSetLoading: _,
-          fnSetError: _,
-          fnSetSuccess: _,
-          fnSetStrError: _,
-          fnSetStrSuccess: _,
-          fnSetElSuccess: _,
-          fnSetElError: _,
-          fnSetThrobber: _,
-        };
-      }
-      function _(_) {
-        const {
-            strDialogTitle: _,
-            state: _,
-            closeModal: _,
-            strThrobber: _,
-          } = _,
-          {
-            bLoading: _,
-            bError: _,
-            bSuccess: _,
-            strError: _,
-            strSuccess: _,
-            elSuccess: _,
-            elError: _,
-            strThrobber: _,
-          } = _;
-        return _ || _ || _
-          ? (0, _.jsxs)(_._, {
-              strTitle: _,
-              bAlertDialog: !0,
-              closeModal: _,
-              className: _.SuccessErrorDialog,
-              children: [
-                Boolean(_) &&
-                  (0, _.jsx)("div", {
-                    className: _.ErrorStylesWithIcon,
-                    children:
-                      _ || (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-                  }),
-                Boolean(_) && _,
-              ],
-            })
-          : _ || _ || _
-            ? (0, _.jsx)(_._, {
-                strTitle: _,
-                strDescription: _ || (0, _._)("#EventDisplay_Share_Success"),
-                bAlertDialog: !0,
-                closeModal: _,
-                className: _.SuccessErrorDialog,
-                children: (0, _.jsx)(_.Fragment, {
-                  children: Boolean(_) && _,
-                }),
-              })
-            : (0, _.jsx)(_._, {
-                strTitle: _,
-                className: _.SuccessErrorDialog,
-                bProgressDialog: !0,
-                closeModal: () => {},
-                children: (0, _.jsx)(_._, {
-                  string: _ || _ || (0, _._)("#Loading"),
-                  size: "medium",
-                  position: "center",
-                }),
-              });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -154,6 +57,7 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -196,7 +100,7 @@
             return _?.[1];
           })(window.location.href),
           _ = _ && "news" == _,
-          _ = 36 == _.GetEventType(),
+          _ = _.GetEventType() == _.ajI,
           _ = "community" === (0, _._)(),
           _ = _.appid ? "games" : "groups",
           _ =
@@ -283,7 +187,7 @@
             _.appid &&
             _ &&
             _.BHasSaleUpdateLandingPageVanity(),
-          _ = 36 == _.GetEventType();
+          _ = _.GetEventType() == _.ajI;
         switch (_) {
           case _.k_eCommunityPublish:
             return (
@@ -391,9 +295,9 @@
           _ = _(_, _, _ ? "relative" : "absolute");
         return (
           _.useEffect(() => {
-            _ ? window.open(_) : window.location.assign(_);
+            _ && (_ ? window.open(_) : window.location.assign(_));
           }, [_, _]),
-          _
+          _ && _
             ? (0, _.jsx)(_._, {
                 push: !0,
                 _: _,
@@ -430,7 +334,7 @@
                   pathname: _,
                 }),
                 onClick: (_) => {
-                  _.onClick?.(_), _.push(_), _.preventDefault();
+                  _ && (_.onClick?.(_), _.push(_), _.preventDefault());
                 },
                 onOptionsActionDescription: _,
                 onOptionsButton: _ ? _ : void 0,
@@ -452,6 +356,103 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, _] = (0, _.useState)(() => Boolean(_)),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null);
+        return {
+          bLoading: _,
+          bError: _,
+          bSuccess: _,
+          strError: _,
+          strSuccess: _,
+          elSuccess: _,
+          elError: _,
+          strThrobber: _,
+          fnSetLoading: _,
+          fnSetError: _,
+          fnSetSuccess: _,
+          fnSetStrError: _,
+          fnSetStrSuccess: _,
+          fnSetElSuccess: _,
+          fnSetElError: _,
+          fnSetThrobber: _,
+        };
+      }
+      function _(_) {
+        const {
+            strDialogTitle: _,
+            state: _,
+            closeModal: _,
+            strThrobber: _,
+          } = _,
+          {
+            bLoading: _,
+            bError: _,
+            bSuccess: _,
+            strError: _,
+            strSuccess: _,
+            elSuccess: _,
+            elError: _,
+            strThrobber: _,
+          } = _;
+        return _ || _ || _
+          ? (0, _.jsxs)(_._, {
+              strTitle: _,
+              bAlertDialog: !0,
+              closeModal: _,
+              className: _.SuccessErrorDialog,
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
+                    className: _.ErrorStylesWithIcon,
+                    children:
+                      _ || (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+                  }),
+                Boolean(_) && _,
+              ],
+            })
+          : _ || _ || _
+            ? (0, _.jsx)(_._, {
+                strTitle: _,
+                strDescription: _ || (0, _._)("#EventDisplay_Share_Success"),
+                bAlertDialog: !0,
+                closeModal: _,
+                className: _.SuccessErrorDialog,
+                children: (0, _.jsx)(_.Fragment, {
+                  children: Boolean(_) && _,
+                }),
+              })
+            : (0, _.jsx)(_._, {
+                strTitle: _,
+                className: _.SuccessErrorDialog,
+                bProgressDialog: !0,
+                closeModal: () => {},
+                children: (0, _.jsx)(_._, {
+                  string: _ || _ || (0, _._)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+              });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
@@ -461,6 +462,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -484,7 +486,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clanAccountID: _ } = _,
-          _ = (0, _._)(() => new _._(_, _._.EUNIVERSE, 7, 0)),
+          _ = (0, _._)(() => new _._(_, _._.EUNIVERSE, _.P3F, 0)),
           {
             bIsFetching: _,
             rgEventModels: _,
@@ -656,7 +658,7 @@
               const _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-              return 1 == _?.data?.success;
+              return _?.data?.success == _._;
             },
           }),
           [_, _] = _.useState(!1),
@@ -674,7 +676,7 @@
               const _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-              return 1 == _?.data?.success;
+              return _?.data?.success == _._;
             },
           }),
           _ = __webpack_require__?.GetLinkedEventGID(),
@@ -739,7 +741,7 @@
                   children: [
                     (0, _.jsx)("span", {
                       className: _().Label,
-                      children: _.GetNameWithFallback((0, _._)(_._.LANGUAGE)),
+                      children: _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE)),
                     }),
                     !_.BIsVisibleEvent() &&
                       (0, _.jsxs)("span", {

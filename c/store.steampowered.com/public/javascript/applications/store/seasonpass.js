@@ -47,6 +47,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = {
         include_assets: !0,
@@ -85,6 +86,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = new URL(window.location.href),
@@ -118,7 +120,7 @@
                 ],
               ]),
               _,
-              _ || 0,
+              _ || _.Bhc,
             ),
           );
         return (0, _.jsx)(_.Fragment, {
@@ -434,7 +436,7 @@
                     partnerEventStore: _._,
                     bShowOnlyInitialEvent: !0,
                     showAppHeader: !0,
-                    trackingLocation: 3,
+                    trackingLocation: _._._,
                   }),
               ],
             })

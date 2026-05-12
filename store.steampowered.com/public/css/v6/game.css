@@ -3384,30 +3384,6 @@ img.package_header {
 	line-height: 15px;
 }
 
-body.v6 .game_area_already_owned.page_content {
-	height: 40px;
-	padding: 0px 15px 0px 0px;
-	position: relative;
-
-    background: -moz-linear-gradient(left,  rgba(163,207,6,0.6) 0%, rgba(75,106,33,0.6) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(163,207,6,0.6)), color-stop(100%,rgba(75,106,33,0.6))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* IE10+ */
-    background: linear-gradient(to right,  rgba(163,207,6,0.6) 0%,rgba(75,106,33,0.6) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99a3cf06', endColorstr='#994b6a21',GradientType=1 ); /* IE6-9 */
-
-
-    font-size: 18px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-		    line-height: 40px;
-	color: #a3cf06;
-    margin-bottom: 1px;
-	width: 925px;
-}
-
 body.v6 .game_area_already_owned.master_sub {
 	background: rgb( 56, 112, 150 );
 	color: white;
@@ -3466,6 +3442,8 @@ body.v6 .game_area_already_owned.master_sub {
 
 .already_in_library_master_sub {
 	display: flex;
+	padding-inline-end: 16px;
+	align-items: center;
 }
 
 .game_purchase_sub_dropdown .already_in_library_master_sub {
@@ -7016,7 +6994,7 @@ a.open_in_steam_body:hover {
 	margin-bottom: 16px;
 }
 
-body.v6.widestore .game_area_already_owned.page_content {
+body.v6 .game_area_already_owned.page_content {
 	height: 40px;
 	padding: 0px;
 	position: relative;
@@ -7036,11 +7014,6 @@ body.v6.widestore .game_area_already_owned.page_content {
     margin-bottom: 1px;
 	max-width: 1200px;
 	width: 100%;
-}
-
-body.v6.widestore .game_area_already_owned.master_sub {
-	background: rgb( 56, 112, 150 );
-	color: white;
 }
 
 .widestore .game_area_play_stats {
@@ -7079,7 +7052,7 @@ body.v6.widestore .game_area_already_owned.master_sub {
 }
 
 @media screen and (max-width: 1220px) and (min-width: 910px) {
-	body.v6.widestore .game_area_already_owned.page_content {
+	body.v6 .game_area_already_owned.page_content {
 		width: calc(100% - 50px);
 		padding: 0 25px;
 		align-items: center;

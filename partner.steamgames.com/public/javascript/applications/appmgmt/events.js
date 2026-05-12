@@ -32,63 +32,64 @@
     },
     76483: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => G });
+      n.r(t), n.d(t, { default: () => I });
       var i = n(7850),
         a = n(41735),
         s = n.n(a),
         r = n(90626),
         l = n(22837),
-        o = n(2160),
-        d = n(18318),
-        c = n(17720),
-        u = n(68033),
-        h = n(6205),
-        g = n(16676),
-        m = n(84811),
-        p = n(63232),
-        _ = n(1909),
-        S = n(25228),
-        B = n(9154),
-        x = n(738),
-        f = n(22797),
-        P = n(62490),
-        j = n(52038),
-        w = n(61859),
-        N = n(87669),
+        o = n(37085),
+        d = n(2160),
+        c = n(18318),
+        u = n(17720),
+        h = n(68033),
+        g = n(6205),
+        m = n(16676),
+        p = n(84811),
+        _ = n(17891),
+        S = n(1909),
+        B = n(25228),
+        x = n(9154),
+        f = n(738),
+        P = n(22797),
+        j = n(62490),
+        w = n(52038),
+        N = n(61859),
+        b = n(87669),
         v = n(68797),
         T = n(78327),
-        b = n(58962);
-      function L(e, t, n) {
-        const i = e && e.length > n ? [...e] : (0, P.$Y)(e || [], n + 1, "");
+        L = n(58962);
+      function E(e, t, n) {
+        const i = e && e.length > n ? [...e] : (0, j.$Y)(e || [], n + 1, "");
         return (i[n] = t), i;
       }
-      function E(e, t) {
+      function C(e, t) {
         return (e && e.length > t && e[t]) || "";
       }
-      function C(e, t) {
+      function D(e, t) {
         let n = !1,
           i = !1;
-        for (let a = 0; a < 31; a++) {
-          const s = E(e, a).trim(),
-            r = E(t, a).trim();
+        for (let a = l.Bhc; a < l.bP9; a++) {
+          const s = C(e, a).trim(),
+            r = C(t, a).trim();
           if (!s && !r) continue;
-          const o = (0, w.we)("#Language_" + (0, l.Lg)(a));
+          const o = (0, N.we)("#Language_" + (0, l.LgB)(a));
           if (((n = !0), !s))
-            return (0, w.we)("#BuildNotes_Error_MissingTitle", o);
-          if (!r) return (0, w.we)("#BuildNotes_Error_MissingDescription", o);
-          if (s.length > d.dm)
-            return (0, w.we)("#BuildNotes_Error_TitleTooLong", o);
+            return (0, N.we)("#BuildNotes_Error_MissingTitle", o);
+          if (!r) return (0, N.we)("#BuildNotes_Error_MissingDescription", o);
+          if (s.length > c.dm)
+            return (0, N.we)("#BuildNotes_Error_TitleTooLong", o);
           if (r.length > 32768)
-            return (0, w.we)("#BuildNotes_Error_DescriptionTooLong", o);
-          0 === a && (i = !0);
+            return (0, N.we)("#BuildNotes_Error_DescriptionTooLong", o);
+          a === l.Bhc && (i = !0);
         }
         return n
           ? i
             ? null
-            : (0, w.we)("#BuildNotes_Error_NoEnglishProvided")
-          : (0, w.we)("#BuildNotes_Error_NoLanguagesProvided");
+            : (0, N.we)("#BuildNotes_Error_NoEnglishProvided")
+          : (0, N.we)("#BuildNotes_Error_NoLanguagesProvided");
       }
-      class D {
+      class G {
         m_nBuildVersion;
         m_bSteamChina;
         m_strBuildBranch;
@@ -96,7 +97,7 @@
         static Get() {
           return (
             this.s_Singleton ||
-              ((this.s_Singleton = new D()), this.s_Singleton.Init()),
+              ((this.s_Singleton = new G()), this.s_Singleton.Init()),
             this.s_Singleton
           );
         }
@@ -123,125 +124,125 @@
           return this.m_strBuildBranch;
         }
       }
-      function G(e) {
-        const [t, n] = r.useState(0),
-          [a, l] = r.useState(null),
-          [u, h] = r.useState(null),
-          [p, _] = r.useState(null),
-          [S, B] = r.useState("editing"),
-          [x, f] = r.useState(null);
-        if (!D.Get().BShouldShowPatchNotesEditor()) return null;
-        const P = (e) => n(e),
-          j = (e) => Boolean(E(a, e) || E(u, e)),
-          N = D.Get().BCanSubmitSteamChinaPatchNotes()
-            ? [o.TU.k_ESteamRealmChina, o.TU.k_ESteamRealmGlobal]
-            : [o.TU.k_ESteamRealmGlobal],
-          G = C(a, u),
-          U =
+      function I(e) {
+        const [t, n] = r.useState(l.Bhc),
+          [a, h] = r.useState(null),
+          [g, _] = r.useState(null),
+          [S, B] = r.useState(null),
+          [x, f] = r.useState("editing"),
+          [P, j] = r.useState(null);
+        if (!G.Get().BShouldShowPatchNotesEditor()) return null;
+        const w = (e) => n(e),
+          b = (e) => Boolean(C(a, e) || C(g, e)),
+          I = G.Get().BCanSubmitSteamChinaPatchNotes()
+            ? [d.TU.k_ESteamRealmChina, d.TU.k_ESteamRealmGlobal]
+            : [d.TU.k_ESteamRealmGlobal],
+          M = D(a, g),
+          F =
             T.TS.COMMUNITY_BASE_URL +
             "ogg/" +
             e.appId +
             "/partnerevents/create/";
-        return (0, i.jsxs)(m.tH, {
+        return (0, i.jsxs)(p.tH, {
           children: [
             (0, i.jsxs)("div", {
-              className: b.BuildNoteCtn,
+              className: L.BuildNoteCtn,
               children: [
                 (0, i.jsx)("div", {
-                  className: b.BuildTitle,
-                  children: (0, w.we)(
+                  className: L.BuildTitle,
+                  children: (0, N.we)(
                     "#BuildNotes_Title",
-                    D.Get().GetPostedBuildVersion(),
-                    D.Get().GetBuildBranch() || "default",
+                    G.Get().GetPostedBuildVersion(),
+                    G.Get().GetBuildBranch() || "default",
                   ),
                 }),
                 (0, i.jsxs)("div", {
-                  className: b.SplitPanel,
+                  className: L.SplitPanel,
                   children: [
                     (0, i.jsxs)("div", {
-                      className: b.DescriptionPanel,
+                      className: L.DescriptionPanel,
                       children: [
                         (0, i.jsx)("div", {
-                          className: b.BuildSubTitle,
-                          children: (0, w.we)("#BuildNotes_SubTitle"),
+                          className: L.BuildSubTitle,
+                          children: (0, N.we)("#BuildNotes_SubTitle"),
                         }),
                         (0, i.jsx)("div", {
-                          className: b.InfoText,
-                          children: (0, w.we)("#BuildNotes_Desc1"),
+                          className: L.InfoText,
+                          children: (0, N.we)("#BuildNotes_Desc1"),
                         }),
                         (0, i.jsx)("div", {
-                          className: b.InfoText,
-                          children: (0, w.PP)("#BuildNotes_Desc2"),
+                          className: L.InfoText,
+                          children: (0, N.PP)("#BuildNotes_Desc2"),
                         }),
                         (0, i.jsx)("a", {
-                          href: U,
-                          children: (0, i.jsx)(g.$n, {
-                            children: (0, w.we)("#BuildNotes_OpenFullEditor"),
+                          href: F,
+                          children: (0, i.jsx)(m.$n, {
+                            children: (0, N.we)("#BuildNotes_OpenFullEditor"),
                           }),
                         }),
                       ],
                     }),
-                    "editing" === S &&
-                      (0, i.jsx)(I, {
-                        sError: G,
+                    "editing" === x &&
+                      (0, i.jsx)(R, {
+                        sError: M,
                         eLanguage: t,
-                        realms: N,
-                        fnHasLanguage: j,
-                        fnSetLanguage: P,
-                        fnGetTitle: (e) => E(a, e),
-                        fnSetTitle: (e, t) => l(L(a, t, e)),
-                        fnGetDescription: (e) => E(u, e),
-                        fnSetDescription: (e, t) => h(L(u, t, e)),
+                        realms: I,
+                        fnHasLanguage: b,
+                        fnSetLanguage: w,
+                        fnGetTitle: (e) => C(a, e),
+                        fnSetTitle: (e, t) => h(E(a, t, e)),
+                        fnGetDescription: (e) => C(g, e),
+                        fnSetDescription: (e, t) => _(E(g, t, e)),
                         fnOnPreviewEvent: () =>
-                          _(
+                          B(
                             (function (e, t) {
-                              let n = new d.lh();
+                              let n = new c.lh();
                               (n.GID = "PreviewPartnerEventRow_0"),
-                                (n.clanSteamID = new c.b(T.iA.steamid)),
+                                (n.clanSteamID = new u.b(T.iA.steamid)),
                                 (n.postTime = Date.now() / 1e3),
                                 (n.startTime = Date.now() / 1e3),
                                 (n.createTime = Date.now() / 1e3),
-                                (n.type = 12);
-                              for (let i = 0; i < 31; i++)
-                                n.name.set(i, E(e, i)),
-                                  n.description.set(i, E(t, i));
+                                (n.type = l.Fwr);
+                              for (let i = l.Bhc; i < l.bP9; i++)
+                                n.name.set(i, C(e, i)),
+                                  n.description.set(i, C(t, i));
                               return n;
-                            })(a, u),
+                            })(a, g),
                           ),
                         fnApplyLoc: (e, t) => {
                           const n = new Array();
                           let i = a,
-                            s = u;
+                            s = g;
                           for (const a of t) {
                             const t = e.GetLocalization("Title", a) || "",
                               r = e.GetLocalization("Description", a) || "";
                             (t || r) && n.push(a),
-                              t && (i = L(i, t, a)),
-                              r && (s = L(s, r, a));
+                              t && (i = E(i, t, a)),
+                              r && (s = E(s, r, a));
                           }
-                          return l(i), h(s), n;
+                          return h(i), _(s), n;
                         },
                       }),
-                    "submitting" === S && (0, i.jsx)(O, {}),
-                    "failed" === S &&
-                      (0, i.jsx)(R, { fnOnReturnToEditor: () => B("editing") }),
-                    "submitted" === S &&
-                      (0, i.jsx)(A, { appId: e.appId, eventGid: x }),
+                    "submitting" === x && (0, i.jsx)(O, {}),
+                    "failed" === x &&
+                      (0, i.jsx)(A, { fnOnReturnToEditor: () => f("editing") }),
+                    "submitted" === x &&
+                      (0, i.jsx)(U, { appId: e.appId, eventGid: P }),
                   ],
                 }),
               ],
             }),
-            Boolean(p && "editing" === S) &&
+            Boolean(S && "editing" === x) &&
               (0, i.jsx)(y, {
-                event: p,
+                event: S,
                 eLanguage: t,
-                realms: N,
-                fnOnClose: () => _(null),
+                realms: I,
+                fnOnClose: () => B(null),
                 fnOnSubmitEvent: async () => {
-                  _(null), B("submitting");
+                  B(null), f("submitting");
                   const t = await (async function (e, t, n) {
-                    if (C(t, n)) return null;
-                    const i = Boolean(E(t, 29).trim()),
+                    if (D(t, n)) return null;
+                    const i = Boolean(C(t, l.ZLm).trim()),
                       a = new FormData();
                     a.append("sessionid", T.TS.SESSIONID),
                       a.append("appid", "" + e),
@@ -250,15 +251,15 @@
                       a.append("descriptions", JSON.stringify(n)),
                       a.append(
                         "build_id",
-                        "" + D.Get().GetPostedBuildVersion(),
+                        "" + G.Get().GetPostedBuildVersion(),
                       ),
-                      a.append("build_branch", D.Get().GetBuildBranch());
+                      a.append("build_branch", G.Get().GetBuildBranch());
                     const r =
                       T.TS.PARTNER_BASE_URL +
                       "partnerevents/ajaxpublishpatchnotes";
                     try {
                       const e = await s().post(r, a, { withCredentials: !0 });
-                      if (1 == e?.data?.success) return e.data;
+                      if (e?.data?.success == o.R) return e.data;
                       console.error(
                         "buildpatchnotes: OnSubmitCreateEvent error code  " +
                           e?.data?.success +
@@ -273,9 +274,9 @@
                       );
                     }
                     return null;
-                  })(e.appId, a, u);
+                  })(e.appId, a, g);
                   t
-                    ? (f(t.clan_event_gid),
+                    ? (j(t.clan_event_gid),
                       (function () {
                         const e = new URLSearchParams(window.location.search);
                         e.delete("submittedbuild"), e.delete("buildbranch");
@@ -287,71 +288,71 @@
                             window.location.hash;
                         window.history.replaceState({}, "", n);
                       })(),
-                      B("submitted"))
-                    : B("failed");
+                      f("submitted"))
+                    : f("failed");
                 },
-                fnHasLanguage: j,
-                fnSetLanguage: P,
+                fnHasLanguage: b,
+                fnSetLanguage: w,
               }),
           ],
         });
       }
-      const I = (e) => {
+      const R = (e) => {
           const {
             sError: t,
             eLanguage: n,
             realms: a,
             fnHasLanguage: s,
             fnSetLanguage: r,
-            fnGetTitle: l,
-            fnSetTitle: c,
-            fnGetDescription: m,
-            fnSetDescription: p,
-            fnOnPreviewEvent: B,
-            fnApplyLoc: f,
+            fnGetTitle: o,
+            fnSetTitle: u,
+            fnGetDescription: p,
+            fnSetDescription: _,
+            fnOnPreviewEvent: x,
+            fnApplyLoc: P,
           } = e;
-          let P = "";
-          if (a.includes(o.TU.k_ESteamRealmChina)) {
-            const e = "" !== l(29).trim();
-            P = (0, w.we)(
+          let j = "";
+          if (a.includes(d.TU.k_ESteamRealmChina)) {
+            const e = "" !== o(l.ZLm).trim();
+            j = (0, N.we)(
               e
                 ? "#BuildNotes_SteamChina_Provided"
                 : "#BuildNotes_SteamChina_NotProvided",
             );
           }
           return (0, i.jsxs)("div", {
-            className: b.RightPanel,
+            className: L.RightPanel,
             children: [
               (0, i.jsxs)("div", {
-                className: b.EditTopBar,
+                className: L.EditTopBar,
                 children: [
                   (0, i.jsx)("div", {
-                    className: b.EditTitle,
-                    children: (0, w.we)("#BuildNotes_PatchnotesTitle"),
+                    className: L.EditTitle,
+                    children: (0, N.we)("#BuildNotes_PatchnotesTitle"),
                   }),
                   (0, i.jsxs)("div", {
-                    className: b.LangPicker,
+                    className: L.LangPicker,
                     children: [
-                      (0, i.jsx)(g.$n, {
+                      (0, i.jsx)(m.$n, {
                         onClick: () => {
-                          const e = new N.G(),
-                            t = (0, w.we)("#BuildNotes_SampleTitle"),
-                            n = (0, w.we)("#BuildNotes_SampleDescription");
-                          for (let i = 0; i < 31; i++)
+                          const e = new b.G(),
+                            t = (0, N.we)("#BuildNotes_SampleTitle"),
+                            n = (0, N.we)("#BuildNotes_SampleDescription");
+                          for (let i = l.Bhc; i < l.bP9; i++)
                             e.SetLocalization("Title", i, t),
                               e.SetLocalization("Description", i, n);
-                          (0, x.pg)(
-                            (0, i.jsx)(S.zZ, {
+                          (0, f.pg)(
+                            (0, i.jsx)(B.zZ, {
                               sampleLocData: e,
                               sampleFilename: "patchnote_loc_sample",
-                              fnOnImportLocData: f,
+                              fnOnImportLocData: P,
                             }),
                             window,
                           );
                         },
-                        children: (0, w.we)("#BuildNotes_ImportLocalization"),
+                        children: (0, N.we)("#BuildNotes_ImportLocalization"),
                       }),
-                      (0, i.jsx)(_.Ng, {
+                      (0, i.jsx)(S.Ng, {
                         selectedLang: n,
                         fnOnLanguageChanged: r,
                         fnLangHasData: s,
@@ -361,40 +362,40 @@
                   }),
                 ],
               }),
-              (0, i.jsx)(g.pd, {
-                value: l(n),
-                placeholder: (0, w.we)("#BuildNotes_TitlePlaceholder"),
-                onChange: (e) => c(n, e.currentTarget.value),
-                maxLength: d.dm,
+              (0, i.jsx)(m.pd, {
+                value: o(n),
+                placeholder: (0, N.we)("#BuildNotes_TitlePlaceholder"),
+                onChange: (e) => u(n, e.currentTarget.value),
+                maxLength: c.dm,
               }),
               (0, i.jsx)("div", {
-                className: b.EditTitle,
-                children: (0, w.we)("#BuildNotes_PatchnotesDesc"),
+                className: L.EditTitle,
+                children: (0, N.we)("#BuildNotes_PatchnotesDesc"),
               }),
-              (0, i.jsx)(h.I, {
-                fnGetCurText: () => m(n),
-                fnOnTextChange: (e) => p(n, e.currentTarget.value),
-                fnSetText: (e) => p(n, e),
-                strPlaceholder: (0, w.we)("#BuildNotes_DescPlaceholder"),
-                emoticonStore: u.A,
+              (0, i.jsx)(g.I, {
+                fnGetCurText: () => p(n),
+                fnOnTextChange: (e) => _(n, e.currentTarget.value),
+                fnSetText: (e) => _(n, e),
+                strPlaceholder: (0, N.we)("#BuildNotes_DescPlaceholder"),
+                emoticonStore: h.A,
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
-                classNameForTextArea: b.BBCodeEditor,
+                classNameForTextArea: L.BBCodeEditor,
               }),
               (0, i.jsxs)("div", {
-                className: b.SubmitButtonCtn,
+                className: L.SubmitButtonCtn,
                 children: [
                   !Boolean(t) &&
-                    (0, i.jsx)(g.jn, {
-                      onClick: B,
-                      children: (0, w.we)("#BuildNotes_Preview"),
+                    (0, i.jsx)(m.jn, {
+                      onClick: x,
+                      children: (0, N.we)("#BuildNotes_Preview"),
                     }),
                   Boolean(t) &&
-                    (0, i.jsx)("div", { className: b.ErrorMsg, children: t }),
-                  Boolean(!t && P) &&
+                    (0, i.jsx)("div", { className: L.ErrorMsg, children: t }),
+                  Boolean(!t && j) &&
                     (0, i.jsx)("div", {
-                      className: b.SteamChinaMsg,
-                      children: P,
+                      className: L.SteamChinaMsg,
+                      children: j,
                     }),
                 ],
               }),
@@ -411,34 +412,34 @@
             fnHasLanguage: l,
             fnSetLanguage: o,
           } = e;
-          return (0, i.jsxs)(B.of, {
+          return (0, i.jsxs)(x.of, {
             children: [
               (0, i.jsxs)("div", {
-                className: b.PreviewHeader,
+                className: L.PreviewHeader,
                 children: [
-                  (0, i.jsx)(_.Ng, {
+                  (0, i.jsx)(S.Ng, {
                     selectedLang: n,
                     fnOnLanguageChanged: o,
                     fnFilterLanguage: l,
                     realms: a,
                   }),
                   (0, i.jsxs)("div", {
-                    className: b.SubmitButtonCtn,
+                    className: L.SubmitButtonCtn,
                     children: [
-                      (0, i.jsx)(g.$n, {
+                      (0, i.jsx)(m.$n, {
                         onClick: s,
-                        children: (0, w.we)("#BuildNotes_Close"),
+                        children: (0, N.we)("#BuildNotes_Close"),
                       }),
-                      (0, i.jsx)(g.jn, {
+                      (0, i.jsx)(m.jn, {
                         onClick: r,
-                        children: (0, w.we)("#BuildNotes_PostNotes"),
+                        children: (0, N.we)("#BuildNotes_PostNotes"),
                       }),
                     ],
                   }),
                 ],
               }),
               (0, i.jsx)("div", {
-                children: (0, i.jsx)(p.H, {
+                children: (0, i.jsx)(_.H, {
                   event: t,
                   fnClose: s,
                   langOverride: n,
@@ -450,47 +451,47 @@
         },
         O = (e) =>
           (0, i.jsxs)("div", {
-            className: (0, j.A)(b.RightPanel, b.SubmitPanel),
+            className: (0, w.A)(L.RightPanel, L.SubmitPanel),
             children: [
-              (0, i.jsx)(f.t, { className: b.SubmitThrobber }),
+              (0, i.jsx)(P.t, { className: L.SubmitThrobber }),
               (0, i.jsx)("div", {
-                className: b.SubmitText,
-                children: (0, w.we)("#BuildNotes_Submitting"),
+                className: L.SubmitText,
+                children: (0, N.we)("#BuildNotes_Submitting"),
               }),
             ],
           }),
-        R = (e) =>
+        A = (e) =>
           (0, i.jsxs)("div", {
-            className: (0, j.A)(b.RightPanel, b.FailedPanel),
+            className: (0, w.A)(L.RightPanel, L.FailedPanel),
             children: [
               (0, i.jsx)("div", {
-                className: b.FailedText,
-                children: (0, w.we)("#BuildNotes_FailedDescription"),
+                className: L.FailedText,
+                children: (0, N.we)("#BuildNotes_FailedDescription"),
               }),
               (0, i.jsx)("div", {
-                className: b.FailedButton,
-                children: (0, i.jsx)(g.$n, {
+                className: L.FailedButton,
+                children: (0, i.jsx)(m.$n, {
                   onClick: e.fnOnReturnToEditor,
-                  children: (0, w.we)("#BuildNotes_ReturnToEditor"),
+                  children: (0, N.we)("#BuildNotes_ReturnToEditor"),
                 }),
               }),
             ],
           }),
-        A = (e) => {
+        U = (e) => {
           const { appId: t, eventGid: n } = e,
             a = `${T.TS.STORE_BASE_URL}news/app/${t}/view/${n}`;
           return (0, i.jsxs)("div", {
-            className: (0, j.A)(b.RightPanel, b.SuccessPanel),
+            className: (0, w.A)(L.RightPanel, L.SuccessPanel),
             children: [
               (0, i.jsx)("div", {
-                className: b.SuccessText,
-                children: (0, w.we)("#BuildNotes_Success"),
+                className: L.SuccessText,
+                children: (0, N.we)("#BuildNotes_Success"),
               }),
               (0, i.jsx)("a", {
                 href: a,
-                className: b.ViewEventButton,
-                children: (0, i.jsx)(g.$n, {
-                  children: (0, w.we)("#BuildNotes_ViewPublished"),
+                className: L.ViewEventButton,
+                children: (0, i.jsx)(m.$n, {
+                  children: (0, N.we)("#BuildNotes_ViewPublished"),
                 }),
               }),
             ],

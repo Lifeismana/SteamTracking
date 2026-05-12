@@ -58,7 +58,7 @@
       var c = t(78327),
         s = t(22837);
       function o() {
-        return c.TS.IN_CLIENT && (0, s.DO)(c.TS.LAUNCHER_TYPE);
+        return c.TS.IN_CLIENT && (0, s.DOG)(c.TS.LAUNCHER_TYPE);
       }
     },
     95034: (e, r, t) => {
@@ -480,34 +480,35 @@
     },
     8685: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => f });
+      t.r(r), t.d(r, { default: () => b });
       var c = t(7850),
         s = t(67692),
         o = t(90626),
-        l = t(97436),
-        i = t(78327),
-        n = t(28240),
-        a = t(23809);
-      function f(e) {
-        const { redirectUrl: r = i.TS.STORE_BASE_URL } = e,
-          t = (0, a.rW)(),
-          [f, b] = (0, o.useState)(!1),
-          u = e.guest;
+        l = t(92120),
+        i = t(51883),
+        n = t(78327),
+        a = t(28240),
+        f = t(23809);
+      function b(e) {
+        const { redirectUrl: r = n.TS.STORE_BASE_URL } = e,
+          t = (0, f.rW)(),
+          [b, u] = (0, o.useState)(!1),
+          h = e.guest;
         return (0, c.jsx)("div", {
           className: s.LoginContainer,
-          children: f
+          children: b
             ? (0, c.jsx)(l.Fn, {})
             : (0, c.jsx)(l.YN, {
                 autoFocus: !0,
                 transport: t,
-                platform: 2,
+                platform: i.SS.tS,
                 onComplete: (e) => {
-                  e == n.wI.k_PrimaryDomainFail
-                    ? b(!0)
+                  e == a.wI.k_PrimaryDomainFail
+                    ? u(!0)
                     : window.location.assign(r);
                 },
                 redirectUrl: r,
-                children: u && (0, c.jsx)(l.Mk, { redirectURL: e.redirectUrl }),
+                children: h && (0, c.jsx)(l.Mk, { redirectURL: e.redirectUrl }),
               }),
         });
       }

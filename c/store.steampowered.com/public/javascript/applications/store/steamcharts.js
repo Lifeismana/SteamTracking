@@ -853,8 +853,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], 31, !1);
+        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
+        m_rgHasData = (0, _._)([], _.bP9, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new _._();
         GetCallback() {
@@ -1004,6 +1004,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get().BIsLoaded() && _._.Get();
@@ -1015,10 +1016,10 @@
               if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
                 return !0;
               switch (_.GetStoreItemType()) {
-                case 0:
+                case _._._:
                   if (_.BIsGameIgnored(_.GetID())) return !0;
                   break;
-                case 1:
+                case _._._:
                   if (_.BIsPackageIgnored(_.GetID())) return !0;
               }
               return !1;
@@ -1222,7 +1223,7 @@
               (0, _.jsx)(
                 "option",
                 {
-                  value: -1,
+                  value: _.xPp,
                   children: (0, _._)("#language_selection_none"),
                 },
                 "langpicker_unset",
@@ -1232,7 +1233,7 @@
           const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
           for (const _ of _._.GetLanguageListForRealms(_)) {
             if (_ && !_(_)) continue;
-            const _ = (0, _._)(_),
+            const _ = (0, _.LgB)(_),
               _ = (0, _._)("#Language_" + _),
               _ = !(!_ || !_(_));
             _.push({
@@ -1526,7 +1527,7 @@
           });
         let _;
         if (_.localized_background_art) {
-          const _ = (0, _._)(_),
+          const _ = (0, _.LgB)(_),
             _ =
               _ in _.localized_background_art
                 ? _
@@ -1788,10 +1789,10 @@
             _.sub_menu_url,
             _(_.sub_menu_url, _),
             _.localized_sub_menu_name?.[_] ||
-              _.localized_sub_menu_name?.[0] ||
+              _.localized_sub_menu_name?.[_.Bhc] ||
               "unknown",
             _.sub_menu_icon?.localized_media?.[_]?.image ||
-              _.sub_menu_icon?.localized_media?.[0]?.image ||
+              _.sub_menu_icon?.localized_media?.[_.Bhc]?.image ||
               void 0,
           ]);
         let _ = _.label_color || "#DBDFE2";
@@ -2126,6 +2127,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         _.preventDefault();
@@ -2421,8 +2423,8 @@
                 const _ = [],
                   _ = new Array();
                 for (const _ of _) {
-                  if (25 == _) continue;
-                  const _ = (0, _._)("#Language_" + (0, _._)(_));
+                  if (_ == _.X51) continue;
+                  const _ = (0, _._)("#Language_" + (0, _.LgB)(_));
                   __webpack_require__.push({
                     label: _,
                     data: _,
@@ -2541,7 +2543,7 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType: _.forceFileType || 3,
+                          fileType: _.forceFileType || _._._,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -2615,7 +2617,8 @@
           }),
         });
       }
-      var _;
+      var _,
+        _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
           (_[(_.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
@@ -2743,7 +2746,7 @@
             let _ = _._.InitFromClanID(_.clanAccountID);
             _._.DeleteClanImage(_, _)
               .then((_) => {
-                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
+                _.success != _._ && _((0, _._)(_).strErrorMsg), _(!1);
               })
               .catch((_) => {
                 _((0, _._)(_).strErrorMsg), _(!1);
@@ -2889,7 +2892,7 @@
               className: _,
               children: (0, _.jsx)("source", {
                 src: _.url,
-                type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
+                type: "video/" + (_.file_type == _._._ ? "mp4" : "webm"),
               }),
             })
           : null;
@@ -3129,7 +3132,7 @@
             for (const _ of _) {
               const _ = __webpack_require__(_);
               if (_) {
-                const _ = (0, _._)(_),
+                const _ = (0, _.LgB)(_),
                   _ = (0, _._)("#Language_" + _);
                 _.push({
                   lang: _,
@@ -3184,7 +3187,7 @@
                 strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
                 closeModal: _,
                 onOK: () => {
-                  for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
+                  for (let _ = 0; _ < _.bP9; _++) _ && _ && _(_) && _(_);
                 },
               }),
             }),
@@ -3223,7 +3226,7 @@
           _: _.strLang,
           className: _().LanguageContainer,
           onClick: (_) => {
-            let _ = (0, _._)(_.currentTarget._);
+            let _ = (0, _.sfN)(_.currentTarget._);
             _(_);
           },
           children: [
@@ -3323,7 +3326,7 @@
                   strTitle: (0, _._)("#selectimage_remove_image"),
                   strDescription: (0, _._)(
                     "#selectimage_remove_details",
-                    (0, _._)("#Language_" + (0, _._)(_.lang)),
+                    (0, _._)("#Language_" + (0, _.LgB)(_.lang)),
                   ),
                   onOK: () => {
                     _(_.lang);
@@ -3355,7 +3358,7 @@
             },
             [_, _],
           ),
-          _ = _ || (0, _._)(_._.LANGUAGE),
+          _ = _ || (0, _.sfN)(_._.LANGUAGE),
           [_, _, _, _] = (0, _._)(() => [
             _.GetSummaryWithFallback(_),
             _.GetNameWithFallback(_),
@@ -3366,7 +3369,7 @@
         (_ =
           void 0 !== _
             ? [_]
-            : 2434320 == _.appid || 2 == _._.EUNIVERSE
+            : 2434320 == _.appid || _._.EUNIVERSE == _._
               ? _
                 ? _.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
@@ -3724,7 +3727,7 @@
                 ],
               }),
             }),
-            12 != _ &&
+            _ != _.Fwr &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)("div", {
@@ -3835,7 +3838,8 @@
           });
       function _(_, _) {
         let _ = 0;
-        for (let _ = 0; _ < 31; ++_) (_(_, _)?.length ?? 0) > 0 && (_ += 1);
+        for (let _ = _.Bhc; _ < _.bP9; ++_)
+          (_(_, _)?.length ?? 0) > 0 && (_ += 1);
         return _;
       }
       var _;
@@ -3859,7 +3863,7 @@
             _?.GetEventType(),
             _?.BHasTag("vo_marketing_message"),
           ]),
-          _ = 36 == _;
+          _ = _ == _.ajI;
         let _ = null;
         _ === _.k_Required
           ? (_ = (0, _.jsx)("span", {
@@ -4449,7 +4453,7 @@
           return (
             _.forEach((_) => {
               const { clanImage: _, lang: _ } = _;
-              let _ = (0, _._)("#Language_" + (0, _._)(_));
+              let _ = (0, _._)("#Language_" + (0, _.LgB)(_));
               _.push(
                 (0, _.jsxs)(
                   "div",
@@ -4525,7 +4529,7 @@
             _(!0);
         }, [_, _, _]);
         const _ = (0, _.useCallback)(
-            (_, _, _ = 0) => {
+            (_, _, _ = _.Bhc) => {
               const _ = _._.InitFromClanID(_),
                 _ = _._.GetHashAndExt(_ ?? null);
               if (0 == _._.GetAllLocalizedGroupImages().length) {
@@ -4553,7 +4557,7 @@
           bOKDisabled: _ > 0,
           onOK: () => {
             const _ = _._.GetLocalizedImageGroupForEdit();
-            for (let _ = 0; _ < 31; ++_) {
+            for (let _ = _.Bhc; _ < _.bP9; ++_) {
               const _ = _?.localized_images[_];
               if (_) {
                 const _ = __webpack_require__.split("/").pop() || "";
@@ -4562,7 +4566,7 @@
                   {
                     image_hash: _(_),
                     clanAccountID: _,
-                    file_type: (0, _._)(_) ?? 0,
+                    file_type: (0, _._)(_) ?? _._._,
                     imageid: 0,
                   },
                   _,
@@ -4677,10 +4681,10 @@
           ]),
           [_] = (0, _.useState)(() =>
             (function (_) {
-              const _ = _._([], 31, null);
+              const _ = _._([], _.bP9, null);
               for (const _ in _) {
-                const _ = (0, _._)(_);
-                -1 != _ && (_[_] = _[_]);
+                const _ = (0, _.sfN)(_);
+                _ != _.xPp && (_[_] = _[_]);
               }
               return _;
             })(_.localized_background_art ?? {}),
@@ -4705,7 +4709,7 @@
                 },
                 _ = _._.GetHashAndExt(_);
               return (
-                _ ? (_[(0, _._)(_)] = _) : delete _[(0, _._)(_)],
+                _ ? (_[(0, _.LgB)(_)] = _) : delete _[(0, _.LgB)(_)],
                 {
                   ..._,
                   localized_background_art: _,
@@ -5130,7 +5134,7 @@
         if (
           (_?.nUniqueIDNextSaleSection &&
             (_ = (0, _._)(
-              2,
+              _._,
               _.GetSaleSectionByID(_?.nUniqueIDNextSaleSection),
               _,
               _,
@@ -5140,7 +5144,7 @@
         ) {
           const _ = _[_.length - 1];
           _ = (0, _._)(
-            2,
+            _._,
             _?.GetSaleSectionByID(_),
             _,
             _,
@@ -5187,7 +5191,7 @@
                       "li",
                       {
                         children: (0, _._)(
-                          3,
+                          _._,
                           _.GetSaleSectionByID(_),
                           _,
                           _,
@@ -5459,7 +5463,7 @@
       function _(_) {
         const { rgPresenters: _ } = _;
         if (!_ || 0 == _.length) return null;
-        const _ = (0, _._)(_._.LANGUAGE);
+        const _ = (0, _.sfN)(_._.LANGUAGE);
         return 1 == _.length
           ? (0, _.jsx)("div", {
               className: (0, _._)(
@@ -5643,14 +5647,14 @@
                 ? _._.EPreviewMode_EditBackground
                 : _._.EPreviewMode_Enabled
               : _._.EPreviewMode_Disabled,
-            _ = _ || 36 != __webpack_require__.GetEventType(),
+            _ = _ || __webpack_require__.GetEventType() != _.ajI,
             _ = (0, _._)(_.clanSteamID);
           return (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
               eventModel: _,
               language: _,
               children: (0, _.jsx)(_._, {
-                location: _ ? 2 : 0,
+                location: _ ? _._ : _._,
                 children: (0, _.jsxs)(_, {
                   event: _,
                   language: _,
@@ -6106,6 +6110,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { component: _ = "a" } = _,
@@ -6118,7 +6123,7 @@
                 ..._
               } = _,
               _ = _.useRef(0),
-              _ = 0 == _.GetStoreItemType() ? _.GetAppID() : null,
+              _ = _.GetStoreItemType() == _._._ ? _.GetAppID() : null,
               _ = (0, _._)(),
               _ = _.useMemo(
                 () =>
@@ -6292,7 +6297,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6313,7 +6320,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (1 != _.GetEResult()) throw "error loading most played by dau";
+          if (_.GetEResult() != _._) throw "error loading most played by dau";
           return {
             rgRanks: this.ReadMostPlayedByDAU(
               _,
@@ -6328,7 +6335,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (1 != _.GetEResult())
+          if (_.GetEResult() != _._)
             throw "error loading most played by concurrent";
           return {
             rgRanks: this.ReadMostPlayedByConcurrent(
@@ -6372,6 +6379,7 @@
         });
       }
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6854,7 +6862,8 @@
             this.m_promiseInitialize ||
               (this.m_promiseInitialize = new Promise((_, _) => {
                 let _;
-                (2 != _._.EUNIVERSE && 4 != _._.EUNIVERSE) || (_ = 1539068400),
+                (_._.EUNIVERSE != _._ && _._.EUNIVERSE != _.CII) ||
+                  (_ = 1539068400),
                   this.LoadCountryList()
                     .then((_) =>
                       this.LoadTopSellersForWeek(_, _, _).then((_) => {
@@ -6884,7 +6893,7 @@
                 this.m_WebAPI.GetServiceTransport(),
                 _,
               );
-              if (1 == __webpack_require__.GetEResult()) {
+              if (__webpack_require__.GetEResult() == _._) {
                 let _ = __webpack_require__
                   .Body()
                   .countries()
@@ -6949,7 +6958,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (1 != _.GetEResult()) throw "error loading top sellers";
+          if (_.GetEResult() != _._) throw "error loading top sellers";
           return {
             strCountryCode: _,
             rtWeekStart: _.Body().start_date(),
@@ -7067,12 +7076,12 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (1 != _.GetEResult()) {
-            if (10 == _.GetEResult())
+          if (_.GetEResult() != _._) {
+            if (_.GetEResult() == _._)
               return {
                 bSQLError: !0,
               };
-            if (42 == _.GetEResult()) return {};
+            if (_.GetEResult() == _._) return {};
             throw "error loading top releases";
           }
           return _.Body().toObject();
@@ -7102,7 +7111,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (1 != __webpack_require__.GetEResult())
+          if (__webpack_require__.GetEResult() != _._)
             throw "error loading most played on Steam Deck";
           return {
             rgRanks: this.ReadMostPlayedOnDeck(
@@ -7133,12 +7142,12 @@
               ? this.m_WebAPI.GetServiceTransport()
               : this.m_WebAPI.GetAnonymousServiceTransport();
           let _ = await _._.GetYearTopAppReleases(_, _);
-          if (1 != _.GetEResult()) {
-            if (10 == _.GetEResult())
+          if (_.GetEResult() != _._) {
+            if (_.GetEResult() == _._)
               return {
                 bSQLError: !0,
               };
-            if (42 == _.GetEResult()) return {};
+            if (_.GetEResult() == _._) return {};
             throw "error loading top releases";
           }
           const _ = _.Body().toObject();
@@ -7152,32 +7161,32 @@
                     top_combined_app_and_dlc_releases: [],
                     top_dlc_releases: [],
                   },
-                  _ = [4, 1, 2, 3],
+                  _ = [_._._, _._._, _._._, _._._],
                   _ = [
                     {
                       appid: 400,
-                      app_release_rank: 4,
-                      type: 1,
+                      app_release_rank: _._._,
+                      type: _._._,
                     },
                     {
                       appid: 440,
-                      app_release_rank: 4,
-                      type: 2,
+                      app_release_rank: _._._,
+                      type: _._._,
                     },
                     {
                       appid: 620,
-                      app_release_rank: 4,
-                      type: 3,
+                      app_release_rank: _._._,
+                      type: _._._,
                     },
                     {
                       appid: 583950,
-                      app_release_rank: 4,
-                      type: 4,
+                      app_release_rank: _._._,
+                      type: _._._,
                     },
                     {
                       appid: 546560,
-                      app_release_rank: 4,
-                      type: 5,
+                      app_release_rank: _._._,
+                      type: _._._,
                     },
                   ];
                 for (const _ of _)
@@ -7275,7 +7284,7 @@
           return [
             "SteamCharts Overview Top Sellers",
             {
-              sort: 10,
+              sort: _._._,
               start: 0,
               count: 5,
               filters: this.m_TopSellersStore.GetDefaultTopSellersFilters(),
@@ -7287,7 +7296,7 @@
           return [
             "SteamCharts Overview Most Played",
             {
-              sort: 32,
+              sort: _._._,
               start: 0,
               count: 5,
               filters: {
@@ -7572,18 +7581,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         let _ = _().PlatinumSection;
         switch (_) {
-          case 1:
+          case _._._:
             _ = _().GoldSection;
             break;
-          case 2:
+          case _._._:
             _ = _().SilverSection;
             break;
-          case 3:
+          case _._._:
             _ = _().BronzeSection;
         }
         return _;
@@ -7820,7 +7828,7 @@
             facets: _,
           } = _,
           _ = _(_, _, _, _, _),
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = (0, _._)();
         return !_ || _
           ? null === _
@@ -7841,7 +7849,7 @@
       }
       function _(_, _, _, _) {
         (0, _.useEffect)(() => {
-          if (null == _ && 1 != _ && _) {
+          if (null == _ && _ != _._ && _) {
             const _ = (function (_) {
               const _ = _._.Get(),
                 _ = _.filter((_) => {
@@ -7947,7 +7955,7 @@
           _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () =>
-              _ && 1 != _
+              _ && _ != _._
                 ? _.top_dlc_releases
                     ?.filter((_) => !_._.Get().BIsAppMissing(_.appid))
                     .map((_) => _.appid)
@@ -7956,7 +7964,7 @@
           ),
           { rgFilteredCombinedAppsAndDLC: _, rgFilteredAppIDByTier: _ } = (0,
           _.useMemo)(() => {
-            if (!_ || 1 == _)
+            if (!_ || _ == _._)
               return {
                 rgFilteredCombinedAppsAndDLC: [],
                 rgFilteredAppIDByTier: [],
@@ -8008,7 +8016,7 @@
               }).then(_);
           }, [_]),
           _(_, _, _, _),
-          _ && 1 != _ && _ && null != _ && _
+          _ && _ != _._ && _ && null != _ && _
             ? 0 == _.length
               ? (0, _.jsxs)(_._, {
                   className: _().ChartPage,
@@ -8893,7 +8901,7 @@
         return _ &&
           _.top_combined_app_and_dlc_releases &&
           0 != _.top_combined_app_and_dlc_releases.length &&
-          3 == _
+          _ == _._
           ? (0, _.jsxs)("div", {
               className: _().PageSection,
               children: [
@@ -10277,7 +10285,7 @@
           _ = (0, _._)(
             "SteamCharts Live Top Sellers",
             {
-              sort: _ ? 10 : 11,
+              sort: _ ? _._._ : _._._,
               start: 0,
               count: 100,
             },
@@ -10605,7 +10613,7 @@
       function _(_) {
         const { MostPlayedOnDeckStore: _, strTimePeriod: _ } = _,
           { topPlayedPeriod: _, dateRangeString: _ } = _.useMemo(() => {
-            let _ = 1;
+            let _ = _._._;
             const _ = new Date().getTime() / 1e3,
               _ = _ - 518400,
               _ = _ - 2505600,
@@ -10614,13 +10622,13 @@
             if (_)
               switch (__webpack_require__.toLowerCase()) {
                 case "pastmonth":
-                  (_ = 2), (_ = (0, _._)(_, _));
+                  (_ = _._._), (_ = (0, _._)(_, _));
                   break;
                 case "pastyear":
-                  (_ = 3), (_ = (0, _._)(_, _));
+                  (_ = _._._), (_ = (0, _._)(_, _));
                   break;
                 case "pastweek":
-                  (_ = 1), (_ = (0, _._)(_, _));
+                  (_ = _._._), (_ = (0, _._)(_, _));
               }
             return {
               topPlayedPeriod: _,
@@ -10813,12 +10821,12 @@
         const { children: _, eTopPlayedPeriod: _ } = _;
         let _ = (0, _._)("#SteamCharts_MostPlayedDeck_TableChangeWeek_Tooltip");
         switch (_) {
-          case 2:
+          case _._._:
             _ = (0, _._)(
               "#SteamCharts_MostPlayedDeck_TableChangeMonth_Tooltip",
             );
             break;
-          case 3:
+          case _._._:
             _ = (0, _._)("#SteamCharts_MostPlayedDeck_TableChangeYear_Tooltip");
         }
         return (0, _.jsxs)("table", {
@@ -11092,7 +11100,7 @@
       function _(_) {
         const { rgTabsData: _, nYear: _, facets: _ } = _,
           _ = _(_, _, _),
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = (0, _._)();
         return !_ || _
           ? null === _
@@ -11138,10 +11146,11 @@
           _ = _?.filter((_) => !_._.Get().BIsAppMissing(_.appid)).map((_) => {
             let _ = _.app_release_rank;
             return (
-              4 == _ && (_ = 0),
+              _ == _._._ && (_ = 0),
               _[_] || (_[_] = []),
               _[_].push(_.appid),
-              4 == _._.Get().GetApp(_.appid)?.GetAppType() && _.push(_.appid),
+              _._.Get().GetApp(_.appid)?.GetAppType() == _._._ &&
+                _.push(_.appid),
               _.appid
             );
           });
@@ -11208,14 +11217,14 @@
               ),
               _ = (0, _._)(_, _),
               _ = (0, _.useMemo)(() => {
-                if (!_ || 1 == _) return [];
+                if (!_ || _ == _._) return [];
                 const _ = [],
                   _ = (_?.top_combined_app_and_dlc_releases || [])
                     .filter((_) => !_._.Get().BIsAppMissing(_.appid))
                     .map((_) => {
                       let _ = _.app_release_rank;
                       return (
-                        4 == _ && (_ = 0),
+                        _ == _._._ && (_ = 0),
                         _[_] || (_[_] = []),
                         _[_].push(_.appid),
                         _.appid
@@ -11236,7 +11245,7 @@
                     },
                   ],
                   _ = _(
-                    1,
+                    _._._,
                     "#SteamCharts_Yearly_Tab_TopSellers",
                     _
                       ? "#SteamCharts_Yearly_Tab_TopSellers_desc_pre"
@@ -11247,7 +11256,7 @@
                   _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
                     __webpack_require__.push(_),
                   (_ = _(
-                    2,
+                    _._._,
                     "#SteamCharts_Yearly_Tab_MostPlayed",
                     "#SteamCharts_Yearly_Tab_MostPlayed_desc",
                     _.top_app_list,
@@ -11255,7 +11264,7 @@
                   _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
                     __webpack_require__.push(_),
                   (_ = _(
-                    3,
+                    _._._,
                     "#SteamCharts_Yearly_Tab_SteamDeck",
                     "#SteamCharts_Yearly_Tab_SteamDeck_desc",
                     _.top_app_list,
@@ -11263,7 +11272,7 @@
                   _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
                     ((_.bShowDeckCompat = !0), __webpack_require__.push(_)),
                   (_ = _(
-                    4,
+                    _._._,
                     "#SteamCharts_Yearly_Tab_Controller",
                     "#SteamCharts_Yearly_Tab_Controller_desc",
                     _.top_app_list,
@@ -11271,7 +11280,7 @@
                   _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
                     __webpack_require__.push(_),
                   (_ = _(
-                    5,
+                    _._._,
                     "#SteamCharts_Yearly_Tab_VR",
                     "#SteamCharts_Yearly_Tab_VR_desc",
                     _.top_app_list,
@@ -11279,7 +11288,7 @@
                   _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
                     __webpack_require__.push(_),
                   (_ = _(
-                    6,
+                    _._._,
                     "#SteamCharts_Yearly_Tab_Demo",
                     "#SteamCharts_Yearly_Tab_Demo_desc",
                     _.top_app_list,
@@ -11304,7 +11313,7 @@
               }).then(_);
           }, [_]),
           _(_, _, _?.[0]?.rgFilteredDLCsAppIDs, _),
-          _ && 1 != _ && _ && null != _ && _
+          _ && _ != _._ && _ && null != _ && _
             ? 0 == _.length
               ? (0, _.jsxs)(_._, {
                   className: _().ChartPage,

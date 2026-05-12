@@ -179,10 +179,11 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       let _ = {
         success: !0,
-        result: 1,
+        result: _._,
       };
       class _ {
         m_mapWaitingCallbacks = new Map();
@@ -273,7 +274,7 @@
                   message: "GetClientInfo",
                 })
                   .then((_) => {
-                    1 == _.success
+                    _.success == _._
                       ? ((this.m_ClientInfo.ulVersion = _.clientversion),
                         (this.m_ClientInfo.bFriendsUIEnabled = !!_.friendsui),
                         (this.m_ClientInfo.unAccountID = _.accountid),
@@ -302,7 +303,7 @@
       }
       let _ = new (class {
         m_connection = new _();
-        FailureResult(_ = 2) {
+        FailureResult(_ = _._) {
           let _ = {
             success: !1,
             result: _,
@@ -314,7 +315,7 @@
             this.m_connection &&
               !this.m_connection.connected_to_client &&
               (_.connect_failed = !0),
-            7 == _ && (_.call_unsupported = !0),
+            _ == _._ && (_.call_unsupported = !0),
             _
           );
         }
@@ -369,7 +370,7 @@
           };
           return this.GenericEResultCall(_, !0).then((_) => {
             if (_.connect_failed) return;
-            let _ = 1 == _.result;
+            let _ = _.result == _._;
             return this.m_mapCacheSubscribedApp.set(_, _), _;
           });
         }
@@ -398,13 +399,13 @@
               _ && !this.BClientAccountMatches()
                 ? {
                     success: !1,
-                    result: 19,
+                    result: _._,
                     account_mismatch: !0,
                   }
                 : this.m_connection
                     .SendMsgAndAwaitResponse(_)
                     .then((_) =>
-                      1 === _.success ? _ : this.FailureResult(_.success),
+                      _.success === _._ ? _ : this.FailureResult(_.success),
                     ),
             )
             .catch(() => this.FailureResult());
@@ -513,6 +514,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
         const { fnOpenInSteamClient: _ } = _();
@@ -547,13 +549,13 @@
         });
       });
       function _() {
-        const [_, _] = _.useState(22);
+        const [_, _] = _.useState(_._);
         _.useEffect(() => {
           _._.IN_CLIENT ||
             _._.IN_MOBILE ||
             _._.IN_MOBILE_WEBVIEW ||
             _._.BClientConnectedAndSupportsMessage("OpenSteamURL").then((_) => {
-              _(_ ? 1 : 2);
+              _(_ ? _._ : _._);
             });
         }, []);
         const _ = _.useCallback(() => {
@@ -565,7 +567,7 @@
             _.set("utm_bid", _),
               (_ += _.origin + _.pathname + "?" + _.toString() + _.hash);
           } else _ += window.location.href;
-          1 == _ ? _._.OpenSteamURL(_) : (window.location.href = _);
+          _ == _._ ? _._.OpenSteamURL(_) : (window.location.href = _);
         }, [_]);
         return {
           eClientConnectedState: _,
@@ -597,13 +599,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
           const { fnOpenInSteamClient: _, eClientConnectedState: _ } = (0,
             _.useOpenWebInSteamClient)(),
-            _ = 1 == _,
+            _ = _ == _._,
             [_, _, _] = (0, _._)();
           return (
             (0, _.use)((0, _._)()),

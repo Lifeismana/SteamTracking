@@ -440,9 +440,9 @@
               }
               if (_.cssProperty)
                 if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_, _);
+                  const _ = _.cssProperty(_, _, _.formFactor);
                   if (_.length && Array.isArray(_[0]))
-                    __webpack_require__.forEach(([_, _]) => (_[_] = _));
+                    _.forEach(([_, _]) => (_[_] = _));
                   else {
                     const _ = _;
                     _[_[0]] = _[1];
@@ -876,13 +876,18 @@
           },
           {
             prop: "color",
-            cssProperty: (_, _) => ["--text-color", _(_, _.contrast ?? "body")],
+            responsive: !0,
+            cssProperty: (_, _, _) => [
+              "--text-color",
+              _(_, _(_.contrast, _) ?? "body"),
+            ],
           },
           {
             prop: "contrast",
-            cssProperty: (_, _) => [
+            responsive: !0,
+            cssProperty: (_, _, _) => [
               "--text-color",
-              _(_.color ?? "text-body", _),
+              _(_(_.color, _) ?? "text-body", _),
             ],
           },
           {
@@ -1881,63 +1886,63 @@
       }
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 9320, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 36939, 19))),
         (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3095, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83095, 19))),
         (_.bulgarian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 864, 19))),
         (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3910, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 73910, 19))),
         (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7098, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27098, 19))),
         (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 4847, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84847, 19))),
         (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3621, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 53621, 19))),
         (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 9058, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 29058, 19))),
         (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 2683, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 82683, 19))),
         (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 9209, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 49209, 19))),
         (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 2933, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 42933, 19))),
         (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 6740, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 66740, 19))),
         (_.indonesian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 4631, 19))),
         (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 517, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 10517, 19))),
         (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 4788, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 24788, 19))),
         (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3838, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83838, 19))),
         (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1990, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 91990, 19))),
         (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 8953, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 18953, 19))),
         (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 8766, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 58766, 19))),
         (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 3110, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 93110, 19))),
         (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7384, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67384, 19))),
         (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 8928, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 28928, 19))),
         (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 1168, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98787, 19))),
         (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 6421, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 96421, 19))),
         (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7524, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 17524, 19))),
         (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7248, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67248, 19))),
         (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 6085, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46085, 19))),
         (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7997, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 37997, 19))),
         (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7247, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 47247, 19))),
         (_.vietnamese = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 3092, 19)));
       const _ = (function (_) {

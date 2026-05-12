@@ -196,6 +196,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = "UpperLeft",
+        _ = "BottomLeft",
+        _ = "UpperCenter",
+        _ = "CenterCenter",
+        _ = "BottomCenter";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -214,7 +219,7 @@
         },
         _ = (0, _._)(_()["duration-app-launch"]),
         _ = {
-          pinnedPosition: "BottomLeft",
+          pinnedPosition: _,
           nWidthPct: 50,
           nHeightPct: 50,
         },
@@ -311,22 +316,22 @@
               children: [
                 (0, _.jsx)("div", {
                   className: `${_().PinBox} ${_().BottomLeft}`,
-                  onClick: () => this.SetPinnedPosition("BottomLeft"),
+                  onClick: () => this.SetPinnedPosition(_),
                   title: "Pin to Bottom Left",
                 }),
                 (0, _.jsx)("div", {
                   className: `${_().PinBox} ${_().UpperCenter}`,
-                  onClick: () => this.SetPinnedPosition("UpperCenter"),
+                  onClick: () => this.SetPinnedPosition(_),
                   title: "Pin to Top Center",
                 }),
                 (0, _.jsx)("div", {
                   className: `${_().PinBox} ${_().CenterCenter}`,
-                  onClick: () => this.SetPinnedPosition("CenterCenter"),
+                  onClick: () => this.SetPinnedPosition(_),
                   title: "Pin to Center",
                 }),
                 (0, _.jsx)("div", {
                   className: `${_().PinBox} ${_().BottomCenter}`,
-                  onClick: () => this.SetPinnedPosition("BottomCenter"),
+                  onClick: () => this.SetPinnedPosition(_),
                   title: "Pin to Bottom Center",
                 }),
                 _,
@@ -722,22 +727,22 @@
       function _(_, _, _) {
         let _, _, _, _;
         switch (_) {
-          case "BottomLeft":
+          case _:
             (_ = 0), (_ = 100 - _), (_ = 0), (_ = 100 - _);
             break;
-          case "UpperLeft":
+          case _:
             (_ = 100 - _), (_ = 0), (_ = 0), (_ = 100 - _);
             break;
-          case "CenterCenter":
+          case _:
             (_ = (100 - _) / 2),
               (_ = (100 - _) / 2),
               (_ = (100 - _) / 2),
               (_ = (100 - _) / 2);
             break;
-          case "UpperCenter":
+          case _:
             (_ = 100 - _), (_ = 0), (_ = (100 - _) / 2), (_ = (100 - _) / 2);
             break;
-          case "BottomCenter":
+          case _:
             (_ = 0), (_ = 100 - _), (_ = (100 - _) / 2), (_ = (100 - _) / 2);
         }
         return {
@@ -877,15 +882,11 @@
                   (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
                   100 -
                 this.m_nLocalOffsetXPct;
+              if (this.props.pinType == _ || this.props.pinType == _) return 0;
               if (
-                "UpperLeft" == this.props.pinType ||
-                "BottomLeft" == this.props.pinType
-              )
-                return 0;
-              if (
-                "CenterCenter" == this.props.pinType ||
-                "BottomCenter" == this.props.pinType ||
-                "UpperCenter" == this.props.pinType
+                this.props.pinType == _ ||
+                this.props.pinType == _ ||
+                this.props.pinType == _
               ) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (_ = _), _;
@@ -900,9 +901,9 @@
                   100 +
                   (this.state.curWidthPct - this.m_nLocalOffsetXPct));
               if (
-                "CenterCenter" == this.props.pinType ||
-                "BottomCenter" == this.props.pinType ||
-                "UpperCenter" == this.props.pinType
+                this.props.pinType == _ ||
+                this.props.pinType == _ ||
+                this.props.pinType == _
               ) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (_ = _), _;
@@ -915,12 +916,8 @@
                   (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
                   100 -
                 this.m_nLocalOffsetYPct;
-              if (
-                "UpperCenter" == this.props.pinType ||
-                "UpperLeft" == this.props.pinType
-              )
-                return 0;
-              if ("CenterCenter" == this.props.pinType) {
+              if (this.props.pinType == _ || this.props.pinType == _) return 0;
+              if (this.props.pinType == _) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (_ = _), _;
               }
@@ -933,12 +930,8 @@
                   (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
                   100 +
                   (this.state.curHeightPct - this.m_nLocalOffsetYPct));
-              if (
-                "BottomLeft" == this.props.pinType ||
-                "BottomCenter" == this.props.pinType
-              )
-                return 0;
-              if ("CenterCenter" == this.props.pinType) {
+              if (this.props.pinType == _ || this.props.pinType == _) return 0;
+              if (this.props.pinType == _) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (_ = _), _;
               }
@@ -984,10 +977,10 @@
             case _.middle:
               (_ = _(_.clientX)),
                 (_ = _(_.clientY)),
-                "CenterCenter" != this.state.pinType && (_ = _(_.clientY)),
-                "CenterCenter" != this.state.pinType &&
-                  "BottomCenter" != this.state.pinType &&
-                  "UpperCenter" != this.state.pinType &&
+                this.state.pinType != _ && (_ = _(_.clientY)),
+                this.state.pinType != _ &&
+                  this.state.pinType != _ &&
+                  this.state.pinType != _ &&
                   (_ = _(_.clientX)),
                 _(),
                 _(),

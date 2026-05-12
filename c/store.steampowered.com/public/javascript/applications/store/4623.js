@@ -435,6 +435,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return new (_())(
@@ -484,7 +485,7 @@
             const _ = _?.public_data,
               _ = _?.private_data;
             (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? 0),
+              (_.m_ePersonaState = _?.persona_state ?? _.cU3),
               (_.m_strAvatarHash = _?.sha_digest_avatar
                 ? (0, _._)(_.sha_digest_avatar)
                 : _._),
@@ -1500,6 +1501,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _.jsx)(_._, {
@@ -1557,7 +1559,7 @@
             : (0, _.jsx)(_._, {
                 autoFocus: !0,
                 transport: _,
-                platform: 2,
+                platform: _._._,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail
                     ? _(!0)
@@ -1620,7 +1622,7 @@
                 })(_).load(_),
               enabled: !!_,
             });
-          })(1 == _.GetStoreItemType() ? _.GetID() : void 0);
+          })(_.GetStoreItemType() == _._._ ? _.GetID() : void 0);
         return _ ? (0, _._)("#Cart_ShippingEstimate_DeliveryDate", _(_)) : null;
       }
       function _(_) {
@@ -1643,6 +1645,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { component: _ = "a" } = _,
@@ -1655,7 +1658,7 @@
                 ..._
               } = _,
               _ = _.useRef(0),
-              _ = 0 == _.GetStoreItemType() ? _.GetAppID() : null,
+              _ = _.GetStoreItemType() == _._._ ? _.GetAppID() : null,
               _ = (0, _._)(),
               _ = _.useMemo(
                 () =>
@@ -1779,7 +1782,10 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1841,7 +1847,9 @@
             );
           },
           onSuccess: ([_, _], _, { previousCart: _ }) => {
-            1 == _ ? ((0, _._)(_, _, _.cart), _ && _()) : _.setQueryData(_, _);
+            _ == _._
+              ? ((0, _._)(_, _, _.cart), _ && _())
+              : _.setQueryData(_, _);
           },
           onError: (_, _, { previousCart: _ }) => {
             _.setQueryData(_, _);
@@ -1869,7 +1877,7 @@
           _?.cart_items.length &&
           _.cart_items.every(
             ({ store_item: _ }) =>
-              1 == _.item_type &&
+              _.item_type == _._._ &&
               (_.self_purchase_option || _.best_purchase_option)
                 ?.requires_shipping,
           )
@@ -1882,7 +1890,7 @@
           queryFn: async () => {
             const _ = await (async function (_) {
               const _ = _._.Init(_._);
-              _.Body().set_language((0, _._)(_._.LANGUAGE));
+              _.Body().set_language((0, _.sfN)(_._.LANGUAGE));
               const _ = await _._.GetRelevantCoupons(_, _);
               return __webpack_require__.BIsValid()
                 ? __webpack_require__.Body().toObject()
@@ -1906,7 +1914,7 @@
               ),
               _ = await _.json();
             return (
-              1 !== _.eresult &&
+              _.eresult !== _._ &&
                 console.error("Failed to load sale drop progress"),
               _
             );
@@ -1942,7 +1950,7 @@
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = _(),
-          _ = _.isSuccess && 2 == _.data.role(),
+          _ = _.isSuccess && _.data.role() == _._._,
           _ = _.data?.cart_items.some((_) => !_.can_purchase_as_gift);
         let _ = _.k_ECanRequest;
         return (
@@ -1959,7 +1967,7 @@
       function _() {
         const _ = (0, _._)(),
           _ = (0, _._)();
-        return _.isSuccess && 1 == _.data.role() && (0, _._)(_);
+        return _.isSuccess && _.data.role() == _._._ && (0, _._)(_);
       }
       !(function (_) {
         (_[(_.k_ECanRequest = 0)] = "k_ECanRequest"),
@@ -1980,6 +1988,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2034,11 +2044,11 @@
         });
       }
       const _ = {
-        chunkid: function (module) {
-          const { item: _, validatedItem: _ } = module,
+        [_._._]: function (_) {
+          const { item: _, validatedItem: _ } = _,
             [_, _] = (0, _._)(_.packageid, {}),
-            [_, _] = (0, _._)(_.packageid, 1, _._),
-            _ = (_ && !_.BIsVisible()) || 2 === _ || 2 === _,
+            [_, _] = (0, _._)(_.packageid, _._._, _._),
+            _ = (_ && !_.BIsVisible()) || _ === _._ || _ === _._,
             _ = _?.GetSelfPurchaseOption();
           return _ || (_ && !_)
             ? (0, _.jsx)(_, {
@@ -2048,7 +2058,7 @@
               })
             : _ && _
               ? (0, _.jsx)(_, {
-                  ...module,
+                  ..._,
                   storeItem: _,
                   displayItem: _,
                   lineItem: _,
@@ -2056,10 +2066,10 @@
                 })
               : (0, _.jsx)(_._, {});
         },
-        chunkid: function (module) {
-          const { item: _, validatedItem: _ } = module,
-            [_, _] = (0, _._)(_.bundleid, 2, _._);
-          if ((_ && !_.BIsVisible()) || 2 === _)
+        [_._._]: function (_) {
+          const { item: _, validatedItem: _ } = _,
+            [_, _] = (0, _._)(_.bundleid, _._._, _._);
+          if ((_ && !_.BIsVisible()) || _ === _._)
             return (0, _.jsx)(_, {
               lineItemID: _.line_item_id,
               validatedItem: _,
@@ -2068,7 +2078,7 @@
           if (!_) return (0, _.jsx)(_._, {});
           const _ = _.GetSelfPurchaseOption();
           return (0, _.jsx)(_, {
-            ...module,
+            ..._,
             storeItem: _,
             displayItem: _,
             lineItem: _,
@@ -2485,7 +2495,7 @@
       }
       function _(_) {
         const { item: _ } = _;
-        if (!_ || 1 != _.GetStoreItemType()) return null;
+        if (!_ || _.GetStoreItemType() != _._._) return null;
         const _ = _.GetSelfPurchaseOption(),
           _ = _?.recurrence_info;
         if (!_) return null;
@@ -2700,6 +2710,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.createContext(null);
       function _(_) {
@@ -2720,17 +2731,17 @@
                 _?.cart_items?.forEach((_) => {
                   let _ = !!_.gift_info?.accountid_giftee;
                   _.errors?.duplicate_appids_in_cart?.length &&
-                    _(1, (0, _._)("#Cart_Error_DuplicateApps_FootNote")),
+                    _(_._._, (0, _._)("#Cart_Error_DuplicateApps_FootNote")),
                     _.errors?.owned_appids?.length &&
                       (_.errors?.has_existing_billing_agreement
                         ? _(
-                            15,
+                            _._._,
                             (0, _._)(
                               "#Cart_Error_ExistingBillingAgreement_FootNote",
                             ),
                           )
                         : _(
-                            2,
+                            _._._,
                             (0, _._)(
                               _
                                 ? "#Cart_Error_AlreadyOwned_GiftFootNote"
@@ -2738,22 +2749,25 @@
                             ),
                           )),
                     _.errors?.unavailable_in_country &&
-                      _(8, (0, _._)("#Cart_Error_UnavailableCountry_FootNote")),
+                      _(
+                        _._._,
+                        (0, _._)("#Cart_Error_UnavailableCountry_FootNote"),
+                      ),
                     _.errors?.adult_content_restricted &&
                       _(
-                        17,
+                        _._._,
                         (0, _._)("#Cart_Error_AdultContentRestricted_FootNote"),
                       ),
                     _.errors?.commercial_license_restricted &&
                       _(
-                        18,
+                        _._._,
                         (0, _._)(
                           "#Cart_Error_CommercialLicenseRestricted_FootNote",
                         ),
                       ),
                     _.errors?.missing_must_own_appids &&
                       _(
-                        16,
+                        _._._,
                         _
                           ? (0, _._)(
                               "#Cart_Error_MissingMustOwnApps_FootNoteGift",
@@ -2761,9 +2775,15 @@
                           : (0, _._)("#Cart_Error_MissingMustOwnApps_FootNote"),
                       ),
                     _.warnings?.appids_in_mastersub?.length &&
-                      _(4, (0, _._)("#Cart_Error_MasterSubscription_FootNote")),
+                      _(
+                        _._._,
+                        (0, _._)("#Cart_Error_MasterSubscription_FootNote"),
+                      ),
                     _.warnings?.price_has_changed &&
-                      _.set(10, (0, _._)("#Cart_Warning_PriceChange_FootNote"));
+                      _.set(
+                        _._._,
+                        (0, _._)("#Cart_Warning_PriceChange_FootNote"),
+                      );
                 }),
                 {
                   rgCartLevelNotices: Array.from(_.values()),
@@ -2846,7 +2866,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 1,
+                  purchase_state: _._._,
                   notice_text: (0, _._)("#Cart_Error_DuplicateApps_LineItem"),
                   appids: _.errors.duplicate_appids_in_cart,
                 },
@@ -2867,7 +2887,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 8,
+                  purchase_state: _._._,
                   notice_text: (0, _._)(
                     "#Cart_Error_UnavailableCountry_LineItem",
                   ),
@@ -2880,7 +2900,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 17,
+                  purchase_state: _._._,
                   notice_text: (0, _._)(
                     "#Cart_Error_AdultContentRestricted_LineItem",
                   ),
@@ -2893,7 +2913,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 18,
+                  purchase_state: _._._,
                   notice_text: (0, _._)(
                     "#Cart_Error_CommercialLicenseRestricted_LineItem",
                   ),
@@ -2915,7 +2935,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 14,
+                  purchase_state: _._._,
                   notice_text: (0, _._)("#Cart_Error_TooManyInCart"),
                 },
                 "too_many_in_cart",
@@ -2926,7 +2946,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 16,
+                  purchase_state: _._._,
                   notice_text: _
                     ? (0, _._)("#Cart_Error_MissingMustOwnApps_GiftLineItem")
                     : (0, _._)("#Cart_Error_MissingMustOwnApps_LineItem"),
@@ -2940,7 +2960,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 4,
+                  purchase_state: _._._,
                   notice_text: (0, _._)(
                     "#Cart_Error_MasterSubscription_LineItem",
                   ),
@@ -2956,7 +2976,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 3,
+                  purchase_state: _._._,
                   notice_text: (0, _._)("#Cart_Warning_AlreadyOwned_LineItem"),
                   appids: _.warnings.owned_appids,
                 },
@@ -2968,7 +2988,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 9,
+                  purchase_state: _._._,
                   notice_text: (0, _._)("#Cart_Warning_ExtraCopies_LineItem"),
                   appids: _.warnings.owned_appids_extra_copy,
                 },
@@ -2980,7 +3000,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 10,
+                  purchase_state: _._._,
                   notice_text: (0, _._)("#Cart_Warning_PriceChange_LineItem"),
                 },
                 "price_has_changed",
@@ -2991,7 +3011,7 @@
               (0, _.jsx)(
                 _,
                 {
-                  purchase_state: 5,
+                  purchase_state: _._._,
                   notice_text: (0, _._)("#Cart_Warning_NoRefund_LineItem"),
                 },
                 "non_refundable",
@@ -3072,7 +3092,7 @@
         let _ = !!_.gift_info?.accountid_giftee;
         if (_.errors?.has_existing_billing_agreement)
           return (0, _.jsx)(_, {
-            purchase_state: 15,
+            purchase_state: _._._,
             notice_text: (0, _._)("#Cart_Error_ExistingBillingAgreement"),
           });
         {
@@ -3090,7 +3110,7 @@
                   : "#Cart_Error_AlreadyOwned_LineItem",
               )),
             (0, _.jsx)(_, {
-              purchase_state: 2,
+              purchase_state: _._._,
               notice_text: _,
               appids: _ ? _.errors.owned_appids : null,
             })
@@ -3103,17 +3123,17 @@
           children: [
             _.errors?.coupon_exclusive_promo &&
               (0, _.jsx)(_, {
-                purchase_state: 13,
+                purchase_state: _._._,
                 notice_text: (0, _._)("#Cart_Error_CouponIsExclusivePromo"),
               }),
             _.errors?.invalid_coupon &&
               (0, _.jsx)(_, {
-                purchase_state: 11,
+                purchase_state: _._._,
                 notice_text: (0, _._)("#Cart_Error_CouponIsInvalid"),
               }),
             _.errors?.invalid_coupon_for_item &&
               (0, _.jsx)(_, {
-                purchase_state: 12,
+                purchase_state: _._._,
                 notice_text: (0, _._)("#Cart_Error_CouponIsInvalidForItem"),
               }),
           ],
@@ -3153,6 +3173,7 @@
           useInitCartLocalization: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3352,9 +3373,9 @@
               { data: _ } = (0, _._)(_);
             (0, _.useEffect)(() => {
               const _ = _?.type;
-              0 == _
+              _ == _._._
                 ? __webpack_require__(_._)
-                : (4 != _ && 11 != _) ||
+                : (_ != _._._ && _ != _._._) ||
                   __webpack_require__(_.related_items?.parent_appid);
             }, [_?._, _?.related_items?.parent_appid, _?.type]);
             const _ = (0, _.useMemo)(
@@ -3823,7 +3844,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (function (_) {
@@ -4163,7 +4183,8 @@
           }
         return _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { giftInfo: _, onChange: _ } = _,
           _ = (0, _._)(_.accountid_giftee);
@@ -4483,14 +4504,15 @@
       function _(_) {
         const { gifteeAccountID: _ } = _,
           { isLoading: _, data: _ } = (0, _._)(!0);
-        if (_ || _.is_not_member_of_any_group() || 2 === _.role()) return null;
+        if (_ || _.is_not_member_of_any_group() || _.role() === _._._)
+          return null;
         const _ = _._.InitFromAccountID(
           _,
           _._.EUNIVERSE,
         ).ConvertTo64BitString();
         return _.family_group()
           .members()
-          .some((_) => _.steamid() === _ && 2 === _.role())
+          .some((_) => _.steamid() === _ && _.role() === _._._)
           ? (0, _.jsxs)("div", {
               className: _().FamilyGiftNotice,
               children: [" ", (0, _._)("#Cart_FamilyGift_Notice")],
@@ -4626,7 +4648,7 @@
             (0, _.jsx)(_._, {
               onCancel: _,
               onOK: () => {
-                __webpack_require__(), _(_ || _._);
+                __webpack_require__(), _(_ || _.kFb);
               },
               strOKText: (0, _._)("#Button_Done"),
             }),
@@ -5025,7 +5047,7 @@
           _ = (0, _._)(),
           [_, _] = (0, _._)(),
           _ = (0, _._)();
-        let _ = _._;
+        let _ = _.kFb;
         (0, _._)(_) && (_ = _.gid);
         const _ = (function (_) {
             return "login" == _
@@ -5043,7 +5065,7 @@
           onClick: () => {
             switch (_) {
               case "login":
-                if (_ != _._ && _) {
+                if (_ != _.kFb && _) {
                   const _ =
                     _._.STORE_CHECKOUT_BASE_URL +
                     "checkout?purchasetype=self&cart=" +
@@ -5099,7 +5121,7 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = (0, _._)(_.data?.family_groupid(), _, 1);
+          _ = (0, _._)(_.data?.family_groupid(), _, _._._);
         return _
           ? (0, _.jsx)(_._, {
               disabled: _,
@@ -5335,14 +5357,14 @@
             { data: _ } = (0, _._)(),
             _ = !_.current;
           let _ = _._,
-            _ = -1;
+            _ = _._._;
           if (_ && void 0 !== _) {
             const _ = _.data?.line_items || [],
               _ = _.length
                 ? _.reduce((_, _) => (_.time_added > _.time_added ? _ : _))
                 : null;
             (_ = _?.bundleid || _?.packageid || _._),
-              (_ = _ === _?.bundleid ? 2 : 1);
+              (_ = _ === _?.bundleid ? _._._ : _._._);
           }
           const [_] = (0, _._)(_, _, _._);
           if (_ && _) {

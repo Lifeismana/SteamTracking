@@ -634,13 +634,9 @@
                 _ = new Array(),
                 _ = new Array();
               if (_) {
-                const _ = (0, _._)(_._.k_ECurrencyCodeUSD).toUpperCase(),
+                const _ = (0, _._)(_._).toUpperCase(),
                   _ = (0, _._)(_, _) || (0, _._)(_, _) || (0, _._)(_, _);
-                for (
-                  let _ = _._.k_ECurrencyCodeUSD;
-                  _ < _._.k_ECurrencyCodeMax;
-                  ++_
-                ) {
+                for (let _ = _._; _ < _._; ++_) {
                   if (!_.BIsSupportCurrencyAndOrRegion(_)) continue;
                   const _ = (0, _._)(_).toUpperCase(),
                     _ = (0, _._)(_, _),
@@ -661,29 +657,17 @@
                     appids: _,
                   });
                 }
-                for (
-                  let _ = _._.k_ERegionCodeCIS;
-                  _ < _._.k_ERegionCodeMax;
-                  ++_
-                ) {
-                  if (
-                    !_.BIsSupportCurrencyAndOrRegion(_._.k_ECurrencyCodeUSD, _)
-                  )
-                    continue;
-                  const _ = (0, _._)(_._.k_ECurrencyCodeUSD, _).toUpperCase(),
+                for (let _ = _._; _ < _._; ++_) {
+                  if (!_.BIsSupportCurrencyAndOrRegion(_._, _)) continue;
+                  const _ = (0, _._)(_._, _).toUpperCase(),
                     _ = (0, _._)(_, _),
                     _ = (0, _._)(_, _),
                     _ = (0, _._)(_, _),
-                    _ = _.GetScaledRecommendedPrice(
-                      _,
-                      _._.k_ECurrencyCodeUSD,
-                      _,
-                      _,
-                    ).price;
+                    _ = _.GetScaledRecommendedPrice(_, _._, _, _).price;
                   _.push({
                     packageID: _,
                     strPriceKey: _,
-                    eCurrencyCode: _._.k_ECurrencyCodeUSD,
+                    eCurrencyCode: _._,
                     eRegionCode: _,
                     strCountryOverride: void 0,
                     nPublishedPrice: _,
@@ -788,7 +772,7 @@
                                   ),
                                 }),
                                 (0, _.jsx)(_, {
-                                  usdRow: _[_._.k_ECurrencyCodeUSD],
+                                  usdRow: _[_._],
                                 }),
                               ],
                             }),

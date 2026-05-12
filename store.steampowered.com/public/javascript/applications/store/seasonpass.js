@@ -34,37 +34,38 @@
     },
     51899: (e, s, t) => {
       "use strict";
-      t.r(s), t.d(s, { default: () => W });
+      t.r(s), t.d(s, { default: () => O });
       var n = t(7850),
-        a = t(8527),
-        o = t(90626),
-        i = t(38390),
-        r = t(6379),
-        l = t(55263),
-        c = t(63369),
-        p = t(8107),
-        d = t(60014),
-        m = t(55963),
-        _ = t(1431),
-        u = t.n(_);
-      const h = { include_assets: !0, include_basic_info: !0 };
-      function x(e) {
+        a = t(34214),
+        o = t(8527),
+        i = t(90626),
+        r = t(38390),
+        l = t(6379),
+        c = t(55263),
+        p = t(63369),
+        d = t(8107),
+        m = t(60014),
+        _ = t(55963),
+        u = t(1431),
+        h = t.n(u);
+      const x = { include_assets: !0, include_basic_info: !0 };
+      function S(e) {
         const { appid: s } = e,
-          [t] = (0, l.t7)(s, h),
-          a = (0, d.n9)();
+          [t] = (0, c.t7)(s, x),
+          a = (0, m.n9)();
         return t && s
           ? (0, n.jsx)("div", {
-              className: u().StoreItemCtn,
+              className: h().StoreItemCtn,
               children: (0, n.jsx)("div", {
-                className: u().StoreItemRow,
+                className: h().StoreItemRow,
                 children: (0, n.jsxs)("a", {
-                  href: (0, m.wJ)(t.GetStorePageURL(), a),
+                  href: (0, _.wJ)(t.GetStorePageURL(), a),
                   children: [
                     (0, n.jsx)("img", {
                       src: t.GetAssets().GetSmallCapsuleURL(),
                     }),
                     (0, n.jsxs)("div", {
-                      className: u().StoreItemDescription,
+                      className: h().StoreItemDescription,
                       children: [t.GetShortDescription(), " "],
                     }),
                   ],
@@ -73,44 +74,45 @@
             })
           : null;
       }
-      var S = t(32630),
-        g = t(93980),
+      var g = t(32630),
+        j = t(99376),
         f = t(42780),
-        j = t(59952),
-        v = t(12611),
-        R = t(30470);
-      function w() {
+        v = t(22837),
+        R = t(59952),
+        w = t(12611),
+        P = t(30470);
+      function b() {
         const e = new URL(window.location.href),
           s = e.pathname.split("/"),
           t = s?.[2];
         e.searchParams.get("beta");
-        return `${R.TS.STORE_ICON_BASE_URL}${t}/`;
+        return `${P.TS.STORE_ICON_BASE_URL}${t}/`;
       }
-      var P = t(61859),
-        b = t(26296),
-        I = t(4852),
-        A = t.n(I),
-        D = t(24484),
-        N = t(78327),
-        G = t(79613);
-      function T(e) {
+      var I = t(61859),
+        A = t(26296),
+        D = t(4852),
+        N = t.n(D),
+        T = t(24484),
+        G = t(78327),
+        E = t(79613);
+      function B(e) {
         return new f.OJ(new f.R8(), 0);
       }
-      function E(e) {
+      function C(e) {
         const { text: s, languageOverride: t } = e,
-          [a] = (0, o.useState)(
-            new g.B(
+          [a] = (0, i.useState)(
+            new j.B(
               new Map([
-                ...Array.from(j.W4.entries()),
-                ["img", { Constructor: B, autocloses: !1 }],
+                ...Array.from(R.W4.entries()),
+                ["img", { Constructor: L, autocloses: !1 }],
               ]),
-              T,
-              t || 0,
+              B,
+              t || v.Bhc,
             ),
           );
         return (0, n.jsx)(n.Fragment, { children: a.ParseBBCode(s, {}, !0) });
       }
-      function B(e) {
+      function L(e) {
         const { showErrorInfo: s } = e.context;
         let t = e?.children?.toString();
         if (
@@ -119,11 +121,11 @@
           null == t || null == t || 0 == t.length)
         )
           return "";
-        const a = (0, D.Fd)("store_page_asset_url", "application_config"),
-          o = (0, D.Fd)("store_page_extra_assets_url", "application_config"),
-          i = (0, D.Fd)("store_page_extra_assets_map", "application_config");
-        if (a && t.startsWith(v.qR + "/")) {
-          const e = t.replace(v.qR + "/", ""),
+        const a = (0, T.Fd)("store_page_asset_url", "application_config"),
+          o = (0, T.Fd)("store_page_extra_assets_url", "application_config"),
+          i = (0, T.Fd)("store_page_extra_assets_map", "application_config");
+        if (a && t.startsWith(w.qR + "/")) {
+          const e = t.replace(w.qR + "/", ""),
             s = i[e];
           if (s) {
             const e = [];
@@ -150,13 +152,13 @@
                     e.alt_text?.length > 0 &&
                     ("webm" === e.extension || "webm" === e.extension),
                 )?.alt_text,
-                i = (0, G.Wr)() || (0, G.Ae)(),
+                i = (0, E.Wr)() || (0, E.Ae)(),
                 r = (e) => {
                   const s = e.currentTarget;
                   s.paused ? s.play() : s.pause();
                 };
               return (0, n.jsxs)("video", {
-                className: A().StoreVideo,
+                className: N().StoreVideo,
                 poster: a,
                 "aria-label": o,
                 autoPlay: !0,
@@ -169,7 +171,7 @@
                     !i &&
                     (0, n.jsx)("source", { src: s, type: "video/webm" }),
                   t &&
-                    !N.TS.IN_CLIENT &&
+                    !G.TS.IN_CLIENT &&
                     (0, n.jsx)("source", { src: t, type: "video/mp4" }),
                 ],
               });
@@ -178,47 +180,47 @@
               const s = e[0]?.alt_text,
                 t = e[0]?.url;
               return (0, n.jsx)("img", {
-                className: A().StoreImage,
+                className: N().StoreImage,
                 src: t,
                 alt: s,
               });
             }
           }
           t = a.replace("%s", e);
-        } else t = t.replace(v.qR, w()).replace("http://", "https://");
+        } else t = t.replace(w.qR, b()).replace("http://", "https://");
         return s
-          ? (0, n.jsx)(b.i, { className: A().StoreImage, src: t })
+          ? (0, n.jsx)(A.i, { className: N().StoreImage, src: t })
           : (0, n.jsx)("img", {
-              className: A().StoreImage,
+              className: N().StoreImage,
               src: t,
-              alt: (0, P.we)("#EventEditor_InsertImage_URL"),
+              alt: (0, I.we)("#EventEditor_InsertImage_URL"),
             });
       }
-      var C = t(52038),
-        L = t(29298),
-        k = t.n(L),
-        y = t(39777),
-        U = t(35380);
-      function W(e) {
+      var k = t(52038),
+        y = t(29298),
+        U = t.n(y),
+        W = t(39777),
+        $ = t(35380);
+      function O(e) {
         const { season_pass: s } = e;
         return s && s.milestones && 0 != s.milestones.length
-          ? (0, n.jsx)(S.Ay, {
+          ? (0, n.jsx)(g.Ay, {
               feature: "seasonpassproductpage",
               children: (0, n.jsxs)("div", {
                 className:
                   "game_area_description overflow_allowed season_pass_area",
                 children: [
                   (0, n.jsx)("h2", {
-                    children: (0, P.we)("#SeasonPass_Header"),
+                    children: (0, I.we)("#SeasonPass_Header"),
                   }),
                   (0, n.jsx)("p", {
-                    children: (0, P.oW)("#SeasonPass_Incomplete_Desc"),
+                    children: (0, I.oW)("#SeasonPass_Incomplete_Desc"),
                   }),
                   (0, n.jsx)("p", {
-                    children: (0, P.oW)(
+                    children: (0, I.oW)(
                       "#SeasonPass_Incomplete_Desc2",
                       (0, n.jsx)("a", {
-                        href: `${a.TS.STORE_BASE_URL}account/emailoptout`,
+                        href: `${o.TS.STORE_BASE_URL}account/emailoptout`,
                       }),
                     ),
                   }),
@@ -235,7 +237,7 @@
                     )
                     .map((e) =>
                       (0, n.jsx)(
-                        $,
+                        Z,
                         { baseGameAppID: s.appid, milestone: e },
                         "ms_" + e.milestone_id,
                       ),
@@ -245,66 +247,66 @@
             })
           : null;
       }
-      function $(e) {
+      function Z(e) {
         const { milestone: s, baseGameAppID: t } = e,
           a = s.milestone_desc?.length > 0;
         return (0, n.jsxs)("div", {
-          className: k().SeasonPass,
+          className: U().SeasonPass,
           children: [
             (0, n.jsxs)("div", {
-              className: (0, C.A)(k().Title, Boolean(s.shipped) && k().Shipped),
+              className: (0, k.A)(U().Title, Boolean(s.shipped) && U().Shipped),
               children: [
                 (0, n.jsxs)("span", {
                   children: [
                     Boolean(s.shipped) && "✓",
                     " ",
-                    P.A0.GetTokenWithFallback(s.title),
+                    I.A0.GetTokenWithFallback(s.title),
                   ],
                 }),
                 (0, n.jsx)("div", {
-                  className: k().DateAndControl,
-                  children: (0, n.jsx)(Z, { milestone: s }),
+                  className: U().DateAndControl,
+                  children: (0, n.jsx)(X, { milestone: s }),
                 }),
               ],
             }),
-            a && (0, n.jsx)(O, { milestone: s, baseGameAppID: t }),
+            a && (0, n.jsx)(F, { milestone: s, baseGameAppID: t }),
           ],
         });
       }
-      function O(e) {
+      function F(e) {
         const { milestone: s, baseGameAppID: t } = e,
-          a = P.A0.GetTokenWithFallback(s.milestone_desc),
+          a = I.A0.GetTokenWithFallback(s.milestone_desc),
           o = s.appid || s.coming_soon_appid;
         return (0, n.jsxs)(n.Fragment, {
           children: [
-            Boolean(o) && (0, n.jsx)(x, { appid: o }),
+            Boolean(o) && (0, n.jsx)(S, { appid: o }),
             (0, n.jsxs)("div", {
-              className: k().Description,
+              className: U().Description,
               children: [
-                (0, n.jsx)(E, { text: a }),
+                (0, n.jsx)(C, { text: a }),
                 Boolean(s.shipped) &&
-                  (0, n.jsx)(q, { milestone: s, baseGameAppID: t }),
+                  (0, n.jsx)(Y, { milestone: s, baseGameAppID: t }),
               ],
             }),
           ],
         });
       }
-      function Z(e) {
+      function X(e) {
         const { milestone: s } = e;
-        if (s.shipped) return (0, n.jsx)(F, { milestone: s });
+        if (s.shipped) return (0, n.jsx)(q, { milestone: s });
         const t = s.dates[0].rtime,
           a = s.dates.filter((e, s) => 0 == s || e.rtime < t);
         return (0, n.jsx)("div", {
-          className: k().Upcoming,
-          children: (0, P.PP)(
+          className: U().Upcoming,
+          children: (0, I.PP)(
             "#SeasonPass_Release_Date",
             (0, n.jsx)("br", {}),
             [...a].reverse().map((e, s) => {
-              const t = (0, c.M)(e.coming_soon_display_type, e.rtime, null, !0);
+              const t = (0, p.M)(e.coming_soon_display_type, e.rtime, null, !0);
               return (0, n.jsx)(
                 "div",
                 {
-                  className: s + 1 < a.length ? k().Strike : void 0,
+                  className: s + 1 < a.length ? U().Strike : void 0,
                   children: t,
                 },
                 "dd" + e.rtime + e.coming_soon_display_type,
@@ -313,77 +315,77 @@
           ),
         });
       }
-      function F(e) {
+      function q(e) {
         const { milestone: s } = e,
-          t = (0, U.$5)(s.appid),
-          { data: a } = (0, y.by)(t),
+          t = (0, $.$5)(s.appid),
+          { data: a } = (0, W.by)(t),
           o = a?.steam_release_date || s.rtime_complete;
         return (0, n.jsx)("div", {
-          className: k().Shipped,
-          children: (0, P.PP)(
+          className: U().Shipped,
+          children: (0, I.PP)(
             "#SeasonPass_Released_Date",
             (0, n.jsx)("br", {}),
-            (0, P.TW)(o),
+            (0, I.TW)(o),
           ),
         });
       }
-      const X = {};
-      function q(e) {
+      const V = {};
+      function Y(e) {
         const { milestone: s, baseGameAppID: t } = e;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)("div", {
-              className: k().Status,
-              children: (0, P.PP)(
+              className: U().Status,
+              children: (0, I.PP)(
                 s.appid ? "#SeasonPass_DLC_Status" : "#SeasonPass_Event_Status",
               ),
             }),
-            s.appid && (0, n.jsx)(V, { milestone: s }),
+            s.appid && (0, n.jsx)(H, { milestone: s }),
             Boolean(s.appid && s.event_gid) &&
-              (0, n.jsx)("span", { className: k().Padding }),
+              (0, n.jsx)("span", { className: U().Padding }),
             Boolean(s.event_gid) &&
-              (0, n.jsx)(Y, { milestone: s, baseGameAppID: t }),
+              (0, n.jsx)(M, { milestone: s, baseGameAppID: t }),
           ],
         });
       }
-      function V(e) {
+      function H(e) {
         const { milestone: s } = e,
-          [t] = (0, l.t7)(s.appid, X);
+          [t] = (0, c.t7)(s.appid, V);
         return (0, n.jsx)("a", {
-          href: t?.GetStorePageURL() || `${a.TS.STORE_BASE_URL}app/${s.appid}`,
-          children: (0, P.we)("#SeasonPass_ShowStore"),
+          href: t?.GetStorePageURL() || `${o.TS.STORE_BASE_URL}app/${s.appid}`,
+          children: (0, I.we)("#SeasonPass_ShowStore"),
         });
       }
-      function Y(e) {
+      function M(e) {
         const { milestone: s, baseGameAppID: t } = e,
-          [l, c] = (0, o.useState)(!1),
-          d = (0, i.RR)(s.event_gid);
-        return d
+          [c, p] = (0, i.useState)(!1),
+          m = (0, r.RR)(s.event_gid);
+        return m
           ? (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsx)("a", {
-                  href: `${a.TS.STORE_BASE_URL}news/app/${t}/view/${s.event_gid}`,
+                  href: `${o.TS.STORE_BASE_URL}news/app/${t}/view/${s.event_gid}`,
                   onClick: (e) => {
-                    e.preventDefault(), e.stopPropagation(), c(!0);
+                    e.preventDefault(), e.stopPropagation(), p(!0);
                   },
-                  children: (0, P.we)("#SeasonPass_ReadEvent"),
+                  children: (0, I.we)("#SeasonPass_ReadEvent"),
                 }),
-                Boolean(l) &&
-                  (0, n.jsx)(p.N, {
+                Boolean(c) &&
+                  (0, n.jsx)(d.N, {
                     appid: t,
-                    eventModel: d,
-                    announcementGID: d.AnnouncementGID,
-                    closeModal: () => c(!1),
-                    partnerEventStore: r.O3,
+                    eventModel: m,
+                    announcementGID: m.AnnouncementGID,
+                    closeModal: () => p(!1),
+                    partnerEventStore: l.O3,
                     bShowOnlyInitialEvent: !0,
                     showAppHeader: !0,
-                    trackingLocation: 3,
+                    trackingLocation: a.Tc.j$,
                   }),
               ],
             })
           : (0, n.jsx)("a", {
-              href: `${a.TS.STORE_BASE_URL}news/app/${t}/view/${s.event_gid}`,
-              children: (0, P.we)("#SeasonPass_ReadEvent"),
+              href: `${o.TS.STORE_BASE_URL}news/app/${t}/view/${s.event_gid}`,
+              children: (0, I.we)("#SeasonPass_ReadEvent"),
             });
       }
     },

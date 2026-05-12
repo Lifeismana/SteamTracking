@@ -11,7 +11,10 @@
         _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3017,6 +3020,11 @@
                     _: !0,
                     _: !0,
                   },
+                  products_missing_user_rights: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -5751,7 +5759,7 @@
               _.set_gid_clan_event(_),
               _.Body().add_request_list(_);
             const _ = await _.GetPromotionPlanForSalePages(_, _);
-            if (1 != _.GetEResult())
+            if (_.GetEResult() != _._)
               throw new Error(
                 `Error from PromotionPlanBySalePage: ${_.GetEResult()}`,
               );
@@ -5775,7 +5783,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new (class {
         async DeleteForumTopic(_, _, _, _, _) {
@@ -5793,7 +5800,7 @@
             withCredentials: !0,
             cancelToken: _.token,
           });
-          if (1 != _.data.success) throw _.data;
+          if (_.data.success != _._) throw _.data;
           return _.data;
         }
       })();
@@ -5863,7 +5870,10 @@
             _ = _.AnnouncementGID;
           (this.m_forumTopicGID = _.forumTopicGID),
             (this.m_clanSteamID = _),
-            !this.props.eventModel.bOldAnnouncement && _ && "0" != _ && _ != _._
+            !this.props.eventModel.bOldAnnouncement &&
+            _ &&
+            "0" != _ &&
+            _ != _.kFb
               ? (this.SetToWaiting(),
                 _.DeleteClanEvent(_, _)
                   .then(this.OnDeleteEventSuccessCallback)
@@ -5890,7 +5900,7 @@
             _ = new Array();
           switch (this.state.dialogState) {
             case "confirmation":
-              let _ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE)),
+              let _ = _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE)),
                 _ = _.BIsVisibleEvent()
                   ? "#EventDisplay_AreYouSure_Visible"
                   : "#EventDisplay_AreYouSure";
@@ -6230,7 +6240,7 @@
             _ = "store" == _,
             _ = _._.is_support && (0, _._)(_.clanSteamID, !0),
             _ = _ && !_,
-            _ = 36 == _.GetEventType(),
+            _ = _.GetEventType() == _.ajI,
             _ = _ && _?.GetLinkedEventGID() == _.GID,
             _ =
               (_ == _._.k_EEventStateVisible ||
@@ -6493,7 +6503,7 @@
                           const _ = new FormData();
                           _.append("sessionid", _._.SESSIONID),
                             _.append("clan_accountid", "" + _._.CLANACCOUNTID),
-                            _.append("event_id", "15");
+                            _.append("event_id", "" + _._._);
                           const _ = await _().post(
                             `${_._.STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards`,
                             _,

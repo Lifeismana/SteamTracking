@@ -151,12 +151,20 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3;
       function _(_, _, _, _) {
         const _ = (0, _.useRef)(void 0),
           _ = (0, _.useRef)(void 0),
@@ -212,33 +220,33 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                    _?.token.reason || _.current !== _ || _(_ == _._), _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+          return [null, _];
+        if (!1 === _) return [void 0, _];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
+        return _ ? [_, _] : [null, _];
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
         const [_, _] = _(_, _, _);
         let _;
-        1 != _?.GetStoreItemType() ||
+        _?.GetStoreItemType() != _._._ ||
           _.GetAssets()?.GetHeaderURL() ||
           1 != _?.GetIncludedAppIDs().length ||
           (_ = _.GetIncludedAppIDs()[0]);
@@ -305,7 +313,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return 2;
+          return _;
         if (
           !_.every(
             (_) =>
@@ -313,15 +321,15 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return 1;
+          return _;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? 3
-          : 2;
+          ? _
+          : _;
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _() {
         _.useEffect(
@@ -342,59 +350,60 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
           case "discord_server":
-            return 5;
+            return _._._;
           case "youtube":
-            return 1;
+            return _._._;
           case "facebook":
-            return 2;
+            return _._._;
           case "twitter":
-            return 3;
+            return _._._;
           case "twitch":
-            return 4;
+            return _._._;
           case "reddit":
-            return 10;
+            return _._._;
           case "instagram":
-            return 11;
+            return _._._;
           case "tumblr":
-            return 12;
+            return _._._;
           case "qq":
-            return 6;
+            return _._._;
           case "qqlink":
-            return 18;
+            return _._._;
           case "qqchannel":
-            return 23;
+            return _._._;
           case "bilibili":
-            return 8;
+            return _._._;
           case "weibo":
-            return 9;
+            return _._._;
           case "wechat":
-            return 17;
+            return _._._;
           case "tieba":
-            return 13;
+            return _._._;
           case "tiktok":
-            return 14;
+            return _._._;
           case "douyin":
-            return 19;
+            return _._._;
           case "bluesky":
-            return 20;
+            return _._._;
           case "mastodon":
-            return 21;
+            return _._._;
           case "threads":
-            return 22;
+            return _._._;
           case "vk":
-            return 7;
+            return _._._;
           case "telegram":
-            return 15;
+            return _._._;
           case "linkedin":
-            return 16;
+            return _._._;
           case "rednote":
-            return 24;
+            return _._._;
         }
-        return 0;
+        return _._._;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -451,7 +460,7 @@
                     link_type: _(_.type),
                   };
                   return (
-                    6 == _.link_type || 17 == _.link_type
+                    _.link_type == _._._ || _.link_type == _._._
                       ? (_.text = _.link)
                       : (_.url = _.link),
                     _
@@ -484,14 +493,14 @@
             })
           : null;
       }
-      const _ = [6, 23, 18, 8, 9, 19, 24];
+      const _ = [_._._, _._._, _._._, _._._, _._._, _._._, _._._];
       function _(_) {
         const { _: _, rgSocialMedia: _, className: _ } = _,
           _ = (0, _._)();
         return (0, _.jsx)("div", {
           className: (0, _._)(_().AppSocialLinks, _),
           children: __webpack_require__
-            .filter((_) => !_ || _.includes(_.link_type || 0))
+            .filter((_) => !_ || _.includes(_.link_type || _._._))
             .map((_) =>
               _.url
                 ? (0, _.jsx)(
@@ -548,105 +557,105 @@
       function _(_) {
         const { social: _ } = _;
         return (0, _.jsx)(_, {
-          linkType: _.link_type || 0,
+          linkType: _.link_type || _._._,
           className: _().AppSocialLinkIcon,
         });
       }
       function _(_) {
         const { linkType: _, ..._ } = _;
         switch (_) {
-          case 1:
+          case _._._:
             return (0, _.jsx)(_.agV, {
               ..._,
             });
-          case 2:
+          case _._._:
             return (0, _.jsx)(_.ZnA, {
               ..._,
             });
-          case 3:
+          case _._._:
             return (0, _.jsx)(_._, {
               ..._,
             });
-          case 4:
+          case _._._:
             return (0, _.jsx)(_.ofN, {
               ..._,
             });
-          case 5:
+          case _._._:
             return (0, _.jsx)(_.Bki, {
               ..._,
             });
-          case 6:
-          case 18:
-          case 23:
+          case _._._:
+          case _._._:
+          case _._._:
             return (0, _.jsx)(_.$vK, {
               ..._,
             });
-          case 7:
+          case _._._:
             return (0, _.jsx)(_.OSJ, {
               ..._,
             });
-          case 8:
+          case _._._:
             return (0, _.jsx)(_.nm_, {
               ..._,
             });
-          case 9:
+          case _._._:
             return (0, _.jsx)(_.tIO, {
               ..._,
             });
-          case 10:
+          case _._._:
             return (0, _.jsx)(_.Vt2, {
               ..._,
             });
-          case 11:
+          case _._._:
             return (0, _.jsx)(_.Vgk, {
               ..._,
             });
-          case 12:
+          case _._._:
             return (0, _.jsx)(_.VSd, {
               ..._,
             });
-          case 13:
+          case _._._:
             return (0, _.jsx)(_.ccb, {
               ..._,
             });
-          case 14:
+          case _._._:
             return (0, _.jsx)(_.rNt, {
               ..._,
             });
-          case 15:
+          case _._._:
             return (0, _.jsx)(_.g$j, {
               ..._,
             });
-          case 16:
+          case _._._:
             return (0, _.jsx)(_.BQz, {
               ..._,
             });
-          case 17:
+          case _._._:
             return (0, _.jsx)(_.jdP, {
               ..._,
             });
-          case 19:
+          case _._._:
             return (0, _.jsx)(_.bKN, {
               ..._,
             });
-          case 20:
+          case _._._:
             return (0, _.jsx)(_.sDU, {
               ..._,
             });
-          case 21:
+          case _._._:
             return (0, _.jsx)(_.MbF, {
               ..._,
             });
-          case 22:
+          case _._._:
             return (0, _.jsx)(_.emH, {
               ..._,
             });
-          case 24:
+          case _._._:
             return (0, _.jsx)(_.Yoo, {
               ..._,
             });
-          case 25:
-          case 0:
+          case _._._:
+          case _._._:
             return "invalid social media type";
         }
       }

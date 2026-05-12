@@ -15,6 +15,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return (
@@ -53,7 +54,7 @@
           children: _
             ? (0, _.jsx)(_._, {})
             : (0, _.jsx)(_._, {
-                platform: 2,
+                platform: _._._,
                 transport: _,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail

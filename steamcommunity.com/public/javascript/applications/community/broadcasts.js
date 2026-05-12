@@ -1242,7 +1242,7 @@
                 Boolean(r) &&
                   (0, a.jsx)("div", {
                     className: F.RelatedEvents,
-                    children: (0, a.jsx)(D.rN, {
+                    children: (0, a.jsx)(D.r, {
                       clanAccountID: r.clanAccountID,
                       trackingLocation: b.Tc.My,
                       partnerEventStore: _e.Av,
@@ -1369,7 +1369,7 @@
             ],
           });
         });
-      var je = s(60746);
+      var je = s(82429);
       let ge = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
       function Be(e) {
         const [t, s] = n.useState(!0);

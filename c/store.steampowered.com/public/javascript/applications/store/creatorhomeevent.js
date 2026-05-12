@@ -447,8 +447,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], 31, !1);
+        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
+        m_rgHasData = (0, _._)([], _.bP9, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new _._();
         GetCallback() {
@@ -787,7 +787,7 @@
               (0, _.jsx)(
                 "option",
                 {
-                  value: -1,
+                  value: _.xPp,
                   children: (0, _._)("#language_selection_none"),
                 },
                 "langpicker_unset",
@@ -797,7 +797,7 @@
           const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
           for (const _ of _._.GetLanguageListForRealms(_)) {
             if (_ && !_(_)) continue;
-            const _ = (0, _._)(_),
+            const _ = (0, _.LgB)(_),
               _ = (0, _._)("#Language_" + _),
               _ = !(!_ || !_(_));
             _.push({
@@ -1091,7 +1091,7 @@
           });
         let _;
         if (_.localized_background_art) {
-          const _ = (0, _._)(_),
+          const _ = (0, _.LgB)(_),
             _ =
               _ in _.localized_background_art
                 ? _
@@ -1353,10 +1353,10 @@
             _.sub_menu_url,
             _(_.sub_menu_url, _),
             _.localized_sub_menu_name?.[_] ||
-              _.localized_sub_menu_name?.[0] ||
+              _.localized_sub_menu_name?.[_.Bhc] ||
               "unknown",
             _.sub_menu_icon?.localized_media?.[_]?.image ||
-              _.sub_menu_icon?.localized_media?.[0]?.image ||
+              _.sub_menu_icon?.localized_media?.[_.Bhc]?.image ||
               void 0,
           ]);
         let _ = _.label_color || "#DBDFE2";
@@ -1691,6 +1691,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         _.preventDefault();
@@ -1986,8 +1987,8 @@
                 const _ = [],
                   _ = new Array();
                 for (const _ of _) {
-                  if (25 == _) continue;
-                  const _ = (0, _._)("#Language_" + (0, _._)(_));
+                  if (_ == _.X51) continue;
+                  const _ = (0, _._)("#Language_" + (0, _.LgB)(_));
                   __webpack_require__.push({
                     label: _,
                     data: _,
@@ -2106,7 +2107,7 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType: _.forceFileType || 3,
+                          fileType: _.forceFileType || _._._,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -2180,7 +2181,8 @@
           }),
         });
       }
-      var _;
+      var _,
+        _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
           (_[(_.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
@@ -2308,7 +2310,7 @@
             let _ = _._.InitFromClanID(_.clanAccountID);
             _._.DeleteClanImage(_, _)
               .then((_) => {
-                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
+                _.success != _._ && _((0, _._)(_).strErrorMsg), _(!1);
               })
               .catch((_) => {
                 _((0, _._)(_).strErrorMsg), _(!1);
@@ -2454,7 +2456,7 @@
               className: _,
               children: (0, _.jsx)("source", {
                 src: _.url,
-                type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
+                type: "video/" + (_.file_type == _._._ ? "mp4" : "webm"),
               }),
             })
           : null;
@@ -2694,7 +2696,7 @@
             for (const _ of _) {
               const _ = __webpack_require__(_);
               if (_) {
-                const _ = (0, _._)(_),
+                const _ = (0, _.LgB)(_),
                   _ = (0, _._)("#Language_" + _);
                 _.push({
                   lang: _,
@@ -2749,7 +2751,7 @@
                 strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
                 closeModal: _,
                 onOK: () => {
-                  for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
+                  for (let _ = 0; _ < _.bP9; _++) _ && _ && _(_) && _(_);
                 },
               }),
             }),
@@ -2788,7 +2790,7 @@
           _: _.strLang,
           className: _().LanguageContainer,
           onClick: (_) => {
-            let _ = (0, _._)(_.currentTarget._);
+            let _ = (0, _.sfN)(_.currentTarget._);
             _(_);
           },
           children: [
@@ -2888,7 +2890,7 @@
                   strTitle: (0, _._)("#selectimage_remove_image"),
                   strDescription: (0, _._)(
                     "#selectimage_remove_details",
-                    (0, _._)("#Language_" + (0, _._)(_.lang)),
+                    (0, _._)("#Language_" + (0, _.LgB)(_.lang)),
                   ),
                   onOK: () => {
                     _(_.lang);
@@ -2920,7 +2922,7 @@
             },
             [_, _],
           ),
-          _ = _ || (0, _._)(_._.LANGUAGE),
+          _ = _ || (0, _.sfN)(_._.LANGUAGE),
           [_, _, _, _] = (0, _._)(() => [
             _.GetSummaryWithFallback(_),
             _.GetNameWithFallback(_),
@@ -2931,7 +2933,7 @@
         (_ =
           void 0 !== _
             ? [_]
-            : 2434320 == _.appid || 2 == _._.EUNIVERSE
+            : 2434320 == _.appid || _._.EUNIVERSE == _._
               ? _
                 ? _.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
@@ -3289,7 +3291,7 @@
                 ],
               }),
             }),
-            12 != _ &&
+            _ != _.Fwr &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)("div", {
@@ -3400,7 +3402,8 @@
           });
       function _(_, _) {
         let _ = 0;
-        for (let _ = 0; _ < 31; ++_) (_(_, _)?.length ?? 0) > 0 && (_ += 1);
+        for (let _ = _.Bhc; _ < _.bP9; ++_)
+          (_(_, _)?.length ?? 0) > 0 && (_ += 1);
         return _;
       }
       var _;
@@ -3424,7 +3427,7 @@
             _?.GetEventType(),
             _?.BHasTag("vo_marketing_message"),
           ]),
-          _ = 36 == _;
+          _ = _ == _.ajI;
         let _ = null;
         _ === _.k_Required
           ? (_ = (0, _.jsx)("span", {
@@ -4014,7 +4017,7 @@
           return (
             _.forEach((_) => {
               const { clanImage: _, lang: _ } = _;
-              let _ = (0, _._)("#Language_" + (0, _._)(_));
+              let _ = (0, _._)("#Language_" + (0, _.LgB)(_));
               _.push(
                 (0, _.jsxs)(
                   "div",
@@ -4090,7 +4093,7 @@
             _(!0);
         }, [_, _, _]);
         const _ = (0, _.useCallback)(
-            (_, _, _ = 0) => {
+            (_, _, _ = _.Bhc) => {
               const _ = _._.InitFromClanID(_),
                 _ = _._.GetHashAndExt(_ ?? null);
               if (0 == _._.GetAllLocalizedGroupImages().length) {
@@ -4118,7 +4121,7 @@
           bOKDisabled: _ > 0,
           onOK: () => {
             const _ = _._.GetLocalizedImageGroupForEdit();
-            for (let _ = 0; _ < 31; ++_) {
+            for (let _ = _.Bhc; _ < _.bP9; ++_) {
               const _ = _?.localized_images[_];
               if (_) {
                 const _ = __webpack_require__.split("/").pop() || "";
@@ -4127,7 +4130,7 @@
                   {
                     image_hash: _(_),
                     clanAccountID: _,
-                    file_type: (0, _._)(_) ?? 0,
+                    file_type: (0, _._)(_) ?? _._._,
                     imageid: 0,
                   },
                   _,
@@ -4242,10 +4245,10 @@
           ]),
           [_] = (0, _.useState)(() =>
             (function (_) {
-              const _ = _._([], 31, null);
+              const _ = _._([], _.bP9, null);
               for (const _ in _) {
-                const _ = (0, _._)(_);
-                -1 != _ && (_[_] = _[_]);
+                const _ = (0, _.sfN)(_);
+                _ != _.xPp && (_[_] = _[_]);
               }
               return _;
             })(_.localized_background_art ?? {}),
@@ -4270,7 +4273,7 @@
                 },
                 _ = _._.GetHashAndExt(_);
               return (
-                _ ? (_[(0, _._)(_)] = _) : delete _[(0, _._)(_)],
+                _ ? (_[(0, _.LgB)(_)] = _) : delete _[(0, _.LgB)(_)],
                 {
                   ..._,
                   localized_background_art: _,
@@ -4695,7 +4698,7 @@
         if (
           (_?.nUniqueIDNextSaleSection &&
             (_ = (0, _._)(
-              2,
+              _._,
               _.GetSaleSectionByID(_?.nUniqueIDNextSaleSection),
               _,
               _,
@@ -4705,7 +4708,7 @@
         ) {
           const _ = _[_.length - 1];
           _ = (0, _._)(
-            2,
+            _._,
             _?.GetSaleSectionByID(_),
             _,
             _,
@@ -4752,7 +4755,7 @@
                       "li",
                       {
                         children: (0, _._)(
-                          3,
+                          _._,
                           _.GetSaleSectionByID(_),
                           _,
                           _,
@@ -5024,7 +5027,7 @@
       function _(_) {
         const { rgPresenters: _ } = _;
         if (!_ || 0 == _.length) return null;
-        const _ = (0, _._)(_._.LANGUAGE);
+        const _ = (0, _.sfN)(_._.LANGUAGE);
         return 1 == _.length
           ? (0, _.jsx)("div", {
               className: (0, _._)(
@@ -5208,14 +5211,14 @@
                 ? _._.EPreviewMode_EditBackground
                 : _._.EPreviewMode_Enabled
               : _._.EPreviewMode_Disabled,
-            _ = _ || 36 != __webpack_require__.GetEventType(),
+            _ = _ || __webpack_require__.GetEventType() != _.ajI,
             _ = (0, _._)(_.clanSteamID);
           return (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
               eventModel: _,
               language: _,
               children: (0, _.jsx)(_._, {
-                location: _ ? 2 : 0,
+                location: _ ? _._ : _._,
                 children: (0, _.jsxs)(_, {
                   event: _,
                   language: _,
@@ -5727,7 +5730,7 @@
         const { clanAccountID: _, gidEvent: _ } = _,
           [_, _] = _.useState(!0);
         let { eventModel: _, bLoading: _ } = (0, _._)(_, _);
-        const _ = (0, _._)(_._.LANGUAGE),
+        const _ = (0, _.sfN)(_._.LANGUAGE),
           [_] = (0, _._)("livepreview");
         return (
           _ && (_ = (0, _._)(_, "creatorhome_fake")),

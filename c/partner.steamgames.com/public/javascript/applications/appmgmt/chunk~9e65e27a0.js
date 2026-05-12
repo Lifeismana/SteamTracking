@@ -227,6 +227,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       async function _() {
         const _ =
@@ -242,7 +243,7 @@
             params: _,
             withCredentials: !0,
           });
-          if (200 === _.status && 1 === _.data?.success) {
+          if (200 === _.status && _.data?.success === _._) {
             const _ = {
               rgCategories: [],
               bHasUnpublishedChanges: !1,
@@ -386,7 +387,7 @@
           const _ = await _().post(_, _, {
             withCredentials: !0,
           });
-          if (200 === _.status && 1 === _.data?.success)
+          if (200 === _.status && _.data?.success === _._)
             return _.Get().ClearDirty(), null;
           _ = (0, _._)(_);
         } catch (_) {
@@ -407,7 +408,7 @@
             params: _,
             withCredentials: !0,
           });
-          if (200 !== _.status || 1 !== _.data?.success) return (0, _._)(_);
+          if (200 !== _.status || _.data?.success !== _._) return (0, _._)(_);
         } catch (_) {
           return (0, _._)(_);
         }
@@ -468,7 +469,7 @@
             const _ = await _().get(_, {
               params: _,
             });
-            if (200 === _.status && 1 === _.data?.success)
+            if (200 === _.status && _.data?.success === _._)
               return (
                 (this.m_rgTags = _.data.tags),
                 (this.m_rgCategories = _.data.categories),

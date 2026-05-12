@@ -226,6 +226,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -243,9 +244,9 @@
               _?.version_hash && _.Body().set_have_version_hash(_.version_hash);
             const _ = await _._.GetTagList(_, _);
             let _;
-            if (1 == _.GetEResult())
+            if (_.GetEResult() == _._)
               (_ = _.Body().toObject()), _ && _.StoreObject(_, _);
-            else if (29 == _.GetEResult()) _ = _ || void 0;
+            else if (_.GetEResult() == _._) _ = _ || void 0;
             else {
               if (!_) throw _.GetErrorMessage();
               console.warn(

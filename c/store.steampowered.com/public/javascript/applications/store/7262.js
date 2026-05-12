@@ -103,6 +103,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -138,7 +139,7 @@
                 className: _().CapsuleImage,
                 alt: _.name,
               }),
-              Boolean(4 == _.type) &&
+              Boolean(_.type == _._._) &&
                 (0, _.jsx)("img", {
                   className: _().CornerSash,
                   src: `${_._.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
@@ -361,6 +362,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _ = !1) {
         const { data: _ } = (0, _._)(_),
@@ -383,7 +385,7 @@
             }
           })(_, _) &&
           _.item_type &&
-          [1, 2].includes(_.item_type) &&
+          [_._._, _._._].includes(_.item_type) &&
           (_ = {
             appid: _.included_appids[0],
           });
@@ -524,9 +526,10 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return 2 == _ ? "bundle" : 1 == _ ? "sub" : "app";
+        return _ == _._._ ? "bundle" : _ == _._._ ? "sub" : (_._._, "app");
       }
       const _ = (_) => {
         const { appid: _ } = _,
@@ -552,6 +555,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { bAllowOutsideOfDeck: _ } = _;
@@ -566,26 +571,26 @@
           _ = (0, _._)(_),
           [_, _] = (0, _._)();
         let _ = "unknown";
-        if (2 == _)
+        if (_ == _._)
           switch (_.data?.steam_os_compat_category) {
-            case 2:
+            case _._:
               _ = "steamoscompatible";
               break;
-            case 1:
+            case _._:
               _ = "steamosunsupported";
               break;
-            case 0:
+            case _._:
               _ = "steamosunknown";
           }
         else
           switch (_.data?.steam_deck_compat_category) {
-            case 3:
+            case _._:
               _ = "verified";
               break;
-            case 2:
+            case _._:
               _ = "playable";
               break;
-            case 1:
+            case _._:
               _ = "unsupported";
           }
         return (0, _.jsx)("div", {

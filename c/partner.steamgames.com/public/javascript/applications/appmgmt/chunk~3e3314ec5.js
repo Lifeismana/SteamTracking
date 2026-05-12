@@ -208,6 +208,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         if (!_)
@@ -221,14 +223,14 @@
             _ = _;
             break;
           }
-        const _ = _ && _ < _._.k_ERegionCodeMax;
-        if ((_ == _._.k_ECurrencyCodeUSD && !_) || !_)
+        const _ = _ && _ < _._;
+        if ((_ == _._ && !_) || !_)
           return {
             nSuggestedPriceInCents: null,
             nGuidelinesLevel: null,
           };
         const _ = _.GetRecommendPrice(_, _, _, _),
-          _ = _.GetRecommendPrice(_, _._.k_ECurrencyCodeUSD, void 0, _);
+          _ = _.GetRecommendPrice(_, _._, void 0, _);
         if (
           ((0, _._)(
             _,
@@ -616,7 +618,7 @@
             rtSubmitted: Math.floor(Date.now() / 1e3),
             submitterID: _._.accountid,
             prices: {},
-            eState: 1,
+            eState: _._,
             bPartnerWillPublish: _,
           };
           for (const _ of this.m_rgKnownPriceKeys)
@@ -647,10 +649,10 @@
             });
             if (
               200 == _?.status &&
-              1 == _.data?.success &&
-              0 != _.data.eState
+              _.data?.success == _._ &&
+              _.data.eState != _._
             ) {
-              if (3 == _.data.eState) {
+              if (_.data.eState == _._) {
                 this.m_mapPriceProposals.delete(_);
                 for (const _ of this.m_rgKnownPriceKeys)
                   this.m_mapPackagePrice.has(_) ||
@@ -673,15 +675,15 @@
               _,
             ),
             _?.response?.data ?? {
-              success: 2,
+              success: _._,
             }
           );
         }
         async PublishApprovedProposal(_, _, _ = 0) {
           const _ = this.m_mapPriceProposals.get(_);
-          if (4 != _?.eState || !_?.proposalKey)
+          if (_?.eState != _._ || !_?.proposalKey)
             return {
-              success: 8,
+              success: _._,
             };
           const _ = (0, _._)("publisherid", "application_config"),
             _ =
@@ -700,7 +702,7 @@
               cancelToken: _?.token,
               timeout: _,
             });
-            if (200 == _?.status && 1 == _.data?.success) {
+            if (200 == _?.status && _.data?.success == _._) {
               this.m_mapPriceProposals.delete(_);
               for (const _ of this.m_rgKnownPriceKeys)
                 this.m_mapPackagePrice.get(_).set(_, _.prices[_]),
@@ -724,7 +726,7 @@
               _,
             ),
             _?.response?.data ?? {
-              success: 2,
+              success: _._,
             }
           );
         }
@@ -732,7 +734,7 @@
           const _ = this.m_mapPriceProposals.get(_);
           if (!_?.proposalKey)
             return {
-              success: 8,
+              success: _._,
             };
           const _ = (0, _._)("publisherid", "application_config"),
             _ =
@@ -750,7 +752,7 @@
               withCredentials: !0,
               cancelToken: _?.token,
             });
-            if (200 == _?.status && 1 == _.data?.success) {
+            if (200 == _?.status && _.data?.success == _._) {
               this.m_mapPriceProposals.delete(_);
               for (const _ of this.m_rgKnownPriceKeys)
                 this.GetPriceGridCellCallbackList(_, _).Dispatch(
@@ -773,7 +775,7 @@
               _,
             ),
             _?.response?.data ?? {
-              success: 2,
+              success: _._,
             }
           );
         }
@@ -1126,6 +1128,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = (0, _._)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
@@ -1167,12 +1170,12 @@
           return null;
         },
         _ = new Map([
-          [38, (_) => _(_, _)],
-          [39, _],
-          [40, (_) => _(_, _)],
-          [37, _],
-          [9, (_) => _(_, _)],
-          [13, (_) => _(_, _)],
+          [_._, (_) => _(_, _)],
+          [_._, _],
+          [_._, (_) => _(_, _)],
+          [_._, _],
+          [_._, (_) => _(_, _)],
+          [_._, (_) => _(_, _)],
         ]);
       function _(_) {
         const _ = Array.prototype.slice.call(_.children).reverse();
@@ -1185,7 +1188,8 @@
       }
       function _(_) {
         let _ = _.get(_.keyCode);
-        if ((9 === _.keyCode && _.shiftKey && (_ = (_) => _(_, _)), !_)) return;
+        if ((_.keyCode === _._ && _.shiftKey && (_ = (_) => _(_, _)), !_))
+          return;
         var _;
         let _ = _(
           ((_ = _.currentTarget),
@@ -1416,17 +1420,17 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return _._.k_ECurrencyCodeUSD;
+        return _._;
       }
       function _(_) {
         switch (_) {
-          case _._.k_ERegionCodeCIS:
+          case _._:
             return "usd_cis";
-          case _._.k_ERegionCodeSAsia:
+          case _._:
             return "usd_sasia";
-          case _._.k_ERegionCodeLATAM:
+          case _._:
             return "usd_latam";
-          case _._.k_ERegionCodeMENA:
+          case _._:
             return "usd_mena";
           default:
             return "usd_invalid";
@@ -1434,13 +1438,13 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_ERegionCodeCIS:
+          case _._:
             return "CIS";
-          case _._.k_ERegionCodeSAsia:
+          case _._:
             return "SASIA";
-          case _._.k_ERegionCodeLATAM:
+          case _._:
             return "LATAM";
-          case _._.k_ERegionCodeMENA:
+          case _._:
             return "MENA";
           default:
             return "Invalid Region";
@@ -1449,26 +1453,26 @@
       function _(_) {
         switch (_) {
           case "CIS":
-            return _._.k_ERegionCodeCIS;
+            return _._;
           case "SASIA":
-            return _._.k_ERegionCodeSAsia;
+            return _._;
           case "LATAM":
-            return _._.k_ERegionCodeLATAM;
+            return _._;
           case "MENA":
-            return _._.k_ERegionCodeMENA;
+            return _._;
           default:
-            return _._.k_ERegionCodeInvalid;
+            return _._;
         }
       }
       function _(_) {
         switch (_) {
-          case _._.k_ERegionCodeCIS:
+          case _._:
             return "The Commonwealth of Independent Stats";
-          case _._.k_ERegionCodeSAsia:
+          case _._:
             return "South Asia";
-          case _._.k_ERegionCodeLATAM:
+          case _._:
             return "Latin America";
-          case _._.k_ERegionCodeMENA:
+          case _._:
             return "Middle East and North Africa";
           default:
             return "Invalid Region";
@@ -1477,15 +1481,15 @@
       function _(_) {
         switch (_?.toLowerCase()) {
           case "usd_cis":
-            return _._.k_ERegionCodeCIS;
+            return _._;
           case "usd_sasia":
-            return _._.k_ERegionCodeSAsia;
+            return _._;
           case "usd_latam":
-            return _._.k_ERegionCodeLATAM;
+            return _._;
           case "usd_mena":
-            return _._.k_ERegionCodeMENA;
+            return _._;
           default:
-            return _._.k_ERegionCodeInvalid;
+            return _._;
         }
       }
     },
@@ -1498,16 +1502,17 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
-        eConversionMethod: 1,
+        eConversionMethod: _._._,
         setConversionMethod: (_) => {},
         rgAvailableConversionMethods: [],
       });
       function _(_) {
         const { eInitialConversionMethod: _ } = _,
           _ = (0, _._)(),
-          [_, _] = _.useState(_ || 1),
+          [_, _] = _.useState(_ || _._._),
           _ = _.useMemo(() => {
             const _ = _
               ? __webpack_require__.GetAvailableConversionMethods()
@@ -1538,7 +1543,10 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = _._._;
       class _ {
         m_mapUSDPrice = new Map();
         m_mapKeyToGuidePrice = new Map();
@@ -1546,25 +1554,25 @@
         m_setConversionMethod = new Set();
         m_setSupportedCurrencies = new Set();
         m_setSupportedRegions = new Set();
-        GetKey(_, _, _, _ = 1) {
-          return `${_}_${_}_${_ || _._.k_ERegionCodeInvalid}_${_}`;
+        GetKey(_, _, _, _ = _) {
+          return `${_}_${_}_${_ || _._}_${_}`;
         }
         GetAvailableConversionMethods() {
           return Array.from(this.m_setConversionMethod).sort();
         }
         GetAnyPricePoint() {
-          return Array.from(this.m_mapUSDPrice.get(1)?.values() || [])[0];
+          return Array.from(this.m_mapUSDPrice.get(_._._)?.values() || [])[0];
         }
         BIsSupportCurrencyAndOrRegion(_, _) {
           return _
-            ? _ == _._.k_ECurrencyCodeUSD && this.m_setSupportedRegions.has(_)
+            ? _ == _._ && this.m_setSupportedRegions.has(_)
             : this.m_setSupportedCurrencies.has(_);
         }
-        GetRecommendPrice(_, _, _, _ = 1) {
+        GetRecommendPrice(_, _, _, _ = _) {
           const _ = this.GetKey(_, _, _, _);
           return this.m_mapKeyToGuidePrice.get(_);
         }
-        GetScaledRecommendedPrice(_, _, _, _ = 1) {
+        GetScaledRecommendedPrice(_, _, _, _ = _) {
           let _ = -1,
             _ = -1;
           for (const _ of this.m_mapUSDPrice.get(_).keys()) {
@@ -1588,7 +1596,7 @@
         constructor(_) {
           let _ = new Set();
           _.forEach((_) => {
-            const _ = _.convert_method ?? 1;
+            const _ = _.convert_method ?? _;
             this.m_setConversionMethod.add(_),
               this.m_mapUSDPrice.has(_) || this.m_mapUSDPrice.set(_, new Map());
             this.m_mapUSDPrice.get(_).set(_.usd_price, _),
@@ -1597,8 +1605,8 @@
                 const _ = this.GetKey(
                   _.usd_price,
                   _.currency_code,
-                  _._.k_ERegionCodeInvalid,
-                  _.convert_method || 1,
+                  _._,
+                  _.convert_method || _,
                 );
                 this.m_mapKeyToGuidePrice.set(_, _),
                   this.m_setSupportedCurrencies.add(_.currency_code);
@@ -1608,24 +1616,19 @@
                   _.usd_price,
                   _.currency_code,
                   _.region_code,
-                  _.convert_method || 1,
+                  _.convert_method || _,
                 );
                 if (
                   (this.m_mapKeyToGuidePrice.set(_, _),
                   this.m_setSupportedRegions.add(_.region_code),
-                  this.m_setConversionMethod.has(3))
+                  this.m_setConversionMethod.has(_._._))
                 ) {
                   const _ = {
-                      currency_code: _._.k_ECurrencyCodeUSD,
+                      currency_code: _._,
                       price: _.usd_price,
                       region_code: _.region_code,
                     },
-                    _ = this.GetKey(
-                      _.usd_price,
-                      _._.k_ECurrencyCodeUSD,
-                      _.region_code,
-                      3,
-                    );
+                    _ = this.GetKey(_.usd_price, _._, _.region_code, _._._);
                   this.m_mapKeyToGuidePrice.set(_, _);
                 }
               });
@@ -1636,8 +1639,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1672,23 +1673,15 @@
                 ),
                 _)
               ) {
-                for (
-                  let _ = _._.k_ECurrencyCodeUSD;
-                  _ < _._.k_ECurrencyCodeMax;
-                  ++_
-                ) {
+                for (let _ = _._; _ < _._; ++_) {
                   const _ = _.GetRecommendPrice(_, _, void 0, _ ?? _)?.price;
                   if (_ && _ > 0) {
                     const _ = (0, _._)(_);
                     _(_, _, _);
                   }
                 }
-                for (
-                  let _ = _._.k_ERegionCodeCIS;
-                  _ < _._.k_ERegionCodeMax;
-                  ++_
-                ) {
-                  const _ = _._.k_ECurrencyCodeUSD,
+                for (let _ = _._; _ < _._; ++_) {
+                  const _ = _._,
                     _ = _.GetRecommendPrice(_, _, _, _ ?? _)?.price;
                   if (_ && _ > 0) {
                     const _ = (0, _._)(_, _).toUpperCase();
@@ -1705,26 +1698,40 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _._,
         _: () => _,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
         _: () => _,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
-        _: () => _._,
+        _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)(),
-        _ = ((0, _._)(), (0, _._)());
+      const _ = 0,
+        _ = 1,
+        _ = 3,
+        _ = 4;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
     },
   },
 ]);

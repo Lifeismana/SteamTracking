@@ -3,7 +3,7 @@
 (self.webpackChunkHelp = self.webpackChunkHelp || []).push([
   [1574],
   {
-    9041: (e) => {
+    69041: (e) => {
       e.exports = {
         Button: "_0BH1ydyFmSnUvoVK2hIc",
         "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
@@ -19,7 +19,7 @@
         MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
       };
     },
-    3406: (e) => {
+    73406: (e) => {
       e.exports = {
         Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
         LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
@@ -33,10 +33,10 @@
         ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
-    4041: (e) => {
+    44041: (e) => {
       e.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
     },
-    8875: (e) => {
+    68875: (e) => {
       e.exports = {
         Flex: "_3nHL7awgK1Qei1XivGvHMK",
         Direction: "_3JCkAyd9cnB90tRcDLPp4W",
@@ -49,7 +49,7 @@
         Inline: "LOeaKjPDMbdcAB54IFgyX",
       };
     },
-    5180: (e) => {
+    75180: (e) => {
       e.exports = {
         Grid: "_2IVd64AHN6R428cgcPqW7M",
         Display: "_2PUyyAEGuZenuwES7VJvQO",
@@ -67,7 +67,7 @@
         Gap: "c0C2uHpDLCegllhH1rM3M",
       };
     },
-    8122: (e) => {
+    88122: (e) => {
       e.exports = {
         "m-0": "_3NvasCX7YWBZpC8aibkm0E",
         "m-1": "_37cUiZ5UzC1qHmlFJaMIAr",
@@ -286,7 +286,7 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
-    9049: (e) => {
+    39049: (e) => {
       e.exports = {
         Heading: "_12ldq1_X5RuLWAAs_ODwt7",
         "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
@@ -300,7 +300,7 @@
         "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
       };
     },
-    5274: (e) => {
+    65274: (e) => {
       e.exports = {
         Text: "f6hU22EA7Z8peFWZVBJU",
         Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
@@ -319,7 +319,7 @@
         WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
       };
     },
-    122: (e) => {
+    50122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
         TextLinkButton: "_30P9kUCljAZzX5fl1DHGJe",
@@ -330,10 +330,10 @@
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
     },
-    1239: (e) => {
+    91239: (e) => {
       e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
     },
-    4840: (e) => {
+    74840: (e) => {
       e.exports = {
         GlobalFooter: "_291ttHtxyu5obiKzor2G9G",
         LegalNotice: "_1y5BgqyS1zWfS5kYC34pV9",
@@ -341,22 +341,22 @@
         LinkColumnHeading: "g8vToPr0EO3CpytRyimNA",
       };
     },
-    859: (e) => {
+    60859: (e) => {
       e.exports = {
         SteamChinaFooter: "_1xP-wMjwBUZyEOyfSNfAYV",
         FooterContent: "_3yFMcIFF5seXRG2z7Eb08C",
         NavLinks: "_2hZemvW0chMhSn36Vr0RF9",
       };
     },
-    544: (e, s, t) => {
+    22521: (e, s, t) => {
       "use strict";
       t.r(s), t.d(s, { GlobalFooter: () => qe });
       var r = t(7850),
         n = t(8871),
-        o = t(626),
+        o = t(90626),
         i = t(7745),
-        a = t(5947),
-        c = t(4882);
+        a = t(55947),
+        c = t(74882);
       function l(e) {
         const { children: s, "flow-children": t, ...l } = e,
           { gamepadEvents: p } = (0, a.C7)(e);
@@ -371,7 +371,7 @@
           children: o.cloneElement(s, { ...s.props, ref: C }),
         });
       }
-      var p = t(7647);
+      var p = t(37647);
       const h = p.IE.reduce((e, s, t) => ((e[s] = t), e), {});
       function d(e, s) {
         if ("object" != typeof e) return e;
@@ -427,11 +427,11 @@
               }
               if (a.cssProperty)
                 if ("function" == typeof a.cssProperty) {
-                  const t = a.cssProperty(s, e);
-                  if (t.length && Array.isArray(t[0]))
-                    t.forEach(([e, s]) => (n[e] = s));
+                  const r = a.cssProperty(s, e, t.formFactor);
+                  if (r.length && Array.isArray(r[0]))
+                    r.forEach(([e, s]) => (n[e] = s));
                   else {
-                    const e = t;
+                    const e = r;
                     n[e[0]] = e[1];
                   }
                 } else n[a.cssProperty] = s;
@@ -469,7 +469,7 @@
       function g(e, s) {
         return e.startsWith("text") ? `var(--color-${e}-${s})` : u(e);
       }
-      var f = t(8122);
+      var f = t(88122);
       const x = [
           { prop: "margin", responsive: !0, className: (e) => f[`m-${e}`] },
           { prop: "marginX", responsive: !0, className: (e) => f[`mx-${e}`] },
@@ -718,9 +718,9 @@
             cssProperty: "--text-align",
           },
         ];
-      var H = t(4238),
+      var H = t(64238),
         j = t.n(H),
-        y = t(8875);
+        y = t(68875);
       function w(e) {
         const { as: s = "div", ref: t, ...n } = e,
           o = m({ ...n, className: j()(e.className, y.Flex) }, S),
@@ -780,8 +780,8 @@
       function L(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
-      var b = t(9049),
-        N = t(5274);
+      var b = t(39049),
+        N = t(65274);
       function V(e) {
         const { as: s = "span", ref: t, className: n, ...o } = e,
           i = s;
@@ -805,13 +805,18 @@
           },
           {
             prop: "color",
-            cssProperty: (e, s) => ["--text-color", g(e, s.contrast ?? "body")],
+            responsive: !0,
+            cssProperty: (e, s, t) => [
+              "--text-color",
+              g(e, d(s.contrast, t) ?? "body"),
+            ],
           },
           {
             prop: "contrast",
-            cssProperty: (e, s) => [
+            responsive: !0,
+            cssProperty: (e, s, t) => [
               "--text-color",
-              g(s.color ?? "text-body", e),
+              g(d(s.color, t) ?? "text-body", e),
             ],
           },
           { prop: "truncate", className: N.Truncate },
@@ -837,7 +842,7 @@
           },
         ];
       const P = o.createContext({ depth: 0 });
-      var R = t(1239);
+      var R = t(91239);
       function T() {
         return R.Reset;
       }
@@ -871,9 +876,9 @@
           className: (e) => b[`HeadingSize-${e}`],
         },
       ];
-      var k = t(122),
+      var k = t(50122),
         U = t(8527),
-        Z = t(5699);
+        Z = t(45699);
       function I(e) {
         const { underline: s = "auto", ...t } = e,
           n = U.TS.IN_GAMEPADUI ? Z.Ii : "a";
@@ -885,9 +890,9 @@
         ...M,
         { prop: "underline", className: (e) => k[`Underline-${e}`] },
       ];
-      var B = t(9041),
-        F = t(3406),
-        W = t(4041);
+      var F = t(69041),
+        B = t(73406),
+        W = t(44041);
       function O(e) {
         const { as: s = "div", ref: t, ...n } = e,
           o = m({ ...n, className: j()(W.Box, e.className) }, D),
@@ -912,7 +917,7 @@
               children: [
                 (0, r.jsx)("div", {
                   "data-visibility": !t,
-                  className: F.ChildContainer,
+                  className: B.ChildContainer,
                   children: n,
                 }),
                 t &&
@@ -931,32 +936,32 @@
         const { className: s, color: t, ...n } = m(e, Q);
         return (0, r.jsx)("div", {
           "data-accent-color": t,
-          className: j()(s, F.Spinner),
+          className: j()(s, B.Spinner),
           ...n,
         });
       }
       const Q = [
         ...x,
-        { prop: "size", responsive: !0, className: (e) => F[`Size-${e}`] },
-        { prop: "variant", className: (e) => F[`Variant-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => B[`Size-${e}`] },
+        { prop: "variant", className: (e) => B[`Variant-${e}`] },
       ];
       function J(e) {
         e.preventDefault();
       }
       const q = [
           ...x,
-          { prop: "size", responsive: !0, className: (e) => B[`Size-${e}`] },
-          { prop: "variant", className: (e) => B[`Variant-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => F[`Size-${e}`] },
+          { prop: "variant", className: (e) => F[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
           {
             prop: "width",
-            className: B.Width,
+            className: F.Width,
             cssProperty: "--width",
             responsive: !0,
           },
           {
             prop: "minWidth",
-            className: B.MinWidth,
+            className: F.MinWidth,
             cssProperty: "--min-width",
             responsive: !0,
           },
@@ -993,7 +998,7 @@
                 size: t,
                 minWidth: n,
                 color: o,
-                className: j()(B.Button, l && B.Icon),
+                className: j()(F.Button, l && F.Icon),
                 onClick: C,
               },
               q,
@@ -1021,14 +1026,14 @@
                 variant: s,
                 size: t,
                 minWidth: n,
-                className: j()(B.Button, i && B.Icon, T()),
+                className: j()(F.Button, i && F.Icon, T()),
               },
               q,
             ),
           });
         };
-      var ee = t(7603),
-        se = t(5180);
+      var ee = t(37603),
+        se = t(75180);
       function te(e) {
         const { as: s = "div", ref: t, ...n } = e,
           o = m({ ...n, className: j()(se.Grid, e.className) }, re),
@@ -1161,23 +1166,23 @@
         }
         return r.push(e.slice(a)), o.createElement(o.Fragment, null, ...r);
       }
-      var ie = t(1933),
-        ae = t(8861);
+      var ie = t(91933),
+        ae = t(38861);
       function ce() {
         return "desktop" === (0, ie.j_)(ae.k1);
       }
       function le() {
         ce() && (0, ie.Y1)(ae.k1), "location" in window && location.reload();
       }
-      var pe = t(14),
-        he = t(4840),
-        de = t(3788),
-        Ce = t(8505),
-        me = t(4621),
-        _e = t(2754),
-        ue = t(5585),
+      var pe = t(60014),
+        he = t(74840),
+        de = t(73788),
+        Ce = t(28505),
+        me = t(94621),
+        _e = t(32754),
+        ue = t(85585),
         ge = t(7445),
-        fe = t(1393);
+        fe = t(81393);
       const xe = (0, o.createContext)(null);
       function ve(e) {
         return U.TS.IN_GAMEPADUI
@@ -1369,7 +1374,7 @@
         },
         FocusManager: ve,
       };
-      t(2327);
+      t(42327);
       function Se(e) {
         const {
             children: s,
@@ -1397,7 +1402,7 @@
           ],
         });
       }
-      var Le = t(859),
+      var Le = t(60859),
         be = t.n(Le);
       function Ne() {
         return (0, r.jsxs)("svg", {
@@ -1668,7 +1673,7 @@
               }),
             });
       }
-      var Re = t(6762);
+      var Re = t(96762);
       function Te(e, ...s) {
         return 0 == s.length
           ? e
@@ -1697,35 +1702,35 @@
         };
       }
       const Ue = {};
-      (Ue.arabic = () => t.e(6939).then(t.t.bind(t, 9320, 19))),
-        (Ue.brazilian = () => t.e(3095).then(t.t.bind(t, 3095, 19))),
+      (Ue.arabic = () => t.e(6939).then(t.t.bind(t, 36939, 19))),
+        (Ue.brazilian = () => t.e(3095).then(t.t.bind(t, 83095, 19))),
         (Ue.bulgarian = () => t.e(864).then(t.t.bind(t, 864, 19))),
-        (Ue.czech = () => t.e(3910).then(t.t.bind(t, 3910, 19))),
-        (Ue.danish = () => t.e(7098).then(t.t.bind(t, 7098, 19))),
-        (Ue.dutch = () => t.e(4847).then(t.t.bind(t, 4847, 19))),
-        (Ue.english = () => t.e(3621).then(t.t.bind(t, 3621, 19))),
-        (Ue.finnish = () => t.e(9058).then(t.t.bind(t, 9058, 19))),
-        (Ue.french = () => t.e(2683).then(t.t.bind(t, 2683, 19))),
-        (Ue.german = () => t.e(9209).then(t.t.bind(t, 9209, 19))),
-        (Ue.greek = () => t.e(2933).then(t.t.bind(t, 2933, 19))),
-        (Ue.hungarian = () => t.e(6740).then(t.t.bind(t, 6740, 19))),
+        (Ue.czech = () => t.e(3910).then(t.t.bind(t, 73910, 19))),
+        (Ue.danish = () => t.e(7098).then(t.t.bind(t, 27098, 19))),
+        (Ue.dutch = () => t.e(4847).then(t.t.bind(t, 84847, 19))),
+        (Ue.english = () => t.e(3621).then(t.t.bind(t, 53621, 19))),
+        (Ue.finnish = () => t.e(9058).then(t.t.bind(t, 29058, 19))),
+        (Ue.french = () => t.e(2683).then(t.t.bind(t, 82683, 19))),
+        (Ue.german = () => t.e(9209).then(t.t.bind(t, 49209, 19))),
+        (Ue.greek = () => t.e(2933).then(t.t.bind(t, 42933, 19))),
+        (Ue.hungarian = () => t.e(6740).then(t.t.bind(t, 66740, 19))),
         (Ue.indonesian = () => t.e(4631).then(t.t.bind(t, 4631, 19))),
-        (Ue.italian = () => t.e(517).then(t.t.bind(t, 517, 19))),
-        (Ue.japanese = () => t.e(4788).then(t.t.bind(t, 4788, 19))),
-        (Ue.koreana = () => t.e(3838).then(t.t.bind(t, 3838, 19))),
-        (Ue.latam = () => t.e(1990).then(t.t.bind(t, 1990, 19))),
-        (Ue.norwegian = () => t.e(8953).then(t.t.bind(t, 8953, 19))),
-        (Ue.polish = () => t.e(8766).then(t.t.bind(t, 8766, 19))),
-        (Ue.portuguese = () => t.e(3110).then(t.t.bind(t, 3110, 19))),
-        (Ue.romanian = () => t.e(7384).then(t.t.bind(t, 7384, 19))),
-        (Ue.russian = () => t.e(8928).then(t.t.bind(t, 8928, 19))),
-        (Ue.schinese = () => t.e(8787).then(t.t.bind(t, 1168, 19))),
-        (Ue.spanish = () => t.e(6421).then(t.t.bind(t, 6421, 19))),
-        (Ue.swedish = () => t.e(7524).then(t.t.bind(t, 7524, 19))),
-        (Ue.tchinese = () => t.e(7248).then(t.t.bind(t, 7248, 19))),
-        (Ue.thai = () => t.e(6085).then(t.t.bind(t, 6085, 19))),
-        (Ue.turkish = () => t.e(7997).then(t.t.bind(t, 7997, 19))),
-        (Ue.ukrainian = () => t.e(7247).then(t.t.bind(t, 7247, 19))),
+        (Ue.italian = () => t.e(517).then(t.t.bind(t, 10517, 19))),
+        (Ue.japanese = () => t.e(4788).then(t.t.bind(t, 24788, 19))),
+        (Ue.koreana = () => t.e(3838).then(t.t.bind(t, 83838, 19))),
+        (Ue.latam = () => t.e(1990).then(t.t.bind(t, 91990, 19))),
+        (Ue.norwegian = () => t.e(8953).then(t.t.bind(t, 18953, 19))),
+        (Ue.polish = () => t.e(8766).then(t.t.bind(t, 58766, 19))),
+        (Ue.portuguese = () => t.e(3110).then(t.t.bind(t, 93110, 19))),
+        (Ue.romanian = () => t.e(7384).then(t.t.bind(t, 67384, 19))),
+        (Ue.russian = () => t.e(8928).then(t.t.bind(t, 28928, 19))),
+        (Ue.schinese = () => t.e(8787).then(t.t.bind(t, 98787, 19))),
+        (Ue.spanish = () => t.e(6421).then(t.t.bind(t, 96421, 19))),
+        (Ue.swedish = () => t.e(7524).then(t.t.bind(t, 17524, 19))),
+        (Ue.tchinese = () => t.e(7248).then(t.t.bind(t, 67248, 19))),
+        (Ue.thai = () => t.e(6085).then(t.t.bind(t, 46085, 19))),
+        (Ue.turkish = () => t.e(7997).then(t.t.bind(t, 37997, 19))),
+        (Ue.ukrainian = () => t.e(7247).then(t.t.bind(t, 47247, 19))),
         (Ue.vietnamese = () => t.e(3092).then(t.t.bind(t, 3092, 19)));
       const Ze = (function (e) {
         const s = new Map(),
@@ -1873,7 +1878,7 @@
           ],
         });
       }
-      function Be() {
+      function Fe() {
         return (0, r.jsx)("svg", {
           width: "24",
           height: "22",
@@ -1885,7 +1890,7 @@
           }),
         });
       }
-      function Fe() {
+      function Be() {
         return (0, r.jsx)("svg", {
           width: "22",
           height: "22",
@@ -1988,11 +1993,11 @@
                 }),
                 (0, r.jsx)(Ye, {
                   href: "https://bsky.app/profile/steampowered.com",
-                  children: (0, r.jsx)(Be, {}),
+                  children: (0, r.jsx)(Fe, {}),
                 }),
                 (0, r.jsx)(Ye, {
                   href: "https://facebook.com/steam",
-                  children: (0, r.jsx)(Fe, {}),
+                  children: (0, r.jsx)(Be, {}),
                 }),
                 (0, r.jsx)(Ye, {
                   href: "https://twitter.com/steam",

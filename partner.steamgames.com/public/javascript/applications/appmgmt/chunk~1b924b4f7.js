@@ -75,147 +75,149 @@
     10754: (e, n, t) => {
       "use strict";
       t.d(n, {
-        mK: () => j,
-        Gy: () => k,
-        sh: () => D,
-        T6: () => S,
-        yk: () => w,
-        Ur: () => v,
+        mK: () => N,
+        Gy: () => y,
+        sh: () => v,
+        T6: () => w,
+        yk: () => T,
+        Ur: () => k,
       });
       var r = t(7850),
-        i = t(13578),
+        i = t(48724),
         o = t(48174),
         s = t(82314),
-        a = t(17084),
-        c = t(9554),
-        l = t(90626),
-        d = t(16676),
-        u = t(12155),
-        h = t(32754),
-        p = t(52038),
-        g = t(61859),
-        P = t(47184),
-        m = t(96434),
-        f = t.n(m),
-        b = t(14336);
-      let x = null;
-      function _(e) {
+        a = t(4160),
+        c = t(68488),
+        l = t(17084),
+        d = t(9554),
+        u = t(90626),
+        h = t(16676),
+        p = t(12155),
+        g = t(32754),
+        P = t(52038),
+        m = t(61859),
+        f = t(47184),
+        b = t(96434),
+        x = t.n(b),
+        _ = t(14336);
+      let D = null;
+      function C(e) {
         const { packageID: n, strPriceKey: t } = e,
           {
             nPriceInCents: i,
             nPublishedPriceInCents: o,
             nProposedPriceInCents: s,
-            nSuggestedPriceInCents: c,
-            fnSetPrice: l,
-          } = (0, a.xQ)(n, t),
-          { nPriceInCents: d } = (0, a.xQ)(n, "USD"),
+            nSuggestedPriceInCents: a,
+            fnSetPrice: c,
+          } = (0, l.xQ)(n, t),
+          { nPriceInCents: d } = (0, l.xQ)(n, "USD"),
           u = !(!s || (o && s == o)),
-          m = (0, a.d$)(n),
-          _ = m && j(m.rtSubmitted),
-          { data: D } = (0, b.js)(m?.submitterID),
-          C = D ? D.m_strPlayerName : m?.submitterID;
-        return (o || u || c) && x == n + t
+          h = (0, l.d$)(n),
+          p = h && N(h.rtSubmitted),
+          { data: b } = (0, _.js)(h?.submitterID),
+          C = b ? b.m_strPlayerName : h?.submitterID;
+        return (o || u || a) && D == n + t
           ? (0, r.jsxs)("div", {
-              className: f().PricePopout,
+              className: x().PricePopout,
               children: [
                 !!o &&
-                  (0, r.jsxs)(h.he, {
-                    className: f().DetailRow,
+                  (0, r.jsxs)(g.he, {
+                    className: x().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, g.we)(
+                    toolTipContent: (0, m.we)(
                       "#PricingDashboard_CurrentPriceOnStore_ttip",
                     ),
                     children: [
                       (0, r.jsx)("div", {
-                        className: f().DetailLabel,
-                        children: (0, g.we)(
+                        className: x().DetailLabel,
+                        children: (0, m.we)(
                           "#PricingDashboard_CurrentPriceOnStore",
                         ),
                       }),
                       (0, r.jsx)("div", {
-                        className: f().DetailPrice,
-                        children: (0, a.Wx)(o, t).join(""),
+                        className: x().DetailPrice,
+                        children: (0, l.Wx)(o, t).join(""),
                       }),
-                      (0, r.jsx)(h.he, {
-                        className: (0, p.A)(
-                          f().DetailButton,
-                          o == i && f().Disabled,
+                      (0, r.jsx)(g.he, {
+                        className: (0, P.A)(
+                          x().DetailButton,
+                          o == i && x().Disabled,
                         ),
-                        onClick: () => l(o),
+                        onClick: () => c(o),
                         bDisabled: o == i,
-                        toolTipContent: (0, g.we)(
+                        toolTipContent: (0, m.we)(
                           "#PricingDashboard_UseThisOldPrice_ttip",
                         ),
-                        children: (0, g.we)(
+                        children: (0, m.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
                     ],
                   }),
                 u &&
-                  (0, r.jsxs)(h.he, {
-                    className: f().DetailRow,
+                  (0, r.jsxs)(g.he, {
+                    className: x().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, g.we)(
+                    toolTipContent: (0, m.we)(
                       "#PricingDashboard_ProposedPrice_ttip",
                       C,
-                      _,
+                      p,
                     ),
                     children: [
                       (0, r.jsx)("div", {
-                        className: f().DetailLabel,
-                        children: (0, g.we)("#PricingDashboard_ProposedPrice"),
+                        className: x().DetailLabel,
+                        children: (0, m.we)("#PricingDashboard_ProposedPrice"),
                       }),
                       (0, r.jsx)("div", {
-                        className: f().DetailPrice,
-                        children: (0, a.Wx)(s, t).join(""),
+                        className: x().DetailPrice,
+                        children: (0, l.Wx)(s, t).join(""),
                       }),
-                      (0, r.jsx)(h.he, {
-                        className: (0, p.A)(
-                          f().DetailButton,
-                          s == i && f().Disabled,
+                      (0, r.jsx)(g.he, {
+                        className: (0, P.A)(
+                          x().DetailButton,
+                          s == i && x().Disabled,
                         ),
-                        onClick: () => l(s),
+                        onClick: () => c(s),
                         bDisabled: s == i,
-                        toolTipContent: (0, g.we)(
+                        toolTipContent: (0, m.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
                         ),
-                        children: (0, g.we)(
+                        children: (0, m.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
                     ],
                   }),
-                !!c &&
-                  (0, r.jsxs)(h.he, {
-                    className: f().DetailRow,
+                !!a &&
+                  (0, r.jsxs)(g.he, {
+                    className: x().DetailRow,
                     direction: "left",
-                    toolTipContent: P.g.Localize(
+                    toolTipContent: f.g.Localize(
                       "#PricingDashboard_Method_SuggestedPrice_ttip",
-                      (0, a.Wx)(d, "USD").join(""),
+                      (0, l.Wx)(d, "USD").join(""),
                     ),
                     children: [
                       (0, r.jsx)("div", {
-                        className: f().DetailLabel,
-                        children: P.g.Localize(
+                        className: x().DetailLabel,
+                        children: f.g.Localize(
                           "#PricingDashboard_Method_SuggestedPrice",
                         ),
                       }),
                       (0, r.jsx)("div", {
-                        className: f().DetailPrice,
-                        children: (0, a.Wx)(c, t).join(""),
+                        className: x().DetailPrice,
+                        children: (0, l.Wx)(a, t).join(""),
                       }),
-                      (0, r.jsx)(h.he, {
-                        className: (0, p.A)(
-                          f().DetailButton,
-                          c == i && f().Disabled,
+                      (0, r.jsx)(g.he, {
+                        className: (0, P.A)(
+                          x().DetailButton,
+                          a == i && x().Disabled,
                         ),
-                        onClick: () => l(c),
-                        bDisabled: c == i,
-                        toolTipContent: (0, g.we)(
+                        onClick: () => c(a),
+                        bDisabled: a == i,
+                        toolTipContent: (0, m.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
                         ),
-                        children: (0, g.we)(
+                        children: (0, m.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
@@ -225,73 +227,73 @@
             })
           : null;
       }
-      function D(e) {
+      function v(e) {
         const { cell: n, row: t } = e,
           o = t.original.packageID,
           s = n.getValue(),
           {
-            nPriceInCents: u,
-            nPublishedPriceInCents: h,
-            nProposedPriceInCents: p,
-            fnSetPrice: g,
-          } = (0, a.xQ)(o, s),
-          [P, m, b] = (0, a.Wx)(u, s),
-          D = (0, a.Gs)(s),
-          v = l.useRef(void 0),
-          { strClassName: w } = T(o, s),
-          j = "USD" == s,
-          y = p ?? h,
-          N = u != y;
+            nPriceInCents: a,
+            nPublishedPriceInCents: p,
+            nProposedPriceInCents: g,
+            fnSetPrice: P,
+          } = (0, l.xQ)(o, s),
+          [m, f, b] = (0, l.Wx)(a, s),
+          _ = (0, l.Gs)(s),
+          v = u.useRef(void 0),
+          { strClassName: k } = j(o, s),
+          T = "USD" == s,
+          N = g ?? p,
+          I = a != N;
         return (0, r.jsxs)("div", {
           ref: v,
-          onKeyDown: c.nm,
-          className: w,
+          onKeyDown: d.nm,
+          className: k,
           children: [
-            N && (0, r.jsx)(k, { nPriceInCents: u, nSavedPriceInCents: y }),
-            (0, r.jsx)("div", { className: f().PricePrefix, children: P && P }),
+            I && (0, r.jsx)(y, { nPriceInCents: a, nSavedPriceInCents: N }),
+            (0, r.jsx)("div", { className: x().PricePrefix, children: m && m }),
             (0, r.jsx)(i.n, {
               menuTarget: (0, r.jsx)("div", {
-                className: f().EditablePrice,
-                children: (0, r.jsx)(d.pd, {
-                  value: m,
-                  className: f().PriceInput,
+                className: x().EditablePrice,
+                children: (0, r.jsx)(h.pd, {
+                  value: f,
+                  className: x().PriceInput,
                   onChange: (e) => {
                     const n = e.target.value.replace(/[^0-9]/g, "");
                     let t = Number(n || 0);
                     if (Number.isNaN(t)) return;
-                    D.bWholeUnitsOnly && (t *= 100);
+                    _.bWholeUnitsOnly && (t *= 100);
                     const r = 2147483647;
-                    t > r && (t = r), g(t);
+                    t > r && (t = r), P(t);
                   },
                   onFocus: () => {
-                    x = o + s;
+                    D = o + s;
                   },
                 }),
               }),
               direction: "up",
-              interactionMode: 2,
+              interactionMode: c.AV,
               dismissOnClick: !0,
               renderWhenClosed: !1,
-              children: (0, r.jsx)(_, { packageID: o, strPriceKey: s }),
+              children: (0, r.jsx)(C, { packageID: o, strPriceKey: s }),
             }),
-            (0, r.jsx)("div", { className: f().PriceSuffix, children: b && b }),
-            j &&
-              (0, r.jsx)(C, {
+            (0, r.jsx)("div", { className: x().PriceSuffix, children: b && b }),
+            T &&
+              (0, r.jsx)(S, {
                 packageID: o,
                 appids: t.original.appids,
                 bCanSetToFree: t.original.bCanSetToFree,
               }),
-            (0, r.jsx)(S, { packageID: o, strPriceKey: s }),
+            (0, r.jsx)(w, { packageID: o, strPriceKey: s }),
           ],
         });
       }
-      function C(e) {
+      function S(e) {
         const { packageID: n, appids: t, bCanSetToFree: i } = e,
-          { fnApplyGuidelines: c } = (0, o.gC)((0, a.$i)());
+          { fnApplyGuidelines: a } = (0, o.gC)((0, l.$i)());
         return (0, r.jsx)(s.x, {
-          fnGetUSDPriceInCents: () => (0, a.FR)(n, "USD"),
-          fnOnUpdate: (e) => c(n, e),
-          strDescription: P.g.Localize(
+          fnGetUSDPriceInCents: () => (0, l.FR)(n, "USD"),
+          fnOnUpdate: (e) => a(n, e),
+          strDescription: f.g.Localize(
             "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           nPackageID: n,
@@ -299,24 +301,24 @@
           bCanSetToFree: i,
         });
       }
-      function S(e) {
+      function w(e) {
         const { packageID: n, strPriceKey: t } = e,
-          { strPriceWarning: i, bBadPrice: o, bShowWarningIcon: s } = T(n, t);
+          { strPriceWarning: i, bBadPrice: o, bShowWarningIcon: s } = j(n, t);
         return s
-          ? (0, r.jsx)(h.he, {
-              className: f().PriceAlert,
-              strTooltipClassname: f().HoverToolTip,
+          ? (0, r.jsx)(g.he, {
+              className: x().PriceAlert,
+              strTooltipClassname: x().HoverToolTip,
               toolTipContent: i,
               direction: "top",
-              children: (0, r.jsx)(u.eTF, {
+              children: (0, r.jsx)(p.eTF, {
                 color: o ? "rgb(194, 45, 0)" : "#e5af37",
               }),
             })
           : null;
       }
-      const v = 2.25,
-        w = 0.5;
-      function T(e, n) {
+      const k = 2.25,
+        T = 0.5;
+      function j(e, n) {
         const {
             nPriceInCents: t,
             nPublishedPriceInCents: r,
@@ -325,68 +327,68 @@
             nMaxPriceInCents: s,
             nMaxDiscountPercentage: c,
             nSuggestedPriceInCents: d,
-          } = (0, a.xQ)(e, n),
-          u = (0, a.d$)(e),
-          h = "USD" == n,
-          P = t != (i ?? r),
-          m = t < o,
+          } = (0, l.xQ)(e, n),
+          h = (0, l.d$)(e),
+          p = "USD" == n,
+          g = t != (i ?? r),
+          f = t < o,
           b = !!s && t > s,
-          x = !!d && t > d * v,
-          _ = !!d && t < d * w,
-          D = !!d && t < d && !!c,
-          C = !!d && t == d && !!c,
+          _ = !!d && t > d * k,
+          D = !!d && t < d * T,
+          C = !!d && t < d && !!c,
+          v = !!d && t == d && !!c,
           S =
-            (b && (0, g.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (m &&
-              (0, g.we)(
+            (b && (0, m.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
+            (f &&
+              (0, m.we)(
                 "#PricingDashboard_PriceTooLow",
-                (0, a.Wx)(o, n).join(""),
+                (0, l.Wx)(o, n).join(""),
               )) ||
-            (x &&
-              (0, g.we)(
-                "#PricingDashboard_PriceMuchHigherThanMethod",
-                (0, a.Wx)(d, n).join(""),
-              )) ||
-            (x && !1) ||
             (_ &&
-              (0, g.we)(
-                "#PricingDashboard_PriceMuchLowerThanMethod",
-                (0, a.Wx)(d, n).join(""),
+              (0, m.we)(
+                "#PricingDashboard_PriceMuchHigherThanMethod",
+                (0, l.Wx)(d, n).join(""),
               )) ||
             (_ && !1) ||
             (D &&
-              (0, g.we)(
+              (0, m.we)(
+                "#PricingDashboard_PriceMuchLowerThanMethod",
+                (0, l.Wx)(d, n).join(""),
+              )) ||
+            (D && !1) ||
+            (C &&
+              (0, m.we)(
                 "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
                 c,
               )) ||
-            (C && (0, g.we)("#PricingDashboard_PriceCheap", c)),
-          T = b || m,
-          k = x || _,
-          j = T || k || D,
-          y = !(P || !i || (r && i == r)),
-          N = 4 == u?.eState,
-          E = (0, p.A)(
-            f().PriceCell,
-            h && f().USD,
-            P && f().ChangedLocally,
-            y && f().ProposedPrice,
-            N && f().ApprovedCanPublish,
-            j && f().WarningPrice,
-            k && f().SevereWarningPrice,
-            T && f().BadPrice,
+            (v && (0, m.we)("#PricingDashboard_PriceCheap", c)),
+          w = b || f,
+          j = _ || D,
+          y = w || j || C,
+          N = !(g || !i || (r && i == r)),
+          I = h?.eState == a.Zo,
+          L = (0, P.A)(
+            x().PriceCell,
+            p && x().USD,
+            g && x().ChangedLocally,
+            N && x().ProposedPrice,
+            I && x().ApprovedCanPublish,
+            y && x().WarningPrice,
+            j && x().SevereWarningPrice,
+            w && x().BadPrice,
           );
-        return l.useMemo(
+        return u.useMemo(
           () => ({
             strPriceWarning: S,
-            strClassName: E,
-            bBadPrice: T,
-            bShowSevereWarning: k,
-            bShowWarningIcon: j,
+            strClassName: L,
+            bBadPrice: w,
+            bShowSevereWarning: j,
+            bShowWarningIcon: y,
           }),
-          [S, E, T, k, j],
+          [S, L, w, j, y],
         );
       }
-      function k(e) {
+      function y(e) {
         const { nPriceInCents: n, nSavedPriceInCents: t } = e;
         let i = null,
           o = null,
@@ -396,27 +398,27 @@
           const e = Math.ceil((100 * (n - t)) / t),
             c = n > t;
           (s = c
-            ? (0, g.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
-            : (0, g.we)("#PricingDashboard_PriceLowerBy", e + "%")),
-            (a = (0, p.A)(f().PriceChange, c && f().PriceIncrease)),
+            ? (0, m.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
+            : (0, m.we)("#PricingDashboard_PriceLowerBy", e + "%")),
+            (a = (0, P.A)(x().PriceChange, c && x().PriceIncrease)),
             (o = (0, r.jsx)("div", {
-              className: f().PriceChangeArrow,
-              children: (0, r.jsx)(u.i3G, { angle: c ? 0 : 180 }),
+              className: x().PriceChangeArrow,
+              children: (0, r.jsx)(p.i3G, { angle: c ? 0 : 180 }),
             })),
             (i = e + "%");
         } else
-          (i = (0, g.we)("#PricingDashboard_PriceIsNew_Short")),
-            (a = (0, p.A)(f().NewPrice));
-        return (0, r.jsxs)(h.he, {
+          (i = (0, m.we)("#PricingDashboard_PriceIsNew_Short")),
+            (a = (0, P.A)(x().NewPrice));
+        return (0, r.jsxs)(g.he, {
           className: a,
-          strTooltipClassname: f().HoverToolTip,
+          strTooltipClassname: x().HoverToolTip,
           toolTipContent: s,
           direction: "top",
           children: [o, i],
         });
       }
-      function j(e) {
-        return new Date(1e3 * e).toLocaleString(g.pf.GetPreferredLocales(), {
+      function N(e) {
+        return new Date(1e3 * e).toLocaleString(m.pf.GetPreferredLocales(), {
           weekday: "long",
           month: "long",
           day: "numeric",
@@ -438,329 +440,97 @@
     },
     20187: (e, n, t) => {
       "use strict";
-      t.d(n, { Ae: () => u, EY: () => l, U6: () => d });
+      t.d(n, { Ae: () => h, EY: () => d, U6: () => u });
       var r = t(7850),
-        i = t(41324),
-        o = t(75659),
-        s = t(64238),
-        a = t.n(s),
-        c = t(65274);
-      function l(e) {
-        const { as: n = "span", ref: t, className: o, ...s } = e,
-          l = n;
-        return (0, r.jsx)(l, {
+        i = t(55348),
+        o = t(11526),
+        s = t(75659),
+        a = t(64238),
+        c = t.n(a),
+        l = t(65274);
+      function d(e) {
+        const { as: n = "span", ref: t, className: i, ...s } = e,
+          a = n;
+        return (0, r.jsx)(a, {
           ref: t,
-          ...(0, i.mz)({ ...s, className: a()(c.Text, o) }, u),
+          ...(0, o.mz)({ ...s, className: c()(l.Text, i) }, h),
         });
       }
-      const d = [
+      const u = [
           {
             prop: "weight",
             responsive: !0,
-            className: c.TextWeight,
+            className: l.TextWeight,
             cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: c.TextAlign,
+            className: l.TextAlign,
             cssProperty: "--text-align",
           },
           {
             prop: "color",
-            cssProperty: (e, n) => [
+            responsive: !0,
+            cssProperty: (e, n, t) => [
               "--text-color",
-              (0, i.To)(e, n.contrast ?? "body"),
+              (0, o.To)(e, (0, i.I)(n.contrast, t) ?? "body"),
             ],
           },
           {
             prop: "contrast",
-            cssProperty: (e, n) => [
+            responsive: !0,
+            cssProperty: (e, n, t) => [
               "--text-color",
-              (0, i.To)(n.color ?? "text-body", e),
+              (0, o.To)((0, i.I)(n.color, t) ?? "text-body", e),
             ],
           },
-          { prop: "truncate", className: c.Truncate },
+          { prop: "truncate", className: l.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: c.LineClamp,
+            className: l.LineClamp,
             cssProperty: "--line-clamp",
           },
           {
             prop: "whiteSpace",
-            className: c.WhiteSpace,
+            className: l.WhiteSpace,
             cssProperty: "--white-space",
           },
         ],
-        u = [
-          ...d,
-          ...o.L,
+        h = [
+          ...u,
+          ...s.L,
           {
             prop: "size",
             responsive: !0,
-            className: (e) => c[`TextSize-${e}`],
+            className: (e) => l[`TextSize-${e}`],
           },
         ];
     },
-    13578: (e, n, t) => {
+    48724: (e, n, t) => {
       "use strict";
-      t.d(n, { n: () => g });
+      t.d(n, { n: () => u });
       var r = t(7850),
-        i = t(91934),
+        i = t(68488),
         o = t(64238),
         s = t.n(o),
         a = t(90626),
-        c = t(56011),
-        l = t(65697);
-      function d(e) {
-        const {
-            direction: n,
-            ignoreHorizontal: t,
-            ignoreVertical: r,
-            dismissOnClick: o,
-            interactionMode: s = 0,
-          } = e,
-          d = (0, a.useRef)(null),
-          u = (0, a.useRef)(!1),
-          h = (0, a.useRef)(!1),
-          p = (0, a.useRef)(null),
-          [g, P] = (0, a.useState)(!1),
-          [m, f] = (0, a.useMemo)(
-            () =>
-              (function (e) {
-                const [n, t] = (0, i.x)(e, "-");
-                return "left" === n || "right" === n ? [void 0, n] : [n, t];
-              })(n),
-            [n],
-          ),
-          b = (0, a.useCallback)(() => {
-            if (!p.current || !d.current) return;
-            const e = p.current.getBoundingClientRect(),
-              n = d.current.getBoundingClientRect();
-            let i = f;
-            const o = p.current.matches(":dir(rtl)");
-            o && ("left" === f ? (i = "right") : "right" === f && (i = "left")),
-              d.current.style.setProperty("--parentWidth", `${e.width}px`),
-              d.current.style.setProperty("--parentHeight", `${e.height}px`);
-            let s = 0;
-            if (!t) {
-              if (n.width) {
-                if ("left" === i) {
-                  s = (m ? e.right : e.left) - n.width;
-                }
-                if ("right" === i) {
-                  const t = m ? e.left : e.right;
-                  s = document.documentElement.clientWidth - (t + n.width);
-                }
-                void 0 === i &&
-                  (s = o
-                    ? e.right - n.width
-                    : document.documentElement.clientWidth -
-                      (e.left + n.width)),
-                  (s = Math.min(s, 0));
-              }
-              "left" === i
-                ? m
-                  ? ((d.current.style.left = "unset"),
-                    (d.current.style.right = `${document.documentElement.clientWidth - e.right + s}px`))
-                  : ((d.current.style.left = "unset"),
-                    (d.current.style.right = `${document.documentElement.clientWidth - e.left + s}px`))
-                : "right" === i
-                  ? m
-                    ? ((d.current.style.left = `${e.left + s}px`),
-                      (d.current.style.right = "unset"))
-                    : ((d.current.style.left = `${e.right + s}px`),
-                      (d.current.style.right = "unset"))
-                  : void 0 === i &&
-                    (o
-                      ? ((d.current.style.left = "unset"),
-                        (d.current.style.right = `${document.documentElement.clientWidth - e.right + s}px`))
-                      : ((d.current.style.left = `${e.left + s}px`),
-                        (d.current.style.right = "unset")));
-            }
-            r ||
-              ("down" === m
-                ? ((d.current.style.top = `${e.bottom}px`),
-                  (d.current.style.bottom = "unset"),
-                  d.current.style.setProperty(
-                    "--availableHeight",
-                    document.documentElement.clientHeight - e.bottom + "px",
-                  ))
-                : "up" === m
-                  ? ((d.current.style.top = "unset"),
-                    (d.current.style.bottom =
-                      document.documentElement.clientHeight - e.top + "px"),
-                    d.current.style.setProperty(
-                      "--availableHeight",
-                      `${e.top}px`,
-                    ))
-                  : void 0 === m &&
-                    ((d.current.style.top = `${e.top}px`),
-                    (d.current.style.bottom = "unset"),
-                    d.current.style.setProperty(
-                      "--availableHeight",
-                      document.documentElement.clientHeight - e.top + "px",
-                    )));
-          }, [f, t, r, m]),
-          x = (0, a.useMemo)(() => {
-            if (p.current) return (0, c._f)(p.current);
-          }, [p.current]);
-        (0, a.useEffect)(
-          () =>
-            g
-              ? (d.current?.showPopover(),
-                b(),
-                x?.addEventListener("scroll", b),
-                window.addEventListener("scroll", b),
-                () => {
-                  x?.removeEventListener("scroll", b),
-                    window.addEventListener("scroll", b);
-                })
-              : ("true" !=
-                  window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
-                  d.current?.hidePopover(),
-                () => {}),
-          [g, b, x],
-        );
-        const _ = (0, a.useCallback)(() => {
-            b(), P(!0), (h.current = !0);
-          }, [b]),
-          D = (0, a.useCallback)(() => {
-            (h.current = !1), u.current || P(!1);
-          }, []),
-          C = (0, a.useCallback)(() => {
-            (u.current = !0), P(!0);
-          }, []),
-          S = (0, a.useCallback)(
-            (e) => {
-              d.current?.contains(e.target) && C();
-            },
-            [C],
-          ),
-          v = (0, a.useCallback)(
-            (e) => {
-              d.current?.contains(e.target) && C();
-            },
-            [C],
-          ),
-          w = (0, a.useCallback)(() => {
-            (u.current = !1), h.current || P(!1);
-          }, []),
-          T = (0, a.useCallback)(
-            (e) => {
-              d.current?.contains(e.target) && w();
-            },
-            [w],
-          ),
-          k = (0, a.useCallback)(() => {
-            w(), D();
-          }, [w, D]),
-          j = (0, a.useCallback)(
-            (e) => {
-              "Enter" === e.key && (e.preventDefault(), g ? D() : _());
-            },
-            [D, _, g],
-          ),
-          y = (0, a.useCallback)(
-            (e) => {
-              e.currentTarget.contains(e.relatedTarget) ||
-                d.current?.contains(e.relatedTarget) ||
-                D();
-            },
-            [D],
-          ),
-          N = (0, a.useCallback)(
-            (e) => {
-              2 === s && _();
-            },
-            [s, _],
-          ),
-          E = (0, a.useCallback)(
-            (e) => {
-              const n =
-                  e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
-                t = !e.relatedTarget && !u.current;
-              (n || t) && (w(), P(!1));
-            },
-            [w],
-          ),
-          I = (0, a.useCallback)(
-            (e) => {
-              d.current?.contains(e.target) &&
-                (g && o ? k() : u.current && _());
-            },
-            [k, o, g, _],
-          ),
-          L = (0, a.useCallback)(
-            (e) => {
-              d.current?.contains(e.target) &&
-                ("Enter" === e.key && g && o ? k() : _(),
-                "Escape" === e.key && g && (k(), e.stopPropagation()));
-            },
-            [k, o, g, _],
-          );
-        let O;
-        0 !== s || g
-          ? 1 === s && (O = g ? D : _)
-          : (O = (e) => {
-              e.preventDefault(), _();
-            });
-        const F = {
-            "aria-expanded": g,
-            role: "button",
-            onMouseEnter: 0 === s ? _ : void 0,
-            onMouseLeave: 0 === s ? D : void 0,
-            onClick: O,
-            ref: p,
-            onKeyDown: j,
-            onFocus: N,
-            onBlur: y,
-          },
-          R = {
-            popover: "manual",
-            ref: d,
-            onMouseEnter: v,
-            onMouseLeave: T,
-            onFocus: S,
-            onBlur: E,
-            onClick: I,
-            onKeyDown: L,
-            className: l.PopoverMenu,
-          };
-        return (
-          (0, a.useImperativeHandle)(
-            e.ref,
-            () => ({ show: _, hide: D, close: k }),
-            [_, D, k],
-          ),
-          { isShowingMenu: g, triggerProps: F, menuProps: R, closeMenu: k }
-        );
-      }
-      !(async function () {
-        if (
-          "undefined" == typeof HTMLElement ||
-          "object" != typeof HTMLElement.prototype ||
-          !("popover" in HTMLElement.prototype)
-        ) {
-          (await t.e(8433).then(t.bind(t, 8433))).apply();
-        }
-      })();
-      var u = t(7445),
-        h = t(76217);
-      function p(e, n) {
+        c = t(7445),
+        l = t(76217);
+      function d(e, n) {
         return (t) => {
           e?.(t), n?.(t);
         };
       }
-      function g(e) {
+      function u(e) {
         const {
             direction: n,
-            interactionMode: t = 0,
-            ignoreHorizontal: i,
-            ignoreVertical: o,
-            dismissOnClick: c,
-            menuTarget: l,
+            interactionMode: t = i.aJ,
+            ignoreHorizontal: o,
+            ignoreVertical: u,
+            dismissOnClick: h,
+            menuTarget: p,
             className: g,
             children: P,
             renderWhenClosed: m = !0,
@@ -771,32 +541,32 @@
             triggerProps: x,
             menuProps: _,
             closeMenu: D,
-          } = d(e),
+          } = (0, i.Yz)(e),
           C = a.useRef(null),
-          S = a.useRef(null);
+          v = a.useRef(null);
         return (
           a.useEffect(() => {
             b
-              ? S.current?.TakeFocus()
-              : S.current?.BFocusWithin() && C.current?.TakeFocus();
+              ? v.current?.TakeFocus()
+              : v.current?.BFocusWithin() && C.current?.TakeFocus();
           }, [b]),
           (0, r.jsxs)(r.Fragment, {
             children: [
-              a.cloneElement(l, {
+              a.cloneElement(p, {
                 ...x,
-                onMouseEnter: p(l.props.onMouseEnter, x.onMouseEnter),
-                onMouseLeave: p(l.props.onMouseLeave, x.onMouseLeave),
+                onMouseEnter: d(p.props.onMouseEnter, x.onMouseEnter),
+                onMouseLeave: d(p.props.onMouseLeave, x.onMouseLeave),
                 navRef: C,
               }),
-              (0, r.jsx)(h.Z, {
+              (0, r.jsx)(l.Z, {
                 ...f,
                 ..._,
                 className: s()(_.className, g),
-                navRef: S,
+                navRef: v,
                 onCancel: D,
                 onFocusWithin: (e) => !e && D(),
                 childFocusDisabled: !b,
-                children: (0, r.jsx)(u.q, { children: (m || b) && P }),
+                children: (0, r.jsx)(c.q, { children: (m || b) && P }),
               }),
             ],
           })
@@ -946,8 +716,8 @@
       })(g || (g = {}));
       var D = t(8527),
         C = t(51614);
-      var S = t(71298),
-        v = t(47911);
+      var v = t(71298),
+        S = t(47911);
       function w(e) {
         const {
             strButtonOverride: n,
@@ -975,17 +745,17 @@
               active: c,
               children:
                 a && t && 1 == t.length
-                  ? (0, r.jsx)(T, {
+                  ? (0, r.jsx)(k, {
                       closeModal: d,
                       nPackageID: o,
                       nAppID: t[0],
                     })
-                  : (0, r.jsx)(k, { closeModal: d }),
+                  : (0, r.jsx)(T, { closeModal: d }),
             }),
           ],
         });
       }
-      function T(e) {
+      function k(e) {
         const { closeModal: n, nAppID: t, nPackageID: i } = e,
           [c, l] = (0, a.useState)(g.k_FreeToPlay),
           d = (function (e, n) {
@@ -1037,9 +807,9 @@
               },
             });
           })(t, i),
-          u = (0, S.vs)();
+          u = (0, v.vs)();
         return u.bLoading
-          ? (0, r.jsx)(S.Hh, {
+          ? (0, r.jsx)(v.Hh, {
               state: u,
               strDialogTitle: x.g.Localize("#FreeOnDemand_Title"),
               closeModal: () => {
@@ -1077,7 +847,7 @@
                     u.fnSetStrError(
                       e instanceof Error
                         ? e.message
-                        : v.Z.Localize("#Error_ErrorCommunicatingWithNetwork"),
+                        : S.Z.Localize("#Error_ErrorCommunicatingWithNetwork"),
                     );
                 }
               },
@@ -1109,7 +879,7 @@
               ],
             });
       }
-      function k(e) {
+      function T(e) {
         const { closeModal: n } = e,
           t = `${_.TS.SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915`;
         return (0, r.jsxs)(m.KG, {
@@ -1137,94 +907,95 @@
     },
     82314: (e, n, t) => {
       "use strict";
-      t.d(n, { e: () => b, x: () => f });
+      t.d(n, { e: () => x, x: () => b });
       var r = t(7850),
         i = t(61459),
         o = t(88267),
-        s = t(13578),
+        s = t(48724),
         a = t(48174),
         c = t(42836),
-        l = t(12155),
-        d = t(52038),
-        u = t(31389),
-        h = t.n(u),
-        p = t(90626),
-        g = t(47184),
-        P = t(53965),
-        m = t(32754);
-      function f(e) {
-        const n = (0, r.jsx)("button", {
-          className: h().PriceGuidelinesPicker,
-          children: (0, r.jsx)(l.GB9, {}),
-        });
-        return (0, r.jsx)(x, { menuTarget: n, ...e });
-      }
+        l = t(68488),
+        d = t(12155),
+        u = t(52038),
+        h = t(31389),
+        p = t.n(h),
+        g = t(90626),
+        P = t(47184),
+        m = t(53965),
+        f = t(32754);
       function b(e) {
+        const n = (0, r.jsx)("button", {
+          className: p().PriceGuidelinesPicker,
+          children: (0, r.jsx)(d.GB9, {}),
+        });
+        return (0, r.jsx)(_, { menuTarget: n, ...e });
+      }
+      function x(e) {
         const { strButton: n, strTooltip: t } = e,
-          i = (0, r.jsxs)(P.$, {
+          i = (0, r.jsxs)(m.$, {
             onClick: () => {},
             children: [
-              (0, r.jsx)(m.Gq, {
+              (0, r.jsx)(f.Gq, {
                 toolTipContent: t,
                 children: (0, r.jsx)("span", { children: n }),
               }),
               (0, r.jsx)("div", {
-                className: (0, d.A)(
-                  h().SelectionIndicator,
+                className: (0, u.A)(
+                  p().SelectionIndicator,
                   "DialogDropDown_Arrow",
                 ),
-                children: (0, r.jsx)(l.GB9, {}),
+                children: (0, r.jsx)(d.GB9, {}),
               }),
             ],
           });
-        return (0, r.jsx)(x, { menuTarget: i, ...e });
+        return (0, r.jsx)(_, { menuTarget: i, ...e });
       }
-      function x(e) {
+      function _(e) {
         const { menuTarget: n } = e,
-          t = p.useRef(null);
+          t = g.useRef(null);
         return (0, r.jsx)(s.n, {
           menuTarget: n,
           direction: "down",
-          interactionMode: 1,
+          interactionMode: l.k$,
           ref: t,
-          children: (0, r.jsx)(_, { onSelect: () => t.current?.close(), ...e }),
+          children: (0, r.jsx)(D, { onSelect: () => t.current?.close(), ...e }),
         });
       }
-      function _(e) {
+      function D(e) {
         const {
             fnGetUSDPriceInCents: n,
             fnOnUpdate: t,
             strDescription: s,
             bCanSetToFree: l,
-            nPackageID: u,
-            onSelect: p,
-            appids: P,
+            nPackageID: d,
+            onSelect: h,
+            appids: g,
           } = e,
           m = (0, a.cT)(),
           f = n();
         if (!m) return null;
         const b = m.GetUSDPricePointsInCents();
         return (0, r.jsxs)("div", {
-          className: h().GuidelinesPanel,
+          className: p().GuidelinesPanel,
           children: [
             (0, r.jsx)("div", {
-              className: h().GuidelinesDescription,
-              children: s || g.g.Localize("#PricingGuideline_Default"),
+              className: p().GuidelinesDescription,
+              children: s || P.g.Localize("#PricingGuideline_Default"),
             }),
             (0, r.jsxs)("div", {
-              className: h().GuidelinesGrid,
+              className: p().GuidelinesGrid,
               children: [
                 void 0 !== l &&
                   (0, r.jsx)(
                     "div",
                     {
-                      className: h().GridElement,
+                      className: p().GridElement,
                       children: (0, r.jsx)(c.K, {
-                        nPackageID: u,
-                        strButtonOverride: g.g.Localize(
+                        nPackageID: d,
+                        strButtonOverride: P.g.Localize(
                           "#FreeOnDemand_InlineOption",
                         ),
-                        appids: P,
+                        appids: g,
                       }),
                     },
                     "settofree",
@@ -1234,13 +1005,13 @@
                     "button",
                     {
                       onClick: () => {
-                        p(), t(e);
+                        h(), t(e);
                       },
-                      className: (0, d.A)({
-                        [h().GridElement]: !0,
-                        [h().CurrentPrice]: f == e,
+                      className: (0, u.A)({
+                        [p().GridElement]: !0,
+                        [p().CurrentPrice]: f == e,
                       }),
-                      children: (0, i.x)(e, o.AI.k_ECurrencyCodeUSD),
+                      children: (0, i.x)(e, o.CS),
                     },
                     e,
                   ),
@@ -1254,7 +1025,7 @@
     47184: (e, n, t) => {
       "use strict";
       t.d(n, { g: () => o });
-      var r = t(48891);
+      var r = t(13843);
       const i = {};
       (i.arabic = () => t.e(6873).then(t.t.bind(t, 46873, 19))),
         (i.brazilian = () => t.e(1365).then(t.t.bind(t, 1365, 19))),
@@ -1289,6 +1060,251 @@
       const o = (0, r.l)(async function (e) {
         if (i[e]) return i[e]();
       });
+    },
+    68488: (e, n, t) => {
+      "use strict";
+      t.d(n, { k$: () => c, AV: () => l, aJ: () => a, Yz: () => d });
+      t(7850);
+      var r = t(91934),
+        i = (t(64238), t(90626)),
+        o = t(56011),
+        s = t(65697);
+      !(async function () {
+        if (
+          "undefined" == typeof HTMLElement ||
+          "object" != typeof HTMLElement.prototype ||
+          !("popover" in HTMLElement.prototype)
+        ) {
+          (await t.e(8433).then(t.bind(t, 8433))).apply();
+        }
+      })();
+      const a = 0,
+        c = 1,
+        l = 2;
+      function d(e) {
+        const {
+            direction: n,
+            ignoreHorizontal: t,
+            ignoreVertical: d,
+            dismissOnClick: u,
+            interactionMode: h = a,
+          } = e,
+          p = (0, i.useRef)(null),
+          g = (0, i.useRef)(!1),
+          P = (0, i.useRef)(!1),
+          m = (0, i.useRef)(null),
+          [f, b] = (0, i.useState)(!1),
+          [x, _] = (0, i.useMemo)(
+            () =>
+              (function (e) {
+                const [n, t] = (0, r.x)(e, "-");
+                return "left" === n || "right" === n ? [void 0, n] : [n, t];
+              })(n),
+            [n],
+          ),
+          D = (0, i.useCallback)(() => {
+            if (!m.current || !p.current) return;
+            const e = m.current.getBoundingClientRect(),
+              n = p.current.getBoundingClientRect();
+            let r = _;
+            const i = m.current.matches(":dir(rtl)");
+            i && ("left" === _ ? (r = "right") : "right" === _ && (r = "left")),
+              p.current.style.setProperty("--parentWidth", `${e.width}px`),
+              p.current.style.setProperty("--parentHeight", `${e.height}px`);
+            let o = 0;
+            if (!t) {
+              if (n.width) {
+                if ("left" === r) {
+                  o = (x ? e.right : e.left) - n.width;
+                }
+                if ("right" === r) {
+                  const t = x ? e.left : e.right;
+                  o = document.documentElement.clientWidth - (t + n.width);
+                }
+                void 0 === r &&
+                  (o = i
+                    ? e.right - n.width
+                    : document.documentElement.clientWidth -
+                      (e.left + n.width)),
+                  (o = Math.min(o, 0));
+              }
+              "left" === r
+                ? x
+                  ? ((p.current.style.left = "unset"),
+                    (p.current.style.right = `${document.documentElement.clientWidth - e.right + o}px`))
+                  : ((p.current.style.left = "unset"),
+                    (p.current.style.right = `${document.documentElement.clientWidth - e.left + o}px`))
+                : "right" === r
+                  ? x
+                    ? ((p.current.style.left = `${e.left + o}px`),
+                      (p.current.style.right = "unset"))
+                    : ((p.current.style.left = `${e.right + o}px`),
+                      (p.current.style.right = "unset"))
+                  : void 0 === r &&
+                    (i
+                      ? ((p.current.style.left = "unset"),
+                        (p.current.style.right = `${document.documentElement.clientWidth - e.right + o}px`))
+                      : ((p.current.style.left = `${e.left + o}px`),
+                        (p.current.style.right = "unset")));
+            }
+            d ||
+              ("down" === x
+                ? ((p.current.style.top = `${e.bottom}px`),
+                  (p.current.style.bottom = "unset"),
+                  p.current.style.setProperty(
+                    "--availableHeight",
+                    document.documentElement.clientHeight - e.bottom + "px",
+                  ))
+                : "up" === x
+                  ? ((p.current.style.top = "unset"),
+                    (p.current.style.bottom =
+                      document.documentElement.clientHeight - e.top + "px"),
+                    p.current.style.setProperty(
+                      "--availableHeight",
+                      `${e.top}px`,
+                    ))
+                  : void 0 === x &&
+                    ((p.current.style.top = `${e.top}px`),
+                    (p.current.style.bottom = "unset"),
+                    p.current.style.setProperty(
+                      "--availableHeight",
+                      document.documentElement.clientHeight - e.top + "px",
+                    )));
+          }, [_, t, d, x]),
+          C = (0, i.useMemo)(() => {
+            if (m.current) return (0, o._f)(m.current);
+          }, [m.current]);
+        (0, i.useEffect)(
+          () =>
+            f
+              ? (p.current?.showPopover(),
+                D(),
+                C?.addEventListener("scroll", D),
+                window.addEventListener("scroll", D),
+                () => {
+                  C?.removeEventListener("scroll", D),
+                    window.addEventListener("scroll", D);
+                })
+              : ("true" !=
+                  window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
+                  p.current?.hidePopover(),
+                () => {}),
+          [f, D, C],
+        );
+        const v = (0, i.useCallback)(() => {
+            D(), b(!0), (P.current = !0);
+          }, [D]),
+          S = (0, i.useCallback)(() => {
+            (P.current = !1), g.current || b(!1);
+          }, []),
+          w = (0, i.useCallback)(() => {
+            (g.current = !0), b(!0);
+          }, []),
+          k = (0, i.useCallback)(
+            (e) => {
+              p.current?.contains(e.target) && w();
+            },
+            [w],
+          ),
+          T = (0, i.useCallback)(
+            (e) => {
+              p.current?.contains(e.target) && w();
+            },
+            [w],
+          ),
+          j = (0, i.useCallback)(() => {
+            (g.current = !1), P.current || b(!1);
+          }, []),
+          y = (0, i.useCallback)(
+            (e) => {
+              p.current?.contains(e.target) && j();
+            },
+            [j],
+          ),
+          N = (0, i.useCallback)(() => {
+            j(), S();
+          }, [j, S]),
+          I = (0, i.useCallback)(
+            (e) => {
+              "Enter" === e.key && (e.preventDefault(), f ? S() : v());
+            },
+            [S, v, f],
+          ),
+          L = (0, i.useCallback)(
+            (e) => {
+              e.currentTarget.contains(e.relatedTarget) ||
+                p.current?.contains(e.relatedTarget) ||
+                S();
+            },
+            [S],
+          ),
+          E = (0, i.useCallback)(
+            (e) => {
+              h === l && v();
+            },
+            [h, v],
+          ),
+          O = (0, i.useCallback)(
+            (e) => {
+              const n =
+                  e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
+                t = !e.relatedTarget && !g.current;
+              (n || t) && (j(), b(!1));
+            },
+            [j],
+          ),
+          F = (0, i.useCallback)(
+            (e) => {
+              p.current?.contains(e.target) &&
+                (f && u ? N() : g.current && v());
+            },
+            [N, u, f, v],
+          ),
+          R = (0, i.useCallback)(
+            (e) => {
+              p.current?.contains(e.target) &&
+                ("Enter" === e.key && f && u ? N() : v(),
+                "Escape" === e.key && f && (N(), e.stopPropagation()));
+            },
+            [N, u, f, v],
+          );
+        let M;
+        h !== a || f
+          ? h === c && (M = f ? S : v)
+          : (M = (e) => {
+              e.preventDefault(), v();
+            });
+        const z = {
+            "aria-expanded": f,
+            role: "button",
+            onMouseEnter: h === a ? v : void 0,
+            onMouseLeave: h === a ? S : void 0,
+            onClick: M,
+            ref: m,
+            onKeyDown: I,
+            onFocus: E,
+            onBlur: L,
+          },
+          A = {
+            popover: "manual",
+            ref: p,
+            onMouseEnter: T,
+            onMouseLeave: y,
+            onFocus: k,
+            onBlur: O,
+            onClick: F,
+            onKeyDown: R,
+            className: s.PopoverMenu,
+          };
+        return (
+          (0, i.useImperativeHandle)(
+            e.ref,
+            () => ({ show: v, hide: S, close: N }),
+            [v, S, N],
+          ),
+          { isShowingMenu: f, triggerProps: z, menuProps: A, closeMenu: N }
+        );
+      }
     },
   },
 ]);

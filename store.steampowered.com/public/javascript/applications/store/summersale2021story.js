@@ -47,36 +47,39 @@
     90444: (e, r, t) => {
       "use strict";
       t.d(r, {
-        E4: () => h,
-        PB: () => N,
-        PU: () => P,
-        VZ: () => p,
-        _l: () => n,
-        cZ: () => c,
-        iG: () => g,
-        ib: () => l,
-        x4: () => d,
+        E4: () => O,
+        PB: () => T,
+        PU: () => B,
+        VZ: () => N,
+        _l: () => g,
+        cZ: () => d,
+        iG: () => P,
+        ib: () => y,
+        x4: () => p,
       });
       var m = t(34629),
-        _ = t(41735),
-        o = t.n(_),
+        o = t(41735),
+        _ = t.n(o),
         s = t(14947),
         a = t(90626),
-        S = t(68797),
-        u = t(78327);
-      class i {
+        u = t(37085),
+        S = t(42457),
+        i = t(40259),
+        n = t(68797),
+        c = t(78327);
+      class l {
         m_mapGenreToStickerResponse = new Map();
-        m_eStoryBadgeGranted = 0;
+        m_eStoryBadgeGranted = S.GP.d7;
         m_strLocalizedStoryHeader;
         m_strLocalizedStoryHeaderMobile;
         static s_Singleton;
         static Get() {
-          return i.s_Singleton || (i.s_Singleton = new i()), i.s_Singleton;
+          return l.s_Singleton || (l.s_Singleton = new l()), l.s_Singleton;
         }
         constructor() {
           (0, s.Gn)(this),
-            "dev" == u.TS.WEB_UNIVERSE && (window.g_SummerSale2021Store = this);
-          const e = (0, u.Tc)("summerstory", "application_config");
+            "dev" == c.TS.WEB_UNIVERSE && (window.g_SummerSale2021Store = this);
+          const e = (0, c.Tc)("summerstory", "application_config");
           if (e) {
             if (e.story_choices) {
               const r = e.story_choices;
@@ -108,15 +111,15 @@
         }
         async LoadClaimForGenre(e, r) {
           if (this.m_mapGenreToStickerResponse.has(e)) return;
-          if (!u.iA.logged_in) return;
+          if (!c.iA.logged_in) return;
           this.m_mapGenreToStickerResponse.set(e, {});
           let t = null;
           try {
-            const m = await o().get(
-              u.TS.STORE_BASE_URL + "promotion/ajaxhasclaimedgenresticker",
+            const m = await _().get(
+              c.TS.STORE_BASE_URL + "promotion/ajaxhasclaimedgenresticker",
               { params: { genre: e }, cancelToken: r?.token },
             );
-            if (200 == m?.status && 1 == m.data?.success && m.data?.results) {
+            if (200 == m?.status && m.data?.success == u.R && m.data?.results) {
               const r = m.data.results;
               return void this.m_mapGenreToStickerResponse.set(e, r);
             }
@@ -124,23 +127,23 @@
           } catch (e) {
             t = e;
           }
-          const m = (0, S.H)(t);
+          const m = (0, n.H)(t);
           console.error("Could not check claim on genre", e, m.strErrorMsg, m);
         }
         async MakeClaimForGenre(e, r, t) {
-          if (!u.iA.logged_in) return 21;
+          if (!c.iA.logged_in) return u.Dy;
           const m = new FormData();
           m.append("genre", e.toString()),
             m.append("choice", r.toString()),
-            m.append("sessionid", u.TS.SESSIONID);
-          let _ = null;
+            m.append("sessionid", c.TS.SESSIONID);
+          let o = null;
           try {
-            const s = await o().post(
-              u.TS.STORE_BASE_URL + "promotion/ajaxclaimstickerforgenre",
+            const s = await _().post(
+              c.TS.STORE_BASE_URL + "promotion/ajaxclaimstickerforgenre",
               m,
               { withCredentials: !0, cancelToken: t?.token },
             );
-            if (200 == s?.status && 1 == s.data?.success && s.data?.results) {
+            if (200 == s?.status && s.data?.success == u.R && s.data?.results) {
               const t = s.data.results,
                 m = this.m_mapGenreToStickerResponse.get(e);
               return (
@@ -150,62 +153,62 @@
                 s.data.success
               );
             }
-            _ = { response: s };
+            o = { response: s };
           } catch (e) {
-            _ = e;
+            o = e;
           }
-          const s = (0, S.H)(_);
+          const s = (0, n.H)(o);
           return (
             console.error("Could not make claim on genre", e, s.strErrorMsg, s),
-            _?.data?.success || 2
+            o?.data?.success || u.zi
           );
         }
       }
-      function n() {
-        return i.Get().GetStoryBadgeGranted();
-      }
-      function c() {
-        return i.Get().GetLocalizedStoryHeader();
-      }
-      function l() {
-        return i.Get().GetLocalizedStoryHeaderMobile();
-      }
       function g() {
-        return i.Get().GetAllGenreChoices();
+        return l.Get().GetStoryBadgeGranted();
       }
-      function d(e) {
+      function d() {
+        return l.Get().GetLocalizedStoryHeader();
+      }
+      function y() {
+        return l.Get().GetLocalizedStoryHeaderMobile();
+      }
+      function P() {
+        return l.Get().GetAllGenreChoices();
+      }
+      function p(e) {
         const r = a.useRef(null);
         a.useEffect(() => {
-          const e = o().CancelToken.source();
+          const e = _().CancelToken.source();
           return (r.current = e), () => e.cancel("useGenreClaim: unmounting");
         }, []),
-          i.Get().LoadClaimForGenre(e, r.current);
+          l.Get().LoadClaimForGenre(e, r.current);
         return [
-          i.Get().GetClaimForGenre(e),
+          l.Get().GetClaimForGenre(e),
           async (t) => {
-            await i.Get().MakeClaimForGenre(e, t, r.current);
+            await l.Get().MakeClaimForGenre(e, t, r.current);
           },
         ];
       }
-      (0, m.Cg)([s.sH], i.prototype, "m_mapGenreToStickerResponse", void 0),
-        (0, m.Cg)([s.sH], i.prototype, "m_eStoryBadgeGranted", void 0);
-      const y = 1658760;
-      function P(e) {
-        const [r] = d(e);
+      (0, m.Cg)([s.sH], l.prototype, "m_mapGenreToStickerResponse", void 0),
+        (0, m.Cg)([s.sH], l.prototype, "m_eStoryBadgeGranted", void 0);
+      const h = 1658760;
+      function B(e) {
+        const [r] = p(e);
         return r?.sticker_def
-          ? `${u.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${y}/${r.sticker_def.item_image_small}`
+          ? `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${h}/${r.sticker_def.item_image_small}`
           : null;
       }
-      function p(e) {
-        return !e || e >= B.length ? null : B[e];
+      function N(e) {
+        return !e || e >= G.length ? null : G[e];
       }
-      function h() {
-        return B.slice(1);
+      function O() {
+        return G.slice(1);
       }
-      const B = [
+      const G = [
         null,
         {
-          eGenre: 1,
+          eGenre: i.oT.XR,
           strPageTitle: "#Summer21_Story_Action_Title",
           strPageNumber: "#Summer21_Story_Action_Pg",
           strPageText: "#Summer21_Story_Action_Intro",
@@ -220,7 +223,7 @@
           strGenreName: "#Summer21_Story_Action_Genre",
         },
         {
-          eGenre: 2,
+          eGenre: i.oT.x7,
           strPageTitle: "#Summer21_Story_Adventure_Title",
           strPageNumber: "#Summer21_Story_Adventure_Pg",
           strPageText: "#Summer21_Story_Adventure_Intro",
@@ -235,7 +238,7 @@
           strGenreName: "#Summer21_Story_Adventure_Genre",
         },
         {
-          eGenre: 3,
+          eGenre: i.oT.r,
           strPageTitle: "#Summer21_Story_RPG_Title",
           strPageNumber: "#Summer21_Story_RPG_Pg",
           strPageText: "#Summer21_Story_RPG_Intro",
@@ -250,7 +253,7 @@
           strGenreName: "#Summer21_Story_RPG_Genre",
         },
         {
-          eGenre: 4,
+          eGenre: i.oT.mj,
           strPageTitle: "#Summer21_Story_Strategy_Title",
           strPageNumber: "#Summer21_Story_Strategy_Pg",
           strPageText: "#Summer21_Story_Strategy_Intro",
@@ -265,7 +268,7 @@
           strGenreName: "#Summer21_Story_Strategy_Genre",
         },
         {
-          eGenre: 5,
+          eGenre: i.oT.W,
           strPageTitle: "#Summer21_Story_Sim_Title",
           strPageNumber: "#Summer21_Story_Sim_Pg",
           strPageText: "#Summer21_Story_Sim_Intro",
@@ -280,7 +283,7 @@
           strGenreName: "#Summer21_Story_Sim_Genre",
         },
         {
-          eGenre: 6,
+          eGenre: i.oT.zE,
           strPageTitle: "#Summer21_Story_Sports_Title",
           strPageNumber: "#Summer21_Story_Sports_Pg",
           strPageText: "#Summer21_Story_Sports_Intro",
@@ -295,7 +298,7 @@
           strGenreName: "#Summer21_Story_Sports_Genre",
         },
         {
-          eGenre: 7,
+          eGenre: i.oT.xJ,
           strPageTitle: "#Summer21_Story_Horror_Title",
           strPageNumber: "#Summer21_Story_Horror_Pg",
           strPageText: "#Summer21_Story_Horror_Intro",
@@ -310,7 +313,7 @@
           strGenreName: "#Summer21_Story_Horror_Genre",
         },
         {
-          eGenre: 8,
+          eGenre: i.oT.hK,
           strPageTitle: "#Summer21_Story_Survival_Title",
           strPageNumber: "#Summer21_Story_Survival_Pg",
           strPageText: "#Summer21_Story_Survival_Intro",
@@ -325,7 +328,7 @@
           strGenreName: "#Summer21_Story_Survival_Genre",
         },
         {
-          eGenre: 9,
+          eGenre: i.oT.Bk,
           strPageTitle: "#Summer21_Story_Open_Title",
           strPageNumber: "#Summer21_Story_Open_Pg",
           strPageText: "#Summer21_Story_Open_Intro",
@@ -340,7 +343,7 @@
           strGenreName: "#Summer21_Story_Open_Genre",
         },
         {
-          eGenre: 10,
+          eGenre: i.oT.PQ,
           strPageTitle: "#Summer21_Story_SciFi_Title",
           strPageNumber: "#Summer21_Story_SciFi_Pg",
           strPageText: "#Summer21_Story_SciFi_Intro",
@@ -355,7 +358,7 @@
           strGenreName: "#Summer21_Story_SciFi_Genre",
         },
         {
-          eGenre: 11,
+          eGenre: i.oT.QB,
           strPageTitle: "#Summer21_Story_Mystery_Title",
           strPageNumber: "#Summer21_Story_Mystery_Pg",
           strPageText: "#Summer21_Story_Mystery_Intro",
@@ -370,7 +373,7 @@
           strGenreName: "#Summer21_Story_Mystery_Genre",
         },
         {
-          eGenre: 12,
+          eGenre: i.oT.LK,
           strPageTitle: "#Summer21_Story_Space_Title",
           strPageNumber: "#Summer21_Story_Space_Pg",
           strPageText: "#Summer21_Story_Space_Intro",
@@ -385,7 +388,7 @@
           strGenreName: "#Summer21_Story_Space_Genre",
         },
         {
-          eGenre: 13,
+          eGenre: i.oT.Ou,
           strPageTitle: "#Summer21_Story_Roguelike_Title",
           strPageNumber: "#Summer21_Story_Roguelike_Pg",
           strPageText: "#Summer21_Story_Roguelike_Intro",
@@ -400,7 +403,7 @@
           strGenreName: "#Summer21_Story_Roguelike_Genre",
         },
         {
-          eGenre: 14,
+          eGenre: i.oT.Bc,
           strPageTitle: "#Summer21_Story_Anime_Title",
           strPageNumber: "#Summer21_Story_Anime_Pg",
           strPageText: "#Summer21_Story_Anime_Intro",
@@ -415,7 +418,7 @@
           strGenreName: "#Summer21_Story_Anime_Genre",
         },
       ];
-      function N() {
+      function T() {
         a.useEffect(() => {
           const e = document.createElement("link");
           (e.rel = "stylesheet"),
@@ -427,62 +430,64 @@
     },
     90428: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => u });
+      t.r(r), t.d(r, { default: () => n });
       var m = t(7850),
-        _ = t(90444),
-        o = t(52038),
-        s = t(61859),
-        a = t(78327),
-        S = t(42919);
-      const u = () => {
-          (0, _.PB)();
-          const e = (0, _.iG)(),
-            r = (0, _.E4)(),
-            t = (0, _.cZ)(),
-            u = (0, _.ib)(),
-            c = [],
-            l = [];
+        o = t(42457),
+        _ = t(40259),
+        s = t(90444),
+        a = t(52038),
+        u = t(61859),
+        S = t(78327),
+        i = t(42919);
+      const n = () => {
+          (0, s.PB)();
+          const e = (0, s.iG)(),
+            r = (0, s.E4)(),
+            t = (0, s.cZ)(),
+            o = (0, s.ib)(),
+            n = [],
+            g = [];
           r.forEach((r) => {
             const t = r.eGenre,
-              _ = a.TS.STORE_BASE_URL + "sale/" + r.strSalePage;
-            let o = (0, s.PP)(
+              o = S.TS.STORE_BASE_URL + "sale/" + r.strSalePage;
+            let s = (0, u.PP)(
               "#Summer_21_Story_Enter",
-              (0, m.jsx)("span", { children: (0, s.we)(r.strGenreName) }),
+              (0, m.jsx)("span", { children: (0, u.we)(r.strGenreName) }),
             );
             if (e.has(t)) {
-              let s = "";
-              1 == e.get(t).choice
-                ? (s = r.strResultA + "_Summary")
-                : 2 == e.get(t).choice && (s = r.strResultB + "_Summary"),
-                c.push(
+              let a = "";
+              e.get(t).choice == _.f$.rg
+                ? (a = r.strResultA + "_Summary")
+                : e.get(t).choice == _.f$.kE && (a = r.strResultB + "_Summary"),
+                n.push(
                   (0, m.jsx)(
-                    n,
+                    l,
                     {
-                      strSubheader: o,
+                      strSubheader: s,
                       bClaimed: !0,
                       strBackgroundColor: r.strBackgroundColor,
                       eGenre: r.eGenre,
                       strTitle: r.strPageTitle,
-                      strSaleURL: _,
-                      strSummary: s,
+                      strSaleURL: o,
+                      strSummary: a,
                     },
                     t,
                   ),
                 );
             } else {
               let e = "";
-              l.length || (e = "next"),
-                l.push(
+              g.length || (e = "next"),
+                g.push(
                   (0, m.jsx)(
-                    n,
+                    l,
                     {
                       strID: e,
-                      strSubheader: o,
+                      strSubheader: s,
                       strBackgroundColor: "#7C5F5A",
                       bClaimed: !1,
                       eGenre: r.eGenre,
                       strTitle: r.strPageTitle,
-                      strSaleURL: _,
+                      strSaleURL: o,
                       strSummary: "#Summer_21_Story_Next_Intro",
                     },
                     t,
@@ -490,242 +495,242 @@
                 );
             }
           });
-          let g = c.concat(l);
+          let d = n.concat(g);
           return (0, m.jsx)("div", {
-            className: (0, o.A)(S.PageOuterContainer, a.TS.LANGUAGE),
+            className: (0, a.A)(i.PageOuterContainer, S.TS.LANGUAGE),
             children: (0, m.jsxs)("div", {
-              className: S.PageInnerContainer,
+              className: i.PageInnerContainer,
               children: [
                 (0, m.jsxs)("a", {
-                  href: a.TS.STORE_BASE_URL,
+                  href: S.TS.STORE_BASE_URL,
                   children: [
                     t &&
                       (0, m.jsx)("img", {
-                        className: S.LocalizedHeaderImg,
+                        className: i.LocalizedHeaderImg,
                         src: t,
                       }),
-                    u &&
+                    o &&
                       (0, m.jsx)("img", {
-                        className: S.LocalizedHeaderMobileImg,
-                        src: u,
+                        className: i.LocalizedHeaderMobileImg,
+                        src: o,
                       }),
                   ],
                 }),
                 (0, m.jsxs)("div", {
-                  className: S.PageInnerBG,
+                  className: i.PageInnerBG,
                   children: [
                     (0, m.jsxs)("div", {
-                      className: S.PageInnerContent,
+                      className: i.PageInnerContent,
                       children: [
                         (0, m.jsxs)("div", {
-                          className: S.HeaderContainer,
+                          className: i.HeaderContainer,
                           children: [
                             (0, m.jsx)("div", {
-                              className: S.HeaderPrefix,
-                              children: (0, s.we)(
+                              className: i.HeaderPrefix,
+                              children: (0, u.we)(
                                 "#Summer_21_Overview_Title_Prefix",
                               ),
                             }),
-                            (0, s.we)("#Summer_21_Overview_Title"),
+                            (0, u.we)("#Summer_21_Overview_Title"),
                           ],
                         }),
                         (0, m.jsx)("div", {
-                          className: (0, o.A)(S.HeaderDesc, S.Noto),
-                          children: (0, s.we)(
+                          className: (0, a.A)(i.HeaderDesc, i.Noto),
+                          children: (0, u.we)(
                             "#Summer_21_Overview_Description1",
                           ),
                         }),
                         (0, m.jsx)("div", {
-                          className: (0, o.A)(S.HeaderDesc, S.Noto),
-                          children: (0, s.we)(
+                          className: (0, a.A)(i.HeaderDesc, i.Noto),
+                          children: (0, u.we)(
                             "#Summer_21_Overview_Description3",
                           ),
                         }),
                         (0, m.jsx)("div", {
-                          className: (0, o.A)(S.HeaderDesc, S.Noto),
-                          children: (0, s.we)(
+                          className: (0, a.A)(i.HeaderDesc, i.Noto),
+                          children: (0, u.we)(
                             "#Summer_21_Overview_Description4",
                           ),
                         }),
                         (0, m.jsxs)("a", {
                           id: "wallpapers",
                           href:
-                            a.TS.MEDIA_CDN_URL +
+                            S.TS.MEDIA_CDN_URL +
                             "store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip",
-                          className: (0, o.A)(
-                            S.HeaderDesc,
-                            S.Noto,
-                            S.Wallpapers,
+                          className: (0, a.A)(
+                            i.HeaderDesc,
+                            i.Noto,
+                            i.Wallpapers,
                           ),
                           children: [
                             "*",
-                            (0, s.we)("#Summer21_Story_DownloadWallpaper"),
+                            (0, u.we)("#Summer21_Story_DownloadWallpaper"),
                           ],
                         }),
                         (0, m.jsx)("div", {
-                          className: (0, o.A)(S.HeaderIntro, S.Noto),
-                          children: (0, s.we)(
+                          className: (0, a.A)(i.HeaderIntro, i.Noto),
+                          children: (0, u.we)(
                             "#Summer_21_Overview_Description2",
                           ),
                         }),
                         (0, m.jsx)("div", {
-                          className: (0, o.A)(S.HeaderIntro, S.Noto),
-                          children: (0, s.we)("#Summer_21_Story_Intro"),
+                          className: (0, a.A)(i.HeaderIntro, i.Noto),
+                          children: (0, u.we)("#Summer_21_Story_Intro"),
                         }),
                         (0, m.jsx)("div", {
-                          className: (0, o.A)(S.ListHeader, S.Noto),
-                          children: (0, s.we)("#Summer_21_Story_Next"),
+                          className: (0, a.A)(i.ListHeader, i.Noto),
+                          children: (0, u.we)("#Summer_21_Story_Next"),
                         }),
                         (0, m.jsx)("div", {
-                          className: (0, o.A)(S.GenreListContainer),
-                          children: g,
+                          className: (0, a.A)(i.GenreListContainer),
+                          children: d,
                         }),
                       ],
                     }),
-                    (0, m.jsx)(i, {}),
+                    (0, m.jsx)(c, {}),
                   ],
                 }),
               ],
             }),
           });
         },
-        i = (e) => {
-          const r = (0, _._l)();
+        c = (e) => {
+          const r = (0, s._l)();
           let t;
-          if (51 == r)
+          if (r == o.GP.zI)
             t = {
               badge_name: "#Summer21_Badge_Outcome1_Title",
               badge_desc: "#Summer21_Badge_Outcome1_Description",
-              badge_class: S.Badge_51,
+              badge_class: i.Badge_51,
             };
-          else if (52 == r)
+          else if (r == o.GP.sG)
             t = {
               badge_name: "#Summer21_Badge_Outcome2_Title",
               badge_desc: "#Summer21_Badge_Outcome2_Description",
-              badge_class: S.Badge_52,
+              badge_class: i.Badge_52,
             };
-          else if (53 == r)
+          else if (r == o.GP.Ms)
             t = {
               badge_name: "#Summer21_Badge_Outcome3_Title",
               badge_desc: "#Summer21_Badge_Outcome3_Description",
-              badge_class: S.Badge_53,
+              badge_class: i.Badge_53,
             };
-          else if (54 == r)
+          else if (r == o.GP.WK)
             t = {
               badge_name: "#Summer21_Badge_Outcome4_Title",
               badge_desc: "#Summer21_Badge_Outcome4_Description",
-              badge_class: S.Badge_54,
+              badge_class: i.Badge_54,
             };
           else {
-            if (55 != r) return null;
+            if (r != o.GP.ER) return null;
             t = {
               badge_name: "#Summer21_Badge_Outcome5_Title",
               badge_desc: "#Summer21_Badge_Outcome5_Description",
-              badge_class: S.Badge_55,
+              badge_class: i.Badge_55,
             };
           }
           return (0, m.jsxs)(m.Fragment, {
             children: [
               (0, m.jsx)("div", {
-                className: (0, o.A)(
-                  S.HeaderDesc,
-                  S.Noto,
-                  S.CompletedSummaryText,
+                className: (0, a.A)(
+                  i.HeaderDesc,
+                  i.Noto,
+                  i.CompletedSummaryText,
                 ),
-                children: (0, s.we)("#Summer21_Badge_Unlocked_Description"),
+                children: (0, u.we)("#Summer21_Badge_Unlocked_Description"),
               }),
               (0, m.jsxs)("div", {
                 id: "badge",
-                className: (0, o.A)(S.BadgeContainer, S.Noto),
+                className: (0, a.A)(i.BadgeContainer, i.Noto),
                 children: [
                   (0, m.jsxs)("div", {
-                    className: S.Column,
+                    className: i.Column,
                     children: [
                       (0, m.jsx)("div", {
-                        className: S.SubHeader,
-                        children: (0, s.we)("#Summer21_Badge_Prelude"),
+                        className: i.SubHeader,
+                        children: (0, u.we)("#Summer21_Badge_Prelude"),
                       }),
                       (0, m.jsx)("div", {
-                        className: S.BadgeName,
-                        children: (0, s.we)(t.badge_name),
+                        className: i.BadgeName,
+                        children: (0, u.we)(t.badge_name),
                       }),
                       (0, m.jsx)("div", {
-                        className: S.BadgeDesc,
-                        children: (0, s.we)(t.badge_desc),
+                        className: i.BadgeDesc,
+                        children: (0, u.we)(t.badge_desc),
                       }),
                     ],
                   }),
                   (0, m.jsxs)("div", {
-                    className: S.Column,
+                    className: i.Column,
                     children: [
                       (0, m.jsx)("a", {
-                        className: (0, o.A)(S.BadgeImg, t.badge_class),
-                        href: a.TS.COMMUNITY_BASE_URL + "my/badges/" + r,
+                        className: (0, a.A)(i.BadgeImg, t.badge_class),
+                        href: S.TS.COMMUNITY_BASE_URL + "my/badges/" + r,
                       }),
                       (0, m.jsx)("div", {
-                        className: S.BadgeText,
-                        children: (0, s.we)("#Summer21_Badge_Congrats1"),
+                        className: i.BadgeText,
+                        children: (0, u.we)("#Summer21_Badge_Congrats1"),
                       }),
                       (0, m.jsx)("div", {
-                        className: S.BadgeText,
-                        children: (0, s.we)("#Summer21_Badge_Congrats2"),
+                        className: i.BadgeText,
+                        children: (0, u.we)("#Summer21_Badge_Congrats2"),
                       }),
                       (0, m.jsx)("a", {
-                        className: S.BadgeLink,
-                        href: a.TS.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
-                        children: (0, s.we)("#Summer21_Badge_View"),
+                        className: i.BadgeLink,
+                        href: S.TS.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
+                        children: (0, u.we)("#Summer21_Badge_View"),
                       }),
                       (0, m.jsx)("a", {
-                        className: S.FrameExample,
-                        href: a.TS.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
+                        className: i.FrameExample,
+                        href: S.TS.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
                       }),
                     ],
                   }),
                 ],
               }),
               (0, m.jsx)("div", {
-                className: (0, o.A)(S.TheEnd, S.Noto),
-                children: (0, s.we)("#Summer21_Story_End"),
+                className: (0, a.A)(i.TheEnd, i.Noto),
+                children: (0, u.we)("#Summer21_Story_End"),
               }),
             ],
           });
         },
-        n = (e) => {
-          const r = (0, _.PU)(e.eGenre);
+        l = (e) => {
+          const r = (0, s.PU)(e.eGenre);
           return (0, m.jsxs)("a", {
             id: e.strID,
             href: e.strSaleURL,
             style: { backgroundColor: `${e.strBackgroundColor}` },
-            className: (0, o.A)(S.GenreContainer, S.Claimed),
+            className: (0, a.A)(i.GenreContainer, i.Claimed),
             children: [
               (0, m.jsxs)("div", {
-                className: S.LeftColumn,
+                className: i.LeftColumn,
                 children: [
                   (0, m.jsx)("div", {
-                    className: (0, o.A)(S.GenreSubheader, S.Noto),
+                    className: (0, a.A)(i.GenreSubheader, i.Noto),
                     children: e.strSubheader,
                   }),
                   (0, m.jsx)("div", {
-                    className: S.GenreTitle,
-                    children: (0, s.we)(e.strTitle),
+                    className: i.GenreTitle,
+                    children: (0, u.we)(e.strTitle),
                   }),
                   (0, m.jsx)("div", {
-                    className: (0, o.A)(S.GenreStory, S.Noto),
-                    children: (0, s.we)(e.strSummary),
+                    className: (0, a.A)(i.GenreStory, i.Noto),
+                    children: (0, u.we)(e.strSummary),
                   }),
                 ],
               }),
               (0, m.jsxs)("div", {
-                className: S.RightColumn,
+                className: i.RightColumn,
                 children: [
                   r &&
                     (0, m.jsx)("div", {
-                      className: S.StickerPreview,
+                      className: i.StickerPreview,
                       style: { backgroundImage: `url(${r})` },
                     }),
                   !e.bClaimed &&
                     (0, m.jsx)("div", {
-                      className: (0, o.A)(S.StickerPreview, S.Unclaimed),
+                      className: (0, a.A)(i.StickerPreview, i.Unclaimed),
                     }),
                 ],
               }),

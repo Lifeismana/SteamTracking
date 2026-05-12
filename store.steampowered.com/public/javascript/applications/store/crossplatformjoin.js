@@ -71,41 +71,42 @@
       var t = s(78327),
         c = s(22837);
       function i() {
-        return t.TS.IN_CLIENT && (0, c.DO)(t.TS.LAUNCHER_TYPE);
+        return t.TS.IN_CLIENT && (0, c.DOG)(t.TS.LAUNCHER_TYPE);
       }
     },
     82477: (e, r, s) => {
       "use strict";
-      s.d(r, { Cg: () => u, pZ: () => m, vg: () => b });
+      s.d(r, { Cg: () => b, pZ: () => p, vg: () => m });
       var t = s(7850),
         c = s(90626),
         i = s(738),
         o = s(61859),
         n = s(78327),
-        a = s(97436),
-        l = s(72034),
-        d = s(28240),
-        f = s(51706);
-      function h(e) {
+        a = s(92120),
+        l = s(51883),
+        d = s(72034),
+        f = s(28240),
+        h = s(51706);
+      function u(e) {
         return (0, t.jsx)(i.x_, {
           onEscKeypress: e.closeModal,
           bDisableBackgroundDismiss: !0,
-          children: (0, t.jsx)(p, {
+          children: (0, t.jsx)(x, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
         });
       }
-      function u(e) {
+      function b(e) {
         const { redirectURL: r = window.location.href } = e;
-        return (0, t.jsx)(f.EN, {
+        return (0, t.jsx)(h.EN, {
           active: !0,
-          children: (0, t.jsx)(h, { redirectURL: r }),
+          children: (0, t.jsx)(u, { redirectURL: r }),
         });
       }
-      function b() {
+      function m() {
         (0, i.pg)(
-          (0, t.jsx)(h, {
+          (0, t.jsx)(u, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -113,29 +114,29 @@
           { strTitle: (0, o.we)("#Login_SignInTitle") },
         );
       }
-      function m(e, r) {
+      function p(e, r) {
         (0, i.pg)(
-          (0, t.jsx)(h, { ownerWin: window, redirectURL: e, guestOption: r }),
+          (0, t.jsx)(u, { ownerWin: window, redirectURL: e, guestOption: r }),
           window,
           { strTitle: (0, o.we)("#Login_SignInTitle") },
         );
       }
-      function p(e) {
+      function x(e) {
         const { redirectURL: r, guestOption: s } = e,
           [i] = (0, c.useState)(
-            new l.D(n.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new d.D(n.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [o, f] = (0, c.useState)(!1);
+          [o, h] = (0, c.useState)(!1);
         return (0, t.jsx)("div", {
           children: o
             ? (0, t.jsx)(a.Fn, {})
             : (0, t.jsx)(a.YN, {
                 autoFocus: !0,
                 transport: i,
-                platform: 2,
+                platform: l.SS.tS,
                 onComplete: (e) => {
-                  e == d.wI.k_PrimaryDomainFail
-                    ? f(!0)
+                  e == f.wI.k_PrimaryDomainFail
+                    ? h(!0)
                     : window.location.assign(r);
                 },
                 redirectUrl: r,
@@ -561,7 +562,7 @@
     },
     40917: (e, r, s) => {
       "use strict";
-      s.r(r), s.d(r, { default: () => E });
+      s.r(r), s.d(r, { default: () => z });
       var t = s(7850),
         c = s(9054),
         i = s.n(c),
@@ -571,19 +572,20 @@
         l = s(58632),
         d = s.n(l),
         f = s(80902),
-        h = s(56545),
-        u = s(37403),
-        b = s(30470),
-        m = s(22837);
-      let p;
-      const x = 864e5;
-      function j(e) {
-        return `appinfo_${e}_${b.TS.LANGUAGE}`;
-      }
+        h = s(37085),
+        u = s(56545),
+        b = s(34214),
+        m = s(30470),
+        p = s(22837);
+      let x;
+      const j = 864e5;
       function _(e) {
-        return Boolean(e && Date.now() - e.timeCached < x);
+        return `appinfo_${e}_${m.TS.LANGUAGE}`;
       }
       function k(e) {
+        return Boolean(e && Date.now() - e.timeCached < j);
+      }
+      function N(e) {
         const r = (0, n.KV)(),
           s = (0, n.rX)();
         return (0, f.I)({
@@ -591,24 +593,24 @@
           queryFn: async () =>
             (function (e, r) {
               return (
-                p ||
-                  (p = new (d())(
+                x ||
+                  (x = new (d())(
                     async (s) => {
                       const t = new Map();
-                      (await Promise.all(s.map((e) => r.GetObject(j(e)))))
-                        .filter(_)
+                      (await Promise.all(s.map((e) => r.GetObject(_(e)))))
+                        .filter(k)
                         .forEach(({ value: e }) => t.set(e.appid, e));
                       const c = s.slice().filter((e) => !t.has(e));
                       if (c.length) {
-                        const s = h.w.Init(u._z);
-                        s.Body().set_language((0, m.sf)(b.TS.LANGUAGE)),
+                        const s = u.w.Init(b._z);
+                        s.Body().set_language((0, p.sfN)(m.TS.LANGUAGE)),
                           s.Body().set_appids(c);
-                        const i = await u.BE.GetApps(e, s);
-                        if (1 != i.GetEResult()) throw i.GetErrorMessage();
+                        const i = await b.BE.GetApps(e, s);
+                        if (i.GetEResult() != h.R) throw i.GetErrorMessage();
                         i.Body()
                           .toObject()
                           .apps.forEach((e) => {
-                            r.StoreObject(j(e.appid), {
+                            r.StoreObject(_(e.appid), {
                               timeCached: Date.now(),
                               value: e,
                             }),
@@ -619,39 +621,39 @@
                     },
                     { cache: !1 },
                   )),
-                p
+                x
               );
             })(r, s).load(e),
-          staleTime: x,
+          staleTime: j,
           enabled: !!e,
         }).data;
       }
-      var N = s(79908),
-        L = s(61859),
-        S = s(82477),
-        T = s(56283),
-        g = s(22797),
-        v = s(78327);
-      function M(e) {
+      var L = s(96873),
+        S = s(61859),
+        T = s(82477),
+        g = s(56283),
+        v = s(22797),
+        M = s(78327);
+      function w(e) {
         return `?joinsessionid=${e}`;
       }
-      function w(e) {
-        return (0, t.jsx)(T.$n, {
+      function I(e) {
+        return (0, t.jsx)(g.$n, {
           className: i().JoinSessionButton,
           onClick: () =>
             (window.location.href =
-              `steam://launch/${e.steamAppId}` + M(e.sessionID)),
+              `steam://launch/${e.steamAppId}` + w(e.sessionID)),
           children: e.children,
         });
       }
-      function I(e) {
-        const r = (0, N.Vc)(),
+      function y(e) {
+        const r = (0, L.Vc)(),
           s = (0, n.KV)();
         return r.isSuccess
           ? r.data?.sessions?.length > 0
             ? (0, t.jsxs)(t.Fragment, {
                 children: [
-                  (0, t.jsx)(T.JU, {
+                  (0, t.jsx)(g.JU, {
                     className: i().AvailableSessionsText,
                     children: "Available Steam Sessions:",
                   }),
@@ -671,14 +673,14 @@
                               className: i().OsName,
                               children: r.os_name,
                             }),
-                            (0, t.jsx)(T.$n, {
+                            (0, t.jsx)(g.$n, {
                               className: i().JoinSessionButton,
                               onClick: () =>
-                                (0, N.o6)(
+                                (0, L.o6)(
                                   s,
                                   r.client_instanceid,
                                   e.steamAppId,
-                                  M(e.sessionID),
+                                  w(e.sessionID),
                                 ),
                               children: "Launch Game",
                             }),
@@ -695,14 +697,14 @@
                 children: "No logged in sessions",
               })
           : r.isFetching || r.isRefetching
-            ? (0, t.jsx)(g.t, {})
+            ? (0, t.jsx)(v.t, {})
             : (0, t.jsxs)("div", {
                 className: i().Error,
                 children: ["Error ", r.error.message],
               });
       }
-      function y(e) {
-        const r = k(e.steamAppId);
+      function E(e) {
+        const r = N(e.steamAppId);
         return r
           ? (0, t.jsxs)(t.Fragment, {
               children: [
@@ -722,10 +724,10 @@
                   className: i().SessionInfoCtr,
                   children: (0, t.jsx)("iframe", { src: e.sessionLiveDataUrl }),
                 }),
-                v.TS.IN_CLIENT
+                M.TS.IN_CLIENT
                   ? (0, t.jsx)("div", {
                       className: i().SectionCtr,
-                      children: (0, t.jsx)(w, {
+                      children: (0, t.jsx)(I, {
                         ...e,
                         children: "Launch Game",
                       }),
@@ -734,28 +736,28 @@
                       children: [
                         (0, t.jsx)("div", {
                           className: i().SectionCtr,
-                          children: v.iA.logged_in
-                            ? (0, t.jsx)(I, { ...e })
+                          children: M.iA.logged_in
+                            ? (0, t.jsx)(y, { ...e })
                             : (0, t.jsxs)(t.Fragment, {
                                 children: [
-                                  (0, t.jsx)(T.JU, {
+                                  (0, t.jsx)(g.JU, {
                                     children: "Login to join on another device",
                                   }),
-                                  (0, t.jsx)(T.$n, {
-                                    onClick: S.vg,
-                                    children: (0, L.we)("#Login_SignIn"),
+                                  (0, t.jsx)(g.$n, {
+                                    onClick: T.vg,
+                                    children: (0, S.we)("#Login_SignIn"),
                                   }),
                                 ],
                               }),
                         }),
-                        !v.TS.IN_MOBILE_WEBVIEW &&
+                        !M.TS.IN_MOBILE_WEBVIEW &&
                           (0, t.jsxs)("div", {
                             className: i().SectionCtr,
                             children: [
-                              (0, t.jsx)(T.JU, {
+                              (0, t.jsx)(g.JU, {
                                 children: "Or launch on this PC",
                               }),
-                              (0, t.jsx)(w, {
+                              (0, t.jsx)(I, {
                                 ...e,
                                 children: "Launch Game Here",
                               }),
@@ -765,10 +767,10 @@
                     }),
               ],
             })
-          : (0, t.jsx)(g.t, {});
+          : (0, t.jsx)(v.t, {});
       }
-      function E() {
-        const e = (0, v.Tc)("multiplayersession_join", "application_config"),
+      function z() {
+        const e = (0, M.Tc)("multiplayersession_join", "application_config"),
           r = new URLSearchParams((0, o.zy)().search).get("jws"),
           { header: s, body: c } = (0, a.I3)(r) || { header: {}, body: {} };
         let { steamAppId: n } = c;
@@ -780,7 +782,7 @@
             className: i().JoinApp,
             children: [
               n && d && d
-                ? (0, t.jsx)(y, {
+                ? (0, t.jsx)(E, {
                     steamAppId: n,
                     sessionLiveDataUrl: d,
                     sessionID: l,

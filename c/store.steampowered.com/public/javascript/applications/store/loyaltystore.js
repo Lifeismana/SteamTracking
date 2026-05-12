@@ -1428,10 +1428,11 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       let _ = {
         success: !0,
-        result: 1,
+        result: _._,
       };
       class _ {
         m_mapWaitingCallbacks = new Map();
@@ -1522,7 +1523,7 @@
                   message: "GetClientInfo",
                 })
                   .then((_) => {
-                    1 == _.success
+                    _.success == _._
                       ? ((this.m_ClientInfo.ulVersion = _.clientversion),
                         (this.m_ClientInfo.bFriendsUIEnabled = !!_.friendsui),
                         (this.m_ClientInfo.unAccountID = _.accountid),
@@ -1551,7 +1552,7 @@
       }
       let _ = new (class {
         m_connection = new _();
-        FailureResult(_ = 2) {
+        FailureResult(_ = _._) {
           let _ = {
             success: !1,
             result: _,
@@ -1563,7 +1564,7 @@
             this.m_connection &&
               !this.m_connection.connected_to_client &&
               (_.connect_failed = !0),
-            7 == _ && (_.call_unsupported = !0),
+            _ == _._ && (_.call_unsupported = !0),
             _
           );
         }
@@ -1618,7 +1619,7 @@
           };
           return this.GenericEResultCall(_, !0).then((_) => {
             if (_.connect_failed) return;
-            let _ = 1 == _.result;
+            let _ = _.result == _._;
             return this.m_mapCacheSubscribedApp.set(_, _), _;
           });
         }
@@ -1647,13 +1648,13 @@
               _ && !this.BClientAccountMatches()
                 ? {
                     success: !1,
-                    result: 19,
+                    result: _._,
                     account_mismatch: !0,
                   }
                 : this.m_connection
                     .SendMsgAndAwaitResponse(_)
                     .then((_) =>
-                      1 === _.success ? _ : this.FailureResult(_.success),
+                      _.success === _._ ? _ : this.FailureResult(_.success),
                     ),
             )
             .catch(() => this.FailureResult());
@@ -1842,6 +1843,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _.jsx)(_._, {
@@ -1899,7 +1901,7 @@
             : (0, _.jsx)(_._, {
                 autoFocus: !0,
                 transport: _,
-                platform: 2,
+                platform: _._._,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail
                     ? _(!0)
@@ -2071,6 +2073,115 @@
           scrollPadding: _,
         };
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        static GetScrollableClassname() {
+          return "vt-scrollable";
+        }
+        m_observer = null;
+        m_refElement = _.createRef();
+        m_elTracked = null;
+        m_bPreviouslyIntersecting = !1;
+        BTriggerOnce() {
+          return "once" == (this.props.trigger || "once");
+        }
+        GetBoundingClientRect() {
+          return this.m_refElement.current
+            ? this.m_refElement.current.getBoundingClientRect()
+            : null;
+        }
+        DestroyObserver() {
+          this.m_observer &&
+            (this.m_observer.disconnect(),
+            (this.m_observer = null),
+            (this.m_elTracked = null));
+        }
+        componentWillUnmount() {
+          this.DestroyObserver();
+        }
+        componentDidMount() {
+          this.UpdateObserver(null);
+        }
+        componentDidUpdate(_) {
+          this.UpdateObserver(_);
+        }
+        UpdateObserver(_) {
+          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
+          this.m_observer &&
+            _ &&
+            (_.rootMargin != this.m_observer.rootMargin ||
+              _.thresholds != this.m_observer.thresholds) &&
+            this.DestroyObserver();
+          let _ = this.m_refElement.current;
+          if (
+            (this.m_observer &&
+              _ != this.m_elTracked &&
+              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked = null)),
+            !this.m_observer && _)
+          ) {
+            let _ = {
+              root: this.FindScrollableAncestor(_),
+            };
+            this.props.rootMargin && (_.rootMargin = this.props.rootMargin),
+              this.props.thresholds && (_.threshold = this.props.thresholds),
+              (this.m_observer = (0, _._)(_, this.OnIntersection, _));
+          }
+          this.m_observer &&
+            _ &&
+            _ != this.m_elTracked &&
+            (this.m_observer.observe(_), (this.m_elTracked = _));
+        }
+        FindScrollableAncestor(_) {
+          return _._(_, (_) => {
+            const _ = this.props.horizontal
+              ? window.getComputedStyle(_).overflowX
+              : window.getComputedStyle(_).overflowY;
+            return (
+              "scroll" == _ ||
+              "auto" == _ ||
+              !!_.classList.contains(_.GetScrollableClassname())
+            );
+          });
+        }
+        OnIntersection(_, _) {
+          let _ = !1;
+          for (const _ of _)
+            if (_.isIntersecting) {
+              _ = !0;
+              break;
+            }
+          this.m_bPreviouslyIntersecting != _ &&
+            ((this.m_bPreviouslyIntersecting = _),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(_),
+            _ && this.BTriggerOnce() && this.DestroyObserver());
+        }
+        render() {
+          let {
+            onVisibilityChange: _,
+            rootMargin: _,
+            trigger: _,
+            horizontal: _,
+            ..._
+          } = this.props;
+          return (0, _.jsx)("div", {
+            ref: this.m_refElement,
+            ..._,
+            children: this.props.children,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2631,6 +2742,10 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -5037,6 +5152,9 @@
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
         __webpack_require__._ +
@@ -5046,35 +5164,35 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 2 === _._.EUNIVERSE ? 404860 : 1675200;
+      const _ = _._.EUNIVERSE === _._ ? 404860 : 1675200;
       function _(_, _ = !1) {
         const _ = (_) => (0, _._)(_ ? `${_}_Plural` : _);
         switch (_) {
-          case 4:
+          case _._:
             return __webpack_require__("#CommunityItemClass_Emoticon");
-          case 11:
+          case _._:
             return __webpack_require__("#CommunityItemClass_Sticker");
-          case 13:
+          case _._:
             return __webpack_require__(
               "#CommunityItemClass_MiniProfileBackground",
             );
-          case 3:
+          case _._:
             return __webpack_require__("#CommunityItemClass_Background");
-          case 12:
+          case _._:
             return __webpack_require__("#CommunityItemClass_ChatEffect");
-          case 14:
+          case _._:
             return __webpack_require__("#CommunityItemClass_AvatarFrame");
-          case 15:
+          case _._:
             return __webpack_require__("#CommunityItemClass_AnimatedAvatar");
-          case 1:
+          case _._:
             return __webpack_require__("#CommunityItemClass_Badge");
-          case 8:
+          case _._:
             return __webpack_require__("#CommunityItemClass_ProfileModifier");
-          case 16:
+          case _._:
             return __webpack_require__(
               "#CommunityItemClass_SteamDeckKeyboardSkin",
             );
-          case 17:
+          case _._:
             return __webpack_require__(
               "#CommunityItemClass_SteamDeckStartupMovie",
             );
@@ -5155,7 +5273,7 @@
             return _.Body().set_requests(_), _;
           },
           (_) =>
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? _.Body()
                   .responses()
                   .map((_) => _.toObject())
@@ -5171,7 +5289,7 @@
             return _.Body().set_filter_appids(_), _;
           },
           (_, _) => {
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._) {
               const { items: _ } = _.Body().toObject(),
                 _ = {};
               return (
@@ -5264,7 +5382,7 @@
             steamid: _._.steamid,
           });
           let _ = await _._.GetSummary(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._
             ? (this.m_lPointsAvailable = _._.fromString(
                 _.Body().summary().points(),
               ))
@@ -5282,7 +5400,7 @@
           this.m_bLoadedAwardCost = !0;
           const _ = _._.Init(_._);
           let _ = await _._.GetReactionConfig(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._
             ? ((this.m_unAwardPointsTransferred = 0),
               _.Body()
                 .reactions()
@@ -5402,7 +5520,7 @@
             _.set_include_direct_purchase_disabled(!0),
             _.forEach((_) => _.add_definitionids(_));
           const _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._
             ? (_.response.count !== _.response.total_count &&
                 console.error(
                   "LoadRewardDefinitions did not receive all expected definitions (likely to due server-side limiting). The calling code should be paging/batching the request into multiple.",
@@ -5414,7 +5532,7 @@
               []);
         }
         QueryRewardDefinitions(_, _, _) {
-          const _ = _.rewardtype ?? [1],
+          const _ = _.rewardtype ?? [_._._],
             _ = _._.Get().ExcludedContentDescriptor,
             _ = _._.Get().GetExcludedTagsSortedByID();
           let _ = this.QueryLoyaltyRewardDefinitions(
@@ -5442,17 +5560,17 @@
         }
         EResultToErrorMessage(_) {
           switch (_) {
-            case 15:
+            case _._:
               return (0, _._)("#Redeem_Error_AccessDenied");
-            case 24:
+            case _._:
               return (0, _._)("#Redeem_Error_InsufficientPrivileges");
-            case 107:
+            case _._:
               return (0, _._)("#Redeem_Error_InsufficientFunds");
-            case 29:
+            case _._:
               return (0, _._)("#Redeem_Error_DuplicateRequest");
-            case 26:
+            case _._:
               return (0, _._)("#Redeem_Error_Revoked");
-            case 11:
+            case _._:
               return (0, _._)("#Redeem_Error_PriceChange");
           }
           return "";
@@ -5513,7 +5631,7 @@
                     (_) =>
                       !(
                         (function (_) {
-                          if (5 === _.type || 6 === _.type)
+                          if (_.type === _._._ || _.type === _._._)
                             return _.bundle_defids &&
                               0 != _.bundle_defids.length
                               ? !_.bundle_discount &&
@@ -5527,19 +5645,19 @@
                                 !0);
                           const _ = _.community_item_data;
                           if (!_) return !0;
-                          if (1 === _.type) {
+                          if (_.type === _._._) {
                             let _ = !1;
                             switch (_.community_item_class) {
-                              case 11:
-                              case 14:
-                              case 15:
+                              case _._:
+                              case _._:
+                              case _._:
                                 _ = !_.item_image_small;
                                 break;
-                              case 4:
-                              case 16:
+                              case _._:
+                              case _._:
                                 _ = !_.item_image_large;
                                 break;
-                              case 3:
+                              case _._:
                                 _ = _.animated
                                   ? !(
                                       _.item_image_large ||
@@ -5550,7 +5668,7 @@
                                     )
                                   : !_.item_image_large;
                                 break;
-                              case 13:
+                              case _._:
                                 _ = !(
                                   _.item_image_large ||
                                   _.item_movie_mp4 ||
@@ -5559,7 +5677,7 @@
                                   _.item_movie_webm_small
                                 );
                                 break;
-                              case 17:
+                              case _._:
                                 _ =
                                   !_.item_image_large &&
                                   !_.item_movie_webm &&
@@ -5574,7 +5692,7 @@
                               );
                           }
                           return !1;
-                        })(_) && 4 !== _.type
+                        })(_) && _.type !== _._._
                       ),
                   ),
                   _ = this.m_mapAppRewards.get(_);
@@ -5634,7 +5752,7 @@
             _ && _.set_reward_types(_),
             _ && _.set_cursor(_);
           const _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._
             ? _.response
             : (console.error(
                 `Error when loading reward definitions: EResult=${_.eresult}`,
@@ -5684,11 +5802,11 @@
         async LoadSeasonalBadgeDefinition() {
           const _ = new _._();
           _.set_appids([this.GetCurrentSeasonalAppID()]),
-            _.set_community_item_classes([1]),
+            _.set_community_item_classes([_._]),
             _.set_count(1),
             _.set_language(_._.LANGUAGE);
           let _ = await this.m_batchedRewardItemLoader.Load(_);
-          if (1 == _.eresult) {
+          if (_.eresult == _._) {
             return _.response.definitions[0] || null;
           }
           return (
@@ -5710,11 +5828,11 @@
         async LoadGoldenProfileDefinition() {
           const _ = new _._();
           _.set_appids([this.GetCurrentSeasonalAppID()]),
-            _.set_community_item_classes([8]),
+            _.set_community_item_classes([_._]),
             _.set_count(1),
             _.set_language(_._.LANGUAGE);
           let _ = await this.m_batchedRewardItemLoader.Load(_);
-          if (1 == _.eresult) {
+          if (_.eresult == _._) {
             if (0 != _.response.count) {
               return _.response.definitions[0] || null;
             }
@@ -5745,11 +5863,11 @@
         async LoadCouponDefinitions() {
           const _ = new _._();
           _.set_appids([this.GetCurrentSeasonalAppID()]),
-            _.set_reward_types([4]),
+            _.set_reward_types([_._._]),
             _.set_count(10),
             _.set_language(_._.LANGUAGE);
           let _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._
             ? _.response.definitions
             : (console.error(
                 `Error when loading coupon definitions: EResult=${_.eresult}`,
@@ -5763,16 +5881,16 @@
             (_.point_cost = 0),
             (_.discount = _.bundle_discount),
             (_.items = this.GetRewardDefinitions(..._.bundle_defids)),
-            8 == _.community_item_class)
+            _.community_item_class == _._)
           ) {
             let _ = this.GetRewardDefinitions(_.defid);
             _.items = _.items.concat(_);
           }
           return (
             _.items.sort((_, _) =>
-              8 == _.community_item_class
+              _.community_item_class == _._
                 ? -1
-                : 8 == _.community_item_class
+                : _.community_item_class == _._
                   ? 1
                   : _.community_item_class - _.community_item_class,
             ),
@@ -5798,7 +5916,7 @@
             ),
           );
           if ((_ || this.GetCommunityItemInventory(_.appid), !_)) return !1;
-          if (5 == _.type || 6 == _.type) {
+          if (_.type == _._._ || _.type == _._._) {
             for (const _ of _.bundle_defids) {
               const _ = this.m_mapLoyaltyRewardDefs.get(_);
               if (_ && !this.BRewardOwnedByUser(_)) return !1;
@@ -5810,37 +5928,37 @@
         BRewardEquippedByUser(_) {
           if (!this.BRewardOwnedByUser(_)) return !1;
           switch (_.community_item_class) {
-            case 15:
+            case _._:
               return (
                 this.m_equippedItems.animated_avatar.appid == _.appid &&
                 this.m_equippedItems.animated_avatar.item_type ==
                   _.community_item_type
               );
-            case 14:
+            case _._:
               return (
                 this.m_equippedItems.avatar_frame.appid == _.appid &&
                 this.m_equippedItems.avatar_frame.item_type ==
                   _.community_item_type
               );
-            case 3:
+            case _._:
               return (
                 this.m_equippedItems.profile_background.appid == _.appid &&
                 this.m_equippedItems.profile_background.item_type ==
                   _.community_item_type
               );
-            case 13:
+            case _._:
               return (
                 this.m_equippedItems.mini_profile_background.appid == _.appid &&
                 this.m_equippedItems.mini_profile_background.item_type ==
                   _.community_item_type
               );
-            case 8:
+            case _._:
               return (
                 this.m_equippedItems.profile_modifier.appid == _.appid &&
                 this.m_equippedItems.profile_modifier.item_type ==
                   _.community_item_type
               );
-            case 16:
+            case _._:
               return (
                 this.m_equippedItems.steam_deck_keyboard_skin.appid ==
                   _.appid &&
@@ -5901,7 +6019,7 @@
           this.m_bLoadedActiveBonuses = !0;
           const _ = _._.Init(_._),
             _ = await _._.GetActivePurchaseBonuses(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._
             ? this.m_rgActiveBonuses.push(
                 ..._.Body()
                   .bonuses()
@@ -5913,13 +6031,13 @@
         }
         async SetProfileBackground(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -5931,7 +6049,7 @@
           const _ = await _._.SetProfileBackground(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult() &&
+            _.GetEResult() != _._ &&
               console.error(
                 `Error when calling PlayerService.SetProfileBackground: EResult=${_.GetEResult()}`,
               ),
@@ -5940,13 +6058,13 @@
         }
         async SetAvatarFrame(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -5958,7 +6076,7 @@
           const _ = await _._.SetAvatarFrame(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._
               ? console.error(
                   `Error when calling PlayerService.SetAvatarFrame: EResult=${_.GetEResult()}`,
                 )
@@ -5968,13 +6086,13 @@
         }
         async SetAnimatedAvatar(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -5986,7 +6104,7 @@
           const _ = await _._.SetAnimatedAvatar(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._
               ? console.error(
                   `Error when calling PlayerService.SetAnimatedAvatar: EResult=${_.GetEResult()}`,
                 )
@@ -5996,13 +6114,13 @@
         }
         async SetMiniProfileBackground(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -6014,7 +6132,7 @@
           const _ = await _._.SetMiniProfileBackground(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._
               ? console.error(
                   `Error when calling PlayerService.SetMiniProfileBackground: EResult=${_.GetEResult()}`,
                 )
@@ -6024,13 +6142,13 @@
         }
         async SetSteamDeckKeyboardSkin(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -6042,7 +6160,7 @@
           const _ = await _._.SetSteamDeckKeyboardSkin(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._
               ? console.error(
                   `Error when calling PlayerService.SetSteamDeckKeyboardSkin: EResult=${_.GetEResult()}`,
                 )
@@ -6052,13 +6170,13 @@
         }
         async ActivateProfileModifier(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -6072,7 +6190,7 @@
           const _ = await _._.ActivateProfileModifierItem(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._
               ? console.error(
                   `Error when calling QuestService.ActivateProfileModifierItem: EResult=${_.GetEResult()}`,
                 )
@@ -6082,13 +6200,13 @@
         }
         async RedeemPointsForItem(_, _, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -6099,7 +6217,7 @@
           const _ = await _._.RedeemPoints(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? (this.GetCommunityItemInventory(_),
                 this.GetLoyaltyRewardsSummary())
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
@@ -6111,13 +6229,13 @@
         }
         async RedeemPointsForBadge(_, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -6127,7 +6245,7 @@
           const _ = await _._.RedeemPointsForBadgeLevel(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? (this.GetCommunityItemInventory(this.GetCurrentSeasonalAppID()),
                 this.GetLoyaltyRewardsSummary())
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
@@ -6139,13 +6257,13 @@
         }
         async RedeemPointsForProfileShowcase(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -6158,7 +6276,7 @@
           );
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? this.RefreshPurchasedProfileCustomizations()
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
                 console.error(
@@ -6169,13 +6287,13 @@
         }
         async RedeemPointsForProfileShowcaseUpgrade(_, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -6191,7 +6309,7 @@
           );
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? this.RefreshPurchasedProfileCustomizations()
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
                 console.error(
@@ -6202,13 +6320,13 @@
         }
         async RedeemPointsForCoupon(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -6225,7 +6343,7 @@
               .then((_) => {
                 const _ = _.data;
                 (_.eResult = _.eresult),
-                  1 == _.eresult && _.redirect
+                  _.eresult == _._ && _.redirect
                     ? (window.location.href = _.redirect)
                     : console.error(
                         `Error when calling ajaxredeemtokensforcartdiscount: ${_}`,
@@ -6265,7 +6383,7 @@
             this.m_transport,
             _,
           );
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._
             ? _.Body()
                 .promotions()
                 .map((_) => _.toObject())
@@ -6276,13 +6394,13 @@
         }
         BCanRedeemPointsForItem(_) {
           switch (_.type) {
-            case 1:
+            case _._._:
               switch (_.community_item_class) {
-                case 4:
-                case 3: {
+                case _._:
+                case _._: {
                   if (
                     _.community_item_data.animated &&
-                    3 == _.community_item_class
+                    _.community_item_class == _._
                   )
                     return !0;
                   if (this.GetSortedGamesWithRewards().includes(_.appid))
@@ -6292,8 +6410,8 @@
                 }
               }
               break;
-            case 5:
-            case 6: {
+            case _._._:
+            case _._._: {
               if (this.GetSortedGamesWithRewards().includes(_.appid)) return !0;
               let _ = this.m_mapEligibleApps.get(_.appid);
               return !(!_ || !_.event_app);
@@ -6376,7 +6494,7 @@
             _ = Math.floor(Date.now() / 1e3) - 14 * _._.PerDay;
           _.Body().set_min_last_played(_);
           const _ = await _._.ClientGetLastPlayedTimes(this.m_transport, _);
-          return 1 == __webpack_require__.GetEResult()
+          return __webpack_require__.GetEResult() == _._
             ? ((this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
                 __webpack_require__.Body().toObject().games,
               )),
@@ -6403,7 +6521,7 @@
             return [];
           const _ = _._.Init(_._),
             _ = await _._.GetEligibleApps(this.m_transport, _);
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._
             ? _.Body().toObject().apps
             : (console.error(
                 `Error when calling GetEligibleApps: EResult=${_.GetEResult()}`,
@@ -6417,7 +6535,7 @@
             steamid: _._.steamid,
           });
           const _ = await _._.GetProfileItemsEquipped(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._
             ? (this.m_equippedItems = _.Body().toObject())
             : console.error(
                 `Error when calling GetProfileItemsEquipped: EResult=${_.GetEResult()}`,
@@ -6433,7 +6551,7 @@
             this.m_transport,
             _,
           );
-          if (1 == _.GetEResult()) {
+          if (_.GetEResult() == _._) {
             let _ = _.Body().toObject();
             (this.m_rgPurchasedCustomizations = _.purchased_customizations),
               (this.m_rgUpgradedCustomizations = _.upgraded_customizations);
@@ -6444,7 +6562,7 @@
         }
         async GetEquippedProfileItems(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
           };
           const _ = _._.Init(_._);
           __webpack_require__.Body().set_steamid(_),
@@ -6452,7 +6570,7 @@
           const _ = await _._.GetEquippedProfileItems(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult() &&
+            _.GetEResult() != _._ &&
               console.error(
                 `Error when calling LoyaltyRewardsService.GetEquippedProfileItems: EResult=${_.GetEResult()}`,
               ),
@@ -6522,7 +6640,7 @@
             _.set_count(1),
             _.set_definitionids([_]);
           const _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._
             ? _.response.count > 0
               ? _.response.definitions[0]
               : null
@@ -6578,7 +6696,7 @@
         HydrateCustomPages() {
           const _ = (_, _, _) => {
               const _ = new _(_, _, {
-                grouping: 2,
+                grouping: _,
                 maxToReturn: 0,
                 ..._,
               });
@@ -6593,7 +6711,7 @@
                 _,
                 _(
                   {
-                    grouping: 2,
+                    grouping: _,
                   },
                   _,
                 ),
@@ -6605,7 +6723,7 @@
             _ = (_, _, _, _) => {
               const _ = _(_, _ || "", _);
               return {
-                type: 2,
+                type: _,
                 cluster: _._,
                 get title() {
                   return (0, _._)("#HeroCluster_AppTitle", _.title);
@@ -6638,21 +6756,21 @@
               (0, _._)("#RewardCluster_Popular_Subtitle"),
             ),
             _ = _(
-              _(13, !0),
+              _(_._, !0),
               (0, _._)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
-                itemclass: [13],
+                itemclass: [_._],
               },
             ),
             _ = _(
               (0, _._)("#ShopPageTitle_Avatar"),
               (0, _._)("#RewardCluster_AvatarItems_Subtitle"),
               {
-                itemclass: [15, 14],
+                itemclass: [_._, _._],
               },
             ),
-            _ = _(_(3, !0), (0, _._)("#RewardCluster_Backgrounds_Subtitle"), {
-              itemclass: [3],
+            _ = _(_(_._, !0), (0, _._)("#RewardCluster_Backgrounds_Subtitle"), {
+              itemclass: [_._],
             }),
             _ = _(
               (0, _._)(
@@ -6661,7 +6779,7 @@
               ),
               (0, _._)("#RewardCluster_ChatEffect_Subtitle"),
               {
-                itemclass: [12],
+                itemclass: [_._],
               },
             ),
             _ = _(
@@ -6671,7 +6789,7 @@
               ),
               (0, _._)("#RewardCluster_Popular_Subtitle"),
               {
-                itemclass: [11],
+                itemclass: [_._],
               },
             ),
             _ = _(
@@ -6681,39 +6799,39 @@
               ),
               (0, _._)("#RewardCluster_Popular_Subtitle"),
               {
-                itemclass: [4],
+                itemclass: [_._],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(15, !0)),
+              (0, _._)("#RewardCluster_All_Title", _(_._, !0)),
               (0, _._)("#RewardCluster_AnimatedAvatar_Subtitle"),
               {
-                itemclass: [15],
+                itemclass: [_._],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(14, !0)),
+              (0, _._)("#RewardCluster_All_Title", _(_._, !0)),
               (0, _._)("#RewardCluster_AvatarFrames_Subtitle"),
               {
-                itemclass: [14],
+                itemclass: [_._],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(16, !0)),
+              (0, _._)("#RewardCluster_All_Title", _(_._, !0)),
               (0, _._)("#RewardCluster_SteamDeckKeyboardSkins_Subtitle"),
               {
-                itemclass: [16],
+                itemclass: [_._],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(17, !0)),
+              (0, _._)("#RewardCluster_All_Title", _(_._, !0)),
               (0, _._)("#RewardCluster_SteamDeckStartupMovies_Subtitle"),
               {
-                itemclass: [17],
+                itemclass: [_._],
               },
             ),
-            _ = _((0, _._)("#RewardCluster_FromGames", _(17, !0)), void 0, {
-              itemclass: [17],
+            _ = _((0, _._)("#RewardCluster_FromGames", _(_._, !0)), void 0, {
+              itemclass: [_._],
               excludedAppIDs: [_],
             }),
             _ = _(
@@ -6723,7 +6841,7 @@
               ),
               "",
               {
-                rewardtype: [5, 6],
+                rewardtype: [_._._, _._._],
               },
             ),
             _ = _(
@@ -6733,9 +6851,9 @@
               ),
               "",
               {
-                itemclass: [8],
-                queryFilter: [3],
-                grouping: 1,
+                itemclass: [_._],
+                queryFilter: [_._._],
+                grouping: _,
               },
             ),
             _ = _(
@@ -6745,9 +6863,9 @@
               ),
               "",
               {
-                itemclass: [8],
-                queryFilter: [3],
-                grouping: 2,
+                itemclass: [_._],
+                queryFilter: [_._._],
+                grouping: _,
               },
             ),
             _ = _(
@@ -6757,8 +6875,8 @@
               ),
               "",
               {
-                itemclass: [8],
-                queryFilter: [3],
+                itemclass: [_._],
+                queryFilter: [_._._],
                 categoryTag: ["artist_profile"],
               },
             ),
@@ -6767,8 +6885,8 @@
                 (0, _._)("#RewardCluster_TabletopFest2021Profiles_Title"),
                 void 0,
                 {
-                  itemclass: [8],
-                  queryFilter: [3],
+                  itemclass: [_._],
+                  queryFilter: [_._._],
                   categoryTag: ["tabletop_fest_2021"],
                 },
               ),
@@ -6776,18 +6894,18 @@
                 (0, _._)("#RewardCluster_TiledProfileBackgrounds_Title"),
                 (0, _._)("#RewardCluster_BackgroundsTiled_Subtitle"),
                 {
-                  itemclass: [3],
-                  queryFilter: [4],
+                  itemclass: [_._],
+                  queryFilter: [_._._],
                 },
               )),
             _ = [
               {
                 cluster: _,
-                type: 1,
+                type: _,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
                 linkedPage: {
                   type: "custom",
                   pageid: "steamdeck",
@@ -6796,7 +6914,7 @@
               },
               {
                 cluster: _,
-                type: 2,
+                type: _,
                 strImage: _,
                 bFullBleedImage: !0,
                 linkedPage: {
@@ -6806,13 +6924,13 @@
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
                 linkedPage: null,
                 bHideHiddenItemCount: !0,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
                 linkedPage: {
                   type: "custom",
                   pageid: "stickers",
@@ -6820,15 +6938,15 @@
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
                 linkedPage: {
                   type: "custom",
                   pageid: "backgrounds",
@@ -6836,11 +6954,11 @@
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _,
                 linkedPage: {
                   type: "custom",
                   pageid: "emoticons",
@@ -6870,7 +6988,7 @@
               [
                 {
                   cluster: _,
-                  type: 0,
+                  type: _,
                 },
               ],
               (0, _._)("#ShopPageTitle_Stickers"),
@@ -6884,7 +7002,7 @@
               [
                 {
                   cluster: _,
-                  type: 0,
+                  type: _,
                 },
               ],
               (0, _._)("#ShopPageTitle_Emoticons"),
@@ -6898,10 +7016,10 @@
                 [
                   {
                     cluster: _,
-                    type: 0,
+                    type: _,
                   },
                 ],
-                _(12, !0),
+                _(_._, !0),
                 void 0,
                 (0, _._)("#SearchPlaceholder_ChatEffects"),
               ),
@@ -6910,32 +7028,32 @@
               (0, _._)("#RewardCluster_AnimatedProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_Backgrounds_Subtitle"),
               {
-                itemclass: [3],
-                queryFilter: [1],
+                itemclass: [_._],
+                queryFilter: [_._._],
               },
             ),
             _ = _(
               (0, _._)("#RewardCluster_AnimatedMiniProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
-                itemclass: [13],
-                queryFilter: [1],
+                itemclass: [_._],
+                queryFilter: [_._._],
               },
             ),
             _ = _(
               (0, _._)("#RewardCluster_StillProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_Backgrounds_Subtitle"),
               {
-                itemclass: [3],
-                queryFilter: [2],
+                itemclass: [_._],
+                queryFilter: [_._._],
               },
             ),
             _ = _(
               (0, _._)("#RewardCluster_StillMiniProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
-                itemclass: [13],
-                queryFilter: [2],
+                itemclass: [_._],
+                queryFilter: [_._._],
               },
             );
           _(
@@ -6944,23 +7062,23 @@
               [
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
               ],
               (0, _._)("#ShopPageTitle_Backgrounds"),
@@ -6974,11 +7092,11 @@
                 [
                   {
                     cluster: _,
-                    type: 1,
+                    type: _,
                   },
                   {
                     cluster: _,
-                    type: 1,
+                    type: _,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_Avatar"),
@@ -6992,11 +7110,11 @@
               [
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
               ],
               (0, _._)("#ShopPageTitle_SteamDeckItems"),
@@ -7010,7 +7128,7 @@
                 [
                   {
                     cluster: _,
-                    type: 0,
+                    type: _,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_SteamDeckKeyboardSkin"),
@@ -7024,11 +7142,11 @@
                 [
                   {
                     cluster: _,
-                    type: 1,
+                    type: _,
                   },
                   {
                     cluster: _,
-                    type: 0,
+                    type: _,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_SteamDeckStartupMovie"),
@@ -7042,7 +7160,7 @@
                 [
                   {
                     cluster: _,
-                    type: 0,
+                    type: _,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_ItemBundles"),
@@ -7056,15 +7174,15 @@
               [
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
                 {
                   cluster: _,
-                  type: 1,
+                  type: _,
                 },
                 {
                   cluster: _,
-                  type: 0,
+                  type: _,
                 },
               ],
               (0, _._)("#ShopPageTitle_ProfileBundles"),
@@ -7078,7 +7196,7 @@
               [
                 {
                   cluster: _,
-                  type: 0,
+                  type: _,
                   bHomogeneous: !0,
                 },
               ],
@@ -7098,12 +7216,12 @@
                     get appid() {
                       return _.Get().GetSortedMyGamesWithRewards().slice(0, 10);
                     },
-                    grouping: 2,
+                    grouping: _,
                   },
                 );
                 this.m_mapClusters.set(_._, _);
                 const _ = {
-                  type: 2,
+                  type: _,
                   linkedPage: {
                     type: "custom",
                     pageid: "games",
@@ -7203,15 +7321,15 @@
       }
       function _(_) {
         const _ = {
-          sort: 1,
+          sort: _._._,
           sort_descending: !0,
         };
         switch (_) {
-          case 1:
-            (_.sort = 1), (_.sort_descending = !0);
+          case _:
+            (_.sort = _._._), (_.sort_descending = !0);
             break;
-          case 2:
-            (_.sort = 2), (_.sort_descending = !1);
+          case _:
+            (_.sort = _._._), (_.sort_descending = !1);
         }
         return _;
       }
@@ -7240,6 +7358,11 @@
         (0, _._)([_._], _.prototype, "m_rgUpgradedCustomizations", void 0),
         (0, _._)([_._], _.prototype, "m_unAwardPointsTransferred", void 0),
         (0, _._)([_._], _.prototype, "ShowLoginDialog", null);
+      const _ = 1,
+        _ = 2,
+        _ = 0,
+        _ = 1,
+        _ = 2;
       class _ {
         m_strId;
         m_filter;
@@ -7323,11 +7446,12 @@
           return this.m_strEventName;
         }
         get items() {
+          const _ = [_._, _._, _._, _._, _._, _._, _._, _._, _._];
           let _ = [];
           const _ = {
             type: "clusterview",
             view: {
-              type: 1,
+              type: _,
               linkedPage: null,
               cluster: {
                 _: _({
@@ -7340,7 +7464,7 @@
                   _.Get().QueryRewardDefinitions(
                     _(
                       {
-                        grouping: 2,
+                        grouping: _,
                         categoryTag: [this.m_strEventName],
                       },
                       _,
@@ -7353,10 +7477,10 @@
           };
           _.push(_);
           const _ = this.m_rgPriorityAppIDs?.concat(this.m_rgIncludedAppIDs),
-            _ = [8, 15, 14, 13, 3, 11, 4, 16, 17].map((_) => ({
+            _ = _.map((_) => ({
               type: "clusterview",
               view: {
-                type: 1,
+                type: _,
                 linkedPage: null,
                 cluster: {
                   _: _({
@@ -7372,7 +7496,7 @@
                     _.Get().QueryRewardDefinitions(
                       _(
                         {
-                          grouping: 2,
+                          grouping: _,
                           itemclass: [_],
                           appid: _,
                         },
@@ -7384,10 +7508,10 @@
                 },
               },
             })),
-            _ = __webpack_require__?.slice(0, this.m_cAppClusters).map((_) => ({
+            _ = _?.slice(0, this.m_cAppClusters).map((_) => ({
               type: "clusterview",
               view: {
-                type: 1,
+                type: _,
                 linkedPage: {
                   type: "app",
                   appid: _,
@@ -7419,15 +7543,16 @@
           return this.m_strSubtitle;
         }
         get items() {
+          const _ = [_._, _._, _._, _._, _._, _._, _._, _._, _._];
           let _ = [];
           {
             let _ = {
               type: "clusterview",
               view: {
-                type: 1,
+                type: _,
                 cluster: {
                   _: _([this.m_appid], {
-                    rewardtype: [5],
+                    rewardtype: [_._._],
                   }),
                   title: (0, _._)("#RewardItemType_Bundle_plural"),
                   subtitle: "",
@@ -7436,7 +7561,7 @@
                       _(
                         {
                           appid: [this.m_appid],
-                          rewardtype: [5, 6],
+                          rewardtype: [_._._, _._._],
                         },
                         _,
                       ),
@@ -7448,10 +7573,10 @@
             };
             _.push(_);
           }
-          let _ = [8, 15, 14, 13, 3, 11, 4, 16, 17].map((_) => ({
+          let _ = _.map((_) => ({
             type: "clusterview",
             view: {
-              type: 1,
+              type: _,
               cluster: {
                 _: _([this.m_appid], {
                   itemclass: [_],
@@ -7706,7 +7831,7 @@
           if (!_.Get().BIsLoggedIn()) return;
           const _ = _._.Init(_._);
           let _ = await _._.CanClaimItem(_.Get().GetServiceTransport(), _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._
             ? this.InitFreeItemReward(_.Body().toObject())
             : console.error(
                 "Error when calling SaleItemRewardsService.CanClaimItem: EResult=${msgResponse.GetEResult()}",
@@ -7714,13 +7839,13 @@
         }
         async ClaimFreeSaleItem() {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!_.Get().BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -7729,7 +7854,7 @@
             _ = await _._.ClaimItem(_.Get().GetServiceTransport(), _);
           return (
             (_.eResult = __webpack_require__.GetEResult()),
-            1 == __webpack_require__.GetEResult()
+            __webpack_require__.GetEResult() == _._
               ? ((this.m_claimedFreeItemDef = __webpack_require__
                   .Body()
                   .reward_item()
@@ -7742,7 +7867,7 @@
                   .Body()
                   .next_claim_time()),
                 this.SetClaimTimer())
-              : (10 == __webpack_require__.GetEResult() &&
+              : (__webpack_require__.GetEResult() == _._ &&
                   (_.strMessage = (0, _._)("#SummerSale_Redeem_Busy")),
                 console.error(
                   `Error when calling SaleItemRewardsService.ClaimItem: EResult=${__webpack_require__.GetEResult()}`,
@@ -7782,6 +7907,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7987,9 +8113,9 @@
       function _(_) {
         const _ = (0, _._)(() => _._.GetAppInfo(_.appid));
         switch (_.type) {
-          case 6:
+          case _._._:
             return (0, _._)("#RewardBundle_AutoGeneratedBundleName", _.name);
-          case 5:
+          case _._._:
             return _.community_item_data?.item_title ?? "";
           default:
             return (
@@ -8225,6 +8351,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const {
@@ -8346,7 +8473,7 @@
       }
       const _ = (_) => {
         switch (_.descriptor.type) {
-          case 1:
+          case _._:
             const _ = (0, _.jsx)(_, {
               ..._,
             });
@@ -8355,7 +8482,7 @@
                   children: _,
                 })
               : _;
-          case 0:
+          case _._:
             const _ = (0, _.jsx)(_, {
               ..._,
             });
@@ -8364,7 +8491,7 @@
                   children: _,
                 })
               : _;
-          case 2:
+          case _._:
             return (0, _.jsx)(_._, {
               children: (_) =>
                 "desktop" !== _
@@ -8384,7 +8511,7 @@
       };
       let _ = class extends _.Component {
         render() {
-          if (1 != this.props.descriptor.type) return null;
+          if (this.props.descriptor.type != _._) return null;
           const {
               descriptor: {
                 cluster: { _: _, title: _, subtitle: _, GetRewards: _ },
@@ -8583,7 +8710,7 @@
         _ = (0, _._)((_) => {
           const { descriptor: _, additionalFilter: _, linkedPage: _ } = _,
             _ = (0, _._)("(min-width: 1070px)");
-          if (2 !== _.type)
+          if (_.type !== _._)
             return (
               console.error(
                 `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
@@ -8641,7 +8768,7 @@
         _ = (0, _._)((_) => {
           const { descriptor: _, additionalFilter: _, linkedPage: _ } = _,
             _ = (0, _._)();
-          if (2 !== _.type)
+          if (_.type !== _._)
             return (
               console.error(
                 `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
@@ -8698,7 +8825,7 @@
           return (0, _.jsx)(_._, {
             definition: _,
             onClick: (_) => {
-              5 === _.type || 6 === _.type
+              _.type === _._._ || _.type === _._._
                 ? _.push(_._.LoyaltyItemBundle(_.defid))
                 : (0, _._)(_, _);
             },
@@ -10720,6 +10847,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(!1);
       function _(_) {
@@ -10891,10 +11019,10 @@
       }
       const _ = (0, _._)((_) => {
           const { offer: _, items: _ } = _,
-            _ = _(_, 15),
-            _ = _(_, 14),
-            _ = _(_, 13),
-            _ = _(_, 3);
+            _ = _(_, _._),
+            _ = _(_, _._),
+            _ = _(_, _._),
+            _ = _(_, _._);
           return (0, _.jsxs)("div", {
             style: {
               position: "relative",
@@ -10930,7 +11058,7 @@
         }),
         _ = (0, _._)((_) => {
           const { offer: _, item: _, className: _, ..._ } = _,
-            _ = 14 == _.community_item_class;
+            _ = _.community_item_class == _._;
           return (0, _.createElement)(
             _._,
             {
@@ -10973,6 +11101,8 @@
       });
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11165,6 +11295,8 @@
         });
       const _ = _;
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12047,9 +12179,12 @@
       function _(_) {
         switch (_.type) {
           case 1:
-            if (1 == _.rewardDefinition.community_item_class)
+            if (_.rewardDefinition.community_item_class == _._)
               return _._.Get().GetCostToLevelSeasonalBadge(_.itemLevel || 0);
-            if (5 == _.rewardDefinition.type || 6 == _.rewardDefinition.type) {
+            if (
+              _.rewardDefinition.type == _._._ ||
+              _.rewardDefinition.type == _._._
+            ) {
               return _._.Get().GetBundleOfferForUser(_.rewardDefinition)
                 .point_cost;
             }
@@ -12171,7 +12306,7 @@
           const _ =
             _._.Get().BRewardOwnedByUser(
               this.props.definition.rewardDefinition,
-            ) && 2 != this.props.definition.rewardDefinition.type;
+            ) && this.props.definition.rewardDefinition.type != _._._;
           return _._.Get().BIsLoggedIn() && !_ && !this.BCanAffordItem();
         }
         BAlreadyEquipped() {
@@ -12202,12 +12337,12 @@
                 this.props.definition.rewardDefinition,
               ) ||
               !(
-                (2 == this.props.definition.rewardDefinition.type &&
+                (this.props.definition.rewardDefinition.type == _._._ &&
                   _._.Get().GetUserSeasonalBadgeLevel() >=
                     this.props.definition.itemLevel) ||
-                1 == this.props.definition.rewardDefinition.type ||
-                5 == this.props.definition.rewardDefinition.type ||
-                6 == this.props.definition.rewardDefinition.type
+                this.props.definition.rewardDefinition.type == _._._ ||
+                this.props.definition.rewardDefinition.type == _._._ ||
+                this.props.definition.rewardDefinition.type == _._._
               )
             )
           );
@@ -12258,14 +12393,14 @@
             ) {
               case 1:
                 switch (this.props.definition.rewardDefinition.type) {
-                  case 1:
-                  case 5:
-                  case 6:
+                  case _._._:
+                  case _._._:
+                  case _._._:
                     this.BIsFreeSaleRewardItem()
                       ? _._.Get()
                           .ClaimFreeSaleItem()
                           .then((_) => {
-                            1 == _.eResult
+                            _.eResult == _._
                               ? ((this.m_mutableObjDefinition.rewardDefinition =
                                   _._.Get().GetClaimedSaleRewardItemDef()),
                                 this.setState({
@@ -12284,7 +12419,7 @@
                             _(this.m_mutableObjDefinition),
                           )
                           .then((_) => {
-                            1 == _.eResult
+                            _.eResult == _._
                               ? this.setState({
                                   step: "equip",
                                   requestInProgress: !1,
@@ -12292,20 +12427,20 @@
                               : _.strMessage.length
                                 ? this.ShowError(_.strMessage)
                                 : this.ShowGenericError(),
-                              11 == _.eResult &&
+                              _.eResult == _._ &&
                                 this.setState({
                                   step: "pricechange",
                                 });
                           })
                           .catch(this.ShowGenericError);
                     break;
-                  case 4:
+                  case _._._:
                     _._.Get()
                       .RedeemPointsForCoupon(
                         this.props.definition.rewardDefinition.defid,
                       )
                       .then((_) => {
-                        1 == _.eResult
+                        _.eResult == _._
                           ? this.setState({
                               step: "equip",
                               requestInProgress: !1,
@@ -12314,7 +12449,7 @@
                       })
                       .catch(this.ShowGenericError);
                     break;
-                  case 2: {
+                  case _._._: {
                     let _ = Math.max(
                       this.props.definition.itemLevel -
                         _._.Get().GetUserSeasonalBadgeLevel(),
@@ -12326,7 +12461,7 @@
                         _,
                       )
                       .then((_) => {
-                        1 == _.eResult
+                        _.eResult == _._
                           ? this.setState({
                               step: "equip",
                               requestInProgress: !1,
@@ -12346,7 +12481,7 @@
                     this.props.definition.desiredItemLevel,
                   )
                   .then((_) => {
-                    1 == _.eResult
+                    _.eResult == _._
                       ? (this.setState({
                           requestInProgress: !1,
                         }),
@@ -12363,7 +12498,7 @@
                     this.props.definition.profileCustomizationType,
                   )
                   .then((_) => {
-                    1 == _.eResult
+                    _.eResult == _._
                       ? this.CloseModal()
                       : _.strMessage.length
                         ? this.ShowError(_.strMessage)
@@ -12381,37 +12516,37 @@
           });
           let _ = null;
           switch (this.props.definition.rewardDefinition.community_item_class) {
-            case 3:
+            case _._:
               _ = _._.Get().SetProfileBackground(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 14:
+            case _._:
               _ = _._.Get().SetAvatarFrame(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 15:
+            case _._:
               _ = _._.Get().SetAnimatedAvatar(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 13:
+            case _._:
               _ = _._.Get().SetMiniProfileBackground(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 8:
+            case _._:
               _ = _._.Get().ActivateProfileModifier(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 16:
+            case _._:
               _ = _._.Get().SetSteamDeckKeyboardSkin(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 17:
+            case _._:
               return (
                 (window.location.href = "steam://open/settings/customization"),
                 void this.CloseModal()
@@ -12423,7 +12558,7 @@
               );
           }
           _.then((_) => {
-            1 == _.eResult
+            _.eResult == _._
               ? this.setState({
                   step: "equipped",
                   requestInProgress: !1,
@@ -12460,7 +12595,9 @@
               : null;
           let _ = "";
           if (
-            [1, 5, 6].includes(this.props.definition.rewardDefinition?.type)
+            [_._._, _._._, _._._].includes(
+              this.props.definition.rewardDefinition?.type,
+            )
           ) {
             _ = `${document.location.href.split("/reward/")[0]}/reward/${this.props.definition.rewardDefinition.defid}`;
           }
@@ -12642,7 +12779,7 @@
               )
             : _(_.rewardDefinition),
         _ = (_) => {
-          if (1 == _.type)
+          if (_.type == _._._)
             return (
               (0, _._)(
                 _.community_item_data,
@@ -12650,9 +12787,9 @@
               ),
               _.community_item_data.item_title
             );
-          if (2 == _.type) return (0, _._)("#Redeem_Badge_PrestigeBadge");
-          if (5 == _.type) return _.community_item_data.item_title;
-          if (6 == _.type) {
+          if (_.type == _._._) return (0, _._)("#Redeem_Badge_PrestigeBadge");
+          if (_.type == _._._) return _.community_item_data.item_title;
+          if (_.type == _._._) {
             const _ = _._.GetAppInfo(_.appid).name || "";
             return (0, _._)("#RewardBundle_AutoGeneratedBundleName", _);
           }
@@ -12673,13 +12810,13 @@
             case 3:
               return (0, _._)("#ProfileShowcases_AdditionalSlot");
             case 1:
-              if (1 == _.type || 2 == _.type)
+              if (_.type == _._._ || _.type == _._._)
                 return _.appid != _._.Get().GetCurrentSeasonalAppID() &&
-                  8 == _.community_item_class &&
+                  _.community_item_class == _._ &&
                   0 != _.bundle_defids?.length
                   ? (0, _._)("#RewardItemType_ProfileBundle")
                   : (0, _._)(_.community_item_class);
-              if (5 == _.type || 6 == _.type)
+              if (_.type == _._._ || _.type == _._._)
                 return (0, _._)("#RewardItemType_Bundle");
           }
           return "";
@@ -13655,7 +13792,7 @@
             };
             let _ = _._.Get()
               .GetRewardDefinitions(..._.rewardDefinition.bundle_defids)
-              .filter((_) => 14 == _.community_item_class);
+              .filter((_) => _.community_item_class == _._);
             0 != _?.length &&
               (_.frame =
                 "items/" +
@@ -13767,7 +13904,7 @@
         GetProfileSteamID() {
           return _._.Get().BIsLoggedIn()
             ? _._.steamid
-            : 2 == _._.EUNIVERSE
+            : _._.EUNIVERSE == _._
               ? "148618792083695825"
               : "76561197960266962";
         }
@@ -13872,7 +14009,7 @@
             .items.map((_) => {
               const _ = _.community_item_data.item_image_large;
               let _ = (0, _._)(_.appid, _);
-              3 == _.community_item_class &&
+              _.community_item_class == _._ &&
                 (_ =
                   _._.COMMUNITY_CDN_URL +
                   "economy/profilebackground/items/" +
@@ -13962,7 +14099,7 @@
         GetProfileSteamID() {
           return _._.Get().BIsLoggedIn()
             ? _._.steamid
-            : 2 == _._.EUNIVERSE
+            : _._.EUNIVERSE == _._
               ? "148618792083695825"
               : "76561197960266962";
         }
@@ -13988,7 +14125,7 @@
             _ = _.items.map((_) => {
               let _ = (0, _._)(_);
               const _ = _._.Get().BRewardOwnedByUser(_),
-                _ = 8 == _.community_item_class;
+                _ = _.community_item_class == _._;
               return (0, _.jsxs)(
                 _._,
                 {
@@ -14106,17 +14243,17 @@
         }
       }
       const _ = {
-          11: _,
-          3: _,
-          4: _,
-          13: _,
-          14: _,
-          15: _,
-          1: _,
-          12: _,
-          8: _,
-          16: _,
-          17: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
         },
         _ = (0, _._)((_) => {
           let _ = null;
@@ -14127,10 +14264,10 @@
               break;
             case 1:
               _ =
-                5 == _.definition.rewardDefinition.type ||
-                6 == _.definition.rewardDefinition.type
+                _.definition.rewardDefinition.type == _._._ ||
+                _.definition.rewardDefinition.type == _._._
                   ? _
-                  : 8 == _.definition.rewardDefinition.community_item_class &&
+                  : _.definition.rewardDefinition.community_item_class == _._ &&
                       0 != _.definition.rewardDefinition.bundle_defids?.length
                     ? _
                     : _[_.definition.rewardDefinition.community_item_class];
@@ -14139,7 +14276,7 @@
             ? (0, _.jsx)(_, {
                 ..._,
               })
-            : 4 == _.definition.rewardDefinition.type
+            : _.definition.rewardDefinition.type == _._._
               ? (0, _.jsx)(_, {
                   ..._,
                 })
@@ -14411,8 +14548,8 @@
                 switch (_.type) {
                   case 1:
                     if (
-                      5 == _.rewardDefinition.type ||
-                      6 == _.rewardDefinition.type
+                      _.rewardDefinition.type == _._._ ||
+                      _.rewardDefinition.type == _._._
                     ) {
                       const { discount: _, original_point_cost: _ } =
                         _._.Get().GetBundleOfferForUser(_.rewardDefinition);
@@ -14566,7 +14703,7 @@
           if (
             ("equip" != _ && "equipped" != _) ||
             !_.rewardDefinition ||
-            1 != _.rewardDefinition.type
+            _.rewardDefinition.type != _._._
           ) {
             if ("cantredeemforapp" == _) {
               let _ = (0, _.jsx)("span", {
@@ -14659,6 +14796,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { className: _, ..._ } = _;
@@ -14679,7 +14818,7 @@
       function _({ definition: _, ..._ }) {
         _.community_item_data || console.log(_);
         let _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
-        3 == _.community_item_class &&
+        _.community_item_class == _._ &&
           (_ =
             _._.COMMUNITY_CDN_URL +
             "economy/profilebackground/items/" +
@@ -14935,7 +15074,7 @@
           (0, _.jsx)(_, {
             ..._(_),
             iconComponent: _._,
-            desc: (0, _._)(8),
+            desc: (0, _._)(_._),
           }),
         ),
         _ = (0, _._)((_) =>
@@ -15286,22 +15425,22 @@
           });
         },
         _ = {
-          11: _,
-          4: _,
-          12: _,
-          3: _,
-          13: _,
-          8: _,
-          14: _,
-          15: _,
-          16: _,
-          17: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
+          [_._]: _,
         },
         _ = (0, _._)((_) => {
           const { className: _, ..._ } = _,
             _ = _._.Get().BRewardOwnedByUser(_.definition),
             _ = (0, _._)(_, _ && _.OwnedItem);
-          if (5 == _.definition.type || 6 == _.definition.type)
+          if (_.definition.type == _._._ || _.definition.type == _._._)
             return (0, _.jsx)(_._, {
               fallback: null,
               children: (0, _.jsx)(_._, {
@@ -15311,7 +15450,7 @@
               }),
             });
           if (
-            8 == _.definition.community_item_class &&
+            _.definition.community_item_class == _._ &&
             0 != _.definition.bundle_defids?.length
           )
             return (0, _.jsx)(_._, {
@@ -16661,6 +16800,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { steamid: _ } = _,
@@ -16697,20 +16838,20 @@
                 (_ = [..._.data.active_definitions, ..._]),
               _?.data?.inactive_definitions?.length &&
                 (_ = [..._.data.inactive_definitions, ..._]),
-              _?.find((_) => 3 == _.community_item_class)
+              _?.find((_) => _.community_item_class == _._)
             );
           }, [_]);
         if (!_.data || !_.data) return null;
         let _ = null;
-        1 != _.data.eResult
+        _.data.eResult != _._
           ? ((_ = (0, _._)("#EquippedProfile_Error_Generic")),
-            15 == _.data.eResult &&
+            _.data.eResult == _._ &&
               (_ = (0, _._)("#EquippedProfile_Error_AccessDenied")))
           : _.data.active_definitions?.length ||
             _.data.inactive_definitions?.length ||
             (_ = (0, _._)("#EquippedProfile_Error_NoItems"));
         const _ = {
-            type: 1,
+            type: _._,
             cluster: {
               _: "SimilarProfileItems",
               title: (0, _._)("#EquippedProfile_RelatedAppsCarousel_Title"),
@@ -16719,7 +16860,7 @@
                 _._.Get().QueryRewardDefinitions(
                   {
                     appid: _,
-                    grouping: 2,
+                    grouping: _._,
                   },
                   _,
                   _,
@@ -17942,7 +18083,7 @@
             steamid: _._.steamid,
           });
           let _ = await _.GetBidsForUser(this.m_transport, _);
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._
             ? _.Body().toObject().bids
             : (console.error(
                 `Error when calling AuctionService.GetBidsForUser: EResult=${_.GetEResult()}`,
@@ -17963,7 +18104,7 @@
         async LoadAllItems() {
           const _ = _._.Init(_);
           let _ = await _.GetAllItems(this.m_anonymousTransport, _);
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._
             ? _.Body().toObject().items
             : (console.error(
                 `Error when calling AuctionService.GetAllItems: EResult=${_.GetEResult()}`,
@@ -17987,7 +18128,7 @@
         async GetUserBidForItem(_) {
           const _ = _._.Init(_);
           let _ = await _.GetUserBidForItem(this.m_transport, _);
-          return 1 == __webpack_require__.GetEResult()
+          return __webpack_require__.GetEResult() == _._
             ? __webpack_require__.Body().toObject().bid
             : (console.error(
                 `Error when calling AuctionService.GetUserBidForItem: EResult=${__webpack_require__.GetEResult()}`,
@@ -17996,13 +18137,13 @@
         }
         async PlaceBid(_, _, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!_._.Get().BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -18016,7 +18157,7 @@
           const _ = await _.PlaceBid(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? this.GetCurrentUserBids(!0)
               : ((_.strMessage = _.Hdr().error_message()),
                 console.error(
@@ -18027,13 +18168,13 @@
         }
         async CancelBid(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._,
             strMessage: "",
           };
           if (!_._.Get().BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._,
                 strMessage: "Not logged on",
               }),
               _
@@ -18045,7 +18186,7 @@
           const _ = await _.CancelBid(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._
               ? this.GetCurrentUserBids(!0)
               : ((_.strMessage = _.Hdr().error_message()),
                 console.error(
@@ -18134,14 +18275,15 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_.community_item_class) {
-          case 15:
-          case 14:
-          case 11:
+          case _._:
+          case _._:
+          case _._:
             return (0, _._)(_.appid, _.community_item_data.item_image_small);
-          case 3:
+          case _._:
             return `${_._.COMMUNITY_BASE_URL}economy/profilebackground/items/${_.appid}/${_.community_item_data.item_image_large}?size=320x200`;
           default:
             return (0, _._)(_.appid, _.community_item_data.item_image_large);
@@ -18155,6 +18297,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18251,6 +18394,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const _ = {
@@ -18261,8 +18405,8 @@
             _ = {
               defid: void 0,
               appid: _._.Get().GetCurrentSaleRewardAppID(),
-              type: 1,
-              community_item_class: 11,
+              type: _._._,
+              community_item_class: _._,
               point_cost: "0",
               quantity: "1",
               active: !0,
@@ -18394,6 +18538,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           __webpack_require__
@@ -18469,7 +18614,7 @@
           _._.Get()
             .getLoyaltyRewardDefMap()
             .forEach((_) => {
-              _.length < 3 && 1 == _.type && _.push(_);
+              _.length < 3 && _.type == _._._ && _.push(_);
             });
           const _ = _._.Get().GetPageDescriptor({
               type: "custom",
@@ -18764,7 +18909,7 @@
           return _ && "clusterview" === _.type
             ? {
                 ..._.view,
-                type: 0,
+                type: _._,
               }
             : null;
         }
@@ -18869,7 +19014,7 @@
           !_.data)
         )
           return null;
-        if (!_ || !_.isSuccess || 1 != _.data.success)
+        if (!_ || !_.isSuccess || _.data.success != _._)
           return console.error(`Failed to get event page for ${_}`), null;
         const _ = _.data?.details?.included_apps?.concat(
             _.data?.details?.priority_apps,
@@ -18980,7 +19125,7 @@
             items: __webpack_require__.slice(0, _).map((_) => ({
               type: "clusterview",
               view: {
-                type: 1,
+                type: _._,
                 linkedPage: {
                   type: "app",
                   appid: _,
@@ -19030,7 +19175,7 @@
               items: _.slice(0, _).map((_) => ({
                 type: "clusterview",
                 view: {
-                  type: 1,
+                  type: _._,
                   linkedPage: {
                     type: "app",
                     appid: _,

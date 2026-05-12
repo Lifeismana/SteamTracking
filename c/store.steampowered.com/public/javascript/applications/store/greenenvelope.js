@@ -237,8 +237,39 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 2,
+        _ = 4,
+        _ = 8,
+        _ = 512,
+        _ = 1024,
+        _ = 2048;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 1,
+        _ = 2,
+        _ = 4,
+        _ = 1073741824;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
@@ -279,7 +310,7 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return 4 == this.apptype || 2 == this.apptype;
+          return this.apptype == _._ || this.apptype == _._;
         }
         BuildAppURL(_, _) {
           return _
@@ -299,7 +330,7 @@
             (this.m_eAppType = _.app_type());
         }
         DeserializeFromAppOverview(_) {
-          _.icon_hash() && 1073741824 != _.app_type()
+          _.icon_hash() && _.app_type() != _._
             ? ((this.m_bInitialized = !0),
               (this.m_strName = _.display_name()),
               (this.m_strIconURL = _.icon_hash()),
@@ -347,6 +378,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = "offline";
@@ -364,7 +397,7 @@
       class _ {
         m_steamid;
         m_bInitialized = !1;
-        m_ePersonaState = 0;
+        m_ePersonaState = _.cU3;
         m_unGamePlayedAppID = 0;
         m_gameid = "0";
         m_unPersonaStateFlags = 0;
@@ -384,7 +417,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_eGamingDeviceType = 0;
+        m_eGamingDeviceType = _.eSB;
         m_mapRichPresence = _._.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -393,7 +426,7 @@
           (0, _._)(this), (this.m_steamid = _);
         }
         Reset() {
-          (this.m_ePersonaState = 0),
+          (this.m_ePersonaState = _.cU3),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -406,7 +439,7 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = 0);
+            (this.m_eGamingDeviceType = _.eSB);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -415,7 +448,7 @@
           return this.m_steamid.ConvertTo64BitString();
         }
         get is_online() {
-          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
+          return this.m_ePersonaState != _.cU3 && this.m_ePersonaState != _._3b;
         }
         get is_ingame() {
           return (
@@ -437,7 +470,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return !!(2 & (this.m_unPersonaStateFlags ?? 0));
+          return 0 != ((this.m_unPersonaStateFlags ?? 0) & _._);
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -449,7 +482,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
+          return this.m_ePersonaState == _.PrD || this.m_ePersonaState == _.vPz;
         }
         HasStateFlag(_) {
           return 0 != ((this.m_unPersonaStateFlags ?? 0) & _);
@@ -458,10 +491,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          0 != this.m_ePersonaState && this.Reset();
+          this.m_ePersonaState != _.cU3 && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(4);
+          return this.HasStateFlag(_._);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -498,7 +531,7 @@
               let _ = this.m_mapRichPresence.get("steam_display");
               return _.Localize(_, this.m_mapRichPresence);
             }
-          } else if (this.HasStateFlag(8))
+          } else if (this.HasStateFlag(_._))
             return (0, _._)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -528,20 +561,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case 0:
-            case 7:
+            case _.cU3:
+            case _._3b:
               return this.GetOfflineStatusTime();
-            case 1:
+            case _.UXk:
               return (0, _._)("#PersonaStateOnline");
-            case 2:
+            case _.wcG:
               return (0, _._)("#PersonaStateBusy");
-            case 3:
+            case _.PrD:
               return (0, _._)("#PersonaStateAway");
-            case 4:
+            case _.vPz:
               return (0, _._)("#PersonaStateSnooze");
-            case 5:
+            case _.Hrn:
               return (0, _._)("#PersonaStateLookingToTrade");
-            case 6:
+            case _.HAb:
               return (0, _._)("#PersonaStateLookingToPlay");
             default:
               return "";
@@ -676,6 +709,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return new (_())(
@@ -725,7 +759,7 @@
             const _ = _?.public_data,
               _ = _?.private_data;
             (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? 0),
+              (_.m_ePersonaState = _?.persona_state ?? _.cU3),
               (_.m_strAvatarHash = _?.sha_digest_avatar
                 ? (0, _._)(_.sha_digest_avatar)
                 : _._),
@@ -766,12 +800,20 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3;
       function _(_, _, _, _) {
         const _ = (0, _.useRef)(void 0),
           _ = (0, _.useRef)(void 0),
@@ -827,33 +869,33 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                    _?.token.reason || _.current !== _ || _(_ == _._), _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+          return [null, _];
+        if (!1 === _) return [void 0, _];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
+        return _ ? [_, _] : [null, _];
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
         const [_, _] = _(_, _, _);
         let _;
-        1 != _?.GetStoreItemType() ||
+        _?.GetStoreItemType() != _._._ ||
           _.GetAssets()?.GetHeaderURL() ||
           1 != _?.GetIncludedAppIDs().length ||
           (_ = _.GetIncludedAppIDs()[0]);
@@ -920,7 +962,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return 2;
+          return _;
         if (
           !_.every(
             (_) =>
@@ -928,15 +970,15 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return 1;
+          return _;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? 3
-          : 2;
+          ? _
+          : _;
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _() {
         _.useEffect(
@@ -972,7 +1014,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1000,9 +1044,9 @@
           _ = _,
           _ = _().PinnedTemplate;
         return (
-          7 == _
+          _ == _.ogI
             ? (_ = _().PinnedTemplateDesktop)
-            : 3 == _ && (_ = _().PinnedTemplateWeb),
+            : _ == _.yrU && (_ = _().PinnedTemplateWeb),
           (_ = (0, _._)(_, _)),
           (0, _.jsx)(_._, {
             className: _,
@@ -1071,7 +1115,7 @@
             return () => window.clearTimeout(_);
           }, []),
           _.useEffect(() => {
-            _ && _ > 0 && _ !== _().Unread && 2 != _ && 1 != _
+            _ && _ > 0 && _ !== _().Unread && _ != _.miK && _ != _.PN1
               ? _(_().Unread)
               : _ || _ != _().Unread || _(_().MarkedRead);
           }, [_, _, _]);
@@ -1079,13 +1123,13 @@
         _ || (_ = () => console.log("Missing activate function")),
           _ == _.loadingActive && (_ = void 0);
         let _ = _().StandardTemplate;
-        4 == _
+        _ == _.oYe
           ? (_ = _().AllNotificationsTemplate)
-          : 2 == _
+          : _ == _.miK
             ? (_ = _().DesktopToastTemplate)
-            : (7 != _ && 3 != _) || (_ = _().StandardTemplateDesktop);
+            : (_ != _.ogI && _ != _.yrU) || (_ = _().StandardTemplateDesktop);
         let _ = null;
-        if (_ != _.none && 2 != _ && 1 != _) {
+        if (_ != _.none && _ != _.miK && _ != _.PN1) {
           let _ = _ == _.loadingComplete ? _().Hide : null;
           _ = (0, _.jsxs)("div", {
             className: (0, _._)(_().LoadingTemplate, _),
@@ -1144,7 +1188,7 @@
       }
       function _(_) {
         const { location: _ } = _;
-        return 3 != _
+        return _ != _.B3I
           ? null
           : (0, _.jsx)("div", {
               className: _().NewIndicator,
@@ -1159,10 +1203,10 @@
           location: _,
           fnRenderTimestamp: _,
         } = _;
-        const _ = !!_ && (3 == _ || 4 == _);
+        const _ = !!_ && (_ == _.B3I || _ == _.oYe);
         let _;
         return (
-          (_ = 4 == _ ? _ : (_ ?? _)),
+          (_ = _ == _.oYe ? _ : (_ ?? _)),
           (0, _.jsxs)("div", {
             className: _().Header,
             children: [
@@ -1249,9 +1293,11 @@
           (_[(_.loadingActive = 1)] = "loadingActive"),
           (_[(_.loadingComplete = 2)] = "loadingComplete");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        return 1 == _;
+        return _ == _.PN1;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -1322,9 +1368,9 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case 6:
+          case _._._:
             return (0, _.jsx)(_.ilR, {});
-          case 11:
+          case _._._:
             return (0, _.jsx)(_.Cv4, {});
           default:
             return (0, _.jsx)(_.Qte, {});
@@ -1566,11 +1612,11 @@
         } = _;
         const _ = _(_);
         let _ = "";
-        _ && 2 == _.state
+        _ && _.state == _.UXi
           ? (_ = (0, _._)(
               "#SteamNotifications_FriendInvite_Description_AwaitingResponse",
             ))
-          : _ && 3 == _.state
+          : _ && _.state == _._UC
             ? (_ = (0, _._)(
                 "#SteamNotifications_FriendInvite_Description_Friends",
               ))
@@ -1580,7 +1626,7 @@
           _ = () => _(!0);
         let _ = _;
         if (_ && !_) {
-          const _ = 3 == _.state && 1 != _,
+          const _ = _.state == _._UC && _ != _.PN1,
             _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ = (0, _.jsxs)(_._, {
             style: {
@@ -1762,7 +1808,7 @@
           _ = !_;
         let _ = "";
         return (
-          1 == _.state
+          _.state == _._
             ? (_ =
                 _ && __webpack_require__?.GetName()
                   ? (0, _._)(
@@ -1770,7 +1816,7 @@
                       __webpack_require__.GetName(),
                     )
                   : (0, _._)("#SteamNotification_AsyncGame_Action"))
-            : 2 == _.state &&
+            : _.state == _._ &&
               (_ =
                 _ && __webpack_require__?.GetName()
                   ? (0, _._)(
@@ -1907,14 +1953,14 @@
           ),
           _ = (0, _._)(_) ? _ : null,
           _ = (0, _._)(_) ? _ : null;
-        10 == _.comment_type
+        _.comment_type == _._
           ? (_ =
               _.owner_steam_id?.ConvertTo64BitString() == _
-                ? 4 == _ && _
+                ? _ == _.oYe && _
                   ? (0, _._)("#SteamNotifications_Comment_Your_Profile_By", _)
                   : (0, _._)("#SteamNotifications_Comment_Your_Profile")
                 : _
-                  ? 4 == _ && _
+                  ? _ == _.oYe && _
                     ? (0, _._)(
                         "#SteamNotifications_Comment_Player_Profile_By",
                         _,
@@ -1922,7 +1968,7 @@
                       )
                     : (0, _._)("#SteamNotifications_Comment_Player_Profile", _)
                   : (0, _._)("#SteamNotifications_Comment_Profile"))
-          : 5 == _.comment_type && 5 == _.json_data?.file_type
+          : _.comment_type == _._ && _.json_data?.file_type == _.pmA
             ? (_ =
                 _.owner_steam_id?.ConvertTo64BitString() == _
                   ? _
@@ -1940,7 +1986,7 @@
             : !_ && _.json_data?.title && (_ = _.json_data.title);
         let _ = null;
         _ =
-          7 == _.comment_type && _.bis_forum && _
+          _.comment_type == _._ && _.bis_forum && _
             ? (0, _.jsx)(_, {
                 children: (0, _._)(
                   "#SteamNotifications_Comment_NewDiscussion",
@@ -1954,7 +2000,7 @@
           _ = null;
         if (void 0 !== _ && _ > 1) {
           const _ = "+" + (_ - 1);
-          4 == _
+          _ == _.oYe
             ? (_ = (0, _.jsx)("div", {
                 className: _().AllNotificationsCommentPlus,
                 children: _,
@@ -1965,7 +2011,7 @@
         if (!_) {
           const _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           if (_ && (0, _._)(_)) {
-            const _ = _.bhas_friend && 1 != _;
+            const _ = _.bhas_friend && _ != _.PN1;
             _ = (0, _.jsxs)("div", {
               style: {
                 position: "relative",
@@ -2225,8 +2271,8 @@
         return _
           ? (0, _.jsx)(_._, {
               controller: "notification",
-              method: (0, _._)(_),
-              submethod: (0, _._)(_),
+              method: (0, _.fLp)(_),
+              submethod: (0, _.ey3)(_),
               children: (0, _.jsx)(_, {
                 ..._,
               }),
@@ -2380,6 +2426,32 @@
             })
           : null;
       }
+      const _ = (_) => {
+        const {
+            rollup: _,
+            onNotificationClick: _,
+            location: _,
+            uimode: _,
+            onHide: _,
+          } = _,
+          _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
+        return (0, _.jsx)("a", {
+          href: _,
+          onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
+          children: (0, _.jsx)(_, {
+            logo: (0, _.jsx)(_.Qte, {}),
+            icon: (0, _.jsx)(_.h20, {}),
+            onActivate: () =>
+              __webpack_require__(() => window.location.assign(_), _.item),
+            location: _,
+            eUIMode: _,
+            timestamp: _.timestamp,
+            nUnread: _.rgunread.length,
+            bNewIndicator: (0, _._)(_.item),
+            onHide: _,
+          }),
+        });
+      };
       function _(_) {
         const { url: _, count: _, icon: _, strLocToken: _, eFeature: _ } = _,
           _ = (0, _._)(_);
@@ -2394,21 +2466,21 @@
                   count: _,
                   onActivate: () => window.location.assign(_),
                   strLocToken: _,
-                  eUIMode: 3,
+                  eUIMode: _.yrU,
                   visible: !0,
                 }),
               })
           : null;
       }
       const _ = {
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = _(_),
             _ = (0, _._)(),
             _ = _._.COMMUNITY_BASE_URL + _.url,
@@ -2454,14 +2526,14 @@
             }),
           });
         },
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = _(_),
             [_] = (0, _._)(_.appid, {
               include_assets: !0,
@@ -2502,14 +2574,14 @@
             })
           );
         },
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = (0, _._)(),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/friends/pending`,
             _ = _(_),
@@ -2534,14 +2606,14 @@
             }),
           });
         },
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
             _ = (0, _._)(_.item, _, _),
@@ -2566,14 +2638,14 @@
             }),
           });
         },
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = (0, _._)(),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/inventory/#pending_gifts`,
             _ = _(_),
@@ -2597,14 +2669,14 @@
             }),
           });
         },
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = (0, _._)(),
             _ = _(_),
             _ = `${_._.COMMUNITY_BASE_URL}profiles/${_}/tradeoffers`,
@@ -2628,14 +2700,14 @@
             }),
           });
         },
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = `${_._.COMMUNITY_BASE_URL}my/gamenotifications/`,
             _ = _(_),
             [_] = (0, _._)(_.appid, {
@@ -2660,18 +2732,18 @@
             }),
           });
         },
-        chunkid: function (module) {
+        [_._._]: function (_) {
           const {
               rollup: _,
               onNotificationClick: _,
               location: _,
               uimode: _,
               onHide: _,
-            } = module,
+            } = _,
             _ = _(_),
             { data: _ } = (0, _._)(_.responder_steamid),
             _ = _.package_id > 0 ? _.package_id : _.bundle_id,
-            _ = _.package_id > 0 ? 1 : 2,
+            _ = _.package_id > 0 ? _._._ : _._._,
             [_] = (0, _._)(_, _, {
               include_basic_info: !0,
               include_assets: !0,
@@ -2706,32 +2778,7 @@
             }),
           });
         },
-        chunkid: (module) => {
-          const {
-              rollup: _,
-              onNotificationClick: _,
-              location: _,
-              uimode: _,
-              onHide: _,
-            } = module,
-            _ = `${_._.COMMUNITY_BASE_URL}my/tradehistory`;
-          return (0, _.jsx)("a", {
-            href: _,
-            onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
-            children: (0, _.jsx)(_, {
-              logo: (0, _.jsx)(_.Qte, {}),
-              icon: (0, _.jsx)(_.h20, {}),
-              onActivate: () =>
-                __webpack_require__(() => window.location.assign(_), _.item),
-              location: _,
-              eUIMode: _,
-              timestamp: _.timestamp,
-              nUnread: _.rgunread.length,
-              bNewIndicator: (0, _._)(_.item),
-              onHide: _,
-            }),
-          });
-        },
+        [_._._]: _,
       };
       var _ = __webpack_require__("chunkid");
       const _ = new _._(),
@@ -2750,7 +2797,7 @@
                     _ = await (0, _._)(
                       _,
                       _._.steamid,
-                      (0, _._)(_._.LANGUAGE),
+                      (0, _.sfN)(_._.LANGUAGE),
                       void 0,
                       !1,
                       !1,
@@ -2918,8 +2965,8 @@
                   {
                     rollup: _,
                     onNotificationClick: _,
-                    uimode: 3,
-                    location: 3,
+                    uimode: _.yrU,
+                    location: _.B3I,
                   },
                   _,
                 ),
@@ -2933,7 +2980,7 @@
           countItem: "pending_gifts",
           icon: _._,
           strLocToken: "#Notification_NewGiftsPinned_Body",
-          feature: 1,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -2941,7 +2988,7 @@
           countItem: "pending_invites",
           icon: _.sdo,
           strLocToken: "#Notification_FriendInvitePinned_Body",
-          feature: 4,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -2949,7 +2996,7 @@
           countItem: "comments",
           icon: _.MwB,
           strLocToken: "#Notification_NewCommentPinned_Body",
-          feature: 2,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -2957,7 +3004,7 @@
           countItem: "inventory_items",
           icon: _.rI_,
           strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
-          feature: 3,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -2965,7 +3012,7 @@
           countItem: "trade_offers",
           icon: _.h20,
           strLocToken: "#Notification_NewTradeOffersPinned_Body",
-          feature: 6,
+          feature: _._,
         },
         {
           fnUrl: () =>
@@ -2979,7 +3026,7 @@
           countItem: "moderator_messages",
           icon: _.hJ4,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
-          feature: 2,
+          feature: _._,
         },
         {
           fnUrl: () => `${_._.HELP_BASE_URL}wizard/HelpRequests`,
@@ -3029,6 +3076,115 @@
         });
       }
       const _ = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        static GetScrollableClassname() {
+          return "vt-scrollable";
+        }
+        m_observer = null;
+        m_refElement = _.createRef();
+        m_elTracked = null;
+        m_bPreviouslyIntersecting = !1;
+        BTriggerOnce() {
+          return "once" == (this.props.trigger || "once");
+        }
+        GetBoundingClientRect() {
+          return this.m_refElement.current
+            ? this.m_refElement.current.getBoundingClientRect()
+            : null;
+        }
+        DestroyObserver() {
+          this.m_observer &&
+            (this.m_observer.disconnect(),
+            (this.m_observer = null),
+            (this.m_elTracked = null));
+        }
+        componentWillUnmount() {
+          this.DestroyObserver();
+        }
+        componentDidMount() {
+          this.UpdateObserver(null);
+        }
+        componentDidUpdate(_) {
+          this.UpdateObserver(_);
+        }
+        UpdateObserver(_) {
+          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
+          this.m_observer &&
+            _ &&
+            (_.rootMargin != this.m_observer.rootMargin ||
+              _.thresholds != this.m_observer.thresholds) &&
+            this.DestroyObserver();
+          let _ = this.m_refElement.current;
+          if (
+            (this.m_observer &&
+              _ != this.m_elTracked &&
+              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked = null)),
+            !this.m_observer && _)
+          ) {
+            let _ = {
+              root: this.FindScrollableAncestor(_),
+            };
+            this.props.rootMargin && (_.rootMargin = this.props.rootMargin),
+              this.props.thresholds && (_.threshold = this.props.thresholds),
+              (this.m_observer = (0, _._)(_, this.OnIntersection, _));
+          }
+          this.m_observer &&
+            _ &&
+            _ != this.m_elTracked &&
+            (this.m_observer.observe(_), (this.m_elTracked = _));
+        }
+        FindScrollableAncestor(_) {
+          return _._(_, (_) => {
+            const _ = this.props.horizontal
+              ? window.getComputedStyle(_).overflowX
+              : window.getComputedStyle(_).overflowY;
+            return (
+              "scroll" == _ ||
+              "auto" == _ ||
+              !!_.classList.contains(_.GetScrollableClassname())
+            );
+          });
+        }
+        OnIntersection(_, _) {
+          let _ = !1;
+          for (const _ of _)
+            if (_.isIntersecting) {
+              _ = !0;
+              break;
+            }
+          this.m_bPreviouslyIntersecting != _ &&
+            ((this.m_bPreviouslyIntersecting = _),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(_),
+            _ && this.BTriggerOnce() && this.DestroyObserver());
+        }
+        render() {
+          let {
+            onVisibilityChange: _,
+            rootMargin: _,
+            trigger: _,
+            horizontal: _,
+            ..._
+          } = this.props;
+          return (0, _.jsx)("div", {
+            ref: this.m_refElement,
+            ..._,
+            children: this.props.children,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
   },
 ]);

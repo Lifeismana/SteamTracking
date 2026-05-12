@@ -49,16 +49,25 @@
         NewThrobber: "_1m8iQOSVziKDHiInrfskv_",
       };
     },
+    45334: (e, r, t) => {
+      "use strict";
+      t.d(r, { $e: () => s, B7: () => i, Pe: () => o, Pv: () => c });
+      const s = 1,
+        c = 2,
+        i = 4,
+        o = 1073741824;
+    },
     17690: (e, r, t) => {
       "use strict";
-      t.d(r, { IU: () => n, by: () => a, sc: () => o });
+      t.d(r, { IU: () => a, by: () => d, sc: () => l });
       var s = t(78327),
         c = t(85044),
-        i = t(81393);
-      const o = 0,
-        l = "061818254b2c99ac49e6626adb128ed1282a392f",
-        n = 120;
-      class a {
+        i = t(81393),
+        o = t(45334);
+      const l = 0,
+        n = "061818254b2c99ac49e6626adb128ed1282a392f",
+        a = 120;
+      class d {
         m_unAppID;
         m_bInitialized = !1;
         m_strName;
@@ -81,10 +90,10 @@
           return this.m_strName;
         }
         get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, l);
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, n);
         }
         get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, l);
+          return this.BuildAppURL(this.m_strIconURL, n);
         }
         get time_updated_from_server() {
           return this.m_dtUpdatedFromServer;
@@ -93,7 +102,7 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return 4 == this.apptype || 2 == this.apptype;
+          return this.apptype == o.B7 || this.apptype == o.Pv;
         }
         BuildAppURL(e, r) {
           return e
@@ -113,7 +122,7 @@
             (this.m_eAppType = e.app_type());
         }
         DeserializeFromAppOverview(e) {
-          e.icon_hash() && 1073741824 != e.app_type()
+          e.icon_hash() && e.app_type() != o.Pe
             ? ((this.m_bInitialized = !0),
               (this.m_strName = e.display_name()),
               (this.m_strIconURL = e.icon_hash()),
@@ -154,7 +163,7 @@
       var s = t(78327),
         c = t(22837);
       function i() {
-        return s.TS.IN_CLIENT && (0, c.DO)(s.TS.LAUNCHER_TYPE);
+        return s.TS.IN_CLIENT && (0, c.DOG)(s.TS.LAUNCHER_TYPE);
       }
     },
     85044: (e, r, t) => {

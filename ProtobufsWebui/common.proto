@@ -610,6 +610,100 @@ message CCloud_PendingRemoteOperation {
 	optional int32 device_type = 6;
 }
 
+message CContentServerConfig_AnonymousDepots_Notification {
+	repeated uint32 anon_session_allowed_depots = 2;
+}
+
+message CContentServerConfig_CMStats_Notification {
+	repeated .CContentServerConfig_CMStats_Notification_Stats stats = 1;
+}
+
+// Used by: common.proto
+message CContentServerConfig_CMStats_Notification_Stats {
+	optional uint32 sysid_cm = 1;
+	optional uint32 current_load = 2;
+	optional uint32 rtime_last_updated = 3;
+}
+
+message CContentServerConfig_ContentServerStats_Notification {
+	repeated .CContentServerConfig_ContentServerStats_Notification_Stats stats = 1;
+	repeated .CContentServerConfig_ContentServerStats_Notification_CDNStats cdn_stats = 2;
+	repeated .CContentServerConfig_ContentServerStats_Notification_SteamCacheStats steamcache_stats = 3;
+}
+
+// Used by: common.proto
+message CContentServerConfig_ContentServerStats_Notification_CDNStats {
+	optional string cdn_name = 1;
+	optional int32 current_load = 2;
+	optional uint32 rtime_last_updated = 3;
+}
+
+// Used by: common.proto
+message CContentServerConfig_ContentServerStats_Notification_Stats {
+	optional uint32 cs_id = 1;
+	optional uint32 current_load = 2;
+	optional uint32 rtime_last_updated = 3;
+}
+
+// Used by: common.proto
+message CContentServerConfig_ContentServerStats_Notification_SteamCacheStats {
+	optional uint32 cache_id = 1;
+	optional uint32 current_load = 2;
+	optional uint32 rtime_last_updated = 3;
+	optional uint32 load_adjustment = 4;
+}
+
+// Used by: ContentServerConfig, common.proto
+message CContentServerConfig_OpenCacheConfig {
+	optional uint32 cache_id = 1;
+	optional bool is_enabled = 2;
+	optional string host_name = 3;
+	optional string provider = 4;
+	optional uint32 cell_id = 5;
+	optional string config_json = 6;
+	optional string name = 7;
+	optional string ip_filter_list = 8;
+}
+
+message CContentServerConfig_OpenCacheConfigUpdate_Notification {
+	optional .CContentServerConfig_OpenCacheConfig config = 1;
+}
+
+// Used by: ContentServerConfig, common.proto
+message CContentServerConfig_SteamCacheConfig {
+	optional uint32 cache_id = 1;
+	optional bool is_enabled = 2;
+	optional string host_name = 3;
+	optional string provider = 4;
+	optional uint32 cell_id = 5;
+	optional string api_key_primary = 6;
+	optional string api_key_secondary = 7;
+	optional string config_json = 8;
+	optional string name = 9;
+	optional string ip_filter_list = 10;
+	optional uint32 timestamp = 11;
+}
+
+message CContentServerConfig_SteamCacheConfigUpdate_Notification {
+	optional .CContentServerConfig_SteamCacheConfig config = 1;
+}
+
+// Used by: ContentServerConfig, common.proto
+message CContentServerConfig_SteamCSConfig {
+	optional uint32 cs_id = 1;
+	optional bool is_enabled = 2;
+	optional string host_name = 3;
+	optional string provider = 4;
+	optional uint32 cell_id = 5;
+	optional string config_json = 8;
+	optional string name = 9;
+	optional string ip_filter_list = 10;
+}
+
+message CContentServerConfig_SteamCSConfigUpdate_Notification {
+	optional .CContentServerConfig_SteamCSConfig config = 1;
+}
+
 message CGameNetworkingUI_AppSummary {
 	optional uint32 appid = 1;
 	optional bool ip_was_shared_with_friend = 10;
@@ -676,6 +770,13 @@ message CGameRecording_AudioSessionsChanged_Notification_Session {
 	optional bool is_game = 8;
 	optional bool is_steam = 9;
 	optional bool is_saved = 10;
+}
+
+message CMDSAdmin_DepotIngestChunkStorageFailure_Notification {
+	optional uint32 appid = 1;
+	optional uint32 depot_id = 2;
+	optional fixed64 build_handle = 3;
+	optional bytes sha = 4;
 }
 
 message CMsgAchievementChange {

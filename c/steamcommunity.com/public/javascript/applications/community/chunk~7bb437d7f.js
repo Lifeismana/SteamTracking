@@ -580,8 +580,12 @@
               });
         }),
         _ = (_) => {
+          var _;
           const _ = (0, _.jsx)("div", {
-            className: _.stylesmodule.DateToolTip,
+            className:
+              null === (_ = _.stylesmodule) || void 0 === _
+                ? void 0
+                : _.DateToolTip,
             children: (0, _.jsx)(_, {
               dateAndTime: _.rtFullDate,
               bSingleLine: !0,
@@ -598,7 +602,7 @@
         };
       let _ = class extends _.Component {
         render() {
-          const { startDateAndTime: _, endDateAndTime: _ } = this.props,
+          const { startDateAndTime: _, endDateAndTime: _ = 0 } = this.props,
             _ = this.props.stylesmodule
               ? {
                   ..._(),

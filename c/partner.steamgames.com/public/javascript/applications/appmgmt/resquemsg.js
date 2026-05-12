@@ -13,56 +13,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
-        WidePageCtn: "uHgjQHyNygSKukDngfNQO",
-        PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
-        PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
-        Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
-        PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
-        ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
-        ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
-        SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
-        ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
-        LeftCol: "_1AqrivbzwCs57BXiugqpeA",
-        ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
-        Blue: "J7iYYml2Jf_PcaACW1hEr",
-        ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
-        Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
-        ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
-        SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
-        warning: "_2HiNh3o5cgMEbzFKYBUjAy",
-        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
-        RightCol: "_3kaQhRnhNh_awrnNX90rui",
-        NoSticky: "JQNb8bHftBTAYpCXTx52v",
-        SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
-        Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
-        TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
-        DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
-        Indent: "_7PV326-4cpZdmTCEdgC2l",
-        DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
-        FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
-        MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
-        UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
-        UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
-        MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
-        BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
-        UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
-        LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
-        LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
-        UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
-        LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
-        DeleteAll: "rYuknI3K1VFknv90GNUTc",
-        EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
-        StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
-        HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
-        StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
-        Stat: "_3OYQbVCq1yBuEx1XcDzG06",
-        BigStat: "lYYwDDss378Sm0FKPBxPh",
-        IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         EventTimeSection: "_3HyTVTASSmLacvaM964sgu",
         EventTimeTitle: "_2lG5hFYhu9PGPn6RoFeQOL",
         EventVisibilityItem: "_1she-lvNiCP3ASjTnl4q7x",
@@ -82,6 +32,51 @@
         VisibilityItems: "_1WleIEEiF-9nJ57tLWkRmS",
         EventEditorVisibilityCtn: "_4gWwydbAbp2t1NCeW9LLV",
         DateErrorCtn: "_1Ao_g72kBAdoOo0lGUG7Mr",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
+        description: "_1oXNiM3xAFJRy_Ze38gkG3",
+        description2: "_1KF2MlJ6F5jUyxes4dS-I8",
+        reservation_ctn: "_1GzH4ChDWcNv3vCKTlSIfb",
+        reservation_horizontal_ctn: "keZ2uzYaV6t4dSmdSpPpP",
+        options: "_1ShICbWRa-d4k2sWXSBRU5",
+        price: "_K9GwdoULB7fidQYauP4H",
+        CommunityPreviewReservationWidgetControl: "k82adLwDVk_0_Qpi4uKHS",
+        reservecopy: "_2mg-ayeqtfvSlVBeUNudsd",
+        reserverow: "_1DB5FQ_X8YXXb9MTrWamkY",
+        purchaseaction: "_10a9BMKHCowrtgelPrWPvh",
+        reserverowReserved: "_27GR40w6gCHGSSzOvM-6f6",
+        reservebutton: "_3I2SPz9E3c4Z9kizQ8Si8",
+        noreserve: "UsTrTU7oUGQiO_uLnTTBQ",
+        cancelreservation: "_2PaJLP896niw_vwPf8Ul5p",
+        alreadyreserved: "_2jeg5CIDxIsUEOFM4IOyKE",
+        expecteddate: "_1-QAWjJQ51fHnsPzqCzc6T",
+        expecteddate_str: "_1Thj5rQmTc3_SU05H6yiSY",
+        Link: "_1vJHwybFjHBbNcBpxq2vJO",
+        ReservationPSULessAddToCart: "_2HaOvkwPHDjo-tw2MojOhW",
+        ReservationPSULessOutOfStock: "Cnrm19fZ6RQr1qL0tAjK9",
+        BackgroundAnimation: "_1xm0qUdmOPB5fFuOJowf-6",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1B7CatJQljUauJ8s1n-ljZ",
+        "ItemFocusAnim-darkerGrey": "_6ssa6UMKDgZzlmkNC_YVR",
+        "ItemFocusAnim-darkGreySettings": "_3zdVJjpFzFXizWMqJTanXL",
+        "ItemFocusAnim-darkGrey": "_30_M6ppan1_ulIlPEXgIJl",
+        "ItemFocusAnim-grey": "_3GYj5W9eacowkuiHIeomMp",
+        "ItemFocusAnim-translucent-white-10": "_3hWi_Bpp8nC9QUW0w7vdoF",
+        "ItemFocusAnim-translucent-white-20": "_2tLGUDqcBXOft1XNfwfowc",
+        "ItemFocusAnimBorder-darkGrey": "_3lwkegIBcstdeNMYHVQcIL",
+        "ItemFocusAnim-green": "iNSUXIvhm2XWFZAz-czyp",
+        focusAnimation: "sCYIjlY_RF-rJsQ-OC8Vo",
+        hoverAnimation: "_3fUy8YNvjnAprZfdUIuwu5",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Link: "_1K4QC6vZ61M5lcIvcCWMEP",
+        UserTooNew: "_20i0fZO4jaOWCaVeAoB6KJ",
+        AlreadyBought: "g1ayBmJ07JAYzenoRRpu5",
       };
     },
     chunkid: (module) => {
@@ -112,6 +107,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)("physical_goods", "application_config");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -195,7 +191,7 @@
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._) {
               const _ = new Set(),
                 _ = Math.floor(Date.now() / 1e3);
               return (
@@ -243,7 +239,7 @@
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._) {
               const _ = this.GetKey(_);
               let _ = this.m_mapProductPositionMsgList.get(_);
               const _ = __webpack_require__.findIndex(
@@ -431,13 +427,52 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { elReservationMessage: _, strUrlLearnMoreLink: _ } = _;
+        return _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                _,
+                (0, _.jsx)(_._, {
+                  url: _,
+                  className: _().Link,
+                  children: _._.Localize("#Button_Learn"),
+                }),
+              ],
+            })
+          : _;
+      }
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
       }
       function _(_) {
-        const { strToken: _, rtEstimatedNotifcationDate: _ } = _,
-          _ = new Date(1e3 * _),
+        const {
+          strToken: _,
+          rtEstimatedNotifcationDate: _,
+          strUrlLearnMoreLink: _,
+          bInReservationQueue: _,
+        } = _;
+        if (!_ || !_)
+          return (0, _.jsx)("div", {
+            className: _().Ctn,
+            children: (0, _.jsx)(_, {
+              elReservationMessage: _._.Localize(
+                _
+                  ? "#Sale_Reservation_Fallback_user_V2"
+                  : "#Sale_Reservation_Fallback_V2",
+              ),
+              strUrlLearnMoreLink: _,
+            }),
+          });
+        const _ = new Date(1e3 * _),
           _ = _.getMonth() + 1;
         let _ = "",
           _ = "",
@@ -490,12 +525,20 @@
                     (_ = "" + Math.floor(_ / 28 + 1))));
             }
             break;
+          case "#Sale_Reservation_AvailabilityUnknown":
+            _ = _
+              ? "#Sale_Reservation_Fallback_user_V2"
+              : "#Sale_Reservation_Fallback_V2";
+            break;
           default:
             _ = "#Sale_Reservation_Fallback";
         }
         return (0, _.jsx)("div", {
           className: _().Ctn,
-          children: (0, _._)(_, _, _, _, ""),
+          children: (0, _.jsx)(_, {
+            elReservationMessage: (0, _._)(_, _, _, _, ""),
+            strUrlLearnMoreLink: _,
+          }),
         });
       }
       var _ = __webpack_require__("chunkid");
@@ -638,8 +681,10 @@
             }),
             (0, _.jsx)("td", {
               children: (0, _.jsx)(_, {
+                strUrlLearnMoreLink: void 0,
                 rtEstimatedNotifcationDate: _.rtime_estimated_notification,
                 strToken: _.localization_token,
+                bInReservationQueue: !0,
               }),
             }),
             (0, _.jsxs)("td", {
@@ -820,6 +865,7 @@
         "#Sale_Reservation_Year",
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
+        "#Sale_Reservation_AvailabilityUnknown",
       ];
       function _(_) {
         const { strToken: _, fnSetToken: _, rtEstimateDate: _ } = _,
@@ -829,6 +875,8 @@
                 label: (0, _.jsx)(_, {
                   strToken: _,
                   rtEstimatedNotifcationDate: _,
+                  strUrlLearnMoreLink: void 0,
+                  bInReservationQueue: !0,
                 }),
                 data: _,
               })),
@@ -859,8 +907,10 @@
                       children: (0, _._)("#Sale_Reservation_ExpectedDate"),
                     }),
                     (0, _.jsx)(_, {
+                      strUrlLearnMoreLink: void 0,
                       rtEstimatedNotifcationDate: _,
                       strToken: _,
+                      bInReservationQueue: !0,
                     }),
                   ],
                 }),
@@ -956,6 +1006,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -997,7 +1048,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -1014,7 +1065,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -1524,108 +1575,6 @@
             ? (0, _.jsx)(_.hz4, {})
             : (0, _.jsx)(_.Xjb, {}),
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        if (_().isCancel(_))
-          return {
-            strErrorMsg: "Action Cancelled:" + _,
-            errorCode: 52,
-          };
-        if (
-          void 0 !== _.response &&
-          _.response.data &&
-          "object" == typeof _.response.data
-        ) {
-          if ("msg" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.msg,
-              errorCode: _.response.data.success,
-            };
-          if ("err_msg" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.err_msg,
-              errorCode: _.response.data.success,
-            };
-          if ("message" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.message,
-              errorCode: _.response.data.success,
-            };
-          if ("success" in _.response.data)
-            return {
-              strErrorMsg: "error code: " + _.response.data.success,
-              errorCode: _.response.data.success,
-            };
-        } else if ("object" == typeof _.data) {
-          if ("msg" in _.data)
-            return {
-              strErrorMsg: _.data.msg,
-              errorCode: _.data.success,
-            };
-          if ("err_msg" in _.data)
-            return {
-              strErrorMsg: _.data.err_msg,
-              errorCode: _.data.success,
-            };
-          if ("message" in _.data)
-            return {
-              strErrorMsg: _.data.message,
-              errorCode: _.data.success,
-            };
-          if ("success" in _.data)
-            return {
-              strErrorMsg: "error code: " + _.data.success,
-              errorCode: _.data.success,
-            };
-        } else {
-          if (void 0 !== _.success && void 0 !== _.msg)
-            return {
-              strErrorMsg: _.msg,
-              errorCode: _.success,
-            };
-          if (void 0 !== _.success && void 0 !== _.message)
-            return {
-              strErrorMsg: _.message,
-              errorCode: _.success,
-            };
-          if (void 0 !== _.success && void 0 !== _.err_msg)
-            return {
-              strErrorMsg: _.err_msg,
-              errorCode: _.success,
-            };
-          if ("string" == typeof _ && _.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(_),
-              console.groupEnd();
-          else {
-            if ("object" == typeof _ && _ instanceof _._)
-              return {
-                strErrorMsg: "" + _.GetErrorMessage(),
-                errorCode: _.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", _);
-          }
-        }
-        return "object" == typeof _ && "status" in _
-          ? {
-              strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: 2,
-            }
-          : {
-              strErrorMsg: "Unknown Error: " + _,
-              errorCode: 2,
-            };
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

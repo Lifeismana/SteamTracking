@@ -57,8 +57,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"));
       function _(_) {
         return (0, _.jsx)(_.d1w, {});
       }
@@ -68,7 +72,7 @@
       function _(_) {
         return (0, _.jsx)("div", {
           className: (0, _._)(_.RoleIcon, _.className),
-          children: 2 == _.role ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {}),
+          children: _.role == _._._ ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {}),
         });
       }
       function _(_) {
@@ -118,7 +122,7 @@
                   bCompactView: !1,
                   persona: _,
                   strNickname: _,
-                  eFriendRelationship: 3,
+                  eFriendRelationship: _._UC,
                   bEllipsisName: !0,
                 }),
               ],
@@ -202,6 +206,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -243,7 +248,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -260,7 +265,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -321,6 +326,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
@@ -331,7 +337,7 @@
               queryFn: async () => {
                 const _ = _._.Init(_._),
                   _ = await _._.GetCommunityPreferences(_, _);
-                if (1 != __webpack_require__.GetEResult())
+                if (__webpack_require__.GetEResult() != _._)
                   throw new Error(
                     `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
                   );

@@ -58,6 +58,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _ && _.length > _ ? [..._] : (0, _._)(_ || [], _ + 1, "");
@@ -69,11 +70,11 @@
       function _(_, _) {
         let _ = !1,
           _ = !1;
-        for (let _ = 0; _ < 31; _++) {
+        for (let _ = _.Bhc; _ < _.bP9; _++) {
           const _ = _(_, _).trim(),
             _ = _(_, _).trim();
           if (!_ && !_) continue;
-          const _ = (0, _._)("#Language_" + (0, _._)(_));
+          const _ = (0, _._)("#Language_" + (0, _.LgB)(_));
           if (((_ = !0), !_))
             return (0, _._)("#BuildNotes_Error_MissingTitle", _);
           if (!_) return (0, _._)("#BuildNotes_Error_MissingDescription", _);
@@ -81,7 +82,7 @@
             return (0, _._)("#BuildNotes_Error_TitleTooLong", _);
           if (_.length > 32768)
             return (0, _._)("#BuildNotes_Error_DescriptionTooLong", _);
-          0 === _ && (_ = !0);
+          _ === _.Bhc && (_ = !0);
         }
         return _
           ? _
@@ -125,7 +126,7 @@
         }
       }
       function _(_) {
-        const [_, _] = _.useState(0),
+        const [_, _] = _.useState(_.Bhc),
           [_, _] = _.useState(null),
           [_, _] = _.useState(null),
           [_, _] = _.useState(null),
@@ -202,8 +203,8 @@
                                 (_.postTime = Date.now() / 1e3),
                                 (_.startTime = Date.now() / 1e3),
                                 (_.createTime = Date.now() / 1e3),
-                                (_.type = 12);
-                              for (let _ = 0; _ < 31; _++)
+                                (_.type = _.Fwr);
+                              for (let _ = _.Bhc; _ < _.bP9; _++)
                                 _.name.set(_, _(_, _)),
                                   _.description.set(_, _(_, _));
                               return _;
@@ -247,7 +248,7 @@
                   _(null), _("submitting");
                   const _ = await (async function (_, _, _) {
                     if (_(_, _)) return null;
-                    const _ = Boolean(_(_, 29).trim()),
+                    const _ = Boolean(_(_, _.ZLm).trim()),
                       _ = new FormData();
                     _.append("sessionid", _._.SESSIONID),
                       _.append("appid", "" + _),
@@ -266,7 +267,7 @@
                       const _ = await _().post(_, _, {
                         withCredentials: !0,
                       });
-                      if (1 == _?.data?.success) return _.data;
+                      if (_?.data?.success == _._) return _.data;
                       console.error(
                         "buildpatchnotes: OnSubmitCreateEvent error code  " +
                           _?.data?.success +
@@ -320,7 +321,7 @@
           } = _;
           let _ = "";
           if (_.includes(_._.k_ESteamRealmChina)) {
-            const _ = "" !== _(29).trim();
+            const _ = "" !== _(_.ZLm).trim();
             _ = (0, _._)(
               _
                 ? "#BuildNotes_SteamChina_Provided"
@@ -345,7 +346,7 @@
                           const _ = new _._(),
                             _ = (0, _._)("#BuildNotes_SampleTitle"),
                             _ = (0, _._)("#BuildNotes_SampleDescription");
-                          for (let _ = 0; _ < 31; _++)
+                          for (let _ = _.Bhc; _ < _.bP9; _++)
                             _.SetLocalization("Title", _, _),
                               _.SetLocalization("Description", _, _);
                           (0, _._)(

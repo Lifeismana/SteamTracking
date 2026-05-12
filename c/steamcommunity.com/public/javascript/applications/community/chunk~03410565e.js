@@ -75,13 +75,6 @@
         DeleteInfo: "_3EhGHfB3z9uPkO3ZTnwUVm",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
-        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
-        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -1726,98 +1719,6 @@
                 children: (0, _._)("#Login_SignIn"),
               }),
           ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            title: _,
-            tooltip: _,
-            getMinimized: _,
-            toggleMinimized: _,
-            className: _,
-            children: _,
-            elAdditionalButtons: _,
-          } = _,
-          _ = (0, _._)(() => _());
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _,
-                _.SectionTitleHeader,
-                _.required_title,
-                "SectionTitleHeader",
-              ),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _.CollapsableSectionTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: [
-                    _,
-                    Boolean(_) &&
-                      (0, _.jsx)(_._, {
-                        tooltip: _,
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.SectionTitleButtons,
-                  children: [
-                    _,
-                    (0, _.jsx)(_, {
-                      bIsMinimized: _,
-                      fnToggleMinimize: _,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            !_ &&
-              (0, _.jsx)(_._, {
-                children: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const [_, _] = _.useState(Boolean(_.bStartMinimized));
-        return (0, _.jsx)(_, {
-          ..._,
-          getMinimized: () => _,
-          toggleMinimized: () => __webpack_require__(!_),
-          children: _.children,
-        });
-      }
-      function _(_) {
-        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
-          _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return (0, _.jsx)(_._, {
-          "data-tooltip-text": (0, _._)(_),
-          onClick: _,
-          children: _.bIsMinimized
-            ? (0, _.jsx)(_.hz4, {})
-            : (0, _.jsx)(_.Xjb, {}),
         });
       }
     },

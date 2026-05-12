@@ -313,7 +313,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -344,7 +346,7 @@
             )
               return _._;
             if (null == _) return _.Loading;
-            if (1 != _) return _.FailedToLoad;
+            if (_ != _._) return _.FailedToLoad;
             const _ = (0, _._)(_);
             return _.every((_) => _.rtStartDate > _ + _._ || _.rtEndDate < _)
               ? _._
@@ -355,7 +357,7 @@
               [_, _] = _.useState(_.Idle);
             let _ = _.useCallback(async () => {
               _(_.Loading);
-              1 == (await _(_)).success ? _(_._) : _(_.Failed);
+              (await _(_)).success == _._ ? _(_._) : _(_.Failed);
             }, [_, _, _]);
             return {
               fnPublish: _,
@@ -508,7 +510,7 @@
           ? ((_ = _().NeedsReview),
             (_ = (0, _._)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
             (_ = (0, _._)("#PricingDashboard_PriceProposal_NeedsReview")))
-          : 1 == _?.eState && _.bPartnerWillPublish
+          : _?.eState == _._ && _.bPartnerWillPublish
             ? ((_ = _().PartnerWillPublish),
               (_ = (0, _._)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
@@ -518,8 +520,8 @@
               (_ = (0, _._)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
               )))
-            : 1 != _?.eState || _.bPartnerWillPublish
-              ? 4 == _?.eState
+            : _?.eState != _._ || _.bPartnerWillPublish
+              ? _?.eState == _._
                 ? ((_ = _().ApprovedCanPublish),
                   (_ = (0, _._)(
                     "#PricingDashboard_PriceProposal_Approved_ttip",
@@ -653,6 +655,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _ } = _,
@@ -756,11 +759,11 @@
                   ? _(_, void 0, 6e4).then((_) => {
                       __webpack_require__(_);
                     })
-                  : __webpack_require__("chunkid");
+                  : __webpack_require__(_._);
               }, [_, _, _]),
               _.useMemo(() => {
                 if (void 0 === _) return null;
-                if (1 != _)
+                if (_ != _._)
                   return {
                     days: 0,
                     loadFailed: !0,
@@ -994,7 +997,7 @@
                 const _ = _[_],
                   _ = await _(_, _, _);
                 if (_.token.reason) return;
-                if (1 != _.success)
+                if (_.success != _._)
                   return void _(
                     _.msg ?? (0, _._)("#PricingDashboard_SavePricesError"),
                   );

@@ -378,6 +378,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         m_elCanvas;
@@ -2066,9 +2067,9 @@
               ));
         }
         OnKeyDown(_) {
-          37 == _.keyCode
+          _.keyCode == _._
             ? (this.props.video.JumpTime(-15), _.preventDefault())
-            : 39 == _.keyCode &&
+            : _.keyCode == _._ &&
               (this.props.video.JumpTime(15), _.preventDefault());
         }
         AdjustSliderForClientX(_) {
@@ -2835,6 +2836,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_elVideo = null;
@@ -2911,7 +2913,7 @@
                     )
                     .then((_) => {
                       const _ = _.data;
-                      (_.success && 1 == _.success) ||
+                      (_.success && _.success == _._) ||
                         console.log(
                           "Failed to add a WebRTC session ICE candidate: " +
                             String(_.success),
@@ -2954,7 +2956,7 @@
                     )
                     .then((_) => {
                       const _ = _.data;
-                      if (!_.success || 1 != _.success)
+                      if (!_.success || _.success != _._)
                         throw new Error(String(_.success));
                     });
                 } catch (_) {
@@ -2989,7 +2991,7 @@
               .then((_) => {
                 const _ = _.data,
                   _ = _.data;
-                if (!_.success || 1 != _.success)
+                if (!_.success || _.success != _._)
                   throw new Error(String(_.success));
                 _.candidate_generation > this.m_nHostCandidateGeneration
                   ? (_.candidates.forEach((_) => {
@@ -3164,6 +3166,8 @@
         (0, _._)([_._], _.prototype, "OnVideoPause", null),
         (0, _._)([_._], _.prototype, "OnVideoResize", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3553,7 +3557,7 @@
                 params: _,
               },
             );
-            if (!_ || !_.data || !_.data.success || 1 != _.data.success)
+            if (!_ || !_.data || !_.data.success || _.data.success != _._)
               return void (_.m_bInitialized = !0);
             const _ = _.data;
             (0, _._)(() => {
@@ -3727,7 +3731,7 @@
               (0, _._)("#BroadcastWatch_RequestFailed"),
             );
           let _ = _.data;
-          1 == _.success
+          _.success == _._
             ? (_.SetState(_.Ready), (_.m_data = _), this.LoadClip(_))
             : _.SetState(_.Error, (0, _._)("#BroadcastWatch_RequestFailed"));
         }
@@ -3833,7 +3837,7 @@
         m_player = null;
         m_listeners = new _._();
         m_gameDataParser = null;
-        m_eWatchLocation = 0;
+        m_eWatchLocation = _._._;
         m_bStartWithSubtitles = !1;
         m_steamIDBroadcast = null;
         m_BroadcastInfo = null;
@@ -3956,7 +3960,7 @@
           return null;
         }
         SetSubtitles(_) {
-          let _ = _ ? _._[_] : -1;
+          let _ = _ ? _._[_] : _.xPp;
           this.m_player.SetSubtitles(_);
         }
         SetStartWithSubtitles(_) {
@@ -4342,6 +4346,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         let _ = _.toString();
@@ -4422,7 +4427,7 @@
         }
         async LoadDiscoveryQueue(_, _, _) {
           const _ = _(_, _);
-          if (!this.m_transport) return 2;
+          if (!this.m_transport) return _._;
           try {
             const _ = (0, _._)(this.m_transport, _, _, _);
             _ &&
@@ -4438,7 +4443,7 @@
                 : (this.m_setExhuasted.delete(_),
                   this.GetExhaustedCallback(_, _).Set(!1)),
               this.m_mapSkippedAppCount.set(_, _.skipped || 0),
-              1
+              _._
             );
           } catch (_) {
             return (
@@ -4450,7 +4455,7 @@
                 "key",
                 _,
               ),
-              2
+              _._
             );
           }
         }
@@ -4496,7 +4501,7 @@
             const _ = (
               await _._.SkipDiscoveryQueueItem(this.m_transport, _)
             ).GetEResult();
-            1 != _ && 29 != _
+            _ != _._ && _ != _._
               ? (console.warn("Error", _, "failed to skip appid ", _),
                 this.m_mapSkippedApps.delete(_))
               : _ && this.MarkDiscoveryQueueCompleted(_, _);
@@ -4531,7 +4536,7 @@
               []
             );
           const _ = await _._.GetDiscoveryQueueSkippedApps(this.m_transport, _);
-          return 1 === _.GetEResult()
+          return _.GetEResult() === _._
             ? _.Body().appids() || []
             : (console.warn(
                 "Failed to retrieve skipped apps for discovery queue.",
@@ -4584,6 +4589,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4652,7 +4658,7 @@
               _ && _.Body().set_override_country_code(_);
               _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
               const _ = await _._.Query(_, _);
-              if (1 != _.GetEResult())
+              if (_.GetEResult() != _._)
                 throw `Error executing StoreQuery "${_}", EResult: ${_.GetEResult()}`;
               return new _(_, _);
             })(_, _, _, _ ?? {}, _),
@@ -5199,7 +5205,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5461,7 +5469,7 @@
             let { data: _ } = (0, _._)(
               "DiscoveryQueueWidget",
               {
-                sort: 11,
+                sort: _._._,
                 start: 0,
                 count: 12,
                 filters: {
@@ -5512,7 +5520,7 @@
         });
       }
       function _() {
-        const _ = (0, _._)(2, _._.LANGUAGE, !0),
+        const _ = (0, _._)(_._._, _._.LANGUAGE, !0),
           _ = (0, _._)();
         if (!_.data?.definition || 0 == (_.data?.reward_items?.length ?? 0))
           return null;
@@ -5686,6 +5694,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled";
@@ -5711,7 +5720,7 @@
           _ = (_ ?? !0) && _ && !_.BIsAllAges() && "masked" == _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(0),
+          [_, _] = _.useState(_._),
           _ = _.useRef(void 0),
           _ = _.useRef(void 0),
           [_, _] = _.useState(),
@@ -5740,17 +5749,17 @@
           }, [_, _, _, _]);
         const _ = (function (_, _, _, _, _) {
           return _.useCallback(() => {
-            0 == _
+            _ == _._
               ? _(!0)
-              : 1 == _ && _.current
+              : _ == _._ && _.current
                 ? _.current.paused
                   ? _.current.play()
                   : _.current.pause()
-                : 2 == _ && _.current
+                : _ == _._ && _.current
                   ? _.current.IsPaused()
                     ? _.current.Play()
                     : _.current.Pause()
-                  : 2 == _ && _ && _.TogglePlayPause();
+                  : _ == _._ && _ && _.TogglePlayPause();
           }, [_, _, _, _, _]);
         })(_, _, _, _, _);
         _.useEffect(() => {
@@ -5764,7 +5773,7 @@
           onMouseLeave: () => _(!1),
           children: [
             (0, _.jsx)("img", {
-              className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
+              className: (0, _._)(_().AppMainCap, _ != _._ && _().Hidden),
               src: _,
               onClick: _,
             }),
@@ -5851,7 +5860,10 @@
           _ = !!_ || !!_;
         _.useEffect(() => {
           let _ = !1;
-          _ && _ && _ && (_ = 0 === _ || (1 === _ && !_) || (2 === _ && !_)),
+          _ &&
+            _ &&
+            _ &&
+            (_ = _ === _._ || (_ === _._ && !_) || (_ === _._ && !_)),
             _(_),
             _?.(_ && _);
         }, [_, _, _, _, _, _, _, _]),
@@ -5873,7 +5885,7 @@
           })(_, _),
           _.useEffect(() => {
             _ ||
-              (_(0),
+              (_(_._),
               _(!1),
               _(!1),
               _.current && (_.current.pause(), (_.current.currentTime = 0)),
@@ -5882,16 +5894,16 @@
         const _ = _.useRef(!1);
         return (
           _.useEffect(() => {
-            if (_ && 0 === _)
+            if (_ && _ === _._)
               if ((_(!0), _))
                 if (_.current) {
-                  _.Debug("Starting microtrailer"), _(1);
+                  _.Debug("Starting microtrailer"), _(_._);
                   const _ = () =>
                     (function (_, _, _) {
                       if (_.current) return;
                       (_.current = !0),
                         _.Debug("Starting main trailer"),
-                        _(2),
+                        _(_._),
                         __webpack_require__.Play();
                     })(_, _, _.current);
                   _ || !_.current
@@ -5906,7 +5918,7 @@
                           _.Warning(`Failed to play ${_}: `, _);
                       }));
                 } else
-                  _ && (_.Debug("Starting broadcast player"), _(2), _.Play());
+                  _ && (_.Debug("Starting broadcast player"), _(_._), _.Play());
               else _.Debug("Showing image");
             var _, _, _;
           }, [_, _, _, _, _, _, _, _, _]),
@@ -5934,18 +5946,18 @@
             const [_, _] = _.useState(!1);
             _.useEffect(() => {
               _ && !_
-                ? 1 == _ && _ && _
+                ? _ == _._ && _ && _
                   ? (__webpack_require__.pause(), _(!0))
-                  : 2 == _ && _ && _
+                  : _ == _._ && _ && _
                     ? (_.Pause(), _(!0))
-                    : 2 == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
+                    : _ == _._ && _ && !_.IsPaused() && (_.Pause(), _(!0))
                 : !_ &&
                   _ &&
-                  (1 == _ && _
+                  (_ == _._ && _
                     ? __webpack_require__.play()
-                    : 2 == _ && _
+                    : _ == _._ && _
                       ? _.Play()
-                      : 2 == _ && _ && _.IsPaused() && _.Play(),
+                      : _ == _._ && _ && _.IsPaused() && _.Play(),
                   _(!1));
             }, [_, _, _, _, _, _, _, _]);
           })(_, _, _.current, _, _.current, _, _),
@@ -5995,7 +6007,7 @@
                     (0, _.jsx)(_.default, {
                       classes: _(!1, _),
                       nAppIDVOD: _.GetAppID(),
-                      watchLocation: 15,
+                      watchLocation: _._._,
                       fnOnVideoEnd: _,
                       fnVideoClick: _,
                       fnSetBroadcastVideo: _,
@@ -6023,7 +6035,7 @@
             _.current.SetVolume(_, _);
           }
         }, [_, _]);
-        let _ = 2 != _,
+        let _ = _ != _._,
           _ = _(!1, _);
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)("div", {
@@ -6045,9 +6057,9 @@
       function _(_, _) {
         return (0, _._)({
           [_().AppVideo]: !0,
-          [_().PlayFullTrailer]: 2 == _,
-          [_().PlayMicrotrailer]: 1 == _,
-          [_().NoTrailer]: 0 == _,
+          [_().PlayFullTrailer]: _ == _._,
+          [_().PlayMicrotrailer]: _ == _._,
+          [_().NoTrailer]: _ == _._,
           [_().Microtrailer]: _,
           [_().Trailer]: !_,
         });

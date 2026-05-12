@@ -3,31 +3,32 @@
   [351],
   {
     chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case 0:
+          case _._._:
             return "game";
-          case 6:
+          case _._._:
             return "software";
-          case 1:
+          case _._._:
             return "demo";
-          case 4:
+          case _._._:
             return "dlc";
-          case 7:
-          case 3:
+          case _._._:
+          case _._._:
             return "video";
-          case 11:
+          case _._._:
             return "music";
-          case 12:
+          case _._._:
             return "beta";
-          case 2:
+          case _._._:
             return "mod";
         }
         return "invalid";
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -52,6 +53,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -112,7 +114,7 @@
               });
             if (
               200 == _.status &&
-              (1 == _.data?.success || 42 == _.data?.success)
+              (_.data?.success == _._ || _.data?.success == _._)
             ) {
               const _ = {
                 badgeid: _.data.badgeid,
@@ -286,6 +288,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = -1;
       class _ {
@@ -424,7 +427,7 @@
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (200 == _?.status && 1 == _?.data?.success)
+            if (200 == _?.status && _?.data?.success == _._)
               return (
                 (this.m_userData[_].opened = _),
                 (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
@@ -494,7 +497,7 @@
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (200 == _.status && 1 == _?.data?.success) {
+            if (200 == _.status && _?.data?.success == _._) {
               console.log("CDoorStore - closed " + _.data.count);
               for (let _ = 0; _ < 7; ++_)
                 (this.m_userData[_].opened = !1),

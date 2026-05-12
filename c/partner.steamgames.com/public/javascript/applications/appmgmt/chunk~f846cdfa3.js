@@ -919,6 +919,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _, onClose: _, onCommit: _ } = _,
@@ -1009,7 +1010,7 @@
                       _.append("release_date", __webpack_require__.toString());
                   _.append("coming_soon_display", _);
                   const _ = await _().post(_, _);
-                  if (!_.data || 1 != _.data.success)
+                  if (!_.data || _.data.success != _._)
                     throw (0, _._)(
                       "#Error_Description",
                       _.data?.success,

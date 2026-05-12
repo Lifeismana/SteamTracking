@@ -856,7 +856,7 @@
     },
     67045: (e, t, n) => {
       "use strict";
-      n.d(t, { M: () => O });
+      n.d(t, { M: () => F });
       var a = n(7850),
         i = n(90626),
         s = n(63369),
@@ -868,16 +868,17 @@
         p = n.n(c),
         m = n(70986),
         _ = n(20194),
-        g = n(16676),
-        h = n(99637),
-        u = n(9154),
-        x = n(22797),
-        E = n(7860),
-        j = n(61336),
-        S = n(78327),
-        b = n(39679),
-        f = n(51780);
-      function A(e) {
+        g = n(37085),
+        h = n(16676),
+        u = n(99637),
+        x = n(9154),
+        E = n(22797),
+        j = n(7860),
+        S = n(61336),
+        b = n(78327),
+        f = n(39679),
+        A = n(51780);
+      function C(e) {
         const { appid: t, onClose: n, onCommit: s } = e,
           [o, d] = i.useState(null),
           {
@@ -889,7 +890,7 @@
               queryKey: ["ReleaseRequest", e],
               queryFn: async () => {
                 const t = await p().get(
-                  `${S.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
+                  `${b.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
                 );
                 if ("string" == typeof t.data)
                   throw "Error loading release status";
@@ -900,21 +901,21 @@
           g = "prerelease" == l?.strReleaseState,
           h = i.useCallback(
             (e, n) => {
-              E.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
+              j.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
                 s(e, n, g);
             },
             [t, s, g],
           );
-        let u = (0, a.jsx)(w, { setOnOKButton: d, onCommit: h });
+        let u = (0, a.jsx)(R, { setOnOKButton: d, onCommit: h });
         return (
           m
-            ? (u = (0, a.jsx)(R, {
+            ? (u = (0, a.jsx)(v, {
                 strError: (0, r.we)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!c && l) || (u = (0, a.jsx)(x.t, {})),
-          (0, a.jsx)(C.Provider, {
+            : (!c && l) || (u = (0, a.jsx)(E.t, {})),
+          (0, a.jsx)(D.Provider, {
             value: l,
-            children: (0, a.jsx)(N, {
+            children: (0, a.jsx)(k, {
               fnSubmit: o,
               fnCloseModal: n,
               children: u,
@@ -922,42 +923,42 @@
           })
         );
       }
-      const C = i.createContext(null);
-      function D() {
-        return i.useContext(C);
+      const D = i.createContext(null);
+      function w() {
+        return i.useContext(D);
       }
-      const w = i.memo(function (e) {
+      const R = i.memo(function (e) {
         const {
             appid: t,
             bCanUpdateComingSoonDate: n,
             rtReleaseDate: s,
             strComingSoonDisplay: o,
-          } = D(),
+          } = w(),
           { setOnOKButton: d, onCommit: l } = e,
           [c, m] = i.useState(s),
-          [_, h] = i.useState(o || void 0),
-          [u, x] = i.useState("none"),
-          [E, A] = i.useState(),
-          C = i.useCallback((e) => {
-            A(e), x("none");
+          [_, u] = i.useState(o || void 0),
+          [x, E] = i.useState("none"),
+          [j, C] = i.useState(),
+          D = i.useCallback((e) => {
+            C(e), E("none");
           }, []),
-          w = i.useCallback(() => {
+          R = i.useCallback(() => {
             if (c)
               if (_) {
-                x("submitting"), A(null);
+                E("submitting"), C(null);
                 (async function (e) {
                   const {
                       unAppID: t,
                       rtReleaseDate: n,
                       strComingSoonDisplay: a,
                     } = e,
-                    i = `${S.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
+                    i = `${b.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
                     s = new FormData();
-                  s.append("sessionid", S.TS.SESSIONID),
+                  s.append("sessionid", b.TS.SESSIONID),
                     n && s.append("release_date", n.toString());
                   s.append("coming_soon_display", a);
                   const o = await p().post(i, s);
-                  if (!o.data || 1 != o.data.success)
+                  if (!o.data || o.data.success != g.R)
                     throw (0, r.we)(
                       "#Error_Description",
                       o.data?.success,
@@ -969,41 +970,41 @@
                   strComingSoonDisplay: _,
                 })
                   .then(() => {
-                    x("refreshing"), l(c, _);
+                    E("refreshing"), l(c, _);
                   })
                   .catch((e) => {
-                    C(e);
+                    D(e);
                   });
               } else
-                C(
+                D(
                   (0, r.we)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"),
                 );
-            else C((0, r.we)("#App_Landing_ReleaseDate_Error_NoDate"));
-          }, [t, c, _, n, l, C]);
+            else D((0, r.we)("#App_Landing_ReleaseDate_Error_NoDate"));
+          }, [t, c, _, n, l, D]);
         return (
           i.useEffect(() => {
-            d("none" == u ? () => w : null);
-          }, [w, n, u, d]),
+            d("none" == x ? () => R : null);
+          }, [R, n, x, d]),
           (0, a.jsxs)(a.Fragment, {
             children: [
-              E && (0, a.jsx)(R, { strError: E }),
-              (0, a.jsx)(v, {}),
-              (0, a.jsxs)(g.dR, {
+              j && (0, a.jsx)(v, { strError: j }),
+              (0, a.jsx)(N, {}),
+              (0, a.jsxs)(h.dR, {
                 children: [
-                  (0, a.jsxs)(k, {
+                  (0, a.jsxs)(T, {
                     label: (0, r.we)("#App_Landing_IntendedReleaseDateTitle"),
                     children: [
-                      (0, a.jsx)(T, { rtSelectedDate: c, setSelectedDate: m }),
-                      (0, a.jsx)(P, {}),
+                      (0, a.jsx)(P, { rtSelectedDate: c, setSelectedDate: m }),
+                      (0, a.jsx)(I, {}),
                     ],
                   }),
-                  (0, a.jsxs)(k, {
+                  (0, a.jsxs)(T, {
                     label: (0, r.we)("#App_Landing_PublicDateDisplayTitle"),
                     children: [
-                      (0, a.jsx)(b.Ll, {
+                      (0, a.jsx)(f.Ll, {
                         rtSteamReleaseDate: c,
                         value: _,
-                        onChange: h,
+                        onChange: u,
                       }),
                       (0, a.jsx)("p", {
                         children: (0, r.we)(
@@ -1020,83 +1021,83 @@
                 ],
               }),
               (0, a.jsx)("div", {
-                className: f.ReleaseColumnFooter,
+                className: A.ReleaseColumnFooter,
                 children: (0, r.oW)(
                   "#App_Landing_NeedHelpWithReleaseDates",
                   (0, a.jsx)("a", {
                     target: "_blank",
-                    href: `${S.TS.PARTNER_BASE_URL}doc/store/coming_soon`,
+                    href: `${b.TS.PARTNER_BASE_URL}doc/store/coming_soon`,
                   }),
                   (0, a.jsx)("a", {
                     target: "_blank",
-                    href: `${(0, j.GX)()}wizard/HelpWithPublishing`,
+                    href: `${(0, S.GX)()}wizard/HelpWithPublishing`,
                   }),
                 ),
               }),
-              (0, a.jsx)(L, {}),
+              (0, a.jsx)(B, {}),
             ],
           })
         );
       });
-      function R(e) {
+      function v(e) {
         const { strError: t } = e;
-        return (0, a.jsx)("div", { className: f.ErrorBox, children: t });
+        return (0, a.jsx)("div", { className: A.ErrorBox, children: t });
       }
-      function v() {
+      function N() {
         const {
           bIsComingSoon: e,
           bIsStorePageReviewed: t,
           bIsWaitingForBuildReview: n,
           bIsFirstSelfPublishingApp: i,
           rtEarliestDate: s,
-        } = D();
+        } = w();
         return e && t
           ? n
-            ? (0, a.jsx)(I, {
+            ? (0, a.jsx)(L, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_BuildReview",
                 ),
               })
-            : (0, a.jsx)(I, {
+            : (0, a.jsx)(L, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate",
                   (0, r.$z)(s),
                 ),
               })
           : i
-            ? (0, a.jsx)(I, {
+            ? (0, a.jsx)(L, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
                 ),
               })
-            : (0, a.jsx)(I, {
+            : (0, a.jsx)(L, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_TwoWeeks",
                 ),
               });
       }
-      function N(e) {
+      function k(e) {
         const { fnCloseModal: t, fnSubmit: n, children: i } = e,
-          { bCanUpdateComingSoonDate: s } = D() || {
+          { bCanUpdateComingSoonDate: s } = w() || {
             bCanUpdateComingSoonDate: !0,
           };
-        return (0, a.jsxs)(u.mt, {
+        return (0, a.jsxs)(x.mt, {
           active: !0,
-          className: f.ReleaseDateModal,
+          className: A.ReleaseDateModal,
           onDismiss: t,
           children: [
-            (0, a.jsx)(g.Y9, {
+            (0, a.jsx)(h.Y9, {
               children: (0, r.we)(
                 s
                   ? "#App_Landing_Set_Release_Date"
                   : "#App_Landing_Change_Release_Date",
               ),
             }),
-            (0, a.jsx)(g.nB, {
-              className: f.ReleaseDateRequestBody,
+            (0, a.jsx)(h.nB, {
+              className: A.ReleaseDateRequestBody,
               children: i,
             }),
-            (0, a.jsx)(g.CB, {
+            (0, a.jsx)(h.CB, {
               bOKDisabled: !n,
               onCancel: t,
               strCancelText: (0, r.we)("#App_Landing_Requested_Date_Cancel"),
@@ -1106,38 +1107,38 @@
           ],
         });
       }
-      function k(e) {
+      function T(e) {
         const { label: t, children: n } = e;
-        return (0, a.jsxs)(g.VP, {
-          className: f.Column,
+        return (0, a.jsxs)(h.VP, {
+          className: A.Column,
           children: [
             (0, a.jsxs)("div", {
-              className: f.ColumnLabel,
+              className: A.ColumnLabel,
               children: [t, ":"],
             }),
-            (0, a.jsx)("div", { className: f.ColumnContent, children: n }),
+            (0, a.jsx)("div", { className: A.ColumnContent, children: n }),
           ],
         });
       }
-      function T(e) {
+      function P(e) {
         const { rtSelectedDate: t, setSelectedDate: n } = e,
-          { bCanUpdateComingSoonDate: i, rtEarliestDate: s } = D();
+          { bCanUpdateComingSoonDate: i, rtEarliestDate: s } = w();
         return (0, a.jsx)(a.Fragment, {
-          children: (0, a.jsx)(h.K, {
+          children: (0, a.jsx)(u.K, {
             bWeekdaysOnly: !0,
             bNoDefaultDate: !0,
             disabled: !i,
             nEarliestTime: s,
             fnGetTimeToUpdate: () => t,
             fnSetTimeToUpdate: n,
-            className: f.DatePicker,
+            className: A.DatePicker,
             bShowTimeZone: !0,
             strAlsoShowTimeZone: m.o,
           }),
         });
       }
-      function P(e) {
-        const { bCanUpdateComingSoonDate: t, rtReleaseDate: n } = D();
+      function I(e) {
+        const { bCanUpdateComingSoonDate: t, rtReleaseDate: n } = w();
         return t
           ? (0, a.jsxs)(a.Fragment, {
               children: [
@@ -1163,36 +1164,36 @@
                   (0, r.$z)(n),
                 ),
                 (0, a.jsx)("a", {
-                  href: `${(0, j.GX)()}wizard/HelpWithPublishing?issueid=905`,
+                  href: `${(0, S.GX)()}wizard/HelpWithPublishing?issueid=905`,
                 }),
               ),
             });
       }
-      function I(e) {
+      function L(e) {
         return (0, a.jsx)("span", {
-          className: f.BlueNote,
+          className: A.BlueNote,
           children: e.children,
         });
       }
-      function L(e) {
+      function B(e) {
         const {
           rtEarliestDate: t,
           strReleaseState: n,
           bCanUpdateComingSoonDate: i,
-        } = D();
+        } = w();
         return "prerelease" != n || i
           ? null
           : (0, a.jsx)("div", {
-              className: f.PublishNowWarning,
+              className: A.PublishNowWarning,
               children: (0, r.we)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
                 (0, r.$z)(t),
               ),
             });
       }
-      var B = n(52038),
-        y = n(96409);
-      function O(e) {
+      var y = n(52038),
+        O = n(96409);
+      function F(e) {
         const {
             bIsGameEdit: t,
             unAppID: n,
@@ -1209,27 +1210,27 @@
           }, []);
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            g && (0, a.jsx)(A, { appid: n, onClose: j, onCommit: S }),
+            g && (0, a.jsx)(C, { appid: n, onClose: j, onCommit: S }),
             u &&
-              (0, a.jsx)($, {
+              (0, a.jsx)(U, {
                 appid: n,
                 bIsGameEdit: t,
                 closeModal: () => x(!1),
               }),
             (0, a.jsxs)("div", {
-              className: (0, B.A)(d.ReleaseDateInfoCtn, t && d.GameEditCtn),
+              className: (0, y.A)(d.ReleaseDateInfoCtn, t && d.GameEditCtn),
               children: [
                 (0, a.jsxs)("div", {
                   className: d.ReleaseDateContent,
                   children: [
-                    (0, a.jsx)(M, {
+                    (0, a.jsx)($, {
                       label: (0, r.we)("#App_Landing_SpecifiedReleaseDate"),
-                      children: (0, a.jsx)(F, { rtReleaseDate: c }),
+                      children: (0, a.jsx)(M, { rtReleaseDate: c }),
                     }),
-                    (0, a.jsx)(M, {
+                    (0, a.jsx)($, {
                       label: (0, r.we)("#App_Landing_CustomersSeeReleaseDate"),
                       children: (0, a.jsx)("div", {
-                        className: (0, B.A)(d.BigField, m ? d.Set : d.Unset),
+                        className: (0, y.A)(d.BigField, m ? d.Set : d.Unset),
                         children: m
                           ? (0, s.M)(m, c)
                           : (0, r.we)("#App_Landing_UnsetReleaseDate"),
@@ -1241,47 +1242,47 @@
                   className: d.EditButton,
                   onClick: E,
                   children: [
-                    (0, a.jsx)("div", { className: (0, B.A)(d.Spacer, d.Top) }),
+                    (0, a.jsx)("div", { className: (0, y.A)(d.Spacer, d.Top) }),
                     (0, a.jsx)("div", {
                       className: d.EditButtonIcon,
                       children: (0, a.jsx)(l.ffu, {}),
                     }),
                     (0, a.jsx)("div", {
-                      className: (0, B.A)(d.Spacer, d.Bottom),
+                      className: (0, y.A)(d.Spacer, d.Bottom),
                     }),
                   ],
                 }),
               ],
             }),
             1e3 * o > new Date().getTime() &&
-              (0, a.jsx)(M, {
+              (0, a.jsx)($, {
                 label: (0, r.we)("#App_Landing_EarliestAdvancedAccessDate"),
-                children: (0, a.jsx)(F, { rtReleaseDate: o }),
+                children: (0, a.jsx)(M, { rtReleaseDate: o }),
               }),
           ],
         });
       }
-      function F(e) {
+      function M(e) {
         const { rtReleaseDate: t } = e;
         return t
           ? (0, a.jsxs)(a.Fragment, {
               children: [
                 (0, a.jsx)("div", {
-                  className: (0, B.A)(d.BigField, d.Set),
+                  className: (0, y.A)(d.BigField, d.Set),
                   children: (0, r.$z)(t),
                 }),
                 (0, a.jsx)("div", {
-                  className: (0, B.A)(d.SubField, d.Set),
+                  className: (0, y.A)(d.SubField, d.Set),
                   children: (0, o.KC)(t, {}, { timeZoneName: "short" }),
                 }),
               ],
             })
           : (0, a.jsx)("div", {
-              className: (0, B.A)(d.BigField, d.Unset),
+              className: (0, y.A)(d.BigField, d.Unset),
               children: (0, r.we)("#App_Landing_UnsetReleaseDate"),
             });
       }
-      function M(e) {
+      function $(e) {
         return (0, a.jsxs)("div", {
           className: d.LabelField,
           children: [
@@ -1290,19 +1291,19 @@
           ],
         });
       }
-      function $(e) {
+      function U(e) {
         const { appid: t, bIsGameEdit: n, closeModal: s } = e,
           o = i.useCallback(() => {
             n
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
-                  y.bI.GameEditByAppID(t.toString()) +
+                  O.bI.GameEditByAppID(t.toString()) +
                   "?activetab=tab_publish"),
               s();
           }, [t, n, s]);
-        return (0, a.jsx)(u.EN, {
+        return (0, a.jsx)(x.EN, {
           active: !0,
-          children: (0, a.jsx)(u.o0, {
+          children: (0, a.jsx)(x.o0, {
             strTitle: (0, r.we)("#App_Landing_ReleaseDate_ChangesSaved"),
             strDescription: (0, r.we)(
               "#App_Landing_Release_PublishStorePrompt",

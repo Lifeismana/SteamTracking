@@ -1672,14 +1672,14 @@
                   m_strLanguageBCP47: _.strLanguage,
                 });
           this.m_nTimedText = 0;
-          let _ = (0, _._)(_._.LANGUAGE);
+          let _ = (0, _.sfN)(_._.LANGUAGE);
           for (let _ of _) {
             const _ = document.createElement("track");
             (_.kind = "captions"),
               (_.label = _(_.m_strLanguageBCP47)),
               (_.srclang = _.m_strLanguageBCP47),
               (_.src = _.m_strURL),
-              (!this.m_bAlwaysStartWithSubtitles && 0 == _) ||
+              (!this.m_bAlwaysStartWithSubtitles && _ == _.Bhc) ||
                 _._[_.m_strLanguageBCP47] != _ ||
                 (_.default = !0),
               this.m_elVideo.appendChild(_),
@@ -2328,7 +2328,7 @@
             (0, _._)("Trying to play again, this time muted with subtitles"),
               (_ = void 0),
               (this.m_elVideo.muted = !0),
-              this.SetSubtitles((0, _._)(_._.LANGUAGE));
+              this.SetSubtitles((0, _.sfN)(_._.LANGUAGE));
             try {
               await this.m_elVideo.play();
             } catch (_) {
@@ -2793,7 +2793,7 @@
         return !!_ && _ instanceof Error && "NotAllowedError" == _.name;
       }
       function _(_) {
-        return _ in _._ ? (0, _._)("#Language_" + (0, _._)(_._[_])) : "";
+        return _ in _._ ? (0, _._)("#Language_" + (0, _.LgB)(_._[_])) : "";
       }
       (0, _._)([_._], _.prototype, "m_nTimedText", void 0),
         (0, _._)([_._], _.prototype, "InitTimedText", null),

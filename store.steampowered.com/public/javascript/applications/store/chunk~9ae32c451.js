@@ -5,29 +5,30 @@
   [351],
   {
     20019: (e, t, n) => {
-      function s(e) {
+      n.d(t, { U: () => o });
+      var s = n(96171);
+      function o(e) {
         switch (e) {
-          case 0:
+          case s.uE.HT:
             return "game";
-          case 6:
+          case s.uE.Sv:
             return "software";
-          case 1:
+          case s.uE.ue:
             return "demo";
-          case 4:
+          case s.uE._i:
             return "dlc";
-          case 7:
-          case 3:
+          case s.uE.Wz:
+          case s.uE.FS:
             return "video";
-          case 11:
+          case s.uE.Ov:
             return "music";
-          case 12:
+          case s.uE.Vi:
             return "beta";
-          case 2:
+          case s.uE.RA:
             return "mod";
         }
         return "invalid";
       }
-      n.d(t, { U: () => s });
     },
     56055: (e, t, n) => {
       n.d(t, { b2: () => s, nx: () => o });
@@ -40,16 +41,17 @@
       })(o || (o = {}));
     },
     39733: (e, t, n) => {
-      n.d(t, { Du: () => h, fy: () => m, pt: () => _ });
+      n.d(t, { Du: () => _, fy: () => h, pt: () => p });
       var s = n(68797),
         o = n(78327),
         i = n(41735),
         r = n.n(i),
-        a = n(90626),
-        l = n(6144),
-        c = n(84933),
+        a = n(37085),
+        l = n(90626),
+        c = n(6144),
+        u = n(84933),
         d = n(81393);
-      class u {
+      class m {
         m_mapBadgeInfo = new Map();
         m_mapBadgeLoadPromises = new Map();
         m_eventBadgehangeCallback = new Map();
@@ -63,7 +65,7 @@
         GetBadgeInfoChangeCallback(e) {
           return (
             this.m_eventBadgehangeCallback.has(e) ||
-              this.m_eventBadgehangeCallback.set(e, new l.lu()),
+              this.m_eventBadgehangeCallback.set(e, new c.lu()),
             this.m_eventBadgehangeCallback.get(e)
           );
         }
@@ -92,17 +94,17 @@
               "ajaxgetbadgeinfo called on wrong unsupported site: " + n,
             );
             const i = n + "actions/ajaxgetbadgeinfo",
-              a = { badgeid: e },
-              l = await r().get(i, { params: a, withCredentials: !0 });
+              l = { badgeid: e },
+              c = await r().get(i, { params: l, withCredentials: !0 });
             if (
-              200 == l.status &&
-              (1 == l.data?.success || 42 == l.data?.success)
+              200 == c.status &&
+              (c.data?.success == a.R || c.data?.success == a.p)
             ) {
               const t = {
-                badgeid: l.data.badgeid,
-                level: l.data.level,
-                xp: l.data.xp,
-                completion_time: l.data.completion_time,
+                badgeid: c.data.badgeid,
+                level: c.data.level,
+                xp: c.data.xp,
+                completion_time: c.data.completion_time,
               };
               return (
                 this.m_mapBadgeInfo.set(e, t),
@@ -111,7 +113,7 @@
                 t
               );
             }
-            t = (0, s.H)(l);
+            t = (0, s.H)(c);
           } catch (e) {
             t = (0, s.H)(e);
           }
@@ -122,43 +124,43 @@
         static s_Singleton;
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
+            m.s_Singleton ||
+              ((m.s_Singleton = new m()),
               "dev" == o.TS.WEB_UNIVERSE &&
-                (window.g_UserBadgeForEventStore = u.s_Singleton)),
-            u.s_Singleton
+                (window.g_UserBadgeForEventStore = m.s_Singleton)),
+            m.s_Singleton
           );
         }
         constructor() {}
       }
-      function m(e) {
-        const [t, n] = (0, a.useState)(e ? u.Get().GetBadgeInfo(e) : void 0);
+      function h(e) {
+        const [t, n] = (0, l.useState)(e ? m.Get().GetBadgeInfo(e) : void 0);
         return (
-          (0, a.useEffect)(() => {
+          (0, l.useEffect)(() => {
             !t &&
               e &&
-              u
+              m
                 .Get()
                 .LoadBadgeInfo(e)
                 .then((e) => n(e));
           }, [e, t]),
-          (0, c.hL)(e ? u.Get().GetBadgeInfoChangeCallback(e) : void 0, n),
+          (0, u.hL)(e ? m.Get().GetBadgeInfoChangeCallback(e) : void 0, n),
           t
         );
       }
-      function h(e) {
-        u.Get().Test_SetBadgeInfo(e);
-      }
       function _(e) {
-        const [t, n] = (0, a.useState)(
-          e ? u.Get().GetInitialBadgeInfo(e) : void 0,
+        m.Get().Test_SetBadgeInfo(e);
+      }
+      function p(e) {
+        const [t, n] = (0, l.useState)(
+          e ? m.Get().GetInitialBadgeInfo(e) : void 0,
         );
         return (
-          (0, a.useEffect)(() => {
-            !t && e && u.Get().LoadBadgeInfo(e);
+          (0, l.useEffect)(() => {
+            !t && e && m.Get().LoadBadgeInfo(e);
           }, [e, t]),
-          (0, c.hL)(e ? u.Get().GetBadgeInfoChangeCallback(e) : void 0, () =>
-            n(e ? u.Get().GetInitialBadgeInfo(e) : void 0),
+          (0, u.hL)(e ? m.Get().GetBadgeInfoChangeCallback(e) : void 0, () =>
+            n(e ? m.Get().GetInitialBadgeInfo(e) : void 0),
           ),
           t
         );
@@ -249,39 +251,40 @@
     },
     35400: (e, t, n) => {
       n.d(t, {
-        DV: () => I,
-        OC: () => g,
-        OM: () => D,
-        Sp: () => b,
-        Tn: () => S,
-        W3: () => C,
-        hH: () => p,
-        my: () => v,
+        DV: () => D,
+        OC: () => I,
+        OM: () => S,
+        Sp: () => v,
+        Tn: () => C,
+        W3: () => b,
+        hH: () => g,
+        my: () => f,
       });
       var s = n(34629),
         o = n(41735),
         i = n.n(o),
         r = n(14947),
         a = n(90626),
-        l = n(68797),
-        c = n(6144),
+        l = n(37085),
+        c = n(68797),
+        u = n(6144),
         d = n(84933),
-        u = n(78327),
-        m = n(44165),
-        h = n(34824);
-      const _ = -1;
-      class p {
+        m = n(78327),
+        h = n(44165),
+        _ = n(34824);
+      const p = -1;
+      class g {
         m_userData;
         m_bLoadedDuringInit = !1;
         m_strLastDoorOpenKey = "video_noneset";
         m_bIsAnyDoorOpened = !1;
-        m_nHighestDoorOpened = _;
+        m_nHighestDoorOpened = p;
         m_initialLoadPromise;
         m_mapDoorOpenPromise = new Map();
         m_mapChangeCallback = new Map();
-        m_doorInitializedChangedCallback = new c.lu();
-        m_largestDoorChangeCallback = new c.lu();
-        m_bIsAnyDoorOpenChangeCallback = new c.lu();
+        m_doorInitializedChangedCallback = new u.lu();
+        m_largestDoorChangeCallback = new u.lu();
+        m_bIsAnyDoorOpenChangeCallback = new u.lu();
         GetLastDoorOpen() {
           return this.m_strLastDoorOpenKey;
         }
@@ -297,9 +300,9 @@
           );
         }
         BCanUserOpenDoor(e) {
-          let t = m.HD.GetTimeNowWithOverride();
+          let t = h.HD.GetTimeNowWithOverride();
           return (
-            u.iA.logged_in &&
+            m.iA.logged_in &&
             this.m_userData &&
             e < this.m_userData.length &&
             t >= this.m_userData[e].rtime_start &&
@@ -324,7 +327,7 @@
         GetDoorStateChangeCallback(e) {
           return (
             this.m_mapChangeCallback.has(e) ||
-              this.m_mapChangeCallback.set(e, new c.lu()),
+              this.m_mapChangeCallback.set(e, new u.lu()),
             this.m_mapChangeCallback.get(e)
           );
         }
@@ -355,11 +358,11 @@
             : console.error("CDoorStore: Wrong door being set " + e);
         }
         RecomputeState() {
-          let e = _;
+          let e = p;
           this.m_userData?.forEach((t) => {
             t.opened && t.day > e && (e = t.day);
           });
-          const t = e != _;
+          const t = e != p;
           t != this.m_bIsAnyDoorOpened &&
             ((this.m_bIsAnyDoorOpened = t),
             this.GetIsAnyDoorOpenChange().Dispatch(t)),
@@ -368,14 +371,14 @@
               this.GetLargestDoorIndexChange().Dispatch(e));
         }
         async OpenDoor(e, t = !0, n = "", s = !1) {
-          return !u.iA.logged_in ||
+          return !m.iA.logged_in ||
             !this.m_userData ||
             e > this.m_userData.length ||
             e < 0
-            ? ("dev" == u.TS.WEB_UNIVERSE &&
+            ? ("dev" == m.TS.WEB_UNIVERSE &&
                 console.log(
                   "CDoorStore.OpenDoor Early fail settings:",
-                  u.iA.logged_in,
+                  m.iA.logged_in,
                   this.m_userData,
                   e,
                   this.m_userData?.length,
@@ -393,29 +396,29 @@
                   this.m_mapDoorOpenPromise.get(e));
         }
         async InternalOpenDoor(e, t = !0, n, s = !1) {
-          let o = u.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
+          let o = m.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
           const r = new FormData();
-          r.append("sessionid", u.TS.SESSIONID),
+          r.append("sessionid", m.TS.SESSIONID),
             n && r.append("datarecord", n),
             s && r.append("fake_open", "" + s),
             r.append("door_index", "" + e),
-            r.append("clan_accountid", "" + u.UF.CLANACCOUNTID),
+            r.append("clan_accountid", "" + m.UF.CLANACCOUNTID),
             t || r.append("open_door", "0");
           let a = null;
           try {
             let n = await i().post(o, r, { withCredentials: !0 });
-            if (200 == n?.status && 1 == n?.data?.success)
+            if (200 == n?.status && n?.data?.success == l.R)
               return (
                 (this.m_userData[e].opened = t),
                 (this.m_strLastDoorOpenKey = "door_" + (t ? e : e - 1)),
-                n.data.capsuleinsert && (0, h.YH)([n.data.capsuleinsert]),
+                n.data.capsuleinsert && (0, _.YH)([n.data.capsuleinsert]),
                 this.GetDoorStateChangeCallback(e).Dispatch(t),
                 this.RecomputeState(),
                 n.data
               );
-            a = (0, l.H)(n);
+            a = (0, c.H)(n);
           } catch (e) {
-            a = (0, l.H)(e);
+            a = (0, c.H)(e);
           }
           return (
             this.m_mapDoorOpenPromise.delete(e),
@@ -431,7 +434,7 @@
               this.m_initialLoadPromise);
         }
         async InternalLoadDoorData() {
-          const e = u.TS.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
+          const e = m.TS.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
           let t = null;
           try {
             const n = await i().get(e, { withCredentials: !0 });
@@ -450,9 +453,9 @@
                 this.m_userData
               );
             }
-            t = (0, l.H)(n);
+            t = (0, c.H)(n);
           } catch (e) {
-            t = (0, l.H)(e);
+            t = (0, c.H)(e);
           }
           return (
             console.error(
@@ -463,14 +466,14 @@
           );
         }
         async CloseAllDoors(e) {
-          let t = u.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
+          let t = m.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
           const n = new FormData();
-          n.append("sessionid", u.TS.SESSIONID),
+          n.append("sessionid", m.TS.SESSIONID),
             n.append("clan_accountid", "" + e);
           let s = null;
           try {
             let e = await i().post(t, n, { withCredentials: !0 });
-            if (200 == e.status && 1 == e?.data?.success) {
+            if (200 == e.status && e?.data?.success == l.R) {
               console.log("CDoorStore - closed " + e.data.count);
               for (let e = 0; e < 7; ++e)
                 (this.m_userData[e].opened = !1),
@@ -479,9 +482,9 @@
                   );
               return this.RecomputeState(), !0;
             }
-            s = (0, l.H)(e);
+            s = (0, c.H)(e);
           } catch (e) {
-            s = (0, l.H)(e);
+            s = (0, c.H)(e);
           }
           return (
             console.error(
@@ -494,64 +497,64 @@
         static s_Singleton;
         static Get() {
           return (
-            p.s_Singleton ||
-              ((p.s_Singleton = new p()),
-              p.s_Singleton.Init(),
-              "dev" == u.TS.WEB_UNIVERSE &&
-                (window.g_EventDoorStore = p.s_Singleton)),
-            p.s_Singleton
+            g.s_Singleton ||
+              ((g.s_Singleton = new g()),
+              g.s_Singleton.Init(),
+              "dev" == m.TS.WEB_UNIVERSE &&
+                (window.g_EventDoorStore = g.s_Singleton)),
+            g.s_Singleton
           );
         }
         constructor() {
           (0, r.Gn)(this);
         }
         Init() {
-          (this.m_userData = (0, u.Tc)("doorinfo", "application_config")),
+          (this.m_userData = (0, m.Tc)("doorinfo", "application_config")),
             this.m_userData &&
               ((this.m_bLoadedDuringInit = !0),
               this.RecomputeState(),
-              "dev" == u.TS.WEB_UNIVERSE &&
+              "dev" == m.TS.WEB_UNIVERSE &&
                 console.log("CDoorStore Loading - ", this.m_userData));
         }
       }
-      function g() {
-        return { fnOpenDoor: p.Get().OpenDoor };
-      }
       function I() {
-        const [e, t] = (0, a.useState)(p.Get().BIsInitialized());
+        return { fnOpenDoor: g.Get().OpenDoor };
+      }
+      function D() {
+        const [e, t] = (0, a.useState)(g.Get().BIsInitialized());
         return (
           (0, a.useEffect)(() => {
-            e || p.Get().LoadDoorData();
+            e || g.Get().LoadDoorData();
           }, [e]),
-          (0, d.hL)(p.Get().GetDoorStateInitializedChangeCallback(), t),
+          (0, d.hL)(g.Get().GetDoorStateInitializedChangeCallback(), t),
           e
         );
       }
-      function D(e) {
-        const t = I(),
-          [n, s] = (0, a.useState)(t ? p.Get().BIsDoorOpened(e) : void 0);
-        return (0, d.hL)(p.Get().GetDoorStateChangeCallback(e), s), n;
-      }
-      function S() {
-        const e = I(),
-          [t, n] = (0, a.useState)(e ? p.Get().GetLargestDoorOpenIndex() : _);
-        return (0, d.hL)(p.Get().GetLargestDoorIndexChange(), n), t;
+      function S(e) {
+        const t = D(),
+          [n, s] = (0, a.useState)(t ? g.Get().BIsDoorOpened(e) : void 0);
+        return (0, d.hL)(g.Get().GetDoorStateChangeCallback(e), s), n;
       }
       function C() {
-        const e = I(),
-          [t, n] = (0, a.useState)(!!e && p.Get().BIsAnyDoorOpened());
-        return (0, d.hL)(p.Get().GetIsAnyDoorOpenChange(), n), t;
+        const e = D(),
+          [t, n] = (0, a.useState)(e ? g.Get().GetLargestDoorOpenIndex() : p);
+        return (0, d.hL)(g.Get().GetLargestDoorIndexChange(), n), t;
       }
-      function b(e) {
-        p.Get().SetInMemoryUpdateDoorOpenUpto(e);
+      function b() {
+        const e = D(),
+          [t, n] = (0, a.useState)(!!e && g.Get().BIsAnyDoorOpened());
+        return (0, d.hL)(g.Get().GetIsAnyDoorOpenChange(), n), t;
       }
-      function v(e, t) {
-        p.Get().SetInMemorySpecificDoorState(e, t);
+      function v(e) {
+        g.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
-      (0, s.Cg)([r.sH], p.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, s.Cg)([r.sH], p.prototype, "m_nHighestDoorOpened", void 0),
-        (0, s.Cg)([d.oI], p.prototype, "BIsDoorOpened", null),
-        (0, s.Cg)([d.oI], p.prototype, "OpenDoor", null);
+      function f(e, t) {
+        g.Get().SetInMemorySpecificDoorState(e, t);
+      }
+      (0, s.Cg)([r.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),
+        (0, s.Cg)([r.sH], g.prototype, "m_nHighestDoorOpened", void 0),
+        (0, s.Cg)([d.oI], g.prototype, "BIsDoorOpened", null),
+        (0, s.Cg)([d.oI], g.prototype, "OpenDoor", null);
     },
     34824: (e, t, n) => {
       n.d(t, {
@@ -569,8 +572,8 @@
         a = n(81393),
         l = n(6144),
         c = n(84933),
-        d = n(78327),
-        u = n(6379),
+        u = n(78327),
+        d = n(6379),
         m = n(16021),
         h = n(3967);
       !(function (e) {
@@ -685,9 +688,9 @@
         }
         DeployCapsuleIfPossible(e, t) {
           if (this.BHasExistingInsertion(e)) return null;
-          if (d.P9.ANNOUNCEMENT_GID) {
-            const n = u.O3.GetClanEventFromAnnouncementGID(
-                d.P9.ANNOUNCEMENT_GID,
+          if (u.P9.ANNOUNCEMENT_GID) {
+            const n = d.O3.GetClanEventFromAnnouncementGID(
+                u.P9.ANNOUNCEMENT_GID,
               ),
               s = n?.GetSaleSectionByID(e.sectionid);
             if (this.BIsInsertableSectionType(s)) {
@@ -720,7 +723,7 @@
             _.s_Singleton ||
               ((_.s_Singleton = new _()),
               _.s_Singleton.Init(),
-              "dev" == d.TS.WEB_UNIVERSE &&
+              "dev" == u.TS.WEB_UNIVERSE &&
                 (window.g_DynamicCapsuleInsertStore = _.s_Singleton)),
             _.s_Singleton
           );
@@ -729,7 +732,7 @@
           (0, i.Gn)(this);
         }
         Init() {
-          const e = (0, d.Fd)("capsuleinsert", "application_config");
+          const e = (0, u.Fd)("capsuleinsert", "application_config");
           _.ValidateData(e) &&
             (e.sectionID
               ? this.m_mapMaterializedInsertion.set(this.GetKey(e), e)
@@ -755,12 +758,12 @@
                             discount_pct: 50,
                           });
                       }))
-                : "dev" == d.TS.WEB_UNIVERSE &&
+                : "dev" == u.TS.WEB_UNIVERSE &&
                   console.error(
                     "CDynamicCapsuleInsertStore: Payload not material and missing instructions.",
                     e,
                   ),
-            "dev" == d.TS.WEB_UNIVERSE &&
+            "dev" == u.TS.WEB_UNIVERSE &&
               console.log("CDynamicCapsuleInsertStore loaded ", e)),
             h.I.Get()
               .GetNewInteractionCallback()
@@ -850,13 +853,13 @@
       n.d(t, { LG: () => b, hA: () => C });
       var s = n(7850),
         o = n(76217),
-        i = n(8092),
+        i = n(67165),
         r = n(30894),
         a = n(55263),
         l = n(17289),
         c = n(52038),
-        d = n(61859),
-        u = n(82227),
+        u = n(61859),
+        d = n(82227),
         m = n(61336),
         h = n(78327),
         _ = n(84811),
@@ -881,7 +884,7 @@
           return (0, s.jsx)("div", {
             className: I.DevSummaryWidgetCtn,
             children: (0, s.jsx)(g.t, {
-              string: (0, d.we)("#Loading"),
+              string: (0, u.we)("#Loading"),
               size: "medium",
               position: "center",
             }),
@@ -889,10 +892,10 @@
         const G = t.type,
           A =
             "developer" == t.type
-              ? (0, d.we)("#CreatorHome_DevelopedBy")
+              ? (0, u.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
-                ? (0, d.we)("#CreatorHome_PublishedBy")
-                : (0, d.we)("#CreatorHome_InFranchise"),
+                ? (0, u.we)("#CreatorHome_PublishedBy")
+                : (0, u.we)("#CreatorHome_InFranchise"),
           E = w.GetCreatorHomeURL(G),
           O = w.GetNumFollowers();
         return (0, s.jsx)(_.tH, {
@@ -978,13 +981,13 @@
                                         }),
                                         children: [
                                           (0, s.jsx)("span", {
-                                            children: (0, d.we)(
+                                            children: (0, u.we)(
                                               "#CreatorHome_JustFollowers",
                                             ),
                                           }),
                                           (0, s.jsx)("span", {
                                             className: I.FollowerCount,
-                                            children: (0, u.Dq)(O),
+                                            children: (0, d.Dq)(O),
                                           }),
                                         ],
                                       }),
@@ -1004,7 +1007,7 @@
                               "/members/",
                             target: "_blank",
                             className: I.MembersListLink,
-                            children: (0, d.we)("#ClanMembershipList"),
+                            children: (0, u.we)("#ClanMembershipList"),
                           }),
                       ],
                     }),
@@ -1056,7 +1059,7 @@
       }
     },
     77021: (e, t, n) => {
-      n.d(t, { PM: () => h, TU: () => d, lM: () => m, ty: () => u });
+      n.d(t, { PM: () => h, TU: () => u, lM: () => m, ty: () => d });
       var s = n(34629),
         o = n(90626),
         i = n(78327),
@@ -1064,7 +1067,7 @@
         a = n(14947),
         l = n(95034),
         c = n(65946);
-      class d {
+      class u {
         m_sParentOrigin;
         m_eventModelJson = void 0;
         m_setMouseOverSectionID = a.sH.set();
@@ -1074,11 +1077,11 @@
         static s_Singleton;
         static Get() {
           return (
-            d.s_Singleton ||
-              ((d.s_Singleton = new d()),
+            u.s_Singleton ||
+              ((u.s_Singleton = new u()),
               "dev" == i.TS.WEB_UNIVERSE &&
-                (window.g_PartnerSaleLivePreviewClient = d.s_Singleton)),
-            d.s_Singleton
+                (window.g_PartnerSaleLivePreviewClient = u.s_Singleton)),
+            u.s_Singleton
           );
         }
         constructor() {
@@ -1215,30 +1218,30 @@
             }
         }
       }
-      function u() {
-        return (0, c.q3)(() => d.Get().BIsConnected());
+      function d() {
+        return (0, c.q3)(() => u.Get().BIsConnected());
       }
       function m(e) {
-        const t = (0, c.q3)(() => d.Get().GetJumpToSectionID());
+        const t = (0, c.q3)(() => u.Get().GetJumpToSectionID());
         o.useEffect(() => {
-          if (!d.Get().BIsConnected() || !t) return;
-          e(t) && d.Get().ClearJumpToSectionID();
+          if (!u.Get().BIsConnected() || !t) return;
+          e(t) && u.Get().ClearJumpToSectionID();
         }, [e, t]);
       }
       function h(e) {
-        const t = (0, c.q3)(() => d.Get().GetJumpToSubsectionIDs());
+        const t = (0, c.q3)(() => u.Get().GetJumpToSubsectionIDs());
         o.useEffect(() => {
-          if (!d.Get().BIsConnected() || !t) return;
+          if (!u.Get().BIsConnected() || !t) return;
           e(t.nSectionID, t.strSubsectionID) &&
-            d.Get().ClearJumpToSubectionID();
+            u.Get().ClearJumpToSubectionID();
         }, [e, t]);
       }
-      (0, s.Cg)([a.sH], d.prototype, "m_eventModelJson", void 0),
-        (0, s.Cg)([a.sH], d.prototype, "m_setMouseOverSectionID", void 0),
-        (0, s.Cg)([a.sH], d.prototype, "m_setMouseOverSubsectionID", void 0),
-        (0, s.Cg)([a.sH], d.prototype, "m_jumpToSection", void 0),
-        (0, s.Cg)([a.sH], d.prototype, "m_jumpToSubsection", void 0),
-        (0, s.Cg)([r.oI], d.prototype, "HandleMessage", null);
+      (0, s.Cg)([a.sH], u.prototype, "m_eventModelJson", void 0),
+        (0, s.Cg)([a.sH], u.prototype, "m_setMouseOverSectionID", void 0),
+        (0, s.Cg)([a.sH], u.prototype, "m_setMouseOverSubsectionID", void 0),
+        (0, s.Cg)([a.sH], u.prototype, "m_jumpToSection", void 0),
+        (0, s.Cg)([a.sH], u.prototype, "m_jumpToSubsection", void 0),
+        (0, s.Cg)([r.oI], u.prototype, "HandleMessage", null);
     },
     17289: (e, t, n) => {
       n.d(t, { m: () => r });

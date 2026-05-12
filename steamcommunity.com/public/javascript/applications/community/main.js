@@ -2946,8 +2946,9 @@
           }),
         });
       }
-      var ct = r(32754);
-      const ut = i.lazy(() =>
+      var ct = r(32754),
+        ut = r(87652);
+      const dt = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2963,38 +2964,6 @@
             r.e(5263),
             r.e(8138),
           ]).then(r.bind(r, 70162)),
-        ),
-        dt = i.lazy(() =>
-          Promise.all([
-            r.e(8589),
-            r.e(7596),
-            r.e(2421),
-            r.e(7055),
-            r.e(2667),
-            r.e(1477),
-            r.e(9402),
-            r.e(9436),
-            r.e(4731),
-            r.e(2006),
-            r.e(8024),
-            r.e(4317),
-            r.e(6377),
-            r.e(766),
-            r.e(5660),
-            r.e(9118),
-            r.e(5329),
-            r.e(2162),
-            r.e(9774),
-            r.e(2694),
-            r.e(7679),
-            r.e(1415),
-            r.e(9281),
-            r.e(9773),
-            r.e(9769),
-            r.e(6299),
-            r.e(8780),
-            r.e(4268),
-          ]).then(r.bind(r, 5901)),
         ),
         mt = i.lazy(() =>
           Promise.all([
@@ -3022,12 +2991,12 @@
             r.e(1415),
             r.e(9281),
             r.e(9773),
+            r.e(3584),
             r.e(9769),
             r.e(6299),
             r.e(8780),
-            r.e(9855),
-            r.e(6662),
-          ]).then(r.bind(r, 47861)),
+            r.e(4268),
+          ]).then(r.bind(r, 52425)),
         ),
         gt = i.lazy(() =>
           Promise.all([
@@ -3055,18 +3024,53 @@
             r.e(1415),
             r.e(9281),
             r.e(9773),
+            r.e(3584),
+            r.e(9769),
+            r.e(6299),
+            r.e(8780),
+            r.e(9855),
+            r.e(6662),
+          ]).then(r.bind(r, 47861)),
+        ),
+        pt = i.lazy(() =>
+          Promise.all([
+            r.e(8589),
+            r.e(7596),
+            r.e(2421),
+            r.e(7055),
+            r.e(2667),
+            r.e(1477),
+            r.e(9402),
+            r.e(9436),
+            r.e(4731),
+            r.e(2006),
+            r.e(8024),
+            r.e(4317),
+            r.e(6377),
+            r.e(766),
+            r.e(5660),
+            r.e(9118),
+            r.e(5329),
+            r.e(2162),
+            r.e(9774),
+            r.e(2694),
+            r.e(7679),
+            r.e(1415),
+            r.e(9281),
+            r.e(9773),
+            r.e(3584),
             r.e(9769),
             r.e(6299),
             r.e(8780),
             r.e(258),
           ]).then(r.bind(r, 98378)),
         ),
-        pt = i.lazy(() =>
+        ht = i.lazy(() =>
           Promise.all([r.e(5633), r.e(4317), r.e(5263), r.e(7561)]).then(
             r.bind(r, 80837),
           ),
         ),
-        ht = i.lazy(() =>
+        _t = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -3091,6 +3095,7 @@
             r.e(1415),
             r.e(9281),
             r.e(9773),
+            r.e(3584),
             r.e(1063),
             r.e(9769),
             r.e(6299),
@@ -3098,7 +3103,7 @@
             r.e(2079),
           ]).then(r.bind(r, 35261)),
         ),
-        _t = i.lazy(() =>
+        Bt = i.lazy(() =>
           Promise.all([
             r.e(2667),
             r.e(9773),
@@ -3107,8 +3112,8 @@
             r.e(1220),
           ]).then(r.bind(r, 47004)),
         ),
-        Bt = i.lazy(() => r.e(9129).then(r.bind(r, 50463))),
-        bt = i.lazy(() =>
+        bt = i.lazy(() => r.e(9129).then(r.bind(r, 50463))),
+        ft = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -3132,7 +3137,7 @@
             r.e(3781),
           ]).then(r.bind(r, 70450)),
         ),
-        ft = i.lazy(() =>
+        wt = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -3150,6 +3155,7 @@
             r.e(2162),
             r.e(9774),
             r.e(2694),
+            r.e(3584),
             r.e(1063),
             r.e(3256),
             r.e(8453),
@@ -3158,7 +3164,7 @@
             r.e(8521),
           ]).then(r.bind(r, 67318)),
         ),
-        wt = i.lazy(() =>
+        Mt = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -3169,12 +3175,12 @@
             r.e(5836),
           ]).then(r.bind(r, 45048)),
         ),
-        Mt = i.lazy(() =>
+        yt = i.lazy(() =>
           Promise.all([r.e(8589), r.e(4731), r.e(6966)]).then(r.bind(r, 42144)),
         ),
-        yt = i.lazy(() => r.e(349).then(r.bind(r, 36424))),
-        St = i.lazy(() => r.e(2092).then(r.bind(r, 92598))),
-        vt = i.lazy(() =>
+        St = i.lazy(() => r.e(349).then(r.bind(r, 36424))),
+        vt = i.lazy(() => r.e(2092).then(r.bind(r, 92598))),
+        Ct = i.lazy(() =>
           Promise.all([
             r.e(9436),
             r.e(2006),
@@ -3185,7 +3191,7 @@
             r.e(976),
           ]).then(r.bind(r, 24830)),
         ),
-        Ct = i.lazy(() =>
+        zt = i.lazy(() =>
           Promise.all([
             r.e(9436),
             r.e(2006),
@@ -3196,22 +3202,10 @@
             r.e(6893),
           ]).then(r.bind(r, 32664)),
         ),
-        zt = i.lazy(() =>
+        Rt = i.lazy(() =>
           Promise.all([r.e(9436), r.e(5329), r.e(8829), r.e(3156)]).then(
             r.bind(r, 7201),
           ),
-        ),
-        Rt = i.lazy(() =>
-          Promise.all([
-            r.e(2421),
-            r.e(3359),
-            r.e(5660),
-            r.e(2162),
-            r.e(1415),
-            r.e(9769),
-            r.e(5282),
-            r.e(7331),
-          ]).then(r.bind(r, 65423)),
         ),
         jt = i.lazy(() =>
           Promise.all([
@@ -3223,7 +3217,7 @@
             r.e(9769),
             r.e(5282),
             r.e(7331),
-          ]).then(r.bind(r, 55435)),
+          ]).then(r.bind(r, 65423)),
         ),
         It = i.lazy(() =>
           Promise.all([
@@ -3235,44 +3229,56 @@
             r.e(9769),
             r.e(5282),
             r.e(7331),
+          ]).then(r.bind(r, 55435)),
+        ),
+        Tt = i.lazy(() =>
+          Promise.all([
+            r.e(2421),
+            r.e(3359),
+            r.e(5660),
+            r.e(2162),
+            r.e(1415),
+            r.e(9769),
+            r.e(5282),
+            r.e(7331),
           ]).then(r.bind(r, 36080)),
         ),
-        Tt = i.lazy(async () => ({
+        xt = i.lazy(async () => ({
           default: (
             await Promise.all([r.e(2421), r.e(1415), r.e(1574)]).then(
               r.bind(r, 2917),
             )
           ).GlobalFooter,
         })),
-        xt = i.lazy(() =>
+        Ft = i.lazy(() =>
           Promise.all([r.e(2775), r.e(892)]).then(r.bind(r, 10378)),
         ),
-        Ft = i.lazy(() =>
+        Ot = i.lazy(() =>
           Promise.all([r.e(6377), r.e(2775), r.e(140)]).then(r.bind(r, 22)),
         ),
-        Ot = i.lazy(() => r.e(583).then(r.bind(r, 58317))),
-        Wt = () => (R.UF.IS_OGG ? "games" : "groups"),
-        qt = {
+        Wt = i.lazy(() => r.e(583).then(r.bind(r, 58317))),
+        qt = () => (R.UF.IS_OGG ? "games" : "groups"),
+        Ut = {
           DiagData: () => "/:anything*/diagdata",
           Login: () => "/login",
           LegacyLogin: () => "/login/home",
           OAuthLogin: () => "/oauth/loginform",
           OpenidLogin: () => "/openid/loginform",
           EventsInternal: () => "/(migrateevents|migrate)",
-          EventEditor: (e) => `/${Wt()}/${e}/partnerevents`,
-          EventReaders: (e) => `/${Wt()}/${e}/(events|announcements)`,
+          EventEditor: (e) => `/${qt()}/${e}/partnerevents`,
+          EventReaders: (e) => `/${qt()}/${e}/(events|announcements)`,
           HubPublishedFiles: (e) => `/app/${e}/(images|screenshots)/`,
           HubRoot: (e) => `/app/${e}(/workshop/)?`,
           HubUGC: (e) => `/app/${e}/videos/`,
           GroupRoot: (e) => `/groups/${e}/`,
           ProfileVanity: (e, t) => `/id/${e}${t ? `/${t}` : ""}`,
           ProfileSteamID: (e, t) => `/profiles/${e}${t ? `/${t}` : ""}`,
-          ProfileVanityGamesList: (e) => qt.ProfileVanity(e, "games"),
-          ProfileSteamIDGamesList: (e) => qt.ProfileSteamID(e, "games"),
+          ProfileVanityGamesList: (e) => Ut.ProfileVanity(e, "games"),
+          ProfileSteamIDGamesList: (e) => Ut.ProfileSteamID(e, "games"),
           ProfileVanityItemCollection: (e) =>
-            `${qt.ProfileVanity(e)}/itemcollection`,
+            `${Ut.ProfileVanity(e)}/itemcollection`,
           ProfileSteamIDItemCollection: (e) =>
-            `${qt.ProfileSteamID(e)}/itemcollection`,
+            `${Ut.ProfileSteamID(e)}/itemcollection`,
           UGCDetailsPage: () => "/:anything/filedetails",
           UserReviewRewardAppVanity: () =>
             "/id/:vanity_url/recommended/:appid/",
@@ -3290,9 +3296,9 @@
           QuestionsApp: () => "/questions/",
           ConferenceApp: () => "/(conference|steamworksvirtualconference)/",
           ProfileVanityNotifications: (e) =>
-            `${qt.ProfileVanity(e)}/notifications`,
+            `${Ut.ProfileVanity(e)}/notifications`,
           ProfileSteamIDNotifications: (e) =>
-            `${qt.ProfileSteamID(e)}/notifications`,
+            `${Ut.ProfileSteamID(e)}/notifications`,
           Market: () => "/market",
           MarketSearch: () => "/market/search",
           TradeOfferNew: () => "/tradeoffer/new/",
@@ -3300,13 +3306,13 @@
           ...{},
           CommunityHomeRoot: () => "/",
         };
-      class Ut extends i.Component {
+      class kt extends i.Component {
         render() {
           return (0, n.jsx)(a.Kd, {
-            basename: Lt(),
-            children: (0, n.jsxs)(kt, {
+            basename: Nt(),
+            children: (0, n.jsxs)(Dt, {
               children: [
-                (0, n.jsx)(Dt, {}),
+                (0, n.jsx)(Pt, {}),
                 (0, n.jsxs)(i.Suspense, {
                   fallback: null,
                   children: [
@@ -3314,7 +3320,7 @@
                       children: [
                         (0, n.jsx)(o.qh, {
                           exact: !0,
-                          path: qt.DiagData(),
+                          path: Ut.DiagData(),
                           render: (e) =>
                             (0, i.createElement)(h.z, {
                               ...e,
@@ -3323,47 +3329,47 @@
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: [qt.Login(), qt.LegacyLogin(), qt.OAuthLogin()],
+                          path: [Ut.Login(), Ut.LegacyLogin(), Ut.OAuthLogin()],
                           children: (0, n.jsx)(ne.X, {
-                            config: { login: (e) => (0, n.jsx)(Mt, { ...e }) },
+                            config: { login: (e) => (0, n.jsx)(yt, { ...e }) },
                           }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            qt.Login(),
-                            qt.LegacyLogin(),
-                            qt.OpenidLogin(),
+                            Ut.Login(),
+                            Ut.LegacyLogin(),
+                            Ut.OpenidLogin(),
                           ],
                           children: (0, n.jsx)(ne.X, {
-                            config: { login: (e) => (0, n.jsx)(Mt, { ...e }) },
+                            config: { login: (e) => (0, n.jsx)(yt, { ...e }) },
                           }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.EventEditor(":appid_or_vanity_str"),
-                          component: mt,
-                        }),
-                        (0, n.jsx)(o.qh, {
-                          path: qt.EventsInternal(),
+                          path: Ut.EventEditor(":appid_or_vanity_str"),
                           component: gt,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.EventReaders(":appid_or_vanity_str"),
-                          component: dt,
+                          path: Ut.EventsInternal(),
+                          component: pt,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.BroadcastApp(),
-                          component: ht,
+                          path: Ut.EventReaders(":appid_or_vanity_str"),
+                          component: mt,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.HubPublishedFiles(":appid"),
+                          path: Ut.BroadcastApp(),
+                          component: _t,
+                        }),
+                        (0, n.jsx)(o.qh, {
+                          path: Ut.HubPublishedFiles(":appid"),
                           render: (e) =>
                             (0, n.jsx)(ne.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(dt, {}),
+                                "apphub-events": () => (0, n.jsx)(mt, {}),
                                 "apphub-ugcrewards": () =>
-                                  (0, n.jsx)(pt, { ...e }),
+                                  (0, n.jsx)(ht, { ...e }),
                                 "community-awards": () =>
-                                  (0, n.jsx)(pt, { ...e }),
+                                  (0, n.jsx)(ht, { ...e }),
                                 "community-app-social-media": (e) =>
                                   (0, n.jsx)(Ye.wo, { ...e }),
                                 "ugc-file-content-moderation-report-dialog": (
@@ -3376,112 +3382,112 @@
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.HubRoot(":appid"),
+                          path: Ut.HubRoot(":appid"),
                           render: (e) =>
                             (0, n.jsx)(ne.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(dt, {}),
+                                "apphub-events": () => (0, n.jsx)(mt, {}),
                                 "apphub-ugcrewards": () =>
-                                  (0, n.jsx)(pt, { ...e }),
+                                  (0, n.jsx)(ht, { ...e }),
                                 "community-awards": () =>
-                                  (0, n.jsx)(pt, { ...e }),
+                                  (0, n.jsx)(ht, { ...e }),
                                 "community-app-social-media": (e) =>
                                   (0, n.jsx)(Ye.wo, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.GroupRoot(":groupid_or_vanity_str"),
+                          path: Ut.GroupRoot(":groupid_or_vanity_str"),
                           render: (e) =>
                             (0, n.jsx)(ne.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(dt, {}),
+                                "apphub-events": () => (0, n.jsx)(mt, {}),
                                 "community-awards": () =>
-                                  (0, n.jsx)(pt, { ...e }),
+                                  (0, n.jsx)(ht, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.UserReviewRewardAppVanity(),
-                          render: (e) => (0, n.jsx)(pt, { ...e }),
+                          path: Ut.UserReviewRewardAppVanity(),
+                          render: (e) => (0, n.jsx)(ht, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.UserReviewRewardApp(),
-                          render: (e) => (0, n.jsx)(pt, { ...e }),
+                          path: Ut.UserReviewRewardApp(),
+                          render: (e) => (0, n.jsx)(ht, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.UserReviewsRewardVanity(),
-                          render: (e) => (0, n.jsx)(pt, { ...e }),
+                          path: Ut.UserReviewsRewardVanity(),
+                          render: (e) => (0, n.jsx)(ht, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.UserReviewsReward(),
-                          render: (e) => (0, n.jsx)(pt, { ...e }),
+                          path: Ut.UserReviewsReward(),
+                          render: (e) => (0, n.jsx)(ht, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            qt.DiscussionsAppGeneral(),
-                            qt.DiscussionsAppWorkshop(),
-                            qt.DiscussionsAppUGC(),
+                            Ut.DiscussionsAppGeneral(),
+                            Ut.DiscussionsAppWorkshop(),
+                            Ut.DiscussionsAppUGC(),
                           ],
                           render: (e) =>
                             (0, n.jsx)(ne.X, {
                               config: {
                                 "community-awards": () =>
-                                  (0, n.jsx)(pt, { ...e }),
+                                  (0, n.jsx)(ht, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            qt.ManageFriendsApp(),
-                            qt.ManageFriendsProfileApp(),
+                            Ut.ManageFriendsApp(),
+                            Ut.ManageFriendsProfileApp(),
                           ],
                           render: () =>
                             (0, n.jsx)(ne.X, {
                               config: {
-                                "manage-friends": () => (0, n.jsx)(Bt, {}),
+                                "manage-friends": () => (0, n.jsx)(bt, {}),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            qt.ProfileVanityItemCollection(":vanity_url"),
-                            qt.ProfileSteamIDItemCollection(":steamid"),
+                            Ut.ProfileVanityItemCollection(":vanity_url"),
+                            Ut.ProfileSteamIDItemCollection(":steamid"),
                           ],
                           render: (e) =>
                             (0, n.jsx)(ne.X, {
                               config: {
                                 "itemcollection-root": () =>
-                                  (0, n.jsx)(yt, { ...e }),
+                                  (0, n.jsx)(St, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.ProfileVanityNotifications(":vanity_url"),
-                          render: (e) => (0, n.jsx)(Ct, { ...e }),
+                          path: Ut.ProfileVanityNotifications(":vanity_url"),
+                          render: (e) => (0, n.jsx)(zt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.ProfileSteamIDNotifications(":steamid"),
-                          render: (e) => (0, n.jsx)(Ct, { ...e }),
+                          path: Ut.ProfileSteamIDNotifications(":steamid"),
+                          render: (e) => (0, n.jsx)(zt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.ProfileVanity(":vanity_url"),
-                          render: (e) => (0, n.jsx)(ut, { ...e }),
+                          path: Ut.ProfileVanity(":vanity_url"),
+                          render: (e) => (0, n.jsx)(dt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.ProfileSteamID(":steamid"),
-                          render: (e) => (0, n.jsx)(ut, { ...e }),
+                          path: Ut.ProfileSteamID(":steamid"),
+                          render: (e) => (0, n.jsx)(dt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.UGCDetailsPage(),
+                          path: Ut.UGCDetailsPage(),
                           render: (e) =>
                             (0, n.jsxs)(n.Fragment, {
                               children: [
-                                (0, n.jsx)(pt, { ...e }),
+                                (0, n.jsx)(ht, { ...e }),
                                 (0, n.jsx)(ne.X, {
                                   config: {
                                     "game-recording-clip": (e) =>
-                                      (0, n.jsx)(zt, { ...e }),
+                                      (0, n.jsx)(Rt, { ...e }),
                                     "ugc-file-content-moderation-report-dialog":
                                       (e) => (0, n.jsx)(Je.Xi, { ...e }),
                                     "comment-content-moderation-report-dialog":
@@ -3492,39 +3498,39 @@
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.GameNotes(),
-                          component: _t,
+                          path: Ut.GameNotes(),
+                          component: Bt,
                         }),
-                        (0, n.jsx)(o.qh, { path: qt.FAQApp(), component: bt }),
+                        (0, n.jsx)(o.qh, { path: Ut.FAQApp(), component: ft }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.QuestionsApp(),
+                          path: Ut.QuestionsApp(),
+                          component: Mt,
+                        }),
+                        (0, n.jsx)(o.qh, {
+                          path: Ut.ConferenceApp(),
                           component: wt,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: qt.ConferenceApp(),
-                          component: ft,
-                        }),
-                        (0, n.jsx)(o.qh, {
-                          path: [qt.Market(), qt.MarketSearch()],
+                          path: [Ut.Market(), Ut.MarketSearch()],
                           children: (0, n.jsx)(ne.X, {
                             config: {
-                              market: (e) => (0, n.jsx)(Rt, { ...e }),
+                              market: (e) => (0, n.jsx)(jt, { ...e }),
                               marketsearchinput: (e) =>
-                                (0, n.jsx)(jt, { ...e }),
+                                (0, n.jsx)(It, { ...e }),
                             },
                           }),
                         }),
                         !1,
                         (0, n.jsx)(o.qh, {
-                          path: qt.CommunityHomeRoot(),
+                          path: Ut.CommunityHomeRoot(),
                           render: (e) =>
                             (0, n.jsx)(ne.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(dt, {}),
+                                "apphub-events": () => (0, n.jsx)(mt, {}),
                                 "apphub-ugcrewards": () =>
-                                  (0, n.jsx)(pt, { ...e }),
+                                  (0, n.jsx)(ht, { ...e }),
                                 "community-home-header-v2": () =>
-                                  (0, n.jsx)(St, {}),
+                                  (0, n.jsx)(vt, {}),
                               },
                             }),
                         }),
@@ -3533,20 +3539,20 @@
                     }),
                     (0, n.jsx)(o.qh, {
                       path: [
-                        qt.ProfileVanity(":vanity_url", "inventory"),
-                        qt.ProfileSteamID(":steamid", "inventory"),
-                        qt.ProfileVanity(":vanity_url", "tradehistory"),
-                        qt.ProfileSteamID(":steamid", "tradehistory"),
-                        qt.Market(),
-                        qt.TradeOfferNew(),
-                        qt.TradeOfferView(":tradeid"),
+                        Ut.ProfileVanity(":vanity_url", "inventory"),
+                        Ut.ProfileSteamID(":steamid", "inventory"),
+                        Ut.ProfileVanity(":vanity_url", "tradehistory"),
+                        Ut.ProfileSteamID(":steamid", "tradehistory"),
+                        Ut.Market(),
+                        Ut.TradeOfferNew(),
+                        Ut.TradeOfferView(":tradeid"),
                       ],
                       children: (0, n.jsx)(ne.X, {
                         config: {
                           iteminfo: (e) =>
                             (0, n.jsx)(i.Suspense, {
                               fallback: null,
-                              children: (0, n.jsx)(It, { ...e }),
+                              children: (0, n.jsx)(Tt, { ...e }),
                             }),
                         },
                       }),
@@ -3558,17 +3564,19 @@
           });
         }
       }
-      function kt(e) {
+      function Dt(e) {
         return (0, n.jsx)(se.Ay, {
           domain: "steamcommunity.com",
           children: (0, n.jsx)(R.ss, {
-            children: (0, n.jsx)(Pt, {
-              children: (0, n.jsx)(Xe.s, {
-                children: (0, n.jsx)(p, {
-                  children: (0, n.jsx)(et.Y, {
-                    children: (0, n.jsx)(Qe, {
-                      children: (0, n.jsx)(G, {
-                        children: (0, n.jsx)(ct.C$, { children: e.children }),
+            children: (0, n.jsx)(ut.Iz, {
+              children: (0, n.jsx)(Lt, {
+                children: (0, n.jsx)(Xe.s, {
+                  children: (0, n.jsx)(p, {
+                    children: (0, n.jsx)(et.Y, {
+                      children: (0, n.jsx)(Qe, {
+                        children: (0, n.jsx)(G, {
+                          children: (0, n.jsx)(ct.C$, { children: e.children }),
+                        }),
                       }),
                     }),
                   }),
@@ -3578,7 +3586,7 @@
           }),
         });
       }
-      function Dt() {
+      function Pt() {
         return (0, n.jsxs)(_.wC, {
           children: [
             (0, n.jsx)(i.Suspense, {
@@ -3586,7 +3594,7 @@
               children: (0, n.jsx)(ne.X, {
                 config: {
                   "green-envelope": () =>
-                    (0, n.jsx)(vt, {
+                    (0, n.jsx)(Ct, {
                       bResponsiveHeader: !1,
                       notifications: (0, R.Tc)(
                         "steam_notifications",
@@ -3594,7 +3602,7 @@
                       ),
                     }),
                   "green-envelope-responsive": () =>
-                    (0, n.jsx)(vt, {
+                    (0, n.jsx)(Ct, {
                       bResponsiveHeader: !0,
                       notifications: (0, R.Tc)(
                         "steam_notifications",
@@ -3609,7 +3617,7 @@
                 footer: () =>
                   (0, n.jsx)(i.Suspense, {
                     fallback: null,
-                    children: (0, n.jsx)(Tt, {}),
+                    children: (0, n.jsx)(xt, {}),
                   }),
               },
             }),
@@ -3628,15 +3636,15 @@
                   (0, n.jsx)(Je.yq, { ...e }),
                 "forum-post-content-moderation-anonymous-report-dialog": (e) =>
                   (0, n.jsx)(ot, { ...e }),
-                "forum-reported-subjects-list": (e) => (0, n.jsx)(xt, { ...e }),
-                "forum-post-moderation-tool": (e) => (0, n.jsx)(Ft, { ...e }),
-                "copy-to-clipboard-button": (e) => (0, n.jsx)(Ot, { ...e }),
+                "forum-reported-subjects-list": (e) => (0, n.jsx)(Ft, { ...e }),
+                "forum-post-moderation-tool": (e) => (0, n.jsx)(Ot, { ...e }),
+                "copy-to-clipboard-button": (e) => (0, n.jsx)(Wt, { ...e }),
               },
             }),
           ],
         });
       }
-      function Pt(e) {
+      function Lt(e) {
         const t = (0, z.bs)(s.P),
           r = (0, z.bs)(i.useCallback(() => new u.A(), [])),
           a = (0, i.useMemo)(
@@ -3652,18 +3660,18 @@
           }),
         });
       }
-      function Lt() {
+      function Nt() {
         let e = document.createElement("a");
         e.href = R.TS.COMMUNITY_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
-      var Nt = r(44844),
-        At = r(14947);
+      var At = r(44844),
+        Et = r(14947);
       r(5977);
-      var Et = r(96059),
-        Gt = r(17204);
-      function Ht() {
+      var Gt = r(96059),
+        Ht = r(17204);
+      function Vt() {
         const e = [];
         return (
           it.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
@@ -3672,40 +3680,40 @@
         );
       }
       r(12155), r(738), r(41775);
-      var Vt = r(92724);
+      var Zt = r(92724);
       r(64641);
-      (0, At.jK)({ enforceActions: "never" }),
+      (0, Et.jK)({ enforceActions: "never" }),
         (0, _e.oQ)(async () => {
-          $t(),
-            (0, Gt.aj)().Init(
+          Qt(),
+            (0, Ht.aj)().Init(
               "Community",
               CLSTAMP,
-              new Et.D(R.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-              { fnGetReportTags: Ht },
+              new Gt.D(R.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+              { fnGetReportTags: Vt },
             ),
-            await Qt();
+            await Xt();
           const e =
             document.getElementById("react_root") ||
             document.getElementById("application_root");
           if (e) {
             const t = window;
             if (t.g_bCommunityReactInitialized) return void 0;
-            Nt.createRoot(e).render(i.createElement(Ut, {})),
+            At.createRoot(e).render(i.createElement(kt, {})),
               (t.g_bCommunityReactInitialized = !0);
           }
         });
-      let Zt,
-        Kt = !1;
-      function $t() {
-        if (!Kt) {
+      let Kt,
+        $t = !1;
+      function Qt() {
+        if (!$t) {
           (0, R.XJ)("application_config").config
-            ? (Qt(), (Kt = !0))
+            ? (Xt(), ($t = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function Qt() {
-        Zt ||
-          (Zt = (async function (e) {
+      async function Xt() {
+        Kt ||
+          (Kt = (async function (e) {
             {
               const t = $.A0.GetLanguageFallback(e),
                 i = e === t,
@@ -3718,26 +3726,26 @@
                     : r(68042)(`./shared_${t}.json`).then((e) => e.default),
                   i ? {} : r(95386)(`./sales_${t}.json`).then((e) => e.default),
                   i ? {} : r(68982)(`./main_${t}.json`).then((e) => e.default),
-                  (0, Vt.u)(),
+                  (0, Zt.u)(),
                 ]);
               $.pf.AddTokens({ ...s, ...n, ...a }, { ...l, ...o, ...c });
             }
-            for (const e of Xt) $.pf.AddTokens(e);
-            Xt = void 0;
+            for (const e of Yt) $.pf.AddTokens(e);
+            Yt = void 0;
           })(R.TS.LANGUAGE)),
-          await Zt;
+          await Kt;
       }
-      let Xt = [];
-      function Yt(e, t, r) {
+      let Yt = [];
+      function Jt(e, t, r) {
         (0, We.wT)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== Xt ? Xt.push(r) : $.pf.AddTokens(r);
+          void 0 !== Yt ? Yt.push(r) : $.pf.AddTokens(r);
       }
-      $t(),
+      Qt(),
         (function () {
           const e = window;
           e.g_rgPendingLocManifests &&
-            e.g_rgPendingLocManifests.forEach((e) => Yt(...e)),
-            (e.LocalizationManifestReady = Yt),
+            e.g_rgPendingLocManifests.forEach((e) => Jt(...e)),
+            (e.LocalizationManifestReady = Jt),
             (e.g_rgPendingLocManifests = void 0);
         })();
     },
@@ -14649,6 +14657,156 @@
             return null;
         }
       }
+    },
+    87652: (e, t, r) => {
+      "use strict";
+      r.d(t, { Iz: () => o, YN: () => l });
+      var i = r(7850),
+        n = r(33688),
+        s = r(90626);
+      const a = s.createContext(void 0);
+      function o(e) {
+        const [t] = s.useState(() => new n.e());
+        return (0, i.jsx)(a.Provider, { value: t, children: e.children });
+      }
+      function l() {
+        const e = s.useContext(a);
+        return (
+          e ||
+          (function () {
+            if (!c)
+              throw new Error(
+                "Partner event tracking has not been initialized (context or global)",
+              );
+            return c;
+          })()
+        );
+      }
+      let c;
+    },
+    33688: (e, t, r) => {
+      "use strict";
+      r.d(t, { e: () => g });
+      var i = r(34629),
+        n = r(34214),
+        s = r(56545),
+        a = r(37085),
+        o = r(6144),
+        l = r(6419),
+        c = r(78327),
+        u = r(41735),
+        d = r.n(u),
+        m = r(68797);
+      class g {
+        constructor(e) {
+          (this.m_setShownEvents = new Set()),
+            (this.m_setReadEvents = new Set()),
+            (this.m_rgPendingUpload = []),
+            (this.m_schUpload = new o.LU()),
+            (this.m_bUploading = !1),
+            (this.m_CMInterface = e);
+        }
+        RecordEventShown(e, t) {
+          e &&
+            !e.bOldAnnouncement &&
+            e.GID &&
+            this.MarkEventShown(e.GID, e.clanSteamID.GetAccountID(), t);
+        }
+        RecordEventRead(e, t) {
+          e &&
+            !e.bOldAnnouncement &&
+            e.GID &&
+            this.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t);
+        }
+        MarkEventShown(e, t, r) {
+          let i = this.MakeKey(e, r);
+          if (this.m_setShownEvents.has(i)) return !1;
+          this.m_setShownEvents.add(i);
+          let s = new n.kZ();
+          return (
+            s.set_event_gid(e),
+            s.set_clanid(t),
+            s.set_display_location(r),
+            s.set_mark_shown(!0),
+            this.QueueForUpload(s),
+            !0
+          );
+        }
+        MarkEventRead(e, t, r) {
+          let i = this.MakeKey(e, r);
+          if (this.m_setReadEvents.has(i)) return !1;
+          this.m_setReadEvents.add(i);
+          let s = new n.kZ();
+          return (
+            s.set_event_gid(e),
+            s.set_clanid(t),
+            s.set_display_location(r),
+            s.set_mark_read(!0),
+            this.QueueForUpload(s),
+            !0
+          );
+        }
+        MakeKey(e, t) {
+          return `${e}_${t}`;
+        }
+        QueueForUpload(e) {
+          this.m_rgPendingUpload.push(e), this.ScheduleUpload();
+        }
+        ScheduleUpload() {
+          this.m_bUploading ||
+            (this.m_rgPendingUpload.length >= 30
+              ? this.UploadPendingData()
+              : this.m_schUpload.IsScheduled() ||
+                this.m_schUpload.Schedule(6e4, this.UploadPendingData));
+        }
+        async Flush() {
+          if (!this.m_bUploading) return this.UploadPendingData();
+        }
+        async UploadPendingData() {
+          if (this.m_bUploading) return;
+          this.m_schUpload.Cancel();
+          let e = this.m_rgPendingUpload.splice(0, 30);
+          if (0 == e.length) return;
+          let t = !1;
+          if (this.m_CMInterface) {
+            let r = s.w.Init(n.wS);
+            for (let t of e) r.Body().add_markings(t);
+            this.m_bUploading = !0;
+            let i = await n.BE.MarkPartnerEventsForUser(
+              this.m_CMInterface.GetServiceTransport(),
+              r,
+            );
+            (this.m_bUploading = !1), (t = i.GetEResult() == a.R);
+          } else {
+            if (!c.iA.logged_in) return;
+            let r = e.map((e) => e.toObject()),
+              i = (0, c.xv)() + "actions/ajaxmarkpartnerevents";
+            const n = new FormData();
+            n.append("sessionid", c.TS.SESSIONID),
+              n.append("request", JSON.stringify(r));
+            try {
+              t =
+                (await d().post(i, n, { withCredentials: !0 })).data.success ==
+                a.R;
+            } catch (e) {
+              let t = (0, m.H)(e);
+              console.error(
+                "CPartnerEventUserTracking.UploadPendingData error " +
+                  t.strErrorMsg,
+                t,
+              );
+            }
+          }
+          t
+            ? this.m_rgPendingUpload.length > 0 && this.ScheduleUpload()
+            : (console.log(
+                "Saving news event state failed. Will try again soon!",
+              ),
+              (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(e)),
+              this.m_schUpload.Schedule(6e4, this.UploadPendingData));
+        }
+      }
+      (0, i.Cg)([l.o], g.prototype, "UploadPendingData", null);
     },
     56545: (e, t, r) => {
       "use strict";

@@ -13,270 +13,276 @@
     73744: (e, t, i) => {
       "use strict";
       i.d(t, {
-        Ek: () => g,
-        Fj: () => h,
-        Ho: () => l,
-        Kf: () => r,
-        N_: () => u,
-        XY: () => c,
-        dM: () => s,
-        qj: () => a,
-        s4: () => m,
-        vz: () => d,
-        yu: () => p,
+        Ek: () => c,
+        Fj: () => m,
+        Ho: () => g,
+        Kf: () => n,
+        N_: () => b,
+        XY: () => _,
+        dM: () => r,
+        qj: () => s,
+        s4: () => u,
+        vz: () => I,
+        yu: () => d,
       });
-      function a(e) {
+      var a = i(34214);
+      function s(e) {
         return Array.isArray(e) ? e[0] : e;
       }
-      function s(e) {
+      function r(e) {
         const t = Array.isArray(e) ? e : [e];
         return Math.min(...t);
       }
-      function r(e, t) {
-        return void 0 === t ? a(e) : Array.isArray(e) ? e[t] : e;
+      function n(e, t) {
+        return void 0 === t ? s(e) : Array.isArray(e) ? e[t] : e;
       }
-      const n = [1, 3, 2],
-        o = [1, 3],
-        l = [5, 4],
-        h = {
-          capsule: { width: 800, height: 450, rgAcceptableTypes: o },
+      const o = [a.bg.iS, a.bg.dU, a.bg.CK, a.bg.wD],
+        l = [a.bg.iS, a.bg.dU, a.bg.CK],
+        h = [a.bg.iS, a.bg.dU],
+        g = [a.bg.pJ, a.bg.nn],
+        p =
+          (a.bg.pi,
+          a.bg.k7,
+          [a.bg.iS, a.bg.dU, a.bg.CK, a.bg.wD, a.bg.pJ, a.bg.nn]),
+        m = {
+          capsule: { width: 800, height: 450, rgAcceptableTypes: h },
           marketingmessage_art_2_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           marketingmessage_art_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
-          spotlight: { width: 2108, height: 460, rgAcceptableTypes: o },
+          spotlight: { width: 2108, height: 460, rgAcceptableTypes: h },
           localized_store_app_spotlight: {
             width: 1200,
             height: 260,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           localized_store_app_spotlight_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           localized_title_image: {
             width: 1920,
             height: 622,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
-          background: { width: 1920, height: 622, rgAcceptableTypes: o },
+          background: { width: 1920, height: 622, rgAcceptableTypes: h },
           hero: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
-          email_full: { width: 800, height: 300, rgAcceptableTypes: o },
-          email_centered: { width: 644, height: 300, rgAcceptableTypes: o },
+          email_full: { width: 800, height: 300, rgAcceptableTypes: h },
+          email_centered: { width: 644, height: 300, rgAcceptableTypes: h },
           broadcast_left: {
             width: [199, 155],
             height: [433, 337],
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           broadcast_right: {
             width: [199, 155],
             height: [433, 337],
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           sale_header: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
           sale_overlay: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
           localized_image_group: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           localized_background_art: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           sale_section_background: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
           sale_section_title: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
           link_capsule: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           product_banner: {
             width: [1200, 1100],
             height: [175, 160],
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           product_mobile_banner: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           product_banner_override: {
             width: [1200, 1100],
             height: [175, 160],
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           product_mobile_banner_override: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
-          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: o },
+          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: h },
           tab_bar_background: {
             width: 1500,
             height: 100,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           sale_logo: {
             width: [1200, 940],
             height: [460, 460],
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
-          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: n },
+          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: l },
           bestofyear_banner_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
           localized_marketing_message: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [1, 3, 2, 10],
+            rgAcceptableTypes: o,
           },
           localized_optin_banner: {
             width: 1e3,
             height: 150,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           localized_marketingmessage_webm: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [a.bg.pJ],
           },
           localized_marketingmessage_mp4: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [a.bg.nn],
           },
           localized_partnerevent_webm: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [a.bg.pJ],
           },
           localized_partnerevent_mp4: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [a.bg.nn],
           },
           localized_subtitles: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [6, 7],
+            rgAcceptableTypes: [a.bg.k7, a.bg.pi],
           },
           localized_marketingmessage_poster: {
             width: 528,
             height: 297,
-            rgAcceptableTypes: [1, 3],
+            rgAcceptableTypes: [a.bg.iS, a.bg.dU],
           },
           localized_marketingmessage_background: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           localized_email_image: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
           template_asset: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+            rgAcceptableTypes: p,
           },
           user_poll_background: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: o,
+            rgAcceptableTypes: h,
           },
-          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: n },
-          spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: o },
-          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: n },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: l },
+          spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: h },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: l },
           marketingmessage_art: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
           marketingmessage_art_2: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
-          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: n },
+          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: l },
           takeover_webm_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [a.bg.pJ],
           },
           takeover_mp4_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [a.bg.nn],
           },
           takeover_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
           takeover_webm_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [a.bg.pJ],
           },
           takeover_mp4_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [a.bg.nn],
           },
-          takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: n },
+          takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: l },
           takeunder_mobile_art: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: n,
+            rgAcceptableTypes: l,
           },
-          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: o },
-          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: o },
+          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: h },
+          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: h },
         };
-      function g(e, t, i, a) {
+      function c(e, t, i, a) {
         let s = null;
         if (Array.isArray(i)) {
           if (
@@ -296,15 +302,15 @@
         } else if (t !== a) return !1;
         return !0;
       }
-      function p(e, t, i, a) {
-        const s = h[i];
+      function d(e, t, i, a) {
+        const s = m[i];
         return (
           !!s &&
-          (s.bDisableEnforceDimensions ? !!a : g(e, t, s.width, s.height))
+          (s.bDisableEnforceDimensions ? !!a : c(e, t, s.width, s.height))
         );
       }
-      function m(e, t, i) {
-        const a = h[i];
+      function u(e, t, i) {
+        const a = m[i];
         if (!a) return !1;
         if (a.bDisableEnforceDimensions) return !0;
         if (Array.isArray(a.width)) {
@@ -316,29 +322,31 @@
         } else if (t < a.height) return !1;
         return !0;
       }
-      function c(e) {
-        const t = h[e];
+      function _(e) {
+        const t = m[e];
         return (
-          t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
+          t.rgAcceptableTypes.includes(a.bg.k7) ||
+          t.rgAcceptableTypes.includes(a.bg.pi)
         );
       }
-      function d(e, t) {
-        return t.filter((t) => u(e, t));
+      function I(e, t) {
+        return t.filter((t) => b(e, t));
       }
-      function u(e, t) {
-        return h[t].rgAcceptableTypes.includes(e);
+      function b(e, t) {
+        return m[t].rgAcceptableTypes.includes(e);
       }
     },
     78511: (e, t, i) => {
       "use strict";
-      i.d(t, { o: () => n, q: () => o });
+      i.d(t, { o: () => o, q: () => l });
       var a = i(34629),
         s = i(14947),
-        r = i(82705);
-      function n(e) {
+        r = i(34214),
+        n = i(82705);
+      function o(e) {
         return "waiting" == e || "uploading" == e || "processing" == e;
       }
-      class o {
+      class l {
         m_originalSize = { width: 0, height: 0 };
         m_originalDataUrl = "";
         dataUrl = void 0;
@@ -351,17 +359,17 @@
         filename;
         uploadTime;
         fileType;
-        constructor(e, t, i, a, n) {
+        constructor(e, t, i, a, o) {
           (0, s.Gn)(this),
             (this.file = e),
             (this.filename = t),
-            (this.fileType = (0, r.yh)(t) ?? 0),
+            (this.fileType = (0, n.yh)(t) ?? r.bg.w3),
             (this.language = i),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
-            (this.m_originalSize = n),
-            (this.height = n.height),
-            (this.width = n.width),
+            (this.m_originalSize = o),
+            (this.height = o.height),
+            (this.width = o.width),
             (this.m_originalDataUrl = a),
             (this.dataUrl = a);
         }
@@ -372,37 +380,38 @@
         }
         GetImageOptionLabel() {}
       }
-      (0, a.Cg)([s.sH], o.prototype, "dataUrl", void 0),
-        (0, a.Cg)([s.sH], o.prototype, "width", void 0),
-        (0, a.Cg)([s.sH], o.prototype, "height", void 0),
-        (0, a.Cg)([s.sH], o.prototype, "status", void 0),
-        (0, a.Cg)([s.sH.ref], o.prototype, "message", void 0),
-        (0, a.Cg)([s.sH], o.prototype, "language", void 0);
+      (0, a.Cg)([s.sH], l.prototype, "dataUrl", void 0),
+        (0, a.Cg)([s.sH], l.prototype, "width", void 0),
+        (0, a.Cg)([s.sH], l.prototype, "height", void 0),
+        (0, a.Cg)([s.sH], l.prototype, "status", void 0),
+        (0, a.Cg)([s.sH.ref], l.prototype, "message", void 0),
+        (0, a.Cg)([s.sH], l.prototype, "language", void 0);
     },
     28954: (e, t, i) => {
       "use strict";
-      i.d(t, { bT: () => A, zO: () => D });
+      i.d(t, { bT: () => D, zO: () => v });
       var a = i(34629),
-        s = i(81393),
-        r = i(64753),
-        n = i(41735),
-        o = i.n(n),
-        l = i(14947),
-        h = i(90626),
-        g = i(73744),
-        p = i(86355),
-        m = i(68797),
-        c = i(6419),
-        d = i(56011),
-        u = i(61859),
-        _ = i(78327),
-        I = i(82817),
+        s = i(22837),
+        r = i(81393),
+        n = i(64753),
+        o = i(41735),
+        l = i.n(o),
+        h = i(14947),
+        g = i(90626),
+        p = i(73744),
+        m = i(86355),
+        c = i(68797),
+        d = i(6419),
+        u = i(56011),
+        _ = i(61859),
+        I = i(78327),
+        b = i(82817),
         y = i(27666),
         w = i(64953),
         f = i(69343);
-      function b(e, t, i) {
-        const a = (0, g.Kf)(t.width, i),
-          s = (0, g.Kf)(t.height, i);
+      function C(e, t, i) {
+        const a = (0, p.Kf)(t.width, i),
+          s = (0, p.Kf)(t.height, i);
         return {
           sKey: `${e}_${a}x${s}`,
           width: a,
@@ -413,39 +422,39 @@
           bDeprecated: (i ?? 0) >= 1,
           fnGetLabelText() {
             return "spotlight" == this.artworkType
-              ? (0, u.we)("#EventEditor_ArtworkType_store_spotlight")
-              : (0, u.we)("#EventEditor_ArtworkType_" + this.artworkType);
+              ? (0, _.we)("#EventEditor_ArtworkType_store_spotlight")
+              : (0, _.we)("#EventEditor_ArtworkType_" + this.artworkType);
           },
         };
       }
-      class C extends f.Vr {
-        m_filesToUpload = l.sH.array();
-        m_filesCompleted = l.sH.array();
+      class T extends f.Vr {
+        m_filesToUpload = h.sH.array();
+        m_filesCompleted = h.sH.array();
         m_clanImagesV2;
         m_clanSteamID;
         m_rgImageOptions;
         m_localizedImageGroupPrimaryImage;
         m_lastError = void 0;
         constructor(e, t, i, a) {
-          var r;
+          var s;
           super(),
-            (0, l.Gn)(this),
+            (0, h.Gn)(this),
             (this.m_clanSteamID = e),
             (this.m_rgImageOptions =
-              ((r = t),
-              r?.flatMap((e) => {
-                const t = g.Fj[e];
+              ((s = t),
+              s?.flatMap((e) => {
+                const t = p.Fj[e];
                 if (
-                  ((0, s.wT)(Boolean(t), `Artwork Type not in Map ${e}`),
+                  ((0, r.wT)(Boolean(t), `Artwork Type not in Map ${e}`),
                   "number" == typeof t.width && "number" == typeof t.height)
                 )
-                  return [b(e, t)];
+                  return [C(e, t)];
                 {
                   let i = Math.max(
                     Array.isArray(t.width) ? t.width.length : 1,
                     Array.isArray(t.height) ? t.height.length : 1,
                   );
-                  return Array.from({ length: i }, (i, a) => b(e, t, a));
+                  return Array.from({ length: i }, (i, a) => C(e, t, a));
                 }
               }))),
             (this.m_localizedImageGroupPrimaryImage = i),
@@ -454,14 +463,14 @@
         GetClanSteamID() {
           return this.m_clanSteamID;
         }
-        async AddImage(e, t = 0) {
+        async AddImage(e, t = s.Bhc) {
           const { language: i } = (0, f.jj)(e.name, t);
           return this.AddImageForLanguage(e, i);
         }
         async AddImageForLanguage(e, t) {
-          if (!((0, I.aL)(e.type) || (_.iA.is_support && (0, I.Uz)(e.type))))
+          if (!((0, b.aL)(e.type) || (I.iA.is_support && (0, b.Uz)(e.type))))
             return !1;
-          const i = await (0, I.zB)(e, (0, I.Uz)(e.type));
+          const i = await (0, b.zB)(e, (0, b.Uz)(e.type));
           if (!i) return !1;
           const a = new w.M7(
             e,
@@ -469,22 +478,22 @@
             t,
             this.m_rgImageOptions,
             i.src,
-            (0, I.II)(i),
+            (0, b.II)(i),
             i,
             this.m_localizedImageGroupPrimaryImage,
           );
           return (this.m_filesToUpload = [...this.m_filesToUpload, a]), !0;
         }
-        async AddExistingClanImage(e, t = 0) {
+        async AddExistingClanImage(e, t = s.Bhc) {
           const i = y.z.GetHashAndExt(e);
           if (!i) return !1;
           const a = y.z.GenerateEditableURLFromHashAndExt(
               this.m_clanSteamID,
               i,
             ),
-            s = await o()({ url: a, method: "GET", responseType: "blob" }),
-            r = (0, d.pE)(s.data, e.file_name);
-          return await this.AddImage(r, t);
+            r = await l()({ url: a, method: "GET", responseType: "blob" }),
+            n = (0, u.pE)(r.data, e.file_name);
+          return await this.AddImage(n, t);
         }
         DeleteUploadImageByIndex(e) {
           this.m_filesToUpload.splice(e, 1),
@@ -497,7 +506,7 @@
           t >= 0 && this.DeleteUploadImageByIndex(t);
         }
         ClearImages() {
-          this.m_filesToUpload = l.sH.array();
+          this.m_filesToUpload = h.sH.array();
         }
         GetFilesUploaded() {
           return this.m_filesCompleted;
@@ -533,7 +542,7 @@
           this.CancelAllUploads(), this.UploadAllImages();
         }
         async handleUploadRefresh(e) {
-          await p.pU.LoadClanImages(this.m_clanSteamID, !0, e);
+          await m.pU.LoadClanImages(this.m_clanSteamID, !0, e);
         }
         BGetUploadsAreInSerial() {
           return !1;
@@ -542,14 +551,14 @@
           const s = e.file,
             r = e.GetCurrentImageOption(),
             n = e.GetResizeDimension(),
-            l = new FormData();
-          l.append("clanimage", s, t),
-            l.append("sessionid", _.TS.SESSIONID),
-            this.m_clanImagesV2 && l.append("clan_images_v2", "1"),
-            r?.artworkType && l.append("arttype", r.artworkType),
+            o = new FormData();
+          o.append("clanimage", s, t),
+            o.append("sessionid", I.TS.SESSIONID),
+            this.m_clanImagesV2 && o.append("clan_images_v2", "1"),
+            r?.artworkType && o.append("arttype", r.artworkType),
             n &&
               n.length > 0 &&
-              l.append(
+              o.append(
                 "resize",
                 n.map((e) => e.width + "x" + e.height).join(","),
               );
@@ -557,17 +566,17 @@
           const g = this.m_localizedImageGroupPrimaryImage;
           g &&
             ((h = "/ajaxuploadlocalizedimage/"),
-            l.append("origimagehash", g.image_hash),
-            g.thumbnail_hash && l.append("thumbhash", g.thumbnail_hash),
-            l.append("extension", "" + g.file_type),
-            l.append("language", "" + i));
+            o.append("origimagehash", g.image_hash),
+            g.thumbnail_hash && o.append("thumbhash", g.thumbnail_hash),
+            o.append("extension", "" + g.file_type),
+            o.append("language", "" + i));
           const p = t.split(".").pop()?.toLocaleLowerCase();
           ("webm" != p && "mp4" != p) ||
-            (l.append("video_width", "" + e.width),
-            l.append("video_height", "" + e.height));
-          let c,
+            (o.append("video_width", "" + e.width),
+            o.append("video_height", "" + e.height));
+          let m,
             d =
-              _.TS.COMMUNITY_BASE_URL +
+              I.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               this.m_clanSteamID.ConvertTo64BitString() +
               h,
@@ -576,40 +585,40 @@
               withCredentials: !0,
               headers: { "Content-Type": "multipart/form-data" },
             },
-            I = !0;
+            _ = !0;
           try {
-            (c = await o().post(d, l, u)), this.m_filesCompleted.push(s);
+            (m = await l().post(d, o, u)), this.m_filesCompleted.push(s);
           } catch (e) {
-            (I = !1),
+            (_ = !1),
               (this.m_lastError = {
                 file: s,
                 status: e.response ? e.response.status : 500,
-                message: (0, m.H)(e).strErrorMsg,
+                message: (0, c.H)(e).strErrorMsg,
               }),
-              (c = e.response);
+              (m = e.response);
           }
           return (
             g || (await this.handleUploadRefresh(a)),
-            { bSuccess: I, result: c.data }
+            { bSuccess: _, result: m.data }
           );
         }
       }
-      (0, a.Cg)([l.sH], C.prototype, "m_filesToUpload", void 0),
-        (0, a.Cg)([l.sH], C.prototype, "m_filesCompleted", void 0),
-        (0, a.Cg)([l.sH], C.prototype, "m_lastError", void 0),
-        (0, a.Cg)([c.o], C.prototype, "AddImage", null),
-        (0, a.Cg)([c.o], C.prototype, "AddExistingClanImage", null),
-        (0, a.Cg)([c.o], C.prototype, "DeleteUploadImageByIndex", null),
-        (0, a.Cg)([c.o], C.prototype, "DeleteUploadImage", null),
-        (0, a.Cg)([c.o], C.prototype, "ClearImages", null);
-      class T extends C {
+      (0, a.Cg)([h.sH], T.prototype, "m_filesToUpload", void 0),
+        (0, a.Cg)([h.sH], T.prototype, "m_filesCompleted", void 0),
+        (0, a.Cg)([h.sH], T.prototype, "m_lastError", void 0),
+        (0, a.Cg)([d.o], T.prototype, "AddImage", null),
+        (0, a.Cg)([d.o], T.prototype, "AddExistingClanImage", null),
+        (0, a.Cg)([d.o], T.prototype, "DeleteUploadImageByIndex", null),
+        (0, a.Cg)([d.o], T.prototype, "DeleteUploadImage", null),
+        (0, a.Cg)([d.o], T.prototype, "ClearImages", null);
+      class A extends T {
         constructor(e, t, i) {
           super(e, t, i, !1);
         }
       }
-      async function A(e, t, i, a, s) {
+      async function D(e, t, i, a, s) {
         let r =
-            _.TS.COMMUNITY_BASE_URL +
+            I.TS.COMMUNITY_BASE_URL +
             "/gid/" +
             t.ConvertTo64BitString() +
             "/resizeimage/",
@@ -618,14 +627,14 @@
           n.append("imagehash", i),
           n.append("extension", a),
           n.append("resize", s.map((e) => e.width + "x" + e.height).join(",")),
-          n.append("sessionid", _.TS.SESSIONID),
-          (await o().post(r, n, { cancelToken: e })).data.count
+          n.append("sessionid", I.TS.SESSIONID),
+          (await l().post(r, n, { cancelToken: e })).data.count
         );
       }
-      function D(e, t, i) {
-        const a = (0, r.wm)(t instanceof Array ? t : [t]),
+      function v(e, t, i) {
+        const a = (0, n.wm)(t instanceof Array ? t : [t]),
           s = e.ConvertTo64BitString();
-        return h.useMemo(() => new T(e, a, i), [s, a]);
+        return g.useMemo(() => new A(e, a, i), [s, a]);
       }
     },
     64953: (e, t, i) => {
@@ -847,27 +856,27 @@
           a
         );
       }
-      async function g(e, t, i, a, s, r) {
-        const n = h(e, a, s),
-          o = [];
-        let l = 0;
-        const g = Array.from({ length: Math.floor(t) }, () =>
+      async function g(e, t, i, a, r, n) {
+        const o = h(e, a, r),
+          l = [];
+        let g = 0;
+        const p = Array.from({ length: Math.floor(t) }, () =>
           (async () => {
-            for (; l < n.length; ) {
-              const e = l++,
-                t = n[e];
+            for (; g < o.length; ) {
+              const e = g++,
+                t = o[e];
               t.status = "uploading";
-              const a = await i(t, t.filename, t.language ?? -1, r);
+              const a = await i(t, t.filename, t.language ?? s.xPp, n);
               (t.status = a.bSuccess ? "success" : "failed"),
                 (t.message =
                   !a.bSuccess && a.elErrorMessage ? a.elErrorMessage : ""),
-                (o[e] = { image: t, uploadResult: a });
+                (l[e] = { image: t, uploadResult: a });
             }
           })(),
         );
         return (
-          await Promise.all(g),
-          o.map((e) => ({
+          await Promise.all(p),
+          l.map((e) => ({
             bSuccess: e.uploadResult.bSuccess,
             image: e.image,
             uploadResult: e.uploadResult.result,
@@ -880,37 +889,37 @@
           this.m_cancel = o().CancelToken.source();
           const i = this.BGetUploadsAreInSerial() ? 1 : 4;
           let a;
-          const s = this.UploadSingleImage.bind(this);
+          const r = this.UploadSingleImage.bind(this);
           return (
             (a =
               i > 1
                 ? await g(
                     this.GetUploadImages(),
                     i,
-                    s,
+                    r,
                     e,
                     t,
                     this.m_cancel.token,
                   )
-                : await (async function (e, t, i, a, s) {
-                    const r = h(e, i, a),
-                      n = [];
-                    for (const e of r) {
+                : await (async function (e, t, i, a, r) {
+                    const n = h(e, i, a),
+                      o = [];
+                    for (const e of n) {
                       e.status = "uploading";
-                      const i = await t(e, e.filename, e.language ?? -1, s);
+                      const i = await t(e, e.filename, e.language ?? s.xPp, r);
                       (e.status = i.bSuccess ? "success" : "failed"),
                         (e.message =
                           !i.bSuccess && i.elErrorMessage
                             ? i.elErrorMessage
                             : ""),
-                        n.push({
+                        o.push({
                           bSuccess: i.bSuccess,
                           image: e,
                           uploadResult: i.result,
                         });
                     }
-                    return n;
-                  })(this.GetUploadImages(), s, e, t, this.m_cancel.token)),
+                    return o;
+                  })(this.GetUploadImages(), r, e, t, this.m_cancel.token)),
             a
           );
         }
@@ -923,22 +932,22 @@
           return e;
         for (const t of i) if (r.A0.IsELanguageValidInRealm(e, t)) return e;
         for (const e of i) if (r.A0.IsELanguageValidInRealm(t, e)) return t;
-        return i.includes(a.TU.k_ESteamRealmGlobal) ? 0 : 29;
+        return i.includes(a.TU.k_ESteamRealmGlobal) ? s.Bhc : s.ZLm;
       }
-      function c(e, t = 0) {
+      function c(e, t = s.Bhc) {
         let i = e.lastIndexOf(".");
         -1 != i && (e = e.slice(0, i).toLowerCase());
         let a = null,
           r = 0;
-        e.endsWith("korean") && ((a = 4), (r = 6));
-        for (let t = 0; t < 31; ++t) {
-          const i = (0, s.ww)(t);
+        e.endsWith("korean") && ((a = s.Pn1), (r = 6));
+        for (let t = s.Bhc; t < s.bP9; ++t) {
+          const i = (0, s.wwZ)(t);
           if (i.length <= r) continue;
           if (e.endsWith(i) && e.length > i.length + 2) {
             const s = e[e.length - i.length - 1];
             /\p{Alphabetic}|\p{Number}/u.test(s) || ((a = t), (r = i.length));
           }
-          const n = (0, s.Lg)(t);
+          const n = (0, s.LgB)(t);
           n.length <= r || (e.endsWith(n) && ((a = t), (r = n.length)));
         }
         return {
@@ -953,22 +962,23 @@
     },
     86355: (e, t, i) => {
       "use strict";
-      i.d(t, { mr: () => I, n9: () => _, pU: () => u });
+      i.d(t, { mr: () => b, n9: () => I, pU: () => _ });
       var a = i(34629),
-        s = i(41735),
-        r = i.n(s),
-        n = i(14947),
-        o = i(90626),
-        l = i(17720),
-        h = i(4434),
-        g = i(81393),
-        p = i(6144),
-        m = i(84933),
-        c = i(78327);
-      class d {
+        s = i(37085),
+        r = i(41735),
+        n = i.n(r),
+        o = i(14947),
+        l = i(90626),
+        h = i(17720),
+        g = i(4434),
+        p = i(81393),
+        m = i(6144),
+        c = i(84933),
+        d = i(78327);
+      class u {
         constructor() {
-          (0, n.Gn)(this),
-            "dev" == c.TS.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+          (0, o.Gn)(this),
+            "dev" == d.TS.WEB_UNIVERSE && (window.g_ClanImageStore = this);
         }
         m_mapClanToImages = new Map();
         m_mapClanImageLoadPromises = new Map();
@@ -987,7 +997,7 @@
         GetImageListCallbackForClanAccountIDInternal(e) {
           return (
             this.m_imageListChangeCallback.has(e) ||
-              this.m_imageListChangeCallback.set(e, new p.lu()),
+              this.m_imageListChangeCallback.set(e, new m.lu()),
             this.m_imageListChangeCallback.get(e)
           );
         }
@@ -1020,18 +1030,18 @@
         async InternalLoadClanImages(e, t, i) {
           let a = e.GetAccountID();
           if (
-            ((0, g.wT)(e && 0 != a, "ClanSteamID missing:" + e),
+            ((0, p.wT)(e && 0 != a, "ClanSteamID missing:" + e),
             e && (!this.m_mapClanToImages.has(a) || t))
           ) {
             let t,
               s = {};
-            const o =
-              c.TS.COMMUNITY_BASE_URL +
+            const r =
+              d.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               e.ConvertTo64BitString() +
               "/getimages/";
             if (
-              ((t = await r().get(o, {
+              ((t = await n().get(r, {
                 params: s,
                 withCredentials: !0,
                 cancelToken: i,
@@ -1039,7 +1049,7 @@
               t)
             ) {
               for (let e of t.data.images) e.clanAccountID = a;
-              (0, n.h5)(() => {
+              (0, o.h5)(() => {
                 this.m_mapClanImageLoadState.set(a, { loaded: !0 }),
                   this.m_mapClanToImages.set(a, t.data.images),
                   this.GetImageListCallbackForClanAccountIDInternal(a).Dispatch(
@@ -1061,7 +1071,7 @@
           return t || new Array();
         }
         GetFilteredClanImages(e, t) {
-          let i = u.GetClanImages(e);
+          let i = _.GetClanImages(e);
           return this.GetFilteredClanImagesList(i, t);
         }
         GetFilteredClanImagesList(e, t) {
@@ -1097,48 +1107,48 @@
           return a ? a.find((e) => e.image_hash == t) : void 0;
         }
         async DeleteClanImageByID(e, t) {
-          let i = { sessionid: c.TS.SESSIONID, imageid: t },
+          let i = { sessionid: d.TS.SESSIONID, imageid: t },
             a = e.GetAccountID(),
-            s = await r().get(
-              c.TS.COMMUNITY_BASE_URL +
+            r = await n().get(
+              d.TS.COMMUNITY_BASE_URL +
                 "/gid/" +
                 e.ConvertTo64BitString() +
                 "/deleteimage/",
               { params: i },
             );
-          if (!s || 200 != s.status || 1 != s.data.success) return s.data;
-          let n = this.m_mapClanToImages.get(a);
-          if (n) {
-            let e = n.findIndex((e, i, a) => e.imageid == t);
+          if (!r || 200 != r.status || r.data.success != s.R) return r.data;
+          let o = this.m_mapClanToImages.get(a);
+          if (o) {
+            let e = o.findIndex((e, i, a) => e.imageid == t);
             e >= 0 &&
-              (n.splice(e, 1),
+              (o.splice(e, 1),
               this.GetImageListCallbackForClanAccountIDInternal(a).Dispatch([
-                ...n,
+                ...o,
               ]));
           }
-          return s.data;
+          return r.data;
         }
         async DeleteClanImage(e, t) {
           return this.DeleteClanImageByID(e, t.imageid);
         }
       }
-      (0, a.Cg)([n.sH], d.prototype, "m_mapClanToImages", void 0),
-        (0, a.Cg)([n.sH], d.prototype, "m_mapClanImageLoadState", void 0);
-      const u = new d();
-      function _(e) {
-        const [t, i] = (0, o.useState)(u.GetClanImagesByAccount(e));
-        return (0, m.hL)(u.GetImageListCallbackForClanAccountID(e), i), t;
-      }
+      (0, a.Cg)([o.sH], u.prototype, "m_mapClanToImages", void 0),
+        (0, a.Cg)([o.sH], u.prototype, "m_mapClanImageLoadState", void 0);
+      const _ = new u();
       function I(e) {
-        const t = l.b.InitFromClanID(e),
-          i = (0, h.m)("useLoadClanImages"),
-          [a, s] = (0, o.useState)(() => u.BHasLoadedClanImages(t));
+        const [t, i] = (0, l.useState)(_.GetClanImagesByAccount(e));
+        return (0, c.hL)(_.GetImageListCallbackForClanAccountID(e), i), t;
+      }
+      function b(e) {
+        const t = h.b.InitFromClanID(e),
+          i = (0, g.m)("useLoadClanImages"),
+          [a, s] = (0, l.useState)(() => _.BHasLoadedClanImages(t));
         return (
-          (0, o.useEffect)(() => {
-            const t = l.b.InitFromClanID(e);
+          (0, l.useEffect)(() => {
+            const t = h.b.InitFromClanID(e);
             return (
-              u.BHasLoadedClanImages(t) ||
-                u.LoadClanImages(t, !1, i.token).then(() => s(!0)),
+              _.BHasLoadedClanImages(t) ||
+                _.LoadClanImages(t, !1, i.token).then(() => s(!0)),
               () => i.cancel()
             );
           }, [e, i]),
@@ -1148,47 +1158,49 @@
     },
     82705: (e, t, i) => {
       "use strict";
-      i.d(t, { yh: () => a });
+      i.d(t, { yh: () => s });
       i(90626);
-      function a(e) {
+      var a = i(34214);
+      function s(e) {
         return (
           e.indexOf("?") > 0 && (e = e.split("?")[0]),
           e.endsWith(".jpg") || e.endsWith(".jpeg")
-            ? 1
+            ? a.bg.iS
             : e.endsWith(".png")
-              ? 3
+              ? a.bg.dU
               : e.endsWith(".gif")
-                ? 2
+                ? a.bg.CK
                 : e.endsWith(".mp4")
-                  ? 4
+                  ? a.bg.nn
                   : e.endsWith(".webm")
-                    ? 5
+                    ? a.bg.pJ
                     : e.endsWith(".vtt")
-                      ? 6
+                      ? a.bg.k7
                       : e.endsWith(".srt")
-                        ? 7
+                        ? a.bg.pi
                         : e.endsWith(".webp")
-                          ? 10
+                          ? a.bg.wD
                           : void 0
         );
       }
     },
     66331: (e, t, i) => {
       "use strict";
-      i.d(t, { q: () => u, t: () => _ });
+      i.d(t, { q: () => _, t: () => I });
       var a = i(34629),
         s = i(7850),
         r = i(90626),
         n = i(73744),
-        o = i(56283),
-        l = i(81416),
-        h = i(51706),
-        g = i(52038),
-        p = i(61859),
-        m = i(84933),
-        c = i(50666),
-        d = i(56011);
-      class u extends r.Component {
+        o = i(34214),
+        l = i(56283),
+        h = i(81416),
+        g = i(51706),
+        p = i(52038),
+        m = i(61859),
+        c = i(84933),
+        d = i(50666),
+        u = i(56011);
+      class _ extends r.Component {
         state = {
           region: {
             xPosPct: 0,
@@ -1201,29 +1213,29 @@
         async OnCrop() {
           const e = this.props.uploadFile.GetCanvasImageSource();
           e &&
-            (await (async function (e, t, i, a, s, r, n, o, l) {
-              return new Promise((h, g) => {
-                const p = _(l);
-                if (!p) return void g("Invalid format provided");
-                const m = document.createElement("canvas");
-                (m.width = n), (m.height = o);
-                const c = 0,
-                  u = 0,
-                  I = m.getContext("2d");
-                I?.drawImage(t, i, a, s, r, c, u, n, o),
-                  m.toBlob((t) => {
-                    const i = m.toDataURL(p);
-                    3 !== l && i.startsWith("data:image/png")
-                      ? g("Unable to encode into the requested file format")
+            (await (async function (e, t, i, a, s, r, n, l, h) {
+              return new Promise((g, p) => {
+                const m = I(h);
+                if (!m) return void p("Invalid format provided");
+                const c = document.createElement("canvas");
+                (c.width = n), (c.height = l);
+                const d = 0,
+                  _ = 0,
+                  b = c.getContext("2d");
+                b?.drawImage(t, i, a, s, r, d, _, n, l),
+                  c.toBlob((t) => {
+                    const i = c.toDataURL(m);
+                    h !== o.bg.dU && i.startsWith("data:image/png")
+                      ? p("Unable to encode into the requested file format")
                       : t
-                        ? ((e.file = (0, d.pE)(t, e.filename)),
+                        ? ((e.file = (0, u.pE)(t, e.filename)),
                           (e.width = n),
-                          (e.height = o),
+                          (e.height = l),
                           (e.dataUrl = i),
                           (e.uploadTime = Date.now()),
                           (e.bCropped = !0),
-                          h())
-                        : g("Unable to apply crop into image");
+                          g())
+                        : p("Unable to apply crop into image");
                   });
               });
             })(
@@ -1298,25 +1310,25 @@
               800,
               500,
             );
-          return (0, s.jsx)(h.x_, {
+          return (0, s.jsx)(g.x_, {
             onEscKeypress: this.props.closeModal,
             bDisableBackgroundDismiss: !0,
             children: (0, s.jsxs)("div", {
-              className: (0, g.A)("DialogContent", "_DialogCenterVertically"),
+              className: (0, p.A)("DialogContent", "_DialogCenterVertically"),
               children: [
-                (0, s.jsx)(o.iK, {
-                  children: (0, p.we)(
+                (0, s.jsx)(l.iK, {
+                  children: (0, m.we)(
                     "#ImageUpload_CropModalTitleDims",
                     this.GetDestWidth(),
                     this.GetDestHeight(),
                   ),
                 }),
                 (0, s.jsx)("div", {
-                  className: (0, g.A)("DialogBodyText"),
-                  children: (0, p.we)("#ImageUpload_CropModalDescription"),
+                  className: (0, p.A)("DialogBodyText"),
+                  children: (0, m.we)("#ImageUpload_CropModalDescription"),
                 }),
                 (0, s.jsxs)("div", {
-                  className: c.CropImage,
+                  className: d.CropImage,
                   style: { width: i.width, height: i.height },
                   children: [
                     (0, s.jsx)("img", {
@@ -1327,7 +1339,7 @@
                       },
                       src: this.props.uploadFile.dataUrl,
                     }),
-                    (0, s.jsx)(l.I, {
+                    (0, s.jsx)(h.I, {
                       bLockAspectRatio: !0,
                       bDisableLink: !0,
                       index: 0,
@@ -1342,34 +1354,34 @@
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: c.CropPreviewGroup,
+                  className: d.CropPreviewGroup,
                   children: [
                     (0, s.jsx)("div", {
-                      className: c.CropPreviewLabel,
-                      children: (0, p.we)("#ImageUpload_CropPreview"),
+                      className: d.CropPreviewLabel,
+                      children: (0, m.we)("#ImageUpload_CropPreview"),
                     }),
                     (0, s.jsx)("div", { style: this.GetPreviewWindowStyle() }),
                   ],
                 }),
-                (0, s.jsx)(o.jn, {
+                (0, s.jsx)(l.jn, {
                   onClick: this.OnCrop,
-                  children: (0, p.we)("#ImageUpload_CropAndContinue"),
+                  children: (0, m.we)("#ImageUpload_CropAndContinue"),
                 }),
               ],
             }),
           });
         }
       }
-      function _(e) {
+      function I(e) {
         switch (e) {
-          case 3:
+          case o.bg.dU:
             return "image/png";
-          case 1:
+          case o.bg.iS:
             return "image/jpeg";
         }
       }
-      (0, a.Cg)([m.oI], u.prototype, "OnCrop", null),
-        (0, a.Cg)([m.oI], u.prototype, "UpdateCrop", null);
+      (0, a.Cg)([c.oI], _.prototype, "OnCrop", null),
+        (0, a.Cg)([c.oI], _.prototype, "UpdateCrop", null);
     },
   },
 ]);

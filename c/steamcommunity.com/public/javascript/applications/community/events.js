@@ -158,7 +158,6 @@
       };
       (0, _._)([_._], _.prototype, "HideModal", null), (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = (function () {
@@ -226,6 +225,138 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsxs)("div", {
+          className: _.LatestUpdateButtonCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.LatestUpdateIcon,
+              children: (0, _.jsx)(_.UTF, {
+                role: "presentation",
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              className: _.LatestUpdateButton,
+              onClick: _.onClick,
+              children: _._.Localize(
+                "#EventBrowse_LatestUpdateTime_Button",
+                (0, _._)(_.nUpdateTime),
+              ),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
+          _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
+          _ = window.screen.width > 500 ? _._ : _._;
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("h2", {
+              children: (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
+            }),
+            (0, _.jsx)("div", {
+              className: _.SectionButtonCtn,
+              children: (0, _.jsx)(_._, {
+                className: _.SectionButton,
+                onClick: (_) => {
+                  null == _ || _(), _.stopPropagation(), _.preventDefault();
+                },
+                children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
+              }),
+            }),
+            !!_ &&
+              (0, _.jsx)(_._, {
+                className: _.EventsSummariesCtn,
+                "flow-children": "column",
+                navEntryPreferPosition: _._.PREFERRED_CHILD,
+                children: (0, _.jsx)(_, {
+                  event: _,
+                  onClick: (_) => {
+                    null == _ || _(), _.stopPropagation(), _.preventDefault();
+                  },
+                }),
+              }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 500;
+      function _(_) {
+        const {
+            strClassName: _,
+            rgEvents: _,
+            fnEventShowModal: _,
+            elPostRowElement: _,
+            bViewAllShowInfiniteScroll: _,
+          } = _,
+          _ = (0, _._)().ownerWindow.window.innerWidth <= _ ? 1 : 2;
+        return (0, _.jsxs)(_._, {
+          className: _,
+          "flow-children": "row",
+          children: [
+            !!_ &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: _._.Localize("#EventBrowse_RecentEvents"),
+                  }),
+                  !_._.IN_GAMEPADUI &&
+                    !!_ &&
+                    (0, _.jsx)("div", {
+                      className: _.SectionButtonCtn,
+                      children:
+                        _ && _
+                          ? (0, _.jsx)(_._, {
+                              className: _.SectionButton,
+                              onClick: () => _(_[0]),
+                              children: _._.Localize(
+                                "#EventBrowse_MoreEventsBtn",
+                              ),
+                            })
+                          : (0, _.jsx)(_._, {
+                              eventModel: _[0],
+                              route: _._.k_eViewWebSiteHub,
+                              className: _.SectionButton,
+                              children: _._.Localize(
+                                "#EventBrowse_MoreEventsBtn",
+                              ),
+                            }),
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.EventsSummariesCtn,
+                    children: __webpack_require__.slice(0, _).map((_) => {
+                      const _ = _
+                          ? (_) => {
+                              _(_), _.stopPropagation(), _.preventDefault();
+                            }
+                          : void 0,
+                        _ =
+                          1 === _.length && window.screen.width > 500
+                            ? _._
+                            : _._;
+                      return (0, _.jsx)(
+                        _,
+                        {
+                          event: _,
+                          onClick: _,
+                        },
+                        _.GID,
+                      );
+                    }),
+                  }),
+                ],
+              }),
+            _,
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -236,22 +367,22 @@
           [_, _, _] = (0, _._)(),
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(void 0),
+          _ = (0, _._)(),
           _ = (0, _.useCallback)(() => {
             _(null), _();
           }, [_]),
           _ = (0, _.useCallback)(
             (_) => {
-              if (_ && _ && _.BIsPartnerEvent()) {
-                const _ = _._.Get().GetTracker();
-                __webpack_require__.MarkEventRead(
-                  _.GID,
-                  _.clanSteamID.GetAccountID(),
-                  _,
-                ) && __webpack_require__.Flush();
-              }
-              _(_), _(void 0), _();
+              _ &&
+                _ &&
+                _.BIsPartnerEvent() &&
+                _.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
+                _.Flush(),
+                _(_),
+                _(void 0),
+                _();
             },
-            [_, _],
+            [_, _, _],
           ),
           { last_update_event: _, rgEvents: _ } = (function (_) {
             const {
@@ -263,6 +394,7 @@
               } = _,
               [_, _] = (0, _.useState)(null),
               [_, _] = (0, _.useState)(null),
+              _ = (0, _._)(),
               [_] = _("emgid", void 0),
               [_] = _("announce_gid", void 0);
             return (
@@ -299,20 +431,21 @@
                       2,
                       _,
                     );
-                    if ((_(_), _ && _ && _.length > 0)) {
-                      const _ = _._.Get().GetTracker();
-                      _.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
-                        _.MarkEventShown(
-                          _.GID,
-                          _.clanSteamID.GetAccountID(),
-                          _,
+                    _(_),
+                      _ &&
+                        _ &&
+                        _.length > 0 &&
+                        (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
+                          _.MarkEventShown(
+                            _.GID,
+                            _.clanSteamID.GetAccountID(),
+                            _,
+                          ),
                         ),
-                      ),
-                        _.Flush();
-                    }
+                        _.Flush());
                   })();
                 }
-              }, [_, _, _, _, _]),
+              }, [_, _, _, _, _, _]),
               (0, _.useEffect)(() => {
                 if (null != _ && (_ || _)) {
                   const _ = _.find(
@@ -339,10 +472,9 @@
             fnEventShowModal: _,
           }),
           _ = (0, _.useCallback)(() => {
-            const { event_gid: _, announcement_gid: _, clan_account_id: _ } = _,
-              _ = _._.Get().GetTracker();
+            const { event_gid: _, announcement_gid: _, clan_account_id: _ } = _;
             _ && _ && _.MarkEventRead(_, _, _) && _.Flush(), _(_), _(null), _();
-          }, [_, _, _]);
+          }, [_, _, _, _]);
         (0, _.useEffect)(
           () => (
             (window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
@@ -359,79 +491,44 @@
           _ =
             _ && !!_.announcement_gid && (!_ || 0 == _.length)
               ? _.announcement_gid
-              : void 0,
-          _ = window.screen.width <= 500 ? 1 : 2;
-        return (0, _.jsxs)(_._, {
-          className: _,
-          "flow-children": "row",
-          children: [
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_, {
-                ..._,
-                announcementGID: _ || (null == _ ? void 0 : _.AnnouncementGID),
-                eventModel: _,
-                closeModal: _,
-              }),
-            }),
-            !!_ &&
-              (0, _.jsxs)("div", {
-                children: [
-                  (0, _.jsx)("h2", {
-                    children: (0, _._)("#EventBrowse_RecentEvents"),
-                  }),
-                  !_._.IN_GAMEPADUI &&
-                    !!_ &&
-                    (0, _.jsx)("div", {
-                      className: _.SectionButtonCtn,
-                      children: _
-                        ? (0, _.jsx)(_._, {
-                            className: _.SectionButton,
-                            onClick: () => _(_[0]),
-                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                          })
-                        : (0, _.jsx)(_._, {
-                            eventModel: _[0],
-                            route: _._.k_eViewWebSiteHub,
-                            className: _.SectionButton,
-                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                          }),
-                    }),
-                  (0, _.jsx)("div", {
-                    className: _.EventsSummariesCtn,
-                    children: _.slice(0, _).map((_) => {
-                      const _ =
-                        1 === _.length && window.screen.width > 500 ? _._ : _._;
-                      return (0, _.jsx)(
-                        _,
-                        {
-                          event: _,
-                          onClick: (_) => {
-                            _(_), _.stopPropagation(), _.preventDefault();
-                          },
-                        },
-                        _.GID,
-                      );
-                    }),
-                  }),
-                ],
-              }),
-            _ &&
-              !!_ &&
-              (0, _.jsx)(_, {
+              : void 0;
+        let _;
+        return (
+          _ && _
+            ? (_ = (0, _.jsx)(_, {
                 nUpdateTime: _.rtime,
                 announcementGID: _,
                 onClick: _,
-              }),
-            _ &&
-              !_ &&
-              !_._.IN_GAMEPADUI &&
-              (0, _.jsx)(_, {
+              }))
+            : !_ ||
+              _ ||
+              _._.IN_GAMEPADUI ||
+              (_ = (0, _.jsx)(_, {
                 nUpdateTime: _.rtime,
                 onClick: _,
+              })),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  announcementGID:
+                    _ || (null == _ ? void 0 : _.AnnouncementGID),
+                  eventModel: _,
+                  closeModal: _,
+                }),
               }),
-          ],
-        });
+              (0, _.jsx)(_, {
+                elPostRowElement: _,
+                rgEvents: _,
+                fnEventShowModal: _,
+                bViewAllShowInfiniteScroll: _,
+                strClassName: _,
+              }),
+            ],
+          })
+        );
       }
       function _(_) {
         const {
@@ -457,84 +554,25 @@
             });
       }
       function _(_) {
-        return (0, _.jsxs)("div", {
-          className: _.LatestUpdateButtonCtn,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.LatestUpdateIcon,
-              children: (0, _.jsx)(_.UTF, {
-                role: "presentation",
-              }),
-            }),
-            (0, _.jsx)(_._, {
-              className: _.LatestUpdateButton,
-              onClick: _.onClick,
-              children: (0, _._)(
-                "#EventBrowse_LatestUpdateTime_Button",
-                (0, _._)(_.nUpdateTime),
-              ),
-            }),
-          ],
+        const { appid: _ } = _;
+        let _ = new Date(1e3 * _._.NOW),
+          _ = new Date(__webpack_require__.setUTCHours(0, 0, 0, 0) - 15552e6),
+          _ = Math.floor(_.getTime() / 1e3);
+        return (0, _.jsx)("div", {
+          className:
+            "detailBox altFooter greenlight_home_box section announcements_row",
+          children: (0, _.jsx)(_, {
+            appid: _,
+            partnerEventStore: _._,
+            event_customization: {
+              require_tags: ["workshop"],
+              rtime_oldestevent: _,
+            },
+            strClassName: _.Container,
+            trackingLocation: _._._,
+            bViewAllShowInfiniteScroll: !0,
+          }),
         });
-      }
-      function _(_) {
-        const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
-          _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
-          _ = window.screen.width > 500 ? _._ : _._;
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsx)("h2", {
-              children: (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
-            }),
-            (0, _.jsx)("div", {
-              className: _.SectionButtonCtn,
-              children: (0, _.jsx)("div", {
-                className: _.SectionButton,
-                onClick: (_) => {
-                  null == _ || _(), _.stopPropagation(), _.preventDefault();
-                },
-                children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
-              }),
-            }),
-            !!_ &&
-              (0, _.jsx)(_._, {
-                className: _.EventsSummariesCtn,
-                "flow-children": "column",
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
-                children: (0, _.jsx)(_, {
-                  event: _,
-                  onClick: (_) => {
-                    null == _ || _(), _.stopPropagation(), _.preventDefault();
-                  },
-                }),
-              }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        render() {
-          const { appid: _ } = this.props;
-          let _ = _._.GetTimeNowWithOverrideAsDate(),
-            _ = new Date(_.setUTCHours(0, 0, 0, 0) - 15552e6),
-            _ = Math.floor(__webpack_require__.getTime() / 1e3);
-          return (0, _.jsx)("div", {
-            className:
-              "detailBox altFooter greenlight_home_box section announcements_row",
-            children: (0, _.jsx)(_, {
-              appid: _,
-              partnerEventStore: _._,
-              event_customization: {
-                require_tags: ["workshop"],
-                rtime_oldestevent: _,
-              },
-              strClassName: _.Container,
-              trackingLocation: _._._,
-              bViewAllShowInfiniteScroll: !0,
-            }),
-          });
-        }
       }
       function _(_) {
         const [_, _] = _.useState(!0);

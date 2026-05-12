@@ -29,13 +29,13 @@
         o = n(22837),
         a = n(62490),
         u = n(6419),
-        l = n(78327),
-        c = n(91986);
+        c = n(78327),
+        l = n(91986);
       class d {
-        m_eCurLang = (0, o.sf)(l.TS.LANGUAGE);
-        m_rgHasData = (0, a.$Y)([], 31, !1);
+        m_eCurLang = (0, o.sfN)(c.TS.LANGUAGE);
+        m_rgHasData = (0, a.$Y)([], o.bP9, !1);
         m_bHasLocalizationContext = !1;
-        m_callback = new c.l();
+        m_callback = new l.l();
         GetCallback() {
           return this.m_callback;
         }
@@ -68,7 +68,7 @@
           return (
             d.s_globalSingletonStore ||
               ((d.s_globalSingletonStore = new d()),
-              "dev" == l.TS.WEB_UNIVERSE &&
+              "dev" == c.TS.WEB_UNIVERSE &&
                 (window.DUS = d.s_globalSingletonStore)),
             d.s_globalSingletonStore
           );
@@ -90,196 +90,205 @@
     },
     55263: (e, t, n) => {
       n.d(t, {
-        G6: () => u,
-        Gg: () => d,
-        MS: () => m,
-        Ow: () => c,
-        gF: () => p,
-        t7: () => l,
-        zX: () => g,
+        G6: () => g,
+        Gg: () => f,
+        MS: () => b,
+        Ow: () => p,
+        Sq: () => l,
+        eR: () => d,
+        gF: () => w,
+        ik: () => _,
+        t7: () => m,
+        zX: () => v,
       });
       var i = n(41735),
         r = n.n(i),
         s = n(90626),
-        o = n(73745),
-        a = n(16021);
-      function u(e, t, n, i) {
-        const u = (0, s.useRef)(void 0),
-          l = (0, s.useRef)(void 0),
-          c = (0, o.CH)();
-        u.current = e;
-        const [d, _] = (0, s.useState)(void 0),
+        o = n(37085),
+        a = n(96171),
+        u = n(73745),
+        c = n(16021);
+      const l = 1,
+        d = 2,
+        _ = 3;
+      function g(e, t, n, i) {
+        const a = (0, s.useRef)(void 0),
+          g = (0, s.useRef)(void 0),
+          m = (0, u.CH)();
+        a.current = e;
+        const [p, f] = (0, s.useState)(void 0),
           {
-            include_assets: g,
-            include_release: m,
-            include_platforms: p,
-            include_all_purchase_options: f,
-            include_screenshots: h,
-            include_trailers: v,
-            include_ratings: w,
-            include_tag_count: C,
-            include_reviews: S,
-            include_basic_info: b,
-            include_supported_languages: L,
-            include_full_description: G,
-            include_included_items: H,
-            include_assets_without_overrides: I,
-            apply_user_filters: k,
-            include_links: y,
+            include_assets: h,
+            include_release: v,
+            include_platforms: b,
+            include_all_purchase_options: w,
+            include_screenshots: C,
+            include_trailers: S,
+            include_ratings: L,
+            include_tag_count: G,
+            include_reviews: H,
+            include_basic_info: I,
+            include_supported_languages: k,
+            include_full_description: y,
+            include_included_items: x,
+            include_assets_without_overrides: E,
+            apply_user_filters: W,
+            include_links: A,
           } = n;
         if (
           ((0, s.useEffect)(() => {
             const n = {
-              include_assets: g,
-              include_release: m,
-              include_platforms: p,
-              include_all_purchase_options: f,
-              include_screenshots: h,
-              include_trailers: v,
-              include_ratings: w,
-              include_tag_count: C,
-              include_reviews: S,
-              include_basic_info: b,
-              include_supported_languages: L,
-              include_full_description: G,
-              include_included_items: H,
-              include_assets_without_overrides: I,
-              apply_user_filters: k,
-              include_links: y,
+              include_assets: h,
+              include_release: v,
+              include_platforms: b,
+              include_all_purchase_options: w,
+              include_screenshots: C,
+              include_trailers: S,
+              include_ratings: L,
+              include_tag_count: G,
+              include_reviews: H,
+              include_basic_info: I,
+              include_supported_languages: k,
+              include_full_description: y,
+              include_included_items: x,
+              include_assets_without_overrides: E,
+              apply_user_filters: W,
+              include_links: A,
             };
             let s = null;
             return (
               !e ||
                 e < 0 ||
-                a.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== d && i && i == l.current) ||
-                (i !== l.current && (_(void 0), (l.current = i)),
+                c.A.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== p && i && i == g.current) ||
+                (i !== g.current && (f(void 0), (g.current = i)),
                 (s = r().CancelToken.source()),
-                a.A.Get()
+                c.A.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    s?.token.reason || u.current !== e || _(1 == t), c();
+                    s?.token.reason || a.current !== e || f(t == o.R), m();
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, d, g, m, p, f, h, v, w, C, S, b, L, G, H, I, k, y, c]),
+          }, [e, t, i, p, h, v, b, w, C, S, L, G, H, I, k, y, x, E, W, A, m]),
           !e)
         )
-          return [null, 2];
-        if (!1 === d) return [void 0, 2];
-        if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!a.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const E = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return E ? [E, 3] : [null, 2];
+          return [null, d];
+        if (!1 === p) return [void 0, d];
+        if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, d];
+        if (!c.A.Get().BHasStoreItem(e, t, n)) return [void 0, l];
+        const R = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return R ? [R, _] : [null, d];
       }
-      function l(e, t, n) {
-        return u(e, 0, t, n);
+      function m(e, t, n) {
+        return g(e, a.c6.qI, t, n);
       }
-      function c(e, t, n) {
-        return u(e, 2, t, n);
+      function p(e, t, n) {
+        return g(e, a.c6.xO, t, n);
       }
-      function d(e, t, n) {
-        return u(e, 1, t, n);
+      function f(e, t, n) {
+        return g(e, a.c6.RD, t, n);
       }
-      function _(e, t, n, i) {
-        const u = (0, o.CH)(),
+      function h(e, t, n, i) {
+        const o = (0, u.CH)(),
           {
-            include_assets: l,
-            include_release: c,
-            include_platforms: d,
-            include_all_purchase_options: _,
-            include_screenshots: g,
-            include_trailers: m,
-            include_ratings: p,
-            include_tag_count: f,
-            include_reviews: h,
-            include_basic_info: v,
-            include_supported_languages: w,
-            include_full_description: C,
-            include_included_items: S,
-            include_assets_without_overrides: b,
-            apply_user_filters: L,
-            include_links: G,
+            include_assets: a,
+            include_release: g,
+            include_platforms: m,
+            include_all_purchase_options: p,
+            include_screenshots: f,
+            include_trailers: h,
+            include_ratings: v,
+            include_tag_count: b,
+            include_reviews: w,
+            include_basic_info: C,
+            include_supported_languages: S,
+            include_full_description: L,
+            include_included_items: G,
+            include_assets_without_overrides: H,
+            apply_user_filters: I,
+            include_links: k,
           } = n;
         if (
           ((0, s.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const n = {
-                include_assets: l,
-                include_release: c,
-                include_platforms: d,
-                include_all_purchase_options: _,
-                include_screenshots: g,
-                include_trailers: m,
-                include_ratings: p,
-                include_tag_count: f,
-                include_reviews: h,
-                include_basic_info: v,
-                include_supported_languages: w,
-                include_full_description: C,
-                include_included_items: S,
-                include_assets_without_overrides: b,
-                apply_user_filters: L,
-                include_links: G,
+                include_assets: a,
+                include_release: g,
+                include_platforms: m,
+                include_all_purchase_options: p,
+                include_screenshots: f,
+                include_trailers: h,
+                include_ratings: v,
+                include_tag_count: b,
+                include_reviews: w,
+                include_basic_info: C,
+                include_supported_languages: S,
+                include_full_description: L,
+                include_included_items: G,
+                include_assets_without_overrides: H,
+                apply_user_filters: I,
+                include_links: k,
               },
               i = e.filter(
                 (e) =>
                   !(
-                    a.A.Get().BHasStoreItem(e, t, n) ||
-                    a.A.Get().BIsStoreItemMissing(e, t)
+                    c.A.Get().BHasStoreItem(e, t, n) ||
+                    c.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
             if (0 == i.length) return;
             const s = r().CancelToken.source(),
-              o = i.map((e) => a.A.Get().QueueStoreItemRequest(e, t, n));
+              u = i.map((e) => c.A.Get().QueueStoreItemRequest(e, t, n));
             return (
-              Promise.all(o).then(() => {
-                s.token.reason || u();
+              Promise.all(u).then(() => {
+                s.token.reason || o();
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, u, l, c, d, _, g, m, p, f, h, v, w, C, S, b, L, G]),
+          }, [e, t, i, o, a, g, m, p, f, h, v, b, w, C, S, L, G, H, I, k]),
           !e)
         )
-          return 2;
+          return d;
         if (
           !e.every(
             (e) =>
-              a.A.Get().BHasStoreItem(e, t, n) ||
-              a.A.Get().BIsStoreItemMissing(e, t),
+              c.A.Get().BHasStoreItem(e, t, n) ||
+              c.A.Get().BIsStoreItemMissing(e, t),
           )
         )
-          return 1;
+          return l;
         return e.every((e) =>
-          a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
-          ? 3
-          : 2;
+          ? _
+          : d;
       }
-      function g(e, t, n) {
-        return _(e, 0, t, n);
+      function v(e, t, n) {
+        return h(e, a.c6.qI, t, n);
       }
-      function m(e, t, n) {
-        return _(e, 2, t, n);
+      function b(e, t, n) {
+        return h(e, a.c6.xO, t, n);
       }
-      function p(e, t, n) {
-        return _(e, 1, t, n);
+      function w(e, t, n) {
+        return h(e, a.c6.RD, t, n);
       }
     },
     82817: (e, t, n) => {
       n.d(t, {
-        EG: () => o,
-        II: () => g,
-        N1: () => m,
-        S2: () => d,
-        Uz: () => c,
+        EG: () => a,
+        II: () => m,
+        N1: () => p,
+        S2: () => _,
+        Uz: () => d,
         aL: () => l,
-        ab: () => r,
-        qR: () => s,
-        zB: () => _,
+        ab: () => s,
+        qR: () => o,
+        zB: () => g,
       });
-      var i = n(3577);
-      function r(e) {
+      var i = n(3577),
+        r = n(34214);
+      function s(e) {
         const t = e.toLowerCase();
         return t.endsWith(".jpg") || t.endsWith(".jpeg")
           ? "image/jpeg"
@@ -299,7 +308,7 @@
                         ? "image/webp"
                         : void 0;
       }
-      function s(e) {
+      function o(e) {
         switch (e) {
           case "image/jpeg":
             return ".jpg";
@@ -323,27 +332,27 @@
           ".jpg"
         );
       }
-      function o(e) {
+      function a(e) {
         switch (e) {
-          case 1:
+          case r.bg.iS:
             return ".jpg";
-          case 2:
+          case r.bg.CK:
             return ".gif";
-          case 3:
+          case r.bg.dU:
             return ".png";
-          case 5:
+          case r.bg.pJ:
             return ".webm";
-          case 4:
+          case r.bg.nn:
             return ".mp4";
-          case 7:
+          case r.bg.pi:
             return ".srt";
-          case 6:
+          case r.bg.k7:
             return ".vtt";
-          case 10:
+          case r.bg.wD:
             return ".webp";
         }
       }
-      function a(e) {
+      function u(e) {
         const t = (0, i.x0)(),
           n = new Image();
         return (
@@ -356,7 +365,7 @@
           t.promise
         );
       }
-      function u(e) {
+      function c(e) {
         const t = (0, i.x0)(),
           n = document.createElement("video");
         return (
@@ -373,14 +382,14 @@
       function l(e) {
         return e.startsWith("image/");
       }
-      function c(e) {
+      function d(e) {
         return e.startsWith("video/");
       }
-      function d(e, t) {
-        return t ? u(e) : a(e);
+      function _(e, t) {
+        return t ? c(e) : u(e);
       }
-      async function _(e, t) {
-        if (t) return u(URL.createObjectURL(e));
+      async function g(e, t) {
+        if (t) return c(URL.createObjectURL(e));
         {
           const t = (0, i.x0)(),
             n = new FileReader();
@@ -395,17 +404,17 @@
             n.readAsDataURL(e);
           const r = await t.promise;
           if (!r) return;
-          return a(r.toString());
+          return u(r.toString());
         }
       }
-      function g(e) {
+      function m(e) {
         return e
           ? e instanceof HTMLVideoElement
             ? { width: e.videoWidth, height: e.videoHeight }
             : { width: e.width, height: e.height }
           : { width: 0, height: 0 };
       }
-      function m(e, t) {
+      function p(e, t) {
         if (!t) return e;
         const n = new Set([
           "content-length",

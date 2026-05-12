@@ -54,6 +54,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const { bundleid: _ } = _.match.params,
@@ -64,7 +65,7 @@
           if (isNaN(_)) return _;
           const [_] = _._.Get().GetRewardDefinitions(_);
           return _
-            ? 5 !== _.type && 6 !== _.type
+            ? _.type !== _._._ && _.type !== _._._
               ? _
               : (0, _.jsx)(_, {
                   bundle: _,

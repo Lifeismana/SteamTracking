@@ -77,13 +77,6 @@
         DeleteInfo: "_3EhGHfB3z9uPkO3ZTnwUVm",
       };
     },
-    64734: (e) => {
-      e.exports = {
-        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
-        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
-        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
-      };
-    },
     28579: (e, s, t) => {
       "use strict";
       t.d(s, { xh: () => z, AC: () => ne, u6: () => ie });
@@ -154,8 +147,8 @@
         _ = t.n(Q),
         p = t(4434),
         S = t(68797);
-      const g = 0,
-        C = 1,
+      const C = 0,
+        g = 1,
         w = 2,
         N = 3;
       class x {
@@ -413,7 +406,7 @@
                 : "/ajaxgetqandasession/",
             Q = m.TS.COMMUNITY_BASE_URL + "questions/" + m.UF.VANITY_ID + v + e,
             p = {};
-          let g = null;
+          let C = null;
           try {
             const s = await _().get(Q, {
               params: p,
@@ -471,18 +464,18 @@
                 i.R
               );
             }
-            g = { response: s };
+            C = { response: s };
           } catch (e) {
-            g = e;
+            C = e;
           }
-          const C = (0, S.H)(g);
+          const g = (0, S.H)(C);
           return (
-            console.error("Could not load Q&A", e, C.strErrorMsg, C),
+            console.error("Could not load Q&A", e, g.strErrorMsg, g),
             null !==
               (h =
                 null ===
                   (A =
-                    null === (c = null == g ? void 0 : g.response) ||
+                    null === (c = null == C ? void 0 : C.response) ||
                     void 0 === c
                       ? void 0
                       : c.data) || void 0 === A
@@ -498,7 +491,7 @@
           for (const s of e) {
             const e = this.m_mapQuestions.get(s);
             e.posterAccountID == m.iA.accountid &&
-              e.eState == C &&
+              e.eState == g &&
               t.add(e.gidQuestion);
           }
           if (this.m_rgPendingQuestionGIDs.length > 0) {
@@ -507,7 +500,7 @@
               n.has(e) &&
                 (null === (s = this.m_mapQuestions.get(e)) || void 0 === s
                   ? void 0
-                  : s.eState) == C &&
+                  : s.eState) == g &&
                 t.add(e);
           }
           this.m_rgPendingQuestionGIDs = Array.from(t);
@@ -576,7 +569,7 @@
               : o.bUserCanModerate)
           )
             return i.sW;
-          if (t != C && t != N) return i.nO;
+          if (t != g && t != N) return i.nO;
           if (this.m_mapQuestions.get(s).eState == t) return i.R;
           const u =
               m.TS.COMMUNITY_BASE_URL +
@@ -587,7 +580,7 @@
             c = new FormData();
           c.append("sessionid", m.TS.SESSIONID),
             c.append("gidquestion", s),
-            c.append("action", t == C ? "show" : "hide");
+            c.append("action", t == g ? "show" : "hide");
           let A = null;
           try {
             const s = await _().post(u, c, {
@@ -792,13 +785,13 @@
                 : []) {
                 const e = x.Get().GetQuestion(t);
                 switch (null == e ? void 0 : e.eState) {
-                  case C:
+                  case g:
                     l.push(t);
                     break;
                   case w:
                     d.push(t);
                     break;
-                  case g:
+                  case C:
                     u.push(t);
                     break;
                   case N:
@@ -853,7 +846,7 @@
         );
       }
       let I = null;
-      function T(e) {
+      function f(e) {
         const s = (0, p.m)("useReloadFunction"),
           [t, n] = o.useState(!1),
           i = o.useCallback(() => {
@@ -891,7 +884,7 @@
           o.useMemo(() => ({ fnReload: i, bIsReloading: t }), [i, t])
         );
       }
-      function j(e) {
+      function D(e) {
         const s = (0, p.m)("useQuestionModeratorActions"),
           t = o.useCallback(
             (t, n) => {
@@ -920,21 +913,21 @@
           [t, n],
         );
       }
-      var f = t(68255),
-        D = t(82477),
+      var T = t(68255),
+        j = t(82477),
         k = t(76684),
         G = t(9154),
-        M = t(738),
-        U = t(12155),
+        U = t(738),
+        M = t(12155),
         L = t(22797),
-        B = t(32754),
-        R = t(48479),
+        R = t(32754),
+        B = t(48479),
         q = t(52038),
         E = t(61859),
         V = t(41338),
-        H = t(14771),
-        P = t(76048),
-        y = t.n(P),
+        P = t(14771),
+        H = t(76048),
+        y = t.n(H),
         F = t(41471),
         O = t(6083);
       function z(e) {
@@ -980,7 +973,7 @@
       function Y(e) {
         const s = o.useCallback(
           () =>
-            (0, M.mK)((0, n.jsx)(K, {}), window, {
+            (0, U.mK)((0, n.jsx)(K, {}), window, {
               strTitle: (0, E.we)("#QAndA_CreateQAndA_Title"),
             }),
           [],
@@ -994,7 +987,7 @@
             }),
             (0, n.jsx)("div", {
               className: y().DashboardHeaderButtonCtn,
-              children: (0, n.jsx)(f.$n, {
+              children: (0, n.jsx)(T.$n, {
                 onClick: s,
                 children: (0, E.we)("#QAndA_CreateQAndA_Button"),
               }),
@@ -1017,7 +1010,7 @@
           bOKDisabled: 0 == t.length,
           closeModal: e.closeModal,
           className: y().CreateQAndADialog,
-          children: (0, n.jsx)(f.pd, {
+          children: (0, n.jsx)(T.pd, {
             type: "text",
             className: y().NameInput,
             value: t,
@@ -1040,7 +1033,7 @@
             (e) => {
               e.stopPropagation(),
                 e.preventDefault(),
-                (0, M.mK)((0, n.jsx)(Z, { qanda: s }), window, {
+                (0, U.mK)((0, n.jsx)(Z, { qanda: s }), window, {
                   strTitle: (0, E.we)("#QAndA_CreateQAndA_Title"),
                 });
             },
@@ -1064,7 +1057,7 @@
               children: (0, n.jsx)("div", {
                 className: y().DeleteButton,
                 onClick: i,
-                children: (0, n.jsx)(U.lMJ, {}),
+                children: (0, n.jsx)(M.lMJ, {}),
               }),
             }),
           ],
@@ -1088,7 +1081,7 @@
           u = (0, n.jsxs)("div", {
             className: y().NameInput,
             children: [
-              (0, n.jsx)(f.pd, {
+              (0, n.jsx)(T.pd, {
                 type: "text",
                 className: y().NameInput,
                 value: a,
@@ -1097,7 +1090,7 @@
                 onChange: (e) => r(e.currentTarget.value),
                 maxLength: W,
               }),
-              (0, n.jsx)(f.jn, {
+              (0, n.jsx)(T.jn, {
                 onClick: (e) => {
                   e.stopPropagation(),
                     e.preventDefault(),
@@ -1162,7 +1155,7 @@
           })(t);
         if (!d) return null;
         const m = l - d.rtPostTime,
-          A = m < H.Kp.PerDay ? (0, E.Hq)(m) : (0, E._l)(d.rtPostTime),
+          A = m < P.Kp.PerDay ? (0, E.Hq)(m) : (0, E._l)(d.rtPostTime),
           h = a ? () => r(t, !d.bUserUpVoted) : null,
           v = a
             ? d.bUserUpVoted
@@ -1172,8 +1165,8 @@
           Q = (0, q.A)(
             y().Question,
             d.eState == N && y().Hidden,
-            d.eState == C && y().Moderated,
-            d.eState == g && y().Unmoderated,
+            d.eState == g && y().Moderated,
+            d.eState == C && y().Unmoderated,
             d.eState == w && y().Answered,
           );
         return (0, n.jsxs)("div", {
@@ -1193,7 +1186,7 @@
                           className: y().QuestionTitle,
                           children: d.strQuestionText,
                         }),
-                        (0, n.jsx)(B.he, {
+                        (0, n.jsx)(R.he, {
                           toolTipContent:
                             a &&
                             (d.bUserUpVoted
@@ -1203,7 +1196,7 @@
                             className: (0, q.A)(v, y().Votes),
                             onClick: h,
                             children: [
-                              (0, n.jsx)(U.bfp, { className: y().RateIcon }),
+                              (0, n.jsx)(M.bfp, { className: y().RateIcon }),
                               (0, n.jsx)("div", {
                                 className: y().VoteCount,
                                 children: (0, O.D)(Number(d.nVoteCount)),
@@ -1244,7 +1237,7 @@
           o = s.rtAnswerTime && t - s.rtAnswerTime,
           i =
             s.rtAnswerTime &&
-            (o < H.Kp.PerDay ? (0, E.Hq)(o) : (0, E._l)(s.rtAnswerTime));
+            (o < P.Kp.PerDay ? (0, E.Hq)(o) : (0, E._l)(s.rtAnswerTime));
         return s.strAnswerText
           ? (0, n.jsxs)("div", {
               className: y().Answer,
@@ -1254,7 +1247,7 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: y().AnswerCheck,
-                      children: (0, n.jsx)(U.X4B, { color: "#67c1f5" }),
+                      children: (0, n.jsx)(M.X4B, { color: "#67c1f5" }),
                     }),
                     (0, E.we)("#QAndA_ModeratorAnswerTitle"),
                   ],
@@ -1279,7 +1272,7 @@
               children: [
                 (0, n.jsx)("div", {
                   className: y().AnswerCheck,
-                  children: (0, n.jsx)(U.X4B, { color: "#67c1f5" }),
+                  children: (0, n.jsx)(M.X4B, { color: "#67c1f5" }),
                 }),
                 (0, E.we)("#QAndA_AlreadyAnsweredTitle"),
               ],
@@ -1304,10 +1297,10 @@
       }
       function te(e) {
         const { gidSession: s, gidQuestion: t, eState: o } = e,
-          { fnAnswerQuestion: i, fnModerateQuestion: a } = j(s),
-          r = o == g || o == N,
+          { fnAnswerQuestion: i, fnModerateQuestion: a } = D(s),
+          r = o == C || o == N,
           l = o != N,
-          d = o == C;
+          d = o == g;
         return (0, n.jsxs)("div", {
           className: y().ModeratorSection,
           children: [
@@ -1323,29 +1316,29 @@
               className: y().ToolRow,
               children: [
                 (0, E.we)("#QAndA_ModeratorOtherOptionsLabel"),
-                (0, n.jsx)(B.he, {
+                (0, n.jsx)(R.he, {
                   toolTipContent: (0, E.we)(
                     "#QAndA_ModerateApproveButton_ttip",
                   ),
-                  children: (0, n.jsx)(f.$n, {
-                    onClick: () => a(t, C),
+                  children: (0, n.jsx)(T.$n, {
+                    onClick: () => a(t, g),
                     className: y().InputButton,
                     disabled: !r,
                     children: (0, E.we)("#QAndA_ModerateApproveButton"),
                   }),
                 }),
-                (0, n.jsx)(B.he, {
+                (0, n.jsx)(R.he, {
                   toolTipContent: (0, E.we)("#QAndA_ModerateHideButton_ttip"),
-                  children: (0, n.jsx)(f.$n, {
+                  children: (0, n.jsx)(T.$n, {
                     onClick: () => a(t, N),
                     className: y().InputButton,
                     disabled: !l,
                     children: (0, E.we)("#QAndA_ModerateHideButton"),
                   }),
                 }),
-                (0, n.jsx)(B.he, {
+                (0, n.jsx)(R.he, {
                   toolTipContent: (0, E.we)("#QAndA_QuickAnswerButton_ttip"),
-                  children: (0, n.jsx)(f.$n, {
+                  children: (0, n.jsx)(T.$n, {
                     onClick: () => i(t, ""),
                     className: y().InputButton,
                     disabled: !d,
@@ -1392,7 +1385,7 @@
           ? (0, n.jsxs)("div", {
               className: (0, q.A)(y().QAModeratorColumn, y().QASplitColumns),
               children: [
-                (0, n.jsx)(R.qx, {
+                (0, n.jsx)(B.qx, {
                   title: (0, E.we)("#QAndA_ModeratorViewHeader"),
                   className: y().ModeratorInstructions,
                   children: (0, n.jsx)("div", {
@@ -1412,7 +1405,7 @@
                     ),
                   }),
                 }),
-                (0, n.jsx)(R.qx, {
+                (0, n.jsx)(B.qx, {
                   title: (0, E.we)("#QAndA_HiddenQuestionsHeader"),
                   className: y().AnsweredSectionHeader,
                   bStartMinimized: !0,
@@ -1450,17 +1443,17 @@
             rgAnsweredQuestionGIDs: c,
             rgNewQuestionGIDs: m,
           } = b(s),
-          { fnReload: A, bIsReloading: h } = T(s),
+          { fnReload: A, bIsReloading: h } = f(s),
           Q = (0, r.P_)(10),
           _ = a && t,
-          { fnModerateQuestion: p } = j(s);
+          { fnModerateQuestion: p } = D(s);
         return (0, n.jsxs)("div", {
           className: (0, q.A)(y().QAMainCtn, t && y().QASplitColumns),
           children: [
             (0, n.jsxs)("div", {
               className: (0, q.A)(y().QAHeader, _ && y().ModerationHeader),
               children: [
-                (0, n.jsx)(f.$n, {
+                (0, n.jsx)(T.$n, {
                   onClick: A,
                   disabled: !o,
                   className: (0, q.A)(
@@ -1470,18 +1463,18 @@
                   ),
                   children: (0, n.jsx)("div", {
                     className: y().ReloadIcon,
-                    children: (0, n.jsx)(U.MvQ, {}),
+                    children: (0, n.jsx)(M.MvQ, {}),
                   }),
                 }),
                 _
                   ? (0, n.jsxs)(n.Fragment, {
                       children: [
                         (0, E.we)("#QAndA_ModeratorLabelHeader"),
-                        (0, n.jsx)(B.he, {
+                        (0, n.jsx)(R.he, {
                           toolTipContent: (0, E.we)(
                             "#QAndA_ModerateHideAllButton_ttip",
                           ),
-                          children: (0, n.jsx)(f.$n, {
+                          children: (0, n.jsx)(T.$n, {
                             onClick: async () => {
                               for (const e of [m, u, c])
                                 for (const s of e) await p(s, N);
@@ -1602,7 +1595,7 @@
           children: (0, n.jsxs)("div", {
             className: y().InputCtn,
             children: [
-              (0, n.jsx)(f.pd, {
+              (0, n.jsx)(T.pd, {
                 type: "text",
                 placeholder: s,
                 maxLength: 512,
@@ -1620,7 +1613,7 @@
                         position: "center",
                       }),
                     }),
-                  (0, n.jsx)(f.$n, {
+                  (0, n.jsx)(T.$n, {
                     onClick: async () => {
                       d(!0);
                       (await t(a)) == i.R && r(""), d(!1);
@@ -1644,88 +1637,12 @@
               children: (0, E.we)("#QAndA_LogInPrompt"),
             }),
             !m.iA.logged_in &&
-              (0, n.jsx)(f.$n, {
-                onClick: D.vg,
+              (0, n.jsx)(T.$n, {
+                onClick: j.vg,
                 className: (0, q.A)(y().SignInButton, y().InputButton),
                 children: (0, E.we)("#Login_SignIn"),
               }),
           ],
-        });
-      }
-    },
-    48479: (e, s, t) => {
-      "use strict";
-      t.d(s, { AQ: () => h, pn: () => Q, qx: () => v });
-      var n = t(7850),
-        o = t(68255),
-        i = t(61859),
-        a = t(12155),
-        r = t(90626),
-        l = t(52038),
-        d = t(95695),
-        u = t(84811),
-        c = t(64734),
-        m = t(65946),
-        A = t(26408);
-      function h(e) {
-        const {
-            title: s,
-            tooltip: t,
-            getMinimized: o,
-            toggleMinimized: i,
-            className: a,
-            children: r,
-            elAdditionalButtons: h,
-          } = e,
-          v = (0, m.q3)(() => o());
-        return (0, n.jsxs)(n.Fragment, {
-          children: [
-            (0, n.jsxs)("div", {
-              className: (0, l.A)(
-                a,
-                c.SectionTitleHeader,
-                c.required_title,
-                "SectionTitleHeader",
-              ),
-              children: [
-                (0, n.jsxs)("div", {
-                  className: (0, l.A)(
-                    d.CollapsableSectionTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: [s, Boolean(t) && (0, n.jsx)(A.o, { tooltip: t })],
-                }),
-                (0, n.jsxs)("div", {
-                  className: c.SectionTitleButtons,
-                  children: [
-                    h,
-                    (0, n.jsx)(Q, { bIsMinimized: v, fnToggleMinimize: i }),
-                  ],
-                }),
-              ],
-            }),
-            !v && (0, n.jsx)(u.tH, { children: r }),
-          ],
-        });
-      }
-      function v(e) {
-        const [s, t] = r.useState(Boolean(e.bStartMinimized));
-        return (0, n.jsx)(h, {
-          ...e,
-          getMinimized: () => s,
-          toggleMinimized: () => t(!s),
-          children: e.children,
-        });
-      }
-      function Q(e) {
-        const { bIsMinimized: s, fnToggleMinimize: t } = e,
-          r = s ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return (0, n.jsx)(o.$n, {
-          "data-tooltip-text": (0, i.we)(r),
-          onClick: t,
-          children: e.bIsMinimized
-            ? (0, n.jsx)(a.hz4, {})
-            : (0, n.jsx)(a.Xjb, {}),
         });
       }
     },

@@ -158,56 +158,57 @@
     },
     58813: (t, e, n) => {
       "use strict";
-      n.r(e), n.d(e, { default: () => _ });
+      n.r(e), n.d(e, { default: () => m });
       var o = n(7850),
         i = n(90626),
         r = n(47184),
         s = n(8527),
         a = n(16676),
-        l = n(38917),
-        c = n(87700),
-        u = n(95695),
-        d = n.n(u);
-      function _(t) {
+        l = n(62113),
+        c = n(38917),
+        u = n(87700),
+        d = n(95695),
+        _ = n.n(d);
+      function m(t) {
         const { bHideTour: e, fnConversionMethodSelected: n } = t,
           {
-            eConversionMethod: u,
-            setConversionMethod: _,
-            rgAvailableConversionMethods: m,
-          } = (0, c.MA)(),
-          h = (0, i.useMemo)(() => {
+            eConversionMethod: d,
+            setConversionMethod: m,
+            rgAvailableConversionMethods: h,
+          } = (0, u.MA)(),
+          p = (0, i.useMemo)(() => {
             const t = new Array();
             return (
-              m.findIndex((t) => 1 == t) >= 0 &&
+              h.findIndex((t) => t == l.Y5.lZ) >= 0 &&
                 t.push({
                   label: r.g.Localize("#ConversionMethod_Nuanced"),
-                  data: 1,
+                  data: l.Y5.lZ,
                 }),
-              m.findIndex((t) => 2 == t) >= 0 &&
+              h.findIndex((t) => t == l.Y5.KC) >= 0 &&
                 t.push({
                   label: r.g.Localize("#ConversionMethod_PPP"),
-                  data: 2,
+                  data: l.Y5.KC,
                 }),
-              m.findIndex((t) => 3 == t) >= 0 &&
+              h.findIndex((t) => t == l.Y5.bA) >= 0 &&
                 t.push({
                   label: r.g.Localize("#ConversionMethod_FX"),
-                  data: 3,
+                  data: l.Y5.bA,
                 }),
               t
             );
-          }, [m]);
-        return h.length <= 1
+          }, [h]);
+        return p.length <= 1
           ? s.iA.is_support
             ? (0, o.jsxs)("div", {
-                className: d().ValveOnlyBackground,
+                className: _().ValveOnlyBackground,
                 children: [
                   "Hiding Converison Method Widget; only have ",
-                  h.length,
+                  p.length,
                   " method in guideline.",
                 ],
               })
             : null
-          : (0, o.jsx)(l.fX, {
+          : (0, o.jsx)(c.fX, {
               name: "conversion_method",
               stops: [
                 {
@@ -260,17 +261,17 @@
                       }),
                     ),
                   }),
-                  (0, o.jsx)(l.dD, {
+                  (0, o.jsx)(c.dD, {
                     tour: "conversion_method",
                     name: "convert_dropdown",
                     options: { position: "below", offset: 18 },
                     children: (0, o.jsx)("div", {
                       children: (0, o.jsx)(a.ZU, {
-                        rgOptions: h,
+                        rgOptions: p,
                         contextMenuPositionOptions: { bMatchWidth: !1 },
-                        selectedOption: u,
+                        selectedOption: d,
                         onChange: (t) => {
-                          _(t.data), n && n(t.data);
+                          m(t.data), n && n(t.data);
                         },
                       }),
                     }),
@@ -340,10 +341,10 @@
             this.m_strActiveTour === t && (this.m_strActiveTour = ""));
         }
         MarkTourSeen(t) {
-          return g(this.m_storage, t, Date.now());
+          return C(this.m_storage, t, Date.now());
         }
         MarkTourUnseen(t) {
-          return g(this.m_storage, t, void 0);
+          return C(this.m_storage, t, void 0);
         }
       }
       (0, o.Cg)([m.sH], v.prototype, "m_tours", void 0),
@@ -357,18 +358,18 @@
         const e = await t.GetObject(x);
         return e && "object" == typeof e ? e : {};
       }
-      async function g(t, e, n) {
+      async function C(t, e, n) {
         const o = await f(t);
         return t.StoreObject(x, { ...o, [e]: n });
       }
-      const C = new v();
+      const g = new v();
       function b() {
         const t = (0, _.rX)();
         return (
           (0, r.useEffect)(() => {
-            C.Init(t);
+            g.Init(t);
           }, [t]),
-          C
+          g
         );
       }
       function S(t) {
@@ -400,10 +401,10 @@
         const { id: p, title: v, content: x } = o[m],
           f = _[p];
         if (!f || !f.elem) return null;
-        let g = x;
+        let C = x;
         return (
           Array.isArray(x) &&
-            (g = x.map((t, e) => (0, i.jsx)("div", { children: t }, e))),
+            (C = x.map((t, e) => (0, i.jsx)("div", { children: t }, e))),
           (0, i.jsx)(w, {
             ...f,
             children: (0, i.jsxs)(E, {
@@ -411,7 +412,7 @@
               title: v,
               onRequestClose: d,
               children: [
-                g,
+                C,
                 (0, i.jsxs)("div", {
                   className: s.Action,
                   children: [

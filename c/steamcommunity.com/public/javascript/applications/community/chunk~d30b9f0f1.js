@@ -694,11 +694,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Main: "_1Zn_5pvuMbqr57ws1eJKe",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ModeratorAuditActionCtn: "f6z__AuHw6SOG9zsY2oKr",
         ExpandModActions: "_3nNMeqxuySIiNcmt7YEXb7",
       };
@@ -953,13 +948,6 @@
         "ItemFocusAnim-green": "guH2fAOEkfwuIvOhn0oHl",
         focusAnimation: "_2XCqyPQ8Leg6L1dwSjpULK",
         hoverAnimation: "zU1NJEk7QqOdsECL2PI2d",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
-        SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
-        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -36248,46 +36236,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _._ {
-        async DeleteOldAnnouncement(_, _) {
-          let _ = new URLSearchParams();
-          __webpack_require__.append("sessionid", _._.SESSIONID);
-          let _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              _.ConvertTo64BitString() +
-              "/announcements/ajaxdeleteannouncement/" +
-              _,
-            _ = await _().post(_, _);
-          if (_.data.success != _._) throw _.data;
-          return this.RemoveGIDFromList(_, _._ + _), _.data;
-        }
-        static Get() {
-          return (
-            _.sm_Instance || ((_.sm_Instance = new _()), _.sm_Instance.Init()),
-            _.sm_Instance
-          );
-        }
-        static GetSummaryStore() {
-          return (
-            _.sm_SummaryInstance ||
-              ((_.sm_SummaryInstance = new _(!0)), _.sm_SummaryInstance.Init()),
-            _.sm_SummaryInstance
-          );
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -37227,86 +37175,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { event: _, closeModal: _ } = _;
-        return (0, _.jsx)(_._, {
-          initialEvent: _,
-          bShowOnlyInitialEvent: !0,
-          partnerEventStore: _._,
-          emoticonStore: _._,
-          showAppHeader: !0,
-          closeModal: _,
-        });
-      }
-      function _(_, _) {
-        (0, _._)(
-          (0, _.jsx)(_, {
-            event: _,
-          }),
-          _,
-        );
-      }
-      let _ = class extends _.Component {
-        constructor() {
-          super(...arguments), (this.m_refFocus = _.createRef());
-        }
-        componentDidMount() {
-          this.props.fnClose &&
-            (document.addEventListener("keydown", this.escFunction, !1),
-            this.m_refFocus.current && this.m_refFocus.current.focus());
-        }
-        componentWillUnmount() {
-          this.props.fnClose &&
-            document.removeEventListener("keydown", this.escFunction, !1);
-        }
-        escFunction(_) {
-          const { fnClose: _ } = this.props;
-          27 === _.keyCode && _ && _();
-        }
-        OnBackgroundClick(_) {
-          _.currentTarget == _.target && this.props.fnClose();
-        }
-        render() {
-          const { event: _, langOverride: _, isPreview: _ } = this.props;
-          return (0, _.jsx)("div", {
-            ref: this.m_refFocus,
-            className: _.Main,
-            onClick: this.OnBackgroundClick,
-            children: (0, _.jsx)(
-              _._,
-              {
-                event: _,
-                emoticonStore: _._,
-                partnerEventStore: _._.Get(),
-                langOverride: _,
-                isPreview: _,
-                bDisableBroadcastPlayer: !1,
-              },
-              _.GID,
-            ),
-          });
-        }
-      };
-      (0, _._)([_._], _.prototype, "escFunction", null),
-        (0, _._)([_._], _.prototype, "OnBackgroundClick", null),
-        (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -37529,71 +37397,6 @@
             })
           : null;
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor() {
-          (this.m_bHasBeenTracked = !1), (this.m_fnSubmit = null);
-        }
-      }
-      const _ = new (class {
-          constructor() {
-            (this.m_nImpressionDelayMS = 500), (this.m_mapEvents = new Map());
-          }
-          ShouldTrack(_) {
-            if (_.bOldAnnouncement) return !1;
-            const _ = this.m_mapEvents.get(_.GID);
-            return !_ || !_.m_bHasBeenTracked;
-          }
-          StartTracking(_, _) {
-            if (_.bOldAnnouncement) return;
-            let _ = this.m_mapEvents.get(_.GID);
-            _ || ((_ = new _()), this.m_mapEvents.set(_.GID, _)),
-              _.m_bHasBeenTracked ||
-                _.m_fnSubmit ||
-                ((_.m_fnSubmit = new _._()),
-                _.m_fnSubmit.Schedule(
-                  this.m_nImpressionDelayMS,
-                  this.ReportImpression.bind(this, _, _),
-                ));
-          }
-          StopTracking(_) {
-            const _ = this.m_mapEvents.get(_.GID);
-            _ && _.m_fnSubmit && (_.m_fnSubmit.Cancel(), (_.m_fnSubmit = null));
-          }
-          ReportImpression(_, _) {
-            _._.Get().RecordEventShown(_, _._._),
-              _ && _._.RecordViewedEvent((0, _._)(), _.GID);
-            const _ = this.m_mapEvents.get(_.GID);
-            _ &&
-              ((_.m_bHasBeenTracked = !0),
-              _.m_fnSubmit.Cancel(),
-              (_.m_fnSubmit = null));
-          }
-        })(),
-        _ = (_) => {
-          const { event: _ } = _;
-          if (_.ShouldTrack(_)) {
-            const _ = () => _.StartTracking(_, _.recordNewsHubStats || !1),
-              _ = () => _.StopTracking(_);
-            return (0, _.jsx)(_._, {
-              onEnter: _,
-              onLeave: _,
-            });
-          }
-          return null;
-        };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -38015,6 +37818,179 @@
               ],
             }));
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const {
+            clanAccountID: _,
+            gidAnnouncement: _,
+            partnerEventStore: _,
+            trackingLocation: _,
+            bViewAllShowInfiniteScroll: _,
+          } = _,
+          _ = _._.InitFromClanID(_),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)(!0),
+          [_, _] = (0, _.useState)(!1);
+        if (
+          ((0, _.useEffect)(
+            () => (
+              (async () => {
+                _.current && _.current("PartnerEventRow Initializng new mount");
+                const _ = _().CancelToken.source();
+                _.current = _.cancel;
+                const _ = _._.InitFromClanID(_);
+                await _._.LoadClanInfoForClanSteamID(_);
+                let _ = await _.LoadAdjacentPartnerEventsByAnnouncement(
+                  _,
+                  _,
+                  null,
+                  4,
+                  4,
+                  {
+                    only_summaries: !0,
+                  },
+                  _,
+                );
+                if (!_.token.reason) {
+                  _ = _ || [];
+                  let _ = _.filter((_) => _.GetAnnouncementGID() != _).map(
+                    (_) => _.AnnouncementGID,
+                  );
+                  _._(_);
+                  const _ = _.slice(0, 3)
+                    .map((_) => _.GetClanEventFromAnnouncementGID(_))
+                    .filter((_) => !!_);
+                  if ((_(_), _(!1), _)) {
+                    let _ = _._.Get().GetTracker(),
+                      _ = !1;
+                    if (_.BHasClanAnnouncementGID(_)) {
+                      let _ = _.GetClanEventFromAnnouncementGID(_);
+                      _ &&
+                        _.BIsPartnerEvent() &&
+                        _.BIsVisibleEvent() &&
+                        (_.MarkEventRead(
+                          _.GID,
+                          _.clanSteamID.GetAccountID(),
+                          _,
+                        ),
+                        (_ = !0));
+                    }
+                    _.length > 0 &&
+                      (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
+                        _.MarkEventShown(
+                          _.GID,
+                          _.clanSteamID.GetAccountID(),
+                          _,
+                        ),
+                      ),
+                      (_ = !0)),
+                      _ && _.Flush();
+                  }
+                }
+              })(),
+              () => {
+                _.current && _.current("PartnerEventRow: unmounting");
+              }
+            ),
+            [_, _, _, _],
+          ),
+          _)
+        )
+          return (0, _.jsx)(_._, {
+            position: "center",
+            size: "medium",
+          });
+        if (0 == _.length) return (0, _.jsx)("div", {});
+        const _ = _._.GetClanInfoByClanAccountID(_);
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().OtherEventsCtn, "OtherEventsCtn"),
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().EventSectionTitleCtn,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().EventSectionTitle,
+                      "EventSectionTitle",
+                    ),
+                    children: [
+                      (0, _._)("#EventBrowse_MoreEventsTitle", _.group_name),
+                      " ",
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().EventSectionSpacer,
+                    children: " ",
+                  }),
+                  _
+                    ? (0, _.jsx)("div", {
+                        className: _().EventSectionMoreBtn,
+                        onClick: () => _(!0),
+                        children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                      })
+                    : (0, _.jsx)(_._, {
+                        eventModel: _[0],
+                        route: _._.k_eViewWebSiteHub,
+                        className: _().EventSectionMoreBtn,
+                        children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                      }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                className: _().OtherEvents,
+                "flow-children": "column",
+                navEntryPreferPosition: _._.PREFERRED_CHILD,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      event: _,
+                    },
+                    _.AnnouncementGID,
+                  ),
+                ),
+              }),
+              Boolean(_) &&
+                (0, _.jsx)(_._, {
+                  appid: _[0].appid,
+                  clanSteamID: _,
+                  announcementGID: _[0].AnnouncementGID,
+                  closeModal: () => _(!1),
+                  partnerEventStore: _,
+                }),
+            ],
+          }),
+        });
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -42683,98 +42659,6 @@
           }, [_, _]),
           _ && !_
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            title: _,
-            tooltip: _,
-            getMinimized: _,
-            toggleMinimized: _,
-            className: _,
-            children: _,
-            elAdditionalButtons: _,
-          } = _,
-          _ = (0, _._)(() => _());
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _,
-                _.SectionTitleHeader,
-                _.required_title,
-                "SectionTitleHeader",
-              ),
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(
-                    _.CollapsableSectionTitle,
-                    "EventEditorTextTitle",
-                  ),
-                  children: [
-                    _,
-                    Boolean(_) &&
-                      (0, _.jsx)(_._, {
-                        tooltip: _,
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.SectionTitleButtons,
-                  children: [
-                    _,
-                    (0, _.jsx)(_, {
-                      bIsMinimized: _,
-                      fnToggleMinimize: _,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            !_ &&
-              (0, _.jsx)(_._, {
-                children: _,
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const [_, _] = _.useState(Boolean(_.bStartMinimized));
-        return (0, _.jsx)(_, {
-          ..._,
-          getMinimized: () => _,
-          toggleMinimized: () => __webpack_require__(!_),
-          children: _.children,
-        });
-      }
-      function _(_) {
-        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
-          _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return (0, _.jsx)(_._, {
-          "data-tooltip-text": (0, _._)(_),
-          onClick: _,
-          children: _.bIsMinimized
-            ? (0, _.jsx)(_.hz4, {})
-            : (0, _.jsx)(_.Xjb, {}),
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -182,6 +182,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -211,7 +212,7 @@
           !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
         )
           return null;
-        const _ = Boolean(_ && 0 == _?.item_type),
+        const _ = Boolean(_ && _?.item_type == _._._),
           _ = Boolean(!_ && !_ && !_ && _ && _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -316,6 +317,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -451,7 +453,7 @@
                   (0, _.jsx)("div", {
                     className: _().ParentType,
                     children: (0, _._)(
-                      11 == _
+                      _ == _._._
                         ? "#SalePage_ParentApp_SoundTrack"
                         : "#SalePage_ParentApp_DLC",
                     ),
@@ -593,7 +595,7 @@
           { data: _ } = (0, _._)(_),
           { bIsOwned: _ } = (0, _._)(_),
           _ = _ && !_;
-        if (_ && _ && 0 == _.item_type && _.appid)
+        if (_ && _ && _.item_type == _._._ && _.appid)
           return (0, _.jsx)(_._, {
             appid: _.appid,
             bIsMuted: _,
@@ -621,6 +623,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -710,7 +713,8 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
-          ? (1 != _.type && 12 != _.type) || !_.related_items?.parent_appid
+          ? (_.type != _._._ && _.type != _._._) ||
+            !_.related_items?.parent_appid
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,

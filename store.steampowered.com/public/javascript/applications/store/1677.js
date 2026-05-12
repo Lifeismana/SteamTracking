@@ -82,7 +82,7 @@
     },
     34181: (e, t, r) => {
       "use strict";
-      r.d(t, { A: () => F, D: () => z });
+      r.d(t, { A: () => j, D: () => F });
       var i = r(34629),
         s = r(7850),
         a = r(90626),
@@ -141,92 +141,93 @@
         }
       };
       g = (0, i.Cg)([n.PA], g);
-      var B = r(12155),
-        y = r(70342),
-        _ = r.n(y),
-        M = r(97232);
-      const f = (0, n.PA)((e) => {
+      var B = r(38924),
+        y = r(12155),
+        _ = r(70342),
+        M = r.n(_),
+        f = r(97232);
+      const b = (0, n.PA)((e) => {
         const { persona: t, className: r, ...i } = e;
         if (!t) return null;
         if (!t.is_online) return null;
-        const n = t.HasStateFlag(512),
-          o = t.HasStateFlag(2048),
-          u = 544 == t.m_eGamingDeviceType,
-          d = 545 == t.m_eGamingDeviceType,
-          g = !u && !d && !o && t.HasStateFlag(1024);
+        const n = t.HasStateFlag(B.R$),
+          u = t.HasStateFlag(B.hs),
+          d = t.m_eGamingDeviceType == o.LS$,
+          g = t.m_eGamingDeviceType == o.ppM,
+          _ = !d && !g && !u && t.HasStateFlag(B.sr);
         return (0, s.jsxs)(a.Fragment, {
           children: [
             n &&
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  _().PersonaStatusIcon,
-                  _().MobilePhoneIcon,
+                  M().PersonaStatusIcon,
+                  M().MobilePhoneIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, c.we)("#Platform_Hint_Mobile"),
                 ...i,
-                children: (0, s.jsx)(M.rf, {}),
-              }),
-            o &&
-              (0, s.jsx)("div", {
-                className: (0, m.A)(
-                  r,
-                  _().PersonaStatusIcon,
-                  _().VRIcon,
-                  (0, l.rO)(t),
-                ),
-                title: (0, c.we)("#Platform_Hint_VR"),
-                ...i,
-                children: (0, s.jsx)(B.MUh, {}),
-              }),
-            g &&
-              (0, s.jsx)("div", {
-                className: (0, m.A)(
-                  r,
-                  _().PersonaStatusIcon,
-                  _().BigPictureIcon,
-                  (0, l.rO)(t),
-                ),
-                title: (0, c.we)("#Platform_Hint_BigPicture"),
-                ...i,
-                children: (0, s.jsx)(B.bPr, {}),
+                children: (0, s.jsx)(f.rf, {}),
               }),
             u &&
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  _().PersonaStatusIcon,
-                  _().SteamDeckIcon,
+                  M().PersonaStatusIcon,
+                  M().VRIcon,
                   (0, l.rO)(t),
                 ),
-                title: (0, c.we)("#Platform_Hint_SteamDeck"),
+                title: (0, c.we)("#Platform_Hint_VR"),
                 ...i,
-                children: (0, s.jsx)(B.DQe, {}),
+                children: (0, s.jsx)(y.MUh, {}),
+              }),
+            _ &&
+              (0, s.jsx)("div", {
+                className: (0, m.A)(
+                  r,
+                  M().PersonaStatusIcon,
+                  M().BigPictureIcon,
+                  (0, l.rO)(t),
+                ),
+                title: (0, c.we)("#Platform_Hint_BigPicture"),
+                ...i,
+                children: (0, s.jsx)(y.bPr, {}),
               }),
             d &&
               (0, s.jsx)("div", {
                 className: (0, m.A)(
                   r,
-                  _().PersonaStatusIcon,
-                  _().SteamDeckIcon,
+                  M().PersonaStatusIcon,
+                  M().SteamDeckIcon,
+                  (0, l.rO)(t),
+                ),
+                title: (0, c.we)("#Platform_Hint_SteamDeck"),
+                ...i,
+                children: (0, s.jsx)(y.DQe, {}),
+              }),
+            g &&
+              (0, s.jsx)("div", {
+                className: (0, m.A)(
+                  r,
+                  M().PersonaStatusIcon,
+                  M().SteamDeckIcon,
                   (0, l.rO)(t),
                 ),
                 title: (0, c.we)("#Platform_Hint_LegionGoS"),
                 ...i,
-                children: (0, s.jsx)(B.DQe, {}),
+                children: (0, s.jsx)(y.DQe, {}),
               }),
           ],
         });
       });
-      var b = r(18828),
-        p = r.n(b),
-        h = r(78327);
-      function w(e) {
+      var p = r(18828),
+        h = r.n(p),
+        w = r(78327);
+      function z(e) {
         return (0, s.jsxs)(a.Fragment, {
           children: [
             (0, s.jsx)("span", {
-              className: p().partyBeaconJoin,
+              className: h().partyBeaconJoin,
               children: (0, c.we)("#User_WantsToPlay"),
             }),
             " – ",
@@ -234,7 +235,7 @@
           ],
         });
       }
-      let z = class extends a.Component {
+      let F = class extends a.Component {
         render() {
           const {
             className: e,
@@ -245,15 +246,15 @@
             bParenthesizeNicknames: n,
             strNickname: u,
             bCompactView: d,
-            bHideGameName: y,
+            bHideGameName: B,
             bHideEnhancedRichPresenceLabel: _,
             bHideSnooze: M,
-            bHideStatus: b,
-            renderStatus: z,
+            bHideStatus: f,
+            renderStatus: p,
             renderRichPresence: F,
             bHidePersona: j,
-            bDNDSet: v,
-            bHasPartyBeacon: S,
+            bDNDSet: S,
+            bHasPartyBeacon: v,
             bHasGamePrivacy: I,
             bNoMask: R,
             bEllipsisName: N,
@@ -264,18 +265,18 @@
             P = null,
             T = [
               e,
-              p().personaNameAndStatusLabel,
+              h().personaNameAndStatusLabel,
               (0, l.rO)(r),
-              d && p().compactView,
-              R && p().NoMask,
+              d && h().compactView,
+              R && h().NoMask,
             ];
-          S || r.has_public_party_beacon
-            ? (O = (0, s.jsx)(w, { persona: r }))
-            : (0, o.aP)(i)
-              ? ((O = (0, c.we)("#PersonaStateBlocked")), T.push(p().blocked))
+          v || r.has_public_party_beacon
+            ? (O = (0, s.jsx)(z, { persona: r }))
+            : (0, o.aPS)(i)
+              ? ((O = (0, c.we)("#PersonaStateBlocked")), T.push(h().blocked))
               : r.is_ingame
                 ? ((O =
-                    !r.is_in_nonsteam_game || a || (0, o.S$)(i)
+                    !r.is_in_nonsteam_game || a || (0, o.S$u)(i)
                       ? r.GetCurrentGameName()
                       : (0, c.we)("#PersonaStateInNonSteamGame")),
                   a || j
@@ -286,7 +287,7 @@
                 : r.m_broadcastAccountId &&
                   (O = (0, c.we)("#PersonaStateWatchingBroadcast")),
             O || (O = r.GetLocalizedOnlineStatus()),
-            z && (O = z());
+            p && (O = p());
           let C = !j && !M;
           !1 === M && (C = !0),
             r.is_awayOrSnooze && C && (W = (0, s.jsx)(g, { persona: r }));
@@ -295,88 +296,88 @@
             ? (G = (0, s.jsx)("div", {
                 className: "ContextMenuButton",
                 onClick: t,
-                children: (0, s.jsx)(B.GB9, {}),
+                children: (0, s.jsx)(y.GB9, {}),
               }))
-            : T.push(p().noContextMenu),
-            j && T.push(p().hidePersona),
+            : T.push(h().noContextMenu),
+            j && T.push(h().hidePersona),
             F && (P = F()),
-            (!y && P) || T.push(p().twoLine);
-          const A = !r.is_ingame && !b,
-            k = !_ && P,
-            L = O && (!y || !k),
-            q = (0, o.ID)(h.TS.LAUNCHER_TYPE);
+            (!B && P) || T.push(h().twoLine);
+          const A = !r.is_ingame && !f,
+            L = !_ && P,
+            k = O && (!B || !L),
+            q = (0, o.IDH)(w.TS.LAUNCHER_TYPE);
           let U = u && !n,
             D = U ? u : r.m_strPlayerName,
-            Z = !j && (L || A) && k;
+            Z = !j && (k || A) && L;
           return (0, s.jsxs)("div", {
             ...x,
             className: (0, m.A)(...T),
             onContextMenu: t,
             children: [
               (0, s.jsxs)("div", {
-                className: (0, m.A)(p().statusAndName, Z && p().threeLines),
+                className: (0, m.A)(h().statusAndName, Z && h().threeLines),
                 children: [
                   (0, s.jsxs)("div", {
-                    className: (0, m.A)(p().playerName, N && p().EllipsisName),
+                    className: (0, m.A)(h().playerName, N && h().EllipsisName),
                     children: [
                       D || " ",
                       n &&
                         u &&
                         (0, s.jsxs)("span", {
-                          className: p().playerNickname,
+                          className: h().playerNickname,
                           children: ["(", u, ")"],
                         }),
                     ],
                   }),
-                  v &&
+                  S &&
                     (0, s.jsx)("div", {
-                      className: p().DNDContainer,
+                      className: h().DNDContainer,
                       title: (0, c.we)("#User_ToggleDoNotDisturb"),
-                      children: (0, s.jsx)(B.Aj0, {}),
+                      children: (0, s.jsx)(y.Aj0, {}),
                     }),
                   U &&
                     (0, s.jsx)("span", {
-                      className: p().playerNicknameBracket,
+                      className: h().playerNicknameBracket,
                       title: (0, c.we)("#isNickname"),
                       children: " *",
                     }),
-                  (0, s.jsx)(f, { persona: r }),
+                  (0, s.jsx)(b, { persona: r }),
                   W,
                   (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
                     q &&
                     (0, s.jsx)("div", {
-                      className: p().PendingPersona,
+                      className: h().PendingPersona,
                       title: (0, c.we)("#SteamChina_PendingPersonaName"),
-                      children: (0, s.jsx)(B.zD7, {}),
+                      children: (0, s.jsx)(y.zD7, {}),
                     }),
                   G,
                 ],
               }),
               !j &&
                 (0, s.jsxs)("div", {
-                  className: p().richPresenceContainer,
+                  className: h().richPresenceContainer,
                   children: [
-                    (L || A) &&
+                    (k || A) &&
                       (0, s.jsxs)("div", {
                         className: (0, m.A)(
-                          p().gameName,
-                          Z && p().threeLines,
-                          p().richPresenceLabel,
+                          h().gameName,
+                          Z && h().threeLines,
+                          h().richPresenceLabel,
                           "no-drag",
                         ),
                         children: [
                           I &&
                             (0, s.jsx)("div", {
-                              className: p().gameIsPrivateIcon,
+                              className: h().gameIsPrivateIcon,
                               title: (0, c.we)("#User_GameInfoHidden"),
-                              children: (0, s.jsx)(B.jZl, {}),
+                              children: (0, s.jsx)(y.jZl, {}),
                             }),
                           O,
                         ],
                       }),
-                    k &&
+                    L &&
                       (0, s.jsxs)("div", {
-                        className: (0, m.A)(p().richPresenceLabel, "no-drag"),
+                        className: (0, m.A)(h().richPresenceLabel, "no-drag"),
                         children: [P, " "],
                       }),
                   ],
@@ -385,8 +386,8 @@
           });
         }
       };
-      z = (0, i.Cg)([n.PA], z);
-      const F = (0, n.PA)((e) => {
+      F = (0, i.Cg)([n.PA], F);
+      const j = (0, n.PA)((e) => {
         const {
           persona: t,
           bParenthesizeNicknames: r,
@@ -399,15 +400,15 @@
         let u = i && !r ? i : t.m_strPlayerName;
         return (0, s.jsx)("span", {
           ...o,
-          className: (0, m.A)(c, n && p().DisableColoring, !a && (0, l.rO)(t)),
+          className: (0, m.A)(c, n && h().DisableColoring, !a && (0, l.rO)(t)),
           children: (0, s.jsxs)("span", {
-            className: p().playerName,
+            className: h().playerName,
             children: [
               u || " ",
               r &&
                 i &&
                 (0, s.jsxs)("span", {
-                  className: p().playerNickname,
+                  className: h().playerNickname,
                   children: ["(", i, ")"],
                 }),
             ],
@@ -418,11 +419,11 @@
     26505: (e, t, r) => {
       "use strict";
       r.d(t, {
-        M8: () => P,
-        d0: () => R,
-        Dv: () => N,
-        Nd: () => G,
-        EW: () => W,
+        M8: () => T,
+        d0: () => N,
+        Dv: () => x,
+        Nd: () => A,
+        EW: () => O,
       });
       var i,
         s,
@@ -1097,52 +1098,52 @@
           return "CFriendsList_GetFriendsList_Request";
         }
       }
-      class v extends u.Message {
+      class S extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            v.prototype.friendslist || g.Sg(v.M()),
+            S.prototype.friendslist || g.Sg(S.M()),
             u.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            v.sm_m ||
-              (v.sm_m = { proto: v, fields: { friendslist: { n: 1, c: B } } }),
-            v.sm_m
+            S.sm_m ||
+              (S.sm_m = { proto: S, fields: { friendslist: { n: 1, c: B } } }),
+            S.sm_m
           );
         }
         static MBF() {
-          return v.sm_mbf || (v.sm_mbf = g.w0(v.M())), v.sm_mbf;
+          return S.sm_mbf || (S.sm_mbf = g.w0(S.M())), S.sm_mbf;
         }
         toObject(e = !1) {
-          return v.toObject(e, this);
+          return S.toObject(e, this);
         }
         static toObject(e, t) {
-          return g.BT(v.M(), e, t);
+          return g.BT(S.M(), e, t);
         }
         static fromObject(e) {
-          return g.Uq(v.M(), e);
+          return g.Uq(S.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (d().BinaryReader)(e),
-            r = new v();
-          return v.deserializeBinaryFromReader(r, t);
+            r = new S();
+          return S.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return g.zj(v.MBF(), e, t);
+          return g.zj(S.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (d().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          g.i0(v.M(), e, t);
+          g.i0(S.M(), e, t);
         }
         serializeBase64String() {
           var e = new (d().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFriendsList_GetFriendsList_Response";
@@ -1159,7 +1160,7 @@
             return e.SendMsg(
               "FriendsList.GetFriendsList#1",
               (0, l.I8)(j, t),
-              v,
+              S,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -1181,22 +1182,23 @@
             request: F,
           };
         })(s || (s = {}));
-      var S = r(37735),
-        I = r(14336);
-      function R(e) {
+      var v = r(42457),
+        I = r(22837),
+        R = r(14336);
+      function N(e) {
         const t = (0, n.KV)(),
           r = (0, a.LH)(),
-          i = (0, I.tb)(),
+          i = (0, R.tb)(),
           s = (0, c.jE)();
         let l = { loadNicknames: !1, loadFavorites: !1, ...e };
         return (0, o.I)({
           queryKey: ["FriendsList", r, l],
           queryFn: async () => {
-            const e = s.fetchQuery(x(t, r)),
-              a = l.loadNicknames ? s.fetchQuery(O(t, r)) : void 0,
-              n = l.loadFavorites ? s.fetchQuery(T(t, r)) : void 0,
+            const e = s.fetchQuery(W(t, r)),
+              a = l.loadNicknames ? s.fetchQuery(P(t, r)) : void 0,
+              n = l.loadFavorites ? s.fetchQuery(C(t, r)) : void 0,
               c = await e,
-              o = new Map(c.map((e) => [e, s.fetchQuery((0, I.mK)(i, t, e))]));
+              o = new Map(c.map((e) => [e, s.fetchQuery((0, R.mK)(i, t, e))]));
             let u;
             if (a) {
               const e = (await a).nicknames;
@@ -1220,12 +1222,12 @@
           staleTime: 12e4,
         });
       }
-      function N() {
+      function x() {
         const e = (0, n.KV)(),
           t = (0, a.LH)();
-        return (0, o.I)(x(e, t));
+        return (0, o.I)(W(e, t));
       }
-      function x(e, t) {
+      function W(e, t) {
         return {
           queryKey: ["GetFriendsList", t],
           queryFn: async () => {
@@ -1238,8 +1240,8 @@
               ?.filter((e) => {
                 const t = new m.b(e.ulfriendid());
                 return (
-                  (3 == e.efriendrelationship() ||
-                    6 == e.efriendrelationship()) &&
+                  (e.efriendrelationship() == I._UC ||
+                    e.efriendrelationship() == I.Ec7) &&
                   t.BIsIndividualAccount()
                 );
               })
@@ -1247,7 +1249,7 @@
           },
         };
       }
-      function W() {
+      function O() {
         const e = (0, n.KV)(),
           t = (0, a.LH)();
         return (0, o.I)({
@@ -1262,8 +1264,8 @@
               ?.filter((e) => {
                 const t = new m.b(e.ulfriendid());
                 return (
-                  (5 == e.efriendrelationship() ||
-                    6 == e.efriendrelationship()) &&
+                  (e.efriendrelationship() == I.wim ||
+                    e.efriendrelationship() == I.Ec7) &&
                   t.BIsIndividualAccount()
                 );
               })
@@ -1271,27 +1273,27 @@
           },
         });
       }
-      function O(e, t) {
+      function P(e, t) {
         return {
           queryKey: ["GetFriendNicknameList", t],
           queryFn: async () => {
-            const t = l.w.Init(S.dN);
-            return (await S.xt.GetNicknameList(e, t)).Body().toObject();
+            const t = l.w.Init(v.dN);
+            return (await v.xt.GetNicknameList(e, t)).Body().toObject();
           },
         };
       }
-      function P(e = {}) {
+      function T(e = {}) {
         return (function (e = {}) {
           const t = (0, n.KV)(),
             r = (0, a.LH)();
-          return (0, o.I)({ ...O(t, r), ...e });
+          return (0, o.I)({ ...P(t, r), ...e });
         })({
           ...e,
           select: (e) =>
             new Map(e.nicknames.map((e) => [e.accountid, e.nickname])),
         });
       }
-      function T(e, t) {
+      function C(e, t) {
         return {
           queryKey: ["GetFriendFavorites", t],
           queryFn: async () => {
@@ -1303,22 +1305,22 @@
           },
         };
       }
-      async function C(e, t) {
-        const r = l.w.Init(S.tl);
+      async function G(e, t) {
+        const r = l.w.Init(v.tl);
         r.Body().set_appid(t);
-        const i = await S.xt.GetFriendsGameplayInfo(e, r);
+        const i = await v.xt.GetFriendsGameplayInfo(e, r);
         return (
           i.BSuccess() ||
             console.warn(`Failed to get gameplay info: ${i.GetEResult()}`),
           i.Body().toObject()
         );
       }
-      function G(e, t = {}) {
+      function A(e, t = {}) {
         const r = (0, n.KV)(),
           i = (0, a.LH)();
         return (0, o.I)({
           queryKey: [`GameplayInfo_${i}_${e}`],
-          queryFn: async () => await C(r, e),
+          queryFn: async () => await G(r, e),
           ...t,
         });
       }

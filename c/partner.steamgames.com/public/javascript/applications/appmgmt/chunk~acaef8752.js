@@ -136,6 +136,7 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
       const _ = ["app_header_capsule", "app_main_capsule"],
         _ = [
           "sale_header",
@@ -171,10 +172,12 @@
       function _(_, _) {
         return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
       }
-      const _ = [1, 3, 2],
-        _ = [1, 3],
-        _ = [5, 4],
-        _ = [7, 6],
+      const _ = [_._._, _._._, _._._, _._._],
+        _ = [_._._, _._._, _._._],
+        _ = [_._._, _._._],
+        _ = [_._._, _._._],
+        _ = [_._._, _._._],
+        _ = [_._._, _._._, _._._, _._._, _._._, _._._],
         _ = {
           capsule: {
             width: 800,
@@ -332,7 +335,7 @@
           localized_marketing_message: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [1, 3, 2, 10],
+            rgAcceptableTypes: _,
           },
           localized_optin_banner: {
             width: 1e3,
@@ -342,33 +345,33 @@
           localized_marketingmessage_webm: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           localized_marketingmessage_mp4: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           localized_partnerevent_webm: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           localized_partnerevent_mp4: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           localized_subtitles: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [6, 7],
+            rgAcceptableTypes: [_._._, _._._],
           },
           localized_marketingmessage_poster: {
             width: 528,
             height: 297,
-            rgAcceptableTypes: [1, 3],
+            rgAcceptableTypes: [_._._, _._._],
           },
           localized_marketingmessage_background: {
             width: 570,
@@ -385,7 +388,7 @@
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+            rgAcceptableTypes: _,
           },
           user_poll_background: {
             width: 0,
@@ -426,12 +429,12 @@
           takeover_webm_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           takeover_mp4_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           takeover_mobile_art: {
             width: 500,
@@ -441,12 +444,12 @@
           takeover_webm_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [5],
+            rgAcceptableTypes: [_._._],
           },
           takeover_mp4_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [4],
+            rgAcceptableTypes: [_._._],
           },
           takeunder_art: {
             width: 1200,
@@ -512,7 +515,8 @@
       function _(_) {
         const _ = _[_];
         return (
-          _.rgAcceptableTypes.includes(6) || _.rgAcceptableTypes.includes(7)
+          _.rgAcceptableTypes.includes(_._._) ||
+          _.rgAcceptableTypes.includes(_._._)
         );
       }
       function _(_, _) {
@@ -529,6 +533,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -554,7 +559,7 @@
           (0, _._)(this),
             (this.file = _),
             (this.filename = _),
-            (this.fileType = (0, _._)(_) ?? 0),
+            (this.fileType = (0, _._)(_) ?? _._._),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -869,7 +874,7 @@
                 const _ = await __webpack_require__(
                   _,
                   _.filename,
-                  _.language ?? -1,
+                  _.language ?? _.xPp,
                   _,
                 );
                 (_.status = _.bSuccess ? "success" : "failed"),
@@ -914,7 +919,7 @@
                       _ = [];
                     for (const _ of _) {
                       _.status = "uploading";
-                      const _ = await _(_, _.filename, _.language ?? -1, _);
+                      const _ = await _(_, _.filename, _.language ?? _.xPp, _);
                       (_.status = _.bSuccess ? "success" : "failed"),
                         (_.message =
                           !_.bSuccess && _.elErrorMessage
@@ -940,22 +945,24 @@
           return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
+        return __webpack_require__.includes(_._.k_ESteamRealmGlobal)
+          ? _.Bhc
+          : _.ZLm;
       }
-      function _(_, _ = 0) {
+      function _(_, _ = _.Bhc) {
         let _ = _.lastIndexOf(".");
         -1 != _ && (_ = _.slice(0, _).toLowerCase());
         let _ = null,
           _ = 0;
-        _.endsWith("korean") && ((_ = 4), (_ = 6));
-        for (let _ = 0; _ < 31; ++_) {
-          const _ = (0, _._)(_);
+        _.endsWith("korean") && ((_ = _.Pn1), (_ = 6));
+        for (let _ = _.Bhc; _ < _.bP9; ++_) {
+          const _ = (0, _.wwZ)(_);
           if (_.length <= _) continue;
           if (_.endsWith(_) && _.length > _.length + 2) {
             const _ = _[_.length - _.length - 1];
             /\p{Alphabetic}|\p{Number}/u.test(_) || ((_ = _), (_ = _.length));
           }
-          const _ = (0, _._)(_);
+          const _ = (0, _.LgB)(_);
           _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
         }
         return {
@@ -974,25 +981,26 @@
         _: () => _,
       });
       __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           _.indexOf("?") > 0 && (_ = _.split("?")[0]),
           _.endsWith(".jpg") || _.endsWith(".jpeg")
-            ? 1
+            ? _._._
             : _.endsWith(".png")
-              ? 3
+              ? _._._
               : _.endsWith(".gif")
-                ? 2
+                ? _._._
                 : _.endsWith(".mp4")
-                  ? 4
+                  ? _._._
                   : _.endsWith(".webm")
-                    ? 5
+                    ? _._._
                     : _.endsWith(".vtt")
-                      ? 6
+                      ? _._._
                       : _.endsWith(".srt")
-                        ? 7
+                        ? _._._
                         : _.endsWith(".webp")
-                          ? 10
+                          ? _._._
                           : void 0
         );
       }
@@ -1068,6 +1076,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1422,7 +1431,7 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType: _.forceFileType || 3,
+                          fileType: _.forceFileType || _._._,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -1500,8 +1509,8 @@
         const _ = [],
           _ = new Array();
         for (const _ of _) {
-          if (25 == _) continue;
-          const _ = (0, _._)("#Language_" + (0, _._)(_));
+          if (_ == _.X51) continue;
+          const _ = (0, _._)("#Language_" + (0, _.LgB)(_));
           __webpack_require__.push({
             label: _,
             data: _,
@@ -2338,6 +2347,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -2364,7 +2374,8 @@
                 _?.drawImage(_, _, _, _, _, _, _, _, _),
                   _.toBlob((_) => {
                     const _ = _.toDataURL(_);
-                    3 !== _ && __webpack_require__.startsWith("data:image/png")
+                    _ !== _._._ &&
+                    __webpack_require__.startsWith("data:image/png")
                       ? _("Unable to encode into the requested file format")
                       : _
                         ? ((_.file = (0, _._)(_, _.filename)),
@@ -2523,9 +2534,9 @@
       }
       function _(_) {
         switch (_) {
-          case 3:
+          case _._._:
             return "image/png";
-          case 1:
+          case _._._:
             return "image/jpeg";
         }
       }

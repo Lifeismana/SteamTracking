@@ -73,6 +73,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -114,7 +115,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -131,7 +132,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -369,7 +370,7 @@
                       "NOTE: Event needs to be published in unlisted mode for Steam partners to see it. Admin account bypass this check",
                   }),
                 (0, _.jsx)(_._, {
-                  lang: (0, _._)(_._.LANGUAGE),
+                  lang: (0, _.sfN)(_._.LANGUAGE),
                   event: _,
                   adminPanel:
                     _._.EREALM === _._.k_ESteamRealmChina
@@ -386,6 +387,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -505,7 +507,7 @@
       function _(_) {
         const [_] = (0, _._)("gid"),
           _ = (0, _._)(_),
-          _ = (0, _._)(_._.LANGUAGE);
+          _ = (0, _.sfN)(_._.LANGUAGE);
         return _
           ? (0, _.jsxs)("div", {
               className: _().Ctn,
@@ -646,7 +648,7 @@
                   _ = await _().post(_, _, {
                     withCredentials: !0,
                   });
-                return 1 == _?.data?.success;
+                return _?.data?.success == _._;
               },
             }));
         var _, _, _, _;
@@ -817,7 +819,7 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _().SessionName,
-                  children: _.localized_session_title[0],
+                  children: _.localized_session_title[_.Bhc],
                 }),
                 (0, _.jsxs)("div", {
                   className: _().SessionTime,
@@ -831,7 +833,7 @@
                 }),
                 (0, _.jsx)("div", {
                   children: (0, _.jsx)(_, {
-                    desc: `Description: ${_.localized_session_description[0] || ""}`,
+                    desc: `Description: ${_.localized_session_description[_.Bhc] || ""}`,
                   }),
                 }),
                 "dev" == _._.WEB_UNIVERSE &&
@@ -857,7 +859,7 @@
       function _(_) {
         const [_] = (0, _._)("gid"),
           _ = (0, _._)(_),
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           [_, _] = (0, _.useState)("");
         return _
           ? (0, _.jsxs)("div", {
@@ -1120,7 +1122,7 @@
             session: _,
             registrations: _,
           } = _,
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = (0, _._)(),
           { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(_),
           _ = (0, _._)(_, _),
@@ -1150,7 +1152,7 @@
                   _ = await _().post(_, _, {
                     withCredentials: !0,
                   });
-                return 1 == _?.data?.success;
+                return _?.data?.success == _._;
               },
             }));
         var _, _, _;
@@ -1164,7 +1166,7 @@
                   className: _().SessionName,
                   children:
                     _.localized_session_title[_] ??
-                    _.localized_session_title[0],
+                    _.localized_session_title[_.Bhc],
                 }),
                 (0, _.jsx)("div", {
                   className: _().SessionTime,

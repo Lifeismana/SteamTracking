@@ -827,24 +827,23 @@
         __webpack_require__._(module_exports, {
           default: () => _,
         });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -1908,6 +1907,7 @@
           return "CAssetSetPublishing_UpdatePublishTime_Response";
         }
       }
+      var _;
       !(function (_) {
         (_.CreateAssetSet = function (_, _) {
           return _.SendMsg(
@@ -1996,6 +1996,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "default",
         _ = "steam_default_assetset",
@@ -2067,14 +2070,14 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._) {
               const _ = _.Body().assetset().toObject();
               return (
                 this.m_mapAssetSets.set(_.assetset_id, _),
                 this.GetAppAssetSetListChangeCallback(_.appid).Dispatch(
                   this.GetAllAssetSets(_.appid),
                 ),
-                1
+                _._
               );
             }
             _ = (0, _._)(_);
@@ -2089,7 +2092,7 @@
                 _?.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         async UpdateAssetSet(_) {
@@ -2101,11 +2104,11 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult())
+            if (_.GetEResult() == _._)
               return (
                 this.m_mapAssetSets.set(_.assetset_id, _),
                 this.GetAssetSetChangeCallback(_.assetset_id).Dispatch(_),
-                1
+                _._
               );
             _ = (0, _._)(_);
           } catch (_) {
@@ -2119,7 +2122,7 @@
                 _?.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         async DeleteAssetSet(_, _) {
@@ -2132,13 +2135,13 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult())
+            if (_.GetEResult() == _._)
               return (
                 this.m_mapAssetSets.delete(_),
                 this.GetAppAssetSetListChangeCallback(_).Dispatch(
                   this.GetAllAssetSets(_),
                 ),
-                1
+                _._
               );
             _ = (0, _._)(_);
           } catch (_) {
@@ -2152,7 +2155,7 @@
                 _?.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         async AddBranchToAssetSet(_, _, _) {
@@ -2164,7 +2167,7 @@
               console.log(
                 "CAssetSetStore.AddBranchToAssetSet object missing: " + _,
               ),
-              2
+              _._
             );
           try {
             _.Body().set_appid(_),
@@ -2174,14 +2177,14 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult())
+            if (_.GetEResult() == _._)
               return (
                 _.branches || (_.branches = []),
                 _.branches.push(_),
                 this.GetAssetSetChangeCallback(_.assetset_id).Dispatch({
                   ..._,
                 }),
-                1
+                _._
               );
             _ = (0, _._)(_);
           } catch (_) {
@@ -2195,7 +2198,7 @@
                 _?.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         async RemoveBranchFromAssetSet(_, _, _) {
@@ -2207,7 +2210,7 @@
               console.log(
                 "CAssetSetStore.RemoveBranchFromAssetSet object missing: " + _,
               ),
-              2
+              _._
             );
           const _ = (_.branches || []).findIndex((_) => _ === _);
           if (_ < 0)
@@ -2216,7 +2219,7 @@
                 "CAssetSetStore.RemoveBranchFromAssetSet branch does not exist: " +
                   _,
               ),
-              2
+              _._
             );
           try {
             _.Body().set_appid(_),
@@ -2226,13 +2229,13 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult())
+            if (_.GetEResult() == _._)
               return (
                 _.branches.splice(_, 1),
                 this.GetAssetSetChangeCallback(_.assetset_id).Dispatch({
                   ..._,
                 }),
-                1
+                _._
               );
             _ = (0, _._)(_);
           } catch (_) {
@@ -2246,7 +2249,7 @@
                 _?.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         static s_Singleton;
@@ -2332,7 +2335,7 @@
             branches: _ ? [_] : [],
           },
           _ = await __webpack_require__(_);
-        return 1 != _
+        return _ != _._
           ? {
               eResult: _,
               assetSetID: null,
@@ -2409,7 +2412,7 @@
       function _(_) {
         let _ = `<g id="${_.markerid}">`;
         return (
-          1 == _.image_type
+          _.image_type == _
             ? (_ += (function (_) {
                 const _ = new DOMParser(),
                   _ = _.parseFromString(_, "image/svg+xml").querySelector(
@@ -2417,7 +2420,7 @@
                   );
                 return _ ? _.innerHTML : null;
               })(_.image))
-            : 2 == _.image_type &&
+            : _.image_type == _ &&
               (_ += `<image width="36" height="36" xlink:href='${_.image}' />`),
           (_ += "</g>"),
           _
@@ -2537,7 +2540,7 @@
               _.append("imagetype", "" + _);
             const _ = `${_._.PARTNER_BASE_URL}timelinemarkers/ajaxcreatemarker`,
               _ = await _().post(_, _);
-            if (200 == _?.status && 1 == _.data.success) {
+            if (200 == _?.status && _.data.success == _._) {
               const _ = _.data.new_marker;
               return (
                 "dev" == _._.WEB_UNIVERSE &&
@@ -2547,7 +2550,7 @@
                   ...this.GetAllMarkersForApp(_),
                 ]),
                 _(_, _) == _ && this.EnsureRequirePublishingIsVisible(),
-                1
+                _._
               );
             }
             _ = (0, _._)(_);
@@ -2559,7 +2562,7 @@
               "CTimelineMarkerEditorStore create failed with " + _.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         async UpdateTimelineMarkerDefinition(_, _, _, _, _, _) {
@@ -2571,7 +2574,7 @@
                 "CTimelineMarkerEditorStore attempting update, timeline markerid does not exist: " +
                   _,
               ),
-              42
+              _._
             );
           (0, _._)(
             _ == _.appid,
@@ -2590,7 +2593,7 @@
               _.append("timeline_marker_id", _);
             const _ = `${_._.PARTNER_BASE_URL}timelinemarkers/ajaxupdatemarker`,
               _ = await _().post(_, _);
-            if (200 == _?.status && 1 == _.data.success) {
+            if (200 == _?.status && _.data.success == _._) {
               const _ = _.data.updated_marker;
               this.m_mapTimelineMarker.set(_.timeline_marker_id, _);
               const _ = this.GetAppMarkers(_, _);
@@ -2612,7 +2615,7 @@
                   ...this.GetAllMarkersForApp(_),
                 ]),
                 _(_, _) == _ && this.EnsureRequirePublishingIsVisible(),
-                1
+                _._
               );
             }
             _ = (0, _._)(_);
@@ -2624,7 +2627,7 @@
               "CTimelineMarkerEditorStore update failed with " + _.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         async DeleteTimelineMarkerDefinition(_, _, _) {
@@ -2636,7 +2639,7 @@
                 "CTimelineMarkerEditorStore attempting delete, timeline markerid does not exist: " +
                   _,
               ),
-              42
+              _._
             );
           const _ = _.markerid;
           try {
@@ -2647,7 +2650,7 @@
               _.append("timeline_marker_id", _);
             const _ = `${_._.PARTNER_BASE_URL}timelinemarkers/ajaxdeletemarker`,
               _ = await _().post(_, _);
-            if (200 == _?.status && 1 == _.data.success) {
+            if (200 == _?.status && _.data.success == _._) {
               this.m_mapTimelineMarker.delete(_);
               const _ = this.GetAppMarkers(_, _);
               return (
@@ -2659,7 +2662,7 @@
                 this.GetAppMarkerListChange(_).Dispatch([
                   ...this.GetAllMarkersForApp(_),
                 ]),
-                1
+                _._
               );
             }
             _ = (0, _._)(_);
@@ -2672,7 +2675,7 @@
                 _.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         async PublishTimelineMarkerDefinitions(_, _, _) {
@@ -2686,7 +2689,7 @@
                   "CTimelineMarkerEditorStore attempting publish, timeline markerid does not exist: " +
                     _,
                 ),
-                42
+                _._
               );
             if (!_.unpublished_changes)
               return (
@@ -2694,7 +2697,7 @@
                   "CTimelineMarkerEditorStore attempting publish already published asset: " +
                     _,
                 ),
-                11
+                _._
               );
           }
           try {
@@ -2705,7 +2708,7 @@
               _.append("timeline_marker_id", __webpack_require__.join(","));
             const _ = `${_._.PARTNER_BASE_URL}timelinemarkers/ajaxpublishmarkers`,
               _ = await _().post(_, _);
-            if (200 == _?.status && 1 == _.data.success) {
+            if (200 == _?.status && _.data.success == _._) {
               for (let _ = 0; _ < _.length; ++_) {
                 const _ = _[_],
                   _ = this.m_mapTimelineMarker.get(_),
@@ -2729,7 +2732,7 @@
                 this.GetAppMarkerListChange(_).Dispatch([
                   ...this.GetAllMarkersForApp(_),
                 ]),
-                1
+                _._
               );
             }
             _ = (0, _._)(_);
@@ -2742,7 +2745,7 @@
                 _.strErrorMsg,
               _,
             ),
-            2
+            _._
           );
         }
         static s_Singleton;
@@ -2850,9 +2853,9 @@
         if (!_) return null;
         let _;
         return (
-          1 == _
+          _ == _
             ? (_ = `data:image/svg+xml,${encodeURIComponent(_)}`)
-            : 2 == _ && (_ = _),
+            : _ == _ && (_ = _),
           (0, _.jsx)("div", {
             className: (0, _._)(_.IconPreviewCtn),
             children: (0, _.jsxs)("div", {
@@ -3170,6 +3173,7 @@
         });
       }
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4419,11 +4423,11 @@
                 timeline_id: _.strTimelineID,
                 entry_id: "",
                 time: "" + Math.floor(_.nTimelineOffsetMS.valMS + _),
-                type: 5,
+                type: _._._,
                 marker_icon: _,
                 marker_priority: 0,
               });
-            1 == _.eResult &&
+            _.eResult == _._ &&
               (this.m_timelineLoader.AddUserMarker(
                 _.strTimelineID,
                 Math.floor(_.nTimelineOffsetMS.valMS),
@@ -4436,7 +4440,7 @@
         async RemoveUserMarker(_, _) {
           const { fnRemoveUserTimelineMarker: _ } = _(),
             _ = this.m_timelineLoader.GetGameID();
-          return 1 == (await __webpack_require__(_, this.GetClipID(), _, _))
+          return (await __webpack_require__(_, this.GetClipID(), _, _)) == _._
             ? (this.m_timelineLoader.RemoveUserMarker(_, _), !0)
             : ((0, _._)(
                 `Failed to delete user marker for timeline ${_} entry ${_}`,
@@ -4450,13 +4454,13 @@
               timeline_id: _,
               entry_id: _._,
               time: _.time,
-              type: 5,
+              type: _._._,
               marker_icon: _.icon,
               marker_priority: _.priority,
               range_title: _,
               marker_description: _,
             };
-          if (1 == (await _(_, this.GetClipID(), _))) {
+          if ((await _(_, this.GetClipID(), _)) == _._) {
             const _ = {
               strIcon: _.icon,
               name: _,
@@ -5992,7 +5996,6 @@
             });
       }
       var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       class _ {
         m_bCreationWasTemporary;
         m_fnCreate;
@@ -6101,7 +6104,7 @@
                 (0, _._)(_);
               }
               return {
-                result: 2,
+                result: _._,
               };
             })(_, _, _, _, _, _, _, _, _),
           _ / 1e3,
@@ -6349,7 +6352,7 @@
               }),
               (0, _.jsx)(_._, {
                 onSelected: () => {
-                  _(_, 4, _, void 0),
+                  _(_, _._._, _, void 0),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
@@ -6370,7 +6373,7 @@
               }),
               (0, _.jsx)(_._, {
                 onSelected: () => {
-                  _(_, 4, void 0, _),
+                  _(_, _._._, void 0, _),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
@@ -6406,15 +6409,15 @@
                         _,
                         _,
                         _ - _,
-                        7,
+                        _._._,
                         {
-                          latestRangeMethod: 7,
-                          originalRangeMethod: 7,
+                          latestRangeMethod: _._._,
+                          originalRangeMethod: _._._,
                           relativeMS: 0,
                         },
                         {
-                          latestRangeMethod: 7,
-                          originalRangeMethod: 7,
+                          latestRangeMethod: _._._,
+                          originalRangeMethod: _._._,
                           relativeMS: 0,
                         },
                       ).create(!1);
@@ -8673,7 +8676,7 @@
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
-              _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
+              _(_._._, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
           (0, _.jsx)(_, {
             offsetPX: _,
@@ -8806,7 +8809,7 @@
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
-              _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
+              _(_._._, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
           (0, _.jsx)(_, {
             offsetPX: _,
@@ -10094,13 +10097,13 @@
                           })(_, _, _, (_) => {
                             _({
                               image: _,
-                              image_type: 2,
+                              image_type: _,
                               strFilenameWithoutExtension: _(_).substring(0, _),
                             });
                           })
                         : _({
                             image: _.result,
-                            image_type: 2,
+                            image_type: _,
                             strFilenameWithoutExtension: _(_).substring(0, _),
                           });
                 }),
@@ -10109,7 +10112,7 @@
                 "image/svg+xml" === _ || _.endsWith(".svg")
                   ? _({
                       image: _.result,
-                      image_type: 1,
+                      image_type: _,
                       strFilenameWithoutExtension: _(_).substring(0, _),
                     })
                   : (console.error("unknown content types: " + _),
@@ -10229,7 +10232,9 @@
                 let _ = !0;
                 for (let _ = 0; _ < _.length; ++_) {
                   const _ = _[_];
-                  if (1 != (await _(_, _, _.markerid, _.image, _.image_type))) {
+                  if (
+                    (await _(_, _, _.markerid, _.image, _.image_type)) != _._
+                  ) {
                     _.fnSetError(!0),
                       _.fnSetStrError((0, _._)("#OptIn_Appeals_Dialog_Failed")),
                       (_ = !1);
@@ -10504,7 +10509,7 @@
                   strDescription: (0, _._)("#Dialog_AreYouSure"),
                   onOK: async () => {
                     _.fnSetLoading(!0);
-                    1 != (await _(_, _.asset_set_id, _.timeline_marker_id))
+                    (await _(_, _.asset_set_id, _.timeline_marker_id)) != _._
                       ? (_.fnSetError(!0),
                         _.fnSetStrError(
                           (0, _._)("#OptIn_Appeals_Dialog_Failed"),
@@ -10526,7 +10531,7 @@
           strOKButtonText: (0, _._)("#Button_Update"),
           onOK: async () => {
             _.fnSetLoading(!0),
-              1 == (await _(_, _.asset_set_id, _.timeline_marker_id, _, _, _))
+              (await _(_, _.asset_set_id, _.timeline_marker_id, _, _, _)) == _._
                 ? (_.fnSetSuccess(!0),
                   _.fnSetStrSuccess(
                     (0, _._)("#TimelineMarkers_Dialog_UpdateSuccess"),
@@ -10621,7 +10626,7 @@
           _ = _(_),
           _ = _?.trimStart().startsWith("steam_");
         let _;
-        if (1 == _) {
+        if (_ == _) {
           const _ = new DOMParser()
             .parseFromString(_, "image/svg+xml")
             .querySelector("svg");
@@ -10801,7 +10806,7 @@
           );
         if (_ == _) {
           const _ = await _(_, !0);
-          if (1 != _.eResult) {
+          if (_.eResult != _._) {
             const _ = (0, _._)({
               success: _.eResult,
             });
@@ -10822,16 +10827,16 @@
           fnUpdateTimelineMarkerDefinition: _,
         } = _();
         let _ = _(_, _),
-          _ = 1;
+          _ = _._;
         if (((_ = _), (_ = _), _.Get().BDoesAssetSetHaveMarkerID(_, _))) {
           const _ = _(_, _);
           _ = await _(_, _, _.timeline_marker_id, _, _.image, _.image_type);
         } else _ = await _(_, _, _, _.image, _.image_type);
         var _, _;
-        if (1 != _)
+        if (_ != _._)
           return console.error("TimelineMarkerDrop failed on step 1" + _), _;
         if (_.unpublished_changes) {
-          if (((_ = await _(_, _, _.timeline_marker_id)), 1 != _))
+          if (((_ = await _(_, _, _.timeline_marker_id)), _ != _._))
             return (
               console.error("TimelineMarkerDrop failed on step 2: " + _), _
             );
@@ -10839,7 +10844,7 @@
         }
         return _ &&
           !_?.unpublished_changes &&
-          ((_ = await _(_, _, _.timeline_marker_id)), 1 != _)
+          ((_ = await _(_, _, _.timeline_marker_id)), _ != _._)
           ? (console.error("TimelineMarkerDrop failed on step 3: " + _), _)
           : ("dev" == _._.WEB_UNIVERSE &&
               console.log("drag&drop complete successfully"),
@@ -10908,7 +10913,7 @@
                 try {
                   let _;
                   _ ? (_ = await _(_)) : ((_.branches = []), (_ = await _(_))),
-                    1 != _ &&
+                    _ != _._ &&
                       (_ = (0, _._)({
                         sucess: _,
                       }));
@@ -11204,7 +11209,7 @@
                 for (let _ = 0; _ < _.length; ++_) {
                   const _ = _[_];
                   if (!_.branches?.includes(_)) {
-                    if (1 != (await _(_.appid, _.assetset_id, _)))
+                    if ((await _(_.appid, _.assetset_id, _)) != _._)
                       return void _.fnSetError(!0);
                     _++;
                   }
@@ -11213,7 +11218,7 @@
                 for (let _ = 0; _ < _.length; ++_) {
                   const _ = _[_];
                   if (!_.has(_)) {
-                    if (1 != (await _(_.appid, _.assetset_id, _)))
+                    if ((await _(_.appid, _.assetset_id, _)) != _._)
                       return void _.fnSetError(!0);
                     _++;
                   }
@@ -11327,7 +11332,7 @@
               bOKDisabled: !_,
               onOK: async () => {
                 _.fnSetLoading(!0);
-                1 == (await _(_, _, _.markerid, _.image, _.image_type))
+                (await _(_, _, _.markerid, _.image, _.image_type)) == _._
                   ? (_.fnSetStrSuccess(
                       (0, _._)("#TimelineMarker_Clone_success"),
                     ),
@@ -11599,7 +11604,21 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _, _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _,
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return "gamemode" === _.type;
       }
@@ -11631,34 +11650,34 @@
           type: void 0,
         };
         switch (_.type) {
-          case 1: {
+          case _._._: {
             let _ = _;
             (_.type = "gamemode"), (_.mode = _.game_mode);
             break;
           }
-          case 5: {
+          case _._._: {
             let _ = _;
             (_.type = "usermarker"),
               (_.icon = "steam_marker"),
               (_.priority = _.marker_priority);
             break;
           }
-          case 4: {
+          case _._._: {
             let _ = _;
             (_.type = "achievement"), (_.achievement_name = _.achievement_name);
             break;
           }
-          case 7: {
+          case _._._: {
             let _ = _;
             (_.type = "error"), (_.description = _.marker_description);
             break;
           }
-          case 3: {
+          case _._._: {
             let _ = _;
             (_.type = "state_description"), (_.title = _.timestamp_title);
             break;
           }
-          case 2: {
+          case _._._: {
             let _ = _;
             (_.type = "event"),
               (_.icon = _.marker_icon),
@@ -11669,7 +11688,7 @@
               (_.possible_clip = _.range_possible_clip);
             break;
           }
-          case 6: {
+          case _._._: {
             let _ = _;
             (_.type = "screenshot"),
               (_.icon = _.marker_icon),
@@ -11682,24 +11701,12 @@
         }
         return _;
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.Playing = 1)] = "Playing"),
-            (_[(_.Staging = 2)] = "Staging"),
-            (_[(_.Menus = 3)] = "Menus");
-        })(_ || (_ = {})),
+      !(function (_) {
+        (_[(_.Invalid = 0)] = "Invalid"),
+          (_[(_.Playing = 1)] = "Playing"),
+          (_[(_.Staging = 2)] = "Staging"),
+          (_[(_.Menus = 3)] = "Menus");
+      })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.None = 1)] = "None"),
@@ -11757,6 +11764,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11835,7 +11843,8 @@
           const _ = await _._.GetTimelinesForClip({
             clip_id: _,
           });
-          if (1 != _.GetEResult()) throw new Error("Unable to load clip " + _);
+          if (_.GetEResult() != _._)
+            throw new Error("Unable to load clip " + _);
           const {
             timelines: _ = [],
             game_id: _,
@@ -12825,7 +12834,7 @@
         RecordingSessionChanged(_) {
           let _ = _.session_id,
             _ = _.notification_type;
-          if (1 == _) {
+          if (_ == _._._) {
             const _ = this.m_mapRunningTimelines.get(_.timeline_id);
             if (!_)
               return (
@@ -12843,13 +12852,13 @@
               recording_type: _.recording_type,
             };
             _.m_metadata.recordings.push(_), (_.m_runningRecording = _);
-          } else if (2 == _) {
+          } else if (_ == _._._) {
             const _ = this.GetRunningTimelineForRecording(_.timeline_id, _);
             if (!_) return;
             (_.m_runningRecording.duration_ms = _.duration_ms),
               (_.m_runningRecording = null),
               this.FireEvent("OnInvalidateRecording", _.timeline_id, _);
-          } else if (4 == _) {
+          } else if (_ == _._._) {
             const _ = this.GetTimelineMetadata(_.timeline_id);
             if (_) {
               const _ = _.metadata.recordings.find((_) => _.recording_id === _);
@@ -12863,7 +12872,7 @@
             }
             this.GetRunningTimelineForRecording(_.timeline_id, _) ||
               this.FireEvent("OnInvalidateRecording", _.timeline_id, _);
-          } else if (3 == _) {
+          } else if (_ == _._._) {
             const _ = this.GetTimelineMetadata(_.timeline_id);
             if (_) {
               const _ = _.metadata.recordings.filter(
@@ -13020,9 +13029,67 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      const _ = 1,
+        _ = 2,
+        _ = 4,
+        _ = 1073741824;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13066,7 +13133,7 @@
                   },
                   recordings: {
                     _: 5,
-                    _,
+                    _: _,
                     _: !0,
                     _: !0,
                   },
@@ -13634,6 +13701,27 @@
           return "CPhaseAttribute";
         }
       }
+      const _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 0,
+        _ = 1,
+        _ = 0,
+        _ = 1;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -17576,7 +17664,7 @@
                   },
                   time_precision: {
                     _: 6,
-                    _: 0,
+                    _: _,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -19012,6 +19100,7 @@
           return "CGameRecording_SwitchBackgroundRecordingGame_Response";
         }
       }
+      var _;
       !(function (_) {
         (_.GetAppsWithBackgroundVideoHandler = {
           name: "GameRecording.GetAppsWithBackgroundVideo#1",
@@ -20765,6 +20854,110 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = "061818254b2c99ac49e6626adb128ed1282a392f",
+        _ = 120;
+      class _ {
+        m_unAppID;
+        m_bInitialized = !1;
+        m_strName;
+        m_strIconURL;
+        m_dtUpdatedFromServer;
+        m_eAppType;
+        constructor(_) {
+          this.m_unAppID = _;
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return this.apptype == _._ || this.apptype == _._;
+        }
+        BuildAppURL(_, _) {
+          return _
+            ? _._.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                _ +
+                ".jpg"
+            : (0, _._)(_);
+        }
+        DeserializeFromMessage(_) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = _.name()),
+            (this.m_strIconURL = _.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = _.app_type());
+        }
+        DeserializeFromAppOverview(_) {
+          _.icon_hash() && _.app_type() != _._
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = _.display_name()),
+              (this.m_strIconURL = _.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = _.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(_) {
+          try {
+            (this.m_strName = _.strName),
+              (this.m_strIconURL = _.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(_.strUpdatedFromServer)),
+              (this.m_eAppType = _.eAppType),
+              (this.m_bInitialized = !0);
+          } catch {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, _._)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20793,37 +20986,61 @@
           return this.m_ulGameID.toString();
         }
         BIsSteamApp() {
-          return this.GetType() === _._.k_EGameIDTypeApp;
+          return this.GetType() === _.Rhn.k_EGameIDTypeApp;
         }
         BIsShortcut() {
-          return this.GetType() === _._.k_EGameIDTypeShortcut;
+          return this.GetType() === _.Rhn.k_EGameIDTypeShortcut;
         }
         BIsMod() {
-          return this.GetType() === _._.k_EGameIDTypeGameMod;
+          return this.GetType() === _.Rhn.k_EGameIDTypeGameMod;
         }
         GetInternalAppID() {
           return this.BIsSteamApp() ? this.GetAppID() : this.GetModID();
         }
         BIsValid() {
           switch (this.GetType()) {
-            case _._.k_EGameIDTypeApp:
+            case _.Rhn.k_EGameIDTypeApp:
               return this.GetAppID() !== _._;
-            case _._.k_EGameIDTypeGameMod:
+            case _.Rhn.k_EGameIDTypeGameMod:
               return (
                 this.GetAppID() !== _._ && !!(2147483648 & this.GetModID())
               );
-            case _._.k_EGameIDTypeShortcut:
+            case _.Rhn.k_EGameIDTypeShortcut:
               return !!(2147483648 & this.GetModID());
             default:
               return (0, _._)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
           }
         }
         static InitFromAppID(_) {
-          return new _(_._.k_EGameIDTypeApp, _, 0);
+          return new _(_.Rhn.k_EGameIDTypeApp, _, 0);
         }
         static InitFromShortcutID(_) {
-          return new _(_._.k_EGameIDTypeShortcut, 0, _);
+          return new _(_.Rhn.k_EGameIDTypeShortcut, 0, _);
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function _(_, _) {
+        let _ = ".jpg";
+        (_ && "0000000000000000000000000000000000000000" !== _) || (_ = _),
+          44 == _.length && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
+        let _ = _._.AVATAR_BASE_URL;
+        return (
+          _ ||
+            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (_ += _.substr(0, 2) + "/")),
+          (_ += _),
+          _ && "small" != _ && (_ += "_" + _),
+          (_ += _),
+          _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -21193,108 +21410,6 @@
           }, [_]),
           _.current
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        if (_().isCancel(_))
-          return {
-            strErrorMsg: "Action Cancelled:" + _,
-            errorCode: 52,
-          };
-        if (
-          void 0 !== _.response &&
-          _.response.data &&
-          "object" == typeof _.response.data
-        ) {
-          if ("msg" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.msg,
-              errorCode: _.response.data.success,
-            };
-          if ("err_msg" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.err_msg,
-              errorCode: _.response.data.success,
-            };
-          if ("message" in _.response.data)
-            return {
-              strErrorMsg: _.response.data.message,
-              errorCode: _.response.data.success,
-            };
-          if ("success" in _.response.data)
-            return {
-              strErrorMsg: "error code: " + _.response.data.success,
-              errorCode: _.response.data.success,
-            };
-        } else if ("object" == typeof _.data) {
-          if ("msg" in _.data)
-            return {
-              strErrorMsg: _.data.msg,
-              errorCode: _.data.success,
-            };
-          if ("err_msg" in _.data)
-            return {
-              strErrorMsg: _.data.err_msg,
-              errorCode: _.data.success,
-            };
-          if ("message" in _.data)
-            return {
-              strErrorMsg: _.data.message,
-              errorCode: _.data.success,
-            };
-          if ("success" in _.data)
-            return {
-              strErrorMsg: "error code: " + _.data.success,
-              errorCode: _.data.success,
-            };
-        } else {
-          if (void 0 !== _.success && void 0 !== _.msg)
-            return {
-              strErrorMsg: _.msg,
-              errorCode: _.success,
-            };
-          if (void 0 !== _.success && void 0 !== _.message)
-            return {
-              strErrorMsg: _.message,
-              errorCode: _.success,
-            };
-          if (void 0 !== _.success && void 0 !== _.err_msg)
-            return {
-              strErrorMsg: _.err_msg,
-              errorCode: _.success,
-            };
-          if ("string" == typeof _ && _.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(_),
-              console.groupEnd();
-          else {
-            if ("object" == typeof _ && _ instanceof _._)
-              return {
-                strErrorMsg: "" + _.GetErrorMessage(),
-                errorCode: _.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", _);
-          }
-        }
-        return "object" == typeof _ && "status" in _
-          ? {
-              strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: 2,
-            }
-          : {
-              strErrorMsg: "Unknown Error: " + _,
-              errorCode: 2,
-            };
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -1258,6 +1258,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1508,7 +1510,7 @@
               const _ = {
                   steamid: _._.InitFromAccountID(_).ConvertTo64BitString(),
                   gid: _,
-                  type: 6,
+                  type: _._._,
                 },
                 _ = await _._.GetUserActionData(_, _);
               return _.BSuccess() && _.Body().jsondata()
@@ -1542,7 +1544,7 @@
                 ],
                 !0,
               ),
-              _ = _ && 1 == _.success;
+              _ = _ && _.success == _._;
             _ || _("We hit error during invite, check console: " + _?.msg),
               _(!1),
               _.refetch(),
@@ -1619,7 +1621,7 @@
           onOK: async () => {
             _(!0);
             const _ = await _(_, _, !1);
-            1 == _?.success
+            _?.success == _._
               ? (_(_.rgInvitedAccounts.length), _(_.rgSkippedAccounts.length))
               : _("We hit error during invite, check console: " + _?.msg),
               _(!1);
@@ -1816,7 +1818,7 @@
           const _ = await _().post(_, _, {
             withCredentials: !0,
           });
-          if (1 != _?.data?.success) {
+          if (_?.data?.success != _._) {
             let _ = (0, _._)(_);
             console.error("DisplayPartnerEventRow error: " + _.strErrorMsg, _);
           }
@@ -1853,7 +1855,7 @@
                 async (_) => {
                   const _ = _._.Init(_._);
                   __webpack_require__.Body().set_gids([..._]),
-                    __webpack_require__.Body().set_type(6);
+                    __webpack_require__.Body().set_type(_._._);
                   const _ = await _._.GetMultipleUserActionData(_, _);
                   if (!_.BSuccess())
                     throw `Failed to call GetMultipleUserActionData with details: ${_.GetErrorMessage()}`;
@@ -2219,7 +2221,7 @@
       }
       function _(_) {
         const { gidClanEvent: _, rgSelected: _, fnSetSelected: _ } = _,
-          _ = (0, _._)(_).GetNameWithFallback(0);
+          _ = (0, _._)(_).GetNameWithFallback(_.Bhc);
         return (0, _.jsx)(_._, {
           label: _,
           checked: __webpack_require__.includes(_),
@@ -2288,7 +2290,7 @@
                             const _ = await _().post(_, _, {
                               withCredentials: !0,
                             });
-                            if (1 != _?.data?.success) {
+                            if (_?.data?.success != _._) {
                               let _ = (0, _._)(_);
                               console.error(
                                 "AsyncSendInviteEmails error: " + _.strErrorMsg,
@@ -2645,7 +2647,7 @@
                   `Failed to read registrations for gids ${_.join(",")}`,
                 );
               const _ = await _.json();
-              if (1 != _.success)
+              if (_.success != _._)
                 throw new Error(
                   `Failed to read registrations for gids ${_.join(",")}: ${_.msg}`,
                 );
@@ -2737,7 +2739,7 @@
                       _.sessions?.forEach((_) => {
                         _.set(
                           `${_.GID}_${_.group_id}_${_._}`,
-                          `${_.localized_session_title[0]}@${(0, _._)(_.rtime_start)} ${(0, _._)(_.rtime_start)}`,
+                          `${_.localized_session_title[_.Bhc]}@${(0, _._)(_.rtime_start)} ${(0, _._)(_.rtime_start)}`,
                         );
                       });
                     });
@@ -3006,7 +3008,7 @@
           _ = (0, _._)(),
           _ = (0, _._)(_, (0, _._)(), _),
           _ = _.isSuccess ? _.data : null,
-          _ = _.GetNameWithFallback(0),
+          _ = _.GetNameWithFallback(_.Bhc),
           _ = (0, _.useMemo)(() => {
             const _ = new Array();
             return (
@@ -3302,7 +3304,6 @@
           [_, _] = (0, _.useState)(null);
         return (0, _.jsxs)("div", {
           children: [
-            " | ",
             (0, _.jsx)("a", {
               href: "#",
               onClick: async (_) => {
@@ -3339,11 +3340,11 @@
                     (0, _.jsx)(_._, {
                       string: (0, _._)("#Loading"),
                     }),
-                  Boolean(1 == _) &&
+                  Boolean(_ == _._) &&
                     (0, _.jsx)("div", {
                       children: "Test Emails Sent",
                     }),
-                  Boolean(_ && 1 != _) &&
+                  Boolean(_ && _ != _._) &&
                     (0, _.jsx)("div", {
                       children: "Email Failed to Send. Check console",
                     }),
@@ -3369,9 +3370,9 @@
             session: _,
             firstSession: _ = !0,
           } = _,
-          _ = _._.GetWithFallback(_?.localized_session_title, 0),
-          _ = _._.GetWithFallback(_?.localized_session_description, 0),
-          _ = _._.GetWithFallback(_?.localized_intended_audience, 0),
+          _ = _._.GetWithFallback(_?.localized_session_title, _.Bhc),
+          _ = _._.GetWithFallback(_?.localized_session_description, _.Bhc),
+          _ = _._.GetWithFallback(_?.localized_intended_audience, _.Bhc),
           _ = _?.find((_) => _.group_id == _.group_id && _.session_id == _._),
           [_, _, _] = (0, _._)(),
           _ = _((0, _._)(), _, _?.group_id);
@@ -3467,7 +3468,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3684,7 +3684,7 @@
                       __webpack_require__.push(_.results.country_code),
                       __webpack_require__.push(
                         _.results.preferred_language
-                          ? (0, _._)(_.results.preferred_language)
+                          ? (0, _.LgB)(_.results.preferred_language)
                           : "",
                       );
                     const _ = (0, _._)(_);
@@ -3791,7 +3791,7 @@
             (0, _.jsx)("td", {
               children:
                 _.english_not_good && _.preferred_language
-                  ? (0, _._)(_.preferred_language)
+                  ? (0, _.LgB)(_.preferred_language)
                   : "",
             }),
             (0, _.jsx)("td", {
@@ -3921,7 +3921,7 @@
                       _.push(_.results.country_code),
                       _.push(
                         _.results.preferred_language
-                          ? (0, _._)(_.results.preferred_language)
+                          ? (0, _.LgB)(_.results.preferred_language)
                           : "",
                       );
                     const _ = (0, _._)(_);
@@ -4021,7 +4021,7 @@
                       params: _,
                       withCredentials: !0,
                     });
-                  if (!_ || 200 != _?.status || 1 != _?.data?.success)
+                  if (!_ || 200 != _?.status || _?.data?.success != _._)
                     throw `Failed to load app to user email and langs: ${((0, _._))(_).strErrorMsg}`;
                   const _ = new Map();
                   return (
@@ -4213,10 +4213,10 @@
               target: "_blank",
               children: [
                 (0, _.jsx)("div", {
-                  children: __webpack_require__.GetNameWithFallback("chunkid"),
+                  children: __webpack_require__.GetNameWithFallback(_.Bhc),
                 }),
                 (0, _.jsx)("img", {
-                  src: __webpack_require__.GetImageURL("capsule", 0),
+                  src: __webpack_require__.GetImageURL("capsule", _.Bhc),
                 }),
               ],
             })
@@ -4378,7 +4378,7 @@
                                   const _ = await _().post(_, _, {
                                     withCredentials: !0,
                                   });
-                                  1 != _.data.success
+                                  _.data.success != _._
                                     ? (console.error(
                                         "MeetSteamLanding failed " +
                                           _.data.success,
@@ -4687,7 +4687,7 @@
                         __webpack_require__({
                           ..._,
                           english_not_good: !0,
-                          preferred_language: (0, _._)(_._.LANGUAGE),
+                          preferred_language: (0, _.sfN)(_._.LANGUAGE),
                         }),
                       label: (0, _._)("#MeetSteam_CapabableEnglish_No"),
                     }),
@@ -4828,7 +4828,7 @@
                                 const _ = await _().post(_, _, {
                                   withCredentials: !0,
                                 });
-                                1 != _.data.success
+                                _.data.success != _._
                                   ? (console.error(
                                       "MeetSteamLanding failed " +
                                         _.data.success,
@@ -4978,7 +4978,7 @@
                       if (_) {
                         const _ = _.jsondata.meet_steam_groups.find(
                           (_) => _.group_id === _.group_id,
-                        ).localized_session_title[0];
+                        ).localized_session_title[_.Bhc];
                         _.registrations.length > 0 && (_.registrations += "|"),
                           (_.registrations += _);
                       }

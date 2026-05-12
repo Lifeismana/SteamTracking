@@ -389,7 +389,7 @@
     },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => v, KM: () => A, KT: () => k });
+      t.d(a, { B3: () => B, KM: () => h, KT: () => v });
       var o = t(41735),
         n = t.n(o),
         r = t(58632),
@@ -397,22 +397,23 @@
         i = t(90626),
         s = t(80902),
         _ = t(75233),
-        l = t(17720),
-        m = t(68797),
-        d = t(78327),
-        p = t(56545),
-        g = t(37735),
-        C = t(23809);
-      const u = "nicknames";
-      function A(e) {
-        const a = (0, C.KV)(),
+        l = t(37085),
+        m = t(17720),
+        d = t(68797),
+        p = t(78327),
+        g = t(56545),
+        C = t(42457),
+        u = t(23809);
+      const A = "nicknames";
+      function h(e) {
+        const a = (0, u.KV)(),
           { data: t, isLoading: o } = (0, s.I)({
-            queryKey: [u],
+            queryKey: [A],
             queryFn: async () => {
               const e = new Map();
-              if (d.iA.logged_in) {
-                const t = p.w.Init(g.dN),
-                  o = (await g.xt.GetNicknameList(a, t)).Body().toObject();
+              if (p.iA.logged_in) {
+                const t = g.w.Init(C.dN),
+                  o = (await C.xt.GetNicknameList(a, t)).Body().toObject();
                 o?.nicknames &&
                   o.nicknames.length > 0 &&
                   o.nicknames.forEach((a) => {
@@ -424,14 +425,14 @@
           });
         return t ? t.get(e) : null;
       }
-      const h = new (c())(
+      const f = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const a =
-                "community" == (0, d.yK)()
-                  ? d.TS.COMMUNITY_BASE_URL
-                  : d.TS.STORE_BASE_URL;
+                "community" == (0, p.yK)()
+                  ? p.TS.COMMUNITY_BASE_URL
+                  : p.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const t = { accountid: e[0], origin: self.origin },
                   o = await n().get(`${a}actions/ajaxgetavatarpersona`, {
@@ -440,10 +441,10 @@
                 if (
                   !o ||
                   200 != o.status ||
-                  1 != o.data?.success ||
+                  o.data?.success != l.R ||
                   !o.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(o).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, d.H))(o).strErrorMsg}`;
                 return [o.data.userinfo];
               }
               {
@@ -454,14 +455,14 @@
                 if (
                   !o ||
                   200 != o.status ||
-                  1 != o.data?.success ||
+                  o.data?.success != l.R ||
                   !o.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(o).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, d.H))(o).strErrorMsg}`;
                 const r = new Map();
                 return (
                   o.data.userinfos.forEach((e) =>
-                    r.set(new l.b(e.steamid).GetAccountID(), e),
+                    r.set(new m.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => r.get(e))
                 );
@@ -469,23 +470,23 @@
             })(e),
           { cache: !1 },
         ),
-        f = "avatarandpersonas";
-      function k(e) {
+        k = "avatarandpersonas";
+      function v(e) {
         const { data: a, isLoading: t } = (0, s.I)({
-          queryKey: [f, e],
-          queryFn: () => h.load(e),
+          queryKey: [k, e],
+          queryFn: () => f.load(e),
         });
         return [a, t];
       }
-      function v(e) {
+      function B(e) {
         const a = (0, _.jE)(),
           { data: t, isLoading: o } = (0, s.I)({
-            queryKey: [f, e],
+            queryKey: [k, e],
             queryFn: async () => {
-              const t = await h.loadMany(e);
+              const t = await f.loadMany(e);
               return (
                 t.forEach((e) => {
-                  const t = [f, new l.b(e.steamid).GetAccountID()];
+                  const t = [k, new m.b(e.steamid).GetAccountID()];
                   a.setQueryData(t, e);
                 }),
                 t
@@ -507,7 +508,7 @@
     },
     79194: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => p });
+      t.r(a), t.d(a, { default: () => g });
       var o = t(7850),
         n = t(80620),
         r = t(54926),
@@ -517,10 +518,11 @@
         _ = t(78327),
         l = t(32077),
         m = t(37220),
-        d = t(52038);
-      function p(e) {
+        d = t(52038),
+        p = t(45740);
+      function g(e) {
         const a = (0, m.b)(e.year),
-          t = k();
+          t = v();
         return (0, o.jsxs)("div", {
           className: (0, d.A)(l.MMFrame, a.MMFrame, a.MMOverride),
           onClick: t,
@@ -528,30 +530,30 @@
             (0, o.jsxs)("div", {
               className: l.HeaderCtn,
               children: [
-                (0, o.jsx)(A, {
+                (0, o.jsx)(h, {
                   baseClass: (0, d.A)(l.ReplayLogo, a.ReplayLogo),
                   accentClass: (0, d.A)(l.ReplayLogoAccent, a.ReplayLogoAccent),
                 }),
-                (0, o.jsx)(h, { year: e.year, theme: a }),
+                (0, o.jsx)(f, { year: e.year, theme: a }),
               ],
             }),
-            (0, o.jsx)(u, { className: (0, d.A)(l.SteamLogo, a.SteamLogo) }),
-            (0, o.jsx)(f, { theme: a }),
+            (0, o.jsx)(A, { className: (0, d.A)(l.SteamLogo, a.SteamLogo) }),
+            (0, o.jsx)(k, { theme: a }),
             (0, o.jsxs)("div", {
               className: (0, d.A)(l.Content, a.Content),
               children: [
-                (0, o.jsx)(g, { theme: a }),
+                (0, o.jsx)(C, { theme: a }),
                 (0, o.jsx)("div", {
                   className: (0, d.A)(l.Description, a.Description),
                   children: (0, s.we)("#YIR_MM_Generic_Desc"),
                 }),
-                (0, o.jsx)(C, { theme: a }),
+                (0, o.jsx)(u, { theme: a }),
               ],
             }),
           ],
         });
       }
-      function g(e) {
+      function C(e) {
         const { theme: a } = e,
           [t] = (0, i.KT)(_.iA.accountid);
         return t
@@ -577,16 +579,16 @@
             })
           : null;
       }
-      function C(e) {
+      function u(e) {
         const { theme: a } = e,
-          t = k();
+          t = v();
         return (0, o.jsx)(c.Z, {
           className: (0, d.A)(l.ViewPageButton, a.ViewPageButton),
           onActivate: t,
           children: (0, s.we)("#YIR_MM_Generic_Action"),
         });
       }
-      function u(e) {
+      function A(e) {
         return (0, o.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 476 600",
@@ -611,7 +613,7 @@
           ],
         });
       }
-      function A(e) {
+      function h(e) {
         const { baseClass: a, accentClass: t } = e;
         return (0, o.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -638,7 +640,7 @@
           ],
         });
       }
-      function h(e) {
+      function f(e) {
         const { year: a, theme: t } = e;
         return (0, o.jsx)("div", {
           className: (0, d.A)(l.Header, t.Header),
@@ -652,15 +654,15 @@
           ),
         });
       }
-      function f(e) {
+      function k(e) {
         return (0, o.jsx)("div", {
           className: (0, d.A)(l.Hashtag, e.theme.Hashtag),
           children: (0, s.we)("#YIR_MM_HashTag"),
         });
       }
-      function k() {
+      function v() {
         const e = (0, r.J)().GetTemplateVars();
-        return (0, n.WN)(e.linkurl, 1);
+        return (0, n.WN)(e.linkurl, p.cU.wY);
       }
     },
     37220: (e, a, t) => {

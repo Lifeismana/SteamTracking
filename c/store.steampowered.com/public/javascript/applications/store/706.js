@@ -671,6 +671,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         const _ = (0, _._)(),
@@ -685,13 +686,13 @@
             let _;
             if ((0, _._)(_)) {
               const [_, _] = await (0, _._)(_, _, _, _, _, _);
-              if (1 != _) throw `AddToAccountCart failed with ${_}`;
+              if (_ != _._) throw `AddToAccountCart failed with ${_}`;
               (_ = _.line_item_ids), (0, _._)(_, _, _.cart);
             } else {
               if (!(0, _._)(_)) throw "Invalid cart type";
               {
                 const [_, _] = await (0, _._)(_, _ ? [_] : void 0, _, _);
-                if (1 != _ || !_)
+                if (_ != _._ || !_)
                   throw `AddItemsToAnonymousCart failed with ${_}`;
                 {
                   const _ = _
@@ -740,20 +741,20 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = {
-          [_._.k_ECurrencyCodeInvalid]: {},
-          [_._.k_ECurrencyCodeUSD]: {
+          [_._]: {},
+          [_._]: {
             strSymbol: "$",
           },
-          [_._.k_ECurrencyCodeGBP]: {
+          [_._]: {
             strSymbol: "£",
           },
-          [_._.k_ECurrencyCodeEUR]: {
+          [_._]: {
             strSymbol: "€",
           },
-          [_._.k_ECurrencyCodeCHF]: {
+          [_._]: {
             strSymbol: "CHF",
           },
-          [_._.k_ECurrencyCodeRUB]: {
+          [_._]: {
             strSymbol: "руб.",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
@@ -761,227 +762,227 @@
             strDecimalSymbol: ",",
             strThousandsSeparator: "",
           },
-          [_._.k_ECurrencyCodePLN]: {
+          [_._]: {
             strSymbol: "zł",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeBRL]: {
+          [_._]: {
             strSymbol: "R$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeJPY]: {
+          [_._]: {
             strSymbol: "¥",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeNOK]: {
+          [_._]: {
             strSymbol: "kr",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeIDR]: {
+          [_._]: {
             strSymbol: "Rp",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeMYR]: {
+          [_._]: {
             strSymbol: "RM",
           },
-          [_._.k_ECurrencyCodePHP]: {
+          [_._]: {
             strSymbol: "P",
           },
-          [_._.k_ECurrencyCodeSGD]: {
+          [_._]: {
             strSymbol: "S$",
           },
-          [_._.k_ECurrencyCodeTHB]: {
+          [_._]: {
             strSymbol: "฿",
           },
-          [_._.k_ECurrencyCodeVND]: {
+          [_._]: {
             strSymbol: "₫",
             bWholeUnitsOnly: !0,
             bSuffixSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeKRW]: {
+          [_._]: {
             strSymbol: "₩",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeTRY]: {
+          [_._]: {
             strSymbol: "TL",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeUAH]: {
+          [_._]: {
             strSymbol: "₴",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeMXN]: {
+          [_._]: {
             strSymbol: "Mex$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCAD]: {
+          [_._]: {
             strSymbol: "CDN$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeAUD]: {
+          [_._]: {
             strSymbol: "A$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeNZD]: {
+          [_._]: {
             strSymbol: "NZ$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCNY]: {
+          [_._]: {
             strSymbol: "¥",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeINR]: {
+          [_._]: {
             strSymbol: "₹",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
           },
-          [_._.k_ECurrencyCodeCLP]: {
+          [_._]: {
             strSymbol: "CLP$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodePEN]: {
+          [_._]: {
             strSymbol: "S/.",
           },
-          [_._.k_ECurrencyCodeCOP]: {
+          [_._]: {
             strSymbol: "COL$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeZAR]: {
+          [_._]: {
             strSymbol: "R",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeHKD]: {
+          [_._]: {
             strSymbol: "HK$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeTWD]: {
+          [_._]: {
             strSymbol: "NT$",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeSAR]: {
+          [_._]: {
             strSymbol: "SR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeAED]: {
+          [_._]: {
             strSymbol: "AED",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeSEK]: {
+          [_._]: {
             strSymbol: "kr",
             bSpaceForSymbol: !0,
             bSuffixSymbol: !0,
           },
-          [_._.k_ECurrencyCodeARS]: {
+          [_._]: {
             strSymbol: "ARS$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeILS]: {
+          [_._]: {
             strSymbol: "₪",
           },
-          [_._.k_ECurrencyCodeBYN]: {
+          [_._]: {
             strSymbol: "Br",
           },
-          [_._.k_ECurrencyCodeKZT]: {
+          [_._]: {
             strSymbol: "₸",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeKWD]: {
+          [_._]: {
             strSymbol: "KD",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeQAR]: {
+          [_._]: {
             strSymbol: "QR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCRC]: {
+          [_._]: {
             strSymbol: "₡",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeUYU]: {
+          [_._]: {
             strSymbol: "$U",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeBGN]: {
+          [_._]: {
             strSymbol: "лв",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeHRK]: {
+          [_._]: {
             strSymbol: "kn",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCZK]: {
+          [_._]: {
             strSymbol: "Kč",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeDKK]: {
+          [_._]: {
             strSymbol: "kr.",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeHUF]: {
+          [_._]: {
             strSymbol: "Ft",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeRON]: {
+          [_._]: {
             strSymbol: "lei",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeMax]: {},
+          [_._]: {},
         },
         _ = {
           strSymbol: "",
           bSuffixSymbol: !1,
           bSpaceForSymbol: !1,
           bWholeUnitsOnly: !1,
-          eCurrency: _._.k_ECurrencyCodeInvalid,
+          eCurrency: _._,
           strDecimalSymbol: ".",
           strThousandsSeparator: ",",
         };
@@ -1040,25 +1041,25 @@
       function _(_) {
         switch (_?.toUpperCase()) {
           case "AE":
-            return _._.k_ECurrencyCodeAED;
+            return _._;
           case "AU":
-            return _._.k_ECurrencyCodeAUD;
+            return _._;
           case "BR":
-            return _._.k_ECurrencyCodeBRL;
+            return _._;
           case "CA":
-            return _._.k_ECurrencyCodeCAD;
+            return _._;
           case "CH":
           case "LI":
-            return _._.k_ECurrencyCodeCHF;
+            return _._;
           case "CL":
-            return _._.k_ECurrencyCodeCLP;
+            return _._;
           case "CN":
           case "XC":
-            return _._.k_ECurrencyCodeCNY;
+            return _._;
           case "CO":
-            return _._.k_ECurrencyCodeCOP;
+            return _._;
           case "CR":
-            return _._.k_ECurrencyCodeCRC;
+            return _._;
           case "AD":
           case "AL":
           case "AT":
@@ -1104,57 +1105,57 @@
           case "SK":
           case "SM":
           case "VA":
-            return _._.k_ECurrencyCodeEUR;
+            return _._;
           case "GB":
           case "GG":
           case "GS":
           case "IM":
           case "JE":
-            return _._.k_ECurrencyCodeGBP;
+            return _._;
           case "HK":
-            return _._.k_ECurrencyCodeHKD;
+            return _._;
           case "ID":
-            return _._.k_ECurrencyCodeIDR;
+            return _._;
           case "IL":
-            return _._.k_ECurrencyCodeILS;
+            return _._;
           case "IN":
-            return _._.k_ECurrencyCodeINR;
+            return _._;
           case "JP":
-            return _._.k_ECurrencyCodeJPY;
+            return _._;
           case "KR":
-            return _._.k_ECurrencyCodeKRW;
+            return _._;
           case "KW":
-            return _._.k_ECurrencyCodeKWD;
+            return _._;
           case "KZ":
-            return _._.k_ECurrencyCodeKZT;
+            return _._;
           case "MX":
-            return _._.k_ECurrencyCodeMXN;
+            return _._;
           case "MY":
-            return _._.k_ECurrencyCodeMYR;
+            return _._;
           case "NO":
-            return _._.k_ECurrencyCodeNOK;
+            return _._;
           case "NZ":
-            return _._.k_ECurrencyCodeNZD;
+            return _._;
           case "PE":
-            return _._.k_ECurrencyCodePEN;
+            return _._;
           case "PH":
-            return _._.k_ECurrencyCodePHP;
+            return _._;
           case "PL":
-            return _._.k_ECurrencyCodePLN;
+            return _._;
           case "QA":
-            return _._.k_ECurrencyCodeQAR;
+            return _._;
           case "RU":
-            return _._.k_ECurrencyCodeRUB;
+            return _._;
           case "SA":
-            return _._.k_ECurrencyCodeSAR;
+            return _._;
           case "SG":
-            return _._.k_ECurrencyCodeSGD;
+            return _._;
           case "TH":
-            return _._.k_ECurrencyCodeTHB;
+            return _._;
           case "TW":
-            return _._.k_ECurrencyCodeTWD;
+            return _._;
           case "UA":
-            return _._.k_ECurrencyCodeUAH;
+            return _._;
           case "AF":
           case "AG":
           case "AI":
@@ -1311,79 +1312,120 @@
           case "YT":
           case "ZM":
           case "ZW":
-            return _._.k_ECurrencyCodeUSD;
+            return _._;
           case "UY":
-            return _._.k_ECurrencyCodeUYU;
+            return _._;
           case "VN":
-            return _._.k_ECurrencyCodeVND;
+            return _._;
           case "ZA":
-            return _._.k_ECurrencyCodeZAR;
+            return _._;
           default:
-            return (
-              console.assert(!1, `Unhandled country code: ${_}`),
-              _._.k_ECurrencyCodeUSD
-            );
+            return console.assert(!1, `Unhandled country code: ${_}`), _._;
         }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _;
       __webpack_require__._(module_exports, {
         _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
-            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
-            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
-            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
-            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
-            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
-            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
-            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
-            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
-            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
-            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
-            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
-            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
-            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
-            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
-            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
-            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
-            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
-            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
-            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
-            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
-            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
-            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
-            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
-            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
-            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
-            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
-            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
-            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
-            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
-            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
-            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
-            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
-            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
-            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
-            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
-            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
-            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
-            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
-            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
-            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
-            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
-            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
-            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
-            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
-            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
-            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
-            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
-            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(_ || (_ = {}));
-      _.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS;
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 8,
+        _ = 9,
+        _ = 10,
+        _ = 11,
+        _ = 12,
+        _ = 13,
+        _ = 14,
+        _ = 15,
+        _ = 16,
+        _ = 17,
+        _ = 18,
+        _ = 19,
+        _ = 20,
+        _ = 21,
+        _ = 22,
+        _ = 23,
+        _ = 24,
+        _ = 25,
+        _ = 26,
+        _ = 27,
+        _ = 28,
+        _ = 29,
+        _ = 30,
+        _ = 31,
+        _ = 32,
+        _ = 33,
+        _ = 34,
+        _ = 35,
+        _ = 36,
+        _ = 37,
+        _ = 38,
+        _ = 39,
+        _ = 40,
+        _ = 41,
+        _ = 42,
+        _ = 43,
+        _ = 44,
+        _ = 45,
+        _ = 46,
+        _ = 47,
+        _ = 48;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1632,7 +1674,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1647,7 +1691,7 @@
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           _ = _ && "appid" in _ ? _.appid : void 0,
           _ = (0, _._)(_),
-          { mutateAsync: _ } = (function (_, _, _, _ = 0) {
+          { mutateAsync: _ } = (function (_, _, _, _ = _._._) {
             const _ = (0, _._)(),
               _ = _._.accountid;
             return (0, _._)({
@@ -1794,11 +1838,11 @@
           });
         const _ = _.item_type,
           _ = _.type;
-        return 2 == _ || 1 == _
+        return _ == _._._ || _ == _._._
           ? (0, _.jsx)(_, {
               includeAppIDs: _.included_appids,
             })
-          : (1 == _ || 12 == _) &&
+          : (_ == _._._ || _ == _._._) &&
               _.related_items &&
               _.related_items.parent_appid
             ? (0, _.jsx)(_, {
@@ -1960,6 +2004,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1989,7 +2034,8 @@
           onMouseLeave: () => _(!1),
           onTouchStart: () => _(!1),
           onKeyDown: (_) => {
-            27 == _.keyCode && (_(!1), _.preventDefault(), _.stopPropagation());
+            _.keyCode == _._ &&
+              (_(!1), _.preventDefault(), _.stopPropagation());
           },
           children: [
             _ &&
@@ -2157,7 +2203,7 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = !_ && !_ && !_,
-          _ = _ && 0 == _.item_type;
+          _ = _ && _.item_type == _._._;
         return (0, _.jsxs)("div", {
           className: _().BottomShelf,
           style: {
@@ -2367,7 +2413,7 @@
           });
         let _ = _;
         _ &&
-          1 == _.item_type &&
+          _.item_type == _._._ &&
           1 == _.included_appids?.length &&
           (_ = {
             appid: _.included_appids[0],
@@ -2417,6 +2463,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       async function _(_) {
         const _ = await fetch(_, {
@@ -2424,7 +2471,7 @@
         });
         if (!_._) throw new Error(`Server returned ${_.status}`);
         const _ = await _.json();
-        return 1 != _.success ? null : _;
+        return _.success != _._ ? null : _;
       }
       function _() {
         return "undefined" != typeof window && "undefined" != typeof self
@@ -2484,7 +2531,7 @@
                 });
               if (!_._) throw new Error(`Server returned ${_.status}`);
               const _ = await _.json();
-              return 1 != _.success ? null : _;
+              return _.success != _._ ? null : _;
             })(_);
             if (_) {
               const {
@@ -2569,6 +2616,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2579,7 +2627,7 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_ || !_) return null;
-        if (1 == _.type && !(0, _._)(_)) return null;
+        if (_.type == _._._ && !(0, _._)(_)) return null;
         let _ = _.summary_unfiltered || _.summary_filtered,
           _ = "#ReviewScore_UserReviewScoreAria",
           _ = !1;
@@ -2596,9 +2644,9 @@
           return null;
         let _ = _().ReviewScoreNone;
         _ =
-          _.review_score > 0 && _.review_score < 5
+          _.review_score > 0 && _.review_score < _._._
             ? _().ReviewScoreLow
-            : 5 == _.review_score
+            : _.review_score == _._._
               ? _().ReviewScoreMixed
               : _().ReviewScoreHigh;
         const _ = `${_._.STORE_BASE_URL}app/${_.appid}/#app_reviews_hash`,
@@ -2641,19 +2689,19 @@
             ],
           });
         let _ = "#ReviewScore_PercentPositive";
-        if (2 === _.item_type) _ = "#ReviewScore_PercentPositive_bundle";
-        else if (0 === _.item_type)
+        if (_.item_type === _._._) _ = "#ReviewScore_PercentPositive_bundle";
+        else if (_.item_type === _._._)
           switch (_.type) {
-            case 6:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_software";
               break;
-            case 7:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_video";
               break;
-            case 10:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_hardware";
               break;
-            case 8:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_series";
           }
         return (0, _.jsx)(_._, {
@@ -2696,6 +2744,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -2703,7 +2752,9 @@
           { data: _ } = (0, _._)(_),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() =>
-            _ && (1 == _.type || 12 == _.type) && _.related_items?.parent_appid
+            _ &&
+            (_.type == _._._ || _.type == _._._) &&
+            _.related_items?.parent_appid
               ? _.related_items?.parent_appid
               : _ && "appid" in _
                 ? _.appid
@@ -2718,7 +2769,7 @@
         (0, _.useEffect)(() => {
           _ &&
             "appid" in _ &&
-            (1 == _?.type || 12 == _?.type) &&
+            (_?.type == _._._ || _?.type == _._._) &&
             _(_.related_items?.parent_appid || _.appid);
         }, [_, _]);
         const _ = (0, _.useCallback)(
@@ -2733,7 +2784,7 @@
           },
           [_.token.reason, _, _],
         );
-        return _ && 10 != _?.type
+        return _ && _?.type != _._._
           ? null
           : (0, _.jsxs)(_._, {
               className: (0, _._)(_().WishlistButton, _),
@@ -2840,7 +2891,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2922,13 +2975,13 @@
       }
       function _(_) {
         switch (_) {
-          case 1:
+          case _.g0U:
             return (0, _._)("#Library_DeviceType_PC");
-          case 544:
+          case _.LS$:
             return (0, _._)("#Library_DeviceType_SteamDeck");
-          case 546:
+          case _.bOm:
             return (0, _._)("#Library_DeviceType_SteamMachine");
-          case 5001:
+          case _.jYC:
             return (0, _._)("#Library_DeviceType_SteamFrame");
           default:
             return;
@@ -3022,7 +3075,7 @@
         const _ = _.data?.sessions?.filter((_) => {
           switch (_.device_type) {
             default:
-            case 1:
+            case _.g0U:
               {
                 if (!_.os_type) return !1;
                 const _ = (0, _._)(_.os_type);
@@ -3031,7 +3084,7 @@
                 if (_.steamos_linux && _.includes("Linux")) return !0;
               }
               break;
-            case 544:
+            case _.LS$:
               return _.windows || _.steamos_linux;
           }
           return !1;
@@ -3140,7 +3193,7 @@
               ? _.related_items.demo_appid
               : [],
           _ = _.length > 0,
-          _ = _ || 1 === _.type,
+          _ = _ || _.type === _._._,
           _ = _
             ? _._.Localize("#Sale_InstallDemo_ttip", _.name || "")
             : _
@@ -3148,7 +3201,7 @@
               : _._.Localize("#Loading");
         if ((0, _._)()) {
           if (_ && _) {
-            const _ = 1 === _.type ? _.appid : _[0];
+            const _ = _.type === _._._ ? _.appid : _[0];
             return (0, _.jsx)("div", {
               className: _,
               children: (0, _.jsx)(_, {
@@ -3168,7 +3221,7 @@
               onClick: (_) => {
                 _.preventDefault(),
                   _.stopPropagation(),
-                  _ && (0, _._)(1 === _.type ? _.appid : _[0], _.name);
+                  _ && (0, _._)(_.type === _._._ ? _.appid : _[0], _.name);
               },
               className: (0, _._)(_, _().DemoButton, !_ && _().DisabledButton),
               children: _
@@ -3273,6 +3326,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3336,7 +3390,7 @@
         }
         if (_.is_free) {
           if (!_.is_free_temporarily)
-            return 0 == _.item_type && 1 == _.type
+            return _.item_type == _._._ && _.type == _._._
               ? _
                 ? null
                 : (0, _.jsxs)("div", {
@@ -3382,7 +3436,7 @@
         }
         if (!_ || !_.formatted_final_price) return null;
         let _ = _.discount_pct || 0,
-          _ = _ || 2 != _.item_type ? 0 : _.bundle_discount_pct || 0,
+          _ = _ || _.item_type != _._._ ? 0 : _.bundle_discount_pct || 0,
           _ = _.formatted_final_price;
         if (_) {
           const _ = (0, _._)(_._.country_code.toUpperCase()),
@@ -3595,7 +3649,7 @@
         const { tagid: _, className: _ } = _,
           _ = (0, _._)(_, _._.LANGUAGE);
         if (!_) return null;
-        const _ = (0, _._)((0, _._)(_._.LANGUAGE)),
+        const _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return (0, _.jsx)(_._, {
           url: _,
@@ -3605,7 +3659,7 @@
       }
       function _(_) {
         const { tagid: _, className: _, bNoStoreLinks: _ } = _,
-          _ = (0, _._)((0, _._)(_._.LANGUAGE)),
+          _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
           _ = (0, _._)(_, _._.LANGUAGE),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return _
@@ -3694,6 +3748,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3714,7 +3769,7 @@
         if (0 === _.length)
           return _ &&
             _.related_items?.parent_appid &&
-            (1 == _.type || 12 == _.type)
+            (_.type == _._._ || _.type == _._._)
             ? (0, _.jsx)(_, {
                 ..._,
                 _: {
@@ -3924,12 +3979,17 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { data: _ } = (0, _._)(_);
         return (0, _.useMemo)(
           () =>
-            _ ? (0 == _.item_type ? [_.appid] : _.included_appids || []) : [],
+            _
+              ? _.item_type == _._._
+                ? [_.appid]
+                : _.included_appids || []
+              : [],
           [_],
         );
       }
@@ -4901,7 +4961,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4954,7 +5018,7 @@
               params: _,
               withCredentials: !0,
             });
-            if (200 == _?.status && 1 == _.data?.success && _.data?.results)
+            if (200 == _?.status && _.data?.success == _._ && _.data?.results)
               return this.AddCompatabilityResult(_.data.results), !0;
             _ = (0, _._)(_);
           } catch (_) {
@@ -5017,8 +5081,8 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           [_, _, _] = (0, _._)();
-        if (!_ || !_ || 0 !== _.item_type) return null;
-        const _ = _.steam_deck_compat_category || 0;
+        if (!_ || !_ || _.item_type !== _._._) return null;
+        const _ = _.steam_deck_compat_category || _._;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().LearnMoreCtn, "LearnMoreCtn"),
           children: [
@@ -5118,22 +5182,22 @@
       function _(_) {
         const { category: _ } = _;
         switch (_) {
-          case 3:
+          case _._:
             return (0, _.jsx)(_.o5Q, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 2:
+          case _._:
             return (0, _.jsx)(_.aVR, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 1:
+          case _._:
             return (0, _.jsx)(_.jIP, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 0:
+          case _._:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -5144,17 +5208,17 @@
       function _(_) {
         const { category: _ } = _;
         switch (_) {
-          case 2:
+          case _._:
             return (0, _.jsx)(_.ZjT, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 1:
+          case _._:
             return (0, _.jsx)(_.jIP, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 0:
+          case _._:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -5164,7 +5228,7 @@
       }
       function _(_) {
         const { _: _, category: _, appName: _, descriptionToken: _ } = _;
-        if (0 == _)
+        if (_ == _._)
           return (0, _.jsx)("div", {
             _: _,
             className: _().CompatibilityDetailRatingSummary,
@@ -5180,15 +5244,15 @@
         let _ = "",
           _ = null;
         switch (_) {
-          case 3:
+          case _._:
             (_ = "#SteamDeckVerified_DescriptionHeader_Verified"),
               (_ = _().Verified);
             break;
-          case 2:
+          case _._:
             (_ = "#SteamDeckVerified_DescriptionHeader_Playable"),
               (_ = _().Playable);
             break;
-          case 1:
+          case _._:
             (_ = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (_ = _().Unsupported);
         }
@@ -5218,7 +5282,7 @@
       }
       function _(_) {
         const { _: _, category: _, appName: _, descriptionToken: _ } = _;
-        if (0 == _)
+        if (_ == _._)
           return (0, _.jsx)("div", {
             className: _().CompatibilityDetailRatingSummary,
             children: _
@@ -5233,11 +5297,11 @@
         let _ = "",
           _ = null;
         switch (_) {
-          case 2:
+          case _._:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
               (_ = _().Compatible);
             break;
-          case 1:
+          case _._:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
               (_ = _().Unsupported);
         }
@@ -5267,11 +5331,11 @@
       }
       function _(_) {
         switch (_) {
-          case 3:
+          case _._:
             return "#SteamDeckVerified_Category_Verified";
-          case 2:
+          case _._:
             return "#SteamDeckVerified_Category_Playable";
-          case 1:
+          case _._:
             return "#SteamDeckVerified_Category_Unsupported";
           default:
             return "#SteamDeckVerified_Category_Unknown";
@@ -5279,9 +5343,9 @@
       }
       function _(_) {
         switch (_) {
-          case 2:
+          case _._:
             return "#SteamOSCompatibility_Category_Compatible";
-          case 1:
+          case _._:
             return "#SteamOSCompatibility_Category_Unsupported";
           default:
             return "#SteamOSCompatibility_Category_Unknown";
@@ -5294,6 +5358,8 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5469,12 +5535,12 @@
             ],
             queryFn: () =>
               (async function (_, _) {
-                if (!_ || 1 !== _.item_type || 10 !== _.type) return _;
+                if (!_ || _.item_type !== _._._ || _.type !== _._._) return _;
                 const _ = _._.Init(_);
                 __webpack_require__.Body().set_packageid(_._ || 0),
                   __webpack_require__.Body().set_country_code(_._.country_code);
                 const _ = await _.CheckInventoryAvailableByPackage(_, _);
-                if (1 !== _.GetEResult())
+                if (_.GetEResult() !== _._)
                   throw (
                     (console.error(
                       "Received error from FetchPhysicalGoodsStock",
@@ -5486,7 +5552,7 @@
                   );
                 return _.Body().toObject();
               })(_, _),
-            enabled: Boolean(_ && 10 === _.type),
+            enabled: Boolean(_ && _.type === _._._),
           });
         return _.isLoading ? null : _.data;
       }
@@ -5510,18 +5576,18 @@
             if (_) {
               let _ = _.appid;
               _.related_items?.parent_appid &&
-                11 != _.type &&
+                _.type != _._._ &&
                 (_ = _.related_items.parent_appid),
                 (0, _._)(window, `steam://run/${_}`);
             }
           }, [_]);
-        if (!_ || !_ || !_ || 8 == _.type) return null;
+        if (!_ || !_ || !_ || _.type == _._._) return null;
         const _ =
           _.is_free ||
           (null != _.final_price_in_cents && "0" == _.final_price_in_cents) ||
           (_.discount_pct && _.discount_pct >= 100);
-        if (1 == _.item_type)
-          if (10 == _.type) {
+        if (_.item_type == _._._)
+          if (_.type == _._._) {
             if (!_)
               return (0, _.jsx)(_._, {
                 size: "small",
@@ -5536,9 +5602,9 @@
               });
           } else if (_ && _.included_appids && _.included_appids.length > 1)
             return null;
-        if (0 == _.item_type) {
+        if (_.item_type == _._._) {
           if (_.is_coming_soon && !_.packageid) return null;
-          if (_ && 10 === _.type) return null;
+          if (_ && _.type === _._._) return null;
           if (!_ && _.is_free_to_keep) {
             if (_._.IN_CLIENT || "store" != (0, _._)()) {
               const _ = `${_._.IN_CLIENT ? "steam://openurl/" : ""}${_}`;
@@ -7434,10 +7500,18 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 3;
+      var _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4;
       var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7684,13 +7758,13 @@
           (_.onOptionsButton = _),
           (_ = (0, _.jsx)(_, {
             blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: 1,
+            eHWCompatibiltyDisplay: _._,
           })),
           (_ = (0, _.jsx)(_, {
             blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: 2,
+            eHWCompatibiltyDisplay: _._,
           })));
-        const _ = 2 == _;
+        const _ = _ == _._;
         if (!_.resolved_items?.length) {
           const _ = _
               ? (0, _._)(
@@ -7859,14 +7933,14 @@
           _ =
             _.steamos_resolved_items &&
             -1 !==
-              _.steamos_resolved_items?.findIndex((_) => 1 == _.display_type),
+              _.steamos_resolved_items?.findIndex((_) => _.display_type == _),
           _ = (0, _.jsx)(_._, {
             _: _,
-            category: _.steamos_resolved_category ?? 0,
+            category: _.steamos_resolved_category ?? _._,
             appName: _,
           }),
           _ = (0, _.jsx)(_._, {
-            category: _.steamos_resolved_category ?? 0,
+            category: _.steamos_resolved_category ?? _._,
           }),
           _ = _.steamos_resolved_items && _.steamos_resolved_items?.length > 0;
         return (0, _.jsx)(_, {
@@ -7885,7 +7959,7 @@
                 }),
               _.steamos_resolved_items &&
                 _.steamos_resolved_items
-                  .filter((_) => 1 != _.display_type)
+                  .filter((_) => _.display_type != _)
                   .map((_) =>
                     (0, _.jsxs)(
                       "div",
@@ -7907,7 +7981,7 @@
                 (0, _.jsx)("div", {
                   className: _().CompatibilityNotes,
                   children: _.steamos_resolved_items
-                    ?.filter((_) => 1 == _.display_type)
+                    ?.filter((_) => _.display_type == _)
                     .map((_) =>
                       (0, _.jsxs)(
                         "div",
@@ -7932,7 +8006,7 @@
       }
       function _(_) {
         const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
-          _ = -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type),
+          _ = -1 !== _.resolved_items?.findIndex((_) => _.display_type == _),
           _ = (0, _.jsx)(_._, {
             _: _,
             category: _.resolved_category,
@@ -7958,7 +8032,7 @@
                 }),
               _.resolved_items &&
                 _.resolved_items
-                  .filter((_) => 1 !== _.display_type)
+                  .filter((_) => _.display_type !== _)
                   .map((_) =>
                     (0, _.jsxs)(
                       "div",
@@ -7981,7 +8055,7 @@
                 (0, _.jsx)("div", {
                   className: _().CompatibilityNotes,
                   children: _.resolved_items
-                    .filter((_) => 1 == _.display_type)
+                    .filter((_) => _.display_type == _)
                     .map((_) =>
                       (0, _.jsx)(
                         "div",
@@ -8006,7 +8080,7 @@
         if (!_) return null;
         if (_) {
           const _ =
-            2 == _
+            _ == _._
               ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog")
               : (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
           return (0, _.jsxs)("div", {
@@ -8024,7 +8098,7 @@
           });
         }
         const _ =
-          2 == _
+          _ == _._
             ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
             : (0, _._)(
                 "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
@@ -8044,23 +8118,23 @@
       function _(_) {
         const { displaytype: _ } = _;
         switch (_) {
-          case 4:
+          case _:
             return (0, _.jsx)(_.o5Q, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 3:
+          case _:
             return (0, _.jsx)(_.aVR, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 2:
+          case _:
             return (0, _.jsx)(_.jIP, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 0:
+          case _:
             return (0, _.jsx)(_.WX$, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 1:
+          case _:
             return (
               "dev" == _._.WEB_UNIVERSE &&
                 console.error(
@@ -8073,11 +8147,11 @@
       function _(_) {
         const { displaytype: _ } = _;
         switch (_) {
-          case 3:
+          case _:
             return (0, _.jsx)(_.ZjT, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 1:
+          case _:
             return (0, _.jsx)(_.bcZ, {
               className: _().CompatibilityDetailsResultIcon,
             });

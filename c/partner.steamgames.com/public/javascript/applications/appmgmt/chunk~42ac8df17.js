@@ -141,56 +141,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
-        WidePageCtn: "uHgjQHyNygSKukDngfNQO",
-        PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
-        PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
-        Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
-        PageSubTitle: "okuL_y7hLnZUD5P4ACqUN",
-        ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
-        ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
-        SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
-        ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
-        LeftCol: "_1AqrivbzwCs57BXiugqpeA",
-        ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
-        Blue: "J7iYYml2Jf_PcaACW1hEr",
-        ColHeaderImg: "_1VFkxNTzCFO2uCcle_nAJk",
-        Bright: "_3ZqV0CAeVnd0rruF6TVKQz",
-        ActionBar: "ilVbVkb6hkO_s6E_kiiSd",
-        SectionIntroRequirements: "_3TKZIwYk2f5dd3MR5909Uz",
-        warning: "_2HiNh3o5cgMEbzFKYBUjAy",
-        IntroText: "_1WWL_09T_-Jq--HSJRhKtH",
-        RightCol: "_3kaQhRnhNh_awrnNX90rui",
-        NoSticky: "JQNb8bHftBTAYpCXTx52v",
-        SmallText: "_3ltg5fPzb-WsRyzI41vAv_",
-        Button: "_3L1DFwM1lpsRwZ-AaMx9ie",
-        TitleSmall: "_3DyXNd5UgceEG9fcCKinvw",
-        DefaultSectionCtn: "Pupnokb21glaosRjxBjAm",
-        Indent: "_7PV326-4cpZdmTCEdgC2l",
-        DashLink: "_2NH_FlbsKA0jN2jPG4Rn9A",
-        FlexRow: "_3rz6jzCvvOGt8N0XaPIdzg",
-        MarginBottom: "_2Bw2oyBgXlb8EZ4HHbE8Ye",
-        UploadedImageDisplayCtn: "_1_JRuj6yAJovBDZE8IMSob",
-        UploaderLeftCol: "_3KQhw0sa1q_h62e4yaFgbw",
-        MarketingMessage: "_2pCvRF734J5gLxMMHW7LIb",
-        BannerPreview: "_1x4unTauuLCbMkThgRpsXc",
-        UploaderRightCol: "_3jcvvtnLhiQBvAebO2eI4Z",
-        LangCountTitle: "_1tPNH9hTWnMUsbdob5i93a",
-        LangSelectCtn: "_3tHzJ-eCQIlg-4XjTN0bNU",
-        UploaderImgLang: "_1jJThBArHevzcJ93kx4WhR",
-        LangSelected: "_1sUrnQsBw06ZqTIbMeE9tT",
-        DeleteAll: "rYuknI3K1VFknv90GNUTc",
-        EditCtn: "_1g5X3AT4HwD0ya2e2t2WTO",
-        StatusBtn: "_1MGZHxsnyQPrLXwl-8Fium",
-        HalfWidthBtnCtn: "fGJIpDJEvYkHmhWFP39BX",
-        StatReportCtn: "_1J3v1KGOhdSGz77c2rLxWy",
-        Stat: "_3OYQbVCq1yBuEx1XcDzG06",
-        BigStat: "lYYwDDss378Sm0FKPBxPh",
-        IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         AddToCartAnchorCtn: "_2ZqO4e00c6-Fr4hJvTJsAu",
         Action: "yoe6d_43t3I6-mjbZGkLs",
         ActionOutOfStock: "_3XwnF5hpyOwvxFT_v7PMhS",
@@ -509,26 +459,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
-      const _ = 39049601,
-        _ = 41316928,
-        _ = 4,
-        _ = 20,
-        _ = 45559995,
-        _ = 45902273,
-        _ = [4145017, 35143931, _, _, _];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
+      __webpack_require__("chunkid");
       const _ = {
           name: "cookieSettings",
           options: {
@@ -580,13 +512,488 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
-      const _ =
-          /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\s"<>\[\],.ː:])?)/,
-        _ = /^(steam|ftp|https?):\/\//;
-      function _(_) {
-        return _.test(_) ? _ : "https://" + _;
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 0,
+        _ = 1;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.version || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  version: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  preference_state: {
+                    _: 2,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  content_customization: {
+                    _: 3,
+                    _: _,
+                  },
+                  valve_analytics: {
+                    _: 4,
+                    _: _,
+                  },
+                  third_party_analytics: {
+                    _: 5,
+                    _: _,
+                  },
+                  third_party_content: {
+                    _: 6,
+                    _: _,
+                  },
+                  utm_enabled: {
+                    _: 7,
+                    _: !0,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences";
+        }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.recentapps || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  recentapps: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ContentCustomization";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.product_impressions_tracking || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  product_impressions_tracking: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.google_analytics || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  google_analytics: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.youtube || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  youtube: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  vimeo: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  sketchfab: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  twitter: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacy_GetCookiePreferences_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.preferences || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  preferences: {
+                    _: 1,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacy_GetCookiePreferences_Response";
+        }
+      }
+      var _;
+      !(function (_) {
+        _.GetCookiePreferences = function (_, _) {
+          return _.SendMsg(
+            "AccountPrivacy.GetCookiePreferences#1",
+            (0, _._)(_, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
+        };
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1966,666 +2373,6 @@
           return "CartCoupon";
         }
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  accept: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_RespondToClanInvite_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_RespondToClanInvite_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  rtime_oldest_date: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetDraftAndRecentPartnerEventSnippet_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.snippets || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  snippets: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetDraftAndRecentPartnerEventSnippet_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  announcement_gid: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  hidden: {
-                    _: 3,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  published: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  rtime32_start_time: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  event_name: {
-                    _: 6,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  event_type: {
-                    _: 7,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetDraftAndRecentPartnerEventSnippet_Response_CEventSnippetData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.requests || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  requests: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  cursor: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  count: {
-                    _: 3,
-                    _: 100,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  start_build_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  end_build_id: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  branch: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Request_PatchNoteRange";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.matches || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  matches: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  num_total_results: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  next_cursor: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  build_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  branch: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  clan_event_gid: {
-                    _: 4,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  clan_account_id: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Response_PatchNotesDesc";
-        }
-      }
-      !(function (_) {
-        (_.RespondToClanInvite = function (_, _) {
-          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-          });
-        }),
-          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _) {
-            return _.SendMsg(
-              "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetPartnerEventsByBuildIDRange = function (_, _) {
-            return _.SendMsg(
-              "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          });
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4377,7 +4124,211 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+        });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStorePreferences_GetIgnoreList_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.ignore_list || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  ignore_list: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStorePreferences_GetIgnoreList_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  packageid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  reason: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStorePreferences_GetIgnoreList_Response_IgnoreListEntry";
+        }
+      }
+      var _;
+      !(function (_) {
+        _.GetIgnoreList = function (_, _) {
+          return _.SendMsg(
+            "StorePreferences.GetIgnoreList#1",
+            (0, _._)(_, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
+        };
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
@@ -4444,10 +4395,6 @@
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _ } = _;
         return (0, _.jsx)(_._, {
@@ -4490,6 +4437,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       async function _(_) {
         const _ = await fetch(_, {
@@ -4497,7 +4446,7 @@
         });
         if (!_._) throw new Error(`Server returned ${_.status}`);
         const _ = await _.json();
-        return 1 != _.success ? null : _;
+        return _.success != _._ ? null : _;
       }
       function _() {
         return "undefined" != typeof window && "undefined" != typeof self
@@ -4557,7 +4506,7 @@
                 });
               if (!_._) throw new Error(`Server returned ${_.status}`);
               const _ = await _.json();
-              return 1 != _.success ? null : _;
+              return _.success != _._ ? null : _;
             })(_);
             if (_) {
               const {
@@ -4640,6 +4589,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, snr: _, classOverride: _ } = _,
@@ -4648,7 +4598,7 @@
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           _ = _ && "appid" in _ ? _.appid : void 0,
           _ = (0, _._)(_),
-          { mutateAsync: _ } = (function (_, _, _, _ = 0) {
+          { mutateAsync: _ } = (function (_, _, _, _ = _._._) {
             const _ = (0, _._)(),
               _ = _._.accountid;
             return (0, _._)({
@@ -4794,11 +4744,11 @@
           });
         const _ = _.item_type,
           _ = _.type;
-        return 2 == _ || 1 == _
+        return _ == _._._ || _ == _._._
           ? (0, _.jsx)(_, {
               includeAppIDs: _.included_appids,
             })
-          : (1 == _ || 12 == _) &&
+          : (_ == _._._ || _ == _._._) &&
               _.related_items &&
               _.related_items.parent_appid
             ? (0, _.jsx)(_, {
@@ -5007,7 +4957,7 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = !_ && !_ && !_,
-          _ = _ && 0 == _.item_type;
+          _ = _ && _.item_type == _._._;
         return (0, _.jsxs)("div", {
           className: _().BottomShelf,
           style: {
@@ -5217,7 +5167,7 @@
           });
         let _ = _;
         _ &&
-          1 == _.item_type &&
+          _.item_type == _._._ &&
           1 == _.included_appids?.length &&
           (_ = {
             appid: _.included_appids[0],
@@ -5273,6 +5223,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5283,7 +5234,7 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_ || !_) return null;
-        if (1 == _.type && !(0, _._)(_)) return null;
+        if (_.type == _._._ && !(0, _._)(_)) return null;
         let _ = _.summary_unfiltered || _.summary_filtered,
           _ = "#ReviewScore_UserReviewScoreAria",
           _ = !1;
@@ -5300,9 +5251,9 @@
           return null;
         let _ = _().ReviewScoreNone;
         _ =
-          _.review_score > 0 && _.review_score < 5
+          _.review_score > 0 && _.review_score < _._._
             ? _().ReviewScoreLow
-            : 5 == _.review_score
+            : _.review_score == _._._
               ? _().ReviewScoreMixed
               : _().ReviewScoreHigh;
         const _ = `${_._.STORE_BASE_URL}app/${_.appid}/#app_reviews_hash`,
@@ -5345,19 +5296,19 @@
             ],
           });
         let _ = "#ReviewScore_PercentPositive";
-        if (2 === _.item_type) _ = "#ReviewScore_PercentPositive_bundle";
-        else if (0 === _.item_type)
+        if (_.item_type === _._._) _ = "#ReviewScore_PercentPositive_bundle";
+        else if (_.item_type === _._._)
           switch (_.type) {
-            case 6:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_software";
               break;
-            case 7:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_video";
               break;
-            case 10:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_hardware";
               break;
-            case 8:
+            case _._._:
               _ = "#ReviewScore_PercentPositive_series";
           }
         return (0, _.jsx)(_._, {
@@ -5400,6 +5351,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -5407,7 +5359,9 @@
           { data: _ } = (0, _._)(_),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() =>
-            _ && (1 == _.type || 12 == _.type) && _.related_items?.parent_appid
+            _ &&
+            (_.type == _._._ || _.type == _._._) &&
+            _.related_items?.parent_appid
               ? _.related_items?.parent_appid
               : _ && "appid" in _
                 ? _.appid
@@ -5422,7 +5376,7 @@
         (0, _.useEffect)(() => {
           _ &&
             "appid" in _ &&
-            (1 == _?.type || 12 == _?.type) &&
+            (_?.type == _._._ || _?.type == _._._) &&
             _(_.related_items?.parent_appid || _.appid);
         }, [_, _]);
         const _ = (0, _.useCallback)(
@@ -5437,7 +5391,7 @@
           },
           [_.token.reason, _, _],
         );
-        return _ && 10 != _?.type
+        return _ && _?.type != _._._
           ? null
           : (0, _.jsxs)(_._, {
               className: (0, _._)(_().WishlistButton, _),
@@ -5467,6 +5421,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5508,7 +5463,8 @@
           onMouseLeave: () => _(!1),
           onTouchStart: () => _(!1),
           onKeyDown: (_) => {
-            27 == _.keyCode && (_(!1), _.preventDefault(), _.stopPropagation());
+            _.keyCode == _._ &&
+              (_(!1), _.preventDefault(), _.stopPropagation());
           },
           children: [
             _ &&
@@ -5638,7 +5594,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5654,10 +5612,116 @@
           }),
         });
       }
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = -700,
+        _ = -600,
+        _ = -599,
+        _ = -598,
+        _ = -597,
+        _ = -596,
+        _ = -595,
+        _ = -594,
+        _ = -593,
+        _ = -592,
+        _ = -591,
+        _ = -590,
+        _ = -589,
+        _ = -588,
+        _ = -587,
+        _ = -586,
+        _ = -585,
+        _ = -584,
+        _ = -583,
+        _ = -582,
+        _ = -581,
+        _ = -580,
+        _ = -579,
+        _ = -578,
+        _ = -577,
+        _ = -576,
+        _ = -575,
+        _ = -574,
+        _ = -573,
+        _ = -572,
+        _ = -571,
+        _ = -500,
+        _ = -499,
+        _ = -498,
+        _ = -497,
+        _ = -496,
+        _ = -300,
+        _ = -203,
+        _ = -202,
+        _ = -201,
+        _ = -200,
+        _ = -199,
+        _ = -198,
+        _ = -197,
+        _ = -196,
+        _ = -195,
+        _ = -194,
+        _ = -193,
+        _ = -192,
+        _ = -191,
+        _ = -190,
+        _ = -189,
+        _ = -188,
+        _ = -187,
+        _ = -186,
+        _ = -185,
+        _ = -184,
+        _ = -183,
+        _ = -182,
+        _ = -102,
+        _ = -101,
+        _ = -100,
+        _ = -99,
+        _ = -95,
+        _ = -94,
+        _ = -93,
+        _ = -92,
+        _ = -90,
+        _ = -89,
+        _ = -88,
+        _ = -87,
+        _ = -86,
+        _ = -85,
+        _ = -84,
+        _ = -83,
+        _ = -82,
+        _ = -81,
+        _ = -80,
+        _ = -79,
+        _ = -75,
+        _ = -74,
+        _ = -70,
+        _ = -69,
+        _ = -68,
+        _ = -67,
+        _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 8,
+        _ = 9,
+        _ = 10,
+        _ = 11,
+        _ = 12,
+        _ = 13,
+        _ = 14,
+        _ = 15,
+        _ = 16,
+        _ = 17,
+        _ = 18,
+        _ = 19,
+        _ = 20;
+      var _;
       !(function (_) {
         (_[(_.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
           (_[(_.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -5677,6 +5741,7 @@
           (_[(_.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
       })(_ || (_ = {}));
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7384,7 +7449,7 @@
           queryFn: async () => {
             const _ = _._.Init(_),
               _ = await _.GetAllClientLogonInfo(_, _);
-            if (1 !== __webpack_require__.GetEResult())
+            if (__webpack_require__.GetEResult() !== _._)
               throw (
                 (console.error(
                   "Received error from GetAllClientLogonInfo",
@@ -7397,7 +7462,7 @@
               );
             const _ = [];
             for (const _ of __webpack_require__.Body().sessions())
-              0 !== _.device_type() && _.push(_.toObject());
+              _.device_type() !== _.eSB && _.push(_.toObject());
             return {
               sessions: _,
               refetchInterval:
@@ -7487,7 +7552,7 @@
           _.Body().set_client_instanceid(_),
           _.Body().set_include_client_info(!0);
         const _ = await _.GetClientAppList(_, _);
-        if (1 !== _.GetEResult())
+        if (_.GetEResult() !== _._)
           throw (
             (console.error(
               "Received error from GetClientAppList",
@@ -7524,7 +7589,7 @@
           _ = (0, _._)(),
           _ = (_) => {
             _ &&
-              ((21 != _.result && 16 != _.result) ||
+              ((_.result != _._ && _.result != _._) ||
                 __webpack_require__.refetch());
           },
           _ = (0, _._)({
@@ -7689,13 +7754,13 @@
       }
       function _(_) {
         switch (_) {
-          case 1:
+          case _.g0U:
             return (0, _._)("#Library_DeviceType_PC");
-          case 544:
+          case _.LS$:
             return (0, _._)("#Library_DeviceType_SteamDeck");
-          case 546:
+          case _.bOm:
             return (0, _._)("#Library_DeviceType_SteamMachine");
-          case 5001:
+          case _.jYC:
             return (0, _._)("#Library_DeviceType_SteamFrame");
           default:
             return;
@@ -7789,222 +7854,222 @@
         const _ = _.data?.sessions?.filter((_) => {
           switch (_.device_type) {
             default:
-            case 1:
+            case _.g0U:
               {
                 if (!_.os_type) return !1;
                 const _ = (function (_) {
                   switch (_) {
-                    case 0:
+                    case _:
                       return "Windows";
-                    case 1:
+                    case _:
                       return "Windows 3.11";
-                    case 2:
+                    case _:
                       return "Windows 95";
-                    case 3:
+                    case _:
                       return "Windows 98";
-                    case 4:
+                    case _:
                       return "Windows ME";
-                    case 5:
+                    case _:
                       return "Windows NT";
-                    case 6:
+                    case _:
                       return "Windows 2000";
-                    case 7:
+                    case _:
                       return "Windows XP";
-                    case 8:
+                    case _:
                       return "Windows 2003";
-                    case 9:
+                    case _:
                       return "Windows Vista";
-                    case 10:
+                    case _:
                       return "Windows 7";
-                    case 11:
+                    case _:
                       return "Windows 2008";
-                    case 12:
+                    case _:
                       return "Windows 2012";
-                    case 15:
+                    case _:
                       return "Windows 2012 R2";
-                    case 13:
+                    case _:
                       return "Windows 8";
-                    case 14:
+                    case _:
                       return "Windows 8.1";
-                    case 16:
+                    case _:
                       return "Windows 10";
-                    case 17:
+                    case _:
                       return "Windows 2016";
-                    case 18:
+                    case _:
                       return "Windows 2019";
-                    case 19:
+                    case _:
                       return "Windows 2022";
-                    case 20:
+                    case _:
                       return "Windows 11";
-                    case -102:
+                    case _:
                       return "Mac OS";
-                    case -101:
+                    case _:
                       return "MacOS 10.4";
-                    case -100:
+                    case _:
                       return "MacOS 10.5";
-                    case -99:
+                    case _:
                       return "MacOS 10.5.8";
-                    case -95:
+                    case _:
                       return "MacOS 10.6";
-                    case -94:
+                    case _:
                       return "MacOS 10.6.3";
-                    case -93:
+                    case _:
                       return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
-                    case -92:
+                    case _:
                       return "MacOS 10.6.7";
-                    case -90:
+                    case _:
                       return "MacOS 10.7";
-                    case -89:
+                    case _:
                       return "MacOS 10.8";
-                    case -88:
+                    case _:
                       return "MacOS 10.9";
-                    case -87:
+                    case _:
                       return "MacOS 10.10";
-                    case -86:
+                    case _:
                       return "MacOS 10.11";
-                    case -85:
+                    case _:
                       return "MacOS 10.12";
-                    case -84:
+                    case _:
                       return "MacOS 10.13";
-                    case -83:
+                    case _:
                       return "MacOS 10.14";
-                    case -82:
+                    case _:
                       return "MacOS 10.15";
-                    case -81:
+                    case _:
                       return "MacOS 11 (as 10.16)";
-                    case -75:
+                    case _:
                       return "MacOS 12 (as 10.17)";
-                    case -70:
+                    case _:
                       return "MacOS 13 (as 10.18)";
-                    case -80:
+                    case _:
                       return "MacOS 11";
-                    case -79:
+                    case _:
                       return "MacOS 11.1";
-                    case -74:
+                    case _:
                       return "MacOS 12";
-                    case -69:
+                    case _:
                       return "MacOS 13";
-                    case -68:
+                    case _:
                       return "MacOS 14";
-                    case -67:
+                    case _:
                       return "MacOS 15";
-                    case -203:
+                    case _:
                       return "Linux";
-                    case -202:
+                    case _:
                       return "Linux 2.2";
-                    case -201:
+                    case _:
                       return "Linux 2.4";
-                    case -200:
+                    case _:
                       return "Linux 2.6";
-                    case -199:
+                    case _:
                       return "Linux 3.2";
-                    case -198:
+                    case _:
                       return "Linux 3.5";
-                    case -197:
+                    case _:
                       return "Linux 3.6";
-                    case -196:
+                    case _:
                       return "Linux 3.10";
-                    case -195:
+                    case _:
                       return "Linux 3.16";
-                    case -194:
+                    case _:
                       return "Linux 3.18";
-                    case -193:
+                    case _:
                       return "Linux 3.x";
-                    case -191:
+                    case _:
                       return "Linux 4.1";
-                    case -190:
+                    case _:
                       return "Linux 4.4";
-                    case -189:
+                    case _:
                       return "Linux 4.9";
-                    case -188:
+                    case _:
                       return "Linux 4.14";
-                    case -187:
+                    case _:
                       return "Linux 4.19";
-                    case -192:
+                    case _:
                       return "Linux 4.x";
-                    case -186:
+                    case _:
                       return "Linux 5.x";
-                    case -185:
+                    case _:
                       return "Linux 5.4";
-                    case -184:
+                    case _:
                       return "Linux 6.x";
-                    case -183:
+                    case _:
                       return "Linux 7.x";
-                    case -182:
+                    case _:
                       return "Linux 5.10";
-                    case -300:
+                    case _:
                       return "PS3";
-                    case -700:
+                    case _:
                       return "Web Client";
-                    case -500:
+                    case _:
                       return "Android";
-                    case -499:
+                    case _:
                       return "Android 6.x";
-                    case -498:
+                    case _:
                       return "Android 7.x";
-                    case -497:
+                    case _:
                       return "Android 8.x";
-                    case -496:
+                    case _:
                       return "Android 9.x";
-                    case -600:
+                    case _:
                       return "iOS";
-                    case -599:
+                    case _:
                       return "iOS 1";
-                    case -598:
+                    case _:
                       return "iOS 2";
-                    case -597:
+                    case _:
                       return "iOS 3";
-                    case -596:
+                    case _:
                       return "iOS 4";
-                    case -595:
+                    case _:
                       return "iOS 5";
-                    case -594:
+                    case _:
                       return "iOS 6";
-                    case -593:
+                    case _:
                       return "iOS 6.1";
-                    case -592:
+                    case _:
                       return "iOS 7";
-                    case -591:
+                    case _:
                       return "iOS 7.1";
-                    case -590:
+                    case _:
                       return "iOS 8";
-                    case -589:
+                    case _:
                       return "iOS 8.1";
-                    case -588:
+                    case _:
                       return "iOS 8.2";
-                    case -587:
+                    case _:
                       return "iOS 8.3";
-                    case -586:
+                    case _:
                       return "iOS 8.4";
-                    case -585:
+                    case _:
                       return "iOS 9";
-                    case -584:
+                    case _:
                       return "iOS 9.1";
-                    case -583:
+                    case _:
                       return "iOS 9.2";
-                    case -582:
+                    case _:
                       return "iOS 9_.3";
-                    case -581:
+                    case _:
                       return "iOS 10";
-                    case -580:
+                    case _:
                       return "iOS 10.1";
-                    case -579:
+                    case _:
                       return "iOS 10.2";
-                    case -578:
+                    case _:
                       return "iOS 10.3";
-                    case -577:
+                    case _:
                       return "iOS 11";
-                    case -576:
+                    case _:
                       return "iOS 11.1";
-                    case -575:
+                    case _:
                       return "iOS 11.2";
-                    case -574:
+                    case _:
                       return "iOS 11.3";
-                    case -573:
+                    case _:
                       return "iOS 11.4";
-                    case -572:
+                    case _:
                       return "iOS 12";
-                    case -571:
+                    case _:
                       return "iOS 12.1";
                     default:
                       return "Unknown";
@@ -8015,7 +8080,7 @@
                 if (_.steamos_linux && _.includes("Linux")) return !0;
               }
               break;
-            case 544:
+            case _.LS$:
               return _.windows || _.steamos_linux;
           }
           return !1;
@@ -8102,7 +8167,7 @@
                 __webpack_require__.Body().set_appid(_),
                   __webpack_require__.Body().set_client_instanceid(_);
                 const _ = await _.InstallClientApp(_, _);
-                if (1 != _.GetEResult())
+                if (_.GetEResult() != _._)
                   throw (
                     (console.error(
                       "Received error from InstallClientApp",
@@ -8150,7 +8215,7 @@
               ? _.related_items.demo_appid
               : [],
           _ = _.length > 0,
-          _ = _ || 1 === _.type,
+          _ = _ || _.type === _._._,
           _ = _
             ? _._.Localize("#Sale_InstallDemo_ttip", _.name || "")
             : _
@@ -8158,7 +8223,7 @@
               : _._.Localize("#Loading");
         if ((0, _._)()) {
           if (_ && _) {
-            const _ = 1 === _.type ? _.appid : _[0];
+            const _ = _.type === _._._ ? _.appid : _[0];
             return (0, _.jsx)("div", {
               className: _,
               children: (0, _.jsx)(_, {
@@ -8178,7 +8243,7 @@
               onClick: (_) => {
                 _.preventDefault(),
                   _.stopPropagation(),
-                  _ && (0, _._)(1 === _.type ? _.appid : _[0], _.name);
+                  _ && (0, _._)(_.type === _._._ ? _.appid : _[0], _.name);
               },
               className: (0, _._)(_, _().DemoButton, !_ && _().DisabledButton),
               children: _
@@ -8284,6 +8349,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8347,7 +8413,7 @@
         }
         if (_.is_free) {
           if (!_.is_free_temporarily)
-            return 0 == _.item_type && 1 == _.type
+            return _.item_type == _._._ && _.type == _._._
               ? _
                 ? null
                 : (0, _.jsxs)("div", {
@@ -8393,7 +8459,7 @@
         }
         if (!_ || !_.formatted_final_price) return null;
         let _ = _.discount_pct || 0,
-          _ = _ || 2 != _.item_type ? 0 : _.bundle_discount_pct || 0,
+          _ = _ || _.item_type != _._._ ? 0 : _.bundle_discount_pct || 0,
           _ = _.formatted_final_price;
         if (_) {
           const _ = (0, _._)(_._.country_code.toUpperCase()),
@@ -8606,7 +8672,7 @@
         const { tagid: _, className: _ } = _,
           _ = (0, _._)(_, _._.LANGUAGE);
         if (!_) return null;
-        const _ = (0, _._)((0, _._)(_._.LANGUAGE)),
+        const _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return (0, _.jsx)(_._, {
           url: _,
@@ -8616,7 +8682,7 @@
       }
       function _(_) {
         const { tagid: _, className: _, bNoStoreLinks: _ } = _,
-          _ = (0, _._)((0, _._)(_._.LANGUAGE)),
+          _ = (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
           _ = (0, _._)(_, _._.LANGUAGE),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return _
@@ -8783,6 +8849,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8803,7 +8870,7 @@
         if (0 === _.length)
           return _ &&
             _.related_items?.parent_appid &&
-            (1 == _.type || 12 == _.type)
+            (_.type == _._._ || _.type == _._._)
             ? (0, _.jsx)(_, {
                 ..._,
                 _: {
@@ -8949,12 +9016,17 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { data: _ } = (0, _._)(_);
         return (0, _.useMemo)(
           () =>
-            _ ? (0 == _.item_type ? [_.appid] : _.included_appids || []) : [],
+            _
+              ? _.item_type == _._._
+                ? [_.appid]
+                : _.included_appids || []
+              : [],
           [_],
         );
       }
@@ -8966,877 +9038,6 @@
               appid: _.related_items.parent_appid,
             };
         }, [_]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = JSON.parse(`{
-	"unknown": 0,
-	"store.steampowered.com": 1,
-	"steamcommunity.com": 2,
-	"global": 3,
-	"default": 4,
-	"application": 5,
-	"subscription": 6,
-	"search": 7,
-	"cart": 8,
-	"app": 9,
-	"global-nav": 10,
-	"global-account": 11,
-	"storemenu": 12,
-	"search-suggestion": 13,
-	"about": 14,
-	"suggest": 15,
-	"dlc": 16,
-	"storemenu-recommendedtags": 17,
-	"creator": 18,
-	"footer-genre-dropdown": 20,
-	"footer-category-dropdown": 21,
-	"footer-about-dropdown": 22,
-	"footer-help-dropdown": 23,
-	"footer-publisher-catalogs": 24,
-	"wishlist": 25,
-	"stats": 26,
-	"spotlight": 40,
-	"message": 41,
-	"marketing-message": 42,
-	"daily-deal": 43,
-	"footer": 44,
-	"header": 45,
-	"name": 46,
-	"more-details": 47,
-	"notification": 48,
-	"category": 49,
-	"steamdeck": 50,
-	"login": 60,
-	"prompt": 61,
-	"join-steam": 62,
-	"successful-login": 63,
-	"successful-joinsteam": 64,
-	"recommendations": 70,
-	"categories": 71,
-	"hardware": 72,
-	"waystoplay": 73,
-	"specialsections": 74,
-	"more": 75,
-	"big-category-link": 76,
-	"small-category-link": 77,
-	"package-purchase-recommendations": 78,
-	"popular": 79,
-	"recent": 80,
-	"main-cluster": 100,
-	"featured-win-games": 101,
-	"featured-mac-games": 102,
-	"tab-NewReleases": 103,
-	"tab-TopSellers": 104,
-	"tab-ComingSoon": 105,
-	"tab-Discounts": 106,
-	"smallcap-videos": 107,
-	"smallcap-demos": 108,
-	"home-headlines": 109,
-	"community-activity": 110,
-	"home-underten": 111,
-	"home-specials": 112,
-	"home-partners": 113,
-	"home-steam-install": 114,
-	"community-activity-recentlyplayed": 115,
-	"community-activity-recentlybought": 116,
-	"promo-banner": 117,
-	"promo-takeover": 118,
-	"featured-linux-games": 119,
-	"updated-games": 120,
-	"featured-updated-games": 121,
-	"discovery-queue": 122,
-	"new-on-steam": 123,
-	"curated-app": 124,
-	"home-gutter": 125,
-	"upcoming-queue": 126,
-	"home-specials-under10": 127,
-	"main-cluster-recommended": 128,
-	"main-cluster-topseller": 129,
-	"main-cluster-newonsteam": 130,
-	"recommended-spotlight": 131,
-	"hardware-promo": 132,
-	"popular-new-on-steam": 133,
-	"main-cluster-recommended-byfriends": 134,
-	"main-cluster-recommended-bycurators": 135,
-	"main-cluster-recenttopseller": 136,
-	"home-under10": 137,
-	"friends-trending": 138,
-	"spotlight-specials": 139,
-	"curator-recommended": 140,
-	"best-selling-vr": 141,
-	"creator-recommendations": 142,
-	"live-broadcast": 143,
-	"main-cluster-followed-creator": 144,
-	"tab-PopularNewReleases": 145,
-	"home-big-blue-buttons": 146,
-	"home-banner": 147,
-	"top-new-releases": 148,
-	"curated-main-app": 149,
-	"search-results": 150,
-	"query": 151,
-	"search-share": 152,
-	"genre": 200,
-	"large-cluster": 201,
-	"find-more": 202,
-	"friend-activity": 203,
-	"specials": 2300,
-	"breadcrumbs": 205,
-	"freestuff": 220,
-	"demos": 1900,
-	"tab-NewDemos": 222,
-	"tab-TopDemos": 223,
-	"browse-demos": 224,
-	"videos": 100002,
-	"popular-videos": 226,
-	"tab-NewVideos": 227,
-	"browse": 230,
-	"mac": 231,
-	"under10": 232,
-	"under5": 233,
-	"publisher": 234,
-	"publishers": 235,
-	"publisher-listing": 236,
-	"tag": 237,
-	"gettaggames": 238,
-	"explore": 239,
-	"browse-tags": 240,
-	"tags": 241,
-	"content-hub-carousel": 242,
-	"Action": 250,
-	"Adventure": 251,
-	"Strategy": 252,
-	"RPG": 253,
-	"Indie": 254,
-	"Massively Multiplayer": 255,
-	"Casual": 256,
-	"Family": 257,
-	"Simulation": 258,
-	"Racing": 259,
-	"Sports": 260,
-	"recommended": 300,
-	"recommendation-main": 301,
-	"friend-recommendations": 302,
-	"recommended-friendplaytime": 303,
-	"recommended-recentlyviewed": 304,
-	"recommended-morerecentlyviewed": 305,
-	"recommended-genrehighlights": 306,
-	"morelike": 307,
-	"morelike-mainitem": 308,
-	"friendactivity.js": 309,
-	"friendactivity-wishlist-spotlight": 310,
-	"friendactivity-purchases": 311,
-	"friendactivity-playedandwanted": 312,
-	"byafriend": 313,
-	"friend-recommendation": 314,
-	"ajaxgetfriendactivity": 315,
-	"recommend-franchise": 316,
-	"more-from-franchise": 317,
-	"wishlist-capsule": 318,
-	"game-highlights": 400,
-	"recommend-game": 401,
-	"view-own-recommendation": 402,
-	"game-purchase": 403,
-	"game-purchase-guide": 404,
-	"game-purchase-dlc": 405,
-	"game-friend-recommendations": 406,
-	"game-add-to-wishlist": 407,
-	"game-details": 408,
-	"game-highlight-tags": 409,
-	"game-tags-dialog": 410,
-	"game-tags-yours": 411,
-	"bundle-component-preview": 412,
-	"dlc-parent-app-link": 413,
-	"similar-recent-apps": 414,
-	"demo-parent-app-link": 415,
-	"package-purchase": 420,
-	"package-contents": 421,
-	"package-details": 422,
-	"category-list": 423,
-	"bundle": 430,
-	"bundle-contents": 431,
-	"cart-remove-item": 500,
-	"cart-items": 501,
-	"cart-continue-shopping": 502,
-	"cart-purchase": 503,
-	"checkout-logo-abandon": 504,
-	"checkout-success": 505,
-	"checkout": 506,
-	"gift": 507,
-	"self": 508,
-	"checkout-complete-return": 509,
-	"checkout-complete-logo": 510,
-	"purchaserequest": 511,
-	"display": 512,
-	"initial": 513,
-	"gifts": 514,
-	"upsell-recommended": 520,
-	"upsell-specials": 521,
-	"external-site": 550,
-	"facebook": 551,
-	"twitter": 552,
-	"referral": 553,
-	"summersale": 600,
-	"prizebooth": 610,
-	"activity-game-link": 611,
-	"activity-game-discount": 612,
-	"prize-info": 613,
-	"promotion": 614,
-	"sale": 615,
-	"sale-item": 616,
-	"sale-dailydeals": 617,
-	"sale-publishers": 618,
-	"sale-genres": 619,
-	"email": 620,
-	"cart-icon": 621,
-	"sale-category-links": 622,
-	"sale-notification-callout": 623,
-	"sale-yesterdaydeals": 624,
-	"sale-flashsales": 625,
-	"sale-fromyourwishlist": 626,
-	"closed-beta-access": 627,
-	"sale-tag-bucket": 628,
-	"sale-hero": 629,
-	"sale-franchises": 630,
-	"sale-dlcforyou": 631,
-	"sale-recommended-by-steam-labs": 632,
-	"sale-recommended-by-deep-dive": 633,
-	"sale-dailydeals-tier2": 634,
-	"sale-deep-discounts": 635,
-	"sale-deck-mostplayed": 636,
-	"home-chart-deckmostplayed": 637,
-	"home-deck-banner": 638,
-	"sale-tag-bucket-top": 639,
-	"sale-dailydeals-none": 640,
-	"sale-dailydeals-tags": 641,
-	"sale-dailydeals-ir": 642,
-	"sale-dailydeals-tier2-none": 645,
-	"sale-dailydeals-tier2-tags": 646,
-	"sale-dailydeals-tier2-ir": 647,
-	"sale-hero-none": 650,
-	"sale-hero-tags": 651,
-	"sale-hero-ir": 652,
-	"autumnsale": 660,
-	"wintersale": 661,
-	"yearinreview": 662,
-	"springsale": 663,
-	"mobileapp": 700,
-	"summary": 701,
-	"mobilestorefront": 702,
-	"home": 703,
-	"winter2012-today-square": 800,
-	"winter2012-today-square-button": 801,
-	"winter2012-hires": 802,
-	"winter2012-hires-button": 803,
-	"winter2012-yesterday-square": 804,
-	"winter2012-yesterday-square-button": 805,
-	"winter2012-flash": 806,
-	"winter2012-flash-button": 807,
-	"winter2012-pack": 808,
-	"winter2012-pack-button": 809,
-	"winter2012-topsellers": 810,
-	"winter2012-topsellers-button": 811,
-	"winter2012-vote-winner": 812,
-	"winter2012-vote-winner-button": 821,
-	"winter2012-vote-option-voting": 813,
-	"winter2012-vote-option-voted": 814,
-	"winter2012-nav": 815,
-	"winter2012-500-callout": 816,
-	"winter2012-500-callout-button": 820,
-	"winter2012-featured": 817,
-	"winter2012-lower-nav": 822,
-	"winter2012-vote-option-vote-results": 823,
-	"fall2014-48": 850,
-	"fall2014-24": 851,
-	"fall2014-TopSellers": 852,
-	"fall2014-Upcoming": 853,
-	"fall2014-Under10": 854,
-	"fall2014-Under5": 855,
-	"fall2014-PopularNewReleases": 856,
-	"fall2014-specials-more": 857,
-	"fall2014-recommend-wishlist": 858,
-	"fall2014-recommend-contentforyourgames": 859,
-	"renderspecials": 860,
-	"recommend": 861,
-	"recommended-ranked-played": 862,
-	"redeem-wallet-complete-return": 900,
-	"redeem-wallet-complete-return-app": 901,
-	"updated": 1000,
-	"curators": 1050,
-	"curatorrecommendations": 1051,
-	"ajaxgetcuratorrecommendations": 1052,
-	"curatorscombinedrecommendations": 1053,
-	"ajaxgetcombinedrecommendations": 1054,
-	"curatorlist": 1055,
-	"curator": 1056,
-	"curatorfeaturedlist": 1057,
-	"curator_featured_list": 1057,
-	"mycuratorsreviewing": 1058,
-	"creatorfeaturedrecs": 1059,
-	"new_dlc": 1060,
-	"browse-dlc": 1061,
-	"curatorlistcapsule": 1062,
-	"widget": 1100,
-	"appvisibilitystats": 1101,
-	"render": 1200,
-	"recommendationfeed-single-friends": 1210,
-	"recommendationfeed-single-curators": 1211,
-	"recommendationfeed-single-recent": 1212,
-	"recommendationfeed-single-wishlist": 1213,
-	"recommendationfeed-single-played": 1214,
-	"recommendationfeed-two": 1250,
-	"recommendationfeed-four": 1251,
-	"winter2014-featured": 1300,
-	"winter2014-yesterday": 1301,
-	"winter2014-flash": 1302,
-	"winter2014-flash2": 1303,
-	"winter2014-vote": 1304,
-	"winter2014-specials-more": 1305,
-	"winter2014-recommend-wishlist": 1306,
-	"winter2014-frontpage-wishlist": 1307,
-	"winter2014-TopSellers": 1308,
-	"winter2014-Upcoming": 1309,
-	"winter2014-Under10": 1310,
-	"winter2014-Under5": 1311,
-	"winter2014-PopularNewReleases": 1312,
-	"winter2017-FeaturedBanner": 1313,
-	"summer2018-standardview-curated": 1314,
-	"summer2018-standardview-recommend-basic": 1315,
-	"summer2018-standardview-recommend-neural": 1316,
-	"summer2018-mergedview-curated": 1317,
-	"summer2018-mergedview-recommend-neural": 1318,
-	"summer2018-salien-giveaway": 1319,
-	"summer2018-creator-recommend": 1320,
-	"summer2018-live-stream": 1321,
-	"sale-vr": 1322,
-	"sale-moddable": 1323,
-	"discovery-queue-0": 1324,
-	"wishlist-onsale": 1400,
-	"wishlist-newrelease": 1401,
-	"greenlight-newrelease": 1402,
-	"sales-event-enhanced": 1403,
-	"creator-newrelease": 1404,
-	"generic-onsale": 1405,
-	"topsellers-onsale": 1406,
-	"recommended-onsale": 1407,
-	"demo-newrelease": 1408,
-	"Free to Play": 1420,
-	"tab-mostplayednewreleases": 1421,
-	"tab-mostplayed": 1422,
-	"tab-comingsoon": 1423,
-	"tab-discounts": 1424,
-	"tab-ConcurrentUsers": 1454,
-	"vr": 1453,
-	"hub-vr-recommended": 1455,
-	"hub-vr-specials": 1459,
-	"hub-vr-featured": 1463,
-	"hub-vr-takeover": 1467,
-	"games": 1452,
-	"hub-games-recommended": 1456,
-	"hub-games-specials": 1460,
-	"hub-games-featured": 1464,
-	"hub-games-takeover": 1468,
-	"software": 1451,
-	"hub-software-recommended": 1457,
-	"hub-software-specials": 1461,
-	"hub-software-featured": 1465,
-	"hub-software-takeover": 1469,
-	"hub-videos-recommended": 1458,
-	"hub-videos-specials": 1462,
-	"hub-videos-featured": 1466,
-	"hub-videos-takeover": 1470,
-	"macos": 1480,
-	"hub-macos-recommended": 1481,
-	"hub-macos-specials": 1482,
-	"hub-macos-featured": 1483,
-	"hub-macos-takeover": 1484,
-	"linux": 1490,
-	"hub-linux-recommended": 1491,
-	"hub-linux-specials": 1492,
-	"hub-linux-featured": 1493,
-	"hub-linux-takeover": 1494,
-	"controller": 1500,
-	"hub-controller-recommended": 1501,
-	"hub-controller-specials": 1502,
-	"hub-controller-featured": 1503,
-	"hub-controller-takeover": 1504,
-	"freetoplay": 1510,
-	"hub-freetoplay-recommended": 1511,
-	"hub-freetoplay-specials": 1512,
-	"hub-freetoplay-featured": 1513,
-	"hub-freetoplay-takeover": 1514,
-	"earlyaccess": 1520,
-	"hub-earlyaccess-recommended": 1521,
-	"hub-earlyaccess-specials": 1522,
-	"hub-earlyaccess-featured": 1523,
-	"hub-earlyaccess-takeover": 1524,
-	"pccafe": 1530,
-	"hub-pccafe-recommended": 1531,
-	"hub-pccafe-specials": 1532,
-	"hub-pccafe-featured": 1533,
-	"hub-pccafe-takeover": 1534,
-	"remoteplayphone": 1540,
-	"hub-remoteplayphone-recommended": 1541,
-	"hub-remoteplayphone-specials": 1542,
-	"hub-remoteplayphone-featured": 1543,
-	"hub-remoteplayphone-takeover": 1544,
-	"remoteplaytablet": 1550,
-	"hub-remoteplaytablet-recommended": 1551,
-	"hub-remoteplaytablet-specials": 1552,
-	"hub-remoteplaytablet-featured": 1553,
-	"hub-remoteplaytablet-takeover": 1554,
-	"remoteplaytv": 1560,
-	"hub-remoteplaytv-recommended": 1561,
-	"hub-remoteplaytv-specials": 1562,
-	"hub-remoteplaytv-featured": 1563,
-	"hub-remoteplaytv-takeover": 1564,
-	"remoteplaytogether": 1570,
-	"hub-remoteplaytogether-recommended": 1571,
-	"hub-remoteplaytogether-specials": 1572,
-	"hub-remoteplaytogether-featured": 1573,
-	"hub-remoteplaytogether-takeover": 1574,
-	"remote-play-about": 1580,
-	"remoteplay": 1581,
-	"turnbasedrpg": 1582,
-	"arcaderhythm": 1583,
-	"greatondeck": 1584,
-	"remoteplaylanding": 1585,
-	"fightingmartialarts": 1586,
-	"actionfps": 1587,
-	"hackandslash": 1588,
-	"actionrunjump": 1589,
-	"shmup": 1590,
-	"adventure": 1591,
-	"action": 1592,
-	"adventurerpg": 1593,
-	"hiddenobject": 1594,
-	"metroidvania": 1595,
-	"puzzlematching": 1596,
-	"storyrich": 1597,
-	"visualnovel": 1598,
-	"casual": 1559,
-	"querypaginated": 1600,
-	"n_section": 1601,
-	"rpgjrpg": 1602,
-	"rpgpartybased": 1603,
-	"roguelikeroguelite": 1604,
-	"rpgaction": 1605,
-	"rpg": 1606,
-	"rpgstrategytactics": 1607,
-	"rpgturnbased": 1608,
-	"simulation": 1609,
-	"simbuildingautomation": 1610,
-	"simdating": 1611,
-	"simfarmingcrafting": 1612,
-	"simhobbysim": 1613,
-	"simlife": 1614,
-	"simphysicssandbox": 1615,
-	"simspaceflight": 1616,
-	"strategy": 1617,
-	"strategycardboard": 1618,
-	"strategycitiessettlements": 1619,
-	"soundtracks": 1620,
-	"hub-soundtracks-recommended": 1621,
-	"hub-soundtracks-specials": 1622,
-	"hub-soundtracks-featured": 1623,
-	"hub-soundtracks-takeover": 1624,
-	"strategygrand4x": 1625,
-	"strategymilitary": 1626,
-	"strategyrealtime": 1627,
-	"towerdefense": 1628,
-	"strategyturnbased": 1629,
-	"sportsandracing": 1630,
-	"sports": 1631,
-	"sportsfishinghunting": 1632,
-	"sportsindividual": 1633,
-	"racing": 1634,
-	"racingsim": 1635,
-	"sportssim": 1636,
-	"sportsteam": 1637,
-	"anime": 1638,
-	"horror": 1639,
-	"mysterydetective": 1640,
-	"explorationopenworld": 1641,
-	"sciencefiction": 1642,
-	"space": 1643,
-	"survival": 1644,
-	"multiplayercoop": 1645,
-	"multiplayerlan": 1646,
-	"multiplayerlocalparty": 1647,
-	"multiplayermmo": 1648,
-	"multiplayer": 1649,
-	"multiplayeronlinecompetitive": 1650,
-	"singleplayer": 1651,
-	"upcoming": 1700,
-	"comingsoon-recommendedcomingsoon": 1701,
-	"comingsoon-popularwishlist": 1702,
-	"comingsoon-newdlc": 1703,
-	"comingsoon-followedcreator": 1704,
-	"comingsoon-mywishlist": 1705,
-	"comingsoon-largecap": 1706,
-	"tab-PopularUpcoming": 1707,
-	"tab-AllUpcoming": 1708,
-	"in-library-game-event-update": 1800,
-	"on-wishlist-game-event-update": 1801,
-	"in-library-game-remind-me": 1802,
-	"hub-demos-recommended": 1901,
-	"hub-demos-specials": 1902,
-	"hub-demos-featured": 1903,
-	"hub-demos-takeover": 1904,
-	"creator-home-product-page": 2000,
-	"franchise-home-link": 2001,
-	"ajaxgetappinfoforcap": 2100,
-	"partner-events": 2101,
-	"library-partner-events": 2102,
-	"store-partner-events": 2103,
-	"steamtv-partner-events": 2104,
-	"community-partner-events": 2105,
-	"partnerweb-partner-events": 2106,
-	"store-calendar-partner-events": 2107,
-	"events": 2108,
-	"subscriptions": 2109,
-	"ea": 2110,
-	"subscriptionplansea": 2111,
-	"download_event": 2112,
-	"reminder": 2113,
-	"steamtv": 2200,
-	"hub-specials-recommended": 2301,
-	"hub-specials-specials": 2302,
-	"hub-specials-featured": 2303,
-	"hub-specials-takeover": 2304,
-	"recommender": 2400,
-	"recommended-by-steam-labs": 2401,
-	"labs": 2500,
-	"automaticshow": 2501,
-	"microtrailers": 2502,
-	"now-playing": 2503,
-	"deepdive": 2504,
-	"game-add-to-wishlist-deepdive": 2505,
-	"dbdetailsmulti": 2506,
-	"dbgetlinkparam": 2507,
-	"recommended-by-deep-dive": 2508,
-	"recommended-by-deep-dive-carousel": 2509,
-	"recommended-by-deep-dive-carousel_default": 2510,
-	"recommended-by-deep-dive-carousel_cluster_recent": 2511,
-	"recommended-by-deep-dive-carousel_cluster_games": 2512,
-	"recommended-by-deep-dive-carousel_cluster_playtime": 2513,
-	"recommended-by-deep-dive-carousel-default": 2514,
-	"recommended-by-deep-dive-carousel-cluster-recent": 2515,
-	"recommended-by-deep-dive-carousel-cluster-games": 2516,
-	"recommended-by-deep-dive-carousel-cluster-playtime": 2517,
-	"trendingreviews": 2600,
-	"ajaxgetrecentreviews": 2601,
-	"community-recommendations": 2602,
-	"lunarnewyear2020": 2700,
-	"lunarnewyear": 2701,
-	"lunarnewyearmarket": 2702,
-	"steam-logo": 2750,
-	"sale-banner": 2751,
-	"sale-button-top": 2752,
-	"sale-button-bottom": 2753,
-	"wishlist-button-bottom": 2754,
-	"footer-steam-logo": 2755,
-	"steamclient": 5000,
-	"library": 5100,
-	"friendsui": 5200,
-	"friendcontextmenu": 5201,
-	"nextfest": 6000,
-	"topsellers": 7000,
-	"steamcharts": 7001,
-	"weeklytopsellers": 7002,
-	"topchartlist": 7003,
-	"overview": 7004,
-	"mostplayed": 7005,
-	"salesmartdailyactiveuserdemo": 7006,
-	"salesmartmostplayeddemo": 7007,
-	"salesmartdecktopplayed": 7008,
-	"salesmartcategory": 7009,
-	"vrhardwarelanding": 7010,
-	"monthlytopreleases": 7011,
-	"bestofyear": 7012,
-	"apphome": 100000,
-	"images": 100001,
-	"allnews": 100003,
-	"news": 100004,
-	"announcements": 100005,
-	"discussions": 100006,
-	"reporteddiscussions": 100007,
-	"tradingforum": 100008,
-	"guides": 100009,
-	"reviews": 100010,
-	"positivereviews": 100011,
-	"negativereviews": 100012,
-	"workshop": 100013,
-	"broadcasts": 100014,
-	"eventcomments": 100015,
-	"sharedfiles": 100100,
-	"filedetails": 100101,
-	"screenshot": 100102,
-	"workshopitem": 100103,
-	"mtxitem": 100104,
-	"collection": 100105,
-	"guide": 100106,
-	"integratedguide": 100107,
-	"merch": 100108,
-	"artwork": 100109,
-	"video": 100110,
-	"topicsearch": 100201,
-	"singletopic": 100202,
-	"profiles": 100300,
-	"review": 100301,
-	"profileshowcase": 100302,
-	"broadcast": 100400,
-	"watch": 100401,
-	"friendactivityfeed": 100500,
-	"announcement": 100501,
-	"curatorreview": 100502,
-	"friendpurchase": 100503,
-	"workshopitempublished": 100504,
-	"artworkpublished": 100505,
-	"screenshotpublished": 100506,
-	"guidepublished": 100507,
-	"collectionpublished": 100508,
-	"itemfavorited": 100509,
-	"userreviewpublished": 100510,
-	"partner.steamgames.com": 100600,
-	"help.steampowered.com": 100601,
-	"salecreatorhome": 100700,
-	"saleitembrowse": 100701,
-	"salefacetbrowse": 100702,
-	"salesection": 100703,
-	"saletabsection": 100704,
-	"salebroadcast": 100705,
-	"salecuratorrec": 100706,
-	"saleeventsched": 100707,
-	"salesubscription": 100708,
-	"saleitemsearch": 100709,
-	"salesmartwishlist": 100710,
-	"salesmartir": 100711,
-	"salesmartdlc": 100712,
-	"salesmarttagrec": 100713,
-	"salebrowsetopwishlisted": 100714,
-	"salebrowsetrendingwishlisted": 100715,
-	"salebrowsepopularcomingsoon": 100716,
-	"salebrowsemostplayeddemo": 100717,
-	"salebrowsedailyactiveuserdemo": 100718,
-	"salebrowseplayednowdemo": 100719,
-	"salebrowserecentlyreleased": 100720,
-	"salebrowsepopularpurchased": 100721,
-	"salebrowsepopularpurchaseddiscounted": 100722,
-	"salebrowsediscounted": 100723,
-	"salebrowseprice": 100724,
-	"salebrowsenewandtrending": 100725,
-	"salebrowsetopsellers": 100726,
-	"salebrowsetoprated": 100727,
-	"discoveryqueue2022": 100728,
-	"saleeventsection": 100729,
-	"salesectionlinks": 100730,
-	"salesectionrewards": 100731,
-	"salesectiontext": 100732,
-	"salesectioneventschedule": 100733,
-	"salesmartpersonalizedcarousel": 100734,
-	"promo-takeunder": 100735,
-	"salesmartwr": 100736,
-	"salesmartwishlist_allsale": 100737,
-	"salesmartir_allsale": 100738,
-	"autopopulatetag": 100739,
-	"autopopulatecategory": 100740,
-	"salesmartrecentevents": 100741,
-	"seasonpassproductpage": 100742,
-	"itemcollections": 100743,
-	"crosspromotesalepage": 100744,
-	"mm-auto-render": 100745,
-	"salequiz": 100746,
-	"templatemediacontent": 100747,
-	"templatefaq": 100748,
-	"templatetechspec": 100749,
-	"topnewreleases": 100750,
-	"newreleases": 100751,
-	"salebrowsetrendingfree": 100752,
-	"trendingfree": 100753,
-	"reactroot": 100754,
-	"bundlelist": 100755,
-	"verifiedprogram": 100756,
-	"trailercarousel": 100757
-}`);
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        static InstrumentLink(_, _, _ = null) {
-          const _ = _.GetSNRLinkParam(_, _),
-            _ = _.GetCuratorClanIDParam(_);
-          return _.AddNavParamToURL(_, _, _);
-        }
-        static ParseSNR(_) {
-          const _ = _.split("_") || [];
-          return {
-            domain: _.DecodeEventComponent(_[0]),
-            controller: _.DecodeEventComponent(_[1]),
-            method: _.DecodeEventComponent(_[2]),
-            submethod: _.DecodeEventComponent(_[3]),
-            feature: _.DecodeEventComponent(_[4]),
-            depth: _[5] ? Number(_[5]) : void 0,
-          };
-        }
-        static GetSNRLinkParam(_, _ = null) {
-          let _ = _.ComputeLinkPrefix(
-            _.domain,
-            _.controller,
-            _.method,
-            _.submethod,
-          );
-          _ = _ ?? _.depth ?? null;
-          const _ = _.EncodeEventComponent(_.feature);
-          return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
-        }
-        static GetCuratorClanIDParam(_) {
-          return _.curator_clanid ?? null;
-        }
-        static AddNavParamToURL(_, _, _) {
-          if (!_ || 0 == _.length) return _;
-          try {
-            const _ = new URL((0, _._)(_)),
-              _ = new URLSearchParams(_.search);
-            return (
-              _.set("snr", encodeURIComponent(_ ?? "")),
-              _ &&
-                !_._.includes(_) &&
-                _.set("curator_clanid", encodeURIComponent(_ ?? "")),
-              _.origin + _.pathname + "?" + _.toString() + _.hash
-            );
-          } catch (_) {
-            return console.error(_, _), _;
-          }
-        }
-        static ComputeLinkPrefix(_, _, _, _) {
-          let _ = "";
-          return (
-            (_ += _.EncodeEventComponent(_)),
-            (_ += "_"),
-            (_ += _.EncodeEventComponent(_)),
-            (_ += "_"),
-            (_ += _.EncodeEventComponent(_)),
-            (_ += "_"),
-            (_ += _.EncodeEventComponent(_)),
-            _
-          );
-        }
-        static EncodeEventComponent(_) {
-          return _
-            ? _ in _
-              ? "" + _[_]
-              : (_.match(/^[0-9]+$/) || (_ = _.replace(/^[0-9]+/, "")),
-                _.replace(/[^a-zA-Z0-9\- ]+/g, ""))
-            : "";
-        }
-        static DecodeEventComponent(_) {
-          const _ = _ && parseInt(_);
-          if (_ && _) for (const _ in _) if (_[_] == _) return _;
-          return _.SanitizeEventComponent(_);
-        }
-        static SanitizeEventComponent(_) {
-          return _ && _.match(/^[a-zA-Z0-9\-.]*$/) ? _ : "";
-        }
-      }
-      function _(_) {
-        return {
-          ..._,
-          domain: _.SanitizeEventComponent(_.domain),
-          controller: _.SanitizeEventComponent(_.controller),
-          method: _.SanitizeEventComponent(_.method),
-          submethod: _.SanitizeEventComponent(_.submethod),
-          feature: _.SanitizeEventComponent(_.feature),
-          depth: _.depth || 0,
-        };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({});
-      _.createContext(void 0);
-      function _(_) {
-        const { children: _, ..._ } = _,
-          _ = _(),
-          _ = _.useMemo(
-            () => ({
-              ..._,
-              ..._,
-            }),
-            [
-              _,
-              _.domain,
-              _.controller,
-              _.method,
-              _.submethod,
-              _.feature,
-              _.depth,
-              _.curator_clanid,
-            ],
-          );
-        return (0, _.jsx)(_.Provider, {
-          value: _,
-          children: _,
-        });
-      }
-      function _() {
-        return _.useContext(_);
-      }
-      function _(_, _) {
-        return (function (_, _, _) {
-          return {
-            ..._,
-            feature: _ || _.feature,
-            depth: _ || _.depth,
-            countrycode: _._.COUNTRY,
-            is_client: _._.IN_CLIENT,
-          };
-        })(_(), _, _);
-      }
-      function _(_, _, _) {
-        const _ = _();
-        return _.useMemo(() => _ && _(_, _, _, _), [_, _, _, _]);
-      }
-      function _(_, _) {
-        const _ = _();
-        return _.useMemo(
-          () =>
-            _._.GetSNRLinkParam(
-              {
-                ..._,
-                feature: _ || _.feature,
-              },
-              _,
-            ),
-          [_, _, _],
-        );
-      }
-      function _(_, _, _, _) {
-        const _ = _._.GetSNRLinkParam(
-            {
-              ..._,
-              feature: _ || _.feature,
-            },
-            _,
-          ),
-          _ = _._.GetCuratorClanIDParam(_);
-        return _._.AddNavParamToURL(_, _, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -10222,76 +9423,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return (0, _._)(
-          _,
-          (function (_) {
-            if (!_) return;
-            let _ = _?.jsondata?.read_more_link
-              ? (0, _._)(_.jsondata.read_more_link).toLocaleLowerCase()
-              : void 0;
-            return _ ? [_] : void 0;
-          })(_),
-        );
-      }
-      function _(_, _) {
-        return _
-          ? (_ = _(_, _)
-              ? (_._.IN_CLIENT ? "steam://openurl_external/" : "") + (0, _._)(_)
-              : (0, _._)(_))
-          : "";
-      }
-      function _(_, _, _) {
-        let _ = _;
-        return (
-          _.toLowerCase().startsWith("http") || (_ = "http://" + _),
-          (0, _.jsx)(_, {
-            url: _,
-            event: _,
-            children: _ || _,
-          })
-        );
-      }
-      const _ = (_) => {
-        const { url: _, event: _, className: _, style: _ } = _;
-        let _,
-          _ = (0, _._)(_);
-        (_ = _(_, _)), (0, _._)(_) && (_ = "noopener nofollow");
-        const _ =
-          "string" == typeof _.children &&
-          _.children.length > 0 &&
-          _ &&
-          !_.startsWith("steam://")
-            ? (0, _._)(_)
-            : void 0;
-        return (0, _.jsx)(_._, {
-          toolTipContent: _,
-          direction: "top",
-          children: (0, _.jsx)(_._, {
-            className: _,
-            href: _,
-            rel: _,
-            _: _._,
-            style: _,
-            children: _.children,
-          }),
-        });
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _.useMemo)(
@@ -10477,119 +9608,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _ = "", _ = null) {
-        return _.InstrumentLink(_, _, _);
-      }
-      function _(_, _, _) {
-        const _ = (0, _._)();
-        return _.useMemo(() => {
-          const _ = (0, _._)(_).toLowerCase(),
-            _ = (0, _._)(_._.COMMUNITY_BASE_URL).toLowerCase(),
-            _ = (0, _._)(_._.STORE_BASE_URL).toLowerCase();
-          return _ === _ || _ === _ ? (0, _._)(_, _, _, _) : _;
-        }, [_, _, _, _]);
-      }
-      function _(_, _, _ = null) {
-        const _ = _(_, _),
-          _ = _ ? _._.GetCuratorClanIDParam(_) : null;
-        return _._.AddNavParamToURL(_, _, _);
-      }
-      function _(_, _, _, _ = null) {
-        const _ = _(_, _, _);
-        if (_ && Object.keys(_).length > 0)
-          try {
-            const _ = new URL((0, _._)(_)),
-              _ = new URLSearchParams(_.search);
-            return (
-              Object.entries(_).forEach(([_, _]) => {
-                _.set(_, encodeURIComponent(_ ?? ""));
-              }),
-              _.origin + _.pathname + "?" + _.toString() + _.hash
-            );
-          } catch (_) {
-            "dev" == _._.WEB_UNIVERSE &&
-              console.error("UTM parameter parsing failed:", _, _);
-          }
-        return _;
-      }
-      function _(_, _ = null) {
-        return _?.domain ? _.GetLinkParam(_, _) : _._.SNR;
-      }
-      class _ {
-        static sm_strDomain;
-        static sm_strController;
-        static sm_strMethod;
-        static sm_strSubmethod;
-        static sm_strComputedLinkPrefix;
-        static SetNavEventParams(_, _, _ = null, _ = null) {
-          (_.sm_strDomain = _),
-            (_.sm_strController = _),
-            (_.sm_strMethod = _),
-            (_.sm_strSubmethod = _),
-            (_.sm_strComputedLinkPrefix = null);
-        }
-        static GetDefaultParams() {
-          let _ = {
-            domain: _.sm_strDomain,
-            controller: _.sm_strController,
-          };
-          return (
-            _.sm_strMethod && (_.method = _.sm_strMethod),
-            _.sm_strSubmethod && (_.submethod = _.sm_strSubmethod),
-            _
-          );
-        }
-        static InstrumentLink(_, _, _ = null) {
-          const _ = _.GetLinkParam(_, _),
-            _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
-          return _._.AddNavParamToURL(_, _, _);
-        }
-        static GetLinkParam(_, _ = null) {
-          let _, _;
-          if ("string" != typeof _) {
-            if (_.domain) return _._.GetSNRLinkParam(_, _);
-            _ = _.feature || "";
-          }
-          if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
-            return null;
-          _ = _.sm_strComputedLinkPrefix;
-          let _ = _._.EncodeEventComponent(_);
-          return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
-        }
-        static ComputeStaticLinkPrefix() {
-          return _.sm_strDomain
-            ? ((_.sm_strComputedLinkPrefix = _._.ComputeLinkPrefix(
-                _.sm_strDomain,
-                _.sm_strController,
-                _.sm_strMethod,
-                _.sm_strSubmethod,
-              )),
-              !0)
-            : ((0, _._)(
-                !1,
-                "CStoreNavEvents::SetNavEventParams was not called before calling InstrumentLink!",
-              ),
-              !1);
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10599,8 +9617,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -10675,7 +9696,7 @@
             is_curator: _.is_curator,
             has_visible_store_page: _.has_visible_store_page,
             has_rss_feed: _.has_rss_feed,
-            rss_language: _.rss_language ? _.rss_language : 0,
+            rss_language: _.rss_language ? _.rss_language : _.Bhc,
             avatar_full_url: _.avatar_full_url,
             avatar_medium_url: _.avatar_medium_url,
             group_name: _.group_name,
@@ -10950,6 +9971,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.AnyController = 0)] = "AnyController"),
@@ -10997,7 +10023,7 @@
         m_bShowFilteredUserReviewScores = !0;
         m_setPreferredPlatforms = new Set();
         m_bAllowAppImpressions = !1;
-        m_primaryLanguage = -1;
+        m_primaryLanguage = _.xPp;
         m_secondaryLanguages = new Set();
         m_rgRecommendedTags = [];
         m_mapRecommendingCuratorsForApp = new Map();
@@ -11089,11 +10115,11 @@
         }
         BIsStoreItemOwned(_) {
           switch (_.GetStoreItemType()) {
-            case 0:
+            case _._._:
               if (_.Get().BIsGameOwned(_.GetAppID())) return !0;
               break;
-            case 1:
-            case 2:
+            case _._._:
+            case _._._:
               if (_.GetIncludedAppIDs().every((_) => _.Get().BIsGameOwned(_)))
                 return !0;
           }
@@ -11126,7 +10152,8 @@
         BIsAnyLanguageEnabled(_) {
           return (
             null == this.m_primaryLanguage ||
-            this.m_primaryLanguage <= -1 || 31 <= this.m_primaryLanguage ||
+            this.m_primaryLanguage <= _.xPp ||
+              _.bP9 <= this.m_primaryLanguage ||
             _.some(
               (_) =>
                 this.m_primaryLanguage === _ ||
@@ -11264,7 +10291,7 @@
                   for (const _ of Object.keys(_.data.rgCurations)) {
                     const _ = [];
                     for (const _ of Object.keys(_.data.rgCurations[_]))
-                      0 === _.data.rgCurations[_][_] &&
+                      _.data.rgCurations[_][_] === _._._ &&
                         __webpack_require__.push(Number(_));
                     this.m_mapRecommendingCuratorsForApp.set(Number(_), _);
                   }
@@ -11310,7 +10337,7 @@
           }
           return _.data;
         }
-        async UpdateAppIgnore(_, _, _, _ = 0) {
+        async UpdateAppIgnore(_, _, _, _ = _._._) {
           let _ = _._.STORE_BASE_URL + "recommended/ignorerecommendation";
           const _ = new FormData();
           _.append("sessionid", _._.SESSIONID),
@@ -11342,7 +10369,7 @@
           return (
             (this.m_bAjaxInFlight = !1),
             {
-              success: 2,
+              success: _._,
             }
           );
         }
@@ -11367,10 +10394,11 @@
             (this.m_bAjaxInFlight = !1),
             _ && _.token.reason
               ? {
-                  success: 52,
+                  success: _._,
                 }
-              : ((_.data.success = 1 == _.data.success ? 1 : 2),
-                1 != _.data.success && this.ApplyWishlistUpdate(_, -1 != _, _),
+              : ((_.data.success = 1 == _.data.success ? _._ : _._),
+                _.data.success != _._ &&
+                  this.ApplyWishlistUpdate(_, -1 != _, _),
                 _.data)
           );
         }
@@ -11429,15 +10457,15 @@
             const _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (!_.data) return 2;
+            if (!_.data) return _._;
             this.InvalidateCache(),
               _
                 ? this.m_setFollowedApps.add(Number(_))
                 : this.m_setFollowedApps.delete(Number(_));
           } catch (_) {
-            return console.log("Follow game request failed"), 2;
+            return console.log("Follow game request failed"), _._;
           }
-          return 1;
+          return _._;
         }
         BHasPlatformPreferenceSet() {
           return (
@@ -11516,120 +10544,17 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_CMInterface;
-        m_setShownEvents = new Set();
-        m_setReadEvents = new Set();
-        m_rgPendingUpload = [];
-        m_schUpload = new _._();
-        m_bUploading = !1;
-        constructor(_) {
-          this.m_CMInterface = _;
-        }
-        MarkEventShown(_, _, _) {
-          let _ = this.MakeKey(_, _);
-          if (this.m_setShownEvents.has(_)) return !1;
-          this.m_setShownEvents.add(_);
-          let _ = new _._();
-          return (
-            _.set_event_gid(_),
-            _.set_clanid(_),
-            _.set_display_location(_),
-            _.set_mark_shown(!0),
-            this.QueueForUpload(_),
-            !0
-          );
-        }
-        MarkEventRead(_, _, _) {
-          let _ = this.MakeKey(_, _);
-          if (this.m_setReadEvents.has(_)) return !1;
-          this.m_setReadEvents.add(_);
-          let _ = new _._();
-          return (
-            _.set_event_gid(_),
-            _.set_clanid(_),
-            _.set_display_location(_),
-            _.set_mark_read(!0),
-            this.QueueForUpload(_),
-            !0
-          );
-        }
-        MakeKey(_, _) {
-          return `${_}_${_}`;
-        }
-        QueueForUpload(_) {
-          this.m_rgPendingUpload.push(_), this.ScheduleUpload();
-        }
-        ScheduleUpload() {
-          this.m_bUploading ||
-            (this.m_rgPendingUpload.length >= 30
-              ? this.UploadPendingData()
-              : this.m_schUpload.IsScheduled() ||
-                this.m_schUpload.Schedule(6e4, this.UploadPendingData));
-        }
-        async Flush() {
-          if (!this.m_bUploading) return this.UploadPendingData();
-        }
-        async UploadPendingData() {
-          if (this.m_bUploading) return;
-          this.m_schUpload.Cancel();
-          let _ = this.m_rgPendingUpload.splice(0, 30);
-          if (0 == _.length) return;
-          let _ = !1;
-          if (this.m_CMInterface) {
-            let _ = _._.Init(_._);
-            for (let _ of _) __webpack_require__.Body().add_markings(_);
-            this.m_bUploading = !0;
-            let _ = await _._.MarkPartnerEventsForUser(
-              this.m_CMInterface.GetServiceTransport(),
-              _,
-            );
-            (this.m_bUploading = !1), (_ = 1 == _.GetEResult());
-          } else {
-            if (!_._.logged_in) return;
-            let _ = _.map((_) => _.toObject()),
-              _ = (0, _._)() + "actions/ajaxmarkpartnerevents";
-            const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
-              _.append("request", JSON.stringify(_));
-            try {
-              _ =
-                1 ==
-                (
-                  await _().post(_, _, {
-                    withCredentials: !0,
-                  })
-                ).data.success;
-            } catch (_) {
-              let _ = (0, _._)(_);
-              console.error(
-                "CPartnerEventUserTracking.UploadPendingData error " +
-                  _.strErrorMsg,
-                _,
-              );
-            }
-          }
-          _
-            ? this.m_rgPendingUpload.length > 0 && this.ScheduleUpload()
-            : (console.log(
-                "Saving news event state failed. Will try again soon!",
-              ),
-              (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(_)),
-              this.m_schUpload.Schedule(6e4, this.UploadPendingData));
-        }
-      }
-      (0, _._)([_._], _.prototype, "UploadPendingData", null);
-      var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11701,7 +10626,7 @@
           return Boolean(_.s_EventUserStore);
         }
         async Init(_) {
-          (this.m_cm = _), (this.m_tracker = new _(_));
+          (this.m_cm = _), (this.m_tracker = new _._(_));
           const _ = (0, _._)("partnereventpermissions", "application_config");
           this.ValidateStoreDefault(_) &&
             ((0, _._)(() => {
@@ -11880,7 +10805,7 @@
                   params: _,
                   withCredentials: !0,
                 })),
-                _ && 1 == _.data.success)
+                _ && _.data.success == _._)
               ) {
                 let _ = this.m_mapClanToUserPermissions.get(_);
                 _ && this.CopyFromResponseToTrack(_, _.data);
@@ -11898,7 +10823,7 @@
                 void 0 !== _.response &&
                 void 0 !== _.response.data &&
                 void 0 !== _.response.data.success &&
-                21 == _.response.data.success)
+                _.response.data.success == _._)
             );
             else {
               const _ = (0, _._)(_);
@@ -11999,13 +10924,12 @@
               __webpack_require__
                 .Body()
                 .set_clan_accountid(_.clanSteamID.GetAccountID()),
-              1 ==
-                (
-                  await _._.RateClanAnnouncement(
-                    this.m_cm.GetServiceTransport(),
-                    _,
-                  )
-                ).GetEResult()
+              (
+                await _._.RateClanAnnouncement(
+                  this.m_cm.GetServiceTransport(),
+                  _,
+                )
+              ).GetEResult() == _._
             );
           }
           {
@@ -12029,7 +10953,7 @@
               withCredentials: !0,
               cancelToken: _.token,
             };
-            return 1 == (await _().post(_, _, _)).data.success;
+            return (await _().post(_, _, _)).data.success == _._;
           }
         }
         async LoadMyVote(_, _) {
@@ -12044,7 +10968,7 @@
                 this.m_cm.GetServiceTransport(),
                 _,
               );
-              1 == _.GetEResult() &&
+              _.GetEResult() == _._ &&
                 (_ =
                   !!_.Body().voted_up() || (!_.Body().voted_down() && void 0));
             } else {
@@ -12144,12 +11068,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return "account" === _.type;
       }
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -12333,6 +11257,8 @@
           return "CUserInterface_NavData";
         }
       }
+      const _ = 1,
+        _ = 2;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -13636,6 +12562,7 @@
           return "CAccountCart_GetRelevantCoupons_Response_LineItemCoupons";
         }
       }
+      var _;
       !(function (_) {
         (_.GetCart = function (_, _) {
           return _.SendMsg("AccountCart.GetCart#1", (0, _._)(_, _), _, {
@@ -13719,14 +12646,14 @@
         });
         if (!_._) throw new Error("Failed to fetch /cart/addtocart");
         const _ = await _.json();
-        return [_?.success ? 1 : 2, _?.contents];
+        return [_?.success ? _._ : _._, _?.contents];
       }
       async function _(_, _, _, _) {
         const _ = _._.Init(_);
         if (!_ || 0 === _.length)
           return (
             console.error("No valid Package or Bundle provided to add to cart"),
-            [8, null]
+            [_._, null]
           );
         __webpack_require__.forEach((_) => {
           const _ = _.Body().add_items();
@@ -13768,14 +12695,14 @@
                       (_.line_item_id = _.gidlineitem),
                         _.bundle_item?.bundleid
                           ? ((_.bundleid = _.bundle_item.bundleid),
-                            (_.type = 2))
+                            (_.type = _))
                           : _.package_item &&
                             ((_.packageid = _.package_item.packageid),
                             (_.price_when_added.amount_in_cents =
                               _.package_item.costwhenadded?.amount ?? ""),
                             (_.price_when_added.currency_code =
                               _.package_item.costwhenadded?.currencycode ?? 0),
-                            (_.type = 1));
+                            (_.type = _));
                       return _;
                     })(_),
               )
@@ -13843,7 +12770,7 @@
                   _,
                 );
               })(_, _, _, _, _, _);
-              if (1 != _) throw `AddToAccountCart failed with ${_}`;
+              if (_ != _._) throw `AddToAccountCart failed with ${_}`;
               (_ = _.line_item_ids), _(_, _, _.cart);
             } else {
               if (
@@ -13854,7 +12781,7 @@
                 throw "Invalid cart type";
               {
                 const [_, _] = await _(0, _ ? [_] : void 0, _);
-                if (1 != _ || !_)
+                if (_ != _._ || !_)
                   throw `AddItemsToAnonymousCart failed with ${_}`;
                 {
                   const _ = _
@@ -13895,6 +12822,7 @@
           },
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return (0, _._)(
           _ ? `${_._.STORE_BASE_URL}${_.store_url_path}` : void 0,
@@ -14067,12 +12995,12 @@
             ],
             queryFn: () =>
               (async function (_, _) {
-                if (!_ || 1 !== _.item_type || 10 !== _.type) return _;
+                if (!_ || _.item_type !== _._._ || _.type !== _._._) return _;
                 const _ = _._.Init(_);
                 __webpack_require__.Body().set_packageid(_._ || 0),
                   __webpack_require__.Body().set_country_code(_._.country_code);
                 const _ = await _.CheckInventoryAvailableByPackage(_, _);
-                if (1 !== _.GetEResult())
+                if (_.GetEResult() !== _._)
                   throw (
                     (console.error(
                       "Received error from FetchPhysicalGoodsStock",
@@ -14084,7 +13012,7 @@
                   );
                 return _.Body().toObject();
               })(_, _),
-            enabled: Boolean(_ && 10 === _.type),
+            enabled: Boolean(_ && _.type === _._._),
           });
         return _.isLoading ? null : _.data;
       }
@@ -14108,18 +13036,18 @@
             if (_) {
               let _ = _.appid;
               _.related_items?.parent_appid &&
-                11 != _.type &&
+                _.type != _._._ &&
                 (_ = _.related_items.parent_appid),
                 (0, _._)(window, `steam://run/${_}`);
             }
           }, [_]);
-        if (!_ || !_ || !_ || 8 == _.type) return null;
+        if (!_ || !_ || !_ || _.type == _._._) return null;
         const _ =
           _.is_free ||
           (null != _.final_price_in_cents && "0" == _.final_price_in_cents) ||
           (_.discount_pct && _.discount_pct >= 100);
-        if (1 == _.item_type)
-          if (10 == _.type) {
+        if (_.item_type == _._._)
+          if (_.type == _._._) {
             if (!_)
               return (0, _.jsx)(_._, {
                 size: "small",
@@ -14134,9 +13062,9 @@
               });
           } else if (_ && _.included_appids && _.included_appids.length > 1)
             return null;
-        if (0 == _.item_type) {
+        if (_.item_type == _._._) {
           if (_.is_coming_soon && !_.packageid) return null;
-          if (_ && 10 === _.type) return null;
+          if (_ && _.type === _._._) return null;
           if (!_ && _.is_free_to_keep) {
             if (_._.IN_CLIENT || "store" != (0, _._)()) {
               const _ = `${_._.IN_CLIENT ? "steam://openurl/" : ""}${_}`;
@@ -14231,8 +13159,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = () => (2 === _._.EUNIVERSE ? 2581 : 45267781);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = () => (_._.EUNIVERSE === _._ ? 2581 : 45267781);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

@@ -654,29 +654,29 @@ License: MIT
                 I = (h = 0);
               if (!o) return O();
               if (a || (!1 !== a && -1 === o.indexOf(d))) {
-                for (var C = o.split(n), D = 0; D < C.length; D++) {
-                  if (((b = C[D]), (h += b.length), D !== C.length - 1))
+                for (var D = o.split(n), C = 0; C < D.length; C++) {
+                  if (((b = D[C]), (h += b.length), C !== D.length - 1))
                     h += n.length;
                   else if (f) return O();
                   if (!s || b.substring(0, v) !== s) {
                     if (y) {
                       if (((w = []), N(b.split(t)), F(), g)) return O();
                     } else N(b.split(t));
-                    if (i && i <= D) return (w = w.slice(0, i)), O(!0);
+                    if (i && i <= C) return (w = w.slice(0, i)), O(!0);
                   }
                 }
                 return O();
               }
               for (
                 var A = o.indexOf(t, h),
-                  T = o.indexOf(n, h),
-                  k = new RegExp(m(u) + m(d), "g"),
-                  R = o.indexOf(d, h);
+                  R = o.indexOf(n, h),
+                  T = new RegExp(m(u) + m(d), "g"),
+                  k = o.indexOf(d, h);
                 ;
               )
                 if (o[h] === d)
-                  for (R = h, h++; ; ) {
-                    if (-1 === (R = o.indexOf(d, R + 1)))
+                  for (k = h, h++; ; ) {
+                    if (-1 === (k = o.indexOf(d, k + 1)))
                       return (
                         f ||
                           E.push({
@@ -686,34 +686,34 @@ License: MIT
                             row: w.length,
                             index: h,
                           }),
-                        P()
+                        L()
                       );
-                    if (R === _ - 1) return P(o.substring(h, R).replace(k, d));
-                    if (d === u && o[R + 1] === u) R++;
-                    else if (d === u || 0 === R || o[R - 1] !== u) {
-                      -1 !== A && A < R + 1 && (A = o.indexOf(t, R + 1));
-                      var M = L(
+                    if (k === _ - 1) return L(o.substring(h, k).replace(T, d));
+                    if (d === u && o[k + 1] === u) k++;
+                    else if (d === u || 0 === k || o[k - 1] !== u) {
+                      -1 !== A && A < k + 1 && (A = o.indexOf(t, k + 1));
+                      var M = B(
                         -1 ===
-                          (T = -1 !== T && T < R + 1 ? o.indexOf(n, R + 1) : T)
+                          (R = -1 !== R && R < k + 1 ? o.indexOf(n, k + 1) : R)
                           ? A
-                          : Math.min(A, T),
+                          : Math.min(A, R),
                       );
-                      if (o.substr(R + 1 + M, x) === t) {
-                        b.push(o.substring(h, R).replace(k, d)),
-                          o[(h = R + 1 + M + x)] !== d && (R = o.indexOf(d, h)),
+                      if (o.substr(k + 1 + M, x) === t) {
+                        b.push(o.substring(h, k).replace(T, d)),
+                          o[(h = k + 1 + M + x)] !== d && (k = o.indexOf(d, h)),
                           (A = o.indexOf(t, h)),
-                          (T = o.indexOf(n, h));
+                          (R = o.indexOf(n, h));
                         break;
                       }
                       if (
-                        ((M = L(T)),
-                        o.substring(R + 1 + M, R + 1 + M + j) === n)
+                        ((M = B(R)),
+                        o.substring(k + 1 + M, k + 1 + M + j) === n)
                       ) {
                         if (
-                          (b.push(o.substring(h, R).replace(k, d)),
-                          B(R + 1 + M + j),
+                          (b.push(o.substring(h, k).replace(T, d)),
+                          P(k + 1 + M + j),
                           (A = o.indexOf(t, h)),
-                          (R = o.indexOf(d, h)),
+                          (k = o.indexOf(d, h)),
                           y && (F(), g))
                         )
                           return O();
@@ -727,33 +727,33 @@ License: MIT
                         row: w.length,
                         index: h,
                       }),
-                        R++;
+                        k++;
                     }
                   }
                 else if (s && 0 === b.length && o.substring(h, h + v) === s) {
-                  if (-1 === T) return O();
-                  (h = T + j), (T = o.indexOf(n, h)), (A = o.indexOf(t, h));
-                } else if (-1 !== A && (A < T || -1 === T))
+                  if (-1 === R) return O();
+                  (h = R + j), (R = o.indexOf(n, h)), (A = o.indexOf(t, h));
+                } else if (-1 !== A && (A < R || -1 === R))
                   b.push(o.substring(h, A)), (h = A + x), (A = o.indexOf(t, h));
                 else {
-                  if (-1 === T) break;
-                  if ((b.push(o.substring(h, T)), B(T + j), y && (F(), g)))
+                  if (-1 === R) break;
+                  if ((b.push(o.substring(h, R)), P(R + j), y && (F(), g)))
                     return O();
                   if (i && w.length >= i) return O(!0);
                 }
-              return P();
+              return L();
               function N(e) {
                 w.push(e), (I = h);
               }
-              function L(e) {
+              function B(e) {
                 var t = 0;
                 return -1 !== e &&
-                  (e = o.substring(R + 1, e)) &&
+                  (e = o.substring(k + 1, e)) &&
                   "" === e.trim()
                   ? e.length
                   : t;
               }
-              function P(e) {
+              function L(e) {
                 return (
                   f ||
                     (void 0 === e && (e = o.substring(h)),
@@ -764,8 +764,8 @@ License: MIT
                   O()
                 );
               }
-              function B(e) {
-                (h = e), N(b), (b = []), (T = o.indexOf(n, h));
+              function P(e) {
+                (h = e), N(b), (b = []), (R = o.indexOf(n, h));
               }
               function O(s) {
                 if (e.header && !p && w.length && !l) {
@@ -1186,7 +1186,7 @@ License: MIT
     },
     20153: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => xn, default: () => jn });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => jn, default: () => vn });
       var s = n(7850),
         r = n(43527),
         i = n(90626),
@@ -1202,25 +1202,27 @@ License: MIT
         p = n(45737),
         f = n.n(p),
         _ = n(24484),
-        x = n(56545),
-        j = n(85737),
-        v = n(64753),
-        S = n(20194),
-        y = n(75233),
-        w = n(41735),
-        E = n.n(w),
-        b = n(17720),
-        I = n(78327),
-        C = n(32179),
-        D = n(21711),
-        A = n(44165),
-        T = n(95034);
-      function k() {
+        x = n(22837),
+        j = n(37085),
+        v = n(56545),
+        S = n(85737),
+        y = n(64753),
+        w = n(20194),
+        E = n(75233),
+        b = n(41735),
+        I = n.n(b),
+        D = n(17720),
+        C = n(78327),
+        A = n(32179),
+        R = n(21711),
+        T = n(44165),
+        k = n(95034);
+      function M() {
         const [e] = i.useState(() =>
-            (0, I.Tc)("events_list", "application_config"),
+            (0, C.Tc)("events_list", "application_config"),
           ),
-          [t] = (0, T.QD)("filter"),
-          n = (0, A.f1)(),
+          [t] = (0, k.QD)("filter"),
+          n = (0, T.f1)(),
           [s, r] = i.useMemo(() => {
             let t = new Array(),
               s = new Array();
@@ -1251,25 +1253,25 @@ License: MIT
           ),
         };
       }
-      function R(e) {
+      function N(e) {
         return ["usePartnerRevAndBestAppSlow", e];
       }
-      async function M(e) {
-        const t = `${I.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
-          n = { sessionid: I.TS.SESSIONID, partnerid: e },
-          s = await E().get(t, { params: n });
+      async function B(e) {
+        const t = `${C.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
+          n = { sessionid: C.TS.SESSIONID, partnerid: e },
+          s = await I().get(t, { params: n });
         return s?.data?.data;
       }
-      function N(e, t) {
+      function L(e, t) {
         return e.getQueryData(["usePartnerRevAndBestAppSlow", t]);
       }
-      function L(e, t, n) {
-        return (0, S.I)({
+      function P(e, t, n) {
+        return (0, w.I)({
           queryKey: ["useMeetSteamGetAllRegistration", t, n],
           queryFn: async () => {
-            const n = x.w.Init(j.q3);
+            const n = v.w.Init(S.q3);
             n.Body().set_clan_event_gid(t);
-            const s = await j.ZK.GetRegistrations(e, n);
+            const s = await S.ZK.GetRegistrations(e, n);
             return s.BSuccess()
               ? s
                   .Body()
@@ -1280,27 +1282,27 @@ License: MIT
           enabled: null != t && 0 != n,
         });
       }
-      var P = n(19367),
-        B = n.n(P),
-        O = n(38390),
-        F = n(50304),
-        G = n(96001),
-        $ = n(16676),
-        z = n(74783),
-        U = n(26161),
-        q = n(78395),
-        K = n(21869),
-        W = n(22797),
-        H = n(26408),
-        Y = n(52038),
-        V = n(65),
-        J = n(61859),
-        Q = n(91675),
-        Z = n(30470),
-        X = n(30565),
-        ee = n.n(X);
-      function te(e) {
-        const t = ne();
+      var O = n(19367),
+        F = n.n(O),
+        G = n(38390),
+        $ = n(50304),
+        z = n(96001),
+        U = n(16676),
+        q = n(35239),
+        K = n(26161),
+        W = n(78395),
+        H = n(21869),
+        Y = n(22797),
+        V = n(26408),
+        J = n(52038),
+        Q = n(65),
+        Z = n(61859),
+        X = n(91675),
+        ee = n(30470),
+        te = n(30565),
+        ne = n.n(te);
+      function se(e) {
+        const t = re();
         return (0, s.jsx)("div", {
           children: (0, s.jsx)("ol", {
             children: Array.from(t.entries()).map(([e, t]) =>
@@ -1308,7 +1310,7 @@ License: MIT
                 "li",
                 {
                   children: (0, s.jsx)("a", {
-                    href: `${I.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
+                    href: `${C.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
                     target: "_blank",
                     children: t,
                   }),
@@ -1319,16 +1321,16 @@ License: MIT
           }),
         });
       }
-      function ne() {
+      function re() {
         const [e] = (0, i.useState)(() => {
-          const e = (0, I.Tc)("survey_list", "application_config") || {},
+          const e = (0, C.Tc)("survey_list", "application_config") || {},
             t = new Map();
           for (const n of Object.keys(e)) t.set(n, e[n]);
           return t;
         });
         return e;
       }
-      function se(e, t) {
+      function ie(e, t) {
         const n = (function () {
             const [e, t] = (0, i.useState)(location.search);
             return (
@@ -1386,31 +1388,31 @@ License: MIT
           );
         return [r, o];
       }
-      const re = i.createContext(void 0);
-      function ie(e) {
+      const ae = i.createContext(void 0);
+      function oe(e) {
         const { children: t } = e,
-          [n, r] = se("showpastevents", !1);
-        return (0, s.jsx)(re.Provider, {
+          [n, r] = ie("showpastevents", !1);
+        return (0, s.jsx)(ae.Provider, {
           value: { bShowArchived: n, setShowArchived: r },
           children: t,
         });
       }
-      const ae = () => {
-        const e = (0, i.useContext)(re);
+      const ce = () => {
+        const e = (0, i.useContext)(ae);
         if (!e)
           throw new Error(
             "useMeetSteamArchived must be used within MeetSteamArchivedProvider",
           );
         return e;
       };
-      var oe = n(34283),
-        ce = n.n(oe),
-        le = n(68797),
-        de = n(9161),
-        ue = n(65689),
-        he = n(81393),
-        ge = n(96059);
-      class me {
+      var le = n(34283),
+        de = n.n(le),
+        ue = n(68797),
+        he = n(9161),
+        ge = n(41403),
+        me = n(81393),
+        pe = n(96059);
+      class fe {
         m_steamInterface;
         GetSaleFeatureTransport() {
           return this.m_steamInterface;
@@ -1418,22 +1420,22 @@ License: MIT
         static s_Singleton;
         static Get() {
           return (
-            me.s_Singleton ||
-              ((me.s_Singleton = new me()), me.s_Singleton.Init()),
-            me.s_Singleton
+            fe.s_Singleton ||
+              ((fe.s_Singleton = new fe()), fe.s_Singleton.Init()),
+            fe.s_Singleton
           );
         }
         Init() {
           const e = (0, _.Tc)("store_feature_token", "application_config");
-          (0, he.wT)(Boolean(e), "require store_feature_token"),
-            (this.m_steamInterface = new ge.D(Z.TS.WEBAPI_BASE_URL, e));
+          (0, me.wT)(Boolean(e), "require store_feature_token"),
+            (this.m_steamInterface = new pe.D(ee.TS.WEBAPI_BASE_URL, e));
         }
       }
-      function pe() {
-        return me.Get().GetSaleFeatureTransport().GetServiceTransport();
+      function _e() {
+        return fe.Get().GetSaleFeatureTransport().GetServiceTransport();
       }
-      var fe = n(6083);
-      function _e(e) {
+      var xe = n(6083);
+      function je(e) {
         const { hideModal: t, gid: n } = e,
           [r, a] = (0, i.useState)(!1),
           [o, c] = (0, i.useState)(null),
@@ -1441,16 +1443,16 @@ License: MIT
           [u, g] = i.useState(""),
           [m, p] = i.useState(""),
           [f, _] = i.useState(!1),
-          x = pe(),
-          j = (0, S.I)({
+          x = _e(),
+          v = (0, w.I)({
             queryKey: ["MeetSteamInviteDirectDialog", n, l],
             queryFn: async () => {
               const e = {
-                  steamid: b.b.InitFromAccountID(l).ConvertTo64BitString(),
+                  steamid: D.b.InitFromAccountID(l).ConvertTo64BitString(),
                   gid: n,
-                  type: 6,
+                  type: ge.Dk.rV,
                 },
-                t = await ue.Nl.GetUserActionData(x, e);
+                t = await ge.Nl.GetUserActionData(x, e);
               return t.BSuccess() && t.Body().jsondata()
                 ? JSON.parse(t.Body().jsondata())
                 : {};
@@ -1458,19 +1460,19 @@ License: MIT
             enabled: Boolean(n) && l > 0,
           });
         i.useEffect(() => {
-          j.isLoading ||
-            (j.isSuccess &&
-              (g(j.data.partner_id ? j.data.partner_id.toString() : ""),
-              p(j.data.email_override ?? ""),
-              _(j.data.allow_registration_if_full ?? !1)));
-        }, [j.isLoading, j.isSuccess, j.data]);
-        return (0, s.jsxs)(q.o0, {
+          v.isLoading ||
+            (v.isSuccess &&
+              (g(v.data.partner_id ? v.data.partner_id.toString() : ""),
+              p(v.data.email_override ?? ""),
+              _(v.data.allow_registration_if_full ?? !1)));
+        }, [v.isLoading, v.isSuccess, v.data]);
+        return (0, s.jsxs)(W.o0, {
           strTitle: "Invite User",
-          bOKDisabled: !l || r || j.isLoading,
+          bOKDisabled: !l || r || v.isLoading,
           onOK: async () => {
             a(!0);
             const e = Number.parseInt(u) > 0 ? Number.parseInt(u) : 0,
-              s = await Se(
+              s = await we(
                 n,
                 [
                   {
@@ -1482,10 +1484,10 @@ License: MIT
                 ],
                 !0,
               ),
-              r = s && 1 == s.success;
+              r = s && s.success == j.R;
             r || c("We hit error during invite, check console: " + s?.msg),
               a(!1),
-              j.refetch(),
+              v.refetch(),
               r && t();
           },
           onCancel: t,
@@ -1498,29 +1500,29 @@ License: MIT
             !r &&
               (0, s.jsxs)(s.Fragment, {
                 children: [
-                  (0, s.jsx)($.pd, {
+                  (0, s.jsx)(U.pd, {
                     type: "number",
                     label: "Account ID",
                     onChange: (e) => d(Number.parseInt(e.currentTarget.value)),
                     value: l,
                   }),
                   0 != l &&
-                    !j.isLoading &&
+                    !v.isLoading &&
                     (0, s.jsxs)(s.Fragment, {
                       children: [
-                        (0, s.jsx)($.pd, {
+                        (0, s.jsx)(U.pd, {
                           type: "number",
                           label: "Partner ID (optional)",
                           onChange: (e) => g(e.currentTarget.value),
                           value: u,
                         }),
-                        (0, s.jsx)($.pd, {
+                        (0, s.jsx)(U.pd, {
                           type: "text",
                           label: "Email override (optional)",
                           onChange: (e) => p(e.currentTarget.value.trim()),
                           value: m,
                         }),
-                        (0, s.jsx)($.Yh, {
+                        (0, s.jsx)(U.Yh, {
                           controlled: !0,
                           checked: f,
                           onChange: _,
@@ -1531,35 +1533,35 @@ License: MIT
                 ],
               }),
             r &&
-              (0, s.jsx)(W.t, {
+              (0, s.jsx)(Y.t, {
                 size: "small",
                 position: "center",
-                string: (0, J.we)("#Saving"),
+                string: (0, Z.we)("#Saving"),
               }),
-            j.isLoading &&
-              (0, s.jsx)(W.t, {
+            v.isLoading &&
+              (0, s.jsx)(Y.t, {
                 size: "small",
                 position: "center",
-                string: (0, J.we)("#Loading"),
+                string: (0, Z.we)("#Loading"),
               }),
           ],
         });
       }
-      function xe(e) {
+      function ve(e) {
         const { hideModal: t, gid: n } = e,
           [r, a] = (0, i.useState)(null),
           [o, c] = (0, i.useState)(!1),
           [l, d] = (0, i.useState)(null),
           [u, g] = (0, i.useState)(null),
           [m, p] = (0, i.useState)(null);
-        return (0, s.jsxs)(q.o0, {
+        return (0, s.jsxs)(W.o0, {
           strTitle: "Invite Users",
           bOKDisabled: !r || 0 == r.length || null != u,
           strCancelButtonText: null !== u ? "Close" : "Cancel",
           onOK: async () => {
             c(!0);
-            const e = await Se(n, r, !1);
-            1 == e?.success
+            const e = await we(n, r, !1);
+            e?.success == j.R
               ? (g(e.rgInvitedAccounts.length), p(e.rgSkippedAccounts.length))
               : d("We hit error during invite, check console: " + e?.msg),
               c(!1);
@@ -1577,24 +1579,24 @@ License: MIT
               (0, s.jsxs)("div", {
                 children: [
                   "Invited ",
-                  (0, fe.D)(u),
+                  (0, xe.D)(u),
                   " accounts, skipped previously invited ",
-                  (0, fe.D)(m),
+                  (0, xe.D)(m),
                 ],
               }),
             o &&
-              (0, s.jsx)(W.t, {
+              (0, s.jsx)(Y.t, {
                 size: "small",
                 position: "center",
-                string: (0, J.we)("#Saving"),
+                string: (0, Z.we)("#Saving"),
               }),
             null == r
-              ? (0, s.jsx)(ve, { setInvites: a })
-              : (0, s.jsx)(je, { rgInvites: r }),
+              ? (0, s.jsx)(ye, { setInvites: a })
+              : (0, s.jsx)(Se, { rgInvites: r }),
           ],
         });
       }
-      function je(e) {
+      function Se(e) {
         const { rgInvites: t } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1632,7 +1634,7 @@ License: MIT
           ],
         });
       }
-      function ve(e) {
+      function ye(e) {
         const { setInvites: t } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1669,15 +1671,15 @@ License: MIT
                 const t = [];
                 t.push(["nAccountID", "nPartnerID", "strEmailOverride"]),
                   t.push(["388445686", "1", "adils@valvesoftware.com"]);
-                de.g.WriteCSVToFile(t, "invite_template.csv");
+                he.g.WriteCSVToFile(t, "invite_template.csv");
               },
               children: "Download Template Example",
             }),
             (0, s.jsx)("br", {}),
             (0, s.jsx)("br", {}),
-            (0, s.jsx)($.$n, {
+            (0, s.jsx)(U.$n, {
               children: (0, s.jsxs)("label", {
-                className: ce().ImportButtonLabel,
+                className: de().ImportButtonLabel,
                 htmlFor: "import-discount-input",
                 children: [
                   "Choose CSV File",
@@ -1688,7 +1690,7 @@ License: MIT
                     onChange: async (e) => {
                       if (e.target.files.length >= 1) {
                         const n = e.target.files[0],
-                          s = await de.g.ParseCSVFile(n);
+                          s = await he.g.ParseCSVFile(n);
                         if (s?.data) {
                           const e = new Array();
                           s.data.forEach((t) => {
@@ -1714,58 +1716,58 @@ License: MIT
           ],
         });
       }
-      async function Se(e, t, n) {
+      async function we(e, t, n) {
         const s = t.map((e) => e.nAccountID).join(","),
           r = t.map((e) => e.nPartnerID).join(","),
           i = t.map((e) => e.strEmailOverride).join(","),
           a = t.map((e) => (e.bAllowRegistrationIfFull ? "1" : "0")).join(",");
         let o = new FormData();
-        o.append("sessionid", Z.TS.SESSIONID),
+        o.append("sessionid", ee.TS.SESSIONID),
           o.append("gid", e),
           o.append("accounts", s),
           o.append("partnerids", r),
           o.append("emailoverride", i),
           o.append("allowregistrationiffull", a),
           o.append("forceupdate", n ? "1" : "0");
-        const c = `${Z.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
+        const c = `${ee.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
         try {
-          const e = await E().post(c, o, { withCredentials: !0 });
-          if (1 != e?.data?.success) {
-            let t = (0, le.H)(e);
+          const e = await I().post(c, o, { withCredentials: !0 });
+          if (e?.data?.success != j.R) {
+            let t = (0, ue.H)(e);
             console.error("DisplayPartnerEventRow error: " + t.strErrorMsg, t);
           }
           return e?.data;
         } catch (e) {
-          let t = (0, le.H)(e);
+          let t = (0, ue.H)(e);
           console.error("DisplayPartnerEventRow error: " + t.strErrorMsg, t);
         }
         return null;
       }
-      var ye = n(16666),
-        we = n(66051),
-        Ee = n(54806),
-        be = n(58632),
-        Ie = n.n(be);
-      function Ce(e) {
-        const t = pe(),
-          n = i.useContext(Ae),
-          s = (0, S.I)(Te(n, t, e));
+      var Ee = n(16666),
+        be = n(66051),
+        Ie = n(54806),
+        De = n(58632),
+        Ce = n.n(De);
+      function Ae(e) {
+        const t = _e(),
+          n = i.useContext(Te),
+          s = (0, w.I)(ke(n, t, e));
         return s.isLoading ? null : s.data;
       }
-      function De(e) {
-        const t = pe(),
-          n = i.useContext(Ae);
-        return (0, Ee.E)({ queries: e.map((e) => Te(n, t, e)) });
+      function Re(e) {
+        const t = _e(),
+          n = i.useContext(Te);
+        return (0, Ie.E)({ queries: e.map((e) => ke(n, t, e)) });
       }
-      const Ae = i.createContext({
+      const Te = i.createContext({
         loadMeetSteamAllRegistration: async (e, t) =>
           await (function (e) {
-            ke ||
-              (ke = new (Ie())(
+            Me ||
+              (Me = new (Ce())(
                 async (t) => {
-                  const n = x.w.Init(ue.j3);
-                  n.Body().set_gids([...t]), n.Body().set_type(6);
-                  const s = await ue.Nl.GetMultipleUserActionData(e, n);
+                  const n = v.w.Init(ge.j3);
+                  n.Body().set_gids([...t]), n.Body().set_type(ge.Dk.rV);
+                  const s = await ge.Nl.GetMultipleUserActionData(e, n);
                   if (!s.BSuccess())
                     throw `Failed to call GetMultipleUserActionData with details: ${s.GetErrorMessage()}`;
                   const r = new Map();
@@ -1778,7 +1780,7 @@ License: MIT
                           const t = JSON.parse(e.jsondata());
                           if (!("steamid" in t) || !t.steamid) {
                             t.steamid = e.steamid();
-                            const n = new b.b(t.steamid);
+                            const n = new D.b(t.steamid);
                             t.accountid = n.GetAccountID();
                           }
                           const n = e.gid();
@@ -1794,37 +1796,37 @@ License: MIT
                 },
                 { maxBatchSize: 5 },
               ));
-            return ke;
+            return Me;
           })(e).load(t),
       });
-      function Te(e, t, n) {
+      function ke(e, t, n) {
         return {
           queryKey: ["MeetSteamAllRegistrationStatus", n],
           queryFn: () => e.loadMeetSteamAllRegistration(t, n),
           enabled: !!n,
         };
       }
-      let ke;
-      var Re = n(7860);
-      function Me(e, t) {
-        const n = (0, G.a)(),
-          s = i.useContext(Le),
-          r = (0, S.I)(Pe(s, n, e, t));
+      let Me;
+      var Ne = n(7860);
+      function Be(e, t) {
+        const n = (0, z.a)(),
+          s = i.useContext(Pe),
+          r = (0, w.I)(Oe(s, n, e, t));
         return r.isLoading ? null : r.data;
       }
-      function Ne(e, t) {
-        return Re.L.getQueryData(["PartnerEmailAndName", e, t]);
+      function Le(e, t) {
+        return Ne.L.getQueryData(["PartnerEmailAndName", e, t]);
       }
-      const Le = i.createContext({
+      const Pe = i.createContext({
         loadPartnerEmailAndName: async (e, t, n) =>
           await (function (e) {
-            Be ||
-              (Be = new (Ie())(
+            Fe ||
+              (Fe = new (Ce())(
                 async (t) => {
-                  const n = x.w.Init(j.g9);
+                  const n = v.w.Init(S.g9);
                   n.Body().set_accountids(t.map((e) => e.accountID)),
                     n.Body().set_partnerids(t.map((e) => e.partnerID));
-                  const s = await j.ZK.GetBatchPartnerEmailAndName(e, n);
+                  const s = await S.ZK.GetBatchPartnerEmailAndName(e, n);
                   if (!s.BSuccess())
                     throw `Failed to call GetBatchPartnerEmailAndName with details: ${s.GetErrorMessage()}`;
                   const r = new Map();
@@ -1843,20 +1845,20 @@ License: MIT
                 },
                 { maxBatchSize: 100 },
               ));
-            return Be;
+            return Fe;
           })(e).load({ accountID: t, partnerID: n }),
       });
-      function Pe(e, t, n, s) {
+      function Oe(e, t, n, s) {
         return {
           queryKey: ["PartnerEmailAndName", n, s],
           queryFn: () => e.loadPartnerEmailAndName(t, n, s),
           enabled: !!n || !!s,
         };
       }
-      let Be;
-      function Oe(e) {
+      let Fe;
+      function Ge(e) {
         const { rgEventGIDs: t } = e,
-          [n, r, a] = (0, v.uD)(),
+          [n, r, a] = (0, y.uD)(),
           [o, c] = (0, i.useState)(null);
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1868,19 +1870,19 @@ License: MIT
               },
               children: "Analyse Top Partner Coverage",
             }),
-            (0, s.jsx)(K.E, {
+            (0, s.jsx)(H.E, {
               active: n,
               children: (0, s.jsx)(u.tH, {
-                children: (0, s.jsx)(q.o0, {
+                children: (0, s.jsx)(W.o0, {
                   closeModal: a,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
                   children: Boolean(null == o)
-                    ? (0, s.jsx)(qe, { rgEventGIDs: t, fnSelectedEvents: c })
+                    ? (0, s.jsx)(We, { rgEventGIDs: t, fnSelectedEvents: c })
                     : (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(Ue, { rgGidMeetSteamEvents: o }),
-                          (0, s.jsx)($.$n, {
+                          (0, s.jsx)(Ke, { rgGidMeetSteamEvents: o }),
+                          (0, s.jsx)(U.$n, {
                             onClick: () => c(null),
                             children: "Reset Selection",
                           }),
@@ -1892,8 +1894,8 @@ License: MIT
           ],
         });
       }
-      const Fe = (0, ye.FB)();
-      function Ge(e) {
+      const $e = (0, Ee.FB)();
+      function ze(e) {
         return (
           (e = e?.filter(
             (t, n) =>
@@ -1903,17 +1905,17 @@ License: MIT
             ?.map(
               (e) =>
                 e.name ||
-                Ne(e.accountid, e.partner_id)?.realname ||
+                Le(e.accountid, e.partner_id)?.realname ||
                 e.accountid,
             )
             .join(",") || ""
         );
       }
-      function $e(e) {
-        return Ge(e.cell.getValue());
+      function Ue(e) {
+        return ze(e.cell.getValue());
       }
-      function ze(e, t) {
-        const n = De(t),
+      function qe(e, t) {
+        const n = Re(t),
           [s, r, a] = (0, i.useMemo)(() => {
             if (n.filter((e) => !e.isLoading).length != n.length)
               return [null, [], []];
@@ -1941,13 +1943,13 @@ License: MIT
             return [r, i.map((e) => e.accountID), i.map((e) => e.partnerID)];
           }, [n, e]),
           o = (function (e, t) {
-            const n = (0, G.a)(),
-              s = i.useContext(Le);
-            return (0, Ee.E)({ queries: e.map((e, r) => Pe(s, n, e, t[r])) });
+            const n = (0, z.a)(),
+              s = i.useContext(Pe);
+            return (0, Ie.E)({ queries: e.map((e, r) => Oe(s, n, e, t[r])) });
           })(r, a);
         return o.filter((e) => !e.isLoading).length == o.length ? s : null;
       }
-      function Ue(e) {
+      function Ke(e) {
         const { rgGidMeetSteamEvents: t } = e,
           n = (function () {
             const [e] = (0, i.useState)(() =>
@@ -1955,8 +1957,8 @@ License: MIT
             );
             return e;
           })(),
-          r = (0, C.vh)(n),
-          a = ze(n, t),
+          r = (0, A.vh)(n),
+          a = qe(n, t),
           o = (0, i.useMemo)(() => {
             if (!r || !a) return null;
             const e = [];
@@ -1965,7 +1967,7 @@ License: MIT
                 const n = a.get(t);
                 e.push({
                   partner_id: t,
-                  partner_name: (0, C.Yd)(t)?.name || "Unknown",
+                  partner_name: (0, A.Yd)(t)?.name || "Unknown",
                   invitations:
                     n?.filter(
                       (e) =>
@@ -1987,19 +1989,19 @@ License: MIT
           }, [r, a, n]),
           c = (0, i.useMemo)(
             () => [
-              Fe.accessor("partner_id", { header: "Partner ID", size: 100 }),
-              Fe.accessor("partner_name", {
+              $e.accessor("partner_id", { header: "Partner ID", size: 100 }),
+              $e.accessor("partner_name", {
                 header: "Partner Name",
                 size: 300,
               }),
-              Fe.accessor("invitations", {
+              $e.accessor("invitations", {
                 header: "Invitations",
-                cell: $e,
+                cell: Ue,
                 size: 300,
               }),
-              Fe.accessor("registrations", {
+              $e.accessor("registrations", {
                 header: "Registered to Attend",
-                cell: $e,
+                cell: Ue,
                 size: 300,
               }),
             ],
@@ -2017,27 +2019,27 @@ License: MIT
               n.push(
                 "invitations" == e.accessorKey ||
                   "registrations" == e.accessorKey
-                  ? Ge(s)
+                  ? ze(s)
                   : s.toString(),
               );
             }
             e.push(n);
           }
-          de.g.WriteCSVToFile(e, "partneranalysis.csv");
+          he.g.WriteCSVToFile(e, "partneranalysis.csv");
         }
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)($.JU, { children: "Partner Analysis" }),
+            (0, s.jsx)(U.JU, { children: "Partner Analysis" }),
             Boolean(o)
               ? (0, s.jsxs)(u.tH, {
                   children: [
-                    (0, s.jsx)($.$n, {
+                    (0, s.jsx)(U.$n, {
                       id: "download-csv",
                       onClick: l,
                       style: { width: "120px" },
                       children: "Download CSV",
                     }),
-                    (0, s.jsx)(we.k, {
+                    (0, s.jsx)(be.k, {
                       columns: c,
                       data: o,
                       getRowKey: (e) => e,
@@ -2046,7 +2048,7 @@ License: MIT
                       overscan: n.length,
                     }),
                     (0, s.jsx)("br", {}),
-                    (0, s.jsx)($.$n, {
+                    (0, s.jsx)(U.$n, {
                       id: "download-csv",
                       onClick: l,
                       style: { width: "120px" },
@@ -2054,40 +2056,40 @@ License: MIT
                     }),
                   ],
                 })
-              : (0, s.jsx)(W.t, {
-                  string: (0, J.we)("#Loading"),
+              : (0, s.jsx)(Y.t, {
+                  string: (0, Z.we)("#Loading"),
                   position: "center",
                 }),
           ],
         });
       }
-      function qe(e) {
+      function We(e) {
         const { rgEventGIDs: t, fnSelectedEvents: n } = e,
           [r, a] = (0, i.useState)([]),
-          { bShowArchived: o, setShowArchived: c } = ae(),
-          { bIsLoading: l, events: d } = (0, O.PB)(t),
+          { bShowArchived: o, setShowArchived: c } = ce(),
+          { bIsLoading: l, events: d } = (0, G.PB)(t),
           u = (0, i.useMemo)(() => {
             const e = Math.floor(new Date().getTime() / 1e3);
             return o && d ? [...d] : d?.filter((t) => t.endTime >= e);
           }, [d, o]);
         return l
-          ? (0, s.jsx)(W.t, { string: "Loading..." })
+          ? (0, s.jsx)(Y.t, { string: "Loading..." })
           : (0, s.jsxs)(s.Fragment, {
               children: [
-                (0, s.jsx)($.Yh, {
+                (0, s.jsx)(U.Yh, {
                   checked: o,
                   onChange: c,
                   label: "Show Past Events",
                 }),
-                (0, s.jsx)($.JU, { children: "Choose Events" }),
+                (0, s.jsx)(U.JU, { children: "Choose Events" }),
                 u.map((e) =>
                   (0, s.jsx)(
-                    Ke,
+                    He,
                     { gidClanEvent: e.GID, rgSelected: r, fnSetSelected: a },
                     e.GID,
                   ),
                 ),
-                (0, s.jsx)($.$n, {
+                (0, s.jsx)(U.$n, {
                   disabled: 0 == r.length,
                   onClick: () => n(r),
                   children: "Continue",
@@ -2095,10 +2097,10 @@ License: MIT
               ],
             });
       }
-      function Ke(e) {
+      function He(e) {
         const { gidClanEvent: t, rgSelected: n, fnSetSelected: r } = e,
-          i = (0, O.RR)(t).GetNameWithFallback(0);
-        return (0, s.jsx)($.Yh, {
+          i = (0, G.RR)(t).GetNameWithFallback(x.Bhc);
+        return (0, s.jsx)(U.Yh, {
           label: i,
           checked: n.includes(t),
           onChange: (e) => {
@@ -2110,14 +2112,14 @@ License: MIT
           },
         });
       }
-      var We = n(67361),
-        He = n(29233),
-        Ye = n(30603),
-        Ve = n.n(Ye);
-      function Je(e) {
+      var Ye = n(67361),
+        Ve = n(29233),
+        Je = n(30603),
+        Qe = n.n(Je);
+      function Ze(e) {
         const { hideModal: t, gid: n } = e,
-          r = Ce(n),
-          a = (0, y.jE)(),
+          r = Ae(n),
+          a = (0, E.jE)(),
           [o, c] = (0, i.useMemo)(
             () =>
               r
@@ -2125,7 +2127,7 @@ License: MIT
                 : [0, 0],
             [r],
           );
-        return (0, s.jsxs)(q.o0, {
+        return (0, s.jsxs)(W.o0, {
           bAlertDialog: !0,
           bAllowFullSize: !0,
           bDisableBackgroundDismiss: !0,
@@ -2135,10 +2137,10 @@ License: MIT
           strTitle: "Invitation And Registration Status",
           children: [
             !r &&
-              (0, s.jsx)(W.t, {
+              (0, s.jsx)(Y.t, {
                 size: "medium",
                 position: "center",
-                string: (0, J.we)("#Loading"),
+                string: (0, Z.we)("#Loading"),
               }),
             r &&
               (0, s.jsxs)(s.Fragment, {
@@ -2147,19 +2149,19 @@ License: MIT
                     children: ["There are ", o, " registrations."],
                   }),
                   c > 0 &&
-                    (0, s.jsxs)($.$n, {
+                    (0, s.jsxs)(U.$n, {
                       onClick: async () => {
                         await (async function (e, t) {
                           let n = new FormData();
-                          n.append("sessionid", Z.TS.SESSIONID),
+                          n.append("sessionid", ee.TS.SESSIONID),
                             n.append("gid", t);
-                          const s = `${Z.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
+                          const s = `${ee.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
                           try {
-                            const r = await E().post(s, n, {
+                            const r = await I().post(s, n, {
                               withCredentials: !0,
                             });
-                            if (1 != r?.data?.success) {
-                              let e = (0, le.H)(r);
+                            if (r?.data?.success != j.R) {
+                              let e = (0, ue.H)(r);
                               console.error(
                                 "AsyncSendInviteEmails error: " + e.strErrorMsg,
                                 e,
@@ -2175,7 +2177,7 @@ License: MIT
                               r?.data
                             );
                           } catch (e) {
-                            let t = (0, le.H)(e);
+                            let t = (0, ue.H)(e);
                             console.error(
                               "AsyncSendInviteEmails error: " + t.strErrorMsg,
                               t,
@@ -2202,7 +2204,7 @@ License: MIT
                       }),
                       (0, s.jsx)("tbody", {
                         children: r?.map((e) =>
-                          (0, s.jsx)(Qe, { reg: e }, "regentry_" + e.steamid),
+                          (0, s.jsx)(Xe, { reg: e }, "regentry_" + e.steamid),
                         ),
                       }),
                     ],
@@ -2212,9 +2214,9 @@ License: MIT
           ],
         });
       }
-      function Qe(e) {
+      function Xe(e) {
         const { reg: t } = e,
-          [n] = (0, C.UA)(t.partner_id);
+          [n] = (0, A.UA)(t.partner_id);
         return (0, s.jsxs)("tr", {
           children: [
             (0, s.jsx)("td", { children: t.steamid }),
@@ -2228,18 +2230,18 @@ License: MIT
           ],
         });
       }
-      function Ze(e) {
+      function et(e) {
         const { hideModal: t, gid: n, title: r, group: a, session: o } = e,
-          c = (0, G.a)(),
-          l = Ce(n),
-          d = L(c, n, a?.group_id),
+          c = (0, z.a)(),
+          l = Ae(n),
+          d = P(c, n, a?.group_id),
           [u, h] = (0, i.useMemo)(() => {
             const e = d?.data?.filter((e) => e.session_id == o.id),
               t = new Map(),
               n = new Map();
             return (
               e?.forEach((e) => {
-                const s = new He.b2(e.steamid).GetAccountID();
+                const s = new Ve.b2(e.steamid).GetAccountID();
                 if ((t.set(s, e), e.jsondata)) {
                   const t = JSON.parse(e.jsondata);
                   t.pre_event_partner_questions &&
@@ -2249,8 +2251,8 @@ License: MIT
               [t, n]
             );
           }, [o, d]),
-          g = l?.filter((e) => u.has(new He.b2(e.steamid).GetAccountID()));
-        return (0, s.jsxs)(q.o0, {
+          g = l?.filter((e) => u.has(new Ve.b2(e.steamid).GetAccountID()));
+        return (0, s.jsxs)(W.o0, {
           bAlertDialog: !0,
           bAllowFullSize: !0,
           bDisableBackgroundDismiss: !0,
@@ -2259,7 +2261,7 @@ License: MIT
           strTitle: "Session Registration",
           children: [
             (0, s.jsx)("div", {
-              className: Ve().ExportToCSV,
+              className: Qe().ExportToCSV,
               children: (0, s.jsx)("a", {
                 onClick: () =>
                   (function (e, t, n, s, r, i) {
@@ -2278,7 +2280,7 @@ License: MIT
                     a.push(o),
                       s.forEach((t) => {
                         const n = [],
-                          s = t.partner_id ? (0, C.Yd)(t.partner_id) : void 0;
+                          s = t.partner_id ? (0, A.Yd)(t.partner_id) : void 0;
                         n.push("" + t.steamid),
                           n.push(t.name),
                           n.push(t.invited ? "YES" : ""),
@@ -2291,9 +2293,9 @@ License: MIT
                                 ? t.guests_registered - 1
                                 : 0),
                           );
-                        const o = new He.b2(t.steamid);
+                        const o = new Ve.b2(t.steamid);
                         if (r.has(o.GetAccountID())) {
-                          const e = Xe(r.get(o.GetAccountID()), t);
+                          const e = tt(r.get(o.GetAccountID()), t);
                           if (e) {
                             const t = new Date(1e3 * e)
                               .toISOString()
@@ -2317,17 +2319,17 @@ License: MIT
                         }
                       });
                     const c =
-                      `meetsteam_${n}_${(0, J.TW)(t.rtime_start)}_at_${(0, We.KC)(t.rtime_start)}.csv`.replace(
+                      `meetsteam_${n}_${(0, Z.TW)(t.rtime_start)}_at_${(0, Ye.KC)(t.rtime_start)}.csv`.replace(
                         /[ <>:"/\\|?*\x00-\x1F]/g,
                         "_",
                       );
-                    de.g.WriteCSVToFile(a, c);
+                    he.g.WriteCSVToFile(a, c);
                   })(a, o, r, g, u, h),
                 children: "Export to CSV",
               }),
             }),
             (0, s.jsxs)("table", {
-              className: Ve().Table,
+              className: Qe().Table,
               children: [
                 (0, s.jsx)("thead", {
                   children: (0, s.jsxs)("tr", {
@@ -2341,7 +2343,7 @@ License: MIT
                       (0, s.jsxs)("th", {
                         children: [
                           "Guest Count ",
-                          (0, s.jsx)(H.o, {
+                          (0, s.jsx)(V.o, {
                             tooltip:
                               "Additional guests, doesn't include main registrant",
                           }),
@@ -2355,10 +2357,10 @@ License: MIT
                 }),
                 (0, s.jsx)("tbody", {
                   children: g?.flatMap((e) => {
-                    const t = new He.b2(e.steamid).GetAccountID(),
+                    const t = new Ve.b2(e.steamid).GetAccountID(),
                       n = [
                         (0, s.jsx)(
-                          et,
+                          nt,
                           {
                             group: a,
                             regInfo: u.get(t),
@@ -2371,7 +2373,7 @@ License: MIT
                     for (let t = 0; t < e.guest_names?.length; t++)
                       n.push(
                         (0, s.jsx)(
-                          tt,
+                          st,
                           { guestName: e.guest_names[t] },
                           "regguestrow" + e.steamid + "_" + t,
                         ),
@@ -2384,15 +2386,15 @@ License: MIT
           ],
         });
       }
-      function Xe(e, t) {
+      function tt(e, t) {
         const n = `registration_emailed_${e.group_id}_${e.session_id}`;
         let s = null;
         return n in t && (s = t[n]), s;
       }
-      function et(e) {
+      function nt(e) {
         const { inviteInfo: t, regInfo: n, group: r, preRegQuestions: i } = e,
-          [a] = (0, C.UA)(t.partner_id),
-          o = Xe(n, t);
+          [a] = (0, A.UA)(t.partner_id),
+          o = tt(n, t);
         return (0, s.jsxs)("tr", {
           children: [
             (0, s.jsx)("td", { children: t.steamid }),
@@ -2404,7 +2406,7 @@ License: MIT
             (0, s.jsx)("td", {
               children: n.guests_registered ? n.guests_registered - 1 : 0,
             }),
-            (0, s.jsx)("td", { children: o ? (0, J.TW)(o) : "" }),
+            (0, s.jsx)("td", { children: o ? (0, Z.TW)(o) : "" }),
             r.ask_registration_question &&
               (0, s.jsx)("td", {
                 children:
@@ -2413,7 +2415,7 @@ License: MIT
           ],
         });
       }
-      function tt(e) {
+      function st(e) {
         const { guestName: t } = e;
         return (0, s.jsxs)("tr", {
           children: [
@@ -2422,16 +2424,16 @@ License: MIT
           ],
         });
       }
-      var nt = n(2516),
-        st = n(98019),
-        rt = n(8527);
-      function it(e) {
-        return (0, S.I)({
+      var rt = n(2516),
+        it = n(98019),
+        at = n(8527);
+      function ot(e) {
+        return (0, w.I)({
           queryKey: [],
           queryFn: async () =>
             await (async function (e) {
               const t = { sessionid: (0, _.KC)(), gids: e },
-                n = `${rt.TS.PARTNER_BASE_URL}meetsteam/admin/ajaxgetregistrations`,
+                n = `${at.TS.PARTNER_BASE_URL}meetsteam/admin/ajaxgetregistrations`,
                 s = await fetch(n, {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },
@@ -2442,7 +2444,7 @@ License: MIT
                   `Failed to read registrations for gids ${e.join(",")}`,
                 );
               const r = await s.json();
-              if (1 != r.success)
+              if (r.success != j.R)
                 throw new Error(
                   `Failed to read registrations for gids ${e.join(",")}: ${r.msg}`,
                 );
@@ -2451,9 +2453,9 @@ License: MIT
           enabled: e && e.length > 0,
         });
       }
-      function at(e) {
+      function ct(e) {
         const { rgEventGIDs: t } = e,
-          [n, r, a] = (0, v.uD)(),
+          [n, r, a] = (0, y.uD)(),
           [o, c] = (0, i.useState)(null);
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -2465,19 +2467,19 @@ License: MIT
               },
               children: "Show Registration Across Events",
             }),
-            (0, s.jsx)(K.E, {
+            (0, s.jsx)(H.E, {
               active: n,
               children: (0, s.jsx)(u.tH, {
-                children: (0, s.jsx)(q.o0, {
+                children: (0, s.jsx)(W.o0, {
                   closeModal: a,
                   bAllowFullSize: !0,
                   bDisableBackgroundDismiss: !0,
                   children: Boolean(null == o)
-                    ? (0, s.jsx)(qe, { rgEventGIDs: t, fnSelectedEvents: c })
+                    ? (0, s.jsx)(We, { rgEventGIDs: t, fnSelectedEvents: c })
                     : (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(ct, { rgGidMeetSteamEvents: o }),
-                          (0, s.jsx)($.$n, {
+                          (0, s.jsx)(dt, { rgGidMeetSteamEvents: o }),
+                          (0, s.jsx)(U.$n, {
                             onClick: () => c(null),
                             children: "Reset Selection",
                           }),
@@ -2489,8 +2491,8 @@ License: MIT
           ],
         });
       }
-      const ot = (0, ye.FB)();
-      function ct(e) {
+      const lt = (0, Ee.FB)();
+      function dt(e) {
         const { rgGidMeetSteamEvents: t } = e,
           {
             rgAllRegistrations: n,
@@ -2498,10 +2500,10 @@ License: MIT
             rgValveAccounts: a,
             rgMapAccountToSessionTimes: o,
           } = (function (e) {
-            const t = De(e),
-              n = (0, st.qh)(),
-              { bIsLoading: s, events: r } = (0, O.PB)(e),
-              { data: a } = it(e),
+            const t = Re(e),
+              n = (0, it.qh)(),
+              { bIsLoading: s, events: r } = (0, G.PB)(e),
+              { data: a } = ot(e),
               [o, c, l] = (0, i.useMemo)(() => {
                 if (
                   s ||
@@ -2526,14 +2528,14 @@ License: MIT
                       t.sessions?.forEach((n) => {
                         o.set(
                           `${e.GID}_${t.group_id}_${n.id}`,
-                          `${t.localized_session_title[0]}@${(0, We.TW)(n.rtime_start)} ${(0, We.KC)(n.rtime_start)}`,
+                          `${t.localized_session_title[x.Bhc]}@${(0, Ye.TW)(n.rtime_start)} ${(0, Ye.KC)(n.rtime_start)}`,
                         );
                       });
                     });
                   }),
                   a.forEach((e) => {
                     e.rgRegistrations.forEach((t) => {
-                      const n = new b.b(t.steamid).GetAccountID(),
+                      const n = new D.b(t.steamid).GetAccountID(),
                         s =
                           o.get(`${e.gid}_${t.group_id}_${t.session_id}`) ||
                           `${t.group_id}:${t.session_id}`;
@@ -2543,7 +2545,7 @@ License: MIT
                   [Array.from(n), e, i]
                 );
               }, [t, s, a, r]);
-            return (0, D.fI)(o)
+            return (0, R.fI)(o)
               ? {
                   rgAllRegistrations: c,
                   rgPartnerIDs: o,
@@ -2557,7 +2559,7 @@ License: MIT
                   rgMapAccountToSessionTimes: void 0,
                 };
           })(t),
-          c = (0, C.vh)(r),
+          c = (0, A.vh)(r),
           l = (0, i.useMemo)(() => {
             if (!(c && n && a && o)) return null;
             const e = new Map();
@@ -2565,8 +2567,8 @@ License: MIT
             const t = [];
             return (
               n.forEach((n) => {
-                const s = (0, C.Yd)(n.partner_id),
-                  r = (0, D.Gl)(n.partner_id);
+                const s = (0, A.Yd)(n.partner_id),
+                  r = (0, R.Gl)(n.partner_id);
                 t.push({
                   partner_id: n.partner_id ? "" + n.partner_id : "",
                   partner_name: s?.name || "Unknown",
@@ -2582,7 +2584,7 @@ License: MIT
                       ? r
                           .filter((e) => e.is_business_contact)
                           .map((t) => {
-                            const n = new b.b(t.steamid),
+                            const n = new D.b(t.steamid),
                               s = e.get(n.GetAccountID());
                             return s?.displayName || t.steamid;
                           })
@@ -2594,16 +2596,16 @@ License: MIT
               t
             );
           }, [c, n, a, o]),
-          d = lt();
+          d = ut();
         return c && r && l
           ? (0, s.jsxs)(s.Fragment, {
               children: [
-                (0, s.jsx)($.JU, { children: "Registations" }),
+                (0, s.jsx)(U.JU, { children: "Registations" }),
                 Boolean(l)
                   ? (0, s.jsxs)(u.tH, {
                       children: [
-                        (0, s.jsx)(dt, { rgData: l }),
-                        (0, s.jsx)(we.k, {
+                        (0, s.jsx)(ht, { rgData: l }),
+                        (0, s.jsx)(be.k, {
                           columns: d,
                           data: l,
                           getRowKey: (e) => e,
@@ -2612,47 +2614,47 @@ License: MIT
                           overscan: r.length,
                         }),
                         (0, s.jsx)("br", {}),
-                        (0, s.jsx)(dt, { rgData: l }),
+                        (0, s.jsx)(ht, { rgData: l }),
                       ],
                     })
-                  : (0, s.jsx)(W.t, {
-                      string: (0, J.we)("#Loading"),
+                  : (0, s.jsx)(Y.t, {
+                      string: (0, Z.we)("#Loading"),
                       position: "center",
                     }),
               ],
             })
-          : (0, s.jsx)(W.t, { string: (0, J.we)("#Loading") });
+          : (0, s.jsx)(Y.t, { string: (0, Z.we)("#Loading") });
       }
-      function lt() {
+      function ut() {
         return (0, i.useMemo)(
           () => [
-            ot.accessor("name", { header: "Name", size: 200 }),
-            ot.accessor("accountid", { header: "Account ID", size: 150 }),
-            ot.accessor("email", { header: "Email", size: 150 }),
-            ot.accessor("guest_registrated", {
+            lt.accessor("name", { header: "Name", size: 200 }),
+            lt.accessor("accountid", { header: "Account ID", size: 150 }),
+            lt.accessor("email", { header: "Email", size: 150 }),
+            lt.accessor("guest_registrated", {
               header: "Guest Count",
               size: 100,
             }),
-            ot.accessor("guest_names", { header: "Guest's Names", size: 100 }),
-            ot.accessor("partner_id", { header: "Partner ID", size: 100 }),
-            ot.accessor("partner_name", { header: "Partner Name", size: 300 }),
-            ot.accessor("game", { header: "Game Name", size: 150 }),
-            ot.accessor("business_contact", {
+            lt.accessor("guest_names", { header: "Guest's Names", size: 100 }),
+            lt.accessor("partner_id", { header: "Partner ID", size: 100 }),
+            lt.accessor("partner_name", { header: "Partner Name", size: 300 }),
+            lt.accessor("game", { header: "Game Name", size: 150 }),
+            lt.accessor("business_contact", {
               header: "Business Contact",
               size: 150,
             }),
-            ot.accessor("sessions", { header: "Sessions", size: 150 }),
+            lt.accessor("sessions", { header: "Sessions", size: 150 }),
           ],
           [],
         );
       }
-      function dt(e) {
+      function ht(e) {
         const { rgData: t } = e,
-          n = lt();
-        return (0, s.jsx)($.$n, {
+          n = ut();
+        return (0, s.jsx)(U.$n, {
           id: "download-csv",
           onClick: () =>
-            (0, nt.K)(
+            (0, rt.K)(
               "registrationdump.csv",
               t,
               n.map((e) => ({
@@ -2667,16 +2669,16 @@ License: MIT
           children: "Download CSV",
         });
       }
-      function ut(e) {
-        const t = b.b.InitFromClanID((0, U.H)()),
+      function gt(e) {
+        const t = D.b.InitFromClanID((0, K.H)()),
           n = (function () {
             const [e] = (0, i.useState)(() =>
               (0, _.Tc)("event_gids", "application_config"),
             );
             return e;
           })(),
-          { bShowArchived: r, setShowArchived: a } = ae(),
-          { bIsLoading: o, events: c } = (0, O.PB)(n),
+          { bShowArchived: r, setShowArchived: a } = ce(),
+          { bIsLoading: o, events: c } = (0, G.PB)(n),
           l = i.useMemo(() => {
             if (!c) return null;
             const e =
@@ -2684,26 +2686,26 @@ License: MIT
                   ? [...c]
                   : c?.filter((e) => e.endTime >= new Date().getTime() / 1e3),
               t = Array.from(
-                (0, V.bv)(e, (e) => (0, V.J2)(new Date(1e3 * e.startTime))),
+                (0, Q.bv)(e, (e) => (0, Q.J2)(new Date(1e3 * e.startTime))),
               );
             return t?.sort((e) => -e[0]), t;
           }, [c, r]);
         return o
-          ? (0, s.jsx)(W.t, {})
+          ? (0, s.jsx)(Y.t, {})
           : l
             ? (0, s.jsxs)("div", {
                 children: [
                   (0, s.jsxs)("div", {
                     children: [
                       (0, s.jsx)("a", {
-                        href: `${Z.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
+                        href: `${ee.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
                         children: "Open Meet Steam Event Dashboard",
                       }),
-                      (0, s.jsx)(Oe, { rgEventGIDs: n }),
-                      (0, s.jsx)(at, { rgEventGIDs: n }),
+                      (0, s.jsx)(Ge, { rgEventGIDs: n }),
+                      (0, s.jsx)(ct, { rgEventGIDs: n }),
                     ],
                   }),
-                  (0, s.jsx)($.Yh, {
+                  (0, s.jsx)(U.Yh, {
                     checked: r,
                     onChange: a,
                     label: "Show Past Events",
@@ -2711,7 +2713,7 @@ License: MIT
                   (0, s.jsx)("hr", {}),
                   l.map((e) =>
                     (0, s.jsx)(
-                      ht,
+                      mt,
                       { month: new Date(1e3 * e[0]), events: e[1] },
                       e[0],
                     ),
@@ -2720,7 +2722,7 @@ License: MIT
               })
             : null;
       }
-      function ht(e) {
+      function mt(e) {
         const { month: t, events: n } = e,
           r = i.useMemo(() => [...n].sort((e) => -e.startTime), [n]),
           a = new Intl.DateTimeFormat(navigator.language, {
@@ -2729,22 +2731,22 @@ License: MIT
           }).format(t);
         return (0, s.jsxs)("div", {
           children: [
-            (0, s.jsx)("div", { className: ee().MonthTitle, children: a }),
+            (0, s.jsx)("div", { className: ne().MonthTitle, children: a }),
             (0, s.jsx)("div", {
-              className: ee().MonthEvents,
-              children: r.map((e) => (0, s.jsx)(gt, { oEvent: e }, e.GID)),
+              className: ne().MonthEvents,
+              children: r.map((e) => (0, s.jsx)(pt, { oEvent: e }, e.GID)),
             }),
           ],
         });
       }
-      function gt(e) {
+      function pt(e) {
         const { oEvent: t } = e,
           n = t.GID,
-          r = b.b.InitFromClanID((0, U.H)()),
-          a = (0, G.a)(),
-          o = (0, F.my)(a, (0, U.H)(), n),
+          r = D.b.InitFromClanID((0, K.H)()),
+          a = (0, z.a)(),
+          o = (0, $.my)(a, (0, K.H)(), n),
           c = o.isSuccess ? o.data : null,
-          l = t.GetNameWithFallback(0),
+          l = t.GetNameWithFallback(x.Bhc),
           d = (0, i.useMemo)(() => {
             const e = new Array();
             return (
@@ -2757,27 +2759,27 @@ License: MIT
             );
           }, [t.jsondata.meet_steam_groups]);
         return (0, s.jsxs)("div", {
-          className: ee().EventRow,
+          className: ne().EventRow,
           children: [
             (0, s.jsxs)("div", {
-              className: ee().EventMainDetails,
+              className: ne().EventMainDetails,
               children: [
                 (0, s.jsxs)("div", {
-                  className: ee().TitleLine,
+                  className: ne().TitleLine,
                   children: [
-                    (0, s.jsx)("div", { className: ee().Title, children: l }),
+                    (0, s.jsx)("div", { className: ne().Title, children: l }),
                     (0, s.jsx)("div", {
-                      className: ee().StartDate,
-                      children: (0, J.TW)(t?.startTime),
+                      className: ne().StartDate,
+                      children: (0, Z.TW)(t?.startTime),
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: ee().ActionLine,
+                  className: ne().ActionLine,
                   children: [
                     (0, s.jsx)("div", {
                       children: (0, s.jsx)("a", {
-                        href: `${Z.TS.COMMUNITY_BASE_URL}gid/${r.ConvertTo64BitString()}/partnerevents/edit/${n}`,
+                        href: `${ee.TS.COMMUNITY_BASE_URL}gid/${r.ConvertTo64BitString()}/partnerevents/edit/${n}`,
                         children: "Edit",
                       }),
                     }),
@@ -2785,7 +2787,7 @@ License: MIT
                       children: [
                         " | ",
                         (0, s.jsx)("a", {
-                          href: `${Z.TS.STORE_BASE_URL}meetsteam/${n}`,
+                          href: `${ee.TS.STORE_BASE_URL}meetsteam/${n}`,
                           children: "View",
                         }),
                       ],
@@ -2796,21 +2798,21 @@ License: MIT
                     ) &&
                       (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(xt, { gid: n }),
+                          (0, s.jsx)(vt, { gid: n }),
                           " | ",
                           (0, s.jsx)("a", {
-                            href: `${Z.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${Z.iA.accountid}`,
+                            href: `${ee.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${ee.iA.accountid}`,
                             children: "QR Page",
                           }),
                           " | ",
                           (0, s.jsx)("a", {
-                            href: `${Z.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${n}`,
+                            href: `${ee.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${n}`,
                             children: "Attendance List",
                           }),
-                          (0, s.jsx)(mt, { gid: n }),
                           (0, s.jsx)(ft, { gid: n }),
-                          (0, s.jsx)(pt, { gid: n }),
+                          (0, s.jsx)(xt, { gid: n }),
                           (0, s.jsx)(_t, { gid: n }),
+                          (0, s.jsx)(jt, { gid: n }),
                         ],
                       }),
                   ],
@@ -2849,7 +2851,7 @@ License: MIT
                         children: [
                           Boolean(d.length > 0)
                             ? (0, s.jsx)(
-                                vt,
+                                yt,
                                 {
                                   gid: n,
                                   group: d[0].group,
@@ -2887,7 +2889,7 @@ License: MIT
                           (0, s.jsx)(
                             "tr",
                             {
-                              children: (0, s.jsx)(vt, {
+                              children: (0, s.jsx)(yt, {
                                 group: e.group,
                                 gid: n,
                                 session: e.session,
@@ -2906,24 +2908,24 @@ License: MIT
           ],
         });
       }
-      function mt(e) {
+      function ft(e) {
         const { gid: t } = e,
-          n = ne();
+          n = re();
         return Array.from(n.keys()).includes(t)
           ? (0, s.jsxs)(s.Fragment, {
               children: [
                 " | ",
                 (0, s.jsx)("a", {
-                  href: `${Z.TS.PARTNER_BASE_URL}meetsteam/survey/${t}`,
+                  href: `${ee.TS.PARTNER_BASE_URL}meetsteam/survey/${t}`,
                   children: "Survey",
                 }),
               ],
             })
           : null;
       }
-      function pt(e) {
+      function _t(e) {
         const { gid: t } = e,
-          [n, r, i] = (0, v.uD)();
+          [n, r, i] = (0, y.uD)();
         return (0, s.jsxs)("div", {
           children: [
             " | ",
@@ -2934,24 +2936,24 @@ License: MIT
               },
               children: [
                 "Invite via CSV",
-                (0, s.jsx)(H.o, {
+                (0, s.jsx)(V.o, {
                   tooltip:
                     "This will email invitee and show the users on the dashboard (if not already invited).  We need csv with accountid,partnerid,email_override (optional)",
                 }),
               ],
             }),
             (0, s.jsx)(u.tH, {
-              children: (0, s.jsx)(K.E, {
+              children: (0, s.jsx)(H.E, {
                 active: n,
-                children: (0, s.jsx)(xe, { hideModal: i, gid: t }),
+                children: (0, s.jsx)(ve, { hideModal: i, gid: t }),
               }),
             }),
           ],
         });
       }
-      function ft(e) {
+      function xt(e) {
         const { gid: t } = e,
-          [n, r, i] = (0, v.uD)();
+          [n, r, i] = (0, y.uD)();
         return (0, s.jsxs)("div", {
           children: [
             " | ",
@@ -2963,17 +2965,17 @@ License: MIT
               children: "Invite",
             }),
             (0, s.jsx)(u.tH, {
-              children: (0, s.jsx)(K.E, {
+              children: (0, s.jsx)(H.E, {
                 active: n,
-                children: (0, s.jsx)(_e, { hideModal: i, gid: t }),
+                children: (0, s.jsx)(je, { hideModal: i, gid: t }),
               }),
             }),
           ],
         });
       }
-      function _t(e) {
+      function jt(e) {
         const { gid: t } = e,
-          [n, r, i] = (0, v.uD)();
+          [n, r, i] = (0, y.uD)();
         return (0, s.jsxs)("div", {
           children: [
             " | ",
@@ -2985,41 +2987,40 @@ License: MIT
               children: "Show Invites",
             }),
             (0, s.jsx)(u.tH, {
-              children: (0, s.jsx)(K.E, {
+              children: (0, s.jsx)(H.E, {
                 active: n,
-                children: (0, s.jsx)(Je, { hideModal: i, gid: t }),
+                children: (0, s.jsx)(Ze, { hideModal: i, gid: t }),
               }),
             }),
           ],
         });
       }
-      function xt(e) {
+      function vt(e) {
         const { gid: t } = e,
-          n = (0, G.a)(),
+          n = (0, z.a)(),
           [r, a] = (0, i.useState)(!1),
           [o, c] = (0, i.useState)(null);
         return (0, s.jsxs)("div", {
           children: [
-            " | ",
             (0, s.jsx)("a", {
               href: "#",
               onClick: async (e) => {
                 e.preventDefault(), e.stopPropagation(), a(!0);
                 const s = await (async function (e, t) {
-                  const n = x.w.Init(j.VI),
-                    s = b.b.InitFromClanID((0, U.H)());
+                  const n = v.w.Init(S.VI),
+                    s = D.b.InitFromClanID((0, K.H)());
                   n.Body().set_clan_event_gid(t),
                     n.Body().set_steamid(s.ConvertTo64BitString());
-                  const r = await j.ZK.TestFireEmails(e, n);
+                  const r = await S.ZK.TestFireEmails(e, n);
                   return console.log("test fire", r), r.GetEResult();
                 })(n, t);
                 c(s);
               },
               children: "Email Self",
             }),
-            (0, s.jsx)(K.E, {
+            (0, s.jsx)(H.E, {
               active: r,
-              children: (0, s.jsxs)(q.o0, {
+              children: (0, s.jsxs)(W.o0, {
                 bAlertDialog: !0,
                 strTitle: "Test Emails",
                 closeModal: () => {
@@ -3032,10 +3033,10 @@ License: MIT
                       "This will temporarily register and then de-register you from the event as a way to test the email sending code.",
                   }),
                   Boolean(null == o) &&
-                    (0, s.jsx)(W.t, { string: (0, J.we)("#Loading") }),
-                  Boolean(1 == o) &&
+                    (0, s.jsx)(Y.t, { string: (0, Z.we)("#Loading") }),
+                  Boolean(o == j.R) &&
                     (0, s.jsx)("div", { children: "Test Emails Sent" }),
-                  Boolean(o && 1 != o) &&
+                  Boolean(o && o != j.R) &&
                     (0, s.jsx)("div", {
                       children: "Email Failed to Send. Check console",
                     }),
@@ -3045,15 +3046,15 @@ License: MIT
           ],
         });
       }
-      function jt(e, t) {
-        const n = B().unix(e),
-          s = B().unix(e).tz(t),
+      function St(e, t) {
+        const n = F().unix(e),
+          s = F().unix(e).tz(t),
           r = s.utcOffset() - n.utcOffset(),
           i = new Date(1e3 * (e + 60 * r)),
           a = new Date();
-        return `${i.getFullYear() == a.getFullYear() ? ((0, Q.$w))(i, !1, !1) : ((0, Q._9))(i, !1, !1)} ${(0, Q.KC)(e + 60 * r)} ${s.format("z")}`;
+        return `${i.getFullYear() == a.getFullYear() ? ((0, X.$w))(i, !1, !1) : ((0, X._9))(i, !1, !1)} ${(0, X.KC)(e + 60 * r)} ${s.format("z")}`;
       }
-      function vt(e) {
+      function yt(e) {
         const {
             gid: t,
             group: n,
@@ -3061,36 +3062,36 @@ License: MIT
             session: i,
             firstSession: a = !0,
           } = e,
-          o = J.NT.GetWithFallback(n?.localized_session_title, 0),
-          c = J.NT.GetWithFallback(n?.localized_session_description, 0),
-          l = J.NT.GetWithFallback(n?.localized_intended_audience, 0),
+          o = Z.NT.GetWithFallback(n?.localized_session_title, x.Bhc),
+          c = Z.NT.GetWithFallback(n?.localized_session_description, x.Bhc),
+          l = Z.NT.GetWithFallback(n?.localized_intended_audience, x.Bhc),
           d = r?.find((e) => e.group_id == n.group_id && e.session_id == i.id),
-          [h, g, m] = (0, v.uD)(),
-          p = L((0, G.a)(), t, n?.group_id);
+          [h, g, m] = (0, y.uD)(),
+          p = P((0, z.a)(), t, n?.group_id);
         let f = Math.min((d?.guest_count / i.max_capacity) * 100, 100),
           _ = d?.guest_count > 0 ? `${f}%` : "0%",
-          x = d?.guest_count >= i.max_capacity;
-        const j = Intl.DateTimeFormat().resolvedOptions().timeZone,
+          j = d?.guest_count >= i.max_capacity;
+        const v = Intl.DateTimeFormat().resolvedOptions().timeZone,
           S =
             "in_person" === i.location_type
-              ? (i.in_person_time_zone ?? z.hh)
-              : j;
+              ? (i.in_person_time_zone ?? q.hh)
+              : v;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             a && Boolean(n)
               ? (0, s.jsxs)("td", {
                   children: [
                     o,
-                    (0, s.jsx)(H.o, { tooltip: c }),
+                    (0, s.jsx)(V.o, { tooltip: c }),
                     Boolean(l) && (0, s.jsx)("div", { children: l }),
                   ],
                 })
               : (0, s.jsx)("td", {}),
             (0, s.jsx)("td", {
-              children: (0, s.jsx)("span", { children: jt(i.rtime_start, S) }),
+              children: (0, s.jsx)("span", { children: St(i.rtime_start, S) }),
             }),
             (0, s.jsx)("td", {
-              children: (0, Q.IH)(i.rtime_end - i.rtime_start),
+              children: (0, X.IH)(i.rtime_end - i.rtime_start),
             }),
             (0, s.jsxs)("td", {
               children: [
@@ -3099,11 +3100,11 @@ License: MIT
                 i.max_capacity,
                 (0, s.jsx)("br", {}),
                 (0, s.jsx)("div", {
-                  className: ee().CapacityBarMax,
+                  className: ne().CapacityBarMax,
                   children: (0, s.jsx)("div", {
-                    className: (0, Y.A)(
-                      ee().CapacityBarCurrent,
-                      x ? ee().Full : "",
+                    className: (0, J.A)(
+                      ne().CapacityBarCurrent,
+                      j ? ne().Full : "",
                     ),
                     style: { width: _ },
                   }),
@@ -3128,11 +3129,11 @@ License: MIT
             }),
             (0, s.jsxs)("td", {
               children: [
-                (0, s.jsx)($.$n, { onClick: g, children: "Details" }),
+                (0, s.jsx)(U.$n, { onClick: g, children: "Details" }),
                 (0, s.jsx)(u.tH, {
-                  children: (0, s.jsx)(K.E, {
+                  children: (0, s.jsx)(H.E, {
                     active: h,
-                    children: (0, s.jsx)(Ze, {
+                    children: (0, s.jsx)(et, {
                       gid: t,
                       title: o,
                       group: n,
@@ -3146,15 +3147,14 @@ License: MIT
           ],
         });
       }
-      var St = n(22837),
-        yt = n(39777),
-        wt = n(35380),
-        Et = n(14336),
-        bt = n(16021),
-        It = n(68276),
+      var wt = n(39777),
+        Et = n(35380),
+        bt = n(14336),
+        It = n(16021),
+        Dt = n(68276),
         Ct = n(48479);
-      function Dt(e) {
-        const { rgEvents: t } = k(),
+      function At(e) {
+        const { rgEvents: t } = M(),
           n = (function () {
             const [e] = (0, i.useState)(() =>
               (0, _.Tc)("interest_results", "application_config"),
@@ -3165,7 +3165,7 @@ License: MIT
             );
           })(),
           [r, a] = (0, i.useState)(""),
-          o = I.TS.PARTNER_BASE_URL + "meetsteam",
+          o = C.TS.PARTNER_BASE_URL + "meetsteam",
           c = (0, i.useMemo)(() => {
             const e = new Map();
             return (
@@ -3178,16 +3178,16 @@ License: MIT
             );
           }, [n]);
         return (0, s.jsxs)("div", {
-          className: ee().EventList,
+          className: ne().EventList,
           children: [
-            (0, s.jsx)($.pd, {
+            (0, s.jsx)(U.pd, {
               type: "text",
               value: r,
               onChange: (e) => a(e.currentTarget.value.trim()),
               label: "Filter",
             }),
             (0, s.jsxs)("div", {
-              children: ["Total Survey Responses: ", (0, fe.D)(n?.length || 0)],
+              children: ["Total Survey Responses: ", (0, xe.D)(n?.length || 0)],
             }),
             (0, s.jsxs)("div", {
               children: [
@@ -3201,7 +3201,7 @@ License: MIT
               )
               .map((e) =>
                 (0, s.jsx)(
-                  At,
+                  Rt,
                   {
                     conf: e,
                     nInterestCount: c.get(e.id) ?? 0,
@@ -3210,14 +3210,14 @@ License: MIT
                   e.id,
                 ),
               ),
-            (0, s.jsx)(Bt, { rgSurveyInterest: n }),
+            (0, s.jsx)(Ot, { rgSurveyInterest: n }),
           ],
         });
       }
-      function At(e) {
+      function Rt(e) {
         const { conf: t, nInterestCount: n, rgSurveyInterest: r } = e;
         return (0, s.jsx)(Ct.qx, {
-          title: `${t.name} in ${t.place} around ${t.time}: Interest: ${(0, fe.D)(n)}`,
+          title: `${t.name} in ${t.place} around ${t.time}: Interest: ${(0, xe.D)(n)}`,
           bStartMinimized: !0,
           children: (0, s.jsx)(kt, { conf: t, rgSurveyInterest: r }),
         });
@@ -3243,25 +3243,25 @@ License: MIT
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
             [t, n],
           ),
-          a = (0, st.qh)(),
+          a = (0, it.qh)(),
           { bComplete: o, nCount: c } = (function (e) {
             const [t, n] = (0, i.useState)(!1),
               [s, r] = (0, i.useState)(0),
-              a = (0, y.jE)();
+              a = (0, E.jE)();
             return (
               (0, i.useEffect)(() => {
                 (async () => {
                   let t = 0;
                   for (const n of e) {
                     const e = n.results.partner_id;
-                    new b.b(n.steamid).GetAccountID(),
+                    new D.b(n.steamid).GetAccountID(),
                       await Promise.all([
-                        (0, C.qG)(e),
+                        (0, A.qG)(e),
                         a.prefetchQuery({
-                          queryKey: R(e),
-                          queryFn: async () => M(e),
+                          queryKey: N(e),
+                          queryFn: async () => B(e),
                         }),
-                        (0, D.PQ)(a, e),
+                        (0, R.PQ)(a, e),
                       ]),
                       ++t,
                       r(t);
@@ -3275,23 +3275,23 @@ License: MIT
         return o
           ? a?.length
             ? r && 0 != r.length
-              ? (0, s.jsx)(Rt, { conf: t, rgSurveyInterest: r })
+              ? (0, s.jsx)(Mt, { conf: t, rgSurveyInterest: r })
               : (0, s.jsx)("div", { children: "No users with interest" })
-            : (0, s.jsx)(W.t, {
+            : (0, s.jsx)(Y.t, {
                 position: "center",
                 string: "Loading Valve Account info (this shouldn't take long)",
               })
-          : (0, s.jsx)(W.t, {
+          : (0, s.jsx)(Y.t, {
               position: "center",
               string: `Loading ${c} of ${r.length}`,
             });
       }
-      function Rt(e) {
+      function Mt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
-          r = (0, y.jE)();
+          r = (0, E.jE)();
         return (0, s.jsxs)("div", {
           children: [
-            (0, s.jsx)($.$n, {
+            (0, s.jsx)(U.$n, {
               onClick: () => {
                 const e = [];
                 e.push([
@@ -3314,19 +3314,19 @@ License: MIT
                 ]),
                   n.forEach((t) => {
                     const n = [],
-                      s = new He.b2(t.steamid);
+                      s = new Ve.b2(t.steamid);
                     n.push("" + s.GetAccountID());
-                    const i = (0, Et.z0)(s.GetAccountID()),
+                    const i = (0, bt.z0)(s.GetAccountID()),
                       a = t.results.partner_id;
                     n.push("" + a);
-                    const o = (0, D.N6)(a).map(
-                      (e) => (0, st.YA)(r, e)?.displayName || "" + e,
+                    const o = (0, R.N6)(a).map(
+                      (e) => (0, it.YA)(r, e)?.displayName || "" + e,
                     );
                     n.push(o.join("|"));
                     const c = t.results.email_override || "";
                     n.push("" + c),
                       n.push(i?.m_strPlayerName ? i.m_strPlayerName : "");
-                    const l = Ne(s.GetAccountID(), a);
+                    const l = Le(s.GetAccountID(), a);
                     if (
                       (n.push(l ? l.realname : ""),
                       n.push(t.results.have_you_met_steam ? "yes" : "no"),
@@ -3343,22 +3343,22 @@ License: MIT
                       n.push(t.results.country_code),
                       n.push(
                         t.results.preferred_language
-                          ? (0, St.Lg)(t.results.preferred_language)
+                          ? (0, x.LgB)(t.results.preferred_language)
                           : "",
                       );
-                    const d = (0, C.Yd)(a);
+                    const d = (0, A.Yd)(a);
                     n.push(d ? d.name : "");
-                    const u = N(r, a);
+                    const u = L(r, a);
                     u
                       ? (n.push("" + Tt(u.strGrossUSD)),
                         n.push("" + u.nBestAppID),
-                        n.push(bt.A.Get().GetApp(u.nBestAppID)?.GetName()),
+                        n.push(It.A.Get().GetApp(u.nBestAppID)?.GetName()),
                         n.push("" + u.nBestAppLongTermSalesRank))
                       : (n.push(""), n.push(""), n.push(""), n.push("")),
                       e.push(n);
                   });
                 const s = t.name.replace(" ", "_") + "_conference_interest.csv";
-                de.g.WriteCSVToFile(e, s);
+                he.g.WriteCSVToFile(e, s);
               },
               children: "Export to CSV",
             }),
@@ -3385,7 +3385,7 @@ License: MIT
                 (0, s.jsx)("tbody", {
                   children: n.map((e) =>
                     (0, s.jsx)(
-                      Mt,
+                      Nt,
                       {
                         strsteamid: e.steamid,
                         partnerID: e.results.partner_id,
@@ -3400,29 +3400,29 @@ License: MIT
           ],
         });
       }
-      function Mt(e) {
+      function Nt(e) {
         const { partnerID: t, registration: n } = e;
         return (0, s.jsxs)("tr", {
           children: [
-            (0, s.jsx)("td", { children: (0, s.jsx)(Nt, { ...e }) }),
+            (0, s.jsx)("td", { children: (0, s.jsx)(Bt, { ...e }) }),
             (0, s.jsx)("td", { children: n.have_you_met_steam ? "" : "NO" }),
             (0, s.jsx)(Lt, { nPartnerID: t }),
             (0, s.jsx)("td", { children: n.attending.length }),
             (0, s.jsx)("td", {
               children:
                 n.english_not_good && n.preferred_language
-                  ? (0, St.Lg)(n.preferred_language)
+                  ? (0, x.LgB)(n.preferred_language)
                   : "",
             }),
             (0, s.jsx)("td", { children: n.country_code }),
-            (0, s.jsx)("td", { children: (0, J.TW)(n.submit_time) }),
+            (0, s.jsx)("td", { children: (0, Z.TW)(n.submit_time) }),
           ],
         });
       }
-      function Nt(e) {
+      function Bt(e) {
         const { strsteamid: t, partnerID: n, registration: r } = e,
-          i = (0, Et.hW)(t),
-          a = Me(new He.b2(t).GetAccountID(), n),
+          i = (0, bt.hW)(t),
+          a = Be(new Ve.b2(t).GetAccountID(), n),
           o = a?.realname || i.data?.m_strPlayerName;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -3434,23 +3434,23 @@ License: MIT
       }
       function Lt(e) {
         const { nPartnerID: t } = e,
-          [n] = (0, C.UA)(t),
+          [n] = (0, A.UA)(t),
           r = (function (e) {
-            const t = (0, S.I)({
-              queryKey: R(e),
-              queryFn: async () => M(e),
+            const t = (0, w.I)({
+              queryKey: N(e),
+              queryFn: async () => B(e),
               enabled: Boolean(e),
             });
             return t.isLoading ? null : t.data;
           })(t),
-          i = (0, D.Z4)(t),
-          a = (0, y.jE)();
+          i = (0, R.Z4)(t),
+          a = (0, E.jE)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)("td", { children: n ? n?.name + ` (${t})` : t }),
             (0, s.jsx)("td", {
               children: i
-                ?.map((e) => (0, st.YA)(a, e)?.displayName || "" + e)
+                ?.map((e) => (0, it.YA)(a, e)?.displayName || "" + e)
                 .join(","),
             }),
             (0, s.jsxs)("td", { children: ["$", r?.strGrossUSD] }),
@@ -3466,18 +3466,18 @@ License: MIT
       }
       function Pt(e) {
         const { appid: t } = e,
-          n = (0, wt.$5)(t),
-          { data: r } = (0, yt.J$)(n);
-        return (0, s.jsx)(It.Q, {
+          n = (0, Et.$5)(t),
+          { data: r } = (0, wt.J$)(n);
+        return (0, s.jsx)(Dt.Q, {
           id: n,
           children: (0, s.jsx)("span", { children: r?.name || t }),
         });
       }
-      function Bt(e) {
+      function Ot(e) {
         const { rgSurveyInterest: t } = e,
-          n = (0, y.jE)(),
+          n = (0, E.jE)(),
           r =
-            ((0, st.qh)(),
+            ((0, it.qh)(),
             (0, i.useMemo)(
               () =>
                 t.filter((e) =>
@@ -3489,7 +3489,7 @@ License: MIT
           title: `Alternative Suggestions (${r.length})`,
           bStartMinimized: !0,
           children: [
-            (0, s.jsx)($.$n, {
+            (0, s.jsx)(U.$n, {
               onClick: () => {
                 const e = [];
                 e.push([
@@ -3509,26 +3509,26 @@ License: MIT
                 ]),
                   r.forEach((t) => {
                     const s = [],
-                      r = new He.b2(t.steamid);
+                      r = new Ve.b2(t.steamid);
                     s.push("" + r.GetAccountID());
-                    const i = (0, Et.z0)(r.GetAccountID()),
+                    const i = (0, bt.z0)(r.GetAccountID()),
                       a = t.results.partner_id;
                     s.push("" + a);
                     const o = t.results.email_override || "";
                     s.push("" + o),
                       s.push(i?.m_strPlayerName ? i.m_strPlayerName : "");
-                    const c = Ne(r.GetAccountID(), a);
+                    const c = Le(r.GetAccountID(), a);
                     s.push(c ? c.realname : ""),
                       s.push("" + t.results.attending?.length),
                       s.push(t.results.country_code),
                       s.push(
                         t.results.preferred_language
-                          ? (0, St.Lg)(t.results.preferred_language)
+                          ? (0, x.LgB)(t.results.preferred_language)
                           : "",
                       );
-                    const l = (0, C.Yd)(a);
+                    const l = (0, A.Yd)(a);
                     s.push(l ? l.name : "");
-                    const d = N(n, a);
+                    const d = L(n, a);
                     d
                       ? (s.push("" + Tt(d.strGrossUSD)),
                         s.push("" + d.nBestAppID),
@@ -3537,7 +3537,7 @@ License: MIT
                       s.push(t.results.suggestion),
                       e.push(s);
                   });
-                de.g.WriteCSVToFile(e, "suggestsion.csv");
+                he.g.WriteCSVToFile(e, "suggestsion.csv");
               },
               children: "Export to CSV (wait until the table populates fully)",
             }),
@@ -3559,7 +3559,7 @@ License: MIT
                 }),
                 (0, s.jsx)("tbody", {
                   children: r.map((e) =>
-                    (0, s.jsx)(Ot, { survey: e }, "suggested" + e.steamid),
+                    (0, s.jsx)(Ft, { survey: e }, "suggested" + e.steamid),
                   ),
                 }),
               ],
@@ -3567,13 +3567,13 @@ License: MIT
           ],
         });
       }
-      function Ot(e) {
+      function Ft(e) {
         const { survey: t } = e;
-        new He.b2(t.steamid);
+        new Ve.b2(t.steamid);
         return (0, s.jsxs)("tr", {
           children: [
             (0, s.jsx)("td", {
-              children: (0, s.jsx)(Nt, {
+              children: (0, s.jsx)(Bt, {
                 strsteamid: t.steamid,
                 partnerID: t.results.partner_id,
                 registration: t.results,
@@ -3584,24 +3584,24 @@ License: MIT
           ],
         });
       }
-      const Ft = i.createContext({
+      const Gt = i.createContext({
         loadUserEmailAndLangs: async (e) =>
           await (function () {
-            $t ||
-              ($t = new (Ie())(
+            zt ||
+              (zt = new (Ce())(
                 async (e) => {
-                  const t = `${I.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
+                  const t = `${C.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
                     n = {
-                      sessionid: I.TS.SESSIONID,
+                      sessionid: C.TS.SESSIONID,
                       strAccountIDs: e.join(","),
                     },
-                    s = await E().get(t, { params: n, withCredentials: !0 });
-                  if (!s || 200 != s?.status || 1 != s?.data?.success)
-                    throw `Failed to load app to user email and langs: ${((0, le.H))(s).strErrorMsg}`;
+                    s = await I().get(t, { params: n, withCredentials: !0 });
+                  if (!s || 200 != s?.status || s?.data?.success != j.R)
+                    throw `Failed to load app to user email and langs: ${((0, ue.H))(s).strErrorMsg}`;
                   const r = new Map();
                   return (
                     s.data.users.forEach((e) => {
-                      const t = new b.b(e.steamid);
+                      const t = new D.b(e.steamid);
                       r.set(t.GetAccountID(), e);
                     }),
                     e.map((e) => r.get(e) ?? null)
@@ -3609,31 +3609,31 @@ License: MIT
                 },
                 { maxBatchSize: 100 },
               ));
-            return $t;
+            return zt;
           })().load(e),
       });
-      function Gt(e, t) {
+      function $t(e, t) {
         return {
           queryKey: ["UserEmailAndLangs", t],
           queryFn: () => e.loadUserEmailAndLangs(t),
           enabled: !!t,
         };
       }
-      let $t;
-      var zt = n(73745),
-        Ut = n(3049);
-      function qt(e) {
-        const t = (0, G.a)(),
-          n = (0, st.qh)(),
+      let zt;
+      var Ut = n(73745),
+        qt = n(3049);
+      function Kt(e) {
+        const t = (0, z.a)(),
+          n = (0, it.qh)(),
           r = (function (e) {
-            const t = (0, S.I)({
+            const t = (0, w.I)({
               queryKey: ["useMeetSteamSaleOperators"],
               queryFn: async () => {
-                const t = x.w.Init(j.Rl),
+                const t = v.w.Init(S.Rl),
                   n = new Date();
                 n.setFullYear(n.getFullYear() - 2),
                   t.Body().set_rt_oldest_date(0);
-                const s = await j.ZK.GetSaleEventOrganizers(e, t);
+                const s = await S.ZK.GetSaleEventOrganizers(e, t);
                 return s.BSuccess()
                   ? s
                       .Body()
@@ -3656,28 +3656,28 @@ License: MIT
         return a
           ? (0, s.jsxs)("div", {
               children: [
-                (0, s.jsxs)($.$n, {
+                (0, s.jsxs)(U.$n, {
                   onClick: () => {
                     const e = [];
                     e.push(["User Name", "account id", "Email", "Event Count"]),
                       a.forEach((t) => {
-                        const n = (0, Et.z0)(t.accountid),
+                        const n = (0, bt.z0)(t.accountid),
                           s =
                             ((r = t.accountid),
-                            Re.L.getQueryData(["UserEmailAndLangs", r]));
+                            Ne.L.getQueryData(["UserEmailAndLangs", r]));
                         var r;
                         e.push([
                           n?.m_strPlayerName || "",
                           "" + t.accountid,
                           s?.email_address || "",
-                          t.clan_event_gids?.length.toLocaleString((0, Ut.J)()),
+                          t.clan_event_gids?.length.toLocaleString((0, qt.J)()),
                         ]);
                       });
-                    de.g.WriteCSVToFile(e, "sale_operators.csv");
+                    he.g.WriteCSVToFile(e, "sale_operators.csv");
                   },
                   children: [
                     "CSV Export",
-                    (0, s.jsx)(H.o, {
+                    (0, s.jsx)(V.o, {
                       tooltip:
                         "Wait until the page finishes loading before export",
                     }),
@@ -3696,25 +3696,25 @@ License: MIT
                     }),
                     (0, s.jsx)("tbody", {
                       children: a.map((e) =>
-                        (0, s.jsx)(Kt, { organizer: e }, e.accountid),
+                        (0, s.jsx)(Wt, { organizer: e }, e.accountid),
                       ),
                     }),
                   ],
                 }),
               ],
             })
-          : (0, s.jsx)(W.t, { string: (0, J.we)("#Loading"), size: "medium" });
+          : (0, s.jsx)(Y.t, { string: (0, Z.we)("#Loading"), size: "medium" });
       }
-      function Kt(e) {
+      function Wt(e) {
         const { organizer: t } = e,
           n = (0, i.useMemo)(
-            () => b.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
+            () => D.b.InitFromAccountID(t.accountid).ConvertTo64BitString(),
             [t],
           ),
-          r = (0, Et.hW)(n),
+          r = (0, bt.hW)(n),
           a = (function (e) {
-            const t = i.useContext(Ft);
-            return (0, S.I)(Gt(t, e));
+            const t = i.useContext(Gt);
+            return (0, w.I)($t(t, e));
           })(t.accountid),
           o = r.data?.m_strPlayerName || "";
         return (0, s.jsxs)("tr", {
@@ -3722,7 +3722,7 @@ License: MIT
             (0, s.jsxs)("td", { children: [o, " (", t.accountid, ")"] }),
             (0, s.jsx)("td", { children: a?.data?.email_address }),
             (0, s.jsx)("td", {
-              children: (0, s.jsx)(Wt, {
+              children: (0, s.jsx)(Ht, {
                 name: o,
                 rgClanEventGIDs: t.clan_event_gids,
               }),
@@ -3730,71 +3730,71 @@ License: MIT
           ],
         });
       }
-      function Wt(e) {
+      function Ht(e) {
         const { name: t, rgClanEventGIDs: n } = e,
-          [r, i, a] = (0, zt.uD)();
+          [r, i, a] = (0, Ut.uD)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsxs)($.$n, {
+            (0, s.jsxs)(U.$n, {
               onClick: i,
-              children: ["See ", (0, fe.D)(n.length), " Events"],
+              children: ["See ", (0, xe.D)(n.length), " Events"],
             }),
-            (0, s.jsx)(K.E, {
+            (0, s.jsx)(H.E, {
               active: r,
-              children: (0, s.jsx)(q.o0, {
+              children: (0, s.jsx)(W.o0, {
                 bAlertDialog: !0,
                 closeModal: a,
                 strTitle: `${t}'s Events`,
-                children: n.map((e) => (0, s.jsx)(Ht, { gid: e }, e)),
+                children: n.map((e) => (0, s.jsx)(Yt, { gid: e }, e)),
               }),
             }),
           ],
         });
       }
-      function Ht(e) {
+      function Yt(e) {
         const { gid: t } = e,
-          n = (0, O.RR)(t);
+          n = (0, G.RR)(t);
         return n
           ? (0, s.jsxs)("a", {
-              href: `${Z.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
+              href: `${ee.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
               target: "_blank",
               children: [
-                (0, s.jsx)("div", { children: n.GetNameWithFallback(0) }),
-                (0, s.jsx)("img", { src: n.GetImageURL("capsule", 0) }),
+                (0, s.jsx)("div", { children: n.GetNameWithFallback(x.Bhc) }),
+                (0, s.jsx)("img", { src: n.GetImageURL("capsule", x.Bhc) }),
               ],
             })
           : (0, s.jsxs)("div", { children: ["Loading ", t] });
       }
-      function Yt(e) {
+      function Vt(e) {
         const t = (e) =>
             window.sessionStorage.setItem("meetsteamadmin", `?tab=${e.key}`),
           n = [
             {
               name: "Interest Survey Results",
               key: "survey",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Dt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(At, {}) }),
               onClick: t,
             },
             {
               name: "Event Management",
               key: "event",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(ut, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(gt, {}) }),
               onClick: t,
             },
             {
               name: "Sale Operators",
               key: "saleops",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(qt, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(Kt, {}) }),
               onClick: t,
             },
             {
               name: "Post Event Surveys",
               key: "postsurvey",
-              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(te, {}) }),
+              contents: (0, s.jsx)(u.tH, { children: (0, s.jsx)(se, {}) }),
               onClick: t,
             },
           ];
-        return (0, s.jsx)(ie, {
+        return (0, s.jsx)(oe, {
           children: (0, s.jsxs)("div", {
             className: f().AdminPageCtn,
             children: [
@@ -3813,43 +3813,43 @@ License: MIT
           }),
         });
       }
-      var Vt = n(65946),
-        Jt = n(79645),
-        Qt = n(1909),
-        Zt = n(56330),
-        Xt = n(85761),
-        en = n.n(Xt);
-      function tn(e) {
+      var Jt = n(65946),
+        Qt = n(79645),
+        Zt = n(1909),
+        Xt = n(56330),
+        en = n(85761),
+        tn = n.n(en);
+      function nn(e) {
         const t = (function () {
             const [e] = (0, i.useState)(() =>
-              (0, I.Tc)("registration_open", "application_config"),
+              (0, C.Tc)("registration_open", "application_config"),
             );
             return e;
           })(),
           n = (function () {
             const [e] = (0, i.useState)(
-              () => (0, I.Tc)("user_reg", "application_config") || {},
+              () => (0, C.Tc)("user_reg", "application_config") || {},
             );
             return e;
           })(),
-          { data: r } = (0, Et.js)(I.iA.accountid),
+          { data: r } = (0, bt.js)(C.iA.accountid),
           [a, o] = (0, i.useState)(!1),
           [c, l] = (0, i.useState)(!1),
           [d, u] = (0, i.useState)(!1),
           [h, g] = (0, i.useState)(() => JSON.parse(JSON.stringify(n)));
         return t
           ? !r || r.m_bPlayerNamePending
-            ? (0, s.jsx)(W.t, {
+            ? (0, s.jsx)(Y.t, {
                 size: "medium",
                 position: "center",
-                string: (0, J.we)("#Loading"),
+                string: (0, Z.we)("#Loading"),
               })
             : (0, s.jsxs)("div", {
-                className: (0, Y.A)(f().AdminPageCtn, en().Ctn),
+                className: (0, J.A)(f().AdminPageCtn, tn().Ctn),
                 children: [
                   (0, s.jsx)("div", {
                     className: f().PageTitle,
-                    children: (0, J.we)("#MeetSteam_MainTitle"),
+                    children: (0, Z.we)("#MeetSteam_MainTitle"),
                   }),
                   (0, s.jsx)("hr", {}),
                   (0, s.jsx)("div", {
@@ -3863,7 +3863,7 @@ License: MIT
                             (0, s.jsxs)("h1", {
                               children: [
                                 " ",
-                                (0, J.PP)(
+                                (0, Z.PP)(
                                   "#MeetSteam_Intro",
                                   r.m_strPlayerName,
                                   (0, s.jsx)("br", {}),
@@ -3872,42 +3872,42 @@ License: MIT
                             }),
                             (0, s.jsx)("p", {
                               className: f().IntroText,
-                              children: (0, J.we)("#MeetSteam_Desc1"),
+                              children: (0, Z.we)("#MeetSteam_Desc1"),
                             }),
                           ],
                         }),
                         (0, s.jsx)("div", {
                           className: f().SectionCtn,
-                          children: (0, s.jsx)(an, {
+                          children: (0, s.jsx)(on, {
                             oRegistration: h,
                             fnSetRegistration: g,
                           }),
                         }),
                         (0, s.jsx)("div", {
                           className: f().SectionCtn,
-                          children: (0, s.jsx)(nn, {
+                          children: (0, s.jsx)(sn, {
                             oRegistration: h,
                             fnSetRegistration: g,
                           }),
                         }),
                         (0, s.jsxs)("div", {
-                          className: (0, Y.A)(f().SectionCtn, f().ActionBar),
+                          className: (0, J.A)(f().SectionCtn, f().ActionBar),
                           children: [
-                            (0, s.jsx)($.jn, {
+                            (0, s.jsx)(U.jn, {
                               onClick: async () => {
                                 l(!0), o(!1), u(!1);
-                                const e = `${I.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
+                                const e = `${C.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
                                   t = new FormData();
-                                t.append("sessionid", I.TS.SESSIONID),
+                                t.append("sessionid", C.TS.SESSIONID),
                                   t.append(
                                     "registrationJson",
                                     JSON.stringify(h),
                                   );
                                 try {
-                                  const n = await E().post(e, t, {
+                                  const n = await I().post(e, t, {
                                     withCredentials: !0,
                                   });
-                                  1 != n.data.success
+                                  n.data.success != j.R
                                     ? (console.error(
                                         "MeetSteamLanding failed " +
                                           n.data.success,
@@ -3922,22 +3922,22 @@ License: MIT
                                 }
                                 l(!1);
                               },
-                              children: (0, J.we)("#Button_Submit"),
+                              children: (0, Z.we)("#Button_Submit"),
                             }),
                             c &&
-                              (0, s.jsx)(W.t, {
+                              (0, s.jsx)(Y.t, {
                                 size: "medium",
                                 position: "center",
-                                string: (0, J.we)("#Saving"),
+                                string: (0, Z.we)("#Saving"),
                               }),
                             d &&
                               (0, s.jsx)("div", {
-                                children: (0, J.we)("#Button_Saved"),
+                                children: (0, Z.we)("#Button_Saved"),
                               }),
                             a &&
                               (0, s.jsx)("div", {
-                                className: Zt.ErrorStylesWithIcon,
-                                children: (0, J.we)(
+                                className: Xt.ErrorStylesWithIcon,
+                                children: (0, Z.we)(
                                   "#Error_ErrorCommunicatingWithNetwork",
                                 ),
                               }),
@@ -3949,32 +3949,32 @@ License: MIT
                 ],
               })
           : (0, s.jsx)("div", {
-              className: en().Ctn,
-              children: (0, J.we)("#MeetSteam_closed"),
+              className: tn().Ctn,
+              children: (0, Z.we)("#MeetSteam_closed"),
             });
       }
-      function nn(e) {
+      function sn(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          { rgEvents: r, rgOldEvents: i, selectConference: a } = k();
+          { rgEvents: r, rgOldEvents: i, selectConference: a } = M();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)("h1", {
-              children: (0, J.we)("#MeetSteam_Events_Interest"),
+              children: (0, Z.we)("#MeetSteam_Events_Interest"),
             }),
             (0, s.jsx)("p", {
-              children: (0, J.PP)(
+              children: (0, Z.PP)(
                 "#MeetSteam_Events_title",
-                (0, I.Tc)("meet_steam_year", "application_config") || "2025",
+                (0, C.Tc)("meet_steam_year", "application_config") || "2025",
               ),
             }),
             (0, s.jsxs)("p", {
               children: [
                 (0, s.jsx)("span", {
-                  className: en().Indicator,
+                  className: tn().Indicator,
                   children: "*",
                 }),
                 " ",
-                (0, J.PP)("#MeetSteam_Events_desc"),
+                (0, Z.PP)("#MeetSteam_Events_desc"),
               ],
             }),
             Boolean(a) &&
@@ -3982,35 +3982,35 @@ License: MIT
                 children: [
                   (0, s.jsx)("hr", {}),
                   (0, s.jsx)("p", {
-                    children: (0, J.we)("#MeetSteam_ConferenceOrg"),
+                    children: (0, Z.we)("#MeetSteam_ConferenceOrg"),
                   }),
-                  (0, s.jsx)(sn, { ...e, rgConference: [a] }),
+                  (0, s.jsx)(rn, { ...e, rgConference: [a] }),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("hr", {}),
                   (0, s.jsx)("h2", {
-                    children: (0, J.we)("#MeetSteam_OtherConference"),
+                    children: (0, Z.we)("#MeetSteam_OtherConference"),
                   }),
                 ],
               }),
-            (0, s.jsx)(sn, { ...e, rgConference: r }),
+            (0, s.jsx)(rn, { ...e, rgConference: r }),
             (0, s.jsx)("br", {}),
-            (0, s.jsx)($.pd, {
+            (0, s.jsx)(U.pd, {
               type: "text",
               value: t.suggestion || "",
               onChange: (e) => n({ ...t, suggestion: e.currentTarget.value }),
-              label: (0, J.we)("#MeetSteam_others"),
+              label: (0, Z.we)("#MeetSteam_others"),
             }),
             Boolean(i?.length > 0) &&
               (0, s.jsx)(Ct.qx, {
                 bStartMinimized: !0,
-                title: (0, J.we)("#MeetSteam_PastEvents", i.length),
-                children: (0, s.jsx)(sn, { ...e, rgConference: i }),
+                title: (0, Z.we)("#MeetSteam_PastEvents", i.length),
+                children: (0, s.jsx)(rn, { ...e, rgConference: i }),
               }),
           ],
         });
       }
-      function sn(e) {
+      function rn(e) {
         const { rgConference: t } = e;
         return (0, s.jsxs)("table", {
           children: [
@@ -4033,7 +4033,7 @@ License: MIT
                       (0, s.jsx)("td", {
                         children: t.attending
                           ? (0, s.jsx)("span", {
-                              className: en().Indicator,
+                              className: tn().Indicator,
                               children: "*",
                             })
                           : "",
@@ -4048,7 +4048,7 @@ License: MIT
                         children: (0, s.jsx)("div", { children: t.time }),
                       }),
                       (0, s.jsx)("td", {
-                        children: (0, s.jsx)(rn, { ...e, conf: t }),
+                        children: (0, s.jsx)(an, { ...e, conf: t }),
                       }),
                     ],
                   },
@@ -4059,9 +4059,9 @@ License: MIT
           ],
         });
       }
-      function rn(e) {
+      function an(e) {
         const { oRegistration: t, fnSetRegistration: n, conf: r } = e;
-        return (0, s.jsx)($.Yh, {
+        return (0, s.jsx)(U.Yh, {
           checked: t.attending?.includes(r.id),
           onChange: (e) => {
             let s = t.attending ? [...t.attending] : [];
@@ -4071,33 +4071,33 @@ License: MIT
                 s.includes(r.id) &&
                 (s.splice(s.indexOf(r.id), 1), n({ ...t, attending: s }));
           },
-          tooltip: (0, J.we)("#MeetSteam_attend_ttip"),
+          tooltip: (0, Z.we)("#MeetSteam_attend_ttip"),
         });
       }
-      function an(e) {
+      function on(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          r = (0, Et.js)(I.iA.accountid),
+          r = (0, bt.js)(C.iA.accountid),
           a = (function (e) {
             const t = (function () {
                 const [e] = (0, i.useState)(
                   () =>
-                    (0, I.Tc)("partner_user_email", "application_config") || "",
+                    (0, C.Tc)("partner_user_email", "application_config") || "",
                 );
                 return e;
               })(),
               n = (function () {
                 const [e] = (0, i.useState)(() =>
-                  (0, I.Tc)("primary_partner_id", "application_config"),
+                  (0, C.Tc)("primary_partner_id", "application_config"),
                 );
                 return e;
               })(),
-              s = Me(I.iA.accountid, e != n ? e : null);
+              s = Be(C.iA.accountid, e != n ? e : null);
             return e == n ? t : s?.email;
           })(t?.partner_id),
           [o, c] = (0, i.useState)(() =>
             Boolean((t.email_override && t.email_override != a) || !a),
           ),
-          [l, d, u] = (0, Vt.q3)(() => [
+          [l, d, u] = (0, Jt.q3)(() => [
             !Boolean(t.have_you_met_steam),
             Boolean(t.english_not_good),
             t.preferred_language,
@@ -4105,54 +4105,54 @@ License: MIT
         return r.data
           ? (0, s.jsxs)("div", {
               children: [
-                (0, s.jsx)("h1", { children: (0, J.we)("#MeetSteam_You") }),
-                (0, s.jsx)("p", { children: (0, J.we)("#MeetSteam_You_Desc") }),
-                (0, s.jsx)(on, {
+                (0, s.jsx)("h1", { children: (0, Z.we)("#MeetSteam_You") }),
+                (0, s.jsx)("p", { children: (0, Z.we)("#MeetSteam_You_Desc") }),
+                (0, s.jsx)(cn, {
                   nPartnerID: t.partner_id,
-                  label: (0, J.we)("#MeetSteam_You_Company"),
+                  label: (0, Z.we)("#MeetSteam_You_Company"),
                   setPartnerID: (e) => n({ ...t, partner_id: e }),
                 }),
                 (0, s.jsxs)("div", {
-                  className: en().EmailInfoRow,
+                  className: tn().EmailInfoRow,
                   children: [
                     (0, s.jsx)("div", {
-                      className: en().EmailField,
-                      children: (0, s.jsx)($.pd, {
+                      className: tn().EmailField,
+                      children: (0, s.jsx)(U.pd, {
                         type: "string",
-                        label: (0, J.we)("#MeetSteam_You_Email"),
+                        label: (0, Z.we)("#MeetSteam_You_Email"),
                         disabled: !o,
                         value: t.email_override || a || "",
-                        placeholder: (0, J.we)("#MeetSteam_You_EmailMissing"),
+                        placeholder: (0, Z.we)("#MeetSteam_You_EmailMissing"),
                         mustBeEmail: !0,
                         onChange: (e) =>
                           n({ ...t, email_override: e.currentTarget.value }),
                       }),
                     }),
                     !o &&
-                      (0, s.jsx)($.Yh, {
+                      (0, s.jsx)(U.Yh, {
                         checked: o,
                         onChange: c,
-                        label: (0, J.we)("#MeetSteam_You_Update"),
-                        tooltip: (0, J.we)("#MeetSteam_You_Update_ttip"),
+                        label: (0, Z.we)("#MeetSteam_You_Update"),
+                        tooltip: (0, Z.we)("#MeetSteam_You_Update_ttip"),
                       }),
                   ],
                 }),
-                (0, s.jsx)($.JU, {
-                  children: (0, J.we)("#MeetSteam_NeverMet"),
+                (0, s.jsx)(U.JU, {
+                  children: (0, Z.we)("#MeetSteam_NeverMet"),
                 }),
-                (0, s.jsx)($.Yh, {
-                  label: (0, J.we)("#MeetSteam_NeverMetNo"),
+                (0, s.jsx)(U.Yh, {
+                  label: (0, Z.we)("#MeetSteam_NeverMetNo"),
                   checked: l,
                   onChange: (e) => n({ ...t, have_you_met_steam: !e }),
                 }),
-                (0, s.jsx)($.JU, {
-                  children: (0, J.we)("#MeetSteam_CapabableEnglish"),
+                (0, s.jsx)(U.JU, {
+                  children: (0, Z.we)("#MeetSteam_CapabableEnglish"),
                 }),
                 (0, s.jsxs)("div", {
-                  className: en().RadioButtonCtn,
+                  className: tn().RadioButtonCtn,
                   children: [
-                    (0, s.jsx)($.Od, {
-                      className: en().RadioButtons,
+                    (0, s.jsx)(U.Od, {
+                      className: tn().RadioButtons,
                       checked: !d,
                       onChange: (e) =>
                         e &&
@@ -4161,19 +4161,19 @@ License: MIT
                           english_not_good: void 0,
                           preferred_language: void 0,
                         }),
-                      label: (0, J.we)("#MeetSteam_CapabableEnglish_Yes"),
+                      label: (0, Z.we)("#MeetSteam_CapabableEnglish_Yes"),
                     }),
-                    (0, s.jsx)($.Od, {
-                      className: en().RadioButtons,
+                    (0, s.jsx)(U.Od, {
+                      className: tn().RadioButtons,
                       checked: d,
                       onChange: (e) =>
                         e &&
                         n({
                           ...t,
                           english_not_good: !0,
-                          preferred_language: (0, St.sf)(I.TS.LANGUAGE),
+                          preferred_language: (0, x.sfN)(C.TS.LANGUAGE),
                         }),
-                      label: (0, J.we)("#MeetSteam_CapabableEnglish_No"),
+                      label: (0, Z.we)("#MeetSteam_CapabableEnglish_No"),
                     }),
                   ],
                 }),
@@ -4181,13 +4181,13 @@ License: MIT
                   (0, s.jsxs)(s.Fragment, {
                     children: [
                       (0, s.jsx)("br", {}),
-                      (0, s.jsx)($.JU, {
-                        children: (0, J.we)("#MeetSteam_LanguagePref"),
+                      (0, s.jsx)(U.JU, {
+                        children: (0, Z.we)("#MeetSteam_LanguagePref"),
                       }),
-                      (0, s.jsx)(Qt.Ng, {
+                      (0, s.jsx)(Zt.Ng, {
                         selectedLang: u,
                         bAllowUnsetOption: !1,
-                        strTooltip: (0, J.we)("#MeetSteam_LanguagePref_ttip"),
+                        strTooltip: (0, Z.we)("#MeetSteam_LanguagePref_ttip"),
                         fnOnLanguageChanged: (e) =>
                           n({ ...t, preferred_language: e }),
                       }),
@@ -4195,20 +4195,20 @@ License: MIT
                   }),
               ],
             })
-          : (0, s.jsx)(W.t, {
+          : (0, s.jsx)(Y.t, {
               size: "medium",
               position: "center",
-              string: (0, J.we)("#Loading"),
+              string: (0, Z.we)("#Loading"),
             });
       }
-      function on(e) {
+      function cn(e) {
         const { nPartnerID: t, setPartnerID: n, label: r } = e,
-          i = (0, Jt.c)(I.iA.accountid);
+          i = (0, Qt.c)(C.iA.accountid);
         if (!i)
-          return (0, s.jsx)(W.t, {
+          return (0, s.jsx)(Y.t, {
             size: "small",
             position: "center",
-            string: (0, J.we)("#Loading"),
+            string: (0, Z.we)("#Loading"),
           });
         if (1 == i.length) return null;
         const a = [];
@@ -4216,7 +4216,7 @@ License: MIT
           i.forEach((e) =>
             a.push({ label: e?.partner_name, data: e.partnerid }),
           ),
-          (0, s.jsx)($.m, {
+          (0, s.jsx)(U.m, {
             layout: "inline",
             label: r,
             rgOptions: a,
@@ -4227,20 +4227,20 @@ License: MIT
           })
         );
       }
-      var cn = n(20587),
-        ln = n(13038),
-        dn = n.n(ln);
-      function un(e) {
-        const { data: t } = (0, Et.js)(I.iA.accountid),
+      var ln = n(20587),
+        dn = n(13038),
+        un = n.n(dn);
+      function hn(e) {
+        const { data: t } = (0, bt.js)(C.iA.accountid),
           n = (function () {
             const [e] = (0, i.useState)(
-              () => (0, I.Tc)("survey_event_name", "application_config") || "",
+              () => (0, C.Tc)("survey_event_name", "application_config") || "",
             );
             return e;
           })(),
           r = (function () {
             const [e] = (0, i.useState)(
-              () => (0, I.Tc)("survey_data", "application_config") || "",
+              () => (0, C.Tc)("survey_data", "application_config") || "",
             );
             return e;
           })(),
@@ -4250,17 +4250,17 @@ License: MIT
           [h, g] = (0, i.useState)(!1),
           [m, p] = (0, i.useState)(!1);
         return !t || t.m_bPlayerNamePending
-          ? (0, s.jsx)(W.t, {
+          ? (0, s.jsx)(Y.t, {
               size: "medium",
               position: "center",
-              string: (0, J.we)("#Loading"),
+              string: (0, Z.we)("#Loading"),
             })
           : (0, s.jsxs)("div", {
-              className: (0, Y.A)(f().AdminPageCtn, dn().Ctn),
+              className: (0, J.A)(f().AdminPageCtn, un().Ctn),
               children: [
                 (0, s.jsx)("div", {
                   className: f().PageTitle,
-                  children: (0, J.we)("#MeetSteam_PostSurvey_Title", n),
+                  children: (0, Z.we)("#MeetSteam_PostSurvey_Title", n),
                 }),
                 (0, s.jsx)("hr", {}),
                 (0, s.jsx)("div", {
@@ -4272,7 +4272,7 @@ License: MIT
                         className: f().SectionCtn,
                         children: [
                           (0, s.jsx)("div", {
-                            children: (0, J.we)(
+                            children: (0, Z.we)(
                               "#MeetSteam_PostSurvey_Question",
                             ),
                           }),
@@ -4285,15 +4285,15 @@ License: MIT
                         ],
                       }),
                       (0, s.jsxs)("div", {
-                        className: (0, Y.A)(f().SectionCtn, f().ActionBar),
+                        className: (0, J.A)(f().SectionCtn, f().ActionBar),
                         children: [
-                          (0, s.jsx)($.jn, {
+                          (0, s.jsx)(U.jn, {
                             onClick: async () => {
                               g(!0), u(!1), p(!1);
-                              const e = `${I.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${l}`,
+                              const e = `${C.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${l}`,
                                 t = new FormData();
                               t.append("gid", l),
-                                t.append("sessionid", I.TS.SESSIONID);
+                                t.append("sessionid", C.TS.SESSIONID);
                               let n = {
                                 gid: l,
                                 simple_response: a,
@@ -4303,10 +4303,10 @@ License: MIT
                               };
                               t.append("surveyjson", JSON.stringify(n));
                               try {
-                                const n = await E().post(e, t, {
+                                const n = await I().post(e, t, {
                                   withCredentials: !0,
                                 });
-                                1 != n.data.success
+                                n.data.success != j.R
                                   ? (console.error(
                                       "MeetSteamLanding failed " +
                                         n.data.success,
@@ -4321,22 +4321,22 @@ License: MIT
                               }
                               g(!1);
                             },
-                            children: (0, J.we)("#Button_Submit"),
+                            children: (0, Z.we)("#Button_Submit"),
                           }),
                           h &&
-                            (0, s.jsx)(W.t, {
+                            (0, s.jsx)(Y.t, {
                               size: "medium",
                               position: "center",
-                              string: (0, J.we)("#Saving"),
+                              string: (0, Z.we)("#Saving"),
                             }),
                           m &&
                             (0, s.jsx)("div", {
-                              children: (0, J.we)("#Button_Saved"),
+                              children: (0, Z.we)("#Button_Saved"),
                             }),
                           d &&
                             (0, s.jsx)("div", {
-                              className: Zt.ErrorStylesWithIcon,
-                              children: (0, J.we)(
+                              className: Xt.ErrorStylesWithIcon,
+                              children: (0, Z.we)(
                                 "#Error_ErrorCommunicatingWithNetwork",
                               ),
                             }),
@@ -4348,18 +4348,18 @@ License: MIT
               ],
             });
       }
-      var hn = n(27144),
-        gn = n(5695);
-      function mn(e) {
+      var gn = n(27144),
+        mn = n(5695);
+      function pn(e) {
         const t = (function () {
             const [e] = (0, i.useState)(
-              () => (0, I.Tc)("event_gids", "application_config") || [],
+              () => (0, C.Tc)("event_gids", "application_config") || [],
             );
             return e;
           })(),
           n = (function () {
             const [e] = (0, i.useState)(
-              () => (0, I.Tc)("survey_results", "application_config") || [],
+              () => (0, C.Tc)("survey_results", "application_config") || [],
             );
             return e;
           })(),
@@ -4368,7 +4368,7 @@ License: MIT
               const [e] = (0, i.useState)(() => {
                 const e = new Map(),
                   t =
-                    (0, I.Tc)("registration_by_gid", "application_config") ||
+                    (0, C.Tc)("registration_by_gid", "application_config") ||
                     {};
                 for (const n in t) {
                   const s = t[n];
@@ -4383,7 +4383,7 @@ License: MIT
               return (
                 e.forEach((e, n) => {
                   e.forEach((e) => {
-                    const s = new b.b(e.steamid);
+                    const s = new D.b(e.steamid);
                     t.has(s.GetAccountID()) || t.set(s.GetAccountID(), []),
                       (e.gidEvent = n),
                       t.get(s.GetAccountID()).push(e);
@@ -4394,12 +4394,12 @@ License: MIT
             }, [e]);
           })(),
           { surveyGID: a } = (0, o.g)(),
-          { bIsLoading: c, events: l } = (0, O.PB)(t),
+          { bIsLoading: c, events: l } = (0, G.PB)(t),
           [d, u] = (0, i.useMemo)(
             () => [
               n
                 .map((e) => {
-                  const t = new b.b(e.steamid);
+                  const t = new D.b(e.steamid);
                   if (r.has(t.GetAccountID())) {
                     const e = r.get(t.GetAccountID());
                     return JSON.parse(e[0].jsondata).partner_id;
@@ -4407,22 +4407,22 @@ License: MIT
                   return null;
                 })
                 .filter(Boolean),
-              n.map((e) => new b.b(e.steamid).GetAccountID()),
+              n.map((e) => new D.b(e.steamid).GetAccountID()),
             ],
             [r, n],
           ),
-          h = (0, C.vh)(d),
-          g = (0, hn.B3)(u);
+          h = (0, A.vh)(d),
+          g = (0, gn.B3)(u);
         return !c && h && g
-          ? (0, s.jsx)(fn, {
+          ? (0, s.jsx)(_n, {
               rgSurveyResults: n,
               mapAccountsToReg: r,
               meetSteamEvents: l,
             })
-          : (0, s.jsx)(W.t, { string: "Loading Event, Partner and User Info" });
+          : (0, s.jsx)(Y.t, { string: "Loading Event, Partner and User Info" });
       }
-      const pn = (0, ye.FB)();
-      function fn(e) {
+      const fn = (0, Ee.FB)();
+      function _n(e) {
         const {
             rgSurveyResults: t,
             mapAccountsToReg: n,
@@ -4436,7 +4436,7 @@ License: MIT
             return (
               t.forEach((t) => {
                 const r = JSON.parse(t.jsondata),
-                  i = new b.b(t.steamid);
+                  i = new D.b(t.steamid);
                 let a = {
                   feedback: r.simple_response,
                   accountid: i.GetAccountID(),
@@ -4448,20 +4448,20 @@ License: MIT
                     (a.email = s.email_override),
                     (a.name = s.name),
                     (a.registrations = "");
-                  const r = (0, C.Yd)(s.partner_id);
+                  const r = (0, A.Yd)(s.partner_id);
                   r && (a.partner_name = r.name),
                     t.forEach((t) => {
                       const n = e.get(t.gidEvent);
                       if (n) {
                         const e = n.jsondata.meet_steam_groups.find(
                           (e) => e.group_id === t.group_id,
-                        ).localized_session_title[0];
+                        ).localized_session_title[x.Bhc];
                         a.registrations.length > 0 && (a.registrations += "|"),
                           (a.registrations += e);
                       }
                     });
                 } else {
-                  const e = (0, hn.CF)(i.GetAccountID());
+                  const e = (0, gn.CF)(i.GetAccountID());
                   e && (a.name = e.persona_name);
                 }
                 s.push(a);
@@ -4471,20 +4471,20 @@ License: MIT
           }, [n, r, t]),
           o = (0, i.useMemo)(
             () => [
-              pn.accessor("name", { header: "Name", size: 150 }),
-              pn.accessor("feedback", {
+              fn.accessor("name", { header: "Name", size: 150 }),
+              fn.accessor("feedback", {
                 header: "Feedback",
                 size: 500,
-                cell: gn.Gb,
+                cell: mn.Gb,
               }),
-              pn.accessor("registrations", {
+              fn.accessor("registrations", {
                 header: "Sessions",
                 size: 200,
-                cell: _n,
+                cell: xn,
               }),
-              pn.accessor("accountid", { header: "Account ID", size: 150 }),
-              pn.accessor("email", { header: "Email", size: 150 }),
-              pn.accessor("partner_name", {
+              fn.accessor("accountid", { header: "Account ID", size: 150 }),
+              fn.accessor("email", { header: "Email", size: 150 }),
+              fn.accessor("partner_name", {
                 header: "Partner Name",
                 size: 200,
               }),
@@ -4501,10 +4501,10 @@ License: MIT
                     children: "Survey Results",
                   }),
                   (0, s.jsx)("hr", {}),
-                  (0, s.jsx)($.$n, {
+                  (0, s.jsx)(U.$n, {
                     id: "download-csv",
                     onClick: () =>
-                      (0, nt.K)(
+                      (0, rt.K)(
                         "meetsteam_survey_results.csv",
                         a,
                         o.map((e) => ({
@@ -4519,7 +4519,7 @@ License: MIT
                     children: "Download CSV",
                   }),
                   (0, s.jsx)("br", {}),
-                  (0, s.jsx)(we.k, {
+                  (0, s.jsx)(be.k, {
                     columns: o,
                     data: a,
                     getRowKey: (e) => e,
@@ -4530,24 +4530,24 @@ License: MIT
                 ],
               }),
             })
-          : (0, s.jsx)(W.t, { string: (0, J.we)("#Loading") });
+          : (0, s.jsx)(Y.t, { string: (0, Z.we)("#Loading") });
       }
-      function _n(e) {
+      function xn(e) {
         const t = e.getValue();
         return t?.length > 0
-          ? (0, s.jsx)(gn.DP, { text: e.getValue(), regExp: /\|/ })
+          ? (0, s.jsx)(mn.DP, { text: e.getValue(), regExp: /\|/ })
           : "";
       }
-      const xn = {
+      const jn = {
         YearlySurvery: (e = ":year") => `/${e}`,
         PostEventSurvey: (e = ":surveyGID") => `/survey/${e}`,
         AdminDashboard: () => "/admin",
         PostEventSurveyResults: (e = ":surveyGID") => `/surveyresults/${e}`,
       };
-      function jn(e) {
+      function vn(e) {
         return (
           (0, i.useEffect)(() => {
-            cn.O3.Init();
+            ln.O3.Init();
           }, []),
           (0, s.jsx)(c.m, {
             children: (0, s.jsx)(a.Kd, {
@@ -4565,23 +4565,23 @@ License: MIT
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: xn.AdminDashboard(),
-                    component: Yt,
+                    path: jn.AdminDashboard(),
+                    component: Vt,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: xn.YearlySurvery(":year(\\d+)"),
-                    component: tn,
+                    path: jn.YearlySurvery(":year(\\d+)"),
+                    component: nn,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: xn.PostEventSurvey(":surveyGID(\\d+)"),
-                    component: un,
+                    path: jn.PostEventSurvey(":surveyGID(\\d+)"),
+                    component: hn,
                   }),
                   (0, s.jsx)(o.qh, {
                     exact: !0,
-                    path: xn.PostEventSurveyResults(":surveyGID(\\d+)"),
-                    component: mn,
+                    path: jn.PostEventSurveyResults(":surveyGID(\\d+)"),
+                    component: pn,
                   }),
                   (0, s.jsx)(o.qh, { component: d.a }),
                 ],

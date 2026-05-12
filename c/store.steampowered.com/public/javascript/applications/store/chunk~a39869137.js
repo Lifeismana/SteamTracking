@@ -9,6 +9,11 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           !!_ &&
@@ -28,22 +33,18 @@
       function _(_) {
         return (
           null != _ &&
-          (0 == _ ||
-            4 == _ ||
-            6 == _ ||
-            11 == _ ||
-            1 == _ ||
-            10 == _ ||
-            2 == _ ||
-            7 == _ ||
-            12 == _ ||
-            14 == _)
+          (_ == _._._ ||
+            _ == _._._ ||
+            _ == _._._ ||
+            _ == _._._ ||
+            _ == _._._ ||
+            _ == _._._ ||
+            _ == _._._ ||
+            _ == _._._ ||
+            _ == _._._ ||
+            _ == _._._)
         );
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1704,14 +1705,14 @@
                   m_strLanguageBCP47: _.strLanguage,
                 });
           this.m_nTimedText = 0;
-          let _ = (0, _._)(_._.LANGUAGE);
+          let _ = (0, _.sfN)(_._.LANGUAGE);
           for (let _ of _) {
             const _ = document.createElement("track");
             (_.kind = "captions"),
               (_.label = _(_.m_strLanguageBCP47)),
               (_.srclang = _.m_strLanguageBCP47),
               (_.src = _.m_strURL),
-              (!this.m_bAlwaysStartWithSubtitles && 0 == _) ||
+              (!this.m_bAlwaysStartWithSubtitles && _ == _.Bhc) ||
                 _._[_.m_strLanguageBCP47] != _ ||
                 (_.default = !0),
               this.m_elVideo.appendChild(_),
@@ -2360,7 +2361,7 @@
             (0, _._)("Trying to play again, this time muted with subtitles"),
               (_ = void 0),
               (this.m_elVideo.muted = !0),
-              this.SetSubtitles((0, _._)(_._.LANGUAGE));
+              this.SetSubtitles((0, _.sfN)(_._.LANGUAGE));
             try {
               await this.m_elVideo.play();
             } catch (_) {
@@ -2825,7 +2826,7 @@
         return !!_ && _ instanceof Error && "NotAllowedError" == _.name;
       }
       function _(_) {
-        return _ in _._ ? (0, _._)("#Language_" + (0, _._)(_._[_])) : "";
+        return _ in _._ ? (0, _._)("#Language_" + (0, _.LgB)(_._[_])) : "";
       }
       (0, _._)([_._], _.prototype, "m_nTimedText", void 0),
         (0, _._)([_._], _.prototype, "InitTimedText", null),
@@ -3768,6 +3769,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -3829,11 +3831,11 @@
       function _(_) {
         const { _: _, bHideInLibraryApps: _ } = _,
           { data: _ } = (0, _._)(_),
-          _ = 2 == _?.item_type,
+          _ = _?.item_type == _._._,
           { data: _ } = (0, _._)(),
           _ = _.useMemo(() => {
             if (_)
-              return 1 === _.item_type || 2 === _.item_type
+              return _.item_type === _._._ || _.item_type === _._._
                 ? (_.included_appids || [])
                     .filter((_) => !_ || !_ || !_?.has(_))
                     .map((_) => ({
@@ -3971,10 +3973,10 @@
         if (!_) return null;
         const _ = _.included_appids?.length || 0,
           _ = _.included_appids?.filter((_) => _?.has(_))?.length || 0,
-          _ = 2 == _.item_type && Boolean(_?.must_purchase_as_set),
+          _ = _.item_type == _._._ && Boolean(_?.must_purchase_as_set),
           _ = Boolean(!_ && _ > 1),
-          _ = 1 == _.item_type && 1 == _,
-          _ = 0 == _.item_type || _,
+          _ = _.item_type == _._._ && 1 == _,
+          _ = _.item_type == _._._ || _,
           _ = _ && _.appid,
           _ = _.name || "",
           _ = (0, _._)(_, _),
@@ -4082,7 +4084,7 @@
                                   _: _,
                                   bMinimizePlatforms: _,
                                 }),
-                                Boolean(_ && 0 == _.item_type) &&
+                                Boolean(_ && _.item_type == _._._) &&
                                   (0, _.jsx)(_._, {
                                     className: _().DeckCompatIcon,
                                     _: _,
@@ -4104,7 +4106,8 @@
                         _ &&
                         (0, _.jsx)(_, {
                           _: _,
-                          bHideInLibraryApps: !_ && 2 == _.item_type && _ < _,
+                          bHideInLibraryApps:
+                            !_ && _.item_type == _._._ && _ < _,
                         }),
                       Boolean(_) &&
                         (0, _.jsx)(_, {
@@ -4190,10 +4193,10 @@
           _ = _.included_appids?.length || 0,
           _ = _.included_appids?.filter((_) => _?.has(_))?.length || 0;
         let _ = _.short_description;
-        const _ = 1 == _.item_type && 1 == _,
-          _ = 2 == _.item_type && Boolean(_?.must_purchase_as_set);
+        const _ = _.item_type == _._._ && 1 == _,
+          _ = _.item_type == _._._ && Boolean(_?.must_purchase_as_set);
         return (
-          (2 == _.item_type || (1 == _.item_type && !_)) &&
+          (_.item_type == _._._ || (_.item_type == _._._ && !_)) &&
             (_ =
               !_ && _ > 0 && _ < _
                 ? (0, _._)("#Sale_Bundle_CompletePartialSet", _, _)
@@ -4235,6 +4238,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4257,7 +4261,7 @@
           { bIsOwned: _ } = (0, _._)(_);
         if (!_) return null;
         const _ =
-            (1 === _.type && !_?.is_coming_soon) ||
+            (_.type === _._._ && !_?.is_coming_soon) ||
             (_.related_items?.demo_appid &&
               _.related_items?.demo_appid.length > 0),
           _ = (0, _._)(_.type),
@@ -4298,7 +4302,7 @@
                     className: _().Action,
                   }),
                 Boolean(!_) &&
-                  1 !== _.type &&
+                  _.type !== _._._ &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       Boolean(_ && !_.is_free) &&

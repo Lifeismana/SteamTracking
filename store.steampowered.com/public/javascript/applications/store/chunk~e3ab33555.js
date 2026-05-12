@@ -174,7 +174,7 @@
         m = a(62641),
         h = a(4796),
         p = a(44165),
-        u = a(60746),
+        u = a(82429),
         v = a(78327),
         g = a(14947),
         S = a(68797),
@@ -385,8 +385,8 @@
         T = a(41550),
         y = a(32541),
         A = a(42011),
-        C = a(32337),
-        I = a(75113),
+        C = a(52885),
+        I = a(32803),
         N = a(43667),
         f = a(64940),
         B = a(90316),
@@ -405,8 +405,8 @@
         z = a(51272),
         K = a(6379),
         q = a(99637),
-        Q = a(51706),
-        Y = a(22797),
+        Y = a(51706),
+        Q = a(22797),
         X = a(40323),
         J = a.n(X);
       class Z {
@@ -472,7 +472,7 @@
           [S, x] = _.useState(h),
           [j, w] = _.useState(-1),
           b = j >= 0;
-        return (0, n.jsx)(Q.o0, {
+        return (0, n.jsx)(Y.o0, {
           strTitle: (0, O.we)("#EventDashboard_Stats_title"),
           strDescription: (0, O.we)("#EventDashboard_Stats_desc"),
           closeModal: a,
@@ -488,7 +488,7 @@
               let _,
                 m = 0,
                 h = new Array();
-              const p = (0, i.sf)(v.TS.LANGUAGE);
+              const p = (0, i.sfN)(v.TS.LANGUAGE);
               do {
                 if (
                   ((m += 1),
@@ -542,7 +542,7 @@
               a(),
             ),
           children: Boolean(t.appid && !s)
-            ? (0, n.jsx)(Y.t, {
+            ? (0, n.jsx)(Q.t, {
                 string: (0, O.we)("#Loading"),
                 position: "center",
                 size: "medium",
@@ -608,7 +608,7 @@
                     ],
                   }),
                   b &&
-                    (0, n.jsx)(Y.t, {
+                    (0, n.jsx)(Q.t, {
                       position: "center",
                       size: "medium",
                       string: (0, O.we)("#EventDashboard_Stats_Progress", j),
@@ -1017,8 +1017,8 @@
       function be(e) {
         const { event: t, lang: a } = e,
           s = (0, c.q3)(() => t.jsondata.meet_steam_groups),
-          i = (0, u.Ec)(t.clanSteamID.GetAccountID()),
-          [r, o, l] = (0, _.useMemo)(() => {
+          r = (0, u.Ec)(t.clanSteamID.GetAccountID()),
+          [o, l, d] = (0, _.useMemo)(() => {
             const e = new Map(),
               t = new Map();
             let a = !1;
@@ -1030,15 +1030,15 @@
                         ? e.get(t).push(s.group_id)
                         : e.set(t, [s.group_id]);
                     }),
-                    t.set(s.group_id, s.localized_session_title[0]))
+                    t.set(s.group_id, s.localized_session_title[i.Bhc]))
                   : (a = !0);
               }),
               [e, t, a]
             );
           }, [s]);
-        return 0 == r.size
+        return 0 == o.size
           ? null
-          : i.can_edit
+          : r.can_edit
             ? (0, n.jsxs)("div", {
                 className: (0, F.A)(
                   Ee().DefaultSectionCtn,
@@ -1046,8 +1046,8 @@
                 ),
                 children: [
                   (0, n.jsx)(W.JU, { children: "(VO) Meet Steam URLs" }),
-                  Array.from(r.keys()).map((e) => {
-                    const a = r.get(e);
+                  Array.from(o.keys()).map((e) => {
+                    const a = o.get(e);
                     return (0, n.jsx)(
                       "div",
                       {
@@ -1059,7 +1059,7 @@
                             a.map((t) =>
                               (0, n.jsxs)(
                                 "span",
-                                { children: [o.get(t), ","] },
+                                { children: [l.get(t), ","] },
                                 "name" + e + "_" + t,
                               ),
                             ),
@@ -1069,7 +1069,7 @@
                       `tokenurl_${e}`,
                     );
                   }),
-                  Boolean(l) &&
+                  Boolean(d) &&
                     (0, n.jsx)("div", {
                       children: (0, n.jsx)("a", {
                         href: `${we.TS.STORE_BASE_URL}meetsteam/${t.GID}`,
@@ -1087,71 +1087,73 @@
             a.e(6597),
             a.e(8970),
             a.e(7937),
-            a.e(7403),
+            a.e(9197),
             a.e(4796),
             a.e(8614),
-            a.e(4243),
+            a.e(6226),
             a.e(4781),
             a.e(706),
-            a.e(3384),
             a.e(6883),
+            a.e(3384),
+            a.e(2389),
             a.e(7262),
-            a.e(6769),
+            a.e(1215),
             a.e(596),
             a.e(1703),
-            a.e(4932),
+            a.e(4667),
+            a.e(4867),
             a.e(321),
             a.e(177),
             a.e(8396),
-          ]).then(a.bind(a, 74968)),
+          ]).then(a.bind(a, 49850)),
         ),
         Ae = (0, d.PA)((e) => {
           const {
               event: t,
               lang: a,
               partnerEventStore: s,
-              emoticonStore: i,
-              nOverrideStartTime: o,
-              nOverrideEndTime: l,
-              adminPanel: d,
-              otherEventRow: c,
-              titleBar: m,
+              emoticonStore: o,
+              nOverrideStartTime: l,
+              nOverrideEndTime: d,
+              adminPanel: c,
+              otherEventRow: m,
+              titleBar: p,
             } = e,
-            p = t.appid,
-            u = t.clanSteamID.GetAccountID(),
-            v = (0, L.MU)(),
-            [g, S] = (0, E.t7)(p, {
+            u = t.appid,
+            v = t.clanSteamID.GetAccountID(),
+            g = (0, L.MU)(),
+            [S, x] = (0, E.t7)(u, {
               include_assets: !0,
               include_platforms: !0,
               include_basic_info: !0,
               include_release: !0,
             }),
-            [x, j] = (0, h.TB)(u);
+            [j, w] = (0, h.TB)(v);
           if (
-            (_.useEffect(() => window.scrollTo(0, 0), [p, u]),
-            !v && 36 == t.GetEventType())
+            (_.useEffect(() => window.scrollTo(0, 0), [u, v]),
+            !g && t.GetEventType() == i.ajI)
           )
             return (0, n.jsx)(I.OG, {
               eventModel: t,
               route: I.PH.k_eStoreSalePage,
               bPopup: !1,
             });
-          const w = (0, I.Bw)(t, I.PH.k_eStoreNewsHub, "allowRelative"),
-            D = (0, I.Bw)(t, I.PH.k_eStoreUsersNewsHub, "allowRelative");
-          if (!t.bLoaded || !j || (p && !g && 2 !== S))
+          const D = (0, I.Bw)(t, I.PH.k_eStoreNewsHub, "allowRelative"),
+            T = (0, I.Bw)(t, I.PH.k_eStoreUsersNewsHub, "allowRelative");
+          if (!t.bLoaded || !w || (u && !S && x !== E.eR))
             return (0, n.jsx)("div", {
               className: pe().FlexCenter,
               style: { height: "400px" },
-              children: (0, n.jsx)(Y.t, {
+              children: (0, n.jsx)(Q.t, {
                 size: "medium",
                 string: (0, O.we)("#Loading"),
               }),
             });
-          let T = t.GetDescriptionWithFallback(a);
+          let N = t.GetDescriptionWithFallback(a);
           return (0, n.jsx)(Ce, {
             event: t,
             lang: a,
-            titleBar: m,
+            titleBar: p,
             body: (0, n.jsxs)(b.tH, {
               children: [
                 (0, n.jsxs)("div", {
@@ -1159,13 +1161,13 @@
                   children: [
                     (0, n.jsx)(Te.r, {
                       crumbs: [
-                        { name: (0, O.we)("#BreadCrumbs_AllEvents"), url: D },
+                        { name: (0, O.we)("#BreadCrumbs_AllEvents"), url: T },
                         {
                           name: (0, O.we)(
                             "#BreadCrumbs_GameEvents",
-                            g?.GetName() || j.group_name,
+                            S?.GetName() || w.group_name,
                           ),
-                          url: w,
+                          url: D,
                         },
                       ],
                     }),
@@ -1180,15 +1182,15 @@
                       }),
                   ],
                 }),
-                Boolean(t.BEventCanShowBroadcastWidget(v)) &&
+                Boolean(t.BEventCanShowBroadcastWidget(g)) &&
                   (0, n.jsx)("div", {
                     className: P().EventBroadcastCtn,
                     children: (0, n.jsx)(_.Suspense, {
                       fallback: null,
                       children: (0, n.jsx)(ye, {
                         event: t,
-                        bIsPreview: v,
-                        accountIDs: v ? t.jsondata.broadcast_whitelist : void 0,
+                        bIsPreview: g,
+                        accountIDs: g ? t.jsondata.broadcast_whitelist : void 0,
                       }),
                     }),
                   }),
@@ -1204,7 +1206,7 @@
                               (0, n.jsx)(f.EventDisplaySteamAwardNomination, {
                                 event: t,
                                 lang: a,
-                                previewMode: v,
+                                previewMode: g,
                               }),
                             t.BHasTag("steam_award_vote_request") &&
                               (0, n.jsx)(f.WinterSaleSteamAwardVoteWrapper, {
@@ -1224,9 +1226,9 @@
                             ),
                             children: [
                               (0, n.jsx)(C.fh, {
-                                text: T || "",
+                                text: N || "",
                                 partnerEventStore: s,
-                                showErrorInfo: v,
+                                showErrorInfo: g,
                                 event: t,
                                 languageOverride: a,
                               }),
@@ -1291,27 +1293,27 @@
                       children: (0, n.jsx)(fe, {
                         event: t,
                         lang: a,
-                        nOverrideStartTime: o,
-                        nOverrideEndTime: l,
+                        nOverrideStartTime: l,
+                        nOverrideEndTime: d,
                       }),
                     }),
                   ],
                 }),
                 (0, n.jsx)(A.F, {
                   eventModel: t,
-                  emoticonStore: i,
+                  emoticonStore: o,
                   partnerEventStore: s,
                 }),
               ],
             }),
-            postbody: (0, n.jsxs)(b.tH, { children: [d, c] }),
+            postbody: (0, n.jsxs)(b.tH, { children: [c, m] }),
             footer: (0, n.jsx)(b.tH, {
               children: (0, n.jsx)("div", {
                 className: P().AppSummaryCtn,
                 children: (0, n.jsxs)("div", {
                   className: P().EventBodyPosition,
                   children: [
-                    Boolean(g) &&
+                    Boolean(S) &&
                       (0, n.jsxs)("div", {
                         className: P().AppSummaryWidgetTitleCtn,
                         children: [
@@ -1326,7 +1328,7 @@
                             ),
                             children: (0, n.jsx)(de.p, {
                               id: t.appid,
-                              type: (0, r.U)(g.GetAppType()),
+                              type: (0, r.U)(S.GetAppType()),
                               bPreferAssetWithoutOverride: !1,
                             }),
                           }),
@@ -1350,7 +1352,7 @@
             } = e,
             d = t.GetImageURLWithFallback("background", a),
             c = t.BIsImageSafeForAllAges("background", a),
-            _ = "lang_" + (0, i.ww)(a),
+            _ = "lang_" + (0, i.wwZ)(a),
             m = !!d && t.BImageNeedScreenshotFallback("background", a);
           return (0, n.jsxs)("div", {
             className: (0, F.A)(
@@ -1438,9 +1440,9 @@
             event: t,
             lang: a,
             nOverrideStartTime: s,
-            nOverrideEndTime: i,
+            nOverrideEndTime: r,
           } = e,
-          [r, o, l, d, _, m] = (0, c.q3)(() => [
+          [o, l, d, _, m, u] = (0, c.q3)(() => [
             t.appid,
             t.clanSteamID,
             p.HD.GetTimeNowWithOverride(),
@@ -1448,30 +1450,30 @@
             t.GetCategoryAsString(),
             t.type,
           ]),
-          [u] = (0, E.t7)(r, {
+          [v] = (0, E.t7)(o, {
             include_assets: !0,
             include_platforms: !0,
             include_release: !0,
           }),
-          [v, g] = (0, h.TB)(o.GetAccountID());
-        return g
-          ? t.appid && !u
+          [g, S] = (0, h.TB)(l.GetAccountID());
+        return S
+          ? t.appid && !v
             ? null
             : (0, n.jsx)("div", {
                 className: P().EventDetailTitleDesc,
                 children: (0, n.jsxs)("div", {
                   className: P().EventDetailsSticky,
                   children: [
-                    g.is_ogg
-                      ? (0, n.jsx)(Be, { appid: g.appid })
-                      : (0, n.jsx)(Pe, { clanSteamID: o }),
+                    S.is_ogg
+                      ? (0, n.jsx)(Be, { appid: S.appid })
+                      : (0, n.jsx)(Pe, { clanSteamID: l }),
                     (0, n.jsx)(G.j, {
                       event: t,
-                      nOverrideEndTime: i,
+                      nOverrideEndTime: r,
                       nOverrideStartTime: s,
                     }),
-                    28 !== m &&
-                      l < d &&
+                    u !== i.uYK &&
+                      d < _ &&
                       (0, n.jsx)("div", {
                         className: P().EventDetailTimeInfo,
                         children: (0, n.jsx)(N.j, { eventModel: t, lang: a }),
@@ -1487,20 +1489,20 @@
                         }),
                         (0, n.jsxs)("div", {
                           className: P().EventDetailsType,
-                          children: [_, " "],
+                          children: [m, " "],
                         }),
                       ],
                     }),
-                    (0, n.jsx)(ke, { event: t, bIsOGG: g.is_ogg }),
+                    (0, n.jsx)(ke, { event: t, bIsOGG: S.is_ogg }),
                     Boolean(t.jsondata.meet_steam_groups) &&
                       (0, n.jsx)(be, { event: t, lang: a }),
                   ],
                 }),
               })
           : ((0, ve.wT)(
-              g,
+              S,
               "EventDetailsRightColumn - clan info (" +
-                o.GetAccountID() +
+                l.GetAccountID() +
                 ") is missing",
             ),
             null);
@@ -1538,7 +1540,7 @@
                     bIsComingSoon: a.BIsComingSoon(),
                     className: P().ActionButton,
                   })
-                : (0, n.jsx)(Y.t, { size: "small", position: "center" }),
+                : (0, n.jsx)(Q.t, { size: "small", position: "center" }),
             }),
           ],
         });
@@ -1796,8 +1798,8 @@
           K = g().unix(G).tz(z),
           q = !!p && z != p && g().unix(G).tz(p),
           {
-            fnOnInput: Q,
-            fnOnInputBlur: Y,
+            fnOnInput: Y,
+            fnOnInputBlur: Q,
             fnOnChange: X,
           } = w(
             D,
@@ -1897,8 +1899,8 @@
                           "DialogTextInputBase",
                         ),
                         disabled: v,
-                        onChange: (e) => Q(e.currentTarget.value),
-                        onBlur: (e) => Y(e.currentTarget.value),
+                        onChange: (e) => Y(e.currentTarget.value),
+                        onBlur: (e) => Q(e.currentTarget.value),
                       },
                     }),
                     !!q &&
@@ -2000,7 +2002,7 @@
     },
     43068: (e, t, a) => {
       "use strict";
-      a.d(t, { P: () => T });
+      a.d(t, { P: () => y });
       var s = a(7850),
         n = a(41735),
         i = a.n(n),
@@ -2008,8 +2010,9 @@
         o = a(14947),
         l = a(78327),
         d = a(68797),
-        c = a(2160);
-      class _ {
+        c = a(37085),
+        _ = a(2160);
+      class m {
         m_objApprovalPriviledge = null;
         m_LoadingPriviledgePromise = null;
         BHasSteamChinaAppApprovalPriviledge() {
@@ -2028,7 +2031,7 @@
             l.TS.STORE_BASE_URL + "events_admin/ajaxgetscapprovalpriviledge";
           try {
             const t = await i().get(e, { withCredentials: !0 });
-            if (1 == t?.data?.success)
+            if (t?.data?.success == c.R)
               return (
                 (this.m_objApprovalPriviledge = {
                   bHasAccess: t.data.bHasAccess,
@@ -2047,7 +2050,7 @@
         }
         static s_Singleton;
         static Get() {
-          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+          return m.s_Singleton || (m.s_Singleton = new m()), m.s_Singleton;
         }
         constructor() {
           (0, o.Gn)(this);
@@ -2060,77 +2063,77 @@
                 ),
               (this.m_objApprovalPriviledge = e),
               (this.m_LoadingPriviledgePromise = null))
-            : (l.iA.logged_in && l.TS.EREALM === c.TU.k_ESteamRealmChina) ||
+            : (l.iA.logged_in && l.TS.EREALM === _.TU.k_ESteamRealmChina) ||
               (this.m_objApprovalPriviledge = { bHasAccess: !1 });
         }
         ValidateStoreDefault(e) {
           return e && "object" == typeof e && "boolean" == typeof e.bHasAccess;
         }
       }
-      (0, r.Cg)([o.sH], _.prototype, "m_objApprovalPriviledge", void 0);
-      var m = a(75844),
-        h = a(90626),
-        p = a(17720),
-        u = a(60746),
-        v = a(60092),
-        g = a(90316),
-        S = a(95695),
-        x = a(51706),
-        j = a(738),
-        w = a(22797),
-        D = a(52038),
-        E = a(56011),
-        b = a(61859);
-      const T = (0, m.PA)((e) => {
-          const [t, a] = h.useState(null),
+      (0, r.Cg)([o.sH], m.prototype, "m_objApprovalPriviledge", void 0);
+      var h = a(75844),
+        p = a(90626),
+        u = a(17720),
+        v = a(82429),
+        g = a(60092),
+        S = a(90316),
+        x = a(95695),
+        j = a(51706),
+        w = a(738),
+        D = a(22797),
+        E = a(52038),
+        b = a(56011),
+        T = a(61859);
+      const y = (0, h.PA)((e) => {
+          const [t, a] = p.useState(null),
             { eventModel: n } = e;
           let r = n.clanSteamID.GetAccountID();
-          h.useEffect(() => {
+          p.useEffect(() => {
             const e = i().CancelToken.source();
             return (
               (async () => {
-                const t = p.b.InitFromClanID(r),
-                  s = await u.KN.Get().LoadSingleAppEventPermissions(t),
-                  n = await _.Get().HintLoadAppApprovalPriviledge();
+                const t = u.b.InitFromClanID(r),
+                  s = await v.KN.Get().LoadSingleAppEventPermissions(t),
+                  n = await m.Get().HintLoadAppApprovalPriviledge();
                 e.token.reason ||
                   a(l.iA.is_support || s.can_edit || n.bHasAccess);
               })(),
               () => e.cancel("SteamChinaAdminPanel is unmounting")
             );
           }, [r]);
-          const o = p.b.InitFromClanID(r);
+          const o = u.b.InitFromClanID(r);
           return l.iA.is_support ||
-            u.KN.Get().GetPartnerEventPermissions(o).can_edit
-            ? (0, s.jsx)(v.g, {
+            v.KN.Get().GetPartnerEventPermissions(o).can_edit
+            ? (0, s.jsx)(g.g, {
                 eventModel: n,
                 partnerEventStore: e.partnerEventStore,
                 addtionalAdminButtons: t
-                  ? [(0, s.jsx)(y, { eventModel: n }, "removesteamchina")]
+                  ? [(0, s.jsx)(A, { eventModel: n }, "removesteamchina")]
                   : void 0,
               })
-            : _.Get().BHasSteamChinaAppApprovalPriviledge()
+            : m.Get().BHasSteamChinaAppApprovalPriviledge()
               ? (0, s.jsxs)("div", {
-                  className: g.DisplayAdminPanel,
+                  className: S.DisplayAdminPanel,
                   children: [
                     (0, s.jsx)("span", {
-                      className: g.DisplayAdminPanel_Title,
-                      children: (0, b.we)("#EventDisplay_Admin_Title"),
+                      className: S.DisplayAdminPanel_Title,
+                      children: (0, T.we)("#EventDisplay_Admin_Title"),
                     }),
-                    (0, s.jsx)(y, { eventModel: n }, "removesteamchina"),
+                    (0, s.jsx)(A, { eventModel: n }, "removesteamchina"),
                   ],
                 })
               : null;
         }),
-        y = (e) => {
+        A = (e) => {
           const { eventModel: t } = e;
           return (0, s.jsx)("div", {
-            className: (0, D.A)(S.Button, g.AdminButton, S.ValveOnlyBackground),
+            className: (0, E.A)(x.Button, S.AdminButton, x.ValveOnlyBackground),
             onClick: (a) => {
               let n = !1;
-              (0, j.pg)(
-                (0, s.jsx)(x.o0, {
-                  strTitle: (0, b.we)("#EventAdmin_Moderation_HideEventInSC"),
-                  strDescription: (0, b.we)(
+              (0, w.pg)(
+                (0, s.jsx)(j.o0, {
+                  strTitle: (0, T.we)("#EventAdmin_Moderation_HideEventInSC"),
+                  strDescription: (0, T.we)(
                     "#EventAdmin_Moderation_HideEventInSC_Desc",
                   ),
                   bDestructiveWarning: !0,
@@ -2150,8 +2153,10 @@
                         try {
                           const e = `${l.TS.STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina`,
                             s = await i().post(e, a, { withCredentials: !0 });
-                          (n = 1 == s?.data?.success || 29 == s?.data?.success),
-                            29 == s?.data?.success &&
+                          (n =
+                            s?.data?.success == c.R ||
+                            s?.data?.success == c.Ze),
+                            s?.data?.success == c.Ze &&
                               console.warn(
                                 `RemoveEventFromSteamChinaButton: we receive duplicate request ${t.clanSteamID.GetAccountID()} : ${t.GID}; event is still removed from SC`,
                               ),
@@ -2166,17 +2171,17 @@
                             );
                         }
                         e.closeModal && e.closeModal(),
-                          (0, j.pg)(
+                          (0, w.pg)(
                             n
-                              ? (0, s.jsx)(x.o0, {
+                              ? (0, s.jsx)(j.o0, {
                                   bAlertDialog: !0,
-                                  children: (0, b.we)(
+                                  children: (0, T.we)(
                                     "#EventDisplay_Share_Success",
                                   ),
                                 })
-                              : (0, s.jsx)(x.KG, {
+                              : (0, s.jsx)(j.KG, {
                                   children:
-                                    (0, b.we)("#EventDisplay_Share_Failure") +
+                                    (0, T.we)("#EventDisplay_Share_Failure") +
                                     " " +
                                     r,
                                 }),
@@ -2186,12 +2191,12 @@
                   },
                   children:
                     n &&
-                    (0, s.jsx)(w.t, { size: "medium", position: "center" }),
+                    (0, s.jsx)(D.t, { size: "medium", position: "center" }),
                 }),
-                (0, E.uX)(a),
+                (0, b.uX)(a),
               );
             },
-            children: (0, b.we)("#EventAdmin_Moderation_HideEventInSC"),
+            children: (0, T.we)("#EventAdmin_Moderation_HideEventInSC"),
           });
         };
     },

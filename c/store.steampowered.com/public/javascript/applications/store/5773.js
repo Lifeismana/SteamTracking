@@ -112,8 +112,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], 31, !1);
+        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
+        m_rgHasData = (0, _._)([], _.bP9, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new _._();
         GetCallback() {
@@ -363,7 +363,7 @@
               (0, _.jsx)(
                 "option",
                 {
-                  value: -1,
+                  value: _.xPp,
                   children: (0, _._)("#language_selection_none"),
                 },
                 "langpicker_unset",
@@ -373,7 +373,7 @@
           const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
           for (const _ of _._.GetLanguageListForRealms(_)) {
             if (_ && !_(_)) continue;
-            const _ = (0, _._)(_),
+            const _ = (0, _.LgB)(_),
               _ = (0, _._)("#Language_" + _),
               _ = !(!_ || !_(_));
             _.push({
@@ -621,10 +621,10 @@
             fnShareOnSteamActivityFeed: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _.useState)((0, _._)(_._.LANGUAGE)),
+          [_, _] = (0, _.useState)((0, _.sfN)(_._.LANGUAGE)),
           _ = (0, _.useMemo)(() => {
             const _ = new URL(_);
-            return _.searchParams.set("l", (0, _._)(_)), _.href;
+            return _.searchParams.set("l", (0, _.LgB)(_)), _.href;
           }, [_, _]);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().FlexColumnContainer, _().share_controls_ctn),
@@ -759,6 +759,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -781,26 +783,26 @@
         }
         BHandleKeyPress(_) {
           switch (_) {
-            case 38:
+            case _._:
               this.SetSelectedIndexDelta(-1);
               break;
-            case 40:
+            case _._:
               this.SetSelectedIndexDelta(1);
               break;
-            case 36:
+            case _._:
               this.SetSelectedIndex(0);
               break;
-            case 33:
+            case _._:
               this.SetSelectedIndexDelta(-this.GetPageSize());
               break;
-            case 35:
+            case _._:
               this.SetSelectedIndex(-1);
               break;
-            case 34:
+            case _._:
               this.SetSelectedIndexDelta(this.GetPageSize());
               break;
-            case 13:
-            case 9:
+            case _._:
+            case _._:
               if (void 0 === this.state.selectedIndex)
                 return (
                   this.props.onSuggestionSelected(this.props.strSearch), !1
@@ -809,7 +811,7 @@
                 this.m_rgCurrentMatches[this.state.selectedIndex],
               );
               break;
-            case 27:
+            case _._:
               this.props.onSuggestionSelected(this.props.strSearch);
               break;
             default:
@@ -1123,7 +1125,7 @@
           !_.ctrlKey &&
           this.m_MentionDialog.BHandleKeyPress(_.keyCode)
             ? _.preventDefault()
-            : (8 != _.keyCode && 46 != _.keyCode) ||
+            : (_.keyCode != _._ && _.keyCode != _._) ||
               (this.m_iMentionSearchCancelledOffset = void 0);
         }
         FindMatchOpener(_, _, _) {
@@ -1303,6 +1305,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -1327,7 +1331,7 @@
             async (_) => {
               if (
                 (_.ClearImages(),
-                _ && (_(!0), await _.AddExistingClanImage(_, 0)))
+                _ && (_(!0), await _.AddExistingClanImage(_, _.Bhc)))
               ) {
                 _(_);
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
@@ -1384,7 +1388,7 @@
                         width: _,
                         height: _,
                       },
-                      fileType: 3,
+                      fileType: _._._,
                     }),
                     _,
                   );
@@ -2900,7 +2904,7 @@
                   _._.CMInterface.GetServiceTransport(),
                   _,
                 );
-                if (1 != _.GetEResult()) {
+                if (_.GetEResult() != _._) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -2918,7 +2922,7 @@
                 const _ = await _().post(_, _, {
                   withCredentials: !0,
                 });
-                if (200 != _.status || 1 != _?.data?.success) {
+                if (200 != _.status || _?.data?.success != _._) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +

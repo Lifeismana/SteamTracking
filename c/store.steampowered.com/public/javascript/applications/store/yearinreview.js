@@ -1084,8 +1084,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], 31, !1);
+        m_eCurLang = (0, _.sfN)(_._.LANGUAGE);
+        m_rgHasData = (0, _._)([], _.bP9, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new _._();
         GetCallback() {
@@ -1146,6 +1146,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get().BIsLoaded() && _._.Get();
@@ -1157,10 +1158,10 @@
               if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
                 return !0;
               switch (_.GetStoreItemType()) {
-                case 0:
+                case _._._:
                   if (_.BIsGameIgnored(_.GetID())) return !0;
                   break;
-                case 1:
+                case _._._:
                   if (_.BIsPackageIgnored(_.GetID())) return !0;
               }
               return !1;
@@ -1180,6 +1181,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1229,7 +1231,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -1246,7 +1248,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._ ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -2690,7 +2692,7 @@
               (0, _.jsx)(
                 "option",
                 {
-                  value: -1,
+                  value: _.xPp,
                   children: (0, _._)("#language_selection_none"),
                 },
                 "langpicker_unset",
@@ -2700,7 +2702,7 @@
           const _ = this.props.realms || [_._.k_ESteamRealmGlobal];
           for (const _ of _._.GetLanguageListForRealms(_)) {
             if (_ && !_(_)) continue;
-            const _ = (0, _._)(_),
+            const _ = (0, _.LgB)(_),
               _ = (0, _._)("#Language_" + _),
               _ = !(!_ || !_(_));
             _.push({
@@ -2817,6 +2819,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -2839,26 +2843,26 @@
         }
         BHandleKeyPress(_) {
           switch (_) {
-            case 38:
+            case _._:
               this.SetSelectedIndexDelta(-1);
               break;
-            case 40:
+            case _._:
               this.SetSelectedIndexDelta(1);
               break;
-            case 36:
+            case _._:
               this.SetSelectedIndex(0);
               break;
-            case 33:
+            case _._:
               this.SetSelectedIndexDelta(-this.GetPageSize());
               break;
-            case 35:
+            case _._:
               this.SetSelectedIndex(-1);
               break;
-            case 34:
+            case _._:
               this.SetSelectedIndexDelta(this.GetPageSize());
               break;
-            case 13:
-            case 9:
+            case _._:
+            case _._:
               if (void 0 === this.state.selectedIndex)
                 return (
                   this.props.onSuggestionSelected(this.props.strSearch), !1
@@ -2867,7 +2871,7 @@
                 this.m_rgCurrentMatches[this.state.selectedIndex],
               );
               break;
-            case 27:
+            case _._:
               this.props.onSuggestionSelected(this.props.strSearch);
               break;
             default:
@@ -3181,7 +3185,7 @@
           !_.ctrlKey &&
           this.m_MentionDialog.BHandleKeyPress(_.keyCode)
             ? _.preventDefault()
-            : (8 != _.keyCode && 46 != _.keyCode) ||
+            : (_.keyCode != _._ && _.keyCode != _._) ||
               (this.m_iMentionSearchCancelledOffset = void 0);
         }
         FindMatchOpener(_, _, _) {
@@ -3361,6 +3365,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -3385,7 +3391,7 @@
             async (_) => {
               if (
                 (_.ClearImages(),
-                _ && (_(!0), await _.AddExistingClanImage(_, 0)))
+                _ && (_(!0), await _.AddExistingClanImage(_, _.Bhc)))
               ) {
                 _(_);
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
@@ -3442,7 +3448,7 @@
                         width: _,
                         height: _,
                       },
-                      fileType: 3,
+                      fileType: _._._,
                     }),
                     _,
                   );
@@ -4958,7 +4964,7 @@
                   _._.CMInterface.GetServiceTransport(),
                   _,
                 );
-                if (1 != _.GetEResult()) {
+                if (_.GetEResult() != _._) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -4976,7 +4982,7 @@
                 const _ = await _().post(_, _, {
                   withCredentials: !0,
                 });
-                if (200 != _.status || 1 != _?.data?.success) {
+                if (200 != _.status || _?.data?.success != _._) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -6562,6 +6568,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_basic_info: !0,
@@ -6628,7 +6635,7 @@
             this.m_SteamInterface.GetServiceTransport(),
             _,
           );
-          if (1 != _.GetEResult()) throw "error loading game info";
+          if (_.GetEResult() != _._) throw "error loading game info";
           for (let _ of _.Body().store_items()) _._.Get().ReadItem(_, _);
           return !0;
         }
@@ -6669,7 +6676,7 @@
             this.m_SteamInterface.GetServiceTransport(),
             _,
           );
-          return 1 != _.GetEResult()
+          return _.GetEResult() != _._
             ? ("dev" === _._.WEB_UNIVERSE &&
                 console.error(
                   "failed to set privacy settings, error:" + _.GetEResult(),
@@ -6683,7 +6690,7 @@
               };
         }
         PrivacyEResultToMessage(_) {
-          return 10 === _ ? "Servers are busy, please try again later" : "";
+          return _ === _._ ? "Servers are busy, please try again later" : "";
         }
         GetGameDetailsPopupIndex() {
           return this.m_GameDetailPopupData.index;
@@ -6878,7 +6885,7 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._) {
               const _ = _.Body()
                   .game_achievements()
                   .map((_) => _.toObject()),
@@ -7019,7 +7026,7 @@
             const [_, _] = _.useState(0);
             return (
               _.useEffect(() => {
-                if (1 == _) return;
+                if (_ == _._) return;
                 const _ = _.reduce((_, _) => {
                   const _ = _.parent_appid || _.appid,
                     _ = _._.Get().GetApp(_)?.BIsVisible(),
@@ -7141,10 +7148,10 @@
         let _;
         switch (_) {
           case "demo":
-            _ = 1;
+            _ = _._._;
             break;
           case "playtest":
-            _ = 12;
+            _ = _._._;
         }
         return (0, _.jsx)(_._, {
           "flow-children": "grid",
@@ -7180,14 +7187,14 @@
           } = _,
           [_, _] = (0, _._)(null == _ ? _ : _, _),
           _ = _(_, _);
-        if (1 == _) return null;
+        if (_ == _._) return null;
         if (!_ || !_.BIsVisible())
-          return !_ || (1 != _ && 12 != _)
+          return !_ || (_ != _._._ && _ != _._._)
             ? null
             : (0, _.jsx)(_, {
                 ..._,
                 nParentAppID: _,
-                eChildType: 0,
+                eChildType: _._._,
               });
         const _ = _.GetAssetsWithoutOverrides().GetLibraryCapsuleURL();
         return (0, _.jsxs)("a", {
@@ -7202,13 +7209,13 @@
                       className: _().SpecialFlags,
                       children: [
                         _ &&
-                          1 == _ &&
+                          _ == _._._ &&
                           (0, _.jsx)("div", {
                             className: _().DemoPlayDetails,
                             children: (0, _._)("#YIR_Played_Demo"),
                           }),
                         _ &&
-                          12 == _ &&
+                          _ == _._._ &&
                           (0, _.jsx)("div", {
                             className: _().PlaytestPlayDetails,
                             children: (0, _._)("#YIR_Played_PlayTest"),
@@ -7334,7 +7341,7 @@
                       className: _.SectionTitle,
                       children: _("#YIR_FirstTime_Title", _.length),
                     }),
-                    Boolean(1 == _)
+                    Boolean(_ == _._)
                       ? (0, _.jsx)(_._, {
                           size: "medium",
                           position: "center",
@@ -7661,7 +7668,7 @@
           _ = (0, _._)(_, _);
         return (
           (0, _.useEffect)(() => {
-            1 != _ && _(_.map((_) => _._.Get().GetApp(_)).filter(Boolean));
+            _ != _._ && _(_.map((_) => _._.Get().GetApp(_)).filter(Boolean));
           }, [_, _]),
           _
             ? (0, _.jsxs)(_.Fragment, {
@@ -8626,7 +8633,7 @@
             this.m_SteamInterface.GetServiceTransport(),
             _,
           );
-          if (1 != _.GetEResult())
+          if (_.GetEResult() != _._)
             throw "error friend sharing information " + _.GetEResult();
           return _.Body()
             .friend_shares()
@@ -8697,7 +8704,7 @@
                       {
                         strSteamid: _.ConvertTo64BitString(),
                         year: _,
-                        ePrivacy: 3,
+                        ePrivacy: _._._,
                         bPrivacyOverride: !1,
                       },
                       "family_" + _,
@@ -8780,7 +8787,7 @@
         return (0, _.jsx)(_._, {
           href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${_}`,
           className: (0, _._)({
-            [_.IsPrivate]: 1 == _,
+            [_.IsPrivate]: _ == _._._,
             [_.FriendCtn]: !0,
             [_.FriendCtn]: !0,
           }),
@@ -9495,7 +9502,7 @@
         });
       }
       function _(_) {
-        return _?.demo ? 1 : _?.playtest ? 12 : void 0;
+        return _?.demo ? _._._ : _?.playtest ? _._._ : void 0;
       }
       function _(_) {
         const { nDays: _ } = _,
@@ -9544,7 +9551,7 @@
                     (0, _.jsx)(
                       _._,
                       {
-                        href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${_}?src=8`,
+                        href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${_}?src=${_._._}`,
                         className: (0, _._)(_.OtherYearLink, _.OtherYearLink),
                         children: _,
                       },
@@ -9576,7 +9583,7 @@
             this.m_SteamInterface.GetServiceTransport(),
             _,
           );
-          if (1 != _.GetEResult())
+          if (_.GetEResult() != _._)
             throw `Load social images failed: ${_.GetErrorMessage()}`;
           return _.Body().toObject().images;
         }
@@ -9611,7 +9618,7 @@
         if (!_ && _._.logged_in)
           return (0, _.jsx)(_._, {
             className: (0, _._)(_.SeeRewindButton, _.SeeRewindButton),
-            href: `${_._.STORE_BASE_URL}replay/${_._.steamid}/${_}?src=9`,
+            href: `${_._.STORE_BASE_URL}replay/${_._.steamid}/${_}?src=${_._._}`,
             children: (0, _._)("#YIR_SeeYourRewind"),
           });
         return (0, _.jsxs)(_._, {
@@ -9655,18 +9662,18 @@
           [_, _] = (0, _.useState)(""),
           _ = (0, _._)(() => _.GetPrivacyState()),
           _ = (0, _._)(() => _.GetPrivacyState()),
-          _ = (0, _.useMemo)(() => 3 === _ || 2 === _, [_]),
+          _ = (0, _.useMemo)(() => _ === _._._ || _ === _._._, [_]),
           _ = [
             {
-              data: 1,
+              data: _._._,
               label: (0, _._)("#YIR_ShareVisbility_Private"),
             },
             {
-              data: 2,
+              data: _._._,
               label: (0, _._)("#YIR_ShareVisbility_FriendsOnly"),
             },
             {
-              data: 3,
+              data: _._._,
               label: (0, _._)("#YIR_ShareVisbility_Public"),
             },
           ];
@@ -9711,9 +9718,9 @@
         const { closeModal: _, userYearInReview: _, steamId: _, nYear: _ } = _,
           [_, _] = (0, _.useState)(),
           _ = (0, _._)(() => __webpack_require__.GetPrivacyState()),
-          _ = (0, _.useMemo)(() => 3 === _ || 2 === _, [_]),
-          [_, _] = (0, _.useState)((0, _._)(_._.LANGUAGE)),
-          _ = (0, _.useMemo)(() => (0, _._)(_), [_]),
+          _ = (0, _.useMemo)(() => _ === _._._ || _ === _._._, [_]),
+          [_, _] = (0, _.useState)((0, _.sfN)(_._.LANGUAGE)),
+          _ = (0, _.useMemo)(() => (0, _.LgB)(_), [_]),
           _ = ((_ = _), _.Get().GetAccountShortCode(_));
         var _;
         const _ = `https://s.team/${((_ = _), "y" + (_ % 100))}/${_}`;
@@ -9747,7 +9754,7 @@
                       children: (0, _.jsx)(_._, {
                         selectedLang: _,
                         fnOnLanguageChanged: _,
-                        fnFilterLanguage: (_) => 25 !== _,
+                        fnFilterLanguage: (_) => _ !== _.X51,
                       }),
                     }),
                   }),
@@ -10209,7 +10216,7 @@
           _ = _(),
           _ = _.slice(0, 5)
             .map((_, _) =>
-              _._.Get().BHasStoreItem(_.appid, 0)
+              _._.Get().BHasStoreItem(_.appid, _._._)
                 ? (0, _.jsx)(
                     _,
                     {
@@ -11391,7 +11398,7 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._) {
               const _ = _.Body()
                 .achievements()
                 .map((_) => {
@@ -11486,7 +11493,15 @@
             className: _,
             ..._
           } = _,
-          [_, _] = _.useState(!1);
+          [_, _] = _.useState(!1),
+          _ = _.useCallback((_) => {
+            _ &&
+              (_.complete
+                ? _(!0)
+                : (_.onload = () => {
+                    _(!0);
+                  }));
+          }, []);
         if (_)
           return (0, _.jsx)("div", {
             className: _().HiddenLabel,
@@ -11513,11 +11528,11 @@
                 }),
               }),
             (0, _.jsx)("img", {
+              ref: _,
               className: (0, _._)(_().Icon, _ && _().IconGlow),
               src: _,
               loading: "lazy",
               alt: _,
-              onLoad: () => _(!0),
             }),
           ],
         });
@@ -11967,7 +11982,7 @@
             () => __webpack_require__.GetChartMonthlyDataForApp(_),
             [_, _],
           );
-        if (1 === _)
+        if (_ === _._)
           return (0, _.jsx)("div", {
             className: (0, _._)(
               _.TopGameBlockContainer,
@@ -12298,7 +12313,7 @@
               (0, _._)(_, "snr", null),
               (0, _._)(_, "sP", null);
           }, [_]),
-          15 == _)
+          _ == _._)
         )
           return (0, _.jsx)(_, {
             message: (0, _._)("#YIR_Error_NoShareNoGameplayNotUser"),

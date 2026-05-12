@@ -1452,7 +1452,9 @@ p a:hover {
   background-color: var(--background-color);
   border: var(--border-width, 1px) solid var(--border-color, transparent);
   width: var(--checkbox-size);
+  min-width: var(--checkbox-size);
   height: var(--checkbox-size);
+  min-height: var(--checkbox-size);
   color: var(--icon-color);
 }
 ._1kIuUssJvopWbHik1IKMG6 ._3babFLLB0YYBf8znrlE7Dt .cngAYeP7ZvFo2pT_v3-xO {

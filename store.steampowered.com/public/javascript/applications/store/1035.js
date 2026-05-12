@@ -13,17 +13,36 @@
         avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
       };
     },
+    38924: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        Fj: () => r,
+        R$: () => n,
+        Zx: () => i,
+        hs: () => m,
+        o5: () => s,
+        sr: () => o,
+      });
+      const r = 2,
+        i = 4,
+        s = 8,
+        n = 512,
+        o = 1024,
+        m = 2048;
+    },
     10622: (e, t, a) => {
       "use strict";
-      a.d(t, { Z: () => _, dV: () => A.d, rO: () => l });
+      a.d(t, { Z: () => p, dV: () => _.d, rO: () => c });
       var r = a(34629),
         i = a(14947),
         s = a(31561),
         n = a(51006),
         o = a(61859),
-        m = a(78327),
-        A = a(85044);
-      function l(e) {
+        m = a(22837),
+        A = a(38924),
+        l = a(78327),
+        _ = a(85044);
+      function c(e) {
         let t = "offline";
         return (
           e &&
@@ -36,15 +55,15 @@
           t
         );
       }
-      class _ {
+      class p {
         m_steamid;
         m_bInitialized = !1;
-        m_ePersonaState = 0;
+        m_ePersonaState = m.cU3;
         m_unGamePlayedAppID = 0;
         m_gameid = "0";
         m_unPersonaStateFlags = 0;
         m_strPlayerName = "";
-        m_strAvatarHash = A.d;
+        m_strAvatarHash = _.d;
         m_strAccountName = "";
         m_rtLastSeenOnline = 0;
         m_strGameExtraInfo = "";
@@ -59,7 +78,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_eGamingDeviceType = 0;
+        m_eGamingDeviceType = m.eSB;
         m_mapRichPresence = i.sH.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -68,7 +87,7 @@
           (0, i.Gn)(this), (this.m_steamid = e);
         }
         Reset() {
-          (this.m_ePersonaState = 0),
+          (this.m_ePersonaState = m.cU3),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -81,7 +100,7 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = 0);
+            (this.m_eGamingDeviceType = m.eSB);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -90,7 +109,7 @@
           return this.m_steamid.ConvertTo64BitString();
         }
         get is_online() {
-          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
+          return this.m_ePersonaState != m.cU3 && this.m_ePersonaState != m._3b;
         }
         get is_ingame() {
           return (
@@ -112,7 +131,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return !!(2 & (this.m_unPersonaStateFlags ?? 0));
+          return 0 != ((this.m_unPersonaStateFlags ?? 0) & A.Fj);
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -124,7 +143,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
+          return this.m_ePersonaState == m.PrD || this.m_ePersonaState == m.vPz;
         }
         HasStateFlag(e) {
           return 0 != ((this.m_unPersonaStateFlags ?? 0) & e);
@@ -133,10 +152,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          0 != this.m_ePersonaState && this.Reset();
+          this.m_ePersonaState != m.cU3 && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(4);
+          return this.HasStateFlag(A.Zx);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -173,7 +192,7 @@
               let t = this.m_mapRichPresence.get("steam_display");
               return e.Localize(t, this.m_mapRichPresence);
             }
-          } else if (this.HasStateFlag(8))
+          } else if (this.HasStateFlag(A.o5))
             return (0, o.we)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -195,7 +214,7 @@
           if (0 == this.last_seen_online)
             return (0, o.we)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!m.TS.IN_MOBILE || e <= 60) && (0, s.tB)(e);
+          (!l.TS.IN_MOBILE || e <= 60) && (0, s.tB)(e);
           let t = n.Vw.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, o.we)("#PersonaStateLastSeen_JustNow")
@@ -203,20 +222,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case 0:
-            case 7:
+            case m.cU3:
+            case m._3b:
               return this.GetOfflineStatusTime();
-            case 1:
+            case m.UXk:
               return (0, o.we)("#PersonaStateOnline");
-            case 2:
+            case m.wcG:
               return (0, o.we)("#PersonaStateBusy");
-            case 3:
+            case m.PrD:
               return (0, o.we)("#PersonaStateAway");
-            case 4:
+            case m.vPz:
               return (0, o.we)("#PersonaStateSnooze");
-            case 5:
+            case m.Hrn:
               return (0, o.we)("#PersonaStateLookingToTrade");
-            case 6:
+            case m.HAb:
               return (0, o.we)("#PersonaStateLookingToPlay");
             default:
               return "";
@@ -247,16 +266,16 @@
             : "offline";
         }
         BHasAvatarSet() {
-          return this.m_strAvatarHash != A.d;
+          return this.m_strAvatarHash != _.d;
         }
         get avatar_url() {
-          return (0, A.t)(this.m_strAvatarHash);
+          return (0, _.t)(this.m_strAvatarHash);
         }
         get avatar_url_medium() {
-          return (0, A.t)(this.m_strAvatarHash, "medium");
+          return (0, _.t)(this.m_strAvatarHash, "medium");
         }
         get avatar_url_full() {
-          return (0, A.t)(this.m_strAvatarHash, "full");
+          return (0, _.t)(this.m_strAvatarHash, "full");
         }
         static SortStatusComparator(e, t, a) {
           if (t.has_public_party_beacon) {
@@ -282,33 +301,33 @@
         }
         GetCommunityProfileURL() {
           return this.m_strProfileURL
-            ? `${m.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${m.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+            ? `${l.TS.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+            : `${l.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, r.Cg)([i.sH], _.prototype, "m_bInitialized", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_ePersonaState", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_unGamePlayedAppID", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_gameid", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_unPersonaStateFlags", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_strPlayerName", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_strAvatarHash", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_strAccountName", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_rtLastSeenOnline", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_strGameExtraInfo", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_unGameServerIP", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_unGameServerPort", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_game_lobby_id", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_bPlayerNamePending", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_bAvatarPending", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_broadcastId", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_broadcastAccountId", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_broadcastAppId", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_broadcastViewerCount", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_eGamingDeviceType", void 0),
-        (0, r.Cg)([i.sH], _.prototype, "m_bNameInitialized", void 0);
+      (0, r.Cg)([i.sH], p.prototype, "m_bInitialized", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_ePersonaState", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_unGamePlayedAppID", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_gameid", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_unPersonaStateFlags", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_strPlayerName", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_strAvatarHash", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_strAccountName", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_rtLastSeenOnline", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_strGameExtraInfo", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_unGameServerIP", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_unGameServerPort", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_game_lobby_id", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_bPlayerNamePending", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_bAvatarPending", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_broadcastId", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_broadcastAccountId", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_broadcastAppId", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_broadcastViewerCount", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_strBroadcastTitle", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_bCommunityBanned", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_eGamingDeviceType", void 0),
+        (0, r.Cg)([i.sH], p.prototype, "m_bNameInitialized", void 0);
     },
     1035: (e, t, a) => {
       "use strict";
@@ -323,11 +342,11 @@
         l = a(3088);
       const _ =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        p =
+        c =
           a.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var u = a(43047),
-        c = a.n(u),
+      var p = a(43047),
+        u = a.n(p),
         h = a(81393);
       const g = s.memo(function (e) {
         const {
@@ -337,7 +356,7 @@
             statusStyle: n,
             statusPosition: o,
             children: A,
-            ...u
+            ...p
           } = e,
           g = s.useMemo(() => {
             const e = [];
@@ -355,7 +374,7 @@
                     case "Large":
                     case "X-Large":
                     case "FillArea":
-                      return p;
+                      return c;
                     default:
                       return (0, h.z_)(e, `Unhandled size ${e}`), _;
                   }
@@ -366,20 +385,20 @@
           }, [t, a]);
         return (0, i.jsxs)("div", {
           className: (0, m.A)(
-            c().avatarHolder,
+            u().avatarHolder,
             "avatarHolder",
             "no-drag",
             a,
             r,
           ),
-          ...u,
+          ...p,
           children: [
             (0, i.jsx)("div", {
-              className: (0, m.A)(c().avatarStatus, "avatarStatus", o),
+              className: (0, m.A)(u().avatarStatus, "avatarStatus", o),
               style: n,
             }),
             (0, i.jsx)(l.c, {
-              className: (0, m.A)(c().avatar, "avatar"),
+              className: (0, m.A)(u().avatar, "avatar"),
               rgSources: g,
               draggable: !1,
             }),
@@ -427,10 +446,10 @@
           n.startsWith("https://") ||
             (n = A.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + n),
           (0, i.jsx)("div", {
-            className: (0, m.A)(c().avatarFrame, a, "avatarFrame"),
+            className: (0, m.A)(u().avatarFrame, a, "avatarFrame"),
             ...s,
             children: (0, i.jsx)("img", {
-              className: c().avatarFrameImg,
+              className: u().avatarFrameImg,
               src: n,
             }),
           })
@@ -539,16 +558,16 @@
           } = e,
           A = i.useRef(null),
           [l, _] = i.useState(0),
-          [p, u] = i.useState(0);
+          [c, p] = i.useState(0);
         i.useImperativeHandle(
           o,
           () => ({ imgRef: A, nSourceIndex: l, nSourceLength: t.length }),
           [A, l, t],
         );
-        const c = i.useMemo(() => JSON.stringify(t), [t]);
+        const u = i.useMemo(() => JSON.stringify(t), [t]);
         i.useEffect(() => {
-          _(0), u((e) => e + 1);
-        }, [c]);
+          _(0), p((e) => e + 1);
+        }, [u]);
         const h = i.useMemo(() => {
             let a = "";
             return (
@@ -575,7 +594,7 @@
         return (0, r.jsx)(
           "img",
           { ref: A, ...m, src: h, onError: g, alt: n },
-          p,
+          c,
         );
       }
     },

@@ -527,7 +527,7 @@
               let _,
                 _ = 0,
                 _ = new Array();
-              const _ = (0, _._)(_._.LANGUAGE);
+              const _ = (0, _.sfN)(_._.LANGUAGE);
               do {
                 if (
                   ((_ += 1),
@@ -1076,7 +1076,7 @@
                         ? _.get(_).push(_.group_id)
                         : _.set(_, [_.group_id]);
                     }),
-                    _.set(_.group_id, _.localized_session_title[0]))
+                    _.set(_.group_id, _.localized_session_title[_.Bhc]))
                   : (_ = !0);
               }),
               [_, _, _]
@@ -1153,6 +1153,8 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (0, _._)((_) => {
@@ -1179,7 +1181,7 @@
             [_, _] = (0, _._)(_);
           if (
             (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
-            !_ && 36 == _.GetEventType())
+            !_ && _.GetEventType() == _.ajI)
           )
             return (0, _.jsx)(_._, {
               eventModel: _,
@@ -1188,7 +1190,7 @@
             });
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
             _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
-          if (!_.bLoaded || !_ || (_ && !_ && 2 !== _))
+          if (!_.bLoaded || !_ || (_ && !_ && _ !== _._))
             return (0, _.jsx)("div", {
               className: _().FlexCenter,
               style: {
@@ -1418,7 +1420,7 @@
             } = _,
             _ = _.GetImageURLWithFallback("background", _),
             _ = _.BIsImageSafeForAllAges("background", _),
-            _ = "lang_" + (0, _._)(_),
+            _ = "lang_" + (0, _.wwZ)(_),
             _ = !!_ && _.BImageNeedScreenshotFallback("background", _);
           return (0, _.jsxs)("div", {
             className: (0, _._)(
@@ -1563,7 +1565,7 @@
                       nOverrideEndTime: _,
                       nOverrideStartTime: _,
                     }),
-                    28 !== _ &&
+                    _ !== _.uYK &&
                       _ < _ &&
                       (0, _.jsx)("div", {
                         className: _().EventDetailTimeInfo,
@@ -2158,6 +2160,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_objApprovalPriviledge = null;
@@ -2180,7 +2183,7 @@
             const _ = await _().get(_, {
               withCredentials: !0,
             });
-            if (1 == _?.data?.success)
+            if (_?.data?.success == _._)
               return (
                 (this.m_objApprovalPriviledge = {
                   bHasAccess: _.data.bHasAccess,
@@ -2327,8 +2330,9 @@
                             _ = await _().post(_, _, {
                               withCredentials: !0,
                             });
-                          (_ = 1 == _?.data?.success || 29 == _?.data?.success),
-                            29 == _?.data?.success &&
+                          (_ =
+                            _?.data?.success == _._ || _?.data?.success == _._),
+                            _?.data?.success == _._ &&
                               console.warn(
                                 `RemoveEventFromSteamChinaButton: we receive duplicate request ${_.clanSteamID.GetAccountID()} : ${_.GID}; event is still removed from SC`,
                               ),

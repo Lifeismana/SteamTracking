@@ -46,7 +46,7 @@
         (a.turkish = () => n.e(7996).then(n.t.bind(n, 87996, 19))),
         (a.ukrainian = () => n.e(7306).then(n.t.bind(n, 47306, 19))),
         (a.vietnamese = () => n.e(2539).then(n.t.bind(n, 72539, 19)));
-      const r = (0, n(48891).l)(async function (e) {
+      const r = (0, n(13843).l)(async function (e) {
         if (a[e]) return a[e]();
       });
       var o,
@@ -163,47 +163,48 @@
       };
     },
     39020: (e, t, n) => {
-      n.d(t, { Fv: () => s, MB: () => u });
-      var i = n(56545),
-        a = n(75487),
-        r = n(23809),
-        o = n(20194);
-      function s(e) {
-        const t = (0, r.TR)(),
-          n = (0, r.rX)();
-        return (0, o.I)(h(t.GetAnonymousServiceTransport(), n, e));
+      n.d(t, { Fv: () => h, MB: () => c });
+      var i = n(37085),
+        a = n(56545),
+        r = n(41071),
+        o = n(23809),
+        s = n(20194);
+      function h(e) {
+        const t = (0, o.TR)(),
+          n = (0, o.rX)();
+        return (0, s.I)(u(t.GetAnonymousServiceTransport(), n, e));
       }
-      function h(e, t, n) {
+      function u(e, t, n) {
         return {
           queryKey: ["LocalizedTagNames", n],
           queryFn: async () => {
-            const r = `LocalizedTagNames2_${n}`,
-              o = await t.GetObject(r),
-              s = i.w.Init(a.Gr);
-            s.Body().set_language(n),
-              o?.version_hash && s.Body().set_have_version_hash(o.version_hash);
-            const h = await a.nd.GetTagList(e, s);
-            let u;
-            if (1 == h.GetEResult())
-              (u = h.Body().toObject()), t && t.StoreObject(r, u);
-            else if (29 == h.GetEResult()) u = o || void 0;
+            const o = `LocalizedTagNames2_${n}`,
+              s = await t.GetObject(o),
+              h = a.w.Init(r.Gr);
+            h.Body().set_language(n),
+              s?.version_hash && h.Body().set_have_version_hash(s.version_hash);
+            const u = await r.nd.GetTagList(e, h);
+            let c;
+            if (u.GetEResult() == i.R)
+              (c = u.Body().toObject()), t && t.StoreObject(o, c);
+            else if (u.GetEResult() == i.Ze) c = s || void 0;
             else {
-              if (!o) throw h.GetErrorMessage();
+              if (!s) throw u.GetErrorMessage();
               console.warn(
                 "Couldn't load updated tag localization, will continue with what we have from storage.",
               ),
-                (u = o);
+                (c = s);
             }
-            const c = {};
+            const d = {};
             return (
-              (u?.tags || []).forEach(({ tagid: e, name: t }) => (c[e] = t)), c
+              (c?.tags || []).forEach(({ tagid: e, name: t }) => (d[e] = t)), d
             );
           },
           staleTime: 36e5,
         };
       }
-      function u(e, t) {
-        const { data: n } = s(t);
+      function c(e, t) {
+        const { data: n } = h(t);
         return n && n[e];
       }
     },

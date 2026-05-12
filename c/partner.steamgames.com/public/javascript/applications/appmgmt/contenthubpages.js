@@ -40,6 +40,7 @@
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+        "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
         ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
         Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
@@ -1012,6 +1013,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1020,8 +1022,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      _._, _._, _._, _._, _._;
       let _ = new Map();
-      _.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4);
+      _.set(_._, _._), _.set(_._, _._), _.set(_._, _._), _.set(_._, _._);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1400,7 +1403,7 @@
       }
       const _ = _.memo(function (_) {
         const { rgContentDescriptors: _, setContentDescriptors: _ } = _,
-          _ = _.useMemo(() => [2, 1, 4, 3], []);
+          _ = _.useMemo(() => [_._, _._, _._, _._], []);
         return (0, _.jsx)(_._, {
           label: "Content Descriptors",
           children: (0, _.jsx)(_, {
@@ -1411,19 +1414,19 @@
               (function (_) {
                 let _ = null;
                 switch (_) {
-                  case 5:
+                  case _._:
                     _ = "#ContentDescriptor_GeneralMatureContent";
                     break;
-                  case 2:
+                  case _._:
                     _ = "#ContentDescriptor_FrequentViolenceOrGore";
                     break;
-                  case 1:
+                  case _._:
                     _ = "#ContentDescriptor_NudityOrSexualContent";
                     break;
-                  case 4:
+                  case _._:
                     _ = "#ContentDescriptor_GratuitousNudityOrSexualContent";
                     break;
-                  case 3:
+                  case _._:
                     _ = "#ContentDescriptor_AdultOnlySexualContent";
                     break;
                   default:
@@ -1824,6 +1827,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1855,16 +1859,18 @@
           },
           {
             prop: "color",
-            cssProperty: (_, _) => [
+            responsive: !0,
+            cssProperty: (_, _, _) => [
               "--text-color",
-              (0, _._)(_, _.contrast ?? "body"),
+              (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
             ],
           },
           {
             prop: "contrast",
-            cssProperty: (_, _) => [
+            responsive: !0,
+            cssProperty: (_, _, _) => [
               "--text-color",
-              (0, _._)(_.color ?? "text-body", _),
+              (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
             ],
           },
           {

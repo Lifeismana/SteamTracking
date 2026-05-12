@@ -11,6 +11,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_nLastUpdated = 0;
@@ -83,7 +84,7 @@
               "Fallback:",
               _,
             ),
-          _ && 1 != _._.EUNIVERSE)
+          _ && _._.EUNIVERSE != _.wLO)
         )
           return _;
         return _;
@@ -192,7 +193,7 @@
             console.log("Loading batch of App Info from Steam: ", _),
               await this.m_CMInterface?.WaitUntilLoggedOn();
             let _ = _._.Init(_._);
-            _.Body().set_language((0, _._)(_._.LANGUAGE));
+            _.Body().set_language((0, _.sfN)(_._.LANGUAGE));
             const _ = 50;
             for (; _.length > 0; ) {
               const _ = Math.min(_, _.length),
@@ -202,7 +203,7 @@
                 this.m_CMInterface.GetServiceTransport(),
                 _,
               );
-              1 == _.GetEResult()
+              _.GetEResult() == _._
                 ? this.OnGetAppsResponse(_)
                 : console.error(
                     `Error when calling CommunityService.GetApps: EResult=${_.GetEResult()}, AppIDs:`,
@@ -314,7 +315,7 @@
           const _ = this.GetRichPresenceLoc(_);
           return _
             ? _.Localize(_, _)
-            : 1 != _._.EUNIVERSE
+            : _._.EUNIVERSE != _.wLO
               ? (console.log(
                   `Unable to find app localization information for app ${_} token ${_}, this may not have had a chance to load yet`,
                 ),
@@ -373,7 +374,7 @@
                 .then(
                   (_) => (
                     (_.m_fetching = null),
-                    1 != _.GetEResult()
+                    _.GetEResult() != _._
                       ? Promise.reject()
                       : (this.OnRichPresenceLocUpdate(
                           _,

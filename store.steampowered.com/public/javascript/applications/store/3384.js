@@ -372,190 +372,198 @@
     55263: (e, s, t) => {
       "use strict";
       t.d(s, {
-        G6: () => a,
-        Gg: () => d,
-        Ow: () => o,
-        YM: () => f,
-        mZ: () => j,
-        t7: () => c,
-        zX: () => m,
+        G6: () => _,
+        Gg: () => h,
+        Ow: () => f,
+        Sq: () => o,
+        YM: () => k,
+        eR: () => d,
+        ik: () => j,
+        mZ: () => v,
+        t7: () => m,
+        zX: () => p,
       });
       var n = t(41735),
         r = t.n(n),
         i = t(90626),
-        u = t(84933),
-        l = t(16021);
-      function a(e, s, t, n) {
-        const a = (0, i.useRef)(void 0),
-          c = (0, i.useRef)(void 0),
-          o = (0, u.CH)();
-        a.current = e;
-        const [d, j] = (0, i.useState)(void 0),
+        u = t(37085),
+        l = t(96171),
+        a = t(84933),
+        c = t(16021);
+      const o = 1,
+        d = 2,
+        j = 3;
+      function _(e, s, t, n) {
+        const l = (0, i.useRef)(void 0),
+          _ = (0, i.useRef)(void 0),
+          m = (0, a.CH)();
+        l.current = e;
+        const [f, h] = (0, i.useState)(void 0),
           {
-            include_assets: _,
-            include_release: m,
-            include_platforms: f,
-            include_all_purchase_options: h,
-            include_screenshots: v,
-            include_trailers: g,
-            include_ratings: p,
-            include_tag_count: k,
-            include_reviews: b,
-            include_basic_info: w,
-            include_supported_languages: y,
-            include_full_description: I,
-            include_included_items: G,
-            include_assets_without_overrides: z,
-            apply_user_filters: D,
-            include_links: S,
+            include_assets: v,
+            include_release: g,
+            include_platforms: p,
+            include_all_purchase_options: k,
+            include_screenshots: b,
+            include_trailers: w,
+            include_ratings: y,
+            include_tag_count: I,
+            include_reviews: G,
+            include_basic_info: D,
+            include_supported_languages: z,
+            include_full_description: S,
+            include_included_items: O,
+            include_assets_without_overrides: A,
+            apply_user_filters: N,
+            include_links: C,
           } = t;
         if (
           ((0, i.useEffect)(() => {
             const t = {
-              include_assets: _,
-              include_release: m,
-              include_platforms: f,
-              include_all_purchase_options: h,
-              include_screenshots: v,
-              include_trailers: g,
-              include_ratings: p,
-              include_tag_count: k,
-              include_reviews: b,
-              include_basic_info: w,
-              include_supported_languages: y,
-              include_full_description: I,
-              include_included_items: G,
-              include_assets_without_overrides: z,
-              apply_user_filters: D,
-              include_links: S,
+              include_assets: v,
+              include_release: g,
+              include_platforms: p,
+              include_all_purchase_options: k,
+              include_screenshots: b,
+              include_trailers: w,
+              include_ratings: y,
+              include_tag_count: I,
+              include_reviews: G,
+              include_basic_info: D,
+              include_supported_languages: z,
+              include_full_description: S,
+              include_included_items: O,
+              include_assets_without_overrides: A,
+              apply_user_filters: N,
+              include_links: C,
             };
             let i = null;
             return (
               !e ||
                 e < 0 ||
-                l.A.Get().BHasStoreItem(e, s, t) ||
-                (void 0 !== d && n && n == c.current) ||
-                (n !== c.current && (j(void 0), (c.current = n)),
+                c.A.Get().BHasStoreItem(e, s, t) ||
+                (void 0 !== f && n && n == _.current) ||
+                (n !== _.current && (h(void 0), (_.current = n)),
                 (i = r().CancelToken.source()),
-                l.A.Get()
+                c.A.Get()
                   .QueueStoreItemRequest(e, s, t)
                   .then((s) => {
-                    i?.token.reason || a.current !== e || j(1 == s), o();
+                    i?.token.reason || l.current !== e || h(s == u.R), m();
                   })),
               () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, s, n, d, _, m, f, h, v, g, p, k, b, w, y, I, G, z, D, S, o]),
+          }, [e, s, n, f, v, g, p, k, b, w, y, I, G, D, z, S, O, A, N, C, m]),
           !e)
         )
-          return [null, 2];
-        if (!1 === d) return [void 0, 2];
-        if (l.A.Get().BIsStoreItemMissing(e, s)) return [void 0, 2];
-        if (!l.A.Get().BHasStoreItem(e, s, t)) return [void 0, 1];
-        const O = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, s);
-        return O ? [O, 3] : [null, 2];
+          return [null, d];
+        if (!1 === f) return [void 0, d];
+        if (c.A.Get().BIsStoreItemMissing(e, s)) return [void 0, d];
+        if (!c.A.Get().BHasStoreItem(e, s, t)) return [void 0, o];
+        const E = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, s);
+        return E ? [E, j] : [null, d];
       }
-      function c(e, s, t) {
-        return a(e, 0, s, t);
+      function m(e, s, t) {
+        return _(e, l.c6.qI, s, t);
       }
-      function o(e, s, t) {
-        return a(e, 2, s, t);
+      function f(e, s, t) {
+        return _(e, l.c6.xO, s, t);
       }
-      function d(e, s, t) {
-        return a(e, 1, s, t);
+      function h(e, s, t) {
+        return _(e, l.c6.RD, s, t);
       }
-      function j(e, s, t) {
-        const [n, r] = a(e, s, t);
+      function v(e, s, t) {
+        const [n, r] = _(e, s, t);
         let i;
-        1 != n?.GetStoreItemType() ||
+        n?.GetStoreItemType() != l.c6.RD ||
           n.GetAssets()?.GetHeaderURL() ||
           1 != n?.GetIncludedAppIDs().length ||
           (i = n.GetIncludedAppIDs()[0]);
-        const [u, l] = c(i, t);
-        return i && u?.BIsVisible() ? [u, l] : [n, r];
+        const [u, a] = m(i, t);
+        return i && u?.BIsVisible() ? [u, a] : [n, r];
       }
-      function _(e, s, t, n) {
-        const a = (0, u.CH)(),
+      function g(e, s, t, n) {
+        const u = (0, a.CH)(),
           {
-            include_assets: c,
-            include_release: o,
-            include_platforms: d,
-            include_all_purchase_options: j,
-            include_screenshots: _,
-            include_trailers: m,
-            include_ratings: f,
-            include_tag_count: h,
-            include_reviews: v,
-            include_basic_info: g,
-            include_supported_languages: p,
-            include_full_description: k,
-            include_included_items: b,
-            include_assets_without_overrides: w,
-            apply_user_filters: y,
-            include_links: I,
+            include_assets: l,
+            include_release: _,
+            include_platforms: m,
+            include_all_purchase_options: f,
+            include_screenshots: h,
+            include_trailers: v,
+            include_ratings: g,
+            include_tag_count: p,
+            include_reviews: k,
+            include_basic_info: b,
+            include_supported_languages: w,
+            include_full_description: y,
+            include_included_items: I,
+            include_assets_without_overrides: G,
+            apply_user_filters: D,
+            include_links: z,
           } = t;
         if (
           ((0, i.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const t = {
-                include_assets: c,
-                include_release: o,
-                include_platforms: d,
-                include_all_purchase_options: j,
-                include_screenshots: _,
-                include_trailers: m,
-                include_ratings: f,
-                include_tag_count: h,
-                include_reviews: v,
-                include_basic_info: g,
-                include_supported_languages: p,
-                include_full_description: k,
-                include_included_items: b,
-                include_assets_without_overrides: w,
-                apply_user_filters: y,
-                include_links: I,
+                include_assets: l,
+                include_release: _,
+                include_platforms: m,
+                include_all_purchase_options: f,
+                include_screenshots: h,
+                include_trailers: v,
+                include_ratings: g,
+                include_tag_count: p,
+                include_reviews: k,
+                include_basic_info: b,
+                include_supported_languages: w,
+                include_full_description: y,
+                include_included_items: I,
+                include_assets_without_overrides: G,
+                apply_user_filters: D,
+                include_links: z,
               },
               n = e.filter(
                 (e) =>
                   !(
-                    l.A.Get().BHasStoreItem(e, s, t) ||
-                    l.A.Get().BIsStoreItemMissing(e, s)
+                    c.A.Get().BHasStoreItem(e, s, t) ||
+                    c.A.Get().BIsStoreItemMissing(e, s)
                   ),
               );
             if (0 == n.length) return;
             const i = r().CancelToken.source(),
-              u = n.map((e) => l.A.Get().QueueStoreItemRequest(e, s, t));
+              a = n.map((e) => c.A.Get().QueueStoreItemRequest(e, s, t));
             return (
-              Promise.all(u).then(() => {
-                i.token.reason || a();
+              Promise.all(a).then(() => {
+                i.token.reason || u();
               }),
               () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, s, n, a, c, o, d, j, _, m, f, h, v, g, p, k, b, w, y, I]),
+          }, [e, s, n, u, l, _, m, f, h, v, g, p, k, b, w, y, I, G, D, z]),
           !e)
         )
-          return 2;
+          return d;
         if (
           !e.every(
             (e) =>
-              l.A.Get().BHasStoreItem(e, s, t) ||
-              l.A.Get().BIsStoreItemMissing(e, s),
+              c.A.Get().BHasStoreItem(e, s, t) ||
+              c.A.Get().BIsStoreItemMissing(e, s),
           )
         )
-          return 1;
+          return o;
         return e.every((e) =>
-          l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, s),
+          c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, s),
         )
-          ? 3
-          : 2;
+          ? j
+          : d;
       }
-      function m(e, s, t) {
-        return _(e, 0, s, t);
+      function p(e, s, t) {
+        return g(e, l.c6.qI, s, t);
       }
-      function f() {
+      function k() {
         i.useEffect(
           () => (
-            l.A.Get().SetReturnUnavailableItems(!0),
-            () => l.A.Get().SetReturnUnavailableItems(!1)
+            c.A.Get().SetReturnUnavailableItems(!0),
+            () => c.A.Get().SetReturnUnavailableItems(!1)
           ),
           [],
         );

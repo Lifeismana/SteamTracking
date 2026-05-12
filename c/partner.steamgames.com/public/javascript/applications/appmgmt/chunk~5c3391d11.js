@@ -95,9 +95,37 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -109,10 +137,13 @@
           bSteamOS: !1,
           bSteamDeck: !1,
         }),
-        _ = () => _.useContext(_);
+        _ = () => _.useContext(_),
+        _ = 0,
+        _ = 1,
+        _ = 2;
       function _() {
         const { bForceShowCompatInfo: _, bSteamDeck: _, bSteamOS: _ } = _();
-        return _ && !_ ? [!0, 2] : _ || _ || _._.ON_DECK ? [!0, 1] : [!1, 0];
+        return _ && !_ ? [!0, _] : _ || _ || _._.ON_DECK ? [!0, _] : [!1, _];
       }
       function _(_) {
         const { _: _, className: _ } = _,
@@ -139,15 +170,15 @@
           });
         },
         _ = {
-          1: _.jIP,
-          2: _.aVR,
-          3: _.o5Q,
-          0: _.WX$,
+          [_._]: _.jIP,
+          [_._]: _.aVR,
+          [_._]: _.o5Q,
+          [_._]: _.WX$,
         },
         _ = {
-          0: _.WX$,
-          1: _.jIP,
-          2: _.ZjT,
+          [_._]: _.WX$,
+          [_._]: _.jIP,
+          [_._]: _.ZjT,
         };
       function _(_) {
         return _[_] || _.WX$;
@@ -155,6 +186,12 @@
       function _(_) {
         return _[_] || _.WX$;
       }
+      _._, _._, _._, _._;
+      _._, _._, _._;
+      _._, _._, _._, _._;
+      _._, _._, _._, _._;
+      _._, _._, _._;
+      _._, _._, _._;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -174,7 +211,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -227,7 +268,7 @@
               params: _,
               withCredentials: !0,
             });
-            if (200 == _?.status && 1 == _.data?.success && _.data?.results)
+            if (200 == _?.status && _.data?.success == _._ && _.data?.results)
               return this.AddCompatabilityResult(_.data.results), !0;
             _ = (0, _._)(_);
           } catch (_) {
@@ -290,8 +331,8 @@
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           [_, _, _] = (0, _._)();
-        if (!_ || !_ || 0 !== _.item_type) return null;
-        const _ = _.steam_deck_compat_category || 0;
+        if (!_ || !_ || _.item_type !== _._._) return null;
+        const _ = _.steam_deck_compat_category || _._;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().LearnMoreCtn, "LearnMoreCtn"),
           children: [
@@ -363,22 +404,22 @@
       function _(_) {
         const { category: _ } = _;
         switch (_) {
-          case 3:
+          case _._:
             return (0, _.jsx)(_.o5Q, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 2:
+          case _._:
             return (0, _.jsx)(_.aVR, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 1:
+          case _._:
             return (0, _.jsx)(_.jIP, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 0:
+          case _._:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -389,17 +430,17 @@
       function _(_) {
         const { category: _ } = _;
         switch (_) {
-          case 2:
+          case _._:
             return (0, _.jsx)(_.ZjT, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 1:
+          case _._:
             return (0, _.jsx)(_.jIP, {
               className: _().CategoryIcon,
               role: "presentation",
             });
-          case 0:
+          case _._:
             return (0, _.jsx)(_.WX$, {
               className: _().CategoryIcon,
               role: "presentation",
@@ -409,7 +450,7 @@
       }
       function _(_) {
         const { _: _, category: _, appName: _, descriptionToken: _ } = _;
-        if (0 == _)
+        if (_ == _._)
           return (0, _.jsx)("div", {
             _: _,
             className: _().CompatibilityDetailRatingSummary,
@@ -425,15 +466,15 @@
         let _ = "",
           _ = null;
         switch (_) {
-          case 3:
+          case _._:
             (_ = "#SteamDeckVerified_DescriptionHeader_Verified"),
               (_ = _().Verified);
             break;
-          case 2:
+          case _._:
             (_ = "#SteamDeckVerified_DescriptionHeader_Playable"),
               (_ = _().Playable);
             break;
-          case 1:
+          case _._:
             (_ = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (_ = _().Unsupported);
         }
@@ -463,7 +504,7 @@
       }
       function _(_) {
         const { _: _, category: _, appName: _, descriptionToken: _ } = _;
-        if (0 == _)
+        if (_ == _._)
           return (0, _.jsx)("div", {
             className: _().CompatibilityDetailRatingSummary,
             children: _
@@ -478,11 +519,11 @@
         let _ = "",
           _ = null;
         switch (_) {
-          case 2:
+          case _._:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
               (_ = _().Compatible);
             break;
-          case 1:
+          case _._:
             (_ = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
               (_ = _().Unsupported);
         }
@@ -512,11 +553,11 @@
       }
       function _(_) {
         switch (_) {
-          case 3:
+          case _._:
             return "#SteamDeckVerified_Category_Verified";
-          case 2:
+          case _._:
             return "#SteamDeckVerified_Category_Playable";
-          case 1:
+          case _._:
             return "#SteamDeckVerified_Category_Unsupported";
           default:
             return "#SteamDeckVerified_Category_Unknown";
@@ -524,9 +565,9 @@
       }
       function _(_) {
         switch (_) {
-          case 2:
+          case _._:
             return "#SteamOSCompatibility_Category_Compatible";
-          case 1:
+          case _._:
             return "#SteamOSCompatibility_Category_Unsupported";
           default:
             return "#SteamOSCompatibility_Category_Unknown";
@@ -539,10 +580,18 @@
         __webpack_require__._(module_exports, {
           default: () => _,
         });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 3;
+      var _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4;
       var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2387,13 +2436,13 @@
           (_.onOptionsButton = _),
           (_ = (0, _.jsx)(_, {
             blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: 1,
+            eHWCompatibiltyDisplay: _._,
           })),
           (_ = (0, _.jsx)(_, {
             blogURL: _.steam_deck_blog_url,
-            eHWCompatibiltyDisplay: 2,
+            eHWCompatibiltyDisplay: _._,
           })));
-        const _ = 2 == _;
+        const _ = _ == _._;
         if (!_.resolved_items?.length) {
           const _ = _
               ? (0, _._)(
@@ -2562,14 +2611,14 @@
           _ =
             _.steamos_resolved_items &&
             -1 !==
-              _.steamos_resolved_items?.findIndex((_) => 1 == _.display_type),
+              _.steamos_resolved_items?.findIndex((_) => _.display_type == _),
           _ = (0, _.jsx)(_._, {
             _: _,
-            category: _.steamos_resolved_category ?? 0,
+            category: _.steamos_resolved_category ?? _._,
             appName: _,
           }),
           _ = (0, _.jsx)(_._, {
-            category: _.steamos_resolved_category ?? 0,
+            category: _.steamos_resolved_category ?? _._,
           }),
           _ = _.steamos_resolved_items && _.steamos_resolved_items?.length > 0;
         return (0, _.jsx)(_, {
@@ -2588,7 +2637,7 @@
                 }),
               _.steamos_resolved_items &&
                 _.steamos_resolved_items
-                  .filter((_) => 1 != _.display_type)
+                  .filter((_) => _.display_type != _)
                   .map((_) =>
                     (0, _.jsxs)(
                       "div",
@@ -2610,7 +2659,7 @@
                 (0, _.jsx)("div", {
                   className: _().CompatibilityNotes,
                   children: _.steamos_resolved_items
-                    ?.filter((_) => 1 == _.display_type)
+                    ?.filter((_) => _.display_type == _)
                     .map((_) =>
                       (0, _.jsxs)(
                         "div",
@@ -2635,7 +2684,7 @@
       }
       function _(_) {
         const { titleId: _, descriptionId: _, results: _, appName: _ } = _,
-          _ = -1 !== _.resolved_items?.findIndex((_) => 1 == _.display_type),
+          _ = -1 !== _.resolved_items?.findIndex((_) => _.display_type == _),
           _ = (0, _.jsx)(_._, {
             _: _,
             category: _.resolved_category,
@@ -2661,7 +2710,7 @@
                 }),
               _.resolved_items &&
                 _.resolved_items
-                  .filter((_) => 1 !== _.display_type)
+                  .filter((_) => _.display_type !== _)
                   .map((_) =>
                     (0, _.jsxs)(
                       "div",
@@ -2684,7 +2733,7 @@
                 (0, _.jsx)("div", {
                   className: _().CompatibilityNotes,
                   children: _.resolved_items
-                    .filter((_) => 1 == _.display_type)
+                    .filter((_) => _.display_type == _)
                     .map((_) =>
                       (0, _.jsx)(
                         "div",
@@ -2709,7 +2758,7 @@
         if (!_) return null;
         if (_) {
           const _ =
-            2 == _
+            _ == _._
               ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog")
               : (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
           return (0, _.jsxs)("div", {
@@ -2727,7 +2776,7 @@
           });
         }
         const _ =
-          2 == _
+          _ == _._
             ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
             : (0, _._)(
                 "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
@@ -2747,23 +2796,23 @@
       function _(_) {
         const { displaytype: _ } = _;
         switch (_) {
-          case 4:
+          case _:
             return (0, _.jsx)(_.o5Q, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 3:
+          case _:
             return (0, _.jsx)(_.aVR, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 2:
+          case _:
             return (0, _.jsx)(_.jIP, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 0:
+          case _:
             return (0, _.jsx)(_.WX$, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 1:
+          case _:
             return (
               "dev" == _._.WEB_UNIVERSE &&
                 console.error(
@@ -2776,11 +2825,11 @@
       function _(_) {
         const { displaytype: _ } = _;
         switch (_) {
-          case 3:
+          case _:
             return (0, _.jsx)(_.ZjT, {
               className: _().CompatibilityDetailsResultIcon,
             });
-          case 1:
+          case _:
             return (0, _.jsx)(_.bcZ, {
               className: _().CompatibilityDetailsResultIcon,
             });

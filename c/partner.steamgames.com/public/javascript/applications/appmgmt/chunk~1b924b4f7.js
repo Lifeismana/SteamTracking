@@ -96,6 +96,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       let _ = null;
@@ -276,7 +278,7 @@
                 }),
               }),
               direction: "up",
-              interactionMode: 2,
+              interactionMode: _._,
               dismissOnClick: !0,
               renderWhenClosed: !1,
               children: (0, _.jsx)(_, {
@@ -380,7 +382,7 @@
           _ = _ || _,
           _ = _ || _ || _,
           _ = !(_ || !_ || (_ && _ == _)),
-          _ = 4 == _?.eState,
+          _ = _?.eState == _._,
           _ = (0, _._)(
             _().PriceCell,
             _ && _().USD,
@@ -467,6 +469,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -498,16 +501,18 @@
           },
           {
             prop: "color",
-            cssProperty: (_, _) => [
+            responsive: !0,
+            cssProperty: (_, _, _) => [
               "--text-color",
-              (0, _._)(_, _.contrast ?? "body"),
+              (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
             ],
           },
           {
             prop: "contrast",
-            cssProperty: (_, _) => [
+            responsive: !0,
+            cssProperty: (_, _, _) => [
               "--text-color",
-              (0, _._)(_.color ?? "text-body", _),
+              (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
             ],
           },
           {
@@ -548,254 +553,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            direction: _,
-            ignoreHorizontal: _,
-            ignoreVertical: _,
-            dismissOnClick: _,
-            interactionMode: _ = 0,
-          } = _,
-          _ = (0, _.useRef)(null),
-          _ = (0, _.useRef)(!1),
-          _ = (0, _.useRef)(!1),
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useMemo)(
-            () =>
-              (function (_) {
-                const [_, _] = (0, _._)(_, "-");
-                return "left" === _ || "right" === _ ? [void 0, _] : [_, _];
-              })(_),
-            [_],
-          ),
-          _ = (0, _.useCallback)(() => {
-            if (!_.current || !_.current) return;
-            const _ = _.current.getBoundingClientRect(),
-              _ = _.current.getBoundingClientRect();
-            let _ = _;
-            const _ = _.current.matches(":dir(rtl)");
-            _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left")),
-              _.current.style.setProperty("--parentWidth", `${_.width}px`),
-              _.current.style.setProperty("--parentHeight", `${_.height}px`);
-            let _ = 0;
-            if (!_) {
-              if (_.width) {
-                if ("left" === _) {
-                  _ = (_ ? _.right : _.left) - _.width;
-                }
-                if ("right" === _) {
-                  const _ = _ ? _.left : _.right;
-                  _ = document.documentElement.clientWidth - (_ + _.width);
-                }
-                void 0 === _ &&
-                  (_ = _
-                    ? _.right - _.width
-                    : document.documentElement.clientWidth -
-                      (_.left + _.width)),
-                  (_ = Math.min(_, 0));
-              }
-              "left" === _
-                ? _
-                  ? ((_.current.style.left = "unset"),
-                    (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
-                  : ((_.current.style.left = "unset"),
-                    (_.current.style.right = `${document.documentElement.clientWidth - _.left + _}px`))
-                : "right" === _
-                  ? _
-                    ? ((_.current.style.left = `${_.left + _}px`),
-                      (_.current.style.right = "unset"))
-                    : ((_.current.style.left = `${_.right + _}px`),
-                      (_.current.style.right = "unset"))
-                  : void 0 === _ &&
-                    (_
-                      ? ((_.current.style.left = "unset"),
-                        (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
-                      : ((_.current.style.left = `${_.left + _}px`),
-                        (_.current.style.right = "unset")));
-            }
-            _ ||
-              ("down" === _
-                ? ((_.current.style.top = `${_.bottom}px`),
-                  (_.current.style.bottom = "unset"),
-                  _.current.style.setProperty(
-                    "--availableHeight",
-                    document.documentElement.clientHeight - _.bottom + "px",
-                  ))
-                : "up" === _
-                  ? ((_.current.style.top = "unset"),
-                    (_.current.style.bottom =
-                      document.documentElement.clientHeight - _.top + "px"),
-                    _.current.style.setProperty(
-                      "--availableHeight",
-                      `${_.top}px`,
-                    ))
-                  : void 0 === _ &&
-                    ((_.current.style.top = `${_.top}px`),
-                    (_.current.style.bottom = "unset"),
-                    _.current.style.setProperty(
-                      "--availableHeight",
-                      document.documentElement.clientHeight - _.top + "px",
-                    )));
-          }, [_, _, _, _]),
-          _ = (0, _.useMemo)(() => {
-            if (_.current) return (0, _._)(_.current);
-          }, [_.current]);
-        (0, _.useEffect)(
-          () =>
-            _
-              ? (_.current?.showPopover(),
-                _(),
-                _?.addEventListener("scroll", _),
-                window.addEventListener("scroll", _),
-                () => {
-                  _?.removeEventListener("scroll", _),
-                    window.addEventListener("scroll", _);
-                })
-              : ("true" !=
-                  window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
-                  _.current?.hidePopover(),
-                () => {}),
-          [_, _, _],
-        );
-        const _ = (0, _.useCallback)(() => {
-            _(), _(!0), (_.current = !0);
-          }, [_]),
-          _ = (0, _.useCallback)(() => {
-            (_.current = !1), _.current || _(!1);
-          }, []),
-          _ = (0, _.useCallback)(() => {
-            (_.current = !0), _(!0);
-          }, []),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) && _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) && _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(() => {
-            (_.current = !1), _.current || _(!1);
-          }, []),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) && _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(() => {
-            _(), _();
-          }, [_, _]),
-          _ = (0, _.useCallback)(
-            (_) => {
-              "Enter" === _.key && (_.preventDefault(), _ ? _() : _());
-            },
-            [_, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.currentTarget.contains(_.relatedTarget) ||
-                _.current?.contains(_.relatedTarget) ||
-                _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              2 === _ && _();
-            },
-            [_, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              const _ =
-                  _.relatedTarget && !_.currentTarget.contains(_.relatedTarget),
-                _ = !_.relatedTarget && !_.current;
-              (_ || _) && (_(), _(!1));
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) &&
-                (_ && _ ? _() : _.current && _());
-            },
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) &&
-                ("Enter" === _.key && _ && _ ? _() : _(),
-                "Escape" === _.key && _ && (_(), _.stopPropagation()));
-            },
-            [_, _, _, _],
-          );
-        let _;
-        0 !== _ || _
-          ? 1 === _ && (_ = _ ? _ : _)
-          : (_ = (_) => {
-              _.preventDefault(), _();
-            });
-        const _ = {
-            "aria-expanded": _,
-            role: "button",
-            onMouseEnter: 0 === _ ? _ : void 0,
-            onMouseLeave: 0 === _ ? _ : void 0,
-            onClick: _,
-            ref: _,
-            onKeyDown: _,
-            onFocus: _,
-            onBlur: _,
-          },
-          _ = {
-            popover: "manual",
-            ref: _,
-            onMouseEnter: _,
-            onMouseLeave: _,
-            onFocus: _,
-            onBlur: _,
-            onClick: _,
-            onKeyDown: _,
-            className: _.PopoverMenu,
-          };
-        return (
-          (0, _.useImperativeHandle)(
-            _.ref,
-            () => ({
-              show: _,
-              hide: _,
-              close: _,
-            }),
-            [_, _, _],
-          ),
-          {
-            isShowingMenu: _,
-            triggerProps: _,
-            menuProps: _,
-            closeMenu: _,
-          }
-        );
-      }
-      !(async function () {
-        if (
-          "undefined" == typeof HTMLElement ||
-          "object" != typeof HTMLElement.prototype ||
-          !("popover" in HTMLElement.prototype)
-        ) {
-          (
-            await __webpack_require__
-              ._("chunkid")
-              .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
-          ).apply();
-        }
-      })();
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (_) => {
           _?.(_), _?.(_);
@@ -804,7 +561,7 @@
       function _(_) {
         const {
             direction: _,
-            interactionMode: _ = 0,
+            interactionMode: _ = _._,
             ignoreHorizontal: _,
             ignoreVertical: _,
             dismissOnClick: _,
@@ -819,7 +576,7 @@
             triggerProps: _,
             menuProps: _,
             closeMenu: _,
-          } = _(_),
+          } = (0, _._)(_),
           _ = _.useRef(null),
           _ = _.useRef(null);
         return (
@@ -1233,6 +990,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1279,7 +1037,7 @@
         return (0, _.jsx)(_._, {
           menuTarget: _,
           direction: "down",
-          interactionMode: 1,
+          interactionMode: _._,
           ref: _,
           children: (0, _.jsx)(_, {
             onSelect: () => _.current?.close(),
@@ -1337,7 +1095,7 @@
                         [_().GridElement]: !0,
                         [_().CurrentPrice]: _ == _,
                       }),
-                      children: (0, _._)(_, _._.k_ECurrencyCodeUSD),
+                      children: (0, _._)(_, _._),
                     },
                     _,
                   ),
@@ -1418,6 +1176,269 @@
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(async function () {
+        if (
+          "undefined" == typeof HTMLElement ||
+          "object" != typeof HTMLElement.prototype ||
+          !("popover" in HTMLElement.prototype)
+        ) {
+          (
+            await __webpack_require__
+              ._("chunkid")
+              .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+          ).apply();
+        }
+      })();
+      const _ = 0,
+        _ = 1,
+        _ = 2;
+      function _(_) {
+        const {
+            direction: _,
+            ignoreHorizontal: _,
+            ignoreVertical: _,
+            dismissOnClick: _,
+            interactionMode: _ = _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useRef)(!1),
+          _ = (0, _.useRef)(!1),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useMemo)(
+            () =>
+              (function (_) {
+                const [_, _] = (0, _._)(_, "-");
+                return "left" === _ || "right" === _ ? [void 0, _] : [_, _];
+              })(_),
+            [_],
+          ),
+          _ = (0, _.useCallback)(() => {
+            if (!_.current || !_.current) return;
+            const _ = _.current.getBoundingClientRect(),
+              _ = _.current.getBoundingClientRect();
+            let _ = _;
+            const _ = _.current.matches(":dir(rtl)");
+            _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left")),
+              _.current.style.setProperty("--parentWidth", `${_.width}px`),
+              _.current.style.setProperty("--parentHeight", `${_.height}px`);
+            let _ = 0;
+            if (!_) {
+              if (_.width) {
+                if ("left" === _) {
+                  _ = (_ ? _.right : _.left) - _.width;
+                }
+                if ("right" === _) {
+                  const _ = _ ? _.left : _.right;
+                  _ = document.documentElement.clientWidth - (_ + _.width);
+                }
+                void 0 === _ &&
+                  (_ = _
+                    ? _.right - _.width
+                    : document.documentElement.clientWidth -
+                      (_.left + _.width)),
+                  (_ = Math.min(_, 0));
+              }
+              "left" === _
+                ? _
+                  ? ((_.current.style.left = "unset"),
+                    (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                  : ((_.current.style.left = "unset"),
+                    (_.current.style.right = `${document.documentElement.clientWidth - _.left + _}px`))
+                : "right" === _
+                  ? _
+                    ? ((_.current.style.left = `${_.left + _}px`),
+                      (_.current.style.right = "unset"))
+                    : ((_.current.style.left = `${_.right + _}px`),
+                      (_.current.style.right = "unset"))
+                  : void 0 === _ &&
+                    (_
+                      ? ((_.current.style.left = "unset"),
+                        (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                      : ((_.current.style.left = `${_.left + _}px`),
+                        (_.current.style.right = "unset")));
+            }
+            _ ||
+              ("down" === _
+                ? ((_.current.style.top = `${_.bottom}px`),
+                  (_.current.style.bottom = "unset"),
+                  _.current.style.setProperty(
+                    "--availableHeight",
+                    document.documentElement.clientHeight - _.bottom + "px",
+                  ))
+                : "up" === _
+                  ? ((_.current.style.top = "unset"),
+                    (_.current.style.bottom =
+                      document.documentElement.clientHeight - _.top + "px"),
+                    _.current.style.setProperty(
+                      "--availableHeight",
+                      `${_.top}px`,
+                    ))
+                  : void 0 === _ &&
+                    ((_.current.style.top = `${_.top}px`),
+                    (_.current.style.bottom = "unset"),
+                    _.current.style.setProperty(
+                      "--availableHeight",
+                      document.documentElement.clientHeight - _.top + "px",
+                    )));
+          }, [_, _, _, _]),
+          _ = (0, _.useMemo)(() => {
+            if (_.current) return (0, _._)(_.current);
+          }, [_.current]);
+        (0, _.useEffect)(
+          () =>
+            _
+              ? (_.current?.showPopover(),
+                _(),
+                _?.addEventListener("scroll", _),
+                window.addEventListener("scroll", _),
+                () => {
+                  _?.removeEventListener("scroll", _),
+                    window.addEventListener("scroll", _);
+                })
+              : ("true" !=
+                  window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
+                  _.current?.hidePopover(),
+                () => {}),
+          [_, _, _],
+        );
+        const _ = (0, _.useCallback)(() => {
+            _(), _(!0), (_.current = !0);
+          }, [_]),
+          _ = (0, _.useCallback)(() => {
+            (_.current = !1), _.current || _(!1);
+          }, []),
+          _ = (0, _.useCallback)(() => {
+            (_.current = !0), _(!0);
+          }, []),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) && _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) && _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(() => {
+            (_.current = !1), _.current || _(!1);
+          }, []),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) && _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(() => {
+            _(), _();
+          }, [_, _]),
+          _ = (0, _.useCallback)(
+            (_) => {
+              "Enter" === _.key && (_.preventDefault(), _ ? _() : _());
+            },
+            [_, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.currentTarget.contains(_.relatedTarget) ||
+                _.current?.contains(_.relatedTarget) ||
+                _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _ === _ && _();
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ =
+                  _.relatedTarget && !_.currentTarget.contains(_.relatedTarget),
+                _ = !_.relatedTarget && !_.current;
+              (_ || _) && (_(), _(!1));
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) &&
+                (_ && _ ? _() : _.current && _());
+            },
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) &&
+                ("Enter" === _.key && _ && _ ? _() : _(),
+                "Escape" === _.key && _ && (_(), _.stopPropagation()));
+            },
+            [_, _, _, _],
+          );
+        let _;
+        _ !== _ || _
+          ? _ === _ && (_ = _ ? _ : _)
+          : (_ = (_) => {
+              _.preventDefault(), _();
+            });
+        const _ = {
+            "aria-expanded": _,
+            role: "button",
+            onMouseEnter: _ === _ ? _ : void 0,
+            onMouseLeave: _ === _ ? _ : void 0,
+            onClick: _,
+            ref: _,
+            onKeyDown: _,
+            onFocus: _,
+            onBlur: _,
+          },
+          _ = {
+            popover: "manual",
+            ref: _,
+            onMouseEnter: _,
+            onMouseLeave: _,
+            onFocus: _,
+            onBlur: _,
+            onClick: _,
+            onKeyDown: _,
+            className: _.PopoverMenu,
+          };
+        return (
+          (0, _.useImperativeHandle)(
+            _.ref,
+            () => ({
+              show: _,
+              hide: _,
+              close: _,
+            }),
+            [_, _, _],
+          ),
+          {
+            isShowingMenu: _,
+            triggerProps: _,
+            menuProps: _,
+            closeMenu: _,
+          }
+        );
+      }
     },
   },
 ]);

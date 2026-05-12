@@ -345,6 +345,182 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        let { bShowOnlyInitialEvent: _ } = _;
+        const _ = (0, _._)();
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_, {
+            ..._,
+            bShowOnlyInitialEvent: _ || _,
+          }),
+        });
+      };
+      let _ = class extends _.Component {
+        state = {
+          bLoading: !1,
+          eventModel: this.props.eventModel,
+        };
+        m_refParent = _.createRef();
+        m_cancelSignal = _().CancelToken.source();
+        componentDidMount() {
+          this.state.eventModel ||
+            this.setState(
+              {
+                bLoading: !0,
+              },
+              this.LoadEvent,
+            );
+          let _ = this.GetBodyElement();
+          _ &&
+            this.props.bPrimaryPageFeature &&
+            _.classList.add(_.BodyNoScroll);
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel("EventInfiniteScrollModal unmounting");
+          let _ = this.GetBodyElement();
+          _ &&
+            this.props.bPrimaryPageFeature &&
+            _.classList.remove(_.BodyNoScroll);
+        }
+        GetBodyElement() {
+          return this.m_refParent.current
+            ? this.m_refParent.current.closest("body")
+            : null;
+        }
+        async LoadEvent() {
+          const {
+            appid: _,
+            clanSteamID: _,
+            announcementGID: _,
+            partnerEventStore: _,
+            additionalParams: _,
+          } = this.props;
+          _.LoadAdjacentPartnerEventsByAnnouncement(
+            _,
+            _,
+            _,
+            0,
+            3,
+            _,
+            this.m_cancelSignal,
+          )
+            .then((_) => {
+              _.length > 0
+                ? this.setState(
+                    {
+                      bLoading: !1,
+                      eventModel: _[0],
+                    },
+                    this.HandleReadEvent,
+                  )
+                : (this.props.onEventNotFound && this.props.onEventNotFound(),
+                  this.setState({
+                    bLoading: !1,
+                  }));
+            })
+            .catch((_) => {
+              let _ = (0, _._)(_);
+              console.error(
+                "EventInfiniteScrollModal failed " + _.strErrorMsg,
+                _,
+              ),
+                this.setState({
+                  bLoading: !1,
+                });
+            });
+        }
+        async HandleReadEvent() {
+          const { eventModel: _ } = this.state,
+            { trackingLocation: _ } = this.props;
+          _ &&
+            _.BIsPartnerEvent() &&
+            _._.Get()
+              .GetTracker()
+              .MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
+            _._.Get().GetTracker().Flush();
+        }
+        render() {
+          const { bShowOnlyInitialEvent: _ } = this.props,
+            { bLoading: _, eventModel: _ } = this.state;
+          if (_)
+            return (0, _.jsx)(_._, {
+              active: !0,
+              children: (0, _.jsx)("div", {
+                className: _().FlexCenter,
+                style: {
+                  height: "400px",
+                },
+                children: (0, _.jsx)(_._, {}),
+              }),
+            });
+          const {
+            closeModal: _,
+            appid: _,
+            clanSteamID: _,
+            className: _,
+            partnerEventStore: _,
+            showAppHeader: _,
+            bPrimaryPageFeature: _,
+            additionalParams: _,
+            eventClassName: _,
+          } = this.props;
+          let _;
+          _._.IN_CLIENT &&
+            _?.appid &&
+            (_._.Get().HintLoad(),
+            _._.Get().BOwnsApp(_.appid) &&
+              (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
+          const _ = (0, _.jsx)(_._, {
+            initialEvent: _,
+            appid: _,
+            clanSteamID: _,
+            partnerEventStore: _,
+            emoticonStore: _._,
+            closeModal: !_ && _,
+            showAppHeader: _,
+            bShowOnlyInitialEvent: _,
+            additionalParams: _,
+            eventClassName: _,
+            onAppIconClick: _,
+          });
+          return _
+            ? _
+            : (0, _.jsx)(_._, {
+                active: !0,
+                children: (0, _.jsx)("div", {
+                  className: _,
+                  children: _,
+                }),
+              });
+        }
+      };
+      _ = (0, _._)([_._], _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -464,12 +640,164 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const {
+            clanAccountID: _,
+            gidAnnouncement: _,
+            partnerEventStore: _,
+            trackingLocation: _,
+            bViewAllShowInfiniteScroll: _,
+          } = _,
+          _ = _._.InitFromClanID(_),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)(!0),
+          [_, _] = (0, _.useState)(!1);
+        if (
+          ((0, _.useEffect)(
+            () => (
+              (async () => {
+                _.current && _.current("PartnerEventRow Initializng new mount");
+                const _ = _().CancelToken.source();
+                _.current = _.cancel;
+                const _ = _._.InitFromClanID(_);
+                await _._.LoadClanInfoForClanSteamID(_);
+                let _ = await _.LoadAdjacentPartnerEventsByAnnouncement(
+                  _,
+                  _,
+                  null,
+                  4,
+                  4,
+                  {
+                    only_summaries: !0,
+                  },
+                  _,
+                );
+                if (!_.token.reason) {
+                  _ = _ || [];
+                  let _ = _.filter((_) => _.GetAnnouncementGID() != _).map(
+                    (_) => _.AnnouncementGID,
+                  );
+                  _._(_);
+                  const _ = _.slice(0, 3)
+                    .map((_) => _.GetClanEventFromAnnouncementGID(_))
+                    .filter((_) => !!_);
+                  if ((_(_), _(!1), _)) {
+                    let _ = _._.Get().GetTracker(),
+                      _ = !1;
+                    if (_.BHasClanAnnouncementGID(_)) {
+                      let _ = _.GetClanEventFromAnnouncementGID(_);
+                      _ &&
+                        _.BIsPartnerEvent() &&
+                        _.BIsVisibleEvent() &&
+                        (_.MarkEventRead(
+                          _.GID,
+                          _.clanSteamID.GetAccountID(),
+                          _,
+                        ),
+                        (_ = !0));
+                    }
+                    _.length > 0 &&
+                      (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
+                        _.MarkEventShown(
+                          _.GID,
+                          _.clanSteamID.GetAccountID(),
+                          _,
+                        ),
+                      ),
+                      (_ = !0)),
+                      _ && _.Flush();
+                  }
+                }
+              })(),
+              () => {
+                _.current && _.current("PartnerEventRow: unmounting");
+              }
+            ),
+            [_, _, _, _],
+          ),
+          _)
+        )
+          return (0, _.jsx)(_._, {
+            position: "center",
+            size: "medium",
+          });
+        if (0 == _.length) return (0, _.jsx)("div", {});
+        const _ = _._.GetClanInfoByClanAccountID(_);
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            className: (0, _._)(_().OtherEventsCtn, "OtherEventsCtn"),
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().EventSectionTitleCtn,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: (0, _._)(
+                      _().EventSectionTitle,
+                      "EventSectionTitle",
+                    ),
+                    children: [
+                      (0, _._)("#EventBrowse_MoreEventsTitle", _.group_name),
+                      " ",
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().EventSectionSpacer,
+                    children: " ",
+                  }),
+                  _
+                    ? (0, _.jsx)("div", {
+                        className: _().EventSectionMoreBtn,
+                        onClick: () => _(!0),
+                        children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                      })
+                    : (0, _.jsx)(_._, {
+                        eventModel: _[0],
+                        route: _._.k_eViewWebSiteHub,
+                        className: _().EventSectionMoreBtn,
+                        children: (0, _._)("#EventBrowse_MoreEventsBtn"),
+                      }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                className: _().OtherEvents,
+                "flow-children": "column",
+                navEntryPreferPosition: _._.PREFERRED_CHILD,
+                children: _.map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      event: _,
+                    },
+                    _.AnnouncementGID,
+                  ),
+                ),
+              }),
+              Boolean(_) &&
+                (0, _.jsx)(_._, {
+                  appid: _[0].appid,
+                  clanSteamID: _,
+                  announcementGID: _[0].AnnouncementGID,
+                  closeModal: () => _(!1),
+                  partnerEventStore: _,
+                }),
+            ],
+          }),
+        });
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -511,7 +839,8 @@
                     );
                     _ = _ && _.group_name;
                   }
-                  const _ = _ && _.GetNameWithFallback((0, _._)(_._.LANGUAGE));
+                  const _ =
+                    _ && _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE));
                   if (_ && _ && _) {
                     const _ = (0, _._)(
                       "#EventCalendar_TabTitle_GroupNameAndEventDetail",
@@ -553,7 +882,7 @@
             }, [_, _, _, _, _]);
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative");
           if (_ || !_ || (_?.appid && !_)) {
-            const _ = "lang_" + (0, _._)((0, _._)(_._.LANGUAGE)),
+            const _ = "lang_" + (0, _.wwZ)((0, _.sfN)(_._.LANGUAGE)),
               _ = "";
             return (0, _.jsxs)("div", {
               className: (0, _._)(
@@ -590,7 +919,7 @@
                         position: "center",
                       }),
                   postbody: Boolean(_ && _)
-                    ? (0, _.jsx)(_._, {
+                    ? (0, _.jsx)(_, {
                         clanAccountID: _.GetAccountID(),
                         partnerEventStore: _,
                       })
@@ -603,7 +932,7 @@
             ? (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
                   appid: _.appid,
-                  trackingLocation: 7,
+                  trackingLocation: _._._,
                   announcementGID: _.GetAnnouncementGID(),
                   partnerEventStore: _,
                   eventModel: _,
@@ -613,7 +942,7 @@
               })
             : (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
-                  lang: (0, _._)(_._.LANGUAGE),
+                  lang: (0, _.sfN)(_._.LANGUAGE),
                   partnerEventStore: _,
                   event: _,
                   adminPanel:
@@ -625,7 +954,7 @@
                           eventModel: _,
                           partnerEventStore: _,
                         }),
-                  otherEventRow: (0, _.jsx)(_._, {
+                  otherEventRow: (0, _.jsx)(_, {
                     clanAccountID: _.clanSteamID.GetAccountID(),
                     gidAnnouncement: _.AnnouncementGID,
                     partnerEventStore: _,
@@ -1182,7 +1511,7 @@
                 className: _().LanguageHeader,
                 children: (0, _._)(
                   "#EventCurator_BrowseDialog_LangCurator",
-                  (0, _._)("#Language_" + (0, _._)(_.lang)),
+                  (0, _._)("#Language_" + (0, _.LgB)(_.lang)),
                 ),
               }),
               _,
@@ -1259,7 +1588,7 @@
                       onEventNotFound: _,
                       appid: 0,
                       clanSteamID: _.clanInfo.clanSteamID,
-                      trackingLocation: 8,
+                      trackingLocation: _._._,
                       eventModel: void 0,
                       announcementGID: void 0,
                       partnerEventStore: _._,
@@ -2611,7 +2940,7 @@
             }
           }, [_.clanInfo]);
         const _ = _._.Get(),
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = "capsule",
           [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.has_live_stream,
@@ -2627,7 +2956,7 @@
             _.GetSummaryWithFallback(_),
           ]),
           [_, _] = _.useState(() =>
-            (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+            (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
           ),
           _ = (0, _._)(),
           _ = (0, _._)(() =>
@@ -2641,10 +2970,10 @@
               const { video_preview_type: _, video_preview_id: _, type: _ } = _,
                 _ = _.appid;
               if (!_) return null;
-              if (12 === _) return null;
+              if (_ === _.Fwr) return null;
               if ("youtube" === _) {
-                const _ = (0, _._)(_._.LANGUAGE),
-                  _ = (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+                const _ = (0, _.sfN)(_._.LANGUAGE),
+                  _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
                   _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
                 if ("carousel" === _)
                   return (0, _.jsx)(_._, {
@@ -2699,13 +3028,14 @@
             strCapsuleImgURLForBackground: _,
             fnSetCoverSize: _,
           }),
-          _ = _ && 14 != _ && !(_ && "carousel" !== _),
+          _ = _ && "carousel" !== _,
+          _ = _ && _ != _.zeJ && !_,
           _ = _ && _,
           _ = !_ && _,
           _ = "wide" !== _ || _,
           _ =
-            28 !== _ &&
-            12 !== _ &&
+            _ !== _.uYK &&
+            _ !== _.Fwr &&
             _._.GetTimeNowWithOverride() < _ &&
             (0, _.jsx)("div", {
               className: (0, _._)(_().ReminderContainer, _ && _().OnlyIcon),
@@ -2717,7 +3047,7 @@
                 bExpandLeft: _,
               }),
             }),
-          _ = Boolean(12 !== _ && _),
+          _ = Boolean(_ !== _.Fwr && _),
           _ = Boolean(
             _ &&
               (!_ ||
@@ -2746,7 +3076,7 @@
                     _.preventDefault();
                 },
                 children: [
-                  14 === _ &&
+                  _ === _.zeJ &&
                     (0, _.jsx)("div", {
                       className: (0, _._)(
                         _().TileBackgroundImage,
@@ -2763,7 +3093,7 @@
                       (0, _.jsxs)("div", {
                         className: _().TileTextContainer,
                         children: [
-                          Boolean(12 == _) &&
+                          Boolean(_ == _.Fwr) &&
                             (0, _.jsx)("div", {
                               className: _().PatchIconCtn,
                               children: (0, _.jsx)(_.vjL, {}),
@@ -2847,7 +3177,7 @@
             strCapsuleImgURLForBackground: _,
             fnSetCoverSize: _,
           } = _,
-          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _.sfN)(_._.LANGUAGE),
           _ = !_ && "upcoming" !== _,
           [_, _, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetEventType(),
@@ -2877,7 +3207,7 @@
               _ &&
                 (0, _.jsxs)(_.Fragment, {
                   children: [
-                    12 === _ &&
+                    _ === _.Fwr &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("div", {
@@ -2899,7 +3229,7 @@
                           }),
                         ],
                       }),
-                    12 !== _ &&
+                    _ !== _.Fwr &&
                       (0, _.jsxs)("div", {
                         className: (0, _._)({
                           [_().EventCapsuleCtn]: !0,
@@ -3282,12 +3612,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = "SteamNewsHub_SuggestCuratorsDismissed";
       function _() {
         const _ = _._.GetELanguageFallbackOrder();
-        void 0 === _.find((_) => 0 === _) && _.push(0);
+        void 0 === _.find((_) => _ === _.Bhc) && _.push(_.Bhc);
         const _ = new Array();
         for (const _ of _) {
           const _ = _.Get().GetCuratorsForLang(_);
@@ -3981,7 +4310,7 @@
                   _ = _ && _._.GetClanInfoByClanAccountID(_);
                 _ = _ && _.group_name;
               }
-              _ = _ && _.GetNameWithFallback((0, _._)(_._.LANGUAGE));
+              _ = _ && _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE));
             }
           }
           let _ = (0, _._)("#EventCalendar_TabTitle_Global");
@@ -4096,7 +4425,7 @@
             ? (await __webpack_require__.RegisterCalendarEventsAndModels(_),
               (_.m_bInitialLoad = !1))
             : await __webpack_require__.RegisterCalendarEventsAndModels({
-                success: 1,
+                success: _._,
               }),
             __webpack_require__.BIsSingleSourceCalendar() &&
               (__webpack_require__.BIsSingleAppCalendar()
@@ -4159,7 +4488,7 @@
                 });
         }
         async OnEventClicked(_) {
-          _._.Get().RecordEventRead(_, 8);
+          _._.Get().RecordEventRead(_, _._._);
           const _ =
               this.state.nSteamNavHeaderHeight +
               this.state.nHubBannerHeight +
@@ -4231,7 +4560,7 @@
                   children: this.state.modalEvent
                     ? (0, _.jsx)(_._, {
                         appid: this.state.modalEvent.appid,
-                        trackingLocation: 8,
+                        trackingLocation: _._._,
                         announcementGID:
                           this.state.modalEvent.GetAnnouncementGID(),
                         partnerEventStore: _._,
@@ -4331,7 +4660,7 @@
             _.BIsSingleGroupCalendar() ? _.GetSingleGroupID() : void 0,
           ]),
           [_, _] = _.useState(!1),
-          _ = (0, _._)(_._.LANGUAGE);
+          _ = (0, _.sfN)(_._.LANGUAGE);
         if (
           (_.useEffect(() => {
             if (_ && _ && !_._.GetClanEventModel(_)) {
@@ -4377,7 +4706,7 @@
             if (!_) return null;
             let _ = _._.GetClanEventModel(_);
             if (!_) return null;
-            let _ = (0, _._)(_._.LANGUAGE);
+            let _ = (0, _.sfN)(_._.LANGUAGE);
             return (0, _.jsx)(_, {
               largeHeader: _,
               titleToken: __webpack_require__.GetNameWithFallback(_),

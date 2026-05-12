@@ -85,99 +85,100 @@
     },
     8893: (e, a, t) => {
       "use strict";
-      t.d(a, { G: () => _ });
+      t.d(a, { G: () => h });
       var r = t(7850),
-        s = t(74812),
-        i = t(90626),
-        n = t(18654),
-        c = t.n(n),
-        l = t(26296),
-        o = t(52038),
-        u = t(78327),
-        d = t(90717),
-        p = t(83164),
-        m = t.n(p);
-      function _(e) {
-        const { id: a, bPreferLibrary: t, bPreferAssetWithoutOverride: n } = e,
-          { storeItemDefaultInfo: p, storeItemAsset: _ } = (0, s.q)(
+        s = t(96171),
+        i = t(74812),
+        n = t(90626),
+        c = t(18654),
+        l = t.n(c),
+        o = t(26296),
+        u = t(52038),
+        d = t(78327),
+        p = t(90717),
+        m = t(83164),
+        _ = t.n(m);
+      function h(e) {
+        const { id: a, bPreferLibrary: t, bPreferAssetWithoutOverride: c } = e,
+          { storeItemDefaultInfo: m, storeItemAsset: h } = (0, i.q)(
             a,
             "vertical",
-            n,
+            c,
           ),
-          [h, A] = i.useState(0);
-        if (!p || !_)
+          [A, b] = n.useState(0);
+        if (!m || !h)
           return (0, r.jsx)("div", {
-            className: c().HeroCapsuleImageContainer,
+            className: l().HeroCapsuleImageContainer,
           });
-        const { strStoreVerticalURL: b, strLibraryVerticalURL: g } = (0, d.M)(
-          _,
-          p,
+        const { strStoreVerticalURL: g, strLibraryVerticalURL: y } = (0, p.M)(
+          h,
+          m,
         );
-        if (b && (!t || !g))
+        if (g && (!t || !y))
           return (0, r.jsxs)("div", {
-            className: (0, o.A)(
-              c().HeroCapsuleImageContainer,
+            className: (0, u.A)(
+              l().HeroCapsuleImageContainer,
               "HeroCapsuleImageContainer",
             ),
             children: [
               (0, r.jsx)("img", {
-                src: b,
-                className: c().CapsuleImage,
-                alt: p.name,
+                src: g,
+                className: l().CapsuleImage,
+                alt: m.name,
               }),
-              Boolean(4 == p.type) &&
+              Boolean(m.type == s.uE._i) &&
                 (0, r.jsx)("img", {
-                  className: m().CornerSash,
-                  src: `${u.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
+                  className: _().CornerSash,
+                  src: `${d.TS.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
                   alt: "DLC",
                 }),
             ],
           });
-        if (g)
+        if (y)
           return (0, r.jsxs)("div", {
-            className: (0, o.A)(
-              c().LibraryFallbackAssetImageContainer,
-              c().VerticalCapsule,
-              t ? c().ForceLibrarySizing : "",
+            className: (0, u.A)(
+              l().LibraryFallbackAssetImageContainer,
+              l().VerticalCapsule,
+              t ? l().ForceLibrarySizing : "",
             ),
             children: [
               (0, r.jsx)("div", {
-                className: c().FallbackBackground,
-                style: { backgroundImage: `url(${g})` },
+                className: l().FallbackBackground,
+                style: { backgroundImage: `url(${y})` },
               }),
               (0, r.jsx)("img", {
-                src: g,
-                className: c().CapsuleImage,
-                alt: p.name,
+                src: y,
+                className: l().CapsuleImage,
+                alt: m.name,
               }),
             ],
           });
-        const y = (0, d.N)(_, !0),
-          f = y.length - 1,
-          v = (e) => {
-            const a = y.indexOf(e);
-            a >= f && a < y.length - 1 && A(a + 1);
+        const f = (0, p.N)(h, !0),
+          v = f.length - 1,
+          I = (e) => {
+            const a = f.indexOf(e);
+            a >= v && a < f.length - 1 && b(a + 1);
           };
-        if (h < y.length) {
-          const e = y[h];
+        if (A < f.length) {
+          const e = f[A];
           return (0, r.jsxs)("div", {
-            className: c().LibraryFallbackAssetImageContainer,
+            className: l().LibraryFallbackAssetImageContainer,
             children: [
               (0, r.jsx)("div", {
-                className: c().FallbackBackground,
+                className: l().FallbackBackground,
                 style: { backgroundImage: `url(${e})` },
               }),
-              (0, r.jsx)(l.o, {
+              (0, r.jsx)(o.o, {
                 lazyLoad: !0,
-                srcs: y,
-                className: c().CapsuleImage,
-                alt: p.name,
-                onImageError: v,
+                srcs: f,
+                className: l().CapsuleImage,
+                alt: m.name,
+                onImageError: I,
               }),
             ],
           });
         }
-        return (0, r.jsx)("div", { className: c().HeroCapsuleImageContainer });
+        return (0, r.jsx)("div", { className: l().HeroCapsuleImageContainer });
       }
     },
     94191: (e, a, t) => {
@@ -319,15 +320,16 @@
     },
     74812: (e, a, t) => {
       "use strict";
-      t.d(a, { q: () => i });
+      t.d(a, { q: () => n });
       var r = t(81393),
-        s = t(39777);
-      function i(e, a, t = !1) {
-        const { data: i } = (0, s.J$)(e),
-          { data: n } = (0, s.lv)(e, t);
-        let c;
-        i &&
-          1 == i.included_appids?.length &&
+        s = t(96171),
+        i = t(39777);
+      function n(e, a, t = !1) {
+        const { data: n } = (0, i.J$)(e),
+          { data: c } = (0, i.lv)(e, t);
+        let l;
+        n &&
+          1 == n.included_appids?.length &&
           !(function (e, a) {
             if (!e) return !1;
             switch (a) {
@@ -341,14 +343,14 @@
               default:
                 return (0, r.z_)(a, `Unhandled imageType: ${a}`), !1;
             }
-          })(n, a) &&
-          i.item_type &&
-          [1, 2].includes(i.item_type) &&
-          (c = { appid: i.included_appids[0] });
-        const { data: l } = (0, s.J$)(c),
-          { data: o } = (0, s.lv)(c, t),
-          u = l?.visible ? l : i;
-        return { storeItemAsset: l?.visible ? o : n, storeItemDefaultInfo: u };
+          })(c, a) &&
+          n.item_type &&
+          [s.c6.RD, s.c6.xO].includes(n.item_type) &&
+          (l = { appid: n.included_appids[0] });
+        const { data: o } = (0, i.J$)(l),
+          { data: u } = (0, i.lv)(l, t),
+          d = o?.visible ? o : n;
+        return { storeItemAsset: o?.visible ? u : c, storeItemDefaultInfo: d };
       }
     },
     75515: (e, a, t) => {
@@ -465,63 +467,70 @@
     },
     70300: (e, a, t) => {
       "use strict";
-      t.d(a, { nz: () => i, oj: () => n });
+      t.d(a, { nz: () => n, oj: () => c });
       var r = t(7850),
-        s = t(84518);
-      function i(e) {
-        return 2 == e ? "bundle" : 1 == e ? "sub" : "app";
+        s = t(96171),
+        i = t(84518);
+      function n(e) {
+        return e == s.c6.xO
+          ? "bundle"
+          : e == s.c6.RD
+            ? "sub"
+            : (s.c6.qI, "app");
       }
-      const n = (e) => {
+      const c = (e) => {
         const { appid: a } = e,
           t = (0, r.jsx)("div", {
             className: "ImpressionTrackedElement",
             children: e.children,
           });
-        return a ? (0, r.jsx)(s.A, { appID: a, children: t }) : t;
+        return a ? (0, r.jsx)(i.A, { appID: a, children: t }) : t;
       };
     },
     54492: (e, a, t) => {
       "use strict";
-      t.d(a, { J: () => o });
+      t.d(a, { J: () => d });
       var r = t(7850),
-        s = t(39777),
-        i = t(91822),
-        n = t(52038),
-        c = t(78327),
-        l = t(58855);
-      function o(e) {
+        s = t(72737),
+        i = t(34104),
+        n = t(39777),
+        c = t(91822),
+        l = t(52038),
+        o = t(78327),
+        u = t(58855);
+      function d(e) {
         const { bAllowOutsideOfDeck: a } = e;
-        return (0, c.Qn)() || a ? (0, r.jsx)(u, { ...e }) : null;
+        return (0, o.Qn)() || a ? (0, r.jsx)(p, { ...e }) : null;
       }
-      function u(e) {
+      function p(e) {
         const { className: a, id: t } = e,
-          c = (0, s.qI)(t),
-          [o, u] = (0, i.FD)();
-        let d = "unknown";
-        if (2 == u)
-          switch (c.data?.steam_os_compat_category) {
-            case 2:
-              d = "steamoscompatible";
+          o = (0, n.qI)(t),
+          [d, p] = (0, c.FD)();
+        let m = "unknown";
+        if (p == c.H1)
+          switch (o.data?.steam_os_compat_category) {
+            case s.Hi:
+              m = "steamoscompatible";
               break;
-            case 1:
-              d = "steamosunsupported";
+            case s.u_:
+              m = "steamosunsupported";
               break;
-            case 0:
-              d = "steamosunknown";
+            case s.xs:
+              m = "steamosunknown";
           }
         else
-          switch (c.data?.steam_deck_compat_category) {
-            case 3:
-              d = "verified";
+          switch (o.data?.steam_deck_compat_category) {
+            case i.I2:
+              m = "verified";
               break;
-            case 2:
-              d = "playable";
+            case i.sd:
+              m = "playable";
               break;
-            case 1:
-              d = "unsupported";
+            case i.V8:
+              m = "unsupported";
           }
         return (0, r.jsx)("div", {
-          className: (0, n.A)(l.CompatIcon, "ds_steam_deck_compat", d, a),
+          className: (0, l.A)(u.CompatIcon, "ds_steam_deck_compat", m, a),
         });
       }
     },

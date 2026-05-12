@@ -40,6 +40,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (!_) return _;
@@ -74,7 +76,7 @@
       async function _(_, _) {
         const _ = await _,
           _ = await _;
-        return 1 != _ ? _ : _;
+        return _ != _._ ? _ : _;
       }
       class _ {
         k_QueueWaitUntilRequestMS = 5;
@@ -115,9 +117,9 @@
         m_PendingInfoPromise;
         m_PendingInfoResolve = void 0;
         m_PendingTimer = void 0;
-        k_AlreadyResolvedOK = Promise.resolve(1);
-        k_AlreadyResolvedInvalid = Promise.resolve(8);
-        k_AlreadyResolvedBusy = Promise.resolve(10);
+        k_AlreadyResolvedOK = Promise.resolve(_._);
+        k_AlreadyResolvedInvalid = Promise.resolve(_._);
+        k_AlreadyResolvedBusy = Promise.resolve(_._);
         static sm_instance;
         static Get() {
           return (
@@ -212,22 +214,22 @@
           include_links: !0,
         };
         async QueueAppRequest(_, _) {
-          return this.QueueStoreItemRequest(_, 0, _);
+          return this.QueueStoreItemRequest(_, _._._, _);
         }
         async QueuePackageRequest(_, _) {
-          return this.QueueStoreItemRequest(_, 1, _);
+          return this.QueueStoreItemRequest(_, _._._, _);
         }
         async QueueBundleRequest(_, _) {
-          return this.QueueStoreItemRequest(_, 2, _);
+          return this.QueueStoreItemRequest(_, _._._, _);
         }
         async QueueTagRequest(_, _) {
-          return this.QueueStoreItemRequest(_, 4, _);
+          return this.QueueStoreItemRequest(_, _._._, _);
         }
         async QueueCreatorRequest(_, _) {
-          return this.QueueStoreItemRequest(_, 5, _);
+          return this.QueueStoreItemRequest(_, _._._, _);
         }
         async QueueHubCategoryRequest(_, _) {
-          return this.QueueStoreItemRequest(_, 6, _);
+          return this.QueueStoreItemRequest(_, _._._, _);
         }
         static ValidateDataRequest(_) {
           const _ = [
@@ -248,55 +250,67 @@
           return !0;
         }
         async QueueMultipleAppRequests(_, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = (
-            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 0, _)))
-          ).filter((_) => 1 != _);
-          return _.length > 0 ? _[0] : 1;
+            await Promise.all(
+              _.map((_) => this.QueueStoreItemRequest(_, _._._, _)),
+            )
+          ).filter((_) => _ != _._);
+          return _.length > 0 ? _[0] : _._;
         }
         async QueueMultiplePackageRequests(_, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = (
-            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 1, _)))
-          ).filter((_) => 1 != _);
-          return _.length > 0 ? _[0] : 1;
+            await Promise.all(
+              _.map((_) => this.QueueStoreItemRequest(_, _._._, _)),
+            )
+          ).filter((_) => _ != _._);
+          return _.length > 0 ? _[0] : _._;
         }
         async QueueMultipleBundleRequests(_, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = (
-            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 2, _)))
-          ).filter((_) => 1 != _);
-          return _.length > 0 ? _[0] : 1;
+            await Promise.all(
+              _.map((_) => this.QueueStoreItemRequest(_, _._._, _)),
+            )
+          ).filter((_) => _ != _._);
+          return _.length > 0 ? _[0] : _._;
         }
         async QueueMultipleTagRequests(_, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = (
-            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 4, _)))
-          ).filter((_) => 1 != _);
-          return _.length > 0 ? _[0] : 1;
+            await Promise.all(
+              _.map((_) => this.QueueStoreItemRequest(_, _._._, _)),
+            )
+          ).filter((_) => _ != _._);
+          return _.length > 0 ? _[0] : _._;
         }
         async QueueMultipleCreatorRequests(_, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = (
-            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 5, _)))
-          ).filter((_) => 1 != _);
-          return _.length > 0 ? _[0] : 1;
+            await Promise.all(
+              _.map((_) => this.QueueStoreItemRequest(_, _._._, _)),
+            )
+          ).filter((_) => _ != _._);
+          return _.length > 0 ? _[0] : _._;
         }
         async QueueMultipleHubCategoryRequests(_, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = (
-            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 6, _)))
-          ).filter((_) => 1 != _);
-          return _.length > 0 ? _[0] : 1;
+            await Promise.all(
+              _.map((_) => this.QueueStoreItemRequest(_, _._._, _)),
+            )
+          ).filter((_) => _ != _._);
+          return _.length > 0 ? _[0] : _._;
         }
         async QueueMultipleStoreItemRequests(_, _, _) {
-          if (!_ || 0 == _.length) return 1;
+          if (!_ || 0 == _.length) return _._;
           const _ = (
             await Promise.all(
               _.map((_, _) => this.QueueStoreItemRequest(_, _[_], _)),
             )
-          ).filter((_) => 1 != _);
-          return _.length > 0 ? _[0] : 1;
+          ).filter((_) => _ != _._);
+          return _.length > 0 ? _[0] : _._;
         }
         async QueueStoreItemRequest(_, _, _) {
           if (
@@ -335,22 +349,22 @@
             (this.m_setPendingDataRequest = _(this.m_setPendingDataRequest, _)),
             _)
           ) {
-            case 0:
+            case _._._:
               this.m_setPendingAppInfo.add(_);
               break;
-            case 2:
+            case _._._:
               this.m_setPendingBundleInfo.add(_);
               break;
-            case 1:
+            case _._._:
               this.m_setPendingPackageInfo.add(_);
               break;
-            case 4:
+            case _._._:
               this.m_setPendingTagInfo.add(_);
               break;
-            case 5:
+            case _._._:
               this.m_setPendingCreatorInfo.add(_);
               break;
-            case 6:
+            case _._._:
               this.m_setPendingHubCategoryInfo.add(_);
               break;
             default:
@@ -403,22 +417,22 @@
             return this.k_AlreadyResolvedOK;
           let _ = null;
           switch (_) {
-            case 0:
+            case _._._:
               _ = this.m_mapAppsInFlight.get(_);
               break;
-            case 1:
+            case _._._:
               _ = this.m_mapPackageInFlight.get(_);
               break;
-            case 2:
+            case _._._:
               _ = this.m_mapBundleInFlight.get(_);
               break;
-            case 4:
+            case _._._:
               _ = this.m_mapTagsInFlight.get(_);
               break;
-            case 5:
+            case _._._:
               _ = this.m_mapCreatorsInFlight.get(_);
               break;
-            case 6:
+            case _._._:
               _ = this.m_mapHubCategoriesInFlight.get(_);
           }
           return _ && _._.BDataRequestContainsOtherDataRequest(_.dataRequest, _)
@@ -431,7 +445,7 @@
           let _ = [],
             _ = [];
           (_ || []).forEach((_) => {
-            const _ = this.GetPreviousSupersetLoadPromise(_, 0, _);
+            const _ = this.GetPreviousSupersetLoadPromise(_, _._._, _);
             if (_) _.push(_);
             else {
               _.push(
@@ -439,7 +453,7 @@
                   appid: _,
                 }),
               );
-              let _ = _(this.GetStoreItemDataRequest(_, 0), _);
+              let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
               const _ = this.m_mapAppsInFlight.get(_);
               (_ = _(_?.dataRequest, _)),
                 _ && _.push(_.promise),
@@ -450,7 +464,7 @@
             }
           }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(_, 1, _);
+              const _ = this.GetPreviousSupersetLoadPromise(_, _._._, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -458,7 +472,7 @@
                     packageid: _,
                   }),
                 );
-                let _ = _(this.GetStoreItemDataRequest(_, 1), _);
+                let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                 const _ = this.m_mapPackageInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -469,7 +483,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(_, 2, _);
+              const _ = this.GetPreviousSupersetLoadPromise(_, _._._, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -477,7 +491,7 @@
                     bundleid: _,
                   }),
                 );
-                let _ = _(this.GetStoreItemDataRequest(_, 2), _);
+                let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                 const _ = this.m_mapBundleInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -488,7 +502,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(_, 4, _);
+              const _ = this.GetPreviousSupersetLoadPromise(_, _._._, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -496,7 +510,7 @@
                     tagid: _,
                   }),
                 );
-                let _ = _(this.GetStoreItemDataRequest(_, 4), _);
+                let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                 const _ = this.m_mapTagsInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -507,7 +521,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(_, 5, _);
+              const _ = this.GetPreviousSupersetLoadPromise(_, _._._, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -515,7 +529,7 @@
                     creatorid: _,
                   }),
                 );
-                let _ = _(this.GetStoreItemDataRequest(_, 5), _);
+                let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                 const _ = this.m_mapCreatorsInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -526,7 +540,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(_, 6, _);
+              const _ = this.GetPreviousSupersetLoadPromise(_, _._._, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -534,7 +548,7 @@
                     hubcategoryid: _,
                   }),
                 );
-                let _ = _(this.GetStoreItemDataRequest(_, 6), _);
+                let _ = _(this.GetStoreItemDataRequest(_, _._._), _);
                 const _ = this.m_mapHubCategoriesInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -544,7 +558,7 @@
                   });
               }
             });
-          let _ = 1;
+          let _ = _._;
           if (
             (_.length > 0 &&
               (_ = await this.InternalHandleLoadStoreItems(_, _)),
@@ -552,7 +566,7 @@
             _.length > 0)
           ) {
             const _ = await Promise.all(_);
-            for (const _ of _) 1 != _ && 1 == _ && (_ = _);
+            for (const _ of _) _ != _._ && _ == _._ && (_ = _);
           }
           return (
             (_ || []).forEach((_) => this.m_mapAppsInFlight.delete(_)),
@@ -627,7 +641,7 @@
           );
         }
         async InternalHandleLoadStoreItems(_, _) {
-          let _ = 1;
+          let _ = _._;
           (_ = this.SortStoreItems(_)),
             _.include_included_items &&
               (_ = {
@@ -659,7 +673,7 @@
               }
             }
             (await Promise.all(_)).forEach((_, _) => {
-              1 == _.GetEResult()
+              _.GetEResult() == _._
                 ? _.Body()
                     .store_items()
                     .forEach((_) => {
@@ -667,9 +681,9 @@
                         _ = __webpack_require__.item_type();
                       let _ =
                           this.m_bReturnUnavailableItems &&
-                          15 == __webpack_require__.success(),
+                          __webpack_require__.success() == _._,
                         _ =
-                          1 == __webpack_require__.success() &&
+                          __webpack_require__.success() == _._ &&
                           !this.BIsStoreItemMissing(_, _);
                       if (_ || _) this.ReadItem(_, _);
                       else {
@@ -681,27 +695,27 @@
                             ),
                           _)
                         ) {
-                          case 0:
+                          case _._._:
                             this.m_setUnavailableApps.add(_),
                               this.m_mapApps.delete(_);
                             break;
-                          case 1:
+                          case _._._:
                             this.m_setUnavailablePackages.add(_),
                               this.m_mapPackages.delete(_);
                             break;
-                          case 2:
+                          case _._._:
                             this.m_setUnavailableBundles.add(_),
                               this.m_mapBundles.delete(_);
                             break;
-                          case 4:
+                          case _._._:
                             this.m_setUnavailableTags.add(_),
                               this.m_mapTags.delete(_);
                             break;
-                          case 5:
+                          case _._._:
                             this.m_setUnavailableCreators.add(_),
                               this.m_mapCreators.delete(_);
                             break;
-                          case 6:
+                          case _._._:
                             this.m_setUnavailableHubCategories.add(_),
                               this.m_mapHubCategories.delete(_);
                             break;
@@ -717,24 +731,24 @@
                           __webpack_require__.unvailable_for_country_restriction()
                         )
                           switch (_) {
-                            case 0:
+                            case _._._:
                               this.m_setUnavailableDueToCountryRestrictionApps.add(
                                 _,
                               );
                               break;
-                            case 1:
+                            case _._._:
                               this.m_setUnavailableDueToCountryRestrictionPackages.add(
                                 _,
                               );
                               break;
-                            case 2:
+                            case _._._:
                               this.m_setUnavailableDueToCountryRestrictionBundles.add(
                                 _,
                               );
                               break;
-                            case 4:
-                            case 5:
-                            case 6:
+                            case _._._:
+                            case _._._:
+                            case _._._:
                               console.error(
                                 "CStoreItemCache::InternalHandleLoadStoreItems - tags, creators or categories don't have country restrictions. eResult: " +
                                   _.GetEResult() +
@@ -752,9 +766,9 @@
                       _.Hdr().error_message(),
                     (0, _._)(_),
                   ),
-                  (1 == _.Hdr().transport_error() || _._.FROM_WEB) &&
+                  (_.Hdr().transport_error() == _._ || _._.FROM_WEB) &&
                     this.MarkStoreItemIDUnavailable(_[_]),
-                  1 == _ && (_ = _.GetEResult()));
+                  _ == _._ && (_ = _.GetEResult()));
             });
           } catch (_) {
             const _ = (0, _._)(_);
@@ -765,7 +779,7 @@
                 _,
               ),
               _.forEach((_) => this.MarkStoreItemIDUnavailable(_)),
-              79
+              _._
             );
           }
           return _;
@@ -773,22 +787,22 @@
         GetMapForType(_) {
           let _;
           switch (_) {
-            case 0:
+            case _._._:
               _ = this.m_mapApps;
               break;
-            case 2:
+            case _._._:
               _ = this.m_mapBundles;
               break;
-            case 1:
+            case _._._:
               _ = this.m_mapPackages;
               break;
-            case 4:
+            case _._._:
               _ = this.m_mapTags;
               break;
-            case 5:
+            case _._._:
               _ = this.m_mapCreators;
               break;
-            case 6:
+            case _._._:
               _ = this.m_mapHubCategories;
               break;
             default:
@@ -803,7 +817,7 @@
           );
         }
         GetStoreItem(_, _) {
-          if (-1 == _ || 3 == _) return;
+          if (_ == _._._ || _ == _._._) return;
           const _ = this.GetMapForType(_);
           return __webpack_require__?.get(_);
         }
@@ -818,54 +832,54 @@
           return this.GetMapForType(_)?.get(_)?.GetDataRequest() || null;
         }
         BHasApp(_, _) {
-          return this.BHasStoreItem(_, 0, _);
+          return this.BHasStoreItem(_, _._._, _);
         }
         GetApp(_) {
-          return this.GetStoreItem(_, 0);
+          return this.GetStoreItem(_, _._._);
         }
         BHasPackage(_, _) {
-          return this.BHasStoreItem(_, 1, _);
+          return this.BHasStoreItem(_, _._._, _);
         }
         GetPackage(_) {
-          return this.GetStoreItem(_, 1);
+          return this.GetStoreItem(_, _._._);
         }
         BHasBundle(_, _) {
-          return this.BHasStoreItem(_, 2, _);
+          return this.BHasStoreItem(_, _._._, _);
         }
         GetBundle(_) {
-          return this.GetStoreItem(_, 2);
+          return this.GetStoreItem(_, _._._);
         }
         BHasTag(_, _) {
-          return this.BHasStoreItem(_, 4, _);
+          return this.BHasStoreItem(_, _._._, _);
         }
         GetTag(_) {
-          return this.GetStoreItem(_, 4);
+          return this.GetStoreItem(_, _._._);
         }
         BHasCreator(_, _) {
-          return this.BHasStoreItem(_, 5, _);
+          return this.BHasStoreItem(_, _._._, _);
         }
         GetCreator(_) {
-          return this.GetStoreItem(_, 5);
+          return this.GetStoreItem(_, _._._);
         }
         BHasHubCategory(_, _) {
-          return this.BHasStoreItem(_, 6, _);
+          return this.BHasStoreItem(_, _._._, _);
         }
         GetHubCategory(_) {
-          return this.GetStoreItem(_, 6);
+          return this.GetStoreItem(_, _._._);
         }
         BIsStoreItemMissing(_, _) {
           switch (_) {
-            case 0:
+            case _._._:
               return this.BIsAppMissing(_);
-            case 1:
+            case _._._:
               return this.BIsPackageMissing(_);
-            case 2:
+            case _._._:
               return this.BIsBundleMissing(_);
-            case 4:
+            case _._._:
               return this.BIsTagMissing(_);
-            case 5:
+            case _._._:
               return this.BIsCreatorMissing(_);
-            case 6:
+            case _._._:
               return this.BIsHubCategoryMissing(_);
             default:
               return console.error("BStoreItemMissing invalid type", _), !0;
@@ -891,15 +905,15 @@
         }
         BIsStoreItemUnavailableDueToCountryRestriction(_, _) {
           switch (_) {
-            case 0:
+            case _._._:
               return this.BIsAppUnavailableDueToCountryRestriction(_);
-            case 1:
+            case _._._:
               return this.BIsPackageUnavailableDueToCountryRestriction(_);
-            case 2:
+            case _._._:
               return this.BIsBundleUnavailableDueToCountryRestriction(_);
-            case 4:
-            case 5:
-            case 6:
+            case _._._:
+            case _._._:
+            case _._._:
               return (
                 console.error(
                   "BIsStoreItemUnavailableDueToCountryRestriction - tags, creators or categories don't have country restrictions. type: ",
@@ -933,22 +947,22 @@
               console.warn(`Failed to load item data: ${_.success()}`), null
             );
           switch (_) {
-            case 0:
+            case _._._:
               _ = this.m_mapApps;
               break;
-            case 1:
+            case _._._:
               _ = this.m_mapPackages;
               break;
-            case 2:
+            case _._._:
               _ = this.m_mapBundles;
               break;
-            case 4:
+            case _._._:
               _ = this.m_mapTags;
               break;
-            case 5:
+            case _._._:
               _ = this.m_mapCreators;
               break;
-            case 6:
+            case _._._:
               _ = this.m_mapHubCategories;
               break;
             default:

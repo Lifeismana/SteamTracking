@@ -298,7 +298,7 @@
         i = r.n(o),
         t = r(69041),
         a = r(75659),
-        n = r(41324),
+        n = r(11526),
         c = r(11820),
         l = r(73406),
         m = r(90534),
@@ -445,7 +445,7 @@
         o = r(39479),
         i = r(64238),
         t = r.n(i),
-        a = r(41324),
+        a = r(11526),
         n = r(75659),
         c = r(44041);
       function l(s) {
@@ -470,7 +470,7 @@
       r.d(e, { s: () => l });
       var p = r(7850),
         o = r(39479),
-        i = r(41324),
+        i = r(11526),
         t = r(75659),
         a = r(64238),
         n = r.n(a),
@@ -538,7 +538,7 @@
     75659: (s, e, r) => {
       "use strict";
       r.d(e, { L: () => i, h: () => t });
-      var p = r(41324),
+      var p = r(11526),
         o = r(88122);
       const i = [
           { prop: "margin", responsive: !0, className: (s) => o[`m-${s}`] },
@@ -789,23 +789,18 @@
           },
         ];
     },
-    41324: (s, e, r) => {
+    11526: (s, e, r) => {
       "use strict";
       r.d(e, {
-        Fd: () => c,
-        ti: () => n,
-        To: () => l,
-        w7: () => m,
-        mz: () => a,
+        Fd: () => n,
+        ti: () => a,
+        To: () => c,
+        w7: () => l,
+        mz: () => t,
       });
-      var p = r(10430);
-      const o = p.IE.reduce((s, e, r) => ((s[e] = r), s), {});
-      function i(s, e) {
-        if ("object" != typeof s) return s;
-        for (let r = o[e]; r >= 0; r--) if (p.IE[r] in s) return s[p.IE[r]];
-        return s.initial;
-      }
-      const t = {
+      var p = r(10430),
+        o = r(55348);
+      const i = {
         0: !0,
         1: !0,
         2: !0,
@@ -817,10 +812,10 @@
         8: !0,
         9: !0,
       };
-      function a(s, e) {
+      function t(s, e) {
         return (function (s, e, r) {
           const p = [],
-            o = {},
+            i = {},
             t = {},
             { extracted: a, remaining: n } = (function (s, e) {
               const r = { remaining: { ...s }, extracted: {} };
@@ -836,7 +831,7 @@
             let e = a[n.prop];
             if (
               void 0 !== e &&
-              (n.responsive && (e = i(e, r.formFactor)), void 0 !== e)
+              (n.responsive && (e = (0, o.I)(e, r.formFactor)), void 0 !== e)
             ) {
               if (n.className) {
                 if (
@@ -854,14 +849,14 @@
               }
               if (n.cssProperty)
                 if ("function" == typeof n.cssProperty) {
-                  const r = n.cssProperty(e, s);
-                  if (r.length && Array.isArray(r[0]))
-                    r.forEach(([s, e]) => (o[s] = e));
+                  const p = n.cssProperty(e, s, r.formFactor);
+                  if (p.length && Array.isArray(p[0]))
+                    p.forEach(([s, e]) => (i[s] = e));
                   else {
-                    const s = r;
-                    o[s[0]] = s[1];
+                    const s = p;
+                    i[s[0]] = s[1];
                   }
-                } else o[n.cssProperty] = e;
+                } else i[n.cssProperty] = e;
               if (n.dataProperty)
                 if ("function" == typeof n.dataProperty) {
                   const [s, r] = n.dataProperty(e);
@@ -876,94 +871,108 @@
             "style" in n &&
               n.style &&
               "object" == typeof n.style &&
-              Object.assign(o, n.style),
-            { ...t, ...n, className: p.join(" "), style: o }
+              Object.assign(i, n.style),
+            { ...t, ...n, className: p.join(" "), style: i }
           );
         })(s, e, { formFactor: (0, p.xC)() });
       }
-      function n(s) {
+      function a(s) {
         return (function (s) {
-          return !!t[s];
+          return !!i[s];
         })(s)
           ? `var(--spacing-${s})`
           : s;
       }
-      function c(s) {
+      function n(s) {
         if (!("%" == s[s.length - 1])) return `var(--color-${s})`;
         const [e, r] = s.split(" ");
         return `rgb( from ${`var(--color-${e})`} r g b / ${r} )`;
       }
-      function l(s, e) {
-        return s.startsWith("text") ? `var(--color-${s}-${e})` : c(s);
+      function c(s, e) {
+        return s.startsWith("text") ? `var(--color-${s}-${e})` : n(s);
       }
-      function m(s) {
-        return s.startsWith("text") ? `var(--color-${s})` : c(s);
+      function l(s) {
+        return s.startsWith("text") ? `var(--color-${s})` : n(s);
+      }
+    },
+    55348: (s, e, r) => {
+      "use strict";
+      r.d(e, { I: () => i });
+      var p = r(10430);
+      const o = p.IE.reduce((s, e, r) => ((s[e] = r), s), {});
+      function i(s, e) {
+        if ("object" != typeof s) return s;
+        for (let r = o[e]; r >= 0; r--) if (p.IE[r] in s) return s[p.IE[r]];
+        return s.initial;
       }
     },
     20187: (s, e, r) => {
       "use strict";
-      r.d(e, { Ae: () => m, EY: () => c, U6: () => l });
+      r.d(e, { Ae: () => _, EY: () => l, U6: () => m });
       var p = r(7850),
-        o = r(41324),
-        i = r(75659),
-        t = r(64238),
-        a = r.n(t),
-        n = r(65274);
-      function c(s) {
-        const { as: e = "span", ref: r, className: i, ...t } = s,
-          c = e;
-        return (0, p.jsx)(c, {
+        o = r(55348),
+        i = r(11526),
+        t = r(75659),
+        a = r(64238),
+        n = r.n(a),
+        c = r(65274);
+      function l(s) {
+        const { as: e = "span", ref: r, className: o, ...t } = s,
+          a = e;
+        return (0, p.jsx)(a, {
           ref: r,
-          ...(0, o.mz)({ ...t, className: a()(n.Text, i) }, m),
+          ...(0, i.mz)({ ...t, className: n()(c.Text, o) }, _),
         });
       }
-      const l = [
+      const m = [
           {
             prop: "weight",
             responsive: !0,
-            className: n.TextWeight,
+            className: c.TextWeight,
             cssProperty: (s) => ["--text-weight", `var(--font-weight-${s})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: n.TextAlign,
+            className: c.TextAlign,
             cssProperty: "--text-align",
           },
           {
             prop: "color",
-            cssProperty: (s, e) => [
+            responsive: !0,
+            cssProperty: (s, e, r) => [
               "--text-color",
-              (0, o.To)(s, e.contrast ?? "body"),
+              (0, i.To)(s, (0, o.I)(e.contrast, r) ?? "body"),
             ],
           },
           {
             prop: "contrast",
-            cssProperty: (s, e) => [
+            responsive: !0,
+            cssProperty: (s, e, r) => [
               "--text-color",
-              (0, o.To)(e.color ?? "text-body", s),
+              (0, i.To)((0, o.I)(e.color, r) ?? "text-body", s),
             ],
           },
-          { prop: "truncate", className: n.Truncate },
+          { prop: "truncate", className: c.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: n.LineClamp,
+            className: c.LineClamp,
             cssProperty: "--line-clamp",
           },
           {
             prop: "whiteSpace",
-            className: n.WhiteSpace,
+            className: c.WhiteSpace,
             cssProperty: "--white-space",
           },
         ],
-        m = [
-          ...l,
-          ...i.L,
+        _ = [
+          ...m,
+          ...t.L,
           {
             prop: "size",
             responsive: !0,
-            className: (s) => n[`TextSize-${s}`],
+            className: (s) => c[`TextSize-${s}`],
           },
         ];
     },

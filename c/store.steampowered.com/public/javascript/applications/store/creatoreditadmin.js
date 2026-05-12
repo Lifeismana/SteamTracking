@@ -85,7 +85,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _._.IN_CLIENT && (0, _._)(_._.LAUNCHER_TYPE);
+        return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -452,7 +452,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -893,11 +894,11 @@
                   _ = await _().get(_, {
                     params: _,
                   });
-                return 200 == _?.status && 1 == _.data?.success
+                return 200 == _?.status && _.data?.success == _._
                   ? _.data
                   : (console.error("useSocialMediaSupports:", _?.status),
                     {
-                      success: 2,
+                      success: _._,
                     });
               },
             });

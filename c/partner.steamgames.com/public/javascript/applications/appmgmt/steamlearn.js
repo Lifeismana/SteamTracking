@@ -575,7 +575,7 @@
           SteamLearnRoutes: () => _,
           default: () => _,
         });
-      var _,
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -587,6 +587,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      const _ = 10,
+        _ = 12,
+        _ = 14,
+        _ = 15,
+        _ = 21;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -1183,35 +1188,10 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  sequence_table: {
-                    _: 12,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  sequence_table_count: {
-                    _: 13,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  sort_sequence: {
-                    _: 14,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  sequence_min_length: {
-                    _: 15,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
                   table_full_sample: {
                     _: 16,
                     _: _._.readBool,
                     _: _._.writeBool,
-                  },
-                  sequence_prefix_frequency: {
-                    _: 17,
-                    _: _._.readFloat,
-                    _: _._.writeFloat,
                   },
                   other_project_id: {
                     _: 18,
@@ -2875,10 +2855,6 @@
                     _: 15,
                     _: _,
                   },
-                  conditional_extract: {
-                    _: 16,
-                    _: _,
-                  },
                   concatenate: {
                     _: 17,
                     _: _,
@@ -2939,10 +2915,6 @@
                     _: 31,
                     _: _,
                   },
-                  max_pooling_1d: {
-                    _: 32,
-                    _: _,
-                  },
                   flatten: {
                     _: 33,
                     _: _,
@@ -2951,24 +2923,12 @@
                     _: 34,
                     _: _,
                   },
-                  transformer: {
-                    _: 35,
-                    _: _,
-                  },
                   external_embedding: {
                     _: 36,
                     _: _,
                   },
                   time_distributed_dense: {
                     _: 37,
-                    _: _,
-                  },
-                  sequence_split: {
-                    _: 38,
-                    _: _,
-                  },
-                  weighted_average: {
-                    _: 39,
                     _: _,
                   },
                   global_avg_pooling_1d: {
@@ -3583,234 +3543,6 @@
         }
         getClassName() {
           return "CMsgSteamLearnModelNodeTrain";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.extract_filter_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  extract_filter_type: {
-                    _: 10,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  extract_weight_type: {
-                    _: 11,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  filter_info: {
-                    _: 12,
-                    _: _,
-                  },
-                  weight_info: {
-                    _: 13,
-                    _: _,
-                  },
-                  compact_table: {
-                    _: 14,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  extracted_compact_table: {
-                    _: 15,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeConditionalExtract";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid_release_recency_months || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid_release_recency_months: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  appid_publisher_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  appid_featured_tag_id: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  appid_theme_tag_id: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeConditionalExtract_FilterInfo";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid_release_recency_bias || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid_release_recency_bias: {
-                    _: 1,
-                    _: _._.readFloat,
-                    _: _._.writeFloat,
-                  },
-                  input_number: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  input_strength: {
-                    _: 3,
-                    _: _._.readFloat,
-                    _: _._.writeFloat,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeConditionalExtract_WeightInfo";
         }
       }
       class _ extends _.Message {
@@ -4746,71 +4478,6 @@
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
-          super(),
-            _.prototype.pool_size || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  pool_size: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  strides: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeMaxPooling1D";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
           super(), _.Message.initialize(this, _, 0, -1, void 0, null);
         }
         toObject(_ = !1) {
@@ -5148,86 +4815,6 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.num_heads || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  num_heads: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  feedforward_size: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  dropout_pct: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  num_internal_blocks: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  regularization: {
-                    _: 6,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeTransformer";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
             _.prototype.project_id || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -5372,151 +4959,6 @@
         }
         getClassName() {
           return "CMsgSteamLearnModelNodeTimeDistributedDense";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.head_split_chance || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  head_split_chance: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  mid_split_chance: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  tail_split_chance: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  sequence_table_name: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  compact_table_name: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeSequenceSplit";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.axis || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  axis: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  use_weights: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnModelNodeWeightedAverage";
         }
       }
       class _ extends _.Message {
@@ -6836,7 +6278,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.inference_metadata_result || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 9, 6, 8], null);
+            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6, 8], null);
         }
         static sm_m;
         static sm_mbf;
@@ -6869,12 +6311,6 @@
                   },
                   compact_tables: {
                     _: 5,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  sequence_tables: {
-                    _: 9,
                     _: _,
                     _: !0,
                     _: !0,
@@ -7493,284 +6929,6 @@
         }
         getClassName() {
           return "CMsgSteamLearn_InferenceMetadata_Response_CompactTable_MapStringValuesEntry";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  name: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  map_values: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  map_mappings: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  total_count: {
-                    _: 4,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_SequenceTable";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.values || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  values: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                  crc: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  count: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_SequenceTable_Entry";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.key || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  key: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  value: {
-                    _: 2,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_SequenceTable_MapValuesEntry";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.key || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  key: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  value: {
-                    _: 2,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Response_SequenceTable_MapMappingsEntry";
         }
       }
       class _ extends _.Message {
@@ -14662,6 +13820,7 @@
           return "CMsgSteamLearn_GetNearestEmbedding_Response_NearEmbedding";
         }
       }
+      var _;
       !(function (_) {
         (_.CreateProject = function (_, _) {
           return _.SendMsg("SteamLearn.CreateProject#1", (0, _._)(_, _), _, {
@@ -15042,7 +14201,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult())
+              if (_.BIsValid() && _.GetEResult() == _._)
                 return (
                   _.Body()
                     .data_sources()
@@ -15066,7 +14225,7 @@
               const _ = await _.GetDataSource(_.Get().GetServiceTransport(), _);
               if (
                 __webpack_require__.BIsValid() &&
-                1 == __webpack_require__.GetEResult()
+                __webpack_require__.GetEResult() == _._
               )
                 return __webpack_require__.Body().data_source();
               throw `Failed FetchDataSource ${_}`;
@@ -15097,7 +14256,7 @@
             const _ = await _.GetProject(_.Get().GetServiceTransport(), _);
             if (
               __webpack_require__.BIsValid() &&
-              1 == __webpack_require__.GetEResult()
+              __webpack_require__.GetEResult() == _._
             )
               return __webpack_require__.Body().project();
             throw `Failed FetchProject ${_}`;
@@ -15121,7 +14280,7 @@
             (async function () {
               let _ = _._.Init(_);
               const _ = await _.ListProjects(_.Get().GetServiceTransport(), _);
-              if (_.BIsValid() && 1 == _.GetEResult())
+              if (_.BIsValid() && _.GetEResult() == _._)
                 return _.Body().projects();
               throw "Failed FetchProjectList";
             })(),
@@ -15138,7 +14297,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult())
+              if (_.BIsValid() && _.GetEResult() == _._)
                 return _.Body().project_config_infos();
               throw "Failed FetchProjectList";
             })(),
@@ -15166,7 +14325,7 @@
         __webpack_require__.Body().set_project_id(_),
           __webpack_require__.Body().set_published_version(_);
         const _ = await _.GetProjectConfig(_.Get().GetServiceTransport(), _);
-        if (_.BIsValid() && 1 == _.GetEResult())
+        if (_.BIsValid() && _.GetEResult() == _._)
           return _.Body().project_config();
         throw `Failed FetchProjectConfig ${_} ${_}`;
       }
@@ -15220,7 +14379,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
+              if (_.BIsValid() && _.GetEResult() == _._) return _.Body();
               throw "Failed FetchAccessTokens";
             })(),
           staleTime: 1 / 0,
@@ -15238,7 +14397,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
+              if (_.BIsValid() && _.GetEResult() == _._) return _.Body();
               throw `Failed FetchFetchVersions: Project ${_}`;
             })(_, _),
           staleTime: 1 / 0,
@@ -15256,7 +14415,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
+              if (_.BIsValid() && _.GetEResult() == _._) return _.Body();
               throw `Failed FetchTrainVersions: Project ${_}`;
             })(_, _),
           staleTime: 1 / 0,
@@ -15274,7 +14433,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
+              if (_.BIsValid() && _.GetEResult() == _._) return _.Body();
               throw `Failed FetchFetchStatus: Project ${_}`;
             })(_, _),
           staleTime: 1 / 0,
@@ -15292,7 +14451,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
+              if (_.BIsValid() && _.GetEResult() == _._) return _.Body();
               throw `Failed FetchTrainStatus: Project ${_}`;
             })(_, _),
           staleTime: 1 / 0,
@@ -15314,7 +14473,7 @@
               );
               if (
                 _.BIsValid() &&
-                1 == _.GetEResult() &&
+                _.GetEResult() == _._ &&
                 1 == _.Body().project_status().length
               )
                 return _.Body().project_status()[0];
@@ -15339,7 +14498,7 @@
               );
               if (
                 _.BIsValid() &&
-                1 == _.GetEResult() &&
+                _.GetEResult() == _._ &&
                 1 == _.Body().project_status().length
               )
                 return _.Body().project_status()[0];
@@ -15363,7 +14522,7 @@
               if (
                 (console.log(_.Body().toObject()),
                 _.BIsValid() &&
-                  1 == _.GetEResult() &&
+                  _.GetEResult() == _._ &&
                   1 == _.Body().project_status().length)
               )
                 return _.Body();
@@ -15382,7 +14541,7 @@
                 _.Body().set_fetch_id(_),
                 _.Body().set_train_id(_);
               const _ = await _.GetTrainLogs(_.Get().GetServiceTransport(), _);
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
+              if (_.BIsValid() && _.GetEResult() == _._) return _.Body();
               throw `Failed FetchLogs: Project ${_}, Train ${_}, Fetch ${_}`;
             })(_, _, _),
           staleTime: 1e4,
@@ -15401,7 +14560,7 @@
                 _.Get().GetServiceTransport(),
                 _,
               );
-              if (_.BIsValid() && 1 == _.GetEResult()) return _.Body();
+              if (_.BIsValid() && _.GetEResult() == _._) return _.Body();
               throw `Failed FetchSnapshotStatus: ${_} to ${_} `;
             })(_, _, _),
           staleTime: 1 / 0,
@@ -15429,7 +14588,7 @@
         const _ = await _.CreateProject(_.Get().GetServiceTransport(), _);
         return (
           _ &&
-            1 == _.GetEResult() &&
+            _.GetEResult() == _._ &&
             (_._.setQueryData(
               [_, _.Body().project().project_id()],
               [_.Body().project(), _.Body().project()],
@@ -15446,7 +14605,7 @@
         const _ = await _.EditProjectConfig(_.Get().GetServiceTransport(), _);
         return (
           _ &&
-            1 == __webpack_require__.GetEResult() &&
+            __webpack_require__.GetEResult() == _._ &&
             (await _(_, 0, _, _(_.project_id(), _.published_version())),
             _._.invalidateQueries({
               queryKey: _(_.project_id(), _.published_version()),
@@ -15546,8 +14705,7 @@
             let _ = 0,
               _ = !1;
             for (const _ of _.data_source_element_usages())
-              _.input() == _.input().input_num() &&
-                (_++, 6 == _.preprocessing_type() && (_ = !0));
+              _.input() == _.input().input_num() && _++;
             _ ? _.push(1) : _.push(_);
             break;
           }
@@ -15619,7 +14777,7 @@
             _ && ((_[_] = _), _.push(..._));
             break;
           }
-          case 15: {
+          case _: {
             let _ = 0;
             for (const _ of _.connectors())
               if (_.is_input_connector()) {
@@ -15658,7 +14816,7 @@
             }
             break;
           }
-          case 10: {
+          case _: {
             const _ = _.connectors()
                 .filter((_) => _.is_input_connector())
                 .map((_) => _.connector_id()),
@@ -15684,14 +14842,10 @@
             }
             _.push(_.onehot().width());
             break;
-          case 12:
-          case 14:
-          case 20:
+          case _:
             _.push(1);
             break;
           case 27:
-          case 33:
-          case 35:
             break;
           case 13: {
             const _ = _.connectors()
@@ -15709,23 +14863,7 @@
             }
             break;
           }
-          case 7: {
-            const _ = _.connectors().findIndex((_) => _.connector_id() == _);
-            if (-1 == _) break;
-            if (_ % 3 == 2) {
-              _.push(1);
-              break;
-            }
-            const _ = Math.floor(_ / 3),
-              { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-                _,
-                _.connectors()[_].connector_id(),
-              ),
-              _ = _(_, _, _);
-            _.push(_[0] - 1);
-            break;
-          }
-          case 21: {
+          case _: {
             const _ = _.connectors().findIndex((_) => _.connector_id() == _);
             if (-1 == _) break;
             if (0 == _) {
@@ -15745,6 +14883,9 @@
             _.push(_[0] - 1);
             break;
           }
+          case _:
+            _.push(1);
+            break;
           case 16:
             switch (_.text_vectorization().output()) {
               case 1:
@@ -15767,6 +14908,9 @@
             }
             break;
           }
+          case 20:
+            _.push(1);
+            break;
           case 24: {
             let _ = 1;
             const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
@@ -15780,18 +14924,6 @@
             _.push(_);
             break;
           }
-          case 30: {
-            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-              _,
-              _.connectors()[0].connector_id(),
-            );
-            if (_) {
-              const _ = _(_, _, _);
-              for (let _ = 0; _ < _.length; _++)
-                _ != _.weighted_average().axis() && _.push(_[_]);
-            }
-            break;
-          }
           case 22: {
             const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
               _,
@@ -15802,25 +14934,6 @@
               _.length > 0 &&
                 (_.push(_[0] - _.conv_1d().kernel_size() + 1),
                 _.push(_.conv_1d().filters()));
-            }
-            break;
-          }
-          case 23: {
-            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-              _,
-              _.connectors()[0].connector_id(),
-            );
-            if (_) {
-              const _ = _(_, _, _);
-              if (_.length > 0) {
-                _.push(
-                  Math.floor(
-                    (_[0] - _.max_pooling_1d().pool_size() + 1) /
-                      _.max_pooling_1d().pool_size(),
-                  ),
-                );
-                for (let _ = 1; _ < _.length; _++) _.push(_[_]);
-              }
             }
             break;
           }
@@ -15846,48 +14959,7 @@
             }
             break;
           }
-          case 26: {
-            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-              _,
-              _.connectors()[0].connector_id(),
-            );
-            if (_) {
-              const _ = _(_, _, _);
-              _.push(..._);
-            }
-            break;
-          }
-          case 28: {
-            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-              _,
-              _.connectors()[0].connector_id(),
-            );
-            if (_) {
-              const _ = _(_, _, _);
-              2 == _.length &&
-                (_.push(_[0]), _.push(_.time_distributed_dense().width()));
-            }
-            break;
-          }
-          case 29: {
-            let _ = 0;
-            for (const _ of _.data_source_element_usages())
-              6 == _.preprocessing_type() &&
-                _.sequence_table() ==
-                  _.sequence_split().sequence_table_name() &&
-                _++;
-            _.push(2), _.push(_);
-            break;
-          }
           case 17: {
-            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
-              _,
-              _.connectors()[0].connector_id(),
-            );
-            _ && _.push(..._(_, _, _));
-            break;
-          }
-          case 18: {
             const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
               _,
               _.connectors()[0].connector_id(),
@@ -15941,6 +15013,9 @@
               _.token_transformer().is_causal() && (_[0] += 1);
             break;
           }
+          case 33:
+          case 35:
+            break;
           case 36: {
             const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
               _,
@@ -15969,11 +15044,13 @@
             break;
           }
           case 38:
-          case 40:
             _.push(768);
             break;
           case 39:
             _.push(_.bert_tokenizer().sequence_length());
+            break;
+          case 40:
+            _.push(768);
             break;
           case 41: {
             const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
@@ -16032,29 +15109,21 @@
           const _ = _[0],
             _ = _.project_nodes().find(
               (_) => 1 == _.type() && _.input().input_num() == _,
-            ),
-            _ = _.data_source_element_usages().find((_) => _.input() == _);
+            );
+          _.data_source_element_usages().find((_) => _.input() == _);
           if (!_) {
             const [_, _] = _(_, 1);
             let _ = new _();
             _.set_connector_id(_(_)), _.set_is_input_connector(!1);
             let _ = new _();
-            if (
-              (_.set_node_id(_(_)),
+            _.set_node_id(_(_)),
               _.set_type(1),
               _.set_location_x(_),
               _.set_location_y(_),
               _.set_comment(""),
               _.input().set_input_num(_),
               _.add_connectors(_),
-              6 == _.preprocessing_type())
-            ) {
-              let _ = new _();
-              _.set_connector_id(_(_)),
-                _.set_is_input_connector(!1),
-                _.add_connectors(_);
-            }
-            _.add_project_nodes(_);
+              _.add_project_nodes(_);
           }
           _.shift();
         }
@@ -16137,7 +15206,6 @@
               _.set_max_range(0),
               _.set_std_dev(1),
               _.set_compact_table(""),
-              _.set_sequence_table(""),
               _.add_data_source_element_usages(_);
           }
         }
@@ -16179,24 +15247,14 @@
         for (const _ of _.data_source_element_usages())
           if (__webpack_require__.compact_table() == _) return !0;
         for (const _ of _.project_nodes())
-          if (
-            (!_ || __webpack_require__.node_id() != _.node_id()) &&
-            7 == _.type() &&
-            _.conditional_extract().extracted_compact_table() == _
-          )
-            return !0;
+          !_ || (__webpack_require__.node_id(), _.node_id());
         for (const _ of _.project_nodes())
           if (
             (!_ || __webpack_require__.node_id() != _.node_id()) &&
-            21 == _.type() &&
+            _.type() == _ &&
             _.extract().extracted_compact_table() == _
           )
             return !0;
-        return !1;
-      }
-      function _(_, _, _) {
-        for (const _ of _.data_source_element_usages())
-          if (__webpack_require__.sequence_table() == _) return !0;
         return !1;
       }
       var _;
@@ -16209,19 +15267,16 @@
             return _.Input;
           case 6:
             return _.Train;
-          case 15:
-          case 7:
+          case _:
           case 13:
-          case 12:
-          case 14:
-          case 18:
+          case _:
+          case _:
           case 11:
           case 9:
-          case 10:
-          case 29:
+          case _:
           case 16:
           case 32:
-          case 21:
+          case _:
           case 27:
           case 38:
           case 39:
@@ -16237,12 +15292,8 @@
           case 19:
           case 20:
           case 22:
-          case 23:
           case 24:
           case 25:
-          case 26:
-          case 28:
-          case 30:
           case 31:
           case 33:
           case 34:
@@ -16661,7 +15712,7 @@
                           );
                           return (
                             _ &&
-                              1 == _.GetEResult() &&
+                              _.GetEResult() == _._ &&
                               (await _(_, 0, _, _(_.project_id())),
                               _._.invalidateQueries({
                                 queryKey: [_, _.project_id()],
@@ -16753,7 +15804,7 @@
                         _,
                       );
                       return __webpack_require__.BIsValid() &&
-                        1 == __webpack_require__.GetEResult()
+                        __webpack_require__.GetEResult() == _._
                         ? (_._.invalidateQueries({
                             queryKey: ["SteamLearnProjectConfigList"],
                           }),
@@ -17139,9 +16190,7 @@
                           _.set_max_range(_.max_range()),
                           _.set_std_dev(_.std_dev()),
                           _.set_compact_table(_.compact_table()),
-                          _.set_compact_table_count(_.compact_table_count()),
-                          _.set_sequence_table(_.sequence_table()),
-                          _.set_sequence_table_count(_.sequence_table_count()));
+                          _.set_compact_table_count(_.compact_table_count()));
                   })(_, _, _),
                   _(_, _),
                   _(_));
@@ -17393,16 +16442,6 @@
             [_, _] = _.useState(!0),
             [_, _] = _.useState(_?.dropout_pct()?.toFixed(0) || "0"),
             [_, _] = _.useState(!0),
-            [_, _] = _.useState(_?.sequence_table()),
-            [_, _] = _.useState(_?.sort_sequence() || !1),
-            [_, _] = _.useState(_?.sequence_min_length()?.toFixed(0) || "0"),
-            [_, _] = _.useState(!0),
-            [_, _] = _.useState(
-              _?.sequence_prefix_frequency()?.toFixed(0) || "0",
-            ),
-            [_, _] = _.useState(!0),
-            [_, _] = _.useState(_?.sequence_table_count()?.toFixed(0) || "0"),
-            [_, _] = _.useState(!0),
             [_, _] = _.useState(_?.table_full_sample() || !1),
             [_, _] = _.useState(_?.other_project_id() > 0),
             [_, _] = _.useState(_?.other_project_id()?.toString() || "0"),
@@ -17443,22 +16482,6 @@
                     _.set_compact_table_count(parseInt(_)),
                   ) || _),
                 (_ =
-                  _(_, _.sequence_table(), () => _.set_sequence_table(_)) || _),
-                (_ =
-                  _(_, _.sort_sequence(), () => _.set_sort_sequence(_)) || _),
-                (_ =
-                  _(_, _.sequence_min_length()?.toString() || "0", () =>
-                    _.set_sequence_min_length(parseInt(_)),
-                  ) || _),
-                (_ =
-                  _(_, _.sequence_prefix_frequency()?.toString() || "0", () =>
-                    _.set_sequence_prefix_frequency(parseInt(_)),
-                  ) || _),
-                (_ =
-                  _(_, _.sequence_table_count()?.toString() || "0", () =>
-                    _.set_sequence_table_count(parseInt(_)),
-                  ) || _),
-                (_ =
                   _(_, _.table_full_sample(), () =>
                     _.set_table_full_sample(_),
                   ) || _),
@@ -17488,7 +16511,7 @@
                   ) || _));
             }),
               _ && _(_);
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
           const _ = 0 == _,
             _ = (_, _, _) => {
               _(_),
@@ -17529,11 +16552,6 @@
               case 1:
                 _ = (0, _._)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_CompactTable_Desc",
-                );
-                break;
-              case 6:
-                _ = (0, _._)(
-                  "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceTable_Desc",
                 );
                 break;
               case 2:
@@ -17587,12 +16605,6 @@
               },
               {
                 label: (0, _._)(
-                  "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceTable",
-                ),
-                value: 6,
-              },
-              {
-                label: (0, _._)(
                   "#SteamLearn_Config_DataSource_Input_Preprocess_NormAuto",
                 ),
                 value: 2,
@@ -17625,8 +16637,7 @@
             _ = 3 == _?.preprocessing_type() || 5 == _?.preprocessing_type(),
             _ = 7 == _?.preprocessing_type(),
             _ = 4 == _?.preprocessing_type(),
-            _ = 1 == _?.preprocessing_type(),
-            _ = 6 == _?.preprocessing_type();
+            _ = 1 == _?.preprocessing_type();
           return (0, _.jsxs)("div", {
             className: _.ProjectConfigDataSourceElementRouting,
             children: [
@@ -17904,114 +16915,6 @@
                             (0, _.jsx)("div", {
                               className: _.Label,
                               children: (0, _._)(
-                                "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceTableName",
-                              ),
-                            }),
-                            (0, _.jsx)("input", {
-                              type: "text",
-                              className: _.ValueInput,
-                              disabled: !1,
-                              value: _,
-                              onChange: (_) => _(_.target.value),
-                            }),
-                          ],
-                        }),
-                      _ &&
-                        0 != _.input() &&
-                        (0, _.jsxs)("div", {
-                          className: _.PreprocessingOptions,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.Label,
-                              children: (0, _._)(
-                                "#SteamLearn_Config_DataSource_Input_Preprocess_TableCount",
-                              ),
-                            }),
-                            (0, _.jsx)("input", {
-                              type: "text",
-                              className: (0, _._)(
-                                _.ValueInput,
-                                !_ && _.Invalid,
-                              ),
-                              disabled: !1,
-                              value: _,
-                              onChange: (_) => _(_.target.value, _, _),
-                            }),
-                          ],
-                        }),
-                      _ &&
-                        0 != _.input() &&
-                        (0, _.jsxs)("div", {
-                          className: _.PreprocessingOptions,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.Label,
-                              children: (0, _._)(
-                                "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceMinLength",
-                              ),
-                            }),
-                            (0, _.jsx)("input", {
-                              type: "text",
-                              className: (0, _._)(
-                                _.ValueInput,
-                                !_ && _.Invalid,
-                              ),
-                              disabled: !1,
-                              value: _,
-                              onChange: (_) => _(_.target.value, _, _),
-                            }),
-                          ],
-                        }),
-                      _ &&
-                        0 != _.input() &&
-                        (0, _.jsxs)("div", {
-                          className: _.PreprocessingOptions,
-                          children: [
-                            (0, _.jsx)("label", {
-                              htmlFor: "editsort",
-                              children: (0, _._)(
-                                "#SteamLearn_Config_DataSource_Input_Preprocess_SequenceSort",
-                              ),
-                            }),
-                            (0, _.jsx)("input", {
-                              type: "checkbox",
-                              _: "editsort",
-                              checked: _,
-                              onChange: () => _(!_),
-                            }),
-                          ],
-                        }),
-                      _ &&
-                        0 != _.input() &&
-                        (0, _.jsxs)("div", {
-                          className: _.PreprocessingOptions,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.Label,
-                              children: (0, _._)(
-                                "#SteamLearn_Config_DataSource_Input_Preprocess_SequencePrefixRemoveThreshold",
-                              ),
-                            }),
-                            (0, _.jsx)("input", {
-                              type: "text",
-                              className: (0, _._)(
-                                _.ValueInput,
-                                !_ && _.Invalid,
-                              ),
-                              disabled: !1,
-                              value: _,
-                              onChange: (_) => _(_.target.value, _, _),
-                            }),
-                          ],
-                        }),
-                      (_ || _) &&
-                        0 != _.input() &&
-                        (0, _.jsxs)("div", {
-                          className: _.PreprocessingOptions,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.Label,
-                              children: (0, _._)(
                                 "#SteamLearn_Config_DataSource_Input_Preprocess_CompactTableName",
                               ),
                             }),
@@ -18024,7 +16927,7 @@
                             }),
                           ],
                         }),
-                      (_ || _) &&
+                      _ &&
                         0 != _.input() &&
                         (0, _.jsxs)("div", {
                           className: _.PreprocessingOptions,
@@ -18047,7 +16950,7 @@
                             }),
                           ],
                         }),
-                      (_ || _) &&
+                      _ &&
                         0 != _.input() &&
                         (0, _.jsxs)("div", {
                           className: _.PreprocessingOptions,
@@ -18678,7 +17581,7 @@
                         );
                         if (
                           (console.log(_.Body().toObject()),
-                          _.BIsValid() && 1 == _.GetEResult())
+                          _.BIsValid() && _.GetEResult() == _._)
                         ) {
                           let _ = [];
                           for (const _ of _.Body().outputs()) {
@@ -18964,188 +17867,6 @@
                   }),
                 })
           );
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.FlowNode, _.BatchNormalizationNode, _.Keras),
-            children: [
-              (0, _.jsx)(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Title,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TitleText,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Title_BatchNormalization",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.NodeID,
-                    children: _.node_id(),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.EditGear,
-                    onClick: () => _(!0),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Delete,
-                    onClick: () =>
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_Node",
-                          ),
-                          strDescription: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_NodeDetails",
-                          ),
-                          onOK: () => _(_, _.node_id()),
-                        }),
-                        window,
-                      ),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.TitleUnderBar,
-              }),
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: (0, _.jsx)("div", {
-                  className: _.CenterSection,
-                  children:
-                    _.comment().length > 0 &&
-                    (0, _.jsx)("div", {
-                      className: _.Comment,
-                      children: _.comment(),
-                    }),
-                }),
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
-          _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_.bVisible, _.msgNode]);
-          return (0, _.jsxs)(_._, {
-            active: _.bVisible,
-            onDismiss: () => _.fnSetPopupVisible(!1),
-            modalClassName: "NodeEditDialog",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.NodeHeader,
-                children: [
-                  (0, _._)("#SteamLearn_Config_Node_Title_BatchNormalization"),
-                  (0, _.jsx)("div", {
-                    className: _.SubHeader,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Tooltip_BatchNormalization",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.NodeBody,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)("#SteamLearn_Config_Node_Comment"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_CommentDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
-                    },
-                    children: (0, _._)("#SteamLearn_Confirm"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                    children: (0, _._)("#SteamLearn_Cancel"),
-                  }),
-                ],
-              }),
-            ],
-          });
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
@@ -20024,7 +18745,7 @@
             _.useEffect(() => {
               setTimeout(() => {
                 for (const _ of _.project_nodes())
-                  15 == _.type() && _(_(_.node_id()));
+                  _.type() == _ && _(_(_.node_id()));
               }, 0.1);
             }, [_, _]),
             (0, _.jsxs)("div", {
@@ -20581,780 +19302,6 @@
               ],
             })
           );
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = (0, _._)(),
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector()),
-            _ = _.filter((_, _) => _ % 2 == 0),
-            _ = _.filter((_, _) => _ % 2 == 1);
-          _.useEffect(() => {
-            setTimeout(() => {
-              for (const _ of _.project_nodes())
-                7 == _.type() && _(_(_.node_id()));
-            }, 0.1);
-          }, [_, _]);
-          const _ = Math.max(78, 20 * _.length);
-          let _ = "";
-          switch (_.conditional_extract().extract_filter_type()) {
-            case 1:
-              _ = (0, _._)(
-                "#SteamLearn_Config_Node_ConditionalExtract_FilterType_Random",
-              );
-              break;
-            case 2:
-              _ = (0, _._)(
-                "#SteamLearn_Config_Node_ConditionalExtract_FilterType_AppID",
-              );
-              break;
-            case 4:
-              _ = (0, _._)(
-                "#SteamLearn_Config_Node_ConditionalExtract_FilterType_AppIDFeatured",
-              );
-              break;
-            case 7:
-              _ = (0, _._)(
-                "#SteamLearn_Config_Node_ConditionalExtract_FilterType_First",
-              );
-          }
-          const _ =
-            2 == _.conditional_extract().extract_filter_type() ||
-            4 == _.conditional_extract().extract_filter_type();
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _.FlowNode,
-              _.ConditionalExtractNode,
-              _.Preprocessing,
-            ),
-            children: [
-              (0, _.jsx)(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Title,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TitleText,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Title_ConditionalExtract",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.NodeID,
-                    children: _.node_id(),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.EditGear,
-                    onClick: () => _(!0),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Delete,
-                    onClick: () =>
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_Node",
-                          ),
-                          strDescription: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_NodeDetails",
-                          ),
-                          onOK: () => _(_, _.node_id()),
-                        }),
-                        window,
-                      ),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.TitleUnderBar,
-              }),
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: (0, _.jsxs)("div", {
-                  className: _.CenterSection,
-                  children: [
-                    _.comment().length > 0 &&
-                      (0, _.jsx)("div", {
-                        className: _.Comment,
-                        children: _.comment(),
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_FilterType",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: _,
-                        }),
-                      ],
-                    }),
-                    _ &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_Age",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children: _.conditional_extract()
-                              .filter_info()
-                              .appid_release_recency_months(),
-                          }),
-                        ],
-                      }),
-                    _ &&
-                      2 == _.conditional_extract().extract_weight_type() &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_BiasFactor",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children:
-                              _.conditional_extract()
-                                .weight_info()
-                                .appid_release_recency_bias()
-                                ?.toFixed(2) || "0",
-                          }),
-                        ],
-                      }),
-                    _ &&
-                      3 == _.conditional_extract().extract_weight_type() &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_Input",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children:
-                              _.conditional_extract()
-                                .weight_info()
-                                .input_number()
-                                ?.toFixed(0) || "0",
-                          }),
-                        ],
-                      }),
-                    _ &&
-                      3 == _.conditional_extract().extract_weight_type() &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_InputStr",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children:
-                              _.conditional_extract()
-                                .weight_info()
-                                .input_strength()
-                                ?.toFixed(2) || "0",
-                          }),
-                        ],
-                      }),
-                    _ &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTable",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children: _.conditional_extract().compact_table(),
-                          }),
-                        ],
-                      }),
-                    _ &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_ExtractedCompactTable",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children:
-                              _.conditional_extract().extracted_compact_table(),
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(((_ + 1) / (_.length + 1)) * (_ - 24)),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Right,
-                    _: _,
-                    style: {
-                      top: _ + 24,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            _ = _.msgNode
-              .connectors()
-              .filter((_) => _.is_input_connector()).length,
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(__webpack_require__.toString()),
-            [_, _] = _.useState(
-              _.msgNode.conditional_extract().extract_filter_type(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.conditional_extract().extract_weight_type(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode
-                .conditional_extract()
-                .filter_info()
-                .appid_release_recency_months()
-                ?.toString() || "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode
-                .conditional_extract()
-                .weight_info()
-                .appid_release_recency_bias()
-                ?.toFixed(2) || "0",
-            ),
-            [_, _] = _.useState(
-              _.msgNode
-                .conditional_extract()
-                .weight_info()
-                .input_number()
-                ?.toFixed(0) || "1",
-            ),
-            [_, _] = _.useState(
-              _.msgNode
-                .conditional_extract()
-                .weight_info()
-                .input_strength()
-                ?.toFixed(2) || "1.00",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.conditional_extract().compact_table(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.conditional_extract().extracted_compact_table(),
-            );
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(__webpack_require__.toString()),
-              _(_.msgNode.conditional_extract().extract_filter_type()),
-              _(_.msgNode.conditional_extract().extract_weight_type()),
-              _(
-                _.msgNode
-                  .conditional_extract()
-                  .filter_info()
-                  .appid_release_recency_months()
-                  ?.toString() || "0",
-              ),
-              _(
-                _.msgNode
-                  .conditional_extract()
-                  .weight_info()
-                  .appid_release_recency_bias()
-                  ?.toFixed(2) || "0",
-              ),
-              _(
-                _.msgNode
-                  .conditional_extract()
-                  .weight_info()
-                  .input_number()
-                  ?.toFixed(0) || "1",
-              ),
-              _(
-                _.msgNode
-                  .conditional_extract()
-                  .weight_info()
-                  .input_strength()
-                  ?.toFixed(2) || "1.00",
-              ),
-              _(_.msgNode.conditional_extract().compact_table()),
-              _(_.msgNode.conditional_extract().extracted_compact_table());
-          }, [_.bVisible, _.msgNode, _]);
-          let _ = [
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_ConditionalExtract_FilterType_All",
-                ),
-                value: 6,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_ConditionalExtract_FilterType_Random",
-                ),
-                value: 1,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_ConditionalExtract_FilterType_AppID",
-                ),
-                value: 2,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_ConditionalExtract_FilterType_AppIDFeatured",
-                ),
-                value: 4,
-              },
-              {
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_ConditionalExtract_FilterType_First",
-                ),
-                value: 7,
-              },
-            ],
-            _ = [];
-          switch (_) {
-            case 6:
-              _.push({
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_ConditionalExtract_WeightType_Input",
-                ),
-                value: 3,
-              });
-              break;
-            case 2:
-            case 4:
-              _.push({
-                label: (0, _._)(
-                  "#SteamLearn_Config_Node_ConditionalExtract_WeightType_Input",
-                ),
-                value: 3,
-              }),
-                _.push({
-                  label: (0, _._)(
-                    "#SteamLearn_Config_Node_ConditionalExtract_WeightType_AppIDRecency",
-                  ),
-                  value: 2,
-                });
-          }
-          const _ = 2 == _ || 4 == _,
-            _ = 1 == _,
-            _ = _ && 2 == _,
-            _ = !_ && 3 == _,
-            _ = !_ && 7 != _;
-          return (0, _.jsxs)(_._, {
-            active: _.bVisible,
-            onDismiss: () => _.fnSetPopupVisible(!1),
-            modalClassName: "NodeEditDialog",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.NodeHeader,
-                children: [
-                  (0, _._)("#SteamLearn_Config_Node_Title_ConditionalExtract"),
-                  (0, _.jsx)("div", {
-                    className: _.SubHeader,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Tooltip_ConditionalExtract",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.NodeBody,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)("#SteamLearn_Config_Node_Comment"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_CommentDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_ConditionalExtract_NumInputs",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_ConditionalExtract_NumInputsDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 1, 5),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_ConditionalExtract_FilterType",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_ConditionalExtract_FilterTypeDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetValue: () => _,
-                        fnSetValue: (_) => _(parseInt(_)),
-                        options: _,
-                      }),
-                      _ &&
-                        (0, _.jsx)(_, {
-                          label: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_Age",
-                          ),
-                          labelTooltip: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_AgeDesc",
-                          ),
-                          smallLabel: !0,
-                          dontUpdateProject: !0,
-                          fnGetInitialValue: () => _,
-                          fnValidateValue: (_) => _(_, 0, 360),
-                          fnSetValue: (_) => _(_),
-                        }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _.Separator,
-                    }),
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: _.NodeOptionBlock,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.NodeOptionHeader,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_WeightType",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.NodeOptionDesc,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_WeightTypeDesc",
-                          ),
-                        }),
-                        (0, _.jsx)(_, {
-                          dontUpdateProject: !0,
-                          fnGetValue: () => _,
-                          fnSetValue: (_) => _(parseInt(_)),
-                          options: _,
-                        }),
-                        _ &&
-                          (0, _.jsx)(_, {
-                            label: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_BiasFactor",
-                            ),
-                            labelTooltip: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_BiasFactorDesc",
-                            ),
-                            smallLabel: !0,
-                            dontUpdateProject: !0,
-                            fnGetInitialValue: () => _,
-                            digitCount: 2,
-                            fnValidateValue: (_) => _(_, 0, 1),
-                            fnSetValue: (_) => _(_),
-                          }),
-                        _ &&
-                          (0, _.jsx)(_, {
-                            label: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_Input",
-                            ),
-                            labelTooltip: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_InputDesc",
-                            ),
-                            smallLabel: !0,
-                            dontUpdateProject: !0,
-                            fnGetInitialValue: () => _,
-                            fnValidateValue: (_) =>
-                              _(
-                                _,
-                                1,
-                                _.msgNode
-                                  .connectors()
-                                  .filter((_) => _.is_input_connector())
-                                  .length - 1,
-                              ),
-                            fnSetValue: (_) => _(_),
-                          }),
-                        _ &&
-                          (0, _.jsx)(_, {
-                            label: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_InputStr",
-                            ),
-                            labelTooltip: (0, _._)(
-                              "#SteamLearn_Config_Node_ConditionalExtract_AppID_InputStrDesc",
-                            ),
-                            smallLabel: !0,
-                            dontUpdateProject: !0,
-                            fnGetInitialValue: () => _,
-                            digitCount: 2,
-                            fnValidateValue: (_) => _(_, 0, 20),
-                            fnSetValue: (_) => _(_),
-                          }),
-                      ],
-                    }),
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _.Separator,
-                    }),
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: _.NodeOptionBlock,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.NodeOptionHeader,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTable",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.NodeOptionDesc,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTableDesc",
-                          ),
-                        }),
-                        (0, _.jsx)(_, {
-                          label: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTable",
-                          ),
-                          labelTooltip: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_CompactTableDesc",
-                          ),
-                          smallLabel: !0,
-                          dontUpdateProject: !0,
-                          fnGetInitialValue: () => _,
-                          fnValidateValue: (_) => _(_, _),
-                          fnSetValue: (_) => _(_),
-                        }),
-                        (0, _.jsx)(_, {
-                          label: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_ExtractedCompactTable",
-                          ),
-                          labelTooltip: (0, _._)(
-                            "#SteamLearn_Config_Node_ConditionalExtract_AppID_ExtractedCompactTableDesc",
-                          ),
-                          smallLabel: !0,
-                          dontUpdateProject: !0,
-                          fnGetInitialValue: () => _,
-                          fnValidateValue: (_) => !_(_, _, _.msgNode),
-                          fnSetValue: (_) => _(_),
-                        }),
-                      ],
-                    }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () => {
-                      const _ = parseInt(_);
-                      if (_ > _) {
-                        const _ = 3 * (_ - _),
-                          _ = _(_, _);
-                        for (let _ = 0; _ < _; _++) {
-                          const _ = _ % 3 != 0;
-                          let _ = new _();
-                          _.set_connector_id(_[_]),
-                            _.set_is_input_connector(!_),
-                            _.msgNode.add_connectors(_);
-                        }
-                      } else if (_ < _) {
-                        let _ = _.msgNode
-                          .connectors()
-                          .filter((_) => _.is_input_connector())
-                          .slice(_)
-                          .map((_) => _.connector_id());
-                        __webpack_require__.push(
-                          ..._.msgNode
-                            .connectors()
-                            .filter((_) => !_.is_input_connector())
-                            .slice(2 * _)
-                            .map((_) => _.connector_id()),
-                        );
-                        for (let _ of _.project_nodes())
-                          for (let _ of _.connectors())
-                            _.set_linked_connector_ids(
-                              _.linked_connector_ids().filter(
-                                (_) => !__webpack_require__.includes(_),
-                              ),
-                            );
-                        let _ = _.msgNode
-                          .connectors()
-                          .filter(
-                            (_) =>
-                              !__webpack_require__.includes(_.connector_id()),
-                          );
-                        _.msgNode.set_connectors(_);
-                      }
-                      _.msgNode.set_comment(_),
-                        _.msgNode
-                          .conditional_extract()
-                          .set_extract_filter_type(_),
-                        _.msgNode
-                          .conditional_extract()
-                          .set_extract_weight_type(_),
-                        _.msgNode
-                          .conditional_extract()
-                          .filter_info()
-                          .set_appid_release_recency_months(parseInt(_)),
-                        _.msgNode
-                          .conditional_extract()
-                          .weight_info()
-                          .set_appid_release_recency_bias(parseFloat(_)),
-                        _.msgNode
-                          .conditional_extract()
-                          .weight_info()
-                          .set_input_number(parseInt(_)),
-                        _.msgNode
-                          .conditional_extract()
-                          .weight_info()
-                          .set_input_strength(parseFloat(_)),
-                        _.msgNode.conditional_extract().set_compact_table(_),
-                        _.msgNode
-                          .conditional_extract()
-                          .set_extracted_compact_table(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                    children: (0, _._)("#SteamLearn_Confirm"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                    children: (0, _._)("#SteamLearn_Cancel"),
-                  }),
-                ],
-              }),
-            ],
-          });
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
@@ -23831,7 +21778,7 @@
             _ != _ && _(_),
               setTimeout(() => {
                 for (const _ of _.project_nodes())
-                  12 == _.type() && _(_(_.node_id()));
+                  _.type() == _ && _(_(_.node_id()));
               }, 0.1);
           }, [_, _, _]);
           const _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -25098,7 +23045,7 @@
           _.useEffect(() => {
             setTimeout(() => {
               for (const _ of _.project_nodes())
-                21 == _.type() && _(_(_.node_id()));
+                _.type() == _ && _(_(_.node_id()));
             }, 0.1);
           }, [_, _]);
           const _ = Math.max(78, 20 * _.length);
@@ -26574,141 +24521,135 @@
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           let _ = 0,
-            _ = [],
-            _ = !1;
+            _ = [];
           for (const _ of _.data_source_element_usages())
             _.input() == _.input().input_num() &&
-              ((_ += 1),
-              _.push(_.data_element_path()),
-              6 == _.preprocessing_type() && (_ = !0));
-          return (
-            _ && (_ = 1),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_.FlowNode, _.InputNode, _.Preprocessing),
-              children: [
-                (0, _.jsx)(_, {
-                  bVisible: _,
-                  fnSetPopupVisible: _,
-                  msgNode: _.data.msgNode,
-                }),
-                _.map((_, _) => {
-                  const _ = Math.floor(
-                      ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                    ),
-                    _ = _(_.connector_id());
-                  return (0, _.jsx)(
-                    _._,
-                    {
-                      type: "target",
-                      position: _._.Top,
-                      _: _,
-                      style: {
-                        left: _,
-                      },
-                      children: (0, _.jsx)("div", {
-                        className: _.ConnectorID,
-                        children: _.connector_id(),
-                      }),
+              ((_ += 1), _.push(_.data_element_path()));
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.FlowNode, _.InputNode, _.Preprocessing),
+            children: [
+              (0, _.jsx)(_, {
+                bVisible: _,
+                fnSetPopupVisible: _,
+                msgNode: _.data.msgNode,
+              }),
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return (0, _.jsx)(
+                  _._,
+                  {
+                    type: "target",
+                    position: _._.Top,
+                    _: _,
+                    style: {
+                      left: _,
                     },
-                    _,
-                  );
-                }),
-                (0, _.jsxs)("div", {
-                  className: _.Title,
+                    children: (0, _.jsx)("div", {
+                      className: _.ConnectorID,
+                      children: _.connector_id(),
+                    }),
+                  },
+                  _,
+                );
+              }),
+              (0, _.jsxs)("div", {
+                className: _.Title,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.TitleText,
+                    children: (0, _._)(
+                      "#SteamLearn_Config_Node_Title_Input",
+                      _.data.msgNode.input().input_num(),
+                    ),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.NodeID,
+                    children: _.node_id(),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.EditGear,
+                    onClick: () => _(!0),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: _.TitleUnderBar,
+              }),
+              (0, _.jsx)("div", {
+                className: _.Body,
+                children: (0, _.jsxs)("div", {
+                  className: _.CenterSection,
                   children: [
-                    (0, _.jsx)("div", {
-                      className: _.TitleText,
-                      children: (0, _._)(
-                        "#SteamLearn_Config_Node_Title_Input",
-                        _.data.msgNode.input().input_num(),
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.NodeID,
-                      children: _.node_id(),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _.EditGear,
-                      onClick: () => _(!0),
-                    }),
-                  ],
-                }),
-                (0, _.jsx)("div", {
-                  className: _.TitleUnderBar,
-                }),
-                (0, _.jsx)("div", {
-                  className: _.Body,
-                  children: (0, _.jsxs)("div", {
-                    className: _.CenterSection,
-                    children: [
-                      _.comment() &&
+                    _.comment() &&
+                      (0, _.jsx)("div", {
+                        className: _.Comment,
+                        children: _.comment(),
+                      }),
+                    !_.comment() &&
+                      _ &&
+                      (0, _.jsx)("div", {
+                        className: _.Comment,
+                        children: _,
+                      }),
+                    (0, _.jsxs)("div", {
+                      className: _.LabelValue,
+                      children: [
                         (0, _.jsx)("div", {
-                          className: _.Comment,
-                          children: _.comment(),
+                          className: _.Label,
+                          children: (0, _._)("#SteamLearn_Config_Node_Width"),
                         }),
-                      !_.comment() &&
-                        _ &&
                         (0, _.jsx)("div", {
-                          className: _.Comment,
+                          className: _.Value,
                           children: _,
                         }),
+                      ],
+                    }),
+                    _.input().inference_iterate() &&
                       (0, _.jsxs)("div", {
                         className: _.LabelValue,
                         children: [
                           (0, _.jsx)("div", {
                             className: _.Label,
-                            children: (0, _._)("#SteamLearn_Config_Node_Width"),
+                            children: (0, _._)(
+                              "#SteamLearn_Config_Node_Input_InferenceIterate",
+                            ),
                           }),
                           (0, _.jsx)("div", {
                             className: _.Value,
-                            children: _,
+                            children: (0, _._)("#SteamLearn_Yes"),
                           }),
                         ],
                       }),
-                      _.input().inference_iterate() &&
-                        (0, _.jsxs)("div", {
-                          className: _.LabelValue,
-                          children: [
-                            (0, _.jsx)("div", {
-                              className: _.Label,
-                              children: (0, _._)(
-                                "#SteamLearn_Config_Node_Input_InferenceIterate",
-                              ),
-                            }),
-                            (0, _.jsx)("div", {
-                              className: _.Value,
-                              children: (0, _._)("#SteamLearn_Yes"),
-                            }),
-                          ],
-                        }),
-                    ],
-                  }),
+                  ],
                 }),
-                _.map((_, _) => {
-                  const _ = Math.floor(
-                      ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                    ),
-                    _ = _(_.connector_id());
-                  return (0, _.jsx)(
-                    _._,
-                    {
-                      type: "source",
-                      position: _._.Bottom,
-                      _: _,
-                      style: {
-                        left: _,
-                      },
-                      children: (0, _.jsx)("div", {
-                        className: _.ConnectorID,
-                        children: _.connector_id(),
-                      }),
+              }),
+              _.map((_, _) => {
+                const _ = Math.floor(
+                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                  ),
+                  _ = _(_.connector_id());
+                return (0, _.jsx)(
+                  _._,
+                  {
+                    type: "source",
+                    position: _._.Bottom,
+                    _: _,
+                    style: {
+                      left: _,
                     },
-                    _,
-                  );
-                }),
-              ],
-            })
-          );
+                    children: (0, _.jsx)("div", {
+                      className: _.ConnectorID,
+                      children: _.connector_id(),
+                    }),
+                  },
+                  _,
+                );
+              }),
+            ],
+          });
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
@@ -26832,7 +24773,7 @@
             _.useEffect(() => {
               setTimeout(() => {
                 for (const _ of _.project_nodes())
-                  14 == _.type() && _(_(_.node_id()));
+                  _.type() == _ && _(_(_.node_id()));
               }, 0.1);
             }, [_, _]),
             (0, _.jsxs)("div", {
@@ -27610,282 +25551,6 @@
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return (0, _.jsxs)("div", {
-            className: (0, _._)(_.FlowNode, _.MaxPooling1DNode, _.Keras),
-            children: [
-              (0, _.jsx)(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Title,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TitleText,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Title_MaxPooling1D",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.NodeID,
-                    children: _.node_id(),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.EditGear,
-                    onClick: () => _(!0),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Delete,
-                    onClick: () =>
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_Node",
-                          ),
-                          strDescription: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_NodeDetails",
-                          ),
-                          onOK: () => _(_, _.node_id()),
-                        }),
-                        window,
-                      ),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.TitleUnderBar,
-              }),
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: (0, _.jsxs)("div", {
-                  className: _.CenterSection,
-                  children: [
-                    _.comment().length > 0 &&
-                      (0, _.jsx)("div", {
-                        className: _.Comment,
-                        children: _.comment(),
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_MaxPooling1D_PoolSize",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: _.max_pooling_1d().pool_size(),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_MaxPooling1D_Strides",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: _.max_pooling_1d().strides(),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(
-              _.msgNode.max_pooling_1d().pool_size().toString(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.max_pooling_1d()?.strides().toString() || "1",
-            );
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.max_pooling_1d().pool_size().toString()),
-              _(_.msgNode.max_pooling_1d().strides().toString());
-          }, [_]);
-          return (0, _.jsxs)(_._, {
-            active: _.bVisible,
-            onDismiss: () => _.fnSetPopupVisible(!1),
-            modalClassName: "NodeEditDialog",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.NodeHeader,
-                children: [
-                  (0, _._)("#SteamLearn_Config_Node_Title_MaxPooling1D"),
-                  (0, _.jsx)("div", {
-                    className: _.SubHeader,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Tooltip_MaxPooling1D",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.NodeBody,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)("#SteamLearn_Config_Node_Comment"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_CommentDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_MaxPooling1D_PoolSize",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_MaxPooling1D_PoolSizeDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_MaxPooling1D_Strides",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_MaxPooling1D_StridesDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 1, void 0),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _.msgNode.max_pooling_1d().set_pool_size(parseInt(_)),
-                        _.msgNode.max_pooling_1d().set_strides(parseInt(_)),
-                        _.msgNode.set_comment(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                    children: (0, _._)("#SteamLearn_Confirm"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                    children: (0, _._)("#SteamLearn_Cancel"),
-                  }),
-                ],
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return (0, _.jsxs)("div", {
             className: (0, _._)(_.FlowNode, _.NamedInferenceNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
@@ -28091,188 +25756,6 @@
                         _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
-                    },
-                    children: (0, _._)("#SteamLearn_Confirm"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                    children: (0, _._)("#SteamLearn_Cancel"),
-                  }),
-                ],
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.FlowNode, _.NormalizeNode, _.Preprocessing),
-            children: [
-              (0, _.jsx)(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Title,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TitleText,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Title_Normalize",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.NodeID,
-                    children: _.node_id(),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.EditGear,
-                    onClick: () => _(!0),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Delete,
-                    onClick: () =>
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_Node",
-                          ),
-                          strDescription: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_NodeDetails",
-                          ),
-                          onOK: () => _(_, _.node_id()),
-                        }),
-                        window,
-                      ),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.TitleUnderBar,
-              }),
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: (0, _.jsx)("div", {
-                  className: _.CenterSection,
-                  children:
-                    _.comment().length > 0 &&
-                    (0, _.jsx)("div", {
-                      className: _.Comment,
-                      children: _.comment(),
-                    }),
-                }),
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(_.msgNode.comment());
-          _.useEffect(() => {
-            _(_.msgNode.comment());
-          }, [_.bVisible, _.msgNode]);
-          return (0, _.jsxs)(_._, {
-            active: _.bVisible,
-            onDismiss: () => _.fnSetPopupVisible(!1),
-            modalClassName: "NodeEditDialog",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.NodeHeader,
-                children: [
-                  (0, _._)("#SteamLearn_Config_Node_Title_Normalize"),
-                  (0, _.jsx)("div", {
-                    className: _.SubHeader,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Tooltip_Normalize",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.NodeBody,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)("#SteamLearn_Config_Node_Comment"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_CommentDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -29087,434 +26570,6 @@
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
           return (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _.FlowNode,
-              _.SequenceSplitNode,
-              _.Preprocessing,
-            ),
-            children: [
-              (0, _.jsx)(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Title,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TitleText,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Title_SequenceSplit",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.NodeID,
-                    children: _.node_id(),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.EditGear,
-                    onClick: () => _(!0),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Delete,
-                    onClick: () =>
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_Node",
-                          ),
-                          strDescription: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_NodeDetails",
-                          ),
-                          onOK: () => _(_, _.node_id()),
-                        }),
-                        window,
-                      ),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.TitleUnderBar,
-              }),
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: (0, _.jsxs)("div", {
-                  className: _.CenterSection,
-                  children: [
-                    _.comment().length > 0 &&
-                      (0, _.jsx)("div", {
-                        className: _.Comment,
-                        children: _.comment(),
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_SequenceSplit_HeadSplitChance",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: `${_.sequence_split().head_split_chance()}%`,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_SequenceSplit_MidSplitChance",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: `${_.sequence_split().mid_split_chance()}%`,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_SequenceSplit_TailSplitChance",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: `${_.sequence_split().tail_split_chance()}%`,
-                        }),
-                      ],
-                    }),
-                    _.sequence_split().sequence_table_name().length > 0 &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_SequenceSplit_SequenceTableName",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children: _.sequence_split().sequence_table_name(),
-                          }),
-                        ],
-                      }),
-                    _.sequence_split().compact_table_name()?.length > 0 &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_SequenceSplit_CompactTableName",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children: _.sequence_split().compact_table_name(),
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(
-              _.msgNode.sequence_split().head_split_chance().toString(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.sequence_split().mid_split_chance().toString(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.sequence_split().tail_split_chance().toString(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.sequence_split().sequence_table_name(),
-            ),
-            [_, _] = _.useState(
-              _.msgNode.sequence_split()?.compact_table_name() || "",
-            );
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.sequence_split().head_split_chance().toString()),
-              _(_.msgNode.sequence_split().mid_split_chance().toString()),
-              _(_.msgNode.sequence_split().tail_split_chance().toString()),
-              _(_.msgNode.sequence_split().sequence_table_name()),
-              _(_.msgNode.sequence_split().compact_table_name());
-          }, [_.bVisible, _.msgNode]);
-          return (0, _.jsxs)(_._, {
-            active: _.bVisible,
-            onDismiss: () => _.fnSetPopupVisible(!1),
-            modalClassName: "NodeEditDialog",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.NodeHeader,
-                children: [
-                  (0, _._)("#SteamLearn_Config_Node_Title_SequenceSplit"),
-                  (0, _.jsx)("div", {
-                    className: _.SubHeader,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Tooltip_SequenceSplit",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.NodeBody,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)("#SteamLearn_Config_Node_Comment"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_CommentDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_HeadSplitChance",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_HeadSplitChance_Desc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 0, 100),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_MidSplitChance",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_MidSplitChance_Desc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 0, 100),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_TailSplitChance",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_TailSplitChance_Desc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 0, 100),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_SequenceTableName",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_SequenceTableName_Desc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, _),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_CompactTableName",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_SequenceSplit_CompactTableName_Desc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, _),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _.msgNode.set_comment(_),
-                        _.msgNode
-                          .sequence_split()
-                          .set_head_split_chance(parseInt(_)),
-                        _.msgNode
-                          .sequence_split()
-                          .set_mid_split_chance(parseInt(_)),
-                        _.msgNode
-                          .sequence_split()
-                          .set_tail_split_chance(parseInt(_)),
-                        _.msgNode.sequence_split().set_sequence_table_name(_),
-                        _.msgNode.sequence_split().set_compact_table_name(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                    children: (0, _._)("#SteamLearn_Confirm"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                    children: (0, _._)("#SteamLearn_Cancel"),
-                  }),
-                ],
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return (0, _.jsxs)("div", {
             className: (0, _._)(_.FlowNode, _.ShuffleNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
@@ -29755,7 +26810,7 @@
           _.useEffect(() => {
             setTimeout(() => {
               for (const _ of _.project_nodes())
-                10 == _.type() && _(_(_.node_id()));
+                _.type() == _ && _(_(_.node_id()));
             }, 0.1);
           }, [_, _]);
           const _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -32702,13 +29757,12 @@
                             (function (_, _) {
                               for (const _ of _.project_nodes())
                                 if (
-                                  14 == __webpack_require__.type() &&
+                                  __webpack_require__.type() == _ &&
                                   __webpack_require__.kmeans().name() == _
                                 )
                                   return !0;
                               return !1;
-                            })(_, _) ||
-                            _(_, _),
+                            })(_, _),
                           fnSetValue: (_) => _(_),
                         }),
                       ],
@@ -32835,719 +29889,6 @@
               }),
             ],
           });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.FlowNode, _.TransformerNode, _.Keras),
-            children: [
-              (0, _.jsx)(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Title,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TitleText,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Title_Transformer",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.NodeID,
-                    children: _.node_id(),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.EditGear,
-                    onClick: () => _(!0),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Delete,
-                    onClick: () =>
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_Node",
-                          ),
-                          strDescription: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_NodeDetails",
-                          ),
-                          onOK: () => _(_, _.node_id()),
-                        }),
-                        window,
-                      ),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.TitleUnderBar,
-              }),
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: (0, _.jsxs)("div", {
-                  className: _.CenterSection,
-                  children: [
-                    _.comment().length > 0 &&
-                      (0, _.jsx)("div", {
-                        className: _.Comment,
-                        children: _.comment(),
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_Transformer_NumHeads",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: _.transformer().num_heads(),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: _.transformer().feedforward_size(),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_Transformer_DropoutPct",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: `${_.transformer().dropout_pct()}%`,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_Transformer_InternalBlocks",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: `${_.transformer().num_internal_blocks()}`,
-                        }),
-                      ],
-                    }),
-                    0 != _.transformer().regularization() &&
-                      (0, _.jsxs)("div", {
-                        className: _.LabelValue,
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.Label,
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_DenseStack_Regularization",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _.Value,
-                            children: _(_.transformer().regularization()),
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.transformer().num_heads().toString()),
-            [_, _] = _.useState(
-              _.msgNode.transformer().feedforward_size()?.toString() || "1024",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.transformer().dropout_pct()?.toString() || "30",
-            ),
-            [_, _] = _.useState(
-              _.msgNode.transformer().num_internal_blocks()?.toString() || "2",
-            ),
-            [_, _] = _.useState(_.msgNode.transformer().regularization());
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.transformer().num_heads().toString()),
-              _(
-                _.msgNode.transformer().feedforward_size()?.toString() ||
-                  "1024",
-              ),
-              _(_.msgNode.transformer().dropout_pct()?.toString() || "30"),
-              _(
-                _.msgNode.transformer().num_internal_blocks()?.toString() ||
-                  "2",
-              ),
-              _(_.msgNode.transformer().regularization());
-          }, [_]);
-          let _ = [
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Regularization_None",
-              ),
-              value: 0,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Regularization_L1",
-              ),
-              value: 1,
-            },
-            {
-              label: (0, _._)(
-                "#SteamLearn_Config_Node_Train_Regularization_L2",
-              ),
-              value: 2,
-            },
-          ];
-          return (0, _.jsxs)(_._, {
-            active: _.bVisible,
-            onDismiss: () => _.fnSetPopupVisible(!1),
-            modalClassName: "NodeEditDialog",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.NodeHeader,
-                children: [
-                  (0, _._)("#SteamLearn_Config_Node_Title_Transformer"),
-                  (0, _.jsx)("div", {
-                    className: _.SubHeader,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Tooltip_Transformer",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.NodeBody,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)("#SteamLearn_Config_Node_Comment"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_CommentDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_NumHeads",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_NumHeadsDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 1, 20),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_FeedforwardSizeDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 16, 10240),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_DropoutPct",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_DropoutPctDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 1, 99),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_InternalBlocks",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_Transformer_InternalBlocksDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 1, 16),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.Option,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.OptionTitle,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_DenseStack_Regularization",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.OptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_DenseStack_RegularizationDesc",
-                        ),
-                      }),
-                      (0, _.jsx)("select", {
-                        className: _.InputSelect,
-                        value: _,
-                        onChange: (_) => _(parseInt(_.target.value)),
-                        children: _.map((_) =>
-                          (0, _.jsx)(
-                            "option",
-                            {
-                              value: _.value,
-                              children: _.label,
-                            },
-                            _.value,
-                          ),
-                        ),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _.msgNode.transformer().set_num_heads(parseInt(_)),
-                        _.msgNode
-                          .transformer()
-                          .set_feedforward_size(parseInt(_)),
-                        _.msgNode.transformer().set_dropout_pct(parseInt(_)),
-                        _.msgNode
-                          .transformer()
-                          .set_num_internal_blocks(parseInt(_)),
-                        _.msgNode.transformer().set_regularization(_),
-                        _.msgNode.set_comment(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                    children: (0, _._)("#SteamLearn_Confirm"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                    children: (0, _._)("#SteamLearn_Cancel"),
-                  }),
-                ],
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(!1),
-            _ = _.data.msgNode,
-            _ = _.connectors().filter((_) => _.is_input_connector()),
-            _ = _.connectors().filter((_) => !_.is_input_connector());
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.FlowNode, _.WeightedAverageNode, _.Keras),
-            children: [
-              (0, _.jsx)(_, {
-                bVisible: _,
-                fnSetPopupVisible: _,
-                msgNode: _,
-              }),
-              _.map((_, _) => {
-                if (1 == _ && !_.weighted_average().use_weights()) return null;
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "target",
-                    position: _._.Top,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Title,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.TitleText,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Title_WeightedAverage",
-                    ),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.NodeID,
-                    children: _.node_id(),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.EditGear,
-                    onClick: () => _(!0),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Delete,
-                    onClick: () =>
-                      (0, _._)(
-                        (0, _.jsx)(_._, {
-                          strTitle: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_Node",
-                          ),
-                          strDescription: (0, _._)(
-                            "#SteamLearn_Config_Node_Delete_NodeDetails",
-                          ),
-                          onOK: () => _(_, _.node_id()),
-                        }),
-                        window,
-                      ),
-                  }),
-                ],
-              }),
-              (0, _.jsx)("div", {
-                className: _.TitleUnderBar,
-              }),
-              (0, _.jsx)("div", {
-                className: _.Body,
-                children: (0, _.jsxs)("div", {
-                  className: _.CenterSection,
-                  children: [
-                    _.comment().length > 0 &&
-                      (0, _.jsx)("div", {
-                        className: _.Comment,
-                        children: _.comment(),
-                      }),
-                    (0, _.jsxs)("div", {
-                      className: _.LabelValue,
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _.Label,
-                          children: (0, _._)(
-                            "#SteamLearn_Config_Node_WeightedAverage_Axis",
-                          ),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.Value,
-                          children: _.weighted_average().axis(),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              }),
-              _.map((_, _) => {
-                const _ = Math.floor(
-                    ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
-                  ),
-                  _ = _(_.connector_id());
-                return (0, _.jsx)(
-                  _._,
-                  {
-                    type: "source",
-                    position: _._.Bottom,
-                    _: _,
-                    style: {
-                      left: _,
-                    },
-                    children: (0, _.jsx)("div", {
-                      className: _.ConnectorID,
-                      children: _.connector_id(),
-                    }),
-                  },
-                  _,
-                );
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { msgWorkingProjectConfig: _ } = _(),
-            [_, _] = _.useState(_.msgNode.comment()),
-            [_, _] = _.useState(_.msgNode.weighted_average().axis().toString()),
-            [_, _] = _.useState(_.msgNode.weighted_average().use_weights());
-          _.useEffect(() => {
-            _(_.msgNode.comment()),
-              _(_.msgNode.weighted_average().axis().toString()),
-              _(_.msgNode.weighted_average().use_weights());
-          }, [_.bVisible, _.msgNode]);
-          return (0, _.jsxs)(_._, {
-            active: _.bVisible,
-            onDismiss: () => _.fnSetPopupVisible(!1),
-            modalClassName: "NodeEditDialog",
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.NodeHeader,
-                children: [
-                  (0, _._)("#SteamLearn_Config_Node_Title_WeightedAverage"),
-                  (0, _.jsx)("div", {
-                    className: _.SubHeader,
-                    children: (0, _._)(
-                      "#SteamLearn_Config_Node_Tooltip_WeightedAverage",
-                    ),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.NodeBody,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)("#SteamLearn_Config_Node_Comment"),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_CommentDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        isText: !0,
-                        dontUpdateProject: !0,
-                        width: 200,
-                        fnGetInitialValue: () => _,
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_WeightedAverage_Axis",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_WeightedAverage_AxisDesc",
-                        ),
-                      }),
-                      (0, _.jsx)(_, {
-                        dontUpdateProject: !0,
-                        isText: !0,
-                        fnGetInitialValue: () => _,
-                        fnValidateValue: (_) => _(_, 0, void 0),
-                        fnSetValue: (_) => _(_),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _.NodeOptionBlock,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionHeader,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_WeightedAverage_UseWeights",
-                        ),
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.NodeOptionDesc,
-                        children: (0, _._)(
-                          "#SteamLearn_Config_Node_WeightedAverage_UseWeightsDesc",
-                        ),
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _.CheckboxWithLabel,
-                        children: [
-                          (0, _.jsx)("input", {
-                            type: "checkbox",
-                            _: "useweights",
-                            checked: _,
-                            onChange: () => _(!_),
-                          }),
-                          (0, _.jsx)("label", {
-                            htmlFor: "useweights",
-                            children: (0, _._)(
-                              "#SteamLearn_Config_Node_WeightedAverage_UseWeights",
-                            ),
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _.Separator,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _.msgNode.weighted_average().set_axis(parseInt(_)),
-                        _.msgNode.weighted_average().set_use_weights(_),
-                        _.msgNode.set_comment(_),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
-                    },
-                    children: (0, _._)("#SteamLearn_Confirm"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: () => _.fnSetPopupVisible(!1),
-                    children: (0, _._)("#SteamLearn_Cancel"),
-                  }),
-                ],
-              }),
-            ],
-          });
         };
       var _ = __webpack_require__("chunkid");
       const _ = () =>
@@ -33591,22 +29932,15 @@
                 nodeOnehot: _,
                 nodeExplode: _,
                 nodeConditionalSwap: _,
-                nodeConditionalExtract: _,
                 nodeKMeans: _,
                 nodeTextVectorization: _,
-                nodeBatchNormalization: _,
-                nodeNormalize: _,
                 nodeNamedInference: _,
                 nodeDot: _,
                 nodeExtract: _,
                 nodeConv1D: _,
-                nodeMaxPooling1D: _,
                 nodeFlatten: _,
                 nodeGlobalMaxPooling1D: _,
                 nodeGlobalAvgPooling1D: _,
-                nodeTransformer: _,
-                nodeSequenceSplit: _,
-                nodeWeightedAverage: _,
                 nodeTokenMask: _,
                 nodeTokenTransformer: _,
                 nodeMaskedHead: _,
@@ -33660,8 +29994,7 @@
                     case 8:
                       (_ = 2), (_ = 1), _.concatenate().set_axis(0);
                       break;
-                    case 15:
-                    case 33:
+                    case _:
                       (_ = 2), (_ = 1);
                       break;
                     case 2:
@@ -33690,7 +30023,7 @@
                     case 9:
                       (_ = 1), (_ = 1), _.shuffle().set_exclude_zeroes(!1);
                       break;
-                    case 10:
+                    case _:
                       (_ = 2),
                         (_ = 2),
                         _.synced_shuffle().set_exclude_zeroes(!1);
@@ -33701,7 +30034,7 @@
                         _.onehot().set_width(16),
                         _.onehot().set_compact_table("");
                       break;
-                    case 12:
+                    case _:
                       (_ = 1), (_ = 0);
                       break;
                     case 27:
@@ -33721,11 +30054,6 @@
                       (_ = 1), (_ = 1), _.row_extract().set_row(0);
                       break;
                     case 38:
-                    case 17:
-                    case 18:
-                    case 24:
-                    case 25:
-                    case 31:
                       (_ = 1), (_ = 1);
                       break;
                     case 39:
@@ -33755,34 +30083,7 @@
                     case 4:
                       (_ = 1), (_ = 1), _.dropout().set_dropout_pct(30);
                       break;
-                    case 7:
-                      (_ = 1),
-                        (_ = 2),
-                        _.conditional_extract().set_extract_filter_type(1),
-                        _.conditional_extract().set_extract_weight_type(0),
-                        _.conditional_extract()
-                          .filter_info()
-                          .set_appid_release_recency_months(0),
-                        _.conditional_extract()
-                          .filter_info()
-                          .set_appid_publisher_id(0),
-                        _.conditional_extract()
-                          .filter_info()
-                          .set_appid_featured_tag_id(0),
-                        _.conditional_extract()
-                          .filter_info()
-                          .set_appid_theme_tag_id(0),
-                        _.conditional_extract()
-                          .weight_info()
-                          .set_appid_release_recency_bias(0),
-                        _.conditional_extract()
-                          .weight_info()
-                          .set_input_number(0),
-                        _.conditional_extract()
-                          .weight_info()
-                          .set_input_strength(0);
-                      break;
-                    case 14:
+                    case _:
                       (_ = 1),
                         (_ = 1),
                         _.kmeans().set_num_clusters(10),
@@ -33804,14 +30105,14 @@
                     case 19:
                       (_ = 1), (_ = 1), _.named_inference().set_name("");
                       break;
+                    case 17:
+                      (_ = 1), (_ = 1);
+                      break;
                     case 20:
                       (_ = 2), (_ = 1), _.dot().set_normalize(!1);
                       break;
-                    case 30:
-                      (_ = 2),
-                        (_ = 1),
-                        _.weighted_average().set_axis(0),
-                        _.weighted_average().set_use_weights(!0);
+                    case 24:
+                      (_ = 1), (_ = 1);
                       break;
                     case 22:
                       (_ = 1),
@@ -33821,35 +30122,11 @@
                         _.conv_1d().set_strides(1),
                         _.conv_1d().set_activation(1);
                       break;
-                    case 23:
-                      (_ = 1),
-                        (_ = 1),
-                        _.max_pooling_1d().set_pool_size(3),
-                        _.max_pooling_1d().set_strides(1);
+                    case 25:
+                    case 31:
+                      (_ = 1), (_ = 1);
                       break;
-                    case 26:
-                      (_ = 1),
-                        (_ = 1),
-                        _.transformer().set_num_heads(2),
-                        _.transformer().set_feedforward_size(1024),
-                        _.transformer().set_dropout_pct(30);
-                      break;
-                    case 28:
-                      (_ = 1),
-                        (_ = 1),
-                        _.time_distributed_dense().set_width(1024),
-                        _.time_distributed_dense().set_activation(1);
-                      break;
-                    case 29:
-                      (_ = 1),
-                        (_ = 2),
-                        _.sequence_split().set_head_split_chance(0),
-                        _.sequence_split().set_mid_split_chance(100),
-                        _.sequence_split().set_tail_split_chance(0),
-                        _.sequence_split().set_sequence_table_name(""),
-                        _.sequence_split().set_compact_table_name("");
-                      break;
-                    case 21: {
+                    case _: {
                       _.extract().set_input_type(0),
                         _.extract().set_mode(0),
                         _.extract().set_exclusion(0),
@@ -33909,6 +30186,9 @@
                         _.token_transformer().set_transformer_heads(4),
                         _.token_transformer().set_transformer_dropout_pct(30),
                         _.token_transformer().set_is_causal(!1);
+                      break;
+                    case 33:
+                      (_ = 2), (_ = 1);
                       break;
                     case 35:
                       (_ = 1),
@@ -34101,22 +30381,12 @@
                               }),
                               (0, _.jsx)(_, {
                                 fnDragStart: _,
-                                eType: 15,
+                                eType: _,
                                 strName: (0, _._)(
                                   "#SteamLearn_Config_Node_Title_Combine",
                                 ),
                                 strTooltip: (0, _._)(
                                   "#SteamLearn_Config_Node_Tooltip_Combine",
-                                ),
-                              }),
-                              (0, _.jsx)(_, {
-                                fnDragStart: _,
-                                eType: 7,
-                                strName: (0, _._)(
-                                  "#SteamLearn_Config_Node_Title_ConditionalExtract",
-                                ),
-                                strTooltip: (0, _._)(
-                                  "#SteamLearn_Config_Node_Tooltip_ConditionalExtract",
                                 ),
                               }),
                               (0, _.jsx)(_, {
@@ -34131,7 +30401,7 @@
                               }),
                               (0, _.jsx)(_, {
                                 fnDragStart: _,
-                                eType: 12,
+                                eType: _,
                                 strName: (0, _._)(
                                   "#SteamLearn_Config_Node_Title_Explode",
                                 ),
@@ -34141,7 +30411,7 @@
                               }),
                               (0, _.jsx)(_, {
                                 fnDragStart: _,
-                                eType: 21,
+                                eType: _,
                                 strName: (0, _._)(
                                   "#SteamLearn_Config_Node_Title_Extract",
                                 ),
@@ -34161,7 +30431,7 @@
                               }),
                               (0, _.jsx)(_, {
                                 fnDragStart: _,
-                                eType: 14,
+                                eType: _,
                                 strName: (0, _._)(
                                   "#SteamLearn_Config_Node_Title_KMeans",
                                 ),
@@ -34177,16 +30447,6 @@
                                 ),
                                 strTooltip: (0, _._)(
                                   "#SteamLearn_Config_Node_Tooltip_Logic",
-                                ),
-                              }),
-                              (0, _.jsx)(_, {
-                                fnDragStart: _,
-                                eType: 18,
-                                strName: (0, _._)(
-                                  "#SteamLearn_Config_Node_Title_Normalize",
-                                ),
-                                strTooltip: (0, _._)(
-                                  "#SteamLearn_Config_Node_Tooltip_Normalize",
                                 ),
                               }),
                               (0, _.jsx)(_, {
@@ -34211,22 +30471,12 @@
                               }),
                               (0, _.jsx)(_, {
                                 fnDragStart: _,
-                                eType: 10,
+                                eType: _,
                                 strName: (0, _._)(
                                   "#SteamLearn_Config_Node_Title_SyncedShuffle",
                                 ),
                                 strTooltip: (0, _._)(
                                   "#SteamLearn_Config_Node_Tooltip_SyncedShuffle",
-                                ),
-                              }),
-                              (0, _.jsx)(_, {
-                                fnDragStart: _,
-                                eType: 29,
-                                strName: (0, _._)(
-                                  "#SteamLearn_Config_Node_Title_SequenceSplit",
-                                ),
-                                strTooltip: (0, _._)(
-                                  "#SteamLearn_Config_Node_Tooltip_SequenceSplit",
                                 ),
                               }),
                               (0, _.jsx)(_, {
@@ -34425,16 +30675,6 @@
                               }),
                               (0, _.jsx)(_, {
                                 fnDragStart: _,
-                                eType: 23,
-                                strName: (0, _._)(
-                                  "#SteamLearn_Config_Node_Title_MaxPooling1D",
-                                ),
-                                strTooltip: (0, _._)(
-                                  "#SteamLearn_Config_Node_Tooltip_MaxPooling1D",
-                                ),
-                              }),
-                              (0, _.jsx)(_, {
-                                fnDragStart: _,
                                 eType: 19,
                                 strName: (0, _._)(
                                   "#SteamLearn_Config_Node_Title_NamedInference",
@@ -34471,26 +30711,6 @@
                                 ),
                                 strTooltip: (0, _._)(
                                   "#SteamLearn_Config_Node_Tooltip_TokenTransformer",
-                                ),
-                              }),
-                              (0, _.jsx)(_, {
-                                fnDragStart: _,
-                                eType: 26,
-                                strName: (0, _._)(
-                                  "#SteamLearn_Config_Node_Title_Transformer",
-                                ),
-                                strTooltip: (0, _._)(
-                                  "#SteamLearn_Config_Node_Tooltip_Transformer",
-                                ),
-                              }),
-                              (0, _.jsx)(_, {
-                                fnDragStart: _,
-                                eType: 30,
-                                strName: (0, _._)(
-                                  "#SteamLearn_Config_Node_Title_WeightedAverage",
-                                ),
-                                strTooltip: (0, _._)(
-                                  "#SteamLearn_Config_Node_Tooltip_WeightedAverage",
                                 ),
                               }),
                             ],
@@ -34536,7 +30756,7 @@
         switch (_) {
           case 8:
             return "nodeConcat";
-          case 15:
+          case _:
             return "nodeCombine";
           case 2:
             return "nodeDense";
@@ -34552,46 +30772,34 @@
             return "nodeTrain";
           case 9:
             return "nodeShuffle";
-          case 10:
+          case _:
             return "nodeSyncedShuffle";
           case 11:
             return "nodeOnehot";
-          case 12:
+          case _:
             return "nodeExplode";
           case 13:
             return "nodeConditionalSwap";
-          case 7:
-            return "nodeConditionalExtract";
-          case 14:
+          case _:
             return "nodeKMeans";
           case 16:
             return "nodeTextVectorization";
           case 17:
             return "nodeBatchNormalization";
-          case 18:
-            return "nodeNormalize";
           case 19:
             return "nodeNamedInference";
           case 20:
             return "nodeDot";
-          case 21:
+          case _:
             return "nodeExtract";
           case 22:
             return "nodeConv1D";
-          case 23:
-            return "nodeMaxPooling1D";
           case 24:
             return "nodeFlatten";
           case 25:
             return "nodeGlobalMaxPooling1D";
           case 31:
             return "nodeGlobalAvgPooling1D";
-          case 26:
-            return "nodeTransformer";
-          case 29:
-            return "nodeSequenceSplit";
-          case 30:
-            return "nodeWeightedAverage";
           case 32:
             return "nodeTokenMask";
           case 34:
@@ -35864,7 +32072,7 @@
                           _.Get().GetServiceTransport(),
                           _,
                         );
-                        _.BIsValid() && 1 == _.GetEResult() && _(_.Body());
+                        _.BIsValid() && _.GetEResult() == _._ && _(_.Body());
                       })(_),
                     children: "Inference",
                   }),
@@ -36696,14 +32904,6 @@
                                             "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_TextVectorizationAdapt",
                                           ),
                                         }),
-                                      9 == _.metadata_phase() &&
-                                        (0, _.jsx)("div", {
-                                          className: _.MetadataEntryType,
-                                          children: (0, _._)(
-                                            "#SteamLearn_Status_Fetch_Status_InProgress_Metadata_SequenceTables",
-                                            _.metadata_phase_name(),
-                                          ),
-                                        }),
                                       (0, _.jsx)("div", {
                                         className: (0, _._)(
                                           _.ProgressBar,
@@ -37016,7 +33216,7 @@
                   _,
                 );
                 _ &&
-                  1 == _.GetEResult() &&
+                  _.GetEResult() == _._ &&
                   _._.invalidateQueries({
                     queryKey: [_, _],
                   }),
@@ -38103,7 +34303,7 @@
                       _(_, _),
                         _(_, _),
                         __webpack_require__.BIsValid() &&
-                          1 == __webpack_require__.GetEResult() &&
+                          __webpack_require__.GetEResult() == _._ &&
                           (await new Promise((_) => setTimeout(_, 250)),
                           await _(_.project_id(), _.published_version()),
                           await new Promise((_) => setTimeout(_, 250)),

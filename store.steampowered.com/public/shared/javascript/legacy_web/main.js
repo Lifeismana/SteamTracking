@@ -1,17 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10643173";
+var CLSTAMP = "10651257";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      385: (e, t, n) => {
+      550: (e, t, n) => {
         n.d(t, { pR: () => r, Vz: () => i, nh: () => l });
         var a,
           r,
           i,
-          o = n(621);
+          o = n(909);
         class s {
           m_ActiveInputId;
           m_ActiveInputTimeout;
@@ -231,7 +231,7 @@ var CLSTAMP = "10643173";
           }
         }
       },
-      527: (e, t, n) => {
+      119: (e, t, n) => {
         function a(e, t) {
           return (function (e, t) {
             const n = e.findIndex(t);
@@ -240,7 +240,7 @@ var CLSTAMP = "10643173";
         }
         n.d(t, { x9: () => a });
       },
-      246: (e, t, n) => {
+      126: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -255,9 +255,9 @@ var CLSTAMP = "10643173";
         }
         n.d(t, { o: () => a });
       },
-      621: (e, t, n) => {
+      909: (e, t, n) => {
         n.d(t, { l: () => r });
-        var a = n(527);
+        var a = n(119);
         class r {
           m_vecCallbacks = [];
           Register(e) {
@@ -288,7 +288,7 @@ var CLSTAMP = "10643173";
           }
         }
       },
-      910: (e, t, n) => {
+      702: (e, t, n) => {
         function a(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
@@ -301,7 +301,7 @@ var CLSTAMP = "10643173";
         }
         n.d(t, { Dp: () => r });
       },
-      491: (e, t, n) => {
+      339: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -345,7 +345,7 @@ var CLSTAMP = "10643173";
     var t = a[e];
     if (void 0 !== t) return t.exports;
     var i = (a[e] = { exports: {} });
-    return n[e](i, i.exports, r), i.exports;
+    return n[e].call(i.exports, i, i.exports, r), i.exports;
   }
   (r.m = n),
     (r.n = (e) => {
@@ -363,9 +363,13 @@ var CLSTAMP = "10643173";
       Promise.all(Object.keys(r.f).reduce((t, n) => (r.f[n](e, t), t), []))),
     (r.u = (e) =>
       "javascript/legacy_web/" +
-      { 97: "desktop", 616: "gamepad" }[e] +
+      ({ 97: "desktop", 616: "gamepad" }[e] || e) +
       ".js?contenthash=" +
-      { 97: "579927c0aab0a8227055", 616: "2e2e62153ec50843e5f5" }[e]),
+      {
+        97: "4966c6d52fc0c5834b33",
+        322: "5e2f67168b0e323c4988",
+        616: "949e74ee200c504dc2fb",
+      }[e]),
     (r.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=19ddf4825411373681e0"),
     (r.g = (function () {
@@ -575,12 +579,12 @@ var CLSTAMP = "10643173";
         n = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  r(491);
+  r(339);
   var i = r(669),
     o = r.n(i),
     s = r(629),
-    c = r(385),
-    l = r(246);
+    c = r(550),
+    l = r(126);
   let p = [
     { index: 0, type: c.pR.OK, category: "action" },
     { index: 1, type: c.pR.CANCEL, category: "action" },
@@ -635,11 +639,12 @@ var CLSTAMP = "10643173";
     }
   }
   (0, s.Cg)([l.o], u.prototype, "PollGamepads", null);
-  var d = r(910);
+  var d = r(702);
   async function _(e) {
-    const { InitializeGamepadNavigation: t } = await r
-      .e(616)
-      .then(r.bind(r, 375));
+    const { InitializeGamepadNavigation: t } = await Promise.all([
+      r.e(322),
+      r.e(616),
+    ]).then(r.bind(r, 444));
     t(e);
   }
   r.p.endsWith("shared/") || (r.p = r.p + "shared/"),
@@ -653,7 +658,7 @@ var CLSTAMP = "10643173";
             ? (async function () {
                 const { InitializeForDesktop: e } = await r
                   .e(97)
-                  .then(r.bind(r, 294));
+                  .then(r.bind(r, 494));
                 e();
               })()
             : e.RegisterForGamepadDetected(() => _(e));

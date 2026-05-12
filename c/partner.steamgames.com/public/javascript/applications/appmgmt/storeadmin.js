@@ -703,7 +703,21 @@
         _: () => _,
         _: () => _,
       });
-      const _ = [1, 2, 11, 3, 4, 10, 5, 6, 13, 14, 15, 16],
+      var _ = __webpack_require__("chunkid");
+      const _ = [
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+          _._._,
+        ],
         _ = [
           "#msg_action_details",
           "#msg_preload_now",
@@ -718,49 +732,62 @@
         ];
       function _(_) {
         switch (_) {
-          case 1:
+          case _._._:
             return "Now Available";
-          case 2:
+          case _._._:
             return "Weekend Deal";
-          case 3:
+          case _._._:
             return "Pre-Purchase";
-          case 4:
+          case _._._:
             return "Play Now";
-          case 6:
+          case _._._:
             return "General";
-          case 7:
+          case _._._:
             return "on Demo Quit";
-          case 9:
+          case _._._:
             return "EJ's Korner";
-          case 5:
+          case _._._:
             return "Pre-Load Now";
-          case 8:
+          case _._._:
             return "Gifting Message";
-          case 10:
+          case _._._:
             return "Major Update";
-          case 11:
+          case _._._:
             return "Midweek Deal";
-          case 12:
+          case _._._:
             return "Daily Deal";
-          case 13:
+          case _._._:
             return "New DLC";
-          case 14:
+          case _._._:
             return "Free Weekend";
-          case 15:
+          case _._._:
             return "Sale Page";
-          case 16:
+          case _._._:
             return "Play Test";
+          case _._._:
           default:
             return "--------------------";
         }
       }
+      _._._,
+        _._._,
+        _._._,
+        _._._,
+        _._._,
+        _._._,
+        _._._,
+        _._._,
+        _._._,
+        _._._,
+        _._._;
       var _;
       function _(_, _) {
         let _ = !0;
         return (
-          1 == _
+          _ == _._._
             ? (_ = _?.startsWith("https://store.steamchina.com/"))
-            : 2 == _ && (_ = _?.startsWith("https://store.steampowered.com/")),
+            : _ == _._._ &&
+              (_ = _?.startsWith("https://store.steampowered.com/")),
           _
         );
       }
@@ -811,6 +838,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppIDToPaymentPartners = new Map();
@@ -839,11 +868,11 @@
         }
         GetInfoForStoreItem(_, _) {
           switch (_) {
-            case 0:
+            case _._._:
               return this.GetInfoForApp(_);
-            case 1:
+            case _._._:
               return this.GetInfoForPackage(_);
-            case 2:
+            case _._._:
               return this.GetInfoForBundle(_);
             default:
               return null;
@@ -851,11 +880,11 @@
         }
         BHasInfoForStoreItem(_, _) {
           switch (_) {
-            case 0:
+            case _._._:
               return this.BHasInfoForApp(_);
-            case 1:
+            case _._._:
               return this.BHasInfoForPackage(_);
-            case 2:
+            case _._._:
               return this.BHasInfoForBundle(_);
             default:
               return !1;
@@ -893,11 +922,11 @@
         }
         async LoadStoreItemPartnerInfo(_, _) {
           switch (_) {
-            case 0:
+            case _._._:
               return this.LoadAppPartnerInfo(_);
-            case 1:
+            case _._._:
               return this.LoadPackagePartnerInfo(_);
-            case 2:
+            case _._._:
               return this.LoadBundlePartnerInfo(_);
             default:
               return null;
@@ -916,7 +945,7 @@
                 params: _,
                 withCredentials: !0,
               });
-            if (200 == _?.status && 1 == _.data?.success)
+            if (200 == _?.status && _.data?.success == _._)
               return _
                 ? (this.m_mapAppIDToPaymentPartners.set(_, _.data.partnerinfo),
                   this.m_mapAppIDToPaymentPartners.get(_))
@@ -957,7 +986,7 @@
         constructor() {}
       }
       function _(_) {
-        return _(_, 0);
+        return _(_, _._._);
       }
       function _(_) {
         return _(_._, (0, _._)(_));
@@ -982,7 +1011,9 @@
         return (
           (0, _.useEffect)(() => {
             if (_?.length > 0) {
-              const _ = _.map((_) => _.Get().LoadStoreItemPartnerInfo(_, 0));
+              const _ = _.map((_) =>
+                _.Get().LoadStoreItemPartnerInfo(_, _._._),
+              );
               Promise.all(_).then(() => {
                 const _ = new Map();
                 _.forEach((_) => {
@@ -1138,6 +1169,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1172,7 +1204,7 @@
           ]),
           [_] = (0, _._)(_?._, (0, _._)(_?.item_type), _._),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
-          _ = 12 != _?.GetAppType() ? _?.GetParentAppID() : void 0;
+          _ = _?.GetAppType() != _._._ ? _?.GetParentAppID() : void 0;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
@@ -1428,7 +1460,7 @@
             const _ = (0, _._)(_, _),
               _ = (0, _._)(_.ExtraAssetImg, _ && _.Selected);
             _ =
-              1 == _.usage
+              _.usage == _._
                 ? (0, _.jsx)(
                     "video",
                     {
@@ -2005,7 +2037,7 @@
         _.useEffect(() => {
           const _ = (_) => ({
             baseFilename: (0, _._)(_),
-            languages: (0, _._)(_) ? [0] : (0, _._)(_),
+            languages: (0, _._)(_) ? [_.Bhc] : (0, _._)(_),
           });
           _.SetExistingAssetGroups(_.map(_), _),
             _.SetOnlyAssetGroup(_ ? _(_) : null);
@@ -2059,10 +2091,10 @@
         return (
           _.useEffect(() => {
             const _ = _.map(async (_) => {
-              let _ = (0, _._)(_, !1, -1);
+              let _ = (0, _._)(_, !1, _.xPp);
               return (
-                _ || (_ = (0, _._)(_, !0, -1)),
-                (0, _._)(await (0, _._)((0, _._)(_?.url, _), 1 == _?.usage))
+                _ || (_ = (0, _._)(_, !0, _.xPp)),
+                (0, _._)(await (0, _._)((0, _._)(_?.url, _), _?.usage == _._))
               );
             });
             Promise.all(_).then(_);
@@ -2088,7 +2120,7 @@
           const _ = (0, _._)(_, !1);
           _ = _ ? [_] : [];
         } else {
-          const _ = 29 == _ ? 6 : 0,
+          const _ = _ == _.ZLm ? _.NFp : _.Bhc,
             _ = (0, _._)(_).sort((_, _) =>
               (function (_, _, _, _) {
                 if (null != _) {
@@ -2205,7 +2237,7 @@
                 (0, _.jsx)("div", {
                   className: _.StackedImageCtn,
                   children: _.map((_, _) =>
-                    1 == _.usage
+                    _.usage == _._
                       ? (0, _.jsx)(
                           "video",
                           {
@@ -2264,8 +2296,8 @@
                   _.append("name", (0, _._)(_)),
                   (0, _._)(_) &&
                     null != _ &&
-                    -1 != _ &&
-                    _.append("lang", (0, _._)(_));
+                    _ != _.xPp &&
+                    _.append("lang", (0, _.LgB)(_));
                 const _ = await fetch(_, {
                     method: "post",
                     body: _,
@@ -2333,6 +2365,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_bLockedToSpecificAsset;
@@ -2386,7 +2419,7 @@
               _.push(
                 (0, _._)(
                   "#ImageUpload_ReplaceLanguage",
-                  (0, _._)("#Language_" + (0, _._)(this.language)),
+                  (0, _._)("#Language_" + (0, _.LgB)(this.language)),
                 ),
               ),
             {
@@ -2440,7 +2473,7 @@
             return _.find((_) => _.sKey == this.m_rgCurrentImageOptionKey);
           }
           const _ = _.find(
-            (_) => _.groupName == (0, _._)(this.filename, -1).baseFilename,
+            (_) => _.groupName == (0, _._)(this.filename, _.xPp).baseFilename,
           );
           return _ || (1 == _.length ? _[0] : void 0);
         }
@@ -2459,12 +2492,12 @@
         }
         IsFileTypeSupported(_) {
           switch (_) {
-            case 1:
-            case 3:
-            case 10:
-            case 2:
-            case 4:
-            case 5:
+            case _._._:
+            case _._._:
+            case _._._:
+            case _._._:
+            case _._._:
+            case _._._:
               return !0;
             default:
               return !1;
@@ -2476,6 +2509,7 @@
         (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2608,11 +2642,11 @@
                   try {
                     const _ = await Promise.race([_, _.promise]);
                     _.set(_.nRequestId, {
-                      bSuccess: 1 == _,
+                      bSuccess: _ == _._,
                       uploadImage: _,
                       strGroupName: _,
                       elErrorMessage:
-                        1 == _
+                        _ == _._
                           ? void 0
                           : (0, _._)("#MediaConvert_InternalError"),
                     });
@@ -2658,7 +2692,7 @@
                 );
               if (_)
                 for (const [_, _] of _._(_, _))
-                  if (22 != _) {
+                  if (_ != _._) {
                     const _ = _.get(_);
                     _.delete(_), _?.(_);
                   }
@@ -2802,7 +2836,7 @@
             _.append("request_id", _.toString()),
             _.append("name", _),
             _.append("asset_type", "extra_asset_v2"),
-            -1 != _ && _.append("language", (0, _._)(_));
+            _ != _.xPp && _.append("language", (0, _.LgB)(_));
           const _ = await this.MakePost(
             this.m_urls.strCompleteConvert,
             _,
@@ -2890,7 +2924,7 @@
               _.push(
                 _(
                   this.m_onlyAssetGroup.baseFilename,
-                  _.language ?? 0,
+                  _.language ?? _.Bhc,
                   !0,
                   _.width,
                   _.height,
@@ -2900,8 +2934,11 @@
             else {
               const _ = (0, _._)(_.filename).baseFilename,
                 _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
-              _.push(_(_, _.language ?? 0, !0, _.width, _.height, _.file.size)),
-                _ != _ && _.push(_(_, -1, !0, _.width, _.height, _.file.size));
+              _.push(
+                _(_, _.language ?? _.Bhc, !0, _.width, _.height, _.file.size),
+              ),
+                _ != _ &&
+                  _.push(_(_, _.xPp, !0, _.width, _.height, _.file.size));
             }
           let _ = this.m_rgExistingAssetGroups ?? [],
             _ = this.m_rgImageSizes ?? [];
@@ -2928,7 +2965,7 @@
             }, new Map()),
             _ = [];
           for (const _ of _.keys()) {
-            const _ = _.get(_).filter((_) => -1 != _.language),
+            const _ = _.get(_).filter((_) => _.language != _.xPp),
               _ = new Set(_.map((_) => _.language)).size,
               _ =
                 _ > 1
@@ -3009,9 +3046,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1;
       function _(_) {
         return _ && !_(_);
       }
@@ -3056,40 +3096,40 @@
         switch (_) {
           case "mp4":
           case "webm":
-            return 1;
+            return _;
         }
-        return 0;
+        return _;
       }
-      function _(_, _ = 0, _ = 0) {
+      function _(_, _ = _.Bhc, _ = 0) {
         const _ = _(_, !1, _);
         return _ ? (0, _._)(_.url, _) : null;
       }
-      function _(_, _, _ = 0) {
+      function _(_, _, _ = _.Bhc) {
         if (!_) return;
         if (_(_))
           return {
             url: _.url,
-            usage: 0,
+            usage: _,
           };
         const _ = (function (_, _) {
           if (!_ || 0 == Object.keys(_).length) return null;
           if (1 == Object.keys(_).length) return Object.values(_)._(0);
-          let _ = _[(0, _._)(_)];
+          let _ = _[(0, _.LgB)(_)];
           if (_) return _;
-          const _ = 29 == _ ? 6 : 0;
-          return (_ = _[(0, _._)(_)]), _ || (-1 == _ ? _[0] : null);
+          const _ = _ == _.ZLm ? _.NFp : _.Bhc;
+          return (_ = _[(0, _.LgB)(_)]), _ || (_ == _.xPp ? _[0] : null);
         })(_.images, _);
         return _ ? _(_, _) : null;
       }
-      function _(_, _ = 0) {
+      function _(_, _ = _.Bhc) {
         if (!_) return;
         if (_(_)) return _.name;
-        const _ = _.alt_text?.[(0, _._)(_)];
+        const _ = _.alt_text?.[(0, _.LgB)(_)];
         return _;
       }
       function _(_) {
         return (
-          (_?.images && Object.keys(_.images).map((_) => (0, _._)(_))) ?? []
+          (_?.images && Object.keys(_.images).map((_) => (0, _.sfN)(_))) ?? []
         );
       }
       function _(_) {
@@ -3194,7 +3234,7 @@
           strActiveLanguage: _,
           mapValues: _,
           rctLanguageSelect: _,
-          rgLanguages: _.map(_._),
+          rgLanguages: _.map(_.sfN),
           rctHiddenInputs: _,
           setActiveLanguage: _,
         };
@@ -3269,7 +3309,7 @@
       });
       function _() {
         const _ = _.useContext(_);
-        return (0, _._)(_?.strActiveLanguage, 0);
+        return (0, _.sfN)(_?.strActiveLanguage, _.Bhc);
       }
       function _(_) {
         const {
@@ -3278,12 +3318,12 @@
             rctLanguageSelect: _,
             setActiveLanguage: _,
           } = _(_, [], null, null),
-          _ = (0, _._)(_, 0);
+          _ = (0, _.sfN)(_, _.Bhc);
         return (
           _.useEffect(() => {
             _._.Get().SetCurEditLanguage(_);
           }, [_]),
-          (0, _._)(_._.Get().GetCallback(), (_) => _((0, _._)(_))),
+          (0, _._)(_._.Get().GetCallback(), (_) => _((0, _.LgB)(_))),
           {
             strActiveLanguage: _,
             eActiveLang: _,
@@ -4786,7 +4826,7 @@
             addtlAttrs: _,
             addtlAttrsValues: _,
             closeModal: _,
-            view: _,
+            viewRef: _,
             from: _,
             _: _,
           } = _,
@@ -4794,43 +4834,31 @@
           _ = _.useRef(null),
           [_, _] = _.useState(_),
           _ = _.useCallback(() => {
-            const { state: _, dispatch: _ } = _,
-              _ = _ ? _.marks.color : _.marks.bgcolor;
-            if (!_) return void console.log("debug: no markType");
-            if (!_ || !_.startsWith("#") || 7 !== _.length)
-              return void console.log("debug: invalid color text: " + _);
-            if (_ < 0 || _ > _.doc.content.size || _ > _)
-              return void console.error("Invalid selection range:", _, _);
-            let _;
             try {
-              if (
-                ((_ = _.create({
-                  color: _,
-                  ..._,
-                })),
-                !_)
-              )
-                return void console.error(
-                  "Failed to create mark — mark is null",
+              const _ = _.current;
+              if (!_ || _.isDestroyed)
+                return void console.warn(
+                  "Editor view is destroyed; skipping color insert",
                 );
-            } catch (_) {
-              return void console.error("Failed to create color mark:", _);
-            }
-            let _ = _._;
-            _ === _
-              ? (_ = _.addStoredMark(_))
-              : ((_ = _.removeMark(_, _, _)),
-                (_ = _.addMark(_, _, _)),
-                (_ = _.setSelection(_._.create(_.doc, _)))),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "Dispatching transaction:",
-                  _.steps.map((_) => _.toJSON()),
-                  _,
-                  _,
-                );
-            try {
-              (_.docChanged || _.steps.length > 0) && __webpack_require__(_);
+              const { state: _, dispatch: _ } = _,
+                _ = _ ? _.marks.color : _.marks.bgcolor;
+              if (!_) return void console.log("debug: no markType");
+              if (!_ || !/^#[0-9a-fA-F]{6}$/.test(_))
+                return void console.log("debug: invalid color text: " + _);
+              const _ = Math.max(0, Math.min(_, _.doc.content.size));
+              if (_ > Math.max(0, Math.min(_, _.doc.content.size)))
+                return void console.error("Invalid selection range:", _, _);
+              const _ = _.create({
+                color: _,
+                ..._,
+              });
+              let _ = _._;
+              _ === _
+                ? (_ = _.addStoredMark(_))
+                : ((_ = _.removeMark(_, _, _)),
+                  (_ = _.addMark(_, _, _)),
+                  (_ = _.setSelection(_._.create(_.doc, _)))),
+                _(_.scrollIntoView());
             } catch (_) {
               console.error(_);
             } finally {
@@ -4887,9 +4915,11 @@
         (0, _._)(_, _);
         const [_, _] = (function (_, _, _) {
           const [_, _] = _.useState(void 0),
+            _ = _.useRef(null),
             _ = _.useCallback(
               (_) => {
-                const { state: _, dispatch: _ } = _,
+                _.current = _;
+                const { state: _ } = _,
                   _ = _.selection;
                 let { from: _, _: _, empty: _ } = _;
                 const _ = _ ? _.marks.color : _.marks.bgcolor;
@@ -4922,7 +4952,7 @@
                     _[_] = _;
                   }
                 _({
-                  view: _,
+                  viewRef: _,
                   strColor: _,
                   strTargetText: _,
                   bIsUpdate: _,
@@ -4934,10 +4964,13 @@
               },
               [_, _, _.marks.bgcolor, _.marks.color],
             ),
-            _ = _?.view,
             _ = _.useCallback(() => {
-              window.setTimeout(() => _.focus(), 1), _(void 0);
-            }, [_]);
+              const _ = _.current;
+              window.setTimeout(() => {
+                _ && !_.isDestroyed && _.focus();
+              }, 1),
+                _(void 0);
+            }, []);
           return [
             _,
             _ &&
@@ -5506,7 +5539,7 @@
             }
             var _;
             return _.current;
-          })((0, _._)(_)),
+          })((0, _.sfN)(_)),
           [_] = _.useState(() => new Map()),
           _ = _.useCallback(
             (_) => {
@@ -5534,7 +5567,7 @@
           _.useEffect(() => {
             _.current && _.current();
           }, [_, _]);
-        const _ = (0, _._)(_),
+        const _ = (0, _.sfN)(_),
           _ = "awards" != _,
           _ = _.useCallback(
             (_) =>
@@ -6086,7 +6119,7 @@
                     ? (0, _._)("#StoreAdmin_EditAltText_PlaceholderDecorative")
                     : (0, _._)(
                         "#StoreAdmin_EditAltText_Placeholder",
-                        (0, _._)(`#Language_${(0, _._)(_)}`),
+                        (0, _._)(`#Language_${(0, _.LgB)(_)}`),
                       ),
                   value: _ ? "" : _,
                   onChange: (_) => _(_.target.value, !1),
@@ -6263,12 +6296,12 @@
           { file: _, onCancel: _ } = _,
           { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = _(),
           _ = _.useCallback((_) => _?.replace(_, "_").toLowerCase() ?? "", [_]),
-          { baseFilename: _, language: _ } = (0, _._)(_.name, -1),
+          { baseFilename: _, language: _ } = (0, _._)(_.name, _.xPp),
           [_, _] = _.useState(() => _(_)),
           _ = _.useMemo(() => _(_), [_, _]),
           _ = (0, _._)(_.languages),
           _ = (function (_, _, _) {
-            return 1 == _?.length ? _[0] : -1 != _ ? _ : _;
+            return 1 == _?.length ? _[0] : _ != _.xPp ? _ : _;
           })(
             _.map((_) => _.data),
             _,
@@ -6284,7 +6317,7 @@
               _ = _.find((_) => (0, _._)(_) == _);
             if (!_) return;
             if ((0, _._)(_)) return _;
-            const _ = _.images?.[(0, _._)(_)];
+            const _ = _.images?.[(0, _.LgB)(_)];
             return _;
           });
         }, [_, _, _, _]);
@@ -6393,7 +6426,7 @@
                       (0, _.jsx)("img", {
                         src:
                           "name" in _
-                            ? (0, _._)(_, 0, _)
+                            ? (0, _._)(_, _.Bhc, _)
                             : (0, _._)((0, _._)(_, !1)?.url, _),
                         className: _.ImgPreview,
                       }),
@@ -6620,6 +6653,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.strSecondaryCategory
@@ -6740,7 +6774,7 @@
         if (_ && _ && _ && _) {
           const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: 34,
+              controllerType: _._,
               partial: !_,
               role: "presentation",
             }),
@@ -6764,7 +6798,7 @@
           if (_) {
             const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: 34,
+              controllerType: _._,
               partial: !_,
               role: "presentation",
             });
@@ -6801,7 +6835,7 @@
           if (_) {
             const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: 45,
+              controllerType: _._,
               partial: !_,
               role: "presentation",
             });
@@ -6852,7 +6886,7 @@
                 (0, _.jsx)(_, {
                   tagImage: (0, _.jsx)(_.pcV, {
                     className: _.SmallerSVG,
-                    controllerType: 32,
+                    controllerType: _._,
                     partial: !_,
                     role: "presentation",
                   }),
@@ -7949,7 +7983,7 @@
             asset_mtime: _,
           } = _,
           _ = _.useMemo(() => new Map(_), [_]),
-          _ = _.useMemo(() => Array.from(_.keys()).map(_._), [_]),
+          _ = _.useMemo(() => Array.from(_.keys()).map(_.sfN), [_]),
           {
             strActiveLanguage: _,
             mapValues: _,
@@ -8367,7 +8401,7 @@
           _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () =>
-              1 != _ && _
+              _ != _._ && _
                 ? _.filter((_) => _ != _).map((_) => {
                     const _ = _._.Get().GetApp(_);
                     return {
@@ -8378,7 +8412,7 @@
                 : [],
             [_, _, _],
           );
-        return _ && 1 != _
+        return _ && _ != _._
           ? (0, _.jsxs)("div", {
               className: _().ManualFeatures,
               children: [
@@ -8744,6 +8778,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
@@ -8915,7 +8950,7 @@
                   _ = await _().get(_, {
                     params: _,
                   });
-                if (1 != _?.data?.success)
+                if (_?.data?.success != _._)
                   throw (
                     "Fail to load DLC list for appid " +
                     _ +
@@ -8931,7 +8966,7 @@
           _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () =>
-              1 != _ && _
+              _ != _._ && _
                 ? _.filter((_) => _ != _).map((_) => {
                     const _ = _._.Get().GetApp(_);
                     return {
@@ -8942,7 +8977,7 @@
                 : [],
             [_, _, _],
           );
-        return _ && 1 != _
+        return _ && _ != _._
           ? (0, _.jsxs)("div", {
               className: _.SelectorRow,
               children: [
@@ -8971,6 +9006,7 @@
             });
       }
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9100,8 +9136,9 @@
             onSelected: _,
             parentAppID: _,
           } = _,
+          _ = _._._,
           [_, _] = _.useState(null),
-          [_] = (0, _._)(_?.appid, 0, {
+          [_] = (0, _._)(_?.appid, _, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -9130,7 +9167,7 @@
                         itemid: _,
                       });
                     },
-                    itemType: 0,
+                    itemType: _,
                     fnFilterID: (_) =>
                       -1 ==
                       __webpack_require__.findIndex(
@@ -9488,7 +9525,7 @@
               _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-            if (200 == _.status && 1 == _.data?.success)
+            if (200 == _.status && _.data?.success == _._)
               return (
                 console.log(`Proposal for package ${_} successfully rejected`),
                 this.m_rgMapProposal.delete(_),
@@ -9521,7 +9558,7 @@
               _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-            if (200 == _.status && 1 == _.data?.success)
+            if (200 == _.status && _.data?.success == _._)
               return (
                 console.log(
                   `Proposal for package ${_} successfully accepted`,
@@ -9590,20 +9627,25 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_release: !0,
       };
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)(),
+        _ = ((0, _._)(), (0, _._)());
       function _(_) {
         const _ = new Array();
         return (
-          _._.forEach((_) => {
+          _.forEach((_) => {
             _.proposed_prices.base_amounts.some(
               (_) => _.amount.currency_code == _,
             ) || _.push((0, _._)(_));
           }),
-          _._.forEach((_) => {
+          _.forEach((_) => {
             const _ = (0, _._)(_);
             _.proposed_prices.region_amounts.some((_) => _.name == _) ||
               _.push((0, _._)(_));
@@ -9660,16 +9702,8 @@
           _.proposed_prices.region_amounts.map((_) => {
             const _ = (0, _._)(_.name),
               _ =
-                __webpack_require__.GetRecommendPrice(
-                  _,
-                  _._.k_ECurrencyCodeUSD,
-                  _,
-                ) ||
-                __webpack_require__.GetScaledRecommendedPrice(
-                  _,
-                  _._.k_ECurrencyCodeUSD,
-                  _,
-                );
+                __webpack_require__.GetRecommendPrice(_, _._, _) ||
+                __webpack_require__.GetScaledRecommendedPrice(_, _._, _);
             _(_, _, _, _, _, _);
           }),
           {
@@ -9726,7 +9760,7 @@
                     const _ = new Array();
                     _(_).length > 0 && _.push("currency_missing");
                     const _ = _.proposed_prices.base_amounts.find(
-                        (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
+                        (_) => _.amount.currency_code == _._,
                       )?.amount.amount,
                       _ = _(_, _, _, _);
                     (_.rgAboveThreshold.length > 0 ||
@@ -9822,6 +9856,649 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 55,
+        _ = 920;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.quicktext_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [6, 10, 11], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  quicktext_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  requires_update: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  title: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  hidden: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  approved: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  help_request_types: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  content: {
+                    _: 7,
+                    _: _,
+                  },
+                  button_text: {
+                    _: 8,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  replacement: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  payment_methods: {
+                    _: 10,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  appids: {
+                    _: 11,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  escalation_level: {
+                    _: 12,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  partner_only: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSupportData_QuickText";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.content || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  content: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  major_revision: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  minor_revision: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  author: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  last_update: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  language: {
+                    _: 6,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSupportData_QuickTextContent";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.quicktext_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  quicktext_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  language: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  from_sql: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSupportAgents_GetQuickText_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.quicktext || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  quicktext: {
+                    _: 1,
+                    _: _,
+                  },
+                  english_reference: {
+                    _: 2,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSupportAgents_GetQuickText_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  log_type: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  version_string: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  log_contents: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  request_id: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CHelpRequestLogs_UploadUserApplicationLog_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype._ || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  _: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CHelpRequestLogs_UploadUserApplicationLog_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CHelpRequestLogs_GetApplicationLogDemand_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.request_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  request_id: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CHelpRequestLogs_GetApplicationLogDemand_Response";
+        }
+      }
+      var _, _;
+      !(function (_) {
+        _.GetQuickText = function (_, _) {
+          return _.SendMsg("SupportAgents.GetQuickText#1", (0, _._)(_, _), _, {
+            bConstMethod: !0,
+            ePrivilege: 5,
+          });
+        };
+      })(_ || (_ = {})),
+        (function (_) {
+          (_.UploadUserApplicationLog = function (_, _) {
+            return _.SendMsg(
+              "HelpRequestLogs.UploadUserApplicationLog#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+            (_.GetApplicationLogDemand = function (_, _) {
+              return _.SendMsg(
+                "HelpRequestLogs.GetApplicationLogDemand#1",
+                (0, _._)(_, _),
+                _,
+                {
+                  ePrivilege: 1,
+                },
+              );
+            });
+        })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -9850,7 +10527,7 @@
                 ).data.tickets;
               },
             });
-          })(_, 920, 55),
+          })(_, _, _),
           [_, _] = (0, _.useState)(2);
         return (
           (0, _.useEffect)(() => {
@@ -10012,7 +10689,7 @@
                   `${_._.PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/`,
                   _,
                 );
-                if (1 != _?.data?.success)
+                if (_?.data?.success != _._)
                   throw (
                     (_?.data?.message && _.fnSetStrError(_?.data?.message),
                     _?.data?.message || "create ticket failed generic")
@@ -10030,7 +10707,7 @@
                 });
               },
             });
-          })(_, _, 920, 55, _);
+          })(_, _, _, _, _);
         return _.bLoading
           ? (0, _.jsx)(_._, {
               state: _,
@@ -10104,15 +10781,15 @@
                       href: _,
                       children: `Package ${_.packageid}`,
                     }),
-                Boolean(4 == _?.GetAppType()) &&
+                Boolean(_?.GetAppType() == _._._) &&
                   (0, _.jsx)("span", {
                     children: " (DLC)",
                   }),
-                Boolean(2 == _?.GetAppType()) &&
+                Boolean(_?.GetAppType() == _._._) &&
                   (0, _.jsx)("span", {
                     children: " (MOD)",
                   }),
-                Boolean(10 == _?.GetAppType()) &&
+                Boolean(_?.GetAppType() == _._._) &&
                   (0, _.jsx)("span", {
                     children: " (HARDWARE)",
                   }),
@@ -10202,7 +10879,7 @@
         return (0, _.jsx)("thead", {
           children: (0, _.jsxs)("tr", {
             children: [
-              _._.map((_) =>
+              _.map((_) =>
                 (0, _.jsx)(
                   "td",
                   {
@@ -10214,7 +10891,7 @@
                   "header" + _,
                 ),
               ),
-              _._.map((_) =>
+              _.map((_) =>
                 (0, _.jsx)(
                   "td",
                   {
@@ -10234,11 +10911,11 @@
         const { proposal: _, oGuideline: _, mapCurrentPrices: _ } = _,
           _ = _.get(_.packageid),
           _ = _.proposed_prices.base_amounts.find(
-            (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
+            (_) => _.amount.currency_code == _._,
           )?.amount.amount;
         return (0, _.jsxs)("tr", {
           children: [
-            _._.map((_) => {
+            _.map((_) => {
               const _ =
                 __webpack_require__.GetRecommendPrice(_, _) ||
                 __webpack_require__.GetScaledRecommendedPrice(_, _);
@@ -10253,7 +10930,7 @@
                 _.packageid + "-" + _,
               );
             }),
-            _._.map((_) => {
+            _.map((_) => {
               const _ = (0, _._)(_),
                 _ =
                   __webpack_require__.GetRecommendPrice(_, _, _) ||
@@ -10503,12 +11180,12 @@
       function _(_) {
         const { proposal: _, mapCurrentPrices: _ } = _,
           _ = _.proposed_prices.base_amounts.find(
-            (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
+            (_) => _.amount.currency_code == _._,
           )?.amount.amount,
           _ = __webpack_require__
             .get(_.packageid)
             ?.current_costs.base_amounts.find(
-              (_) => _.currency_code == _._.k_ECurrencyCodeUSD,
+              (_) => _.currency_code == _._,
             )?.amount;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -10554,7 +11231,7 @@
                 const _ = new Array();
                 return (
                   _.proposed_prices.base_amounts.forEach((_) => {
-                    _._.includes(_.amount.currency_code) ||
+                    _.includes(_.amount.currency_code) ||
                       (console.log(
                         "Unexpected currency code: " + _.amount.currency_code,
                         _,
@@ -10564,7 +11241,7 @@
                       ));
                   }),
                   _.proposed_prices.region_amounts.forEach((_) => {
-                    _._.includes((0, _._)(_.name.toUpperCase())) ||
+                    _.includes((0, _._)(_.name.toUpperCase())) ||
                       (console.log(
                         `Unexpected region code: ${_.name} and currency code ${_.amount.currency_code} with price in cents ${_.amount.amount}`,
                       ),
@@ -10591,9 +11268,9 @@
       function _(_) {
         const { proposal: _, oGuideline: _ } = _,
           _ = _.proposed_prices.base_amounts.find(
-            (_) => _.amount.currency_code == _._.k_ECurrencyCodeUSD,
+            (_) => _.amount.currency_code == _._,
           )?.amount.amount,
-          _ = __webpack_require__.GetRecommendPrice(_, _._.k_ECurrencyCodeUSD);
+          _ = __webpack_require__.GetRecommendPrice(_, _._);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             Boolean(!_) &&
@@ -12024,7 +12701,7 @@
                 "input",
                 {
                   type: "hidden",
-                  name: `${_}[${(0, _._)(_, "english")}]`,
+                  name: `${_}[${(0, _.LgB)(_, "english")}]`,
                   value: (0, _._)(_, _),
                 },
                 _ + "_" + _,
@@ -12297,12 +12974,12 @@
         return (
           (0, _.useEffect)(() => {
             if (_) {
-              const _ = (0, _._)(_.strActiveLanguage, 0);
+              const _ = (0, _.sfN)(_.strActiveLanguage, _.Bhc);
               _._.Get().SetCurEditLanguage(_);
             }
           }, [_.strActiveLanguage, _]),
           (0, _._)(_._.Get().GetCallback(), (_) => {
-            _.setActiveLanguage((0, _._)(_));
+            _.setActiveLanguage((0, _.LgB)(_));
           }),
           (0, _.jsxs)("div", {
             className: (0, _._)(_().EditBtn, _().BtnCtn),
@@ -13061,8 +13738,8 @@
                     bOnlyDisplay: !0,
                     placeholderToken: (0, _._)(
                       "#SeasonPass_NoLang_Fallback",
-                      (0, _._)("#Language_" + (0, _._)(_)),
-                      (0, _._)("#Language_" + (0, _._)(_)),
+                      (0, _._)("#Language_" + (0, _.LgB)(_)),
+                      (0, _._)("#Language_" + (0, _.LgB)(_)),
                     ),
                     rgRealms: _,
                   }),
@@ -14833,8 +15510,7 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = "useCreatorHomeClanLinksByApp";
       function _(_) {
         const _ = (0, _._)(),
@@ -14844,7 +15520,7 @@
               const _ = _._.Init(_._);
               __webpack_require__.Body().set_appid(_);
               const _ = await _._.GetDevPageLinks(_, _);
-              return 1 == _.GetEResult()
+              return _.GetEResult() == _._
                 ? _.Body()
                     .links()
                     .map((_) => _.toObject())
@@ -14858,6 +15534,7 @@
         return _.isLoading ? null : _.data;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -14883,7 +15560,7 @@
               __webpack_require__.Body().link().set_linkname(_.link.linkname),
               __webpack_require__.Body().link().set_json(_.link.json);
             const _ = await _._.SetDevPageLink(_, _);
-            return 1 == _.GetEResult()
+            return _.GetEResult() == _._
               ? (_._.invalidateQueries({
                   queryKey: [_, _.appid],
                 }),
@@ -14927,7 +15604,7 @@
                     link: {
                       appid: _,
                       clan_steamid: _.ConvertTo64BitString(),
-                      relation: 0,
+                      relation: _._._,
                       linkname: _,
                       json: null,
                     },
@@ -15017,7 +15694,7 @@
                     link: {
                       appid: _,
                       clan_steamid: _.ConvertTo64BitString(),
-                      relation: 0,
+                      relation: _._._,
                       linkname: _,
                       json: null,
                     },
@@ -15035,7 +15712,7 @@
                   const _ = _._.Init(_._);
                   __webpack_require__.Body().set_partnerid(_);
                   const _ = await _._.GetDevPagesForPartner(_, _);
-                  return 1 == _.GetEResult()
+                  return _.GetEResult() == _._
                     ? _.Body()
                         .results()
                         .map((_) => _.toObject())
@@ -15059,7 +15736,7 @@
                   _ = await _().get(_, {
                     params: _,
                   });
-                return 200 == _?.status && 1 == _.data?.success
+                return 200 == _?.status && _.data?.success == _._
                   ? _.data.rgClanAccountIDs
                   : (console.error(
                       "useClanLinkableForMeViaCreatorHome:",
@@ -15393,8 +16070,8 @@
             [_],
           ),
           _ = (_, _) => {
-            const _ = (0, _._)(_),
-              _ = (0, _._)(29 == _ ? 6 : 0);
+            const _ = (0, _.LgB)(_),
+              _ = (0, _.LgB)(_ == _.ZLm ? _.NFp : _.Bhc);
             return _ in _[_].urls
               ? _[_].urls[_]
               : _ in _[_].urls
@@ -17121,6 +17798,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -17156,10 +17835,10 @@
                 },
                 _ = `${_._.PARTNER_BASE_URL}appsearch/suggestapps`;
               switch (_) {
-                case 1:
+                case _._._:
                   _ = `${_._.PARTNER_BASE_URL}admin/store/suggestpackage`;
                   break;
-                case 2:
+                case _._._:
                   _ = `${_._.PARTNER_BASE_URL}bundles/suggestbundle`;
                   break;
                 default:
@@ -17172,7 +17851,7 @@
                 params: _,
                 withCredentials: !0,
               });
-              200 == _?.status && 1 == _.data?.success
+              200 == _?.status && _.data?.success == _._
                 ? _
                   ? (_(_.data.matches?.filter((_) => _(_._)) || []),
                     _(
@@ -17212,16 +17891,16 @@
           }, []),
           _)
         ) {
-          case 1:
+          case _._._:
             _ = (0, _._)("#StoreAdmin_Search_Placeholder_package");
             break;
-          case 2:
+          case _._._:
             _ = (0, _._)("#StoreAdmin_Search_Placeholder_bundle");
             break;
           default:
             _ = (0, _._)("#StoreAdmin_Search_Placeholder");
         }
-        const _ = _ && !_ && 0 == _;
+        const _ = _ && !_ && _ == _._._;
         return (0, _.jsxs)("div", {
           className: _,
           children: [
@@ -17268,7 +17947,7 @@
                         name: _.match,
                         _: _._,
                         is_visible: !0,
-                        type: 0,
+                        type: _._._,
                         fnSetItemID: () => {
                           _([]), _(_._, _.itemid);
                         },
@@ -17283,7 +17962,7 @@
                       {
                         name: _.name,
                         _: _.packageid,
-                        type: 1,
+                        type: _._._,
                         is_visible: _.is_visible,
                         fnSetItemID: () => {
                           _([]), _(_.packageid);
@@ -17299,7 +17978,7 @@
                       {
                         name: _.name,
                         _: _.bundleid,
-                        type: 2,
+                        type: _._._,
                         is_visible: _.is_visible,
                         fnSetItemID: () => {
                           _([]), _(_.bundleid);
@@ -17320,10 +17999,10 @@
           });
         let _ = "#DailyDeals_HeaderArtMissing";
         switch (_) {
-          case 1:
+          case _._._:
             _ = "#DailyDeals_PackageHeaderArtMissing";
             break;
-          case 2:
+          case _._._:
             _ = "#DailyDeals_BundleHeaderArtMissing";
         }
         return (0, _.jsxs)("div", {
@@ -17346,7 +18025,7 @@
                     children: [(0, _._)("#Sale_FeaturingHidden"), " "],
                   }),
                 _,
-                1 == _ ? ` (${_})` : "",
+                _ == _._._ ? ` (${_})` : "",
               ],
             }),
           ],
@@ -17778,29 +18457,29 @@
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const _ = (0, _._)(_);
+        const _ = (0, _.LgB)(_);
         return _ ? _[_] : "";
       }
       function _(_, _, _) {
-        const _ = (0, _._)(_);
+        const _ = (0, _.LgB)(_);
         return _[_] != _ && ((_[_] = _), !0);
       }
       function _(_, _) {
-        const _ = (0, _._)(_);
+        const _ = (0, _.LgB)(_);
         return Boolean(_?.[_]);
       }
       function _(_) {
         if (!_) return 0;
         let _ = 0;
-        for (let _ = 0; _ < 31; ++_) {
-          _[(0, _._)(_)] && (_ += 1);
+        for (let _ = _.Bhc; _ < _.bP9; ++_) {
+          _[(0, _.LgB)(_)] && (_ += 1);
         }
         return _;
       }
       function _(_) {
         const _ = new Array();
-        for (let _ = 0; _ < 31; ++_) {
-          const _ = (0, _._)(_);
+        for (let _ = _.Bhc; _ < _.bP9; ++_) {
+          const _ = (0, _.LgB)(_);
           _[_] && _.push([_, _[_]]);
         }
         return _;
@@ -17871,7 +18550,7 @@
                     _._,
                     {
                       bDone: !1,
-                      name: `${(0, _._)(_.lang)} - Not found`,
+                      name: `${(0, _.LgB)(_.lang)} - Not found`,
                       tooltip: `${_.url} not downloadable from the CDN`,
                     },
                     _.url,
@@ -17978,7 +18657,7 @@
             setSelectedLanguage: _,
             deleteLanguage: _,
           } = _,
-          _ = (0, _._)(_);
+          _ = (0, _.LgB)(_);
         return (0, _.jsxs)(
           "div",
           {
@@ -18340,6 +19019,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18378,7 +19058,7 @@
           !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
         )
           return null;
-        const _ = Boolean(_ && 0 == _?.item_type),
+        const _ = Boolean(_ && _?.item_type == _._._),
           _ = Boolean(!_ && !_ && !_ && _ && _);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -18633,7 +19313,7 @@
                   (0, _.jsx)("div", {
                     className: _().ParentType,
                     children: (0, _._)(
-                      11 == _
+                      _ == _._._
                         ? "#SalePage_ParentApp_SoundTrack"
                         : "#SalePage_ParentApp_DLC",
                     ),
@@ -18775,7 +19455,7 @@
           { data: _ } = (0, _._)(_),
           { bIsOwned: _ } = (0, _._)(_),
           _ = _ && !_;
-        if (_ && _ && 0 == _.item_type && _.appid)
+        if (_ && _ && _.item_type == _._._ && _.appid)
           return (0, _.jsx)(_._, {
             appid: _.appid,
             bIsMuted: _,
@@ -18803,6 +19483,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18892,7 +19573,8 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
-          ? (1 != _.type && 12 != _.type) || !_.related_items?.parent_appid
+          ? (_.type != _._._ && _.type != _._._) ||
+            !_.related_items?.parent_appid
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,

@@ -123,93 +123,21 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 19764, 19))),
-        (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38110, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 24245, 19))),
-        (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 83527, 19))),
-        (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38713, 19))),
-        (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38602, 19))),
-        (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 32640, 19))),
-        (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 37803, 19))),
-        (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 38968, 19))),
-        (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 28678, 19))),
-        (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 19596, 19))),
-        (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 72521, 19))),
-        (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 39008, 19))),
-        (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 98096, 19))),
-        (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 39367, 19))),
-        (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 27903, 19))),
-        (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 4759, 19))),
-        (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 84936, 19))),
-        (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 95937, 19))),
-        (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 49797, 19))),
-        (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 37323, 19))),
-        (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 42489, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 31427, 19))),
-        (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 93191, 19))),
-        (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 51208, 19))),
-        (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 65465, 19))),
-        (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75119, 19))),
-        (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 21390, 19))),
-        (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 46032, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 76534, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 78159, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case 1:
+          case _._._:
             return _._.Localize("#StoreTrailer_Title_Category_Gameplay");
-          case 2:
+          case _._._:
             return _._.Localize("#StoreTrailer_Title_Category_Teaser");
-          case 3:
+          case _._._:
             return _._.Localize("#StoreTrailer_Title_Category_Cinematic");
-          case 4:
+          case _._._:
             return _._.Localize("#StoreTrailer_Title_Category_Update");
-          case 5:
+          case _._._:
             return _._.Localize("#StoreTrailer_Title_Category_Accolades");
-          case 6:
+          case _._._:
             return _._.Localize("#StoreTrailer_Title_Category_Interview");
         }
         return _._.Localize("#StoreTrailer_Title_Category_Unknown");
@@ -225,6 +153,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -544,7 +473,7 @@
           this.IsInitialized() && this.m_player.SetSubtitles(_);
         }
         DisableCaptions() {
-          this.IsInitialized() && this.m_player.SetSubtitles(-1);
+          this.IsInitialized() && this.m_player.SetSubtitles(_.xPp);
         }
         GetFailureReason() {
           return this.m_eFailureReason;
@@ -640,6 +569,7 @@
         });
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -755,7 +685,7 @@
       function _(_) {
         let { player: _, controlsVisible: _, category: _, title: _ } = _,
           _ = (0, _._)("once", _, _);
-        if (0 == _ || !_) return null;
+        if (_ == _._._ || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return (0, _.jsx)("div", {
           className: _,
@@ -1061,7 +991,7 @@
       function _(_) {
         let { player: _, controlsVisible: _, category: _, title: _ } = _,
           _ = (0, _._)("standard", _, _);
-        if (0 == _ || !_) return null;
+        if (_ == _._._ || !_) return null;
         let _ = (0, _._)(
           _().TitleRow,
           _ && !_ && _().FadeIn,
@@ -1275,7 +1205,7 @@
       function _(_) {
         let { player: _, controlsVisible: _, category: _, title: _ } = _,
           _ = (0, _._)("standard", _, _);
-        if (0 == _ || !_) return null;
+        if (_ == _._._ || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return (0, _.jsx)("div", {
           className: _,
@@ -1333,7 +1263,7 @@
           localContext: _,
           focus: _,
         } = _;
-        (_ = _ || ""), (_ = _ || 0);
+        (_ = _ || ""), (_ = _ || _._._);
         let [_, _] = (function (_, _, _, _, _, _, _) {
           let _ = (0, _._)(),
             _ = (0, _.useRef)(void 0);
@@ -2101,7 +2031,7 @@
       }
       function _(_) {
         let { player: _, refButton: _, onClose: _ } = _;
-        const _ = (0, _._)(_._.LANGUAGE);
+        const _ = (0, _.sfN)(_._.LANGUAGE);
         let _ = (0, _.useMemo)(() => {
             let _ = [..._.GetCaptionRepresentations()],
               _ = _.findIndex((_) => _.m_eLanguage == _);
@@ -2719,6 +2649,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2727,6 +2660,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2;
       function _(_) {
         const {
             name: _,
@@ -2737,7 +2673,7 @@
           [_, _] = _.useState(!1);
         if (
           (_.useEffect(() => {
-            0 != _ && _(!0);
+            _ != _ && _(!0);
           }, [_]),
           _.useEffect(() => {
             if (_) return void _(!0);
@@ -2745,11 +2681,11 @@
             const _ = setTimeout(() => _(!1), 3e3);
             return () => clearTimeout(_);
           }, [_, _]),
-          null == _ || 0 == _)
+          null == _ || _ == _)
         )
           return;
         const _ =
-          1 == _ ? (0, _._)("#StoreTrailer_Title_TrailerPreview") : (0, _._)(_);
+          _ == _ ? (0, _._)("#StoreTrailer_Title_TrailerPreview") : (0, _._)(_);
         return (0, _.jsx)("div", {
           className: (0, _._)({
             [_().TrailerTitle]: !0,

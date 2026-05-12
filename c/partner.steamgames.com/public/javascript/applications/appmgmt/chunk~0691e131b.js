@@ -1197,20 +1197,55 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      const _ = 0,
+        _ = 1;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
       });
-      var _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+      var _ = {};
+      __webpack_require__._(_),
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 1,
+        _ = 2;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -1704,7 +1739,7 @@
                   },
                   persistence: {
                     _: 7,
-                    _: 1,
+                    _: _._,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -2649,7 +2684,7 @@
                   },
                   persistence: {
                     _: 6,
-                    _: 1,
+                    _: _._,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -4722,6 +4757,7 @@
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
+      var _, _, _;
       !(function (_) {
         (_.GetPasswordRSAPublicKey = function (_, _) {
           return _.SendMsg(
@@ -4968,6 +5004,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -5037,28 +5076,30 @@
         async PollForUpdate() {
           try {
             const _ = _._.Init(_._);
-            _.SetEMsg(9804),
+            _.SetEMsg(_.Kec),
               _.Body().set_client_id(this.m_strClientID),
               _.Body().set_request_id(this.m_rgRequestID),
               this.m_strTokenToRevoke &&
                 _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
             const _ = await _._.PollAuthSessionStatus(this.m_transport, _),
               _ = _.GetEResult();
-            if (1 !== _) {
-              if (2 === _) {
+            if (_ !== _._) {
+              if (_ === _._) {
                 const _ = _.Hdr().transport_error();
                 if (
                   ((0, _._)(
                     `Failed to poll auth session. Result ${_}. Transport Error: ${_}`,
                   ),
-                  2 === _ || 3 === _)
+                  _ === _.MhR || _ === _.VrD)
                 )
-                  return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
+                  return (
+                    this.m_transport.MakeReady(), this.StartPolling(!1), _._
+                  );
               }
-              if (9 === _ || 27 === _) this.m_eFailureState = _.Expired;
-              else if (84 === _) this.m_eFailureState = _.RateLimitExceeded;
+              if (_ === _._ || _ === _._) this.m_eFailureState = _.Expired;
+              else if (_ === _._) this.m_eFailureState = _.RateLimitExceeded;
               else {
-                if (118 == _) {
+                if (_ == _._) {
                   if (this.m_onShowAgreement)
                     this.m_onShowAgreement(_.Body().agreement_session_url());
                   else {
@@ -5115,7 +5156,7 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              2
+              _._
             );
           }
         }
@@ -5184,7 +5225,7 @@
                             `Transfer login to ${_.host} failed with status code: ${_.status}`,
                           ),
                           (_ = !1))
-                        : 1 !== _.data.result &&
+                        : _.data.result !== _._ &&
                           ((0, _._)(
                             `Transfer login to ${_.host} failed with result: ${_.data.result}`,
                           ),
@@ -5265,6 +5306,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -6895,8 +6939,21 @@
             );
           });
       })(_ || (_ = {}));
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 10,
+        _ = 11,
+        _ = 13,
+        _ = 14,
+        _ = 15,
+        _ = 16;
       class _ extends _._ {
-        m_eStatus = 0;
+        m_eStatus = _;
         m_steamid;
         m_strAccountName;
         m_strConfirmationAssociatedMessage = "";
@@ -6919,31 +6976,33 @@
             (this.m_onGetMachineAuth = _.onGetMachineAuth);
         }
         async Start(_, _, _) {
-          if (0 !== this.m_eStatus && 2 !== this.m_eStatus)
+          if (this.m_eStatus !== _ && this.m_eStatus !== _)
             return (
               (0, _._)(
                 "Cannot start an already started auth session. Create a new session instance.",
               ),
-              29
+              _._
             );
           const _ = _.replace(/[^\x00-\x7F]/g, ""),
             _ = _.replace(/[^\x00-\x7F]/g, "").slice(0, 64);
-          if (!_.length || !_.length) return 8;
+          if (!_.length || !_.length) return _._;
           if (
-            ((this.m_eStatus = 1),
+            ((this.m_eStatus = _),
             (this.m_bUsingCodeOverride = !1),
             "anonymous" == _)
           )
-            return this.SetFailureState(_._.AnonymousLogin, _.EResult(12)), 12;
+            return (
+              this.SetFailureState(_._.AnonymousLogin, _.EResult(_._)), _._
+            );
           try {
             const _ = await (async function (_, _) {
               const _ = _._.Init(_._);
               __webpack_require__.Body().set_account_name(_),
-                __webpack_require__.SetEMsg("chunkid");
+                __webpack_require__.SetEMsg(_.Kec);
               try {
                 await _.MakeReady();
                 const _ = await _._.GetPasswordRSAPublicKey(_, _);
-                if ((_.DEBUG_LogToConsole(), 1 !== _.GetEResult()))
+                if ((_.DEBUG_LogToConsole(), _.GetEResult() !== _._))
                   return (
                     (0, _._)(
                       `Failed to get RSA key with EResult: ${_.GetEResult()}`,
@@ -6978,17 +7037,17 @@
             if (!_)
               return (
                 (0, _._)("Cannot start auth session without a valid RSA key"),
-                this.SetFailureState(_._.Network, _.EResult(20)),
-                20
+                this.SetFailureState(_._.Network, _.EResult(_._)),
+                _._
               );
             const _ = (0, _._)(_, _),
               _ = _._.Init(_._);
-            _.SetEMsg(9804),
+            _.SetEMsg(_.Kec),
               _.Body().set_account_name(_),
               _.Body().set_encrypted_password(_),
               _.Body().set_encryption_timestamp(_.timestamp),
               _.Body().set_remember_login(!!_),
-              _.Body().set_persistence(_ ? 1 : 0),
+              _.Body().set_persistence(_ ? _._ : _._),
               _.Body().set_website_id(_._.WEBSITE_ID);
             try {
               _.Body().set_device_details(await this.GetDeviceDetails());
@@ -6996,11 +7055,11 @@
               (0, _._)("Failed to GetDeviceDetails"), (0, _._)(_);
             }
             if (
-              (_.Body().set_language((0, _._)(_._.LANGUAGE)),
+              (_.Body().set_language((0, _.sfN)(_._.LANGUAGE)),
               null != this.m_onGetMachineAuth)
             ) {
               const _ = await this.m_onGetMachineAuth(_);
-              1 == _.eresult && _.Body().set_guard_data(_.data);
+              _.eresult == _._ && _.Body().set_guard_data(_.data);
             }
             await this.m_transport.MakeReady();
             const _ = await _._.BeginAuthSessionViaCredentials(
@@ -7012,16 +7071,16 @@
               (0, _._)(async () => {
                 const _ = _.GetEResult(),
                   _ = _.Hdr().transport_error();
-                if (1 !== _)
+                if (_ !== _._)
                   switch (_) {
-                    case 5:
-                      return (this.m_eStatus = 2), _;
-                    case 20:
-                    case 3:
+                    case _._:
+                      return (this.m_eStatus = _), _;
+                    case _._:
+                    case _._:
                       return (
-                        this.SetFailureState(_._.Network, _.EResult(20)), _
+                        this.SetFailureState(_._.Network, _.EResult(_._)), _
                       );
-                    case 84:
+                    case _._:
                       return (
                         this.SetFailureState(
                           _._.RateLimitExceeded,
@@ -7029,7 +7088,7 @@
                         ),
                         _
                       );
-                    case 118:
+                    case _._:
                       if (this.m_onShowAgreement)
                         this.m_onShowAgreement(
                           _.Body().agreement_session_url(),
@@ -7043,9 +7102,10 @@
                         this.m_onCompleteCallback({
                           bSuccess: !1,
                         }),
-                        (this.m_eStatus = 0),
+                        (this.m_eStatus = _),
                         _
                       );
+                    case _._:
                     default:
                       return (
                         (0, _._)(
@@ -7077,14 +7137,13 @@
                   (this.m_rgRequestID = _),
                   (this.m_steamid = _),
                   (this.m_strWeakAuthToken = _),
-                  _.find(({ confirmation_type: _ }) => 6 === _))
+                  _.find(({ confirmation_type: _ }) => _ === _._._))
                 ) {
                   const _ = new FormData();
                   _.append("clientid", _), _.append("steamid", this.m_steamid);
                   const _ = `${_._.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
                   try {
                     if (
-                      1 ==
                       (
                         await _().post(_, _, {
                           headers: {
@@ -7092,9 +7151,9 @@
                           },
                           withCredentials: !0,
                         })
-                      ).data.result
+                      ).data.result == _._
                     )
-                      return (this.m_eStatus = 4), this.StartPolling(!0), 1;
+                      return (this.m_eStatus = _), this.StartPolling(!0), _._;
                   } catch (_) {
                     if (
                       ((0, _._)(
@@ -7108,18 +7167,20 @@
                             _._.Network,
                             _.AjaxFailureWithCode(_.response.status),
                           ),
-                          20)
+                          _._)
                         : (this.SetFailureState(
                             _._.Network,
                             _.AjaxFailureNoCode(),
                           ),
-                          20);
+                          _._);
                     }
-                    return this.SetFailureState(_._.Network, _.EResult(79)), 79;
+                    return (
+                      this.SetFailureState(_._.Network, _.EResult(_._)), _._
+                    );
                   }
                 }
                 const _ = (function (_) {
-                    let _ = _[0] || 0;
+                    let _ = _[0] || _._._;
                     _.length > 1 && (_ = _.sort((_, _) => _[_] - _[_])[0]);
                     return _;
                   })(_.map(({ confirmation_type: _ }) => _)),
@@ -7131,19 +7192,19 @@
                       _.associated_message),
                   _)
                 ) {
-                  case 1:
-                    return (this.m_eStatus = 13), this.StartPolling(), _;
-                  case 2:
-                    this.m_eStatus = 3;
+                  case _._._:
+                    return (this.m_eStatus = _), this.StartPolling(), _;
+                  case _._._:
+                    this.m_eStatus = _;
                     break;
-                  case 5:
-                    (this.m_eStatus = 4), this.StartPolling(!1);
+                  case _._._:
+                    (this.m_eStatus = _), this.StartPolling(!1);
                     break;
-                  case 3:
-                    (this.m_eStatus = 5), this.StartPolling(!1);
+                  case _._._:
+                    (this.m_eStatus = _), this.StartPolling(!1);
                     break;
-                  case 4:
-                    (this.m_eStatus = 6), this.StartPolling(!1);
+                  case _._._:
+                    (this.m_eStatus = _), this.StartPolling(!1);
                 }
                 return _;
               })
@@ -7158,12 +7219,12 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              2
+              _._
             );
           }
         }
         Stop() {
-          this.StopPolling(), (this.m_eStatus = 16);
+          this.StopPolling(), (this.m_eStatus = _);
         }
         GetStatus() {
           return this.m_eStatus;
@@ -7186,35 +7247,35 @@
         async SendSteamGuardCode(_, _ = !0) {
           if (0 == _.length) {
             switch (this.m_eStatus) {
-              case 10:
-                this.m_eStatus = 3;
+              case _:
+                this.m_eStatus = _;
                 break;
-              case 11:
-                this.m_eStatus = 5;
+              case _:
+                this.m_eStatus = _;
                 break;
-              case 5:
-              case 3:
+              case _:
+              case _:
                 break;
               default:
                 throw new Error("Attempted to clear code in invalid state");
             }
-            return Promise.resolve(1);
+            return Promise.resolve(_._);
           }
           try {
             await this.m_transport.MakeReady();
-            const _ = 3 === this.m_eStatus || 10 === this.m_eStatus,
+            const _ = this.m_eStatus === _ || this.m_eStatus === _,
               _ = _._.Init(_._);
-            _.SetEMsg(9804),
+            _.SetEMsg(_.Kec),
               _.Body().set_client_id(this.m_strClientID),
               _.Body().set_steamid(this.m_steamid),
               _.Body().set_code(_),
-              _.Body().set_code_type(_ ? 2 : 3);
+              _.Body().set_code_type(_ ? _._._ : _._._);
             const _ = await _._.UpdateAuthSessionWithSteamGuardCode(
                 this.m_transport,
                 _,
               ),
               _ = _.GetEResult();
-            if (1 !== _) {
+            if (_ !== _._) {
               if (!_)
                 return (
                   (0, _._)(
@@ -7223,10 +7284,10 @@
                   _
                 );
               switch (_) {
-                case 65:
-                case 88:
-                  return (this.m_eStatus = _ ? 10 : 11), _;
-                case 27:
+                case _._:
+                case _._:
+                  return (this.m_eStatus = _ ? _ : _), _;
+                case _._:
                   return (
                     this.SetFailureState(_._.Expired, _.EResult(_)),
                     this.m_onCompleteCallback({
@@ -7234,7 +7295,7 @@
                     }),
                     _
                   );
-                case 84:
+                case _._:
                   return (
                     this.SetFailureState(_._.RateLimitExceeded, _.EResult(_)),
                     this.m_onCompleteCallback({
@@ -7242,7 +7303,7 @@
                     }),
                     _
                   );
-                case 118:
+                case _._:
                   if (this.m_onShowAgreement)
                     this.m_onShowAgreement(_.Body().agreement_session_url());
                   else {
@@ -7254,7 +7315,7 @@
                     this.m_onCompleteCallback({
                       bSuccess: !1,
                     }),
-                    (this.m_eStatus = 0),
+                    (this.m_eStatus = _),
                     _
                   );
                 default:
@@ -7270,7 +7331,7 @@
                   );
               }
             }
-            return (this.m_eStatus = 13), this.StartPolling(), _;
+            return (this.m_eStatus = _), this.StartPolling(), _;
           } catch (_) {
             return (
               (0, _._)(`Failed to update auth session with SG code. ${_}`),
@@ -7278,19 +7339,19 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              2
+              _._
             );
           }
         }
         UseCodeOverride() {
           switch (this.m_eStatus) {
-            case 6:
+            case _:
               return (
-                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = 5)
+                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = _)
               );
-            case 4:
+            case _:
               return (
-                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = 3)
+                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = _)
               );
             default:
               return void (0, _._)(
@@ -7312,7 +7373,7 @@
                 this.m_weakAuthWebInterface.GetServiceTransport(),
                 _,
               );
-            1 != _.GetEResult()
+            _._ != _.GetEResult()
               ? (_.DEBUG_LogToConsole(),
                 (0, _._)(
                   "An unexpected error occured while adding an authenticator",
@@ -7328,7 +7389,7 @@
               "An unexpected error occured while moving an authenticator",
               _,
             ),
-              this.SetFailureState(_._.MoveAuthenticator, _.EResult(2));
+              this.SetFailureState(_._.MoveAuthenticator, _.EResult(_._));
           }
         }
         async ResendMoveCode() {
@@ -7337,7 +7398,7 @@
               this.m_weakAuthWebInterface.GetServiceTransport(),
               _,
             );
-          1 != _.GetEResult() &&
+          _._ != _.GetEResult() &&
             (_.DEBUG_LogToConsole(),
             (0, _._)(
               "An unexpected error occured while adding an authenticator",
@@ -7354,7 +7415,7 @@
             this.m_weakAuthWebInterface.GetServiceTransport(),
             _,
           );
-          94 == __webpack_require__.GetEResult()
+          _._ == __webpack_require__.GetEResult()
             ? (this.m_eStatus = 12)
             : __webpack_require__.Body().success()
               ? (__webpack_require__.DEBUG_LogToConsole(),
@@ -7374,16 +7435,16 @@
                 ));
         }
         FinishMoveRecovery() {
-          this.m_eStatus = 5;
+          this.m_eStatus = _;
         }
         BCanGoBack() {
           switch (this.m_eStatus) {
-            case 5:
-            case 11:
-            case 3:
-            case 10:
-            case 6:
-            case 4:
+            case _:
+            case _:
+            case _:
+            case _:
+            case _:
+            case _:
             case 7:
             case 8:
             case 12:
@@ -7394,22 +7455,22 @@
         }
         GoBack() {
           switch (this.m_eStatus) {
-            case 6:
-            case 4:
-              this.m_eStatus = 0;
+            case _:
+            case _:
+              this.m_eStatus = _;
               break;
-            case 5:
-            case 11:
-              this.m_eStatus = this.m_bUsingCodeOverride ? 6 : 0;
+            case _:
+            case _:
+              this.m_eStatus = this.m_bUsingCodeOverride ? _ : _;
               break;
             case 7:
             case 8:
             case 12:
-              this.m_eStatus = (this.m_bUsingCodeOverride, 5);
+              this.m_eStatus = (this.m_bUsingCodeOverride, _);
               break;
-            case 3:
-            case 10:
-              this.m_eStatus = this.m_bUsingCodeOverride ? 4 : 0;
+            case _:
+            case _:
+              this.m_eStatus = this.m_bUsingCodeOverride ? _ : _;
               break;
             default:
               return void (0, _._)(
@@ -7418,13 +7479,13 @@
           }
         }
         SetFailureState(_, _, _ = "") {
-          (this.m_eStatus = 15),
+          (this.m_eStatus = _),
             (this.m_eFailureState = _),
             (this.m_strErrorReference = _),
             (this.m_strExtendedErrorMessage = _);
         }
         onAuthComplete = (_) => {
-          this.m_eStatus = _.bSuccess ? 14 : 15;
+          this.m_eStatus = _.bSuccess ? _ : _;
           const _ = _.bSuccess
             ? {
                 ..._,
@@ -7451,7 +7512,10 @@
         (0, _._)([_._], _.prototype, "GoBack", null),
         (0, _._)([_._], _.prototype, "SetFailureState", null),
         (0, _._)([_._], _.prototype, "SetOnLoginComplete", null);
-      const _ = [4, 3, 2, 1, 0, 5].reduce((_, _, _) => ((_[_] = _), _), {});
+      const _ = [_._._, _._._, _._._, _._._, _._._, _._._].reduce(
+        (_, _, _) => ((_[_] = _), _),
+        {},
+      );
       function _(_) {
         return _ ? 7 : 5;
       }
@@ -7462,12 +7526,104 @@
         return _(_, _) && _.length === _(_);
       }
       const _ = {
-        EResult: (_) => `e${_}`,
-        FailedToStart: () => "c-fts",
-        FailedToAddCode: () => "c-ftac",
-        AjaxFailureNoCode: () => "af",
-        AjaxFailureWithCode: (_) => `af-${_}`,
-      };
+          EResult: (_) => `e${_}`,
+          FailedToStart: () => "c-fts",
+          FailedToAddCode: () => "c-ftac",
+          AjaxFailureNoCode: () => "af",
+          AjaxFailureWithCode: (_) => `af-${_}`,
+        },
+        _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4;
+      class _ extends _._ {
+        m_eStatus = _;
+        constructor(_) {
+          super(
+            _.transport,
+            (_) => {
+              (this.m_eStatus = _.bSuccess ? _ : _), _.onComplete(_);
+            },
+            _.onDeviceDetails,
+          ),
+            (0, _._)(this);
+        }
+        async Start() {
+          if (this.m_eStatus !== _)
+            return (
+              console.error(
+                "Cannot start an already started auth session. Create a new session instance.",
+              ),
+              _._
+            );
+          this.m_eStatus = _;
+          try {
+            await this.m_transport.MakeReady();
+            const _ = _._.Init(_._);
+            _.SetEMsg(_.Kec);
+            try {
+              _.Body().set_device_details(await this.GetDeviceDetails());
+            } catch (_) {
+              console.error("Failed to GetDeviceDetails"), console.log(_);
+            }
+            _.Body().set_website_id(_._.WEBSITE_ID);
+            const _ = await _._.BeginAuthSessionViaQR(this.m_transport, _),
+              _ = _.GetEResult(),
+              _ = _.Hdr().transport_error();
+            if (_ !== _._)
+              return (
+                console.error(
+                  `Failed to start auth session. Result: ${_} Transport: ${_}`,
+                ),
+                (this.m_eFailureState = _._.Generic),
+                this.m_onCompleteCallback({
+                  bSuccess: !1,
+                }),
+                _
+              );
+            const {
+              client_id: _,
+              challenge_url: _,
+              interval: _,
+              request_id: _,
+            } = _.Body().toObject();
+            return (
+              (this.m_strClientID = _),
+              (this.m_strChallengeURL = _),
+              (this.m_msPollInterval = 1e3 * _),
+              (this.m_rgRequestID = _),
+              (this.m_eStatus = _),
+              this.StartPolling(!1),
+              _
+            );
+          } catch (_) {
+            return (
+              console.error(
+                `Failed to start auth session: ${JSON.stringify(_)}`,
+              ),
+              (this.m_eFailureState = _._.Generic),
+              this.m_onCompleteCallback({
+                bSuccess: !1,
+              }),
+              _._
+            );
+          }
+        }
+        Stop() {
+          this.StopPolling(), (this.m_eStatus = 5);
+        }
+        GetChallengeURL() {
+          return this.m_strChallengeURL;
+        }
+        GetClientID() {
+          return this.m_strClientID;
+        }
+        GetStatus() {
+          return this.m_eStatus;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_eStatus", void 0);
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -7588,93 +7744,6 @@
           (_[(_._ = 3)] = "Q"),
           (_[(_._ = 2)] = "H");
       })(_ || (_ = {}));
-      class _ extends _._ {
-        m_eStatus = 0;
-        constructor(_) {
-          super(
-            _.transport,
-            (_) => {
-              (this.m_eStatus = _.bSuccess ? 3 : 4), _.onComplete(_);
-            },
-            _.onDeviceDetails,
-          ),
-            (0, _._)(this);
-        }
-        async Start() {
-          if (0 !== this.m_eStatus)
-            return (
-              console.error(
-                "Cannot start an already started auth session. Create a new session instance.",
-              ),
-              2
-            );
-          this.m_eStatus = 1;
-          try {
-            await this.m_transport.MakeReady();
-            const _ = _._.Init(_._);
-            _.SetEMsg(9804);
-            try {
-              _.Body().set_device_details(await this.GetDeviceDetails());
-            } catch (_) {
-              console.error("Failed to GetDeviceDetails"), console.log(_);
-            }
-            _.Body().set_website_id(_._.WEBSITE_ID);
-            const _ = await _._.BeginAuthSessionViaQR(this.m_transport, _),
-              _ = _.GetEResult(),
-              _ = _.Hdr().transport_error();
-            if (1 !== _)
-              return (
-                console.error(
-                  `Failed to start auth session. Result: ${_} Transport: ${_}`,
-                ),
-                (this.m_eFailureState = _._.Generic),
-                this.m_onCompleteCallback({
-                  bSuccess: !1,
-                }),
-                _
-              );
-            const {
-              client_id: _,
-              challenge_url: _,
-              interval: _,
-              request_id: _,
-            } = _.Body().toObject();
-            return (
-              (this.m_strClientID = _),
-              (this.m_strChallengeURL = _),
-              (this.m_msPollInterval = 1e3 * _),
-              (this.m_rgRequestID = _),
-              (this.m_eStatus = 2),
-              this.StartPolling(!1),
-              _
-            );
-          } catch (_) {
-            return (
-              console.error(
-                `Failed to start auth session: ${JSON.stringify(_)}`,
-              ),
-              (this.m_eFailureState = _._.Generic),
-              this.m_onCompleteCallback({
-                bSuccess: !1,
-              }),
-              2
-            );
-          }
-        }
-        Stop() {
-          this.StopPolling(), (this.m_eStatus = 5);
-        }
-        GetChallengeURL() {
-          return this.m_strChallengeURL;
-        }
-        GetClientID() {
-          return this.m_strClientID;
-        }
-        GetStatus() {
-          return this.m_eStatus;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_eStatus", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -7722,10 +7791,10 @@
             onDeviceDetails: _,
           });
         (0, _.useEffect)(() => _ && _(_), [_, _]);
-        const _ = 2 === _ ? _ : _._.STORE_BASE_URL,
-          _ = 0 === _ || 1 === _ || _,
-          _ = 4 === _,
-          _ = 3 === _,
+        const _ = _ === _ ? _ : _._.STORE_BASE_URL,
+          _ = _ === _ || _ === _ || _,
+          _ = _ === _,
+          _ = _ === _,
           _ = _
             ? (0, _.jsx)(_, {})
             : _
@@ -7741,7 +7810,7 @@
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id && _(_.refreshInfo.login_token_id);
         }, [_.refreshInfo, _]);
-        const _ = 1 !== _._.EUNIVERSE;
+        const _ = _._.EUNIVERSE !== _.wLO;
         return (0, _.jsx)("div", {
           className: _().Column,
           children: (0, _.jsxs)("div", {
@@ -7892,7 +7961,7 @@
                         _ = new FormData();
                       Object.keys(_).forEach((_) => _.append(_, _[_]));
                       const _ = await _().post(_, _),
-                        _ = 200 === _.status && 1 === _.data.result;
+                        _ = 200 === _.status && _.data.result === _._;
                       _ && window.location.assign(_);
                       return _;
                     })(_.current)
@@ -7982,7 +8051,7 @@
       }
       function _(_) {
         const { launcherType: _, variant: _, redirectUrl: _ } = _;
-        if (8 === _) return null;
+        if (_ === _.A2g) return null;
         if ("none" == _) return null;
         const _ = void 0 !== _;
         let _;
@@ -8019,14 +8088,14 @@
           os_type: _,
           device_friendly_name: _,
           machine_id: _,
-          platform_type: 1,
+          platform_type: _._._,
           gaming_device_type: _.eGamingDeviceType,
         };
       }
       async function _() {
         return {
           device_friendly_name: window.navigator.userAgent,
-          platform_type: 2,
+          platform_type: _._._,
         };
       }
       function _(_) {
@@ -8090,14 +8159,14 @@
             onGetMachineAuth: _.onGetMachineAuth,
             onShowAgreement: _.onShowAgreement,
           }),
-          [_, _] = (0, _.useState)(0),
+          [_, _] = (0, _.useState)(_),
           _ = "Login_RememberMeSetting",
           [_, _] = (0, _.useState)(
             _.refreshInfo?.account_name ?? _.defaultAccountName ?? "",
           ),
           [_, _] = (0, _.useState)(""),
           [_, _] = (0, _.useState)(_ && !_ && "0" != localStorage?.getItem(_)),
-          _ = !(0 === _.eStatus || 1 === _.eStatus || 2 === _.eStatus);
+          _ = !(_.eStatus === _ || _.eStatus === _ || _.eStatus === _);
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id &&
             _.setTokenToRevoke(_.refreshInfo.login_token_id);
@@ -8116,7 +8185,7 @@
             _(_), localStorage?.setItem(_, _ ? "1" : "0");
           },
           onPasswordSubmit: () =>
-            _ && _ ? _.start(_, _, _) : Promise.resolve(8),
+            _ && _ ? _.start(_, _, _) : Promise.resolve(_._),
           bInPasswordFlow: _,
           onTryOffline: () => {
             (0, _._)(`Logging in offline with username ${_}`),
@@ -8163,7 +8232,7 @@
             onShowAgreement: _,
           }),
           _ = _();
-        if (null != _ && 1 != _)
+        if (null != _ && _ != _._)
           return (0, _.jsx)("div", {
             className: _().Login,
             children: (0, _.jsx)(_, {
@@ -8265,17 +8334,17 @@
         }
         const _ = _.password.eStatus;
         switch (_) {
-          case 13:
+          case _:
             return _.renderLoading
               ? (0, _.jsx)(_.Fragment, {
                   children: _.renderLoading(),
                 })
               : (0, _.jsx)(_, {});
-          case 5:
-          case 11:
-          case 3:
-          case 10:
-            const _ = 5 === _ || 11 === _;
+          case _:
+          case _:
+          case _:
+          case _:
+            const _ = _ === _ || _ === _;
             return (0, _.jsx)(_, {
               type: _ ? "mobile" : "email",
               onSubmitCode: _.password.addCode,
@@ -8285,20 +8354,20 @@
               onBack: _.password.goBack,
               onCodeHelp: _.onCodeHelp,
             });
-          case 6:
-          case 4:
-            const _ = 6 === _;
+          case _:
+          case _:
+            const _ = _ === _;
             return (0, _.jsx)(_, {
               type: _ ? "mobile" : "email",
               accountName: _.password.strAccountName,
               onUseCodeOverride: _.password.useCodeOverride,
               onCodeHelp: _.onCodeHelp,
             });
-          case 16:
+          case _:
             return (0, _.jsx)(_, {
               reset: _.password.reset,
             });
-          case 15:
+          case _:
             return (0, _.jsx)(_, {
               reset: _.password.reset,
               failure: _.password.eFailureState,
@@ -8306,7 +8375,7 @@
               errorReference: _.password.strErrorReference,
               extendedErrorMessage: _.password.strExtendedErrorMessage,
             });
-          case 14:
+          case _:
             return (0, _.jsx)(_, {
               compact: !0,
               children: _(),
@@ -8327,37 +8396,37 @@
       function _(_) {
         if (!_.refreshInfo) return null;
         let _;
-        switch (_.refreshInfo?.reason ?? 2) {
-          case 2:
-          case 7:
+        switch (_.refreshInfo?.reason ?? _._) {
+          case _._:
+          case _._:
           default:
             _ = "#Login_RefreshReason_Generic";
             break;
-          case 6:
+          case _._:
             _ = "#Login_RefreshReason_LoggedInElsewhere";
             break;
-          case 34:
+          case _._:
             _ = "#Login_RefreshReason_LogonSessionReplaced";
             break;
-          case 5:
+          case _._:
             _ = "#Login_RefreshReason_InvalidPassword";
             break;
-          case 26:
+          case _._:
             _ = "#Login_RefreshReason_Revoked";
             break;
-          case 27:
+          case _._:
             _ = "#Login_RefreshReason_Expired";
             break;
-          case 49:
+          case _._:
             _ = "#Login_RefreshReason_PasswordRequiredToKickSession";
             break;
-          case 43:
+          case _._:
             _ = "#Login_RefreshReason_AccountDisabled";
             break;
-          case 69:
+          case _._:
             _ = "#Login_RefreshReason_ParentalControlRestricted";
             break;
-          case 84:
+          case _._:
             _ = "#Login_RefreshReason_RateLimitExceeded";
         }
         return (0, _.jsxs)("div", {
@@ -8408,8 +8477,8 @@
               (0, _.useCallback)(() => _.current, [_])
             );
           })(),
-          _ = 1 === _ || 13 === _,
-          _ = 2 === _ && !_,
+          _ = _ === _ || _ === _,
+          _ = _ === _ && !_,
           _ = _
             ? (0, _.jsx)(_, {
                 children: (0, _._)("#Login_CheckCredentials"),
@@ -8973,7 +9042,7 @@
                 _(!1), _(!1);
               });
           },
-          _ = !_ && (11 === _ || 10 === _);
+          _ = !_ && (_ === _ || _ === _);
         let _, _;
         return (
           _
@@ -9407,7 +9476,7 @@
           launcherType: _ = _._.IN_STEAMUI ? _._.LAUNCHER_TYPE : void 0,
           className: _ = _().HeaderLogo,
         } = _;
-        return 8 === _
+        return _ === _.A2g
           ? (0, _.jsx)("div", {
               className: _,
             })

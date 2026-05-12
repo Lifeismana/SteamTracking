@@ -9,20 +9,20 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = {
-          [_._.k_ECurrencyCodeInvalid]: {},
-          [_._.k_ECurrencyCodeUSD]: {
+          [_._]: {},
+          [_._]: {
             strSymbol: "$",
           },
-          [_._.k_ECurrencyCodeGBP]: {
+          [_._]: {
             strSymbol: "£",
           },
-          [_._.k_ECurrencyCodeEUR]: {
+          [_._]: {
             strSymbol: "€",
           },
-          [_._.k_ECurrencyCodeCHF]: {
+          [_._]: {
             strSymbol: "CHF",
           },
-          [_._.k_ECurrencyCodeRUB]: {
+          [_._]: {
             strSymbol: "руб.",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
@@ -30,227 +30,227 @@
             strDecimalSymbol: ",",
             strThousandsSeparator: "",
           },
-          [_._.k_ECurrencyCodePLN]: {
+          [_._]: {
             strSymbol: "zł",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeBRL]: {
+          [_._]: {
             strSymbol: "R$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeJPY]: {
+          [_._]: {
             strSymbol: "¥",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeNOK]: {
+          [_._]: {
             strSymbol: "kr",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeIDR]: {
+          [_._]: {
             strSymbol: "Rp",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeMYR]: {
+          [_._]: {
             strSymbol: "RM",
           },
-          [_._.k_ECurrencyCodePHP]: {
+          [_._]: {
             strSymbol: "P",
           },
-          [_._.k_ECurrencyCodeSGD]: {
+          [_._]: {
             strSymbol: "S$",
           },
-          [_._.k_ECurrencyCodeTHB]: {
+          [_._]: {
             strSymbol: "฿",
           },
-          [_._.k_ECurrencyCodeVND]: {
+          [_._]: {
             strSymbol: "₫",
             bWholeUnitsOnly: !0,
             bSuffixSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeKRW]: {
+          [_._]: {
             strSymbol: "₩",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeTRY]: {
+          [_._]: {
             strSymbol: "TL",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeUAH]: {
+          [_._]: {
             strSymbol: "₴",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeMXN]: {
+          [_._]: {
             strSymbol: "Mex$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCAD]: {
+          [_._]: {
             strSymbol: "CDN$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeAUD]: {
+          [_._]: {
             strSymbol: "A$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeNZD]: {
+          [_._]: {
             strSymbol: "NZ$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCNY]: {
+          [_._]: {
             strSymbol: "¥",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeINR]: {
+          [_._]: {
             strSymbol: "₹",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
           },
-          [_._.k_ECurrencyCodeCLP]: {
+          [_._]: {
             strSymbol: "CLP$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodePEN]: {
+          [_._]: {
             strSymbol: "S/.",
           },
-          [_._.k_ECurrencyCodeCOP]: {
+          [_._]: {
             strSymbol: "COL$",
             bSpaceForSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeZAR]: {
+          [_._]: {
             strSymbol: "R",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ".",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeHKD]: {
+          [_._]: {
             strSymbol: "HK$",
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeTWD]: {
+          [_._]: {
             strSymbol: "NT$",
             bWholeUnitsOnly: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeSAR]: {
+          [_._]: {
             strSymbol: "SR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeAED]: {
+          [_._]: {
             strSymbol: "AED",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeSEK]: {
+          [_._]: {
             strSymbol: "kr",
             bSpaceForSymbol: !0,
             bSuffixSymbol: !0,
           },
-          [_._.k_ECurrencyCodeARS]: {
+          [_._]: {
             strSymbol: "ARS$",
             bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeILS]: {
+          [_._]: {
             strSymbol: "₪",
           },
-          [_._.k_ECurrencyCodeBYN]: {
+          [_._]: {
             strSymbol: "Br",
           },
-          [_._.k_ECurrencyCodeKZT]: {
+          [_._]: {
             strSymbol: "₸",
             bSuffixSymbol: !0,
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },
-          [_._.k_ECurrencyCodeKWD]: {
+          [_._]: {
             strSymbol: "KD",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeQAR]: {
+          [_._]: {
             strSymbol: "QR",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCRC]: {
+          [_._]: {
             strSymbol: "₡",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeUYU]: {
+          [_._]: {
             strSymbol: "$U",
             bWholeUnitsOnly: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: ".",
           },
-          [_._.k_ECurrencyCodeBGN]: {
+          [_._]: {
             strSymbol: "лв",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeHRK]: {
+          [_._]: {
             strSymbol: "kn",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeCZK]: {
+          [_._]: {
             strSymbol: "Kč",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeDKK]: {
+          [_._]: {
             strSymbol: "kr.",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeHUF]: {
+          [_._]: {
             strSymbol: "Ft",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeRON]: {
+          [_._]: {
             strSymbol: "lei",
             bSuffixSymbol: !0,
             bSpaceForSymbol: !0,
           },
-          [_._.k_ECurrencyCodeMax]: {},
+          [_._]: {},
         },
         _ = {
           strSymbol: "",
           bSuffixSymbol: !1,
           bSpaceForSymbol: !1,
           bWholeUnitsOnly: !1,
-          eCurrency: _._.k_ECurrencyCodeInvalid,
+          eCurrency: _._,
           strDecimalSymbol: ".",
           strThousandsSeparator: ",",
         };
@@ -317,25 +317,25 @@
       function _(_) {
         switch (_?.toUpperCase()) {
           case "AE":
-            return _._.k_ECurrencyCodeAED;
+            return _._;
           case "AU":
-            return _._.k_ECurrencyCodeAUD;
+            return _._;
           case "BR":
-            return _._.k_ECurrencyCodeBRL;
+            return _._;
           case "CA":
-            return _._.k_ECurrencyCodeCAD;
+            return _._;
           case "CH":
           case "LI":
-            return _._.k_ECurrencyCodeCHF;
+            return _._;
           case "CL":
-            return _._.k_ECurrencyCodeCLP;
+            return _._;
           case "CN":
           case "XC":
-            return _._.k_ECurrencyCodeCNY;
+            return _._;
           case "CO":
-            return _._.k_ECurrencyCodeCOP;
+            return _._;
           case "CR":
-            return _._.k_ECurrencyCodeCRC;
+            return _._;
           case "AD":
           case "AL":
           case "AT":
@@ -381,57 +381,57 @@
           case "SK":
           case "SM":
           case "VA":
-            return _._.k_ECurrencyCodeEUR;
+            return _._;
           case "GB":
           case "GG":
           case "GS":
           case "IM":
           case "JE":
-            return _._.k_ECurrencyCodeGBP;
+            return _._;
           case "HK":
-            return _._.k_ECurrencyCodeHKD;
+            return _._;
           case "ID":
-            return _._.k_ECurrencyCodeIDR;
+            return _._;
           case "IL":
-            return _._.k_ECurrencyCodeILS;
+            return _._;
           case "IN":
-            return _._.k_ECurrencyCodeINR;
+            return _._;
           case "JP":
-            return _._.k_ECurrencyCodeJPY;
+            return _._;
           case "KR":
-            return _._.k_ECurrencyCodeKRW;
+            return _._;
           case "KW":
-            return _._.k_ECurrencyCodeKWD;
+            return _._;
           case "KZ":
-            return _._.k_ECurrencyCodeKZT;
+            return _._;
           case "MX":
-            return _._.k_ECurrencyCodeMXN;
+            return _._;
           case "MY":
-            return _._.k_ECurrencyCodeMYR;
+            return _._;
           case "NO":
-            return _._.k_ECurrencyCodeNOK;
+            return _._;
           case "NZ":
-            return _._.k_ECurrencyCodeNZD;
+            return _._;
           case "PE":
-            return _._.k_ECurrencyCodePEN;
+            return _._;
           case "PH":
-            return _._.k_ECurrencyCodePHP;
+            return _._;
           case "PL":
-            return _._.k_ECurrencyCodePLN;
+            return _._;
           case "QA":
-            return _._.k_ECurrencyCodeQAR;
+            return _._;
           case "RU":
-            return _._.k_ECurrencyCodeRUB;
+            return _._;
           case "SA":
-            return _._.k_ECurrencyCodeSAR;
+            return _._;
           case "SG":
-            return _._.k_ECurrencyCodeSGD;
+            return _._;
           case "TH":
-            return _._.k_ECurrencyCodeTHB;
+            return _._;
           case "TW":
-            return _._.k_ECurrencyCodeTWD;
+            return _._;
           case "UA":
-            return _._.k_ECurrencyCodeUAH;
+            return _._;
           case "AF":
           case "AG":
           case "AI":
@@ -588,113 +588,110 @@
           case "YT":
           case "ZM":
           case "ZW":
-            return _._.k_ECurrencyCodeUSD;
+            return _._;
           case "UY":
-            return _._.k_ECurrencyCodeUYU;
+            return _._;
           case "VN":
-            return _._.k_ECurrencyCodeVND;
+            return _._;
           case "ZA":
-            return _._.k_ECurrencyCodeZAR;
+            return _._;
           default:
-            return (
-              console.assert(!1, `Unhandled country code: ${_}`),
-              _._.k_ECurrencyCodeUSD
-            );
+            return console.assert(!1, `Unhandled country code: ${_}`), _._;
         }
       }
       function _(_) {
         switch (_) {
-          case _._.k_ECurrencyCodeGBP:
+          case _._:
             return "GBP";
-          case _._.k_ECurrencyCodeEUR:
+          case _._:
             return "EUR";
-          case _._.k_ECurrencyCodeCHF:
+          case _._:
             return "CHF";
-          case _._.k_ECurrencyCodeRUB:
+          case _._:
             return "RUB";
-          case _._.k_ECurrencyCodePLN:
+          case _._:
             return "PLN";
-          case _._.k_ECurrencyCodeBRL:
+          case _._:
             return "BRL";
-          case _._.k_ECurrencyCodeJPY:
+          case _._:
             return "JPY";
-          case _._.k_ECurrencyCodeNOK:
+          case _._:
             return "NOK";
-          case _._.k_ECurrencyCodeIDR:
+          case _._:
             return "IDR";
-          case _._.k_ECurrencyCodeMYR:
+          case _._:
             return "MYR";
-          case _._.k_ECurrencyCodePHP:
+          case _._:
             return "PHP";
-          case _._.k_ECurrencyCodeSGD:
+          case _._:
             return "SGD";
-          case _._.k_ECurrencyCodeTHB:
+          case _._:
             return "THB";
-          case _._.k_ECurrencyCodeVND:
+          case _._:
             return "VND";
-          case _._.k_ECurrencyCodeKRW:
+          case _._:
             return "KRW";
-          case _._.k_ECurrencyCodeTRY:
+          case _._:
             return "TRY";
-          case _._.k_ECurrencyCodeUAH:
+          case _._:
             return "UAH";
-          case _._.k_ECurrencyCodeMXN:
+          case _._:
             return "MXN";
-          case _._.k_ECurrencyCodeCAD:
+          case _._:
             return "CAD";
-          case _._.k_ECurrencyCodeAUD:
+          case _._:
             return "AUD";
-          case _._.k_ECurrencyCodeNZD:
+          case _._:
             return "NZD";
-          case _._.k_ECurrencyCodeCNY:
+          case _._:
             return "CNY";
-          case _._.k_ECurrencyCodeINR:
+          case _._:
             return "INR";
-          case _._.k_ECurrencyCodeCLP:
+          case _._:
             return "CLP";
-          case _._.k_ECurrencyCodePEN:
+          case _._:
             return "PEN";
-          case _._.k_ECurrencyCodeCOP:
+          case _._:
             return "COP";
-          case _._.k_ECurrencyCodeZAR:
+          case _._:
             return "ZAR";
-          case _._.k_ECurrencyCodeHKD:
+          case _._:
             return "HKD";
-          case _._.k_ECurrencyCodeTWD:
+          case _._:
             return "TWD";
-          case _._.k_ECurrencyCodeSAR:
+          case _._:
             return "SAR";
-          case _._.k_ECurrencyCodeAED:
+          case _._:
             return "AED";
-          case _._.k_ECurrencyCodeSEK:
+          case _._:
             return "SEK";
-          case _._.k_ECurrencyCodeARS:
+          case _._:
             return "ARS";
-          case _._.k_ECurrencyCodeILS:
+          case _._:
             return "ILS";
-          case _._.k_ECurrencyCodeBYN:
+          case _._:
             return "BYN";
-          case _._.k_ECurrencyCodeKZT:
+          case _._:
             return "KZT";
-          case _._.k_ECurrencyCodeKWD:
+          case _._:
             return "KWD";
-          case _._.k_ECurrencyCodeQAR:
+          case _._:
             return "QAR";
-          case _._.k_ECurrencyCodeCRC:
+          case _._:
             return "CRC";
-          case _._.k_ECurrencyCodeUYU:
+          case _._:
             return "UYU";
-          case _._.k_ECurrencyCodeBGN:
+          case _._:
             return "BGN";
-          case _._.k_ECurrencyCodeHRK:
+          case _._:
             return "HRK";
-          case _._.k_ECurrencyCodeCZK:
+          case _._:
             return "CZK";
-          case _._.k_ECurrencyCodeDKK:
+          case _._:
             return "DKK";
-          case _._.k_ECurrencyCodeHUF:
+          case _._:
             return "HUF";
-          case _._.k_ECurrencyCodeRON:
+          case _._:
             return "RON";
           default:
             return "USD";
@@ -702,219 +699,219 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_ECurrencyCodeUSD:
+          case _._:
             return "US Dollar";
-          case _._.k_ECurrencyCodeGBP:
+          case _._:
             return "GB Pounds";
-          case _._.k_ECurrencyCodeEUR:
+          case _._:
             return "Euros";
-          case _._.k_ECurrencyCodeCHF:
+          case _._:
             return "Swiss Francs";
-          case _._.k_ECurrencyCodeRUB:
+          case _._:
             return "Russian Rubles";
-          case _._.k_ECurrencyCodePLN:
+          case _._:
             return "Polish zloty";
-          case _._.k_ECurrencyCodeBRL:
+          case _._:
             return "Brazilian Reals";
-          case _._.k_ECurrencyCodeJPY:
+          case _._:
             return "Japanese Yen";
-          case _._.k_ECurrencyCodeNOK:
+          case _._:
             return "Norwegian Krone";
-          case _._.k_ECurrencyCodeIDR:
+          case _._:
             return "Indonesian Rupiah";
-          case _._.k_ECurrencyCodeMYR:
+          case _._:
             return "Malaysian Ringgit";
-          case _._.k_ECurrencyCodePHP:
+          case _._:
             return "Philippine Peso";
-          case _._.k_ECurrencyCodeSGD:
+          case _._:
             return "Singapore Dollar";
-          case _._.k_ECurrencyCodeTHB:
+          case _._:
             return "Thai Baht";
-          case _._.k_ECurrencyCodeVND:
+          case _._:
             return "Vietnamese Dong";
-          case _._.k_ECurrencyCodeKRW:
+          case _._:
             return "Korean Won";
-          case _._.k_ECurrencyCodeTRY:
+          case _._:
             return "Turkish Lira";
-          case _._.k_ECurrencyCodeUAH:
+          case _._:
             return "Ukrainian Hryvnia";
-          case _._.k_ECurrencyCodeMXN:
+          case _._:
             return "Mexican Peso";
-          case _._.k_ECurrencyCodeCAD:
+          case _._:
             return "Canadian Dollar";
-          case _._.k_ECurrencyCodeAUD:
+          case _._:
             return "Australian Dollar";
-          case _._.k_ECurrencyCodeNZD:
+          case _._:
             return "New Zealand Dollar";
-          case _._.k_ECurrencyCodeCNY:
+          case _._:
             return "Chinese Yuan";
-          case _._.k_ECurrencyCodeINR:
+          case _._:
             return "Indian Rupee";
-          case _._.k_ECurrencyCodeCLP:
+          case _._:
             return "Chilean Peso";
-          case _._.k_ECurrencyCodePEN:
+          case _._:
             return "Peruvian Sol";
-          case _._.k_ECurrencyCodeCOP:
+          case _._:
             return "Colombian Peso";
-          case _._.k_ECurrencyCodeZAR:
+          case _._:
             return "South African Rand";
-          case _._.k_ECurrencyCodeHKD:
+          case _._:
             return "Hong Kong Dollar";
-          case _._.k_ECurrencyCodeTWD:
+          case _._:
             return "Taiwanese Dollar";
-          case _._.k_ECurrencyCodeSAR:
+          case _._:
             return "Saudi Arabian Riyal";
-          case _._.k_ECurrencyCodeAED:
+          case _._:
             return "Emirati Dirham";
-          case _._.k_ECurrencyCodeSEK:
+          case _._:
             return "Swedish Krona";
-          case _._.k_ECurrencyCodeARS:
+          case _._:
             return "Argentine Peso";
-          case _._.k_ECurrencyCodeILS:
+          case _._:
             return "Israeli New Shequel";
-          case _._.k_ECurrencyCodeBYN:
+          case _._:
             return "Belarusian Ruble";
-          case _._.k_ECurrencyCodeKZT:
+          case _._:
             return "Kazakhstani Tenge";
-          case _._.k_ECurrencyCodeKWD:
+          case _._:
             return "Kuwaiti Dinar";
-          case _._.k_ECurrencyCodeQAR:
+          case _._:
             return "Qatari Rial";
-          case _._.k_ECurrencyCodeCRC:
+          case _._:
             return "Costa Rican Colon";
-          case _._.k_ECurrencyCodeUYU:
+          case _._:
             return "Uruguayan Peso";
-          case _._.k_ECurrencyCodeBGN:
+          case _._:
             return "Bulgarian lev";
-          case _._.k_ECurrencyCodeHRK:
+          case _._:
             return "Croatian kuna";
-          case _._.k_ECurrencyCodeCZK:
+          case _._:
             return "Czech koruna";
-          case _._.k_ECurrencyCodeDKK:
+          case _._:
             return "Danish krone";
-          case _._.k_ECurrencyCodeHUF:
+          case _._:
             return "Hungarian forint";
-          case _._.k_ECurrencyCodeRON:
+          case _._:
             return "Romanian leu";
           default:
             return "";
         }
       }
-      function _(_, _ = _._.k_ERegionCodeInvalid) {
+      function _(_, _ = _._) {
         switch (_) {
-          case _._.k_ECurrencyCodeGBP:
+          case _._:
             return "gbp";
-          case _._.k_ECurrencyCodeEUR:
+          case _._:
             return "eur";
-          case _._.k_ECurrencyCodeCHF:
+          case _._:
             return "chf";
-          case _._.k_ECurrencyCodeRUB:
+          case _._:
             return "rub";
-          case _._.k_ECurrencyCodePLN:
+          case _._:
             return "pln";
-          case _._.k_ECurrencyCodeBRL:
+          case _._:
             return "brl";
-          case _._.k_ECurrencyCodeJPY:
+          case _._:
             return "jpy";
-          case _._.k_ECurrencyCodeNOK:
+          case _._:
             return "nok";
-          case _._.k_ECurrencyCodeIDR:
+          case _._:
             return "idr";
-          case _._.k_ECurrencyCodeMYR:
+          case _._:
             return "myr";
-          case _._.k_ECurrencyCodePHP:
+          case _._:
             return "php";
-          case _._.k_ECurrencyCodeSGD:
+          case _._:
             return "sgd";
-          case _._.k_ECurrencyCodeTHB:
+          case _._:
             return "thb";
-          case _._.k_ECurrencyCodeVND:
+          case _._:
             return "vnd";
-          case _._.k_ECurrencyCodeKRW:
+          case _._:
             return "krw";
-          case _._.k_ECurrencyCodeTRY:
+          case _._:
             return "try";
-          case _._.k_ECurrencyCodeUAH:
+          case _._:
             return "uah";
-          case _._.k_ECurrencyCodeMXN:
+          case _._:
             return "mxn";
-          case _._.k_ECurrencyCodeCAD:
+          case _._:
             return "cad";
-          case _._.k_ECurrencyCodeAUD:
+          case _._:
             return "aud";
-          case _._.k_ECurrencyCodeNZD:
+          case _._:
             return "nzd";
-          case _._.k_ECurrencyCodeCNY:
+          case _._:
             return "cny";
-          case _._.k_ECurrencyCodeINR:
+          case _._:
             return "inr";
-          case _._.k_ECurrencyCodeCLP:
+          case _._:
             return "clp";
-          case _._.k_ECurrencyCodePEN:
+          case _._:
             return "pen";
-          case _._.k_ECurrencyCodeCOP:
+          case _._:
             return "cop";
-          case _._.k_ECurrencyCodeZAR:
+          case _._:
             return "zar";
-          case _._.k_ECurrencyCodeHKD:
+          case _._:
             return "hkd";
-          case _._.k_ECurrencyCodeTWD:
+          case _._:
             return "twd";
-          case _._.k_ECurrencyCodeSAR:
+          case _._:
             return "sar";
-          case _._.k_ECurrencyCodeAED:
+          case _._:
             return "aed";
-          case _._.k_ECurrencyCodeSEK:
+          case _._:
             return "sek";
-          case _._.k_ECurrencyCodeARS:
+          case _._:
             return "ars";
-          case _._.k_ECurrencyCodeILS:
+          case _._:
             return "ils";
-          case _._.k_ECurrencyCodeBYN:
+          case _._:
             return "byn";
-          case _._.k_ECurrencyCodeKZT:
+          case _._:
             return "kzt";
-          case _._.k_ECurrencyCodeKWD:
+          case _._:
             return "kwd";
-          case _._.k_ECurrencyCodeQAR:
+          case _._:
             return "qar";
-          case _._.k_ECurrencyCodeCRC:
+          case _._:
             return "crc";
-          case _._.k_ECurrencyCodeUYU:
+          case _._:
             return "uyu";
-          case _._.k_ECurrencyCodeBGN:
+          case _._:
             return "bgn";
-          case _._.k_ECurrencyCodeHRK:
+          case _._:
             return "hrk";
-          case _._.k_ECurrencyCodeCZK:
+          case _._:
             return "czk";
-          case _._.k_ECurrencyCodeDKK:
+          case _._:
             return "dkk";
-          case _._.k_ECurrencyCodeHUF:
+          case _._:
             return "huf";
-          case _._.k_ECurrencyCodeRON:
+          case _._:
             return "ron";
           default:
-            return _ == _._.k_ERegionCodeCIS
+            return _ == _._
               ? "usd_cis"
-              : _ == _._.k_ERegionCodeSAsia
+              : _ == _._
                 ? "usd_sasia"
-                : _ == _._.k_ERegionCodeLATAM
+                : _ == _._
                   ? "usd_latam"
-                  : _ == _._.k_ERegionCodeMENA
+                  : _ == _._
                     ? "usd_mena"
                     : "usd";
         }
       }
       function _(_) {
         switch (_) {
-          case _._.k_ERegionCodeCIS:
+          case _._:
             return "CIS";
-          case _._.k_ERegionCodeSAsia:
+          case _._:
             return "SASIA";
-          case _._.k_ERegionCodeLATAM:
+          case _._:
             return "LATAM";
-          case _._.k_ERegionCodeMENA:
+          case _._:
             return "MENA";
         }
         return "Unknown";
@@ -926,99 +923,99 @@
           case "USD_MENA":
           case "USD_LATAM":
           case "USD_SASIA":
-            return _._.k_ECurrencyCodeUSD;
+            return _._;
           case "GBP":
-            return _._.k_ECurrencyCodeGBP;
+            return _._;
           case "EUR":
-            return _._.k_ECurrencyCodeEUR;
+            return _._;
           case "CHF":
-            return _._.k_ECurrencyCodeCHF;
+            return _._;
           case "RUB":
-            return _._.k_ECurrencyCodeRUB;
+            return _._;
           case "PLN":
-            return _._.k_ECurrencyCodePLN;
+            return _._;
           case "BRL":
-            return _._.k_ECurrencyCodeBRL;
+            return _._;
           case "JPY":
-            return _._.k_ECurrencyCodeJPY;
+            return _._;
           case "NOK":
-            return _._.k_ECurrencyCodeNOK;
+            return _._;
           case "IDR":
-            return _._.k_ECurrencyCodeIDR;
+            return _._;
           case "MYR":
-            return _._.k_ECurrencyCodeMYR;
+            return _._;
           case "PHP":
-            return _._.k_ECurrencyCodePHP;
+            return _._;
           case "SGD":
-            return _._.k_ECurrencyCodeSGD;
+            return _._;
           case "THB":
-            return _._.k_ECurrencyCodeTHB;
+            return _._;
           case "VND":
-            return _._.k_ECurrencyCodeVND;
+            return _._;
           case "KRW":
-            return _._.k_ECurrencyCodeKRW;
+            return _._;
           case "TRY":
-            return _._.k_ECurrencyCodeTRY;
+            return _._;
           case "UAH":
-            return _._.k_ECurrencyCodeUAH;
+            return _._;
           case "MXN":
-            return _._.k_ECurrencyCodeMXN;
+            return _._;
           case "CAD":
-            return _._.k_ECurrencyCodeCAD;
+            return _._;
           case "AUD":
-            return _._.k_ECurrencyCodeAUD;
+            return _._;
           case "NZD":
-            return _._.k_ECurrencyCodeNZD;
+            return _._;
           case "CNY":
-            return _._.k_ECurrencyCodeCNY;
+            return _._;
           case "INR":
-            return _._.k_ECurrencyCodeINR;
+            return _._;
           case "CLP":
-            return _._.k_ECurrencyCodeCLP;
+            return _._;
           case "PEN":
-            return _._.k_ECurrencyCodePEN;
+            return _._;
           case "COP":
-            return _._.k_ECurrencyCodeCOP;
+            return _._;
           case "ZAR":
-            return _._.k_ECurrencyCodeZAR;
+            return _._;
           case "HKD":
-            return _._.k_ECurrencyCodeHKD;
+            return _._;
           case "TWD":
-            return _._.k_ECurrencyCodeTWD;
+            return _._;
           case "SAR":
-            return _._.k_ECurrencyCodeSAR;
+            return _._;
           case "AED":
-            return _._.k_ECurrencyCodeAED;
+            return _._;
           case "SEK":
-            return _._.k_ECurrencyCodeSEK;
+            return _._;
           case "ARS":
-            return _._.k_ECurrencyCodeARS;
+            return _._;
           case "ILS":
-            return _._.k_ECurrencyCodeILS;
+            return _._;
           case "BYN":
-            return _._.k_ECurrencyCodeBYN;
+            return _._;
           case "KZT":
-            return _._.k_ECurrencyCodeKZT;
+            return _._;
           case "KWD":
-            return _._.k_ECurrencyCodeKWD;
+            return _._;
           case "QAR":
-            return _._.k_ECurrencyCodeQAR;
+            return _._;
           case "CRC":
-            return _._.k_ECurrencyCodeCRC;
+            return _._;
           case "UYU":
-            return _._.k_ECurrencyCodeUYU;
+            return _._;
           case "BGN":
-            return _._.k_ECurrencyCodeBGN;
+            return _._;
           case "HRK":
-            return _._.k_ECurrencyCodeHRK;
+            return _._;
           case "CZK":
-            return _._.k_ECurrencyCodeCZK;
+            return _._;
           case "DKK":
-            return _._.k_ECurrencyCodeDKK;
+            return _._;
           case "HUF":
-            return _._.k_ECurrencyCodeHUF;
+            return _._;
           case "RON":
-            return _._.k_ECurrencyCodeRON;
+            return _._;
           default:
             return _(_)
               ? _(_.substring(0, 3))
@@ -1028,7 +1025,7 @@
                     !1,
                     `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
                   ),
-                  _._.k_ECurrencyCodeInvalid);
+                  _._);
         }
       }
       function _(_) {
@@ -1045,141 +1042,311 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      var _;
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
         _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
-            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
-            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
-            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
-            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
-            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
-            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
-            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
-            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
-            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
-            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
-            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
-            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
-            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
-            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
-            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
-            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
-            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
-            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
-            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
-            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
-            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
-            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
-            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
-            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
-            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
-            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
-            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
-            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
-            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
-            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
-            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
-            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
-            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
-            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
-            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
-            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
-            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
-            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
-            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
-            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
-            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
-            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
-            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
-            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
-            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
-            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
-            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
-            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(_ || (_ = {}));
-      const _ = [_.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS];
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5,
+        _ = 6,
+        _ = 7,
+        _ = 8,
+        _ = 9,
+        _ = 10,
+        _ = 11,
+        _ = 12,
+        _ = 13,
+        _ = 14,
+        _ = 15,
+        _ = 16,
+        _ = 17,
+        _ = 18,
+        _ = 19,
+        _ = 20,
+        _ = 21,
+        _ = 22,
+        _ = 23,
+        _ = 24,
+        _ = 25,
+        _ = 26,
+        _ = 27,
+        _ = 28,
+        _ = 29,
+        _ = 30,
+        _ = 31,
+        _ = 32,
+        _ = 33,
+        _ = 34,
+        _ = 35,
+        _ = 36,
+        _ = 37,
+        _ = 38,
+        _ = 39,
+        _ = 40,
+        _ = 41,
+        _ = 42,
+        _ = 43,
+        _ = 44,
+        _ = 45,
+        _ = 46,
+        _ = 47,
+        _ = 48;
+      const _ = [_, _];
       function _() {
         return [
-          _.k_ECurrencyCodeUSD,
-          _.k_ECurrencyCodeGBP,
-          _.k_ECurrencyCodeEUR,
-          _.k_ECurrencyCodeCHF,
-          _.k_ECurrencyCodeRUB,
-          _.k_ECurrencyCodePLN,
-          _.k_ECurrencyCodeBRL,
-          _.k_ECurrencyCodeJPY,
-          _.k_ECurrencyCodeNOK,
-          _.k_ECurrencyCodeIDR,
-          _.k_ECurrencyCodeMYR,
-          _.k_ECurrencyCodePHP,
-          _.k_ECurrencyCodeSGD,
-          _.k_ECurrencyCodeTHB,
-          _.k_ECurrencyCodeVND,
-          _.k_ECurrencyCodeKRW,
-          _.k_ECurrencyCodeUAH,
-          _.k_ECurrencyCodeMXN,
-          _.k_ECurrencyCodeCAD,
-          _.k_ECurrencyCodeAUD,
-          _.k_ECurrencyCodeNZD,
-          _.k_ECurrencyCodeCNY,
-          _.k_ECurrencyCodeINR,
-          _.k_ECurrencyCodeCLP,
-          _.k_ECurrencyCodePEN,
-          _.k_ECurrencyCodeCOP,
-          _.k_ECurrencyCodeZAR,
-          _.k_ECurrencyCodeHKD,
-          _.k_ECurrencyCodeTWD,
-          _.k_ECurrencyCodeSAR,
-          _.k_ECurrencyCodeAED,
-          _.k_ECurrencyCodeILS,
-          _.k_ECurrencyCodeKZT,
-          _.k_ECurrencyCodeKWD,
-          _.k_ECurrencyCodeQAR,
-          _.k_ECurrencyCodeCRC,
-          _.k_ECurrencyCodeUYU,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
         ];
       }
       function _() {
-        return [
-          ..._(),
-          ..._,
-          _.k_ECurrencyCodeSEK,
-          _.k_ECurrencyCodeBGN,
-          _.k_ECurrencyCodeHRK,
-          _.k_ECurrencyCodeCZK,
-          _.k_ECurrencyCodeDKK,
-          _.k_ECurrencyCodeHUF,
-          _.k_ECurrencyCodeRON,
-        ];
+        return [..._(), ..._, _, _, _, _, _, _, _];
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      var _;
-      function _() {
-        return [
-          _.k_ERegionCodeCIS,
-          _.k_ERegionCodeSAsia,
-          _.k_ERegionCodeLATAM,
-          _.k_ERegionCodeMENA,
-        ];
-      }
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
-            (_[(_.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
-            (_[(_.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
-            (_[(_.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
-            (_[(_.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
-            (_[(_.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
-        })(_ || (_ = {}));
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3,
+        _ = 4,
+        _ = 5;
+      function _() {
+        return [_, _, _, _];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 1,
+        _ = 2,
+        _ = 4,
+        _ = 1073741824;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = "061818254b2c99ac49e6626adb128ed1282a392f",
+        _ = 120;
+      class _ {
+        m_unAppID;
+        m_bInitialized = !1;
+        m_strName;
+        m_strIconURL;
+        m_dtUpdatedFromServer;
+        m_eAppType;
+        constructor(_) {
+          this.m_unAppID = _;
+        }
+        get appid() {
+          return this.m_unAppID;
+        }
+        get is_initialized() {
+          return this.m_bInitialized;
+        }
+        get is_valid() {
+          return this.m_bInitialized && !!this.m_strName;
+        }
+        get name() {
+          return this.m_strName;
+        }
+        get icon_url_no_default() {
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get icon_url() {
+          return this.BuildAppURL(this.m_strIconURL, _);
+        }
+        get time_updated_from_server() {
+          return this.m_dtUpdatedFromServer;
+        }
+        get apptype() {
+          return this.m_eAppType;
+        }
+        BIsApplicationOrTool() {
+          return this.apptype == _._ || this.apptype == _._;
+        }
+        BuildAppURL(_, _) {
+          return _
+            ? _._.MEDIA_CDN_COMMUNITY_URL +
+                "images/apps/" +
+                this.appid +
+                "/" +
+                _ +
+                ".jpg"
+            : (0, _._)(_);
+        }
+        DeserializeFromMessage(_) {
+          (this.m_bInitialized = !0),
+            (this.m_strName = _.name()),
+            (this.m_strIconURL = _.icon()),
+            (this.m_dtUpdatedFromServer = new Date()),
+            (this.m_eAppType = _.app_type());
+        }
+        DeserializeFromAppOverview(_) {
+          _.icon_hash() && _.app_type() != _._
+            ? ((this.m_bInitialized = !0),
+              (this.m_strName = _.display_name()),
+              (this.m_strIconURL = _.icon_hash()),
+              (this.m_dtUpdatedFromServer = new Date()),
+              (this.m_eAppType = _.app_type()))
+            : (this.m_bInitialized = !1);
+        }
+        DeserializeFromCacheObject(_) {
+          try {
+            (this.m_strName = _.strName),
+              (this.m_strIconURL = _.strIconURL),
+              (this.m_dtUpdatedFromServer = new Date(_.strUpdatedFromServer)),
+              (this.m_eAppType = _.eAppType),
+              (this.m_bInitialized = !0);
+          } catch {}
+        }
+        SerializeToCacheObject() {
+          return (
+            (0, _._)(
+              this.m_bInitialized,
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
+            ),
+            this.m_bInitialized
+              ? {
+                  strName: this.m_strName,
+                  strIconURL: this.m_strIconURL,
+                  strUpdatedFromServer: this.m_dtUpdatedFromServer.toJSON(),
+                  eAppType: this.m_eAppType,
+                }
+              : null
+          );
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function _(_, _) {
+        let _ = ".jpg";
+        (_ && "0000000000000000000000000000000000000000" !== _) || (_ = _),
+          44 == _.length && ((_ = _.substr(-4)), (_ = _.substr(0, 40)));
+        let _ = _._.AVATAR_BASE_URL;
+        return (
+          _ ||
+            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (_ += _.substr(0, 2) + "/")),
+          (_ += _),
+          _ && "small" != _ && (_ += "_" + _),
+          (_ += _),
+          _
+        );
+      }
     },
   },
 ]);

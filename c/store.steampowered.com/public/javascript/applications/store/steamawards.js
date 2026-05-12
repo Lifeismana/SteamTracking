@@ -292,6 +292,322 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = 30;
+      function _(_) {
+        const {
+            event: _,
+            imageURLOverride: _,
+            bShowAssociatedApp: _,
+            langOverride: _,
+            onClick: _,
+            eEventRount: _,
+            bHidePrices: _,
+          } = _,
+          _ = (0, _._)(_.appid),
+          [_, _, _, _, _, _] = (0, _._)(() => {
+            const _ = _ || (0, _.sfN)(_._.LANGUAGE),
+              _ = Boolean(void 0 !== _)
+                ? _
+                : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
+              _ = Boolean(void 0 !== _)
+                ? _
+                : _.GetImageURLWithFallback("capsule", _, _._.full);
+            return [
+              _,
+              _.GetNameWithFallback(_) || "",
+              _.GetCategoryAsString(),
+              _.GetSummaryWithFallback(_),
+              _,
+              _.GetSubTitleWithLanguageFallback(_) || "",
+            ];
+          }),
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          _ = [];
+        if ((_ && _.push(_), _ && _ !== _ && _.push(_), _)) {
+          const _ = (0, _._)(_, "main_capsule");
+          _ && _.push(_);
+        }
+        const [_, _] = (0, _.useState)(_);
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _().OtherEvents_EventCtn,
+          });
+        const _ = _._.NOW,
+          _ = _ ? _.GetStartTimeAndDateUnixSeconds() : 0;
+        let _ = _;
+        return (
+          _ && (_.length > _ || _.length > _) && (_ = void 0),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  _().OtherEvents_EventCtn,
+                  "OtherEvents_EventCtn",
+                  _().HoversEnabled,
+                ),
+                eventModel: _,
+                route: _ || _._.k_eView,
+                onClick: _,
+                preferredFocus: !0,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: _().EventSummaryContainer,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().EventSummaryType,
+                        children: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().EventSummaryText,
+                        children: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().OtherEvents_BGImage,
+                    style: {
+                      backgroundColor: "#ffffff",
+                      backgroundImage: _ ? `url(${(0, _._)(_)})` : "none",
+                    },
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _().OtherEvents_ContentCtn,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().OtherEvents_MainImageCtn,
+                          _ && _().MaskImages,
+                        ),
+                        children: (0, _.jsx)(_._, {
+                          rgSources: _,
+                          onIncrementalError: (_, _, _) => {
+                            _ >= _.length && _(void 0), _(_[_ + 1]);
+                          },
+                          className: _().OtherEvents_MainImage,
+                          alt: "",
+                        }),
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().OtherEvents_TextCtn,
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().OtherEvents_TextTitle,
+                            children: _,
+                          }),
+                          Boolean(_) &&
+                            (0, _.jsx)("div", {
+                              className: _().OtherEvents_SubTitle,
+                              children: _,
+                            }),
+                          Boolean(_ > _)
+                            ? (0, _.jsx)("div", {
+                                className: (0, _._)(
+                                  _().UpcomingCtn,
+                                  "UpcomingCtn",
+                                ),
+                                children: (0, _.jsx)(_._, {
+                                  bSingleLine: !0,
+                                  dateAndTime:
+                                    _.GetStartTimeAndDateUnixSeconds(),
+                                }),
+                              })
+                            : (0, _.jsx)(_._, {
+                                bSingleLine: !0,
+                                bOnlyDate: !0,
+                                dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                              }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              Boolean(_ && _.appid) &&
+                (0, _.jsx)(_, {
+                  appid: _.appid,
+                  bHidePrice: _,
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { appid: _, bHidePrice: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        if (!_ || !_) return null;
+        const _ = _ && _.hide_discount_pct_for_compliance;
+        return (0, _.jsx)(_._, {
+          appID: _,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_().AppCapsuleCtn, "AppCapsuleCtn"),
+            ...(0, _._)(_, _, _, !1),
+            children: [
+              (0, _.jsx)(_._, {
+                _: _,
+                hoverProps: {
+                  direction: "overlay",
+                  style: {
+                    minWidth: "320px",
+                  },
+                },
+                children: (0, _.jsx)("img", {
+                  className: (0, _._)(_().AppCapsuleImage, _().CapsuleShadow),
+                  src: (0, _._)(_, "small_capsule"),
+                  alt: _.name,
+                }),
+              }),
+              Boolean(!_ && !_.is_free) &&
+                (0, _.jsxs)("span", {
+                  className: (0, _._)(
+                    _().AppCapsulePrice,
+                    Boolean(_?.discount_pct) ? _().Discounted : "",
+                  ),
+                  children: [
+                    Boolean(_?.discount_pct && _) &&
+                      (0, _.jsx)("div", {
+                        className: _().DiscountIconCtn,
+                        children: (0, _.jsx)(_.XH_, {}),
+                      }),
+                    Boolean(_?.discount_pct && !_) &&
+                      (0, _.jsx)("span", {
+                        className: _().StoreSaleDiscountBox,
+                        children: `-${_?.discount_pct}%`,
+                      }),
+                    _ &&
+                      _.final_price_in_cents &&
+                      (0, _.jsx)("span", {
+                        className: _().StoreSalePriceBox,
+                        children: _.formatted_final_price,
+                      }),
+                  ],
+                }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { event: _, imageURLOverride: _, onClick: _ } = _,
+          _ = (0, _._)(_.appid),
+          _ = (0, _._)(_.appid),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _.sfN)(_._.LANGUAGE),
+          [_, _, _, _, _] = (0, _._)(() =>
+            _
+              ? [
+                  void 0 !== _
+                    ? _
+                    : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
+                  _.GetNameWithFallback(_),
+                  _.GetCategoryAsString(),
+                  _.GetSubTitleWithLanguageFallback(_),
+                  _.GetSummaryWithFallback(_),
+                ]
+              : [void 0, void 0, void 0, void 0, void 0],
+          );
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _().OtherEvents_EventCtn,
+          });
+        const _ = [];
+        if ((_ && _.push(_), _)) {
+          const _ = (0, _._)(_, "main_capsule");
+          _ && _.push(_);
+        }
+        return (0, _.jsxs)(_._, {
+          className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
+          eventModel: _,
+          route: _._.k_eView,
+          onClick: _,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().OtherEvents_ContentCtn,
+              children: (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().OtherEvents_MainImageCtn,
+                  _ && _().MaskImages,
+                ),
+                children: (0, _.jsx)(_._, {
+                  rgSources: _,
+                  className: _().OtherEvents_MainImage,
+                  alt: "",
+                }),
+              }),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().OtherEvents_TextCtn,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().HorizontalDescriptionCtn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().HorizontalDescription,
+                      children: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      bSingleLine: !0,
+                      dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().HorizontalTitle,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().HorizontalSubTitle,
+                    children: _,
+                  }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().HorizontalSummary,
+                    children: _,
+                  }),
+              ],
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -397,6 +713,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         async DeleteOldAnnouncement(_, _) {
@@ -409,7 +726,7 @@
               "/announcements/ajaxdeleteannouncement/" +
               _,
             _ = await _().post(_, _);
-          if (1 != _.data.success) throw _.data;
+          if (_.data.success != _._) throw _.data;
           return this.RemoveGIDFromList(_, _._ + _), _.data;
         }
         static sm_Instance;
@@ -428,6 +745,60 @@
           );
         }
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ extends _._ {
+        constructor() {
+          super();
+        }
+        BTransportReady() {
+          return !0;
+        }
+        GetServerTime() {
+          return _._.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
+        }
+        async RequestEmoticonListInternal() {
+          let _ = [];
+          try {
+            let _ = await _().get(_._.CHAT_BASE_URL + "actions/EmoticonData", {
+              withCredentials: !0,
+            });
+            if (_.data.emoticons)
+              for (let _ of _.data.emoticons) {
+                let _ = _.name;
+                if (_.startsWith("^"))
+                  _.push({
+                    name: _,
+                  });
+                else {
+                  let _ = {
+                      name: _.substr(1, _.length - 2),
+                    },
+                    _ = _.name.toLowerCase();
+                  _ != _.name && (_.name_normalized = _),
+                    _.time_last_used && (_.last_used = _.time_last_used),
+                    _.use_count && (_.use_count = _.use_count),
+                    _.time_received && (_.time_received = _.time_received),
+                    _.appid && (_.appid = _.appid),
+                    _.push(_);
+                }
+              }
+          } catch (_) {
+            console.error("error loading emoticon list", _);
+          }
+          this.OnEmoticonListReceived(_);
+        }
+      }
+      const _ = new _();
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -524,6 +895,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -604,7 +976,8 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
-          ? (1 != _.type && 12 != _.type) || !_.related_items?.parent_appid
+          ? (_.type != _._._ && _.type != _._._) ||
+            !_.related_items?.parent_appid
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,
@@ -670,6 +1043,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_basic_info: !0,
@@ -686,7 +1063,7 @@
           });
         let _ = (0, _._)("#Steamawards_Nominate_ThisYear");
         return (
-          3 == _.flag && (_ = (0, _._)("#Steamawards_Nominate_PastYear")),
+          _.flag == _._._ && (_ = (0, _._)("#Steamawards_Nominate_PastYear")),
           (0, _.jsxs)("div", {
             className: _().NominationPickerCtn,
             children: [
@@ -731,7 +1108,7 @@
                 children: (0, _.jsx)(_, {
                   unAppID: _._,
                   eSteamAwardCategoryID: _.voteid,
-                  eNominatonSource: 0,
+                  eNominatonSource: _._._,
                   fnShowPicker: _,
                 }),
               }),
@@ -774,7 +1151,7 @@
                     }),
                     (0, _.jsx)(_, {
                       eSteamAwardCategoryID: _.voteid,
-                      eNominatonSource: 6,
+                      eNominatonSource: _._._,
                       rgGameCarouselItems: _,
                     }),
                   ],
@@ -807,7 +1184,7 @@
                 _.data?.suggested_apps &&
                   (0, _.jsx)(_, {
                     eSteamAwardCategoryID: _.voteid,
-                    eNominatonSource: 7,
+                    eNominatonSource: _._._,
                     rgGameCarouselItems: _.data.suggested_apps.map((_) => ({
                       appID: _.appid,
                     })),
@@ -833,7 +1210,7 @@
             (0, _.jsx)(_, {
               unAppID: _._,
               eSteamAwardCategoryID: _,
-              eNominatonSource: 0,
+              eNominatonSource: _._._,
               fnShowPicker: _,
             }),
           ],
@@ -867,7 +1244,7 @@
                             _,
                             {
                               eSteamAwardCategoryID: _.voteid,
-                              eNominatonSource: 3,
+                              eNominatonSource: _._._,
                               appSuggestion: _,
                             },
                             _._,
@@ -939,7 +1316,7 @@
             [_],
           ),
           _ = (0, _._)(_);
-        if (1 == _) return null;
+        if (_ == _._) return null;
         const _ = _.filter((_) => _._.Get().BHasApp(_.appID));
         return (0, _.jsx)("div", {
           ref: _,
@@ -1031,7 +1408,7 @@
                 _,
                 _ ?? "Unknown",
               );
-              42 == _ &&
+              _ == _._ &&
                 (_ = (0, _._)("#Steamawards_Nominate_Error_NoMatch", _)),
                 (0, _._)(_, _);
             },
@@ -1148,7 +1525,7 @@
           bShowAssociatedApp: !0,
           bHidePrices: !0,
           onClick: (_) => {
-            _._.Get().RecordEventRead(_, 7),
+            _._.Get().RecordEventRead(_, _._._),
               (0, _._)(_, _._(_)),
               _.stopPropagation(),
               _.preventDefault();
@@ -1484,7 +1861,7 @@
         );
       }
       function _() {
-        const _ = (0, _._)(70);
+        const _ = (0, _._)(_._._);
         let _ = 0;
         const _ = _.data?.quests?.map(
           (_) => (
@@ -2250,7 +2627,7 @@
           _ = _.useCallback(() => {
             _(0), _(_[_.current]);
           }, [_]);
-        if (1 == _)
+        if (_ == _._)
           return (0, _.jsx)(_._, {
             position: "center",
             size: "large",

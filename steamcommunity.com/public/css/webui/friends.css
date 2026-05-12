@@ -4071,6 +4071,10 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldRightColumn_PSZtx {
   flex-grow: 1;
 }
+.gamepaddialog_Field_eKmEX:not(.gamepaddialog_ChildrenWidthGrow_Jgod1)
+  .gamepaddialog_FieldRightColumn_PSZtx {
+  max-width: 50%;
+}
 .gamepaddialog_FieldLabelRow_2VcTl {
   display: flex;
   flex-direction: row;

@@ -172,195 +172,197 @@
     },
     75152: (e, t, n) => {
       "use strict";
-      n.d(t, { q: () => h });
+      n.d(t, { q: () => b });
       var a = n(7850),
         r = n(99171),
-        s = n(39777),
-        o = n(90626),
-        i = n(43976),
-        l = n(18654),
-        c = n.n(l),
-        d = n(96006),
-        u = n(3740),
-        m = n(14326),
-        p = n(52038);
-      function h(e) {
+        s = n(96171),
+        o = n(39777),
+        i = n(90626),
+        l = n(43976),
+        c = n(18654),
+        d = n.n(c),
+        u = n(96006),
+        m = n(3740),
+        p = n(14326),
+        h = n(52038);
+      function b(e) {
         const {
             id: t,
             bShowAsMuted: n,
             bHidePrice: r,
-            bShowInLibraryInsteadOfPrice: l,
-            bHidePlatforms: h,
-            strClassName: I,
-            creatorAccountID: x,
-            bShowName: A,
-            onlyOneDiscountPct: f,
-            bShowAddToCart: v,
-            bShowWishlistButton: S,
+            bShowInLibraryInsteadOfPrice: c,
+            bHidePlatforms: b,
+            strClassName: x,
+            creatorAccountID: A,
+            bShowName: f,
+            onlyOneDiscountPct: v,
+            bShowAddToCart: S,
+            bShowWishlistButton: w,
           } = e,
-          w = (0, o.useRef)(null),
-          [j, g] = (0, o.useState)(!1),
-          { data: C } = (0, s.J$)(t);
+          j = (0, i.useRef)(null),
+          [g, C] = (0, i.useState)(!1),
+          { data: P } = (0, o.J$)(t);
         if (
-          ((0, o.useEffect)(() => {
-            w.current && g(w.current.offsetWidth < 370);
-          }, [w]),
+          ((0, i.useEffect)(() => {
+            j.current && C(j.current.offsetWidth < 370);
+          }, [j]),
           !t || !("appid" in t || "bundleid" in t || "packageid" in t))
         )
           return null;
-        const P = Boolean(S && 0 == C?.item_type),
-          y = Boolean(!x && !v && !P && h && r);
+        const y = Boolean(w && P?.item_type == s.c6.qI),
+          D = Boolean(!A && !S && !y && b && r);
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            !y &&
+            !D &&
               (0, a.jsxs)("div", {
-                ref: w,
-                className: (0, p.A)(
-                  c().CapsuleBottomBar,
+                ref: j,
+                className: (0, h.A)(
+                  d().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  n && c().Muted,
-                  I,
+                  n && d().Muted,
+                  x,
                 ),
                 children: [
-                  x && (0, a.jsx)(_, { creatorAccountID: x, ...e }),
-                  v &&
-                    (0, a.jsx)(i.h, {
+                  A && (0, a.jsx)(I, { creatorAccountID: A, ...e }),
+                  S &&
+                    (0, a.jsx)(l.h, {
                       id: t,
-                      className: (0, p.A)(
-                        c().MaxActionButtonWidth,
-                        c().AddToCartButton,
+                      className: (0, h.A)(
+                        d().MaxActionButtonWidth,
+                        d().AddToCartButton,
                       ),
                     }),
-                  P &&
+                  y &&
                     "appid" in t &&
-                    (0, a.jsx)(m.r, {
+                    (0, a.jsx)(p.r, {
                       appid: t.appid,
-                      className: (0, p.A)(
-                        c().MaxActionButtonWidth,
-                        c().AddToWishlistButton,
+                      className: (0, h.A)(
+                        d().MaxActionButtonWidth,
+                        d().AddToWishlistButton,
                       ),
                     }),
-                  !h && (0, a.jsx)(d.Q, { id: t, bMinimizePlatforms: j }),
+                  !b && (0, a.jsx)(u.Q, { id: t, bMinimizePlatforms: g }),
                   !r &&
                     (0, a.jsx)("span", {
-                      className: c().BottomBarPriceInfo,
-                      children: (0, a.jsx)(u.N, {
+                      className: d().BottomBarPriceInfo,
+                      children: (0, a.jsx)(m.N, {
                         id: t,
-                        bShowInLibrary: l,
-                        onlyOneDiscountPct: f,
+                        bShowInLibrary: c,
+                        onlyOneDiscountPct: v,
                       }),
                     }),
                 ],
               }),
-            A && (0, a.jsx)(b, { id: t }),
+            f && (0, a.jsx)(_, { id: t }),
           ],
         });
       }
-      function b(e) {
+      function _(e) {
         const { id: t } = e,
-          { data: n } = (0, s.J$)(t);
+          { data: n } = (0, o.J$)(t);
         return n?.name
-          ? (0, a.jsx)("div", { className: c().CapsuleName, children: n.name })
+          ? (0, a.jsx)("div", { className: d().CapsuleName, children: n.name })
           : null;
       }
-      function _(e) {
-        const { creatorAccountID: t, bShowAsMuted: n, strClassName: i } = e,
-          l = (0, o.useMemo)(() => ({ creatorid: t }), [t]),
-          { data: d } = (0, s.J$)(l),
-          { data: u } = (0, s.lv)(l);
-        if (!d) return null;
+      function I(e) {
+        const { creatorAccountID: t, bShowAsMuted: n, strClassName: s } = e,
+          l = (0, i.useMemo)(() => ({ creatorid: t }), [t]),
+          { data: c } = (0, o.J$)(l),
+          { data: u } = (0, o.lv)(l);
+        if (!c) return null;
         const m = (0, r.t)(u?.clan_avatar, "Medium"),
-          h = d.name || "";
+          p = c.name || "";
         return (0, a.jsxs)("div", {
-          className: (0, p.A)(c().BottomCreatorRow, n && c().Muted, i),
+          className: (0, h.A)(d().BottomCreatorRow, n && d().Muted, s),
           children: [
             (0, a.jsx)("img", {
-              className: (0, p.A)(c().CreatorLogo),
+              className: (0, h.A)(d().CreatorLogo),
               src: m,
-              alt: h,
+              alt: p,
             }),
-            (0, a.jsx)("span", { className: c().CreatorName, children: h }),
+            (0, a.jsx)("span", { className: d().CreatorName, children: p }),
           ],
         });
       }
     },
     22687: (e, t, n) => {
       "use strict";
-      n.d(t, { W: () => M, J: () => W });
+      n.d(t, { W: () => R, J: () => M });
       var a = n(7850),
         r = n(45699),
         s = n(76217),
         o = n(23310),
-        i = n(706),
-        l = n(20433);
-      var c = n(78588),
-        d = n(12424),
-        u = n(75152),
-        m = n(42834),
-        p = n(80696),
-        h = n(39777),
-        b = n(14987),
-        _ = n(60014),
-        I = n(58918),
-        x = n(90626),
-        A = n(35380),
-        f = n(55963),
-        v = n(33924),
-        S = n(18654),
-        w = n.n(S),
-        j = n(94191),
-        g = n(72860),
-        C = n(70300),
-        P = n(54492),
-        y = n(49411),
-        D = n(52038),
+        i = n(96171),
+        l = n(706),
+        c = n(20433);
+      var d = n(78588),
+        u = n(12424),
+        m = n(75152),
+        p = n(42834),
+        h = n(80696),
+        b = n(39777),
+        _ = n(14987),
+        I = n(60014),
+        x = n(58918),
+        A = n(90626),
+        f = n(35380),
+        v = n(55963),
+        S = n(33924),
+        w = n(18654),
+        j = n.n(w),
+        g = n(94191),
+        C = n(72860),
+        P = n(70300),
+        y = n(54492),
+        D = n(49411),
+        E = n(52038),
         N = n(61859),
         H = n(61336),
-        E = n(78327),
-        T = n(91291),
-        B = n.n(T),
-        k = n(90421),
-        O = n(5309),
-        F = n(71420);
-      const W = "capsule_index_";
-      function M(e) {
+        T = n(78327),
+        B = n(91291),
+        k = n.n(B),
+        O = n(90421),
+        F = n(5309),
+        W = n(71420);
+      const M = "capsule_index_";
+      function R(e) {
         const {
             capsule: t,
             bShowParentApp: n,
             elElementToAppendToHover: r,
-            index: l,
+            index: i,
             navKey: c,
             bHideStoreHover: d,
             onlyOneDiscountPct: u,
             bPreferDemoStorePage: m,
             bShowEarlyAccessBanner: p,
           } = e,
-          [b, _] = x.useState(!1),
-          I = (0, A.rt)(t),
-          { data: f } = (0, h.J$)(I),
-          v = (0, A.$5)(n ? f?.related_items?.parent_appid : void 0),
-          { data: S } = (0, h.J$)(v);
-        if (!f || !I) return null;
-        const j = !!S && !!v,
-          g = (0, a.jsx)(G, {
+          [h, _] = A.useState(!1),
+          I = (0, f.rt)(t),
+          { data: x } = (0, b.J$)(I),
+          v = (0, f.$5)(n ? x?.related_items?.parent_appid : void 0),
+          { data: S } = (0, b.J$)(v);
+        if (!x || !I) return null;
+        const w = !!S && !!v,
+          g = (0, a.jsx)(L, {
             ...e,
             strExtraParams: e.strExtraParams,
             id: I,
-            bIsHovered: b,
-            bHasParentAppToDisplay: j,
+            bIsHovered: h,
+            bHasParentAppToDisplay: w,
             onlyOneDiscountPct: u,
             bShowEarlyAccessBanner: p,
           });
         return (0, a.jsxs)(s.Z, {
-          className: (0, D.A)({
-            [w().OuterCapsuleContainer]: !0,
-            [W + l]: 0 == l,
+          className: (0, E.A)({
+            [j().OuterCapsuleContainer]: !0,
+            [M + i]: 0 == i,
           }),
           navEntryPreferPosition: o.iU.PREFERRED_CHILD,
           navKey: c,
           children: [
-            (0, a.jsxs)(C.oj, {
-              appid: f.appid,
+            (0, a.jsxs)(P.oj, {
+              appid: x.appid,
               children: [
                 Boolean(d)
                   ? (0, a.jsx)("div", {
@@ -368,8 +370,8 @@
                       onMouseLeave: () => _(!1),
                       children: g,
                     })
-                  : (0, a.jsx)(i.Q, {
-                      className: w().CapsuleContainer,
+                  : (0, a.jsx)(l.Q, {
+                      className: j().CapsuleContainer,
                       id: I,
                       elElementToAppend: e.elElementToAppendToHover,
                       bShowDemoButton: e.bShowDemoButton,
@@ -388,51 +390,51 @@
                 Boolean(r) && (0, a.jsx)(a.Fragment, { children: r }),
               ],
             }),
-            j &&
-              (0, a.jsx)(R, {
+            w &&
+              (0, a.jsx)(G, {
                 strExtraParams: e.strExtraParams,
                 parentID: v,
                 parentStoreItemDefaultInfo: S,
-                childAppType: f.type,
+                childAppType: x.type,
                 bPreferDemoStorePage: Boolean(m),
               }),
           ],
         });
       }
-      function R(e) {
+      function G(e) {
         const {
             strExtraParams: t,
             parentID: n,
             parentStoreItemDefaultInfo: s,
             childAppType: o,
-            bPreferDemoStorePage: i,
+            bPreferDemoStorePage: l,
           } = e,
-          c = (0, _.n9)(),
-          d = (0, E.Qn)(),
-          { data: u } = (0, h.lv)(n);
-        return u
+          d = (0, I.n9)(),
+          u = (0, T.Qn)(),
+          { data: m } = (0, b.lv)(n);
+        return m
           ? (0, a.jsx)(r.ml, {
-              className: w().CapsuleParentInfo,
-              ...(0, g.S)(s, c, d, i, t),
-              children: (0, a.jsxs)(C.oj, {
+              className: j().CapsuleParentInfo,
+              ...(0, C.S)(s, d, u, l, t),
+              children: (0, a.jsxs)(P.oj, {
                 appid: s.appid,
                 children: [
                   (0, a.jsx)("div", {
-                    className: w().ParentType,
+                    className: j().ParentType,
                     children: (0, N.we)(
-                      11 == o
+                      o == i.uE.Ov
                         ? "#SalePage_ParentApp_SoundTrack"
                         : "#SalePage_ParentApp_DLC",
                     ),
                   }),
-                  (0, a.jsx)(l.u, {
+                  (0, a.jsx)(c.u, {
                     id: n,
                     strExtraParams: t,
                     children: (0, a.jsx)("img", {
                       loading: "lazy",
-                      className: v.AppCapsuleImage,
+                      className: S.AppCapsuleImage,
                       alt: s.name || "",
-                      src: (0, m.b0)(u, "small_capsule"),
+                      src: (0, p.b0)(m, "small_capsule"),
                       width: 231,
                       height: 87,
                     }),
@@ -442,7 +444,7 @@
             })
           : null;
       }
-      function G(e) {
+      function L(e) {
         const {
             id: t,
             bHideStatusBanners: n,
@@ -450,74 +452,74 @@
             index: o,
             imageType: i,
             bHasParentAppToDisplay: l,
-            bIsHovered: d,
+            bIsHovered: c,
             strDoubleCapsuleMessage: u,
             bPreferDemoStorePage: m,
-            bShowEarlyAccessBanner: I,
+            bShowEarlyAccessBanner: p,
             bPreferAssetWithoutOverride: x,
           } = e,
-          A = (0, _.n9)(),
-          v = (0, y.w)(),
-          S = (0, b._)(t),
-          { data: w } = (0, h.J$)(t);
+          A = (0, I.n9)(),
+          f = (0, D.w)(),
+          S = (0, _._)(t),
+          { data: w } = (0, b.J$)(t);
         if (!w) return null;
-        const g = (0, H.NT)(
-          (0, f.It)(`${(0, F._)(w, m)}${s ? `?${s}` : ""}`, A, v),
+        const j = (0, H.NT)(
+          (0, v.It)(`${(0, W._)(w, m)}${s ? `?${s}` : ""}`, A, f),
         );
         let C;
-        const N = !!u;
+        const P = !!u;
         return (0, a.jsxs)(a.Fragment, {
           children: [
             (0, a.jsxs)("div", {
-              className: (0, D.A)({ [B().TwoWidthCtn]: N }),
+              className: (0, E.A)({ [k().TwoWidthCtn]: P }),
               children: [
                 (0, a.jsxs)(r.Ii, {
-                  href: C ? void 0 : g,
+                  href: C ? void 0 : j,
                   style: { display: "block", cursor: "pointer" },
-                  className: (0, D.A)({ [B().TwoWidthCapsule]: N }),
+                  className: (0, E.A)({ [k().TwoWidthCapsule]: P }),
                   preferredFocus: l,
                   onClick: C,
                   children: [
-                    (0, a.jsx)(j.V, {
+                    (0, a.jsx)(g.V, {
                       appids: S,
                       hide_status_banners: n,
                       show_early_access: e.bShowEarlyAccessBanner,
                     }),
                     "none" != i &&
-                      (0, a.jsx)(c.a, {
+                      (0, a.jsx)(d.a, {
                         imageType: i,
                         id: t,
                         bPreferAssetWithoutOverride: x,
                       }),
-                    (0, a.jsx)(P.J, { id: t }),
-                    (0, a.jsx)(p.m, { id: t, active: d, bIsHoverMode: !0 }),
+                    (0, a.jsx)(y.J, { id: t }),
+                    (0, a.jsx)(h.m, { id: t, active: c, bIsHoverMode: !0 }),
                   ],
                 }),
-                N &&
-                  (0, a.jsx)(L, {
+                P &&
+                  (0, a.jsx)($, {
                     id: t,
                     strDoubleCapsuleMessage: u,
                     index: o,
                   }),
               ],
             }),
-            (0, a.jsx)($, { ...e }),
+            (0, a.jsx)(q, { ...e }),
           ],
         });
       }
-      function L(e) {
+      function $(e) {
         const { id: t, strDoubleCapsuleMessage: n, index: r } = e,
-          { data: s } = (0, h.by)(t),
-          { data: o } = (0, h.xz)(t);
+          { data: s } = (0, b.by)(t),
+          { data: o } = (0, b.xz)(t);
         return (0, a.jsxs)("div", {
-          className: (0, D.A)(B().TwoWidthSideInfo, "TwoWidthSideInfo"),
+          className: (0, E.A)(k().TwoWidthSideInfo, "TwoWidthSideInfo"),
           children: [
-            (0, a.jsx)("div", { className: B().Reason, children: n }),
+            (0, a.jsx)("div", { className: k().Reason, children: n }),
             (0, a.jsx)("div", {
-              className: B().StoreSaleItemRelease,
-              children: (0, a.jsx)("span", { children: s ? (0, O.CC)(s) : "" }),
+              className: k().StoreSaleItemRelease,
+              children: (0, a.jsx)("span", { children: s ? (0, F.CC)(s) : "" }),
             }),
-            (0, a.jsx)(k.n, {
+            (0, a.jsx)(O.n, {
               bHideTitle: !0,
               rgTagIDs: o?.map((e) => e.tagid) || [],
               instanceNum: r,
@@ -525,138 +527,140 @@
           ],
         });
       }
-      function $(e) {
+      function q(e) {
         const {
             id: t,
             bHidePriceIfOwned: n,
             bHideStatusBanners: r,
             bUseSubscriptionLayout: s,
             elElementToAppendToHover: o,
-            bHidePrice: i,
-            bHidePlatforms: l,
-            creatorAccountID: c,
-            bIsHovered: m,
-            onlyOneDiscountPct: p,
-            strDoubleCapsuleMessage: b,
+            bHidePrice: l,
+            bHidePlatforms: c,
+            creatorAccountID: d,
+            bIsHovered: p,
+            onlyOneDiscountPct: h,
+            strDoubleCapsuleMessage: _,
           } = e,
-          { data: _ } = (0, h.J$)(t),
-          { bIsOwned: x } = (0, I.ZJ)(t),
-          A = x && !r;
-        if (s && _ && 0 == _.item_type && _.appid)
-          return (0, a.jsx)(d.E, { appid: _.appid, bIsMuted: m });
+          { data: I } = (0, b.J$)(t),
+          { bIsOwned: A } = (0, x.ZJ)(t),
+          f = A && !r;
+        if (s && I && I.item_type == i.c6.qI && I.appid)
+          return (0, a.jsx)(u.E, { appid: I.appid, bIsMuted: p });
         if (o) return null;
-        const f = Boolean(x && n),
-          v = Boolean(A);
-        return (0, a.jsx)(u.q, {
+        const v = Boolean(A && n),
+          S = Boolean(f);
+        return (0, a.jsx)(m.q, {
           id: t,
-          bShowAsMuted: v,
-          bHidePrice: i,
-          bShowInLibraryInsteadOfPrice: f,
-          bHidePlatforms: l,
-          creatorAccountID: c,
+          bShowAsMuted: S,
+          bHidePrice: l,
+          bShowInLibraryInsteadOfPrice: v,
+          bHidePlatforms: c,
+          creatorAccountID: d,
           bShowName: e.bShowName,
-          onlyOneDiscountPct: p,
-          bShowWishlistButton: Boolean(b),
+          onlyOneDiscountPct: h,
+          bShowWishlistButton: Boolean(_),
         });
       }
     },
     14326: (e, t, n) => {
       "use strict";
-      n.d(t, { _: () => S, r: () => v });
+      n.d(t, { _: () => w, r: () => S });
       var a = n(7850),
-        r = n(39777),
-        s = n(60014),
-        o = n(58918),
-        i = n(17376),
-        l = n(79969),
-        c = n(90626),
-        d = n(35380),
-        u = n(55963),
-        m = n(18654),
-        p = n.n(m),
-        h = n(39700),
-        b = n(12155),
-        _ = n(32754),
-        I = n(52038),
-        x = n(61859),
-        A = n(78327),
-        f = n(84547);
-      function v(e) {
-        const { appid: t, className: n, bTextMode: s } = e,
-          o = (0, d.$5)(t),
-          { data: i } = (0, r.J$)(o),
-          { data: l } = (0, r.by)(o);
-        return (0, a.jsx)(S, {
+        r = n(96171),
+        s = n(39777),
+        o = n(60014),
+        i = n(58918),
+        l = n(17376),
+        c = n(79969),
+        d = n(90626),
+        u = n(35380),
+        m = n(55963),
+        p = n(18654),
+        h = n.n(p),
+        b = n(39700),
+        _ = n(12155),
+        I = n(32754),
+        x = n(52038),
+        A = n(61859),
+        f = n(78327),
+        v = n(84547);
+      function S(e) {
+        const { appid: t, className: n, bTextMode: r } = e,
+          o = (0, u.$5)(t),
+          { data: i } = (0, s.J$)(o),
+          { data: l } = (0, s.by)(o);
+        return (0, a.jsx)(w, {
           appid: t,
           bIsFree: Boolean(i?.is_free),
           bIsComingSoon: Boolean(l?.is_coming_soon),
-          bTextMode: s,
+          bTextMode: r,
           className: n,
         });
       }
-      function S(e) {
-        const [t, n] = c.useState(!1),
-          r = (0, s.n9)(),
+      function w(e) {
+        const [t, n] = d.useState(!1),
+          r = (0, o.n9)(),
           {
-            appid: m,
-            bIsFree: v,
+            appid: s,
+            bIsFree: p,
             bIsComingSoon: S,
-            className: j,
+            className: w,
             bTextMode: g,
           } = e,
-          C = (0, d.$5)(m),
-          { bIsOwned: P } = (0, o.ZJ)(C),
-          y = (0, i.bB)(m),
-          { mutateAsync: D } = (0, l.s)(m, !y, (0, u.L3)(r)),
-          { elDialogElement: N, fnShowLogonDialog: H } = (0, f.E)();
-        if (P || (!S && v))
-          return v ? (0, a.jsx)(w, { possibleDemoAppID: m }) : null;
-        let E = null;
+          C = (0, u.$5)(s),
+          { bIsOwned: P } = (0, i.ZJ)(C),
+          y = (0, l.bB)(s),
+          { mutateAsync: D } = (0, c.s)(s, !y, (0, m.L3)(r)),
+          { elDialogElement: E, fnShowLogonDialog: N } = (0, v.E)();
+        if (P || (!S && p))
+          return p ? (0, a.jsx)(j, { possibleDemoAppID: s }) : null;
+        let H = null;
         return (
           t && !g
-            ? (E = (0, a.jsx)(h.k, { size: 18 }))
+            ? (H = (0, a.jsx)(b.k, { size: 18 }))
             : y
-              ? y && (E = g ? (0, x.we)("#OnWishlist") : (0, a.jsx)(b.qnF, {}))
-              : (E = g
-                  ? (0, x.we)("#wishlist_add_to_wishlist")
-                  : (0, a.jsx)(b.T4m, {})),
+              ? y && (H = g ? (0, A.we)("#OnWishlist") : (0, a.jsx)(_.qnF, {}))
+              : (H = g
+                  ? (0, A.we)("#wishlist_add_to_wishlist")
+                  : (0, a.jsx)(_.T4m, {})),
           (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(_.he, {
-                toolTipContent: (0, x.we)("#AddToWishlist_ttip"),
+              (0, a.jsx)(I.he, {
+                toolTipContent: (0, A.we)("#AddToWishlist_ttip"),
                 children: (0, a.jsx)("div", {
-                  className: (0, I.A)(p().WishList, j),
+                  className: (0, x.A)(h().WishList, w),
                   onClick: async () => {
-                    A.iA.logged_in ? t || (n(!0), await D(), n(!1)) : H();
+                    f.iA.logged_in ? t || (n(!0), await D(), n(!1)) : N();
                   },
-                  children: E,
+                  children: H,
                 }),
               }),
-              N,
+              E,
             ],
           })
         );
       }
-      function w(e) {
+      function j(e) {
         const { possibleDemoAppID: t, className: n } = e,
-          s = (0, d.$5)(t),
-          { data: o } = (0, r.J$)(s);
-        return o
-          ? (1 != o.type && 12 != o.type) || !o.related_items?.parent_appid
+          o = (0, u.$5)(t),
+          { data: i } = (0, s.J$)(o);
+        return i
+          ? (i.type != r.uE.ue && i.type != r.uE.Vi) ||
+            !i.related_items?.parent_appid
             ? null
-            : (0, a.jsx)(j, {
-                parentAppID: o.related_items?.parent_appid,
+            : (0, a.jsx)(g, {
+                parentAppID: i.related_items?.parent_appid,
                 className: n,
               })
           : null;
       }
-      function j(e) {
+      function g(e) {
         const { parentAppID: t, className: n } = e,
-          s = (0, d.$5)(t),
-          { data: o } = (0, r.J$)(s),
-          { data: i } = (0, r.by)(s);
+          r = (0, u.$5)(t),
+          { data: o } = (0, s.J$)(r),
+          { data: i } = (0, s.by)(r);
         return o && i
-          ? (0, a.jsx)(S, {
+          ? (0, a.jsx)(w, {
               appid: t,
               bIsComingSoon: Boolean(i.is_coming_soon),
               bIsFree: Boolean(o.is_free),

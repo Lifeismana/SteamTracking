@@ -31,244 +31,350 @@
     },
     31258: (e, r, n) => {
       "use strict";
-      function t(e) {
+      n.d(r, { gU: () => rr, tz: () => nr });
+      const t = -700,
+        a = -600,
+        s = -599,
+        c = -598,
+        i = -597,
+        u = -596,
+        o = -595,
+        l = -594,
+        d = -593,
+        S = -592,
+        h = -591,
+        p = -590,
+        x = -589,
+        m = -588,
+        O = -587,
+        f = -586,
+        w = -585,
+        E = -584,
+        g = -583,
+        k = -582,
+        _ = -581,
+        y = -580,
+        M = -579,
+        P = -578,
+        W = -577,
+        T = -576,
+        L = -575,
+        v = -574,
+        C = -573,
+        j = -572,
+        b = -571,
+        I = -500,
+        N = -499,
+        A = -498,
+        z = -497,
+        B = -496,
+        H = -300,
+        V = -203,
+        R = -202,
+        D = -201,
+        U = -200,
+        X = -199,
+        F = -198,
+        G = -197,
+        K = -196,
+        J = -195,
+        Q = -194,
+        Z = -193,
+        q = -192,
+        Y = -191,
+        $ = -190,
+        ee = -189,
+        re = -188,
+        ne = -187,
+        te = -186,
+        ae = -185,
+        se = -184,
+        ce = -183,
+        ie = -182,
+        ue = -102,
+        oe = -101,
+        le = -100,
+        de = -99,
+        Se = -95,
+        he = -94,
+        pe = -93,
+        xe = -92,
+        me = -90,
+        Oe = -89,
+        fe = -88,
+        we = -87,
+        Ee = -86,
+        ge = -85,
+        ke = -84,
+        _e = -83,
+        ye = -82,
+        Me = -81,
+        Pe = -80,
+        We = -79,
+        Te = -75,
+        Le = -74,
+        ve = -70,
+        Ce = -69,
+        je = -68,
+        be = -67,
+        Ie = 0,
+        Ne = 1,
+        Ae = 2,
+        ze = 3,
+        Be = 4,
+        He = 5,
+        Ve = 6,
+        Re = 7,
+        De = 8,
+        Ue = 9,
+        Xe = 10,
+        Fe = 11,
+        Ge = 12,
+        Ke = 13,
+        Je = 14,
+        Qe = 15,
+        Ze = 16,
+        qe = 17,
+        Ye = 18,
+        $e = 19,
+        er = 20;
+      function rr(e) {
         switch (e) {
-          case 0:
+          case Ie:
             return "Windows";
-          case 1:
+          case Ne:
             return "Windows 3.11";
-          case 2:
+          case Ae:
             return "Windows 95";
-          case 3:
+          case ze:
             return "Windows 98";
-          case 4:
+          case Be:
             return "Windows ME";
-          case 5:
+          case He:
             return "Windows NT";
-          case 6:
+          case Ve:
             return "Windows 2000";
-          case 7:
+          case Re:
             return "Windows XP";
-          case 8:
+          case De:
             return "Windows 2003";
-          case 9:
+          case Ue:
             return "Windows Vista";
-          case 10:
+          case Xe:
             return "Windows 7";
-          case 11:
+          case Fe:
             return "Windows 2008";
-          case 12:
+          case Ge:
             return "Windows 2012";
-          case 15:
+          case Qe:
             return "Windows 2012 R2";
-          case 13:
+          case Ke:
             return "Windows 8";
-          case 14:
+          case Je:
             return "Windows 8.1";
-          case 16:
+          case Ze:
             return "Windows 10";
-          case 17:
+          case qe:
             return "Windows 2016";
-          case 18:
+          case Ye:
             return "Windows 2019";
-          case 19:
+          case $e:
             return "Windows 2022";
-          case 20:
+          case er:
             return "Windows 11";
-          case -102:
+          case ue:
             return "Mac OS";
-          case -101:
+          case oe:
             return "MacOS 10.4";
-          case -100:
+          case le:
             return "MacOS 10.5";
-          case -99:
+          case de:
             return "MacOS 10.5.8";
-          case -95:
+          case Se:
             return "MacOS 10.6";
-          case -94:
+          case he:
             return "MacOS 10.6.3";
-          case -93:
+          case pe:
             return "MacOS 10.6.4 with Apple's Snow Leopard Graphics Update";
-          case -92:
+          case xe:
             return "MacOS 10.6.7";
-          case -90:
+          case me:
             return "MacOS 10.7";
-          case -89:
+          case Oe:
             return "MacOS 10.8";
-          case -88:
+          case fe:
             return "MacOS 10.9";
-          case -87:
+          case we:
             return "MacOS 10.10";
-          case -86:
+          case Ee:
             return "MacOS 10.11";
-          case -85:
+          case ge:
             return "MacOS 10.12";
-          case -84:
+          case ke:
             return "MacOS 10.13";
-          case -83:
+          case _e:
             return "MacOS 10.14";
-          case -82:
+          case ye:
             return "MacOS 10.15";
-          case -81:
+          case Me:
             return "MacOS 11 (as 10.16)";
-          case -75:
+          case Te:
             return "MacOS 12 (as 10.17)";
-          case -70:
+          case ve:
             return "MacOS 13 (as 10.18)";
-          case -80:
+          case Pe:
             return "MacOS 11";
-          case -79:
+          case We:
             return "MacOS 11.1";
-          case -74:
+          case Le:
             return "MacOS 12";
-          case -69:
+          case Ce:
             return "MacOS 13";
-          case -68:
+          case je:
             return "MacOS 14";
-          case -67:
+          case be:
             return "MacOS 15";
-          case -203:
+          case V:
             return "Linux";
-          case -202:
+          case R:
             return "Linux 2.2";
-          case -201:
+          case D:
             return "Linux 2.4";
-          case -200:
+          case U:
             return "Linux 2.6";
-          case -199:
+          case X:
             return "Linux 3.2";
-          case -198:
+          case F:
             return "Linux 3.5";
-          case -197:
+          case G:
             return "Linux 3.6";
-          case -196:
+          case K:
             return "Linux 3.10";
-          case -195:
+          case J:
             return "Linux 3.16";
-          case -194:
+          case Q:
             return "Linux 3.18";
-          case -193:
+          case Z:
             return "Linux 3.x";
-          case -191:
+          case Y:
             return "Linux 4.1";
-          case -190:
+          case $:
             return "Linux 4.4";
-          case -189:
+          case ee:
             return "Linux 4.9";
-          case -188:
+          case re:
             return "Linux 4.14";
-          case -187:
+          case ne:
             return "Linux 4.19";
-          case -192:
+          case q:
             return "Linux 4.x";
-          case -186:
+          case te:
             return "Linux 5.x";
-          case -185:
+          case ae:
             return "Linux 5.4";
-          case -184:
+          case se:
             return "Linux 6.x";
-          case -183:
+          case ce:
             return "Linux 7.x";
-          case -182:
+          case ie:
             return "Linux 5.10";
-          case -300:
+          case H:
             return "PS3";
-          case -700:
+          case t:
             return "Web Client";
-          case -500:
+          case I:
             return "Android";
-          case -499:
+          case N:
             return "Android 6.x";
-          case -498:
+          case A:
             return "Android 7.x";
-          case -497:
+          case z:
             return "Android 8.x";
-          case -496:
+          case B:
             return "Android 9.x";
-          case -600:
+          case a:
             return "iOS";
-          case -599:
+          case s:
             return "iOS 1";
-          case -598:
+          case c:
             return "iOS 2";
-          case -597:
+          case i:
             return "iOS 3";
-          case -596:
+          case u:
             return "iOS 4";
-          case -595:
+          case o:
             return "iOS 5";
-          case -594:
+          case l:
             return "iOS 6";
-          case -593:
+          case d:
             return "iOS 6.1";
-          case -592:
+          case S:
             return "iOS 7";
-          case -591:
+          case h:
             return "iOS 7.1";
-          case -590:
+          case p:
             return "iOS 8";
-          case -589:
+          case x:
             return "iOS 8.1";
-          case -588:
+          case m:
             return "iOS 8.2";
-          case -587:
+          case O:
             return "iOS 8.3";
-          case -586:
+          case f:
             return "iOS 8.4";
-          case -585:
+          case w:
             return "iOS 9";
-          case -584:
+          case E:
             return "iOS 9.1";
-          case -583:
+          case g:
             return "iOS 9.2";
-          case -582:
+          case k:
             return "iOS 9_.3";
-          case -581:
+          case _:
             return "iOS 10";
-          case -580:
+          case y:
             return "iOS 10.1";
-          case -579:
+          case M:
             return "iOS 10.2";
-          case -578:
+          case P:
             return "iOS 10.3";
-          case -577:
+          case W:
             return "iOS 11";
-          case -576:
+          case T:
             return "iOS 11.1";
-          case -575:
+          case L:
             return "iOS 11.2";
-          case -574:
+          case v:
             return "iOS 11.3";
-          case -573:
+          case C:
             return "iOS 11.4";
-          case -572:
+          case j:
             return "iOS 12";
-          case -571:
+          case b:
             return "iOS 12.1";
           default:
             return "Unknown";
         }
       }
-      var a;
-      n.d(r, { g: () => t, t: () => a }),
-        (function (e) {
-          (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
-            (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
-            (e[(e.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
-            (e[(e.k_EPlatformTypeLinux64 = 3)] = "k_EPlatformTypeLinux64"),
-            (e[(e.k_EPlatformTypeOSX = 4)] = "k_EPlatformTypeOSX"),
-            (e[(e.k_EPlatformTypePS3 = 5)] = "k_EPlatformTypePS3"),
-            (e[(e.k_EPlatformTypeLinux32 = 6)] = "k_EPlatformTypeLinux32"),
-            (e[(e.k_EPlatformTypeAndroid32 = 7)] = "k_EPlatformTypeAndroid32"),
-            (e[(e.k_EPlatformTypeAndroid64 = 8)] = "k_EPlatformTypeAndroid64"),
-            (e[(e.k_EPlatformTypeIOS32 = 9)] = "k_EPlatformTypeIOS32"),
-            (e[(e.k_EPlatformTypeIOS64 = 10)] = "k_EPlatformTypeIOS64"),
-            (e[(e.k_EPlatformTypeTVOS = 11)] = "k_EPlatformTypeTVOS"),
-            (e[(e.k_EPlatformTypeEmbeddedClient = 12)] =
-              "k_EPlatformTypeEmbeddedClient"),
-            (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
-            (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-        })(a || (a = {}));
+      var nr;
+      !(function (e) {
+        (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
+          (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
+          (e[(e.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
+          (e[(e.k_EPlatformTypeLinux64 = 3)] = "k_EPlatformTypeLinux64"),
+          (e[(e.k_EPlatformTypeOSX = 4)] = "k_EPlatformTypeOSX"),
+          (e[(e.k_EPlatformTypePS3 = 5)] = "k_EPlatformTypePS3"),
+          (e[(e.k_EPlatformTypeLinux32 = 6)] = "k_EPlatformTypeLinux32"),
+          (e[(e.k_EPlatformTypeAndroid32 = 7)] = "k_EPlatformTypeAndroid32"),
+          (e[(e.k_EPlatformTypeAndroid64 = 8)] = "k_EPlatformTypeAndroid64"),
+          (e[(e.k_EPlatformTypeIOS32 = 9)] = "k_EPlatformTypeIOS32"),
+          (e[(e.k_EPlatformTypeIOS64 = 10)] = "k_EPlatformTypeIOS64"),
+          (e[(e.k_EPlatformTypeTVOS = 11)] = "k_EPlatformTypeTVOS"),
+          (e[(e.k_EPlatformTypeEmbeddedClient = 12)] =
+            "k_EPlatformTypeEmbeddedClient"),
+          (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
+          (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
+      })(nr || (nr = {}));
     },
     1078: (e, r, n) => {
       "use strict";

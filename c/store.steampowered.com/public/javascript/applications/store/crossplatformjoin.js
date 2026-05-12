@@ -71,7 +71,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _._.IN_CLIENT && (0, _._)(_._.LAUNCHER_TYPE);
+        return _._.IN_CLIENT && (0, _.DOG)(_._.LAUNCHER_TYPE);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -82,6 +82,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -146,7 +147,7 @@
             : (0, _.jsx)(_._, {
                 autoFocus: !0,
                 transport: _,
-                platform: 2,
+                platform: _._._,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail
                     ? _(!0)
@@ -619,6 +620,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _;
       const _ = 864e5;
@@ -654,10 +656,10 @@
                         const _ = _._.Init(_._);
                         __webpack_require__
                           .Body()
-                          .set_language((0, _._)(_._.LANGUAGE)),
+                          .set_language((0, _.sfN)(_._.LANGUAGE)),
                           __webpack_require__.Body().set_appids(_);
                         const _ = await _._.GetApps(_, _);
-                        if (1 != _.GetEResult()) throw _.GetErrorMessage();
+                        if (_.GetEResult() != _._) throw _.GetErrorMessage();
                         _.Body()
                           .toObject()
                           .apps.forEach((_) => {

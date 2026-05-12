@@ -421,7 +421,7 @@
     },
     47861: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => $d });
+      a.r(t), a.d(t, { default: () => ec });
       var n = a(90626),
         i = a(7850),
         s = a(43527),
@@ -565,7 +565,7 @@
         Z = a(24506),
         X = a(14947),
         $ = a(17640),
-        ee = a(60746),
+        ee = a(82429),
         te = a(25228),
         ae = a(32754),
         ne = a(87669),
@@ -2773,7 +2773,7 @@
         xt = a(16021),
         Et = a(84811),
         jt = a(73130),
-        bt = a(3919),
+        bt = a(32803),
         wt = a(26296);
       var Ct = a(37085),
         ft = a(11113),
@@ -3960,7 +3960,7 @@
                       eventModel: e,
                       partnerEventStore: o.mh,
                     }),
-                    otherEventRow: (0, i.jsx)(qt.rN, {
+                    otherEventRow: (0, i.jsx)(qt.r, {
                       clanAccountID: e.clanSteamID.GetAccountID(),
                       trackingLocation: Wt.Tc.My,
                       gidAnnouncement: e.AnnouncementGID,
@@ -18730,9 +18730,10 @@
         return (0, i.jsx)(i.Fragment, {});
       }
       var Yd = a(5058),
-        Jd = (a(5977), a(97058)),
-        Kd = a(39020);
-      let Zd = class extends Dr.mn {
+        Jd = a(16180),
+        Kd = (a(5977), a(97058)),
+        Zd = a(39020);
+      let Xd = class extends Dr.mn {
         constructor() {
           super(...arguments), (this.state = { bLoading: !0 });
         }
@@ -18758,8 +18759,8 @@
               });
         }
       };
-      Zd = (0, K.Cg)([_.PA], Zd);
-      const Xd = (0, P.L)(function (e) {
+      Xd = (0, K.Cg)([_.PA], Xd);
+      const $d = (0, P.L)(function (e) {
         const t = o.mh.GetEditModel(),
           a = t.GetEventModel(),
           [l, r] = n.useState();
@@ -18791,9 +18792,9 @@
           children: (0, L.we)("#EventDisplay_ReturnToDashboard"),
         });
       });
-      function $d(e) {
+      function ec(e) {
         const [t, a] = n.useState(!0),
-          r = (0, Kd.vb)(O.TS.LANGUAGE);
+          r = (0, Zd.vb)(O.TS.LANGUAGE);
         return (
           n.useEffect(() => {
             Ir.Vw.Init(new Tr.D(O.TS.WEBAPI_BASE_URL)),
@@ -18845,7 +18846,7 @@
                 string: (0, L.we)("#Loading"),
               })
             : (0, i.jsx)(Et.tH, {
-                children: (0, i.jsxs)(bt.IQ.Provider, {
+                children: (0, i.jsxs)(Jd.I.Provider, {
                   value: { bCanUseLink: !0 },
                   children: [
                     (0, i.jsx)(Cn.EB, {}),
@@ -18904,7 +18905,7 @@
                             ":gid(\\d+)?",
                           ),
                           render: (e) =>
-                            (0, n.createElement)(Xd, {
+                            (0, n.createElement)($d, {
                               ...e,
                               key: e.match.params.gid,
                             }),
@@ -18965,7 +18966,7 @@
                             ":oldAnnouncementGID(\\d+)",
                           ),
                           render: (e) =>
-                            (0, n.createElement)(Zd, {
+                            (0, n.createElement)(Xd, {
                               ...e,
                               key: e.match.params.oldAnnouncementGID,
                             }),
@@ -19010,7 +19011,7 @@
                               bPreview: !0,
                             }),
                         }),
-                        (0, i.jsx)(gt.qh, { component: Jd.a }),
+                        (0, i.jsx)(gt.qh, { component: Kd.a }),
                       ],
                     }),
                   ],

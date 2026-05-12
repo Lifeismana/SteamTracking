@@ -430,6 +430,307 @@
       }
       i.d(t, { x0: () => r });
     },
+    32803: (e, t, i) => {
+      "use strict";
+      i.d(t, {
+        Bw: () => T,
+        EX: () => B,
+        Hx: () => R,
+        JP: () => S,
+        LJ: () => I,
+        OG: () => M,
+        PH: () => r,
+        T7: () => w,
+        tj: () => G,
+      });
+      var r,
+        n = i(7850),
+        a = i(90626),
+        s = i(92757),
+        o = i(45699),
+        l = i(81393),
+        c = i(78327),
+        d = i(16180),
+        u = i(55963),
+        m = i(61336),
+        _ = i(60014),
+        p = i(26161),
+        h = i(55263),
+        g = i(22837),
+        v = i(61859),
+        f = i(27939);
+      !(function (e) {
+        (e.k_eView = "view"),
+          (e.k_eViewWebSiteHub = "websitehub"),
+          (e.k_eCommunityView = "communityview"),
+          (e.k_eCommunityEdit = "edit"),
+          (e.k_eCommunityEditBroadcast = "editBroadcast"),
+          (e.k_eCommunityAdminPage = "admin"),
+          (e.k_eCommunityPublish = "publish"),
+          (e.k_eCommunityMigrate = "migrate"),
+          (e.k_eCommunityPreview = "preview"),
+          (e.k_eCommunityPreviewSale = "previewsale"),
+          (e.k_eCommunityAnnouncementHub = "community_announcehub"),
+          (e.k_eStoreView = "storeview"),
+          (e.k_eStoreNewsHub = "newshub"),
+          (e.k_eStoreOwnerPage = "store"),
+          (e.k_eStoreSalePage = "sale"),
+          (e.k_eStoreUsersNewsHub = "usernewshub");
+      })(r || (r = {}));
+      const y =
+        /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
+      function b(e, t) {
+        if (!t) return !1;
+        const i = "store" === (0, c.yK)(),
+          n = (function (e) {
+            const t = e.match(y);
+            return null == t ? void 0 : t[1];
+          })(window.location.href),
+          a = i && "news" == n,
+          s = t.GetEventType() == g.ajI,
+          o = "community" === (0, c.yK)(),
+          d = t.appid ? "games" : "groups",
+          u =
+            o &&
+            d == n &&
+            ((t.appid && t.appid === c.UF.APPID) ||
+              (!t.appid &&
+                t.clanSteamID.GetAccountID() === c.UF.CLANACCOUNTID));
+        switch (e) {
+          case r.k_eView:
+            return u || a;
+          case r.k_eCommunityView:
+          case r.k_eCommunityEdit:
+          case r.k_eCommunityEditBroadcast:
+          case r.k_eCommunityPublish:
+          case r.k_eCommunityMigrate:
+          case r.k_eCommunityPreview:
+          case r.k_eCommunityPreviewSale:
+          case r.k_eCommunityAnnouncementHub:
+            return u;
+          case r.k_eCommunityAdminPage:
+            return !s && u;
+          case r.k_eViewWebSiteHub:
+            return u || a;
+          case r.k_eStoreView:
+          case r.k_eStoreNewsHub:
+          case r.k_eStoreOwnerPage:
+          case r.k_eStoreUsersNewsHub:
+            return a;
+          case r.k_eStoreSalePage:
+            return !1;
+          default:
+            return (0, l.wT)(!1, "Unknown route specified for link: " + e), !1;
+        }
+      }
+      function S(e) {
+        const t =
+          c.TS.COMMUNITY_BASE_URL +
+          "gid/" +
+          e.clanSteamID.ConvertTo64BitString() +
+          "/announcements/share/" +
+          e.AnnouncementGID;
+        return {
+          strFacebookUrl: t + "?site=facebook&t=" + Math.random(),
+          strTwitterUrl: t + "?site=twitter",
+          strRedditUrl: t + "?site=reddit",
+        };
+      }
+      function B(e) {
+        return A(e, r.k_eStoreSalePage, "absolute");
+      }
+      function w(e) {
+        return A(e, r.k_eStoreView, "absolute");
+      }
+      function E(e, t, i) {
+        if (i)
+          return (
+            (e ? "/games/" + c.UF.VANITY_ID : "/groups/" + c.UF.VANITY_ID) + "/"
+          );
+        const r = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
+        return c.TS.COMMUNITY_BASE_URL + r + "/";
+      }
+      function I() {
+        return "news";
+      }
+      function A(e, t, i) {
+        const [r] = (0, h.t7)(null == e ? void 0 : e.appid, {
+          include_basic_info: !0,
+        });
+        if (e) return C(e, r, t, i);
+      }
+      function C(e, t, i, n) {
+        const a = "relative" === n,
+          s = "community" === (0, c.yK)(),
+          o = a ? "/" : c.TS.STORE_BASE_URL,
+          d = E(e.appid, e.clanSteamID, a);
+        i === r.k_eView
+          ? (i = s ? r.k_eCommunityView : r.k_eStoreView)
+          : i === r.k_eViewWebSiteHub &&
+            (i = s ? r.k_eCommunityAnnouncementHub : r.k_eStoreNewsHub);
+        const u = e.GID ? e.GID : "",
+          m = e.AnnouncementGID ? e.AnnouncementGID : "",
+          _ =
+            e.BIsOGGEvent() &&
+            e.appid &&
+            t &&
+            e.BHasSaleUpdateLandingPageVanity(),
+          h = e.GetEventType() == g.ajI;
+        switch (i) {
+          case r.k_eCommunityPublish:
+            return (
+              d +
+              (e.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + m
+                : "partnerevents/publish/" + u + "?tab=publishing")
+            );
+          case r.k_eCommunityEdit:
+            return (
+              d +
+              (e.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + m
+                : "partnerevents/edit/" + u)
+            );
+          case r.k_eCommunityEditBroadcast:
+            return (
+              d +
+              (e.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + m
+                : "partnerevents/edit/" + u) +
+              "?tab=broadcast"
+            );
+          case r.k_eCommunityMigrate:
+            return d + "partnerevents/migrate_announcement/" + m;
+          case r.k_eCommunityPreview:
+            return h
+              ? d + "partnerevents/previewsale/" + u
+              : d +
+                  (e.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + m
+                    : "partnerevents/preview/" + u);
+          case r.k_eCommunityPreviewSale:
+            return d + "partnerevents/previewsale/" + u;
+          case r.k_eCommunityAdminPage:
+            return h
+              ? `${o}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : d + "partnerevents";
+          case r.k_eCommunityAnnouncementHub:
+            return d + "announcements";
+          case r.k_eStoreNewsHub:
+            return (
+              o +
+              `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
+            );
+          case r.k_eStoreOwnerPage:
+            return (
+              o +
+              (e.appid
+                ? "app/" + e.appid
+                : "curator/" + e.clanSteamID.GetAccountID())
+            );
+          case r.k_eStoreSalePage:
+            return e.jsondata.bSaleEnabled
+              ? e.clanSteamID.GetAccountID() == f.wv
+                ? `${o}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
+                : e.clanSteamID.GetAccountID() == f.yT
+                  ? `${o}charts/bestofyear/${e.jsondata.sale_vanity_id}`
+                  : _
+                    ? `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`
+                    : h
+                      ? `${o}curator/${e.clanSteamID.GetAccountID()}`
+                      : o +
+                        (e.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            e.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        e.jsondata.sale_vanity_id
+              : o;
+          case r.k_eCommunityView:
+            return d + "announcements/detail/" + m;
+          case r.k_eStoreView:
+            if (e.clanSteamID.GetAccountID() == (0, p.H)())
+              return `${c.TS.STORE_BASE_URL}meetsteam/${u}`;
+            if (_)
+              return `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`;
+            if (h) return `${o}curator/${e.clanSteamID.GetAccountID()}`;
+            return `${o}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${m}` : `view/${u}`}`;
+          case r.k_eStoreUsersNewsHub:
+            return `${o}news/`;
+          default:
+            return (0, l.wT)(!1, "Unknown route specified for link"), "";
+        }
+      }
+      function T(e, t, i) {
+        return A(
+          e,
+          t,
+          "forceAbsolute" === i || !b(t, e) ? "absolute" : "relative",
+        );
+      }
+      function M(e) {
+        const { eventModel: t, route: i, bPopup: r = !0 } = e,
+          o = b(i, t),
+          l = A(t, i, o ? "relative" : "absolute");
+        return (
+          a.useEffect(() => {
+            l && (r ? window.open(l) : window.location.assign(l));
+          }, [r, l]),
+          o && l ? (0, n.jsx)(s.rd, { push: !0, to: l }) : null
+        );
+      }
+      function R(e, t, i) {
+        const r = E(e, t, !1);
+        return "admin" === i ? r + "partnerevents" : "";
+      }
+      function G(e) {
+        const { eventModel: t, preferredFocus: i } = e,
+          { bCanUseLink: l } = a.useContext(d.I),
+          c = (0, _.n9)(),
+          p = (0, s.W6)(),
+          h = l && b(e.route, t),
+          g = A(t, e.route, h ? "relative" : "absolute"),
+          f = !h && g ? (0, m.NT)(g) : g,
+          y = h || !f ? f : (0, u.wJ)(f, c),
+          S = A(t, r.k_eViewWebSiteHub, "absolute"),
+          B = Boolean(e.route != r.k_eViewWebSiteHub)
+            ? (0, v.we)("#EventBrowse_MoreEventsBtn")
+            : "",
+          w = a.useCallback(() => {
+            S && window.location.assign(S);
+          }, [S]);
+        return t
+          ? h
+            ? (0, n.jsx)(o.Ii, {
+                style: e.style,
+                className: e.className,
+                href: p.createHref({ pathname: y }),
+                onClick: (t) => {
+                  var i;
+                  y &&
+                    (null === (i = e.onClick) || void 0 === i || i.call(e, t),
+                    p.push(y),
+                    t.preventDefault());
+                },
+                onOptionsActionDescription: B,
+                onOptionsButton: B ? w : void 0,
+                preferredFocus: i,
+                children: e.children,
+              })
+            : (0, n.jsx)(o.Ii, {
+                href: y,
+                style: e.style,
+                className: e.className,
+                onClick: e.onClick,
+                preferredFocus: i,
+                onOptionsActionDescription: B,
+                onOptionsButton: B ? w : void 0,
+                children: e.children,
+              })
+          : null;
+      }
+    },
     45285: (e, t, i) => {
       "use strict";
       i.d(t, { Mc: () => r });
@@ -10871,307 +11172,10 @@
       }
       i.d(t, { J: () => r });
     },
-    3919: (e, t, i) => {
+    16180: (e, t, i) => {
       "use strict";
-      i.d(t, {
-        PH: () => d,
-        tj: () => G,
-        IQ: () => c,
-        Hx: () => R,
-        LJ: () => I,
-        OG: () => M,
-        Bw: () => T,
-        JP: () => S,
-        T7: () => w,
-        EX: () => B,
-      });
-      var r = i(7850),
-        n = i(90626),
-        a = i(92757),
-        s = i(45699),
-        o = i(81393),
-        l = i(78327);
-      const c = n.createContext({ bCanUseLink: !1 });
-      var d,
-        u = i(55963),
-        m = i(61336),
-        _ = i(60014),
-        p = i(26161),
-        h = i(55263),
-        g = i(22837),
-        v = i(61859),
-        f = i(27939);
-      !(function (e) {
-        (e.k_eView = "view"),
-          (e.k_eViewWebSiteHub = "websitehub"),
-          (e.k_eCommunityView = "communityview"),
-          (e.k_eCommunityEdit = "edit"),
-          (e.k_eCommunityEditBroadcast = "editBroadcast"),
-          (e.k_eCommunityAdminPage = "admin"),
-          (e.k_eCommunityPublish = "publish"),
-          (e.k_eCommunityMigrate = "migrate"),
-          (e.k_eCommunityPreview = "preview"),
-          (e.k_eCommunityPreviewSale = "previewsale"),
-          (e.k_eCommunityAnnouncementHub = "community_announcehub"),
-          (e.k_eStoreView = "storeview"),
-          (e.k_eStoreNewsHub = "newshub"),
-          (e.k_eStoreOwnerPage = "store"),
-          (e.k_eStoreSalePage = "sale"),
-          (e.k_eStoreUsersNewsHub = "usernewshub");
-      })(d || (d = {}));
-      const y =
-        /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-      function b(e, t) {
-        if (!t) return !1;
-        const i = "store" === (0, l.yK)(),
-          r = (function (e) {
-            const t = e.match(y);
-            return null == t ? void 0 : t[1];
-          })(window.location.href),
-          n = i && "news" == r,
-          a = t.GetEventType() == g.ajI,
-          s = "community" === (0, l.yK)(),
-          c = t.appid ? "games" : "groups",
-          u =
-            s &&
-            c == r &&
-            ((t.appid && t.appid === l.UF.APPID) ||
-              (!t.appid &&
-                t.clanSteamID.GetAccountID() === l.UF.CLANACCOUNTID));
-        switch (e) {
-          case d.k_eView:
-            return u || n;
-          case d.k_eCommunityView:
-          case d.k_eCommunityEdit:
-          case d.k_eCommunityEditBroadcast:
-          case d.k_eCommunityPublish:
-          case d.k_eCommunityMigrate:
-          case d.k_eCommunityPreview:
-          case d.k_eCommunityPreviewSale:
-          case d.k_eCommunityAnnouncementHub:
-            return u;
-          case d.k_eCommunityAdminPage:
-            return !a && u;
-          case d.k_eViewWebSiteHub:
-            return u || n;
-          case d.k_eStoreView:
-          case d.k_eStoreNewsHub:
-          case d.k_eStoreOwnerPage:
-          case d.k_eStoreUsersNewsHub:
-            return n;
-          case d.k_eStoreSalePage:
-            return !1;
-          default:
-            return (0, o.wT)(!1, "Unknown route specified for link: " + e), !1;
-        }
-      }
-      function S(e) {
-        const t =
-          l.TS.COMMUNITY_BASE_URL +
-          "gid/" +
-          e.clanSteamID.ConvertTo64BitString() +
-          "/announcements/share/" +
-          e.AnnouncementGID;
-        return {
-          strFacebookUrl: t + "?site=facebook&t=" + Math.random(),
-          strTwitterUrl: t + "?site=twitter",
-          strRedditUrl: t + "?site=reddit",
-        };
-      }
-      function B(e) {
-        return A(e, d.k_eStoreSalePage, "absolute");
-      }
-      function w(e) {
-        return A(e, d.k_eStoreView, "absolute");
-      }
-      function E(e, t, i) {
-        if (i)
-          return (
-            (e ? "/games/" + l.UF.VANITY_ID : "/groups/" + l.UF.VANITY_ID) + "/"
-          );
-        const r = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
-        return l.TS.COMMUNITY_BASE_URL + r + "/";
-      }
-      function I() {
-        return "news";
-      }
-      function A(e, t, i) {
-        const [r] = (0, h.t7)(null == e ? void 0 : e.appid, {
-          include_basic_info: !0,
-        });
-        if (e) return C(e, r, t, i);
-      }
-      function C(e, t, i, r) {
-        const n = "relative" === r,
-          a = "community" === (0, l.yK)(),
-          s = n ? "/" : l.TS.STORE_BASE_URL,
-          c = E(e.appid, e.clanSteamID, n);
-        i === d.k_eView
-          ? (i = a ? d.k_eCommunityView : d.k_eStoreView)
-          : i === d.k_eViewWebSiteHub &&
-            (i = a ? d.k_eCommunityAnnouncementHub : d.k_eStoreNewsHub);
-        const u = e.GID ? e.GID : "",
-          m = e.AnnouncementGID ? e.AnnouncementGID : "",
-          _ =
-            e.BIsOGGEvent() &&
-            e.appid &&
-            t &&
-            e.BHasSaleUpdateLandingPageVanity(),
-          h = e.GetEventType() == g.ajI;
-        switch (i) {
-          case d.k_eCommunityPublish:
-            return (
-              c +
-              (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + m
-                : "partnerevents/publish/" + u + "?tab=publishing")
-            );
-          case d.k_eCommunityEdit:
-            return (
-              c +
-              (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + m
-                : "partnerevents/edit/" + u)
-            );
-          case d.k_eCommunityEditBroadcast:
-            return (
-              c +
-              (e.bOldAnnouncement
-                ? "partnerevents/migrate_announcement/" + m
-                : "partnerevents/edit/" + u) +
-              "?tab=broadcast"
-            );
-          case d.k_eCommunityMigrate:
-            return c + "partnerevents/migrate_announcement/" + m;
-          case d.k_eCommunityPreview:
-            return h
-              ? c + "partnerevents/previewsale/" + u
-              : c +
-                  (e.bOldAnnouncement
-                    ? "partnerevents/preview_old_announcement/" + m
-                    : "partnerevents/preview/" + u);
-          case d.k_eCommunityPreviewSale:
-            return c + "partnerevents/previewsale/" + u;
-          case d.k_eCommunityAdminPage:
-            return h
-              ? `${s}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
-              : c + "partnerevents";
-          case d.k_eCommunityAnnouncementHub:
-            return c + "announcements";
-          case d.k_eStoreNewsHub:
-            return (
-              s +
-              `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
-            );
-          case d.k_eStoreOwnerPage:
-            return (
-              s +
-              (e.appid
-                ? "app/" + e.appid
-                : "curator/" + e.clanSteamID.GetAccountID())
-            );
-          case d.k_eStoreSalePage:
-            return e.jsondata.bSaleEnabled
-              ? e.clanSteamID.GetAccountID() == f.wv
-                ? `${s}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
-                : e.clanSteamID.GetAccountID() == f.yT
-                  ? `${s}charts/bestofyear/${e.jsondata.sale_vanity_id}`
-                  : _
-                    ? `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`
-                    : h
-                      ? `${s}curator/${e.clanSteamID.GetAccountID()}`
-                      : s +
-                        (e.jsondata
-                          .sale_vanity_id_valve_approved_for_sale_subpath
-                          ? "sale/"
-                          : "curator/" +
-                            e.clanSteamID.GetAccountID() +
-                            "/sale/") +
-                        e.jsondata.sale_vanity_id
-              : s;
-          case d.k_eCommunityView:
-            return c + "announcements/detail/" + m;
-          case d.k_eStoreView:
-            if (e.clanSteamID.GetAccountID() == (0, p.H)())
-              return `${l.TS.STORE_BASE_URL}meetsteam/${u}`;
-            if (_)
-              return `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`;
-            if (h) return `${s}curator/${e.clanSteamID.GetAccountID()}`;
-            return `${s}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${m}` : `view/${u}`}`;
-          case d.k_eStoreUsersNewsHub:
-            return `${s}news/`;
-          default:
-            return (0, o.wT)(!1, "Unknown route specified for link"), "";
-        }
-      }
-      function T(e, t, i) {
-        return A(
-          e,
-          t,
-          "forceAbsolute" === i || !b(t, e) ? "absolute" : "relative",
-        );
-      }
-      function M(e) {
-        const { eventModel: t, route: i, bPopup: s = !0 } = e,
-          o = b(i, t),
-          l = A(t, i, o ? "relative" : "absolute");
-        return (
-          n.useEffect(() => {
-            l && (s ? window.open(l) : window.location.assign(l));
-          }, [s, l]),
-          o && l ? (0, r.jsx)(a.rd, { push: !0, to: l }) : null
-        );
-      }
-      function R(e, t, i) {
-        const r = E(e, t, !1);
-        return "admin" === i ? r + "partnerevents" : "";
-      }
-      function G(e) {
-        const { eventModel: t, preferredFocus: i } = e,
-          { bCanUseLink: o } = n.useContext(c),
-          l = (0, _.n9)(),
-          p = (0, a.W6)(),
-          h = o && b(e.route, t),
-          g = A(t, e.route, h ? "relative" : "absolute"),
-          f = !h && g ? (0, m.NT)(g) : g,
-          y = h || !f ? f : (0, u.wJ)(f, l),
-          S = A(t, d.k_eViewWebSiteHub, "absolute"),
-          B = Boolean(e.route != d.k_eViewWebSiteHub)
-            ? (0, v.we)("#EventBrowse_MoreEventsBtn")
-            : "",
-          w = n.useCallback(() => {
-            S && window.location.assign(S);
-          }, [S]);
-        return t
-          ? h
-            ? (0, r.jsx)(s.Ii, {
-                style: e.style,
-                className: e.className,
-                href: p.createHref({ pathname: y }),
-                onClick: (t) => {
-                  var i;
-                  y &&
-                    (null === (i = e.onClick) || void 0 === i || i.call(e, t),
-                    p.push(y),
-                    t.preventDefault());
-                },
-                onOptionsActionDescription: B,
-                onOptionsButton: B ? w : void 0,
-                preferredFocus: i,
-                children: e.children,
-              })
-            : (0, r.jsx)(s.Ii, {
-                href: y,
-                style: e.style,
-                className: e.className,
-                onClick: e.onClick,
-                preferredFocus: i,
-                onOptionsActionDescription: B,
-                onOptionsButton: B ? w : void 0,
-                children: e.children,
-              })
-          : null;
-      }
+      i.d(t, { I: () => r });
+      const r = i(90626).createContext({ bCanUseLink: !1 });
     },
     42951: (e, t, i) => {
       "use strict";
@@ -11189,7 +11193,7 @@
         _ = i(4796),
         p = i(81477),
         h = i(44165),
-        g = i(60746),
+        g = i(82429),
         v = i(1088),
         f = i(40650),
         y = i(68255),
@@ -11208,7 +11212,7 @@
         j = i(78327),
         k = i(6878),
         x = i.n(k),
-        D = i(3919),
+        D = i(32803),
         z = i(1078),
         F = i(95695),
         L = i(82477),

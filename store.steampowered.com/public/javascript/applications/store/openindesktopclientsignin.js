@@ -33,7 +33,7 @@
       t.d(n, { Y: () => l });
       var i = t(7850),
         s = t(20187),
-        o = t(41324),
+        o = t(11526),
         r = t(50122),
         c = t(8527),
         a = t(45699);
@@ -89,7 +89,7 @@
     62151: (e, n, t) => {
       "use strict";
       t.d(n, { F5: () => o });
-      var i = t(48891);
+      var i = t(13843);
       const s = {};
       (s.arabic = () => t.e(3695).then(t.t.bind(t, 93695, 19))),
         (s.brazilian = () => t.e(1091).then(t.t.bind(t, 41091, 19))),
@@ -127,10 +127,11 @@
     },
     62381: (e, n, t) => {
       "use strict";
-      t.d(n, { W: () => r });
-      var i = t(30470);
-      let s = { success: !0, result: 1 };
-      class o {
+      t.d(n, { W: () => c });
+      var i = t(37085),
+        s = t(30470);
+      let o = { success: !0, result: i.R };
+      class r {
         m_mapWaitingCallbacks = new Map();
         m_socket;
         m_iCallSeq = 1;
@@ -173,8 +174,8 @@
           if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
             return !1;
           let t = Object.assign({}, e, {
-            universe: i.TS.EUNIVERSE,
-            accountid: i.iA.accountid,
+            universe: s.TS.EUNIVERSE,
+            accountid: s.iA.accountid,
           });
           void 0 !== n && (t.sequenceid = n);
           try {
@@ -217,7 +218,7 @@
               (this.m_socket.onopen = () => {
                 this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                   .then((t) => {
-                    1 == t.success
+                    t.success == i.R
                       ? ((this.m_ClientInfo.ulVersion = t.clientversion),
                         (this.m_ClientInfo.bFriendsUIEnabled = !!t.friendsui),
                         (this.m_ClientInfo.unAccountID = t.accountid),
@@ -244,9 +245,9 @@
           );
         }
       }
-      let r = new (class {
-        m_connection = new o();
-        FailureResult(e = 2) {
+      let c = new (class {
+        m_connection = new r();
+        FailureResult(e = i.zi) {
           let n = { success: !1, result: e };
           return (
             this.m_connection &&
@@ -255,13 +256,13 @@
             this.m_connection &&
               !this.m_connection.connected_to_client &&
               (n.connect_failed = !0),
-            7 == e && (n.call_unsupported = !0),
+            e == i.Vr && (n.call_unsupported = !0),
             n
           );
         }
         BClientConnected() {
           return this.m_connection.Connect().then(
-            () => s,
+            () => o,
             () => this.FailureResult(),
           );
         }
@@ -298,7 +299,7 @@
           let n = { message: "IsSubscribedApp", appid: e };
           return this.GenericEResultCall(n, !0).then((n) => {
             if (n.connect_failed) return;
-            let t = 1 == n.result;
+            let t = n.result == i.R;
             return this.m_mapCacheSubscribedApp.set(e, t), t;
           });
         }
@@ -311,8 +312,8 @@
         }
         BClientAccountMatches() {
           return (
-            !i.iA.logged_in ||
-            i.iA.accountid == this.m_connection.ClientInfo.unAccountID
+            !s.iA.logged_in ||
+            s.iA.accountid == this.m_connection.ClientInfo.unAccountID
           );
         }
         GenericEResultCall(e, n = !1) {
@@ -320,17 +321,17 @@
             .Connect()
             .then(() =>
               n && !this.BClientAccountMatches()
-                ? { success: !1, result: 19, account_mismatch: !0 }
+                ? { success: !1, result: i.$A, account_mismatch: !0 }
                 : this.m_connection
                     .SendMsgAndAwaitResponse(e)
                     .then((e) =>
-                      1 === e.success ? s : this.FailureResult(e.success),
+                      e.success === i.R ? o : this.FailureResult(e.success),
                     ),
             )
             .catch(() => this.FailureResult());
         }
       })();
-      window.ClientConnectionAPI = r;
+      window.ClientConnectionAPI = c;
     },
     51706: (e, n, t) => {
       "use strict";
@@ -411,46 +412,47 @@
       "use strict";
       t.r(n),
         t.d(n, {
-          OpenInDesktopClient: () => u,
-          default: () => m,
-          useOpenWebInSteamClient: () => p,
+          OpenInDesktopClient: () => p,
+          default: () => _,
+          useOpenWebInSteamClient: () => m,
         });
       var i = t(7850),
-        s = t(90626),
-        o = t(30470),
-        r = t(84811),
-        c = t(62381),
-        a = t(97824),
-        l = t(78327),
-        d = t(2627),
-        h = t(61859);
-      const u = (0, r.Nr)(function (e) {
-        const { fnOpenInSteamClient: n } = p();
+        s = t(37085),
+        o = t(90626),
+        r = t(30470),
+        c = t(84811),
+        a = t(62381),
+        l = t(97824),
+        d = t(78327),
+        h = t(2627),
+        u = t(61859);
+      const p = (0, c.Nr)(function (e) {
+        const { fnOpenInSteamClient: n } = m();
         return (0, i.jsx)("div", {
-          className: a.OpenInBannerContainer,
+          className: l.OpenInBannerContainer,
           children: (0, i.jsxs)("div", {
-            className: a.OpenInBannerContent,
+            className: l.OpenInBannerContent,
             children: [
               (0, i.jsx)("div", {
-                className: a.BannerButtonContainer,
+                className: l.BannerButtonContainer,
                 children: (0, i.jsx)("div", {
                   onClick: n,
-                  className: a.BannerButton,
-                  children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  className: l.BannerButton,
+                  children: (0, u.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
               }),
               (0, i.jsx)("div", {
-                className: a.BannerMessage,
+                className: l.BannerMessage,
                 children: (0, i.jsxs)("div", {
-                  className: a.BannerTitle,
+                  className: l.BannerTitle,
                   children: [
                     (0, i.jsx)("b", {
-                      children: (0, h.we)(
+                      children: (0, u.we)(
                         "#OpenInDesktopAppBanner_NotSignedIn",
                       ),
                     }),
                     (0, i.jsx)("br", {}),
-                    (0, h.we)("#OpenInDesktopAppBanner_Body"),
+                    (0, u.we)("#OpenInDesktopAppBanner_Body"),
                   ],
                 }),
               }),
@@ -458,76 +460,77 @@
           }),
         });
       });
-      function p() {
-        const [e, n] = s.useState(22);
-        s.useEffect(() => {
-          o.TS.IN_CLIENT ||
-            o.TS.IN_MOBILE ||
-            o.TS.IN_MOBILE_WEBVIEW ||
-            c.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
-              n(e ? 1 : 2);
+      function m() {
+        const [e, n] = o.useState(s._9);
+        o.useEffect(() => {
+          r.TS.IN_CLIENT ||
+            r.TS.IN_MOBILE ||
+            r.TS.IN_MOBILE_WEBVIEW ||
+            a.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
+              n(e ? s.R : s.zi);
             });
         }, []);
-        const t = s.useCallback(() => {
-          let n = `${(0, l.yl)()}//openurl/`;
-          const t = (0, d.VY)("browserid");
+        const t = o.useCallback(() => {
+          let n = `${(0, d.yl)()}//openurl/`;
+          const t = (0, h.VY)("browserid");
           if (t) {
             const e = new URL(window.location.href),
               i = new URLSearchParams(e.search);
             i.set("utm_bid", t),
               (n += e.origin + e.pathname + "?" + i.toString() + e.hash);
           } else n += window.location.href;
-          1 == e ? c.W.OpenSteamURL(n) : (window.location.href = n);
+          e == s.R ? a.W.OpenSteamURL(n) : (window.location.href = n);
         }, [e]);
         return { eClientConnectedState: e, fnOpenInSteamClient: t };
       }
-      const m = u;
+      const _ = p;
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => O, default: () => k });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => k, default: () => w });
       var i = t(7850),
         s = t(53965),
         o = t(83392),
         r = t(20187),
         c = t(28491),
-        a = t(62151),
-        l = t(84547),
-        d = t(55672),
-        h = t(84811),
-        u = t(51706),
-        p = t(71009),
-        m = t(32754),
-        _ = t(61859),
-        C = t(84933),
-        b = t(30470),
-        g = t(11131),
-        S = t.n(g),
-        f = t(90626),
-        I = t(92724);
-      const O = (0, h.Nr)(function (e) {
+        a = t(37085),
+        l = t(62151),
+        d = t(84547),
+        h = t(55672),
+        u = t(84811),
+        p = t(51706),
+        m = t(71009),
+        _ = t(32754),
+        C = t(61859),
+        b = t(84933),
+        g = t(30470),
+        S = t(11131),
+        f = t.n(S),
+        I = t(90626),
+        O = t(92724);
+      const k = (0, u.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
-            p.useOpenWebInSteamClient)(),
-            h = 1 == t,
-            [g, O, k] = (0, C.uD)();
+            m.useOpenWebInSteamClient)(),
+            u = t == a.R,
+            [S, k, w] = (0, b.uD)();
           return (
-            (0, f.use)((0, I.u)()),
+            (0, I.use)((0, O.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
-                (0, i.jsx)(m.Gq, {
-                  toolTipContent: d.Z.Localize("#AddToWishlist_ttip"),
+                (0, i.jsx)(_.Gq, {
+                  toolTipContent: h.Z.Localize("#AddToWishlist_ttip"),
                   children: (0, i.jsx)(s.$, {
-                    onClick: O,
-                    children: (0, _.we)("#AddToYourWishlist"),
+                    onClick: k,
+                    children: (0, C.we)("#AddToYourWishlist"),
                   }),
                 }),
-                (0, i.jsx)(u.EN, {
-                  active: g,
-                  children: (0, i.jsxs)(u.o0, {
-                    strTitle: (0, _.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                    className: S().WishlistModalOverride,
-                    strDescription: a.F5.Localize("#Wishlist_NotSignedIn"),
-                    closeModal: k,
+                (0, i.jsx)(p.EN, {
+                  active: S,
+                  children: (0, i.jsxs)(p.o0, {
+                    strTitle: (0, C.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    className: f().WishlistModalOverride,
+                    strDescription: l.F5.Localize("#Wishlist_NotSignedIn"),
+                    closeModal: w,
                     bAlertDialog: !0,
                     children: [
                       (0, i.jsxs)(o.s, {
@@ -538,24 +541,24 @@
                         children: [
                           (0, i.jsx)(s.$, {
                             onClick: n,
-                            children: (0, _.we)(
+                            children: (0, C.we)(
                               "#OpenInDesktopAppBanner_OpenAppButton",
                             ),
                           }),
                           (0, i.jsx)(s.$, {
                             color: "dull",
-                            onClick: l.l,
-                            children: d.Z.Localize("#Login_SignIn"),
+                            onClick: d.l,
+                            children: h.Z.Localize("#Login_SignIn"),
                           }),
                         ],
                       }),
-                      !h &&
+                      !u &&
                         (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(r.EY, {
-                            children: (0, _.oW)(
+                            children: (0, C.oW)(
                               "#GotSteam_NeedSteam",
                               (0, i.jsx)(c.Y, {
-                                href: `${b.TS.STORE_BASE_URL}about`,
+                                href: `${g.TS.STORE_BASE_URL}about`,
                               }),
                             ),
                           }),
@@ -567,7 +570,7 @@
             })
           );
         }),
-        k = O;
+        w = k;
     },
   },
 ]);

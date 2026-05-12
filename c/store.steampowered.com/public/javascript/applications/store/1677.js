@@ -144,17 +144,18 @@
       _ = (0, _._)([_._], _);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { persona: _, className: _, ..._ } = _;
         if (!_) return null;
         if (!_.is_online) return null;
-        const _ = _.HasStateFlag(512),
-          _ = _.HasStateFlag(2048),
-          _ = 544 == _.m_eGamingDeviceType,
-          _ = 545 == _.m_eGamingDeviceType,
-          _ = !_ && !_ && !_ && _.HasStateFlag(1024);
+        const _ = _.HasStateFlag(_._),
+          _ = _.HasStateFlag(_._),
+          _ = _.m_eGamingDeviceType == _.LS$,
+          _ = _.m_eGamingDeviceType == _.ppM,
+          _ = !_ && !_ && !_ && _.HasStateFlag(_._);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _ &&
@@ -274,11 +275,11 @@
             ? (_ = (0, _.jsx)(_, {
                 persona: _,
               }))
-            : (0, _._)(_)
+            : (0, _.aPS)(_)
               ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
               : _.is_ingame
                 ? ((_ =
-                    !_.is_in_nonsteam_game || _ || (0, _._)(_)
+                    !_.is_in_nonsteam_game || _ || (0, _.S$u)(_)
                       ? __webpack_require__.GetCurrentGameName()
                       : (0, _._)("#PersonaStateInNonSteamGame")),
                   _ || _
@@ -311,7 +312,7 @@
           const _ = !_.is_ingame && !_,
             _ = !_ && _,
             _ = _ && (!_ || !_),
-            _ = (0, _._)(_._.LAUNCHER_TYPE);
+            _ = (0, _.IDH)(_._.LAUNCHER_TYPE);
           let _ = _ && !_,
             _ = _ ? _ : _.m_strPlayerName,
             _ = !_ && (_ || _) && _;
@@ -1267,6 +1268,7 @@
           };
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -1330,8 +1332,8 @@
               ?.filter((_) => {
                 const _ = new _._(_.ulfriendid());
                 return (
-                  (3 == _.efriendrelationship() ||
-                    6 == _.efriendrelationship()) &&
+                  (_.efriendrelationship() == _._UC ||
+                    _.efriendrelationship() == _.Ec7) &&
                   _.BIsIndividualAccount()
                 );
               })
@@ -1354,8 +1356,8 @@
               ?.filter((_) => {
                 const _ = new _._(_.ulfriendid());
                 return (
-                  (5 == _.efriendrelationship() ||
-                    6 == _.efriendrelationship()) &&
+                  (_.efriendrelationship() == _.wim ||
+                    _.efriendrelationship() == _.Ec7) &&
                   _.BIsIndividualAccount()
                 );
               })

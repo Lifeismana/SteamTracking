@@ -6,10 +6,28 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 2,
+        _ = 4,
+        _ = 8,
+        _ = 512,
+        _ = 1024,
+        _ = 2048;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -32,7 +50,7 @@
       class _ {
         m_steamid;
         m_bInitialized = !1;
-        m_ePersonaState = 0;
+        m_ePersonaState = _.cU3;
         m_unGamePlayedAppID = 0;
         m_gameid = "0";
         m_unPersonaStateFlags = 0;
@@ -52,7 +70,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_eGamingDeviceType = 0;
+        m_eGamingDeviceType = _.eSB;
         m_mapRichPresence = _._.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -61,7 +79,7 @@
           (0, _._)(this), (this.m_steamid = _);
         }
         Reset() {
-          (this.m_ePersonaState = 0),
+          (this.m_ePersonaState = _.cU3),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -74,7 +92,7 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_eGamingDeviceType = 0);
+            (this.m_eGamingDeviceType = _.eSB);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -83,7 +101,7 @@
           return this.m_steamid.ConvertTo64BitString();
         }
         get is_online() {
-          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
+          return this.m_ePersonaState != _.cU3 && this.m_ePersonaState != _._3b;
         }
         get is_ingame() {
           return (
@@ -105,7 +123,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return !!(2 & (this.m_unPersonaStateFlags ?? 0));
+          return 0 != ((this.m_unPersonaStateFlags ?? 0) & _._);
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -117,7 +135,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
+          return this.m_ePersonaState == _.PrD || this.m_ePersonaState == _.vPz;
         }
         HasStateFlag(_) {
           return 0 != ((this.m_unPersonaStateFlags ?? 0) & _);
@@ -126,10 +144,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          0 != this.m_ePersonaState && this.Reset();
+          this.m_ePersonaState != _.cU3 && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(4);
+          return this.HasStateFlag(_._);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -166,7 +184,7 @@
               let _ = this.m_mapRichPresence.get("steam_display");
               return _.Localize(_, this.m_mapRichPresence);
             }
-          } else if (this.HasStateFlag(8))
+          } else if (this.HasStateFlag(_._))
             return (0, _._)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -196,20 +214,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case 0:
-            case 7:
+            case _.cU3:
+            case _._3b:
               return this.GetOfflineStatusTime();
-            case 1:
+            case _.UXk:
               return (0, _._)("#PersonaStateOnline");
-            case 2:
+            case _.wcG:
               return (0, _._)("#PersonaStateBusy");
-            case 3:
+            case _.PrD:
               return (0, _._)("#PersonaStateAway");
-            case 4:
+            case _.vPz:
               return (0, _._)("#PersonaStateSnooze");
-            case 5:
+            case _.Hrn:
               return (0, _._)("#PersonaStateLookingToTrade");
-            case 6:
+            case _.HAb:
               return (0, _._)("#PersonaStateLookingToPlay");
             default:
               return "";
@@ -320,6 +338,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return new (_())(
@@ -386,7 +405,7 @@
             const _ = _?.public_data,
               _ = _?.private_data;
             (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? 0),
+              (_.m_ePersonaState = _?.persona_state ?? _.cU3),
               (_.m_strAvatarHash = _?.sha_digest_avatar
                 ? (0, _._)(_.sha_digest_avatar)
                 : _._),

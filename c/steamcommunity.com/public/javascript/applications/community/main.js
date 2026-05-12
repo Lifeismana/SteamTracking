@@ -3077,7 +3077,8 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -3125,6 +3126,41 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -3166,42 +3202,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3272,6 +3277,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3806,14 +3812,16 @@
         return (0, _.jsx)(_._, {
           domain: "steamcommunity.com",
           children: (0, _.jsx)(_._, {
-            children: (0, _.jsx)(_, {
-              children: (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_, {
-                  children: (0, _.jsx)(_._, {
-                    children: (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_, {
+                children: (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_, {
+                    children: (0, _.jsx)(_._, {
                       children: (0, _.jsx)(_, {
-                        children: (0, _.jsx)(_._, {
-                          children: _.children,
+                        children: (0, _.jsx)(_, {
+                          children: (0, _.jsx)(_._, {
+                            children: _.children,
+                          }),
                         }),
                       }),
                     }),
@@ -16058,6 +16066,167 @@
             return null;
         }
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(void 0);
+      function _(_) {
+        const [_] = _.useState(() => new _._());
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: _.children,
+        });
+      }
+      function _() {
+        const _ = _.useContext(_);
+        return (
+          _ ||
+          (function () {
+            if (!_)
+              throw new Error(
+                "Partner event tracking has not been initialized (context or global)",
+              );
+            return _;
+          })()
+        );
+      }
+      let _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor(_) {
+          (this.m_setShownEvents = new Set()),
+            (this.m_setReadEvents = new Set()),
+            (this.m_rgPendingUpload = []),
+            (this.m_schUpload = new _._()),
+            (this.m_bUploading = !1),
+            (this.m_CMInterface = _);
+        }
+        RecordEventShown(_, _) {
+          _ &&
+            !_.bOldAnnouncement &&
+            _.GID &&
+            this.MarkEventShown(_.GID, _.clanSteamID.GetAccountID(), _);
+        }
+        RecordEventRead(_, _) {
+          _ &&
+            !_.bOldAnnouncement &&
+            _.GID &&
+            this.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _);
+        }
+        MarkEventShown(_, _, _) {
+          let _ = this.MakeKey(_, _);
+          if (this.m_setShownEvents.has(_)) return !1;
+          this.m_setShownEvents.add(_);
+          let _ = new _._();
+          return (
+            _.set_event_gid(_),
+            _.set_clanid(_),
+            _.set_display_location(_),
+            _.set_mark_shown(!0),
+            this.QueueForUpload(_),
+            !0
+          );
+        }
+        MarkEventRead(_, _, _) {
+          let _ = this.MakeKey(_, _);
+          if (this.m_setReadEvents.has(_)) return !1;
+          this.m_setReadEvents.add(_);
+          let _ = new _._();
+          return (
+            _.set_event_gid(_),
+            _.set_clanid(_),
+            _.set_display_location(_),
+            _.set_mark_read(!0),
+            this.QueueForUpload(_),
+            !0
+          );
+        }
+        MakeKey(_, _) {
+          return `${_}_${_}`;
+        }
+        QueueForUpload(_) {
+          this.m_rgPendingUpload.push(_), this.ScheduleUpload();
+        }
+        ScheduleUpload() {
+          this.m_bUploading ||
+            (this.m_rgPendingUpload.length >= 30
+              ? this.UploadPendingData()
+              : this.m_schUpload.IsScheduled() ||
+                this.m_schUpload.Schedule(6e4, this.UploadPendingData));
+        }
+        async Flush() {
+          if (!this.m_bUploading) return this.UploadPendingData();
+        }
+        async UploadPendingData() {
+          if (this.m_bUploading) return;
+          this.m_schUpload.Cancel();
+          let _ = this.m_rgPendingUpload.splice(0, 30);
+          if (0 == _.length) return;
+          let _ = !1;
+          if (this.m_CMInterface) {
+            let _ = _._.Init(_._);
+            for (let _ of _) __webpack_require__.Body().add_markings(_);
+            this.m_bUploading = !0;
+            let _ = await _._.MarkPartnerEventsForUser(
+              this.m_CMInterface.GetServiceTransport(),
+              _,
+            );
+            (this.m_bUploading = !1), (_ = _.GetEResult() == _._);
+          } else {
+            if (!_._.logged_in) return;
+            let _ = _.map((_) => _.toObject()),
+              _ = (0, _._)() + "actions/ajaxmarkpartnerevents";
+            const _ = new FormData();
+            _.append("sessionid", _._.SESSIONID),
+              _.append("request", JSON.stringify(_));
+            try {
+              _ =
+                (
+                  await _().post(_, _, {
+                    withCredentials: !0,
+                  })
+                ).data.success == _._;
+            } catch (_) {
+              let _ = (0, _._)(_);
+              console.error(
+                "CPartnerEventUserTracking.UploadPendingData error " +
+                  _.strErrorMsg,
+                _,
+              );
+            }
+          }
+          _
+            ? this.m_rgPendingUpload.length > 0 && this.ScheduleUpload()
+            : (console.log(
+                "Saving news event state failed. Will try again soon!",
+              ),
+              (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(_)),
+              this.m_schUpload.Schedule(6e4, this.UploadPendingData));
+        }
+      }
+      (0, _._)([_._], _.prototype, "UploadPendingData", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

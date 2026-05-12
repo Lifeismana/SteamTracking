@@ -2817,7 +2817,7 @@ GHomepage = {
 
 		const k_nMinCapsules = 5;
 
-		var rgUnder10Filtered = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.under10, 'home', k_nMinCapsules, 12, oFilterOptions );
+		var rgUnder10Filtered = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.under10, 'home', k_nMinCapsules, k_nMinCapsules * 5, oFilterOptions );
 
 		rgUnder10Filtered.splice( rgUnder10Filtered.length - ( rgUnder10Filtered.length % k_nMinCapsules ) );
 		if ( rgUnder10Filtered.length >= k_nMinCapsules )

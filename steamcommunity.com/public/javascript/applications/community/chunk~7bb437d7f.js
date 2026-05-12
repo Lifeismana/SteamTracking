@@ -558,8 +558,12 @@
               });
         }),
         p = (e) => {
-          const s = (0, i.jsx)("div", {
-            className: e.stylesmodule.DateToolTip,
+          var s;
+          const t = (0, i.jsx)("div", {
+            className:
+              null === (s = e.stylesmodule) || void 0 === s
+                ? void 0
+                : s.DateToolTip,
             children: (0, i.jsx)(g, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
@@ -567,7 +571,7 @@
             }),
           });
           return (0, i.jsx)(r.m9, {
-            toolTipContent: s,
+            toolTipContent: t,
             direction: "top",
             className: e.className,
             bTopmost: !0,
@@ -576,7 +580,7 @@
         };
       let T = class extends a.Component {
         render() {
-          const { startDateAndTime: e, endDateAndTime: s } = this.props,
+          const { startDateAndTime: e, endDateAndTime: s = 0 } = this.props,
             t = this.props.stylesmodule
               ? { ...j(), ...this.props.stylesmodule }
               : j();

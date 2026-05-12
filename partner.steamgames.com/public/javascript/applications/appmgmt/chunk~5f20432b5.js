@@ -7,9 +7,9 @@
   {
     72839: (e, t, s) => {
       s.d(t, { Bn: () => l, hS: () => r, rV: () => n });
-      var a = s(15161),
+      var a = s(96171),
         i = s(78327);
-      s(94601);
+      s(38516);
       function n(e, t) {
         e.Body().set_context(r(t));
       }
@@ -26,20 +26,22 @@
       }
     },
     16021: (e, t, s) => {
-      s.d(t, { A: () => I });
+      s.d(t, { A: () => R });
       var a = s(34629),
         i = s(14947),
-        n = s(56545),
-        r = s(96059),
-        l = s(59411),
-        o = s(15161),
-        u = s(81393),
-        m = s(68797),
-        c = s(78327),
-        d = s(72839),
-        h = s(75279),
-        _ = s(6419);
-      function p(e, t) {
+        n = s(37085),
+        r = s(22837),
+        l = s(56545),
+        o = s(96059),
+        u = s(59411),
+        c = s(96171),
+        m = s(81393),
+        d = s(68797),
+        h = s(78327),
+        _ = s(72839),
+        p = s(75279),
+        g = s(6419);
+      function I(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -69,12 +71,12 @@
           include_links: e.include_links || t.include_links,
         };
       }
-      async function g(e, t) {
+      async function f(e, t) {
         const s = await e,
           a = await t;
-        return 1 != s ? s : a;
+        return s != n.R ? s : a;
       }
-      class I {
+      class R {
         k_QueueWaitUntilRequestMS = 5;
         k_nMaxBatchSize = 250;
         m_bReturnUnavailableItems = !1;
@@ -113,22 +115,22 @@
         m_PendingInfoPromise;
         m_PendingInfoResolve = void 0;
         m_PendingTimer = void 0;
-        k_AlreadyResolvedOK = Promise.resolve(1);
-        k_AlreadyResolvedInvalid = Promise.resolve(8);
-        k_AlreadyResolvedBusy = Promise.resolve(10);
+        k_AlreadyResolvedOK = Promise.resolve(n.R);
+        k_AlreadyResolvedInvalid = Promise.resolve(n.nO);
+        k_AlreadyResolvedBusy = Promise.resolve(n.S7);
         static sm_instance;
         static Get() {
           return (
-            I.sm_instance ||
-              ((I.sm_instance = new I()),
-              (window.StoreItemCache = I.sm_instance)),
-            I.sm_instance
+            R.sm_instance ||
+              ((R.sm_instance = new R()),
+              (window.StoreItemCache = R.sm_instance)),
+            R.sm_instance
           );
         }
         static Initialize(e, t) {
-          const s = I.Get();
+          const s = R.Get();
           return (
-            (0, u.wT)(
+            (0, m.wT)(
               !s.m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once.",
             ),
@@ -185,7 +187,7 @@
             (this.m_bActivelyResettingCache = !1);
         }
         static BIsInitialized() {
-          return I.Get().m_bInitialized;
+          return R.Get().m_bInitialized;
         }
         static k_DataRequest_CommonOnly = {};
         static k_DataRequest_BasicInfo = { include_basic_info: !0 };
@@ -206,22 +208,22 @@
           include_links: !0,
         };
         async QueueAppRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 0, t);
+          return this.QueueStoreItemRequest(e, c.c6.qI, t);
         }
         async QueuePackageRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 1, t);
+          return this.QueueStoreItemRequest(e, c.c6.RD, t);
         }
         async QueueBundleRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 2, t);
+          return this.QueueStoreItemRequest(e, c.c6.xO, t);
         }
         async QueueTagRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 4, t);
+          return this.QueueStoreItemRequest(e, c.c6.je, t);
         }
         async QueueCreatorRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 5, t);
+          return this.QueueStoreItemRequest(e, c.c6.tp, t);
         }
         async QueueHubCategoryRequest(e, t) {
-          return this.QueueStoreItemRequest(e, 6, t);
+          return this.QueueStoreItemRequest(e, c.c6.wn, t);
         }
         static ValidateDataRequest(e) {
           const t = [
@@ -242,60 +244,72 @@
           return !0;
         }
         async QueueMultipleAppRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
+          if (!e || 0 == e.length) return n.R;
           const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 0, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
+            await Promise.all(
+              e.map((e) => this.QueueStoreItemRequest(e, c.c6.qI, t)),
+            )
+          ).filter((e) => e != n.R);
+          return s.length > 0 ? s[0] : n.R;
         }
         async QueueMultiplePackageRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
+          if (!e || 0 == e.length) return n.R;
           const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 1, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
+            await Promise.all(
+              e.map((e) => this.QueueStoreItemRequest(e, c.c6.RD, t)),
+            )
+          ).filter((e) => e != n.R);
+          return s.length > 0 ? s[0] : n.R;
         }
         async QueueMultipleBundleRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
+          if (!e || 0 == e.length) return n.R;
           const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 2, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
+            await Promise.all(
+              e.map((e) => this.QueueStoreItemRequest(e, c.c6.xO, t)),
+            )
+          ).filter((e) => e != n.R);
+          return s.length > 0 ? s[0] : n.R;
         }
         async QueueMultipleTagRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
+          if (!e || 0 == e.length) return n.R;
           const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 4, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
+            await Promise.all(
+              e.map((e) => this.QueueStoreItemRequest(e, c.c6.je, t)),
+            )
+          ).filter((e) => e != n.R);
+          return s.length > 0 ? s[0] : n.R;
         }
         async QueueMultipleCreatorRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
+          if (!e || 0 == e.length) return n.R;
           const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 5, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
+            await Promise.all(
+              e.map((e) => this.QueueStoreItemRequest(e, c.c6.tp, t)),
+            )
+          ).filter((e) => e != n.R);
+          return s.length > 0 ? s[0] : n.R;
         }
         async QueueMultipleHubCategoryRequests(e, t) {
-          if (!e || 0 == e.length) return 1;
+          if (!e || 0 == e.length) return n.R;
           const s = (
-            await Promise.all(e.map((e) => this.QueueStoreItemRequest(e, 6, t)))
-          ).filter((e) => 1 != e);
-          return s.length > 0 ? s[0] : 1;
+            await Promise.all(
+              e.map((e) => this.QueueStoreItemRequest(e, c.c6.wn, t)),
+            )
+          ).filter((e) => e != n.R);
+          return s.length > 0 ? s[0] : n.R;
         }
         async QueueMultipleStoreItemRequests(e, t, s) {
-          if (!e || 0 == e.length) return 1;
+          if (!e || 0 == e.length) return n.R;
           const a = (
             await Promise.all(
               e.map((e, a) => this.QueueStoreItemRequest(e, t[a], s)),
             )
-          ).filter((e) => 1 != e);
-          return a.length > 0 ? a[0] : 1;
+          ).filter((e) => e != n.R);
+          return a.length > 0 ? a[0] : n.R;
         }
         async QueueStoreItemRequest(e, t, s) {
           if (
-            ((0, u.wT)(
-              I.ValidateDataRequest(s),
+            ((0, m.wT)(
+              R.ValidateDataRequest(s),
               "Invalid Data Request: " + JSON.stringify(s),
             ),
             "string" == typeof e && (e = parseInt(e)),
@@ -309,7 +323,7 @@
             );
           if (!e)
             return (
-              (0, u.wT)(
+              (0, m.wT)(
                 !e,
                 `unexpected id ${e} of zero or undefined for type ${t}`,
               ),
@@ -326,29 +340,29 @@
                 () => this.FlushPendingInfo(),
                 this.k_QueueWaitUntilRequestMS,
               ))),
-            (this.m_setPendingDataRequest = p(this.m_setPendingDataRequest, s)),
+            (this.m_setPendingDataRequest = I(this.m_setPendingDataRequest, s)),
             t)
           ) {
-            case 0:
+            case c.c6.qI:
               this.m_setPendingAppInfo.add(e);
               break;
-            case 2:
+            case c.c6.xO:
               this.m_setPendingBundleInfo.add(e);
               break;
-            case 1:
+            case c.c6.RD:
               this.m_setPendingPackageInfo.add(e);
               break;
-            case 4:
+            case c.c6.je:
               this.m_setPendingTagInfo.add(e);
               break;
-            case 5:
+            case c.c6.tp:
               this.m_setPendingCreatorInfo.add(e);
               break;
-            case 6:
+            case c.c6.wn:
               this.m_setPendingHubCategoryInfo.add(e);
               break;
             default:
-              (0, u.wT)(!1, `Unexpected Type ${t}`);
+              (0, m.wT)(!1, `Unexpected Type ${t}`);
           }
           const i = this.m_PendingInfoPromise;
           return (
@@ -397,133 +411,133 @@
             return this.k_AlreadyResolvedOK;
           let a = null;
           switch (t) {
-            case 0:
+            case c.c6.qI:
               a = this.m_mapAppsInFlight.get(e);
               break;
-            case 1:
+            case c.c6.RD:
               a = this.m_mapPackageInFlight.get(e);
               break;
-            case 2:
+            case c.c6.xO:
               a = this.m_mapBundleInFlight.get(e);
               break;
-            case 4:
+            case c.c6.je:
               a = this.m_mapTagsInFlight.get(e);
               break;
-            case 5:
+            case c.c6.tp:
               a = this.m_mapCreatorsInFlight.get(e);
               break;
-            case 6:
+            case c.c6.wn:
               a = this.m_mapHubCategoriesInFlight.get(e);
           }
           return a &&
-            h.Ay.BDataRequestContainsOtherDataRequest(a.dataRequest, s)
+            p.Ay.BDataRequestContainsOtherDataRequest(a.dataRequest, s)
             ? a.promise
             : null;
         }
-        async HintLoadStoreItems(e, t, s, a, i, n, r) {
-          let l = null;
-          const u = new Promise((e) => (l = e));
+        async HintLoadStoreItems(e, t, s, a, i, r, l) {
+          let o = null;
+          const u = new Promise((e) => (o = e));
           let m = [],
-            c = [];
+            d = [];
           (e || []).forEach((e) => {
-            const t = this.GetPreviousSupersetLoadPromise(e, 0, r);
-            if (t) c.push(t);
+            const t = this.GetPreviousSupersetLoadPromise(e, c.c6.qI, l);
+            if (t) d.push(t);
             else {
-              m.push(o.O4.fromObject({ appid: e }));
-              let t = p(this.GetStoreItemDataRequest(e, 0), r);
+              m.push(c.O4.fromObject({ appid: e }));
+              let t = I(this.GetStoreItemDataRequest(e, c.c6.qI), l);
               const s = this.m_mapAppsInFlight.get(e);
-              (t = p(s?.dataRequest, t)),
-                s && c.push(s.promise),
+              (t = I(s?.dataRequest, t)),
+                s && d.push(s.promise),
                 this.m_mapAppsInFlight.set(e, {
-                  promise: s ? g(s.promise, u) : u,
+                  promise: s ? f(s.promise, u) : u,
                   dataRequest: t,
                 });
             }
           }),
             (t || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 1, r);
-              if (t) c.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, c.c6.RD, l);
+              if (t) d.push(t);
               else {
-                m.push(o.O4.fromObject({ packageid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 1), r);
+                m.push(c.O4.fromObject({ packageid: e }));
+                let t = I(this.GetStoreItemDataRequest(e, c.c6.RD), l);
                 const s = this.m_mapPackageInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && c.push(s.promise),
+                (t = I(s?.dataRequest, t)),
+                  s && d.push(s.promise),
                   this.m_mapPackageInFlight.set(e, {
-                    promise: s ? g(s.promise, u) : u,
+                    promise: s ? f(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
             }),
             (s || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 2, r);
-              if (t) c.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, c.c6.xO, l);
+              if (t) d.push(t);
               else {
-                m.push(o.O4.fromObject({ bundleid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 2), r);
+                m.push(c.O4.fromObject({ bundleid: e }));
+                let t = I(this.GetStoreItemDataRequest(e, c.c6.xO), l);
                 const s = this.m_mapBundleInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && c.push(s.promise),
+                (t = I(s?.dataRequest, t)),
+                  s && d.push(s.promise),
                   this.m_mapBundleInFlight.set(e, {
-                    promise: s ? g(s.promise, u) : u,
+                    promise: s ? f(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
             }),
             (a || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 4, r);
-              if (t) c.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, c.c6.je, l);
+              if (t) d.push(t);
               else {
-                m.push(o.O4.fromObject({ tagid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 4), r);
+                m.push(c.O4.fromObject({ tagid: e }));
+                let t = I(this.GetStoreItemDataRequest(e, c.c6.je), l);
                 const s = this.m_mapTagsInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && c.push(s.promise),
+                (t = I(s?.dataRequest, t)),
+                  s && d.push(s.promise),
                   this.m_mapTagsInFlight.set(e, {
-                    promise: s ? g(s.promise, u) : u,
+                    promise: s ? f(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
             }),
             (i || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 5, r);
-              if (t) c.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, c.c6.tp, l);
+              if (t) d.push(t);
               else {
-                m.push(o.O4.fromObject({ creatorid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 5), r);
+                m.push(c.O4.fromObject({ creatorid: e }));
+                let t = I(this.GetStoreItemDataRequest(e, c.c6.tp), l);
                 const s = this.m_mapCreatorsInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && c.push(s.promise),
+                (t = I(s?.dataRequest, t)),
+                  s && d.push(s.promise),
                   this.m_mapCreatorsInFlight.set(e, {
-                    promise: s ? g(s.promise, u) : u,
+                    promise: s ? f(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
             }),
-            (n || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(e, 6, r);
-              if (t) c.push(t);
+            (r || []).forEach((e) => {
+              const t = this.GetPreviousSupersetLoadPromise(e, c.c6.wn, l);
+              if (t) d.push(t);
               else {
-                m.push(o.O4.fromObject({ hubcategoryid: e }));
-                let t = p(this.GetStoreItemDataRequest(e, 6), r);
+                m.push(c.O4.fromObject({ hubcategoryid: e }));
+                let t = I(this.GetStoreItemDataRequest(e, c.c6.wn), l);
                 const s = this.m_mapHubCategoriesInFlight.get(e);
-                (t = p(s?.dataRequest, t)),
-                  s && c.push(s.promise),
+                (t = I(s?.dataRequest, t)),
+                  s && d.push(s.promise),
                   this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: s ? g(s.promise, u) : u,
+                    promise: s ? f(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
             });
-          let d = 1;
+          let h = n.R;
           if (
             (m.length > 0 &&
-              (d = await this.InternalHandleLoadStoreItems(m, r)),
-            l(d),
-            c.length > 0)
+              (h = await this.InternalHandleLoadStoreItems(m, l)),
+            o(h),
+            d.length > 0)
           ) {
-            const e = await Promise.all(c);
-            for (const t of e) 1 != t && 1 == d && (d = t);
+            const e = await Promise.all(d);
+            for (const t of e) t != n.R && h == n.R && (h = t);
           }
           return (
             (e || []).forEach((e) => this.m_mapAppsInFlight.delete(e)),
@@ -531,8 +545,8 @@
             (s || []).forEach((e) => this.m_mapBundleInFlight.delete(e)),
             (a || []).forEach((e) => this.m_mapTagsInFlight.delete(e)),
             (i || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
-            (n || []).forEach((e) => this.m_mapHubCategoriesInFlight.delete(e)),
-            d
+            (r || []).forEach((e) => this.m_mapHubCategoriesInFlight.delete(e)),
+            h
           );
         }
         MarkStoreItemIDUnavailable(e) {
@@ -575,9 +589,9 @@
               let o = e.tagid() ?? 0,
                 u = t.tagid() ?? 0;
               if (o != u) return o - u;
-              let m = e.creatorid() ?? 0,
-                c = t.creatorid() ?? 0;
-              if (m != c) return m - c;
+              let c = e.creatorid() ?? 0,
+                m = t.creatorid() ?? 0;
+              if (c != m) return c - m;
               let d = e.hubcategoryid() ?? 0,
                 h = t.hubcategoryid() ?? 0;
               return d != h ? d - h : 0;
@@ -591,14 +605,14 @@
               (console.warn(
                 "Service transport not initialized for StoreItemCache",
               ),
-              (this.m_serviceTransport = new r.D(
-                c.TS.WEBAPI_BASE_URL,
+              (this.m_serviceTransport = new o.D(
+                h.TS.WEBAPI_BASE_URL,
               ).GetAnonymousServiceTransport())),
             this.m_serviceTransport
           );
         }
         async InternalHandleLoadStoreItems(e, t) {
-          let s = 1;
+          let s = n.R;
           (e = this.SortStoreItems(e)),
             t.include_included_items &&
               (t = {
@@ -610,67 +624,68 @@
               });
           const a = new Array();
           try {
-            const r = [];
+            const o = [];
             for (; e.length > 0; ) {
               const s = e.splice(0, this.k_nMaxBatchSize);
               if ((a.push(s), this.m_bUsePartnerAPI)) {
-                const e = n.w.Init(l.St);
+                const e = l.w.Init(u.St);
                 e.Body().set_include_unpublished(!1);
                 const a = e.Body().getitems_request(!0);
-                a.set_context((0, d.hS)(this.m_bUsePartnerAPI)),
-                  a.set_data_request(o.gn.fromObject(t)),
+                a.set_context((0, _.hS)(this.m_bUsePartnerAPI)),
+                  a.set_data_request(c.gn.fromObject(t)),
                   a.set_ids(s),
-                  r.push(l.BT.GetItems(this.GetServiceTransport(), e));
+                  o.push(u.BT.GetItems(this.GetServiceTransport(), e));
               } else {
-                const e = n.w.Init(o.eE);
-                (0, d.rV)(e, this.m_bUsePartnerAPI),
-                  (0, d.Bn)(e, t),
+                const e = l.w.Init(c.eE);
+                (0, _.rV)(e, this.m_bUsePartnerAPI),
+                  (0, _.Bn)(e, t),
                   e.Body().set_ids(s),
-                  r.push(o.$4.GetItems(this.GetServiceTransport(), e));
+                  o.push(c.$4.GetItems(this.GetServiceTransport(), e));
               }
             }
-            (await Promise.all(r)).forEach((n, r) => {
-              1 == n.GetEResult()
-                ? n
+            (await Promise.all(o)).forEach((l, o) => {
+              l.GetEResult() == n.R
+                ? l
                     .Body()
                     .store_items()
                     .forEach((s) => {
                       const a = s.id(),
                         r = s.item_type();
-                      let l =
-                          this.m_bReturnUnavailableItems && 15 == s.success(),
-                        o = 1 == s.success() && !this.BIsStoreItemMissing(a, r);
-                      if (l || o) this.ReadItem(s, t);
+                      let o =
+                          this.m_bReturnUnavailableItems && s.success() == n.sW,
+                        u =
+                          s.success() == n.R && !this.BIsStoreItemMissing(a, r);
+                      if (o || u) this.ReadItem(s, t);
                       else {
                         switch (
-                          ("dev" == c.TS.WEB_UNIVERSE &&
+                          ("dev" == h.TS.WEB_UNIVERSE &&
                             console.warn(
                               `Failed to load ${a} type ${r} with error ${s.success()}`,
                               s,
                             ),
                           r)
                         ) {
-                          case 0:
+                          case c.c6.qI:
                             this.m_setUnavailableApps.add(a),
                               this.m_mapApps.delete(a);
                             break;
-                          case 1:
+                          case c.c6.RD:
                             this.m_setUnavailablePackages.add(a),
                               this.m_mapPackages.delete(a);
                             break;
-                          case 2:
+                          case c.c6.xO:
                             this.m_setUnavailableBundles.add(a),
                               this.m_mapBundles.delete(a);
                             break;
-                          case 4:
+                          case c.c6.je:
                             this.m_setUnavailableTags.add(a),
                               this.m_mapTags.delete(a);
                             break;
-                          case 5:
+                          case c.c6.tp:
                             this.m_setUnavailableCreators.add(a),
                               this.m_mapCreators.delete(a);
                             break;
-                          case 6:
+                          case c.c6.wn:
                             this.m_setUnavailableHubCategories.add(a),
                               this.m_mapHubCategories.delete(a);
                             break;
@@ -684,29 +699,29 @@
                         }
                         if (s.unvailable_for_country_restriction())
                           switch (r) {
-                            case 0:
+                            case c.c6.qI:
                               this.m_setUnavailableDueToCountryRestrictionApps.add(
                                 a,
                               );
                               break;
-                            case 1:
+                            case c.c6.RD:
                               this.m_setUnavailableDueToCountryRestrictionPackages.add(
                                 a,
                               );
                               break;
-                            case 2:
+                            case c.c6.xO:
                               this.m_setUnavailableDueToCountryRestrictionBundles.add(
                                 a,
                               );
                               break;
-                            case 4:
-                            case 5:
-                            case 6:
+                            case c.c6.je:
+                            case c.c6.tp:
+                            case c.c6.wn:
                               console.error(
                                 "CStoreItemCache::InternalHandleLoadStoreItems - tags, creators or categories don't have country restrictions. eResult: " +
-                                  n.GetEResult() +
+                                  l.GetEResult() +
                                   " message: " +
-                                  n.Hdr().error_message(),
+                                  l.Hdr().error_message(),
                                 (0, i.HO)(e),
                               );
                           }
@@ -714,17 +729,17 @@
                     })
                 : (console.warn(
                     "CStoreItemCache::InternalHandleLoadStoreItems failed with eResult: " +
-                      n.GetEResult() +
+                      l.GetEResult() +
                       " message: " +
-                      n.Hdr().error_message(),
+                      l.Hdr().error_message(),
                     (0, i.HO)(e),
                   ),
-                  (1 == n.Hdr().transport_error() || c.TS.FROM_WEB) &&
-                    this.MarkStoreItemIDUnavailable(a[r]),
-                  1 == s && (s = n.GetEResult()));
+                  (l.Hdr().transport_error() == r.sC || h.TS.FROM_WEB) &&
+                    this.MarkStoreItemIDUnavailable(a[o]),
+                  s == n.R && (s = l.GetEResult()));
             });
           } catch (e) {
-            const t = (0, m.H)(e);
+            const t = (0, d.H)(e);
             return (
               console.error(
                 "CStoreItemCache::InternalHandleLoadStoreItems failed: " +
@@ -732,7 +747,7 @@
                 t,
               ),
               a.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
-              79
+              n.eH
             );
           }
           return s;
@@ -740,22 +755,22 @@
         GetMapForType(e) {
           let t;
           switch (e) {
-            case 0:
+            case c.c6.qI:
               t = this.m_mapApps;
               break;
-            case 2:
+            case c.c6.xO:
               t = this.m_mapBundles;
               break;
-            case 1:
+            case c.c6.RD:
               t = this.m_mapPackages;
               break;
-            case 4:
+            case c.c6.je:
               t = this.m_mapTags;
               break;
-            case 5:
+            case c.c6.tp:
               t = this.m_mapCreators;
               break;
-            case 6:
+            case c.c6.wn:
               t = this.m_mapHubCategories;
               break;
             default:
@@ -770,7 +785,7 @@
           );
         }
         GetStoreItem(e, t) {
-          if (-1 == t || 3 == t) return;
+          if (t == c.c6.Ep || t == c.c6.Eb) return;
           const s = this.GetMapForType(t);
           return s?.get(e);
         }
@@ -784,54 +799,54 @@
           return this.GetMapForType(t)?.get(e)?.GetDataRequest() || null;
         }
         BHasApp(e, t) {
-          return this.BHasStoreItem(e, 0, t);
+          return this.BHasStoreItem(e, c.c6.qI, t);
         }
         GetApp(e) {
-          return this.GetStoreItem(e, 0);
+          return this.GetStoreItem(e, c.c6.qI);
         }
         BHasPackage(e, t) {
-          return this.BHasStoreItem(e, 1, t);
+          return this.BHasStoreItem(e, c.c6.RD, t);
         }
         GetPackage(e) {
-          return this.GetStoreItem(e, 1);
+          return this.GetStoreItem(e, c.c6.RD);
         }
         BHasBundle(e, t) {
-          return this.BHasStoreItem(e, 2, t);
+          return this.BHasStoreItem(e, c.c6.xO, t);
         }
         GetBundle(e) {
-          return this.GetStoreItem(e, 2);
+          return this.GetStoreItem(e, c.c6.xO);
         }
         BHasTag(e, t) {
-          return this.BHasStoreItem(e, 4, t);
+          return this.BHasStoreItem(e, c.c6.je, t);
         }
         GetTag(e) {
-          return this.GetStoreItem(e, 4);
+          return this.GetStoreItem(e, c.c6.je);
         }
         BHasCreator(e, t) {
-          return this.BHasStoreItem(e, 5, t);
+          return this.BHasStoreItem(e, c.c6.tp, t);
         }
         GetCreator(e) {
-          return this.GetStoreItem(e, 5);
+          return this.GetStoreItem(e, c.c6.tp);
         }
         BHasHubCategory(e, t) {
-          return this.BHasStoreItem(e, 6, t);
+          return this.BHasStoreItem(e, c.c6.wn, t);
         }
         GetHubCategory(e) {
-          return this.GetStoreItem(e, 6);
+          return this.GetStoreItem(e, c.c6.wn);
         }
         BIsStoreItemMissing(e, t) {
           switch (t) {
-            case 0:
+            case c.c6.qI:
               return this.BIsAppMissing(e);
-            case 1:
+            case c.c6.RD:
               return this.BIsPackageMissing(e);
-            case 2:
+            case c.c6.xO:
               return this.BIsBundleMissing(e);
-            case 4:
+            case c.c6.je:
               return this.BIsTagMissing(e);
-            case 5:
+            case c.c6.tp:
               return this.BIsCreatorMissing(e);
-            case 6:
+            case c.c6.wn:
               return this.BIsHubCategoryMissing(e);
             default:
               return console.error("BStoreItemMissing invalid type", t), !0;
@@ -857,15 +872,15 @@
         }
         BIsStoreItemUnavailableDueToCountryRestriction(e, t) {
           switch (t) {
-            case 0:
+            case c.c6.qI:
               return this.BIsAppUnavailableDueToCountryRestriction(e);
-            case 1:
+            case c.c6.RD:
               return this.BIsPackageUnavailableDueToCountryRestriction(e);
-            case 2:
+            case c.c6.xO:
               return this.BIsBundleUnavailableDueToCountryRestriction(e);
-            case 4:
-            case 5:
-            case 6:
+            case c.c6.je:
+            case c.c6.tp:
+            case c.c6.wn:
               return (
                 console.error(
                   "BIsStoreItemUnavailableDueToCountryRestriction - tags, creators or categories don't have country restrictions. type: ",
@@ -899,22 +914,22 @@
               console.warn(`Failed to load item data: ${e.success()}`), null
             );
           switch (s) {
-            case 0:
+            case c.c6.qI:
               a = this.m_mapApps;
               break;
-            case 1:
+            case c.c6.RD:
               a = this.m_mapPackages;
               break;
-            case 2:
+            case c.c6.xO:
               a = this.m_mapBundles;
               break;
-            case 4:
+            case c.c6.je:
               a = this.m_mapTags;
               break;
-            case 5:
+            case c.c6.tp:
               a = this.m_mapCreators;
               break;
-            case 6:
+            case c.c6.wn:
               a = this.m_mapHubCategories;
               break;
             default:
@@ -922,7 +937,7 @@
           }
           let i = a.get(e.id());
           if (
-            (i ? i.MergeData(e, t) : ((i = new h.Ay(e, t)), a.set(e.id(), i)),
+            (i ? i.MergeData(e, t) : ((i = new p.Ay(e, t)), a.set(e.id(), i)),
             t.include_included_items && e.included_items(!1))
           ) {
             for (const s of e.included_items().included_apps())
@@ -933,7 +948,7 @@
           return i;
         }
       }
-      (0, a.Cg)([_.o], I.prototype, "ReadItem", null);
+      (0, a.Cg)([g.o], R.prototype, "ReadItem", null);
     },
   },
 ]);

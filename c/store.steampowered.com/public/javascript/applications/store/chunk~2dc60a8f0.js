@@ -900,13 +900,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
-      function _(_, _) {
-        if ("object" != typeof _) return _;
-        for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
-        return _.initial;
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = {
         0: !0,
         1: !0,
@@ -943,7 +938,7 @@
             let _ = _[_.prop];
             if (
               void 0 !== _ &&
-              (_.responsive && (_ = _(_, _.formFactor)), void 0 !== _)
+              (_.responsive && (_ = (0, _._)(_, _.formFactor)), void 0 !== _)
             ) {
               if (_.className) {
                 if (
@@ -961,9 +956,9 @@
               }
               if (_.cssProperty)
                 if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_, _);
+                  const _ = _.cssProperty(_, _, _.formFactor);
                   if (_.length && Array.isArray(_[0]))
-                    __webpack_require__.forEach(([_, _]) => (_[_] = _));
+                    _.forEach(([_, _]) => (_[_] = _));
                   else {
                     const _ = _;
                     _[_[0]] = _[1];
@@ -1018,10 +1013,24 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
+      function _(_, _) {
+        if ("object" != typeof _) return _;
+        for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
+        return _.initial;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1056,16 +1065,18 @@
           },
           {
             prop: "color",
-            cssProperty: (_, _) => [
+            responsive: !0,
+            cssProperty: (_, _, _) => [
               "--text-color",
-              (0, _._)(_, _.contrast ?? "body"),
+              (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
             ],
           },
           {
             prop: "contrast",
-            cssProperty: (_, _) => [
+            responsive: !0,
+            cssProperty: (_, _, _) => [
               "--text-color",
-              (0, _._)(_.color ?? "text-body", _),
+              (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
             ],
           },
           {

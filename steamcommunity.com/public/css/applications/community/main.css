@@ -3120,6 +3120,9 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 .eKmEXJCm_lgme24Fp_HWt.Jgod1QRim6eNfvia2_3Ac .PSZtxj2h3MlyYv-c9dgke {
   flex-grow: 1;
 }
+.eKmEXJCm_lgme24Fp_HWt:not(.Jgod1QRim6eNfvia2_3Ac) .PSZtxj2h3MlyYv-c9dgke {
+  max-width: 50%;
+}
 ._2VcTlXFC64Jtg9gvtT6cmY {
   display: flex;
   flex-direction: row;

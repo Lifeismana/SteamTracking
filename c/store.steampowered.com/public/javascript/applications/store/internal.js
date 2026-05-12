@@ -20,6 +20,7 @@
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+        "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
         ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
         Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
@@ -45,6 +46,7 @@
         "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
+        "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
       };
     },
     chunkid: (module) => {
@@ -759,6 +761,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_assets: !0,
@@ -899,7 +903,7 @@
       }
       function _(_, _) {
         if (_.localized) {
-          const _ = (0, _._)(_._.LANGUAGE);
+          const _ = (0, _.sfN)(_._.LANGUAGE);
           if (!_.GetAllLanguagesWithSomeSupport()?.includes(_))
             return _._.k_RejectSupportedLanguage;
         }
@@ -918,26 +922,27 @@
         if (!_.early_access && _.BIsEarlyAccess())
           return _._.k_RejectEarlyAccess;
         const _ = _.GetAppType();
-        if (!_.software && 6 == _) return _._.k_RejectSoftware;
+        if (!_.software && _ == _._._) return _._.k_RejectSoftware;
         if (_.games_already_in_library && _.BIsGameOwned(_))
           return _._.k_RejectInLibrary;
         if (_.games_not_in_library && !_.BIsGameOwned(_))
           return _._.k_RejectNotInLibrary;
-        if (!_.video && [7, 8, 9].includes(_)) return _._.k_RejectVideo;
+        if (!_.video && [_._._, _._._, _._._].includes(_))
+          return _._.k_RejectVideo;
         if (_.has_discount) {
           const _ = _.GetBestPurchaseOption();
           if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
         }
         return "adultonly" != _ &&
           _.no_ao_content &&
-          (_.HasContentDescriptorID(3) || _.HasContentDescriptorID(4))
+          (_.HasContentDescriptorID(_._) || _.HasContentDescriptorID(_._))
           ? _._.k_RejectAO
-          : 1 == _ &&
+          : _ == _._._ &&
               _.games_already_in_library &&
               _.BIsGameOwned(_.GetParentAppID() || 0)
             ? _._.k_RejectInLibrary
             : _
-              ? (1 == _ && _.BHasAppID(_.GetParentAppID() || 0)) ||
+              ? (_ == _._._ && _.BHasAppID(_.GetParentAppID() || 0)) ||
                 _.BHasAppID(_)
                 ? _._.k_RejectAlreadyDisplayed
                 : _.has_trailer && !_.BHasTrailers(!1)
@@ -1002,12 +1007,20 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3;
       function _(_, _, _, _) {
         const _ = (0, _.useRef)(void 0),
           _ = (0, _.useRef)(void 0),
@@ -1063,33 +1076,33 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                    _?.token.reason || _.current !== _ || _(_ == _._), _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+          return [null, _];
+        if (!1 === _) return [void 0, _];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
+        return _ ? [_, _] : [null, _];
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._._, _, _);
       }
       function _(_, _, _) {
         const [_, _] = _(_, _, _);
         let _;
-        1 != _?.GetStoreItemType() ||
+        _?.GetStoreItemType() != _._._ ||
           _.GetAssets()?.GetHeaderURL() ||
           1 != _?.GetIncludedAppIDs().length ||
           (_ = _.GetIncludedAppIDs()[0]);
@@ -1156,7 +1169,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return 2;
+          return _;
         if (
           !_.every(
             (_) =>
@@ -1164,15 +1177,15 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return 1;
+          return _;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? 3
-          : 2;
+          ? _
+          : _;
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._._, _, _);
       }
       function _() {
         _.useEffect(
@@ -1207,6 +1220,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1271,7 +1285,7 @@
             : (0, _.jsx)(_._, {
                 autoFocus: !0,
                 transport: _,
-                platform: 2,
+                platform: _._._,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail
                     ? _(!0)
@@ -2495,6 +2509,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return `/gameexplorer/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nAppID).join()}/${0 == _.arrSelectedAppInfos.length ? "0" : _.arrSelectedAppInfos.map((_) => _.nWeight.toFixed(0)).join()}/${_.nSelfFactor}/${_.nPopularity}/${_.bSimilar}`;
@@ -2817,7 +2832,7 @@
         });
       }
       function _(_) {
-        const [_] = (0, _._)(_.nAppID, 0, _._);
+        const [_] = (0, _._)(_.nAppID, _._._, _._);
         return _
           ? (0, _.jsxs)("div", {
               className: _.CapsuleContainer,
@@ -4136,14 +4151,16 @@
         (0, _._)([_._], _.prototype, "OnSelectedStartApp", null),
         (0, _._)([_._], _.prototype, "OnSelectedEndApp", null),
         (_ = (0, _._)([_._], _));
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -4863,6 +4880,7 @@
           return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response_Cluster";
         }
       }
+      var _;
       !(function (_) {
         (_.PrioritizeAppsForUser = function (_, _) {
           return _.SendMsg(
@@ -4984,9 +5002,9 @@
         );
       }
       const _ = {
-        3: "Total Playtime",
-        2: "Number of Played Games",
-        1: "Most Recently Played",
+        [_]: "Total Playtime",
+        [_]: "Number of Played Games",
+        [_]: "Most Recently Played",
       };
       function _(_) {
         const { SimilarityStore: _ } = _,

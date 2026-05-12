@@ -138,6 +138,23 @@
     },
     chunkid: (module) => {
       module.exports = {
+        wishlistCategoryMaxDisplayChars: "26",
+        CategoriesCtn: "_1Ua4366mxFvXUSFTfIlJ-i",
+        CategoryListHeader: "_3Ra2jK42XFbrJlIPtsmMfC",
+        CategoryList: "_1FrjJkMKzXxdevx_oYK2Nx",
+        Multiline: "_16SkCu-YheGIHn8_WtMVnd",
+        Small: "Tj_sAx3peeMFFwrrnIjIK",
+        CategoryBtn: "_1c0u5zo_wZGsAM08nfEEKu",
+        NotActionable: "ySn3WlbDgR3ay1P7i3gjT",
+        CategoryName: "_1QX11E_2wBgWuzEO7M7ps9",
+        Focused: "_2BMRaClxLpIT5YJoDcejhm",
+        Selected: "_2vVKhV_YC031wyUrFu6vJx",
+        Removable: "_2rdKi5D2dn1dWLtySZS1w7",
+        CategorySettingsBtn: "KA8f-sx_XEMnp78-pwZgl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TileContainer: "_3YSNlqOERJPDvATbhSyba4",
         TileTitleContainer: "huv5kmY_qRW6CUhP41AX4",
         TileTitleInnerContainer: "_3SemwneNsiLL2pOP4TMon4",
@@ -451,6 +468,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CategoriesMenuOption: "_3xnfcAL3FecCAajGoP5Dby",
+        Label: "_1u14-I56YvpTValKAwSmtn",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TopPlayedBannerCtn: "_28-JzhtXHYEcY9I5iFk3YP",
         DeckLogo: "E-ox_4OryQdke1181LNoB",
         BannerTitle: "s1wKhoJ4gbSLtf27P3_EZ",
@@ -478,6 +501,182 @@
         Woodsman: "urO4erFoFvnP14FJ41NMD",
         Zombies: "_3OCIBFe-fNBm1tXmL490m4",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        let { bShowOnlyInitialEvent: _ } = _;
+        const _ = (0, _._)();
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_, {
+            ..._,
+            bShowOnlyInitialEvent: _ || _,
+          }),
+        });
+      };
+      let _ = class extends _.Component {
+        state = {
+          bLoading: !1,
+          eventModel: this.props.eventModel,
+        };
+        m_refParent = _.createRef();
+        m_cancelSignal = _().CancelToken.source();
+        componentDidMount() {
+          this.state.eventModel ||
+            this.setState(
+              {
+                bLoading: !0,
+              },
+              this.LoadEvent,
+            );
+          let _ = this.GetBodyElement();
+          _ &&
+            this.props.bPrimaryPageFeature &&
+            _.classList.add(_.BodyNoScroll);
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel("EventInfiniteScrollModal unmounting");
+          let _ = this.GetBodyElement();
+          _ &&
+            this.props.bPrimaryPageFeature &&
+            _.classList.remove(_.BodyNoScroll);
+        }
+        GetBodyElement() {
+          return this.m_refParent.current
+            ? this.m_refParent.current.closest("body")
+            : null;
+        }
+        async LoadEvent() {
+          const {
+            appid: _,
+            clanSteamID: _,
+            announcementGID: _,
+            partnerEventStore: _,
+            additionalParams: _,
+          } = this.props;
+          _.LoadAdjacentPartnerEventsByAnnouncement(
+            _,
+            _,
+            _,
+            0,
+            3,
+            _,
+            this.m_cancelSignal,
+          )
+            .then((_) => {
+              _.length > 0
+                ? this.setState(
+                    {
+                      bLoading: !1,
+                      eventModel: _[0],
+                    },
+                    this.HandleReadEvent,
+                  )
+                : (this.props.onEventNotFound && this.props.onEventNotFound(),
+                  this.setState({
+                    bLoading: !1,
+                  }));
+            })
+            .catch((_) => {
+              let _ = (0, _._)(_);
+              console.error(
+                "EventInfiniteScrollModal failed " + _.strErrorMsg,
+                _,
+              ),
+                this.setState({
+                  bLoading: !1,
+                });
+            });
+        }
+        async HandleReadEvent() {
+          const { eventModel: _ } = this.state,
+            { trackingLocation: _ } = this.props;
+          _ &&
+            _.BIsPartnerEvent() &&
+            _._.Get()
+              .GetTracker()
+              .MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
+            _._.Get().GetTracker().Flush();
+        }
+        render() {
+          const { bShowOnlyInitialEvent: _ } = this.props,
+            { bLoading: _, eventModel: _ } = this.state;
+          if (_)
+            return (0, _.jsx)(_._, {
+              active: !0,
+              children: (0, _.jsx)("div", {
+                className: _().FlexCenter,
+                style: {
+                  height: "400px",
+                },
+                children: (0, _.jsx)(_._, {}),
+              }),
+            });
+          const {
+            closeModal: _,
+            appid: _,
+            clanSteamID: _,
+            className: _,
+            partnerEventStore: _,
+            showAppHeader: _,
+            bPrimaryPageFeature: _,
+            additionalParams: _,
+            eventClassName: _,
+          } = this.props;
+          let _;
+          _._.IN_CLIENT &&
+            _?.appid &&
+            (_._.Get().HintLoad(),
+            _._.Get().BOwnsApp(_.appid) &&
+              (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
+          const _ = (0, _.jsx)(_._, {
+            initialEvent: _,
+            appid: _,
+            clanSteamID: _,
+            partnerEventStore: _,
+            emoticonStore: _._,
+            closeModal: !_ && _,
+            showAppHeader: _,
+            bShowOnlyInitialEvent: _,
+            additionalParams: _,
+            eventClassName: _,
+            onAppIconClick: _,
+          });
+          return _
+            ? _
+            : (0, _.jsx)(_._, {
+                active: !0,
+                children: (0, _.jsx)("div", {
+                  className: _,
+                  children: _,
+                }),
+              });
+        }
+      };
+      _ = (0, _._)([_._], _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -562,6 +761,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = -1;
@@ -585,8 +785,8 @@
           _ = (0, _._)(_, _._),
           [_, _] = _.useState(null);
         _.useEffect(() => {
-          if (1 == _) return;
-          const _ = _.filter((_) => !_._.Get().BIsStoreItemMissing(_, 0));
+          if (_ == _._) return;
+          const _ = _.filter((_) => !_._.Get().BIsStoreItemMissing(_, _._._));
           if (_ && _ && !_ && _.length > 0 && _[0] == _[0]) {
             const _ = [_[0], _, ..._.slice(1)];
             _(_), _(_), _?.(_.length);
@@ -629,7 +829,7 @@
             creatorClanAccountID: _,
             strFeaturingMsg: _,
           } = _,
-          [_] = (0, _._)(_, 0, _._);
+          [_] = (0, _._)(_, _._._, _._);
         if (_ == _)
           return (0, _.jsx)("div", {
             className: (0, _._)({
@@ -1242,7 +1442,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = (function () {
@@ -1315,10 +1514,140 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.jsxs)("div", {
+          className: _.LatestUpdateButtonCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.LatestUpdateIcon,
+              children: (0, _.jsx)(_.UTF, {
+                role: "presentation",
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              className: _.LatestUpdateButton,
+              onClick: _.onClick,
+              children: _._.Localize(
+                "#EventBrowse_LatestUpdateTime_Button",
+                (0, _._)(_.nUpdateTime),
+              ),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
+          _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
+          _ = window.screen.width > 500 ? _._ : _._;
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)("h2", {
+              children: (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
+            }),
+            (0, _.jsx)("div", {
+              className: _.SectionButtonCtn,
+              children: (0, _.jsx)(_._, {
+                className: _.SectionButton,
+                onClick: (_) => {
+                  _?.(), _.stopPropagation(), _.preventDefault();
+                },
+                children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
+              }),
+            }),
+            !!_ &&
+              (0, _.jsx)(_._, {
+                className: _.EventsSummariesCtn,
+                "flow-children": "column",
+                navEntryPreferPosition: _._.PREFERRED_CHILD,
+                children: (0, _.jsx)(_, {
+                  event: _,
+                  onClick: (_) => {
+                    _?.(), _.stopPropagation(), _.preventDefault();
+                  },
+                }),
+              }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 500;
+      function _(_) {
+        const {
+            strClassName: _,
+            rgEvents: _,
+            fnEventShowModal: _,
+            elPostRowElement: _,
+            bViewAllShowInfiniteScroll: _,
+          } = _,
+          _ = (0, _._)().ownerWindow.window.innerWidth <= _ ? 1 : 2;
+        return (0, _.jsxs)(_._, {
+          className: _,
+          "flow-children": "row",
+          children: [
+            !!_ &&
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _.jsx)("h2", {
+                    children: _._.Localize("#EventBrowse_RecentEvents"),
+                  }),
+                  !_._.IN_GAMEPADUI &&
+                    !!_ &&
+                    (0, _.jsx)("div", {
+                      className: _.SectionButtonCtn,
+                      children:
+                        _ && _
+                          ? (0, _.jsx)(_._, {
+                              className: _.SectionButton,
+                              onClick: () => _(_[0]),
+                              children: _._.Localize(
+                                "#EventBrowse_MoreEventsBtn",
+                              ),
+                            })
+                          : (0, _.jsx)(_._, {
+                              eventModel: _[0],
+                              route: _._.k_eViewWebSiteHub,
+                              className: _.SectionButton,
+                              children: _._.Localize(
+                                "#EventBrowse_MoreEventsBtn",
+                              ),
+                            }),
+                    }),
+                  (0, _.jsx)("div", {
+                    className: _.EventsSummariesCtn,
+                    children: __webpack_require__.slice(0, _).map((_) => {
+                      const _ = _
+                          ? (_) => {
+                              _(_), _.stopPropagation(), _.preventDefault();
+                            }
+                          : void 0,
+                        _ =
+                          1 === _.length && window.screen.width > 500
+                            ? _._
+                            : _._;
+                      return (0, _.jsx)(
+                        _,
+                        {
+                          event: _,
+                          onClick: _,
+                        },
+                        _.GID,
+                      );
+                    }),
+                  }),
+                ],
+              }),
+            _,
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             trackingLocation: _,
@@ -1328,22 +1657,22 @@
           [_, _, _] = (0, _._)(),
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(void 0),
+          _ = (0, _._)(),
           _ = (0, _.useCallback)(() => {
             _(null), _();
           }, [_]),
           _ = (0, _.useCallback)(
             (_) => {
-              if (_ && _ && _.BIsPartnerEvent()) {
-                const _ = _._.Get().GetTracker();
-                __webpack_require__.MarkEventRead(
-                  _.GID,
-                  _.clanSteamID.GetAccountID(),
-                  _,
-                ) && __webpack_require__.Flush();
-              }
-              _(_), _(void 0), _();
+              _ &&
+                _ &&
+                _.BIsPartnerEvent() &&
+                _.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _) &&
+                _.Flush(),
+                _(_),
+                _(void 0),
+                _();
             },
-            [_, _],
+            [_, _, _],
           ),
           { last_update_event: _, rgEvents: _ } = (function (_) {
             const {
@@ -1355,6 +1684,7 @@
               } = _,
               [_, _] = (0, _.useState)(null),
               [_, _] = (0, _.useState)(null),
+              _ = (0, _._)(),
               [_] = _("emgid", void 0),
               [_] = _("announce_gid", void 0);
             return (
@@ -1391,20 +1721,21 @@
                       2,
                       _,
                     );
-                    if ((_(_), _ && _ && _.length > 0)) {
-                      const _ = _._.Get().GetTracker();
-                      _.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
-                        _.MarkEventShown(
-                          _.GID,
-                          _.clanSteamID.GetAccountID(),
-                          _,
+                    _(_),
+                      _ &&
+                        _ &&
+                        _.length > 0 &&
+                        (_.filter((_) => _.BIsPartnerEvent()).forEach((_) =>
+                          _.MarkEventShown(
+                            _.GID,
+                            _.clanSteamID.GetAccountID(),
+                            _,
+                          ),
                         ),
-                      ),
-                        _.Flush();
-                    }
+                        _.Flush());
                   })();
                 }
-              }, [_, _, _, _, _]),
+              }, [_, _, _, _, _, _]),
               (0, _.useEffect)(() => {
                 if (null != _ && (_ || _)) {
                   const _ = _.find(
@@ -1431,10 +1762,9 @@
             fnEventShowModal: _,
           }),
           _ = (0, _.useCallback)(() => {
-            const { event_gid: _, announcement_gid: _, clan_account_id: _ } = _,
-              _ = _._.Get().GetTracker();
+            const { event_gid: _, announcement_gid: _, clan_account_id: _ } = _;
             _ && _ && _.MarkEventRead(_, _, _) && _.Flush(), _(_), _(null), _();
-          }, [_, _, _]);
+          }, [_, _, _, _]);
         (0, _.useEffect)(
           () => (
             (window.fnPartnerEvent_ShowInfiniteScroll = (_, _) => {
@@ -1451,79 +1781,43 @@
           _ =
             _ && !!_.announcement_gid && (!_ || 0 == _.length)
               ? _.announcement_gid
-              : void 0,
-          _ = window.screen.width <= _ ? 1 : 2;
-        return (0, _.jsxs)(_._, {
-          className: _,
-          "flow-children": "row",
-          children: [
-            (0, _.jsx)(_._, {
-              active: _,
-              children: (0, _.jsx)(_, {
-                ..._,
-                announcementGID: _ || _?.AnnouncementGID,
-                eventModel: _,
-                closeModal: _,
-              }),
-            }),
-            !!_ &&
-              (0, _.jsxs)("div", {
-                children: [
-                  (0, _.jsx)("h2", {
-                    children: (0, _._)("#EventBrowse_RecentEvents"),
-                  }),
-                  !_._.IN_GAMEPADUI &&
-                    !!_ &&
-                    (0, _.jsx)("div", {
-                      className: _.SectionButtonCtn,
-                      children: _
-                        ? (0, _.jsx)(_._, {
-                            className: _.SectionButton,
-                            onClick: () => _(_[0]),
-                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                          })
-                        : (0, _.jsx)(_._, {
-                            eventModel: _[0],
-                            route: _._.k_eViewWebSiteHub,
-                            className: _.SectionButton,
-                            children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                          }),
-                    }),
-                  (0, _.jsx)("div", {
-                    className: _.EventsSummariesCtn,
-                    children: _.slice(0, _).map((_) => {
-                      const _ =
-                        1 === _.length && window.screen.width > 500 ? _._ : _._;
-                      return (0, _.jsx)(
-                        _,
-                        {
-                          event: _,
-                          onClick: (_) => {
-                            _(_), _.stopPropagation(), _.preventDefault();
-                          },
-                        },
-                        _.GID,
-                      );
-                    }),
-                  }),
-                ],
-              }),
-            _ &&
-              !!_ &&
-              (0, _.jsx)(_, {
+              : void 0;
+        let _;
+        return (
+          _ && _
+            ? (_ = (0, _.jsx)(_, {
                 nUpdateTime: _.rtime,
                 announcementGID: _,
                 onClick: _,
-              }),
-            _ &&
-              !_ &&
-              !_._.IN_GAMEPADUI &&
-              (0, _.jsx)(_, {
+              }))
+            : !_ ||
+              _ ||
+              _._.IN_GAMEPADUI ||
+              (_ = (0, _.jsx)(_, {
                 nUpdateTime: _.rtime,
                 onClick: _,
+              })),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                active: _,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  announcementGID: _ || _?.AnnouncementGID,
+                  eventModel: _,
+                  closeModal: _,
+                }),
               }),
-          ],
-        });
+              (0, _.jsx)(_, {
+                elPostRowElement: _,
+                rgEvents: _,
+                fnEventShowModal: _,
+                bViewAllShowInfiniteScroll: _,
+                strClassName: _,
+              }),
+            ],
+          })
+        );
       }
       function _(_) {
         const {
@@ -1542,63 +1836,8 @@
           trackingLocation: _,
           announcementGID: _,
           partnerEventStore: _,
-          eventModel: _,
+          eventModel: _ ?? void 0,
           closeModal: _,
-        });
-      }
-      function _(_) {
-        return (0, _.jsxs)("div", {
-          className: _.LatestUpdateButtonCtn,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.LatestUpdateIcon,
-              children: (0, _.jsx)(_.UTF, {
-                role: "presentation",
-              }),
-            }),
-            (0, _.jsx)(_._, {
-              className: _.LatestUpdateButton,
-              onClick: _.onClick,
-              children: (0, _._)(
-                "#EventBrowse_LatestUpdateTime_Button",
-                (0, _._)(_.nUpdateTime),
-              ),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
-          _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
-          _ = window.screen.width > 500 ? _._ : _._;
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsx)("h2", {
-              children: (0, _._)("#EventBrowse_LastUpdateDate", (0, _._)(_)),
-            }),
-            (0, _.jsx)("div", {
-              className: _.SectionButtonCtn,
-              children: (0, _.jsx)("div", {
-                className: _.SectionButton,
-                onClick: (_) => {
-                  _?.(), _.stopPropagation(), _.preventDefault();
-                },
-                children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
-              }),
-            }),
-            !!_ &&
-              (0, _.jsx)(_._, {
-                className: _.EventsSummariesCtn,
-                "flow-children": "column",
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
-                children: (0, _.jsx)(_, {
-                  event: _,
-                  onClick: (_) => {
-                    _?.(), _.stopPropagation(), _.preventDefault();
-                  },
-                }),
-              }),
-          ],
         });
       }
       var _ = __webpack_require__("chunkid");
@@ -1615,10 +1854,10 @@
             event_customization: {
               rtime_oldestevent: _,
               exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
-              exclude_event_types: [34],
+              exclude_event_types: [_._._],
             },
             strClassName: "early_access_announcements",
-            trackingLocation: 3,
+            trackingLocation: _._._,
           }),
         });
       }
@@ -1665,7 +1904,7 @@
           [_],
         );
         const [_, _, _] = (0, _._)(),
-          _ = _ ? _.GetNameWithFallback((0, _._)(_._.LANGUAGE)) : null,
+          _ = _ ? _.GetNameWithFallback((0, _.sfN)(_._.LANGUAGE)) : null,
           _ = !_ || _.BHasEventEnded();
         return _ &&
           _.related_items?.demo_appid &&
@@ -1759,6 +1998,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       new _._();
       var _;
@@ -1831,7 +2071,7 @@
           case _.EPurchaseNoticeType_ControllerRequired:
             return (0, _.jsx)(_, {
               appid: _,
-              controllerType: 32,
+              controllerType: _._,
             });
           case _.EPurchaseNoticeType_VRRequired:
             return (0, _.jsx)(_, {});
@@ -1870,7 +2110,7 @@
             const _ = new Map(
               Object.entries(_).map(([_, _]) => [Number(_), _]),
             );
-            if (1 != _ && _ == _.k_CreatorHomeAll) {
+            if (_ != _._ && _ == _.k_CreatorHomeAll) {
               const _ = new Set(_);
               _.forEach((_) => {
                 if (!_.has(_)) {
@@ -2308,7 +2548,7 @@
         if (_ && _ && _ && _) {
           const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: 34,
+              controllerType: _._,
               partial: !_,
               role: "presentation",
             }),
@@ -2332,7 +2572,7 @@
           if (_) {
             const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: 34,
+              controllerType: _._,
               partial: !_,
               role: "presentation",
             });
@@ -2369,7 +2609,7 @@
           if (_) {
             const _ = (0, _.jsx)(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: 45,
+              controllerType: _._,
               partial: !_,
               role: "presentation",
             });
@@ -2420,7 +2660,7 @@
                 (0, _.jsx)(_, {
                   tagImage: (0, _.jsx)(_.pcV, {
                     className: _.SmallerSVG,
-                    controllerType: 32,
+                    controllerType: _._,
                     partial: !_,
                     role: "presentation",
                   }),
@@ -2496,9 +2736,9 @@
           queryKey: ["useGetReactionConfiguration"],
           queryFn: async () => {
             const _ = _._.Init(_._);
-            _.Body().set_elanguage((0, _._)(_._.LANGUAGE));
+            _.Body().set_elanguage((0, _.sfN)(_._.LANGUAGE));
             let _ = await _._.GetReactionConfig(_, _);
-            return 1 == __webpack_require__.GetEResult()
+            return __webpack_require__.GetEResult() == _._
               ? __webpack_require__.Body().toObject().reactions
               : (console.error(
                   `Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${__webpack_require__.GetEResult()}`,
@@ -2576,12 +2816,12 @@
         (0, _._)([_._], _.prototype, "handleMouseOut", null);
       class _ extends _.Component {
         static defaultProps = {
-          targetType: 1,
+          targetType: _._._,
         };
         constructor(_) {
           super(_),
             (window.fnLoyalty_ShowAwardModal = (_, _, _, _, _) => {
-              _ || (_ = 0),
+              _ || (_ = _._._),
                 this.setState({
                   bShowModal: !0,
                   fnSuccessFunc: _,
@@ -2594,7 +2834,7 @@
             (this.state = {
               bShowModal: !1,
               targetid: "",
-              targetType: 0,
+              targetType: _._._,
             });
         }
         render() {
@@ -2612,7 +2852,7 @@
                 {
                   targetid: _,
                   active: _,
-                  targetType: _ ?? 0,
+                  targetType: _ ?? _._._,
                   ugcType: _,
                   onDismiss: () =>
                     this.setState({
@@ -2660,21 +2900,22 @@
             onSuccess: _,
             onDismiss: _,
           } = _,
-          [_, _] = _.useState(_ || 0),
+          [_, _] = _.useState(_ || _._._),
           [_, _] = _.useState(_.SELECTING),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(2),
+          [_, _] = _.useState(_._),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (function (_, _, _, _) {
             return (0, _._)({
               queryKey: ["UserReactions", _, _],
               queryFn: async () => {
-                if (!_._.logged_in) throw 21;
+                if (!_._.logged_in) throw _._;
                 const _ = _._.Init(_._);
                 _.Body().set_target_type(_), _.Body().set_targetid(_);
                 let _ = await _._.GetReactions(_, _);
-                if (1 == _.GetEResult()) return new Set(_.Body().reactionids());
+                if (_.GetEResult() == _._)
+                  return new Set(_.Body().reactionids());
                 throw _.GetEResult();
               },
               enabled: _,
@@ -2685,9 +2926,9 @@
               queryKey: ["AwardsConfiguration"],
               queryFn: async () => {
                 const _ = _._.Init(_._);
-                _.Body().set_elanguage((0, _._)(_._.LANGUAGE));
+                _.Body().set_elanguage((0, _.sfN)(_._.LANGUAGE));
                 let _ = await _._.GetReactionConfig(_, _);
-                if (1 == __webpack_require__.GetEResult()) {
+                if (__webpack_require__.GetEResult() == _._) {
                   const _ = new Map();
                   let _ = __webpack_require__.Body().toObject().reactions ?? [];
                   for (const _ of _) _.reactionid && _.set(_.reactionid, _);
@@ -2702,12 +2943,12 @@
             return (0, _._)({
               queryKey: ["UserPointBalance"],
               queryFn: async () => {
-                if (!_._.logged_in) throw 21;
+                if (!_._.logged_in) throw _._;
                 const _ = _._.steamid,
                   _ = _._.Init(_._);
                 __webpack_require__.Body().set_steamid(_);
                 let _ = await _._.GetSummary(_, _);
-                if (1 == _.GetEResult())
+                if (_.GetEResult() == _._)
                   return _._.fromString(
                     _.Body().toObject().summary?.points ?? "0",
                   );
@@ -2720,14 +2961,14 @@
             const _ = (0, _._)();
             return (0, _._)({
               mutationFn: async (_) => {
-                if (!_._.logged_in) throw 21;
+                if (!_._.logged_in) throw _._;
                 const { targetid: _, targetType: _, nReactionId: _ } = _;
                 let _ = _._.Init(_._);
                 _.Body().set_target_type(_),
                   _.Body().set_targetid(_),
                   _.Body().set_reactionid(_);
                 const _ = await _._.AddReaction(_, _);
-                if (1 != _.GetEResult()) throw _.GetEResult();
+                if (_.GetEResult() != _._) throw _.GetEResult();
               },
               onSuccess: () => {
                 _.invalidateQueries({
@@ -2756,46 +2997,48 @@
                   _.reactionid
                 )
                   switch (_) {
-                    case 1:
-                    case 3:
-                    case 4:
-                    case 5:
+                    case _._._:
                       _.push(_.reactionid);
                       break;
-                    case 2:
+                    case _._._:
                       void 0 !== _ &&
                         _.valid_ugc_types?.includes(_) &&
                         _.push(_.reactionid);
+                      break;
+                    case _._._:
+                    case _._._:
+                    case _._._:
+                      _.push(_.reactionid);
                   }
               }),
               _
             );
           })(_, _, _),
-          _ = 0 === _ ? null : _.get(_),
+          _ = _ === _._._ ? null : _.get(_),
           _ = _ ? _.points_cost : 0,
           _ = _ ? _.points_transferred : 0;
         let _,
           _ = "";
         switch (_) {
-          case 1:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_Review");
             break;
-          case 2:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_UGC");
             break;
-          case 3:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_Profile");
             break;
-          case 4:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_ForumTopic");
             break;
-          case 5:
+          case _._._:
             _ = (0, _._)("#GrantAwardDescription_Comment");
         }
         switch (_) {
           case _.SELECTING:
             {
-              const _ = 0 === _ || _.data?.has(_),
+              const _ = _ === _._._ || _.data?.has(_),
                 _ = !_ || _.greaterThanOrEqual(_),
                 _ = (0, _.jsx)(_._, {
                   onClick: () => _(_.CONFIRM),
@@ -2843,7 +3086,7 @@
                             alreadyAwarded: _.data?.has(_),
                             awardConfig: _.get(_),
                             onClick: () => {
-                              _.data?.has(_) || _(_ === _ ? 0 : _);
+                              _.data?.has(_) || _(_ === _ ? _._._ : _);
                             },
                           },
                           _,
@@ -2905,7 +3148,7 @@
                   (0, _.jsx)(_._, {
                     onClick: async function () {
                       null !== _ &&
-                        0 != _ &&
+                        _ != _._._ &&
                         (_(_.SUBMITTING),
                         await _.mutate(
                           {
@@ -3034,28 +3277,28 @@
             {
               let _ = "";
               switch (_) {
-                case 10:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_Busy");
                   break;
-                case 32:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_PersistFailed");
                   break;
-                case 8:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_InvalidParam");
                   break;
-                case 42:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_NoMatch");
                   break;
-                case 107:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_InsufficientFunds");
                   break;
-                case 15:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_AccessDenied");
                   break;
-                case 21:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_NotLoggedOn");
                   break;
-                case 29:
+                case _._:
                   _ = (0, _._)("#GrantAwardError_DuplicateRequest");
                   break;
                 default:
@@ -3094,10 +3337,10 @@
           case _.LOADING_ERROR: {
             let _ = "";
             switch (_) {
-              case 10:
+              case _._:
                 _ = (0, _._)("#GrantAwardError_Busy");
                 break;
-              case 21:
+              case _._:
                 _ = (0, _._)("#GrantAwardError_NotLoggedOn");
                 break;
               default:
@@ -5155,8 +5398,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { category: _ } = _;
@@ -5178,7 +5422,7 @@
         let _ = _.useCallback(
           (_) => {
             const _ = (0, _._)();
-            _ && _.AddEvent(1003), _(!0);
+            _ && _.AddEvent(_._._), _(!0);
           },
           [_],
         );
@@ -5216,9 +5460,9 @@
       const _ = function (_) {
         const { appID: _, results: _, appName: _, tab: _ } = _,
           _ = (0, _._)(),
-          _ = "steamos" == _ ? 2 : 1;
+          _ = "steamos" == _ ? _._ : _._;
         let _, _, _;
-        2 == _
+        _ == _._
           ? ((_ = (0, _._)(
               "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
             )),
@@ -5392,6 +5636,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { eReactionID: _, nCount: _ } = _,
@@ -5515,7 +5760,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       async function _(_, _, _, _) {
-        if (!_) throw new _(8, "Bad appid");
+        if (!_) throw new _(_._, "Bad appid");
         const _ = {
             date_range_type: "all",
             day_range: 30,
@@ -5551,8 +5796,8 @@
           ),
           _ = await _.json().catch((_) => "");
         if (!_ || "object" != typeof _)
-          throw new _(76, "Malformed ajaxgetreviews response");
-        if (1 != _.success)
+          throw new _(_._, "Malformed ajaxgetreviews response");
+        if (_.success != _._)
           throw new _(_.success, `Error ${_.success} from ajaxgetreviews`);
         const _ = _;
         _.reviewFilter = _.get("filter") || "all";
@@ -5607,8 +5852,8 @@
           }),
           _ = await _.json().catch((_) => "");
         if (!_ || "object" != typeof _)
-          throw new _(76, `Malformed ${_} response`);
-        if (1 != _.success)
+          throw new _(_._, `Malformed ${_} response`);
+        if (_.success != _._)
           throw new _(_.success, `Error ${_.success} from ${_}`);
         return _;
       }
@@ -5831,7 +6076,7 @@
       function _(_) {
         const { review: _ } = _,
           { appid: _, app_release_date: _, appname: _ } = _.useContext(_);
-        if (_ == _._ || _ == _._ || _ == _._) {
+        if (_ == _.qaO || _ == _.DFD || _ == _.PBt) {
           if ((_.timestamp_updated || _.timestamp_created) < 1695853800)
             return (0, _.jsx)(_._, {
               className: _().Disclaimer,
@@ -6058,15 +6303,15 @@
           _ = _._.logged_in,
           _ = _.useCallback((_) => {
             let _ = "#Review_VoteError";
-            const _ = _ instanceof _ ? _.eResult : 2;
+            const _ = _ instanceof _ ? _.eResult : _._;
             switch (_) {
-              case 21:
+              case _._:
                 _ = "#Review_VoteError_NotLoggedIn";
                 break;
-              case 15:
+              case _._:
                 _ = "#Review_VoteError_AccessDenied";
                 break;
-              case 24:
+              case _._:
                 _ = "#Review_VoteError_LimitedUser";
             }
             _(_.Localize(_, _));
@@ -6104,7 +6349,7 @@
               }),
             }),
             (0, _.jsx)(_, {
-              targetType: 1,
+              targetType: _._._,
               bShowModal: _,
               targetid: _.recommendationid,
               onDismiss: _,
@@ -6139,7 +6384,7 @@
                   bEnabled: _,
                   bSelected: !!_ && !!_.voted_funny,
                   strLabel: _.Localize("#Review_RateFunny"),
-                  onActivate: () => _(1, !0),
+                  onActivate: () => _(_._._, !0),
                   children: (0, _.jsx)(_.FwP, {}),
                 }),
                 (0, _.jsx)(_, {
@@ -6330,7 +6575,7 @@
             focusable: !0,
             children: [
               (0, _.jsx)(_, {
-                targetType: 1,
+                targetType: _._._,
                 bShowModal: _,
                 targetid: _.recommendationid,
                 onDismiss: _,
@@ -6697,6 +6942,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { _: _, className: _, title: _ } = _;
@@ -7722,13 +7968,13 @@
         if (!_ || !_.total_reviews) return null;
         let _ = _().Negative;
         switch (_.review_score) {
-          case 9:
-          case 8:
-          case 7:
-          case 6:
+          case _._._:
+          case _._._:
+          case _._._:
+          case _._._:
             _ = _().Positive;
             break;
-          case 5:
+          case _._._:
             _ = _().Mixed;
         }
         let _ = "#Review_Count";
@@ -7833,7 +8079,7 @@
               getNextPageParam: (_) => _.cursor,
               placeholderData: (_) => _,
               retry: (_, _) =>
-                _ instanceof _ ? 8 != _.eResult && _ < 3 : _ < 3,
+                _ instanceof _ ? _.eResult != _._ && _ < 3 : _ < 3,
             });
           })(_, _, _),
           _ = _?.data?.pages?.[0],
@@ -8032,6 +8278,452 @@
           })
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "0",
+        _ = "wishlistcategories";
+      function _(_, _, _) {
+        return [_, _, _, _];
+      }
+      function _(_, _, _, _) {
+        return {
+          queryKey: _(_, _ && "0" !== _ ? _ : "", _),
+          queryFn: () =>
+            (async function (_, _, _, _) {
+              if (!_ || (_ != _ && !_)) return [];
+              let _ = [];
+              if (_) {
+                const _ = _._.Init(_._);
+                __webpack_require__.Body().set_steamid(_),
+                  __webpack_require__.Body().set_share_token(_);
+                _ =
+                  (await _._.GetSharedWishlistCategories(_, _))
+                    .Body()
+                    .toObject().categories ?? [];
+              } else {
+                const _ = _._.Init(_._);
+                _ =
+                  (await _._.GetWishlistCategories(_, _)).Body().toObject()
+                    .categories ?? [];
+              }
+              return _(_);
+            })(_, _, _, _),
+          staleTime: 6e5,
+        };
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(_(_, _, _, _));
+      }
+      function _(_, _) {
+        return ["wishlistappidcategories", _, _];
+      }
+      function _(_, _) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _) {
+            return {
+              queryKey: _(_, _),
+              queryFn: async () => {
+                const _ = _._.Init(_._);
+                _.Body().set_appid(_);
+                const _ = await _._.GetItemCategories(_, _);
+                return _.BSuccess()
+                  ? _(_.Body().toObject().categories ?? [])
+                  : [];
+              },
+              staleTime: 6e5,
+            };
+          })(_, _, _),
+        );
+      }
+      const _ = "wishlist_recent_categories";
+      function _(_) {
+        return {
+          queryKey: [_],
+          queryFn: async () => (await _.GetObject(_)) ?? [],
+          staleTime: 36e5,
+        };
+      }
+      function _(_) {
+        return (
+          _.map((_) => ({
+            _: _.categoryid,
+            name: _.name,
+            cItems: _.item_count ?? 0,
+            bNotificationOptIn: !!_.notification_opt_in,
+          })) ?? []
+        ).sort((_, _) =>
+          _.cItems !== _.cItems
+            ? _.cItems - _.cItems
+            : _.name.localeCompare(_.name),
+        );
+      }
+      const _ = parseInt(_.wishlistCategoryMaxDisplayChars);
+      var _;
+      function _(_) {
+        const {
+            rgCategories: _,
+            header: _,
+            onClick: _,
+            eAction: _,
+            bMultiline: _,
+            bShowEmptyLabel: _,
+            bShowAllButton: _,
+            containerClassName: _,
+            size: _,
+          } = _,
+          _ = _.useRef(null);
+        let _ = [],
+          _ = !1;
+        for (const _ of _) {
+          _.bSelected && (_ = !0);
+          const _ = _._ === _ ? _.name : _._,
+            _ = (0, _.jsx)(
+              _,
+              {
+                category: _,
+                selected:
+                  _ !== _.k_ECategoryButtonAction_Remove && !!_.bSelected,
+                onClick: _ ? () => _(_.name, _._) : void 0,
+                eAction: _ ?? _.k_ECategoryButtonAction_None,
+              },
+              _,
+            );
+          _.push(_);
+        }
+        const _ = (0, _._)("#Wishlist_Controls_Categories_All");
+        return (
+          _.useEffect(() => {
+            _.current?.Node().BFocusWithin() &&
+              _.current.Node().ForceMeasureFocusRing();
+          }, [_]),
+          (0, _.jsxs)("div", {
+            className: _()(_.CategoriesCtn, _),
+            children: [
+              null !== _ &&
+                (0, _.jsx)("span", {
+                  className: _.CategoryListHeader,
+                  children:
+                    _ ?? (0, _._)("#Wishlist_Controls_Categories_Header"),
+                }),
+              (0, _.jsxs)(_._, {
+                className: _()(
+                  _.CategoryList,
+                  _ && _.Multiline,
+                  "small" === _ && _.Small,
+                ),
+                "flow-children": _ ? "grid" : "row",
+                focusableIfEmpty: _.length > 0,
+                navRef: _,
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      category: {
+                        cItems: 0,
+                        _: _,
+                        name: _,
+                        bNotificationOptIn: !1,
+                      },
+                      selected: !_,
+                      onClick: () => _ && _(_, _),
+                      onOKActionDescription: (0, _._)(
+                        "#Wishlist_Gamepad_Filter_Clear_Category",
+                      ),
+                    }),
+                  _,
+                  !_.length &&
+                    _ &&
+                    (0, _.jsx)("div", {
+                      className: _.CategoryListHeader,
+                      children: (0, _._)("#Wishlist_Categories_None"),
+                    }),
+                ],
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const {
+            category: _,
+            selected: _,
+            className: _,
+            onOKActionDescription: _,
+            onClick: _,
+            eAction: _,
+          } = _,
+          _ = _ === _.k_ECategoryButtonAction_Remove,
+          _ = _ === _.k_ECategoryButtonAction_Filter,
+          _ = _.name.length > _;
+        let _ = _;
+        _ && !_
+          ? (_ = (0, _._)("#Wishlist_Gamepad_Filter_Category"))
+          : _ !== _.k_ECategoryButtonAction_Add ||
+            _ ||
+            (_ = (0, _._)("#Wishlist_Gamepad_Add_Category"));
+        const _ = {
+            onSecondaryActionDescription: _
+              ? (_ ?? (0, _._)("#Wishlist_Gamepad_Removecategory"))
+              : void 0,
+            onSecondaryButton: () => _ && _ && _(),
+            onOKActionDescription: _ ? null : _,
+            onOKButton: () => !_ && _ && _(),
+            focusClassName: _.Focused,
+          },
+          _ = !!_;
+        let _;
+        return (
+          _
+            ? (_ = _.name)
+            : _ && _
+              ? (_ = (0, _._)("#Wishlist_Controls_Categories_Remove_Tooltip"))
+              : _ &&
+                _ &&
+                (_ = (0, _._)("#Wishlist_Controls_Categories_Filter_Tooltip")),
+          (0, _.jsx)(_._, {
+            toolTipContent: _,
+            children: (0, _.jsxs)(_._, {
+              className: _()(
+                _.CategoryBtn,
+                _ && _.Removable,
+                _ && _.Selected,
+                !_ && _.NotActionable,
+                _,
+              ),
+              onClick: _,
+              ..._,
+              children: [
+                (0, _.jsx)("span", {
+                  className: _.CategoryName,
+                  children: _.name,
+                }),
+                _ && (0, _.jsx)(_.i6V, {}),
+              ],
+            }),
+          })
+        );
+      }
+      !(function (_) {
+        (_[(_.k_ECategoryButtonAction_None = 0)] =
+          "k_ECategoryButtonAction_None"),
+          (_[(_.k_ECategoryButtonAction_Filter = 1)] =
+            "k_ECategoryButtonAction_Filter"),
+          (_[(_.k_ECategoryButtonAction_Add = 2)] =
+            "k_ECategoryButtonAction_Add"),
+          (_[(_.k_ECategoryButtonAction_Remove = 3)] =
+            "k_ECategoryButtonAction_Remove");
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = _.useState(void 0),
+          { data: _ } = (function (_, _) {
+            const _ = (0, _._)(),
+              _ = (0, _._)(),
+              _ = _.useCallback((_) => new Map(_.map((_) => [_._, _])), []);
+            return (0, _._)({
+              ..._(_, _, _, _),
+              select: _,
+            });
+          })(_),
+          { data: _ } = _(_),
+          _ = (function (_) {
+            const { data: _ } = _(_);
+            return _.useMemo(() => {
+              let _ = [
+                {
+                  _: _,
+                  name: (0, _._)("#Wishlist_Categories_Suggested_Birthday"),
+                  cItems: 0,
+                  bNotificationOptIn: !1,
+                },
+                {
+                  _: _,
+                  name: (0, _._)("#Wishlist_Categories_Suggested_Recommended"),
+                  cItems: 0,
+                  bNotificationOptIn: !1,
+                },
+                {
+                  _: _,
+                  name: (0, _._)("#Wishlist_Categories_Suggested_Discount"),
+                  cItems: 0,
+                  bNotificationOptIn: !1,
+                },
+              ];
+              for (const _ of _ ?? [])
+                _ = _.filter(
+                  (_) =>
+                    _.name.toLocaleLowerCase() !== _.name.toLocaleLowerCase(),
+                );
+              return _;
+            }, [_]);
+          })(_),
+          { data: _ } = (function () {
+            const _ = (0, _._)();
+            return (0, _._)(_(_));
+          })(),
+          { data: _ } = _(_, _),
+          _ = (function (_) {
+            const _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                const _ = _._.Init(_._);
+                __webpack_require__.Body().set_appid(_.appid),
+                  __webpack_require__.Body().set_category_name(_.categoryName),
+                  __webpack_require__.Body().set_categoryid(_.categoryID);
+                const _ = await _._.AddWishlistItemCategory(_, _);
+                let _ = {
+                  eresult: _.GetEResult(),
+                };
+                return (
+                  _.BSuccess() &&
+                    (_.category = {
+                      _: _.Body().categoryid(),
+                      name: _.Body().name(),
+                      cItems: _.Body().item_count(),
+                      bNotificationOptIn: !!_.Body().notification_opt_in(),
+                    }),
+                  _
+                );
+              },
+              onSuccess(_, _) {
+                __webpack_require__.invalidateQueries({
+                  queryKey: ["WishlistSortedFiltered", _],
+                  exact: !1,
+                }),
+                  __webpack_require__.invalidateQueries({
+                    queryKey: [_, _],
+                    exact: !1,
+                  }),
+                  __webpack_require__.invalidateQueries({
+                    queryKey: _(_, _.appid),
+                  });
+              },
+            });
+          })(_),
+          _ = (function (_) {
+            const _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                const _ = _._.Init(_._);
+                return (
+                  __webpack_require__.Body().set_appid(_.appid),
+                  __webpack_require__.Body().set_categoryid(_.categoryID),
+                  (await _._.RemoveWishlistItemCategory(_, _)).GetEResult()
+                );
+              },
+              onSuccess(_, _) {
+                __webpack_require__.invalidateQueries({
+                  queryKey: ["WishlistSortedFiltered", _],
+                  exact: !1,
+                }),
+                  __webpack_require__.invalidateQueries({
+                    queryKey: [_, _],
+                    exact: !1,
+                  }),
+                  __webpack_require__.invalidateQueries({
+                    queryKey: _(_, _.appid),
+                  });
+              },
+            });
+          })(_),
+          _ = (function () {
+            const _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                const _ = (await _.ensureQueryData(_(_))) ?? [],
+                  _ = Array.from(new Set([..._.rgCategoryIDs, _])).slice(0, 3);
+                return await _.StoreObject(_, _), _;
+              },
+              onSuccess: async (_) => {
+                _.setQueryData([_], _);
+              },
+            });
+          })();
+        return (
+          _.useEffect(() => {
+            if (_ || !_ || !_ || !_ || !_ || !_) return;
+            let _ = new Set(_.map((_) => _._) ?? []),
+              _ = _.slice(0, 6).map((_) => ({
+                ..._,
+                bSelected: !0,
+              }));
+            const _ = _.map((_) => _.get(_)).filter((_) => !!_);
+            for (const _ of [..._, ..._]) {
+              if (_.length >= 6) break;
+              _.has(_._) || (_.push(_), _.add(_._));
+            }
+            _.length < 6 && (_ = [..._, ...(_?.slice(0, 6 - _.length) ?? [])]),
+              _(_);
+          }, [_, _, _, _, _, _]),
+          _ && 0 !== _.length
+            ? (0, _.jsxs)("div", {
+                className: _.CategoriesMenuOption,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.Label,
+                    children: (0, _._)("#Wishlist_QuickAdd_Header"),
+                  }),
+                  (0, _.jsx)(_, {
+                    rgCategories: _ ?? [],
+                    header: null,
+                    onClick: async (_, _) => {
+                      if (
+                        _.find((_) => (_ && _ !== _ ? _._ === _ : _.name === _))
+                          .bSelected
+                      )
+                        _.mutate({
+                          appid: _,
+                          categoryID: _,
+                        }),
+                          _(
+                            _.map((_) =>
+                              _._ === _
+                                ? {
+                                    ..._,
+                                    bSelected: !1,
+                                  }
+                                : _,
+                            ),
+                          );
+                      else if (_) {
+                        const _ = await _.mutateAsync({
+                          appid: _,
+                          categoryName: _,
+                          categoryID: _ ?? _,
+                        });
+                        _.eresult === _._ &&
+                          _.category?._ &&
+                          (_((_) =>
+                            _.map((_) =>
+                              _.name === _
+                                ? {
+                                    ..._.category,
+                                    bSelected: !0,
+                                  }
+                                : _,
+                            ),
+                          ),
+                          _.mutate({
+                            rgCategoryIDs: [_.category._],
+                          }));
+                      }
+                    },
+                    bMultiline: !0,
+                  }),
+                ],
+              })
+            : null
+        );
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -8067,7 +8759,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -8092,10 +8783,14 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -8123,8 +8818,7 @@
               ._("chunkid")
               .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
           ).AccessibilityFeatureDisplay,
-        })),
-        _ = () => null;
+        }));
       function _(_) {
         const { appid: _ } = _;
         return (0, _.jsx)(_._, {

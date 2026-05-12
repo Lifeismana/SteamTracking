@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10650267";
+var CLSTAMP = "10651221";
 (() => {
   var e,
     t,
@@ -192,9 +192,9 @@ var CLSTAMP = "10650267";
         }
         (i.keys = () => Object.keys(s)), (i.id = 68042), (e.exports = i);
       },
-      44065: (e, t, n) => {
+      5029: (e, t, n) => {
         "use strict";
-        n(60813);
+        n(47652);
         var s = n(63696),
           i = n(7470);
         function a(e, t) {
@@ -306,7 +306,7 @@ var CLSTAMP = "10650267";
           else n && console.error("Missing config element #", t);
         }
         const g = "presentation_mode";
-        var f = n(52677);
+        var f = n(48127);
         const I = {
             EUNIVERSE: 0,
             WEB_UNIVERSE: "",
@@ -1836,7 +1836,7 @@ var CLSTAMP = "10650267";
               })();
           });
       },
-      60813: (e, t, n) => {
+      47652: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2004,7 +2004,7 @@ var CLSTAMP = "10650267";
         4776: "fcef25c79464d2dab63c",
         4787: "f933b9746b9145fdf8c7",
         5018: "9637e641f3a60cd176bf",
-        5110: "0b13b179809acfa0f695",
+        5110: "eb4c590fda079b0877ec",
         5241: "734629cb6994f49391cc",
         5341: "7a78f0e1927e9759e826",
         5480: "d623db031a5e27e6bd30",
@@ -2173,6 +2173,6 @@ var CLSTAMP = "10650267";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [9489, 1068], () => o(44065));
+  var c = o.O(void 0, [9489, 1068], () => o(5029));
   c = o.O(c);
 })();
