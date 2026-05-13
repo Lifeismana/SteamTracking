@@ -5522,7 +5522,7 @@
                     "Event Create Time: ",
                     a.GetEventModel().createTime,
                     " -",
-                    Boolean(0 != a.GetEventModel().startTime) &&
+                    Boolean(0 != a.GetEventModel().createTime) &&
                       (0, n.jsx)(h.K4, {
                         dateAndTime: a.GetEventModel().createTime,
                         bSingleLine: !0,

@@ -6188,12 +6188,10 @@
     },
     65944: (e, t, r) => {
       "use strict";
-      r.d(t, { Ns: () => o });
-      var i = r(22837),
-        n = r(30470);
-      const s = 1783442164,
-        a = "dev" == n.TS.WEB_UNIVERSE;
-      function o(e, t) {
+      r.d(t, { Ns: () => s });
+      var i = r(22837);
+      const n = 1778623200;
+      function s(e, t) {
         let r = !1;
         return (
           e && e.GetEventType() == i.ajI
@@ -6202,12 +6200,7 @@
               t &&
               t.is_creator_home &&
               (r = (function (e, t) {
-                const r = e.BIsVisibleEvent();
-                return (
-                  !!t &&
-                  !!t.is_creator_home &&
-                  (a || (!r && n.TS.NOW > s) || (r && e.createTime > s))
-                );
+                return !!t && !!t.is_creator_home && (e.createTime ?? 0) > n;
               })(e, t)),
           r
         );

@@ -5346,68 +5346,70 @@
           );
         }
         clone(e = !1) {
-          let t = new Be();
+          var t;
+          let i = new Be();
           if (
-            ((t.GID = this.GID),
-            (t.AnnouncementGID = this.AnnouncementGID),
-            (t.clanSteamID = this.clanSteamID),
-            (t.bOldAnnouncement = this.bOldAnnouncement),
-            (t.nCommentCount = this.nCommentCount),
-            (t.nVotesUp = this.nVotesUp),
-            (t.nVotesDown = this.nVotesDown),
-            (t.forumTopicGID = this.forumTopicGID),
-            (t.comment_type = this.comment_type),
-            (t.gidfeature = this.gidfeature),
-            (t.gidfeature2 = this.gidfeature2),
-            (t.featured_app_tagid = this.featured_app_tagid),
-            (t.creator_steamid = this.creator_steamid),
-            (t.last_update_steamid = this.last_update_steamid),
-            (t.rtime32_last_modified = this.rtime32_last_modified),
-            (t.rtime32_last_solr_search_col_updated =
+            ((i.GID = this.GID),
+            (i.AnnouncementGID = this.AnnouncementGID),
+            (i.clanSteamID = this.clanSteamID),
+            (i.bOldAnnouncement = this.bOldAnnouncement),
+            (i.nCommentCount = this.nCommentCount),
+            (i.nVotesUp = this.nVotesUp),
+            (i.nVotesDown = this.nVotesDown),
+            (i.forumTopicGID = this.forumTopicGID),
+            (i.comment_type = this.comment_type),
+            (i.gidfeature = this.gidfeature),
+            (i.gidfeature2 = this.gidfeature2),
+            (i.featured_app_tagid = this.featured_app_tagid),
+            (i.creator_steamid = this.creator_steamid),
+            (i.last_update_steamid = this.last_update_steamid),
+            (i.rtime32_last_modified = this.rtime32_last_modified),
+            (i.rtime32_last_solr_search_col_updated =
               this.rtime32_last_solr_search_col_updated),
-            (t.rtime32_moderator_reviewed = this.rtime32_moderator_reviewed),
-            (t.type = this.type),
-            (t.appid = this.appid),
-            (t.name = new Map()),
-            this.name.forEach((e, i) => {
-              t.name.set(i, e);
+            (i.rtime32_moderator_reviewed = this.rtime32_moderator_reviewed),
+            (i.type = this.type),
+            (i.appid = this.appid),
+            (i.name = new Map()),
+            this.name.forEach((e, t) => {
+              i.name.set(t, e);
             }),
-            (t.description = new Map()),
-            this.description.forEach((e, i) => {
-              t.description.set(i, e);
+            (i.description = new Map()),
+            this.description.forEach((e, t) => {
+              i.description.set(t, e);
             }),
-            (t.timestamp_loc_updated = new Map()),
-            this.timestamp_loc_updated.forEach((e, i) => {
-              t.timestamp_loc_updated.set(i, e);
+            (i.timestamp_loc_updated = new Map()),
+            this.timestamp_loc_updated.forEach((e, t) => {
+              i.timestamp_loc_updated.set(t, e);
             }),
-            (t.createTime = Math.floor(Date.now() / 1e3)),
-            (t.startTime = this.startTime),
-            (t.endTime = this.endTime),
-            (t.visibilityStartTime = this.visibilityStartTime),
-            (t.visibilityEndTime = this.visibilityEndTime),
-            (t.postTime = this.postTime),
-            (t.visibility_state = this.visibility_state),
-            (t.loadedAllLanguages = this.loadedAllLanguages),
-            (t.bLoaded = this.bLoaded),
-            (t.broadcaster = this.broadcaster
+            (i.createTime =
+              null !== (t = this.createTime) && void 0 !== t ? t : 0),
+            (i.startTime = this.startTime),
+            (i.endTime = this.endTime),
+            (i.visibilityStartTime = this.visibilityStartTime),
+            (i.visibilityEndTime = this.visibilityEndTime),
+            (i.postTime = this.postTime),
+            (i.visibility_state = this.visibility_state),
+            (i.loadedAllLanguages = this.loadedAllLanguages),
+            (i.bLoaded = this.bLoaded),
+            (i.broadcaster = this.broadcaster
               ? new d.b(this.broadcaster.ConvertTo64BitString())
               : void 0),
-            (t.jsondata = JSON.parse(JSON.stringify(this.jsondata))),
-            (t.vecTags = new Array()),
+            (i.jsondata = JSON.parse(JSON.stringify(this.jsondata))),
+            (i.vecTags = new Array()),
             e
-              ? ((t.m_nBuildID = this.m_nBuildID),
-                (t.m_strBuildBranch = this.m_strBuildBranch),
-                this.vecTags.forEach((e) => t.vecTags.push(e)))
+              ? ((i.m_nBuildID = this.m_nBuildID),
+                (i.m_strBuildBranch = this.m_strBuildBranch),
+                this.vecTags.forEach((e) => i.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  fe.includes(e) && t.vecTags.push(e);
+                  fe.includes(e) && i.vecTags.push(e);
                 }),
-            t.jsondata.email_setting)
+            i.jsondata.email_setting)
           ) {
             let e = 100;
-            for (let i of t.jsondata.email_setting.sections)
-              i.unique_id || ((i.unique_id = `email_section_${e}`), e++);
+            for (let t of i.jsondata.email_setting.sections)
+              t.unique_id || ((t.unique_id = `email_section_${e}`), e++);
           }
-          return t;
+          return i;
         }
         GetLastReferencedSaleDayFromCapsules(e, t) {
           let i = t;

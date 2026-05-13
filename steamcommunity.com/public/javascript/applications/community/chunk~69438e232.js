@@ -19189,13 +19189,11 @@
     },
     65944: (e, t, r) => {
       "use strict";
-      r.d(t, { Ns: () => l, iR: () => c });
+      r.d(t, { Ns: () => s, iR: () => o });
       var i = r(33951),
-        n = r(22837),
-        a = r(30470);
-      const s = 1783442164,
-        o = "dev" == a.TS.WEB_UNIVERSE;
-      function l(e, t) {
+        n = r(22837);
+      const a = 1778623200;
+      function s(e, t) {
         let r = !1;
         return (
           e && e.GetEventType() == n.ajI
@@ -19204,19 +19202,19 @@
               t &&
               t.is_creator_home &&
               (r = (function (e, t) {
-                const r = e.BIsVisibleEvent();
+                var r;
                 return (
                   !!t &&
                   !!t.is_creator_home &&
-                  (o || (!r && a.TS.NOW > s) || (r && e.createTime > s))
+                  (null !== (r = e.createTime) && void 0 !== r ? r : 0) > a
                 );
               })(e, t)),
           r
         );
       }
-      function c(e) {
+      function o(e) {
         const t = (0, i.TB)(e.clanSteamID.GetAccountID());
-        return l(e, t.data);
+        return s(e, t.data);
       }
     },
     74812: (e, t, r) => {

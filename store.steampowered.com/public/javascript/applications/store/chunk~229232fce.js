@@ -2267,7 +2267,7 @@
             this.timestamp_loc_updated.forEach((e, a) => {
               t.timestamp_loc_updated.set(a, e);
             }),
-            (t.createTime = Math.floor(Date.now() / 1e3)),
+            (t.createTime = this.createTime ?? 0),
             (t.startTime = this.startTime),
             (t.endTime = this.endTime),
             (t.visibilityStartTime = this.visibilityStartTime),

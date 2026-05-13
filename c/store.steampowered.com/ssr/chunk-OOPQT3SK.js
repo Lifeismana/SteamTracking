@@ -7789,7 +7789,7 @@ var _ = _(_(), 1),
   _ = {
     shortName: "wishlistcats",
     descriptiveName: "Wishlist Categories Beta",
-    default: !1,
+    default: !0,
   },
   _ = _({
     Component: _,

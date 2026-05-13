@@ -6768,10 +6768,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1783442164,
-        _ = "dev" == _._.WEB_UNIVERSE;
+      var _ = __webpack_require__("chunkid");
+      const _ = 1778623200;
       function _(_, _) {
         let _ = !1;
         return (
@@ -6781,12 +6779,7 @@
               _ &&
               _.is_creator_home &&
               (_ = (function (_, _) {
-                const _ = _.BIsVisibleEvent();
-                return (
-                  !!_ &&
-                  !!_.is_creator_home &&
-                  (_ || (!_ && _._.NOW > _) || (_ && _.createTime > _))
-                );
+                return !!_ && !!_.is_creator_home && (_.createTime ?? 0) > _;
               })(_, _)),
           _
         );

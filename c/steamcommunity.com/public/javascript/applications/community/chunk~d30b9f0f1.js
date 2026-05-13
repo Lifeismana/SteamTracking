@@ -5701,7 +5701,7 @@
                     __webpack_require__.GetEventModel().createTime,
                     " -",
                     Boolean(
-                      0 != __webpack_require__.GetEventModel().startTime,
+                      0 != __webpack_require__.GetEventModel().createTime,
                     ) &&
                       (0, _.jsx)(_._, {
                         dateAndTime:
