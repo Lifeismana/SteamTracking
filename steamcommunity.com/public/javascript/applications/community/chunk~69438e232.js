@@ -1348,7 +1348,11 @@
           [i.rg]: {},
           [i.CS]: { strSymbol: "$" },
           [i.dz]: { strSymbol: "£" },
-          [i.a4]: { strSymbol: "€" },
+          [i.a4]: {
+            strSymbol: "€",
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
           [i.ln]: { strSymbol: "CHF" },
           [i.Fq]: {
             strSymbol: "руб.",

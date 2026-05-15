@@ -237,6 +237,7 @@
     "Economy_Market_HeaderTip_AccountLocked": "Your account is currently locked. Information about this lock can be found by clicking the red bar shown in the upper right hand corner while logged into the Steam client.",
     "Economy_Market_TopLevelTooltip_RemoveRestrictionLink": "To remove this restriction...",
     "Economy_Market_TopLevelReason_AccountTradeBanned": "Your account is currently trade banned.",
+    "Economy_Market_TopLevelReason_Unknown": "This account cannot currently use the Steam Community Market.",
     "Economy_Market_TopLevelTooltip_AccountTradeBanned": "Trade ban length can range from temporary to permanent. To see when this trade ban expires, please click the red bar shown in the upper right hand corner while logged into the Steam client.",
     "Economy_Market_HeaderTip_AccountTradeBanned": "Your account has been banned from trading. To see when this trade ban expires, please click the red bar shown in the upper right hand corner while logged into the Steam client.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "More info...",
@@ -269,5 +270,6 @@
     "Economy_Market_TopLevelTooltip_SteamGuardRecentlyEnabled": "You must wait until Steam Guard has been enabled on your account for 15 days. Steam Support cannot remove this restriction.",
     "Economy_Market_TopLevelReason_NoSteamGuard": "Your account must be protected by Steam Guard for at least %1$s days.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "You must enable Steam Guard on your account. Please ensure that your email is verified and you have logged into your account twice after enabling Steam Guard.",
-    "Economy_Market_HeaderTip_NoSteamGuard": "Your account must be protected by Steam Guard for at least %1$s days."
+    "Economy_Market_HeaderTip_NoSteamGuard": "Your account must be protected by Steam Guard for at least %1$s days.",
+    "Economy_Market_HeaderTip_TimeCanUse": "If nothing further occurs to restrict your access, you'll be able to use The Community Market on %1$s"
 }
