@@ -10141,7 +10141,7 @@
       }
       var Is = a(49199),
         Gs = a(79821),
-        As = a(33494),
+        As = a(97780),
         Ns = a(81047),
         Ms = a(9239),
         Bs = a(2160),
@@ -10966,7 +10966,7 @@
         });
       }
       const so = n.lazy(() =>
-        Promise.all([a.e(6200), a.e(3772)]).then(a.bind(a, 16722)),
+        Promise.all([a.e(6200), a.e(2480)]).then(a.bind(a, 16134)),
       );
       function oo(e) {
         const { editModel: t, refOnInsertImage: a } = e,

@@ -296,9 +296,9 @@
         };
       }
     },
-    33494: (e, a, n) => {
+    97780: (e, a, n) => {
       "use strict";
-      n.d(a, { G: () => H });
+      n.d(a, { G: () => T });
       var t = n(7850),
         l = n(22837),
         s = n(41735),
@@ -323,139 +323,10 @@
         A = n(52038),
         E = n(61859),
         S = n(73745),
-        b = n(17720),
-        k = n(68359),
-        D = n(9709),
-        L = n(9449),
-        N = n(56692),
-        R = n(26408),
-        y = n(82817),
-        T = n(27666);
-      const U = (0, r.PA)((e) => {
-        const {
-            closeModal: a,
-            appid: n,
-            partnerEventStore: l,
-            primaryLocalizedImage: s,
-            clanSteamID: r,
-            fnSetImageURL: o,
-            rgRealmList: g,
-            fnLangHasData: m,
-            fnGetImageHash: u,
-          } = e,
-          [p, h] = c.useState(),
-          [_, v] = c.useState(!0),
-          x = (0, S.YR)(() => i().CancelToken.source());
-        c.useEffect(
-          () => () => x.cancel("LocalizedImageDialog component unmounted"),
-          [x],
-        );
-        const w = c.useCallback(async () => {
-            try {
-              const e = b.b.InitFromClanID(s.clanAccountID),
-                a = await T.z.AsyncGetImageResolution(
-                  e,
-                  s.image_hash,
-                  s.file_type,
-                  x,
-                  !1,
-                );
-              x.token.reason || h(a);
-            } catch (e) {
-              let a = (0, C.H)(e);
-              console.error("LocalizedImageDialog : " + a.strErrorMsg, a);
-            }
-          }, [x, s.clanAccountID, s.file_type, s.image_hash]),
-          A = c.useCallback(async () => {
-            try {
-              await k.R.DetermineAvailableLocalizationForGroup(x),
-                x.token.reason || v(!1);
-            } catch (e) {
-              let a = (0, C.H)(e);
-              console.error("LocalizedImageDialog : " + a.strErrorMsg, a);
-            }
-          }, [x]);
-        c.useEffect(() => {
-          a &&
-            (k.R.SetPrimaryImageForImageGroup(s, "localized_image_group"),
-            w(),
-            A());
-        }, [a, A, w, s]);
-        const U = !_ && p,
-          B = p ? ` - ${p.width}x${p.height}` : "",
-          G = (0, y.EG)(s.file_type).slice(1),
-          O = p && { width: p.width, height: p.height },
-          F = T.z.GenerateURLFromHashAndExt(r, T.z.GetHashAndExt(s));
-        return (0, t.jsx)(j.eV, {
-          bAllowFullSize: !0,
-          title: (0, E.we)("#ImagePickerLoc_Title"),
-          onCancel: a,
-          closeModal: a,
-          children: (0, t.jsx)(d.nB, {
-            children: (0, t.jsxs)(d.a3, {
-              children: [
-                (0, t.jsx)("div", {
-                  className: I().FlexRowContainer,
-                  children: (0, t.jsxs)("span", {
-                    className: I().FlexColumnContainer,
-                    children: [
-                      (0, t.jsxs)("div", {
-                        children: [
-                          (0, E.we)("#ImagePickerLoc_Default"),
-                          (0, t.jsx)(R.o, {
-                            tooltip: (0, E.we)("#ImagePickerLoc_Default_Hint"),
-                          }),
-                        ],
-                      }),
-                      (0, t.jsx)("img", { className: D.TitleImg, src: F }),
-                      (0, t.jsx)("div", {
-                        children: s.file_name + B + " - " + G,
-                      }),
-                    ],
-                  }),
-                }),
-                !U &&
-                  (0, t.jsx)(f.t, {
-                    position: "center",
-                    string: (0, E.we)("#Loading"),
-                  }),
-                U &&
-                  (0, t.jsxs)(c.Fragment, {
-                    children: [
-                      (0, t.jsx)(L.t, {
-                        clanSteamID: r,
-                        rgSupportArtwork: [],
-                        localizedPrimaryImage: s,
-                        forceResolution: O,
-                        bAllowPreviousClanImageSelection: !0,
-                        fnSetImageURL: o,
-                        rgRealmList: g,
-                      }),
-                      (0, t.jsx)("div", {
-                        className: D.ArtworkBar,
-                        children: (0, t.jsx)(N.it, {
-                          clanSteamID: r,
-                          eventModel: void 0,
-                          artworkType: "localized_image_group",
-                          title: (0, E.we)("#ImagePickerLoc_Title"),
-                          realms: g,
-                          fnLangHasData: m,
-                          appid: n,
-                          fnGetImageHashAndExt: u,
-                          fnSetImageURL: o,
-                          partnerEventStore: l,
-                        }),
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-          }),
-        });
-      });
-      var B = n(40888),
-        G = n.n(B);
-      function O(e) {
+        b = n(36782),
+        k = n(40888),
+        D = n.n(k);
+      function L(e) {
         const a = (0, c.useRef)(null);
         (0, c.useEffect)(() => {
           var e;
@@ -481,7 +352,7 @@
               ? (0, t.jsx)("img", { src: e.nextSrc })
               : e.nextSrc,
           i = [
-            G().LightboxDialog,
+            D().LightboxDialog,
             ...(e.backgroundClassName ? [e.backgroundClassName] : []),
           ];
         return (0, t.jsxs)("dialog", {
@@ -497,15 +368,15 @@
             e.prevSrc &&
               (0, t.jsx)("div", {
                 className: (0, A.A)(
-                  G().LightboxImageContainer,
-                  G().LightboxPrevImage,
+                  D().LightboxImageContainer,
+                  D().LightboxPrevImage,
                 ),
                 children: n,
               }),
             (0, t.jsx)("div", {
               className: (0, A.A)(
-                G().LightboxImageContainer,
-                G().LightboxMainImage,
+                D().LightboxImageContainer,
+                D().LightboxMainImage,
               ),
               tabIndex: 0,
               onClick: (a) => {
@@ -516,24 +387,24 @@
             e.nextSrc &&
               (0, t.jsx)("div", {
                 className: (0, A.A)(
-                  G().LightboxImageContainer,
-                  G().LightboxNextImage,
+                  D().LightboxImageContainer,
+                  D().LightboxNextImage,
                 ),
                 children: s,
               }),
             (0, t.jsxs)("div", {
-              className: G().LightboxToolbar,
+              className: D().LightboxToolbar,
               children: [
                 (0, t.jsx)("span", {
-                  className: G().LightboxImageTitle,
+                  className: D().LightboxImageTitle,
                   children: e.imageTitle,
                 }),
                 (0, t.jsxs)("div", {
-                  className: G().LightboxToolbarButtons,
+                  className: D().LightboxToolbarButtons,
                   children: [
                     e.toolbarButtons,
                     (0, t.jsx)("button", {
-                      className: G().LightboxCloseButton,
+                      className: D().LightboxCloseButton,
                       onClick: e.onCloseRequest,
                     }),
                   ],
@@ -542,21 +413,21 @@
             }),
             e.prevSrc &&
               (0, t.jsx)("button", {
-                className: G().LightboxLeftButton,
+                className: D().LightboxLeftButton,
                 onClick: e.onMovePrevRequest,
               }),
             e.nextSrc &&
               (0, t.jsx)("button", {
-                className: G().LightboxRightButton,
+                className: D().LightboxRightButton,
                 onClick: e.onMoveNextRequest,
               }),
           ],
         });
       }
-      var F = n(33561),
-        M = n(86355);
-      let P = 1;
-      const H = (0, r.PA)((e) => {
+      var N = n(33561),
+        R = n(86355);
+      let y = 1;
+      const T = (0, r.PA)((e) => {
         const {
             clanSteamID: a,
             appid: n,
@@ -566,14 +437,14 @@
             bShowLightBox: d,
             fnSetImageURL: p,
             rgRealmList: x,
-            fnLangHasData: b,
-            fnGetImageHash: k,
+            fnLangHasData: k,
+            fnGetImageHash: D,
           } = e,
-          [D, L] = c.useState(""),
-          [N, R] = c.useState(0),
-          [y, T] = c.useState(),
-          [B, G] = c.useState(void 0),
-          [H, V] = c.useState(!M.pU.BHasLoadedClanImages(a)),
+          [T, G] = c.useState(""),
+          [O, F] = c.useState(0),
+          [M, P] = c.useState(),
+          [H, z] = c.useState(void 0),
+          [W, V] = c.useState(!R.pU.BHasLoadedClanImages(a)),
           [Y, q] = c.useState(void 0),
           Z = (0, S.YR)(() => i().CancelToken.source());
         c.useEffect(
@@ -582,9 +453,9 @@
         );
         const Q = (0, S.YR)(() => new Map()),
           [J, X] = (0, c.useState)(null),
-          { bClanImagesV2: K } = (0, F.sK)(),
+          { bClanImagesV2: K } = (0, N.sK)(),
           $ = a.GetAccountID(),
-          ee = c.useCallback(() => M.pU.LoadClanImages(a, !1, Z.token), [Z, $]),
+          ee = c.useCallback(() => R.pU.LoadClanImages(a, !1, Z.token), [Z, $]),
           ae = c.useCallback(async () => {
             if (!Q.has(a.GetAccountID()))
               try {
@@ -602,24 +473,24 @@
               }
           }, [Z, a, Q, ee]);
         c.useEffect(() => {
-          H && ae();
-        }, [ae, H]);
+          W && ae();
+        }, [ae, W]);
         const ne = c.useCallback(() => {
           V(!0), ae();
         }, [ae]);
         c.useEffect(() => {
           ne();
         }, [$, ne]);
-        const te = M.pU.BHasLoadedClanImages(a);
+        const te = R.pU.BHasLoadedClanImages(a);
         c.useEffect(() => {
           te || ne();
         }, [te, ne]);
         const le = () => {
-            T(void 0), G(void 0);
+            P(void 0), z(void 0);
           },
           se = (e) => {
-            if (null != y) {
-              const a = B[y];
+            if (null != M) {
+              const a = H[M];
               le(),
                 requestAnimationFrame(() => {
                   s(a, e);
@@ -638,42 +509,42 @@
               }),
             ],
           });
-        if (H)
+        if (W)
           return (0, t.jsx)(f.t, {
             position: "center",
             string: (0, E.we)("#Loading"),
           });
-        let ie = B;
+        let ie = H;
         return (0, t.jsxs)("div", {
           className: (0, A.A)(h().PickerContainer),
           children: [
-            (0, t.jsx)(v.g, { fnSetImageSearch: (e) => L(e) }),
+            (0, t.jsx)(v.g, { fnSetImageSearch: (e) => G(e) }),
             (0, t.jsx)("div", {
               className: h().ImagesContainer,
               children: (0, t.jsx)(u.GF, {
                 clanAccountID: a.GetAccountID(),
-                fileNameSearch: D,
+                fileNameSearch: T,
                 imageInsertCallBack: s,
                 fnOnExpandImage: (e) => {
                   if (e && d) {
-                    let n = M.pU.GetFilteredClanImages(
+                    let n = R.pU.GetFilteredClanImages(
                         a,
-                        D.trim().toLowerCase(),
+                        T.trim().toLowerCase(),
                       ),
                       t = n.findIndex((a, n, t) => e.imageid == a.imageid);
-                    t >= 0 && (T(t), G(n));
+                    t >= 0 && (P(t), z(n));
                   }
                 },
                 InternalOpenLocalizeImageGroup: (e) => {
                   (0, w.pg)(
-                    (0, t.jsx)(U, {
+                    (0, t.jsx)(b.$, {
                       primaryLocalizedImage: e,
                       appid: n,
                       clanSteamID: a,
                       fnSetImageURL: p,
                       rgRealmList: x,
-                      fnLangHasData: b,
-                      fnGetImageHash: k,
+                      fnLangHasData: k,
+                      fnGetImageHash: D,
                       partnerEventStore: r,
                     }),
                     window,
@@ -681,16 +552,16 @@
                 },
               }),
             }),
-            N > 0 &&
+            O > 0 &&
               (0, t.jsx)(
-                W,
+                B,
                 {
                   uploader: J,
                   onDismiss: () => {
-                    L(D), R(null);
+                    G(T), F(null);
                   },
                 },
-                "clanimageuploaderview" + N,
+                "clanimageuploaderview" + O,
               ),
             !o &&
               (0, t.jsx)(_.D, {
@@ -720,19 +591,19 @@
                             window,
                           ));
                     }
-                    return s && (L(""), R(++P), n.UploadAllImages()), s;
+                    return s && (G(""), F(++y), n.UploadAllImages()), s;
                   }
                   return !1;
                 },
               }),
-            null != y &&
-              (0, t.jsx)(O, {
-                mainSrc: ie[y].url,
-                imageTitle: ie[y].file_name,
-                nextSrc: y < ie.length - 1 ? ie[y + 1].url : void 0,
-                prevSrc: y > 0 ? ie[y - 1].url : void 0,
-                onMoveNextRequest: () => T(y + 1),
-                onMovePrevRequest: () => T(y - 1),
+            null != M &&
+              (0, t.jsx)(L, {
+                mainSrc: ie[M].url,
+                imageTitle: ie[M].file_name,
+                nextSrc: M < ie.length - 1 ? ie[M + 1].url : void 0,
+                prevSrc: M > 0 ? ie[M - 1].url : void 0,
+                onMoveNextRequest: () => P(M + 1),
+                onMovePrevRequest: () => P(M - 1),
                 onCloseRequest: le,
                 toolbarButtons: [
                   (0, t.jsx)(
@@ -759,16 +630,16 @@
                   ),
                 ],
               }),
-            (0, t.jsx)(z, {}),
+            (0, t.jsx)(U, {}),
           ],
         });
       });
-      function z(e) {
+      function U(e) {
         const {
           bClanImagesV2: a,
           bClanImagesV2Allowed: n,
           setClanImagesV2: l,
-        } = (0, F.sK)();
+        } = (0, N.sK)();
         return (0, t.jsx)(t.Fragment, {
           children:
             n &&
@@ -781,7 +652,7 @@
             }),
         });
       }
-      function W(e) {
+      function B(e) {
         const { uploader: a, onDismiss: n } = e,
           [l, s] = (0, o.q3)(() => [
             a.BAllDone(),
@@ -849,6 +720,153 @@
           ],
         });
       }
+    },
+    36782: (e, a, n) => {
+      "use strict";
+      n.d(a, { $: () => A });
+      var t = n(7850),
+        l = n(41735),
+        s = n.n(l),
+        i = n(75844),
+        r = n(90626),
+        o = n(17720),
+        c = n(68359),
+        d = n(68255),
+        g = n(9709),
+        m = n(9449),
+        u = n(95695),
+        p = n.n(u),
+        h = n(9154),
+        _ = n(22797),
+        v = n(68797),
+        x = n(61859),
+        I = n(73745),
+        j = n(56692),
+        w = n(26408),
+        f = n(82817),
+        C = n(27666);
+      const A = (0, i.PA)((e) => {
+        const {
+            closeModal: a,
+            appid: n,
+            partnerEventStore: l,
+            primaryLocalizedImage: i,
+            clanSteamID: u,
+            fnSetImageURL: A,
+            rgRealmList: E,
+            fnLangHasData: S,
+            fnGetImageHash: b,
+          } = e,
+          [k, D] = r.useState(),
+          [L, N] = r.useState(!0),
+          R = (0, I.YR)(() => s().CancelToken.source());
+        r.useEffect(
+          () => () => R.cancel("LocalizedImageDialog component unmounted"),
+          [R],
+        );
+        const y = r.useCallback(async () => {
+            try {
+              const e = o.b.InitFromClanID(i.clanAccountID),
+                a = await C.z.AsyncGetImageResolution(
+                  e,
+                  i.image_hash,
+                  i.file_type,
+                  R,
+                  !1,
+                );
+              R.token.reason || D(a);
+            } catch (e) {
+              let a = (0, v.H)(e);
+              console.error("LocalizedImageDialog : " + a.strErrorMsg, a);
+            }
+          }, [R, i.clanAccountID, i.file_type, i.image_hash]),
+          T = r.useCallback(async () => {
+            try {
+              await c.R.DetermineAvailableLocalizationForGroup(R),
+                R.token.reason || N(!1);
+            } catch (e) {
+              let a = (0, v.H)(e);
+              console.error("LocalizedImageDialog : " + a.strErrorMsg, a);
+            }
+          }, [R]);
+        r.useEffect(() => {
+          a &&
+            (c.R.SetPrimaryImageForImageGroup(i, "localized_image_group"),
+            y(),
+            T());
+        }, [a, T, y, i]);
+        const U = !L && k,
+          B = k ? ` - ${k.width}x${k.height}` : "",
+          G = (0, f.EG)(i.file_type).slice(1),
+          O = k && { width: k.width, height: k.height },
+          F = C.z.GenerateURLFromHashAndExt(u, C.z.GetHashAndExt(i));
+        return (0, t.jsx)(h.eV, {
+          bAllowFullSize: !0,
+          title: (0, x.we)("#ImagePickerLoc_Title"),
+          onCancel: a,
+          closeModal: a,
+          children: (0, t.jsx)(d.nB, {
+            children: (0, t.jsxs)(d.a3, {
+              children: [
+                (0, t.jsx)("div", {
+                  className: p().FlexRowContainer,
+                  children: (0, t.jsxs)("span", {
+                    className: p().FlexColumnContainer,
+                    children: [
+                      (0, t.jsxs)("div", {
+                        children: [
+                          (0, x.we)("#ImagePickerLoc_Default"),
+                          (0, t.jsx)(w.o, {
+                            tooltip: (0, x.we)("#ImagePickerLoc_Default_Hint"),
+                          }),
+                        ],
+                      }),
+                      (0, t.jsx)("img", { className: g.TitleImg, src: F }),
+                      (0, t.jsx)("div", {
+                        children: i.file_name + B + " - " + G,
+                      }),
+                    ],
+                  }),
+                }),
+                !U &&
+                  (0, t.jsx)(_.t, {
+                    position: "center",
+                    string: (0, x.we)("#Loading"),
+                  }),
+                U &&
+                  (0, t.jsxs)(r.Fragment, {
+                    children: [
+                      (0, t.jsx)(m.t, {
+                        clanSteamID: u,
+                        rgSupportArtwork: [],
+                        localizedPrimaryImage: i,
+                        forceResolution: O,
+                        bAllowPreviousClanImageSelection: !0,
+                        fnSetImageURL: A,
+                        rgRealmList: E,
+                      }),
+                      (0, t.jsx)("div", {
+                        className: g.ArtworkBar,
+                        children: (0, t.jsx)(j.it, {
+                          clanSteamID: u,
+                          eventModel: void 0,
+                          artworkType: "localized_image_group",
+                          title: (0, x.we)("#ImagePickerLoc_Title"),
+                          realms: E,
+                          fnLangHasData: S,
+                          appid: n,
+                          fnGetImageHashAndExt: b,
+                          fnSetImageURL: A,
+                          partnerEventStore: l,
+                        }),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+          }),
+        });
+      });
     },
     50433: (e, a, n) => {
       "use strict";

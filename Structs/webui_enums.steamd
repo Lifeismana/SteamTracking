@@ -962,6 +962,7 @@ enum ETrailerGrowAmount
 	k_ETrailerGrowAmount_None = 0;
 	k_ETrailerGrowAmount_Small = 1;
 	k_ETrailerGrowAmount_Medium = 2;
+	k_ETrailerGrowAmount_Implicit = 1;
 }
 
 enum ETwoFactorTokenSteamguardScheme

@@ -251,6 +251,7 @@ function _(_) {
       bShowAllButton: _,
       containerClassName: _,
       size: _,
+      bShowCounts: _,
     } = _,
     _ = _.default.useRef(null),
     _ = [],
@@ -265,6 +266,7 @@ function _(_) {
           selected: _ !== 3 && !!_.bSelected,
           onClick: _ ? () => _(_.name, _._) : void 0,
           eAction: _ ?? 0,
+          bShowCount: _,
         },
         _,
       );
@@ -325,6 +327,7 @@ function _(_) {
       onOKActionDescription: _,
       onClick: _,
       eAction: _,
+      bShowCount: _,
     } = _,
     _ = _ === 3,
     _ = _ === 1,
@@ -361,6 +364,10 @@ function _(_) {
             className: _,
             children: _.name,
           }),
+          _ &&
+            (0, _.jsxs)("span", {
+              children: ["(", _.cItems, ")"],
+            }),
           _ && (0, _.jsx)(_, {}),
         ],
       }),
@@ -368,13 +375,13 @@ function _(_) {
   );
 }
 function _(_) {
-  let { onClick: _ } = _;
+  let { categoryCount: _, onClick: _ } = _;
   return (0, _.jsx)(_, {
     toolTipContent: _("#Wishlist_Controls_Categories_Manage"),
     children: (0, _.jsx)(_, {
       className: (0, _.default)(_, _),
       onClick: _,
-      children: (0, _.jsx)(_, {}),
+      children: _ > 0 ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {}),
     }),
   });
 }

@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [3772],
+  [2480],
   {
     5068: (e) => {
       e.exports = {
@@ -66,9 +66,9 @@
         StrongShadows: "_3_c8HvckcvJ0FHwgeS1GtO",
       };
     },
-    16722: (e, t, o) => {
+    16134: (e, t, o) => {
       "use strict";
-      o.r(t), o.d(t, { default: () => yo });
+      o.r(t), o.d(t, { default: () => Uo });
       var s = o(7850),
         n = o(90286),
         l = o(26555),
@@ -91,8 +91,8 @@
         C = o(28015),
         E = o(71696),
         w = o(61859),
-        M = o(27650),
-        I = o(73745),
+        I = o(27650),
+        M = o(73745),
         k = o(30470),
         S = o(21134),
         D = o(5058),
@@ -212,16 +212,16 @@
       }
       var z = o(12155),
         R = o(88997),
-        F = o(60155),
-        L = o(5068),
+        L = o(60155),
+        F = o(5068),
         Y = o(64753),
         H = o(9154),
         K = o(62490),
         q = o(84811),
         Q = o(32728);
       function $(e, t) {
-        const o = ne(t);
-        if (o) return { node: t, nodeAttrs: o, clanImage: ae(e, o) };
+        const o = ce(t);
+        if (o) return { node: t, nodeAttrs: o, clanImage: pe(e, o) };
       }
       function W(e) {
         const {
@@ -284,10 +284,10 @@
                     event: l.GetEventModel(),
                     children: x.map((e, t) =>
                       (0, s.jsx)(
-                        ie,
+                        me,
                         {
                           node: e,
-                          nodeAttrs: ne(e),
+                          nodeAttrs: ce(e),
                           schemaConfig: i,
                           event: l.GetEventModel(),
                         },
@@ -372,7 +372,7 @@
             e.destination &&
               c((t) => K.yY(t.slice(), e.source.index, e.destination.index));
           }, []),
-          { showInsertImageModal: v, imageModal: f } = re({
+          { showInsertImageModal: v, imageModal: f } = _e({
             clanSteamID: i,
             imageNodeType: a,
             videoNodeType: r,
@@ -406,7 +406,7 @@
                         direction: "horizontal",
                         children: (e) =>
                           (0, s.jsxs)("div", {
-                            className: L.CarouselList,
+                            className: F.CarouselList,
                             ...e.droppableProps,
                             ref: e.innerRef,
                             children: [
@@ -440,9 +440,9 @@
                       label: (0, w.we)(
                         "#EventEditor_CarouselEditor_AddAnotherItem",
                       ),
-                      className: L.AddButton,
+                      className: F.AddButton,
                       onClick: v,
-                      children: (0, s.jsx)(N.OMN, { className: L.PlusIcon }),
+                      children: (0, s.jsx)(N.OMN, { className: F.PlusIcon }),
                     }),
                   ],
                 }),
@@ -466,23 +466,23 @@
             n((e) => e.filter((e) => e != o));
           }, [o, n]);
         return (0, s.jsx)("div", {
-          className: p()(L.ListItem, L.DraggableItem),
+          className: p()(F.ListItem, F.DraggableItem),
           ref: t.innerRef,
           ...t.draggableProps,
           ...t.dragHandleProps,
           children: (0, s.jsxs)("div", {
-            className: L.ImagePreview,
+            className: F.ImagePreview,
             children: [
               (0, s.jsx)("img", {
                 src: v.z.ReplacementTokenToClanImageURL(o.node.attrs.src),
               }),
               (0, s.jsx)("div", {
-                className: L.Controls,
+                className: F.Controls,
                 children: (0, s.jsx)("div", {
-                  className: L.Control,
+                  className: F.Control,
                   children: (0, s.jsx)(T.ff, {
                     onClick: a,
-                    className: L.Button,
+                    className: F.Button,
                     children: (0, s.jsx)(N.sED, {}),
                   }),
                 }),
@@ -491,7 +491,13 @@
           }),
         });
       }
-      function te(e) {
+      var te = o(8527),
+        oe = o(25888),
+        se = o(36782),
+        ne = o(12611);
+      var le = o(95695),
+        ie = o.n(le);
+      function ae(e) {
         const {
             schemaConfig: t,
             node: o,
@@ -506,9 +512,9 @@
             update: h,
             selected: x,
           } = e,
-          [v, f, g] = (0, I.uD)(),
-          j = ne(o);
-        let b = (0, s.jsx)(ie, {
+          [v, f, g] = (0, M.uD)(),
+          j = ce(o);
+        let b = (0, s.jsx)(me, {
           schemaConfig: t,
           event: n.GetEventModel(),
           node: o,
@@ -518,7 +524,7 @@
             u(), g();
           }, [u, g]),
           E = _.useCallback((e) => h((0, a.M)(e)), [h]),
-          [w, M] = J(E, {
+          [w, I] = J(E, {
             clanSteamID: d,
             imageNodeType: l,
             videoNodeType: i,
@@ -527,12 +533,57 @@
           k = _.useCallback(() => {
             w([o]);
           }, [o, w]),
-          D = { createCarousel: r ? k : void 0, src: le(j) };
-        let y = p()(S.ClanImageContainer, x && S.Selected);
+          { showLocalizationModal: D, localizationModal: y } = (function (
+            e,
+            t,
+            o,
+          ) {
+            const [n, l] = _.useState(void 0),
+              i = _.useCallback(() => l(void 0), []);
+            return {
+              showLocalizationModal: _.useCallback(
+                (s) => {
+                  const n = s.map((e) => ce(e)).filter(Boolean);
+                  if (1 === n.length) {
+                    let s = n[0];
+                    if ("src" in s.attrs && s.attrs.src.includes(ne.lw)) {
+                      const t = s.attrs.src.replace(ne.lw, ne.eg);
+                      e(o.create({ src: t }));
+                    }
+                    l(pe(t.GetClanSteamID(), s));
+                  }
+                },
+                [t, o, e],
+              ),
+              localizationModal: (0, s.jsx)(H.EN, {
+                active: void 0 !== n,
+                children: (0, s.jsx)(se.$, {
+                  closeModal: i,
+                  primaryLocalizedImage: n,
+                  appid: t.GetAppID(),
+                  clanSteamID: t.GetClanSteamID(),
+                  fnSetImageURL: t.SetImageURL,
+                  fnLangHasData: t.BHasTitleImage,
+                  fnGetImageHash: t.GetImageHashAndExt,
+                  rgRealmList: t.GetIncludedRealmList(),
+                  partnerEventStore: oe.mh,
+                }),
+              }),
+            };
+          })(E, n, l),
+          T = _.useCallback(() => {
+            D([o]);
+          }, [o, D]),
+          N = {
+            createCarousel: r ? k : void 0,
+            src: ue(j),
+            localizeAssets: te.iA.is_support ? T : void 0,
+          };
+        let P = p()(S.ClanImageContainer, x && S.Selected);
         return (0, s.jsxs)(s.Fragment, {
           children: [
             v &&
-              (0, s.jsx)(de, {
+              (0, s.jsx)(he, {
                 bIsEdit: !0,
                 nodeAttrs: j,
                 hideModal: C,
@@ -541,24 +592,25 @@
                 clanSteamID: d,
                 onItemSelected: c,
               }),
-            M,
+            I,
+            y,
             (0, s.jsx)(A, {
-              className: y,
-              toolbar: (0, s.jsx)(oe, {
+              className: P,
+              toolbar: (0, s.jsx)(re, {
                 showModal: f,
                 removeNode: m,
-                contextMenuProps: D,
+                contextMenuProps: N,
               }),
               children: b,
             }),
           ],
         });
       }
-      function oe(e) {
+      function re(e) {
         const { showModal: t, removeNode: o, contextMenuProps: n } = e,
           l = _.useCallback(
             (e) => {
-              (0, R.lX)((0, s.jsx)(se, { ...n }), e, {
+              (0, R.lX)((0, s.jsx)(de, { ...n }), e, {
                 bPreferPopTop: !1,
                 bPreferPopLeft: !0,
               });
@@ -575,28 +627,34 @@
           }),
         });
       }
-      function se(e) {
-        const { createCarousel: t, src: o } = e,
-          n = _.useCallback(() => {
+      function de(e) {
+        const { createCarousel: t, src: o, localizeAssets: n } = e,
+          l = _.useCallback(() => {
             window.open(o);
           }, [o]);
-        return (0, s.jsxs)(F.tz, {
+        return (0, s.jsxs)(L.tz, {
           children: [
             t &&
-              (0, s.jsx)(F.kt, {
+              (0, s.jsx)(L.kt, {
                 onSelected: t,
                 children: (0, w.we)(
                   "#EventEditor_CarouselEditor_CreateACarousel",
                 ),
               }),
-            (0, s.jsx)(F.kt, {
-              onSelected: n,
+            n &&
+              (0, s.jsxs)(L.kt, {
+                onSelected: n,
+                className: ie().ValveOnlyBackground,
+                children: ["(VO) + ", (0, w.we)("#ImagePicker_Localized")],
+              }),
+            (0, s.jsx)(L.kt, {
+              onSelected: l,
               children: (0, w.we)("#EventEditor_ImageEdit_PreviewImage"),
             }),
           ],
         });
       }
-      function ne(e) {
+      function ce(e) {
         const { type: t, attrs: o } = e;
         return "image" == t.name
           ? { type: "image", attrs: o }
@@ -604,14 +662,14 @@
             ? { type: "video", attrs: o }
             : void 0;
       }
-      function le(e) {
+      function ue(e) {
         return "image" == e.type
           ? e.attrs.src
           : "video" == e.type
             ? e.attrs.mp4 || e.attrs.webm
             : void 0;
       }
-      function ie(e) {
+      function me(e) {
         const { schemaConfig: t, event: o, node: n, nodeAttrs: l } = e,
           { type: i, attrs: a } = l,
           r = t.ConvertAttrToBBCodeArgs(n, a);
@@ -637,7 +695,7 @@
               )
             : ((0, d.z_)(i, "unhandled type: " + i), null);
       }
-      function ae(e, t) {
+      function pe(e, t) {
         const { type: o, attrs: s } = t;
         let n;
         if (
@@ -648,7 +706,7 @@
           return t && f.pU.GetClanImageByImageHash(e, t);
         }
       }
-      function re(e) {
+      function _e(e) {
         const {
             clanSteamID: t,
             imageNodeType: o,
@@ -679,7 +737,7 @@
           closeImageModal: d,
           imageModal:
             a &&
-            (0, s.jsx)(de, {
+            (0, s.jsx)(he, {
               nodeAttrs: a,
               hideModal: d,
               onItemSelected: l,
@@ -690,7 +748,7 @@
           activeModal: null == a ? void 0 : a.type,
         };
       }
-      function de(e) {
+      function he(e) {
         const {
             bIsEdit: t = !1,
             nodeAttrs: o,
@@ -702,7 +760,7 @@
           } = e,
           { type: c, attrs: u } = o,
           m = (function (e, t) {
-            return _.useMemo(() => ae(e, t), [e, t.type, t.attrs]);
+            return _.useMemo(() => pe(e, t), [e, t.type, t.attrs]);
           })(l, o),
           [h, x] = _.useState(() =>
             m ||
@@ -727,7 +785,7 @@
         let b,
           E = null;
         if ("image" == c)
-          (E = (0, s.jsx)(ce, {
+          (E = (0, s.jsx)(xe, {
             active: "hotlink" == h,
             bIsEdit: t,
             hideModal: n,
@@ -739,7 +797,7 @@
               : (0, w.we)("#EventEditor_InsertImage_Title"));
         else {
           if ("video" != c) return (0, d.z_)(c, "Unhandled type"), null;
-          (E = (0, s.jsx)(ue, {
+          (E = (0, s.jsx)(ve, {
             active: "hotlink" == h,
             bIsEdit: t,
             hideModal: n,
@@ -765,7 +823,7 @@
             }),
             (0, s.jsx)("div", {
               className: p()(S.ClanImageModalMode, "uploaded" == h && S.Active),
-              children: (0, s.jsx)(me, {
+              children: (0, s.jsx)(fe, {
                 bIsEdit: t,
                 hideModal: n,
                 onImageSelected: v,
@@ -781,7 +839,7 @@
           ],
         });
       }
-      function ce(e) {
+      function xe(e) {
         const {
             active: t,
             bIsEdit: o,
@@ -819,7 +877,7 @@
           })
         );
       }
-      function ue(e) {
+      function ve(e) {
         const {
             active: t,
             bIsEdit: o,
@@ -889,7 +947,7 @@
           ],
         });
       }
-      function me(e) {
+      function fe(e) {
         const {
             bIsEdit: t,
             hideModal: o,
@@ -949,7 +1007,7 @@
           }),
         });
       }
-      function pe(e) {
+      function ge(e) {
         const { editModel: t, imageNode: o, videoNode: n, children: l } = e,
           i = _.useCallback(
             async (e) => {
@@ -963,14 +1021,14 @@
               const a = Object.values(i)[0];
               if (!a.bSuccess || a.uploadResult.success != c.R)
                 throw a.uploadResult.message;
-              const r = _e(
+              const r = je(
                 f.pU.GetClanImageByImageHash(s, a.uploadResult.image_hash),
                 o,
                 n,
               );
               return (
                 r.type == o &&
-                  (await (0, M.DB)(
+                  (await (0, I.DB)(
                     v.z.ReplacementTokenToClanImageURL(r.attrs.src),
                   )),
                 r
@@ -986,7 +1044,7 @@
             })
           : l;
       }
-      function _e(e, t, o) {
+      function je(e, t, o) {
         const s = (0, h.fw)(e);
         switch (e.file_type) {
           case u.bg.nn:
@@ -999,14 +1057,14 @@
             return t.create({ src: s });
         }
       }
-      var he = o(96640),
-        xe = o(79216);
-      var ve = o(70995),
-        fe = o(74410),
-        ge = o(72421),
-        je = o(52038),
-        be = o(63226);
-      function Ce(e) {
+      var be = o(96640),
+        Ce = o(79216);
+      var Ee = o(70995),
+        we = o(74410),
+        Ie = o(72421),
+        Me = o(52038),
+        ke = o(63226);
+      function Se(e) {
         const {
             videoID: t,
             align: o,
@@ -1015,7 +1073,7 @@
             setAttrs: i,
             focusView: a,
           } = e,
-          [r, d, c] = (0, I.uD)(),
+          [r, d, c] = (0, M.uD)(),
           u = _.useCallback(() => {
             c(), a();
           }, [c, a]),
@@ -1028,7 +1086,7 @@
         return (0, s.jsxs)(s.Fragment, {
           children: [
             r &&
-              (0, s.jsx)(Ee, {
+              (0, s.jsx)(De, {
                 videoID: t,
                 align: o,
                 bEditing: !0,
@@ -1036,14 +1094,14 @@
                 onSave: m,
               }),
             (0, s.jsxs)(U, {
-              className: (0, je.A)(be.PreviewYoutubeEditor, l && be.Selected),
+              className: (0, Me.A)(ke.PreviewYoutubeEditor, l && ke.Selected),
               children: [
                 (0, s.jsx)(O, {
                   onEditClick: d,
                   onDeleteClick: e.removeNode,
                   bStrongShadows: !0,
                 }),
-                l && (0, s.jsx)("div", { className: be.SelectionOverlay }),
+                l && (0, s.jsx)("div", { className: ke.SelectionOverlay }),
                 (0, s.jsx)(D.Bm, {
                   event: n.GetEventModel(),
                   strTag: "previewyoutube",
@@ -1056,7 +1114,7 @@
           ],
         });
       }
-      function Ee(e) {
+      function De(e) {
         const {
             videoID: t = "",
             align: o = "",
@@ -1064,11 +1122,11 @@
             hideModal: l,
             onSave: i,
           } = e,
-          [a, r] = _.useState(o || fe.V2.full),
+          [a, r] = _.useState(o || we.V2.full),
           [d, c] = _.useState(t ? `https://www.youtube.com/watch?v=${t}` : ""),
           [u, m] = _.useState(void 0),
           p = _.useCallback(() => {
-            const { strVideoID: e } = (0, ve.XU)(d);
+            const { strVideoID: e } = (0, Ee.XU)(d);
             return (
               e ? i(e, a) : m((0, w.we)("#EventEditor_InsertYouTube_NoURL")), !1
             );
@@ -1078,7 +1136,7 @@
           }, []);
         return (0, s.jsx)(H.EN, {
           active: !0,
-          children: (0, s.jsxs)(ge._, {
+          children: (0, s.jsxs)(Ie._, {
             strTitle: (0, w.we)("#EventEditor_InsertYouTube"),
             closeModal: l,
             strOKText: n
@@ -1086,7 +1144,7 @@
               : (0, w.we)("#EventEditor_InsertYouTube"),
             onOK: p,
             children: [
-              u && (0, s.jsx)("div", { className: be.Error, children: u }),
+              u && (0, s.jsx)("div", { className: ke.Error, children: u }),
               (0, s.jsx)(g.pd, {
                 label: (0, w.we)("#EventEditor_InsertYouTube_URL"),
                 placeholder: (0, w.we)("#EventEditor_InsertYouTube_Placholder"),
@@ -1098,18 +1156,18 @@
                 label: (0, w.we)("#EventEditor_InsertYouTube_Position"),
                 children: [
                   (0, s.jsx)(g.Od, {
-                    checked: a == fe.V2.left,
-                    onChange: (e) => e && r(fe.V2.left),
+                    checked: a == we.V2.left,
+                    onChange: (e) => e && r(we.V2.left),
                     label: (0, w.we)("#EventEditor_InsertYouTube_Left"),
                   }),
                   (0, s.jsx)(g.Od, {
-                    checked: a == fe.V2.right,
-                    onChange: (e) => e && r(fe.V2.right),
+                    checked: a == we.V2.right,
+                    onChange: (e) => e && r(we.V2.right),
                     label: (0, w.we)("#EventEditor_InsertYouTube_Right"),
                   }),
                   (0, s.jsx)(g.Od, {
-                    checked: a == fe.V2.full,
-                    onChange: (e) => e && r(fe.V2.full),
+                    checked: a == we.V2.full,
+                    onChange: (e) => e && r(we.V2.full),
                     label: (0, w.we)("#EventEditor_InsertYouTube_Full"),
                   }),
                 ],
@@ -1118,85 +1176,83 @@
           }),
         });
       }
-      var we = o(69001),
-        Me = o(25888),
-        Ie = o(65946),
-        ke = o(26161),
-        Se = o(32897),
-        De = o(78395),
-        ye = o(21869),
-        Te = o(1397),
-        Ne = o.n(Te),
-        Pe = o(22837),
-        Ue = o(63556),
-        Ge = o(44165),
-        Ae = o(95695),
-        Oe = o(99637),
-        Be = o(91675),
-        Ve = o(14771),
-        ze = o(87937),
-        Re = o(61819),
-        Fe = o(88942),
-        Le = o(78327),
-        Ye = o(41735),
-        He = o.n(Ye),
-        Ke = o(26408);
-      function qe(e) {
+      var ye = o(69001),
+        Te = o(65946),
+        Ne = o(26161),
+        Pe = o(32897),
+        Ue = o(78395),
+        Ge = o(21869),
+        Ae = o(1397),
+        Oe = o.n(Ae),
+        Be = o(22837),
+        Ve = o(63556),
+        ze = o(44165),
+        Re = o(99637),
+        Le = o(91675),
+        Fe = o(14771),
+        Ye = o(87937),
+        He = o(61819),
+        Ke = o(88942),
+        qe = o(78327),
+        Qe = o(41735),
+        $e = o.n(Qe),
+        We = o(26408);
+      function Je(e) {
         const { hideModal: t, fnUpdateSession: o } = e,
-          [n, l] = (0, _.useState)(() => tt(!0, null)),
-          [i, a] = (0, _.useState)(() => ot(!0, null)),
-          [r] = (0, Ie.q3)(() => [i.location_type]);
-        return (0, s.jsx)(ye.E, {
+          [n, l] = (0, _.useState)(() => lt(!0, null)),
+          [i, a] = (0, _.useState)(() => it(!0, null)),
+          [r] = (0, Te.q3)(() => [i.location_type]);
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsx)(De.o0, {
+          children: (0, s.jsx)(Ue.o0, {
             strTitle: (0, w.we)("#MeetSteam_create_title"),
             onOK: () => o(n, i),
             closeModal: () => {
-              a(ot(!0, null)), l(tt(!0, null)), t();
+              a(it(!0, null)), l(lt(!0, null)), t();
             },
             bOKDisabled: null == !r,
             children: (0, s.jsxs)("div", {
-              className: Ne().DialogCtn,
+              className: Oe().DialogCtn,
               children: [
-                (0, s.jsx)(We, { group: n, fnSetGroup: l }),
-                (0, s.jsx)(Xe, { session: i, fnSetSession: a }),
+                (0, s.jsx)(et, { group: n, fnSetGroup: l }),
+                (0, s.jsx)(ot, { session: i, fnSetSession: a }),
               ],
             }),
           }),
         });
       }
-      function Qe(e) {
+      function Xe(e) {
         const { hideModal: t, groupInput: o, fnUpdateGroupSession: n } = e,
-          [l, i] = (0, _.useState)(() => tt(!1, o));
-        return (0, s.jsx)(ye.E, {
+          [l, i] = (0, _.useState)(() => lt(!1, o));
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsx)(De.o0, {
+          children: (0, s.jsx)(Ue.o0, {
             strTitle: (0, w.we)("#MeetSteam_edit_title"),
             onOK: () => {
               n(l), t();
             },
             onCancel: () => {
-              i(tt(!1, o)), t();
+              i(lt(!1, o)), t();
             },
             children: (0, s.jsx)("div", {
-              className: Ne().DialogCtn,
-              children: (0, s.jsx)(We, { group: l, fnSetGroup: i }),
+              className: Oe().DialogCtn,
+              children: (0, s.jsx)(et, { group: l, fnSetGroup: i }),
             }),
           }),
         });
       }
-      function $e(e) {
+      function Ze(e) {
         const {
             bCreate: t,
             hideModal: o,
             sessionInput: n,
             fnUpdateSession: l,
           } = e,
-          [i, a] = (0, _.useState)(() => ot(t, n)),
-          [r] = (0, Ie.q3)(() => [i.location_type]);
-        return (0, s.jsx)(ye.E, {
+          [i, a] = (0, _.useState)(() => it(t, n)),
+          [r] = (0, Te.q3)(() => [i.location_type]);
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsx)(De.o0, {
+          children: (0, s.jsx)(Ue.o0, {
             strTitle: (0, w.we)(
               t ? "#MeetSteam_create_title" : "#MeetSteam_edit_title",
             ),
@@ -1204,19 +1260,19 @@
               l(i), o();
             },
             onCancel: () => {
-              a(ot(t, n)), o();
+              a(it(t, n)), o();
             },
             bOKDisabled: !r,
             children: (0, s.jsx)("div", {
-              className: Ne().DialogCtn,
-              children: (0, s.jsx)(Xe, { session: i, fnSetSession: a }),
+              className: Oe().DialogCtn,
+              children: (0, s.jsx)(ot, { session: i, fnSetSession: a }),
             }),
           }),
         });
       }
-      function We(e) {
+      function et(e) {
         const { group: t, fnSetGroup: o } = e,
-          n = (0, Ue.E)();
+          n = (0, Ve.E)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(g.pd, {
@@ -1237,9 +1293,9 @@
               children: (0, w.we)("#MeetSteam_edit_session_desc"),
             }),
             (0, s.jsx)("textarea", {
-              className: (0, je.A)(
+              className: (0, Me.A)(
                 "DialogTextInputBase",
-                Ne().EventDescriptionField,
+                Oe().EventDescriptionField,
               ),
               value: w.NT.Get(t.localized_session_description, n),
               rows: 5,
@@ -1272,16 +1328,16 @@
             (0, s.jsxs)(g.JU, {
               children: [
                 "FAQ ",
-                (0, s.jsx)(Ke.o, {
+                (0, s.jsx)(We.o, {
                   tooltip:
                     "Optional FAQ section which appears in the pop-up display and hidden by default",
                 }),
               ],
             }),
             (0, s.jsx)("textarea", {
-              className: (0, je.A)(
+              className: (0, Me.A)(
                 "DialogTextInputBase",
-                Ne().EventDescriptionField,
+                Oe().EventDescriptionField,
               ),
               value: w.NT.Get(t.localized_sesssion_faq, n),
               rows: 5,
@@ -1304,11 +1360,11 @@
               label:
                 "Ask partner to tell us what they want to learn from the sessions",
             }),
-            (0, s.jsx)(Je, { ...e }),
+            (0, s.jsx)(tt, { ...e }),
           ],
         });
       }
-      function Je(e) {
+      function tt(e) {
         var t;
         const { group: o, fnSetGroup: n } = e,
           [l, i] = (0, _.useState)(
@@ -1372,9 +1428,9 @@
               label: "Change Visibility Options",
             });
       }
-      function Xe(e) {
+      function ot(e) {
         const { session: t, fnSetSession: o } = e,
-          [n, l, i, a, r, d] = (0, Ie.q3)(() => [
+          [n, l, i, a, r, d] = (0, Te.q3)(() => [
             t.rtime_start,
             t.rtime_end,
             t.max_capacity,
@@ -1386,10 +1442,10 @@
         for (let e = 0; e < 4; ++e) c.push({ data: e, label: e });
         const u = Math.max(0, Math.floor((l - n) / 60)),
           m = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          p = "in_person" === r ? (null != d ? d : Se.hh) : m;
+          p = "in_person" === r ? (null != d ? d : Pe.hh) : m;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(et, {
+            (0, s.jsx)(nt, {
               startTime: t.rtime_start,
               location_type: r,
               fnUpdateLocationAndTZ: (e, s) =>
@@ -1397,12 +1453,12 @@
               in_person_time_zone: d,
             }),
             (0, s.jsx)("br", {}),
-            (0, s.jsx)(Oe.K, {
+            (0, s.jsx)(Re.K, {
               strDescription: (0, w.we)("#MeetSteam_edit_start"),
               nEarliestTime: 0,
               fnGetTimeToUpdate: () => n,
               fnSetTimeToUpdate: (e) =>
-                o({ ...t, rtime_start: e, rtime_end: e + Ve.Kp.PerMinute * u }),
+                o({ ...t, rtime_start: e, rtime_end: e + Fe.Kp.PerMinute * u }),
               fnIsValidDateTime: () => !0,
               bShowTimeZone: !0,
             }),
@@ -1413,11 +1469,11 @@
               label: (0, w.we)("#MeetSteam_edit_duration"),
               onChange: (e) => {
                 const s = Number.parseInt(e.currentTarget.value);
-                o({ ...t, rtime_end: t.rtime_start + Ve.Kp.PerMinute * s });
+                o({ ...t, rtime_end: t.rtime_start + Fe.Kp.PerMinute * s });
               },
               value: u,
             }),
-            (0, s.jsx)(Ze, {
+            (0, s.jsx)(st, {
               rtime_start: n,
               rtime_end: l,
               sDisplayTimeZone: p,
@@ -1425,7 +1481,7 @@
             (0, s.jsx)("br", {}),
             (0, s.jsx)("br", {}),
             (0, s.jsxs)("div", {
-              className: Ne().ParticipantRow,
+              className: Oe().ParticipantRow,
               children: [
                 (0, s.jsx)(g.pd, {
                   type: "number",
@@ -1451,13 +1507,13 @@
           ],
         });
       }
-      function Ze(e) {
+      function st(e) {
         const { rtime_start: t, rtime_end: o, sDisplayTimeZone: n } = e,
-          l = ze.unix(t).tz(Se.hh),
-          i = ze.unix(t).tz(n),
+          l = Ye.unix(t).tz(Pe.hh),
+          i = Ye.unix(t).tz(n),
           a = i.utcOffset() - l.utcOffset(),
-          r = ze.unix(o).tz(Se.hh),
-          d = ze.unix(o).tz(n),
+          r = Ye.unix(o).tz(Pe.hh),
+          d = Ye.unix(o).tz(n),
           c = d.utcOffset() - r.utcOffset();
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -1465,7 +1521,7 @@
               children: [
                 (0, w.we)("#MeetSteam_edit_displayed_start"),
                 ": ",
-                (0, Be.P0)(i.unix() + 60 * a, !1, i.format("z")),
+                (0, Le.P0)(i.unix() + 60 * a, !1, i.format("z")),
                 " ",
               ],
             }),
@@ -1473,14 +1529,14 @@
               children: [
                 (0, w.we)("#MeetSteam_edit_displayed_end"),
                 ": ",
-                (0, Be.P0)(d.unix() + 60 * c, !1, d.format("z")),
+                (0, Le.P0)(d.unix() + 60 * c, !1, d.format("z")),
                 " ",
               ],
             }),
           ],
         });
       }
-      function et(e) {
+      function nt(e) {
         const {
             startTime: t,
             location_type: o,
@@ -1488,12 +1544,12 @@
             in_person_time_zone: l,
           } = e,
           i = (function (e) {
-            const t = (0, Fe.I)({
+            const t = (0, Ke.I)({
               queryKey: ["timezone", e],
               queryFn: async () => {
-                const t = `${Le.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
+                const t = `${qe.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
                   o = { reference_time: e },
-                  s = await He().get(t, { params: o });
+                  s = await $e().get(t, { params: o });
                 return null == s ? void 0 : s.data.timezones;
               },
             });
@@ -1513,12 +1569,12 @@
           children: [
             (0, s.jsx)("div", {
               id: d,
-              className: Ae.EventEditorTextTitle,
+              className: le.EventEditorTextTitle,
               children: (0, w.we)("#MeetSteam_edit_date_display_title"),
             }),
             (0, s.jsx)("div", {
               id: c,
-              className: Ae.EventEditorTextSubTitle,
+              className: le.EventEditorTextSubTitle,
               children: (0, w.we)("#MeetSteam_edit_date_display_desc"),
             }),
             (0, s.jsxs)(g.zW, {
@@ -1538,7 +1594,7 @@
               ],
             }),
             "in_person" === o &&
-              (0, s.jsx)(Re.Ay, {
+              (0, s.jsx)(He.Ay, {
                 styles: { option: (e) => ({ ...e, color: "#444444" }) },
                 isSearchable: !0,
                 isMulti: !1,
@@ -1549,15 +1605,15 @@
                 defaultMenuIsOpen: !1,
                 value: l
                   ? { label: r(l), value: l }
-                  : { label: r(Se.hh), value: Se.hh },
+                  : { label: r(Pe.hh), value: Pe.hh },
                 onChange: (e) => n(o, e.value),
               }),
           ],
         });
       }
-      function tt(e, t) {
+      function lt(e, t) {
         if (e) {
-          const e = Me.mh.GetEditModel().GetEventModel()
+          const e = oe.mh.GetEditModel().GetEventModel()
             .jsondata.meet_steam_groups;
           let t = 0;
           do {
@@ -1565,10 +1621,10 @@
           } while (e && e.findIndex((e) => e.group_id == t) >= 0);
           return {
             group_id: t,
-            localized_session_title: (0, K.$Y)([], Pe.bP9, null),
-            localized_session_description: (0, K.$Y)([], Pe.bP9, null),
-            localized_sesssion_faq: (0, K.$Y)([], Pe.bP9, null),
-            localized_intended_audience: (0, K.$Y)([], Pe.bP9, null),
+            localized_session_title: (0, K.$Y)([], Be.bP9, null),
+            localized_session_description: (0, K.$Y)([], Be.bP9, null),
+            localized_sesssion_faq: (0, K.$Y)([], Be.bP9, null),
+            localized_intended_audience: (0, K.$Y)([], Be.bP9, null),
             group_visibility_tokens: [],
             ask_registration_question: !1,
             sessions: [],
@@ -1594,10 +1650,10 @@
             ),
             null);
       }
-      function ot(e, t) {
+      function it(e, t) {
         if (e) {
-          const e = Ge.HD.GetTimeNowWithOverride(),
-            t = Me.mh.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
+          const e = ze.HD.GetTimeNowWithOverride(),
+            t = oe.mh.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
             o =
               null == t ? void 0 : t.reduce((e, t) => e.concat(t.sessions), []);
           let s = 0;
@@ -1607,8 +1663,8 @@
           const n = 3600 * Math.ceil(e / 3600);
           return {
             id: s,
-            rtime_start: n + Ve.Kp.PerDay,
-            rtime_end: n + Ve.Kp.PerDay + Ve.Kp.PerHour,
+            rtime_start: n + Fe.Kp.PerDay,
+            rtime_end: n + Fe.Kp.PerDay + Fe.Kp.PerHour,
             max_capacity: 100,
             max_per_team: 3,
           };
@@ -1621,8 +1677,8 @@
             ),
             null);
       }
-      function st(e) {
-        const t = Me.mh.GetEditModel();
+      function at(e) {
+        const t = oe.mh.GetEditModel();
         for (
           let o = 0;
           o < t.GetEventModel().jsondata.meet_steam_groups.length;
@@ -1635,8 +1691,8 @@
         }
         return null;
       }
-      function nt(e) {
-        const t = Me.mh.GetEditModel();
+      function rt(e) {
+        const t = oe.mh.GetEditModel();
         for (
           let o = 0;
           o < t.GetEventModel().jsondata.meet_steam_groups.length;
@@ -1647,8 +1703,8 @@
         }
         return null;
       }
-      function lt(e) {
-        const t = Me.mh.GetEditModel();
+      function dt(e) {
+        const t = oe.mh.GetEditModel();
         for (
           let o = 0;
           o < t.GetEventModel().jsondata.meet_steam_schedules.length;
@@ -1663,33 +1719,33 @@
           null
         );
       }
-      var it = o(33561);
-      function at(e) {
+      var ct = o(33561);
+      function ut(e) {
         var t;
         const { focusView: o, removeNode: n, group_id: l } = e,
-          i = (0, it.LU)(),
-          a = (0, Ie.q3)(() => {
+          i = (0, ct.LU)(),
+          a = (0, Te.q3)(() => {
             var e;
             return null ===
               (e = i.GetEventModel().jsondata.meet_steam_groups) || void 0 === e
               ? void 0
               : e.find((e) => e.group_id == l);
           }),
-          [r, d, c] = (0, I.uD)(),
+          [r, d, c] = (0, M.uD)(),
           u = _.useCallback(() => {
             o(), c();
           }, [o, c]),
-          [m, p, h] = (0, I.uD)(),
+          [m, p, h] = (0, M.uD)(),
           x = _.useCallback(() => {
             o(), h();
           }, [o, h]);
-        return a && i.GetClanAccountID() == (0, ke.H)()
+        return a && i.GetClanAccountID() == (0, Ne.H)()
           ? (0, s.jsxs)("div", {
-              className: Ne().EditorCtn,
+              className: Oe().EditorCtn,
               children: [
-                (0, s.jsx)(rt, { groupData: a, focusView: o }),
+                (0, s.jsx)(mt, { groupData: a, focusView: o }),
                 (0, s.jsxs)("div", {
-                  className: Ne().controls,
+                  className: Oe().controls,
                   children: [
                     (0, s.jsx)(T.ff, {
                       onClick: d,
@@ -1722,29 +1778,29 @@
                   ],
                 }),
                 Boolean(r) &&
-                  (0, s.jsx)(Qe, {
+                  (0, s.jsx)(Xe, {
                     hideModal: u,
                     groupInput: a,
                     fnUpdateGroupSession: (e) => {
-                      const { groupIndex: t } = nt(e.group_id),
-                        o = Me.mh.GetEditModel();
+                      const { groupIndex: t } = rt(e.group_id),
+                        o = oe.mh.GetEditModel();
                       (o.GetEventModel().jsondata.meet_steam_groups[t] = e),
-                        o.SetDirty(we.IQ.description);
+                        o.SetDirty(ye.IQ.description);
                     },
                   }),
                 Boolean(m) &&
-                  (0, s.jsx)(ye.E, {
+                  (0, s.jsx)(Ge.E, {
                     active: !0,
-                    children: (0, s.jsx)(De.o0, {
+                    children: (0, s.jsx)(Ue.o0, {
                       strTitle: (0, w.we)("#Button_Delete"),
                       strDescription: (0, w.we)("#Dialog_AreYouSure"),
                       onOK: () => {
-                        const { groupIndex: e } = nt(a.group_id),
-                          t = Me.mh.GetEditModel(),
+                        const { groupIndex: e } = rt(a.group_id),
+                          t = oe.mh.GetEditModel(),
                           o = [...t.GetEventModel().jsondata.meet_steam_groups];
                         o.splice(e, 1),
                           (t.GetEventModel().jsondata.meet_steam_groups = o),
-                          t.SetDirty(we.IQ.description),
+                          t.SetDirty(ye.IQ.description),
                           n();
                       },
                       closeModal: x,
@@ -1756,20 +1812,20 @@
               children: "Error: Cannot edit meet steam session group",
             });
       }
-      function rt(e) {
+      function mt(e) {
         const { groupData: t, focusView: o } = e,
-          n = (0, Ie.q3)(() => t.sessions || []),
-          [l, i, a] = (0, I.uD)(),
+          n = (0, Te.q3)(() => t.sessions || []),
+          [l, i, a] = (0, M.uD)(),
           r = _.useCallback(() => {
             o(), a();
           }, [o, a]);
         return t
-          ? (0, s.jsxs)(Se.jr, {
+          ? (0, s.jsxs)(Pe.jr, {
               groupData: t,
               children: [
                 n.map((e, l) =>
                   (0, s.jsx)(
-                    dt,
+                    pt,
                     {
                       focusView: o,
                       sessionID: e.id,
@@ -1779,53 +1835,53 @@
                   ),
                 ),
                 (0, s.jsx)(T.ff, {
-                  className: Ne().AddNew,
+                  className: Oe().AddNew,
                   onClick: i,
                   tooltip: (0, w.we)("#MeetSteam_add"),
                   children: (0, s.jsx)(N.OMN, {}),
                 }),
                 l &&
-                  (0, s.jsx)($e, {
+                  (0, s.jsx)(Ze, {
                     bCreate: !0,
                     hideModal: r,
                     fnUpdateSession: (e) => {
-                      const o = Me.mh.GetEditModel(),
+                      const o = oe.mh.GetEditModel(),
                         s = [...t.sessions, e];
                       s.sort((e, t) => e.rtime_start - t.rtime_start),
                         (t.sessions = s),
-                        o.SetDirty(we.IQ.description);
+                        o.SetDirty(ye.IQ.description);
                     },
                   }),
               ],
             })
           : null;
       }
-      function dt(e) {
+      function pt(e) {
         const { sessionID: t, bShowOR: o, focusView: n } = e,
-          [l, i] = (0, I.OP)(),
-          a = (0, Ie.q3)(() => {
-            const { groupIndex: e, sessionIndex: o } = st(t);
-            return Me.mh.GetEditModel().GetEventModel().jsondata
+          [l, i] = (0, M.OP)(),
+          a = (0, Te.q3)(() => {
+            const { groupIndex: e, sessionIndex: o } = at(t);
+            return oe.mh.GetEditModel().GetEventModel().jsondata
               .meet_steam_groups[e].sessions[o];
           }),
-          [r, d, c] = (0, I.uD)(),
+          [r, d, c] = (0, M.uD)(),
           u = _.useCallback(() => {
             n(), c();
           }, [n, c]),
-          [m, p, h] = (0, I.uD)(),
+          [m, p, h] = (0, M.uD)(),
           x = _.useCallback(() => {
             n(), h();
           }, [n, h]);
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsxs)("div", {
-              className: Ne().Column,
+              className: Oe().Column,
               ...i,
               children: [
-                (0, s.jsx)(Se.Tn, { sessionData: a }),
+                (0, s.jsx)(Pe.Tn, { sessionData: a }),
                 Boolean(l) &&
                   (0, s.jsxs)("div", {
-                    className: Ne().controls,
+                    className: Oe().controls,
                     children: [
                       (0, s.jsx)(T.ff, {
                         onClick: d,
@@ -1840,13 +1896,13 @@
                     ],
                   }),
                 Boolean(r) &&
-                  (0, s.jsx)($e, {
+                  (0, s.jsx)(Ze, {
                     bCreate: !1,
                     hideModal: u,
                     sessionInput: a,
                     fnUpdateSession: (e) => {
-                      const o = Me.mh.GetEditModel(),
-                        { groupIndex: s, sessionIndex: n } = st(t),
+                      const o = oe.mh.GetEditModel(),
+                        { groupIndex: s, sessionIndex: n } = at(t),
                         l = [
                           ...o.GetEventModel().jsondata.meet_steam_groups[s]
                             .sessions,
@@ -1856,18 +1912,18 @@
                         (o.GetEventModel().jsondata.meet_steam_groups[
                           s
                         ].sessions = l),
-                        o.SetDirty(we.IQ.description);
+                        o.SetDirty(ye.IQ.description);
                     },
                   }),
                 Boolean(m) &&
-                  (0, s.jsx)(ye.E, {
+                  (0, s.jsx)(Ge.E, {
                     active: !0,
-                    children: (0, s.jsx)(De.o0, {
+                    children: (0, s.jsx)(Ue.o0, {
                       strTitle: (0, w.we)("#Button_Delete"),
                       strDescription: (0, w.we)("#Dialog_AreYouSure"),
                       onOK: () => {
-                        const e = Me.mh.GetEditModel(),
-                          { groupIndex: o, sessionIndex: s } = st(t),
+                        const e = oe.mh.GetEditModel(),
+                          { groupIndex: o, sessionIndex: s } = at(t),
                           n = [
                             ...e.GetEventModel().jsondata.meet_steam_groups[o]
                               .sessions,
@@ -1877,21 +1933,21 @@
                           (e.GetEventModel().jsondata.meet_steam_groups[
                             o
                           ].sessions = n),
-                          e.SetDirty(we.IQ.description);
+                          e.SetDirty(ye.IQ.description);
                       },
                       closeModal: x,
                     }),
                   }),
               ],
             }),
-            o && (0, s.jsx)(Se.w3, {}),
+            o && (0, s.jsx)(Pe.w3, {}),
           ],
         });
       }
-      var ct = o(36969),
-        ut = o(38539),
-        mt = (o(9024), o(86807));
-      function pt(e) {
+      var _t = o(36969),
+        ht = o(38539),
+        xt = (o(9024), o(86807));
+      function vt(e) {
         const { schema: t } = e,
           {
             table: o,
@@ -1902,7 +1958,7 @@
           } = t.nodes,
           r = _.useCallback(
             (e, t, s) =>
-              !ut.aH(e) &&
+              !ht.aH(e) &&
               (t &&
                 t(
                   e.tr.insert(
@@ -1928,101 +1984,101 @@
             })
           : null;
       }
-      function _t(e) {
+      function ft(e) {
         const { schema: t, className: o } = e,
           { callbacks: n, view: l } = (0, T.wU)(),
-          [i, a] = _.useState(() => !!t.nodes.table && ut.aH(l.state));
+          [i, a] = _.useState(() => !!t.nodes.table && ht.aH(l.state));
         return (
-          (0, I.hL)(
+          (0, M.hL)(
             n,
             _.useCallback(
-              (e) => a(!!t.nodes.table && ut.aH(e.state)),
+              (e) => a(!!t.nodes.table && ht.aH(e.state)),
               [t.nodes.table],
             ),
           ),
-          (0, s.jsx)(mt.R, {
+          (0, s.jsx)(xt.R, {
             visible: i,
             msAnimationDuration: 100,
             children: (0, s.jsx)(T.Ez, {
               className: o,
-              children: (0, s.jsx)(ht, { schema: t }),
+              children: (0, s.jsx)(gt, { schema: t }),
             }),
           })
         );
       }
-      function ht(e) {
+      function gt(e) {
         const { schema: t } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_AddRowBefore"),
-              command: ut.JD,
+              command: ht.JD,
               children: (0, s.jsx)(N.BPi, {}),
             }),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_AddRowAfter"),
-              command: ut.gC,
+              command: ht.gC,
               children: (0, s.jsx)(N.fG_, {}),
             }),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_DeleteRow"),
-              command: ut.aR,
+              command: ht.aR,
               children: (0, s.jsx)(N.XW_, {}),
             }),
             (0, s.jsx)(T.XQ, {}),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_AddColumnBefore"),
-              command: ut.RC,
+              command: ht.RC,
               children: (0, s.jsx)(N.l26, {}),
             }),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_AddColumnAfter"),
-              command: ut.GU,
+              command: ht.GU,
               children: (0, s.jsx)(N.ur3, {}),
             }),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_DeleteColumn"),
-              command: ut.gR,
+              command: ht.gR,
               children: (0, s.jsx)(N.dyV, {}),
             }),
             (0, s.jsx)(T.XQ, {}),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_HeaderRow"),
-              command: ut.uC,
+              command: ht.uC,
               children: (0, s.jsx)(N.mLi, {}),
             }),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_HeaderColumn"),
-              command: ut.xV,
+              command: ht.xV,
               children: (0, s.jsx)(N.sXN, {}),
             }),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_HeaderCell"),
-              command: ut._G,
+              command: ht._G,
               children: (0, s.jsx)(N.Maz, {}),
             }),
             (0, s.jsx)(T.XQ, {}),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_MergeCells"),
-              command: ut.w7,
+              command: ht.w7,
               children: (0, s.jsx)(N.rnq, {}),
             }),
             (0, s.jsx)(T.cQ, {
               tooltip: (0, w.we)("#FormattingToolbar_Tables_SplitCells"),
-              command: ut.L0,
+              command: ht.L0,
               children: (0, s.jsx)(N.vB9, {}),
             }),
             !1,
           ],
         });
       }
-      var xt = o(44483),
-        vt = o(44832),
-        ft = o(28516),
-        gt = o.n(ft);
-      function jt(e, t) {
+      var jt = o(44483),
+        bt = o(44832),
+        Ct = o(28516),
+        Et = o.n(Ct);
+      function wt(e, t) {
         if (e) {
-          const e = Me.mh.GetEditModel().GetEventModel()
+          const e = oe.mh.GetEditModel().GetEventModel()
             .jsondata.meet_steam_schedules;
           let t = 0;
           do {
@@ -2038,12 +2094,12 @@
             ),
             null);
       }
-      function bt(e) {
+      function It(e) {
         const { hideModal: t, fnUpdateSession: o, inputScheduleModel: n } = e,
-          l = (0, Ge.f1)(),
-          i = (0, it.LU)(),
-          [a, r] = (0, _.useState)(() => jt(!Boolean(n), n)),
-          [d, c, u] = (0, Ie.q3)(() => [
+          l = (0, ze.f1)(),
+          i = (0, ct.LU)(),
+          [a, r] = (0, _.useState)(() => wt(!Boolean(n), n)),
+          [d, c, u] = (0, Te.q3)(() => [
             a.location_type,
             a.in_person_time_zone,
             i.GetEventModel().jsondata.meet_steam_groups || [],
@@ -2052,27 +2108,27 @@
             const e = u.reduce((e, t) => e.concat(t.sessions), []);
             return 0 == e.length ? l : Math.min(...e.map((e) => e.rtime_start));
           }, [u, l]);
-        return (0, s.jsx)(ye.E, {
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsx)(De.o0, {
+          children: (0, s.jsx)(Ue.o0, {
             strTitle: Boolean(n)
               ? "Update Meet Steam Schedule"
               : "Create Meet Steam Schedule View",
             onOK: () => o(a),
             closeModal: () => {
-              r(jt(!Boolean(n), n)), t();
+              r(wt(!Boolean(n), n)), t();
             },
             children: (0, s.jsxs)("div", {
-              className: gt().DialogCtn,
+              className: Et().DialogCtn,
               children: [
-                (0, s.jsx)(et, {
+                (0, s.jsx)(nt, {
                   startTime: i.GetEventStartTime(),
                   location_type: d,
                   in_person_time_zone: c,
                   fnUpdateLocationAndTZ: (e, t) =>
                     r({ ...a, location_type: e, in_person_time_zone: t }),
                 }),
-                (0, s.jsx)(Ct, {
+                (0, s.jsx)(Mt, {
                   inputScheduleModel: a,
                   fnUpdateSession: (e) => r(e),
                   rtBreakStartingTime: m,
@@ -2082,15 +2138,15 @@
           }),
         });
       }
-      function Ct(e) {
+      function Mt(e) {
         const {
             fnUpdateSession: t,
             inputScheduleModel: o,
             rtBreakStartingTime: n,
           } = e,
-          [l, i] = (0, Ie.q3)(() => [
+          [l, i] = (0, Te.q3)(() => [
             o.session_breaks || [],
-            o.in_person_time_zone || Se.hh,
+            o.in_person_time_zone || Pe.hh,
           ]),
           a = (0, _.useCallback)(
             (e, s) => {
@@ -2112,7 +2168,7 @@
               .sort((e, t) => t.rtime_start - e.rtime_start)
               .map((e, t) =>
                 (0, s.jsx)(
-                  Et,
+                  kt,
                   {
                     sDisplayTimeZone: i,
                     index: t,
@@ -2132,9 +2188,9 @@
                 a(
                   {
                     break_id: s,
-                    localized_break_description: (0, K.$Y)([], Pe.bP9, null),
+                    localized_break_description: (0, K.$Y)([], Be.bP9, null),
                     rtime_start: n,
-                    rtime_end: n + Ve.Kp.PerHour,
+                    rtime_end: n + Fe.Kp.PerHour,
                   },
                   (null === (e = o.session_breaks) || void 0 === e
                     ? void 0
@@ -2146,15 +2202,15 @@
           ],
         });
       }
-      function Et(e) {
+      function kt(e) {
         const {
             breakSession: t,
             fnOnUpdate: o,
             index: n,
             sDisplayTimeZone: l,
           } = e,
-          i = (0, Ue.E)(),
-          [a, r, d, c] = (0, Ie.q3)(() => [
+          i = (0, Ve.E)(),
+          [a, r, d, c] = (0, Te.q3)(() => [
             t.rtime_start,
             t.rtime_end,
             t.localized_break_description[i] || "",
@@ -2164,12 +2220,12 @@
           children: [
             (0, s.jsxs)("div", { children: ["Break # ", n + 1] }),
             (0, s.jsx)("br", {}),
-            (0, s.jsx)(Oe.K, {
+            (0, s.jsx)(Re.K, {
               strDescription: "Break Start Time",
               nEarliestTime: 0,
               fnGetTimeToUpdate: () => a,
               fnSetTimeToUpdate: (e) =>
-                o({ ...t, rtime_start: e, rtime_end: e + Ve.Kp.PerMinute * c }),
+                o({ ...t, rtime_start: e, rtime_end: e + Fe.Kp.PerMinute * c }),
               fnIsValidDateTime: () => !0,
               bShowTimeZone: !0,
             }),
@@ -2180,7 +2236,7 @@
               label: "Break duration in minutes",
               onChange: (e) => {
                 const s = Number.parseInt(e.currentTarget.value);
-                o({ ...t, rtime_end: t.rtime_start + Ve.Kp.PerMinute * s });
+                o({ ...t, rtime_end: t.rtime_start + Fe.Kp.PerMinute * s });
               },
               value: c,
             }),
@@ -2194,7 +2250,7 @@
                   o(s);
               },
             }),
-            (0, s.jsx)(Ze, {
+            (0, s.jsx)(st, {
               rtime_start: a,
               rtime_end: r,
               sDisplayTimeZone: l,
@@ -2202,10 +2258,10 @@
           ],
         });
       }
-      function wt(e) {
+      function St(e) {
         const { focusView: t, removeNode: o, schedule_id: n } = e,
-          l = (0, it.LU)(),
-          i = (0, Ie.q3)(() => {
+          l = (0, ct.LU)(),
+          i = (0, Te.q3)(() => {
             var e;
             return null ===
               (e = l.GetEventModel().jsondata.meet_steam_schedules) ||
@@ -2213,24 +2269,24 @@
               ? void 0
               : e.find((e) => e.schedule_id == n);
           }),
-          [a, r, d] = (0, I.uD)(),
+          [a, r, d] = (0, M.uD)(),
           c = _.useCallback(() => {
             t(), d();
           }, [t, d]),
-          [u, m, p] = (0, I.uD)(),
+          [u, m, p] = (0, M.uD)(),
           h = _.useCallback(() => {
             t(), p();
           }, [t, p]);
-        return i && l.GetClanAccountID() == (0, ke.H)()
+        return i && l.GetClanAccountID() == (0, Ne.H)()
           ? (0, s.jsxs)("div", {
-              className: gt().EditorCtn,
+              className: Et().EditorCtn,
               children: [
-                (0, s.jsx)(Se.fs, {
+                (0, s.jsx)(Pe.fs, {
                   eventModel: l.GetEventModel(),
                   scheduleData: i,
                 }),
                 (0, s.jsxs)("div", {
-                  className: gt().controls,
+                  className: Et().controls,
                   children: [
                     (0, s.jsx)(T.ff, {
                       onClick: r,
@@ -2245,30 +2301,30 @@
                   ],
                 }),
                 Boolean(a) &&
-                  (0, s.jsx)(bt, {
+                  (0, s.jsx)(It, {
                     hideModal: c,
                     inputScheduleModel: i,
                     fnUpdateSession: (e) => {
-                      const { scheduleIndex: t } = lt(e.schedule_id);
+                      const { scheduleIndex: t } = dt(e.schedule_id);
                       (l.GetEventModel().jsondata.meet_steam_schedules[t] = e),
-                        l.SetDirty(we.IQ.description);
+                        l.SetDirty(ye.IQ.description);
                     },
                   }),
                 Boolean(u) &&
-                  (0, s.jsx)(ye.E, {
+                  (0, s.jsx)(Ge.E, {
                     active: !0,
-                    children: (0, s.jsx)(De.o0, {
+                    children: (0, s.jsx)(Ue.o0, {
                       strTitle: (0, w.we)("#Button_Delete"),
                       strDescription: (0, w.we)("#Dialog_AreYouSure"),
                       onOK: () => {
-                        const { scheduleIndex: e } = lt(i.schedule_id),
-                          t = Me.mh.GetEditModel(),
+                        const { scheduleIndex: e } = dt(i.schedule_id),
+                          t = oe.mh.GetEditModel(),
                           s = [
                             ...t.GetEventModel().jsondata.meet_steam_schedules,
                           ];
                         s.splice(e, 1),
                           (t.GetEventModel().jsondata.meet_steam_schedules = s),
-                          t.SetDirty(we.IQ.description),
+                          t.SetDirty(ye.IQ.description),
                           o();
                       },
                       closeModal: h,
@@ -2280,11 +2336,11 @@
               children: "Error: Cannot edit meet steam schedule view",
             });
       }
-      var Mt = o(10820),
-        It = o(68033),
-        kt = o(30193),
-        St = o(14947);
-      function Dt(e) {
+      var Dt = o(10820),
+        yt = o(68033),
+        Tt = o(30193),
+        Nt = o(14947);
+      function Pt(e) {
         const { schema: t } = e,
           { callbacks: o, view: n } = (0, T.wU)(),
           [l, i] = _.useState(!1),
@@ -2303,10 +2359,10 @@
           r = _.useCallback(
             (e) => {
               i(!0);
-              const t = (0, R.lX)((0, s.jsx)(yt, { OnSelected: a }), e, {
+              const t = (0, R.lX)((0, s.jsx)(Ut, { OnSelected: a }), e, {
                 bOverlapHorizontal: !0,
               });
-              (0, St.z7)(
+              (0, Nt.z7)(
                 () => !t.visible,
                 () => i(!1),
               );
@@ -2320,34 +2376,34 @@
           children: (0, s.jsx)(z.jZW, {}),
         });
       }
-      function yt(e) {
+      function Ut(e) {
         return (
-          (0, kt.k3)(It.A),
-          (0, s.jsx)(Mt.iY, { emoticonStore: It.A, OnSelected: e.OnSelected })
+          (0, Tt.k3)(yt.A),
+          (0, s.jsx)(Dt.iY, { emoticonStore: yt.A, OnSelected: e.OnSelected })
         );
       }
-      var Tt = o(14703),
-        Nt = o(4796),
-        Pt = o(63287),
-        Ut = o.n(Pt),
-        Gt = o(7913),
-        At = o(82102),
-        Ot = o(69484),
-        Bt = o(27939);
-      function Vt(e) {
+      var Gt = o(14703),
+        At = o(4796),
+        Ot = o(63287),
+        Bt = o.n(Ot),
+        Vt = o(7913),
+        zt = o(82102),
+        Rt = o(69484),
+        Lt = o(27939);
+      function Ft(e) {
         const { hideModal: t, fnUpdateSession: o, clanAccountID: n } = e,
-          [l, i] = (0, _.useState)(() => Wt(!0, null));
-        return (0, s.jsx)(ye.E, {
+          [l, i] = (0, _.useState)(() => eo(!0, null));
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsx)(De.o0, {
+          children: (0, s.jsx)(Ue.o0, {
             strTitle: (0, w.we)("#UserPolls_Create_title"),
             onOK: () => o(l),
             closeModal: () => {
-              i(Wt(!0, null)), t();
+              i(eo(!0, null)), t();
             },
             children: (0, s.jsx)("div", {
-              className: Ut().DialogCtn,
-              children: (0, s.jsx)(Ft, {
+              className: Bt().DialogCtn,
+              children: (0, s.jsx)(Kt, {
                 clanAccountID: n,
                 userPollDef: l,
                 fnSetDef: i,
@@ -2356,28 +2412,28 @@
           }),
         });
       }
-      function zt(e) {
+      function Yt(e) {
         const {
             hideModal: t,
             userPollDef: o,
             clanAccountID: n,
             fnUpdateUserPollDef: l,
           } = e,
-          [i, a] = (0, _.useState)(() => Wt(!1, o));
-        return (0, s.jsx)(ye.E, {
+          [i, a] = (0, _.useState)(() => eo(!1, o));
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsx)(De.o0, {
+          children: (0, s.jsx)(Ue.o0, {
             strTitle: (0, w.we)("#UserPolls_Edit_title"),
             onOK: () => {
               l(i);
             },
             onCancel: () => {
-              a(Wt(!1, o));
+              a(eo(!1, o));
             },
             closeModal: t,
             children: (0, s.jsx)("div", {
-              className: Ut().DialogCtn,
-              children: (0, s.jsx)(Ft, {
+              className: Bt().DialogCtn,
+              children: (0, s.jsx)(Kt, {
                 userPollDef: i,
                 clanAccountID: n,
                 fnSetDef: a,
@@ -2386,26 +2442,26 @@
           }),
         });
       }
-      function Rt(e) {
+      function Ht(e) {
         switch (e) {
           default:
-          case Tt.$t.k_EPollResult_NotVisible:
+          case Gt.$t.k_EPollResult_NotVisible:
             return (0, w.we)("#UserPolls_Visibility_None");
-          case Tt.$t.k_EPollResult_Visible_After_End:
+          case Gt.$t.k_EPollResult_Visible_After_End:
             return (0, w.we)("#UserPolls_Visibility_End");
-          case Tt.$t.k_EPollResult_Visible_After_Vote:
+          case Gt.$t.k_EPollResult_Visible_After_Vote:
             return (0, w.we)("#UserPolls_Visibility_Voter");
-          case Tt.$t.k_EPollResult_Visible_After_Vote_Or_End:
+          case Gt.$t.k_EPollResult_Visible_After_Vote_Or_End:
             return (0, w.we)("#UserPolls_Visibility_Voter_or_End");
-          case Tt.$t.k_EPollResult_Visible_On_Demand:
+          case Gt.$t.k_EPollResult_Visible_On_Demand:
             return (0, w.we)("#UserPolls_Visibility_OnDemand");
         }
       }
-      function Ft(e) {
+      function Kt(e) {
         const { userPollDef: t, fnSetDef: o } = e,
-          n = (0, Ue.E)(),
-          [l] = (0, Ie.q3)(() => [t.results_visibility_settings]),
-          i = Object.values(Tt.$t).map((e) => ({ data: e, label: Rt(e) }));
+          n = (0, Ve.E)(),
+          [l] = (0, Te.q3)(() => [t.results_visibility_settings]),
+          i = Object.values(Gt.$t).map((e) => ({ data: e, label: Ht(e) }));
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(g.pd, {
@@ -2422,13 +2478,13 @@
                   o(s);
               },
             }),
-            (0, s.jsx)(Kt, { ...e }),
-            (0, s.jsx)(Ht, { ...e }),
+            (0, s.jsx)(Wt, { ...e }),
+            (0, s.jsx)($t, { ...e }),
             (0, s.jsx)(g.JU, { children: (0, w.we)("#UserPolls_Visibility") }),
             (0, s.jsx)("div", {
-              className: Ut().PollArea,
+              className: Bt().PollArea,
               children: (0, s.jsx)(g.m, {
-                strDropDownClassName: Ae.DropDownScroll,
+                strDropDownClassName: le.DropDownScroll,
                 rgOptions: i,
                 selectedOption: l,
                 onChange: (e) => {
@@ -2439,26 +2495,26 @@
                 contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
               }),
             }),
-            (0, s.jsx)(Lt, { ...e }),
+            (0, s.jsx)(qt, { ...e }),
           ],
         });
       }
-      function Lt(e) {
+      function qt(e) {
         const { clanAccountID: t, userPollDef: o, fnSetDef: n } = e,
-          l = (0, it.LU)(),
-          i = (0, Tt.rR)(l.GetClanSteamID()),
-          [a] = (0, Ie.q3)(() => [o.user_poll_background]),
+          l = (0, ct.LU)(),
+          i = (0, Gt.rR)(l.GetClanSteamID()),
+          [a] = (0, Te.q3)(() => [o.user_poll_background]),
           r = (0, _.useCallback)(
             (e, t, s, l, i) => {
               (0, d.wT)(
-                null != s && s >= Pe.Bhc && s < Pe.bP9,
+                null != s && s >= Be.Bhc && s < Be.bP9,
                 "Unexpected value for elang: " + s,
               ),
                 (0, d.wT)(
                   "user_poll_background" === i,
                   "Unexpected artwork type " + i,
                 );
-              const a = (0, At.G)(e, t);
+              const a = (0, zt.G)(e, t);
               a.image && n({ ...o, user_poll_background: a.image });
             },
             [n, o],
@@ -2469,14 +2525,14 @@
               children: (0, w.we)("#UserPolls_BackgroundImage"),
             }),
             (0, s.jsxs)("div", {
-              className: Ut().PollArea,
+              className: Bt().PollArea,
               children: [
                 (0, s.jsx)("p", {
                   children: (0, w.we)("#UserPolls_BackgroundImage_desc"),
                 }),
-                (0, s.jsx)(Gt.a, {
+                (0, s.jsx)(Vt.a, {
                   rgRealmList: l.GetIncludedRealmList(),
-                  rgSupportArtwork: Tt.YX,
+                  rgSupportArtwork: Gt.YX,
                   strUploadAjaxURL: i,
                   fnOnUploadSuccess: r,
                   elOverrideDragAndDropText: (0, w.we)(
@@ -2485,53 +2541,53 @@
                   bTwoPhaseUpload: !0,
                   bDirectTempStorageUpload: !0,
                 }),
-                Boolean(a) && (0, s.jsx)("img", { src: (0, Ot.F)(t, a) }),
+                Boolean(a) && (0, s.jsx)("img", { src: (0, Rt.F)(t, a) }),
               ],
             }),
           ],
         });
       }
-      function Yt(e) {
+      function Qt(e) {
         switch (e) {
-          case Tt.BY.k_EPollVoter_AnyUser:
+          case Gt.BY.k_EPollVoter_AnyUser:
             return (0, w.we)("#UserPolls_Voters_Anyone");
-          case Tt.BY.k_EPollVoter_UserGameInLibrary:
+          case Gt.BY.k_EPollVoter_UserGameInLibrary:
             return (0, w.we)("#UserPolls_Voters_Owners");
-          case Tt.BY.k_EPollVoter_MinPlayTime:
+          case Gt.BY.k_EPollVoter_MinPlayTime:
             return (0, w.we)("#UserPolls_Voters_Players");
-          case Tt.BY.k_EPollVoter_MemberOfGroup:
+          case Gt.BY.k_EPollVoter_MemberOfGroup:
             return (0, w.we)("#UserPolls_Voters_Members");
         }
       }
-      function Ht(e) {
+      function $t(e) {
         const { clanAccountID: t, userPollDef: o, fnSetDef: n } = e,
-          [l, i] = (0, Nt.TB)(t),
-          [a, r] = (0, Ie.q3)(() => [
+          [l, i] = (0, At.TB)(t),
+          [a, r] = (0, Te.q3)(() => [
             o.voter_min_playtime_seconds,
             o.voter_eligibility,
           ]),
           d = (0, _.useMemo)(() => {
             const e = [
               {
-                label: Yt(Tt.BY.k_EPollVoter_AnyUser),
-                data: Tt.BY.k_EPollVoter_AnyUser,
+                label: Qt(Gt.BY.k_EPollVoter_AnyUser),
+                data: Gt.BY.k_EPollVoter_AnyUser,
               },
             ];
             return (
-              i && i.is_ogg && t != Bt.II
+              i && i.is_ogg && t != Lt.II
                 ? (e.push({
-                    label: Yt(Tt.BY.k_EPollVoter_UserGameInLibrary),
-                    data: Tt.BY.k_EPollVoter_UserGameInLibrary,
+                    label: Qt(Gt.BY.k_EPollVoter_UserGameInLibrary),
+                    data: Gt.BY.k_EPollVoter_UserGameInLibrary,
                   }),
                   e.push({
-                    label: Yt(Tt.BY.k_EPollVoter_MinPlayTime),
-                    data: Tt.BY.k_EPollVoter_MinPlayTime,
+                    label: Qt(Gt.BY.k_EPollVoter_MinPlayTime),
+                    data: Gt.BY.k_EPollVoter_MinPlayTime,
                   }))
                 : !i ||
-                  (i.is_ogg && t != Bt.II) ||
+                  (i.is_ogg && t != Lt.II) ||
                   e.push({
-                    label: Yt(Tt.BY.k_EPollVoter_MemberOfGroup),
-                    data: Tt.BY.k_EPollVoter_MemberOfGroup,
+                    label: Qt(Gt.BY.k_EPollVoter_MemberOfGroup),
+                    data: Gt.BY.k_EPollVoter_MemberOfGroup,
                   }),
               e
             );
@@ -2540,30 +2596,30 @@
           children: [
             (0, s.jsx)(g.JU, { children: (0, w.we)("#UserPolls_Voters") }),
             (0, s.jsxs)("div", {
-              className: Ut().PollArea,
+              className: Bt().PollArea,
               children: [
                 (0, s.jsx)(g.m, {
-                  strDropDownClassName: Ae.DropDownScroll,
+                  strDropDownClassName: le.DropDownScroll,
                   rgOptions: d,
                   selectedOption: r,
                   onChange: (e) => {
                     if (e.data != o.voter_eligibility) {
                       let t = { ...o, voter_eligibility: e.data };
-                      e.data == Tt.BY.k_EPollVoter_MinPlayTime &&
-                        (t.voter_min_playtime_seconds = 5 * $t),
+                      e.data == Gt.BY.k_EPollVoter_MinPlayTime &&
+                        (t.voter_min_playtime_seconds = 5 * Zt),
                         n(t);
                     }
                   },
                   bDisableMouseOverlay: !0,
                   contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
                 }),
-                Boolean(r == Tt.BY.k_EPollVoter_MinPlayTime) &&
+                Boolean(r == Gt.BY.k_EPollVoter_MinPlayTime) &&
                   (0, s.jsx)("div", {
-                    className: Ut().OptionInset,
+                    className: Bt().OptionInset,
                     children: (0, s.jsx)(g.pd, {
                       type: "number",
                       label: (0, w.we)("#UserPolls_MinPlayTime"),
-                      value: a / $t,
+                      value: a / Zt,
                       min: 5,
                       onChange: (e) => {
                         var t, s;
@@ -2577,7 +2633,7 @@
                                 : t.value,
                             )) && void 0 !== s
                             ? s
-                            : 5) * $t;
+                            : 5) * Zt;
                         o.voter_min_playtime_seconds != l &&
                           n({ ...o, voter_min_playtime_seconds: l });
                       },
@@ -2588,9 +2644,9 @@
           ],
         });
       }
-      function Kt(e) {
+      function Wt(e) {
         const { userPollDef: t, fnSetDef: o } = e,
-          [n, l] = (0, Ie.q3)(() => [
+          [n, l] = (0, Te.q3)(() => [
             t.poll_end_time,
             t.poll_end_days_since_start,
           ]);
@@ -2598,10 +2654,10 @@
           children: [
             (0, s.jsx)(g.JU, { children: (0, w.we)("#UserPolls_Starts") }),
             (0, s.jsxs)("div", {
-              className: Ut().PollArea,
+              className: Bt().PollArea,
               children: [
                 (0, s.jsxs)("div", {
-                  className: (0, je.A)(Ae.FlexRowContainer, Ae.RadioOption),
+                  className: (0, Me.A)(le.FlexRowContainer, le.RadioOption),
                   children: [
                     (0, s.jsx)("input", {
                       type: "radio",
@@ -2613,7 +2669,7 @@
                           o({
                             ...t,
                             poll_end_time: void 0,
-                            poll_end_days_since_start: qt * Qt,
+                            poll_end_days_since_start: Jt * Xt,
                           });
                       },
                     }),
@@ -2627,10 +2683,10 @@
                 }),
                 Boolean(l) &&
                   (0, s.jsx)("div", {
-                    className: Ut().OptionInset,
+                    className: Bt().OptionInset,
                     children: (0, s.jsx)(g.pd, {
                       type: "number",
-                      value: l / Qt,
+                      value: l / Xt,
                       min: 1,
                       onChange: (e) => {
                         var s, n;
@@ -2644,7 +2700,7 @@
                                 : s.value,
                             )) && void 0 !== n
                             ? n
-                            : 1) * Qt;
+                            : 1) * Xt;
                         t.poll_end_days_since_start != l &&
                           o({
                             ...t,
@@ -2655,7 +2711,7 @@
                     }),
                   }),
                 (0, s.jsxs)("div", {
-                  className: (0, je.A)(Ae.FlexRowContainer, Ae.RadioOption),
+                  className: (0, Me.A)(le.FlexRowContainer, le.RadioOption),
                   children: [
                     (0, s.jsx)("input", {
                       type: "radio",
@@ -2668,7 +2724,7 @@
                             ...t,
                             poll_end_days_since_start: void 0,
                             poll_end_time:
-                              Math.floor(Date.now() / 1e3) + qt * Qt,
+                              Math.floor(Date.now() / 1e3) + Jt * Xt,
                           });
                       },
                     }),
@@ -2682,9 +2738,9 @@
                 }),
                 Boolean(n) &&
                   (0, s.jsxs)("div", {
-                    className: (0, je.A)(Ut().OptionInset, Ae.FlexRowContainer),
+                    className: (0, Me.A)(Bt().OptionInset, le.FlexRowContainer),
                     children: [
-                      (0, s.jsx)(Oe.K, {
+                      (0, s.jsx)(Re.K, {
                         strDescription: "",
                         nEarliestTime: Math.floor(Date.now() / 1e3) + 3600,
                         fnGetTimeToUpdate: () => n,
@@ -2709,13 +2765,13 @@
           ],
         });
       }
-      const qt = 7,
-        Qt = 86400,
-        $t = 60;
-      function Wt(e, t) {
+      const Jt = 7,
+        Xt = 86400,
+        Zt = 60;
+      function eo(e, t) {
         if (e) {
           const e =
-            Me.mh.GetEditModel().GetEventModel().jsondata.user_polls || [];
+            oe.mh.GetEditModel().GetEventModel().jsondata.user_polls || [];
           let t = 0;
           do {
             t = Math.floor(1e4 + 9e4 * Math.random());
@@ -2723,11 +2779,11 @@
           return {
             poll_id: t,
             options: [],
-            localized_poll_description: (0, K.$Y)([], Pe.bP9, null),
-            poll_end_days_since_start: qt * Qt,
+            localized_poll_description: (0, K.$Y)([], Be.bP9, null),
+            poll_end_days_since_start: Jt * Xt,
             poll_end_time: void 0,
-            results_visibility_settings: Tt.$t.k_EPollResult_Visible_On_Demand,
-            voter_eligibility: Tt.BY.k_EPollVoter_AnyUser,
+            results_visibility_settings: Gt.$t.k_EPollResult_Visible_On_Demand,
+            voter_eligibility: Gt.BY.k_EPollVoter_AnyUser,
           };
         }
         return t
@@ -2741,18 +2797,18 @@
             ),
             null);
       }
-      function Jt(e) {
+      function to(e) {
         const {
             bCreate: t,
             hideModal: o,
             pollOptionsInput: n,
             fnUpdatePollOption: l,
           } = e,
-          [i, a] = (0, _.useState)(() => Xt(t, n)),
-          r = (0, Ue.E)();
-        return (0, s.jsx)(ye.E, {
+          [i, a] = (0, _.useState)(() => oo(t, n)),
+          r = (0, Ve.E)();
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsx)(De.o0, {
+          children: (0, s.jsx)(Ue.o0, {
             strTitle: (0, w.we)(
               t ? "#UserPolls_Option_Create" : "#UserPolls_Option_Edit",
             ),
@@ -2760,10 +2816,10 @@
               l(i), o();
             },
             onCancel: () => {
-              a(Xt(t, n)), o();
+              a(oo(t, n)), o();
             },
             children: (0, s.jsx)("div", {
-              className: Ut().DialogCtn,
+              className: Bt().DialogCtn,
               children: (0, s.jsx)(g.pd, {
                 type: "text",
                 label: (0, w.we)("#UserPolls_Option_Title"),
@@ -2783,9 +2839,9 @@
           }),
         });
       }
-      function Xt(e, t) {
+      function oo(e, t) {
         if (e) {
-          const e = Me.mh.GetEditModel().GetEventModel().jsondata.user_polls,
+          const e = oe.mh.GetEditModel().GetEventModel().jsondata.user_polls,
             t =
               null == e ? void 0 : e.reduce((e, t) => e.concat(t.options), []);
           let o = 0;
@@ -2794,7 +2850,7 @@
           } while (t && t.findIndex((e) => e.option_id == o) >= 0);
           return {
             option_id: o,
-            localized_option: (0, K.$Y)([], Pe.bP9, null),
+            localized_option: (0, K.$Y)([], Be.bP9, null),
           };
         }
         return t
@@ -2805,11 +2861,11 @@
             ),
             null);
       }
-      var Zt = o(69818),
-        eo = o(56330),
-        to = o(37935);
-      function oo(e) {
-        const t = Me.mh.GetEditModel();
+      var so = o(69818),
+        no = o(56330),
+        lo = o(37935);
+      function io(e) {
+        const t = oe.mh.GetEditModel();
         for (let o = 0; o < t.GetEventModel().jsondata.user_polls.length; ++o) {
           const s = t.GetEventModel().jsondata.user_polls[o];
           for (let t = 0; t < s.options.length; ++t)
@@ -2818,40 +2874,40 @@
         }
         return null;
       }
-      function so(e) {
-        const t = Me.mh.GetEditModel();
+      function ao(e) {
+        const t = oe.mh.GetEditModel();
         for (let o = 0; o < t.GetEventModel().jsondata.user_polls.length; ++o) {
           const s = t.GetEventModel().jsondata.user_polls[o];
           if (s.poll_id == e) return { userPollDef: s, pollIndex: o };
         }
         return null;
       }
-      var no = o(56654);
-      function lo(e) {
+      var ro = o(56654);
+      function co(e) {
         const { focusView: t, removeNode: o, poll_id: n } = e,
-          l = (0, it.LU)(),
-          i = (0, Ie.q3)(() => {
+          l = (0, ct.LU)(),
+          i = (0, Te.q3)(() => {
             var e;
             return null === (e = l.GetEventModel().jsondata.user_polls) ||
               void 0 === e
               ? void 0
               : e.find((e) => e.poll_id == n);
           }),
-          [a, r, d] = (0, I.uD)(),
+          [a, r, d] = (0, M.uD)(),
           c = _.useCallback(() => {
             t(), d();
           }, [t, d]),
-          [u, m, p] = (0, I.uD)(),
+          [u, m, p] = (0, M.uD)(),
           h = _.useCallback(() => {
             t(), p();
           }, [t, p]);
         return i
           ? (0, s.jsxs)("div", {
-              className: Ne().EditorCtn,
+              className: Oe().EditorCtn,
               children: [
-                (0, s.jsx)(io, { userPollDef: i, focusView: t }),
+                (0, s.jsx)(uo, { userPollDef: i, focusView: t }),
                 (0, s.jsxs)("div", {
-                  className: Ne().controls,
+                  className: Oe().controls,
                   children: [
                     (0, s.jsx)(T.ff, {
                       onClick: r,
@@ -2865,41 +2921,41 @@
                     }),
                     (0, s.jsx)(T.ff, {
                       onClick: () => {},
-                      tooltip: Rt(i.results_visibility_settings),
+                      tooltip: Ht(i.results_visibility_settings),
                       children: (0, s.jsx)(z.WLA, {}),
                     }),
                     (0, s.jsx)(T.ff, {
                       onClick: () => {},
-                      tooltip: Yt(i.voter_eligibility),
+                      tooltip: Qt(i.voter_eligibility),
                       children: (0, s.jsx)(z.JpU, {}),
                     }),
                   ],
                 }),
                 Boolean(a) &&
-                  (0, s.jsx)(zt, {
+                  (0, s.jsx)(Yt, {
                     hideModal: c,
                     userPollDef: i,
                     clanAccountID: l.GetClanAccountID(),
                     fnUpdateUserPollDef: (e) => {
-                      const { pollIndex: t } = so(e.poll_id),
-                        o = Me.mh.GetEditModel();
+                      const { pollIndex: t } = ao(e.poll_id),
+                        o = oe.mh.GetEditModel();
                       (o.GetEventModel().jsondata.user_polls[t] = e),
-                        o.SetDirty(we.IQ.description);
+                        o.SetDirty(ye.IQ.description);
                     },
                   }),
                 Boolean(u) &&
-                  (0, s.jsx)(ye.E, {
+                  (0, s.jsx)(Ge.E, {
                     active: !0,
-                    children: (0, s.jsx)(De.o0, {
+                    children: (0, s.jsx)(Ue.o0, {
                       strTitle: (0, w.we)("#Button_Delete"),
                       strDescription: (0, w.we)("#Dialog_AreYouSure"),
                       onOK: () => {
-                        const { pollIndex: e } = so(i.poll_id),
-                          t = Me.mh.GetEditModel(),
+                        const { pollIndex: e } = ao(i.poll_id),
+                          t = oe.mh.GetEditModel(),
                           s = [...t.GetEventModel().jsondata.user_polls];
                         s.splice(e, 1),
                           (t.GetEventModel().jsondata.user_polls = s),
-                          t.SetDirty(we.IQ.description),
+                          t.SetDirty(ye.IQ.description),
                           o();
                       },
                       closeModal: h,
@@ -2908,48 +2964,48 @@
               ],
             })
           : (0, s.jsx)("div", {
-              className: eo.ErrorStylesWithIcon,
+              className: no.ErrorStylesWithIcon,
               children: (0, w.we)("#UserPolls_Editor_FailToFindModel", n),
             });
       }
-      function io(e) {
+      function uo(e) {
         const { userPollDef: t, focusView: o } = e,
-          [n, l] = (0, Ie.q3)(() => [
+          [n, l] = (0, Te.q3)(() => [
             t.options || [],
             t.randomize_option_order,
           ]),
-          i = (0, it.LU)(),
-          a = (0, Ue.E)(),
-          [r, d, c] = (0, I.uD)(),
+          i = (0, ct.LU)(),
+          a = (0, Ve.E)(),
+          [r, d, c] = (0, M.uD)(),
           u = _.useCallback(() => {
             o(), c();
           }, [o, c]),
-          [m, p, h] = (0, I.uD)(),
+          [m, p, h] = (0, M.uD)(),
           x = _.useCallback(() => {
             o(), h();
           }, [o, h]);
         return t
-          ? (0, s.jsxs)(to.W6, {
+          ? (0, s.jsxs)(lo.W6, {
               userPollDef: t,
               eventModel: i.GetEventModel(),
               lang: a,
               children: [
                 n.map((e) =>
                   (0, s.jsx)(
-                    ro,
+                    po,
                     { focusView: o, optionID: e.option_id },
                     "polloption" + t.poll_id + "_" + e.option_id,
                   ),
                 ),
                 (0, s.jsxs)("div", {
-                  className: Ut().AdminOptions,
+                  className: Bt().AdminOptions,
                   children: [
-                    (0, s.jsx)(Zt.wl, {
+                    (0, s.jsx)(so.wl, {
                       className: "",
                       onClick: d,
                       children: (0, w.we)("#UserPolls_Option_Add"),
                     }),
-                    (0, s.jsx)(Zt.wl, {
+                    (0, s.jsx)(so.wl, {
                       className: "",
                       onClick: p,
                       children: (0, w.we)("#UserPolls_Option_Reorder"),
@@ -2957,18 +3013,18 @@
                   ],
                 }),
                 r &&
-                  (0, s.jsx)(Jt, {
+                  (0, s.jsx)(to, {
                     bCreate: !0,
                     hideModal: u,
                     fnUpdatePollOption: (e) => {
-                      const o = Me.mh.GetEditModel();
+                      const o = oe.mh.GetEditModel();
                       t.options || (t.options = []),
                         t.options.push(e),
-                        o.SetDirty(we.IQ.description);
+                        o.SetDirty(ye.IQ.description);
                     },
                   }),
                 m &&
-                  (0, s.jsx)(ao, {
+                  (0, s.jsx)(mo, {
                     hideModal: x,
                     options: n,
                     bRandomize: l,
@@ -2980,19 +3036,19 @@
             })
           : null;
       }
-      function ao(e) {
+      function mo(e) {
         const {
             options: t,
             bRandomize: o,
             fnUpdateOptions: n,
             hideModal: l,
           } = e,
-          i = (0, Ue.E)(),
+          i = (0, Ve.E)(),
           [a, r] = (0, _.useState)(o),
           [d, c] = (0, _.useState)(t);
-        return (0, s.jsx)(ye.E, {
+        return (0, s.jsx)(Ge.E, {
           active: !0,
-          children: (0, s.jsxs)(De.o0, {
+          children: (0, s.jsxs)(Ue.o0, {
             strTitle: (0, w.we)("#UserPolls_Option_Reorder"),
             strDescription: (0, w.we)("#UserPolls_Option_Reorder_desc"),
             onCancel: () => {
@@ -3008,7 +3064,7 @@
                 checked: a,
                 onChange: r,
               }),
-              (0, s.jsx)(no.A, {
+              (0, s.jsx)(ro.A, {
                 items: d,
                 render: (e) => {
                   var t, o;
@@ -3019,7 +3075,7 @@
                         : t[i]) ||
                       (null === (o = e.localized_option) || void 0 === o
                         ? void 0
-                        : o[Pe.Bhc]) ||
+                        : o[Be.Bhc]) ||
                       "",
                   });
                 },
@@ -3029,31 +3085,31 @@
           }),
         });
       }
-      function ro(e) {
+      function po(e) {
         const { optionID: t, focusView: o } = e,
-          [n, l] = (0, I.OP)(),
-          i = (0, Ie.q3)(() => {
-            const { optionIndex: e, pollIndex: o } = oo(t);
-            return Me.mh.GetEditModel().GetEventModel().jsondata.user_polls[o]
+          [n, l] = (0, M.OP)(),
+          i = (0, Te.q3)(() => {
+            const { optionIndex: e, pollIndex: o } = io(t);
+            return oe.mh.GetEditModel().GetEventModel().jsondata.user_polls[o]
               .options[e];
           }),
-          a = (0, Ue.E)(),
-          [r, d, c] = (0, I.uD)(),
+          a = (0, Ve.E)(),
+          [r, d, c] = (0, M.uD)(),
           u = _.useCallback(() => {
             o(), c();
           }, [o, c]),
-          [m, p, h] = (0, I.uD)(),
+          [m, p, h] = (0, M.uD)(),
           x = _.useCallback(() => {
             o(), h();
           }, [o, h]);
         return (0, s.jsxs)("div", {
-          className: Ne().Column,
+          className: Oe().Column,
           ...l,
           children: [
-            (0, s.jsx)(to.s3, { pollOptionDef: i, lang: a }),
+            (0, s.jsx)(lo.s3, { pollOptionDef: i, lang: a }),
             Boolean(n) &&
               (0, s.jsxs)("div", {
-                className: Ne().controls,
+                className: Oe().controls,
                 children: [
                   (0, s.jsx)(T.ff, {
                     onClick: d,
@@ -3068,32 +3124,32 @@
                 ],
               }),
             Boolean(r) &&
-              (0, s.jsx)(Jt, {
+              (0, s.jsx)(to, {
                 bCreate: !1,
                 hideModal: u,
                 pollOptionsInput: i,
                 fnUpdatePollOption: (e) => {
-                  const o = Me.mh.GetEditModel(),
-                    { optionIndex: s, pollIndex: n } = oo(t),
+                  const o = oe.mh.GetEditModel(),
+                    { optionIndex: s, pollIndex: n } = io(t),
                     l = [...o.GetEventModel().jsondata.user_polls[n].options];
                   (l[s] = e),
                     (o.GetEventModel().jsondata.user_polls[n].options = l),
-                    o.SetDirty(we.IQ.description);
+                    o.SetDirty(ye.IQ.description);
                 },
               }),
             Boolean(m) &&
-              (0, s.jsx)(ye.E, {
+              (0, s.jsx)(Ge.E, {
                 active: !0,
-                children: (0, s.jsx)(De.o0, {
+                children: (0, s.jsx)(Ue.o0, {
                   strTitle: (0, w.we)("#Button_Delete"),
                   strDescription: (0, w.we)("#Dialog_AreYouSure"),
                   onOK: () => {
-                    const e = Me.mh.GetEditModel(),
-                      { optionIndex: o, pollIndex: s } = oo(t),
+                    const e = oe.mh.GetEditModel(),
+                      { optionIndex: o, pollIndex: s } = io(t),
                       n = [...e.GetEventModel().jsondata.user_polls[s].options];
                     n.splice(o, 1),
                       (e.GetEventModel().jsondata.user_polls[s].options = n),
-                      e.SetDirty(we.IQ.description);
+                      e.SetDirty(ye.IQ.description);
                   },
                   closeModal: x,
                 }),
@@ -3101,7 +3157,7 @@
           ],
         });
       }
-      const co = _.memo(function (e) {
+      const _o = _.memo(function (e) {
         const {
           view: t,
           schema: o,
@@ -3120,50 +3176,50 @@
               (0, s.jsxs)(T.Ez, {
                 className: e.className,
                 children: [
-                  (0, s.jsx)(ct.MV, {}),
+                  (0, s.jsx)(_t.MV, {}),
                   (0, s.jsx)(T.XQ, {}),
-                  (0, s.jsx)(ct.Km, { schema: o }),
+                  (0, s.jsx)(_t.Km, { schema: o }),
                   (0, s.jsx)(T.XQ, {}),
-                  o.marks.link && (0, s.jsx)(uo, { schema: o }),
+                  o.marks.link && (0, s.jsx)(ho, { schema: o }),
                   (0, s.jsx)(T.XQ, {}),
-                  (0, s.jsx)(ct.Hz, { schema: o }),
-                  (0, s.jsx)(ct.WJ, { schema: o, levels: 3 }),
+                  (0, s.jsx)(_t.Hz, { schema: o }),
+                  (0, s.jsx)(_t.WJ, { schema: o, levels: 3 }),
                   (0, s.jsx)(T.XQ, {}),
-                  (0, s.jsx)(Dt, { schema: o }),
-                  (0, s.jsx)(po, { schema: o, clanSteamID: i }),
-                  (0, s.jsx)(pt, { schema: o }),
-                  (0, s.jsx)(ct.C$, {
+                  (0, s.jsx)(Pt, { schema: o }),
+                  (0, s.jsx)(vo, { schema: o, clanSteamID: i }),
+                  (0, s.jsx)(vt, { schema: o }),
+                  (0, s.jsx)(_t.C$, {
                     schema: o,
                     showIndentButtonsAsNeeded: !0,
                   }),
                   (0, s.jsx)(T.hK, {}),
                   r &&
-                    (0, s.jsx)(ct.Nt, {
+                    (0, s.jsx)(_t.Nt, {
                       bSpellcheckEnabled: a,
                       setSpellcheckEnabled: r,
                     }),
                   o.nodes.meetsteamsessiongroup &&
-                    (0, s.jsx)(ho, { schema: o }),
+                    (0, s.jsx)(go, { schema: o }),
                   o.nodes.meetsteamscheduleview &&
-                    (0, s.jsx)(xo, { schema: o }),
+                    (0, s.jsx)(jo, { schema: o }),
                   o.nodes.userpolls &&
                     k.iA.is_support &&
-                    (0, s.jsx)(mo, { schema: o }),
+                    (0, s.jsx)(xo, { schema: o }),
                 ],
               }),
-              (0, s.jsx)(_t, { className: e.className, schema: o }),
+              (0, s.jsx)(ft, { className: e.className, schema: o }),
             ],
           }),
         });
       });
-      function uo(e) {
-        const t = (0, vt.V9)();
-        return (0, s.jsx)(ct.z9, { schema: e.schema, addtlAttrs: t });
+      function ho(e) {
+        const t = (0, bt.V9)();
+        return (0, s.jsx)(_t.z9, { schema: e.schema, addtlAttrs: t });
       }
-      function mo(e) {
+      function xo(e) {
         const { schema: t } = e,
           { callbacks: o, view: n } = (0, T.wU)(),
-          l = (0, it.LU)(),
+          l = (0, ct.LU)(),
           [i, a, r] = (0, Y.uD)(),
           d = _.useCallback(() => {
             r(), n.focus();
@@ -3188,7 +3244,7 @@
         return (0, s.jsxs)(s.Fragment, {
           children: [
             i &&
-              (0, s.jsx)(Vt, {
+              (0, s.jsx)(Ft, {
                 hideModal: d,
                 clanAccountID: l.GetClanAccountID(),
                 fnUpdateSession: c,
@@ -3202,7 +3258,7 @@
           ],
         });
       }
-      function po(e) {
+      function vo(e) {
         const { schema: t, clanSteamID: o } = e,
           { callbacks: n, view: l } = (0, T.wU)(),
           { image: i, video: a, previewyoutube: r } = t.nodes,
@@ -3218,7 +3274,7 @@
             showInsertVideoModal: m,
             imageModal: p,
             activeModal: h,
-          } = re({
+          } = _e({
             clanSteamID: o,
             imageNodeType: i,
             videoNodeType: a,
@@ -3242,12 +3298,12 @@
                 toggled: "video" == h,
                 children: (0, s.jsx)(N.CeX, {}),
               }),
-            r && (0, s.jsx)(_o, { schema: t }),
+            r && (0, s.jsx)(fo, { schema: t }),
             (i || a || r) && (0, s.jsx)(T.XQ, {}),
           ],
         });
       }
-      function _o(e) {
+      function fo(e) {
         const { schema: t } = e,
           { callbacks: o, view: n } = (0, T.wU)(),
           [l, i, a] = (0, Y.uD)(),
@@ -3256,7 +3312,7 @@
           }, [a, n]),
           d = _.useCallback(
             (e, o) => {
-              !(function (e, t, o, s = fe.V2.left) {
+              !(function (e, t, o, s = we.V2.left) {
                 e.dispatch(
                   e.state.tr.insert(
                     e.state.selection.to,
@@ -3270,20 +3326,20 @@
           );
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            l && (0, s.jsx)(Ee, { hideModal: r, onSave: d }),
+            l && (0, s.jsx)(De, { hideModal: r, onSave: d }),
             (0, s.jsx)(T.ff, {
               tooltip: "#EventEditor_InsertYouTube",
               onClick: i,
               toggled: l,
-              children: (0, s.jsx)("img", { src: xt.A }),
+              children: (0, s.jsx)("img", { src: jt.A }),
             }),
           ],
         });
       }
-      function ho(e) {
+      function go(e) {
         const { schema: t } = e,
           { callbacks: o, view: n } = (0, T.wU)(),
-          l = (0, it.LU)(),
+          l = (0, ct.LU)(),
           [i, a, r] = (0, Y.uD)(),
           d = _.useCallback(() => {
             r(), n.focus();
@@ -3307,23 +3363,23 @@
             },
             [t, n, d, l],
           );
-        if ((null == l ? void 0 : l.GetClanAccountID()) == (0, ke.H)())
+        if ((null == l ? void 0 : l.GetClanAccountID()) == (0, Ne.H)())
           return (0, s.jsxs)(s.Fragment, {
             children: [
-              i && (0, s.jsx)(qe, { hideModal: d, fnUpdateSession: c }),
+              i && (0, s.jsx)(Je, { hideModal: d, fnUpdateSession: c }),
               (0, s.jsx)(T.ff, {
                 tooltip: "#MeetSteam_add_group_ttip",
                 onClick: a,
                 toggled: i,
-                children: (0, s.jsx)("img", { src: xt.A }),
+                children: (0, s.jsx)("img", { src: jt.A }),
               }),
             ],
           });
       }
-      function xo(e) {
+      function jo(e) {
         const { schema: t } = e,
           { callbacks: o, view: n } = (0, T.wU)(),
-          l = (0, it.LU)(),
+          l = (0, ct.LU)(),
           [i, a, r] = (0, Y.uD)(),
           d = _.useCallback(() => {
             r(), n.focus();
@@ -3345,11 +3401,11 @@
             },
             [t, n, d, l],
           );
-        if ((null == l ? void 0 : l.GetClanAccountID()) == (0, ke.H)())
+        if ((null == l ? void 0 : l.GetClanAccountID()) == (0, Ne.H)())
           return (0, s.jsxs)(s.Fragment, {
             children: [
               i &&
-                (0, s.jsx)(bt, {
+                (0, s.jsx)(It, {
                   hideModal: d,
                   inputScheduleModel: null,
                   fnUpdateSession: c,
@@ -3358,23 +3414,23 @@
                 tooltip: "#MeetSteam_add_schedule_ttip",
                 onClick: a,
                 toggled: i,
-                children: (0, s.jsx)("img", { src: xt.A }),
+                children: (0, s.jsx)("img", { src: jt.A }),
               }),
             ],
           });
       }
-      var vo = o(75844),
-        fo = o(90316),
-        go = o.n(fo),
-        jo = o(1805),
-        bo = o(81962);
-      function Co(e) {
+      var bo = o(75844),
+        Co = o(90316),
+        Eo = o.n(Co),
+        wo = o(1805),
+        Io = o(81962);
+      function Mo(e) {
         const { schema: t, emoticonStore: o } = e,
           n = t.nodes.emoticon;
-        (0, kt.k3)(o),
+        (0, Tt.k3)(o),
           (0, i.c$)(
             _.useMemo(
-              () => (0, xe.sM)({ rules: [wo(/:([a-zA-Z0-9_]+):$/, n, o)] }),
+              () => (0, Ce.sM)({ rules: [So(/:([a-zA-Z0-9_]+):$/, n, o)] }),
               [n, o],
             ),
           );
@@ -3382,7 +3438,7 @@
           () => [
             {
               type: n,
-              component: Eo,
+              component: ko,
               readProps: (e) => ({ emoticonStore: o, emoticon: e.textContent }),
             },
           ],
@@ -3390,40 +3446,40 @@
         );
         return (0, s.jsx)(a.U, { specs: l });
       }
-      function Eo(e) {
+      function ko(e) {
         const { selected: t, emoticonStore: o, emoticon: n } = e;
-        (0, kt.k3)(o);
+        (0, Tt.k3)(o);
         if (o.BHasEmoticon(n)) {
           const e = t
             ? { background: "#54a5d4", filter: "brightness(1.2)" }
             : void 0;
           return (0, s.jsx)("span", {
             style: e,
-            children: (0, s.jsx)(bo.n, { emoticon: n }),
+            children: (0, s.jsx)(Io.n, { emoticon: n }),
           });
         }
         return `:${n}:`;
       }
-      function wo(e, t, o) {
-        return new xe.fV(e, (e, s, n, l) => {
+      function So(e, t, o) {
+        return new Ce.fV(e, (e, s, n, l) => {
           const i = s[1];
           if (!o.BHasEmoticon(i)) return null;
           const a = t.create(null, e.schema.text(i));
           return e.tr.replaceWith(n, l, a);
         });
       }
-      var Mo = o(73560),
-        Io = o(91254);
-      function ko(e) {
+      var Do = o(73560),
+        yo = o(91254);
+      function To(e) {
         const { editModel: t, href: o } = e,
-          n = (0, Mo.W7)(o);
+          n = (0, Do.W7)(o);
         if (n) {
           const l = n.fnBBComponent(o, {
-            partnerEventStore: Io.O3,
+            partnerEventStore: yo.O3,
             event: t.GetEventModel(),
           });
           return (0, s.jsx)(A, {
-            toolbar: (0, s.jsx)(So, {
+            toolbar: (0, s.jsx)(No, {
               href: o,
               removeNode: e.removeNode,
               update: e.update,
@@ -3434,7 +3490,7 @@
         }
         return (0, s.jsx)("a", { href: o, children: o });
       }
-      function So(e) {
+      function No(e) {
         const { href: t, removeNode: o, update: n, schema: l } = e;
         return (0, s.jsxs)(O, {
           onDeleteClick: o,
@@ -3455,18 +3511,18 @@
           ],
         });
       }
-      var Do = o(42714);
-      const yo = (0, vo.PA)(function (e) {
+      var Po = o(42714);
+      const Uo = (0, bo.PA)(function (e) {
         const { editModel: t } = e,
           o = t.GetEventModel().loadedAllLanguages,
           n = t.GetCurEditLanguage();
         return o
           ? (0, s.jsx)(q.tH, {
-              children: (0, s.jsx)(To, { ...e, eCurrentEditLanguage: n }),
+              children: (0, s.jsx)(Go, { ...e, eCurrentEditLanguage: n }),
             })
           : null;
       });
-      const To = _.memo(function (e) {
+      const Go = _.memo(function (e) {
         const {
             editModel: t,
             refOnInsertImage: o,
@@ -3474,7 +3530,7 @@
             eCurrentEditLanguage: a,
           } = e,
           [r, c] = _.useState(),
-          m = _.useMemo(() => (0, he.u)(i), [i]),
+          m = _.useMemo(() => (0, be.u)(i), [i]),
           [p, x] = _.useState(),
           v = (function (e, t) {
             const { nodes: o } = t.pm_schema,
@@ -3491,7 +3547,7 @@
                         e.GetClanSteamID(),
                         l.groups.filename,
                       );
-                      let n = s && _e(s, t, o);
+                      let n = s && je(s, t, o);
                       if (n) return n;
                     }
                     return "default";
@@ -3502,7 +3558,7 @@
               })(e, o.image, o.video),
               n = (function (e, t) {
                 const o = _.useCallback(
-                  (e) => ((0, Mo.yO)(e) ? t.create({ href: e }) : "default"),
+                  (e) => ((0, Do.yO)(e) ? t.create({ href: e }) : "default"),
                   [t],
                 );
                 return t ? o : void 0;
@@ -3526,13 +3582,13 @@
                   null == l
                     ? void 0
                     : l.replace(
-                        kt.pN.GetUnvalidatedEmoticonReplaceRegex(),
+                        Tt.pN.GetUnvalidatedEmoticonReplaceRegex(),
                         "[emoticon]$1[/emoticon]",
                       )),
                 new n.n(e, l, (e) => t.SetDescription(o, e), {
                   parser: {
                     fnProcessText: (t) =>
-                      (0, Do.F)(e.pm_schema, t, e.pm_schema.marks.link, s),
+                      (0, Po.F)(e.pm_schema, t, e.pm_schema.marks.link, s),
                   },
                 })
               );
@@ -3582,32 +3638,32 @@
               );
             }, [e, t, o, s, n]);
           })(o, j.image, j.video, b.link, r),
-          (0, s.jsx)(pe, {
+          (0, s.jsx)(ge, {
             editModel: t,
             imageNode: j.image,
             videoNode: j.video,
             children: (0, s.jsxs)("div", {
-              className: go().EventDescriptionContainer,
+              className: Eo().EventDescriptionContainer,
               children: [
-                (0, s.jsx)(co, {
+                (0, s.jsx)(_o, {
                   view: r,
                   schema: m.pm_schema,
                   refUpdateToolbar: g,
-                  className: go().ToolBar,
+                  className: Eo().ToolBar,
                   clanSteamID: t.GetClanSteamID(),
                 }),
                 (0, s.jsx)("div", {
-                  className: go().EventDescriptionArea,
-                  children: (0, s.jsx)(jo.l, {
+                  className: Eo().EventDescriptionArea,
+                  children: (0, s.jsx)(wo.l, {
                     pmState: p,
-                    className: (0, je.A)(
-                      go().EventDescriptionRichField,
-                      go().EventDetailsBody,
+                    className: (0, Me.A)(
+                      Eo().EventDescriptionRichField,
+                      Eo().EventDetailsBody,
                     ),
                     refOnUpdate: g,
                     refView: c,
                     panelProps: { onBlur: () => p.CommitChanges() },
-                    children: (0, s.jsx)(No, {
+                    children: (0, s.jsx)(Ao, {
                       eventSchemaConfig: m,
                       editModel: t,
                       onURLPasted: v,
@@ -3619,7 +3675,7 @@
           })
         );
       });
-      const No = _.memo(function (e) {
+      const Ao = _.memo(function (e) {
         const { eventSchemaConfig: t, editModel: o, onURLPasted: n } = e,
           { marks: l, nodes: i } = t.pm_schema;
         return (0, s.jsxs)(s.Fragment, {
@@ -3630,22 +3686,22 @@
               schema: t.pm_schema,
             }),
             i.image && (0, s.jsx)(E.pw, { nodeType: i.image }),
-            (0, s.jsx)(Po, {
+            (0, s.jsx)(Oo, {
               schemaConfig: t,
               editModel: o,
               clanSteamID: o.GetClanSteamID(),
             }),
-            (0, s.jsx)(Co, { emoticonStore: It.A, schema: t.pm_schema }),
+            (0, s.jsx)(Mo, { emoticonStore: yt.A, schema: t.pm_schema }),
           ],
         });
       });
-      function Po(e) {
+      function Oo(e) {
         const { schemaConfig: t, editModel: o, clanSteamID: n } = e,
           l = t.pm_schema,
           r = _.useMemo(
             () =>
               (function (e) {
-                return xe.sM({ rules: [xe.tG(/^>$/, e.nodes.quote)] });
+                return Ce.sM({ rules: [Ce.tG(/^>$/, e.nodes.quote)] });
               })(l),
             [l],
           );
@@ -3670,33 +3726,33 @@
             () => [
               d.previewyoutube && {
                 type: d.previewyoutube,
-                component: Ce,
+                component: Se,
                 readProps: (e) => ({
                   videoID: e.attrs.videoID,
                   align: e.attrs.align,
                   editModel: o,
                 }),
               },
-              c && { type: c, component: te, readProps: (e) => p("image", e) },
-              u && { type: u, component: te, readProps: (e) => p("video", e) },
+              c && { type: c, component: ae, readProps: (e) => p("image", e) },
+              u && { type: u, component: ae, readProps: (e) => p("video", e) },
               d.meetsteamsessiongroup && {
                 type: d.meetsteamsessiongroup,
-                component: at,
+                component: ut,
                 readProps: (e) => ({ group_id: e.attrs.group_id }),
               },
               d.meetsteamscheduleview && {
                 type: d.meetsteamscheduleview,
-                component: wt,
+                component: St,
                 readProps: (e) => ({ schedule_id: e.attrs.schedule_id }),
               },
               d.userpolls && {
                 type: d.userpolls,
-                component: lo,
+                component: co,
                 readProps: (e) => ({ poll_id: e.attrs.poll_id }),
               },
               d.dynamiclink && {
                 type: d.dynamiclink,
-                component: ko,
+                component: To,
                 readProps: (e) => ({
                   editModel: o,
                   href: e.attrs.href,

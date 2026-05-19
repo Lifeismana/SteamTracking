@@ -120,7 +120,7 @@
     chunkid: (module) => {
       module.exports = {
         CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
-        GrowOnHoverSmall: "YoLbM_PjSF7Lk-_QYDToT",
+        GrowOnHoverImplicit: "_23t3208XMavZer6IZIxzSb",
         GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
       };
     },
@@ -3755,7 +3755,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, active: _, bIsHoverMode: _, eGrowOnHover: _ } = _,
+        const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = _.useRef(0),
           _ = _.useRef(null);
@@ -3779,8 +3779,8 @@
             : null;
         let _;
         switch (_) {
-          case _.k_ETrailerGrowAmount_Small:
-            _ = _().GrowOnHoverSmall;
+          case _.k_ETrailerGrowAmount_Implicit:
+            _ = _().GrowOnHoverImplicit;
             break;
           case _.k_ETrailerGrowAmount_Medium:
             _ = _().GrowOnHoverMedium;
@@ -3812,8 +3812,8 @@
       }
       !(function (_) {
         (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
-          (_[(_.k_ETrailerGrowAmount_Small = 1)] =
-            "k_ETrailerGrowAmount_Small"),
+          (_[(_.k_ETrailerGrowAmount_Implicit = 1)] =
+            "k_ETrailerGrowAmount_Implicit"),
           (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
             "k_ETrailerGrowAmount_Medium");
       })(_ || (_ = {}));

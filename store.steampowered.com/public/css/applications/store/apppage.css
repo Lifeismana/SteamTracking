@@ -4269,6 +4269,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
 ._1c0u5zo_wZGsAM08nfEEKu {
   display: flex;
   align-items: center;
+  gap: 4px;
   flex-shrink: 0;
   border-radius: 2px;
   padding: 5px 8px;
@@ -4315,7 +4316,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   flex-shrink: 0;
   width: 8px;
   height: 8px;
-  margin-inline-start: 6px;
+  margin-inline-start: 2px;
   fill: #9dacbc;
 }
 @media screen and (max-width: 910px) {

@@ -198,25 +198,39 @@ var _ = {
   reviews: _.k_EWishlistSort_ReviewScore,
 };
 var _ = {
-  name: "wishlistPrefs",
-  options: {
-    path: "/wishlist",
-    secure: !0,
-    maxAge: 365 * 24 * 60 * 60 * 1e3,
+    name: "wishlistPrefs",
+    options: {
+      path: "/wishlist",
+      secure: !0,
+      maxAge: 365 * 24 * 60 * 60 * 1e3,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
   },
-  preferenceControls: {
-    isTechnicallyNecessary: !0,
-  },
-};
+  _ = {
+    name: "wishlistPrefs",
+    options: {
+      path: "/wishlistnew",
+      secure: !0,
+      maxAge: 365 * 24 * 60 * 60 * 1e3,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
+  };
+function _() {
+  return window.location.pathname.split("/")._(1) === "wishlistnew" ? _ : _;
+}
 function _() {
   try {
-    let _ = JSON.parse(_(_) || "{}");
+    let _ = JSON.parse(_(_()) || "{}");
     return _.filterParams?.wng && delete _.filterParams.wng, _;
   } catch {}
   return {};
 }
 function _(_) {
-  Object.keys(_).length == 0 ? _(_) : _(_, JSON.stringify(_));
+  Object.keys(_).length == 0 ? _(_()) : _(_(), JSON.stringify(_));
 }
 function _() {
   return !!_().bCompactView;
@@ -1103,14 +1117,21 @@ function _(_) {
 }
 var _ = _.createContext(void 0);
 function _(_) {
-  let { filters: _, setFilters: _, sort: _, children: _ } = _,
+  let {
+      filters: _,
+      setFilters: _,
+      sort: _,
+      bLoadingFilters: _,
+      children: _,
+    } = _,
     _ = _.useMemo(
       () => ({
         filters: _,
         setFilters: _,
         sort: _,
+        bLoadingFilters: _,
       }),
-      [_, _, _],
+      [_, _, _, _],
     );
   return (0, _.jsx)(_.Provider, {
     value: _,
@@ -1118,8 +1139,8 @@ function _(_) {
   });
 }
 function _() {
-  let { filters: _, setFilters: _ } = _.useContext(_);
-  return [_, _];
+  let { filters: _, setFilters: _, bLoadingFilters: _ } = _.useContext(_);
+  return [_, _, _];
 }
 function _() {
   let { sort: _ } = _.useContext(_);
@@ -1758,6 +1779,7 @@ function _(_) {
       onClick: _ ? void 0 : _,
       bShowAllButton: !_,
       header: _,
+      bShowCounts: !0,
     }),
   });
 }
@@ -1786,6 +1808,7 @@ function _(_) {
         !_ &&
         (0, _.jsx)(_, {
           onClick: _,
+          categoryCount: _.length,
         }),
     ],
   });
@@ -9295,6 +9318,8 @@ var _ = _(_(), 1),
   _ = _(_(), 1);
 var _ = "kQFepgJkQxo-";
 var _ = "AHPZRiL51P0-";
+var _ = "mzlfwmGWozc-";
+var _ = "C0WRs9Wkn6Q-";
 var _ = "wJ3Q5pBP4TU-";
 var _ = "MALY0R-5xEE-";
 var _ = "Cm4ue828Eq8-";
@@ -9446,18 +9471,32 @@ function _(_) {
               _.length >= _ && (0, _.jsx)(_, {}),
             ],
           }),
-          (0, _.jsx)("form", {
+          (0, _.jsxs)("form", {
             className: _,
             onSubmit: _,
-            children: (0, _.jsx)(_, {
-              autoFocus: !0,
-              value: _,
-              className: _,
-              type: "search",
-              placeholder: _.Localize("#wishlist_categories_dialog_search"),
-              onChange: (_) => _(_.target.value),
-              maxLength: 500,
-            }),
+            children: [
+              (0, _.jsx)(_, {
+                autoFocus: !0,
+                value: _,
+                className: _,
+                type: "search",
+                placeholder: _.Localize("#wishlist_categories_dialog_search"),
+                onChange: (_) => _(_.target.value),
+                onOKActionDescription:
+                  _.length > 0
+                    ? _.Localize("#wishlist_categories_dialog_add")
+                    : null,
+                maxLength: 500,
+              }),
+              !_.IN_GAMEPADUI &&
+                (0, _.jsx)("div", {
+                  className: (0, _.default)(_, _.length > 0 && _),
+                  children: (0, _.jsx)(_, {
+                    onClick: _,
+                    children: _.Localize("#wishlist_categories_dialog_add"),
+                  }),
+                }),
+            ],
           }),
           (0, _.jsxs)("div", {
             children: [
@@ -9498,19 +9537,12 @@ function _(_) {
             }),
         ],
       }),
-      (0, _.jsxs)(_, {
+      (0, _.jsx)(_, {
         className: _,
-        children: [
-          _.length > 0 &&
-            (0, _.jsx)(_, {
-              onClick: _,
-              children: _.Localize("#wishlist_categories_dialog_add"),
-            }),
-          (0, _.jsx)(_, {
-            onClick: _,
-            children: _.Localize("#Button_Done"),
-          }),
-        ],
+        children: (0, _.jsx)(_, {
+          onClick: _,
+          children: _.Localize("#Button_Done"),
+        }),
       }),
     ],
   });
@@ -9596,7 +9628,7 @@ function _(_) {
               },
               active: _,
               bIsHoverMode: !0,
-              eGrowOnHover: _ ? 1 : 2,
+              eGrowOnActivate: _ ? 1 : 2,
             }),
           }),
         (0, _.jsx)(_, {
@@ -9721,17 +9753,16 @@ function _(_) {
       appid: _,
     }),
     _ = _(),
-    _ = _[_] === _.k_EWishlistSort_ReviewScore,
     _ = _[_] === _.k_EWishlistSort_ReleaseDate,
-    _ = (_?.is_coming_soon || _) && !_;
+    _ = _?.is_coming_soon || _;
   return (0, _.jsxs)("div", {
     className: _,
     children: [
-      !_ &&
+      _ &&
         (0, _.jsx)(_, {
           appid: _,
         }),
-      _ &&
+      !_?.is_coming_soon &&
         (0, _.jsx)(_, {
           appid: _,
         }),
@@ -9866,7 +9897,14 @@ function _(_) {
       appid: _.appid,
     }),
     { data: _ } = _(_),
-    _ = _ && _?.is_early_access ? 4 : 5;
+    _ = _ && _?.is_early_access ? 4 : 5,
+    [_, _, _] = _(),
+    _ = _ ? [] : _.rgTagFilters,
+    _ = new Set(_),
+    _ = _.concat(_?.map((_) => _.tagid).filter((_) => !_.has(_)) ?? []).slice(
+      0,
+      _,
+    );
   return (0, _.jsxs)("div", {
     className: _,
     children: [
@@ -9874,23 +9912,22 @@ function _(_) {
         className: _,
         children: _.Localize("#wishlist_controls_tags_header"),
       }),
-      _?.slice(0, _).map((_) =>
+      _.map((_) =>
         (0, _.jsx)(
           _,
           {
-            tag: _,
+            tagID: _,
           },
-          _.tagid,
+          _,
         ),
       ),
     ],
   });
 }
 function _(_) {
-  let { tag: _ } = _,
+  let { tagID: _ } = _,
     [_, _] = _(),
     _ = _(),
-    _ = _.tagid,
     _ = _.rgTagFilters.includes(_),
     _ = _.useCallback(
       () =>
@@ -10236,41 +10273,51 @@ function _(_) {
     { data: _ } = _({
       appid: _.appid,
     }),
-    _ = _(_);
-  if (!_) return null;
-  let _ = !_.IN_GAMEPADUI && _?.type !== _.k_EStoreAppType_Hardware,
+    _ = _(_),
+    _ = !_.IN_GAMEPADUI && _?.type !== _.k_EStoreAppType_Hardware,
     _ = _ !== 0;
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      _ &&
-        (0, _.jsx)("div", {
-          className: _,
-          children: (0, _.jsx)(_, {
-            purchaseOption: _,
-          }),
-        }),
-      (0, _.jsxs)("div", {
-        className: _,
+  return _
+    ? (0, _.jsxs)(_.Fragment, {
         children: [
-          (0, _.jsx)(_, {
-            item: _,
-            className: _,
-            children: (0, _.jsx)(_, {
-              purchaseOption: _,
-              transparentBackground: !0,
-            }),
-          }),
           _ &&
             (0, _.jsx)("div", {
-              className: (0, _.default)(_, _ && _),
+              className: _,
               children: (0, _.jsx)(_, {
                 purchaseOption: _,
               }),
             }),
+          (0, _.jsxs)("div", {
+            className: _,
+            children: [
+              (0, _.jsx)(_, {
+                item: _,
+                className: _,
+                children: (0, _.jsx)(_, {
+                  purchaseOption: _,
+                  transparentBackground: !0,
+                }),
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: (0, _.default)(_, _ && _),
+                  children: (0, _.jsx)(_, {
+                    purchaseOption: _,
+                  }),
+                }),
+            ],
+          }),
         ],
-      }),
-    ],
-  });
+      })
+    : _?.is_free && !_.is_coming_soon && !_.IN_GAMEPADUI
+      ? (0, _.jsx)("div", {
+          className: _,
+          children: (0, _.jsx)(_, {
+            itemid: {
+              appid: _.appid,
+            },
+          }),
+        })
+      : null;
 }
 function _(_) {
   let { wishlistItem: _, removeItem: _ } = _,
@@ -10765,6 +10812,7 @@ function _(_) {
           filters: _,
           setFilters: _,
           sort: _,
+          bLoadingFilters: _,
           children: [
             (0, _.jsx)(_, {
               filters: _,
@@ -10831,6 +10879,12 @@ function _(_) {
   });
 }
 function _() {
+  let _ = () => {
+      _(_, !1), window.location.reload();
+    },
+    _ = _.IN_MOBILE
+      ? "https://valve.enterprise.slack.com/archives/C0B3BBQF0NA"
+      : "slack://channel?team=E0204JMT2DC&id=C0B3BBQF0NA";
   return (0, _.jsxs)(_, {
     className: _,
     "flow-children": "row",
@@ -10841,14 +10895,16 @@ function _() {
       (0, _.jsxs)("div", {
         className: _,
         children: [
+          _.IN_CLIENT
+            ? (0, _.jsx)("span", {
+                children: "#steam-wishlists",
+              })
+            : (0, _.jsx)(_, {
+                href: _,
+                children: "#steam-wishlists",
+              }),
           (0, _.jsx)(_, {
-            href: "slack://channel?team=E0204JMT2DC&id=C0B3BBQF0NA",
-            children: "Feedback",
-          }),
-          (0, _.jsx)(_, {
-            onClick: () => {
-              _(_, !1), window.location.reload();
-            },
+            onClick: _,
             children: "Exit",
           }),
         ],
@@ -10988,9 +11044,7 @@ function _(_) {
   let _;
   if (_.tagID) {
     let _ = (0, _.jsx)(_, {
-      tag: {
-        tagid: _.tagID,
-      },
+      tagID: _.tagID,
     });
     _ = _.LocalizeReact(
       _.cTagMatches > 1

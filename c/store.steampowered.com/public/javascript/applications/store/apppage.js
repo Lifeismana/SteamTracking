@@ -8375,6 +8375,7 @@
             bShowAllButton: _,
             containerClassName: _,
             size: _,
+            bShowCounts: _,
           } = _,
           _ = _.useRef(null);
         let _ = [],
@@ -8390,6 +8391,7 @@
                   _ !== _.k_ECategoryButtonAction_Remove && !!_.bSelected,
                 onClick: _ ? () => _(_.name, _._) : void 0,
                 eAction: _ ?? _.k_ECategoryButtonAction_None,
+                bShowCount: _,
               },
               _,
             );
@@ -8455,6 +8457,7 @@
             onOKActionDescription: _,
             onClick: _,
             eAction: _,
+            bShowCount: _,
           } = _,
           _ = _ === _.k_ECategoryButtonAction_Remove,
           _ = _ === _.k_ECategoryButtonAction_Filter,
@@ -8501,6 +8504,10 @@
                   className: _.CategoryName,
                   children: _.name,
                 }),
+                _ &&
+                  (0, _.jsxs)("span", {
+                    children: ["(", _.cItems, ")"],
+                  }),
                 _ && (0, _.jsx)(_.i6V, {}),
               ],
             }),

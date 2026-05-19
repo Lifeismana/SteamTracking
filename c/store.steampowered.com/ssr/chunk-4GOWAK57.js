@@ -215,6 +215,45 @@ function _(_) {
   });
 }
 function _(_) {
+  let { className: _ } = _;
+  return (0, _.jsxs)("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    className: _("SVGIcon_Button SVGIcon_Plus", _),
+    _: "0px",
+    _: "0px",
+    width: "256px",
+    height: "256px",
+    viewBox: "0 0 256 256",
+    children: [
+      (0, _.jsx)("line", {
+        className: "horizontalLine",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "45",
+        strokeLinecap: "square",
+        strokeMiterlimit: "10",
+        _: "73.333",
+        _: "128",
+        _: "183.333",
+        _: "128",
+      }),
+      (0, _.jsx)("line", {
+        className: "verticalLine",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "45",
+        strokeLinecap: "square",
+        strokeMiterlimit: "10",
+        _: "128.333",
+        _: "73.335",
+        _: "128.333",
+        _: "183.333",
+      }),
+    ],
+  });
+}
+function _(_) {
   return _()
     ? (0, _.jsxs)("svg", {
         width: "36",
@@ -1298,6 +1337,7 @@ function _(_) {
   });
 }
 export {
+  _,
   _,
   _,
   _,

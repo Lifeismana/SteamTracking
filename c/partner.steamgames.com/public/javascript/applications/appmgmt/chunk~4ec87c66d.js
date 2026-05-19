@@ -7160,6 +7160,14 @@
           _ !== this.m_model.do_anytime.enter_discounts &&
             ((this.m_model.do_anytime.enter_discounts = _), this.SetDirty(!0));
         }
+        BIsFeaturedDiscounts() {
+          return this.m_model.do_anytime.feature_discounts || !1;
+        }
+        SetFeaturedDiscounts(_) {
+          _ !== this.m_model.do_anytime.feature_discounts &&
+            ((this.m_model.do_anytime.feature_discounts = _),
+            this.SetDirty(!0));
+        }
         GetDiscountEventID() {
           return this.m_model.do_anytime.discount_event_id || "";
         }
@@ -7974,6 +7982,8 @@
         ),
         (0, _._)([_._], _.prototype, "BIsEnterDiscountsEnabled", null),
         (0, _._)([_._.bound], _.prototype, "SetEnterDiscountsEnabled", null),
+        (0, _._)([_._], _.prototype, "BIsFeaturedDiscounts", null),
+        (0, _._)([_._.bound], _.prototype, "SetFeaturedDiscounts", null),
         (0, _._)([_._], _.prototype, "GetDiscountEventID", null),
         (0, _._)([_._.bound], _.prototype, "SetDiscountEventID", null),
         (0, _._)([_._], _.prototype, "GetExternalAppReviewers", null),
@@ -24894,12 +24904,13 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [_, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _] = (0, _._)(() => [
             _.BIsDoAnytimeEnabled(),
             _.BIsLivestreamEnabled(),
             _.BIsChatSessionEnabled(),
             _.BIsAnytimeTaggingWizardEnabled(),
             _.BIsEnterDiscountsEnabled(),
+            _.BIsFeaturedDiscounts(),
             _.GetDiscountEventID(),
           ]);
         return (0, _.jsx)(_._, {
@@ -24927,66 +24938,78 @@
                   (0, _.jsx)("h3", {
                     children: "This Event Will Feature Livestreams",
                   }),
+                  (0, _.jsx)("span", {
+                    children:
+                      "Developers may schedule a 'livestream' type event during this sale and their stream will be prioritized in the broadcast player on the event landing page during their scheduled time.",
+                  }),
                   (0, _.jsx)(_._, {
                     label: "Developers can create livestream sessions",
                     checked: _,
                     onChange: _.SetLivestreamEnabled,
                   }),
-                  (0, _.jsx)("span", {
-                    children:
-                      "Developers may schedule a 'livestream' type event during this sale and their stream will be prioritized in the broadcast player on the event landing page during their scheduled time.",
-                  }),
                   (0, _.jsx)("br", {}),
                   (0, _.jsx)("h3", {
                     children: "This Event Will Feature Dev Chats",
+                  }),
+                  (0, _.jsx)("span", {
+                    children:
+                      "Developers may schedule a 'live chat' type event during this sale and their event will appear in the schedule on the event landing page.",
                   }),
                   (0, _.jsx)(_._, {
                     label: "Developers can create chat session",
                     checked: _,
                     onChange: _.SetChatSessionEnabled,
                   }),
-                  (0, _.jsx)("span", {
-                    children:
-                      "Developers may schedule a 'live chat' type event during this sale and their event will appear in the schedule on the event landing page.",
-                  }),
                   (0, _.jsx)("br", {}),
                   (0, _.jsx)("h3", {
                     children: "Reminder to Update Store Tags",
+                  }),
+                  (0, _.jsx)("span", {
+                    children:
+                      "Developers should make use of the tagging wizard to make sure players can find their game.",
                   }),
                   (0, _.jsx)(_._, {
                     label: "Remind developers to use the tagging wizard",
                     checked: _,
                     onChange: _.SetAnytimeTaggingWizardEnabled,
                   }),
-                  (0, _.jsx)("span", {
-                    children:
-                      "Developers should make use of the tagging wizard to make sure players can find their game.",
-                  }),
                   (0, _.jsx)("br", {}),
                   (0, _.jsx)("h3", {
                     children: "This Event features discounts",
+                  }),
+                  (0, _.jsx)("span", {
+                    children:
+                      "If enabled, developers are reminded to enter discounts for their game.",
                   }),
                   (0, _.jsx)(_._, {
                     label: "Remind developers to enter discounts",
                     checked: _,
                     onChange: _.SetEnterDiscountsEnabled,
                   }),
-                  (0, _.jsx)("span", {
-                    children:
-                      "Developers are reminded to enter discounts for their game.",
-                  }),
-                  (0, _.jsx)("br", {}),
                   Boolean(_) &&
-                    (0, _.jsx)(_._, {
-                      type: "text",
-                      label: "Enter Discount Event ID",
-                      placeholder:
-                        "For example: 7113, in the case of partner.steamgames.com/admin/editdiscountevent/7113",
-                      tooltip:
-                        "Only requires the ID found at the end of the URL",
-                      value: _,
-                      onChange: (_) =>
-                        _.SetDiscountEventID(_?.currentTarget?.value || ""),
+                    (0, _.jsx)("div", {
+                      className: _().IndentedSubSection,
+                      children: (0, _.jsx)(_._, {
+                        label:
+                          "Special featuring for discounted items (eg. summer sale)",
+                        checked: _,
+                        onChange: _.SetFeaturedDiscounts,
+                      }),
+                    }),
+                  Boolean(_) &&
+                    (0, _.jsx)("div", {
+                      className: _().IndentedSubSection,
+                      children: (0, _.jsx)(_._, {
+                        type: "text",
+                        label: "Enter Discount Event ID",
+                        placeholder:
+                          "For example: 7113, in the case of partner.steamgames.com/admin/editdiscountevent/7113",
+                        tooltip:
+                          "Only requires the ID found at the end of the URL",
+                        value: _,
+                        onChange: (_) =>
+                          _.SetDiscountEventID(_?.currentTarget?.value || ""),
+                      }),
                     }),
                 ],
               }),
@@ -35758,50 +35781,35 @@
       function _(_) {
         const { optInDefinition: _ } = _,
           _ = _.event_title[_._.LANGUAGE] || _.event_title.english,
-          _ = _.do_anytime.enter_discounts,
-          _ = _.public_doc_wiki_url,
-          _ = _.launch_demo?.enabled,
-          _ = Boolean(_.collect_trailer_permissions),
-          _ = Boolean(_.collect_game_discount_requirement),
-          [_, _, _] = (0, _._)(() => [
-            _.Get().GetModel().jsondata.trailer_permission,
-            _.Get().GetModel().jsondata.rtime_granting_trailer,
-            _.Get().GetModel().jsondata.accountid_granting_trailer,
-          ]);
+          _ = (_.do_anytime.enter_discounts, _.public_doc_wiki_url),
+          [_, _, _] =
+            (_.launch_demo,
+            Boolean(_.collect_trailer_permissions),
+            Boolean(_.collect_game_discount_requirement),
+            (0, _._)(() => [
+              _.Get().GetModel().jsondata.trailer_permission,
+              _.Get().GetModel().jsondata.rtime_granting_trailer,
+              _.Get().GetModel().jsondata.accountid_granting_trailer,
+            ]));
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("div", {
               className: "sub_category",
-              children: (0, _.jsxs)("h3", {
-                children: [
-                  (0, _._)("#OptIn_Collect_Trailer"),
-                  " ",
-                  (0, _.jsx)("span", {
-                    className: "required_optional1",
-                    children: Boolean(_.collect_demo_deadline)
-                      ? (0, _.jsxs)(_.Fragment, {
-                          children: [
-                            "(",
-                            (0, _._)(
-                              "#OptIn_Collect_SuggestedBy",
-                              (0, _._)(_.collect_demo_deadline),
-                            ),
-                            ")",
-                          ],
-                        })
-                      : (0, _.jsxs)(_.Fragment, {
-                          children: [
-                            "(",
-                            (0, _._)("#OptIn_Collect_Optional"),
-                            ")",
-                          ],
-                        }),
-                  }),
-                ],
+              children: (0, _.jsx)("h3", {
+                children: (0, _._)("#OptIn_Collect_Trailer"),
               }),
             }),
             (0, _.jsx)("p", {
-              children: (0, _._)("#OptIn_Collect_Trailer_check", _),
+              children: (0, _._)(
+                (0, _._)("#OptIn_Collect_Trailer_check", _),
+                (0, _.jsx)("b", {}),
+              ),
+            }),
+            (0, _.jsx)("p", {
+              children: (0, _._)(
+                "#OptIn_Collect_Trailer_check_req_trailer",
+                (0, _._)(_.optin_deadline_date),
+              ),
             }),
             _ &&
               (0, _.jsx)("p", {
@@ -35813,44 +35821,6 @@
                   }),
                 ),
               }),
-            (0, _.jsxs)("div", {
-              className: "eligibility",
-              children: [
-                (0, _.jsx)("h5", {
-                  children: (0, _._)("#OptIn_Collect_Trailer_eligibility"),
-                }),
-                Boolean(_ || _) &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: _.collect_demo_deadline
-                      ? (0, _.jsx)("p", {
-                          children: (0, _._)(
-                            "#OptIn_Collect_Trailer_check_req_discount",
-                            (0, _._)(_.collect_demo_deadline),
-                          ),
-                        })
-                      : (0, _.jsx)("p", {
-                          children: (0, _._)(
-                            "#OptIn_Collect_Trailer_check_req_discount_noDate",
-                          ),
-                        }),
-                  }),
-                Boolean(_ || _) &&
-                  (0, _.jsx)(_.Fragment, {
-                    children: _.collect_demo_deadline
-                      ? (0, _.jsx)("p", {
-                          children: (0, _._)(
-                            "#OptIn_Collect_Trailer_deadline_1",
-                            (0, _._)(_.collect_demo_deadline),
-                          ),
-                        })
-                      : (0, _.jsx)("p", {
-                          children: (0, _._)(
-                            "#OptIn_Collect_Trailer_deadline_1_noDate",
-                          ),
-                        }),
-                  }),
-              ],
-            }),
             (0, _.jsxs)("div", {
               className: (0, _._)(_().FlexRowContainer, _().RadioOption),
               children: [
@@ -35905,8 +35875,7 @@
       function _(_) {
         const { optInDefinition: _ } = _,
           _ = _.event_title[_._.LANGUAGE] || _.event_title.english,
-          _ = _.do_anytime.enter_discounts,
-          _ = _.public_doc_wiki_url,
+          _ = (_.do_anytime.enter_discounts, _.public_doc_wiki_url),
           [_, _, _] = (0, _._)(() => [
             _.Get().GetModel().jsondata.demo_permission,
             _.Get().GetModel().jsondata.rtime_granting_demo,
@@ -35957,28 +35926,6 @@
                   }),
                 ),
               }),
-            (0, _.jsxs)("div", {
-              className: "eligibility",
-              children: [
-                (0, _.jsx)("h5", {
-                  children: (0, _._)("#OptIn_Collect_Trailer_eligibility"),
-                }),
-                Boolean(_ && _.collect_demo_deadline) &&
-                  (0, _.jsx)("p", {
-                    children: (0, _._)(
-                      "#OptIn_Collect_Trailer_check_req_discount",
-                      (0, _._)(_.collect_demo_deadline),
-                    ),
-                  }),
-                Boolean(_.collect_demo_deadline) &&
-                  (0, _.jsx)("p", {
-                    children: (0, _._)(
-                      "#OptIn_Collect_Demo_deadline_1",
-                      (0, _._)(_.collect_demo_deadline),
-                    ),
-                  }),
-              ],
-            }),
             (0, _.jsxs)("div", {
               className: (0, _._)(_().FlexRowContainer, _().RadioOption),
               children: [
@@ -36227,18 +36174,21 @@
         const { optInDefinition: _ } = _,
           _ = _.Get(),
           _ = _.event_title[_._.LANGUAGE] || _.event_title.english,
+          _ = (0, _._)(_.event_start_date),
           _ = _.do_anytime.enter_discounts,
-          [_, _] = (0, _._)(() => [
-            __webpack_require__.BHasCheckedNoPlannedDiscounts(),
-            __webpack_require__.GetModel().appid,
-          ]),
+          [_, _] =
+            (_.do_anytime.feature_discounts,
+            (0, _._)(() => [
+              __webpack_require__.BHasCheckedNoPlannedDiscounts(),
+              __webpack_require__.GetModel().appid,
+            ])),
           [_] = (0, _._)(_, {
             include_release: !0,
           });
         return !_ || _?.BIsComingSoon() || _?.BIsFree()
           ? null
           : _
-            ? (0, _.jsxs)(_.Fragment, {
+            ? (0, _.jsxs)("div", {
                 children: [
                   (0, _.jsx)("div", {
                     className: "sub_category",
@@ -36247,8 +36197,8 @@
                     }),
                   }),
                   (0, _.jsx)("div", {
-                    children: (0, _.jsx)("div", {
-                      children: (0, _._)("#OptIn_Discount_Intent_Desc"),
+                    children: (0, _.jsx)("p", {
+                      children: (0, _._)("#OptIn_Discount_Intent_Desc", _),
                     }),
                   }),
                   (0, _.jsxs)("div", {
@@ -36267,9 +36217,12 @@
                         htmlFor: "DiscountOptions_Yes",
                         children: (0, _.jsx)("span", {
                           children: (0, _._)(
-                            "#OptIn_Discount_Intent_Desc_radio_yes",
-                            _.GetName(),
-                            _,
+                            (0, _._)(
+                              "#OptIn_Discount_Intent_Desc_radio_yes",
+                              _.GetName(),
+                              _,
+                            ),
+                            (0, _.jsx)("b", {}),
                           ),
                         }),
                       }),
@@ -36291,9 +36244,12 @@
                         htmlFor: "DiscountOptions_No",
                         children: (0, _.jsx)("span", {
                           children: (0, _._)(
-                            "#OptIn_Discount_Intent_Desc_radio_no",
-                            _.GetName(),
-                            _,
+                            (0, _._)(
+                              "#OptIn_Discount_Intent_Desc_radio_no",
+                              _.GetName(),
+                              _,
+                            ),
+                            (0, _.jsx)("b", {}),
                           ),
                         }),
                       }),
@@ -36624,7 +36580,6 @@
                   (0, _.jsx)("h1", {
                     children: (0, _._)("#OptIn_OptInOut_Title"),
                   }),
-                  (0, _._)("#OptIn_OptInOut_Desc"),
                   (0, _.jsxs)("div", {
                     className: "indent_section",
                     children: [
@@ -36642,24 +36597,29 @@
                         optInDefinition: _,
                       }),
                       Boolean(_._.is_support) &&
-                        (0, _.jsx)("div", {
-                          className: _().ValveOnlyBackground,
-                          children: (0, _.jsx)(_._, {
-                            onClick: () => {
-                              const _ = _.Get().GetModel();
-                              (0, _._)(
-                                (0, _.jsx)(_._, {
-                                  strTitle: (0, _._)("#OptIn_Debug"),
-                                  bAlertDialog: !0,
-                                  children: (0, _.jsx)(_._, {
-                                    data: _,
-                                  }),
-                                }),
-                                window,
-                              );
-                            },
-                            children: "(VO) " + (0, _._)("#OptIn_Debug"),
-                          }),
+                        (0, _.jsxs)(_.Fragment, {
+                          children: [
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("div", {
+                              className: _().ValveOnlyBackground,
+                              children: (0, _.jsx)(_._, {
+                                onClick: () => {
+                                  const _ = _.Get().GetModel();
+                                  (0, _._)(
+                                    (0, _.jsx)(_._, {
+                                      strTitle: (0, _._)("#OptIn_Debug"),
+                                      bAlertDialog: !0,
+                                      children: (0, _.jsx)(_._, {
+                                        data: _,
+                                      }),
+                                    }),
+                                    window,
+                                  );
+                                },
+                                children: "(VO) " + (0, _._)("#OptIn_Debug"),
+                              }),
+                            }),
+                          ],
                         }),
                     ],
                   }),
@@ -38746,18 +38706,9 @@
                         text: _,
                         event: null,
                       }),
+                      (0, _.jsx)("br", {}),
                       (0, _.jsx)("h3", {
                         children: (0, _._)("#OptIn_OptInOut_Title"),
-                      }),
-                      (0, _.jsxs)("div", {
-                        children: [
-                          (0, _._)("#OptIn_RegInstruction"),
-                          Boolean(_?.do_anytime?.discount_event_id) &&
-                            (0, _._)(
-                              "#OptIn_DiscountParticipation",
-                              (0, _._)(_.event_start_date),
-                            ),
-                        ],
                       }),
                     ],
                   }),

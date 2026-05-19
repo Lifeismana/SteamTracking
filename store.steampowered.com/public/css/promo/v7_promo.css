@@ -66,6 +66,13 @@ body.v7 {
 	font-family: "Motiva Sans", Sans-serif;
 }
 
+@media screen and ( max-width: 910px )
+{
+	body.v7 {
+		background: var(--page-background);
+	}
+}
+
 body.v7 .responsive_page_template_content {
 	margin: 0 auto;
 }
@@ -138,8 +145,13 @@ body.v7 #footer .rule {
 	transition: opacity 100ms;
 }
 
+.carousel_container .carousel_thumbs {
+	min-height: 12px;
+}
+
 .carousel_container .carousel_thumbs > div {
-	height: 4px;
+	height: 8px;
+	border-radius: 6px;
 }
 
 .page_background_holder_mobile {
@@ -306,7 +318,7 @@ html.responsive .fullscreen-bg__video_mobile {
 	/* display: none; */
 	text-align: center;
 	font-weight: 600;
-	font-size: 26px;
+	font-size: clamp(1rem, 1.75cqi, 1.5rem);
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	padding: 0px 0px 10px 0px;
 	border-radius: 20px;
@@ -585,7 +597,7 @@ body.v7 .sale_capsule_carousel .carousel_items > * {
 	color: #ffffff;
 	text-shadow: 1px 1px 8px var(--dark-ctn-bg);
 	font-family: "Motiva Sans", sans-serif;
-	font-size: 26px;
+	font-size: clamp(1rem, 1.75cqi, 1.5rem);
 	font-style: normal;
 	font-weight: 600;
 	line-height: 1;
@@ -619,6 +631,7 @@ body.v7 .sale_capsule_carousel .carousel_items > * {
 }
 
 .home_pagecontent_ctn {
+	container-type: inline-size;
     max-width: 1300px;
 	box-sizing: border-box;
     margin-left: auto;
@@ -760,7 +773,7 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 	display: flex;
 	gap: 8px;
 	align-items: center;
-	font-size: 20px;
+	font-size: clamp(1rem, 1.75cqi, 1.5rem);
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: 600;
 	color: #ffffff;
@@ -789,16 +802,6 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 	z-index: 1;
 	position: relative;
 	padding: 0 0 10px 0;
-}
-
-@media screen and ( max-width: 910px )
-{
-.title_grid {
-	grid-template-areas:
-			"title"
-			"subtitle"
-			"button";
-}
 }
 
 .title_grid .home_section_title {
@@ -884,7 +887,7 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 	overflow: hidden;
 	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: clamp(11px, 1.2vw, 14px);
 	padding: 3px 8px;
 	z-index: 2;
 	transition: opacity 0.6s;
@@ -989,7 +992,7 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-		font-size: 17px;
+		font-size: clamp(1rem, 1.75cqi, 1.5rem);
 }
 
 .home_morefeatured_ctn .three_row, .home_morefeatured_ctn .four_row {
@@ -1084,6 +1087,21 @@ body.v7 .page_content_ctn.dark {
 	color: rgb(255, 255, 255);
 	text-align: right;
 	font-size: 14px;
+}
+
+.see_more_mobile {
+	display: none;
+}
+
+@media screen and ( max-width: 910px ) {
+
+	.see_more_mobile {
+		display: block;
+	}
+
+	.see_more_desktop {
+		display: none;
+	}
 }
 
 a:hover {
@@ -1483,7 +1501,7 @@ html.responsive:not( .GamepadMode ) .carousel_container.spotlight .carousel_item
 .home_beta_link {
 	background: orange;
 	color: black !important;
-	font-size: 13px;
+	font-size: clamp(11px, 1.15vw, 14px);
 	font-weight: 500;
 	display: flex;
 	align-items: center;
@@ -1820,29 +1838,33 @@ img.main_capsule_header {
 
 @media screen and ( max-width: 910px )
 {
-html.responsive .store_main_capsule {
-	display: flex;
-	flex-wrap: wrap;
-	max-height: unset;
-	height: auto;
-}
+	html.responsive .store_main_capsule {
+		display: flex;
+		flex-wrap: wrap;
+		max-height: unset;
+		height: auto;
+	}
 
-html.responsive .store_main_capsule .capsule {
-	width: 100%;
-}
+	html.responsive .store_main_capsule .capsule {
+		width: 100%;
+	}
 
-html.responsive .store_main_capsule .info {
-	padding: 10px;
-	flex-grow: 1;
-}
+	html.responsive .store_main_capsule .info {
+		padding: 10px;
+		flex-grow: 1;
+	}
 
-html.responsive .store_main_capsule .reason {
-	display: none;
-}
+	html.responsive .store_main_capsule .reason {
+		display: none;
+	}
 
-html.responsive .store_main_capsule .screenshots, html.responsive .store_main_capsule .large_screenshot {
-	display: none;
-}
+	html.responsive .store_main_capsule .screenshots, html.responsive .store_main_capsule .large_screenshot {
+		display: none;
+	}
+
+	html.responsive .carousel_container .carousel_items:not(.no_paging) .store_main_capsule {
+		max-width: 90%;
+	}
 }
 
 /* Community Recommendations widget */
@@ -2796,17 +2818,10 @@ body.responsive_page p.home_subtitle_ctn a {
 	font-size: 14px;
 	font-weight: 300;
 }
+
 body.responsive_page .home_title {
-	line-height: 26px;
-	font-size: 20px;
-}
-
-html.responsive .title_grid {
-	padding: 12px 12px 10px 12px;
-}
-
-html.responsive .home_section_title {
-	font-size: 20px;
+	line-height: 22px;
+	font-size: clamp(1rem, 1.75cqi, 1.5rem);
 }
 
 body.responsive_page .home_section_subtitle {
@@ -2911,12 +2926,15 @@ html.responsive .home_category_ctn .home_category_title_ctn {
 
 .home_title_ctn {
 	display: flex;
-	font-size: 20px;
+	padding: 0px 0px 10px 0px;
+	flex-direction: column;
+}
+
+.home_title_ctn .home_title {
+	font-size: clamp(1rem, 1.75cqi, 1.5rem);
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: 600;
 	color: #ffffff;
-	padding: 0px 0px 10px 0px;
-	flex-direction: column;
 }
 
 .home_title_ctn a:link, .home_title_ctn a:visited {
@@ -3340,11 +3358,6 @@ html.responsive .home_tab_content .tab_content_items {
 	gap: 5px;
 }
 
-html.responsive .home_section_title {
-	text-align: center;
-	font-weight: 500;
-}
-
 html.responsive .home_tab_section .home_pagecontent_ctn {
 	padding: 25px;
 }
@@ -3477,8 +3490,19 @@ body.v7 .sale_capsule .discount_block_inline, .store_main_capsule .discount_bloc
 	overflow: hidden;
 	text-align: right;
 	justify-content: flex-end;
-
 }
+
+@media screen and ( max-width: 910px ) {
+
+	html.responsive body.v7 .sale_capsule .discount_block_inline, .store_main_capsule .discount_block_inline {
+		height: 32px;
+	}
+
+	html.responsive body.v7 .carousel_container .carousel_items:not(.no_paging), body.v7 .carousel_container.maincap .carousel_items:not(.no_paging) {
+		padding-bottom: 8px !important; /* this is here to override store.css padding definition, it would be good to fix this properly */
+	}
+}
+
 
 body.v7 .discount_block_large .bundle_base_discount {
 	font-size: 12px;
@@ -4481,11 +4505,25 @@ html.GamepadMode .content_hub_carousel_ctn .season_sale_feature_event_capsule  {
 	width: calc( 100vw / 3 );
 }
 
-@media screen and ( max-width: 500px )
-{
+@media screen and ( max-width: 500px ) {
+
 html.responsive .content_hub_carousel_ctn .season_sale_feature_event_capsule {
 	width: 91vw;
 }
+
+}
+
+@media screen and ( max-width: 910px ) {
+
+	html.responsive:not( .GamepadMode ) .carousel_container .carousel_items:not(.no_paging),
+	html.responsive:not( .GamepadMode ) .carousel_container.maincap .carousel_items:not(.no_paging) {
+		scroll-padding: 10px;
+	}
+
+	html.responsive .special_offers .carousel_container, html.responsive .home_deck_section .carousel_container {
+		margin-bottom: 10px;
+	}
+
 }
 
 .content_hub_carousel_ctn .season_sale_feature_event_capsule img {
@@ -4533,40 +4571,66 @@ html.responsive .content_hub_carousel_ctn .season_sale_feature_event_capsule {
 	top: 13%;
 }
 
+.carousel_container .arrow.right > div {
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/cut_arrow.svg' );
+	background-size: contain;
+}
+
+.carousel_container .arrow.left > div {
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/cut_arrow.svg' );
+	transform: rotate(180deg);
+	background-size: contain;
+}
+
+.carousel_container .arrow > div {
+	height: 50px;
+}
+
 .carousel_container .arrow {
 	transform: translateY(calc(-50% + 37px));
+	height: 50px;
 }
 
 .carousel_container .arrow.right {
 	right: -50px;
 	background: none;
-	transition: all .15s ease-in-out;
+	opacity: .7;
+	transition: opacity .2s ease-in-out;
 }
 
 .carousel_container .arrow.right:hover {
-	transform: translateY(calc(-50% + 37px)) scale(1.1);
+	transform: translateY(calc(-50% + 37px));
+	opacity: 1;
 	background: none;
 }
 
 .carousel_container .arrow.left {
 	left: -50px;
 	background: none;
-	transition: all .15s ease-in-out;
+	opacity: .7;
+	transition: opacity .2s ease-in-out;
 }
 
 .carousel_container .arrow.left:hover {
-	transform: translateY(calc(-50% + 37px)) scale(1.05);
+	transform: translateY(calc(-50% + 37px));
+	opacity: 1;
 	background: none;
 }
 
 .carousel_container.maincap .arrow.right:hover {
-	transform: translateY(calc(-50% + 37px)) scale(1.1);
+	transform: translateY(calc(-50% + 37px));
+	opacity: 1;
 	background: none;
 }
 
 .carousel_container.maincap .arrow.left:hover {
-	transform: translateY(calc(-50% + 37px)) translateX(0px) scale(1.1);
+	transform: translateY(calc(-50% + 37px)) translateX(0px);
+	opacity: 1;
 	background: none;
+}
+
+.carousel_container .carousel_thumbs > div.focus {
+	background-color: hsla(202,60%,100%,1);
 }
 
 /* Game Hover overrides */

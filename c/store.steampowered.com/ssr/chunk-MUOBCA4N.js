@@ -2,12 +2,12 @@ var _ = _(_(), 1),
   _ = _(_(), 1);
 var _ = {
   CapsuleMicroTrailer: "Acv6ZIJxoFk-",
-  GrowOnHoverSmall: "_7QBdLN5HD9A-",
+  GrowOnHoverImplicit: "E-65We4PMeg-",
   GrowOnHoverMedium: "oFuClJZIqYM-",
 };
 var _ = _(_(), 1);
 function _(_) {
-  let { _: _, active: _, bIsHoverMode: _, eGrowOnHover: _ } = _,
+  let { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
     { data: _ } = _(_),
     _ = _.default.useRef(0),
     _ = _.default.useRef(null);
@@ -34,7 +34,7 @@ function _(_) {
   let _;
   switch (_) {
     case 1:
-      _ = _.GrowOnHoverSmall;
+      _ = _.GrowOnHoverImplicit;
       break;
     case 2:
       _ = _.GrowOnHoverMedium;

@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [3772],
+  [2480],
   {
     chunkid: (module) => {
       module.exports = {
@@ -513,6 +513,12 @@
           }),
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const {
             schemaConfig: _,
@@ -549,9 +555,55 @@
           _ = _.useCallback(() => {
             _([_]);
           }, [_, _]),
+          { showLocalizationModal: _, localizationModal: _ } = (function (
+            _,
+            _,
+            _,
+          ) {
+            const [_, _] = _.useState(void 0),
+              _ = _.useCallback(() => _(void 0), []);
+            return {
+              showLocalizationModal: _.useCallback(
+                (_) => {
+                  const _ = _.map((_) => _(_)).filter(Boolean);
+                  if (1 === _.length) {
+                    let _ = _[0];
+                    if ("src" in _.attrs && _.attrs.src.includes(_._)) {
+                      const _ = _.attrs.src.replace(_._, _._);
+                      _(
+                        __webpack_require__.create({
+                          src: _,
+                        }),
+                      );
+                    }
+                    _(_(_.GetClanSteamID(), _));
+                  }
+                },
+                [_, _, _],
+              ),
+              localizationModal: (0, _.jsx)(_._, {
+                active: void 0 !== _,
+                children: (0, _.jsx)(_._, {
+                  closeModal: _,
+                  primaryLocalizedImage: _,
+                  appid: _.GetAppID(),
+                  clanSteamID: _.GetClanSteamID(),
+                  fnSetImageURL: _.SetImageURL,
+                  fnLangHasData: _.BHasTitleImage,
+                  fnGetImageHash: _.GetImageHashAndExt,
+                  rgRealmList: _.GetIncludedRealmList(),
+                  partnerEventStore: _._,
+                }),
+              }),
+            };
+          })(_, _, _),
+          _ = _.useCallback(() => {
+            _([_]);
+          }, [_, _]),
           _ = {
             createCarousel: _ ? _ : void 0,
             src: _(_),
+            localizeAssets: _._.is_support ? _ : void 0,
           };
         let _ = _()(_.ClanImageContainer, _ && _.Selected);
         return (0, _.jsxs)(_.Fragment, {
@@ -566,6 +618,7 @@
                 clanSteamID: _,
                 onItemSelected: _,
               }),
+            _,
             _,
             (0, _.jsx)(_, {
               className: _,
@@ -607,7 +660,7 @@
         });
       }
       function _(_) {
-        const { createCarousel: _, src: _ } = _,
+        const { createCarousel: _, src: _, localizeAssets: _ } = _,
           _ = _.useCallback(() => {
             window.open(_);
           }, [_]);
@@ -619,6 +672,12 @@
                 children: (0, _._)(
                   "#EventEditor_CarouselEditor_CreateACarousel",
                 ),
+              }),
+            _ &&
+              (0, _.jsxs)(_._, {
+                onSelected: _,
+                className: _().ValveOnlyBackground,
+                children: ["(VO) + ", (0, _._)("#ImagePicker_Localized")],
               }),
             (0, _.jsx)(_._, {
               onSelected: _,
@@ -1214,9 +1273,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

@@ -346,141 +346,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-        const {
-            closeModal: _,
-            appid: _,
-            partnerEventStore: _,
-            primaryLocalizedImage: _,
-            clanSteamID: _,
-            fnSetImageURL: _,
-            rgRealmList: _,
-            fnLangHasData: _,
-            fnGetImageHash: _,
-          } = _,
-          [_, _] = _.useState(),
-          [_, _] = _.useState(!0),
-          _ = (0, _._)(() => _().CancelToken.source());
-        _.useEffect(
-          () => () => _.cancel("LocalizedImageDialog component unmounted"),
-          [_],
-        );
-        const _ = _.useCallback(async () => {
-            try {
-              const _ = _._.InitFromClanID(_.clanAccountID),
-                _ = await _._.AsyncGetImageResolution(
-                  _,
-                  _.image_hash,
-                  _.file_type,
-                  _,
-                  !1,
-                );
-              _.token.reason || _(_);
-            } catch (_) {
-              let _ = (0, _._)(_);
-              console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
-            }
-          }, [_, _.clanAccountID, _.file_type, _.image_hash]),
-          _ = _.useCallback(async () => {
-            try {
-              await _._.DetermineAvailableLocalizationForGroup(_),
-                _.token.reason || _(!1);
-            } catch (_) {
-              let _ = (0, _._)(_);
-              console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
-            }
-          }, [_]);
-        _.useEffect(() => {
-          _ &&
-            (_._.SetPrimaryImageForImageGroup(_, "localized_image_group"),
-            _(),
-            _());
-        }, [_, _, _, _]);
-        const _ = !_ && _,
-          _ = _ ? ` - ${_.width}x${_.height}` : "",
-          _ = (0, _._)(_.file_type).slice(1),
-          _ = _ && {
-            width: _.width,
-            height: _.height,
-          },
-          _ = _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_));
-        return (0, _.jsx)(_._, {
-          bAllowFullSize: !0,
-          title: (0, _._)("#ImagePickerLoc_Title"),
-          onCancel: _,
-          closeModal: _,
-          children: (0, _.jsx)(_._, {
-            children: (0, _.jsxs)(_._, {
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().FlexRowContainer,
-                  children: (0, _.jsxs)("span", {
-                    className: _().FlexColumnContainer,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        children: [
-                          (0, _._)("#ImagePickerLoc_Default"),
-                          (0, _.jsx)(_._, {
-                            tooltip: (0, _._)("#ImagePickerLoc_Default_Hint"),
-                          }),
-                        ],
-                      }),
-                      (0, _.jsx)("img", {
-                        className: _.TitleImg,
-                        src: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        children: _.file_name + _ + " - " + _,
-                      }),
-                    ],
-                  }),
-                }),
-                !_ &&
-                  (0, _.jsx)(_._, {
-                    position: "center",
-                    string: (0, _._)("#Loading"),
-                  }),
-                _ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        clanSteamID: _,
-                        rgSupportArtwork: [],
-                        localizedPrimaryImage: _,
-                        forceResolution: _,
-                        bAllowPreviousClanImageSelection: !0,
-                        fnSetImageURL: _,
-                        rgRealmList: _,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _.ArtworkBar,
-                        children: (0, _.jsx)(_._, {
-                          clanSteamID: _,
-                          eventModel: void 0,
-                          artworkType: "localized_image_group",
-                          title: (0, _._)("#ImagePickerLoc_Title"),
-                          realms: _,
-                          fnLangHasData: _,
-                          appid: _,
-                          fnGetImageHashAndExt: _,
-                          fnSetImageURL: _,
-                          partnerEventStore: _,
-                        }),
-                      }),
-                    ],
-                  }),
-              ],
-            }),
-          }),
-        });
-      });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = (0, _.useRef)(null);
@@ -707,7 +572,7 @@
                 },
                 InternalOpenLocalizeImageGroup: (_) => {
                   (0, _._)(
-                    (0, _.jsx)(_, {
+                    (0, _.jsx)(_._, {
                       primaryLocalizedImage: _,
                       appid: _,
                       clanSteamID: _,
@@ -894,6 +759,161 @@
           ],
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const {
+            closeModal: _,
+            appid: _,
+            partnerEventStore: _,
+            primaryLocalizedImage: _,
+            clanSteamID: _,
+            fnSetImageURL: _,
+            rgRealmList: _,
+            fnLangHasData: _,
+            fnGetImageHash: _,
+          } = _,
+          [_, _] = _.useState(),
+          [_, _] = _.useState(!0),
+          _ = (0, _._)(() => _().CancelToken.source());
+        _.useEffect(
+          () => () => _.cancel("LocalizedImageDialog component unmounted"),
+          [_],
+        );
+        const _ = _.useCallback(async () => {
+            try {
+              const _ = _._.InitFromClanID(_.clanAccountID),
+                _ = await _._.AsyncGetImageResolution(
+                  _,
+                  _.image_hash,
+                  _.file_type,
+                  _,
+                  !1,
+                );
+              _.token.reason || _(_);
+            } catch (_) {
+              let _ = (0, _._)(_);
+              console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
+            }
+          }, [_, _.clanAccountID, _.file_type, _.image_hash]),
+          _ = _.useCallback(async () => {
+            try {
+              await _._.DetermineAvailableLocalizationForGroup(_),
+                _.token.reason || _(!1);
+            } catch (_) {
+              let _ = (0, _._)(_);
+              console.error("LocalizedImageDialog : " + _.strErrorMsg, _);
+            }
+          }, [_]);
+        _.useEffect(() => {
+          _ &&
+            (_._.SetPrimaryImageForImageGroup(_, "localized_image_group"),
+            _(),
+            _());
+        }, [_, _, _, _]);
+        const _ = !_ && _,
+          _ = _ ? ` - ${_.width}x${_.height}` : "",
+          _ = (0, _._)(_.file_type).slice(1),
+          _ = _ && {
+            width: _.width,
+            height: _.height,
+          },
+          _ = _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_));
+        return (0, _.jsx)(_._, {
+          bAllowFullSize: !0,
+          title: (0, _._)("#ImagePickerLoc_Title"),
+          onCancel: _,
+          closeModal: _,
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().FlexRowContainer,
+                  children: (0, _.jsxs)("span", {
+                    className: _().FlexColumnContainer,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        children: [
+                          (0, _._)("#ImagePickerLoc_Default"),
+                          (0, _.jsx)(_._, {
+                            tooltip: (0, _._)("#ImagePickerLoc_Default_Hint"),
+                          }),
+                        ],
+                      }),
+                      (0, _.jsx)("img", {
+                        className: _.TitleImg,
+                        src: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        children: _.file_name + _ + " - " + _,
+                      }),
+                    ],
+                  }),
+                }),
+                !_ &&
+                  (0, _.jsx)(_._, {
+                    position: "center",
+                    string: (0, _._)("#Loading"),
+                  }),
+                _ &&
+                  (0, _.jsxs)(_.Fragment, {
+                    children: [
+                      (0, _.jsx)(_._, {
+                        clanSteamID: _,
+                        rgSupportArtwork: [],
+                        localizedPrimaryImage: _,
+                        forceResolution: _,
+                        bAllowPreviousClanImageSelection: !0,
+                        fnSetImageURL: _,
+                        rgRealmList: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _.ArtworkBar,
+                        children: (0, _.jsx)(_._, {
+                          clanSteamID: _,
+                          eventModel: void 0,
+                          artworkType: "localized_image_group",
+                          title: (0, _._)("#ImagePickerLoc_Title"),
+                          realms: _,
+                          fnLangHasData: _,
+                          appid: _,
+                          fnGetImageHashAndExt: _,
+                          fnSetImageURL: _,
+                          partnerEventStore: _,
+                        }),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+          }),
+        });
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

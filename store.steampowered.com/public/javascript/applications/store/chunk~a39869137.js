@@ -3949,7 +3949,7 @@
                             id: Z,
                             active: Z && ee,
                             bIsHoverMode: !0,
-                            eGrowOnHover: k.C.k_ETrailerGrowAmount_Medium,
+                            eGrowOnActivate: k.C.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),

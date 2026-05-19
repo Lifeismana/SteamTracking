@@ -4027,7 +4027,7 @@
                             _: _,
                             active: _ && _,
                             bIsHoverMode: !0,
-                            eGrowOnHover: _._.k_ETrailerGrowAmount_Medium,
+                            eGrowOnActivate: _._.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),

@@ -7408,12 +7408,13 @@
             bShowAllButton: c,
             containerClassName: d,
             size: u,
+            bShowCounts: p,
           } = e,
-          p = a.useRef(null);
-        let h = [],
-          g = !1;
+          h = a.useRef(null);
+        let g = [],
+          f = !1;
         for (const e of t) {
-          e.bSelected && (g = !0);
+          e.bSelected && (f = !0);
           const t = e.id === ss ? e.name : e.id,
             n = (0, r.jsx)(
               _s,
@@ -7423,16 +7424,17 @@
                   i !== fs.k_ECategoryButtonAction_Remove && !!e.bSelected,
                 onClick: s ? () => s(e.name, e.id) : void 0,
                 eAction: i ?? fs.k_ECategoryButtonAction_None,
+                bShowCount: p,
               },
               t,
             );
-          h.push(n);
+          g.push(n);
         }
-        const f = (0, ns.g)("#Wishlist_Controls_Categories_All");
+        const v = (0, ns.g)("#Wishlist_Controls_Categories_All");
         return (
           a.useEffect(() => {
-            p.current?.Node().BFocusWithin() &&
-              p.current.Node().ForceMeasureFocusRing();
+            h.current?.Node().BFocusWithin() &&
+              h.current.Node().ForceMeasureFocusRing();
           }, [t]),
           (0, r.jsxs)("div", {
             className: Zn()(rs.CategoriesCtn, d),
@@ -7451,23 +7453,23 @@
                 ),
                 "flow-children": o ? "grid" : "row",
                 focusableIfEmpty: t.length > 0,
-                navRef: p,
+                navRef: h,
                 children: [
                   c &&
                     (0, r.jsx)(_s, {
                       category: {
                         cItems: 0,
                         id: ss,
-                        name: f,
+                        name: v,
                         bNotificationOptIn: !1,
                       },
-                      selected: !g,
-                      onClick: () => s && s(f, ss),
+                      selected: !f,
+                      onClick: () => s && s(v, ss),
                       onOKActionDescription: (0, ns.g)(
                         "#Wishlist_Gamepad_Filter_Clear_Category",
                       ),
                     }),
-                  h,
+                  g,
                   !t.length &&
                     l &&
                     (0, r.jsx)("div", {
@@ -7488,53 +7490,55 @@
             onOKActionDescription: s,
             onClick: i,
             eAction: o,
+            bShowCount: l,
           } = e,
-          l = o === fs.k_ECategoryButtonAction_Remove,
-          c = o === fs.k_ECategoryButtonAction_Filter,
-          d = t.name.length > gs;
-        let m = s;
-        c && !m
-          ? (m = (0, ns.g)("#Wishlist_Gamepad_Filter_Category"))
+          c = o === fs.k_ECategoryButtonAction_Remove,
+          d = o === fs.k_ECategoryButtonAction_Filter,
+          m = t.name.length > gs;
+        let p = s;
+        d && !p
+          ? (p = (0, ns.g)("#Wishlist_Gamepad_Filter_Category"))
           : o !== fs.k_ECategoryButtonAction_Add ||
-            m ||
-            (m = (0, ns.g)("#Wishlist_Gamepad_Add_Category"));
-        const p = {
-            onSecondaryActionDescription: l
-              ? (m ?? (0, ns.g)("#Wishlist_Gamepad_Removecategory"))
+            p ||
+            (p = (0, ns.g)("#Wishlist_Gamepad_Add_Category"));
+        const h = {
+            onSecondaryActionDescription: c
+              ? (p ?? (0, ns.g)("#Wishlist_Gamepad_Removecategory"))
               : void 0,
-            onSecondaryButton: () => l && i && i(),
-            onOKActionDescription: l ? null : m,
-            onOKButton: () => !l && i && i(),
+            onSecondaryButton: () => c && i && i(),
+            onOKActionDescription: c ? null : p,
+            onOKButton: () => !c && i && i(),
             focusClassName: rs.Focused,
           },
-          h = !!i;
-        let g;
+          g = !!i;
+        let f;
         return (
-          d
-            ? (g = t.name)
-            : l && h
-              ? (g = (0, ns.g)("#Wishlist_Controls_Categories_Remove_Tooltip"))
-              : c &&
-                h &&
-                (g = (0, ns.g)("#Wishlist_Controls_Categories_Filter_Tooltip")),
+          m
+            ? (f = t.name)
+            : c && g
+              ? (f = (0, ns.g)("#Wishlist_Controls_Categories_Remove_Tooltip"))
+              : d &&
+                g &&
+                (f = (0, ns.g)("#Wishlist_Controls_Categories_Filter_Tooltip")),
           (0, r.jsx)(Le.Gq, {
-            toolTipContent: g,
+            toolTipContent: f,
             children: (0, r.jsxs)(u.fu, {
               className: Zn()(
                 rs.CategoryBtn,
-                l && rs.Removable,
+                c && rs.Removable,
                 n && rs.Selected,
-                !h && rs.NotActionable,
+                !g && rs.NotActionable,
                 a,
               ),
               onClick: i,
-              ...p,
+              ...h,
               children: [
                 (0, r.jsx)("span", {
                   className: rs.CategoryName,
                   children: t.name,
                 }),
-                l && (0, r.jsx)(_.i6V, {}),
+                l && (0, r.jsxs)("span", { children: ["(", t.cItems, ")"] }),
+                c && (0, r.jsx)(_.i6V, {}),
               ],
             }),
           })
