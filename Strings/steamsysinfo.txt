@@ -224,7 +224,6 @@ $\nY8O
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
@@ -646,6 +645,7 @@ $\nY8O
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
+0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -664,7 +664,6 @@ $\nY8O
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 1000
-0123456789
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
@@ -1712,7 +1711,6 @@ ESignatureClass
 ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
@@ -4488,10 +4486,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD

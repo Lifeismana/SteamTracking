@@ -454,7 +454,6 @@ $\nY8O
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_EStreamControlTouchConfigActive
 %\n!k_EStreamHostDisplaySettingClient
@@ -3190,7 +3189,6 @@ ESessionPersistence
 ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
 ESteamOSCompatibilityCategory
@@ -6904,10 +6902,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD

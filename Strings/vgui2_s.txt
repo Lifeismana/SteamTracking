@@ -660,8 +660,6 @@ $\nY8O
 /user-dirs.dirs
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -671,8 +669,8 @@ $\nY8O
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -687,7 +685,6 @@ $\nY8O
 /yQA
 0)AA7A
 0)KEY_0
-3333
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
@@ -921,6 +918,7 @@ $\nY8O
 3+C;SSKS
 30!]^JV
 30>9
+3333
 3333UUUU
 333?333?333?333?
 4$KEY_4
@@ -2131,10 +2129,10 @@ LABEL_REPEATED
 LABEL_REQUIRED
 LANG
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lsb_release -d -s
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lspci -mm -n
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LEZShnat7{
 LINUX
 LINUX32
@@ -3111,13 +3109,8 @@ WARNING: Failed to initialize base backlight, using dpaux as fallback\n
 WARNING: discarding _NET_WM_PID %u as invalid for X11 window - use specialized XCB_X11_TO_PID function!\n
 WARNING: dlopen/dlsym libX11.so.6: failed to resolve one or more functions\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -5546,15 +5539,9 @@ style
 styles
 subtype mismatch
 successfullyAdded
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 supplied row stride too small
 surface()->RunFrame()
 svRegPath
@@ -5654,7 +5641,6 @@ typeinfo name for __cxxabiv1::__si_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
-u'a{E
 uUKEY_U
 uifontfile_format.proto
 uifontfile_format.proto"C\n\rCUIFontFilePB

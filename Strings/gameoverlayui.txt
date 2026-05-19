@@ -440,7 +440,6 @@ $\nY8O
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
@@ -1107,8 +1106,6 @@ $\nY8O
 /user-dirs.dirs
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -1118,8 +1115,8 @@ $\nY8O
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -1143,7 +1140,6 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-06:46:37
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1595,6 +1591,7 @@ $\nY8O
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20:55:50
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -3223,7 +3220,6 @@ ESignatureClass
 ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
@@ -3415,7 +3411,6 @@ FPSGraph.ColorLegend
 FPSGraph.HeightLarge
 FPSLabel
 FPSNumber
-FXL,
 F\nBk_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate
 F\n\foptimize_for
 Facebook query returned an error
@@ -4319,7 +4314,7 @@ LABEL_REQUIRED
 LANCache
 LANPeer
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 LEZShnat7{
 LIMIT_MATCH=
 LIMIT_RECURSION=
@@ -4525,7 +4520,7 @@ MaxResults
 MaxUseCount
 Maximize
 Maximum family size exceeded
-May 12 2026
+May 18 2026
 MaybeAllocateAligned cannot fail here.
 Meetei_Mayek
 Meeting
@@ -6325,13 +6320,8 @@ Visa (BoaCompra)
 Visa Electron (BoaCompra)
 WARNING
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -8302,10 +8292,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD
@@ -10055,15 +10041,9 @@ subtabposition
 subtitles
 subtype mismatch
 success
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 supplied row stride too small
 support changed ownership
 support cleared content

@@ -577,7 +577,6 @@ $d`D-laM
 %\n!k_EProfileCustomizationTypeGuides
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
@@ -1495,8 +1494,6 @@ $d`D-laM
 /user-dirs.dirs
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -1506,8 +1503,8 @@ $d`D-laM
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -1540,8 +1537,6 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-06:46:10
-06:46:22
 08bX
 0A/8
 0F`8
@@ -2156,6 +2151,8 @@ $d`D-laM
 2+ss
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2048
+20:55:28
+20:55:43
 20CHTMLBaseProtoBufMsg
 20CIBusCallbackManager
 20CMsgGetCookiesForURL
@@ -4899,7 +4896,6 @@ ESignatureClass
 ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
@@ -6958,8 +6954,8 @@ LANCache
 LANPeer
 LBN6
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LEFTPAD_ANALOG
 LEFTSTICK_CLICK
 LEFTSTICK_DOWN
@@ -7188,7 +7184,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 12 2026
+May 18 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -9909,13 +9905,8 @@ WARNING: cancelling DoClose() for bHideOnClose, but using Window.Close() is pref
 WARNING: discarding _NET_WM_PID %u as invalid for X11 window - use specialized XCB_X11_TO_PID function!\n
 WARNING: dlopen/dlsym libX11.so.6: failed to resolve one or more functions\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -10781,6 +10772,7 @@ _input
 _internal.BInGpuFallbackMode
 _internal.ExecutePromise
 _internal.GetDisplayScaleFactors
+_internal.IsDebuggingEnabled
 _internal.RequestDisableGpu
 _internal.SetDevMode
 _internal.SetForceDeviceScaleFactor
@@ -17903,10 +17895,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD
@@ -18939,7 +18927,6 @@ oeap
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
-oho#
 oid exists
 oid_module_init
 oid_section
@@ -20088,6 +20075,9 @@ relativename
 release_space %llu
 released
 reliance
+remote-debugging-address
+remote-debugging-pipe
+remote-debugging-port
 remove
 removeFromCRL
 rename
@@ -21070,15 +21060,9 @@ subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
 success
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 superseded
 suppPubInfo
 supplied row stride too small

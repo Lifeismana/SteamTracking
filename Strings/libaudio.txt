@@ -399,7 +399,6 @@ LOCK_EX
 LOCK_SH
 LoadFileRangeIntoBuffer_Internal
 Lowered '%s' -> '%s'\n
-M;LU}
 MUSIC
 March
 Matched '%s' -> '%s'\n

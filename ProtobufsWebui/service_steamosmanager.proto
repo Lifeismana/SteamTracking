@@ -43,6 +43,17 @@ message CSteamOSManager_GetState_Response {
 	optional .CSteamOSManagerState state = 1;
 }
 
+message CSteamOSManager_GetSteamVRPaths_Request {
+}
+
+message CSteamOSManager_GetSteamVRPaths_Response {
+	optional string active_path = 1;
+	optional .CSteamVRPathRecord default_path = 2;
+	optional string main_lowerdir_path = 3;
+	optional string rel_lowerdir_path = 4;
+	repeated .CSteamVRPathRecord sideloaded_paths = 5;
+}
+
 message CSteamOSManager_OptOutOfSideloadedClient_Request {
 }
 
@@ -69,6 +80,13 @@ message CSteamOSManager_SetDefaultDesktopSession_Request {
 message CSteamOSManager_SetDefaultDesktopSession_Response {
 }
 
+message CSteamOSManager_SetSteamVRPath_Request {
+	optional string path = 1;
+}
+
+message CSteamOSManager_SetSteamVRPath_Response {
+}
+
 message CSteamOSManager_StateChanged_Notification {
 }
 
@@ -82,7 +100,6 @@ message CSteamOSManagerState {
 	optional bool is_service_available = 1;
 	optional string os_version = 2;
 	optional bool is_mandatory_update_available = 3;
-	optional int32 startup_movie_variant = 4 [(.description) = "enum"];
 	optional bool is_status_led_control_available = 5;
 	optional .CMsgFactoryResetState factory_reset_state = 6;
 	optional bool is_tdp_limit_available = 7;
@@ -113,6 +130,11 @@ message CSteamOSManagerState {
 	optional string desktop_session_default = 33;
 }
 
+message CSteamVRPathRecord {
+	optional string path = 1;
+	optional string version = 2;
+}
+
 service SteamOSManager {
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc ApplyMandatoryUpdate (.CSteamOSManager_ApplyMandatoryUpdate_Request) returns (.CSteamOSManager_ApplyMandatoryUpdate_Response);
@@ -120,6 +142,8 @@ service SteamOSManager {
 	rpc FactoryReset (.CSteamOSManager_FactoryReset_Request) returns (.CSteamOSManager_FactoryReset_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetState (.CSteamOSManager_GetState_Request) returns (.CSteamOSManager_GetState_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc GetSteamVRPaths (.CSteamOSManager_GetSteamVRPaths_Request) returns (.CSteamOSManager_GetSteamVRPaths_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc GetUserHasPassword (.CSteamOS_GetUserHasPassword_Request) returns (.CSteamOS_GetUserHasPassword_Response);
 	// ePrivilege=1, eClientExecutionSite=1
@@ -132,6 +156,8 @@ service SteamOSManager {
 	rpc RefreshScreenReaderAutoLocale (.CSteamOSManager_RefreshScreenReaderAutoLocale_Request) returns (.CSteamOSManager_RefreshScreenReaderAutoLocale_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetDefaultDesktopSession (.CSteamOSManager_SetDefaultDesktopSession_Request) returns (.CSteamOSManager_SetDefaultDesktopSession_Response);
+	// ePrivilege=1, eClientExecutionSite=1
+	rpc SetSteamVRPath (.CSteamOSManager_SetSteamVRPath_Request) returns (.CSteamOSManager_SetSteamVRPath_Response);
 	// ePrivilege=1, eClientExecutionSite=1
 	rpc SetUserPassword (.CSteamOS_SetUserPassword_Request) returns (.CSteamOS_SetUserPassword_Response);
 	// ePrivilege=1, eClientExecutionSite=1

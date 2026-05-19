@@ -1985,8 +1985,6 @@ $ffn
 /user-dirs.dirs
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -1996,8 +1994,8 @@ $ffn
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
@@ -2050,9 +2048,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-06:46:10
-06:46:22
-06:46:27
 08bX
 0?0L
 0A/8
@@ -2360,7 +2355,6 @@ $ffn
 11CWorkThread
 11IFileSystem
 11M|
-123456789
 127.0.0.1
 12CAddressInfo
 12CAutoReleaseI14CMetricsStringE
@@ -2434,7 +2428,6 @@ $ffn
 14ConCommandBase
 14ISSLConnection
 1536
-15000
 155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
@@ -2486,7 +2479,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18446744073709551615
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2559,8 +2551,15 @@ $ffn
 20.GamePerformanceSettings.EGamePerformanceSetting
 2000
 2048
+15000
+123456789
+18446744073709551615
 208.64.200.0/22
 208.78.164.0/22
+20:55:28
+20:55:44
+20:55:45
+20:55:47
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2787,11 +2786,11 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-64CK\vH
 65536
+60000000
+64CK\vH
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -7063,7 +7062,7 @@ LB hCon  Socket  Flags  Local address    Remote address   Mode    State         
 LBN6
 LD_LIBRARY_PATH
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 LEGACY_GOST_PKCS12
 LEZShnat7{
 LINUX
@@ -7289,7 +7288,7 @@ MaxResults
 MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 12 2026
+May 18 2026
 MaybeAllocateAligned cannot fail here.
 MbP?H
 Meeting
@@ -9307,7 +9306,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built May 12 2026 06:46:21
+Startup - updater built May 18 2026 20:55:44
 State
 StaticFileWriterThread()
 Steam
@@ -10169,13 +10168,8 @@ WARNING: %s='%s' does not allow fallback. Appending 'x11,windows'\n
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WARNING: setlocale('%s') failed, using locale: '%s'. International characters may not work.\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -19822,15 +19816,9 @@ subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
 success
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 superseded
 suppPubInfo
 supplied row stride too small

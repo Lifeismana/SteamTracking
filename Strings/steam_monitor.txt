@@ -227,15 +227,16 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
-06:46:10
-06:46:14
 12CStdMemAlloc
 16CAdHocValidation
 18CUtlCharConversion
 19CUtlNoEscConversion
+20:55:28
+20:55:32
 21CUtlCStringConversion
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
+:HSv
 </script>
 <family %u, %u bytes>
 <no address info>
@@ -318,7 +319,7 @@ Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-May 12 2026
+May 18 2026
 MbP?H
 MemFree:
 MemTotal:

@@ -131,14 +131,6 @@ enum ESystemFanControlMode {
 	k_SystemFanControlMode_Default = 2;
 }
 
-enum EStartupMovieVariant {
-	k_EStartupMovieVariant_Invalid = 0;
-	k_EStartupMovieVariant_Generic = 1;
-	k_EStartupMovieVariant_DeckBlue = 2;
-	k_EStartupMovieVariant_DeckOrange = 3;
-	k_EStartupMovieVariant_Machine = 4;
-}
-
 enum EColorGamutLabelSet {
 	k_ColorGamutLabelSet_Default = 0;
 	k_ColorGamutLabelSet_sRGB_Native = 1;

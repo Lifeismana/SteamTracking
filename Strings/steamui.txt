@@ -2070,7 +2070,6 @@ ${LANGUAGE}
 %\n!k_ERemoteClientPairWifiAPCanceled
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_ESteamDeckKeyboardLayout_Danish
 %\n!k_ESteamDeckKeyboardLayout_Dvorak
 %\n!k_ESteamDeckKeyboardLayout_French
@@ -2254,6 +2253,7 @@ ${LANGUAGE}
 %s/%s/%s.txt
 %s/%s/%u/gamerecordings
 %s/%s/assets/timeline
+%s/%s/vrcmd --version
 %s/%s?LOCAL_HOSTNAME=%s&LANGUAGE=%s&COUNTRY=%s&LAUNCHER_TYPE=%d&CLIENT_SESSION=%u
 %s/%s_g22.cube
 %s/%s_pq.cube
@@ -2783,6 +2783,7 @@ ${LANGUAGE}
 '.CRemoteClient_ReplyPacket_Notification
 '.CSiteLicense_LCSAssociateUser_Response"
 '.CSteamInputService_GetDongles_Response
+'.CSteamOSManager_SetSteamVRPath_Request
 '.CSteamTV_GetBroadcastChannelID_Request
 '.CSteamTV_GetSubscribedChannels_Request
 '.CStorageDeviceManager_GetState_Request
@@ -3047,6 +3048,8 @@ ${LANGUAGE}
 (.CRemotePlay_SessionStopped_Notification
 (.CSiteLicense_ClientSeatCheckout_Request
 (.CSleepManager_StateChanged_Notification
+(.CSteamOSManager_GetSteamVRPaths_Request
+(.CSteamOSManager_SetSteamVRPath_Response
 (.CSteamOSManager_SwitchToDesktop_Request
 (.CSteamTV_CreateBroadcastChannel_Request
 (.CSteamTV_FollowBroadcastChannel_Request
@@ -3491,6 +3494,7 @@ ${LANGUAGE}
 (\t"(\n&CSiteLicense_LCSAssociateUser_Response"]\n'CSiteLicense_ClientSeatCheckout_Request
 (\t")\n'CPlayer_GetPerFriendPreferences_Request"
 (\t")\n'CRemoteClient_MarkTaskComplete_Response"_\n'CRemoteClient_RemotePacket_Notification
+(\t")\n'CSteamOSManager_SetSteamVRPath_Response"Y\n
 (\t")\n'SiteServerUI_ContentCacheStatus_Request"
 (\t")\n\vCHTMLHeader
 (\t"*\n(CCommunity_HideAndReportComment_Response"/\n\fCAppPriority
@@ -3512,7 +3516,7 @@ ${LANGUAGE}
 (\t"2\n!CRemoteClient_AllocateSDR_Request
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
 (\t"3\n1CAccountHardware_RegisterSteamController_Response"n\n<CAccountHardware_CompleteSteamControllerRegistration_Request
-(\t"3\n1CSteamOSManager_SetDefaultDesktopSession_Response"Y\n
+(\t"3\n1CSteamOSManager_SetDefaultDesktopSession_Response")\n'CSteamOSManager_GetSteamVRPaths_Request"3\n
 (\t"4\n SiteServerUI_SetLanguage_Request
 (\t"5\n CMsgTest_MessageToServer_Request
 (\t"5\n#CPartnerApps_FindDRMUploads_Request
@@ -4091,6 +4095,7 @@ ${LANGUAGE}
 ).CSiteLicense_InitiateAssociation_Request
 ).CSleepManager_ShowPowerMenu_Notification
 ).CSleepManager_SwitchToPowerState_Request
+).CSteamOSManager_GetSteamVRPaths_Response
 ).CSteamOSManager_SwitchToDesktop_Response
 ).CSteamTV_CreateBroadcastChannel_Response"
 ).CSteamTV_FollowBroadcastChannel_Response"
@@ -4240,6 +4245,7 @@ ${LANGUAGE}
 )\n%k_ETwoFactorStatusFieldFlag_LastUsage
 )\n%k_EnhancedMarketAppearanceStatus_None
 )\n%k_PublishedFileQueryType_RankedByVote
+)\n\fdefault_path
 )\n\ncategories
 )\n\nmouse_down
 )\n\rcurrent_state
@@ -4386,6 +4392,8 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN22CSystemAudioController10InitializeEvE40CWebUIAudioSupportsUseBluetoothForMicJob41CAudio_SupportsUseBluetoothForMic_Request42CAudio_SupportsUseBluetoothForMic_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE31CWebUISteamOSManagerGetStateJob32CSteamOSManager_GetState_Request33CSteamOSManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE35CWebUISteamOSManagerFactoryResetJob36CSteamOSManager_FactoryReset_Request37CSteamOSManager_FactoryReset_ResponseE
+*18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE37CWebUISteamOSManagerSetSteamVRPathJob38CSteamOSManager_SetSteamVRPath_Request39CSteamOSManager_SetSteamVRPath_ResponseE
+*18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerGetSteamVRPathsJob39CSteamOSManager_GetSteamVRPaths_Request40CSteamOSManager_GetSteamVRPaths_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSetUserPasswordJob32CSteamOS_SetUserPassword_Request33CSteamOS_SetUserPassword_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSwitchToDesktopJob39CSteamOSManager_SwitchToDesktop_Request40CSteamOSManager_SwitchToDesktop_ResponseE
 *18CWebUIMsgLambdaJobIZN23CSteamOSControllerLinux10InitializeEvE41CWebUISteamOSManagerGetUserHasPasswordJob35CSteamOS_GetUserHasPassword_Request36CSteamOS_GetUserHasPassword_ResponseE
@@ -4473,6 +4481,8 @@ ${LANGUAGE}
 *23CInternalLambdaWorkItemIZN15CLEDDeviceSysfs23YldWriteIndexedPropertyEi10StringViewS1_EUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN18CLibraryAssetCache26BYldMoveFileAndUpdateCacheEj17ELibraryAssetTypePKcS3_EUlvE_bE
 *23CInternalLambdaWorkItemIZN19CFactoryResetHelper15YldFactoryResetEbbEUlvE_7EResultE
+*23CInternalLambdaWorkItemIZN23CSteamOSControllerLinux17YldSetSteamVRPathERK38CSteamOSManager_SetSteamVRPath_RequestR39CSteamOSManager_SetSteamVRPath_ResponseEUlvE_7EResultE
+*23CInternalLambdaWorkItemIZN23CSteamOSControllerLinux18YldGetSteamVRPathsERK39CSteamOSManager_GetSteamVRPaths_RequestR40CSteamOSManager_GetSteamVRPaths_ResponseEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN23CSteamOSControllerLinux18YldSetUserPasswordERK32CSteamOS_SetUserPassword_RequestR33CSteamOS_SetUserPassword_ResponseEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN23CSteamOSControllerLinux21YldGetUserHasPasswordERK35CSteamOS_GetUserHasPassword_RequestR36CSteamOS_GetUserHasPassword_ResponseEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN23CSteamOSControllerLinux26YldPrepareFactoryImageTestERK47CSteamOSManager_PrepareFactoryImageTest_RequestR48CSteamOSManager_PrepareFactoryImageTest_ResponseEUlvE_7EResultE
@@ -4667,6 +4677,8 @@ ${LANGUAGE}
 *ZN23CPulseAudioRecorderBase9ListSinksEvEUlvE0_
 *ZN23CSteamOSControllerLinux10InitializeEvE31CWebUISteamOSManagerGetStateJob
 *ZN23CSteamOSControllerLinux10InitializeEvE35CWebUISteamOSManagerFactoryResetJob
+*ZN23CSteamOSControllerLinux10InitializeEvE37CWebUISteamOSManagerSetSteamVRPathJob
+*ZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerGetSteamVRPathsJob
 *ZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSetUserPasswordJob
 *ZN23CSteamOSControllerLinux10InitializeEvE38CWebUISteamOSManagerSwitchToDesktopJob
 *ZN23CSteamOSControllerLinux10InitializeEvE41CWebUISteamOSManagerGetUserHasPasswordJob
@@ -4675,44 +4687,46 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvE47CWebUISteamOSManagerOptOutOfSideloadedClientJob
 *ZN23CSteamOSControllerLinux10InitializeEvE47CWebUISteamOSManagerSetDefaultDesktopSessionJob
 *ZN23CSteamOSControllerLinux10InitializeEvE52CWebUISteamOSManagerRefreshScreenReaderAutoLocaleJob
-*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE23_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE31_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE25_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE33_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK32CSteamOSManager_GetState_RequestR33CSteamOSManager_GetState_ResponseE_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK32CSteamOS_SetUserPassword_RequestR33CSteamOS_SetUserPassword_ResponseE4_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK35CSteamOS_GetUserHasPassword_RequestR36CSteamOS_GetUserHasPassword_ResponseE5_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK36CSteamOSManager_FactoryReset_RequestR37CSteamOSManager_FactoryReset_ResponseE2_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK38CSteamOSManager_SetSteamVRPath_RequestR39CSteamOSManager_SetSteamVRPath_ResponseE10_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK39CSteamOSManager_GetSteamVRPaths_RequestR40CSteamOSManager_GetSteamVRPaths_ResponseE9_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK39CSteamOSManager_SwitchToDesktop_RequestR40CSteamOSManager_SwitchToDesktop_ResponseE7_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK44CSteamOSManager_ApplyMandatoryUpdate_RequestR45CSteamOSManager_ApplyMandatoryUpdate_ResponseE1_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK47CSteamOSManager_PrepareFactoryImageTest_RequestR48CSteamOSManager_PrepareFactoryImageTest_ResponseE6_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK48CSteamOSManager_OptOutOfSideloadedClient_RequestR49CSteamOSManager_OptOutOfSideloadedClient_ResponseE0_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK48CSteamOSManager_SetDefaultDesktopSession_RequestR49CSteamOSManager_SetDefaultDesktopSession_ResponseE8_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK53CSteamOSManager_RefreshScreenReaderAutoLocale_RequestR54CSteamOSManager_RefreshScreenReaderAutoLocale_ResponseE3_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlRKiE9_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE10_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE14_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE15_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRKiE11_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE12_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE16_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE17_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE18_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE19_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE25_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE20_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE21_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE27_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE32_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE29_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE34_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlbE35_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlfE28_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlfE29_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE36_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE37_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlfE30_
-*ZN23CSteamOSControllerLinux10InitializeEvEUliE12_
-*ZN23CSteamOSControllerLinux10InitializeEvEUliE21_
-*ZN23CSteamOSControllerLinux10InitializeEvEUliE26_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE11_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlfE31_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlfE32_
+*ZN23CSteamOSControllerLinux10InitializeEvEUliE14_
+*ZN23CSteamOSControllerLinux10InitializeEvEUliE23_
+*ZN23CSteamOSControllerLinux10InitializeEvEUliE28_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE13_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE20_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE15_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE22_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE24_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE33_
-*ZN23CSteamOSControllerLinux10InitializeEvEUlvE36_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE26_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE35_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE38_
 *ZN23CSteamOSControllerLinux12SetWifiDebugEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetCECEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetVRSEnabledEbEUlvE_
@@ -6271,6 +6285,8 @@ ${LANGUAGE}
 .CSteamTV_JoinChat_Response"
 .CSteamTV_Search_Request
 .CSteamTV_Search_Response"
+.CSteamVRPathRecord
+.CSteamVRPathRecord"6\n&CSteamOSManager_SetSteamVRPath_Request
 .CStorageDeviceManagerDrive
 .CStorageDeviceManagerState"1\n/CStorageDeviceManager_StateChanged_Notification"7\n#CStorageDeviceManager_Eject_Request
 .CStoreBrowse_GetItems_Request
@@ -6470,7 +6486,6 @@ ${LANGUAGE}
 .ESplitScalingFilter
 .ESplitScalingScaler
 .ESplitScalingScaler"w\n
-.EStartupMovieVariant
 .ESteamNotificationType
 .ESteamOSCompatibilityCategory
 .ESteamPipeOperationType
@@ -7423,9 +7438,7 @@ ${LANGUAGE}
 /user-dirs.dirs
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam_serialnumber.sh
 /usr/bin/steamos-passwd
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -7436,10 +7449,16 @@ ${LANGUAGE}
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
+/usr/bin/steamos-systemreport
+/usr/bin/steamvr
+/usr/bin/steamvr getpath-lowerdir-main
+/usr/bin/steamvr getpathdefault
+/usr/bin/steamvr merge-main-overlay
+/usr/bin/steamvr setpath %s
 /usr/bin/xdg-open
 /usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
 /usr/lib/os-release
@@ -9253,6 +9272,7 @@ ${LANGUAGE}
 18CStartVideoDataMsg
 18CSteamOSController
 18CSteamUIController
+18CSteamVRPathRecord
 18CStreamDataLostMsg
 18CStreamSampleQueueI23CGameFrameDurationStatsjLi3ELb0EE
 18CStreamSampleQueueIN13CStreamServer17CRecentFrameStatsE15CFastFrameStatsLi10ELb0EE
@@ -9789,6 +9809,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjPKcS2_S2_9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjiiEE
+20CJSMethodCallHandlerI23CSteamUIInputControllerJjjjjEE
 20CJSMethodCallHandlerI23CSteamUIMusicControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI23CSteamUIMusicControllerJEE
 20CJSMethodCallHandlerI23CSteamUIMusicControllerJbEE
@@ -11545,6 +11566,7 @@ ${LANGUAGE}
 38CRemoteClient_ReplyPacket_Notification
 38CSiteLicense_LCSAssociateUser_Response
 38CSteamInputService_GetDongles_Response
+38CSteamOSManager_SetSteamVRPath_Request
 38CSteamTV_GetBroadcastChannelID_Request
 38CSteamTV_GetSubscribedChannels_Request
 38CSteamTV_HomePageTemplate_ConveyorBelt
@@ -11629,6 +11651,8 @@ ${LANGUAGE}
 39CRemotePlay_SessionStopped_Notification
 39CSiteLicense_ClientSeatCheckout_Request
 39CSleepManager_StateChanged_Notification
+39CSteamOSManager_GetSteamVRPaths_Request
+39CSteamOSManager_SetSteamVRPath_Response
 39CSteamOSManager_SwitchToDesktop_Request
 39CSteamTV_CreateBroadcastChannel_Request
 39CSteamTV_FollowBroadcastChannel_Request
@@ -11803,6 +11827,7 @@ ${LANGUAGE}
 40CSiteLicense_InitiateAssociation_Request
 40CSleepManager_ShowPowerMenu_Notification
 40CSleepManager_SwitchToPowerState_Request
+40CSteamOSManager_GetSteamVRPaths_Response
 40CSteamOSManager_SwitchToDesktop_Response
 40CSteamTV_CreateBroadcastChannel_Response
 40CSteamTV_FollowBroadcastChannel_Response
@@ -17825,6 +17850,7 @@ CSteamUIVRController::OnVRSceneApplicationChanged
 CSteamURLController::ExecuteSteamURL %s : not allowed yet
 CSteamURLController::ExecuteSteamURL : Wrong universe
 CSteamURLController::OnLaunchGameMsgReceived
+CSteamVRPathRecord
 CStopAudioDataMsg"{\n
 CStopVideoDataMsg"
 CStorageDeviceManagerDrive
@@ -19997,7 +20023,6 @@ ESignatureClass
 ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamDeckCompatibilityCategory
 ESteamDeckCompatibilityFeedback
@@ -22452,6 +22477,7 @@ GetSteamDeckComponents
 GetSteamDeckKeyboardSkin
 GetSteamGuardDetails
 GetSteamTVUserSettings
+GetSteamVRPaths
 GetStoreCategories
 GetStorePreferences
 GetString
@@ -24137,6 +24163,7 @@ LC_TIME
 LD_LIBRARY_PATH
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" %s
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" dbus-send --system --print-reply --dest=org.freedesktop.ConsoleKit /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
@@ -24153,7 +24180,6 @@ LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PA
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lspci -mm -n
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-prepare-oobe-test
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-session-select %s
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" xdg-icon-resource forceupdate
 LEDManager.GetState#1
 LEDManager.NotifyStateChanged#1
@@ -24555,7 +24581,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 12 2026 06:46:39
+May 18 2026 20:56:02
 MaybeAllocateAligned cannot fail here.
 MbP?
 Media
@@ -25038,6 +25064,7 @@ Method GetSteamDeckComponents() not implemented.
 Method GetSteamDeckKeyboardSkin() not implemented.
 Method GetSteamGuardDetails() not implemented.
 Method GetSteamTVUserSettings() not implemented.
+Method GetSteamVRPaths() not implemented.
 Method GetStoreCategories() not implemented.
 Method GetStorePreferences() not implemented.
 Method GetSubSectionData() not implemented.
@@ -25404,6 +25431,7 @@ Method SetSpeed() not implemented.
 Method SetStartupBrightness() not implemented.
 Method SetSteamDeckKeyboardSkin() not implemented.
 Method SetSteamTVUserSettings() not implemented.
+Method SetSteamVRPath() not implemented.
 Method SetSubscriptionListFromCollection() not implemented.
 Method SetTrusted() not implemented.
 Method SetUseBluetoothForMic() not implemented.
@@ -29997,6 +30025,7 @@ SetSteamDeckKeyboardSkin
 SetSteamID
 SetSteamInfo
 SetSteamTVUserSettings
+SetSteamVRPath
 SetStreamingActive
 SetString
 SetText
@@ -30601,12 +30630,14 @@ SteamOSManager
 SteamOSManager.ApplyMandatoryUpdate#1
 SteamOSManager.FactoryReset#1
 SteamOSManager.GetState#1
+SteamOSManager.GetSteamVRPaths#1
 SteamOSManager.GetUserHasPassword#1
 SteamOSManager.NotifyStateChanged#1
 SteamOSManager.OptOutOfSideloadedClient#1
 SteamOSManager.PrepareFactoryImageTest#1
 SteamOSManager.RefreshScreenReaderAutoLocale#1
 SteamOSManager.SetDefaultDesktopSession#1
+SteamOSManager.SetSteamVRPath#1
 SteamOSManager.SetUserPassword#1
 SteamOSManager.SwitchToDesktop#1
 SteamOSManager1AmbientLightSensor1
@@ -31628,6 +31659,7 @@ The user callback function failed
 The user callback function failed due to the temporal error
 The value of the cart in local currency is too high
 TheadedGetUserHasPassword
+TheadedSetSteamVRPath
 TheadedSetUserPassword
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This installation is missing the app ID in config/config.vdf. Please reinstall.
@@ -31673,6 +31705,7 @@ ThreadedBroadcastNotification
 ThreadedCleanupSystemReports
 ThreadedCount
 ThreadedFactoryResetProgress
+ThreadedGetSteamVRPaths
 ThreadedPerformInitialHandshake SSL_do_handshake
 ThreadedSaveSysemReportToDesktop
 ThreadedSetDevkitServiceState
@@ -32052,6 +32085,7 @@ Unable to capture video: %s\n
 Unable to create clip directory
 Unable to create directories for downloaded clip: %s
 Unable to decrement IOCP eventfd, error %d
+Unable to determine VR Path Registry filename\n
 Unable to export clip: %s %s
 Unable to find boundary string in multipart/form-data: %s\n
 Unable to find new name when downloading clip %s
@@ -32062,9 +32096,11 @@ Unable to hard link entire recording from %s to %s
 Unable to increment IOCP eventfd, error %d
 Unable to load clip file after download: %s
 Unable to load clip summary for %s after download
+Unable to parse %s\n
 Unable to parse CMsgClientSettings in SetSetting
 Unable to parse clip file after download: %s
 Unable to parse number.
+Unable to read VR Path Registry from %s\n
 Unable to send encrypted SSL data over connection\n
 Unable to set basic info on new published file %llu
 Unable to set default socket options, error %d
@@ -32462,11 +32498,14 @@ VRMostTrackersCount
 VRStream
 VRStreamingThread
 VRSubmitScreenshot
+VR_CONFIG_PATH
 VR_GetGenericInterface
 VR_GetStringForHmdError
 VR_InitInternal2
 VR_IsHmdPresent
+VR_LOG_PATH
 VR_MovieStream
+VR_OVERRIDE
 VR_Shutdown
 VR_ShutdownInternal
 VR_uid
@@ -32720,13 +32759,8 @@ WARNING: discarding _NET_WM_PID %u as invalid for X11 window - use specialized X
 WARNING: dlopen/dlsym libX11.so.6: failed to resolve one or more functions\n
 WARNING: org.freedesktop.ScreenSaver.SimulateUserActivity() is not supported. Falling back to Inhibit(): %s\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WAVE
 WAYLAND_DISPLAY
 WIN32
@@ -33826,6 +33860,7 @@ Zulu
 \n(CPublishedFile_GetChangeHistory_Response
 \n(CPublishedFile_GetSubSectionData_Request
 \n(CQueuedMatchmaking_SearchForGame_Request
+\n(CSteamOSManager_GetSteamVRPaths_Response
 \n(CStoreBrowse_GetContentHubConfig_Request
 \n(CStoreBrowse_GetStoreCategories_Response
 \n(CStore_GetDiscoveryQueueSettings_Request
@@ -35137,6 +35172,7 @@ Zulu
 \n\vactionBlock
 \n\vactiveMatch
 \n\vactive_beta
+\n\vactive_path
 \n\vadmin_query
 \n\vallow_alias
 \n\vallow_voice
@@ -36612,7 +36648,7 @@ bInput
 bIsApplication
 bIsBackupInstall
 bIsBroadcasting
-bIsCEFDebuggingEnabled
+bIsDeckOled
 bIsDefaultFolder
 bIsDefaultInputDevice
 bIsDefaultOutputDevice
@@ -36946,6 +36982,7 @@ bigpicture
 bigpicture_daisywheel.vdf
 bigpicture_windowed
 billing_agreement_type
+bin/linuxarm64
 bin\steamservice.exe
 bind
 bind_textdomain_codeset
@@ -46919,10 +46956,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_ESteamDeckKeyboardLayout_Thai
 k_ESteamNotificationType_Gift
 k_ESteamNotificationType_Item
@@ -49112,6 +49145,7 @@ mailto
 mailto:
 main
 main_capsule_2x
+main_lowerdir_path
 make
 makecontext
 malay
@@ -50393,6 +50427,7 @@ openurl/
 openurl_external
 openurl_external/
 openvr.tool.steamvr_desktop_gametheatre
+openvr/openvrpaths.vrpath
 openvroverlay
 openxr
 opera
@@ -52348,6 +52383,7 @@ registry.vdf
 regular expression is too large
 reinterpret_cast
 reject
+rel_lowerdir_path
 relative
 relative_mouse.vdf
 relativename
@@ -52774,6 +52810,7 @@ rungameid
 rungameid/
 running
 runparam
+runtime
 russian
 rv > 0 && rv <= nSendLen
 rx_bytes_per_sec
@@ -53443,6 +53480,7 @@ shutdown
 shutdown while in init
 sibling-id
 side
+sideloaded_paths
 sides != 0
 sig invalid mime type
 sig_alg
@@ -53886,7 +53924,6 @@ startup_movie_id
 startup_movie_local_path
 startup_movie_shuffle
 startup_movie_used_for_resume
-startup_movie_variant
 startvrdashboard
 stat
 stat_id
@@ -54552,15 +54589,9 @@ subtype mismatch
 success
 successful
 successful.\n
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 suggested-default-performance-profile
 suggested-minimum-limit
 suggestedPresentationDelay

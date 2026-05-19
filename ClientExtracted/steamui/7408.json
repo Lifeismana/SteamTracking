@@ -289,7 +289,7 @@
     "setcooldown_expireson": "Şikâyet bekleme süresi %1$s tarihinde sona erecektir.",
     "setcooldown_nocooldown": "Bekleme süresi yok",
     "setcooldown_days": "gün",
-    "setcooldown_newcooldownlabel": "New cooldown for user:",
+    "setcooldown_newcooldownlabel": "Kullanıcı için yeni bekleme süresi:",
     "setcooldown_clearcooldown": "Temizle",
     "setcooldown_cooldownsummary": "(%1$s gün)",
     "setcooldown_dialogtitle": "Şikâyet bekleme süresini ayarla",

@@ -4497,6 +4497,7 @@
               _.PlayMPD(
                 _.m_data.url,
                 _.m_data.hls_url,
+                void 0,
                 _.m_strCDNAuthUrlParameters,
               );
           } else {

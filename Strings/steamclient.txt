@@ -1451,31 +1451,7 @@
 #SettingsController_Shutdown_Never
 #SettingsController_SteamController
 #SettingsDownloads_No_Throttle
-#SteamNetSockets_AppClose_Normal
-#SteamNetSockets_AppClose_Unusual
-#SteamNetSockets_Connected
-#SteamNetSockets_Connecting
-#SteamNetSockets_Disconnect_ConnectionTimedout
-#SteamNetSockets_Disconnect_InternalError
-#SteamNetSockets_Disconnect_LocalProblem_HostedServerPrimaryRelay
-#SteamNetSockets_Disconnect_LocalProblem_ManyRelays
-#SteamNetSockets_Disconnect_LocalProblem_NetworkConfig
-#SteamNetSockets_Disconnect_LocalProblem_Other
-#SteamNetSockets_Disconnect_P2P_Rendezvous
-#SteamNetSockets_Disconnect_RemoteProblem_BadCert
-#SteamNetSockets_Disconnect_RemoteProblem_BadCrypt
-#SteamNetSockets_Disconnect_RemoteProblem_Timeout
-#SteamNetSockets_Disconnect_RemoteProblem_TimeoutConnecting
-#SteamNetSockets_Disconnect_SteamConnectivity
-#SteamNetSockets_Disconnect_TimedOut
-#SteamNetSockets_Disconnect_Unusual
-#SteamNetSockets_FindingRoute
-#SteamNetSockets_PeerClose_App_Normal
-#SteamNetSockets_PeerClose_App_Unusual
-#SteamNetSockets_PeerClose_LocalProblem
-#SteamNetSockets_PeerClose_RemoteProblem_BadCert
-#SteamNetSockets_PeerClose_RemoteProblem_BadCrypt
-#SteamNetSockets_PeerClose_Ununusual
+#SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR
 #SteamUI_Selection_Arabic
 #SteamUI_Selection_Brazilian
 #SteamUI_Selection_Bulgarian
@@ -2284,7 +2260,6 @@ $steammessages_parental_objects.proto"
 %\n!k_ERemoteClientPairWifiAPCanceled
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
-%\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_ESteamDatagramMsg_P2PStatsRelay
 %\n!k_ESteamDeckKeyboardLayout_Danish
 %\n!k_ESteamDeckKeyboardLayout_Dvorak
@@ -3203,6 +3178,7 @@ $steammessages_parental_objects.proto"
 '.CRemoteClient_ReplyPacket_Notification
 '.CSiteLicense_LCSAssociateUser_Response"
 '.CSteamInputService_GetDongles_Response
+'.CSteamOSManager_SetSteamVRPath_Request
 '.CSteamTV_GetBroadcastChannelID_Request
 '.CSteamTV_GetSubscribedChannels_Request
 '.CStorageDeviceManager_GetState_Request
@@ -3474,6 +3450,8 @@ $steammessages_parental_objects.proto"
 (.CRemotePlay_SessionStopped_Notification
 (.CSiteLicense_ClientSeatCheckout_Request
 (.CSleepManager_StateChanged_Notification
+(.CSteamOSManager_GetSteamVRPaths_Request
+(.CSteamOSManager_SetSteamVRPath_Response
 (.CSteamOSManager_SwitchToDesktop_Request
 (.CSteamTV_CreateBroadcastChannel_Request
 (.CSteamTV_FollowBroadcastChannel_Request
@@ -3935,6 +3913,7 @@ $steammessages_parental_objects.proto"
 (\t"(\n&CSiteLicense_LCSAssociateUser_Response"]\n'CSiteLicense_ClientSeatCheckout_Request
 (\t")\n'CPlayer_GetPerFriendPreferences_Request"
 (\t")\n'CRemoteClient_MarkTaskComplete_Response"_\n'CRemoteClient_RemotePacket_Notification
+(\t")\n'CSteamOSManager_SetSteamVRPath_Response"Y\n
 (\t")\n'SiteServerUI_ContentCacheStatus_Request"
 (\t")\n\vCHTMLHeader
 (\t"*\n(CCommunity_HideAndReportComment_Response"/\n\fCAppPriority
@@ -3956,7 +3935,7 @@ $steammessages_parental_objects.proto"
 (\t"3\n!CMsgClientLaunchClientAppResponse
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
 (\t"3\n1CAccountHardware_RegisterSteamController_Response"n\n<CAccountHardware_CompleteSteamControllerRegistration_Request
-(\t"3\n1CSteamOSManager_SetDefaultDesktopSession_Response"Y\n
+(\t"3\n1CSteamOSManager_SetDefaultDesktopSession_Response")\n'CSteamOSManager_GetSteamVRPaths_Request"3\n
 (\t"4\n SiteServerUI_SetLanguage_Request
 (\t"4\n\nCMsgGSKick
 (\t"5\n CMsgTest_MessageToServer_Request
@@ -4632,6 +4611,7 @@ $steammessages_parental_objects.proto"
 ).CSiteLicense_InitiateAssociation_Request
 ).CSleepManager_ShowPowerMenu_Notification
 ).CSleepManager_SwitchToPowerState_Request
+).CSteamOSManager_GetSteamVRPaths_Response
 ).CSteamOSManager_SwitchToDesktop_Response
 ).CSteamTV_CreateBroadcastChannel_Response"
 ).CSteamTV_FollowBroadcastChannel_Response"
@@ -4785,6 +4765,7 @@ $steammessages_parental_objects.proto"
 )\n%k_ETwoFactorStatusFieldFlag_LastUsage
 )\n%k_EnhancedMarketAppearanceStatus_None
 )\n%k_PublishedFileQueryType_RankedByVote
+)\n\fdefault_path
 )\n\ncategories
 )\n\nmouse_down
 )\n\rcurrent_state
@@ -6738,6 +6719,8 @@ $steammessages_parental_objects.proto"
 .CSteamTV_JoinChat_Response"
 .CSteamTV_Search_Request
 .CSteamTV_Search_Response"
+.CSteamVRPathRecord
+.CSteamVRPathRecord"6\n&CSteamOSManager_SetSteamVRPath_Request
 .CStorageDeviceManagerDrive
 .CStorageDeviceManagerState"1\n/CStorageDeviceManager_StateChanged_Notification"7\n#CStorageDeviceManager_Eject_Request
 .CStoreBrowse_GetItems_Request
@@ -6929,7 +6912,6 @@ $steammessages_parental_objects.proto"
 .ESplitScalingFilter
 .ESplitScalingScaler
 .ESplitScalingScaler"w\n
-.EStartupMovieVariant
 .ESteamNetworkingSocketsCipher"'\n
 .ESteamNotificationType
 .ESteamOSCompatibilityCategory
@@ -8024,8 +8006,6 @@ $steammessages_parental_objects.proto"
 /usr/bin/crosdisk %s
 /usr/bin/lsof
 /usr/bin/steam-runtime-system-info >
-/usr/bin/steam_serialnumber.sh
-/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
 /usr/bin/steamos-polkit-helpers/jupiter-dock-updater
 /usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
@@ -8035,8 +8015,8 @@ $steammessages_parental_objects.proto"
 /usr/bin/steamos-polkit-helpers/steamos-format-sdcard
 /usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
 /usr/bin/steamos-polkit-helpers/steamos-reboot-other
-/usr/bin/steamos-polkit-helpers/steamos-set-hostname
-/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname %s
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone %s
 /usr/bin/steamos-polkit-helpers/steamos-trim-devices
 /usr/bin/steamos-polkit-helpers/steamos-update
 /usr/bin/xdg-open
@@ -8156,8 +8136,6 @@ $steammessages_parental_objects.proto"
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
-0123456789
-0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8321,6 +8299,8 @@ $steammessages_parental_objects.proto"
 10000
 1000000
 10000000
+0123456789
+0123456789.
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -11338,6 +11318,7 @@ $steammessages_parental_objects.proto"
 18CSiteLicenseClient
 18CStartAudioDataMsg
 18CStartVideoDataMsg
+18CSteamVRPathRecord
 18CStreamDataLostMsg
 18CSystemDockManager
 18CSystemPerfManager
@@ -12506,6 +12487,7 @@ $steammessages_parental_objects.proto"
 25CGameRecordingTagInstance
 25CGenericAsyncFileIOThread
 25CGetCompatDataDiskSizeJob
+25CGyroToJoystickCameraMode
 25CHTTPClientNetworkRequest
 25CHTTPResponseHandlerFuncs
 25CJobQueryMasterGameServer
@@ -13800,6 +13782,7 @@ $steammessages_parental_objects.proto"
 33CAdapterSteamNetworkingSockets009
 33CAdapterSteamNetworkingSockets011
 33CAdapterSteamNetworkingSockets012
+33CAdapterSteamNetworkingSockets013
 33CAudio_GetHdmiCecEnabled_Response
 33CAudio_SendHdmiCecVolume_Response
 33CAudio_SetHdmiCecEnabled_Response
@@ -14536,6 +14519,7 @@ $steammessages_parental_objects.proto"
 38CRemoteClient_SteamBroadcastPacket_Job
 38CSiteLicense_LCSAssociateUser_Response
 38CSteamInputService_GetDongles_Response
+38CSteamOSManager_SetSteamVRPath_Request
 38CSteamTV_GetBroadcastChannelID_Request
 38CSteamTV_GetSubscribedChannels_Request
 38CSteamTV_HomePageTemplate_ConveyorBelt
@@ -14652,6 +14636,8 @@ $steammessages_parental_objects.proto"
 39CSiteLicense_ClientSeatCheckout_Request
 39CSleepManager_StateChanged_Notification
 39CSteamControllerTritonPacketAbstraction
+39CSteamOSManager_GetSteamVRPaths_Request
+39CSteamOSManager_SetSteamVRPath_Response
 39CSteamOSManager_SwitchToDesktop_Request
 39CSteamTV_CreateBroadcastChannel_Request
 39CSteamTV_FollowBroadcastChannel_Request
@@ -14830,6 +14816,7 @@ $steammessages_parental_objects.proto"
 40CSiteLicense_InitiateAssociation_Request
 40CSleepManager_ShowPowerMenu_Notification
 40CSleepManager_SwitchToPowerState_Request
+40CSteamOSManager_GetSteamVRPaths_Response
 40CSteamOSManager_SwitchToDesktop_Response
 40CSteamTV_CreateBroadcastChannel_Response
 40CSteamTV_FollowBroadcastChannel_Response
@@ -15995,10 +15982,7 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
-60CAccountHardware_CompleteSteamControllerRegistration_Request
-60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
 60CMarketingMessages_GetPartnerReadyToPublishMessages_Response
 60CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
@@ -16006,9 +15990,12 @@ $steammessages_parental_objects.proto"
 60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
+6144
+60000000
+60CAccountHardware_CompleteSteamControllerRegistration_Request
+60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16747,7 +16734,6 @@ $steammessages_parental_objects.proto"
 <.CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response"
 <.ChatRoomClient_NotifyChatGroupUserStateChanged_Notification
 <0\f<pqA1
-<25CGyroToJoystickCameraMode
 <4E87
 <84P0,(
 <= or is NULL
@@ -16996,6 +16982,7 @@ $steammessages_parental_objects.proto"
 @c5U
 @cCSClientMaxNumSocketsPerHost
 @cCSClientMaxNumSocketsPerHostForCachingProxy
+@cDefaultInitialDownloadSources
 @cDepotBuilderFileChunkingThreads
 @cFileChunkingCRCFalseAlarmBytesToSkip
 @cFileChunkingCRCFalseAlarmThreshold
@@ -21586,6 +21573,7 @@ CSteamTV_JoinChat_Request
 CSteamTV_JoinChat_Response
 CSteamTV_Search_Request
 CSteamTV_Search_Response
+CSteamVRPathRecord
 CStopAudioDataMsg"{\n
 CStopVideoDataMsg"
 CStorageDeviceManagerDrive
@@ -22946,7 +22934,6 @@ ControllerActiveConfigMsg
 ControllerBindings
 ControllerConfigResponse
 ControllerConfigUsage
-ControllerData.m_ulSerialNumber != STEAM_CONTROLLER_HANDLE_ALL_CONTROLLERS
 ControllerGyroEulerAngles
 ControllerPersonalization
 ControllerQuaternion
@@ -24350,7 +24337,6 @@ ESignatureClass
 ESpeakerConfiguration
 ESplitScalingFilter
 ESplitScalingScaler
-EStartupMovieVariant
 ESteamControllerConfigTemplateWorkshopFileID
 ESteamDatagramMsgID
 ESteamDeckCompatibilityCategory
@@ -24627,7 +24613,6 @@ Enable the minimum speed required to update the gyroscope response.
 Enable valid email domains in BIsValidEmailAddress
 EnableConfiguratorSupport
 EnableDeviceCallbacks
-EnableDiagnosticsUI
 EnableDockedInput
 EnableGameOverlay
 EnableGameOverlayForApp
@@ -25715,7 +25700,6 @@ Finding FOZ pipeline cache files for archive version %u, base directory: %s.
 Finding Mesa %s cache files, base directory: %s.
 Finding Mesa SF caches, base directory: %s.
 Finding NVIDIA cache files, base directory: %s.
-Fingerprint check failed: %x vs. %x
 Finish method returned eresult %d\n
 FinishDepotUpload
 FinishStreamingSession
@@ -27046,6 +27030,7 @@ GetSteamRealm
 GetSteamTVUserSettings
 GetSteamUILanguage
 GetSteamVRAppId
+GetSteamVRPaths
 GetStoreCategories
 GetStorePreferences
 GetStreamClientFormFactor
@@ -27175,7 +27160,6 @@ Google Swiftshader
 Google.Protobuf.Reflection
 Gospel
 Got %d download sources and %d caching proxies via ContentServerDirectoryService::BYieldingGetServersForSteamPipe (CellID %d / Launcher %d)
-Got %s expected %s\n
 Got GOAWAY frame with last stream processed %d for stream %d\n
 Got RST STREAM for stream %d with error %u\n
 Got SDR config revision %d from %s\n
@@ -27209,6 +27193,7 @@ Gray color space not permitted on RGB PNG
 Greek
 Greenlight Items
 GreenlightItems
+Grip Pulse: eSide: %u, nStrength: %d, nRepeats: %d, nFlags: %d\n
 Group
 Group HTTP metrics by hostname.  Careful, the cardinality of your in-memory map might be large.
 GroupChatMessageNotification_t
@@ -27853,8 +27838,8 @@ Icelandic
 Icon
 IdempotencyLevel
 IdentifyControllerRumbleEffect
+Identity %s isn't valid for Messages sessions.
 Identity is blank
-Identity isn't valid for Messages sessions.
 IdleAction
 IdleActionUSec
 IdleHint
@@ -28960,6 +28945,7 @@ LC_TELEPHONE
 LC_TIME
 LD_LIBRARY_PATH
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" amixer -c acp5x contents
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -28973,7 +28959,6 @@ LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PA
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" lspci -mm -n
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-select-branch -c
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" steamos-select-branch -l
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LD_PRELOAD
 LEFT
 LEFT_ALT
@@ -29561,7 +29546,8 @@ Message from relay session %u mapped to %s, but that connection has no Transport
 Message is too deep, the parser exceeded the configured recursion limit of
 Message missing required fields:
 Message of type "
-Message size %d is too big.  Max is %d
+Message size %d is too big.  Max internal size is %d
+Message size %u is too big.  Max is %d
 Message type "
 Message type %d wasn't declared, but we registered job %s to handle it?\n
 Message"
@@ -29952,6 +29938,7 @@ Method GetSteamDeckComponents() not implemented.
 Method GetSteamDeckKeyboardSkin() not implemented.
 Method GetSteamGuardDetails() not implemented.
 Method GetSteamTVUserSettings() not implemented.
+Method GetSteamVRPaths() not implemented.
 Method GetStoreCategories() not implemented.
 Method GetStorePreferences() not implemented.
 Method GetSubSectionData() not implemented.
@@ -30318,6 +30305,7 @@ Method SetSpeed() not implemented.
 Method SetStartupBrightness() not implemented.
 Method SetSteamDeckKeyboardSkin() not implemented.
 Method SetSteamTVUserSettings() not implemented.
+Method SetSteamVRPath() not implemented.
 Method SetSubscriptionListFromCollection() not implemented.
 Method SetTrusted() not implemented.
 Method SetUseBluetoothForMic() not implemented.
@@ -30715,7 +30703,6 @@ N25SteamNetworkingSocketsLib26CSteamNetworkConnectionP2PE
 N25SteamNetworkingSocketsLib26CSteamNetworkConnectionUDPE
 N25SteamNetworkingSocketsLib26CSteamNetworkingICESessionE
 N25SteamNetworkingSocketsLib26CSteamNetworkingSocketsSDRE
-N25SteamNetworkingSocketsLib26PostConnectionStateMsgTaskE
 N25SteamNetworkingSocketsLib26SteamDatagramClientThinkerE
 N25SteamNetworkingSocketsLib27CConnectionTransportP2PBaseE
 N25SteamNetworkingSocketsLib27CConnectionTransportSDRBaseE
@@ -33040,7 +33027,6 @@ PostChatMessage
 PostCode
 PostCommentToThread
 PostConnectionStateMsg
-PostConnectionStateUpdateForDiagnosticsUI
 PostConnectionStateUpdatesForAllConnections
 PostControllerConfig
 PostOutstandingRequestFriendshipCallbacks
@@ -34898,6 +34884,7 @@ SNP decode first reliable stream pos underflow.  %llx mod %llx, expected next %l
 SNP decode overrun %d bytes for %s segment data.
 SNP decode overrun, %d bytes for %s
 SNP decode unreliable msgnum underflow.  %llx mod %llx, highest seen %llx
+SNP stop waiting advanced past sentinel gap.  This should never happen!
 SNP stop waiting reduced %lld (pkt %lld) -> %lld (pkt %lld)
 SNP_SendPacket
 SNR_table_Q1
@@ -35976,6 +35963,7 @@ SetSteamDatagramHostedAddressCipherContext failed!?
 SetSteamDeckKeyboardSkin
 SetSteamID
 SetSteamTVUserSettings
+SetSteamVRPath
 SetStreamingDesktopToRemotePlayTogetherEnabled
 SetStreamingDriversInstalled
 SetStreamingEnabled
@@ -36768,6 +36756,7 @@ SteamNetworkingSockets009
 SteamNetworkingSockets010
 SteamNetworkingSockets011
 SteamNetworkingSockets012
+SteamNetworkingSockets013
 SteamNetworkingSocketsCert_t
 SteamNetworkingSocketsInterface()->m_keyPrivateKey.IsValid()
 SteamNetworkingSocketsLowLevelDecRef
@@ -38162,6 +38151,7 @@ Unencrypted
 Unencrypted addresses only allowed to 'dev' POPID
 Unexpected AvailAnyRouterCommunication %d
 Unexpected EGameFrameRateReportingPreference value: %d\n
+Unexpected IPV6_TCLASS cmsg_len %lld
 Unexpected IP_TOS cmsg_len %lld
 Unexpected NoConnection
 Unexpected P2PSessionError %d
@@ -38729,6 +38719,7 @@ V_strcat
 V_strcmp( strEntryName.String(), "_bucketmanifest" ) == 0
 V_strcmp_prefix
 V_stricmp( m_Presets[0], s_pszDefaultPresetName ) == 0
+V_stricmp_prefix
 V_stristr( STEAMNETWORKINGSOCKETS_HARDCODED_ROOT_CA_KEY, checkID ) != NULL
 V_stristr( cacheIn.Key( 0 ).szDriverDescription, "Audio" ) != nullptr
 V_stristr(char const*, char const*)
@@ -38923,13 +38914,8 @@ WARNING: dlopen/dlsym libX11.so.6: failed to resolve one or more functions\n
 WARNING: org.freedesktop.ScreenSaver.SimulateUserActivity() is not supported. Falling back to Inhibit(): %s\n
 WARNING: the shader manager was disabled from desktop mode. Some features may not work correctly.
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
-WARNING: using plain als gain get\n
 WARNING: using plain factory reset\n
-WARNING: using plain jupiter-biosupdate\n
 WARNING: using plain reboot other\n
-WARNING: using plain set-hostname\n
-WARNING: using plain set-timezone\n
-WARNING: using plain steamos-update\n
 WAVE
 WCOM
 WCOP
@@ -40250,6 +40236,7 @@ Zulu
 [AppID %u] Requested playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for %u items
 [AppID %u] Requesting to stop playtime tracking for all items
+[AppID %u] Resolved path is malformed UTF-8, failing (%s)
 [AppID %u] Resolving file %s from state %d - invalid, leaving
 [AppID %u] Resolving file %s from state %d - synchronized, leaving
 [AppID %u] Resolving file %s from state %d, bUseLocal = %s
@@ -40803,6 +40790,7 @@ Zulu
 \n(CPublishedFile_GetChangeHistory_Response
 \n(CPublishedFile_GetSubSectionData_Request
 \n(CQueuedMatchmaking_SearchForGame_Request
+\n(CSteamOSManager_GetSteamVRPaths_Response
 \n(CStoreBrowse_GetContentHubConfig_Request
 \n(CStoreBrowse_GetStoreCategories_Response
 \n(CStore_GetDiscoveryQueueSettings_Request
@@ -42305,6 +42293,7 @@ Zulu
 \n\vaccumulated
 \n\vactionBlock
 \n\vactiveMatch
+\n\vactive_path
 \n\vadmin_query
 \n\vallow_alias
 \n\vallow_voice
@@ -45456,6 +45445,7 @@ control command failed
 control=mangohud\n
 controller
 controllerData
+controllerInfo.m_ulSerialNumber != STEAM_CONTROLLER_HANDLE_ALL_CONTROLLERS
 controllerPath
 controllerType
 controller_8bitdo
@@ -48228,6 +48218,7 @@ gamma value does not match sRGB
 gamma value out of range
 gapFilled->first < gapFilled->second
 gapFilled->first <= nSegBegin
+gapFilled->second > nSegBegin
 gap_ms
 gateway
 gather_time_entropy
@@ -48516,6 +48507,9 @@ gray[16] color-map: too few entries
 gray[8] color-map: too few entries
 greek
 greeting
+grip_sense_haptic_test
+grip_sense_haptic_test_repeats
+grip_sense_haptic_test_strength
 group
 group details changed
 group name must start with a non-digit
@@ -51922,10 +51916,6 @@ k_ESplitScalingScaler_Fit
 k_ESplitScalingScaler_Integer
 k_ESplitScalingScaler_Invalid
 k_ESplitScalingScaler_Stretch
-k_EStartupMovieVariant_DeckBlue
-k_EStartupMovieVariant_Generic
-k_EStartupMovieVariant_Invalid
-k_EStartupMovieVariant_Machine
 k_ESteamDatagramMsg_ConnectOK
 k_ESteamDatagramMsg_Diagnostic
 k_ESteamDatagramMsg_Invalid
@@ -52895,15 +52885,15 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:440
 low-pri yield - /data/src/clientdll/clientjob.cpp:471
 low-pri yield - /data/src/clientdll/clientjob.cpp:780
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - /data/src/clientdll/clientugc.cpp:6900
-low-pri yield - /data/src/clientdll/compatmanager.cpp:1973
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2224
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2491
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3171
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3203
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3216
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3268
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3868
+low-pri yield - /data/src/clientdll/clientugc.cpp:6912
+low-pri yield - /data/src/clientdll/compatmanager.cpp:1975
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2226
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2493
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3173
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3230
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3243
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3295
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3895
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
@@ -53265,7 +53255,6 @@ m_bIsBroadcasting
 m_bIsFinalized
 m_bIsFirstLoad
 m_bIsMasterInstance
-m_bIsPuckDockedSlot
 m_bIsRTMP
 m_bIsRecordingDesktop
 m_bIsUserMarker
@@ -54856,7 +54845,6 @@ m_usecIdleTimeout > 0
 m_usecNextThinkTime != k_nThinkTime_Never
 m_usecNextThinkTime == k_nThinkTime_Never
 m_usecSendSignalDeadline == k_nThinkTime_Never
-m_usecWhenNextDiagnosticsUpdate > usecNow
 m_usecWhenSentConnectRequest == usecNow
 m_usecWhenSentLastSignal == usecNow
 m_usecWhenStartedFindingRoute == 0
@@ -55195,6 +55183,7 @@ mailto
 main
 main_capsule_2x
 main_cxn
+main_lowerdir_path
 mainboard_manufacturer
 mainboard_product
 mainboard_serialnumber
@@ -55872,10 +55861,7 @@ nSDR_POPID
 nSRecord
 nScanCode < V_ARRAYSIZE( s_HidToXKeySym)
 nScore >= 0 || m_vecAvailableTransports.size() == 1
-nSegBegin < gapFilled->second
 nSegBegin < nSegEnd
-nSegBegin > gapFilled->first
-nSegEnd < gapFilled->second
 nSeq >= GetSeqStart() && nSeq <= GetSeqEnd()
 nSeq >= m_nSeqFirstUnacked && nSeq < ( m_nSeqFirstUnacked + k_nMaxUnackedPkts )
 nSeqStart <= nSeqEnd
@@ -58428,7 +58414,6 @@ price_to_base_discount_on
 prices
 prim:
 primary
-primary.m_sessionSelectQualityMetrics.m_nScore < k_nRouteScoreHuge
 primary_controller_type
 primary_language
 primary_steam_controller_serial
@@ -59007,6 +58992,7 @@ reinterpret_cast<const char *>( pData )[nLength - 1] == '\0'
 reject
 relInfo.m_nSentReliableSegRefCount > 0
 relSeg.m_nRefCount > 0
+rel_lowerdir_path
 relative_mouse
 relative_mouse.vdf
 relativename
@@ -60196,6 +60182,7 @@ shutdown
 shutdown while in init
 siblings
 side
+sideloaded_paths
 sides != 0
 sig invalid mime type
 sig_alg
@@ -60382,6 +60369,7 @@ socketaddress.cc
 socketpair
 socketpair() call failed.  Error code 0x%08x.
 sockopt(IPPROTO_IP, IP_RECVTOS, 1) failed (0x%x), will not be able to read TOS\n
+sockopt(IPPROTO_IPV6, IPV6_RECVTCLASS, 1) failed (0x%x), will not be able to read TOS for IPv6 packets\n
 soco
 soft_press
 soft_press_sytle
@@ -60659,7 +60647,6 @@ starting steam-runtime-launcher-service\n
 starttls
 startup
 startup_brightness
-startup_movie_variant
 stat
 stat.stat_id() < 0xFFFF
 stat_aggregate_method
@@ -60739,7 +60726,7 @@ stderr
 stdin
 stdout
 steam
-steam (main) May 12 2026 06:46:47
+steam (main) May 18 2026 20:56:03
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -61024,6 +61011,7 @@ stime went backwards?
 stoken
 stop using I64/I32, use lld or d respectively
 stop_waiting offset
+stop_waiting past sentinel gap
 stop_waiting pktNum %llu offset %llu
 storage_system
 store
@@ -61180,15 +61168,9 @@ subtreeMinimumQuality
 subtype mismatch
 success
 successful
-sudo -n /usr/bin/steam_serialnumber.sh
-sudo -n /usr/lib/hwsupport/format-sdcard.sh
 sudo -n chmod a+w "%s"
-sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
-sudo -n hostnamectl set-hostname
 sudo -n steamos-factory-reset-config
 sudo -n steamos-reboot --reboot-other
-sudo -n steamos-update
-sudo -n timedatectl set-timezone
 sueaccoefjghi
 sum_chunk_scores
 sum_run_time_ms
@@ -61410,6 +61392,7 @@ test_reconnect
 test_voice_encode
 testappcloudpaths
 testing
+tests
 text
 text chunk: out of memory
 text compression mode is out of range

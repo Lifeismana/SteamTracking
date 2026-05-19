@@ -152,7 +152,7 @@
     "ContentReportSubmitted_Chat_Description": "Merci de nous avoir signalé cet abus. Nous avons envoyé un échantillon de l'historique du chat au groupe de modération. Aucune autre action de votre part n'est nécessaire.",
     "ContentReportSubmissionError_Title": "Erreur lors de l'envoi",
     "ContentReportSubmissionError_Description": "Une erreur s'est produite lors de l'envoi. Veuillez réessayer ultérieurement.",
-    "ContentReportSubmissionOnCooldown_Description": "Ce compte n'est temporairement plus autorisé à signaler du contenu.",
+    "ContentReportSubmissionOnCooldown_Description": "Ce compte n'est temporairement plus autorisé à faire de signalement.",
     "ContentReport_FriendOptions_CallToAction": "Vous pouvez aussi prendre d'autres mesures pour éviter des messages à l'avenir :",
     "ContentReport_FriendOptions_BlockedDesc": "Cette personne a été automatiquement bloquée. Vous ne recevrez plus de messages de sa part.",
     "ContentReport_FriendOptions_Unblock": "Débloquer",
@@ -292,7 +292,7 @@
     "setcooldown_newcooldownlabel": "Nouveau délai d'attente pour le compte :",
     "setcooldown_clearcooldown": "Supprimer",
     "setcooldown_cooldownsummary": "(%1$s jours)",
-    "setcooldown_dialogtitle": "Définir un délai d'attente pour pouvoir signaler du contenu",
+    "setcooldown_dialogtitle": "Définir un délai d'attente avant de réautoriser des signalements",
     "setcooldown_dialogdescription": "Interdire à un compte de signaler du contenu ou de contester les décisions de la modération en raison d'un abus du système de signalement.",
     "setcooldown_setbutton": "Définir un délai d'attente",
     "nocomma": ""
