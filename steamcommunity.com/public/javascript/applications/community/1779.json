@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Kun Valve",
     "moderation_escalationlevel_supervisor_desc": "Veileder kreves",
+    "moderation_escalation_escalationnote": "Eskaleringsmerknad:",
     "moderation_chatmetadata_deleted": "Metadataen knyttet til denne samtalerapporten er blitt slettet på grunn av alder. Den beholdes kun i omtrent 21 dager.",
     "moderation_chatmetadata_futurelogcollection": "Denne samtaleloggen kan utvides med ytterligere meldinger sendt etter rapporten i %1$s",
     "moderation_resolutionaction_removed": "Fjern rapportert innhold",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Rapporterte saker",
     "moderation_already_owner_disputed": "Allerede bestridt",
     "moderationstats_alltypes": "Alle sakstyper",
-    "moderation_alternateforumtool": "Alternativt verktøy",
+    "forumsubjectlist_subjectreportsummary": "%1$s uløst, %1$s bestridt",
     "empty_no_trailing_comma": ""
 }

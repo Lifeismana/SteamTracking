@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Sadece Valve",
     "moderation_escalationlevel_supervisor_desc": "Denetleyici gerekli",
+    "moderation_escalation_escalationnote": "Üst birim için not:",
     "moderation_chatmetadata_deleted": "Bu sohbet şikâyetine ilişkin üst veriler, süre kısıtlaması nedeniyle silinmiştir. Bu veriler yaklaşık 21 gün boyunca saklanır.",
     "moderation_chatmetadata_futurelogcollection": "Bu sohbet kaydı, şikâyet gönderildikten %1$s sonra gönderilmiş ilave mesajlarla genişletilebilir.",
     "moderation_resolutionaction_removed": "Şikâyet edilen içeriği kaldır",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Şikâyet edilen konular",
     "moderation_already_owner_disputed": "Zaten itiraz edildi",
     "moderationstats_alltypes": "Tüm konu türleri",
-    "moderation_alternateforumtool": "Alternatif araç",
+    "forumsubjectlist_subjectreportsummary": "%1$s çözülmemiş, %1$s itiraz edilmiş",
     "empty_no_trailing_comma": ""
 }

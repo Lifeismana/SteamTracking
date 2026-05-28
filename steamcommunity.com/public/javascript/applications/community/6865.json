@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Nastavení omezení nahlašování",
     "setcooldown_dialogdescription": "Umožňuje zamezit uživateli v nahlašování obsahu nebo zpochybňování rozhodnutí, v případě, že zneužil systém.",
     "setcooldown_setbutton": "Nastavit omezení",
+    "setcooldown_clearopenreports": "Smazat nevyřešená nahlášení tohoto uživatele",
     "nocomma": ""
 }

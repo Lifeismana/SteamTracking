@@ -295,12 +295,12 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", ref: _, navRef: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -312,6 +312,7 @@
           _ = _;
         return (0, _.jsx)(_._, {
           focusable: _,
+          navRef: _,
           children: (0, _.jsx)(_, {
             ref: _,
             ..._,

@@ -70,17 +70,17 @@
         p = s(78327),
         g = s(56545),
         h = s(42457),
-        x = s(23809);
-      const _ = "nicknames";
+        _ = s(23809);
+      const x = "nicknames";
       function S(e) {
-        const t = (0, x.KV)(),
+        const t = (0, _.KV)(),
           { data: s, isLoading: n } = (0, c.I)({
-            queryKey: [_],
+            queryKey: [x],
             queryFn: async () => {
               const e = new Map();
               if (p.iA.logged_in) {
-                const s = g.w.Init(h.dN),
-                  n = (await h.xt.GetNicknameList(t, s)).Body().toObject();
+                const s = g.w.Init(h.w_T),
+                  n = (await h.xtC.GetNicknameList(t, s)).Body().toObject();
                 n?.nicknames &&
                   n.nicknames.length > 0 &&
                   n.nicknames.forEach((t) => {
@@ -262,7 +262,7 @@
                   className: u.SectionTitleButtons,
                   children: [
                     g,
-                    (0, n.jsx)(x, { bIsMinimized: h, fnToggleMinimize: i }),
+                    (0, n.jsx)(_, { bIsMinimized: h, fnToggleMinimize: i }),
                   ],
                 }),
               ],
@@ -280,7 +280,7 @@
           children: e.children,
         });
       }
-      function x(e) {
+      function _(e) {
         const { bIsMinimized: t, fnToggleMinimize: s } = e,
           o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, n.jsx)(a.$n, {
@@ -308,8 +308,8 @@
         p = s(92557),
         g = s(22797),
         h = s(61859),
-        x = s(43068),
-        _ = s(84811);
+        _ = s(43068),
+        x = s(84811);
       function S(e) {
         const { gid: t } = (0, i.g)(),
           [s, a] = (0, d.useState)(!0);
@@ -326,7 +326,7 @@
           });
         const S = u.O3.GetClanEventModel(t);
         return S
-          ? (0, n.jsxs)(_.tH, {
+          ? (0, n.jsxs)(x.tH, {
               children: [
                 !S.BIsUnlistedEvent() &&
                   (0, n.jsx)("div", {
@@ -338,7 +338,7 @@
                   event: S,
                   adminPanel:
                     c.TS.EREALM === o.TU.k_ESteamRealmChina
-                      ? (0, n.jsx)(x.P, { eventModel: S })
+                      ? (0, n.jsx)(_.P, { eventModel: S })
                       : (0, n.jsx)(m.g, { eventModel: S, bSupportsSticky: !0 }),
                 }),
               ],
@@ -562,7 +562,7 @@
             t.group_id,
             t.session_id,
           ),
-          [x, S, v] = (0, $.uD)(),
+          [_, S, v] = (0, $.uD)(),
           M =
             ((T = s.GID),
             (w = a),
@@ -673,8 +673,8 @@
                   ],
                 }),
             (0, n.jsx)(U.E, {
-              active: x,
-              children: (0, n.jsx)(_.tH, {
+              active: _,
+              children: (0, n.jsx)(x.tH, {
                 children: (0, n.jsx)(W, {
                   closeModal: v,
                   bIncludeSelf: r,
@@ -1036,7 +1036,7 @@
                 : 0),
             0,
           ),
-          [h, x, S] = (0, $.uD)(),
+          [h, _, S] = (0, $.uD)(),
           v =
             ((w = t.GID),
             (C = a.group_id),
@@ -1085,12 +1085,12 @@
                 children: [
                   (0, n.jsx)(b.$n, {
                     className: (0, F.A)(ee().SetCapacityButton),
-                    onClick: x,
+                    onClick: _,
                     children: "Update capacity...",
                   }),
                   (0, n.jsx)(U.E, {
                     active: h,
-                    children: (0, n.jsx)(_.tH, {
+                    children: (0, n.jsx)(x.tH, {
                       children: (0, n.jsx)(ue, {
                         closeModal: S,
                         nCapacity: i.max_capacity ?? 0,

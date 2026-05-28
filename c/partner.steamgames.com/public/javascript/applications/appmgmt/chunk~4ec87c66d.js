@@ -716,6 +716,7 @@
         MarketingAppTitleCell: "in2n3ALH613p-Y5td8PVV",
         MarketingCell: "_1PBHFKvI48-zcNDtRDdE0e",
         SalesCell: "EsNiiuvw4iJrlroxDY5W7",
+        ProductsMissingUserRights: "qwvkGxgO9nmMo7ukuUire",
         DiscountPercentageContainer: "_3mWzC2go9Rk4_zsL3fXKYK",
         GameCountInfo: "NtseNNy86csiR-ctSJAnu",
         GameCountBadge: "_2qOXeMNq6wbprU9tbhWusC",
@@ -1503,26 +1504,24 @@
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        EventSizer: "_2JC5DEuXUeE50kjpb7Eeau",
         OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        ShowInWideMode: "RLbLb742gN095uDUITtIB",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
         OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
-        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
-        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
-        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
-        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
-        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
+        EventType: "_2BWwVF5N-3fDuJRblB6gHb",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
@@ -6558,6 +6557,14 @@
             ((this.m_model.collect_game_discount_requirement = _),
             this.SetDirty(!0));
         }
+        BIsCollectGameFrontPageFeaturing() {
+          return this.m_model.collect_game_front_page_featuring;
+        }
+        SetCollectGameFrontPageFeaturing(_) {
+          _ != this.m_model.collect_game_front_page_featuring &&
+            ((this.m_model.collect_game_front_page_featuring = _),
+            this.SetDirty(!0));
+        }
         BHasCollectDemoDeadlineDate() {
           return Boolean(this.m_model.collect_demo_deadline);
         }
@@ -7790,6 +7797,13 @@
           [_._.bound],
           _.prototype,
           "SetCollectGameDiscountRequirement",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "BIsCollectGameFrontPageFeaturing", null),
+        (0, _._)(
+          [_._.bound],
+          _.prototype,
+          "SetCollectGameFrontPageFeaturing",
           null,
         ),
         (0, _._)([_._], _.prototype, "BHasCollectDemoDeadlineDate", null),
@@ -21430,6 +21444,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const [_, _, _] = (0, _._)(!1);
@@ -21488,49 +21503,44 @@
               (0, _.jsxs)("h1", {
                 children: [
                   "Opt-In Admin Dashboard",
-                  (0, _.jsx)("button", {
-                    className: (0, _._)(_().Button),
+                  (0, _.jsxs)("div", {
                     style: {
                       float: "right",
                       marginRight: "16px",
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "8px",
                     },
-                    onClick: (_) =>
-                      (0, _._)(
-                        _,
-                        "https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event",
-                      ),
-                    children: "Help",
-                  }),
-                  (0, _.jsx)("button", {
-                    className: (0, _._)(_().Button),
-                    style: {
-                      float: "right",
-                      marginRight: "16px",
-                    },
-                    onClick: (_) =>
-                      (window.location.href =
-                        _._.PARTNER_BASE_URL + "optin/admin/preprune"),
-                    children: "Pre-prune tool",
-                  }),
-                  (0, _.jsx)("button", {
-                    className: (0, _._)(_().Button),
-                    style: {
-                      float: "right",
-                      marginRight: "16px",
-                    },
-                    onClick: (_) =>
-                      (window.location.href =
-                        _._.PARTNER_BASE_URL + "optin/appreview_dashboard"),
-                    children: "Appealss Dashboard",
-                  }),
-                  (0, _.jsx)("button", {
-                    className: (0, _._)(_().Button),
-                    style: {
-                      float: "right",
-                      marginRight: "16px",
-                    },
-                    onClick: (_) => __webpack_require__(),
-                    children: "Create Opt-In Page",
+                    children: [
+                      (0, _.jsx)(_._, {
+                        color: "dull",
+                        onClick: (_) =>
+                          (0, _._)(
+                            _,
+                            "https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event",
+                          ),
+                        children: "Help",
+                      }),
+                      (0, _.jsx)(_._, {
+                        color: "dull",
+                        onClick: (_) =>
+                          (window.location.href =
+                            _._.PARTNER_BASE_URL + "optin/admin/preprune"),
+                        children: "Pre-prune tool",
+                      }),
+                      (0, _.jsx)(_._, {
+                        color: "dull",
+                        onClick: (_) =>
+                          (window.location.href =
+                            _._.PARTNER_BASE_URL + "optin/appreview_dashboard"),
+                        children: "Appealss Dashboard",
+                      }),
+                      (0, _.jsx)(_._, {
+                        color: "dull",
+                        onClick: (_) => __webpack_require__(),
+                        children: "Create Opt-In Page",
+                      }),
+                    ],
                   }),
                 ],
               }),
@@ -22595,12 +22605,13 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [_, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _] = (0, _._)(() => [
             _.BIsAdditionalFeaturingSectionEnabled(),
             _.BIsCollectTrailerPermissions(),
             _.BIsCollectDemoPermissions(),
             _.BIsCollectGameProfileIntent(),
             _.BIsCollectGameDiscountRequirement(),
+            _.BIsCollectGameFrontPageFeaturing(),
           ]),
           [_, _] = (0, _.useState)(_.BHasCollectDemoDeadlineDate()),
           [_] = (0, _._)(() => [_.GetEventStartTime()]);
@@ -24320,10 +24331,11 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get(),
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.GetName(),
             _.GetFullName(),
             _.BIsOptInEnabled(),
+            _.EVisibility(),
           ]),
           [_, _, _] = (0, _._)(!1);
         return (0, _.jsxs)("div", {
@@ -24373,6 +24385,23 @@
                           _ ? _.SetOptInEnabled(_) : _();
                         },
                       }),
+                      _ &&
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _.jsx)("h3", {
+                              children: "Opt-In Visibility:",
+                            }),
+                            (0, _.jsx)("b", {
+                              children:
+                                void 0 === _ ||
+                                _ === _._.k_EOptInVisibility_Public
+                                  ? "Public"
+                                  : "Invite Only",
+                            }),
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("br", {}),
+                          ],
+                        }),
                       (0, _.jsx)("a", {
                         href: `${_._.PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales`,
                         target: "_blank",
@@ -25662,12 +25691,14 @@
           _ = (0, _.useMemo)(
             () =>
               _ && _
-                ? _.filter(
-                    (_) =>
+                ? _.filter((_) => {
+                    const _ = _.get(_.appid);
+                    return (
                       (!_ || _.trailers_opt_in) &&
                       (!_ || _.opt_in) &&
-                      (!_ || _.discount_info),
-                  ).map((_) => {
+                      (!_ || _.discount_info || (_ && !_.no_planned_discount))
+                    );
+                  }).map((_) => {
                     if (_) {
                       const _ = _.get(_.appid);
                       _ &&
@@ -25683,6 +25714,9 @@
                         (_.game_profile_intent = Boolean(
                           _.jsondata?.game_profile_intent &&
                             _.jsondata?.rtime_granting_profile,
+                        )),
+                        (_.no_planned_discount = Boolean(
+                          _.no_planned_discount,
                         )),
                         (_.store_url = `${_._.STORE_BASE_URL}app/${_.appid}`));
                     }
@@ -27504,7 +27538,11 @@
                 ? (_.long_term_sales_rank =
                     __webpack_require__.fnGetLongTermSaleRankForApp(_.appid))
                 : (_.long_term_sales_rank = 1e6),
-                (_.discount_info = (0, _._)(_.appid, _, _, _, _));
+                (_.discount_info = (0, _._)(_.appid, _, _, _, _)),
+                "" != _.discount_info ||
+                  void 0 === _.no_planned_discount ||
+                  Boolean(_.no_planned_discount) ||
+                  (_.discount_info = (0, _._)("#DiscountEvent_Intent"));
             }),
             _)
           : _;
@@ -30943,10 +30981,15 @@
                 .then((_) => {
                   if (_ != _._)
                     _.fnSetError(!0),
-                      _.fnSetStrError(
-                        "Error: Failed to create the email on the steam server: Eresult: " +
-                          _,
-                      );
+                      _ == _._
+                        ? _.fnSetStrError(
+                            "Error: Failed to create the email on the steam server because the opt-in event is not marked as live. Please tick live before creating the email: Eresult: " +
+                              _,
+                          )
+                        : _.fnSetStrError(
+                            "Error: Failed to create the email on the steam server: Eresult: " +
+                              _,
+                          );
                   else {
                     const _ = _().CancelToken.source();
                     _._.Get()
@@ -46327,6 +46370,7 @@
           { rgDiscounts: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)("gross_sales"),
           [_, _] = (0, _.useState)(!1),
+          _ = (_.products_missing_user_rights ?? 0) > 0,
           _ = (_) => {
             _(_ == _ && !_), _(_);
           },
@@ -46393,6 +46437,14 @@
                 sortColumn: _,
                 sortAscending: _,
               }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _.ProductsMissingUserRights,
+                  children: (0, _._)(
+                    "#DailyDeals_ProductsMissingUserRights",
+                    _.products_missing_user_rights,
+                  ),
+                }),
               _.products
                 ?.filter((_) => _.units > 0 || _.gross_activations > 0)
                 .sort((_, _) =>
@@ -50064,6 +50116,7 @@
                   children: "Notes for Localization",
                 }),
                 (0, _.jsx)("textarea", {
+                  className: "DialogTextInputBase",
                   rows: 10,
                   cols: 80,
                   value: _,
@@ -65679,7 +65732,9 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _().PartnerName,
-                  children: (0, _.jsxs)("b", {
+                  children: (0, _.jsxs)("a", {
+                    href: `${_._.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${_}`,
+                    target: "_blank",
                     children: [_.name, " (", _, ")"],
                   }),
                 }),
@@ -79661,7 +79716,7 @@
         BIsMutedClanID(_) {
           return this.m_mapBlockedClanIds.has(_);
         }
-        async UpdateCommunitionSetting(_, _, _) {
+        async UpdateCommunicationSetting(_, _, _) {
           const _ = _._.STORE_BASE_URL + "account/optoutappcommunication/",
             _ = new FormData();
           if (
@@ -80268,7 +80323,7 @@
           let _ = _.appInfo ? _.appid : void 0,
             _ = _.clanInfo ? _.clanInfo.clanid : void 0;
           null != _ || null != _
-            ? (await _.Get().UpdateCommunitionSetting(_, _, _),
+            ? (await _.Get().UpdateCommunicationSetting(_, _, _),
               _._.RecordAppInteractionEvent(_, _._.k_eMuted))
             : (0, _._)(
                 !1,
@@ -82708,6 +82763,7 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
             saleDescList: _,
@@ -82856,8 +82912,7 @@
             saleDesc: _,
             message: (0, _._)("#Sale_InDraftModeHasApp"),
           });
-        const _ = (0, _.sfN)(_._.LANGUAGE),
-          _ = _.GetSaleURL();
+        const _ = (0, _.sfN)(_._.LANGUAGE);
         return (0, _.jsx)(_._, {
           children: (0, _.jsxs)("div", {
             className: (0, _._)(_().TileContainer),
@@ -82875,20 +82930,9 @@
               (0, _.jsxs)("div", {
                 className: (0, _._)(_().EventDetailsCtn),
                 children: [
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _.GetSummaryWithFallback(_),
-                    children: (0, _.jsx)("a", {
-                      href: _,
-                      target: "_blank",
-                      children: (0, _.jsx)(_._, {
-                        className: (0, _._)(_().CapsuleImg),
-                        rgSources: _.GetImageForSizeAsArrayWithFallback(
-                          "capsule",
-                          _,
-                          _._.capsule_main,
-                        ),
-                      }),
-                    }),
+                  (0, _.jsx)(_, {
+                    eventModel: _,
+                    eLanguage: _,
                   }),
                   (0, _.jsxs)("div", {
                     className: (0, _._)(_().TopStatsCtn),
@@ -82943,6 +82987,22 @@
                   saleDesc: _,
                 }),
             ],
+          }),
+        });
+      }
+      function _(_) {
+        const { eventModel: _, eLanguage: _ } = _,
+          _ = _.GetSaleURL(),
+          _ = (0, _._)(_, "capsule", _, _._.capsule_main);
+        return (0, _.jsx)(_._, {
+          toolTipContent: _.GetSummaryWithFallback(_),
+          children: (0, _.jsx)("a", {
+            href: _,
+            target: "_blank",
+            children: (0, _.jsx)(_._, {
+              className: (0, _._)(_().CapsuleImg),
+              rgSources: _,
+            }),
           }),
         });
       }
@@ -91287,6 +91347,7 @@
             hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
+            disableScreenshots: _,
             children: _,
           } = _,
           _ = _.useRef(null),
@@ -91296,13 +91357,16 @@
               _ &&
                 (_ && _(!0),
                 window.GameHover &&
+                  (_.current &&
+                    _ &&
+                    (_.current.dataset.hoverDisableScreenshots = "true"),
                   window.GameHover(_ ? _() : _.current, _, "global_hover", {
                     type: _,
                     _: (0, _._)(_)._,
                     _: 1,
-                  }));
+                  })));
             },
-            [_, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -98563,6 +98627,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { event: _ } = _,
@@ -99229,8 +99294,6 @@
               emoticonStore: _,
               className: _,
               additionalTypeAndDateElement: _,
-              fnFilterImageURLsForKnownFailures: _,
-              fnImageFailureCallback: _,
               headerClassnames: _,
               isPreview: _,
               bShouldMaskImages: _,
@@ -99238,16 +99301,9 @@
             } = this.props,
             _ = _ || (0, _.sfN)(_._.LANGUAGE),
             _ = _.GetDescriptionWithFallback(_) || "",
-            _ = _;
-          let _ = _.GetImageForSizeAsArrayWithFallback(
-            "background",
-            _,
-            _._.background_main,
-          );
-          _ && (_ = _(_));
-          const _ = _.GetCategoryAsString(),
-            _ = _.type,
-            _ = _.BImageNeedScreenshotFallback("background", _);
+            _ = _,
+            _ = _.GetCategoryAsString(),
+            _ = _.type;
           let _ = "";
           if (_.appid) _ = _?.GetName() || "";
           else if (_.clanSteamID) {
@@ -99268,22 +99324,10 @@
                 "editor" == _ ? _().InEditor : "",
               ),
               children: [
-                _ != _.Fwr &&
-                  !_ &&
-                  (0, _.jsx)(_._, {
-                    className: (0, _._)(
-                      _().EventCoverImageBackground,
-                      _ && _().MaskImages,
-                    ),
-                    rgSources: _,
-                    onIncrementalError: (_, _, _) => _ && _(_),
-                  }),
-                _.length > 0 &&
-                  (0, _.jsx)(_._, {
-                    className: _().EventBackgroundBlur,
-                    rgSources: _,
-                    onIncrementalError: (_, _, _) => _ && _(_),
-                  }),
+                (0, _.jsx)(_, {
+                  ...this.props,
+                  eLanguage: _,
+                }),
                 (0, _.jsx)("div", {
                   className: _().LibraryEventTitleContainer,
                   children: (0, _.jsxs)("div", {
@@ -99455,6 +99499,42 @@
           });
         }
       };
+      function _(_) {
+        const {
+            event: _,
+            fnFilterImageURLsForKnownFailures: _,
+            fnImageFailureCallback: _,
+            eLanguage: _,
+            bShouldMaskImages: _,
+          } = _,
+          _ = _.BImageNeedScreenshotFallback("background", _),
+          _ = _.type;
+        let _ = (0, _._)(_, "background", _, _._.background_main);
+        return (
+          _ && _ && (_ = __webpack_require__(_)),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ != _.Fwr &&
+                !_ &&
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _().EventCoverImageBackground,
+                    _ && _().MaskImages,
+                  ),
+                  rgSources: _,
+                  onIncrementalError: (_, _, _) => _ && _(_),
+                }),
+              _ &&
+                _.length > 0 &&
+                (0, _.jsx)(_._, {
+                  className: _().EventBackgroundBlur,
+                  rgSources: _,
+                  onIncrementalError: (_, _, _) => _ && _(_),
+                }),
+            ],
+          })
+        );
+      }
       var _;
       (0, _._)([_._], _.prototype, "OnEnterVisible", null),
         (0, _._)([_._], _.prototype, "OnLeaveVisible", null),
@@ -100952,6 +101032,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
@@ -100960,6 +101041,24 @@
             ? ""
             : (0, _._)(_.default_label))
         );
+      }
+      function _(_) {
+        const { event: _, elTitle: _, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _ ? "product_mobile_banner" : "product_banner", _);
+        return (0, _.jsxs)("div", {
+          className: _().SaleImageCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().SaleImageHelper,
+              children: _,
+            }),
+            (0, _.jsx)("img", {
+              src: _,
+              alt: _,
+            }),
+          ],
+        });
       }
       const _ = (0, _._)((_) => {
         const {
@@ -100971,34 +101070,28 @@
             subtitle: _,
           } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(),
           { eventModel: _ } = (0, _._)(
             _.sale_page_cross_promo_clan_account_id,
             _.sale_page_cross_promo_event_gid,
             !1,
-          ),
-          _ = _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
+          );
+        if (
+          "title_image" == _.section_type &&
+          "image" === _.title_image_selected
+        )
+          return null;
+        const _ =
+          _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
         if (!_) return null;
         const _ = _ || (0, _._)(_, _, _);
         let _ = (0, _.jsx)("div", {
             className: (0, _._)(_().SaleSectionHeader, "SaleSectionHeader"),
             style: _(_, _, _),
             children: _?.BHasSomeImage("product_banner")
-              ? (0, _.jsxs)("div", {
-                  className: _().SaleImageCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().SaleImageHelper,
-                      children: _,
-                    }),
-                    (0, _.jsx)("img", {
-                      src: _.GetImageURLWithFallback(
-                        _ ? "product_mobile_banner" : "product_banner",
-                        _,
-                      ),
-                      alt: _,
-                    }),
-                  ],
+              ? (0, _.jsx)(_, {
+                  ..._,
+                  event: _,
+                  elTitle: _,
                 })
               : _,
           }),
@@ -101230,6 +101323,7 @@
                     (0, _.jsx)(_._, {
                       _: _,
                       bMinimizePlatforms: _,
+                      bHideWindows: !0,
                     }),
                   !_ &&
                     (0, _.jsx)("span", {
@@ -101357,6 +101451,7 @@
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: _,
           } = _,
+          _ = (0, _._)(),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -101372,6 +101467,7 @@
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
+            bUsePanel: !_ && !_,
           });
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
@@ -101471,6 +101567,7 @@
         const {
             _: _,
             bHideStatusBanners: _,
+            bUsePanel: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -101486,11 +101583,11 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        const _ = !!_;
+        const _ = _
+            ? void 0
+            : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
+          _ = _ ? _._ : _._,
+          _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -101498,8 +101595,8 @@
                 [_().TwoWidthCtn]: _,
               }),
               children: [
-                (0, _.jsxs)(_._, {
-                  href: _ ? void 0 : _,
+                (0, _.jsxs)(_, {
+                  href: _,
                   style: {
                     display: "block",
                     cursor: "pointer",
@@ -101508,12 +101605,12 @@
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
-                  onClick: _,
+                  focusable: !0,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
                       hide_status_banners: _,
-                      show_early_access: _.bShowEarlyAccessBanner,
+                      show_early_access: _,
                     }),
                     "none" != _ &&
                       (0, _.jsx)(_._, {

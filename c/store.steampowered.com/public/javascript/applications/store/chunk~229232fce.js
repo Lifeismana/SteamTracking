@@ -115,44 +115,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _;
-      !(function (_) {
-        (_.full = ""),
-          (_.background_main = "_960x311"),
-          (_.background_mini = "_480x156"),
-          (_.capsule_main = "_400x225"),
-          (_.spotlight_main = "_1054x230");
-      })(_ || (_ = {}));
-      const _ = [
-        "localized_image_group",
-        "link_capsule",
-        "product_mobile_banner_override",
-        "product_banner_override",
-        "sale_section_title",
-        "schedule_track_art",
-        "localized_background_art",
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      function _() {
-        let _, _;
-        return {
-          promise: new Promise((_, _) => {
-            (_ = _), (_ = _);
-          }),
-          resolve: _,
-          reject: _,
-        };
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -1896,15 +1858,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
-      const _ = "{STEAM_CLAN_IMAGE}",
-        _ = "{STEAM_CLAN_LOC_IMAGE}",
-        _ = "{STEAM_APP_IMAGE}";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -1990,8 +1943,9 @@
         "GetEventStartTime",
         null,
       );
-      var _ = __webpack_require__("chunkid");
       const _ = 99999;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = [
         _._,
         _.zeJ,
@@ -2153,18 +2107,24 @@
       function _(_) {
         return _(_) ? _?.smart_section_type : void 0;
       }
-      function _(_, _) {
-        if (!_.BIsNextFest() || _(_.section_type) || _(_)) return !1;
+      function _(_) {
         return (
-          ((_.jsondata.sale_ml_recommender_delay_hours &&
+          (_.jsondata.sale_ml_recommender_delay_hours &&
             (_.startTime ?? 0) +
               _.jsondata.sale_ml_recommender_delay_hours * _._.PerHour -
               new Date().getTime() / 1e3) ??
-            0) > 0
+          0
         );
       }
-      function _(_, _) {
-        return !!_.use_random_order || !!_(_, _);
+      function _(_, _, _) {
+        return (
+          !!_.BIsNextFest() &&
+          !!_(_.section_type) &&
+          (_ == _._.Random || _(_) > 0)
+        );
+      }
+      function _(_, _, _) {
+        return !!_.use_random_order || !!_(_, _, _);
       }
       !(function (_) {
         (_[(_.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -2420,6 +2380,50 @@
                 "Invalid Broadcast SteamID: " +
                   _.broadcaster.ConvertTo64BitString(),
               )),
+            _
+          );
+        }
+        static FromCClanEventData(_, _) {
+          let _ = new _();
+          return (
+            (_.GID = _.gid),
+            (_.clanSteamID = new _._(_.clan_steamid)),
+            _.name.set(_, _.event_name ?? ""),
+            (_.type = _.event_type),
+            (_.appid = _.appid ?? 0),
+            (_.startTime = _.rtime32_start_time),
+            (_.endTime = _.rtime32_end_time),
+            (_.nCommentCount = _.comment_count ?? 0),
+            (_.creator_steamid = _.creator_steamid),
+            (_.last_update_steamid = _.last_update_steamid),
+            (_.jsondata = JSON.parse(_.jsondata ?? "{}")),
+            (_.rtime32_last_local_modification = _.rtime32_last_modified),
+            _.published
+              ? _.hidden
+                ? (_.visibility_state = _.unlisted
+                    ? _.k_EEventStateUnlisted
+                    : _.k_EEventStateStaged)
+                : (_.visibility_state = _.k_EEventStateVisible)
+              : (_.visibility_state = _.k_EEventStateUnpublished),
+            (_.createTime = _.rtime_created),
+            (_.m_nBuildID = _.build_id),
+            (_.m_strBuildBranch = _.build_branch),
+            (_.visibilityStartTime = _.rtime32_visibility_start),
+            (_.visibilityEndTime = _.rtime32_visibility_end),
+            (_.rtime32_moderator_reviewed = _.rtime_mod_reviewed),
+            (_.featured_app_tagid = _.featured_app_tagid),
+            _.broadcaster_accountid &&
+              (_.broadcaster = _._.InitFromAccountID(_.broadcaster_accountid)),
+            (_.AnnouncementGID = _.announcement_body?.gid ?? "0"),
+            (_.postTime = _.announcement_body?.posttime),
+            (_.forumTopicGID = _.forum_topic_id),
+            _.name.set(_, _.announcement_body?.headline ?? ""),
+            _.description.set(_, _.announcement_body?.body ?? ""),
+            (_.nCommentCount = _.comment_count ?? 0),
+            (_.vecTags = [...(_.announcement_body?.tags ?? [])]),
+            (_.forumTopicGID = _.announcement_body?.forum_topic_id),
+            (_.nVotesUp = _.announcement_body?.voteupcount ?? 0),
+            (_.nVotesDown = _.announcement_body?.votedowncount ?? 0),
             _
           );
         }
@@ -2730,74 +2734,6 @@
             ? this.appid
             : this.jsondata?.referenced_appids?.[0];
         }
-        GetImageURLWithFallback(_, _, _ = _._.full, _ = !0) {
-          const _ = this.GetImageURL(_, _, _);
-          if (_ && _.trim().length > 0) return _;
-          const _ = _._.GetELanguageFallback(_);
-          if (_ != _) {
-            const _ = this.GetImageURL(_, _, _);
-            if (_ && _.trim().length > 0) return _;
-          }
-          const _ = _._.GetClanInfoByClanAccountID(
-            this.clanSteamID.GetAccountID(),
-          );
-          if ("capsule" == _) {
-            let _ = this.GetImageFromBeginningOfDescription(
-              _,
-              Number.MAX_VALUE,
-            );
-            if (_ && (_ || (0, _._)(_))) return _;
-            let _ = this.appid;
-            if (!_ && _ && ((_.is_creator_home && !_.is_ogg) || _.is_curator)) {
-              if (!this.jsondata?.referenced_appids?.length)
-                return _.avatar_full_url;
-              _ = this.jsondata.referenced_appids[0];
-            }
-            _._.Get().QueueAppRequest(_, {
-              include_assets: !0,
-            });
-            const _ = _._.Get().GetApp(_);
-            return _ &&
-              _.BContainDataRequest({
-                include_assets: !0,
-              }) &&
-              _.GetAssets()
-              ? _.GetAssets()?.GetMainCapsuleURL()
-              : _?.avatar_full_url
-                ? _.avatar_full_url
-                : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
-          }
-          return "background" == _ &&
-            _ &&
-            ((_.is_creator_home && !_.is_ogg) || _.is_curator)
-            ? _.creator_page_bg_url
-            : this.GetFallbackArtworkScreenshot();
-        }
-        GetFallbackArtworkScreenshot() {
-          if (this.appid) {
-            _._.Get().QueueAppRequest(this.appid, {
-              include_screenshots: !0,
-            });
-            const _ = _._.Get().GetApp(this.appid);
-            let _ = Number(
-                this.bOldAnnouncement
-                  ? this.AnnouncementGID
-                  : null == this.GID
-                    ? 0
-                    : this.GID,
-              ),
-              _ = _?.GetScreenshots(_.BHasAgeSafeScreenshots());
-            return _ && _.length > 1 ? ((_ %= _.length), _[_]) : "";
-          }
-          if (this.clanSteamID && this.GetEventType() != _.ajI) {
-            const _ = _._.GetClanInfoByClanAccountID(
-              this.clanSteamID.GetAccountID(),
-            );
-            if (_ && ((_.is_creator_home && !_.is_ogg) || _.is_curator))
-              return _.avatar_full_url;
-          }
-          return "";
-        }
         BImageNeedScreenshotFallback(_, _) {
           let _ = this.GetImageURL(_, _);
           if (!_ || 0 == _.length) {
@@ -2805,18 +2741,6 @@
             _ != _ && (_ = this.GetImageURL(_, _));
           }
           return !_ || 0 == _.length;
-        }
-        GetImageForSizeAsArrayWithFallback(_, _, _, _) {
-          let _ = new Array();
-          if (!this.BImageNeedScreenshotFallback(_, _)) {
-            const _ = this.GetImageURLWithFallback(_, _, _);
-            if ((_ && _.push(_), _ != _._.full)) {
-              const _ = this.GetImageURLWithFallback(_, _, _._.full);
-              _ && _.push(_);
-            }
-          }
-          const _ = this.GetFallbackArtworkScreenshot();
-          return _ && !_ && _.push(_), _;
         }
         GetDescriptionWithFallback(_) {
           const _ = _._.GetELanguageFallback(_);
@@ -3101,7 +3025,7 @@
         GetSaleSections() {
           return this.jsondata.sale_sections ?? [];
         }
-        GenerateDynamicSaleSections(_, _, _, _) {
+        GenerateDynamicSaleSections(_, _, _, _, _) {
           const _ = [],
             _ = {
               section_type: "unselected_empty",
@@ -3134,6 +3058,12 @@
                 section_type: "footer_default_social_share",
                 unique_id: _++,
               }),
+            _ &&
+              _.push({
+                ..._,
+                section_type: "nextfest_header",
+                unique_id: _++,
+              }),
             _
           );
         }
@@ -3143,17 +3073,23 @@
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
-            _ = this.GetEventType() == _.ajI;
-          return _ || _ || _ || _
+            _ = this.GetEventType() == _.ajI,
+            _ = _._.is_valve_email,
+            _ =
+              this.BIsNextFest(_) &&
+              !!this.startTime &&
+              (this.startTime > new Date("2026-03-01").getTime() / 1e3 || _);
+          return _ || _ || _ || _ || _
             ? [
+                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1),
               ]
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
           if (_ > _) {
-            return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
+            return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
           }
@@ -3425,12 +3361,16 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest() {
-          const _ = this.jsondata.sale_vanity_id;
+        BIsNextFest(_ = !0) {
+          const _ = "nextfest",
+            _ = this.jsondata.sale_vanity_id?.toLowerCase(),
+            _ = new _._(this.clanSteamID).GetAccountID();
           return (
-            new _._(this.clanSteamID).GetAccountID() == _._ &&
-            _ &&
-            _.toLowerCase().startsWith("nextfest")
+            !(!_ || _ != _._) &&
+            (_
+              ? __webpack_require__.startsWith(_)
+              : __webpack_require__.startsWith(_) &&
+                !__webpack_require__.includes("prev"))
           );
         }
         GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
@@ -3491,7 +3431,7 @@
         }
       }
       function _(_) {
-        return _?.replace(/[()]/g, "\\$&");
+        if (_) return _?.replace(/[()]/g, "\\$&");
       }
       (0, _._)([_._], _.prototype, "GID", void 0),
         (0, _._)([_._], _.prototype, "AnnouncementGID", void 0),
@@ -3622,144 +3562,107 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {
-        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
-        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
-        ReplacementTokenToClanImageURL(_) {
-          return (_ = _.replace(_._, this.GetBaseURL())).replace(
-            "http://",
-            "https://",
-          );
-        },
-        ExtractHashFromBBCodeURL(_) {
-          const _ =
-            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
-              _,
-            );
-          return _?.groups
-            ? [_.groups.filename, parseInt(_.groups.clanid)]
-            : [void 0, void 0];
-        },
-        GetExtensionString: (_) =>
-          (null != _.file_type ? (0, _._)(_.file_type) : null) ?? ".jpg",
-        GetHashAndExt(_) {
-          return _ ? _.image_hash + this.GetExtensionString(_) : null;
-        },
-        GetThumbHashAndExt(_) {
-          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
-        },
-        GetHashFromHashAndExt(_) {
-          let _ = _.substring(_.lastIndexOf("."));
-          return _.substring(0, _.length - _.length);
-        },
-        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(_, _, _ = _._.full) {
-          return this.GenerateURLFromHashAndExtAndLang(_, _, _, _.xPp, void 0);
-        },
-        GenerateURLFromHashAndExtAndLang(_, _, _ = _._.full, _, _) {
-          _ instanceof _._ && (_ = _.GetAccountID());
-          let _ = this.GetBaseURL();
-          const _ = null != _ && _ != _.xPp;
-          if (_ != _._.full || _) {
-            let _ = _.substring(_.lastIndexOf(".")),
-              _ = _.substring(0, _.length - _.length);
-            return _ && _ != _.Bhc && "localized_image_group" == _
-              ? _ + _ + "/" + _ + "/" + (0, _.x6o)((0, _.LgB)(_)) + _
-              : _ + _ + "/" + _ + _ + _;
-          }
-          return _ + _ + "/" + _;
-        },
-        GetHashAndExtFromURL(_) {
-          let _ = this.GetBaseURL();
-          return _?.startsWith(_)
-            ? -1 == (_ = _.substring(_.length)).indexOf("/")
-              ? null
-              : (_ = _.substring(_.indexOf("/") + 1))
-            : null;
-        },
-        GenerateEditableURLFromHashAndExt(_, _, _) {
-          let _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.ConvertTo64BitString() +
-            "/showclanimage/?image_hash_and_ext=" +
-            _;
-          return _ && (_ += "&lang=" + _), _;
-        },
-        GetMimeType: (_) => (0, _._)(_),
-        async AsyncGetImageResolution(_, _, _, _, _) {
-          const _ =
-              _ +
-              this.GetExtensionString({
-                file_type: _,
-              }),
-            _ = this.GenerateEditableURLFromHashAndExt(_, _);
-          return await this.AsyncGetImageResolutionInternal(_, _, _);
-        },
-        async AsyncGetImageResolutionInternal(_, _, _) {
-          const _ = (0, _._)();
-          let _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              const _ = {
-                success: _._,
-              };
-              _ ||
-                ((_.err_msg =
-                  "Load fail on url " +
-                  _ +
-                  " with error: " +
-                  (0, _._)(_).strErrorMsg),
-                console.error(_.err_msg)),
-                (_.success = _._),
-                _.resolve(_);
-            }),
-            (_.onload = () => {
-              const _ = {
-                success: _._,
-              };
-              (_.width = _.width),
-                (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
-                ),
-                (_.success = _._),
-                _.resolve(_);
-            }),
-            (_.src = _),
-            _.token.promise.catch(() => {
-              const _ = {
-                success: _._,
-              };
-              return (_.onload = () => {}), (_.success = _._), _;
-            });
-          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
-          let _;
-          try {
-            _ = await Promise.race([_, _.promise]);
-          } catch {
-            _ = {
-              success: _._,
-              err_msg: "We timed out processing images",
+      const _ = "100% 0px 100% 0px",
+        _ = "tab",
+        _ = "SaleSection_",
+        _ = "exploration";
+      var _;
+      !(function (_) {
+        (_.Random = "r"), (_.Personalized = "p");
+      })(_ || (_ = {}));
+      const _ = 940;
+      function _() {
+        return window.innerWidth >= _;
+      }
+      function _() {
+        const [_, _] = (0, _.useState)(window.innerWidth);
+        return (
+          (0, _.useEffect)(() => {
+            const _ = () => {
+              _(window.innerWidth);
             };
-          }
-          return _;
-        },
-        BIsClanImageVideo: (_) => _.file_type == _._._ || _.file_type == _._._,
-      };
+            return (
+              window.addEventListener("resize", _),
+              () => window.removeEventListener("resize", _)
+            );
+          }, []),
+          _
+        );
+      }
+      function _(_ = _) {
+        return _() >= _;
+      }
+      function _(_) {
+        const _ = _(_),
+          _ = (0, _._)(_);
+        return _
+          ? {
+              nMaxCapsulesPerRow: _.nMaxItemsPerRow,
+              bScreenIsWide: _,
+            }
+          : {
+              nMaxCapsulesPerRow: Math.min(
+                Math.max(
+                  Math.floor(window.innerWidth / _.nItemMinimumWidth),
+                  1,
+                ),
+                _.nMaxItemsPerRow,
+              ),
+              bScreenIsWide: _,
+            };
+      }
+      function _(_) {
+        const _ = (0, _._)(_);
+        return _()
+          ? _.nMaxItemsPerRow
+          : Math.min(
+              Math.max(Math.floor(window.innerWidth / _.nItemMinimumWidth), 1),
+              _.nMaxItemsPerRow,
+            );
+      }
+      function _(_) {
+        switch (_) {
+          case _._:
+            return _.mv5;
+          case _._:
+            return _.KH9;
+          case _._:
+            return _.hmR;
+          case _._:
+            return _.R2g;
+          default:
+            return;
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _.mv5:
+            return _._;
+          case _.KH9:
+            return _._;
+          case _.hmR:
+            return _._;
+          default:
+            return;
+        }
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -5140,128 +5043,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.toLowerCase();
-        return _.endsWith(".jpg") || _.endsWith(".jpeg")
-          ? "image/jpeg"
-          : _.endsWith(".png")
-            ? "image/png"
-            : _.endsWith(".gif")
-              ? "image/gif"
-              : _.endsWith(".mp4")
-                ? "video/mp4"
-                : _.endsWith(".webm")
-                  ? "video/webm"
-                  : _.endsWith(".srt")
-                    ? "text/srt"
-                    : _.endsWith(".vtt")
-                      ? "text/vtt"
-                      : _.endsWith(".webp")
-                        ? "image/webp"
-                        : void 0;
-      }
-      function _(_) {
-        switch (_) {
-          case _._._:
-            return ".jpg";
-          case _._._:
-            return ".gif";
-          case _._._:
-            return ".png";
-          case _._._:
-            return ".webm";
-          case _._._:
-            return ".mp4";
-          case _._._:
-            return ".srt";
-          case _._._:
-            return ".vtt";
-          case _._._:
-            return ".webp";
-        }
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = new Image();
-        return (
-          (_.onload = () => _.resolve(_)),
-          (_.onerror = (_) => {
-            console.error("LoadImage failed to load the image, details", _),
-              _.resolve(void 0);
-          }),
-          (_.src = _),
-          _.promise
-        );
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = document.createElement("video");
-        return (
-          (_.preload = "metadata"),
-          __webpack_require__.addEventListener("loadedmetadata", () =>
-            _.resolve(_),
-          ),
-          (_.onerror = (_) => {
-            console.error("LoadVideo failed to load the video, details", _),
-              _.resolve(void 0);
-          }),
-          (_.src = _),
-          _.promise
-        );
-      }
-      function _(_) {
-        return _.startsWith("image/");
-      }
-      function _(_) {
-        return _.startsWith("video/");
-      }
-      async function _(_, _) {
-        if (_) return _(URL.createObjectURL(_));
-        {
-          const _ = (0, _._)(),
-            _ = new FileReader();
-          (_.onload = () => _.resolve(_.result ?? void 0)),
-            (_.onerror = () => {
-              console.error(
-                "GetMediaElementFromFile failed to load the image, details",
-                _.error,
-              ),
-                _.resolve(void 0);
-            }),
-            __webpack_require__.readAsDataURL(_);
-          const _ = await _.promise;
-          if (!_) return;
-          return _(_.toString());
-        }
-      }
-      function _(_) {
-        return _
-          ? _ instanceof HTMLVideoElement
-            ? {
-                width: _.videoWidth,
-                height: _.videoHeight,
-              }
-            : {
-                width: _.width,
-                height: _.height,
-              }
-          : {
-              width: 0,
-              height: 0,
-            };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5298,8 +5079,8 @@
       }
       function _(_) {
         let _ = "#PartnerEvent_" + _,
-          _ = (0, _._)(_);
-        return _ != _ ? _ : (0, _._)("#PartnerEvent_Other");
+          _ = _._.Localize(_);
+        return _ != _ ? _ : _._.Localize("#PartnerEvent_Other");
       }
     },
   },

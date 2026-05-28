@@ -1004,7 +1004,6 @@
         constructor() {
           (0, a.Gn)(this);
         }
-        bOpenEventLandingPage = !1;
         bIncludeFeaturedAsGameSource = !0;
         nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {

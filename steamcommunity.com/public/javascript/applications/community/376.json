@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Kun Valve",
     "moderation_escalationlevel_supervisor_desc": "Kræver supervisor",
+    "moderation_escalation_escalationnote": "Eskaleringsnote:",
     "moderation_chatmetadata_deleted": "Metadataene, som er knyttet til denne chatrapport, er blevet slettet på grund af alder. De gemmes kun i ca. 21 dage.",
     "moderation_chatmetadata_futurelogcollection": "Denne chatlog kan blive forbedret med yderligere beskeder, som er sendt efter rapporteringen om %1$s",
     "moderation_resolutionaction_removed": "Fjern det rapporterede indhold",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Rapporterede emner",
     "moderation_already_owner_disputed": "Indsigelse allerede startet",
     "moderationstats_alltypes": "Alle emnetyper",
-    "moderation_alternateforumtool": "Alternativt værktøj",
+    "forumsubjectlist_subjectreportsummary": "Uafklaret: %1$s Indsigelse: %1$s",
     "empty_no_trailing_comma": ""
 }

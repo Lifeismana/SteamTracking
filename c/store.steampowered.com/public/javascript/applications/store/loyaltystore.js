@@ -6042,11 +6042,11 @@
               }),
               _
             );
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.F55);
           __webpack_require__
             .Body()
             .set_communityitemid(this.GetOwnedCommunityItemID(_));
-          const _ = await _._.SetProfileBackground(this.m_transport, _);
+          const _ = await _.xtC.SetProfileBackground(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
             _.GetEResult() != _._ &&
@@ -6069,11 +6069,11 @@
               }),
               _
             );
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.C0y);
           __webpack_require__
             .Body()
             .set_communityitemid(this.GetOwnedCommunityItemID(_));
-          const _ = await _._.SetAvatarFrame(this.m_transport, _);
+          const _ = await _.xtC.SetAvatarFrame(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
             _.GetEResult() != _._
@@ -6097,11 +6097,11 @@
               }),
               _
             );
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.UMm);
           __webpack_require__
             .Body()
             .set_communityitemid(this.GetOwnedCommunityItemID(_));
-          const _ = await _._.SetAnimatedAvatar(this.m_transport, _);
+          const _ = await _.xtC.SetAnimatedAvatar(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
             _.GetEResult() != _._
@@ -6125,11 +6125,11 @@
               }),
               _
             );
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.A6_);
           __webpack_require__
             .Body()
             .set_communityitemid(this.GetOwnedCommunityItemID(_));
-          const _ = await _._.SetMiniProfileBackground(this.m_transport, _);
+          const _ = await _.xtC.SetMiniProfileBackground(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
             _.GetEResult() != _._
@@ -6153,11 +6153,11 @@
               }),
               _
             );
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.BTZ);
           __webpack_require__
             .Body()
             .set_communityitemid(this.GetOwnedCommunityItemID(_));
-          const _ = await _._.SetSteamDeckKeyboardSkin(this.m_transport, _);
+          const _ = await _.xtC.SetSteamDeckKeyboardSkin(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
             _.GetEResult() != _._
@@ -6490,10 +6490,10 @@
         async LoadRecentlyPlayedApps() {
           if (((this.m_bLoadedRecentlyPlayed = !0), !this.BIsLoggedIn()))
             return [];
-          const _ = _._.Init(_._),
+          const _ = _._.Init(_.t24),
             _ = Math.floor(Date.now() / 1e3) - 14 * _._.PerDay;
           _.Body().set_min_last_played(_);
-          const _ = await _._.ClientGetLastPlayedTimes(this.m_transport, _);
+          const _ = await _.xtC.ClientGetLastPlayedTimes(this.m_transport, _);
           return __webpack_require__.GetEResult() == _._
             ? ((this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
                 __webpack_require__.Body().toObject().games,
@@ -6530,11 +6530,11 @@
         }
         async RefreshEquippedProfileItems() {
           if (!this.BIsLoggedIn()) return;
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.aKf);
           _.SetBodyFields({
             steamid: _._.steamid,
           });
-          const _ = await _._.GetProfileItemsEquipped(this.m_transport, _);
+          const _ = await _.xtC.GetProfileItemsEquipped(this.m_transport, _);
           _.GetEResult() == _._
             ? (this.m_equippedItems = _.Body().toObject())
             : console.error(
@@ -6543,11 +6543,11 @@
         }
         async RefreshPurchasedProfileCustomizations() {
           if (!this.BIsLoggedIn()) return;
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.llP);
           _.SetBodyFields({
             steamid: _._.steamid,
           });
-          const _ = await _._.GetPurchasedAndUpgradedProfileCustomizations(
+          const _ = await _.xtC.GetPurchasedAndUpgradedProfileCustomizations(
             this.m_transport,
             _,
           );
@@ -9246,14 +9246,15 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
-          _ = _.useRef(void 0);
+          _ = _.useRef(null);
         return (
-          _.useEffect(() => _.current?.Activate(!0), []),
+          _.useEffect(() => {
+            _.current && _.current.NavTree()?.Activate(!0);
+          }, []),
           (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
-              navID: "LoyaltyShell",
-              navTreeRef: _,
               className: (0, _._)(_.Shell),
+              navRef: _,
               children: (0, _.jsx)(_._, {
                 domain: "store.steampowered.com",
                 feature: "pointsshop",

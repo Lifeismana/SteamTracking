@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Angiv rapporteringsnedkøling",
     "setcooldown_dialogdescription": "Bloker en bruger fra at rapportere indhold eller gøre indsigelse mod moderering, hvis personen har misbrugt systemet.",
     "setcooldown_setbutton": "Angiv nedkøling",
+    "setcooldown_clearopenreports": "Ryd denne brugers uafklarede rapporteringer",
     "nocomma": ""
 }

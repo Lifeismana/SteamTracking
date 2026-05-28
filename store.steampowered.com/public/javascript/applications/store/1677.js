@@ -253,27 +253,27 @@
             renderStatus: p,
             renderRichPresence: F,
             bHidePersona: j,
-            bDNDSet: S,
-            bHasPartyBeacon: v,
+            bDNDSet: v,
+            bHasPartyBeacon: S,
             bHasGamePrivacy: I,
             bNoMask: R,
-            bEllipsisName: N,
-            ...x
+            bEllipsisName: x,
+            ...N
           } = this.props;
           let W = null,
             O = null,
-            P = null,
-            T = [
+            C = null,
+            P = [
               e,
               h().personaNameAndStatusLabel,
               (0, l.rO)(r),
-              d && h().compactView,
-              R && h().NoMask,
+              d ? h().compactView : void 0,
+              R ? h().NoMask : void 0,
             ];
-          v || r.has_public_party_beacon
+          S || r.has_public_party_beacon
             ? (O = (0, s.jsx)(z, { persona: r }))
             : (0, o.aPS)(i)
-              ? ((O = (0, c.we)("#PersonaStateBlocked")), T.push(h().blocked))
+              ? ((O = (0, c.we)("#PersonaStateBlocked")), P.push(h().blocked))
               : r.is_ingame
                 ? ((O =
                     !r.is_in_nonsteam_game || a || (0, o.S$u)(i)
@@ -282,43 +282,49 @@
                   a || j
                     ? a &&
                       r.is_awayOrSnooze &&
-                      (P = (0, c.we)("#PersonaStateAway"))
-                    : (P = r.GetCurrentGameRichPresence()))
+                      (C = (0, c.we)("#PersonaStateAway"))
+                    : (C = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
                   (O = (0, c.we)("#PersonaStateWatchingBroadcast")),
             O || (O = r.GetLocalizedOnlineStatus()),
             p && (O = p());
-          let C = !j && !M;
-          !1 === M && (C = !0),
-            r.is_awayOrSnooze && C && (W = (0, s.jsx)(g, { persona: r }));
-          let G = null;
+          let T = !j && !M;
+          !1 === M && (T = !0),
+            r.is_awayOrSnooze && T && (W = (0, s.jsx)(g, { persona: r }));
+          let G = (0, s.jsx)(s.Fragment, {});
           t
             ? (G = (0, s.jsx)("div", {
                 className: "ContextMenuButton",
                 onClick: t,
                 children: (0, s.jsx)(y.GB9, {}),
               }))
-            : T.push(h().noContextMenu),
-            j && T.push(h().hidePersona),
-            F && (P = F()),
-            (!B && P) || T.push(h().twoLine);
+            : P.push(h().noContextMenu),
+            j && P.push(h().hidePersona),
+            F && (C = F()),
+            (!B && C) || P.push(h().twoLine);
           const A = !r.is_ingame && !f,
-            L = !_ && P,
+            L = !_ && C,
             k = O && (!B || !L),
             q = (0, o.IDH)(w.TS.LAUNCHER_TYPE);
           let U = u && !n,
             D = U ? u : r.m_strPlayerName,
             Z = !j && (k || A) && L;
           return (0, s.jsxs)("div", {
-            ...x,
-            className: (0, m.A)(...T),
+            ...N,
+            className: (0, m.A)(...P),
             onContextMenu: t,
             children: [
               (0, s.jsxs)("div", {
-                className: (0, m.A)(h().statusAndName, Z && h().threeLines),
+                className: (0, m.A)(
+                  h().statusAndName,
+                  Z ? h().threeLines : void 0,
+                ),
                 children: [
                   (0, s.jsxs)("div", {
-                    className: (0, m.A)(h().playerName, N && h().EllipsisName),
+                    className: (0, m.A)(
+                      h().playerName,
+                      x ? h().EllipsisName : void 0,
+                    ),
                     children: [
                       D || " ",
                       n &&
@@ -329,7 +335,7 @@
                         }),
                     ],
                   }),
-                  S &&
+                  v &&
                     (0, s.jsx)("div", {
                       className: h().DNDContainer,
                       title: (0, c.we)("#User_ToggleDoNotDisturb"),
@@ -361,7 +367,7 @@
                       (0, s.jsxs)("div", {
                         className: (0, m.A)(
                           h().gameName,
-                          Z && h().threeLines,
+                          Z ? h().threeLines : void 0,
                           h().richPresenceLabel,
                           "no-drag",
                         ),
@@ -378,7 +384,7 @@
                     L &&
                       (0, s.jsxs)("div", {
                         className: (0, m.A)(h().richPresenceLabel, "no-drag"),
-                        children: [P, " "],
+                        children: [C, " "],
                       }),
                   ],
                 }),
@@ -419,9 +425,9 @@
     26505: (e, t, r) => {
       "use strict";
       r.d(t, {
-        M8: () => T,
-        d0: () => N,
-        Dv: () => x,
+        M8: () => P,
+        d0: () => x,
+        Dv: () => N,
         Nd: () => A,
         EW: () => O,
       });
@@ -1098,52 +1104,52 @@
           return "CFriendsList_GetFriendsList_Request";
         }
       }
-      class S extends u.Message {
+      class v extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            S.prototype.friendslist || g.Sg(S.M()),
+            v.prototype.friendslist || g.Sg(v.M()),
             u.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            S.sm_m ||
-              (S.sm_m = { proto: S, fields: { friendslist: { n: 1, c: B } } }),
-            S.sm_m
+            v.sm_m ||
+              (v.sm_m = { proto: v, fields: { friendslist: { n: 1, c: B } } }),
+            v.sm_m
           );
         }
         static MBF() {
-          return S.sm_mbf || (S.sm_mbf = g.w0(S.M())), S.sm_mbf;
+          return v.sm_mbf || (v.sm_mbf = g.w0(v.M())), v.sm_mbf;
         }
         toObject(e = !1) {
-          return S.toObject(e, this);
+          return v.toObject(e, this);
         }
         static toObject(e, t) {
-          return g.BT(S.M(), e, t);
+          return g.BT(v.M(), e, t);
         }
         static fromObject(e) {
-          return g.Uq(S.M(), e);
+          return g.Uq(v.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (d().BinaryReader)(e),
-            r = new S();
-          return S.deserializeBinaryFromReader(r, t);
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return g.zj(S.MBF(), e, t);
+          return g.zj(v.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (d().BinaryWriter)();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          g.i0(S.M(), e, t);
+          g.i0(v.M(), e, t);
         }
         serializeBase64String() {
           var e = new (d().BinaryWriter)();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFriendsList_GetFriendsList_Response";
@@ -1160,7 +1166,7 @@
             return e.SendMsg(
               "FriendsList.GetFriendsList#1",
               (0, l.I8)(j, t),
-              S,
+              v,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -1182,10 +1188,10 @@
             request: F,
           };
         })(s || (s = {}));
-      var v = r(42457),
+      var S = r(42457),
         I = r(22837),
         R = r(14336);
-      function N(e) {
+      function x(e) {
         const t = (0, n.KV)(),
           r = (0, a.LH)(),
           i = (0, R.tb)(),
@@ -1195,8 +1201,8 @@
           queryKey: ["FriendsList", r, l],
           queryFn: async () => {
             const e = s.fetchQuery(W(t, r)),
-              a = l.loadNicknames ? s.fetchQuery(P(t, r)) : void 0,
-              n = l.loadFavorites ? s.fetchQuery(C(t, r)) : void 0,
+              a = l.loadNicknames ? s.fetchQuery(C(t, r)) : void 0,
+              n = l.loadFavorites ? s.fetchQuery(T(t, r)) : void 0,
               c = await e,
               o = new Map(c.map((e) => [e, s.fetchQuery((0, R.mK)(i, t, e))]));
             let u;
@@ -1222,7 +1228,7 @@
           staleTime: 12e4,
         });
       }
-      function x() {
+      function N() {
         const e = (0, n.KV)(),
           t = (0, a.LH)();
         return (0, o.I)(W(e, t));
@@ -1273,27 +1279,27 @@
           },
         });
       }
-      function P(e, t) {
+      function C(e, t) {
         return {
           queryKey: ["GetFriendNicknameList", t],
           queryFn: async () => {
-            const t = l.w.Init(v.dN);
-            return (await v.xt.GetNicknameList(e, t)).Body().toObject();
+            const t = l.w.Init(S.w_T);
+            return (await S.xtC.GetNicknameList(e, t)).Body().toObject();
           },
         };
       }
-      function T(e = {}) {
+      function P(e = {}) {
         return (function (e = {}) {
           const t = (0, n.KV)(),
             r = (0, a.LH)();
-          return (0, o.I)({ ...P(t, r), ...e });
+          return (0, o.I)({ ...C(t, r), ...e });
         })({
           ...e,
           select: (e) =>
             new Map(e.nicknames.map((e) => [e.accountid, e.nickname])),
         });
       }
-      function C(e, t) {
+      function T(e, t) {
         return {
           queryKey: ["GetFriendFavorites", t],
           queryFn: async () => {
@@ -1306,9 +1312,9 @@
         };
       }
       async function G(e, t) {
-        const r = l.w.Init(v.tl);
+        const r = l.w.Init(S.tlx);
         r.Body().set_appid(t);
-        const i = await v.xt.GetFriendsGameplayInfo(e, r);
+        const i = await S.xtC.GetFriendsGameplayInfo(e, r);
         return (
           i.BSuccess() ||
             console.warn(`Failed to get gameplay info: ${i.GetEResult()}`),

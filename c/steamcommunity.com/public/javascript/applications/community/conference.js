@@ -669,6 +669,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
@@ -754,11 +757,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {
-        include_assets: !0,
-      };
       function _(_) {
+        var _;
         const {
             eventModel: _,
             calendarEvent: _,
@@ -767,75 +769,42 @@
             bHideGameTitle: _,
             fnOnClicked: _,
           } = _,
-          [_, _] = _.useState(!1);
-        (0, _._)(_.GetAppIDOrReferenceAppID(), _),
-          _.useEffect(() => {
-            if (_.clanInfo) {
-              let _ = _._.InitFromClanID(_.clanInfo.clanid);
-              _._.LoadClanInfoForClanSteamID(_);
-            }
-          }, [_.clanInfo]);
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(__webpack_require__.GetAppIDOrReferenceAppID());
+        (0, _._)(_);
+        const _ = (0, _._)(_);
+        _.useEffect(() => {
+          if (_.clanInfo) {
+            let _ = _._.InitFromClanID(_.clanInfo.clanid);
+            _._.LoadClanInfoForClanSteamID(_);
+          }
+        }, [_.clanInfo]);
         const _ = _._.Get(),
           _ = (0, _.sfN)(_._.LANGUAGE),
           _ = "capsule",
           [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.has_live_stream,
-            _.GetEventType(),
-            _.GetAllTags(),
-            _.GetCategoryAsString(),
-            _.GetNameWithFallback(_),
-            _.BImageNeedScreenshotFallback(_, _),
+            __webpack_require__.GetEventType(),
+            __webpack_require__.GetAllTags(),
+            __webpack_require__.GetCategoryAsString(),
+            __webpack_require__.GetNameWithFallback(_),
+            __webpack_require__.BImageNeedScreenshotFallback(_, _),
             _.appid,
             _.GID,
-            _.GetStartTimeAndDateUnixSeconds(),
-            _.GetSubTitleWithLanguageFallback(_),
-            _.GetSummaryWithFallback(_),
+            __webpack_require__.GetStartTimeAndDateUnixSeconds(),
+            __webpack_require__.GetSubTitleWithLanguageFallback(_),
+            __webpack_require__.GetSummaryWithFallback(_),
           ]),
           [_, _] = _.useState(() =>
             (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
           ),
           _ = (0, _._)(),
-          _ = (0, _._)(() =>
-            Boolean(_ && _)
-              ? _.GetFallbackArtworkScreenshot()
-              : _.GetImageURLWithFallback(_, _, _, _),
-          ),
+          _ = Boolean(_ && _ && _),
           _ =
-            "upcoming" !== _ &&
-            (function (_, _, _, _) {
-              const { video_preview_type: _, video_preview_id: _, type: _ } = _,
-                _ = _.appid;
-              if (!_) return null;
-              if (_ === _.Fwr) return null;
-              if ("youtube" === _) {
-                const _ = (0, _.sfN)(_._.LANGUAGE),
-                  _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
-                  _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
-                if ("carousel" === _)
-                  return (0, _.jsx)(_, {
-                    altImgWithFallback: _,
-                    video: _,
-                    className: _().YoutubePreviewImage,
-                  });
-                const _ = () => {
-                  _._.RecordAppInteractionEvent(_, _._.k_ePlayedVideo),
-                    __webpack_require__(!0);
-                };
-                return (0, _.jsx)(_, {
-                  video: _,
-                  altImgWithFallback: _,
-                  autoplay: !0,
-                  autopause: !0,
-                  showFullscreenBtn: !0,
-                  controls: !0,
-                  imageClassnames: _().YoutubePreviewImage,
-                  onPlayerActivated: _,
-                  preloadYoutubeScripts: !0,
-                  playsInline: !0,
-                });
-              }
-              return null;
-            })(_, _, _, _),
+            null !== (_ = (0, _._)(_ ? void 0 : _, _, _, _, _)) && void 0 !== _
+              ? _
+              : _,
+          _ = _(_, _),
           _ = _()[`EventType${_}`],
           _ = _.map((_) => _()[`Tag-${_}`]),
           _ = (0, _._)(
@@ -856,7 +825,7 @@
         _ === _ && (_ = void 0), _ === _ && (_ = void 0);
         const _ = (0, _._)(_),
           _ = (0, _.jsx)(_, {
-            videoPreview: _,
+            setVideoPlayerReady: _,
             calendarEvent: _,
             eventModel: _,
             mode: _,
@@ -1003,43 +972,84 @@
           ],
         });
       }
+      function _(_, _) {
+        const { video_preview_type: _, video_preview_id: _, type: _ } = _;
+        return "upcoming" !== _ && !!_ && _ !== _.Fwr && "youtube" === _;
+      }
+      function _(_) {
+        const { eventModel: _, fnSetVideoStateReady: _, mode: _ } = _,
+          { video_preview_id: _, type: _ } = _.eventModel,
+          _ = _.calendarEvent.appid,
+          _ = (0, _.sfN)(_._.LANGUAGE),
+          _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
+          _ = (0, _._)(_, "capsule", _, _, !0);
+        if ("carousel" === _)
+          return (0, _.jsx)(_, {
+            altImgWithFallback: _,
+            video: _,
+            className: _().YoutubePreviewImage,
+          });
+        return (0, _.jsx)(_, {
+          video: _,
+          altImgWithFallback: _,
+          autoplay: !0,
+          autopause: !0,
+          showFullscreenBtn: !0,
+          controls: !0,
+          imageClassnames: _().YoutubePreviewImage,
+          onPlayerActivated: () => {
+            _._.RecordAppInteractionEvent(_, _._.k_ePlayedVideo),
+              __webpack_require__(!0);
+          },
+          preloadYoutubeScripts: !0,
+          playsInline: !0,
+        });
+      }
       function _(_) {
         const {
-            videoPreview: _,
             eventModel: _,
             calendarEvent: _,
             mode: _,
             artworkType: _,
             strCapsuleImgURLForBackground: _,
+            setVideoPlayerReady: _,
             fnSetCoverSize: _,
           } = _,
           _ = (0, _.sfN)(_._.LANGUAGE),
-          _ = !_ && "upcoming" !== _,
+          _ = _(_, _),
+          _ = !_(_, _) && "upcoming" !== _,
           [_, _, _, _, _, _] = (0, _._)(() => [
-            __webpack_require__.GetEventType(),
+            _.GetEventType(),
             _.has_live_stream,
             _.has_live_stream,
             _.clanSteamID.GetAccountID(),
-            _.GetGameCapsule(),
-            __webpack_require__.BImageNeedScreenshotFallback(_, _),
+            __webpack_require__.GetGameCapsule(),
+            _.BImageNeedScreenshotFallback(_, _),
           ]);
         _.useEffect(() => {
-          const _ = new Image();
-          (_.src = _),
-            (_.onerror = () => {
-              _(_._.full);
-            });
+          if (_) {
+            const _ = new Image();
+            (_.src = _),
+              (_.onerror = () => {
+                _(_._.full);
+              });
+          }
         }, [_, _]);
         const _ = _._.GetClanInfoByClanAccountID(_),
           _ = _ && !_.is_ogg;
-        let _ = __webpack_require__.GetSummaryWithFallback(_);
+        let _ = _.GetSummaryWithFallback(_);
         return (
-          __webpack_require__.GetSubTitleWithLanguageFallback(_) === _ &&
-            (_ = void 0),
+          _.GetSubTitleWithLanguageFallback(_) === _ && (_ = void 0),
           (0, _.jsxs)("div", {
             className: _().CoverImageCtn,
             children: [
-              _,
+              _ &&
+                (0, _.jsx)(_, {
+                  eventModel: _,
+                  mode: _,
+                  calendarEvent: _,
+                  fnSetVideoStateReady: _,
+                }),
               _ &&
                 (0, _.jsxs)(_.Fragment, {
                   children: [

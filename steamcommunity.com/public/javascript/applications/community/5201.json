@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Somente para a Valve",
     "moderation_escalationlevel_supervisor_desc": "Requer supervisor",
+    "moderation_escalation_escalationnote": "Observação do encaminhamento:",
     "moderation_chatmetadata_deleted": "Os metadados associados a esta denúncia de mensagem da conversa já foram excluídos. Eles ficam armazenados por aproximadamente 21 dias.",
     "moderation_chatmetadata_futurelogcollection": "Este registro de conversa pode ser enriquecido com mensagens adicionais enviadas após a denúncia em %1$s",
     "moderation_resolutionaction_removed": "Remover o conteúdo denunciado",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Assuntos denunciados",
     "moderation_already_owner_disputed": "Já contestada",
     "moderationstats_alltypes": "Todos os tipos de assuntos",
-    "moderation_alternateforumtool": "Alternar ferramenta",
+    "forumsubjectlist_subjectreportsummary": "%1$s não resolvida(s), %1$s contestada(s)",
     "empty_no_trailing_comma": ""
 }

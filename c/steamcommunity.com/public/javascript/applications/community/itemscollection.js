@@ -130,7 +130,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -557,132 +556,94 @@
             return [_ ? Math.floor((100 * _) / _) : 0, _, _];
           }, [_, _, _]);
         return (0, _.jsx)(_._, {
-          navID: "ItemCollection",
+          feature: "itemcollections",
           children: (0, _.jsx)(_._, {
-            feature: "itemcollections",
-            children: (0, _.jsx)(_._, {
-              appID: _,
-              children: (0, _.jsxs)(_._, {
-                className: _().ProfileSubPageContainer,
-                children: [
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: _().PageBackground,
-                      children: (0, _.jsxs)("video", {
-                        preload: "auto",
-                        playsInline: !0,
-                        muted: !0,
-                        autoPlay: !0,
-                        loop: !0,
-                        poster: `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_.item_image_large}`,
-                        children: [
+            appID: _,
+            children: (0, _.jsxs)(_._, {
+              className: _().ProfileSubPageContainer,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().PageBackground,
+                    children: (0, _.jsxs)("video", {
+                      preload: "auto",
+                      playsInline: !0,
+                      muted: !0,
+                      autoPlay: !0,
+                      loop: !0,
+                      poster: `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_.item_image_large}`,
+                      children: [
+                        (0, _.jsx)("source", {
+                          src: `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_.item_movie_webm}`,
+                          type: "video/webm",
+                        }),
+                        Boolean(!_._.IN_CLIENT) &&
                           (0, _.jsx)("source", {
-                            src: `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_.item_movie_webm}`,
-                            type: "video/webm",
+                            src: `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_.item_movie_mp4}`,
+                            type: "video/mp4",
                           }),
-                          Boolean(!_._.IN_CLIENT) &&
-                            (0, _.jsx)("source", {
-                              src: `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_.item_movie_mp4}`,
-                              type: "video/mp4",
-                            }),
-                        ],
-                      }),
+                      ],
                     }),
-                  (0, _.jsx)(_, {
-                    nAppID: _,
                   }),
-                  (0, _.jsxs)("div", {
-                    className: _().PageSection,
-                    children: [
-                      (0, _.jsx)("span", {
-                        children: (0, _._)("#ItemCollection_Collected", _, _),
-                      }),
-                      (0, _.jsx)(_, {
-                        className: _().ProgressBar,
-                        animate: !0,
-                        nPercent: _,
-                        indeterminate: !1,
-                      }),
-                    ],
-                  }),
-                  Boolean(_) &&
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PageSection,
-                        _().BackgroundGradient,
-                        _().Highlight,
-                      ),
-                      children: (0, _.jsx)(_, {
-                        oRewardDefinition: _,
-                        bViewingOwnProfile: _,
-                        rgRewardItems: _,
-                        rgUserItemRewarded: _,
-                        rgCommunityItemDefs: _,
-                      }),
+                (0, _.jsx)(_, {
+                  nAppID: _,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().PageSection,
+                  children: [
+                    (0, _.jsx)("span", {
+                      children: (0, _._)("#ItemCollection_Collected", _, _),
                     }),
-                  (0, _.jsxs)("div", {
+                    (0, _.jsx)(_, {
+                      className: _().ProgressBar,
+                      animate: !0,
+                      nPercent: _,
+                      indeterminate: !1,
+                    }),
+                  ],
+                }),
+                Boolean(_) &&
+                  (0, _.jsx)("div", {
                     className: (0, _._)(
                       _().PageSection,
                       _().BackgroundGradient,
+                      _().Highlight,
                     ),
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().HowToGet,
-                        children: (0, _._)("#ItemCollection_ForPoints_Title"),
-                      }),
-                      _.map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            nAppID: _,
-                            itemClass: _,
-                            rgItems: _.get(_),
-                            bViewingOwnProfile: _,
-                            bHideItemStore: _ == _._,
-                          },
-                          "item_class_" + _,
-                        ),
-                      ),
-                    ],
+                    children: (0, _.jsx)(_, {
+                      oRewardDefinition: _,
+                      bViewingOwnProfile: _,
+                      rgRewardItems: _,
+                      rgUserItemRewarded: _,
+                      rgCommunityItemDefs: _,
+                    }),
                   }),
-                ],
-              }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().PageSection, _().BackgroundGradient),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().HowToGet,
+                      children: (0, _._)("#ItemCollection_ForPoints_Title"),
+                    }),
+                    _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          nAppID: _,
+                          itemClass: _,
+                          rgItems: _.get(_),
+                          bViewingOwnProfile: _,
+                          bHideItemStore: _ == _._,
+                        },
+                        "item_class_" + _,
+                      ),
+                    ),
+                  ],
+                }),
+              ],
             }),
           }),
         });
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-        const { children: _, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(void 0),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(),
-          _ = (0, _._)("__nav_tree_root");
-        return (0, _.jsx)(_._, {
-          ..._,
-          navTreeRef: _,
-          ref: _,
-          parentEmbeddedNavTree: _,
-          disabledRoot: !_,
-          historyMode: "navigationapi",
-          children: (0, _.jsx)(_._, {
-            disableFocusRing: !_,
-            children: _,
-          }),
-        });
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

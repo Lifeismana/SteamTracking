@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "仅限 Valve",
     "moderation_escalationlevel_supervisor_desc": "需要主管",
+    "moderation_escalation_escalationnote": "转交上级处理注释：",
     "moderation_chatmetadata_deleted": "与此聊天报告相关的元数据因时间过久已被删除。此类数据通常只会保留大约 21 天。",
     "moderation_chatmetadata_futurelogcollection": "此聊天日志可以在 %1$s后添加进行举报后发送的额外消息",
     "moderation_resolutionaction_removed": "移除被举报的内容",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "已举报的对象",
     "moderation_already_owner_disputed": "已提出争议",
     "moderationstats_alltypes": "所有对象类型",
-    "moderation_alternateforumtool": "备用工具",
+    "forumsubjectlist_subjectreportsummary": "%1$s 项未解决，%1$s 项存在争议",
     "empty_no_trailing_comma": ""
 }

@@ -292,6 +292,7 @@
             hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
+            disableScreenshots: _,
             children: _,
           } = _,
           _ = _.useRef(null),
@@ -301,13 +302,16 @@
               _ &&
                 (_ && _(!0),
                 window.GameHover &&
+                  (_.current &&
+                    _ &&
+                    (_.current.dataset.hoverDisableScreenshots = "true"),
                   window.GameHover(_ ? _() : _.current, _, "global_hover", {
                     type: _,
                     _: (0, _._)(_)._,
                     _: 1,
-                  }));
+                  })));
             },
-            [_, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -7017,7 +7021,7 @@
         m_Transport = null;
         m_Storage = null;
         m_TextFilterPreferences = {
-          eTextFilterSetting: _._._,
+          eTextFilterSetting: _.Bx6._,
           bIgnoreFriends: !1,
         };
         m_TextFilterWords;
@@ -7036,12 +7040,12 @@
         m_DataAccess;
         constructor(_) {
           (0, _._)(this);
-          let _ = new _._();
+          let _ = new _.B4H();
           (this.m_TextFilterPreferences = {
             eTextFilterSetting: _.text_filter_setting(),
             bIgnoreFriends: _.text_filter_ignore_friends(),
           }),
-            (this.m_TextFilterWords = new _._()),
+            (this.m_TextFilterWords = new _.EyI()),
             (this.m_DataAccess = _);
         }
         async Init(_ = 0, _ = null, _ = null) {
@@ -7172,10 +7176,10 @@
           );
           if (_)
             try {
-              this.m_TextFilterWords = _._.fromObject(JSON.parse(_));
+              this.m_TextFilterWords = _.EyI.fromObject(JSON.parse(_));
             } catch (_) {
               console.warn("Error parsing cached text filter word list", _),
-                (this.m_TextFilterWords = new _._());
+                (this.m_TextFilterWords = new _.EyI());
             }
         }
         SaveTextFilterWords() {
@@ -7204,12 +7208,12 @@
             );
         }
         async RequestUpdatedSettings() {
-          let _ = new _._();
+          let _ = new _.B4H();
           if (0 !== this.m_unAccountID)
             try {
               if (this.m_Transport) {
-                let _ = _._.Init(_._);
-                _ = (await _._.GetCommunityPreferences(this.m_Transport, _))
+                let _ = _._.Init(_.tzK);
+                _ = (await _.xtC.GetCommunityPreferences(this.m_Transport, _))
                   .Body()
                   .preferences();
               } else {
@@ -7225,7 +7229,7 @@
                     withCredentials: !0,
                   },
                 );
-                _ = _._.fromObject(_.data.preferences);
+                _ = _.B4H.fromObject(_.data.preferences);
               }
             } catch (_) {}
           if (
@@ -7233,12 +7237,12 @@
             _.text_filter_words_revision() !==
               this.m_TextFilterWords.text_filter_words_revision())
           ) {
-            let _ = new _._();
+            let _ = new _.EyI();
             if (0 !== _.text_filter_words_revision())
               try {
                 if (this.m_Transport) {
-                  let _ = _._.Init(_._);
-                  _ = (await _._.GetTextFilterWords(this.m_Transport, _))
+                  let _ = _._.Init(_.SCE);
+                  _ = (await _.xtC.GetTextFilterWords(this.m_Transport, _))
                     .Body()
                     .words();
                 } else {
@@ -7254,7 +7258,7 @@
                       withCredentials: !0,
                     },
                   );
-                  _ = _._.fromObject(_.data.words);
+                  _ = _.EyI.fromObject(_.data.words);
                 }
               } catch (_) {}
             this.UpdateTextFilterWords(_);
@@ -7373,10 +7377,10 @@
             _ = [],
             _ = [];
           switch (this.m_TextFilterPreferences.eTextFilterSetting) {
-            case _._._:
-            case _._._:
+            case _.Bx6._:
+            case _.Bx6._:
               break;
-            case _._._:
+            case _.Bx6._:
               _ = _.concat(this.m_strBannedWords.split(_));
               break;
             default:
@@ -10179,7 +10183,7 @@
           {
             appid: 730,
             url: "https://steam.tv/csgo",
-            broadcasterAccountID: 911609735,
+            broadcasterAccountID: 927819071,
           },
         ],
       };
@@ -14916,6 +14920,7 @@
               _.PlayMPD(
                 _.m_data.url,
                 _.m_data.hls_url,
+                void 0,
                 _.m_strCDNAuthUrlParameters,
               );
           } else {

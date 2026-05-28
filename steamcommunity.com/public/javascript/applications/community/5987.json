@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Nur Valve",
     "moderation_escalationlevel_supervisor_desc": "Erfordert einen Vorgesetzten",
+    "moderation_escalation_escalationnote": "Hinweis zur Meldung an höherer Stelle:",
     "moderation_chatmetadata_deleted": "Die Metadaten, die mit der Meldung dieses Chats verknüpft sind, wurden aufgrund ihres Alters gelöscht. Sie werden nur ca. 21 Tage lang aufbewahrt.",
     "moderation_chatmetadata_futurelogcollection": "In diesem Chatprotokoll tauchen in %1$s ggf. zusätzliche Einträge auf, die nach der Meldung geschrieben wurden.",
     "moderation_resolutionaction_removed": "Gemeldeten Inhalt entfernen",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Gemeldete Themen",
     "moderation_already_owner_disputed": "Bereits angefochten",
     "moderationstats_alltypes": "Alle Themen",
-    "moderation_alternateforumtool": "Alternatives Werkzeug",
+    "forumsubjectlist_subjectreportsummary": "%1$s offene, %1$s angefochtene",
     "empty_no_trailing_comma": ""
 }

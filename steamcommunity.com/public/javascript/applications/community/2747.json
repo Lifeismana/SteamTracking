@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Ställ in rapporteringscooldown",
     "setcooldown_dialogdescription": "Blockera användare från att rapportera innehåll eller bestrida moderering när de har missbrukat systemet.",
     "setcooldown_setbutton": "Ställ in cooldown",
+    "setcooldown_clearopenreports": "Rensa den här användarens olösta rapporter",
     "nocomma": ""
 }

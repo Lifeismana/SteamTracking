@@ -490,7 +490,7 @@
         I = s(61859),
         C = s(78327),
         _ = s(82817),
-        x = s(27666),
+        x = s(40414),
         f = s(64953),
         S = s(69343);
       function b(e, t, s) {
@@ -567,9 +567,9 @@
           return (this.m_filesToUpload = [...this.m_filesToUpload, i]), !0;
         }
         async AddExistingClanImage(e, t = n.Bhc) {
-          const s = x.z.GetHashAndExt(e);
+          const s = x.zU.GetHashAndExt(e);
           if (!s) return !1;
-          const i = x.z.GenerateEditableURLFromHashAndExt(
+          const i = x.zU.GenerateEditableURLFromHashAndExt(
               this.m_clanSteamID,
               s,
             ),
@@ -1431,7 +1431,7 @@
         p = s(88997),
         c = s(70995),
         d = s(17720),
-        g = s(27666),
+        g = s(40414),
         u = s(86355),
         m = s(73745),
         I = s(86328),
@@ -2069,13 +2069,13 @@
                               s[0].bSuccess)
                             ) {
                               const e = s[0].uploadResult,
-                                i = g.z.GenerateURLFromHashAndExt(
+                                i = g.zU.GenerateURLFromHashAndExt(
                                   t,
-                                  g.z.GetHashAndExt(e),
+                                  g.zU.GetHashAndExt(e),
                                 ),
-                                n = g.z.GenerateURLFromHashAndExt(
+                                n = g.zU.GenerateURLFromHashAndExt(
                                   t,
-                                  g.z.GetThumbHashAndExt(e),
+                                  g.zU.GetThumbHashAndExt(e),
                                 ),
                                 a = {
                                   imageid: -11231412,
@@ -2223,7 +2223,7 @@
           ) {
             let t = e.dataTransfer.getData("text");
             if (t && t.length > 0)
-              for (let e of [g.z.GetBaseURL(), g.z.GetBaseURLV2()])
+              for (let e of [g.zU.GetBaseURL(), g.zU.GetBaseURLV2()])
                 if (t.startsWith(e)) {
                   let s = "[img]" + ce.lw + "/" + t.substr(e.length) + "[/img]";
                   me.replaceSelection(this.GetTextAreaRef().current, s);
@@ -3066,7 +3066,7 @@
               r.trim().length > 0 && (s += ` company="${r}"`),
               u)
             ) {
-              s += ` photo="${ce.lw + "/" + u.clanAccountID + "/" + g.z.GetHashAndExt(u)}"`;
+              s += ` photo="${ce.lw + "/" + u.clanAccountID + "/" + g.zU.GetHashAndExt(u)}"`;
             }
             I && (s += ` steamid="${I.ConvertTo64BitString()}"`),
               (s += `]${h}[/speaker]`),

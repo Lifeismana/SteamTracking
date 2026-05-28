@@ -133,7 +133,6 @@ body
 	margin-top: 15px;
 	width: 66%;
 	background: rgba(0, 0, 0, 0.4);
-	border: 1px solid transparent;
 	float: left;
 }
 
@@ -194,7 +193,6 @@ body
 	margin-top: 15px;
 	width: 33%;
 	background: rgba(0, 0, 0, 0.4);
-	border: 1px solid transparent;
 	float: right;
 }
 
@@ -231,38 +229,18 @@ html.responsive .responsive_page_menu .community_home_search_divider {
 	border-radius: 3px;
 	box-shadow: 1px 1px 0 #45556c;
 	color: #ffffff;
-	height: 20px;
 	margin-top: 5px;
-	padding: 5px;
-	position: relative;
+	padding: 5px 6px 4px 5px;
 }
 
 input.community_home_search_app_input, input.community_home_search_players_input
 {
 	background-color: #2a3f5a;
 	border: none;
-	box-shadow: none;
+	flex: 1 0 0;
 	font-style: italic;
-	left: 6px;
-	margin: 0;
 	outline: none;
 	padding: 0;
-	position: absolute;
-	top: 6px;
-	width: 90%;
-}
-
-.community_home_search_apps_image, .community_home_search_players_image
-{
-	background-color: #2f3e55;
-	border: none;
-	height: 18px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	right: 4px;
-	top: 5px;
-	width: 23px;
 }
 
 .community_home_sort_options
@@ -288,6 +266,10 @@ input.community_home_search_app_input, input.community_home_search_players_input
 
 @media screen and (max-width: 910px)
 {
+	html.responsive .community_home_app_shortcuts {
+		display: none;
+	}
+
 	html.responsive .community_home_search_box {
 		float: none;
 		width: auto;

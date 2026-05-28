@@ -665,7 +665,7 @@ HelpWizard = {
 				HelpWizard.m_bActionConfirmed = true;
 
 				$J('#help_refund_request_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://help.steampowered.com/public/shared/images/login/throbber.gif" alt=""></span></div>');
-				HelpWizard.ShowRefundRequestForm( HelpWizard.m_nRefundIssueID, HelpWizard.m_nRefundAppID, HelpWizard.m_nRefundPackageID, HelpWizard.m_nRefundTransID, $J('#refund_wallet_selector').val(), $J('#refund_info_box') );
+				HelpWizard.ShowRefundRequestForm( HelpWizard.m_nRefundIssueID, HelpWizard.m_nRefundAppID, HelpWizard.m_nRefundPackageID, HelpWizard.m_nRefundTransID, $J('#refund_wallet_selector').val(), $J('#refund_info_box_maincontent') );
 				break;
 
 			case 3:
@@ -762,7 +762,7 @@ HelpWizard = {
 	UpdateRefundSelector: function() {
 		var transid = $J('#refund_selector').val();
 		var refund_to_wallet = $J('#refund_wallet_selector').val();
-		this.ShowRefundRequestForm( this.m_nRefundIssueID, this.m_nRefundAppID, this.m_nRefundPackageID, transid, refund_to_wallet, $J('#refund_info_box') );
+		this.ShowRefundRequestForm( this.m_nRefundIssueID, this.m_nRefundAppID, this.m_nRefundPackageID, transid, refund_to_wallet, $J('#refund_info_box_maincontent') );
 	},
 
 	ShowSubmitRefundArea: function() {

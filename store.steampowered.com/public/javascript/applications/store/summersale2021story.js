@@ -69,7 +69,7 @@
         c = t(78327);
       class l {
         m_mapGenreToStickerResponse = new Map();
-        m_eStoryBadgeGranted = S.GP.d7;
+        m_eStoryBadgeGranted = S.GPz.d7;
         m_strLocalizedStoryHeader;
         m_strLocalizedStoryHeaderMobile;
         static s_Singleton;
@@ -597,32 +597,32 @@
         c = (e) => {
           const r = (0, s._l)();
           let t;
-          if (r == o.GP.zI)
+          if (r == o.GPz.zI)
             t = {
               badge_name: "#Summer21_Badge_Outcome1_Title",
               badge_desc: "#Summer21_Badge_Outcome1_Description",
               badge_class: i.Badge_51,
             };
-          else if (r == o.GP.sG)
+          else if (r == o.GPz.sG)
             t = {
               badge_name: "#Summer21_Badge_Outcome2_Title",
               badge_desc: "#Summer21_Badge_Outcome2_Description",
               badge_class: i.Badge_52,
             };
-          else if (r == o.GP.Ms)
+          else if (r == o.GPz.Ms)
             t = {
               badge_name: "#Summer21_Badge_Outcome3_Title",
               badge_desc: "#Summer21_Badge_Outcome3_Description",
               badge_class: i.Badge_53,
             };
-          else if (r == o.GP.WK)
+          else if (r == o.GPz.WK)
             t = {
               badge_name: "#Summer21_Badge_Outcome4_Title",
               badge_desc: "#Summer21_Badge_Outcome4_Description",
               badge_class: i.Badge_54,
             };
           else {
-            if (r != o.GP.ER) return null;
+            if (r != o.GPz.ER) return null;
             t = {
               badge_name: "#Summer21_Badge_Outcome5_Title",
               badge_desc: "#Summer21_Badge_Outcome5_Description",

@@ -247,7 +247,7 @@
                     children: (0, _._)(
                       "#SeasonPass_Incomplete_Desc2",
                       (0, _.jsx)("a", {
-                        href: `${_._.STORE_BASE_URL}account/emailoptout`,
+                        href: `${_._.STORE_BASE_URL}account/notificationsettings`,
                       }),
                     ),
                   }),

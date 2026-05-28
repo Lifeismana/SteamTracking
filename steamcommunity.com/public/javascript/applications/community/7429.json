@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Establecer tiempo de espera para denuncias",
     "setcooldown_dialogdescription": "Bloquear a un usuario para que no haga denuncias de contenido ni disputas de moderación cuando ha hecho uso indebido del sistema.",
     "setcooldown_setbutton": "Establecer tiempo de espera",
+    "setcooldown_clearopenreports": "Borrar las denuncias sin resolver de este usuario",
     "nocomma": ""
 }

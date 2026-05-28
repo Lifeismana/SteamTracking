@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Только Valve",
     "moderation_escalationlevel_supervisor_desc": "Нужен контролёр",
+    "moderation_escalation_escalationnote": "Примечание к передаче темы выше:",
     "moderation_chatmetadata_deleted": "Метаданные, связанные с этой жалобой на сообщение в чате, были удалены из-за срока давности. Ориентировочный срок хранения — 21 день.",
     "moderation_chatmetadata_futurelogcollection": "Этот журнал чата можно дополнить сообщениями, отправленными в течение %1$s после поступления жалобы",
     "moderation_resolutionaction_removed": "Удалить контент с жалобой",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Жалобы на темы",
     "moderation_already_owner_disputed": "Уже оспорено",
     "moderationstats_alltypes": "Все типы тем",
-    "moderation_alternateforumtool": "Альтернативный инструмент",
+    "forumsubjectlist_subjectreportsummary": "Нерассмотренных: %1$s. Оспоренных: %1$s.",
     "empty_no_trailing_comma": ""
 }

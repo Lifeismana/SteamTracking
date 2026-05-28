@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Aseta ilmiantojäähy",
     "setcooldown_dialogdescription": "Estä käyttäjää ilmiantamasta sisältöä tai kiistauttamasta moderointipäätöksiä, jos hän on käyttänyt järjestelmää väärin.",
     "setcooldown_setbutton": "Aseta jäähy",
+    "setcooldown_clearopenreports": "Poista käyttäjän ratkaisemattomat ilmiannot",
     "nocomma": ""
 }

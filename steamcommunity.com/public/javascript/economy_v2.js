@@ -24,7 +24,7 @@ function Economy_UseResponsiveLayout()
 		return false;
 
 	// trading has a special break point
-	if ( g_bIsTrading && $J(window).width() > 600 )
+	if ( g_bIsTrading && window.innerWidth > 600 )
 		return false;
 
 	return true;
@@ -3040,21 +3040,19 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			}
 			else
 			{
-				$('contextselect_options_contexts').update('');
-				var rgContextIds = g_ActiveUser.GetContextIdsForApp( appid );
-				var fnContextClick = function( appid, contextid ) { HideMenu( $('contextselect'), $('contextselect_options') ); window.location = '#' + appid + '_' + contextid; };
-				for ( var i = 0; i < rgContextIds.length; i++ )
+				const rgOptions = new Array();
+				const rgContextIds = g_ActiveUser.GetContextIdsForApp( appid );
+				for ( var i = 0; i < rgContextIds.length; ++i )
 				{
-					var rgContext = g_ActiveUser.GetContext( appid, rgContextIds[i] );
-					var elContext = new Element( 'div', {'class': 'popup_item context_name', 'id': 'context_option_' + appid + '_' + rgContext.id } );
-					$J( elContext ).text( rgContext.name );
-											$J( elContext ).text( rgContext.name );
-										var strHash = '#' + appid + '_' + rgContext.id;
-					elContext.observe( 'click', fnContextClick.bind( null, appid, rgContext.id ) );
-
-
-					$('contextselect_options_contexts').appendChild( elContext );
+					const nId = rgContextIds[ i ];
+					const rgContext = g_ActiveUser.GetContext( appid, nId );
+					let name = rgContext.name;
+										rgOptions.push( new Object( {
+						'value': 'context_option_' + appid + '_' + nId,
+						'text': name
+					} ) );
 				}
+				DSelectSetOptions( 'contextselect', rgOptions );
 				$('context_selector').show();
 			}
 		}
@@ -3063,13 +3061,12 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 		if ( !g_ActiveUser.BIsSingleContextApp( appid ) )
 		{
 			// make sure the popup isn't visible
-			HideMenu( $('contextselect'), $('contextselect_options') );
-			var elActiveContext = $('context_option_' + appid + '_' + contextid);
-			if ( elActiveContext )
+			DSelectOnBlur( 'contextselect' );
+			var $elActiveContext = $J('#context_option_' + appid + '_' + contextid);
+			if ( $elActiveContext )
 			{
-				$('contextselect_activecontext').update( elActiveContext.clone( true ) );
+				$J('#contextselect_trigger').text( $elActiveContext.text() );
 			}
-
 		}
 
 		$('active_inventory_page').hide();

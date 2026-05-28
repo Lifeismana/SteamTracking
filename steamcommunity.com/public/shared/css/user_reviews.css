@@ -23,43 +23,38 @@ select {
 	background-repeat: no-repeat;
 }
 
-#rightContents {
-	width: 294px;
-	padding-top: 0px;
-	padding-right: 16px;
+#rightContents .panel {
+	background: rgba(27,27,27,.36);
+	border-radius: 4px;
+	padding: 10px;
+	margin: 0 0 10px 0;
+	border: 1px solid #1f1f20;
+	box-shadow: 1px 1px 0 0 #39393a;
 }
-	#rightContents .panel {
-		background: rgba(27,27,27,.36);
-		border-radius: 4px;
-		padding: 10px;
-		margin: 0 0 10px 0;
-		border: 1px solid #1f1f20;
-		box-shadow: 1px 1px 0 0 #39393a;
-	}
 
-	#rightContents .panel.owner {
-		border-color: #81a313;
-	}
+#rightContents .panel.owner {
+	border-color: #81a313;
+}
 
-	#rightContents .panel.admin {
-		border-color: #a55b13;
-	}
+#rightContents .panel.admin {
+	border-color: #a55b13;
+}
 
-	#rightContents .panel.admin .title {
-		color: #a55b13;
-	}
+#rightContents .panel.admin .title {
+	color: #a55b13;
+}
 
-	#rightContents .panel.admin .smallText {
-		font-size: 12px;
-	}
+#rightContents .panel.admin .smallText {
+	font-size: 12px;
+}
 
-	.general_btn.panel_btn {
-		color: #EBEBEB;
-	}
+.general_btn.panel_btn {
+	color: #EBEBEB;
+}
 
-	.friendBlock {
-		background-color: rgba( 84, 133, 183, 0.2);
-	}
+.friendBlock {
+	background-color: rgba( 84, 133, 183, 0.2);
+}
 
 .gameLogoHolder_default img {
 	width: 292px;

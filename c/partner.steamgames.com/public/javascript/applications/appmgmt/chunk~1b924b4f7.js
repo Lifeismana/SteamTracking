@@ -352,33 +352,38 @@
           _ = !!_ && _ > _ * _,
           _ = !!_ && _ < _ * _,
           _ = !!_ && _ < _ && !!_,
-          _ = !!_ && _ == _ && !!_,
-          _ =
-            (_ && (0, _._)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (_ &&
-              (0, _._)(
+          _ = !!_ && _ == _ && !!_;
+        let _ = !1;
+        _
+          ? (_ = (0, _._)("#PricingDashboard_PriceIncreaseDisallowed"))
+          : _
+            ? (_ = (0, _._)(
                 "#PricingDashboard_PriceTooLow",
                 (0, _._)(_, _).join(""),
-              )) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceMuchHigherThanMethod",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ && !1) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceMuchLowerThanMethod",
-                (0, _._)(_, _).join(""),
-              )) ||
-            (_ && !1) ||
-            (_ &&
-              (0, _._)(
-                "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                _,
-              )) ||
-            (_ && (0, _._)("#PricingDashboard_PriceCheap", _)),
-          _ = _ || _,
+              ))
+            : _
+              ? (_ = (0, _._)(
+                  "#PricingDashboard_PriceMuchHigherThanMethod",
+                  (0, _._)(_, _).join(""),
+                ))
+              : _ && _
+                ? (_ = (0, _._)(
+                    "#PricingDashboard_PriceMuchLowerThanMethod_AndLimitDiscount",
+                    (0, _._)(_, _).join(""),
+                    _,
+                  ))
+                : _
+                  ? (_ = (0, _._)(
+                      "#PricingDashboard_PriceMuchLowerThanMethod",
+                      (0, _._)(_, _).join(""),
+                    ))
+                  : _
+                    ? (_ = (0, _._)(
+                        "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
+                        _,
+                      ))
+                    : _ && (_ = (0, _._)("#PricingDashboard_PriceCheap", _));
+        const _ = _ || _,
           _ = _ || _,
           _ = _ || _ || _,
           _ = !(_ || !_ || (_ && _ == _)),

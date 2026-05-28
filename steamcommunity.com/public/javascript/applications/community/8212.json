@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Pouze Valve",
     "moderation_escalationlevel_supervisor_desc": "Je vyžadován hlavní správce",
+    "moderation_escalation_escalationnote": "Poznámka k eskalaci:",
     "moderation_chatmetadata_deleted": "Metadata spojená s tímto nahlášením zprávy z konverzace byla smazána z důvodu svého stáří. Tato metadata jsou uchovávána přibližně 21 dnů.",
     "moderation_chatmetadata_futurelogcollection": "Tento záznam konverzace mohl být rozšířen o další zprávy poslané po nahlášení (%1$s)",
     "moderation_resolutionaction_removed": "Smazat nahlášený obsah",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Nahlášené předměty",
     "moderation_already_owner_disputed": "Již zpochybněno",
     "moderationstats_alltypes": "Všechny typy předmětů",
-    "moderation_alternateforumtool": "Alternativní nástroj",
+    "forumsubjectlist_subjectreportsummary": "%1$s nevyřešeno, %1$s zpochybněno",
     "empty_no_trailing_comma": ""
 }

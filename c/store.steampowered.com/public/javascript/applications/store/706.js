@@ -612,13 +612,18 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        Sticky: "_3dlxz6KBJpvmA-qsVAzxs8",
         GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
         GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        ChecklistMode: "_3blAkLFfSQrJjGklUKOP7e",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        checklistBox: "_1idkU7IA8dDPOIbsU-dRkJ",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+        StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
+        StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -738,6 +743,66 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_) {
+        const _ = await fetch(_, {
+          method: "GET",
+        });
+        if (!_._) throw new Error(`Server returned ${_.status}`);
+        const _ = await _.json();
+        return _.success != _._ ? null : _;
+      }
+      function _() {
+        return "undefined" != typeof window && "undefined" != typeof self
+          ? self.origin
+          : "ssr_server";
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
+      function _(_, _) {
+        return {
+          queryKey: _(_),
+          queryFn: async () => {
+            const _ = await (async function (_) {
+              const _ = _._.InitFromClanID(_);
+              return _(
+                `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
+              );
+            })(_);
+            if (_) {
+              _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
+                _.vanity_url &&
+                  _.setQueryData(_(_.vanity_url), _.clanAccountID);
+              const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
+              return _;
+            }
+            return null;
+          },
+          enabled: !!_,
+        };
+      }
+      function _(_) {
+        return ["clantoclaninfo", _];
+      }
+      function _(_) {
+        return ["apptoclanid", _];
+      }
+      function _(_) {
+        return ["vanitytoclanid", _];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {
@@ -750,6 +815,8 @@
           },
           [_._]: {
             strSymbol: "€",
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
           },
           [_._]: {
             strSymbol: "CHF",
@@ -1434,6 +1501,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
@@ -1558,6 +1627,42 @@
           day: "numeric",
         };
         return _ && (_.weekday = "long"), _.toLocaleDateString((0, _._)(), _);
+      }
+      function _(_, _, _) {
+        const _ = new Date(1e3 * _),
+          _ = (0, _._)(),
+          _ = {
+            ...(_?.bForce24HourClock ||
+            (function (_) {
+              const _ = new Date();
+              return (
+                _.setHours(15),
+                _.toLocaleTimeString(_, {
+                  hour: "numeric",
+                }) ==
+                  _.toLocaleTimeString(_, {
+                    hour: "numeric",
+                    hour12: !1,
+                  })
+              );
+            })(_[0])
+              ? {
+                  hour: "numeric",
+                  minute: "2-digit",
+                  hourCycle: "h23",
+                }
+              : {
+                  hour: "numeric",
+                  minute: "2-digit",
+                }),
+            ..._,
+          };
+        return _.toLocaleTimeString(_, _);
+      }
+      function _(_) {
+        return _.toLocaleDateString((0, _._)(), {
+          weekday: "long",
+        });
       }
       function _(_) {
         const _ = Math.floor(_ / _._.PerYear),
@@ -2463,57 +2568,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      async function _(_) {
-        const _ = await fetch(_, {
-          method: "GET",
-        });
-        if (!_._) throw new Error(`Server returned ${_.status}`);
-        const _ = await _.json();
-        return _.success != _._ ? null : _;
-      }
-      function _() {
-        return "undefined" != typeof window && "undefined" != typeof self
-          ? self.origin
-          : "ssr_server";
-      }
-      function _(_) {
-        const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => {
-                const _ = await (async function (_) {
-                  const _ = _._.InitFromClanID(_);
-                  return _(
-                    `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
-                  );
-                })(_);
-                if (_) {
-                  _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
-                    _.vanity_url &&
-                      _.setQueryData(_(_.vanity_url), _.clanAccountID);
-                  const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
-                  return _;
-                }
-                return null;
-              },
-              enabled: !!_,
-            };
-          })(_, _),
-        );
-      }
-      function _(_) {
-        return ["clantoclaninfo", _];
-      }
-      function _(_) {
-        return ["apptoclanid", _];
-      }
-      function _(_) {
-        return ["vanitytoclanid", _];
-      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _._)({
@@ -2575,7 +2630,7 @@
             styleOverride: _,
             followType: _,
           } = _,
-          { data: _ } = _(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = _(_);
         return _ && _
           ? (0, _.jsxs)("div", {
@@ -2897,19 +2952,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          className: _.GreenButton,
-          type: "button",
-          ..._,
-          children: (0, _.jsx)("span", {
-            children: _,
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3020,7 +3063,7 @@
             ? null
             : (0, _.jsxs)(_.Fragment, {
                 children: [
-                  (0, _.jsxs)(_, {
+                  (0, _.jsxs)(_._, {
                     onClick: async () => {
                       try {
                         _(!0), await _(), (0, _._)(), _(!1), _();
@@ -3163,7 +3206,7 @@
           _ = (0, _._)(_, _.client_instanceid);
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsxs)(_, {
+            (0, _.jsxs)(_._, {
               onClick: () => {
                 _.mutateAsync(), _(!0);
               },
@@ -3244,34 +3287,46 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, strClassName: _, bMinimizePlatforms: _ } = _,
+        const {
+            _: _,
+            strClassName: _,
+            bMinimizePlatforms: _,
+            bHideWindows: _,
+          } = _,
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         if (_) {
-          let _ =
-            _?.windows &&
-            (0, _.jsx)("span", {
-              title: _._.Localize("#Platform_Windows"),
-              children: (0, _.jsx)(_.Xz0, {
-                "aria-label": _._.Localize("#Platform_Windows"),
-              }),
-            });
+          let _ = _
+            ? null
+            : _?.windows &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Windows"),
+                children: (0, _.jsx)(_.Xz0, {
+                  "aria-label": _._.Localize("#Platform_Windows"),
+                }),
+              });
           return (
-            (0, _._)() && _?.mac
+            ((0, _._)() || (0, _._)() || (0, _._)()) && _?.steamos_linux
               ? (_ = (0, _.jsx)("span", {
-                  title: _._.Localize("#Platform_Mac"),
-                  children: (0, _.jsx)(_.kPc, {
-                    "aria-label": _._.Localize("#Platform_Mac"),
-                  }),
-                }))
-              : ((0, _._)() || (0, _._)() || (0, _._)()) &&
-                _?.steamos_linux &&
-                (_ = (0, _.jsx)("span", {
                   title: _._.Localize("#Platform_Linux"),
                   children: (0, _.jsx)(_.Qte, {
                     "aria-label": _._.Localize("#Platform_Linux"),
                   }),
-                })),
+                }))
+              : (0, _._)() && _?.mac
+                ? (_ = (0, _.jsx)("span", {
+                    title: _._.Localize("#Platform_Mac"),
+                    children: (0, _.jsx)(_.kPc, {
+                      "aria-label": _._.Localize("#Platform_Mac"),
+                    }),
+                  }))
+                : _.vr_support?.vrhmd &&
+                  (_ = (0, _.jsx)("span", {
+                    title: _._.Localize("#Platform_VR"),
+                    children: (0, _.jsx)(_._, {
+                      "aria-label": _._.Localize("#Platform_VR"),
+                    }),
+                  })),
             _
               ? (0, _.jsx)("span", {
                   className: (0, _._)(_().CapsulePlatform, _),
@@ -3283,7 +3338,8 @@
         return (0, _.jsxs)("span", {
           className: (0, _._)(_().CapsulePlatform, _),
           children: [
-            _.windows &&
+            !_ &&
+              _.windows &&
               (0, _.jsx)("span", {
                 title: _._.Localize("#Platform_Windows"),
                 children: (0, _.jsx)(_.Xz0, {
@@ -3550,7 +3606,7 @@
                   className: _().StoreSaleDiscountBox,
                   children: `-${_}%`,
                 }),
-              Boolean(_) &&
+              Boolean(_ && _) &&
                 (0, _.jsx)("div", {
                   className: _().DiscountIconCtn,
                   children: (0, _.jsx)(_.XH_, {}),
@@ -3735,6 +3791,50 @@
           snr: (0, _._)(_),
           strStoreURL: (0, _._)(_, _, _),
         };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.GreenButton,
+          type: "button",
+          ..._,
+          children: (0, _.jsx)("span", {
+            children: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.BlueButton,
+          type: "button",
+          ..._,
+          children: (0, _.jsx)("span", {
+            children: _,
+          }),
+        });
+      }
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsx)(_._, {
+          className: _.GreyButton,
+          type: "button",
+          ..._,
+          children: (0, _.jsx)("span", {
+            children: _,
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -8201,6 +8301,8 @@
             classNameTabContent: _,
             preferredFocus: _,
             bVerticalTabs: _,
+            bSticky: _,
+            bChecklistMode: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -8232,6 +8334,8 @@
                 className: (0, _._)(
                   _().GraphicalAssetsTabs,
                   _ && _().GraphicalAssetsTabsVertical,
+                  _ && _().ChecklistMode,
+                  _ && _().Sticky,
                   _,
                 ),
                 navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,

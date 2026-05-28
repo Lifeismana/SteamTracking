@@ -1050,6 +1050,7 @@
           bIsWaitingForBuildReview: n,
           bIsFirstSelfPublishingApp: i,
           rtEarliestDate: s,
+          bRequiresReleaseWaitingPeriod: o,
         } = w();
         return e && t
           ? n
@@ -1064,17 +1065,19 @@
                   (0, r.$z)(s),
                 ),
               })
-          : i
+          : i && o
             ? (0, a.jsx)(L, {
                 children: (0, r.we)(
                   "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
                 ),
               })
-            : (0, a.jsx)(L, {
-                children: (0, r.we)(
-                  "#App_Landing_Release_EarliestDate_TwoWeeks",
-                ),
-              });
+            : o
+              ? (0, a.jsx)(L, {
+                  children: (0, r.we)(
+                    "#App_Landing_Release_EarliestDate_TwoWeeks",
+                  ),
+                })
+              : null;
       }
       function k(e) {
         const { fnCloseModal: t, fnSubmit: n, children: i } = e,

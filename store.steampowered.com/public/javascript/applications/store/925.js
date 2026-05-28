@@ -5212,9 +5212,9 @@
         return (0, s.I)({
           queryKey: S(e),
           queryFn: async () => {
-            const t = a.w.Init(d.m8);
+            const t = a.w.Init(d.m8g);
             t.Body().set_steamid(e);
-            const i = await d.xt.GetRecentPlaytimeSessionsForChild(r, t);
+            const i = await d.xtC.GetRecentPlaytimeSessionsForChild(r, t);
             h(i.GetEResult());
             const s = (function (e) {
               let r = [];

@@ -43,6 +43,7 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
         CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
@@ -400,6 +401,186 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _ = 0) {
+        return _(_, _, _);
+      }
+      async function _(_, _, _ = 0) {
+        return _(_, _, _);
+      }
+      function _(_, _, _ = 0) {
+        if (!_ || 0 == _.length) return null;
+        if (null == _ ? void 0 : _.startsWith(_._))
+          return _.ReplacementTokenToClanImageURL(_);
+        if (null == _ ? void 0 : _.startsWith(_._)) {
+          const _ = new Array(),
+            _ = _.GetBaseURL(),
+            _ = _.substring(_._.length + 1),
+            _ = parseInt(_.substring(0, _.indexOf("/"))),
+            _ = _.substring(_.indexOf("/") + 1),
+            _ = _.GetHashFromHashAndExt(_),
+            _ = _.GetExtStringFromHashAndExt(_);
+          if (null != _) {
+            let _ = (0, _.LgB)(_);
+            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _),
+              _ == _.Pn1 &&
+                ((_ = (0, _.x6o)((0, _.LgB)(_))),
+                _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _));
+          }
+          return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
+        }
+        return _;
+      }
+      const _ = {
+        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
+        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
+        ReplacementTokenToClanImageURL(_) {
+          return (_ = _.replace(_._, this.GetBaseURL())).replace(
+            "http://",
+            "https://",
+          );
+        },
+        ExtractHashFromBBCodeURL(_) {
+          const _ =
+            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^.]*)$/.exec(
+              _,
+            );
+          return (null == _ ? void 0 : _.groups)
+            ? [_.groups.filename, parseInt(_.groups.clanid)]
+            : [void 0, void 0];
+        },
+        GetExtensionString(_) {
+          var _;
+          return null !==
+            (_ = null != _.file_type ? (0, _._)(_.file_type) : null) &&
+            void 0 !== _
+            ? _
+            : ".jpg";
+        },
+        GetHashAndExt(_) {
+          return _ ? _.image_hash + this.GetExtensionString(_) : null;
+        },
+        GetThumbHashAndExt(_) {
+          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
+        },
+        GetHashFromHashAndExt(_) {
+          let _ = _.substring(_.lastIndexOf("."));
+          return _.substring(0, _.length - _.length);
+        },
+        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+        GenerateURLFromHashAndExt(_, _, _ = _._.full) {
+          return this.GenerateURLFromHashAndExtAndLang(_, _, _, _.xPp, void 0);
+        },
+        GenerateURLFromHashAndExtAndLang(_, _, _ = _._.full, _, _) {
+          _ instanceof _._ && (_ = _.GetAccountID());
+          let _ = this.GetBaseURL();
+          const _ = null != _ && _ != _.xPp;
+          if (_ != _._.full || _) {
+            let _ = _.substring(_.lastIndexOf(".")),
+              _ = _.substring(0, _.length - _.length);
+            return _ && _ != _.Bhc && "localized_image_group" == _
+              ? _ + _ + "/" + _ + "/" + (0, _.x6o)((0, _.LgB)(_)) + _
+              : _ + _ + "/" + _ + _ + _;
+          }
+          return _ + _ + "/" + _;
+        },
+        GetHashAndExtFromURL(_) {
+          let _ = this.GetBaseURL();
+          return (null == _ ? void 0 : _.startsWith(_))
+            ? -1 == (_ = _.substring(_.length)).indexOf("/")
+              ? null
+              : (_ = _.substring(_.indexOf("/") + 1))
+            : null;
+        },
+        GenerateEditableURLFromHashAndExt(_, _, _) {
+          let _ =
+            _._.COMMUNITY_BASE_URL +
+            "gid/" +
+            _.ConvertTo64BitString() +
+            "/showclanimage/?image_hash_and_ext=" +
+            _;
+          return _ && (_ += "&lang=" + _), _;
+        },
+        GetMimeType: (_) => (0, _._)(_),
+        async AsyncGetImageResolution(_, _, _, _, _) {
+          const _ =
+              _ +
+              this.GetExtensionString({
+                file_type: _,
+              }),
+            _ = this.GenerateEditableURLFromHashAndExt(_, _);
+          return await this.AsyncGetImageResolutionInternal(_, _, _);
+        },
+        async AsyncGetImageResolutionInternal(_, _, _) {
+          const _ = (0, _._)();
+          let _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              const _ = {
+                success: _._,
+              };
+              _ ||
+                ((_.err_msg =
+                  "Load fail on url " +
+                  _ +
+                  " with error: " +
+                  (0, _._)(_).strErrorMsg),
+                console.error(_.err_msg)),
+                (_.success = _._),
+                _.resolve(_);
+            }),
+            (_.onload = () => {
+              const _ = {
+                success: _._,
+              };
+              (_.width = _.width),
+                (_.height = _.height),
+                (0, _._)(
+                  _.width > 0 && _.height > 0,
+                  "unexpected image resolution discovered for strURL: " + _,
+                ),
+                (_.success = _._),
+                _.resolve(_);
+            }),
+            (_.src = _),
+            _.token.promise.catch(() => {
+              const _ = {
+                success: _._,
+              };
+              return (_.onload = () => {}), (_.success = _._), _;
+            });
+          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+          let _;
+          try {
+            _ = await Promise.race([_, _.promise]);
+          } catch {
+            _ = {
+              success: _._,
+              err_msg: "We timed out processing images",
+            };
+          }
+          return _;
+        },
+        BIsClanImageVideo: (_) => _.file_type == _._._ || _.file_type == _._._,
+      };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _;
       !(function (_) {
@@ -449,6 +630,8 @@
         _: () => _,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -558,9 +741,13 @@
         return "news";
       }
       function _(_, _, _) {
-        const [_] = (0, _._)(null == _ ? void 0 : _.appid, {
-          include_basic_info: !0,
-        });
+        const { data: _ } = (0, _._)(
+          (null == _ ? void 0 : _.appid)
+            ? {
+                appid: _.appid,
+              }
+            : void 0,
+        );
         if (_) return _(_, _, _, _);
       }
       function _(_, _, _, _) {
@@ -639,7 +826,7 @@
                 : _.clanSteamID.GetAccountID() == _._
                   ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
                   : _
-                    ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                    ? `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`
                     : _
                       ? `${_}curator/${_.clanSteamID.GetAccountID()}`
                       : _ +
@@ -657,7 +844,7 @@
             if (_.clanSteamID.GetAccountID() == (0, _._)())
               return `${_._.STORE_BASE_URL}meetsteam/${_}`;
             if (_)
-              return `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`;
+              return `${(0, _._)(_)}/${_.GetSaleUpdateLandingPageVanity()}`;
             if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
             return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
           case _.k_eStoreUsersNewsHub:
@@ -704,7 +891,7 @@
           _ = _ || !_ ? _ : (0, _._)(_, _),
           _ = _(_, _.k_eViewWebSiteHub, "absolute"),
           _ = Boolean(_.route != _.k_eViewWebSiteHub)
-            ? (0, _._)("#EventBrowse_MoreEventsBtn")
+            ? _._.Localize("#EventBrowse_MoreEventsBtn")
             : "",
           _ = _.useCallback(() => {
             _ && window.location.assign(_);
@@ -3957,6 +4144,49 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        return (
+          !!_ &&
+          Boolean(
+            _.related_items &&
+              _.related_items.standalone_demo_appid &&
+              _.related_items.standalone_demo_appid.length > 0 &&
+              _.related_items.standalone_demo_appid[0],
+          )
+        );
+      }
+      function _(_) {
+        var _, _;
+        return _ &&
+          (null === (_ = _.related_items) || void 0 === _
+            ? void 0
+            : _.standalone_demo_appid)
+          ? null === (_ = _.related_items) || void 0 === _
+            ? void 0
+            : _.standalone_demo_appid
+          : [];
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _ = !1) {
+        if (_)
+          return _ && (0, _._)(_)
+            ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
+            : `${_._.STORE_BASE_URL}${_.store_url_path}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -5728,6 +5958,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5776,6 +6007,7 @@
         null,
       );
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
         _._,
@@ -5952,18 +6184,24 @@
       function _(_) {
         return _(_) ? (null == _ ? void 0 : _.smart_section_type) : void 0;
       }
-      function _(_, _) {
+      function _(_) {
         var _;
-        if (!_.BIsNextFest() || _(_.section_type) || _(_)) return !1;
         const _ =
           _.jsondata.sale_ml_recommender_delay_hours &&
           (null !== (_ = _.startTime) && void 0 !== _ ? _ : 0) +
             _.jsondata.sale_ml_recommender_delay_hours * _._.PerHour -
             new Date().getTime() / 1e3;
-        return (null != _ ? _ : 0) > 0;
+        return null != _ ? _ : 0;
       }
-      function _(_, _) {
-        return !!_.use_random_order || !!_(_, _);
+      function _(_, _, _) {
+        return (
+          !!_.BIsNextFest() &&
+          !!_(_.section_type) &&
+          (_ == _._.Random || _(_) > 0)
+        );
+      }
+      function _(_, _, _) {
+        return !!_.use_random_order || !!_(_, _, _);
       }
       !(function (_) {
         (_[(_.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -6210,6 +6448,108 @@
                 "Invalid Broadcast SteamID: " +
                   _.broadcaster.ConvertTo64BitString(),
               )),
+            _
+          );
+        }
+        static FromCClanEventData(_, _) {
+          var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+          let _ = new _();
+          return (
+            (_.GID = _.gid),
+            (_.clanSteamID = new _._(_.clan_steamid)),
+            _.name.set(_, null !== (_ = _.event_name) && void 0 !== _ ? _ : ""),
+            (_.type = _.event_type),
+            (_.appid = null !== (_ = _.appid) && void 0 !== _ ? _ : 0),
+            (_.startTime = _.rtime32_start_time),
+            (_.endTime = _.rtime32_end_time),
+            (_.nCommentCount =
+              null !== (_ = _.comment_count) && void 0 !== _ ? _ : 0),
+            (_.creator_steamid = _.creator_steamid),
+            (_.last_update_steamid = _.last_update_steamid),
+            (_.jsondata = JSON.parse(
+              null !== (_ = _.jsondata) && void 0 !== _ ? _ : "{}",
+            )),
+            (_.rtime32_last_local_modification = _.rtime32_last_modified),
+            _.published
+              ? _.hidden
+                ? (_.visibility_state = _.unlisted
+                    ? _.k_EEventStateUnlisted
+                    : _.k_EEventStateStaged)
+                : (_.visibility_state = _.k_EEventStateVisible)
+              : (_.visibility_state = _.k_EEventStateUnpublished),
+            (_.createTime = _.rtime_created),
+            (_.m_nBuildID = _.build_id),
+            (_.m_strBuildBranch = _.build_branch),
+            (_.visibilityStartTime = _.rtime32_visibility_start),
+            (_.visibilityEndTime = _.rtime32_visibility_end),
+            (_.rtime32_moderator_reviewed = _.rtime_mod_reviewed),
+            (_.featured_app_tagid = _.featured_app_tagid),
+            _.broadcaster_accountid &&
+              (_.broadcaster = _._.InitFromAccountID(_.broadcaster_accountid)),
+            (_.AnnouncementGID =
+              null !==
+                (_ =
+                  null === (_ = _.announcement_body) || void 0 === _
+                    ? void 0
+                    : _.gid) && void 0 !== _
+                ? _
+                : "0"),
+            (_.postTime =
+              null === (_ = _.announcement_body) || void 0 === _
+                ? void 0
+                : _.posttime),
+            (_.forumTopicGID = _.forum_topic_id),
+            _.name.set(
+              _,
+              null !==
+                (_ =
+                  null === (_ = _.announcement_body) || void 0 === _
+                    ? void 0
+                    : _.headline) && void 0 !== _
+                ? _
+                : "",
+            ),
+            _.description.set(
+              _,
+              null !==
+                (_ =
+                  null === (_ = _.announcement_body) || void 0 === _
+                    ? void 0
+                    : _.body) && void 0 !== _
+                ? _
+                : "",
+            ),
+            (_.nCommentCount =
+              null !== (_ = _.comment_count) && void 0 !== _ ? _ : 0),
+            (_.vecTags = [
+              ...(null !==
+                (_ =
+                  null === (_ = _.announcement_body) || void 0 === _
+                    ? void 0
+                    : _.tags) && void 0 !== _
+                ? _
+                : []),
+            ]),
+            (_.forumTopicGID =
+              null === (_ = _.announcement_body) || void 0 === _
+                ? void 0
+                : _.forum_topic_id),
+            (_.nVotesUp =
+              null !==
+                (_ =
+                  null === (_ = _.announcement_body) || void 0 === _
+                    ? void 0
+                    : _.voteupcount) && void 0 !== _
+                ? _
+                : 0),
+            (_.nVotesDown =
+              null !==
+                (_ =
+                  null === (_ = _.announcement_body) || void 0 === _
+                    ? void 0
+                    : _.votedowncount) && void 0 !== _
+                ? _
+                : 0),
             _
           );
         }
@@ -6575,88 +6915,6 @@
               ? void 0
               : _[0];
         }
-        GetImageURLWithFallback(_, _, _ = _._.full, _ = !0) {
-          var _, _, _;
-          const _ = this.GetImageURL(_, _, _);
-          if (_ && _.trim().length > 0) return _;
-          const _ = _._.GetELanguageFallback(_);
-          if (_ != _) {
-            const _ = this.GetImageURL(_, _, _);
-            if (_ && _.trim().length > 0) return _;
-          }
-          const _ = _._.GetClanInfoByClanAccountID(
-            this.clanSteamID.GetAccountID(),
-          );
-          if ("capsule" == _) {
-            let _ = this.GetImageFromBeginningOfDescription(
-              _,
-              Number.MAX_VALUE,
-            );
-            if (_ && (_ || (0, _._)(_))) return _;
-            let _ = this.appid;
-            if (!_ && _ && ((_.is_creator_home && !_.is_ogg) || _.is_curator)) {
-              if (
-                !(null ===
-                  (_ =
-                    null === (_ = this.jsondata) || void 0 === _
-                      ? void 0
-                      : _.referenced_appids) || void 0 === _
-                  ? void 0
-                  : _.length)
-              )
-                return _.avatar_full_url;
-              _ = this.jsondata.referenced_appids[0];
-            }
-            _._.Get().QueueAppRequest(_, {
-              include_assets: !0,
-            });
-            const _ = _._.Get().GetApp(_);
-            return _ &&
-              _.BContainDataRequest({
-                include_assets: !0,
-              }) &&
-              _.GetAssets()
-              ? null === (_ = _.GetAssets()) || void 0 === _
-                ? void 0
-                : _.GetMainCapsuleURL()
-              : (null == _ ? void 0 : _.avatar_full_url)
-                ? _.avatar_full_url
-                : _._.STORE_ICON_BASE_URL + _ + "/header.jpg";
-          }
-          return "background" == _ &&
-            _ &&
-            ((_.is_creator_home && !_.is_ogg) || _.is_curator)
-            ? _.creator_page_bg_url
-            : this.GetFallbackArtworkScreenshot();
-        }
-        GetFallbackArtworkScreenshot() {
-          if (this.appid) {
-            _._.Get().QueueAppRequest(this.appid, {
-              include_screenshots: !0,
-            });
-            const _ = _._.Get().GetApp(this.appid);
-            let _ = Number(
-                this.bOldAnnouncement
-                  ? this.AnnouncementGID
-                  : null == this.GID
-                    ? 0
-                    : this.GID,
-              ),
-              _ =
-                null == _
-                  ? void 0
-                  : _.GetScreenshots(_.BHasAgeSafeScreenshots());
-            return _ && _.length > 1 ? ((_ %= _.length), _[_]) : "";
-          }
-          if (this.clanSteamID && this.GetEventType() != _.ajI) {
-            const _ = _._.GetClanInfoByClanAccountID(
-              this.clanSteamID.GetAccountID(),
-            );
-            if (_ && ((_.is_creator_home && !_.is_ogg) || _.is_curator))
-              return _.avatar_full_url;
-          }
-          return "";
-        }
         BImageNeedScreenshotFallback(_, _) {
           let _ = this.GetImageURL(_, _);
           if (!_ || 0 == _.length) {
@@ -6664,18 +6922,6 @@
             _ != _ && (_ = this.GetImageURL(_, _));
           }
           return !_ || 0 == _.length;
-        }
-        GetImageForSizeAsArrayWithFallback(_, _, _, _) {
-          let _ = new Array();
-          if (!this.BImageNeedScreenshotFallback(_, _)) {
-            const _ = this.GetImageURLWithFallback(_, _, _);
-            if ((_ && _.push(_), _ != _._.full)) {
-              const _ = this.GetImageURLWithFallback(_, _, _._.full);
-              _ && _.push(_);
-            }
-          }
-          const _ = this.GetFallbackArtworkScreenshot();
-          return _ && !_ && _.push(_), _;
         }
         GetDescriptionWithFallback(_) {
           const _ = _._.GetELanguageFallback(_);
@@ -7027,7 +7273,7 @@
             ? _
             : [];
         }
-        GenerateDynamicSaleSections(_, _, _, _) {
+        GenerateDynamicSaleSections(_, _, _, _, _) {
           const _ = [],
             _ = {
               section_type: "unselected_empty",
@@ -7060,6 +7306,12 @@
                 section_type: "footer_default_social_share",
                 unique_id: _++,
               }),
+            _ &&
+              _.push({
+                ..._,
+                section_type: "nextfest_header",
+                unique_id: _++,
+              }),
             _
           );
         }
@@ -7073,18 +7325,24 @@
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
-            _ = this.GetEventType() == _.ajI;
-          return _ || _ || _ || _
+            _ = this.GetEventType() == _.ajI,
+            _ = _._.is_valve_email,
+            _ =
+              this.BIsNextFest(_) &&
+              !!this.startTime &&
+              (this.startTime > new Date("2026-03-01").getTime() / 1e3 || _);
+          return _ || _ || _ || _ || _
             ? [
+                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _, !1),
               ]
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
           var _;
           if (_ > _._) {
-            return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
+            return this.GenerateDynamicSaleSections(!0, !0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
           }
@@ -7434,12 +7692,17 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest() {
-          const _ = this.jsondata.sale_vanity_id;
+        BIsNextFest(_ = !0) {
+          var _;
+          const _ = "nextfest",
+            _ =
+              null === (_ = this.jsondata.sale_vanity_id) || void 0 === _
+                ? void 0
+                : _.toLowerCase(),
+            _ = new _._(this.clanSteamID).GetAccountID();
           return (
-            new _._(this.clanSteamID).GetAccountID() == _._ &&
-            _ &&
-            _.toLowerCase().startsWith("nextfest")
+            !(!_ || _ != _._) &&
+            (_ ? _.startsWith(_) : _.startsWith(_) && !_.includes("prev"))
           );
         }
         GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
@@ -7507,7 +7770,7 @@
         }
       }
       function _(_) {
-        return null == _ ? void 0 : _.replace(/[()]/g, "\\$&");
+        if (_) return null == _ ? void 0 : _.replace(/[()]/g, "\\$&");
       }
       (0, _._)([_._], _.prototype, "GID", void 0),
         (0, _._)([_._], _.prototype, "AnnouncementGID", void 0),
@@ -7989,6 +8252,111 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "100% 0px 100% 0px",
+        _ = "tab",
+        _ = "SaleSection_",
+        _ = "exploration";
+      var _;
+      !(function (_) {
+        (_.Random = "r"), (_.Personalized = "p");
+      })(_ || (_ = {}));
+      const _ = 940;
+      function _() {
+        return window.innerWidth >= _;
+      }
+      function _() {
+        const [_, _] = (0, _.useState)(window.innerWidth);
+        return (
+          (0, _.useEffect)(() => {
+            const _ = () => {
+              _(window.innerWidth);
+            };
+            return (
+              window.addEventListener("resize", _),
+              () => window.removeEventListener("resize", _)
+            );
+          }, []),
+          _
+        );
+      }
+      function _(_ = _) {
+        return _() >= _;
+      }
+      function _(_) {
+        const _ = _(_),
+          _ = (0, _._)(_);
+        return _
+          ? {
+              nMaxCapsulesPerRow: _.nMaxItemsPerRow,
+              bScreenIsWide: _,
+            }
+          : {
+              nMaxCapsulesPerRow: Math.min(
+                Math.max(
+                  Math.floor(window.innerWidth / _.nItemMinimumWidth),
+                  1,
+                ),
+                _.nMaxItemsPerRow,
+              ),
+              bScreenIsWide: _,
+            };
+      }
+      function _(_) {
+        const _ = (0, _._)(_);
+        return _()
+          ? _.nMaxItemsPerRow
+          : Math.min(
+              Math.max(Math.floor(window.innerWidth / _.nItemMinimumWidth), 1),
+              _.nMaxItemsPerRow,
+            );
+      }
+      function _(_) {
+        switch (_) {
+          case _._:
+            return _.mv5;
+          case _._:
+            return _.KH9;
+          case _._:
+            return _.hmR;
+          case _._:
+            return _.R2g;
+          default:
+            return;
+        }
+      }
+      function _(_) {
+        switch (_) {
+          case _.mv5:
+            return _._;
+          case _.KH9:
+            return _._;
+          case _.hmR:
+            return _._;
+          default:
+            return;
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
       });
@@ -8482,155 +8850,6 @@
       (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
         (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
       const _ = new _();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
-        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
-        ReplacementTokenToClanImageURL(_) {
-          return (_ = _.replace(_._, this.GetBaseURL())).replace(
-            "http://",
-            "https://",
-          );
-        },
-        ExtractHashFromBBCodeURL(_) {
-          const _ =
-            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
-              _,
-            );
-          return (null == _ ? void 0 : _.groups)
-            ? [_.groups.filename, parseInt(_.groups.clanid)]
-            : [void 0, void 0];
-        },
-        GetExtensionString(_) {
-          var _;
-          return null !==
-            (_ = null != _.file_type ? (0, _._)(_.file_type) : null) &&
-            void 0 !== _
-            ? _
-            : ".jpg";
-        },
-        GetHashAndExt(_) {
-          return _ ? _.image_hash + this.GetExtensionString(_) : null;
-        },
-        GetThumbHashAndExt(_) {
-          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
-        },
-        GetHashFromHashAndExt(_) {
-          let _ = _.substring(_.lastIndexOf("."));
-          return _.substring(0, _.length - _.length);
-        },
-        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(_, _, _ = _._.full) {
-          return this.GenerateURLFromHashAndExtAndLang(_, _, _, _.xPp, void 0);
-        },
-        GenerateURLFromHashAndExtAndLang(_, _, _ = _._.full, _, _) {
-          _ instanceof _._ && (_ = _.GetAccountID());
-          let _ = this.GetBaseURL();
-          const _ = null != _ && _ != _.xPp;
-          if (_ != _._.full || _) {
-            let _ = _.substring(_.lastIndexOf(".")),
-              _ = _.substring(0, _.length - _.length);
-            return _ && _ != _.Bhc && "localized_image_group" == _
-              ? _ + _ + "/" + _ + "/" + (0, _.x6o)((0, _.LgB)(_)) + _
-              : _ + _ + "/" + _ + _ + _;
-          }
-          return _ + _ + "/" + _;
-        },
-        GetHashAndExtFromURL(_) {
-          let _ = this.GetBaseURL();
-          return (null == _ ? void 0 : _.startsWith(_))
-            ? -1 == (_ = _.substring(_.length)).indexOf("/")
-              ? null
-              : (_ = _.substring(_.indexOf("/") + 1))
-            : null;
-        },
-        GenerateEditableURLFromHashAndExt(_, _, _) {
-          let _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.ConvertTo64BitString() +
-            "/showclanimage/?image_hash_and_ext=" +
-            _;
-          return _ && (_ += "&lang=" + _), _;
-        },
-        GetMimeType: (_) => (0, _._)(_),
-        async AsyncGetImageResolution(_, _, _, _, _) {
-          const _ =
-              _ +
-              this.GetExtensionString({
-                file_type: _,
-              }),
-            _ = this.GenerateEditableURLFromHashAndExt(_, _);
-          return await this.AsyncGetImageResolutionInternal(_, _, _);
-        },
-        async AsyncGetImageResolutionInternal(_, _, _) {
-          const _ = (0, _._)();
-          let _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              const _ = {
-                success: _._,
-              };
-              _ ||
-                ((_.err_msg =
-                  "Load fail on url " +
-                  _ +
-                  " with error: " +
-                  (0, _._)(_).strErrorMsg),
-                console.error(_.err_msg)),
-                (_.success = _._),
-                _.resolve(_);
-            }),
-            (_.onload = () => {
-              const _ = {
-                success: _._,
-              };
-              (_.width = _.width),
-                (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
-                ),
-                (_.success = _._),
-                _.resolve(_);
-            }),
-            (_.src = _),
-            _.token.promise.catch(() => {
-              const _ = {
-                success: _._,
-              };
-              return (_.onload = () => {}), (_.success = _._), _;
-            });
-          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
-          let _;
-          try {
-            _ = await Promise.race([_, _.promise]);
-          } catch {
-            _ = {
-              success: _._,
-              err_msg: "We timed out processing images",
-            };
-          }
-          return _;
-        },
-        BIsClanImageVideo: (_) => _.file_type == _._._ || _.file_type == _._._,
-      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -13434,7 +13653,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         let _ = _;
         _ =
@@ -13454,29 +13674,40 @@
                 nMinimumDigitsAfterDecimal: 0,
                 ..._,
               };
-        const _ = _.bUseBinary1K ? 1024 : 1e3,
-          _ = _ * _,
-          _ = _ * _,
-          _ = _ * _;
-        let _,
-          _ = "";
-        _ > _
-          ? ((_ = _ / _), (_ = "Tera"))
-          : _ > _
-            ? ((_ = _ / _), (_ = "Giga"))
-            : _ > _
-              ? ((_ = _ / _), (_ = "Mega"))
+        const { nNum: _, strPrefix: _ } = (function (_, _) {
+            const _ = _.bUseBinary1K ? 1024 : 1e3,
+              _ = _ * _,
+              _ = _ * _,
+              _ = _ * _;
+            return _ > _
+              ? {
+                  nNum: _ / _,
+                  strPrefix: "Tera",
+                }
               : _ > _
-                ? ((_ = _ / _), (_ = "Kilo"))
-                : (_ = _);
-        const _ =
-          "#" +
-          _ +
-          (_.bValueIsInBytes ? "bytes" : "bits") +
-          (_.bValueIsRate ? "_PerSecond" : "");
-        return (0, _._)(
+                ? {
+                    nNum: _ / _,
+                    strPrefix: "Giga",
+                  }
+                : _ > _
+                  ? {
+                      nNum: _ / _,
+                      strPrefix: "Mega",
+                    }
+                  : _ > _
+                    ? {
+                        nNum: _ / _,
+                        strPrefix: "Kilo",
+                      }
+                    : {
+                        nNum: _,
+                        strPrefix: "",
+                      };
+          })(_, _),
+          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
+        return _._.Localize(
           _,
-          _.toLocaleString(_._.GetPreferredLocales(), {
+          _.toLocaleString((0, _._)(), {
             minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
             maximumFractionDigits: _.nDigitsAfterDecimal,
           }),
@@ -13489,7 +13720,7 @@
             (_ = {
               maximumFractionDigits: _,
             }),
-          _ ? _.toLocaleString(_._.GetPreferredLocales(), _) : "" + _
+          _ ? _.toLocaleString((0, _._)(), _) : "" + _
         );
       }
     },
@@ -13546,8 +13777,8 @@
       }
       function _(_) {
         let _ = "#PartnerEvent_" + _,
-          _ = (0, _._)(_);
-        return _ != _ ? _ : (0, _._)("#PartnerEvent_Other");
+          _ = _._.Localize(_);
+        return _ != _ ? _ : _._.Localize("#PartnerEvent_Other");
       }
     },
   },

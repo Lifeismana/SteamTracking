@@ -470,7 +470,7 @@
       var i = r(7850),
         s = r(92528),
         n = r(92757),
-        a = r(6813),
+        a = r(32801),
         o = r(90626),
         l = r(78327),
         c = r(94794),
@@ -20187,7 +20187,6 @@
         constructor() {
           (0, s.Gn)(this);
         }
-        bOpenEventLandingPage = !1;
         bIncludeFeaturedAsGameSource = !0;
         nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {

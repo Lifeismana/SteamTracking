@@ -81,13 +81,18 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        Sticky: "_3dlxz6KBJpvmA-qsVAzxs8",
         GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
         GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        ChecklistMode: "_3blAkLFfSQrJjGklUKOP7e",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        checklistBox: "_1idkU7IA8dDPOIbsU-dRkJ",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+        StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
+        StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
     34104: (e, t, r) => {
@@ -296,8 +301,8 @@
         j = r(12155),
         L = r(39891),
         V = r(22797),
-        y = r(52038),
-        k = r(61859),
+        k = r(52038),
+        y = r(61859),
         M = r(41338),
         R = r(35111),
         N = r.n(R);
@@ -309,14 +314,14 @@
         if (!r || !o || r.item_type !== a.c6.qI) return null;
         const m = o.steam_deck_compat_category || i.YX;
         return (0, s.jsxs)("div", {
-          className: (0, y.A)(N().LearnMoreCtn, "LearnMoreCtn"),
+          className: (0, k.A)(N().LearnMoreCtn, "LearnMoreCtn"),
           children: [
             (0, s.jsx)(d.$o, { category: m }),
             (0, s.jsx)(l.Ii, {
               onClick: u,
               children: (0, s.jsx)("span", {
                 className: N().LearnMorePC,
-                children: (0, k.we)(
+                children: (0, y.we)(
                   "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
                 ),
               }),
@@ -358,7 +363,7 @@
                 : (0, s.jsx)(V.t, {
                     size: "medium",
                     position: "center",
-                    string: (0, k.we)("#Loading"),
+                    string: (0, y.we)("#Loading"),
                   }),
             }),
           }),
@@ -418,11 +423,11 @@
             id: t,
             className: N().CompatibilityDetailRatingSummary,
             children: l
-              ? (0, k.PP)(
+              ? (0, y.PP)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
                   (0, s.jsx)("b", { children: (0, M.EK)(l) }),
                 )
-              : (0, k.we)("#SteamDeckVerified_DescriptionHeader_Unknown"),
+              : (0, y.we)("#SteamDeckVerified_DescriptionHeader_Unknown"),
           });
         let n = "",
           a = null;
@@ -441,20 +446,20 @@
         }
         const c = (0, s.jsx)("span", {
             className: a,
-            children: (0, k.we)(F(r)),
+            children: (0, y.we)(F(r)),
           }),
           C = (0, s.jsx)("span", {
             className: N().CompatibilityDetailRatingSummary,
-            children: (0, k.we)(o || n),
+            children: (0, y.we)(o || n),
           }),
           u = l
-            ? (0, k.PP)(
+            ? (0, y.PP)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
                 (0, s.jsx)("b", { children: (0, M.EK)(l) }),
                 c,
                 C,
               )
-            : (0, k.PP)("#SteamDeckVerified_DescriptionHeader", c, C);
+            : (0, y.PP)("#SteamDeckVerified_DescriptionHeader", c, C);
         return (0, s.jsx)("div", {
           id: t,
           className: N().CompatibilityDetailRatingSummary,
@@ -467,11 +472,11 @@
           return (0, s.jsx)("div", {
             className: N().CompatibilityDetailRatingSummary,
             children: l
-              ? (0, k.PP)(
+              ? (0, y.PP)(
                   "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
                   (0, s.jsx)("b", { children: (0, M.EK)(l) }),
                 )
-              : (0, k.we)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
+              : (0, y.we)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
           });
         let i = "",
           a = null;
@@ -486,20 +491,20 @@
         }
         const c = (0, s.jsx)("span", {
             className: a,
-            children: (0, k.we)(T(r)),
+            children: (0, y.we)(T(r)),
           }),
           C = (0, s.jsx)("span", {
             className: N().CompatibilityDetailRatingSummary,
-            children: (0, k.we)(o || i),
+            children: (0, y.we)(o || i),
           }),
           u = l
-            ? (0, k.PP)(
+            ? (0, y.PP)(
                 "#SteamOSCompatibility_DescriptionHeader_WithAppName",
                 (0, s.jsx)("b", { children: (0, M.EK)(l) }),
                 c,
                 C,
               )
-            : (0, k.PP)("#SteamOSCompatibility_DescriptionHeader", c, C);
+            : (0, y.PP)("#SteamOSCompatibility_DescriptionHeader", c, C);
         return (0, s.jsx)("div", {
           id: t,
           className: N().CompatibilityDetailRatingSummary,
@@ -738,9 +743,9 @@
         j,
         L = r(54906),
         V = r(35111),
-        y = r.n(V),
-        k = r(28285),
-        M = r.n(k),
+        k = r.n(V),
+        y = r(28285),
+        M = r.n(y),
         R = r(52038),
         N = r(61859);
       function B(e) {
@@ -806,7 +811,7 @@
               "aria-label": (0, N.we)("#ControllerButton_DpadLeft"),
             });
           case m.Right:
-            return (0, s.jsx)(G, {
+            return (0, s.jsx)(P, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, N.we)("#ControllerButton_DpadRight"),
@@ -824,7 +829,7 @@
               "aria-label": (0, N.we)("#ControllerButton_DpadDown"),
             });
           case m.HomeMenu:
-            return (0, s.jsx)(P, {
+            return (0, s.jsx)(G, {
               bIsKnockout: r,
               className: t,
               "aria-label": (0, N.we)("#ControllerButton_Steam"),
@@ -1196,7 +1201,7 @@
               ],
             });
       }
-      function G({ bIsKnockout: e, ...t }) {
+      function P({ bIsKnockout: e, ...t }) {
         return e
           ? (0, s.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -1231,7 +1236,7 @@
               ],
             });
       }
-      function P({ bIsKnockout: e, ...t }) {
+      function G({ bIsKnockout: e, ...t }) {
         return e
           ? (0, s.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -2401,19 +2406,19 @@
             autoFocus: a,
             focusableIfEmpty: a,
             noFocusRing: !0,
-            className: y().CompatibilityDetailsContainer,
+            className: k().CompatibilityDetailsContainer,
             ...p,
             children: [
               (0, s.jsxs)("div", {
                 id: r,
-                className: y().DialogHeader,
+                className: k().DialogHeader,
                 children: [
                   (0, s.jsx)("div", {
-                    className: y().DialogTitle,
+                    className: k().DialogTitle,
                     children: e,
                   }),
                   (0, s.jsx)("div", {
-                    className: y().AppTitleCategory,
+                    className: k().AppTitleCategory,
                     children: (0, s.jsx)(L.Ez, {
                       category: t.resolved_category,
                     }),
@@ -2437,7 +2442,7 @@
             i = [
               {
                 name: (0, s.jsxs)("div", {
-                  className: y().pillContent,
+                  className: k().pillContent,
                   children: ["Steam Deck", (0, s.jsx)(r, {})],
                 }),
                 key: "steamdeck",
@@ -2448,7 +2453,7 @@
               },
               {
                 name: (0, s.jsxs)("div", {
-                  className: y().pillContent,
+                  className: k().pillContent,
                   children: ["SteamOS", (0, s.jsx)(l, {})],
                 }),
                 key: "steamos",
@@ -2460,8 +2465,8 @@
             ];
           return (0, s.jsx)(me.V, {
             tabs: i,
-            classNameCtn: y().CompatibilityTabs,
-            classNameTabContent: y().CompatibilityTabContent,
+            classNameCtn: k().CompatibilityTabs,
+            classNameTabContent: k().CompatibilityTabContent,
             startingTab: x ? "steamos" : "steamdeck",
             preferredFocus: !0,
           });
@@ -2492,22 +2497,22 @@
           }, []),
           (0, s.jsxs)(l.Z, {
             className: x
-              ? y().CompatibilityDetailsContainer
-              : y().CompatibilityDetailsContainerDesktop,
+              ? k().CompatibilityDetailsContainer
+              : k().CompatibilityDetailsContainerDesktop,
             ...f,
             children: [
               (0, s.jsxs)("div", {
                 children: [
                   (0, s.jsxs)("div", {
                     id: t,
-                    className: y().DialogHeader,
+                    className: k().DialogHeader,
                     children: [
                       (0, s.jsx)("div", {
-                        className: y().DialogTitle,
+                        className: k().DialogTitle,
                         children: r,
                       }),
                       (0, s.jsx)("div", {
-                        className: y().AppTitleCategory,
+                        className: k().AppTitleCategory,
                         children: a,
                       }),
                     ],
@@ -2519,8 +2524,8 @@
               (0, s.jsx)(o.Qg, {
                 ref: h,
                 className: m()
-                  ? y().CompatibilityDetailsInterior_Scroll
-                  : y().CompatibilityDetailsInterior_NoScroll,
+                  ? k().CompatibilityDetailsInterior_Scroll
+                  : k().CompatibilityDetailsInterior_NoScroll,
                 children: (0, s.jsx)(l.Z, {
                   autoFocus: i,
                   focusableIfEmpty: i || m(),
@@ -2559,7 +2564,7 @@
             children: [
               u &&
                 (0, s.jsx)("div", {
-                  className: y().CompatibilityDetailsSeparator,
+                  className: k().CompatibilityDetailsSeparator,
                 }),
               l.steamos_resolved_items &&
                 l.steamos_resolved_items
@@ -2568,9 +2573,9 @@
                     (0, s.jsxs)(
                       "div",
                       {
-                        className: y().CompatibilityDetailsRow,
+                        className: k().CompatibilityDetailsRow,
                         children: [
-                          (0, s.jsx)(ke, { displaytype: e.display_type }),
+                          (0, s.jsx)(ye, { displaytype: e.display_type }),
                           (0, s.jsx)("span", {
                             children: (0, N.we)(e.loc_token),
                           }),
@@ -2581,16 +2586,16 @@
                   ),
               n &&
                 (0, s.jsx)("div", {
-                  className: y().CompatibilityNotes,
+                  className: k().CompatibilityNotes,
                   children: l.steamos_resolved_items
                     ?.filter((e) => e.display_type == i)
                     .map((e) =>
                       (0, s.jsxs)(
                         "div",
                         {
-                          className: y().CompatibilityDetailsRow,
+                          className: k().CompatibilityDetailsRow,
                           children: [
-                            (0, s.jsx)(ke, { displaytype: e.display_type }),
+                            (0, s.jsx)(ye, { displaytype: e.display_type }),
                             (0, s.jsx)("span", {
                               children: (0, N.we)(e.loc_token),
                             }),
@@ -2626,7 +2631,7 @@
             children: [
               c &&
                 (0, s.jsx)("div", {
-                  className: y().CompatibilityDetailsSeparator,
+                  className: k().CompatibilityDetailsSeparator,
                 }),
               l.resolved_items &&
                 l.resolved_items
@@ -2635,9 +2640,9 @@
                     (0, s.jsxs)(
                       "div",
                       {
-                        className: y().CompatibilityDetailsRow,
+                        className: k().CompatibilityDetailsRow,
                         children: [
-                          (0, s.jsx)(ye, { displaytype: e.display_type }),
+                          (0, s.jsx)(ke, { displaytype: e.display_type }),
                           (0, s.jsx)("span", {
                             children: (0, N.we)(e.loc_token),
                           }),
@@ -2649,14 +2654,14 @@
               i &&
                 l.resolved_items &&
                 (0, s.jsx)("div", {
-                  className: y().CompatibilityNotes,
+                  className: k().CompatibilityNotes,
                   children: l.resolved_items
                     .filter((e) => e.display_type == C)
                     .map((e) =>
                       (0, s.jsx)(
                         "div",
                         {
-                          className: y().CompatibilityDetailsNoteRow,
+                          className: k().CompatibilityDetailsNoteRow,
                           children: (0, s.jsx)("span", {
                             children: (0, N.we)(e.loc_token),
                           }),
@@ -2680,11 +2685,11 @@
               ? (0, N.we)("#SteamOS_DescriptionHeader_DeveloperBlog")
               : (0, N.we)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
           return (0, s.jsxs)("div", {
-            className: y().CompatibilityDetailRatingSummary,
+            className: k().CompatibilityDetailRatingSummary,
             children: [
               e,
               (0, s.jsx)("div", {
-                className: y().DeveloperBlogYButton,
+                className: k().DeveloperBlogYButton,
                 children: (0, s.jsx)(Z, { button: m.Y, type: b.Knockout }),
               }),
             ],
@@ -2697,35 +2702,35 @@
                 "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
               );
         return (0, s.jsxs)("div", {
-          className: y().CompatibilityDetailRatingSummary,
+          className: k().CompatibilityDetailRatingSummary,
           children: [
             o,
             (0, s.jsx)("a", {
               href: t,
-              className: y().DeveloperBlockLinkDesktop,
+              className: k().DeveloperBlockLinkDesktop,
               children: (0, N.we)("#SteamDeckVerified_ViewDeveloperPost"),
             }),
           ],
         });
       }
-      function ye(e) {
+      function ke(e) {
         const { displaytype: t } = e;
         switch (t) {
           case p:
             return (0, s.jsx)(ue.o5Q, {
-              className: y().CompatibilityDetailsResultIcon,
+              className: k().CompatibilityDetailsResultIcon,
             });
           case d:
             return (0, s.jsx)(ue.aVR, {
-              className: y().CompatibilityDetailsResultIcon,
+              className: k().CompatibilityDetailsResultIcon,
             });
           case u:
             return (0, s.jsx)(ue.jIP, {
-              className: y().CompatibilityDetailsResultIcon,
+              className: k().CompatibilityDetailsResultIcon,
             });
           case c:
             return (0, s.jsx)(ue.WX$, {
-              className: y().CompatibilityDetailsResultIcon,
+              className: k().CompatibilityDetailsResultIcon,
             });
           case C:
             return (
@@ -2737,16 +2742,16 @@
             );
         }
       }
-      function ke(e) {
+      function ye(e) {
         const { displaytype: t } = e;
         switch (t) {
           case n:
             return (0, s.jsx)(ue.ZjT, {
-              className: y().CompatibilityDetailsResultIcon,
+              className: k().CompatibilityDetailsResultIcon,
             });
           case i:
             return (0, s.jsx)(ue.bcZ, {
-              className: y().CompatibilityDetailsResultIcon,
+              className: k().CompatibilityDetailsResultIcon,
             });
           default:
             return null;
@@ -2788,77 +2793,89 @@
             classNameTabContent: u,
             preferredFocus: g,
             bVerticalTabs: h,
+            bSticky: f,
+            bChecklistMode: w,
           } = e,
-          f = (0, m.zy)(),
-          w = (0, m.W6)(),
-          [H, _] = (0, l.useState)(
+          H = (0, m.zy)(),
+          _ = (0, m.W6)(),
+          [v, b] = (0, l.useState)(
             () =>
               i ||
-              (!r && (0, n.f3)(f, "tab") ? ((0, n.f3)(f, "tab") ?? "") : ""),
+              (!r && (0, n.f3)(H, "tab") ? ((0, n.f3)(H, "tab") ?? "") : ""),
           );
         (0, l.useEffect)(() => {
-          if (!e.bDisableRouting && f) {
-            const e = (0, n.f3)(f, "tab");
-            e && _(e);
+          if (!e.bDisableRouting && H) {
+            const e = (0, n.f3)(H, "tab");
+            e && b(e);
           }
-        }, [f, f.key, e.bDisableRouting, _]);
-        const v = l.useCallback(
+        }, [H, H.key, e.bDisableRouting, b]);
+        const j = l.useCallback(
             (e) => {
-              _(e.key),
-                r || (0, n.Bm)(w, "tab", e.key),
+              b(e.key),
+                r || (0, n.Bm)(_, "tab", e.key),
                 e.onClick && e.onClick(e);
             },
-            [r, w],
+            [r, _],
           ),
-          b = t.filter((e) => !e.hidden);
-        if (!b.length) return null;
-        const j = b.find((e) => e.key === H) || b[0],
-          L = g ? (i ?? b[0].key) : void 0,
-          V = (0, s.jsxs)(s.Fragment, {
+          L = t.filter((e) => !e.hidden);
+        if (!L.length) return null;
+        const V = L.find((e) => e.key === v) || L[0],
+          k = g ? (i ?? L[0].key) : void 0,
+          y = (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsx)(d.Z, {
                 className: (0, o.A)(
                   c().GraphicalAssetsTabs,
                   h && c().GraphicalAssetsTabsVertical,
+                  w && c().ChecklistMode,
+                  f && c().Sticky,
                   a,
                 ),
                 navEntryPreferPosition: g ? p.iU.PREFERRED_CHILD : p.iU.FIRST,
-                children: b.map((e, t) =>
+                children: L.map((e, t) =>
                   (0, s.jsx)(
                     x,
                     {
                       tab: e,
-                      OnTabClick: v,
+                      OnTabClick: j,
                       classNameTab: C,
-                      active: e.key === j.key,
-                      preferredFocus: L === e.key,
+                      active: e.key === V.key,
+                      preferredFocus: k === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              j && (0, s.jsx)(d.Z, { className: u, children: j.contents }),
+              V && (0, s.jsx)(d.Z, { className: u, children: V.contents }),
             ],
           });
         return h
           ? (0, s.jsx)(d.Z, {
               className: (0, o.A)(c().GraphicalAssetsTabsLayoutVertical),
-              children: V,
+              children: y,
             })
-          : V;
+          : y;
       }
       function h(e) {
-        const { statusType: t = "success", children: r } = e;
-        let l = "";
+        const { statusType: t = "success", bShowStatusBox: r, children: l } = e;
+        let i = "";
         return (
           "success" === t
-            ? (l = c().StatusSuccess)
+            ? (i = c().StatusSuccess)
             : "danger" === t
-              ? (l = c().StatusDanger)
-              : "caution" === t && (l = c().StatusCaution),
+              ? (i = c().StatusDanger)
+              : "caution" === t
+                ? (i = c().StatusCaution)
+                : "info" === t
+                  ? (i = c().StatusInfo)
+                  : "incomplete" === t && (i = c().StatusIncomplete),
           (0, s.jsx)("div", {
-            className: (0, o.A)(c().GraphicalAssetStatus, l),
-            children: r,
+            className: (0, o.A)(
+              c().GraphicalAssetStatus,
+              i,
+              r ? c().checklistBox : "",
+            ),
+            children: l,
           })
         );
       }

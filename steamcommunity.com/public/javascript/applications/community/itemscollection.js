@@ -116,41 +116,40 @@
     },
     36424: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => B });
+      s.r(t), s.d(t, { default: () => A });
       var r = s(7850),
         i = s(45699),
-        o = s(12447),
-        n = s(76217),
-        c = s(37788),
-        a = s(23310),
-        l = s(37621),
-        m = s(8527),
-        d = s(84518),
-        _ = s(60014),
-        u = s(90626),
-        f = s(24484);
-      var p = s(55263),
-        h = s(25706),
-        b = s(52038),
-        g = s(40594);
-      function I({ nPercent: e, indeterminate: t, animate: s, className: i }) {
+        o = s(76217),
+        n = s(37788),
+        c = s(84143),
+        a = s(37621),
+        l = s(8527),
+        m = s(84518),
+        d = s(60014),
+        _ = s(90626),
+        u = s(24484);
+      var f = s(55263),
+        p = s(25706),
+        h = s(52038),
+        b = s(40594);
+      function g({ nPercent: e, indeterminate: t, animate: s, className: i }) {
         return (0, r.jsx)("div", {
-          className: (0, b.A)(
-            g.ProgressBar,
-            s && g.AnimateProgress,
-            t && g.Indeterminate,
+          className: (0, h.A)(
+            b.ProgressBar,
+            s && b.AnimateProgress,
+            t && b.Indeterminate,
             i,
           ),
           style: { "--percent": e / 100 },
         });
       }
-      const x = ({ nPercent: e, size: t = 120, strokeWidth: s = 20 }) => {
+      const I = ({ nPercent: e, size: t = 120, strokeWidth: s = 20 }) => {
         const i = (t - s) / 2,
           o = 2 * Math.PI * i,
           n = o - (e / 100) * o,
           c = 100 == e;
         return (0, r.jsx)("div", {
-          className: (0, b.A)({ [g.Circular]: !0, [g.Full]: c }),
+          className: (0, h.A)({ [b.Circular]: !0, [b.Full]: c }),
           children: (0, r.jsxs)("svg", {
             width: t,
             height: t,
@@ -179,26 +178,26 @@
           }),
         });
       };
-      var j = s(61859),
-        S = s(91675),
-        N = s(73745),
+      var x = s(61859),
+        j = s(91675),
+        S = s(73745),
         k = s(49395),
-        v = s.n(k),
+        N = s.n(k),
         T = s(85427),
-        y = s.n(T),
-        w = s(62490);
-      function C(e) {
+        v = s.n(T),
+        y = s(62490);
+      function w(e) {
         const {
             oRewardDefinition: t,
             rgRewardItems: s,
-            rgUserItemRewarded: o,
-            rgCommunityItemDefs: l,
+            rgUserItemRewarded: a,
+            rgCommunityItemDefs: m,
             bViewingOwnProfile: d,
           } = e,
-          _ = (0, u.useMemo)(() => {
+          u = (0, _.useMemo)(() => {
             const e = new Set();
-            null == o ||
-              o.forEach((t) => {
+            null == a ||
+              a.forEach((t) => {
                 e.add(
                   `${t.item_definition.appid}_${t.item_definition.community_item_type}`,
                 );
@@ -209,7 +208,7 @@
             });
             const r = new Map();
             return (
-              l
+              m
                 .filter((e) => e.active)
                 .filter((e) => t.has(`${e.appid}_${e.item_type}`))
                 .sort((t, s) => {
@@ -228,50 +227,50 @@
                 }),
               r
             );
-          }, [s, o, l]);
-        return (0, r.jsxs)(c.YZ, {
-          navEntryPreferPosition: a.iU.LAST,
+          }, [s, a, m]);
+        return (0, r.jsxs)(n.YZ, {
+          navEntryPreferPosition: c.iU.LAST,
           preferredFocus: !0,
-          className: y().FreeQuestCtn,
+          className: v().FreeQuestCtn,
           children: [
             (0, r.jsx)("div", {
-              className: y().HowToGet,
-              children: (0, j.we)("#ItemCollection_ForFree_Title"),
+              className: v().HowToGet,
+              children: (0, x.we)("#ItemCollection_ForFree_Title"),
             }),
-            (0, r.jsxs)(n.Z, {
+            (0, r.jsxs)(o.Z, {
               children: [
                 (0, r.jsxs)("div", {
-                  className: y().QuestInstructions,
+                  className: v().QuestInstructions,
                   children: [
                     (0, r.jsx)("div", {
-                      className: y().QuestName,
-                      children: (0, j.we)("#ItemCollection_ForFree_Discovery"),
+                      className: v().QuestName,
+                      children: (0, x.we)("#ItemCollection_ForFree_Discovery"),
                     }),
                     (0, r.jsx)("p", {
-                      children: (0, S.nR)(t.rtime_start_time, t.rtime_end_time),
+                      children: (0, j.nR)(t.rtime_start_time, t.rtime_end_time),
                     }),
                     (0, r.jsxs)("p", {
                       children: [
-                        (0, j.we)("#ItemCollection_ForFree_Discovery_desc"),
+                        (0, x.we)("#ItemCollection_ForFree_Discovery_desc"),
                         (0, r.jsx)("br", {}),
-                        (0, j.oW)(
+                        (0, x.oW)(
                           "#ItemCollection_ForFree_Discovery_desc2",
                           (0, r.jsx)(i.Ii, {
-                            href: `${m.TS.STORE_BASE_URL}explore?dq=widget`,
+                            href: `${l.TS.STORE_BASE_URL}explore?dq=widget`,
                           }),
                         ),
                       ],
                     }),
                   ],
                 }),
-                Array.from(_.keys()).map((e) =>
+                Array.from(u.keys()).map((e) =>
                   (0, r.jsx)(
-                    M,
+                    C,
                     {
                       bViewingOwnProfile: d,
                       nAppID: t.appid,
                       itemClass: e,
-                      rgItems: _.get(e),
+                      rgItems: u.get(e),
                       bHideItemStore: !0,
                     },
                     "free_item_class_" + e,
@@ -282,189 +281,189 @@
           ],
         });
       }
-      function M(e) {
+      function C(e) {
         const {
             rgItems: t,
             itemClass: s,
             nAppID: i,
-            bViewingOwnProfile: o,
+            bViewingOwnProfile: a,
           } = e,
-          l = (0, u.useMemo)(
+          l = (0, _.useMemo)(
             () => t.filter((e) => e.user_has_item).length,
             [t],
           ),
           m = t.length ? Math.floor((100 * l) / t.length) : 0;
-        return (0, r.jsxs)(c.YZ, {
-          navEntryPreferPosition: a.iU.LAST,
+        return (0, r.jsxs)(n.YZ, {
+          navEntryPreferPosition: c.iU.LAST,
           preferredFocus: !0,
-          className: (0, b.A)(y().ItemSection),
+          className: (0, h.A)(v().ItemSection),
           children: [
-            (0, r.jsx)(L, { ...e }),
-            (0, r.jsxs)(n.Z, {
-              className: y().ItemCategoryCtn,
+            (0, r.jsx)(M, { ...e }),
+            (0, r.jsxs)(o.Z, {
+              className: v().ItemCategoryCtn,
               children: [
-                (0, r.jsx)(n.Z, {
-                  className: y().CategoryName,
-                  children: (0, j.we)("#Sale_Section_PointShop_class_" + s),
+                (0, r.jsx)(o.Z, {
+                  className: v().CategoryName,
+                  children: (0, x.we)("#Sale_Section_PointShop_class_" + s),
                 }),
-                (0, r.jsx)("div", { className: y().SectionLine }),
-                (0, r.jsx)(D, { ...e }),
+                (0, r.jsx)("div", { className: v().SectionLine }),
+                (0, r.jsx)(L, { ...e }),
               ],
             }),
-            (0, r.jsxs)(n.Z, {
-              className: y().ItemCtn,
+            (0, r.jsxs)(o.Z, {
+              className: v().ItemCtn,
               children: [
-                (0, r.jsxs)(n.Z, {
-                  className: y().ProgressIndicationCtn,
+                (0, r.jsxs)(o.Z, {
+                  className: v().ProgressIndicationCtn,
                   children: [
-                    (0, r.jsx)(x, { nPercent: m }),
+                    (0, r.jsx)(I, { nPercent: m }),
                     (0, r.jsxs)("div", {
-                      className: y().ProgressText,
+                      className: v().ProgressText,
                       children: [
                         (0, r.jsx)("div", {
-                          children: (0, j.we)(
+                          children: (0, x.we)(
                             "#ItemCollection_Collected_Item",
                             l,
                             t.length,
                           ),
                         }),
                         (0, r.jsx)("div", {
-                          children: (0, j.we)("#ItemCollection_Collected_Line"),
+                          children: (0, x.we)("#ItemCollection_Collected_Line"),
                         }),
                       ],
                     }),
                   ],
                 }),
-                t.map((e) => (0, r.jsx)(E, { item: e }, "item_" + e.item_type)),
+                t.map((e) => (0, r.jsx)(D, { item: e }, "item_" + e.item_type)),
               ],
             }),
           ],
         });
       }
-      function L(e) {
+      function M(e) {
         const { itemClass: t, nAppID: s } = e;
-        return t !== l.Ve
+        return t !== a.Ve
           ? null
-          : (0, r.jsx)(n.Z, {
-              className: y().HowToGet,
-              children: (0, j.we)("#ItemCollection_GameCards_Title"),
+          : (0, r.jsx)(o.Z, {
+              className: v().HowToGet,
+              children: (0, x.we)("#ItemCollection_GameCards_Title"),
             });
       }
-      function D(e) {
+      function L(e) {
         const {
           itemClass: t,
           nAppID: s,
           bViewingOwnProfile: o,
           bHideItemStore: n,
         } = e;
-        return t == l.Ve && o
+        return t == a.Ve && o
           ? (0, r.jsx)(i.Ii, {
-              href: `${m.TS.COMMUNITY_BASE_URL}my/gamecards/${s}`,
-              className: y().PointShopLink,
-              children: (0, j.we)("#ItemCollection_Visit_Badge"),
+              href: `${l.TS.COMMUNITY_BASE_URL}my/gamecards/${s}`,
+              className: v().PointShopLink,
+              children: (0, x.we)("#ItemCollection_Visit_Badge"),
             })
           : n
             ? null
             : (0, r.jsx)(i.Ii, {
-                href: `${m.TS.STORE_BASE_URL}points/shop/app/${s}`,
-                className: y().PointShopLink,
-                children: (0, j.we)("#ItemCollection_Visit"),
+                href: `${l.TS.STORE_BASE_URL}points/shop/app/${s}`,
+                className: v().PointShopLink,
+                children: (0, x.we)("#ItemCollection_Visit"),
               });
       }
-      function E(e) {
+      function D(e) {
         const { item: t } = e,
-          [s, i] = (0, N.OP)(),
-          o = t.user_has_item || s,
-          c = !o,
-          a =
-            (!o && t.item_class != l.Ve && t.item_class != l.jE) ||
-            t.item_class == l.J4
+          [s, i] = (0, S.OP)(),
+          n = t.user_has_item || s,
+          c = !n,
+          l =
+            (!n && t.item_class != a.Ve && t.item_class != a.jE) ||
+            t.item_class == a.J4
               ? void 0
               : t.item_image_small;
-        return (0, r.jsx)(n.Z, {
+        return (0, r.jsx)(o.Z, {
           ...i,
           onFocus: i.onMouseEnter,
           onBlur: i.onMouseLeave,
           focusable: !0,
-          className: y().ItemBackground,
-          children: (0, r.jsx)(h.Qc, {
+          className: v().ItemBackground,
+          children: (0, r.jsx)(p.Qc, {
             appid: t.appid,
             item_image_large: t.item_image_large,
-            item_image_small: a,
+            item_image_small: l,
             item_title: t.item_title,
-            item_movie_mp4: o ? t.item_movie_mp4_small : void 0,
-            item_movie_webm: o ? t.item_movie_webm_small : void 0,
-            className: (0, b.A)({ [y().ImgCtn]: !0, [y().ImgGrey]: c }),
-            videoClassName: y().ImgCtn,
+            item_movie_mp4: n ? t.item_movie_mp4_small : void 0,
+            item_movie_webm: n ? t.item_movie_webm_small : void 0,
+            className: (0, h.A)({ [v().ImgCtn]: !0, [v().ImgGrey]: c }),
+            videoClassName: v().ImgCtn,
           }),
         });
       }
-      const A = { include_assets: !0 };
+      const E = { include_assets: !0 };
       function P(e) {
         const { nAppID: t } = e,
-          [s] = (0, p.t7)(t, A);
+          [s] = (0, f.t7)(t, E);
         return s
-          ? (0, r.jsx)(n.Z, {
-              className: y().AppHeaderCtn,
-              children: (0, r.jsxs)(n.Z, {
+          ? (0, r.jsx)(o.Z, {
+              className: v().AppHeaderCtn,
+              children: (0, r.jsxs)(o.Z, {
                 children: [
-                  (0, r.jsxs)(n.Z, {
-                    className: y().AppHeaderRow,
+                  (0, r.jsxs)(o.Z, {
+                    className: v().AppHeaderRow,
                     children: [
-                      (0, r.jsx)(n.Z, {
-                        className: y().AppName,
+                      (0, r.jsx)(o.Z, {
+                        className: v().AppName,
                         children: s.GetName(),
                       }),
-                      (0, r.jsx)(n.Z, {
-                        className: y().PageName,
-                        children: (0, j.we)("#ItemCollection_Title"),
+                      (0, r.jsx)(o.Z, {
+                        className: v().PageName,
+                        children: (0, x.we)("#ItemCollection_Title"),
                       }),
                     ],
                   }),
-                  (0, r.jsx)(n.Z, {
-                    children: (0, j.we)("#ItemCollection_EventSubTitle"),
+                  (0, r.jsx)(o.Z, {
+                    children: (0, x.we)("#ItemCollection_EventSubTitle"),
                   }),
                 ],
               }),
             })
           : null;
       }
-      const B = function (e) {
+      const A = function (e) {
         const {
             strProfileName: t,
             strSteamId: s,
             bViewingOwnProfile: i,
-            rgCommunityItemDefs: c,
-            rgUserCommunityItems: a,
-            nAppID: p,
-            rgRewardItems: h,
-            rgUserItemRewarded: g,
-            oRewardDefinition: x,
+            rgCommunityItemDefs: n,
+            rgUserCommunityItems: c,
+            nAppID: f,
+            rgRewardItems: p,
+            rgUserItemRewarded: b,
+            oRewardDefinition: I,
           } = (function () {
-            const [e, t] = (0, u.useState)(() =>
-              (0, f.Tc)("profile-itemcollection", "itemcollection_config"),
+            const [e, t] = (0, _.useState)(() =>
+              (0, u.Tc)("profile-itemcollection", "itemcollection_config"),
             );
             return e;
           })(),
-          S = (0, u.useMemo)(() => {
+          j = (0, _.useMemo)(() => {
             const e = new Set();
-            a.forEach((t) => {
+            c.forEach((t) => {
               e.add(`${t.appid}_${t.item_type}`);
             });
             const t = new Set();
-            null == h ||
-              h.forEach((e) => {
+            null == p ||
+              p.forEach((e) => {
                 t.add(e.community_item_type);
               });
             const s = new Map();
             return (
-              c
+              n
                 .filter(
                   (e) =>
                     e.active &&
                     !e.deleted &&
                     !t.has(e.item_type) &&
-                    e.item_class != l.u8,
+                    e.item_class != a.u8,
                 )
                 .sort((t, s) => {
                   const r = e.has(`${t.appid}_${t.item_type}`),
@@ -486,165 +485,132 @@
                 }),
               s
             );
-          }, [c, h, a]),
-          N = (0, u.useMemo)(() => {
-            if (S.has(l.sU)) {
-              const e = S.get(l.sU).filter((e) => {
+          }, [n, p, c]),
+          S = (0, _.useMemo)(() => {
+            if (j.has(a.sU)) {
+              const e = j.get(a.sU).filter((e) => {
                 JSON.parse(e.item_key_values);
                 return e.item_movie_webm && e.item_movie_mp4;
               });
-              if (e.length) return (0, w.fW)(e), e[0];
+              if (e.length) return (0, y.fW)(e), e[0];
             }
             return null;
-          }, [S]),
-          k = (0, u.useMemo)(() => {
+          }, [j]),
+          k = (0, _.useMemo)(() => {
             let e = new Map();
             return (
-              c.forEach((t) => {
+              n.forEach((t) => {
                 e.set(t.item_type, t);
               }),
               e
             );
-          }, [c]),
-          T = (0, u.useMemo)(
-            () => Array.from(S.keys()).sort((e, t) => t - e),
-            [S],
+          }, [n]),
+          T = (0, _.useMemo)(
+            () => Array.from(j.keys()).sort((e, t) => t - e),
+            [j],
           ),
-          [L, D, E] = u.useMemo(() => {
+          [M, L, D] = _.useMemo(() => {
             const e =
-                null == a
+                null == c
                   ? void 0
-                  : a.filter((e) => {
+                  : c.filter((e) => {
                       const t = k.get(e.item_type);
                       return (
-                        !t || (t.item_class != l.Ve && t.item_class != l.u8)
+                        !t || (t.item_class != a.Ve && t.item_class != a.u8)
                       );
                     }),
-              t = c.filter((e) => e.item_class != l.Ve && e.item_class != l.u8),
+              t = n.filter((e) => e.item_class != a.Ve && e.item_class != a.u8),
               s = e.length || 0,
               r = t.length || 0;
             return [r ? Math.floor((100 * s) / r) : 0, r, s];
-          }, [k, c, a]);
-        return (0, r.jsx)(o.u, {
-          navID: "ItemCollection",
-          children: (0, r.jsx)(_.nn, {
-            feature: "itemcollections",
-            children: (0, r.jsx)(d.A, {
-              appID: p,
-              children: (0, r.jsxs)(n.Z, {
-                className: v().ProfileSubPageContainer,
-                children: [
-                  N &&
-                    (0, r.jsx)("div", {
-                      className: y().PageBackground,
-                      children: (0, r.jsxs)("video", {
-                        preload: "auto",
-                        playsInline: !0,
-                        muted: !0,
-                        autoPlay: !0,
-                        loop: !0,
-                        poster: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${p}/${N.item_image_large}`,
-                        children: [
+          }, [k, n, c]);
+        return (0, r.jsx)(d.nn, {
+          feature: "itemcollections",
+          children: (0, r.jsx)(m.A, {
+            appID: f,
+            children: (0, r.jsxs)(o.Z, {
+              className: N().ProfileSubPageContainer,
+              children: [
+                S &&
+                  (0, r.jsx)("div", {
+                    className: v().PageBackground,
+                    children: (0, r.jsxs)("video", {
+                      preload: "auto",
+                      playsInline: !0,
+                      muted: !0,
+                      autoPlay: !0,
+                      loop: !0,
+                      poster: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_image_large}`,
+                      children: [
+                        (0, r.jsx)("source", {
+                          src: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_movie_webm}`,
+                          type: "video/webm",
+                        }),
+                        Boolean(!l.TS.IN_CLIENT) &&
                           (0, r.jsx)("source", {
-                            src: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${p}/${N.item_movie_webm}`,
-                            type: "video/webm",
+                            src: `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${f}/${S.item_movie_mp4}`,
+                            type: "video/mp4",
                           }),
-                          Boolean(!m.TS.IN_CLIENT) &&
-                            (0, r.jsx)("source", {
-                              src: `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${p}/${N.item_movie_mp4}`,
-                              type: "video/mp4",
-                            }),
-                        ],
-                      }),
+                      ],
                     }),
-                  (0, r.jsx)(P, { nAppID: p }),
-                  (0, r.jsxs)("div", {
-                    className: y().PageSection,
-                    children: [
-                      (0, r.jsx)("span", {
-                        children: (0, j.we)("#ItemCollection_Collected", E, D),
-                      }),
-                      (0, r.jsx)(I, {
-                        className: y().ProgressBar,
-                        animate: !0,
-                        nPercent: L,
-                        indeterminate: !1,
-                      }),
-                    ],
                   }),
-                  Boolean(x) &&
-                    (0, r.jsx)("div", {
-                      className: (0, b.A)(
-                        y().PageSection,
-                        y().BackgroundGradient,
-                        y().Highlight,
-                      ),
-                      children: (0, r.jsx)(C, {
-                        oRewardDefinition: x,
-                        bViewingOwnProfile: i,
-                        rgRewardItems: h,
-                        rgUserItemRewarded: g,
-                        rgCommunityItemDefs: c,
-                      }),
+                (0, r.jsx)(P, { nAppID: f }),
+                (0, r.jsxs)("div", {
+                  className: v().PageSection,
+                  children: [
+                    (0, r.jsx)("span", {
+                      children: (0, x.we)("#ItemCollection_Collected", D, L),
                     }),
-                  (0, r.jsxs)("div", {
-                    className: (0, b.A)(
-                      y().PageSection,
-                      y().BackgroundGradient,
+                    (0, r.jsx)(g, {
+                      className: v().ProgressBar,
+                      animate: !0,
+                      nPercent: M,
+                      indeterminate: !1,
+                    }),
+                  ],
+                }),
+                Boolean(I) &&
+                  (0, r.jsx)("div", {
+                    className: (0, h.A)(
+                      v().PageSection,
+                      v().BackgroundGradient,
+                      v().Highlight,
                     ),
-                    children: [
-                      (0, r.jsx)("div", {
-                        className: y().HowToGet,
-                        children: (0, j.we)("#ItemCollection_ForPoints_Title"),
-                      }),
-                      T.map((e) =>
-                        (0, r.jsx)(
-                          M,
-                          {
-                            nAppID: p,
-                            itemClass: e,
-                            rgItems: S.get(e),
-                            bViewingOwnProfile: i,
-                            bHideItemStore: e == l.Ve,
-                          },
-                          "item_class_" + e,
-                        ),
-                      ),
-                    ],
+                    children: (0, r.jsx)(w, {
+                      oRewardDefinition: I,
+                      bViewingOwnProfile: i,
+                      rgRewardItems: p,
+                      rgUserItemRewarded: b,
+                      rgCommunityItemDefs: n,
+                    }),
                   }),
-                ],
-              }),
+                (0, r.jsxs)("div", {
+                  className: (0, h.A)(v().PageSection, v().BackgroundGradient),
+                  children: [
+                    (0, r.jsx)("div", {
+                      className: v().HowToGet,
+                      children: (0, x.we)("#ItemCollection_ForPoints_Title"),
+                    }),
+                    T.map((e) =>
+                      (0, r.jsx)(
+                        C,
+                        {
+                          nAppID: f,
+                          itemClass: e,
+                          rgItems: j.get(e),
+                          bViewingOwnProfile: i,
+                          bHideItemStore: e == a.Ve,
+                        },
+                        "item_class_" + e,
+                      ),
+                    ),
+                  ],
+                }),
+              ],
             }),
           }),
         });
       };
-    },
-    12447: (e, t, s) => {
-      "use strict";
-      s.d(t, { u: () => m });
-      var r = s(7850),
-        i = s(8871),
-        o = s(90626),
-        n = s(78327),
-        c = s(85585),
-        a = s(7445),
-        l = s(87133);
-      const m = o.forwardRef(function (e, t) {
-        const { children: s, navTreeRef: m, ...d } = e,
-          _ = o.useRef(void 0),
-          u = (0, i.Ue)(_, m),
-          f = (0, n.Qn)(),
-          p = (0, l.AO)("__nav_tree_root");
-        return (0, r.jsx)(c.B2, {
-          ...d,
-          navTreeRef: u,
-          ref: t,
-          parentEmbeddedNavTree: p,
-          disabledRoot: !f,
-          historyMode: "navigationapi",
-          children: (0, r.jsx)(a.q, { disableFocusRing: !f, children: s }),
-        });
-      });
     },
     37621: (e, t, s) => {
       "use strict";

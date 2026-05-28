@@ -54,7 +54,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _.useRef)(void 0);
@@ -62,40 +61,37 @@
           (0, _.useEffect)(() => {
             _.current && _.current.TakeFocus();
           }, []),
-          (0, _.jsx)(_._, {
-            navID: "CommunityHomeHeader",
-            children: (0, _.jsxs)(_._, {
-              navRef: _,
-              className: _().CommunityHomeHeader,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().CommunityHomeHeaderTitleSection,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().CommunityHomeHeaderTitle,
-                          children: (0, _._)("#Community_Home_Header_Title"),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().CommunityHomeHeaderSubtitle,
-                          children: (0, _._)("#Community_Home_Header_Subtitle"),
-                        }),
-                      ],
-                    }),
-                    (0, _.jsx)(_._, {
-                      className: _().AddFriendBtn,
-                      href: `${_._.COMMUNITY_BASE_URL}search/users/`,
-                      children: (0, _._)(
-                        "#Community_Home_Header_AddFriend_Button",
-                      ),
-                    }),
-                  ],
-                }),
-                (0, _.jsx)(_, {}),
-                (0, _.jsx)(_, {}),
-              ],
-            }),
+          (0, _.jsxs)(_._, {
+            navRef: _,
+            className: _().CommunityHomeHeader,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().CommunityHomeHeaderTitleSection,
+                children: [
+                  (0, _.jsxs)("div", {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().CommunityHomeHeaderTitle,
+                        children: (0, _._)("#Community_Home_Header_Title"),
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().CommunityHomeHeaderSubtitle,
+                        children: (0, _._)("#Community_Home_Header_Subtitle"),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _().AddFriendBtn,
+                    href: `${_._.COMMUNITY_BASE_URL}search/users/`,
+                    children: (0, _._)(
+                      "#Community_Home_Header_AddFriend_Button",
+                    ),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {}),
+              (0, _.jsx)(_, {}),
+            ],
           })
         );
       }
@@ -377,38 +373,6 @@
           ],
         });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-        const { children: _, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(void 0),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(),
-          _ = (0, _._)("__nav_tree_root");
-        return (0, _.jsx)(_._, {
-          ..._,
-          navTreeRef: _,
-          ref: _,
-          parentEmbeddedNavTree: _,
-          disabledRoot: !_,
-          historyMode: "navigationapi",
-          children: (0, _.jsx)(_._, {
-            disableFocusRing: !_,
-            children: _,
-          }),
-        });
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

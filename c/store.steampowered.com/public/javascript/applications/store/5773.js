@@ -2897,10 +2897,10 @@
               "/ajaxpostuserstatus";
             try {
               if (_._.IN_STEAMUI) {
-                let _ = _._.Init(_._);
+                let _ = _._.Init(_.kVt);
                 __webpack_require__.Body().set_appid(_),
                   __webpack_require__.Body().set_status_text(_);
-                let _ = await _._.PostStatusToFriends(
+                let _ = await _.xtC.PostStatusToFriends(
                   _._.CMInterface.GetServiceTransport(),
                   _,
                 );

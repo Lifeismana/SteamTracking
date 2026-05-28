@@ -10,6 +10,7 @@
         FlexColGroup: "_98APa3FIHhT6HoHQPTdP-",
         CurrentPrice: "_2GBqA5FVPnXDKN337UQTQF",
         ProposedPrice: "_1lW7HuIHz1dVNCRWv6gDDu",
+        MaxDiscount: "x7PYG4YYyYUVdJCTlosQh",
         PriceUpdateOptionsGroup: "_29xcvKUrOD3qIkctp2Fo_N",
         FreeSettingCtn: "_1kDnDjWEynufWnYI9AFl3l",
       };
@@ -58,6 +59,10 @@
         PriceEdit: (_) => `/packages/pricing/${_}`,
       };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -157,37 +162,37 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        depth: 0,
-      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { level: _ = "auto", className: _, color: _ } = _,
-          _ = (function (_, _) {
-            if ("auto" === _ && 0 === _) return "h1";
-            const _ = "auto" === _ ? _.toString() : _;
-            if (!/^[1-6]$/.test(_))
-              return "auto" === _
-                ? (console.error(
-                    '<Section> nesting has exceeded "h6" for headings.',
-                  ),
-                  "h6")
-                : (console.error(
-                    `Attempt to render invalid heading level, "${_}".`,
-                  ),
-                  "h1");
-            return "h" + _;
-          })(_, (0, _.useContext)(_).depth);
+        const { underline: _ = "auto", ..._ } = _,
+          _ = _._.IN_GAMEPADUI ? _._ : "a";
         return (0, _.jsx)(_, {
           ...(0, _._)(
             {
               ..._,
-              className: _()((0, _._)(), _.Heading, _),
+              underline: _,
+              className: _.TextLink,
             },
             _,
           ),
@@ -195,34 +200,75 @@
       }
       const _ = [
         ..._._,
-        ..._._,
         {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`HeadingSize-${_}`],
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
         },
       ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = `${_._.PARTNER_BASE_URL}doc/finance/taxfaq`;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              paddingBottom: "4",
+              children: [
+                (0, _.jsx)(_._, {
+                  _: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: _._.Localize("#SinglePricingPackage_Intro_1"),
+                }),
+                (0, _.jsx)(_._, {
+                  _: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: _._.Localize("#SinglePricingPackage_Intro_2"),
+                }),
+                (0, _.jsx)(_._, {
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: (0, _.jsxs)("ol", {
+                    children: [
+                      (0, _.jsx)("li", {
+                        children: _._.Localize(
+                          "#SinglePricingPackage_Intro_2a",
+                        ),
+                      }),
+                      (0, _.jsx)("li", {
+                        children: _._.Localize(
+                          "#SinglePricingPackage_Intro_2b",
+                        ),
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              paddingBottom: "4",
+              children: (0, _.jsx)(_._, {
+                children: _._.LocalizeReact(
+                  "#SinglePricingPackage_Desc_2",
+                  (0, _.jsx)(_, {
+                    href: _,
+                    children: _._.LocalizeReact(
+                      "#SinglePricingPackage_Desc_2_Link",
+                    ),
+                  }),
+                ),
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                children: _._.Localize("#SinglePricingPackage_Desc_3"),
+              }),
+            }),
+          ],
+        });
+      }
       const _ = {};
       (_.arabic = () =>
         __webpack_require__._("chunkid").then(_._.bind(_, 19919, 19))),
@@ -288,6 +334,9 @@
         if (_[_]) return _[_]();
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return -1 != _.getValue() && _.getValue()
@@ -314,67 +363,55 @@
         );
         var _;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { nPackageID: _ } = _,
-          _ = (0, _._)(_),
-          [_, _, _] = (0, _._)(),
-          _ = (0, _._)(_),
-          [_, _] = (0, _.useState)(!1);
-        return _
-          ? (0, _.jsx)("div", {
-              className: (0, _._)(_().ToolbarInfo, _().Visible),
-              children: (0, _.jsxs)("div", {
-                className: _().Buttons,
-                children: [
-                  (0, _.jsx)(_._, {
-                    packageID: _,
-                    bShowCancel: !1,
-                  }),
-                  (0, _.jsx)(_._, {
-                    onClick: _,
-                    className: (0, _._)(_().Button),
-                    children: (0, _._)("#PricingDashboard_CancelPriceProposal"),
-                  }),
-                  (0, _.jsx)(_._, {
-                    active: _,
-                    children: (0, _.jsx)(_._, {
-                      strTitle: (0, _._)(
-                        "#PricingDashboard_CancelPriceProposal",
-                      ),
-                      strDescription: (0, _._)("#Dialog_AreYouSure"),
-                      closeModal: _,
-                      onOK: async () => {
-                        _(!0), await _(), _(!1), window.location.reload();
-                      },
-                      children:
-                        _ &&
-                        (0, _.jsx)(_._, {
-                          string: (0, _._)("#ImageUpload_Processing"),
-                        }),
-                    }),
-                  }),
-                ],
-              }),
+        const {
+            packageID: _,
+            strPriceKey: _,
+            eRegionCode: _,
+            eCurrencyCode: _,
+          } = _.row.original,
+          { nPriceInCents: _, nProposedPriceInCents: _ } = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(_._).toUpperCase(),
+          _ = (0, _._)(_, _) || (0, _._)(_, _) || (0, _._)(_, _),
+          { nGuidelinesLevel: _ } = (0, _._)(_, _, _, _, _),
+          _ = (0, _._)(_, _ ?? _, _, !0);
+        return -1 != _ && _
+          ? (0, _.jsxs)("span", {
+              className: (0, _._)({}),
+              children: [_, " %"],
             })
-          : null;
+          : "--";
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        depth: 0,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ..._ } = _,
-          _ = _._.IN_GAMEPADUI ? _._ : "a";
+        const { level: _ = "auto", className: _, color: _ } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
         return (0, _.jsx)(_, {
           ...(0, _._)(
             {
               ..._,
-              underline: _,
-              className: _.TextLink,
+              className: _()((0, _._)(), _.Heading, _),
             },
             _,
           ),
@@ -382,12 +419,13 @@
       }
       const _ = [
         ..._._,
+        ..._._,
         {
-          prop: "underline",
-          className: (_) => _[`Underline-${_}`],
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
         },
       ];
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { nPackageID: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
@@ -464,69 +502,54 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = `${_._.PARTNER_BASE_URL}doc/finance/taxfaq`;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsxs)(_._, {
-              paddingBottom: "4",
-              children: [
-                (0, _.jsx)(_._, {
-                  _: "p",
-                  size: "4",
-                  color: "text-body",
-                  contrast: "subtitle",
-                  children: _._.Localize("#SinglePricingPackage_Intro_1"),
-                }),
-                (0, _.jsx)(_._, {
-                  _: "p",
-                  size: "4",
-                  color: "text-body",
-                  contrast: "subtitle",
-                  children: _._.Localize("#SinglePricingPackage_Intro_2"),
-                }),
-                (0, _.jsx)(_._, {
-                  size: "4",
-                  color: "text-body",
-                  contrast: "subtitle",
-                  children: (0, _.jsxs)("ol", {
-                    children: [
-                      (0, _.jsx)("li", {
-                        children: _._.Localize(
-                          "#SinglePricingPackage_Intro_2a",
-                        ),
-                      }),
-                      (0, _.jsx)("li", {
-                        children: _._.Localize(
-                          "#SinglePricingPackage_Intro_2b",
-                        ),
-                      }),
-                    ],
+        const { nPackageID: _ } = _,
+          _ = (0, _._)(_),
+          [_, _, _] = (0, _._)(),
+          _ = (0, _._)(_),
+          [_, _] = (0, _.useState)(!1);
+        return _
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(_().ToolbarInfo, _().Visible),
+              children: (0, _.jsxs)("div", {
+                className: _().Buttons,
+                children: [
+                  (0, _.jsx)(_._, {
+                    packageID: _,
+                    bShowCancel: !1,
                   }),
-                }),
-              ],
-            }),
-            (0, _.jsx)(_._, {
-              paddingBottom: "4",
-              children: (0, _.jsx)(_._, {
-                children: _._.LocalizeReact(
-                  "#SinglePricingPackage_Desc_2",
-                  (0, _.jsx)(_, {
-                    href: _,
-                    children: _._.LocalizeReact(
-                      "#SinglePricingPackage_Desc_2_Link",
-                    ),
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    className: (0, _._)(_().Button),
+                    children: (0, _._)("#PricingDashboard_CancelPriceProposal"),
                   }),
-                ),
+                  (0, _.jsx)(_._, {
+                    active: _,
+                    children: (0, _.jsx)(_._, {
+                      strTitle: (0, _._)(
+                        "#PricingDashboard_CancelPriceProposal",
+                      ),
+                      strDescription: (0, _._)("#Dialog_AreYouSure"),
+                      closeModal: _,
+                      onOK: async () => {
+                        _(!0), await _(), _(!1), window.location.reload();
+                      },
+                      children:
+                        _ &&
+                        (0, _.jsx)(_._, {
+                          string: (0, _._)("#ImageUpload_Processing"),
+                        }),
+                    }),
+                  }),
+                ],
               }),
-            }),
-            (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                children: _._.Localize("#SinglePricingPackage_Desc_3"),
-              }),
-            }),
-          ],
-        });
+            })
+          : null;
       }
       const _ = (0, _._)();
       function _(_) {
@@ -534,8 +557,8 @@
           _ = (0, _._)();
         (0, _._)(_);
         const _ = (0, _._)(),
-          _ = Number.parseInt(_),
-          _ = (0, _._)();
+          _ = Number.parseInt(_);
+        (0, _._)();
         return (0, _.jsx)(_._, {
           children: (0, _.jsxs)(_._, {
             fnBLocalChangesExist: _,
@@ -562,58 +585,12 @@
                   }),
                 ],
               }),
-              (0, _.jsxs)("div", {
-                className: "adminTwoColCtn",
-                children: [
-                  (0, _.jsx)("div", {
-                    className: "adminLeftCol",
-                    children: (0, _.jsx)(_, {
-                      nPackageID: _,
-                      appids: __webpack_require__.map(Number.parseInt),
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: "adminRightCol",
-                    children: (0, _.jsxs)("div", {
-                      className: "panel",
-                      children: [
-                        (0, _.jsx)(_, {
-                          size: "7",
-                          children: _._.Localize(
-                            "#SinglePackagePricing_Right_Convert_Title",
-                          ),
-                        }),
-                        (0, _.jsx)(_._, {
-                          children: _._.Localize(
-                            "#SinglePackagePricing_Right_Custom_Desc",
-                          ),
-                        }),
-                        (0, _.jsx)(_._, {
-                          children: _._.Localize(
-                            "#SinglePackagePricing_Right_Convert_Desc",
-                          ),
-                        }),
-                        (0, _.jsxs)(_._, {
-                          direction: "column",
-                          paddingTop: "5",
-                          align: "start",
-                          children: [
-                            (0, _.jsx)(_._, {
-                              size: "3",
-                              children: (0, _._)(
-                                "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
-                              ),
-                            }),
-                            (0, _.jsx)(_, {
-                              nPackageID: _,
-                              oPricingGuideline: _,
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  }),
-                ],
+              (0, _.jsx)("div", {
+                className: "",
+                children: (0, _.jsx)(_, {
+                  nPackageID: _,
+                  appids: __webpack_require__.map(Number.parseInt),
+                }),
               }),
             ],
           }),
@@ -721,7 +698,7 @@
             meta: {
               cellClassname: _()(_().CurrentPrice),
             },
-            size: 150,
+            size: 120,
             cell: _,
           }),
           _.accessor(_ ? "nProposedPrice" : "strPriceKey", {
@@ -731,6 +708,17 @@
             },
             size: 280,
             cell: _ ? _ : _._,
+          }),
+          _.accessor(_ ? "nProposedPrice" : "strPriceKey", {
+            header: (0, _._)("#PackagePricing_Col_MaxDiscount"),
+            meta: {
+              cellClassname: _()(_().MaxDiscount),
+              strHeaderTooltip: (0, _._)(
+                "#PackagePricing_Col_MaxDiscount_ttip",
+              ),
+            },
+            size: 150,
+            cell: _,
           }),
         ];
         return 0 == _.length || 0 == _.length
@@ -755,6 +743,7 @@
                         className: "colSection",
                         children: (0, _.jsxs)(_._, {
                           direction: "row",
+                          gap: "5",
                           children: [
                             (0, _.jsx)(_._, {
                               fnConversionMethodSelected: (_) => {
@@ -763,7 +752,6 @@
                             }),
                             (0, _.jsxs)(_._, {
                               direction: "column",
-                              paddingLeft: "5",
                               children: [
                                 (0, _.jsx)(_._, {
                                   size: "3",
@@ -773,6 +761,29 @@
                                 }),
                                 (0, _.jsx)(_, {
                                   usdRow: _[_._],
+                                }),
+                              ],
+                            }),
+                            (0, _.jsxs)(_._, {
+                              direction: "column",
+                              align: "start",
+                              children: [
+                                (0, _.jsxs)(_._, {
+                                  size: "3",
+                                  children: [
+                                    (0, _._)(
+                                      "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
+                                    ),
+                                    (0, _.jsx)(_._, {
+                                      tooltip: (0, _._)(
+                                        "#PricingDashboard_ApplyGuidelinesDialog_Context",
+                                      ),
+                                    }),
+                                  ],
+                                }),
+                                (0, _.jsx)(_, {
+                                  nPackageID: _,
+                                  oPricingGuideline: _,
                                 }),
                               ],
                             }),

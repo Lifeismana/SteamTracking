@@ -2444,7 +2444,7 @@
                     null === (a = null == e ? void 0 : e.args) || void 0 === a
                       ? void 0
                       : a.alt,
-                  c = (0, p.z)(m, e.language, Number.parseInt(o));
+                  c = (0, p.z5)(m, e.language, Number.parseInt(o));
                 return null == c
                   ? null
                   : "string" == typeof c

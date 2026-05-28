@@ -5582,9 +5582,9 @@
         return (0, _._)({
           queryKey: _(_),
           queryFn: async () => {
-            const _ = _._.Init(_._);
+            const _ = _._.Init(_.m8g);
             __webpack_require__.Body().set_steamid(_);
-            const _ = await _._.GetRecentPlaytimeSessionsForChild(_, _);
+            const _ = await _.xtC.GetRecentPlaytimeSessionsForChild(_, _);
             _(_.GetEResult());
             const _ = (function (_) {
               let _ = [];

@@ -12,7 +12,11 @@
           [a.rg]: {},
           [a.CS]: { strSymbol: "$" },
           [a.dz]: { strSymbol: "£" },
-          [a.a4]: { strSymbol: "€" },
+          [a.a4]: {
+            strSymbol: "€",
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
+          },
           [a.ln]: { strSymbol: "CHF" },
           [a.Fq]: {
             strSymbol: "руб.",

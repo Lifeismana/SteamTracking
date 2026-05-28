@@ -1166,6 +1166,8 @@ function ShowAddToCollection( id, appID )
 			ShowWithFade( 'AddToCollectionDialogContents' );
 		}
 
+		dialog.AdjustSizing();
+
 		// function for when the user clicks OK
 		dialog.done( function() {
 			var params = {

@@ -406,7 +406,7 @@
         _ = i(61859),
         I = i(78327),
         b = i(82817),
-        y = i(27666),
+        y = i(40414),
         w = i(64953),
         f = i(69343);
       function C(e, t, i) {
@@ -485,9 +485,9 @@
           return (this.m_filesToUpload = [...this.m_filesToUpload, a]), !0;
         }
         async AddExistingClanImage(e, t = s.Bhc) {
-          const i = y.z.GetHashAndExt(e);
+          const i = y.zU.GetHashAndExt(e);
           if (!i) return !1;
-          const a = y.z.GenerateEditableURLFromHashAndExt(
+          const a = y.zU.GenerateEditableURLFromHashAndExt(
               this.m_clanSteamID,
               i,
             ),

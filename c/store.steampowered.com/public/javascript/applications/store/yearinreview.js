@@ -1199,8 +1199,8 @@
             queryFn: async () => {
               const _ = new Map();
               if (_._.logged_in) {
-                const _ = _._.Init(_._),
-                  _ = (await _._.GetNicknameList(_, _)).Body().toObject();
+                const _ = _._.Init(_.w_T),
+                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
                 _?.nicknames &&
                   _.nicknames.length > 0 &&
                   _.nicknames.forEach((_) => {
@@ -4957,10 +4957,10 @@
               "/ajaxpostuserstatus";
             try {
               if (_._.IN_STEAMUI) {
-                let _ = _._.Init(_._);
+                let _ = _._.Init(_.kVt);
                 __webpack_require__.Body().set_appid(_),
                   __webpack_require__.Body().set_status_text(_);
-                let _ = await _._.PostStatusToFriends(
+                let _ = await _.xtC.PostStatusToFriends(
                   _._.CMInterface.GetServiceTransport(),
                   _,
                 );
@@ -5683,7 +5683,6 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11388,13 +11387,13 @@
               this.m_mapPromiseAchievementDef.get(_));
         }
         async InternalLoadAchievementDisplayInfo(_) {
-          const _ = _._.Init(_._);
+          const _ = _._.Init(_.ARV);
           _.Body().set_appid(_),
             _.Body().set_language(_._.LANGUAGE || "english");
           _._.LANGUAGE;
           let _ = null;
           try {
-            const _ = await _._.GetGameAchievements(
+            const _ = await _.xtC.GetGameAchievements(
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
@@ -12307,12 +12306,16 @@
           _ = Number.parseInt(
             (0, _._)("yearinreview_eresults", "application_config"),
           );
+        _.useEffect(() => {
+          (0, _._)(_, "src", null),
+            (0, _._)(_, "snr", null),
+            (0, _._)(_, "sP", null);
+        }, [_]);
+        const _ = _.useRef(null);
         if (
           (_.useEffect(() => {
-            (0, _._)(_, "src", null),
-              (0, _._)(_, "snr", null),
-              (0, _._)(_, "sP", null);
-          }, [_]),
+            _.current && _.current.NavTree()?.Activate(!0);
+          }, []),
           _ == _._)
         )
           return (0, _.jsx)(_, {
@@ -12323,9 +12326,12 @@
             message: (0, _._)("#YIR_Error_NoData"),
           });
         const _ = new _._(_);
-        return (0, _.jsx)(_, {
-          steamID: _,
-          year: _,
+        return (0, _.jsx)(_._, {
+          navRef: _,
+          children: (0, _.jsx)(_, {
+            steamID: _,
+            year: _,
+          }),
         });
       }
       function _(_) {
@@ -12920,27 +12926,24 @@
         return (
           (0, _._)(),
           (0, _.jsx)(_._, {
-            navID: "YearInReviewPageRoot",
+            domain: "store.steampowered.com",
+            controller: "yearinreview",
             children: (0, _.jsx)(_._, {
-              domain: "store.steampowered.com",
-              controller: "yearinreview",
               children: (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  path: `${_.Home(":steamId?", ":year?")}`,
-                  render: (_) =>
-                    (0, _.jsx)(_._, {
-                      method: "yearinreview",
-                      children: (0, _.jsx)(_._, {
-                        children: (0, _.jsx)(_, {
-                          steamId:
-                            "my" == _.match.params.steamId
-                              ? _._.steamid
-                              : _.match.params.steamId,
-                          year: _.match.params.year,
-                        }),
+                path: `${_.Home(":steamId?", ":year?")}`,
+                render: (_) =>
+                  (0, _.jsx)(_._, {
+                    method: "yearinreview",
+                    children: (0, _.jsx)(_._, {
+                      children: (0, _.jsx)(_, {
+                        steamId:
+                          "my" == _.match.params.steamId
+                            ? _._.steamid
+                            : _.match.params.steamId,
+                        year: _.match.params.year,
                       }),
                     }),
-                }),
+                  }),
               }),
             }),
           })

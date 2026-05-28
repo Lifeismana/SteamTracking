@@ -796,7 +796,7 @@
         m_Transport = null;
         m_Storage = null;
         m_TextFilterPreferences = {
-          eTextFilterSetting: u.Bx.NS,
+          eTextFilterSetting: u.Bx6.NS,
           bIgnoreFriends: !1,
         };
         m_TextFilterWords;
@@ -815,12 +815,12 @@
         m_DataAccess;
         constructor(e) {
           (0, l.Gn)(this);
-          let t = new u.B4();
+          let t = new u.B4H();
           (this.m_TextFilterPreferences = {
             eTextFilterSetting: t.text_filter_setting(),
             bIgnoreFriends: t.text_filter_ignore_friends(),
           }),
-            (this.m_TextFilterWords = new u.Ey()),
+            (this.m_TextFilterWords = new u.EyI()),
             (this.m_DataAccess = e);
         }
         async Init(e = 0, t = null, r = null) {
@@ -951,10 +951,10 @@
           );
           if (e)
             try {
-              this.m_TextFilterWords = u.Ey.fromObject(JSON.parse(e));
+              this.m_TextFilterWords = u.EyI.fromObject(JSON.parse(e));
             } catch (t) {
               console.warn("Error parsing cached text filter word list", e),
-                (this.m_TextFilterWords = new u.Ey());
+                (this.m_TextFilterWords = new u.EyI());
             }
         }
         SaveTextFilterWords() {
@@ -983,12 +983,12 @@
             );
         }
         async RequestUpdatedSettings() {
-          let e = new u.B4();
+          let e = new u.B4H();
           if (0 !== this.m_unAccountID)
             try {
               if (this.m_Transport) {
-                let t = m.w.Init(u.tz);
-                e = (await u.xt.GetCommunityPreferences(this.m_Transport, t))
+                let t = m.w.Init(u.tzK);
+                e = (await u.xtC.GetCommunityPreferences(this.m_Transport, t))
                   .Body()
                   .preferences();
               } else {
@@ -998,7 +998,7 @@
                     "textfilter/ajaxgetcommunitypreferences",
                   { params: t, withCredentials: !0 },
                 );
-                e = u.B4.fromObject(r.data.preferences);
+                e = u.B4H.fromObject(r.data.preferences);
               }
             } catch (e) {}
           if (
@@ -1006,12 +1006,12 @@
             e.text_filter_words_revision() !==
               this.m_TextFilterWords.text_filter_words_revision())
           ) {
-            let t = new u.Ey();
+            let t = new u.EyI();
             if (0 !== e.text_filter_words_revision())
               try {
                 if (this.m_Transport) {
-                  let e = m.w.Init(u.SC);
-                  t = (await u.xt.GetTextFilterWords(this.m_Transport, e))
+                  let e = m.w.Init(u.SCE);
+                  t = (await u.xtC.GetTextFilterWords(this.m_Transport, e))
                     .Body()
                     .words();
                 } else {
@@ -1021,7 +1021,7 @@
                       "textfilter/ajaxgettextfiltercustomwords",
                     { params: e, withCredentials: !0 },
                   );
-                  t = u.Ey.fromObject(r.data.words);
+                  t = u.EyI.fromObject(r.data.words);
                 }
               } catch (e) {}
             this.UpdateTextFilterWords(t);
@@ -1140,10 +1140,10 @@
             t = [],
             r = [];
           switch (this.m_TextFilterPreferences.eTextFilterSetting) {
-            case u.Bx.C5:
-            case u.Bx.NS:
+            case u.Bx6.C5:
+            case u.Bx6.NS:
               break;
-            case u.Bx.bf:
+            case u.Bx6.bf:
               t = t.concat(this.m_strBannedWords.split(e));
               break;
             default:

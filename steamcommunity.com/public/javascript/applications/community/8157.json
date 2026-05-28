@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Đặt thời gian chờ tố cáo",
     "setcooldown_dialogdescription": "Chặn người dùng tố cáo nội dung hoặc phản đối quyết định điều hành khi họ lạm dụng hệ thống.",
     "setcooldown_setbutton": "Đặt thời gian chờ",
+    "setcooldown_clearopenreports": "Xóa các tố cáo chưa được giải quyết của người dùng này",
     "nocomma": ""
 }

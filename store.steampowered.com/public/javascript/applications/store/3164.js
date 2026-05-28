@@ -202,8 +202,8 @@
             queryFn: async () => {
               const e = new Map();
               if (f.iA.logged_in) {
-                const a = h.w.Init(p.dN),
-                  s = (await p.xt.GetNicknameList(n, a)).Body().toObject();
+                const a = h.w.Init(p.w_T),
+                  s = (await p.xtC.GetNicknameList(n, a)).Body().toObject();
                 s?.nicknames &&
                   s.nicknames.length > 0 &&
                   s.nicknames.forEach((n) => {
@@ -311,8 +311,8 @@
             return {
               queryKey: ["communitypreferences"],
               queryFn: async () => {
-                const n = t.w.Init(r.tz),
-                  a = await r.xt.GetCommunityPreferences(e, n);
+                const n = t.w.Init(r.tzK),
+                  a = await r.xtC.GetCommunityPreferences(e, n);
                 if (a.GetEResult() != s.R)
                   throw new Error(
                     `Error from GetCommunityPreferences: ${a.GetEResult()} ${a.GetErrorMessage()}`,
@@ -367,7 +367,7 @@
       }
       var R = a(91721),
         _ = a.n(R),
-        j = a(10953);
+        j = a(17798);
       function q(e) {
         const { familyGroupID: n, requestID: a } = e,
           [d, m] = o.useState(),

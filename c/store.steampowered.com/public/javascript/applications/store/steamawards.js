@@ -13,26 +13,24 @@
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        EventSizer: "_2JC5DEuXUeE50kjpb7Eeau",
         OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        ShowInWideMode: "RLbLb742gN095uDUITtIB",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
         OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
-        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
-        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
-        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
-        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
-        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
+        EventType: "_2BWwVF5N-3fDuJRblB6gHb",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
@@ -292,7 +290,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -313,13 +310,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 30;
       function _(_) {
         const {
@@ -330,25 +329,24 @@
             onClick: _,
             eEventRount: _,
             bHidePrices: _,
+            nSummaryMaxLength: _,
           } = _,
           _ = (0, _._)(_.appid),
-          [_, _, _, _, _, _] = (0, _._)(() => {
-            const _ = _ || (0, _.sfN)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== _)
-                ? _
-                : _.GetImageURLWithFallback("capsule", _, _._.full);
-            return [
+          _ = _ || (0, _.sfN)(_._.LANGUAGE),
+          _ =
+            (0, _._)(
+              void 0 !== _ ? void 0 : _,
+              "capsule",
               _,
-              _.GetNameWithFallback(_) || "",
-              _.GetCategoryAsString(),
-              _.GetSummaryWithFallback(_),
-              _,
-              _.GetSubTitleWithLanguageFallback(_) || "",
-            ];
-          }),
+              _._.capsule_main,
+            ) ?? _,
+          _ = (0, _._)(void 0 !== _ ? void 0 : _, "capsule", _, _._.full) ?? _,
+          [_, _, _, _] = (0, _._)(() => [
+            _.GetNameWithFallback(_) || "",
+            _.GetCategoryAsString(),
+            _.GetSummaryWithFallback(_, _),
+            _.GetSubTitleWithLanguageFallback(_) || "",
+          ]),
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           _ = [];
@@ -366,7 +364,8 @@
         let _ = _;
         return (
           _ && (_.length > _ || _.length > _) && (_ = void 0),
-          (0, _.jsxs)(_.Fragment, {
+          (0, _.jsxs)("div", {
+            className: _().EventSizer,
             children: [
               (0, _.jsxs)(_._, {
                 className: (0, _._)(
@@ -380,7 +379,10 @@
                 preferredFocus: !0,
                 children: [
                   (0, _.jsxs)("div", {
-                    className: _().EventSummaryContainer,
+                    className: (0, _._)(
+                      _().EventSummaryContainer,
+                      _().HideInWideMode,
+                    ),
                     children: [
                       (0, _.jsx)("div", {
                         className: _().EventSummaryType,
@@ -428,23 +430,45 @@
                               className: _().OtherEvents_SubTitle,
                               children: _,
                             }),
-                          Boolean(_ > _)
-                            ? (0, _.jsx)("div", {
+                          (0, _.jsxs)(_._, {
+                            direction: "row",
+                            gap: "3",
+                            align: "center",
+                            children: [
+                              (0, _.jsx)("div", {
                                 className: (0, _._)(
-                                  _().UpcomingCtn,
-                                  "UpcomingCtn",
+                                  _().EventType,
+                                  _().ShowInWideMode,
                                 ),
-                                children: (0, _.jsx)(_._, {
-                                  bSingleLine: !0,
-                                  dateAndTime:
-                                    _.GetStartTimeAndDateUnixSeconds(),
-                                }),
-                              })
-                            : (0, _.jsx)(_._, {
-                                bSingleLine: !0,
-                                bOnlyDate: !0,
-                                dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
+                                children: _,
                               }),
+                              Boolean(_ > _)
+                                ? (0, _.jsx)("div", {
+                                    className: (0, _._)(
+                                      _().UpcomingCtn,
+                                      "UpcomingCtn",
+                                    ),
+                                    children: (0, _.jsx)(_._, {
+                                      bSingleLine: !0,
+                                      dateAndTime:
+                                        _.GetStartTimeAndDateUnixSeconds(),
+                                    }),
+                                  })
+                                : (0, _.jsx)(_._, {
+                                    bSingleLine: !0,
+                                    bOnlyDate: !0,
+                                    dateAndTime:
+                                      _.GetStartTimeAndDateUnixSeconds(),
+                                  }),
+                            ],
+                          }),
+                          (0, _.jsx)("div", {
+                            className: (0, _._)(
+                              _().EventSummaryText,
+                              _().ShowInWideMode,
+                            ),
+                            children: _,
+                          }),
                         ],
                       }),
                     ],
@@ -519,89 +543,6 @@
           }),
         });
       }
-      function _(_) {
-        const { event: _, imageURLOverride: _, onClick: _ } = _,
-          _ = (0, _._)(_.appid),
-          _ = (0, _._)(_.appid),
-          { data: _ } = (0, _._)(_),
-          _ = (0, _.sfN)(_._.LANGUAGE),
-          [_, _, _, _, _] = (0, _._)(() =>
-            _
-              ? [
-                  void 0 !== _
-                    ? _
-                    : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-                  _.GetNameWithFallback(_),
-                  _.GetCategoryAsString(),
-                  _.GetSubTitleWithLanguageFallback(_),
-                  _.GetSummaryWithFallback(_),
-                ]
-              : [void 0, void 0, void 0, void 0, void 0],
-          );
-        if (!_)
-          return (0, _.jsx)("div", {
-            className: _().OtherEvents_EventCtn,
-          });
-        const _ = [];
-        if ((_ && _.push(_), _)) {
-          const _ = (0, _._)(_, "main_capsule");
-          _ && _.push(_);
-        }
-        return (0, _.jsxs)(_._, {
-          className: _().OtherEvents_EventCtn + " " + _().HorizontalEvent,
-          eventModel: _,
-          route: _._.k_eView,
-          onClick: _,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().OtherEvents_ContentCtn,
-              children: (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().OtherEvents_MainImageCtn,
-                  _ && _().MaskImages,
-                ),
-                children: (0, _.jsx)(_._, {
-                  rgSources: _,
-                  className: _().OtherEvents_MainImage,
-                  alt: "",
-                }),
-              }),
-            }),
-            (0, _.jsxs)("div", {
-              className: _().OtherEvents_TextCtn,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: _().HorizontalDescriptionCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().HorizontalDescription,
-                      children: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      bSingleLine: !0,
-                      dateAndTime: _.GetStartTimeAndDateUnixSeconds(),
-                    }),
-                  ],
-                }),
-                (0, _.jsx)("div", {
-                  className: _().HorizontalTitle,
-                  children: _,
-                }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().HorizontalSubTitle,
-                    children: _,
-                  }),
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().HorizontalSummary,
-                    children: _,
-                  }),
-              ],
-            }),
-          ],
-        });
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -632,6 +573,7 @@
             hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
+            disableScreenshots: _,
             children: _,
           } = _,
           _ = _.useRef(null),
@@ -641,13 +583,16 @@
               _ &&
                 (_ && _(!0),
                 window.GameHover &&
+                  (_.current &&
+                    _ &&
+                    (_.current.dataset.hoverDisableScreenshots = "true"),
                   window.GameHover(_ ? _() : _.current, _, "global_hover", {
                     type: _,
                     _: (0, _._)(_)._,
                     _: 1,
-                  }));
+                  })));
             },
-            [_, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -1861,7 +1806,7 @@
         );
       }
       function _() {
-        const _ = (0, _._)(_._._);
+        const _ = (0, _._)(_.GPz._);
         let _ = 0;
         const _ = _.data?.quests?.map(
           (_) => (

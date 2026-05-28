@@ -5627,9 +5627,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.F5);
+          const i = h.w.Init(w.F55);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetProfileBackground(this.m_transport, i);
+          const s = await w.xtC.SetProfileBackground(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R &&
@@ -5643,9 +5643,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.C0);
+          const i = h.w.Init(w.C0y);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetAvatarFrame(this.m_transport, i);
+          const s = await w.xtC.SetAvatarFrame(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5660,9 +5660,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.UM);
+          const i = h.w.Init(w.UMm);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetAnimatedAvatar(this.m_transport, i);
+          const s = await w.xtC.SetAnimatedAvatar(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5677,9 +5677,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.A6);
+          const i = h.w.Init(w.A6_);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetMiniProfileBackground(this.m_transport, i);
+          const s = await w.xtC.SetMiniProfileBackground(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5694,9 +5694,9 @@
           let t = { eResult: te.zi, strMessage: "" };
           if (!this.BIsLoggedIn())
             return (t = { eResult: te.Dy, strMessage: "Not logged on" }), t;
-          const i = h.w.Init(w.BT);
+          const i = h.w.Init(w.BTZ);
           i.Body().set_communityitemid(this.GetOwnedCommunityItemID(e));
-          const s = await w.xt.SetSteamDeckKeyboardSkin(this.m_transport, i);
+          const s = await w.xtC.SetSteamDeckKeyboardSkin(this.m_transport, i);
           return (
             (t.eResult = s.GetEResult()),
             s.GetEResult() != te.R
@@ -5985,10 +5985,10 @@
         async LoadRecentlyPlayedApps() {
           if (((this.m_bLoadedRecentlyPlayed = !0), !this.BIsLoggedIn()))
             return [];
-          const e = h.w.Init(w.t2),
+          const e = h.w.Init(w.t24),
             t = Math.floor(Date.now() / 1e3) - 14 * me.Kp.PerDay;
           e.Body().set_min_last_played(t);
-          const i = await w.xt.ClientGetLastPlayedTimes(this.m_transport, e);
+          const i = await w.xtC.ClientGetLastPlayedTimes(this.m_transport, e);
           return i.GetEResult() == te.R
             ? ((this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
                 i.Body().toObject().games,
@@ -6025,9 +6025,9 @@
         }
         async RefreshEquippedProfileItems() {
           if (!this.BIsLoggedIn()) return;
-          const e = h.w.Init(w.aK);
+          const e = h.w.Init(w.aKf);
           e.SetBodyFields({ steamid: m.iA.steamid });
-          const t = await w.xt.GetProfileItemsEquipped(this.m_transport, e);
+          const t = await w.xtC.GetProfileItemsEquipped(this.m_transport, e);
           t.GetEResult() == te.R
             ? (this.m_equippedItems = t.Body().toObject())
             : console.error(
@@ -6036,9 +6036,9 @@
         }
         async RefreshPurchasedProfileCustomizations() {
           if (!this.BIsLoggedIn()) return;
-          const e = h.w.Init(w.ll);
+          const e = h.w.Init(w.llP);
           e.SetBodyFields({ steamid: m.iA.steamid });
-          const t = await w.xt.GetPurchasedAndUpgradedProfileCustomizations(
+          const t = await w.xtC.GetPurchasedAndUpgradedProfileCustomizations(
             this.m_transport,
             e,
           );
@@ -8325,33 +8325,34 @@
       "use strict";
       i.d(t, { L: () => u, X: () => m });
       var s = i(7850),
-        r = i(22580),
-        n = i(90626),
-        a = i(12447),
-        o = i(52038),
-        l = i(6708),
-        c = i(99428),
-        d = i(32630);
+        r = i(76217),
+        n = i(22580),
+        a = i(90626),
+        o = i(32630),
+        l = i(52038),
+        c = i(6708),
+        d = i(99428);
       function m(e) {
         const { children: t } = e,
-          i = n.useRef(void 0);
+          i = a.useRef(null);
         return (
-          n.useEffect(() => i.current?.Activate(!0), []),
-          (0, s.jsx)(c.Yp, {
-            children: (0, s.jsx)(a.u, {
-              navID: "LoyaltyShell",
-              navTreeRef: i,
-              className: (0, o.A)(l.Shell),
-              children: (0, s.jsx)(d.Ay, {
+          a.useEffect(() => {
+            i.current && i.current.NavTree()?.Activate(!0);
+          }, []),
+          (0, s.jsx)(d.Yp, {
+            children: (0, s.jsx)(r.Z, {
+              className: (0, l.A)(c.Shell),
+              navRef: i,
+              children: (0, s.jsx)(o.Ay, {
                 domain: "store.steampowered.com",
                 feature: "pointsshop",
-                children: (0, s.jsx)(c.az, {
+                children: (0, s.jsx)(d.az, {
                   display: "flex",
                   flexDirection: "row",
-                  className: l.ShellScrollParent,
-                  children: (0, s.jsx)(c.az, {
+                  className: c.ShellScrollParent,
+                  children: (0, s.jsx)(d.az, {
                     flex: "1",
-                    className: l.ShellScroll,
+                    className: c.ShellScroll,
                     "flow-children": "column",
                     children: t,
                   }),
@@ -8362,10 +8363,10 @@
         );
       }
       function u(e) {
-        (0, n.useEffect)(
+        (0, a.useEffect)(
           () => (
-            r.DZ.Get().SetCurrentSearchPlaceholder(e),
-            () => r.DZ.Get().SetCurrentSearchPlaceholder("")
+            n.DZ.Get().SetCurrentSearchPlaceholder(e),
+            () => n.DZ.Get().SetCurrentSearchPlaceholder("")
           ),
           [e],
         );

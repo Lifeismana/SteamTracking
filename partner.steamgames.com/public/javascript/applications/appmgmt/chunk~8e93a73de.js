@@ -1079,13 +1079,15 @@
           ),
             this.m_schNextDownload.Cancel();
           const r = this.m_callbacks.GetCDNAuthURLParameter();
-          r && (i += r), (0, p.q_)(`${this.GetDebugName()} Downloading: ` + i);
-          let s,
-            a = null,
-            l = performance.now(),
-            m = o().CancelToken.source();
+          let s = i;
+          r && (s = i + r),
+            (0, p.q_)(`${this.GetDebugName()} Downloading: ` + s);
+          let a,
+            l = null,
+            m = performance.now(),
+            h = o().CancelToken.source();
           try {
-            (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = m);
+            (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = h);
             let e = {
               cancelToken: this.m_xhrDownload.token,
               timeout: 15e3,
@@ -1093,47 +1095,47 @@
               onDownloadProgress: (e) => {
                 (this.m_nCurDownloadProgress = e.loaded / e.total),
                   (this.m_nCurDownloadBitrate =
-                    (8 * e.loaded * 1e3) / Math.max(1, performance.now() - l));
+                    (8 * e.loaded * 1e3) / Math.max(1, performance.now() - m));
               },
             };
-            a = await o().get(i, e);
+            l = await o().get(s, e);
           } catch (e) {
-            (s = e), o().isAxiosError(e) && e.response && (a = e.response);
+            (a = e), o().isAxiosError(e) && e.response && (l = e.response);
           }
-          if (!this.m_xhrDownload || this.m_xhrDownload != m)
-            return void (0, p.q_)(`Throwing away cancelled download: ${i}`);
-          s &&
+          if (!this.m_xhrDownload || this.m_xhrDownload != h)
+            return void (0, p.q_)(`Throwing away cancelled download: ${s}`);
+          a &&
             (0, p.q_)(
-              `${this.GetDebugName()} Failed to download segment: ${i}`,
-              s,
+              `${this.GetDebugName()} Failed to download segment: ${s}`,
+              a,
             );
-          let h = performance.now(),
-            u = Math.floor(performance.now() - l),
-            _ = a ? a.status : 0;
+          let u = performance.now(),
+            _ = Math.floor(performance.now() - m),
+            f = l ? l.status : 0;
           if (((this.m_xhrDownload = null), this.m_bSeekInProgress))
             return (
               (0, p.q_)(
-                `${this.GetDebugName()} Throwing away download due to seek: ${i}`,
+                `${this.GetDebugName()} Throwing away download due to seek: ${s}`,
               ),
               void this.ContinueSeek()
             );
-          if (!a || 200 != a.status) {
-            this.m_stats.LogSegmentDownloadFailure(u, a ? a.status : 444);
+          if (!l || 200 != l.status) {
+            this.m_stats.LogSegmentDownloadFailure(_, l ? l.status : 444);
             let r = 500;
-            if (h - n > 9e3) {
+            if (u - n > 9e3) {
               if (this.m_callbacks.GetTimeoutAfterFailedDownload())
                 return (
                   (0, p.q_)(
-                    `${this.GetDebugName()} HTTP download failed.. stopping loader: ${h - n}ms`,
+                    `${this.GetDebugName()} HTTP download failed.. stopping loader: ${u - n}ms`,
                   ),
                   void this.DownloadFailed()
                 );
               r = 3e3;
             }
-            return 410 == _
+            return 410 == f
               ? ((this.m_nNumConsecutiveDownloadGones += 1),
                 (0, p.q_)(
-                  `${this.GetDebugName()} HTTP download gone.. informing the player: ${h - n}ms`,
+                  `${this.GetDebugName()} HTTP download gone.. informing the player: ${u - n}ms`,
                 ),
                 void this.DownloadGone())
               : void this.m_schNextDownload.Schedule(r, () =>
@@ -1141,8 +1143,8 @@
                 );
           }
           this.m_nNumConsecutiveDownloadGones = 0;
-          let f = new Uint8Array(a.data);
-          if (-1 == t) this.m_mapInitSegments.set(e.strID, f);
+          let g = new Uint8Array(l.data);
+          if (-1 == t) this.m_mapInitSegments.set(e.strID, g);
           else {
             let i = this.m_rgBufferedSegments.find((e) => e.nSegmentIndex == t);
             if (!this.BAdvanceNextSegment(t, i))
@@ -1152,7 +1154,7 @@
                 ),
                 void this.DownloadFailed()
               );
-            if (i) (i.representation = e), (i.data = f);
+            if (i) (i.representation = e), (i.data = g);
             else {
               let i = k(e, t),
                 n = this.m_mpd.GetEndTime(),
@@ -1163,14 +1165,14 @@
                   nSegmentIndex: t,
                   nStartPTS: i,
                   nDurationMS: r,
-                  data: f,
+                  data: g,
                 });
             }
-            this.LogDownload(l, f.length),
+            this.LogDownload(m, g.length),
               this.UpdateBuffer(),
               this.m_callbacks.OnSegmentDownloaded(this);
           }
-          (0, p.q_)(`HTTP ${_} (${u}ms, ${Math.floor(f.length / 1e3)}k): ${i}`),
+          (0, p.q_)(`HTTP ${f} (${_}ms, ${Math.floor(g.length / 1e3)}k): ${s}`),
             this.ScheduleNextDownload();
         }
         BAdvanceNextSegment(e, t) {

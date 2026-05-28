@@ -303,11 +303,12 @@ div._1OS2vdfTf7vsWj8VhNKlXu {
   margin: 0;
   background: var(--popover-background, #3d4450);
   box-shadow: var(--popover-shadow, 3px 3px 5px -3px #000);
+  border: none;
   opacity: 0;
   transition:
     display 150ms allow-discrete,
+    overlay 150ms allow-discrete,
     opacity 150ms linear;
-  border: none;
 }
 ._2i2FUBZKGyiP5Sb6tuASpO:not(:popover-open):not(.\:popover-open) {
   display: none !important;

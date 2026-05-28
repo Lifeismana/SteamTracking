@@ -1,11 +1,26 @@
 
+.sharedfiles_header_ctn {
+	max-width: 978px;
+	margin: 0 auto 12px auto;
+	position: relative;
+
+ }
+
+ .sharedfiles_tabs_ctn {
+	 max-width: 958px;
+	 margin: 0 auto;
+ }
 
 #BG_top_sharedfiles {
+	height: 102px;
 	position:relative;
-	background-repeat:no-repeat;
 	min-height:70px;
 	text-align: left;
-	margin: 10px auto 0px auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-bottom: 12px;
+	background: #3a3e4780;
 }
 
 #BG_top_sharedfiles h1 {
@@ -34,7 +49,6 @@
 }
 
 #BG_bottom_sharedfiles {
-	max-width:958px;
 	text-align:left;
 	margin: 0 auto;
 }
@@ -42,14 +56,14 @@
 #mainContents_sharedfiles {
 	padding:0;
 	text-align:left;
-	padding-top: 10px;
 }
 
 #HeaderUserAvatar {
-	float: left;
-	width: 66px;
-	height: 66px;
-	position: relative;
+	width: 68px;
+	height: 68px;
+	margin-inline-start: 30px;
+	margin-top: 18px;
+	display: inline-block;
 }
 
 #HeaderUserInfo {
@@ -94,10 +108,12 @@
 	min-height: 441px;
 	padding: 0px;
 	width: 958px;
+	margin: 0 auto;
 }
 
 #tabs_basebg {
 	max-width:958px;
+	margin: 0 auto;
 	min-height: 441px;
 	padding: 0;
 }
@@ -106,11 +122,9 @@
 #NoItemsContainer {
 	font-size: 17px;
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 40px auto;
 	padding: 220px;
-	background-color: #1f1f1f;
-	border: 1px solid #303030;
+	background-color: rgba(0,0,0,0.4);
 	min-height: 441px;
 }
 
@@ -436,8 +450,12 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 #ScreenshotManagementControlsTop {
-	padding-top: 5px;
-	padding-bottom: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	padding: 3px 8px;
+	background: rgba(0,0,0,0.3);
 }
 
 #ScreenshotManagementControlsBottom {
@@ -447,7 +465,6 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 
 .ScreenshotManagementLabel {
 	text-transform: uppercase;
-	margin-top: 8px;
 }
 
 #ScreenshotManagementInstructions {
@@ -464,10 +481,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	font-size: 14px;
 	padding: 5px;
 	padding-right: 25px;
-	margin-top: 3px;
-	margin-right: 5px;
 	text-align: center;
-	float: left;
 	color: #828282;
 	background-color: #e8e8e8;
 	text-transform: none;
@@ -507,9 +521,15 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 .AdditionalSharedFilesControls {
-	float: right;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 6px;
+
 	margin-bottom: 5px;
 	margin-top: 5px;
+	flex-grow: 1;
 }
 
 .ScreenshotManagementButton {
@@ -670,62 +690,6 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 	text-decoration:none;
 	color:#c9c9c9;
 	padding:0px 3px;
-}
-.searchedForText
-{
-	background-color: #68932f;
-	color: #d2ff96;
-	padding-right: 2px;
-	padding-left: 2px;
-	background-color: #68932f;
-	color: #d2ff96;
-}
-
-
-.searchedTermsContainer
-{
-	vertical-align: middle;
-}
-
-.searchedTermsContainerEndPadding
-{
-	margin-bottom: 10px;
-}
-
-.searchedForTerm
-{
-	float: left;
-	min-height: 20px;
-	line-height: 20px;
-	padding: 4px;
-	background-color: #68932f;
-	border: 2px solid #68932f;
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	color: #d2ff96;
-	font-size: 14px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-top: 5px;
-}
-
-.searchedForTerm:hover
-{
-	cursor: pointer;
-	background-color: #8ac33e;
-	border: 2px solid #8ac33e;
-}
-
-.searchedForTermImage
-{
-	margin-left: 10px;
-	vertical-align: middle;
-}
-
-.searchedForExcludedTermImage {
-	width: 14px;
-	margin-right: 5px;
-	vertical-align: middle;
 }
 
 .video_items_ctn {

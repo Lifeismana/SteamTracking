@@ -11,9 +11,8 @@
       module.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
-        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
-        SectionButtonCtn: "_1HP0yfVUrZ-TPBYhiQkye2",
         SectionButton: "_3n8swQFM3I_ARVM_5bPhAs",
+        StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
         EventsSummariesCtn: "_1snIw0RvJduvDtqpmwtKJ9",
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
@@ -4477,6 +4476,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = __webpack_require__("chunkid"),
         _ = {
@@ -5107,42 +5107,22 @@
             _ = (0, _.sfN)(_._.LANGUAGE),
             _ = _._.GetClanEventModel(_),
             _ = null;
-          if (_) {
-            this.state.bShowAsModal &&
-              (_ = (0, _.jsx)(_._, {
-                className: _.StoreHeaderAdjust,
-                children: (0, _.jsx)("div", {
-                  children: (0, _.jsx)(_._, {
-                    event: _,
-                    fnClose: this.HideModalEvent,
+          _
+            ? (this.state.bShowAsModal &&
+                (_ = (0, _.jsx)(_._, {
+                  className: _.StoreHeaderAdjust,
+                  children: (0, _.jsx)("div", {
+                    children: (0, _.jsx)(_._, {
+                      event: _,
+                      fnClose: this.HideModalEvent,
+                    }),
                   }),
-                }),
-              }));
-            const _ = _.GetImageForSizeAsArrayWithFallback(
-                "capsule",
-                _,
-                _._.capsule_main,
-              ),
-              _ = _.BImageNeedScreenshotFallback("capsule", _);
-            _ =
-              _.length > 0
-                ? (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)(_._, {
-                        rgSources: _,
-                      }),
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: _.NoCapsuleFallback,
-                          children: (0, _._)("#EventModTile_FallbackImageText"),
-                        }),
-                    ],
-                  })
-                : (0, _.jsx)("div", {
-                    className: _.NoCapsule,
-                    children: (0, _._)("#EventModTile_NoCapsule"),
-                  });
-          } else _ = (0, _._)("#Loading");
+                })),
+              (_ = (0, _.jsx)(_, {
+                eventModel: _,
+                lang: _,
+              })))
+            : (_ = (0, _._)("#Loading"));
           const _ = _.last_modified_date
               ? Date.parse(_.last_modified_date) / 1e3
               : 0,
@@ -5296,6 +5276,28 @@
           });
         }
       };
+      function _(_) {
+        const { eventModel: _, lang: _ } = _,
+          _ = (0, _._)(_, "capsule", _, _._.capsule_main),
+          _ = _.BImageNeedScreenshotFallback("capsule", _);
+        return _ && _.length > 0
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  rgSources: _,
+                }),
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.NoCapsuleFallback,
+                    children: (0, _._)("#EventModTile_FallbackImageText"),
+                  }),
+              ],
+            })
+          : (0, _.jsx)("div", {
+              className: _.NoCapsule,
+              children: (0, _._)("#EventModTile_NoCapsule"),
+            });
+      }
       (0, _._)([_._], _.prototype, "ShowModalEvent", null),
         (0, _._)([_._], _.prototype, "HideModalEvent", null),
         (0, _._)([_._], _.prototype, "SetAdultContentState", null),

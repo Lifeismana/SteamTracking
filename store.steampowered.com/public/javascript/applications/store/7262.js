@@ -24,36 +24,31 @@
         o = t(18654),
         u = t.n(o);
       function d(e) {
-        const { id: a, imageType: t, bPreferAssetWithoutOverride: o } = e,
-          { storeItemAsset: d, storeItemDefaultInfo: p } = (0, s.q)(a, t, o);
+        const {
+            id: a,
+            imageType: t,
+            bPreferAssetWithoutOverride: o,
+            strAdditionalClassName: d,
+          } = e,
+          { storeItemAsset: p, storeItemDefaultInfo: m } = (0, s.q)(a, t, o);
         if ("library" === t || "vertical" == t)
           return (0, r.jsx)(i.G, { id: a, bPreferAssetWithoutOverride: o });
-        let m,
-          _,
-          h = "";
-        if ("main" === t)
-          (m = u().mainCapsuleImgWidth),
-            (_ = u().mainCapsuleImgHeight),
-            (h = u().MainCapsuleImageContainer);
-        else
-          (m = u().headerCapsuleImgWidth),
-            (_ = u().headerCapsuleImgHeight),
-            (h = u().HeaderCapsuleImageContainer);
-        if (void 0 === d || !p)
+        let _ = "";
+        if ("main" === t) _ = u().MainCapsuleImageContainer;
+        else _ = u().HeaderCapsuleImageContainer;
+        if (void 0 === p || !m)
           return (0, r.jsx)("div", {
-            className: (0, l.A)(h, "CapsuleImageCtn"),
+            className: (0, l.A)(_, "CapsuleImageCtn", d),
           });
-        if (null == d) return null;
-        let A = (0, n.N)(d, "header" === t);
+        if (null == p) return null;
+        let A = (0, n.N)(p, "header" === t);
         return (0, r.jsx)("div", {
-          className: (0, l.A)(h, "CapsuleImageCtn"),
+          className: (0, l.A)(_, "CapsuleImageCtn", d),
           children: (0, r.jsx)(c.o, {
             lazyLoad: !0,
             srcs: A,
             className: (0, l.A)(u().CapsuleImage),
-            width: m,
-            height: _,
-            alt: p.name,
+            alt: m.name,
           }),
         });
       }
@@ -85,7 +80,7 @@
     },
     8893: (e, a, t) => {
       "use strict";
-      t.d(a, { G: () => h });
+      t.d(a, { G: () => A });
       var r = t(7850),
         s = t(96171),
         i = t(74812),
@@ -98,23 +93,23 @@
         p = t(90717),
         m = t(83164),
         _ = t.n(m);
-      function h(e) {
+      function A(e) {
         const { id: a, bPreferLibrary: t, bPreferAssetWithoutOverride: c } = e,
-          { storeItemDefaultInfo: m, storeItemAsset: h } = (0, i.q)(
+          { storeItemDefaultInfo: m, storeItemAsset: A } = (0, i.q)(
             a,
             "vertical",
             c,
           ),
-          [A, b] = n.useState(0);
-        if (!m || !h)
+          [h, b] = n.useState(0);
+        if (!m || !A)
           return (0, r.jsx)("div", {
             className: l().HeroCapsuleImageContainer,
           });
-        const { strStoreVerticalURL: g, strLibraryVerticalURL: y } = (0, p.M)(
-          h,
+        const { strStoreVerticalURL: y, strLibraryVerticalURL: f } = (0, p.M)(
+          A,
           m,
         );
-        if (g && (!t || !y))
+        if (y && (!t || !f))
           return (0, r.jsxs)("div", {
             className: (0, u.A)(
               l().HeroCapsuleImageContainer,
@@ -122,7 +117,7 @@
             ),
             children: [
               (0, r.jsx)("img", {
-                src: g,
+                src: y,
                 className: l().CapsuleImage,
                 alt: m.name,
               }),
@@ -134,7 +129,7 @@
                 }),
             ],
           });
-        if (y)
+        if (f)
           return (0, r.jsxs)("div", {
             className: (0, u.A)(
               l().LibraryFallbackAssetImageContainer,
@@ -144,23 +139,23 @@
             children: [
               (0, r.jsx)("div", {
                 className: l().FallbackBackground,
-                style: { backgroundImage: `url(${y})` },
+                style: { backgroundImage: `url(${f})` },
               }),
               (0, r.jsx)("img", {
-                src: y,
+                src: f,
                 className: l().CapsuleImage,
                 alt: m.name,
               }),
             ],
           });
-        const f = (0, p.N)(h, !0),
-          v = f.length - 1,
+        const v = (0, p.N)(A, !0),
+          g = v.length - 1,
           I = (e) => {
-            const a = f.indexOf(e);
-            a >= v && a < f.length - 1 && b(a + 1);
+            const a = v.indexOf(e);
+            a >= g && a < v.length - 1 && b(a + 1);
           };
-        if (A < f.length) {
-          const e = f[A];
+        if (h < v.length) {
+          const e = v[h];
           return (0, r.jsxs)("div", {
             className: l().LibraryFallbackAssetImageContainer,
             children: [
@@ -170,7 +165,7 @@
               }),
               (0, r.jsx)(o.o, {
                 lazyLoad: !0,
-                srcs: f,
+                srcs: v,
                 className: l().CapsuleImage,
                 alt: m.name,
                 onImageError: I,
@@ -219,18 +214,18 @@
         });
       }
       var _ = t(58918),
-        h = t(17376);
-      const A =
+        A = t(17376);
+      const h =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
       var b = t(18654),
-        g = t.n(b),
-        y = t(12155),
-        f = t(52038),
-        v = t(94011);
+        y = t.n(b),
+        f = t(12155),
+        v = t(52038),
+        g = t(94011);
       function I(e) {
         const { appids: a, hide_status_banners: t, show_early_access: n } = e,
           { data: l } = (0, _.$Y)(),
-          { data: o } = (0, h.F0)(),
+          { data: o } = (0, A.F0)(),
           b = a.length > 0 && a.every((e) => l && l.has(e)),
           I = a.length > 0 && a.every((e) => o && o.has(e)),
           j = (function (e) {
@@ -261,33 +256,33 @@
             );
           })(a),
           k = b && !t,
-          C = I && !t,
-          D = !t && n;
+          D = I && !t,
+          x = !t && n;
         return (0, r.jsxs)("div", {
-          className: (0, f.A)(g().CapsuleDecorators, "CapsuleDecorators"),
+          className: (0, v.A)(y().CapsuleDecorators, "CapsuleDecorators"),
           children: [
             k &&
               (0, r.jsxs)("span", {
-                className: (0, f.A)(g().Banner, g().Blue),
+                className: (0, v.A)(y().Banner, y().Blue),
                 children: [
                   (0, r.jsx)("img", {
-                    src: (0, s.YJ)(A),
-                    className: g().LinesImg,
+                    src: (0, s.YJ)(h),
+                    className: y().LinesImg,
                     alt: i.Z.Localize("#Sale_InLibrary"),
                   }),
                   i.Z.Localize("#Sale_InLibrary"),
                 ],
               }),
-            C &&
+            D &&
               (0, r.jsxs)("span", {
-                className: g().Banner,
+                className: y().Banner,
                 children: [
-                  (0, r.jsx)(y.qnF, { className: g().LinesImg }),
+                  (0, r.jsx)(f.qnF, { className: y().LinesImg }),
                   i.Z.Localize("#Sale_OnWishlist"),
                 ],
               }),
-            D && !k && !C && (0, r.jsx)(N, { appids: a }),
-            j && (0, r.jsx)(v.K, {}),
+            x && !k && !D && (0, r.jsx)(N, { appids: a }),
+            j && (0, r.jsx)(g.K, {}),
           ],
         });
       }
@@ -312,7 +307,7 @@
           })(a);
         return t
           ? (0, r.jsx)("span", {
-              className: (0, f.A)(g().Banner, g().EarlyAccessGradient),
+              className: (0, v.A)(y().Banner, y().EarlyAccessGradient),
               children: i.Z.Localize("#Sale_EarlyAccess"),
             })
           : null;

@@ -386,6 +386,8 @@ function LoadImageURLForUpload( urls )
 		img.crossOrigin = 'anonymous';
 		img.src = url;
 	}
+
+	document.getElementById( "game_image_drop" ).scrollIntoView( { behavior: "smooth", block: "start" } );
 }
 
 // loads specified files

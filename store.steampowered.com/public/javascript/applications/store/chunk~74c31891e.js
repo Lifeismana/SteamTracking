@@ -658,7 +658,7 @@
         pe = t(7193),
         he = t(39199),
         Ie = t(60860),
-        ye = t(99895),
+        ye = t(76647),
         fe = t(40353);
       function De(e) {
         const { eventModel: n, nEventBadgeID: t } = e,
@@ -789,7 +789,7 @@
       var Ne = t(30894),
         Ge = t(18657),
         Be = t.n(Ge),
-        Ae = t(18638);
+        Ae = t(81204);
       function Te(e) {
         const { clanAccountID: n, color: t, bgcolor: o } = e;
         (0, Ne.L2)();

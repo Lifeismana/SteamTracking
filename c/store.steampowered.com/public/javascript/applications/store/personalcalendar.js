@@ -3,64 +3,267 @@
   {
     chunkid: (module) => {
       module.exports = {
-        TextEntry: "_1vE-LsK6l_D_5yjbywZV1p",
+        CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
+        GrowOnHoverImplicit: "_23t3208XMavZer6IZIxzSb",
+        GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
+        carouselBtnCtn: "_3zfZ9tkIrSDZdSTv8mvZ3-",
+        left: "S8IHdovT5T2iEVg_97xve",
+        right: "Cq59o5WQ49zTvvFY56QYS",
+        carouselBody: "_3a31O8XB_8lD-yov8FB9-9",
+        sliderBody: "_2M3SnYGvMvplWUC8yGhowo",
+        slideTrayCustomize: "_2VUpHDtxN8lR1LDahY_cI2",
+        breadcrumbContainer: "_3HjnEmKg66o82ah74EIvmq",
+        breadcrumbContainerTemplate: "_3dMffY_iRZXHjZmXN9aLej",
+        pip: "_3Byg6Wc4TX36gkUptUIk72",
+        pipList: "LY1m24ODS7AFRuzclt0Sl",
+        pipScrollerContainer: "_3SyN-YtXsML6ado0q-Gdve",
+        pipScrollButton: "qE43Jfzl0qJX_a6XrMgSr",
+        scrollNavDiv: "_95I5gwXXMBghRg-4uNQLr",
+        scrollNavButton: "_1cpdoEGU0uiIWbGIU_qMbZ",
+        pipScroller: "EMd4F6A8qdMk-l6os415A",
+        scrollBackground: "WUHeTNYGQDQQg_jQe-78W",
+        scrollForeground: "PQzkJfi8IxzjcFEDG-yv-",
+        pipContainer: "_3TKX37FakYHikXh3Wtg2BU",
+        pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
+        innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
+        DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
+        BackgroundAnimation: "_25VCY5c_WxOmDf5rM9ytzl",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3Wd6R5ArXmgfz1dMwANtD7",
+        "ItemFocusAnim-darkerGrey": "_2mepLvzcUGS8PS7_cO5A4C",
+        "ItemFocusAnim-darkGreySettings": "KiXqOP4sNGGqLzPFjAa3D",
+        "ItemFocusAnim-darkGrey": "_3NRkgxBrOQc_fQX1HvTkk3",
+        "ItemFocusAnim-grey": "SAxIC6YdDjzPzIqw_aS4s",
+        "ItemFocusAnim-translucent-white-10": "_-1Vlo_3w2uf9fF1-AU1F4",
+        "ItemFocusAnim-translucent-white-20": "_7B6-9HPzoer1QOmgjEAWS",
+        "ItemFocusAnimBorder-darkGrey": "GRKCpstf6SP8ly-oMKYX3",
+        "ItemFocusAnim-green": "_2cBvKmN3c2ILRdjHTpBZUQ",
+        focusAnimation: "_3eJJYrpdNOdlU26_C9wlMp",
+        hoverAnimation: "BiWwdgbiMRC3pAc-R3rqS",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        smallentrywidth: "600px",
-        optionswrapwidth: "777px",
-        PersonalCalendarApp: "_2HSg8AtRJl7UMJATPIsBR8",
-        Refreshing: "_23e1D2r2sYeZs924yfKJo",
-        PersonalCalendarSection: "_1ogG0o0tuYDOljO3JVMG4j",
-        SteamLabsBanner: "_2Gzea-RDxyTWYQ_1m4AvB0",
-        PersonalCalendarContainer: "_1v3eOf_69jOyKwYgOD2J2w",
-        PersonalCalendarHeader: "_3CwW2Qs3urt8QcUjerZErw",
-        PersonalCalendarTitle: "_1jhESJwyB5EudCwWSj1Cd9",
-        PersonalCalendarDescription: "_1o94X46OlzAxrg7CHGu4Xx",
-        IncludeSaturday: "_2aUgvVQfnrPXJadG5GrdcD",
-        Calendar: "p6KFiyUG9MYjbErC0_SGJ",
-        LinearCalendar: "_1L5MsHayIMOr5ug0cNxdxX",
-        SectionHeader: "_1pxjbUKB_ugZ6rMdnTXmks",
-        GameList: "_1YDn2Y6zO2xAbcwcIvI79b",
-        Options: "_2LcfPsUSmeavC5MD7P-3_3",
-        ResultCountSelector: "_2kL46N7kSTQrKIGU59rigN",
-        Disabled: "_3rT8s7lyF7ez2ptouqnozy",
-        Title: "_9umPLKYAgKsJMqw7ujTrY",
-        HideOwnedSelector: "xT3lxTdADiEWewVz8DEPg",
-        TagSelector: "RMzOW5KaqQvzer-NgkySs",
-        AppEntry: "_3V92WeqSSAvVfpoO35PvX3",
-        ShowAllButton: "_3u_Aic2wvh3p-Iz6hf36rP",
-        WeekLinear: "_3eYzWPfWrCyM7r3vp9jsYG",
-        LinearHeader: "_3pwknKJXwBmgVszW8WeZYQ",
-        LinearDayList: "_2AGzi6yGV_B75WoMGktOG4",
-        DayLinear: "_2kvCThnw9WB9GKfJ-WEA49",
-        Empty: "_2Ktvtjekp2t1yiR17tO37o",
-        DayTitle: "_5Cxkp65lk0ZLEkohB0UYj",
-        LinearDayAppList: "_3z4JI2StYiKelmK8LLL_f5",
-        LinearCalendarAppEntry: "_1vkzAJHySeGgIC6aWfk0iS",
-        Week: "_1czh2W36HftecDpf7txuSp",
-        Summary: "_3HXw8Pw87qqgqr1Ag5Bwde",
-        DayOfWeekHeader: "RLNS069fcm-HyBmDQpQzx",
-        Day: "_14ZKl5pFBqLi_U0LVFjkz4",
-        CalendarAppEntry: "_13JzJBgCihXnVCM-l2MMWR",
-        Blank: "_3UiDT-YpyntdDox1_Ccld6",
-        Today: "rChGJxkm3sNTTmDYe7KMW",
-        DateHeader: "_1i3Li2VsTuM5vu7R9eWJ2F",
-        ShowMoreButton: "ez9Ld7tp9t28fRwR6VBKh",
-        ShowMoreTextButton: "_3P6P3gZ5tYxntcm-ESmTbn",
-        PersonalCalendarLoginPrompt: "ON8dwj0iIb2zJimIKh1q3",
-        LoginButton: "_3ltxE2-EO4o2zA-ZuTNR9B",
+        ScrollSnapCarousel: "_1nUtBXgWizhgU1jv-8wVC7",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PersonalCalendarWidget: "_1rLdYDrWbYRcVNpPlFd225",
+        PersonalCalendarWidgetDay: "uUNiI-Woa-IKlMTl8sNz4",
+        TodayCtn: "zxpXN3eSl7IE7Y_HFaDsf",
+        DayTitle: "_1UXC23q3yEmSJ2eQNdi-0W",
+        DayOfWeek: "_8gOpVF6uAFG2cGwiwvREf",
+        Date: "_2ZLaa9X1KqHlMCSw96mYaW",
+        Today: "_3mRf-suj1kS8DGKgfnHAql",
+        DayAppContainer: "_3LhmtdtkRlqwQbEcHrCJGs",
+        MoreGames: "_2T5aAmTJF2RJhrBpoIOfqW",
+        StoreAppHover: "_2Tqn7YAJcleffVrwKeeky6",
+        StoreAppCapsule: "_1V0RCs8QeHLs8oLOr0MdyK",
+        Hovered: "_1StchN24Q1CulpMocY_T5a",
+        Image: "_15wSFuv0rJYhA009HlKKE1",
+        NewBadge: "uh7LG17VS8cMtDP9jCt1f",
+        ScreenshotCycler: "_2icO_OA6Rqt6nLSts5ow4E",
+        Screenshot: "_3aD2ult5gmmxWA_7oCdUPO",
+        Active: "kPZWPvJo2jw2t3b47viEo",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        if (_) {
+          if ("appid" in _) return "app";
+          if ("bundleid" in _) return "bundle";
+          if ("packageid" in _) return "sub";
+        }
+      }
+      function _(_) {
+        const {
+            _: _,
+            hoverClassName: _,
+            fnGetIDOverride: _,
+            fnHoverState: _,
+            disableScreenshots: _,
+            children: _,
+          } = _,
+          _ = _.useRef(null),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _(_);
+              _ &&
+                (_ && _(!0),
+                window.GameHover &&
+                  (_.current &&
+                    _ &&
+                    (_.current.dataset.hoverDisableScreenshots = "true"),
+                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
+                    type: _,
+                    _: (0, _._)(_)._,
+                    _: 1,
+                  })));
+            },
+            [_, _, _, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(_) &&
+                (_ && _.relatedTarget && _(!1),
+                window.HideGameHover &&
+                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
+            },
+            [_, _, _],
+          );
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: _,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          onFocus: _,
+          onBlur: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
+            strExtraParams: _,
+            fnOnClickOverride: _,
+            strOverrideURL: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(
+            _ ||
+              (_ && "creatorid" in _
+                ? (0, _._)(
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
+                    _,
+                    _,
+                  )
+                : (0, _._)(
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
+                    _,
+                    _,
+                  )),
+          );
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            className: _.className,
+            href: _ ? void 0 : _,
+            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+            rel: "noopener noreferrer",
+            onClick: _,
+            children: _.children,
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
+          { data: _ } = (0, _._)(_),
+          _ = _.useRef(0),
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _ && _.current && (_.current.currentTime = _.current);
+        }, [_]);
+        const _ = (0, _._)(_ ? _ : void 0);
+        if ((_ && _._.IN_MOBILE) || !_) return null;
+        if (!_ || !_.visible || !_) return null;
+        const _ = _.filter((_) => _.microtrailer && _.microtrailer.length > 0);
+        if (0 === _.length)
+          return _ &&
+            _.related_items?.parent_appid &&
+            (_.type == _._._ || _.type == _._._)
+            ? (0, _.jsx)(_, {
+                ..._,
+                _: {
+                  appid: _.related_items.parent_appid,
+                },
+              })
+            : null;
+        let _;
+        switch (_) {
+          case _.k_ETrailerGrowAmount_Implicit:
+            _ = _().GrowOnHoverImplicit;
+            break;
+          case _.k_ETrailerGrowAmount_Medium:
+            _ = _().GrowOnHoverMedium;
+        }
+        const _ = _[0];
+        return (0, _.jsx)("video", {
+          className: _()(_().CapsuleMicroTrailer, _),
+          loop: !0,
+          muted: !0,
+          controls: !1,
+          autoPlay: !0,
+          ref: _,
+          onTimeUpdate: (_) => {
+            _.current = _.currentTarget.currentTime;
+          },
+          children: _.microtrailer?.map((_) =>
+            _._.IN_CLIENT && "video/mp4" == _.type
+              ? null
+              : (0, _.jsx)(
+                  "source",
+                  {
+                    src: (0, _._)(_, _.filename || ""),
+                    type: _.type,
+                  },
+                  _.filename,
+                ),
+          ),
+        });
+      }
+      !(function (_) {
+        (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
+          (_[(_.k_ETrailerGrowAmount_Implicit = 1)] =
+            "k_ETrailerGrowAmount_Implicit"),
+          (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
+            "k_ETrailerGrowAmount_Medium");
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -80,45 +283,758 @@
             _.s_PersonalCalendarStore
           );
         }
-        async GetCalendarRecommendations(_, _, _, _, _) {
-          return _._.fetchQuery(_(_, _, _, _, _));
+        async GetCalendarRecommendations(_, _, _) {
+          const _ = new Date();
+          _.setDate(_.getDate() + _), _.setHours(0, 0, 0, 0);
+          const _ = new Date();
+          _.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0);
+          const _ = await _._.fetchQuery(_(_, _, _));
+          return (
+            (_.arrAppInfos = _.arrAppInfos.filter(
+              (_) =>
+                _.nReleaseDate >= _.getTime() / 1e3 &&
+                _.nReleaseDate < _.getTime() / 1e3,
+            )),
+            _
+          );
         }
         Init() {}
       }
-      function _(_, _, _, _, _) {
-        return (0, _._)(_(_, _, _, _, _));
+      function _(_, _, _) {
+        return (0, _._)(_(_, _, _));
       }
-      function _(_, _, _, _, _) {
+      function _(_, _, _) {
         return {
-          queryKey: ["personalcalendar", _, _, _, _, _],
+          queryKey: ["personalcalendar", _, _, _],
           queryFn: async () => {
             const _ = {
                 tag: _,
-                daysbackward: _,
-                daysforward: _,
-                weekaligned: _ ? 1 : 0,
-                maxresults: _,
-                sessionid: _._.SESSIONID,
               },
-              _ = await _().get(
-                `${_._.STORE_BASE_URL}personalcalendarold/getrecommendations`,
-                {
-                  params: _,
-                  timeout: 2e4,
-                },
-              );
+              _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
+                params: _,
+                timeout: 2e4,
+              });
             return {
-              appReleasesByDay: _.data.appReleasesByDay,
-              dayWeekTimestamps: _.data.dayWeekTimestamps,
-              maxResultCount: _.data.maxResultCount,
-              userTags: _.data.userTags,
-              usesWishlists: _.data.usesWishlists,
-              resultMessage: _.data.resultMessage,
+              arrAppInfos: _.data.arrAppInfos,
+              strResultMessage: _.data.strResultMessage,
+              bUsesWishlistedGames: _.data.bUsesWishlistedGames,
             };
           },
           placeholderData: (_) => _,
         };
       }
+      function _(_, _, _, _) {
+        const _ = new Date();
+        if ((_.setDate(_.getDate() - _), _)) {
+          const _ = _.getDay() % 7;
+          _.setDate(_.getDate() - _), _.setHours(0, 0, 0, 0);
+        } else _.setHours(0, 0, 0, 0);
+        const _ = [],
+          _ = new Date(_),
+          _ = Math.ceil((_ + _) / 7);
+        for (let _ = 0; _ < _; _++) {
+          _.push([]);
+          for (let _ = 0; _ < 7; _++)
+            (!_ || (0 != _.getDay() && 6 != _.getDay())) &&
+              _[_].push(Math.floor(_.getTime() / 1e3)),
+              _.setDate(_.getDate() + 1),
+              _.setHours(0, 0, 0, 0);
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_?.asset_url_format && _[_])
+          return (
+            _._.BASE_URL_SHARED_CDN +
+            "/store_item_assets/" +
+            _.asset_url_format.replace("${FILENAME}", _[_])
+          );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            padded: _,
+            gap: _,
+            children: _,
+            bLazyRenderChildren: _,
+            startingSlide: _,
+          } = _,
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _.current?.scrollIntoView({
+            inline: "start",
+            block: "nearest",
+            behavior: "auto",
+          });
+        }, [_]);
+        const _ = (0, _.jsxs)(_._, {
+          "flow-children": "row",
+          style: {
+            gap: _ ? _ + "px" : void 0,
+          },
+          className: (0, _._)(
+            {
+              SaleSectionCarouselPadding: _,
+            },
+            "ScrollSnapCarousel",
+            "SaleSectionCarousel",
+            _.ScrollSnapCarousel,
+            _.className,
+          ),
+          children: [
+            _ &&
+              _.Children.map(_, (_, _) =>
+                (0, _.jsx)("div", {
+                  ref: _ == _ ? _ : void 0,
+                  children: _,
+                }),
+              ),
+            !_ && _,
+          ],
+        });
+        return _
+          ? (0, _.jsx)(_._, {
+              horizontal: !1,
+              placeholderWidth: 1,
+              placeholderHeight: 1,
+              children: _,
+            })
+          : _;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        render() {
+          const { showArrows: _, arrowFill: _, arrowStyle: _ } = this.props,
+            _ = this.props.visibleSlides,
+            _ = this.props.totalSlides,
+            _ = this.props.currentSlide;
+          if (_ >= _) return null;
+          const _ = (100 * _) / _,
+            _ = 100 * (1 - Math.min(_ + _, _) / _),
+            _ = _ + (50 * _) / _,
+            _ = 100 - _;
+          return (0, _.jsxs)("div", {
+            className: _.pipScrollerContainer,
+            children: [
+              _ &&
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _.pipScrollButton,
+                    _.left,
+                    _.carouselNavButton,
+                  ),
+                  children: (0, _.jsx)(_._, {
+                    arrowFill: _,
+                    arrowStyle: _,
+                    direction: "left",
+                  }),
+                }),
+              (0, _.jsxs)("div", {
+                className: _.pipScroller,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _.scrollBackground,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.scrollForeground,
+                    style: {
+                      left: _ + "%",
+                      right: _ + "%",
+                    },
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.scrollNavDiv,
+                    style: {
+                      left: "0%",
+                      width: _ + "%",
+                    },
+                    children: (0, _.jsx)(_._, {
+                      className: (0, _._)(
+                        _.carouselNavButton,
+                        _.scrollNavButton,
+                      ),
+                      style: {
+                        color: "red",
+                      },
+                      children: (0, _.jsx)("div", {}),
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.scrollNavDiv,
+                    style: {
+                      right: "0%",
+                      width: _ + "%",
+                    },
+                    children: (0, _.jsx)(_._, {
+                      className: (0, _._)(
+                        _.carouselNavButton,
+                        _.scrollNavButton,
+                      ),
+                      children: (0, _.jsx)("div", {}),
+                    }),
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _.pipScrollButton,
+                    _.right,
+                    _.carouselNavButton,
+                  ),
+                  children: (0, _.jsx)(_._, {
+                    arrowFill: _,
+                    arrowStyle: _,
+                    direction: "right",
+                  }),
+                }),
+            ],
+          });
+        }
+      }
+      const _ = (0, _._)(_, (_) => ({
+        currentSlide: _.currentSlide,
+        totalSlides: _.totalSlides,
+        visibleSlides: _.visibleSlides,
+      }));
+      function _(_) {
+        const { bPreventSnapCarousel: _ } = _,
+          _ = (0, _._)();
+        return _ || ((_.screenIsWide || _) && !_.bForceSimpleCarousel)
+          ? (0, _.jsx)(_, {
+              ..._,
+              children: _.children,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+              children: _.children,
+            });
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = () => _.Children.count(_.children),
+          _ = __webpack_require__(),
+          _ = Math.min(__webpack_require__(), _.visibleElements);
+        if (!_ || !_) return null;
+        const _ = _ < _,
+          _ = _.hideArrows || !_,
+          _ = !_ || _.hidePips;
+        let _ = 4 / 3,
+          _ = !0;
+        _.slideAspectRatio && ((_ = _.slideAspectRatio), (_ = !1));
+        const _ = `items_in_row_${_.visibleElements}`;
+        return (0, _.jsx)(_._, {
+          "flow-children": "row",
+          className: (0, _._)(_.carouselBody, _.className, _),
+          navKey: _.navKey,
+          children: (0, _.jsxs)(_._, {
+            visibleSlides: _.visibleElements,
+            totalSlides: __webpack_require__(),
+            naturalSlideWidth: 100 * _,
+            naturalSlideHeight: 100,
+            step: _.visibleElements,
+            infinite: !_.disableEdgeWrap,
+            isIntrinsicHeight: _,
+            dragEnabled: !1,
+            touchEnabled: !1,
+            lockOnWindowScroll: !0,
+            orientation: "horizontal",
+            disableKeyboard: !0,
+            currentSlide: _.startingSlide,
+            children: [
+              (0, _.jsx)(_, {
+                bHideArrows: _,
+                bAutoAdvance: _.bAutoAdvance && !_,
+                onSlide: _.onSlide,
+                arrowFill: _.arrowFill,
+                arrowStyle: _.arrowStyle,
+                children: _.Children.map(_.children, (_, _) => {
+                  const _ = _.bLazyRenderChildren
+                    ? (0, _.jsx)(_._, {
+                        rootMargin: "0px -5px 0px 100%",
+                        horizontal: !0,
+                        placeholderWidth: 1,
+                        placeholderHeight: 1,
+                        children: _,
+                      })
+                    : _;
+                  return (0, _.jsx)(
+                    _._,
+                    {
+                      className: _.innerSlide,
+                      index: _,
+                      role: "listitem",
+                      "aria-label": void 0,
+                      children: _,
+                    },
+                    "slide_" + _,
+                  );
+                }),
+              }),
+              !_ &&
+                (_.useTestScrollbar
+                  ? (0, _.jsx)(_, {
+                      showArrows: _,
+                      carouselStore: null,
+                    })
+                  : (0, _.jsx)("div", {
+                      className: _()({
+                        [_.breadcrumbContainer]: !0,
+                        [_.breadcrumbContainerTemplate]:
+                          _.className?.includes("template-carousel"),
+                      }),
+                      children: (0, _.jsx)(_, {
+                        ..._,
+                        nPageSize: _,
+                        children: _.children,
+                      }),
+                    })),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { nPageSize: _ } = _,
+          _ = _.useContext(_._),
+          [_, _] = _.useState(_.state.currentSlide);
+        return (
+          _.useEffect(
+            () =>
+              __webpack_require__.subscribe(() => {
+                _(_.state.currentSlide);
+              }),
+            [_],
+          ),
+          (0, _.jsx)(_.Fragment, {
+            children: _.Children.map(_.children, (_, _) => {
+              if (_ % _ !== 0) return null;
+              const _ = _ >= _ && _ < _ + _;
+              return (0, _.jsx)(
+                _._,
+                {
+                  slide: _,
+                  className: _.pip,
+                  children: (0, _.jsx)(_._, {
+                    ..._,
+                    bIsActive: _,
+                  }),
+                },
+                _,
+              );
+            }),
+          })
+        );
+      }
+      function _(_) {
+        _ && (window.clearTimeout(_.current), (_.current = null));
+      }
+      function _(_) {
+        const {
+            bHideArrows: _,
+            bAutoAdvance: _,
+            children: _,
+            onSlide: _,
+            arrowFill: _,
+            arrowStyle: _,
+          } = _,
+          _ = _.useContext(_._),
+          _ = _.useRef(_.state.currentSlide),
+          [_, _] = _.useState(null),
+          [_, _] = _.useState(!!_),
+          _ = _.useRef(null),
+          _ = _.useRef(null);
+        _.useEffect(() => {
+          const _ = () => {
+            _.current = window.setTimeout(() => {
+              if (_.current) {
+                _(_);
+                let _ = 0;
+                _.state.currentSlide + _.state.visibleSlides <
+                  _.state.totalSlides &&
+                  (_ = Math.min(
+                    _.state.currentSlide + _.state.visibleSlides,
+                    _.state.totalSlides - _.state.visibleSlides,
+                  )),
+                  _.setStoreState({
+                    currentSlide: _,
+                  });
+              }
+            }, 8e3);
+          };
+          _ && _();
+          const _ = () => {
+            const _ = _.current,
+              _ = _.state.currentSlide;
+            _ && _(_), _(_ > _ ? "Right" : _ < _ ? "Left" : null), _(_);
+            (_.current = window.setTimeout(() => {
+              _.current && (_(null), _(_));
+            }, 1e3)),
+              (_.current = _),
+              _.current ? (_(_), _(!1)) : _ && _();
+          };
+          return (
+            _.subscribe(_),
+            () => {
+              _.unsubscribe(_), _(_), _(_);
+            }
+          );
+        }, [_, _]);
+        const _ = !!_ && "CarouselSliding" + _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_.sliderBody, "SliderBody", _),
+          children: [
+            !_ &&
+              (0, _.jsx)(_._, {
+                className: (0, _._)(
+                  _.carouselBtnCtn,
+                  _.left,
+                  _.carouselNavButton,
+                  "CarouselBtnLeft",
+                ),
+                "aria-label": (0, _._)("#Carousel_Prev"),
+                children: (0, _.jsx)(_._, {
+                  arrowFill: _,
+                  arrowStyle: _,
+                  direction: "left",
+                }),
+              }),
+            (0, _.jsx)(_._, {
+              className: _._.GetScrollableClassname(),
+              classNameTray: _.slideTrayCustomize,
+              classNameAnimation: _.DisableSliderMotion,
+              role: "list",
+              children: (0, _.jsx)(_._, {
+                children: _,
+              }),
+            }),
+            !_ &&
+              (0, _.jsx)(_._, {
+                className: (0, _._)(
+                  _.carouselBtnCtn,
+                  _.right,
+                  _.carouselNavButton,
+                  "CarouselBtnRight",
+                ),
+                "aria-label": (0, _._)("#Carousel_Next"),
+                children: (0, _.jsx)(_._, {
+                  arrowFill: _,
+                  arrowStyle: _,
+                  direction: "right",
+                }),
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        state = {
+          bRenderChildren: !1,
+          nPrevRenderWidth: 0,
+          nPrevRenderHeight: 0,
+        };
+        m_refContainer = _.createRef();
+        BLoadAndUnload() {
+          return "LoadAndUnload" == (this.props.mode || "JustLoad");
+        }
+        OnVisibilityChange(_) {
+          let _ = this.state.bRenderChildren;
+          if (_ == _) return;
+          if (_ && !this.BLoadAndUnload()) return;
+          let _ = 0,
+            _ = 0;
+          if (this.m_refContainer.current) {
+            const _ = this.m_refContainer.current.GetBoundingClientRect();
+            _ && ((_ = _.width), (_ = _.height));
+          }
+          this.setState({
+            bRenderChildren: _,
+            nPrevRenderWidth: _,
+            nPrevRenderHeight: _,
+          }),
+            _ && this.props.onRender && this.props.onRender();
+        }
+        render() {
+          const {
+              placeholderWidth: _,
+              placeholderHeight: _,
+              holdGampadFocus: _,
+              onRender: _,
+              style: _,
+              mode: _,
+              ..._
+            } = this.props,
+            _ = this.state.bRenderChildren;
+          let _ = _;
+          if (!_) {
+            const _ = this.state.nPrevRenderWidth || _,
+              _ = this.state.nPrevRenderHeight || _;
+            (void 0 === _ && void 0 === _) ||
+              (_ = {
+                ..._,
+                minHeight: _,
+                minWidth: _,
+              });
+          }
+          const _ = this.BLoadAndUnload() ? "repeated" : "once";
+          let _ = (0, _.jsx)(_._, {
+            ref: this.m_refContainer,
+            style: _,
+            ..._,
+            onVisibilityChange: this.OnVisibilityChange,
+            trigger: _,
+            children: _ && this.props.children,
+          });
+          return (
+            _ &&
+              (_ = (0, _.jsx)(_._, {
+                focusableIfEmpty: !0,
+                children: _,
+              })),
+            _
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnVisibilityChange", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _,
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.k_ECutArrowStyle = "single"),
+          (_.k_EDoubleArrowStyle = "double"),
+          (_.k_EThickChevron = "chevron"),
+          (_.k_EFilledArrow = "filled"),
+          (_.k_EPointyArrow = "pointy");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EPillCrumb = "pill"),
+            (_.k_ECircularCrumb = "circle"),
+            (_.k_ESquareCrumb = "square");
+        })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
+        switch (_) {
+          default:
+          case _.k_ECutArrowStyle: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.uMb, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EDoubleArrowStyle: {
+            const _ = "right" == _ ? 180 : 0;
+            return (0, _.jsx)(_.F2T, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EThickChevron: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.l8x, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EFilledArrow: {
+            const _ = "right" == _ ? 90 : 270;
+            return (0, _.jsx)(_.V5W, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EPointyArrow:
+            return (0, _.jsx)(_.L0X, {
+              fill: _ || "white",
+              role: "presentation",
+              direction: _ || "left",
+            });
+        }
+      }
+      function _(_) {
+        const {
+            bIsActive: _,
+            breadcrumbActiveColor: _,
+            breadcrumbColor: _,
+            breadcrumbStyle: _,
+          } = _,
+          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
+        switch (_) {
+          default:
+          case _.k_EPillCrumb:
+            return (0, _.jsx)(_.IGf, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ECircularCrumb:
+            return (0, _.jsx)(_.az8, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ESquareCrumb:
+            return (0, _.jsx)(_.koA, {
+              fill: _,
+              role: "presentation",
+            });
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Component {
+        static GetScrollableClassname() {
+          return "vt-scrollable";
+        }
+        m_observer = null;
+        m_refElement = _.createRef();
+        m_elTracked = null;
+        m_bPreviouslyIntersecting = !1;
+        BTriggerOnce() {
+          return "once" == (this.props.trigger || "once");
+        }
+        GetBoundingClientRect() {
+          return this.m_refElement.current
+            ? this.m_refElement.current.getBoundingClientRect()
+            : null;
+        }
+        DestroyObserver() {
+          this.m_observer &&
+            (this.m_observer.disconnect(),
+            (this.m_observer = null),
+            (this.m_elTracked = null));
+        }
+        componentWillUnmount() {
+          this.DestroyObserver();
+        }
+        componentDidMount() {
+          this.UpdateObserver(null);
+        }
+        componentDidUpdate(_) {
+          this.UpdateObserver(_);
+        }
+        UpdateObserver(_) {
+          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
+          this.m_observer &&
+            _ &&
+            (_.rootMargin != this.m_observer.rootMargin ||
+              _.thresholds != this.m_observer.thresholds) &&
+            this.DestroyObserver();
+          let _ = this.m_refElement.current;
+          if (
+            (this.m_observer &&
+              _ != this.m_elTracked &&
+              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
+              (this.m_elTracked = null)),
+            !this.m_observer && _)
+          ) {
+            let _ = {
+              root: this.FindScrollableAncestor(_),
+            };
+            this.props.rootMargin && (_.rootMargin = this.props.rootMargin),
+              this.props.thresholds && (_.threshold = this.props.thresholds),
+              (this.m_observer = (0, _._)(_, this.OnIntersection, _));
+          }
+          this.m_observer &&
+            _ &&
+            _ != this.m_elTracked &&
+            (this.m_observer.observe(_), (this.m_elTracked = _));
+        }
+        FindScrollableAncestor(_) {
+          return _._(_, (_) => {
+            const _ = this.props.horizontal
+              ? window.getComputedStyle(_).overflowX
+              : window.getComputedStyle(_).overflowY;
+            return (
+              "scroll" == _ ||
+              "auto" == _ ||
+              !!_.classList.contains(_.GetScrollableClassname())
+            );
+          });
+        }
+        OnIntersection(_, _) {
+          let _ = !1;
+          for (const _ of _)
+            if (_.isIntersecting) {
+              _ = !0;
+              break;
+            }
+          this.m_bPreviouslyIntersecting != _ &&
+            ((this.m_bPreviouslyIntersecting = _),
+            this.props.onVisibilityChange && this.props.onVisibilityChange(_),
+            _ && this.BTriggerOnce() && this.DestroyObserver());
+        }
+        render() {
+          let {
+            onVisibilityChange: _,
+            rootMargin: _,
+            trigger: _,
+            horizontal: _,
+            ..._
+          } = this.props;
+          return (0, _.jsx)("div", {
+            ref: this.m_refElement,
+            ..._,
+            children: this.props.children,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -131,1077 +1047,360 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
-          {
-            value: _,
-            onTextChange: _,
-            onTextClear: _,
-            clearable: _,
-            onChange: _,
-            radius: _,
-            variant: _,
-            size: _,
-            beforeContent: _,
-            afterContent: _,
-            inputRef: _,
-            ref: _,
-            disabled: _,
-            ..._
-          } = __webpack_require__,
-          _ = {
-            ..._,
-            variant: _,
-            size: _,
-            radius: _,
-            beforeContent: _,
-            afterContent:
-              _ && _
-                ? (0, _.jsx)(_._, {
-                    onClick: () => {
-                      _(""), _ && _();
+      const _ = {
+        name: "personalcalendarPrefs",
+        options: {
+          path: "/personalcalendar",
+          secure: !0,
+          maxAge: 31536e6,
+        },
+        preferenceControls: {
+          isTechnicallyNecessary: !0,
+        },
+      };
+      var _;
+      function _() {
+        const _ = (0, _._)(_),
+          _ = _ ? JSON.parse(_) : void 0,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useCallback)((_) => _(_), []),
+          _ = (0, _._)(0, 14, 21),
+          _ = (0, _._)(14, 21, !0, !0).flat(),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
+          _ = (0, _.useCallback)(() => {
+            window.location.href = _;
+          }, [_]);
+        if (!_.data)
+          return (0, _.jsx)(_._, {
+            className: _.PersonalCalendarWidget,
+          });
+        let _ = _.data.arrAppInfos;
+        return (
+          _ &&
+            ((_ = _.filter((_) => !_.bHideOwned || !_.bIsOwned)),
+            (_ = _.filter((_) => !_.bHideEarlyAccess || !_.bIsEarlyAccess)),
+            (_ = _.filter((_) => {
+              switch (_.eWishlistDisplay) {
+                case _.Show:
+                  return !0;
+                case _.Only:
+                  return _.bIsWishlisted;
+                case _.Hide:
+                  return !_.bIsWishlisted;
+              }
+            }))),
+          (0, _.jsxs)(_._, {
+            className: _.PersonalCalendarWidget,
+            navEntryPreferPosition: _._.PREFERRED_CHILD,
+            onFocusWithin: _,
+            onOptionsButton: _,
+            children: [
+              (0, _.jsxs)("div", {
+                className: "title_grid",
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: "home_section_title",
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _.NewBadge,
+                        children: (0, _._)("#NewBadge"),
+                      }),
+                      (0, _._)("#PersonalCalendar_Title"),
+                    ],
+                  }),
+                  (0, _.jsx)("div", {
+                    className: "home_section_subtitle",
+                    children: (0, _._)("#PersonalCalendar_Subtitle"),
+                  }),
+                  !_ &&
+                    (0, _.jsx)(_, {
+                      calendarURL: _,
+                      location: "desktop",
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                visibleElements: 5,
+                hideArrows: !1,
+                disableEdgeWrap: !0,
+                hidePips: _,
+                bPreventSnapCarousel: !(0, _._)(),
+                startingSlide: 10,
+                className: _ ? void 0 : "fiveElementEightGap",
+                children: _.map((_, _) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      bInitialFocus: 10 === _,
+                      nTimestamp: _,
+                      nNextTimestamp: _ < _.length - 1 ? _[_ + 1] : _ + 86400,
+                      arrAppInfos: _,
+                      nRankThreshold: _?.nResultsToShow,
                     },
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : _,
-            ref: _,
-            disabled: _,
-          },
-          _ = (0, _.useRef)(null);
-        return (0, _.jsx)(_._, {
-          cursor: "text",
-          ..._,
-          onClick: (_) => {
-            _.current && _.target !== _.current && _.current.focus();
-          },
-          children: (0, _.jsx)("input", {
-            ref: (0, _._)(_, _),
-            type: "text",
-            ..._,
-            "aria-disabled": _,
-            readOnly: _,
-            className: _()(_.Reset, _.TextEntry),
-            value: _ || "",
-            onChange: (_) => {
-              _ || (_(_.target.value), _ && _(_));
-            },
+                    _,
+                  ),
+                ),
+              }),
+              !_ &&
+                (0, _.jsx)(_, {
+                  calendarURL: _,
+                  location: "mobile",
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  focusWithin: _,
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { calendarURL: _, location: _ } = _,
+          _ = "mobile" == _ ? "see_more_mobile" : "see_more_desktop";
+        return (0, _.jsx)("div", {
+          className: `see_more_link ${_} home_section_button`,
+          children: (0, _.jsx)("a", {
+            href: _,
+            className: "btn_small btn_medium btnv6_white_transparent",
+            children: (0, _.jsx)("span", {
+              children: (0, _._)("#PersonalCalendar_Full"),
+            }),
           }),
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = Object.assign(
-          function (_) {
-            const {
-                suggestions: _,
-                onTextChange: __webpack_require__,
-                onSuggestionSelected: _,
-                clearable: _,
-                ..._
-              } = _,
-              _ = (function (_) {
-                const {
-                    onTextChange: _,
-                    suggestions: __webpack_require__,
-                    onSuggestionSelected: _,
-                  } = _,
-                  [_, _] = (0, _.useState)(null),
-                  [_, _] = (0, _.useState)(!1),
-                  _ = (0, _.useCallback)(
-                    (_) => {
-                      _ ? (_(!0), _(null)) : _(!1), _(_);
-                    },
-                    [_],
-                  );
-                return {
-                  activeIndex: _,
-                  setActiveIndex: _,
-                  open: _,
-                  onOpenChange: _,
-                  onTextChange: _,
-                  suggestions: __webpack_require__,
-                  onSuggestionSelected: _,
-                };
-              })({
-                onTextChange: __webpack_require__,
-                suggestions: _,
-                onSuggestionSelected: _,
-              }),
-              _ =
-                _.value && _
-                  ? (0, _.jsx)(_._, {
-                      onClick: () => _.onTextChange(""),
-                      cursor: "pointer",
-                      hitSlop: !0,
-                    })
-                  : void 0;
-            return (0, _.jsxs)(_.Root, {
-              state: _,
-              children: [
-                (0, _.jsx)(_.TextInput, {
-                  ..._,
-                  afterContent: _,
-                }),
-                (0, _.jsx)(_.Suggestions, {
-                  children: _.map((_, _) =>
-                    (0, _.jsx)(
-                      _.Suggestion,
-                      {
-                        value: _,
-                        children: _,
-                      },
-                      _ + _,
-                    ),
-                  ),
-                }),
-              ],
-            });
-          },
-          {
-            Root: function (_) {
-              const {
-                  children: _,
-                  placement: __webpack_require__ = "bottom-end",
-                  popoverWidth: _ = "dropdown",
-                  ..._
-                } = _,
-                _ = (0, _._)({
-                  ..._.state,
-                  width: _,
-                  placement: __webpack_require__,
-                  gutter: "4",
-                  interactions: {
-                    virtualItemFocus: !0,
-                    focus: !0,
-                  },
-                  role: "combobox",
-                  scroll: !0,
-                });
-              return (0, _.jsx)(_.Provider, {
-                value: _,
-                children: (0, _.jsx)(_._.Root, {
-                  state: _,
-                  children: _,
-                }),
-              });
-            },
-            TextInput: function (_) {
-              const {
-                  state: {
-                    onTextChange: _,
-                    activeIndex: __webpack_require__,
-                    onOpenChange: _,
-                    setActiveIndex: _,
-                    suggestions: _,
-                    onSuggestionSelected: _,
-                  },
-                } = _("<Autocomplete.TextInput>"),
-                _ = (0, _.useRef)(null);
-              return (0, _.jsx)(_._.Anchor, {
-                children: (0, _.jsx)(_, {
-                  ..._,
-                  inputRef: _,
-                  onTextChange: _,
-                  "aria-autocomplete": "list",
-                  onKeyDown: (_) => {
-                    "Enter" === _.key &&
-                      null !== __webpack_require__ &&
-                      _[__webpack_require__] &&
-                      (_ && _(_[__webpack_require__], _),
-                      _.defaultPrevented || _(_[__webpack_require__]),
-                      _(null),
-                      _(!1),
-                      _.preventDefault(),
-                      _.stopPropagation());
-                  },
-                  onKeyDownCapture: (_) => {
-                    ("Home" !== _.key && "End" !== _.key) ||
-                      _.stopPropagation();
-                  },
-                  role: "combobox",
-                }),
-              });
-            },
-            Suggestions: function (_) {
-              return (0, _.jsx)(_._.Positioner, {
-                ..._,
-                returnFocus: !1,
-              });
-            },
-            Suggestion: function (_) {
-              const { value: _, children: __webpack_require__, ..._ } = _,
-                {
-                  state: {
-                    onTextChange: _,
-                    onOpenChange: _,
-                    setActiveIndex: _,
-                    onSuggestionSelected: _,
-                  },
-                } = _("<Autocomplete.TextInput>");
-              return (0, _.jsx)(_._.Item, {
-                onSelect: (_) => {
-                  _ && _(_, _), _.defaultPrevented || _(_), _(null), _(!1);
-                },
-                ..._,
-                children: __webpack_require__,
-              });
-            },
-          },
-        ),
-        _ = (0, _.createContext)(null);
       function _(_) {
-        const _ = (0, _.useContext)(_);
-        return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
+        const { focusWithin: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)("see_more_gamepad_hint", _ && "hover_active"),
+          children: [
+            (0, _.jsx)("img", {
+              src: `${_._.IMG_URL}ico_gamepad/shared_button_y.svg`,
+            }),
+            (0, _.jsx)("div", {
+              children: (0, _._)("#PersonalCalendar_Full"),
+            }),
+          ],
+        });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "PC_HideOwned",
-        _ = "PC_HideEarlyAccess",
-        _ = "PC_GameCount",
-        _ = "PC_WishlistedDisplay";
-      var _;
+      function _(_) {
+        const {
+            nTimestamp: _,
+            nNextTimestamp: _,
+            bInitialFocus: _,
+            arrAppInfos: _,
+            nRankThreshold: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
+          _ = new Date(1e3 * _),
+          _ = new Date(),
+          _ =
+            _.getDate() === _.getDate() &&
+            _.getMonth() === _.getMonth() &&
+            _.getFullYear() === _.getFullYear(),
+          _ = _.toLocaleDateString((0, _._)(), {
+            weekday: "short",
+          }),
+          _ = _.toLocaleString((0, _._)(), {
+            day: "numeric",
+            month: "numeric",
+          }),
+          _ = _.filter((_) => _.nReleaseDate > _ && _.nReleaseDate < _),
+          _ = _ ?? 100,
+          _ = _.filter((_) => _.nRank <= _).length - 2,
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(),
+          _ = _.useRef(null);
+        return (
+          _.useEffect(() => {
+            if (_ && _ && _.current) {
+              const _ = _.current.closest(".carousel__slide"),
+                _ = _.current.closest(".carousel__slider-tray-wrapper");
+              _ && _ && (_.scrollLeft = _.offsetLeft);
+            }
+          }, [_, _]),
+          (0, _.jsxs)(_._, {
+            className: (0, _._)(_.PersonalCalendarWidgetDay, _ && _.TodayCtn),
+            "flow-children": "column",
+            children: [
+              (0, _.jsxs)("div", {
+                className: _.DayTitle,
+                children: [
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _.DayOfWeek,
+                      children: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)("div", {
+                      className: _.Date,
+                      children: _,
+                    }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.Today,
+                      children: (0, _._)("#Time_Today"),
+                    }),
+                ],
+              }),
+              (0, _.jsx)(_._, {
+                className: _.DayAppContainer,
+                "flow-children": "column",
+                navEntryPreferPosition: _._.MAINTAIN_Y,
+                preferredFocus: _ && !_,
+                ref: _,
+                onFocusWithin: () => _(!0),
+                children: _.slice(0, 2).map((_) =>
+                  (0, _.jsx)(
+                    _,
+                    {
+                      nAppID: _.nAppID,
+                    },
+                    _.nAppID,
+                  ),
+                ),
+              }),
+              !_ &&
+                _ > 0 &&
+                (0, _.jsx)(_._, {
+                  href: _,
+                  className: _.MoreGames,
+                  children: (0, _._)("#PersonalCalendar_More", _),
+                }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)({
+            appid: _.nAppID,
+          }),
+          _ = (0, _._)(_.data, (0, _._)() ? "hero_capsule" : "main_capsule"),
+          [_, _] = _.useState(!1),
+          _ = _.useRef(null),
+          { data: _ } = (0, _._)(),
+          _ = _?.preferences?.disable_microtrailers;
+        return (
+          _.useEffect(() => {
+            if (
+              (_.current.setAttribute(
+                "data-ds-appid",
+                _.nAppID.toString() ?? "",
+              ),
+              window.GDynamicStore && window._)
+            ) {
+              const _ = window._(_.current);
+              window.GDynamicStore.DecorateDynamicItems(_);
+            }
+          }, [_.nAppID, _]),
+          (0, _.jsx)(_._, {
+            controller: "personalcalendar",
+            feature: "personalcalendar-homepage",
+            children: (0, _.jsx)(_._, {
+              _: {
+                appid: _.nAppID,
+              },
+              hoverClassName: _.StoreAppHover,
+              disableScreenshots: !0,
+              children: (0, _.jsxs)(_._, {
+                ref: _,
+                className: (0, _._)(_.StoreAppCapsule, _ && _.Hovered),
+                onMouseOver: () => _(!0),
+                onMouseOut: () => _(!1),
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.Image,
+                    src: _,
+                  }),
+                  _ &&
+                    _ &&
+                    (0, _.jsx)(_, {
+                      _: {
+                        appid: _.nAppID,
+                      },
+                      nIntervalMS: 1e3,
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      _: {
+                        appid: _.nAppID,
+                      },
+                      active: _,
+                      bIsHoverMode: !0,
+                    }),
+                ],
+              }),
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(_._),
+          [_, _] = _.useState(0);
+        return (
+          (0, _._)(() => {
+            _.length > 0 && _((_ + 1) % _.length);
+          }, _.nIntervalMS),
+          _?.length && -1 != _
+            ? (0, _.jsx)("div", {
+                className: _.ScreenshotCycler,
+                children: _.map((_, _) =>
+                  (0, _.jsx)(
+                    "img",
+                    {
+                      className: (0, _._)(_.Screenshot, _ == _ && _.Active),
+                      src:
+                        _._.BASE_URL_SHARED_CDN +
+                        "/store_item_assets/" +
+                        _.filename,
+                    },
+                    _.filename,
+                  ),
+                ),
+              })
+            : null
+        );
+      }
+      function _() {
+        return _._.logged_in
+          ? (0, _.jsx)(_._, {
+              placeholderHeight: 408,
+              rootMargin: "0px 0px 100% 0px",
+              children: (0, _.jsx)(_, {}),
+            })
+          : null;
+      }
       !(function (_) {
         (_[(_.Show = 0)] = "Show"),
           (_[(_.Only = 1)] = "Only"),
           (_[(_.Hide = 2)] = "Hide");
       })(_ || (_ = {}));
-      const _ = {
-        selectedTag: 0,
-        bHideOwned: "1" == localStorage.getItem(_),
-        bHideEarlyAccess: "1" == localStorage.getItem(_),
-        cResultsToShow: parseInt(localStorage.getItem(_) ?? "100"),
-        wishlistDisplay: parseInt(localStorage.getItem(_) ?? "0"),
-      };
-      function _(_) {
-        const { count: _ } = _;
-        return (0, _.jsxs)(_._, {
-          className: _.PersonalCalendarHeader,
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.PersonalCalendarTitle,
-              children: (0, _._)("#PersonalCalendar_Title"),
-            }),
-            "number" == typeof _ &&
-              (0, _.jsx)(_._, {
-                className: _.PersonalCalendarDescription,
-                children: (0, _._)("#PersonalCalendar_Description", _),
-              }),
-          ],
-        });
-      }
-      function _() {
-        return (0, _.jsxs)(_._, {
-          className: _.PersonalCalendarLoginPrompt,
-          children: [
-            (0, _._)("#PersonalCalendar_LoginPrompt"),
-            (0, _.jsx)("button", {
-              onClick: _._,
-              className: _.LoginButton,
-              children: (0, _._)("#Login_SignIn"),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-          state: _,
-          onChange: __webpack_require__,
-          tagMap: _,
-          userTags: _,
-          maxResultsToShow: _,
-        } = _;
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.SteamLabsBanner,
-              children: (0, _._)(
-                "#PersonalCalendar_SteamLabs",
-                (0, _.jsx)("a", {
-                  href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
-                }),
-              ),
-            }),
-            (0, _.jsxs)(_._, {
-              className: _.Options,
-              children: [
-                (0, _.jsx)(_, {
-                  userTags: _,
-                  tagMap: _,
-                  selectedTag: _.selectedTag,
-                  onChange: (_) =>
-                    __webpack_require__({
-                      ..._,
-                      selectedTag: _,
-                    }),
-                }),
-                (0, _.jsx)(_, {
-                  count: _.cResultsToShow,
-                  onChange: (_) => {
-                    localStorage.setItem(_, _.toString()),
-                      __webpack_require__({
-                        ..._,
-                        cResultsToShow: _,
-                      });
-                  },
-                  max: _,
-                }),
-                (0, _.jsx)(_, {
-                  wishlistDisplay: _.wishlistDisplay,
-                  onChange: (_) => {
-                    localStorage.setItem(_, _.toString()),
-                      __webpack_require__({
-                        ..._,
-                        wishlistDisplay: _,
-                      });
-                  },
-                  disabled: !_.usesWishlists,
-                }),
-                (0, _.jsxs)(_._, {
-                  className: _.HideOwnedSelector,
-                  children: [
-                    (0, _.jsx)(_._, {
-                      checked: _.bHideOwned,
-                      onChange: (_) => {
-                        localStorage.setItem(_, _ ? "1" : "0"),
-                          __webpack_require__({
-                            ..._,
-                            bHideOwned: _,
-                          });
-                      },
-                      children: (0, _._)("#PersonalCalendar_HideOwned"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      checked: _.bHideEarlyAccess,
-                      onChange: (_) => {
-                        localStorage.setItem(_, _ ? "1" : "0"),
-                          __webpack_require__({
-                            ..._,
-                            bHideEarlyAccess: _,
-                          });
-                      },
-                      "data-tooltip-text": (0, _._)(
-                        "#PersonalCalendar_HideEATooltip",
-                      ),
-                      children: (0, _._)("#PersonalCalendar_HideEarlyAccess"),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            userTags: _,
-            tagMap: __webpack_require__,
-            selectedTag: _,
-            onChange: _,
-          } = _,
-          [_, _] = _.useState(""),
-          { tagStrings: _, tagStringMap: _ } = _.useMemo(() => {
-            const _ = [],
-              _ = new Map();
-            for (const [_, _] of Object.entries(__webpack_require__ ?? {})) {
-              const _ = Number(_);
-              _.push({
-                tagID: _,
-                tagName: _,
-              }),
-                _.set(_.toLocaleLowerCase(), _);
-            }
-            _.sort((_, _) => _?.indexOf(_.tagID) - _?.indexOf(_.tagID));
-            return {
-              tagStrings: _.filter((_) =>
-                _.tagName.toLocaleLowerCase().startsWith(_.toLocaleLowerCase()),
-              )
-                .map((_) => _.tagName)
-                .slice(0, 20),
-              tagStringMap: _,
-            };
-          }, [__webpack_require__, _, _]);
-        return (0, _.jsxs)(_._, {
-          className: _.TagSelector,
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.Title,
-              children: (0, _._)("#PersonalCalendar_TagSelector"),
-            }),
-            (0, _.jsx)(_, {
-              suggestions: _,
-              onSuggestionSelected: (_) =>
-                ((_) => {
-                  _(_?.get(_.toLocaleLowerCase()) ?? 0);
-                })(_),
-              value: _,
-              onTextChange: (_) =>
-                ((_) => {
-                  "" === _.trim() && _
-                    ? _(0)
-                    : _.has(_.toLocaleLowerCase()) &&
-                      _(_.get(_.toLocaleLowerCase())),
-                    _(_);
-                })(_),
-              clearable: !0,
-              placeholder: (0, _._)(
-                "#PersonalCalendar_TagSelector_Placeholder",
-              ),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { count: _, onChange: __webpack_require__, max: _ } = _,
-          _ = [10, 25, 50, 100, 250, 500];
-        let _ = [];
-        _ &&
-          ((_ = _.filter((_) => _ < _)),
-          _.length != _.length && _.push(_),
-          _.includes(_) ||
-            (_.includes(100)
-              ? __webpack_require__("chunkid")
-              : __webpack_require__(_[_.length - 1])));
-        const _ = _.map((_) => _.toString());
-        return (0, _.jsxs)(_._, {
-          className: _.ResultCountSelector,
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.Title,
-              children: (0, _._)("#PersonalCalendar_ResultCountSelector"),
-            }),
-            (0, _.jsx)(_._, {
-              options: _,
-              value: _.toString(),
-              onValueChange: (_) => __webpack_require__(parseInt(_)),
-              radius: "sm",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { wishlistDisplay: _, onChange: __webpack_require__ } = _,
-          _ = (_) => {
-            switch (_) {
-              case _.Show:
-                return (0, _._)("#PersonalCalendar_WishlistShow");
-              case _.Hide:
-                return (0, _._)("#PersonalCalendar_WishlistHide");
-              case _.Only:
-                return (0, _._)("#PersonalCalendar_WishlistOnly");
-            }
-          },
-          _ = [_(_.Show), _(_.Hide), _(_.Only)];
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)(_.ResultCountSelector, _.disabled && _.Disabled),
-          "data-tooltip-text": _.disabled
-            ? (0, _._)("#PersonalCalendar_IgnoringWishlists")
-            : void 0,
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.Title,
-              children: (0, _._)("#PersonalCalendar_Wishlisted"),
-            }),
-            (0, _.jsx)(_._, {
-              options: _,
-              value: _(_),
-              onValueChange: (_) =>
-                _.disabled
-                  ? () => {}
-                  : __webpack_require__(
-                      ((_) => {
-                        switch (_) {
-                          case (0, _._)("#PersonalCalendar_WishlistShow"):
-                            return _.Show;
-                          case (0, _._)("#PersonalCalendar_WishlistHide"):
-                            return _.Hide;
-                          case (0, _._)("#PersonalCalendar_WishlistOnly"):
-                            return _.Only;
-                        }
-                        return _.Show;
-                      })(_),
-                    ),
-              radius: "sm",
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { games: _ } = _,
-          _ =
-            (0, _._)(() =>
-              _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [];
-        return (0, _.jsx)(_._, {
-          controller: "personalcalendar",
-          method: "default",
-          feature: "lastmonth",
-          children: (0, _.jsxs)(_._, {
-            className: _.PersonalCalendarSection,
-            children: [
-              (0, _.jsx)(_._, {
-                className: _.SectionHeader,
-                children: (0, _._)("#PersonalCalendar_LastMonthGames"),
-              }),
-              (0, _.jsx)(_._, {
-                className: (0, _._)(_.GameList, _.Month),
-                children: __webpack_require__.slice(0, 16).map((_) =>
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      className: _.AppEntry,
-                      children: (0, _.jsx)(_._, {
-                        capsule: {
-                          _: _.appid,
-                        },
-                        imageType: "header",
-                        bShowEarlyAccessBanner: !1,
-                        bShowIgnoreButton: !0,
-                        bShowDescriptionInHover: !0,
-                        bPreferAssetWithoutOverride: !1,
-                      }),
-                    },
-                    _.appid,
-                  ),
-                ),
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const { games: _ } = _,
-          _ =
-            (0, _._)(() =>
-              _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [];
-        return (0, _.jsx)(_._, {
-          controller: "personalcalendar",
-          method: "default",
-          feature: "lastweek",
-          children: (0, _.jsxs)(_._, {
-            className: _.PersonalCalendarSection,
-            children: [
-              (0, _.jsx)(_._, {
-                className: _.SectionHeader,
-                children: (0, _._)("#PersonalCalendar_LastWeekGames"),
-              }),
-              (0, _.jsx)(_._, {
-                className: (0, _._)(_.GameList, _.Week),
-                children: __webpack_require__.slice(0, 12).map((_) =>
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      className: _.AppEntry,
-                      children: (0, _.jsx)(_._, {
-                        capsule: {
-                          _: _.appid,
-                        },
-                        imageType: "header",
-                        bShowEarlyAccessBanner: !1,
-                        bShowIgnoreButton: !0,
-                        bShowDescriptionInHover: !0,
-                        bPreferAssetWithoutOverride: !1,
-                      }),
-                    },
-                    _.appid,
-                  ),
-                ),
-              }),
-            ],
-          }),
-        });
-      }
-      function _(_) {
-        const {
-            dayWeekTimestamps: _,
-            appReleasesByDay: __webpack_require__,
-            todayTimestamp: _,
-            includeSaturday: _,
-          } = _,
-          [_, _] = _.useState(9999);
-        return (0, _.jsxs)(_._, {
-          controller: "personalcalendar",
-          method: "default",
-          feature: "calendar",
-          children: [
-            (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                _.PersonalCalendarSection,
-                _.Calendar,
-                _ && _.IncludeSaturday,
-              ),
-              children: [
-                (0, _.jsx)(_._, {
-                  className: _.SectionHeader,
-                  children: (0, _._)("#PersonalCalendar_Upcoming"),
-                }),
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(_.Week, _ && _.IncludeSaturday),
-                  children: _?.[0].map((_, _) =>
-                    0 == _
-                      ? null
-                      : _ || 6 != _
-                        ? (0, _.jsx)(
-                            _,
-                            {
-                              timestamp: _,
-                            },
-                            `WeekHeader_${_}`,
-                          )
-                        : null,
-                  ),
-                }),
-                _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      dayTimestamps: _,
-                      appReleasesByDay: __webpack_require__,
-                      todayTimestamp: _,
-                      maxGames: _,
-                      includeSaturday: _,
-                    },
-                    `Week_${_}`,
-                  ),
-                ),
-                9999 != _ &&
-                  (0, _.jsx)(_._, {
-                    className: _.ShowAllButton,
-                    onClick: () => _(9999),
-                    children: (0, _._)("#PersonalCalendar_ShowAll"),
-                  }),
-              ],
-            }),
-            (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                _.PersonalCalendarSection,
-                _.LinearCalendar,
-                _ && _.IncludeSaturday,
-              ),
-              children: [
-                (0, _.jsx)(_._, {
-                  className: _.SectionHeader,
-                  children: (0, _._)("#PersonalCalendar_Upcoming"),
-                }),
-                _.map((_, _) =>
-                  (0, _.jsx)(
-                    _,
-                    {
-                      dayTimestamps: _,
-                      appReleasesByDay: __webpack_require__,
-                      todayTimestamp: _,
-                      maxGames: _,
-                    },
-                    `WeekLinear_${_}`,
-                  ),
-                ),
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
-          _._.GetPreferredLocales(),
-          {
-            weekday: "long",
-          },
-        );
-        return (0, _.jsx)(_._, {
-          className: _.DayOfWeekHeader,
-          children: _,
-        });
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(_.maxGames);
-        if (_.todayTimestamp > Math.max(..._.dayTimestamps)) return null;
-        const _ = _.dayTimestamps
-          ? Math.max(
-              ..._.dayTimestamps.map((_) =>
-                _ < _.dayTimestamps[0]
-                  ? 0
-                  : _.appReleasesByDay[_]
-                    ? _.appReleasesByDay[_].length
-                    : 0,
-              ),
-            )
-          : 0;
-        return (0, _.jsx)(_._, {
-          className: (0, _._)(_.Week, _.includeSaturday && _.IncludeSaturday),
-          children: _.dayTimestamps.map((_, _) =>
-            0 == _
-              ? null
-              : _.includeSaturday || 6 != _
-                ? (0, _.jsx)(
-                    _,
-                    {
-                      timestamp: _,
-                      appsToday: _.appReleasesByDay[_],
-                      firstTimestamp: _.todayTimestamp,
-                      maxGames: Math.max(_.maxGames, _),
-                      setMaxGames: __webpack_require__,
-                      maxNumGamesInWeek: _,
-                    },
-                    _,
-                  )
-                : null,
-          ),
-        });
-      }
-      function _(_) {
-        if (_.todayTimestamp > Math.max(..._.dayTimestamps)) return null;
-        const _ = {
-            month: "long",
-            day: "numeric",
-          },
-          _ = new Date(1e3 * _.dayTimestamps[0]).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            _,
-          ),
-          _ = new Date(1e3 * (_.dayTimestamps[0] + 518400)).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            _,
-          );
-        return (0, _.jsxs)(_._, {
-          className: _.WeekLinear,
-          children: [
-            (0, _.jsxs)(_._, {
-              className: _.LinearHeader,
-              children: [_, " - ", _],
-            }),
-            (0, _.jsx)(_._, {
-              className: _.LinearDayList,
-              children: _.dayTimestamps?.map((_) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    timestamp: _,
-                    appsToday: _.appReleasesByDay[_],
-                    firstTimestamp: _.todayTimestamp,
-                    maxGames: 9999,
-                    setMaxGames: () => null,
-                    maxNumGamesInWeek: 9999,
-                  },
-                  _,
-                ),
-              ),
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            {
-              month: "long",
-              day: "numeric",
-            },
-          ),
-          _ = new Date();
-        __webpack_require__.setHours(0, 0, 0, 0);
-        const _ =
-            Math.floor(__webpack_require__.getTime() / 1e3) == _.timestamp,
-          _ = _.appsToday?.filter((_) => _.wishlisted).length,
-          _ = Math.max(_.maxGames, _),
-          _ = _ == _.appsToday?.length,
-          _ =
-            (0, _._)(() =>
-              _.appsToday?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [],
-          _ =
-            1 == _.maxNumGamesInWeek ||
-            _.appsToday?.length <= Math.floor(_.maxNumGamesInWeek / 2)
-              ? "library"
-              : "main";
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)(_.Day, _ && _.Today),
-          children: [
-            (0, _.jsx)(_._, {
-              className: _.DateHeader,
-              children: _,
-            }),
-            (0, _.jsxs)(_._, {
-              className: _.GameList,
-              children: [
-                _?.map((_, _) =>
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      className: _.CalendarAppEntry,
-                      children: (0, _.jsx)(_._, {
-                        capsule: {
-                          _: _.appid,
-                        },
-                        imageType: _,
-                        nWidthMultiplier: 2,
-                        bShowName: !1,
-                        bHidePlatforms: !0,
-                        bHidePrice: !0,
-                        bShowEarlyAccessBanner: !1,
-                        bShowIgnoreButton: !0,
-                        bShowDescriptionInHover: !0,
-                        bPreferAssetWithoutOverride: !1,
-                      }),
-                    },
-                    _.appid,
-                  ),
-                ),
-                !_ &&
-                  _ < _.appsToday?.length &&
-                  (0, _.jsx)(_._, {
-                    className: _.ShowMoreButton,
-                    onClick: () => _.setMaxGames(_.appsToday.length),
-                    children: (0, _._)(
-                      "#PersonalCalendar_ShowMore",
-                      _.appsToday.length,
-                    ),
-                  }),
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
-            _._.GetPreferredLocales(),
-            {
-              weekday: "long",
-            },
-          ),
-          _ = new Date();
-        __webpack_require__.setHours(0, 0, 0, 0);
-        const _ = Math.floor(__webpack_require__.getTime() / 1e3),
-          _ = _ == _.timestamp,
-          _ =
-            (0, _._)(() =>
-              _.appsToday?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
-            ) ?? [];
-        return _.timestamp < _
-          ? null
-          : (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                _.DayLinear,
-                _ && _.Today,
-                !_.appsToday?.length && _.Empty,
-              ),
-              children: [
-                (0, _.jsx)(_._, {
-                  className: _.DayTitle,
-                  children: _,
-                }),
-                _.appsToday?.length &&
-                  (0, _.jsx)(_._, {
-                    className: _.LinearDayAppList,
-                    children: _?.map((_) =>
-                      (0, _.jsx)(
-                        _._,
-                        {
-                          className: _.LinearCalendarAppEntry,
-                          children: (0, _.jsx)(_._, {
-                            capsule: {
-                              _: _.appid,
-                            },
-                            imageType: "library",
-                            nWidthMultiplier: 2,
-                            bShowName: !1,
-                            bHidePlatforms: !0,
-                            bHidePrice: !0,
-                            bHideStatusBanners: !0,
-                            bShowIgnoreButton: !0,
-                            bShowDescriptionInHover: !0,
-                            bPreferAssetWithoutOverride: !1,
-                          }),
-                        },
-                        _.appid,
-                      ),
-                    ),
-                  }),
-              ],
-            });
-      }
-      const _ = () => {
-        const { data: _ } = (0, _._)(_._.LANGUAGE),
-          [_, __webpack_require__] = _.useState(_),
-          _ = (0, _._)(_.selectedTag, 500, 30, 60, !0),
-          {
-            maxResultCount: _,
-            dayWeekTimestamps: _,
-            appReleasesByDay: _,
-            userTags: _,
-            usesWishlists: _,
-          } = _.data || {},
-          _ = new Date();
-        _.setHours(0, 0, 0, 0);
-        const _ = Math.floor(_.getTime() / 1e3),
-          _ = new Date();
-        _.setDate(_.getDate() - 7);
-        const _ = Math.floor(_.getTime() / 1e3),
-          {
-            appReleasesByDayFiltered: _,
-            lastMonthGames: _,
-            lastWeekGames: _,
-            includeSaturday: _,
-          } = _.useMemo(() => {
-            if (!_)
-              return {
-                appReleasesByDayFiltered: [],
-                lastMonthGames: [],
-                lastWeekGames: [],
-              };
-            const _ = _?.flat() ?? [];
-            const _ = (function (_, _, _, _, _) {
-                const _ = Object.entries(_).map(
-                  ([_, _]) => (
-                    (_ = _.filter((_) => _.rank < _)),
-                    _ && (_ = _.filter((_) => !_.owned)),
-                    _ &&
-                      (_ = _.filter(
-                        (_) => !_.earlyaccess || _.fromearlyaccess,
-                      )),
-                    _ != _.Show &&
-                      (_ = _.filter((_) => {
-                        switch (_) {
-                          case _.Hide:
-                            return !_.wishlisted;
-                          case _.Only:
-                            return _.wishlisted;
-                        }
-                      })),
-                    [_, _]
-                  ),
-                );
-                return Object.fromEntries(_);
-              })(
-                _,
-                _.cResultsToShow,
-                _.bHideOwned,
-                _.bHideEarlyAccess,
-                _.wishlistDisplay,
-              ),
-              _ = _.filter((_, _) => _ % 7 == 6);
-            let _ = 0;
-            for (const _ of _) _ < _ || (_ += _[_]?.length ?? 0);
-            const _ = _ >= 3;
-            for (let _ = 0; _ < _.length; _ += 1) {
-              if (_ % 7 == 0 && _[_[_]]?.length > 0) {
-                const _ = _[_ + 1];
-                _ < _.length - 1 &&
-                  (_[_] || (_[_] = []), _[_].push(..._[_[_]]), (_[_[_]] = []));
-              }
-              if (_ % 7 == 6 && !_ && _[_[_]]?.length > 0) {
-                const _ = _[_ + 2];
-                _ < _.length - 2 &&
-                  (_[_] || (_[_] = []), _[_].push(..._[_[_]]), (_[_[_]] = []));
-              }
-            }
-            const _ = [],
-              _ = [];
-            for (const _ of _)
-              _ <= _ &&
-                (_ < _ ? _.push(...(_?.[_] ?? [])) : _.push(...(_?.[_] ?? [])));
-            return (
-              _.sort((_, _) => _.rank - _.rank),
-              _.sort((_, _) => _.rank - _.rank),
-              {
-                appReleasesByDayFiltered: _,
-                lastMonthGames: _,
-                lastWeekGames: _,
-                includeSaturday: _,
-              }
-            );
-          }, [
-            _,
-            _.cResultsToShow,
-            _.bHideOwned,
-            _.wishlistDisplay,
-            _.bHideEarlyAccess,
-            _,
-            _,
-            _,
-          ]);
-        return _.data && !_._.logged_in
-          ? (0, _.jsxs)(_._, {
-              className: _.PersonalCalendarLoginPrompt,
-              children: [
-                (0, _.jsx)(_._, {
-                  className: _.Text,
-                  children: (0, _._)("#PersonalCalendar_LoginPrompt"),
-                }),
-                (0, _.jsx)(_._, {
-                  className: (0, _._)(_.LoginButton),
-                  onClick: _._,
-                  children: (0, _.jsx)("span", {
-                    children: (0, _._)("#LoginButton"),
-                  }),
-                }),
-              ],
-            })
-          : (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_._, {
-                className: (0, _._)(
-                  _.PersonalCalendarApp,
-                  _.isFetching && _.Refreshing,
-                ),
-                children: (0, _.jsxs)(_._, {
-                  className: _.PersonalCalendarContainer,
-                  children: [
-                    (0, _.jsx)(_, {
-                      count: _.data ? _.cResultsToShow : void 0,
-                    }),
-                    !_._.steamid && (0, _.jsx)(_, {}),
-                    _.data &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)(_, {
-                            state: _,
-                            onChange: __webpack_require__,
-                            tagMap: _,
-                            userTags: _,
-                            maxResultsToShow: _,
-                            usesWishlists: _,
-                          }),
-                          _.length > 0 &&
-                            (0, _.jsx)(_, {
-                              games: _,
-                              includeSaturday: _,
-                            }),
-                          _.length > 0 &&
-                            (0, _.jsx)(_, {
-                              games: _,
-                              includeSaturday: _,
-                            }),
-                          (0, _.jsx)(_, {
-                            dayWeekTimestamps: _,
-                            appReleasesByDay: _,
-                            todayTimestamp: _,
-                            includeSaturday: _,
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-              }),
-            });
-      };
     },
   },
 ]);

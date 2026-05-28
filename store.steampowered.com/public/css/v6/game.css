@@ -2838,7 +2838,7 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	padding: 0px;
 	color: #556772;
 	line-height: 18px;
-	z-index: 10;
+	z-index: 35;
 	left: 0px;
 	margin-top: -4px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.75);

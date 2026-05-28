@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "僅限 Valve",
     "moderation_escalationlevel_supervisor_desc": "需要督察",
+    "moderation_escalation_escalationnote": "升級處理註記：",
     "moderation_chatmetadata_deleted": "與此聊天檢舉相關聯的中繼資料已因時間過久而移除。此資料僅保留約 21 天。",
     "moderation_chatmetadata_futurelogcollection": "此聊天記錄可能在報告於 %1$s 秒內提出後再以額外送出的訊息補強",
     "moderation_resolutionaction_removed": "移除被檢舉的內容",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "已檢舉的主題",
     "moderation_already_owner_disputed": "已提出爭議",
     "moderationstats_alltypes": "所有主題類型",
-    "moderation_alternateforumtool": "替換工具",
+    "forumsubjectlist_subjectreportsummary": "%1$s 項未解決，%1$s 項已提出爭議",
     "empty_no_trailing_comma": ""
 }

@@ -872,6 +872,33 @@
                 : console.error(..._);
           }
       }
+      function _(_, _, ..._) {
+        console.assert
+          ? 0 == _.length
+            ? console.assert(!!_, _)
+            : console.assert(!!_, _, ..._)
+          : _ || console.warn(_, ..._);
+      }
+      function _(_) {
+        return null != _ && void 0 !== _.focus;
+      }
+      function _(_, _) {
+        let _ = 0,
+          _ = 0;
+        return (
+          _.right < _.left
+            ? (_ = _.left - _.right)
+            : _.left > _.right && (_ = _.left - _.right),
+          _.bottom < _.top
+            ? (_ = _.top - _.bottom)
+            : _.top > _.bottom && (_ = _.top - _.bottom),
+          Math.sqrt(_ * _ + _ * _)
+        );
+      }
+      function _(_) {
+        let _;
+        return _ && (_ = _.ownerDocument.defaultView), _;
+      }
       (window.DebugLogEnable = (..._) => _.Get().SetDebugLogsEnabled(!0, ..._)),
         (window.DebugLogDisable = (..._) =>
           _.Get().SetDebugLogsEnabled(!1, ..._)),
@@ -885,17 +912,41 @@
         (window.DebugLogEnabled = (..._) => _.Get().PrintEnabledLogs(..._)),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
+      function _(_, _) {
+        let _ = _?.parentElement;
+        for (; _; ) {
+          if (_(_)) {
+            const _ = window.getComputedStyle(_);
+            if ("fixed" == _.position || "sticky" == _.position) break;
+            if (
+              !(
+                (_ && "x" != _) ||
+                ("scroll" != _.overflowX && "auto" != _.overflowX)
+              )
+            )
+              break;
+            if (
+              !(
+                (_ && "y" != _) ||
+                ("scroll" != _.overflowY && "auto" != _.overflowY)
+              )
+            )
+              break;
+          }
+          _ = _.parentElement;
+        }
+        return _(_) ? _ : null;
+      }
+      function _(_, _) {
+        if (!("ownerDocument" in _)) return !0;
+        const _ = _.ownerDocument.defaultView.getComputedStyle(_),
+          _ = "x" === _ ? _.overflowX : _.overflowY;
+        return "auto" === _ || "scroll" === _;
+      }
       const _ = {
         _: "y",
         _: "x",
       };
-      function _(_, _, ..._) {
-        console.assert
-          ? 0 == _.length
-            ? console.assert(!!_, _)
-            : console.assert(!!_, _, ..._)
-          : _ || console.warn(_, ..._);
-      }
       const _ = new _("FocusHistory"),
         _ = _.Debug;
       class _ {
@@ -1297,57 +1348,6 @@
           },
           distance: _,
         };
-      }
-      function _(_) {
-        return null != _ && void 0 !== _.focus;
-      }
-      function _(_, _) {
-        let _ = 0,
-          _ = 0;
-        return (
-          _.right < _.left
-            ? (_ = _.left - _.right)
-            : _.left > _.right && (_ = _.left - _.right),
-          _.bottom < _.top
-            ? (_ = _.top - _.bottom)
-            : _.top > _.bottom && (_ = _.top - _.bottom),
-          Math.sqrt(_ * _ + _ * _)
-        );
-      }
-      function _(_) {
-        let _;
-        return _ && (_ = _.ownerDocument.defaultView), _;
-      }
-      function _(_, _) {
-        let _ = _?.parentElement;
-        for (; _; ) {
-          if (_(_)) {
-            const _ = window.getComputedStyle(_);
-            if ("fixed" == _.position || "sticky" == _.position) break;
-            if (
-              !(
-                (_ && "x" != _) ||
-                ("scroll" != _.overflowX && "auto" != _.overflowX)
-              )
-            )
-              break;
-            if (
-              !(
-                (_ && "y" != _) ||
-                ("scroll" != _.overflowY && "auto" != _.overflowY)
-              )
-            )
-              break;
-          }
-          _ = _.parentElement;
-        }
-        return _(_) ? _ : null;
-      }
-      function _(_, _) {
-        if (!("ownerDocument" in _)) return !0;
-        const _ = _.ownerDocument.defaultView.getComputedStyle(_),
-          _ = "x" === _ ? _.overflowX : _.overflowY;
-        return "auto" === _ || "scroll" === _;
       }
       class _ {
         m_options;
@@ -2711,7 +2711,7 @@
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
             this.m_Tree.BIsActive() &&
-              (function (_, _) {
+              (function (_, _, _) {
                 const _ = _.Element;
                 if (!_) return;
                 let _ = [
@@ -2752,7 +2752,7 @@
                       _ == _.NoTransform ||
                       _ == _.NoTransformSparseContent ||
                       !_;
-                  if (_) {
+                  if (_ || _ === _.GAMEPAD) {
                     const _ = _ ? _(_) : _.getBoundingClientRect();
                     let _ = !1;
                     const _ = Math.max(1.4 * (_.bottom - _.top), 40),
@@ -2784,7 +2784,7 @@
                             inline: "nearest",
                           });
                 }
-              })(this, _);
+              })(this, _, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -2877,7 +2877,8 @@
               _[_] &&
                 _.intercept({
                   async handler() {
-                    const _ = window.navigation.currentEntry?.getState() ?? {};
+                    const _ = _.destination.getState() ?? {},
+                      { [_(_)]: _, ..._ } = _;
                     window.navigation.updateCurrentEntry({
                       state: {
                         ..._,
@@ -3159,6 +3160,10 @@
               ),
             "navigationapi" == this.m_Properties.historyMode &&
               __webpack_require__.Push(_(this)),
+            this.m_onActiveFocusStateChangedCallbacks.Dispatch(
+              this.BIsActive(),
+              this,
+            ),
             __webpack_require__.GetUnregisterFunc()
           );
         }

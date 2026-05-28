@@ -344,7 +344,7 @@
         return new (_())(
           async (_) => {
             const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
                 steamids: _,
               }),
               _ = new Map();

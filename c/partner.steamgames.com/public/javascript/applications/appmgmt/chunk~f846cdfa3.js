@@ -1107,6 +1107,7 @@
           bIsWaitingForBuildReview: _,
           bIsFirstSelfPublishingApp: _,
           rtEarliestDate: _,
+          bRequiresReleaseWaitingPeriod: _,
         } = _();
         return _ && _
           ? _
@@ -1121,17 +1122,19 @@
                   (0, _._)(_),
                 ),
               })
-          : _
+          : _ && _
             ? (0, _.jsx)(_, {
                 children: (0, _._)(
                   "#App_Landing_Release_EarliestDate_TwoWeeks30Days",
                 ),
               })
-            : (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#App_Landing_Release_EarliestDate_TwoWeeks",
-                ),
-              });
+            : _
+              ? (0, _.jsx)(_, {
+                  children: (0, _._)(
+                    "#App_Landing_Release_EarliestDate_TwoWeeks",
+                  ),
+                })
+              : null;
       }
       function _(_) {
         const { fnCloseModal: _, fnSubmit: _, children: _ } = _,

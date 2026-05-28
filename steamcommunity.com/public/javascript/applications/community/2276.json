@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Tylko Valve",
     "moderation_escalationlevel_supervisor_desc": "Wymagany nadzorca",
+    "moderation_escalation_escalationnote": "Uwaga o eskalacji:",
     "moderation_chatmetadata_deleted": "Metadane związane z tym zgłoszeniem z czatu zostały usunięte ze względu na ich wiek. Są one przechowywane tylko przez około 21 dni.",
     "moderation_chatmetadata_futurelogcollection": "Ten zapis czatu może zostać uzupełniony o dodatkowe wiadomości wysłane po zgłoszeniu za %1$s.",
     "moderation_resolutionaction_removed": "Usuń zgłoszone treści",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Zgłoszone tematy",
     "moderation_already_owner_disputed": "Już utworzono spór",
     "moderationstats_alltypes": "Wszystkie typy tematów",
-    "moderation_alternateforumtool": "Narzędzie alternatywne",
+    "forumsubjectlist_subjectreportsummary": "Nierozstrzygnięte: %1$s. Zakwestionowane: %1$s.",
     "empty_no_trailing_comma": ""
 }

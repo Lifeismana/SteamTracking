@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Лише Valve",
     "moderation_escalationlevel_supervisor_desc": "Потрібен керівник",
+    "moderation_escalation_escalationnote": "Примітка про підвищення статусу:",
     "moderation_chatmetadata_deleted": "Метадані, пов’язані з цією скаргою на чат, було видалено через їхню давність. Вони зберігаються приблизно 21 день.",
     "moderation_chatmetadata_futurelogcollection": "Цей журнал чату може отримати додаткові повідомлення, надісланими через %1$s після подання скарги",
     "moderation_resolutionaction_removed": "Вилучити вміст зі скаргою",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Теми зі скаргами",
     "moderation_already_owner_disputed": "Уже оспорено",
     "moderationstats_alltypes": "Усі типи тем",
-    "moderation_alternateforumtool": "Альтернативний інструмент",
+    "forumsubjectlist_subjectreportsummary": "Нерозглянуті — %1$s, оспорені — %2$s",
     "empty_no_trailing_comma": ""
 }

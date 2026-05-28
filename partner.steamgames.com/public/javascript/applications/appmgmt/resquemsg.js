@@ -417,8 +417,8 @@
       var w = i(71298),
         R = i(99637),
         A = i(8905),
-        k = i(9154),
-        C = i(738),
+        C = i(9154),
+        k = i(738),
         y = i(48479),
         P = i(56011),
         I = i(61859),
@@ -583,7 +583,7 @@
                 "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
             }),
             (0, n.jsx)(j.$n, {
-              onClick: (e) => (0, C.pg)((0, n.jsx)(X, {}), (0, P.uX)(e)),
+              onClick: (e) => (0, k.pg)((0, n.jsx)(X, {}), (0, P.uX)(e)),
               children: "Force Reload Definitions on Steam Servers",
             }),
           ],
@@ -612,7 +612,7 @@
           children: [
             (0, n.jsx)(j.$n, {
               onClick: (e) =>
-                (0, C.pg)((0, n.jsx)(J, { productID: t }), (0, P.uX)(e)),
+                (0, k.pg)((0, n.jsx)(J, { productID: t }), (0, P.uX)(e)),
               children: "Add new start position",
             }),
             (0, n.jsxs)("table", {
@@ -675,7 +675,7 @@
               children: [
                 (0, n.jsx)(j.$n, {
                   onClick: (e) =>
-                    (0, C.pg)(
+                    (0, k.pg)(
                       (0, n.jsx)(J, { productID: t, existingPositionMsg: t }),
                       (0, P.uX)(e),
                     ),
@@ -683,7 +683,7 @@
                 }),
                 (0, n.jsx)(j.$n, {
                   onClick: (e) =>
-                    (0, C.pg)((0, n.jsx)(Z, { positionMsg: t }), (0, P.uX)(e)),
+                    (0, k.pg)((0, n.jsx)(Z, { positionMsg: t }), (0, P.uX)(e)),
                   children: "Delete",
                 }),
               ],
@@ -706,7 +706,7 @@
           g = (0, w.vs)();
         return g.bLoading
           ? (0, n.jsx)(w.Hh, { state: g, strDialogTitle: _, closeModal: o })
-          : (0, n.jsx)(k.o0, {
+          : (0, n.jsx)(C.o0, {
               bDisableBackgroundDismiss: !0,
               strTitle: _,
               onCancel: o,
@@ -772,7 +772,7 @@
           r = (0, w.vs)();
         return r.bLoading
           ? (0, n.jsx)(w.Hh, { state: r, strDialogTitle: o, closeModal: i })
-          : (0, n.jsx)(k.o0, {
+          : (0, n.jsx)(C.o0, {
               strTitle: o,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: i,
@@ -798,7 +798,7 @@
           (0, s.useEffect)(() => {
             i().then(() => r(!0));
           }, [i]),
-          (0, n.jsx)(k.o0, {
+          (0, n.jsx)(C.o0, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: o
@@ -919,7 +919,7 @@
                             children: (0, n.jsx)("a", {
                               href: `${p.TS.STATS_BASE_URL}steamdeck/reservations/`,
                               target: "_blank",
-                              children: "Steam Deck reservation stats page",
+                              children: "Steam Hardware reservation stats page",
                             }),
                           }),
                         }),
@@ -959,8 +959,8 @@
             queryFn: async () => {
               const e = new Map();
               if (h.iA.logged_in) {
-                const i = _.w.Init(g.dN),
-                  n = (await g.xt.GetNicknameList(t, i)).Body().toObject();
+                const i = _.w.Init(g.w_T),
+                  n = (await g.xtC.GetNicknameList(t, i)).Body().toObject();
                 n?.nicknames &&
                   n.nicknames.length > 0 &&
                   n.nicknames.forEach((t) => {
@@ -1089,8 +1089,8 @@
           strDescToolTip: w,
           strDescription: R,
           bShowTimeZone: A,
-          strInvalidDateTimeLocalizedMsg: k,
-          fnIsValidDateTime: C,
+          strInvalidDateTimeLocalizedMsg: C,
+          fnIsValidDateTime: k,
           bWeekdaysOnly: y,
           fnSetTimeToUpdate: P,
           bForce24HourFormat: I,
@@ -1126,7 +1126,7 @@
               }, [c, o]),
               c
             );
-          })(B, F, k, C, c),
+          })(B, F, C, k, c),
           Y = !c && z;
         let O, W;
         if (t && i && t == i && i > l.HD.GetTimeNowWithOverride()) {

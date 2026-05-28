@@ -55,7 +55,7 @@
     "ReportContent_PickAReason": "Выберите тип жалобы.",
     "ReportContent_ReportButton": "Отправить жалобу",
     "ReportContent_ReportAs": "Причина жалобы на контент:",
-    "ReportContent_Back": "←",
+    "ReportContent_Back": "Назад",
     "ReportContent_Attestation": "Предоставьте дополнительную информацию. Отправляя жалобу, вы подтверждаете, что её содержание является правдивым и точным на основании имеющихся у вас сведений.",
     "ReportContent_DetailsPlaceholder": "Здесь можно указать дополнительную информацию.",
     "ReportContent_CopyrightInfringement": "Нарушение авторских прав",
@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Ограничение возможности жаловаться",
     "setcooldown_dialogdescription": "Пользователям можно запретить жаловаться на контент и оспаривать решения модераторов, если они злоупотребляли системой.",
     "setcooldown_setbutton": "Установить ограничение",
+    "setcooldown_clearopenreports": "Удалить нерассмотренные жалобы этого пользователя",
     "nocomma": ""
 }

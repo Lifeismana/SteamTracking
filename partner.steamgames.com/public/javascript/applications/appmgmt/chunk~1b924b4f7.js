@@ -79,8 +79,8 @@
         Gy: () => y,
         sh: () => v,
         T6: () => w,
-        yk: () => T,
-        Ur: () => k,
+        yk: () => k,
+        Ur: () => T,
       });
       var r = t(7850),
         i = t(48724),
@@ -88,7 +88,7 @@
         s = t(82314),
         a = t(4160),
         c = t(68488),
-        l = t(17084),
+        l = t(69423),
         d = t(9554),
         u = t(90626),
         h = t(16676),
@@ -96,9 +96,9 @@
         g = t(32754),
         P = t(52038),
         m = t(61859),
-        f = t(47184),
-        b = t(96434),
-        x = t.n(b),
+        b = t(47184),
+        f = t(96434),
+        x = t.n(f),
         _ = t(14336);
       let D = null;
       function C(e) {
@@ -114,8 +114,8 @@
           u = !(!s || (o && s == o)),
           h = (0, l.d$)(n),
           p = h && N(h.rtSubmitted),
-          { data: b } = (0, _.js)(h?.submitterID),
-          C = b ? b.m_strPlayerName : h?.submitterID;
+          { data: f } = (0, _.js)(h?.submitterID),
+          C = f ? f.m_strPlayerName : h?.submitterID;
         return (o || u || a) && D == n + t
           ? (0, r.jsxs)("div", {
               className: x().PricePopout,
@@ -192,14 +192,14 @@
                   (0, r.jsxs)(g.he, {
                     className: x().DetailRow,
                     direction: "left",
-                    toolTipContent: f.g.Localize(
+                    toolTipContent: b.g.Localize(
                       "#PricingDashboard_Method_SuggestedPrice_ttip",
                       (0, l.Wx)(d, "USD").join(""),
                     ),
                     children: [
                       (0, r.jsx)("div", {
                         className: x().DetailLabel,
-                        children: f.g.Localize(
+                        children: b.g.Localize(
                           "#PricingDashboard_Method_SuggestedPrice",
                         ),
                       }),
@@ -237,25 +237,25 @@
             nProposedPriceInCents: g,
             fnSetPrice: P,
           } = (0, l.xQ)(o, s),
-          [m, f, b] = (0, l.Wx)(a, s),
+          [m, b, f] = (0, l.Wx)(a, s),
           _ = (0, l.Gs)(s),
           v = u.useRef(void 0),
-          { strClassName: k } = j(o, s),
-          T = "USD" == s,
+          { strClassName: T } = j(o, s),
+          k = "USD" == s,
           N = g ?? p,
-          I = a != N;
+          L = a != N;
         return (0, r.jsxs)("div", {
           ref: v,
           onKeyDown: d.nm,
-          className: k,
+          className: T,
           children: [
-            I && (0, r.jsx)(y, { nPriceInCents: a, nSavedPriceInCents: N }),
+            L && (0, r.jsx)(y, { nPriceInCents: a, nSavedPriceInCents: N }),
             (0, r.jsx)("div", { className: x().PricePrefix, children: m && m }),
             (0, r.jsx)(i.n, {
               menuTarget: (0, r.jsx)("div", {
                 className: x().EditablePrice,
                 children: (0, r.jsx)(h.pd, {
-                  value: f,
+                  value: b,
                   className: x().PriceInput,
                   onChange: (e) => {
                     const n = e.target.value.replace(/[^0-9]/g, "");
@@ -276,8 +276,8 @@
               renderWhenClosed: !1,
               children: (0, r.jsx)(C, { packageID: o, strPriceKey: s }),
             }),
-            (0, r.jsx)("div", { className: x().PriceSuffix, children: b && b }),
-            T &&
+            (0, r.jsx)("div", { className: x().PriceSuffix, children: f && f }),
+            k &&
               (0, r.jsx)(S, {
                 packageID: o,
                 appids: t.original.appids,
@@ -293,7 +293,7 @@
         return (0, r.jsx)(s.x, {
           fnGetUSDPriceInCents: () => (0, l.FR)(n, "USD"),
           fnOnUpdate: (e) => a(n, e),
-          strDescription: f.g.Localize(
+          strDescription: b.g.Localize(
             "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           nPackageID: n,
@@ -316,8 +316,8 @@
             })
           : null;
       }
-      const k = 2.25,
-        T = 0.5;
+      const T = 2.25,
+        k = 0.5;
       function j(e, n) {
         const {
             nPriceInCents: t,
@@ -331,48 +331,53 @@
           h = (0, l.d$)(e),
           p = "USD" == n,
           g = t != (i ?? r),
-          f = t < o,
-          b = !!s && t > s,
-          _ = !!d && t > d * k,
-          D = !!d && t < d * T,
+          b = t < o,
+          f = !!s && t > s,
+          _ = !!d && t > d * T,
+          D = !!d && t < d * k,
           C = !!d && t < d && !!c,
-          v = !!d && t == d && !!c,
-          S =
-            (b && (0, m.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (f &&
-              (0, m.we)(
+          v = !!d && t == d && !!c;
+        let S = !1;
+        f
+          ? (S = (0, m.we)("#PricingDashboard_PriceIncreaseDisallowed"))
+          : b
+            ? (S = (0, m.we)(
                 "#PricingDashboard_PriceTooLow",
                 (0, l.Wx)(o, n).join(""),
-              )) ||
-            (_ &&
-              (0, m.we)(
-                "#PricingDashboard_PriceMuchHigherThanMethod",
-                (0, l.Wx)(d, n).join(""),
-              )) ||
-            (_ && !1) ||
-            (D &&
-              (0, m.we)(
-                "#PricingDashboard_PriceMuchLowerThanMethod",
-                (0, l.Wx)(d, n).join(""),
-              )) ||
-            (D && !1) ||
-            (C &&
-              (0, m.we)(
-                "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                c,
-              )) ||
-            (v && (0, m.we)("#PricingDashboard_PriceCheap", c)),
-          w = b || f,
+              ))
+            : _
+              ? (S = (0, m.we)(
+                  "#PricingDashboard_PriceMuchHigherThanMethod",
+                  (0, l.Wx)(d, n).join(""),
+                ))
+              : D && C
+                ? (S = (0, m.we)(
+                    "#PricingDashboard_PriceMuchLowerThanMethod_AndLimitDiscount",
+                    (0, l.Wx)(d, n).join(""),
+                    c,
+                  ))
+                : D
+                  ? (S = (0, m.we)(
+                      "#PricingDashboard_PriceMuchLowerThanMethod",
+                      (0, l.Wx)(d, n).join(""),
+                    ))
+                  : C
+                    ? (S = (0, m.we)(
+                        "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
+                        c,
+                      ))
+                    : v && (S = (0, m.we)("#PricingDashboard_PriceCheap", c));
+        const w = f || b,
           j = _ || D,
           y = w || j || C,
           N = !(g || !i || (r && i == r)),
-          I = h?.eState == a.Zo,
-          L = (0, P.A)(
+          L = h?.eState == a.Zo,
+          I = (0, P.A)(
             x().PriceCell,
             p && x().USD,
             g && x().ChangedLocally,
             N && x().ProposedPrice,
-            I && x().ApprovedCanPublish,
+            L && x().ApprovedCanPublish,
             y && x().WarningPrice,
             j && x().SevereWarningPrice,
             w && x().BadPrice,
@@ -380,12 +385,12 @@
         return u.useMemo(
           () => ({
             strPriceWarning: S,
-            strClassName: L,
+            strClassName: I,
             bBadPrice: w,
             bShowSevereWarning: j,
             bShowWarningIcon: y,
           }),
-          [S, L, w, j, y],
+          [S, I, w, j, y],
         );
       }
       function y(e) {
@@ -534,10 +539,10 @@
             className: g,
             children: P,
             renderWhenClosed: m = !0,
-            ...f
+            ...b
           } = e,
           {
-            isShowingMenu: b,
+            isShowingMenu: f,
             triggerProps: x,
             menuProps: _,
             closeMenu: D,
@@ -546,10 +551,10 @@
           v = a.useRef(null);
         return (
           a.useEffect(() => {
-            b
+            f
               ? v.current?.TakeFocus()
               : v.current?.BFocusWithin() && C.current?.TakeFocus();
-          }, [b]),
+          }, [f]),
           (0, r.jsxs)(r.Fragment, {
             children: [
               a.cloneElement(p, {
@@ -559,14 +564,14 @@
                 navRef: C,
               }),
               (0, r.jsx)(l.Z, {
-                ...f,
+                ...b,
                 ..._,
                 className: s()(_.className, g),
                 navRef: v,
                 onCancel: D,
                 onFocusWithin: (e) => !e && D(),
-                childFocusDisabled: !b,
-                children: (0, r.jsx)(c.q, { children: (m || b) && P }),
+                childFocusDisabled: !f,
+                children: (0, r.jsx)(c.q, { children: (m || f) && P }),
               }),
             ],
           })
@@ -651,8 +656,8 @@
                   role: "radiogroup",
                   ...o,
                 }),
-                f = (0, d.Q)(i, m, P);
-              return (0, r.jsx)(p, { value: g, children: f });
+                b = (0, d.Q)(i, m, P);
+              return (0, r.jsx)(p, { value: g, children: b });
             },
             Option: function (e) {
               const { value: n, ref: t, children: i, render: o } = e,
@@ -672,18 +677,18 @@
                   onSelectPrev: P,
                 } = s,
                 m = l === n,
-                f = () => {
+                b = () => {
                   m || h(n);
                 },
-                b = {
+                f = {
                   role: "radio",
                   "aria-checked": m,
                   "data-radio-id": c,
-                  onClick: f,
+                  onClick: b,
                   onKeyDown: (e) => {
                     switch (e.key) {
                       case " ":
-                        f(), e.preventDefault(), e.stopPropagation();
+                        b(), e.preventDefault(), e.stopPropagation();
                         break;
                       case "ArrowRight":
                       case "ArrowDown":
@@ -699,7 +704,7 @@
                   children: i,
                 },
                 x = (0, r.jsx)(u, {});
-              return (0, d.Q)(o, x, b, { bSelected: m });
+              return (0, d.Q)(o, x, f, { bSelected: m });
             },
           },
         ),
@@ -707,8 +712,8 @@
       var g,
         P = t(64753),
         m = t(9154),
-        f = t(32754),
-        b = t(24484),
+        b = t(32754),
+        f = t(24484),
         x = t(47184),
         _ = t(30470);
       !(function (e) {
@@ -729,7 +734,7 @@
           [c, l, d] = (0, P.uD)();
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(f.Gq, {
+            (0, r.jsx)(b.Gq, {
               toolTipContent: a
                 ? x.g.Localize("#FreeOnDemand_Button_ttip")
                 : x.g.Localize("#FreeOnDemand_Button_disabled_ttip"),
@@ -745,17 +750,17 @@
               active: c,
               children:
                 a && t && 1 == t.length
-                  ? (0, r.jsx)(k, {
+                  ? (0, r.jsx)(T, {
                       closeModal: d,
                       nPackageID: o,
                       nAppID: t[0],
                     })
-                  : (0, r.jsx)(T, { closeModal: d }),
+                  : (0, r.jsx)(k, { closeModal: d }),
             }),
           ],
         });
       }
-      function k(e) {
+      function T(e) {
         const { closeModal: n, nAppID: t, nPackageID: i } = e,
           [c, l] = (0, a.useState)(g.k_FreeToPlay),
           d = (function (e, n) {
@@ -767,7 +772,7 @@
                 {
                   const n = new FormData();
                   if (
-                    (n.set("sessionid", (0, b.KC)()),
+                    (n.set("sessionid", (0, f.KC)()),
                     n.set("appid", "" + e),
                     n.set(
                       "displaytext",
@@ -790,7 +795,7 @@
                 {
                   const e = new FormData();
                   if (
-                    (e.set("sessionid", (0, b.KC)()),
+                    (e.set("sessionid", (0, f.KC)()),
                     e.set("action", "save"),
                     e.set("billing_type", "12"),
                     !(
@@ -879,7 +884,7 @@
               ],
             });
       }
-      function T(e) {
+      function k(e) {
         const { closeModal: n } = e,
           t = `${_.TS.SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915`;
         return (0, r.jsxs)(m.KG, {
@@ -900,14 +905,14 @@
       }
       function j() {
         const [e] = (0, a.useState)(
-          (0, b.Tc)("bCanSetFree", "application_config"),
+          (0, f.Tc)("bCanSetFree", "application_config"),
         );
         return e;
       }
     },
     82314: (e, n, t) => {
       "use strict";
-      t.d(n, { e: () => x, x: () => b });
+      t.d(n, { e: () => x, x: () => f });
       var r = t(7850),
         i = t(61459),
         o = t(88267),
@@ -922,8 +927,8 @@
         g = t(90626),
         P = t(47184),
         m = t(53965),
-        f = t(32754);
-      function b(e) {
+        b = t(32754);
+      function f(e) {
         const n = (0, r.jsx)("button", {
           className: p().PriceGuidelinesPicker,
           children: (0, r.jsx)(d.GB9, {}),
@@ -935,7 +940,7 @@
           i = (0, r.jsxs)(m.$, {
             onClick: () => {},
             children: [
-              (0, r.jsx)(f.Gq, {
+              (0, r.jsx)(b.Gq, {
                 toolTipContent: t,
                 children: (0, r.jsx)("span", { children: n }),
               }),
@@ -972,9 +977,9 @@
             appids: g,
           } = e,
           m = (0, a.cT)(),
-          f = n();
+          b = n();
         if (!m) return null;
-        const b = m.GetUSDPricePointsInCents();
+        const f = m.GetUSDPricePointsInCents();
         return (0, r.jsxs)("div", {
           className: p().GuidelinesPanel,
           children: [
@@ -1000,7 +1005,7 @@
                     },
                     "settofree",
                   ),
-                b.map((e) =>
+                f.map((e) =>
                   (0, r.jsx)(
                     "button",
                     {
@@ -1009,7 +1014,7 @@
                       },
                       className: (0, u.A)({
                         [p().GridElement]: !0,
-                        [p().CurrentPrice]: f == e,
+                        [p().CurrentPrice]: b == e,
                       }),
                       children: (0, i.x)(e, o.CS),
                     },
@@ -1093,7 +1098,7 @@
           g = (0, i.useRef)(!1),
           P = (0, i.useRef)(!1),
           m = (0, i.useRef)(null),
-          [f, b] = (0, i.useState)(!1),
+          [b, f] = (0, i.useState)(!1),
           [x, _] = (0, i.useMemo)(
             () =>
               (function (e) {
@@ -1176,7 +1181,7 @@
           }, [m.current]);
         (0, i.useEffect)(
           () =>
-            f
+            b
               ? (p.current?.showPopover(),
                 D(),
                 C?.addEventListener("scroll", D),
@@ -1189,31 +1194,31 @@
                   window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
                   p.current?.hidePopover(),
                 () => {}),
-          [f, D, C],
+          [b, D, C],
         );
         const v = (0, i.useCallback)(() => {
-            D(), b(!0), (P.current = !0);
+            D(), f(!0), (P.current = !0);
           }, [D]),
           S = (0, i.useCallback)(() => {
-            (P.current = !1), g.current || b(!1);
+            (P.current = !1), g.current || f(!1);
           }, []),
           w = (0, i.useCallback)(() => {
-            (g.current = !0), b(!0);
+            (g.current = !0), f(!0);
           }, []),
-          k = (0, i.useCallback)(
-            (e) => {
-              p.current?.contains(e.target) && w();
-            },
-            [w],
-          ),
           T = (0, i.useCallback)(
             (e) => {
               p.current?.contains(e.target) && w();
             },
             [w],
           ),
+          k = (0, i.useCallback)(
+            (e) => {
+              p.current?.contains(e.target) && w();
+            },
+            [w],
+          ),
           j = (0, i.useCallback)(() => {
-            (g.current = !1), P.current || b(!1);
+            (g.current = !1), P.current || f(!1);
           }, []),
           y = (0, i.useCallback)(
             (e) => {
@@ -1224,13 +1229,13 @@
           N = (0, i.useCallback)(() => {
             j(), S();
           }, [j, S]),
-          I = (0, i.useCallback)(
-            (e) => {
-              "Enter" === e.key && (e.preventDefault(), f ? S() : v());
-            },
-            [S, v, f],
-          ),
           L = (0, i.useCallback)(
+            (e) => {
+              "Enter" === e.key && (e.preventDefault(), b ? S() : v());
+            },
+            [S, v, b],
+          ),
+          I = (0, i.useCallback)(
             (e) => {
               e.currentTarget.contains(e.relatedTarget) ||
                 p.current?.contains(e.relatedTarget) ||
@@ -1249,51 +1254,51 @@
               const n =
                   e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
                 t = !e.relatedTarget && !g.current;
-              (n || t) && (j(), b(!1));
+              (n || t) && (j(), f(!1));
             },
             [j],
           ),
           F = (0, i.useCallback)(
             (e) => {
               p.current?.contains(e.target) &&
-                (f && u ? N() : g.current && v());
+                (b && u ? N() : g.current && v());
             },
-            [N, u, f, v],
+            [N, u, b, v],
           ),
-          R = (0, i.useCallback)(
+          M = (0, i.useCallback)(
             (e) => {
               p.current?.contains(e.target) &&
-                ("Enter" === e.key && f && u ? N() : v(),
-                "Escape" === e.key && f && (N(), e.stopPropagation()));
+                ("Enter" === e.key && b && u ? N() : v(),
+                "Escape" === e.key && b && (N(), e.stopPropagation()));
             },
-            [N, u, f, v],
+            [N, u, b, v],
           );
-        let M;
-        h !== a || f
-          ? h === c && (M = f ? S : v)
-          : (M = (e) => {
+        let R;
+        h !== a || b
+          ? h === c && (R = b ? S : v)
+          : (R = (e) => {
               e.preventDefault(), v();
             });
         const z = {
-            "aria-expanded": f,
+            "aria-expanded": b,
             role: "button",
             onMouseEnter: h === a ? v : void 0,
             onMouseLeave: h === a ? S : void 0,
-            onClick: M,
+            onClick: R,
             ref: m,
-            onKeyDown: I,
+            onKeyDown: L,
             onFocus: E,
-            onBlur: L,
+            onBlur: I,
           },
           A = {
             popover: "manual",
             ref: p,
-            onMouseEnter: T,
+            onMouseEnter: k,
             onMouseLeave: y,
-            onFocus: k,
+            onFocus: T,
             onBlur: O,
             onClick: F,
-            onKeyDown: R,
+            onKeyDown: M,
             className: s.PopoverMenu,
           };
         return (
@@ -1302,7 +1307,7 @@
             () => ({ show: v, hide: S, close: N }),
             [v, S, N],
           ),
-          { isShowingMenu: f, triggerProps: z, menuProps: A, closeMenu: N }
+          { isShowingMenu: b, triggerProps: z, menuProps: A, closeMenu: N }
         );
       }
     },

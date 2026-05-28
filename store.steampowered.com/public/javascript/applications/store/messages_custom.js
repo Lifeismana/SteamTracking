@@ -412,8 +412,8 @@
             queryFn: async () => {
               const e = new Map();
               if (p.iA.logged_in) {
-                const t = g.w.Init(C.dN),
-                  o = (await C.xt.GetNicknameList(a, t)).Body().toObject();
+                const t = g.w.Init(C.w_T),
+                  o = (await C.xtC.GetNicknameList(a, t)).Body().toObject();
                 o?.nicknames &&
                   o.nicknames.length > 0 &&
                   o.nicknames.forEach((a) => {

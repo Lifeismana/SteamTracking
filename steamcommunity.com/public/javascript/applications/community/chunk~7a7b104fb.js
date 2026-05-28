@@ -786,7 +786,7 @@
         s = r(90626),
         n = r(43104),
         o = r(54728),
-        l = r(27666),
+        l = r(40414),
         c = r(94057),
         m = r(73022),
         d = r(51272),
@@ -818,10 +818,10 @@
               : 0,
           [y, p] = s.useState(h),
           M = (0, _.L$)(
-            `${l.z.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
+            `${l.zU.GetBaseURL()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           w = (0, _.L$)(
-            `${l.z.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
+            `${l.zU.GetBaseURL()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           S = (0, c.w)(a.giveaway_gid);
         let f =

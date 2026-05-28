@@ -326,8 +326,7 @@
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
-          (this.bOpenEventLandingPage = !1),
-            (this.bIncludeFeaturedAsGameSource = !0),
+          (this.bIncludeFeaturedAsGameSource = !0),
             (this.nOverrideDateNow = void 0),
             (0, _._)(this);
         }

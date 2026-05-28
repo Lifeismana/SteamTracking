@@ -1911,7 +1911,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   transition-delay: 0.125s;
 }
 ._1SoIo_lz6BfTG8leoA-ltA.dX_drVcjsB7c-39llrEDd {
-  opacity: 0;
+  opacity: 0.1;
   transition-delay: 0s;
 }
 ._3D14Gr6XaDtndRA8ojG443 {
@@ -2782,7 +2782,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:active[disabled],
 button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover.Disabled,
 button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover[disabled] {
   opacity: 0.4;
-  background: #23262e;
+  background: #131418;
   color: #fff;
   pointer-events: none;
 }
@@ -2817,7 +2817,8 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 .eKmEXJCm_lgme24Fp_HWt {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  column-gap: 12px;
+  row-gap: 0px;
   position: relative;
   border-radius: 2px;
 }
@@ -3075,6 +3076,10 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 }
 ._2o2fXzn99OddeqZMjbDuxQ {
   flex-grow: 1;
+  min-width: 0;
+}
+._2o2fXzn99OddeqZMjbDuxQ .DialogInput_Wrapper {
+  min-width: 0;
 }
 ._2o2fXzn99OddeqZMjbDuxQ > svg {
   height: 1em;
@@ -3114,13 +3119,16 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   ._2tALpM7z8naXJ35Pp5fNAG:empty {
   display: none;
 }
-.PSZtxj2h3MlyYv-c9dgke {
+.eKmEXJCm_lgme24Fp_HWt:not(._3LCXhoVmpvqbOW8fsItdTl) .PSZtxj2h3MlyYv-c9dgke {
   flex-shrink: 0;
 }
 .eKmEXJCm_lgme24Fp_HWt.Jgod1QRim6eNfvia2_3Ac .PSZtxj2h3MlyYv-c9dgke {
   flex-grow: 1;
 }
-.eKmEXJCm_lgme24Fp_HWt:not(.Jgod1QRim6eNfvia2_3Ac) .PSZtxj2h3MlyYv-c9dgke {
+.eKmEXJCm_lgme24Fp_HWt:not(.Jgod1QRim6eNfvia2_3Ac).eKmEXJCm_lgme24Fp_HWt:not(
+    ._3LCXhoVmpvqbOW8fsItdTl
+  )
+  .PSZtxj2h3MlyYv-c9dgke {
   max-width: 50%;
 }
 ._2VcTlXFC64Jtg9gvtT6cmY {
@@ -3240,6 +3248,9 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin
   ._1W1to_azoBRG95oNAFpf9Q {
   color: #dcdedf;
+}
+.eKmEXJCm_lgme24Fp_HWt.aIeh3X5T2M074RLW1qn6_ ._1W1to_azoBRG95oNAFpf9Q {
+  color: #67707b;
 }
 ._3A5ujtARm6atH4phJ5i1i6 {
   display: flex;

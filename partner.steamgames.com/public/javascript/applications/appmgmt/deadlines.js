@@ -47,7 +47,11 @@
     45737: (e) => {
       e.exports = {
         AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
         WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        AdminHeader: "vrqqGANTuXeQs27RGumFj",
+        Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
+        Required: "_1-jmJyKnLRFoN-GX0Oqor8",
         PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
         PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
         Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
@@ -55,6 +59,7 @@
         ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
         ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
         SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
         ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
         LeftCol: "_1AqrivbzwCs57BXiugqpeA",
         ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
@@ -92,6 +97,8 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+        AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
+        RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
       };
     },
     95695: (e) => {
@@ -598,8 +605,8 @@
           ],
         });
       }
-      var k = i(39700);
-      function A() {
+      var A = i(39700);
+      function k() {
         const [e, t] = s.useState(0),
           i = F(a.Qo.RO, e),
           o = s.useRef(0);
@@ -686,7 +693,7 @@
                     }),
                   ],
                 }),
-                Boolean(!i && e > 0) && (0, n.jsx)(k.k, { size: "small" }),
+                Boolean(!i && e > 0) && (0, n.jsx)(A.k, { size: "small" }),
                 Boolean(0 == i?.length && e > 0) &&
                   (0, n.jsxs)("div", {
                     className: d().EmptyNotifications,
@@ -738,7 +745,7 @@
         let c = null;
         switch (t) {
           case a.Qo.RO.toString():
-            c = (0, n.jsx)(A, {});
+            c = (0, n.jsx)(k, {});
             break;
           case a.Qo.Jg.toString():
             c = (0, n.jsx)(B, {});
@@ -801,7 +808,7 @@
         i.d(t, {
           ContactTaxIdentityDialog: () => q,
           default: () => F,
-          k_rgTemplateNameOptionsList: () => A,
+          k_rgTemplateNameOptionsList: () => k,
         });
       var n = i(7850),
         a = i(90626),
@@ -971,8 +978,8 @@
       }
       var B = i(738),
         R = i(56011),
-        k = i(78395);
-      const A = [
+        A = i(78395);
+      const k = [
           "AddressCorrection",
           "DocReq-KYC-Docs",
           "DocReq-KYC-Entity-FR",
@@ -2312,7 +2319,7 @@
         const { closeModal: t, subject: i, publisherid: s } = e,
           [o, r] = a.useState(""),
           [d, c] = a.useState("");
-        return (0, n.jsx)(k.o0, {
+        return (0, n.jsx)(A.o0, {
           strTitle: "Contact TaxIdentity",
           strDescription: d
             ? ""
@@ -2516,7 +2523,7 @@
         const { strTemplate: t } = e,
           [i, s] = a.useState(t || "Renewal-W8-Initial"),
           [o, r] = a.useState(!0),
-          d = A.map((e) => ({ label: e, data: e })),
+          d = k.map((e) => ({ label: e, data: e })),
           l = Date.now(),
           c = {},
           u = new Intl.DateTimeFormat(navigator.language).format(l);
@@ -2634,8 +2641,8 @@
             include_full_description: I,
             include_included_items: B,
             include_assets_without_overrides: R,
-            apply_user_filters: k,
-            include_links: A,
+            apply_user_filters: A,
+            include_links: k,
           } = i;
         if (
           ((0, s.useEffect)(() => {
@@ -2654,8 +2661,8 @@
               include_full_description: I,
               include_included_items: B,
               include_assets_without_overrides: R,
-              apply_user_filters: k,
-              include_links: A,
+              apply_user_filters: A,
+              include_links: k,
             };
             let s = null;
             return (
@@ -2672,7 +2679,7 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, x, y, v, j, g, S, b, _, N, w, T, C, I, B, R, k, A, p]),
+          }, [e, t, n, x, y, v, j, g, S, b, _, N, w, T, C, I, B, R, A, k, p]),
           !e)
         )
           return [null, u];

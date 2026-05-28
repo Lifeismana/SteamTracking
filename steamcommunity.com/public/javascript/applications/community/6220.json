@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Afkoelperiode voor rapporteren instellen",
     "setcooldown_dialogdescription": "De gebruiker kan geen inhoud rapporteren of bezwaar aantekenen tegen moderatiebeslissingen als ze misbruik hebben gemaakt van het systeem.",
     "setcooldown_setbutton": "Afkoelperiode instellen",
+    "setcooldown_clearopenreports": "Niet-opgeloste meldingen van deze gebruiker wissen",
     "nocomma": ""
 }

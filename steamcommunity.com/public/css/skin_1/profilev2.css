@@ -3424,110 +3424,40 @@ footer {
 	text-decoration: underline;
 }
 
+/* these tab styles are the same as in apphub.css and in gameslisttabs.scss */
 .sectionTabs
 {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
 	position: relative;
-	padding-top: 3px;
-	margin-left: -5px;
-	font-size: 14px;
 	z-index: 10;
+	white-space: nowrap;
+	overflow: hidden;
+	overflow-x: auto;
+	padding-block-start: 20px;
+	padding-block-end: 12px;
 }
 
 .sectionTab, a.sectionTab
 {
-	margin-top: 7px;
-	display: block;
-	float: left;
-	color: #dadada;
-	background-color: rgba( 0, 0, 0, 0.4 );
-	line-height: 29px;
-	height: 29px;
-	padding: 0px 12px;
-	margin-left: 5px;
-	text-decoration: none;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	-moz-border-radius: 2px;
-	-moz-border-radius-bottomleft: 0px;
-	-moz-border-radius-bottomright: 0px;
+	font-weight: 500;
+	font-size: 14px;
+	margin-right: 12px;
+	color: white;
+	opacity: 0.7;
+	transition: opacity .2s ease;
 }
 
 .sectionTab:hover
 {
-	background-color: rgba( 102, 192, 244, 0.4 );
-	color: #ffffff;
-}
-
-.sectionTabActive
-{
-	position: relative;
-	margin-top: 0px;
-	margin-left: 5px;
-	font-size: 14px;
-	color: white;
-	float: left;
-}
-
-.sectionTabActive .sectionTab
-{
-	margin-top: 0px;
-	display: inline-block;
-	padding-left: 12px;
-	padding-right: 8px;
-	margin-right: 12px;
-	height: 36px;
-	line-height: 36px;
-	background-position: 0 0px;
-	background-repeat: repeat-x;
-	text-decoration: none;
-}
-
-.sectionTabActive .sectionTab:hover
-{
-	text-decoration: none;
-	color: #ffffff;
-}
-
-.sectionTabInactive, .sectionTabInactive .sectionTab_leftcap, .sectionTabInactive .sectionTab_rightcap
-{
-	display: inline;
+	opacity: 1;
 }
 
 .sectionTab.active
 {
-	margin-top: 0px;
-	height: 34px;
-	padding: 1px;
-	text-decoration: none;
-	border: none;
-
-	background: #57749e; /* Old browsers */
-background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
-	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
-}
-
-.sectionTab.active > span
-{
-	height: 35px;
-	line-height: 36px;
-	padding: 0 19px;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	color: #ffffff;
-
-	display: block;
-	background: #417B9C; /* Old browsers */
-background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
-	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
-}
-
-.new_wishlist_tab_position .sectionTab.wishlist {
-	position: absolute;
-	right: 0;
-	margin-bottom: 6px;
-    top: -3px;
+	border-bottom: 3px solid #1A9FFF;
+	opacity: 1;
 }
 
 .profile_paging {

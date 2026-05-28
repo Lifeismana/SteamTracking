@@ -497,26 +497,24 @@
         OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
         OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
         OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        EventSizer: "_2JC5DEuXUeE50kjpb7Eeau",
         OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
-        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
-        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        ShowInWideMode: "RLbLb742gN095uDUITtIB",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
-        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
         OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
-        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
-        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
-        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
-        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
-        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
-        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
-        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
-        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
-        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
-        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
+        EventType: "_2BWwVF5N-3fDuJRblB6gHb",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
@@ -3816,6 +3814,7 @@
                 src: {},
                 alt: { default: null },
                 title: { default: null },
+                style: { default: void 0 },
               },
               group: "inline",
               draggable: !0,
@@ -3826,17 +3825,33 @@
                     src: e.getAttribute("src"),
                     title: e.getAttribute("title"),
                     alt: e.getAttribute("alt"),
+                    style: e.getAttribute("style"),
                   }),
                 },
               ],
               toDOM(e) {
-                const { src: t, alt: s, title: n } = e.attrs;
-                return ["img", { src: t, alt: s, title: n, class: R().Image }];
+                const { src: t, alt: s, title: n, style: a } = e.attrs;
+                return [
+                  "img",
+                  {
+                    src: t,
+                    alt: s,
+                    title: n,
+                    class: (0, G.A)(R().Image, {
+                      [R().Image_Inline]: "inline" === a,
+                    }),
+                  },
+                ];
               },
               bbCode: {
                 tag: "img",
-                BBArgsToAttrs: (e) => ({ src: e.src }),
-                AttrsToBBArgs: (e) => ({ args: { src: e.src } }),
+                BBArgsToAttrs: (e) => ({
+                  src: e.src,
+                  style: e.style ?? void 0,
+                }),
+                AttrsToBBArgs: (e) => ({
+                  args: { src: e.src, ...(e.style ? { style: e.style } : {}) },
+                }),
                 convertContentToAttr: "src",
               },
             },
@@ -7382,7 +7397,7 @@
         le = s(67045),
         ce = s(96409),
         de = s(92757),
-        ue = s(6813),
+        ue = s(32801),
         pe = s(8527),
         me = s(77411),
         he = s(17720),
@@ -16934,40 +16949,44 @@
             hoverClassName: s,
             fnGetIDOverride: r,
             fnHoverState: i,
-            children: o,
+            disableScreenshots: o,
+            children: l,
           } = e,
-          l = a.useRef(null),
-          c = a.useCallback(
+          c = a.useRef(null),
+          u = a.useCallback(
             (e) => {
               const s = p(t);
               s &&
                 (i && i(!0),
                 window.GameHover &&
-                  window.GameHover(r ? r() : l.current, e, "global_hover", {
+                  (c.current &&
+                    o &&
+                    (c.current.dataset.hoverDisableScreenshots = "true"),
+                  window.GameHover(r ? r() : c.current, e, "global_hover", {
                     type: s,
                     id: (0, d.G$)(t).id,
                     v6: 1,
-                  }));
+                  })));
             },
-            [i, r, t],
+            [i, r, o, t],
           ),
-          u = a.useCallback(
+          m = a.useCallback(
             (e) => {
               p(t) &&
                 (i && e.relatedTarget && i(!1),
                 window.HideGameHover &&
-                  window.HideGameHover(r ? r() : l.current, e, "global_hover"));
+                  window.HideGameHover(r ? r() : c.current, e, "global_hover"));
             },
             [t, i, r],
           );
         return (0, n.jsx)("div", {
-          ref: l,
+          ref: c,
           className: s,
-          onMouseEnter: c,
-          onMouseLeave: u,
-          onFocus: c,
-          onBlur: u,
-          children: o,
+          onMouseEnter: u,
+          onMouseLeave: m,
+          onFocus: u,
+          onBlur: m,
+          children: l,
         });
       }
       function h(e) {
@@ -17532,7 +17551,7 @@
         r = s(76217),
         i = s(23310),
         o = s(96171),
-        l = s(68276),
+        l = s(65522),
         c = s(20433);
       var d = s(78588),
         u = s(12424),
@@ -17603,7 +17622,12 @@
                         b().AddToWishlistButton,
                       ),
                     }),
-                  !i && (0, n.jsx)(f.Q, { id: t, bMinimizePlatforms: j }),
+                  !i &&
+                    (0, n.jsx)(f.Q, {
+                      id: t,
+                      bMinimizePlatforms: j,
+                      bHideWindows: !0,
+                    }),
                   !a &&
                     (0, n.jsx)("span", {
                       className: b().BottomBarPriceInfo,
@@ -17714,21 +17738,23 @@
             bPreferDemoStorePage: p,
             bShowEarlyAccessBanner: m,
           } = e,
-          [g, x] = _.useState(!1),
-          f = (0, T.rt)(t),
-          { data: A } = (0, h.J$)(f),
-          S = (0, T.$5)(s ? A?.related_items?.parent_appid : void 0),
-          { data: j } = (0, h.J$)(S);
-        if (!A || !f) return null;
-        const w = !!j && !!S,
-          v = (0, n.jsx)(Y, {
+          g = (0, G.Qn)(),
+          [x, f] = _.useState(!1),
+          A = (0, T.rt)(t),
+          { data: S } = (0, h.J$)(A),
+          j = (0, T.$5)(s ? S?.related_items?.parent_appid : void 0),
+          { data: w } = (0, h.J$)(j);
+        if (!S || !A) return null;
+        const v = !!w && !!j,
+          y = (0, n.jsx)(Y, {
             ...e,
             strExtraParams: e.strExtraParams,
-            id: f,
-            bIsHovered: g,
-            bHasParentAppToDisplay: w,
+            id: A,
+            bIsHovered: x,
+            bHasParentAppToDisplay: v,
             onlyOneDiscountPct: u,
             bShowEarlyAccessBanner: m,
+            bUsePanel: !d && !g,
           });
         return (0, n.jsxs)(r.Z, {
           className: (0, C.A)({
@@ -17739,17 +17765,17 @@
           navKey: c,
           children: [
             (0, n.jsxs)(M.oj, {
-              appid: A.appid,
+              appid: S.appid,
               children: [
                 Boolean(d)
                   ? (0, n.jsx)("div", {
-                      onMouseEnter: () => x(!0),
-                      onMouseLeave: () => x(!1),
-                      children: v,
+                      onMouseEnter: () => f(!0),
+                      onMouseLeave: () => f(!1),
+                      children: y,
                     })
                   : (0, n.jsx)(l.Q, {
                       className: b().CapsuleContainer,
-                      id: f,
+                      id: A,
                       elElementToAppend: e.elElementToAppendToHover,
                       bShowDemoButton: e.bShowDemoButton,
                       bPreferDemoStorePage: e.bPreferDemoStorePage,
@@ -17762,17 +17788,17 @@
                       nWidthMultiplier: e.nWidthMultiplier,
                       bShowIgnoreButton: e.bShowIgnoreButton,
                       bShowDescription: e.bShowDescriptionInHover,
-                      children: v,
+                      children: y,
                     }),
                 Boolean(a) && (0, n.jsx)(n.Fragment, { children: a }),
               ],
             }),
-            w &&
+            v &&
               (0, n.jsx)(Q, {
                 strExtraParams: e.strExtraParams,
-                parentID: S,
-                parentStoreItemDefaultInfo: j,
-                childAppType: A.type,
+                parentID: j,
+                parentStoreItemDefaultInfo: w,
+                childAppType: S.type,
                 bPreferDemoStorePage: Boolean(p),
               }),
           ],
@@ -17825,58 +17851,61 @@
         const {
             id: t,
             bHideStatusBanners: s,
-            strExtraParams: r,
-            index: i,
-            imageType: o,
-            bHasParentAppToDisplay: l,
-            bIsHovered: c,
-            strDoubleCapsuleMessage: u,
-            bPreferDemoStorePage: p,
-            bShowEarlyAccessBanner: m,
-            bPreferAssetWithoutOverride: _,
+            bUsePanel: i,
+            strExtraParams: o,
+            index: l,
+            imageType: c,
+            bHasParentAppToDisplay: u,
+            bIsHovered: p,
+            strDoubleCapsuleMessage: m,
+            bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: g,
+            bPreferAssetWithoutOverride: x,
           } = e,
-          g = (0, I.n9)(),
-          x = (0, R.w)(),
-          b = (0, P._)(t),
-          { data: f } = (0, h.J$)(t);
-        if (!f) return null;
-        const A = (0, U.NT)(
-          (0, N.It)(`${(0, q._)(f, p)}${r ? `?${r}` : ""}`, g, x),
-        );
-        let S;
-        const j = !!u;
+          b = (0, I.n9)(),
+          f = (0, R.w)(),
+          A = (0, P._)(t),
+          { data: S } = (0, h.J$)(t);
+        if (!S) return null;
+        const j = i
+            ? void 0
+            : (0, U.NT)(
+                (0, N.It)(`${(0, q._)(S, _)}${o ? `?${o}` : ""}`, b, f),
+              ),
+          w = i ? r.Z : a.Ii,
+          v = !!m;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
-              className: (0, C.A)({ [W().TwoWidthCtn]: j }),
+              className: (0, C.A)({ [W().TwoWidthCtn]: v }),
               children: [
-                (0, n.jsxs)(a.Ii, {
-                  href: S ? void 0 : A,
+                (0, n.jsxs)(w, {
+                  href: j,
                   style: { display: "block", cursor: "pointer" },
-                  className: (0, C.A)({ [W().TwoWidthCapsule]: j }),
-                  preferredFocus: l,
-                  onClick: S,
+                  className: (0, C.A)({ [W().TwoWidthCapsule]: v }),
+                  preferredFocus: u,
+                  focusable: !0,
                   children: [
                     (0, n.jsx)(B.V, {
-                      appids: b,
+                      appids: A,
                       hide_status_banners: s,
-                      show_early_access: e.bShowEarlyAccessBanner,
+                      show_early_access: g,
                     }),
-                    "none" != o &&
+                    "none" != c &&
                       (0, n.jsx)(d.a, {
-                        imageType: o,
+                        imageType: c,
                         id: t,
-                        bPreferAssetWithoutOverride: _,
+                        bPreferAssetWithoutOverride: x,
                       }),
                     (0, n.jsx)(F.J, { id: t }),
-                    (0, n.jsx)(k.m, { id: t, active: c, bIsHoverMode: !0 }),
+                    (0, n.jsx)(k.m, { id: t, active: p, bIsHoverMode: !0 }),
                   ],
                 }),
-                j &&
+                v &&
                   (0, n.jsx)(X, {
                     id: t,
-                    strDoubleCapsuleMessage: u,
-                    index: i,
+                    strDoubleCapsuleMessage: m,
+                    index: l,
                   }),
               ],
             }),
@@ -18414,7 +18443,9 @@
         }
         async UploadFile(e, t) {
           (this.m_fnCreatePlaceholder && this.m_fnReplacePlaceholder) ||
-            this.AddError("No editor registered to handle file upload");
+            this.AddError(
+              "Upload File: No editor registered to handle file upload",
+            );
           const s = this.m_fnCreatePlaceholder({ file: e }, t);
           return this.ProcessFile(e, s);
         }
@@ -18424,7 +18455,9 @@
         QueueUploadFileByURL(e, t, s) {
           if (
             ((this.m_fnCreatePlaceholder && this.m_fnReplacePlaceholder) ||
-              this.AddError("No editor registered to handle file upload"),
+              this.AddError(
+                "QueueUploadFile: No editor registered to handle file upload",
+              ),
             console.log(`QueueUploadFileByURL: ${e} at pos ${t}`),
             e.startsWith("data:"))
           ) {

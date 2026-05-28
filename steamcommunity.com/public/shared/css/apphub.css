@@ -52,6 +52,8 @@ center
 .apphub_HeaderTop.workshop
 {
 	background-image:url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_workshop_header.png?v=3');
+	background-repeat: no-repeat;
+	background-position-y: bottom;
 }
 .BasicUI.gpnav_active .apphub_HeaderTop.workshop
 {
@@ -316,28 +318,20 @@ center
 
 .apphub_sectionTabs
 {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+
 	position: relative;
-	padding-top: 18px;
-	margin-left: 10px;
-	font-size: 13px;
 	z-index: 10;
 	white-space: nowrap;
 	overflow: hidden;
 	overflow-x: auto;
+
+	padding-block-start: 20px;
+	padding-block-end: 12px;
 }
 
-.apphub_sectionTabsHR
-{
-	background-color: #0d121a;
-	height: 5px;
-	margin: 0px auto;
-}
-
-.apphub_sectionTabNewWrapper
-{
-	position: relative;
-	display: inline-block;
-}
 .responsive_tab_ctn.apphub_responsive_tab {
 	text-align: center;
 }
@@ -348,54 +342,29 @@ center
 
 .apphub_sectionTab, a.apphub_sectionTab, .apphub_responsive_tab .responsive_tab_control
 {
-	display: inline-block;
-	color: #dadada;
-	/*background-color: #3A3A3A;*/
-	height: 28px;
-	line-height: 31px;
-	padding: 0px 10px;
-	margin-right: 2px;
-	text-decoration: none;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	-moz-border-radius: 2px;
-	-moz-border-radius-bottomleft: 0px;
-	-moz-border-radius-bottomright: 0px;
+	font-weight: 500;
+	font-size: 14px;
+	margin-right: 12px;
+	color: white;
+	opacity: 0.7;
+	transition: opacity .2s ease;
+}
+
+.apphub_sectionTab:hover, a.apphub_sectionTab:hover, .apphub_responsive_tab:hover .responsive_tab_control
+{
+	opacity: 1;
 }
 
 .apphub_sectionTab.active, .apphub_sectionTab.active:hover, .apphub_responsive_tab .responsive_tab_control
 {
-	padding: 1px;
-	text-decoration: none;
-	border: none;
-
-	background: #57749e; /* Old browsers */
-background: -webkit-linear-gradient( top, rgba(103,193,245,1) 5%, rgba(103,193,245,0) 95%);
-	background: linear-gradient( to bottom, rgba(103,193,245,1) 5%, rgba(103,193,245,0) 95%);
-
+	border-bottom: 3px solid #1A9FFF;
+	opacity: 1;
 }
 
 
 .apphub_sectionTab.new > span
 {
 	border-bottom: 1px solid #65c0f9;
-}
-
-.apphub_sectionTab.active > span
-{
-	border-bottom: none;
-}
-
-.apphub_sectionTab.active > span, .apphub_responsive_tab .responsive_tab_control .responsive_tab_control_inner
-{
-	padding: 0 17px;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-
-	display: block;
-	background: #0d121a;
 }
 
 .NoSelect
@@ -409,50 +378,11 @@ background: -webkit-linear-gradient( top, rgba(103,193,245,1) 5%, rgba(103,193,2
 	user-select: none;
 }
 
-.apphub_sectionTabNew
-{
-	color: #65c0f9;
-	position: absolute;
-	left: 10px;
-	top: -10px;
-	background-color: transparent;
-	border-bottom: none;
-	font-size: 12px;
-
-	transition-property: top;
-	transition-duration: 200ms;
-	transition-timing-function: ease-out;
-}
-
-.apphub_sectionTabNewWrapper:hover .apphub_sectionTabNew
-{
-	top: -16px;
-}
-
-.apphub_sectionTabNewWrapper:hover .apphub_sectionTabNew:hover
-{
-	top: -10px;
-}
-
-.apphub_sectionTabNewWrapper.active .apphub_sectionTabNew, .apphub_sectionTabNewWrapper.active .apphub_sectionTabNew:hover
-{
-	left: 17px;
-	top: -16px;
-}
-
 .apphub_sectionTab.admin
 {
 	position: absolute;
 	right: 0;
 	top: 20px;
-}
-
-.apphub_sectionTab:hover
-{
-	color: #ffffff;
-	background: #57749e; /* Old browsers */
-background: -webkit-linear-gradient( top, #67c1f5 5%, #417a9b 95%);
-	background: linear-gradient( to bottom, #67c1f5 5%, #417a9b 95%);
 }
 
 /* friends who played recently */
@@ -1506,7 +1436,6 @@ h3.apphub_responsive_menu_title {
 
 @media screen and (max-width: 910px) {
 	.apphub_HeaderTop {
-		padding-inline: 12px;
 		padding-bottom: 6px;
 	}
 }

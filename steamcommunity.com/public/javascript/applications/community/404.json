@@ -68,10 +68,12 @@
     "MyOrders_GridHeader_Price": "السعر",
     "MyOrders_Cancel": "إلغاء",
     "MyOrders_Remove": "حذف",
+    "MyOrders_SeeAllN": "رؤية جميع الـ%1$s",
     "CancelListing_Dialog_No": "لا",
     "Error_Sorry": "عذرًا!",
     "Error_Encountered": "حدث خطأ في أثناء معالجة طلبك:",
     "Error_TooManyRequests_Description": "لقد أرسلت عددًا كبيرًا من الطلبات مؤخرًا. يرجى الانتظار ومحاولة إرسال طلبك في وقت لاحق.",
+    "ItemBucketPicker_Overflow_FilterPlaceholder": "عامل التصفية...",
     "Mobile_InfoSection": "المعلومات",
     "Mobile_FiltersButton": "عوامل التصفية",
     "AssetProperty_Range_MinPlaceholder": "دقيقة",
@@ -80,6 +82,7 @@
     "AccessoriesList_Title": "الملحقات",
     "Filter_ViewResults": "عرض النتائج",
     "Market_AppUnplayedAndUnvetted_Dismiss": "انقر هنا لعرض هذا العنصر على أي حال",
+    "Economy_Market_TopLevelReason_Unknown": "لا يمكن لهذا الحساب حاليًا استخدام سوق مجتمع Steam.",
     "Economy_Market_TopLevelTooltip_MoreInfoLink": "معلومات أكثر...",
     "Economy_Market_TopLevelReason_InvalidCookie": "يواجه Steam مشكلة في استخدام ملفات تعريف الارتباط الخاصة بمتصفحك."
 }

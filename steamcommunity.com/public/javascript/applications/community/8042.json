@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Само за Valve",
     "moderation_escalationlevel_supervisor_desc": "Изисква се отговорник",
+    "moderation_escalation_escalationnote": "Забележка за ескалация:",
     "moderation_chatmetadata_deleted": "Метаданните, асоциирани с този доклад от чат бяха изтрити поради давността. Задържат се само за ~21 дни.",
     "moderation_chatmetadata_futurelogcollection": "Възможно е тази чат хронология да е била увеличена с допълнителни съобщения, изпратени след доклада в %1$s.",
     "moderation_resolutionaction_removed": "Премахване на докладваното съдържание",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Докладвани теми",
     "moderation_already_owner_disputed": "Вече е оспорено",
     "moderationstats_alltypes": "Всички типове теми",
-    "moderation_alternateforumtool": "Алтернативен инструмент",
+    "forumsubjectlist_subjectreportsummary": "%1$s нерешени, %1$s оспорени",
     "empty_no_trailing_comma": ""
 }

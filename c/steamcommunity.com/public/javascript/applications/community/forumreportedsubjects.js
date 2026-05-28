@@ -7,7 +7,10 @@
         SplitHeader: "_2B88BA7YbropfCtjJdn1yD",
         PopoutButton: "_3cujMozXvwTlTehPQtPJ7F",
         ReportedSubjectRow: "_32u0ZJiVZP0gaSLs5sdhUy",
+        SubjectReportSummary: "_9Ygy5gJ500tkoDj_G546U",
         FlagIcon: "_2DMl8RTVaYtsJarLDt3hqF",
+        ValveOnlyFlag: "-K7dp4xj1MBriG1APh1f4",
+        SupervisorFlag: "_32OXEg2kS_2-BTKOec40kP",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -19,6 +22,7 @@
           useCommentThread: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -131,20 +135,21 @@
       }
       function _(_, _) {
         const _ =
-            _.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0,
-          _ =
-            _.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0;
-        return _ === _
-          ? (function (_, _) {
-              if (_.length !== _.length) return _.length - _.length;
-              for (let _ = 0; _ < _.length; _++) {
-                const _ = _.charCodeAt(_),
-                  _ = _.charCodeAt(_);
-                if (_ !== _) return _ - _;
-              }
-              return 0;
-            })(_.subject_id, _.subject_id)
-          : _ - _;
+          _.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0;
+        return (
+          (_.unresolved_dispute_count + _.unresolved_report_count > 0 ? 1 : 0) -
+            _ ||
+          _.required_moderator_level - _.required_moderator_level ||
+          (function (_, _) {
+            if (_.length !== _.length) return _.length - _.length;
+            for (let _ = 0; _ < _.length; _++) {
+              const _ = _.charCodeAt(_),
+                _ = _.charCodeAt(_);
+              if (_ !== _) return _ - _;
+            }
+            return 0;
+          })(_.subject_id, _.subject_id)
+        );
       }
       function _(_) {
         for (;;) {
@@ -160,14 +165,20 @@
           _ = _(_.subject),
           _ = _(_.clanSteamId, _._, _.forumId, _.subject_group_id);
         let _ = null;
-        if (("0" === _.subject_id && (_ = "Topic"), null === _ && _.isSuccess))
+        "0" === _.subject_id && (_ = "Topic");
+        let _ = "#NA";
+        if (null === _ && _.isSuccess) {
+          let _ = 1;
           for (const _ of null !== (_ = _.data.comments) && void 0 !== _
             ? _
-            : [])
+            : []) {
             if (_.gidcomment === _.subject_id) {
-              _ = _(_.text);
+              (_ = _(_.text)), (_ = `#${_}`);
               break;
             }
+            _++;
+          }
+        }
         if (null === _ && _.isSuccess)
           for (const _ of null !== (_ = _.data.deleted_comments) && void 0 !== _
             ? _
@@ -181,26 +192,57 @@
             "0" === _.subject_id
               ? `#forum_op_${_.subject_group_id}`
               : `#c${_.subject_id}`,
-          _ = _.unresolved_dispute_count > 0 || _.unresolved_report_count > 0;
-        return (0, _.jsx)("div", {
+          _ = _.unresolved_dispute_count > 0 || _.unresolved_report_count > 0,
+          _ = _.required_moderator_level === _._,
+          _ = _.required_moderator_level === _._;
+        return (0, _.jsxs)("div", {
           className: (0, _._)("moderatorToolLink", _.ReportedSubjectRow),
-          children: (0, _.jsxs)("a", {
-            href: _,
-            children: [
-              _ &&
-                (0, _.jsx)("img", {
-                  className: _.FlagIcon,
-                  src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
-                }),
-              !_ &&
-                (0, _.jsx)("span", {
-                  className: _.FlagIcon,
-                  children: " ",
-                }),
-              " ",
-              _,
-            ],
-          }),
+          children: [
+            (0, _.jsxs)("a", {
+              href: _,
+              children: [
+                _ &&
+                  !_ &&
+                  !_ &&
+                  (0, _.jsx)("img", {
+                    className: _.FlagIcon,
+                    src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                  }),
+                !_ &&
+                  (0, _.jsx)("span", {
+                    className: _.FlagIcon,
+                    children: " ",
+                  }),
+                _ &&
+                  _ &&
+                  (0, _.jsx)("span", {
+                    className: (0, _._)(_.FlagIcon, _.ValveOnlyFlag),
+                    children: "VO",
+                  }),
+                _ &&
+                  _ &&
+                  (0, _.jsx)("span", {
+                    className: (0, _._)(_.FlagIcon, _.SupervisorFlag),
+                    children: "▲",
+                  }),
+                " ",
+                _,
+                " ",
+                _,
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _.SubjectReportSummary,
+              children: [
+                " ",
+                _._.Localize(
+                  "#forumsubjectlist_subjectreportsummary",
+                  _.unresolved_report_count,
+                  _.unresolved_dispute_count,
+                ),
+              ],
+            }),
+          ],
         });
       }
       function _(_, _, _, _) {

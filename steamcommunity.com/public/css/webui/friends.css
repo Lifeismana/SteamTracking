@@ -784,7 +784,7 @@
   transition-delay: 0.125s;
 }
 .gamepadui_svg_library_IbexDiagramFrontPanelTransparencyEffect_1SoIo.gamepadui_svg_library_ShowXRay_dX_dr {
-  opacity: 0;
+  opacity: 0.1;
   transition-delay: 0s;
 }
 .gamepadui_svg_library_ActivatableFill_3D14G {
@@ -3710,7 +3710,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:active[disabled],
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Disabled,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover[disabled] {
   opacity: 0.4;
-  background: #23262e;
+  background: #131418;
   color: #fff;
   pointer-events: none;
 }
@@ -3745,7 +3745,8 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_eKmEX {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  column-gap: 12px;
+  row-gap: 0px;
   position: relative;
   border-radius: 2px;
 }
@@ -4021,6 +4022,10 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_FieldChildrenInner_2o2fX {
   flex-grow: 1;
+  min-width: 0;
+}
+.gamepaddialog_FieldChildrenInner_2o2fX .DialogInput_Wrapper {
+  min-width: 0;
 }
 .gamepaddialog_FieldChildrenInner_2o2fX > svg {
   height: 1em;
@@ -4064,14 +4069,21 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldLeftColumn_2tALp:empty {
   display: none;
 }
-.gamepaddialog_FieldRightColumn_PSZtx {
+.gamepaddialog_Field_eKmEX:not(
+    .gamepaddialog_InlineWrapShiftsChildrenBelow_3LCXh
+  )
+  .gamepaddialog_FieldRightColumn_PSZtx {
   flex-shrink: 0;
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthGrow_Jgod1
   .gamepaddialog_FieldRightColumn_PSZtx {
   flex-grow: 1;
 }
-.gamepaddialog_Field_eKmEX:not(.gamepaddialog_ChildrenWidthGrow_Jgod1)
+.gamepaddialog_Field_eKmEX:not(
+    .gamepaddialog_ChildrenWidthGrow_Jgod1
+  ).gamepaddialog_Field_eKmEX:not(
+    .gamepaddialog_InlineWrapShiftsChildrenBelow_3LCXh
+  )
   .gamepaddialog_FieldRightColumn_PSZtx {
   max-width: 50%;
 }
@@ -4201,6 +4213,10 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocuswithin
   .gamepaddialog_FieldDescription_1W1to {
   color: #dcdedf;
+}
+.gamepaddialog_Field_eKmEX.gamepaddialog_Disabled_aIeh3
+  .gamepaddialog_FieldDescription_1W1to {
+  color: #67707b;
 }
 .gamepaddialog_ModalPosition_3A5uj {
   display: flex;
@@ -12527,6 +12543,11 @@ a.bbcodes_LinkButton_3TN0u:hover {
 }
 .bbcodes_Image_3K0Nu {
   max-width: 100%;
+}
+.bbcodes_Image_Inline_XEMe7 {
+  height: 1.1em;
+  width: auto;
+  vertical-align: text-bottom;
 }
 .bbcodes_PreservedUnsupportedTag_3YMzB .bbcodes_Tag_3SEDw {
   color: #999;

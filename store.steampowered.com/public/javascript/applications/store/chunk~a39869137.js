@@ -4001,6 +4001,7 @@
                                 (0, n.jsx)(N.Q, {
                                   id: Z,
                                   bMinimizePlatforms: le,
+                                  bHideWindows: le,
                                 }),
                                 Boolean(C && ne.item_type == o.c6.qI) &&
                                   (0, n.jsx)(F.kk, {
@@ -4135,7 +4136,7 @@
       var n = i(7850),
         s = i(81886),
         r = i(96171),
-        a = i(40807),
+        a = i(55509),
         o = i(3740),
         d = i(39777),
         l = i(58918),

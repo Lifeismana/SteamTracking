@@ -1202,12 +1202,12 @@
         async CommitFavoriteBadgeChanges() {
           if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return _._;
           let _ = this.FavoriteBadgeID,
-            _ = _._.Init(_._);
+            _ = _._.Init(_.Hrm);
           _.badgeid
             ? _.Body().set_badgeid(_.badgeid)
             : _.communityitemid &&
               _.Body().set_communityitemid(_.communityitemid);
-          let _ = await _._.SetFavoriteBadge(
+          let _ = await _.xtC.SetFavoriteBadge(
             this.m_CMInterface.GetServiceTransport(),
             _,
           );
@@ -1388,12 +1388,12 @@
             this.m_Backgrounds.BIsUncomitted())
           ) {
             {
-              let _ = _._.Init(_._);
+              let _ = _._.Init(_.F55);
               _.Body().set_communityitemid(
                 this.m_Backgrounds.m_EquippedItem &&
                   this.m_Backgrounds.m_EquippedItem.communityitemid,
               );
-              let _ = await _._.SetProfileBackground(
+              let _ = await _.xtC.SetProfileBackground(
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
@@ -1403,12 +1403,12 @@
               this.m_Backgrounds.m_EquippedItem &&
               this.m_Backgrounds.m_EquippedItem.communityitemid
             ) {
-              let _ = _._.Init(_._);
+              let _ = _._.Init(_.MK$);
               _.Body().set_communityitemid(
                 this.m_Backgrounds.m_EquippedItem.communityitemid,
               ),
                 _.Body().set_flags(this.m_Backgrounds.m_EquipFlags);
-              let _ = await _._.SetEquippedProfileItemFlags(
+              let _ = await _.xtC.SetEquippedProfileItemFlags(
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
@@ -1453,12 +1453,12 @@
         }
         async CommitMiniProfileChanges() {
           if (this.m_MiniProfileBackgrounds.BIsUncomitted()) {
-            let _ = _._.Init(_._);
+            let _ = _._.Init(_.A6_);
             _.Body().set_communityitemid(
               this.m_MiniProfileBackgrounds.m_EquippedItem &&
                 this.m_MiniProfileBackgrounds.m_EquippedItem.communityitemid,
             );
-            let _ = await _._.SetMiniProfileBackground(
+            let _ = await _.xtC.SetMiniProfileBackground(
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
@@ -1482,23 +1482,23 @@
         async CommitAvatarChanges() {
           let _, _;
           if (this.m_Avatars.BIsUncomitted()) {
-            let _ = _._.Init(_._);
+            let _ = _._.Init(_.UMm);
             _.Body().set_communityitemid(
               this.m_Avatars.m_EquippedItem &&
                 this.m_Avatars.m_EquippedItem.communityitemid,
             ),
-              (_ = _._.SetAnimatedAvatar(
+              (_ = _.xtC.SetAnimatedAvatar(
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               ));
           }
           if (this.m_AvatarFrames.BIsUncomitted()) {
-            let _ = _._.Init(_._);
+            let _ = _._.Init(_.C0y);
             _.Body().set_communityitemid(
               this.m_AvatarFrames.m_EquippedItem &&
                 this.m_AvatarFrames.m_EquippedItem.communityitemid,
             ),
-              (_ = _._.SetAvatarFrame(
+              (_ = _.xtC.SetAvatarFrame(
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               ));
@@ -1631,10 +1631,10 @@
           this.m_ProfileModifiers.Revert();
         }
         ReloadEquippedItems() {
-          let _ = _._.Init(_._);
+          let _ = _._.Init(_.aKf);
           _.Body().set_steamid(_._.steamid),
             _.Body().set_language(_._.LANGUAGE),
-            (this.m_promiseEquipped = _._.GetProfileItemsEquipped(
+            (this.m_promiseEquipped = _.xtC.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
               _,
             )),
@@ -1719,16 +1719,16 @@
           return this.GetGoldenProfileConfigValue("miniprofile_movie");
         }
         async Initialize() {
-          let _ = _._.Init(_._);
+          let _ = _._.Init(_.YkN);
           _.Body().set_language(_._.LANGUAGE),
-            (this.m_promiseOwned = _._.GetProfileItemsOwned(
+            (this.m_promiseOwned = _.xtC.GetProfileItemsOwned(
               this.m_SteamInterface.GetServiceTransport(),
               _,
             ));
-          let _ = _._.Init(_._);
+          let _ = _._.Init(_.aKf);
           _.Body().set_steamid(_._.steamid),
             _.Body().set_language(_._.LANGUAGE),
-            (this.m_promiseEquipped = _._.GetProfileItemsEquipped(
+            (this.m_promiseEquipped = _.xtC.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
               _,
             ));
@@ -2031,13 +2031,13 @@
           this.m_ActiveTheme = this.m_ComittedActiveTheme;
         }
         async CommitActiveTheme() {
-          let _ = _._.Init(_._);
+          let _ = _._.Init(_.yow);
           _.Body().set_theme_id(
             "Default" == this.ActiveTheme.theme_id
               ? ""
               : this.ActiveTheme.theme_id,
           );
-          const _ = await _._.SetProfileTheme(
+          const _ = await _.xtC.SetProfileTheme(
             this.m_CMInterface.GetServiceTransport(),
             _,
           );
@@ -5785,7 +5785,7 @@
           let _ = _ && _.movie_webm,
             _ = _ && _.tiled,
             _ = _ ? _(_) : _(null);
-          const _ = _ && !_ && _.GetEquippedBackgroundFlags() == _._._;
+          const _ = _ && !_ && _.GetEquippedBackgroundFlags() == _.JA9._;
           let _ = null;
           return (
             _ &&
@@ -5918,7 +5918,7 @@
           const _ = !_ || (null == _ ? void 0 : _.tiled),
             _ = _.GetEquippedBackgroundFlags();
           let _ = (0, _.jsx)(_, {
-              flag: _._._,
+              flag: _.JA9._,
               currentFlag: _,
               onSelect: this.OnChange,
               label: (0, _._)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
@@ -6037,16 +6037,8 @@
                   }),
                 ],
               });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, name: _ = "GamepadWebRoot", ..._ } = _;
-        return (0, _.jsx)(_._, {
-          ..._,
-          navID: _,
-          children: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { navigate: _, onClick: _, ..._ } = _,
           { target: _ } = _;
@@ -6077,8 +6069,8 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { root: _, currentPath: _, linksAvailable: _, children: _ } = _;
-        return (0, _.jsx)(_, {
-          name: "ProfileEditShell",
+        return (0, _.jsx)(_._, {
+          navID: "ProfileEditShell",
           children: (0, _.jsx)(_._, {
             children: (0, _.jsxs)(_._, {
               className: _.Shell,
@@ -6861,7 +6853,10 @@
             return (0, _._)({
               mutationFn: async (_) => {
                 const _ = _._.Init(_._);
-                _.Body().set_steamid(_), _.Body().set_rtime_cooldown_ends(_);
+                _.Body().set_steamid(_),
+                  _.Body().set_rtime_cooldown_ends(_.rtCooldownEnds),
+                  void 0 !== _.bClearOpenReports &&
+                    _.Body().set_acquit_unresolved_reports(_.bClearOpenReports);
                 const _ = await _._.UpdateReporterCooldown(_, _);
                 if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
               },
@@ -6872,6 +6867,7 @@
               },
             });
           })(_.steamid),
+          _ = (0, _.useRef)(null),
           _ = (0, _.useRef)(null);
         let _ = "";
         if (_.isSuccess && _.data > 0) {
@@ -6885,11 +6881,24 @@
               children: (0, _.jsxs)(_._, {
                 onCancel: () => __webpack_require__(!1),
                 onOK: async () => {
+                  var _, _;
                   if (!_.current) return;
                   const _ = _.current.value,
                     _ = 86400 * parseInt(_),
-                    _ = Math.floor(new Date().getTime() / 1e3) + _;
-                  await _.mutateAsync(_), __webpack_require__(!1);
+                    _ = Math.floor(new Date().getTime() / 1e3) + _,
+                    _ =
+                      null !==
+                        (_ =
+                          null === (_ = _.current) || void 0 === _
+                            ? void 0
+                            : _.checked) &&
+                      void 0 !== _ &&
+                      _;
+                  await _.mutateAsync({
+                    rtCooldownEnds: _,
+                    bClearOpenReports: _,
+                  }),
+                    __webpack_require__(!1);
                 },
                 strTitle: _._.Localize("#setcooldown_dialogtitle"),
                 strDescription: _._.Localize("#setcooldown_dialogdescription"),
@@ -6936,9 +6945,22 @@
                           }),
                         ],
                       }),
+                      (0, _.jsxs)("p", {
+                        children: [
+                          (0, _.jsx)("input", {
+                            type: "checkbox",
+                            ref: _,
+                          }),
+                          " ",
+                          _._.Localize("#setcooldown_clearopenreports"),
+                        ],
+                      }),
                       (0, _.jsx)("button", {
                         onClick: async () => {
-                          await _.mutateAsync(0), __webpack_require__(!1);
+                          await _.mutateAsync({
+                            rtCooldownEnds: 0,
+                          }),
+                            __webpack_require__(!1);
                         },
                         children: _._.Localize("#setcooldown_clearcooldown"),
                       }),
@@ -7018,38 +7040,6 @@
           ],
         });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-        const { children: _, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(void 0),
-          _ = (0, _._)(_, _),
-          _ = (0, _._)(),
-          _ = (0, _._)("__nav_tree_root");
-        return (0, _.jsx)(_._, {
-          ..._,
-          navTreeRef: _,
-          ref: _,
-          parentEmbeddedNavTree: _,
-          disabledRoot: !_,
-          historyMode: "navigationapi",
-          children: (0, _.jsx)(_._, {
-            disableFocusRing: !_,
-            children: _,
-          }),
-        });
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

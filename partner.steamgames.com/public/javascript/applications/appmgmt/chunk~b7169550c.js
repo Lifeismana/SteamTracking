@@ -46,6 +46,7 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
         CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
@@ -580,36 +581,31 @@
         l = n(18654),
         u = n.n(l);
       function d(e) {
-        const { id: t, imageType: n, bPreferAssetWithoutOverride: l } = e,
-          { storeItemAsset: d, storeItemDefaultInfo: p } = (0, r.q)(t, n, l);
+        const {
+            id: t,
+            imageType: n,
+            bPreferAssetWithoutOverride: l,
+            strAdditionalClassName: d,
+          } = e,
+          { storeItemAsset: p, storeItemDefaultInfo: g } = (0, r.q)(t, n, l);
         if ("library" === n || "vertical" == n)
           return (0, a.jsx)(s.G, { id: t, bPreferAssetWithoutOverride: l });
-        let g,
-          m,
-          h = "";
-        if ("main" === n)
-          (g = u().mainCapsuleImgWidth),
-            (m = u().mainCapsuleImgHeight),
-            (h = u().MainCapsuleImageContainer);
-        else
-          (g = u().headerCapsuleImgWidth),
-            (m = u().headerCapsuleImgHeight),
-            (h = u().HeaderCapsuleImageContainer);
-        if (void 0 === d || !p)
+        let m = "";
+        if ("main" === n) m = u().MainCapsuleImageContainer;
+        else m = u().HeaderCapsuleImageContainer;
+        if (void 0 === p || !g)
           return (0, a.jsx)("div", {
-            className: (0, c.A)(h, "CapsuleImageCtn"),
+            className: (0, c.A)(m, "CapsuleImageCtn", d),
           });
-        if (null == d) return null;
-        let f = (0, i.N)(d, "header" === n);
+        if (null == p) return null;
+        let h = (0, i.N)(p, "header" === n);
         return (0, a.jsx)("div", {
-          className: (0, c.A)(h, "CapsuleImageCtn"),
+          className: (0, c.A)(m, "CapsuleImageCtn", d),
           children: (0, a.jsx)(o.o, {
             lazyLoad: !0,
-            srcs: f,
+            srcs: h,
             className: (0, c.A)(u().CapsuleImage),
-            width: g,
-            height: m,
-            alt: p.name,
+            alt: g.name,
           }),
         });
       }
@@ -1095,8 +1091,8 @@
             queryFn: async () => {
               const e = new Map();
               if (g.iA.logged_in) {
-                const n = m.w.Init(h.dN),
-                  a = (await h.xt.GetNicknameList(t, n)).Body().toObject();
+                const n = m.w.Init(h.w_T),
+                  a = (await h.xtC.GetNicknameList(t, n)).Body().toObject();
                 a?.nicknames &&
                   a.nicknames.length > 0 &&
                   a.nicknames.forEach((t) => {

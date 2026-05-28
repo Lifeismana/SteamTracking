@@ -9155,6 +9155,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9165,7 +9166,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      _.forwardRef(function (_, _) {
+      const _ = _.forwardRef(function (_, _) {
         const {
             navID: _,
             onActivated: _,
@@ -10369,6 +10370,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10481,6 +10483,9 @@
         }
       }
       var _ = __webpack_require__("chunkid");
+      function _(_, _ = window) {
+        return _[_];
+      }
       class _ {
         m_node;
         m_History;
@@ -10649,6 +10654,7 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = [],
@@ -10795,8 +10801,7 @@
           distance: _,
         };
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_options;
         m_msStart;
@@ -12156,7 +12161,7 @@
                   `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                 ),
             this.m_Tree.BIsActive() &&
-              (function (_, _) {
+              (function (_, _, _) {
                 const _ = _.Element;
                 if (!_) return;
                 let _ = [
@@ -12197,7 +12202,7 @@
                       _ == _.NoTransform ||
                       _ == _.NoTransformSparseContent ||
                       !_;
-                  if (_) {
+                  if (_ || _ === _._.GAMEPAD) {
                     const _ = _ ? _(_) : _.getBoundingClientRect();
                     let _ = !1;
                     const _ = Math.max(1.4 * (_.bottom - _.top), 40),
@@ -12229,7 +12234,7 @@
                             inline: "nearest",
                           });
                 }
-              })(this, _);
+              })(this, _, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -12272,7 +12277,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new _._("ScrollSnap").Debug;
       function _(_, _ = "smooth", _, _) {
         const _ = (_ ?? 30) / 100,
           _ = _.useRef(void 0),
@@ -12352,6 +12359,10 @@
                 return !1;
             }
             return (
+              _(
+                `ScrollOnGamepadDirection top:${_.current} left:${_.current}, behavior:${_ ?? "auto"} `,
+                _.current,
+              ),
               _ && "smooth" != _
                 ? (_.current.scrollTo({
                     top: _.current,
@@ -31052,6 +31063,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31146,11 +31158,7 @@
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return _(_, _, "include_screenshots", "screenshots");
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
@@ -31186,6 +31194,9 @@
       }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
+      }
+      function _(_, _) {
+        return _(_, _, "include_screenshots", "screenshots");
       }
       function _(_, _) {
         return _(
@@ -35500,20 +35511,46 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { padded: _, gap: _, children: _, bLazyRenderChildren: _ } = _,
-          _ = (0, _.jsx)("div", {
-            style: {
-              gap: _ ? _ + "px" : void 0,
-            },
-            className: (0, _._)({
-              [_.ScrollSnapCarousel]: !0,
-              ScrollSnapCarousel: !0,
-              SaleSectionCarousel: !0,
-              SaleSectionCarouselPadding: _,
-              ["" + _.className]: !!_.className,
-            }),
+        const {
+            padded: _,
+            gap: _,
             children: _,
+            bLazyRenderChildren: _,
+            startingSlide: _,
+          } = _,
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _.current?.scrollIntoView({
+            inline: "start",
+            block: "nearest",
+            behavior: "auto",
           });
+        }, [_]);
+        const _ = (0, _.jsxs)(_._, {
+          "flow-children": "row",
+          style: {
+            gap: _ ? _ + "px" : void 0,
+          },
+          className: (0, _._)(
+            {
+              SaleSectionCarouselPadding: _,
+            },
+            "ScrollSnapCarousel",
+            "SaleSectionCarousel",
+            _.ScrollSnapCarousel,
+            _.className,
+          ),
+          children: [
+            _ &&
+              _.Children.map(_, (_, _) =>
+                (0, _.jsx)("div", {
+                  ref: _ == _ ? _ : void 0,
+                  children: _,
+                }),
+              ),
+            !_ && _,
+          ],
+        });
         return _
           ? (0, _.jsx)(_._, {
               horizontal: !1,
@@ -35665,6 +35702,7 @@
             lockOnWindowScroll: !0,
             orientation: "horizontal",
             disableKeyboard: !0,
+            currentSlide: _.startingSlide,
             children: [
               (0, _.jsx)(_, {
                 bHideArrows: _,
@@ -39457,7 +39495,8 @@
           ),
           _ = (0, _._)();
         _.useEffect(() => {
-          (_.bAutoFocusPageContent || _.state?.bDirectNav) &&
+          !_.bManuallyFocusPageContent &&
+            _.state?.bDirectNav &&
             _.current?.TakeFocus();
         }, [_.state]);
         const { refForPageList: _, refForPage: _ } = (function () {
@@ -45377,7 +45416,31 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _({ config: _, isDynamic: _ }) {
+      const _ = _.forwardRef(function (_, _) {
+        const { children: _, navTreeRef: _, ..._ } = _,
+          _ = _.useRef(void 0),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(),
+          _ = (0, _._)("__nav_tree_root");
+        return (0, _.jsx)(_._, {
+          ..._,
+          navTreeRef: _,
+          ref: _,
+          parentEmbeddedNavTree: _,
+          disabledRoot: !_,
+          historyMode: "navigationapi",
+          children: (0, _.jsx)(_._, {
+            disableFocusRing: !_,
+            children: _,
+          }),
+        });
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _({ config: _, isDynamic: _, omitFocusNavTreeBridge: _ }) {
         const _ = _ ? _ : _;
         return (0, _.jsx)(_.Fragment, {
           children: Object.keys(_ || {}).map((_) =>
@@ -45386,6 +45449,7 @@
               {
                 featureName: _,
                 render: _[_],
+                omitFocusNavTreeBridge: !!_,
               },
               _,
             ),
@@ -45393,7 +45457,7 @@
         });
       }
       function _(_) {
-        const { featureName: _, render: _ } = _,
+        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
           _ = _.useMemo(
             () =>
               Array.from(
@@ -45410,6 +45474,7 @@
                     featureName: _,
                     elem: _,
                     render: _,
+                    omitFocusNavTreeBridge: _,
                   },
                   _,
                 ),
@@ -45418,7 +45483,7 @@
           : null;
       }
       function _(_) {
-        const { featureName: _, render: _ } = _,
+        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
           _ = (0, _._)(),
           _ = _.useRef([]),
           _ = _.useRef(0);
@@ -45467,6 +45532,7 @@
                   elem: _,
                   featureName: _,
                   render: _,
+                  omitFocusNavTreeBridge: _,
                 },
                 _,
               ),
@@ -45475,7 +45541,12 @@
         );
       }
       function _(_) {
-        const { featureName: _, elem: _, render: _ } = _,
+        const {
+            featureName: _,
+            elem: _,
+            render: _,
+            omitFocusNavTreeBridge: _,
+          } = _,
           _ = _.useMemo(
             () =>
               (function (_, _) {
@@ -45498,12 +45569,22 @@
               })(__webpack_require__.getAttribute("data-props"), _),
             [_, _],
           );
-        return (0, _.createPortal)(
-          (0, _.jsx)(_._, {
-            children: _(_),
-          }),
-          _,
-        );
+        return _
+          ? (0, _.createPortal)(
+              (0, _.jsx)(_._, {
+                children: _(_),
+              }),
+              _,
+            )
+          : (0, _.createPortal)(
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  navID: `FeatureTarget_${_}`,
+                  children: _(_),
+                }),
+              }),
+              _,
+            );
       }
       function _(_, _) {
         return _.matches(_) ? [_] : _.querySelectorAll(_);

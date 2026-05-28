@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Imposta la sospensione delle segnalazioni",
     "setcooldown_dialogdescription": "Impedisci a un utente di segnalare contenuti o contestare la moderazione quando ha abusato del sistema.",
     "setcooldown_setbutton": "Imposta sospensione",
+    "setcooldown_clearopenreports": "Cancella le segnalazioni non risolte di questo utente",
     "nocomma": ""
 }

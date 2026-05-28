@@ -193,6 +193,7 @@
     "MyOrders_NoBuyOrders_Item": "You have no active buy orders for this item.",
     "MyOrders_NoSellOrders_Item": "You are not selling any of this item. Sell items from your inventory, or click the \"Sell\" button on this page.",
     "MyOrders_QuantityWithValue": "Quantity: %1$s",
+    "MyOrders_SeeAllN": "See all %1$s",
     "CancelBuyOrder_GenericError": "There was a problem canceling your order. Please try again later.",
     "CancelListing_GenericError": "There was a problem removing your listing. Please try again later.",
     "CancelListing_Dialog_Header": "Remove a listing",
@@ -206,6 +207,7 @@
     "UniqueBuyOrder_Explanation_1": "Set your preferred price and your purchase is made automatically when the item becomes available at that price.",
     "UniqueBuyOrder_Explanation_2": "Steam will ensure you get the best price available.",
     "UniqueBuyOrder_Explanation_3": "For this item, buy orders will be matched with the cheapest option to buy regardless of any unique characteristics.",
+    "PriceFilter_ValueAndUp": "%1$s and up",
     "Error_Sorry": "Sorry!",
     "Error_Encountered": "An error was encountered while processing your request:",
     "Error_TooManyRequests_Description": "You've made too many requests recently. Please wait and try your request again later.",
@@ -214,6 +216,8 @@
     "Error_LoadingMarketItem": "The requested item might not exist, or there might be a temporary issue preventing this item from loading. Please try again later.",
     "ListingFilter_Title": "Filter Listings",
     "Listings_NoneFound": "No Listings Found",
+    "ItemBucketPicker_Overflow_Placeholder": "More options...",
+    "ItemBucketPicker_Overflow_FilterPlaceholder": "Filter...",
     "Mobile_InfoSection": "Info",
     "Mobile_GraphSection": "Sales graph",
     "Mobile_BuyOrderSection": "Buy Orders",
@@ -271,5 +275,6 @@
     "Economy_Market_TopLevelReason_NoSteamGuard": "Your account must be protected by Steam Guard for at least %1$s days.",
     "Economy_Market_TopLevelTooltip_SteamGuardDisabled": "You must enable Steam Guard on your account. Please ensure that your email is verified and you have logged into your account twice after enabling Steam Guard.",
     "Economy_Market_HeaderTip_NoSteamGuard": "Your account must be protected by Steam Guard for at least %1$s days.",
-    "Economy_Market_HeaderTip_TimeCanUse": "If nothing further occurs to restrict your access, you'll be able to use The Community Market on %1$s"
+    "Economy_Market_HeaderTip_TimeCanUse": "If nothing further occurs to restrict your access, you'll be able to use The Community Market on %1$s",
+    "Economy_Market_TopLevelReason_TradeCooldown": "Your account is on a temporary cooldown from trade and market features."
 }

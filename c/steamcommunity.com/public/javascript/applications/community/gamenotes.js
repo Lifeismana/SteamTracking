@@ -43,10 +43,18 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        Image_Inline: "XEMe7ReBSARw5XHcLR6kF",
         PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
         Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
         CalendarEventContainer: "S-ElBHomDkV0L3K4XChxt",
         CalendarEventLink: "_106tp5gLWBvoekGEC8HXQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Hover: "_1lo3nIamSX1TzzE4TlhFXA",
+        Link: "_1ds3uh7ntoekPm635F2Ziv",
+        LinkHelp: "_3Vn5X8bzPjWx5p545nkB6k",
       };
     },
     chunkid: (module) => {
@@ -6102,6 +6110,279 @@
             text: _ + (null !== (_ = _.text) && void 0 !== _ ? _ : ""),
           }
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+            linkMarkType: _,
+            onURLPasted: _,
+            schema: _,
+            onClickURL: _ = _,
+          } = _,
+          _ = _.useRef(_);
+        _.current = _;
+        const [_, _] = _.useState(),
+          [_, _] = _.useState(),
+          [_, _] = _.useState(),
+          [_, _] = (0, _._)(_),
+          _ = _.useMemo(
+            () =>
+              new _._({
+                props: {
+                  handleClickOn(_, _, _, _, _, _) {
+                    if (_ && (_.ctrlKey || 1 == _.button)) {
+                      const _ = _.resolve(_ - _)
+                        .marks()
+                        .find((_) => _.type == _);
+                      if (_)
+                        return (
+                          _.current(_.attrs.href, _.view),
+                          _.preventDefault(),
+                          !0
+                        );
+                    }
+                    return !1;
+                  },
+                  handleKeyDown: (_, _) =>
+                    !(
+                      "k" != _.key ||
+                      (!_.metaKey && !_.ctrlKey) ||
+                      _.shiftKey ||
+                      _.altKey
+                    ) && (_(_), !0),
+                  clipboardTextParser(_, _, _, _) {
+                    const _ = (0, _._)(_, _, _, _);
+                    return _ && new _._(_._.from(_), _.start(), _.end());
+                  },
+                  handlePaste(_, _, _) {
+                    let _ = [];
+                    if (
+                      (_.content.descendants((_, _) => {
+                        if (_.isText) {
+                          const _ = (0, _._)(_, _.text, _, _);
+                          _ &&
+                            _.push({
+                              node: _,
+                              pos: _,
+                              rgNodes: _,
+                            });
+                        }
+                      }),
+                      !_.length)
+                    )
+                      return !1;
+                    let _ = _.state._;
+                    _.selection.empty || _.deleteSelection();
+                    let _ = _.selection.from,
+                      _ = 0;
+                    for (const _ of _) {
+                      const { node: _, pos: _, rgNodes: _ } = _,
+                        _ = _.content.cut(_, _).append(_._.from(_));
+                      _.insert(_, _), (_ += _.size + 2), (_ = _ + _.nodeSize);
+                    }
+                    return (
+                      _.insert(_, _.content.cut(_)),
+                      _.scrollIntoView(),
+                      _.dispatch(_),
+                      !0
+                    );
+                  },
+                  handleDOMEvents: {
+                    mouseover: (_, _) => {
+                      for (
+                        let _ = _.target;
+                        _ && _ != _.currentTarget;
+                        _ = _.parentElement
+                      )
+                        if ("A" == _.nodeName && "getBoundingClientRect" in _) {
+                          const _ = _.getBoundingClientRect();
+                          return (
+                            _(_.left + _.width / 2), _(_.bottom + 2), void _(_)
+                          );
+                        }
+                      _(void 0);
+                    },
+                    mouseleave: (_, _) => (_(void 0), !1),
+                  },
+                },
+              }),
+            [_, _, _, _],
+          );
+        (0, _._)(_);
+        let _ = null;
+        return (
+          _ &&
+            _ &&
+            _ &&
+            (_ = (0, _.jsx)(_, {
+              top: _,
+              left: _,
+              href: _.getAttribute("href"),
+            })),
+          (0, _.jsxs)(_.Fragment, {
+            children: [_, _],
+          })
+        );
+      });
+      function _(_) {
+        const { top: _, left: _, href: _ } = _,
+          [_, _] = _.useState(0),
+          _ = _.useRef(null);
+        _.useLayoutEffect(() => {
+          _(_.current.getBoundingClientRect().width);
+        }, [_, _, _]);
+        const _ = {
+          top: `${_}px`,
+          left: `${Math.max(_ - _ / 2, 12)}px`,
+        };
+        return (0, _.jsxs)("div", {
+          className: _.Hover,
+          style: _,
+          ref: _,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.Link,
+              children: _,
+            }),
+            (0, _.jsx)("div", {
+              className: _.LinkHelp,
+              children: (0, _._)("#UserGameNotes_ClickToOpenLink"),
+            }),
+          ],
+        });
+      }
+      function _(_, _) {
+        _.open(_);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            role: _,
+            visible: _ = !0,
+            className: _,
+            keepMounted: _ = !1,
+            expandDirection: _ = "height",
+            msAnimationDuration: _ = 250,
+            children: _,
+          } = _,
+          {
+            style: _,
+            active: _,
+            refDiv: _,
+          } = (function (_, _ = "height", _ = 250) {
+            const _ = _.useRef(null),
+              _ = _.useRef(!0),
+              [_, _] = _.useState("idle"),
+              [_, _] = _.useState(
+                _
+                  ? {}
+                  : {
+                      [_]: "0px",
+                      overflow: "hidden",
+                    },
+              ),
+              [_, _] = _.useState(_);
+            _.useLayoutEffect(() => {
+              _.current || _("start"), _ && _(_);
+            }, [_]),
+              _.useLayoutEffect(
+                () => (
+                  (_.current = !1),
+                  () => {
+                    _.current = !0;
+                  }
+                ),
+                [],
+              ),
+              _.useLayoutEffect(() => {
+                const _ = _.current,
+                  _ = "height" == _ ? "scrollHeight" : "scrollWidth",
+                  _ = () => {
+                    _.unstable_batchedUpdates(() => {
+                      _(
+                        _
+                          ? {}
+                          : {
+                              [_]: "0px",
+                              overflow: "hidden",
+                            },
+                      ),
+                        _("idle"),
+                        _(_);
+                    });
+                  };
+                if ("start" == _) {
+                  const _ = _[_];
+                  0 == _
+                    ? _()
+                    : (_((_) => ({
+                        [_]: _ ? "0px" : `${_}px`,
+                        ..._,
+                        overflow: "hidden",
+                      })),
+                      _("active"));
+                } else if ("active" == _) {
+                  _.scrollTop;
+                  const _ = _[_];
+                  return (
+                    _({
+                      overflow: "hidden",
+                      [_]: _ ? `${_}px` : "0px",
+                    }),
+                    __webpack_require__.addEventListener("transitionend", _),
+                    () => {
+                      __webpack_require__.removeEventListener(
+                        "transitionend",
+                        _,
+                      );
+                    }
+                  );
+                }
+              }, [_, _]);
+            const _ = {
+              ..._,
+              transition: `${_} ${_}ms`,
+            };
+            return {
+              style: _,
+              active: _,
+              refDiv: _,
+            };
+          })(_, _, _);
+        return _ || _ || _
+          ? (0, _.jsx)("div", {
+              _: _,
+              role: _,
+              className: _,
+              ref: _,
+              style: _,
+              inert: !_,
+              children: _,
+            })
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

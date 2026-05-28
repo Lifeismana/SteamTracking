@@ -67,7 +67,7 @@
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapGenreToStickerResponse = new Map();
-        m_eStoryBadgeGranted = _._._;
+        m_eStoryBadgeGranted = _.GPz._;
         m_strLocalizedStoryHeader;
         m_strLocalizedStoryHeaderMobile;
         static s_Singleton;
@@ -612,32 +612,32 @@
         _ = (_) => {
           const _ = (0, _._)();
           let _;
-          if (_ == _._._)
+          if (_ == _.GPz._)
             _ = {
               badge_name: "#Summer21_Badge_Outcome1_Title",
               badge_desc: "#Summer21_Badge_Outcome1_Description",
               badge_class: _.Badge_51,
             };
-          else if (_ == _._._)
+          else if (_ == _.GPz._)
             _ = {
               badge_name: "#Summer21_Badge_Outcome2_Title",
               badge_desc: "#Summer21_Badge_Outcome2_Description",
               badge_class: _.Badge_52,
             };
-          else if (_ == _._._)
+          else if (_ == _.GPz._)
             _ = {
               badge_name: "#Summer21_Badge_Outcome3_Title",
               badge_desc: "#Summer21_Badge_Outcome3_Description",
               badge_class: _.Badge_53,
             };
-          else if (_ == _._._)
+          else if (_ == _.GPz._)
             _ = {
               badge_name: "#Summer21_Badge_Outcome4_Title",
               badge_desc: "#Summer21_Badge_Outcome4_Description",
               badge_class: _.Badge_54,
             };
           else {
-            if (_ != _._._) return null;
+            if (_ != _.GPz._) return null;
             _ = {
               badge_name: "#Summer21_Badge_Outcome5_Title",
               badge_desc: "#Summer21_Badge_Outcome5_Description",

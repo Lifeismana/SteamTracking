@@ -18,19 +18,6 @@
 	padding-right:5px;
 }
 
-#rightContents {
-	float:right;
-	width:254px;
-	margin:0;
-	padding:0;
-	padding-left:10px;
-	padding-top:16px;
-}
-
-.migrated_profile_page #rightContents {
-	margin-right: 5px;
-}
-
 #mainContents h2 {
 	font-weight:normal;
 	margin:0;

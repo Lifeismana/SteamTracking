@@ -302,9 +302,9 @@
         SteamDeckTheme: "_2aDQKbd2fBPJ0D_2CiGhRT",
       };
     },
-    70162: (e, t, i) => {
+    10801: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { ProfileEditRoutes: () => fr, default: () => Pr });
+      i.r(t), i.d(t, { ProfileEditRoutes: () => _r, default: () => gr });
       var r = i(7850);
       let a = { ProfileURL: "" };
       var s = i(34629),
@@ -1157,12 +1157,12 @@
         async CommitFavoriteBadgeChanges() {
           if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return T.R;
           let e = this.FavoriteBadgeID,
-            t = M.w.Init(z.Hr);
+            t = M.w.Init(z.Hrm);
           e.badgeid
             ? t.Body().set_badgeid(e.badgeid)
             : e.communityitemid &&
               t.Body().set_communityitemid(e.communityitemid);
-          let i = await z.xt.SetFavoriteBadge(
+          let i = await z.xtC.SetFavoriteBadge(
             this.m_CMInterface.GetServiceTransport(),
             t,
           );
@@ -1339,12 +1339,12 @@
             this.m_Backgrounds.BIsUncomitted())
           ) {
             {
-              let e = M.w.Init(z.F5);
+              let e = M.w.Init(z.F55);
               e.Body().set_communityitemid(
                 this.m_Backgrounds.m_EquippedItem &&
                   this.m_Backgrounds.m_EquippedItem.communityitemid,
               );
-              let t = await z.xt.SetProfileBackground(
+              let t = await z.xtC.SetProfileBackground(
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               );
@@ -1354,14 +1354,14 @@
               this.m_Backgrounds.m_EquippedItem &&
               this.m_Backgrounds.m_EquippedItem.communityitemid
             ) {
-              let e = M.w.Init(z.MK);
+              let e = M.w.Init(z.MK$);
               e
                 .Body()
                 .set_communityitemid(
                   this.m_Backgrounds.m_EquippedItem.communityitemid,
                 ),
                 e.Body().set_flags(this.m_Backgrounds.m_EquipFlags);
-              let t = await z.xt.SetEquippedProfileItemFlags(
+              let t = await z.xtC.SetEquippedProfileItemFlags(
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               );
@@ -1406,12 +1406,12 @@
         }
         async CommitMiniProfileChanges() {
           if (this.m_MiniProfileBackgrounds.BIsUncomitted()) {
-            let e = M.w.Init(z.A6);
+            let e = M.w.Init(z.A6_);
             e.Body().set_communityitemid(
               this.m_MiniProfileBackgrounds.m_EquippedItem &&
                 this.m_MiniProfileBackgrounds.m_EquippedItem.communityitemid,
             );
-            let t = await z.xt.SetMiniProfileBackground(
+            let t = await z.xtC.SetMiniProfileBackground(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             );
@@ -1435,27 +1435,27 @@
         async CommitAvatarChanges() {
           let e, t;
           if (this.m_Avatars.BIsUncomitted()) {
-            let t = M.w.Init(z.UM);
+            let t = M.w.Init(z.UMm);
             t
               .Body()
               .set_communityitemid(
                 this.m_Avatars.m_EquippedItem &&
                   this.m_Avatars.m_EquippedItem.communityitemid,
               ),
-              (e = z.xt.SetAnimatedAvatar(
+              (e = z.xtC.SetAnimatedAvatar(
                 this.m_SteamInterface.GetServiceTransport(),
                 t,
               ));
           }
           if (this.m_AvatarFrames.BIsUncomitted()) {
-            let e = M.w.Init(z.C0);
+            let e = M.w.Init(z.C0y);
             e
               .Body()
               .set_communityitemid(
                 this.m_AvatarFrames.m_EquippedItem &&
                   this.m_AvatarFrames.m_EquippedItem.communityitemid,
               ),
-              (t = z.xt.SetAvatarFrame(
+              (t = z.xtC.SetAvatarFrame(
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               ));
@@ -1588,10 +1588,10 @@
           this.m_ProfileModifiers.Revert();
         }
         ReloadEquippedItems() {
-          let e = M.w.Init(z.aK);
+          let e = M.w.Init(z.aKf);
           e.Body().set_steamid(A.iA.steamid),
             e.Body().set_language(A.TS.LANGUAGE),
-            (this.m_promiseEquipped = z.xt.GetProfileItemsEquipped(
+            (this.m_promiseEquipped = z.xtC.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             )),
@@ -1681,16 +1681,16 @@
           return this.GetGoldenProfileConfigValue("miniprofile_movie");
         }
         async Initialize() {
-          let e = M.w.Init(z.Yk);
+          let e = M.w.Init(z.YkN);
           e.Body().set_language(A.TS.LANGUAGE),
-            (this.m_promiseOwned = z.xt.GetProfileItemsOwned(
+            (this.m_promiseOwned = z.xtC.GetProfileItemsOwned(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             ));
-          let t = M.w.Init(z.aK);
+          let t = M.w.Init(z.aKf);
           t.Body().set_steamid(A.iA.steamid),
             t.Body().set_language(A.TS.LANGUAGE),
-            (this.m_promiseEquipped = z.xt.GetProfileItemsEquipped(
+            (this.m_promiseEquipped = z.xtC.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
               t,
             ));
@@ -1993,13 +1993,13 @@
           this.m_ActiveTheme = this.m_ComittedActiveTheme;
         }
         async CommitActiveTheme() {
-          let e = M.w.Init(z.yo);
+          let e = M.w.Init(z.yow);
           e.Body().set_theme_id(
             "Default" == this.ActiveTheme.theme_id
               ? ""
               : this.ActiveTheme.theme_id,
           );
-          const t = await z.xt.SetProfileTheme(
+          const t = await z.xtC.SetProfileTheme(
             this.m_CMInterface.GetServiceTransport(),
             e,
           );
@@ -3986,7 +3986,7 @@
               children: t,
             })
           : (0, r.jsx)(r.Fragment, { children: t });
-      var xt = i(23310);
+      var xt = i(84143);
       class St extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -5428,7 +5428,7 @@
           let a = t && t.movie_webm,
             s = t && t.tiled,
             o = t ? $(t) : ee(null);
-          const n = t && !s && e.GetEquippedBackgroundFlags() == z.JA.Z;
+          const n = t && !s && e.GetEquippedBackgroundFlags() == z.JA9.Z;
           let l = null;
           return (
             s &&
@@ -5546,7 +5546,7 @@
           const i = !e || (null == e ? void 0 : e.tiled),
             a = t.GetEquippedBackgroundFlags();
           let s = (0, r.jsx)(Si, {
-              flag: z.JA.Z,
+              flag: z.JA9.Z,
               currentFlag: a,
               onSelect: this.OnChange,
               label: (0, _.we)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
@@ -5646,13 +5646,9 @@
                   (0, r.jsx)(ji, { Background: null, children: a }),
                 ],
               });
-      var Ni = i(12447);
-      function Bi(e) {
-        const { children: t, name: i = "GamepadWebRoot", ...a } = e;
-        return (0, r.jsx)(Ni.u, { ...a, navID: i, children: t });
-      }
-      var Ei = i(17083);
-      function bi(e) {
+      var Ni = i(12447),
+        Bi = i(17083);
+      function Ei(e) {
         const { navigate: t, onClick: i, ...a } = e,
           { target: s } = a;
         return (0, r.jsx)(si.Ii, {
@@ -5673,23 +5669,23 @@
           },
         });
       }
-      function Ri(e) {
-        return (0, r.jsx)(Ei.k2, { component: bi, ...e });
+      function bi(e) {
+        return (0, r.jsx)(Bi.k2, { component: Ei, ...e });
       }
-      var Li = i(78091);
-      function Fi(e) {
+      var Ri = i(78091);
+      function Li(e) {
         const { root: t, currentPath: i, linksAvailable: a, children: s } = e;
-        return (0, r.jsx)(Bi, {
-          name: "ProfileEditShell",
+        return (0, r.jsx)(Ni.u, {
+          navID: "ProfileEditShell",
           children: (0, r.jsx)(Se.Z, {
             children: (0, r.jsxs)(Se.Z, {
-              className: Li.Shell,
+              className: Ri.Shell,
               "flow-children": "row",
               navEntryPreferPosition: xt.iU.FIRST,
               children: [
-                (0, r.jsx)(ki, { root: t, currentPath: i, linksAvailable: a }),
+                (0, r.jsx)(Fi, { root: t, currentPath: i, linksAvailable: a }),
                 (0, r.jsx)("div", {
-                  className: Li.PageContent,
+                  className: Ri.PageContent,
                   children: (0, r.jsx)(je.tH, { children: s }),
                 }),
               ],
@@ -5697,82 +5693,82 @@
           }),
         });
       }
-      const ki = ({ root: e, currentPath: t, linksAvailable: i }) => {
+      const Fi = ({ root: e, currentPath: t, linksAvailable: i }) => {
           const s = { root: e, currentPath: t },
-            o = fr,
+            o = _r,
             n = (0, A.Qn)();
           return (0, r.jsxs)(Se.Z, {
-            className: Li.Navigation,
+            className: Ri.Navigation,
             "flow-children": "column",
             children: [
               (0, r.jsx)("div", {
-                className: Li.BackToProfileCtn,
+                className: Ri.BackToProfileCtn,
                 children: (0, r.jsx)(si.Ii, {
                   href: a.ProfileURL,
                   children: (0, _.we)("#Profile_ReturnToYourProfile"),
                 }),
               }),
-              (0, r.jsx)("div", { className: Li.ProfileEditLine }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)("div", { className: Ri.ProfileEditLine }),
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.Info(),
                 children: (0, _.we)("#Profile_Edit_BasicInfo"),
               }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.Avatar(),
                 children: (0, _.we)("#Profile_FieldAvatar"),
               }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.Background(),
                 children: (0, _.we)("#Profile_FieldProfileBackground"),
               }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.MiniProfile(),
                 children: (0, _.we)("#Profile_Edit_MiniProfile"),
               }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.Theme(),
                 children: (0, _.we)("#Profile_Edit_Theme"),
               }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.ProfileModifier(),
                 fnVisible: i.ProfileModifierAvailable,
                 children: (0, _.we)("#Profile_Edit_ProfileModifier"),
               }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.FavoriteBadge(),
                 fnVisible: i.BadgesAvailable,
                 children: (0, _.we)("#Profile_Edit_FavoriteBadge"),
               }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.FavoriteGroup(),
                 fnVisible: i.GroupsAvailable,
                 children: (0, _.we)("#Profile_Edit_FavoriteGroup"),
               }),
               !n &&
-                (0, r.jsx)(Ti, {
+                (0, r.jsx)(ki, {
                   ...s,
                   to: o.Showcases(),
                   fnVisible: i.ShowcasesAvailable,
                   children: (0, _.we)("#Profile_Edit_FeaturedShowcase"),
                 }),
-              (0, r.jsx)("div", { className: Li.ProfileEditLine }),
-              (0, r.jsx)(Ti, {
+              (0, r.jsx)("div", { className: Ri.ProfileEditLine }),
+              (0, r.jsx)(ki, {
                 ...s,
                 to: o.Privacy(),
                 children: (0, _.we)("#Profile_EditPrivacySettings"),
               }),
               (0, r.jsx)("div", {
-                className: Li.ProfileEditStoreLink,
+                className: Ri.ProfileEditStoreLink,
                 children: (0, r.jsx)(si.Ii, {
-                  className: (0, v.A)(Li.ExternalLink),
+                  className: (0, v.A)(Ri.ExternalLink),
                   href: `${A.TS.STORE_BASE_URL}points/`,
                   children: (0, _.we)("#SteamPointsShop"),
                 }),
@@ -5780,7 +5776,7 @@
             ],
           });
         },
-        Ti = (0, h.PA)(
+        ki = (0, h.PA)(
           ({
             root: e,
             currentPath: t,
@@ -5797,11 +5793,11 @@
             let c;
             return (
               d && (c = (e) => e.preventDefault()),
-              (0, r.jsx)(Ri, {
+              (0, r.jsx)(bi, {
                 className: (0, v.A)(
-                  Li.NavLink,
-                  l && Li.Active,
-                  m && Li.Disabled,
+                  Ri.NavLink,
+                  l && Ri.Active,
+                  m && Ri.Disabled,
                 ),
                 to: n,
                 onClick: c,
@@ -5811,8 +5807,8 @@
             );
           },
         );
-      var Mi = i(49622);
-      let Oi = class extends u.Component {
+      var Ti = i(49622);
+      let Mi = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bDialogActive: !1 });
         }
@@ -5825,7 +5821,7 @@
         render() {
           const { ProfileItems: e } = this.props;
           return e.BHasAnyProfileModifiers()
-            ? (0, r.jsx)(qi, {
+            ? (0, r.jsx)(Ui, {
                 active: this.state.bDialogActive,
                 ProfileItems: e,
                 onDismiss: this.HideDialog,
@@ -5833,11 +5829,11 @@
             : null;
         }
       };
-      (0, s.Cg)([Pe.oI], Oi.prototype, "ShowDialog", null),
-        (0, s.Cg)([Pe.oI], Oi.prototype, "HideDialog", null),
-        (Oi = (0, s.Cg)([h.PA], Oi));
-      const Di = Oi,
-        Hi = (0, h.PA)(({ ProfileItems: e }) => {
+      (0, s.Cg)([Pe.oI], Mi.prototype, "ShowDialog", null),
+        (0, s.Cg)([Pe.oI], Mi.prototype, "HideDialog", null),
+        (Mi = (0, s.Cg)([h.PA], Mi));
+      const Oi = Mi,
+        Di = (0, h.PA)(({ ProfileItems: e }) => {
           let t = e.GetProfileModifierCSSURL();
           return t
             ? (0, r.jsx)("link", {
@@ -5847,7 +5843,7 @@
               })
             : null;
         }),
-        Ui = ({ ProfileModifier: e }) => {
+        Hi = ({ ProfileModifier: e }) => {
           const t = e
               ? $(e)
               : `${A.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
@@ -5857,25 +5853,25 @@
             a = e ? e.app_name : "";
           return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)("div", {
-              className: Mi.ProfileModifierBody,
+              className: Ti.ProfileModifierBody,
               children: [
                 (0, r.jsx)("img", {
-                  className: Mi.GoldenProfileItemImage,
+                  className: Ti.GoldenProfileItemImage,
                   src: t,
                 }),
                 (0, r.jsx)("div", {
-                  className: Mi.GoldenProfileTitle,
+                  className: Ti.GoldenProfileTitle,
                   children: i,
                 }),
                 (0, r.jsx)("div", {
-                  className: Mi.GoldenProfileApp,
+                  className: Ti.GoldenProfileApp,
                   children: a,
                 }),
               ],
             }),
           });
         };
-      let qi = class extends u.Component {
+      let Ui = class extends u.Component {
         OnDismiss() {
           this.props.ProfileItems.RevertProfileModifierChanges(),
             this.props.onDismiss();
@@ -5900,39 +5896,39 @@
                   e.SetEquippedProfileModifier(t),
                   e.CommitProfileModifierChanges()
                 ),
-                ItemComponent: Wi,
+                ItemComponent: qi,
                 RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                  (0, r.jsx)(zi, { onSelected: e, active: t }),
+                  (0, r.jsx)(Wi, { onSelected: e, active: t }),
                 ActiveItem: e.GetEquippedProfileModifier(),
                 fnIsSameItem: Jt,
-                fnRenderPreview: (e) => (0, r.jsx)(Ui, { ProfileModifier: e }),
+                fnRenderPreview: (e) => (0, r.jsx)(Hi, { ProfileModifier: e }),
               }),
             ],
           });
         }
       };
-      (0, s.Cg)([Pe.oI], qi.prototype, "OnDismiss", null),
-        (qi = (0, s.Cg)([h.PA], qi));
-      const Wi = ({ Item: e, onSelected: t, children: i, active: a }) =>
+      (0, s.Cg)([Pe.oI], Ui.prototype, "OnDismiss", null),
+        (Ui = (0, s.Cg)([h.PA], Ui));
+      const qi = ({ Item: e, onSelected: t, children: i, active: a }) =>
           (0, r.jsxs)(Se.Z, {
-            className: (0, v.A)(Mi.ProfileModifierOption, a && Mi.Active),
+            className: (0, v.A)(Ti.ProfileModifierOption, a && Ti.Active),
             onActivate: t,
             children: [
               (0, r.jsx)("div", {
-                className: Mi.Preview,
+                className: Ti.Preview,
                 children: (0, r.jsx)("img", { src: $(e), loading: "lazy" }),
               }),
               (0, r.jsxs)("div", {
-                className: Mi.Details,
+                className: Ti.Details,
                 children: [
                   (0, r.jsxs)("div", {
                     children: [
                       (0, r.jsx)("div", {
-                        className: Mi.Title,
+                        className: Ti.Title,
                         children: e.item_title,
                       }),
                       (0, r.jsx)("div", {
-                        className: Mi.App,
+                        className: Ti.App,
                         children: e.app_name,
                       }),
                     ],
@@ -5942,28 +5938,28 @@
               }),
             ],
           }),
-        zi = ({ onSelected: e, children: t, active: i }) =>
+        Wi = ({ onSelected: e, children: t, active: i }) =>
           (0, r.jsxs)(Se.Z, {
-            className: (0, v.A)(Mi.ProfileModifierOption, i && Mi.Active),
+            className: (0, v.A)(Ti.ProfileModifierOption, i && Ti.Active),
             onActivate: e,
             children: [
               (0, r.jsx)("div", {
-                className: (0, v.A)(Mi.Preview, Mi.BlankBackground),
+                className: (0, v.A)(Ti.Preview, Ti.BlankBackground),
                 children: (0, r.jsx)("img", {
                   src: `${A.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
                   loading: "lazy",
                 }),
               }),
               (0, r.jsxs)("div", {
-                className: Mi.Details,
+                className: Ti.Details,
                 children: [
                   (0, r.jsxs)("div", {
                     children: [
                       (0, r.jsx)("div", {
-                        className: Mi.Title,
+                        className: Ti.Title,
                         children: (0, _.we)("#ProfileModifier_DisabledTitle"),
                       }),
-                      (0, r.jsx)("div", { className: Mi.App }),
+                      (0, r.jsx)("div", { className: Ti.App }),
                     ],
                   }),
                   t,
@@ -5971,8 +5967,8 @@
               }),
             ],
           });
-      var Ki = i(20644);
-      let Yi = class extends u.Component {
+      var zi = i(20644);
+      let Ki = class extends u.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -6004,7 +6000,7 @@
                 children: (0, _.we)("#Profile_Edit_Theme_Instructions"),
               }),
               (0, r.jsx)(Le, { strHTMLError: this.state.strHTMLError }),
-              i && (0, r.jsx)($i, {}),
+              i && (0, r.jsx)(Ji, {}),
               (0, r.jsx)(Ee, {
                 getSearchFields: null,
                 ActiveItem: e.ActiveTheme,
@@ -6012,21 +6008,21 @@
                 fnCommitChanges: this.CommitChanges,
                 fnRevertChanges: this.RevertChanges,
                 fnRenderPreview: (e) =>
-                  (0, r.jsx)(Vi, { Theme: e, ProfileItems: t }),
-                fnIsSameItem: Qi,
-                ItemComponent: Ji,
-                classNameItemPicker: Ki.ProfileThemePicker,
-                className: (0, v.A)(i && Ki.ThemePickerDisabled),
+                  (0, r.jsx)(Zi, { Theme: e, ProfileItems: t }),
+                fnIsSameItem: Vi,
+                ItemComponent: Qi,
+                classNameItemPicker: zi.ProfileThemePicker,
+                className: (0, v.A)(i && zi.ThemePickerDisabled),
               }),
             ],
           });
         }
       };
-      (0, s.Cg)([Pe.oI], Yi.prototype, "CommitChanges", null),
-        (0, s.Cg)([Pe.oI], Yi.prototype, "RevertChanges", null),
-        (Yi = (0, s.Cg)([h.PA], Yi));
-      const Xi = Yi,
-        Zi = ({ Theme: e, children: t }) => {
+      (0, s.Cg)([Pe.oI], Ki.prototype, "CommitChanges", null),
+        (0, s.Cg)([Pe.oI], Ki.prototype, "RevertChanges", null),
+        (Ki = (0, s.Cg)([h.PA], Ki));
+      const Yi = Ki,
+        Xi = ({ Theme: e, children: t }) => {
           let i;
           return (
             (i =
@@ -6036,29 +6032,29 @@
             (0, r.jsx)("div", { className: fi[i], children: t })
           );
         },
-        Vi = (0, h.PA)(({ Theme: e, ProfileItems: t }) =>
+        Zi = (0, h.PA)(({ Theme: e, ProfileItems: t }) =>
           (0, r.jsx)("div", {
-            className: Ki.ProfileThemePreviewCtn,
+            className: zi.ProfileThemePreviewCtn,
             children: (0, r.jsx)(Ci, { ProfileItems: t, theme: e.theme_id }),
           }),
         ),
-        Qi = (e, t) => (e && e.theme_id) === (t && t.theme_id),
-        Ji = ({ Item: e, onSelected: t, active: i, children: a }) => {
+        Vi = (e, t) => (e && e.theme_id) === (t && t.theme_id),
+        Qi = ({ Item: e, onSelected: t, active: i, children: a }) => {
           const s = e.theme_id + "Theme",
             o = `ThemeOption${s}`;
           return (0, r.jsxs)(Se.Z, {
             className: (0, v.A)(
-              Ki.ProfileTheme,
-              t && Ki.Option,
-              i && Ki.Active,
+              zi.ProfileTheme,
+              t && zi.Option,
+              i && zi.Active,
               fi[s],
             ),
             onActivate: t,
             children: [
               (0, r.jsx)("div", {
-                className: Ki.PreviewCtn,
+                className: zi.PreviewCtn,
                 children: (0, r.jsxs)("svg", {
-                  className: (0, v.A)(Ki.Preview),
+                  className: (0, v.A)(zi.Preview),
                   viewBox: "0 0 382 382",
                   width: "100%",
                   height: "100%",
@@ -6067,26 +6063,26 @@
                       width: "382",
                       height: "382",
                       fill: "var(--edit-background)",
-                      className: Ki.EditBackground,
+                      className: zi.EditBackground,
                     }),
                     (0, r.jsx)("rect", {
                       width: "382",
                       height: "382",
                       fill: "var(--gradient-background)",
                       fillOpacity: "0.23",
-                      className: Ki.ThemeBackground,
+                      className: zi.ThemeBackground,
                     }),
                     (0, r.jsx)("rect", {
                       width: "382",
                       height: "382",
                       fill: `url(#${o}paint0_radial)`,
-                      className: Ki.PaintRadial0,
+                      className: zi.PaintRadial0,
                     }),
                     (0, r.jsx)("rect", {
                       width: "382",
                       height: "382",
                       fill: `url(#${o}paint1_radial)`,
-                      className: Ki.PaintRadial1,
+                      className: zi.PaintRadial1,
                     }),
                     (0, r.jsxs)("defs", {
                       children: [
@@ -6135,24 +6131,24 @@
                 }),
               }),
               (0, r.jsxs)("div", {
-                className: Ki.Details,
+                className: zi.Details,
                 children: [
-                  (0, r.jsx)("div", { className: Ki.Title, children: e.title }),
+                  (0, r.jsx)("div", { className: zi.Title, children: e.title }),
                   a,
                 ],
               }),
             ],
           });
         },
-        $i = ({ children: e }) =>
+        Ji = ({ children: e }) =>
           (0, r.jsx)("div", {
-            className: Ki.ThemesDisabledNotice,
+            className: zi.ThemesDisabledNotice,
             children: (0, r.jsx)("div", {
-              className: Ki.Notice,
+              className: zi.Notice,
               children: (0, _.we)("#Profile_Edit_GoldenProfileOverridesTheme"),
             }),
           });
-      class er extends u.Component {
+      class $i extends u.Component {
         constructor() {
           super(...arguments),
             (this.m_refDiv = u.createRef()),
@@ -6180,7 +6176,7 @@
         render() {
           const { bSaving: e, strHTMLError: t } = this.state,
             { ProfileTheme: i } = this.props;
-          return (0, r.jsx)(Zi, {
+          return (0, r.jsx)(Xi, {
             Theme: i.ActiveTheme,
             children: (0, r.jsxs)("form", {
               onSubmit: this.OnSubmit,
@@ -6205,26 +6201,26 @@
           });
         }
       }
-      let tr, ir, rr;
-      function ar(e) {
+      let er, tr, ir;
+      function rr(e) {
         const [t, i] = u.useState(!1),
           s = (0, ve.TR)();
         if (
           (u.useEffect(() => {
-            rr ||
-              (rr = (async function (e) {
+            ir ||
+              (ir = (async function (e) {
                 let t = (0, A.Tc)("config", "profile_config");
                 t && Object.assign(a, t),
-                  (tr = new ce(
+                  (er = new ce(
                     (0, A.Tc)("profile-edit", "profile_edit_config"),
                     (0, A.Tc)("profile-badges", "profile_edit_config"),
                     e,
                   )),
                   (0, pe.nA)(A.TS.EREALM) ||
-                    tr.Profile.GroupList.GetUserGroups(),
-                  (ir = document.getElementById("showcases"));
+                    er.Profile.GroupList.GetUserGroups(),
+                  (tr = document.getElementById("showcases"));
               })(s)),
-              rr.then(() => i(!0));
+              ir.then(() => i(!0));
           }, [s]),
           u.useLayoutEffect(() => {
             if (t)
@@ -6240,14 +6236,14 @@
         )
           return null;
         const o = e.match.url,
-          n = tr,
+          n = er,
           {
             Profile: l,
             ProfileItems: d,
             ProfileTheme: m,
             EmoticonStore: c,
           } = n,
-          h = fr,
+          h = _r,
           p = {
             ProfileModifierAvailable: () => d.BHasAnyProfileModifiers(),
             BadgesAvailable: () =>
@@ -6255,14 +6251,14 @@
             GroupsAvailable: () =>
               !(0, pe.nA)(A.TS.EREALM) &&
               (!l.GroupList.BGroupsLoaded() || l.GroupList.BHasAnyGroups()),
-            ShowcasesAvailable: () => null != ir,
+            ShowcasesAvailable: () => null != tr,
           };
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(Hi, { ProfileItems: d }),
+            (0, r.jsx)(Di, { ProfileItems: d }),
             (0, r.jsx)(Et, { Profile: l }),
             (0, r.jsx)(it, { Profile: l, ProfileItems: d }),
-            (0, r.jsx)(Fi, {
+            (0, r.jsx)(Li, {
               root: o,
               currentPath: e.location.pathname,
               linksAvailable: p,
@@ -6294,14 +6290,14 @@
                   }),
                   (0, r.jsx)(ue.qh, {
                     path: `${o}${h.Theme()}`,
-                    children: (0, r.jsx)(Xi, {
+                    children: (0, r.jsx)(Yi, {
                       ProfileTheme: m,
                       ProfileItems: d,
                     }),
                   }),
                   (0, r.jsx)(ue.qh, {
                     path: `${o}${h.ProfileModifier()}`,
-                    children: (0, r.jsx)(Di, { ProfileItems: d }),
+                    children: (0, r.jsx)(Oi, { ProfileItems: d }),
                   }),
                   !(0, pe.nA)(A.TS.EREALM) &&
                     (0, r.jsx)(ue.qh, {
@@ -6321,8 +6317,8 @@
                   }),
                   (0, r.jsx)(ue.qh, {
                     path: `${o}${h.Showcases()}`,
-                    children: (0, r.jsx)(er, {
-                      elShowcases: ir,
+                    children: (0, r.jsx)($i, {
+                      elShowcases: tr,
                       ProfileTheme: m,
                     }),
                   }),
@@ -6335,19 +6331,19 @@
           ],
         });
       }
-      (0, s.Cg)([Pe.oI], er.prototype, "OnSubmit", null),
-        (0, s.Cg)([Pe.oI], er.prototype, "RevertChanges", null);
-      var sr = i(66008),
-        or = i(50050),
-        nr = i(6813),
-        lr = i(53495),
-        dr = i(77490),
-        mr = i(63275),
-        cr = i(99164),
-        hr = i(29385),
-        ur = i(61739),
-        pr = i(22797);
-      function vr(e) {
+      (0, s.Cg)([Pe.oI], $i.prototype, "OnSubmit", null),
+        (0, s.Cg)([Pe.oI], $i.prototype, "RevertChanges", null);
+      var ar = i(66008),
+        sr = i(50050),
+        or = i(6813),
+        nr = i(53495),
+        lr = i(77490),
+        dr = i(63275),
+        mr = i(99164),
+        cr = i(29385),
+        hr = i(61739),
+        ur = i(22797);
+      function pr(e) {
         const [t, i] = (0, u.useState)(!1),
           a = (function (e) {
             const t = (0, ve.KV)();
@@ -6355,9 +6351,9 @@
               queryKey: ["reportercooldown", e],
               queryFn: async () => {
                 var i;
-                const r = M.w.Init(cr.a9);
+                const r = M.w.Init(mr.a9);
                 r.Body().set_steamid(e);
-                const a = await cr.fL.GetReporterCooldown(t, r);
+                const a = await mr.fL.GetReporterCooldown(t, r);
                 if (!a.BSuccess()) throw new Error("EResult " + a.GetEResult());
                 return null !== (i = a.Body().rtime_cooldown_ends()) &&
                   void 0 !== i
@@ -6368,12 +6364,15 @@
           })(e.steamid),
           s = (function (e) {
             const t = (0, ve.KV)(),
-              i = (0, hr.jE)();
-            return (0, ur.n)({
+              i = (0, cr.jE)();
+            return (0, hr.n)({
               mutationFn: async (i) => {
-                const r = M.w.Init(cr.f0);
-                r.Body().set_steamid(e), r.Body().set_rtime_cooldown_ends(i);
-                const a = await cr.fL.UpdateReporterCooldown(t, r);
+                const r = M.w.Init(mr.f0);
+                r.Body().set_steamid(e),
+                  r.Body().set_rtime_cooldown_ends(i.rtCooldownEnds),
+                  void 0 !== i.bClearOpenReports &&
+                    r.Body().set_acquit_unresolved_reports(i.bClearOpenReports);
+                const a = await mr.fL.UpdateReporterCooldown(t, r);
                 if (!a.BSuccess()) throw new Error("EResult " + a.GetEResult());
               },
               onSuccess: async () => {
@@ -6383,11 +6382,12 @@
               },
             });
           })(e.steamid),
-          o = (0, u.useRef)(null);
-        let n = "";
+          o = (0, u.useRef)(null),
+          n = (0, u.useRef)(null);
+        let l = "";
         if (a.isSuccess && a.data > 0) {
           const e = Math.floor((a.data - new Date().getTime() / 1e3) / 86400);
-          n = " " + mr.u.Localize("#setcooldown_cooldownsummary", e);
+          l = " " + dr.u.Localize("#setcooldown_cooldownsummary", e);
         }
         return (0, r.jsxs)(r.Fragment, {
           children: [
@@ -6396,60 +6396,80 @@
               children: (0, r.jsxs)(we.o0, {
                 onCancel: () => i(!1),
                 onOK: async () => {
+                  var e, t;
                   if (!o.current) return;
-                  const e = o.current.value,
-                    t = 86400 * parseInt(e),
-                    r = Math.floor(new Date().getTime() / 1e3) + t;
-                  await s.mutateAsync(r), i(!1);
+                  const r = o.current.value,
+                    a = 86400 * parseInt(r),
+                    l = Math.floor(new Date().getTime() / 1e3) + a,
+                    d =
+                      null !==
+                        (t =
+                          null === (e = n.current) || void 0 === e
+                            ? void 0
+                            : e.checked) &&
+                      void 0 !== t &&
+                      t;
+                  await s.mutateAsync({
+                    rtCooldownEnds: l,
+                    bClearOpenReports: d,
+                  }),
+                    i(!1);
                 },
-                strTitle: mr.u.Localize("#setcooldown_dialogtitle"),
-                strDescription: mr.u.Localize("#setcooldown_dialogdescription"),
-                strOKButtonText: mr.u.Localize("#setcooldown_setbutton"),
+                strTitle: dr.u.Localize("#setcooldown_dialogtitle"),
+                strDescription: dr.u.Localize("#setcooldown_dialogdescription"),
+                strOKButtonText: dr.u.Localize("#setcooldown_setbutton"),
                 children: [
                   a.isLoading &&
                     (0, r.jsxs)("p", {
                       children: [
-                        (0, r.jsx)(pr.t, { size: "small" }),
+                        (0, r.jsx)(ur.t, { size: "small" }),
                         " ",
-                        mr.u.Localize("#setcooldown_loading"),
+                        dr.u.Localize("#setcooldown_loading"),
                       ],
                     }),
                   a.isError &&
                     (0, r.jsx)("p", {
-                      children: mr.u.Localize("#setcooldown_errorloading"),
+                      children: dr.u.Localize("#setcooldown_errorloading"),
                     }),
                   a.isSuccess &&
                     a.data > 0 &&
                     (0, r.jsx)("p", {
-                      children: mr.u.Localize(
+                      children: dr.u.Localize(
                         "#setcooldown_expireson",
-                        (0, dr.P0)(a.data, !1, ""),
+                        (0, lr.P0)(a.data, !1, ""),
                       ),
                     }),
                   a.isSuccess &&
                     0 === a.data &&
                     (0, r.jsx)("p", {
-                      children: mr.u.Localize("#setcooldown_nocooldown"),
+                      children: dr.u.Localize("#setcooldown_nocooldown"),
                     }),
                   (0, r.jsxs)("p", {
                     children: [
                       (0, r.jsxs)("label", {
                         children: [
-                          mr.u.Localize("#setcooldown_newcooldownlabel"),
+                          dr.u.Localize("#setcooldown_newcooldownlabel"),
                           " ",
                           (0, r.jsx)("input", {
                             type: "number",
                             min: "0",
-                            placeholder: mr.u.Localize("#setcooldown_days"),
+                            placeholder: dr.u.Localize("#setcooldown_days"),
                             ref: o,
                           }),
                         ],
                       }),
+                      (0, r.jsxs)("p", {
+                        children: [
+                          (0, r.jsx)("input", { type: "checkbox", ref: n }),
+                          " ",
+                          dr.u.Localize("#setcooldown_clearopenreports"),
+                        ],
+                      }),
                       (0, r.jsx)("button", {
                         onClick: async () => {
-                          await s.mutateAsync(0), i(!1);
+                          await s.mutateAsync({ rtCooldownEnds: 0 }), i(!1);
                         },
-                        children: mr.u.Localize("#setcooldown_clearcooldown"),
+                        children: dr.u.Localize("#setcooldown_clearcooldown"),
                       }),
                     ],
                   }),
@@ -6459,18 +6479,18 @@
             (0, r.jsxs)("a", {
               className: "popup_menu_item",
               onClick: () => i(!0),
-              children: ["Reporting Cooldown", n],
+              children: ["Reporting Cooldown", l],
             }),
           ],
         });
       }
-      const _r = {
+      const vr = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",
           Games: () => "games",
           ItemCollection: () => "itemcollection",
         },
-        fr = {
+        _r = {
           Info: () => "/info",
           Avatar: () => "/avatar",
           Background: () => "/background",
@@ -6482,63 +6502,36 @@
           Privacy: () => "/settings",
           Showcases: () => "/showcases",
         };
-      function gr(e) {
+      function fr(e) {
         return (0, r.jsx)("div", {
-          children: (0, r.jsx)(or.Ay, { targetType: sr.Pw.BZ }),
+          children: (0, r.jsx)(sr.Ay, { targetType: ar.Pw.BZ }),
         });
       }
-      function Pr(e) {
+      function gr(e) {
         const t = e.match.path;
         return (0, r.jsxs)(ue.dO, {
           children: [
             (0, r.jsx)(ue.qh, {
-              path: `${t}/${_r.ProfileEdit()}`,
-              render: (e) => (0, r.jsx)(ar, { ...e }),
+              path: `${t}/${vr.ProfileEdit()}`,
+              render: (e) => (0, r.jsx)(rr, { ...e }),
             }),
             (0, r.jsx)(ue.qh, {
               path: `${t}`,
               render: (e) =>
-                (0, r.jsx)(nr.X, {
+                (0, r.jsx)(or.X, {
                   config: {
-                    "profile-rewards": () => (0, r.jsx)(gr, { ...e }),
+                    "profile-rewards": () => (0, r.jsx)(fr, { ...e }),
                     "ugc-file-content-moderation-report-dialog": (e) =>
-                      (0, r.jsx)(lr.Xi, { ...e }),
+                      (0, r.jsx)(nr.Xi, { ...e }),
                     "comment-content-moderation-report-dialog": (e) =>
-                      (0, r.jsx)(lr.b$, { ...e }),
-                    "reporter-cooldown-dialog": (e) => (0, r.jsx)(vr, { ...e }),
+                      (0, r.jsx)(nr.b$, { ...e }),
+                    "reporter-cooldown-dialog": (e) => (0, r.jsx)(pr, { ...e }),
                   },
                 }),
             }),
           ],
         });
       }
-    },
-    12447: (e, t, i) => {
-      "use strict";
-      i.d(t, { u: () => m });
-      var r = i(7850),
-        a = i(8871),
-        s = i(90626),
-        o = i(78327),
-        n = i(85585),
-        l = i(7445),
-        d = i(87133);
-      const m = s.forwardRef(function (e, t) {
-        const { children: i, navTreeRef: m, ...c } = e,
-          h = s.useRef(void 0),
-          u = (0, a.Ue)(h, m),
-          p = (0, o.Qn)(),
-          v = (0, d.AO)("__nav_tree_root");
-        return (0, r.jsx)(n.B2, {
-          ...c,
-          navTreeRef: u,
-          ref: t,
-          parentEmbeddedNavTree: v,
-          disabledRoot: !p,
-          historyMode: "navigationapi",
-          children: (0, r.jsx)(l.q, { disableFocusRing: !p, children: i }),
-        });
-      });
     },
     30724: (e, t, i) => {
       "use strict";

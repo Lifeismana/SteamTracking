@@ -12,6 +12,10 @@
         BottomButtons: "_1WHIJmT4YG0U0TGfx-u93k",
         OwnerDisputeCtn: "_2QWA5XBjtoSIM-_eLNiw2a",
         EditButton: "_1oiwHOMI9o4tYFhxPeBzdb",
+        ValveOnly: "_1yQPp5pd2qUm4v9YW77mFO",
+        SupervisorOnly: "_19k-dyaHYt8ca02K-yjSvc",
+        AcquitIcon: "_2Q79wl4YD01LCBJ_eG8hwX",
+        SanctionIcon: "_2uzKX4ZNJJzGdL1KdS7DVn",
       };
     },
     chunkid: (module) => {
@@ -34,6 +38,7 @@
         SanctionForm: "_33cLeNjYsBEX2T0-B9gc5G",
         OneColumn: "_2LTDR9F3yb80ONcUPcDxo1",
         MessageTextArea: "_3IWpl3mfH9OFkiqMIh7WtY",
+        ErrorMessage: "_3_dhawEOV-fztaXEftlfxJ",
       };
     },
     chunkid: (module) => {
@@ -41,6 +46,7 @@
         EscalateSubjectDialogCtn: "_2JObmr3sTdkGUMl1qy7pFq",
         BottomButtons: "_3ismg57mYPglYuxYD8MyWH",
         EscalationLevelSelect: "eM6-NVA-Wty4aAN1I5edn",
+        ReasonTextArea: "_2Y0347paZ_xn2vI7jgBpkJ",
       };
     },
     chunkid: (module) => {
@@ -61,13 +67,18 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        Sticky: "_3dlxz6KBJpvmA-qsVAzxs8",
         GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
         GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        ChecklistMode: "_3blAkLFfSQrJjGklUKOP7e",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        checklistBox: "_1idkU7IA8dDPOIbsU-dRkJ",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+        StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
+        StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -99,7 +110,8 @@
       function _(_) {
         const { subject: _, onClose: _ } = _,
           [_, _] = (0, _.useState)(_._),
-          _ = (0, _._)(_.subject_type, _.subject_group_id, _.subject_id);
+          _ = (0, _._)(_.subject_type, _.subject_group_id, _.subject_id),
+          _ = (0, _.useRef)(null);
         return (0, _.jsxs)(_._, {
           className: _().EscalateSubjectDialogCtn,
           children: [
@@ -127,13 +139,26 @@
                 }),
               ],
             }),
+            (0, _.jsx)("label", {
+              children: _._.Localize("#moderation_escalation_escalationnote"),
+            }),
+            (0, _.jsx)(_._, {
+              className: _().ReasonTextArea,
+              ref: _,
+            }),
             (0, _.jsxs)(_._, {
               className: _().BottomButtons,
               children: [
                 (0, _.jsx)(_._, {
                   onClick: async () => {
+                    var _;
+                    const _ =
+                      null === (_ = _.current) || void 0 === _
+                        ? void 0
+                        : _.value;
                     await _.mutateAsync({
                       eNewLevel: _,
+                      strNote: _,
                     }),
                       __webpack_require__();
                   },
@@ -912,10 +937,14 @@
               );
             });
         })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)("main"),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
@@ -1017,6 +1046,11 @@
                   (0, _.jsxs)(_._, {
                     className: _().SanctionForm,
                     children: [
+                      null !== _ &&
+                        (0, _.jsxs)("div", {
+                          className: (0, _._)(_().OneColumn, _().ErrorMessage),
+                          children: [(0, _.jsx)(_.Q9b, {}), " Error: ", _],
+                        }),
                       (0, _.jsx)("label", {
                         htmlFor: "reason",
                         children: "Reason:",
@@ -1240,50 +1274,57 @@
                         onClick: _.onCancel,
                         children: "Cancel",
                       }),
-                      (0, _.jsx)(_._, {
-                        onClick: () => {
-                          (0, _._)(
-                            null !== _,
-                            "eReason must be non-null to sanction",
-                          );
-                          const _ = [];
-                          _ &&
-                            __webpack_require__.push({
-                              sanction: _._,
-                            }),
+                      _ &&
+                        (0, _.jsx)(_._, {
+                          size: "small",
+                        }),
+                      !_ &&
+                        (0, _.jsx)(_._, {
+                          onClick: async () => {
+                            _(!0),
+                              (0, _._)(
+                                null !== _,
+                                "eReason must be non-null to sanction",
+                              );
+                            const _ = [];
                             _ &&
                               __webpack_require__.push({
                                 sanction: _._,
                               }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: _,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: _,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: _,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                                days: -1,
-                              }),
-                            _ &&
-                              __webpack_require__.push({
-                                sanction: _._,
-                              }),
-                            _.onOK(_, _.trim(), _);
-                        },
-                        disabled: null === _ || !_,
-                        children: "Sanction",
-                      }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: _,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: _,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: _,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                  days: -1,
+                                }),
+                              _ &&
+                                __webpack_require__.push({
+                                  sanction: _._,
+                                });
+                            const _ = await _.onOK(_, _.trim(), _);
+                            _(_), _(!1);
+                          },
+                          disabled: null === _ || !_,
+                          children: "Sanction",
+                        }),
                     ],
                   }),
                 ],
@@ -1292,7 +1333,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1841,24 +1881,43 @@
         const _ =
             _ &&
             (_.unresolved_report_count > 0 || _.unresolved_dispute_count > 0),
-          _ = (0, _.jsx)("span", {
-            className: _.ModerateLink,
-            children: (0, _.jsxs)("a", {
-              onClick: () => _(!0),
-              children: [
-                _ &&
-                  (0, _.jsxs)(_.Fragment, {
-                    children: [
-                      (0, _.jsx)("img", {
-                        className: _.Flag,
-                        src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
-                      }),
-                      " ",
-                    ],
-                  }),
-                _._.Localize("#commentsanctiondialog_moderate"),
-              ],
-            }),
+          _ = (0, _.jsxs)("a", {
+            onClick: () => _(!0),
+            children: [
+              _ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("img", {
+                      className: _.Flag,
+                      src: `${_._.COMMUNITY_BASE_URL}public/images/skin_1/notification_icon_flag.png`,
+                    }),
+                    " ",
+                  ],
+                }),
+              _._.Localize("#commentsanctiondialog_moderate"),
+              _ &&
+                _.required_moderator_level === _._ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: _.ValveOnly,
+                      children: "(VO)",
+                    }),
+                  ],
+                }),
+              _ &&
+                _.required_moderator_level === _._ &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: _.SupervisorOnly,
+                      children: "(Supervisor)",
+                    }),
+                  ],
+                }),
+            ],
           });
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -1916,8 +1975,8 @@
           _ = _(_.clanSteamId, _.forumId, _.topicId, _.subjectId),
           _ = [
             {
-              name: "History",
-              key: "history",
+              name: "Reports",
+              key: "reports",
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   subject: _,
@@ -1925,8 +1984,8 @@
               }),
             },
             {
-              name: "Reports",
-              key: "reports",
+              name: "History",
+              key: "history",
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   subject: _,
@@ -2004,26 +2063,31 @@
                           (0, _.jsxs)("div", {
                             className: _.ModerationActionButtons,
                             children: [
-                              (0, _.jsx)(_, {
-                                ..._,
-                                subject: _,
-                                onClose: _.onClose,
-                              }),
-                              (0, _.jsx)(_, {
-                                ..._,
-                                subject: _,
-                                onClose: _.onClose,
-                              }),
-                              _.subject &&
-                                (0, _.jsx)(_._, {
-                                  onClick: () => _("escalate"),
-                                  children: _._.Localize(
-                                    "#moderation_escalation_escalate",
-                                  ),
-                                }),
-                              (0, _.jsx)("button", {
+                              (0, _.jsxs)("button", {
                                 onClick: () => _("sanction"),
-                                children: "Sanction",
+                                children: [
+                                  (0, _.jsx)(_._, {
+                                    className: _.SanctionIcon,
+                                  }),
+                                  "Sanction",
+                                ],
+                              }),
+                              (0, _.jsx)(_, {
+                                ..._,
+                                subject: _,
+                                onClose: _.onClose,
+                              }),
+                              (0, _.jsx)(_, {
+                                ..._,
+                                subject: _,
+                                onClose: _.onClose,
+                              }),
+                              (0, _.jsx)(_._, {
+                                disabled: !_.subject,
+                                onClick: () => _("escalate"),
+                                children: _._.Localize(
+                                  "#moderation_escalation_escalate",
+                                ),
                               }),
                               !_ &&
                                 (0, _.jsx)("button", {
@@ -2062,13 +2126,23 @@
                         subject: _,
                         authorSteamId: _.authorSteamId,
                         onOK: async (_, _, _) => {
-                          await _.mutateAsync({
-                            eReason: _,
-                            rgSanctions: _,
-                            strNote: _,
-                          }),
+                          try {
+                            await _.mutateAsync({
+                              eReason: _,
+                              rgSanctions: _,
+                              strNote: _,
+                            });
+                          } catch (_) {
+                            return _.message;
+                          }
+                          return (
                             _.onClose(),
-                            window.location.reload();
+                            1 === window.location.href.split("#").length &&
+                              "0" !== _.subjectId &&
+                              (window.location.href += "#c" + _.subjectId),
+                            window.location.reload(),
+                            null
+                          );
                         },
                         onCancel: () => _("main"),
                       }),
@@ -2181,12 +2255,18 @@
               _.unresolved_dispute_count > 0 ||
               (_.resolved === _._ && _.dispute_resolved !== _._) ||
               _.dispute_resolved === _._);
-        return (0, _.jsx)("button", {
+        return (0, _.jsxs)("button", {
           onClick: async () => {
             await __webpack_require__.mutateAsync(), _.onClose();
           },
           disabled: !_,
-          children: _._.Localize("#moderation_actions_acquit"),
+          children: [
+            (0, _.jsx)(_.jlt, {
+              className: _.AcquitIcon,
+            }),
+            " ",
+            _._.Localize("#moderation_actions_acquit"),
+          ],
         });
       }
       function _(_) {
@@ -2245,7 +2325,10 @@
             const _ = await _._.SanctionReportedPost(_, _);
             if (!_.BSuccess())
               throw new Error(
-                "Failed to sanction forum comment: " + _.GetEResult(),
+                "Failed to sanction forum comment: (" +
+                  _.GetEResult() +
+                  ") " +
+                  _.GetErrorMessage(),
               );
             return _.Body();
           },
@@ -2312,7 +2395,7 @@
         return new (_())(
           async (_) => {
             const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
                 steamids: _,
               }),
               _ = new Map();
@@ -2575,6 +2658,8 @@
             classNameTabContent: _,
             preferredFocus: _,
             bVerticalTabs: _,
+            bSticky: _,
+            bChecklistMode: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -2614,6 +2699,8 @@
                 className: (0, _._)(
                   _().GraphicalAssetsTabs,
                   _ && _().GraphicalAssetsTabsVertical,
+                  _ && _().ChecklistMode,
+                  _ && _().Sticky,
                   _,
                 ),
                 navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
@@ -2646,16 +2733,24 @@
           : _;
       }
       function _(_) {
-        const { statusType: _ = "success", children: _ } = _;
+        const { statusType: _ = "success", bShowStatusBox: _, children: _ } = _;
         let _ = "";
         return (
           "success" === _
             ? (_ = _().StatusSuccess)
             : "danger" === _
               ? (_ = _().StatusDanger)
-              : "caution" === _ && (_ = _().StatusCaution),
+              : "caution" === _
+                ? (_ = _().StatusCaution)
+                : "info" === _
+                  ? (_ = _().StatusInfo)
+                  : "incomplete" === _ && (_ = _().StatusIncomplete),
           (0, _.jsx)("div", {
-            className: (0, _._)(_().GraphicalAssetStatus, _),
+            className: (0, _._)(
+              _().GraphicalAssetStatus,
+              _,
+              _ ? _().checklistBox : "",
+            ),
             children: _,
           })
         );

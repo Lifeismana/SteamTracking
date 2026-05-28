@@ -124,8 +124,11 @@
     "ItemFlag_InCart": "في العربة",
     "ItemFlag_Ignored": "تم التجاهل",
     "ItemFlag_ExcludedByPreferences": "مستبعدة حسب التفضيلات",
+    "Wishlist_Controls_Categories_Header": "الفئات الخاصة بي:",
     "Wishlist_Categories_None": "لا شيء",
+    "Wishlist_Gamepad_Filter_Category": "تصفية حسب الفئة",
     "Wishlist_Controls_Categories_All": "الكل",
+    "Wishlist_Categories_Dialog_Add": "إضافة فئة",
     "Price_History_Recent_Low_Price_Ttip": "كانت هذه اللعبة معروضة بخصم %1$s طوال %2$s من الأيام الماضية",
     "Price_History_Current_Low_Price_Ttip": "هذه اللعبة معروضة حاليًا بأقل سعر خلال %1$s من الأيام الماضية",
     "Price_History_Lowest_Previous_30": "يُحدد الخصم حسب أقل سعر خلال الثلاثين يومًا الماضية"

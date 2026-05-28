@@ -1091,7 +1091,9 @@
           ),
             this.m_schNextDownload.Cancel();
           const _ = this.m_callbacks.GetCDNAuthURLParameter();
-          _ && (_ += _), (0, _._)(`${this.GetDebugName()} Downloading: ` + _);
+          let _ = _;
+          _ && (_ = _ + _),
+            (0, _._)(`${this.GetDebugName()} Downloading: ` + _);
           let _,
             _ = null,
             _ = performance.now(),

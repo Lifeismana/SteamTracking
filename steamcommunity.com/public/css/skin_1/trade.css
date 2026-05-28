@@ -365,18 +365,13 @@ h2 {
 }
 
 .slot_applogo {
-	position: absolute;
-	z-index: 20;
-	right: 1px;
-	bottom: 1px;
-	width: 16px;
+	display: flex;
 	height: 16px;
+	inset: auto 1px 1px auto;
 	pointer-events: none;	/* click/hover go through to item */
-}
-
-.slot_applogo_img {
+	position: absolute;
 	width: 16px;
-	height: 16px;
+	z-index: 20;
 }
 
 .slot_actionmenu_button {
@@ -805,20 +800,22 @@ div#chat_send_btn.active {
 }
 
 .trade_confirmbtn {
-	margin: 0 auto 12px auto;
-	display: inline-block;
-	position: relative;
-	height: 50px;
-	line-height: 50px;
-	font-size: 24px;
+	background-position: center;
 	color: #7f7f7f;
-	background-repeat: repeat-x;
-	background-position: 0 -50px;
-	padding: 0 50px;
 	cursor: default;
-
+	display: inline-block;
+	font-size: 24px;
+	line-height: 50px;
+	margin: 0 auto 12px auto;
+	/* Work around seeming bug with background clipping/sampling in high DPI. In 1.25x scale, for example, 1px of green
+	 * (from the bottom third of the background image) is sometimes visible below the button. It appears as if the
+	 * browser takes the -50px vertical background, scales it to -62.5 dp, then rounds to -63px and copies from rows
+	 * [63, 126) of the scaled-up image? In any case, this mask greatly reduces (though does not completely eliminate)
+	 * the visibility of the errant row. */
+	mask: linear-gradient( transparent, transparent calc( 100% / 3 ), black calc( 100% / 3 ), black calc( 200% / 3 ), transparent calc( 200% / 3 ), transparent ) center / auto 150px;
 	max-width: 248px;
-
+	padding: 0 50px;
+	position: relative;
 }
 
 .trade_confirmbtn .cap {
@@ -1621,26 +1618,9 @@ html.responsive .trade_right {
 		height: 129px;
 	}
 
-	html.responsive input.filter_search_box {
-		font-size: 16px;
-	}
-
 	html.responsive .trade_offer:not(.ready) .trade_slot:not(.has_item) .slot_inner {
 		background: url( 'https://community.fastly.steamstatic.com/public/images/economy/trade_slot_additem.png' ) no-repeat;
 		background-size: 100% 100%;
-	}
-}
-
-@media screen and (max-width: 480px)
-{
-	html.responsive .filter_right_controls,
-	html.responsive .filter_control_ctn {
-		float: none;
-		width: auto;
-	}
-
-	html.responsive #filter_control {
-		width: calc( 100% - 8px - 2px );
 	}
 }
 

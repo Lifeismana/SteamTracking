@@ -337,7 +337,7 @@
         return new (p())(
           async (t) => {
             const a = [...t],
-              r = await l.xt.GetPlayerLinkDetails(e, { steamids: a }),
+              r = await l.xtC.GetPlayerLinkDetails(e, { steamids: a }),
               n = new Map();
             return (
               r

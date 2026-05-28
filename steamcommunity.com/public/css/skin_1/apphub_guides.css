@@ -15,7 +15,6 @@
 	display: flex;
 	align-items: top;
 	gap: 24px;
-	margin-top: -10px;
 	margin-bottom: 8px;
 }
 
@@ -127,11 +126,6 @@
 	border-bottom: 1px #8F98A0 dotted;
 	padding-bottom: 5px;
 	line-height: 18px;
-}
-
-.apphub_ContentGuides .workshopBrowsePagingWithBG
-{
-	margin-bottom: 6px;
 }
 
 .apphub_ContentGuides .workshopItemPreviewHolder:hover
@@ -379,3 +373,15 @@
 	font-size: 14px;
 }
 
+@media screen and (max-width: 910px)
+{
+	html.responsive .apphub_ContentGuides {
+		float: none;
+		max-width: unset;
+	}
+
+}
+	html.responsive.GamepadMode .apphub_ContentGuides {
+		float: none;
+		max-width: unset;
+	}

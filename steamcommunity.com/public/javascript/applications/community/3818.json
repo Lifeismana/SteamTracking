@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Set reporting cooldown",
     "setcooldown_dialogdescription": "Block a user from reporting content or disputing moderation when they have abused the system.",
     "setcooldown_setbutton": "Set cooldown",
+    "setcooldown_clearopenreports": "Clear this user's unresolved reports",
     "nocomma": ""
 }

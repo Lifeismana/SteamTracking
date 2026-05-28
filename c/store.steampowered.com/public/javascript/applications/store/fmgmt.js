@@ -571,8 +571,8 @@
             queryFn: async () => {
               const _ = new Map();
               if (_._.logged_in) {
-                const _ = _._.Init(_._),
-                  _ = (await _._.GetNicknameList(_, _)).Body().toObject();
+                const _ = _._.Init(_.w_T),
+                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
                 _?.nicknames &&
                   _.nicknames.length > 0 &&
                   _.nicknames.forEach((_) => {
@@ -690,8 +690,8 @@
             return {
               queryKey: ["communitypreferences"],
               queryFn: async () => {
-                const _ = _._.Init(_._),
-                  _ = await _._.GetCommunityPreferences(_, _);
+                const _ = _._.Init(_.tzK),
+                  _ = await _.xtC.GetCommunityPreferences(_, _);
                 if (__webpack_require__.GetEResult() != _._)
                   throw new Error(
                     `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
@@ -750,7 +750,6 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6457,71 +6456,68 @@
         const _ = !_.data?.is_not_member_of_any_group(),
           _ = _._.HELP_BASE_URL + "faqs/view/054C-3167-DD7F-49D4";
         return (0, _.jsx)(_._, {
-          navID: "StoreFamilyManagement",
-          children: (0, _.jsx)(_._, {
-            staleTimeMs: 3e3,
-            children: (0, _.jsxs)(_._.Provider, {
-              value: {
-                errorMessage: _,
-                setErrorMessage: _,
-              },
-              children: [
-                (0, _.jsx)(_._, {}),
-                (0, _.jsxs)(_, {
-                  children: [
-                    (0, _.jsx)(_.Hxx, {}),
-                    (0, _.jsx)("span", {
-                      className: _.FamilyManagementTitle,
-                      children: (0, _._)("#FamilyManagement_Title"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      className: _.HelpLink,
-                      href: _,
-                      children: (0, _.jsx)(_._VW, {}),
-                    }),
-                  ],
+          staleTimeMs: 3e3,
+          children: (0, _.jsxs)(_._.Provider, {
+            value: {
+              errorMessage: _,
+              setErrorMessage: _,
+            },
+            children: [
+              (0, _.jsx)(_._, {}),
+              (0, _.jsxs)(_, {
+                children: [
+                  (0, _.jsx)(_.Hxx, {}),
+                  (0, _.jsx)("span", {
+                    className: _.FamilyManagementTitle,
+                    children: (0, _._)("#FamilyManagement_Title"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.HelpLink,
+                    href: _,
+                    children: (0, _.jsx)(_._VW, {}),
+                  }),
+                ],
+              }),
+              _.isLoading &&
+                (0, _.jsx)("div", {
+                  className: _.ThrobberContainer,
+                  children: (0, _.jsx)(_._, {}),
                 }),
-                _.isLoading &&
-                  (0, _.jsx)("div", {
-                    className: _.ThrobberContainer,
-                    children: (0, _.jsx)(_._, {}),
-                  }),
-                !_.isLoading &&
-                  (0, _.jsx)("div", {
-                    className: _.FamilySettingsContainer,
-                    children: (0, _.jsx)(_._, {
-                      className: _.FamilyContainer,
-                      children: (0, _.jsxs)(_._, {
-                        children: [
-                          (0, _.jsx)(_._, {
-                            path: `${_.path}/create`,
-                            component: _,
-                          }),
-                          (0, _.jsx)(_._, {
-                            path: `${_.path}/join`,
-                            component: _,
-                          }),
-                          (0, _.jsx)(_._, {
-                            path: `${_.path}/confirm_invite`,
-                            component: _,
-                          }),
-                          (0, _.jsx)(_._, {
-                            path: `${_.path}/parentalcontrols/:steamid`,
-                            component: _,
-                          }),
-                          (0, _.jsx)(_._, {
-                            children: _
-                              ? (0, _.jsx)(_, {
-                                  familyGroupID: _.data.family_groupid(),
-                                })
-                              : (0, _.jsx)(_, {}),
-                          }),
-                        ],
-                      }),
+              !_.isLoading &&
+                (0, _.jsx)("div", {
+                  className: _.FamilySettingsContainer,
+                  children: (0, _.jsx)(_._, {
+                    className: _.FamilyContainer,
+                    children: (0, _.jsxs)(_._, {
+                      children: [
+                        (0, _.jsx)(_._, {
+                          path: `${_.path}/create`,
+                          component: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          path: `${_.path}/join`,
+                          component: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          path: `${_.path}/confirm_invite`,
+                          component: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          path: `${_.path}/parentalcontrols/:steamid`,
+                          component: _,
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: _
+                            ? (0, _.jsx)(_, {
+                                familyGroupID: _.data.family_groupid(),
+                              })
+                            : (0, _.jsx)(_, {}),
+                        }),
+                      ],
                     }),
                   }),
-              ],
-            }),
+                }),
+            ],
           }),
         });
       };

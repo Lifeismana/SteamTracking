@@ -735,7 +735,7 @@
         u = s(34629),
         m = s(88997),
         S = s(70995),
-        x = s(27666),
+        x = s(40414),
         C = s(86355),
         L = s(84933),
         I = s(86328),
@@ -1375,13 +1375,13 @@
                               s[0].bSuccess)
                             ) {
                               const e = s[0].uploadResult,
-                                n = x.z.GenerateURLFromHashAndExt(
+                                n = x.zU.GenerateURLFromHashAndExt(
                                   t,
-                                  x.z.GetHashAndExt(e),
+                                  x.zU.GetHashAndExt(e),
                                 ),
-                                i = x.z.GenerateURLFromHashAndExt(
+                                i = x.zU.GenerateURLFromHashAndExt(
                                   t,
-                                  x.z.GetThumbHashAndExt(e),
+                                  x.zU.GetThumbHashAndExt(e),
                                 ),
                                 o = {
                                   imageid: -11231412,
@@ -1532,7 +1532,7 @@
           ) {
             let t = e.dataTransfer.getData("text");
             if (t && t.length > 0)
-              for (let e of [x.z.GetBaseURL(), x.z.GetBaseURLV2()])
+              for (let e of [x.zU.GetBaseURL(), x.zU.GetBaseURLV2()])
                 if (t.startsWith(e)) {
                   let s = "[img]" + ue.lw + "/" + t.substr(e.length) + "[/img]";
                   Ce.replaceSelection(this.GetTextAreaRef().current, s);
@@ -2368,7 +2368,7 @@
               r.trim().length > 0 && (s += ` company="${r}"`),
               p)
             ) {
-              s += ` photo="${ue.lw + "/" + p.clanAccountID + "/" + x.z.GetHashAndExt(p)}"`;
+              s += ` photo="${ue.lw + "/" + p.clanAccountID + "/" + x.zU.GetHashAndExt(p)}"`;
             }
             u && (s += ` steamid="${u.ConvertTo64BitString()}"`),
               (s += `]${c}[/speaker]`),
@@ -2756,9 +2756,9 @@
               "/ajaxpostuserstatus";
             try {
               if (Z.TS.IN_STEAMUI) {
-                let s = h.w.Init(g.kV);
+                let s = h.w.Init(g.kVt);
                 s.Body().set_appid(t), s.Body().set_status_text(n);
-                let i = await g.xt.PostStatusToFriends(
+                let i = await g.xtC.PostStatusToFriends(
                   p.Vw.CMInterface.GetServiceTransport(),
                   s,
                 );

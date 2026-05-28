@@ -1,6 +1,6 @@
+
 a:hover {
 	text-decoration: none;
-	color: #66C0F4;
 }
 #BG_top {
 	position:relative;
@@ -173,11 +173,11 @@ a:hover {
 }
 
 #profileBlock {
-	margin: 5px 0px 0px 0px;
-	flex-grow: 1;
-	max-width: 638px;
 	display: flex;
+	flex: 1 0 0;
 	flex-direction: column;
+	margin: 5px 0px 0px 0px;
+	min-width: 0;
 	padding-bottom: 7px;
 }
 
@@ -218,11 +218,6 @@ a:hover {
 	margin-top: 3px;
 	font-size: 14px;
 	line-height: 20px;
-}
-
-.modalDetails .detailBox {
-	background: url( 'https://community.fastly.steamstatic.com/public/images/groups/group_content_topbackground.png?v=1' ) 0px 8px no-repeat,
-	url( 'https://community.fastly.steamstatic.com/public/images/groups/content_header_rule.png?v=1' ) -4px 0px no-repeat;
 }
 
 .detailBox.collection {
@@ -333,10 +328,6 @@ a:hover {
 #profileBlock p.headlineSub {
 	color: #8F98A0;
 	font-size: 14px;
-}
-
-.browsePagePadding
-{
 }
 
 .general_btn {
@@ -453,11 +444,6 @@ a.general_btn:hover {
 {
 	position: relative;
 	float: right;
-	width:295px;
-	margin:0;
-	padding:0;
-	padding-left:10px;
-	padding-top:0px;
 	z-index: 20;
 }
 
@@ -2267,16 +2253,6 @@ textarea {
 	font-size: 12px;
 }
 
-.workshopBrowsePagingWithBG
-{
-	font-size: 12px;
-	line-height: 24px;
-	margin: 4px 0 20px 0;
-	background: rgba( 0, 0, 0, 0.2 );
-	padding: 2px 10px;
-	display: flex;
-}
-
 .workshopBrowsePaging
 {
 	font-size: 12px;
@@ -2284,12 +2260,6 @@ textarea {
 	margin: 20px 0 0 0;
 	padding-right: 10px;
 	display: flex;
-}
-
-.workshopBrowsePagingControls
-{
-	margin-left: auto;
-	font-size: 14px;
 }
 
 .workshopBrowseSortingControls
@@ -2306,7 +2276,6 @@ textarea {
 	margin-right: 0px;
 	padding-top: 5px;
 	padding-left: 10px;
-	margin-right: 4px;
 }
 .workshopBrowseSortingControls a.dropdown.hover {
 	color: #67c1f5;
@@ -2491,7 +2460,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .commentTabs
 {
-	margin-left: 10px;
+	border-bottom: 5px solid #417B9C;
 	display: flex;
 }
 
@@ -2523,19 +2492,6 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
 
-}
-
-#commentsTabFade {
-	background-color: #417B9C;
-	height: 5px;
-	left: 0px;
-	width: 100%;
-}
-
-#commentsTabFade img
-{
-	width: 100%;
-	display: none;
 }
 
 .developerCommentsDesc
@@ -2877,11 +2833,6 @@ input.inputSplits {
 	border: 1px solid #545349;
 	box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.3);
 }
-.selectTagsFilter
-{
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
 
 .inputTagsFilter
 {
@@ -2942,8 +2893,12 @@ input[type='checkbox'] {
 	border-style: none;
 }
 
-.searchForm .rightSectionHolder {
-	padding-top: 8px;
+.searchForm {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	padding-inline: 6px;
 }
 
 .searchTextContainer
@@ -4404,10 +4359,6 @@ html.responsive #ig_bottom {
 	color: #a4c8ff;
 }
 
-#ig_bottom .pagebtn {
-	line-height: 17px;
-}
-
 .headerOverride #userControls {
 	position: absolute;
 	margin: 10px 0 0 -476px;
@@ -5184,7 +5135,6 @@ a.readmore_link
 	html.responsive #rightContents {
 		float: none;
 		width: auto;
-		padding: 0;
 	}
 
 	html.responsive #ig_bottom {

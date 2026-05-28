@@ -257,11 +257,6 @@
 
 
 
-.inventory_rightnav {
-	float: right;
-	margin-right: 16px;
-}
-
 .tabitems_ctn {
     position: relative;
 }
@@ -475,12 +470,15 @@ a.games_list_tab:hover {
 
 
 
+#context_selector, .filter_ctn, .view_inventory_page {
+	box-sizing: border-box;
+	padding-inline: 10px;
+	width: 100%;
+}
+
 .view_inventory_page {
+	padding-block: 10px;
 	position: relative;
-	background-color: #1c1e21;
-	padding: 11px;
-	width: 884px;
-	margin-left: 6px;
 }
 
 .view_inventory_page .inventory_page_left {
@@ -489,7 +487,7 @@ a.games_list_tab:hover {
 
 .view_inventory_page .inventory_page_right {
 	float: right;
-	width: 350px;
+	width: 370px;
 	position: relative;
 }
 
@@ -528,18 +526,8 @@ a.games_list_tab:hover {
 
 
 /* filter control */
-.filter_ctn {
-	margin-bottom: 8px;
-	margin-left: 12px;
-}
-.filter_label, .filter_control_ctn {
-	float: left;
-	margin-right: 10px;
-	line-height: 32px;
-	height: 32px;
-}
-#filter_control {
-	width: 366px;
+.filter_tag_options {
+	margin-inline: 10px;
 }
 
 .econ_tag_filter_category {
@@ -553,71 +541,22 @@ a.games_list_tab:hover {
 }
 
 #context_selector {
-	margin-left: 12px;
 	margin-bottom: 12px;
 }
 
-#contextselect {
-	background-color: #000000;
-	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/context_arrow.png' );
-	background-repeat: no-repeat;
-	background-position: right top;
-	border: 1px solid #676767;
-	cursor: pointer;
-	display: block;
-	padding: 0;
-	text-align: start;
-}
-
-#contextselect.focus {
-	background-position: right bottom;
-}
-
-#contextselect, #contextselect_options_contexts {
+#contextselect_trigger {
 	width: 430px;
+	max-width: 100%;
 }
 
-#contextselect_options_contexts {
-	border-bottom: none;
-}
-
-#contexts {
-	border-bottom: 1px solid #707070;
-}
-
-#contextselect_options {
-	padding-left: 1px;
-}
-
-.context_name {
-	position: relative;
+html:not(.GamepadMode) #contextselect_trigger {
+	background-color: #000000;
+	border: 1px solid #676767;
 	font-size: 26px;
-	line-height: 35px;
-	height: 35px;
 	font-weight: bold;
-	color: #ffffff;
-	padding-left: 12px;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
+	line-height: 35px;
+	padding-inline: 15px 39px;
 }
-
-#contextselect .context_name {
-	padding-right: 37px;
-}
-
-#contextselect_options .context_name {
-	color: #cac9c9;
-	border-bottom: 1px solid #6c6c6c;
-	cursor: default;
-}
-
-#contextselect_options .context_name:hover {
-	background-color: #212d3d;
-	color: #ffffff;
-}
-
-
 
 body.clienthoverpage {
 	font-family:Arial, Helvetica, Verdana, sans-serif;
@@ -1196,14 +1135,23 @@ body.migrated_profile_page .inventory_links {
 	margin: 0 0 24px;
 }
 
-body.migrated_profile_page .inventory_rightnav {
+.inventory_rightnav {
+	display: flex;
+	flex-direction: row;
 	float: right;
-	margin-right: 0;
+	gap: 12px;
 }
 
-.inventory_rightnav .btn_grey_black, .inventory_rightnav .btn_medium {
-	color: white;
-	margin-left: 12px;
+html:not(.GamepadMode) #inventory_more_dselect_container .trigger {
+	background: rgba( 0, 0, 0, 0.5);
+	border-radius: 2px;
+	border: none;
+	color: #67c1f5;
+	font-size: 15px;
+	line-height: 30px;
+	min-width: 0;
+	padding: 1px 39px 1px 15px;
+	width: auto;
 }
 
 .inventory_newtradeoffer {
@@ -1259,10 +1207,10 @@ body.migrated_profile_page .inventory_rightnav {
 
 @media screen and (max-width: 910px) {
 
-	html.responsive .view_inventory_page {
+	html.responsive #context_selector, html.responsive .filter_ctn, html.responsive .view_inventory_page {
 		width: auto;
 		margin-left: 0;
-		padding: 5px 1%;
+		padding-inline: 1%;
 	}
 
 	html.responsive .view_inventory_page .inventory_page_right {
@@ -1279,13 +1227,6 @@ body.migrated_profile_page .inventory_rightnav {
 		width: auto;
 		max-height: 69px;
 	}
-
-	html.responsive #contextselect,
-	html.responsive #contextselect_options_contexts {
-		max-width: 88vw;
-	}
-
-
 
 	html.responsive .view_inventory_page #inventories {
 		width: auto;
@@ -1305,16 +1246,6 @@ body.migrated_profile_page .inventory_rightnav {
 
 	html.responsive .games_list_tabs_ctn {
 		overflow-x: auto;
-	}
-
-	html.responsive .filter_ctn .filter_control_ctn {
-		overflow: hidden;
-		float: none;
-	}
-
-	html.responsive .filter_ctn.inventory_filters #filter_control {
-		width: 96%;
-		max-width: 363px;
 	}
 
 	html.responsive .view_inventory_page .inventory_ctn {
@@ -1350,21 +1281,22 @@ body.migrated_profile_page .inventory_rightnav {
 	}
 }
 
-@media screen and (max-width: 475px )
-{
-
-	html.responsive .filter_ctn .filter_control_ctn {
-		clear: left;
-	}
+#responsive_inventory_select_dselect_container .trigger {
+	min-width: 250px;
+	width: 100%;
 }
 
-html.responsive .responsive_inventory_fixed_ctn {
-	position: fixed;
-	left: 0;
-	right: 0;
-	background: #000000;
-	top: 62px;
-}
+html:not(.GamepadMode) #responsive_inventory_select_dselect_container .trigger {
+	background: rgba(0, 0, 0, 0.3);
+	border: none;
+	border-radius: 3px;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0 28px 0 4px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
 
 .giftcard_billing_required {
 	margin-bottom: 10px;
@@ -1378,6 +1310,10 @@ html.responsive .responsive_inventory_fixed_ctn {
 	max-width: 98%;
 }
 
+.dselect_container .dropcontainer {
+	z-index: 2000;
+}
+
 .dselect_container .dropcontainer ul {
 	background: #3a6d8b;
 	border-radius: 0 0 3px 3px;
@@ -1387,8 +1323,7 @@ html.responsive .responsive_inventory_fixed_ctn {
 	margin: 0;
 	overflow: hidden auto;
 	padding: 1px;
-	position: absolute;
-	z-index: 2000;
+	white-space: nowrap;
 }
 
 html.GamepadMode .dselect_container .dropcontainer ul {
@@ -1403,10 +1338,10 @@ html.GamepadMode .dselect_container .dropcontainer ul {
 .dselect_container .dropcontainer ul li a {
 	color: #ffffff;
 	display: block;
-	font-size: 16px;
 }
 
 html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	font-size: 16px;
 	padding: 4px;
 }
 
@@ -1418,27 +1353,18 @@ html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
 }
 
 .dselect_container .trigger {
-	background: rgba(0, 0, 0, 0.3);
-	border: none;
-	border-radius: 3px;
 	color: #ffffff;
-	cursor: pointer;
-	display: block;
-	font-size: 16px;
-	line-height: 24px;
-	max-width: 100%;
-	min-width: 250px;
 	overflow: hidden;
-	padding: 0 34px 0 4px;
 	position: relative;
 	text-align: start;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: 100%;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 200; /* thin */
+}
 
-		}
+/* `div` and `button` added here to increase specificity so as to override shared_gamepad.css. */
+html.GamepadMode div.dselect_container button.trigger {
+	padding-inline-end: 36px;
+}
 
 .dselect_container .trigger.activetrigger {
 	border-radius: 3px 3px 0 0;

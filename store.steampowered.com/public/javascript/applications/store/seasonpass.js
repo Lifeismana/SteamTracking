@@ -75,8 +75,8 @@
           : null;
       }
       var g = t(32630),
-        j = t(99376),
-        f = t(42780),
+        f = t(99376),
+        j = t(42780),
         v = t(22837),
         R = t(59952),
         w = t(12611),
@@ -96,12 +96,12 @@
         G = t(78327),
         E = t(79613);
       function B(e) {
-        return new f.OJ(new f.R8(), 0);
+        return new j.OJ(new j.R8(), 0);
       }
       function C(e) {
         const { text: s, languageOverride: t } = e,
           [a] = (0, i.useState)(
-            new j.B(
+            new f.B(
               new Map([
                 ...Array.from(R.W4.entries()),
                 ["img", { Constructor: L, autocloses: !1 }],
@@ -220,7 +220,7 @@
                     children: (0, I.oW)(
                       "#SeasonPass_Incomplete_Desc2",
                       (0, n.jsx)("a", {
-                        href: `${o.TS.STORE_BASE_URL}account/emailoptout`,
+                        href: `${o.TS.STORE_BASE_URL}account/notificationsettings`,
                       }),
                     ),
                   }),

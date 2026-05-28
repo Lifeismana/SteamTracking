@@ -307,10 +307,6 @@
 	html.responsive #rightContents {
 		float: none;
 	}
-
-	html.responsive .comment_notification_filtering_options {
-		display: none;
-	}
 }
 
 @media screen and ( max-width: 480px )

@@ -5,7 +5,14 @@
   [6377],
   {
     77490: (e, n, t) => {
-      t.d(n, { TW: () => u, P0: () => s, $z: () => c, R2: () => b });
+      t.d(n, {
+        cc: () => b,
+        TW: () => u,
+        P0: () => s,
+        KC: () => d,
+        $z: () => c,
+        R2: () => l,
+      });
       var i = t(3049);
       const r = {};
       (r.arabic = () => t.e(6696).then(t.t.bind(t, 6696, 19))),
@@ -100,6 +107,9 @@
         );
       }
       function b(e) {
+        return e.toLocaleDateString((0, i.J)(), { weekday: "long" });
+      }
+      function l(e) {
         const n = Math.floor(e / h.Kp.PerYear),
           t = Math.floor(e / h.Kp.PerMonth),
           i = Math.floor((e % h.Kp.PerMonth) / h.Kp.PerDay),

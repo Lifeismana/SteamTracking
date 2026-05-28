@@ -971,7 +971,7 @@
                             children: (0, _.jsx)("a", {
                               href: `${_._.STATS_BASE_URL}steamdeck/reservations/`,
                               target: "_blank",
-                              children: "Steam Deck reservation stats page",
+                              children: "Steam Hardware reservation stats page",
                             }),
                           }),
                         }),
@@ -1016,8 +1016,8 @@
             queryFn: async () => {
               const _ = new Map();
               if (_._.logged_in) {
-                const _ = _._.Init(_._),
-                  _ = (await _._.GetNicknameList(_, _)).Body().toObject();
+                const _ = _._.Init(_.w_T),
+                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
                 _?.nicknames &&
                   _.nicknames.length > 0 &&
                   _.nicknames.forEach((_) => {

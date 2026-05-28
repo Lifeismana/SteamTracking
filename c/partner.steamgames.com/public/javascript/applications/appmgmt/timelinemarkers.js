@@ -622,7 +622,11 @@
     chunkid: (module) => {
       module.exports = {
         AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
         WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        AdminHeader: "vrqqGANTuXeQs27RGumFj",
+        Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
+        Required: "_1-jmJyKnLRFoN-GX0Oqor8",
         PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
         PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
         Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
@@ -630,6 +634,7 @@
         ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
         ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
         SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
         ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
         LeftCol: "_1AqrivbzwCs57BXiugqpeA",
         ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
@@ -667,6 +672,8 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+        AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
+        RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
       };
     },
     chunkid: (module) => {
@@ -21419,7 +21426,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         let _ = _;
         _ =
@@ -21439,29 +21447,40 @@
                 nMinimumDigitsAfterDecimal: 0,
                 ..._,
               };
-        const _ = _.bUseBinary1K ? 1024 : 1e3,
-          _ = _ * _,
-          _ = _ * _,
-          _ = _ * _;
-        let _,
-          _ = "";
-        _ > _
-          ? ((_ = _ / _), (_ = "Tera"))
-          : _ > _
-            ? ((_ = _ / _), (_ = "Giga"))
-            : _ > _
-              ? ((_ = _ / _), (_ = "Mega"))
+        const { nNum: _, strPrefix: _ } = (function (_, _) {
+            const _ = _.bUseBinary1K ? 1024 : 1e3,
+              _ = _ * _,
+              _ = _ * _,
+              _ = _ * _;
+            return _ > _
+              ? {
+                  nNum: _ / _,
+                  strPrefix: "Tera",
+                }
               : _ > _
-                ? ((_ = _ / _), (_ = "Kilo"))
-                : (_ = _);
-        const _ =
-          "#" +
-          _ +
-          (_.bValueIsInBytes ? "bytes" : "bits") +
-          (_.bValueIsRate ? "_PerSecond" : "");
-        return (0, _._)(
+                ? {
+                    nNum: _ / _,
+                    strPrefix: "Giga",
+                  }
+                : _ > _
+                  ? {
+                      nNum: _ / _,
+                      strPrefix: "Mega",
+                    }
+                  : _ > _
+                    ? {
+                        nNum: _ / _,
+                        strPrefix: "Kilo",
+                      }
+                    : {
+                        nNum: _,
+                        strPrefix: "",
+                      };
+          })(_, _),
+          _ = `#${_}${_.bValueIsInBytes ? "bytes" : "bits"}${_.bValueIsRate ? "_PerSecond" : ""}`;
+        return _._.Localize(
           _,
-          _.toLocaleString(_._.GetPreferredLocales(), {
+          _.toLocaleString((0, _._)(), {
             minimumFractionDigits: _.nMinimumDigitsAfterDecimal,
             maximumFractionDigits: _.nDigitsAfterDecimal,
           }),
@@ -21474,7 +21493,7 @@
             (_ = {
               maximumFractionDigits: _,
             }),
-          _ ? _.toLocaleString(_._.GetPreferredLocales(), _) : "" + _
+          _ ? _.toLocaleString((0, _._)(), _) : "" + _
         );
       }
       function _(_) {

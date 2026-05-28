@@ -140,10 +140,6 @@
 	float: left;
 }
 
-.browsePagePadding
-{
-}
-
 .general_btn {
 	display: block;
 	background-color: #1A1A1A;
@@ -258,7 +254,6 @@ a.general_btn:hover {
 	flex-direction: column;
 	float: right;
 	gap: 12px;
-	margin: 0;
 	padding: 8px 0 0 10px;
 	position: relative;
 	width: 295px;
@@ -495,15 +490,13 @@ h3 {
 
 .hasLinkedItems
 {
+	max-width: 940px;
 	text-align: left;
-	margin: 0px auto;
+	margin: 0 auto 8px auto;
 	padding: 10px;
-	background-image:url('https://community.fastly.steamstatic.com/public/images/sharedfiles/notification_green.png');
-	background-repeat: repeat-x;
+	background: linear-gradient( 180deg, #5c822b, #658f30);
 	background-color: #546b04;
 	color: #D2E885;
-	margin-bottom: 8px;
-	margin-right: 17px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
@@ -1822,34 +1815,6 @@ textarea {
 	font-size: 14px;
 }
 
-.workshopBrowsePagingWithBG
-{
-	font-size: 14px;
-	line-height: 24px;
-	background-color: rgba( 0, 0, 0, 0.4 );
-	padding:  4px;
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	display: flex;
-}
-
-.workshopBrowsePaging
-{
-	font-size: 12px;
-	line-height: 24px;
-	margin-bottom: 10px;
-	display: flex;
-}
-
-.workshopBrowsePagingControls
-{
-	margin-left: auto;
-}
-
-.workshopBrowsePagingInfo
-{
-}
-
 	/* -----[ item details page ] ----------- */
 
 .submit_btn
@@ -1986,11 +1951,6 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	color: #494947;
 }
 
-.commentTabs
-{
-	margin-left: 10px;
-}
-
 .commentsTab, a.commentsTab {
 	display: block;
 	float: left;
@@ -2005,11 +1965,6 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .commentsTab.active {
 	background-color: #4E4E4D;
-}
-
-#commentsTabFade img
-{
-	width: 100%;
 }
 
 .publicComments
@@ -2320,10 +2275,6 @@ input[type='checkbox'] {
 	border-style: none;
 }
 
-.searchForm .rightSectionHolder {
-	padding-top: 8px;
-}
-
 .searchTextContainer
 {
 	position:relative;
@@ -2379,33 +2330,7 @@ input[type='checkbox'] {
 	margin-bottom: 10px;
 }
 
-.searchedForTerm
-{
-	float: left;
-	min-height: 20px;
-	line-height: 20px;
-	padding: 4px;
-	background-color: #68932f;
-	border: 2px solid #68932f;
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	color: #d2ff96;
-	font-size: 14px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-}
 
-.searchedForTerm:hover
-{
-	cursor: pointer;
-	background-color: #8ac33e;
-	border: 2px solid #8ac33e;
-}
-
-.searchedForTermImage
-{
-	margin-left: 10px;
-}
 
 
 .tagsFilterSubmitBtn
@@ -3064,77 +2989,6 @@ div.hover {
 	color:#ffffff;
 	font-size:30px;
 	word-wrap:break-word;
-}
-
-.responsive_tab_ctn.sharedfiles_responsive_tab {
-	text-align: center;
-}
-
-.responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control {
-	display: inline-block;
-	padding: 6px 8px;
-	font-size: 18px;
-	color: #ffffff;
-
-	background: #57749e; /* Old browsers */
-	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
-	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
-}
-
-.sectionTabs
-{
-	position: relative;
-	padding-top: 3px;
-	margin-left: 10px;
-	font-size: 14px;
-	z-index: 10;
-}
-
-
-
-.sectionTabActive .sectionTabActive_leftcap, .sectionTabActive .sectionTabActive_rightcap, .sectionTabActive .sectionTabActive_content
-{
-	background-image: url( https://community.fastly.steamstatic.com/public/images/sharedfiles/tab_active.png );
-}
-
-.sectionTabActive_leftcap
-{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 12px;
-	height: 36px;
-	background-position: 0 0;
-}
-
-.sectionTabActive_rightcap
-{
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 12px;
-	height: 36px;
-	background-repeat: no-repeat;
-	background-position: top right;
-}
-
-.sectionTabActive_content
-{
-	display: inline-block;
-	padding-left: 20px;
-	padding-right: 8px;
-	margin-right: 12px;
-	height: 36px;
-	line-height: 36px;
-	background-position: 0 0px;
-	background-repeat: repeat-x;
-	text-decoration: none;
-}
-
-.sectionTabActive_content:hover
-{
-	text-decoration: none;
-	color: #ffffff;
 }
 
 .sectionTabsHR

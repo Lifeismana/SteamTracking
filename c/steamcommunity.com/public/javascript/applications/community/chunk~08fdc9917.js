@@ -128,7 +128,8 @@
               _.Body().set_subject_group_id(_),
               _.Body().set_subject_id(_),
               _.Body().set_required_level(_.eNewLevel),
-              _.eReason && _.Body().set_reason(_.eReason);
+              _.eReason && _.Body().set_reason(_.eReason),
+              _.strNote && _.Body().set_note(_.strNote);
             const _ = await _._.EscalateSubject(_, _);
             if (_.GetEResult() !== _._)
               throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);

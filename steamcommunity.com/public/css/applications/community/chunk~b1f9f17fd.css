@@ -299,7 +299,7 @@ strong {
 }
 .YaL4BAoqywnKnb5jbU_il {
   color: #56707f;
-  font-size: 12px;
+  font-size: 13px;
   font-family: "Motiva Sans", Sans-serif;
   font-weight: normal;
   padding-top: 0;
@@ -307,6 +307,9 @@ strong {
 }
 .YaL4BAoqywnKnb5jbU_il a {
   color: #8f98a0;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
 }
 .YaL4BAoqywnKnb5jbU_il a:hover {
   color: #fff;
@@ -3744,6 +3747,7 @@ html.responsive.touch
   gap: 48px;
   padding: 20px;
   color: #000;
+  max-width: 940px;
 }
 ._1ShICbWRa-d4k2sWXSBRU5 {
   display: flex;
@@ -4199,6 +4203,12 @@ html.responsive.touch .kmXIYRJ_XTRPAlYph2E50 {
 }
 ._1YmWtGQx7RPg34mzRPqMd- {
   width: 100%;
+}
+._1YmWtGQx7RPg34mzRPqMd- ._2YNmsOz2phP8ss67xqftMV {
+  padding: 0;
+}
+._1YmWtGQx7RPg34mzRPqMd- ._2YNmsOz2phP8ss67xqftMV img {
+  position: relative;
 }
 ._3wnfYKWMVy4IzwkuD-ZTnX {
   display: flex;
@@ -8350,6 +8360,15 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 .BasicUI ._1nqoF3NLNjaj2qxQrb7JgV {
   padding: 16px 0px;
 }
+._2Zm_gRrFMfN5qz4FX-ioXC {
+  justify-content: flex-start;
+}
+._3S3o87MCy5HvHZnto1F9VB {
+  justify-content: center;
+}
+.ZVmHAf8nZRO-hqEMsQN20 {
+  justify-content: flex-end;
+}
 .FFWRI2x0ufl_AF68kEPIq {
   display: inline-block;
 }
@@ -8559,6 +8578,29 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
   margin-top: -1px;
 }
 
+._2Yw2Zq7DhXUnz__aZKNc_r {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+._38138ngfKoemnKfJzKW9GG {
+  display: flex;
+  flex-direction: row;
+  border: gray;
+  border-radius: 3px;
+  gap: 12px;
+}
+.jCg8gWGML1DAedhv9S7Bz {
+  width: 260px;
+}
+.jCg8gWGML1DAedhv9S7Bz .qeM14TZHm0uJ8srLTpEO4 {
+  color: blue;
+}
+._1rgWiRelyItuYoOZELdZSD {
+  display: flex;
+  flex-direction: column;
+  color: #404040;
+}
 ._1vclHrINn0CO_nGkxoDkKy {
   position: absolute;
   height: var(--store-menu-overlap-height, 0px);
@@ -9030,11 +9072,11 @@ html.responsive.touch ._1QP7mh3IZ6mkLZFarqOI6K {
   margin-top: 65px;
 }
 html.responsive.GamepadMode ._3Rukhd1HqXzPiBrK5hwPT- {
-  margin-top: 65px;
+  margin-top: 4vw;
 }
 @media screen and (max-width: 910px) {
   html.responsive ._3Rukhd1HqXzPiBrK5hwPT- {
-    margin-top: 65px;
+    margin-top: 4vw;
   }
 }
 ._3Rukhd1HqXzPiBrK5hwPT- img {

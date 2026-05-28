@@ -14,6 +14,22 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Button: "_0BH1ydyFmSnUvoVK2hIc",
+        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
+        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
+        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
+        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
+        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
+        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
+        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
+        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
+        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
+        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -34,6 +50,20 @@
       module.exports = {
         ListBox: "_1PUg8GjnBeN7rBK-dcyQFl",
         ListBoxOption: "_20oF9tLSfptitLraDOp6X6",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
+        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
+        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
+        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
+        "Size-3": "_389OPmdZoebw42_AlsUFxi",
+        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
+        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
+        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
+        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
+        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
     chunkid: (module) => {
@@ -72,6 +102,35 @@
         "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
         "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
         HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Box: "_2YzOLNBx6TonKU0Zmp20l4",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
       };
     },
     chunkid: (module) => {
@@ -377,6 +436,183 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          size: _ = "3",
+          loading: _ = !0,
+          children: _,
+          color: _,
+          variant: _,
+          ..._
+        } = _;
+        return _ || !_
+          ? (0, _.jsxs)(_._, {
+              position: "relative",
+              ..._,
+              width: "fit-content",
+              children: [
+                (0, _.jsx)("div", {
+                  "data-visibility": !_,
+                  className: _.ChildContainer,
+                  children: _,
+                }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                    children: (0, _.jsx)(_, {
+                      size: _,
+                      color: _,
+                      variant: _,
+                    }),
+                  }),
+              ],
+            })
+          : (0, _.jsx)(_, {
+              size: _,
+              color: _,
+              variant: _,
+              ..._,
+            });
+      }
+      function _(_) {
+        const { className: _, color: _, ..._ } = (0, _._)(_, _);
+        return (0, _.jsx)("div", {
+          "data-accent-color": _,
+          className: _()(_, _.Spinner),
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`Size-${_}`],
+        },
+        {
+          prop: "variant",
+          className: (_) => _[`Variant-${_}`],
+        },
+      ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        _.preventDefault();
+      }
+      const _ = [
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`Size-${_}`],
+          },
+          {
+            prop: "variant",
+            className: (_) => _[`Variant-${_}`],
+          },
+          {
+            prop: "color",
+            dataProperty: (_) => ["accent-color", `${_}`],
+          },
+          {
+            prop: "width",
+            className: _.Width,
+            cssProperty: "--width",
+            responsive: !0,
+          },
+          {
+            prop: "minWidth",
+            className: _.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
+        ],
+        _ = function (_) {
+          const {
+              variant: _ = "default",
+              size: _ = "2",
+              minWidth: _ = "fit-content",
+              color: _,
+              loading: _,
+              children: _,
+              onClick: _,
+              icon: _,
+              gamepadFocusable: _ = !0,
+              ..._
+            } = _,
+            _ = _
+              ? (0, _.jsx)(_, {
+                  size: _,
+                  color: _,
+                  variant: "bright",
+                  children: _,
+                })
+              : _,
+            _ = _ ? void 0 : _,
+            _ = _ && _._.IN_GAMEPADUI ? _._ : "button";
+          return (0, _.jsx)(_, {
+            type: "button",
+            ...(0, _._)(
+              {
+                ..._,
+                variant: _,
+                size: _,
+                minWidth: _,
+                color: _,
+                className: _()(_.Button, _ && _.Icon),
+                onClick: _,
+              },
+              _,
+            ),
+            children: _,
+          });
+        },
+        _ = function (_) {
+          const {
+              variant: _ = "default",
+              size: _ = "2",
+              minWidth: _ = "fit-content",
+              disabled: _,
+              icon: _,
+              gamepadFocusable: _ = !0,
+              ..._
+            } = _,
+            _ = _ ? _ : void 0,
+            _ = _ && _._.IN_GAMEPADUI ? _._ : "a";
+          return (0, _.jsx)(_, {
+            ...(0, _._)(
+              {
+                onClick: _,
+                ..._,
+                variant: _,
+                size: _,
+                minWidth: _,
+                className: _()(_.Button, _ && _.Icon, (0, _._)()),
+              },
+              _,
+            ),
+          });
+        };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -452,6 +688,82 @@
             _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
             fill: "currentColor",
           }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            children: _,
+            beforeContent: _,
+            afterContent: _,
+            hasValue: _,
+            ..._
+          } = _,
+          _ = (function (_) {
+            const {
+                variant: _ = "default",
+                size: _ = "2",
+                radius: _,
+                focusable: _ = !0,
+                hoverable: _ = !0,
+                clickable: _ = !0,
+                disabled: _,
+                className: _,
+                ..._
+              } = _,
+              _ = "underline" === _ ? "none" : _;
+            return (0, _._)(
+              {
+                ..._,
+                radius: _,
+                className: _()(
+                  _.ControlBox,
+                  _ && !_ && _.Focusable,
+                  _ && !_ && _.Hoverable,
+                  _ && !_ && _.Clickable,
+                  _ && _.Disabled,
+                  _[`Variant-${_}`],
+                  _[`Size-${_}`],
+                  _,
+                ),
+              },
+              _._,
+            );
+          })(_);
+        return (0, _.jsxs)(_._, {
+          ..._,
+          align: "center",
+          "data-has-value": !!_,
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                paddingRight: "2",
+                children: _,
+              }),
+            (0, _.jsx)(_._, {
+              flexGrow: "1",
+              minWidth: "0",
+              children: _,
+            }),
+            _ &&
+              (0, _.jsx)(_._, {
+                paddingLeft: "2",
+                children: _,
+              }),
+          ],
         });
       }
     },
@@ -698,6 +1010,174 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { options: _, getOptionLabel: _ = (_) => _, ..._ } = _;
+        return (0, _.jsx)(_.Root, {
+          ..._,
+          children: _.map((_) =>
+            (0, _.jsx)(
+              _.Item,
+              {
+                value: _,
+                children: __webpack_require__(_),
+              },
+              _,
+            ),
+          ),
+        });
+      }
+      function _(_) {
+        return (0, _.jsx)(_._, {
+          className: _.Indicator,
+          radius: _.radius,
+        });
+      }
+      function _(_, _) {
+        const _ = _.compareDocumentPosition(_);
+        return _ & Node.DOCUMENT_POSITION_FOLLOWING
+          ? -1
+          : _ & Node.DOCUMENT_POSITION_PRECEDING
+            ? 1
+            : 0;
+      }
+      (_.Item = function (_) {
+        const { value: _, children: _ } = _,
+          _ = (0, _.useContext)(_),
+          [_, _] = (0, _.useState)(),
+          { register: _, unregister: _ } = _ || {};
+        if (
+          ((0, _.useEffect)(
+            () => (_ && _ && _ ? (_(_, _), () => _(_, _)) : () => {}),
+            [_, _, _, _],
+          ),
+          !_)
+        )
+          return null;
+        const { value: _, onValueChange: _, radius: _, size: _ } = _,
+          _ = _ === _,
+          _ = _ ? void 0 : () => _(_),
+          _ = void 0 === _ ? _ : _;
+        return (0, _.jsx)(_._, {
+          justify: "center",
+          align: "center",
+          radius: _,
+          ref: _,
+          onClick: _,
+          "data-selected": _ ? "true" : "false",
+          className: _()(_.Item, _ && _[`Size-${_}`]),
+          children: _,
+        });
+      }),
+        (_.Root = function (_) {
+          const {
+              variant: _ = "default",
+              radius: _,
+              size: _,
+              children: _,
+              value: _,
+              onValueChange: _,
+            } = _,
+            [_, _] = (0, _.useState)({}),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => ({
+                  ..._,
+                  [_]: _,
+                })),
+              [],
+            ),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => {
+                  const _ = {
+                    ..._,
+                  };
+                  return _[_] === _ && delete _[_], _;
+                }),
+              [],
+            ),
+            _ = (0, _.useMemo)(
+              () => ({
+                value: _,
+                onValueChange: _,
+                register: _,
+                unregister: _,
+                radius: _,
+                size: _,
+              }),
+              [_, _, _, _, _, _],
+            );
+          return (0, _.jsx)(_._, {
+            clickable: !1,
+            hoverable: !1,
+            focusable: !1,
+            variant: _,
+            radius: _,
+            size: _,
+            className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
+            tabIndex: 0,
+            onKeyDown: (_) => {
+              let _ = 0;
+              switch (_.key) {
+                case " ":
+                case "Enter":
+                case "ArrowRight":
+                  _ = 1;
+                  break;
+                case "ArrowLeft":
+                  _ = -1;
+              }
+              if (_) {
+                const _ = Array.from(Object.values(_)).sort(_);
+                let _;
+                if (null === _) _ = _ > 0 ? 0 : _.length - 1;
+                else {
+                  const _ = _[_],
+                    _ = __webpack_require__.findIndex((_) => _ === _);
+                  (0, _._)(
+                    "number" == typeof _,
+                    "Could not find current segmented value position",
+                  ),
+                    (_ = _ + _);
+                }
+                const _ = _[_ < 0 ? _.length + _ : _ % _.length],
+                  _ = Object.keys(_).find((_) => _[_] === _);
+                "string" != typeof _
+                  ? console.error("Could not find next segmeneted value")
+                  : (_(_), _.stopPropagation(), _.preventDefault());
+              }
+            },
+            children: (0, _.jsx)(_.Provider, {
+              value: _,
+              children: (0, _.jsxs)("div", {
+                className: _.SegmentedControl,
+                children: [
+                  _,
+                  null !== _ &&
+                    (0, _.jsx)(_, {
+                      radius: _,
+                    }),
+                ],
+              }),
+            }),
+          });
+        });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { viewBoxSize: _ = 20, ..._ } = _,
@@ -740,6 +1220,54 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "div", ref: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, _.className),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: _,
+          ..._,
+        });
+      }
+      function _(_) {
+        const { _: _ = "div", ref: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, _.className),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          }),
+        });
+      }
+      const _ = _._;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -747,6 +1275,99 @@
       }
       function _(_, _, _, _) {
         return _(_ || _, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "span", ref: _, className: _, ..._ } = _,
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: _,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            responsive: !0,
+            cssProperty: (_, _, _) => [
+              "--text-color",
+              (0, _._)(_, (0, _._)(_.contrast, _) ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            responsive: !0,
+            cssProperty: (_, _, _) => [
+              "--text-color",
+              (0, _._)((0, _._)(_.color, _) ?? "text-body", _),
+            ],
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ..._,
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`TextSize-${_}`],
+          },
+        ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return _.Reset;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -995,206 +1616,6 @@
               ? _._.k_RejectAlreadyDisplayed
               : _(_, _)
             : _._.k_NotRejected;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1,
-        _ = 2,
-        _ = 3;
-      function _(_, _, _, _) {
-        const _ = (0, _.useRef)(void 0),
-          _ = (0, _.useRef)(void 0),
-          _ = (0, _._)();
-        _.current = _;
-        const [_, _] = (0, _.useState)(void 0),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            const _ = {
-              include_assets: _,
-              include_release: _,
-              include_platforms: _,
-              include_all_purchase_options: _,
-              include_screenshots: _,
-              include_trailers: _,
-              include_ratings: _,
-              include_tag_count: _,
-              include_reviews: _,
-              include_basic_info: _,
-              include_supported_languages: _,
-              include_full_description: _,
-              include_included_items: _,
-              include_assets_without_overrides: _,
-              apply_user_filters: _,
-              include_links: _,
-            };
-            let _ = null;
-            return (
-              !_ ||
-                _ < 0 ||
-                _._.Get().BHasStoreItem(_, _, _) ||
-                (void 0 !== _ && _ && _ == _.current) ||
-                (_ !== _.current && (_(void 0), (_.current = _)),
-                (_ = _().CancelToken.source()),
-                _._.Get()
-                  .QueueStoreItemRequest(_, _, _)
-                  .then((_) => {
-                    _?.token.reason || _.current !== _ || _(_ == _._), _();
-                  })),
-              () => _?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return [null, _];
-        if (!1 === _) return [void 0, _];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
-        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, _] : [null, _];
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _(_, _, _) {
-        const [_, _] = _(_, _, _);
-        let _;
-        _?.GetStoreItemType() != _._._ ||
-          _.GetAssets()?.GetHeaderURL() ||
-          1 != _?.GetIncludedAppIDs().length ||
-          (_ = _.GetIncludedAppIDs()[0]);
-        const [_, _] = _(_, _);
-        return _ && _?.BIsVisible() ? [_, _] : [_, _];
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)(),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            if (!_ || 0 == _.length) return;
-            const _ = {
-                include_assets: _,
-                include_release: _,
-                include_platforms: _,
-                include_all_purchase_options: _,
-                include_screenshots: _,
-                include_trailers: _,
-                include_ratings: _,
-                include_tag_count: _,
-                include_reviews: _,
-                include_basic_info: _,
-                include_supported_languages: _,
-                include_full_description: _,
-                include_included_items: _,
-                include_assets_without_overrides: _,
-                apply_user_filters: _,
-                include_links: _,
-              },
-              _ = _.filter(
-                (_) =>
-                  !(
-                    _._.Get().BHasStoreItem(_, _, _) ||
-                    _._.Get().BIsStoreItemMissing(_, _)
-                  ),
-              );
-            if (0 == _.length) return;
-            const _ = _().CancelToken.source(),
-              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
-            return (
-              Promise.all(_).then(() => {
-                _.token.reason || _();
-              }),
-              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return _;
-        if (
-          !_.every(
-            (_) =>
-              _._.Get().BHasStoreItem(_, _, _) ||
-              _._.Get().BIsStoreItemMissing(_, _),
-          )
-        )
-          return _;
-        return _.every((_) =>
-          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
-        )
-          ? _
-          : _;
-      }
-      function _(_, _, _) {
-        return _(_, _._._, _, _);
-      }
-      function _() {
-        _.useEffect(
-          () => (
-            _._.Get().SetReturnUnavailableItems(!0),
-            () => _._.Get().SetReturnUnavailableItems(!1)
-          ),
-          [],
-        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1638,229 +2059,8 @@
         return ((_ - _) / (_ - _)) * 100;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            children: _,
-            beforeContent: _,
-            afterContent: _,
-            hasValue: _,
-            ..._
-          } = _,
-          _ = (function (_) {
-            const {
-                variant: _ = "default",
-                size: _ = "2",
-                radius: _,
-                focusable: _ = !0,
-                hoverable: _ = !0,
-                clickable: _ = !0,
-                disabled: _,
-                className: _,
-                ..._
-              } = _,
-              _ = "underline" === _ ? "none" : _;
-            return (0, _._)(
-              {
-                ..._,
-                radius: _,
-                className: _()(
-                  _.ControlBox,
-                  _ && !_ && _.Focusable,
-                  _ && !_ && _.Hoverable,
-                  _ && !_ && _.Clickable,
-                  _ && _.Disabled,
-                  _[`Variant-${_}`],
-                  _[`Size-${_}`],
-                  _,
-                ),
-              },
-              _._,
-            );
-          })(_);
-        return (0, _.jsxs)(_._, {
-          ..._,
-          align: "center",
-          "data-has-value": !!_,
-          children: [
-            _ &&
-              (0, _.jsx)(_._, {
-                paddingRight: "2",
-                children: _,
-              }),
-            (0, _.jsx)(_._, {
-              flexGrow: "1",
-              minWidth: "0",
-              children: _,
-            }),
-            _ &&
-              (0, _.jsx)(_._, {
-                paddingLeft: "2",
-                children: _,
-              }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(null);
-      function _(_) {
-        const { options: _, getOptionLabel: _ = (_) => _, ..._ } = _;
-        return (0, _.jsx)(_.Root, {
-          ..._,
-          children: _.map((_) =>
-            (0, _.jsx)(
-              _.Item,
-              {
-                value: _,
-                children: __webpack_require__(_),
-              },
-              _,
-            ),
-          ),
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          className: _.Indicator,
-          radius: _.radius,
-        });
-      }
-      function _(_, _) {
-        const _ = _.compareDocumentPosition(_);
-        return _ & Node.DOCUMENT_POSITION_FOLLOWING
-          ? -1
-          : _ & Node.DOCUMENT_POSITION_PRECEDING
-            ? 1
-            : 0;
-      }
-      (_.Item = function (_) {
-        const { value: _, children: _ } = _,
-          _ = (0, _.useContext)(_),
-          [_, _] = (0, _.useState)(),
-          { register: _, unregister: _ } = _ || {};
-        if (
-          ((0, _.useEffect)(
-            () => (_ && _ && _ ? (_(_, _), () => _(_, _)) : () => {}),
-            [_, _, _, _],
-          ),
-          !_)
-        )
-          return null;
-        const { value: _, onValueChange: _, radius: _, size: _ } = _,
-          _ = _ === _,
-          _ = _ ? void 0 : () => _(_),
-          _ = void 0 === _ ? _ : _;
-        return (0, _.jsx)(_._, {
-          justify: "center",
-          align: "center",
-          radius: _,
-          ref: _,
-          onClick: _,
-          "data-selected": _ ? "true" : "false",
-          className: _()(_.Item, _ && _[`Size-${_}`]),
-          children: _,
-        });
-      }),
-        (_.Root = function (_) {
-          const {
-              variant: _ = "default",
-              radius: _,
-              size: _,
-              children: _,
-              value: _,
-              onValueChange: _,
-            } = _,
-            [_, _] = (0, _.useState)({}),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => ({
-                  ..._,
-                  [_]: _,
-                })),
-              [],
-            ),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => {
-                  const _ = {
-                    ..._,
-                  };
-                  return _[_] === _ && delete _[_], _;
-                }),
-              [],
-            ),
-            _ = (0, _.useMemo)(
-              () => ({
-                value: _,
-                onValueChange: _,
-                register: _,
-                unregister: _,
-                radius: _,
-                size: _,
-              }),
-              [_, _, _, _, _, _],
-            );
-          return (0, _.jsx)(_, {
-            clickable: !1,
-            hoverable: !1,
-            focusable: !1,
-            variant: _,
-            radius: _,
-            size: _,
-            className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
-            tabIndex: 0,
-            onKeyDown: (_) => {
-              let _ = 0;
-              switch (_.key) {
-                case " ":
-                case "Enter":
-                case "ArrowRight":
-                  _ = 1;
-                  break;
-                case "ArrowLeft":
-                  _ = -1;
-              }
-              if (_) {
-                const _ = Array.from(Object.values(_)).sort(_);
-                let _;
-                if (null === _) _ = _ > 0 ? 0 : _.length - 1;
-                else {
-                  const _ = _[_],
-                    _ = __webpack_require__.findIndex((_) => _ === _);
-                  (0, _._)(
-                    "number" == typeof _,
-                    "Could not find current segmented value position",
-                  ),
-                    (_ = _ + _);
-                }
-                const _ = _[_ < 0 ? _.length + _ : _ % _.length],
-                  _ = Object.keys(_).find((_) => _[_] === _);
-                "string" != typeof _
-                  ? console.error("Could not find next segmeneted value")
-                  : (_(_), _.stopPropagation(), _.preventDefault());
-              }
-            },
-            children: (0, _.jsx)(_.Provider, {
-              value: _,
-              children: (0, _.jsxs)("div", {
-                className: _.SegmentedControl,
-                children: [
-                  _,
-                  null !== _ &&
-                    (0, _.jsx)(_, {
-                      radius: _,
-                    }),
-                ],
-              }),
-            }),
-          });
-        });
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = Object.assign(
@@ -2057,7 +2257,8 @@
             children: _,
           });
         };
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = {
         _: "rotate( 180, 10, 10 )",
         left: "rotate( 90, 10, 10 )",
@@ -2087,7 +2288,8 @@
         });
       }
       var _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         const { onSelectionChange: _, selectedValue: _, ..._ } = _,
           [_, _] = (0, _.useState)(!1),
@@ -2341,7 +2543,7 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_, {}),
-            _ = (0, _.jsx)(_, {
+            _ = (0, _.jsx)(_._, {
               afterContent: _,
               variant: _,
               size: _,
@@ -2704,7 +2906,7 @@
                         className: _.ControlTitle,
                         children: "Popularity",
                       }),
-                      (0, _.jsx)(_, {
+                      (0, _.jsx)(_._, {
                         options: ["Similar", "Any", "Popular", "Niche"],
                         value: _,
                         onValueChange: (_) =>
@@ -2775,7 +2977,7 @@
                         className: _.ControlTitle,
                         children: "Self Factor",
                       }),
-                      (0, _.jsx)(_, {
+                      (0, _.jsx)(_._, {
                         options: ["None", "Some", "Lots"],
                         value: _,
                         onValueChange: (_) =>

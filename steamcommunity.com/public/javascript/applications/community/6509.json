@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "報告のクールダウンを設定",
     "setcooldown_dialogdescription": "システムを濫用したユーザーによるコンテンツの報告やモデレーションへの異議申し立てをブロックします。",
     "setcooldown_setbutton": "クールダウンを設定",
+    "setcooldown_clearopenreports": "このユーザーの未解決報告をクリアする",
     "nocomma": ""
 }

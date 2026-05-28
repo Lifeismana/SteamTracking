@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Chỉ Valve",
     "moderation_escalationlevel_supervisor_desc": "Cần giám sát",
+    "moderation_escalation_escalationnote": "Ghi chú cho cấp cao hơn:",
     "moderation_chatmetadata_deleted": "Metadata liên quan tới tố cáo trò chuyện này đã bị xóa do quá hạn. Metadata chỉ được giữ trong khoảng 21 ngày.",
     "moderation_chatmetadata_futurelogcollection": "Nhật ký trò chuyện có thể được bổ sung thông tin bằng các tin nhắn gửi thêm sau khi tố cáo trong %1$s",
     "moderation_resolutionaction_removed": "Gỡ bỏ nội dung đã tố cáo",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Chủ đề bị tố cáo",
     "moderation_already_owner_disputed": "Đã phản đối",
     "moderationstats_alltypes": "Tất cả loại chủ đề",
-    "moderation_alternateforumtool": "Công cụ thay thế",
+    "forumsubjectlist_subjectreportsummary": "%1$s chưa giải quyết, %1$s có phản đối",
     "empty_no_trailing_comma": ""
 }

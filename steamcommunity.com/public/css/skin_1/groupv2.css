@@ -2,20 +2,13 @@
 
 .grouppage_header {
 	position: relative;
-	height: 242px;
-
-	border-bottom: 5px solid #417B9C;
 }
 
 .grouppage_member_tiles {
-	left: 0;
 	height: 230px;
 	overflow: hidden;
 	padding-top: 12px;
 	padding-left: 14px;
-	position: absolute;
-	right: -1px;
-	top: 0;
 }
 
 .grouppage_membertiles_overlay {
@@ -90,10 +83,8 @@ body.nodatauri .grouppage_membertiles_overlay {
 }
 
 .grouppage_join_area {
-	background-color: #000000;
 	color: #9d9d9d;
 	font-size: 13px;
-	height: 32px;
 	line-height: 30px;
 	padding: 6px;
 	position: absolute;
@@ -101,15 +92,10 @@ body.nodatauri .grouppage_membertiles_overlay {
 	top: 75px;
 }
 
-.grouppage_join_area .btn_medium {
-	margin-bottom: 1px;
-}
-
 .grouppage_join_area.pending_invite {
 	top: 35px;
 	max-width: 182px;
 	text-align: center;
-	height: auto;
 }
 
 .grouppage_join_area.pending_invite .grouppage_pending_invite_description {
@@ -167,28 +153,30 @@ img.member_tile {
 
 .group_tabs {
 	position: absolute;
-	left: 0;
 	bottom: 0;
-	right: 0;
+	width: 100%;
+}
+
+.group_tabs .responsive_hidden {
+	align-items: end;
+	border-bottom: 5px solid #417B9C;
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+.group_tabs .nonresponsive_hidden {
+	margin-inline: 1%;
 }
 
 .group_tab {
-	margin-top: 7px;
-	display: block;
-	float: left;
-	color: #dadada;
 	background-color: rgba( 0, 0, 0, 0.5 );
-	line-height: 29px;
+	border-radius: 2px 2px 0 0;
+	color: #dadada;
+	display: inline-block;
 	height: 29px;
-	padding: 0px 12px;
-	margin-right: 5px;
-	text-decoration: none;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	-moz-border-radius: 2px;
-	-moz-border-radius-bottomleft: 0px;
-	-moz-border-radius-bottomright: 0px;
+	line-height: 29px;
+	padding-inline: 12px;
 }
 
 a.group_tab:hover {
@@ -199,35 +187,22 @@ a.group_tab:hover {
 .group_tab.active {
 	margin-top: 0px;
 	height: 34px;
-	padding: 1px;
+	padding: 0;
 	text-decoration: none;
 	border: none;
 
-	background: #57749e; /* Old browsers */
-	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
-	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
-}
-
-.group_tab.active > span {
-	height: 35px;
-	line-height: 36px;
-	padding: 0 19px;
-	border-radius: 2px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	color: #ffffff;
-
-	display: block;
 	background: #417B9C; /* Old browsers */
 	background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
 }
 
-.grouppage_content_area {
-
-	padding-top: 18px;
+.group_tab.active > span {
+	border-radius: 2px 2px 0 0;
+	color: #ffffff;
+	height: 35px;
+	line-height: 36px;
+	padding: 0 19px;
 }
-
 
 .group_curator_recommends {
 	color: #b1b1b1;
@@ -333,11 +308,11 @@ a.group_tab:hover {
 }
 .group_content {
 	background: url( 'https://community.fastly.steamstatic.com/public/images/groups/content_footer_fade.png?v=1') bottom left no-repeat, url( 'https://community.fastly.steamstatic.com/public/images/groups/group_content_topbackground.png?v=1' ) top left no-repeat;
-	margin-bottom: 22px;
-	max-width: 626px;	/* backgrounds don't look good beyond this */
-	padding-bottom: 24px;
-	padding-left: 5px;
-	padding-right: 9px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	max-width: 640px;	/* backgrounds don't look good beyond this */
+	overflow: auto;
+	padding: 10px 0 0 5px;
 	position: relative;
 }
 
@@ -467,6 +442,10 @@ a.readmore_link {
 	background-position: bottom left;
 }
 
+.grouppage_content_area {
+	padding-top: 10px;
+}
+
 .grouppage_content_area h1 {
 	color: #ffffff;
 	font-size: 1.7em;
@@ -481,7 +460,6 @@ a.readmore_link {
 	font-size: 1.7em;
 	font-weight:normal;
 	margin: 0;
-	padding: 10px 0px 0px 0px;
 	text-decoration: none;
 }
 a.large_title:hover {
@@ -532,6 +510,12 @@ a.large_title:hover {
 	vertical-align: middle;
 	width: 12px;
 	height: 12px;
+}
+
+.discussions_page {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .rightcol {
@@ -1309,6 +1293,10 @@ a.headlineLink:hover {
 	margin-right: 8px;
 }
 
+#group_trending_topics {
+	padding-bottom: 15px;
+}
+
 #group_trending_topics_pending {
 	text-align: center;
 	height: 198px;
@@ -1926,38 +1914,23 @@ div.rule {
 
 @media screen and (max-width: 910px)
 {
-
 	html.responsive .leftcol,
 	html.responsive .rightcol {
 		width: auto;
 		float: none;
 	}
 
-	html.responsive .leftcol {
-		max-width: 640px;
-	}
-
 	html.responsive .rightcol {
-		padding: 16px 8px 0 8px;
+		padding-top: 16px;
 	}
 
 	html.responsive .responsive_local_menu .grouppage_join_area {
+		margin-bottom: 2px;
 		position: static;
-		top: 0;
-		right: 0;
 	}
 
 	html.responsive .grouppage_header {
 		height: auto;
-	}
-
-	html.responsive .group_tabs {
-		overflow-x: auto;
-	}
-
-	html.responsive .group_tabs_scroll {
-		white-space: nowrap;
-		width: 1024px;
 	}
 
 	html.responsive .member_block.last {
@@ -1970,9 +1943,41 @@ div.rule {
 
 	html.responsive .maincontent.grouppage_header_content {
 		padding: 0;
-		margin: 0;
+		margin: 0 auto;
 	}
+
 }
+	html.responsive.GamepadMode .leftcol,
+	html.responsive.GamepadMode .rightcol {
+		width: auto;
+		float: none;
+	}
+
+	html.responsive.GamepadMode .rightcol {
+		padding-top: 16px;
+	}
+
+	html.responsive.GamepadMode .responsive_local_menu .grouppage_join_area {
+		margin-bottom: 2px;
+		position: static;
+	}
+
+	html.responsive.GamepadMode .grouppage_header {
+		height: auto;
+	}
+
+	html.responsive.GamepadMode .member_block.last {
+		margin-right: 4px;
+	}
+
+	html.responsive.GamepadMode .grouppage_header {
+		overflow: hidden;
+	}
+
+	html.responsive.GamepadMode .maincontent.grouppage_header_content {
+		padding: 0;
+		margin: 0 auto;
+	}
 
 @media screen and (max-width: 580px)
 {
@@ -2018,14 +2023,6 @@ div.rule {
 
 	html.responsive .grouppage_resp_stats .groupstat {
 		display: none;
-	}
-}
-
-
-@media screen and (max-width: 480px)
-{
-	html.responsive .grouppage_header {
-		border-bottom: none;
 	}
 }
 

@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Atur waktu jeda pelaporan",
     "setcooldown_dialogdescription": "Memblokir pengguna dari melaporkan konten atau menyengketakan moderasi saat mereka menyalahgunakan sistem.",
     "setcooldown_setbutton": "Atur waktu jeda",
+    "setcooldown_clearopenreports": "Hapus laporan yang belum terselesaikan milik pengguna ini",
     "nocomma": ""
 }

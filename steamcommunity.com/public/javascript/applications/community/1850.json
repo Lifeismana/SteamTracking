@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Endast Valve",
     "moderation_escalationlevel_supervisor_desc": "Ansvarig krävs",
+    "moderation_escalation_escalationnote": "Eskaleringsanteckning:",
     "moderation_chatmetadata_deleted": "Metadata kopplad till den här chattrapporten har tagits bort på grund av ålder. Den behålls endast i ca 21 dagar.",
     "moderation_chatmetadata_futurelogcollection": "Chattloggen kan utökas med ytterligare meddelanden som har skickats efter anmälan gjordes om %1$s",
     "moderation_resolutionaction_removed": "Ta bort anmält innehåll",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Rapporterade ämnen",
     "moderation_already_owner_disputed": "Redan bestridd",
     "moderationstats_alltypes": "Alla ämnestyper",
-    "moderation_alternateforumtool": "Alternativt verktyg",
+    "forumsubjectlist_subjectreportsummary": "%1$s olösta, %1$s bestridda",
     "empty_no_trailing_comma": ""
 }

@@ -606,7 +606,7 @@ body.v7 .sale_capsule_carousel .carousel_items > * {
 
 .featured_special_deals .home_section_subtitle, .title_grid .home_section_subtitle {
 	color: rgba(255, 255, 255, 0.7);
-	font-size: 19px;
+	font-size: clamp(.75rem, 1.5cqi, 1.25rem);
 	font-weight: 400;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
@@ -781,7 +781,7 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 
 .home_section_subtitle {
 	display: flex;
-	font-size: 14px;
+	font-size: clamp(.75rem, 1.5cqi, 1.25rem);
 	text-transform: none;
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: normal;
@@ -798,7 +798,7 @@ body.v7 .sale_capsule.with_microtrailer.microtrailer_active {
 	grid-template-rows: auto;
 	grid-template-areas:
     "title button"
-    "subtitle button";
+    "subtitle button_low";
 	z-index: 1;
 	position: relative;
 	padding: 0 0 10px 0;
@@ -1078,6 +1078,28 @@ body.v7 .page_content_ctn.dark {
 	width: 18px;
 }
 
+.see_more_gamepad_hint {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	gap: 5px;
+	color: rgb(255, 255, 255);
+	font-weight: 500;
+	font-size: 13px;
+
+	opacity: 0;
+	transition: opacity 300ms ease-in-out;
+}
+
+.see_more_gamepad_hint img {
+	width: 20px;
+	height: 20px;
+}
+
+.see_more_gamepad_hint.hover_active {
+	opacity: 1;
+}
+
 .see_more_link {
 	display: flex;
 	align-items: center;
@@ -1093,9 +1115,13 @@ body.v7 .page_content_ctn.dark {
 	display: none;
 }
 
+.GamepadMode .see_more_desktop {
+	display: none;
+}
+
 @media screen and ( max-width: 910px ) {
 
-	.see_more_mobile {
+	html:not( .GamepadMode ) .see_more_mobile {
 		display: block;
 	}
 
@@ -1854,6 +1880,12 @@ img.main_capsule_header {
 		flex-grow: 1;
 	}
 
+	html.responsive .review_placeholder {
+		display: flex;
+		gap: 3px;
+		padding: 5px 8px 5px 0;
+	}
+
 	html.responsive .store_main_capsule .reason {
 		display: none;
 	}
@@ -2143,7 +2175,11 @@ html.responsive	.community_recommendation_app > .right_col > .community_recommen
 }
 
 html.responsive .review_box .content {
-	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
 }
 
 html.responsive .community_recommendation_app .app_name {
@@ -2798,8 +2834,19 @@ html.responsive .home_deck_title_ctn {
 	justify-content: center;
 }
 
-body.responsive_page .home_tab_button {
+html.responsive .home_tab_button {
 	font-size: 14px;
+	background: var(--light-ctn-bg);
+	padding: 12px;
+	border-radius: 3px;
+}
+
+html.responsive .home_tab_button.active {
+	background: var(--blue-translucent);
+}
+
+html.responsive .home_tabs_row_ctn {
+	gap: 6px;
 }
 
 .event_nav_element {
@@ -2822,10 +2869,6 @@ body.responsive_page p.home_subtitle_ctn a {
 body.responsive_page .home_title {
 	line-height: 22px;
 	font-size: clamp(1rem, 1.75cqi, 1.5rem);
-}
-
-body.responsive_page .home_section_subtitle {
-	font-size: 16px;
 }
 
 html.responsive .title_grid .home_section_button {
@@ -2976,6 +3019,7 @@ html.responsive .home_category_ctn .home_category_title_ctn {
 	white-space: nowrap;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	touch-action: manipulation;
 }
 
 .home_tabs_row_ctn::-webkit-scrollbar {
@@ -3355,11 +3399,13 @@ html.responsive .home_tab_content .tab_content_items .TopSellerCapsule:nth-child
 
 html.responsive .home_tab_content .tab_content_items {
 	justify-content: center;
-	gap: 5px;
+	gap: 12px;
 }
 
-html.responsive .home_tab_section .home_pagecontent_ctn {
-	padding: 25px;
+html.responsive .home_tab_content .see_more_link {
+	flex-direction: column;
+	padding-right: 2%;
+	align-items: flex-end;
 }
 
 html.responsive .tab_item_header {
@@ -3421,7 +3467,6 @@ html.responsive .home_tabs_sections .tab_content_items .tab_item_header .tab_row
 	background: transparent;
 	display: inline-block;
 	cursor: pointer;
-	transition: opacity .1s ease-in-out;
 	/* 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -3560,7 +3605,7 @@ body.v7 .discount_block_large .bundle_base_discount {
 	overflow: hidden;
 	position: relative;
 	max-width: 1600px;
-	margin: 0 auto;
+	margin: 16px auto;
 }
 
 .top_new_releases_date {
@@ -3588,6 +3633,7 @@ body.v7 .discount_block_large .bundle_base_discount {
 	background: var(--multi-color-bg-gradient-1);
 	padding: 20px 10px 10px 10px;
 	border-radius: 3px;
+	margin-bottom: 8px;
 }
 
 /* Styling for top new releases section during seasonal sales so the background doesn't clash with the seasonal tile */
@@ -3611,6 +3657,33 @@ body.v7 .discount_block_large .bundle_base_discount {
 }
 
 /* End Top New Releases */
+
+/* Personal Calendar (most of this styling is in the feature's scss) */
+
+.personal_calendar_ctn {
+	overflow: hidden;
+	position: relative;
+	max-width: 1600px;
+	margin: 16px auto;
+}
+
+.personal_calendar_background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* background-repeat: repeat; */
+	background-size: cover;
+	-webkit-mask-image: linear-gradient( 90deg, transparent 0%, rgba(0, 0, 0, .25) 15%, rgba(0, 0, 0, .25) 85%, transparent 100%);
+	mask-image: linear-gradient( 90deg, transparent 0%, rgba(0, 0, 0, .25) 15%, rgba(0, 0, 0, .25)k 85%, transparent 100%);
+	opacity: 0.35;
+	z-index: -1;
+}
+
+.personal_calendar_ctn .title_grid .home_section_button {
+	grid-area: button_low;
+}
 
 /* Trending Among Friends */
 

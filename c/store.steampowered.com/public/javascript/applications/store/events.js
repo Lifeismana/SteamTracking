@@ -2918,10 +2918,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {
-        include_assets: !0,
-      };
       function _(_) {
         const {
             eventModel: _,
@@ -2931,14 +2933,16 @@
             bHideGameTitle: _,
             fnOnClicked: _,
           } = _,
-          [_, _] = _.useState(!1);
-        (0, _._)(_.GetAppIDOrReferenceAppID(), _),
-          _.useEffect(() => {
-            if (_.clanInfo) {
-              let _ = _._.InitFromClanID(_.clanInfo.clanid);
-              _._.LoadClanInfoForClanSteamID(_);
-            }
-          }, [_.clanInfo]);
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(_.GetAppIDOrReferenceAppID());
+        (0, _._)(_);
+        const _ = (0, _._)(_);
+        _.useEffect(() => {
+          if (_.clanInfo) {
+            let _ = _._.InitFromClanID(_.clanInfo.clanid);
+            _._.LoadClanInfoForClanSteamID(_);
+          }
+        }, [_.clanInfo]);
         const _ = _._.Get(),
           _ = (0, _.sfN)(_._.LANGUAGE),
           _ = "capsule",
@@ -2959,47 +2963,9 @@
             (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
           ),
           _ = (0, _._)(),
-          _ = (0, _._)(() =>
-            Boolean(_ && _)
-              ? _.GetFallbackArtworkScreenshot()
-              : _.GetImageURLWithFallback(_, _, _, _),
-          ),
-          _ =
-            "upcoming" !== _ &&
-            (function (_, _, _, _) {
-              const { video_preview_type: _, video_preview_id: _, type: _ } = _,
-                _ = _.appid;
-              if (!_) return null;
-              if (_ === _.Fwr) return null;
-              if ("youtube" === _) {
-                const _ = (0, _.sfN)(_._.LANGUAGE),
-                  _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
-                  _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
-                if ("carousel" === _)
-                  return (0, _.jsx)(_._, {
-                    altImgWithFallback: _,
-                    video: _,
-                    className: _().YoutubePreviewImage,
-                  });
-                const _ = () => {
-                  _._.RecordAppInteractionEvent(_, _._.k_ePlayedVideo),
-                    __webpack_require__(!0);
-                };
-                return (0, _.jsx)(_._, {
-                  video: _,
-                  altImgWithFallback: _,
-                  autoplay: !0,
-                  autopause: !0,
-                  showFullscreenBtn: !0,
-                  controls: !0,
-                  imageClassnames: _().YoutubePreviewImage,
-                  onPlayerActivated: _,
-                  preloadYoutubeScripts: !0,
-                  playsInline: !0,
-                });
-              }
-              return null;
-            })(_, _, _, _),
+          _ = Boolean(_ && _ && _),
+          _ = (0, _._)(_ ? void 0 : _, _, _, _, _) ?? _,
+          _ = _(_, _),
           _ = _()[`EventType${_}`],
           _ = _.map((_) => _()[`Tag-${_}`]),
           _ = (0, _._)(
@@ -3020,7 +2986,7 @@
         _ === _ && (_ = void 0), _ === _ && (_ = void 0);
         const _ = (0, _._)(_),
           _ = (0, _.jsx)(_, {
-            videoPreview: _,
+            setVideoPlayerReady: _,
             calendarEvent: _,
             eventModel: _,
             mode: _,
@@ -3167,43 +3133,84 @@
           ],
         });
       }
+      function _(_, _) {
+        const { video_preview_type: _, video_preview_id: _, type: _ } = _;
+        return "upcoming" !== _ && !!_ && _ !== _.Fwr && "youtube" === _;
+      }
+      function _(_) {
+        const { eventModel: _, fnSetVideoStateReady: _, mode: _ } = _,
+          { video_preview_id: _, type: _ } = _.eventModel,
+          _ = _.calendarEvent.appid,
+          _ = (0, _.sfN)(_._.LANGUAGE),
+          _ = (0, _._)() && _ == _.zeJ ? _._.full : _._.capsule_main,
+          _ = (0, _._)(_, "capsule", _, _, !0);
+        if ("carousel" === _)
+          return (0, _.jsx)(_._, {
+            altImgWithFallback: _,
+            video: _,
+            className: _().YoutubePreviewImage,
+          });
+        return (0, _.jsx)(_._, {
+          video: _,
+          altImgWithFallback: _,
+          autoplay: !0,
+          autopause: !0,
+          showFullscreenBtn: !0,
+          controls: !0,
+          imageClassnames: _().YoutubePreviewImage,
+          onPlayerActivated: () => {
+            _._.RecordAppInteractionEvent(_, _._.k_ePlayedVideo),
+              __webpack_require__(!0);
+          },
+          preloadYoutubeScripts: !0,
+          playsInline: !0,
+        });
+      }
       function _(_) {
         const {
-            videoPreview: _,
             eventModel: _,
             calendarEvent: _,
             mode: _,
             artworkType: _,
             strCapsuleImgURLForBackground: _,
+            setVideoPlayerReady: _,
             fnSetCoverSize: _,
           } = _,
           _ = (0, _.sfN)(_._.LANGUAGE),
-          _ = !_ && "upcoming" !== _,
+          _ = _(_, _),
+          _ = !_(_, _) && "upcoming" !== _,
           [_, _, _, _, _, _] = (0, _._)(() => [
-            __webpack_require__.GetEventType(),
+            _.GetEventType(),
             _.has_live_stream,
             _.has_live_stream,
             _.clanSteamID.GetAccountID(),
-            _.GetGameCapsule(),
-            __webpack_require__.BImageNeedScreenshotFallback(_, _),
+            __webpack_require__.GetGameCapsule(),
+            _.BImageNeedScreenshotFallback(_, _),
           ]);
         _.useEffect(() => {
-          const _ = new Image();
-          (_.src = _),
-            (_.onerror = () => {
-              _(_._.full);
-            });
+          if (_) {
+            const _ = new Image();
+            (_.src = _),
+              (_.onerror = () => {
+                _(_._.full);
+              });
+          }
         }, [_, _]);
         const _ = _._.GetClanInfoByClanAccountID(_),
           _ = _ && !_.is_ogg;
-        let _ = __webpack_require__.GetSummaryWithFallback(_);
+        let _ = _.GetSummaryWithFallback(_);
         return (
-          __webpack_require__.GetSubTitleWithLanguageFallback(_) === _ &&
-            (_ = void 0),
+          _.GetSubTitleWithLanguageFallback(_) === _ && (_ = void 0),
           (0, _.jsxs)("div", {
             className: _().CoverImageCtn,
             children: [
-              _,
+              _ &&
+                (0, _.jsx)(_, {
+                  eventModel: _,
+                  mode: _,
+                  calendarEvent: _,
+                  fnSetVideoStateReady: _,
+                }),
               _ &&
                 (0, _.jsxs)(_.Fragment, {
                   children: [
@@ -3808,13 +3815,24 @@
             component: (_, _, _) =>
               (0, _.jsx)(_, {
                 largeHeader: _,
-                titleToken: _.strHeaderTitle,
+                titleToken: _.strHeaderTitle ?? "",
                 subtitleToken: _.strHeaderSubtitle,
                 headerImg: _,
                 headerURL: _,
               }),
           }
         );
+      }
+      function _(_) {
+        const { bLargeHeader: _, eventModel: _ } = _;
+        let _ = (0, _.sfN)(_._.LANGUAGE);
+        const _ = (0, _._)(_, "capsule", _, _._.capsule_main);
+        return (0, _.jsx)(_, {
+          largeHeader: _,
+          titleToken: __webpack_require__.GetNameWithFallback(_) ?? "",
+          subtitleToken: __webpack_require__.GetSubTitleWithSummaryFallback(_),
+          headerImg: _,
+        });
       }
       let _ = null;
       function _() {
@@ -4494,20 +4512,7 @@
               this.state.nHubBannerHeight +
               this.state.nMobileNavBannerHeight,
             _ = _();
-          if (
-            (_ && (_.style.transform = `translateY(${-1 * _}px)`),
-            _._.bOpenEventLandingPage)
-          ) {
-            const _ =
-                _.appid &&
-                (await _._.Get().QueueAppRequest(_.appid, {
-                  include_basic_info: !0,
-                }))
-                  ? _._.Get().GetApp(_.appid)
-                  : void 0,
-              _ = (0, _._)(_, _, _._.k_eStoreView, "allowRelative");
-            this.props.history.push(_);
-          } else
+          _ && (_.style.transform = `translateY(${-1 * _}px)`),
             (0, _._)(this.props.history, {
               emclan: _.clanSteamID.ConvertTo64BitString(),
               emgid: _.GID,
@@ -4679,45 +4684,27 @@
           }, [_, _, _]),
           _)
         ) {
-          let _, _;
-          if (_ && !_) {
-            const _ = _._.GetClanEventModel(_);
-            _ &&
-              ((_ = _.GetImageURLWithFallback("capsule", _, _._.capsule_main)),
-              (_ = _.GetSaleURL()));
-          }
-          const _ = (function (_, _, _, _) {
-            if (!_) return null;
-            const _ = _().find((_) => _.collection === _);
-            return _ ? _.component(_, _, _) : null;
-          })(_, _.bLargeMode, _, _);
-          if (!_) return null;
-          const _ = (0, _._)(_().HubBanner, _().WideBanner);
-          return (0, _.jsx)("div", {
-            style: {
-              transform: `translateY(${_.nTopOffset}px)`,
-            },
-            className: _,
-            children: _,
-          });
+          let _;
+          return (
+            _ && !_ && (_ = _._.GetClanEventModel(_)),
+            (0, _.jsx)(_, {
+              ..._,
+              collectionID: _,
+              eventModel: _,
+              language: _,
+            })
+          );
         }
         if (_) {
           const _ = (function (_, _) {
             if (!_) return null;
             let _ = _._.GetClanEventModel(_);
-            if (!_) return null;
-            let _ = (0, _.sfN)(_._.LANGUAGE);
-            return (0, _.jsx)(_, {
-              largeHeader: _,
-              titleToken: __webpack_require__.GetNameWithFallback(_),
-              subtitleToken:
-                __webpack_require__.GetSubTitleWithSummaryFallback(_),
-              headerImg: __webpack_require__.GetImageURLWithFallback(
-                "capsule",
-                _,
-                _._.capsule_main,
-              ),
-            });
+            return _
+              ? (0, _.jsx)(_, {
+                  bLargeHeader: _,
+                  eventModel: _,
+                })
+              : null;
           })(_, _.bLargeMode);
           if (!_) return null;
           const _ = (0, _._)(_().HubBanner, _().WideBanner);
@@ -4749,6 +4736,25 @@
           });
         }
         return null;
+      }
+      function _(_) {
+        const { collectionID: _, language: _, eventModel: _ } = _;
+        let _ = (0, _._)(_, "capsule", _, _._.capsule_main),
+          _ = _?.GetSaleURL() ?? void 0;
+        const _ = (function (_, _, _, _) {
+          if (!_) return null;
+          const _ = _().find((_) => _.collection === _);
+          return _ ? _.component(_, _, _) : null;
+        })(_, _.bLargeMode, _, _);
+        if (!_) return null;
+        const _ = (0, _._)(_().HubBanner, _().WideBanner);
+        return (0, _.jsx)("div", {
+          style: {
+            transform: `translateY(${_.nTopOffset}px)`,
+          },
+          className: _,
+          children: _,
+        });
       }
       let _ = class extends _.Component {
         GetCurrentSectionLayout() {

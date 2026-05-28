@@ -268,8 +268,8 @@
               _,
               _().personaNameAndStatusLabel,
               (0, _._)(_),
-              _ && _().compactView,
-              _ && _().NoMask,
+              _ ? _().compactView : void 0,
+              _ ? _().NoMask : void 0,
             ];
           _ || _.has_public_party_beacon
             ? (_ = (0, _.jsx)(_, {
@@ -298,7 +298,7 @@
               (_ = (0, _.jsx)(_, {
                 persona: _,
               }));
-          let _ = null;
+          let _ = (0, _.jsx)(_.Fragment, {});
           _
             ? (_ = (0, _.jsx)("div", {
                 className: "ContextMenuButton",
@@ -322,10 +322,16 @@
             onContextMenu: _,
             children: [
               (0, _.jsxs)("div", {
-                className: (0, _._)(_().statusAndName, _ && _().threeLines),
+                className: (0, _._)(
+                  _().statusAndName,
+                  _ ? _().threeLines : void 0,
+                ),
                 children: [
                   (0, _.jsxs)("div", {
-                    className: (0, _._)(_().playerName, _ && _().EllipsisName),
+                    className: (0, _._)(
+                      _().playerName,
+                      _ ? _().EllipsisName : void 0,
+                    ),
                     children: [
                       _ || " ",
                       _ &&
@@ -370,7 +376,7 @@
                       (0, _.jsxs)("div", {
                         className: (0, _._)(
                           _().gameName,
-                          _ && _().threeLines,
+                          _ ? _().threeLines : void 0,
                           _().richPresenceLabel,
                           "no-drag",
                         ),
@@ -1369,8 +1375,8 @@
         return {
           queryKey: ["GetFriendNicknameList", _],
           queryFn: async () => {
-            const _ = _._.Init(_._);
-            return (await _._.GetNicknameList(_, _)).Body().toObject();
+            const _ = _._.Init(_.w_T);
+            return (await _.xtC.GetNicknameList(_, _)).Body().toObject();
           },
         };
       }
@@ -1401,9 +1407,9 @@
         };
       }
       async function _(_, _) {
-        const _ = _._.Init(_._);
+        const _ = _._.Init(_.tlx);
         __webpack_require__.Body().set_appid(_);
-        const _ = await _._.GetFriendsGameplayInfo(_, _);
+        const _ = await _.xtC.GetFriendsGameplayInfo(_, _);
         return (
           _.BSuccess() ||
             console.warn(`Failed to get gameplay info: ${_.GetEResult()}`),

@@ -78,19 +78,13 @@ input[type=time] {
 
 input.custom_form_text
 {
-	width: calc( 100% - 10px );
-	clear: left;
+	box-sizing: border-box;
+	width: 100%;
 }
-
-input.custom_form_text.right_hint
-{
-	width: calc( 50% - 16px );
-	margin-right: 16px;
-}
-
 
 .custom_form_label
 {
+	align-content: end;
 	padding-bottom: 4px;
 }
 
@@ -102,67 +96,69 @@ input.custom_form_text.right_hint
 
 .create_request_form_row
 {
-	padding-bottom: 20px;
-	clear: both;
+	display: grid;
+	column-gap: 16px;
+	grid-auto-columns: minmax( 245px, 1fr );
+	grid-auto-flow: column;
+	grid-template-rows: repeat( 3, auto );
+}
+
+@media screen and (max-width: 580px) {
+	.create_request_form_row
+	{
+		grid-auto-flow: row;
+	}
+}
+
+.right_hint_container {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+}
+
+.right_hint_container > * {
+	flex: 1 0 0;
+}
+
+.hint_text_container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
 }
 
 .create_request_form_row .hint_text
 {
-	padding-top: 2px;
 	font-size: 12px;
-	color: #8c96a0;
 }
 
 .create_request_form_row .hint_text.right_hint
 {
-	width: calc( 50% - 16px );
-	display: inline-block;
 	color: #5eafde;
-	vertical-align: top;
-	padding-top: 0px;
 }
 
-
-.create_request_form_colset_1
+.create_request_form_row .hint_text:not(.right_hint)
 {
-	float: left;
-	width: calc( 100% - 16px );
-	margin-right: 16px;
+	padding-top: 2px;
+	color: #8c96a0;
 }
 
-
-.create_request_form_colset_2
+.create_request_form_item
 {
-	float: left;
-	width: calc( 50% - 16px );
-	margin-right: 16px;
+	display: grid;
+	column-gap: 16px;
+	grid-row-end: span 3;
+	grid-auto-columns: minmax( 245px, 1fr );
+	grid-auto-flow: column;
+	grid-template-rows: subgrid;
+	padding-bottom: 20px;
 }
 
-.create_request_form_colset_3
+.create_request_form_subitem
 {
-	float: left;
-	width: calc( 33% - 16px );
-	margin-right: 16px;
+	display: grid;
+	grid-row-end: span 3;
+	grid-template-rows: subgrid;
 }
-
-@media screen and (max-width: 580px)
-{
-	.create_request_form_colset_2, .create_request_form_colset_3
-	{
-		width: calc( 100% - 16px );
-		clear: left;
-		padding-top: 20px;
-	}
-
-	.create_request_form_colset_2:first-child,
-	.create_request_form_colset_3:first-child
-	{
-		padding-top: 0px;
-	}
-
-
-}
-
 
 .help_site_button {
 	display: inline-block;
@@ -177,52 +173,10 @@ input.custom_form_text.right_hint
 	color: #ffffff;
 }
 
-.dropcontainer ul {
-	list-style-type:none;
-	line-height: 22px;
-	margin:0;
-	position:absolute;
-	top:0;
-	left: 0;
-	right: 0;
-	z-index: 90;
-
-	overflow: auto;
-	overflow-x: hidden;
-
-	box-shadow: 0 0 5px 0 #000000;
-	background: #417A9B;
-
-	max-height: 300px;
-	min-width: fit-content;
-	max-width: 500px;
-}
-.dropdownhidden{
-	display: none;
-}
-.dropdownvisible{
-	display: block;
-}
-.dropcontainer ul li {
-	padding: 0;
-	margin: 0;
-}
-.dropcontainer ul li.emptyvalue {
-	font-style: italic;
-}
-.dropcontainer ul a {
-	padding: 0 10px;
-	display:block;
-	text-decoration:none;
-	color: #e5e4dc;
-	line-height: 22px;
-	height: 22px;
-
-	white-space: nowrap;
-}
-
-.dropcontainer{
-	position:relative;
+.date_picker {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
 }
 
 .dselect_container
@@ -230,86 +184,89 @@ input.custom_form_text.right_hint
 	font-size: 12px;
 }
 
-.dselect_container.day_picker
-{
-	float: left;
-	width: 64px;
+.dselect_container .dropcontainer {
+	z-index: 2000;
 }
 
-.dselect_container.month_picker
-{
-	float: left;
-	padding-left: 6px;
-	width: 120px;
+.dselect_container .dropcontainer ul {
+	background: #417A9B;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
+	line-height: 22px;
+	list-style-type: none;
+	margin: 0;
+	max-height: 300px;
+	overflow: hidden auto;
+	white-space: nowrap;
 }
 
-.dselect_container.year_picker
-{
-	float: left;
-	padding-left: 6px;
-	width: 72px;
-}
-
-.dselect_container {
-	position: relative;
-
-}
-.dselect_container button.trigger, .dselect_container button.activetrigger {
-	display: block;
-	box-sizing: content-box;
-	text-align: inherit;
-	cursor: pointer;
-	position: relative;
-
-	color: #67C1F5;
-	padding: 0 30px 0 8px;
-	font-size: 12px;
-	line-height: 24px;
-	border: 0;
+html.GamepadMode .dselect_container .dropcontainer ul {
 	border-radius: 3px;
-	text-decoration: none;
+}
 
+.dselect_container .dropcontainer ul.dropdownhidden {
+	display: none;
+}
+
+.dselect_container .dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+
+.dselect_container .dropcontainer ul li a {
+	color: #e5e4dc;
+	display: block;
+}
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	line-height: 22px;
+	padding-inline: 10px;
+}
+
+.dselect_container .trigger {
 	overflow: hidden;
+	position: relative;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-.dselect_container button.trigger {
+html:not(.GamepadMode) .dselect_container .trigger {
 	background: rgba( 103, 193, 245, 0.2 );
+	border: 0;
+	border-radius: 3px;
+	color: #67C1F5;
+	font-size: 12px;
+	line-height: 24px;
+	padding: 0 32px 0 8px;
 }
 
-.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover {
+/* `div` and `button` added here to increase specificity so as to override shared_gamepad.css. */
+html.GamepadMode div.dselect_container button.trigger {
+	padding-inline-end: 36px;
+}
+
+html:not(.GamepadMode) .dselect_container .activetrigger {
+	background-color: #67c1f5;
+	border-radius: 3px 3px 0 0;
 	color: #ffffff;
-	background: #67c1f5;
 }
 
-
-.dselect_container button.activetrigger {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	z-index: 91;
-	position: relative;
-}
-
-.dselect_container button.trigger::after, .dselect_container button.activetrigger::after {
-	position: absolute;
-	right: 0;
-	top: 3px;
-	width: 24px;
-	height: 14px;
+.dselect_container .trigger::after {
 	background: url('https://help.steampowered.com/public/images//ico_arrow_dn_for_select.png') no-repeat right;
 	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 24px;
 }
 
-.dselect_container button.trigger:hover,
-.dselect_container .dropcontainer a.highlighted_selection
+html:not(.GamepadMode) .dselect_container .trigger:hover,
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover
 {
-	color: #ffffff;
 	background-color: #67c1f5; /* Old browsers */
+	color: #ffffff;
 	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
-
 
 body.v6 {
 	position: relative;
@@ -1018,6 +975,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 .help_wizard_button {
 	display: block;
+	width: 100%;
 	max-width: 712px;
 
 	/* buttons may have different padding, but want them to always be max 712 wide to match everything else */
@@ -1030,6 +988,7 @@ body.v6 .page_content_ctn.dark:last-child {
 
 	font-size: 15px;
 	color: white;
+	text-align: start;
 
 	background-color: #445468;
 }
@@ -1412,7 +1371,6 @@ body.v6 .help_refund_request_area h1 {
 
 body.v6 .help_refund_request_area h2 {
 	font-size: 12px;
-	margin-bottom: 15px;
 	color: #c6d4df;
 }
 
@@ -1454,33 +1412,11 @@ body.v6 .help_refund_request_area h2 a:hover {
 }
 
 .refund_notes {
+	display: grid;
+	gap: 6px;
+	grid-template-columns: 94px auto;
 	margin-bottom: 40px;
-}
-
-.refund_notes_left {
-	float: left;
-	width: 100px;
-	text-align: right;
-	margin-top: 2px;
-}
-
-.refund_notes_left > div
-{
-	line-height: 24px;
-	margin-right: 6px;
-	margin-top: 6px;
-}
-
-.refund_notes_right {
-	overflow: hidden;
-}
-
-.refund_notes_right > div {
-	margin: 6px 0 6px 0;
-}
-
-.refund_field {
-
+	padding-block: 6px;
 }
 
 .refund_sale_points_title {
@@ -1578,12 +1514,30 @@ body.v6 .help_refund_request_area h2 a:hover {
 	color: rgb( 255, 128, 0 ) !important;
 }
 
+.refund_info_grid {
+	column-gap: 10px;
+	display: grid;
+	grid-template-columns: 90px auto;
+	row-gap: 15px;
+}
+
 .refund_info_box {
-	padding: 10px;
+	padding: 20px 10px 25px;
 	background-color: #1d2a3b;
 	margin-right: 9%;
 	margin-bottom: 10px;
 	margin-top: 10px;
+}
+
+.refund_notes > div:nth-child( 2n + 1 ),
+.refund_info_box > div:nth-child( 2n + 1 ) {
+	text-align: end;
+}
+
+.refund_info_box_contents {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .refund_notes_box
@@ -1605,29 +1559,19 @@ body.v6 .help_refund_request_area h2 a:hover {
 	margin-bottom: 15px;
 }
 
-.refund_info_box_left {
-	width: 90px;
-	min-height: 1px;
-	text-align: right;
-	padding-right: 10px;
-	float: left;
+/* When the first item in the refund box body is a select, tweak the adjacent grid cell style so the label text in it
+ * lines up with the text in the select. The selectors these are copied from are those matching
+ * `.dselect_container button.trigger`. */
+html.GamepadMode .multiple_options {
+	padding-block: 12px;
 }
-
-.refund_info_box_left.multiple_options {
+html:not(.GamepadMode) .multiple_options {
 	line-height: 24px;
-}
-
-.refund_info_box_right {
-	overflow: hidden;
 }
 
 .refund_note {
 	color: #9d9d9f;
 }
-
-/*.refund_bright {
-	color: #fdfdfd;
-}*/
 
 .info_box {
 	padding: 10px;
@@ -1675,7 +1619,6 @@ body.v6 .help_refund_request_area h2 a:hover {
 }
 
 .refund_game_block {
-	margin-top: 10px;
 	border-spacing: 0;
 	background-color: #151f2d;
 	padding: 14px 10px 6px 10px;
@@ -3461,10 +3404,13 @@ input.unlockcode_entry_input
 	color: #c6d4df;
 }
 
+#hardware_refund_serial {
+	padding-bottom: 15px;
+}
+
 #hardware_serial_entry {
 	width: 400px;
 	font-style: normal;
-	margin: 10px 0 10px 0;
 	text-transform: uppercase;
 
 	color: #FFFFFF;
@@ -3480,7 +3426,7 @@ input.unlockcode_entry_input
 	background-color: #8f9eb1;
 	height: 1px;
 	width: auto;
-	margin: 6px 180px 22px 0px;
+	margin: 6px 180px 12px 0px;
 }
 
 .shipping_form_left
@@ -3787,8 +3733,9 @@ input.unlockcode_entry_input
 }
 
 .help_request_textarea_ctn textarea {
+	box-sizing: border-box;
 	padding: 8px;
-	width: calc( 100% - 2px - 16px );
+	width: 100%;
 	min-height: 80px;
 	height: 25vh;
 	resize: none;
@@ -3796,12 +3743,8 @@ input.unlockcode_entry_input
 }
 
 .help_request_textarea_ctn textarea.short {
-	padding: 8px;
-	width: calc( 100% - 2px - 16px );
 	min-height: 40px;
 	height: 10vh;
-	resize: none;
-	font-size: 16px;
 }
 
 

@@ -335,6 +335,7 @@
           }
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.createContext(void 0);
       function _(_) {
         const { table: _, setColumnSizeOverride: _ } = _,
@@ -631,8 +632,6 @@
                 !_.column.columnDef.meta?.bDisableSortButton &&
                 ((_ = "button"),
                 (_.onClick = _.column.getToggleSortingHandler())),
-              _.column.columnDef.meta?.strHeaderTooltip &&
-                (_.title = _.column.columnDef.meta?.strHeaderTooltip),
               (0, _.jsx)(
                 _,
                 {
@@ -641,6 +640,7 @@
                   HeaderElement: _,
                   nHeaderHeight: _,
                   sortDirection: _,
+                  strTooltip: _.column.columnDef.meta?.strHeaderTooltip,
                   conditionalProps: _,
                 },
                 _._,
@@ -762,6 +762,7 @@
             HeaderElement: _,
             nHeaderHeight: _,
             sortDirection: _,
+            strTooltip: _,
             conditionalProps: _,
           } = _,
           _ = (0, _.useRef)(null);
@@ -797,6 +798,10 @@
                 _.isPlaceholder
                   ? null
                   : (0, _._)(_.column.columnDef.header, _.getContext()),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    tooltip: _,
+                  }),
                 _ &&
                   !_.column.columnDef.meta?.bDisableSortButton &&
                   (0, _.jsx)("div", {

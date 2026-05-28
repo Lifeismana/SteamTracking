@@ -113,28 +113,21 @@
 ._2Jd3MGaOu0C9Ydswf8Q4Tn {
   padding-top: 5px;
 }
+.BasicUI ._2Jd3MGaOu0C9Ydswf8Q4Tn {
+  overflow: hidden;
+  position: relative;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
 ._2Jd3MGaOu0C9Ydswf8Q4Tn h2 {
-  font-family: "Motiva Sans", Arial, Sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
-  margin: 0 0 10px;
-  letter-spacing: 2px;
-  font-weight: normal;
-  padding-top: 2px;
-}
-@media screen and (max-width: 910px) {
-  ._3YyCpH32HRhZtt4BOM5wM5 {
-    margin-top: 58px;
-  }
-}
-._1HP0yfVUrZ-TPBYhiQkye2 {
+  width: 100%;
   display: flex;
-  flex-direction: row-reverse;
-  margin-bottom: -21px;
-  margin-top: -5px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
 }
-._3n8swQFM3I_ARVM_5bPhAs {
+._2Jd3MGaOu0C9Ydswf8Q4Tn h2 ._3n8swQFM3I_ARVM_5bPhAs {
   background: rgba(0, 0, 0, 0);
   border: 1px solid hsla(0, 0%, 100%, 0.4);
   border-radius: 2px;
@@ -145,15 +138,20 @@
   width: fit-content;
   cursor: pointer;
   position: relative;
-  bottom: 30px;
 }
-._3n8swQFM3I_ARVM_5bPhAs:hover {
+._2Jd3MGaOu0C9Ydswf8Q4Tn h2 ._3n8swQFM3I_ARVM_5bPhAs:hover {
   border: 1px solid #fff;
+}
+@media screen and (max-width: 910px) {
+  ._3YyCpH32HRhZtt4BOM5wM5 {
+    margin-top: 58px;
+  }
 }
 ._1snIw0RvJduvDtqpmwtKJ9 {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
-  margin-bottom: 5px;
+  flex-direction: row;
+  gap: 8px;
   margin-top: 5px;
   overflow-x: auto;
 }

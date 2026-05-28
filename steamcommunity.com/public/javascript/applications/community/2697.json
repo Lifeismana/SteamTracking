@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Valve exclusivement",
     "moderation_escalationlevel_supervisor_desc": "Supervision requise",
+    "moderation_escalation_escalationnote": "Remarque sur la procédure d'appel :",
     "moderation_chatmetadata_deleted": "Les métadonnées associées à ce signalement de chat ont été supprimées en raison de leur ancienneté. Elles ne sont conservées que pendant 21 jours environ.",
     "moderation_chatmetadata_futurelogcollection": "Des messages supplémentaires envoyés après le signalement seront peut-être rajoutés à l'historique de chat dans %1$s",
     "moderation_resolutionaction_removed": "Supprimer le contenu signalé",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Sujets signalés",
     "moderation_already_owner_disputed": "Déjà contesté",
     "moderationstats_alltypes": "Tous les types de sujets",
-    "moderation_alternateforumtool": "Autre outil",
+    "forumsubjectlist_subjectreportsummary": "%1$s non résolus, %1$s contestés",
     "empty_no_trailing_comma": ""
 }

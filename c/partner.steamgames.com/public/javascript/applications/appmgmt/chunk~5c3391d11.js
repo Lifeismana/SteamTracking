@@ -79,13 +79,18 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        Sticky: "_3dlxz6KBJpvmA-qsVAzxs8",
         GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
         GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
+        ChecklistMode: "_3blAkLFfSQrJjGklUKOP7e",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
-        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
+        checklistBox: "_1idkU7IA8dDPOIbsU-dRkJ",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
+        VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusDanger: "UxdQKun4GcZ-B1NJwHevX",
         StatusCaution: "E9t9jUT0k_0xGdy7HbJfd",
+        StatusInfo: "_38gm-PDPbi6lw1-aiH81HR",
+        StatusIncomplete: "ZGxYVjsUSjHLRHIWkx4-L",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2880,6 +2885,8 @@
             classNameTabContent: _,
             preferredFocus: _,
             bVerticalTabs: _,
+            bSticky: _,
+            bChecklistMode: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -2911,6 +2918,8 @@
                 className: (0, _._)(
                   _().GraphicalAssetsTabs,
                   _ && _().GraphicalAssetsTabsVertical,
+                  _ && _().ChecklistMode,
+                  _ && _().Sticky,
                   _,
                 ),
                 navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
@@ -2943,16 +2952,24 @@
           : _;
       }
       function _(_) {
-        const { statusType: _ = "success", children: _ } = _;
+        const { statusType: _ = "success", bShowStatusBox: _, children: _ } = _;
         let _ = "";
         return (
           "success" === _
             ? (_ = _().StatusSuccess)
             : "danger" === _
               ? (_ = _().StatusDanger)
-              : "caution" === _ && (_ = _().StatusCaution),
+              : "caution" === _
+                ? (_ = _().StatusCaution)
+                : "info" === _
+                  ? (_ = _().StatusInfo)
+                  : "incomplete" === _ && (_ = _().StatusIncomplete),
           (0, _.jsx)("div", {
-            className: (0, _._)(_().GraphicalAssetStatus, _),
+            className: (0, _._)(
+              _().GraphicalAssetStatus,
+              _,
+              _ ? _().checklistBox : "",
+            ),
             children: _,
           })
         );

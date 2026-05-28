@@ -265,7 +265,7 @@ a.item_action:hover {
 }
 
 .react_trade_hover {
-	width: 346px;
+	width: 370px;
 }
 
 .item_desc_content {
@@ -401,11 +401,6 @@ a.item_action:hover {
 	padding: 0 14px;
 }
 
-.filter_right_controls {
-	float: right;
-	width: 200px;
-}
-
 .filter_tag_button {
 	display: grid;
 	white-space: nowrap;
@@ -420,63 +415,51 @@ a.item_action:hover {
 	justify-content: space-between;
 }
 
-.filter_control_ctn {
-	position: relative;
-	float: left;
-}
-
 #filter_clear_btn {
-	position: absolute;
-	right: 4px;
-	top: 7px;
-	width: 16px;
-	height: 16px;
 	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVdJREFUeNqM009EBGEYx/GZbSwRe4qI/lw6bDZLW4eUKFJEl05Rx9KpxJ4iukWXutQhkTp26hDpkFJERFqW6LpEpxgiou/Lb3j2Nat9+Bzmmfd95n3ed96wVCoFKdGCIvKI8YZq2sDIe+7ANhbQ5r2rYReH+EmSGTNgHK9YTpnsohN7uNeH6goUcIH24P8YxjVabYFT5Mygy5SJN2bp7oNbSYFpbVgS+5jFuskdYworJrfmWo1UwIbbwDMV+kI/yuq7bMa5FkZdgV6vgNuHW63iRLketeCPzWd05n64U+gzz9125224Au9e7hdLOMIQ5nGHSbVko+oKXHnJHe3BhJZ9jlU8epv4jYdIBZ4xqBcbOq5NZJU7QBcWvdOKQ92Fgv6wXNBcvGDErSL5kSqYw2cTk58woxbq7oLbqAH9NHHKxJp+rjF8JMmwwXXOqq2iilUaXec/AQYATLo/RECYZloAAAAASUVORK5CYII= );
-
 	background-repeat: no-repeat;
-	z-index: 12;
 	cursor: pointer;
-}
-
-#filter_control {
-	width: 200px;
-}
-
-.filter_ctn.inventory_filters #filter_control {
-	width: 416px;
-	border-radius: 3px;
-	border: 1px solid rgba( 0, 0, 0, 0.3);
-	box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
-	padding-bottom: 1px;
-	background-color: rgba( 0, 0, 0, 0.2);
+	height: 16px;
+	inset: 4px 4px auto auto;
+	position: absolute;
+	width: 16px;
+	z-index: 12;
 }
 
 .filter_ctn {
 	align-items: center;
 	display: flex;
-	margin-bottom: 12px;
+	flex-direction: row;
+	gap: 10px;
+	margin-bottom: 6px;
+	overflow: hidden;
+}
+
+.filter_control_ctn {
+	flex: 1 1 180px;
+	position: relative;
+}
+
+.filter_label {
+	flex: 0 3 auto;
 }
 
 input.filter_search_box {
-	padding: 4px 4px;
-	color: #828282;
+	background-color: rgba( 0, 0, 0, 0.2);
+	border: 1px solid rgba( 0, 0, 0, 0.3);
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-sizing: border-box;
 	font-size: 12px;
 	outline: none;
-	border: 1px solid;
-	border-color: #292929;
-	background-color: #101010;
+	padding: 2px 4px;
+	width: 100%;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			border-radius: 0px;
-}
+		}
 
-input.filter_search_box::-webkit-input-placeholder {
-	color: #555555;
-	font-style: italic;
-}
-
-input.filter_search_box:-moz-placeholder {
+input.filter_search_box::placeholder {
 	color: #555555;
 	font-style: italic;
 }
@@ -485,13 +468,6 @@ input.filter_search_box:-moz-placeholder {
 	border: 1px solid #292929;
 	padding: 12px;
 	padding-bottom: 0;
-}
-
-.filter_tag_show {
-	line-height: 32px
-}
-
-.filter_tag_container {
 }
 
 #filter_control.filtered, #inventories.filtered, .filter_tag_options.filtered {
@@ -558,12 +534,6 @@ body.compact_trading_ui .item_desc_icon {
 
 body.compact_trading_ui .appselect {
 	display: none;
-}
-
-#iteminfo0, #iteminfo1 {
-	width: 346px;
-	top: 0px;
-	left: 0px;
 }
 
 #iteminfo0 .item_desc_content, #iteminfo1 .item_desc_content {
@@ -1513,25 +1483,22 @@ a.game_button {
 	position: relative;
 	height: 96%;
 	height: calc( 100% - 16px );
-	max-width: 346px;
+	max-width: 370px;
 	margin: 0 auto;
 }
 
 .economy_item_popup_dismiss {
-	position: absolute;
-	right: -12px;
-	top: -15px;
-	height: 30px;
-	width: 30px;
-	border: 3px solid #cccccc;
-	color: #cccccc;
-	text-align: center;
-	line-height: 30px;
 	background: #000000;
+	border: 3px solid #cccccc;
 	border-radius: 20px;
-	font-size: 20px;
-
+	color: #cccccc;
 	cursor: pointer;
+	font-size: 20px;
+	line-height: 30px;
+	inset: -16px -16px auto auto;
+	position: absolute;
+	text-align: center;
+	width: 30px;
 }
 
 .economy_item_popup_only {
@@ -1562,8 +1529,7 @@ html.responsive .newmodal.economy_modal_ctn {
 
 .economy_item_popup #iteminfo0,
 .economy_item_popup #iteminfo1 {
-	max-width: 95%;
-	max-width: calc( 100% - 4px );
+	width: 370px;
 }
 
 .escrow_explanation{

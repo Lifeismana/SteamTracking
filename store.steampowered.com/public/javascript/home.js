@@ -470,6 +470,8 @@ GHomepage = {
 
 		} catch( e ) { OnHomepageException(e); }
 
+		GHomepage.InitGamepadMoreSections();
+
         // this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
 		GHomepage.bInitialRenderComplete = true;
 		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
@@ -512,6 +514,31 @@ GHomepage = {
 			return 'b' + rgItem.bundleid;
 
 		return 'unknown';
+	},
+
+	InitGamepadMoreSections: function()
+	{
+		if ( !window.UseGamepadScreenMode() )
+			return;
+
+		$J('[data-gp-morebutton]').each( function(index, element) {
+			let $Element = $J( element );
+			let strURL = element.getAttribute('data-gp-morebutton');
+
+			$Element.on('vgp_onfocus', function() {
+				$Element.find('.see_more_gamepad_hint').addClass('hover_active')
+			});
+
+			$Element.on('vgp_onblur', function() {
+				$Element.find('.see_more_gamepad_hint').removeClass('hover_active')
+			});
+
+			$Element.on('vgp_onoptions', function() {
+				window.location = strURL;
+			});
+
+			$Element.removeAttr( 'data-gp-morebutton' );
+		});
 	},
 
 	RenderRecentApps: function()
@@ -1256,6 +1283,10 @@ GHomepage = {
 		{
 			let $elReleaseDate = $J('<div/>', { 'class': 'release_date coming_soon' }).text( rgItemData.release_date_string );
 			$InfoCtn.append( $elReleaseDate );
+		}
+		else
+		{
+			$InfoCtn.append( $J('<div>', { 'class': 'review_placeholder' }) );
 		}
 
 		// Recommendation reason block
@@ -2080,14 +2111,16 @@ GHomepage = {
 			oFilterOptions = { ...oFilterOptions, has_discount: true, enforce_minimum: true };
 		}
 
-        const rgCapsules = GHomepage.FilterItemsForDisplay(GHomepage.rgRecommendedBySteamLabsApps, 'home', 4, 12, oFilterOptions );
+		const bVersion2 = $RecommendedBySteamLabs.hasClass( 'v2' );
 
-        if ( rgCapsules.length < 4 )
+		const k_nMinItems = bVersion2 ? 5 : 4;
+
+        const rgCapsules = GHomepage.FilterItemsForDisplay(GHomepage.rgRecommendedBySteamLabsApps, 'home', k_nMinItems, 20, oFilterOptions );
+
+        if ( rgCapsules.length < k_nMinItems )
         {
             return;
         }
-
-		const bVersion2 = $RecommendedBySteamLabs.hasClass( 'v2' );
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecommendedBySteamLabs,
             function( oItem, strFeature, rgOptions, nDepth )
@@ -2098,10 +2131,10 @@ GHomepage = {
 				}
 				var nAppId = oItem.appid;
                 return GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
-            }, 'recommended_by_steam_labs', bVersion2 ? 5 : 4
+            }, 'recommended_by_steam_labs', k_nMinItems
         );
 
-		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
+		GDynamicStore.MarkAppDisplayed( rgCapsules, k_nMinItems );
 		$RecommendedBySteamLabs.show();
     },
 
@@ -3117,7 +3150,7 @@ GHomepage = {
 		let $ImgCtn = $CapCtn.children('.capsule_image_ctn').first();
 
 		const strMicrotrailerWebmSrc = strMicrotrailerData || rgItemData?.microtrailer;
-		if ( GDynamicStore.s_preferences.disable_microtrailers )
+		if ( GDynamicStore.s_preferences.disable_microtrailers || !strMicrotrailerWebmSrc )
 		{
 			if ( rgItemData?.screenshots )
 			{

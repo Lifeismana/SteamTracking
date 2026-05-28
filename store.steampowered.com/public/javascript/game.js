@@ -2053,7 +2053,7 @@ function ToggleBannerContentVisibility( divContentID, divIconID )
 	var $element = $J( divContentID );
 	if ( $element !== null )
 	{
-		$element.is(':visible') ? $element.hide('fast') : $element.show('fast');
+		$element.slideToggle( 'fast' );
 	}
 
 	var $icon = $J( divIconID )

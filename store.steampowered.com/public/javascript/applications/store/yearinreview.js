@@ -1188,8 +1188,8 @@
             queryFn: async () => {
               const e = new Map();
               if (p.iA.logged_in) {
-                const a = u.w.Init(_.dN),
-                  s = (await _.xt.GetNicknameList(t, a)).Body().toObject();
+                const a = u.w.Init(_.w_T),
+                  s = (await _.xtC.GetNicknameList(t, a)).Body().toObject();
                 s?.nicknames &&
                   s.nicknames.length > 0 &&
                   s.nicknames.forEach((t) => {
@@ -2616,7 +2616,7 @@
         u = a(34629),
         _ = a(88997),
         g = a(70995),
-        x = a(27666),
+        x = a(40414),
         v = a(86355),
         S = a(84933),
         C = a(86328),
@@ -3256,13 +3256,13 @@
                               a[0].bSuccess)
                             ) {
                               const e = a[0].uploadResult,
-                                s = x.z.GenerateURLFromHashAndExt(
+                                s = x.zU.GenerateURLFromHashAndExt(
                                   t,
-                                  x.z.GetHashAndExt(e),
+                                  x.zU.GetHashAndExt(e),
                                 ),
-                                n = x.z.GenerateURLFromHashAndExt(
+                                n = x.zU.GenerateURLFromHashAndExt(
                                   t,
-                                  x.z.GetThumbHashAndExt(e),
+                                  x.zU.GetThumbHashAndExt(e),
                                 ),
                                 r = {
                                   imageid: -11231412,
@@ -3413,7 +3413,7 @@
           ) {
             let t = e.dataTransfer.getData("text");
             if (t && t.length > 0)
-              for (let e of [x.z.GetBaseURL(), x.z.GetBaseURLV2()])
+              for (let e of [x.zU.GetBaseURL(), x.zU.GetBaseURLV2()])
                 if (t.startsWith(e)) {
                   let a = "[img]" + ue.lw + "/" + t.substr(e.length) + "[/img]";
                   ve.replaceSelection(this.GetTextAreaRef().current, a);
@@ -4250,7 +4250,7 @@
               i.trim().length > 0 && (a += ` company="${i}"`),
               m)
             ) {
-              a += ` photo="${ue.lw + "/" + m.clanAccountID + "/" + x.z.GetHashAndExt(m)}"`;
+              a += ` photo="${ue.lw + "/" + m.clanAccountID + "/" + x.zU.GetHashAndExt(m)}"`;
             }
             u && (a += ` steamid="${u.ConvertTo64BitString()}"`),
               (a += `]${c}[/speaker]`),
@@ -4638,9 +4638,9 @@
               "/ajaxpostuserstatus";
             try {
               if (Z.TS.IN_STEAMUI) {
-                let a = d.w.Init(p.kV);
+                let a = d.w.Init(p.kVt);
                 a.Body().set_appid(t), a.Body().set_status_text(s);
-                let n = await p.xt.PostStatusToFriends(
+                let n = await p.xtC.PostStatusToFriends(
                   m.Vw.CMInterface.GetServiceTransport(),
                   a,
                 );
@@ -5332,18 +5332,17 @@
     },
     13643: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { YearInReviewRoutes: () => nn, default: () => rn });
+      a.r(t), a.d(t, { YearInReviewRoutes: () => sn, default: () => nn });
       var s = a(7850),
-        n = a(12447),
-        r = a(8527),
-        i = a(43527),
-        o = a(34629),
-        l = a(90626),
-        c = a(78327),
-        d = a(56545),
-        m = a(73594),
-        h = a(80902);
-      const p = {
+        n = a(8527),
+        r = a(43527),
+        i = a(34629),
+        o = a(90626),
+        l = a(78327),
+        c = a(56545),
+        d = a(73594),
+        m = a(80902);
+      const h = {
           19: [19, 1663, 1774, 3814, 1646, 4158],
           3859: [3859, 1685, 3843, 1775, 5711, 3878, 745697],
           4182: [4182, 4166, 3871, 4026],
@@ -5745,51 +5744,51 @@
           17927: [17927],
           11095: [11095],
         },
-        u = [12095, 5611, 6650, 9130, 1721];
-      var _ = a(51680),
-        g = a(61859);
+        p = [12095, 5611, 6650, 9130, 1721];
+      var u = a(51680),
+        _ = a(61859);
+      function g() {
+        return (0, o.useContext)(Zs).bIsUser;
+      }
       function x() {
-        return (0, l.useContext)(Qs).bIsUser;
+        return (0, o.useContext)(Zs).themeStyle;
       }
-      function v() {
-        return (0, l.useContext)(Qs).themeStyle;
-      }
-      function S(e) {
-        const t = c.iA.logged_in,
+      function v(e) {
+        const t = l.iA.logged_in,
           a = e?.GetContentDescriptorIDs().length > 0,
-          s = x(),
-          n = (0, _.Z)(e);
+          s = g(),
+          n = (0, u.Z)(e);
         return t ? !s && n : a;
       }
-      function C() {
-        const e = (0, l.useContext)(Qs),
+      function S() {
+        const e = (0, o.useContext)(Zs),
           t = e.bIsUser;
-        return l.useCallback(
+        return o.useCallback(
           (a, ...s) => {
             if (t) {
               const e = `${a}_second`;
-              return (0, g.PP)(e, ...s) === e
-                ? (0, g.PP)(a, ...s)
-                : (0, g.PP)(e, ...s);
+              return (0, _.PP)(e, ...s) === e
+                ? (0, _.PP)(a, ...s)
+                : (0, _.PP)(e, ...s);
             }
             {
               const t = `${a}_third`;
-              return (0, g.PP)(t, e.persona_name, ...s) === t
-                ? (0, g.PP)(a, ...s)
-                : (0, g.PP)(t, e.persona_name, ...s);
+              return (0, _.PP)(t, e.persona_name, ...s) === t
+                ? (0, _.PP)(a, ...s)
+                : (0, _.PP)(t, e.persona_name, ...s);
             }
           },
           [t, e.persona_name],
         );
       }
-      function I(e) {
+      function C(e) {
         return e < 100
-          ? (0, g.we)("#YIR_Percent_Low", "1")
-          : (0, g.we)("#YIR_Percent", Math.round(e / 100).toFixed(0));
+          ? (0, _.we)("#YIR_Percent_Low", "1")
+          : (0, _.we)("#YIR_Percent", Math.round(e / 100).toFixed(0));
       }
-      var y = a(25489);
-      function j(e, t, a, s) {
-        const { rgRankings: n, nTotalResultCount: r } = f(e, t, a),
+      var I = a(25489);
+      function y(e, t, a, s) {
+        const { rgRankings: n, nTotalResultCount: r } = j(e, t, a),
           i = n.map((a) => {
             if (a.relative_playtime_percentagex100) {
               let e = 0;
@@ -5803,7 +5802,7 @@
                 {
                   appid: a.appid,
                   parent_appid: a.parent_appid,
-                  strPercentage: I(e),
+                  strPercentage: C(e),
                 }
               );
             }
@@ -5815,19 +5814,19 @@
                 const s = a.stats.total_playtime_percentagex100,
                   n = `${e}_playtime_percentagex100`,
                   r = a.relative_game_stats[n];
-                return (0, y.OQ)((r * s) / t, 0, 1e4);
+                return (0, I.OQ)((r * s) / t, 0, 1e4);
               })(t, s, e.GetRawStats().playtime_stats.games[n]);
               return {
                 appid: a.appid,
                 parent_appid: a.parent_appid,
-                strPercentage: I(r),
+                strPercentage: C(r),
               };
             }
             return { appid: a.appid };
           });
         return { nTotalResultCount: r, rgResults: i };
       }
-      function f(e, t, a) {
+      function j(e, t, a) {
         if ("demo" == t || "playtest" == t) {
           const s =
             "demo" == t ? e.GetDemoByPlaytime() : e.GetPlaytestByPlaytime();
@@ -5850,7 +5849,7 @@
           rgRankings: n?.slice(0, a) || [],
         };
       }
-      function w(e, t) {
+      function f(e, t) {
         switch (t) {
           case "overall":
             return e.playtime_stats.game_summary.filter(
@@ -5888,18 +5887,18 @@
             );
         }
       }
-      function A(e, t) {
+      function w(e, t) {
         if ("demo" != t && "playtest" != t) {
           const a = `${"overall" === t ? "total" : t}_sessions`,
             s = `${"overall" === t ? "total" : t}_playtime_percentagex100`;
           return {
-            nTotalGames: w(e, t).length || 0,
+            nTotalGames: f(e, t).length || 0,
             nTotalSessions: e.playtime_stats.total_stats[a] || 0,
             nTotalPercentage: e.playtime_stats.total_stats[s] || 0,
           };
         }
         {
-          const a = w(e, t);
+          const a = f(e, t);
           return {
             nTotalGames: a.length,
             nTotalSessions: a
@@ -5911,14 +5910,14 @@
           };
         }
       }
-      const N = "percentMonthOfOverall",
-        k = "percentOtherGamesRelativeMonth";
-      var T = a(14947),
-        R = a(17720),
-        L = a(14771),
-        B = a(81393);
-      const b = 5;
-      class P {
+      const A = "percentMonthOfOverall",
+        N = "percentOtherGamesRelativeMonth";
+      var k = a(14947),
+        T = a(17720),
+        R = a(14771),
+        L = a(81393);
+      const B = 5;
+      class b {
         m_allStats = null;
         m_steamid = null;
         m_mapGameSummary = new Map();
@@ -6014,9 +6013,9 @@
         }
         constructor(e, t, a, s) {
           if (
-            ((0, T.Gn)(this),
+            ((0, k.Gn)(this),
             (this.m_allStats = e),
-            (this.m_steamid = R.b.InitFromAccountID(e.account_id)),
+            (this.m_steamid = T.b.InitFromAccountID(e.account_id)),
             (this.m_privacyState = e.privacy_state),
             (this.m_globalPercentiles = t),
             (this.m_globalGameplayDistribution = a),
@@ -6024,21 +6023,21 @@
             e.playtime_stats?.total_stats?.total_sessions > 0)
           ) {
             e.playtime_stats.game_summary.forEach((e) => {
-              (0, B.wT)(
+              (0, L.wT)(
                 !this.m_mapGameSummary.has(e.appid),
                 `Found at least two record of appid ${e.appid} in stats.playtime_stats.game_summary`,
               ),
                 this.m_mapGameSummary.set(e.appid, e);
             }),
               e.playtime_stats.games.forEach((e) => {
-                (0, B.wT)(
+                (0, L.wT)(
                   !this.m_mapGameStats.has(e.appid),
                   `Found at least two record of appid ${e.appid} in stats.playtime_stats.games`,
                 ),
                   this.m_mapGameStats.set(e.appid, e);
               });
             const { rgResults: t } = (function (e, t, a) {
-                const { rgRankings: s, nTotalResultCount: n } = f(e, t),
+                const { rgRankings: s, nTotalResultCount: n } = j(e, t),
                   r = new Set(s.map((e) => e.appid).slice(0, a));
                 return {
                   rgResults: e
@@ -6056,7 +6055,7 @@
               appid: e,
               rank: t,
             }))),
-              (this.m_rgTopGamesShown = t.slice(0, b)),
+              (this.m_rgTopGamesShown = t.slice(0, B)),
               (this.m_rgTopGameShownAppIDs = this.m_rgTopGamesShown.map(
                 (e) => e.appid,
               )),
@@ -6089,12 +6088,12 @@
                           const p = s.get(a).total_playtime_percentagex100;
                           l[a] = (c / p) * 1e4;
                         }),
-                        (r[N] = c);
+                        (r[A] = c);
                       const p = c - d;
-                      r[k] = p;
+                      r[N] = p;
                       const u = 1e4 - m;
                       return (
-                        (i[k] = u),
+                        (i[N] = u),
                         {
                           date: a,
                           topPlayedPercentBreakdownPerMonth: r,
@@ -6141,7 +6140,7 @@
             }));
             this.m_rgAggregateTagData = (function (e, t) {
               const a = e.filter(
-                (e) => -1 == u.findIndex((t) => t == e.nTagId),
+                (e) => -1 == p.findIndex((t) => t == e.nTagId),
               );
               let s = [],
                 n = [],
@@ -6156,8 +6155,8 @@
                     nWeight: a[i].nWeight,
                     nPreSelectionWeight: a[i].nPreSelectionWeight,
                   }),
-                  p[e] &&
-                    p[e].forEach((e) => {
+                  h[e] &&
+                    h[e].forEach((e) => {
                       n.push(e);
                     }),
                   o++),
@@ -6201,7 +6200,7 @@
               s[0] += n.total_playtime_percentagex100;
               continue;
             }
-            let t = (a - n.rtime_release_date) / L.Kp.PerYear,
+            let t = (a - n.rtime_release_date) / R.Kp.PerYear,
               r = e.findIndex((e) => t < e);
             r >= 0
               ? (s[r] += n.total_playtime_percentagex100)
@@ -6210,20 +6209,20 @@
           return s;
         }
       }
-      (0, o.Cg)([T.sH], P.prototype, "m_privacyState", void 0);
-      const G = "0px 0px 100% 0px";
-      var D = a(37085),
-        E = a(16021),
-        M = a(96171),
-        Y = a(72839),
-        O = a(65946),
-        F = a(30894),
-        U = a(41872);
-      const H = {
+      (0, i.Cg)([k.sH], b.prototype, "m_privacyState", void 0);
+      const P = "0px 0px 100% 0px";
+      var G = a(37085),
+        D = a(16021),
+        E = a(96171),
+        M = a(72839),
+        Y = a(65946),
+        O = a(30894),
+        F = a(41872);
+      const U = {
         include_basic_info: !0,
         include_assets_without_overrides: !0,
       };
-      class V {
+      class H {
         m_SteamInterface = null;
         m_DynamicUserStore = null;
         m_GameDetailPopupData = { index: null, appids: [] };
@@ -6237,7 +6236,7 @@
           const a = this.LoadFromPageConfigIfAvailable(e, t);
           if (a)
             return (
-              "dev" == c.TS.WEB_UNIVERSE &&
+              "dev" == l.TS.WEB_UNIVERSE &&
                 console.log(
                   "CYearInReviewStore - reading preload for " +
                     e +
@@ -6246,22 +6245,22 @@
                     " num games " +
                     a.playtime_stats.game_summary?.length,
                 ),
-              new P(
+              new b(
                 a,
                 this.LoadFromPageConfigGlobalPercentile(t),
                 this.LoadFromPageConfigGlobalDistribution(t),
                 this.LoadFromPageConfigPreviousYearSummary(t),
               )
             );
-          const s = d.w.Init(m.Ry);
+          const s = c.w.Init(d.Ry);
           s.Body().set_steamid(e),
             s.Body().set_year(t),
             s.Body().set_force_regenerate(!1);
-          const n = await m.Nl.GetUserYearInReview(
+          const n = await d.Nl.GetUserYearInReview(
             this.m_SteamInterface.GetServiceTransport(),
             s,
           );
-          return new P(
+          return new b(
             n.Body().stats().toObject(),
             n.Body().percentiles().toObject(),
             n.Body().distribution().toObject(),
@@ -6271,34 +6270,34 @@
         async PreloadStoreItemCache(e) {
           let t = e
             .GetTopGamesShownAppIDs()
-            .map((e) => M.O4.fromObject({ appid: e }));
+            .map((e) => E.O4.fromObject({ appid: e }));
           if (0 == t.length) return !0;
-          let a = d.w.Init(M.eE);
-          (0, Y.rV)(a), (0, Y.Bn)(a, H), a.Body().set_ids(t);
-          let s = await M.$4.GetItems(
+          let a = c.w.Init(E.eE);
+          (0, M.rV)(a), (0, M.Bn)(a, U), a.Body().set_ids(t);
+          let s = await E.$4.GetItems(
             this.m_SteamInterface.GetServiceTransport(),
             a,
           );
-          if (s.GetEResult() != D.R) throw "error loading game info";
-          for (let e of s.Body().store_items()) E.A.Get().ReadItem(e, H);
+          if (s.GetEResult() != G.R) throw "error loading game info";
+          for (let e of s.Body().store_items()) D.A.Get().ReadItem(e, U);
           return !0;
         }
         LoadFromPageConfigIfAvailable(e, t) {
-          const a = "yearinreview_" + new R.b(e).GetAccountID() + "_" + t;
-          let s = (0, c.Tc)(a, "application_config");
+          const a = "yearinreview_" + new T.b(e).GetAccountID() + "_" + t;
+          let s = (0, l.Tc)(a, "application_config");
           return this.ValidateYearInReview(s) ? s : null;
         }
         LoadFromPageConfigGlobalDistribution(e) {
           const t = "yearinreview_" + e + "_distribution";
-          return (0, c.Fd)(t, "application_config");
+          return (0, l.Fd)(t, "application_config");
         }
         LoadFromPageConfigGlobalPercentile(e) {
           const t = "yearinreview_" + e + "_percentiles";
-          return (0, c.Fd)(t, "application_config");
+          return (0, l.Fd)(t, "application_config");
         }
         LoadFromPageConfigPreviousYearSummary(e) {
           const t = "yearinreview_" + e + "_previous_year_summary";
-          return (0, c.Fd)(t, "application_config");
+          return (0, l.Fd)(t, "application_config");
         }
         ValidateYearInReview(e) {
           const t = e;
@@ -6312,16 +6311,16 @@
           );
         }
         async SetYearInReviewPrivacy(e, t, a) {
-          const s = d.w.Init(m.XC);
+          const s = c.w.Init(d.XC);
           s.Body().set_steamid(e),
             s.Body().set_year(t),
             s.Body().set_privacy_state(a);
-          const n = await m.Nl.SetUserSharingPermissions(
+          const n = await d.Nl.SetUserSharingPermissions(
             this.m_SteamInterface.GetServiceTransport(),
             s,
           );
-          return n.GetEResult() != D.R
-            ? ("dev" === c.TS.WEB_UNIVERSE &&
+          return n.GetEResult() != G.R
+            ? ("dev" === l.TS.WEB_UNIVERSE &&
                 console.error(
                   "failed to set privacy settings, error:" + n.GetEResult(),
                 ),
@@ -6332,7 +6331,7 @@
             : { privacy_state: n.Body().privacy_state() };
         }
         PrivacyEResultToMessage(e) {
-          return e === D.S7 ? "Servers are busy, please try again later" : "";
+          return e === G.S7 ? "Servers are busy, please try again later" : "";
         }
         GetGameDetailsPopupIndex() {
           return this.m_GameDetailPopupData.index;
@@ -6349,25 +6348,25 @@
         static s_Singleton;
         static Get() {
           return (
-            V.s_Singleton ||
-              ((V.s_Singleton = new V()),
-              V.s_Singleton.Init(),
-              "dev" == c.TS.WEB_UNIVERSE &&
-                (window.g_YearInReview = V.s_Singleton)),
-            V.s_Singleton
+            H.s_Singleton ||
+              ((H.s_Singleton = new H()),
+              H.s_Singleton.Init(),
+              "dev" == l.TS.WEB_UNIVERSE &&
+                (window.g_YearInReview = H.s_Singleton)),
+            H.s_Singleton
           );
         }
         constructor() {
-          (0, T.Gn)(this);
+          (0, k.Gn)(this);
         }
         async Init() {
-          (this.m_SteamInterface = (0, U.P)()),
-            (this.m_DynamicUserStore = await F.Fm.Get().HintLoad());
+          (this.m_SteamInterface = (0, F.P)()),
+            (this.m_DynamicUserStore = await O.Fm.Get().HintLoad());
         }
       }
-      function W() {
-        const [e, t, a] = (0, O.q3)(() => {
-          const e = V.Get().GetGameList();
+      function V() {
+        const [e, t, a] = (0, Y.q3)(() => {
+          const e = H.Get().GetGameList();
           return [
             e.appids.length > e.index ? e.appids[e.index] : null,
             e.appids.length,
@@ -6376,20 +6375,20 @@
         });
         return { unAppID: e, length: t, index: a };
       }
-      function z(e, t) {
-        return l.useCallback(() => {
-          V.Get().SetGameDetailsPopupAppData(e, t);
+      function W(e, t) {
+        return o.useCallback(() => {
+          H.Get().SetGameDetailsPopupAppData(e, t);
         }, [e, t]);
       }
-      function Z(e) {
-        return l.useCallback(() => {
-          V.Get().SetGameDetailsPopupIndex(e);
+      function z(e) {
+        return o.useCallback(() => {
+          H.Get().SetGameDetailsPopupIndex(e);
         }, [e]);
       }
-      (0, o.Cg)([T.sH], V.prototype, "m_GameDetailPopupData", void 0);
-      var Q = a(58632),
-        K = a.n(Q);
-      class X {
+      (0, i.Cg)([k.sH], H.prototype, "m_GameDetailPopupData", void 0);
+      var Z = a(58632),
+        Q = a.n(Z);
+      class K {
         m_SteamInterface;
         m_steamid;
         m_year;
@@ -6398,7 +6397,7 @@
           (this.m_SteamInterface = e),
             (this.m_steamid = t),
             (this.m_year = a),
-            (this.m_DataLoader = new (K())(
+            (this.m_DataLoader = new (Q())(
               (e) => this.InternalLoadScreenshots(e),
               { cache: !1 },
             ));
@@ -6413,11 +6412,11 @@
           return this.m_DataLoader.load(e);
         }
         async InternalLoadScreenshots(e) {
-          const t = d.w.Init(m.DI);
+          const t = c.w.Init(d.DI);
           t.Body().set_steamid(this.m_steamid.ConvertTo64BitString()),
             t.Body().set_year(this.m_year),
             t.Body().set_appids(e);
-          const a = await m.Nl.GetUserYearScreenshots(
+          const a = await d.Nl.GetUserYearScreenshots(
             this.m_SteamInterface.GetServiceTransport(),
             t,
           );
@@ -6429,9 +6428,9 @@
           return e.map((e) => s.get(e));
         }
       }
-      function q(e) {
-        const t = (0, l.useContext)(Qs).Screenshots,
-          { data: a } = (0, h.I)({
+      function X(e) {
+        const t = (0, o.useContext)(Zs).Screenshots,
+          { data: a } = (0, m.I)({
             queryKey: [
               "yirscreenshots",
               t.steamid.ConvertTo64BitString(),
@@ -6442,10 +6441,10 @@
           });
         return a;
       }
-      var J = a(68797),
-        $ = a(6144),
-        ee = a(84933);
-      async function te(e, t) {
+      var q = a(68797),
+        J = a(6144),
+        $ = a(84933);
+      async function ee(e, t) {
         const a = await t;
         if (a) {
           const t = a.find((t) => t.appid == e);
@@ -6453,7 +6452,7 @@
         }
         return null;
       }
-      class ae {
+      class te {
         m_SteamInterface = null;
         m_mapUserAchievementsByYear = new Map();
         m_mapPromiseUserAchievementsByYear = new Map();
@@ -6465,7 +6464,7 @@
           const s = this.GetKey(e, t, a);
           return (
             this.m_mapAchievementLoadCallback.has(s) ||
-              this.m_mapAchievementLoadCallback.set(s, new $.lu()),
+              this.m_mapAchievementLoadCallback.set(s, new J.lu()),
             this.m_mapAchievementLoadCallback.get(s)
           );
         }
@@ -6482,7 +6481,7 @@
             this.m_mapPromiseUserAchievementsByYear.has(s) ||
               this.m_mapPromiseUserAchievementsByYear.set(
                 s,
-                te(a, this.InternalLoadUserAchievementForYear(e, t, [a])),
+                ee(a, this.InternalLoadUserAchievementForYear(e, t, [a])),
               ),
             this.m_mapPromiseUserAchievementsByYear.get(s)
           );
@@ -6502,26 +6501,26 @@
             const a = this.InternalLoadUserAchievementForYear(e, t, n);
             n.forEach((n) => {
               const r = this.GetKey(e, t, n),
-                i = te(n, a);
+                i = ee(n, a);
               this.m_mapPromiseUserAchievementsByYear.set(r, i), s.push(i);
             });
           }
           return Promise.all(s);
         }
         async InternalLoadUserAchievementForYear(e, t, a) {
-          const s = d.w.Init(m.mb),
-            n = R.b.InitFromAccountID(t);
+          const s = c.w.Init(d.mb),
+            n = T.b.InitFromAccountID(t);
           s.Body().set_appids(a),
             s.Body().set_steamid(n.ConvertTo64BitString()),
             s.Body().set_year(e),
             s.Body().set_total_only(!1);
           let r = null;
           try {
-            const n = await m.Nl.GetUserYearAchievements(
+            const n = await d.Nl.GetUserYearAchievements(
               this.m_SteamInterface.GetServiceTransport(),
               s,
             );
-            if (n.GetEResult() == D.R) {
+            if (n.GetEResult() == G.R) {
               const s = n
                   .Body()
                   .game_achievements()
@@ -6543,9 +6542,9 @@
                 s
               );
             }
-            r = (0, J.H)(n);
+            r = (0, q.H)(n);
           } catch (e) {
-            r = (0, J.H)(e);
+            r = (0, q.H)(e);
           }
           return (
             console.error(
@@ -6559,77 +6558,77 @@
         static s_Singleton;
         static Get() {
           return (
-            ae.s_Singleton ||
-              ((ae.s_Singleton = new ae()),
-              "dev" == c.TS.WEB_UNIVERSE &&
-                (window.g_YearInReviewUserAchievement = ae.s_Singleton),
-              ae.s_Singleton.Init()),
-            ae.s_Singleton
+            te.s_Singleton ||
+              ((te.s_Singleton = new te()),
+              "dev" == l.TS.WEB_UNIVERSE &&
+                (window.g_YearInReviewUserAchievement = te.s_Singleton),
+              te.s_Singleton.Init()),
+            te.s_Singleton
           );
         }
         constructor() {}
         Init() {
-          this.m_SteamInterface = (0, U.P)();
+          this.m_SteamInterface = (0, F.P)();
         }
       }
-      function se(e, t, a) {
-        const [s, n] = (0, l.useState)(ae.Get().GetAchievement(e, t, a)),
-          [r, i] = (0, l.useState)(a);
+      function ae(e, t, a) {
+        const [s, n] = (0, o.useState)(te.Get().GetAchievement(e, t, a)),
+          [r, i] = (0, o.useState)(a);
         return (
-          (0, l.useEffect)(() => {
+          (0, o.useEffect)(() => {
             (s && r == a) ||
-              ae
+              te
                 .Get()
                 .LoadUserAchievementForYearForGame(e, t, a)
                 .then((e) => {
                   n(e), i(a);
                 });
           }, [t, s, a, r, e]),
-          (0, ee.hL)(ae.Get().GetAchievementLoadCallback(e, t, a), n),
+          (0, $.hL)(te.Get().GetAchievementLoadCallback(e, t, a), n),
           s
         );
       }
-      var ne = a(92757),
-        re = a(1035),
-        ie = a(27144),
-        oe = a(56283),
-        le = a(84811),
-        ce = a(95034),
-        de = a(95695),
-        me = a(12155),
-        he = a(22797),
-        pe = a(52038),
-        ue = a(27309),
-        _e = a(55263),
-        ge = a(82227),
-        xe = a(67554),
-        ve = a.n(xe),
-        Se = a(95781),
-        Ce = a.n(Se),
-        Ie = a(95970),
-        ye = a.n(Ie),
-        je = a(60383);
-      function fe(e) {
+      var se = a(92757),
+        ne = a(1035),
+        re = a(27144),
+        ie = a(56283),
+        oe = a(84811),
+        le = a(95034),
+        ce = a(95695),
+        de = a(12155),
+        me = a(22797),
+        he = a(52038),
+        pe = a(27309),
+        ue = a(55263),
+        _e = a(82227),
+        ge = a(67554),
+        xe = a.n(ge),
+        ve = a(95781),
+        Se = a.n(ve),
+        Ce = a(95970),
+        Ie = a.n(Ce),
+        ye = a(60383);
+      function je(e) {
         const { className: t, children: a, strClassOnFirstVisible: n } = e,
-          [r, i] = (0, l.useState)(!1);
-        return (0, s.jsx)(je.J, {
+          [r, i] = (0, o.useState)(!1);
+        return (0, s.jsx)(ye.J, {
           trigger: "once",
           onVisibilityChange: i,
-          className: (0, pe.A)(t, r ? n || "NowVisible" : void 0),
+          className: (0, he.A)(t, r ? n || "NowVisible" : void 0),
           children: a,
         });
       }
-      var we = a(38535),
-        Ae = a(76217);
-      const Ne = { ...H, include_screenshots: !0 };
-      function ke(e) {
+      var fe = a(38535),
+        we = a(76217);
+      const Ae = { ...U, include_screenshots: !0 };
+      function Ne(e) {
         const {
             category: t,
             userYearInReview: a,
             strClassName: n,
             bgImageURL: r,
             title: i,
-            subTitle: o,
+            subTitle: l,
             disclaimer: c,
             subTitleTokenIfMax: d,
           } = e,
@@ -6638,27 +6637,27 @@
             nTotalGames: h,
             nTotalSessions: p,
             nTotalPercentage: u,
-          } = (0, l.useMemo)(() => A(m, t), [m, t]),
-          { rgResults: _, nTotalResultCount: x } = (0, l.useMemo)(
-            () => j(a, t, 5, u),
+          } = (0, o.useMemo)(() => w(m, t), [m, t]),
+          { rgResults: g, nTotalResultCount: x } = (0, o.useMemo)(
+            () => y(a, t, 5, u),
             [a, t, u, 5],
           ),
-          v = (0, l.useMemo)(
-            () => _.map((e) => e.parent_appid || e.appid),
-            [_],
+          v = (0, o.useMemo)(
+            () => g.map((e) => e.parent_appid || e.appid),
+            [g],
           ),
-          [S, C] = (0, l.useState)(
-            _.length > 0 ? _[0].parent_appid || _[0].appid : 0,
+          [S, C] = (0, o.useState)(
+            g.length > 0 ? g[0].parent_appid || g[0].appid : 0,
           ),
-          I = (0, _e.zX)(v, Boolean("vr" == t) ? Ne : H),
-          y = (function (e, t, a) {
-            const [s, n] = l.useState(0);
+          I = (0, ue.zX)(v, Boolean("vr" == t) ? Ae : U),
+          j = (function (e, t, a) {
+            const [s, n] = o.useState(0);
             return (
-              l.useEffect(() => {
-                if (a == _e.Sq) return;
+              o.useEffect(() => {
+                if (a == ue.Sq) return;
                 const s = e.reduce((e, a) => {
                   const s = a.parent_appid || a.appid,
-                    n = E.A.Get().GetApp(s)?.BIsVisible(),
+                    n = D.A.Get().GetApp(s)?.BIsVisible(),
                     r = !("demo" == t || "playtest" == t) || a.parent_appid;
                   return e + (n && r ? 1 : 0);
                 }, 0);
@@ -6666,73 +6665,73 @@
               }, [e, a, t]),
               s
             );
-          })(_, t, I),
+          })(g, t, I),
           f =
             "overall" === t ||
             "controller" === t ||
             "demo" == t ||
             "playtest" == t;
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(n, t, ye().PlatformContentsCtn),
+          className: (0, he.A)(n, t, Ie().PlatformContentsCtn),
           children: [
-            (0, s.jsx)("div", { className: ye().SectionTitle, children: i }),
+            (0, s.jsx)("div", { className: Ie().SectionTitle, children: i }),
             Boolean(r) &&
-              (0, s.jsx)("img", { src: r, className: ye().BackgroundImage }),
+              (0, s.jsx)("img", { src: r, className: Ie().BackgroundImage }),
             Boolean("vr" === t) &&
               Boolean(S > 0) &&
-              (0, s.jsx)(Te, { appid: S }),
+              (0, s.jsx)(ke, { appid: S }),
             (0, s.jsxs)("div", {
-              className: (0, pe.A)(Ce().YearInReviewContent, ye().StatsRow),
+              className: (0, he.A)(Se().YearInReviewContent, Ie().StatsRow),
               children: [
                 (0, s.jsxs)("div", {
-                  className: ye().StatBlock,
+                  className: Ie().StatBlock,
                   children: [
                     (0, s.jsx)("div", {
-                      className: ye().BigNum,
-                      children: (0, ge.Dq)(h),
+                      className: Ie().BigNum,
+                      children: (0, _e.Dq)(h),
                     }),
                     (0, s.jsx)("div", {
-                      className: ye().StatDescription,
-                      children: (0, g.Yp)("#YIR_NewLine_Games", h),
+                      className: Ie().StatDescription,
+                      children: (0, _.Yp)("#YIR_NewLine_Games", h),
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: ye().StatBlock,
+                  className: Ie().StatBlock,
                   children: [
                     (0, s.jsx)("div", {
-                      className: ye().BigNum,
-                      children: (0, ge.Dq)(p),
+                      className: Ie().BigNum,
+                      children: (0, _e.Dq)(p),
                     }),
                     (0, s.jsx)("div", {
-                      className: ye().StatDescription,
-                      children: (0, g.Yp)("#YIR_NewLine_Session", p),
+                      className: Ie().StatDescription,
+                      children: (0, _.Yp)("#YIR_NewLine_Session", p),
                     }),
                   ],
                 }),
                 Boolean(!f) &&
-                  (0, s.jsx)(be, { percentVal: u, subToken: "#YIR_NewLine" }),
+                  (0, s.jsx)(Be, { percentVal: u, subToken: "#YIR_NewLine" }),
               ],
             }),
-            Boolean(o) &&
+            Boolean(l) &&
               (0, s.jsx)("div", {
-                className: ye().SectionSubTitle,
-                children: o,
+                className: Ie().SectionSubTitle,
+                children: l,
               }),
-            !Boolean(o) &&
+            !Boolean(l) &&
               Boolean(d) &&
               x > 5 &&
-              y > 0 &&
+              j > 0 &&
               (0, s.jsx)("div", {
-                className: ye().SectionSubTitle,
-                children: (0, g.we)(d, y),
+                className: Ie().SectionSubTitle,
+                children: (0, _.we)(d, j),
               }),
             Boolean(c) &&
-              (0, s.jsx)("div", { className: ye().Disclaimer, children: c }),
-            (0, s.jsx)(fe, {
-              className: ve().SteamDeckGameCapRow,
-              children: (0, s.jsx)(Re, {
-                rgGamePercentages: _,
+              (0, s.jsx)("div", { className: Ie().Disclaimer, children: c }),
+            (0, s.jsx)(je, {
+              className: xe().SteamDeckGameCapRow,
+              children: (0, s.jsx)(Te, {
+                rgGamePercentages: g,
                 category: t,
                 fnOnHoverApp: C,
               }),
@@ -6740,10 +6739,10 @@
           ],
         });
       }
-      function Te(e) {
+      function ke(e) {
         const { appid: t } = e,
-          [a] = (0, _e.t7)(t, Ne),
-          n = (0, we.$9)();
+          [a] = (0, ue.t7)(t, Ae),
+          n = (0, fe.$9)();
         if (!a) return null;
         const r = a.GetScreenshots("blocked" == n);
         if (!r.length) return null;
@@ -6751,30 +6750,30 @@
           o = "masked" == n && !a.BIsAgeSafeScreenshot(i);
         return (0, s.jsx)("img", {
           src: i,
-          className: (0, pe.A)({ [ye().GameImage]: !0, [ye().BlurImage]: o }),
+          className: (0, he.A)({ [Ie().GameImage]: !0, [Ie().BlurImage]: o }),
         });
       }
-      function Re(e) {
+      function Te(e) {
         const { rgGamePercentages: t, category: a, fnOnHoverApp: n } = e,
           r = t.map((e) => e.appid);
         let i;
         switch (a) {
           case "demo":
-            i = M.uE.ue;
+            i = E.uE.ue;
             break;
           case "playtest":
-            i = M.uE.Vi;
+            i = E.uE.Vi;
         }
-        return (0, s.jsx)(Ae.Z, {
+        return (0, s.jsx)(we.Z, {
           "flow-children": "grid",
-          className: (0, pe.A)(
-            Ce().YearInReviewContent,
-            ye().CapRow,
-            ve().CapRow,
+          className: (0, he.A)(
+            Se().YearInReviewContent,
+            Ie().CapRow,
+            xe().CapRow,
           ),
           children: t.map((e, t) =>
             (0, s.jsx)(
-              Le,
+              Re,
               {
                 appid: e.appid,
                 strInfo: e.strPercentage,
@@ -6790,7 +6789,7 @@
           ),
         });
       }
-      function Le(e) {
+      function Re(e) {
         const {
             appid: t,
             strInfo: a,
@@ -6801,16 +6800,16 @@
             nParentAppID: l,
             eChildType: c,
           } = e,
-          [d, m] = (0, _e.t7)(null == c ? t : l, H),
-          h = z(r, n);
-        if (m == _e.Sq) return null;
+          [d, m] = (0, ue.t7)(null == c ? t : l, U),
+          h = W(r, n);
+        if (m == ue.Sq) return null;
         if (!d || !d.BIsVisible())
-          return !l || (c != M.uE.ue && c != M.uE.Vi)
+          return !l || (c != E.uE.ue && c != E.uE.Vi)
             ? null
-            : (0, s.jsx)(Le, { ...e, nParentAppID: l, eChildType: M.uE.HT });
+            : (0, s.jsx)(Re, { ...e, nParentAppID: l, eChildType: E.uE.HT });
         const p = d.GetAssetsWithoutOverrides().GetLibraryCapsuleURL();
         return (0, s.jsxs)("a", {
-          className: ve().CapsuleCtn,
+          className: xe().CapsuleCtn,
           onClick: h,
           onMouseEnter: o,
           children: [
@@ -6818,73 +6817,73 @@
               ? (0, s.jsxs)(s.Fragment, {
                   children: [
                     (0, s.jsxs)("div", {
-                      className: ve().SpecialFlags,
+                      className: xe().SpecialFlags,
                       children: [
                         l &&
-                          c == M.uE.ue &&
+                          c == E.uE.ue &&
                           (0, s.jsx)("div", {
-                            className: ve().DemoPlayDetails,
-                            children: (0, g.we)("#YIR_Played_Demo"),
+                            className: xe().DemoPlayDetails,
+                            children: (0, _.we)("#YIR_Played_Demo"),
                           }),
                         l &&
-                          c == M.uE.Vi &&
+                          c == E.uE.Vi &&
                           (0, s.jsx)("div", {
-                            className: ve().PlaytestPlayDetails,
-                            children: (0, g.we)("#YIR_Played_PlayTest"),
+                            className: xe().PlaytestPlayDetails,
+                            children: (0, _.we)("#YIR_Played_PlayTest"),
                           }),
                       ],
                     }),
                     (0, s.jsx)("img", { loading: i, src: p, alt: d.GetName() }),
                   ],
                 })
-              : (0, s.jsx)(Be, { item: d }),
+              : (0, s.jsx)(Le, { item: d }),
             Boolean(a) &&
-              (0, s.jsx)("div", { className: ve().TimePlayed, children: a }),
+              (0, s.jsx)("div", { className: xe().TimePlayed, children: a }),
           ],
         });
       }
-      function Be(e) {
+      function Le(e) {
         const { item: t } = e;
         return (0, s.jsxs)("div", {
-          className: ve().UnavailableGame,
+          className: xe().UnavailableGame,
           children: [
             (0, s.jsx)("img", {
-              src: ue.A,
+              src: pe.A,
               alt: t.GetName() || "" + t.GetAppID(),
             }),
             (0, s.jsx)("div", {
-              className: ve().GameTitle,
+              className: xe().GameTitle,
               children: t.GetName(),
             }),
           ],
         });
       }
-      function be(e) {
+      function Be(e) {
         const { percentVal: t, subToken: a } = e,
-          n = I(t),
+          n = C(t),
           r = `${a}_Percent`;
         return (0, s.jsxs)("div", {
-          className: ye().StatBlock,
+          className: Ie().StatBlock,
           children: [
-            (0, s.jsx)("div", { className: ye().BigNum, children: n }),
+            (0, s.jsx)("div", { className: Ie().BigNum, children: n }),
             (0, s.jsx)("div", {
-              className: ye().StatDescription,
-              children: (0, g.we)(r),
+              className: Ie().StatDescription,
+              children: (0, _.we)(r),
             }),
           ],
         });
       }
-      var Pe = a(55963),
-        Ge = a(70300),
-        De = a(38135),
-        Ee = a(91675),
-        Me = a(18288),
-        Ye = a(60014),
-        Oe = a(32754);
-      function Fe(e) {
+      var be = a(55963),
+        Pe = a(70300),
+        Ge = a(38135),
+        De = a(91675),
+        Ee = a(18288),
+        Me = a(60014),
+        Ye = a(32754);
+      function Oe(e) {
         const { userYearInReview: t, nYear: a } = e,
-          n = v(),
-          r = (0, l.useMemo)(() => {
+          n = x(),
+          r = (0, o.useMemo)(() => {
             const e = new Set();
             return (
               t.GetPlayTimeStats().game_summary.forEach((t) => {
@@ -6895,57 +6894,57 @@
               Array.from(e)
             );
           }, [t]),
-          i = (0, _e.zX)(r, H),
-          o = C(),
+          i = (0, ue.zX)(r, U),
+          l = S(),
           c = (e) =>
             window.sessionStorage.setItem("yirfirsttime", `?tab=${e.key}`),
           d = [
             {
-              name: (0, g.we)("#YIR_FirstTime_Tab_MonthlyGrid"),
+              name: (0, _.we)("#YIR_FirstTime_Tab_MonthlyGrid"),
               key: "firsttimebymonth",
-              contents: (0, s.jsx)(le.tH, {
+              contents: (0, s.jsx)(oe.tH, {
                 children: (0, s.jsx)("div", {
-                  className: Me.MonthGridOverallCtn,
-                  children: (0, s.jsx)(He, { userYearInReview: t, nYear: a }),
+                  className: Ee.MonthGridOverallCtn,
+                  children: (0, s.jsx)(Ue, { userYearInReview: t, nYear: a }),
                 }),
               }),
               onClick: c,
             },
             {
-              name: (0, g.we)("#YIR_FirstTime_Tab_Grid"),
+              name: (0, _.we)("#YIR_FirstTime_Tab_Grid"),
               key: "firsttimegrid",
-              contents: (0, s.jsx)(le.tH, {
-                children: (0, s.jsx)(Ue, { userYearInReview: t, nYear: a }),
+              contents: (0, s.jsx)(oe.tH, {
+                children: (0, s.jsx)(Fe, { userYearInReview: t, nYear: a }),
               }),
               onClick: c,
             },
           ];
         return 0 == r.length
           ? null
-          : (0, s.jsxs)(fe, {
-              className: Se.AllFirstPlayedCtn,
+          : (0, s.jsxs)(je, {
+              className: ve.AllFirstPlayedCtn,
               children: [
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(Me.AllGamesBGImage, n.AllGamesBGImage),
+                  className: (0, he.A)(Ee.AllGamesBGImage, n.AllGamesBGImage),
                 }),
                 (0, s.jsxs)("div", {
-                  className: Se.YearInReviewContent,
+                  className: ve.YearInReviewContent,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Se.SectionTitle,
-                      children: o("#YIR_FirstTime_Title", r.length),
+                      className: ve.SectionTitle,
+                      children: l("#YIR_FirstTime_Title", r.length),
                     }),
-                    Boolean(i == _e.Sq)
-                      ? (0, s.jsx)(he.t, {
+                    Boolean(i == ue.Sq)
+                      ? (0, s.jsx)(me.t, {
                           size: "medium",
                           position: "center",
-                          string: (0, g.we)("#Loading"),
+                          string: (0, _.we)("#Loading"),
                         })
                       : (0, s.jsx)("div", {
-                          className: Se.TabCtn,
-                          children: (0, s.jsx)(De.V, {
-                            classNameCtn: Se.TabBar,
-                            classNameTab: (0, pe.A)(Se.Tab, n.Tab),
+                          className: ve.TabCtn,
+                          children: (0, s.jsx)(Ge.V, {
+                            classNameCtn: ve.TabBar,
+                            classNameTab: (0, he.A)(ve.Tab, n.Tab),
                             tabs: d,
                           }),
                         }),
@@ -6954,13 +6953,13 @@
               ],
             });
       }
-      function Ue(e) {
+      function Fe(e) {
         const { nYear: t, userYearInReview: a } = e,
           n = a.GetPlayTimeStats().game_summary,
-          r = C(),
-          [i, o] = l.useState(!1),
+          r = S(),
+          [i, l] = o.useState(!1),
           { bShouldShowMore: c, rgGamesInOrderOfPlaytime: d } = (0,
-          l.useMemo)(() => {
+          o.useMemo)(() => {
             const e = new Set(),
               t = n
                 .filter(
@@ -6976,7 +6975,7 @@
                 )
                 .map((e) => ({
                   appid: e.appid,
-                  strPercentage: I(e.total_playtime_percentagex100),
+                  strPercentage: C(e.total_playtime_percentagex100),
                   bNewThisYear: Boolean(e.new_this_year),
                   bIsDemo: Boolean(e.demo),
                   bIsPlaytest: Boolean(e.playtest),
@@ -6990,25 +6989,25 @@
           }, [n, i]);
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(We, {
+            (0, s.jsx)(Ve, {
               nYear: t,
               rgGamesInOrderOfPlaytime: d,
               strTooltip: r("#YIR_FirstTime_Percentages"),
             }),
             c &&
               (0, s.jsx)("div", {
-                className: xe.MoreButtonContainer,
+                className: ge.MoreButtonContainer,
                 children: (0, s.jsx)("a", {
                   href: "#",
-                  className: xe.ShowMoreBtn,
-                  onClick: () => o(!0),
-                  children: (0, g.we)("#YIR_ShowMore"),
+                  className: ge.ShowMoreBtn,
+                  onClick: () => l(!0),
+                  children: (0, _.we)("#YIR_ShowMore"),
                 }),
               }),
           ],
         });
       }
-      function He(e) {
+      function Ue(e) {
         const { nYear: t, userYearInReview: a } = e,
           n = a.GetRawStats().playtime_stats.months;
         return (0, s.jsx)(s.Fragment, {
@@ -7016,23 +7015,23 @@
             .filter((e) => e.stats.total_sessions > 0)
             .map((e) =>
               (0, s.jsx)(
-                Ve,
+                He,
                 { month: e, userYearInReview: a, nYear: t },
                 "outermonth" + e.rtime_month,
               ),
             ),
         });
       }
-      function Ve(e) {
+      function He(e) {
         const { nYear: t, userYearInReview: a, month: n } = e,
-          r = C(),
-          [i, o] = l.useState(!1),
-          { bShouldShowMore: c, rgGameStats: d } = (0, l.useMemo)(() => {
+          r = S(),
+          [i, l] = o.useState(!1),
+          { bShouldShowMore: c, rgGameStats: d } = (0, o.useMemo)(() => {
             const e = n.game_summary
                 .filter((e) => {
                   const t = a.GetGameSummaryForApp(e.appid);
                   return (
-                    (0, B.wT)(
+                    (0, L.wT)(
                       t,
                       `Displaying Month Data ${n.rtime_month} missing summary for appid: ${e.appid}`,
                     ),
@@ -7048,7 +7047,7 @@
                   const t = a.GetGameSummaryForApp(e.appid);
                   return {
                     appid: t.appid,
-                    strPercentage: I(e.relative_playtime_percentagex100),
+                    strPercentage: C(e.relative_playtime_percentagex100),
                     bNewThisYear: Boolean(t.new_this_year),
                     bIsDemo: Boolean(t.demo),
                     bIsPlaytest: Boolean(t.playtest),
@@ -7063,29 +7062,29 @@
         return (0, s.jsxs)(
           "div",
           {
-            className: Me.MonthGroupCtn,
+            className: Ee.MonthGroupCtn,
             children: [
               (0, s.jsx)("div", {
-                className: Me.MonthTitle,
+                className: Ee.MonthTitle,
                 children: Boolean(true)
-                  ? (0, g.we)(
+                  ? (0, _.we)(
                       "#YIR_MonthlyGrid_MonthSingular_" + (m.getMonth() + 1),
                     )
-                  : (0, Ee.sq)(m),
+                  : (0, De.sq)(m),
               }),
-              (0, s.jsx)(We, {
+              (0, s.jsx)(Ve, {
                 rgGamesInOrderOfPlaytime: d,
                 nYear: t,
                 strTooltip: r("#YIR_FirstTime_MonthlyPercentages"),
               }),
               c &&
                 (0, s.jsx)("div", {
-                  className: xe.MoreButtonContainer,
+                  className: ge.MoreButtonContainer,
                   children: (0, s.jsx)("a", {
                     href: "#",
-                    className: xe.ShowMoreBtn,
-                    onClick: () => o(!0),
-                    children: (0, g.we)("#YIR_ShowMore"),
+                    className: ge.ShowMoreBtn,
+                    onClick: () => l(!0),
+                    children: (0, _.we)("#YIR_ShowMore"),
                   }),
                 }),
             ],
@@ -7093,17 +7092,17 @@
           "monthgroup_" + n.rtime_month,
         );
       }
-      function We(e) {
+      function Ve(e) {
         const { nYear: t, rgGamesInOrderOfPlaytime: a, strTooltip: n } = e;
-        let r = a.filter((e) => E.A.Get().BHasApp(e.nParentAppID || e.appid));
+        let r = a.filter((e) => D.A.Get().BHasApp(e.nParentAppID || e.appid));
         const i = r.map((e) => e.appid);
         let o = r.map((e, a) =>
           (0, s.jsx)(
-            ze,
+            We,
             {
               appid: e.nParentAppID || e.appid,
               bNewThisYear: e.bNewThisYear,
-              fnOnClick: () => V.Get().SetGameDetailsPopupAppData(a, i),
+              fnOnClick: () => H.Get().SetGameDetailsPopupAppData(a, i),
               nYear: t,
               strPercentage: e.strPercentage,
               strTooltip: n,
@@ -7113,13 +7112,13 @@
             e.appid,
           ),
         );
-        return (0, s.jsx)(Ae.Z, {
+        return (0, s.jsx)(we.Z, {
           "flow-children": "grid",
-          className: (0, pe.A)(xe.FirstPlayCtn, Me.FirstPlayCtn),
+          className: (0, he.A)(ge.FirstPlayCtn, Ee.FirstPlayCtn),
           children: o,
         });
       }
-      function ze(e) {
+      function We(e) {
         const {
             nYear: t,
             appid: a,
@@ -7130,64 +7129,64 @@
             bIsDemo: l,
             bIsPlayTest: c,
           } = e,
-          [d] = (0, _e.t7)(a, H),
-          m = (0, Ye.n9)(),
-          h = v();
+          [d] = (0, ue.t7)(a, U),
+          m = (0, Me.n9)(),
+          h = x();
         if (!d || !d.BIsVisible()) return null;
-        const p = (0, Pe.wJ)(d?.GetStorePageURL() || "", m),
+        const p = (0, be.wJ)(d?.GetStorePageURL() || "", m),
           u = d.GetAssetsWithoutOverrides().GetLibraryCapsuleURL();
         return (0, s.jsx)("div", {
-          className: (0, pe.A)({
-            [xe.GameCtn]: !0,
-            [Me.GameCtn]: !0,
-            [xe.GameNewThisYear]: n,
+          className: (0, he.A)({
+            [ge.GameCtn]: !0,
+            [Ee.GameCtn]: !0,
+            [ge.GameNewThisYear]: n,
           }),
           onClick: (e) => {
             r && (e.preventDefault(), r());
           },
-          children: (0, s.jsx)(Ge.oj, {
+          children: (0, s.jsx)(Pe.oj, {
             appid: d.GetAppID(),
             children: (0, s.jsxs)("a", {
               href: r ? void 0 : p,
-              className: xe.CapsuleCtn,
+              className: ge.CapsuleCtn,
               children: [
                 (Boolean(n) || Boolean(l) || Boolean(c)) &&
                   (0, s.jsxs)("div", {
-                    className: xe.SpecialFlags,
+                    className: ge.SpecialFlags,
                     children: [
                       Boolean(n) &&
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(
-                            xe.GamePlayDetails,
+                          className: (0, he.A)(
+                            ge.GamePlayDetails,
                             h.GamePlayDetails,
                           ),
-                          children: (0, g.we)("#YIR_FirstTime_Played", t),
+                          children: (0, _.we)("#YIR_FirstTime_Played", t),
                         }),
                       Boolean(l) &&
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(
-                            xe.DemoPlayDetails,
+                          className: (0, he.A)(
+                            ge.DemoPlayDetails,
                             h.DemoPlayDetails,
                           ),
-                          children: (0, g.we)("#YIR_Played_Demo"),
+                          children: (0, _.we)("#YIR_Played_Demo"),
                         }),
                       Boolean(c) &&
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(
-                            xe.PlaytestPlayDetails,
+                          className: (0, he.A)(
+                            ge.PlaytestPlayDetails,
                             h.PlaytestPlayDetails,
                           ),
-                          children: (0, g.we)("#YIR_Played_PlayTest"),
+                          children: (0, _.we)("#YIR_Played_PlayTest"),
                         }),
                     ],
                   }),
                 u
                   ? (0, s.jsx)("img", { loading: "lazy", src: u })
-                  : (0, s.jsx)(Be, { item: d }),
+                  : (0, s.jsx)(Le, { item: d }),
                 Boolean(i) &&
-                  (0, s.jsx)(Oe.he, {
+                  (0, s.jsx)(Ye.he, {
                     toolTipContent: o,
-                    className: xe.TimePlayed,
+                    className: ge.TimePlayed,
                     children: i,
                   }),
               ],
@@ -7195,14 +7194,14 @@
           }),
         });
       }
-      var Ze = a(46079),
-        Qe = a.n(Ze);
-      const Ke = 9e3,
-        Xe = 1,
-        qe = 50;
-      function Je(e) {
+      var ze = a(46079),
+        Ze = a.n(ze);
+      const Qe = 9e3,
+        Ke = 1,
+        Xe = 50;
+      function qe(e) {
         const { userYearInReview: t, children: a } = e,
-          n = (0, l.useMemo)(
+          n = (0, o.useMemo)(
             () =>
               t
                 .GetPlayTimeStats()
@@ -7212,19 +7211,19 @@
                 ),
             [t],
           );
-        if (!n || 0 == n.length) return (0, s.jsx)(tt, { children: a });
+        if (!n || 0 == n.length) return (0, s.jsx)(et, { children: a });
         const r = n[0].total_playtime_percentagex100;
-        return t.GetPlayTimeStats().game_summary.length < Xe || r >= Ke
-          ? (0, s.jsx)(et, {
+        return t.GetPlayTimeStats().game_summary.length < Ke || r >= Qe
+          ? (0, s.jsx)($e, {
               appid: n[0].parent_appid || n[0].appid,
               children: a,
             })
-          : (0, s.jsx)($e, { userYearInReview: t, children: a });
+          : (0, s.jsx)(Je, { userYearInReview: t, children: a });
       }
-      function $e(e) {
+      function Je(e) {
         const { userYearInReview: t, children: a } = e,
-          n = v(),
-          r = (0, l.useMemo)(
+          n = x(),
+          r = (0, o.useMemo)(
             () =>
               Array.from(
                 new Set(
@@ -7238,40 +7237,40 @@
                         t.total_playtime_percentagex100 -
                         e.total_playtime_percentagex100,
                     )
-                    .slice(0, qe)
+                    .slice(0, Xe)
                     .map((e) => e.parent_appid || e.appid),
                 ),
               ),
             [t],
           ),
-          [i, o] = (0, l.useState)(null),
-          c = (0, _e.zX)(r, H);
+          [i, l] = (0, o.useState)(null),
+          c = (0, ue.zX)(r, U);
         return (
-          (0, l.useEffect)(() => {
-            c != _e.Sq && o(r.map((e) => E.A.Get().GetApp(e)).filter(Boolean));
+          (0, o.useEffect)(() => {
+            c != ue.Sq && l(r.map((e) => D.A.Get().GetApp(e)).filter(Boolean));
           }, [r, c]),
           i
             ? (0, s.jsxs)(s.Fragment, {
                 children: [
                   (0, s.jsx)("div", {
-                    className: (0, pe.A)(Qe().ImagesCtn, n.ImagesCtn),
+                    className: (0, he.A)(Ze().ImagesCtn, n.ImagesCtn),
                     children: (0, s.jsx)("div", {
-                      className: Qe().AllImagesCtn,
+                      className: Ze().AllImagesCtn,
                       children: (0, s.jsx)("div", {
-                        className: Qe().AllImages,
+                        className: Ze().AllImages,
                         children: (0, s.jsxs)("div", {
-                          className: (0, pe.A)({
-                            [Qe().ImageTint]: !0,
-                            [Qe().Sub10]: i.length <= 10,
-                            [Qe().Sub20]: i.length <= 20,
-                            [Qe().Sub40]: i.length <= 40,
+                          className: (0, he.A)({
+                            [Ze().ImageTint]: !0,
+                            [Ze().Sub10]: i.length <= 10,
+                            [Ze().Sub20]: i.length <= 20,
+                            [Ze().Sub40]: i.length <= 40,
                           }),
                           children: [
                             i.map((e) =>
                               (0, s.jsx)(
                                 "div",
                                 {
-                                  className: Qe().BgImage,
+                                  className: Ze().BgImage,
                                   style: {
                                     backgroundImage: `url( ${e.GetAssetsWithoutOverrides().GetLibraryHeroURL()?.trim().length > 0 ? e.GetAssetsWithoutOverrides().GetLibraryHeroURL() : e.GetAssetsWithoutOverrides().GetMainCapsuleURL()} )`,
                                   },
@@ -7284,7 +7283,7 @@
                                 (0, s.jsx)(
                                   "div",
                                   {
-                                    className: Qe().BgImage,
+                                    className: Ze().BgImage,
                                     style: {
                                       backgroundImage: `url( ${e.GetAssetsWithoutOverrides().GetRawPageBackgroundURL()?.trim().length > 0 ? e.GetAssetsWithoutOverrides().GetRawPageBackgroundURL() : e.GetAssetsWithoutOverrides().GetMainCapsuleURL()} )`,
                                     },
@@ -7297,7 +7296,7 @@
                                 (0, s.jsx)(
                                   "div",
                                   {
-                                    className: Qe().BgImage,
+                                    className: Ze().BgImage,
                                     style: {
                                       backgroundImage: `url( ${e.GetAssetsWithoutOverrides().GetLibraryHeroURL()?.trim().length > 0 ? e.GetAssetsWithoutOverrides().GetLibraryHeroURL() : e.GetAssetsWithoutOverrides().GetMainCapsuleURL()} )`,
                                     },
@@ -7313,22 +7312,22 @@
                   a,
                 ],
               })
-            : (0, s.jsx)(tt, { children: a })
+            : (0, s.jsx)(et, { children: a })
         );
       }
-      function et(e) {
+      function $e(e) {
         const { appid: t, children: a } = e,
-          [n] = (0, _e.t7)(t, H),
-          r = v();
+          [n] = (0, ue.t7)(t, U),
+          r = x();
         return n
           ? (0, s.jsxs)(s.Fragment, {
               children: [
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(Qe().ImagesCtn, r.ImagesCtn),
+                  className: (0, he.A)(Ze().ImagesCtn, r.ImagesCtn),
                   children: (0, s.jsx)("div", {
-                    className: (0, pe.A)(Qe().SingleGame, r.SingleGame),
+                    className: (0, he.A)(Ze().SingleGame, r.SingleGame),
                     children: (0, s.jsx)("div", {
-                      className: (0, pe.A)(Qe().ImageTint, r.ImageTint),
+                      className: (0, he.A)(Ze().ImageTint, r.ImageTint),
                       children: (0, s.jsx)("img", {
                         src: n
                           ?.GetAssetsWithoutOverrides()
@@ -7340,41 +7339,41 @@
                 a,
               ],
             })
-          : (0, s.jsx)(tt, { children: a });
+          : (0, s.jsx)(et, { children: a });
       }
-      function tt(e) {
+      function et(e) {
         return (0, s.jsx)("div", {
-          className: Qe().basicBackground,
+          className: Ze().basicBackground,
           children: e.children,
         });
       }
-      var at = a(7550),
-        st = a.n(at),
-        nt = a(30470),
-        rt = a(32671),
-        it = a(74295),
-        ot = a(6435),
-        lt = a(72040),
-        ct = a(76721),
-        dt = a(5585),
-        mt = a(66579),
-        ht = a(92665);
-      const pt = ({
+      var tt = a(7550),
+        at = a.n(tt),
+        st = a(30470),
+        nt = a(32671),
+        rt = a(74295),
+        it = a(6435),
+        ot = a(72040),
+        lt = a(76721),
+        ct = a(5585),
+        dt = a(66579),
+        mt = a(92665);
+      const ht = ({
         spaceAroundCount: e,
         endValue: t,
         maxValue: a,
         duration: n = 1e3,
         startAnimation: r = !1,
         stopAnimation: i = !1,
-        onAnimationStart: o,
+        onAnimationStart: l,
         onAnimationStop: c,
         delay: d = 0,
         className: m,
       }) => {
-        const [h, p] = (0, l.useState)(0),
-          u = l.useRef(null);
+        const [h, p] = (0, o.useState)(0),
+          u = o.useRef(null);
         return (
-          (0, l.useEffect)(() => {
+          (0, o.useEffect)(() => {
             let e = null;
             const s = () => {
               if (!e) return;
@@ -7388,31 +7387,31 @@
             };
             return (
               r &&
-                (o && o(),
+                (l && l(),
                 window.setTimeout(() => {
                   (e = Date.now()),
-                    o && o(),
+                    l && l(),
                     (u.current = requestAnimationFrame(s));
                 }, d)),
               () => {
                 u.current && cancelAnimationFrame(u.current), i && c && c();
               }
             );
-          }, [t, n, r, i, o, c, d, a]),
+          }, [t, n, r, i, l, c, d, a]),
           e
-            ? (0, s.jsxs)(s.Fragment, { children: [" ", (0, ge.Dq)(h), " "] })
-            : (0, s.jsx)(s.Fragment, { children: (0, ge.Dq)(h) })
+            ? (0, s.jsxs)(s.Fragment, { children: [" ", (0, _e.Dq)(h), " "] })
+            : (0, s.jsx)(s.Fragment, { children: (0, _e.Dq)(h) })
         );
       };
-      var ut = a(79613),
-        _t = a(39020),
-        gt = a(6083);
-      const xt = () => {
-          const e = v();
+      var pt = a(79613),
+        ut = a(39020),
+        _t = a(6083);
+      const gt = () => {
+          const e = x();
           return (0, s.jsxs)("svg", {
-            className: (0, pe.A)(
-              st().ProgressIconSVG,
-              st().IconStreak,
+            className: (0, he.A)(
+              at().ProgressIconSVG,
+              at().IconStreak,
               e.IconStreak,
             ),
             x: "0px",
@@ -7482,12 +7481,12 @@
             ],
           });
         },
-        vt = () => {
-          const e = v();
+        xt = () => {
+          const e = x();
           return (0, s.jsxs)("svg", {
-            className: (0, pe.A)(
-              st().ProgressIconSVG,
-              st().IconGamesPlayed,
+            className: (0, he.A)(
+              at().ProgressIconSVG,
+              at().IconGamesPlayed,
               e.IconGamesPlayed,
             ),
             x: "0px",
@@ -7519,12 +7518,12 @@
             ],
           });
         },
-        St = () => {
-          const e = v();
+        vt = () => {
+          const e = x();
           return (0, s.jsx)("svg", {
-            className: (0, pe.A)(
-              st().ProgressIconSVG,
-              st().IconAchievement,
+            className: (0, he.A)(
+              at().ProgressIconSVG,
+              at().IconAchievement,
               e.IconAchievement,
             ),
             x: "0px",
@@ -7542,25 +7541,25 @@
             }),
           });
         };
-      function Ct(e) {
+      function St(e) {
         const { userYearInReview: t } = e,
-          a = v();
-        return (0, s.jsx)(fe, {
-          className: (0, pe.A)(Ce().TopHonorsSection, a.TopHonorsSection),
+          a = x();
+        return (0, s.jsx)(je, {
+          className: (0, he.A)(Se().TopHonorsSection, a.TopHonorsSection),
           children: (0, s.jsx)("div", {
-            className: (0, pe.A)(
-              Ce().YearInReviewContent,
-              Ce().TopHonorsContent,
+            className: (0, he.A)(
+              Se().YearInReviewContent,
+              Se().TopHonorsContent,
             ),
             children: (0, s.jsxs)("div", {
-              className: st().TopHonorsCtn,
+              className: at().TopHonorsCtn,
               children: [
-                (0, s.jsx)(It, { userYearInReview: t }),
+                (0, s.jsx)(Ct, { userYearInReview: t }),
                 (0, s.jsxs)("div", {
-                  className: st().SpiderAndNumbersCnt,
+                  className: at().SpiderAndNumbersCnt,
                   children: [
-                    (0, s.jsx)(wt, { userYearInReview: t }),
-                    (0, s.jsx)(Nt, { userYearInReview: t }),
+                    (0, s.jsx)(ft, { userYearInReview: t }),
+                    (0, s.jsx)(At, { userYearInReview: t }),
                   ],
                 }),
               ],
@@ -7568,76 +7567,76 @@
           }),
         });
       }
-      function It(e) {
+      function Ct(e) {
         let { userYearInReview: t } = e;
         t.GetYear();
-        const a = C(),
-          n = v();
+        const a = S(),
+          n = x();
         let r = t.GetPlayTimeStats().summary_stats?.total_achievements || 0,
           i = t.GetFilteredGameSummary()?.length || 0,
-          o =
+          l =
             t.GetPlayTimeStats().playtime_streak?.longest_consecutive_days || 0,
           c = t.GetPlayTimeStats().by_numbers?.achievements_pct || 0,
           d = t.GetPlayTimeStats().by_numbers?.games_played_pct || 0,
           m = t.GetPlayTimeStats().by_numbers?.game_streak_pct || 0,
-          h = o > 0 && m > 0 && "cn" !== nt.iA.country_code.toLowerCase();
+          h = l > 0 && m > 0 && "cn" !== st.iA.country_code.toLowerCase();
         c >= 99 && (c = 100),
           d >= 99 && (d = 100),
           m >= 99 && (m = 100),
           r == t.GetPlayTimeStats().by_numbers?.achievements_avg && (c = 50),
           i == t.GetPlayTimeStats().by_numbers?.games_played_avg && (d = 50),
-          o == t.GetPlayTimeStats().by_numbers?.game_streak_avg && (m = 50),
+          l == t.GetPlayTimeStats().by_numbers?.game_streak_avg && (m = 50),
           0 == r && (c = 0),
           0 == i && (d = 0),
-          0 == o && (m = 0);
-        const [p, u] = l.useState(!1),
-          [_, g] = l.useState(!1),
-          [x, S] = l.useState(!1),
-          I = l.useCallback(async (e) => {
-            e && (u(!0), g(!0), S(!0));
+          0 == l && (m = 0);
+        const [p, u] = o.useState(!1),
+          [_, g] = o.useState(!1),
+          [v, C] = o.useState(!1),
+          I = o.useCallback(async (e) => {
+            e && (u(!0), g(!0), C(!0));
           }, []),
-          y = (0, s.jsx)(pt, {
+          y = (0, s.jsx)(ht, {
             endValue: r,
             maxValue: (100 * r) / c,
             duration: 2e3,
             startAnimation: p,
             delay: 500,
           }),
-          j = (0, s.jsx)(pt, {
+          j = (0, s.jsx)(ht, {
             endValue: i,
             maxValue: (100 * i) / d,
             duration: 2e3,
             startAnimation: _,
             delay: 700,
           }),
-          f = (0, s.jsx)(pt, {
-            endValue: o,
-            maxValue: (100 * o) / m,
+          f = (0, s.jsx)(ht, {
+            endValue: l,
+            maxValue: (100 * l) / m,
             duration: 2e3,
-            startAnimation: x,
+            startAnimation: v,
             delay: 900,
           });
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(
-            st().PlayBehaviorContainer,
+          className: (0, he.A)(
+            at().PlayBehaviorContainer,
             n.PlayBehaviorContainer,
           ),
           children: [
             (0, s.jsx)("div", {
-              className: Ce().SectionTitle,
+              className: Se().SectionTitle,
               children: a("#YIR_Compare_Title_Label"),
             }),
             (0, s.jsx)("div", {
-              className: (0, pe.A)(
-                Ce().SectionSubTitle,
-                st().PlayBehaviorSectionSubTitle,
+              className: (0, he.A)(
+                Se().SectionSubTitle,
+                at().PlayBehaviorSectionSubTitle,
               ),
               children: a("#YIR_Compare_Subtitle_Label"),
             }),
-            (0, s.jsxs)(je.J, {
+            (0, s.jsxs)(ye.J, {
               onVisibilityChange: I,
               children: [
-                (0, s.jsx)(yt, {
+                (0, s.jsx)(It, {
                   progressLabel: a(
                     1 == r
                       ? "#YIR_Compare_PlayerProgress_Achievements_Single"
@@ -7647,9 +7646,9 @@
                   userPercent: c,
                   steamAverage:
                     t.GetPlayTimeStats().by_numbers?.achievements_avg,
-                  progressIcon: (0, s.jsx)(St, {}),
+                  progressIcon: (0, s.jsx)(vt, {}),
                 }),
-                (0, s.jsx)(yt, {
+                (0, s.jsx)(It, {
                   progressLabel: a(
                     1 == i
                       ? "#YIR_Compare_PlayerProgress_PlayedGames_Single"
@@ -7659,12 +7658,12 @@
                   userPercent: d,
                   steamAverage:
                     t.GetPlayTimeStats().by_numbers?.games_played_avg,
-                  progressIcon: (0, s.jsx)(vt, {}),
+                  progressIcon: (0, s.jsx)(xt, {}),
                 }),
                 h &&
-                  (0, s.jsx)(yt, {
+                  (0, s.jsx)(It, {
                     progressLabel: a(
-                      1 == o
+                      1 == l
                         ? "#YIR_Compare_PlayerProgress_LongestStreak_Single"
                         : "#YIR_Compare_PlayerProgress_LongestStreak_Label",
                       f,
@@ -7672,45 +7671,45 @@
                     userPercent: m,
                     steamAverage:
                       t.GetPlayTimeStats().by_numbers?.game_streak_avg,
-                    progressIcon: (0, s.jsx)(xt, {}),
+                    progressIcon: (0, s.jsx)(gt, {}),
                   }),
               ],
             }),
             (0, s.jsx)("div", {
-              className: st().PlayNewnessContainer,
-              children: (0, s.jsx)(ft, { userYearInReview: t }),
+              className: at().PlayNewnessContainer,
+              children: (0, s.jsx)(jt, { userYearInReview: t }),
             }),
           ],
         });
       }
-      function yt(e) {
+      function It(e) {
         let {
           progressLabel: t,
           steamAverage: a,
           progressIcon: n,
           userPercent: r,
         } = e;
-        const i = v();
+        const i = x();
         return (
-          (r = y.OQ(r, 0, 100)),
-          (0, s.jsxs)(fe, {
-            className: st().PlayerBehaviorProgressCnt,
+          (r = I.OQ(r, 0, 100)),
+          (0, s.jsxs)(je, {
+            className: at().PlayerBehaviorProgressCnt,
             children: [
-              (0, s.jsx)("div", { className: st().ProgressIcon, children: n }),
+              (0, s.jsx)("div", { className: at().ProgressIcon, children: n }),
               (0, s.jsxs)("div", {
-                className: st().ProgressRightSide,
+                className: at().ProgressRightSide,
                 children: [
                   (0, s.jsx)("div", {
-                    className: (0, pe.A)(st().ProgressLabel, i.ProgressLabel),
+                    className: (0, he.A)(at().ProgressLabel, i.ProgressLabel),
                     children: t,
                   }),
                   (0, s.jsx)("div", {
-                    className: st().ProgressBar,
+                    className: at().ProgressBar,
                     children: (0, s.jsx)("div", {
-                      className: st().ProgressBarWrapper,
+                      className: at().ProgressBarWrapper,
                       children: (0, s.jsx)("div", {
-                        className: (0, pe.A)(
-                          st().ProgressBarFilled,
+                        className: (0, he.A)(
+                          at().ProgressBarFilled,
                           i.ProgressBarFilled,
                           i.ProgressBarFilledGradient,
                         ),
@@ -7723,13 +7722,13 @@
                             "% 100%, 0% 100%)",
                         },
                         children: (0, s.jsxs)("div", {
-                          className: st().GlitterBox,
+                          className: at().GlitterBox,
                           children: [
-                            (0, s.jsx)("div", { className: st().Glitter }),
+                            (0, s.jsx)("div", { className: at().Glitter }),
                             (0, s.jsx)("div", {
-                              className: (0, pe.A)(
-                                st().Glitter,
-                                st().GlitterSecond,
+                              className: (0, he.A)(
+                                at().Glitter,
+                                at().GlitterSecond,
                               ),
                             }),
                           ],
@@ -7738,12 +7737,12 @@
                     }),
                   }),
                   (0, s.jsx)("div", {
-                    className: st().ProgressLabelsCnt,
+                    className: at().ProgressLabelsCnt,
                     children:
                       a &&
                       (0, s.jsx)("div", {
-                        className: st().ProgressSteamAvgLabel,
-                        children: (0, g.we)(
+                        className: at().ProgressSteamAvgLabel,
+                        children: (0, _.we)(
                           "#YIR_Compare_PlayerProgress_Steam_Avg",
                           a,
                         ),
@@ -7755,20 +7754,20 @@
           })
         );
       }
-      const jt = {
+      const yt = {
         NewActive: "#YIR_Compare_NewGames_Flavor",
         UsedActive: "#YIR_Compare_ComfortGames_Flavor",
         OldActive: "#YIR_Compare_OldGames_Flavor",
       };
-      function ft(e) {
+      function jt(e) {
         const { userYearInReview: t } = e,
           a = t.GetYear(),
-          n = v(),
+          n = x(),
           r = n.new_games_color,
           i = n.used_games_color,
-          o = n.old_games_color,
-          [c, d] = (0, l.useState)("NewActive"),
-          m = C(),
+          l = n.old_games_color,
+          [c, d] = (0, o.useState)("NewActive"),
+          m = S(),
           h = t.GetGlobalGameplayDistribition(),
           p = {
             NewActive: h?.new_releases || 0,
@@ -7776,9 +7775,9 @@
             OldActive: h?.classic_releases || 0,
           },
           u = h && h.new_releases ? h.recent_cutoff_year : 7,
-          _ = u + 1;
-        let [x, S, I] = l.useMemo(() => {
-          let e = t.GetGameAgeCounts([1, _]),
+          g = u + 1;
+        let [v, C, I] = o.useMemo(() => {
+          let e = t.GetGameAgeCounts([1, g]),
             a = e.reduce((e, t) => t + e, 0);
           if (0 == a) return [0, 0, 0];
           let s = e.map((e) => Math.floor((100 * e) / a)),
@@ -7791,52 +7790,52 @@
             (s[r.pop().index] += 1), (n -= 1);
           }
           return s;
-        }, [t, _]);
-        const y = { NewActive: x, UsedActive: S, OldActive: I },
+        }, [t, g]);
+        const y = { NewActive: v, UsedActive: C, OldActive: I },
           j = {
             NewActive: m("#YIR_Compare_NewGames_Desc_User", a),
             UsedActive: m("#YIR_Compare_ComfortGames_Desc_User", u),
-            OldActive: m("#YIR_Compare_OldGames_Desc_User", _),
+            OldActive: m("#YIR_Compare_OldGames_Desc_User", g),
           },
           f = {
-            NewActive: (0, g.we)("#YIR_Compare_NewGames_Desc_AvgSteam", a),
-            UsedActive: (0, g.we)("#YIR_Compare_ComfortGames_Desc_AvgSteam", u),
-            OldActive: (0, g.we)("#YIR_Compare_OldGames_Desc_AvgSteam", _),
+            NewActive: (0, _.we)("#YIR_Compare_NewGames_Desc_AvgSteam", a),
+            UsedActive: (0, _.we)("#YIR_Compare_ComfortGames_Desc_AvgSteam", u),
+            OldActive: (0, _.we)("#YIR_Compare_OldGames_Desc_AvgSteam", g),
           },
-          w = (0, l.useMemo)(() => {
+          w = (0, o.useMemo)(() => {
             const e = new Array();
             return (
-              e.push({ name: "new", value: x > 0 ? x : 1 }),
-              e.push({ name: "used", value: S > 0 ? S : 1 }),
+              e.push({ name: "new", value: v > 0 ? v : 1 }),
+              e.push({ name: "used", value: C > 0 ? C : 1 }),
               e.push({ name: "old", value: I > 0 ? I : 1 }),
               e
             );
-          }, [x, S, I]);
+          }, [v, C, I]);
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(
-            st().GameNewnessComparisonContainer,
-            st()[c],
+          className: (0, he.A)(
+            at().GameNewnessComparisonContainer,
+            at()[c],
             n[c],
           ),
           children: [
             (0, s.jsx)("div", {
-              className: (0, pe.A)(st().GameNewnessTitle, n.GameNewnessTitle),
-              children: (0, g.PP)(
+              className: (0, he.A)(at().GameNewnessTitle, n.GameNewnessTitle),
+              children: (0, _.PP)(
                 "#YIR_Compare_Flavor_Title",
                 (0, s.jsx)("div", {}),
               ),
             }),
             (0, s.jsxs)("div", {
-              className: st().GameNewnessDataCnt,
+              className: at().GameNewnessDataCnt,
               children: [
                 (0, s.jsx)("div", {
-                  className: st().WheelChart,
-                  children: (0, s.jsx)(rt.u, {
+                  className: at().WheelChart,
+                  children: (0, s.jsx)(nt.u, {
                     width: "100%",
                     height: "100%",
                     aspect: 1,
-                    children: (0, s.jsx)(it.r, {
-                      children: (0, s.jsxs)(ot.F, {
+                    children: (0, s.jsx)(rt.r, {
+                      children: (0, s.jsxs)(it.F, {
                         data: w,
                         dataKey: "value",
                         nameKey: "name",
@@ -7851,12 +7850,12 @@
                         endAngle: 405,
                         children: [
                           (0, s.jsx)(
-                            lt.f,
+                            ot.f,
                             {
                               onMouseEnter: () => d("NewActive"),
-                              className: (0, pe.A)(
-                                st().WheelArc,
-                                "NewActive" === c && st().Active,
+                              className: (0, he.A)(
+                                at().WheelArc,
+                                "NewActive" === c && at().Active,
                               ),
                               fill: r,
                               style:
@@ -7867,12 +7866,12 @@
                             "cell-1",
                           ),
                           (0, s.jsx)(
-                            lt.f,
+                            ot.f,
                             {
                               onMouseEnter: () => d("UsedActive"),
-                              className: (0, pe.A)(
-                                st().WheelArc,
-                                "UsedActive" === c && st().Active,
+                              className: (0, he.A)(
+                                at().WheelArc,
+                                "UsedActive" === c && at().Active,
                               ),
                               fill: i,
                               style:
@@ -7883,14 +7882,14 @@
                             "cell-2",
                           ),
                           (0, s.jsx)(
-                            lt.f,
+                            ot.f,
                             {
                               onMouseEnter: () => d("OldActive"),
-                              className: (0, pe.A)(
-                                st().WheelArc,
-                                "OldActive" === c && st().Active,
+                              className: (0, he.A)(
+                                at().WheelArc,
+                                "OldActive" === c && at().Active,
                               ),
-                              fill: o,
+                              fill: l,
                               style:
                                 "OldActive" === c
                                   ? { opacity: "1" }
@@ -7904,43 +7903,43 @@
                   }),
                 }),
                 (0, s.jsx)("div", {
-                  className: st().RightSideContainer,
+                  className: at().RightSideContainer,
                   children: (0, s.jsxs)("div", {
-                    className: st().DataBoxesContainer,
+                    className: at().DataBoxesContainer,
                     children: [
                       (0, s.jsxs)("div", {
-                        className: (0, pe.A)(
-                          st().UserData,
+                        className: (0, he.A)(
+                          at().UserData,
                           n.UserData,
-                          st().DataBox,
+                          at().DataBox,
                           n.DataBox,
                           n.Background,
                         ),
                         children: [
                           (0, s.jsx)("div", {
-                            className: (0, pe.A)(
-                              st().DataBoxArrow,
+                            className: (0, he.A)(
+                              at().DataBoxArrow,
                               n.DataBoxArrow,
                               n.Background,
                             ),
                           }),
                           (0, s.jsxs)("div", {
-                            className: (0, pe.A)(
-                              st().PercentageLabel,
+                            className: (0, he.A)(
+                              at().PercentageLabel,
                               n.PercentageLabel,
                               n.Color,
                             ),
                             children: [
-                              (0, g.we)("#YIR_Compare_Percentage", y[c]),
+                              (0, _.we)("#YIR_Compare_Percentage", y[c]),
                               (0, s.jsx)("div", {
-                                className: st().FlavorLabel,
-                                children: (0, g.we)(jt[c]),
+                                className: at().FlavorLabel,
+                                children: (0, _.we)(yt[c]),
                               }),
                             ],
                           }),
                           (0, s.jsx)("div", {
-                            className: (0, pe.A)(
-                              st().PercentageDescriptionLabel,
+                            className: (0, he.A)(
+                              at().PercentageDescriptionLabel,
                               n.PercentageDescriptionLabel,
                               n.Color,
                             ),
@@ -7949,28 +7948,28 @@
                         ],
                       }),
                       (0, s.jsxs)("div", {
-                        className: (0, pe.A)(
-                          st().SteamData,
+                        className: (0, he.A)(
+                          at().SteamData,
                           n.SteamData,
-                          st().DataBox,
+                          at().DataBox,
                           n.DataBox,
                           n.Border,
                         ),
                         children: [
                           (0, s.jsx)("div", {
-                            className: (0, pe.A)(
-                              st().PercentageLabel,
+                            className: (0, he.A)(
+                              at().PercentageLabel,
                               n.PercentageLabel,
                               n.Color,
                             ),
-                            children: (0, g.we)(
+                            children: (0, _.we)(
                               "#YIR_Compare_Percentage",
                               p[c],
                             ),
                           }),
                           (0, s.jsx)("div", {
-                            className: (0, pe.A)(
-                              st().PercentageDescriptionLabel,
+                            className: (0, he.A)(
+                              at().PercentageDescriptionLabel,
                               n.PercentageDescriptionLabel,
                               n.Color,
                             ),
@@ -7986,13 +7985,13 @@
           ],
         });
       }
-      function wt(e) {
+      function ft(e) {
         const { userYearInReview: t } = e,
           a = t.GetUserAggregateTagData(),
-          { data: n } = (0, _t.Fv)(nt.TS.LANGUAGE),
-          r = C(),
-          i = v(),
-          o = (0, ut.Ae)(),
+          { data: n } = (0, ut.Fv)(st.TS.LANGUAGE),
+          r = S(),
+          i = x(),
+          o = (0, pt.Ae)(),
           l = window.innerWidth <= 300,
           c = a.map((e) => e.nPreSelectionWeight).sort((e, t) => t - e);
         let d = a.map((e, t) => {
@@ -8002,32 +8001,32 @@
         if (0 == d.length) return null;
         const m = d.map((e, t) => (0, s.jsx)("li", { children: e.subject }, t));
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(st().SpidergraphContainer, st().HalfwidthColumn),
+          className: (0, he.A)(at().SpidergraphContainer, at().HalfwidthColumn),
           children: [
             (0, s.jsx)("div", {
-              className: st().SectionLabel,
-              children: (0, g.we)("#YIR_Spider_Title"),
+              className: at().SectionLabel,
+              children: (0, _.we)("#YIR_Spider_Title"),
             }),
             (0, s.jsx)("div", {
-              className: (0, pe.A)(st().SectionDesc, i.SectionDesc),
+              className: (0, he.A)(at().SectionDesc, i.SectionDesc),
               children: r("#YIR_Spider_Desc", t.GetYear()),
             }),
             (0, s.jsx)("div", {
-              className: st().GraphBox,
-              children: (0, s.jsx)(rt.u, {
-                className: st().SpiderResponsiveContainer,
-                children: (0, s.jsxs)(ct.V, {
+              className: at().GraphBox,
+              children: (0, s.jsx)(nt.u, {
+                className: at().SpiderResponsiveContainer,
+                children: (0, s.jsxs)(lt.V, {
                   cx: "50%",
                   cy: "50%",
                   outerRadius: "70%",
                   data: d,
                   children: [
-                    (0, s.jsx)(dt.z, {}),
-                    (0, s.jsx)(mt.r, {
-                      tick: (0, s.jsx)(At, {}),
+                    (0, s.jsx)(ct.z, {}),
+                    (0, s.jsx)(dt.r, {
+                      tick: (0, s.jsx)(wt, {}),
                       dataKey: "subject",
                     }),
-                    (0, s.jsx)(ht.V, {
+                    (0, s.jsx)(mt.V, {
                       name: "tempRadar",
                       dataKey: "A",
                       stroke: "#8884d8",
@@ -8042,15 +8041,15 @@
             }),
             (o || l) &&
               (0, s.jsxs)("ol", {
-                className: st().RadarChartLegend,
+                className: at().RadarChartLegend,
                 children: [" ", m, " "],
               }),
           ],
         });
       }
-      function At(e) {
+      function wt(e) {
         const { payload: t, x: a, ...n } = e,
-          r = (0, ut.Ae)(),
+          r = (0, pt.Ae)(),
           i = window.innerWidth <= 300;
         return r || i
           ? (0, s.jsx)("text", {
@@ -8068,18 +8067,18 @@
               width: "170px",
               height: "100%",
               children: (0, s.jsx)("foreignObject", {
-                className: st().RadarTextContainer,
+                className: at().RadarTextContainer,
                 dy: "20px",
                 width: "170",
                 height: "150",
                 children: (0, s.jsx)("div", {
-                  className: st().RadarText,
+                  className: at().RadarText,
                   children: t.value,
                 }),
               }),
             });
       }
-      function Nt(e) {
+      function At(e) {
         const { userYearInReview: t } = e;
         let a = (function (e) {
           let t = e.GetRawStats().playtime_stats?.by_numbers;
@@ -8108,44 +8107,44 @@
         })(t);
         if (0 == a.length) return null;
         let n = a.map(([e, t]) =>
-          (0, s.jsx)(kt, { label: (0, g.we)(e), value: t }, e),
+          (0, s.jsx)(Nt, { label: (0, _.we)(e), value: t }, e),
         );
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(st().NumbersContainer, st().HalfwidthColumn),
+          className: (0, he.A)(at().NumbersContainer, at().HalfwidthColumn),
           children: [
             (0, s.jsx)("div", {
-              className: st().SectionLabel,
-              children: (0, g.we)("#YIR_ByTheNum_Title"),
+              className: at().SectionLabel,
+              children: (0, _.we)("#YIR_ByTheNum_Title"),
             }),
-            (0, s.jsx)("div", { className: st().NumbersRowsCnt, children: n }),
+            (0, s.jsx)("div", { className: at().NumbersRowsCnt, children: n }),
           ],
         });
       }
-      function kt(e) {
+      function Nt(e) {
         let { label: t, value: a } = e,
-          n = a ? (0, gt.D)(a) : "-";
+          n = a ? (0, _t.D)(a) : "-";
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(st().NumbersRow, 0 == a && st().Disabled),
+          className: (0, he.A)(at().NumbersRow, 0 == a && at().Disabled),
           children: [
-            (0, s.jsx)("div", { className: st().NumbersLabel, children: t }),
-            (0, s.jsx)("div", { className: st().FillerDots }),
-            (0, s.jsx)("div", { className: st().NumbersValue, children: n }),
+            (0, s.jsx)("div", { className: at().NumbersLabel, children: t }),
+            (0, s.jsx)("div", { className: at().FillerDots }),
+            (0, s.jsx)("div", { className: at().NumbersValue, children: n }),
           ],
         });
       }
-      class Tt {
+      class kt {
         m_SteamInterface = null;
         async LoadFriendsSharedYearInReview(e, t) {
-          const a = d.w.Init(m.iL),
-            s = R.b.InitFromAccountID(e);
+          const a = c.w.Init(d.iL),
+            s = T.b.InitFromAccountID(e);
           a.Body().set_year(t),
             a.Body().set_steamid(s.ConvertTo64BitString()),
-            a.Body().set_return_private(c.iA.is_support);
-          const n = await m.Nl.GetFriendsSharedYearInReview(
+            a.Body().set_return_private(l.iA.is_support);
+          const n = await d.Nl.GetFriendsSharedYearInReview(
             this.m_SteamInterface.GetServiceTransport(),
             a,
           );
-          if (n.GetEResult() != D.R)
+          if (n.GetEResult() != G.R)
             throw "error friend sharing information " + n.GetEResult();
           return n
             .Body()
@@ -8155,32 +8154,32 @@
         static s_Singleton;
         static Get() {
           return (
-            Tt.s_Singleton ||
-              ((Tt.s_Singleton = new Tt()), Tt.s_Singleton.Init()),
-            Tt.s_Singleton
+            kt.s_Singleton ||
+              ((kt.s_Singleton = new kt()), kt.s_Singleton.Init()),
+            kt.s_Singleton
           );
         }
         constructor() {}
         Init() {
-          this.m_SteamInterface = (0, U.P)();
+          this.m_SteamInterface = (0, F.P)();
         }
       }
-      var Rt = a(8905),
-        Lt = a(96236),
-        Bt = a(66599),
-        bt = a(30925),
-        Pt = a(45699);
-      function Gt(e) {
+      var Tt = a(8905),
+        Rt = a(96236),
+        Lt = a(66599),
+        Bt = a(30925),
+        bt = a(45699);
+      function Pt(e) {
         const { userYearInReview: t } = e;
-        return c.iA.is_support || c.iA.accountid == t.GetAccountID()
-          ? (0, s.jsxs)(Lt.K, {
+        return l.iA.is_support || l.iA.accountid == t.GetAccountID()
+          ? (0, s.jsxs)(Rt.K, {
               rootMargin: "0px 0px 100% 0px",
               children: [
-                (0, s.jsx)(Dt, {
+                (0, s.jsx)(Gt, {
                   accountID: t.GetAccountID(),
                   year: t.GetYear(),
                 }),
-                (0, s.jsx)(Mt, {
+                (0, s.jsx)(Et, {
                   accountID: t.GetAccountID(),
                   year: t.GetYear(),
                 }),
@@ -8188,37 +8187,37 @@
             })
           : null;
       }
-      function Dt(e) {
+      function Gt(e) {
         const { accountID: t, year: a } = e,
-          n = (0, l.useMemo)(
-            () => R.b.InitFromAccountID(t).ConvertTo64BitString(),
+          n = (0, o.useMemo)(
+            () => T.b.InitFromAccountID(t).ConvertTo64BitString(),
             [t],
           ),
-          r = (0, bt.N0)(n, !0);
+          r = (0, Bt.N0)(n, !0);
         if (r.isLoading || r.data?.is_not_member_of_any_group()) return null;
         const i = r.data
           .family_group()
           .members()
-          .map((e) => new R.b(e.steamid()))
+          .map((e) => new T.b(e.steamid()))
           .filter((e) => e.GetAccountID() != t);
         return 0 == i.length
           ? null
           : (0, s.jsxs)("div", {
-              className: Bt.FriendsSharedSection,
+              className: Lt.FriendsSharedSection,
               children: [
                 (0, s.jsx)("div", {
-                  className: Bt.FriendsSharedSectionTitle,
-                  children: (0, g.we)("#YIR_FamilyShared"),
+                  className: Lt.FriendsSharedSectionTitle,
+                  children: (0, _.we)("#YIR_FamilyShared"),
                 }),
                 (0, s.jsx)("div", {
-                  className: Bt.FriendsGrid,
+                  className: Lt.FriendsGrid,
                   children: i.map((e) =>
                     (0, s.jsx)(
-                      Yt,
+                      Mt,
                       {
                         strSteamid: e.ConvertTo64BitString(),
                         year: a,
-                        ePrivacy: m.hb.QB,
+                        ePrivacy: d.hb.QB,
                         bPrivacyOverride: !1,
                       },
                       "family_" + e,
@@ -8228,52 +8227,52 @@
               ],
             });
       }
-      const Et = 50;
-      function Mt(e) {
+      const Dt = 50;
+      function Et(e) {
         const { accountID: t, year: a } = e,
           { isLoading: n, rgFriendAccounts: r } = (function (e, t) {
-            const { data: a, isLoading: s } = (0, h.I)({
+            const { data: a, isLoading: s } = (0, m.I)({
               queryKey: ["SharedFriendYearInReviews", e, t],
-              queryFn: () => Tt.Get().LoadFriendsSharedYearInReview(e, t),
+              queryFn: () => kt.Get().LoadFriendsSharedYearInReview(e, t),
             });
             return { rgFriendAccounts: s ? null : a, isLoading: s };
           })(t, a),
-          i = (0, l.useMemo)(
+          i = (0, o.useMemo)(
             () =>
               r?.length > 0
                 ? [...r]
                     .sort((e, t) => t.rt_privacy_updated - e.rt_privacy_updated)
-                    .slice(0, Et)
+                    .slice(0, Dt)
                 : [],
             [r],
           ),
-          o = (0, l.useMemo)(
-            () => i.map((e) => new R.b(e.steamid).GetAccountID()),
+          c = (0, o.useMemo)(
+            () => i.map((e) => new T.b(e.steamid).GetAccountID()),
             [i],
           ),
-          d = (0, ie.B3)(o);
-        if (n || 0 == o?.length || !d) return null;
-        const m = new Map();
+          d = (0, re.B3)(c);
+        if (n || 0 == c?.length || !d) return null;
+        const h = new Map();
         return (
           d
             .filter(Boolean)
-            .forEach((e) => m.set(e.steamid, e.persona_name || "")),
-          i.sort((e, t) => m.get(e.steamid).localeCompare(m.get(t.steamid))),
+            .forEach((e) => h.set(e.steamid, e.persona_name || "")),
+          i.sort((e, t) => h.get(e.steamid).localeCompare(h.get(t.steamid))),
           (0, s.jsxs)("div", {
-            className: Bt.FriendsSharedSection,
+            className: Lt.FriendsSharedSection,
             children: [
               (0, s.jsx)("div", {
-                className: Bt.FriendsSharedSectionTitle,
-                children: (0, g.we)("#YIR_FriendShared"),
+                className: Lt.FriendsSharedSectionTitle,
+                children: (0, _.we)("#YIR_FriendShared"),
               }),
-              (0, s.jsx)(Ae.Z, {
-                className: Bt.FriendsGrid,
+              (0, s.jsx)(we.Z, {
+                className: Lt.FriendsGrid,
                 "flow-children": "grid",
                 children: i
-                  .slice(0, Et)
+                  .slice(0, Dt)
                   .map((e) =>
                     (0, s.jsx)(
-                      Yt,
+                      Mt,
                       {
                         strSteamid: e.steamid,
                         ePrivacy: e.privacy_state,
@@ -8284,149 +8283,149 @@
                     ),
                   ),
               }),
-              Boolean(c.iA.is_support) &&
+              Boolean(l.iA.is_support) &&
                 (0, s.jsx)("div", {
-                  className: de.ValveOnlyBackground,
-                  children: (0, g.we)("#YIR_FriendShared_support"),
+                  className: ce.ValveOnlyBackground,
+                  children: (0, _.we)("#YIR_FriendShared_support"),
                 }),
             ],
           })
         );
       }
-      function Yt(e) {
+      function Mt(e) {
         const { strSteamid: t, year: a, ePrivacy: n } = e,
-          r = new R.b(t),
-          i = v();
-        return (0, s.jsx)(Pt.Ii, {
-          href: `${c.TS.STORE_BASE_URL}replay/${r.ConvertTo64BitString()}/${a}`,
-          className: (0, pe.A)({
-            [Bt.IsPrivate]: n == m.hb.ym,
-            [Bt.FriendCtn]: !0,
+          r = new T.b(t),
+          i = x();
+        return (0, s.jsx)(bt.Ii, {
+          href: `${l.TS.STORE_BASE_URL}replay/${r.ConvertTo64BitString()}/${a}`,
+          className: (0, he.A)({
+            [Lt.IsPrivate]: n == d.hb.ym,
+            [Lt.FriendCtn]: !0,
             [i.FriendCtn]: !0,
           }),
-          children: (0, s.jsx)(Rt.p, {
+          children: (0, s.jsx)(Tt.p, {
             accountID: r.GetAccountID(),
             bHideWhenNotAvailable: !0,
             bLink: !1,
           }),
         });
       }
-      var Ot = a(30700),
-        Ft = a(59848),
-        Ut = a.n(Ft),
-        Ht = a(30230),
-        Vt = a(75620);
-      const Wt = 100;
-      var zt;
-      function Zt(e) {
+      var Yt = a(30700),
+        Ot = a(59848),
+        Ft = a.n(Ot),
+        Ut = a(30230),
+        Ht = a(75620);
+      const Vt = 100;
+      var Wt;
+      function zt(e) {
         const { userYearInReview: t } = e,
           a = t.GetPlayTimeStats().total_stats,
           n = t.GetPlayTimeStats().game_summary,
-          r = C(),
-          i = v(),
-          o = (0, l.useMemo)(() => {
+          r = S(),
+          i = x(),
+          l = (0, o.useMemo)(() => {
             const e = new Array();
             return (
-              a.windows_playtime_percentagex100 > Wt &&
+              a.windows_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.windows,
-                  name: (0, g.we)("#YIR_Platfrom_windows"),
+                  id: Wt.windows,
+                  name: (0, _.we)("#YIR_Platfrom_windows"),
                   value: a.windows_playtime_percentagex100,
                 }),
-              a.linux_playtime_percentagex100 > Wt &&
+              a.linux_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.linux,
-                  name: (0, g.we)("#YIR_Platfrom_linux"),
+                  id: Wt.linux,
+                  name: (0, _.we)("#YIR_Platfrom_linux"),
                   value: a.linux_playtime_percentagex100,
                 }),
-              a.macos_playtime_percentagex100 > Wt &&
+              a.macos_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.mac,
-                  name: (0, g.we)("#YIR_Platfrom_macos"),
+                  id: Wt.mac,
+                  name: (0, _.we)("#YIR_Platfrom_macos"),
                   value: a.macos_playtime_percentagex100,
                 }),
-              a.vr_playtime_percentagex100 > Wt &&
+              a.vr_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.vr,
-                  name: (0, g.we)("#YIR_Platfrom_vr"),
+                  id: Wt.vr,
+                  name: (0, _.we)("#YIR_Platfrom_vr"),
                   value: a.vr_playtime_percentagex100,
                 }),
-              a.deck_playtime_percentagex100 > Wt &&
+              a.deck_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.deck,
-                  name: (0, g.we)("#YIR_Platfrom_deck"),
+                  id: Wt.deck,
+                  name: (0, _.we)("#YIR_Platfrom_deck"),
                   value: a.deck_playtime_percentagex100,
                 }),
               e
             );
           }, [a]),
-          c = (0, l.useMemo)(() => {
+          c = (0, o.useMemo)(() => {
             const e = new Array();
             return (
-              a.windows_playtime_percentagex100 > Wt &&
+              a.windows_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.windows,
-                  name: (0, g.we)("#YIR_Platfrom_windows"),
+                  id: Wt.windows,
+                  name: (0, _.we)("#YIR_Platfrom_windows"),
                   value: n.filter((e) => e.played_windows).length,
                 }),
-              a.linux_playtime_percentagex100 > Wt &&
+              a.linux_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.linux,
-                  name: (0, g.we)("#YIR_Platfrom_linux"),
+                  id: Wt.linux,
+                  name: (0, _.we)("#YIR_Platfrom_linux"),
                   value: n.filter((e) => e.played_linux).length,
                 }),
-              a.macos_playtime_percentagex100 > Wt &&
+              a.macos_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.mac,
-                  name: (0, g.we)("#YIR_Platfrom_macos"),
+                  id: Wt.mac,
+                  name: (0, _.we)("#YIR_Platfrom_macos"),
                   value: n.filter((e) => e.played_mac).length,
                 }),
-              a.vr_playtime_percentagex100 > Wt &&
+              a.vr_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.vr,
-                  name: (0, g.we)("#YIR_Platfrom_vr"),
+                  id: Wt.vr,
+                  name: (0, _.we)("#YIR_Platfrom_vr"),
                   value: n.filter((e) => e.played_vr).length,
                 }),
-              a.deck_playtime_percentagex100 > Wt &&
+              a.deck_playtime_percentagex100 > Vt &&
                 e.push({
-                  id: zt.deck,
-                  name: (0, g.we)("#YIR_Platfrom_deck"),
+                  id: Wt.deck,
+                  name: (0, _.we)("#YIR_Platfrom_deck"),
                   value: n.filter((e) => e.played_deck).length,
                 }),
               e
             );
           }, [a, n]);
-        if (o.length < 2) return null;
-        const d = $t(a);
-        return (0, s.jsx)(fe, {
-          className: (0, pe.A)(ve().PlatformChartsCtn, i.PlatformChartsCtn),
+        if (l.length < 2) return null;
+        const d = Jt(a);
+        return (0, s.jsx)(je, {
+          className: (0, he.A)(xe().PlatformChartsCtn, i.PlatformChartsCtn),
           children: (0, s.jsxs)("div", {
-            className: (0, pe.A)(
-              Ce().YearInReviewContent,
-              ve().PlatformSpacing,
+            className: (0, he.A)(
+              Se().YearInReviewContent,
+              xe().PlatformSpacing,
             ),
             children: [
               (0, s.jsx)("div", {
-                className: Ce().SectionTitle,
+                className: Se().SectionTitle,
                 children: r("#YIR_Platform"),
               }),
               (0, s.jsxs)("div", {
-                className: ve().PlatformChartsRow,
+                className: xe().PlatformChartsRow,
                 children: [
                   (0, s.jsxs)("div", {
-                    className: ve().PieCtn,
+                    className: xe().PieCtn,
                     children: [
                       (0, s.jsx)("div", {
-                        className: ve().GraphTitle,
-                        children: (0, g.we)("#YIR_Platfrom_playtime"),
+                        className: xe().GraphTitle,
+                        children: (0, _.we)("#YIR_Platfrom_playtime"),
                       }),
-                      (0, s.jsx)(rt.u, {
+                      (0, s.jsx)(nt.u, {
                         width: "90%",
                         aspect: 1,
-                        children: (0, s.jsxs)(it.r, {
+                        children: (0, s.jsxs)(rt.r, {
                           children: [
-                            (0, s.jsx)(ot.F, {
-                              data: o,
+                            (0, s.jsx)(it.F, {
+                              data: l,
                               dataKey: "value",
                               nameKey: "name",
                               cx: "50%",
@@ -8435,34 +8434,34 @@
                               outerRadius: "80%",
                               fill: "#8884d8",
                               paddingAngle: 1,
-                              children: o.map((e, t) =>
+                              children: l.map((e, t) =>
                                 (0, s.jsx)(
-                                  lt.f,
+                                  ot.f,
                                   { fill: i[`pie_${e.id}`] },
                                   `cell-${t}`,
                                 ),
                               ),
                             }),
-                            (0, s.jsx)(Ht.m, { content: (0, s.jsx)(Qt, {}) }),
-                            (0, s.jsx)(Vt.s, {}),
+                            (0, s.jsx)(Ut.m, { content: (0, s.jsx)(Zt, {}) }),
+                            (0, s.jsx)(Ht.s, {}),
                           ],
                         }),
                       }),
                     ],
                   }),
                   (0, s.jsxs)("div", {
-                    className: ve().PieCtn,
+                    className: xe().PieCtn,
                     children: [
                       (0, s.jsx)("div", {
-                        className: ve().GraphTitle,
-                        children: (0, g.we)("#YIR_Platfrom_games"),
+                        className: xe().GraphTitle,
+                        children: (0, _.we)("#YIR_Platfrom_games"),
                       }),
-                      (0, s.jsx)(rt.u, {
+                      (0, s.jsx)(nt.u, {
                         width: "90%",
                         aspect: 1,
-                        children: (0, s.jsxs)(it.r, {
+                        children: (0, s.jsxs)(rt.r, {
                           children: [
-                            (0, s.jsx)(ot.F, {
+                            (0, s.jsx)(it.F, {
                               data: c,
                               dataKey: "value",
                               nameKey: "name",
@@ -8474,14 +8473,14 @@
                               paddingAngle: 1,
                               children: c.map((e, t) =>
                                 (0, s.jsx)(
-                                  lt.f,
+                                  ot.f,
                                   { fill: i[`pie_${e.id}`] },
                                   `cell-${t}`,
                                 ),
                               ),
                             }),
-                            (0, s.jsx)(Ht.m, { content: (0, s.jsx)(Kt, {}) }),
-                            (0, s.jsx)(Vt.s, {}),
+                            (0, s.jsx)(Ut.m, { content: (0, s.jsx)(Qt, {}) }),
+                            (0, s.jsx)(Ht.s, {}),
                           ],
                         }),
                       }),
@@ -8491,9 +8490,9 @@
               }),
               (d.bDeck || d.bVR) &&
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(
-                    Ce().SectionTitle,
-                    ve().PlatformDetailsSetup,
+                  className: (0, he.A)(
+                    Se().SectionTitle,
+                    xe().PlatformDetailsSetup,
                   ),
                   children: r("#YIR_Platform_DiveIn"),
                 }),
@@ -8501,30 +8500,30 @@
           }),
         });
       }
-      function Qt(e) {
+      function Zt(e) {
         const { active: t, payload: a } = e;
         if (t && a && a.length) {
           const e = a[0].value;
-          return (0, s.jsxs)(Oe.t1, {
+          return (0, s.jsxs)(Ye.t1, {
             children: [
               a[0].name,
               ": ",
-              (0, g.we)("#YIR_Percent_Playtime", I(e)),
+              (0, _.we)("#YIR_Percent_Playtime", C(e)),
             ],
           });
         }
         return null;
       }
-      function Kt(e) {
+      function Qt(e) {
         const { active: t, payload: a } = e;
         if (t && a && a.length) {
           const e = a[0].value,
             t = a[0].name;
-          return (0, s.jsx)(Oe.t1, {
-            children: (0, g.E3)(
+          return (0, s.jsx)(Ye.t1, {
+            children: (0, _.E3)(
               "#YIR_Platfrom_gamesplays_tooltip",
               e,
-              (0, ge.Dq)(e),
+              (0, _e.Dq)(e),
               t,
             ),
           });
@@ -8537,121 +8536,121 @@
           (e.deck = "deck"),
           (e.mac = "mac"),
           (e.vr = "vr");
-      })(zt || (zt = {}));
-      const Xt = 100;
-      function qt(e) {
+      })(Wt || (Wt = {}));
+      const Kt = 100;
+      function Xt(e) {
         const { userYearInReview: t } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(Zt, { userYearInReview: t }),
-            (0, s.jsx)(ea, { userYearInReview: t }),
+            (0, s.jsx)(zt, { userYearInReview: t }),
+            (0, s.jsx)($t, { userYearInReview: t }),
           ],
         });
       }
-      function Jt(e) {
+      function qt(e) {
         const { userYearInReview: t, strClassName: a, nYear: n } = e,
           r = t.GetRawStats(),
-          i = C(),
-          o = void 0,
+          i = S(),
+          l = void 0,
           c = i("#YIR_TopGames_deck_subtitle"),
           {
             nTotalGames: d,
             nTotalSessions: m,
             nTotalPercentage: h,
-          } = (0, l.useMemo)(() => A(r, "deck"), [r]),
-          { rgResults: p } = (0, l.useMemo)(() => j(t, "deck", 5, h), [t, h]),
+          } = (0, o.useMemo)(() => w(r, "deck"), [r]),
+          { rgResults: p } = (0, o.useMemo)(() => y(t, "deck", 5, h), [t, h]),
           u = Number(Math.round(h / 100).toFixed(0));
-        let _ = i("#YIR_TopGames_deck_new");
-        u > 50 && (_ = i("#YIR_TopGames_deck_mostly"));
-        const x = (0, l.useRef)(null),
-          v = (0, ee.wY)((e) => {
+        let g = i("#YIR_TopGames_deck_new");
+        u > 50 && (g = i("#YIR_TopGames_deck_mostly"));
+        const x = (0, o.useRef)(null),
+          v = (0, $.wY)((e) => {
             x.current &&
               x.current.style.setProperty(
                 "--contentSize",
                 `${e.contentRect.width}px`,
               );
           }),
-          [S, I] = l.useState(!1),
-          y = l.useCallback((e) => {
+          [C, I] = o.useState(!1),
+          j = o.useCallback((e) => {
             e && I(!0);
           }, []),
-          f = (0, s.jsx)(pt, { endValue: d, duration: 2e3, startAnimation: S }),
-          w = (0, s.jsx)(pt, { endValue: m, duration: 2e3, startAnimation: S }),
+          f = (0, s.jsx)(ht, { endValue: d, duration: 2e3, startAnimation: C }),
+          A = (0, s.jsx)(ht, { endValue: m, duration: 2e3, startAnimation: C }),
           N =
-            ((0, s.jsx)(pt, { endValue: u, duration: 2e3, startAnimation: S }),
-            (0, l.useRef)(null));
+            ((0, s.jsx)(ht, { endValue: u, duration: 2e3, startAnimation: C }),
+            (0, o.useRef)(null));
         return (
-          (0, Ot.q)(N),
+          (0, Yt.q)(N),
           (0, s.jsxs)("div", {
-            className: (0, pe.A)(
+            className: (0, he.A)(
               a,
-              ye().PlatformContentsCtn,
-              Ut().DeckContainer,
+              Ie().PlatformContentsCtn,
+              Ft().DeckContainer,
             ),
             ref: x,
             children: [
               (0, s.jsx)("div", {
-                className: (0, pe.A)(ye().SectionTitle, Ut().SectionTitle),
-                children: _,
+                className: (0, he.A)(Ie().SectionTitle, Ft().SectionTitle),
+                children: g,
               }),
               (0, s.jsxs)("div", {
-                className: Ut().ScreenContainer,
+                className: Ft().ScreenContainer,
                 ref: v,
                 children: [
                   (0, s.jsxs)("div", {
-                    className: Ut().PlatformDataContainer,
+                    className: Ft().PlatformDataContainer,
                     children: [
-                      (0, s.jsxs)(je.J, {
-                        onVisibilityChange: y,
-                        className: (0, pe.A)(
-                          Ce().YearInReviewContent,
-                          ye().StatsRow,
-                          Ut().StatsRow,
+                      (0, s.jsxs)(ye.J, {
+                        onVisibilityChange: j,
+                        className: (0, he.A)(
+                          Se().YearInReviewContent,
+                          Ie().StatsRow,
+                          Ft().StatsRow,
                         ),
                         children: [
                           (0, s.jsxs)("div", {
-                            className: ye().StatBlock,
+                            className: Ie().StatBlock,
                             children: [
                               (0, s.jsx)("div", {
-                                className: ye().BigNum,
+                                className: Ie().BigNum,
                                 children: f,
                               }),
                               (0, s.jsx)("div", {
-                                className: ye().StatDescription,
-                                children: (0, g.Yp)("#YIR_NewLine_Games", d),
+                                className: Ie().StatDescription,
+                                children: (0, _.Yp)("#YIR_NewLine_Games", d),
                               }),
                             ],
                           }),
                           (0, s.jsxs)("div", {
-                            className: ye().StatBlock,
+                            className: Ie().StatBlock,
                             children: [
                               (0, s.jsx)("div", {
-                                className: ye().BigNum,
-                                children: w,
+                                className: Ie().BigNum,
+                                children: A,
                               }),
                               (0, s.jsx)("div", {
-                                className: ye().StatDescription,
-                                children: (0, g.Yp)("#YIR_NewLine_Session", m),
+                                className: Ie().StatDescription,
+                                children: (0, _.Yp)("#YIR_NewLine_Session", m),
                               }),
                             ],
                           }),
-                          (0, s.jsx)(be, {
+                          (0, s.jsx)(Be, {
                             percentVal: h,
                             subToken: "#YIR_NewLine",
                           }),
                         ],
                       }),
-                      Boolean(o) &&
+                      Boolean(l) &&
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(
-                            ye().SectionSubTitle,
-                            Ut().SectionSubTitle,
+                          className: (0, he.A)(
+                            Ie().SectionSubTitle,
+                            Ft().SectionSubTitle,
                           ),
-                          children: o,
+                          children: l,
                         }),
-                      (0, s.jsx)(fe, {
-                        className: ve().SteamDeckGameCapRow,
-                        children: (0, s.jsx)(Re, {
+                      (0, s.jsx)(je, {
+                        className: xe().SteamDeckGameCapRow,
+                        children: (0, s.jsx)(Te, {
                           rgGamePercentages: p,
                           category: "deck",
                         }),
@@ -8659,7 +8658,7 @@
                     ],
                   }),
                   (0, s.jsxs)("video", {
-                    className: Ut().Video,
+                    className: Ft().Video,
                     poster:
                       "https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesPoster.jpg",
                     playsInline: !0,
@@ -8682,78 +8681,78 @@
                 ],
               }),
               (0, s.jsx)("div", {
-                className: (0, pe.A)(ye().Disclaimer, Ut().Disclaimer),
+                className: (0, he.A)(Ie().Disclaimer, Ft().Disclaimer),
                 children: c,
               }),
             ],
           })
         );
       }
-      function $t(e) {
+      function Jt(e) {
         return {
-          bDeck: e.deck_playtime_percentagex100 > Xt,
-          bVR: e.vr_playtime_percentagex100 > Xt,
+          bDeck: e.deck_playtime_percentagex100 > Kt,
+          bVR: e.vr_playtime_percentagex100 > Kt,
         };
       }
-      function ea(e) {
+      function $t(e) {
         const { userYearInReview: t } = e,
           a = t.GetYear(),
-          n = C(),
+          n = S(),
           r = t.GetPlayTimeStats().total_stats,
           i =
             r.controller_playtime_percentagex100 +
             r.deck_playtime_percentagex100;
         let o;
         i > 7e3 && (o = !0);
-        const l = $t(r);
-        return (0, s.jsxs)(Lt.K, {
+        const c = Jt(r);
+        return (0, s.jsxs)(Rt.K, {
           rootMargin: "0px 0px 100% 0px",
           children: [
-            Boolean(l.bDeck) &&
-              (0, s.jsx)(fe, {
-                className: (0, pe.A)(ye().Section, ye().Deck),
-                children: (0, s.jsx)(Jt, { userYearInReview: t, nYear: a }),
+            Boolean(c.bDeck) &&
+              (0, s.jsx)(je, {
+                className: (0, he.A)(Ie().Section, Ie().Deck),
+                children: (0, s.jsx)(qt, { userYearInReview: t, nYear: a }),
               }),
-            Boolean(l.bVR) &&
-              (0, s.jsx)(fe, {
-                className: (0, pe.A)(ye().Section, ye().VR),
-                children: (0, s.jsx)(ke, {
+            Boolean(c.bVR) &&
+              (0, s.jsx)(je, {
+                className: (0, he.A)(Ie().Section, Ie().VR),
+                children: (0, s.jsx)(Ne, {
                   category: "vr",
                   userYearInReview: t,
-                  bgImageURL: `${c.TS.IMG_URL}yearinreview/vr_background6.webp`,
+                  bgImageURL: `${l.TS.IMG_URL}yearinreview/vr_background6.webp`,
                   title: n("#YIR_TopGames_vr"),
                   subTitle: void 0,
                 }),
               }),
             Boolean(i > 1e3) &&
-              (0, s.jsx)(fe, {
-                className: (0, pe.A)(ye().Section, ye().Controller),
-                children: (0, s.jsx)(ke, {
+              (0, s.jsx)(je, {
+                className: (0, he.A)(Ie().Section, Ie().Controller),
+                children: (0, s.jsx)(Ne, {
                   category: "controller",
                   userYearInReview: t,
                   title: n(
                     o
                       ? "#YIR_TopGames_controllerMost"
                       : "#YIR_TopGames_controller",
-                    I(i),
+                    C(i),
                   ),
                   subTitle: n(
                     "#YIR_Platform_subtitle_controller",
-                    (0, g.we)("#YIR_Platfrom_controller_forsubtitle"),
+                    (0, _.we)("#YIR_Platfrom_controller_forsubtitle"),
                   ),
                 }),
               }),
             Boolean(a >= 2024) &&
-              (0, s.jsx)(le.tH, {
-                children: (0, s.jsx)(ta, { userYearInReview: t }),
+              (0, s.jsx)(oe.tH, {
+                children: (0, s.jsx)(ea, { userYearInReview: t }),
               }),
           ],
         });
       }
-      function ta(e) {
+      function ea(e) {
         const { userYearInReview: t } = e,
-          a = C(),
-          [n, r] = (0, l.useMemo)(
+          a = S(),
+          [n, r] = (0, o.useMemo)(
             () => [
               t
                 .GetDemoByPlaytime()
@@ -8770,12 +8769,12 @@
           );
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            Boolean(n > Xt) &&
-              (0, s.jsxs)(fe, {
-                className: (0, pe.A)(ye().Section, ye().Demo),
+            Boolean(n > Kt) &&
+              (0, s.jsxs)(je, {
+                className: (0, he.A)(Ie().Section, Ie().Demo),
                 children: [
-                  (0, s.jsx)("div", { className: ye().BG_Demo }),
-                  (0, s.jsx)(ke, {
+                  (0, s.jsx)("div", { className: Ie().BG_Demo }),
+                  (0, s.jsx)(Ne, {
                     category: "demo",
                     userYearInReview: t,
                     title: a("#YIR_TopGames_demo"),
@@ -8783,12 +8782,12 @@
                   }),
                 ],
               }),
-            Boolean(r > Xt) &&
-              (0, s.jsxs)(fe, {
-                className: (0, pe.A)(ye().Section, ye().Playtest),
+            Boolean(r > Kt) &&
+              (0, s.jsxs)(je, {
+                className: (0, he.A)(Ie().Section, Ie().Playtest),
                 children: [
-                  (0, s.jsx)("div", { className: ye().BG_Playtest }),
-                  (0, s.jsx)(ke, {
+                  (0, s.jsx)("div", { className: Ie().BG_Playtest }),
+                  (0, s.jsx)(Ne, {
                     category: "playtest",
                     userYearInReview: t,
                     title: a("#YIR_TopGames_playtest"),
@@ -8799,13 +8798,13 @@
           ],
         });
       }
-      var aa = a(99514),
-        sa = a.n(aa);
-      function na(e) {
+      var ta = a(99514),
+        aa = a.n(ta);
+      function sa(e) {
         const { userYearInReview: t } = e;
-        if ("cn" === c.iA.country_code.toLowerCase())
+        if ("cn" === l.iA.country_code.toLowerCase())
           return (
-            "dev" === nt.TS.WEB_UNIVERSE &&
+            "dev" === st.TS.WEB_UNIVERSE &&
               console.log(
                 "<DisplayLongestStreak is not displayed; country code CN",
               ),
@@ -8813,7 +8812,7 @@
           );
         const a = t.GetPlayTimeStats().playtime_streak;
         return !a || a.longest_consecutive_days < 5
-          ? ("dev" === nt.TS.WEB_UNIVERSE &&
+          ? ("dev" === st.TS.WEB_UNIVERSE &&
               (a
                 ? console.log(
                     `<DisplayLongestStreak is not displayed; require consequative days >= 5 (actual ${a.longest_consecutive_days})`,
@@ -8822,97 +8821,97 @@
                     "<DisplayLongestStreak is not displayed; data oject is missing",
                   )),
             null)
-          : (0, s.jsx)(ra, { ...e });
+          : (0, s.jsx)(na, { ...e });
       }
-      function ra(e) {
+      function na(e) {
         const { userYearInReview: t } = e,
-          a = C(),
+          a = S(),
           n = !0,
           r = t.GetPlayTimeStats().playtime_streak,
-          i = v(),
-          [o, c] = l.useState(!1),
-          d = l.useCallback((e) => {
+          i = x(),
+          [l, c] = o.useState(!1),
+          d = o.useCallback((e) => {
             e && c(!0);
           }, []),
-          [m, h] = l.useState(!1),
-          p = l.useCallback((e) => {
+          [m, h] = o.useState(!1),
+          p = o.useCallback((e) => {
             e &&
               window.setTimeout(() => {
                 h(!0);
               }, 30);
           }, []),
-          [u, _] = l.useState(!1),
-          x = r.streak_games.length > 12 && !u,
-          S = x
+          [u, g] = o.useState(!1),
+          v = r.streak_games.length > 12 && !u,
+          C = v
             ? r.streak_games.sort((e, t) => e.appid - t.appid).slice(0, 12)
             : r.streak_games.sort((e, t) => e.appid - t.appid),
-          I = S.map((e) => e.appid),
+          I = C.map((e) => e.appid),
           y = r.streak_games.length;
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(
-            ve().StreakCtn,
-            sa().StreakCtn,
-            sa().Section,
+          className: (0, he.A)(
+            xe().StreakCtn,
+            aa().StreakCtn,
+            aa().Section,
             i.Section,
           ),
           children: [
             (0, s.jsx)("div", {
-              className: (0, pe.A)(
-                sa().LongestStreakBgImage,
+              className: (0, he.A)(
+                aa().LongestStreakBgImage,
                 i.LongestStreakBgImage,
               ),
             }),
             (0, s.jsxs)("div", {
-              className: Ce().YearInReviewContent,
+              className: Se().YearInReviewContent,
               children: [
                 (0, s.jsxs)("div", {
-                  className: sa().SectionTitle,
+                  className: aa().SectionTitle,
                   children: [
-                    (0, s.jsx)(je.J, {
-                      className: sa().LongestStreakDailyCount,
+                    (0, s.jsx)(ye.J, {
+                      className: aa().LongestStreakDailyCount,
                       onVisibilityChange: d,
                       children: a(
                         "#YIR_Longest_Streak_Title",
-                        (0, s.jsx)(pt, {
-                          className: sa().LongestStreakNumber,
+                        (0, s.jsx)(ht, {
+                          className: aa().LongestStreakNumber,
                           endValue: r.longest_consecutive_days,
                           duration: 2e3,
-                          startAnimation: o,
+                          startAnimation: l,
                         }),
                       ),
                     }),
-                    (0, s.jsxs)(fe, {
-                      className: sa().StreakBarCtn,
+                    (0, s.jsxs)(je, {
+                      className: aa().StreakBarCtn,
                       children: [
-                        (0, s.jsx)("div", { className: sa().StreakSizeCtn }),
+                        (0, s.jsx)("div", { className: aa().StreakSizeCtn }),
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(
-                            sa().StreakSizeFullBar,
+                          className: (0, he.A)(
+                            aa().StreakSizeFullBar,
                             i.StreakSizeFullBar,
                           ),
                         }),
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)({
-                            [sa().StreakTickCtn]: !0,
-                            [sa().LargerTicks]: r.longest_consecutive_days < 40,
+                          className: (0, he.A)({
+                            [aa().StreakTickCtn]: !0,
+                            [aa().LargerTicks]: r.longest_consecutive_days < 40,
                           }),
-                          children: (0, s.jsx)(oa, {
+                          children: (0, s.jsx)(ia, {
                             nDays: r.longest_consecutive_days - 1,
                           }),
                         }),
-                        (0, s.jsx)("div", { className: sa().StreakSizeCtn }),
+                        (0, s.jsx)("div", { className: aa().StreakSizeCtn }),
                       ],
                     }),
-                    (0, s.jsxs)(fe, {
-                      className: sa().StreakDates,
+                    (0, s.jsxs)(je, {
+                      className: aa().StreakDates,
                       children: [
                         (0, s.jsx)("div", {
-                          className: sa().StreakStart,
-                          children: (0, g.TW)(r.rtime_start, n),
+                          className: aa().StreakStart,
+                          children: (0, _.TW)(r.rtime_start, n),
                         }),
                         (0, s.jsx)("div", {
-                          className: sa().StreakEnd,
-                          children: (0, g.TW)(
+                          className: aa().StreakEnd,
+                          children: (0, _.TW)(
                             r.rtime_start +
                               24 * r.longest_consecutive_days * 60 * 60,
                             n,
@@ -8922,45 +8921,45 @@
                     }),
                   ],
                 }),
-                (0, s.jsxs)(je.J, {
+                (0, s.jsxs)(ye.J, {
                   onVisibilityChange: p,
-                  className: (0, pe.A)(
-                    ve().LongestStreakGamesWrapper,
-                    sa().LongestStreakGamesWrapper,
+                  className: (0, he.A)(
+                    xe().LongestStreakGamesWrapper,
+                    aa().LongestStreakGamesWrapper,
                   ),
                   children: [
                     (0, s.jsx)("div", {
-                      className: (0, pe.A)(
-                        sa().CapRowTitle,
-                        m && sa().AnimateTitle,
+                      className: (0, he.A)(
+                        aa().CapRowTitle,
+                        m && aa().AnimateTitle,
                       ),
                       children: a(
                         y > 1
                           ? "#YIR_Longest_Streak_Games"
                           : "#YIR_Longest_Streak_Games_Singular",
-                        (0, gt.D)(y),
+                        (0, _t.D)(y),
                       ),
                     }),
                     (0, s.jsx)("div", {
-                      className: (0, pe.A)(sa().CapRowCtn),
-                      children: (0, s.jsx)(Ae.Z, {
+                      className: (0, he.A)(aa().CapRowCtn),
+                      children: (0, s.jsx)(we.Z, {
                         "flow-children": "grid",
-                        className: (0, pe.A)(
-                          ve().CapRow,
-                          ve().LongestStreak,
-                          m && ve().AnimateCap,
+                        className: (0, he.A)(
+                          xe().CapRow,
+                          xe().LongestStreak,
+                          m && xe().AnimateCap,
                         ),
-                        children: S.map((e, a) => {
+                        children: C.map((e, a) => {
                           const n = t.GetGameSummaryForApp(e.appid);
                           return (0, s.jsx)(
-                            Le,
+                            Re,
                             {
                               appid: e.appid,
                               index: a,
                               loading: "lazy",
                               rgAppIDs: I,
                               nParentAppID: n?.parent_appid,
-                              eChildType: ia(n),
+                              eChildType: ra(n),
                             },
                             "longest_" + e.appid,
                           );
@@ -8969,14 +8968,14 @@
                     }),
                   ],
                 }),
-                x &&
+                v &&
                   (0, s.jsx)("div", {
-                    className: ve().MoreButtonContainer,
+                    className: xe().MoreButtonContainer,
                     children: (0, s.jsx)("a", {
                       href: "#",
-                      className: ve().ShowMoreBtn,
-                      onClick: () => _(!0),
-                      children: (0, g.we)("#YIR_ShowMore"),
+                      className: xe().ShowMoreBtn,
+                      onClick: () => g(!0),
+                      children: (0, _.we)("#YIR_ShowMore"),
                     }),
                   }),
               ],
@@ -8984,10 +8983,10 @@
           ],
         });
       }
-      function ia(e) {
-        return e?.demo ? M.uE.ue : e?.playtest ? M.uE.Vi : void 0;
+      function ra(e) {
+        return e?.demo ? E.uE.ue : e?.playtest ? E.uE.Vi : void 0;
       }
-      function oa(e) {
+      function ia(e) {
         const { nDays: t } = e,
           a = [];
         if (t > 0) {
@@ -8995,7 +8994,7 @@
             a.push(
               (0, s.jsx)(
                 "div",
-                { className: sa().Tick },
+                { className: aa().Tick },
                 "DrawNDivForStreakDays" + e,
               ),
             );
@@ -9003,35 +9002,35 @@
         }
         return null;
       }
-      var la = a(32490);
-      function ca(e) {
+      var oa = a(32490);
+      function la(e) {
         const { steamId: t, year: a } = e,
-          n = v(),
+          n = x(),
           r =
             ((i = t),
-            (o = a),
-            l.useMemo(() => {
-              const e = "yearinreview_otheryears_" + i.GetAccountID() + "_" + o;
-              return (0, c.Tc)(e, "application_config");
-            }, [i, o]));
-        var i, o;
-        const d = C();
+            (c = a),
+            o.useMemo(() => {
+              const e = "yearinreview_otheryears_" + i.GetAccountID() + "_" + c;
+              return (0, l.Tc)(e, "application_config");
+            }, [i, c]));
+        var i, c;
+        const m = S();
         return r && 0 !== r.length
           ? (0, s.jsxs)("div", {
-              className: la.OtherYearsCtn,
+              className: oa.OtherYearsCtn,
               children: [
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(la.OtherYearsHeader, n.OtherYearsHeader),
-                  children: d("#YearInReview_OtherYearLinks_Header"),
+                  className: (0, he.A)(oa.OtherYearsHeader, n.OtherYearsHeader),
+                  children: m("#YearInReview_OtherYearLinks_Header"),
                 }),
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(la.OtherYearLinks, n.OtherYearLinks),
+                  className: (0, he.A)(oa.OtherYearLinks, n.OtherYearLinks),
                   children: r.map((e) =>
                     (0, s.jsx)(
-                      Pt.Ii,
+                      bt.Ii,
                       {
-                        href: `${c.TS.STORE_BASE_URL}replay/${t.ConvertTo64BitString()}/${e}?src=${m.Db.pR}`,
-                        className: (0, pe.A)(la.OtherYearLink, n.OtherYearLink),
+                        href: `${l.TS.STORE_BASE_URL}replay/${t.ConvertTo64BitString()}/${e}?src=${d.Db.pR}`,
+                        className: (0, he.A)(oa.OtherYearLink, n.OtherYearLink),
                         children: e,
                       },
                       e,
@@ -9042,122 +9041,122 @@
             })
           : null;
       }
-      var da = a(64021),
-        ma = a.n(da),
-        ha = a(738),
-        pa = a(1909),
-        ua = a(22837),
-        _a = a(51706);
-      class ga {
+      var ca = a(64021),
+        da = a.n(ca),
+        ma = a(738),
+        ha = a(1909),
+        pa = a(22837),
+        ua = a(51706);
+      class _a {
         m_SteamInterface = null;
         get SteamInterface() {
           return this.m_SteamInterface;
         }
         async GetLoadSocialImages(e, t, a) {
-          const s = d.w.Init(m.BY);
+          const s = c.w.Init(d.BY);
           s.Body().set_steamid(e),
             s.Body().set_year(t),
             s.Body().set_language(a);
-          const n = await m.Nl.GetUserYearInReviewShareImage(
+          const n = await d.Nl.GetUserYearInReviewShareImage(
             this.m_SteamInterface.GetServiceTransport(),
             s,
           );
-          if (n.GetEResult() != D.R)
+          if (n.GetEResult() != G.R)
             throw `Load social images failed: ${n.GetErrorMessage()}`;
           return n.Body().toObject().images;
         }
         GetAccountShortCode(e) {
           const t = "accountshortcode_" + e.GetAccountID();
-          return (0, c.Tc)(t, "application_config");
+          return (0, l.Tc)(t, "application_config");
         }
         static s_Singleton;
         static Get() {
           return (
-            ga.s_Singleton ||
-              ((ga.s_Singleton = new ga()),
-              ga.s_Singleton.Init(),
-              "dev" == c.TS.WEB_UNIVERSE &&
-                (window.g_YearInReview = ga.s_Singleton)),
-            ga.s_Singleton
+            _a.s_Singleton ||
+              ((_a.s_Singleton = new _a()),
+              _a.s_Singleton.Init(),
+              "dev" == l.TS.WEB_UNIVERSE &&
+                (window.g_YearInReview = _a.s_Singleton)),
+            _a.s_Singleton
           );
         }
         constructor() {}
         Init() {
-          this.m_SteamInterface = (0, U.P)();
+          this.m_SteamInterface = (0, F.P)();
         }
       }
-      const xa = "yir_social_images";
-      var va = a(73067),
-        Sa = a(44691);
-      function Ca(e) {
+      const ga = "yir_social_images";
+      var xa = a(73067),
+        va = a(44691);
+      function Sa(e) {
         const { userYearInReview: t, steamId: a, nYear: n } = e,
-          r = x(),
-          i = v();
-        if (!c.iA.logged_in) return null;
-        if (!r && c.iA.logged_in)
-          return (0, s.jsx)(Pt.Ii, {
-            className: (0, pe.A)(da.SeeRewindButton, i.SeeRewindButton),
-            href: `${c.TS.STORE_BASE_URL}replay/${c.iA.steamid}/${n}?src=${m.Db.UO}`,
-            children: (0, g.we)("#YIR_SeeYourRewind"),
+          r = g(),
+          i = x();
+        if (!l.iA.logged_in) return null;
+        if (!r && l.iA.logged_in)
+          return (0, s.jsx)(bt.Ii, {
+            className: (0, he.A)(ca.SeeRewindButton, i.SeeRewindButton),
+            href: `${l.TS.STORE_BASE_URL}replay/${l.iA.steamid}/${n}?src=${d.Db.UO}`,
+            children: (0, _.we)("#YIR_SeeYourRewind"),
           });
-        return (0, s.jsxs)(Ae.Z, {
-          className: da.YIRShareCtn,
+        return (0, s.jsxs)(we.Z, {
+          className: ca.YIRShareCtn,
           children: [
-            (0, s.jsx)(Ia, { userYearInReview: t, steamId: a, nYear: n }),
-            (0, s.jsxs)(Ae.Z, {
-              className: da.ShareButton,
+            (0, s.jsx)(Ca, { userYearInReview: t, steamId: a, nYear: n }),
+            (0, s.jsxs)(we.Z, {
+              className: ca.ShareButton,
               onActivate: (e) => {
-                (0, ha.pg)(
-                  (0, s.jsx)(ja, { userYearInReview: t, steamId: a, nYear: n }),
+                (0, ma.pg)(
+                  (0, s.jsx)(ya, { userYearInReview: t, steamId: a, nYear: n }),
                   window,
-                  { strTitle: (0, g.we)("#Button_Share") },
+                  { strTitle: (0, _.we)("#Button_Share") },
                 );
               },
               children: [
-                (0, s.jsx)(me.SYj, { className: (0, pe.A)(da.ShareIcon) }),
+                (0, s.jsx)(de.SYj, { className: (0, he.A)(ca.ShareIcon) }),
                 (0, s.jsx)("span", {
-                  className: (0, pe.A)(da.ShareText),
-                  children: (0, g.we)("#Button_Share"),
+                  className: (0, he.A)(ca.ShareText),
+                  children: (0, _.we)("#Button_Share"),
                 }),
               ],
             }),
           ],
         });
       }
-      function Ia(e) {
+      function Ca(e) {
         const { userYearInReview: t, steamId: a, nYear: n } = e,
-          [r, i] = (0, l.useState)(""),
-          o = (0, O.q3)(() => t.GetPrivacyState()),
-          c = (0, O.q3)(() => t.GetPrivacyState()),
-          d = (0, l.useMemo)(() => c === m.hb.QB || c === m.hb.uI, [c]),
+          [r, i] = (0, o.useState)(""),
+          l = (0, Y.q3)(() => t.GetPrivacyState()),
+          c = (0, Y.q3)(() => t.GetPrivacyState()),
+          m = (0, o.useMemo)(() => c === d.hb.QB || c === d.hb.uI, [c]),
           h = [
-            { data: m.hb.ym, label: (0, g.we)("#YIR_ShareVisbility_Private") },
+            { data: d.hb.ym, label: (0, _.we)("#YIR_ShareVisbility_Private") },
             {
-              data: m.hb.uI,
-              label: (0, g.we)("#YIR_ShareVisbility_FriendsOnly"),
+              data: d.hb.uI,
+              label: (0, _.we)("#YIR_ShareVisbility_FriendsOnly"),
             },
-            { data: m.hb.QB, label: (0, g.we)("#YIR_ShareVisbility_Public") },
+            { data: d.hb.QB, label: (0, _.we)("#YIR_ShareVisbility_Public") },
           ];
-        return (0, s.jsxs)(Ae.Z, {
+        return (0, s.jsxs)(we.Z, {
           "flow-children": "column",
           children: [
             (0, s.jsx)("div", {
-              className: (0, pe.A)(da.PrivacyWarning, d ? da.Visible : ""),
-              children: d
-                ? (0, g.we)("#YIR_ShareVisbility")
-                : (0, g.we)("#YIR_ShareModal_DisabledShareTtp"),
+              className: (0, he.A)(ca.PrivacyWarning, m ? ca.Visible : ""),
+              children: m
+                ? (0, _.we)("#YIR_ShareVisbility")
+                : (0, _.we)("#YIR_ShareModal_DisabledShareTtp"),
             }),
             (0, s.jsx)("div", {
-              className: da.DropDownSizer,
-              children: (0, s.jsx)(oe.ZU, {
-                strDropDownButtonClassName: da.DropdownButton,
-                strDropDownClassName: da.DropdownOption,
+              className: ca.DropDownSizer,
+              children: (0, s.jsx)(ie.ZU, {
+                strDropDownButtonClassName: ca.DropdownButton,
+                strDropDownClassName: ca.DropdownOption,
                 rgOptions: h,
-                selectedOption: o,
+                selectedOption: l,
                 onChange: async (e) => {
-                  if (e.data !== o) {
+                  if (e.data !== l) {
                     const s = await (async function (e, t, a) {
-                      return await V.Get().SetYearInReviewPrivacy(e, t, a);
+                      return await H.Get().SetYearInReviewPrivacy(e, t, a);
                     })(a.ConvertTo64BitString(), n, e.data);
                     void 0 !== s.privacy_state
                       ? t.SetPrivacyState(s.privacy_state)
@@ -9166,80 +9165,80 @@
                 },
               }),
             }),
-            r && (0, s.jsx)("div", { className: da.Error, children: r }),
+            r && (0, s.jsx)("div", { className: ca.Error, children: r }),
           ],
         });
       }
-      const ya = "l";
-      function ja(e) {
+      const Ia = "l";
+      function ya(e) {
         const { closeModal: t, userYearInReview: a, steamId: n, nYear: r } = e,
-          [i, o] = (0, l.useState)(),
-          d = (0, O.q3)(() => a.GetPrivacyState()),
-          h = (0, l.useMemo)(() => d === m.hb.QB || d === m.hb.uI, [d]),
-          [p, u] = (0, l.useState)((0, ua.sfN)(c.TS.LANGUAGE)),
-          _ = (0, l.useMemo)(() => (0, ua.LgB)(p), [p]),
-          x = ((v = n), ga.Get().GetAccountShortCode(v));
+          [i, c] = (0, o.useState)(),
+          m = (0, Y.q3)(() => a.GetPrivacyState()),
+          h = (0, o.useMemo)(() => m === d.hb.QB || m === d.hb.uI, [m]),
+          [p, u] = (0, o.useState)((0, pa.sfN)(l.TS.LANGUAGE)),
+          g = (0, o.useMemo)(() => (0, pa.LgB)(p), [p]),
+          x = ((v = n), _a.Get().GetAccountShortCode(v));
         var v;
         const S = `https://s.team/${((C = r), "y" + (C % 100))}/${x}`;
         var C;
-        const I = (0, l.useMemo)(() => {
+        const I = (0, o.useMemo)(() => {
             const e = new URL(S);
-            return e.searchParams.set(ya, _), e.href;
-          }, [_, S]),
+            return e.searchParams.set(Ia, g), e.href;
+          }, [g, S]),
           y = () => {
-            o(!0);
+            c(!0);
           };
         return i
-          ? (0, s.jsx)(va.J, { eventLink: I, closeModal: t })
-          : (0, s.jsx)(_a.o0, {
+          ? (0, s.jsx)(xa.J, { eventLink: I, closeModal: t })
+          : (0, s.jsx)(ua.o0, {
               strDescription: "",
-              strTitle: (0, g.we)("#YIR_ShareModal_Title"),
+              strTitle: (0, _.we)("#YIR_ShareModal_Title"),
               onCancel: t,
               onOK: t,
               bAlertDialog: !0,
-              modalClassName: da.ShareModalDialogCtn,
+              modalClassName: ca.ShareModalDialogCtn,
               children: (0, s.jsxs)("div", {
-                className: da.ShareModal,
+                className: ca.ShareModal,
                 children: [
                   (0, s.jsx)("div", {
-                    className: da.ShareLanguagePicker,
+                    className: ca.ShareLanguagePicker,
                     children: (0, s.jsx)("div", {
-                      className: da.LangaugeDropdown,
-                      children: (0, s.jsx)(pa.Ng, {
+                      className: ca.LangaugeDropdown,
+                      children: (0, s.jsx)(ha.Ng, {
                         selectedLang: p,
                         fnOnLanguageChanged: u,
-                        fnFilterLanguage: (e) => e !== ua.X51,
+                        fnFilterLanguage: (e) => e !== pa.X51,
                       }),
                     }),
                   }),
-                  (0, s.jsx)(fa, {
-                    language: _,
+                  (0, s.jsx)(ja, {
+                    language: g,
                     steamId: n,
                     nYear: r,
                     shareUrl: I,
                   }),
                   (0, s.jsxs)("div", {
-                    className: da.FooterCtn,
+                    className: ca.FooterCtn,
                     children: [
-                      (0, s.jsx)(Ia, {
+                      (0, s.jsx)(Ca, {
                         userYearInReview: a,
                         steamId: n,
                         nYear: r,
                       }),
                       (0, s.jsx)("div", {
-                        className: (0, pe.A)(da.VisBorder, !h && da.Disabled),
-                        children: c.TS.IN_MOBILE_WEBVIEW
-                          ? (0, s.jsx)(Ta, {
+                        className: (0, he.A)(ca.VisBorder, !h && ca.Disabled),
+                        children: l.TS.IN_MOBILE_WEBVIEW
+                          ? (0, s.jsx)(ka, {
                               bCanShare: h,
                               shareUrl: I,
                               shareOnSteamActivityFeed: y,
                             })
-                          : (0, s.jsx)(ka, {
+                          : (0, s.jsx)(Na, {
                               nYear: r,
                               bCanShare: h,
                               shareUrl: I,
                               shortAccountCode: x,
-                              language: _,
+                              language: g,
                               shareOnSteamActivityFeed: y,
                             }),
                       }),
@@ -9249,110 +9248,110 @@
               }),
             });
       }
-      function fa(e) {
+      function ja(e) {
         const { language: t, steamId: a, nYear: n, shareUrl: r } = e,
-          [i, o] = (0, l.useState)(0),
-          [d, m] = (0, l.useState)(!1),
+          [i, c] = (0, o.useState)(0),
+          [d, h] = (0, o.useState)(!1),
           { isLoading: p, data: u } = (function (e, t, a) {
-            return (0, h.I)({
-              queryKey: [xa, e, t, a],
-              queryFn: () => ga.Get().GetLoadSocialImages(e, t, a),
+            return (0, m.I)({
+              queryKey: [ga, e, t, a],
+              queryFn: () => _a.Get().GetLoadSocialImages(e, t, a),
             });
           })(a.ConvertTo64BitString(), n, t),
-          _ = u?.length - 1,
-          x = `${c.TS.BASE_URL_SHARED_CDN}social_sharing/`,
+          g = u?.length - 1,
+          x = `${l.TS.BASE_URL_SHARED_CDN}social_sharing/`,
           v = (e) => {
-            i > 0 && (o(i - 1), e.stopPropagation());
+            i > 0 && (c(i - 1), e.stopPropagation());
           },
           S = (e) => {
-            i < _ && (o(i + 1), e.stopPropagation());
+            i < g && (c(i + 1), e.stopPropagation());
           };
         return (
-          (0, Sa.E)("ArrowLeft", v),
-          (0, Sa.E)("Left", v),
-          (0, Sa.E)("ArrowRight", S),
-          (0, Sa.E)("Right", S),
+          (0, va.E)("ArrowLeft", v),
+          (0, va.E)("Left", v),
+          (0, va.E)("ArrowRight", S),
+          (0, va.E)("Right", S),
           p
             ? (0, s.jsx)("div", {
-                className: (0, pe.A)(da.CarouselCtn, da.LoadingCtn),
-                children: (0, s.jsx)(he.t, { position: "center" }),
+                className: (0, he.A)(ca.CarouselCtn, ca.LoadingCtn),
+                children: (0, s.jsx)(me.t, { position: "center" }),
               })
             : u
               ? (0, s.jsxs)("div", {
-                  className: da.CarouselCtn,
+                  className: ca.CarouselCtn,
                   children: [
                     d &&
-                      (0, s.jsx)(wa, {
+                      (0, s.jsx)(fa, {
                         carouselIndex: i,
                         endPreviewImage: (e) => {
-                          m(!1), e.stopPropagation();
+                          h(!1), e.stopPropagation();
                         },
                         onMoveLeft: v,
                         onMoveRight: S,
                         name: u[i].name,
                         url: `${x}${u[i].url_path}`,
-                        maxIndex: _,
+                        maxIndex: g,
                       }),
                     (0, s.jsxs)("div", {
-                      className: da.ImageArrowCtn,
+                      className: ca.ImageArrowCtn,
                       children: [
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(
-                            da.Arrow,
-                            da.Left,
-                            0 === i && da.ArrowDisabled,
+                          className: (0, he.A)(
+                            ca.Arrow,
+                            ca.Left,
+                            0 === i && ca.ArrowDisabled,
                           ),
                           onClick: v,
-                          children: (0, s.jsx)(me.V5W, { angle: 270 }),
+                          children: (0, s.jsx)(de.V5W, { angle: 270 }),
                         }),
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(
-                            da.Arrow,
-                            da.Right,
-                            i === _ && da.ArrowDisabled,
+                          className: (0, he.A)(
+                            ca.Arrow,
+                            ca.Right,
+                            i === g && ca.ArrowDisabled,
                           ),
                           onClick: S,
-                          children: (0, s.jsx)(me.V5W, { angle: 90 }),
+                          children: (0, s.jsx)(de.V5W, { angle: 90 }),
                         }),
                         (0, s.jsxs)("div", {
-                          className: da.ImagesCtn,
+                          className: ca.ImagesCtn,
                           children: [
                             (0, s.jsx)("div", {
-                              className: (0, pe.A)(da.Peek, da.LeftPeak),
+                              className: (0, he.A)(ca.Peek, ca.LeftPeak),
                               children:
                                 0 !== i &&
                                 (0, s.jsx)("img", {
-                                  className: da.PeakImg,
+                                  className: ca.PeakImg,
                                   src: `${x}${u[i - 1].url_path}`,
                                 }),
                             }),
                             (0, s.jsx)("div", {
-                              className: da.CenterImage,
+                              className: ca.CenterImage,
                               children: (0, s.jsxs)("div", {
-                                className: da.ImgAndPreviewCtn,
+                                className: ca.ImgAndPreviewCtn,
                                 children: [
                                   (0, s.jsx)("div", {
                                     onClick: (e) => {
-                                      m(!0), e.stopPropagation();
+                                      h(!0), e.stopPropagation();
                                     },
-                                    className: da.PreviewMask,
-                                    children: (0, g.we)(
+                                    className: ca.PreviewMask,
+                                    children: (0, _.we)(
                                       "#YIR_ShareModal_FullscreenPreview",
                                     ),
                                   }),
                                   (0, s.jsx)("img", {
-                                    className: da.CenterImg,
+                                    className: ca.CenterImg,
                                     src: `${x}${u[i].url_path}`,
                                   }),
                                 ],
                               }),
                             }),
                             (0, s.jsx)("div", {
-                              className: (0, pe.A)(da.Peek, da.RightPeak),
+                              className: (0, he.A)(ca.Peek, ca.RightPeak),
                               children:
-                                i !== _ &&
+                                i !== g &&
                                 (0, s.jsx)("img", {
-                                  className: da.PeakImg,
+                                  className: ca.PeakImg,
                                   src: `${x}${u[i + 1].url_path}`,
                                 }),
                             }),
@@ -9360,23 +9359,23 @@
                         }),
                       ],
                     }),
-                    c.TS.IN_MOBILE_WEBVIEW
-                      ? (0, s.jsx)(Na, {
+                    l.TS.IN_MOBILE_WEBVIEW
+                      ? (0, s.jsx)(Aa, {
                           imageUrl: `${x}${u[i].url_path}`,
                           shareUrl: r,
                         })
-                      : c.TS.IN_CLIENT
+                      : l.TS.IN_CLIENT
                         ? null
-                        : (0, s.jsx)(Aa, { imageUrl: `${x}${u[i].url_path}` }),
+                        : (0, s.jsx)(wa, { imageUrl: `${x}${u[i].url_path}` }),
                     (0, s.jsx)("div", {
-                      className: da.CarouselHintCtn,
+                      className: ca.CarouselHintCtn,
                       children: u.map((e, t) =>
                         (0, s.jsx)(
                           "div",
                           {
-                            className: (0, pe.A)(
-                              da.CarouselHint,
-                              t === i ? da.ActiveHint : null,
+                            className: (0, he.A)(
+                              ca.CarouselHint,
+                              t === i ? ca.ActiveHint : null,
                             ),
                           },
                           `${t}_hint`,
@@ -9384,24 +9383,24 @@
                       ),
                     }),
                     (0, s.jsx)("div", {
-                      className: da.FormatHint,
-                      children: (0, g.we)(
+                      className: ca.FormatHint,
+                      children: (0, _.we)(
                         `#YIR_ShareModal_ImageCaption_${u[i].name}`,
                       ),
                     }),
                   ],
                 })
               : (0, s.jsx)("div", {
-                  className: (0, pe.A)(da.CarouselCtn, da.LoadingCtn),
+                  className: (0, he.A)(ca.CarouselCtn, ca.LoadingCtn),
                   children: (0, s.jsx)("div", {
-                    children: (0, g.we)(
+                    children: (0, _.we)(
                       "#YIR_ShareModal_FailedToGenerateImages",
                     ),
                   }),
                 })
         );
       }
-      function wa(e) {
+      function fa(e) {
         const {
           carouselIndex: t,
           maxIndex: a,
@@ -9412,40 +9411,40 @@
           url: l,
         } = e;
         return (
-          (0, Sa.E)("Escape", i),
-          (0, Sa.E)("Esc", i),
+          (0, va.E)("Escape", i),
+          (0, va.E)("Esc", i),
           (0, s.jsx)("div", {
-            className: da.PreviewImageCtn,
+            className: ca.PreviewImageCtn,
             children: (0, s.jsx)("div", {
-              className: da.PreviewClickCtn,
+              className: ca.PreviewClickCtn,
               onClick: i,
               children: (0, s.jsxs)("div", {
-                className: da.PreviewAndIconCtn,
+                className: ca.PreviewAndIconCtn,
                 children: [
                   (0, s.jsx)("div", {
-                    className: da.CloseIcon,
-                    children: (0, s.jsx)(me.sED, {}),
+                    className: ca.CloseIcon,
+                    children: (0, s.jsx)(de.sED, {}),
                   }),
                   (0, s.jsx)("div", {
-                    className: (0, pe.A)(
-                      da.Arrow,
-                      da.Left,
-                      0 === t && da.ArrowDisabled,
+                    className: (0, he.A)(
+                      ca.Arrow,
+                      ca.Left,
+                      0 === t && ca.ArrowDisabled,
                     ),
                     onClick: n,
-                    children: (0, s.jsx)(me.V5W, { angle: 270 }),
+                    children: (0, s.jsx)(de.V5W, { angle: 270 }),
                   }),
                   (0, s.jsx)("div", {
-                    className: (0, pe.A)(
-                      da.Arrow,
-                      da.Right,
-                      t === a && da.ArrowDisabled,
+                    className: (0, he.A)(
+                      ca.Arrow,
+                      ca.Right,
+                      t === a && ca.ArrowDisabled,
                     ),
                     onClick: r,
-                    children: (0, s.jsx)(me.V5W, { angle: 90 }),
+                    children: (0, s.jsx)(de.V5W, { angle: 90 }),
                   }),
                   (0, s.jsx)("img", {
-                    className: da[`PreviewImage_${o}`],
+                    className: ca[`PreviewImage_${o}`],
                     src: l,
                   }),
                 ],
@@ -9454,9 +9453,9 @@
           })
         );
       }
-      function Aa(e) {
+      function wa(e) {
         return (0, s.jsxs)("div", {
-          className: da.InteractButton,
+          className: ca.InteractButton,
           onClick: () => {
             fetch(e.imageUrl)
               .then((e) => e.blob())
@@ -9471,18 +9470,18 @@
               });
           },
           children: [
-            (0, s.jsx)(me.MQO, { className: da.InteractButtonIcon }),
+            (0, s.jsx)(de.MQO, { className: ca.InteractButtonIcon }),
             (0, s.jsx)("span", {
-              className: (0, pe.A)(da.InteractButtonText),
-              children: (0, g.we)("#YIR_ShareModal_SaveImage"),
+              className: (0, he.A)(ca.InteractButtonText),
+              children: (0, _.we)("#YIR_ShareModal_SaveImage"),
             }),
           ],
         });
       }
-      function Na(e) {
+      function Aa(e) {
         const { imageUrl: t, shareUrl: a } = e;
         return (0, s.jsxs)("div", {
-          className: da.InteractButton,
+          className: ca.InteractButton,
           onClick: () => {
             const e = Reflect.get(window, "ReactNativeWebView");
             if (e?.postMessage) {
@@ -9490,52 +9489,52 @@
                 event_name: "shareimage",
                 link: t,
                 url: t,
-                subject: (0, g.we)("#YIR_ShareModal_MobileSubject"),
+                subject: (0, _.we)("#YIR_ShareModal_MobileSubject"),
                 message: a,
-                title: (0, g.we)("#YIR_ShareModal_MobileMessage"),
+                title: (0, _.we)("#YIR_ShareModal_MobileMessage"),
               };
               return void e.postMessage(JSON.stringify(s));
             }
           },
           children: [
-            (0, s.jsx)(me.SYj, { className: da.InteractButtonIcon }),
+            (0, s.jsx)(de.SYj, { className: ca.InteractButtonIcon }),
             (0, s.jsx)("span", {
-              className: (0, pe.A)(da.InteractButtonText),
-              children: (0, g.we)("#YIR_ShareModal_ShareImage"),
+              className: (0, he.A)(ca.InteractButtonText),
+              children: (0, _.we)("#YIR_ShareModal_ShareImage"),
             }),
           ],
         });
       }
-      function ka(e) {
+      function Na(e) {
         const {
             bCanShare: t,
             shareUrl: a,
             shortAccountCode: n,
             language: r,
             nYear: i,
-            shareOnSteamActivityFeed: o,
+            shareOnSteamActivityFeed: c,
           } = e,
-          [d, m] = (0, l.useState)(!1);
+          [d, m] = (0, o.useState)(!1);
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)("div", {
-              className: da.ShareURLTitle,
-              children: (0, g.we)("#YIR_ShareModal_YourLink"),
+              className: ca.ShareURLTitle,
+              children: (0, _.we)("#YIR_ShareModal_YourLink"),
             }),
             (0, s.jsxs)("div", {
-              className: da.ShareURLCtn,
+              className: ca.ShareURLCtn,
               children: [
-                (0, s.jsx)("div", { className: da.ShareShortUrl, children: a }),
+                (0, s.jsx)("div", { className: ca.ShareShortUrl, children: a }),
                 (0, s.jsxs)("div", {
-                  className: (0, pe.A)(da.ShareLinkButton),
+                  className: (0, he.A)(ca.ShareLinkButton),
                   onClick: () => {
                     navigator.clipboard.writeText(a), m(!0);
                   },
                   children: [
-                    (0, s.jsx)(me.SYj, { className: da.ShareLinkIcon }),
+                    (0, s.jsx)(de.SYj, { className: ca.ShareLinkIcon }),
                     (0, s.jsx)("span", {
-                      className: (0, pe.A)(da.ShareLinkText),
-                      children: (0, g.we)(
+                      className: (0, he.A)(ca.ShareLinkText),
+                      children: (0, _.we)(
                         d
                           ? "#YIR_ShareModal_CopyLink_Success"
                           : "#YIR_ShareModal_CopyLink",
@@ -9546,29 +9545,29 @@
               ],
             }),
             (0, s.jsxs)("div", {
-              className: (0, pe.A)(da.SocialButtons, da.SteamButtons),
+              className: (0, he.A)(ca.SocialButtons, ca.SteamButtons),
               children: [
                 (0, s.jsxs)("div", {
-                  onClick: o,
-                  className: (0, pe.A)(da.ShareLinkButton, da.FeedBtn),
+                  onClick: c,
+                  className: (0, he.A)(ca.ShareLinkButton, ca.FeedBtn),
                   children: [
-                    (0, s.jsx)(me.Qte, { className: da.ShareLinkIcon }),
+                    (0, s.jsx)(de.Qte, { className: ca.ShareLinkIcon }),
                     (0, s.jsx)("span", {
-                      className: (0, pe.A)(da.ShareLinkText),
-                      children: (0, g.we)(
+                      className: (0, he.A)(ca.ShareLinkText),
+                      children: (0, _.we)(
                         "#YIR_ShareModal_ShareOnFriendsActivity",
                       ),
                     }),
                   ],
                 }),
                 (0, s.jsxs)("a", {
-                  href: `${c.TS.COMMUNITY_BASE_URL}profiles/${c.iA.steamid}/edit/showcases`,
-                  className: (0, pe.A)(da.ShareLinkButton, da.FeedBtn),
+                  href: `${l.TS.COMMUNITY_BASE_URL}profiles/${l.iA.steamid}/edit/showcases`,
+                  className: (0, he.A)(ca.ShareLinkButton, ca.FeedBtn),
                   children: [
-                    (0, s.jsx)(me.KJW, { className: da.ShareLinkIcon }),
+                    (0, s.jsx)(de.KJW, { className: ca.ShareLinkIcon }),
                     (0, s.jsx)("span", {
-                      className: (0, pe.A)(da.ShareLinkText),
-                      children: (0, g.we)("#YIR_ShareModal_AddShowcase"),
+                      className: (0, he.A)(ca.ShareLinkText),
+                      children: (0, _.we)("#YIR_ShareModal_AddShowcase"),
                     }),
                   ],
                 }),
@@ -9577,14 +9576,14 @@
           ],
         });
       }
-      function Ta(e) {
+      function ka(e) {
         const { bCanShare: t, shareUrl: a, shareOnSteamActivityFeed: n } = e;
         return (0, s.jsx)(s.Fragment, {
           children: (0, s.jsxs)("div", {
-            className: da.MobileCtn,
+            className: ca.MobileCtn,
             children: [
               (0, s.jsxs)("div", {
-                className: (0, pe.A)(da.ShareLinkButton, !t && da.Disabled),
+                className: (0, he.A)(ca.ShareLinkButton, !t && ca.Disabled),
                 onClick: () => {
                   const e = Reflect.get(window, "ReactNativeWebView");
                   if (e?.postMessage) {
@@ -9592,29 +9591,29 @@
                       event_name: "share",
                       link: a,
                       url: a,
-                      subject: (0, g.we)("#YIR_ShareModal_MobileSubject"),
-                      message: (0, g.we)("#YIR_ShareModal_MobileMessage"),
-                      title: (0, g.we)("#YIR_ShareModal_MobileMessage"),
+                      subject: (0, _.we)("#YIR_ShareModal_MobileSubject"),
+                      message: (0, _.we)("#YIR_ShareModal_MobileMessage"),
+                      title: (0, _.we)("#YIR_ShareModal_MobileMessage"),
                     };
                     return void e.postMessage(JSON.stringify(t));
                   }
                 },
                 children: [
-                  (0, s.jsx)(me.SYj, { className: da.ShareLinkIcon }),
+                  (0, s.jsx)(de.SYj, { className: ca.ShareLinkIcon }),
                   (0, s.jsx)("span", {
-                    className: (0, pe.A)(da.ShareLinkText),
-                    children: (0, g.we)("#YIR_ShareModal_ShareLink"),
+                    className: (0, he.A)(ca.ShareLinkText),
+                    children: (0, _.we)("#YIR_ShareModal_ShareLink"),
                   }),
                 ],
               }),
               (0, s.jsxs)("div", {
                 onClick: n,
-                className: (0, pe.A)(da.ShareLinkButton, !t && da.Disabled),
+                className: (0, he.A)(ca.ShareLinkButton, !t && ca.Disabled),
                 children: [
-                  (0, s.jsx)(me.Qte, { className: da.ShareLinkIcon }),
+                  (0, s.jsx)(de.Qte, { className: ca.ShareLinkIcon }),
                   (0, s.jsx)("span", {
-                    className: (0, pe.A)(da.ShareLinkText),
-                    children: (0, g.we)(
+                    className: (0, he.A)(ca.ShareLinkText),
+                    children: (0, _.we)(
                       "#YIR_ShareModal_ShareOnFriendsActivity",
                     ),
                   }),
@@ -9624,10 +9623,10 @@
           }),
         });
       }
-      function Ra(e) {
+      function Ta(e) {
         return e >= 2024;
       }
-      function La(e) {
+      function Ra(e) {
         const { userYearInReview: t } = e,
           a = t.GetYear(),
           n = t.GetPlayTimeStats().total_stats,
@@ -9638,13 +9637,13 @@
           c = o.filter((e) => e.new_this_year).length || 0,
           d = t.GetPlayTimeStats().playtime_streak,
           m = t.GetTopGamesShown(),
-          h = C(),
+          h = S(),
           p = m
             .slice(0, 5)
             .map((e, t) =>
-              E.A.Get().BHasStoreItem(e.appid, M.c6.qI)
+              D.A.Get().BHasStoreItem(e.appid, E.c6.qI)
                 ? (0, s.jsx)(
-                    Ha,
+                    Ua,
                     { gameStat: e, gridClass: `Game${t}` },
                     `${t}_${e.appid}`,
                   )
@@ -9652,33 +9651,33 @@
             )
             .filter((e) => null !== e),
           u = [
-            ba(l, t),
-            Da(a, n),
-            Pa(
+            Ba(l, t),
+            Ga(a, n),
+            ba(
               a,
               d,
-              Ra(a) ? t.GetPreviousYearSummary()?.longest_streak : void 0,
+              Ta(a) ? t.GetPreviousYearSummary()?.longest_streak : void 0,
             ),
           ].filter((e) => null !== e),
           _ = (0, s.jsx)(
-            Ma,
+            Ea,
             {
               rgGamesLength: o.length,
               nNewGames: c,
               nDemoPlayed: r,
               nPlaytestPlayed: i,
               nYear: t.GetYear(),
-              nPreviousYearsGames: Ra(a)
+              nPreviousYearsGames: Ta(a)
                 ? t.GetPreviousYearSummary()?.games_played
                 : void 0,
             },
             "overview",
           );
-        return (0, s.jsx)(fe, {
+        return (0, s.jsx)(je, {
           children: (0, s.jsxs)("div", {
-            className: (0, pe.A)(Ce().YearInReviewContent, Ce().SummaryArea),
+            className: (0, he.A)(Se().YearInReviewContent, Se().SummaryArea),
             children: [
-              (0, s.jsx)(Ea, {
+              (0, s.jsx)(Da, {
                 rgGamesLength: o.length,
                 nNewGames: c,
                 totalAchievementUnlocked: l,
@@ -9688,13 +9687,13 @@
               Boolean(1 !== o.length) &&
                 (0, s.jsx)(s.Fragment, {
                   children: (0, s.jsxs)("div", {
-                    className: Ce().SummaryGridCtn,
+                    className: Se().SummaryGridCtn,
                     children: [
                       (0, s.jsx)("div", {
-                        className: Ce().SectionSubTitle,
+                        className: Se().SectionSubTitle,
                         children: h("#YIR_YourSummary_SubTitle"),
                       }),
-                      (0, s.jsx)(Ba, {
+                      (0, s.jsx)(La, {
                         overview: _,
                         statFillers: u,
                         gameFillers: p,
@@ -9706,50 +9705,50 @@
           }),
         });
       }
-      function Ba(e) {
+      function La(e) {
         let { statFillers: t, gameFillers: a, overview: n } = e;
         return a.length > 2 && t.length > 1
           ? (0, s.jsx)("div", {
-              className: Ce().SummaryGridStandard,
+              className: Se().SummaryGridStandard,
               children: [n, t[0], t[1], a[0], a[1], a[2]],
             })
           : a.length > 1 && t.length > 2
             ? (0, s.jsx)("div", {
-                className: Ce().SummaryGridStandard,
+                className: Se().SummaryGridStandard,
                 children: [n, t[1], t[2], t[0], a[0], a[1]],
               })
             : 1 == t.length && a.length > 3
               ? (0, s.jsx)("div", {
-                  className: Ce().SummaryGridStandard,
+                  className: Se().SummaryGridStandard,
                   children: [n, t[0], a[0], a[1], a[2], a[3]],
                 })
               : a.length > 1
                 ? (0, s.jsx)("div", {
-                    className: Ce().SummaryGridSparse,
+                    className: Se().SummaryGridSparse,
                     children: [n, a[0], a[1]],
                   })
                 : null;
       }
-      function ba(e, t) {
+      function Ba(e, t) {
         return e > 0
-          ? (0, s.jsx)(Oa, { userYearInReview: t }, "totalAchievements")
+          ? (0, s.jsx)(Ya, { userYearInReview: t }, "totalAchievements")
           : null;
       }
-      function Pa(e, t, a) {
+      function ba(e, t, a) {
         return t && t.longest_consecutive_days <= 1 && a <= 1
           ? null
           : t &&
               t.longest_consecutive_days > 0 &&
-              "cn" !== c.iA.country_code.toLowerCase()
+              "cn" !== l.iA.country_code.toLowerCase()
             ? (0, s.jsx)(
-                Fa,
+                Oa,
                 { oLongestStreak: t, nYear: e, nPrevLongestStreamDays: a },
                 "longestStreak",
               )
             : null;
       }
-      const Ga = 1e3;
-      function Da(e, t) {
+      const Pa = 1e3;
+      function Ga(e, t) {
         const a =
             t.controller_playtime_percentagex100 +
             t.deck_playtime_percentagex100,
@@ -9758,11 +9757,11 @@
             t.controller_playtime_percentagex100 -
             t.vr_playtime_percentagex100 -
             t.deck_playtime_percentagex100;
-        return a < Ga || n < Ga
+        return a < Pa || n < Pa
           ? null
-          : (0, s.jsx)(Ua, { oTotalStats: t, nYear: e }, "hardwareTime");
+          : (0, s.jsx)(Fa, { oTotalStats: t, nYear: e }, "hardwareTime");
       }
-      function Ea(e) {
+      function Da(e) {
         const {
             rgGamesLength: t,
             nNewGames: a,
@@ -9770,7 +9769,7 @@
             nTotalPlaytimeSeconds: r,
             nTotalPercentagePlaytimex100: i,
           } = e,
-          o = C();
+          o = S();
         let l;
         return (
           (l =
@@ -9795,72 +9794,72 @@
                               : r > 36e4
                                 ? o("#YIR_YourSummary_HoursMany")
                                 : null),
-          (0, s.jsx)("div", { className: Ce().SectionTitle, children: l })
+          (0, s.jsx)("div", { className: Se().SectionTitle, children: l })
         );
       }
-      function Ma(e) {
-        const t = (0, l.useContext)(Qs).persona_name,
+      function Ea(e) {
+        const t = (0, o.useContext)(Zs).persona_name,
           {
             rgGamesLength: a,
             nNewGames: n,
             nDemoPlayed: r,
             nPlaytestPlayed: i,
-            nYear: o,
+            nYear: c,
             nPreviousYearsGames: d,
           } = e,
-          m = v(),
-          h = `${c.TS.IMG_URL}yearinreview/bg_2023.svg`;
-        let p = Ce().NormalNumbers;
+          m = x(),
+          h = `${l.TS.IMG_URL}yearinreview/bg_2023.svg`;
+        let p = Se().NormalNumbers;
         return (
-          a > 99999 ? (p = Ce().SixNumbers) : a > 99 && (p = Ce().ThreeNumbers),
+          a > 99999 ? (p = Se().SixNumbers) : a > 99 && (p = Se().ThreeNumbers),
           (0, s.jsx)("div", {
-            className: (0, pe.A)(Ce().SummaryCtnShadow, m.SummaryCtnShadow),
+            className: (0, he.A)(Se().SummaryCtnShadow, m.SummaryCtnShadow),
             children: (0, s.jsxs)("div", {
-              className: (0, pe.A)(
-                Ce().SummaryCtn,
-                Ce().GridItem,
+              className: (0, he.A)(
+                Se().SummaryCtn,
+                Se().GridItem,
                 m.GridItem,
-                Ce().OverviewBlock,
+                Se().OverviewBlock,
                 m.SummaryCtn,
               ),
               children: [
-                (0, s.jsx)("div", { className: Ce().SubtleBorder }),
+                (0, s.jsx)("div", { className: Se().SubtleBorder }),
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(
-                    Ce().BackgroundImage,
-                    Ce().BackgroundImageCover,
+                  className: (0, he.A)(
+                    Se().BackgroundImage,
+                    Se().BackgroundImageCover,
                   ),
                   style: { backgroundImage: `url(${h})` },
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().SummaryBlockTitle,
+                  className: Se().SummaryBlockTitle,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().RewindHeader,
-                      children: (0, g.PP)(
+                      className: Se().RewindHeader,
+                      children: (0, _.PP)(
                         "#YearInReview_SteamRewindHeader",
                         (0, s.jsx)("span", {
-                          className: (0, pe.A)(Ce().UserName, m.UserName),
-                          children: (0, g.we)(
+                          className: (0, he.A)(Se().UserName, m.UserName),
+                          children: (0, _.we)(
                             "#YearInReview_PossessiveUserName",
                             t,
                           ),
                         }),
-                        (0, g.we)("#date_year", o),
+                        (0, _.we)("#date_year", c),
                       ),
                     }),
                     (0, s.jsxs)("div", {
-                      className: (0, pe.A)(Ce().StatBox, Ce().Big),
+                      className: (0, he.A)(Se().StatBox, Se().Big),
                       children: [
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(Ce().BigNum, p),
-                          children: (0, ge.Dq)(a),
+                          className: (0, he.A)(Se().BigNum, p),
+                          children: (0, _e.Dq)(a),
                         }),
                         (0, s.jsx)("div", {
-                          className: Ce().SmallText,
-                          children: (0, g.Yp)("#YIR_YourSummary_Games", a),
+                          className: Se().SmallText,
+                          children: (0, _.Yp)("#YIR_YourSummary_Games", a),
                         }),
-                        (0, s.jsx)(Ya, {
+                        (0, s.jsx)(Ma, {
                           strTokenPrefix: "#YIR_YourSummary_PrevYear_Game",
                           nCurValue: a,
                           nPrevValue: d,
@@ -9870,19 +9869,19 @@
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().SubSummaryCtn,
+                  className: Se().SubSummaryCtn,
                   children: [
                     Boolean(n) &&
                       (0, s.jsxs)("div", {
-                        className: Ce().StatBox,
+                        className: Se().StatBox,
                         children: [
                           (0, s.jsx)("div", {
-                            className: Ce().BigNum,
-                            children: (0, ge.Dq)(n),
+                            className: Se().BigNum,
+                            children: (0, _e.Dq)(n),
                           }),
                           (0, s.jsx)("div", {
-                            className: Ce().SmallText,
-                            children: (0, g.Yp)(
+                            className: Se().SmallText,
+                            children: (0, _.Yp)(
                               "#YIR_YourSummary_GamesFirst",
                               n,
                             ),
@@ -9891,29 +9890,29 @@
                       }),
                     Boolean(r) &&
                       (0, s.jsxs)("div", {
-                        className: Ce().StatBox,
+                        className: Se().StatBox,
                         children: [
                           (0, s.jsx)("div", {
-                            className: Ce().BigNum,
-                            children: (0, ge.Dq)(r),
+                            className: Se().BigNum,
+                            children: (0, _e.Dq)(r),
                           }),
                           (0, s.jsx)("div", {
-                            className: Ce().SmallText,
-                            children: (0, g.Yp)("#YIR_YourSummary_Demos", r),
+                            className: Se().SmallText,
+                            children: (0, _.Yp)("#YIR_YourSummary_Demos", r),
                           }),
                         ],
                       }),
                     Boolean(i) &&
                       (0, s.jsxs)("div", {
-                        className: Ce().StatBox,
+                        className: Se().StatBox,
                         children: [
                           (0, s.jsx)("div", {
-                            className: Ce().BigNum,
-                            children: (0, ge.Dq)(i),
+                            className: Se().BigNum,
+                            children: (0, _e.Dq)(i),
                           }),
                           (0, s.jsx)("div", {
-                            className: Ce().SmallText,
-                            children: (0, g.Yp)(
+                            className: Se().SmallText,
+                            children: (0, _.Yp)(
                               "#YIR_YourSummary_PlayTests",
                               i,
                             ),
@@ -9927,113 +9926,113 @@
           })
         );
       }
-      function Ya(e) {
+      function Ma(e) {
         const { strTokenPrefix: t, nCurValue: a, nPrevValue: n } = e;
         if (null != n && 0 !== n && 0 !== a)
           return a == n
             ? null
             : a < n
               ? (0, s.jsxs)("div", {
-                  className: Ce().CompareCtn,
+                  className: Se().CompareCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: (0, pe.A)(
-                        Ce().CompareArrow,
-                        Ce().ArrowDownCtn,
+                      className: (0, he.A)(
+                        Se().CompareArrow,
+                        Se().ArrowDownCtn,
                       ),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().CompareText,
-                      children: (0, g.Yp)(t + "Less", n - a, (0, ge.Dq)(n - a)),
+                      className: Se().CompareText,
+                      children: (0, _.Yp)(t + "Less", n - a, (0, _e.Dq)(n - a)),
                     }),
                   ],
                 })
               : (0, s.jsxs)("div", {
-                  className: Ce().CompareCtn,
+                  className: Se().CompareCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: (0, pe.A)(Ce().CompareArrow, Ce().ArrowUpCtn),
+                      className: (0, he.A)(Se().CompareArrow, Se().ArrowUpCtn),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().CompareText,
-                      children: (0, g.Yp)(t + "More", a - n, (0, ge.Dq)(a - n)),
+                      className: Se().CompareText,
+                      children: (0, _.Yp)(t + "More", a - n, (0, _e.Dq)(a - n)),
                     }),
                   ],
                 });
       }
-      function Oa(e) {
+      function Ya(e) {
         const { userYearInReview: t } = e,
           a = t.GetPlayTimeStats().summary_stats,
           n = (t.GetFilteredGameSummary(), t.GetYear()),
-          r = v(),
-          i = `${c.TS.IMG_URL}yearinreview/achievement_grid_02.webp`;
-        let o = Ce().NormalNumbers;
+          r = x(),
+          i = `${l.TS.IMG_URL}yearinreview/achievement_grid_02.webp`;
+        let o = Se().NormalNumbers;
         return (
           a.total_achievements > 99999
-            ? (o = Ce().SixNumbers)
-            : a.total_achievements > 99 && (o = Ce().ThreeNumbers),
+            ? (o = Se().SixNumbers)
+            : a.total_achievements > 99 && (o = Se().ThreeNumbers),
           (0, s.jsx)("div", {
-            className: (0, pe.A)(Ce().SummaryCtnShadow, r.SummaryCtnShadow),
+            className: (0, he.A)(Se().SummaryCtnShadow, r.SummaryCtnShadow),
             children: (0, s.jsxs)("div", {
-              className: (0, pe.A)(
-                Ce().SummaryCtn,
-                Ce().GridItem,
+              className: (0, he.A)(
+                Se().SummaryCtn,
+                Se().GridItem,
                 r.GridItem,
-                Ce().Achievements,
-                Ce().AchievementBlock,
+                Se().Achievements,
+                Se().AchievementBlock,
                 r.SummaryCtn,
                 r.AchievementBlock,
               ),
               children: [
-                (0, s.jsx)("div", { className: Ce().SubtleBorder }),
+                (0, s.jsx)("div", { className: Se().SubtleBorder }),
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(
-                    Ce().BackgroundImage,
-                    Ce().BackgroundImageCover,
+                  className: (0, he.A)(
+                    Se().BackgroundImage,
+                    Se().BackgroundImageCover,
                   ),
                   style: { backgroundImage: `url(${i})` },
                 }),
                 (0, s.jsxs)("div", {
-                  className: (0, pe.A)(
-                    Ce().StatBox,
-                    Ce().SummaryBlockHugeNumCtn,
+                  className: (0, he.A)(
+                    Se().StatBox,
+                    Se().SummaryBlockHugeNumCtn,
                   ),
                   children: [
                     (0, s.jsx)("div", {
-                      className: (0, pe.A)(Ce().BigNum, o),
-                      children: (0, ge.Dq)(a.total_achievements),
+                      className: (0, he.A)(Se().BigNum, o),
+                      children: (0, _e.Dq)(a.total_achievements),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().SmallText,
-                      children: (0, g.Yp)(
+                      className: Se().SmallText,
+                      children: (0, _.Yp)(
                         "#YIR_YourSummary_Achievement",
                         a.total_achievements,
                       ),
                     }),
-                    (0, s.jsx)(Ya, {
+                    (0, s.jsx)(Ma, {
                       strTokenPrefix: "#YIR_YourSummary_PrevYear_Ach",
                       nCurValue: a.total_achievements,
-                      nPrevValue: Ra(n)
+                      nPrevValue: Ta(n)
                         ? t.GetPreviousYearSummary().unlocked_achievements
                         : void 0,
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().SummaryBlockExtrasCtn,
+                  className: Se().SummaryBlockExtrasCtn,
                   children: [
                     (0, s.jsxs)("div", {
-                      className: Ce().StatBox,
+                      className: Se().StatBox,
                       children: [
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(Ce().BigNum),
-                          children: (0, ge.Dq)(
+                          className: (0, he.A)(Se().BigNum),
+                          children: (0, _e.Dq)(
                             a.total_games_with_achievements || 0,
                           ),
                         }),
                         (0, s.jsx)("div", {
-                          className: Ce().SmallText,
-                          children: (0, g.Yp)(
+                          className: Se().SmallText,
+                          children: (0, _.Yp)(
                             "#YIR_YourSummary_Achievement_Games",
                             a.total_games_with_achievements,
                           ),
@@ -10041,15 +10040,15 @@
                       ],
                     }),
                     (0, s.jsxs)("div", {
-                      className: Ce().StatBox,
+                      className: Se().StatBox,
                       children: [
                         (0, s.jsx)("div", {
-                          className: Ce().BigNum,
-                          children: (0, ge.Dq)(a.total_rare_achievements || 0),
+                          className: Se().BigNum,
+                          children: (0, _e.Dq)(a.total_rare_achievements || 0),
                         }),
                         (0, s.jsx)("div", {
-                          className: Ce().SmallText,
-                          children: (0, g.Yp)(
+                          className: Se().SmallText,
+                          children: (0, _.Yp)(
                             "#YIR_YourSummary_Achievement_Rare",
                             a.total_rare_achievements,
                           ),
@@ -10063,60 +10062,60 @@
           })
         );
       }
-      function Fa(e) {
+      function Oa(e) {
         const { oLongestStreak: t, nYear: a, nPrevLongestStreamDays: n } = e,
           r = !0,
-          i = (0, g.TW)(t.rtime_start, r),
-          o = (0, g.TW)(
+          i = (0, _.TW)(t.rtime_start, r),
+          o = (0, _.TW)(
             t.rtime_start + 24 * t.longest_consecutive_days * 60 * 60,
             r,
           ),
-          l = v();
-        if ("ch" === c.iA.country_code) return null;
-        const d = `${c.TS.IMG_URL}yearinreview/streak_bg.jpg`;
+          c = x();
+        if ("ch" === l.iA.country_code) return null;
+        const d = `${l.TS.IMG_URL}yearinreview/streak_bg.jpg`;
         return (0, s.jsx)("div", {
-          className: (0, pe.A)(Ce().SummaryCtnShadow, l.SummaryCtnShadow),
+          className: (0, he.A)(Se().SummaryCtnShadow, c.SummaryCtnShadow),
           children: (0, s.jsxs)("div", {
-            className: (0, pe.A)(
-              Ce().SummaryCtn,
-              Ce().GridItem,
-              l.GridItem,
-              Ce().StreakBlock,
-              l.SummaryCtn,
-              l.StreakBlock,
+            className: (0, he.A)(
+              Se().SummaryCtn,
+              Se().GridItem,
+              c.GridItem,
+              Se().StreakBlock,
+              c.SummaryCtn,
+              c.StreakBlock,
             ),
             children: [
-              (0, s.jsx)("div", { className: Ce().SubtleBorder }),
+              (0, s.jsx)("div", { className: Se().SubtleBorder }),
               (0, s.jsx)("div", {
-                className: (0, pe.A)(
-                  Ce().BackgroundImage,
-                  Ce().BackgroundImageCover,
+                className: (0, he.A)(
+                  Se().BackgroundImage,
+                  Se().BackgroundImageCover,
                 ),
                 style: { backgroundImage: `url(${d})` },
               }),
               (0, s.jsxs)("div", {
-                className: (0, pe.A)(Ce().StatBox, Ce().SummaryBlockHugeNumCtn),
+                className: (0, he.A)(Se().StatBox, Se().SummaryBlockHugeNumCtn),
                 children: [
                   (0, s.jsx)("div", {
-                    className: Ce().BigNum,
-                    children: (0, g.Yp)(
+                    className: Se().BigNum,
+                    children: (0, _.Yp)(
                       "#YIR_Game_LongestStreak_DaysPlayed",
                       t.longest_consecutive_days,
                     ),
                   }),
                   (0, s.jsx)("div", {
-                    className: Ce().SmallText,
-                    children: (0, g.we)("#YIR_YourSummary_Stat_Streak"),
+                    className: Se().SmallText,
+                    children: (0, _.we)("#YIR_YourSummary_Stat_Streak"),
                   }),
                   (0, s.jsx)("div", {
-                    className: Ce().SmallLightText,
-                    children: (0, g.we)(
+                    className: Se().SmallLightText,
+                    children: (0, _.we)(
                       "#YIR_Game_LongestStreak_FromDateToDate",
                       i,
                       o,
                     ),
                   }),
-                  (0, s.jsx)(Ya, {
+                  (0, s.jsx)(Ma, {
                     strTokenPrefix: "#YIR_YourSummary_PrevYear_Day",
                     nCurValue: t.longest_consecutive_days,
                     nPrevValue: n,
@@ -10124,17 +10123,17 @@
                 ],
               }),
               (0, s.jsx)("div", {
-                className: Ce().SummaryBlockExtrasCtn,
+                className: Se().SummaryBlockExtrasCtn,
                 children: (0, s.jsxs)("div", {
-                  className: (0, pe.A)(Ce().StatBox, Ce().LongestStreakStat),
+                  className: (0, he.A)(Se().StatBox, Se().LongestStreakStat),
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().BigNum,
-                      children: (0, ge.Dq)(t.streak_games.length),
+                      className: Se().BigNum,
+                      children: (0, _e.Dq)(t.streak_games.length),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().SmallText,
-                      children: (0, g.Yp)(
+                      className: Se().SmallText,
+                      children: (0, _.Yp)(
                         "#YIR_YourSummary_Games",
                         t.streak_games.length,
                       ),
@@ -10146,9 +10145,9 @@
           }),
         });
       }
-      function Ua(e) {
+      function Fa(e) {
         const { oTotalStats: t, nYear: a } = e,
-          n = I(
+          n = C(
             t.total_playtime_percentagex100 -
               t.controller_playtime_percentagex100 -
               t.vr_playtime_percentagex100 -
@@ -10157,68 +10156,68 @@
           r =
             t.controller_playtime_percentagex100 +
             t.deck_playtime_percentagex100,
-          i = I(r),
-          o = `${c.TS.IMG_URL}yearinreview/keyboard.png?v=3`,
-          l = `${c.TS.IMG_URL}yearinreview/controllers.png?v=2`,
-          d = v();
+          i = C(r),
+          o = `${l.TS.IMG_URL}yearinreview/keyboard.png?v=3`,
+          c = `${l.TS.IMG_URL}yearinreview/controllers.png?v=2`,
+          d = x();
         let m, h, p;
         return (
           Math.floor(r / 100) < 40
-            ? ((m = 40), (h = Ce().Small), (p = Ce().Large))
+            ? ((m = 40), (h = Se().Small), (p = Se().Large))
             : Math.floor(r / 100) > 60
-              ? ((m = 60), (h = Ce().Large), (p = Ce().Small))
+              ? ((m = 60), (h = Se().Large), (p = Se().Small))
               : (m = r / 100),
           (0, s.jsx)("div", {
-            className: (0, pe.A)(Ce().SummaryCtnShadow, d.SummaryCtnShadow),
+            className: (0, he.A)(Se().SummaryCtnShadow, d.SummaryCtnShadow),
             children: (0, s.jsxs)("div", {
-              className: (0, pe.A)(
-                Ce().HardwareSummary,
-                Ce().SummaryCtn,
-                Ce().GridItem,
+              className: (0, he.A)(
+                Se().HardwareSummary,
+                Se().SummaryCtn,
+                Se().GridItem,
                 d.GridItem,
-                Ce().HardwareBlock,
+                Se().HardwareBlock,
                 d.SummaryCtn,
                 d.HardwareBlock,
               ),
               children: [
-                (0, s.jsx)("div", { className: Ce().SubtleBorder }),
+                (0, s.jsx)("div", { className: Se().SubtleBorder }),
                 (0, s.jsxs)("div", {
-                  className: Ce().ContentCtn,
+                  className: Se().ContentCtn,
                   children: [
                     (0, s.jsxs)("div", {
-                      className: Ce().KeyboardPortion,
+                      className: Se().KeyboardPortion,
                       children: [
                         (0, s.jsx)("div", {
-                          className: Ce().BackgroundImage,
+                          className: Se().BackgroundImage,
                           style: { background: `url(${o}) bottom` },
                         }),
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(Ce().Stat, p),
+                          className: (0, he.A)(Se().Stat, p),
                           children: n,
                         }),
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(Ce().Subtitle, p),
-                          children: (0, g.we)(
+                          className: (0, he.A)(Se().Subtitle, p),
+                          children: (0, _.we)(
                             "#YIR_HowYouPlayed_Keyboard_Generic",
                           ),
                         }),
                       ],
                     }),
                     (0, s.jsxs)("div", {
-                      className: Ce().ControllerPortion,
+                      className: Se().ControllerPortion,
                       style: { height: m + "%" },
                       children: [
                         (0, s.jsx)("div", {
-                          className: Ce().BackgroundImage,
-                          style: { background: `url(${l}) top` },
+                          className: Se().BackgroundImage,
+                          style: { background: `url(${c}) top` },
                         }),
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(Ce().Stat, h),
+                          className: (0, he.A)(Se().Stat, h),
                           children: i,
                         }),
                         (0, s.jsx)("div", {
-                          className: (0, pe.A)(Ce().Subtitle, h),
-                          children: (0, g.we)(
+                          className: (0, he.A)(Se().Subtitle, h),
+                          children: (0, _.we)(
                             "#YIR_HowYouPlayed_Controllers_Percent",
                           ),
                         }),
@@ -10231,54 +10230,54 @@
           })
         );
       }
-      function Ha(e) {
+      function Ua(e) {
         const { gameStat: t, gridClass: a } = e,
           { appid: n } = t,
-          [r] = (0, _e.t7)(n, H),
-          i = z(0, [n]),
-          o = v();
+          [r] = (0, ue.t7)(n, U),
+          i = W(0, [n]),
+          o = x();
         if (!r) return null;
         const l = r.GetAssetsWithoutOverrides()?.GetLibraryHeroURL(),
           c = Math.trunc(t.stats.total_sessions);
         return (0, s.jsx)("div", {
-          className: (0, pe.A)(Ce().SummaryCtnShadow, o.SummaryCtnShadow),
+          className: (0, he.A)(Se().SummaryCtnShadow, o.SummaryCtnShadow),
           children: (0, s.jsxs)("div", {
-            className: (0, pe.A)(
-              Ce().SummaryCtn,
-              Ce().GridItem,
+            className: (0, he.A)(
+              Se().SummaryCtn,
+              Se().GridItem,
               o.GridItem,
-              Ce()[a],
+              Se()[a],
               o.SummaryCtn,
               o[a],
             ),
             onClick: i,
             children: [
-              (0, s.jsx)("div", { className: Ce().SubtleBorder }),
+              (0, s.jsx)("div", { className: Se().SubtleBorder }),
               (0, s.jsx)("div", {
-                className: (0, pe.A)(Ce().BackgroundImage, o.BackgroundImage),
+                className: (0, he.A)(Se().BackgroundImage, o.BackgroundImage),
                 style: { backgroundImage: `url(${l})` },
               }),
               (0, s.jsx)("div", {
-                className: Ce().SummaryBlockGameName,
+                className: Se().SummaryBlockGameName,
                 children: r.GetName(),
               }),
               (0, s.jsxs)("div", {
-                className: Ce().SummaryBlockExtrasCtn,
+                className: Se().SummaryBlockExtrasCtn,
                 children: [
-                  (0, s.jsx)(Va, {
+                  (0, s.jsx)(Ha, {
                     percentVal: t.stats.total_playtime_percentagex100,
                     subToken: "#YIR_Game_PlayStat",
                   }),
                   (0, s.jsxs)("div", {
-                    className: Ce().StatBox,
+                    className: Se().StatBox,
                     children: [
                       (0, s.jsx)("div", {
-                        className: Ce().BigNum,
-                        children: (0, ge.Dq)(c),
+                        className: Se().BigNum,
+                        children: (0, _e.Dq)(c),
                       }),
                       (0, s.jsx)("div", {
-                        className: Ce().SmallText,
-                        children: (0, g.we)(
+                        className: Se().SmallText,
+                        children: (0, _.we)(
                           1 == c
                             ? "#YIR_Game_PlaySession_Singular"
                             : "#YIR_Game_PlaySessions",
@@ -10292,69 +10291,69 @@
           }),
         });
       }
-      function Va(e) {
+      function Ha(e) {
         const { percentVal: t, subToken: a, className: n } = e,
-          r = I(t),
+          r = C(t),
           i = `${a}_Percent`;
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(Ce().StatBox, n),
+          className: (0, he.A)(Se().StatBox, n),
           children: [
-            (0, s.jsx)("div", { className: Ce().BigNum, children: r }),
+            (0, s.jsx)("div", { className: Se().BigNum, children: r }),
             (0, s.jsx)("div", {
-              className: Ce().SmallText,
-              children: (0, g.we)(i),
+              className: Se().SmallText,
+              children: (0, _.we)(i),
             }),
           ],
         });
       }
-      var Wa = a(37220),
-        za = a(61141),
-        Za = a(58661),
-        Qa = a(73077),
-        Ka = a(20283),
-        Xa = a(90150),
-        qa = a(39743);
-      const Ja = l.memo((e) => {
+      var Va = a(37220),
+        Wa = a(61141),
+        za = a(58661),
+        Za = a(73077),
+        Qa = a(20283),
+        Ka = a(90150),
+        Xa = a(39743);
+      const qa = o.memo((e) => {
           const { data: t, topMonthlyAppsAndRanks: a } = e,
-            n = v(),
-            r = (0, l.useCallback)(
-              (e, a) => (t[a]?.date ? (0, Ee.oL)(t[a].date) : ""),
+            n = x(),
+            r = (0, o.useCallback)(
+              (e, a) => (t[a]?.date ? (0, De.oL)(t[a].date) : ""),
               [t],
             ),
-            i = (0, l.useRef)(void 0);
-          return (0, s.jsx)(rt.u, {
+            i = (0, o.useRef)(void 0);
+          return (0, s.jsx)(nt.u, {
             width: "100%",
             height: "100%",
-            children: (0, s.jsxs)(za.X, {
+            children: (0, s.jsxs)(Wa.X, {
               data: t,
               margin: { top: 25, left: 0, right: 0, bottom: 0 },
               barGap: 30,
               children: [
-                (0, s.jsx)(Za.d, { vertical: !1, stroke: "#a0aab6" }),
-                (0, s.jsx)(Qa.h, {
-                  tickFormatter: I,
+                (0, s.jsx)(za.d, { vertical: !1, stroke: "#a0aab6" }),
+                (0, s.jsx)(Za.h, {
+                  tickFormatter: C,
                   tick: { fill: "white" },
                   axisLine: !0,
                 }),
-                (0, s.jsx)(Ht.m, {
+                (0, s.jsx)(Ut.m, {
                   wrapperStyle: { outline: "none" },
                   allowEscapeViewBox: { x: !1, y: !0 },
                   isAnimationActive: !1,
                   offset: 0,
-                  content: (0, s.jsx)(es, { hoveredBarIDRef: i }),
+                  content: (0, s.jsx)($a, { hoveredBarIDRef: i }),
                 }),
-                (0, s.jsx)(Ka.y, {
+                (0, s.jsx)(Qa.y, {
                   barSize: 60,
-                  dataKey: `topPlayedPercentBreakdownPerMonth.${k}`,
-                  name: k,
+                  dataKey: `topPlayedPercentBreakdownPerMonth.${N}`,
+                  name: N,
                   stackId: "a",
                   fill: n.monthOthersColor,
-                  onMouseEnter: () => (i.current = k),
+                  onMouseEnter: () => (i.current = N),
                   onMouseOut: () => (i.current = void 0),
                 }),
                 a.map((e, t) =>
                   (0, s.jsx)(
-                    Ka.y,
+                    Qa.y,
                     {
                       barSize: 60,
                       dataKey: `topPlayedPercentBreakdownPerMonth.${e.appid}`,
@@ -10367,45 +10366,45 @@
                     `${t}`,
                   ),
                 ),
-                (0, s.jsx)(Xa.W, {
+                (0, s.jsx)(Ka.W, {
                   interval: 0,
-                  tick: (0, s.jsx)(is, {}),
+                  tick: (0, s.jsx)(rs, {}),
                   tickFormatter: r,
                 }),
               ],
             }),
           });
         }),
-        $a = 7;
-      function es(e) {
+        Ja = 7;
+      function $a(e) {
         const { active: t, payload: a, hoveredBarIDRef: n } = e,
-          r = v(),
-          i = C();
+          r = x(),
+          i = S();
         if (t && a && a.length) {
           const e = a[0].payload.date.getMonth(),
-            t = (0, g.we)(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
-            o = a[0].payload.topPlayedPercentBreakdownPerMonth[N],
+            t = (0, _.we)(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
+            l = a[0].payload.topPlayedPercentBreakdownPerMonth[A],
             c = Object.keys(a[0].payload.otherPlayedPercentBreakdownForMonth),
             d = a[0].payload.topPlayedRelativePercentBreakdownForMonth,
             m = a.find((e) => e.name === n.current),
             h = m?.name,
-            p = h === k,
+            p = h === N,
             u = a
               .map((e) => {
                 const n = e.name,
                   r = d[e.name];
-                if (n === k) {
+                if (n === N) {
                   const i = p && 1 == a.length;
                   return (0, s.jsxs)(
-                    l.Fragment,
+                    o.Fragment,
                     {
                       children: [
                         !i &&
                           (0, s.jsx)("div", {
-                            className: (0, pe.A)(
-                              e === m && qa.HoveredGameLabel,
+                            className: (0, he.A)(
+                              e === m && Xa.HoveredGameLabel,
                             ),
-                            children: ls(
+                            children: os(
                               r,
                               t,
                               "#YIR_MonthlyCharts_OtherGamesTooltip",
@@ -10413,21 +10412,21 @@
                           }),
                         p &&
                           c
-                            .slice(0, $a)
+                            .slice(0, Ja)
                             .map((e) =>
                               (0, s.jsx)(
-                                ss,
-                                { appId: e, className: qa.HoveredGameLabel },
+                                as,
+                                { appId: e, className: Xa.HoveredGameLabel },
                                 e,
                               ),
                             ),
                         p &&
-                          c.length > $a &&
+                          c.length > Ja &&
                           (0, s.jsx)("div", {
-                            className: qa.HoveredGameLabel,
-                            children: (0, g.we)(
+                            className: Xa.HoveredGameLabel,
+                            children: (0, _.we)(
                               "#YIR_MonthlyCharts_OtherGamesTooltip_AndMore",
-                              c.length - $a,
+                              c.length - Ja,
                             ),
                           }),
                       ],
@@ -10437,10 +10436,10 @@
                 }
                 return e.value
                   ? (0, s.jsx)(
-                      ns,
+                      ss,
                       {
                         appId: n,
-                        className: (0, pe.A)(e === m && qa.HoveredGameLabel),
+                        className: (0, he.A)(e === m && Xa.HoveredGameLabel),
                         date: t,
                         value: r,
                       },
@@ -10449,42 +10448,42 @@
                   : null;
               })
               .reverse(),
-            _ = 1 == u.length && c.length > 0;
-          return (0, s.jsxs)(Oe.t1, {
+            g = 1 == u.length && c.length > 0;
+          return (0, s.jsxs)(Ye.t1, {
             style: { background: m?.color ?? r.monthOthersColor },
-            className: qa.MonthlyChartTooltipCtn,
+            className: Xa.MonthlyChartTooltipCtn,
             children: [
-              (0, s.jsx)("div", { className: qa.TooltipBackgroundOverlay }),
+              (0, s.jsx)("div", { className: Xa.TooltipBackgroundOverlay }),
               (0, s.jsx)("div", {
-                className: qa.TooltipImageContainer,
+                className: Xa.TooltipImageContainer,
                 children:
                   m &&
                   (0, s.jsxs)(s.Fragment, {
                     children: [
-                      !p && (0, s.jsx)(as, { appId: h }),
-                      p && (0, s.jsx)(ts, { appIds: c.slice(0, 7) }),
+                      !p && (0, s.jsx)(ts, { appId: h }),
+                      p && (0, s.jsx)(es, { appIds: c.slice(0, 7) }),
                     ],
                   }),
               }),
               (0, s.jsxs)("div", {
-                className: qa.TotalPlaytimeContainer,
+                className: Xa.TotalPlaytimeContainer,
                 children: [
                   (0, s.jsx)("div", {
-                    className: xe.TotalPlaytime,
-                    children: ls(o, t, "#YIR_MonthlyCharts_PlayedTotalTooltip"),
+                    className: ge.TotalPlaytime,
+                    children: os(l, t, "#YIR_MonthlyCharts_PlayedTotalTooltip"),
                   }),
-                  !_ &&
+                  !g &&
                     (0, s.jsxs)(s.Fragment, {
                       children: [
                         (0, s.jsx)("div", {
-                          children: (0, g.we)(
+                          children: (0, _.we)(
                             "#YIR_MonthlyCharts_PlayedSubtitleTooltip",
                           ),
                         }),
                         u,
                       ],
                     }),
-                  _ &&
+                  g &&
                     m &&
                     (0, s.jsxs)(s.Fragment, {
                       children: [
@@ -10503,12 +10502,12 @@
         }
         return null;
       }
-      function ts({ appIds: e }) {
+      function es({ appIds: e }) {
         return (0, s.jsx)("div", {
-          className: qa.OtherGamesStack,
+          className: Xa.OtherGamesStack,
           children: e?.map((t, a) =>
             (0, s.jsx)(
-              as,
+              ts,
               {
                 appId: t,
                 style: { zIndex: e.length - a, "--stack-position": a },
@@ -10518,31 +10517,31 @@
           ),
         });
       }
-      function as({ appId: e, style: t }) {
-        const [a] = (0, _e.t7)(parseInt(e), H);
+      function ts({ appId: e, style: t }) {
+        const [a] = (0, ue.t7)(parseInt(e), U);
         if (!a) return null;
-        const n = a.GetAssetsWithoutOverrides().GetLibraryCapsuleURL() || ue.A;
+        const n = a.GetAssetsWithoutOverrides().GetLibraryCapsuleURL() || pe.A;
         return (0, s.jsx)("img", {
           style: t,
-          className: qa.CapsuleImg,
+          className: Xa.CapsuleImg,
           src: n,
         });
       }
-      function ss({ appId: e, className: t }) {
-        const [a] = (0, _e.t7)(parseInt(e), H);
+      function as({ appId: e, className: t }) {
+        const [a] = (0, ue.t7)(parseInt(e), U);
         return a
           ? (0, s.jsx)("div", { className: t, children: a.GetName() }, e)
           : null;
       }
-      function ns(e) {
+      function ss(e) {
         const { appId: t, className: a, value: n, date: r } = e,
-          [i] = (0, _e.t7)(parseInt(t), H);
+          [i] = (0, ue.t7)(parseInt(t), U);
         return i
           ? (0, s.jsx)(
               "div",
               {
                 className: a,
-                children: ls(
+                children: os(
                   n,
                   r,
                   "#YIR_MonthlyCharts_TopPlayedTooltip",
@@ -10553,43 +10552,43 @@
             )
           : null;
       }
-      const rs = l.memo((e) => {
+      const ns = o.memo((e) => {
         const { data: t, name: a, color: n } = e,
-          r = v(),
-          i = (0, l.useCallback)(
-            (e, a) => (t[a]?.date ? (0, Ee.oL)(t[a].date) : ""),
+          r = x(),
+          i = (0, o.useCallback)(
+            (e, a) => (t[a]?.date ? (0, De.oL)(t[a].date) : ""),
             [t],
           );
-        return (0, s.jsx)(rt.u, {
+        return (0, s.jsx)(nt.u, {
           width: "100%",
           height: "100%",
-          children: (0, s.jsxs)(za.X, {
+          children: (0, s.jsxs)(Wa.X, {
             data: t,
             margin: { top: 25, left: 0, right: 0, bottom: 0 },
             barGap: 30,
             children: [
-              (0, s.jsx)(Ht.m, {
+              (0, s.jsx)(Ut.m, {
                 wrapperStyle: {
                   outline: "1px solid " + (n ?? r.chartAccentColorAlt),
                 },
                 allowEscapeViewBox: { x: !1, y: !0 },
                 isAnimationActive: !1,
-                content: (0, s.jsx)(os, { name: a }),
+                content: (0, s.jsx)(is, { name: a }),
               }),
-              (0, s.jsx)(Za.d, { vertical: !1, stroke: "#a0aab6" }),
-              (0, s.jsx)(Qa.h, {
-                tickFormatter: I,
+              (0, s.jsx)(za.d, { vertical: !1, stroke: "#a0aab6" }),
+              (0, s.jsx)(Za.h, {
+                tickFormatter: C,
                 tick: { fill: "white" },
                 axisLine: !0,
               }),
-              (0, s.jsx)(Ka.y, {
+              (0, s.jsx)(Qa.y, {
                 barSize: 60,
                 dataKey: "percent",
                 fill: n ?? r.chartAccentColorAlt,
               }),
-              (0, s.jsx)(Xa.W, {
+              (0, s.jsx)(Ka.W, {
                 interval: 0,
-                tick: (0, s.jsx)(is, {}),
+                tick: (0, s.jsx)(rs, {}),
                 tickFormatter: i,
                 color: "#ffffff",
               }),
@@ -10597,7 +10596,7 @@
           }),
         });
       });
-      function is(e) {
+      function rs(e) {
         const { x: t, y: a, payload: n } = e,
           r = e.tickFormatter(n.value, n.index);
         return (0, s.jsx)("g", {
@@ -10613,23 +10612,23 @@
           }),
         });
       }
-      function os(e) {
+      function is(e) {
         const { active: t, payload: a, name: n } = e,
-          r = v();
+          r = x();
         if (t && a && a.length && a[0].value) {
           const e = a[0].payload.date.getMonth(),
-            t = (0, g.we)(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
+            t = (0, _.we)(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
             i = a[0].value,
             o = "#YIR_MonthlyCharts_TopPlayedGameTooltip_Percent";
-          return (0, s.jsx)(Oe.t1, {
+          return (0, s.jsx)(Ye.t1, {
             style: { background: "#0e1014" },
             children: (0, s.jsx)(
               "div",
               {
                 style: { color: r.chartAccentColor },
-                children: (0, g.PP)(
+                children: (0, _.PP)(
                   o,
-                  (0, s.jsx)("b", { children: I(i) }),
+                  (0, s.jsx)("b", { children: C(i) }),
                   t,
                   n,
                 ),
@@ -10640,32 +10639,32 @@
         }
         return null;
       }
-      function ls(e, t, a, ...n) {
+      function os(e, t, a, ...n) {
         const r = `${a}_Percent`;
-        return (0, g.PP)(r, (0, s.jsx)("b", { children: I(e) }), t, ...n);
+        return (0, _.PP)(r, (0, s.jsx)("b", { children: C(e) }), t, ...n);
       }
-      var cs = a(98288);
-      function ds(e) {
+      var ls = a(98288);
+      function cs(e) {
         const { userYearInReview: t } = e,
-          a = C(),
+          a = S(),
           n = t.GetChartMonthlyData(),
           r = t.GetTopGameIdsAndRanks();
         return (0, s.jsx)("div", {
-          className: cs.Section,
+          className: ls.Section,
           children:
             t.GetPlayTimeStats().games?.length > 1 &&
-            (0, s.jsxs)(fe, {
-              className: cs.AnimationVisibilityCtn,
+            (0, s.jsxs)(je, {
+              className: ls.AnimationVisibilityCtn,
               children: [
                 (0, s.jsx)("div", {
-                  className: Se.SectionTitle,
+                  className: ve.SectionTitle,
                   children: a("#YIR_MonthlyCharts_Title"),
                 }),
                 (0, s.jsx)("div", {
-                  className: cs.ChartContainer,
+                  className: ls.ChartContainer,
                   children: (0, s.jsx)("div", {
-                    className: cs.Chart,
-                    children: (0, s.jsx)(Ja, {
+                    className: ls.Chart,
+                    children: (0, s.jsx)(qa, {
                       data: n,
                       topMonthlyAppsAndRanks: r,
                     }),
@@ -10675,11 +10674,11 @@
             }),
         });
       }
-      var ms = a(58918),
-        hs = a(17376),
-        ps = a(79969),
-        us = a(42457);
-      class _s {
+      var ds = a(58918),
+        ms = a(17376),
+        hs = a(79969),
+        ps = a(42457);
+      class us {
         m_SteamInterface = null;
         m_mapAchievementDef = new Map();
         m_mapPromiseAchievementDef = new Map();
@@ -10693,7 +10692,7 @@
         GetAchievementLoadChange(e) {
           return (
             this.m_mapLoadCallback.has(e) ||
-              this.m_mapLoadCallback.set(e, new $.lu()),
+              this.m_mapLoadCallback.set(e, new J.lu()),
             this.m_mapLoadCallback.get(e)
           );
         }
@@ -10708,17 +10707,17 @@
               this.m_mapPromiseAchievementDef.get(e));
         }
         async InternalLoadAchievementDisplayInfo(e) {
-          const t = d.w.Init(us.AR);
+          const t = c.w.Init(ps.ARV);
           t.Body().set_appid(e),
-            t.Body().set_language(c.TS.LANGUAGE || "english");
-          c.TS.LANGUAGE;
+            t.Body().set_language(l.TS.LANGUAGE || "english");
+          l.TS.LANGUAGE;
           let a = null;
           try {
-            const s = await us.xt.GetGameAchievements(
+            const s = await ps.xtC.GetGameAchievements(
               this.m_SteamInterface.GetServiceTransport(),
               t,
             );
-            if (s.GetEResult() == D.R) {
+            if (s.GetEResult() == G.R) {
               const t = s
                 .Body()
                 .achievements()
@@ -10732,9 +10731,9 @@
                 t
               );
             }
-            a = (0, J.H)(s);
+            a = (0, q.H)(s);
           } catch (e) {
-            a = (0, J.H)(e);
+            a = (0, q.H)(e);
           }
           return (
             console.error(
@@ -10748,49 +10747,49 @@
         static s_Singleton;
         static Get() {
           return (
-            _s.s_Singleton ||
-              ((_s.s_Singleton = new _s()),
-              "dev" == c.TS.WEB_UNIVERSE &&
-                (window.g_GameAchievementDisplayStore = _s.s_Singleton),
-              _s.s_Singleton.Init()),
-            _s.s_Singleton
+            us.s_Singleton ||
+              ((us.s_Singleton = new us()),
+              "dev" == l.TS.WEB_UNIVERSE &&
+                (window.g_GameAchievementDisplayStore = us.s_Singleton),
+              us.s_Singleton.Init()),
+            us.s_Singleton
           );
         }
         constructor() {}
         Init() {
-          this.m_SteamInterface = (0, U.P)();
+          this.m_SteamInterface = (0, F.P)();
         }
       }
-      function gs(e) {
-        const [t, a] = (0, l.useState)(_s.Get().GetAchievements(e)),
-          [s, n] = (0, l.useState)(e);
+      function _s(e) {
+        const [t, a] = (0, o.useState)(us.Get().GetAchievements(e)),
+          [s, n] = (0, o.useState)(e);
         return (
-          (0, l.useEffect)(() => {
-            ((null == t && !_s.Get().BHasAchievementLoaded(e)) || s != e) &&
-              _s
+          (0, o.useEffect)(() => {
+            ((null == t && !us.Get().BHasAchievementLoaded(e)) || s != e) &&
+              us
                 .Get()
                 .LoadAchievementDisplayInfo(e)
                 .then((e) => {
                   a(e), n(s);
                 });
           }, [e, t, s]),
-          (0, ee.hL)(_s.Get().GetAchievementLoadChange(e), a),
+          (0, $.hL)(us.Get().GetAchievementLoadChange(e), a),
           t
         );
       }
-      function xs(e, t, a) {
-        const s = se(a, t, e),
+      function gs(e, t, a) {
+        const s = ae(a, t, e),
           n = (function (e) {
-            const [t, a] = (0, l.useState)(_s.Get().GetAchievements(e));
-            return (0, ee.hL)(_s.Get().GetAchievementLoadChange(e), a), t;
+            const [t, a] = (0, o.useState)(us.Get().GetAchievements(e));
+            return (0, $.hL)(us.Get().GetAchievementLoadChange(e), a), t;
           })(e),
-          [r, i] = (0, l.useState)(
+          [r, i] = (0, o.useState)(
             s?.all_time_unlocked_achievements > 0 &&
               n?.length > 0 &&
               n?.length <= s?.all_time_unlocked_achievements,
           );
         return (
-          (0, l.useEffect)(() => {
+          (0, o.useEffect)(() => {
             i(
               s?.all_time_unlocked_achievements > 0 &&
                 n?.length > 0 &&
@@ -10800,23 +10799,23 @@
           r
         );
       }
-      var vs = a(72739),
-        Ss = a(35380),
-        Cs = a(1078),
-        Is = a(44533),
-        ys = a.n(Is);
-      function js(e) {
+      var xs = a(72739),
+        vs = a(35380),
+        Ss = a(1078),
+        Cs = a(44533),
+        Is = a.n(Cs);
+      function ys(e) {
         const {
             imgURL: t,
             glow: a,
             pauseAnimation: n,
             hidden: r,
             alt: i,
-            className: o,
+            className: l,
             ...c
           } = e,
-          [d, m] = l.useState(!1),
-          h = l.useCallback((e) => {
+          [d, m] = o.useState(!1),
+          h = o.useCallback((e) => {
             e &&
               (e.complete
                 ? m(!0)
@@ -10826,32 +10825,32 @@
           }, []);
         if (r)
           return (0, s.jsx)("div", {
-            className: ys().HiddenLabel,
+            className: Is().HiddenLabel,
             ...c,
             children: "?",
           });
         const p = d && a;
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(
-            ys().AchievementIconWrapper,
-            o,
-            n && ys().RareAchievementNoAnimation,
+          className: (0, he.A)(
+            Is().AchievementIconWrapper,
+            l,
+            n && Is().RareAchievementNoAnimation,
           ),
           ...c,
           children: [
             p &&
               (0, s.jsx)("div", {
-                className: ys().RareAchievementIconGlowContainerRoot,
+                className: Is().RareAchievementIconGlowContainerRoot,
                 children: (0, s.jsx)("div", {
-                  className: ys().RareAchievementIconGlowContainer,
+                  className: Is().RareAchievementIconGlowContainer,
                   children: (0, s.jsx)("div", {
-                    className: ys().RareAchievementIconGlow,
+                    className: Is().RareAchievementIconGlow,
                   }),
                 }),
               }),
             (0, s.jsx)("img", {
               ref: h,
-              className: (0, pe.A)(ys().Icon, p && ys().IconGlow),
+              className: (0, he.A)(Is().Icon, p && Is().IconGlow),
               src: t,
               loading: "lazy",
               alt: i,
@@ -10859,15 +10858,15 @@
           ],
         });
       }
-      var fs = a(7077),
-        ws = a.n(fs),
-        As = a(36626);
-      function Ns(e) {
+      var js = a(7077),
+        fs = a.n(js),
+        ws = a(36626);
+      function As(e) {
         const { appid: t, userYearInReview: a } = e,
-          n = se(a.GetYear(), a.GetAccountID(), t);
+          n = ae(a.GetYear(), a.GetAccountID(), t);
         return n?.achievements?.length > 0
-          ? (0, s.jsx)(le.tH, {
-              children: (0, l.createElement)(ks, {
+          ? (0, s.jsx)(oe.tH, {
+              children: (0, o.createElement)(Ns, {
                 ...e,
                 key: "achievementunlucklist_" + t,
                 userUnlockedAchievements: n,
@@ -10875,105 +10874,105 @@
             })
           : null;
       }
-      function ks(e) {
+      function Ns(e) {
         const {
             appid: t,
             userYearInReview: a,
             bBlurContent: n,
             userUnlockedAchievements: r,
           } = e,
-          [i, o] = (0, l.useState)(n),
-          d = C(),
+          [i, c] = (0, o.useState)(n),
+          d = S(),
           m = (function (e) {
-            const t = gs(e);
+            const t = _s(e);
             return t ? t.length : 0;
           })(t),
           h = r.achievements.length,
           p = r.all_time_unlocked_achievements,
           u = p == m && m > 0 && h > 0 && p > 0 && !r.unlocked_more_in_future,
-          _ = `${c.TS.COMMUNITY_BASE_URL}profiles/${a.GetSteamID().ConvertTo64BitString()}/stats/${t}`,
-          x = (0, c.hf)();
+          g = `${l.TS.COMMUNITY_BASE_URL}profiles/${a.GetSteamID().ConvertTo64BitString()}/stats/${t}`,
+          x = (0, l.hf)();
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(Se.YearInReviewContent, As.AchievementsCtn),
+          className: (0, he.A)(ve.YearInReviewContent, ws.AchievementsCtn),
           children: [
             i &&
               (0, s.jsx)("div", {
-                onClick: () => o(!1),
-                className: As.ContentRestrictionText,
-                children: (0, g.we)(
+                onClick: () => c(!1),
+                className: ws.ContentRestrictionText,
+                children: (0, _.we)(
                   "#YIR_TopGames_ContentRestrictionAchievements",
                 ),
               }),
             (0, s.jsxs)("div", {
-              className: As.AchievementSectionTitleCtn,
+              className: ws.AchievementSectionTitleCtn,
               children: [
                 (0, s.jsx)("div", {
-                  className: As.AchievementSectionTitle,
+                  className: ws.AchievementSectionTitle,
                   children: d("#YIR_TopGames_Achievements"),
                 }),
                 (0, s.jsxs)("div", {
-                  className: As.AchievementLinkCtn,
+                  className: ws.AchievementLinkCtn,
                   children: [
                     x &&
                       (0, s.jsx)("a", {
-                        href: _,
-                        className: As.AchievementLink,
-                        children: (0, g.we)("#YIR_SeeAllAchievements"),
+                        href: g,
+                        className: ws.AchievementLink,
+                        children: (0, _.we)("#YIR_SeeAllAchievements"),
                       }),
                     !x &&
-                      (0, s.jsx)(Pt.Ii, {
-                        href: _,
+                      (0, s.jsx)(bt.Ii, {
+                        href: g,
                         target: "_blank",
-                        className: As.AchievementLink,
-                        children: (0, g.we)("#YIR_SeeAllAchievements"),
+                        className: ws.AchievementLink,
+                        children: (0, _.we)("#YIR_SeeAllAchievements"),
                       }),
                   ],
                 }),
               ],
             }),
             (0, s.jsx)("div", {
-              className: (0, pe.A)({
-                [As.AllUnlockedAchievements]: u,
-                [As.AchievementsRowCtn]: !0,
+              className: (0, he.A)({
+                [ws.AllUnlockedAchievements]: u,
+                [ws.AchievementsRowCtn]: !0,
               }),
               children: (0, s.jsxs)("div", {
-                className: As.AchievementRow,
+                className: ws.AchievementRow,
                 children: [
                   (0, s.jsxs)("div", {
-                    className: As.AchievementsTitleCtn,
+                    className: ws.AchievementsTitleCtn,
                     children: [
                       (0, s.jsx)("div", {
-                        className: As.AchievementsBigNum,
-                        children: (0, ge.Dq)(h),
+                        className: ws.AchievementsBigNum,
+                        children: (0, _e.Dq)(h),
                       }),
                       (0, s.jsx)("div", {
-                        className: As.AchievementsSmallText,
-                        children: (0, g.PP)(
+                        className: ws.AchievementsSmallText,
+                        children: (0, _.PP)(
                           "#YIR_UnlockedThisYear_Short",
                           (0, s.jsx)("br", {}),
                         ),
                       }),
                     ],
                   }),
-                  (0, s.jsx)(Ts, { userUnlockedAchievements: r }),
+                  (0, s.jsx)(ks, { userUnlockedAchievements: r }),
                 ],
               }),
             }),
           ],
         });
       }
-      function Ts(e) {
+      function ks(e) {
         const { userUnlockedAchievements: t } = e,
           a = (function (e) {
-            const t = gs(e);
-            return (0, l.useMemo)(() => {
+            const t = _s(e);
+            return (0, o.useMemo)(() => {
               const e = new Map();
               return (
                 t?.length > 0 && t.forEach((t) => e.set(t.internal_name, t)), e
               );
             }, [t]);
           })(t.appid),
-          n = (0, l.useMemo)(
+          n = (0, o.useMemo)(
             () =>
               t.achievements.sort(
                 (e, t) => e.rtime_unlocked - t.rtime_unlocked,
@@ -10987,34 +10986,34 @@
                 .filter((e) => Boolean(e?.icon))
                 .map((e) =>
                   (0, s.jsx)(
-                    Ls,
+                    Rs,
                     { appid: t.appid, display: e },
                     "displayAch_" + e.internal_name,
                   ),
                 ),
             })
-          : (0, s.jsx)(he.t, { size: "small", string: (0, g.we)("#Loading") });
+          : (0, s.jsx)(me.t, { size: "small", string: (0, _.we)("#Loading") });
       }
-      const Rs = 10;
-      function Ls(e) {
+      const Ts = 10;
+      function Rs(e) {
         const { display: t, appid: a } = e,
-          n = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${a}/${t.icon}`,
-          r = Number.parseFloat("" + t.player_percent_unlocked) < Rs;
-        return (0, s.jsx)(Oe.m9, {
-          toolTipContent: (0, s.jsx)(Bs, { display: t }),
-          className: (0, pe.A)({
-            [As.RareAchievement]: r,
-            [As.Achievement]: !0,
+          n = `${l.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${a}/${t.icon}`,
+          r = Number.parseFloat("" + t.player_percent_unlocked) < Ts;
+        return (0, s.jsx)(Ye.m9, {
+          toolTipContent: (0, s.jsx)(Ls, { display: t }),
+          className: (0, he.A)({
+            [ws.RareAchievement]: r,
+            [ws.Achievement]: !0,
           }),
-          children: (0, s.jsx)(js, {
+          children: (0, s.jsx)(ys, {
             imgURL: n,
-            className: As.AchievementIcon,
+            className: ws.AchievementIcon,
             alt: t.localized_name ?? t.internal_name,
             glow: r,
           }),
         });
       }
-      function Bs(e) {
+      function Ls(e) {
         const { display: t } = e;
         let a;
         return (
@@ -11024,14 +11023,14 @@
               ? (a = t.localized_name)
               : t.internal_name && (a = t.internal_name),
           (0, s.jsxs)("div", {
-            className: ws().TextToolTip,
+            className: fs().TextToolTip,
             children: [
               (0, s.jsx)("div", { children: a }),
               (0, s.jsx)("br", {}),
               (0, s.jsx)("div", {
-                children: (0, g.we)(
+                children: (0, _.we)(
                   "#YIR_Achievement_ttip",
-                  (0, ge.Dq)(
+                  (0, _e.Dq)(
                     Math.max(
                       0.1,
                       Number.parseFloat("" + t.player_percent_unlocked),
@@ -11043,26 +11042,26 @@
           })
         );
       }
-      var bs = a(64514);
-      function Ps(e) {
+      var Bs = a(64514);
+      function bs(e) {
         const { appid: t, bBlurContent: a, nYear: n } = e,
-          r = q(t),
-          [i, o] = (0, Cs.XC)(),
-          l = C();
+          r = X(t),
+          [i, o] = (0, Ss.XC)(),
+          l = S();
         return r && 0 != r.length
           ? (0, s.jsxs)("div", {
-              className: (0, pe.A)(Se.YearInReviewContent, bs.ScreenshotsCtn),
+              className: (0, he.A)(ve.YearInReviewContent, Bs.ScreenshotsCtn),
               children: [
                 o,
                 (0, s.jsx)("div", {
-                  className: bs.ScreenshotHeader,
+                  className: Bs.ScreenshotHeader,
                   children: l("#YIR_ScreenshotsThisYear"),
                 }),
                 (0, s.jsx)("div", {
-                  className: bs.ScreenshotRow,
+                  className: Bs.ScreenshotRow,
                   children: r.map((e, t) =>
                     (0, s.jsx)(
-                      Ds,
+                      Gs,
                       {
                         nYear: n,
                         bBlurContent: a,
@@ -11081,29 +11080,29 @@
             })
           : null;
       }
-      const Gs =
+      const Ps =
         "?imw=375&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false";
-      function Ds(e) {
+      function Gs(e) {
         const {
             screenshot: t,
             fnSetExpandScreenShot: a,
             bBlurContent: n,
             nYear: r,
           } = e,
-          [i, o] = (0, l.useState)(n),
-          d = { backgroundImage: `url(${t.image_url + Gs})` },
-          m = `${c.TS.IMG_URL}yearinreview/screenshot_placeholder.png`;
+          [i, c] = (0, o.useState)(n),
+          d = { backgroundImage: `url(${t.image_url + Ps})` },
+          m = `${l.TS.IMG_URL}yearinreview/screenshot_placeholder.png`;
         return (0, s.jsxs)("div", {
-          className: bs.ScreenshotCtn,
+          className: Bs.ScreenshotCtn,
           onClick: () => {
-            i && o(!1), a();
+            i && c(!1), a();
           },
           style: d,
           children: [
             i &&
               (0, s.jsx)("div", {
-                className: bs.ContentRestrictionText,
-                children: (0, g.we)(
+                className: Bs.ContentRestrictionText,
+                children: (0, _.we)(
                   "#YIR_TopGames_ContentRestrictionScreenshots",
                 ),
               }),
@@ -11111,35 +11110,35 @@
           ],
         });
       }
-      function Es(e) {
+      function Ds(e) {
         const { userYearInReview: t } = e,
           a = t.GetTopGamesShownAppIDs(),
-          n = C(),
-          r = b,
-          i = (0, l.useMemo)(() => a?.slice(0, r), [0, r, a]);
+          n = S(),
+          r = B,
+          i = (0, o.useMemo)(() => a?.slice(0, r), [0, r, a]);
         if (!a || 0 == a.length || 0 > a.length) return null;
-        let o = a.length > 1;
+        let l = a.length > 1;
         return (0, s.jsx)("div", {
-          className: (0, pe.A)(xe.TopGamesContainer),
-          children: (0, s.jsxs)(Lt.K, {
+          className: (0, he.A)(ge.TopGamesContainer),
+          children: (0, s.jsxs)(Rt.K, {
             placeholderHeight: "100vh",
-            rootMargin: G,
-            className: xe.FullWidth,
+            rootMargin: P,
+            className: ge.FullWidth,
             children: [
-              Boolean(o) &&
+              Boolean(l) &&
                 (0, s.jsx)("div", {
-                  className: (0, pe.A)(xe.TopGameTitleCtn, xe.white),
+                  className: (0, he.A)(ge.TopGameTitleCtn, ge.white),
                   children: (0, s.jsx)("div", {
-                    className: xe.TopGameTitle,
+                    className: ge.TopGameTitle,
                     children: n("#YIR_TopGame_mostplayed_intro"),
                   }),
                 }),
               i.map((e, a) =>
                 (0, s.jsx)(
-                  fe,
+                  je,
                   {
                     children: (0, s.jsx)(
-                      Os,
+                      Ys,
                       { unAppID: e, userYearInReview: t, index: a },
                       a,
                     ),
@@ -11151,9 +11150,9 @@
           }),
         });
       }
-      function Ms(e) {
+      function Es(e) {
         const { gameSummary: t, index: a, userYearInReview: n } = e,
-          r = C(),
+          r = S(),
           i = t.appid,
           o = n.GetYear();
         for (let e = o; e >= 2022; --e) {
@@ -11161,7 +11160,7 @@
             a = r(t, o);
           if (t != a)
             return (0, s.jsxs)("div", {
-              className: xe.IntroLine,
+              className: ge.IntroLine,
               children: [a, " "],
             });
         }
@@ -11179,234 +11178,234 @@
                 : "#YIR_TopGame_top_continued"),
           l
             ? (0, s.jsx)("div", {
-                className: (0, pe.A)(xe.IntroLine, Se.IntroLine),
+                className: (0, he.A)(ge.IntroLine, ve.IntroLine),
                 children: r(l, n.GetYear()),
               })
             : null
         );
       }
-      function Ys(e) {
+      function Ms(e) {
         let { userYearInReview: t } = e,
-          { unAppID: a, length: n, index: r } = W(),
-          [i, o] = (function (e) {
-            let [t, a] = l.useState(!1),
-              s = l.useRef(null),
+          { unAppID: a, length: n, index: r } = V(),
+          [i, c] = (function (e) {
+            let [t, a] = o.useState(!1),
+              s = o.useRef(null),
               n = s.current;
-            const r = W();
-            l.useEffect(() => {
+            const r = V();
+            o.useEffect(() => {
               null !== e && e != n && a(!0), null === e && t && a(!1);
             }, [a, t, e, n]),
               (s.current = e);
-            let i = l.useRef(void 0),
-              o = l.useCallback(() => {
-                let t = parseInt(xe.strGameDetailsTransitionTimeMS);
+            let i = o.useRef(void 0),
+              l = o.useCallback(() => {
+                let t = parseInt(ge.strGameDetailsTransitionTimeMS);
                 (i.current = setTimeout(() => {
                   e == r.unAppID &&
-                    V.Get().SetGameDetailsPopupAppData(null, []);
+                    H.Get().SetGameDetailsPopupAppData(null, []);
                 }, t)),
                   a(!1);
               }, [r.unAppID, e]);
             return (
-              l.useEffect(
+              o.useEffect(
                 () => () => {
                   i.current && clearTimeout(i.current), (i.current = void 0);
                 },
                 [],
               ),
-              [t, o]
+              [t, l]
             );
           })(a),
           d = (function (e) {
-            return l.useCallback(
+            return o.useCallback(
               (t) => {
                 t.target == t.currentTarget && e();
               },
               [e],
             );
-          })(o);
-        const m = Z(r + 1),
-          h = Z(r - 1),
-          p = (0, c.Qn)();
+          })(c);
+        const m = z(r + 1),
+          h = z(r - 1),
+          p = (0, l.Qn)();
         if (null == a && !i) return null;
-        let u = (0, pe.A)(
-            xe.GameDetailsPopup,
-            i && xe.Visible,
-            p && xe.GamepadUI,
+        let u = (0, he.A)(
+            ge.GameDetailsPopup,
+            i && ge.Visible,
+            p && ge.GamepadUI,
           ),
           _ = (0, s.jsx)("div", {
             className: u,
             onClick: d,
             children: (0, s.jsxs)("div", {
-              className: xe.ContentWrapper,
+              className: ge.ContentWrapper,
               children: [
                 (0, s.jsx)("div", {
-                  className: xe.GameWrapper,
-                  children: (0, s.jsx)(Os, {
+                  className: ge.GameWrapper,
+                  children: (0, s.jsx)(Ys, {
                     unAppID: a,
                     userYearInReview: t,
                     index: 1,
                   }),
                 }),
-                (0, s.jsx)(Cs._G, {
+                (0, s.jsx)(Ss._G, {
                   index: r,
                   numElements: n,
                   fnForward: m,
                   fnBackwards: h,
-                  fnClose: o,
+                  fnClose: c,
                 }),
               ],
             }),
           });
-        return vs.createPortal(_, document.body);
+        return xs.createPortal(_, document.body);
       }
-      const Os = l.memo((e) => {
+      const Ys = o.memo((e) => {
         const { unAppID: t, userYearInReview: a, index: n } = e,
           r = a.GetGameStats(t),
           i = Math.trunc(r?.playtime_streak?.longest_consecutive_days || 1),
-          o = a.GetGameSummaryForApp(t),
-          d = o ? o.parent_appid || t : 0,
-          [m, h] = (0, _e.t7)(d, H),
-          p = xs(d, a.GetAccountID(), a.GetYear()),
-          u = (0, Ye.n9)(),
-          _ = C(),
-          S = n % 2 ? "OddGradient" : "EvenGradient",
-          y = (0, c.Qn)(),
-          j = x(),
-          f = v(),
-          w = (0, c.hf)(),
-          { gameChartData: A, rank: N } = (0, l.useMemo)(
+          c = a.GetGameSummaryForApp(t),
+          d = c ? c.parent_appid || t : 0,
+          [m, h] = (0, ue.t7)(d, U),
+          p = gs(d, a.GetAccountID(), a.GetYear()),
+          u = (0, Me.n9)(),
+          v = S(),
+          I = n % 2 ? "OddGradient" : "EvenGradient",
+          y = (0, l.Qn)(),
+          j = g(),
+          f = x(),
+          w = (0, l.hf)(),
+          { gameChartData: A, rank: N } = (0, o.useMemo)(
             () => a.GetChartMonthlyDataForApp(t),
             [t, a],
           );
-        if (h === _e.Sq)
+        if (h === ue.Sq)
           return (0, s.jsx)("div", {
-            className: (0, pe.A)(
-              xe.TopGameBlockContainer,
-              xe[S],
+            className: (0, he.A)(
+              ge.TopGameBlockContainer,
+              ge[I],
               f.TopGameBlockContainer,
-              f[S],
-              xe.LoadingCtn,
+              f[I],
+              ge.LoadingCtn,
             ),
-            children: (0, s.jsx)(he.t, { position: "center" }),
+            children: (0, s.jsx)(me.t, { position: "center" }),
           });
-        if (!m || !o) return null;
-        let k = (0, Pe.wJ)(m.GetStorePageURL(), u);
-        c.TS.IN_CLIENT && (k = "steam://openurl/" + k);
+        if (!m || !c) return null;
+        let k = (0, be.wJ)(m.GetStorePageURL(), u);
+        l.TS.IN_CLIENT && (k = "steam://openurl/" + k);
         const T = A?.find((e) => e.percent > 0),
           R = T ? T.date.getMonth() : null,
-          L = R ? (0, g.we)(`#YIR_MonthlyCharts_MonthNoun_${R + 1}`) : "",
-          B = Math.trunc(o.total_sessions);
+          L = R ? (0, _.we)(`#YIR_MonthlyCharts_MonthNoun_${R + 1}`) : "",
+          B = Math.trunc(c.total_sessions);
         let b = "";
         j && y
           ? (b = `steam://open/games/details/${t}`)
           : j &&
-            !c.TS.IN_MOBILE_WEBVIEW &&
+            !l.TS.IN_MOBILE_WEBVIEW &&
             (b = `steam://open/library/details/${t}`);
         let P = m.GetName();
         return (
-          o.demo
-            ? (P = (0, g.we)("#YIR_GameName_PlusDemo", P))
-            : o.playtest && (P = (0, g.we)("#YIR_GameName_PlusPlaytest", P)),
-          (0, s.jsxs)(fe, {
-            className: (0, pe.A)(
-              xe.TopGameBlockContainer,
-              xe[S],
+          c.demo
+            ? (P = (0, _.we)("#YIR_GameName_PlusDemo", P))
+            : c.playtest && (P = (0, _.we)("#YIR_GameName_PlusPlaytest", P)),
+          (0, s.jsxs)(je, {
+            className: (0, he.A)(
+              ge.TopGameBlockContainer,
+              ge[I],
               f.TopGameBlockContainer,
-              f[S],
+              f[I],
             ),
             children: [
-              (0, s.jsx)(Us, { oStoreItem: m }),
+              (0, s.jsx)(Fs, { oStoreItem: m }),
               (0, s.jsxs)("div", {
-                className: xe.StandardInfoCtn,
+                className: ge.StandardInfoCtn,
                 children: [
-                  (0, s.jsx)(Fs, { oStoreItem: m }),
+                  (0, s.jsx)(Os, { oStoreItem: m }),
                   (0, s.jsxs)("div", {
-                    className: (0, pe.A)(
-                      Se.YearInReviewContent,
-                      xe.InfoContentSpacing,
+                    className: (0, he.A)(
+                      ve.YearInReviewContent,
+                      ge.InfoContentSpacing,
                     ),
                     children: [
                       (0, s.jsxs)("div", {
-                        className: xe.InfoContainer,
+                        className: ge.InfoContainer,
                         children: [
-                          (0, s.jsxs)(Ae.Z, {
-                            className: xe.GameLinks,
+                          (0, s.jsxs)(we.Z, {
+                            className: ge.GameLinks,
                             "flow-children": "row",
                             children: [
                               w &&
                                 (0, s.jsx)("a", {
                                   href: k,
-                                  className: xe.GameLink,
-                                  children: (0, g.we)(
+                                  className: ge.GameLink,
+                                  children: (0, _.we)(
                                     "#YIR_TopGames_VisitInStore",
                                   ),
                                 }),
                               !w &&
-                                (0, s.jsx)(Pt.Ii, {
+                                (0, s.jsx)(bt.Ii, {
                                   href: k,
                                   target: "_blank",
-                                  className: xe.GameLink,
-                                  children: (0, g.we)(
+                                  className: ge.GameLink,
+                                  children: (0, _.we)(
                                     "#YIR_TopGames_VisitInStore",
                                   ),
                                 }),
                               !!b &&
-                                (0, s.jsx)(Pt.Ii, {
+                                (0, s.jsx)(bt.Ii, {
                                   href: b,
-                                  className: xe.GameLink,
-                                  children: (0, g.we)(
+                                  className: ge.GameLink,
+                                  children: (0, _.we)(
                                     "#YIR_TopGames_VisitInLibrary",
                                   ),
                                 }),
-                              !j && (0, s.jsx)(Vs, { appID: d }),
+                              !j && (0, s.jsx)(Hs, { appID: d }),
                             ],
                           }),
                           (0, s.jsx)("div", {
-                            className: (0, pe.A)({
-                              [xe.Title]: !0,
-                              [xe.TitleLongName]: P?.length > 25,
+                            className: (0, he.A)({
+                              [ge.Title]: !0,
+                              [ge.TitleLongName]: P?.length > 25,
                             }),
                             children: P,
                           }),
-                          (0, s.jsx)(Ms, {
-                            gameSummary: o,
+                          (0, s.jsx)(Es, {
+                            gameSummary: c,
                             userYearInReview: a,
                             index: n,
                           }),
                           (0, s.jsxs)("div", {
-                            className: xe.StatsGroup,
+                            className: ge.StatsGroup,
                             children: [
-                              Boolean(o.total_playtime_percentagex100) &&
+                              Boolean(c.total_playtime_percentagex100) &&
                                 (0, s.jsxs)("div", {
-                                  className: xe.StatContainer,
+                                  className: ge.StatContainer,
                                   children: [
                                     (0, s.jsx)("div", {
-                                      className: xe.BigNum,
-                                      children: I(
+                                      className: ge.BigNum,
+                                      children: C(
                                         Math.ceil(
-                                          o.total_playtime_percentagex100,
+                                          c.total_playtime_percentagex100,
                                         ),
                                       ),
                                     }),
                                     (0, s.jsx)("div", {
-                                      className: xe.NumSubtitle,
-                                      children: (0, g.we)(
+                                      className: ge.NumSubtitle,
+                                      children: (0, _.we)(
                                         "#YIR_Game_PercentPlaytime",
                                       ),
                                     }),
                                   ],
                                 }),
-                              Boolean(o.total_sessions) &&
+                              Boolean(c.total_sessions) &&
                                 (0, s.jsxs)("div", {
-                                  className: xe.StatContainer,
+                                  className: ge.StatContainer,
                                   children: [
                                     (0, s.jsx)("div", {
-                                      className: xe.BigNum,
-                                      children: (0, ge.Dq)(B),
+                                      className: ge.BigNum,
+                                      children: (0, _e.Dq)(B),
                                     }),
                                     (0, s.jsx)("div", {
-                                      className: xe.NumSubtitle,
-                                      children: (0, g.we)(
+                                      className: ge.NumSubtitle,
+                                      children: (0, _.we)(
                                         1 == B
                                           ? "#YIR_Game_PlaySession_Singular"
                                           : "#YIR_Game_PlaySessions",
@@ -11414,43 +11413,43 @@
                                     }),
                                   ],
                                 }),
-                              "cn" !== c.iA.country_code.toLowerCase() &&
+                              "cn" !== l.iA.country_code.toLowerCase() &&
                                 Boolean(i > 1) &&
                                 (0, s.jsx)("div", {
-                                  className: xe.StatContainer,
-                                  children: (0, s.jsxs)(Oe.he, {
-                                    toolTipContent: (0, g.PP)(
+                                  className: ge.StatContainer,
+                                  children: (0, s.jsxs)(Ye.he, {
+                                    toolTipContent: (0, _.PP)(
                                       "#YIR_Game_LongestStreak_ttip",
                                     ),
                                     children: [
                                       (0, s.jsx)("div", {
-                                        className: xe.BigNum,
-                                        children: (0, ge.Dq)(i),
+                                        className: ge.BigNum,
+                                        children: (0, _e.Dq)(i),
                                       }),
                                       (0, s.jsx)("div", {
-                                        className: xe.NumSubtitle,
-                                        children: (0, g.we)(
+                                        className: ge.NumSubtitle,
+                                        children: (0, _.we)(
                                           "#YIR_Game_LongestStreak",
                                         ),
                                       }),
                                     ],
                                   }),
                                 }),
-                              Boolean(o?.new_this_year) &&
+                              Boolean(c?.new_this_year) &&
                                 (0, s.jsx)("div", {
-                                  className: xe.StatContainer,
-                                  children: (0, s.jsxs)(Oe.he, {
-                                    toolTipContent: _(
+                                  className: ge.StatContainer,
+                                  children: (0, s.jsxs)(Ye.he, {
+                                    toolTipContent: v(
                                       "#YIR_TopGames_NewThisYEar_ttip",
                                     ),
                                     children: [
                                       (0, s.jsx)("div", {
-                                        className: xe.BigNum,
-                                        children: (0, s.jsx)(me.eNX, {}),
+                                        className: ge.BigNum,
+                                        children: (0, s.jsx)(de.eNX, {}),
                                       }),
                                       (0, s.jsx)("div", {
-                                        className: xe.NumSubtitle,
-                                        children: (0, g.we)(
+                                        className: ge.NumSubtitle,
+                                        children: (0, _.we)(
                                           "#YIR_TopGames_NewThisYEar",
                                         ),
                                       }),
@@ -11459,15 +11458,15 @@
                                 }),
                               Boolean(p) &&
                                 (0, s.jsxs)("div", {
-                                  className: xe.StatContainer,
+                                  className: ge.StatContainer,
                                   children: [
                                     (0, s.jsx)("div", {
-                                      className: xe.BigNum,
-                                      children: (0, s.jsx)(me.Exy, {}),
+                                      className: ge.BigNum,
+                                      children: (0, s.jsx)(de.Exy, {}),
                                     }),
                                     (0, s.jsx)("div", {
-                                      className: xe.NumSubtitle,
-                                      children: (0, g.we)("#YIR_TopGames_100"),
+                                      className: ge.NumSubtitle,
+                                      children: (0, _.we)("#YIR_TopGames_100"),
                                     }),
                                   ],
                                 }),
@@ -11477,16 +11476,16 @@
                       }),
                       A &&
                         (0, s.jsxs)("div", {
-                          className: (0, pe.A)(
-                            xe.GameChartCtn,
-                            xe.ChartWidthHelper,
+                          className: (0, he.A)(
+                            ge.GameChartCtn,
+                            ge.ChartWidthHelper,
                           ),
                           children: [
                             (0, s.jsx)("div", {
-                              className: xe.GameChartFirstPlayed,
+                              className: ge.GameChartFirstPlayed,
                               children: L
-                                ? _(
-                                    Boolean(o?.new_this_year)
+                                ? v(
+                                    Boolean(c?.new_this_year)
                                       ? "#YIR_TopGames_firstplayedNew"
                                       : "#YIR_TopGames_firstplayed",
                                     L,
@@ -11494,8 +11493,8 @@
                                 : null,
                             }),
                             (0, s.jsx)("div", {
-                              className: xe.GameChart,
-                              children: (0, s.jsx)(rs, {
+                              className: ge.GameChart,
+                              children: (0, s.jsx)(ns, {
                                 data: A,
                                 name: m.GetName(),
                                 color: f[`topApp_${N}`],
@@ -11507,145 +11506,152 @@
                   }),
                 ],
               }),
-              (0, s.jsx)(Hs, { appid: d, userYearInReview: a, oStoreItem: m }),
+              (0, s.jsx)(Us, { appid: d, userYearInReview: a, oStoreItem: m }),
             ],
           })
         );
       });
-      function Fs(e) {
+      function Os(e) {
         const { oStoreItem: t } = e,
-          a = S(t),
+          a = v(t),
           n = t.GetAssetsWithoutOverrides()?.GetLibraryHeroURL();
         return (0, s.jsx)("div", {
-          className: xe.BackgroundImage,
+          className: ge.BackgroundImage,
           style: a ? null : { backgroundImage: `url(${n})` },
         });
       }
-      function Us(e) {
+      function Fs(e) {
         const { oStoreItem: t } = e,
-          a = v(),
-          n = S(t),
+          a = x(),
+          n = v(t),
           r = t.GetAssetsWithoutOverrides()?.GetLibraryHeroURL();
         return (0, s.jsx)(s.Fragment, {
           children: (0, s.jsx)("div", {
-            className: (0, pe.A)(xe.BackgroundImageFull, a.BackgroundImageFull),
+            className: (0, he.A)(ge.BackgroundImageFull, a.BackgroundImageFull),
             style: n ? null : { backgroundImage: `url(${r})` },
           }),
         });
       }
-      function Hs(e) {
+      function Us(e) {
         const { appid: t, userYearInReview: a, oStoreItem: n } = e,
-          r = S(n);
+          r = v(n);
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(Ns, { bBlurContent: r, appid: t, userYearInReview: a }),
-            (0, s.jsx)(Ps, { bBlurContent: r, appid: t, nYear: a.GetYear() }),
+            (0, s.jsx)(As, { bBlurContent: r, appid: t, userYearInReview: a }),
+            (0, s.jsx)(bs, { bBlurContent: r, appid: t, nYear: a.GetYear() }),
           ],
         });
       }
-      function Vs(e) {
+      function Hs(e) {
         const { appID: t } = e,
-          a = (0, Ss.$5)(t),
-          n = (0, hs.bB)(t),
-          { bIsOwned: r } = (0, ms.ZJ)(a),
-          i = (0, Ye.n9)(),
-          o = (0, Pe.L3)(i),
-          { mutate: l } = (0, ps.s)(t, !n, o);
-        return !c.iA.logged_in || r
+          a = (0, vs.$5)(t),
+          n = (0, ms.bB)(t),
+          { bIsOwned: r } = (0, ds.ZJ)(a),
+          i = (0, Me.n9)(),
+          o = (0, be.L3)(i),
+          { mutate: c } = (0, hs.s)(t, !n, o);
+        return !l.iA.logged_in || r
           ? null
-          : (0, s.jsxs)(Ae.Z, {
-              className: (0, pe.A)(xe.AddToWishlist),
+          : (0, s.jsxs)(we.Z, {
+              className: (0, he.A)(ge.AddToWishlist),
               onActivate: (e) => {
-                e.preventDefault(), e.stopPropagation(), l();
+                e.preventDefault(), e.stopPropagation(), c();
               },
               children: [
-                n ? (0, s.jsx)(me.qnF, {}) : (0, s.jsx)(me.T4m, {}),
-                (0, g.we)(
+                n ? (0, s.jsx)(de.qnF, {}) : (0, s.jsx)(de.T4m, {}),
+                (0, _.we)(
                   n ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
                 ),
               ],
             });
       }
-      var Ws = a(37788);
-      function zs(e) {
+      var Vs = a(37788);
+      function Ws(e) {
         const t = parseInt(e.year),
           a = e.steamId || "",
-          n = (0, ne.W6)(),
+          n = (0, se.W6)(),
           r = Number.parseInt(
-            (0, c.Fd)("yearinreview_eresults", "application_config"),
+            (0, l.Fd)("yearinreview_eresults", "application_config"),
           );
+        o.useEffect(() => {
+          (0, le.le)(n, "src", null),
+            (0, le.le)(n, "snr", null),
+            (0, le.le)(n, "sP", null);
+        }, [n]);
+        const i = o.useRef(null);
         if (
-          (l.useEffect(() => {
-            (0, ce.le)(n, "src", null),
-              (0, ce.le)(n, "snr", null),
-              (0, ce.le)(n, "sP", null);
-          }, [n]),
-          r == D.sW)
+          (o.useEffect(() => {
+            i.current && i.current.NavTree()?.Activate(!0);
+          }, []),
+          r == G.sW)
         )
-          return (0, s.jsx)(en, {
-            message: (0, g.we)("#YIR_Error_NoShareNoGameplayNotUser"),
+          return (0, s.jsx)($s, {
+            message: (0, _.we)("#YIR_Error_NoShareNoGameplayNotUser"),
           });
         if (!a || !t)
-          return (0, s.jsx)(en, { message: (0, g.we)("#YIR_Error_NoData") });
-        const i = new R.b(a);
-        return (0, s.jsx)(Zs, { steamID: i, year: t });
+          return (0, s.jsx)($s, { message: (0, _.we)("#YIR_Error_NoData") });
+        const c = new T.b(a);
+        return (0, s.jsx)(we.Z, {
+          navRef: i,
+          children: (0, s.jsx)(zs, { steamID: c, year: t }),
+        });
       }
-      function Zs(e) {
+      function zs(e) {
         let { steamID: t, year: a } = e;
-        const [n, r] = (0, ie.KT)(t.GetAccountID()),
+        const [n, r] = (0, re.KT)(t.GetAccountID()),
           { userYearInReview: i, isLoading: o } = (function (e, t) {
-            let { data: a, isLoading: s } = (0, h.I)({
+            let { data: a, isLoading: s } = (0, m.I)({
                 queryKey: ["YearInReview", "Get", e, t],
-                queryFn: () => V.Get().GetLoadYearInReview(e, t),
+                queryFn: () => H.Get().GetLoadYearInReview(e, t),
               }),
-              { data: n, isLoading: r } = (0, h.I)({
+              { data: n, isLoading: r } = (0, m.I)({
                 queryKey: ["YearInReview_AppDataLoading"],
-                queryFn: () => V.Get().PreloadStoreItemCache(a),
+                queryFn: () => H.Get().PreloadStoreItemCache(a),
                 enabled: !!a,
               }),
               i = s || r;
             return i || n || (a = null), { userYearInReview: a, isLoading: i };
           })(t.ConvertTo64BitString(), a);
         if (r || o)
-          return (0, s.jsx)(he.t, {
-            string: (0, g.we)("#Loading"),
+          return (0, s.jsx)(me.t, {
+            string: (0, _.we)("#Loading"),
             position: "center",
           });
         if (!n || !t.BIsIndividualAccount())
-          return (0, s.jsx)(en, { message: (0, g.we)("#YIR_Error_NoUser") });
+          return (0, s.jsx)($s, { message: (0, _.we)("#YIR_Error_NoUser") });
         if (!i)
-          return (0, s.jsx)(en, {
-            message: (0, g.we)("#YIR_Error_PageLoadFailed"),
+          return (0, s.jsx)($s, {
+            message: (0, _.we)("#YIR_Error_PageLoadFailed"),
           });
-        const l = !i.GetPlayTimeStats()?.game_summary?.length;
-        return c.iA.steamid !== n.steamid && l
-          ? (0, s.jsx)(en, {
-              message: (0, g.we)("#YIR_Error_NoShareNoGameplayNotUser"),
+        const c = !i.GetPlayTimeStats()?.game_summary?.length;
+        return l.iA.steamid !== n.steamid && c
+          ? (0, s.jsx)($s, {
+              message: (0, _.we)("#YIR_Error_NoShareNoGameplayNotUser"),
             })
-          : l
-            ? (0, s.jsx)(en, {
-                message: (0, g.we)("#YIR_Error_NoShareNoGameplay"),
+          : c
+            ? (0, s.jsx)($s, {
+                message: (0, _.we)("#YIR_Error_NoShareNoGameplay"),
               })
-            : (0, s.jsx)(Ws.f7, {
+            : (0, s.jsx)(Vs.f7, {
                 autoFocus: !0,
                 noFocusRing: !0,
                 focusable: !1,
                 children: (0, s.jsx)("div", {
-                  className: Ce().YearInReviewContainer,
-                  children: (0, s.jsx)(Xs, {
+                  className: Se().YearInReviewContainer,
+                  children: (0, s.jsx)(Ks, {
                     userYearInReview: i,
                     avatarAndPersona: n,
                   }),
                 }),
               });
       }
-      const Qs = l.createContext({
+      const Zs = o.createContext({
         bIsUser: !1,
         persona_name: "",
         Screenshots: void 0,
         themeStyle: {},
       });
-      function Ks(e) {
+      function Qs(e) {
         const {
             viewAsUser: t,
             avatarAndPersona: a,
@@ -11653,16 +11659,16 @@
             themeYear: r,
             children: i,
           } = e,
-          o = n.GetSteamID(),
+          l = n.GetSteamID(),
           c = n.GetYear(),
-          d = (0, Wa.b)(r),
-          m = l.useRef(void 0);
+          d = (0, Va.b)(r),
+          m = o.useRef(void 0);
         (m.current &&
-          m.current.steamid.GetAccountID() == o.GetAccountID() &&
+          m.current.steamid.GetAccountID() == l.GetAccountID() &&
           m.current.year == c) ||
-          (m.current = new X(V.Get().SteamInterface, o, c));
+          (m.current = new K(H.Get().SteamInterface, l, c));
         const h = m.current,
-          p = l.useMemo(
+          p = o.useMemo(
             () => ({
               bIsUser: t,
               persona_name: a.persona_name,
@@ -11671,117 +11677,117 @@
             }),
             [t, a.persona_name, h, d],
           );
-        return (0, s.jsx)(Qs.Provider, {
+        return (0, s.jsx)(Zs.Provider, {
           value: p,
-          children: (0, s.jsx)(we.QA, {
+          children: (0, s.jsx)(fe.QA, {
             eAdultOnlyMediaBehavior: t ? "allowed" : "masked",
             children: i,
           }),
         });
       }
-      function Xs(e) {
+      function Ks(e) {
         const { userYearInReview: t, avatarAndPersona: a } = e,
           n = t.GetSteamID(),
           r = t.GetYear(),
-          i = v(),
-          o = t.GetTopGamesShownAppIDs();
+          i = x(),
+          c = t.GetTopGamesShownAppIDs();
         !(function (e, t, a) {
-          const [s, n] = (0, l.useState)(ae.Get().GetManyAchievement(e, t, a));
-          (0, l.useEffect)(() => {
+          const [s, n] = (0, o.useState)(te.Get().GetManyAchievement(e, t, a));
+          (0, o.useEffect)(() => {
             a?.length > 0 &&
-              ae
+              te
                 .Get()
                 .LoadUserAchievementForYearForMultipleGame(e, t, a)
                 .then(n);
           }, [t, e, a]);
-        })(r, n.GetAccountID(), o);
-        const d = c.iA.logged_in && c.iA.steamid === a.steamid,
-          [m, h] = (0, l.useState)(d),
-          [p, u] = (0, l.useState)(r),
-          _ = t.GetPlayTimeStats().game_summary?.length;
-        return (0, s.jsxs)(Ks, {
+        })(r, n.GetAccountID(), c);
+        const d = l.iA.logged_in && l.iA.steamid === a.steamid,
+          [m, h] = (0, o.useState)(d),
+          [p, u] = (0, o.useState)(r),
+          g = t.GetPlayTimeStats().game_summary?.length;
+        return (0, s.jsxs)(Qs, {
           viewAsUser: m,
           userYearInReview: t,
           avatarAndPersona: a,
           themeYear: p,
           children: [
-            (0, s.jsx)($s, {
+            (0, s.jsx)(Js, {
               viewAsUser: m,
               setViewAsUser: h,
               themeYear: p,
               setThemeYear: u,
             }),
-            (0, s.jsx)(Js, { avatarAndPersona: a, userYearInReview: t }),
-            (0, s.jsx)(le.tH, {
-              children: (0, s.jsxs)(Je, {
+            (0, s.jsx)(qs, { avatarAndPersona: a, userYearInReview: t }),
+            (0, s.jsx)(oe.tH, {
+              children: (0, s.jsxs)(qe, {
                 userYearInReview: t,
                 children: [
-                  (0, s.jsx)(La, { userYearInReview: t }),
-                  Boolean(1 === _) && (0, s.jsx)(Es, { userYearInReview: t }),
+                  (0, s.jsx)(Ra, { userYearInReview: t }),
+                  Boolean(1 === g) && (0, s.jsx)(Ds, { userYearInReview: t }),
                 ],
               }),
             }),
-            (0, s.jsx)(le.tH, {
-              children: (0, s.jsx)(Ct, { userYearInReview: t }),
+            (0, s.jsx)(oe.tH, {
+              children: (0, s.jsx)(St, { userYearInReview: t }),
             }),
-            Boolean(_ > 1) &&
+            Boolean(g > 1) &&
               (0, s.jsxs)(s.Fragment, {
                 children: [
-                  (0, s.jsx)(Es, { userYearInReview: t }),
+                  (0, s.jsx)(Ds, { userYearInReview: t }),
                   (0, s.jsx)("div", {
-                    className: (0, pe.A)(Ce().TimeRelatedCtn, i.TimeRelatedCtn),
-                    children: (0, s.jsx)(le.tH, {
-                      children: (0, s.jsx)(ds, { userYearInReview: t }),
+                    className: (0, he.A)(Se().TimeRelatedCtn, i.TimeRelatedCtn),
+                    children: (0, s.jsx)(oe.tH, {
+                      children: (0, s.jsx)(cs, { userYearInReview: t }),
                     }),
                   }),
                 ],
               }),
             (0, s.jsx)("div", {
-              className: Ce().GraphRelatedCtn,
-              children: (0, s.jsx)(le.tH, {
-                children: (0, s.jsx)(qt, { userYearInReview: t }),
+              className: Se().GraphRelatedCtn,
+              children: (0, s.jsx)(oe.tH, {
+                children: (0, s.jsx)(Xt, { userYearInReview: t }),
               }),
             }),
             Boolean(t.GetPlayTimeStats().playtime_streak) &&
-              (0, s.jsx)(le.tH, {
-                children: (0, s.jsx)(na, { userYearInReview: t }),
+              (0, s.jsx)(oe.tH, {
+                children: (0, s.jsx)(sa, { userYearInReview: t }),
               }),
-            Boolean(_ > 5) &&
-              (0, s.jsx)(le.tH, {
-                children: (0, s.jsx)(Fe, { userYearInReview: t, nYear: r }),
+            Boolean(g > 5) &&
+              (0, s.jsx)(oe.tH, {
+                children: (0, s.jsx)(Oe, { userYearInReview: t, nYear: r }),
               }),
-            (0, s.jsx)(le.tH, {
+            (0, s.jsx)(oe.tH, {
               children: (0, s.jsxs)("div", {
-                className: Ce().BottomCtn,
+                className: Se().BottomCtn,
                 children: [
-                  (0, s.jsx)(Je, {
+                  (0, s.jsx)(qe, {
                     userYearInReview: t,
-                    children: (0, s.jsx)(tn, {
+                    children: (0, s.jsx)(en, {
                       playerName: a.persona_name,
                       userYearInReview: t,
                     }),
                   }),
                   m &&
                     (0, s.jsxs)("div", {
-                      className: ma().ShareOptions,
+                      className: da().ShareOptions,
                       children: [
                         (0, s.jsx)("div", {
-                          className: ma().ShareTitle,
-                          children: (0, g.we)("#YIR_ShareOptionsTitle"),
+                          className: da().ShareTitle,
+                          children: (0, _.we)("#YIR_ShareOptionsTitle"),
                         }),
-                        (0, s.jsxs)(Ae.Z, {
-                          className: ma().ShareColumns,
+                        (0, s.jsxs)(we.Z, {
+                          className: da().ShareColumns,
                           children: [
                             (0, s.jsxs)("div", {
-                              className: (0, pe.A)(ma().ShareArea),
+                              className: (0, he.A)(da().ShareArea),
                               children: [
                                 (0, s.jsx)("div", {
-                                  className: ma().ShareTypeTitle,
-                                  children: (0, g.we)(
+                                  className: da().ShareTypeTitle,
+                                  children: (0, _.we)(
                                     "#YIR_ShareModal_TitleSocial",
                                   ),
                                 }),
-                                (0, s.jsx)(Ca, {
+                                (0, s.jsx)(Sa, {
                                   userYearInReview: t,
                                   steamId: n,
                                   nYear: r,
@@ -11789,24 +11795,24 @@
                               ],
                             }),
                             (0, s.jsxs)("div", {
-                              className: (0, pe.A)(ma().ShareArea),
+                              className: (0, he.A)(da().ShareArea),
                               children: [
                                 (0, s.jsx)("div", {
-                                  className: ma().ShareTypeTitle,
-                                  children: (0, g.we)(
+                                  className: da().ShareTypeTitle,
+                                  children: (0, _.we)(
                                     "#YIR_ShareModal_TitleProfile",
                                   ),
                                 }),
-                                (0, s.jsxs)(Pt.Ii, {
-                                  href: `${c.TS.COMMUNITY_BASE_URL}profiles/${c.iA.steamid}/edit/showcases`,
-                                  className: (0, pe.A)(ma().ShareButton),
+                                (0, s.jsxs)(bt.Ii, {
+                                  href: `${l.TS.COMMUNITY_BASE_URL}profiles/${l.iA.steamid}/edit/showcases`,
+                                  className: (0, he.A)(da().ShareButton),
                                   children: [
-                                    (0, s.jsx)(me.KJW, {
-                                      className: ma().ShareLinkIcon,
+                                    (0, s.jsx)(de.KJW, {
+                                      className: da().ShareLinkIcon,
                                     }),
                                     (0, s.jsx)("span", {
-                                      className: (0, pe.A)(ma().ShareText),
-                                      children: (0, g.we)(
+                                      className: (0, he.A)(da().ShareText),
+                                      children: (0, _.we)(
                                         "#YIR_ShareModal_AddShowcase",
                                       ),
                                     }),
@@ -11821,32 +11827,32 @@
                 ],
               }),
             }),
-            (0, s.jsx)(le.tH, {
-              children: (0, s.jsx)(Gt, { userYearInReview: t }),
+            (0, s.jsx)(oe.tH, {
+              children: (0, s.jsx)(Pt, { userYearInReview: t }),
             }),
-            (0, s.jsx)(le.tH, {
-              children: (0, s.jsx)(ca, { steamId: n, year: r }),
+            (0, s.jsx)(oe.tH, {
+              children: (0, s.jsx)(la, { steamId: n, year: r }),
             }),
-            (0, s.jsx)(le.tH, { children: (0, s.jsx)(an, { year: r }) }),
-            (0, s.jsx)(le.tH, {
-              children: (0, s.jsx)(Ys, { userYearInReview: t }),
+            (0, s.jsx)(oe.tH, { children: (0, s.jsx)(tn, { year: r }) }),
+            (0, s.jsx)(oe.tH, {
+              children: (0, s.jsx)(Ms, { userYearInReview: t }),
             }),
           ],
         });
       }
-      function qs(e) {
+      function Xs(e) {
         const { avatarAndPersona: t } = e,
-          a = v();
+          a = x();
         return (0, s.jsxs)("div", {
-          className: Ce().AvatarName,
+          className: Se().AvatarName,
           children: [
-            (0, s.jsx)(re.Ul, {
+            (0, s.jsx)(ne.Ul, {
               strAvatarURL: t.avatar_url.replace(/\.jpg$/, "_full.jpg"),
-              className: Ce().UserAvatar,
+              className: Se().UserAvatar,
             }),
             (0, s.jsx)("span", {
-              className: (0, pe.A)(Ce().UserName, a.UserName),
-              children: (0, g.we)(
+              className: (0, he.A)(Se().UserName, a.UserName),
+              children: (0, _.we)(
                 "#YearInReview_PossessiveUserName",
                 t.persona_name,
               ),
@@ -11854,30 +11860,30 @@
           ],
         });
       }
-      function Js(e) {
+      function qs(e) {
         let { avatarAndPersona: t, userYearInReview: a } = e;
         const n = a.GetSteamID(),
           r = a.GetYear();
         return (0, s.jsx)("div", {
-          className: (0, pe.A)(Ce().YearInReviewContent, Ce().TopAreaSizer),
+          className: (0, he.A)(Se().YearInReviewContent, Se().TopAreaSizer),
           children: (0, s.jsxs)("div", {
-            className: Ce().HeaderCtn,
+            className: Se().HeaderCtn,
             children: [
               (0, s.jsx)("div", {
-                className: Ce().RewindHeader,
-                children: (0, g.PP)(
+                className: Se().RewindHeader,
+                children: (0, _.PP)(
                   "#YearInReview_SteamRewindHeader",
-                  (0, s.jsx)(qs, { avatarAndPersona: t }),
-                  (0, g.we)("#date_year", r, " "),
+                  (0, s.jsx)(Xs, { avatarAndPersona: t }),
+                  (0, _.we)("#date_year", r, " "),
                 ),
               }),
-              c.iA.logged_in &&
+              l.iA.logged_in &&
                 (0, s.jsx)("div", {
-                  className: Ce().HeaderShareCtn,
+                  className: Se().HeaderShareCtn,
                   children: (0, s.jsx)("div", {
-                    className: (0, pe.A)(ma().ShareArea),
-                    children: (0, s.jsx)(le.tH, {
-                      children: (0, s.jsx)(Ca, {
+                    className: (0, he.A)(da().ShareArea),
+                    children: (0, s.jsx)(oe.tH, {
+                      children: (0, s.jsx)(Sa, {
                         userYearInReview: a,
                         steamId: n,
                         nYear: r,
@@ -11889,39 +11895,39 @@
           }),
         });
       }
-      function $s(e) {
+      function Js(e) {
         const {
             viewAsUser: t,
             setViewAsUser: a,
             themeYear: n,
             setThemeYear: r,
           } = e,
-          i = (0, l.useCallback)(
+          i = (0, o.useCallback)(
             (e) => {
               r(e.data);
             },
             [r],
           );
-        return "dev" === c.TS.WEB_UNIVERSE ||
-          "beta" === c.TS.WEB_UNIVERSE ||
-          (c.iA.is_support &&
+        return "dev" === l.TS.WEB_UNIVERSE ||
+          "beta" === l.TS.WEB_UNIVERSE ||
+          (l.iA.is_support &&
             Boolean(
-              (0, c.Fd)("localization_advanced_access", "application_config"),
+              (0, l.Fd)("localization_advanced_access", "application_config"),
             ))
-          ? c.TS.IN_GAMEPADUI
+          ? l.TS.IN_GAMEPADUI
             ? null
             : (0, s.jsxs)("div", {
-                className: (0, pe.A)(Ce().DevToggle, de.ValveOnlyBackground),
+                className: (0, he.A)(Se().DevToggle, ce.ValveOnlyBackground),
                 children: [
                   (0, s.jsx)("div", {
                     children: "Debug Only: Toggle First Person View",
                   }),
-                  (0, s.jsx)(oe.RF, { onChange: a, checked: t }),
+                  (0, s.jsx)(ie.RF, { onChange: a, checked: t }),
                   (0, s.jsx)("div", {
                     children:
                       "Debug Only: Change to view the contents in the css style of a different year",
                   }),
-                  (0, s.jsx)(oe.ZU, {
+                  (0, s.jsx)(ie.ZU, {
                     rgOptions: [
                       { data: 2022, label: "2022" },
                       { data: 2023, label: "2023" },
@@ -11935,17 +11941,17 @@
               })
           : null;
       }
-      function en(e) {
+      function $s(e) {
         let { message: t } = e;
         return (0, s.jsxs)("div", {
-          className: Ce().MissingUserCtn,
+          className: Se().MissingUserCtn,
           children: [
-            (0, s.jsx)("div", { className: Ce().GenericBackground }),
+            (0, s.jsx)("div", { className: Se().GenericBackground }),
             (0, s.jsxs)("div", {
-              className: (0, pe.A)(Ce().YearInReviewContainer, Ce().ErrorMsg),
+              className: (0, he.A)(Se().YearInReviewContainer, Se().ErrorMsg),
               children: [
                 (0, s.jsx)("div", {
-                  className: Ce().SectionTitle,
+                  className: Se().SectionTitle,
                   children: t,
                 }),
                 (0, s.jsx)("div", {}),
@@ -11954,19 +11960,19 @@
           ],
         });
       }
-      function tn(e) {
+      function en(e) {
         let { userYearInReview: t } = e;
-        const a = v();
-        if (!c.iA.is_support && c.iA.accountid != t.GetAccountID()) return null;
+        const a = x();
+        if (!l.iA.is_support && l.iA.accountid != t.GetAccountID()) return null;
         const n = t.GetYear();
         return (0, s.jsx)("div", {
-          className: (0, pe.A)(Ce().YearInReviewContent, Ce().ConclusionCtn),
+          className: (0, he.A)(Se().YearInReviewContent, Se().ConclusionCtn),
           children: (0, s.jsx)("div", {
-            className: Ce().SectionTitle,
-            children: (0, g.PP)(
+            className: Se().SectionTitle,
+            children: (0, _.PP)(
               "#YIR_Conclusion",
               (0, s.jsx)("span", {
-                className: (0, pe.A)(Ce().ConclusionName, a.ConclusionName),
+                className: (0, he.A)(Se().ConclusionName, a.ConclusionName),
                 children: e.playerName,
               }),
               n,
@@ -11974,81 +11980,81 @@
           }),
         });
       }
-      function an(e) {
+      function tn(e) {
         const { year: t } = e;
         return (0, s.jsxs)("div", {
-          className: (0, pe.A)(
-            Ce().YearInReviewContenredPadding,
-            Ce().FAQSection,
+          className: (0, he.A)(
+            Se().YearInReviewContenredPadding,
+            Se().FAQSection,
           ),
           children: [
             (0, s.jsx)("div", {
-              className: Ce().SectionTitle,
-              children: (0, g.we)("#YIR_FAQ_Title"),
+              className: Se().SectionTitle,
+              children: (0, _.we)("#YIR_FAQ_Title"),
             }),
             (0, s.jsxs)("div", {
-              className: Ce().Questions,
+              className: Se().Questions,
               children: [
                 (0, s.jsxs)("div", {
-                  className: Ce().QuestionCtn,
+                  className: Se().QuestionCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().Question,
-                      children: (0, g.we)("#YIR_FAQ_Dates_Q"),
+                      className: Se().Question,
+                      children: (0, _.we)("#YIR_FAQ_Dates_Q"),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().Answer,
-                      children: (0, g.we)("#YIR_FAQ_Dates_A", t),
+                      className: Se().Answer,
+                      children: (0, _.we)("#YIR_FAQ_Dates_A", t),
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().QuestionCtn,
+                  className: Se().QuestionCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().Question,
-                      children: (0, g.we)("#YIR_FAQ_Offline_Q"),
+                      className: Se().Question,
+                      children: (0, _.we)("#YIR_FAQ_Offline_Q"),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().Answer,
-                      children: (0, g.we)("#YIR_FAQ_Offline_A"),
+                      className: Se().Answer,
+                      children: (0, _.we)("#YIR_FAQ_Offline_A"),
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().QuestionCtn,
+                  className: Se().QuestionCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().Question,
-                      children: (0, g.we)("#YIR_FAQ_Types_Q"),
+                      className: Se().Question,
+                      children: (0, _.we)("#YIR_FAQ_Types_Q"),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().Answer,
-                      children: (0, g.we)("#YIR_FAQ_Types_A"),
+                      className: Se().Answer,
+                      children: (0, _.we)("#YIR_FAQ_Types_A"),
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().QuestionCtn,
+                  className: Se().QuestionCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().Question,
-                      children: (0, g.we)("#YIR_FAQ_Share_Q"),
+                      className: Se().Question,
+                      children: (0, _.we)("#YIR_FAQ_Share_Q"),
                     }),
                     (0, s.jsxs)("div", {
-                      className: Ce().Answer,
+                      className: Se().Answer,
                       children: [
-                        (0, g.we)("#YIR_FAQ_Share_A"),
+                        (0, _.we)("#YIR_FAQ_Share_A"),
                         (0, s.jsxs)("ol", {
                           children: [
                             (0, s.jsx)("li", {
-                              children: (0, g.we)("#YIR_FAQ_Share_A_b1"),
+                              children: (0, _.we)("#YIR_FAQ_Share_A_b1"),
                             }),
                             (0, s.jsx)("li", {
-                              children: (0, g.we)("#YIR_FAQ_Share_A_b2"),
+                              children: (0, _.we)("#YIR_FAQ_Share_A_b2"),
                             }),
                             (0, s.jsx)("li", {
-                              children: (0, g.we)("#YIR_FAQ_Share_A_b3"),
+                              children: (0, _.we)("#YIR_FAQ_Share_A_b3"),
                             }),
                           ],
                         }),
@@ -12057,60 +12063,60 @@
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().QuestionCtn,
+                  className: Se().QuestionCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().Question,
-                      children: (0, g.we)("#YIR_FAQ_ShareFamily_Q"),
+                      className: Se().Question,
+                      children: (0, _.we)("#YIR_FAQ_ShareFamily_Q"),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().Answer,
-                      children: (0, g.we)("#YIR_FAQ_ShareFamily_A"),
+                      className: Se().Answer,
+                      children: (0, _.we)("#YIR_FAQ_ShareFamily_A"),
                     }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: Ce().QuestionCtn,
+                  className: Se().QuestionCtn,
                   children: [
                     (0, s.jsx)("div", {
-                      className: Ce().Question,
-                      children: (0, g.we)("#YIR_FAQ_Controller_Q"),
+                      className: Se().Question,
+                      children: (0, _.we)("#YIR_FAQ_Controller_Q"),
                     }),
                     (0, s.jsx)("div", {
-                      className: Ce().Answer,
-                      children: (0, g.we)("#YIR_FAQ_Controller_A1"),
+                      className: Se().Answer,
+                      children: (0, _.we)("#YIR_FAQ_Controller_A1"),
                     }),
                     (0, s.jsx)("br", {}),
                     (0, s.jsx)("div", {
-                      className: Ce().Answer,
-                      children: (0, g.we)("#YIR_FAQ_Controller_A2"),
+                      className: Se().Answer,
+                      children: (0, _.we)("#YIR_FAQ_Controller_A2"),
                     }),
                   ],
                 }),
                 2022 == t
                   ? (0, s.jsxs)("div", {
-                      className: Ce().QuestionCtn,
+                      className: Se().QuestionCtn,
                       children: [
                         (0, s.jsx)("div", {
-                          className: Ce().Question,
-                          children: (0, g.we)("#YIR_FAQ_PrivateApps_Q"),
+                          className: Se().Question,
+                          children: (0, _.we)("#YIR_FAQ_PrivateApps_Q"),
                         }),
                         (0, s.jsx)("div", {
-                          className: Ce().Answer,
-                          children: (0, g.we)("#YIR_FAQ_PrivateApps_A", t),
+                          className: Se().Answer,
+                          children: (0, _.we)("#YIR_FAQ_PrivateApps_A", t),
                         }),
                       ],
                     })
                   : (0, s.jsxs)("div", {
-                      className: Ce().QuestionCtn,
+                      className: Se().QuestionCtn,
                       children: [
                         (0, s.jsx)("div", {
-                          className: Ce().Question,
-                          children: (0, g.we)("#YIR_FAQ_PrivateApps_v2_Q"),
+                          className: Se().Question,
+                          children: (0, _.we)("#YIR_FAQ_PrivateApps_v2_Q"),
                         }),
                         (0, s.jsx)("div", {
-                          className: Ce().Answer,
-                          children: (0, g.we)("#YIR_FAQ_PrivateApps_v2_A", t),
+                          className: Se().Answer,
+                          children: (0, _.we)("#YIR_FAQ_PrivateApps_v2_A", t),
                         }),
                       ],
                     }),
@@ -12119,33 +12125,30 @@
           ],
         });
       }
-      var sn = a(32630);
-      const nn = { Home: (e, t) => `${i.B.YearInReview(e, t)}` };
-      function rn(e) {
+      var an = a(32630);
+      const sn = { Home: (e, t) => `${r.B.YearInReview(e, t)}` };
+      function nn(e) {
         return (
-          (0, _e.YM)(),
-          (0, s.jsx)(n.u, {
-            navID: "YearInReviewPageRoot",
-            children: (0, s.jsx)(sn.Ay, {
-              domain: "store.steampowered.com",
-              controller: "yearinreview",
-              children: (0, s.jsx)(ne.dO, {
-                children: (0, s.jsx)(ne.qh, {
-                  path: `${nn.Home(":steamId?", ":year?")}`,
-                  render: (e) =>
-                    (0, s.jsx)(sn.Ay, {
-                      method: "yearinreview",
-                      children: (0, s.jsx)(le.tH, {
-                        children: (0, s.jsx)(zs, {
-                          steamId:
-                            "my" == e.match.params.steamId
-                              ? r.iA.steamid
-                              : e.match.params.steamId,
-                          year: e.match.params.year,
-                        }),
+          (0, ue.YM)(),
+          (0, s.jsx)(an.Ay, {
+            domain: "store.steampowered.com",
+            controller: "yearinreview",
+            children: (0, s.jsx)(se.dO, {
+              children: (0, s.jsx)(se.qh, {
+                path: `${sn.Home(":steamId?", ":year?")}`,
+                render: (e) =>
+                  (0, s.jsx)(an.Ay, {
+                    method: "yearinreview",
+                    children: (0, s.jsx)(oe.tH, {
+                      children: (0, s.jsx)(Ws, {
+                        steamId:
+                          "my" == e.match.params.steamId
+                            ? n.iA.steamid
+                            : e.match.params.steamId,
+                        year: e.match.params.year,
                       }),
                     }),
-                }),
+                  }),
               }),
             }),
           })

@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "设置举报冷却时间",
     "setcooldown_dialogdescription": "使滥用系统的用户无法进行内容举报或对处理结果提出争议。",
     "setcooldown_setbutton": "设置冷却时间",
+    "setcooldown_clearopenreports": "清除该用户的未解决举报",
     "nocomma": ""
 }

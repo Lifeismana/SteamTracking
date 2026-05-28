@@ -323,8 +323,7 @@
         d = t(78327);
       class c {
         constructor() {
-          (this.bOpenEventLandingPage = !1),
-            (this.bIncludeFeaturedAsGameSource = !0),
+          (this.bIncludeFeaturedAsGameSource = !0),
             (this.nOverrideDateNow = void 0),
             (0, i.Gn)(this);
         }

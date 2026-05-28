@@ -19,6 +19,32 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CarouselEditContainer: "_3kKETJYqcMOvI7DoPg8NRp",
+        CarouselList: "_29awDHhUWS3DKirluu8OGx",
+        ListItem: "uUOCgnwAbXeUmKvdAccoH",
+        DraggableItem: "XruR-YbySxPawieGNohW6",
+        ImagePreview: "_3RALyudkR9YsufJ__hQRLZ",
+        Spacer: "EAttw6yxMpx398nbBEbMz",
+        Controls: "Ge-JWjIp9WDyaaxi6CvtR",
+        Control: "vwJtDHPeg0gv0CI7yGChD",
+        AddButton: "_36RM9HiLN49wfehWU79FHe",
+        PlusIcon: "_3nwxvp5yLdVg3iJ1eAi63z",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ClanImageContainer: "_1TEbObXeFqUF-IRZKx0Qg5",
+        Selected: "_3VVyv-d-F-7paQgn90RTr0",
+        "extra-asset-blink": "_3AFR3dAEjYGOiz7dgTms8Y",
+        ClanImageModalContent: "SsgHukHcE1jf7p3W6Ta8g",
+        ClanImageModalMode: "_1RAzAQViGO8A_wCFzSUStH",
+        Active: "_1qsUls0lc9uJ_RarLA3dcG",
+        ClanImageGridForm: "_3uCm4z1gjW0tmhRd228Xqh",
+        ClanImageGridContainer: "_3Q5TF6lMOT30JuoipVGd5C",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DiffTableContainer: "_1T21rDXKcolUe7tHkC54OL",
         DiffButtonCtn: "_2iajX7nR6xNLkLocPzfuKe",
         DiffButton: "_3KPMmnZcO_XZ44Mxw1lqtg",
@@ -631,7 +657,11 @@
     chunkid: (module) => {
       module.exports = {
         AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
         WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        AdminHeader: "vrqqGANTuXeQs27RGumFj",
+        Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
+        Required: "_1-jmJyKnLRFoN-GX0Oqor8",
         PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
         PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
         Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
@@ -639,6 +669,7 @@
         ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
         ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
         SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
         ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
         LeftCol: "_1AqrivbzwCs57BXiugqpeA",
         ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
@@ -676,6 +707,8 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+        AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
+        RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
       };
     },
     chunkid: (module) => {
@@ -833,6 +866,18 @@
         "ItemFocusAnim-green": "_3qjU-9ZS6bDpjjMAOYUhGm",
         focusAnimation: "_3-bYSIZZNIWgiOR__mB2jd",
         hoverAnimation: "_39oPHCcA4NgTm53rnykAtP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        EditableComponentToolbarContainer: "o3hf9xdErkO0g06PW47cS",
+        EditableComponentToolbar: "_2Lz0NGsqaU7fnOxrrftZMG",
+        EditableComponentInlineContainer: "_32qkMjC0nQ9LGh6fNXlNkM",
+        InlineHoverContainer: "_1TX0Q6DERjhYWEDcU-0QLC",
+        Hidden: "_3rZ3G-s7kNdbfzeAOTIYOr",
+        WidthConstrained: "_1eKpwF-reh8vmJh6uM9dho",
+        FloatingToolbarButton: "KsGqILWyUj2YuFJK_Zy7D",
+        StrongShadows: "_3_c8HvckcvJ0FHwgeS1GtO",
       };
     },
     chunkid: (module) => {
@@ -1250,7 +1295,7 @@
                     section_type: "items",
                     smart_section: !0,
                     smart_section_type: "all_released",
-                    default_label: "#Sale_default_label_24",
+                    default_label: "#Sale_default_label_281",
                     capsules_per_row_array: [1],
                     carousel_rows: 1,
                     single_item_style: "library",
@@ -2082,8 +2127,8 @@
           if (_) return _.tabs.find((_) => _.unique_id == _);
           (0, _._)(_, "TabID missing: " + _);
         }
-        GetSaleSectionIndexByID(_) {
-          return _ > _._
+        GetSaleSectionIndexByID(_, _) {
+          return _
             ? this.m_curModel
                 .GetSaleSectionIncludingFooterSections()
                 .findIndex((_) => _.unique_id === _)
@@ -2880,9 +2925,6 @@
         }
         GetImageURL(_, _ = _.Bhc, _ = _._.full) {
           return this.m_curModel.GetImageURL(_, _, _);
-        }
-        GetImageURLWithFallback(_, _, _ = _._.full) {
-          return this.m_curModel.GetImageURLWithFallback(_, _, _);
         }
         GetImageHashAndExt(_, _) {
           return this.m_curModel.GetImageHashAndExt(_, _);
@@ -4760,7 +4802,8 @@
             : void 0;
         },
       };
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_ = !1) {
           super(_),
@@ -4890,13 +4933,22 @@
               }
             }
           }
-          this.m_editModel.BHasSaleEnabled() &&
-            this.m_editModel.GetSaleSectionCount() > 0 &&
-            this.m_editModel.GetSaleSections().forEach((_) => {
-              (0, _._)(_.section_type) && (0, _._)(_) && (_.capsules = []);
-            }),
+          if (
+            (this.m_editModel.BHasSaleEnabled() &&
+              this.m_editModel.GetSaleSectionCount() > 0 &&
+              this.m_editModel.GetSaleSections().forEach((_) => {
+                (0, _._)(_.section_type) && (0, _._)(_) && (_.capsules = []);
+              }),
             await (0, _._)(this.m_editModel),
-            await (0, _._)(this.m_editModel);
+            await (0, _._)(this.m_editModel),
+            this.m_editModel.BPushUpdatesToCrowdInAutomatically())
+          ) {
+            const _ = this.m_editModel.GetDescription(_.Bhc);
+            if (_ && _.includes(_._)) {
+              const _ = _.replaceAll(_._, _._);
+              this.m_editModel.SetDescription(_.Bhc, _);
+            }
+          }
         }
         async SaveModel(_, _) {
           await this.PreSaveActions(_);
@@ -6067,6 +6119,1158 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        const _ = (0, _._)(_);
+        if (_)
+          return {
+            node: _,
+            nodeAttrs: _,
+            clanImage: (0, _._)(_, _),
+          };
+      }
+      function _(_) {
+        const {
+            node: _,
+            imageNodeType: _,
+            videoNodeType: _,
+            editModel: _,
+            schemaConfig: _,
+            removeNode: _,
+            update: _,
+            focusView: _,
+          } = _,
+          [_, _, _] = (0, _._)(),
+          _ =
+            (_.useCallback(() => {
+              _(), _();
+            }, [_, _]),
+            _.GetClanSteamID()),
+          _ = _.useMemo(() => {
+            let _ = [];
+            return (
+              _.descendants((_) => {
+                (_.type != _ && _.type != _) || _.push(_);
+              }),
+              _
+            );
+          }, [_, _, _]),
+          _ = _.useCallback((_) => _((0, _._)(_)), [_]),
+          _ = "true" === _.attrs.autoadvance,
+          [_, _] = _(_, {
+            autoAdvance: _,
+            clanSteamID: _,
+            imageNodeType: _,
+            videoNodeType: _,
+            carouselNodeType: _.type,
+          }),
+          _ = _.useCallback(() => {
+            _(_);
+          }, [_, _]);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  onDeleteClick: _,
+                  strDeleteDescription: (0, _._)(
+                    "#EventEditor_CarouselEditor_RemoveCarousel",
+                  ),
+                  onEditClick: _,
+                  strEditDescription: (0, _._)(
+                    "#EventEditor_CarouselEditor_EditCarousel",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    strTag: "carousel",
+                    args: {},
+                    rawargs: "",
+                    event: _.GetEventModel(),
+                    children: _.map((_, _) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          node: _,
+                          nodeAttrs: (0, _._)(_),
+                          schemaConfig: _,
+                          event: _.GetEventModel(),
+                        },
+                        _,
+                      ),
+                    ),
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_, _) {
+        const _ = _.carouselNodeType,
+          [_, _] = _.useState(void 0),
+          _ = _.clanSteamID,
+          _ = _.useCallback(
+            (_) => {
+              _(_.map((_) => _(_, _)).filter(Boolean));
+            },
+            [_],
+          ),
+          _ = _.useCallback(() => _(void 0), []),
+          _ = _.useCallback(
+            (_, _) => {
+              const _ = __webpack_require__.create(
+                {
+                  autoadvance: _ ? "true" : null,
+                },
+                _.map(({ node: _ }) => _),
+              );
+              _(_);
+            },
+            [_, _],
+          );
+        return [
+          _,
+          (0, _.jsx)(_._, {
+            active: void 0 !== _,
+            children: (0, _.jsx)(_, {
+              ..._,
+              images: _,
+              onCarouselImagesSelected: _,
+              hideModal: _,
+            }),
+          }),
+        ];
+      }
+      function _(_) {
+        const { nodeAttrs: _ } = _;
+        return "image" == _.type ? _.attrs.src : _.attrs.mp4 || _.attrs.webm;
+      }
+      function _(_) {
+        var _;
+        const {
+            hideModal: _,
+            images: _,
+            onCarouselImagesSelected: _,
+            clanSteamID: _,
+            imageNodeType: _,
+            videoNodeType: _,
+          } = _,
+          [_, _] = _.useState(_),
+          [_, _] = _.useState(
+            null !== (_ = _.autoAdvance) && void 0 !== _ && _,
+          ),
+          _ = _.useCallback(
+            (_, _) => {
+              const _ = _(_, _.create(_));
+              if (!_)
+                throw `Couldn't parse image ${_.name} - ${JSON.stringify(_)}`;
+              _((_) => {
+                const _ = _(_);
+                return _.find((_) => _(_) == _) ? _ : [..._, _];
+              });
+            },
+            [_],
+          ),
+          _ = _.useCallback(() => {
+            _(_, _), __webpack_require__();
+          }, [_, _, _, _]),
+          _ = _.useCallback((_) => {
+            _.destination &&
+              _((_) => _._(_.slice(), _.source.index, _.destination.index));
+          }, []),
+          { showInsertImageModal: _, imageModal: _ } = (0, _._)({
+            clanSteamID: _,
+            imageNodeType: _,
+            videoNodeType: _,
+            onItemSelected: _,
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsxs)(_._, {
+              active: !0,
+              onDismiss: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  children: (0, _._)(
+                    "#EventEditor_CarouselEditor_EditCarousel",
+                  ),
+                }),
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      label: (0, _._)(
+                        "#EventEditor_CarouselEditor_AutoAdvance",
+                      ),
+                      checked: _,
+                      onChange: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      onDragEnd: _,
+                      children: (0, _.jsx)(_._, {
+                        droppableId: "droppable",
+                        direction: "horizontal",
+                        children: (_) =>
+                          (0, _.jsxs)("div", {
+                            className: _.CarouselList,
+                            ..._.droppableProps,
+                            ref: _.innerRef,
+                            children: [
+                              _.map((_, _) =>
+                                (0, _.jsx)(
+                                  _._,
+                                  {
+                                    children: (0, _.jsx)(_._, {
+                                      draggableId: _(_),
+                                      index: _,
+                                      children: (_, _, _) =>
+                                        (0, _.jsx)(_, {
+                                          draggableProvided: _,
+                                          image: _,
+                                          setSelectedImages: _,
+                                          iImage: _,
+                                          cImages: _.length,
+                                        }),
+                                    }),
+                                  },
+                                  _(_),
+                                ),
+                              ),
+                              _.placeholder,
+                            ],
+                          }),
+                      }),
+                    }),
+                    (0, _.jsx)(_._, {
+                      bottomSeparator: "none",
+                      label: (0, _._)(
+                        "#EventEditor_CarouselEditor_AddAnotherItem",
+                      ),
+                      className: _.AddButton,
+                      onClick: _,
+                      children: (0, _.jsx)(_.OMN, {
+                        className: _.PlusIcon,
+                      }),
+                    }),
+                  ],
+                }),
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    onCancel: _,
+                    onOK: _,
+                  }),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            draggableProvided: _,
+            image: _,
+            setSelectedImages: _,
+            iImage: _,
+            cImages: _,
+          } = _,
+          _ = _.useCallback(() => {
+            _((_) => _.filter((_) => _ != _));
+          }, [_, _]);
+        return (0, _.jsx)("div", {
+          className: _()(_.ListItem, _.DraggableItem),
+          ref: _.innerRef,
+          ..._.draggableProps,
+          ..._.dragHandleProps,
+          children: (0, _.jsxs)("div", {
+            className: _.ImagePreview,
+            children: [
+              (0, _.jsx)("img", {
+                src: _._.ReplacementTokenToClanImageURL(_.node.attrs.src),
+              }),
+              (0, _.jsx)("div", {
+                className: _.Controls,
+                children: (0, _.jsx)("div", {
+                  className: _.Control,
+                  children: (0, _.jsx)(_._, {
+                    onClick: _,
+                    className: _.Button,
+                    children: (0, _.jsx)(_.sED, {}),
+                  }),
+                }),
+              }),
+            ],
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useCallback(
+          (_) =>
+            (0, _._)(_)
+              ? _.create({
+                  href: _,
+                })
+              : "default",
+          [_],
+        );
+        return _ ? _ : void 0;
+      }
+      function _(_) {
+        const { editModel: _, href: _ } = _,
+          _ = (0, _._)(_);
+        if (_) {
+          const _ = _.fnBBComponent(_, {
+            partnerEventStore: _._,
+            event: _.GetEventModel(),
+          });
+          return (0, _.jsx)(_._, {
+            toolbar: (0, _.jsx)(_, {
+              href: _,
+              removeNode: _.removeNode,
+              update: _.update,
+              schema: _.schema,
+            }),
+            children: _,
+          });
+        }
+        return (0, _.jsx)("a", {
+          href: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { href: _, removeNode: _, update: _, schema: _ } = _;
+        return (0, _.jsxs)(_._, {
+          onDeleteClick: _,
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: () => window.open(_),
+              description: (0, _._)("#ContextMenu_OpenLinkInNewWindow"),
+              children: (0, _.jsx)(_.YNO, {}),
+            }),
+            (0, _.jsx)(_._, {
+              onClick: () =>
+                _(
+                  (0, _._)(
+                    _.text(_, [
+                      _.marks.link.create({
+                        href: _,
+                      }),
+                    ]),
+                  ),
+                ),
+              description: (0, _._)(
+                "#EventEditor_DynamicLink_ConvertToTextLink",
+              ),
+              children: (0, _.jsx)(_.Rkk, {}),
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            schemaConfig: _,
+            node: _,
+            editModel: _,
+            imageNodeType: _,
+            videoNodeType: _,
+            carouselNodeType: _,
+            clanSteamID: _,
+            setAttrs: _,
+            focusView: _,
+            removeNode: _,
+            update: _,
+            selected: _,
+          } = _,
+          [_, _, _] = (0, _._)(),
+          _ = _(_);
+        let _ = (0, _.jsx)(_, {
+          schemaConfig: _,
+          event: _.GetEventModel(),
+          node: _,
+          nodeAttrs: _,
+        });
+        const _ = _.useCallback(() => {
+            _(), _();
+          }, [_, _]),
+          _ = _.useCallback((_) => _((0, _._)(_)), [_]),
+          [_, _] = (0, _._)(_, {
+            clanSteamID: _,
+            imageNodeType: _,
+            videoNodeType: _,
+            carouselNodeType: _,
+          }),
+          _ = _.useCallback(() => {
+            _([_]);
+          }, [_, _]),
+          { showLocalizationModal: _, localizationModal: _ } = (function (
+            _,
+            _,
+            _,
+          ) {
+            const [_, _] = _.useState(void 0),
+              _ = _.useCallback(() => _(void 0), []);
+            return {
+              showLocalizationModal: _.useCallback(
+                (_) => {
+                  const _ = _.map((_) => _(_)).filter(Boolean);
+                  if (1 === _.length) {
+                    let _ = _[0];
+                    if ("src" in _.attrs && _.attrs.src.includes(_._)) {
+                      const _ = _.attrs.src.replace(_._, _._);
+                      _(
+                        __webpack_require__.create({
+                          src: _,
+                        }),
+                      );
+                    }
+                    _(_(_.GetClanSteamID(), _));
+                  }
+                },
+                [_, _, _],
+              ),
+              localizationModal: (0, _.jsx)(_._, {
+                active: void 0 !== _,
+                children: (0, _.jsx)(_._, {
+                  closeModal: _,
+                  primaryLocalizedImage: _,
+                  appid: _.GetAppID(),
+                  clanSteamID: _.GetClanSteamID(),
+                  fnSetImageURL: _.SetImageURL,
+                  fnLangHasData: _.BHasTitleImage,
+                  fnGetImageHash: _.GetImageHashAndExt,
+                  rgRealmList: _.GetIncludedRealmList(),
+                  partnerEventStore: _._,
+                }),
+              }),
+            };
+          })(_, _, _),
+          _ = _.useCallback(() => {
+            _([_]);
+          }, [_, _]),
+          _ = _.useCallback(() => {
+            const _ = {
+              ..._.attrs,
+            };
+            "style" in _ && "inline" === _.style
+              ? delete _.style
+              : (_.style = "inline"),
+              _(_.type.create(_, _.content, _.marks));
+          }, [_.attrs, _.content, _.marks, _.type, _]),
+          _ = {
+            createCarousel: _ ? _ : void 0,
+            src: _(_),
+            style: "style" in _.attrs ? _.attrs.style : void 0,
+            localizeAssets: _._.is_support ? _ : void 0,
+            toggleImageInlineStyles: _,
+          };
+        let _ = _()(_.ClanImageContainer, _ && _.Selected);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _ &&
+              (0, _.jsx)(_, {
+                bIsEdit: !0,
+                nodeAttrs: _,
+                hideModal: _,
+                imageNodeType: _,
+                videoNodeType: _,
+                clanSteamID: _,
+                onItemSelected: _,
+              }),
+            _,
+            _,
+            (0, _.jsx)(_._, {
+              className: _,
+              toolbar: (0, _.jsx)(_, {
+                showModal: _,
+                removeNode: _,
+                contextMenuProps: _,
+              }),
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { showModal: _, removeNode: _, contextMenuProps: _ } = _,
+          _ = _.useCallback(
+            (_) => {
+              (0, _._)(
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+                _,
+                {
+                  bPreferPopTop: !1,
+                  bPreferPopLeft: !0,
+                },
+              );
+            },
+            [_],
+          );
+        return (0, _.jsx)(_._, {
+          onEditClick: _,
+          onDeleteClick: _,
+          children: (0, _.jsx)(_._, {
+            onClick: _,
+            description: (0, _._)("#ActionButtonLabelContextMenu"),
+            children: (0, _.jsx)(_.h28, {}),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            createCarousel: _,
+            src: _,
+            localizeAssets: _,
+            style: _,
+            toggleImageInlineStyles: _,
+          } = _,
+          _ = _.useCallback(() => {
+            window.open(_);
+          }, [_]),
+          _ = "inline" === _;
+        return (0, _.jsxs)(_._, {
+          children: [
+            _ &&
+              (0, _.jsx)(_._, {
+                onSelected: _,
+                children: (0, _._)(
+                  "#EventEditor_CarouselEditor_CreateACarousel",
+                ),
+              }),
+            _ &&
+              (0, _.jsxs)(_._, {
+                onSelected: _,
+                className: _().ValveOnlyBackground,
+                children: ["(VO) + ", (0, _._)("#ImagePicker_Localized")],
+              }),
+            (0, _.jsx)(_._, {
+              onSelected: _,
+              children: (0, _._)("#EventEditor_ImageEdit_PreviewImage"),
+            }),
+            (0, _.jsxs)(_._, {
+              onSelected: () => _(),
+              bChecked: _,
+              children: [
+                (0, _._)("#EventEditor_Image_Inline"),
+                (0, _.jsx)(_._, {
+                  tooltip: (0, _._)("#EventEditor_Image_Inline_ttip"),
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { type: _, attrs: _ } = _;
+        return "image" == _.name
+          ? {
+              type: "image",
+              attrs: _,
+            }
+          : "video" == _.name
+            ? {
+                type: "video",
+                attrs: _,
+              }
+            : void 0;
+      }
+      function _(_) {
+        return "image" == _.type
+          ? _.attrs.src
+          : "video" == _.type
+            ? _.attrs.mp4 || _.attrs.webm
+            : void 0;
+      }
+      function _(_) {
+        const { schemaConfig: _, event: _, node: _, nodeAttrs: _ } = _,
+          { type: _, attrs: _ } = _,
+          _ = _.ConvertAttrToBBCodeArgs(_, _);
+        return "image" == _
+          ? (0, _.jsx)(_._, {
+              strTag: "img",
+              args: _,
+              rawargs: "",
+              event: _,
+              showErrorInfo: !0,
+            })
+          : "video" == _
+            ? (0, _.jsx)(
+                _._,
+                {
+                  strTag: "video",
+                  args: _,
+                  rawargs: "",
+                  event: _,
+                  showErrorInfo: !0,
+                },
+                `${_.mp4}_${_.webm}`,
+              )
+            : ((0, _._)(_, "unhandled type: " + _), null);
+      }
+      function _(_, _) {
+        const { type: _, attrs: _ } = _;
+        let _;
+        if (
+          ("image" == _ ? (_ = _.src) : "video" == _ && (_ = _.mp4 || _.webm),
+          _)
+        ) {
+          const [_] = _._.ExtractHashFromBBCodeURL(_);
+          return _ && _._.GetClanImageByImageHash(_, _);
+        }
+      }
+      function _(_) {
+        const {
+            clanSteamID: _,
+            imageNodeType: _,
+            videoNodeType: _,
+            onItemSelected: _,
+            onHideModal: _,
+          } = _,
+          [_, _] = _.useState(),
+          _ = _.useCallback(() => {
+            _(void 0), _ && _();
+          }, [_]);
+        return {
+          showInsertImageModal: _.useCallback(() => {
+            _({
+              type: "image",
+              attrs: {
+                src: "",
+                style: void 0,
+              },
+            });
+          }, []),
+          showInsertVideoModal: _.useCallback(() => {
+            _({
+              type: "video",
+              attrs: {
+                mp4: "",
+                webm: "",
+                poster: "",
+                autoplay: !0,
+                controls: !1,
+              },
+            });
+          }, []),
+          closeImageModal: _,
+          imageModal:
+            _ &&
+            (0, _.jsx)(_, {
+              nodeAttrs: _,
+              hideModal: _,
+              onItemSelected: _,
+              imageNodeType: _,
+              videoNodeType: _,
+              clanSteamID: _,
+            }),
+          activeModal: null == _ ? void 0 : _.type,
+        };
+      }
+      function _(_) {
+        const {
+            bIsEdit: _ = !1,
+            nodeAttrs: _,
+            hideModal: _,
+            clanSteamID: _,
+            onItemSelected: _,
+            imageNodeType: _,
+            videoNodeType: _,
+          } = _,
+          { type: _, attrs: _ } = _,
+          _ = (function (_, _) {
+            return _.useMemo(() => _(_, _), [_, _.type, _.attrs]);
+          })(_, _),
+          [_, _] = _.useState(() =>
+            _ ||
+            ("image" == _.type && !_.attrs.src) ||
+            ("video" == _.type && !_.attrs.mp4 && !_.attrs.webm)
+              ? "uploaded"
+              : "hotlink",
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(
+                {
+                  src: _,
+                },
+                _,
+              ),
+                _();
+            },
+            [_, _, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(
+                {
+                  ..._,
+                  ..._,
+                },
+                _,
+              ),
+                _();
+            },
+            [_, _, _, _],
+          ),
+          _ = _.useId();
+        let _,
+          _ = null;
+        if ("image" == _)
+          (_ = (0, _.jsx)(_, {
+            active: "hotlink" == _,
+            bIsEdit: _,
+            hideModal: _,
+            onImageSelected: _,
+            src: _.src,
+          })),
+            (_ = _
+              ? (0, _._)("#EventEditor_ReplaceImage_Title")
+              : (0, _._)("#EventEditor_InsertImage_Title"));
+        else {
+          if ("video" != _) return (0, _._)(_, "Unhandled type"), null;
+          (_ = (0, _.jsx)(_, {
+            active: "hotlink" == _,
+            bIsEdit: _,
+            hideModal: _,
+            attrs: _,
+            setAttrs: _,
+          })),
+            (_ = (0, _._)("#EventEditor_EditVideo_Title"));
+        }
+        return (0, _.jsxs)(_._, {
+          active: !0,
+          onDismiss: _,
+          className: _.ClanImageModalContent,
+          children: [
+            (0, _.jsx)(_._, {
+              _: _,
+              children: _,
+            }),
+            (0, _.jsxs)(_._, {
+              labelId: _,
+              value: _,
+              onChange: (_) => _(_),
+              children: [
+                (0, _.jsx)(_._, {
+                  value: "uploaded",
+                  children: "Uploaded",
+                }),
+                (0, _.jsx)(_._, {
+                  value: "hotlink",
+                  children: "Enter URL",
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _()(_.ClanImageModalMode, "uploaded" == _ && _.Active),
+              children: (0, _.jsx)(_, {
+                bIsEdit: _,
+                hideModal: _,
+                onImageSelected: _,
+                onVideoSelected: _ && _,
+                clanSteamID: _,
+                selectedImage: _,
+              }),
+            }),
+            (0, _.jsx)("div", {
+              className: _()(_.ClanImageModalMode, "hotlink" == _ && _.Active),
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            active: _,
+            bIsEdit: _,
+            hideModal: _,
+            onImageSelected: _,
+            src: _,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _.useCallback((_) => _(_.currentTarget.value), []),
+          _ = _
+            ? (0, _._)("#EventEditor_ReplaceImage_Title")
+            : (0, _._)("#EventEditor_InsertImage_Title"),
+          _ = _.useRef(void 0);
+        return (
+          _.useEffect(() => {
+            _ && _.current.Focus();
+          }, [_]),
+          (0, _.jsxs)(_._, {
+            onSubmit: () => _(_),
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  ref: _,
+                  value: _,
+                  onChange: _,
+                  label: (0, _._)("#EventEditor_InsertImage_URL"),
+                }),
+              }),
+              (0, _.jsx)(_._, {
+                onCancel: _,
+                strOKText: _,
+                bOKDisabled: !_ || _ == _,
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const {
+            active: _,
+            bIsEdit: _,
+            hideModal: _,
+            attrs: _,
+            setAttrs: _,
+          } = _,
+          [_, _] = _.useState(_.mp4),
+          [_, _] = _.useState(_.webm),
+          [_, _] = _.useState(_.poster),
+          [_, _] = _.useState(!!_.autoplay),
+          [_, _] = _.useState(!!_.controls),
+          _ = _.useRef(void 0);
+        _.useEffect(() => {
+          _ && _.current.Focus();
+        }, [_]);
+        return (0, _.jsxs)(_._, {
+          onSubmit: (_) => {
+            _({
+              ..._,
+              mp4: _ || void 0,
+              webm: _ || void 0,
+              poster: _ || void 0,
+              autoplay: _,
+              controls: _,
+            }),
+              _();
+          },
+          children: [
+            (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  ref: _,
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#EventEditor_InsertVideo_InputMP4"),
+                }),
+                (0, _.jsx)(_._, {
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#EventEditor_InsertVideo_InputWebM"),
+                }),
+                (0, _.jsx)(_._, {
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value),
+                  label: (0, _._)("#EventEditor_InsertVideo_InputPoster"),
+                }),
+                (0, _.jsx)(_._, {
+                  checked: _,
+                  onChange: _,
+                  label: (0, _._)("#EventEditor_InsertVideo_InputAutoplay"),
+                }),
+                (0, _.jsx)(_._, {
+                  checked: _,
+                  onChange: _,
+                  label: (0, _._)("#EventEditor_InsertVideo_InputShowControls"),
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              onCancel: _,
+              strOKText: (0, _._)("#EventEditor_EditVideo_Title"),
+              bOKDisabled: !_ && !_,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            bIsEdit: _,
+            hideModal: _,
+            onImageSelected: _,
+            onVideoSelected: _,
+            clanSteamID: _,
+          } = _,
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(_.selectedImage),
+          _ = _
+            ? (0, _._)("#EventEditor_ReplaceImage_Title")
+            : (0, _._)("#EventEditor_InsertImage_Title"),
+          _ = _.useCallback(
+            (_) => {
+              switch (_.file_type) {
+                case _._._:
+                  _ &&
+                    _({
+                      mp4: (0, _._)(_),
+                    });
+                  break;
+                case _._._:
+                  _ &&
+                    _({
+                      webm: (0, _._)(_),
+                    });
+                  break;
+                default:
+                  _((0, _._)(_));
+              }
+            },
+            [_, _],
+          ),
+          _ = _.useCallback(
+            (_, _) => {
+              _(_), _ && _(_);
+            },
+            [_],
+          );
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsxs)(_._, {
+            onSubmit: () => _ && _(_),
+            className: _.ClanImageGridForm,
+            children: [
+              (0, _.jsx)(_._, {
+                fnSetImageSearch: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _.ClanImageGridContainer,
+                children: (0, _.jsx)(_._, {
+                  clanAccountID: _.GetAccountID(),
+                  fileNameSearch: _,
+                  onImageSelected: _,
+                  selectedItem: _,
+                }),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  onCancel: _,
+                  strOKText: _,
+                  bOKDisabled: !_ || _ == _.selectedImage,
+                }),
+              }),
+            ],
+          }),
+        });
+      }
+      function _(_) {
+        const { clanSteamID: _, imageNode: _, videoNode: _, children: _ } = _,
+          _ = _.useCallback(
+            async (_) => {
+              const _ = new _._(_, null);
+              if (!(await _.AddImage(_, _._.Get().GetCurEditLanguage())))
+                throw "Error processing image upload";
+              const _ = await _.UploadAllImages();
+              if (!_ || 1 != Object.values(_).length)
+                throw "Error uploading image";
+              const _ = Object.values(_)[0];
+              if (!_.bSuccess || _.uploadResult.success != _._)
+                throw _.uploadResult.message;
+              const _ = _(
+                _._.GetClanImageByImageHash(_, _.uploadResult.image_hash),
+                _,
+                _,
+              );
+              return (
+                _.type == _ &&
+                  (await (0, _._)(
+                    _._.ReplacementTokenToClanImageURL(_.attrs.src),
+                  )),
+                _
+              );
+            },
+            [_, _, _],
+          );
+        return _
+          ? (0, _.jsx)(_._, {
+              ProcessFileUpload: _,
+              bAllowImageHotLinking: !0,
+              children: _,
+            })
+          : _;
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(_);
+        switch (_.file_type) {
+          case _._._:
+            if (!_) throw "Video unsupported";
+            return __webpack_require__.create({
+              mp4: _,
+            });
+          case _._._:
+            if (!_) throw "Video unsupported";
+            return __webpack_require__.create({
+              webm: _,
+            });
+          default:
+            return _.create({
+              src: _,
+            });
+        }
+      }
+      function _(_, _, _) {
+        const _ = _.useCallback(
+          (_) => {
+            const _ = `^https?://${_._.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)(?<extension>\\.[^\\.]*)$`,
+              _ = _.match(_);
+            if (_ && _.groups.clanid == _.GetAccountID().toString()) {
+              const _ = _._.GetClanImageByImageHash(_, _.groups.filename);
+              let _ = _ && _(_, _, _);
+              if (_) return _;
+            }
+            return "default";
+          },
+          [_, _, _],
+        );
+        return _ ? _ : void 0;
+      }
+      function _(_, _, _, _, _) {
+        _.useEffect(() => {
+          if (!_ || !_) return;
+          const _ = (_, _) => {
+            let _;
+            switch (_) {
+              case _._.k_eInsertFullImage:
+                _ = _.create({
+                  src: (0, _._)(_),
+                });
+                break;
+              case _._.k_eInsertThumbnail:
+                _ = _.create(
+                  {
+                    src: (0, _._)(_, !0),
+                  },
+                  null,
+                  [
+                    _.create({
+                      href: (0, _._)(_),
+                    }),
+                  ],
+                );
+                break;
+              case _._.k_eInsertVideo:
+                let _;
+                _.file_type == _._._
+                  ? (_ = {
+                      mp4: (0, _._)(_),
+                    })
+                  : _.file_type == _._._ &&
+                    (_ = {
+                      webm: (0, _._)(_),
+                    }),
+                  _ && _ && (_ = __webpack_require__.create(_));
+                break;
+              case _._.k_eShowImageGroup:
+                break;
+              default:
+                (0, _._)(_, `Unhandled insert type ${_}`);
+            }
+            if (_) {
+              const _ = _.state._;
+              _.selection.replaceWith(_, _), _.dispatch(_);
+            }
+          };
+          return (
+            (_.current = _),
+            () => {
+              _.current == _ && (_.current = void 0);
+            }
+          );
+        }, [_, _, _, _, _]);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -7136,7 +8340,13 @@
         const _ = _.useMemo(
           () =>
             (function () {
-              const { paragraph: _, bullet_list: _, list_item: _ } = _._.nodes,
+              const {
+                  paragraph: _,
+                  bullet_list: _,
+                  list_item: _,
+                  image: _,
+                  video: _,
+                } = _._.nodes,
                 { strong: _, italic: _, underline: _, strike: _ } = _._.marks,
                 { link: _ } = _._.marks,
                 { color: _, bgcolor: _ } = _._.marks;
@@ -7145,6 +8355,7 @@
                   paragraph: _,
                   bullet_list: _,
                   list_item: _,
+                  image: _,
                 },
                 marks: {
                   strong: _,
@@ -15893,6 +17104,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         BHasSolrEvent(_) {
@@ -16361,15 +17573,10 @@
                 eventModel: _,
                 route: _._.k_eView,
                 children: [
-                  _
-                    ? (0, _.jsx)("img", {
-                        style: {
-                          height: "40px",
-                          marginRight: "8px",
-                        },
-                        src: _.GetImageURLWithFallback("capsule", _.Bhc),
-                      })
-                    : null,
+                  _ &&
+                    (0, _.jsx)(_, {
+                      event: _,
+                    }),
                   _ ? _.GetNameWithFallback(_.Bhc) : null,
                   "  (",
                   _ ? _.AnnouncementGID : null,
@@ -16388,6 +17595,17 @@
             },
           })
         );
+      }
+      function _(_) {
+        const { event: _ } = _,
+          _ = (0, _._)(_, "capsule", _.Bhc);
+        return (0, _.jsx)("img", {
+          style: {
+            height: "40px",
+            marginRight: "8px",
+          },
+          src: _,
+        });
       }
       const _ = (0, _._)((_) => {
         var _;
@@ -19687,6 +20905,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
@@ -19834,7 +21053,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(!0);
@@ -19907,6 +21130,7 @@
             bSingleLine: _,
             rctToolbarControls: _,
             fnShowRichTextEditor: _,
+            clanSteamID: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(),
@@ -19918,53 +21142,58 @@
               _(_.borderBoxSize[0].blockSize > 300),
             [],
           );
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_._, {
-              children: (0, _.jsxs)("div", {
-                className: _().ToolBarCtn,
-                children: [
-                  Boolean(_) &&
-                    (0, _.jsxs)("span", {
-                      className: _().ToolBarTitle,
-                      children: [
-                        _,
-                        " ",
-                        _ &&
-                          (0, _.jsx)(_._, {
-                            tooltip: _,
-                          }),
-                      ],
+        return (0, _.jsx)(_._, {
+          clanSteamID: _,
+          imageNode: _.pm_schema.nodes.image,
+          videoNode: void 0,
+          children: (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)(_._, {
+                children: (0, _.jsxs)("div", {
+                  className: _().ToolBarCtn,
+                  children: [
+                    Boolean(_) &&
+                      (0, _.jsxs)("span", {
+                        className: _().ToolBarTitle,
+                        children: [
+                          _,
+                          " ",
+                          _ &&
+                            (0, _.jsx)(_._, {
+                              tooltip: _,
+                            }),
+                        ],
+                      }),
+                    (0, _.jsx)(_, {
+                      view: _,
+                      refUpdateToolbar: _,
+                      sticky: _,
+                      bSingleLineEditor: _,
+                      rctToolbarControls: _,
+                      schema: _.pm_schema,
+                      fnShowRichTextEditor: _,
                     }),
-                  (0, _.jsx)(_, {
-                    view: _,
-                    refUpdateToolbar: _,
-                    sticky: _,
-                    bSingleLineEditor: _,
-                    rctToolbarControls: _,
-                    schema: _.pm_schema,
-                    fnShowRichTextEditor: _,
-                  }),
-                ],
+                  ],
+                }),
               }),
-            }),
-            (0, _.jsx)(_._, {
-              fallback: (0, _.jsxs)("div", {
-                children: [
-                  "Error Occurred in Rich Text Editor:",
-                  (0, _.jsx)(_, {
-                    fnShowRichTextEditor: _,
-                  }),
-                ],
+              (0, _.jsx)(_._, {
+                fallback: (0, _.jsxs)("div", {
+                  children: [
+                    "Error Occurred in Rich Text Editor:",
+                    (0, _.jsx)(_, {
+                      fnShowRichTextEditor: _,
+                    }),
+                  ],
+                }),
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  onResize: _,
+                  setView: _,
+                  TemplateRichTextSchema: _,
+                }),
               }),
-              children: (0, _.jsx)(_, {
-                ..._,
-                onResize: _,
-                setView: _,
-                TemplateRichTextSchema: _,
-              }),
-            }),
-          ],
+            ],
+          }),
         });
       }
       function _(_) {
@@ -19984,10 +21213,33 @@
           } = _,
           [_, _] = _.useState(null),
           _ = _.useRef(void 0),
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = _.pm_schema.nodes,
+          _ = _.pm_schema.marks,
+          _ = (function (_, _) {
+            const { nodes: _ } = _.pm_schema,
+              _ = (0, _._)(_, _.image, _.video),
+              _ = (0, _._)(_.dynamiclink);
+            return _.useCallback(
+              (..._) => {
+                let _ = "default";
+                return (
+                  _ && (_ = _(..._)), "default" == _ && _ && (_ = _(..._)), _
+                );
+              },
+              [_, _],
+            );
+          })(_.GetClanSteamID(), _);
         (0, _.useEffect)(() => {
-          _(new _._(_, _(), (_) => _(_)));
-        }, [_, _, _]);
+          _(
+            new _._(_, _(), (_) => _(_), {
+              parser: {
+                fnProcessText: (_) =>
+                  (0, _._)(_.pm_schema, _, _.pm_schema.marks.link, _),
+              },
+            }),
+          );
+        }, [_, _, _, _]);
         const _ = (0, _._)(_);
         return (
           (0, _._)(_, {
@@ -20031,14 +21283,14 @@
                   refView: _,
                   bSingleLine: _,
                   children: [
-                    "color" in _.pm_schema.marks &&
+                    "color" in _ &&
                       (0, _.jsx)(_, {
-                        colorMarkType: _.pm_schema.marks.color,
+                        colorMarkType: _.color,
                         schema: _.pm_schema,
                       }),
-                    "bgcolor" in _.pm_schema.marks &&
+                    "bgcolor" in _ &&
                       (0, _.jsx)(_, {
-                        colorMarkType: _.pm_schema.marks.bgcolor,
+                        colorMarkType: _.bgcolor,
                         schema: _.pm_schema,
                       }),
                     Boolean(_) &&
@@ -20048,12 +21300,50 @@
                     (0, _.jsx)(_, {
                       strPlaceholder: _,
                     }),
+                    "image" in _ &&
+                      (0, _.jsx)(_._, {
+                        nodeType: _.image,
+                      }),
+                    (0, _.jsx)(_, {
+                      schemaConfig: _,
+                      clanSteamID: _.GetClanSteamID(),
+                    }),
                   ],
                 }),
               }),
             ],
           })
         );
+      }
+      function _(_) {
+        const { schemaConfig: _, clanSteamID: _ } = _,
+          _ = (0, _._)(),
+          _ = _.pm_schema.nodes.image,
+          _ = _.useCallback(
+            (_) => ({
+              schemaConfig: _,
+              node: _,
+              imageNodeType: _,
+              videoNodeType: void 0,
+              carouselNodeType: void 0,
+              editModel: _,
+              clanSteamID: _,
+            }),
+            [_, _, _, _],
+          ),
+          _ = _.useMemo(
+            () => [
+              _ && {
+                type: _,
+                component: _._,
+                readProps: (_) => _(_),
+              },
+            ],
+            [_, _],
+          );
+        return (0, _.jsx)(_._, {
+          specs: _,
+        });
       }
       function _(_) {
         const { fnShowRichTextEditor: _ } = _;
@@ -20130,49 +21420,66 @@
       }
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
-          [_, _] = (0, _.useState)(
-            !_.localized_label ||
-              _.localized_label.every((_) => null == _ || null == _),
+          [_] = (0, _._)(() => [
+            _.title_image_selected
+              ? "image" === _.title_image_selected
+              : !_.localized_label ||
+                _.localized_label.every((_) => null == _ || null == _),
+          ]),
+          _ = (0, _.useCallback)(
+            () => __webpack_require__.SetDirty(_._.jsondata_sales),
+            [_],
           );
-        (0, _._)();
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)("p", {
-              children: (0, _._)("#Sale_TitleHeader_feature"),
-            }),
-            (0, _.jsx)(_._, {
-              children: (0, _._)("#Sale_TitleHeader_sel"),
-            }),
-            (0, _.jsxs)("div", {
-              className: _.RadioButtonCtn,
-              children: [
-                (0, _.jsx)(_._, {
-                  className: _.RadioButtons,
-                  checked: _,
-                  controlled: !0,
-                  onChange: () => _(!0),
-                  label: (0, _._)(
-                    "#Sale_Section_Media_Layout_ContentTypeImage",
-                  ),
-                }),
-                (0, _.jsx)(_._, {
-                  className: _.RadioButtons,
-                  checked: !_,
-                  controlled: !0,
-                  onChange: () => _(!1),
-                  label: (0, _._)("#Sale_Section_Media_Layout_ContentTypeText"),
-                }),
-              ],
-            }),
-            _
-              ? (0, _.jsx)(_, {
-                  ..._,
-                })
-              : (0, _.jsx)(_, {
-                  ..._,
-                }),
-          ],
-        });
+        return (
+          (0, _.useEffect)(() => {
+            _.title_image_selected &&
+              (_.title_image_selected = _ ? "image" : "title");
+          }, []),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("p", {
+                children: (0, _._)("#Sale_TitleHeader_feature"),
+              }),
+              (0, _.jsx)(_._, {
+                children: (0, _._)("#Sale_TitleHeader_sel"),
+              }),
+              (0, _.jsxs)("div", {
+                className: _.RadioButtonCtn,
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _.RadioButtons,
+                    checked: _,
+                    controlled: !0,
+                    onChange: () => {
+                      (_.title_image_selected = "image"), _();
+                    },
+                    label: (0, _._)(
+                      "#Sale_Section_Media_Layout_ContentTypeImage",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.RadioButtons,
+                    checked: !_,
+                    controlled: !0,
+                    onChange: () => {
+                      (_.title_image_selected = "title"), _();
+                    },
+                    label: (0, _._)(
+                      "#Sale_Section_Media_Layout_ContentTypeText",
+                    ),
+                  }),
+                ],
+              }),
+              _
+                ? (0, _.jsx)(_, {
+                    ..._,
+                  })
+                : (0, _.jsx)(_, {
+                    ..._,
+                  }),
+            ],
+          })
+        );
       }
       function _(_) {
         const { saleSection: _, editModel: _ } = _,
@@ -23109,6 +24416,7 @@
             language: _,
             fnOnDirty: _,
             strOverrideBackgroundColor: _,
+            clanSteamID: _,
           } = _,
           [_, _] = (0, _._)(() => [
             _.eTitleDisplaySize,
@@ -23135,6 +24443,7 @@
         return (0, _.jsx)("div", {
           className: _().TitleCtn,
           children: (0, _.jsx)(_, {
+            clanSteamID: _,
             bSingleLine: !0,
             nTitleCharLimit: _,
             language: _,
@@ -23179,6 +24488,7 @@
             fnOnDirty: _,
             uniqueID: _,
             strOverrideBackgroundColor: _,
+            clanSteamID: _,
           } = _,
           [_] = (0, _._)(() => [_.subtitle_alignment || _._.k_Left]),
           _ = _.useCallback(() => {
@@ -23203,6 +24513,7 @@
         return (0, _.jsx)("div", {
           className: _().SubTitleCtn,
           children: (0, _.jsx)(_, {
+            clanSteamID: _,
             bSingleLine: !0,
             language: _,
             fnGetContent: _,
@@ -23333,6 +24644,7 @@
                     children: (0, _._)("#Template_Section_FAQ_BorderColor"),
                   }),
                 (0, _.jsx)(_, {
+                  clanSteamID: __webpack_require__.GetClanSteamID(),
                   uniqueID: "" + _.unique_id,
                   language: _,
                   fnOnDirty: _,
@@ -23351,6 +24663,7 @@
                     (0, _.jsx)(
                       _,
                       {
+                        clanSteamID: __webpack_require__.GetClanSteamID(),
                         saleSection: _,
                         question: _,
                         language: _,
@@ -23376,7 +24689,7 @@
             question: _,
             language: _,
             fnOnDirty: _,
-            index: _,
+            clanSteamID: _,
           } = _,
           _ = _.quiz.questions.findIndex((_) => _ == _) + 1,
           [_, _] = (0, _._)(_ + _.unique_id, !1),
@@ -23406,6 +24719,7 @@
             }),
             children: [
               (0, _.jsx)(_, {
+                clanSteamID: _,
                 strPlaceholder: (0, _._)(
                   "#Sale_Section_Quiz_QuestionPlaceholder",
                 ),
@@ -23415,6 +24729,7 @@
                 fnUpdateContent: _,
               }),
               (0, _.jsx)(_, {
+                clanSteamID: _,
                 strPlaceholder: (0, _._)(
                   "#Sale_Section_Quiz_AnswerPlaceholder",
                 ),
@@ -24325,6 +25640,7 @@
                   contents: (0, _.jsx)(_._, {
                     children: (0, _.jsx)(_, {
                       uniqueID: _,
+                      clanSteamID: __webpack_require__.GetClanSteamID(),
                       media_overlay: _,
                       fnOnDirty: _,
                       strOverrideBackgroundColor: _,
@@ -24340,6 +25656,7 @@
                     contents: (0, _.jsx)(_._, {
                       children: (0, _.jsx)("div", {
                         children: (0, _.jsx)(_, {
+                          clanSteamID: __webpack_require__.GetClanSteamID(),
                           language: _,
                           mediaContentData: _,
                           fnOnDirty: _,
@@ -24360,6 +25677,7 @@
                     contents: (0, _.jsx)(_._, {
                       children: (0, _.jsx)("div", {
                         children: (0, _.jsx)(_, {
+                          clanSteamID: __webpack_require__.GetClanSteamID(),
                           language: _,
                           mediaContentData: _,
                           fnOnDirty: _,
@@ -24377,7 +25695,7 @@
               );
             }
             return null;
-          }, [_, _, _, _, _, _, _, _.unique_id]);
+          }, [_, _, _, _, _, _, _, _, _.unique_id]);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsxs)("h1", {
@@ -24425,6 +25743,7 @@
                 })
               : (0, _.jsx)(_, {
                   uniqueID: _,
+                  clanSteamID: __webpack_require__.GetClanSteamID(),
                   media_overlay: _,
                   fnOnDirty: _,
                   strOverrideBackgroundColor: _,
@@ -24438,6 +25757,7 @@
             media_overlay: _,
             fnOnDirty: _,
             strOverrideBackgroundColor: _,
+            clanSteamID: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _.useMemo)(
@@ -24455,6 +25775,7 @@
             }),
             _ &&
               (0, _.jsx)(_, {
+                clanSteamID: _,
                 language: _,
                 uniqueID: "" + _,
                 localizedMedia: _,
@@ -24623,6 +25944,7 @@
             setSelectedMedia: _,
             strOverrideBackgroundColor: _,
             fnOnDirty: _,
+            clanSteamID: __webpack_require__.GetClanSteamID(),
           };
         return (0, _.jsxs)(_._, {
           children: [
@@ -24648,6 +25970,7 @@
             selectedMedia: _,
             fnOnDirty: _,
             strOverrideBackgroundColor: _,
+            clanSteamID: _,
           } = _,
           _ = (0, _._)(),
           [_] = (0, _._)(() => [(null == _ ? void 0 : _.length) || 0]);
@@ -24660,6 +25983,7 @@
             Boolean(_) &&
               (0, _.jsx)(_, {
                 mediaContent: _,
+                clanSteamID: _,
                 uniqueID: _.unique_id,
                 language: _,
                 fnOnDirty: _,
@@ -25029,6 +26353,7 @@
             uniqueID: _,
             strOverrideBackgroundColor: _,
             bAllowDescHeaders: _,
+            clanSteamID: _,
           } = _,
           [_, _] = (0, _._)(() => [
             _.description_alignment || _._.k_Left,
@@ -25053,6 +26378,7 @@
             [_, _, _],
           );
         return (0, _.jsx)(_, {
+          clanSteamID: _,
           language: _,
           fnGetContent: _,
           eTextAlignment: _,
@@ -25150,6 +26476,7 @@
                     (0, _.jsx)(
                       _,
                       {
+                        clanSteamID: __webpack_require__.GetClanSteamID(),
                         saleSection: _,
                         block: _,
                         language: _,
@@ -25190,7 +26517,13 @@
       }
       const _ = "techblockcollapsestate";
       function _(_) {
-        const { saleSection: _, block: _, language: _, fnOnDirty: _ } = _,
+        const {
+            saleSection: _,
+            block: _,
+            language: _,
+            fnOnDirty: _,
+            clanSteamID: _,
+          } = _,
           _ = _.tech_specs.tech_spec_block_list.findIndex((_) => _ == _) + 1,
           [_, _] = (0, _._)(_ + _.unique_id, !1),
           _ = (0, _._)(() =>
@@ -25246,6 +26579,7 @@
                   (0, _.jsx)(
                     _,
                     {
+                      clanSteamID: _,
                       item: _,
                       language: _,
                       fnOnDirty: _,
@@ -25280,7 +26614,7 @@
         });
       }
       function _(_) {
-        const { item: _, language: _, fnOnDirty: _ } = _,
+        const { item: _, language: _, fnOnDirty: _, clanSteamID: _ } = _,
           [_] = (0, _._)(() => [_(_, _)]),
           _ = _.useCallback(
             () =>
@@ -25330,6 +26664,7 @@
               tooltip: (0, _._)("#Template_Section_TechSpec_Name_ttip"),
             }),
             (0, _.jsx)(_, {
+              clanSteamID: _,
               language: _,
               fnGetContent: _,
               fnUpdateContent: _,
@@ -25606,51 +26941,56 @@
             sErrorMessage: _,
             eResult: _,
           } = (0, _._)(_, _),
-          _ = (0, _._)();
-        if (_)
-          return (0, _.jsx)(_._, {
-            string: (0, _._)("#Sale_CrossPromoSale_Loading"),
-            size: "small",
-          });
-        if (_ && _ != _._)
-          return (0, _.jsxs)("div", {
-            children: [(0, _._)("#EventDisplay_Share_Failure"), " ", _],
-          });
-        const _ =
-          null == _ ? void 0 : _.GetImageURLWithFallback("product_banner", _);
-        return (0, _.jsxs)("div", {
-          children: [
-            _
-              ? (0, _.jsx)("div", {
-                  children: (0, _._)("#Sale_CrossPromoSale_Linked"),
-                })
-              : (0, _.jsx)("div", {
-                  children: (0, _._)("#Sale_CrossPromoSale_LinkIncomplete"),
-                }),
-            _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      children: (0, _._)(
-                        "#Sale_CrossPromoSale_PageTitle",
-                        _.GetNameWithFallback(_),
-                      ),
-                    }),
-                    _
-                      ? (0, _.jsx)("img", {
-                          src: _,
-                          className: _.ImageFit,
-                        })
-                      : (0, _.jsx)("div", {
-                          children: (0, _._)("#Sale_CrossPromoSale_NoImage"),
-                        }),
-                  ],
-                })
-              : (0, _.jsx)("div", {
-                  children: (0, _._)("#Sale_CrossPromoSale_Linked_notvisible"),
-                }),
-          ],
-        });
+          _ = (0, _._)(),
+          _ = (0, _._)(_, "product_banner", _);
+        return _
+          ? (0, _.jsx)(_._, {
+              string: (0, _._)("#Sale_CrossPromoSale_Loading"),
+              size: "small",
+            })
+          : _ && _ != _._
+            ? (0, _.jsxs)("div", {
+                children: [(0, _._)("#EventDisplay_Share_Failure"), " ", _],
+              })
+            : (0, _.jsxs)("div", {
+                children: [
+                  _
+                    ? (0, _.jsx)("div", {
+                        children: (0, _._)("#Sale_CrossPromoSale_Linked"),
+                      })
+                    : (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#Sale_CrossPromoSale_LinkIncomplete",
+                        ),
+                      }),
+                  _
+                    ? (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("div", {
+                            children: (0, _._)(
+                              "#Sale_CrossPromoSale_PageTitle",
+                              _.GetNameWithFallback(_),
+                            ),
+                          }),
+                          _
+                            ? (0, _.jsx)("img", {
+                                src: _,
+                                className: _.ImageFit,
+                              })
+                            : (0, _.jsx)("div", {
+                                children: (0, _._)(
+                                  "#Sale_CrossPromoSale_NoImage",
+                                ),
+                              }),
+                        ],
+                      })
+                    : (0, _.jsx)("div", {
+                        children: (0, _._)(
+                          "#Sale_CrossPromoSale_Linked_notvisible",
+                        ),
+                      }),
+                ],
+              });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25750,7 +27090,7 @@
                       var _;
                       return _.SetSaleSectionTextLocalization(
                         _,
-                        _.GetSaleSectionIndexByID(_.unique_id),
+                        _.GetSaleSectionIndexByID(_.unique_id, !1),
                         (null === (_ = null == _ ? void 0 : _.currentTarget) ||
                         void 0 === _
                           ? void 0
@@ -25760,7 +27100,7 @@
                     fnSetText: (_) =>
                       _.SetSaleSectionTextLocalization(
                         _,
-                        _.GetSaleSectionIndexByID(_.unique_id),
+                        _.GetSaleSectionIndexByID(_.unique_id, !1),
                         _,
                       ),
                     ref: _,
@@ -27365,7 +28705,9 @@
                 closeModal: _,
                 onOK: () => {
                   null !== _ &&
-                    ((_.product_configs = _.filter((_, _) => _ !== _)), _());
+                    ((_.product_configs = _.filter((_, _) => _ !== _)),
+                    (_.package_to_config_tuple = []),
+                    _());
                 },
                 onCancel: () => _(null),
                 strDescription: _._.Localize("#Dialog_AreYouSure"),
@@ -27730,7 +29072,7 @@
       const _ = (0, _._)((_) => {
         const { saleSection: _, editModel: _ } = _,
           _ = __webpack_require__.GetCurEditLanguage(),
-          [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.default_label,
             _.localized_label,
             _.label_link,
@@ -27742,6 +29084,7 @@
             __webpack_require__.GetClanSteamID(),
             __webpack_require__.GetIncludedRealmList(),
             _.internal_section_title || "",
+            _.section_type,
           ]),
           _ = Boolean(_._.GetWithFallback(_, _)),
           _ = _ || _._.IsValidTitleOption(_, "label");
@@ -27753,7 +29096,8 @@
         const _ = (0, _._)(),
           _ =
             !!(0, _._)(_, __webpack_require__.GetEventModel(), _.eLocation) ||
-            "title_image" == _.section_type;
+            "title_image" == _.section_type,
+          _ = "crosspromotesalepage" === _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             !_ &&
@@ -27793,115 +29137,117 @@
                         __webpack_require__.SetDirty(_._.jsondata_sales);
                     },
                   }),
-                  _ &&
-                    (0, _.jsxs)(_._, {
-                      clanSteamID: __webpack_require__.GetClanSteamID(),
-                      className: _.CustomImageTitle,
-                      children: [
-                        (0, _.jsx)("span", {
-                          className: _.PromptText,
-                          children: (0, _._)("#Sale_option_title_image"),
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _.UploadImageButton,
-                          children: (0, _.jsx)(_._, {
-                            onClick: (_) => {
-                              _.preventDefault(),
-                                _.stopPropagation(),
-                                (0, _._)(
-                                  (0, _.jsx)(_._, {
-                                    loc_images: _,
-                                    partnerEventStore: _._,
-                                    appid: _,
-                                    realms: _,
-                                    artworkType: "sale_section_title",
-                                    eventModel: _,
-                                    clanSteamID: _,
-                                    fnLangHasData: _.BHasTitleImage,
-                                    fnGetImageHash: (_, _) => {
-                                      var _;
-                                      return null ===
-                                        (_ = _.localized_label_image) ||
-                                        void 0 === _
-                                        ? void 0
-                                        : _[_];
-                                    },
-                                    fnSetImageURL: (_, _, _ = _.Bhc) => {
-                                      const _ = _._.GetHashAndExt(_);
-                                      _.localized_label_image = _._.Set(
-                                        _ || [],
-                                        _,
-                                        _,
-                                      );
-                                    },
-                                  }),
-                                  (0, _._)(_),
+                ],
+              }),
+            !_ &&
+              _ &&
+              (0, _.jsxs)(_._, {
+                clanSteamID: __webpack_require__.GetClanSteamID(),
+                className: _.CustomImageTitle,
+                children: [
+                  (0, _.jsx)("span", {
+                    className: _.PromptText,
+                    children: (0, _._)("#Sale_option_title_image"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _.UploadImageButton,
+                    children: (0, _.jsx)(_._, {
+                      onClick: (_) => {
+                        _.preventDefault(),
+                          _.stopPropagation(),
+                          (0, _._)(
+                            (0, _.jsx)(_._, {
+                              loc_images: _,
+                              partnerEventStore: _._,
+                              appid: _,
+                              realms: _,
+                              artworkType: "sale_section_title",
+                              eventModel: _,
+                              clanSteamID: _,
+                              fnLangHasData: _.BHasTitleImage,
+                              fnGetImageHash: (_, _) => {
+                                var _;
+                                return null === (_ = _.localized_label_image) ||
+                                  void 0 === _
+                                  ? void 0
+                                  : _[_];
+                              },
+                              fnSetImageURL: (_, _, _ = _.Bhc) => {
+                                const _ = _._.GetHashAndExt(_);
+                                _.localized_label_image = _._.Set(
+                                  _ || [],
+                                  _,
+                                  _,
                                 );
-                            },
-                            children:
-                              _ > 0
-                                ? (0, _._)(
-                                    "#selectimage_managing_n_existing_title",
-                                    _,
-                                  )
-                                : (0, _._)("#selectimage_uploading_title"),
-                          }),
-                        }),
-                      ],
+                              },
+                            }),
+                            (0, _._)(_),
+                          );
+                      },
+                      children:
+                        _ > 0
+                          ? (0, _._)(
+                              "#selectimage_managing_n_existing_title",
+                              _,
+                            )
+                          : (0, _._)("#selectimage_uploading_title"),
                     }),
-                  _ &&
-                    (0, _.jsxs)(_._, {
-                      clanSteamID: __webpack_require__.GetClanSteamID(),
-                      children: [
-                        (0, _.jsx)(_._, {
-                          label: (0, _._)("#Sale_LinkURL"),
-                          tooltip: (0, _._)("#Sale_LinkURL_title_hint"),
-                          placeholder: (0, _._)("#Sale_LinkURL"),
-                          onChange: (_) => {
-                            (_.label_link = _.target.value),
-                              __webpack_require__.SetDirty(_._.jsondata_sales);
-                          },
-                          value: _,
-                        }),
-                        (0, _.jsx)(_, {
-                          saleSection: _,
-                          editModel: _,
-                        }),
-                      ],
-                    }),
-                  (0, _.jsxs)("div", {
-                    className: _.SectionSubtitleCtn,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        children: (0, _._)("#EventEditor_Event_SubTitle"),
-                      }),
-                      (0, _.jsx)(_._, {
-                        nameType: "subtitle",
-                        default_label: _,
-                        localized_label: _,
-                        editModel: _,
-                        onClearCustomTitle: () => {
-                          (_.localized_subtitle = _._.Set(
-                            _.localized_subtitle || [],
-                            _,
-                            null,
-                          )),
-                            __webpack_require__.SetDirty(_._.jsondata_sales);
-                        },
-                        onSetCustomTitle: (_) => {
-                          (_.localized_subtitle = _._.Set(
-                            _.localized_subtitle || [],
-                            _,
-                            _,
-                          )),
-                            __webpack_require__.SetDirty(_._.jsondata_sales);
-                        },
-                        onSetDefaultLabel: (_) => {
-                          (_.default_subtitle = _),
-                            __webpack_require__.SetDirty(_._.jsondata_sales);
-                        },
-                      }),
-                    ],
+                  }),
+                ],
+              }),
+            !_ &&
+              _ &&
+              (0, _.jsxs)(_._, {
+                clanSteamID: __webpack_require__.GetClanSteamID(),
+                children: [
+                  (0, _.jsx)(_._, {
+                    label: (0, _._)("#Sale_LinkURL"),
+                    tooltip: (0, _._)("#Sale_LinkURL_title_hint"),
+                    placeholder: (0, _._)("#Sale_LinkURL"),
+                    onChange: (_) => {
+                      (_.label_link = _.target.value),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
+                    value: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    saleSection: _,
+                    editModel: _,
+                  }),
+                ],
+              }),
+            (!_ || _) &&
+              (0, _.jsxs)("div", {
+                className: _.SectionSubtitleCtn,
+                children: [
+                  (0, _.jsx)(_._, {
+                    children: (0, _._)("#EventEditor_Event_SubTitle"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    nameType: "subtitle",
+                    default_label: _,
+                    localized_label: _,
+                    editModel: _,
+                    onClearCustomTitle: () => {
+                      (_.localized_subtitle = _._.Set(
+                        _.localized_subtitle || [],
+                        _,
+                        null,
+                      )),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
+                    onSetCustomTitle: (_) => {
+                      (_.localized_subtitle = _._.Set(
+                        _.localized_subtitle || [],
+                        _,
+                        _,
+                      )),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
+                    onSetDefaultLabel: (_) => {
+                      (_.default_subtitle = _),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
                   }),
                 ],
               }),
@@ -33965,7 +35311,7 @@
             this.m_section.localized_image.length > _ &&
             (this.m_section.localized_image[_] = null);
         }
-        GetImageURLWithFallback(_, _) {
+        GetEmailImageURLWithFallback(_, _) {
           let _ = this.GetImageHashAndExtWithFallback(_);
           return _ ? _._.GenerateURLFromHashAndExt(_, _) : void 0;
         }
@@ -39234,29 +40580,32 @@
           : "links" === _.section_type ||
               "title_image" === _.section_type ||
               "sale_tabhub" === (0, _._)(_)
-            ? _
-              ? __webpack_require__.map((_) => ({
-                  Render: (_) =>
-                    (function (_, _) {
-                      const {
-                        saleEvent: _,
-                        language: _,
-                        index: _,
-                        section: _,
-                      } = _;
-                      return (0, _.jsx)(
-                        _,
-                        {
-                          link: _,
+            ? "title_image" === _.section_type &&
+              "title" === _.title_image_selected
+              ? []
+              : _
+                ? __webpack_require__.map((_) => ({
+                    Render: (_) =>
+                      (function (_, _) {
+                        const {
+                          saleEvent: _,
                           language: _,
-                          clanAccountID: _.clanSteamID.GetAccountID(),
-                          strClassName: _().LinkCapsule,
-                        },
-                        _.unique_id + "_" + _,
-                      );
-                    })(_, _),
-                }))
-              : []
+                          index: _,
+                          section: _,
+                        } = _;
+                        return (0, _.jsx)(
+                          _,
+                          {
+                            link: _,
+                            language: _,
+                            clanAccountID: _.clanSteamID.GetAccountID(),
+                            strClassName: _().LinkCapsule,
+                          },
+                          _.unique_id + "_" + _,
+                        );
+                      })(_, _),
+                  }))
+                : []
             : (0, _._)(_.section_type)
               ? _
                 ? _.filter((_) => !(0, _._)(_)).map((_) => ({
@@ -41308,6 +42657,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (
@@ -41316,6 +42666,24 @@
             ? ""
             : (0, _._)(_.default_label))
         );
+      }
+      function _(_) {
+        const { event: _, elTitle: _, language: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(_, _ ? "product_mobile_banner" : "product_banner", _);
+        return (0, _.jsxs)("div", {
+          className: _().SaleImageCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().SaleImageHelper,
+              children: _,
+            }),
+            (0, _.jsx)("img", {
+              src: _,
+              alt: _,
+            }),
+          ],
+        });
       }
       const _ = (0, _._)((_) => {
         var _;
@@ -41328,34 +42696,28 @@
             subtitle: _,
           } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(),
           { eventModel: _ } = (0, _._)(
             _.sale_page_cross_promo_clan_account_id,
             _.sale_page_cross_promo_event_gid,
             !1,
-          ),
-          _ = _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
+          );
+        if (
+          "title_image" == _.section_type &&
+          "image" === _.title_image_selected
+        )
+          return null;
+        const _ =
+          _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
         if (!_) return null;
         const _ = _ || (0, _._)(_, _, _);
         let _ = (0, _.jsx)("div", {
             className: (0, _._)(_().SaleSectionHeader, "SaleSectionHeader"),
             style: _(_, _, _),
             children: (null == _ ? void 0 : _.BHasSomeImage("product_banner"))
-              ? (0, _.jsxs)("div", {
-                  className: _().SaleImageCtn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().SaleImageHelper,
-                      children: _,
-                    }),
-                    (0, _.jsx)("img", {
-                      src: _.GetImageURLWithFallback(
-                        _ ? "product_mobile_banner" : "product_banner",
-                        _,
-                      ),
-                      alt: _,
-                    }),
-                  ],
+              ? (0, _.jsx)(_, {
+                  ..._,
+                  event: _,
+                  elTitle: _,
                 })
               : _,
           }),
@@ -41788,6 +43150,7 @@
                     (0, _.jsx)(_._, {
                       _: _,
                       bMinimizePlatforms: _,
+                      bHideWindows: !0,
                     }),
                   !_ &&
                     (0, _.jsx)("span", {
@@ -41880,6 +43243,7 @@
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: _,
           } = _,
+          _ = (0, _._)(),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -41902,6 +43266,7 @@
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: _,
+            bUsePanel: !_ && !_,
           });
         return (0, _.jsxs)(_._, {
           className: (0, _._)({
@@ -42001,6 +43366,7 @@
         const {
             _: _,
             bHideStatusBanners: _,
+            bUsePanel: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -42016,11 +43382,11 @@
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        const _ = !!_;
+        const _ = _
+            ? void 0
+            : (0, _._)((0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _)),
+          _ = _ ? _._ : _._,
+          _ = !!_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -42028,8 +43394,8 @@
                 [_().TwoWidthCtn]: _,
               }),
               children: [
-                (0, _.jsxs)(_._, {
-                  href: _ ? void 0 : _,
+                (0, _.jsxs)(_, {
+                  href: _,
                   style: {
                     display: "block",
                     cursor: "pointer",
@@ -42038,12 +43404,12 @@
                     [_().TwoWidthCapsule]: _,
                   }),
                   preferredFocus: _,
-                  onClick: _,
+                  focusable: !0,
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
                       hide_status_banners: _,
-                      show_early_access: _.bShowEarlyAccessBanner,
+                      show_early_access: _,
                     }),
                     "none" != _ &&
                       (0, _.jsx)(_._, {
@@ -42350,6 +43716,143 @@
             ? `tabid${this.GetActiveTabUniqueID()}`
             : "";
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { className: _, ..._ } = _;
+        return (0, _.jsx)("div", {
+          className: _()(_, _.EditableComponentToolbarContainer),
+          ..._,
+        });
+      }
+      function _(_) {
+        const {
+            toolbar: _,
+            top: _,
+            left: _,
+            width: _,
+            height: _,
+            visible: _,
+          } = _,
+          _ = {
+            left: `${_}px`,
+            top: `${_}px`,
+            width: `${_}px`,
+            position: "absolute",
+          },
+          _ = _ < 120;
+        return (
+          (_ < 80 || _) && ((_.top = _ - 32 - 16 + "px"), (_.height = "48px")),
+          (0, _.jsx)("div", {
+            style: _,
+            className: _()(
+              _.InlineHoverContainer,
+              _ && _.WidthConstrained,
+              !_ && _.Hidden,
+            ),
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const { className: _, toolbar: _, children: _ } = _,
+          [_, _] = (0, _._)(),
+          [_, _] = _.useState({
+            top: 0,
+            left: 0,
+            width: 0,
+            height: 0,
+          }),
+          _ = (0, _.useRef)(void 0);
+        return (
+          (0, _.useLayoutEffect)(() => {
+            if (_) {
+              const _ = _.current;
+              _({
+                top: _.offsetTop,
+                left: _.offsetLeft,
+                width: _.offsetWidth,
+                height: _.offsetHeight,
+              });
+            }
+          }, [_]),
+          (0, _.jsx)(_.Fragment, {
+            children: (0, _.jsxs)("span", {
+              ref: _,
+              className: _()(_, _.EditableComponentInlineContainer),
+              ..._,
+              children: [
+                (0, _.jsx)(_, {
+                  ..._,
+                  toolbar: _,
+                  visible: _ && _.width > 0,
+                }),
+                _,
+              ],
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const {
+          onEditClick: _,
+          strEditDescription: _ = (0, _._)("#Button_Edit"),
+          onDeleteClick: _,
+          strDeleteDescription: _ = (0, _._)("#Button_Remove"),
+          bStrongShadows: _ = !1,
+          children: _,
+        } = _;
+        return (0, _.jsxs)(_, {
+          bStrongShadows: _,
+          children: [
+            _,
+            _ &&
+              (0, _.jsx)(_, {
+                onClick: _,
+                description: _,
+                children: (0, _.jsx)(_.ffu, {}),
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                onClick: _,
+                description: _,
+                children: (0, _.jsx)(_.sED, {}),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { bStrongShadows: _, children: _ } = _;
+        return (0, _.jsx)("span", {
+          className: _()(_.EditableComponentToolbar, _ && _.StrongShadows),
+          children: _,
+        });
+      }
+      function _(_) {
+        const { onClick: _, description: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          onClick: _,
+          tooltip: _,
+          className: _.FloatingToolbarButton,
+          children: _,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

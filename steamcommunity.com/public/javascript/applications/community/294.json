@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Valve専用",
     "moderation_escalationlevel_supervisor_desc": "監督者が必須です",
+    "moderation_escalation_escalationnote": "エスカレーションメモ：",
     "moderation_chatmetadata_deleted": "このチャットレポートに関連付けられたメタデータは、約21日間の保存期間を超えたため削除されました。",
     "moderation_chatmetadata_futurelogcollection": "このチャットログには、報告後%1$s以内に送信されたメッセージが追加される場合があります",
     "moderation_resolutionaction_removed": "報告されたコンテンツを削除",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "報告された案件",
     "moderation_already_owner_disputed": "異議申し立て済み",
     "moderationstats_alltypes": "すべての案件タイプ",
-    "moderation_alternateforumtool": "代替ツール",
+    "forumsubjectlist_subjectreportsummary": "未解決%1$s件、異議申し立て%1$s件",
     "empty_no_trailing_comma": ""
 }

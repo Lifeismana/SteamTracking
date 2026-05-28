@@ -216,8 +216,8 @@
             queryFn: async () => {
               const _ = new Map();
               if (_._.logged_in) {
-                const _ = _._.Init(_._),
-                  _ = (await _._.GetNicknameList(_, _)).Body().toObject();
+                const _ = _._.Init(_.w_T),
+                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
                 _?.nicknames &&
                   _.nicknames.length > 0 &&
                   _.nicknames.forEach((_) => {
@@ -335,8 +335,8 @@
             return {
               queryKey: ["communitypreferences"],
               queryFn: async () => {
-                const _ = _._.Init(_._),
-                  _ = await _._.GetCommunityPreferences(_, _);
+                const _ = _._.Init(_.tzK),
+                  _ = await _.xtC.GetCommunityPreferences(_, _);
                 if (__webpack_require__.GetEResult() != _._)
                   throw new Error(
                     `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,

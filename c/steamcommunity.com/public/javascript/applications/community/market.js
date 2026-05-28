@@ -2008,7 +2008,7 @@
         return new (_())(
           async (_) => {
             const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
                 steamids: _,
               }),
               _ = new Map();
@@ -3370,13 +3370,87 @@
                 onActiveChange: (_) =>
                   ((_, _, _) => {
                     const _ = _(_, _, _, _);
-                    __webpack_require__(_(_.facets, _.facets));
+                    __webpack_require__(
+                      {
+                        ..._,
+                        facets: _(_.facets, _.facets),
+                      },
+                      !0,
+                    );
                   })(_.facet, _.tag, _),
                 label: _.strLabel,
               },
               `${_.facet}_${_.tag}`,
             ),
           ),
+        });
+      }
+      function _(_) {
+        const {
+            rgToggles: _,
+            onChange: _,
+            state: _,
+            computeNext: _ = (_, _) => _,
+          } = _,
+          _ = _.every(
+            ({ facet: _, tag: _ }) => !_.facets[_] || !_.facets[_][_],
+          );
+        return (0, _.jsxs)(_._, {
+          columns: "1fr 1fr",
+          gap: "1",
+          padding: "1",
+          background: "dull-6",
+          children: [
+            (0, _.jsx)(_._, {
+              color: _ ? "accent" : "dull",
+              onClick: () => {
+                let _ = {
+                  ..._,
+                  facets: {
+                    ..._.facets,
+                  },
+                };
+                for (const _ of _) _ = _(_, _.facet, _.tag, !1);
+                __webpack_require__(
+                  {
+                    ..._,
+                    facets: _(_.facets, _.facets),
+                  },
+                  !0,
+                );
+              },
+              children: "All",
+            }),
+            _.filter((_) => !_.condition || _.condition(_)).map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  active: _.facets[_.facet] && _.facets[_.facet][_.tag],
+                  onActiveChange: (_) =>
+                    ((_, _, _) => {
+                      const _ = _(_, _, _, _);
+                      __webpack_require__(
+                        {
+                          ..._,
+                          facets: _(_.facets, _.facets),
+                        },
+                        !0,
+                      );
+                    })(_.facet, _.tag, _),
+                  label: _.strLabel,
+                },
+                `${_.facet}_${_.tag}`,
+              ),
+            ),
+          ],
+        });
+      }
+      function _(_) {
+        const { label: _, active: _, onActiveChange: _ } = _;
+        return (0, _.jsx)(_._, {
+          color: _ ? "accent" : "dull",
+          onClick: () => _(!_),
+          children: _,
         });
       }
       function _(_) {
@@ -3464,21 +3538,18 @@
                   label: _.strLabel,
                 });
           }
-          case "togglegroup": {
-            const _ = (_) =>
-              _(
-                {
-                  ..._,
-                  facets: _,
-                },
-                !0,
-              );
+          case "togglegroup":
             return (0, _.jsx)(_, {
               ..._,
               onChange: _,
               state: _,
             });
-          }
+          case "togglegrid":
+            return (0, _.jsx)(_, {
+              ..._,
+              onChange: _,
+              state: _,
+            });
           default:
             return (
               (0, _._)(_, `Unhandled facet field type: "${_.fieldType}"`), null
@@ -3937,8 +4008,8 @@
               _ = (0, _.useCallback)((_) => __webpack_require__(_(_, _)), [_]),
               _ = (0, _.useCallback)((_) => _ && _(_(_, _)), [_]);
             return {
-              checkMax: (_) => Math.abs(_(_) - _) < 0.001,
-              checkMin: (_) => Math.abs(_(_) - _) < 0.001,
+              checkMax: (_) => Math.abs(_ - _) < 100,
+              checkMin: (_) => Math.abs(_ - _) < 1,
               props: {
                 value: _,
                 onValueChange: _,
@@ -5519,58 +5590,9 @@
             const _ = _[_.facet];
             if (!_) return [];
             if ("Quality" === _.name) {
-              const _ = _.tags && _.tags.strange,
-                _ = _.tags && _.tags.tournament;
-              (0, _._)(_ && _, "Could not find expected toggle tags");
               const _ = _(_.trigger);
               return {
-                facet: {
-                  strLabel: _.localized_name,
-                  fieldType: "togglegroup",
-                  rgToggles: [
-                    {
-                      facet: _.name,
-                      tag: "strange",
-                      strLabel: _.localized_name,
-                    },
-                    {
-                      facet: _.name,
-                      tag: "tournament",
-                      strLabel: _.localized_name,
-                      condition: _([
-                        {
-                          facet: "Type",
-                          tag: _,
-                        },
-                        {
-                          facet: "Weapon",
-                          exclude: _,
-                        },
-                        {
-                          facet: "ItemSet",
-                        },
-                      ]),
-                    },
-                  ],
-                  computeNext: (_, _) => {
-                    if (
-                      _[_.name] &&
-                      _[_.name].strange &&
-                      _[_.name].tournament
-                    ) {
-                      let _ = "tournament";
-                      _[_.name] && _[_.name].strange && (_ = "strange");
-                      const _ = {
-                        ..._,
-                        [_.name]: {
-                          ..._[_.name],
-                        },
-                      };
-                      return delete _[_.name][_], _;
-                    }
-                    return _;
-                  },
-                },
+                facet: _(_, !0),
                 condition: _,
               };
             }
@@ -5708,6 +5730,7 @@
                   case "togglebutton":
                     return [[_.facet, _.tag]];
                   case "togglegroup":
+                  case "togglegrid":
                     return _.rgToggles.map(({ facet: _, tag: _ }) => [_, _]);
                   default:
                     return (0, _._)(_, "Unhandled facet type"), [];
@@ -6395,6 +6418,50 @@
           ],
         });
       }
+      function _(_, _ = !1) {
+        const _ = _.tags && _.tags.strange,
+          _ = _.tags && _.tags.tournament,
+          _ = _.tags && _.tags.normal;
+        return (
+          (0, _._)(_ && _ && _, "Could not find expected toggle tags"),
+          {
+            strLabel: _.localized_name,
+            fieldType: "togglegrid",
+            rgToggles: [
+              {
+                facet: _.name,
+                tag: "normal",
+                strLabel: _.localized_name,
+              },
+              {
+                facet: _.name,
+                tag: "strange",
+                strLabel: _.localized_name,
+              },
+              {
+                facet: _.name,
+                tag: "tournament",
+                strLabel: _.localized_name,
+                condition: _
+                  ? _([
+                      {
+                        facet: "Type",
+                        tag: _,
+                      },
+                      {
+                        facet: "Weapon",
+                        exclude: _,
+                      },
+                      {
+                        facet: "ItemSet",
+                      },
+                    ])
+                  : void 0,
+              },
+            ],
+          }
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6687,7 +6754,7 @@
                         children: _.Localize("#AdvancedSearch_Heading"),
                       }),
                     (0, _.jsxs)(_._, {
-                      gap: _,
+                      gap: "2",
                       align: {
                         initial: "stretch",
                         _: "start",

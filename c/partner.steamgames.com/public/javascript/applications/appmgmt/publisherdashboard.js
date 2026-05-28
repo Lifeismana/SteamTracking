@@ -3299,6 +3299,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleDesc: _ } = _;
@@ -3319,14 +3320,11 @@
       function _(_) {
         const { saleDesc: _ } = _,
           _ = (0, _.sfN)(_._.LANGUAGE),
-          _ = _._.GetClanEventModel(_.clanEventGID);
+          _ = _._.GetClanEventModel(_.clanEventGID),
+          _ = (0, _._)(_, "capsule", _, _._.capsule_main);
         return _
           ? (0, _.jsx)(_._, {
-              imageUrls: _.GetImageForSizeAsArrayWithFallback(
-                "capsule",
-                _,
-                _._.capsule_main,
-              ),
+              imageUrls: _,
             })
           : void 0;
       }

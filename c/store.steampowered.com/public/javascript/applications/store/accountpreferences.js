@@ -59,23 +59,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        NotificationSettingsHeader: "_2XOzkA8bF8HiEtnoYSLHGC",
-        SectionDescription: "_3K5HBHn_mMUrazI_oUH12q",
-        NotificationGroup: "_1_kCY5Jc71QX_9j4Q7brk",
-        NotificationSection: "_3Sbby9pYJeX9b2Dcjx1Gbc",
-        NotificationFeedToggle: "_30Nc3G1cpcJeZAQulOQYHB",
-        NotificationSendWhen: "_3YstFVBT36qZA8FvdzEAF",
-        NotificationDescription: "_3FSzSTDALgYgSmsyvkISnG",
-        NotificationPrefDetails: "_152HTE3xZ88Xk7LEEPFE68",
-        PrefDetailsToggle: "_3XAMDDm5D1pSZpakvjyRPk",
-        Selected: "_3yrEIJRje6XiWe9BiIGY7P",
-        Account_manage_container_inner: "_2NBAZEDaX1dPJTQImo4BFa",
-        Account_manage_link: "_1FcUl9nMRyQ6UUDHtWT_TR",
-        Account_settings_notifications_extrapadding: "LKNSqnZGtL7Z-k7LqX8i0",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         narrowWidth: "500px",
         PlaytestInvites: "_3XPWJM0EKr-dJ0B0NJtmjq",
         PlaytestInvite: "_22d1cAhcNjyVeCgm3buXvn",
@@ -154,7 +137,7 @@
         return new (_())(
           async (_) => {
             const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
+              _ = await _.xtC.GetPlayerLinkDetails(_, {
                 steamids: _,
               }),
               _ = new Map();
@@ -401,7 +384,6 @@
       }
       (0, _._)([_._], _.prototype, "m_Preferences", void 0);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -749,8 +731,7 @@
               _.SetPreferenceState(_._._);
             }, [_]),
             _ = (0, _._)();
-          return (0, _.jsxs)(_._, {
-            navID: "StoreCookiesSettings",
+          return (0, _.jsxs)("div", {
             children: [
               (0, _.jsx)("div", {
                 className: (0, _._)(
@@ -1190,235 +1171,6 @@
             ],
           });
         });
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        m_Preferences = void 0;
-        m_bUpdating = !1;
-        constructor(_) {
-          (0, _._)(this), (this.m_Preferences = _);
-        }
-        GetPreferences() {
-          return this.m_Preferences;
-        }
-        BUpdatingPreferences() {
-          return this.m_bUpdating;
-        }
-        ToggleTargetPreference(_, _) {
-          this.m_bUpdating = !0;
-          let _ = !1;
-          for (let _ of this.m_Preferences)
-            if (_.notification_type == _.notification_type) {
-              (_.notification_targets ^= _),
-                (_.notification_targets & _._._) != _._._ &&
-                  (_.notification_targets = _._._),
-                (_ = !0);
-              break;
-            }
-          _ && this.PostNotificationSettings(), (this.m_bUpdating = !1);
-        }
-        async PostNotificationSettings() {
-          const _ = _._.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
-            _ = new FormData();
-          _.set("sessionid", _._.SESSIONID),
-            _.append(
-              "notificationpreferences",
-              JSON.stringify(this.m_Preferences),
-            );
-          try {
-            let _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            200 != _.status || _?.data?.success != _._
-              ? window.ShowAlertDialog(
-                  (0, _._)("#NotificationPref_Error"),
-                  (0, _._)("#NotificationPref_ErrorNotSaved"),
-                )
-              : _._;
-          } catch (_) {
-            0,
-              window.ShowAlertDialog(
-                (0, _._)("#NotificationPref_Error"),
-                (0, _._)("#NotificationPref_ErrorNotSaved"),
-              );
-          }
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_Preferences", void 0),
-        (0, _._)([_._], _.prototype, "m_bUpdating", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _;
-      function _() {
-        if (!_) {
-          let _ = (0, _._)("notificationpreferences", "application_config");
-          _ = new _(_);
-        }
-        return _;
-      }
-      const _ = (0, _._)(() => {
-          let _ = _(),
-            _ = [];
-          for (const _ of _.GetPreferences())
-            _.push(
-              (0, _.jsx)(_, {
-                preferenceSetting: _,
-              }),
-            );
-          return (0, _.jsxs)(_._, {
-            navID: "StoreNotificationSettings",
-            children: [
-              (0, _.jsxs)("div", {
-                children: [
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _.NotificationSettingsHeader,
-                      "account_header_line noicon",
-                    ),
-                    children: (0, _.jsx)("div", {
-                      children: (0, _._)("#NotificationSettings_Email_Title"),
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      "account_settings_container",
-                      _.Account_settings_notifications_extrapadding,
-                    ),
-                    children: (0, _.jsx)("div", {
-                      className: _.Account_manage_container_inner,
-                      children: (0, _.jsx)(_._, {
-                        className: _.Account_manage_link,
-                        onClick: () =>
-                          (document.location =
-                            _._.STORE_BASE_URL + "account/emailoptout"),
-                        children: (0, _.jsx)("div", {
-                          children: (0, _._)(
-                            "#NotificationSettings_Email_Button",
-                          ),
-                        }),
-                      }),
-                    }),
-                  }),
-                ],
-              }),
-              (0, _.jsxs)("div", {
-                children: [
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _.NotificationSettingsHeader,
-                      "account_header_line noicon",
-                    ),
-                    children: (0, _.jsx)("div", {
-                      children: (0, _._)("#NotificationSettings_Title"),
-                    }),
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: "account_settings_container",
-                    children: [
-                      (0, _.jsx)("p", {
-                        className: _.SectionDescription,
-                        children: (0, _._)("#NotificationSettings_Desc1"),
-                      }),
-                      (0, _.jsx)("p", {
-                        className: _.SectionDescription,
-                        children: (0, _._)("#NotificationSettings_Desc2"),
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: "notification_settings_container",
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _.NotificationSendWhen,
-                            children: (0, _._)(
-                              "#NotificationSettings_SendMeWhen",
-                            ),
-                          }),
-                          _,
-                        ],
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          });
-        }),
-        _ = (0, _._)((_) => {
-          const { preferenceSetting: _ } = _;
-          let _ = _();
-          const _ = (0, _.useCallback)(() => {
-              __webpack_require__.ToggleTargetPreference(_._._, _);
-            }, [_, _]),
-            _ = (0, _.useCallback)(() => {
-              __webpack_require__.ToggleTargetPreference(_._._, _);
-            }, [_, _]),
-            _ = (0, _.useCallback)(() => {
-              __webpack_require__.ToggleTargetPreference(_._._, _);
-            }, [_, _]),
-            [_, _] = (0, _.useState)(!1),
-            _ = __webpack_require__.BUpdatingPreferences(),
-            _ = (_.notification_targets & _._._) == _._._,
-            _ = (_.notification_targets & _._._) == _._._,
-            _ = (_.notification_targets & _._._) == _._._,
-            _ =
-              ((_ = _.notification_type),
-              (0, _._)("#SteamNotificationTypeDesc_" + _)
-                ? (0, _._)("#SteamNotificationTypeDesc_" + _)
-                : null);
-          var _;
-          return _
-            ? (0, _.jsxs)("div", {
-                className: _.NotificationGroup,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _.NotificationSection,
-                    children: [
-                      (0, _.jsx)(_._, {
-                        className: _.NotificationFeedToggle,
-                        padding: "compact",
-                        onChange: _,
-                        disabled: _,
-                        bottomSeparator: "none",
-                        checked: _,
-                      }),
-                      (0, _.jsx)("p", {
-                        className: _.NotificationDescription,
-                        children: _,
-                      }),
-                      (0, _.jsx)(_._, {
-                        className: (0, _._)({
-                          [_.PrefDetailsToggle]: !0,
-                          [_.Selected]: _,
-                        }),
-                        onClick: () => _(!_),
-                        children: (0, _.jsx)(_.b8_, {
-                          direction: "down",
-                        }),
-                      }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: _.NotificationPrefDetails,
-                      children: [
-                        (0, _.jsx)(_._, {
-                          label: (0, _._)("#NotificationSettings_SendToast"),
-                          disabled: _ || !_,
-                          checked: _,
-                          onChange: _,
-                        }),
-                        (0, _.jsx)(_._, {
-                          label: (0, _._)(
-                            "#NotificationSettings_PushNotification",
-                          ),
-                          disabled: _ || !_,
-                          checked: _,
-                          onChange: _,
-                        }),
-                      ],
-                    }),
-                ],
-              })
-            : null;
-        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -1482,8 +1234,7 @@
                     );
                 }
               })),
-          (0, _.jsxs)(_._, {
-            navID: "StorePlaytestInvites",
+          (0, _.jsxs)("div", {
             children: [
               (0, _.jsx)("div", {
                 className: "account_header_line noicon",
@@ -1743,8 +1494,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        return (0, _.jsxs)(_._, {
-          navID: "StorePlaytests",
+        return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
               bShowPlaytestOverview: !1,
@@ -1850,7 +1600,8 @@
       }
       (0, _._)([_._], _.prototype, "m_rgActiveDevices", void 0),
         (0, _._)([_._], _.prototype, "m_rgRevokedDevices", void 0);
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ =
           __webpack_require__._ +
           "images/applications/store/sg_shield_off.png?v=valveisgoodatcaching",
@@ -2543,8 +2294,7 @@
       var _,
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.jsxs)(_._, {
-          navID: "StoreSecurityAndDevices",
+        return (0, _.jsxs)("div", {
           children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
         });
       }
@@ -3007,7 +2757,6 @@
         ),
         _ = {
           CookieSettings: () => "/cookiepreferences",
-          NotificationSettings: () => "/notificationsettings",
           FamilyManagement: () => "/familymanagement",
           SecurityDevices: () => "/authorizeddevices",
           PlaytestInvites: () => "/playtestinvites",
@@ -3024,15 +2773,6 @@
                   (0, _.jsx)(_._, {
                     config: {
                       "cookie-preferences": () => (0, _.jsx)(_, {}),
-                    },
-                  }),
-              }),
-              (0, _.jsx)(_._, {
-                path: `${_}${__webpack_require__.NotificationSettings()}`,
-                render: () =>
-                  (0, _.jsx)(_._, {
-                    config: {
-                      "notification-settings": () => (0, _.jsx)(_, {}),
                     },
                   }),
               }),

@@ -126,7 +126,8 @@
               n.Body().set_subject_group_id(t),
               n.Body().set_subject_id(r),
               n.Body().set_required_level(o.eNewLevel),
-              o.eReason && n.Body().set_reason(o.eReason);
+              o.eReason && n.Body().set_reason(o.eReason),
+              o.strNote && n.Body().set_note(o.strNote);
             const l = await s.fL.EscalateSubject(i, n);
             if (l.GetEResult() !== a.R)
               throw new Error(`Failed to escalate subject: ${l.GetEMsg()}`);

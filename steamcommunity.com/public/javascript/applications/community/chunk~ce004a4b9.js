@@ -14,7 +14,7 @@
         return new (s())(
           async (r) => {
             const t = [...r],
-              a = await i.xt.GetPlayerLinkDetails(e, { steamids: t }),
+              a = await i.xtC.GetPlayerLinkDetails(e, { steamids: t }),
               n = new Map();
             return (
               a

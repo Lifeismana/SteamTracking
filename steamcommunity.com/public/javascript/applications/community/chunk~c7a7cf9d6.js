@@ -684,7 +684,7 @@
           let n = e.appInfo ? e.appid : void 0,
             i = e.clanInfo ? e.clanInfo.clanid : void 0;
           null != n || null != i
-            ? (await A.S.Get().UpdateCommunitionSetting(t, n, i),
+            ? (await A.S.Get().UpdateCommunicationSetting(t, n, i),
               E.V.RecordAppInteractionEvent(n, E.E.k_eMuted))
             : (0, S.wT)(
                 !1,
@@ -980,7 +980,7 @@
         BIsMutedClanID(e) {
           return this.m_mapBlockedClanIds.has(e);
         }
-        async UpdateCommunitionSetting(e, t, n) {
+        async UpdateCommunicationSetting(e, t, n) {
           const i = c.TS.STORE_BASE_URL + "account/optoutappcommunication/",
             s = new FormData();
           if (

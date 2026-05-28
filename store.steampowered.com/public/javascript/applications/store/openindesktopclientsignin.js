@@ -3,6 +3,58 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1349, 8843],
   {
+    69041: (e) => {
+      e.exports = {
+        Button: "_0BH1ydyFmSnUvoVK2hIc",
+        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
+        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
+        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
+        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
+        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
+        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
+        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
+        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
+        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
+        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
+      };
+    },
+    73406: (e) => {
+      e.exports = {
+        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
+        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
+        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
+        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
+        "Size-3": "_389OPmdZoebw42_AlsUFxi",
+        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
+        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
+        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
+        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
+        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
+      };
+    },
+    44041: (e) => {
+      e.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
+    },
+    65274: (e) => {
+      e.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
     50122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
@@ -13,6 +65,9 @@
         "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
         "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
+    },
+    91239: (e) => {
+      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
     },
     97824: (e) => {
       e.exports = {
@@ -28,6 +83,251 @@
     11131: (e) => {
       e.exports = { WishlistModalOverride: "_3zojRjiXppBm0x5n5HgAZ1" };
     },
+    53965: (e, n, t) => {
+      "use strict";
+      t.d(n, { $: () => x, v: () => f });
+      var i = t(7850),
+        s = t(64238),
+        o = t.n(s),
+        r = t(69041),
+        a = t(75659),
+        c = t(11526),
+        l = t(11820),
+        d = t(73406),
+        p = t(90534),
+        h = t(83392);
+      function u(e) {
+        const {
+          size: n = "3",
+          loading: t = !0,
+          children: s,
+          color: o,
+          variant: r,
+          ...a
+        } = e;
+        return s || !t
+          ? (0, i.jsxs)(p.az, {
+              position: "relative",
+              ...a,
+              width: "fit-content",
+              children: [
+                (0, i.jsx)("div", {
+                  "data-visibility": !t,
+                  className: d.ChildContainer,
+                  children: s,
+                }),
+                t &&
+                  (0, i.jsx)(h.s, {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                    children: (0, i.jsx)(m, { size: n, color: o, variant: r }),
+                  }),
+              ],
+            })
+          : (0, i.jsx)(m, { size: n, color: o, variant: r, ...a });
+      }
+      function m(e) {
+        const { className: n, color: t, ...s } = (0, c.mz)(e, _);
+        return (0, i.jsx)("div", {
+          "data-accent-color": t,
+          className: o()(n, d.Spinner),
+          ...s,
+        });
+      }
+      const _ = [
+        ...a.L,
+        { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
+        { prop: "variant", className: (e) => d[`Variant-${e}`] },
+      ];
+      var S = t(45699),
+        b = t(8527);
+      function C(e) {
+        e.preventDefault();
+      }
+      const g = [
+          ...a.L,
+          { prop: "size", responsive: !0, className: (e) => r[`Size-${e}`] },
+          { prop: "variant", className: (e) => r[`Variant-${e}`] },
+          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
+          {
+            prop: "width",
+            className: r.Width,
+            cssProperty: "--width",
+            responsive: !0,
+          },
+          {
+            prop: "minWidth",
+            className: r.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
+        ],
+        x = function (e) {
+          const {
+              variant: n = "default",
+              size: t = "2",
+              minWidth: s = "fit-content",
+              color: a,
+              loading: l,
+              children: d,
+              onClick: p,
+              icon: h,
+              gamepadFocusable: m = !0,
+              ..._
+            } = e,
+            C = l
+              ? (0, i.jsx)(u, {
+                  size: t,
+                  color: a,
+                  variant: "bright",
+                  children: d,
+                })
+              : d,
+            x = l ? void 0 : p,
+            f = m && b.TS.IN_GAMEPADUI ? S.fu : "button";
+          return (0, i.jsx)(f, {
+            type: "button",
+            ...(0, c.mz)(
+              {
+                ..._,
+                variant: n,
+                size: t,
+                minWidth: s,
+                color: a,
+                className: o()(r.Button, h && r.Icon),
+                onClick: x,
+              },
+              g,
+            ),
+            children: C,
+          });
+        },
+        f = function (e) {
+          const {
+              variant: n = "default",
+              size: t = "2",
+              minWidth: s = "fit-content",
+              disabled: a,
+              icon: d,
+              gamepadFocusable: p = !0,
+              ...h
+            } = e,
+            u = a ? C : void 0,
+            m = p && b.TS.IN_GAMEPADUI ? S.Ii : "a";
+          return (0, i.jsx)(m, {
+            ...(0, c.mz)(
+              {
+                onClick: u,
+                ...h,
+                variant: n,
+                size: t,
+                minWidth: s,
+                className: o()(r.Button, d && r.Icon, (0, l.T)()),
+              },
+              g,
+            ),
+          });
+        };
+    },
+    90534: (e, n, t) => {
+      "use strict";
+      t.d(n, { GY: () => p, az: () => d });
+      var i = t(7850),
+        s = t(39479),
+        o = t(64238),
+        r = t.n(o),
+        a = t(11526),
+        c = t(75659),
+        l = t(44041);
+      function d(e) {
+        const { as: n = "div", ref: t, ...s } = e,
+          o = (0, a.mz)({ ...s, className: r()(l.Box, e.className) }, h),
+          c = n;
+        return (0, i.jsx)(c, { ref: t, ...o });
+      }
+      function p(e) {
+        const { as: n = "div", ref: t, navProps: o, ...c } = e,
+          d = (0, a.mz)({ ...c, className: r()(l.Box, c.className) }, h),
+          p = n;
+        return (0, i.jsx)(s.J, {
+          ...o,
+          children: (0, i.jsx)(p, { ref: t, ...d }),
+        });
+      }
+      const h = c.h;
+    },
+    20187: (e, n, t) => {
+      "use strict";
+      t.d(n, { Ae: () => h, EY: () => d, U6: () => p });
+      var i = t(7850),
+        s = t(55348),
+        o = t(11526),
+        r = t(75659),
+        a = t(64238),
+        c = t.n(a),
+        l = t(65274);
+      function d(e) {
+        const { as: n = "span", ref: t, className: s, ...r } = e,
+          a = n;
+        return (0, i.jsx)(a, {
+          ref: t,
+          ...(0, o.mz)({ ...r, className: c()(l.Text, s) }, h),
+        });
+      }
+      const p = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: l.TextWeight,
+            cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: l.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            responsive: !0,
+            cssProperty: (e, n, t) => [
+              "--text-color",
+              (0, o.To)(e, (0, s.I)(n.contrast, t) ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            responsive: !0,
+            cssProperty: (e, n, t) => [
+              "--text-color",
+              (0, o.To)((0, s.I)(n.color, t) ?? "text-body", e),
+            ],
+          },
+          { prop: "truncate", className: l.Truncate },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: l.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: l.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        h = [
+          ...p,
+          ...r.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (e) => l[`TextSize-${e}`],
+          },
+        ];
+    },
     28491: (e, n, t) => {
       "use strict";
       t.d(n, { Y: () => l });
@@ -35,11 +335,11 @@
         s = t(20187),
         o = t(11526),
         r = t(50122),
-        c = t(8527),
-        a = t(45699);
+        a = t(8527),
+        c = t(45699);
       function l(e) {
         const { underline: n = "auto", ...t } = e,
-          s = c.TS.IN_GAMEPADUI ? a.Ii : "a";
+          s = a.TS.IN_GAMEPADUI ? c.Ii : "a";
         return (0, i.jsx)(s, {
           ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, d),
         });
@@ -49,39 +349,47 @@
         { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];
     },
+    11820: (e, n, t) => {
+      "use strict";
+      t.d(n, { T: () => s });
+      var i = t(91239);
+      function s() {
+        return i.Reset;
+      }
+    },
     84547: (e, n, t) => {
       "use strict";
-      t.d(n, { E: () => h, l: () => u });
+      t.d(n, { E: () => p, l: () => h });
       var i = t(7850),
         s = t(64753),
         o = t(8527),
         r = t(55672),
-        c = t(78395),
-        a = t(21869),
+        a = t(78395),
+        c = t(21869),
         l = t(62151);
       function d(e) {
         const { closeModal: n } = e;
-        return (0, i.jsx)(c.o0, {
+        return (0, i.jsx)(a.o0, {
           strTitle: l.F5.Localize("#LoginRedirect_Dialog_Title"),
           strDescription: l.F5.Localize("#LoginRedirect_Dialog_Description"),
           onCancel: n,
           strOKButtonText: r.Z.Localize("#Button_OK"),
           onOK: () => {
-            u(), n();
+            h(), n();
           },
         });
       }
-      function h() {
+      function p() {
         const [e, n, t] = (0, s.uD)();
         return {
-          elDialogElement: (0, i.jsx)(a.E, {
+          elDialogElement: (0, i.jsx)(c.E, {
             active: e,
             children: (0, i.jsx)(d, { closeModal: t }),
           }),
           fnShowLogonDialog: n,
         };
       }
-      function u() {
+      function h() {
         const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
       }
@@ -127,7 +435,7 @@
     },
     62381: (e, n, t) => {
       "use strict";
-      t.d(n, { W: () => c });
+      t.d(n, { W: () => a });
       var i = t(37085),
         s = t(30470);
       let o = { success: !0, result: i.R };
@@ -245,7 +553,7 @@
           );
         }
       }
-      let c = new (class {
+      let a = new (class {
         m_connection = new r();
         FailureResult(e = i.zi) {
           let n = { success: !1, result: e };
@@ -331,26 +639,26 @@
             .catch(() => this.FailureResult());
         }
       })();
-      window.ClientConnectionAPI = c;
+      window.ClientConnectionAPI = a;
     },
     51706: (e, n, t) => {
       "use strict";
       t.d(n, {
         mt: () => l,
-        o0: () => h.o0,
-        eV: () => u.eV,
-        KG: () => h.KG,
-        Ee: () => h.Ee,
-        x_: () => c.x_,
+        o0: () => p.o0,
+        eV: () => h.eV,
+        KG: () => p.KG,
+        Ee: () => p.Ee,
+        x_: () => a.x_,
         of: () => d,
-        pY: () => h.pY,
+        pY: () => p.pY,
         EN: () => r.E,
       });
       var i = t(7850),
         s = t(90626),
         o = t(56283),
         r = t(21869),
-        c = t(2654);
+        a = t(2654);
       t(72739),
         t(48902),
         t(60155),
@@ -360,7 +668,7 @@
         t(13871),
         t(78327),
         t(28460);
-      function a(e) {
+      function c(e) {
         const { labelledBy: n } = e || {},
           [t, i] = s.useState(void 0);
         return {
@@ -375,21 +683,21 @@
             className: s,
             modalClassName: l,
             children: d,
-            ...h
+            ...p
           } = e,
-          { headerId: u, context: p } = a({ labelledBy: e["aria-labelledby"] });
+          { headerId: h, context: u } = c({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(o.t6.Provider, {
-          value: p,
+          value: u,
           children: (0, i.jsx)(r.E, {
             active: n,
-            children: (0, i.jsx)(c.x_, {
+            children: (0, i.jsx)(a.x_, {
               onEscKeypress: t,
               className: l,
               children: (0, i.jsx)(o.UC, {
                 role: "dialog",
-                "aria-labelledby": u,
+                "aria-labelledby": h,
                 className: s,
-                ...h,
+                ...p,
                 children: d,
               }),
             }),
@@ -404,15 +712,15 @@
         });
       }
       t(81194);
-      var h = t(78395),
-        u = t(10411);
+      var p = t(78395),
+        h = t(10411);
       t(76222);
     },
     71009: (e, n, t) => {
       "use strict";
       t.r(n),
         t.d(n, {
-          OpenInDesktopClient: () => p,
+          OpenInDesktopClient: () => u,
           default: () => _,
           useOpenWebInSteamClient: () => m,
         });
@@ -420,13 +728,13 @@
         s = t(37085),
         o = t(90626),
         r = t(30470),
-        c = t(84811),
-        a = t(62381),
+        a = t(84811),
+        c = t(62381),
         l = t(97824),
         d = t(78327),
-        h = t(2627),
-        u = t(61859);
-      const p = (0, c.Nr)(function (e) {
+        p = t(2627),
+        h = t(61859);
+      const u = (0, a.Nr)(function (e) {
         const { fnOpenInSteamClient: n } = m();
         return (0, i.jsx)("div", {
           className: l.OpenInBannerContainer,
@@ -438,7 +746,7 @@
                 children: (0, i.jsx)("div", {
                   onClick: n,
                   className: l.BannerButton,
-                  children: (0, u.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
               }),
               (0, i.jsx)("div", {
@@ -447,12 +755,12 @@
                   className: l.BannerTitle,
                   children: [
                     (0, i.jsx)("b", {
-                      children: (0, u.we)(
+                      children: (0, h.we)(
                         "#OpenInDesktopAppBanner_NotSignedIn",
                       ),
                     }),
                     (0, i.jsx)("br", {}),
-                    (0, u.we)("#OpenInDesktopAppBanner_Body"),
+                    (0, h.we)("#OpenInDesktopAppBanner_Body"),
                   ],
                 }),
               }),
@@ -466,71 +774,71 @@
           r.TS.IN_CLIENT ||
             r.TS.IN_MOBILE ||
             r.TS.IN_MOBILE_WEBVIEW ||
-            a.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
+            c.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
               n(e ? s.R : s.zi);
             });
         }, []);
         const t = o.useCallback(() => {
           let n = `${(0, d.yl)()}//openurl/`;
-          const t = (0, h.VY)("browserid");
+          const t = (0, p.VY)("browserid");
           if (t) {
             const e = new URL(window.location.href),
               i = new URLSearchParams(e.search);
             i.set("utm_bid", t),
               (n += e.origin + e.pathname + "?" + i.toString() + e.hash);
           } else n += window.location.href;
-          e == s.R ? a.W.OpenSteamURL(n) : (window.location.href = n);
+          e == s.R ? c.W.OpenSteamURL(n) : (window.location.href = n);
         }, [e]);
         return { eClientConnectedState: e, fnOpenInSteamClient: t };
       }
-      const _ = p;
+      const _ = u;
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => k, default: () => w });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => I, default: () => z });
       var i = t(7850),
         s = t(53965),
         o = t(83392),
         r = t(20187),
-        c = t(28491),
-        a = t(37085),
+        a = t(28491),
+        c = t(37085),
         l = t(62151),
         d = t(84547),
-        h = t(55672),
-        u = t(84811),
-        p = t(51706),
+        p = t(55672),
+        h = t(84811),
+        u = t(51706),
         m = t(71009),
         _ = t(32754),
-        C = t(61859),
+        S = t(61859),
         b = t(84933),
-        g = t(30470),
-        S = t(11131),
-        f = t.n(S),
-        I = t(90626),
-        O = t(92724);
-      const k = (0, u.Nr)(function (e) {
+        C = t(30470),
+        g = t(11131),
+        x = t.n(g),
+        f = t(90626),
+        v = t(92724);
+      const I = (0, h.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
             m.useOpenWebInSteamClient)(),
-            u = t == a.R,
-            [S, k, w] = (0, b.uD)();
+            h = t == c.R,
+            [g, I, z] = (0, b.uD)();
           return (
-            (0, I.use)((0, O.u)()),
+            (0, f.use)((0, v.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(_.Gq, {
-                  toolTipContent: h.Z.Localize("#AddToWishlist_ttip"),
+                  toolTipContent: p.Z.Localize("#AddToWishlist_ttip"),
                   children: (0, i.jsx)(s.$, {
-                    onClick: k,
-                    children: (0, C.we)("#AddToYourWishlist"),
+                    onClick: I,
+                    children: (0, S.we)("#AddToYourWishlist"),
                   }),
                 }),
-                (0, i.jsx)(p.EN, {
-                  active: S,
-                  children: (0, i.jsxs)(p.o0, {
-                    strTitle: (0, C.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                    className: f().WishlistModalOverride,
+                (0, i.jsx)(u.EN, {
+                  active: g,
+                  children: (0, i.jsxs)(u.o0, {
+                    strTitle: (0, S.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    className: x().WishlistModalOverride,
                     strDescription: l.F5.Localize("#Wishlist_NotSignedIn"),
-                    closeModal: w,
+                    closeModal: z,
                     bAlertDialog: !0,
                     children: [
                       (0, i.jsxs)(o.s, {
@@ -541,24 +849,24 @@
                         children: [
                           (0, i.jsx)(s.$, {
                             onClick: n,
-                            children: (0, C.we)(
+                            children: (0, S.we)(
                               "#OpenInDesktopAppBanner_OpenAppButton",
                             ),
                           }),
                           (0, i.jsx)(s.$, {
                             color: "dull",
                             onClick: d.l,
-                            children: h.Z.Localize("#Login_SignIn"),
+                            children: p.Z.Localize("#Login_SignIn"),
                           }),
                         ],
                       }),
-                      !u &&
+                      !h &&
                         (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(r.EY, {
-                            children: (0, C.oW)(
+                            children: (0, S.oW)(
                               "#GotSteam_NeedSteam",
-                              (0, i.jsx)(c.Y, {
-                                href: `${g.TS.STORE_BASE_URL}about`,
+                              (0, i.jsx)(a.Y, {
+                                href: `${C.TS.STORE_BASE_URL}about`,
                               }),
                             ),
                           }),
@@ -570,7 +878,7 @@
             })
           );
         }),
-        w = k;
+        z = I;
     },
   },
 ]);

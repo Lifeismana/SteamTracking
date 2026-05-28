@@ -193,6 +193,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -210,51 +211,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _, _) {
-        if (!_)
-          return {
-            nSuggestedPriceInCents: null,
-            nGuidelinesLevel: null,
-          };
-        let _ = null;
-        for (let _ of _.GetUSDPricePointsInCents())
-          if (_ >= _) {
-            _ = _;
-            break;
-          }
-        const _ = _ && _ < _._;
-        if ((_ == _._ && !_) || !_)
-          return {
-            nSuggestedPriceInCents: null,
-            nGuidelinesLevel: null,
-          };
-        const _ = _.GetRecommendPrice(_, _, _, _),
-          _ = _.GetRecommendPrice(_, _._, void 0, _);
-        if (
-          ((0, _._)(
-            _,
-            `Missing requested currency guide for  ${_}/${_}/${_}/${_}`,
-          ),
-          (0, _._)(_, `Missing usd guide for  ${_}/${_}/${_}`),
-          !_ || !_)
-        )
-          return {
-            nSuggestedPriceInCents: null,
-            nGuidelinesLevel: null,
-          };
-        let _ = _.price;
-        const _ = _.price;
-        if (_ != _) {
-          const _ = _ / _;
-          (_ *= _), (_ = Math.ceil(_ * _));
-        }
-        return {
-          nSuggestedPriceInCents: _,
-          nGuidelinesLevel: _,
-        };
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -897,13 +854,8 @@
                   for (const _ of _.Get().m_rgKnownPriceKeys) {
                     if ("USD" == _) continue;
                     const _ = _.Get().GetPrice(_, "USD"),
-                      { nSuggestedPriceInCents: _, nGuidelinesLevel: _ } = _(
-                        _,
-                        _,
-                        _,
-                        (0, _._)(_),
-                        (0, _._)(_),
-                      );
+                      { nSuggestedPriceInCents: _, nGuidelinesLevel: _ } = (0,
+                      _._)(_, _, _, (0, _._)(_), (0, _._)(_));
                     null !== _ &&
                       _.Get().GetPrice(_, _) != _ &&
                       (_.push(_), _.push(_));
@@ -925,7 +877,7 @@
           _ = (0, _._)();
         (0, _._)(_.Get().GetPriceGridCellCallbackList(_, "USD"), _);
         const _ = _.Get().GetPrice(_, "USD"),
-          { nSuggestedPriceInCents: _, nGuidelinesLevel: _ } = _(
+          { nSuggestedPriceInCents: _, nGuidelinesLevel: _ } = (0, _._)(
             _,
             _,
             _,
@@ -936,9 +888,7 @@
           _ = _.Get().GetPublishedPrice(_, _),
           _ = _.Get().GetProposedPrice(_, _),
           { nMinPriceInCents: _, nMaxPriceInCents: _ } = _(_, _),
-          _ = _.Get().GetMinimumDiscountPrice(_),
-          _ = _ ? Math.floor((100 * (_ - _)) / _) : 90,
-          _ = _ < Math.min(90, Math.floor((100 * (_ - 50)) / _)) ? _ : null;
+          _ = _(_, _, _);
         return _.useMemo(
           () => ({
             nPriceInCents: _,
@@ -952,6 +902,15 @@
           }),
           [_, _, _, _, _, _, _, _],
         );
+      }
+      const _ = 90,
+        _ = 10;
+      function _(_, _, _, _) {
+        const _ = _.Get().GetMinimumDiscountPrice(_),
+          _ = _ ? Math.floor((100 * (_ - _)) / _) : _,
+          _ = Math.min(_, Math.floor((100 * (_ - 50)) / _));
+        if (_) return _ < _ || _ < _ ? null : Math.max(Math.min(_, _), 0);
+        return _ < _ ? _ : null;
       }
       function _(_) {
         let [_, _] = _.useState(() => _.Get().BAnyPackagePriceBelowMin(_)),
@@ -1539,6 +1498,58 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _, _) {
+        if (!_)
+          return {
+            nSuggestedPriceInCents: null,
+            nGuidelinesLevel: null,
+          };
+        let _ = null;
+        for (let _ of _.GetUSDPricePointsInCents())
+          if (_ >= _) {
+            _ = _;
+            break;
+          }
+        const _ = _ && _ < _._;
+        if ((_ == _._ && !_) || !_)
+          return {
+            nSuggestedPriceInCents: null,
+            nGuidelinesLevel: null,
+          };
+        const _ = _.GetRecommendPrice(_, _, _, _),
+          _ = _.GetRecommendPrice(_, _._, void 0, _);
+        if (
+          ((0, _._)(
+            _,
+            `Missing requested currency guide for  ${_}/${_}/${_}/${_}`,
+          ),
+          (0, _._)(_, `Missing usd guide for  ${_}/${_}/${_}`),
+          !_ || !_)
+        )
+          return {
+            nSuggestedPriceInCents: null,
+            nGuidelinesLevel: null,
+          };
+        let _ = _.price;
+        const _ = _.price;
+        if (_ != _) {
+          const _ = _ / _;
+          (_ *= _), (_ = Math.ceil(_ * _));
+        }
+        return {
+          nSuggestedPriceInCents: _,
+          nGuidelinesLevel: _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -1725,6 +1736,9 @@
       const _ = 1,
         _ = 2,
         _ = 3;
+      _.Message;
+      _.Message;
+      _.Message;
       _.Message;
       _.Message;
       _.Message;

@@ -36,73 +36,67 @@
     },
     92598: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => v });
+      n.r(t), n.d(t, { default: () => b });
       var r = n(7850),
         a = n(90626),
-        i = n(61859),
-        s = n(84202),
-        o = n.n(s),
+        s = n(61859),
+        i = n(84202),
+        o = n.n(i),
         l = n(45699),
         c = n(78327),
-        d = n(12155),
-        u = n(68255),
+        u = n(12155),
+        d = n(68255),
         m = n(41735),
         p = n.n(m),
         _ = n(55263);
       var h = n(52038),
         S = n(16021),
-        f = n(95034),
-        H = n(92757),
-        C = n(76217),
-        b = n(12447);
-      function v() {
+        H = n(95034),
+        f = n(92757),
+        C = n(76217);
+      function b() {
         const e = (0, a.useRef)(void 0);
         return (
           (0, a.useEffect)(() => {
             e.current && e.current.TakeFocus();
           }, []),
-          (0, r.jsx)(b.u, {
-            navID: "CommunityHomeHeader",
-            children: (0, r.jsxs)(C.Z, {
-              navRef: e,
-              className: o().CommunityHomeHeader,
-              children: [
-                (0, r.jsxs)("div", {
-                  className: o().CommunityHomeHeaderTitleSection,
-                  children: [
-                    (0, r.jsxs)("div", {
-                      children: [
-                        (0, r.jsx)("div", {
-                          className: o().CommunityHomeHeaderTitle,
-                          children: (0, i.we)("#Community_Home_Header_Title"),
-                        }),
-                        (0, r.jsx)("div", {
-                          className: o().CommunityHomeHeaderSubtitle,
-                          children: (0, i.we)(
-                            "#Community_Home_Header_Subtitle",
-                          ),
-                        }),
-                      ],
-                    }),
-                    (0, r.jsx)(l.Ii, {
-                      className: o().AddFriendBtn,
-                      href: `${c.TS.COMMUNITY_BASE_URL}search/users/`,
-                      children: (0, i.we)(
-                        "#Community_Home_Header_AddFriend_Button",
-                      ),
-                    }),
-                  ],
-                }),
-                (0, r.jsx)(y, {}),
-                (0, r.jsx)(A, {}),
-              ],
-            }),
+          (0, r.jsxs)(C.Z, {
+            navRef: e,
+            className: o().CommunityHomeHeader,
+            children: [
+              (0, r.jsxs)("div", {
+                className: o().CommunityHomeHeaderTitleSection,
+                children: [
+                  (0, r.jsxs)("div", {
+                    children: [
+                      (0, r.jsx)("div", {
+                        className: o().CommunityHomeHeaderTitle,
+                        children: (0, s.we)("#Community_Home_Header_Title"),
+                      }),
+                      (0, r.jsx)("div", {
+                        className: o().CommunityHomeHeaderSubtitle,
+                        children: (0, s.we)("#Community_Home_Header_Subtitle"),
+                      }),
+                    ],
+                  }),
+                  (0, r.jsx)(l.Ii, {
+                    className: o().AddFriendBtn,
+                    href: `${c.TS.COMMUNITY_BASE_URL}search/users/`,
+                    children: (0, s.we)(
+                      "#Community_Home_Header_AddFriend_Button",
+                    ),
+                  }),
+                ],
+              }),
+              (0, r.jsx)(v, {}),
+              (0, r.jsx)(j, {}),
+            ],
           })
         );
       }
-      function y() {
+      function v() {
         const [e, t] = (0, a.useState)(""),
-          [n, s] = (0, a.useState)([]),
+          [n, i] = (0, a.useState)([]),
           [m, h] = (0, a.useState)(!1),
           S = (function () {
             const e = (0, a.useMemo)(
@@ -131,16 +125,16 @@
             (0, r.jsxs)(C.Z, {
               className: o().AppHubsCtn,
               children: [
-                (0, r.jsx)(T, {
+                (0, r.jsx)(y, {
                   appShortcuts: S.data.personalAppIds,
-                  sectionTitle: (0, i.we)(
+                  sectionTitle: (0, s.we)(
                     "#Community_Home_Header_GameHubs_ForYou",
                   ),
                   withDivider: S.data.popularAppIds.length > 0,
                 }),
-                (0, r.jsx)(T, {
+                (0, r.jsx)(y, {
                   appShortcuts: S.data.popularAppIds,
-                  sectionTitle: (0, i.we)(
+                  sectionTitle: (0, s.we)(
                     "#Community_Home_Header_GameHubs_Popular",
                   ),
                 }),
@@ -158,25 +152,25 @@
                   children: [
                     (0, r.jsx)("div", {
                       className: o().InputContainer,
-                      children: (0, r.jsx)(u.pd, {
+                      children: (0, r.jsx)(d.pd, {
                         onChange: async (e) => {
                           t(e.target.value);
                           const n = await (async function (e) {
                             const t = `${c.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
                             return (await p().get(t)).data;
                           })(e.target.value);
-                          s(n);
+                          i(n);
                         },
                         value: e,
                         className: o().Input,
-                        placeholder: (0, i.we)(
+                        placeholder: (0, s.we)(
                           "#Community_Home_Header_FindGame_Placeholder",
                         ),
                       }),
                     }),
                     (0, r.jsx)("div", {
                       className: o().SearchIcon,
-                      children: (0, r.jsx)(d.eSy, {}),
+                      children: (0, r.jsx)(u.eSy, {}),
                     }),
                   ],
                 }),
@@ -200,7 +194,7 @@
           ],
         });
       }
-      function T(e) {
+      function y(e) {
         const { appShortcuts: t, sectionTitle: n, withDivider: a } = e;
         return t && t.length
           ? (0, r.jsxs)("div", {
@@ -213,13 +207,13 @@
                     o().AppHubShortcutLinks,
                     a ? o().Divider : null,
                   ),
-                  children: t.map((e, t) => (0, r.jsx)(j, { appId: e }, t)),
+                  children: t.map((e, t) => (0, r.jsx)(w, { appId: e }, t)),
                 }),
               ],
             })
           : null;
       }
-      function j(e) {
+      function w(e) {
         const t = S.A.Get().GetApp(e.appId);
         return t
           ? (0, r.jsx)(l.Ii, {
@@ -232,34 +226,34 @@
             })
           : null;
       }
-      const w = "subsection",
-        x = "browsefilter";
-      function A() {
-        const e = (0, H.W6)(),
-          t = (0, f.f3)(e, w),
-          n = (0, f.f3)(e, x);
+      const A = "subsection",
+        T = "browsefilter";
+      function j() {
+        const e = (0, f.W6)(),
+          t = (0, H.f3)(e, A),
+          n = (0, H.f3)(e, T);
         return (0, r.jsxs)("div", {
           children: [
+            (0, r.jsx)(x, { activeTab: t, activeSort: n }),
             (0, r.jsx)(g, { activeTab: t, activeSort: n }),
-            (0, r.jsx)(I, { activeTab: t, activeSort: n }),
           ],
         });
       }
-      function g(e) {
+      function x(e) {
         const { activeTab: t, activeSort: n } = e,
-          s = a.useRef(void 0);
+          i = a.useRef(void 0);
         a.useEffect(() => {
           const e = document.getElementById(t);
-          if (e && (null == s ? void 0 : s.current)) {
+          if (e && (null == i ? void 0 : i.current)) {
             const t = e.offsetLeft + e.clientWidth;
             t > window.innerWidth &&
-              s.current.scrollBy(t - window.innerWidth, 0);
+              i.current.scrollBy(t - window.innerWidth, 0);
           }
-        }, [null == s ? void 0 : s.current]);
+        }, [null == i ? void 0 : i.current]);
         return (0, r.jsx)(C.Z, {
           "flow-children": "row",
           className: o().TabContainer,
-          ref: s,
+          ref: i,
           children: [
             { label: "#Community_Home_Header_Filter_All", id: "" },
             {
@@ -277,24 +271,24 @@
             { label: "#Community_Home_Header_Filter_Guides", id: "guides" },
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
           ].map((e, a) => {
-            const s = t ? t === e.id : 0 === a,
-              d = e.id ? `${w}=${e.id}` : "",
-              u = n ? `${x}=${n}` : "",
-              m = `${c.TS.COMMUNITY_BASE_URL}${u || d ? "?" : ""}${u}${d ? "&" : ""}${d}`;
+            const i = t ? t === e.id : 0 === a,
+              u = e.id ? `${A}=${e.id}` : "",
+              d = n ? `${T}=${n}` : "",
+              m = `${c.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
             return (0, r.jsx)(
               l.Ii,
               {
                 id: e.id,
                 href: m,
-                className: (0, h.A)(o().Tab, s ? o().ActiveTab : null),
-                children: (0, i.we)(e.label),
+                className: (0, h.A)(o().Tab, i ? o().ActiveTab : null),
+                children: (0, s.we)(e.label),
               },
               e.id,
             );
           }),
         });
       }
-      function I(e) {
+      function g(e) {
         const { activeTab: t, activeSort: n } = e;
         return (0, r.jsxs)(C.Z, {
           "flow-children": "row",
@@ -302,7 +296,7 @@
           children: [
             (0, r.jsx)("div", {
               className: o().SortIcon,
-              children: (0, r.jsx)(d.LPs, {}),
+              children: (0, r.jsx)(u.LPs, {}),
             }),
             [
               { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -311,16 +305,16 @@
                 id: "mostrecent",
               },
             ].map((e, a) => {
-              const s = n ? n === e.id : 0 === a,
-                d = t ? `${w}=${t}` : "",
-                u = e.id ? `${x}=${e.id}` : "",
-                m = `${c.TS.COMMUNITY_BASE_URL}${u || d ? "?" : ""}${u}${d ? "&" : ""}${d}`;
+              const i = n ? n === e.id : 0 === a,
+                u = t ? `${A}=${t}` : "",
+                d = e.id ? `${T}=${e.id}` : "",
+                m = `${c.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
               return (0, r.jsx)(
                 l.Ii,
                 {
                   href: m,
-                  className: (0, h.A)(o().Sort, s ? o().ActiveSort : null),
-                  children: (0, i.we)(e.label),
+                  className: (0, h.A)(o().Sort, i ? o().ActiveSort : null),
+                  children: (0, s.we)(e.label),
                 },
                 e.id,
               );
@@ -329,39 +323,12 @@
         });
       }
     },
-    12447: (e, t, n) => {
-      "use strict";
-      n.d(t, { u: () => d });
-      var r = n(7850),
-        a = n(8871),
-        i = n(90626),
-        s = n(78327),
-        o = n(85585),
-        l = n(7445),
-        c = n(87133);
-      const d = i.forwardRef(function (e, t) {
-        const { children: n, navTreeRef: d, ...u } = e,
-          m = i.useRef(void 0),
-          p = (0, a.Ue)(m, d),
-          _ = (0, s.Qn)(),
-          h = (0, c.AO)("__nav_tree_root");
-        return (0, r.jsx)(o.B2, {
-          ...u,
-          navTreeRef: p,
-          ref: t,
-          parentEmbeddedNavTree: h,
-          disabledRoot: !_,
-          historyMode: "navigationapi",
-          children: (0, r.jsx)(l.q, { disableFocusRing: !_, children: n }),
-        });
-      });
-    },
     95034: (e, t, n) => {
       "use strict";
-      n.d(t, { Bm: () => s, QD: () => o, f3: () => i, ip: () => l });
+      n.d(t, { Bm: () => i, QD: () => o, f3: () => s, ip: () => l });
       var r = n(90626),
         a = n(92757);
-      function i(e, t) {
+      function s(e, t) {
         let n;
         if ("string" == typeof e) n = e;
         else if ("location" in e) n = e.location.search;
@@ -375,7 +342,7 @@
           return e[e.length - 1];
         }
       }
-      function s(e, t, n, r = !1) {
+      function i(e, t, n, r = !1) {
         const a = new URLSearchParams(e.location.search.substring(1));
         if (null != n && null != n) {
           if (a.get(t) == n) return;
@@ -392,7 +359,7 @@
         const n = (0, a.W6)(),
           o = (0, a.zy)(),
           l = (0, r.useMemo)(() => {
-            const n = i(o.search, e);
+            const n = s(o.search, e);
             return null != n && null != n
               ? null != t && null != t
                 ? "boolean" == typeof t
@@ -403,7 +370,7 @@
           }, [o.search, e, t]),
           c = (0, r.useCallback)(
             (t, r = !1) => {
-              s(n, e, null != t && null != t ? String(t) : null, r);
+              i(n, e, null != t && null != t ? String(t) : null, r);
             },
             [n, e],
           );

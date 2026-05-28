@@ -1336,12 +1336,520 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { strURL: _ } = _;
+        return _
+          ? (0, _.jsx)("div", {
+              className: _.MenuBackgroundReflection,
+              children: (0, _.jsx)("img", {
+                alt: "",
+                src: _,
+              }),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { event: _, subMenu: _, language: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(null);
+        return (0, _.jsx)(_._, {
+          className: (0, _._)({
+            [_().SubMenuOuterCtn]: !0,
+            [_().isOpen]: _,
+          }),
+          onMouseEnter: () => {
+            _.current && window.clearTimeout(_.current), _(!0);
+          },
+          onMouseLeave: () => {
+            _.current && window.clearTimeout(_.current),
+              (_.current = window.setTimeout(() => _(!1), 180));
+          },
+          children: (0, _.jsx)("div", {
+            className: _().SubMenuCtn,
+            style: {
+              ...(0, _._)(_, _, _),
+            },
+            children: _.menu_items.map((_) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  className: _().SubMenuItemCtn,
+                  children: (0, _.jsx)(_, {
+                    language: _,
+                    mainItem: _,
+                    subMenu: _,
+                    clanAccountID: _.clanSteamID.GetAccountID(),
+                  }),
+                },
+                "submenuitem" + _.unique_id,
+              ),
+            ),
+          }),
+        });
+      }
+      function _(_) {
+        const { language: _, mainItem: _, subMenu: _, clanAccountID: _ } = _,
+          [_, _] = (0, _.useState)(!1),
+          [_, _, _, _] = (0, _._)(() => [
+            _.sub_menu_url,
+            _(_.sub_menu_url, _),
+            _.localized_sub_menu_name?.[_] ||
+              _.localized_sub_menu_name?.[_.Bhc] ||
+              "unknown",
+            _.sub_menu_icon?.localized_media?.[_]?.image ||
+              _.sub_menu_icon?.localized_media?.[_.Bhc]?.image ||
+              void 0,
+          ]);
+        let _ = _.label_color || "#DBDFE2";
+        return (
+          _
+            ? (_ = _.selected_label_color || _)
+            : _ && (_ = _.hover_label_color || _),
+          (0, _.jsxs)(_._, {
+            className: _().SubMenuItemText,
+            style: {
+              color: _,
+            },
+            href: _,
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+            children: [
+              (0, _.jsx)("div", {
+                className: _().TextLabel,
+                children: _,
+              }),
+              Boolean(_) &&
+                (0, _.jsx)("span", {
+                  className: _().ImageWrapper,
+                  children: (0, _.jsx)("img", {
+                    src: (0, _._)(_, _),
+                    alt: _,
+                    className: _().SubMenuImage,
+                  }),
+                }),
+            ],
+          })
+        );
+      }
+      function _(_, _) {
+        try {
+          const _ = window.location.pathname.toLowerCase(),
+            _ = new URL(_ || ""),
+            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
+          return _.pathname.toLocaleLowerCase() === _ || _ === _;
+        } catch {
+          return !1;
+        }
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, bIsPreview: _ } = _;
+        let _ = _.jsondata.sale_background_video_webm,
+          _ = _.jsondata.sale_background_video_mp4;
+        return Boolean(_ || _)
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("video", {
+                loop: !0,
+                muted: !0,
+                autoPlay: !0,
+                playsInline: !0,
+                className: (0, _._)(
+                  _().SaleBackground,
+                  _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
+                  "SaleBackground",
+                  _().fullscreen_bg_video,
+                ),
+                style: {
+                  backgroundColor: _
+                    ? _.jsondata.sale_background_color
+                    : void 0,
+                },
+                children: [
+                  _ &&
+                    (0, _.jsx)("source", {
+                      src: _,
+                      type: "video/webm",
+                    }),
+                  _ &&
+                    !_._.IN_CLIENT &&
+                    (0, _.jsx)("source", {
+                      src: _,
+                      type: "video/mp4",
+                    }),
+                ],
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const { event: _, language: _, children: _, bIsPreview: _ } = _,
+          _ = _.useRef(null),
+          _ = (0, _._)(_, "sale_header", _),
+          [_] = (0, _._)(() => [_.jsondata.sale_sub_menu]);
+        _.useEffect(() => {
+          if (!_) return;
+          const _ = new Image();
+          (_.onload = () => {
+            const _ = (100 * _.width) / 950 + "%";
+            _.current && _.current.style.setProperty("--background-scale", _);
+          }),
+            (_.src = _);
+        }, [_]);
+        const _ = _.jsondata.sale_sections?.some(
+            (_) => "contenthubmaincarousel" === _.section_type,
+          ),
+          _ =
+            _.jsondata.item_source_type === _._.k_EContentHub &&
+            ((_.jsondata.sale_vanity_id &&
+              _.jsondata.sale_vanity_id.includes("contenthubsalepage_")) ||
+              _),
+          _ = _ ? `url(${_})` : "none";
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _
+              ? (0, _.jsx)(_, {
+                  event: _,
+                  language: _,
+                  bIsPreview: _,
+                  subMenu: _,
+                })
+              : (0, _.jsx)(_, {
+                  strURL: _,
+                }),
+            (0, _.jsx)("div", {
+              className: (0, _._)({
+                SaleBackgroundCtn: !0,
+                ContentHubSalePage: _,
+              }),
+              children: (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
+                  "SaleCustomCSS",
+                  _().SaleBackground,
+                  "SaleBackground",
+                ),
+                style: {
+                  display: "flex",
+                  position: "relative",
+                  flexDirection: "column",
+                  backgroundColor: _.jsondata.sale_background_color,
+                },
+                ref: _,
+                children: [
+                  _ && "coverBlur" == _.jsondata.sale_background_repeat
+                    ? (0, _.jsx)("img", {
+                        className: (0, _._)(
+                          _().SalePageBackground,
+                          _().BackgroundImage,
+                          _().Blur,
+                        ),
+                        src: _,
+                        alt: "Header",
+                      })
+                    : (0, _.jsx)("div", {
+                        className: (0, _._)(
+                          _().SalePageBackground,
+                          _().BackgroundImage,
+                        ),
+                        style: {
+                          backgroundImage: _,
+                          backgroundRepeat: _.jsondata.sale_background_repeat,
+                        },
+                      }),
+                  (0, _.jsx)(_, {
+                    event: _,
+                    bIsPreview: _,
+                  }),
+                  (0, _.jsx)(_.Fragment, {
+                    children: _,
+                  }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _, _) {
+        const _ = (0, _._)("partnereventpermissions", "application_config");
+        if (
+          (function (_) {
+            const _ = _;
+            if (
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            )
+              return (
+                "number" == typeof _[0].clanid && "number" == typeof _[0].appid
+              );
+            return !1;
+          })(_)
+        ) {
+          const _ = _.find((_) => (_.clanid = _));
+          if (_) {
+            let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+            return _;
+          }
+        }
+        if (_._.logged_in) {
+          const _ = _._.InitFromClanID(_);
+          let _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
+          "partnerweb" == (0, _._)()
+            ? (_ = `${_._.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
+            : "store" == (0, _._)() &&
+              (_ = `${_._.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
+          const _ = await fetch(_, {
+            method: "GET",
+            credentials: "include",
+          });
+          if (200 == _.status) {
+            const _ = await _.json();
+            if (_) {
+              let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+              return _;
+            }
+          }
+        }
+        return (function (_, _) {
+          return {
+            clanid: _,
+            appid: _,
+            can_edit: !1,
+            owns_app: !1,
+            event_followed: [],
+            event_followed_flags: [],
+            event_ignored: [],
+            follows_app: !1,
+            valve_admin: !1,
+            support_user: !1,
+            limited_user: !0,
+          };
+        })(_, void 0);
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        (0, _._)(), (0, _._)();
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => await _(_),
+              enabled: !!_,
+            };
+          })(_),
+        );
+      }
+      function _(_) {
+        return ["useEventUserPermissions", _._.accountid, _];
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { eventModel: _ } = _,
+          { data: _ } = _(_.clanSteamID.GetAccountID());
+        if (!_ || (!_.can_edit && !_.support_user) || "community" == (0, _._)())
+          return;
+        const _ = _.GetAllTags(),
+          _ = [];
+        return (
+          _.includes("hide_store") &&
+            _.push(_._.Localize("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          _.includes("mod_hide_store") &&
+            _.support_user &&
+            _.push(_._.Localize("#Sale_SaleEventIsHidden_Reason_Mod")),
+          !_.BIsVisibleEvent() &&
+            _.includes("contenthub") &&
+            _.push(_._.Localize("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          _.BIsVisibleEvent() && 0 == _.length
+            ? void 0
+            : (0, _.jsx)("div", {
+                className: _().SalePageHiddenWarning,
+                children: (0, _.jsxs)("div", {
+                  children: [
+                    !_.BIsVisibleEvent() &&
+                      (0, _.jsx)("div", {
+                        className: _().WarningText,
+                        children: _._.Localize("#Sale_SaleEventIsHidden"),
+                      }),
+                    _.length > 0 &&
+                      (0, _.jsxs)("div", {
+                        className: _().WarningText,
+                        children: [
+                          _._.LocalizePlural(
+                            "#Sale_SaleEventIsHidden_Reason",
+                            _.length,
+                          ),
+                          (0, _.jsx)("ul", {
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                "li",
+                                {
+                                  children: _,
+                                },
+                                _,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+              })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { eventModel: _, language: _ } = _,
+          [_, _] = (0, _._)(() => [
+            _.jsondata.sale_logo_url,
+            _._.GetWithFallback(_.jsondata.localized_sale_logo, _),
+          ]);
+        return _ && _?.length > 0
+          ? _
+            ? (0, _.jsx)("a", {
+                className: _().SalePageLogoCtn,
+                href: _._.STORE_BASE_URL + _,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              })
+            : (0, _.jsx)("div", {
+                className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              })
+          : null;
+      }
+      function _(_) {
+        const { eventModel: _, language: _ } = _,
+          _ = (0, _._)(_, "sale_logo", _);
+        return (0, _.jsx)("img", {
+          src: _,
+          alt: "logo",
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgPresenters: _ } = _;
+        if (!_ || 0 == _.length) return null;
+        const _ = (0, _.sfN)(_._.LANGUAGE);
+        return 1 == _.length
+          ? (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().PresenterDisclaimer,
+                "PresenterDisclaimer",
+              ),
+              children: _._.LocalizeReact(
+                "#SalePresented_By",
+                (0, _.jsx)(_, {
+                  presentor: _[0],
+                  lang: _,
+                }),
+              ),
+            })
+          : (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().PresenterDisclaimer,
+                "PresenterDisclaimer",
+              ),
+              children: _._.LocalizeReact(
+                "#SalePresented_By_Multi",
+                _.slice(0, _.length - 1).map((_, _) =>
+                  (0, _.jsxs)(
+                    _.Fragment,
+                    {
+                      children: [
+                        (0, _.jsx)(_, {
+                          presentor: _,
+                          lang: _,
+                        }),
+                        Boolean(_.length > 2) && ", ",
+                      ],
+                    },
+                    _.url,
+                  ),
+                ),
+                (0, _.jsx)(_, {
+                  presentor: _[_.length - 1],
+                  lang: _,
+                }),
+              ),
+            });
+      }
+      function _(_) {
+        const { presentor: _, lang: _ } = _,
+          _ = (0, _._)(_.url);
+        return (0, _.jsx)(_._, {
+          href: _,
+          bUseLinkFilter: !0,
+          className: _().PresenterLabel,
+          children: _._.GetWithFallback(_.localized_presenter_name, _),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, broadcastEmbedContext: _ } = _,
+          _ = Boolean(_?.jsondata?.broadcast_display_wide_player),
+          _ = Boolean(_?.jsondata?.broadcast_dispaly_wide_player_allow_chat);
+        return (0, _.jsx)(_.Fragment, {
+          children:
+            Boolean(
+              _.BEventCanShowBroadcastWidget() &&
+                _.BSaleShowBroadcastAtTopOfPage(),
+            ) &&
+            (0, _.jsx)(_._, {
+              event: _,
+              broadcastEmbedContext: _,
+              bWideBroadcastDisplay: _,
+              bWideBroadcastPermitChat: _,
+            }),
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, fnOnChangeDayIndex: _, addtionalAdminButtons: _ } = _;
+        return (0, _.jsx)(_._, {
+          eventModel: _,
+          fnOnUpdateSaleDayIndex: _,
+          addtionalAdminButtons: _,
+          bSupportsSticky: !0,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1580,420 +2088,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      async function _(_, _, _) {
-        const _ = (0, _._)("partnereventpermissions", "application_config");
-        if (
-          (function (_) {
-            const _ = _;
-            if (
-              _ &&
-              Array.isArray(_) &&
-              _.length > 0 &&
-              "object" == typeof _[0]
-            )
-              return (
-                "number" == typeof _[0].clanid && "number" == typeof _[0].appid
-              );
-            return !1;
-          })(_)
-        ) {
-          const _ = _.find((_) => (_.clanid = _));
-          if (_) {
-            let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-            return _;
-          }
-        }
-        if (_._.logged_in) {
-          const _ = _._.InitFromClanID(_);
-          let _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
-          "partnerweb" == (0, _._)()
-            ? (_ = `${_._.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
-            : "store" == (0, _._)() &&
-              (_ = `${_._.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
-          const _ = await fetch(_, {
-            method: "GET",
-            credentials: "include",
-          });
-          if (200 == _.status) {
-            const _ = await _.json();
-            if (_) {
-              let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
-              return _;
-            }
-          }
-        }
-        return (function (_, _) {
-          return {
-            clanid: _,
-            appid: _,
-            can_edit: !1,
-            owns_app: !1,
-            event_followed: [],
-            event_followed_flags: [],
-            event_ignored: [],
-            follows_app: !1,
-            valve_admin: !1,
-            support_user: !1,
-            limited_user: !0,
-          };
-        })(_, void 0);
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        (0, _._)(), (0, _._)();
-        return (0, _._)(
-          (function (_) {
-            return {
-              queryKey: _(_),
-              queryFn: async () => await _(_),
-              enabled: !!_,
-            };
-          })(_),
-        );
-      }
-      function _(_) {
-        return ["useEventUserPermissions", _._.accountid, _];
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { eventModel: _ } = _,
-          { data: _ } = _(_.clanSteamID.GetAccountID());
-        if (!_ || (!_.can_edit && !_.support_user) || "community" == (0, _._)())
-          return;
-        const _ = _.GetAllTags(),
-          _ = [];
-        return (
-          _.includes("hide_store") &&
-            _.push(_._.Localize("#Sale_SaleEventIsHidden_Reason_ProductHide")),
-          _.includes("mod_hide_store") &&
-            _.support_user &&
-            _.push(_._.Localize("#Sale_SaleEventIsHidden_Reason_Mod")),
-          !_.BIsVisibleEvent() &&
-            _.includes("contenthub") &&
-            _.push(_._.Localize("#Sale_SaleEventIsHidden_ContentHub_Preview")),
-          _.BIsVisibleEvent() && 0 == _.length
-            ? void 0
-            : (0, _.jsx)("div", {
-                className: _().SalePageHiddenWarning,
-                children: (0, _.jsxs)("div", {
-                  children: [
-                    !_.BIsVisibleEvent() &&
-                      (0, _.jsx)("div", {
-                        className: _().WarningText,
-                        children: _._.Localize("#Sale_SaleEventIsHidden"),
-                      }),
-                    _.length > 0 &&
-                      (0, _.jsxs)("div", {
-                        className: _().WarningText,
-                        children: [
-                          _._.LocalizePlural(
-                            "#Sale_SaleEventIsHidden_Reason",
-                            _.length,
-                          ),
-                          (0, _.jsx)("ul", {
-                            children: _.map((_) =>
-                              (0, _.jsx)(
-                                "li",
-                                {
-                                  children: _,
-                                },
-                                _,
-                              ),
-                            ),
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-              })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { strURL: _ } = _;
-        return _
-          ? (0, _.jsx)("div", {
-              className: _.MenuBackgroundReflection,
-              children: (0, _.jsx)("img", {
-                alt: "",
-                src: _,
-              }),
-            })
-          : null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { event: _, subMenu: _, language: _ } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useRef)(null);
-        return (0, _.jsx)(_._, {
-          className: (0, _._)({
-            [_().SubMenuOuterCtn]: !0,
-            [_().isOpen]: _,
-          }),
-          onMouseEnter: () => {
-            _.current && window.clearTimeout(_.current), _(!0);
-          },
-          onMouseLeave: () => {
-            _.current && window.clearTimeout(_.current),
-              (_.current = window.setTimeout(() => _(!1), 180));
-          },
-          children: (0, _.jsx)("div", {
-            className: _().SubMenuCtn,
-            style: {
-              ...(0, _._)(_, _, _),
-            },
-            children: _.menu_items.map((_) =>
-              (0, _.jsx)(
-                "div",
-                {
-                  className: _().SubMenuItemCtn,
-                  children: (0, _.jsx)(_, {
-                    language: _,
-                    mainItem: _,
-                    subMenu: _,
-                    clanAccountID: _.clanSteamID.GetAccountID(),
-                  }),
-                },
-                "submenuitem" + _.unique_id,
-              ),
-            ),
-          }),
-        });
-      }
-      function _(_) {
-        const { language: _, mainItem: _, subMenu: _, clanAccountID: _ } = _,
-          [_, _] = (0, _.useState)(!1),
-          [_, _, _, _] = (0, _._)(() => [
-            _.sub_menu_url,
-            _(_.sub_menu_url, _),
-            _.localized_sub_menu_name?.[_] ||
-              _.localized_sub_menu_name?.[_.Bhc] ||
-              "unknown",
-            _.sub_menu_icon?.localized_media?.[_]?.image ||
-              _.sub_menu_icon?.localized_media?.[_.Bhc]?.image ||
-              void 0,
-          ]);
-        let _ = _.label_color || "#DBDFE2";
-        return (
-          _
-            ? (_ = _.selected_label_color || _)
-            : _ && (_ = _.hover_label_color || _),
-          (0, _.jsxs)(_._, {
-            className: _().SubMenuItemText,
-            style: {
-              color: _,
-            },
-            href: _,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
-            children: [
-              (0, _.jsx)("div", {
-                className: _().TextLabel,
-                children: _,
-              }),
-              Boolean(_) &&
-                (0, _.jsx)("span", {
-                  className: _().ImageWrapper,
-                  children: (0, _.jsx)("img", {
-                    src: (0, _._)(_, _),
-                    alt: _,
-                    className: _().SubMenuImage,
-                  }),
-                }),
-            ],
-          })
-        );
-      }
-      function _(_, _) {
-        try {
-          const _ = window.location.pathname.toLowerCase(),
-            _ = new URL(_ || ""),
-            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
-          return _.pathname.toLocaleLowerCase() === _ || _ === _;
-        } catch {
-          return !1;
-        }
-      }
-      function _(_) {
-        const { event: _, bIsPreview: _ } = _;
-        let _ = _.jsondata.sale_background_video_webm,
-          _ = _.jsondata.sale_background_video_mp4;
-        return Boolean(_ || _)
-          ? (0, _.jsx)(_._, {
-              children: (0, _.jsxs)("video", {
-                loop: !0,
-                muted: !0,
-                autoPlay: !0,
-                playsInline: !0,
-                className: (0, _._)(
-                  _().SaleBackground,
-                  _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
-                  "SaleBackground",
-                  _().fullscreen_bg_video,
-                ),
-                style: {
-                  backgroundColor: _
-                    ? _.jsondata.sale_background_color
-                    : void 0,
-                },
-                children: [
-                  _ &&
-                    (0, _.jsx)("source", {
-                      src: _,
-                      type: "video/webm",
-                    }),
-                  _ &&
-                    !_._.IN_CLIENT &&
-                    (0, _.jsx)("source", {
-                      src: _,
-                      type: "video/mp4",
-                    }),
-                ],
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const { event: _, language: _, children: _, bIsPreview: _ } = _,
-          _ = _.useRef(null),
-          [_, _] = (0, _._)(() => [
-            _.GetImageURLWithFallback("sale_header", _),
-            _.jsondata.sale_sub_menu,
-          ]);
-        _.useEffect(() => {
-          if (!_) return;
-          const _ = new Image();
-          (_.onload = () => {
-            const _ = (100 * _.width) / 950 + "%";
-            _.current && _.current.style.setProperty("--background-scale", _);
-          }),
-            (_.src = _);
-        }, [_]);
-        const _ = _.jsondata.sale_sections?.some(
-            (_) => "contenthubmaincarousel" === _.section_type,
-          ),
-          _ =
-            _.jsondata.item_source_type === _._.k_EContentHub &&
-            ((_.jsondata.sale_vanity_id &&
-              _.jsondata.sale_vanity_id.includes("contenthubsalepage_")) ||
-              _),
-          _ = _ ? `url(${_})` : "none";
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _
-              ? (0, _.jsx)(_, {
-                  event: _,
-                  language: _,
-                  bIsPreview: _,
-                  subMenu: _,
-                })
-              : (0, _.jsx)(_, {
-                  strURL: _,
-                }),
-            (0, _.jsx)("div", {
-              className: (0, _._)({
-                SaleBackgroundCtn: !0,
-                ContentHubSalePage: _,
-              }),
-              children: (0, _.jsxs)("div", {
-                className: (0, _._)(
-                  _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
-                  "SaleCustomCSS",
-                  _().SaleBackground,
-                  "SaleBackground",
-                ),
-                style: {
-                  display: "flex",
-                  position: "relative",
-                  flexDirection: "column",
-                  backgroundColor: _.jsondata.sale_background_color,
-                },
-                ref: _,
-                children: [
-                  _ && "coverBlur" == _.jsondata.sale_background_repeat
-                    ? (0, _.jsx)("img", {
-                        className: (0, _._)(
-                          _().SalePageBackground,
-                          _().BackgroundImage,
-                          _().Blur,
-                        ),
-                        src: _,
-                        alt: "Header",
-                      })
-                    : (0, _.jsx)("div", {
-                        className: (0, _._)(
-                          _().SalePageBackground,
-                          _().BackgroundImage,
-                        ),
-                        style: {
-                          backgroundImage: _,
-                          backgroundRepeat: _.jsondata.sale_background_repeat,
-                        },
-                      }),
-                  (0, _.jsx)(_, {
-                    event: _,
-                    bIsPreview: _,
-                  }),
-                  (0, _.jsx)(_.Fragment, {
-                    children: _,
-                  }),
-                ],
-              }),
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { eventModel: _, language: _ } = _,
-          [_, _] = (0, _._)(() => [
-            _.jsondata.sale_logo_url,
-            _._.GetWithFallback(_.jsondata.localized_sale_logo, _),
-          ]);
-        return _ && _?.length > 0
-          ? _
-            ? (0, _.jsx)("a", {
-                className: _().SalePageLogoCtn,
-                href: _._.STORE_BASE_URL + _,
-                children: (0, _.jsx)("img", {
-                  src: _.GetImageURLWithFallback("sale_logo", _),
-                  alt: "logo",
-                }),
-              })
-            : (0, _.jsx)("div", {
-                className: (0, _._)(_().SalePageLogoCtn, "SalePageLogoCtn"),
-                children: (0, _.jsx)("img", {
-                  src: _.GetImageURLWithFallback("sale_logo", _),
-                  alt: "logo",
-                }),
-              })
-          : null;
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         Keyify = (_) =>
@@ -2054,6 +2151,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3341,7 +3439,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             event: _,
@@ -3359,34 +3458,22 @@
             [_, _],
           ),
           _ = _ || (0, _.sfN)(_._.LANGUAGE),
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetSummaryWithFallback(_),
             _.GetNameWithFallback(_),
-            _.GetCategoryAsString(),
             _.BShowLibrarySpotlightText(),
           ]);
-        let _ = new Array();
-        (_ =
-          void 0 !== _
-            ? [_]
-            : 2434320 == _.appid || _._.EUNIVERSE == _._
-              ? _
-                ? _.GetImageForSizeAsArrayWithFallback(
-                    "localized_store_app_spotlight_mobile",
-                    _,
-                    _._.full,
-                  )
-                : _.GetImageForSizeAsArrayWithFallback(
-                    "localized_store_app_spotlight",
-                    _,
-                    _._.full,
-                  )
-              : _.GetImageForSizeAsArrayWithFallback(
-                  "spotlight",
-                  _,
-                  _._.spotlight_main,
-                )),
-          _ && (_ = _(_));
+        let _ = "spotlight",
+          _ = _._.spotlight_main;
+        (2434320 != _.appid && _._.EUNIVERSE != _._) ||
+          ((_ = _
+            ? "localized_store_app_spotlight_mobile"
+            : "localized_store_app_spotlight"),
+          (_ = _._.full));
+        let _ =
+          (0, _._)(void 0 !== _ ? void 0 : _, _, _, _) ??
+          (void 0 !== _ ? [_] : []);
+        _ && _ && (_ = _(_));
         const _ = _.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsx)("div", {
@@ -4659,8 +4746,7 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             closeModal: _,
@@ -5455,100 +5541,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { rgPresenters: _ } = _;
-        if (!_ || 0 == _.length) return null;
-        const _ = (0, _.sfN)(_._.LANGUAGE);
-        return 1 == _.length
-          ? (0, _.jsx)("div", {
-              className: (0, _._)(
-                _().PresenterDisclaimer,
-                "PresenterDisclaimer",
-              ),
-              children: _._.LocalizeReact(
-                "#SalePresented_By",
-                (0, _.jsx)(_, {
-                  presentor: _[0],
-                  lang: _,
-                }),
-              ),
-            })
-          : (0, _.jsx)("div", {
-              className: (0, _._)(
-                _().PresenterDisclaimer,
-                "PresenterDisclaimer",
-              ),
-              children: _._.LocalizeReact(
-                "#SalePresented_By_Multi",
-                _.slice(0, _.length - 1).map((_, _) =>
-                  (0, _.jsxs)(
-                    _.Fragment,
-                    {
-                      children: [
-                        (0, _.jsx)(_, {
-                          presentor: _,
-                          lang: _,
-                        }),
-                        Boolean(_.length > 2) && ", ",
-                      ],
-                    },
-                    _.url,
-                  ),
-                ),
-                (0, _.jsx)(_, {
-                  presentor: _[_.length - 1],
-                  lang: _,
-                }),
-              ),
-            });
-      }
-      function _(_) {
-        const { presentor: _, lang: _ } = _,
-          _ = (0, _._)(_.url);
-        return (0, _.jsx)(_._, {
-          href: _,
-          bUseLinkFilter: !0,
-          className: _().PresenterLabel,
-          children: _._.GetWithFallback(_.localized_presenter_name, _),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { event: _, broadcastEmbedContext: _ } = _,
-          _ = Boolean(_?.jsondata?.broadcast_display_wide_player),
-          _ = Boolean(_?.jsondata?.broadcast_dispaly_wide_player_allow_chat);
-        return (0, _.jsx)(_.Fragment, {
-          children:
-            Boolean(
-              _.BEventCanShowBroadcastWidget() &&
-                _.BSaleShowBroadcastAtTopOfPage(),
-            ) &&
-            (0, _.jsx)(_._, {
-              event: _,
-              broadcastEmbedContext: _,
-              bWideBroadcastDisplay: _,
-              bWideBroadcastPermitChat: _,
-            }),
-        });
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { event: _, fnOnChangeDayIndex: _, addtionalAdminButtons: _ } = _;
-        return (0, _.jsx)(_._, {
-          eventModel: _,
-          fnOnUpdateSaleDayIndex: _,
-          addtionalAdminButtons: _,
-          bSupportsSticky: !0,
-        });
-      }
       function _(_) {
         const {
             promotionName: _,
@@ -5672,7 +5665,7 @@
                         fnSetBackgroundImgGroupEditMode: _,
                         bShowAsValveOnly: !_,
                       }),
-                    (0, _.jsxs)("div", {
+                    (0, _.jsxs)(_._, {
                       className: (0, _._)({
                         [_().SaleOuterContainer]: !0,
                         [_().SaleOuterTopMargin]: _,
@@ -5687,6 +5680,7 @@
                         : {
                             marginTop: `${_ || 0}px`,
                           },
+                      scrollIntoViewType: _._.NoTransformSparseContent,
                       children: [
                         (0, _.jsx)(_, {
                           eventModel: _,
@@ -5851,7 +5845,7 @@
           _ &&
             _.groupID != _ &&
             (_[_.length - 1].elements.push(
-              _(_, _, _ && _?.GetActiveTabUniqueID()),
+              _(_, _, _, _ && _?.GetActiveTabUniqueID()),
             ),
             (_ = null)),
             _
@@ -5866,33 +5860,23 @@
         }),
           _ &&
             (_[_.length - 1].elements.push(
-              _(_, _, _ && _?.GetActiveTabUniqueID()),
+              _(_, _, _, _ && _?.GetActiveTabUniqueID()),
             ),
             (_ = null));
         const _ = _.map((_, _) =>
-            (0, _.jsx)(
-              "div",
-              {
-                className: (0, _._)(
-                  _().SaleSectionTabListContainer,
-                  "SaleSectionTabListContainer",
-                ),
-                children: _.elements,
-              },
-              "TabSection_" + _,
-            ),
+          (0, _.jsx)(
+            "div",
+            {
+              className: (0, _._)(
+                _().SaleSectionTabListContainer,
+                "SaleSectionTabListContainer",
+              ),
+              children: _.elements,
+            },
+            "TabSection_" + _,
           ),
-          _ = (0, _.useRef)(null),
-          _ = (0, _.useRef)(null);
-        (0, _.useEffect)(() => {
-          _.current &&
-            (_.current = (0, _._)(_.current, "y") ?? document.documentElement);
-        }, []);
-        const _ = (0, _._)(_, "smooth");
+        );
         return (0, _.jsx)(_._, {
-          ref: _,
-          className: _().SaleSectionListContainer,
-          onGamepadDirection: _,
           focusable: !1,
           focusableIfEmpty: !0,
           navKey: "SaleSectionListContainer",
@@ -8958,7 +8942,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -8978,10 +8961,14 @@
           }),
           [_],
         );
-        return (0, _.jsx)(_._, {
-          navID: "SteamChartsShell",
-          children: (0, _.jsxs)(_._, {
+        const _ = _.useRef(null);
+        return (
+          _.useEffect(() => {
+            _.current && _.current.NavTree()?.Activate(!0);
+          }, []),
+          (0, _.jsxs)(_._, {
             className: _().SteamChartsRootPanel,
+            navRef: _,
             children: [
               (0, _.jsx)("div", {
                 className: _().SteamChartsRootPosition,
@@ -9041,8 +9028,8 @@
                 }),
               }),
             ],
-          }),
-        });
+          })
+        );
       }
       function _() {
         return (0, _.jsxs)(_._, {

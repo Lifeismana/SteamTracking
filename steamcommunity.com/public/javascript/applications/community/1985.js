@@ -156,9 +156,9 @@
               "/ajaxpostuserstatus";
             try {
               if (j.TS.IN_STEAMUI) {
-                let e = p.w.Init(v.kV);
+                let e = p.w.Init(v.kVt);
                 e.Body().set_appid(t), e.Body().set_status_text(a);
-                let s = await v.xt.PostStatusToFriends(
+                let s = await v.xtC.PostStatusToFriends(
                   m.Vw.CMInterface.GetServiceTransport(),
                   e,
                 );

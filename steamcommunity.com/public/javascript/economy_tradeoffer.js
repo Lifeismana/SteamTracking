@@ -197,14 +197,6 @@ function EndTradeOffer( url, bSendOpenerToURL )
 		if ( !url )
 			url = UserYou.GetProfileURL() + '/tradeoffers/';
 
-		if ( Steam.BIsUserInSteamClient() )
-		{
-			url = 'steam://openurl/' + url;
-
-			// give the steam:// url time to process
-			window.setTimeout( function() { window.close(); }, 1 );
-		}
-
 		//overlay (or any browser where we didn't have an opener, eg direct navigation) will follow this route
 		window.location = url;
 	}

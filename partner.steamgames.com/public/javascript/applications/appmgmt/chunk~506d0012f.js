@@ -22,7 +22,7 @@
     },
     66051: (e, t, n) => {
       "use strict";
-      n.d(t, { k: () => I });
+      n.d(t, { k: () => T });
       var r = n(7850),
         o = n(8871),
         i = n(67796),
@@ -77,20 +77,20 @@
           } = e,
           [C, z] = (0, u.useState)(g),
           [S, R] = u.useState(),
-          [E, H] = u.useState(),
-          y = u.useCallback(
+          [E, y] = u.useState(),
+          H = u.useCallback(
             (e) => {
               if (!e || "window" == g) return;
               const t = (0, p._f)(e, "y");
               (0, u.startTransition)(() => {
                 R(t || void 0),
-                  H(e.offsetTop),
+                  y(e.offsetTop),
                   g || z(t ? "element" : "window");
               });
             },
             [g],
           ),
-          I = (0, o.Ue)(y, t),
+          I = (0, o.Ue)(H, t),
           T = {
             nRows: n,
             nItemHeight: i,
@@ -293,8 +293,9 @@
           }
         );
       }
+      var y = n(26408);
       const H = u.createContext(void 0);
-      function y(e) {
+      function I(e) {
         const { table: t, setColumnSizeOverride: n } = e,
           o = (0, u.useRef)(t);
         o.current = t;
@@ -304,7 +305,7 @@
         );
         return (0, r.jsx)(H.Provider, { value: i, children: e.children });
       }
-      const I = u.forwardRef(function (e, t) {
+      const T = u.forwardRef(function (e, t) {
         const {
             data: n,
             columns: o,
@@ -321,19 +322,19 @@
             initialColumnFilters: b,
             initialGrouping: C,
             initialExpanded: z,
-            initialColumnPinning: H,
-            initialColumnVisibility: I,
+            initialColumnPinning: y,
+            initialColumnVisibility: H,
             onGroupingChange: T,
-            onVisibleRowsChange: F,
+            onVisibleRowsChange: j,
             renderGroup: k,
             virtualizeType: O = "element",
           } = e,
-          D = (0, u.useRef)(null),
-          [M, G] = (0, u.useState)({}),
+          M = (0, u.useRef)(null),
+          [D, G] = (0, u.useState)({}),
           [N, P] = (0, u.useState)({}),
           $ = o.map((e) =>
             "accessorKey" in e
-              ? { ...e, filterFn: M[e.accessorKey] ?? e.filterFn }
+              ? { ...e, filterFn: D[e.accessorKey] ?? e.filterFn }
               : e,
           ),
           L = $.map((e) => {
@@ -352,9 +353,9 @@
               sorting: w,
               grouping: C ?? [],
               expanded: z,
-              columnPinning: H ?? {},
+              columnPinning: y ?? {},
               columnFilters: b,
-              columnVisibility: I,
+              columnVisibility: H,
             },
             getCoreRowModel: (0, l.HT)(),
             getSortedRowModel: (0, l.h5)(),
@@ -369,8 +370,8 @@
           T?.(W);
         }, [T, W]),
           (0, u.useEffect)(() => {
-            F?.(K);
-          }, [F, K.length]);
+            j?.(K);
+          }, [j, K.length]);
         const X = (0, s.Te)({
             count: K.length,
             scrollMargin: g,
@@ -448,9 +449,9 @@
               setColumnFilters: _.setColumnFilters,
               resetColumnFilters: _.resetColumnFilters,
               setColumnFilterFnOverride: G,
-              getColumnFilterFnOverride: () => M,
+              getColumnFilterFnOverride: () => D,
               getContainerElement: () => ee.current,
-              getTableElement: () => D.current,
+              getTableElement: () => M.current,
               scrollToColumn(e, t) {
                 J.scrollToIndex(e.getIndex(), t);
               },
@@ -462,7 +463,7 @@
               _.resetColumnFilters,
               _.getState,
               _.getAllColumns,
-              M,
+              D,
               $,
               J,
             ],
@@ -477,7 +478,7 @@
           const t = re[e.index];
           t?.column.getIsPinned() && (ne += e.size);
         }
-        return (0, r.jsx)(y, {
+        return (0, r.jsx)(I, {
           table: _,
           setColumnSizeOverride: P,
           children: (0, r.jsx)("div", {
@@ -492,7 +493,7 @@
             },
             children: (0, r.jsxs)("div", {
               role: "table",
-              ref: D,
+              ref: M,
               "aria-rowcount": n.length,
               style: {
                 minHeight: Q,
@@ -510,7 +511,7 @@
                 ),
                 U.map((e) =>
                   (0, r.jsx)(
-                    j,
+                    F,
                     {
                       row: K[e.index],
                       size: e.size,
@@ -530,7 +531,7 @@
           }),
         });
       });
-      function T(e) {
+      function j(e) {
         const t = e.getIsPinned();
         return {
           borderRight:
@@ -570,16 +571,15 @@
                 !e.column.columnDef.meta?.bDisableSortButton &&
                 ((a = "button"),
                 (l.onClick = e.column.getToggleSortingHandler())),
-              e.column.columnDef.meta?.strHeaderTooltip &&
-                (l.title = e.column.columnDef.meta?.strHeaderTooltip),
               (0, r.jsx)(
-                O,
+                M,
                 {
                   header: e,
                   prevHeader: i,
                   HeaderElement: a,
                   nHeaderHeight: o,
                   sortDirection: s,
+                  strTooltip: e.column.columnDef.meta?.strHeaderTooltip,
                   conditionalProps: l,
                 },
                 e.id,
@@ -588,7 +588,7 @@
           }),
         });
       }
-      const j = u.memo(function (e) {
+      const F = u.memo(function (e) {
         const {
           row: t,
           size: n,
@@ -611,7 +611,7 @@
           "data-even": l % 2 == 0,
           "data-index": l,
           ref: i,
-          children: (0, r.jsx)(F, {
+          children: (0, r.jsx)(k, {
             row: t,
             rowVirtualizer: o,
             nItemHeight: s,
@@ -619,7 +619,7 @@
           }),
         });
       });
-      function F(e) {
+      function k(e) {
         const { row: t, rowVirtualizer: n, renderGroup: o } = e;
         if (t.getCanExpand()) {
           const e = o ?? (() => t.groupingValue);
@@ -657,7 +657,7 @@
           }),
         });
       }
-      function k(e, t) {
+      function O(e, t) {
         const n = (0, u.useContext)(H),
           r = e.columnDef.meta?.bGrowToFit,
           o = e.id,
@@ -685,23 +685,24 @@
             n.setColumnSizeOverride((e) => (e[o] > a ? e : { ...e, [o]: a }));
         }, [r, o, n, i, t, l]);
       }
-      function O(e) {
+      function M(e) {
         const {
             header: t,
             prevHeader: n,
             HeaderElement: o,
             nHeaderHeight: l,
             sortDirection: s,
-            conditionalProps: a,
+            strTooltip: a,
+            conditionalProps: c,
           } = e,
-          c = (0, u.useRef)(null);
+          m = (0, u.useRef)(null);
         return (
-          k(t.column, c),
+          O(t.column, m),
           (0, r.jsxs)(
             o,
             {
               role: "columnheader",
-              ref: c,
+              ref: m,
               "data-pinned": !!t.column.getIsPinned(),
               className: d()(
                 g().ColumnHeader,
@@ -711,9 +712,9 @@
               style: {
                 width: `var(--header-${t.id}-size)`,
                 height: void 0 !== l ? `${l}px` : void 0,
-                ...T(t.column),
+                ...j(t.column),
               },
-              ...a,
+              ...c,
               children: [
                 n?.column.getCanResize() &&
                   (0, r.jsx)("div", {
@@ -727,6 +728,7 @@
                 t.isPlaceholder
                   ? null
                   : (0, i.Kv)(t.column.columnDef.header, t.getContext()),
+                a && (0, r.jsx)(y.o, { tooltip: a }),
                 s &&
                   !t.column.columnDef.meta?.bDisableSortButton &&
                   (0, r.jsx)("div", { className: g().SortIndicator }),
@@ -753,7 +755,7 @@
           s = u.useRef(null),
           a = (0, o.XB)(s, n.measure);
         return (
-          k(t.column, s),
+          O(t.column, s),
           (0, r.jsx)("div", {
             className: d()(
               g().FancyTableCell,
@@ -765,16 +767,16 @@
             style: {
               width: `var(--col-${t.column.id}-size)`,
               transform: l,
-              ...T(t.column),
+              ...j(t.column),
             },
-            children: (0, r.jsx)(M, {
+            children: (0, r.jsx)(G, {
               CellComponent: t.column.columnDef.cell,
               context: t.getContext(),
             }),
           })
         );
       }
-      const M = u.memo(
+      const G = u.memo(
         function (e) {
           return (0, i.Kv)(e.CellComponent, e.context);
         },

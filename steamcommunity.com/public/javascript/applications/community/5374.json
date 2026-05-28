@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Doar Valve",
     "moderation_escalationlevel_supervisor_desc": "Supervizor solicitat",
+    "moderation_escalation_escalationnote": "Notă de înaintare către superior:",
     "moderation_chatmetadata_deleted": "Metadatele asociate acestei raportări de chat au fost șterse din cauza vechimii. Metadatele sunt păstrate pentru aproximativ 21 de zile.",
     "moderation_chatmetadata_futurelogcollection": "Acest jurnal de chat poate fi extins cu mesaje suplimentare trimise după raportare (%1$s)",
     "moderation_resolutionaction_removed": "Elimină conținutul raportat",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Subiecte raportate",
     "moderation_already_owner_disputed": "Deja contestat",
     "moderationstats_alltypes": "Toate tipurile de subiecte",
-    "moderation_alternateforumtool": "Instrument alternativ",
+    "forumsubjectlist_subjectreportsummary": "Nerezolvate: %1$s. Contestate: %1$s",
     "empty_no_trailing_comma": ""
 }

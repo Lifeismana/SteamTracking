@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Alleen Valve",
     "moderation_escalationlevel_supervisor_desc": "Supervisor vereist",
+    "moderation_escalation_escalationnote": "Aantekening bij escalatie:",
     "moderation_chatmetadata_deleted": "De metagegevens voor dit chatrapport zijn verwijderd, omdat de opslagtermijn is verlopen. Deze gegevens worden ongeveer 21 dagen bewaard.",
     "moderation_chatmetadata_futurelogcollection": "Dit chatlogboek kan over %1$s worden aangevuld met nieuwe berichten die na de melding zijn verzonden",
     "moderation_resolutionaction_removed": "De gerapporteerde inhoud verwijderen",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Gerapporteerde onderwerpen",
     "moderation_already_owner_disputed": "Al bezwaar aangetekend",
     "moderationstats_alltypes": "Alle onderwerptypen",
-    "moderation_alternateforumtool": "Alternatieve tool",
+    "forumsubjectlist_subjectreportsummary": "%1$s niet opgelost, voor %1$s bezwaar aangetekend",
     "empty_no_trailing_comma": ""
 }

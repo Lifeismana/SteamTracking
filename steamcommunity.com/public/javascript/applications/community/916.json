@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "Pause verhängen",
     "setcooldown_dialogdescription": "Verhängen Sie für einen Nutzer, der das System missbraucht hat, eine Pause und hindern Sie ihn daran, Inhalte zu melden oder Moderationsentscheidungen anzufechten.",
     "setcooldown_setbutton": "Pause verhängen",
+    "setcooldown_clearopenreports": "Offene Meldungen dieses Nutzers löschen",
     "nocomma": ""
 }

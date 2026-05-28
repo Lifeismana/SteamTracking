@@ -76,14 +76,12 @@ h1, h2, h3, h4, h5, h6 {
 	background-image: url('https://community.fastly.steamstatic.com/public/images/economy/market/header/market_banner.jpg');
 	background-repeat: no-repeat;
 	height: 121px;
-	width: 949px;
 
 }
 
 .market_header_text
 {
 	display: block;
-	width: 600px;
 	text-align: left;
 	padding: 20px 10px 0px;
 }
@@ -264,6 +262,7 @@ ul.market_restrictions li {
 #escrow_description {
 	margin-bottom: 15px;
 }
+
 .escrow_description_link {
 
 			font-family: "Motiva Sans", Sans-serif;
@@ -274,7 +273,7 @@ ul.market_restrictions li {
 
 .escrow_description_link a {
 	text-decoration: underline;
-	color: white;
+	color: inherit;
 }
 
 .missing_items_in_escrow {
@@ -420,7 +419,9 @@ a.market_listing_row_link:hover {
 
 .my_listing_section .market_listing_item_name_block {
 	margin-top: 7px;
-	padding-left: 0;
+	margin-bottom: 7px;
+	padding-left: 2px;
+	min-height: 44px;
 }
 
 .market_listing_item_name {
@@ -908,13 +909,13 @@ a.item_market_action_button_disabled {
 .market_tab_well_tab_contents {
 	display: block;
 	line-height: 39px;
-	padding: 0 4px;
+	padding: 0 8px;
 	margin: 0px;
 	min-width: 195px;
 
 	font-size: 14px;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: normal; /* normal */
 
 			text-align: center;
 	color: #969aa1;
@@ -1042,10 +1043,7 @@ a.market_tab_well_tab_inactive:hover {
 
 .market_search_sidebar_section_tip_small {
 	margin-bottom: 5px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			font-size: 12px;
+	font-size: 12px;
 	color: #4582A5;
 }
 
@@ -2361,6 +2359,10 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 }
 
 /* DSelect */
+.dselect_container .dropcontainer {
+	z-index: 2000;
+}
+
 .dselect_container .dropcontainer ul {
 	background: #417A9B;
 	border-radius: 0 0 3px 3px;
@@ -2371,8 +2373,6 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 	margin: 0 1px;
 	overflow: hidden auto;
 	padding: 0;
-	position: absolute;
-	z-index: 2000;
 }
 
 html.GamepadMode .dselect_container .dropcontainer ul {
@@ -2449,7 +2449,7 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 
 	html.responsive #sideBar > div {
 		width: auto;
-		margin: 0 15px 1em 15px;
+		margin-bottom: 1em;
 	}
 
 	html.responsive #sideBar > div.responsive_local_menu_placeholder {
@@ -2484,6 +2484,7 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 
 	html.responsive #BG_top {
 		height: auto;
+		margin: 0;
 	}
 
 	html.responsive #BG_top > h1 {
@@ -2520,6 +2521,22 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 	html.responsive .market_content_block {
 		padding: 10px 1.6% 0;
 	}
+
+	html.responsive .escrow_description_link {
+		font-size: unset;
+	}
+
+	html.responsive .market_search_sidebar_section_tip_small {
+		color: white;
+    	font-family: "Motiva Sans", Sans-serif;
+    	font-weight: 300;
+		font-size: 16px;
+
+	}
+
+	html.responsive .market_page_left {
+		max-width: unset;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -2536,6 +2553,12 @@ html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dsele
 		width: auto;
 		height: auto;
 		text-align: left;
+		margin-left: 4px;
+	}
+
+
+	html.responsive .market_listing_edit_buttons .item_market_action_button_edit {
+		background-color: rgb(171 171 171 / 20%);
 	}
 
 	html.responsive .market_listing_edit_buttons .market_listing_cancel_button,

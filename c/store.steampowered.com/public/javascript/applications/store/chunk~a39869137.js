@@ -4085,6 +4085,7 @@
                                 (0, _.jsx)(_._, {
                                   _: _,
                                   bMinimizePlatforms: _,
+                                  bHideWindows: _,
                                 }),
                                 Boolean(_ && _.item_type == _._._) &&
                                   (0, _.jsx)(_._, {

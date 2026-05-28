@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "設定檢舉冷卻時間",
     "setcooldown_dialogdescription": "阻止濫用系統的使用者檢舉內容或對處理提出爭議。",
     "setcooldown_setbutton": "設定冷卻時間",
+    "setcooldown_clearopenreports": "清除此使用者尚未解決的檢舉",
     "nocomma": ""
 }

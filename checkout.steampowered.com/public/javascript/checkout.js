@@ -5971,7 +5971,7 @@ function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 				window.location = "steammobile://openurl?url=" + encodeURIComponent( 'https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=' + txnid + '&authurl='+auth_url + '&s=' + g_sessionID );
 				});
 			}
-			else if ( g_bIsInSteamDeck )
+			else if ( g_bIsInGamepadUI )
 			{
 				OpenUrlInNewBlankWindow( 'https://checkout.steampowered.com/checkout/beginauthentication/?transid='+txnid )
 			}

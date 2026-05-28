@@ -292,6 +292,7 @@
   gap: 48px;
   padding: 20px;
   color: #000;
+  max-width: 940px;
 }
 ._1ShICbWRa-d4k2sWXSBRU5 {
   display: flex;
@@ -462,9 +463,8 @@
   box-sizing: border-box;
   margin: 0 auto;
 }
-.wC3_c2yhq3ppKA9AKQoTy input,
-.wC3_c2yhq3ppKA9AKQoTy select,
-.wC3_c2yhq3ppKA9AKQoTy textarea {
+.wC3_c2yhq3ppKA9AKQoTy:not(._3ar6NZpkNtMK2pmiKMadXq) input,
+.wC3_c2yhq3ppKA9AKQoTy:not(._3ar6NZpkNtMK2pmiKMadXq) textarea {
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
   font-size: 14px;
@@ -476,6 +476,26 @@
   box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   padding: 8px 10px;
 }
+.wC3_c2yhq3ppKA9AKQoTy select {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 14px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+  padding: 8px 10px;
+}
+.wC3_c2yhq3ppKA9AKQoTy a {
+  color: #d8dee5;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.wC3_c2yhq3ppKA9AKQoTy a:hover {
+  color: #fff;
+}
 .wC3_c2yhq3ppKA9AKQoTy.uHgjQHyNygSKukDngfNQO {
   max-width: unset;
   padding: 40px 2%;
@@ -485,6 +505,23 @@
 .wC3_c2yhq3ppKA9AKQoTy .DialogLabel {
   display: flex;
 }
+.vrqqGANTuXeQs27RGumFj {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  border-bottom: 2px solid #67c1f5;
+  font-size: 25px;
+  line-height: 26px;
+  color: #fff;
+  margin-bottom: 0px;
+  margin-top: 28px;
+  padding-bottom: 5px;
+}
+.vrqqGANTuXeQs27RGumFj ._31raJsbMXVc33oW6c5hNxS {
+  padding-bottom: unset;
+}
+._1-jmJyKnLRFoN-GX0Oqor8 {
+  color: #e24044;
+}
 ._3uPTh_ikegl-PIq12cfjJg {
   display: flex;
   flex-direction: row;
@@ -493,9 +530,9 @@
 }
 ._2RxJB5bupbx0mkW8dYJQRE {
   position: relative;
-  font-size: 32px;
+  font-size: 25px;
   color: #fff;
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 8px;
 }
 ._2RxJB5bupbx0mkW8dYJQRE span {
@@ -530,6 +567,21 @@
 }
 ._1eWwNe3G6T8EcVRg0R5Ftj b {
   font-weight: 600;
+}
+._2kKPmwgbsJ_P67Vo-HwwRf {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+._2kKPmwgbsJ_P67Vo-HwwRf:after {
+  content: "";
+  position: relative;
+  height: 1px;
+  flex-grow: 1;
+  background: #666d75;
+  margin-left: 20px;
 }
 ._1bjwXvgQa-kJBMijOLS8X5 {
   display: flex;
@@ -968,4 +1020,7 @@
   border-bottom-color: #2e475d;
   border-width: 15px;
   margin-left: 0;
+}
+._38rhsxAONglYlA01yweB9r._1QYBs5PGw6PClZRx9WNL6z {
+  flex-basis: 77%;
 }

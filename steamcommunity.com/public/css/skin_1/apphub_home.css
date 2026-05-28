@@ -495,37 +495,39 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 }
 
 /* search */
+
+.appHubSearchContainer
+{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border: 1px solid #000000;
+	border-radius: 3px;
+	padding-left: 5px;
+	width: 235px;
+}
+
+.appHubSearchContainer:has( .appHubSearchTextInput:focus-visible )
+{
+	outline: Highlight auto 1px;
+}
+
 .appHubSearchTextForm
 {
-	float: left;
-	padding-left: 8px;
-	padding-right: 8px;
-	margin: 9px 0;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	width: 100%;
 }
 
 .appHubSearchTextInput
 {
-	height: 24px;
-	line-height: 24px;
-	width: 235px;
-	border: 1px solid #6283b2;
-	background-color: #2f3e55;
-	font-size: 11px;
-	color: white;
-	padding-left: 5px;
-}
-
-.appHubSearchTextImage
-{
-	position: absolute;
-	top: 5px;
-	right: 3px;
-	width: 23px;
-	height: 18px;
-	padding: 0;
-	margin: 0;
+	background-color: transparent;
 	border: none;
-	cursor: pointer;
+	color: #909090;
+	flex: 1 0 0;
+	font-size: 11px;
+	line-height: 24px;
+	outline: none;
 }
 
 /* store info header */
@@ -885,9 +887,5 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	html.responsive .rightcol {
 		width: auto;
 		float: none;
-	}
-
-	html.responsive .leftcol {
-		max-width: 640px;
 	}
 }

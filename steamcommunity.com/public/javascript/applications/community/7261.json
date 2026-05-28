@@ -295,5 +295,6 @@
     "setcooldown_dialogtitle": "신고 쿨다운 설정",
     "setcooldown_dialogdescription": "시스템을 악용한 사용자가 콘텐츠를 신고하거나 조정에 대해 이의를 제기하지 못하도록 차단합니다.",
     "setcooldown_setbutton": "쿨다운 설정",
+    "setcooldown_clearopenreports": "이 사용자의 해결되지 않은 신고를 제거합니다.",
     "nocomma": ""
 }

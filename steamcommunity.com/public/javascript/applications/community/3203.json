@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Μόνο Valve",
     "moderation_escalationlevel_supervisor_desc": "Απαιτείται προϊστάμενος",
+    "moderation_escalation_escalationnote": "Σημείωση προώθησης σε προϊστάμενο:",
     "moderation_chatmetadata_deleted": "Τα μεταδεδομένα που σχετίζονται με αυτήν την αναφορά συνομιλίας έχουν διαγραφεί λόγω παλαιότητας. Τα μεταδεδομένα διατηρούνται μόνο για περίπου 21 ημέρες.",
     "moderation_chatmetadata_futurelogcollection": "Μπορούν να προστεθούν επιπλέον μηνύματα σε αυτό το αρχείο συνομιλίας, τα οποία στάλθηκαν μετά την αναφορά σε %1$s",
     "moderation_resolutionaction_removed": "Αφαίρεση του περιεχομένου που αναφέρθηκε",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Θέματα που αναφέρθηκαν",
     "moderation_already_owner_disputed": "Έχει ήδη γίνει αμφισβήτηση",
     "moderationstats_alltypes": "Όλοι οι τύποι θεμάτων",
-    "moderation_alternateforumtool": "Εναλλακτικό εργαλείο",
+    "forumsubjectlist_subjectreportsummary": "%1$s χωρίς επίλυση, %1$s υπό αμφισβήτηση",
     "empty_no_trailing_comma": ""
 }

@@ -79,6 +79,7 @@
     "moderation_escalationlevel_valve": "Valve",
     "moderation_escalationlevel_valve_desc": "Solo per Valve",
     "moderation_escalationlevel_supervisor_desc": "Supervisione richiesta",
+    "moderation_escalation_escalationnote": "Nota di segnalazione:",
     "moderation_chatmetadata_deleted": "I metadati associati a questa segnalazione della chat sono stati eliminati perché è trascorso il periodo previsto (vengono conservati solo per circa 21 giorni).",
     "moderation_chatmetadata_futurelogcollection": "Questo registro di chat potrebbe essere integrato con messaggi aggiuntivi inviati dopo la segnalazione tra %1$s",
     "moderation_resolutionaction_removed": "Rimuovi il contenuto segnalato",
@@ -131,6 +132,6 @@
     "reportedsubjectlist_header": "Elementi segnalati",
     "moderation_already_owner_disputed": "Già contestato",
     "moderationstats_alltypes": "Tutti i tipi di elementi",
-    "moderation_alternateforumtool": "Strumento alternativo",
+    "forumsubjectlist_subjectreportsummary": "%1$s non risolto, %1$s contestato",
     "empty_no_trailing_comma": ""
 }

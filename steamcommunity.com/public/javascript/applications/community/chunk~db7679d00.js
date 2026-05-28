@@ -422,18 +422,18 @@
           return "CSteamEngine_SetOverlayEscapeKeyHandling_Notification";
         }
       }
-      class v extends S.Message {
+      class I extends S.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            v.prototype.search_term || _.Sg(v.M()),
+            I.prototype.search_term || _.Sg(I.M()),
             S.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            v.sm_m ||
-              (v.sm_m = {
-                proto: v,
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
                 fields: {
                   search_term: {
                     n: 1,
@@ -444,67 +444,6 @@
                     n: 2,
                     br: _.qM.readUint32,
                     bw: _.gp.writeUint32,
-                  },
-                },
-              }),
-            v.sm_m
-          );
-        }
-        static MBF() {
-          return v.sm_mbf || (v.sm_mbf = _.w0(v.M())), v.sm_mbf;
-        }
-        toObject(e = !1) {
-          return v.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return _.BT(v.M(), e, t);
-        }
-        static fromObject(e) {
-          return _.Uq(v.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (p().BinaryReader)(e),
-            r = new v();
-          return v.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return _.zj(v.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (p().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          _.i0(v.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (p().BinaryWriter)();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
-        }
-      }
-      class I extends S.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            I.prototype.appids || _.Sg(I.M()),
-            S.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: {
-                  appids: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: _.qM.readUint32,
-                    pbr: _.qM.readPackedUint32,
-                    bw: _.gp.writeRepeatedUint32,
                   },
                 },
               }),
@@ -541,6 +480,67 @@
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Request";
+        }
+      }
+      class v extends S.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            v.prototype.appids || _.Sg(v.M()),
+            S.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
+                fields: {
+                  appids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: _.qM.readUint32,
+                    pbr: _.qM.readPackedUint32,
+                    bw: _.gp.writeRepeatedUint32,
+                  },
+                },
+              }),
+            v.sm_m
+          );
+        }
+        static MBF() {
+          return v.sm_mbf || (v.sm_mbf = _.w0(v.M())), v.sm_mbf;
+        }
+        toObject(e = !1) {
+          return v.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.BT(v.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.Uq(v.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (p().BinaryReader)(e),
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.zj(v.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (p().BinaryWriter)();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.i0(v.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (p().BinaryWriter)();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamEngine_SearchAppDataCacheByStoreKeywords_Response";
@@ -732,8 +732,8 @@
           }),
           (e.SearchAppDataCacheByStoreKeywordsHandler = {
             name: "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
-            request: v,
-            response: I,
+            request: I,
+            response: v,
           }),
           (e.SearchAppDataCacheByStoreKeywords = function (e, t) {
             return null == (t = t || (0, B.OI)().GetDefaultTransport())
@@ -745,8 +745,8 @@
                 })
               : t.SendMsg(
                   "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
-                  (0, g.I8)(v, e),
-                  I,
+                  (0, g.I8)(I, e),
+                  v,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -760,8 +760,8 @@
                 })
               : t.SendMsg(
                   "SteamEngine.SearchAppDataCacheByStoreKeywords#1",
-                  (0, g.I8)(v, e),
-                  I,
+                  (0, g.I8)(I, e),
+                  v,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           });
@@ -777,7 +777,7 @@
           (this.m_Transport = null),
             (this.m_Storage = null),
             (this.m_TextFilterPreferences = {
-              eTextFilterSetting: m.Bx.NS,
+              eTextFilterSetting: m.Bx6.NS,
               bIgnoreFriends: !1,
             }),
             (this.m_mapPlayerCache = new Map()),
@@ -794,12 +794,12 @@
             (this.m_bOngoingLoad = !1),
             (this.m_nLoadLanguagesRetryTimeout = void 0),
             (0, l.Gn)(this);
-          let t = new m.B4();
+          let t = new m.B4H();
           (this.m_TextFilterPreferences = {
             eTextFilterSetting: t.text_filter_setting(),
             bIgnoreFriends: t.text_filter_ignore_friends(),
           }),
-            (this.m_TextFilterWords = new m.Ey()),
+            (this.m_TextFilterWords = new m.EyI()),
             (this.m_DataAccess = e);
         }
         async Init(e = 0, t = null, r = null) {
@@ -930,10 +930,10 @@
           );
           if (e)
             try {
-              this.m_TextFilterWords = m.Ey.fromObject(JSON.parse(e));
+              this.m_TextFilterWords = m.EyI.fromObject(JSON.parse(e));
             } catch (t) {
               console.warn("Error parsing cached text filter word list", e),
-                (this.m_TextFilterWords = new m.Ey());
+                (this.m_TextFilterWords = new m.EyI());
             }
         }
         SaveTextFilterWords() {
@@ -962,12 +962,12 @@
             );
         }
         async RequestUpdatedSettings() {
-          let e = new m.B4();
+          let e = new m.B4H();
           if (0 !== this.m_unAccountID)
             try {
               if (this.m_Transport) {
-                let t = g.w.Init(m.tz);
-                e = (await m.xt.GetCommunityPreferences(this.m_Transport, t))
+                let t = g.w.Init(m.tzK);
+                e = (await m.xtC.GetCommunityPreferences(this.m_Transport, t))
                   .Body()
                   .preferences();
               } else {
@@ -977,7 +977,7 @@
                     "textfilter/ajaxgetcommunitypreferences",
                   { params: t, withCredentials: !0 },
                 );
-                e = m.B4.fromObject(r.data.preferences);
+                e = m.B4H.fromObject(r.data.preferences);
               }
             } catch (e) {}
           if (
@@ -985,12 +985,12 @@
             e.text_filter_words_revision() !==
               this.m_TextFilterWords.text_filter_words_revision())
           ) {
-            let t = new m.Ey();
+            let t = new m.EyI();
             if (0 !== e.text_filter_words_revision())
               try {
                 if (this.m_Transport) {
-                  let e = g.w.Init(m.SC);
-                  t = (await m.xt.GetTextFilterWords(this.m_Transport, e))
+                  let e = g.w.Init(m.SCE);
+                  t = (await m.xtC.GetTextFilterWords(this.m_Transport, e))
                     .Body()
                     .words();
                 } else {
@@ -1000,7 +1000,7 @@
                       "textfilter/ajaxgettextfiltercustomwords",
                     { params: e, withCredentials: !0 },
                   );
-                  t = m.Ey.fromObject(r.data.words);
+                  t = m.EyI.fromObject(r.data.words);
                 }
               } catch (e) {}
             this.UpdateTextFilterWords(t);
@@ -1121,10 +1121,10 @@
             t = [],
             r = [];
           switch (this.m_TextFilterPreferences.eTextFilterSetting) {
-            case m.Bx.C5:
-            case m.Bx.NS:
+            case m.Bx6.C5:
+            case m.Bx6.NS:
               break;
-            case m.Bx.bf:
+            case m.Bx6.bf:
               t = t.concat(this.m_strBannedWords.split(e));
               break;
             default:

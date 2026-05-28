@@ -8,6 +8,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = {};
@@ -154,6 +156,11 @@
           " " +
           _
         );
+      }
+      function _(_) {
+        return _.toLocaleDateString((0, _._)(), {
+          weekday: "long",
+        });
       }
       function _(_) {
         const _ = Math.floor(_ / _._.PerYear),

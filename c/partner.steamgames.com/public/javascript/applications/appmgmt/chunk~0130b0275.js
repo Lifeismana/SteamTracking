@@ -18,6 +18,8 @@
           },
           [_._]: {
             strSymbol: "€",
+            strDecimalSymbol: ",",
+            strThousandsSeparator: " ",
           },
           [_._]: {
             strSymbol: "CHF",

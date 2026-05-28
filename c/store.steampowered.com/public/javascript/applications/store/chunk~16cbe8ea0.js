@@ -352,10 +352,10 @@
         return (0, _._)({
           queryKey: _(),
           queryFn: async () => {
-            const _ = _._.Init(_._);
+            const _ = _._.Init(_.jng);
             __webpack_require__.Body().set_badgeid(_),
               __webpack_require__.Body().set_steamid(_._.steamid);
-            return (await _._.GetCommunityBadgeProgress(_, _))
+            return (await _.xtC.GetCommunityBadgeProgress(_, _))
               .Body()
               .toObject();
           },
@@ -620,6 +620,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1080,8 +1081,6 @@
               emoticonStore: _,
               className: _,
               additionalTypeAndDateElement: _,
-              fnFilterImageURLsForKnownFailures: _,
-              fnImageFailureCallback: _,
               headerClassnames: _,
               isPreview: _,
               bShouldMaskImages: _,
@@ -1089,16 +1088,9 @@
             } = this.props,
             _ = _ || (0, _.sfN)(_._.LANGUAGE),
             _ = _.GetDescriptionWithFallback(_) || "",
-            _ = _;
-          let _ = _.GetImageForSizeAsArrayWithFallback(
-            "background",
-            _,
-            _._.background_main,
-          );
-          _ && (_ = _(_));
-          const _ = _.GetCategoryAsString(),
-            _ = _.type,
-            _ = _.BImageNeedScreenshotFallback("background", _);
+            _ = _,
+            _ = _.GetCategoryAsString(),
+            _ = _.type;
           let _ = "";
           if (_.appid) _ = _?.GetName() || "";
           else if (_.clanSteamID) {
@@ -1119,22 +1111,10 @@
                 "editor" == _ ? _().InEditor : "",
               ),
               children: [
-                _ != _.Fwr &&
-                  !_ &&
-                  (0, _.jsx)(_._, {
-                    className: (0, _._)(
-                      _().EventCoverImageBackground,
-                      _ && _().MaskImages,
-                    ),
-                    rgSources: _,
-                    onIncrementalError: (_, _, _) => _ && _(_),
-                  }),
-                _.length > 0 &&
-                  (0, _.jsx)(_._, {
-                    className: _().EventBackgroundBlur,
-                    rgSources: _,
-                    onIncrementalError: (_, _, _) => _ && _(_),
-                  }),
+                (0, _.jsx)(_, {
+                  ...this.props,
+                  eLanguage: _,
+                }),
                 (0, _.jsx)("div", {
                   className: _().LibraryEventTitleContainer,
                   children: (0, _.jsxs)("div", {
@@ -1306,6 +1286,42 @@
           });
         }
       };
+      function _(_) {
+        const {
+            event: _,
+            fnFilterImageURLsForKnownFailures: _,
+            fnImageFailureCallback: _,
+            eLanguage: _,
+            bShouldMaskImages: _,
+          } = _,
+          _ = _.BImageNeedScreenshotFallback("background", _),
+          _ = _.type;
+        let _ = (0, _._)(_, "background", _, _._.background_main);
+        return (
+          _ && _ && (_ = __webpack_require__(_)),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _ != _.Fwr &&
+                !_ &&
+                (0, _.jsx)(_._, {
+                  className: (0, _._)(
+                    _().EventCoverImageBackground,
+                    _ && _().MaskImages,
+                  ),
+                  rgSources: _,
+                  onIncrementalError: (_, _, _) => _ && _(_),
+                }),
+              _ &&
+                _.length > 0 &&
+                (0, _.jsx)(_._, {
+                  className: _().EventBackgroundBlur,
+                  rgSources: _,
+                  onIncrementalError: (_, _, _) => _ && _(_),
+                }),
+            ],
+          })
+        );
+      }
       var _;
       (0, _._)([_._], _.prototype, "OnEnterVisible", null),
         (0, _._)([_._], _.prototype, "OnLeaveVisible", null),

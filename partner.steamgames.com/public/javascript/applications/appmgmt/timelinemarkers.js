@@ -620,7 +620,11 @@
     45737: (e) => {
       e.exports = {
         AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
+        BaseUI: "_3ar6NZpkNtMK2pmiKMadXq",
         WidePageCtn: "uHgjQHyNygSKukDngfNQO",
+        AdminHeader: "vrqqGANTuXeQs27RGumFj",
+        Breadcrumbs: "_31raJsbMXVc33oW6c5hNxS",
+        Required: "_1-jmJyKnLRFoN-GX0Oqor8",
         PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
         PageTitle: "_2RxJB5bupbx0mkW8dYJQRE",
         Beta: "_1YBhTKSlOER8bOnp0BU4Wj",
@@ -628,6 +632,7 @@
         ValveOnlyTitle: "_3skaXOiv1_vtHc_pGOPNsc",
         ValveOnlyBackground: "_2FESGwA28dH3EVAa7uTsUX",
         SectionCtn: "_1eWwNe3G6T8EcVRg0R5Ftj",
+        DividerHeading: "_2kKPmwgbsJ_P67Vo-HwwRf",
         ColumnCtn: "_1bjwXvgQa-kJBMijOLS8X5",
         LeftCol: "_1AqrivbzwCs57BXiugqpeA",
         ColHeader: "_3m2-TXBKQenlqzPUBuhbaD",
@@ -665,6 +670,8 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
+        AdminVerticalTabs: "_38rhsxAONglYlA01yweB9r",
+        RightPanel: "_1QYBs5PGw6PClZRx9WNL6z",
       };
     },
     95695: (e) => {
@@ -19742,17 +19749,18 @@
     },
     82227: (e, t, r) => {
       "use strict";
-      r.d(t, { Dq: () => a, NO: () => s, dm: () => n });
-      var i = r(61859);
-      function n(e, t, r, n) {
-        let a = t;
-        a =
-          "number" == typeof a
+      r.d(t, { Dq: () => s, NO: () => o, dm: () => a });
+      var i = r(3049),
+        n = r(47911);
+      function a(e, t, r, a) {
+        let s = t;
+        s =
+          "number" == typeof s
             ? {
                 nDigitsAfterDecimal: t,
                 bUseBinary1K: r || void 0 === r,
-                bValueIsInBytes: !n,
-                bValueIsRate: n,
+                bValueIsInBytes: !a,
+                bValueIsRate: a,
                 nMinimumDigitsAfterDecimal: 0,
               }
             : {
@@ -19761,44 +19769,40 @@
                 bValueIsInBytes: !0,
                 bValueIsRate: !1,
                 nMinimumDigitsAfterDecimal: 0,
-                ...a,
+                ...s,
               };
-        const s = a.bUseBinary1K ? 1024 : 1e3,
-          o = s * s,
-          l = o * s,
-          m = l * s;
-        let c,
-          d = "";
-        e > m
-          ? ((c = e / m), (d = "Tera"))
-          : e > l
-            ? ((c = e / l), (d = "Giga"))
-            : e > o
-              ? ((c = e / o), (d = "Mega"))
-              : e > s
-                ? ((c = e / s), (d = "Kilo"))
-                : (c = e);
-        const u =
-          "#" +
-          d +
-          (a.bValueIsInBytes ? "bytes" : "bits") +
-          (a.bValueIsRate ? "_PerSecond" : "");
-        return (0, i.we)(
-          u,
-          c.toLocaleString(i.pf.GetPreferredLocales(), {
-            minimumFractionDigits: a.nMinimumDigitsAfterDecimal,
-            maximumFractionDigits: a.nDigitsAfterDecimal,
+        const { nNum: o, strPrefix: l } = (function (e, t) {
+            const r = t.bUseBinary1K ? 1024 : 1e3,
+              i = r * r,
+              n = i * r,
+              a = n * r;
+            return e > a
+              ? { nNum: e / a, strPrefix: "Tera" }
+              : e > n
+                ? { nNum: e / n, strPrefix: "Giga" }
+                : e > i
+                  ? { nNum: e / i, strPrefix: "Mega" }
+                  : e > r
+                    ? { nNum: e / r, strPrefix: "Kilo" }
+                    : { nNum: e, strPrefix: "" };
+          })(e, s),
+          m = `#${l}${s.bValueIsInBytes ? "bytes" : "bits"}${s.bValueIsRate ? "_PerSecond" : ""}`;
+        return n.Z.Localize(
+          m,
+          o.toLocaleString((0, i.J)(), {
+            minimumFractionDigits: s.nMinimumDigitsAfterDecimal,
+            maximumFractionDigits: s.nDigitsAfterDecimal,
           }),
         );
       }
-      function a(e, t = 0) {
+      function s(e, t = 0) {
         let r;
         return (
           t && (r = { maximumFractionDigits: t }),
-          e ? e.toLocaleString(i.pf.GetPreferredLocales(), r) : "" + e
+          e ? e.toLocaleString((0, i.J)(), r) : "" + e
         );
       }
-      function s(e) {
+      function o(e) {
         return e > 1e9
           ? Math.trunc(e / 1e9).toString() + "B"
           : e > 1e6

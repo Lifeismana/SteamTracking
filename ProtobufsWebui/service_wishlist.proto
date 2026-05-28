@@ -156,6 +156,7 @@ message CWishlistFilters {
 	repeated int32 tagids_must_match = 24;
 	repeated int32 excluded_content_descriptors = 25 [(.description) = "enum"];
 	repeated uint64 category_ids = 26;
+	optional bool has_demo = 27;
 }
 
 message CWishlistFilters_ExcludeTypeFilters {

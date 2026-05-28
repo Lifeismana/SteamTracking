@@ -83,8 +83,8 @@
             queryFn: async () => {
               const _ = new Map();
               if (_._.logged_in) {
-                const _ = _._.Init(_._),
-                  _ = (await _._.GetNicknameList(_, _)).Body().toObject();
+                const _ = _._.Init(_.w_T),
+                  _ = (await _.xtC.GetNicknameList(_, _)).Body().toObject();
                 _?.nicknames &&
                   _.nicknames.length > 0 &&
                   _.nicknames.forEach((_) => {

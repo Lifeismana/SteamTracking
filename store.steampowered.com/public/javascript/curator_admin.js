@@ -4,6 +4,82 @@ var g_rgAppsCurated = [];
 // Track all of the app ids that we have in the array so that we don't suggest an existing app in the list back to the user
 var g_rgAppsInLists = [];
 
+
+/**
+ * Similar to CTextInputSuggest, but uses associative arrays instead of just text; useful for when we may have more than one
+ * item with the same text name, or when you want to use HTML in the item name instead of just plaintext
+ *
+ * Each suggestion should include a 'key', and one of the following:
+ * text - Suggestion text (escaped, sets textContents)
+ * html - Raw suggestion html (NOT ESCAPED, sets innerHTML)
+ *
+ * @param $InputElement
+ * @param fnSuggestForTerm
+ * @param fnOnSuggest
+ * @constructor
+ */
+function CIndexedInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
+{
+	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass );
+}
+
+CIndexedInputSuggest.prototype = Object.create(CTextInputSuggest.prototype);;
+
+CIndexedInputSuggest.prototype.OnSuggestionSelected = function( $Suggestion )
+{
+	this.m_$Input.val( $Suggestion.text() );
+
+	this.m_bHaveSuggestions = false;
+	this.m_$Focus = $J();
+	this.HideSuggestions();
+
+	this.m_fnOnSuggest( $Suggestion.data('suggest-key'), $Suggestion.text() );
+};
+
+CIndexedInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
+{
+	var strLastFocus = this.m_strLastFocusVal;
+
+	this.m_$Suggestions.empty();
+
+	this.m_$Focus = $J();
+	this.m_strLastFocus = null;
+
+	if ( rgSuggestions && rgSuggestions.length )
+	{
+		var _this = this;
+		for ( var i = 0; i < rgSuggestions.length; i++ )
+		{
+			var $Suggestion = $J('<div/>', {'class': 'suggestion_item popup_menu_item' } );
+			if ( rgSuggestions[i].img )
+			{
+				var $title = $J( '<span/>' ).text( rgSuggestions[i].text );
+				$Suggestion.append( rgSuggestions[i].img );
+				$Suggestion.append( $title );
+			}
+			else if( rgSuggestions[i].text )
+				$Suggestion.text( rgSuggestions[i].text );
+
+			$Suggestion.data('suggest-key', rgSuggestions[i].key )
+
+			$Suggestion.click( $J.proxy( this.OnSuggestionSelected, this, $Suggestion ) );
+			$Suggestion.mouseenter( $J.proxy( this.SetFocus, this, $Suggestion ) );
+
+			this.m_$Suggestions.append( $Suggestion );
+
+			if ( rgSuggestions[i] == strLastFocus )
+				this.SetFocus( $Suggestion );
+		}
+		this.m_bHaveSuggestions = true;
+		this.ShowSuggestions();
+	}
+	else
+	{
+		this.m_bHaveSuggestions = false;
+		this.HideSuggestions();
+	}
+};
+
 function CreateListFromForm( elForm, fnOnComplete )
 {
 	CallFunctionFromForm( elForm, [ 'listid', 'title', 'description', 'visibility', 'appids', 'type', 'background',
@@ -1053,7 +1129,8 @@ function ReviewsCreate_Load()
 				for( var i=0; i<data.length; i++ )
 				{
 					rgFormattedResults.push({
-						html: '<img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/'+data[i].id+'/capsule_sm_120.jpg">' + data[i].name,
+						img:'<img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/'+data[i].id+'/capsule_sm_120.jpg">',
+						text: data[i].name,
 						key: data[i].id
 					});
 					rgNameToAppMap[data[i].name] = data[i].id
