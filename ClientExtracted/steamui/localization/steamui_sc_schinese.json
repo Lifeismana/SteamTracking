@@ -355,7 +355,7 @@
     "Emoji_Stickers": "蒸汽平台贴纸",
     "Emoji_ChatFX": "蒸汽平台聊天效果",
     "ControllerBinding_GyroSpeedAnglePerSecondMin_Description": "可以输出到摇杆的最低陀螺仪速度（以度/秒为单位）。提示：将其留为 0 并将游戏中的摇杆死区设置为 0（如果可用），然后将蒸汽平台输出摇杆死区设置为首选值。",
-    "ControllerBinding_GyroEnableAngleCatchUp_Description": "当现实世界中的陀螺仪旋转超过游戏内最大转动速率时，蒸汽平台输出将保持摇杆输出，直到达到所需的角度。注意：在大幅度快速轻推控制器后，这可能感觉就像摇杆被 “卡”在极限位置，因此我们始终建议转而提高游戏摇杆灵敏度。",
+    "ControllerBinding_GyroEnableAngleCatchUp_Description": "当要求的陀螺仪视角转动速率超过游戏内最大视角转动速率时，蒸汽平台输入会存储剩余需补齐的角度，以帮助实现期望的游戏内视角。注意：在这种情况下，控制器的大幅快速转向可能会让人感觉摇杆“卡”在极限位置上，因此我们始终建议提高游戏内摇杆视角灵敏度，以尽量缓解这一问题。",
     "Notification_SystemUpdateAvailable_Body": "蒸汽平台更新已推出，可随时下载",
     "Notification_SystemUpdateAvailable_Body_Short": "蒸汽平台有可用更新",
     "Notification_SystemUpdateRestart_Body": "请重启蒸汽平台以应用最新更新",
@@ -502,5 +502,6 @@
     "HardwareDeviceName_Generic": "蒸汽平台设备",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
+    "Settings_ControllerCalibration_CalibrateJoystick_Description": "调整摇杆死区以修复无法准确回中的摇杆的“漂移”问题。若想针对每款游戏单独覆盖此死区偏好设置，请在对应游戏的蒸汽平台输入配置摇杆设置中，更改“死区来源”下拉菜单中的设置。"
 }

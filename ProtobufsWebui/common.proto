@@ -2754,6 +2754,25 @@ message CStorePageFilter_StoreFilter {
 	optional string cache_key = 2;
 }
 
+message CStreamingClientCaps {
+	optional string system_info = 1;
+	optional bool system_can_suspend = 2;
+	optional int32 maximum_decode_bitrate_kbps = 3;
+	optional int32 maximum_burst_bitrate_kbps = 4;
+	optional bool supports_video_hevc_OBSOLETE = 5;
+	optional bool disable_steam_store = 6;
+	optional bool disable_client_cursor = 7;
+	optional bool disable_intel_hardware_encoding = 8;
+	optional bool disable_amd_hardware_encoding = 9;
+	optional bool disable_nvidia_hardware_encoding = 10;
+	optional int32 form_factor = 11;
+	optional bool has_on_screen_keyboard = 12;
+	repeated int32 supported_colorspaces = 13 [(.description) = "enum"];
+	repeated int32 supported_audio_codecs = 14 [(.description) = "enum"];
+	repeated int32 supported_video_codecs = 15 [(.description) = "enum"];
+	optional bool can_toggle_fullscreen = 16;
+}
+
 message CStreamingClientConfig {
 	optional int32 quality = 1 [default = Identifier, (.description) = "enum"];
 	optional uint32 desired_resolution_x = 2;

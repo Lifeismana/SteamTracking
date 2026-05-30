@@ -5508,7 +5508,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         const _ = JSON.parse(JSON.stringify(_)),
           _ = _.split(".");
@@ -5559,6 +5561,7 @@
           [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(!0),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(
             (null ===
@@ -5945,9 +5948,56 @@
                 (0, _.jsx)("h1", {
                   children: "Json Body",
                 }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    "Json size: ",
+                    JSON.stringify(__webpack_require__.GetEventModel().jsondata)
+                      .length,
+                  ],
+                }),
                 (0, _.jsx)(_._, {
                   data: _,
                 }),
+                (0, _.jsx)("br", {}),
+                _
+                  ? (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("h1", {
+                          children:
+                            "Json size: sale sections (index is 0-based)",
+                        }),
+                        __webpack_require__
+                          .GetEventModel()
+                          .jsondata.sale_sections.map((_, _) =>
+                            (0, _.jsx)(
+                              "div",
+                              {
+                                children: `${(0, _._)(_, __webpack_require__.GetEventModel(), 0, 0, _._)}(${_}): ${JSON.stringify(_).length}`,
+                              },
+                              _.unique_id,
+                            ),
+                          ),
+                        (0, _.jsx)("h1", {
+                          children: "Json size: event json properties",
+                        }),
+                        Object.entries(
+                          __webpack_require__.GetEventModel().jsondata,
+                        ).map(([_, _]) =>
+                          (0, _.jsx)(
+                            "div",
+                            {
+                              children: `${_.toString()}: ${JSON.stringify(_).length}`,
+                            },
+                            _.toString(),
+                          ),
+                        ),
+                      ],
+                    })
+                  : (0, _.jsx)(_._, {
+                      label: "Show Json Size Debug",
+                      checked: _,
+                      onChange: _,
+                    }),
               ],
             }),
             _

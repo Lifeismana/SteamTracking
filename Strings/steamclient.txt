@@ -846,7 +846,7 @@
 "&\n$CAudio_GetMonoDownmixEnabled_Request"8\n%CAudio_GetMonoDownmixEnabled_Response
 "&\n$CAudio_GetUseBluetoothForMic_Request"8\n%CAudio_GetUseBluetoothForMic_Response
 "&\n$CRemoteClient_CancelPairing_Response">\n(CRemoteClient_CancelPairing_Notification
-"&\n$CShader_ReportExternalBuild_Response2
+"&\n$CShader_ReportExternalBuild_Response"f\n.CShader_ReportBucketProcessingComplete_Request
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
 "'\n%CAudio_SetMonoDownmixEnabled_Response"+\n)CAudio_SupportsUseBluetoothForMic_Request"=\n*CAudio_SupportsUseBluetoothForMic_Response
@@ -2386,7 +2386,10 @@ $steammessages_parental_objects.proto"
 %s (%llu kB)
 %s (emsg=%d)
 %s - failed to collect system logs
+%s - failed to send manifest request
+%s - failed to send patch request
 %s - locked by 0x%p
+%s - manifest request received %d (%s) HTTP response
 %s - received %d (%s) HTTP response
 %s - received 200 OK but empty response - converting to 404
 %s - skipping directory: %s
@@ -3931,6 +3934,7 @@ $steammessages_parental_objects.proto"
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
 (\t"1\n/CGameRecording_UserUpdateTimelineEntry_Response"y\n.CGameRecording_UserRemoveTimelineEntry_Request
+(\t"1\n/CShader_ReportBucketProcessingComplete_Response2
 (\t"2\n!CRemoteClient_AllocateSDR_Request
 (\t"3\n!CMsgClientLaunchClientAppResponse
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
@@ -5800,7 +5804,6 @@ $steammessages_parental_objects.proto"
 - callback definition not available\n
 - host "%s" %s, RemmoteClientID %llu, IP %s, %u connections \n
 - host %s, vhost %s, cell %u, %s (#%u), %u connections of %u max\n
-- type %s, name %s, iteration %u, chunks: index %u, %u outstanding (%s), %u deferred, %u requested, %u succeeded, %u failed. %.1f %s \n
 -"ke6
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
@@ -5885,10 +5888,8 @@ $steammessages_parental_objects.proto"
 --gameid
 --gpu-launcher='%s'
 --graphics-pipeline-range
---ignore-certificate-errors
 --ignore-gpu-blocklist
 --implicit-whitelist
---in-process-gpu
 --log-file=%s
 --log-severity=disable
 --master-process
@@ -5916,7 +5917,6 @@ $steammessages_parental_objects.proto"
 --renderer-cmd-prefix='konsole -title renderer -e gdb --args'
 --replayer-cache
 --shmem-fd
---single-process
 --spirv-val
 --timeout-seconds
 --type
@@ -6099,16 +6099,13 @@ $steammessages_parental_objects.proto"
 -batterytestmode
 -bootreserve
 -bootreservesizemb
--browser-offline
 -buildid=%u
 -cachedir=%s
 -cafeapplaunch
 -candidates
 -cef-allow-browser-underlays
--cef-disable-blink-features
 -cef-disable-breakpad
 -cef-disable-browser-underlays
--cef-disable-features
 -cef-disable-gpu
 -cef-disable-gpu-compositing
 -cef-disable-gpu-sandbox
@@ -6124,14 +6121,10 @@ $steammessages_parental_objects.proto"
 -cef-disable-site-isolation
 -cef-disable-touch-focus-workaround
 -cef-disable-xcomposite-workaround
--cef-enable-blink-features
 -cef-enable-debugging
--cef-enable-features
 -cef-enable-gpu-debugging
 -cef-enable-low-delay-live-stream
 -cef-enable-vaapi
--cef-extra-flags
--cef-force-32bit
 -cef-force-accessibility
 -cef-force-browser-underlays
 -cef-force-gpu
@@ -6141,11 +6134,8 @@ $steammessages_parental_objects.proto"
 -cef-force-opaque-backgrounds
 -cef-force-sandbox
 -cef-full-memory-crash-report
--cef-ignore-certificate-errors
--cef-in-process-gpu
 -cef-log-sandbox
 -cef-restart-on-ui-mode-change
--cef-single-process
 -cef-use-vulkan
 -cef-verbose-js-logging
 -cef-verbose-logging
@@ -6184,7 +6174,6 @@ $steammessages_parental_objects.proto"
 -enable-keyring
 -enable-libusb
 -enable-libusb-gamecube
--fakeoffline
 -force-no-dbus-simulate-user-activity
 -force-opaque-background
 -force-sandbox
@@ -6233,7 +6222,6 @@ $steammessages_parental_objects.proto"
 -steamdeck
 -steamdeckdisplay
 -steamframe
--steamfs
 -steamid=%llu
 -steammachinedisplay
 -steamos3
@@ -6244,8 +6232,6 @@ $steammessages_parental_objects.proto"
 -steamuniverse=Dev
 -steamuniverse=Internal
 -steamuniverse=Public
--test-device-type
--test-glibc-version
 -testgfn_minutes
 -testlongoobeupdater
 -testoobe
@@ -6267,7 +6253,6 @@ $steammessages_parental_objects.proto"
 -vrverbose
 -websocket
 -websocketignorecertissues
--webui-skip-webhelper-check
 .  It will be discarded from the tag.
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of
@@ -7227,6 +7212,7 @@ $steammessages_parental_objects.proto"
 /.COffline_GetUnsignedOfflineLogonTicket_Request
 /.CPlayer_NewSteamAnnouncementState_Notification
 /.CPublishedFile_FileDeleted_Client_Notification
+/.CShader_ReportBucketProcessingComplete_Request
 /.CSteamInputService_ControllerStateFlow_Request
 /.CSteamInputService_TritonUndocked_Notification
 /.CStore_MigratePartnerLinkTracking_Notification
@@ -7437,6 +7423,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/controllerworkitem.cpp
 /data/src/clientdll/controllerxinput_linux.cpp
 /data/src/clientdll/csinterface.cpp
+/data/src/clientdll/csinterface.h
 /data/src/clientdll/depotbuild.cpp
 /data/src/clientdll/depotbuilder.cpp
 /data/src/clientdll/depotdownloadmgr.cpp
@@ -7480,9 +7467,10 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2016
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2114
 /data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2184
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3788
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3916
-/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4198
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:2238
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3840
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:3968
+/data/src/clientdll/shadercachemanager/shadercachemanager.cpp:4250
 /data/src/clientdll/shadercachemanager/shadercontentupdatejob.cpp
 /data/src/clientdll/sitelicenseclient.cpp
 /data/src/clientdll/steamclient.cpp
@@ -8082,12 +8070,8 @@ $steammessages_parental_objects.proto"
 0 bytes,
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0)AA7A
-0.0333
-0.050
 0.13.15.106
-0.15
 0.3.19
-0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -8116,6 +8100,7 @@ $steammessages_parental_objects.proto"
 0.CPublishedFile_UpdateContentDescriptors_Request
 0.CRemoteClient_EnableSteamBroadcast_Notification
 0.CRemoteClient_RegisterStatusUpdate_Notification
+0.CShader_ReportBucketProcessingComplete_Response"
 0.CSiteManagerClient_TrackedPayments_Notification
 0.CSteamInputService_ControllerStateFlow_Response
 0.CSteamInputService_GetTritonPairingInfo_Request
@@ -8131,11 +8116,17 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 00000000
 0000000000000000
+0.0333
+0.050
+0.15
+0.75
 00000001
 00003333
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
 01/01/00
+0123456789
+0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8143,6 +8134,8 @@ $steammessages_parental_objects.proto"
 084GC?;gc_$
 084HD@<hd`$
 08bX
+0: Auto. 1: Force Controller to be "HandHeld" orientation, like SteamDeck (tilt in pitch by 90 degrees so that "Yaw" is "Through the Screen". 2: Force Controller to be "Standalone" controller like Steam Controller, where "Yaw" is "Through Sticks".
+0: Off. 1: Spew the gyro speed and the extracted quaternion rotation speed
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
 0=>Miles 1=>XAudio2
 0?0L
@@ -8299,8 +8292,6 @@ $steammessages_parental_objects.proto"
 10000
 1000000
 10000000
-0123456789
-0123456789.
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -14031,6 +14022,7 @@ $steammessages_parental_objects.proto"
 34CRemoteClient_Offline_Notification
 34CRemoteClient_StartPairing_Request
 34CRemotePlay_SessionStarted_Request
+34CReportBucketProcessingCompleteJob
 34CSetDualSenseTriggerEffectWorkItem
 34CShaderCacheImplFossilizePipelines
 34CShader_GetBucketManifest_Response
@@ -15376,6 +15368,7 @@ $steammessages_parental_objects.proto"
 46COffline_GetUnsignedOfflineLogonTicket_Request
 46CPlayer_NewSteamAnnouncementState_Notification
 46CPublishedFile_FileDeleted_Client_Notification
+46CShader_ReportBucketProcessingComplete_Request
 46CSteamInputService_ControllerStateFlow_Request
 46CSteamInputService_InitControllerList_Response
 46CSteamInputService_TritonUndocked_Notification
@@ -15428,6 +15421,7 @@ $steammessages_parental_objects.proto"
 47CRemoteClient_EnableSteamBroadcast_Notification
 47CRemoteClient_RegisterStatusUpdate_Notification
 47CRemotePlayTogether_Notification_ControllerSlot
+47CShader_ReportBucketProcessingComplete_Response
 47CSiteManagerClient_TrackedPayments_Notification
 47CSteamInputService_ControllerStateFlow_Response
 47CSteamInputService_GetTritonPairingInfo_Request
@@ -15982,7 +15976,10 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+60CAccountHardware_CompleteSteamControllerRegistration_Request
+60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
 60CMarketingMessages_GetPartnerReadyToPublishMessages_Response
 60CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
@@ -15990,12 +15987,9 @@ $steammessages_parental_objects.proto"
 60CMsgControllerInputControllerActionDotsPer360CalibrationSpin
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
-6144
-60000000
-60CAccountHardware_CompleteSteamControllerRegistration_Request
-60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16763,7 +16757,6 @@ $steammessages_parental_objects.proto"
 <appid> : shows active licenses for appid
 <appid> <seconds> force delay update
 <appid> [force:0|1] stop this running app
-<depotid> <input chunk file> <output chunk file> -- read a packed chunk, unpack it and check SHA, write output to file
 <ef0
 <empty>\n
 <filename> <depotid>
@@ -17686,7 +17679,6 @@ AllocateRelayServer
 AllocateSharedConnection
 Allocation error : not enough memory
 Allow Steam clients that associate to this site to save username and auth credentials locally
-Allow self-signed certificates
 Allow to download shader cache depots
 Allow to download updates to other drives then install folder is on
 Allow webhelper to create BrowserView underlays
@@ -17747,11 +17739,6 @@ AnswerDoesGamePhaseRecordingExist
 AntiReplay
 Any Extended Key Usage
 Any Purpose
-Any additional flags to pass to CEF
-Any blink features to disable
-Any blink features to enable
-Any features to disable
-Any features to enable
 Any language
 App "%u" failed to build file mapping: %s\n
 App "%u" not installed.\n
@@ -17969,7 +17956,6 @@ Attempting to pair to streaming dongle %u
 Attempting to purchase same app in different packages
 Attempting to remove more tokens than the bucket size! starting: %u, toremove: %u
 Attempting to send message to chat room (%s) we are no longer a member of
-Attempting to unpack chunk for depot %d from '%s' to '%s'\n
 Attemt to send packet, but socket has been closed!
 AttribCapabilityGroup
 Attributes
@@ -18777,9 +18763,7 @@ BroadcastClient.NotifyWebRTCSetAnswer#1
 BroadcastClient.NotifyWebRTCStart#1
 BroadcastFirstTimeComplete
 BroadcastInvitedToView_t
-BroadcastMessageToClients
 BroadcastMicrophoneStatus_t
-BroadcastNotification
 BroadcastRecorderError
 BroadcastRecorderError_t
 BroadcastRequestThumbnail_t
@@ -19851,6 +19835,7 @@ CGetCompatToolBucketJob for %s starting.
 CGetCompatToolBucketJob for %s: not installed or other error, early out.
 CGetControllerConnectionState
 CGetControllerInfoWorkItem::RunFunc: Read failure.\n
+CGetControllerInfoWorkItem::RunFunc: timeout\n
 CGetControllerInfoWorkItem::RunFunc: too many read failures.
 CGetCursorImageMsg
 CGetDockedControllerActiveSlotWorkItem
@@ -21204,7 +21189,6 @@ CPumpContextJob::ThreadedPumpContext
 CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CRC check failed for chunk %s - converting to 404
 CRC error
-CRC of chunk '%s': %u\n
 CRC of serialized manifest doesn't match expected value\n
 CRC raw / encrypted    : 0x%X / 0x%X \n
 CRC32_ProcessBuffer
@@ -21372,6 +21356,7 @@ CRemoteStorageSyncContext::ThreadedDecryptFile
 CRemoteStorageSyncContext::ThreadedDecryptFile failed
 CRemoteStorageSyncContext::ThreadedEncryptFile
 CRemoteStorageSyncContext::ThreadedWriteFile failed
+CReportBucketProcessingCompleteJob
 CReportExternalBuildJob
 CReservationPositionMessage
 CResourceCache::BFreeResource
@@ -23347,6 +23332,7 @@ DLH\XT
 DLOPEN Error:%s\n
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
+DOCKED_SLOT
 DOCTYPE
 DOCUMENTS
 DOWNGRD
@@ -24193,7 +24179,6 @@ EGameSearchAction
 EGameSearchResult
 EGamescopeBlurMode
 EGamingDeviceType
-EGamingDeviceType override: %d\n
 EGetBroadcastReady
 EGetChannelsAlgorithm
 EGetFileSyncState
@@ -24791,7 +24776,6 @@ Error: %s: failed start update check
 Error: %s: failed to add event listener for output: %u
 Error: %s: failed to add filter match: %s
 Error: %s: failed to bind object: %d - %s
-Error: %s: failed to broadcast notification
 Error: %s: failed to check for update
 Error: %s: failed to check for update during apply
 Error: %s: failed to collect output for: %s
@@ -24808,8 +24792,6 @@ Error: %s: failed to find current mode
 Error: %s: failed to find mode by id: %d
 Error: %s: failed to find output: %u
 Error: %s: failed to get screen resources
-Error: %s: failed to initialize HTTP server
-Error: %s: failed to initialize WebUI job dispatcher
 Error: %s: failed to initialize XInput2, some features may be missing
 Error: %s: failed to initialize XRandR, some features may be missing
 Error: %s: failed to initialize battery state manager, battery state will be unavailable
@@ -24827,7 +24809,6 @@ Error: %s: failed to parse version
 Error: %s: failed to read bios auto-message
 Error: %s: failed to read from m_nFdEventWake - %d
 Error: %s: failed to retrieve monitor fd
-Error: %s: failed to send notification to client
 Error: %s: failed to serialize display state
 Error: %s: failed to set gpu performance level to %d
 Error: %s: failed to set manual clocks, reverting to previous level: %d
@@ -24865,7 +24846,6 @@ Error: %s: update check error
 Error: %s: update check error: %d
 Error: %s: version query error\n
 Error: %s: write failed() - %d
-Error: Attempt to send message with no clients connected
 Error: CRunWindowsCompatInstallScriptJob::BYieldingRunClientJob: failed to wait for process: %s
 Error: CSystemDockManagerLinux::Init failed to initialize udev, some features may be missing
 Error: DisplayManagerInit: XRR unsupported
@@ -25252,9 +25232,7 @@ Failed to de-serialize global system perf settings
 Failed to de-serialize legacy system perf settings
 Failed to de-serialize per-app system perf settings
 Failed to decode manifest signature key
-Failed to decompress chunk from %s\n
 Failed to decrypt cached manifest %d_%llu
-Failed to decrypt chunk from %s\n
 Failed to decrypt manifest file "%s" to local CS
 Failed to delete app state file "%s"
 Failed to deserialize manifest %llu for depot %u
@@ -25311,7 +25289,6 @@ Failed to get action set handle with error %i\n
 Failed to get cert from steam
 Failed to get chunk index from %s
 Failed to get chunk info in %s
-Failed to get decryption key for depot %d - try downloading the game first\n
 Failed to get decryption key for depot %u
 Failed to get free disc space for target folder "%s"
 Failed to get global FakeIP of client
@@ -25345,6 +25322,7 @@ Failed to initialize fan service manager
 Failed to initialize server address for shared fd id: 0x%lx\n
 Failed to initialize server address for shared fd: %d\n
 Failed to initialize sound system\n
+Failed to issue HTTP request for depot %u
 Failed to join own broadcast chat (BroadcastID %llu)
 Failed to kick controller %u out of bluetooth mode after pairing for slot %u: %u
 Failed to launch executable %s\n
@@ -25404,7 +25382,6 @@ Failed to read bond for %u.%u before forgetting it: %u\n
 Failed to read bond for dongle %u before forgetting it: %u\n
 Failed to read bond from slot on dongle %d
 Failed to read chat member data from initial chat Enter message
-Failed to read chunk from %s\n
 Failed to read chunk from file "%s".
 Failed to read data from "%s" (%u bytes @ %llu), dropping chunk
 Failed to read details for the controller when pairing
@@ -25429,7 +25406,6 @@ Failed to resolve path before download\n
 Failed to resolve path for '%s' for upload\n
 Failed to retrieve app dependencies (batched)!: %s (%s)
 Failed to retrieve info for AppID %u private beta "%s" (%s)
-Failed to save chunk to '%s'\n
 Failed to save download to filesystem: path was %s\n
 Failed to save legacy session file for other user to '%s'
 Failed to save legacy session file to '%s'
@@ -25765,9 +25741,7 @@ ForceUpdate
 ForceUpdateNextRestart
 Forced Off
 Forced create but already created for SharedObjectEvent\n
-Forces offline browser mode
 Forces overlay testmode mode for debugging
-Forces usage of 32-bit steamwebhelper when available
 Forcing IMU Polling Rate= from %u to %u \n
 Forcing Left IMU Polling Rate= from %u to %u \n
 Forcing content server %s for download!
@@ -27193,7 +27167,6 @@ Gray color space not permitted on RGB PNG
 Greek
 Greenlight Items
 GreenlightItems
-Grip Pulse: eSide: %u, nStrength: %d, nRepeats: %d, nFlags: %d\n
 Group
 Group HTTP metrics by hostname.  Careful, the cardinality of your in-memory map might be large.
 GroupChatMessageNotification_t
@@ -27210,6 +27183,7 @@ Gurmukhi
 Gy?K
 Gyro Noise Value: %f, Raw Jerk Value: %f, Low Pass Jerk Value: %f, Jerk Threshold: %f, Jerks Detected: %u\n
 Gyro Rate switched from: %u us to: %u us.\n
+Gyro Raw Speed: %f, %f, %f\n
 Gyro Sensor value: (%u us) fell outside of margin of error: (%u%%). Falling back on estimated polling value (%u us). \n
 Gyro deflection so far: %f\n
 GzOKV
@@ -27456,10 +27430,8 @@ Health Check: CHTTPClient not ready
 Health Check: HTTP: OK
 Health Check: HTTP: bad status code: %d
 Health Check: HTTP: fetch failed
-Health Check: HTTP: starting with url: %s
 Health Check: WS: OK
 Health Check: WS: connect failed
-Health Check: WS: starting with url: %s
 HeartbeatBroadcast
 Heavy Metal
 Hebrew
@@ -28051,7 +28023,6 @@ Initial attempt to contact %s failed.  Giving up after %d consecutive failures
 Initial packet in multi-packet UDP message is too large and would exceed initially allocated buffer
 InitialPeriod
 InitialTimeUnit
-Initialize
 InitializeUGCQuotaUsage
 Initialized SSL context with certificate %s\n
 Initialized SteamVR action manifest and handles\n
@@ -28552,6 +28523,7 @@ ItemVoteSummary
 Items
 Items_Mtx
 Items_ReadyToUse
+Iteration %u, chunks: index %u, %u outstanding (%s), %u deferred, %u requested, %u succeeded, %u failed. %.1f %s \n
 J+TO]
 J0X|
 J:xrG
@@ -29258,7 +29230,6 @@ Logging on %s
 Logic problem? szsrc =
 LogicalCPUCount
 LogicalProcessors
-Login first\n
 Login1Manager
 Login1ManagerProxy
 Logon Extra Security
@@ -29278,6 +29249,7 @@ Lost connectivity to ALL %d Steam Datagram routing clusters.  Possible problem w
 Low FPS
 Low Spec Hardware (Steam Deck/Frame)
 Low Violence
+Low pass filter on the output to help lower FPS games. Needs more thought.
 Lowered '%s' -> '%s'\n
 Luxembourgish
 LwH'
@@ -30195,6 +30167,7 @@ Method ReplaceRoleActions() not implemented.
 Method ReportAccessibilitySettings() not implemented.
 Method ReportApp() not implemented.
 Method ReportBroadcastChannel() not implemented.
+Method ReportBucketProcessingComplete() not implemented.
 Method ReportClientArgs() not implemented.
 Method ReportClientError() not implemented.
 Method ReportClipRange() not implemented.
@@ -32328,7 +32301,6 @@ OverlayWindowBlacklist
 Overlay_EnableSoftProcessKill
 Override default duration-control / anti-indulgence time period. If nonzero, initial playtime threshold is this value in seconds
 Override default duration-control / anti-indulgence time period. If nonzero, per-day playtime threshold is this value in seconds
-Override the current EGamingDeviceType (main/dev only)
 Overwriting on-disk registry with newly created registry.
 OwnGameplayInfo
 Owner
@@ -33187,7 +33159,6 @@ Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Refle
 Protocol error
 Proton download bug: Proton %u is linux native, blocking attempt to set a compat tool for it that has windows as source platform: %s %u (manifest version %d)
 Proton download bug: ignoring invalid entry for Proton (%u) when restoring platform overrides.
-Provide a glibc version for testing
 Provider doesn't support currency
 Proxy
 Proxy Authentication Required
@@ -33306,6 +33277,7 @@ QualityOverride
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
+Quaternion Speed: %f, %f, %f\n
 Quechua
 QueryRefreshTokenByID
 QueryRefreshTokensByAccount
@@ -33759,7 +33731,6 @@ Reject
 Rejected (BAcceptCallFrom() false)\n
 Rejected (Do Not Disturb Set)\n
 Rejected (Unknown Chat Room %s)\n
-Rejecting connection attempt from unknown source
 Rejecting connection request from %s at %s, connection ID %u.  That steamID/ConnectionID pair already has a connection [%s]\n
 Rejecting connection request from %s for unknown virtual port %d
 Relative URL: %s\n
@@ -33929,6 +33900,7 @@ Replay currently disabled on NVIDIA.\n
 ReplyToFriendMessage
 ReportAccessibilitySettings
 ReportBroadcastChannel
+ReportBucketProcessingComplete
 ReportChatDeclined
 ReportClientArgs
 ReportClientError
@@ -34248,8 +34220,6 @@ Running Script
 Running Update
 Running as site license provider; disabling IPv6.
 Running in anonymous mode, can't get cert from Steam.
-Runs CEF GPU processing as thread of browser process
-Runs CEF processes in single process
 RuntimeDirectoryInodesMax
 RuntimeDirectorySize
 Russian
@@ -34506,7 +34476,6 @@ SETWRAP
 SET_LED
 SHA header mismatch for chunk %s (Expected 0x%s, received 0x%s) - converting to 404
 SHA mismatch for chunk %s ( entry %u, offset %llu, size %u, got SHA %s ).\n
-SHA of chunk at '%s': %s\n
 SHA1
 SHA1_Init( &c )
 SHA224
@@ -36041,6 +36010,7 @@ Shader.GetBucketManifest#1
 Shader.GetShaderReportingCadence#1
 Shader.GetStaleBucket#1
 Shader.RegisterShader#1
+Shader.ReportBucketProcessingComplete#1
 Shader.ReportExternalBuild#1
 Shader.SendShader#1
 Sharada
@@ -36096,7 +36066,6 @@ ShutdownApp
 ShutdownLauncher
 ShutdownLauncher_t
 ShutdownSystem
-Shutting down
 Shutting down low level socket/threading support.\n
 Shutting down webhelper process %u
 Shutting down: forcing platform override cache flush to disk.
@@ -36165,7 +36134,6 @@ Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Size() == operand.Size()
 SizeOnDisk
 Skip VR initialization entirely no matter who asks for it
-Skip local webhelper connection checks
 Skip mapping AppID %u to tool "%s" with priority %d: mapping to tool "%s" with priority %d already exists.
 Skip streaming driver checks
 SkipDiscoveryQueueItem
@@ -36526,6 +36494,7 @@ Steam Engine
 Steam ID does not pass strict parsing: '%s'
 Steam ID in logon response doesn't match, but our previous value was non-anon and valid?
 Steam Link
+Steam Link Touch Controller
 Steam Music: Unable to create audio device\n
 Steam Runtime Launch Service:
 Steam Service Error: %s\n
@@ -37011,6 +36980,7 @@ Streaming device at %s didn't respond to streaming proof request
 Streaming launch isn't available, unexpected reason %d
 StreamingAudioFinished
 StreamingAudioPreparationComplete
+StreamingClientSettingsChanged_t
 StreamingSession
 StreamingSessionEvent
 StreamingTargetAudioChannels
@@ -38504,6 +38474,7 @@ UseCandidate was set!
 UsePushToMute
 UsePushToTalk
 UsePushToTalkFriendsUI
+Used to test old Gyro to joystick Camera processing pipeline (1) against old (0).
 UsedVideoH264
 UsedVideoHEVC
 UsedVideoX264
@@ -39127,6 +39098,7 @@ What is the name of your school?
 What is your favorite team?
 What is your mother's maiden name?
 When a local endpoint expects to receive SETTINGS frame, it receives an other type of frame
+When in handheld mode, how far we tilt the gyro quaternion before processing. This affects only the "Gyro to Mouse" and "Gyro to JoystickCamera" modes. And only affects Yaw, Roll, Yaw + Roll, and Laser Pointer 3DOF to 2D conversion styles within those modes. Player Space and World Space are controller affordance agnostic.
 When loading sources into preset "%d", could not find mode ID "%d".
 When loading sources into preset %d, found mismatched source %s for mode ID %d, %s.  Incompatible Mode for this Source.  Creating compatible mode.
 When loading sources into preset %d, found mismatched source types for mode ID %d: %d / %d.
@@ -39649,6 +39621,8 @@ YldUpdateRegistration
 YldUpdateUsageReportIfNecessary
 YldWaitForAppStateLoaded
 YldWaitForLibraryReadyOfflineMode
+YldWaitForResourcesFree - lock
+YldWaitForResourcesFree - signal
 YldWriteCacheDirectoryToFile
 YnFpW
 YooMoney
@@ -40197,15 +40171,15 @@ Zulu
 [AppID %u] Getting Workshop info for item %llu failed : %s
 [AppID %u] HTTP Upload for UGC file '%s' (length=%d) to %s, path %s - failed with with error '%s' (%d)
 [AppID %u] HTTP Upload for file '%s' (offset=%lld, length=%d) to %s, path %s - failed with with error '%s' (%d)
+[AppID %u] HTTP download for file '%s' from host '%s' - %s.
 [AppID %u] HTTP download for file '%s' from host '%s' - Returned error '%s' (%d).
 [AppID %u] HTTP download for file '%s' from host '%s' - Success.
-[AppID %u] HTTP download for file '%s' from host '%s' - Timed out.
 [AppID %u] HTTP download for file '%s' from host '%s', path %s, beginning. . .
+[AppID %u] HTTP upload for UGC file '%s' (length=%d) to %s, path %s - %s.
 [AppID %u] HTTP upload for UGC file '%s' (length=%d) to %s, path %s - success.
-[AppID %u] HTTP upload for UGC file '%s' (length=%d) to %s, path %s - timed out.
 [AppID %u] HTTP upload for UGC file '%s' beginning . . .
+[AppID %u] HTTP upload for file '%s' (offset=%lld, length=%d) to %s, path %s - %s.
 [AppID %u] HTTP upload for file '%s' (offset=%lld, length=%d) to %s, path %s - success.
-[AppID %u] HTTP upload for file '%s' (offset=%lld, length=%d) to %s, path %s - timed out.
 [AppID %u] HTTP upload for file '%s' beginning . . .
 [AppID %u] Ignoring flagged conflict for file '%s', setting to 'forgotten'
 [AppID %u] Inhibiting sync requests for pending platform change
@@ -42598,6 +42572,7 @@ Zulu
 \t#\t%\t+\t/\t5\tC\tI\tM\tO\tU\tY\t_\tk\tq\tw\t
 \t(%zu) comparing %s with %s\n
 \t*** %s - %s - (had more work last frame!!) ***\n
+\t- type %s, name %s chunks: %u outstanding, %u requested, %u succeeded, %u failed. \n
 \t--channel56\t%d\t%d
 \t--channel5\t%d
 \t--channel6\t%d
@@ -47426,6 +47401,7 @@ failed to create temp folder %s
 failed to generate a valid callback handler key
 failed to get memory
 failed to init async
+failed to issue
 failed to lock matchmaking system after 1000ms, proceeding unsafely\n
 failed to move in file
 failed to move out file
@@ -48555,6 +48531,7 @@ gyro_calibration_duration_manual
 gyro_calibration_duration_manual_timeout
 gyro_calibration_duration_stationary
 gyro_data
+gyro_debug_gyro_speed_vs_quaternion_speed
 gyro_debug_sensor_timings
 gyro_deflection_to_joystick_max
 gyro_deflection_to_joystick_min
@@ -48573,7 +48550,9 @@ gyro_filter_min_speed
 gyro_filter_smoothness
 gyro_filtered_quaternion
 gyro_filtered_speed
+gyro_force_handheld_orientation
 gyro_force_sensor_rate
+gyro_handheld_pitch_offset
 gyro_lock_extents
 gyro_mode
 gyro_mouse_sample_angle_offset
@@ -48608,6 +48587,8 @@ gyro_sw_antidrift_enabled
 gyro_to_2d_conversion_style
 gyro_to_camera_angles
 gyro_to_joystick
+gyro_to_joystick_camera_raw
+gyro_to_joystick_camera_relax
 gyro_to_joystick_deflection
 gyro_to_joystick_deflection_neutral_angle
 gyro_to_joystick_deflection_use_gravity
@@ -52873,9 +52854,9 @@ loopback
 lost network device
 lost rgb to gray
 lost/gained channels
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1633
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1786
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1991
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1634
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1798
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:2003
 low-pri yield - /data/src/clientdll/appdatacache.cpp:884
 low-pri yield - /data/src/clientdll/autocloud.cpp:591
 low-pri yield - /data/src/clientdll/autocloud.cpp:670
@@ -52885,7 +52866,7 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:440
 low-pri yield - /data/src/clientdll/clientjob.cpp:471
 low-pri yield - /data/src/clientdll/clientjob.cpp:780
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - /data/src/clientdll/clientugc.cpp:6912
+low-pri yield - /data/src/clientdll/clientugc.cpp:6916
 low-pri yield - /data/src/clientdll/compatmanager.cpp:1975
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2226
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2493
@@ -52894,7 +52875,7 @@ low-pri yield - /data/src/clientdll/compatmanager.cpp:3230
 low-pri yield - /data/src/clientdll/compatmanager.cpp:3243
 low-pri yield - /data/src/clientdll/compatmanager.cpp:3295
 low-pri yield - /data/src/clientdll/compatmanager.cpp:3895
-low-pri yield - /data/src/clientdll/csinterface.cpp:180
+low-pri yield - /data/src/clientdll/csinterface.cpp:222
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
 low-pri yield - /data/src/clientdll/peercontentserver.cpp:712
@@ -53159,6 +53140,7 @@ m_Settings
 m_ShaderManager
 m_SiteLicenseClient
 m_SourceID.m_strHostName
+m_SourceInfo
 m_Sources
 m_Sources[i]->GetCurrentMode()
 m_SpewThrottle
@@ -54803,6 +54785,7 @@ m_unAppPlayedByOtherUserSession
 m_unAppsAdded
 m_unBytesProcessing >= pChunkData->m_Index.m_uOriginalSize
 m_unChunkRequestsOutstanding
+m_unChunkRequestsOutstanding > 0
 m_unConnectionIDLocal == 0
 m_unConnectionIDRemote
 m_unContext
@@ -58736,10 +58719,8 @@ q.m_pLast == this
 q2wI
 q?w0\v
 qCJ.
-qCurrentQuaternionState.IsValid()
 qHardwareQuaternion.IsValid()
 qR5FE%
-qTiltedQuaternion.IsValid()
 qUN1
 q\n\tStats_UDP
 qcStatements
@@ -59435,9 +59416,7 @@ rumble_enabled
 rumble_intensity
 rumble_setting
 rumble_type
-run all games through run_with_steamfs.py
 run_policy_checks
-run_with_steamfs.py --
 running
 runtime
 runtime-directory-inodes-max
@@ -59581,6 +59560,7 @@ sc_kalman_fastq
 sc_kalman_h_vel
 sc_kalman_q_vel
 sc_kalman_r_vel
+sc_kalman_repeated_sample
 sc_kalman_slowq
 sc_schinese
 sc_subscriptions
@@ -60674,7 +60654,7 @@ statistics/rx_bytes
 statistics/tx_bytes
 stats
 stats message size doesn't make sense.  Stats message size %u, packet size %d
-stats: (%s, %d) %s: %llu Bytes, %.0f sec (%.2f Mbps). %u Hits / %u Misses (%.0f %%, %.0f %% bytes)
+stats: (%s, %d) %s: %llu Bytes, %.0f sec (%.2f Mbps). %u Hits / %u Misses (%.0f %%, %.0f %% bytes), score %.4f
 statsEndToEnd.m_nReplyTimeoutsSinceLastRecv > 0
 statsEndToEnd.m_nReplyTimeoutsSinceLastRecv > 0 || statsEndToEnd.m_recv.m_packets.Total() == 0
 statsEndToEnd.m_usecWhenTimeoutStarted > 0
@@ -60726,7 +60706,7 @@ stderr
 stdin
 stdout
 steam
-steam (main) May 18 2026 20:56:03
+steam May 29 2026 17:54:37
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -61510,6 +61490,7 @@ time_to_last_byte_ms
 time_to_send_req_ms
 time_transferred
 time_update_start
+timed out
 timed_trial_add_playtime
 timed_trial_add_playtime <appId> <seconds>: add trial app playtime (developer only)
 timed_trial_reset_playtime
@@ -62635,7 +62616,6 @@ unmatched parentheses
 unnamed
 unnamed_arg0
 unnamed_arg1
-unpack_chunk
 unpacking bad chunk "%s" (%s)
 unpair_unless_you_are_client_id
 unprotectedAttrs

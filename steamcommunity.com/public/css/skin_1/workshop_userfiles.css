@@ -2321,8 +2321,10 @@ input[type='checkbox'] {
 .searchedTermsContainer
 {
 	vertical-align: middle;
-	padding-top: 12px;
 	clear:both;
+}
+.searchedTermsContainer:empty {
+	display: none;
 }
 
 .searchedTermsContainerEndPadding
@@ -2628,67 +2630,6 @@ div.hover {
 
 .hover_box .rule {
 	border-bottom: 1px solid #82807c;
-}
-
-.hover_arrow_left, .hover_arrow_right {
-	position: absolute;
-	top: 39px;
-
-	width: 0px;
-	height: 0px;
-}
-
-.hover_arrow_left {
-	border-right: 14px solid #363c45;
-
-    right: 96%;
-    top: 54px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(54, 60, 69, 0);
-    border-right-color: #363c45;
-    border-width: 16px;
-    margin-top: -16px;
-}
-
-.hover_arrow_right {
-	border-left: 14px solid #363c45;
-
-    left: 96%;
-    top: 54px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(54, 60, 69, 0);
-    border-left-color: #363c45;
-    border-width: 16px;
-    margin-top: -16px;
-}
-
-.hover_arrow_inner {
-	position: absolute;
-	top: -13px;
-	background-repeat: no-repeat;
-	width: 13px;
-	height: 26px;
-
-}
-
-.hover_arrow_left .hover_arrow_inner {
-	left: 0px;
-	background-position: left top;
-}
-
-.hover_arrow_right .hover_arrow_inner {
-	right: 3px;
-	background-position: right top;
 }
 
 .hoverWorkshopItemTitle

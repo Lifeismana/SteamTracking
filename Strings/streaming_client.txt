@@ -3783,8 +3783,6 @@ ${FILENAME}
 -steamos3
 -te c
 -tesla
--test-device-type
--test-glibc-version
 -uY1
 -v71H3}`
 -vR3Gh
@@ -4507,10 +4505,10 @@ ${FILENAME}
 0+f|D
 0,PQ
 0-AD
+0.06
 0/bu^U
 0/gge
 0000000000000000000000000000000000000000
-0.06
 00000001
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00\fo
@@ -4944,6 +4942,8 @@ ${FILENAME}
 16StoreBrowse_Stub
 16StoreItem_Assets
 16[X
+17:44:51
+17:48:18
 17@b
 17CCaptureFailedMsg
 17CClientWalletInfo
@@ -5231,8 +5231,6 @@ ${FILENAME}
 20.StoreItem.PackageGroup.EPackageGroupDisplayType
 20/33001
 2048
-20:55:28
-20:55:37
 20CCDDBAppDetailCommon
 20CCaptureFailedDialog
 20CControllerConfigMsg
@@ -5623,6 +5621,7 @@ ${FILENAME}
 3265&
 3265''6654#72
 3265'3
+32654
 32654##
 32654##5
 32654#'
@@ -5647,6 +5646,8 @@ ${FILENAME}
 32654'#
 32654'#536
 32654''3254&##c
+32654.
+32655
 32655&
 32655&&
 326554&"
@@ -5656,9 +5657,6 @@ ${FILENAME}
 326554&'
 326654&&#"
 3267
-32654
-32654.
-32655
 3267!
 3267!5!&
 3267!5!&&#"
@@ -6053,10 +6051,10 @@ ${FILENAME}
 45CStoreBrowse_GetPriceStops_Response_PriceStop
 45rq
 46$a
-467&&54632
 467.
 4632
 46632
+467&&54632
 4676654&#"
 46CControllerConfigMsg_ControllerActiveConfigMsg
 46CMsgSteamDatagramConnectionStatsClientToRouter
@@ -6292,6 +6290,7 @@ ${FILENAME}
 54&#72
 54&'7
 546'2>
+5467.
 5467
 54632
 54663
@@ -6304,7 +6303,6 @@ ${FILENAME}
 5467'
 5467'!
 5467'7
-5467.
 546753
 546;
 54CControllerConfigMsg_ControllerPersonalizationResponse
@@ -6497,6 +6495,7 @@ ${FILENAME}
 6. makr
 600MiD
 60>T
+663
 6144
 61iz
 62d&
@@ -6513,7 +6512,6 @@ ${FILENAME}
 65R=
 65c\r
 66(YP_
-663
 6632
 6636
 6653
@@ -6714,10 +6712,10 @@ ${FILENAME}
 73MW
 73nL4\v
 74&'3
+75#5!
 754.
 7524
 74632
-75#5!
 75pRD
 75th
 76&'3
@@ -11797,7 +11795,6 @@ EGRMode
 EGamePerformanceSetting
 EGameRecordingType
 EGamescopeBlurMode
-EGamingDeviceType override: %d\n
 EGraphicsPerfOverlayLevel
 EH0:a
 EH6+p
@@ -15294,7 +15291,7 @@ MaxProtocol
 MaxUseCount
 Maximum (%ld) redirects followed
 Maximum file size exceeded
-May 18 2026
+May 29 2026
 MaybeAllocateAligned cannot fail here.
 MbP?
 Mb\ni
@@ -16527,7 +16524,6 @@ Overlay
 OverlayFrameMark
 OverlayInput
 OverlayRendering
-Override the current EGamingDeviceType (main/dev only)
 Ovu$"
 Ow-p
 Ow4O
@@ -17294,7 +17290,6 @@ Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Prova nu!
 Provalo subito!
-Provide a glibc version for testing
 Proxy
 Proxy CONNECT aborted
 Proxy CONNECT aborted due to timeout
@@ -31760,7 +31755,7 @@ lh\n2Ta
 lhatod r
 lhhl
 liQS
-lib May 18 2026 20:55:35
+lib May 29 2026 17:47:01
 lib(%lu)
 libEGL.so.1
 libGL.so.1

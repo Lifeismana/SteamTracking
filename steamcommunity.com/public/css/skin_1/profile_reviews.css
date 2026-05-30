@@ -205,10 +205,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 #rightContents
 {
-	position: relative;
-	float: right;
 	margin-top: 20px;
-	width: 295px;
 }
 
 .review_list #leftContents {
@@ -362,28 +359,14 @@ html:not(.GamepadMode) .dselect_container .trigger.activetrigger {
 
 @media screen and (max-width: 910px)
 {
-
-	html.responsive #rightContents {
-		float: none;
-		width: auto;
-	}
-
 	html.responsive #rightContents .box {
 		margin: unset;
 	}
 
-
 }
-
-	html.responsive.GamepadMode #rightContents {
-		float: none;
-		width: auto;
-	}
-
 	html.responsive.GamepadMode #rightContents .box {
 		margin: unset;
 	}
-
 
 @media screen and (max-width: 910px )
 {

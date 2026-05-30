@@ -826,7 +826,954 @@
           });
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      _.Message;
+      class _ {
+        constructor() {
+          (this.m_mapCallbacks = new Map()),
+            (this.m_rgRegisteredEMsgs = []),
+            (this.m_mapServiceMethodHandlers = new Map()),
+            (this.m_rgRegisteredServiceMethodHandlers = []),
+            (0, _._)(this);
+        }
+        DispatchMsgToHandlers(_, _) {
+          let _ = _.GetEMsg();
+          if (_ == _.bSr) {
+            let _ = _.Hdr().target_job_name();
+            if (_) {
+              let _ = this.m_mapServiceMethodHandlers.get(_);
+              if (_) {
+                this.DEBUG_LogMessageDispatch(_, _[0]);
+                for (let _ of _)
+                  try {
+                    _.invoke(_, _);
+                  } catch (_) {
+                    _ instanceof Error
+                      ? (0, _._)().ReportError(_)
+                      : console.error(
+                          `MessageHandlers failed to dispatch message to handler (${_}): `,
+                          _,
+                        );
+                  }
+                return !0;
+              }
+            }
+          } else {
+            let _ = this.m_mapCallbacks.get(_);
+            if (_) {
+              this.DEBUG_LogMessageDispatch(_, _[0]);
+              for (let _ of _)
+                try {
+                  __webpack_require__.invoke(_);
+                } catch (_) {
+                  _ instanceof Error
+                    ? (0, _._)().ReportError(_)
+                    : console.error(
+                        "MessageHandlers failed to dispatch message to handler: ",
+                        _,
+                      );
+                }
+              return !0;
+            }
+          }
+          return !1;
+        }
+        DEBUG_LogMessageDispatch(_, _) {
+          0;
+        }
+        get emsg_list() {
+          return this.m_rgRegisteredEMsgs;
+        }
+        get servicemethod_list() {
+          return this.m_rgRegisteredServiceMethodHandlers;
+        }
+        AddCallback(_, _, _) {
+          let _ = this.m_mapCallbacks.get(_);
+          return (
+            _ ||
+              ((_ = []),
+              this.m_mapCallbacks.set(_, _),
+              this.m_rgRegisteredEMsgs.push(_)),
+            _.push({
+              invoke: _,
+              msgClass: _,
+            }),
+            {
+              invoke: _,
+              unregister: () => {
+                let _ = this.m_mapCallbacks.get(_);
+                if (_)
+                  for (let _ = 0; _ < _.length; _++)
+                    _[_].invoke == _ && (_.splice(_, 1), _--);
+              },
+            }
+          );
+        }
+        AddServiceMethodHandler(_, _) {
+          let _ = (_, _) => {
+            let _ = _._.InitFromMsg(_.request, _),
+              _ = _._.Init(_.response, _.kHd),
+              _ = _(_, _),
+              _ = (_) => {
+                _.Hdr().set_eresult(_), _(_);
+              };
+            _ instanceof Promise
+              ? _.then(_).catch(() => {
+                  _(_._);
+                })
+              : _(_);
+          };
+          return (
+            this.m_mapServiceMethodHandlers.has(_.name)
+              ? console.error("Duplicate registration for method " + _.name)
+              : (this.m_mapServiceMethodHandlers.set(_.name, [
+                  {
+                    invoke: _,
+                    msgClass: _.request,
+                  },
+                ]),
+                this.m_rgRegisteredServiceMethodHandlers.push(_.name)),
+            {
+              invoke: _,
+              unregister: () => {
+                let _ = this.m_mapServiceMethodHandlers.get(_.name);
+                if (_)
+                  for (let _ = 0; _ < _.length; _++)
+                    _[_].invoke == _ && (_.splice(_, 1), _--);
+              },
+            }
+          );
+        }
+        AddServiceNotificationHandler(_, _) {
+          let _ = (_, _) => {
+              let _ = _._.InitFromMsg(_.request, _);
+              _(_);
+            },
+            _ = this.m_mapServiceMethodHandlers.get(_.name);
+          return (
+            _ ||
+              ((_ = []),
+              this.m_mapServiceMethodHandlers.set(_.name, _),
+              this.m_rgRegisteredServiceMethodHandlers.push(_.name)),
+            _.push({
+              invoke: _,
+              msgClass: _.request,
+            }),
+            {
+              invoke: _,
+              unregister: () => {
+                let _ = this.m_mapServiceMethodHandlers.get(_.name);
+                if (_)
+                  for (let _ = 0; _ < _.length; _++)
+                    _[_].invoke == _ && (_.splice(_, 1), _--);
+              },
+            }
+          );
+        }
+        RegisterBaseEMessageHandler(_, _) {
+          return this.AddCallback(_, void 0, _);
+        }
+        RegisterEMessageHandler(_, _, _) {
+          return this.AddCallback(_, _, (_) => {
+            __webpack_require__(_._.InitFromMsg(_, _));
+          });
+        }
+        RegisterEMessageAction(_, _, _) {
+          return this.AddCallback(_, _, (_) => {
+            (0, _._)(() => {
+              __webpack_require__(_._.InitFromMsg(_, _));
+            });
+          });
+        }
+        RegisterServiceNotificationHandler(_, _) {
+          return this.AddServiceNotificationHandler(_, _);
+        }
+        RegisterServiceNotificationHandlerAction(_, _) {
+          return this.AddServiceNotificationHandler(_, (_) => {
+            let _;
+            return (
+              (0, _._)(() => {
+                _ = _(_);
+              }),
+              _
+            );
+          });
+        }
+        RegisterServiceMethodHandler(_, _) {
+          return this.AddServiceMethodHandler(_, _);
+        }
+        RegisterServiceMethodHandlerAction(_, _) {
+          return this.AddServiceMethodHandler(_, (_, _) => {
+            let _;
+            return (
+              (0, _._)(() => {
+                _ = _(_, _);
+              }),
+              _
+            );
+          });
+        }
+      }
+      var _;
+      (0, _._)([_._], _.prototype, "m_rgRegisteredEMsgs", void 0),
+        (0, _._)(
+          [_._],
+          _.prototype,
+          "m_rgRegisteredServiceMethodHandlers",
+          void 0,
+        );
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.auth_key || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  auth_key: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CTransportAuth_Authenticate_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CTransportAuth_Authenticate_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CTransportAuth_StartShutdown_Notification";
+        }
+      }
+      !(function (_) {
+        (_.AuthenticateHandler = {
+          name: "TransportAuth.Authenticate#1",
+          request: _,
+          response: _,
+        }),
+          (_.Authenticate = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultTransport())
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("TransportAuth.Authenticate#1", (0, _._)(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 3,
+                });
+          }),
+          (_.SendMsgAuthenticate = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultTransport())
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("TransportAuth.Authenticate#1", (0, _._)(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 3,
+                });
+          }),
+          (_.NotifyStartShutdownHandler = {
+            name: "TransportAuth.NotifyStartShutdown#1",
+            request: _,
+          }),
+          (_.RegisterForNotifyStartShutdown = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultHandlerRegistry())
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : __webpack_require__.RegisterServiceNotificationHandler(
+                  _.NotifyStartShutdownHandler,
+                  _,
+                );
+          }),
+          (_.NotifyStartShutdown = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "TransportAuth.NotifyStartShutdown#1",
+                  (0, _._)(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 3,
+                  },
+                );
+          }),
+          (_.SendMsgNotifyStartShutdown = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "TransportAuth.NotifyStartShutdown#1",
+                  (0, _._)(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 3,
+                  },
+                );
+          });
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor(_, _) {
+          var _, _, _, _, _, _, _;
+          (this.m_socket = null),
+            (this.Log = new _._("CWebSocketConnection", () => this.m_sName)),
+            (this.m_bDisconnectRequested = !1),
+            (this.m_bConnecting = !1),
+            (this.m_sName = _),
+            (this.m_fnOnMessageHandler = _.fnOnMessageHandler),
+            (this.m_fnOnCloseHandler = _.fnOnCloseHandler),
+            (this.m_fnOnReconnectStartHandler =
+              null !== (_ = _.fnOnReconnectStartHandler) && void 0 !== _
+                ? _
+                : () => {}),
+            (this.m_fnOnReconnectFinishHandler =
+              null !== (_ = _.fnOnReconnectFinishHandler) && void 0 !== _
+                ? _
+                : () => {}),
+            (this.m_nConnectAttemptsMax =
+              null !== (_ = _.nConnectAttemptsMax) && void 0 !== _ ? _ : 8),
+            (this.m_nConnectAttemptTimeoutMs =
+              null !== (_ = _.nConnectAttemptTimeoutMs) && void 0 !== _
+                ? _
+                : 1e3),
+            (this.m_bReconnectOnFailure =
+              null !== (_ = _.bReconnectOnFailure) && void 0 !== _ && _),
+            (this.m_nReconnectAttemptsMax =
+              null !== (_ = _.nReconnectAttemptsMax) && void 0 !== _ ? _ : 3e4),
+            (this.m_nReconnectAttemptTimeoutMs =
+              null !== (_ = _.nReconnectAttemptTimeoutMs) && void 0 !== _
+                ? _
+                : 1e4);
+        }
+        get name() {
+          return this.m_sName;
+        }
+        async Connect(_) {
+          return (
+            (this.m_sURL = _),
+            this.ConnectWithRetry(
+              this.m_sURL,
+              this.m_nConnectAttemptsMax,
+              this.m_nConnectAttemptTimeoutMs,
+            )
+          );
+        }
+        async Reconnect() {
+          return this.ConnectWithRetry(
+            this.m_sURL,
+            this.m_nReconnectAttemptsMax,
+            this.m_nReconnectAttemptTimeoutMs,
+          );
+        }
+        GetInterAttemptBackoffMs(_) {
+          return 1e3 * (0, _._)(_, 1, 5);
+        }
+        async ConnectWithRetry(_, _, _) {
+          this.m_bConnecting = !0;
+          let _ = 0;
+          do {
+            try {
+              const _ = await this.ConnectToSocket(_, _);
+              if (_.result == _._) return (this.m_bConnecting = !1), _;
+              this.Log.Warning(
+                `connect attempt failed: ${_.result} - ${_.message}`,
+              );
+            } catch (_) {
+              this.Log.Warning(
+                `connect attempt failed: exception ${_.name} - ${_}`,
+              );
+            }
+            const _ = this.GetInterAttemptBackoffMs(_);
+            this.Log.Info(`connect retry: attempt:${_}/${_} backoff:${_}`),
+              await new Promise((_) => setTimeout(_, _)),
+              (this.m_socket = null),
+              (_ += 1);
+          } while (_ < _);
+          return (
+            this.Log.Warning(
+              `websocket connect retry: limit exceeeded, bailing - ${this.name}`,
+            ),
+            (this.m_bConnecting = !1),
+            this.BShouldReconnect() && this.StartReconnect(),
+            {
+              result: _._,
+              message: "not ready, exceeded retry count",
+            }
+          );
+        }
+        Disconnect() {
+          this.Log.Info("disconnect requested"),
+            (this.m_bDisconnectRequested = !0),
+            this.m_socket.close();
+        }
+        PrepareForShutdown() {
+          this.Log.Info("shutdown pending"), (this.m_bDisconnectRequested = !0);
+        }
+        BShouldReconnect() {
+          return (
+            !this.m_bConnecting &&
+            !!this.m_bReconnectOnFailure &&
+            !this.m_bDisconnectRequested
+          );
+        }
+        async StartReconnect() {
+          this.Log.Info("start reconnect"),
+            (this.m_socket = null),
+            this.m_fnOnReconnectStartHandler({
+              connection: this,
+            });
+          if ((await this.Reconnect()).result != _._)
+            return (
+              this.Log.Warning("failed to re-connect to websocket after close"),
+              this.m_fnOnReconnectFinishHandler({
+                connection: this,
+                eResult: _._,
+              }),
+              void this.m_fnOnCloseHandler({
+                connection: this,
+                bError: !0,
+                bIsExpectedToReconnect: !1,
+              })
+            );
+          this.Log.Info("reconnect successful"),
+            this.m_fnOnReconnectFinishHandler({
+              connection: this,
+              eResult: _._,
+            });
+        }
+        async ConnectToSocket(_, _) {
+          if (null != this.m_socket)
+            return this.m_socket.readyState != WebSocket.OPEN
+              ? (this.Log.Error(
+                  `websocket in an unexpected state: ${this.m_socket.readyState}`,
+                ),
+                {
+                  result: _._,
+                  message: "websocket in an unexpected state",
+                })
+              : {
+                  result: _._,
+                  message: "ready",
+                };
+          try {
+            this.m_socket = new WebSocket(_);
+          } catch (_) {
+            return (
+              this.Log.Warning("failed to initialize websocket connection"),
+              {
+                result: _._,
+                message: "Failed to initialize websocket connection",
+              }
+            );
+          }
+          (this.m_socket.binaryType = "arraybuffer"),
+            (this.m_socket.onerror = this.OnSocketError),
+            (this.m_socket.onmessage = this.OnSocketMessage),
+            (this.m_socket.onopen = this.OnSocketOpen),
+            (this.m_socket.onclose = this.OnSocketClose);
+          return (await this.WaitForSocketOpen(this.m_socket, _))
+            ? (this.Log.Info("connection ready"),
+              {
+                result: _._,
+                message: "ready",
+              })
+            : (this.Log.Warning("failed to reach open state"),
+              {
+                result: _._,
+                message: "failed to reach open state",
+              });
+        }
+        async WaitForSocketOpen(_, _) {
+          if (_.readyState != WebSocket.CONNECTING)
+            return _.readyState == WebSocket.OPEN;
+          let _ = _ / 100;
+          for (; _.readyState == WebSocket.CONNECTING && _ > 0; )
+            _--, await new Promise((_) => setTimeout(_, 100));
+          return _.readyState == WebSocket.OPEN;
+        }
+        BCanSendMessages() {
+          return (
+            null != this.m_socket && this.m_socket.readyState == WebSocket.OPEN
+          );
+        }
+        OnSocketError(_) {
+          this.Log.Warning("websocket error");
+        }
+        OnSocketOpen(_) {
+          this.Log.Info("websocket open");
+        }
+        OnSocketClose(_) {
+          if (this.m_bDisconnectRequested)
+            return (
+              this.Log.Info("websocket closed"),
+              void this.m_fnOnCloseHandler({
+                connection: this,
+                bError: !1,
+                bIsExpectedToReconnect: !1,
+              })
+            );
+          if (this.m_bConnecting) return;
+          this.Log.Warning("websocket unexpectedly closed");
+          const _ = this.BShouldReconnect();
+          this.m_fnOnCloseHandler({
+            connection: this,
+            bError: !0,
+            bIsExpectedToReconnect: _,
+          }),
+            _ && this.StartReconnect();
+        }
+        async OnSocketMessage(_) {
+          this.m_fnOnMessageHandler(_.data);
+        }
+        SendSerializedMessage(_) {
+          try {
+            return this.m_socket.send(_), _._;
+          } catch (_) {
+            return _._;
+          }
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnSocketError", null),
+        (0, _._)([_._], _.prototype, "OnSocketOpen", null),
+        (0, _._)([_._], _.prototype, "OnSocketClose", null),
+        (0, _._)([_._], _.prototype, "OnSocketMessage", null);
+      const _ = new _._("WebUITransport");
+      class _ {
+        constructor() {
+          (this.m_iMsgSeq = 1),
+            (this.m_mapPendingMethodRequests = new Map()),
+            (this.m_messageHandlers = new _()),
+            (this.m_mapServiceCallErrorCount = new Map()),
+            (this.m_mapConnectionDetails = new Map()),
+            (this.m_bInitialized = !1),
+            (this.m_nMaximumMsgSizeBytes = 1024);
+        }
+        BIsValid() {
+          return this.m_bInitialized;
+        }
+        GetMaximumMsgSizeBytes() {
+          return this.m_nMaximumMsgSizeBytes;
+        }
+        TEST_GetMaximumMsgBodySizeBytes() {
+          return (
+            this.m_nMaximumMsgSizeBytes -
+            this.TEST_GetMsgHeaderEstimatedSizeBytes()
+          );
+        }
+        TEST_GetMsgHeaderEstimatedSizeBytes() {
+          return 128;
+        }
+        TEST_GetExcessivelyLargeBodySize() {
+          return 67108864;
+        }
+        ReportError(_) {
+          _.Warning(_);
+          const _ = (0, _._)();
+          _ &&
+            _.ReportError(new Error(_), {
+              bIncludeMessageInIdentifier: !0,
+              cCallsitesToIgnore: 1,
+            });
+        }
+        async Init() {
+          if (!_._.IN_CLIENT) return;
+          const _ = await SteamClient.WebUITransport.GetTransportInfo();
+          (this.m_nMaximumMsgSizeBytes = _.nMaximumMsgSizeBytes),
+            this.CreateConnection(
+              1,
+              "steamUI",
+              _.portSteamUI,
+              _.authKeySteamUI,
+            ),
+            this.CreateConnection(
+              2,
+              "clientdll",
+              _.portClientdll,
+              _.authKeyClientdll,
+            ),
+            (0, _._)().SetDefaultTransport(this),
+            (0, _._)().SetDefaultHandlerRegistry(this.m_messageHandlers),
+            _.RegisterForNotifyStartShutdown(this.OnStartShutdown);
+        }
+        get messageHandlers() {
+          return this.m_messageHandlers;
+        }
+        SetStatusEventHandler(_) {
+          this.m_fnOnStatusEventHandler = _;
+        }
+        SetReconnectErrorHandler(_) {
+          this.m_fnOnReconnectErrorHandler = _;
+        }
+        CreateConnection(_, _, _, _) {
+          const _ = {
+              bReconnectOnFailure: !0,
+              fnOnMessageHandler: this.OnWebsocketMessage,
+              fnOnCloseHandler: this.OnWebsocketClose,
+              fnOnReconnectStartHandler: this.OnWebsocketReconnectStart,
+              fnOnReconnectFinishHandler: this.OnWebsocketReconnectFinish,
+              nConnectAttemptsMax: 8,
+              nConnectAttemptTimeoutMs: 1e4,
+              nReconnectAttemptsMax: 8,
+              nReconnectAttemptTimeoutMs: 1e4,
+            },
+            _ = {
+              connection: new _(_, _),
+              sUrl: `ws://localhost:${_}/transportsocket/`,
+              sAuthKey: _,
+              eClientExecutionSite: _,
+            };
+          this.m_mapConnectionDetails.set(_, _);
+        }
+        SendMsg(_, _, _, _) {
+          return new Promise((_, _) => {
+            var _;
+            const _ = _.eClientExecutionSite;
+            if (null == _ || 0 == _)
+              return (
+                _.Error(`SendMsg: Invalid client execution site: ${_}`),
+                void _(`Transport SendMsg: invalid client execution site ${_}`)
+              );
+            const _ = this.m_mapConnectionDetails.get(_);
+            if (null == _)
+              return (
+                _.Error(
+                  `SendMsg: could not find connection for execution site: ${_}`,
+                ),
+                void _(
+                  `Transport SendMsg: could not find connection for execution site ${_}`,
+                )
+              );
+            const _ = _.connection;
+            if (!_.BCanSendMessages()) {
+              const _ =
+                null !== (_ = this.m_mapServiceCallErrorCount.get(_)) &&
+                void 0 !== _
+                  ? _
+                  : 1;
+              this.m_mapServiceCallErrorCount.set(_, _ + 1);
+              const _ = `SendMsg: Attempt to send message but socket wasn't ready: ${_.name} - ${_}`;
+              return (
+                1 == _ && this.ReportError(_),
+                _.Warning(_ + ` error count: ${_}`),
+                void _("Transport SendMsg: socket not ready")
+              );
+            }
+            const _ = this.m_iMsgSeq++;
+            _.SetEMsg(_.bSr),
+              _.Hdr().set_target_job_name(_),
+              _.Hdr().set_jobid_source("" + _);
+            const _ = _.Serialize();
+            if (_.byteLength >= this.m_nMaximumMsgSizeBytes) {
+              _.Error(
+                `SendMsg: message exceeds maximum size: ${_.byteLength} >= ${this.m_nMaximumMsgSizeBytes}`,
+              );
+              const _ = _._.Init(_);
+              return _.Hdr().set_eresult(_._), void _(_);
+            }
+            if (_.SendSerializedMessage(_) != _._)
+              return (
+                _.Error("SendMsg: Failed to send message"),
+                void _("Transport SendMsg: failed to send message")
+              );
+            this.m_mapPendingMethodRequests.set(_, {
+              m_iSeq: _,
+              m_responseClass: _,
+              m_fnCallback: _,
+              m_fnError: _,
+            });
+          });
+        }
+        SendNotification(_, _, _) {
+          var _;
+          const _ = _.eClientExecutionSite;
+          if (null == _ || 0 == _)
+            return (
+              _.Error(`SendNotification: Invalid client execution site: ${_}`),
+              !1
+            );
+          const _ = this.m_mapConnectionDetails.get(_);
+          if (null == _)
+            return (
+              _.Error(
+                `SendNotification: could not find connection for execution site: ${_}`,
+              ),
+              !1
+            );
+          const _ = _.connection;
+          if (!_.BCanSendMessages()) {
+            const _ =
+              null !== (_ = this.m_mapServiceCallErrorCount.get(_)) &&
+              void 0 !== _
+                ? _
+                : 1;
+            this.m_mapServiceCallErrorCount.set(_, _ + 1);
+            const _ = `SendNotification: Attempt to send message but socket wasn't ready: ${_.name} - ${_}`;
+            return (
+              1 == _ && this.ReportError(_),
+              _.Warning(_ + ` error count: ${_}`),
+              !1
+            );
+          }
+          _.SetEMsg(_.bSr), _.Hdr().set_target_job_name(_);
+          return _.SendSerializedMessage(_.Serialize()) == _._;
+        }
+        async ConnectToSite(_) {
+          const _ = _.connection,
+            _ = await _.Connect(_.sUrl);
+          if (_.result != _._) return _;
+          return (await this.SendAuthMessage(_)).BSuccess()
+            ? {
+                result: _._,
+                message: "connected",
+              }
+            : {
+                result: _._,
+                message: "client auth failed",
+              };
+        }
+        async MakeReady() {
+          const _ = [];
+          for (const [_, _] of this.m_mapConnectionDetails)
+            _.push(this.ConnectToSite(_));
+          const _ = await Promise.all(_);
+          (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
+          for (const _ of _) if (_.result != _._) return _;
+          return {
+            result: _._,
+            message: "ready",
+          };
+        }
+        GetConnectionDetails(_) {
+          for (const [_, _] of this.m_mapConnectionDetails)
+            if (_.connection === _) return _;
+          return (
+            _.Error("GetConnectionDetails: failed to identify connection"), null
+          );
+        }
+        DispatchTransportStatusUpdate() {
+          if (!this.m_fnOnStatusEventHandler) return;
+          let _ = !0;
+          for (const [_, _] of this.m_mapConnectionDetails)
+            _.connection.BCanSendMessages() || (_ = !1);
+          this.m_fnOnStatusEventHandler({
+            bConnected: _,
+          });
+        }
+        OnWebsocketReconnectStart(_) {
+          this.DispatchTransportStatusUpdate();
+        }
+        OnWebsocketReconnectFinish(_) {
+          var _;
+          if ((this.DispatchTransportStatusUpdate(), _.eResult != _._))
+            return (
+              _.Warning(
+                "OnWebsocketReconnect: Failed to reconnect to steam client",
+              ),
+              void (
+                null === (_ = this.m_fnOnReconnectErrorHandler) ||
+                void 0 === _ ||
+                _.call(this, {})
+              )
+            );
+          this.FailAllPendingRequests();
+          const _ = this.GetConnectionDetails(_.connection);
+          _ && this.SendAuthMessage(_);
+        }
+        OnWebsocketClose(_) {
+          _.bIsExpectedToReconnect || this.FailAllPendingRequests();
+        }
+        OnWebsocketMessage(_) {
+          const _ = new _._(_),
+            _ = _._.InitHeaderFromPacket(_);
+          __webpack_require__.Hdr().jobid_target() &&
+          __webpack_require__.Hdr().jobid_target() !== _.kFb
+            ? this.DispatchMethodResponse(_)
+            : this.DispatchNotification(_);
+        }
+        DispatchMethodResponse(_) {
+          const _ = parseInt(_.Hdr().jobid_target()),
+            _ = this.m_mapPendingMethodRequests.get(_);
+          if (null == _)
+            return void (0, _._)(
+              !1,
+              "Transport Error: no pending callback for request",
+            );
+          (0, _._)(
+            _ == _.m_iSeq,
+            "Transport Error: mistmatched request sequence",
+          ),
+            this.m_mapPendingMethodRequests.delete(_);
+          const _ = _._.InitFromMsg(_.m_responseClass, _);
+          __webpack_require__.m_fnCallback(_);
+        }
+        DispatchNotification(_) {
+          this.m_messageHandlers.DispatchMsgToHandlers(_, (_) => {
+            (0, _._)(
+              !1,
+              "Transport Error: A notification should not generate a response",
+            );
+          });
+        }
+        FailAllPendingRequests() {
+          for (const [_, _] of this.m_mapPendingMethodRequests) {
+            this.ReportError(
+              `FailAllPendingRequests: forcing failure for request: ${_.m_responseClass.name}`,
+            );
+            let _ = _._.Init(_.m_responseClass);
+            _.Hdr().set_eresult(_._), _.m_fnCallback(_);
+          }
+          this.m_mapPendingMethodRequests.clear();
+        }
+        async SendAuthMessage(_) {
+          const _ = _.AuthenticateHandler.name,
+            _ = {
+              eClientExecutionSite: _.eClientExecutionSite,
+            },
+            _ = _._.Init(_);
+          _.Hdr().set_webui_auth_key(_.sAuthKey);
+          return await this.SendMsg(_, _, _.AuthenticateHandler.response, _);
+        }
+        OnStartShutdown(_) {
+          for (const [_, _] of this.m_mapConnectionDetails)
+            _.connection.PrepareForShutdown();
+          return _._;
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnWebsocketReconnectStart", null),
+        (0, _._)([_._], _.prototype, "OnWebsocketReconnectFinish", null),
+        (0, _._)([_._], _.prototype, "OnWebsocketClose", null),
+        (0, _._)([_._], _.prototype, "OnWebsocketMessage", null),
+        (0, _._)([_._], _.prototype, "OnStartShutdown", null);
+      const _ = new _();
+      var _ = __webpack_require__("chunkid");
       function _() {
         return _._.IN_MOBILE ? _._ : (0, _._)();
       }
@@ -863,7 +1810,7 @@
         }
         async Init(_ = 0, _ = null, _ = null) {
           (this.m_bInitialized = !1),
-            (this.m_WebUIServiceTransport = _._),
+            (this.m_WebUIServiceTransport = _),
             (this.m_unAccountID = _),
             (this.m_Transport = _),
             (this.m_Storage = _),

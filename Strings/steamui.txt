@@ -597,7 +597,7 @@
 "&\n$CAudio_GetMonoDownmixEnabled_Request"8\n%CAudio_GetMonoDownmixEnabled_Response
 "&\n$CAudio_GetUseBluetoothForMic_Request"8\n%CAudio_GetUseBluetoothForMic_Response
 "&\n$CRemoteClient_CancelPairing_Response">\n(CRemoteClient_CancelPairing_Notification
-"&\n$CShader_ReportExternalBuild_Response2
+"&\n$CShader_ReportExternalBuild_Response"f\n.CShader_ReportBucketProcessingComplete_Request
 "&\n$CStorageDeviceManager_Adopt_Response"?\n$CStorageDeviceManager_Format_Request
 "&\n\fCMsgStopLoad
 "'\n%CAudio_SetMonoDownmixEnabled_Response"+\n)CAudio_SupportsUseBluetoothForMic_Request"=\n*CAudio_SupportsUseBluetoothForMic_Response
@@ -2234,7 +2234,6 @@ ${LANGUAGE}
 %s.old
 %s.old.%i
 %s.old.1
-%s.steamscreensavers.host
 %s.vdf
 %s/%c%c/%s_%s
 %s/%d/%s?t=%u&cv=%u
@@ -3513,6 +3512,7 @@ ${LANGUAGE}
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
 (\t"1\n/CGameRecording_UserUpdateTimelineEntry_Response"y\n.CGameRecording_UserRemoveTimelineEntry_Request
+(\t"1\n/CShader_ReportBucketProcessingComplete_Response2
 (\t"2\n!CRemoteClient_AllocateSDR_Request
 (\t"3\n$CSteamEngine_GetGameIDForPID_Request
 (\t"3\n1CAccountHardware_RegisterSteamController_Response"n\n<CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -5769,7 +5769,8 @@ ${LANGUAGE}
 -exitsteam
 -flushconfig
 -force-no-dbus-simulate-user-activity
--force_survey
+-force-oobe-stage1
+-force-oobe-stage2
 -forcecontrollerappid
 -foreground
 -friendsui
@@ -5789,7 +5790,6 @@ ${LANGUAGE}
 -ifrunning
 -inf
 -install
--keeploginstatus
 -language
 -led-enumerate-sysfs-all
 -legacygame "%s" -overlaykey "valve.steam.desktopgame.%u" -pid %u
@@ -5841,8 +5841,6 @@ ${LANGUAGE}
 -system-composer
 -system\SteamFrameWirelessAdapterPairingDialog
 -tenfoot
--test-device-type
--test-glibc-version
 -testled
 -testoobe
 -testoobestage2
@@ -5853,7 +5851,6 @@ ${LANGUAGE}
 -userchooser
 -vguimessages
 -vronly
--webui-skip-webhelper-check
 -windowed
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of
@@ -6813,6 +6810,7 @@ ${LANGUAGE}
 /.COffline_GetUnsignedOfflineLogonTicket_Request
 /.CPlayer_NewSteamAnnouncementState_Notification
 /.CPublishedFile_FileDeleted_Client_Notification
+/.CShader_ReportBucketProcessingComplete_Request
 /.CSteamInputService_ControllerStateFlow_Request
 /.CSteamInputService_TritonUndocked_Notification
 /.CStore_MigratePartnerLinkTracking_Notification
@@ -7216,9 +7214,9 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/vrstreamthread.cpp
 /data/src/steamUI/gamestream/x264wrapper.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp
-/data/src/steamUI/hardwareupdatecontroller.cpp:148
-/data/src/steamUI/hardwareupdatecontroller.cpp:219
-/data/src/steamUI/hardwareupdatecontroller.cpp:263
+/data/src/steamUI/hardwareupdatecontroller.cpp:156
+/data/src/steamUI/hardwareupdatecontroller.cpp:249
+/data/src/steamUI/hardwareupdatecontroller.cpp:293
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/ledcontroller.cpp:1479
@@ -7541,6 +7539,7 @@ ${LANGUAGE}
 0.CPublishedFile_UpdateContentDescriptors_Request
 0.CRemoteClient_EnableSteamBroadcast_Notification
 0.CRemoteClient_RegisterStatusUpdate_Notification
+0.CShader_ReportBucketProcessingComplete_Response"
 0.CSiteManagerClient_TrackedPayments_Notification
 0.CSteamInputService_ControllerStateFlow_Response
 0.CSteamInputService_GetTritonPairingInfo_Request
@@ -7666,8 +7665,6 @@ ${LANGUAGE}
 0\r8np
 0\tzc
 0`P0
-0af0aa96
-0edda764
 0fl:
 0pp@5tqE?|sO541
 0x%llx
@@ -8094,7 +8091,6 @@ ${LANGUAGE}
 10CUtlMemoryIP18CBaseFrameFunctionE
 10CUtlMemoryIP18CGameStreamSessionE
 10CUtlMemoryIP19HTMLCommandBuffer_tE
-10CUtlMemoryIP21CRemoteSteamAppClientE
 10CUtlMemoryIP23CGameStreamAudioEncoderE
 10CUtlMemoryIP24CPromiseResolutionThreadE
 10CUtlMemoryIP24IGameStreamAudioCallbackE
@@ -8374,7 +8370,6 @@ ${LANGUAGE}
 10CUtlVectorIP18CBaseFrameFunction10CUtlMemoryIS1_EE
 10CUtlVectorIP18CGameStreamSession10CUtlMemoryIS1_EE
 10CUtlVectorIP19HTMLCommandBuffer_t10CUtlMemoryIS1_EE
-10CUtlVectorIP21CRemoteSteamAppClient10CUtlMemoryIS1_EE
 10CUtlVectorIP23CGameStreamAudioEncoder10CUtlMemoryIS1_EE
 10CUtlVectorIP24CPromiseResolutionThread10CUtlMemoryIS1_EE
 10CUtlVectorIP24IGameStreamAudioCallback10CUtlMemoryIS1_EE
@@ -12318,6 +12313,7 @@ ${LANGUAGE}
 46COffline_GetUnsignedOfflineLogonTicket_Request
 46CPlayer_NewSteamAnnouncementState_Notification
 46CPublishedFile_FileDeleted_Client_Notification
+46CShader_ReportBucketProcessingComplete_Request
 46CSteamInputService_ControllerStateFlow_Request
 46CSteamInputService_InitControllerList_Response
 46CSteamInputService_TritonUndocked_Notification
@@ -12366,6 +12362,7 @@ ${LANGUAGE}
 47CRemoteClient_EnableSteamBroadcast_Notification
 47CRemoteClient_RegisterStatusUpdate_Notification
 47CRemotePlayTogether_Notification_ControllerSlot
+47CShader_ReportBucketProcessingComplete_Response
 47CSiteManagerClient_TrackedPayments_Notification
 47CSteamInputService_ControllerStateFlow_Response
 47CSteamInputService_GetTritonPairingInfo_Request
@@ -12901,7 +12898,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-60000000
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
@@ -12912,6 +12908,7 @@ ${LANGUAGE}
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -13024,7 +13021,6 @@ ${LANGUAGE}
 73CPlayer_GetPurchasedProfileCustomizations_Response_PurchasedCustomization
 743F-2E0E-C9A5-C375
 74CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails_AccountPrivateData
-7636b50d
 768 Kbps
 768K
 76CPublishedFile_SetPlaytimeForControllerConfigs_Request_ControllerConfigUsage
@@ -14481,7 +14477,6 @@ AddUInt64
 AddUninstallEntry
 AddVRDeviceInfo
 AddedGameToWishlist
-Adding audio samples [current_sample=%lld][samples=%d]
 Adding connection back to pool, but not found in in use list or waiting list
 Adding preview config for appid: %u\n
 Adding process %u for gameID %llu\n
@@ -15360,9 +15355,7 @@ Broadcast.RegisterForViewerRequests
 Broadcast.RejectViewerRequest
 Broadcast.StopBroadcasting
 BroadcastClient
-BroadcastMessageToClients
 BroadcastNetworkDeviceState
-BroadcastNotification
 Broadcast\EncoderSetting
 Broadcast\IncludeDesktop
 Broadcast\MaxKbps
@@ -17518,6 +17511,7 @@ CRemotePlayController::OnRemotePlayTogetherPlayerJoined
 CRemotePlayController::OnRemotePlayTogetherPlayerLeft
 CRemotePlayController::OnStreamingClientConnected
 CRemotePlayController::OnStreamingClientDisconnected
+CRemotePlayController::OnStreamingClientSettingsChanged
 CRemotePlayController::OnStreamingClientUsedInput
 CRemoteSteamAppMgr::OnAppEventStateChange
 CRemoteSteamAppMgr::OnRemoteClientAppCloudStatusChanged
@@ -19015,7 +19009,6 @@ Created encoder %s for codec %d
 Created mapping %s when set to fail if created\n
 CreatedByFollowedUsersRankedByPublicationDate
 CreatedByFriendsRankedByPublicationDate
-Creates lots of timeline data
 Creating broadcast WebRTC session
 Creating new audio encoder for codec %d
 Creating pulse audio recorder for process %d
@@ -19901,7 +19894,6 @@ EGameSearchAction
 EGameSearchResult
 EGamescopeBlurMode
 EGamingDeviceType
-EGamingDeviceType override: %d\n
 EGetChannelsAlgorithm
 EGetFrameFromMPD
 EGetFramesFromVideo
@@ -20425,7 +20417,6 @@ Error: %s: failed eject drive: %s
 Error: %s: failed to add event listener for gamescope-control: %d
 Error: %s: failed to add pending library folder for mount path: %s
 Error: %s: failed to bind action manager
-Error: %s: failed to broadcast notification
 Error: %s: failed to collect output for: %s
 Error: %s: failed to compute desktop folder path
 Error: %s: failed to connect to UDisks2: %s\n
@@ -20444,8 +20435,6 @@ Error: %s: failed to find a voice name for locale: %s
 Error: %s: failed to find home directory
 Error: %s: failed to find root device for drive: 0x%c
 Error: %s: failed to get gdbus connection: %s\n
-Error: %s: failed to initialize HTTP server
-Error: %s: failed to initialize WebUI job dispatcher
 Error: %s: failed to initialize XInput2, some features may be missing
 Error: %s: failed to initialize XRandR, some features may be missing
 Error: %s: failed to initialize block device
@@ -20469,7 +20458,6 @@ Error: %s: failed to retrieve file open dialog results
 Error: %s: failed to retrieve network devices data
 Error: %s: failed to retrieve perf settings state
 Error: %s: failed to retrieve system manager settings
-Error: %s: failed to send notification to client
 Error: %s: failed to set adapter to discovery mode %s
 Error: %s: failed to set atomupd proxy: %s:%d
 Error: %s: failed to set low power mode %s
@@ -20521,7 +20509,6 @@ Error: %s: update check failed: %s\n%s
 Error: %s: update failed: %s\n%s
 Error: %s: version query error\n
 Error: %s\n
-Error: Attempt to send message with no clients connected
 Error: CLEDDeviceSysfs: failed to write property: %s -> %s
 Error: CX11WindowProperty: failed to parse array property: key:%s format:%d index:%d
 Error: CX11WindowProperty: failed to parse property: key:%s format:%d
@@ -20933,10 +20920,6 @@ Failed: invalid callback parameter
 FailedToAdd
 Fails the current game stream session
 Failure
-Fakes a call to fire the achievement progress callback (like 10/100 bonks)
-Fakes a system resume call
-Fakes a system suspend call
-Fakes app state to test library UI
 False
 Family Group
 FamilyGroupFormerMember
@@ -21081,6 +21064,8 @@ Force Password Change
 Force Run Restriction
 Force a Specific AppID for Steam Controller Config - Prevents context/app switching from changing configuration
 Force canceled while pending
+Force show stage1 oobe
+Force show stage2 oobe
 Force the use of the system browser composer
 ForceAcceptInvite
 ForceOOBE
@@ -22853,10 +22838,8 @@ Health Check: CHTTPClient not ready
 Health Check: HTTP: OK
 Health Check: HTTP: bad status code: %d
 Health Check: HTTP: fetch failed
-Health Check: HTTP: starting with url: %s
 Health Check: WS: OK
 Health Check: WS: connect failed
-Health Check: WS: starting with url: %s
 HeartbeatBroadcast
 Hebrew
 Height
@@ -24581,7 +24564,7 @@ Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
-May 18 2026 20:56:02
+May 29 2026 17:53:42
 MaybeAllocateAligned cannot fail here.
 MbP?
 Media
@@ -25321,6 +25304,7 @@ Method ReplaceRoleActions() not implemented.
 Method ReportAccessibilitySettings() not implemented.
 Method ReportApp() not implemented.
 Method ReportBroadcastChannel() not implemented.
+Method ReportBucketProcessingComplete() not implemented.
 Method ReportClientArgs() not implemented.
 Method ReportClientError() not implemented.
 Method ReportClipRange() not implemented.
@@ -25943,6 +25927,7 @@ N21CRemotePlayController49CCallbackInternal_OnRemoteDevicePairingPINChangedE
 N21CRemotePlayController50CCallbackInternal_OnRemoteClientDongleDisconnectedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
+N21CRemotePlayController50CCallbackInternal_OnStreamingClientSettingsChangedE
 N21CRemotePlayController51CCallbackInternal_OnRemoteClientInputSettingsChangeE
 N21CRemotePlayController52CCallbackInternal_OnRemotePlayTogetherGroupDisbandedE
 N21CRemotePlayController53CCallbackInternal_OnRemoteClientVRStreamingInvitationE
@@ -27477,7 +27462,6 @@ Overlay.SetOverlayState
 OverlayHidden
 OverlayToolBarListView
 Overlay_EnableSoftProcessKill
-Override the current EGamingDeviceType (main/dev only)
 OverrideBrowserComposerMode
 Overwriting on-disk registry with newly created registry.
 OwnGameplayInfo
@@ -28209,7 +28193,6 @@ Protocol
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Protocol error
-Provide a glibc version for testing
 Provider doesn't support currency
 Proxy
 Proxy Authentication Required
@@ -28301,7 +28284,6 @@ QueuedMatchmaking
 QueuedMatchmakingGameHost
 Queueing request for http%s://%s%s, %d already in queue, we are still discovering HTTP/2 support\n
 Queueing request for http%s://%s%s, %d already in queue\n
-Queuing new audio [timestamp=%lld][samples=%d]
 Quit
 Quit requested while Steam is focused, disconnecting\n
 QuitRestart
@@ -28696,7 +28678,6 @@ Registered global hotkey: name:'%s' chord:[ %s ]
 Registering duplicate IWaylandEventListener
 Registry
 Rejang
-Rejecting connection attempt from unknown source
 Relative URL: %s\n
 RelativeRangeEdge
 Relay Failed
@@ -28804,6 +28785,7 @@ RemotePlay.UnpairLocalWifiAP
 RemotePlay.UnpairRemoteClient
 RemotePlay.UnpairRemoteDevice
 RemotePlay.UnpairRemoteDevices
+RemotePlayClientCaps
 RemotePlayClientConfig
 RemotePlayServerConfig
 RemotePlayTogether
@@ -28846,6 +28828,7 @@ Repeated map key: '
 ReplaceRoleActions
 ReportAccessibilitySettings
 ReportBroadcastChannel
+ReportBucketProcessingComplete
 ReportClientArgs
 ReportClientError
 ReportClipRange
@@ -30166,7 +30149,6 @@ ShowVROculusOnly
 ShowVRStreamingLaunch
 Shutdown
 ShutdownAndRestartOther
-Shutting down
 SiblingId
 SigEd448
 SignInstallScript
@@ -30211,7 +30193,6 @@ Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Size() == operand.Size()
 SkinV5
 Skip PC power operations
-Skip local webhelper connection checks
 SkipDiscoveryQueueItem
 SkipOfflineModeWarning
 Skipped at least 1 frame while encoding video\n
@@ -30523,7 +30504,6 @@ Steam Controller Setting Saved Binding Selection for AppID: %s, URL: %s, Control
 Steam ID does not pass strict parsing: '%s'
 Steam In-Home Streaming
 Steam Input Configuration AppID has invalid cloud state: %d
-Steam Main Client
 Steam Offline - Saving Controller Configuration Autosave as Offline Save for %s- AppID: %d.\n
 Steam Overlay Layer
 Steam Pipeline Caching Layer
@@ -31256,7 +31236,6 @@ TCP disconnect\n
 TCP send queue for send thread was above fatal limit %d for more than %d seconds, killing process.
 TELETEXSTRING
 TEST_ACHIEVEMENT
-TF_DEMOMAN_DAMAGE_GRIND
 THEN
 TKju(7
 TLS 1.3, client CertificateVerify
@@ -35939,9 +35918,7 @@ acpitz
 acpt_state
 action
 action_set_name
-actionlayer
 actions
-actionset
 activate
 activation_code
 activation_type
@@ -43627,8 +43604,6 @@ gqr<
 gr.json
 gr_enum_audio
 gr_mode
-gr_systemresume
-gr_systemsuspend
 gr_write_json
 gradientEnd
 gradientStart
@@ -48995,7 +48970,6 @@ m_vecParentalPlaytimeWarnings
 m_vecParentalSettingsChanged
 m_vecPendingAchievementsCallbacks
 m_vecPendingAppContentBetaRequests
-m_vecPendingClientDeletions
 m_vecPendingClipRequests
 m_vecPendingJobPromises
 m_vecPendingManualGameRecordingDeletes
@@ -50377,6 +50351,7 @@ old_rsa_priv_decode
 oldsettings
 oldtall
 oldwide
+omitting firmware update for unit with invalid serial number: %s, scheduling retry
 on all connections.
 on this connection.
 onBasis
@@ -52427,7 +52402,6 @@ remove
 removeFromCRL
 remove_all_steamguard_cookies
 remove_property
-removeactionlayer
 removed
 removeditemids
 removelibraryfolder
@@ -52931,7 +52905,6 @@ screen-reader1
 screen_reader_locale_default
 screen_reader_locales_available
 screenreader.vdf
-screensavers
 screenshot
 screenshot_full
 screenshot_handle
@@ -53551,6 +53524,7 @@ skip_steamvr_install_dialog
 skip_storage_update
 skip_unvetted_apps
 skipped
+skipping firmware update for unit with invalid serial number: %s
 slg_write
 slot
 slot full
@@ -54676,7 +54650,6 @@ sys$qiow error
 syscall
 sysconf
 sysid
-sysmanager_format_storage
 sysreqs
 system
 system lib
@@ -54803,15 +54776,12 @@ terminate called recursively\n
 terminate called without an active exception\n
 tesa
 test
-test formatting storage
 test on resume from suspend
 test resuming all games
 test suspending all games
-test_gamerelease_appstate
 test_loc_token
 test_result
 test_resume_from_suspend
-test_tf2_achievement_process
 testnotification
 testonly
 tests
@@ -54943,7 +54913,6 @@ timeline_480_
 timeline_duration_seconds
 timeline_marker_svg
 timeline_offset_ms
-timeline_stress_test
 timelines
 timeout
 timescale

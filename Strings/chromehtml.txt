@@ -64,7 +64,6 @@
 !is_large()
 !m_ChromeIPCClient.BInitialized()
 !m_data.HasError()
-!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 " \n\rCMsgSetUIMode
 " because it is missing required fields:
@@ -628,9 +627,7 @@ $\n k_SystemAudioPortDirection_Input
 --full-memory-crash-report
 --gaia-url=http://disabled.invalid
 --gpu-launcher='%s'
---ignore-certificate-errors
 --ignore-gpu-blocklist
---in-process-gpu
 --log-file=%s
 --log-severity=disable
 --no-sandbox
@@ -643,7 +640,6 @@ $\n k_SystemAudioPortDirection_Input
 --remote-debugging-address=127.0.0.1
 --remote-debugging-port=%s
 --renderer-cmd-prefix='konsole -title renderer -e gdb --args'
---single-process
 --use-angle=vulkan
 --use-fake-ui-for-media-stream
 --valve-enable-accessibility
@@ -670,14 +666,11 @@ $\n k_SystemAudioPortDirection_Input
 -\n\rskia_graphite
 -allowbrowserviewunderlays
 -arch
--browser-offline
 -buildid=%u
 -cachedir=%s
 -cef-allow-browser-underlays
--cef-disable-blink-features
 -cef-disable-breakpad
 -cef-disable-browser-underlays
--cef-disable-features
 -cef-disable-gpu
 -cef-disable-gpu-compositing
 -cef-disable-gpu-sandbox
@@ -693,14 +686,10 @@ $\n k_SystemAudioPortDirection_Input
 -cef-disable-site-isolation
 -cef-disable-touch-focus-workaround
 -cef-disable-xcomposite-workaround
--cef-enable-blink-features
 -cef-enable-debugging
--cef-enable-features
 -cef-enable-gpu-debugging
 -cef-enable-low-delay-live-stream
 -cef-enable-vaapi
--cef-extra-flags
--cef-force-32bit
 -cef-force-accessibility
 -cef-force-browser-underlays
 -cef-force-gpu
@@ -710,11 +699,8 @@ $\n k_SystemAudioPortDirection_Input
 -cef-force-opaque-backgrounds
 -cef-force-sandbox
 -cef-full-memory-crash-report
--cef-ignore-certificate-errors
--cef-in-process-gpu
 -cef-log-sandbox
 -cef-restart-on-ui-mode-change
--cef-single-process
 -cef-use-vulkan
 -cef-verbose-js-logging
 -cef-verbose-logging
@@ -737,7 +723,6 @@ $\n k_SystemAudioPortDirection_Input
 -disablerendererrestart
 -disabletouchfocusworkaround
 -enable-keyring
--fakeoffline
 -force-opaque-background
 -force-sandbox
 -forcebrowserviewunderlays
@@ -1392,7 +1377,6 @@ AliPay
 AliPayHK
 All Friends
 AllGuides
-Allow self-signed certificates
 Allow webhelper to create BrowserView underlays
 Allowed playtime exceeded
 Already Active
@@ -1412,11 +1396,6 @@ AndroidSteamPackageRoot
 Announcement
 Anonymous Game Server
 Anonymous User
-Any additional flags to pass to CEF
-Any blink features to disable
-Any blink features to enable
-Any features to disable
-Any features to enable
 App Running
 AppendedSHA
 Application running
@@ -2562,8 +2541,6 @@ Force the usage of opaque backgrounds for CEF
 ForceUpdate
 Forced Off
 Forced create but already created for SharedObjectEvent\n
-Forces offline browser mode
-Forces usage of 32-bit steamwebhelper when available
 Forcing secure cookie flag as samesite=none
 Found
 Found invalid proto option data for:
@@ -3563,8 +3540,6 @@ Romanian
 RuPay
 Running Script
 Running Update
-Runs CEF GPU processing as thread of browser process
-Runs CEF processes in single process
 Russian
 SET NULL
 SHMemStream header is corrupt in GetInternal()\n
@@ -4035,7 +4010,6 @@ V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*
 V_MakeAbsolutePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
-V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension

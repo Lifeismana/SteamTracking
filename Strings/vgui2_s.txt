@@ -505,8 +505,6 @@ $\nY8O
 -pid
 -steamdeckdisplay
 -steammachinedisplay
--test-device-type
--test-glibc-version
 -vguifocus
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -1550,7 +1548,6 @@ DrawSetSubTextureRGBA out of bounds (height)\n
 DrawSetSubTextureRGBA out of bounds (width)\n
 Dutch
 E=FZGrH
-EGamingDeviceType override: %d\n
 ERROR
 ERROR: %s: failed to set hostname\n
 ERROR: %s: failed to set timezone\n
@@ -2477,7 +2474,6 @@ Option must not use reserved name "uninterpreted_option".
 OrderID
 Out of Memory
 Out of memory
-Override the current EGamingDeviceType (main/dev only)
 Overwriting on-disk registry with newly created registry.
 OwnerID
 PCS illuminant is not D50
@@ -2547,7 +2543,6 @@ Profile length does not match profile
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
-Provide a glibc version for testing
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
 PurchaseCountryCode

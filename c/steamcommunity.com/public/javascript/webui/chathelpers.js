@@ -25,7 +25,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_japanese.json": [611, 3485],
           "./friendsui_koreana.json": [33731, 6971],
           "./friendsui_latam.json": [923, 1499],
-          "./friendsui_norwegian.json": [57767, 4776],
+          "./friendsui_norwegian.json": [80148, 4776],
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
@@ -73,7 +73,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_japanese.json": [611, 3485],
           "./friendsui_koreana.json": [33731, 6971],
           "./friendsui_latam.json": [923, 1499],
-          "./friendsui_norwegian.json": [57767, 4776],
+          "./friendsui_norwegian.json": [80148, 4776],
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
@@ -122,7 +122,7 @@ var CLSTAMP = "steamdb";
           "./shared_koreana.json": [13578, 7539],
           "./shared_latam.json": [85570, 2435],
           "./shared_norwegian.json": [48237, 2320],
-          "./shared_polish.json": [57149, 8967],
+          "./shared_polish.json": [79530, 8967],
           "./shared_portuguese.json": [76682, 6239],
           "./shared_romanian.json": [50692, 2749],
           "./shared_russian.json": [60868, 8025],
@@ -170,7 +170,7 @@ var CLSTAMP = "steamdb";
           "./shared_koreana.json": [13578, 7539],
           "./shared_latam.json": [85570, 2435],
           "./shared_norwegian.json": [48237, 2320],
-          "./shared_polish.json": [57149, 8967],
+          "./shared_polish.json": [79530, 8967],
           "./shared_portuguese.json": [76682, 6239],
           "./shared_romanian.json": [50692, 2749],
           "./shared_russian.json": [60868, 8025],
@@ -427,13 +427,14 @@ var CLSTAMP = "steamdb";
             TAKEOVER_ANNOUNCEMENT_GID: "",
           };
         _.createContext({});
+        var _ = __webpack_require__("chunkid");
         let _ = {
           success: !0,
-          result: 1,
+          result: _._,
         };
         class _ {
           m_connection = new _();
-          FailureResult(_ = 2) {
+          FailureResult(_ = _._) {
             let _ = {
               success: !1,
               result: _,
@@ -445,7 +446,7 @@ var CLSTAMP = "steamdb";
               this.m_connection &&
                 !this.m_connection.connected_to_client &&
                 (_.connect_failed = !0),
-              7 == _ && (_.call_unsupported = !0),
+              _ == _._ && (_.call_unsupported = !0),
               _
             );
           }
@@ -501,7 +502,7 @@ var CLSTAMP = "steamdb";
             };
             return this.GenericEResultCall(_, !0).then((_) => {
               if (_.connect_failed) return;
-              let _ = 1 == _.result;
+              let _ = _.result == _._;
               return this.m_mapCacheSubscribedApp.set(_, _), _;
             });
           }
@@ -530,13 +531,13 @@ var CLSTAMP = "steamdb";
                 _ && !this.BClientAccountMatches()
                   ? {
                       success: !1,
-                      result: 19,
+                      result: _._,
                       account_mismatch: !0,
                     }
                   : this.m_connection
                       .SendMsgAndAwaitResponse(_)
                       .then((_) =>
-                        1 === _.success ? _ : this.FailureResult(_.success),
+                        _.success === _._ ? _ : this.FailureResult(_.success),
                       ),
               )
               .catch(() => this.FailureResult());
@@ -633,7 +634,7 @@ var CLSTAMP = "steamdb";
                     message: "GetClientInfo",
                   })
                     .then((_) => {
-                      1 == _.success
+                      _.success == _._
                         ? ((this.m_ClientInfo.ulVersion = _.clientversion),
                           (this.m_ClientInfo.bFriendsUIEnabled = !!_.friendsui),
                           (this.m_ClientInfo.unAccountID = _.accountid),
@@ -972,6 +973,7 @@ var CLSTAMP = "steamdb";
               : console.assert(!!_, _, ..._)
             : _ || console.warn(_, ..._);
         }
+        var _ = __webpack_require__("chunkid");
         function _(_, _, _, _) {
           var _,
             _ = arguments.length,
@@ -1134,10 +1136,6 @@ var CLSTAMP = "steamdb";
           m_cbkTokensChanged = new _();
           m_rgLocalesToUse;
           m_bReportIndividualMissingTokens = !0;
-          static sm_ErrorReportingStore;
-          static InstallErrorReportingStore(_) {
-            this.sm_ErrorReportingStore = _;
-          }
           static GetLanguageFallback(_) {
             return "sc_schinese" === _ ? "schinese" : "english";
           }
@@ -1234,11 +1232,10 @@ var CLSTAMP = "steamdb";
               return;
             let _ = this.m_mapTokens.get(_.substring(1));
             if (void 0 !== _) return _;
-            !_ &&
-              _.sm_ErrorReportingStore &&
-              !_ &&
-              this.m_bReportIndividualMissingTokens &&
-              _.sm_ErrorReportingStore.ReportError(
+            _ ||
+              _ ||
+              !this.m_bReportIndividualMissingTokens ||
+              (0, _._)().ReportError(
                 new Error(
                   `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
@@ -1914,6 +1911,876 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        const _ = 1,
+          _ = 2,
+          _ = 7,
+          _ = 19;
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        async function _(_, _ = "SHA-256") {
+          let _;
+          var _;
+          "string" == typeof _
+            ? ((_ = _), (_ = new TextEncoder().encode(_).buffer))
+            : (_ = _);
+          return (function (_) {
+            const _ = new Uint8Array(_);
+            let _ = "";
+            for (let _ = 0; _ < _.length; _++)
+              _ += ("00" + _[_].toString(16)).slice(-2);
+            return _;
+          })(await window.crypto.subtle.digest(_, _));
+        }
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ =
+          window.addEventListener ||
+          (globalThis && globalThis.addEventListener) ||
+          (() => {});
+        let _,
+          _ = [],
+          _ = (_, _, _) =>
+            _.push({
+              error: _,
+              cCallsitesToIgnore: _,
+              strComponentStack: _,
+            });
+        const _ = !0;
+        class _ extends Error {
+          constructor(..._) {
+            super(..._), (this.name = "Assertion Failed");
+          }
+        }
+        {
+          const _ = console.assert;
+          console.assert = (_, _, ..._) => {
+            if (!_) {
+              const _ = _();
+              _(new _(_(_, ..._)), 2, _);
+            }
+            _.apply(console, [_, _, ..._]);
+          };
+          const _ = console.error;
+          (console.error = (_, ..._) => {
+            const _ = _();
+            _(new Error(_(_, ..._)), 1, _), _.apply(console, [_, ..._]);
+          }),
+            (console.clogerror = (_, _, ..._) => {
+              const _ = _();
+              _(new Error(_(_, ..._)), _ + 1, _), _.apply(console, [_, ..._]);
+            }),
+            _("error", (_) => {
+              _(_.error, 0);
+            }),
+            _("unhandledrejection", (_) => {
+              _(_.reason, 0);
+            }),
+            (_ = window.setTimeout(() => {
+              (_ = []), (_ = () => {});
+            }, 3e4));
+        }
+        const _ = {
+            cCallsitesToIgnore: 0,
+            bIncludeMessageInIdentifier: !1,
+          },
+          _ = [
+            "(localhost|127.0.0.1):(?!(80|443))",
+            "chrome-extension://",
+            "HTMLDivElement.onreset \\(/market",
+            "/.millennium/Dist",
+            "Millennium internal",
+            "millenium",
+            "Refused unauthorized RPC command",
+          ];
+        function _() {
+          try {
+            const _ =
+              _.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+            if (
+              _ &&
+              "object" == typeof _ &&
+              "function" == typeof _.getCurrentStack
+            ) {
+              const _ = _.getCurrentStack();
+              if ("string" == typeof _) return _;
+            }
+          } catch (_) {}
+        }
+        class _ {
+          m_strProduct;
+          m_strVersion;
+          m_transport = null;
+          m_rgErrorQueue = [];
+          m_sendTimer = null;
+          m_bReportingPaused = !1;
+          m_pauseTimer = void 0;
+          m_fnGetReportingInterval = _;
+          m_fnGetReportTags = () => [];
+          m_bEnabled = !0;
+          m_bInitialized = !1;
+          constructor(_ = !0) {
+            _
+              ? (_.forEach(
+                  ({ error: _, cCallsitesToIgnore: _, strComponentStack: _ }) =>
+                    this.ReportError(_, {
+                      cCallsitesToIgnore: _,
+                      strComponentStack: _,
+                    }),
+                ),
+                (_ = (_, _, _) =>
+                  this.ReportError(_, {
+                    cCallsitesToIgnore: _,
+                    strComponentStack: _,
+                  })))
+              : (_ = () => {}),
+              (_ = []),
+              clearTimeout(_),
+              window.setTimeout(() => {
+                this.m_bInitialized ||
+                  ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
+              }, 3e4);
+          }
+          Init(_, _, _, _ = {}) {
+            (this.m_bInitialized = !0),
+              (this.m_strProduct = _),
+              (this.m_strVersion = _),
+              (this.m_transport = _),
+              _.fnGetReportingInterval &&
+                (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
+              _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
+              this.m_bEnabled ||
+                (console.error(
+                  "Error reporting was initialized after being disabled, possibly dropping errors.",
+                ),
+                (this.m_bEnabled = !0)),
+              this.m_rgErrorQueue.length &&
+                (this.SendErrorReports(this.m_rgErrorQueue),
+                (this.m_rgErrorQueue = []));
+          }
+          async ReportError(_, _) {
+            if (!_)
+              return (
+                console.warn(
+                  "Failed to report error: ReportError() was called without an error to report.",
+                ),
+                null
+              );
+            try {
+              const _ = {
+                ..._,
+                ..._,
+              };
+              if (!this.m_bEnabled) return null;
+              0;
+              const _ = await (function (_, _) {
+                try {
+                  return _.stack && _.stack.match(_)
+                    ? (async function (_, _) {
+                        const {
+                            cCallsitesToIgnore: _,
+                            bIncludeMessageInIdentifier: _,
+                          } = _,
+                          { message: _, stack: _ } = _,
+                          _ = _?.split("\n") ?? [];
+                        let _ = _(_.filter((_) => !!_.match(_))[_]);
+                        _ && (_ = `${_} ${_}`);
+                        const _ = _.map((_) => {
+                          let _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
+                          if (
+                            ((_ && 5 == _.length) ||
+                              (_ = _.match(/(.*at )(http.*):(\d+):(\d+)/)),
+                            !_)
+                          )
+                            return _;
+                          if (5 === _.length) {
+                            const [_, _, _, _, _] = _,
+                              _ = parseInt(_),
+                              _ = parseInt(_);
+                            if (!isNaN(_) && !isNaN(_)) return [_, _, _, _];
+                          }
+                          return _;
+                        }).filter((_) => !!_);
+                        return {
+                          identifier: _,
+                          identifierHash: await _(_),
+                          message: _,
+                        };
+                      })(_, _)
+                    : _.stack && _.stack.match(_)
+                      ? (async function (_, _) {
+                          const {
+                              cCallsitesToIgnore: _,
+                              bIncludeMessageInIdentifier: _,
+                            } = _,
+                            _ = _.stack?.split("\n") ?? [];
+                          let _ = _(_.filter((_) => !!_.match(_))[_]);
+                          _ && (_ = `${_} ${_.message}`);
+                          const _ = _.map((_) => {
+                            const _ = _.match(/(.*@)?(.*):(\d+):(\d+)/);
+                            if (!_) return _;
+                            if (5 === _.length) {
+                              const [_, _, _, _, _] = _,
+                                _ = parseInt(_),
+                                _ = parseInt(_);
+                              if (!isNaN(_) && !isNaN(_)) return [_, _, _, _];
+                            }
+                            return _;
+                          }).filter((_) => !!_);
+                          return {
+                            identifier: _,
+                            identifierHash: await _(_),
+                            message: [_.message, ..._],
+                          };
+                        })(_, _)
+                      : _.stack && _.stack.match(_)
+                        ? (async function (_, _) {
+                            const {
+                                bIncludeMessageInIdentifier: _,
+                                cCallsitesToIgnore: _,
+                              } = _,
+                              _ = _.stack?.split("\n") ?? [],
+                              _ = _[_],
+                              _ = _.split("/");
+                            let _ = _[_.length - 1];
+                            _.indexOf("@") > -1 &&
+                              (_ = _.split("@")[0] + "@" + _);
+                            _ && (_ = `${_} ${_.message}`);
+                            const _ = _.map((_) => {
+                              const _ = _.match(/(.*@)?(.*):(\d+):(\d+)/);
+                              if (!_) return _;
+                              if (5 === _.length) {
+                                const [_, _, _, _, _] = _,
+                                  _ = parseInt(_),
+                                  _ = parseInt(_);
+                                if (!isNaN(_) && !isNaN(_)) return [_, _, _, _];
+                              }
+                              return _;
+                            }).filter((_) => !!_);
+                            return {
+                              identifier: _,
+                              identifierHash: await _(_),
+                              message: [_.message, ..._],
+                            };
+                          })(_, _)
+                        : (_ ||
+                            (console.warn(
+                              "Error reporter does not know how to parse generated stack:",
+                            ),
+                            console.warn(_.stack),
+                            (_ = !0)),
+                          null);
+                } catch (_) {
+                  return (
+                    console.warn(`Failed to normalize error stack: ${_}`), null
+                  );
+                }
+              })(_, _);
+              return _
+                ? (_.cCallsitesToIgnore &&
+                    _.message.splice(1, _.cCallsitesToIgnore),
+                  _.strComponentStack &&
+                    (_.strComponentStack = _.strComponentStack),
+                  this.SendErrorReport(_),
+                  _)
+                : null;
+            } catch (_) {
+              return console.log(`Failed to report error: ${_}`), null;
+            }
+          }
+          PauseReportingForDuration(_) {
+            this.PauseReporting(),
+              (this.m_pauseTimer = window.setTimeout(
+                () => this.ResumeReporting(),
+                _,
+              ));
+          }
+          PauseReporting() {
+            (this.m_bReportingPaused = !0),
+              window.clearTimeout(this.m_pauseTimer);
+          }
+          ResumeReporting() {
+            (this.m_bReportingPaused = !1),
+              window.clearTimeout(this.m_pauseTimer),
+              this.ScheduleSend();
+          }
+          BIsBlacklisted(_) {
+            for (let _ of _.message) {
+              let _ = JSON.stringify(_);
+              for (let _ of _) {
+                const _ = new RegExp(_);
+                if (__webpack_require__.match(_))
+                  return console.warn("Report", _, "matched regex", _), !0;
+              }
+            }
+            return !1;
+          }
+          SendErrorReport(_) {
+            this.BIsBlacklisted(_) ||
+              (this.m_transport
+                ? this.QueueReport(_)
+                : this.m_rgErrorQueue.push(_));
+          }
+          QueueReport(_) {
+            this.m_rgErrorQueue.push(_),
+              this.m_bReportingPaused || this.ScheduleSend();
+          }
+          ScheduleSend() {
+            this.m_sendTimer ||
+              (this.m_sendTimer = window.setTimeout(() => {
+                this.SendErrorReports(this.m_rgErrorQueue),
+                  (this.m_rgErrorQueue = []),
+                  (this.m_sendTimer = null);
+              }, this.m_fnGetReportingInterval()));
+          }
+          SendErrorReports(_) {
+            if (!_ || !_.length) return;
+            const _ = _._.Init(_._),
+              _ = _.reduce(
+                (_, _) => (
+                  _[_.identifier]
+                    ? _[_.identifier].count++
+                    : (_[_.identifier] = {
+                        report: _,
+                        count: 1,
+                      }),
+                  _
+                ),
+                {},
+              ),
+              _ = Object.keys(_).map((_) => {
+                const { report: _, count: _ } = _[_],
+                  _ = new _._();
+                return (
+                  _.set_count(_),
+                  _.set_identifier(_.identifier + " " + _.identifierHash),
+                  _.set_message(JSON.stringify(_.message)),
+                  _.strComponentStack &&
+                    _.set_context(
+                      JSON.stringify({
+                        componentStack: _.strComponentStack,
+                      }),
+                    ),
+                  _
+                );
+              });
+            _.Body().set_product(this.m_strProduct),
+              _.Body().set_version(this.m_strVersion),
+              _.Body().set_errors(_);
+            for (const _ of this.m_fnGetReportTags()) _.Body().add_tags(_);
+            _._.ReportClientError(this.m_transport, _);
+          }
+          get version() {
+            return this.m_strVersion;
+          }
+          get product() {
+            return this.m_strProduct;
+          }
+          get reporting_enabled() {
+            return _;
+          }
+        }
+        function _(_, ..._) {
+          if ("string" == typeof _ && 0 === _.length) return _;
+          return [_, ..._]
+            .map((_) => {
+              try {
+                let _ = String(_);
+                return "[object Object]" == _ && (_ = JSON.stringify(_)), _;
+              } catch (_) {
+                return "[Stringify Error]";
+              }
+            })
+            .join(", ");
+        }
+        const _ = /^\s*at .*(\S+:\d+|\(native\))/m,
+          _ = /(^|@)\S+:\d+/,
+          _ = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+        let _,
+          _ = !1;
+        function _(_) {
+          return (function (_) {
+            const _ = "https://",
+              _ = _.indexOf(_);
+            if (-1 === _) return _;
+            const _ = _.indexOf("/", _ + _.length);
+            return -1 === _ ? _ : _.slice(0, _) + _.slice(_);
+          })(
+            (function (_) {
+              const _ = _.lastIndexOf("?");
+              if (-1 === _) return _;
+              const _ = _.indexOf(":", _);
+              return -1 === _ ? _ : _.slice(0, _) + _.slice(_);
+            })(_),
+          );
+        }
+        const _ = () => (_ || (_ = new _()), _);
+        async function _(_) {
+          try {
+            return (await _(_)).slice(0, 16);
+          } catch (_) {
+            return "";
+          }
+        }
+        function _() {
+          return 1e4;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        class _ {
+          static InitHeaderFromPacket(_) {
+            return new _(void 0, _);
+          }
+          m_eMsg;
+          m_bValid;
+          m_netPacket;
+          m_cubHeader;
+          m_header;
+          m_body;
+          constructor(_, _, _, _, _, _) {
+            if (_)
+              (this.m_eMsg = _.m_eMsg),
+                (this.m_bValid = _.m_bValid),
+                this.m_bValid &&
+                  ((this.m_netPacket = _.m_netPacket),
+                  (this.m_cubHeader = _.m_cubHeader),
+                  (this.m_header = _.m_header),
+                  this.InitForType(_));
+            else {
+              if (((this.m_header = new _._(null)), (this.m_bValid = !0), _))
+                if (
+                  ((this.m_netPacket = _),
+                  this.m_netPacket.SeekGetHead(),
+                  (this.m_eMsg = this.m_netPacket.GetUint32()),
+                  2147483648 & this.m_eMsg)
+                ) {
+                  (this.m_eMsg = 2147483647 & this.m_eMsg),
+                    (this.m_cubHeader = this.m_netPacket.GetUint32());
+                  try {
+                    _._.deserializeBinaryFromReader(
+                      this.m_header,
+                      new _.BinaryReader(
+                        this.m_netPacket.GetPacket(),
+                        this.m_netPacket.TellGet(),
+                        this.m_cubHeader,
+                      ),
+                    ),
+                      this.m_netPacket.SeekGetCurrent(this.m_cubHeader),
+                      _ && this.InitForType(_);
+                  } catch (_) {
+                    console.error("Exception deserializing protobuf", _),
+                      (this.m_bValid = !1);
+                  }
+                } else this.m_bValid = !1;
+              else
+                _ && (this.m_eMsg = _),
+                  _ && _
+                    ? (this.m_body = __webpack_require__.fromObject(_))
+                    : _ && (this.m_body = new _());
+              _ && this.m_header.set_jobid_target(_.Hdr().jobid_target());
+            }
+          }
+          InitForType(_) {
+            (this.m_body = new _()),
+              this.m_netPacket &&
+                (this.m_netPacket.SeekGetHead(8 + this.m_cubHeader),
+                this.ReadBodyFromBuffer(_, this.m_netPacket));
+          }
+          ReadBodyFromBuffer(_, _) {
+            try {
+              _.deserializeBinaryFromReader(
+                this.m_body,
+                new _.BinaryReader(
+                  _.GetPacket(),
+                  _.TellGet(),
+                  _.GetCountBytesRemaining(),
+                ),
+              );
+            } catch (_) {
+              this.m_bValid = !1;
+              const _ = (0, _._)(),
+                _ = `Exception parsing protobuf message body of type ${this.m_eMsg}.  Definitions may be out of sync with server version.`;
+              _ &&
+                _.ReportError(new Error(_), {
+                  bIncludeMessageInIdentifier: !0,
+                }),
+                console.warn(_),
+                console.log(_.stack || _);
+            }
+          }
+          BIsValid() {
+            return this.m_bValid;
+          }
+          Body() {
+            return this.m_body;
+          }
+          SetBodyJSON(_) {
+            (_.toObject = () => _), (this.m_body = _);
+          }
+          Hdr() {
+            return this.m_header;
+          }
+          GetEMsg() {
+            return this.m_eMsg;
+          }
+          SetEMsg(_) {
+            this.m_eMsg = _;
+          }
+          GetEResult() {
+            return this.Hdr().eresult();
+          }
+          BSuccess() {
+            return this.Hdr().eresult() == _._;
+          }
+          GetErrorMessage() {
+            return this.Hdr().error_message()
+              ? this.Hdr().error_message()
+              : `eresult ${this.Hdr().eresult()}`;
+          }
+          Serialize() {
+            const _ = this.m_header.serializeBinary(),
+              _ = this.m_body.serializeBinary(),
+              _ = 2147483648 | this.m_eMsg,
+              _ = new Uint8Array(8 + _.length + _.length),
+              _ = new _._(_);
+            return (
+              _.PutUint32(_),
+              _.PutUint32(_.length),
+              _.PutBytes(_),
+              _.PutBytes(_),
+              _
+            );
+          }
+          SerializeBody() {
+            const _ = this.m_body.serializeBinary(),
+              _ = new Uint8Array(_.length);
+            return new _._(_).PutBytes(_), _;
+          }
+          DEBUG_ToObject() {
+            return {};
+          }
+          DEBUG_LogToConsole() {
+            0;
+          }
+        }
+        class _ extends _ {
+          constructor(_, _ = _.MSr, _, _, _) {
+            super(_, _, _, _, void 0, _);
+          }
+          static InitFromPacket(_, _) {
+            return new _(_, 0, _);
+          }
+          static InitFromMsg(_, _) {
+            return new _(_, void 0, void 0, _);
+          }
+          static Init(_, _) {
+            return new _(_, _);
+          }
+          static InitFromObject(_, _) {
+            return new _(_, void 0, void 0, void 0, _);
+          }
+          Body() {
+            return super.Body();
+          }
+          SetBodyFields(_) {
+            for (const _ in _)
+              Array.isArray(_[_])
+                ? this.Body()[`add_${_}`] &&
+                  _[_].forEach((_) => {
+                    this.Body()[`add_${_}`](_);
+                  })
+                : this.Body()[`set_${_}`] && this.Body()[`set_${_}`](_[_]);
+          }
+        }
+        function _(_, _) {
+          return _ instanceof _ ? _ : _.InitFromObject(_, _);
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
+        const _ = _.BinaryReader.prototype,
+          _ = _.BinaryWriter.prototype;
+        function _(_) {
+          const _ = {},
+            { fields: _ } = _;
+          for (const _ in _) {
+            const _ = _[_];
+            _[_._] = _;
+          }
+          return _;
+        }
+        function _(_, _) {
+          const { proto: _, fields: _ } = _,
+            _ = new _();
+          if (null == _) return _;
+          for (const _ in _) {
+            const { _, _: _, _: _, _: _, _: _ } = _[_];
+            if (!Object.prototype.hasOwnProperty.call(_, _)) continue;
+            const _ = _[_];
+            _
+              ? _
+                ? _.Message.setRepeatedWrapperField(
+                    _,
+                    _,
+                    Array.isArray(_) ? _.map((_) => _.fromObject(_)) : [],
+                  )
+                : _.Message.setWrapperField(_, _, _.fromObject(_))
+              : _.Message.setField(_, _, _);
+          }
+          return _;
+        }
+        function _(_, _, _) {
+          const { proto: _, fields: _ } = _,
+            _ = {};
+          for (const _ in _) {
+            const { _: _, _: _, _: _, _: _, _: _ } = _[_];
+            if (_)
+              if (_)
+                _[_] = _.Message.toObjectList(
+                  _.Message.getRepeatedWrapperField(_, _, _),
+                  _.toObject,
+                  _,
+                );
+              else {
+                const _ = _.Message.getWrapperField(_, _, _, _ ? 1 : 0);
+                _ && (_[_] = _.toObject(_, _));
+              }
+            else {
+              const _ = _.Message.getFieldWithDefault(
+                _,
+                _,
+                void 0 !== _ ? _ : null,
+              );
+              (null !== _ || _) && (_[_] = _);
+            }
+          }
+          return _ && (_.$jspbMessageInstance = _), _;
+        }
+        function _(_, _, _) {
+          for (
+            ;
+            __webpack_require__.nextField() &&
+            !__webpack_require__.isEndGroup();
+          ) {
+            const _ = _[__webpack_require__.getFieldNumber()];
+            if (_) {
+              const { _: _, _: _, _: _, _: _, _: _, _: _ } = _;
+              if (_) {
+                const _ = new _();
+                __webpack_require__.readMessage(
+                  _,
+                  _.deserializeBinaryFromReader,
+                ),
+                  _
+                    ? _.Message.addToRepeatedWrapperField(_, _, _, _)
+                    : _.Message.setWrapperField(_, _, _);
+              } else if (_) {
+                const _ = _.call(_);
+                _
+                  ? _.Message.addToRepeatedField(_, _, _)
+                  : _.Message.setField(_, _, _);
+              } else
+                console.assert(
+                  !!_,
+                  `Reader func not set for field number ${_} in class ${_}`,
+                ),
+                  __webpack_require__.skipField();
+            } else __webpack_require__.skipField();
+          }
+          return _;
+        }
+        function _(_, _, _) {
+          const { fields: _ } = _;
+          for (const _ in _) {
+            const { _: _, _: _, _: _, _: _, _: _, _: _ } = _[_];
+            if (_)
+              if (_) {
+                const _ = _.Message.getRepeatedWrapperField(_, _, _);
+                ((_ && _.length) || _) &&
+                  __webpack_require__.writeRepeatedMessage(
+                    _,
+                    _,
+                    _.serializeBinaryToWriter,
+                  );
+              } else {
+                const _ = _.Message.getWrapperField(_, _, _, _ ? 1 : 0);
+                _ &&
+                  __webpack_require__.writeMessage(
+                    _,
+                    _,
+                    _.serializeBinaryToWriter,
+                  );
+              }
+            else if (_) {
+              const _ = _.Message.getField(_, _);
+              void 0 !== _ && _.call(_, _, _);
+            } else
+              console.assert(
+                !!_,
+                `Writer func not set for field number ${_} in class ${_}`,
+              );
+          }
+        }
+        function _(_) {
+          const _ = _.proto;
+          for (const _ in _.fields) {
+            const _ = _.fields[_],
+              { _: _, _: _, _: _, _: _, _: _ } = _;
+            Object.prototype.hasOwnProperty.call(_, "d")
+              ? (_.prototype[_] = _(_.Message.getFieldWithDefault, _, _))
+              : (_.prototype[_] = _
+                  ? _
+                    ? _(_.Message.getRepeatedWrapperField, _, _)
+                    : _(_, _)
+                  : _(_.Message.getField, _)),
+              (_.prototype[`set_${_}`] = _(
+                _
+                  ? _
+                    ? _.Message.setRepeatedWrapperField
+                    : _.Message.setWrapperField
+                  : _.Message.setField,
+                _,
+              )),
+              _ && (_.prototype[`add_${_}`] = _(_, _));
+          }
+        }
+        function _(_, ..._) {
+          return function () {
+            return _(this, ..._);
+          };
+        }
+        function _(_, _) {
+          return function (_ = !0) {
+            return _.Message.getWrapperField(this, _, _, _ ? 1 : 0);
+          };
+        }
+        function _(_, _) {
+          return function (_) {
+            return _(this, _, _);
+          };
+        }
+        function _(_, _) {
+          return _
+            ? function (_, _) {
+                return _.Message.addToRepeatedWrapperField(this, _, _, _, _);
+              }
+            : function (_, _) {
+                _.Message.addToRepeatedField(this, _, _, _);
+              };
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+        });
+        class _ {
+          m_nOffset;
+          m_nLength;
+          m_viewPacket;
+          m_rgubPacket;
+          m_iGet;
+          m_iPut;
+          constructor(_, _ = 0, _) {
+            (this.m_nOffset = _ || 0),
+              _ instanceof Uint8Array || _ instanceof DataView
+                ? ((this.m_nLength = _ || _.byteLength - this.m_nOffset),
+                  (this.m_nOffset += _.byteOffset),
+                  (this.m_viewPacket = new DataView(
+                    _.buffer,
+                    this.m_nOffset,
+                    this.m_nLength,
+                  )))
+                : ((this.m_nLength = _ || _.byteLength - this.m_nOffset),
+                  (this.m_viewPacket = new DataView(
+                    _,
+                    this.m_nOffset,
+                    this.m_nLength,
+                  ))),
+              (this.m_rgubPacket = new Uint8Array(
+                this.m_viewPacket.buffer,
+                this.m_viewPacket.byteOffset,
+                this.m_viewPacket.byteLength,
+              )),
+              (this.m_iGet = 0),
+              (this.m_iPut = 0);
+          }
+          TellGet() {
+            return this.m_iGet + this.m_viewPacket.byteOffset;
+          }
+          GetPacket() {
+            return this.m_viewPacket.buffer;
+          }
+          GetUint8() {
+            return this.m_viewPacket.getUint8(this.m_iGet++);
+          }
+          GetUint32(_ = !0) {
+            const _ = this.m_viewPacket.getUint32(this.m_iGet, _);
+            return (this.m_iGet += 4), _;
+          }
+          SeekGetHead(_ = 0) {
+            this.m_iGet = _ || 0;
+          }
+          SeekGetCurrent(_) {
+            this.m_iGet += _;
+          }
+          TellPut() {
+            return this.m_iPut + this.m_viewPacket.byteOffset;
+          }
+          TellMaxPut() {
+            return this.m_viewPacket.byteLength;
+          }
+          PutUint8(_) {
+            this.m_viewPacket.setUint8(this.m_iPut++, _);
+          }
+          PutUint32(_, _ = !0) {
+            this.m_viewPacket.setUint32(this.m_iPut, _, _), (this.m_iPut += 4);
+          }
+          PutBytes(_) {
+            this.m_rgubPacket.set(_, this.m_iPut), (this.m_iPut += _.length);
+          }
+          SeekPut(_) {
+            this.m_iPut += _;
+          }
+          GetCountBytesRemaining() {
+            return this.m_viewPacket.byteLength - this.m_iGet;
+          }
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (_._ = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -2098,7 +2965,7 @@ var CLSTAMP = "steamdb";
         4302: "5f96b098b87755d88881",
         4434: "a4963ad2ec6ec578498d",
         4488: "6fc4650152e31925c959",
-        4776: "c42dfbb2eee3ca512432",
+        4776: "fcef25c79464d2dab63c",
         4787: "f933b9746b9145fdf8c7",
         5018: "1f8104083ac4fb14d5b6",
         5110: "4ea40c1561f5076ac561",
@@ -2128,7 +2995,7 @@ var CLSTAMP = "steamdb";
         8306: "20a42735e7b97224db49",
         8759: "ea1ea31bf8c3bbce45b3",
         8766: "62af14dba1cfc865f4aa",
-        8967: "3402c31cec7c1f1ec127",
+        8967: "93be017011fc369117bf",
         9027: "b8c9459aa9211367bbc2",
         9152: "96697cb927a5df2f2879",
         9712: "ae11c1abcbc2f54d036e",
@@ -2279,6 +3146,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [9489, 1068], () => _(87942));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(57100));
   _ = _._(_);
 })();

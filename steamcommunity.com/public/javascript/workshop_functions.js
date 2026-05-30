@@ -820,30 +820,18 @@ function ShowWorkshopItemHover( elem, divHover, targetContent )
 
 	hover.clonePosition( elem, {setWidth: false, setHeight: false} );
 	var hover_box = hover.down( '.hover_box' );
-	var hover_arrow_left = hover.down( '.hover_arrow_left' );
-	var hover_arrow_right = hover.down( '.hover_arrow_right' );
 
-	var hover_arrow = hover_arrow_left;
-
-	var nHoverHorizontalPadding = (hover_arrow ? -4 : 8);
+	var nHoverHorizontalPadding = 8;
 	var boxRightViewport = elem.viewportOffset().left + parseInt( elem.getDimensions().width ) + hover_box.getWidth() + ( 24 - nHoverHorizontalPadding );
 	var nSpaceRight = document.viewport.getWidth() - boxRightViewport;
 	var nSpaceLeft = parseInt( hover.style.left ) - hover.getWidth();
 	if ( boxRightViewport > document.viewport.getWidth() && nSpaceLeft > nSpaceRight)
 	{
 				hover.style.left = ( parseInt( hover.style.left ) - hover.getWidth() + nHoverHorizontalPadding ) + 'px';
-		hover_arrow = hover_arrow_right;
 	}
 	else
 	{
 				hover.style.left = ( parseInt( hover.style.left ) + parseInt( elem.getDimensions().width ) - nHoverHorizontalPadding ) + 'px';
-	}
-
-	if ( hover_arrow )
-	{
-		hover_arrow_left.hide();
-		hover_arrow_right.hide();
-		hover_arrow.show();
 	}
 
 	var nTopAdjustment = 0;
@@ -858,14 +846,6 @@ function ShowWorkshopItemHover( elem, divHover, targetContent )
 		var nViewportAdjustment = ( hover_box.getHeight() + 8 ) - ( document.viewport.getHeight() - boxTopViewport );
 				nViewportAdjustment = Math.min( hover_box.getHeight() - 74, nViewportAdjustment );
 		hover.style.top = ( parseInt( hover.style.top ) - nViewportAdjustment ) + 'px';
-
-		if ( hover_arrow )
-			hover_arrow.style.top = ( 48 + nViewportAdjustment ) + 'px';
-	}
-	else
-	{
-		if ( hover_arrow )
-			hover_arrow.style.top = '';
 	}
 
 	hover.hide();

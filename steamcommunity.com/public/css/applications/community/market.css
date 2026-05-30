@@ -602,12 +602,6 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   font-weight: 500;
   padding: 2px 8px 2px 20px;
 }
-._NIZ2fYFBu6WSnEE1H6i3 {
-  object-fit: var(--object-fit);
-}
-._3OZ4rrlKzwAYOKP9HdqUrq {
-  object-position: var(--object-position);
-}
 ._2XJ9_vd4z2Vp9NFllH7sfv {
   filter: blur(10px) opacity(20%);
   background-repeat: no-repeat;
@@ -702,6 +696,12 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
 .NLSqZ9dW14eyrJHMGtMXq {
   background-color: currentColor;
   mask: var(--mask) no-repeat center;
+}
+._NIZ2fYFBu6WSnEE1H6i3 {
+  object-fit: var(--object-fit);
+}
+._3OZ4rrlKzwAYOKP9HdqUrq {
+  object-position: var(--object-position);
 }
 .CsBvls5vHRsxv-ZseyEhc {
   position: absolute;

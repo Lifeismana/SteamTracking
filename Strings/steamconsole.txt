@@ -271,7 +271,6 @@ $\nY8O
 -sitelicense
 -steamdeckdisplay
 -steammachinedisplay
--test-device-type
 ./depotscripts
 ./obj_steamconsole_steamrtarm64/release/steamconsole.so
 .cpl
@@ -341,11 +340,11 @@ $\nY8O
 0000000000000000000000000000000000000000
 00:00:00
 01/01/00
-0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
 1000
+0123456789
 10CSteamUser
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI20ModuleAddressRange_tE
@@ -1099,7 +1098,6 @@ EFriendRelationship
 EGCAction
 EGCStatus
 EGamingDeviceType
-EGamingDeviceType override: %d\n
 EGpuDriverId
 EHTTPMethod
 EHTTPStatusCode
@@ -1173,6 +1171,7 @@ ERROR! Failed to get install info for item %llu.
 ERROR! Failed to install app '%u' (%s)\n
 ERROR! Failed to load build config file "%s".\n
 ERROR! Failed to load platform info\n
+ERROR! Failed to make stale bucket complete : %s\n
 ERROR! Failed to parse application info for app %d
 ERROR! Failed to parse build config file "%s".\n
 ERROR! Failed to parse parameters\n
@@ -1699,7 +1698,7 @@ Manual
 Maori
 Marathi
 March
-Mark updated with no data ( AppID: %u, BucketID: %llu Manifest: %llu ) Src: %s / %s\n
+Marked processing complete ( AppID: %u, %s / %s )\n
 Master App Editor
 Master Subscription
 MasterCard
@@ -1911,7 +1910,6 @@ Others In Progress
 Out of Resources
 Out of stock
 Over consumption limit
-Override the current EGamingDeviceType (main/dev only)
 Owner
 PATCH
 POLi

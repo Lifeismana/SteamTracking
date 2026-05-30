@@ -881,8 +881,6 @@ $\nY8O
 -steamdeckdisplay
 -steammachinedisplay
 -steampid
--test-device-type
--test-glibc-version
 -toggle-overlay-html-mode
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -1516,6 +1514,7 @@ $\nY8O
 16HTMLComboBoxHost
 16IDynamicFunction
 16ListPanelDragger
+17:49:01
 17CClientWalletInfo
 17CFileWriterThread
 17CIngameFPSCPUInfo
@@ -1591,7 +1590,6 @@ $\nY8O
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
-20:55:50
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -3162,7 +3160,6 @@ EGRMode
 EGameRecordingType
 EGamescopeBlurMode
 EGamingDeviceType
-EGamingDeviceType override: %d\n
 EGpuDriverId
 EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
@@ -4520,7 +4517,7 @@ MaxResults
 MaxUseCount
 Maximize
 Maximum family size exceeded
-May 18 2026
+May 29 2026
 MaybeAllocateAligned cannot fail here.
 Meetei_Mayek
 Meeting
@@ -5107,7 +5104,6 @@ OverlayHidden
 OverlayShown
 OverlayWebFrame
 OverlayWebPopup
-Override the current EGamingDeviceType (main/dev only)
 Overwriting on-disk registry with newly created registry.
 Owner
 OwnerID
@@ -5315,7 +5311,6 @@ ProtectedStore
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
-Provide a glibc version for testing
 Provider doesn't support currency
 Proxy
 Proxy Authentication Required

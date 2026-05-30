@@ -961,7 +961,6 @@ $\nY8O
 -silent
 -steamdeckdisplay
 -steammachinedisplay
--test-device-type
 -toggle-overlay-html-mode
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -3169,7 +3168,6 @@ EGRMode
 EGameRecordingErrorType
 EGameRecordingType
 EGamescopeBlurMode
-EGamingDeviceType override: %d\n
 EGraphicsPerfOverlayLevel
 EHDRToneMapOperator
 EHDRVisualization
@@ -4426,7 +4424,6 @@ Option must have a name.
 Option must not use reserved name "uninterpreted_option".
 Out of Memory
 Out of memory
-Override the current EGamingDeviceType (main/dev only)
 PCS illuminant is not D50
 PERMISSION_DENIED
 PLACEHOLDER_VALUE

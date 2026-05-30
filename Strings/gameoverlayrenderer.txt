@@ -551,6 +551,7 @@ double
 dst_height > 0
 dst_width % 3 == 0
 dst_width > 0
+dt`M
 dx != NULL
 dy != NULL
 dynamic_cast
