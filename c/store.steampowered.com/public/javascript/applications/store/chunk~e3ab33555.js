@@ -1139,7 +1139,10 @@
               })
             : null;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -1305,7 +1308,7 @@
                                     (0, _.jsx)(_._, {
                                       gidEvent: _.GID,
                                     }),
-                                    (0, _.jsx)("a", {
+                                    (0, _.jsx)(_._, {
                                       className: (0, _._)(
                                         _().Button,
                                         "LinkButton",
@@ -1430,7 +1433,8 @@
             _ = _.BIsImageSafeForAllAges("background", _),
             _ = "lang_" + (0, _.wwZ)(_),
             _ = !!_ && _.BImageNeedScreenshotFallback("background", _);
-          return (0, _.jsxs)("div", {
+          return (0, _.jsxs)(_._, {
+            scrollIntoViewType: _._.NoTransformSparseContent,
             className: (0, _._)(
               _().EventDetailsPageContainer,
               _,

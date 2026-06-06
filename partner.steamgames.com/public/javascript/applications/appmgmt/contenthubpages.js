@@ -41,6 +41,7 @@
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
@@ -365,10 +366,10 @@
             children: t,
           });
         };
-      var D = n(64238),
-        O = n.n(D),
-        P = n(38878),
-        R = n(83392),
+      var O = n(64238),
+        D = n.n(O),
+        R = n(38878),
+        P = n(83392),
         z = n(75659),
         V = n(11526);
       function E(e) {
@@ -396,28 +397,28 @@
               {
                 ...c,
                 radius: d,
-                className: O()(
-                  P.ControlBox,
-                  o && !i && P.Focusable,
-                  a && !i && P.Hoverable,
-                  r && !i && P.Clickable,
-                  i && P.Disabled,
-                  P[`Variant-${t}`],
-                  P[`Size-${n}`],
+                className: D()(
+                  R.ControlBox,
+                  o && !i && R.Focusable,
+                  a && !i && R.Hoverable,
+                  r && !i && R.Clickable,
+                  i && R.Disabled,
+                  R[`Variant-${t}`],
+                  R[`Size-${n}`],
                   l,
                 ),
               },
               z.h,
             );
           })(r);
-        return (0, s.jsxs)(R.s, {
+        return (0, s.jsxs)(P.s, {
           ...i,
           align: "center",
           "data-has-value": !!a,
           children: [
-            n && (0, s.jsx)(R.s, { paddingRight: "2", children: n }),
+            n && (0, s.jsx)(P.s, { paddingRight: "2", children: n }),
             (0, s.jsx)(g.az, { flexGrow: "1", minWidth: "0", children: t }),
-            o && (0, s.jsx)(R.s, { paddingLeft: "2", children: o }),
+            o && (0, s.jsx)(P.s, { paddingLeft: "2", children: o }),
           ],
         });
       }
@@ -504,17 +505,17 @@
             ...c
           } = e,
           d = "indeterminate" === t,
-          u = d ? Q : Z,
+          u = d ? X : Z,
           h = () => {
             o || (n && n(!!d || !t));
           };
-        return (0, s.jsxs)(R.s, {
+        return (0, s.jsxs)(P.s, {
           align: "center",
           ref: r,
           role: "checkbox",
           "aria-checked": d ? "mixed" : t,
           "data-state": K(t),
-          className: O()(J.Root, J[`Variant-${i}`], o && J.Disabled),
+          className: D()(J.Root, J[`Variant-${i}`], o && J.Disabled),
           onClick: h,
           tabIndex: 0,
           onKeyDown: (e) => {
@@ -537,7 +538,7 @@
       function K(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function Q(e) {
+      function X(e) {
         return (0, s.jsx)("svg", {
           viewBox: "0 0 16 16",
           fill: "none",
@@ -548,7 +549,7 @@
           }),
         });
       }
-      function X(e, t) {
+      function Q(e, t) {
         const { onSelectionChange: n, selectedValue: s, ...o } = e,
           [a, r] = (0, u.useState)(!1),
           i = (0, u.useCallback)(
@@ -727,7 +728,7 @@
             ...a,
             children: [
               i &&
-                (0, s.jsxs)(R.s, {
+                (0, s.jsxs)(P.s, {
                   gap: "2",
                   align: "center",
                   children: [(0, s.jsx)(q, { checked: u, variant: "dark" }), n],
@@ -782,6 +783,7 @@
               radius: c,
               hasValue: k,
               tabIndex: 0,
+              cursor: "pointer",
               ..._,
             }),
             N = (0, x.Q)(n, A, I, void 0);
@@ -824,7 +826,7 @@
             ...i
           } = e,
           l = (function (e) {
-            return X(e, !1);
+            return Q(e, !1);
           })({
             onSelectionChange: n,
             selectedValue: t,
@@ -863,7 +865,7 @@
               ...l
             } = e,
             c = (function (e) {
-              return X(e, !0);
+              return Q(e, !0);
             })({
               onSelectionChange: n,
               selectedValue: t,
@@ -1226,7 +1228,7 @@
                   ("tagids" === o.type ||
                     "category" === o.type ||
                     "contenthub" == o.type) &&
-                    (0, s.jsx)(De, { category: o, setCategory: a }),
+                    (0, s.jsx)(Oe, { category: o, setCategory: a }),
                 ],
               }),
             }),
@@ -1278,7 +1280,7 @@
           }),
         });
       });
-      function De(e) {
+      function Oe(e) {
         const { category: t, setCategory: n } = e,
           [o, a] = (0, u.useState)(!1),
           [r, i] = (0, u.useState)(0);
@@ -1290,19 +1292,19 @@
                 children: (0, s.jsxs)("div", {
                   className: _e().Category,
                   children: [
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "must",
                       title: "Must have all of these tags",
                     }),
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "any",
                       title: "Must have one of these tags",
                     }),
-                    (0, s.jsx)(Re, {
+                    (0, s.jsx)(Pe, {
                       category: t,
                       setCategory: n,
                       list: "mustnot",
@@ -1317,7 +1319,7 @@
               (0, s.jsxs)("div", {
                 className: _e().CategoryCtn,
                 children: [
-                  (0, s.jsx)(Re, {
+                  (0, s.jsx)(Pe, {
                     category: t,
                     setCategory: n,
                     list: "replaces_tags",
@@ -1337,7 +1339,7 @@
                       onClick: () => i(r + 1),
                       children: "Refresh Stats",
                     }),
-                    (0, s.jsx)(Oe, { category: t }),
+                    (0, s.jsx)(De, { category: t }),
                   ],
                 })
               : (0, s.jsx)(
@@ -1352,7 +1354,7 @@
           ],
         });
       }
-      function Oe(e) {
+      function De(e) {
         const { category: t } = e,
           n = (0, ie.p$)(t.must, t.any, t.mustnot);
         if (!n)
@@ -1396,7 +1398,7 @@
                   children: [
                     "Summary: ",
                     (0, s.jsx)(je.KU, { nTotalGames: n.total_games }),
-                    Boolean(o) && (0, s.jsx)(Pe, { category: t }),
+                    Boolean(o) && (0, s.jsx)(Re, { category: t }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
@@ -1422,13 +1424,13 @@
           ],
         });
       }
-      function Pe(e) {
+      function Re(e) {
         const { category: t } = e,
           n = (0, ie.eX)(t.must, t.any, t.mustnot),
           o = (0, ie.mg)(t.must, t.any, t.mustnot);
         return (0, s.jsx)(je.ny, { saleSummary: n, topAppSummary: o });
       }
-      const Re = u.memo(function (e) {
+      const Pe = u.memo(function (e) {
         const { category: t, setCategory: n, list: o, title: a } = e,
           { rgTags: r, rgCategories: l } = (0, i.DT)(),
           c = (e) => {
@@ -1664,6 +1666,23 @@
             className: (e) => c[`TextSize-${e}`],
           },
         ];
+    },
+    4434: (e, t, n) => {
+      "use strict";
+      n.d(t, { m: () => r });
+      var s = n(41735),
+        o = n.n(s),
+        a = n(90626);
+      function r(e) {
+        const t = a.useRef(o().CancelToken.source());
+        return (
+          a.useEffect(() => {
+            const n = t.current;
+            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
     },
     9161: (e, t, n) => {
       "use strict";

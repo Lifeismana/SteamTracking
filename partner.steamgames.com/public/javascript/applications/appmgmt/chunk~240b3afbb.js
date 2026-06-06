@@ -5,140 +5,141 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [9150],
   {
-    67361: (e, t, n) => {
-      n.d(t, {
-        TW: () => h,
+    67361: (e, n, t) => {
+      t.d(n, {
+        TW: () => u,
         KC: () => d,
-        $z: () => u,
+        $z: () => s,
         _l: () => c,
-        R2: () => l,
+        R2: () => m,
       });
-      var i = n(3049);
-      const a = {};
-      (a.arabic = () => n.e(6696).then(n.t.bind(n, 6696, 19))),
-        (a.brazilian = () => n.e(8906).then(n.t.bind(n, 58906, 19))),
-        (a.bulgarian = () => n.e(3473).then(n.t.bind(n, 53473, 19))),
-        (a.czech = () => n.e(3899).then(n.t.bind(n, 83899, 19))),
-        (a.danish = () => n.e(4925).then(n.t.bind(n, 84925, 19))),
-        (a.dutch = () => n.e(9902).then(n.t.bind(n, 69902, 19))),
-        (a.english = () => n.e(716).then(n.t.bind(n, 80716, 19))),
-        (a.finnish = () => n.e(1663).then(n.t.bind(n, 81663, 19))),
-        (a.french = () => n.e(8484).then(n.t.bind(n, 48484, 19))),
-        (a.german = () => n.e(6810).then(n.t.bind(n, 66810, 19))),
-        (a.greek = () => n.e(3744).then(n.t.bind(n, 13744, 19))),
-        (a.hungarian = () => n.e(2101).then(n.t.bind(n, 62101, 19))),
-        (a.indonesian = () => n.e(8948).then(n.t.bind(n, 68948, 19))),
-        (a.italian = () => n.e(2916).then(n.t.bind(n, 2916, 19))),
-        (a.japanese = () => n.e(195).then(n.t.bind(n, 40195, 19))),
-        (a.koreana = () => n.e(4259).then(n.t.bind(n, 84259, 19))),
-        (a.latam = () => n.e(4475).then(n.t.bind(n, 24475, 19))),
-        (a.norwegian = () => n.e(6884).then(n.t.bind(n, 36884, 19))),
-        (a.polish = () => n.e(5269).then(n.t.bind(n, 15269, 19))),
-        (a.portuguese = () => n.e(6865).then(n.t.bind(n, 96865, 19))),
-        (a.romanian = () => n.e(1391).then(n.t.bind(n, 71391, 19))),
-        (a.russian = () => n.e(4933).then(n.t.bind(n, 64933, 19))),
-        (a.sc_schinese = () => n.e(7503).then(n.t.bind(n, 27503, 19))),
-        (a.schinese = () => n.e(4768).then(n.t.bind(n, 44768, 19))),
-        (a.spanish = () => n.e(876).then(n.t.bind(n, 20876, 19))),
-        (a.swedish = () => n.e(5181).then(n.t.bind(n, 75181, 19))),
-        (a.tchinese = () => n.e(9779).then(n.t.bind(n, 89779, 19))),
-        (a.thai = () => n.e(8970).then(n.t.bind(n, 98970, 19))),
-        (a.turkish = () => n.e(7996).then(n.t.bind(n, 87996, 19))),
-        (a.ukrainian = () => n.e(7306).then(n.t.bind(n, 47306, 19))),
-        (a.vietnamese = () => n.e(2539).then(n.t.bind(n, 72539, 19)));
-      const r = (0, n(13843).l)(async function (e) {
-        if (a[e]) return a[e]();
+      var i = t(3049);
+      const r = {};
+      (r.arabic = () => t.e(6696).then(t.t.bind(t, 6696, 19))),
+        (r.brazilian = () => t.e(8906).then(t.t.bind(t, 58906, 19))),
+        (r.bulgarian = () => t.e(3473).then(t.t.bind(t, 53473, 19))),
+        (r.czech = () => t.e(3899).then(t.t.bind(t, 83899, 19))),
+        (r.danish = () => t.e(4925).then(t.t.bind(t, 84925, 19))),
+        (r.dutch = () => t.e(9902).then(t.t.bind(t, 69902, 19))),
+        (r.english = () => t.e(716).then(t.t.bind(t, 80716, 19))),
+        (r.finnish = () => t.e(1663).then(t.t.bind(t, 81663, 19))),
+        (r.french = () => t.e(8484).then(t.t.bind(t, 48484, 19))),
+        (r.german = () => t.e(6810).then(t.t.bind(t, 66810, 19))),
+        (r.greek = () => t.e(3744).then(t.t.bind(t, 13744, 19))),
+        (r.hungarian = () => t.e(2101).then(t.t.bind(t, 62101, 19))),
+        (r.indonesian = () => t.e(8948).then(t.t.bind(t, 68948, 19))),
+        (r.italian = () => t.e(2916).then(t.t.bind(t, 2916, 19))),
+        (r.japanese = () => t.e(195).then(t.t.bind(t, 40195, 19))),
+        (r.koreana = () => t.e(4259).then(t.t.bind(t, 84259, 19))),
+        (r.latam = () => t.e(4475).then(t.t.bind(t, 24475, 19))),
+        (r.malay = () => t.e(580).then(t.t.bind(t, 60580, 19))),
+        (r.norwegian = () => t.e(6884).then(t.t.bind(t, 36884, 19))),
+        (r.polish = () => t.e(5269).then(t.t.bind(t, 15269, 19))),
+        (r.portuguese = () => t.e(6865).then(t.t.bind(t, 96865, 19))),
+        (r.romanian = () => t.e(1391).then(t.t.bind(t, 71391, 19))),
+        (r.russian = () => t.e(4933).then(t.t.bind(t, 64933, 19))),
+        (r.sc_schinese = () => t.e(7503).then(t.t.bind(t, 27503, 19))),
+        (r.schinese = () => t.e(4768).then(t.t.bind(t, 44768, 19))),
+        (r.spanish = () => t.e(876).then(t.t.bind(t, 20876, 19))),
+        (r.swedish = () => t.e(5181).then(t.t.bind(t, 75181, 19))),
+        (r.tchinese = () => t.e(9779).then(t.t.bind(t, 89779, 19))),
+        (r.thai = () => t.e(8970).then(t.t.bind(t, 98970, 19))),
+        (r.turkish = () => t.e(7996).then(t.t.bind(t, 87996, 19))),
+        (r.ukrainian = () => t.e(7306).then(t.t.bind(t, 47306, 19))),
+        (r.vietnamese = () => t.e(2539).then(t.t.bind(t, 72539, 19)));
+      const a = (0, t(13843).l)(async function (e) {
+        if (r[e]) return r[e]();
       });
       var o,
-        s = n(83710);
-      function h(e, t, n) {
-        let a;
-        a =
-          void 0 === t || !0 === t || !1 === t
-            ? { weekday: n ? "long" : "short", year: t ? void 0 : "numeric" }
-            : t;
-        let r = new Date(1e3 * e);
+        h = t(83710);
+      function u(e, n, t) {
+        let r;
+        r =
+          void 0 === n || !0 === n || !1 === n
+            ? { weekday: t ? "long" : "short", year: n ? void 0 : "numeric" }
+            : n;
+        let a = new Date(1e3 * e);
         const o = {
           weekday: "short",
           month: "long",
           day: "numeric",
           year: "numeric",
-          ...a,
+          ...r,
         };
-        return r.toLocaleDateString((0, i.J)(), o);
+        return a.toLocaleDateString((0, i.J)(), o);
       }
-      function u(e, t) {
-        const n = { year: "numeric", month: "short", day: "numeric", ...t };
-        return new Date(1e3 * e).toLocaleDateString((0, i.J)(), n);
+      function s(e, n) {
+        const t = { year: "numeric", month: "short", day: "numeric", ...n };
+        return new Date(1e3 * e).toLocaleDateString((0, i.J)(), t);
       }
-      function c(e, t) {
+      function c(e, n) {
         const {
-            fullmonthname: n = !1,
-            bUseRelativeNames: a = !0,
+            fullmonthname: t = !1,
+            bUseRelativeNames: r = !0,
             bIncludeDayName: o = !1,
-          } = t ?? {},
-          s = new Date(),
-          h = new Date(1e3 * e);
-        if (h.getFullYear() != s.getFullYear())
-          return u(e, { month: n ? "long" : "short" });
+          } = n ?? {},
+          h = new Date(),
+          u = new Date(1e3 * e);
+        if (u.getFullYear() != h.getFullYear())
+          return s(e, { month: t ? "long" : "short" });
         const c = new Date();
-        if ((c.setHours(0, 0, 0, 0), a))
-          if (h >= c) {
-            if ((c.setDate(c.getDate() + 1), h < c))
-              return r.Localize("#Time_Today");
-            if ((c.setDate(c.getDate() + 1), h < c))
-              return r.Localize("#Time_Tomorrow");
-          } else if ((c.setDate(c.getDate() - 1), h >= c))
-            return r.Localize("#Time_Yesterday");
-        const d = { month: n ? "long" : "short", day: "numeric" };
-        return o && (d.weekday = "long"), h.toLocaleDateString((0, i.J)(), d);
+        if ((c.setHours(0, 0, 0, 0), r))
+          if (u >= c) {
+            if ((c.setDate(c.getDate() + 1), u < c))
+              return a.Localize("#Time_Today");
+            if ((c.setDate(c.getDate() + 1), u < c))
+              return a.Localize("#Time_Tomorrow");
+          } else if ((c.setDate(c.getDate() - 1), u >= c))
+            return a.Localize("#Time_Yesterday");
+        const d = { month: t ? "long" : "short", day: "numeric" };
+        return o && (d.weekday = "long"), u.toLocaleDateString((0, i.J)(), d);
       }
-      function d(e, t, n) {
-        const a = new Date(1e3 * e),
-          r = (0, i.J)(),
+      function d(e, n, t) {
+        const r = new Date(1e3 * e),
+          a = (0, i.J)(),
           o = {
-            ...(t?.bForce24HourClock ||
+            ...(n?.bForce24HourClock ||
             (function (e) {
-              const t = new Date();
+              const n = new Date();
               return (
-                t.setHours(15),
-                t.toLocaleTimeString(e, { hour: "numeric" }) ==
-                  t.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })
+                n.setHours(15),
+                n.toLocaleTimeString(e, { hour: "numeric" }) ==
+                  n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })
               );
-            })(r[0])
+            })(a[0])
               ? { hour: "numeric", minute: "2-digit", hourCycle: "h23" }
               : { hour: "numeric", minute: "2-digit" }),
-            ...n,
+            ...t,
           };
-        return a.toLocaleTimeString(r, o);
+        return r.toLocaleTimeString(a, o);
       }
-      function l(e) {
-        const t = Math.floor(e / s.Kp.PerYear),
-          n = Math.floor(e / s.Kp.PerMonth),
-          i = Math.floor((e % s.Kp.PerMonth) / s.Kp.PerDay),
-          a = Math.floor((e % s.Kp.PerDay) / s.Kp.PerHour),
-          o = Math.floor((e % s.Kp.PerHour) / s.Kp.PerMinute);
+      function m(e) {
+        const n = Math.floor(e / h.Kp.PerYear),
+          t = Math.floor(e / h.Kp.PerMonth),
+          i = Math.floor((e % h.Kp.PerMonth) / h.Kp.PerDay),
+          r = Math.floor((e % h.Kp.PerDay) / h.Kp.PerHour),
+          o = Math.floor((e % h.Kp.PerHour) / h.Kp.PerMinute);
         return (
-          (e %= s.Kp.PerMinute),
-          t > 0
-            ? r.Localize("#TimeRemaining_MoreThanOneYear")
-            : n > 0
-              ? r.Localize("#TimeRemaining_MonthsDays", n, i)
+          (e %= h.Kp.PerMinute),
+          n > 0
+            ? a.Localize("#TimeRemaining_MoreThanOneYear")
+            : t > 0
+              ? a.Localize("#TimeRemaining_MonthsDays", t, i)
               : i > 0
-                ? r.Localize(
+                ? a.Localize(
                     "#TimeRemaining_DaysHoursMinutes",
                     i,
-                    a.toString().padStart(2, "0"),
+                    r.toString().padStart(2, "0"),
                     o.toString().padStart(2, "0"),
                   )
-                : a > 0
-                  ? r.Localize(
+                : r > 0
+                  ? a.Localize(
                       "#TimeRemaining_HoursMinutesSeconds",
-                      a.toString().padStart(2, "0"),
+                      r.toString().padStart(2, "0"),
                       o.toString().padStart(2, "0"),
                       e.toString().padStart(2, "0"),
                     )
-                  : r.Localize(
+                  : a.Localize(
                       "#TimeRemaining_MinutesSeconds",
                       o.toString().padStart(2, "0"),
                       e.toString().padStart(2, "0"),
@@ -151,8 +152,8 @@
           (e[(e.Remaining = 2)] = "Remaining");
       })(o || (o = {}));
     },
-    83710: (e, t, n) => {
-      n.d(t, { Kp: () => i });
+    83710: (e, n, t) => {
+      t.d(n, { Kp: () => i });
       const i = {
         PerYear: 31536e3,
         PerMonth: 2628e3,
@@ -161,52 +162,6 @@
         PerHour: 3600,
         PerMinute: 60,
       };
-    },
-    39020: (e, t, n) => {
-      n.d(t, { Fv: () => h, MB: () => c });
-      var i = n(37085),
-        a = n(56545),
-        r = n(41071),
-        o = n(23809),
-        s = n(20194);
-      function h(e) {
-        const t = (0, o.TR)(),
-          n = (0, o.rX)();
-        return (0, s.I)(u(t.GetAnonymousServiceTransport(), n, e));
-      }
-      function u(e, t, n) {
-        return {
-          queryKey: ["LocalizedTagNames", n],
-          queryFn: async () => {
-            const o = `LocalizedTagNames2_${n}`,
-              s = await t.GetObject(o),
-              h = a.w.Init(r.Gr);
-            h.Body().set_language(n),
-              s?.version_hash && h.Body().set_have_version_hash(s.version_hash);
-            const u = await r.nd.GetTagList(e, h);
-            let c;
-            if (u.GetEResult() == i.R)
-              (c = u.Body().toObject()), t && t.StoreObject(o, c);
-            else if (u.GetEResult() == i.Ze) c = s || void 0;
-            else {
-              if (!s) throw u.GetErrorMessage();
-              console.warn(
-                "Couldn't load updated tag localization, will continue with what we have from storage.",
-              ),
-                (c = s);
-            }
-            const d = {};
-            return (
-              (c?.tags || []).forEach(({ tagid: e, name: t }) => (d[e] = t)), d
-            );
-          },
-          staleTime: 36e5,
-        };
-      }
-      function c(e, t) {
-        const { data: n } = h(t);
-        return n && n[e];
-      }
     },
   },
 ]);

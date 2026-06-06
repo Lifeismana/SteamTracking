@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Sipariş oluştur:",
     "Button_Close": "Kapat",
     "Search_ListingQuantity": "Satıştaki miktar: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Adet: %1$s",
     "Bucket_PriceFrom": "En düşük: %1$s",
     "AccessorySearch_AttachedAccessoryType": "Takılı %1$s",
     "FilterResults_Placeholder": "Sonuçları Filtrele...",

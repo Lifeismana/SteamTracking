@@ -227,10 +227,10 @@ $ORIGIN
 /tmp/steam_monitor.log.last
 0123456789ABCDEF
 0123456789abcdef
+03:02:02
+03:02:05
 12CStdMemAlloc
 16CAdHocValidation
-17:44:51
-17:45:17
 18CUtlCharConversion
 19CUtlNoEscConversion
 21CUtlCStringConversion
@@ -313,12 +313,12 @@ Invalid thread id during thread Start()
 IsSpewActive
 JArray
 Jobs/Coroutines
+Jun  2 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-May 29 2026
 MbP?H
 MemFree:
 MemTotal:

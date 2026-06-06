@@ -114,28 +114,19 @@ input.searchAppsInput
 	width: 180px;
 }
 
-.workshopAppsSort .browseOptionImage
-{
-	width: 202px;
-}
-
-.workshopAppsSort .browseOption
-{
-	font-size: 14px;
+.workshopAppsSort .browseOption {
+	margin-inline-end: 0;
 }
 
 .workshopAppsSort .browseOption.notSelected:hover {
-	cursor: pointer;
 	background-color: rgba(0,0,0,0.2);
-	margin-right: 0px;
 }
 
 .workshopAppsSortTitle
 {
 	text-transform: uppercase;
 	font-size: 12px;
-	padding-top: 20px;
-	padding-bottom: 10px;
+	padding-block: 20px 10px;
 	color: #979797;
 }
 

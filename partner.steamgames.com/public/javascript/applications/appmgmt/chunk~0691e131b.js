@@ -3241,55 +3241,55 @@
           return "CAuthentication_Token_Revoke_Request";
         }
       }
-      class Y extends s.Message {
+      class $ extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Y.toObject(e, this);
+          return $.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new Y();
+          return new $();
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
-            r = new Y();
-          return Y.deserializeBinaryFromReader(r, t);
+            r = new $();
+          return $.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_Token_Revoke_Response";
         }
       }
-      class $ extends s.Message {
+      class Y extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $.prototype.token_id || o.Sg($.M()),
+            Y.prototype.token_id || o.Sg(Y.M()),
             s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            $.sm_m ||
-              ($.sm_m = {
-                proto: $,
+            Y.sm_m ||
+              (Y.sm_m = {
+                proto: Y,
                 fields: {
                   token_id: {
                     n: 1,
@@ -3310,39 +3310,39 @@
                   signature: { n: 4, br: o.qM.readBytes, bw: o.gp.writeBytes },
                 },
               }),
-            $.sm_m
+            Y.sm_m
           );
         }
         static MBF() {
-          return $.sm_mbf || ($.sm_mbf = o.w0($.M())), $.sm_mbf;
+          return Y.sm_mbf || (Y.sm_mbf = o.w0(Y.M())), Y.sm_mbf;
         }
         toObject(e = !1) {
-          return $.toObject(e, this);
+          return Y.toObject(e, this);
         }
         static toObject(e, t) {
-          return o.BT($.M(), e, t);
+          return o.BT(Y.M(), e, t);
         }
         static fromObject(e) {
-          return o.Uq($.M(), e);
+          return o.Uq(Y.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
-            r = new $();
-          return $.deserializeBinaryFromReader(r, t);
+            r = new Y();
+          return Y.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return o.zj($.MBF(), e, t);
+          return o.zj(Y.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
-          return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          o.i0($.M(), e, t);
+          o.i0(Y.M(), e, t);
         }
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
-          return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_RefreshToken_Revoke_Request";
@@ -4553,14 +4553,14 @@
             return e.SendMsg(
               "Authentication.RevokeToken#1",
               (0, c.I8)(Z, t),
-              Y,
+              $,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.RevokeRefreshToken = function (e, t) {
             return e.SendMsg(
               "Authentication.RevokeRefreshToken#1",
-              (0, c.I8)($, t),
+              (0, c.I8)(Y, t),
               K,
               { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -5681,20 +5681,20 @@
           return "CTwoFactor_AddAuthenticator_Response";
         }
       }
-      class Y extends N.Message {
+      class $ extends N.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Y.prototype.steamid || L.Sg(Y.M()),
+            $.prototype.steamid || L.Sg($.M()),
             N.Message.initialize(this, e, 0, -1, [5], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Y.sm_m ||
-              (Y.sm_m = {
-                proto: Y,
+            $.sm_m ||
+              ($.sm_m = {
+                proto: $,
                 fields: {
                   steamid: {
                     n: 1,
@@ -5730,68 +5730,6 @@
                   },
                 },
               }),
-            Y.sm_m
-          );
-        }
-        static MBF() {
-          return Y.sm_mbf || (Y.sm_mbf = L.w0(Y.M())), Y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return L.BT(Y.M(), e, t);
-        }
-        static fromObject(e) {
-          return L.Uq(Y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (U().BinaryReader)(e),
-            r = new Y();
-          return Y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return L.zj(Y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (U().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          L.i0(Y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (U().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTwoFactor_FinalizeAddAuthenticator_Request";
-        }
-      }
-      class $ extends N.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            $.prototype.success || L.Sg($.M()),
-            N.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            $.sm_m ||
-              ($.sm_m = {
-                proto: $,
-                fields: {
-                  success: { n: 1, br: L.qM.readBool, bw: L.gp.writeBool },
-                  server_time: {
-                    n: 3,
-                    br: L.qM.readUint64String,
-                    bw: L.gp.writeUint64String,
-                  },
-                  status: { n: 4, br: L.qM.readInt32, bw: L.gp.writeInt32 },
-                },
-              }),
             $.sm_m
           );
         }
@@ -5825,6 +5763,68 @@
         serializeBase64String() {
           var e = new (U().BinaryWriter)();
           return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CTwoFactor_FinalizeAddAuthenticator_Request";
+        }
+      }
+      class Y extends N.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Y.prototype.success || L.Sg(Y.M()),
+            N.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Y.sm_m ||
+              (Y.sm_m = {
+                proto: Y,
+                fields: {
+                  success: { n: 1, br: L.qM.readBool, bw: L.gp.writeBool },
+                  server_time: {
+                    n: 3,
+                    br: L.qM.readUint64String,
+                    bw: L.gp.writeUint64String,
+                  },
+                  status: { n: 4, br: L.qM.readInt32, bw: L.gp.writeInt32 },
+                },
+              }),
+            Y.sm_m
+          );
+        }
+        static MBF() {
+          return Y.sm_mbf || (Y.sm_mbf = L.w0(Y.M())), Y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return L.BT(Y.M(), e, t);
+        }
+        static fromObject(e) {
+          return L.Uq(Y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (U().BinaryReader)(e),
+            r = new Y();
+          return Y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return L.zj(Y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (U().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          L.i0(Y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (U().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_FinalizeAddAuthenticator_Response";
@@ -6409,8 +6409,8 @@
           (e.FinalizeAddAuthenticator = function (e, t) {
             return e.SendMsg(
               "TwoFactor.FinalizeAddAuthenticator#1",
-              (0, q.I8)(Y, t),
-              $,
+              (0, q.I8)($, t),
+              Y,
               { ePrivilege: 1 },
             );
           }),
@@ -6966,15 +6966,16 @@
             (this.m_strExtendedErrorMessage = r);
         }
         onAuthComplete = (e) => {
-          this.m_eStatus = e.bSuccess ? fe : _e;
-          const t = e.bSuccess
-            ? {
-                ...e,
-                strAccountName: this.m_strAccountName,
-                steamid: this.m_steamid,
-              }
-            : e;
-          this.m_onLoginComplete && this.m_onLoginComplete(t);
+          let t;
+          (this.m_eStatus = e.bSuccess ? fe : _e),
+            (t = e.bSuccess
+              ? {
+                  ...e,
+                  strAccountName: this.m_strAccountName,
+                  steamid: this.m_steamid,
+                }
+              : { bSuccess: !1 }),
+            this.m_onLoginComplete && this.m_onLoginComplete(t);
         };
         SetOnLoginComplete(e) {
           this.m_onLoginComplete = e;
@@ -7196,10 +7197,16 @@
             return (s[a++] = 1), (s[a++] = 129), (s[a++] = 0), (s[a++] = 59), s;
           })(m, s, a),
           g = new Blob([d], { type: "image/gif" }),
-          h = URL.createObjectURL(g);
+          h = URL.createObjectURL(g),
+          p = `rgb(${a[0]}, ${a[1]}, ${a[2]})`;
         return (0, i.jsx)("div", {
           className: (0, y.A)(Ee().QRBits, n),
-          children: (0, i.jsx)("img", { className: Ee().QRImg, src: h }),
+          style: { "--qr-bright-color": p },
+          children: (0, i.jsx)("img", {
+            className: Ee().QRImg,
+            src: h,
+            alt: "",
+          }),
         });
       }
       !(function (e) {
@@ -7218,15 +7225,16 @@
             onStatusChange: n,
             platform: a,
             deckStyling: o,
+            activeBitValue: c = 255,
           } = e,
-          c = F.TS.IN_STEAMUI ? nt : st,
+          l = F.TS.IN_STEAMUI ? nt : st,
           {
-            eStatus: l,
-            strChallengeURL: m,
-            strClientID: d,
-            bHadRemoteInteraction: g,
-            reset: h,
-            setTokenToRevoke: p,
+            eStatus: m,
+            strChallengeURL: d,
+            strClientID: g,
+            bHadRemoteInteraction: h,
+            reset: p,
+            setTokenToRevoke: f,
           } = (function (e) {
             const [t, r] = (0, u.useState)(new Fe(e));
             return (
@@ -7249,24 +7257,25 @@
                 setTokenToRevoke: t.SetTokenToRevoke,
               }))
             );
-          })({ transport: t, onComplete: r, onDeviceDetails: c });
-        (0, u.useEffect)(() => n && n(l), [n, l]);
-        const f = l === ze ? m : F.TS.STORE_BASE_URL,
-          _ = l === Ce || l === ve || g,
-          b = l === je,
-          B = l === Te,
-          w = B
+          })({ transport: t, onComplete: r, onDeviceDetails: l });
+        (0, u.useEffect)(() => n && n(m), [n, m]);
+        const _ = m === ze ? d : F.TS.STORE_BASE_URL,
+          b = m === Ce || m === ve || h,
+          B = m === je,
+          w = m === Te,
+          M = w
             ? (0, i.jsx)(Ze, {})
-            : b
-              ? (0, i.jsx)(Ve, { reset: h })
-              : _
+            : B
+              ? (0, i.jsx)(Ve, { reset: p })
+              : b
                 ? (0, i.jsx)(He, { size: "small" })
                 : null,
-          M = _ || b || B;
+          S = b || B || w;
         (0, u.useEffect)(() => {
-          e.refreshInfo?.login_token_id && p(e.refreshInfo.login_token_id);
-        }, [e.refreshInfo, p]);
-        const S = F.TS.EUNIVERSE !== s.wLO;
+          e.refreshInfo?.login_token_id && f(e.refreshInfo.login_token_id);
+        }, [e.refreshInfo, f]);
+        const R = F.TS.EUNIVERSE !== s.wLO,
+          C = `rgb(${c}, ${c}, ${c})`;
         return (0, i.jsx)("div", {
           className: Le().Column,
           children: (0, i.jsxs)("div", {
@@ -7275,22 +7284,23 @@
               (0, i.jsx)(Ne, {
                 borderWidth: 0,
                 activeBitColor: [21, 23, 28],
-                inactiveBitColor: S ? [255, 0, 255] : [255, 255, 255],
-                quality: Pe(f),
+                inactiveBitColor: R ? [c, 0, c] : [c, c, c],
+                quality: Pe(_),
                 className: (0, y.A)(
                   Le().LoginQR,
                   o && Le().QRLoginDeck,
-                  M && Le().Blur,
-                  S && Le().NonPublic,
+                  S && Le().Blur,
+                  R && Le().NonPublic,
                 ),
-                children: f,
+                children: _,
               }),
-              M &&
+              S &&
                 (0, i.jsx)("div", {
                   className: Le().Overlay,
                   children: (0, i.jsx)("div", {
                     className: Le().Box,
-                    children: w,
+                    style: { "--qr-bright-color": C },
+                    children: M,
                   }),
                 }),
             ],
@@ -7367,9 +7377,9 @@
           }),
         });
       }
-      var Ye = r(8527);
-      const $e = (0, u.createContext)(!1),
-        Ke = () => (0, u.useContext)($e);
+      var $e = r(8527);
+      const Ye = (0, u.createContext)(!1),
+        Ke = () => (0, u.useContext)(Ye);
       function Xe() {
         return (0, i.jsx)("div", {
           className: Ae().Login,
@@ -7406,7 +7416,7 @@
                           ...c
                         } = i.data,
                         u = new FormData();
-                      Object.keys(c).forEach((e) => u.append(e, c[e]));
+                      Object.entries(c).forEach(([e, t]) => u.append(e, t));
                       const m = await l().post(s, u),
                         d = 200 === m.status && m.data.result === a.R;
                       d && window.location.assign(e);
@@ -7440,8 +7450,8 @@
       function et(e) {
         const { embedded: t, children: r, ...n } = e;
         return (0, i.jsx)(f.tH, {
-          children: (0, i.jsx)($e.Provider, {
-            value: t,
+          children: (0, i.jsx)(Ye.Provider, {
+            value: t ?? !1,
             children: (0, i.jsxs)("div", {
               className: Ae().Login,
               children: [(0, i.jsx)(ot, { ...n }), r],
@@ -7544,20 +7554,21 @@
             isProbablySharedPC: i = !1,
           } = e,
           n = (0, u.useCallback)(
-            ({
-              bSuccess: e,
-              strRefreshToken: r,
-              strAccessToken: i,
-              strAccountName: n,
-              strNewGuardData: s,
-            }) => {
-              e &&
+            (e) => {
+              if (e.bSuccess) {
+                const {
+                  strRefreshToken: r,
+                  strAccessToken: i,
+                  strAccountName: n,
+                  strNewGuardData: s,
+                } = e;
                 t({
                   strRefreshToken: r,
                   strAccessToken: i,
                   strAccountName: n,
                   strNewGuardData: s,
                 });
+              }
             },
             [t],
           ),
@@ -7642,35 +7653,36 @@
             refreshInfo: o,
             renderSuccess: c = () => (0, i.jsx)(rr, {}),
             lastResult: l,
-            joinLinkVariant: u,
-            defaultAccountName: m,
-            secureComputer: d = !0,
-            isProbablySharedPC: g = !1,
-            onShowAgreement: p,
-            creationRedirectUrl: f,
+            joinLinkVariant: m,
+            defaultAccountName: d,
+            secureComputer: g = !0,
+            isProbablySharedPC: p = !1,
+            onShowAgreement: f,
+            creationRedirectUrl: b,
           } = e,
-          b = F.TS.IN_STEAMUI ? nt : st,
-          B = F.TS.IN_STEAMUI
+          B = F.TS.IN_STEAMUI ? nt : st,
+          w = F.TS.IN_STEAMUI
             ? (e) => SteamClient.Auth.GetSteamGuardData(e)
             : null,
-          w = (function () {
+          M = (function () {
             const e =
               window?.location && (0, _.f3)(window.location, "need_password");
             return void 0 !== e && "false" !== e && "0" !== e;
           })(),
-          M = at({
+          S = at({
             transport: t,
             platform: n,
             onSuccess: r,
             refreshInfo: o,
-            onDeviceDetails: b,
-            onGetMachineAuth: B,
-            defaultAccountName: m,
-            secureComputer: d,
-            isProbablySharedPC: g,
-            onShowAgreement: p,
+            onDeviceDetails: B,
+            onGetMachineAuth: w,
+            defaultAccountName: d,
+            secureComputer: g,
+            isProbablySharedPC: p,
+            onShowAgreement: f,
           }),
-          S = Ke();
+          R = Ke(),
+          C = (0, u.useId)();
         if (null != l && l != a.R)
           return (0, i.jsx)("div", {
             className: Ae().Login,
@@ -7678,38 +7690,38 @@
               reset: () => window.location.reload(),
               failure: x.eF.Generic,
               errorReference: l.toString(),
-              extendedErrorMessage: M.password.strExtendedErrorMessage,
+              extendedErrorMessage: S.password.strExtendedErrorMessage,
             }),
           });
-        const R = !(0, F.Y2)();
-        if (!M.bInPasswordFlow) {
+        const v = !(0, F.Y2)();
+        if (!S.bInPasswordFlow) {
           const r = (0, i.jsxs)("div", {
-            className: (0, y.A)(Ae().SideBySide, S && Ae().Embedded),
+            className: (0, y.A)(Ae().SideBySide, R && Ae().Embedded),
             children: [
               (0, i.jsx)(ut, {
-                strAccountName: M.strAccountName,
-                onAccountNameChange: M.onAccountNameChange,
-                strPassword: M.strPassword,
-                onPasswordChange: M.onPasswordChange,
-                bRememberMe: M.bRememberMe,
-                onRememberMeChange: M.onRememberMeChange,
-                onSubmit: M.onPasswordSubmit,
-                status: M.password.eStatus,
+                strAccountName: S.strAccountName,
+                onAccountNameChange: S.onAccountNameChange,
+                strPassword: S.strPassword,
+                onPasswordChange: S.onPasswordChange,
+                bRememberMe: S.bRememberMe,
+                onRememberMeChange: S.onRememberMeChange,
+                onSubmit: S.onPasswordSubmit,
+                status: S.password.eStatus,
                 autoFocus: s,
-                secureComputer: d,
+                secureComputer: g,
                 refreshInfo: e.refreshInfo,
               }),
-              R &&
+              v &&
                 (0, i.jsx)(dt, {
                   transport: t,
-                  onQRStatusChange: M.onQRStatusChange,
-                  onComplete: M.onComplete,
+                  onQRStatusChange: S.onQRStatusChange,
+                  onComplete: S.onComplete,
                   platform: n,
                   refreshInfo: o,
                 }),
             ],
           });
-          if (S) {
+          if (R) {
             const t = F.TS.IN_STEAMUI,
               n = t ? F.TS.LAUNCHER_TYPE : void 0;
             return (0, i.jsxs)(Qt, {
@@ -7734,8 +7746,8 @@
                     (0, i.jsx)(tt, { variant: e.helpLinkVariant }),
                     (0, i.jsx)(it, {
                       launcherType: n,
-                      variant: u,
-                      redirectUrl: f,
+                      variant: m,
+                      redirectUrl: b,
                     }),
                   ],
                 }),
@@ -7751,8 +7763,9 @@
             },
             children: [
               !1,
-              (0, i.jsx)("div", {
+              (0, i.jsx)("h2", {
                 className: Ae().PrimaryHeader,
+                id: C,
                 children: e.refreshInfo
                   ? (0, T.we)("#Login_RefreshSignIn")
                   : (0, T.we)("#Login_SignInTitle"),
@@ -7762,11 +7775,12 @@
           });
           return (0, i.jsxs)(Kt, {
             title: a,
-            children: [w && (0, i.jsx)(lt, {}), r],
+            titleId: C,
+            children: [M && (0, i.jsx)(lt, {}), r],
           });
         }
-        const C = M.password.eStatus;
-        switch (C) {
+        const z = S.password.eStatus;
+        switch (z) {
           case pe:
             return e.renderLoading
               ? (0, i.jsx)(i.Fragment, { children: e.renderLoading() })
@@ -7775,46 +7789,46 @@
           case he:
           case le:
           case ge:
-            const t = C === me || C === he;
+            const t = z === me || z === he;
             return (0, i.jsx)(qt, {
               type: t ? "mobile" : "email",
-              onSubmitCode: M.password.addCode,
-              status: C,
-              associatedLabel: M.password.strConfirmationAssociatedMessage,
-              accountName: M.password.strAccountName,
-              onBack: M.password.goBack,
+              onSubmitCode: S.password.addCode,
+              status: z,
+              associatedLabel: S.password.strConfirmationAssociatedMessage,
+              accountName: S.password.strAccountName,
+              onBack: S.password.goBack,
               onCodeHelp: e.onCodeHelp,
             });
           case de:
           case ue:
-            const r = C === de;
+            const r = z === de;
             return (0, i.jsx)(Pt, {
               type: r ? "mobile" : "email",
-              accountName: M.password.strAccountName,
-              onUseCodeOverride: M.password.useCodeOverride,
+              accountName: S.password.strAccountName,
+              onUseCodeOverride: S.password.useCodeOverride,
               onCodeHelp: e.onCodeHelp,
             });
           case be:
-            return (0, i.jsx)(kt, { reset: M.password.reset });
+            return (0, i.jsx)(kt, { reset: S.password.reset });
           case _e:
             return (0, i.jsx)(At, {
-              reset: M.password.reset,
-              failure: M.password.eFailureState,
-              onRequestOffline: M.onTryOffline,
-              errorReference: M.password.strErrorReference,
-              extendedErrorMessage: M.password.strExtendedErrorMessage,
+              reset: S.password.reset,
+              failure: S.password.eFailureState,
+              onRequestOffline: S.onTryOffline,
+              errorReference: S.password.strErrorReference,
+              extendedErrorMessage: S.password.strExtendedErrorMessage,
             });
           case fe:
             return (0, i.jsx)(Kt, { compact: !0, children: c() });
           default:
             return (
-              (0, h.ZI)(`Unknown Phase: ${C}`),
+              (0, h.ZI)(`Unknown Phase: ${z}`),
               (0, i.jsx)(At, {
-                reset: M.password.reset,
+                reset: S.password.reset,
                 failure: x.eF.Generic,
-                onRequestOffline: M.onTryOffline,
-                errorReference: M.password.strErrorReference,
-                extendedErrorMessage: M.password.strExtendedErrorMessage,
+                onRequestOffline: S.onTryOffline,
+                errorReference: S.password.strErrorReference,
+                extendedErrorMessage: S.password.strExtendedErrorMessage,
               })
             );
         }
@@ -7910,7 +7924,9 @@
             : (0, i.jsx)(jt, { children: " " }),
           w = n && !a,
           M = n && !!a,
-          S = !!e.refreshInfo;
+          S = !!e.refreshInfo,
+          R = (0, u.useId)(),
+          C = (0, u.useId)();
         return (0, i.jsxs)(Vt, {
           onSubmit: () => {
             t().then(() => {
@@ -7923,6 +7939,7 @@
               tone: B ? "danger" : void 0,
               label: (0, i.jsx)(Bt, {
                 highlight: !0,
+                inputId: R,
                 children: (0, T.we)("#Login_SignIn_WithAccountName"),
               }),
               value: a,
@@ -7931,16 +7948,21 @@
               },
               autoFocus: w,
               disabled: S,
+              id: R,
             }),
             (0, i.jsx)(bt, {
               tone: B ? "danger" : void 0,
-              label: (0, i.jsx)(Bt, { children: (0, T.we)("#Login_Password") }),
+              label: (0, i.jsx)(Bt, {
+                inputId: C,
+                children: (0, T.we)("#Login_Password"),
+              }),
               value: c,
               onChange: (e) => {
                 p(!0), l(e);
               },
               type: "password",
               autoFocus: M,
+              id: C,
             }),
             g
               ? (0, i.jsx)(z.he, {
@@ -7987,7 +8009,6 @@
           F.TS.STORE_BASE_URL +
           "join/?guest=1&purchaseType=gift&checkout=1&redir=" +
           encodeURIComponent(e.redirectURL);
-        F.TS.STORE_BASE_URL, encodeURIComponent(e.redirectURL);
         return (0, i.jsx)("div", {
           className: Ae().GuestLayout,
           children: (0, i.jsx)(Kt, {
@@ -8103,21 +8124,24 @@
         });
       }
       function bt(e) {
-        const { label: t, error: r, tone: n, autoFocus: s, ...a } = e,
-          o = n ?? (r ? "danger" : void 0);
+        const { label: t, error: r, tone: n, autoFocus: s, id: a, ...o } = e,
+          c = n ?? (r ? "danger" : void 0);
         return (0, i.jsxs)("div", {
           className: Ae().TextField,
           children: [
-            "string" == typeof t ? (0, i.jsx)(Bt, { children: t }) : t,
-            (0, i.jsx)(wt, { type: "error", children: r }),
-            (0, i.jsx)(yt, { autoFocus: s, tone: o, ...a }),
+            "string" == typeof t
+              ? (0, i.jsx)(Bt, { inputId: a, children: t })
+              : t,
+            r && (0, i.jsx)(wt, { type: "error", children: r }),
+            (0, i.jsx)(yt, { autoFocus: s, tone: c, id: a, ...o }),
           ],
         });
       }
       function Bt(e) {
-        const { children: t, highlight: r } = e;
-        return (0, i.jsx)("div", {
-          className: (0, y.A)(Ae().FieldLabel, r && Ae().Highlight),
+        const { children: t, inputId: r, highlight: n } = e;
+        return (0, i.jsx)("label", {
+          className: (0, y.A)(Ae().FieldLabel, n && Ae().Highlight),
+          htmlFor: r,
           children: t,
         });
       }
@@ -8130,6 +8154,7 @@
           className: a,
           autoFocus: o,
           disabled: c,
+          id: l,
         } = e;
         return (0, i.jsx)("input", {
           value: t,
@@ -8138,6 +8163,7 @@
           onChange: (e) => r(e.target.value),
           className: (0, y.A)(Ae().TextInput, "danger" === s && Ae().Danger, a),
           disabled: c,
+          id: l,
         });
       }
       function wt(e) {
@@ -8152,6 +8178,7 @@
         let s = () => {
           r && r(!n);
         };
+        const a = (0, u.useId)();
         return (0, i.jsxs)("div", {
           className: Ae().CheckboxField,
           onClick: s,
@@ -8159,8 +8186,9 @@
             " " == e.key && (s(), e.preventDefault());
           },
           children: [
-            (0, i.jsx)(St, { value: n }),
-            (0, i.jsx)("div", {
+            (0, i.jsx)(St, { labelledBy: a, value: n }),
+            (0, i.jsx)("label", {
+              id: a,
               className: Ae().CheckboxFieldLabel,
               children: t,
             }),
@@ -8168,10 +8196,13 @@
         });
       }
       function St(e) {
-        const { value: t } = e;
+        const { value: t, labelledBy: r } = e;
         return (0, i.jsx)("div", {
           tabIndex: 0,
           className: Ae().Checkbox,
+          "aria-labelledby": r,
+          role: "checkbox",
+          "aria-checked": t,
           children:
             t &&
             (0, i.jsx)("div", {
@@ -8182,7 +8213,10 @@
       }
       function Rt(e) {
         const { refreshLogin: t, ...r } = e;
-        return t && SteamClient.User?.StartShutdown
+        return t &&
+          "SteamClient" in globalThis &&
+          "User" in SteamClient &&
+          "StartShutdown" in SteamClient.User
           ? (0, i.jsx)(vt, {})
           : (0, i.jsx)(Ct, { ...r });
       }
@@ -8364,7 +8398,7 @@
                       onClick: t,
                       children: (0, T.we)("#Button_Retry"),
                     }),
-                    l && (0, i.jsx)(It, { onRequestOffline: n }),
+                    l && n && (0, i.jsx)(It, { onRequestOffline: n }),
                   ],
                 }),
               ],
@@ -8440,7 +8474,7 @@
                               children: (0, T.we)("#Login_IncorrectSteamGuard"),
                             }),
                           (0, i.jsx)(
-                            Yt,
+                            $t,
                             {
                               value: c,
                               onChange: (e) => {
@@ -8531,7 +8565,7 @@
           alignItems: "center",
           className: Ae().EnterCodeFromEmailContainer,
           children: [
-            (0, i.jsx)($t, {
+            (0, i.jsx)(Yt, {
               align: "center",
               spacing: 6,
               children: (0, i.jsx)("div", {
@@ -8580,7 +8614,7 @@
           children: (0, i.jsxs)("div", {
             className: Ae().ConfirmationContainer,
             children: [
-              (0, i.jsx)("img", { src: (0, Ye.YJ)(d) }),
+              (0, i.jsx)("img", { src: (0, $e.YJ)(d) }),
               (0, i.jsx)("div", {
                 className: Ae().AwaitingMobileConfText,
                 children: (0, T.oW)("#Login_AwaitingMobileConfirmation"),
@@ -8704,16 +8738,22 @@
             justifyContent: r,
             gap: n,
             className: s,
-            children: a,
+            ariaLabelledBy: a,
+            children: o,
           } = e,
-          o = (0, y.A)(
+          c = (0, y.A)(
             Ae().FlexCol,
             "center" === t && Ae().AlignItemsCenter,
             "center" === r && Ae().JustifyContentCenter,
             s,
           ),
-          c = n ? { gap: "number" == typeof n ? `${n}px` : n } : void 0;
-        return (0, i.jsx)("div", { className: o, style: c, children: a });
+          l = n ? { gap: "number" == typeof n ? `${n}px` : n } : void 0;
+        return (0, i.jsx)("section", {
+          className: c,
+          style: l,
+          "aria-labelledby": a,
+          children: o,
+        });
       }
       function Zt(e) {
         const {
@@ -8730,8 +8770,8 @@
           };
         return (0, i.jsx)("div", { style: a, className: s, children: t });
       }
-      function Yt(e) {
-        const { onChange: t, backupCode: r, ...n } = e;
+      function $t(e) {
+        const { onChange: t, backupCode: r = !1, ...n } = e;
         return (0, i.jsx)(S, {
           length: we(r),
           backupCode: r,
@@ -8743,7 +8783,7 @@
           allowCharacter: (e) => /\w/g.test(e),
         });
       }
-      function $t(e) {
+      function Yt(e) {
         const { children: t, spacing: r = 0, align: n } = e;
         return (0, i.jsx)(Qt, {
           alignItems: n,
@@ -8754,28 +8794,31 @@
                   children: e,
                 })
               : null,
-          ).filter(Boolean),
+          )?.filter(Boolean),
         });
       }
       function Kt(e) {
-        const { title: t, children: r, compact: n } = e,
-          s = Ke();
+        const { title: t, titleId: r, children: n, compact: s } = e,
+          a = Ke(),
+          o = (0, u.useId)();
         return (0, i.jsxs)(Qt, {
           gap: F.TS.IN_STEAMUI ? 0 : 32,
           className: (0, y.A)(
             Ae().StandardLayout,
-            s && Ae().Embedded,
-            n && Ae().Compact,
+            a && Ae().Embedded,
+            s && Ae().Compact,
             F.TS.IN_STEAMUI && "IN_CLIENT",
           ),
+          ariaLabelledBy: r ?? o,
           children: [
             "string" == typeof t
               ? (0, i.jsx)("div", {
                   className: Ae().PrimaryHeader,
+                  id: r ?? o,
                   children: t,
                 })
               : t,
-            (0, i.jsx)("div", { className: Ae().FormContainer, children: r }),
+            (0, i.jsx)("div", { className: Ae().FormContainer, children: n }),
           ],
         });
       }

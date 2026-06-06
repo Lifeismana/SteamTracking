@@ -3075,6 +3075,12 @@ message CVRGamepadUI_Message_ReportVRPanelErrorBoundaryError_Request {
 message CVRGamepadUI_Message_ReportVRPanelErrorBoundaryError_Response {
 }
 
+message CVRGamepadUI_Message_ResetHMDSettings_Request {
+}
+
+message CVRGamepadUI_Message_ResetHMDSettings_Response {
+}
+
 message CVRGamepadUI_Message_SetCurrentLanguage_Request {
 	optional string language = 1;
 }
@@ -3087,6 +3093,21 @@ message CVRGamepadUI_Message_SetDisplayBrightness_Request {
 }
 
 message CVRGamepadUI_Message_SetDisplayBrightness_Response {
+}
+
+message CVRGamepadUI_Message_SetHMDSettings_Request {
+	optional float user_brightness_value = 1;
+	optional float refresh_rate_value = 2;
+	optional bool supersample_manual_override = 3;
+	optional float supersample_scale_value = 4;
+	optional uint32 frames_to_throttle = 5;
+	optional bool motion_smoothing = 6;
+	optional string performance_profile_value = 7;
+	optional bool perf_graph_in_hmd = 8;
+	optional bool record_vr_stats = 9;
+}
+
+message CVRGamepadUI_Message_SetHMDSettings_Response {
 }
 
 message CVRGamepadUI_Message_ShowDashboardPopup_Request {

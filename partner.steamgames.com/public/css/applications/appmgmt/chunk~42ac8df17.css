@@ -4320,11 +4320,11 @@ html.responsive.touch .ContentHubSalePage {
   position: relative;
   z-index: 2;
 }
-html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
+html.responsive.touch:not(.GamepadMode) ._1cOoCFwafBlSkwllIMf3XM {
   scrollbar-color: hsla(0, 0%, 100%, 0.35) rgba(0, 0, 0, 0);
 }
 @media screen and (max-width: 910px) {
-  html.responsive ._1cOoCFwafBlSkwllIMf3XM {
+  html.responsive:not(.GamepadMode) ._1cOoCFwafBlSkwllIMf3XM {
     scrollbar-color: hsla(0, 0%, 100%, 0.35) rgba(0, 0, 0, 0);
   }
 }
@@ -5102,7 +5102,7 @@ span._1P__hyqsgd049GH0Bn007_ {
   overflow: hidden;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
 }
-.BasicUI ._3FAid_cwwxW8-9Sp6pSPqS {
+.BasicUI ._3FAid_cwwxW8-9Sp6pSPqS:not(._2f6Nut1kQFb4WnCmz4uXDG) {
   display: none;
 }
 ._3FAid_cwwxW8-9Sp6pSPqS svg {

@@ -71,6 +71,35 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _ = 0;
+      function _(_, _) {
+        (0, _.useEffect)(() => {
+          if (!_ && !_)
+            return (
+              _++,
+              () => {
+                0 == --_ && (0, _._)();
+              }
+            );
+        }, [_, _]);
+      }
+      function _(_) {
+        const [_, _] = (0, _.useState)(!1);
+        (0, _.useEffect)(() => {
+          const _ = window.setTimeout(() => __webpack_require__(!0), _);
+          return () => window.clearTimeout(_);
+        }, [_]),
+          _(_);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -511,6 +540,7 @@
               color: _,
               backgroundColor: _,
             },
+            bShowInGamepadUI: !0,
           }),
         });
       }
@@ -1023,11 +1053,13 @@
         }
         return (0, _.jsx)(_.Fragment, {});
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { bSalePage: _ } = _,
           [_, _] = _.useState(_._.IsInitialized());
         return (
+          (0, _._)(_, _),
           _.useEffect(() => {
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
               _._.Init(),

@@ -850,48 +850,12 @@ fieldset.editRow_textarea label {
 	margin-bottom: 0px;
 }
 
-.rightbox_list_option {
-	position: relative;
-	line-height: 37px;
-	height: 37px;
-	color: #c9c9c9;
-}
-
-.rightbox_list_option a:hover {
-	text-decoration: underline;
-}
-
-.rightbox_list_option.selected a:hover {
-	text-decoration: none;
-}
-
-.rightbox_list_option_content {
-	position: relative;
-}
-
-.rightbox_list_option.selected .rightbox_list_selection_background {
-	display: block;
-}
-
-.rightbox_list_selection_background {
-	position: absolute;
-	display: none;
-	left: -27px;
-	top: 0px;
-	background-image: url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_option_selected.png' );
-	width: 306px;
-	height: 37px;
-}
-
 .comment_type_filter_item_container {
 	position: relative;
 }
 
-.comment_type_filter_item_image {
-	position: absolute;
-	height: 40px;
-	width: 270px;
-	cursor: pointer;
+.comment_type_filter_item_container.selected .rightbox_list_selection_background {
+	display: block;
 }
 
 .comment_type_filter_item {
@@ -902,16 +866,12 @@ fieldset.editRow_textarea label {
 	color: white;
 }
 
-.comment_type_filter_item_container .comment_type_filter_option {
+.comment_type_filter_option {
 	padding-left: 23px;
 }
 
 .forum_list_unread {
 	font-weight: bold;
-	color: #ffffff;
-}
-
-.forum_list .rightbox_list_option.selected {
 	color: #ffffff;
 }
 

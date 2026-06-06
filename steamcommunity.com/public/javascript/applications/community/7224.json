@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Legg inn en ordre:",
     "Button_Close": "Lukk",
     "Search_ListingQuantity": "Antall til salgs: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Antall: %1$s",
     "Bucket_PriceFrom": "Fra %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s",
     "FilterResults_Placeholder": "Filtrer resultater …",

@@ -290,11 +290,12 @@
     "setcooldown_nocooldown": "Bekleme süresi yok",
     "setcooldown_days": "gün",
     "setcooldown_newcooldownlabel": "Kullanıcı için yeni bekleme süresi:",
-    "setcooldown_clearcooldown": "Temizle",
+    "setcooldown_clearcooldown": "Bekleme süresini kaldır",
     "setcooldown_cooldownsummary": "(%1$s gün)",
     "setcooldown_dialogtitle": "Şikâyet bekleme süresini ayarla",
     "setcooldown_dialogdescription": "Bu özellik, bir kullanıcının sistemi kötüye kullanması durumunda içeriği şikâyet etmesini veya bir karara itiraz etmesini engellemenizi sağlar.",
     "setcooldown_setbutton": "Bekleme süresini ayarla",
     "setcooldown_clearopenreports": "Bu kullanıcının çözülmemiş şikâyetlerini kaldır",
+    "setcooldown_statssummary": "%1$s/%2$s şikâyet aklandı, geçen hafta %3$s/%4$s şikâyet aklandı.",
     "nocomma": ""
 }

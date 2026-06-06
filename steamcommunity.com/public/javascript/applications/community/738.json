@@ -290,11 +290,12 @@
     "setcooldown_nocooldown": "Nessuna sospensione",
     "setcooldown_days": "giorni",
     "setcooldown_newcooldownlabel": "Nuova sospensione per l'utente:",
-    "setcooldown_clearcooldown": "Cancella",
+    "setcooldown_clearcooldown": "Rimuovi sospensione",
     "setcooldown_cooldownsummary": "(%1$s giorni)",
     "setcooldown_dialogtitle": "Imposta la sospensione delle segnalazioni",
     "setcooldown_dialogdescription": "Impedisci a un utente di segnalare contenuti o contestare la moderazione quando ha abusato del sistema.",
     "setcooldown_setbutton": "Imposta sospensione",
     "setcooldown_clearopenreports": "Cancella le segnalazioni non risolte di questo utente",
+    "setcooldown_statssummary": "%1$s/%2$s segnalazioni assolte, %3$s/%4$s nella scorsa settimana.",
     "nocomma": ""
 }

@@ -2666,6 +2666,11 @@ var CUser = Class.create( {
 
 			this.rgAppInfo[appid] = rgAppData;
 
+						if ( Array.isArray( rgAppData.rgContexts ) )
+			{
+				rgAppData.rgContexts = {};
+			}
+
 			for ( var contextid in rgAppData.rgContexts )
 			{
 				var rgContext = rgAppData.rgContexts[contextid];
@@ -3873,7 +3878,7 @@ function ShowItemHoverAsPopup( elNewInfo, fnOnDismiss )
 	$Info.show();
 	$Info.css('opacity',1);
 
-	var $Modal = $J('<div/>',{'class': 'newmodal economy_modal_ctn'});
+	var $Modal = $J('<dialog/>',{'class': 'newmodal economy_modal_ctn'});
 	var $PopupCtn = $J('<div/>', {'class': 'economy_item_popup' } );
 	var $Scroll = $J('<div/>', {'class' : 'economy_item_popup_scroll'} );
 	var $DismissBtn = $J('<div/>', {'class': 'economy_item_popup_dismiss'} ).text('X');
@@ -3978,12 +3983,6 @@ SellItemDialog = {
 		$('market_sell_currency_input').observe( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
 		$('market_sell_buyercurrency_input').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
 		$('market_sell_buyercurrency_input').observe( 'keyup', this.OnBuyerPriceInputKeyUp.bindAsEventListener(this) );
-
-		$('market_sell_dialog').style.visibility = 'hidden';
-		$('market_sell_dialog').show();
-		// TODO: Slider
-		$('market_sell_dialog').hide();
-		$('market_sell_dialog').style.visibility = '';
 
 		// hold a reference to prevent it form getting removed
 		this.m_elDialogContent = $('market_sell_dialog');

@@ -481,10 +481,12 @@
         switch (_) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
+          case "#Sale_Reservation_ByYear":
             _ = "" + _.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
+          case "#Sale_Reservation_ByMonthYear":
             (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
               (_ = "" + _.getFullYear());
             break;
@@ -574,6 +576,10 @@
             (0, _.jsx)("p", {
               children:
                 "Once selected, you can add groupings of item quantities and a description of how we want to describe the date at which those people will recieve their items.",
+            }),
+            (0, _.jsx)("p", {
+              children:
+                "Queue positions are fixed for each user who enters the queue and only go up with new users entering the queue.  Their position doesn't decrease when previous users cancel or purchase the item.",
             }),
           ],
         });
@@ -865,6 +871,8 @@
         "#Sale_Reservation_Year",
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
+        "#Sale_Reservation_ByYear",
+        "#Sale_Reservation_ByMonthYear",
         "#Sale_Reservation_AvailabilityUnknown",
       ];
       function _(_) {

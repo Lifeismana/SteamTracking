@@ -20,6 +20,7 @@
         "./main_japanese.json": [90114, 9857],
         "./main_koreana.json": [79476, 759],
         "./main_latam.json": [92548, 9783],
+        "./main_malay.json": [41723, 664],
         "./main_norwegian.json": [71759, 5388],
         "./main_polish.json": [63832, 3867],
         "./main_portuguese.json": [58456, 9387],
@@ -68,6 +69,7 @@
         "./main_japanese.json": [90114, 9857],
         "./main_koreana.json": [79476, 759],
         "./main_latam.json": [92548, 9783],
+        "./main_malay.json": [41723, 664],
         "./main_norwegian.json": [71759, 5388],
         "./main_polish.json": [63832, 3867],
         "./main_portuguese.json": [58456, 9387],
@@ -839,6 +841,7 @@
         "./sales_japanese.json": [95849, 8064],
         "./sales_koreana.json": [22417, 5184],
         "./sales_latam.json": [56969, 2744],
+        "./sales_malay.json": [27874, 4759],
         "./sales_norwegian.json": [71890, 4055],
         "./sales_polish.json": [97431, 7958],
         "./sales_portuguese.json": [29627, 1410],
@@ -887,6 +890,7 @@
         "./sales_japanese.json": [95849, 8064],
         "./sales_koreana.json": [22417, 5184],
         "./sales_latam.json": [56969, 2744],
+        "./sales_malay.json": [27874, 4759],
         "./sales_norwegian.json": [71890, 4055],
         "./sales_polish.json": [97431, 7958],
         "./sales_portuguese.json": [29627, 1410],
@@ -935,6 +939,7 @@
         "./shared_japanese.json": [7263, 1389],
         "./shared_koreana.json": [30295, 139],
         "./shared_latam.json": [50559, 5803],
+        "./shared_malay.json": [61136, 4516],
         "./shared_norwegian.json": [86512, 6120],
         "./shared_polish.json": [52889, 2959],
         "./shared_portuguese.json": [72269, 823],
@@ -983,6 +988,7 @@
         "./shared_japanese.json": [7263, 1389],
         "./shared_koreana.json": [30295, 139],
         "./shared_latam.json": [50559, 5803],
+        "./shared_malay.json": [61136, 4516],
         "./shared_norwegian.json": [86512, 6120],
         "./shared_polish.json": [52889, 2959],
         "./shared_portuguese.json": [72269, 823],
@@ -2696,6 +2702,7 @@
           return new _(this, _, _, _, _);
         }
         RegisterGamepadNavigationTree(_, _) {
+          _("Registering focusnav tree ", _._);
           const _ = _.WindowContext;
           __webpack_require__.AddNavTree(_);
           const _ = _.MountNavTree(_);
@@ -3412,14 +3419,12 @@
           ).GlobalFooter,
         })),
         _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -4381,6 +4386,7 @@
         UXk: () => _,
         UtJ: () => _,
         Uu1: () => _,
+        Vlm: () => _,
         VrD: () => _,
         W19: () => _,
         WNR: () => _,
@@ -4583,7 +4589,8 @@
         _ = 28,
         _ = 29,
         _ = 30,
-        _ = 31;
+        _ = 31,
+        _ = 32;
       function _(_, _ = "en") {
         switch (_) {
           case _:
@@ -4648,6 +4655,8 @@
             return "sc-sc";
           case _:
             return "id";
+          case _:
+            return "ms";
           default:
             return _;
         }
@@ -4717,6 +4726,8 @@
             return "sc_schinese";
           case _:
             return "indonesian";
+          case _:
+            return "malay";
           default:
             return _;
         }
@@ -4785,6 +4796,8 @@
           case "sc_schinese":
             return _;
           case "indonesian":
+            return _;
+          case "malay":
             return _;
           default:
             return _;
@@ -6632,108 +6645,6 @@
         }
         getClassName() {
           return "CSteamInputService_ControllerPairingChanged_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.docked_puck_index || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  docked_puck_index: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  target_dongle_index: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamInputService_PairDongleTritonDocked_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamInputService_PairDongleTritonDocked_Response";
         }
       }
       class _ extends _.Message {
@@ -9886,47 +9797,6 @@
                   },
                 );
           }),
-          (_.PairDongleTritonDockedHandler = {
-            name: "SteamInputManager.PairDongleTritonDocked#1",
-            request: _,
-            response: _,
-          }),
-          (_.PairDongleTritonDocked = function (_, _) {
-            return null == (_ = _ || (0, _._)().GetDefaultTransport())
-              ? new Promise((_, _) => {
-                  console.error(
-                    "Transport Error: no transport is available for request",
-                  ),
-                    _("Transport Error: no transport is available for request");
-                })
-              : _.SendMsg(
-                  "SteamInputManager.PairDongleTritonDocked#1",
-                  (0, _._)(_, _),
-                  _,
-                  {
-                    ePrivilege: 1,
-                    eClientExecutionSite: 2,
-                  },
-                );
-          }),
-          (_.SendMsgPairDongleTritonDocked = function (_, _) {
-            return null == (_ = _ || (0, _._)().GetDefaultTransport())
-              ? new Promise((_, _) => {
-                  console.error(
-                    "Transport Error: no transport is available for request",
-                  ),
-                    _("Transport Error: no transport is available for request");
-                })
-              : _.SendMsg(
-                  "SteamInputManager.PairDongleTritonDocked#1",
-                  (0, _._)(_, _),
-                  _,
-                  {
-                    ePrivilege: 1,
-                    eClientExecutionSite: 2,
-                  },
-                );
-          }),
           (_.GetDonglesHandler = {
             name: "SteamInputManager.GetDongles#1",
             request: _,
@@ -10742,6 +10612,7 @@
           parentEmbeddedNavTree: _,
           disabledRoot: !_,
           historyMode: "navigationapi",
+          "flow-children": "column",
           children: (0, _.jsx)(_._, {
             disableFocusRing: !_,
             children: _,
@@ -13838,7 +13709,10 @@
           }
           if (_) {
             const _ = (0, _._)(_);
-            if (this.GetScrollIntoViewType() == _.NoTransformSparseContent) {
+            if (
+              this.GetScrollIntoViewType() == _.NoTransformSparseContent ||
+              _.GetScrollIntoViewType() == _.NoTransformSparseContent
+            ) {
               const _ =
                 null === (_ = _.Element) || void 0 === _
                   ? void 0
@@ -13874,12 +13748,15 @@
           return !1;
         }
         GetScrollIntoViewType() {
-          var _;
-          return (
-            null === (_ = this.m_Properties) || void 0 === _
+          var _, _;
+          return void 0 !==
+            (null === (_ = this.m_Properties) || void 0 === _
               ? void 0
-              : _.scrollIntoViewType
-          )
+              : _.scrollIntoViewType) &&
+            null !==
+              (null === (_ = this.m_Properties) || void 0 === _
+                ? void 0
+                : _.scrollIntoViewType)
             ? this.m_Properties.scrollIntoViewType
             : this.m_Parent
               ? this.m_Parent.GetScrollIntoViewType()
@@ -14939,6 +14816,7 @@
             (this.m_pauseTimer = void 0),
             (this.m_fnGetReportingInterval = _),
             (this.m_fnGetReportTags = () => []),
+            (this.m_fnGetURL = () => location.href),
             (this.m_bEnabled = !0),
             (this.m_bInitialized = !1),
             _
@@ -14970,6 +14848,7 @@
             _.fnGetReportingInterval &&
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
             _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
+            _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -14978,6 +14857,9 @@
             this.m_rgErrorQueue.length &&
               (this.SendErrorReports(this.m_rgErrorQueue),
               (this.m_rgErrorQueue = []));
+        }
+        SetGetURL(_) {
+          this.m_fnGetURL = _;
         }
         async ReportError(_, _) {
           if (!_)
@@ -15125,6 +15007,7 @@
                   _.message.splice(1, _.cCallsitesToIgnore),
                 _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
+                (_.strUrl = this.m_fnGetURL()),
                 this.SendErrorReport(_),
                 _)
               : null;
@@ -15195,16 +15078,16 @@
             _ = Object.keys(_).map((_) => {
               const { report: _, count: _ } = _[_],
                 _ = new _._();
+              let _;
               return (
                 _.set_count(_),
                 _.set_identifier(_.identifier + " " + _.identifierHash),
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
-                  _.set_context(
-                    JSON.stringify({
-                      componentStack: _.strComponentStack,
-                    }),
-                  ),
+                  (null != _ || (_ = {}),
+                  (_.componentStack = _.strComponentStack)),
+                _ && _.set_context(JSON.stringify(_)),
+                _.strUrl && _.set_url(_.strUrl),
                 _
               );
             });
@@ -15468,6 +15351,8 @@
         "koreana",
         "thai",
         "arabic",
+        "indonesian",
+        "malay",
         "bulgarian",
         "czech",
         "danish",
@@ -15478,7 +15363,6 @@
         "greek",
         "french",
         "italian",
-        "indonesian",
         "hungarian",
         "dutch",
         "norwegian",
@@ -15530,6 +15414,7 @@
         ["vn", "vietnamese"],
         ["vi", "vietnamese"],
         ["id", "indonesian"],
+        ["ms", "malay"],
       ]);
       const _ = new Map();
       for (const [_, _] of _.entries()) _.set(_, _);
@@ -15717,6 +15602,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 59184, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 91456, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 7103, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 1779, 19))),
         (_.polish = () =>
@@ -15788,6 +15675,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 87261, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 37429, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 86806, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 41814, 19))),
         (_.polish = () =>
@@ -16098,6 +15987,34 @@
           ],
         },
       ];
+      _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._,
+        _._;
       function _() {
         return [
           {
@@ -19121,6 +19038,31 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  position_is_waitlist: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  user_waitlist_token: {
+                    _: 14,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  queue_in_waitlist: {
+                    _: 15,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  queue_waitlist_token: {
+                    _: 16,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  reservation_type: {
+                    _: 17,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -20651,6 +20593,11 @@
                   },
                   context: {
                     _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 5,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -27624,6 +27571,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = {};
       __webpack_require__._(_),
@@ -32399,6 +32347,137 @@
           return "CContentModeration_GetOldestUnresolvedSubjects_Response_Subject";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetReporterStats_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.total_reports || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  total_reports: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  total_acquitted_reports: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  reports_in_last_week: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  acquitted_reports_in_last_week: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetReporterStats_Response";
+        }
+      }
       var _;
       !(function (_) {
         (_.CreateContentReport = function (_, _) {
@@ -32701,6 +32780,17 @@
           (_.GetOldestUnresolvedSubjects = function (_, _) {
             return _.SendMsg(
               "ContentModeration.GetOldestUnresolvedSubjects#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.GetReporterStats = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.GetReporterStats#1",
               (0, _._)(_, _),
               _,
               {
@@ -53260,6 +53350,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 30295, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 50559, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 61136, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 86512, 19))),
         (_.polish = () =>
@@ -53537,6 +53629,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
@@ -53548,6 +53641,11 @@
         if (!_) return;
         const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
         return _ ? _.filter((_) => !!_.all_ages) : _;
+      }
+      function _(_, _) {
+        const _ = _(_);
+        if (_ && _)
+          return __webpack_require__.find((_) => _.trailer_base_id === _);
       }
       function _(_) {
         let _ = _(_);
@@ -53604,6 +53702,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -53737,11 +53836,7 @@
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return _(_, _, "include_trailers", "trailers");
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
@@ -53775,6 +53870,9 @@
       }
       function _(_, _) {
         return _(_, _, "include_screenshots", "screenshots");
+      }
+      function _(_, _) {
+        return _(_, _, "include_trailers", "trailers");
       }
       function _(_, _) {
         return _(
@@ -79027,24 +79125,6 @@
           })
         );
       }
-      new Set([
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-        _._,
-      ]);
       function _(_) {
         var _;
         const [_, _] = (0, _.useState)([]),
@@ -90687,7 +90767,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _({ config: _, isDynamic: _, omitFocusNavTreeBridge: _ }) {
+      function _({
+        config: _,
+        isDynamic: _,
+        omitFocusNavTreeBridge: _,
+        takeGamepadFocusOnMount: _,
+      }) {
         const _ = _ ? _ : _;
         return (0, _.jsx)(_.Fragment, {
           children: Object.keys(_ || {}).map((_) =>
@@ -90697,6 +90782,7 @@
                 featureName: _,
                 render: _[_],
                 omitFocusNavTreeBridge: !!_,
+                takeGamepadFocusOnMount: !!_,
               },
               _,
             ),
@@ -90704,7 +90790,7 @@
         });
       }
       function _(_) {
-        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
+        const { featureName: _ } = _,
           _ = _.useMemo(
             () =>
               Array.from(
@@ -90714,14 +90800,12 @@
           );
         return _.length
           ? (0, _.jsx)(_.Fragment, {
-              children: _.map((_, _) =>
+              children: __webpack_require__.map((_, _) =>
                 (0, _.jsx)(
                   _,
                   {
-                    featureName: _,
                     elem: _,
-                    render: _,
-                    omitFocusNavTreeBridge: _,
+                    ..._,
                   },
                   _,
                 ),
@@ -90730,7 +90814,7 @@
           : null;
       }
       function _(_) {
-        const { featureName: _, render: _, omitFocusNavTreeBridge: _ } = _,
+        const { featureName: _ } = _,
           _ = (0, _._)(),
           _ = _.useRef([]),
           _ = _.useRef(0);
@@ -90744,7 +90828,8 @@
                   elem: _,
                 }),
               _ = (_) => _._(_.current, (_) => _.elem == _);
-            document.querySelectorAll(_).forEach(_), _.current.length && _();
+            document.querySelectorAll(_).forEach(_),
+              _.current.length && __webpack_require__();
             const _ = new MutationObserver((_) => {
               let _ = !1;
               for (const _ of _)
@@ -90752,7 +90837,7 @@
                   _,
                   (_) => {
                     _(_, _).forEach((_) => {
-                      __webpack_require__(_), (_ = !0);
+                      _(_), (_ = !0);
                     });
                   },
                   (_) => {
@@ -90761,7 +90846,7 @@
                     });
                   },
                 );
-              _ && _();
+              _ && __webpack_require__();
             });
             return (
               _.observe(document, {
@@ -90777,9 +90862,7 @@
                 _,
                 {
                   elem: _,
-                  featureName: _,
-                  render: _,
-                  omitFocusNavTreeBridge: _,
+                  ..._,
                 },
                 _,
               ),
@@ -90793,6 +90876,7 @@
             elem: _,
             render: _,
             omitFocusNavTreeBridge: _,
+            takeGamepadFocusOnMount: _,
           } = _,
           _ = _.useMemo(
             () =>
@@ -90815,23 +90899,30 @@
                 }
               })(__webpack_require__.getAttribute("data-props"), _),
             [_, _],
-          );
-        return _
-          ? (0, _.createPortal)(
-              (0, _.jsx)(_._, {
-                children: _(_),
-              }),
-              _,
-            )
-          : (0, _.createPortal)(
-              (0, _.jsx)(_._, {
-                children: (0, _.jsx)(_._, {
-                  navID: `FeatureTarget_${_}`,
+          ),
+          _ = _.useRef(void 0);
+        return (
+          _.useEffect(() => {
+            _.current && _ && _.current.Activate(!0);
+          }, [_, _]),
+          _
+            ? (0, _.createPortal)(
+                (0, _.jsx)(_._, {
                   children: _(_),
                 }),
-              }),
-              _,
-            );
+                _,
+              )
+            : (0, _.createPortal)(
+                (0, _.jsx)(_._, {
+                  children: (0, _.jsx)(_._, {
+                    navID: `FeatureTarget_${_}`,
+                    navTreeRef: _,
+                    children: _(_),
+                  }),
+                }),
+                _,
+              )
+        );
       }
       function _(_, _) {
         return _.matches(_) ? [_] : _.querySelectorAll(_);
@@ -96959,6 +97050,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -97215,6 +97307,7 @@
           ukrainian: "uk",
           vietnamese: "vi",
           indonesian: "id",
+          malay: "ms",
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
@@ -97277,6 +97370,8 @@
           "vi-VN": _.kSD,
           _: _.Ze9,
           "id-ID": _.Ze9,
+          _: _.Ze9,
+          "ms-MY": _.Ze9,
         };
       function _() {
         return _[_._.LANGUAGE] || null;
@@ -97293,6 +97388,12 @@
           _.set(_, _("#Language_" + _));
         }
         return _;
+      }
+      function _(_) {
+        return (
+          "number" == typeof _ && (_ = (0, _.LgB)(_)),
+          "none" === _ ? "None" : _(`#language_selection_${_}`)
+        );
       }
       const _ = new _();
       window.LocalizationManager = _;
@@ -98823,6 +98924,7 @@
           IN_MOBILE_WEBVIEW: !1,
           IN_TENFOOT: !1,
           PLATFORM: "",
+          ARCH: "",
           SNR: "",
           LAUNCHER_TYPE: 0,
           EREALM: 0,
@@ -98843,11 +98945,11 @@
           DEV_MODE: !1,
           IN_STEAMUI: !1,
           IN_GAMEPADUI: !1,
-          IN_STEAMUI_SHARED_CONTEXT: !1,
           FORCED_DISPLAY_MODE: void 0,
           ON_DECK: !1,
           ON_FRAME: !1,
           ON_STEAMOS: !1,
+          ON_STEAMOS_CLIENT_BRANCH: !1,
           IN_GAMESCOPE: !1,
           IN_LOGIN: !1,
           IN_LOGIN_REFRESH: !1,

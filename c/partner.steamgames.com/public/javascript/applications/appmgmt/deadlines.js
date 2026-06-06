@@ -18,6 +18,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         header_container: "_1sufRvqysxjE-xyRrrKL5U",
         header_label: "_36r9iRM8nCGkZBkqJOFd7G",
         ContactTaxIdentityDialog: "LTwcmHx1UIevNTkOF3lqS",
@@ -25,7 +26,6 @@
         MessageDate: "_3o-Tl2KWzVGK4YHEgfwWLP",
         TaskCompleted: "_3h_ArCyEssKna4ulmgRnLu",
         DocumentProcessingNotice: "_1g1PXMANzYwlWDNpKVMpgk",
-        NotificationContainer: "mXFFZGFLLywwiNBr7ouAn",
         MessageHeader: "_1HU84kVIdNVKbbByTWyyBG",
         MessageSource: "_3PZihnKXFSjpftsqE-Q2V5",
         MessageTitle: "_3BTOSqg9pBNBk8tvXHu0PF",
@@ -2322,10 +2322,7 @@
                   (0, _.jsx)("div", {
                     className: _().SectionBody,
                     children:
-                      "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
-                  }),
-                  (0, _.jsx)(_, {
-                    ..._,
+                      "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number. If your identity verification is pending, you will need to wait until that is complete.",
                   }),
                 ],
               });

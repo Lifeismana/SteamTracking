@@ -39,9 +39,9 @@
       n.r(t), n.d(t, { default: () => b });
       var r = n(7850),
         a = n(90626),
-        s = n(61859),
-        i = n(84202),
-        o = n.n(i),
+        i = n(61859),
+        s = n(84202),
+        o = n.n(s),
         l = n(45699),
         c = n(78327),
         u = n(12155),
@@ -71,18 +71,18 @@
                     children: [
                       (0, r.jsx)("div", {
                         className: o().CommunityHomeHeaderTitle,
-                        children: (0, s.we)("#Community_Home_Header_Title"),
+                        children: (0, i.we)("#Community_Home_Header_Title"),
                       }),
                       (0, r.jsx)("div", {
                         className: o().CommunityHomeHeaderSubtitle,
-                        children: (0, s.we)("#Community_Home_Header_Subtitle"),
+                        children: (0, i.we)("#Community_Home_Header_Subtitle"),
                       }),
                     ],
                   }),
                   (0, r.jsx)(l.Ii, {
                     className: o().AddFriendBtn,
                     href: `${c.TS.COMMUNITY_BASE_URL}search/users/`,
-                    children: (0, s.we)(
+                    children: (0, i.we)(
                       "#Community_Home_Header_AddFriend_Button",
                     ),
                   }),
@@ -96,7 +96,7 @@
       }
       function v() {
         const [e, t] = (0, a.useState)(""),
-          [n, i] = (0, a.useState)([]),
+          [n, s] = (0, a.useState)([]),
           [m, h] = (0, a.useState)(!1),
           S = (function () {
             const e = (0, a.useMemo)(
@@ -127,14 +127,14 @@
               children: [
                 (0, r.jsx)(y, {
                   appShortcuts: S.data.personalAppIds,
-                  sectionTitle: (0, s.we)(
+                  sectionTitle: (0, i.we)(
                     "#Community_Home_Header_GameHubs_ForYou",
                   ),
                   withDivider: S.data.popularAppIds.length > 0,
                 }),
                 (0, r.jsx)(y, {
                   appShortcuts: S.data.popularAppIds,
-                  sectionTitle: (0, s.we)(
+                  sectionTitle: (0, i.we)(
                     "#Community_Home_Header_GameHubs_Popular",
                   ),
                 }),
@@ -159,11 +159,11 @@
                             const t = `${c.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
                             return (await p().get(t)).data;
                           })(e.target.value);
-                          i(n);
+                          s(n);
                         },
                         value: e,
                         className: o().Input,
-                        placeholder: (0, s.we)(
+                        placeholder: (0, i.we)(
                           "#Community_Home_Header_FindGame_Placeholder",
                         ),
                       }),
@@ -241,19 +241,19 @@
       }
       function x(e) {
         const { activeTab: t, activeSort: n } = e,
-          i = a.useRef(void 0);
+          s = a.useRef(void 0);
         a.useEffect(() => {
           const e = document.getElementById(t);
-          if (e && (null == i ? void 0 : i.current)) {
+          if (e && (null == s ? void 0 : s.current)) {
             const t = e.offsetLeft + e.clientWidth;
             t > window.innerWidth &&
-              i.current.scrollBy(t - window.innerWidth, 0);
+              s.current.scrollBy(t - window.innerWidth, 0);
           }
-        }, [null == i ? void 0 : i.current]);
+        }, [null == s ? void 0 : s.current]);
         return (0, r.jsx)(C.Z, {
           "flow-children": "row",
           className: o().TabContainer,
-          ref: i,
+          ref: s,
           children: [
             { label: "#Community_Home_Header_Filter_All", id: "" },
             {
@@ -271,7 +271,7 @@
             { label: "#Community_Home_Header_Filter_Guides", id: "guides" },
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
           ].map((e, a) => {
-            const i = t ? t === e.id : 0 === a,
+            const s = t ? t === e.id : 0 === a,
               u = e.id ? `${A}=${e.id}` : "",
               d = n ? `${T}=${n}` : "",
               m = `${c.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
@@ -280,8 +280,8 @@
               {
                 id: e.id,
                 href: m,
-                className: (0, h.A)(o().Tab, i ? o().ActiveTab : null),
-                children: (0, s.we)(e.label),
+                className: (0, h.A)(o().Tab, s ? o().ActiveTab : null),
+                children: (0, i.we)(e.label),
               },
               e.id,
             );
@@ -305,7 +305,7 @@
                 id: "mostrecent",
               },
             ].map((e, a) => {
-              const i = n ? n === e.id : 0 === a,
+              const s = n ? n === e.id : 0 === a,
                 u = t ? `${A}=${t}` : "",
                 d = e.id ? `${T}=${e.id}` : "",
                 m = `${c.TS.COMMUNITY_BASE_URL}${d || u ? "?" : ""}${d}${u ? "&" : ""}${u}`;
@@ -313,8 +313,8 @@
                 l.Ii,
                 {
                   href: m,
-                  className: (0, h.A)(o().Sort, i ? o().ActiveSort : null),
-                  children: (0, s.we)(e.label),
+                  className: (0, h.A)(o().Sort, s ? o().ActiveSort : null),
+                  children: (0, i.we)(e.label),
                 },
                 e.id,
               );
@@ -325,10 +325,17 @@
     },
     95034: (e, t, n) => {
       "use strict";
-      n.d(t, { Bm: () => i, QD: () => o, f3: () => s, ip: () => l });
+      n.d(t, {
+        Bm: () => s,
+        QD: () => l,
+        f3: () => i,
+        iV: () => u,
+        ip: () => c,
+        le: () => o,
+      });
       var r = n(90626),
         a = n(92757);
-      function s(e, t) {
+      function i(e, t) {
         let n;
         if ("string" == typeof e) n = e;
         else if ("location" in e) n = e.location.search;
@@ -342,7 +349,7 @@
           return e[e.length - 1];
         }
       }
-      function i(e, t, n, r = !1) {
+      function s(e, t, n, r = !1) {
         const a = new URLSearchParams(e.location.search.substring(1));
         if (null != n && null != n) {
           if (a.get(t) == n) return;
@@ -355,11 +362,14 @@
           ? e.replace(`?${a.toString()}`, { ...e.location.state })
           : e.push(`?${a.toString()}`);
       }
-      function o(e, t) {
+      function o(e, t, n) {
+        s(e, t, n, !0);
+      }
+      function l(e, t) {
         const n = (0, a.W6)(),
           o = (0, a.zy)(),
           l = (0, r.useMemo)(() => {
-            const n = s(o.search, e);
+            const n = i(o.search, e);
             return null != n && null != n
               ? null != t && null != t
                 ? "boolean" == typeof t
@@ -370,13 +380,13 @@
           }, [o.search, e, t]),
           c = (0, r.useCallback)(
             (t, r = !1) => {
-              i(n, e, null != t && null != t ? String(t) : null, r);
+              s(n, e, null != t && null != t ? String(t) : null, r);
             },
             [n, e],
           );
         return [l, c];
       }
-      function l(e, t, n = !1) {
+      function c(e, t, n = !1) {
         const r = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
@@ -386,6 +396,9 @@
         n
           ? e.replace(`?${r.toString()}`, { ...e.location.state })
           : e.push(`?${r.toString()}`);
+      }
+      function u(e, t) {
+        c(e, t, !0);
       }
     },
   },

@@ -44,6 +44,7 @@ function GetSupportedLanguages()
 				'latam': 'Spanish - Latin America',
 				'sc_schinese': 'SteamChina - Simplified Chinese',
 				'indonesian': 'Indonesian',
+				'malay': 'Malay',
 			};
 	return languages;
 }
@@ -193,7 +194,7 @@ function InitImageTypes( type )
 		{ name: 'Main Capsule', width: 1232, height: 706, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
 		{ name: 'Package Header', width: 1414, height: 464, path: 'header_image|header|assets|header_image|image', localized: true, confirmation_required: true, tab: 'store'  },
 		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
-		{ name: 'Page Background', width: 1438, height: 810, path: 'asset|page_bg.jpg|assets|page_background', localized: false, tab: 'store' },
+		{ name: 'Page Background', width: 1438, height: 810, path: 'page_background|page_bg_raw|assets|page_background_raw', localized: false, tab: 'store' },
 
 		{ name: 'Broadcast Left Side Panel (old dimensions)', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast', deprecated: true },
 		{ name: 'Broadcast Left Side Panel', width: 199, height: 433, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast' },

@@ -11,9 +11,26 @@
         NormalButton: "TLP9bd53vhNfYhUroF4Np",
       };
     },
-    74433: (t, e, o) => {
+    92690: (t, e, o) => {
       "use strict";
-      o.r(e), o.d(e, { default: () => a });
+      o.r(e), o.d(e, { default: () => s });
+      var n = o(7850),
+        i = o(90626),
+        r = o(58317);
+      function s(t) {
+        const [e, o] = (0, i.useState)(
+            () => void 0 !== localStorage.floatingforumreportedsubjectslist,
+          ),
+          s = (0, i.useMemo)(() => {
+            let e = window.location.href.split("#")[0];
+            return null !== t.gidcomment && (e += "#c" + t.gidcomment), e;
+          }, [t.gidcomment]);
+        return (0, n.jsx)(r.A, { text: s, size: e ? "large" : "small" });
+      }
+    },
+    58317: (t, e, o) => {
+      "use strict";
+      o.d(e, { A: () => l });
       var n = o(7850),
         i = o(90626),
         r = o(6336),
@@ -53,16 +70,6 @@
             ],
           }),
         });
-      }
-      function a(t) {
-        const [e, o] = (0, i.useState)(
-            () => void 0 !== localStorage.floatingforumreportedsubjectslist,
-          ),
-          r = (0, i.useMemo)(() => {
-            let e = window.location.href.split("#")[0];
-            return null !== t.gidcomment && (e += "#c" + t.gidcomment), e;
-          }, [t.gidcomment]);
-        return (0, n.jsx)(l, { text: r, size: e ? "large" : "small" });
       }
     },
   },

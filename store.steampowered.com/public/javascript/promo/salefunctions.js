@@ -38,7 +38,7 @@ function fnRenderHeroCapsule( oItem )
 
 	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': appids, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url, 'aria-label': rgItemData.name } ) );
-	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.fastly.steamstatic.com/public/images/v6/home/hero_placeholder_374x448.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.fastly.steamstatic.com/public/images/v6/home/hero_placeholder_374x448.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ], 'data-image2x-url': rgItemData[ 'hero_capsule_2x' ] ?? '' } ) );
 
 	if ( rgItemData.has_live_broadcast )
 	{

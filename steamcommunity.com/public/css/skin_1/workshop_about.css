@@ -35,9 +35,15 @@ h4 {
 	border-top: 1px solid #2c3f58;
 }
 
-	.page_desc > P {
-		margin-top: 0px;
-	}
+.page_desc > P {
+	margin-top: 0px;
+}
+
+.browseOption {
+	height: unset;
+	line-height: unset;
+	padding-top: 6px;
+}
 
 .enabled_features
 {

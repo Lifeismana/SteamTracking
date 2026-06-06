@@ -1118,6 +1118,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         const _ = (0, _._)(),
@@ -1141,10 +1142,20 @@
                       _ && _.push(_);
                     }
                   }
-                  if (!_) {
-                    const _ = await _.ensureQueryData((0, _._)(_, _, _));
-                    _ && _.push(_);
-                  }
+                  if (!_)
+                    try {
+                      const _ = await _.ensureQueryData((0, _._)(_, _, _));
+                      _ && _.push(_);
+                    } catch (_) {
+                      if (
+                        ((0, _._)(
+                          !1,
+                          `Failed to get fallback art/screenshot for event ${_?.GID} from clan ${_?.clanSteamID.GetAccountID()}`,
+                        ),
+                        0 == _.length)
+                      )
+                        throw _;
+                    }
                   return _;
                 },
               };
@@ -11089,6 +11100,7 @@
                         horizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
+                        holdGamepadFocus: _,
                         children: _,
                       })
                     : _;
@@ -16779,7 +16791,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -16856,7 +16867,8 @@
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, bPopOutTrailerPlayback: _ } = _,
           { data: _ } = (0, _._)(_),
@@ -17971,7 +17983,7 @@
           kind: _.sKind,
           default: _.bDefault,
           srcLang: (0, _.wwZ)(_),
-          label: (0, _._)("#language_selection_" + (0, _.LgB)(_)),
+          label: (0, _._)(_),
         });
       }
     },

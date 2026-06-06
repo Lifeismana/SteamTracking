@@ -1122,10 +1122,8 @@ input.z7qI4Gjuleb-g6osRQpw2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: -10px;
-  left: 10px;
-  width: calc(100% - 20px);
+  position: absolute;
+  top: 50%;
 }
 .BasicUI ._16au-uWHggl6G731aw_eHt {
   top: 8px;

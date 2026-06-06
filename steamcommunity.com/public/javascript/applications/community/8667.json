@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Tee ostotilaus:",
     "Button_Close": "Sulje",
     "Search_ListingQuantity": "Myynnissä oleva määrä: %1$s",
+    "Search_ListingQuantity_Abbreviation": "%1$s kpl",
     "Bucket_PriceFrom": "Alkaen %1$s",
     "AccessorySearch_AttachedAccessoryType": "Lisätty %1$s",
     "FilterResults_Placeholder": "Suodata tulokset",

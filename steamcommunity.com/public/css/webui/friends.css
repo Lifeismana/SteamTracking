@@ -12124,7 +12124,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   padding: 1em;
   border-color: #23262e;
   border-radius: 0;
-  background-color: #fff;
+  background-color: var(--qr-bright-color);
 }
 .qrlogin_LoginQR_xlEVp.qrlogin_Blur_1rteF {
   filter: blur(5px);
@@ -12145,7 +12145,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   border-radius: 3px;
   padding: 12px;
   background-color: rgba(0, 0, 0, 0.75);
-  color: #fff;
+  color: var(--qr-bright-color);
   font-size: 16px;
 }
 .qrlogin_Overlay_464mF .qrlogin_Box_2ltn2 button.DialogButton,

@@ -1237,45 +1237,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
-        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
-        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
-        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
-        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
-        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
-        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
-        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
-        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
-        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
-        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
-        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
-        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
-        Caps3: "ch0xp_kjApA24ePv-4mUf",
-        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
-        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
-        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
-        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
-        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
-        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
-        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
-        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
-        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
-        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
-        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
-        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
-        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
-        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
-        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
-        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
-        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
-        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
-        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
-        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
-        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         Picker: "tid_OE5NJWCCVJQP1PfRc",
         Tabs: "_1yVkTX9Mo_7qb2sxWhM0Cr",
@@ -20536,244 +20497,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-        include_basic_info: !0,
-        include_assets: !0,
-        include_tag_count: 10,
-        include_release: !0,
-      };
-      function _(_) {
-        const {
-            rgOrderedAppIDs: _,
-            fnSetFilteredAppID: _,
-            rgNotToPruneList: _,
-            pageid: _,
-          } = _,
-          [_, _] = _.useState(!0),
-          _ = (0, _._)("OptInAppReviewFilter");
-        _.useEffect(() => {
-          _._.Get()
-            .QueueMultipleAppRequests(_?.slice(0, 100) || [], _)
-            .then(() => {
-              _._.Get()
-                .QueueMultipleAppRequests(_?.slice(100) || [], _)
-                .then(() => {
-                  _(!1);
-                });
-            });
-        }, [_.token.reason, _, _]);
-        const [_, _] = _.useState(new Set()),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(0);
-        return (
-          _.useEffect(() => {
-            const _ = _?.trim().length > 2,
-              _ = _?.toLocaleLowerCase(),
-              _ = Array.from(_),
-              _ = new Set(_ || []);
-            if (_.length > 0 && (_.size > 0 || _ || _ || _)) {
-              const _ = _.filter((_) => {
-                if (_) {
-                  const _ = _._.Get().GetApp(_);
-                  return (
-                    _?.GetName()?.toLocaleLowerCase().indexOf(_) >= 0 ||
-                    _?.GetDeveloperNames()?.some(
-                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
-                    ) ||
-                    _?.GetPublisherNames()?.some(
-                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
-                    ) ||
-                    _?.GetFranchiseNames()?.some(
-                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
-                    ) ||
-                    _?.GetShortDescription()?.toLocaleLowerCase().indexOf(_) >=
-                      0
-                  );
-                }
-                return !0;
-              })
-                .filter((_) => {
-                  if (_.length > 0) {
-                    const _ = _._.Get().GetApp(_);
-                    return _.every((_) => _?.GetTagIDs().includes(_));
-                  }
-                  return !0;
-                })
-                .filter((_) => {
-                  if (_ > 0) {
-                    const _ = _._.Get().GetApp(_);
-                    return (
-                      _ &&
-                      (_?.BIsComingSoon() ||
-                        _?.GetOriginalReleaseDateRTime() > _)
-                    );
-                  }
-                  return !0;
-                })
-                .filter((_) => !(_ && _.size > 0) || !_.has(_));
-              _.token.reason || __webpack_require__(_);
-            }
-          }, [_, _.token.reason, _, _, _, _, _, _, _]),
-          (0, _.jsx)(_._, {
-            title: "Filter Options",
-            bStartMinimized: !0,
-            children: Boolean(_)
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      children: (0, _._)("#EventCalendar_UniversalSearch"),
-                    }),
-                    (0, _.jsx)(_._, {
-                      size: "small",
-                      string: `Loading ${_?.length || 0} Apps`,
-                    }),
-                  ],
-                })
-              : (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      type: "text",
-                      label: (0, _._)("#EventCalendar_UniversalSearch"),
-                      placeholder: "search by app name, description",
-                      value: _,
-                      onChange: (_) => {
-                        _(_.target.value), _(1);
-                      },
-                    }),
-                    (0, _.jsx)(_, {
-                      setFilterTagIDs: _,
-                      fnUpdateSetFilterTagIDs: (_) => {
-                        _(_), _(1);
-                      },
-                      rgAppIDs: _,
-                      bLoading: _,
-                    }),
-                    (0, _.jsx)(_._, {
-                      strDescription: "Filter to games Released After:",
-                      strDescToolTip:
-                        "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
-                      nEarliestTime: 0,
-                      fnGetTimeToUpdate: () => _,
-                      fnSetTimeToUpdate: (_) => {
-                        _(_), _(1);
-                      },
-                    }),
-                    Boolean(_?.length > 0) &&
-                      (0, _.jsx)(_._, {
-                        checked: _,
-                        onChange: (_) => {
-                          _(_), _(1);
-                        },
-                        tooltip:
-                          "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
-                        label:
-                          "Filter out previously emailed apps from pruning",
-                      }),
-                  ],
-                }),
-          })
-        );
-      }
-      function _(_) {
-        const {
-            setFilterTagIDs: _,
-            fnUpdateSetFilterTagIDs: _,
-            rgAppIDs: _,
-            bLoading: _,
-          } = _,
-          _ = _.useMemo(
-            () =>
-              _
-                ? []
-                : (function (_) {
-                    const _ = new Map();
-                    return (
-                      _.forEach((_) => {
-                        const _ = _._.Get().GetApp(_);
-                        __webpack_require__?.GetTagIDs().forEach((_) => {
-                          _.has(_)
-                            ? (_.get(_).count += 1)
-                            : _.set(_, {
-                                tagid: _,
-                                count: 1,
-                              });
-                        });
-                      }),
-                      Array.from(_.values())
-                    );
-                  })(_).sort((_, _) => (_.count < _.count ? 1 : -1)),
-            [_, _],
-          ),
-          { data: _ } = (0, _._)(_._.LANGUAGE),
-          _ = _.useMemo(
-            () =>
-              _.map((_) => ({
-                label: _ && _[_.tagid],
-                value: _,
-              })),
-            [_, _],
-          );
-        return (0, _.jsxs)("div", {
-          className: _.TagFilterBar,
-          children: [
-            (0, _.jsx)(_._, {
-              children: "Filter by Tag:",
-            }),
-            (0, _.jsx)(_._, {
-              isSearchable: !0,
-              isLoading: _,
-              isMulti: !0,
-              isClearable: !0,
-              value: _.filter((_) => _.has(_.value.tagid)),
-              options: _,
-              styles: {
-                option: (_) => ({
-                  ..._,
-                  color: "#444444",
-                }),
-              },
-              formatOptionLabel: (_) =>
-                (0, _.jsx)(_, {
-                  tagCount: _.value,
-                }),
-              onChange: (_) => {
-                __webpack_require__(new Set(_?.map((_) => _.value.tagid)));
-              },
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { tagCount: _ } = _;
-        return (
-          ((0, _._)(_.tagid, _._.LANGUAGE) || "tagid: " + _.tagid) +
-          " (count: " +
-          _.count +
-          ")"
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -25732,7 +25455,7 @@
                     return _;
                   })
                 : null,
-            [_, _, _, _, _],
+            [_, _, _, _, _, _],
           );
         if (!_ || !_ || (_ && !_))
           return (0, _.jsx)(_._, {
@@ -36896,8 +36619,225 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        include_basic_info: !0,
+        include_assets: !0,
+        include_tag_count: 10,
+        include_release: !0,
+      };
+      function _(_) {
+        const {
+            rgOrderedAppIDs: _,
+            fnSetFilteredAppID: _,
+            rgNotToPruneList: _,
+            pageid: _,
+          } = _,
+          [_, _] = _.useState(!0),
+          _ = (0, _._)("OptInAppReviewFilter");
+        _.useEffect(() => {
+          _._.Get()
+            .QueueMultipleAppRequests(_?.slice(0, 100) || [], _)
+            .then(() => {
+              _._.Get()
+                .QueueMultipleAppRequests(_?.slice(100) || [], _)
+                .then(() => {
+                  _(!1);
+                });
+            });
+        }, [_.token.reason, _, _]);
+        const [_, _] = _.useState(new Set()),
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(0);
+        return (
+          _.useEffect(() => {
+            const _ = _?.trim().length > 2,
+              _ = _?.toLocaleLowerCase(),
+              _ = Array.from(_),
+              _ = new Set(_ || []);
+            if (_.length > 0 && (_.size > 0 || _ || _ || _)) {
+              const _ = _.filter((_) => {
+                if (_) {
+                  const _ = _._.Get().GetApp(_);
+                  return (
+                    _?.GetName()?.toLocaleLowerCase().indexOf(_) >= 0 ||
+                    _?.GetDeveloperNames()?.some(
+                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
+                    ) ||
+                    _?.GetPublisherNames()?.some(
+                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
+                    ) ||
+                    _?.GetFranchiseNames()?.some(
+                      (_) => _.toLocaleLowerCase().indexOf(_) >= 0,
+                    ) ||
+                    _?.GetShortDescription()?.toLocaleLowerCase().indexOf(_) >=
+                      0
+                  );
+                }
+                return !0;
+              })
+                .filter((_) => {
+                  if (_.length > 0) {
+                    const _ = _._.Get().GetApp(_);
+                    return _.every((_) => _?.GetTagIDs().includes(_));
+                  }
+                  return !0;
+                })
+                .filter((_) => {
+                  if (_ > 0) {
+                    const _ = _._.Get().GetApp(_);
+                    return (
+                      _ &&
+                      (_?.BIsComingSoon() ||
+                        _?.GetOriginalReleaseDateRTime() > _)
+                    );
+                  }
+                  return !0;
+                })
+                .filter((_) => !(_ && _.size > 0) || !_.has(_));
+              _.token.reason || __webpack_require__(_);
+            }
+          }, [_, _.token.reason, _, _, _, _, _, _, _]),
+          (0, _.jsx)(_._, {
+            title: "Filter Options",
+            bStartMinimized: !0,
+            children: Boolean(_)
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      children: (0, _._)("#EventCalendar_UniversalSearch"),
+                    }),
+                    (0, _.jsx)(_._, {
+                      size: "small",
+                      string: `Loading ${_?.length || 0} Apps`,
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      type: "text",
+                      label: (0, _._)("#EventCalendar_UniversalSearch"),
+                      placeholder: "search by app name, description",
+                      value: _,
+                      onChange: (_) => {
+                        _(_.target.value), _(1);
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      setFilterTagIDs: _,
+                      fnUpdateSetFilterTagIDs: (_) => {
+                        _(_), _(1);
+                      },
+                      rgAppIDs: _,
+                      bLoading: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      strDescription: "Filter to games Released After:",
+                      strDescToolTip:
+                        "Allow us to review upcoming games and games that have released (or released into Early Access) after a point. This is useful when re-running a previously pruned event in a new year.",
+                      nEarliestTime: 0,
+                      fnGetTimeToUpdate: () => _,
+                      fnSetTimeToUpdate: (_) => {
+                        _(_), _(1);
+                      },
+                    }),
+                    Boolean(_?.length > 0) &&
+                      (0, _.jsx)(_._, {
+                        checked: _,
+                        onChange: (_) => {
+                          _(_), _(1);
+                        },
+                        tooltip:
+                          "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
+                        label:
+                          "Filter out previously emailed apps from pruning",
+                      }),
+                  ],
+                }),
+          })
+        );
+      }
+      function _(_) {
+        const {
+            setFilterTagIDs: _,
+            fnUpdateSetFilterTagIDs: _,
+            rgAppIDs: _,
+            bLoading: _,
+          } = _,
+          _ = _.useMemo(
+            () =>
+              _
+                ? []
+                : (function (_) {
+                    const _ = new Map();
+                    return (
+                      _.forEach((_) => {
+                        const _ = _._.Get().GetApp(_);
+                        __webpack_require__?.GetTagIDs().forEach((_) => {
+                          _.has(_)
+                            ? (_.get(_).count += 1)
+                            : _.set(_, {
+                                tagid: _,
+                                count: 1,
+                              });
+                        });
+                      }),
+                      Array.from(_.values())
+                    );
+                  })(_).sort((_, _) => (_.count < _.count ? 1 : -1)),
+            [_, _],
+          ),
+          { data: _ } = (0, _._)(_._.LANGUAGE),
+          _ = _.useMemo(
+            () =>
+              _.map((_) => ({
+                label: _ && _[_.tagid],
+                value: _,
+              })),
+            [_, _],
+          );
+        return (0, _.jsxs)("div", {
+          className: _.TagFilterBar,
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Filter by Tag:",
+            }),
+            (0, _.jsx)(_._, {
+              isSearchable: !0,
+              isLoading: _,
+              isMulti: !0,
+              isClearable: !0,
+              value: _.filter((_) => _.has(_.value.tagid)),
+              options: _,
+              styles: {
+                option: (_) => ({
+                  ..._,
+                  color: "#444444",
+                }),
+              },
+              formatOptionLabel: (_) =>
+                (0, _.jsx)(_, {
+                  tagCount: _.value,
+                }),
+              onChange: (_) => {
+                __webpack_require__(new Set(_?.map((_) => _.value.tagid)));
+              },
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { tagCount: _ } = _;
+        return (
+          ((0, _._)(_.tagid, _._.LANGUAGE) || "tagid: " + _.tagid) +
+          " (count: " +
+          _.count +
+          ")"
+        );
+      }
       const _ = (_) => null != _;
       class _ {
         m_mapChangeCallback = new Map();
@@ -37013,7 +36953,7 @@
       function _(_) {
         const { appid: _, pageid: _, index: _ } = _,
           _ = (0, _._)(_, _),
-          [_, _] = (0, _._)(_, _._),
+          [_, _] = (0, _._)(_, _),
           _ =
             (_.useMemo(
               () => ({
@@ -37193,7 +37133,7 @@
             bAcceptAppeal: _,
             closeModal: _,
           } = _,
-          [_] = (0, _._)(_, _._),
+          [_] = (0, _._)(_, _),
           { fnUpdateAppealState: _ } = (0, _._)(),
           _ = (0, _._)();
         return _.bLoading
@@ -37495,7 +37435,7 @@
             (0, _.jsx)(_, {
               bShowPruningCriteria: _,
             }),
-            (0, _.jsx)(_._, {
+            (0, _.jsx)(_, {
               pageid: _,
               rgOrderedAppIDs: _,
               fnSetFilteredAppID: _,
@@ -37540,7 +37480,7 @@
             index: _,
             bPendingReview: _,
           } = _,
-          [_, _] = (0, _._)(_, _._),
+          [_, _] = (0, _._)(_, _),
           { fnChangeAppPruneState: _ } = _(),
           _ = (0, _._)(_);
         switch (_) {
@@ -76901,399 +76841,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-          capsules_per_row: _,
-          is_generic: _,
-          is_generic_trailer: _,
-          is_event_dash_row: _,
-          is_trailer_carousel: _,
-          is_spotlights: _,
-          is_item_browser: _,
-          is_maincap: _,
-          is_expanded_maincap: _,
-          is_expanded_display: _,
-          show_auto_advance_bar: _,
-        } = _;
-        if (!_) return null;
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderBox,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderVideo,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsxs)("div", {
-            className: _().GhostCtn,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().TrailerCarouselRow,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().VideoPlaceholder,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().ItemDescPlaceholer,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                ],
-              }),
-              _ &&
-                (0, _.jsx)("div", {
-                  className: _().AutoAdvanceBar,
-                  children: (0, _.jsx)("div", {
-                    className: _().ShineCtn,
-                  }),
-                }),
-            ],
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().EventRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().PlaceholderGroupImage,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderButtons,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().SpotlightsRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().DailyDealsColumn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_().MainCapRow]: !0,
-                [_().MainCapRowExpanded]: _,
-              }),
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderRelease,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderReviews,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTags,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().ExpandedItemRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().CapsulePlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().ItemDefPlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-              ],
-            }),
-          });
-        if (_) {
-          const _ = [];
-          for (let _ = 0; _ < _[0]; _++)
-            _.push(
-              (0, _.jsx)(
-                "div",
-                {
-                  className: _().ItemBrowserCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                },
-                "item_browse_ghost_" + _,
-              ),
-            );
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: _,
-          });
-        }
-        return 1 == _?.length
-          ? 1 == _[0]
-            ? (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsx)("div", {
-                  className: _().CapsuleRowSuperCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                }),
-              })
-            : 4 == _[0]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow4,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow3,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-          : 2 == _?.length
-            ? 3 == _[0] && 3 == _[1]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps2),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-            : (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsxs)("div", {
-                  className: _().CapsuleRow234,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps2),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps3),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps4),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              });
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -78720,6 +78268,7 @@
             ref: this.m_hSlider,
             className: this.props.className,
             onPointerDown: this.OnPointerDown,
+            "flow-children": "row",
             children: this.props.children,
           });
         }
@@ -80685,7 +80234,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)();
         if (!_ || !_)
-          return (0, _.jsx)(_, {
+          return (0, _.jsx)(_._, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
@@ -82115,7 +81664,7 @@
                   ),
                   children:
                     !_ || _
-                      ? (0, _.jsx)(_, {
+                      ? (0, _.jsx)(_._, {
                           capsules_per_row: [12],
                           is_item_browser: !0,
                         })
@@ -82182,7 +81731,6 @@
                   (0, _.jsx)(_, {
                     className: _().SaleItemBrowserHeaderContainer,
                     children: (0, _.jsxs)(_._, {
-                      "flow-children": "row",
                       className: _().SaleItemBrowserHeader,
                       children: [
                         _,
@@ -97227,88 +96775,90 @@
           className: _().AppBannerLogo,
           src: _,
         });
-        return (0, _.jsxs)("div", {
-          className: _().AppBannerCtn,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().AppBannerBackground,
-              style: {
-                backgroundImage: `url(${_})`,
-              },
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_().AppBannerGroup, _),
+        return (0, _._)()
+          ? null
+          : (0, _.jsxs)("div", {
+              className: _().AppBannerCtn,
               children: [
-                _
-                  ? Boolean(_)
-                    ? (0, _.jsx)(_._, {
-                        _: _,
-                        className: _().AppBannerLogoCtn,
-                        hoverProps: {
-                          direction: "overlay",
-                          style: {
-                            minWidth: "320px",
-                          },
-                        },
-                        children: _,
-                      })
-                    : (0, _.jsx)(_._, {
-                        _: _,
-                        hoverClassName: _().AppBannerLogoCtn,
-                        children: _,
-                      })
-                  : (0, _.jsxs)("div", {
-                      className: _().AppBannerLogoCtn,
-                      children: [_, " "],
-                    }),
+                (0, _.jsx)("div", {
+                  className: _().AppBannerBackground,
+                  style: {
+                    backgroundImage: `url(${_})`,
+                  },
+                }),
                 (0, _.jsxs)("div", {
-                  className: _().AppBannerTitle,
+                  className: (0, _._)(_().AppBannerGroup, _),
                   children: [
-                    _,
-                    (0, _.jsx)("div", {
-                      className: _().NewsHubSubTitle,
-                      children: (0, _._)("#EventDisplay_NewsHubSubtitle"),
+                    _
+                      ? Boolean(_)
+                        ? (0, _.jsx)(_._, {
+                            _: _,
+                            className: _().AppBannerLogoCtn,
+                            hoverProps: {
+                              direction: "overlay",
+                              style: {
+                                minWidth: "320px",
+                              },
+                            },
+                            children: _,
+                          })
+                        : (0, _.jsx)(_._, {
+                            _: _,
+                            hoverClassName: _().AppBannerLogoCtn,
+                            children: _,
+                          })
+                      : (0, _.jsxs)("div", {
+                          className: _().AppBannerLogoCtn,
+                          children: [_, " "],
+                        }),
+                    (0, _.jsxs)("div", {
+                      className: _().AppBannerTitle,
+                      children: [
+                        _,
+                        (0, _.jsx)("div", {
+                          className: _().NewsHubSubTitle,
+                          children: (0, _._)("#EventDisplay_NewsHubSubtitle"),
+                        }),
+                      ],
                     }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _().AppBannerLinks,
+                        children: [
+                          Boolean(!_ && _) &&
+                            (0, _.jsx)("div", {
+                              className: _().HeaderWishlistButton,
+                              children: (0, _.jsx)(_._, {
+                                appid: _,
+                                bIsFree: Boolean(_?.is_free),
+                                bIsComingSoon: Boolean(_?.is_coming_soon),
+                                className: (0, _._)(
+                                  _().ActionButton,
+                                  _().WishlistBtnShort,
+                                ),
+                              }),
+                            }),
+                          (0, _.jsx)("div", {
+                            className: _().HeaderFollowButton,
+                            children: Boolean(_)
+                              ? (0, _.jsx)(_._, {
+                                  appid: _,
+                                  className: _().HeaderButtonDark,
+                                })
+                              : (0, _.jsx)(_._, {
+                                  clanAccountID: _,
+                                  className: _().HeaderButtonDark,
+                                }),
+                          }),
+                          (0, _.jsx)(_, {
+                            ..._,
+                          }),
+                        ],
+                      }),
                   ],
                 }),
-                _ &&
-                  (0, _.jsxs)("div", {
-                    className: _().AppBannerLinks,
-                    children: [
-                      Boolean(!_ && _) &&
-                        (0, _.jsx)("div", {
-                          className: _().HeaderWishlistButton,
-                          children: (0, _.jsx)(_._, {
-                            appid: _,
-                            bIsFree: Boolean(_?.is_free),
-                            bIsComingSoon: Boolean(_?.is_coming_soon),
-                            className: (0, _._)(
-                              _().ActionButton,
-                              _().WishlistBtnShort,
-                            ),
-                          }),
-                        }),
-                      (0, _.jsx)("div", {
-                        className: _().HeaderFollowButton,
-                        children: Boolean(_)
-                          ? (0, _.jsx)(_._, {
-                              appid: _,
-                              className: _().HeaderButtonDark,
-                            })
-                          : (0, _.jsx)(_._, {
-                              clanAccountID: _,
-                              className: _().HeaderButtonDark,
-                            }),
-                      }),
-                      (0, _.jsx)(_, {
-                        ..._,
-                      }),
-                    ],
-                  }),
               ],
-            }),
-          ],
-        });
+            });
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -98876,6 +98426,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         __webpack_require__
@@ -99132,7 +98683,7 @@
                     appId: _,
                     clanId: _,
                   }),
-                (0, _.jsx)("div", {
+                (0, _.jsx)(_._, {
                   className: (0, _._)(
                     _().AppPartnerEventsBody,
                     _().EndlessScroll,
@@ -99142,6 +98693,7 @@
                   onClick: this.OnBackgroundClick,
                   tabIndex: -1,
                   onKeyDown: this.OnKeyDown,
+                  scrollIntoViewType: _._.NoTransformSparseContent,
                   children: _
                     ? (0, _.jsx)("div", {
                         className: _().NoEvents,
@@ -99509,7 +99061,7 @@
           } = _,
           _ = _.BImageNeedScreenshotFallback("background", _),
           _ = _.type;
-        let _ = (0, _._)(_, "background", _, _._.background_main);
+        let _ = (0, _._)(_, "background", _, _._.background_main, !_);
         return (
           _ && _ && (_ = __webpack_require__(_)),
           (0, _.jsxs)(_.Fragment, {

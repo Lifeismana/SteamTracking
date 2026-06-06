@@ -498,6 +498,7 @@
         (Z.japanese = () => s.e(4788).then(s.t.bind(s, 24788, 19))),
         (Z.koreana = () => s.e(3838).then(s.t.bind(s, 83838, 19))),
         (Z.latam = () => s.e(1990).then(s.t.bind(s, 91990, 19))),
+        (Z.malay = () => s.e(7141).then(s.t.bind(s, 97141, 19))),
         (Z.norwegian = () => s.e(8953).then(s.t.bind(s, 18953, 19))),
         (Z.polish = () => s.e(8766).then(s.t.bind(s, 58766, 19))),
         (Z.portuguese = () => s.e(3110).then(s.t.bind(s, 93110, 19))),

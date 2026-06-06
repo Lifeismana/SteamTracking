@@ -88,28 +88,6 @@
 	right: 5px;
 }
 
-.dmca_browse_option
-{
-	position: relative;
-	height: 37px;
-	line-height: 37px;
-}
-
-.dmca_browse_option_content
-{
-	position: relative;
-}
-
-.dmca_browse_option_selected_background {
-	position: absolute;
-	left: -27px;
-	top: 0px;
-	background-image: url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_option_selected.png' );
-	width: 306px;
-	height: 37px;
-	z-index: 0;
-}
-
 .dmca_search_text
 {
 	width: 230px;

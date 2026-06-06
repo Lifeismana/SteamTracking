@@ -5347,11 +5347,11 @@
     43188: (e, t, s) => {
       "use strict";
       s.d(t, {
-        y3: () => U,
-        Gy: () => H,
-        W3: () => q,
-        TK: () => F,
-        u4: () => Q,
+        y3: () => q,
+        Gy: () => Q,
+        W3: () => K,
+        TK: () => z,
+        u4: () => X,
       });
       var i = s(7850),
         o = s(76217),
@@ -5363,26 +5363,30 @@
         c = s(91822),
         u = s(30894),
         m = s(55263),
-        p = s(61088),
-        h = s.n(p),
-        _ = s(12155),
-        g = s(2627),
-        S = s(61859),
-        C = s(56283),
-        v = s(52038),
-        b = s(78327),
-        y = s(60778),
+        p = s(55815),
+        h = s(25698),
+        _ = s(42834),
+        g = s(52471),
+        S = s(39777),
+        C = s(38535),
+        v = s(49632),
+        b = s(44433),
+        y = s(14947),
         f = s(72224),
-        D = s(55815),
-        P = s(14947),
-        w = s(46253),
-        I = s(38535),
-        k = s(44433),
-        T = s(49632),
-        x = s(25698);
-      const V = new y.wd("TrailerAppVideo"),
-        B = "bGameHighlightAutoplayDisabled";
-      function A(e) {
+        D = s(75279),
+        P = s(56283),
+        w = s(12155),
+        I = s(52038),
+        k = s(2627),
+        T = s(61859),
+        x = s(60778),
+        V = s(78327),
+        B = s(61088),
+        A = s.n(B),
+        M = s(54054);
+      const O = new x.wd("TrailerAppVideo"),
+        R = "bGameHighlightAutoplayDisabled";
+      function L(e) {
         const {
             storeItem: t,
             bCurrentlyActive: s,
@@ -5394,23 +5398,22 @@
             bShowAOAutoPlayWarning: u,
             ...m
           } = e,
-          [p, _] = d.useState(!1),
-          [C, b] = d.useState(!1),
-          y = (0, I.$9)(),
-          f = (function (e, t) {
-            const s = e?.GetAllTrailers().GetAllTrailers("blocked" == t);
-            return s && s.length > 0 ? s[0] : void 0;
-          })(t, y),
-          D = (u ?? !0) && f && !f.BIsAllAges() && "masked" == y,
-          P = (0, I.AS)(),
-          [k, T] = d.useState(!1),
-          [x, V] = d.useState(w.Tw),
-          A = d.useRef(void 0),
-          O = d.useRef(void 0),
-          [R, G] = d.useState(),
-          { bCookieLoaded: j } = (function (e, t, s) {
+          [p, h] = d.useState(!1),
+          [v, b] = d.useState(!1),
+          y = (0, C.$9)(),
+          f = (0, D.DJ)(t),
+          P = (0, g.TH)(f),
+          { data: w } = (0, S.lv)(f),
+          x = (u ?? !0) && P && !P.all_ages && "masked" == y,
+          V = (0, C.AS)(),
+          [B, O] = d.useState(!1),
+          [L, j] = d.useState(M.Tw),
+          N = d.useRef(void 0),
+          H = d.useRef(void 0),
+          [U, F] = d.useState(),
+          { bCookieLoaded: W } = (function (e, t, s) {
             const i = d.useCallback(() => {
-              const t = (0, g.VY)(e ?? B),
+              const t = (0, k.VY)(e ?? R),
                 i = !(!t || "true" !== t.toLowerCase());
               s(!i);
             }, [e, s]);
@@ -5421,96 +5424,101 @@
                 { bCookieLoaded: s }
               );
             })(t, i);
-          })(a, s, _),
-          N = j;
+          })(a, s, h),
+          Q = W;
         d.useEffect(() => {
-          s && N && (p || n) && !D && b(!0);
-        }, [p, N, s, n, D]),
+          s && Q && (p || n) && !x && b(!0);
+        }, [p, Q, s, n, x]),
           d.useEffect(() => {
-            D && C && p && P();
-          }, [C, D, p, P]);
-        const E = (function (e, t, s, i, o) {
+            x && v && p && V();
+          }, [v, x, p, V]);
+        const q = (function (e, t, s, i, o) {
           return d.useCallback(() => {
-            e == w.Tw
+            e == M.Tw
               ? t(!0)
-              : e == w.g && s.current
+              : e == M.g && s.current
                 ? s.current.paused
                   ? s.current.play()
                   : s.current.pause()
-                : e == w.Jh && i.current
+                : e == M.Jh && i.current
                   ? i.current.IsPaused()
                     ? i.current.Play()
                     : i.current.Pause()
-                  : e == w.Jh && o && o.TogglePlayPause();
+                  : e == M.Jh && o && o.TogglePlayPause();
           }, [o, e, i, s, t]);
-        })(x, b, A, O, R);
+        })(L, b, N, H, U);
         d.useEffect(() => {
-          c && (c.current = E);
-        }, [E, c]);
-        const H = t.GetScreenshots("allowed" != y),
-          U = r && H.length > 0 ? H[0] : t.GetAssets().GetMainCapsuleURL();
+          c && (c.current = q);
+        }, [q, c]);
+        const z = t.GetScreenshots("allowed" != y),
+          J =
+            r && z.length > 0
+              ? z[0]
+              : w
+                ? (0, _.b0)(w, "main_capsule")
+                : void 0;
         return (0, i.jsxs)(o.Z, {
-          className: h().AppCarouselTrailerCtn,
-          onMouseEnter: () => T(!0),
-          onMouseLeave: () => T(!1),
+          className: A().AppCarouselTrailerCtn,
+          onMouseEnter: () => O(!0),
+          onMouseLeave: () => O(!1),
           children: [
             (0, i.jsx)("img", {
-              className: (0, v.A)(h().AppMainCap, x != w.Tw && h().Hidden),
-              src: U,
-              onClick: E,
+              className: (0, I.A)(A().AppMainCap, L != M.Tw && A().Hidden),
+              src: J,
+              onClick: q,
             }),
             !n &&
-              (0, i.jsx)(L, {
+              (0, i.jsx)(E, {
                 storeItem: t,
                 bAutoplayVideos: p,
                 autoplayCheckboxPosition: l,
                 fnSetAutoPlayVideos: (e) => {
-                  (0, g.lc)(a ?? B, String(!e), 3650), _(e), b(e);
+                  (0, k.lc)(a ?? R, String(!e), 3650), h(e), b(e);
                 },
               }),
-            (0, i.jsx)(w.hj, {
+            (0, i.jsx)(M.hj, {
               name: t.GetName(),
-              trailerCategory: f?.GetTrailerCategory(),
-              trailerDisplay: x,
-              mouseOver: k,
+              trailerCategory: P?.trailer_category,
+              trailerDisplay: L,
+              mouseOver: B,
             }),
-            (0, i.jsx)(M, {
-              eTrailerDisplay: x,
-              setTrailerDisplay: V,
-              featuredTrailer: f,
-              refMicroTrailer: A,
-              refMainTrailer: O,
-              loadedAndActive: N && s,
+            (0, i.jsx)(G, {
+              eTrailerDisplay: L,
+              setTrailerDisplay: j,
+              featuredTrailer: P,
+              refMicroTrailer: N,
+              refMainTrailer: H,
+              loadedAndActive: Q && s,
               setVideoShouldStart: b,
-              bMouseOverVideo: k,
+              bMouseOverVideo: B,
               storeItem: t,
-              broadcastVideo: R,
-              fnSetBroadcastVideo: G,
-              fnTogglePlayPause: E,
+              broadcastVideo: U,
+              fnSetBroadcastVideo: F,
+              fnTogglePlayPause: q,
               bAutoplayVideos: p,
-              bVideoShouldStart: C,
+              bVideoShouldStart: v,
               bPlayWithBroadcastPlayer: n,
               ...m,
             }),
-            D &&
+            x &&
               p &&
               (0, i.jsxs)("div", {
-                className: h().AOWarning,
+                className: A().AOWarning,
                 children: [
                   (0, i.jsx)("div", {
-                    className: h().Text,
-                    children: (0, S.we)("#StoreTrailer_AOWarning_1"),
+                    className: A().Text,
+                    children: (0, T.we)("#StoreTrailer_AOWarning_1"),
                   }),
                   (0, i.jsx)("div", {
-                    className: h().Text,
-                    children: (0, S.we)("#StoreTrailer_AOWarning_2"),
+                    className: A().Text,
+                    children: (0, T.we)("#StoreTrailer_AOWarning_2"),
                   }),
                 ],
               }),
           ],
         });
       }
-      function M(e) {
+      function G(e) {
         const {
             storeItem: t,
             featuredTrailer: s,
@@ -5521,34 +5529,34 @@
             bRequestPause: c,
             fnComplete: u,
             eTrailerDisplay: m,
-            setTrailerDisplay: p,
-            refMainTrailer: g,
-            refMicroTrailer: S,
-            loadedAndActive: C,
+            setTrailerDisplay: h,
+            refMainTrailer: _,
+            refMicroTrailer: g,
+            loadedAndActive: S,
             setVideoShouldStart: v,
-            broadcastVideo: y,
-            fnSetBroadcastVideo: k,
-            fnTogglePlayPause: T,
-            bAutoplayVideos: x,
-            bVideoShouldStart: B,
+            broadcastVideo: b,
+            fnSetBroadcastVideo: D,
+            fnTogglePlayPause: P,
+            bAutoplayVideos: I,
+            bVideoShouldStart: k,
           } = e,
-          [A, M] = d.useState(!1),
+          [T, x] = d.useState(!1),
+          [B, R] = d.useState(!1),
           [L, G] = d.useState(!1),
-          [j, N] = d.useState(!1),
           [E, H] = d.useState(!1),
           [U, F] = d.useState(!1),
-          W = (0, I.$9)(),
+          W = (0, C.$9)(),
           Q = t?.GetMicroTrailer("blocked" == W),
           q = !!Q || !!s;
         d.useEffect(() => {
           let e = !1;
-          C &&
-            j &&
+          S &&
+            L &&
             q &&
-            (e = m === w.Tw || (m === w.g && !E) || (m === w.Jh && !U)),
-            M(e),
-            l?.(x && e);
-        }, [l, m, U, E, C, x, j, q]),
+            (e = m === M.Tw || (m === M.g && !E) || (m === M.Jh && !U)),
+            x(e),
+            l?.(I && e);
+        }, [l, m, U, E, S, I, L, q]),
           (function (e, t) {
             d.useEffect(() => {
               const s = e.current;
@@ -5564,46 +5572,46 @@
                 }
               );
             }, [t, e]);
-          })(S, H),
+          })(g, H),
           d.useEffect(() => {
-            B ||
-              (p(w.Tw),
-              M(!1),
-              N(!1),
-              S.current && (S.current.pause(), (S.current.currentTime = 0)),
-              g.current && (g.current.Pause(), g.current.SeekToStart()));
-          }, [B, g, S, p]);
+            k ||
+              (h(M.Tw),
+              x(!1),
+              G(!1),
+              g.current && (g.current.pause(), (g.current.currentTime = 0)),
+              _.current && (_.current.Pause(), _.current.SeekToStart()));
+          }, [k, _, g, h]);
         const z = d.useRef(!1);
         return (
           d.useEffect(() => {
-            if (C && m === w.Tw)
-              if ((N(!0), B))
-                if (g.current) {
-                  V.Debug("Starting microtrailer"), p(w.g);
+            if (S && m === M.Tw)
+              if ((G(!0), k))
+                if (_.current) {
+                  O.Debug("Starting microtrailer"), h(M.g);
                   const i = () =>
                     (function (e, t, s) {
                       if (e.current) return;
                       (e.current = !0),
-                        V.Debug("Starting main trailer"),
-                        t(w.Jh),
+                        O.Debug("Starting main trailer"),
+                        t(M.Jh),
                         s.Play();
-                    })(z, p, g.current);
-                  n || !S.current
+                    })(z, h, _.current);
+                  n || !g.current
                     ? i()
                     : (H(!0),
-                      (S.current.onended = i),
-                      (e = S.current),
+                      (g.current.onended = i),
+                      (e = g.current),
                       (t = "microtrailer"),
                       (s = () => H(!1)),
                       e.play().catch((e) => {
-                        s(), V.Warning(`Failed to play ${t}: `, e);
+                        s(), O.Warning(`Failed to play ${t}: `, e);
                       }));
                 } else
-                  y &&
-                    (V.Debug("Starting broadcast player"), p(w.Jh), y.Play());
-              else V.Debug("Showing image");
+                  b &&
+                    (O.Debug("Starting broadcast player"), h(M.Jh), b.Play());
+              else O.Debug("Showing image");
             var e, t, s;
-          }, [C, m, n, B, u, y, p, g, S]),
+          }, [S, m, n, k, u, b, h, _, g, s]),
           (function (e, t) {
             d.useEffect(() => {
               if (!t.current || !t.current.onended) return;
@@ -5614,61 +5622,61 @@
                 }, 6e3);
               return () => clearTimeout(i);
             }, [e, t]);
-          })(E, S),
+          })(E, g),
           d.useEffect(() => {
-            C || v(!1);
-          }, [C, v]),
+            S || v(!1);
+          }, [S, v]),
           d.useEffect(() => {
-            const e = (0, P.fm)(() => {
-              G(y?.GetUserInputNeeded()), F(!y?.IsPaused());
+            const e = (0, y.fm)(() => {
+              R(b?.GetUserInputNeeded()), F(!b?.IsPaused());
             });
             return () => e();
-          }, [y]),
+          }, [b]),
           (function (e, t, s, i, o, a, n) {
             const [r, l] = d.useState(!1);
             d.useEffect(() => {
               e && !r
-                ? t == w.g && s && i
+                ? t == M.g && s && i
                   ? (s.pause(), l(!0))
-                  : t == w.Jh && o && a
+                  : t == M.Jh && o && a
                     ? (o.Pause(), l(!0))
-                    : t == w.Jh && n && !n.IsPaused() && (n.Pause(), l(!0))
+                    : t == M.Jh && n && !n.IsPaused() && (n.Pause(), l(!0))
                 : !e &&
                   r &&
-                  (t == w.g && s
+                  (t == M.g && s
                     ? s.play()
-                    : t == w.Jh && o
+                    : t == M.Jh && o
                       ? o.Play()
-                      : t == w.Jh && n && n.IsPaused() && n.Play(),
+                      : t == M.Jh && n && n.IsPaused() && n.Play(),
                   l(!1));
             }, [n, t, e, r, i, a, s, o]);
-          })(c, m, S.current, E, g.current, U, y),
+          })(c, m, g.current, E, _.current, U, b),
           t && t.BIsVisible()
             ? (s || a) &&
               (0, i.jsxs)(i.Fragment, {
                 children: [
-                  A &&
-                    !L &&
+                  T &&
+                    !B &&
                     (0, i.jsx)(o.Z, {
                       focusable: !0,
-                      onClick: T,
-                      className: h().PlayButton,
-                      children: (0, i.jsx)(_.IOc, {}),
+                      onClick: P,
+                      className: A().PlayButton,
+                      children: (0, i.jsx)(w.IOc, {}),
                     }),
                   Q &&
                     (0, i.jsxs)("video", {
-                      className: R(!0, m),
-                      ref: S,
+                      className: N(!0, m),
+                      ref: g,
                       preload: "auto",
                       playsInline: !0,
                       muted: !0,
-                      onClick: T,
+                      onClick: P,
                       children: [
                         (0, i.jsx)("source", {
                           src: Q.strWebMURL,
                           type: "video/webm",
                         }),
-                        Boolean(!b.TS.IN_CLIENT) &&
+                        Boolean(!V.TS.IN_CLIENT) &&
                           (0, i.jsx)("source", {
                             src: Q.strMP4URL,
                             type: "video/mp4",
@@ -5677,8 +5685,8 @@
                     }),
                   s &&
                     !a &&
-                    (0, i.jsx)(O, {
-                      ref: g,
+                    (0, i.jsx)(j, {
+                      ref: _,
                       trailer: s,
                       eTrailerDisplay: m,
                       fadeRatio: r,
@@ -5687,12 +5695,12 @@
                     }),
                   a &&
                     (0, i.jsx)(f.default, {
-                      classes: R(!1, m),
+                      classes: N(!1, m),
                       nAppIDVOD: t.GetAppID(),
-                      watchLocation: D.nn.h4,
+                      watchLocation: p.nn.h4,
                       fnOnVideoEnd: u,
-                      fnVideoClick: T,
-                      fnSetBroadcastVideo: k,
+                      fnVideoClick: P,
+                      fnSetBroadcastVideo: D,
                       bStartWithSubtitles: !0,
                       bStartMuted: !0,
                     }),
@@ -5701,7 +5709,7 @@
             : null
         );
       }
-      function O(e) {
+      function j(e) {
         let {
           ref: t,
           trailer: s,
@@ -5717,17 +5725,19 @@
             t.current.SetVolume(e, s);
           }
         }, [a, t]);
-        let l = o != w.Jh,
-          c = R(!1, o);
-        return (0, i.jsx)(x.S, {
+        let l = o != M.Jh,
+          c = N(!1, o);
+        const u = (0, d.useMemo)(() => (0, g.hg)(s), [s]);
+        return (0, i.jsx)(h.S, {
           children: (0, i.jsx)("div", {
             className: c,
-            children: (0, i.jsx)(k.P, {
+            children: (0, i.jsx)(b.P, {
               ref: t,
-              dashManifests: s.GetTrailersDash(),
-              hlsManifest: s.GetTrailerHls(),
+              dashManifests: u.rgDashTrailers,
+              hlsManifest: u.rgHlsTrailers[0],
+              captionManifest: s.captions_manifest,
               screenshot: "",
-              altText: "",
+              altText: s.trailer_name,
               forcePause: l,
               muteWhenAutoplayBlocked: !0,
               onPlaybackEnd: r,
@@ -5736,17 +5746,17 @@
           }),
         });
       }
-      function R(e, t) {
-        return (0, v.A)({
-          [h().AppVideo]: !0,
-          [h().PlayFullTrailer]: t == w.Jh,
-          [h().PlayMicrotrailer]: t == w.g,
-          [h().NoTrailer]: t == w.Tw,
-          [h().Microtrailer]: e,
-          [h().Trailer]: !e,
+      function N(e, t) {
+        return (0, I.A)({
+          [A().AppVideo]: !0,
+          [A().PlayFullTrailer]: t == M.Jh,
+          [A().PlayMicrotrailer]: t == M.g,
+          [A().NoTrailer]: t == M.Tw,
+          [A().Microtrailer]: e,
+          [A().Trailer]: !e,
         });
       }
-      function L(e) {
+      function E(e) {
         const {
             storeItem: t,
             bAutoplayVideos: s,
@@ -5758,26 +5768,26 @@
           onClick: (e) => {
             e.preventDefault(), e.stopPropagation();
           },
-          className: h().AutoplayCheckboxCtn,
+          className: A().AutoplayCheckboxCtn,
           children: (0, i.jsx)(
-            C.Yh,
+            P.Yh,
             {
               controlled: !0,
               checked: s,
-              className: h().AutoplayCheckbox,
+              className: A().AutoplayCheckbox,
               style: n,
-              label: T.n.Localize("#StoreTrailer_AutoPlayVideos"),
+              label: v.n.Localize("#StoreTrailer_AutoPlayVideos"),
               onChange: o,
             },
             t.GetAppID(),
           ),
         });
       }
-      var G = s(20713),
-        j = s(44986),
-        N = s(34418),
-        E = s.n(N);
-      const H = {
+      var H = s(20713),
+        U = s(44986),
+        F = s(34418),
+        W = s.n(F);
+      const Q = {
         include_assets: !0,
         include_trailers: !0,
         include_basic_info: !0,
@@ -5787,7 +5797,7 @@
         include_screenshots: !0,
         include_reviews: !0,
       };
-      function U(e) {
+      function q(e) {
         const {
             appID: t,
             focused: s,
@@ -5802,33 +5812,33 @@
             bRequestPause: _,
             fnComplete: g,
           } = e,
-          [C] = (0, m.t7)(t, H),
-          { bIsIgnored: b } = F(t),
-          { bIsWishlisted: y } = Q(t),
-          { bIsWishlisted: f } = Q(C?.GetParentAppID()),
-          [D, P] = (0, c.FD)();
+          [S] = (0, m.t7)(t, Q),
+          { bIsIgnored: C } = z(t),
+          { bIsWishlisted: v } = X(t),
+          { bIsWishlisted: b } = X(S?.GetParentAppID()),
+          [y, f] = (0, c.FD)();
         return (0, i.jsxs)(o.Z, {
-          className: (0, v.A)(E().AppVideoCtn, "AppVideoCtn"),
+          className: (0, I.A)(W().AppVideoCtn, "AppVideoCtn"),
           children: [
             (0, i.jsx)("div", {
-              className: (0, v.A)(E().WishlistBadge, (y || f) && E().Active),
-              children: (0, S.we)("#Sale_OnWishlist"),
+              className: (0, I.A)(W().WishlistBadge, (v || b) && W().Active),
+              children: (0, T.we)("#Sale_OnWishlist"),
             }),
-            D &&
+            y &&
               (0, i.jsx)(c.Ff, {
-                eDisplay: P,
-                className: E().DeckVerifiedLogo,
-                storeItem: C,
+                eDisplay: f,
+                className: W().DeckVerifiedLogo,
+                storeItemPlatform: S?.GetPlatforms(),
               }),
             (0, i.jsxs)("div", {
-              className: E().VideoArea,
+              className: W().VideoArea,
               children: [
-                (0, i.jsx)(W, { appID: t }),
+                (0, i.jsx)(J, { appID: t }),
                 (0, i.jsx)(
-                  A,
+                  L,
                   {
-                    storeItem: C,
-                    bCurrentlyActive: s && !b,
+                    storeItem: S,
+                    bCurrentlyActive: s && !C,
                     autoplayCheckboxPosition: "top",
                     autoPlayCookieName: r,
                     bShowAOAutoPlayWarning: l,
@@ -5848,7 +5858,7 @@
           ],
         });
       }
-      function F(e) {
+      function z(e) {
         const t = (0, l.q3)(() => u.Fm.Get().BIsGameIgnored(e)),
           s = (0, a.ru)(),
           i = d.useCallback(() => {
@@ -5856,47 +5866,47 @@
           }, [e, s, t]);
         return { bIsIgnored: t, fnUpdateIgnored: i };
       }
-      function W(e) {
+      function J(e) {
         const { appID: t } = e,
-          s = (0, b.Qn)(),
-          { bIsIgnored: a, fnUpdateIgnored: n } = F(t);
+          s = (0, V.Qn)(),
+          { bIsIgnored: a, fnUpdateIgnored: n } = z(t);
         return (0, i.jsx)("div", {
-          className: (0, v.A)(E().IgnoredCtn, a && E().Active),
+          className: (0, I.A)(W().IgnoredCtn, a && W().Active),
           children: (0, i.jsxs)("div", {
-            className: (0, v.A)(E().IgnoredInfo, a && E().Active),
+            className: (0, I.A)(W().IgnoredInfo, a && W().Active),
             children: [
               (0, i.jsx)("div", {
-                className: E().IgnoredTitle,
-                children: (0, S.we)("#SaleTrailerCarousel_Ignored"),
+                className: W().IgnoredTitle,
+                children: (0, T.we)("#SaleTrailerCarousel_Ignored"),
               }),
               (0, i.jsx)("div", {
-                className: E().IgnoredDescription,
-                children: (0, S.we)("#SaleTrailerCarousel_IgnoredConfirmation"),
+                className: W().IgnoredDescription,
+                children: (0, T.we)("#SaleTrailerCarousel_IgnoredConfirmation"),
               }),
               (0, i.jsxs)(o.Z, {
-                className: (0, v.A)(E().UndoButton, E().UndoIgnoreButton),
+                className: (0, I.A)(W().UndoButton, W().UndoIgnoreButton),
                 onClick: n,
                 children: [
                   s &&
-                    (0, i.jsx)(j.$m, {
-                      button: G.g4.X,
-                      type: j.wt.Light,
-                      size: j.xY.Medium,
+                    (0, i.jsx)(U.$m, {
+                      button: H.g4.X,
+                      type: U.wt.Light,
+                      size: U.xY.Medium,
                     }),
-                  (0, S.we)("#SaleTrailerCarousel_Undo"),
+                  (0, T.we)("#SaleTrailerCarousel_Undo"),
                 ],
               }),
             ],
           }),
         });
       }
-      function Q(e) {
+      function X(e) {
         const t = Boolean((0, n.bB)(e)),
           s = (0, a.ru)(),
           { mutate: i } = (0, r.s)(e, !t, s);
         return { bIsWishlisted: t, fnUpdateWishlist: i };
       }
-      function q(e) {
+      function K(e) {
         const t = u.Fm.Get().GetRecommendedTags(),
           s = d.useMemo(() => new Map(t.map((e, t) => [e, t])), [t]),
           i = d.useMemo(() => new Map(e.map((e, t) => [e, t])), [e]);
@@ -5910,7 +5920,7 @@
                   : !s.has(e) && s.has(t)
                     ? 1
                     : s.has(e)
-                      ? s.get(e) - s.get(t)
+                      ? s.get(e) - (s.get(t) ?? 0)
                       : i.get(e) - i.get(t),
               ),
           [i, s, e],

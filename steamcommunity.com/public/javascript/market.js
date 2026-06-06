@@ -2339,6 +2339,20 @@ function Market_ClearMarketOptOut()
 	window.location.reload();
 }
 
+function Market_SellAnItem( appid )
+{
+	if ( typeof matchMedia === 'function' && matchMedia( '(max-width: 760px)' ).matches )
+	{
+		window.location.href = "/my/inventory/?market=1#" + appid;
+	}
+	else
+	{
+		ShowModalContent( "/my/inventory/?modal=1&amp;market=1#" + appid, 'Choose an item from your inventory', "/my/inventory/#" + appid, false );
+	}
+
+	return false;
+}
+
 $J(function() {
 	$$('a.tooltip').each( function( elem ) {
 		if ( elem.hasClassName( "locked" ) )

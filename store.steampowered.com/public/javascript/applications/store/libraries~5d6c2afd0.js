@@ -373,7 +373,7 @@
     },
     27: (t, r, e) => {
       var n = e(78714),
-        o = e(97135),
+        o = e(19516),
         a = e(34172),
         u = {};
       (u["[object Float32Array]"] =
@@ -833,7 +833,7 @@
         o = e(69214),
         a = e(83491),
         u = e(62439),
-        i = e(97135),
+        i = e(19516),
         c = e(66507);
       t.exports = function (t, r, e) {
         for (var s = -1, p = (r = n(r, t)).length, f = !1; ++s < p; ) {
@@ -1252,7 +1252,7 @@
     },
     97244: (t, r, e) => {
       var n = e(3316),
-        o = e(97135);
+        o = e(19516);
       t.exports = function (t) {
         return null != t && o(t.length) && !n(t);
       };
@@ -1281,7 +1281,7 @@
         );
       };
     },
-    97135: (t) => {
+    19516: (t) => {
       t.exports = function (t) {
         return (
           "number" == typeof t && t > -1 && t % 1 == 0 && t <= 9007199254740991

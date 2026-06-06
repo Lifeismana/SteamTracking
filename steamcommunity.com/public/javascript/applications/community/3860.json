@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "提交订购单：",
     "Button_Close": "关闭",
     "Search_ListingQuantity": "待售数量：%1$s",
+    "Search_ListingQuantity_Abbreviation": "数量：%1$s",
     "Bucket_PriceFrom": "起价：%1$s",
     "AccessorySearch_AttachedAccessoryType": "已附加的%1$s",
     "FilterResults_Placeholder": "筛选结果…",

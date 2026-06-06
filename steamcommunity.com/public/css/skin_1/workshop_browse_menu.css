@@ -202,6 +202,9 @@ html:not(.GamepadMode) .workshop_browse_tab {
 html:not(.GamepadMode) .workshop_browse_search {
 	margin-top: 1px;
 }
+.responsive_page_menu_ctn .workshop_browse_search {
+	margin-bottom: 10px;
+}
 .workshop_browse_menu_area > :last-child {
 	flex: 0 1 297px;
 	margin-inline-start: auto;
@@ -230,15 +233,13 @@ input.search_text.default_text {
 /* browsing section */
 .workshop_browsing
 {
-	float: left;
-	padding-right: 10px;
+	padding-right: 7px;
 	font-size: 18px;
 	color: #67c1f5;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 			font-weight: normal;
-	margin-right: 2px;
 }
 
 .workshop_browsing_section

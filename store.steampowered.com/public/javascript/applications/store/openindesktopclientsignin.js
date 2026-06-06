@@ -94,8 +94,8 @@
         c = t(11526),
         l = t(11820),
         d = t(73406),
-        p = t(90534),
-        h = t(83392);
+        h = t(90534),
+        p = t(83392);
       function u(e) {
         const {
           size: n = "3",
@@ -106,7 +106,7 @@
           ...a
         } = e;
         return s || !t
-          ? (0, i.jsxs)(p.az, {
+          ? (0, i.jsxs)(h.az, {
               position: "relative",
               ...a,
               width: "fit-content",
@@ -117,7 +117,7 @@
                   children: s,
                 }),
                 t &&
-                  (0, i.jsx)(h.s, {
+                  (0, i.jsx)(p.s, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
@@ -172,8 +172,8 @@
               color: a,
               loading: l,
               children: d,
-              onClick: p,
-              icon: h,
+              onClick: h,
+              icon: p,
               gamepadFocusable: m = !0,
               ..._
             } = e,
@@ -185,7 +185,7 @@
                   children: d,
                 })
               : d,
-            x = l ? void 0 : p,
+            x = l ? void 0 : h,
             f = m && b.TS.IN_GAMEPADUI ? S.fu : "button";
           return (0, i.jsx)(f, {
             type: "button",
@@ -196,7 +196,7 @@
                 size: t,
                 minWidth: s,
                 color: a,
-                className: o()(r.Button, h && r.Icon),
+                className: o()(r.Button, p && r.Icon),
                 onClick: x,
               },
               g,
@@ -211,16 +211,16 @@
               minWidth: s = "fit-content",
               disabled: a,
               icon: d,
-              gamepadFocusable: p = !0,
-              ...h
+              gamepadFocusable: h = !0,
+              ...p
             } = e,
             u = a ? C : void 0,
-            m = p && b.TS.IN_GAMEPADUI ? S.Ii : "a";
+            m = h && b.TS.IN_GAMEPADUI ? S.Ii : "a";
           return (0, i.jsx)(m, {
             ...(0, c.mz)(
               {
                 onClick: u,
-                ...h,
+                ...p,
                 variant: n,
                 size: t,
                 minWidth: s,
@@ -233,7 +233,7 @@
     },
     90534: (e, n, t) => {
       "use strict";
-      t.d(n, { GY: () => p, az: () => d });
+      t.d(n, { GY: () => h, az: () => d });
       var i = t(7850),
         s = t(39479),
         o = t(64238),
@@ -243,24 +243,24 @@
         l = t(44041);
       function d(e) {
         const { as: n = "div", ref: t, ...s } = e,
-          o = (0, a.mz)({ ...s, className: r()(l.Box, e.className) }, h),
+          o = (0, a.mz)({ ...s, className: r()(l.Box, e.className) }, p),
           c = n;
         return (0, i.jsx)(c, { ref: t, ...o });
       }
-      function p(e) {
+      function h(e) {
         const { as: n = "div", ref: t, navProps: o, ...c } = e,
-          d = (0, a.mz)({ ...c, className: r()(l.Box, c.className) }, h),
-          p = n;
+          d = (0, a.mz)({ ...c, className: r()(l.Box, c.className) }, p),
+          h = n;
         return (0, i.jsx)(s.J, {
           ...o,
-          children: (0, i.jsx)(p, { ref: t, ...d }),
+          children: (0, i.jsx)(h, { ref: t, ...d }),
         });
       }
-      const h = c.h;
+      const p = c.h;
     },
     20187: (e, n, t) => {
       "use strict";
-      t.d(n, { Ae: () => h, EY: () => d, U6: () => p });
+      t.d(n, { Ae: () => p, EY: () => d, U6: () => h });
       var i = t(7850),
         s = t(55348),
         o = t(11526),
@@ -273,10 +273,10 @@
           a = n;
         return (0, i.jsx)(a, {
           ref: t,
-          ...(0, o.mz)({ ...r, className: c()(l.Text, s) }, h),
+          ...(0, o.mz)({ ...r, className: c()(l.Text, s) }, p),
         });
       }
-      const p = [
+      const h = [
           {
             prop: "weight",
             responsive: !0,
@@ -318,8 +318,8 @@
             cssProperty: "--white-space",
           },
         ],
-        h = [
-          ...p,
+        p = [
+          ...h,
           ...r.L,
           {
             prop: "size",
@@ -359,7 +359,7 @@
     },
     84547: (e, n, t) => {
       "use strict";
-      t.d(n, { E: () => p, l: () => h });
+      t.d(n, { E: () => h, l: () => p });
       var i = t(7850),
         s = t(64753),
         o = t(8527),
@@ -375,11 +375,11 @@
           onCancel: n,
           strOKButtonText: r.Z.Localize("#Button_OK"),
           onOK: () => {
-            h(), n();
+            p(), n();
           },
         });
       }
-      function p() {
+      function h() {
         const [e, n, t] = (0, s.uD)();
         return {
           elDialogElement: (0, i.jsx)(c.E, {
@@ -389,7 +389,7 @@
           fnShowLogonDialog: n,
         };
       }
-      function h() {
+      function p() {
         const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
       }
@@ -416,6 +416,7 @@
         (s.japanese = () => t.e(9872).then(t.t.bind(t, 79872, 19))),
         (s.koreana = () => t.e(2322).then(t.t.bind(t, 12322, 19))),
         (s.latam = () => t.e(4954).then(t.t.bind(t, 94954, 19))),
+        (s.malay = () => t.e(4753).then(t.t.bind(t, 87134, 19))),
         (s.norwegian = () => t.e(8341).then(t.t.bind(t, 48341, 19))),
         (s.polish = () => t.e(7890).then(t.t.bind(t, 97890, 19))),
         (s.portuguese = () => t.e(1810).then(t.t.bind(t, 21810, 19))),
@@ -645,13 +646,13 @@
       "use strict";
       t.d(n, {
         mt: () => l,
-        o0: () => p.o0,
-        eV: () => h.eV,
-        KG: () => p.KG,
-        Ee: () => p.Ee,
+        o0: () => h.o0,
+        eV: () => p.eV,
+        KG: () => h.KG,
+        Ee: () => h.Ee,
         x_: () => a.x_,
         of: () => d,
-        pY: () => p.pY,
+        pY: () => h.pY,
         EN: () => r.E,
       });
       var i = t(7850),
@@ -683,9 +684,9 @@
             className: s,
             modalClassName: l,
             children: d,
-            ...p
+            ...h
           } = e,
-          { headerId: h, context: u } = c({ labelledBy: e["aria-labelledby"] });
+          { headerId: p, context: u } = c({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(o.t6.Provider, {
           value: u,
           children: (0, i.jsx)(r.E, {
@@ -695,9 +696,9 @@
               className: l,
               children: (0, i.jsx)(o.UC, {
                 role: "dialog",
-                "aria-labelledby": h,
+                "aria-labelledby": p,
                 className: s,
-                ...p,
+                ...h,
                 children: d,
               }),
             }),
@@ -712,8 +713,8 @@
         });
       }
       t(81194);
-      var p = t(78395),
-        h = t(10411);
+      var h = t(78395),
+        p = t(10411);
       t(76222);
     },
     71009: (e, n, t) => {
@@ -732,8 +733,8 @@
         c = t(62381),
         l = t(97824),
         d = t(78327),
-        p = t(2627),
-        h = t(61859);
+        h = t(2627),
+        p = t(61859);
       const u = (0, a.Nr)(function (e) {
         const { fnOpenInSteamClient: n } = m();
         return (0, i.jsx)("div", {
@@ -746,7 +747,7 @@
                 children: (0, i.jsx)("div", {
                   onClick: n,
                   className: l.BannerButton,
-                  children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  children: (0, p.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
               }),
               (0, i.jsx)("div", {
@@ -755,12 +756,12 @@
                   className: l.BannerTitle,
                   children: [
                     (0, i.jsx)("b", {
-                      children: (0, h.we)(
+                      children: (0, p.we)(
                         "#OpenInDesktopAppBanner_NotSignedIn",
                       ),
                     }),
                     (0, i.jsx)("br", {}),
-                    (0, h.we)("#OpenInDesktopAppBanner_Body"),
+                    (0, p.we)("#OpenInDesktopAppBanner_Body"),
                   ],
                 }),
               }),
@@ -780,7 +781,7 @@
         }, []);
         const t = o.useCallback(() => {
           let n = `${(0, d.yl)()}//openurl/`;
-          const t = (0, p.VY)("browserid");
+          const t = (0, h.VY)("browserid");
           if (t) {
             const e = new URL(window.location.href),
               i = new URLSearchParams(e.search);
@@ -804,8 +805,8 @@
         c = t(37085),
         l = t(62151),
         d = t(84547),
-        p = t(55672),
-        h = t(84811),
+        h = t(55672),
+        p = t(84811),
         u = t(51706),
         m = t(71009),
         _ = t(32754),
@@ -816,17 +817,17 @@
         x = t.n(g),
         f = t(90626),
         v = t(92724);
-      const I = (0, h.Nr)(function (e) {
+      const I = (0, p.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
             m.useOpenWebInSteamClient)(),
-            h = t == c.R,
+            p = t == c.R,
             [g, I, z] = (0, b.uD)();
           return (
             (0, f.use)((0, v.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(_.Gq, {
-                  toolTipContent: p.Z.Localize("#AddToWishlist_ttip"),
+                  toolTipContent: h.Z.Localize("#AddToWishlist_ttip"),
                   children: (0, i.jsx)(s.$, {
                     onClick: I,
                     children: (0, S.we)("#AddToYourWishlist"),
@@ -856,11 +857,11 @@
                           (0, i.jsx)(s.$, {
                             color: "dull",
                             onClick: d.l,
-                            children: p.Z.Localize("#Login_SignIn"),
+                            children: h.Z.Localize("#Login_SignIn"),
                           }),
                         ],
                       }),
-                      !h &&
+                      !p &&
                         (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(r.EY, {
                             children: (0, S.oW)(

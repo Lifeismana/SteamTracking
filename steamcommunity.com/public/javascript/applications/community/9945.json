@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Ajánlattétel:",
     "Button_Close": "Bezár",
     "Search_ListingQuantity": "Eladásra kínált mennyiség: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Mennyiség: %1$s",
     "Bucket_PriceFrom": "%1$s kezdőártól",
     "AccessorySearch_AttachedAccessoryType": "%1$s",
     "FilterResults_Placeholder": "Eredmények szűrése...",

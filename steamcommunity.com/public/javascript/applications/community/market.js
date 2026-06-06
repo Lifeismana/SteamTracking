@@ -118,26 +118,26 @@
         l = n(83392),
         s = n(90534),
         a = n(48474),
-        v = n(90626);
-      const i = v.createContext({ steamidOwner: void 0 });
+        i = n(90626);
+      const v = i.createContext({ steamidOwner: void 0 });
       function r() {
-        return v.useContext(i).steamidOwner;
+        return i.useContext(v).steamidOwner;
       }
       function o(t) {
         const { steamidOwner: c, children: n } = t,
-          l = v.useMemo(() => ({ steamidOwner: c }), [c]);
-        return (0, e.jsx)(i.Provider, { value: l, children: n });
+          l = i.useMemo(() => ({ steamidOwner: c }), [c]);
+        return (0, e.jsx)(v.Provider, { value: l, children: n });
       }
       var h = n(37085),
         d = n(63215),
         u = n(8527),
         p = n(23809),
-        g = n(29385),
-        f = n(88942);
+        f = n(29385),
+        g = n(88942);
       function m(t, c = u.TS.LANGUAGE) {
         const n = (0, p.KV)(),
-          e = (0, g.jE)();
-        return (0, f.I)({ ...x(e, n, t, c), enabled: !!t });
+          e = (0, f.jE)();
+        return (0, g.I)({ ...x(e, n, t, c), enabled: !!t });
       }
       function x(t, c, n, e) {
         return {
@@ -189,6 +189,7 @@
         (j.japanese = () => n.e(8225).then(n.t.bind(n, 58225, 19))),
         (j.koreana = () => n.e(7273).then(n.t.bind(n, 97273, 19))),
         (j.latam = () => n.e(7281).then(n.t.bind(n, 77281, 19))),
+        (j.malay = () => n.e(4813).then(n.t.bind(n, 77194, 19))),
         (j.norwegian = () => n.e(4042).then(n.t.bind(n, 64042, 19))),
         (j.polish = () => n.e(3887).then(n.t.bind(n, 93887, 19))),
         (j.portuguese = () => n.e(435).then(n.t.bind(n, 60435, 19))),
@@ -203,10 +204,10 @@
         (j.turkish = () => n.e(8670).then(n.t.bind(n, 38670, 19))),
         (j.ukrainian = () => n.e(4088).then(n.t.bind(n, 44088, 19))),
         (j.vietnamese = () => n.e(5345).then(n.t.bind(n, 25345, 19)));
-      const w = (0, V.l)(async function (t) {
+      const _ = (0, V.l)(async function (t) {
           if (j[t]) return j[t]();
         }),
-        _ = w.Localize;
+        w = _.Localize;
       var b = n(20187),
         y = n(3049);
       const S = {
@@ -216,9 +217,9 @@
             l = null == e ? void 0 : e.get(n.propertyid);
           return l ? l.localized_label : null;
         },
-        Value: M,
+        Value: z,
       };
-      const z = Object.assign(function (t) {
+      const M = Object.assign(function (t) {
         const { appid: c, property: n, ...l } = t,
           { data: s } = m(c),
           a = null == s ? void 0 : s.get(n.propertyid);
@@ -227,17 +228,17 @@
           : (0, e.jsx)(b.EY, {
               as: "div",
               ...l,
-              children: w.LocalizeReact(
+              children: _.LocalizeReact(
                 "#ItemDescription_AssetPropertyLabelColonValue",
                 a.localized_label,
                 (0, e.jsx)(b.EY, {
                   whiteSpace: "pre-wrap",
-                  children: (0, e.jsx)(M, { property: n }),
+                  children: (0, e.jsx)(z, { property: n }),
                 }),
               ),
             });
       }, S);
-      function M(t) {
+      function z(t) {
         const { property: c } = t;
         if (void 0 !== c.float_value) {
           const t =
@@ -281,10 +282,10 @@
                       e = a.Body().add_classes();
                     e.set_classid(c), e.set_instanceid(n);
                   });
-                const v = await e(t, a);
-                if (v.GetEResult() != h.R)
-                  throw `Error loading econ items: ${v.GetErrorMessage()}`;
-                return null !== (s = v.Body().toObject().descriptions) &&
+                const i = await e(t, a);
+                if (i.GetEResult() != h.R)
+                  throw `Error loading econ items: ${i.GetErrorMessage()}`;
+                return null !== (s = i.Body().toObject().descriptions) &&
                   void 0 !== s
                   ? s
                   : [];
@@ -292,7 +293,7 @@
             })(t, c, n, e),
           );
         })((0, p.KV)(), t, u.TS.LANGUAGE);
-        return (0, f.I)(
+        return (0, g.I)(
           (function (t, c, n) {
             const e = `${null == n ? void 0 : n.classid}_${null == n ? void 0 : n.instanceid}`;
             return {
@@ -307,9 +308,9 @@
         A = n(86927);
       function R(t) {
         const { children: c, ...n } = t,
-          l = v.useRef(null),
-          a = v.useCallback(() => `${Y}px`, []),
-          i = v.useCallback((t) => {
+          l = i.useRef(null),
+          a = i.useCallback(() => `${Y}px`, []),
+          v = i.useCallback((t) => {
             const c = l.current;
             if (c && 0 != t.deltaY) {
               const n = c.scrollTop;
@@ -317,8 +318,8 @@
                 c.scrollTop != n && t.preventDefault();
             }
           }, []),
-          r = (0, A.xA)("wheel", i, { passive: !1 }),
-          [o, h] = v.useState(!1);
+          r = (0, A.xA)("wheel", v, { passive: !1 }),
+          [o, h] = i.useState(!1);
         return (0, e.jsxs)(O.A.Root, {
           open: o,
           onOpenChange: h,
@@ -326,26 +327,26 @@
           placement: "right",
           interactions: { hover: (t) => ({ ...t, delay: 250 }) },
           children: [
-            (0, e.jsx)(O.A.Anchor, { children: v.cloneElement(c, { ref: r }) }),
+            (0, e.jsx)(O.A.Anchor, { children: i.cloneElement(c, { ref: r }) }),
             (0, e.jsx)(O.A.Positioner, {
               children: (0, e.jsx)(s.az, {
                 marginX: "2",
-                children: (0, e.jsx)(P, { ...n, refHover: l }),
+                children: (0, e.jsx)(E, { ...n, refHover: l }),
               }),
             }),
           ],
         });
       }
       const Y = 346;
-      function P(t) {
+      function E(t) {
         var c;
         const { description: n, asset: l, bHideImage: s = !1, refHover: a } = t;
-        let v,
-          i = null == n ? void 0 : n.appid;
+        let i,
+          v = null == n ? void 0 : n.appid;
         "identifiers" in t &&
-          ((v = t.identifiers),
-          (i = null !== (c = v.appid) && void 0 !== c ? c : i));
-        const { data: r } = H(i, n ? void 0 : v),
+          ((i = t.identifiers),
+          (v = null !== (c = i.appid) && void 0 !== c ? c : v));
+        const { data: r } = H(v, n ? void 0 : i),
           o = null != n ? n : r;
         return o
           ? (0, e.jsx)(At.Root, {
@@ -380,9 +381,9 @@
             })
           : null;
       }
-      var E = n(28491),
-        G = n(6083);
-      function N(t, c) {
+      var P = n(28491),
+        N = n(6083);
+      function G(t, c) {
         return t.name_color ? `#${t.name_color}` : c;
       }
       function B(t, c) {
@@ -392,29 +393,29 @@
             : null == c
               ? void 0
               : c.amount;
-        return (n && n > 1 ? `${(0, G.D)(n)} ` : "") + t.name;
+        return (n && n > 1 ? `${(0, N.D)(n)} ` : "") + t.name;
       }
-      function F(t) {
+      function $(t) {
         const { description: c, asset: n, style: l = {}, ...s } = t;
         return (0, e.jsx)(b.EY, {
           contrast: "note",
           ...s,
-          style: { ...(null != l ? l : {}), color: N(c) },
+          style: { ...(null != l ? l : {}), color: G(c) },
           children: B(c, n),
         });
       }
-      function $(t) {
+      function F(t) {
         const { description: c, asset: n, style: l = {}, ...s } = t;
-        return (0, e.jsx)(E.Y, {
+        return (0, e.jsx)(P.Y, {
           contrast: "note",
           underline: "hover",
           ...s,
-          style: { ...(null != l ? l : {}), color: N(c) },
+          style: { ...(null != l ? l : {}), color: G(c) },
           children: B(c, n),
         });
       }
-      var W = n(67603);
-      function D(t) {
+      var D = n(67603);
+      function W(t) {
         var c;
         const n = t.context.itemDescription;
         if (
@@ -427,11 +428,11 @@
           s = n.container_properties.contained_items;
         return (0, e.jsx)("ul", {
           children: s.map((t, c) =>
-            (0, e.jsx)(J, { appid: l, contained_item: t }, c),
+            (0, e.jsx)(U, { appid: l, contained_item: t }, c),
           ),
         });
       }
-      function J(t) {
+      function U(t) {
         const { appid: c, contained_item: n } = t,
           { data: l } = H(c, n);
         return l
@@ -440,16 +441,16 @@
                 description: l,
                 children:
                   l.marketable && l.market_hash_name
-                    ? (0, e.jsx)($, {
+                    ? (0, e.jsx)(F, {
                         description: l,
-                        href: W.N.Item(c, l.market_hash_name),
+                        href: D.N.Item(c, l.market_hash_name),
                       })
-                    : (0, e.jsx)(F, { description: l }),
+                    : (0, e.jsx)($, { description: l }),
               }),
             })
           : null;
       }
-      function U(t, c) {
+      function J(t, c) {
         var n, e;
         return (
           null === (n = null == t ? void 0 : t.public_data) || void 0 === n
@@ -479,11 +480,11 @@
               : "0",
           ),
           s = Z.b2.InitFromAccountID(l, u.TS.EUNIVERSE).ConvertTo64BitString(),
-          { data: a, isLoading: v } = (0, q.jn)(s);
-        if (!a && v) return null;
-        const i = U(a, s);
-        return (0, e.jsx)(E.Y, {
-          href: i,
+          { data: a, isLoading: i } = (0, q.jn)(s);
+        if (!a && i) return null;
+        const v = J(a, s);
+        return (0, e.jsx)(P.Y, {
+          href: v,
           "data-miniprofile": l,
           children: a ? a.public_data.persona_name : l,
         });
@@ -496,20 +497,20 @@
         et = n(60869);
       function lt(t) {
         const { itemDescription: c, bbcode: n = "" } = t,
-          e = v.useMemo(() => {
+          e = i.useMemo(() => {
             const t = {
               ...tt.L,
               ...et.I,
               ...ct.F,
               url: { Constructor: nt._ },
-              container_item_list: { Constructor: D },
+              container_item_list: { Constructor: W },
               persona: { Constructor: K },
               date: { Constructor: st },
             };
             return new X.B(t, (t) => new Q.R8(), u.TS.LANGUAGE);
           }, []),
-          l = v.useMemo(() => ({ itemDescription: c }), [c]);
-        return v.useMemo(() => e.ParseBBCode(n, l), [e, n, l]);
+          l = i.useMemo(() => ({ itemDescription: c }), [c]);
+        return i.useMemo(() => e.ParseBBCode(n, l), [e, n, l]);
       }
       function st(t) {
         var c, n;
@@ -534,52 +535,52 @@
             null == a
               ? void 0
               : a.map((t, n) =>
-                  (0, e.jsx)(vt, { line: t, description: c, ...s }, n),
+                  (0, e.jsx)(it, { line: t, description: c, ...s }, n),
                 ),
         });
       }
-      function vt(t) {
+      function it(t) {
         var c, n;
         const { line: l, description: s, ...a } = t,
-          v = {
+          i = {
             as: "div",
             ...a,
             whiteSpace: "pre-line",
             style: { color: l.color ? `#${l.color}` : void 0 },
           };
-        let i =
+        let v =
           null !==
             (n = null === (c = l.value) || void 0 === c ? void 0 : c.trim()) &&
           void 0 !== n
             ? n
             : "";
-        switch ((i || (i = " "), l.type)) {
+        switch ((v || (v = " "), l.type)) {
           case "html":
             return (0, e.jsx)(b.EY, {
-              ...v,
+              ...i,
               children: (0, e.jsx)("span", {
                 style: { display: "contents" },
-                dangerouslySetInnerHTML: { __html: i },
+                dangerouslySetInnerHTML: { __html: v },
               }),
             });
           case "bbcode":
             return (0, e.jsx)(b.EY, {
-              ...v,
-              children: (0, e.jsx)(lt, { itemDescription: s, bbcode: i }),
+              ...i,
+              children: (0, e.jsx)(lt, { itemDescription: s, bbcode: v }),
             });
           default:
-            return (0, e.jsx)(b.EY, { ...v, children: i });
+            return (0, e.jsx)(b.EY, { ...i, children: v });
         }
       }
-      const it = v.createContext(void 0);
+      const vt = i.createContext(void 0);
       function rt() {
-        return v.useContext(it).description;
+        return i.useContext(vt).description;
       }
       function ot() {
-        return v.useContext(it).asset;
+        return i.useContext(vt).asset;
       }
       function ht() {
-        return v.useContext(it).bInteractable;
+        return i.useContext(vt).bInteractable;
       }
       var dt = n(64753);
       function ut(t) {
@@ -590,11 +591,11 @@
             /GetGooValue\(\s*'?[^']*'?\s*,\s*'?[^']*'?\s*,\s*'?(?<appid>[0-9]+)'?\s*,\s*'?(?<item_type>[0-9]+)'?\s*,\s*'?(?<border_color>[0-9]+)'?/,
           ),
           s = null == l ? void 0 : l.groups,
-          { contextid: a, assetid: v } = n;
+          { contextid: a, assetid: i } = n;
         if (
           !(
             s &&
-            v &&
+            i &&
             753 == (null == n ? void 0 : n.appid) &&
             "6" == a &&
             s.appid &&
@@ -602,11 +603,11 @@
           )
         )
           return null;
-        const { appid: i, item_type: r, border_color: o } = s;
+        const { appid: v, item_type: r, border_color: o } = s;
         return (0, e.jsx)(pt, {
           contextid: a,
-          assetid: v,
-          appid: parseInt(i),
+          assetid: i,
+          appid: parseInt(v),
           item_type: parseInt(r),
           border_color: parseInt(o),
         });
@@ -616,12 +617,12 @@
         const {
             contextid: n,
             assetid: s,
-            appid: v,
-            item_type: i,
+            appid: i,
+            item_type: v,
             border_color: r,
           } = t,
           { data: o, isLoading: h } = (function (t, c, n) {
-            return (0, f.I)({
+            return (0, g.I)({
               queryKey: ["GetGooValue", t, c, n],
               queryFn: async () => {
                 const e = new URLSearchParams({
@@ -637,7 +638,7 @@
               },
               retry: !1,
             });
-          })(v, i, r);
+          })(i, v, r);
         return void 0 !== o || h
           ? (0, e.jsxs)(l.s, {
               background: "sky-3",
@@ -650,11 +651,11 @@
                 (0, e.jsx)(b.EY, {
                   as: "div",
                   contrast: "body",
-                  children: w.LocalizeReact(
+                  children: _.LocalizeReact(
                     "#ItemDescription_ThisItemIsWorthGems",
                     (0, e.jsx)(b.EY, {
                       color: "sky-11",
-                      children: w.Localize(
+                      children: _.Localize(
                         "#ItemDescription_XGems",
                         null !==
                           (c =
@@ -669,16 +670,16 @@
                 }),
                 (0, e.jsx)(a.$, {
                   color: "green",
-                  onClick: () => window.GrindIntoGoo(v, n, s),
+                  onClick: () => window.GrindIntoGoo(i, n, s),
                   size: "1",
-                  children: _("#ItemDescription_TurnIntoGemsButton"),
+                  children: w("#ItemDescription_TurnIntoGemsButton"),
                 }),
                 (0, e.jsx)(b.EY, {
                   as: "div",
                   contrast: "body",
                   children: (0, dt.xh)(
-                    _("#ItemDescription_GemDescription"),
-                    (0, e.jsx)(E.Y, {
+                    w("#ItemDescription_GemDescription"),
+                    (0, e.jsx)(P.Y, {
                       underline: "auto",
                       color: "greyneutral-12",
                       href: `${u.TS.COMMUNITY_BASE_URL}tradingcards/boostercreator/`,
@@ -689,9 +690,9 @@
             })
           : null;
       }
-      function gt(t) {
+      function ft(t) {
         const { actions: c } = t,
-          [n, s] = v.useMemo(() => {
+          [n, s] = i.useMemo(() => {
             let t = [],
               n = [];
             return (
@@ -703,7 +704,7 @@
                     : s.startsWith("javascript:GetGooValue")
                 )
                   ? n.push((0, e.jsx)(ut, { action: c }, l))
-                  : t.push((0, e.jsx)(ft, { action: c }, l));
+                  : t.push((0, e.jsx)(gt, { action: c }, l));
               }),
               [t, n]
             );
@@ -715,11 +716,11 @@
           ],
         });
       }
-      function ft(t) {
+      function gt(t) {
         const c = r(),
           n = rt(),
           l = ot(),
-          s = v.useContext(it).listingID;
+          s = i.useContext(vt).listingID;
         return (0, e.jsx)(mt, {
           ...t,
           ownerSteamID: c,
@@ -734,11 +735,11 @@
             description: n,
             asset: l,
             ownerSteamID: s,
-            listingID: v,
+            listingID: i,
           } = t,
-          i = (function (t, c, n, e, l) {
+          v = (function (t, c, n, e, l) {
             var s, a;
-            let v = t
+            let i = t
               .replace(
                 /%assetid%/,
                 null !== (s = null == n ? void 0 : n.assetid) && void 0 !== s
@@ -761,12 +762,12 @@
                   : void 0 !== t.int_value
                     ? (c = t.int_value.toString())
                     : void 0 !== t.string_value && (c = t.string_value),
-                  (v = v.replace(`%propid:${t.propertyid}%`, c));
+                  (i = i.replace(`%propid:${t.propertyid}%`, c));
               });
-            return (v = v.replace(/%propid:[0-9]+%/, "")), v;
-          })(c.link, 0, l, s, v);
-        if (i.startsWith("javascript:")) {
-          const t = i.substring(11),
+            return (i = i.replace(/%propid:[0-9]+%/, "")), i;
+          })(c.link, 0, l, s, i);
+        if (v.startsWith("javascript:")) {
+          const t = v.substring(11),
             n = new Function(t);
           return (0, e.jsx)(a.$, {
             onClick: n,
@@ -776,7 +777,7 @@
           });
         }
         return (0, e.jsx)(a.v, {
-          href: i,
+          href: v,
           size: "1",
           color: "dull",
           children: c.name,
@@ -788,15 +789,15 @@
             eWalletCurrency: c,
             appid: n,
             hashName: s,
-            bCanInteract: v,
-            bItemSealed: i,
+            bCanInteract: i,
+            bItemSealed: v,
             assetid: r,
           } = t,
           { data: o, isLoading: h } =
             ((d = c),
             (p = n),
-            (g = s),
-            (0, f.I)(
+            (f = s),
+            (0, g.I)(
               (function (t, c, n) {
                 return {
                   queryKey: ["MarketPriceOverview", t, c, n],
@@ -812,14 +813,14 @@
                     return await s.json();
                   },
                 };
-              })(d, p, g),
+              })(d, p, f),
             ));
-        var d, p, g;
-        return v ||
+        var d, p, f;
+        return i ||
           (null == o ? void 0 : o.lowest_price) ||
           (null == o ? void 0 : o.volume) ||
           h
-          ? i
+          ? v
             ? (0, e.jsx)(l.s, {
                 background: "greyneutral-3",
                 padding: "4",
@@ -829,7 +830,7 @@
                   color: "dull",
                   href: `${u.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}${r ? `?sellorderassetid=${r}` : ""}`,
                   size: "1",
-                  children: _("#SellOnMarket_ViewListing"),
+                  children: w("#SellOnMarket_ViewListing"),
                 }),
               })
             : (0, e.jsxs)(l.s, {
@@ -839,14 +840,14 @@
                 direction: "column",
                 children: [
                   (0, e.jsx)(Vt, { isLoading: h, priceOverview: o }),
-                  v &&
+                  i &&
                     (0, e.jsx)(a.v, {
                       size: "1",
                       color: "dull",
                       href: `${u.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}`,
-                      children: _("#SellOnMarket_View"),
+                      children: w("#SellOnMarket_View"),
                     }),
-                  v && !i && (0, e.jsx)(jt, {}),
+                  i && !v && (0, e.jsx)(jt, {}),
                 ],
               })
           : null;
@@ -862,13 +863,13 @@
                 (0, e.jsx)(b.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.lowest_price)
-                    ? _("#SellOnMarket_LowestPrice", n.lowest_price)
+                    ? w("#SellOnMarket_LowestPrice", n.lowest_price)
                     : " ",
                 }),
                 (0, e.jsx)(b.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.volume)
-                    ? _("#SellOnMarket_Volume", n.volume)
+                    ? w("#SellOnMarket_Volume", n.volume)
                     : " ",
                 }),
               ],
@@ -883,25 +884,25 @@
                 color: "green",
                 onClick: () => window.SellCurrentSelection(),
                 size: "1",
-                children: _("#SellOnMarket_SellThisItem"),
+                children: w("#SellOnMarket_SellThisItem"),
               }),
             })
           : null;
       }
-      var wt = n(58256),
-        _t = n(11685);
+      var _t = n(58256),
+        wt = n(11685);
       function bt() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: _("#ItemDescription_TradeProtectedTooltip"),
+          title: w("#ItemDescription_TradeProtectedTooltip"),
           children: [
             (0, e.jsx)(s.az, {
-              className: _t.TradeProtectionLabel,
-              children: _("#ItemDescription_TradeProtected"),
+              className: wt.TradeProtectionLabel,
+              children: w("#ItemDescription_TradeProtected"),
             }),
-            (0, e.jsx)(wt._, {
-              className: _t.TradeProtectionIcon,
-              alt: _("#ItemDescription_TradeProtected"),
+            (0, e.jsx)(_t._, {
+              className: wt.TradeProtectionIcon,
+              alt: w("#ItemDescription_TradeProtected"),
               src: `${u.TS.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
             }),
           ],
@@ -911,22 +912,22 @@
       function St() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: _("#ItemDescription_ListedItemTooltip"),
+          title: w("#ItemDescription_ListedItemTooltip"),
           children: [
             (0, e.jsx)(s.az, {
               className: yt.ListedItemLabel,
-              children: _("#ItemDescription_ListedItem"),
+              children: w("#ItemDescription_ListedItem"),
             }),
-            (0, e.jsx)(wt._, {
+            (0, e.jsx)(_t._, {
               className: yt.ListedItemIcon,
-              alt: _("#ItemDescription_ListedItem"),
+              alt: w("#ItemDescription_ListedItem"),
               src: `${u.TS.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
             }),
           ],
         });
       }
-      var zt = n(65646),
-        Mt = n(59805),
+      var Mt = n(65646),
+        zt = n(59805),
         kt = n(96171),
         Lt = n(42834),
         It = n(69345),
@@ -941,7 +942,7 @@
               listingID: s,
               children: a,
             } = t,
-            i = v.useMemo(
+            v = i.useMemo(
               () => ({
                 description: c,
                 asset: n,
@@ -950,14 +951,14 @@
               }),
               [c, n, l, s],
             );
-          return (0, e.jsx)(it.Provider, { value: i, children: a });
+          return (0, e.jsx)(vt.Provider, { value: v, children: a });
         },
         Container: function (t) {
           const { children: c, ...n } = t,
             s = rt();
           return (0, e.jsx)(l.s, {
             direction: "column",
-            border: `2px solid ${N(s, "#3A3A3A")}`,
+            border: `2px solid ${G(s, "#3A3A3A")}`,
             className: Ht.ItemDescription,
             ...n,
             children: c,
@@ -1004,7 +1005,7 @@
           });
         },
         Separator: function () {
-          return (0, e.jsx)(zt.w, {
+          return (0, e.jsx)(Mt.w, {
             color: "dull-10",
             size: "4",
             marginY: "2",
@@ -1013,11 +1014,11 @@
         Name: function (t) {
           const c = rt(),
             n = ot();
-          return (0, e.jsx)(Mt.D, {
+          return (0, e.jsx)(zt.D, {
             size: "7",
             weight: "heavy",
             ...t,
-            children: (0, e.jsx)(F, { description: c, asset: n }),
+            children: (0, e.jsx)($, { description: c, asset: n }),
           });
         },
         FraudWarnings: function () {
@@ -1034,7 +1035,7 @@
                       color: "red-9",
                       as: "div",
                       children: [
-                        (0, e.jsx)(Et, {
+                        (0, e.jsx)(Pt, {
                           style: {
                             height: "1.25em",
                             verticalAlign: "text-bottom",
@@ -1052,18 +1053,18 @@
         },
         GameInfo: function (t) {
           const c = rt(),
-            { gameURL: n, strName: a, iconURL: v } = Rt(t.hrefGame);
+            { gameURL: n, strName: a, iconURL: i } = Rt(t.hrefGame);
           return (0, e.jsxs)(l.s, {
             direction: "row",
             gapX: "2",
             align: "center",
             children: [
-              (0, e.jsx)(Pt, {
+              (0, e.jsx)(Et, {
                 href: n,
-                children: v
-                  ? (0, e.jsx)(wt._, {
+                children: i
+                  ? (0, e.jsx)(_t._, {
                       alt: null != a ? a : "",
-                      src: v,
+                      src: i,
                       className: Ht.GameImage,
                     })
                   : (0, e.jsx)(s.az, { className: Ht.GameImagePlaceholder }),
@@ -1097,7 +1098,7 @@
           const t = rt(),
             c = ht(),
             { actions: n } = t;
-          return c ? n && (0, e.jsx)(gt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(ft, { actions: n }) : null;
         },
         OwnerDescriptions: function () {
           const t = rt();
@@ -1112,13 +1113,13 @@
           const t = rt(),
             c = ht(),
             { owner_actions: n } = t;
-          return c ? n && (0, e.jsx)(gt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(ft, { actions: n }) : null;
         },
         MarketActions: function () {
           const t = rt(),
             c = ht(),
             { market_actions: n } = t;
-          return c ? n && (0, e.jsx)(gt, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(ft, { actions: n }) : null;
         },
         Tags: function () {
           const t = rt(),
@@ -1128,7 +1129,7 @@
                 size: "3",
                 contrast: "note",
                 children: [
-                  _("#ItemDescription_Tags"),
+                  w("#ItemDescription_Tags"),
                   " ",
                   " ",
                   c.map((t) => t.localized_tag_name).join(", "),
@@ -1143,7 +1144,7 @@
                 direction: "column",
                 children: t.asset_properties.map((c, n) =>
                   (0, e.jsx)(
-                    z,
+                    M,
                     { appid: t.appid, property: c, contrast: "note" },
                     n,
                   ),
@@ -1225,7 +1226,7 @@
       function Yt(t) {
         const { gameURL: c, strName: n } = Rt(t.hrefGame);
         return c
-          ? (0, e.jsx)(E.Y, {
+          ? (0, e.jsx)(P.Y, {
               href: c,
               size: "3",
               contrast: "description",
@@ -1238,11 +1239,11 @@
               children: n,
             });
       }
-      function Pt(t) {
+      function Et(t) {
         const { children: c, href: n } = t;
         return n ? (0, e.jsx)("a", { href: n, children: c }) : c;
       }
-      function Et(t) {
+      function Pt(t) {
         return (0, e.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 20 20",
@@ -1256,8 +1257,8 @@
           }),
         });
       }
-      var Gt = n(81393),
-        Nt = n(84811);
+      var Nt = n(81393),
+        Gt = n(84811);
       function Bt(t) {
         const {
             name: c,
@@ -1265,22 +1266,22 @@
             bInteractable: l = !0,
             bIncludeMarketInfo: s = !0,
             bHideActionsForUnique: a = !1,
-            steamidOwner: i,
+            steamidOwner: v,
             strSelectItemAction: r,
           } = t,
-          [h, d] = v.useState();
+          [h, d] = i.useState();
         return (
-          (0, v.useEffect)(
+          (0, i.useEffect)(
             () =>
               (function (t, c) {
                 var n;
                 const e = window;
                 e.UpdateReactItemInfo ||
                   (e.UpdateReactItemInfo = (t, c, n) => {
-                    const e = Dt.get(t);
+                    const e = Wt.get(t);
                     e
                       ? e(c, n)
-                      : (0, Gt.wT)(!1, `Updater not registered: ${t}`);
+                      : (0, Nt.wT)(!1, `Updater not registered: ${t}`);
                   });
                 if (
                   null === (n = e.g_mapPendingItemInfo) || void 0 === n
@@ -1292,9 +1293,9 @@
                   c(n, l), e.g_mapPendingItemInfo.delete(t);
                 }
                 return (
-                  Dt.set(t, c),
+                  Wt.set(t, c),
                   () => {
-                    Dt.delete(t);
+                    Wt.delete(t);
                   }
                 );
               })(c, (t, c) => d(t && { description: t, asset: c })),
@@ -1302,15 +1303,15 @@
           ),
           h
             ? (0, e.jsx)(o, {
-                steamidOwner: i,
-                children: (0, e.jsx)(Nt.tH, {
+                steamidOwner: v,
+                children: (0, e.jsx)(Gt.tH, {
                   children: n
-                    ? (0, e.jsx)(Wt, {
+                    ? (0, e.jsx)(Dt, {
                         description: h.description,
                         asset: h.asset,
                         bHideActionsForUnique: a,
                       })
-                    : (0, e.jsx)(Ft, {
+                    : (0, e.jsx)($t, {
                         description: h.description,
                         asset: h.asset,
                         bInteractable: l,
@@ -1322,7 +1323,7 @@
             : null
         );
       }
-      function Ft(t) {
+      function $t(t) {
         const {
           description: c,
           asset: n,
@@ -1352,12 +1353,12 @@
                 ],
               }),
               s && !a && (0, e.jsx)(At.SellOnMarket, {}),
-              !!a && (0, e.jsx)($t, { strLabel: a }),
+              !!a && (0, e.jsx)(Ft, { strLabel: a }),
             ],
           }),
         });
       }
-      function $t(t) {
+      function Ft(t) {
         const { strLabel: c } = t;
         return (0, e.jsx)(l.s, {
           background: "greyneutral-3",
@@ -1374,10 +1375,10 @@
           }),
         });
       }
-      function Wt(t) {
+      function Dt(t) {
         var c;
         const { description: n, asset: s, bHideActionsForUnique: a } = t,
-          v = !(a && !n.commodity);
+          i = !(a && !n.commodity);
         return (0, e.jsx)(At.Root, {
           description: n,
           asset: s,
@@ -1414,24 +1415,24 @@
                     hrefGame: `${u.TS.COMMUNITY_BASE_URL}market/search?appid=${null !== (c = n.appid) && void 0 !== c ? c : 0}`,
                   }),
                   (0, e.jsx)(At.Descriptions, {}),
-                  v && (0, e.jsx)(At.MarketActions, {}),
+                  i && (0, e.jsx)(At.MarketActions, {}),
                 ],
               }),
             ],
           }),
         });
       }
-      const Dt = new Map();
+      const Wt = new Map();
     },
     65423: (t, c, n) => {
       "use strict";
-      n.r(c), n.d(c, { MarketBaseUIRoot: () => f, default: () => d });
+      n.r(c), n.d(c, { MarketBaseUIRoot: () => g, default: () => d });
       var e = n(7850),
         l = n(90626),
         s = n(21869),
         a = n(76704),
-        v = n(55156),
-        i = n(738),
+        i = n(55156),
+        v = n(738),
         r = n(69818),
         o = n(78327),
         h = n(81063);
@@ -1479,19 +1480,19 @@
         );
       }
       function p(t) {
-        const { active: c, onRequestClose: n, ...v } = t,
-          [i, r] = (0, l.useState)(() => (0, a.D)(t)),
+        const { active: c, onRequestClose: n, ...i } = t,
+          [v, r] = (0, l.useState)(() => (0, a.D)(t)),
           o = (0, l.useCallback)((t) => r((c) => ({ ...c, state: t })), []);
         return (0, e.jsx)(s.E, {
           active: c,
-          children: (0, e.jsx)(g, {
+          children: (0, e.jsx)(f, {
             onRequestClose: n,
-            children: (0, e.jsx)(f, {
+            children: (0, e.jsx)(g, {
               zoo: !0,
               children: (0, e.jsx)(a.nk, {
-                ...v,
-                filter: i.state,
-                config: i.config,
+                ...i,
+                filter: v.state,
+                config: v.config,
                 onFilterChange: o,
                 onSearch: (t, c) => {
                   window.location.href = (0, a.Tx)(t, c);
@@ -1501,10 +1502,10 @@
           }),
         });
       }
-      function g(t) {
+      function f(t) {
         const { onRequestClose: c, children: n } = t,
           l = (0, o.Qn)();
-        return (0, e.jsx)(i.x_, {
+        return (0, e.jsx)(v.x_, {
           onEscKeypress: c,
           children: (0, e.jsx)(r.UC, {
             bCenterVertically: !l,
@@ -1513,8 +1514,8 @@
           }),
         });
       }
-      function f(t) {
-        return (0, e.jsx)(v.Y, { ...t });
+      function g(t) {
+        return (0, e.jsx)(i.Y, { ...t });
       }
     },
     55435: (t, c, n) => {
@@ -1524,8 +1525,8 @@
         l = n(83281),
         s = n(76704),
         a = n(90626),
-        v = n(65423),
-        i = n(90534);
+        i = n(65423),
+        v = n(90534);
       function r(t) {
         const { app: c, initialValue: n, debugMode: r } = t,
           [o, h] = (0, a.useState)(n),
@@ -1533,8 +1534,8 @@
           [u, p] = (0, a.useState)(!0);
         return (0, e.jsx)(l.u.Provider, {
           value: r,
-          children: (0, e.jsx)(v.MarketBaseUIRoot, {
-            children: (0, e.jsx)(i.az, {
+          children: (0, e.jsx)(i.MarketBaseUIRoot, {
+            children: (0, e.jsx)(v.az, {
               width: "259px",
               ref: d,
               position: "relative",
@@ -1558,16 +1559,16 @@
     },
     58256: (t, c, n) => {
       "use strict";
-      n.d(c, { _: () => v });
+      n.d(c, { _: () => i });
       var e = n(7850),
         l = n(75659),
         s = n(11526),
         a = n(89611);
-      function v(t) {
-        const c = (0, s.mz)({ ...t, className: t.className }, i);
+      function i(t) {
+        const c = (0, s.mz)({ ...t, className: t.className }, v);
         return (0, e.jsx)("img", { ...c });
       }
-      const i = [
+      const v = [
         ...l.h,
         {
           prop: "objectFit",
@@ -1593,20 +1594,20 @@
     },
     65646: (t, c, n) => {
       "use strict";
-      n.d(c, { w: () => v });
+      n.d(c, { w: () => i });
       var e = n(7850),
         l = n(75659),
         s = n(11526),
         a = n(8833);
-      function v(t) {
+      function i(t) {
         const { orientation: c = "horizontal", size: n = "1", ...l } = t;
         return (0, e.jsx)("div", {
           role: "separator",
           "aria-orientation": c,
-          ...(0, s.mz)({ ...l, size: n, className: a.Separator }, i),
+          ...(0, s.mz)({ ...l, size: n, className: a.Separator }, v),
         });
       }
-      const i = [
+      const v = [
         ...l.L,
         { prop: "size", className: (t) => a[`Size-${t}`], responsive: !0 },
         {
@@ -1622,20 +1623,20 @@
         l = n(39479),
         s = n(64238),
         a = n.n(s),
-        v = n(75659),
-        i = n(11526),
+        i = n(75659),
+        v = n(11526),
         r = n(75180);
       function o(t) {
         const { as: c = "div", ref: n, ...s } = t,
-          v = (0, i.mz)({ ...s, className: a()(r.Grid, t.className) }, h),
+          i = (0, v.mz)({ ...s, className: a()(r.Grid, t.className) }, h),
           o = c;
         return (0, e.jsx)(l.J, {
           "flow-children": "grid",
-          children: (0, e.jsx)(o, { ref: n, ...v }),
+          children: (0, e.jsx)(o, { ref: n, ...i }),
         });
       }
       const h = [
-        ...v.h,
+        ...i.h,
         {
           prop: "display",
           responsive: !0,
@@ -1730,12 +1731,12 @@
     },
     11333: (t, c, n) => {
       "use strict";
-      n.d(c, { L: () => i, c: () => v });
+      n.d(c, { L: () => v, c: () => i });
       var e = n(78619),
         l = n(49845),
         s = n(58632),
         a = n.n(s);
-      function v(t, c) {
+      function i(t, c) {
         return new (a())(
           async (c) => {
             const n = [...c],
@@ -1758,8 +1759,8 @@
           { maxBatchSize: 100, cache: !1, ...c },
         );
       }
-      function i(t) {
-        return (0, l.V)("PlayerLinkDetails", () => v(t));
+      function v(t) {
+        return (0, l.V)("PlayerLinkDetails", () => i(t));
       }
     },
     62220: (t, c, n) => {
@@ -1769,13 +1770,13 @@
         l = n(8527),
         s = n(23809),
         a = n(88942),
-        v = n(11333);
-      function i(t) {
+        i = n(11333);
+      function v(t) {
         return ["PlayerLinkDetails", t];
       }
       function r(t) {
         const c = (0, s.KV)(),
-          n = (0, v.L)(c);
+          n = (0, i.L)(c);
         return (0, a.I)(
           (function (t, c) {
             const n =
@@ -1785,31 +1786,31 @@
                     .ConvertTo64BitString()
                 : c;
             return {
-              queryKey: i(n),
+              queryKey: v(n),
               queryFn: async () => {
                 var c, e, l, s, a;
                 if (n) {
-                  const v = await t.load(n);
+                  const i = await t.load(n);
                   return (
-                    null === (c = null == v ? void 0 : v.private_data) ||
+                    null === (c = null == i ? void 0 : i.private_data) ||
                       void 0 === c ||
                       delete c.account_name,
-                    null === (e = null == v ? void 0 : v.public_data) ||
+                    null === (e = null == i ? void 0 : i.public_data) ||
                       void 0 === e ||
                       delete e.account_flags,
-                    null === (l = null == v ? void 0 : v.public_data) ||
+                    null === (l = null == i ? void 0 : i.public_data) ||
                       void 0 === l ||
                       delete l.ban_expires_time,
-                    null === (s = null == v ? void 0 : v.public_data) ||
+                    null === (s = null == i ? void 0 : i.public_data) ||
                       void 0 === s ||
                       delete s.privacy_state,
                     1 !==
-                      (null === (a = null == v ? void 0 : v.public_data) ||
+                      (null === (a = null == i ? void 0 : i.public_data) ||
                       void 0 === a
                         ? void 0
                         : a.profile_state) &&
-                      (null == v || delete v.private_data),
-                    v
+                      (null == i || delete i.private_data),
+                    i
                   );
                 }
                 return null;
@@ -1849,19 +1850,19 @@
         l = n(13843);
       function s(t, c) {
         let n = t.toLowerCase().replace(/[^\p{L}\p{N}\p{Z}]/gu, "");
-        const e = v[c];
+        const e = i[c];
         return e && (n = n.replace(e, "")), n.trim();
       }
       function a(t, c) {
         const n = (0, l.A)().languages[0].strLanguage,
           a = t.map((t) => ({ item: t, strSort: s(c ? c(t) : t, n) })),
-          v = new Intl.Collator((0, e.J)(), { numeric: !0 });
+          i = new Intl.Collator((0, e.J)(), { numeric: !0 });
         return (
-          a.sort((t, c) => v.compare(t.strSort, c.strSort)),
+          a.sort((t, c) => i.compare(t.strSort, c.strSort)),
           a.map(({ item: t }) => t)
         );
       }
-      const v = {
+      const i = {
         english: /^(the |a |an )/,
         brazilian: /^(o |os |a |as |um |uns |uma |umas )/,
         danish: /^(en |et |den |det |de )/,
@@ -1884,31 +1885,31 @@
         l = n(90626),
         s = n(8527),
         a = n(88942),
-        v = n(90534),
-        i = n(59805),
+        i = n(90534),
+        v = n(59805),
         r = n(83392),
         o = n(65646),
         h = n(52908),
         d = n(20187),
         u = n(48474),
         p = n(7157),
-        g = n(81393),
-        f = n(25671);
+        f = n(81393),
+        g = n(25671);
       function m(t) {
         const { onTextChange: c, suggestions: n, onSuggestionSelected: e } = t,
           [s, a] = (0, l.useState)(null),
-          [v, i] = (0, l.useState)(!1),
+          [i, v] = (0, l.useState)(!1),
           r = (0, l.useCallback)(
             (t) => {
-              t ? (i(!0), a(null)) : i(!1), c(t);
+              t ? (v(!0), a(null)) : v(!1), c(t);
             },
             [c],
           );
         return {
           activeIndex: s,
           setActiveIndex: a,
-          open: v,
-          onOpenChange: i,
+          open: i,
+          onOpenChange: v,
           onTextChange: r,
           suggestions: n,
           onSuggestionSelected: e,
@@ -1947,7 +1948,7 @@
                   popoverWidth: l = "dropdown",
                   ...s
                 } = t,
-                a = (0, f.T)({
+                a = (0, g.T)({
                   ...s.state,
                   width: l,
                   placement: n,
@@ -1958,7 +1959,7 @@
                 });
               return (0, e.jsx)(C.Provider, {
                 value: s,
-                children: (0, e.jsx)(f.k.Root, { state: a, children: c }),
+                children: (0, e.jsx)(g.k.Root, { state: a, children: c }),
               });
             },
             TextInput: function (t) {
@@ -1968,12 +1969,12 @@
                     activeIndex: n,
                     onOpenChange: s,
                     setActiveIndex: a,
-                    suggestions: v,
-                    onSuggestionSelected: i,
+                    suggestions: i,
+                    onSuggestionSelected: v,
                   },
                 } = V("<Autocomplete.TextInput>"),
                 r = (0, l.useRef)(null);
-              return (0, e.jsx)(f.k.Anchor, {
+              return (0, e.jsx)(g.k.Anchor, {
                 children: (0, e.jsx)(p.k, {
                   ...t,
                   inputRef: r,
@@ -1982,9 +1983,9 @@
                   onKeyDown: (t) => {
                     "Enter" === t.key &&
                       null !== n &&
-                      v[n] &&
-                      (i && i(v[n], t),
-                      t.defaultPrevented || c(v[n]),
+                      i[n] &&
+                      (v && v(i[n], t),
+                      t.defaultPrevented || c(i[n]),
                       a(null),
                       s(!1),
                       t.preventDefault(),
@@ -1999,7 +2000,7 @@
               });
             },
             Suggestions: function (t) {
-              return (0, e.jsx)(f.k.Positioner, { ...t, returnFocus: !1 });
+              return (0, e.jsx)(g.k.Positioner, { ...t, returnFocus: !1 });
             },
             Suggestion: function (t) {
               const { value: c, children: n, ...l } = t,
@@ -2007,13 +2008,13 @@
                   state: {
                     onTextChange: s,
                     onOpenChange: a,
-                    setActiveIndex: v,
-                    onSuggestionSelected: i,
+                    setActiveIndex: i,
+                    onSuggestionSelected: v,
                   },
                 } = V("<Autocomplete.TextInput>");
-              return (0, e.jsx)(f.k.Item, {
+              return (0, e.jsx)(g.k.Item, {
                 onSelect: (t) => {
-                  i && i(c, t), t.defaultPrevented || s(c), v(null), a(!1);
+                  v && v(c, t), t.defaultPrevented || s(c), i(null), a(!1);
                 },
                 ...l,
                 children: n,
@@ -2024,16 +2025,16 @@
         C = (0, l.createContext)(null);
       function V(t) {
         const c = (0, l.useContext)(C);
-        return (0, g.wT)(c, `${t} must be used within an <Autocomplete>!`), c;
+        return (0, f.wT)(c, `${t} must be used within an <Autocomplete>!`), c;
       }
       var j = n(58256),
-        w = n(77914),
-        _ = n(67619),
+        _ = n(77914),
+        w = n(67619),
         b = n(61023),
         y = n(89047),
         S = n(92148),
-        z = n(59366),
-        M = n(80797),
+        M = n(59366),
+        z = n(80797),
         k = n(52038),
         L = n(14181),
         I = n(82277);
@@ -2044,28 +2045,28 @@
             onInputChange: l,
             activeIndex: s,
             popoverPlacement: a,
-            multiselect: i,
+            multiselect: v,
             setActiveIndex: o,
             setOpen: h,
             filterPlaceholder: d,
             onIndexSelected: u,
-            refScrollElement: g,
-          } = $("<Combobox.Options>"),
+            refScrollElement: f,
+          } = F("<Combobox.Options>"),
           m = a.startsWith("top"),
-          x = (0, e.jsx)(v.az, {
+          x = (0, e.jsx)(i.az, {
             overflow: "auto",
-            ref: g,
+            ref: f,
             style: { overscrollBehavior: "contain" },
             children: t.children,
           });
-        return (0, e.jsx)(f.k.Positioner, {
+        return (0, e.jsx)(g.k.Positioner, {
           ref: c,
           children: (0, e.jsxs)(r.s, {
             direction: "column",
             maxHeight: "var(--popover-max-height)",
             children: [
               m && x,
-              (0, e.jsx)(v.az, {
+              (0, e.jsx)(i.az, {
                 flexShrink: "0",
                 className: (0, k.A)(I.FilterBorder, m ? I.Top : I.Bottom),
                 children: (0, e.jsx)(p.k, {
@@ -2078,7 +2079,7 @@
                     "Enter" === t.key &&
                       null !== s &&
                       (u(s),
-                      i || (o(null), h(!1)),
+                      v || (o(null), h(!1)),
                       t.preventDefault(),
                       t.stopPropagation());
                   },
@@ -2104,28 +2105,28 @@
           {
             onItemSelectionChange: s,
             selectedValue: a,
-            multiselect: v,
-            maxSelected: i,
-          } = $("<ComboboxTrigger>");
+            multiselect: i,
+            maxSelected: v,
+          } = F("<ComboboxTrigger>");
         let o = !1,
           d = !1;
-        v
+        i
           ? ((o = Array.isArray(a) && a.includes(c)),
-            (d = !!i && Array.isArray(a) && a.length >= i))
+            (d = !!v && Array.isArray(a) && a.length >= v))
           : (o = c === a);
         const u = l || (d && !o);
-        return (0, e.jsxs)(f.k.Item, {
+        return (0, e.jsxs)(g.k.Item, {
           onSelect: () => s(c),
           selected: o,
           disabled: u,
           children: [
-            v &&
+            i &&
               (0, e.jsxs)(r.s, {
                 gap: "2",
                 align: "center",
                 children: [(0, e.jsx)(h.S, { checked: o, variant: "dark" }), n],
               }),
-            !v && n,
+            !i && n,
           ],
         });
       }
@@ -2153,20 +2154,20 @@
             filter: e = A,
             filterPlaceholder: s,
             selectedValue: a,
-            onSelectionChange: v,
-            maxSelected: i,
+            onSelectionChange: i,
+            maxSelected: v,
           } = t,
           [r, o] = (0, l.useState)(""),
           [h, d] = (0, l.useState)(!1),
           [u, p] = (0, l.useState)(null),
-          g = (0, l.useMemo)(() => n.filter((t) => e(r, t)), [r, n, e]),
-          f = "number" == typeof u,
-          m = g.length > 0,
+          f = (0, l.useMemo)(() => n.filter((t) => e(r, t)), [r, n, e]),
+          g = "number" == typeof u,
+          m = f.length > 0,
           x = (0, l.useCallback)(
             (t) => {
-              t && !f && m && p(0), o(t);
+              t && !g && m && p(0), o(t);
             },
-            [f, m],
+            [g, m],
           ),
           C = (0, l.useCallback)(
             (t) => {
@@ -2176,9 +2177,9 @@
           ),
           V = (0, l.useCallback)(
             (t) => {
-              v(t), c || C(!1);
+              i(t), c || C(!1);
             },
-            [c, v, C],
+            [c, i, C],
           ),
           j = (0, l.useCallback)(
             (t) => {
@@ -2196,7 +2197,7 @@
         return {
           activeIndex: u,
           setActiveIndex: p,
-          rgFilteredOptions: g,
+          rgFilteredOptions: f,
           selectedValue: a,
           onSelectionChange: V,
           onItemSelectionChange: j,
@@ -2209,17 +2210,17 @@
           setOpen: C,
           filterPlaceholder: s,
           multiselect: c,
-          maxSelected: i,
+          maxSelected: v,
         };
       }
-      const P = {
+      const E = {
         Root: function (t) {
           const {
               children: c,
               state: n,
               placement: a = "bottom-end",
-              popoverWidth: v = "dropdown",
-              popoverMaxHeight: i,
+              popoverWidth: i = "dropdown",
+              popoverMaxHeight: v,
               ...r
             } = t,
             [o, h] = (0, l.useState)(void 0);
@@ -2230,11 +2231,11 @@
               () => n.rgFilteredOptions.findIndex((t) => t === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            g = (0, f.T)({
+            f = (0, g.T)({
               open: n.bOpen,
               onOpenChange: n.setOpen,
-              width: v,
-              maxHeight: i,
+              width: i,
+              maxHeight: v,
               placement: a,
               gutter: "4",
               activeIndex: n.activeIndex,
@@ -2267,16 +2268,16 @@
                 n.setOpen(t);
               },
               onIndexSelected: (t) => {
-                const c = g.elementsRef.current;
+                const c = f.elementsRef.current;
                 if (c && c[t]) {
                   c[t].click();
                 }
               },
-              popoverPlacement: g.floating.placement,
+              popoverPlacement: f.floating.placement,
             };
-          return (0, e.jsx)(F.Provider, {
+          return (0, e.jsx)($.Provider, {
             value: m,
-            children: (0, e.jsx)(f.k.Root, { state: g, children: c }),
+            children: (0, e.jsx)(g.k.Root, { state: f, children: c }),
           });
         },
         Option: O,
@@ -2284,26 +2285,26 @@
         VirtualizedOptions: function (t) {
           const { items: c, renderItem: n, overscan: s = 5, ...a } = t,
             {
-              bOpen: i,
+              bOpen: v,
               refPopover: r,
               refScrollElement: o,
-            } = $("<ComboboxVirtualizedOptions>"),
+            } = F("<ComboboxVirtualizedOptions>"),
             [h, d] = (0, l.useState)(!1),
-            u = i && !!r.current && !!o.current;
+            u = v && !!r.current && !!o.current;
           (0, l.useEffect)(() => {
             u !== h && d(u);
           }, [u, h]);
           const p = (0, S.Te)({
             count: h ? c.length : Math.min(c.length, 3),
             getScrollElement: () => o.current,
-            enabled: i,
-            measureElement: z.ZO,
+            enabled: v,
+            measureElement: M.ZO,
             ...a,
           });
           return (0, e.jsx)(T, {
             children: (0, e.jsx)(H, {
               value: p,
-              children: (0, e.jsx)(v.az, {
+              children: (0, e.jsx)(i.az, {
                 height: `${p.getTotalSize()}px`,
                 position: "relative",
                 width: "100%",
@@ -2316,8 +2317,8 @@
           const { virtualItem: c, ...n } = t,
             s = (0, l.useContext)(H);
           return (
-            (0, g.wT)(s, "Virtual item rendered outside of a virtualizer!"),
-            (0, e.jsx)(v.az, {
+            (0, f.wT)(s, "Virtual item rendered outside of a virtualizer!"),
+            (0, e.jsx)(i.az, {
               position: "absolute",
               width: "100%",
               style: { top: 0, left: 0, transform: `translateY(${c.start}px)` },
@@ -2332,32 +2333,32 @@
             {
               bOpen: s,
               setOpen: a,
-              inputValue: v,
-              onInputChange: i,
+              inputValue: i,
+              onInputChange: v,
               selectedValue: r,
               focusedValue: o,
               refScrollElement: h,
               onItemSelectionChange: d,
               activeIndex: u,
               setActiveIndex: p,
-              onFocusChange: g,
+              onFocusChange: f,
               rgFilteredOptions: m,
               onSelectionChange: x,
               multiselect: C,
               onClear: V,
               refPopover: j,
-              clearable: _,
+              clearable: w,
               filterPlaceholder: S,
-              onIndexSelected: z,
+              onIndexSelected: M,
               popoverPlacement: k,
               maxSelected: L,
               ...I
-            } = $("<ComboboxTrigger>"),
+            } = F("<ComboboxTrigger>"),
             T = { tabIndex: 0, children: c },
             H = C ? Array.isArray(r) && r.length > 0 : !!r,
             O =
-              H && _
-                ? (0, e.jsx)(w.g, {
+              H && w
+                ? (0, e.jsx)(_.g, {
                     onClick: V,
                     cursor: "pointer",
                     hitSlop: !0,
@@ -2371,8 +2372,8 @@
               tabIndex: 0,
               ...I,
             }),
-            R = (0, M.Q)(l, A, T, void 0);
-          return (0, e.jsx)(f.k.Anchor, { children: R });
+            R = (0, z.Q)(l, A, T, void 0);
+          return (0, e.jsx)(g.k.Anchor, { children: R });
         },
         DefaultOptionFilter: A,
         Value: function (t) {
@@ -2391,7 +2392,7 @@
           });
         },
       };
-      function E(t) {
+      function P(t) {
         return t
           ? "string" == typeof t
             ? t
@@ -2404,15 +2405,15 @@
                 "")
           : "";
       }
-      const G = Object.assign(function (t) {
+      const N = Object.assign(function (t) {
         const {
             selectedValue: c,
             onSelectionChange: n,
             options: s,
             filter: a,
-            filterPlaceholder: v,
-            placeholder: i,
-            getOptionLabel: r = E,
+            filterPlaceholder: i,
+            placeholder: v,
+            getOptionLabel: r = P,
             ...o
           } = t,
           h = R({
@@ -2423,28 +2424,28 @@
               (t, c) => (a ? a(t, c) : A(t, r(c))),
               [a, r],
             ),
-            filterPlaceholder: v,
+            filterPlaceholder: i,
           }),
           d = null != c;
-        return (0, e.jsxs)(G.Root, {
+        return (0, e.jsxs)(N.Root, {
           state: h,
           ...o,
           children: [
-            (0, e.jsxs)(G.Trigger, {
+            (0, e.jsxs)(N.Trigger, {
               children: [
-                d && (0, e.jsx)(G.Value, { children: r(c) }),
-                !d && (0, e.jsx)(G.Placeholder, { children: i }),
+                d && (0, e.jsx)(N.Value, { children: r(c) }),
+                !d && (0, e.jsx)(N.Placeholder, { children: v }),
               ],
             }),
-            (0, e.jsx)(G.Options, {
+            (0, e.jsx)(N.Options, {
               children: h.rgFilteredOptions.map((t) =>
                 (0, e.jsx)(O, { value: t, children: r(t) }, r(t)),
               ),
             }),
           ],
         });
-      }, P);
-      function N(t) {
+      }, E);
+      function G(t) {
         return Y(t, !0);
       }
       const B = Object.assign(function (t) {
@@ -2453,13 +2454,13 @@
               onSelectionChange: n,
               options: s,
               filter: a,
-              filterPlaceholder: v,
-              placeholder: i,
-              getOptionLabel: r = E,
+              filterPlaceholder: i,
+              placeholder: v,
+              getOptionLabel: r = P,
               maxSelected: o,
               ...h
             } = t,
-            d = N({
+            d = G({
               onSelectionChange: n,
               selectedValue: c,
               rgOptions: s,
@@ -2467,7 +2468,7 @@
                 (t, c) => (a ? a(t, c) : A(t, r(c))),
                 [a, r],
               ),
-              filterPlaceholder: v,
+              filterPlaceholder: i,
               maxSelected: o,
             }),
             u = Array.isArray(c) && c.length > 0;
@@ -2479,33 +2480,33 @@
                 ? new Intl.ListFormat((0, L.ZO)().strISOCode).format(t)
                 : t.join(", ");
           }
-          return (0, e.jsxs)(G.Root, {
+          return (0, e.jsxs)(N.Root, {
             state: d,
             ...h,
             children: [
-              (0, e.jsxs)(G.Trigger, {
+              (0, e.jsxs)(N.Trigger, {
                 children: [
-                  u && (0, e.jsx)(G.Value, { children: p }),
-                  !u && (0, e.jsx)(G.Placeholder, { children: i }),
+                  u && (0, e.jsx)(N.Value, { children: p }),
+                  !u && (0, e.jsx)(N.Placeholder, { children: v }),
                 ],
               }),
-              (0, e.jsx)(G.Options, {
+              (0, e.jsx)(N.Options, {
                 children: d.rgFilteredOptions.map((t) =>
-                  (0, e.jsx)(G.Option, { value: t, children: r(t) }, r(t)),
+                  (0, e.jsx)(N.Option, { value: t, children: r(t) }, r(t)),
                 ),
               }),
             ],
           });
-        }, P),
-        F = (0, l.createContext)(null);
-      function $(t) {
-        const c = (0, l.useContext)(F);
+        }, E),
+        $ = (0, l.createContext)(null);
+      function F(t) {
+        const c = (0, l.useContext)($);
         return c || console.error(`${t} must be used within a <Combobox>!`), c;
       }
-      var W = n(55348),
-        D = n(62463),
-        J = n(11967);
-      const U = (0, l.createContext)(null),
+      var D = n(55348),
+        W = n(62463),
+        U = n(11967);
+      const J = (0, l.createContext)(null),
         Z = Object.assign(
           function (t) {
             const {
@@ -2514,9 +2515,9 @@
                 onItemChange: l = () => {},
                 disabled: s,
                 direction: a = "column",
-                ...v
+                ...i
               } = t,
-              i = {
+              v = {
                 selected: c.reduce((t, c) => ({ ...t, [c]: !0 }), {}),
                 onChange: (t, e) => {
                   if ((l(t, e), e)) n(c.concat(t));
@@ -2528,21 +2529,21 @@
                 disabled: s,
               },
               o = "row" === a;
-            return (0, e.jsx)(U.Provider, {
-              value: i,
+            return (0, e.jsx)(J.Provider, {
+              value: v,
               children: (0, e.jsx)(r.s, {
                 direction: a,
                 wrap: o ? "wrap" : void 0,
                 gap: "column" === a ? "1" : "4",
                 role: "group",
-                ...v,
+                ...i,
               }),
             });
           },
           {
             Item: function (t) {
               const { value: c, children: n } = t,
-                s = (0, l.useContext)(U);
+                s = (0, l.useContext)(J);
               if (!s)
                 return (
                   console.error(
@@ -2550,11 +2551,11 @@
                   ),
                   null
                 );
-              const { selected: a, onChange: v, disabled: i } = s;
+              const { selected: a, onChange: i, disabled: v } = s;
               return (0, e.jsx)(h.S, {
                 checked: !!a[c],
-                disabled: i,
-                onChange: (t) => v(c, t),
+                disabled: v,
+                onChange: (t) => i(c, t),
                 children: !!n && (0, e.jsx)(d.EY, { children: n }),
               });
             },
@@ -2641,6 +2642,7 @@
         (st.japanese = () => n.e(5975).then(n.t.bind(n, 15975, 19))),
         (st.koreana = () => n.e(8303).then(n.t.bind(n, 18303, 19))),
         (st.latam = () => n.e(4375).then(n.t.bind(n, 64375, 19))),
+        (st.malay = () => n.e(7144).then(n.t.bind(n, 37144, 19))),
         (st.norwegian = () => n.e(7224).then(n.t.bind(n, 94843, 19))),
         (st.polish = () => n.e(1825).then(n.t.bind(n, 21825, 19))),
         (st.portuguese = () => n.e(3717).then(n.t.bind(n, 23717, 19))),
@@ -2658,10 +2660,10 @@
       const at = (0, lt.l)(async function (t) {
         if (st[t]) return st[t]();
       });
-      var vt = n(44688);
-      const it = 10;
+      var it = n(44688);
+      const vt = 10;
       function rt(t) {
-        return t.rgOptions.length >= it
+        return t.rgOptions.length >= vt
           ? (0, e.jsx)(dt, { ...t })
           : (0, e.jsx)(ht, { ...t });
       }
@@ -2675,36 +2677,36 @@
       }
       function ht(t) {
         const { rgOptions: c, strLabel: n, value: s = {}, onChange: a } = t,
-          v = (0, l.useMemo)(() => c.filter((t) => ot(t, s)), [c, s]),
-          i = (0, J.DL)({
+          i = (0, l.useMemo)(() => c.filter((t) => ot(t, s)), [c, s]),
+          v = (0, U.DL)({
             rgOptions: c,
-            selectedValue: v,
-            onSelectionChange: (t) => a(v, t),
+            selectedValue: i,
+            onSelectionChange: (t) => a(i, t),
           }),
-          r = v.length > 0;
-        return (0, e.jsxs)(J.uh.Root, {
-          state: i,
+          r = i.length > 0;
+        return (0, e.jsxs)(U.uh.Root, {
+          state: v,
           variant: "highlight",
           radius: "sm",
           clearable: !0,
           children: [
-            (0, e.jsxs)(J.uh.Trigger, {
+            (0, e.jsxs)(U.uh.Trigger, {
               children: [
-                !r && (0, e.jsx)(J.uh.Value, { children: n }),
+                !r && (0, e.jsx)(U.uh.Value, { children: n }),
                 r &&
-                  (0, e.jsxs)(J.uh.Value, {
+                  (0, e.jsxs)(U.uh.Value, {
                     children: [
                       n,
                       ": ",
-                      (0, e.jsx)(d.EY, { color: "accent-8", children: pt(v) }),
+                      (0, e.jsx)(d.EY, { color: "accent-8", children: pt(i) }),
                     ],
                   }),
               ],
             }),
-            (0, e.jsx)(J.uh.Options, {
+            (0, e.jsx)(U.uh.Options, {
               children: c.map((t) =>
                 (0, e.jsx)(
-                  J.uh.Option,
+                  U.uh.Option,
                   {
                     value: t,
                     disabled: !r && 0 === t.matches,
@@ -2723,18 +2725,18 @@
       }
       function dt(t) {
         const { rgOptions: c, strLabel: n, value: s = {}, onChange: a } = t,
-          v = (0, l.useMemo)(() => c.filter((t) => ot(t, s)), [c, s]),
-          i = N({
+          i = (0, l.useMemo)(() => c.filter((t) => ot(t, s)), [c, s]),
+          v = G({
             rgOptions: c,
-            selectedValue: v,
-            onSelectionChange: (t) => a(v, t),
+            selectedValue: i,
+            onSelectionChange: (t) => a(i, t),
             filterPlaceholder: at.Localize(
               "#AdvancedSearch_FilterGeneric_Placeholder",
             ),
           }),
-          r = v.length > 0;
+          r = i.length > 0;
         return (0, e.jsxs)(B.Root, {
-          state: i,
+          state: v,
           variant: "highlight",
           radius: "sm",
           clearable: !0,
@@ -2747,13 +2749,13 @@
                     children: [
                       n,
                       ": ",
-                      (0, e.jsx)(d.EY, { color: "accent-8", children: pt(v) }),
+                      (0, e.jsx)(d.EY, { color: "accent-8", children: pt(i) }),
                     ],
                   }),
               ],
             }),
             (0, e.jsx)(B.Options, {
-              children: i.rgFilteredOptions.map((t) =>
+              children: v.rgFilteredOptions.map((t) =>
                 (0, e.jsx)(
                   B.Option,
                   {
@@ -2778,7 +2780,7 @@
           gap: "2",
           align: "center",
           children: [
-            c && (0, e.jsx)(gt, { color: c }),
+            c && (0, e.jsx)(ft, { color: c }),
             (0, e.jsxs)(d.EY, {
               children: [
                 l,
@@ -2797,20 +2799,20 @@
       function pt(t) {
         return t.map((t) => t.strLabel).join(", ");
       }
-      function gt(t) {
+      function ft(t) {
         const { color: c } = t;
-        return (0, e.jsx)(v.az, {
+        return (0, e.jsx)(i.az, {
           width: "6px",
           height: "6px",
           radius: "full",
           style: { backgroundColor: c },
         });
       }
-      function ft(t) {
+      function gt(t) {
         const { rgOptions: c, strLabel: n, value: l = {}, onChange: s } = t,
           a = (t) => `${t.facet}_${t.tag}`,
-          i = c.filter((t) => ot(t, l)).map(a);
-        return (0, e.jsxs)(v.az, {
+          v = c.filter((t) => ot(t, l)).map(a);
+        return (0, e.jsxs)(i.az, {
           marginBottom: "4",
           children: [
             (0, e.jsx)(d.EY, {
@@ -2820,7 +2822,7 @@
             }),
             (0, e.jsx)(Z, {
               marginTop: "2",
-              selected: i,
+              selected: v,
               onItemChange: (t, n) => {
                 const e = c.find((c) => a(c) === t);
                 e && s(e.facet, e.tag, n);
@@ -2870,10 +2872,10 @@
           paddingX: "5",
           paddingY: "4",
           align: "center",
-          className: vt.TagButton,
+          className: it.TagButton,
           ...a,
           children: [
-            n && (0, e.jsx)(n, { className: vt.Icon }),
+            n && (0, e.jsx)(n, { className: it.Icon }),
             (0, e.jsx)(d.EY, {
               weight: "medium",
               contrast: "title",
@@ -2940,7 +2942,7 @@
               .filter((t) => !t.condition || t.condition(l))
               .map((t) =>
                 (0, e.jsx)(
-                  wt,
+                  _t,
                   {
                     active: l.facets[t.facet] && l.facets[t.facet][t.tag],
                     onActiveChange: (c) =>
@@ -2956,7 +2958,7 @@
           ],
         });
       }
-      function wt(t) {
+      function _t(t) {
         const { label: c, active: n, onActiveChange: l } = t;
         return (0, e.jsx)(u.$, {
           color: n ? "accent" : "dull",
@@ -2964,7 +2966,7 @@
           children: c,
         });
       }
-      function _t(t) {
+      function wt(t) {
         return (0, e.jsx)(nt.x, {
           gapY: "2",
           gapX: "2",
@@ -2990,7 +2992,7 @@
         switch (c.fieldType) {
           case "checkbox": {
             const t = (t, c, e) => l(bt(n, t, c, e), !0);
-            return (0, e.jsx)(ft, { ...c, value: n.facets, onChange: t });
+            return (0, e.jsx)(gt, { ...c, value: n.facets, onChange: t });
           }
           case "select": {
             const t = (t = [], c = []) => {
@@ -3031,13 +3033,13 @@
             return (0, e.jsx)(jt, { ...c, onChange: l, state: n });
           default:
             return (
-              (0, g.z_)(c, `Unhandled facet field type: "${c.fieldType}"`), null
+              (0, f.z_)(c, `Unhandled facet field type: "${c.fieldType}"`), null
             );
         }
       }
       function St(t, c, n, e, l) {
-        var s, a, v;
-        let i = [],
+        var s, a, i;
+        let v = [],
           r = 0,
           o = 2;
         const h = {},
@@ -3051,7 +3053,7 @@
                 ? s
                 : 0),
             (r += null != e ? e : 0);
-          const u = zt(t.name, c, d[c], e);
+          const u = Mt(t.name, c, d[c], e);
           if (u)
             if (h[u.strLabel])
               if (n) {
@@ -3063,14 +3065,14 @@
                     void 0 !== u.matches &&
                     (t.matches =
                       (null !== (a = t.matches) && void 0 !== a ? a : 0) +
-                      (null !== (v = u.matches) && void 0 !== v ? v : 0)),
+                      (null !== (i = u.matches) && void 0 !== i ? i : 0)),
                   void 0 === t.color && u.color && (t.color = u.color);
               } else {
                 let t;
                 do {
                   (t = `${u.strLabel} (?${o}?)`), o++;
                 } while (h[t]);
-                (0, g.wT)(
+                (0, f.wT)(
                   !1,
                   "Forced to assign a unique label to option",
                   t,
@@ -3078,14 +3080,14 @@
                   h[u.strLabel],
                 );
                 const c = { ...u, strLabel: t };
-                i.push(c), (h[c.strLabel] = c);
+                v.push(c), (h[c.strLabel] = c);
               }
-            else i.push(u), (h[u.strLabel] = u);
+            else v.push(u), (h[u.strLabel] = u);
         }
-        if (e) i.sort(e);
+        if (e) v.sort(e);
         else {
           if ("select" === c) {
-            i.sort((t, c) => {
+            v.sort((t, c) => {
               var n, e;
               return (
                 (null !== (n = c.matches) && void 0 !== n ? n : 0) -
@@ -3093,25 +3095,25 @@
               );
             });
             let t = -1;
-            for (let c = i.length - 1; c >= 0 && 0 === i[c].matches; c--) t = c;
-            if (-1 === t) i = (0, et.Z)(i, (t) => t.strLabel);
+            for (let c = v.length - 1; c >= 0 && 0 === v[c].matches; c--) t = c;
+            if (-1 === t) v = (0, et.Z)(v, (t) => t.strLabel);
             else {
-              const c = (0, et.Z)(i.slice(0, t), (t) => t.strLabel),
-                n = (0, et.Z)(i.slice(t), (t) => t.strLabel);
-              i = [...c, ...n];
+              const c = (0, et.Z)(v.slice(0, t), (t) => t.strLabel),
+                n = (0, et.Z)(v.slice(t), (t) => t.strLabel);
+              v = [...c, ...n];
             }
-          } else i = (0, et.Z)(i, (t) => t.strLabel);
+          } else v = (0, et.Z)(v, (t) => t.strLabel);
         }
         if (l && 0 === r) return null;
         if (l && l.total === r && 1 === Object.keys(l.counts[t.name]).length)
           return null;
-        return { strLabel: t.localized_name, rgOptions: i, fieldType: c };
+        return { strLabel: t.localized_name, rgOptions: v, fieldType: c };
       }
-      function zt(t, c, n, e) {
+      function Mt(t, c, n, e) {
         const l = { facet: t, tag: c, strLabel: n.localized_name, matches: e };
         return n.color && (l.color = `#${n.color}`), l;
       }
-      var Mt = n(25489),
+      var zt = n(25489),
         kt = n(75);
       Object.assign(
         function (t) {
@@ -3120,17 +3122,17 @@
               onValueChange: n,
               onValueSettled: s,
               min: a,
-              ...v
+              ...i
             } = t,
-            i = [c],
+            v = [c],
             r = (0, l.useCallback)((t) => n(t[0]), [n]),
             o = (0, l.useCallback)((t) => (null == s ? void 0 : s(t[0])), [s]);
           return (0, e.jsxs)(Tt, {
-            ...v,
+            ...i,
             min: a,
             onValueChange: r,
             onValueSettled: o,
-            value: i,
+            value: v,
             children: [
               (0, e.jsx)(Ot, {
                 children: (0, e.jsx)(At, { start: a, end: c }),
@@ -3159,18 +3161,18 @@
         const { children: c, color: n, ...s } = t,
           {
             min: a,
-            max: v,
-            onValueChange: i,
+            max: i,
+            onValueChange: v,
             value: r,
             step: o = 1,
             onValueSettled: h,
           } = t,
           d = (0, l.useRef)(null),
-          u = (0, l.useRef)(-1),
+          u = (0, l.useRef)(null),
           [p] = (0, l.useState)(() => new Set()),
-          [g, f] = (0, l.useState)(!1);
+          [f, g] = (0, l.useState)(!1);
         return (0, e.jsx)(It.Provider, {
-          value: { ...s, handles: p, bDragActive: g },
+          value: { ...s, handles: p, bDragActive: f },
           children: (0, e.jsx)("div", {
             className: kt.SliderRoot,
             "data-accent-color": n,
@@ -3182,41 +3184,58 @@
                   "number" != typeof r)
                 ) {
                   const c = d.current.getBoundingClientRect(),
-                    n = Yt(t.clientX - c.left, [0, c.width], [a, v]);
-                  u.current = Ht(r, n);
-                }
-                f(!0);
+                    n = Yt(t.clientX - c.left, [0, c.width], [a, i]);
+                  u.current = { activeValueIndex: Ht(r, n), bMoved: !1 };
+                } else u.current = { activeValueIndex: 0, bMoved: !1 };
+                g(!0);
               }
             },
             onPointerUp: (t) => {
-              const c = t.target;
-              c.hasPointerCapture(t.pointerId) &&
-                (c.releasePointerCapture(t.pointerId), h && h(r), f(!1));
+              var c;
+              const n = t.target;
+              n.hasPointerCapture(t.pointerId) &&
+                (n.releasePointerCapture(t.pointerId),
+                h &&
+                  (null === (c = u.current) || void 0 === c
+                    ? void 0
+                    : c.bMoved) &&
+                  h(r),
+                g(!1));
             },
             onPointerMove: (t) => {
-              if (t.target.hasPointerCapture(t.pointerId) && d.current) {
+              if (
+                t.target.hasPointerCapture(t.pointerId) &&
+                d.current &&
+                u.current
+              ) {
                 const c = d.current.getBoundingClientRect(),
-                  n = Pt({
-                    value: Yt(t.clientX - c.left, [0, c.width], [a, v]),
+                  n = Et({
+                    value: Yt(t.clientX - c.left, [0, c.width], [a, i]),
                     min: a,
-                    max: v,
+                    max: i,
                     step: o,
                   }),
                   e = [...r];
-                (e[u.current] = n),
+                (e[u.current.activeValueIndex] = n),
                   e.sort((t, c) => t - c),
-                  (u.current = e.indexOf(n)),
-                  i(e);
+                  (u.current.activeValueIndex = e.indexOf(n)),
+                  (u.current.bMoved = !0),
+                  v(e);
               }
             },
             onClick: (t) => {
-              if (!d.current) return;
-              const c = d.current.getBoundingClientRect(),
-                n = Yt(t.clientX - c.left, [0, c.width], [a, v]),
-                e = Pt({ value: n, min: a, max: v, step: o }),
-                l = Ht(r, n),
-                s = [...r];
-              (s[l] = e), i(s);
+              var c;
+              if (
+                !d.current ||
+                (null === (c = u.current) || void 0 === c ? void 0 : c.bMoved)
+              )
+                return;
+              const n = d.current.getBoundingClientRect(),
+                e = Yt(t.clientX - n.left, [0, n.width], [a, i]),
+                l = Et({ value: e, min: a, max: i, step: o }),
+                s = Ht(r, e),
+                p = [...r];
+              (p[s] = l), v(p), h && h(p);
             },
             children: (0, e.jsx)("div", { className: kt.Inner, children: c }),
           }),
@@ -3234,7 +3253,7 @@
       }
       function Ot(t) {
         const { render: c, ...n } = t;
-        return (0, M.Q)(
+        return (0, z.Q)(
           c,
           (0, e.jsx)("div", { className: kt.SliderTrack }),
           n,
@@ -3244,11 +3263,11 @@
       function At(t) {
         const { start: c, end: n, render: s } = t,
           a = (0, l.useContext)(It);
-        (0, g.wT)(a, "SliderRange must be used within a SliderRoot!");
-        const { min: v, max: i } = a,
-          r = Et(c, v, i),
-          o = 100 - Et(n, v, i);
-        return (0, M.Q)(
+        (0, f.wT)(a, "SliderRange must be used within a SliderRoot!");
+        const { min: i, max: v } = a,
+          r = Pt(c, i, v),
+          o = 100 - Pt(n, i, v);
+        return (0, z.Q)(
           s,
           (0, e.jsx)("div", {
             className: kt.SliderRange,
@@ -3261,29 +3280,29 @@
       function Rt(t) {
         const { render: c } = t,
           n = (0, l.useContext)(It);
-        (0, g.wT)(n, "SliderHandle must be used within a SliderRoot!");
+        (0, f.wT)(n, "SliderHandle must be used within a SliderRoot!");
         const {
             min: s,
             max: a,
-            handles: v,
-            value: i,
+            handles: i,
+            value: v,
             step: r = 1,
             onValueChange: o,
             onValueSettled: h,
           } = n,
           [d, u] = (0, l.useState)(null),
-          [p, f] = (0, l.useState)(-1);
+          [p, g] = (0, l.useState)(-1);
         (0, l.useEffect)(
-          () => (d ? (v.add(d), f(v.size - 1), () => v.delete(d)) : () => {}),
-          [d, v],
+          () => (d ? (i.add(d), g(i.size - 1), () => i.delete(d)) : () => {}),
+          [d, i],
         );
         const m = p > -1,
-          x = { "--handle-pct": `${Et(m ? i[p] : s, s, a)}%` };
+          x = { "--handle-pct": `${Pt(m ? v[p] : s, s, a)}%` };
         m || (x.display = "none");
         const C = {
           ref: u,
           role: "slider",
-          "aria-valuenow": i[p],
+          "aria-valuenow": v[p],
           "aria-valuemin": s,
           "aria-valuemax": a,
           tabIndex: 0,
@@ -3295,8 +3314,8 @@
               case "ArrowDown": {
                 const c = "ArrowRight" === t.key || "ArrowUp" === t.key,
                   n = r * (c ? 1 : -1),
-                  e = Pt({ value: i[p] + n, min: s, max: a, step: r }),
-                  l = [...i];
+                  e = Et({ value: v[p] + n, min: s, max: a, step: r }),
+                  l = [...v];
                 (l[p] = e),
                   o(l),
                   h && h(l),
@@ -3308,8 +3327,8 @@
               case "PageDown": {
                 const c = "PageUp" === t.key,
                   n = Math.round((a - s) / 10) * (c ? 1 : -1),
-                  e = Pt({ value: i[p] + n, min: s, max: a, step: r }),
-                  l = [...i];
+                  e = Et({ value: v[p] + n, min: s, max: a, step: r }),
+                  l = [...v];
                 (l[p] = e),
                   o(l),
                   h && h(l),
@@ -3320,30 +3339,30 @@
             }
           },
         };
-        return (0, M.Q)(
+        return (0, z.Q)(
           c,
           (0, e.jsx)("span", { className: kt.SliderHandle, style: x }),
           C,
-          { value: i[p], bDragActive: n.bDragActive },
+          { value: v[p], bDragActive: n.bDragActive },
         );
       }
       function Yt(t, c, n) {
         if (c[0] === c[1] || n[0] === n[1]) return n[0];
         const e = ((n[1] - n[0]) / (c[1] - c[0])) * (t - c[0]) + n[0];
-        return Mt.OQ(e, n[0], n[1]);
+        return zt.OQ(e, n[0], n[1]);
       }
-      function Pt(t) {
+      function Et(t) {
         const { value: c, min: n, max: e, step: l } = t,
-          s = Math.round((c - n) / l);
-        return Mt.OQ(s * l + n, n, e);
+          s = Math.round((c - n) / l) / (1 / l);
+        return zt.OQ(s + n, n, e);
       }
-      function Et(t, c, n) {
+      function Pt(t, c, n) {
         return ((t - c) / (n - c)) * 100;
       }
-      var Gt = n(48906);
-      function Nt(t) {
+      var Nt = n(48906);
+      function Gt(t) {
         const { defaultValue: c = 0, currency: n, ...l } = t;
-        return (0, e.jsx)(Gt.I, {
+        return (0, e.jsx)(Nt.I, {
           valueToString: (t) =>
             (function (t, c) {
               return void 0 === t
@@ -3364,37 +3383,37 @@
                     ? 100 * parseInt(t)
                     : Math.round(100 * parseFloat(t));
             })(t, c, n.bWholeUnitsOnly),
-          checkValidText: (t, c) => !t || (c !== Gt.C && !isNaN(c)),
+          checkValidText: (t, c) => !t || (c !== Nt.C && !isNaN(c)),
           beforeContent: n.bSuffixSymbol ? void 0 : n.strSymbol,
           afterContent: n.bSuffixSymbol ? n.strSymbol : void 0,
           ...l,
         });
       }
       const Bt = "∞";
-      const Ft = (0, l.createContext)(null);
-      function $t(t) {
+      const $t = (0, l.createContext)(null);
+      function Ft(t) {
         const { state: c, onStateChange: n } = t;
-        return (0, e.jsx)(Wt, {
+        return (0, e.jsx)(Dt, {
           price: c.price,
           onPriceChange: (t) => n({ ...c, price: t }, !1),
           onPriceSettled: (t) => n({ ...c, price: t }, !0),
         });
       }
-      function Wt(t) {
+      function Dt(t) {
         const { price: c, onPriceChange: n, onPriceSettled: s } = t,
-          { maxPrice: a, currency: v } = (function () {
-            const t = (0, l.useContext)(Ft);
-            return (0, g.wT)(t, "No filter config provider found!"), t;
+          { maxPrice: a, currency: i } = (function () {
+            const t = (0, l.useContext)($t);
+            return (0, f.wT)(t, "No filter config provider found!"), t;
           })(),
-          [i, o] = (0, l.useState)(!1),
+          [v, o] = (0, l.useState)(!1),
           h = [0, a],
           u = (t) => (e) => {
             const l = [...c];
-            (l[t] = Mt.OQ(e, h[0], h[1])), n(l), s && s(l), o(!0);
+            (l[t] = zt.OQ(e, h[0], h[1])), n(l), s && s(l), o(!0);
           },
           {
             checkMin: p,
-            checkMax: f,
+            checkMax: g,
             props: m,
           } = (function (t) {
             const {
@@ -3403,14 +3422,14 @@
                 onValueSettled: e,
                 max: s,
                 min: a,
-                step: v = 1,
-                ...i
+                step: i = 1,
+                ...v
               } = t,
               r = Math.floor(100 * Zt(s)) / 100,
               o = Math.floor(100 * Zt(a)) / 100,
-              h = Ut(c, Zt),
-              d = (0, l.useCallback)((t) => n(Ut(t, qt)), [n]),
-              u = (0, l.useCallback)((t) => e && e(Ut(t, qt)), [e]);
+              h = Jt(c, Zt),
+              d = (0, l.useCallback)((t) => n(Jt(t, qt)), [n]),
+              u = (0, l.useCallback)((t) => e && e(Jt(t, qt)), [e]);
             return {
               checkMax: (t) => Math.abs(t - s) < 100,
               checkMin: (t) => Math.abs(t - a) < 1,
@@ -3421,7 +3440,7 @@
                 max: r,
                 min: o,
                 step: 0.01,
-                ...i,
+                ...v,
               },
             };
           })({
@@ -3431,18 +3450,18 @@
             onValueChange: (t) => {
               o(!0);
               const [c, e] = t,
-                l = [p(c) ? 0 : c, f(e) ? a : e];
+                l = [p(c) ? 0 : c, g(e) ? a : e];
               n(l);
             },
             onValueSettled: s,
           }),
           x = p(c[0]),
-          C = f(c[1]),
-          V = x && C && !i,
-          j = x && !i ? void 0 : c[0];
-        let w = c[1];
+          C = g(c[1]),
+          V = x && C && !v,
+          j = x && !v ? void 0 : c[0];
+        let _ = c[1];
         return (
-          C && (w = i ? 1 / 0 : void 0),
+          C && (_ = v ? 1 / 0 : void 0),
           a <= 0
             ? null
             : (0, e.jsxs)(r.s, {
@@ -3454,8 +3473,8 @@
                     gap: "2",
                     align: "center",
                     children: [
-                      (0, e.jsx)(Dt, {
-                        currency: v,
+                      (0, e.jsx)(Wt, {
+                        currency: i,
                         value: j,
                         onValueChange: u(0),
                         placeholder: at.Localize(
@@ -3467,9 +3486,9 @@
                         weight: "medium",
                         children: "-",
                       }),
-                      (0, e.jsx)(Dt, {
-                        currency: v,
-                        value: w,
+                      (0, e.jsx)(Wt, {
+                        currency: i,
+                        value: _,
                         onValueChange: u(1),
                         placeholder: at.Localize(
                           "#AdvancedSearch_MaxPricePlaceholder",
@@ -3483,21 +3502,21 @@
               })
         );
       }
-      function Dt(t) {
-        return (0, e.jsx)(v.az, {
+      function Wt(t) {
+        return (0, e.jsx)(i.az, {
           flexGrow: "1",
-          children: (0, e.jsx)(Nt, { variant: "inset-focus", ...t }),
+          children: (0, e.jsx)(Gt, { variant: "inset-focus", ...t }),
         });
       }
-      const Jt = 3;
-      function Ut(t, c) {
+      const Ut = 3;
+      function Jt(t, c) {
         return t.map(c);
       }
       function Zt(t) {
-        return Math.pow(t, 1 / Jt);
+        return Math.pow(t, 1 / Ut);
       }
       function qt(t) {
-        return Math.round(Math.pow(t, Jt));
+        return Math.round(Math.pow(t, Ut));
       }
       const Kt =
           n.p +
@@ -3525,10 +3544,10 @@
         ac =
           n.p +
           "images/applications/community/sg556.png?v=valveisgoodatcaching",
-        vc =
+        ic =
           n.p +
           "images/applications/community/m4a1_silencer.png?v=valveisgoodatcaching",
-        ic =
+        vc =
           n.p +
           "images/applications/community/galilar.png?v=valveisgoodatcaching",
         rc =
@@ -3547,9 +3566,9 @@
         pc =
           n.p +
           "images/applications/community/ump45.png?v=valveisgoodatcaching",
-        gc =
-          n.p + "images/applications/community/mp9.png?v=valveisgoodatcaching",
         fc =
+          n.p + "images/applications/community/mp9.png?v=valveisgoodatcaching",
+        gc =
           n.p +
           "images/applications/community/mp5sd.png?v=valveisgoodatcaching",
         mc =
@@ -3564,10 +3583,10 @@
         jc =
           n.p +
           "images/applications/community/revolver.png?v=valveisgoodatcaching",
-        wc =
+        _c =
           n.p +
           "images/applications/community/deagle.png?v=valveisgoodatcaching",
-        _c =
+        wc =
           n.p +
           "images/applications/community/glock.png?v=valveisgoodatcaching",
         bc =
@@ -3579,10 +3598,10 @@
         Sc =
           n.p +
           "images/applications/community/hkp2000.png?v=valveisgoodatcaching",
-        zc =
+        Mc =
           n.p +
           "images/applications/community/cz75a.png?v=valveisgoodatcaching",
-        Mc =
+        zc =
           n.p +
           "images/applications/community/ssg08.png?v=valveisgoodatcaching",
         kc =
@@ -3608,37 +3627,37 @@
           "images/applications/community/negev.png?v=valveisgoodatcaching",
         Yc =
           n.p + "images/applications/community/m249.png?v=valveisgoodatcaching",
-        Pc =
-          n.p +
-          "images/applications/community/knife_push.png?v=valveisgoodatcaching",
         Ec =
           n.p +
+          "images/applications/community/knife_push.png?v=valveisgoodatcaching",
+        Pc =
+          n.p +
           "images/applications/community/knife_survival_bowie.png?v=valveisgoodatcaching",
-        Gc =
+        Nc =
           n.p +
           "images/applications/community/knife_gypsy_jackknife.png?v=valveisgoodatcaching",
-        Nc =
+        Gc =
           n.p +
           "images/applications/community/knife_falchion.png?v=valveisgoodatcaching",
         Bc =
           n.p +
           "images/applications/community/knife_tactical.png?v=valveisgoodatcaching",
-        Fc =
-          n.p +
-          "images/applications/community/knife_gut.png?v=valveisgoodatcaching",
         $c =
           n.p +
-          "images/applications/community/knife_kukri.png?v=valveisgoodatcaching",
-        Wc =
+          "images/applications/community/knife_gut.png?v=valveisgoodatcaching",
+        Fc =
           n.p +
-          "images/applications/community/knife_canis.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_kukri.png?v=valveisgoodatcaching",
         Dc =
           n.p +
+          "images/applications/community/knife_canis.png?v=valveisgoodatcaching",
+        Wc =
+          n.p +
           "images/applications/community/knife_cord.png?v=valveisgoodatcaching",
-        Jc =
+        Uc =
           n.p +
           "images/applications/community/knife_ursus.png?v=valveisgoodatcaching",
-        Uc =
+        Jc =
           n.p +
           "images/applications/community/knife_flip.png?v=valveisgoodatcaching",
         Zc =
@@ -3673,28 +3692,28 @@
           aug: (0, s.YJ)(lc),
           ak47: (0, s.YJ)(sc),
           sg556: (0, s.YJ)(ac),
-          m4a1_silencer: (0, s.YJ)(vc),
-          galilar: (0, s.YJ)(ic),
+          m4a1_silencer: (0, s.YJ)(ic),
+          galilar: (0, s.YJ)(vc),
           famas: (0, s.YJ)(rc),
           m4a1: (0, s.YJ)(oc),
           bizon: (0, s.YJ)(hc),
           mac10: (0, s.YJ)(dc),
           mp7: (0, s.YJ)(uc),
           ump45: (0, s.YJ)(pc),
-          mp9: (0, s.YJ)(gc),
-          mp5sd: (0, s.YJ)(fc),
+          mp9: (0, s.YJ)(fc),
+          mp5sd: (0, s.YJ)(gc),
           p90: (0, s.YJ)(mc),
           p250: (0, s.YJ)(xc),
           tec9: (0, s.YJ)(Cc),
           fiveseven: (0, s.YJ)(Vc),
           revolver: (0, s.YJ)(jc),
-          deagle: (0, s.YJ)(wc),
-          glock: (0, s.YJ)(_c),
+          deagle: (0, s.YJ)(_c),
+          glock: (0, s.YJ)(wc),
           usp_silencer: (0, s.YJ)(bc),
           elite: (0, s.YJ)(yc),
           hkp2000: (0, s.YJ)(Sc),
-          cz75a: (0, s.YJ)(zc),
-          ssg08: (0, s.YJ)(Mc),
+          cz75a: (0, s.YJ)(Mc),
+          ssg08: (0, s.YJ)(zc),
           scar20: (0, s.YJ)(kc),
           g3sg1: (0, s.YJ)(Lc),
           awp: (0, s.YJ)(Ic),
@@ -3704,17 +3723,17 @@
           xm1014: (0, s.YJ)(Ac),
           negev: (0, s.YJ)(Rc),
           m249: (0, s.YJ)(Yc),
-          knife_push: (0, s.YJ)(Pc),
-          knife_survival_bowie: (0, s.YJ)(Ec),
-          knife_gypsy_jackknife: (0, s.YJ)(Gc),
-          knife_falchion: (0, s.YJ)(Nc),
+          knife_push: (0, s.YJ)(Ec),
+          knife_survival_bowie: (0, s.YJ)(Pc),
+          knife_gypsy_jackknife: (0, s.YJ)(Nc),
+          knife_falchion: (0, s.YJ)(Gc),
           knife_tactical: (0, s.YJ)(Bc),
-          knife_gut: (0, s.YJ)(Fc),
-          knife_kukri: (0, s.YJ)($c),
-          knife_canis: (0, s.YJ)(Wc),
-          knife_cord: (0, s.YJ)(Dc),
-          knife_ursus: (0, s.YJ)(Jc),
-          knife_flip: (0, s.YJ)(Uc),
+          knife_gut: (0, s.YJ)($c),
+          knife_kukri: (0, s.YJ)(Fc),
+          knife_canis: (0, s.YJ)(Dc),
+          knife_cord: (0, s.YJ)(Wc),
+          knife_ursus: (0, s.YJ)(Uc),
+          knife_flip: (0, s.YJ)(Jc),
           knife_outdoor: (0, s.YJ)(Zc),
           knife_css: (0, s.YJ)(qc),
           knife_skeleton: (0, s.YJ)(Kc),
@@ -4567,7 +4586,7 @@
             trigger: { facet: "Type", tag: "CSGO_Type_WeaponCase" },
           },
         ];
-      const gn = {
+      const fn = {
           Exterior: [
             "WearCategory0",
             "WearCategory1",
@@ -4577,7 +4596,7 @@
             "WearCategoryNA",
           ],
         },
-        fn = [
+        gn = [
           {
             items: [
               { facet: "Weapon", exclude: rn },
@@ -4688,31 +4707,31 @@
                   ? 1
                   : s.compare(t.strLabel, c.strLabel),
             );
-            const v = n.rgOptions.find((t) => "Type" === t.facet),
-              i = v ? { facet: v.facet, tag: v.tag } : void 0;
-            a.push({ facet: n, img: l[t.img], toggle: i });
+            const i = n.rgOptions.find((t) => "Type" === t.facet),
+              v = i ? { facet: i.facet, tag: i.tag } : void 0;
+            a.push({ facet: n, img: l[t.img], toggle: v });
           } else {
             const n = c[t.facet],
               l = St(n, "select", !1);
-            (0, g.wT)(
+            (0, f.wT)(
               l.rgOptions.every((t) => "string" == typeof t.tag),
               `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${l.strLabel}" facet.`,
             ),
               a.push({ facet: l, img: "" });
             for (const t of Object.keys(n.tags || {})) e(n.name, t);
           }
-        const v = [];
+        const i = [];
         for (const t of hn) {
           const { facet: n, tag: l } = t;
           e(n, l),
-            v.push({
+            i.push({
               fieldType: "togglebutton",
               facet: n,
               tag: l,
               strLabel: Cn({ facet: n, tag: l }, c),
             });
         }
-        const i = {
+        const v = {
             fieldType: "select",
             rgOptions: [],
             strLabel: at.Localize("#AdvancedSearch_CustomFilter_Other"),
@@ -4723,7 +4742,7 @@
           for (const [c, l] of Object.entries(n.tags || []))
             e.includes(c) ||
               ("Type" === t && "CSGO_Type_Equipment" === c) ||
-              i.rgOptions.push({
+              v.rgOptions.push({
                 strLabel: l.localized_name,
                 facet: t,
                 tag: c,
@@ -4732,7 +4751,7 @@
         }
         return {
           rgGroups: a,
-          rgToggles: v,
+          rgToggles: i,
           rgConditional: pn
             .flatMap((t) => {
               const c = r[t.facet];
@@ -4743,14 +4762,14 @@
               }
               if ("Rarity" === c.name && c.tags) {
                 const t = [];
-                for (const n of fn) {
+                for (const n of gn) {
                   const e = xn(n.items),
                     l = [];
                   for (const t of n.rarities) {
                     const n = c.tags[t];
                     if (!n) continue;
-                    const e = zt(c.name, t, n);
-                    (0, g.wT)(
+                    const e = Mt(c.name, t, n);
+                    (0, f.wT)(
                       "string" == typeof e.tag,
                       `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${c.name}" facet.`,
                     ),
@@ -4768,10 +4787,10 @@
                 return t;
               }
               let n;
-              if (gn[c.name]) {
-                const t = gn[c.name].reduce((t, c, n) => ((t[c] = n), t), {});
+              if (fn[c.name]) {
+                const t = fn[c.name].reduce((t, c, n) => ((t[c] = n), t), {});
                 n = (n, e) => {
-                  (0, g.wT)(
+                  (0, f.wT)(
                     "string" == typeof n.tag && "string" == typeof e.tag,
                     `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${c.name}" facet.`,
                   );
@@ -4791,7 +4810,7 @@
               return { facet: e, condition: xn(t.trigger) };
             })
             .filter((t) => !!t),
-          otherFacet: i,
+          otherFacet: v,
           rgFacetsWithCustomDisplay: Object.keys(n),
         };
       }
@@ -4830,18 +4849,18 @@
       }
       function Vn(t) {
         const { facets: c, minWidth: n, mini: s, ...a } = t,
-          { state: v, onStateChange: i } = a,
+          { state: i, onStateChange: v } = a,
           {
             rgGroups: h,
             rgToggles: d,
             rgConditional: u,
             otherFacet: p,
-            rgFacetsWithCustomDisplay: f,
+            rgFacetsWithCustomDisplay: g,
           } = (0, l.useMemo)(() => mn(t.facets), [t.facets]),
-          [m, x] = (0, l.useState)(() => u.filter((t) => t.condition(v)));
+          [m, x] = (0, l.useState)(() => u.filter((t) => t.condition(i)));
         (0, l.useEffect)(() => {
           let t = null;
-          const c = u.filter((t) => t.condition(v)),
+          const c = u.filter((t) => t.condition(i)),
             n = new Map(),
             e = [];
           for (const t of c) {
@@ -4861,7 +4880,7 @@
                   case "select":
                     return t.rgOptions.map(
                       ({ facet: c, tag: n }) => (
-                        (0, g.wT)(
+                        (0, f.wT)(
                           "string" == typeof n,
                           `Expected CS facets to never duplicate tag labels. Filter UI will not handle properly. See "${t.strLabel}" facet.`,
                         ),
@@ -4875,25 +4894,25 @@
                   case "togglegrid":
                     return t.rgToggles.map(({ facet: t, tag: c }) => [t, c]);
                   default:
-                    return (0, g.z_)(t, "Unhandled facet type"), [];
+                    return (0, f.z_)(t, "Unhandled facet type"), [];
                 }
               })(c);
               for (const [c, e] of n) t[c] || (t[c] = {}), (t[c][e] = !0);
               return t;
             }, {});
           let s = null;
-          for (const c of Object.keys(v.facets))
-            for (const n of Object.keys(v.facets[c]))
+          for (const c of Object.keys(i.facets))
+            for (const n of Object.keys(i.facets[c]))
               s || (s = l()),
                 (s[c] && s[c][n]) ||
-                  (t || (t = { ...v, facets: { ...v.facets } }),
+                  (t || (t = { ...i, facets: { ...i.facets } }),
                   (t = bt(t, c, n, !1)));
-          x(e), t && i(t, !0);
-        }, [u, v, i, h, d, p]);
+          x(e), t && v(t, !0);
+        }, [u, i, v, h, d, p]);
         const C = (t = [], c = []) => {
-            const n = { ...v, facets: { ...v.facets } };
+            const n = { ...i, facets: { ...i.facets } };
             let e = !0;
-            const l = Object.keys(v.facets.Type || {}),
+            const l = Object.keys(i.facets.Type || {}),
               s = c.filter(({ facet: t }) => "Type" === t);
             if (
               ((t.length > 0 && 0 === c.length) ||
@@ -4906,7 +4925,7 @@
                     s.some(({ tag: t }) => !un.includes(t))),
               e)
             )
-              f.forEach((t) => delete n.facets[t]);
+              g.forEach((t) => delete n.facets[t]);
             else
               for (const e of t) {
                 !c.find(
@@ -4919,25 +4938,25 @@
             for (const t of c)
               n.facets[t.facet] || (n.facets[t.facet] = {}),
                 (n.facets[t.facet] = { ...n.facets[t.facet], [t.tag]: !0 });
-            i(n, !0);
+            v(n, !0);
           },
           V = (t, c) => C(t, c),
           j = [
-            ...Object.values(v.facets.Type || {}),
-            ...Object.values(v.facets.Weapon || {}),
-            ...Object.values(v.facets.ItemSet || {}),
+            ...Object.values(i.facets.Type || {}),
+            ...Object.values(i.facets.Weapon || {}),
+            ...Object.values(i.facets.ItemSet || {}),
           ].some((t) => t);
         return (0, e.jsxs)(e.Fragment, {
           children: [
-            (0, e.jsx)(_t, {
+            (0, e.jsx)(wt, {
               minWidth: n,
               children: h.map(({ facet: t, img: c, toggle: n }) =>
                 (0, e.jsx)(
-                  _n,
+                  wn,
                   {
                     ...t,
                     onChange: V,
-                    value: v.facets,
+                    value: i.facets,
                     img: c,
                     toggle: n,
                     hasTypeSelected: j,
@@ -4958,7 +4977,7 @@
                   (0, e.jsx)(
                     jn,
                     {
-                      active: v.facets[t.facet] && v.facets[t.facet][t.tag],
+                      active: i.facets[t.facet] && i.facets[t.facet][t.tag],
                       onActiveChange: (c) => {
                         return (
                           (n = t.facet),
@@ -4971,7 +4990,7 @@
                         var n, e, l;
                       },
                       muted:
-                        j && !(v.facets[t.facet] && v.facets[t.facet][t.tag]),
+                        j && !(i.facets[t.facet] && i.facets[t.facet][t.tag]),
                       title:
                         "CSGO_Type_WeaponCase" === t.tag
                           ? at.Localize("#AdvancedSearch_CSContainers_Tooltip")
@@ -4985,18 +5004,18 @@
                 (0, e.jsx)(yn, {
                   ...p,
                   onChange: V,
-                  value: v.facets,
+                  value: i.facets,
                   hasTypeSelected: j,
                   mini: s,
                 }),
               ],
             }),
             (0, e.jsx)(o.w, { size: "4", color: "dull-9", marginTop: "4" }),
-            (0, e.jsxs)(_t, {
+            (0, e.jsxs)(wt, {
               minHeight: "88px",
               minWidth: n,
               children: [
-                (0, e.jsx)($t, { ...a }),
+                (0, e.jsx)(Ft, { ...a }),
                 (0, e.jsx)(r.s, {
                   gap: "2",
                   direction: "column",
@@ -5016,16 +5035,16 @@
             onActiveChange: l,
             children: s,
             title: a,
-            mini: v,
+            mini: i,
           } = t,
-          i = ct({ bActive: c, onActiveChange: l, title: a });
+          v = ct({ bActive: c, onActiveChange: l, title: a });
         return (0, e.jsx)(r.s, {
           flexGrow: "1",
           background: "dull-8 50%",
           radius: "sm",
-          paddingY: v ? "2" : "5",
+          paddingY: i ? "2" : "5",
           justify: "center",
-          ...i,
+          ...v,
           "data-active": !!c,
           "data-muted": !!n,
           className: an.ToggleButton,
@@ -5037,20 +5056,20 @@
           }),
         });
       }
-      const wn = l.forwardRef(function (t, c) {
+      const _n = l.forwardRef(function (t, c) {
         const {
             img: n,
             active: l,
             children: s,
             muted: a,
-            onToggle: i,
+            onToggle: v,
             onClear: o,
             mini: h,
             ...d
           } = t,
-          u = i
+          u = v
             ? (t) => {
-                t.stopPropagation(), t.preventDefault(), i();
+                t.stopPropagation(), t.preventDefault(), v();
               }
             : void 0;
         let p = (0, e.jsxs)(r.s, {
@@ -5063,17 +5082,17 @@
           className: an.NoToggleTrigger,
           overflow: "hidden",
           children: [
-            (0, e.jsx)(v.az, { flexGrow: "1", minWidth: "0", children: s }),
+            (0, e.jsx)(i.az, { flexGrow: "1", minWidth: "0", children: s }),
             l && o
               ? (0, e.jsx)(r.s, {
                   align: "center",
                   justify: "center",
-                  children: (0, e.jsx)(w.g, { onClick: o }),
+                  children: (0, e.jsx)(_.g, { onClick: o }),
                 })
               : (0, e.jsx)(y.V, {}),
           ],
         });
-        const g = h ? "50px" : "70px";
+        const f = h ? "50px" : "70px";
         return (
           u &&
             (p = (0, e.jsxs)(e.Fragment, {
@@ -5093,7 +5112,7 @@
                   overflow: "hidden",
                   minWidth: "0",
                   children: [
-                    (0, e.jsx)(v.az, {
+                    (0, e.jsx)(i.az, {
                       overflow: "hidden",
                       position: "absolute",
                       inset: "0",
@@ -5110,13 +5129,13 @@
                     n &&
                       (0, e.jsx)(j._, {
                         src: n,
-                        width: g,
-                        height: g,
+                        width: f,
+                        height: f,
                         objectFit: "contain",
                         zIndex: "1",
                         alt: "",
                       }),
-                    (0, e.jsx)(v.az, {
+                    (0, e.jsx)(i.az, {
                       flexGrow: "1",
                       zIndex: "1",
                       overflow: "hidden",
@@ -5150,7 +5169,7 @@
           })
         );
       });
-      function _n(t) {
+      function wn(t) {
         const { toggle: c, onChange: n, ...l } = t,
           s = (t, e) => {
             if (e && c && e.length > 1) {
@@ -5176,8 +5195,8 @@
             strLabel: n,
             value: s = {},
             onChange: a,
-            img: v,
-            toggle: i,
+            img: i,
+            toggle: v,
             hasTypeSelected: o,
             mini: h,
           } = t,
@@ -5185,20 +5204,20 @@
             () => c.filter((t) => s[t.facet] && s[t.facet][t.tag]),
             [c, s],
           );
-        let p = v;
-        const g = u[0];
-        if ((null == g ? void 0 : g.tag) && g.tag.startsWith("weapon_")) {
-          const t = g.tag.slice(7),
+        let p = i;
+        const f = u[0];
+        if ((null == f ? void 0 : f.tag) && f.tag.startsWith("weapon_")) {
+          const t = f.tag.slice(7),
             c = ln();
           t in c && (p = c[t]);
         }
-        const f = (0, J.DL)({
+        const g = (0, U.DL)({
             rgOptions: c,
             selectedValue: u,
             onSelectionChange: (t) => a(u, t),
           }),
           m = u.length > 0,
-          x = i ? () => a(u, m ? [] : [i]) : void 0;
+          x = v ? () => a(u, m ? [] : [v]) : void 0;
         let C = "";
         if (m) {
           const t = u.map((t) => t.strLabel);
@@ -5207,29 +5226,29 @@
               ? new Intl.ListFormat((0, L.ZO)().strISOCode).format(t)
               : t.join(", ");
         }
-        return (0, e.jsxs)(J.uh.Root, {
-          state: f,
+        return (0, e.jsxs)(U.uh.Root, {
+          state: g,
           variant: "highlight",
           radius: "sm",
           clearable: !0,
           children: [
-            (0, e.jsxs)(J.uh.Trigger, {
-              render: (0, e.jsx)(wn, {
+            (0, e.jsxs)(U.uh.Trigger, {
+              render: (0, e.jsx)(_n, {
                 img: p,
                 active: m,
                 muted: o && !m,
                 onToggle: x,
-                onClear: f.onClear,
+                onClear: g.onClear,
                 mini: h,
               }),
               children: [
-                !m && (0, e.jsx)(J.uh.Value, { children: n }),
+                !m && (0, e.jsx)(U.uh.Value, { children: n }),
                 m &&
                   (0, e.jsxs)(r.s, {
                     align: "center",
                     gap: "2",
                     children: [
-                      (0, e.jsxs)(J.uh.Value, {
+                      (0, e.jsxs)(U.uh.Value, {
                         children: [
                           n,
                           ": ",
@@ -5240,21 +5259,21 @@
                         (0, e.jsx)(r.s, {
                           align: "center",
                           justify: "center",
-                          children: (0, e.jsx)(w.g, {}),
+                          children: (0, e.jsx)(_.g, {}),
                         }),
                     ],
                   }),
               ],
             }),
-            (0, e.jsx)(J.uh.Options, {
+            (0, e.jsx)(U.uh.Options, {
               children: c.map((t) =>
                 (0, e.jsx)(
-                  J.uh.Option,
+                  U.uh.Option,
                   {
                     value: t,
                     children: t
-                      ? (0, e.jsx)(Mn, { label: t.strLabel, icon: Sn(t) })
-                      : (0, e.jsx)(zn, {}),
+                      ? (0, e.jsx)(zn, { label: t.strLabel, icon: Sn(t) })
+                      : (0, e.jsx)(Mn, {}),
                   },
                   ((t) => (t ? `${t.facet}_${t.tag}` : "clear"))(t),
                 ),
@@ -5269,8 +5288,8 @@
             strLabel: n,
             value: s = {},
             onChange: a,
-            img: v,
-            toggle: i,
+            img: i,
+            toggle: v,
             hasTypeSelected: o,
             mini: h,
           } = t,
@@ -5278,42 +5297,42 @@
             const t = c.find((t) => s[t.facet] && s[t.facet][t.tag]);
             if (t) return t;
           }, [c, s]);
-        let p = v;
-        const g = u ? [void 0, ...c] : c;
+        let p = i;
+        const f = u ? [void 0, ...c] : c;
         if ((null == u ? void 0 : u.tag) && u.tag.startsWith("weapon_")) {
           const t = u.tag.slice(7),
             c = ln();
           t in c && (p = c[t]);
         }
-        const f = (0, J.WM)({
-            rgOptions: g,
+        const g = (0, U.WM)({
+            rgOptions: f,
             selectedValue: u,
             onSelectionChange: (t) => a(u ? [u] : [], t ? [t] : []),
           }),
-          m = i
+          m = v
             ? () => {
-                a(u ? [u] : [], u ? [] : [i]);
+                a(u ? [u] : [], u ? [] : [v]);
               }
             : void 0;
-        return (0, e.jsxs)(J.l6.Root, {
-          state: f,
+        return (0, e.jsxs)(U.l6.Root, {
+          state: g,
           variant: "highlight",
           radius: "sm",
           clearable: !0,
           children: [
-            (0, e.jsxs)(J.l6.Trigger, {
-              render: (0, e.jsx)(wn, {
+            (0, e.jsxs)(U.l6.Trigger, {
+              render: (0, e.jsx)(_n, {
                 img: p,
                 active: !!u,
                 muted: o && !u,
                 onToggle: m,
-                onClear: () => f.onSelectionChange(void 0),
+                onClear: () => g.onSelectionChange(void 0),
                 mini: h,
               }),
               children: [
-                !u && (0, e.jsx)(J.l6.Value, { children: n }),
+                !u && (0, e.jsx)(U.l6.Value, { children: n }),
                 !!u &&
-                  (0, e.jsxs)(J.l6.Value, {
+                  (0, e.jsxs)(U.l6.Value, {
                     children: [
                       n,
                       ": ",
@@ -5323,22 +5342,22 @@
                           inline: !0,
                           align: "center",
                           gap: "2",
-                          children: [u.strLabel, m && (0, e.jsx)(w.g, {})],
+                          children: [u.strLabel, m && (0, e.jsx)(_.g, {})],
                         }),
                       }),
                     ],
                   }),
               ],
             }),
-            (0, e.jsx)(J.l6.Options, {
-              children: g.map((t) =>
+            (0, e.jsx)(U.l6.Options, {
+              children: f.map((t) =>
                 (0, e.jsx)(
-                  J.l6.Option,
+                  U.l6.Option,
                   {
                     value: t,
                     children: t
-                      ? (0, e.jsx)(Mn, { label: t.strLabel, icon: Sn(t) })
-                      : (0, e.jsx)(zn, {}),
+                      ? (0, e.jsx)(zn, { label: t.strLabel, icon: Sn(t) })
+                      : (0, e.jsx)(Mn, {}),
                   },
                   ((t) => (t ? `${t.facet}_${t.tag}` : "clear"))(t),
                 ),
@@ -5352,17 +5371,17 @@
         const c = t.tag.slice(7);
         return c in sn ? sn[c] : void 0;
       }
-      function zn() {
+      function Mn() {
         return (0, e.jsxs)(r.s, {
           align: "center",
           gap: "1",
           children: [
-            (0, e.jsx)(w.g, {}),
+            (0, e.jsx)(_.g, {}),
             at.Localize("#AdvancedSearch_AppSelect_Clear"),
           ],
         });
       }
-      function Mn(t) {
+      function zn(t) {
         const { label: c, icon: n } = t;
         return (0, e.jsxs)(r.s, {
           align: "center",
@@ -5377,8 +5396,8 @@
             strLabel: n,
             value: s = {},
             onChange: a,
-            img: v,
-            toggle: i,
+            img: i,
+            toggle: v,
             hasTypeSelected: o,
             mini: h,
           } = t,
@@ -5386,21 +5405,21 @@
             () => c.filter((t) => s[t.facet] && s[t.facet][t.tag]),
             [c, s],
           );
-        let p = v;
-        const g = u[0];
-        if ((null == g ? void 0 : g.tag) && g.tag.startsWith("weapon_")) {
-          const t = g.tag.slice(7),
+        let p = i;
+        const f = u[0];
+        if ((null == f ? void 0 : f.tag) && f.tag.startsWith("weapon_")) {
+          const t = f.tag.slice(7),
             c = ln();
           t in c && (p = c[t]);
         }
-        const f = N({
+        const g = G({
             rgOptions: c,
             selectedValue: u,
             onSelectionChange: (t) => a(u, t),
             filterPlaceholder: "Filter...",
           }),
           m = u.length > 0,
-          x = i ? () => a(u, m ? [] : [i]) : void 0;
+          x = v ? () => a(u, m ? [] : [v]) : void 0;
         let C = "";
         if (m) {
           const t = u.map((t) => t.strLabel);
@@ -5410,18 +5429,18 @@
               : t.join(", ");
         }
         return (0, e.jsxs)(B.Root, {
-          state: f,
+          state: g,
           variant: "highlight",
           radius: "sm",
           clearable: !0,
           children: [
             (0, e.jsxs)(B.Trigger, {
-              render: (0, e.jsx)(wn, {
+              render: (0, e.jsx)(_n, {
                 img: p,
                 active: m,
                 muted: o && !m,
                 onToggle: x,
-                onClear: f.onClear,
+                onClear: g.onClear,
                 mini: h,
               }),
               children: [
@@ -5431,7 +5450,7 @@
                     align: "center",
                     gap: "2",
                     children: [
-                      (0, e.jsxs)(J.uh.Value, {
+                      (0, e.jsxs)(U.uh.Value, {
                         children: [
                           n,
                           ": ",
@@ -5442,21 +5461,21 @@
                         (0, e.jsx)(r.s, {
                           align: "center",
                           justify: "center",
-                          children: (0, e.jsx)(w.g, {}),
+                          children: (0, e.jsx)(_.g, {}),
                         }),
                     ],
                   }),
               ],
             }),
             (0, e.jsx)(B.Options, {
-              children: f.rgFilteredOptions.map((t) =>
+              children: g.rgFilteredOptions.map((t) =>
                 (0, e.jsx)(
                   B.Option,
                   {
                     value: t,
                     children: t
-                      ? (0, e.jsx)(Mn, { label: t.strLabel, icon: Sn(t) })
-                      : (0, e.jsx)(zn, {}),
+                      ? (0, e.jsx)(zn, { label: t.strLabel, icon: Sn(t) })
+                      : (0, e.jsx)(Mn, {}),
                   },
                   ((t) => (t ? `${t.facet}_${t.tag}` : "clear"))(t),
                 ),
@@ -5470,7 +5489,7 @@
           e = t.tags && t.tags.tournament,
           l = t.tags && t.tags.normal;
         return (
-          (0, g.wT)(n && e && l, "Could not find expected toggle tags"),
+          (0, f.wT)(n && e && l, "Could not find expected toggle tags"),
           {
             strLabel: t.localized_name,
             fieldType: "togglegrid",
@@ -5520,13 +5539,13 @@
       function Yn(t, c, n) {
         return (0, l.useMemo)(() => {
           if (!c) return [];
-          const e = En[t];
-          return e ? e(c, n) : Gn(c, void 0, n);
+          const e = Pn[t];
+          return e ? e(c, n) : Nn(c, void 0, n);
         }, [c, n, t]);
       }
-      const Pn = 753,
-        En = { [Pn]: (t, c) => Gn(t, 3, c) };
-      function Gn(t, c, n) {
+      const En = 753,
+        Pn = { [En]: (t, c) => Nn(t, 3, c) };
+      function Nn(t, c, n) {
         const e = "number" == typeof c ? c : Rn,
           l = [],
           s = [];
@@ -5534,18 +5553,18 @@
         for (const c of Object.keys(t)) {
           const a = t[c];
           if (!a.tags) continue;
-          const v = Object.keys(a.tags).length < e,
-            i = St(a, v ? "checkbox" : "select", !0, void 0, n);
-          i && (v ? s.push(i) : l.push(i));
+          const i = Object.keys(a.tags).length < e,
+            v = St(a, i ? "checkbox" : "select", !0, void 0, n);
+          v && (i ? s.push(v) : l.push(v));
         }
         return [l, s].filter((t) => t.length > 0);
       }
-      function Nn(t) {
+      function Gn(t) {
         const { facets: c, state: n, onStateChange: l } = t;
         return (0, e.jsx)(e.Fragment, {
           children: c.flatMap((t, s) => [
             (0, e.jsxs)(
-              _t,
+              wt,
               {
                 children: [
                   t.map((t) =>
@@ -5556,7 +5575,7 @@
                     ),
                   ),
                   s === c.length - 1 &&
-                    (0, e.jsx)($t, { state: n, onStateChange: l }),
+                    (0, e.jsx)(Ft, { state: n, onStateChange: l }),
                 ],
               },
               `facets_${s}`,
@@ -5572,9 +5591,9 @@
         });
       }
       const Bn = 753,
-        Fn = `${Bn}_item_class`,
-        $n = `${Bn}_Event`;
-      function Wn(t) {
+        $n = `${Bn}_item_class`,
+        Fn = `${Bn}_Event`;
+      function Dn(t) {
         const {
             facets: c,
             state: n,
@@ -5582,21 +5601,21 @@
             facetingInfo: s,
             ...a
           } = t,
-          i = { ...c },
-          r = i[Fn];
-        delete i[Fn];
-        !n.app || delete i[$n];
-        const o = Yn(Bn, i, s);
-        return (0, e.jsxs)(v.az, {
+          v = { ...c },
+          r = v[$n];
+        delete v[$n];
+        !n.app || delete v[Fn];
+        const o = Yn(Bn, v, s);
+        return (0, e.jsxs)(i.az, {
           ...a,
           children: [
-            r && (0, e.jsx)(Un, { facet: r, state: n, onStateChange: l }),
-            (0, e.jsx)(Nn, { facets: o, state: n, onStateChange: l }),
+            r && (0, e.jsx)(Jn, { facet: r, state: n, onStateChange: l }),
+            (0, e.jsx)(Gn, { facets: o, state: n, onStateChange: l }),
           ],
         });
       }
-      const Dn = ["item_class_10", "item_class_6"],
-        Jn = {
+      const Wn = ["item_class_10", "item_class_6"],
+        Un = {
           item_class_2: function (t) {
             return (0, e.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5678,14 +5697,14 @@
             });
           },
         };
-      function Un(t) {
+      function Jn(t) {
         const {
             facet: { localized_name: c, name: n, tags: l = {} },
             state: s,
             onStateChange: a,
           } = t,
-          v = Object.keys(l).filter((t) => Dn.indexOf(t) < 1),
-          i = s.facets[n] || {};
+          i = Object.keys(l).filter((t) => Wn.indexOf(t) < 1),
+          v = s.facets[n] || {};
         return (0, e.jsxs)(e.Fragment, {
           children: [
             (0, e.jsx)(d.EY, {
@@ -5698,21 +5717,21 @@
               columns: "repeat( auto-fit, minmax( 230px, 1fr ) )",
               gap: "2",
               marginTop: "2",
-              children: v.map((t) =>
+              children: i.map((t) =>
                 (0, e.jsx)(
                   Ct,
                   {
-                    active: i[t],
+                    active: v[t],
                     onActiveChange: (c) =>
                       ((t, c) => {
-                        if (Dn.includes(t)) {
+                        if (Wn.includes(t)) {
                           let t = s;
-                          for (const e of Dn) t = bt(t, n, e, c);
+                          for (const e of Wn) t = bt(t, n, e, c);
                           a(t, !0);
                         } else a(bt(s, n, t, c), !0);
                       })(t, c),
                     label: l[t].localized_name,
-                    icon: Jn[t],
+                    icon: Un[t],
                   },
                   t,
                 ),
@@ -5734,17 +5753,17 @@
             onSearch: u,
             ...p
           } = t,
-          g = c.bSteamItems,
-          f = (0, Tn.LT)("sm"),
-          m = g ? p.rgAppData && p.rgAppData[ie] : c.filterInGame.app,
+          f = c.bSteamItems,
+          g = (0, Tn.LT)("sm"),
+          m = f ? p.rgAppData && p.rgAppData[ve] : c.filterInGame.app,
           x = Qn(m);
         return (0, e.jsx)(In.u.Provider, {
           value: !!a,
-          children: (0, e.jsx)(Ft.Provider, {
+          children: (0, e.jsx)($t.Provider, {
             value: l,
             children: (0, e.jsx)(Kn.Provider, {
               value: s,
-              children: (0, e.jsx)(v.az, {
+              children: (0, e.jsx)(i.az, {
                 minWidth: { initial: void 0, sm: "min( 75vw, 800px )" },
                 children: (0, e.jsxs)("form", {
                   onSubmit: (t) => {
@@ -5752,7 +5771,7 @@
                   },
                   children: [
                     !l.bNewMarket &&
-                      (0, e.jsx)(i.D, {
+                      (0, e.jsx)(v.D, {
                         size: "7",
                         weight: "heavy",
                         children: at.Localize("#AdvancedSearch_Heading"),
@@ -5763,16 +5782,16 @@
                       marginY: qn,
                       direction: { initial: "column", sm: "row" },
                       children: [
-                        (0, e.jsx)(v.az, {
+                        (0, e.jsx)(i.az, {
                           flexGrow: "0",
                           children: (0, e.jsx)(An, {
-                            showSteamItems: g,
+                            showSteamItems: f,
                             onShowSteamItemsChange: (t) =>
                               n({ ...c, bSteamItems: t }),
                           }),
                         }),
-                        f &&
-                          (0, e.jsx)(v.az, {
+                        g &&
+                          (0, e.jsx)(i.az, {
                             style: { marginTop: "10px" },
                             children: (0, e.jsx)(o.w, {
                               size: "1",
@@ -5812,14 +5831,14 @@
                     }),
                     (0, e.jsxs)(de, {
                       children: [
-                        !g &&
-                          (0, e.jsx)(ve, {
+                        !f &&
+                          (0, e.jsx)(ie, {
                             ...p,
                             filter: c.filterInGame,
                             onFilterChange: (t) => n({ ...c, filterInGame: t }),
                             suggestedInitialApp: c.filterSteam.app,
                           }),
-                        g &&
+                        f &&
                           (0, e.jsx)(oe, {
                             ...p,
                             filter: c.filterSteam,
@@ -5845,33 +5864,33 @@
         return !!t;
       }
       function te(t) {
-        const { filter: c, onFilterChange: n, config: a, onSearch: v } = t,
-          i = c.bSteamItems,
+        const { filter: c, onFilterChange: n, config: a, onSearch: i } = t,
+          v = c.bSteamItems,
           [o, h] = (0, l.useState)(!1),
-          d = i ? c.filterSteam : c.filterInGame,
+          d = v ? c.filterSteam : c.filterInGame,
           p =
             0 !== d.price[0] ||
             d.price[1] !== a.maxPrice ||
             Object.keys(d.facets).length > 0,
-          g =
+          f =
             !c.strSearch &&
             !d.app &&
             !Object.keys(d.facets).length &&
             0 === d.price[0] &&
             d.price[1] === a.maxPrice,
-          f = (0, Tn.LT)("sm"),
+          g = (0, Tn.LT)("sm"),
           m = (0, e.jsx)(u.$, {
             type: "submit",
             onClick: () => {
-              h(!0), v(c, a);
+              h(!0), i(c, a);
             },
-            disabled: o || g,
+            disabled: o || f,
             children: at.Localize("#AdvancedSearch_Search"),
           });
         return (0, e.jsxs)(r.s, {
-          justify: f ? "between" : void 0,
+          justify: g ? "between" : void 0,
           marginTop: qn,
-          direction: f ? "row" : "column",
+          direction: g ? "row" : "column",
           gap: "2",
           children: [
             a.bNewMarket
@@ -5882,22 +5901,22 @@
                   justify: "between",
                   children: (0, e.jsx)("a", {
                     href: `${s.TS.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
-                    className: vt.BetaLink,
+                    className: it.BetaLink,
                     children: at.Localize("#AdvancedSearch_BetaTag"),
                   }),
                 }),
-            f &&
+            g &&
               (0, e.jsxs)(r.s, {
                 gap: qn,
                 justify: "end",
                 children: [
-                  f &&
+                  g &&
                     (0, e.jsx)(u.$, {
                       color: "dull",
                       variant: "ghost",
                       onClick: () => {
                         n(
-                          i
+                          v
                             ? {
                                 ...c,
                                 strSearch: "",
@@ -5924,18 +5943,18 @@
                   m,
                 ],
               }),
-            !f && m,
+            !g && m,
           ],
         });
       }
       function ce(t) {
         const { value: c, onTextChange: n, app: s } = t,
-          [a, v] = (0, l.useState)(!0);
+          [a, i] = (0, l.useState)(!0);
         return (0, e.jsx)(ne, {
           radius: "full",
           variant: "inset",
           app: a ? s : void 0,
-          onClearApp: () => v(!1),
+          onClearApp: () => i(!1),
           value: c,
           onTextChange: n,
         });
@@ -5944,16 +5963,16 @@
         var c, n;
         const {
             value: s,
-            onTextChange: v,
-            app: i,
+            onTextChange: i,
+            app: v,
             onClearApp: o,
             popoverWidth: h,
             ...d
           } = t,
           u = (0, In.b)(),
-          p = null == i ? void 0 : i.appid,
-          g = !!s && s.length > 2,
-          f = (0, a.I)({
+          p = null == v ? void 0 : v.appid,
+          f = !!s && s.length > 2,
+          g = (0, a.I)({
             queryKey: ["market_search_suggestions", s, p],
             queryFn: async () => {
               const t = await fetch(
@@ -5962,15 +5981,15 @@
               return await t.json();
             },
             placeholderData: (t) => t,
-            enabled: g,
+            enabled: f,
             staleTime: u ? 0 : 1 / 0,
           }),
-          C = (null === (c = f.data) || void 0 === c ? void 0 : c.apps) || [],
+          C = (null === (c = g.data) || void 0 === c ? void 0 : c.apps) || [],
           V = (
-            (null === (n = f.data) || void 0 === n ? void 0 : n.results) || []
+            (null === (n = g.data) || void 0 === n ? void 0 : n.results) || []
           ).slice(0, 10),
-          _ = m({
-            onTextChange: v,
+          w = m({
+            onTextChange: i,
             suggestions: C.map((t) => `app|${t.appid}`).concat(
               V.map((t) => `item|${t.market_hash_name}`),
             ),
@@ -5997,15 +6016,15 @@
             },
           }),
           [b, y] = (0, l.useState)(!1),
-          [S, z] = (0, l.useState)(!1),
-          M = b || !S,
+          [S, M] = (0, l.useState)(!1),
+          z = b || !S,
           k = (0, Zn.wY)(
             (0, l.useCallback)((t) => {
               const c = t.contentRect.width < 300;
               y(c);
             }, []),
           ),
-          L = i
+          L = v
             ? (0, e.jsxs)(r.s, {
                 cursor: "pointer",
                 radius: d.radius || "sm",
@@ -6021,23 +6040,23 @@
                   (0, e.jsx)(j._, {
                     height: "20px",
                     objectFit: "contain",
-                    src: i.icon,
+                    src: v.icon,
                     alt: "",
                   }),
-                  (0, e.jsx)(ee, { visible: !M, children: i.name }),
-                  (0, e.jsx)(w.g, {}),
+                  (0, e.jsx)(ee, { visible: !z, children: v.name }),
+                  (0, e.jsx)(_.g, {}),
                 ],
               })
             : null,
           I =
-            i && !M
+            v && !z
               ? at.Localize(
                   "#AdvancedSearch_TextSearch_PlaceholderWithApp",
-                  i.name,
+                  v.name,
                 )
               : at.Localize("#AdvancedSearch_TextSearch_Placeholder");
         return (0, e.jsxs)(x.Root, {
-          state: _,
+          state: w,
           popoverWidth: h,
           children: [
             (0, e.jsx)(x.TextInput, {
@@ -6047,14 +6066,14 @@
               title: at.Localize("#AdvancedSearch_TextSearch_Tooltip"),
               beforeContent: L,
               ref: k,
-              onFocus: () => z(!0),
-              onBlur: () => z(!1),
+              onFocus: () => M(!0),
+              onBlur: () => M(!1),
               clearable: !0,
             }),
             (0, e.jsxs)(x.Suggestions, {
               children: [
-                g && C.map((t) => (0, e.jsx)(se, { ...t }, t.appid)),
-                g &&
+                f && C.map((t) => (0, e.jsx)(se, { ...t }, t.appid)),
+                f &&
                   V.map((t, c) =>
                     (0, e.jsx)(
                       le,
@@ -6076,8 +6095,8 @@
       }
       function ee(t) {
         const { visible: c, children: n } = t;
-        return (0, e.jsx)(v.az, {
-          className: vt.Collapse,
+        return (0, e.jsx)(i.az, {
+          className: it.Collapse,
           "data-visible": !!c,
           children: (0, e.jsx)(d.EY, { truncate: !0, children: n }),
         });
@@ -6089,13 +6108,13 @@
             img: l,
             appName: s,
             searchScore: a,
-            appid: v,
+            appid: i,
           } = t,
-          i = (0, In.b)();
+          v = (0, In.b)();
         return (0, e.jsxs)(x.Suggestion, {
           value: `item|${n}`,
           render: (t, c) =>
-            (0, e.jsx)(ae, { focused: c.focused, link: Hn.N.Item(v, n), ...t }),
+            (0, e.jsx)(ae, { focused: c.focused, link: Hn.N.Item(i, n), ...t }),
           children: [
             (0, e.jsx)("img", {
               style: {
@@ -6123,7 +6142,7 @@
                 (0, e.jsx)(d.EY, { size: "1", truncate: !0, children: s }),
               ],
             }),
-            i &&
+            v &&
               (0, e.jsx)(e.Fragment, {
                 children:
                   a > 0 ? (0, e.jsx)(d.EY, { size: "1", children: a }) : null,
@@ -6172,11 +6191,11 @@
         const { focused: c, link: n, ...l } = t;
         return (0, e.jsx)("a", {
           href: n,
-          className: vt.UndecoratedLink,
+          className: it.UndecoratedLink,
           children: (0, e.jsx)(r.s, {
             align: "center",
             gap: "2",
-            className: vt.SearchSuggestion,
+            className: it.SearchSuggestion,
             radius: "sm",
             margin: "2",
             "data-focused": c,
@@ -6185,23 +6204,23 @@
           }),
         });
       }
-      function ve(t) {
+      function ie(t) {
         var c;
         const {
             rgApps: n = [],
             rgAppData: s = {},
             filter: a,
-            onFilterChange: v,
-            suggestedInitialApp: i,
+            onFilterChange: i,
+            suggestedInitialApp: v,
           } = t,
           [r, o] = (0, l.useState)(!1);
         (0, l.useEffect)(() => {
-          r || (o(!0), i && s[i.appid] && v({ ...a, app: s[i.appid] }));
-        }, [v, a, i, s, r]);
+          r || (o(!0), v && s[v.appid] && i({ ...a, app: s[v.appid] }));
+        }, [i, a, v, s, r]);
         const h = !a.app && r,
           d = Ce(h),
           u = (0, l.useMemo)(
-            () => n.filter((t) => t !== ie && s[t]).map((t) => s[t]),
+            () => n.filter((t) => t !== ve && s[t]).map((t) => s[t]),
             [n, s],
           );
         return (0, e.jsxs)(e.Fragment, {
@@ -6209,7 +6228,7 @@
             (0, e.jsx)(Ve, {
               apps: u,
               selectedApp: a.app,
-              onSelectionChange: (t) => v({ ...a, app: t, facets: {} }),
+              onSelectionChange: (t) => i({ ...a, app: t, facets: {} }),
             }),
             h &&
               (0, e.jsx)(he, {
@@ -6217,31 +6236,31 @@
                 apps:
                   null === (c = d.data) || void 0 === c ? void 0 : c.rgInGame,
                 filterBy: n,
-                onSelect: (t) => v({ ...a, app: s[t] || null, facets: {} }),
+                onSelect: (t) => i({ ...a, app: s[t] || null, facets: {} }),
               }),
             !!a.app &&
-              (0, e.jsx)(fe, {
+              (0, e.jsx)(ge, {
                 appid: a.app.appid,
                 state: a,
-                onStateChange: v,
+                onStateChange: i,
               }),
           ],
         });
       }
-      const ie = 753,
-        re = `${ie}_Game`;
+      const ve = 753,
+        re = `${ve}_Game`;
       function oe(t) {
-        var c, n, v;
-        const { filter: i, onFilterChange: r, suggestedInitialApp: o } = t,
+        var c, n, i;
+        const { filter: v, onFilterChange: r, suggestedInitialApp: o } = t,
           [h, u] = (0, l.useState)(!1),
-          p = !i.app && h,
-          g = Ce(p),
-          f = (0, a.I)(
+          p = !v.app && h,
+          f = Ce(p),
+          g = (0, a.I)(
             ((m = xe),
             {
-              queryKey: ["marketfilters", ie],
+              queryKey: ["marketfilters", ve],
               queryFn: async () => {
-                const t = await m(ie);
+                const t = await m(ve);
                 if (!t)
                   throw new Error(
                     "Failed to load market facets for Steam Inventory items",
@@ -6271,65 +6290,65 @@
             }),
           );
         var m;
-        const { facets: x = {}, rgApps: C, mapAppIDs: V } = f.data || {},
-          j = !i.facets.Event || 0 === Object.keys(i.facets).length;
+        const { facets: x = {}, rgApps: C, mapAppIDs: V } = g.data || {},
+          j = !v.facets.Event || 0 === Object.keys(v.facets).length;
         if (
           ((0, l.useEffect)(() => {
-            !h && V && (u(!0), o && V[o.appid] && r({ ...i, app: o }));
-          }, [h, o, V, r, i]),
-          f.isLoading)
+            !h && V && (u(!0), o && V[o.appid] && r({ ...v, app: o }));
+          }, [h, o, V, r, v]),
+          g.isLoading)
         )
           return (0, e.jsx)(be, {});
-        if (f.isError || !f.data || !C || !x)
-          return (0, e.jsx)(ge, {
+        if (g.isError || !g.data || !C || !x)
+          return (0, e.jsx)(fe, {
             children: (0, e.jsx)(d.EY, {
               size: "4",
               children: at.Localize("#AdvancedSearch_FacetLoadError"),
             }),
           });
-        const w = (
-          null === (c = g.data) || void 0 === c
+        const _ = (
+          null === (c = f.data) || void 0 === c
             ? void 0
             : c.rgPlaytime.length
         )
-          ? null === (n = g.data) || void 0 === n
+          ? null === (n = f.data) || void 0 === n
             ? void 0
             : n.rgPlaytime
-          : null === (v = g.data) || void 0 === v
+          : null === (i = f.data) || void 0 === i
             ? void 0
-            : v.rgInGame;
+            : i.rgInGame;
         return (0, e.jsxs)(e.Fragment, {
           children: [
             j &&
               (0, e.jsx)(Ve, {
                 apps: C,
-                selectedApp: i.app,
-                onSelectionChange: (t) => r({ ...i, app: t, facets: {} }),
+                selectedApp: v.app,
+                onSelectionChange: (t) => r({ ...v, app: t, facets: {} }),
               }),
             j &&
               p &&
               (0, e.jsx)(he, {
-                loading: g.isLoading,
-                apps: w,
+                loading: f.isLoading,
+                apps: _,
                 filterBy: V,
                 onSelect: (t) =>
                   r({
-                    ...i,
+                    ...v,
                     app: C.find((c) => c.appid === t) || null,
                     facets: {},
                   }),
               }),
-            (0, e.jsx)(Wn, {
+            (0, e.jsx)(Dn, {
               marginTop: "3",
               facets: x,
-              state: i,
+              state: v,
               onStateChange: r,
             }),
           ],
         });
       }
       function he(t) {
-        const { apps: c = [], filterBy: n = {}, onSelect: a, loading: i } = t,
+        const { apps: c = [], filterBy: n = {}, onSelect: a, loading: v } = t,
           o = !(0, Tn.LT)("sm"),
           h = (0, l.useMemo)(
             () =>
@@ -6340,15 +6359,15 @@
           ),
           u = c.filter(({ appid: t }) => h[t]).slice(0, 8);
         let p = [];
-        if (i)
+        if (v)
           for (let t = 0; t < 20; t++)
-            p.push((0, e.jsx)(_.O, { width: "92px", height: "138px" }, t));
-        const g = s.iA.logged_in,
-          [f, m] = (0, l.useState)(null),
+            p.push((0, e.jsx)(w.O, { width: "92px", height: "138px" }, t));
+        const f = s.iA.logged_in,
+          [g, m] = (0, l.useState)(null),
           x = (0, Zn.wY)(m);
         let C = u;
         if (!o) {
-          const t = f ? Math.floor((f.contentRect.width - 10) / 104) : 0;
+          const t = g ? Math.floor((g.contentRect.width - 10) / 104) : 0;
           (C = C.slice(0, t)), (p = p.slice(0, t));
         }
         return (0, e.jsxs)(r.s, {
@@ -6360,18 +6379,18 @@
               weight: "medium",
               size: "3",
               contrast: "title",
-              children: g
+              children: f
                 ? at.Localize("#AdvancedSearch_AppSelect_YourGames")
                 : at.Localize("#AdvancedSearch_AppSelect_PopularGames"),
             }),
             (0, e.jsxs)("div", {
-              className: (0, k.A)(vt.TruncatingPortraitRow, o && vt.Compact),
+              className: (0, k.A)(it.TruncatingPortraitRow, o && it.Compact),
               ref: x,
               children: [
-                !i &&
+                !v &&
                   C.map((t) =>
                     (0, e.jsx)(
-                      v.az,
+                      i.az,
                       {
                         onClick: () => a(t.appid),
                         tabIndex: 0,
@@ -6397,7 +6416,7 @@
                       t.appid,
                     ),
                   ),
-                i && p,
+                v && p,
               ],
             }),
           ],
@@ -6439,11 +6458,11 @@
         } = t;
         "number" == typeof l &&
           a[l] &&
-          (l === ie
+          (l === ve
             ? ((c.bSteamItems = !0), (n = c.filterSteam))
             : (n.app = a[l])),
           "string" == typeof e && (c.strSearch = e);
-        const v = (function (t) {
+        const i = (function (t) {
           if (!t || "object" != typeof t) return null;
           const c = {};
           for (const n of Object.keys(t)) {
@@ -6460,7 +6479,7 @@
           return c;
         })(s);
         if (
-          (v && (n.facets = v),
+          (i && (n.facets = i),
           "number" == typeof t.unFilterMinPrice &&
             t.unFilterMinPrice > 0 &&
             (n.price[0] = t.unFilterMinPrice),
@@ -6491,30 +6510,30 @@
             filterInGame: s,
             filterSteam: a,
           } = t,
-          v = l
+          i = l
             ? (function (t) {
                 let c = { ...t, facets: { ...t.facets } };
                 return (
                   t.app && (c.facets.Game = { [`app_${t.app.appid}`]: !0 }),
-                  (c.app = { appid: ie, name: "", icon: "" }),
+                  (c.app = { appid: ve, name: "", icon: "" }),
                   c
                 );
               })(a)
             : s,
           {
-            app: i,
+            app: v,
             facets: r,
             accessories: o,
             price: [h, d],
-          } = v,
+          } = i,
           u = new FormData();
-        i && u.set("appid", i.appid.toString()),
+        v && u.set("appid", v.appid.toString()),
           n && u.set("q", n),
-          n && e && Qn(v.app) && u.set("descriptions", "1");
+          n && e && Qn(i.app) && u.set("descriptions", "1");
         for (const t of Object.keys(r))
           if (r[t])
             for (const c of Object.keys(r[t]))
-              r[t][c] && u.append(`category_${i.appid}_${t}[]`, `tag_${c}`);
+              r[t][c] && u.append(`category_${v.appid}_${t}[]`, `tag_${c}`);
         for (const t of Object.keys(o))
           if (o[t])
             for (const c of Object.keys(o[t]))
@@ -6525,7 +6544,7 @@
           Hn.N.Search({ search: new URLSearchParams(u) })
         );
       }
-      function ge(t) {
+      function fe(t) {
         return (0, e.jsx)(r.s, {
           flexGrow: "1",
           radius: "sm",
@@ -6533,7 +6552,7 @@
           align: "center",
           justify: "center",
           marginTop: "2",
-          className: vt.NoFilters,
+          className: it.NoFilters,
           children: (0, e.jsx)(d.EY, {
             align: "center",
             as: "div",
@@ -6542,7 +6561,7 @@
           }),
         });
       }
-      function fe(t) {
+      function ge(t) {
         const { appid: c, ...n } = t,
           l = (function (t) {
             return (0, a.I)({
@@ -6553,27 +6572,27 @@
           })(c);
         if (l.isLoading) return (0, e.jsx)(be, {});
         if (l.isError || !l.data)
-          return (0, e.jsx)(ge, {
+          return (0, e.jsx)(fe, {
             children: (0, e.jsx)(d.EY, {
               size: "4",
               children: at.Localize("#AdvancedSearch_FacetLoadError"),
             }),
           });
-        const v = (function (t) {
+        const i = (function (t) {
           return (function (t) {
             return s.TS.EUNIVERSE === vn.Rv ? 710 === t : 730 === t;
           })(t) && s.TS.EUNIVERSE === vn.wLO
             ? Vn
             : me;
         })(c);
-        return (0, e.jsx)(v, { appid: c, facets: l.data, ...n });
+        return (0, e.jsx)(i, { appid: c, facets: l.data, ...n });
       }
       function me(t) {
         const { appid: c, facets: n, ...l } = t,
           s = Yn(c, n);
         return 0 === s.length
           ? (0, e.jsx)(e.Fragment, {
-              children: (0, e.jsxs)(ge, {
+              children: (0, e.jsxs)(fe, {
                 children: [
                   (0, e.jsx)(d.EY, {
                     align: "center",
@@ -6593,7 +6612,7 @@
                 ],
               }),
             })
-          : (0, e.jsx)(Nn, { facets: s, ...l });
+          : (0, e.jsx)(Gn, { facets: s, ...l });
       }
       async function xe(t) {
         const c = await fetch(
@@ -6631,7 +6650,7 @@
             size: s = "3",
             clearable: a = !0,
           } = t,
-          v = R({
+          i = R({
             rgOptions: n,
             selectedValue: c || null,
             onSelectionChange: l,
@@ -6641,18 +6660,18 @@
               "#AdvancedSearch_AppSelect_FilterPlaceholder",
             ),
           });
-        return (0, e.jsxs)(G.Root, {
-          state: v,
+        return (0, e.jsxs)(N.Root, {
+          state: i,
           size: s,
           radius: "sm",
           marginBottom: "2",
           clearable: a,
           children: [
-            (0, e.jsxs)(G.Trigger, {
+            (0, e.jsxs)(N.Trigger, {
               children: [
                 c && (0, e.jsx)(je, { app: c, size: s }),
                 !c &&
-                  (0, e.jsx)(G.Placeholder, {
+                  (0, e.jsx)(N.Placeholder, {
                     weight: "medium",
                     contrast: "title",
                     children: at.Localize(
@@ -6661,12 +6680,12 @@
                   }),
               ],
             }),
-            (0, e.jsx)(G.VirtualizedOptions, {
+            (0, e.jsx)(N.VirtualizedOptions, {
               estimateSize: () => 48,
-              items: v.rgFilteredOptions,
+              items: i.rgFilteredOptions,
               renderItem: (t, n) =>
                 (0, e.jsx)(
-                  G.VirtualizedOption,
+                  N.VirtualizedOption,
                   {
                     value: t,
                     virtualItem: n,
@@ -6692,7 +6711,7 @@
           align: "center",
           gap: "2",
           children: [
-            c && (0, e.jsx)(_e, { icon: c, size: s }),
+            c && (0, e.jsx)(we, { icon: c, size: s }),
             (0, e.jsx)(d.EY, {
               color: l ? "accent-8" : void 0,
               contrast: l ? void 0 : "title",
@@ -6701,10 +6720,10 @@
           ],
         });
       }
-      const we = {};
-      function _e(t) {
+      const _e = {};
+      function we(t) {
         const { icon: c, size: n } = t,
-          [s, a] = (0, l.useState)(!!we[c]);
+          [s, a] = (0, l.useState)(!!_e[c]);
         (0, l.useEffect)(() => {
           let t = !0;
           return (
@@ -6716,23 +6735,23 @@
             }
           );
         }, []),
-          s && (we[c] = !0);
-        const i = (0, W.n)(n),
-          r = `var(--spacing-${parseInt(i) + 3})`;
+          s && (_e[c] = !0);
+        const v = (0, D.n)(n),
+          r = `var(--spacing-${parseInt(v) + 3})`;
         return s
           ? (0, e.jsx)("img", {
               src: c,
               style: { width: r, height: r, visibility: s ? void 0 : "hidden" },
               alt: "",
             })
-          : (0, e.jsx)(v.az, { width: r, height: r, background: "dull-10" });
+          : (0, e.jsx)(i.az, { width: r, height: r, background: "dull-10" });
       }
       function be() {
         return (0, e.jsx)(r.s, {
           justify: "center",
           align: "center",
           marginTop: "6",
-          children: (0, e.jsx)(D.k, { size: "4" }),
+          children: (0, e.jsx)(W.k, { size: "4" }),
         });
       }
     },
@@ -6799,26 +6818,95 @@
           return c;
         });
       }
-      n.d(c, { V: () => v });
+      n.d(c, { V: () => i });
       var s = n(90626);
       n(7850);
       const a = (0, s.createContext)({ instances: {}, factories: {} });
-      function v(t, c) {
+      function i(t, c) {
         var n;
         const e = (0, s.useContext)(a),
-          v = "string" == typeof t ? t : l(...t);
-        let i = e;
-        for (; i; ) {
-          if (v in i.instances) return i.instances[v];
-          if (v in i.factories) break;
-          i = i.parent;
+          i = "string" == typeof t ? t : l(...t);
+        let v = e;
+        for (; v; ) {
+          if (i in v.instances) return v.instances[i];
+          if (i in v.factories) break;
+          v = v.parent;
         }
         const r = (
-          null !== (n = null == i ? void 0 : i.factories[v]) && void 0 !== n
+          null !== (n = null == v ? void 0 : v.factories[i]) && void 0 !== n
             ? n
             : c
         )();
-        return ((null != i ? i : e).instances[v] = r), r;
+        return ((null != v ? v : e).instances[i] = r), r;
+      }
+    },
+    42834: (t, c, n) => {
+      "use strict";
+      n.d(c, { DT: () => r, b0: () => i, bu: () => v, pd: () => o });
+      var e = n(8527),
+        l = n(39777),
+        s = n(81393),
+        a = n(38535);
+      function i(t, c) {
+        if (t[c]) {
+          if ("community_icon" == c) {
+            const n = t.asset_url_format
+              .replace(/^steam\//, "images/")
+              .replace("${FILENAME}", `${t[c]}.jpg`)
+              .replace(/\?.*$/, "");
+            return `${e.TS.MEDIA_CDN_COMMUNITY_URL}${n}`;
+          }
+          {
+            const n = t.asset_url_format.replace("${FILENAME}", t[c]);
+            return `${e.TS.STORE_ITEM_BASE_URL}${n}`;
+          }
+        }
+      }
+      function v(t, c = "full") {
+        let n = "";
+        switch (c) {
+          case "thumb":
+            n = ".116x65";
+            break;
+          case "600x338":
+            n = ".600x338";
+            break;
+          case "1920x1080":
+            n = ".1920x1080";
+            break;
+          case "full":
+            n = "";
+            break;
+          default:
+            (0, s.z_)(c, `Invalid size: ${c}`);
+        }
+        return (
+          e.TS.STORE_ITEM_BASE_URL +
+          t.filename.replace(/\.([^.]+)(\?.*)?$/, `${n}.$1$2`)
+        );
+      }
+      function r(t) {
+        const { data: c } = (0, l.j4)(t),
+          n = (0, a.dy)();
+        if (c)
+          return [
+            ...(c.all_ages_screenshots || []),
+            ...(!n && c.mature_content_screenshots
+              ? c.mature_content_screenshots
+              : []),
+          ].sort((t, c) => t.ordinal - c.ordinal);
+      }
+      function o(t, c = !1) {
+        const { data: n } = (0, l.lv)({ appid: t });
+        return void 0 === n
+          ? void 0
+          : null === n
+            ? null
+            : c && n.library_capsule_2x
+              ? i(n, "library_capsule_2x")
+              : n.library_capsule
+                ? i(n, "library_capsule")
+                : `${e.TS.STORE_ITEM_BASE_URL}steam/apps/${t}/portrait.png`;
       }
     },
   },

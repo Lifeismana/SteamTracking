@@ -2493,10 +2493,11 @@ CGameSelector = Class.create( {
 		{
 			// build them
 			this.elSuggestions = new Element( 'div', {'class': 'shadow_content popup_body popup_menu' } );
-			this.elSuggestionsCtn = new Element( 'div', {'class': 'popup_block', style: 'display: none; z-index: 1200;' } );
+			this.elSuggestionsCtn = new Element( 'div', {'class': 'popup_block', style: 'display: none; z-index: 1200; position: fixed; padding: 0; margin: 0; background: transparent; border: none' } );
+			this.elSuggestionsCtn.popover = 'manual';
 			this.elSuggestionsCtn.update( '<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>' );
 			this.elSuggestionsCtn.insert( {bottom: this.elSuggestions } );
-			$(document.body).appendChild( this.elSuggestionsCtn );
+			elInput.parentElement.appendChild( this.elSuggestionsCtn );
 		}
 
 		this.fnOnClick = function( Selector, rgAppData ) { Selector.HideSuggestions(); fnOnClick( Selector, rgAppData ); };
@@ -2513,12 +2514,20 @@ CGameSelector = Class.create( {
 		{
 			AlignMenu( this.elInput, this.elSuggestionsCtn, 'left', 'bottom', true );
 			ShowWithFade( this.elSuggestionsCtn );
+			try {
+				this.elSuggestionsCtn.showPopover();
+			}
+			catch(e) {}
 		}
 	},
 
 	HideSuggestions: function()
 	{
 		HideWithFade( this.elSuggestionsCtn );
+		try {
+			this.elSuggestionsCtn.hidePopover();
+		}
+		catch(e) {}
 	},
 
 	OnGameSelectTextEntry: function( elInput, value )
@@ -2599,7 +2608,7 @@ CGameSelector = Class.create( {
 
 				elSuggestion.appid = rgOptions[i].appid;
 				elSuggestion.fnOnSelect = this.fnOnClick.bind( null, this, rgOptions[i] );
-				elSuggestion.observe( 'click', elSuggestion.fnOnSelect );
+				elSuggestion.addEventListener( 'click', elSuggestion.fnOnSelect );
 				elSuggestion.observe( 'mouseover', this.SetFocus.bind( this, elSuggestion ) );
 
 				this.elSuggestions.insert( {bottom: elSuggestion } );

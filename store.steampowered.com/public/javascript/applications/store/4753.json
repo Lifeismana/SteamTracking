@@ -1,0 +1,17 @@
+{
+    "language": "english",
+    "LoginRedirect_Dialog_Title": "Sign In",
+    "LoginRedirect_Dialog_Description": "Sign in to add this item to your wishlist, follow it, or mark it as ignored. Clicking OK will redirect to the sign in page.",
+    "Wishlist_NotSignedIn": "Sign in or open this page in the Steam App to wishlist, follow, or purchase.",
+    "VerifiedProgram_DeckTitle": "%1$s is %2$s on Steam Deck",
+    "VerifiedProgram_DeckTitle_Verified": "Verified",
+    "VerifiedProgram_DeckSubTitle": "This game and many more have been fully tested and run %1$s.",
+    "VerifiedProgram_GreatOnDeck": "Great On Deck",
+    "VerifiedProgram_DeckAlt": "Verified Checkmark",
+    "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
+    "VerifiedProgram_DeckShopBannerAlt": "Steam Deck Banner: 'Your Games, Everywhere'",
+    "VerifiedProgram_DeckDisclaimer": "Trailer may not represent actual Steam Deck gameplay",
+    "StoreItemFound": "%1$s Found (%2$s)",
+    "StoreItemNotFound": "Not Found (%1$s)",
+    "Dummy": "dummy"
+}

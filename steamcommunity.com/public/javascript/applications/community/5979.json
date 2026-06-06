@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Plasează un ordin de cumpărare:",
     "Button_Close": "Închide",
     "Search_ListingQuantity": "Cantitate de vânzare: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Cantitate: %1$s",
     "Bucket_PriceFrom": "De la %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s – atașat",
     "FilterResults_Placeholder": "Filtrează rezultatele...",

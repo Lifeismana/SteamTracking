@@ -68,7 +68,6 @@
 	--gpDselectWidth: 340px;
 	--gpSidePanelWidth: 340px;
 	--gpGiftingPanelWidth: 280px;
-	--gpCommunityRightPanelWidth: 320px;
 	--gpVerticalResponsivePadding-Small: calc( (100vw - 854px) / 60 );
 	--gpVerticalResponsivePadding-Medium: calc( (100vw - 854px) / 20 );
 	--gpVerticalResponsivePadding-Large: calc( (100vw - 854px) / 12 );
@@ -989,6 +988,10 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 }
+dialog.newmodal {
+	margin: 0;
+	padding: 0;
+}
 
 .newmodal_background {
 	position: fixed;
@@ -1488,6 +1491,17 @@ div#global_header .activebg {
 	color: #ffffff;
 }
 
+#language_dropdown .language_beta {
+	background-color: #ffa500;
+    color: black;
+    padding-inline: 8px;
+    margin-inline-start: 12px;
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-block: 4px;
+}
+
 #account_dropdown > .popup_body {
 	width: fit-content;
     max-width: 250px;
@@ -1754,13 +1768,16 @@ div#global_header .menuitem.supernav_active {
 	padding: 4px;
 }
 
-.workshopBrowsePagingControls {
+.workshopBrowsePagingControls,
+.pageLinks {
 	width: fit-content;
 	margin-left: auto;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	gap: 4px;
 }
+
 .pagebtn, a.pagebtn, .page_current, .pagelink {
 	/* sizing */
 	padding: 0px 16px;

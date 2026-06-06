@@ -1043,47 +1043,58 @@
     },
     4703: (e, t, r) => {
       "use strict";
-      r.d(t, { WC: () => c });
+      r.d(t, { WC: () => d });
       var i = r(7221),
         n = r(7338),
         s = r(75233),
         a = r(80902),
-        o = r(46107),
-        l = r(62278);
-      function c(e, t, r, c, m) {
-        const u = (0, s.jE)(),
-          p = (0, n.eG)(),
-          _ = (0, a.I)(
-            (function (e, t, r, n, s, a, c) {
+        o = r(81393),
+        l = r(46107),
+        c = r(62278);
+      function d(e, t, r, d, u) {
+        const p = (0, s.jE)(),
+          _ = (0, n.eG)(),
+          g = (0, a.I)(
+            (function (e, t, r, n, s, a, d) {
               return {
-                queryKey: d(r, n, s, a, c),
+                queryKey: m(r, n, s, a, d),
                 enabled: r && !!r.GID,
                 queryFn: async () => {
                   if (!r) return null;
-                  let d = new Array();
+                  let m = new Array();
                   if (!r.BImageNeedScreenshotFallback(n, s)) {
-                    const l = await e.ensureQueryData(
-                      (0, o.lx)(e, t, r, n, s, a),
+                    const o = await e.ensureQueryData(
+                      (0, l.lx)(e, t, r, n, s, a),
                     );
-                    if ((l && d.push(l), a != i.wI.full)) {
+                    if ((o && m.push(o), a != i.wI.full)) {
                       const a = await e.ensureQueryData(
-                        (0, o.lx)(e, t, r, n, s, i.wI.full),
+                        (0, l.lx)(e, t, r, n, s, i.wI.full),
                       );
-                      a && d.push(a);
+                      a && m.push(a);
                     }
                   }
-                  if (!c) {
-                    const i = await e.ensureQueryData((0, l.dO)(e, t, r));
-                    i && d.push(i);
-                  }
-                  return d;
+                  if (!d)
+                    try {
+                      const i = await e.ensureQueryData((0, c.dO)(e, t, r));
+                      i && m.push(i);
+                    } catch (e) {
+                      if (
+                        ((0, o.wT)(
+                          !1,
+                          `Failed to get fallback art/screenshot for event ${r?.GID} from clan ${r?.clanSteamID.GetAccountID()}`,
+                        ),
+                        0 == m.length)
+                      )
+                        throw e;
+                    }
+                  return m;
                 },
               };
-            })(u, p, e, t, r, c, m),
+            })(p, _, e, t, r, d, u),
           );
-        return _.data ?? void 0;
+        return g.data ?? void 0;
       }
-      function d(e, t, r, i, n) {
+      function m(e, t, r, i, n) {
         return ["useEventImageForSizeAsArrayWithFallback", e?.GID, t, r, i, n];
       }
     },
@@ -9810,26 +9821,27 @@
                 onSlide: e.onSlide,
                 arrowFill: e.arrowFill,
                 arrowStyle: e.arrowStyle,
-                children: o.Children.map(e.children, (t, r) => {
-                  const n = e.bLazyRenderChildren
+                children: o.Children.map(e.children, (r, n) => {
+                  const s = e.bLazyRenderChildren
                     ? (0, i.jsx)(u.K, {
                         rootMargin: "0px -5px 0px 100%",
                         horizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
-                        children: t,
+                        holdGamepadFocus: t,
+                        children: r,
                       })
-                    : t;
+                    : r;
                   return (0, i.jsx)(
                     a.q7,
                     {
                       className: m.innerSlide,
-                      index: r,
+                      index: n,
                       role: "listitem",
                       "aria-label": void 0,
-                      children: n,
+                      children: s,
                     },
-                    "slide_" + r,
+                    "slide_" + n,
                   );
                 }),
               }),
@@ -12883,15 +12895,15 @@
             r.e(7937),
             r.e(9197),
             r.e(4796),
-            r.e(8614),
             r.e(6226),
             r.e(4781),
             r.e(706),
-            r.e(6883),
+            r.e(5191),
             r.e(2389),
             r.e(7262),
             r.e(1215),
-            r.e(8759),
+            r.e(5656),
+            r.e(6908),
             r.e(596),
             r.e(1703),
             r.e(598),
@@ -14950,18 +14962,17 @@
         g = r(52038),
         h = r(78327),
         f = r(51706),
-        y = r(46253),
-        b = r(22797),
-        S = r(44433),
-        w = r(91970),
-        B = r.n(w),
-        v = r(18654),
-        M = r.n(v),
-        C = r(32754),
-        I = r(61859),
-        x = r(30470),
-        R = r(24484);
-      function T(e) {
+        y = r(22797),
+        b = r(44433),
+        S = r(91970),
+        w = r.n(S),
+        B = r(18654),
+        v = r.n(B),
+        M = r(32754),
+        C = r(61859),
+        I = r(30470),
+        x = r(24484);
+      function R(e) {
         const { id: t } = e,
           { data: r } = (0, l.J$)(t),
           n = (0, m.useMemo)(() => {
@@ -14979,50 +14990,51 @@
           }, [r]);
         return n && 0 != n.length
           ? (0, i.jsx)("div", {
-              className: (0, g.A)(M().SaleTagBlockCtn, "SaleTagBlockCtn"),
+              className: (0, g.A)(v().SaleTagBlockCtn, "SaleTagBlockCtn"),
               children: Boolean(n?.length > 0)
                 ? (0, i.jsx)("div", {
-                    className: (0, g.A)(M().TagBox, M().Categories),
+                    className: (0, g.A)(v().TagBox, v().Categories),
                     children: n.map((e) =>
-                      (0, i.jsx)(E, { categoryID: e }, "cat_" + e),
+                      (0, i.jsx)(j, { categoryID: e }, "cat_" + e),
                     ),
                   })
-                : (0, i.jsx)("div", { children: (0, I.we)("#Broadcast_None") }),
+                : (0, i.jsx)("div", { children: (0, C.we)("#Broadcast_None") }),
             })
           : null;
       }
-      class j {
+      class T {
         m_rgCategories;
         constructor() {
-          this.m_rgCategories = (0, R.Tc)(
+          this.m_rgCategories = (0, x.Tc)(
             "feature_categories",
             "application_config",
           );
         }
         static g_Self = null;
         static Get() {
-          return j.g_Self || (j.g_Self = new j()), j.g_Self;
+          return T.g_Self || (T.g_Self = new T()), T.g_Self;
         }
       }
-      function E(e) {
+      function j(e) {
         const { categoryID: t } = e,
-          r = j.Get().m_rgCategories.find((e) => e.categoryid == t);
+          r = T.Get().m_rgCategories.find((e) => e.categoryid == t);
         return r
           ? (0, i.jsx)("div", {
-              className: M().Category,
-              children: (0, i.jsx)(C.he, {
+              className: v().Category,
+              children: (0, i.jsx)(M.he, {
                 toolTipContent: r.name,
                 children: (0, i.jsx)("div", {
-                  className: M().CategoryIcon,
+                  className: v().CategoryIcon,
                   style: {
-                    background: `url(${x.TS.STORE_CDN_URL}/public/images/${r.image_path}) no-repeat center center/cover`,
+                    background: `url(${I.TS.STORE_CDN_URL}/public/images/${r.image_path}) no-repeat center center/cover`,
                   },
                 }),
               }),
             })
           : null;
       }
-      var U = r(90421);
+      var E = r(90421),
+        U = r(54054);
       function k(e) {
         const { id: t, bPopOutTrailerPlayback: r } = e,
           { data: n } = (0, l.Yo)(t),
@@ -15033,21 +15045,21 @@
           _ = (0, d.dy)(),
           h = n?.highlights?.filter((e) => !_ || e.all_ages),
           f = h && h?.length > 0 ? h[0] : void 0,
-          y = m.useCallback(() => {
+          b = m.useCallback(() => {
             f && (r ? p(!0) : c((e) => !e));
           }, [f, r]);
         if (!a)
           return (0, i.jsx)("div", {
-            className: (0, g.A)(B().HilightGrid, B().MediaContainer),
-            children: (0, i.jsx)(b.t, { size: "medium" }),
+            className: (0, g.A)(w().HilightGrid, w().MediaContainer),
+            children: (0, i.jsx)(y.t, { size: "medium" }),
           });
         const S = f
-          ? (0, i.jsx)(z, { trailer: f, bPlayVideo: o, fnTogglePlayTrailer: y })
+          ? (0, i.jsx)(z, { trailer: f, bPlayVideo: o, fnTogglePlayTrailer: b })
           : null;
         return f ||
           (s && s.all_ages_screenshots && s.all_ages_screenshots.length > 0)
           ? (0, i.jsxs)("div", {
-              className: (0, g.A)(B().HilightGrid, B().MediaContainer),
+              className: (0, g.A)(w().HilightGrid, w().MediaContainer),
               children: [
                 (0, i.jsx)(A, {
                   elFeaturedInCenter: S,
@@ -15066,7 +15078,7 @@
                       name: a.name || "",
                       trailer: f,
                       bPlayVideo: o,
-                      fnTogglePlayTrailer: y,
+                      fnTogglePlayTrailer: b,
                       bControls: !0,
                     }),
               ],
@@ -15086,7 +15098,7 @@
           m = (0, o.kB)(t);
         return void 0 !== !d && a && c
           ? (0, i.jsx)("div", {
-              className: (0, g.A)(B().HilightGrid, B().MediaContainerMM),
+              className: (0, g.A)(w().HilightGrid, w().MediaContainerMM),
               children: (0, i.jsx)(A, {
                 id: t,
                 elFeaturedInCenter: (0, i.jsx)(G, {
@@ -15096,15 +15108,15 @@
                 }),
                 trailer: m && m.length > 0 ? m[0] : void 0,
                 storeItemScreenshots: a,
-                featureElementclassName: B().MainImage,
+                featureElementclassName: w().MainImage,
                 bUseTrailerAsFirstThumb: !n,
                 bNoScreenShotModals: !0,
                 name: c.name || "",
               }),
             })
           : (0, i.jsx)("div", {
-              className: (0, g.A)(B().HilightGrid, B().MediaContainerMM),
-              children: (0, i.jsx)(b.t, { size: "medium" }),
+              className: (0, g.A)(w().HilightGrid, w().MediaContainerMM),
+              children: (0, i.jsx)(y.t, { size: "medium" }),
             });
       }
       function A(e) {
@@ -15121,7 +15133,7 @@
           [h, f] = m.useState(void 0),
           [y, b] = (0, p.XC)(),
           S = (0, d.dy)(),
-          w = (0, m.useRef)(null),
+          B = (0, m.useRef)(null),
           [v, M] = (0, m.useState)(0);
         if (!r) return null;
         const C = t || (void 0 !== h && -1 !== h) ? h : 0,
@@ -15138,7 +15150,7 @@
                 fnTogglePlayTrailer: () => {},
                 onMouseEnter: () => f(0),
                 onMouseLeave: () => {
-                  const e = w.current;
+                  const e = B.current;
                   e && M(e.currentTime);
                 },
               },
@@ -15149,7 +15161,7 @@
             (0, i.jsx)(
               N,
               {
-                ref: w,
+                ref: B,
                 name: n,
                 trailer: s,
                 bControls: !1,
@@ -15174,8 +15186,8 @@
                   "div",
                   {
                     className: (0, g.A)({
-                      [B().ThumbnailCtn]: !0,
-                      [B().ThumbnialClickable]: !_,
+                      [w().ThumbnailCtn]: !0,
+                      [w().ThumbnialClickable]: !_,
                     }),
                     children: (0, i.jsx)("img", {
                       src: t,
@@ -15201,7 +15213,7 @@
                   (0, i.jsx)(
                     "div",
                     {
-                      className: B().ScreenshotDisplayCtn,
+                      className: w().ScreenshotDisplayCtn,
                       children: (0, i.jsx)("img", { src: n }),
                     },
                     r + "_big_" + t,
@@ -15218,21 +15230,21 @@
           children: [
             b,
             (0, i.jsx)("div", {
-              className: l || B().MainMediaCtn,
+              className: l || w().MainMediaCtn,
               children: Boolean(t && (-1 === C || void 0 === C))
                 ? (0, i.jsx)(i.Fragment, { children: t })
                 : (0, i.jsx)(i.Fragment, { children: void 0 !== C && x[C] }),
             }),
             Boolean(T.length > 0) &&
               (0, i.jsxs)("div", {
-                className: B().ScreenshotThumbnailRow,
+                className: w().ScreenshotThumbnailRow,
                 onMouseLeave: () => f(-1),
                 children: [
                   T,
                   j.map((e, t) =>
                     (0, i.jsx)(
                       "div",
-                      { className: B().ThumbnailCtn },
+                      { className: w().ThumbnailCtn },
                       `app_${(0, c.ER)(r)}_${t}`,
                     ),
                   ),
@@ -15269,20 +15281,20 @@
           !n)
         )
           return null;
-        let d = (0, g.A)(B().VideoLargeContainer, a && B().videoPlaying);
+        let d = (0, g.A)(w().VideoLargeContainer, a && w().videoPlaying);
         return (0, i.jsxs)("div", {
           className: d,
           onClick: l,
           children: [
-            (0, i.jsx)(y.hj, {
+            (0, i.jsx)(U.hj, {
               name: r,
               trailerCategory: n.trailer_category,
-              trailerDisplay: y.g,
+              trailerDisplay: U.g,
               mouseOver: !1,
             }),
             Boolean(a && n.microtrailer) &&
               (0, i.jsx)("video", {
-                className: B().VideoLarge,
+                className: w().VideoLarge,
                 ref: t,
                 controls: s,
                 autoPlay: !0,
@@ -15335,8 +15347,8 @@
             closeModal: s,
             children: [
               (0, i.jsx)("div", {
-                className: B().VideoPopupContainers,
-                children: (0, i.jsx)(S.P, {
+                className: w().VideoPopupContainers,
+                children: (0, i.jsx)(b.P, {
                   dashManifests: g || [],
                   hlsManifest: (h.length > 0 && h?.[0]) || "",
                   screenshot: (0, o.hl)(d),
@@ -15369,9 +15381,9 @@
         } = e;
         return (0, i.jsxs)("div", {
           className: (0, g.A)({
-            [B().VideoThumbnail]: !n,
-            [B().videoPlaying]: n,
-            [B().ThumbnailCtn]: !0,
+            [w().VideoThumbnail]: !n,
+            [w().videoPlaying]: n,
+            [w().ThumbnailCtn]: !0,
           }),
           onClick: r,
           onMouseEnter: s,
@@ -15379,7 +15391,7 @@
           children: [
             (0, i.jsx)("img", { src: (0, o.hl)(t) }),
             (0, i.jsx)("div", {
-              className: B().VideoPlayButton,
+              className: w().VideoPlayButton,
               children: (0, i.jsx)(_.jGG, {}),
             }),
           ],
@@ -15397,30 +15409,30 @@
         return (0, i.jsxs)(n.Z, {
           focusable: !0,
           noFocusRing: !0,
-          className: B().MainCapsuleWithHover,
+          className: w().MainCapsuleWithHover,
           ...d,
           onActivate: r,
           children: [
-            (0, i.jsx)("img", { className: B().MainCapsule, src: h }),
+            (0, i.jsx)("img", { className: w().MainCapsule, src: h }),
             (0, i.jsxs)("div", {
-              className: B().AppDetails,
+              className: w().AppDetails,
               children: [
                 (0, i.jsx)("div", {
-                  className: (0, g.A)(B().GameName),
+                  className: (0, g.A)(w().GameName),
                   children: u.name || "",
                 }),
                 (0, i.jsxs)("div", {
-                  className: B().ShortDesc,
+                  className: w().ShortDesc,
                   children: [p.short_description, " "],
                 }),
-                (0, i.jsx)(U.n, {
+                (0, i.jsx)(E.n, {
                   rgTagIDs: _ ? _.slice(0, 10).map((e) => e.tagid || 0) : [],
                   instanceNum: 0,
                   bLargeText: !0,
                   bHideTitle: !0,
                   bNoStoreLinks: !0,
                 }),
-                (0, i.jsx)(T, { id: t }),
+                (0, i.jsx)(R, { id: t }),
               ],
             }),
           ],
@@ -16019,7 +16031,7 @@
           kind: t.sKind,
           default: t.bDefault,
           srcLang: (0, a.wwZ)(i),
-          label: (0, l.we)("#language_selection_" + (0, a.LgB)(i)),
+          label: (0, l.uD)(i),
         });
       }
     },

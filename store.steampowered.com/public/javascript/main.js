@@ -2269,7 +2269,7 @@ function PreloadImages( elElement )
 				var $elTarget = $J(j);
 
 				let strBackgroundImg = $elTarget.data('background-image-url');
-				if ( !window.UseGamepadScreenMode() && !window.UseMobileScreenMode() )
+				if ( !window.UseMobileScreenMode() )
 				{
 					const strBackgroundImg2x = $elTarget.data('background-image2x-url');
 					if ( strBackgroundImg2x )
@@ -2280,7 +2280,14 @@ function PreloadImages( elElement )
 
 			$Element.find("img[data-image-url]").each(function(i, j){
 				var $elTarget = $J(j);
-				$elTarget.attr('src', $elTarget.data('image-url') );
+				let strImgUrl = $elTarget.data('image-url');
+				if ( !window.UseMobileScreenMode() )
+				{
+					const strImg2x = $elTarget.data('image2x-url');
+					if ( strImg2x )
+						strImgUrl = strImg2x;
+				}
+				$elTarget.attr('src', strImgUrl );
 			});
 		})
 
@@ -2340,8 +2347,8 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 		{
 			instance.timerAdvance = setInterval ( function ()
 			{
-				if( !instance.bIsResponsive() && !window.UseGamepadScreenMode() )
-					instance.Advance ();
+				if( !instance.bIsResponsive() && !window.UseGamepadScreenMode() && instance.bIsCarouselInView() )
+					instance.Advance();
 			}, nSpeed * 1000 );
 		}
 	};
@@ -2527,6 +2534,12 @@ CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
 CGenericCarousel.prototype.bIsResponsive = function( )
 {
 	return window.UseSmallScreenMode && window.UseSmallScreenMode();
+}
+
+CGenericCarousel.prototype.bIsCarouselInView = function( )
+{
+	const rect = this.$elContainer[0].getBoundingClientRect();
+	return rect.bottom > 0 && rect.top < window.innerHeight;
 }
 
 CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )

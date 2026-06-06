@@ -216,6 +216,17 @@ message CContentModeration_GetReporterCooldown_Response {
 	optional uint32 rtime_cooldown_ends = 1;
 }
 
+message CContentModeration_GetReporterStats_Request {
+	optional uint64 steamid = 1;
+}
+
+message CContentModeration_GetReporterStats_Response {
+	optional uint32 total_reports = 1;
+	optional uint32 total_acquitted_reports = 2;
+	optional uint32 reports_in_last_week = 3;
+	optional uint32 acquitted_reports_in_last_week = 4;
+}
+
 message CContentModeration_GetReportsSubmittedByUser_Request {
 	optional uint64 steamid = 1;
 	optional uint32 start = 2;
@@ -478,6 +489,8 @@ service ContentModeration {
 	rpc GetReportedSubjectsByOwner (.CContentModeration_GetReportedSubjectsByOwner_Request) returns (.CContentModeration_GetReportedSubjectsByOwner_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetReporterCooldown (.CContentModeration_GetReporterCooldown_Request) returns (.CContentModeration_GetReporterCooldown_Response);
+	// bConstMethod=true, ePrivilege=5
+	rpc GetReporterStats (.CContentModeration_GetReporterStats_Request) returns (.CContentModeration_GetReporterStats_Response);
 	// bConstMethod=true, ePrivilege=1
 	rpc GetReportsSubmittedByUser (.CContentModeration_GetReportsSubmittedByUser_Request) returns (.CContentModeration_GetReportsSubmittedByUser_Response);
 	// ePrivilege=5

@@ -5,7 +5,6 @@
 }
 
 .discussions_header {
-	position: relative;
 	border-bottom: 5px solid #417B9C;
 }
 
@@ -234,23 +233,24 @@
 	font-weight: bold;
 	color: #fefefe;
 }
+
 .discussions_game_controls {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 16px;
 	padding-bottom: 32px;
 }
 
 .discussions_game_browseoption {
 	background-color: rgba( 0, 0, 0, 0.2 );
-	line-height: 32px;
-	padding-left: 12px;
-	float: left;
 	height: 39px;
-	padding-top: 7px;
-	padding-right: 7px;
+	line-height: 32px;
+	padding: 7px 7px 0 12px;
 }
 
 .discussions_game_searchoption {
-	margin-left: 16px;
-	float: left;
+	flex: 1 0 200px;
 }
 
 div.quicklistselect
@@ -545,15 +545,9 @@ td.wordfilter_action a:hover {
 	margin-top: 20px;
 }
 
-
-.global_discussion_search_ctn {
-	margin-bottom: 12px;
-}
-
 .discussions_view_more_link {
 	float: right;
 	line-height: 22px;
-	padding-top: 10px;
 }
 
 .discussions_view_more_link a {
@@ -675,15 +669,23 @@ a.recent_game_discussion.quasi_official_group
 		width: auto;
 	}
 
+	html.responsive .recent_game_discussion {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 910px)
+{
 	html.responsive .discussions_page .group_content.bottomless {
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
 
-	html.responsive .recent_game_discussion {
-		margin-right: 0;
-	}
 }
+	html.responsive.GamepadMode .discussions_page .group_content.bottomless {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
 
 @media screen and (max-width: 720px )
 {

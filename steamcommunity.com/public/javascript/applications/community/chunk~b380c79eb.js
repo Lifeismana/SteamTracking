@@ -21,6 +21,7 @@
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
@@ -46,11 +47,14 @@
         SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
+        IndicatorPosition: "_1Dgxrv7wtUW1EViSgrdMlA",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
         "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
         "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
+        disabled: "_3gVhaCZ4k3QSnF9WhRZk5m",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
+        "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
         "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
       };
     },
@@ -92,7 +96,7 @@
           } = e,
           g = "indeterminate" === n,
           v = g ? d : i.i,
-          C = () => {
+          m = () => {
             s || (t && t(!!g || !n));
           };
         return (0, r.jsxs)(o.s, {
@@ -102,11 +106,11 @@
           "aria-checked": g ? "mixed" : n,
           "data-state": u(n),
           className: c()(l.Root, l[`Variant-${f}`], s && l.Disabled),
-          onClick: C,
+          onClick: m,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (C(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (m(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
@@ -300,10 +304,10 @@
       const g = (0, o.createContext)(null);
       function v(e) {
         return x.TS.IN_GAMEPADUI
-          ? (0, r.jsx)(C, { ...e })
-          : (0, r.jsx)(m, { ...e });
+          ? (0, r.jsx)(m, { ...e })
+          : (0, r.jsx)(C, { ...e });
       }
-      function C(e) {
+      function m(e) {
         const { state: n, children: t } = e,
           i = o.useRef(void 0);
         return (
@@ -317,7 +321,7 @@
           })
         );
       }
-      function m(e) {
+      function C(e) {
         const { state: n, children: t } = e;
         return (0, r.jsx)(i.s3, {
           context: n.floating.context,
@@ -348,10 +352,10 @@
           }),
           g = (0, i.kp)(x.context, { enabled: !!u.click }),
           v = (0, i.iQ)(x.context, { enabled: !!u.focus }),
-          C = (0, i.s9)(x.context),
-          m = (0, o.useRef)([]),
+          m = (0, i.s9)(x.context),
+          C = (0, o.useRef)([]),
           I = (0, i.C1)(x.context, {
-            listRef: m,
+            listRef: C,
             activeIndex: r,
             selectedIndex: c,
             onNavigate: s,
@@ -372,19 +376,19 @@
           k = (0, i.It)(x.context, { role: h }),
           {
             getFloatingProps: O,
-            getReferenceProps: y,
-            getItemProps: L,
-          } = (0, i.bv)([k, g, v, C, I, S]);
+            getReferenceProps: V,
+            getItemProps: y,
+          } = (0, i.bv)([k, g, v, m, I, S]);
         return {
           floating: x,
           getFloatingProps: O,
-          getReferenceProps: y,
-          getItemProps: L,
+          getReferenceProps: V,
+          getItemProps: y,
           open: p,
           activeIndex: r,
           selectedIndex: c,
           setSelectedIndex: a,
-          elementsRef: m,
+          elementsRef: C,
           labelsRef: b,
           typingRef: j,
           initialFocus: u.virtualItemFocus ? -1 : void 0,
@@ -468,10 +472,10 @@
               null
             );
           const v = p === h.activeIndex,
-            C = p === h.selectedIndex || !!l;
+            m = p === h.selectedIndex || !!l;
           return (0, r.jsx)(u.Option, {
             ref: x,
-            selected: C,
+            selected: m,
             focused: v,
             role: "option",
             tabIndex: 0,
@@ -484,7 +488,7 @@
                   (s(e), e.preventDefault(), e.stopPropagation());
               },
               active: v,
-              selected: C,
+              selected: m,
               disabled: a,
               ...d,
             }),
@@ -516,7 +520,11 @@
         });
       }
       function p(e) {
-        return (0, r.jsx)(l.az, { className: u.Indicator, radius: e.radius });
+        const { radius: n } = e;
+        return (0, r.jsx)(l.az, {
+          className: u.IndicatorPosition,
+          children: (0, r.jsx)("div", { className: u.Indicator }),
+        });
       }
       function x(e, n) {
         const t = e.compareDocumentPosition(n);
@@ -527,30 +535,30 @@
             : 0;
       }
       (f.Item = function (e) {
-        const { value: n, children: t } = e,
-          i = (0, o.useContext)(h),
-          [l, s] = (0, o.useState)(),
-          { register: c, unregister: f } = i || {};
+        const { value: n, children: t, disabled: i } = e,
+          l = (0, o.useContext)(h),
+          [s, c] = (0, o.useState)(),
+          { register: f, unregister: p } = l || {};
         if (
           ((0, o.useEffect)(
-            () => (l && c && f ? (c(l, n), () => f(l, n)) : () => {}),
-            [c, f, n, l],
+            () => (s && f && p ? (f(s, n), () => p(s, n)) : () => {}),
+            [f, p, n, s],
           ),
-          !i)
+          !l)
         )
           return null;
-        const { value: p, onValueChange: x, radius: g, size: v } = i,
-          C = n === p,
-          m = C ? void 0 : () => x(n),
+        const { value: x, onValueChange: g, radius: v, size: m } = l,
+          C = n === x,
           I = void 0 === t ? n : t;
         return (0, r.jsx)(d.s, {
           justify: "center",
           align: "center",
-          radius: g,
-          ref: s,
-          onClick: m,
+          ref: c,
+          onClick: (e) => {
+            e.stopPropagation(), e.preventDefault(), C || i || g(n);
+          },
           "data-selected": C ? "true" : "false",
-          className: a()(u.Item, v && u[`Size-${v}`]),
+          className: a()(u.Item, m && u[`Size-${m}`], i ? u.disabled : ""),
           children: I,
         });
       }),
@@ -558,31 +566,31 @@
           const {
               variant: n = "default",
               radius: t,
-              size: l,
-              children: c,
-              value: d,
-              onValueChange: f,
+              size: c,
+              children: d,
+              value: f,
+              onValueChange: g,
             } = e,
-            [g, v] = (0, o.useState)({}),
-            C = (0, o.useCallback)((e, n) => v((t) => ({ ...t, [n]: e })), []),
-            m = (0, o.useCallback)(
+            [v, m] = (0, o.useState)({}),
+            C = (0, o.useCallback)((e, n) => m((t) => ({ ...t, [n]: e })), []),
+            I = (0, o.useCallback)(
               (e, n) =>
-                v((t) => {
+                m((t) => {
                   const r = { ...t };
                   return r[n] === e && delete r[n], r;
                 }),
               [],
             ),
-            I = (0, o.useMemo)(
+            b = (0, o.useMemo)(
               () => ({
-                value: d,
-                onValueChange: f,
+                value: f,
+                onValueChange: g,
                 register: C,
-                unregister: m,
+                unregister: I,
                 radius: t,
-                size: l,
+                size: c,
               }),
-              [d, f, C, m, t, l],
+              [f, g, C, I, t, c],
             );
           return (0, r.jsx)(i.j, {
             clickable: !1,
@@ -590,7 +598,7 @@
             focusable: !1,
             variant: n,
             radius: t,
-            size: l,
+            size: c,
             className: a()(u.SegmentedControlBox, u[`Variant-${n}`]),
             tabIndex: 0,
             onKeyDown: (e) => {
@@ -605,11 +613,11 @@
                   n = -1;
               }
               if (n) {
-                const t = Array.from(Object.values(g)).sort(x);
+                const t = Array.from(Object.values(v)).sort(x);
                 let r;
-                if (null === d) r = n > 0 ? 0 : t.length - 1;
+                if (null === f) r = n > 0 ? 0 : t.length - 1;
                 else {
-                  const e = g[d],
+                  const e = v[f],
                     o = t.findIndex((n) => n === e);
                   (0, s.wT)(
                     "number" == typeof o,
@@ -618,17 +626,18 @@
                     (r = o + n);
                 }
                 const o = t[r < 0 ? t.length + r : r % t.length],
-                  i = Object.keys(g).find((e) => g[e] === o);
+                  i = Object.keys(v).find((e) => v[e] === o);
                 "string" != typeof i
                   ? console.error("Could not find next segmeneted value")
-                  : (f(i), e.stopPropagation(), e.preventDefault());
+                  : (g(i), e.stopPropagation(), e.preventDefault());
               }
             },
             children: (0, r.jsx)(h.Provider, {
-              value: I,
-              children: (0, r.jsxs)("div", {
+              value: b,
+              children: (0, r.jsxs)(l.az, {
                 className: u.SegmentedControl,
-                children: [c, null !== d && (0, r.jsx)(p, { radius: t })],
+                style: { "--outer-radius": `var(--radius-${t})` },
+                children: [d, null !== f && (0, r.jsx)(p, { radius: t })],
               }),
             }),
           });
@@ -636,7 +645,7 @@
     },
     11967: (e, n, t) => {
       "use strict";
-      t.d(n, { DL: () => m, WM: () => p, l6: () => C, uh: () => b });
+      t.d(n, { DL: () => C, WM: () => p, l6: () => m, uh: () => b });
       var r = t(7850),
         o = t(90626),
         i = t(25671),
@@ -795,19 +804,19 @@
               rgOptions: x,
               multiselect: g,
               onClear: v,
-              focusedValue: C,
-              onFocusChange: m,
+              focusedValue: m,
+              onFocusChange: C,
               onSelectionChange: I,
               clearable: b,
               focusedIndex: j,
               onItemSelectionChange: k,
               onFocusedIndexChange: O,
-              refPopover: y,
-              placeholder: L,
-              maxSelected: V,
-              ...P
+              refPopover: V,
+              placeholder: y,
+              maxSelected: L,
+              ...w
             } = S("<SelectTrigger>"),
-            w = {
+            P = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => c(!o),
@@ -829,9 +838,10 @@
               radius: p,
               hasValue: _,
               tabIndex: 0,
-              ...P,
+              cursor: "pointer",
+              ...w,
             }),
-            N = (0, u.Q)(t, R, w, void 0);
+            N = (0, u.Q)(t, R, P, void 0);
           return (0, r.jsx)(i.k.Anchor, { children: N });
         },
         Value: function (e) {
@@ -861,7 +871,7 @@
               ),
               "");
       }
-      const C = Object.assign(function (e) {
+      const m = Object.assign(function (e) {
         const {
             selectedValue: n,
             onSelectionChange: t,
@@ -878,25 +888,25 @@
           }),
           a = null != n,
           u = a ? l(n) : "";
-        return (0, r.jsxs)(C.Root, {
+        return (0, r.jsxs)(m.Root, {
           state: c,
           ...s,
           children: [
-            (0, r.jsxs)(C.Trigger, {
+            (0, r.jsxs)(m.Trigger, {
               children: [
-                a && (0, r.jsx)(C.Value, { children: u }),
-                !a && (0, r.jsx)(C.Placeholder, { children: i }),
+                a && (0, r.jsx)(m.Value, { children: u }),
+                !a && (0, r.jsx)(m.Placeholder, { children: i }),
               ],
             }),
-            (0, r.jsx)(C.Options, {
+            (0, r.jsx)(m.Options, {
               children: c.rgOptions.map((e, n) =>
-                (0, r.jsx)(C.Option, { value: e, children: l(e) }, n),
+                (0, r.jsx)(m.Option, { value: e, children: l(e) }, n),
               ),
             }),
           ],
         });
       }, g);
-      function m(e) {
+      function C(e) {
         return x(e, !0);
       }
       const I = g;
@@ -910,7 +920,7 @@
               maxSelected: s,
               ...c
             } = e,
-            a = m({
+            a = C({
               onSelectionChange: t,
               selectedValue: n,
               rgOptions: o,
@@ -972,23 +982,23 @@
             onTextChange: x,
             onTextClear: g,
             clearable: v,
-            onChange: C,
-            radius: m,
+            onChange: m,
+            radius: C,
             variant: I,
             size: b,
             beforeContent: j,
             afterContent: S,
             inputRef: k,
             ref: O,
-            disabled: y,
-            gamepadFocusable: L = !0,
-            ...V
+            disabled: V,
+            gamepadFocusable: y = !0,
+            ...L
           } = t,
-          P = {
+          w = {
             ...n,
             variant: I,
             size: b,
-            radius: m,
+            radius: C,
             beforeContent: j,
             afterContent:
               i && v
@@ -1001,27 +1011,27 @@
                   })
                 : S,
             ref: O,
-            disabled: y,
+            disabled: V,
           },
-          w = (0, o.useRef)(null),
-          _ = L && p.TS.IN_GAMEPADUI ? f.BA : "input";
+          P = (0, o.useRef)(null),
+          _ = y && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
-          ...P,
+          ...w,
           onClick: (e) => {
-            w.current && e.target !== w.current && w.current.focus();
+            P.current && e.target !== P.current && P.current.focus();
           },
           children: (0, r.jsx)(_, {
-            ref: (0, h.Ue)(k, w),
+            ref: (0, h.Ue)(k, P),
             type: "text",
-            "aria-disabled": y,
-            readOnly: y,
+            "aria-disabled": V,
+            readOnly: V,
             className: l()((0, s.T)(), c.TextEntry),
             value: i || "",
             onChange: (e) => {
-              y || (x(e.target.value), C && C(e));
+              V || (x(e.target.value), m && m(e));
             },
-            ...V,
+            ...L,
           }),
         });
       }

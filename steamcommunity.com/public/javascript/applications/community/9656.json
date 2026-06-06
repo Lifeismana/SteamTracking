@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Realizar un pedido:",
     "Button_Close": "Cerrar",
     "Search_ListingQuantity": "Cantidad a la venta: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Cantidad: %1$s",
     "Bucket_PriceFrom": "A partir de %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s — Conectado",
     "FilterResults_Placeholder": "Filtrar resultados...",

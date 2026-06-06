@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Đặt mua:",
     "Button_Close": "Đóng",
     "Search_ListingQuantity": "Số lượng đăng bán: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Số lượng: %1$s",
     "Bucket_PriceFrom": "Từ %1$s",
     "AccessorySearch_AttachedAccessoryType": "Kèm theo %1$s",
     "FilterResults_Placeholder": "Lọc kết quả...",

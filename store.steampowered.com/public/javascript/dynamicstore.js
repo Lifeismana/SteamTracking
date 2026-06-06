@@ -2042,6 +2042,9 @@ GStoreItemData = {
 			( ApplicableSettings.dlc_for_you && ( !Settings.dlc_for_you || !rgAppData.dlc_for_app || !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) ) ) ) )
 			return false;
 
+		if ( rgAppData.playtest && ApplicableSettings.playtest && !Settings.playtest )
+			return false;
+
 		if ( ApplicableSettings.games_already_in_library && !Settings.games_already_in_library && GDynamicStore.BIsAppOwned( appid ) )
 			return false;
 

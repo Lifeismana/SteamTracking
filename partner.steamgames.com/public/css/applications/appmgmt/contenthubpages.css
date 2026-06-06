@@ -1352,6 +1352,17 @@ img {
 :where(._2RYWJyn7v0tvoY5cR63QuI)._1cd-wdIp5lIWsydAxII-vY:focus-within {
   box-shadow: var(--box-shadow-elevation--1);
 }
+:where(._32JdL4FubsmwHfHXm6OB9I) {
+  --bg-color: rgb(from var(--color-dull-12) r g b / 50%);
+  --bg-color-hover: var(--color-dull-9);
+  --bg-color-focus: rgb(from var(--color-dull-8) r g b / 50%);
+  --bg-color-active: var(--color-dull-12);
+  --bg-highlight-color: white;
+  --text-color: #222222;
+  --text-muted-color: white;
+  --padding: 0 var(--spacing-3);
+  box-shadow: var(--box-shadow-elevation--1);
+}
 :where(.yV_Aq5WutzzittgbOJ1R-) {
   --bg-color: transparent;
   --bg-color-hover: var(--bg-color);
@@ -1405,7 +1416,6 @@ img {
 :where(._2gL71Yq-HzVI9oOGyWu3jH) {
   background-color: var(--bg-color, var(--color-debug));
   transition: background-color 0.2s ease-in-out;
-  cursor: pointer;
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._8JNTStqpIYaMWQJx6g6hK:hover {
   background-color: var(--bg-color-hover, var(--color-debug));

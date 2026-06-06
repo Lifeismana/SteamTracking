@@ -164,6 +164,17 @@
 :where(._2RYWJyn7v0tvoY5cR63QuI)._1cd-wdIp5lIWsydAxII-vY:focus-within {
   box-shadow: var(--box-shadow-elevation--1);
 }
+:where(._32JdL4FubsmwHfHXm6OB9I) {
+  --bg-color: rgb(from var(--color-dull-12) r g b / 50%);
+  --bg-color-hover: var(--color-dull-9);
+  --bg-color-focus: rgb(from var(--color-dull-8) r g b / 50%);
+  --bg-color-active: var(--color-dull-12);
+  --bg-highlight-color: white;
+  --text-color: #222222;
+  --text-muted-color: white;
+  --padding: 0 var(--spacing-3);
+  box-shadow: var(--box-shadow-elevation--1);
+}
 :where(.yV_Aq5WutzzittgbOJ1R-) {
   --bg-color: transparent;
   --bg-color-hover: var(--bg-color);
@@ -217,7 +228,6 @@
 :where(._2gL71Yq-HzVI9oOGyWu3jH) {
   background-color: var(--bg-color, var(--color-debug));
   transition: background-color 0.2s ease-in-out;
-  cursor: pointer;
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._8JNTStqpIYaMWQJx6g6hK:hover {
   background-color: var(--bg-color-hover, var(--color-debug));
@@ -725,7 +735,7 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   padding: 2px 8px 2px 20px;
 }
 ._3tuJ3SHrhBu16Q7GZBtKyt {
-  padding: var(--spacing-1);
+  padding: 0;
 }
 ._3tuJ3SHrhBu16Q7GZBtKyt:focus-visible {
   outline: none;
@@ -734,94 +744,101 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   outline: 2px solid #fff;
 }
 ._3XFGk1-WmLNC9KlGi7IYtN {
-  position: relative;
   display: inline-grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   width: 100%;
   isolation: isolate;
+  padding-left: var(--spacing-1);
+  padding-right: var(--spacing-1);
 }
-._2OvUYpkiij1e7K-4vW8i9W {
+._1Dgxrv7wtUW1EViSgrdMlA {
   transition-property: transform;
   transition-duration: 150ms;
   transition-timing-function: ease-in;
+  padding: var(--spacing-1);
   position: absolute;
   inset: 0;
-  background-color: var(--bg-highlight-color);
   z-index: -1;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(2)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(2)) {
   width: 100%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(3)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(3)) {
   width: 50%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(4)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(4)) {
   width: 33.3333333333%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(5)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(5)) {
   width: 25%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(6)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(6)) {
   width: 20%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(7)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(7)) {
   width: 16.6666666667%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(8)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(8)) {
   width: 14.2857142857%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(9)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(9)) {
   width: 12.5%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(10)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(10)) {
   width: 11.1111111111%;
 }
-._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(11)) {
+._1Dgxrv7wtUW1EViSgrdMlA:where(:nth-child(11)) {
   width: 10%;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(1))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 0;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(2))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 1;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(3))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 2;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(4))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 3;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(5))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 4;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(6))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 5;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(7))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 6;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(8))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 7;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(9))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 8;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(10))
-  ~ ._2OvUYpkiij1e7K-4vW8i9W {
+  ~ ._1Dgxrv7wtUW1EViSgrdMlA {
   --selected-index: 9;
 }
-._2OvUYpkiij1e7K-4vW8i9W {
+._1Dgxrv7wtUW1EViSgrdMlA {
   transform: translateX(calc(100% * var(--selected-index)));
+}
+._2OvUYpkiij1e7K-4vW8i9W {
+  border-radius: calc(var(--outer-radius) - var(--outer-radius) / 3);
+  background-color: var(--bg-highlight-color);
+  width: 100%;
+  height: 100%;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM) {
   display: flex;
@@ -829,6 +846,7 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   align-items: center;
   text-align: center;
   user-select: none;
+  border-radius: calc(var(--outer-radius) - var(--outer-radius) / 3);
   padding-top: var(--spacing-1);
   padding-bottom: var(--spacing-1);
   padding-left: var(--spacing-3);
@@ -851,6 +869,15 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   padding-top: var(--spacing-2);
   padding-bottom: var(--spacing-2);
 }
+:where(._2aNlsjcdOdHOtP8uACA3bM):disabled,
+:where(._2aNlsjcdOdHOtP8uACA3bM)._3gVhaCZ4k3QSnF9WhRZk5m {
+  opacity: 0.35;
+  cursor: default;
+}
+:where(._2aNlsjcdOdHOtP8uACA3bM):disabled:hover,
+:where(._2aNlsjcdOdHOtP8uACA3bM)._3gVhaCZ4k3QSnF9WhRZk5m:hover {
+  background: var(--background);
+}
 :where(
     ._3hD10Qy5141ZEY503SxZkd
       ._2aNlsjcdOdHOtP8uACA3bM[data-selected="false"]:hover
@@ -862,6 +889,14 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
       ._2aNlsjcdOdHOtP8uACA3bM[data-selected="false"]:hover
   ) {
   background-color: var(--color-dull-6);
+}
+:where(
+    ._1gVVovvLBjwCxSH4wWUabt
+      ._2aNlsjcdOdHOtP8uACA3bM[data-selected="false"]:not(
+        ._3gVhaCZ4k3QSnF9WhRZk5m
+      ):hover
+  ) {
+  background-color: rgb(from var(--color-dull-12) r g b / 60%);
 }
 :where(
     ._3qc1Re1q3AH_JYfN49uj8r

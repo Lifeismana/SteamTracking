@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "ส่งคำสั่งซื้อ:",
     "Button_Close": "ปิด",
     "Search_ListingQuantity": "จำนวนที่วางจำหน่าย: %1$s",
+    "Search_ListingQuantity_Abbreviation": "จำนวน:  %1$s",
     "Bucket_PriceFrom": "จาก %1$s",
     "AccessorySearch_AttachedAccessoryType": "มาพร้อม%1$s",
     "FilterResults_Placeholder": "กรองผลลัพธ์...",

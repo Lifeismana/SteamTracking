@@ -19,6 +19,7 @@
         Open: "_2HPVMueZXbMmvgW8C6iOw7",
         DemoButton: "_2Mu1VwOBzB0kLcDCRbJD6w",
         WishlistButton: "_3FAid_cwwxW8-9Sp6pSPqS",
+        ShowInGamepadUI: "_2f6Nut1kQFb4WnCmz4uXDG",
         WishlistButtonText: "_2GqXfP0dBAJl9ozuBV3Jqh",
         WishlistLoadingText: "_2k23LU1oBxEHe-_Qff-1k3",
         WishlistButtonNotTop: "_3W_yknADVFtPgqx9Wh2ayW",
@@ -1540,6 +1541,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 84259, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 24475, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 60580, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 36884, 19))),
         (_.polish = () =>
@@ -2803,7 +2806,13 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, snr: _, classOverride: _, styleOverride: _ } = _,
+        const {
+            _: _,
+            snr: _,
+            classOverride: _,
+            styleOverride: _,
+            bShowInGamepadUI: _,
+          } = _,
           { data: _ } = (0, _._)(_),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() =>
@@ -2842,7 +2851,11 @@
         return _ && _?.type != _._._
           ? null
           : (0, _.jsxs)(_._, {
-              className: (0, _._)(_().WishlistButton, _),
+              className: (0, _._)(
+                _().WishlistButton,
+                _ && _().ShowInGamepadUI,
+                _,
+              ),
               onActivate: _,
               style: _,
               children: [
@@ -2903,6 +2916,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 87134, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
         (_.polish = () =>
@@ -5193,7 +5208,7 @@
               onClick: _,
               children: (0, _.jsx)("span", {
                 className: _().LearnMorePC,
-                children: (0, _._)(
+                children: _._.Localize(
                   "#SteamDeckVerified_Store_CompatSectionHeader_Desktop",
                 ),
               }),
@@ -5229,7 +5244,7 @@
               className: _
                 ? _().DeveloperComments_LinkIcon
                 : _().DeveloperComments_LinkNoIcon,
-              children: (0, _._)(
+              children: _._.Localize(
                 "#SteamDeckVerified_Store_CompatSection_DeveloperComments",
               ),
             }),
@@ -5273,7 +5288,7 @@
                 : (0, _.jsx)(_._, {
                     size: "medium",
                     position: "center",
-                    string: (0, _._)("#Loading"),
+                    string: _._.Localize("#Loading"),
                   }),
             }),
           }),
@@ -5303,7 +5318,6 @@
               role: "presentation",
             });
         }
-        return null;
       }
       function _(_) {
         const { category: _ } = _;
@@ -5324,7 +5338,6 @@
               role: "presentation",
             });
         }
-        return null;
       }
       function _(_) {
         const { _: _, category: _, appName: _, descriptionToken: _ } = _;
@@ -5333,13 +5346,13 @@
             _: _,
             className: _().CompatibilityDetailRatingSummary,
             children: _
-              ? (0, _._)(
+              ? _._.LocalizeReact(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
                   (0, _.jsx)("b", {
                     children: (0, _._)(_),
                   }),
                 )
-              : (0, _._)("#SteamDeckVerified_DescriptionHeader_Unknown"),
+              : _._.Localize("#SteamDeckVerified_DescriptionHeader_Unknown"),
           });
         let _ = "",
           _ = null;
@@ -5358,14 +5371,14 @@
         }
         const _ = (0, _.jsx)("span", {
             className: _,
-            children: (0, _._)(_(_)),
+            children: _._.Localize(_(_)),
           }),
           _ = (0, _.jsx)("span", {
             className: _().CompatibilityDetailRatingSummary,
-            children: (0, _._)(_ || _),
+            children: _._.Localize(_ || _),
           }),
           _ = _
-            ? (0, _._)(
+            ? _._.LocalizeReact(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
                 (0, _.jsx)("b", {
                   children: (0, _._)(_),
@@ -5373,7 +5386,7 @@
                 _,
                 _,
               )
-            : (0, _._)("#SteamDeckVerified_DescriptionHeader", _, _);
+            : _._.LocalizeReact("#SteamDeckVerified_DescriptionHeader", _, _);
         return (0, _.jsx)("div", {
           _: _,
           className: _().CompatibilityDetailRatingSummary,
@@ -5386,13 +5399,13 @@
           return (0, _.jsx)("div", {
             className: _().CompatibilityDetailRatingSummary,
             children: _
-              ? (0, _._)(
+              ? _._.LocalizeReact(
                   "#SteamOSCompatibility_DescriptionHeader_Unknown_WithAppName",
                   (0, _.jsx)("b", {
                     children: (0, _._)(_),
                   }),
                 )
-              : (0, _._)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
+              : _._.Localize("#SteamOSCompatibility_DescriptionHeader_Unknown"),
           });
         let _ = "",
           _ = null;
@@ -5407,14 +5420,14 @@
         }
         const _ = (0, _.jsx)("span", {
             className: _,
-            children: (0, _._)(_(_)),
+            children: _._.Localize(_(_)),
           }),
           _ = (0, _.jsx)("span", {
             className: _().CompatibilityDetailRatingSummary,
-            children: (0, _._)(_ || _),
+            children: _._.Localize(_ || _),
           }),
           _ = _
-            ? (0, _._)(
+            ? _._.LocalizeReact(
                 "#SteamOSCompatibility_DescriptionHeader_WithAppName",
                 (0, _.jsx)("b", {
                   children: (0, _._)(_),
@@ -5422,7 +5435,11 @@
                 _,
                 _,
               )
-            : (0, _._)("#SteamOSCompatibility_DescriptionHeader", _, _);
+            : _._.LocalizeReact(
+                "#SteamOSCompatibility_DescriptionHeader",
+                _,
+                _,
+              );
         return (0, _.jsx)("div", {
           _: _,
           className: _().CompatibilityDetailRatingSummary,
@@ -7852,7 +7869,7 @@
           _ = null,
           _ = null;
         _.steam_deck_blog_url &&
-          ((_.onOptionsActionDescription = (0, _._)(
+          ((_.onOptionsActionDescription = _._.Localize(
             "#SteamDeckVerified_ViewDeveloperPost",
           )),
           (_.onOptionsButton = _),
@@ -7867,10 +7884,10 @@
         const _ = _ == _._;
         if (!_.resolved_items?.length) {
           const _ = _
-              ? (0, _._)(
+              ? _._.Localize(
                   "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
                 )
-              : (0, _._)(
+              : _._.Localize(
                   "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
                 ),
             _ = _
@@ -8045,7 +8062,7 @@
           _ = _.steamos_resolved_items && _.steamos_resolved_items?.length > 0;
         return (0, _.jsx)(_, {
           titleId: _,
-          title: (0, _._)(
+          title: _._.Localize(
             "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
           ),
           ratingIcon: _,
@@ -8070,7 +8087,7 @@
                             displaytype: _.display_type,
                           }),
                           (0, _.jsx)("span", {
-                            children: (0, _._)(_.loc_token),
+                            children: _._.Localize(_.loc_token),
                           }),
                         ],
                       },
@@ -8092,7 +8109,7 @@
                               displaytype: _.display_type,
                             }),
                             (0, _.jsx)("span", {
-                              children: (0, _._)(_.loc_token),
+                              children: _._.Localize(_.loc_token),
                             }),
                           ],
                         },
@@ -8118,7 +8135,7 @@
           _ = _.resolved_items && _.resolved_items?.length > 0;
         return (0, _.jsx)(_, {
           titleId: _,
-          title: (0, _._)(
+          title: _._.Localize(
             "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
           ),
           ratingIcon: _,
@@ -8143,7 +8160,7 @@
                             displaytype: _.display_type,
                           }),
                           (0, _.jsx)("span", {
-                            children: (0, _._)(_.loc_token),
+                            children: _._.Localize(_.loc_token),
                           }),
                         ],
                       },
@@ -8162,7 +8179,7 @@
                         {
                           className: _().CompatibilityDetailsNoteRow,
                           children: (0, _.jsx)("span", {
-                            children: (0, _._)(_.loc_token),
+                            children: _._.Localize(_.loc_token),
                           }),
                         },
                         _.loc_token + _.display_type,
@@ -8181,8 +8198,10 @@
         if (_) {
           const _ =
             _ == _._
-              ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog")
-              : (0, _._)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog");
+              ? _._.Localize("#SteamOS_DescriptionHeader_DeveloperBlog")
+              : _._.Localize(
+                  "#SteamDeckVerified_DescriptionHeader_DeveloperBlog",
+                );
           return (0, _.jsxs)("div", {
             className: _().CompatibilityDetailRatingSummary,
             children: [
@@ -8199,8 +8218,8 @@
         }
         const _ =
           _ == _._
-            ? (0, _._)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
-            : (0, _._)(
+            ? _._.Localize("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
+            : _._.Localize(
                 "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
               );
         return (0, _.jsxs)("div", {
@@ -8210,7 +8229,7 @@
             (0, _.jsx)("a", {
               href: _,
               className: _().DeveloperBlockLinkDesktop,
-              children: (0, _._)("#SteamDeckVerified_ViewDeveloperPost"),
+              children: _._.Localize("#SteamDeckVerified_ViewDeveloperPost"),
             }),
           ],
         });

@@ -521,6 +521,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 87134, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
         (_.polish = () =>

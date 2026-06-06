@@ -254,7 +254,7 @@ a.general_btn:hover {
 	flex-direction: column;
 	float: right;
 	gap: 12px;
-	padding: 8px 0 0 10px;
+	padding-top: 8px;
 	position: relative;
 	width: 295px;
 	z-index: 20;
@@ -263,6 +263,7 @@ a.general_btn:hover {
 #leftContents {
 	width: 648px;
 	margin-bottom: 100px;
+	padding-top: 8px;
 }
 
 .toolsRightSectionHeader {
@@ -294,12 +295,8 @@ a.general_btn:hover {
 .rightSectionHolder {
 	font-size: 14px;
 	position: relative;
-	padding: 16px 8px 16px 13px;
+	padding: 16px 10px;
 	background: rgba( 0, 0, 0, 0.2 );
-	margin-bottom: 12px;
-}
-.right_column .rightSectionHolder {
-	margin-bottom: 0px;
 }
 
 .rightSectionHolder_noPadding .primary_panel .browsePageGotoSharedFiles {
@@ -330,7 +327,7 @@ a.general_btn:hover {
 	margin-top: 47px;
 }
 .primary_panel_border.panel_margin_none {
-	margin-top: 4px;
+	margin-top: 0;
 }
 .primary_panel_border.panel_margin_large {
 	margin-top: 65px;
@@ -344,17 +341,18 @@ a.general_btn:hover {
 {
 	padding: 0px;
 }
-.playerAvatar.workshop img {
+.playerAvatar.workshop img,
+.playerAvatar.workshop a,
+.playerAvatar.workshop {
+	display: block;
 	height: 84px;
 	width: 84px;
-	position: absolute;
-	top: 0px;
-	left: 0px;
 }
 .avatar_ctn {
 	float: left;
 	height: 84px;
 	position: relative;
+	width: 84px;
 }
 .avatar_workshop_overlay {
 	background: url('https://community.fastly.steamstatic.com/public/images/workshop/avatar_overlay.png') no-repeat 0px 0px;
@@ -371,7 +369,6 @@ a.general_btn:hover {
 }
 .current_player_workshop_title {
 	padding-top: 30px;
-	padding-left: 50px;
 	float: left;
 	color: #67c1f5;
 	font-size: 16px;
@@ -399,12 +396,6 @@ a.general_btn:hover {
 	background: no-repeat url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_box_topbtm.png' );
 	width: 295px;
 	background-position: bottom;
-}
-
-.rightDetailsBlock
-{
-	position: relative;
-	padding: 0px 8px 0px 0px;
 }
 
 .rightSectionTopTitle {
@@ -803,23 +794,6 @@ h3 {
 	text-decoration: underline;
 }
 
-	/** browse/filter **/
-
-.browseOptionImage
-{
-	position: absolute;
-	height: 35px;
-	width: 305px;
-	left: -23px;
-}
-
-.browseOption
-{
-	position: relative;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
 	/** app select **/
 
 #BG_top_workshop .appselect_container
@@ -917,148 +891,6 @@ div.appselect_nohighlight
 	border: 3px solid white;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
-}
-
-	/** day select **/
-
-div.dayselect {
-	height: 20px;
-
-	border: 1px solid #4a6922;
-	position: relative;
-	float: right;
-
-	cursor: pointer;
-	margin-right: 5px;
-	top: -3px;
-
-	width: 100px;
-	line-height: 20px;
-	color: #8a8a8a;
-	font-size: 12px;
-	background-color: #000000;
-	border: 1px solid #4a6922;
-}
-
-div.dayselect_options {
-	width: 100px;
-	line-height: 20px;
-	color: #8a8a8a;
-	font-size: 12px;
-	background-color: #000000;
-	border: 1px solid #707070;
-	z-index: 3;
-}
-
-div.dayselect #dayselect_arrow {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 17px;
-	height: 20px;
-	background-image: url( 'https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
-	background-repeat: no-repeat;
-	background-position: top center;
-}
-
-div.dayselect.focus #dayselect_arrow{
-	background-position: bottom;
-}
-
-div.dayselect div.option, div.dayselect_options div.option {
-	padding: 4px;
-	height: 14px;
-	line-height: 14px;
-	cursor: default;
-	border-bottom: none;
-}
-
-div.dayselect #dayselect_activeday
-{
-	background-color: #719F33;
-	color: #ffffff;
-	border-bottom: 1px solid #707070;
-}
-
-div.dayselect_options div.option{
-	border-bottom: none;
-}
-
-div.dayselect_options div.option:hover {
-	background-color: #333333;
-}
-
-div.dayselect div.option img, div.dayselect_options div.option img {
-	vertical-align: middle;
-}
-
-	/** sort select **/
-
-div.sortselect {
-	height: 20px;
-
-	border: 1px solid #4a6922;
-	position: relative;
-	float: right;
-
-	cursor: pointer;
-	margin-right: 5px;
-	top: -3px;
-
-	width: 130px;
-	line-height: 20px;
-	color: #8a8a8a;
-	font-size: 12px;
-	border: 1px solid #364963;
-}
-
-div.sortselect_options {
-	width: 130px;
-	line-height: 20px;
-	color: #ffffff;
-	font-size: 12px;
-	background-color: #417A9B;
-	z-index: 3;
-}
-
-div.sortselect #sortselect_arrow {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 17px;
-	height: 20px;
-	background-image: url( 'https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
-	background-repeat: no-repeat;
-	background-position: top center;
-}
-
-div.sortselect.focus #sortselect_arrow{
-	background-position: bottom;
-}
-
-div.sortselect div.option, div.sortselect_options div.option {
-	padding: 4px;
-	height: 14px;
-	line-height: 14px;
-	cursor: default;
-	border-bottom: none;
-}
-
-div.sortselect #sortselect_activesort
-{
-	color: #ffffff;
-}
-
-div.sortselect_options div.option{
-	border-bottom: none;
-}
-
-div.sortselect_options div.option:hover {
-	background-color: #212d3d;
-}
-
-div.sortselect div.option img, div.sortselect_options div.option img {
-	vertical-align: middle;
 }
 
 	/* -----[ instructions ] ----------- */
@@ -2318,23 +2150,6 @@ input[type='checkbox'] {
 	font-style: italic;
 }
 
-.searchedTermsContainer
-{
-	vertical-align: middle;
-	clear:both;
-}
-.searchedTermsContainer:empty {
-	display: none;
-}
-
-.searchedTermsContainerEndPadding
-{
-	margin-bottom: 10px;
-}
-
-
-
-
 .tagsFilterSubmitBtn
 {
 	padding-left: 4px;
@@ -2549,20 +2364,6 @@ input[type='checkbox'] {
 {
 	margin-left: 10px;
 	width: 222px;
-}
-
-.filterOption .tag_filter_control_not {
-	float: right;
-	margin: 3px 3px 0px 0px;
-	width: 16px;
-	height: 16px;
-	cursor: pointer;
-}
-.filterOption .tag_filter_control_not img {
-	opacity: 0.1;
-}
-.filterOption .tag_filter_control_not.checked img {
-	opacity: 1;
 }
 
 .breadcrumbs

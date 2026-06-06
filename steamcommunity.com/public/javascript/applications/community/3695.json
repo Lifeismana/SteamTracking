@@ -1,12 +1,17 @@
 {
     "language": "الإنجليزية",
     "LoginRedirect_Dialog_Title": "تسجيل الدخول",
+    "LoginRedirect_Dialog_Description": "سجّل الدخول لإضافة هذا العنصر إلى قائمة أمنياتك، أو لمتابعته، أو لتجاهله. سيؤدي النقر على \"موافق\" إلى إعادة توجيهك إلى صفحة تسجيل الدخول.",
+    "Wishlist_NotSignedIn": "سجل الدخول أو افتح هذه الصفحة في Steam لإضافة العنصر إلى قائمة الأمنيات أو متابعته أو شرائه.",
     "VerifiedProgram_DeckTitle": "%1$s تُعد %2$s على Steam Deck",
     "VerifiedProgram_DeckTitle_Verified": "تم التحقق منه",
+    "VerifiedProgram_DeckSubTitle": "خضعت هذه اللعبة وألعاب أخرى عديدة لاختبارات كاملة وتعمل %1$s.",
     "VerifiedProgram_GreatOnDeck": "تعمل جيدًا على Deck",
     "VerifiedProgram_DeckAlt": "علامة التحقق",
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "لافتة Steam Deck: \"ألعابك، معك في كل مكان\"",
     "VerifiedProgram_DeckDisclaimer": "قد لا يمثّل المقطع الترويجي طريقة اللعب الفعلية على Steam Deck",
+    "StoreItemFound": "تم العثور على %1$s (%2$s)",
+    "StoreItemNotFound": "لم يتم العثور عليه (%1$s)",
     "Dummy": "dummy"
 }

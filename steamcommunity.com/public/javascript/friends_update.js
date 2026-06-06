@@ -341,7 +341,9 @@ $J(document ).ready(function(){
 
 
 			var content = $J(j).clone();
-			var modal = new CModal(  content, {} );
+			var dialog = $J( '<dialog/>' );
+			dialog.append( content );
+			var modal = new CModal(  dialog, {} );
 
 
 

@@ -8,6 +8,7 @@
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
@@ -36,11 +37,14 @@
         SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
+        IndicatorPosition: "_1Dgxrv7wtUW1EViSgrdMlA",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
         "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
         "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
+        disabled: "_3gVhaCZ4k3QSnF9WhRZk5m",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
+        "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
         "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
       };
     },
@@ -373,45 +377,6 @@
         "ItemFocusAnim-green": "_3DJ7-ozfbmWiW9sFiyrIsz",
         focusAnimation: "_4EfsGVQ9T6jp3Au9FW6bc",
         hoverAnimation: "_1F117LcLa8O5wSOCVaeow0",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
-        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
-        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
-        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
-        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
-        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
-        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
-        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
-        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
-        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
-        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
-        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
-        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
-        Caps3: "ch0xp_kjApA24ePv-4mUf",
-        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
-        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
-        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
-        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
-        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
-        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
-        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
-        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
-        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
-        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
-        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
-        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
-        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
-        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
-        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
-        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
-        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
-        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
-        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
-        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
-        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
       };
     },
     chunkid: (module) => {
@@ -948,6 +913,7 @@
     chunkid: (module) => {
       module.exports = {
         ExplorationModeTitle: "_2Yw2Zq7DhXUnz__aZKNc_r",
+        ValveOnly: "_35cCdGHtNkKFj006w-Giut",
         ExplorationModeContent: "_38138ngfKoemnKfJzKW9GG",
         ExplorationModeToggle: "jCg8gWGML1DAedhv9S7Bz",
         OptionDisabled: "qeM14TZHm0uJ8srLTpEO4",
@@ -1453,9 +1419,12 @@
         });
       }
       function _(_) {
+        const { radius: _ } = _;
         return (0, _.jsx)(_._, {
-          className: _.Indicator,
-          radius: _.radius,
+          className: _.IndicatorPosition,
+          children: (0, _.jsx)("div", {
+            className: _.Indicator,
+          }),
         });
       }
       function _(_, _) {
@@ -1467,7 +1436,7 @@
             : 0;
       }
       (_.Item = function (_) {
-        const { value: _, children: _ } = _,
+        const { value: _, children: _, disabled: _ } = _,
           _ = (0, _.useContext)(_),
           [_, _] = (0, _.useState)(),
           { register: _, unregister: _ } = _ || {};
@@ -1481,16 +1450,16 @@
           return null;
         const { value: _, onValueChange: _, radius: _, size: _ } = _,
           _ = _ === _,
-          _ = _ ? void 0 : () => _(_),
           _ = void 0 === _ ? _ : _;
         return (0, _.jsx)(_._, {
           justify: "center",
           align: "center",
-          radius: _,
           ref: _,
-          onClick: _,
+          onClick: (_) => {
+            _.stopPropagation(), _.preventDefault(), _ || _ || _(_);
+          },
           "data-selected": _ ? "true" : "false",
-          className: _()(_.Item, _ && _[`Size-${_}`]),
+          className: _()(_.Item, _ && _[`Size-${_}`], _ ? _.disabled : ""),
           children: _,
         });
       }),
@@ -1575,8 +1544,11 @@
             },
             children: (0, _.jsx)(_.Provider, {
               value: _,
-              children: (0, _.jsxs)("div", {
+              children: (0, _.jsxs)(_._, {
                 className: _.SegmentedControl,
+                style: {
+                  "--outer-radius": `var(--radius-${_})`,
+                },
                 children: [
                   _,
                   null !== _ &&
@@ -4788,407 +4760,6 @@
         return (0, _.jsx)(_.Fragment, {
           children: __webpack_require__.ParseBBCode(_, void 0),
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-          capsules_per_row: _,
-          is_generic: _,
-          is_generic_trailer: _,
-          is_event_dash_row: _,
-          is_trailer_carousel: _,
-          is_spotlights: _,
-          is_item_browser: _,
-          is_maincap: _,
-          is_expanded_maincap: _,
-          is_expanded_display: _,
-          show_auto_advance_bar: _,
-        } = _;
-        if (!_) return null;
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderBox,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderVideo,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsxs)("div", {
-            className: _().GhostCtn,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().TrailerCarouselRow,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().VideoPlaceholder,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().ItemDescPlaceholer,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                ],
-              }),
-              _ &&
-                (0, _.jsx)("div", {
-                  className: _().AutoAdvanceBar,
-                  children: (0, _.jsx)("div", {
-                    className: _().ShineCtn,
-                  }),
-                }),
-            ],
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().EventRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().PlaceholderGroupImage,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderButtons,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().SpotlightsRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().DailyDealsColumn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_().MainCapRow]: !0,
-                [_().MainCapRowExpanded]: _,
-              }),
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderRelease,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderReviews,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTags,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().ExpandedItemRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().CapsulePlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().ItemDefPlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-              ],
-            }),
-          });
-        if (_) {
-          const _ = [];
-          for (let _ = 0; _ < _[0]; _++)
-            _.push(
-              (0, _.jsx)(
-                "div",
-                {
-                  className: _().ItemBrowserCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                },
-                "item_browse_ghost_" + _,
-              ),
-            );
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: _,
-          });
-        }
-        return 1 == _?.length
-          ? 1 == _[0]
-            ? (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsx)("div", {
-                  className: _().CapsuleRowSuperCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                }),
-              })
-            : 4 == _[0]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow4,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow3,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-          : 2 == _?.length
-            ? 3 == _[0] && 3 == _[1]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps2),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-            : (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsxs)("div", {
-                  className: _().CapsuleRow234,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps2),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps3),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps4),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -9749,6 +9320,7 @@
             ref: this.m_hSlider,
             className: this.props.className,
             onPointerDown: this.OnPointerDown,
+            "flow-children": "row",
             children: this.props.children,
           });
         }
@@ -10859,10 +10431,12 @@
         switch (_) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
+          case "#Sale_Reservation_ByYear":
             _ = "" + _.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
+          case "#Sale_Reservation_ByMonthYear":
             (_ = (0, _._)("#Sale_Reservation_MonthNoun_" + _)),
               (_ = "" + _.getFullYear());
             break;
@@ -16418,6 +15992,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -16934,8 +16515,7 @@
         };
         window.sessionStorage.setItem(_, JSON.stringify(_));
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         if (null == _ || null == _) return null;
         let _ = _ + "_" + _;
@@ -17351,7 +16931,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
@@ -17371,23 +16950,7 @@
         ).Unregister;
         return () => _();
       }
-      async function _(
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _ = 0,
-        _ = void 0,
-        _,
-        _,
-        _,
-      ) {
+      async function _(_, _, _, _, _, _, _, _, _, _, _ = 0, _, _, _, _) {
         const _ = _(_, _, _, _);
         if ((0, _._)(_.section_type) && "sale_tabhub" != (0, _._)(_))
           return await _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _);
@@ -17688,7 +17251,7 @@
                     );
                     const _ = _._.Get().GetStoreItem(_, _._._);
                     return _
-                      ? _.GetPlatforms().steam_deck_compat_category ===
+                      ? _.GetPlatforms()?.steam_deck_compat_category ===
                           _.smart_section_deck_compatibility
                       : (console.warn(
                           "Failed to get deck top 100 store item",
@@ -18022,10 +17585,20 @@
               ((_ = _.filter((_) => _._ !== _.firstCapsule?._)),
               _.unshift(_.firstCapsule)),
             _.enable_faceted_browsing &&
-              (_.SetFacetCounts(_.facetCounts),
+              ((0, _._)(
+                _,
+                "facetFilterState is missing when facetting is enabled (1)",
+              ),
+              _.SetFacetCounts(_.facetCounts),
               _.SetSolrMatchCount(_.nMatchCount));
         } else if (_.enable_faceted_browsing) {
-          if (_.featured_app_tagid) {
+          if (
+            ((0, _._)(
+              _,
+              "facetFilterState is missing when facetting is enabled (2)",
+            ),
+            _.featured_app_tagid)
+          ) {
             const _ = await _._.fetchQuery(
               (function (_, _, _, _, _, _ = null, _ = null) {
                 const _ = _?.GetQuery(),
@@ -18139,7 +17712,7 @@
           _ && (_ = _(_)),
           _.BUsesContentHubForItemSource() ||
             _.enable_faceted_browsing ||
-            (_ = _.filter((_) => _.ShouldShowCapsule(_))),
+            (_ = _.filter((_) => _ && _.ShouldShowCapsule(_))),
           (_ = _._ ? (0, _._)(_, _) : _);
         const _ = (0, _._)(_.unique_id, _?.GetActiveTabUniqueID());
         _ && _(_, _, _);
@@ -18167,7 +17740,11 @@
         let _,
           _ = new Array();
         if (_.enable_faceted_browsing) {
-          _ = await _.ApplyUserPreferenceFilters(_, _, _);
+          (0, _._)(
+            _,
+            "facetFilterState is missing when facetting is enabled (3)",
+          ),
+            (_ = await _.ApplyUserPreferenceFilters(_, _, _));
           const _ = _ || _;
           _.UpdateMatchCount(_, _.length);
         }
@@ -18239,11 +17816,7 @@
         };
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       const _ = new _._("TrailerAppVideo"),
         _ = "trailercarousel",
         _ = "trailercarousel_seen_intro_video",
@@ -18270,7 +17843,7 @@
         (0, _._)(_, _._);
         const _ = _.useMemo(
             () =>
-              _ > 0
+              _ && _ > 0
                 ? [
                     {
                       type: "game",
@@ -18280,7 +17853,7 @@
                 : [],
             [_],
           ),
-          _ = ((_ = _), _.useMemo(() => _().includes(_), [_]));
+          _ = ((_ = _), _.useMemo(() => !!_ && _().includes(_), [_]));
         var _;
         const [_, _] = _.useState(_ && _ ? 1 : 0),
           [_, _] = _.useState(!0),
@@ -18292,6 +17865,7 @@
             const _ = (0, _._)(),
               [_, _] = _.useState(!0),
               [_, _] = _.useState([]),
+              _ = (0, _._)(),
               _ = (0, _._)(),
               _ = (0, _._)(),
               _ = (0, _._)(),
@@ -18353,10 +17927,18 @@
                           .GetApp(_._)
                           ?.BHasTrailers("blocked" == _),
                       ));
-                  const _ = _.slice(_, _ + _).map((_) => _._);
-                  if (
-                    (await _._.Get().QueueMultipleAppRequests(_, _._)) == _._
-                  ) {
+                  const _ = _.slice(_, _ + _).map((_) => _._),
+                    [_] = await Promise.all([
+                      _._.Get().QueueMultipleAppRequests(_, _._),
+                      ..._.map((_) =>
+                        _.prefetchQuery(
+                          (0, _._)(_, {
+                            appid: _,
+                          }),
+                        ),
+                      ),
+                    ]);
+                  if (_ == _._) {
                     const _ = _.flatMap((_) =>
                       _._.Get().GetApp(_).GetDemoStandaloneStorePageAppIDs(),
                     );
@@ -18383,6 +17965,7 @@
               _,
               _,
               _.enable_faceted_browsing,
+              _,
               _,
               _,
               _,
@@ -18461,6 +18044,7 @@
               _().TrailerCarouselCtn,
             ),
             style: (0, _._)(_, _, _),
+            holdGamepadFocus: _,
             children: [
               (0, _.jsx)(_._, {
                 section: _,
@@ -18474,7 +18058,7 @@
                 showDemoInfo: _.show_as_demos,
                 bStartVideoWhenHidden: !_,
                 fnNavigate: _,
-                introVideo: _,
+                introVideo: !!_,
                 appIndex: _,
                 appCount: _,
                 arrowFill: _.jsondata?.sale_carousel_arrow_color,
@@ -18672,8 +18256,8 @@
                             {
                               appID: _,
                               preferDemoStorePage: _.bPreferDemoStorePage,
-                              showDemoInfo: _,
-                              introVideo: _,
+                              showDemoInfo: !!_,
+                              introVideo: !!_,
                             },
                             _,
                           ),
@@ -18724,8 +18308,11 @@
           _ = _(_, _),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          _ = _.GetAssets().GetMainCapsuleURL() ?? _.GetAssets().GetHeaderURL(),
-          _ = _.GetAssets().GetLibraryCapsuleURL(),
+          { data: _ } = (0, _._)(_),
+          _ = _
+            ? ((0, _._)(_, "main_capsule") ?? (0, _._)(_, "header"))
+            : void 0,
+          _ = _ ? (0, _._)(_, "library_capsule") : void 0,
           _ = (_ ?? _)?.GetFormattedSteamReleaseDate(),
           _ =
             _?.type != _._._ || _?.HasDemoStandaloneStorePage()
@@ -18868,7 +18455,7 @@
       }
       function _() {
         try {
-          return JSON.parse(localStorage.getItem(_)) ?? [];
+          return JSON.parse(localStorage.getItem(_) ?? "{}") ?? [];
         } catch (_) {
           return [];
         }
@@ -18878,12 +18465,12 @@
           let _;
           try {
             const _ = window.localStorage.getItem(_);
-            _ = _ && JSON.parse(_);
+            (_ = _ && JSON.parse(_)),
+              __webpack_require__?.every((_) => "appid" in _ && "count" in _) &&
+                __webpack_require__.forEach(({ appid: _, count: _ }) => {
+                  _.set(_, _);
+                });
           } catch (_) {}
-          __webpack_require__?.every((_) => "appid" in _ && "count" in _) &&
-            __webpack_require__.forEach(({ appid: _, count: _ }) => {
-              _.set(_, _);
-            });
         }, [_, _]);
       }
       var _ = __webpack_require__("chunkid");
@@ -19045,8 +18632,9 @@
         return (
           _ && _.length > 0 && (_ = _),
           _ || _ || !_
-            ? (0, _.jsx)("div", {
+            ? (0, _.jsx)(_._, {
                 className: _.TrailerCarouselApp,
+                focusable: !0,
                 children: (0, _.jsx)(_._, {
                   capsules_per_row: [1],
                   is_trailer_carousel: !0,
@@ -19177,7 +18765,6 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19635,7 +19222,6 @@
         return _.tuple_id.split("_").map((_) => Number(_));
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -20030,6 +19616,7 @@
                         (0, _.jsx)(_._, {
                           snr: _,
                           _: _,
+                          bShowInGamepadUI: !0,
                           classOverride: (0, _._)(
                             _().WishlistButtonNotTop,
                             "WishlistButton",
@@ -22043,6 +21630,7 @@
               }),
               rootMargin: _._,
               onRender: () => _._.Get().AddInteraction(_.unique_id, 0),
+              holdGamepadFocus: _,
               children: [
                 (0, _.jsx)("div", {
                   className: (0, _._)(
@@ -23308,7 +22896,6 @@
                   (0, _.jsx)(_._, {
                     className: _().SaleItemBrowserHeaderContainer,
                     children: (0, _.jsxs)(_._, {
-                      "flow-children": "row",
                       className: _().SaleItemBrowserHeader,
                       children: [
                         _,
@@ -27247,9 +26834,10 @@
           ? 0 == _.length
             ? null
             : _.dlc_for_you_data?.group_by_parent_app
-              ? (0, _.jsxs)("div", {
+              ? (0, _.jsxs)(_._, {
                   className: (0, _._)(_.SaleSection),
                   style: (0, _._)(_, _, _),
+                  scrollIntoViewWhenChildFocused: !0,
                   children: [
                     _.dlc_for_you_data?.hide_dlc_grouping
                       ? (0, _.jsx)("div", {
@@ -27656,7 +27244,7 @@
               _
             );
           }, []);
-        return (0, _.jsx)("div", {
+        return (0, _.jsx)(_._, {
           className: (0, _._)(
             _.ParentAppSortTabsCtn,
             _.SaleSection,
@@ -27667,6 +27255,7 @@
           style: {
             ...(0, _._)(_, _, _),
           },
+          "flow-children": "row",
           children: (0, _.jsxs)("div", {
             className: _.ParentAppSortTabScrollCtn,
             children: [
@@ -29897,14 +29486,25 @@
               _,
             ));
         }
+        const _ = _.BShowNextFestHeader(!0) && !_.BShowNextFestHeader(!1);
         return (0, _.jsxs)("div", {
-          className: _().SaleSection,
+          className: (0, _._)(_().SaleSection, _().ExplorationModeCtn),
           children: [
-            (0, _.jsx)("div", {
+            (0, _.jsxs)("div", {
               className: _().ExplorationModeTitle,
-              children: (0, _._)(
-                "#SaleSectionNextFestHeader_ExplorationMode_Title",
-              ),
+              children: [
+                (0, _._)("#SaleSectionNextFestHeader_ExplorationMode_Title"),
+                (0, _.jsx)("span", {
+                  children: (0, _._)(
+                    "#SaleSectionNextFestHeader_ExplorationMode_SubTitle",
+                  ),
+                }),
+                _ &&
+                  (0, _.jsx)("span", {
+                    className: _().ValveOnly,
+                    children: "(VO)",
+                  }),
+              ],
             }),
             (0, _.jsxs)("div", {
               className: _().ExplorationModeContent,
@@ -29926,8 +29526,8 @@
                       );
                       var _;
                     },
-                    variant: "default",
-                    radius: "sm",
+                    variant: "inset-glass",
+                    radius: "md",
                     children: [
                       (0, _.jsx)(_._.Item, {
                         value: _._.Random,
@@ -29937,12 +29537,10 @@
                       }),
                       (0, _.jsx)(_._.Item, {
                         value: _._.Personalized,
-                        children: (0, _.jsx)("div", {
-                          className: (0, _._)(!_ && _().OptionDisabled),
-                          children: (0, _._)(
-                            "#SaleSectionNextFestHeader_ExplorationMode_Personalized",
-                          ),
-                        }),
+                        disabled: !_,
+                        children: (0, _._)(
+                          "#SaleSectionNextFestHeader_ExplorationMode_Personalized",
+                        ),
                       }),
                     ],
                   }),

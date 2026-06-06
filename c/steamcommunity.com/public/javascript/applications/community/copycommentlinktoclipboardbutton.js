@@ -17,6 +17,28 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, _] = (0, _.useState)(
+            () => void 0 !== localStorage.floatingforumreportedsubjectslist,
+          ),
+          _ = (0, _.useMemo)(() => {
+            let _ = window.location.href.split("#")[0];
+            return null !== _.gidcomment && (_ += "#c" + _.gidcomment), _;
+          }, [_.gidcomment]);
+        return (0, _.jsx)(_._, {
+          text: _,
+          size: _ ? "large" : "small",
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -53,19 +75,6 @@
               (0, _.jsx)(_.cKB, {}),
             ],
           }),
-        });
-      }
-      function _(_) {
-        const [_, _] = (0, _.useState)(
-            () => void 0 !== localStorage.floatingforumreportedsubjectslist,
-          ),
-          _ = (0, _.useMemo)(() => {
-            let _ = window.location.href.split("#")[0];
-            return null !== _.gidcomment && (_ += "#c" + _.gidcomment), _;
-          }, [_.gidcomment]);
-        return (0, _.jsx)(_, {
-          text: _,
-          size: _ ? "large" : "small",
         });
       }
     },

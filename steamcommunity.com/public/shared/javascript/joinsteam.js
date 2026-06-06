@@ -1078,6 +1078,3 @@ function OnCountryChange( elCountry )
 	}
 }
 
-
-
-

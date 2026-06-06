@@ -195,7 +195,7 @@
 }
 .BasicUI ._1snIw0RvJduvDtqpmwtKJ9 {
   margin: unset;
-  gap: var(--gpSpace-Gap);
+  gap: var(--gpSpace-Gap, 12px);
 }
 ._2vEwZPNBe2qcTuxZf5cpiD {
   display: flex;
@@ -4459,10 +4459,10 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   font-weight: 300;
   color: #acb2b8;
   font-size: 16px;
-  overflow: visible;
   outline: none;
+  overflow: visible;
 }
-._1mPKxUDAZ01x-i7612JIsL ._79d7mzfWutbJb1DCbh1Du {
+._1mPKxUDAZ01x-i7612JIsL :where(._79d7mzfWutbJb1DCbh1Du) {
   background:
     radial-gradient(
       circle at top left,
@@ -4473,7 +4473,7 @@ html:has(dialog.ycpazsHLq6lCBFmWPCLCZ[open]) {
   overflow: auto;
   overscroll-behavior: contain;
 }
-._1mPKxUDAZ01x-i7612JIsL ._79d7mzfWutbJb1DCbh1Du:before {
+._1mPKxUDAZ01x-i7612JIsL :where(._79d7mzfWutbJb1DCbh1Du):before {
   content: " ";
   display: block;
   width: 100%;

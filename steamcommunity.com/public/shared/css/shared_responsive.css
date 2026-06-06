@@ -711,7 +711,6 @@ html.responsive body.movescrolltocontent {
 
 	html.responsive .responsive_page_template_content {
 		padding-bottom: 120px;
-		min-height: calc( 100vh - 120px - var( --responsive-menu-floating-height, 0px ) - var( --store-menu-overlap-height, 0px ) );
 	}
 
 	html.responsive .perf_timing_area {
@@ -768,7 +767,6 @@ html.responsive body.movescrolltocontent {
 
 	html.responsive.touch .responsive_page_template_content {
 		padding-bottom: 120px;
-		min-height: calc( 100vh - 120px - var( --responsive-menu-floating-height, 0px ) - var( --store-menu-overlap-height, 0px ) );
 	}
 
 	html.responsive.touch .perf_timing_area {
@@ -821,13 +819,12 @@ html.responsive body.movescrolltocontent {
 .responsive_tab_control select {
 	color: #ffffff;
 	background: rgba(0,0,0,0.3);
-	/*background: #3a6d8b;*/
-    padding: unset;
+	padding: unset;
 	border: none;
 	font-size: 16px;
 	height: 24px;
 	max-width: 98%;
-	min-width: 250px;
+	width: 250px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 

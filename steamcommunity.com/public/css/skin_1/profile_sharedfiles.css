@@ -7,20 +7,20 @@
  }
 
  .sharedfiles_tabs_ctn {
-	 max-width: 958px;
 	 margin: 0 auto;
 	 max-width: 958px;
  }
 
 #BG_top_sharedfiles {
-	height: 102px;
+	box-sizing: border-box;
+	height: 114px;
 	position:relative;
 	min-height:70px;
 	text-align: left;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	padding-bottom: 12px;
+	align-items: start;
+	padding-block: 14px;
 	background: #3a3e4780;
 }
 
@@ -63,7 +63,7 @@
 	width: 68px;
 	height: 68px;
 	margin-inline-start: 30px;
-	margin-top: 18px;
+	margin-top: 12px;
 	display: inline-block;
 }
 
@@ -84,10 +84,6 @@
 	font-size: 18px;
 }
 
-
-#SharedFileDisplaySelect {
-	margin-top: 3px;
-}
 
 #followButtonHolder {
 	float: right;
@@ -255,19 +251,27 @@ a.general_btn:hover {
  */
 
 #FilterContainer {
+	align-items: center;
 	color: #58759f;
-	padding-left: 15px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: 16px;
+	padding: 2px 0 0 15px;
 }
 
 .sharedfiles_usercontrol_ctn {
-	display: inline-block;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
 }
 
 .sharedfiles_usercontrols_label {
 	display: inline-block;
 	color: #939393;
 	vertical-align: top;
-	line-height: 26px;
+	line-height: 20px;
 }
 
 div.sharedfiles_filterselect {
@@ -276,9 +280,6 @@ div.sharedfiles_filterselect {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 12px;
-	height: 26px;
-	line-height: 26px;
-	margin-inline: 1px 8px;
 	position: relative;
 	text-align: left;
 	user-select: none;
@@ -338,9 +339,7 @@ div.sharedfiles_filterselect.focus .sharedfiles_filterselect_arrow{
 div.sharedfiles_filterselect div.option, div.sharedfiles_filterselect_options div.option {
 	border-bottom: none;
 	cursor: default;
-	height: 24px;
-	line-height: 24px;
-	padding-inline: 7px;
+	line-height: 20px;
 }
 
 div.sharedfiles_filterselect_options div.option{
@@ -351,7 +350,7 @@ div.sharedfiles_filterselect_options div.option{
 div.sharedfiles_filterselect div.sharedfiles_filterselect_activeoption {
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/sharedfiles/workshop_dateselect_arrow.png' );
 	background-repeat: no-repeat;
-	background-position: top right;
+	background-position: top calc( 50% - 10px ) right;
 	padding-right: 17px;
 	color: #ebebeb;
 }
@@ -420,10 +419,6 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 	cursor: pointer;
 	color: white;
 	font-size: 12px;
-	height: 26px;
-	line-height: 26px;
-	margin-top: 3px;
-	padding-right: 5px;
 	text-align: left;
 }
 
@@ -441,7 +436,10 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 
 .favoritesRadioText
 {
+	align-items: center;
 	color: #e1e1e1;
+	display: flex;
+	flex-direction: row;
 }
 
 #ScreenshotManagementControls {
@@ -451,12 +449,12 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 #ScreenshotManagementControlsTop {
+	align-items: center;
+	background: rgba(0,0,0,0.3);
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-
+	gap: 10px;
 	padding: 3px 8px;
-	background: rgba(0,0,0,0.3);
 }
 
 #ScreenshotManagementControlsBottom {
@@ -465,6 +463,7 @@ div.sharedfiles_filterselect div.option img, div.sharedfiles_filterselect_option
 }
 
 .ScreenshotManagementLabel {
+	margin-block: 5px;
 	text-transform: uppercase;
 }
 

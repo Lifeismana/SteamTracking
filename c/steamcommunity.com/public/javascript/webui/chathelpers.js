@@ -25,6 +25,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_japanese.json": [611, 3485],
           "./friendsui_koreana.json": [33731, 6971],
           "./friendsui_latam.json": [923, 1499],
+          "./friendsui_malay.json": [37028, 2532],
           "./friendsui_norwegian.json": [80148, 4776],
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
@@ -73,6 +74,7 @@ var CLSTAMP = "steamdb";
           "./friendsui_japanese.json": [611, 3485],
           "./friendsui_koreana.json": [33731, 6971],
           "./friendsui_latam.json": [923, 1499],
+          "./friendsui_malay.json": [37028, 2532],
           "./friendsui_norwegian.json": [80148, 4776],
           "./friendsui_polish.json": [92357, 6127],
           "./friendsui_portuguese.json": [77505, 3415],
@@ -121,6 +123,7 @@ var CLSTAMP = "steamdb";
           "./shared_japanese.json": [13448, 1973],
           "./shared_koreana.json": [13578, 7539],
           "./shared_latam.json": [85570, 2435],
+          "./shared_malay.json": [17017, 6332],
           "./shared_norwegian.json": [48237, 2320],
           "./shared_polish.json": [79530, 8967],
           "./shared_portuguese.json": [76682, 6239],
@@ -169,6 +172,7 @@ var CLSTAMP = "steamdb";
           "./shared_japanese.json": [13448, 1973],
           "./shared_koreana.json": [13578, 7539],
           "./shared_latam.json": [85570, 2435],
+          "./shared_malay.json": [17017, 6332],
           "./shared_norwegian.json": [48237, 2320],
           "./shared_polish.json": [79530, 8967],
           "./shared_portuguese.json": [76682, 6239],
@@ -351,6 +355,7 @@ var CLSTAMP = "steamdb";
             IN_MOBILE_WEBVIEW: !1,
             IN_TENFOOT: !1,
             PLATFORM: "",
+            ARCH: "",
             SNR: "",
             LAUNCHER_TYPE: 0,
             EREALM: 0,
@@ -375,11 +380,11 @@ var CLSTAMP = "steamdb";
             DEV_MODE: !1,
             IN_STEAMUI: !1,
             IN_GAMEPADUI: !1,
-            IN_STEAMUI_SHARED_CONTEXT: !1,
             FORCED_DISPLAY_MODE: void 0,
             ON_DECK: !1,
             ON_FRAME: !1,
             ON_STEAMOS: !1,
+            ON_STEAMOS_CLIENT_BRANCH: !1,
             IN_GAMESCOPE: !1,
             IN_LOGIN: !1,
             IN_LOGIN_REFRESH: !1,
@@ -716,7 +721,8 @@ var CLSTAMP = "steamdb";
             (_[(_.kPFIFlag_HasAuthorSnapshots = 268435456)] =
               "kPFIFlag_HasAuthorSnapshots");
         })(_ || (_ = {}));
-        const _ = 2147483647;
+        const _ = 2147483647,
+          _ = 30;
         function _(_, _ = 0) {
           switch (_) {
             case "english":
@@ -781,7 +787,9 @@ var CLSTAMP = "steamdb";
             case "sc_schinese":
               return 29;
             case "indonesian":
-              return 30;
+              return _;
+            case "malay":
+              return 31;
             default:
               return _;
           }
@@ -1149,7 +1157,7 @@ var CLSTAMP = "steamdb";
           }
           static GetLanguageListForRealms(_) {
             const _ = new Array();
-            for (let _ = 0; _ < 31; _++)
+            for (let _ = 0; _ < 32; _++)
               for (const _ of _)
                 if (this.IsELanguageValidInRealm(_, _)) {
                   _.push(_);
@@ -2027,6 +2035,7 @@ var CLSTAMP = "steamdb";
           m_pauseTimer = void 0;
           m_fnGetReportingInterval = _;
           m_fnGetReportTags = () => [];
+          m_fnGetURL = () => location.href;
           m_bEnabled = !0;
           m_bInitialized = !1;
           constructor(_ = !0) {
@@ -2059,6 +2068,7 @@ var CLSTAMP = "steamdb";
               _.fnGetReportingInterval &&
                 (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
               _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
+              _.fnGetURL && (this.m_fnGetURL = _.fnGetURL),
               this.m_bEnabled ||
                 (console.error(
                   "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -2067,6 +2077,9 @@ var CLSTAMP = "steamdb";
               this.m_rgErrorQueue.length &&
                 (this.SendErrorReports(this.m_rgErrorQueue),
                 (this.m_rgErrorQueue = []));
+          }
+          SetGetURL(_) {
+            this.m_fnGetURL = _;
           }
           async ReportError(_, _) {
             if (!_)
@@ -2191,6 +2204,7 @@ var CLSTAMP = "steamdb";
                     _.message.splice(1, _.cCallsitesToIgnore),
                   _.strComponentStack &&
                     (_.strComponentStack = _.strComponentStack),
+                  (_.strUrl = this.m_fnGetURL()),
                   this.SendErrorReport(_),
                   _)
                 : null;
@@ -2261,16 +2275,15 @@ var CLSTAMP = "steamdb";
               _ = Object.keys(_).map((_) => {
                 const { report: _, count: _ } = _[_],
                   _ = new _._();
+                let _;
                 return (
                   _.set_count(_),
                   _.set_identifier(_.identifier + " " + _.identifierHash),
                   _.set_message(JSON.stringify(_.message)),
                   _.strComponentStack &&
-                    _.set_context(
-                      JSON.stringify({
-                        componentStack: _.strComponentStack,
-                      }),
-                    ),
+                    ((_ ??= {}), (_.componentStack = _.strComponentStack)),
+                  _ && _.set_context(JSON.stringify(_)),
+                  _.strUrl && _.set_url(_.strUrl),
                   _
                 );
               });
@@ -2884,6 +2897,7 @@ var CLSTAMP = "steamdb";
         2256: "shared_english-json",
         2320: "shared_norwegian-json",
         2435: "shared_latam-json",
+        2532: "friendsui_malay-json",
         2632: "shared_spanish-json",
         2749: "shared_romanian-json",
         2945: "friendsui_russian-json",
@@ -2913,6 +2927,7 @@ var CLSTAMP = "steamdb";
         6165: "shared_hungarian-json",
         6208: "shared_german-json",
         6239: "shared_portuguese-json",
+        6332: "shared_malay-json",
         6385: "friendsui_bulgarian-json",
         6518: "friendsui_arabic-json",
         6523: "shared_danish-json",
@@ -2941,64 +2956,66 @@ var CLSTAMP = "steamdb";
       {
         43: "93cb79b044e7536c3480",
         762: "8a41f18c9f3ef97f5303",
-        976: "48d9a7e5ef21b9b87ecf",
-        1225: "f26be2a1aa3ff5507223",
-        1449: "9421448f16290c9d3959",
+        976: "74820ed13b81e42a2ba4",
+        1225: "7512efb5922f36bb1a17",
+        1449: "be34a4d4a3e4ea5a260b",
         1499: "9fe8b05c384130e7eefa",
-        1973: "fe0041c21185b923a4fc",
-        2256: "1d12c120ec50d56db02b",
-        2320: "d80a922e816322133c43",
-        2435: "57bbd0c1171655682197",
-        2632: "a4f37fe4d451a6a6f688",
-        2749: "57fd4c93b725e6db3928",
+        1973: "297d79a8ed49a4c34920",
+        2256: "dd618349a5110d7a8460",
+        2320: "989e4c23359ac2bdd8f5",
+        2435: "7cdf6acaf218f502b153",
+        2532: "dcb8b3c7c4c795e99ba1",
+        2632: "26f6a47b49956caa0c77",
+        2749: "2b979c2c44436d6f7d3b",
         2945: "2895f4933307edc83db3",
-        2954: "53c6296e864a4fda582a",
+        2954: "498848b58d758f114d0b",
         3e3: "f25eceb68319028bebb7",
         3016: "5350f4e10ad588ceb109",
         3232: "24d7f289046539df24da",
         3415: "af0a539ae9a2911a881f",
         3485: "dc24d873e5b1cbdc703a",
-        3710: "ff60fbbd5368d5626880",
+        3710: "54f1f7da608c63fe3a3f",
         3789: "054d0d1457e489ab83cd",
-        3912: "55634086bc1892760922",
+        3912: "e68862febb6376ff49d1",
         4154: "a42f5c8a931faec32b3e",
         4302: "5f96b098b87755d88881",
         4434: "a4963ad2ec6ec578498d",
         4488: "6fc4650152e31925c959",
         4776: "fcef25c79464d2dab63c",
         4787: "f933b9746b9145fdf8c7",
-        5018: "1f8104083ac4fb14d5b6",
-        5110: "4ea40c1561f5076ac561",
-        5241: "9093664b4e9e81b7fd87",
+        5018: "797ed6ada6a68344276d",
+        5110: "cbb60d8629acf8075f7f",
+        5241: "de7f16bf9716606feb2e",
         5341: "7a78f0e1927e9759e826",
         5480: "d623db031a5e27e6bd30",
-        6031: "cba5db2f2e90f714ebda",
+        6031: "92c29659ec5f6786f35d",
         6127: "079be2dc7d25f9ce1c8d",
-        6149: "e66c2a82897ef0569b7a",
-        6165: "b2ae6a979c331b2bbbef",
-        6208: "4b983a32d7728cc10a17",
-        6239: "7d4a82e04ccdff46658e",
+        6149: "97040f065cae320921ba",
+        6165: "beea73d75bbee99785e7",
+        6208: "9acac49e8fb018aaee3b",
+        6239: "80f5487acd6154b78fd8",
+        6332: "16a9d6185c3c6b60b226",
         6385: "f66f814b48e10c54f083",
-        6518: "c15de94ae757264a6aa2",
-        6523: "4b1fc0babb5a71d2fd4b",
-        6562: "ae7b18e826dcd6d5d241",
+        6518: "6d5149aca938984c98c7",
+        6523: "20eaceb495dcfe8287a1",
+        6562: "7d9bb53902f94095eb00",
         6609: "e86f870358e54ad3dfa0",
         6888: "2ae8e28929899aaa51ef",
         6971: "927e8e6288879eb94909",
         7487: "57b6d1e2b2714ad59b41",
-        7539: "e9a147f9cc6103fd127b",
-        7591: "cce36790b190fbadb5bb",
-        7786: "353fe6ffd3fef29c5b19",
+        7539: "c18394e7e44beb092ed7",
+        7591: "65dea1d8d831c37f1e19",
+        7786: "92980eeb3a0ace13c873",
         7861: "2a1b2fbd3a988273124b",
-        8025: "05f0723052467a03dcd7",
+        8025: "7318912db5de9f56689c",
         8194: "0919c0bfecd38a2be954",
-        8306: "20a42735e7b97224db49",
+        8306: "5d5a6ae24da8b1cc1853",
         8759: "ea1ea31bf8c3bbce45b3",
         8766: "62af14dba1cfc865f4aa",
-        8967: "93be017011fc369117bf",
-        9027: "b8c9459aa9211367bbc2",
-        9152: "96697cb927a5df2f2879",
-        9712: "ae11c1abcbc2f54d036e",
+        8967: "be5cfd7781eca0f59f34",
+        9027: "8429762babf935443b49",
+        9152: "1dd45c93219229143b0a",
+        9712: "a99f93bd72c8edcd0eb2",
         9746: "e66c1783691186eb564b",
         9808: "e4839ddff0a542d52a00",
       }[_]),
@@ -3146,6 +3163,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(57100));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(2245));
   _ = _._(_);
 })();

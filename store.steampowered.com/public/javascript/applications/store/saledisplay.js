@@ -4453,7 +4453,7 @@
                           o.GetSaleSectionByID(e),
                           d,
                           i,
-                          o.GetSaleSectionIndexByID(e),
+                          o.GetSaleSectionIndexByID(e, !0),
                         ),
                       },
                       "li_" + e,
@@ -4781,33 +4781,44 @@
           const e =
               t.jsondata.localized_sale_logo &&
               t.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
-            g = t
+            g = t.BUsesContentHubForItemSource(),
+            u = t
               .GetSaleSections()
               .some((e) => "contenthubtitle" === e.section_type),
-            u = t.BUsesContentHubForItemSource() && g;
-          let I;
-          I = e
+            I = g && u;
+          let S;
+          S = e
             ? 0
             : t.BUsesContentHubForItemSource()
               ? 20
               : t.jsondata.sale_header_offset || 0;
-          let S = !1;
-          530 === t.jsondata.sale_header_offset && (S = !0);
-          const w = oe.nY
+          let w = !1;
+          530 === t.jsondata.sale_header_offset && (w = !0);
+          const D = oe.nY
               .Get()
               .BIsPartnerTakeoverActive(
                 t.GetContentHubType(),
                 t.GetContentHubCategory(),
                 t.GetContentHubTag(),
               ),
-            D = Boolean(!w),
-            T = c
+            T = Boolean(!D),
+            L = c
               ? !k && m?.BIsBackgroundImageEnabled()
                 ? je.S.EPreviewMode_EditBackground
                 : je.S.EPreviewMode_Enabled
               : je.S.EPreviewMode_Disabled,
-            L = y || t.GetEventType() != o.ajI,
-            B = (0, Ne.m)(t.clanSteamID);
+            B = y || t.GetEventType() != o.ajI,
+            N = (0, Ne.m)(t.clanSteamID),
+            M = g ? s.Yo.NoTransform : s.Yo.NoTransformSparseContent,
+            U = (0, b.A)(
+              h().SaleOuterContainer,
+              f && h().SaleOuterTopMargin,
+              w && h().SaleNewSizing,
+              h()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
+              "SaleOuterContainer",
+              e && h().SalePageLogoSet,
+              I && h().ContentHub,
+            );
           return (0, a.jsx)(p.tH, {
             children: (0, a.jsx)(i.EU, {
               eventModel: t,
@@ -4819,28 +4830,20 @@
                   language: d,
                   bIsPreview: !!c,
                   children: [
-                    D && (0, a.jsx)(i.Sn, {}),
+                    T && (0, a.jsx)(i.Sn, {}),
                     (0, a.jsx)(q, { eventModel: t }),
                     !!m &&
-                      (L || B) &&
+                      (B || N) &&
                       (0, a.jsx)(Ft, {
                         backgroundImageEditModel: m,
                         bBackgroundImgGroupEditMode: k,
                         fnSetBackgroundImgGroupEditMode: E,
-                        bShowAsValveOnly: !L,
+                        bShowAsValveOnly: !B,
                       }),
                     (0, a.jsxs)(r.Z, {
-                      className: (0, b.A)({
-                        [h().SaleOuterContainer]: !0,
-                        [h().SaleOuterTopMargin]: f,
-                        [h().SaleNewSizing]: S,
-                        [h()[`CustomStyle_${t.jsondata.sale_vanity_id}`]]: !0,
-                        SaleOuterContainer: !0,
-                        [h().SalePageLogoSet]: e,
-                        [h().ContentHub]: u,
-                      }),
-                      style: u ? void 0 : { marginTop: `${I || 0}px` },
-                      scrollIntoViewType: s.Yo.NoTransformSparseContent,
+                      style: I ? void 0 : { marginTop: `${S || 0}px` },
+                      className: U,
+                      scrollIntoViewType: M,
                       children: [
                         (0, a.jsx)(Z, { eventModel: t, language: d }),
                         (0, a.jsx)(ee, {
@@ -4848,7 +4851,7 @@
                         }),
                         (0, a.jsx)(ie, { event: t, broadcastEmbedContext: A }),
                         (0, a.jsx)(Xt, {
-                          ePreviewMode: T,
+                          ePreviewMode: L,
                           event: t,
                           backgroundImageEditModel: m,
                           language: d,
@@ -5356,114 +5359,95 @@
         );
       };
     },
-    19516: (e, n, t) => {
+    84428: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { default: () => S });
+      t.r(n), t.d(n, { default: () => I });
       var a = t(7850),
-        o = t(90626),
-        r = t(11158);
-      let s = 0;
-      function i(e) {
-        const [n, t] = (0, o.useState)(!1);
-        (0, o.useEffect)(() => {
-          const n = window.setTimeout(() => t(!0), e);
-          return () => window.clearTimeout(n);
-        }, [e]),
-          (function (e) {
-            (0, o.useEffect)(() => {
-              if (!e)
-                return (
-                  s++,
-                  () => {
-                    0 == --s && (0, r.s)();
-                  }
-                );
-            }, [e]);
-          })(n);
-      }
-      var l = t(62641),
-        c = t(17720),
-        d = t(6379),
-        g = t(52948),
-        u = t(64641),
-        m = t.n(u),
-        p = t(22797),
-        _ = t(61859),
-        h = t(78327),
-        x = t(90609),
-        v = t(65946),
-        b = t(77021),
-        I = t(38535),
-        j = t(32630);
-      function S(e) {
+        o = t(5729),
+        r = t(90626),
+        s = t(62641),
+        i = t(17720),
+        l = t(6379),
+        c = t(52948),
+        d = t(64641),
+        g = t.n(d),
+        u = t(22797),
+        m = t(61859),
+        p = t(78327),
+        _ = t(90609),
+        h = t(65946),
+        x = t(77021),
+        v = t(38535),
+        b = t(32630);
+      function I(e) {
         const { eventModel: n } = e;
-        return (0, a.jsx)(x.d, {
+        return (0, a.jsx)(_.d, {
           bSalePage: !0,
-          children: (0, a.jsx)(w, { ...e, overrideEventModel: n }),
+          children: (0, a.jsx)(j, { ...e, overrideEventModel: n }),
         });
       }
-      function w(e) {
-        const { promotionName: n, language: t, overrideEventModel: r } = e,
-          [s, u] = o.useState(
-            r ?? d.O3.GetClanEventFromAnnouncementGID(h.P9.ANNOUNCEMENT_GID),
+      function j(e) {
+        const { promotionName: n, language: t, overrideEventModel: d } = e,
+          [_, v] = r.useState(
+            d ?? l.O3.GetClanEventFromAnnouncementGID(p.P9.ANNOUNCEMENT_GID),
           );
         if (
-          (o.useEffect(() => {
-            if (!r && s?.AnnouncementGID != h.P9.ANNOUNCEMENT_GID) {
-              const e = new c.b(h.UF.CLANSTEAMID);
-              d.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+          (r.useEffect(() => {
+            if (!d && _?.AnnouncementGID != p.P9.ANNOUNCEMENT_GID) {
+              const e = new i.b(p.UF.CLANSTEAMID);
+              l.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                 e,
-                h.P9.ANNOUNCEMENT_GID,
+                p.P9.ANNOUNCEMENT_GID,
                 null,
-              ).then(u);
+              ).then(v);
             }
-          }, [s, r]),
+          }, [_, d]),
           (function (e, n) {
-            const t = (0, v.q3)(() => b.TU.Get().GetEventModelJson()),
-              [a, r] = o.useState();
-            o.useEffect(() => {
+            const t = (0, h.q3)(() => x.TU.Get().GetEventModelJson()),
+              [a, o] = r.useState();
+            r.useEffect(() => {
               if (!t || t == a) return;
-              r(t);
-              const e = l.lh.FromJSON(t);
+              o(t);
+              const e = s.lh.FromJSON(t);
               (e.rtime32_last_modified = Math.floor(
                 new Date().getTime() / 1e3,
               )),
                 n(e);
             }, [e, n, a, t]);
-          })(s, u),
-          i(1500),
-          !s)
+          })(_, v),
+          (0, o.s)(1500),
+          !_)
         )
           return (0, a.jsx)("div", {
-            className: m().FlexCenter,
+            className: g().FlexCenter,
             style: { height: "500px" },
-            children: (0, a.jsx)(p.t, {
+            children: (0, a.jsx)(u.t, {
               size: "medium",
-              string: (0, _.we)("#Loading"),
+              string: (0, m.we)("#Loading"),
             }),
           });
-        const x =
-          s.visibility_state !== l.zv.k_EEventStateVisible &&
-          s.visibility_state !== l.zv.k_EEventStateUnlisted;
-        return (0, a.jsx)(f, {
-          eventModel: s,
-          children: (0, a.jsx)(j.oJ, {
-            children: (0, a.jsx)(j.Ay, {
-              curator_clanid: s?.clanSteamID?.GetAccountID(),
-              children: (0, a.jsx)(g._, {
+        const I =
+          _.visibility_state !== s.zv.k_EEventStateVisible &&
+          _.visibility_state !== s.zv.k_EEventStateUnlisted;
+        return (0, a.jsx)(S, {
+          eventModel: _,
+          children: (0, a.jsx)(b.oJ, {
+            children: (0, a.jsx)(b.Ay, {
+              curator_clanid: _?.clanSteamID?.GetAccountID(),
+              children: (0, a.jsx)(c._, {
                 promotionName: n,
                 language: t,
-                eventModel: s,
-                bIsPreview: x,
+                eventModel: _,
+                bIsPreview: I,
               }),
             }),
           }),
         });
       }
-      function f(e) {
+      function S(e) {
         const { eventModel: n, children: t } = e,
           o = "adultonly" == n.GetContentHubType();
-        return (0, a.jsx)(I.QA, {
+        return (0, a.jsx)(v.QA, {
           eAdultOnlyMediaBehavior: o ? "allowed" : "masked",
           children: t,
         });

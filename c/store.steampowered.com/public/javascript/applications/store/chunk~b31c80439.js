@@ -5681,21 +5681,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled";
@@ -5714,11 +5718,10 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
-          _ = (function (_, _) {
-            const _ = _?.GetAllTrailers().GetAllTrailers("blocked" == _);
-            return _ && _.length > 0 ? _[0] : void 0;
-          })(_, _),
-          _ = (_ ?? !0) && _ && !_.BIsAllAges() && "masked" == _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (_ ?? !0) && _ && !_.all_ages && "masked" == _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(_._),
@@ -5767,7 +5770,8 @@
           _ && (_.current = _);
         }, [_, _]);
         const _ = _.GetScreenshots("allowed" != _),
-          _ = _ && _.length > 0 ? _[0] : _.GetAssets().GetMainCapsuleURL();
+          _ =
+            _ && _.length > 0 ? _[0] : _ ? (0, _._)(_, "main_capsule") : void 0;
         return (0, _.jsxs)(_._, {
           className: _().AppCarouselTrailerCtn,
           onMouseEnter: () => _(!0),
@@ -5789,7 +5793,7 @@
               }),
             (0, _.jsx)(_._, {
               name: _.GetName(),
-              trailerCategory: _?.GetTrailerCategory(),
+              trailerCategory: _?.trailer_category,
               trailerDisplay: _,
               mouseOver: _,
             }),
@@ -5922,7 +5926,7 @@
                   _ && (_.Debug("Starting broadcast player"), _(_._), _.Play());
               else _.Debug("Showing image");
             var _, _, _;
-          }, [_, _, _, _, _, _, _, _, _]),
+          }, [_, _, _, _, _, _, _, _, _, _]),
           (function (_, _) {
             _.useEffect(() => {
               if (!_.current || !_.current.onended) return;
@@ -6038,15 +6042,17 @@
         }, [_, _]);
         let _ = _ != _._,
           _ = _(!1, _);
+        const _ = (0, _.useMemo)(() => (0, _._)(_), [_]);
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)("div", {
             className: _,
             children: (0, _.jsx)(_._, {
               ref: _,
-              dashManifests: __webpack_require__.GetTrailersDash(),
-              hlsManifest: __webpack_require__.GetTrailerHls(),
+              dashManifests: _.rgDashTrailers,
+              hlsManifest: _.rgHlsTrailers[0],
+              captionManifest: _.captions_manifest,
               screenshot: "",
-              altText: "",
+              altText: _.trailer_name,
               forcePause: _,
               muteWhenAutoplayBlocked: !0,
               onPlaybackEnd: _,
@@ -6139,7 +6145,7 @@
               (0, _.jsx)(_._, {
                 eDisplay: _,
                 className: _().DeckVerifiedLogo,
-                storeItem: _,
+                storeItemPlatform: _?.GetPlatforms(),
               }),
             (0, _.jsxs)("div", {
               className: _().VideoArea,
@@ -6237,7 +6243,8 @@
                 : !__webpack_require__.has(_) && __webpack_require__.has(_)
                   ? 1
                   : __webpack_require__.has(_)
-                    ? __webpack_require__.get(_) - __webpack_require__.get(_)
+                    ? __webpack_require__.get(_) -
+                      (__webpack_require__.get(_) ?? 0)
                     : _.get(_) - _.get(_),
             ),
           [_, _, _],

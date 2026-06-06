@@ -1693,6 +1693,7 @@
         (Te.japanese = () => r.e(4788).then(r.t.bind(r, 24788, 19))),
         (Te.koreana = () => r.e(3838).then(r.t.bind(r, 83838, 19))),
         (Te.latam = () => r.e(1990).then(r.t.bind(r, 91990, 19))),
+        (Te.malay = () => r.e(7141).then(r.t.bind(r, 97141, 19))),
         (Te.norwegian = () => r.e(8953).then(r.t.bind(r, 18953, 19))),
         (Te.polish = () => r.e(8766).then(r.t.bind(r, 58766, 19))),
         (Te.portuguese = () => r.e(3110).then(r.t.bind(r, 93110, 19))),

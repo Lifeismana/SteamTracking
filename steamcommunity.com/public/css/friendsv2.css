@@ -414,8 +414,6 @@ body.v6 {
 .friend_block_v2 {
     position: relative;
     height: 48px;
-    margin-bottom: 12px;
-    margin-right: 12px;
     font-size: 11px;
     line-height: 13px;
     overflow: hidden;
@@ -463,6 +461,7 @@ body.v6 {
 .profile_friends.search_results {
 	display: flex;
 	flex-flow: row wrap;
+	gap: 12px;
 	margin: 8px 0px 0px 0px;
 }
 
@@ -551,6 +550,7 @@ body.v6 {
 .profile_groups.title_bar {
 	align-items: center;
 	background-color: #015e80;
+	box-sizing: border-box;
 	display: flex;
 	padding: 5px 10px;
 	width: 100%;

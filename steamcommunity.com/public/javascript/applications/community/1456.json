@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Lakukan penawaran pembelian:",
     "Button_Close": "Tutup",
     "Search_ListingQuantity": "Jumlah yang dijual: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Jml: %1$s",
     "Bucket_PriceFrom": "Mulai %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s Terpasang",
     "FilterResults_Placeholder": "Hasil Filter...",

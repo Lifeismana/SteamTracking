@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Læg en ordre ind:",
     "Button_Close": "Luk",
     "Search_ListingQuantity": "Antal til salg: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Antal: %1$s",
     "Bucket_PriceFrom": "Fra %1$s",
     "AccessorySearch_AttachedAccessoryType": "Fastgjort %1$s",
     "FilterResults_Placeholder": "Filtrer resultater...",

@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Поставяне на заявкa:",
     "Button_Close": "Затваряне",
     "Search_ListingQuantity": "Количество за продан: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Брой: %1$s",
     "Bucket_PriceFrom": "От %1$s",
     "AccessorySearch_AttachedAccessoryType": "Прикачено: %1$s",
     "FilterResults_Placeholder": "Филтриране на резултати…",

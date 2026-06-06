@@ -32,6 +32,7 @@
         (r.japanese = () => t.e(195).then(t.t.bind(t, 40195, 19))),
         (r.koreana = () => t.e(4259).then(t.t.bind(t, 84259, 19))),
         (r.latam = () => t.e(4475).then(t.t.bind(t, 24475, 19))),
+        (r.malay = () => t.e(580).then(t.t.bind(t, 60580, 19))),
         (r.norwegian = () => t.e(6884).then(t.t.bind(t, 36884, 19))),
         (r.polish = () => t.e(5269).then(t.t.bind(t, 15269, 19))),
         (r.portuguese = () => t.e(9246).then(t.t.bind(t, 96865, 19))),

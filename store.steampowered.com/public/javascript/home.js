@@ -1304,7 +1304,7 @@ GHomepage = {
 			var nameHTML = '<span class="friend_name">' + V_EscapeHTML(friend.name) + '</span>';
 			var html = "<strong>Recommended<\/strong> by your friend, <span>%1$s<\/span>".replace("%1$s", nameHTML);
 			var $ReasonMain = $J('<div/>').addClass('main friend').html(html);
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL(friend.avatar, '_medium'))).attr('alt', friend.name).data('ds-miniprofile', friend.accountid);
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL(friend.avatar, '_full'))).attr('alt', friend.name).data('ds-miniprofile', friend.accountid);
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
@@ -1329,7 +1329,7 @@ GHomepage = {
 
 			var $ReasonLocal = creator.link.indexOf( 'developer/' ) >= 0 ? "<strong>Developed<\/strong> by<br><span>%1$s<\/span>" : "<strong>Published<\/strong> by<br><span>%1$s<\/span>";
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('creator').html( $ReasonLocal.replace("%1$s", V_EscapeHTML( creator.name ) ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( creator.avatar_sha != '0000000000000000000000000000000000000000' ? creator.avatar_sha : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ).attr('alt', V_EscapeHTML( creator.name )) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( creator.avatar_sha != '0000000000000000000000000000000000000000' ? creator.avatar_sha : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_full' ) ).attr('alt', V_EscapeHTML( creator.name )) );
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
@@ -1342,7 +1342,7 @@ GHomepage = {
 			var curator = GStoreItemData.GetAccountData( null, reason.rgCurators[0], 7 );
 
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('curator').html( "<strong>Recommended<\/strong> by<br><span>%1$s<\/span>".replace("%1$s", V_EscapeHTML( curator.name ) ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar != '0000000000000000000000000000000000000000' ? curator.avatar : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ).attr( 'alt', curator.name ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( curator.avatar != '0000000000000000000000000000000000000000' ? curator.avatar : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_full' ) ).attr( 'alt', curator.name ) );
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
@@ -1447,7 +1447,7 @@ GHomepage = {
 
 				$PrePurchaseReason.appendTo( $ReasonMain );
 			}
-			else if ( rgItemData.early_access )
+			else if ( rgItemData.recent_early_access )
 			{
 				let $EarlyAccessReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( 'Now available in <strong>Early Access</strong>' );
 				$EarlyAccessReason.appendTo( $ReasonMain );
@@ -1460,9 +1460,10 @@ GHomepage = {
 			{
 				strStatus = 'Now Available to Watch';
 			}
-			else if ( rgItemData && rgItemData.free_weekend && rgItemData.free_weekend_status )
+			else if ( rgItemData && rgItemData.free_weekend && rgItemData.free_weekend_status_strong )
 			{
-				strStatus = rgItemData.free_weekend_status;
+				const $FreeWeekendReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( rgItemData.free_weekend_status_strong );
+				$FreeWeekendReason.appendTo( $ReasonMain );
 			}
 			else if ( rgRecommendationReasons.top_seller )
 			{
@@ -1827,20 +1828,21 @@ GHomepage = {
 			localized: true,
 			displayed_elsewhere: false,
 			only_current_platform: true,
+			playtest: false,
 		};
 
 		if ( GHomepage.bIsSeasonalSale )
 		{
-			oFilterOptions = { ...oFilterOptions, has_discount: true, enforce_minimum: true };
+			oFilterOptions = { ...oFilterOptions, has_discount: true };
 		}
 
-		var rgCapsules = GHomepage.FilterItemsForDisplay( rgData, 'home', 4, 8, oFilterOptions );
+		var rgCapsules = GHomepage.FilterItemsForDisplay( rgData, 'home', 4, 16, oFilterOptions );
 		if( rgCapsules.length < 4 )
 		{
-			rgCapsules = GHomepage.FilterItemsForDisplay(
-				rgData, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
-			);
+			$RecentlyUpdated.hide();
+			return;
 		}
+
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
@@ -2617,24 +2619,42 @@ GHomepage = {
 			if ( rgItemsPassingFilter.length !== 4 )
 				continue;
 
-			let $Ctn = $J( '<div/>', {'class': 'home_discounts_block'} );
+			let bGamepad = ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() );
+			let $Ctn = $J( '<div/>', {'class': 'home_discounts_block', 'data-gp-morebutton': TagData.url } );
 
 			let $TitleCtn = $J('<div/>', { 'class': 'home_title_ctn' } ).append( $J('<div/>', { 'class': 'home_title'}).html( TagData.name ) );
 			$TitleCtn.append( $J('<div/>', { 'class': 'home_section_subtitle'} ).text( TagData.recommended ? 'Recommended tag based on what you play' : 'Featured tag' ) )
 			$Ctn.append( $TitleCtn );
 
 			let $GamesCtn =  $J('<div/>', { 'class': 'home_discount_games_ctn' } );
+			$GamesCtn.attr( 'data-panel', '{"flow-children":"geometric"}' );
 			GHomepage.RenderHomeTwoByTwoSection( $GamesCtn, rgItemsPassingFilter, 'sale_tag_bucket_top' );
 			$Ctn.append( $GamesCtn );
 
-			let $SeeMore = $J('<div/>', { 'class': 'see_more_link' } );
-			$SeeMore.append( $J('<a/>', {'class': 'btnv6_white_transparent btn_small_tall', 'href': TagData.url } ).html( '<span>' + 'See More' + '</span>' ) );
-			$Ctn.append( $SeeMore );
+			if ( bGamepad )
+			{
+				let $SeeMore = $J( '<div/>', { 'class' : 'see_more_gamepad_hint' } );
+				$SeeMore.append( `
+					<div class="see_more_gamepad_hint">
+						<img src="https://store.fastly.steamstatic.com/public/images/ico_gamepad/shared_button_y.svg">
+						<div>See More</div>
+					</div>
+				`);
+				$Ctn.append( $SeeMore );
+			}
+			else
+			{
+				let $SeeMore = $J('<div/>', { 'class': 'see_more_link' } );
+				$SeeMore.append( $J('<a/>', {'class': 'btnv6_white_transparent btn_small_tall', 'href': TagData.url } ).html( '<span>' + 'See More' + '</span>' ) );
+				$Ctn.append( $SeeMore );
+			}
 
 			$TagBlocksSection.append( $Ctn );
 			GDynamicStore.MarkAppDisplayed( rgItemsPassingFilter );
 			cTagBlocksShown++;
 		}
+
+		this.InitGamepadMoreSections();
 
 		$Parent.css( { minHeight: '' } );
 	},
@@ -5077,7 +5097,6 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 			{
 				var $Temp = $J('<div/>');
 				$Temp.html( data.html );
-				GDynamicStore.DecorateDynamicItems( $Temp );
 				html = $Temp.html();
 				$Temp.empty();
 			}
@@ -5122,6 +5141,8 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 			else
 				bFirstRender = false;
 		}
+
+		GDynamicStore.DecorateDynamicItems( $TabItems );
 	};
 
 	$Checkbox.add($CheckboxHideF2P).add( RangeInitData ? RangeInitData.$Element : null ).on( 'change', function() {

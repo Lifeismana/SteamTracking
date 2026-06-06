@@ -290,11 +290,12 @@
     "setcooldown_nocooldown": "Ingen aktuell cooldown",
     "setcooldown_days": "dagar",
     "setcooldown_newcooldownlabel": "Ny cooldown för användare:",
-    "setcooldown_clearcooldown": "Rensa",
+    "setcooldown_clearcooldown": "Ta bort cooldown",
     "setcooldown_cooldownsummary": "(%1$s dagar)",
     "setcooldown_dialogtitle": "Ställ in rapporteringscooldown",
     "setcooldown_dialogdescription": "Blockera användare från att rapportera innehåll eller bestrida moderering när de har missbrukat systemet.",
     "setcooldown_setbutton": "Ställ in cooldown",
     "setcooldown_clearopenreports": "Rensa den här användarens olösta rapporter",
+    "setcooldown_statssummary": "%1$s/%2$s rapporter frikända, %3$s/%4$s under den senaste veckan.",
     "nocomma": ""
 }

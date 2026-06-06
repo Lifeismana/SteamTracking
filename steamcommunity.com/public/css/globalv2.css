@@ -33,7 +33,19 @@ body.flat_page.blue {
 
 /* this makes the footer appear at the bottom of the window on short pages */
 body.flat_page .responsive_page_frame {
-	position: static;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body.flat_page .responsive_page_frame .responsive_page_content {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 0;
+}
+
+body.flat_page .responsive_page_frame .responsive_page_content .responsive_page_template_content {
+	margin-bottom: auto;
 }
 
 body.standard_page {
@@ -487,6 +499,39 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 	border:0;
 	width:184px;
 	height:69px;
+}
+
+.rightbox_list_option {
+	position: relative;
+	line-height: 37px;
+	height: 37px;
+	color: #c9c9c9;
+}
+
+.rightbox_list_option_content {
+	position: relative;
+}
+
+.rightbox_list_option.selected .rightbox_list_selection_background {
+	display: block;
+}
+
+.rightbox_list_option.selected a {
+	cursor: default;
+}
+
+.forum_list .rightbox_list_option.selected {
+	color: #ffffff;
+}
+
+.rightbox_list_selection_background {
+	position: absolute;
+	display: none;
+	left: -26px;
+	top: 0px;
+	background: url( 'https://community.fastly.steamstatic.com/public/images/rightcol_option_selected.png' ) left / cover;
+	width: calc( 100% + 26px );
+	height: 37px;
 }
 
 
@@ -1619,9 +1664,8 @@ img.emoticon {
 }
 
 .responsive_tab_baseline {
-	border-bottom: 1px solid #3a3e4780;
+	border-bottom: 5px solid #417B9C;
 	width: 100%;
-	max-width: 936px;
 	margin: 0 auto;
 }
 

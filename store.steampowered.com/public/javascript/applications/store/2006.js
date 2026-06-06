@@ -463,78 +463,76 @@
     },
     20482: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => D });
+      s.r(t), s.d(t, { default: () => j });
       var n = s(34629),
         i = s(7850),
         o = s(90626),
         r = s(22837),
-        a = s(95695),
-        l = s.n(a),
-        c = s(82477),
-        h = s(52038),
-        p = s(61859),
-        d = s(84933),
-        g = s(78327);
-      var u = s(10886),
-        m = s(19654),
-        S = s(3209),
-        x = s(51706),
-        C = s(32754),
-        L = s(51272),
-        I = s(14256),
-        M = s.n(I),
-        T = s(1909),
-        _ = s(73067),
-        v = s(56283),
-        A = s(96715);
-      const w = (e) => {
+        a = s(76217),
+        l = s(95695),
+        c = s.n(l),
+        h = s(82477),
+        p = s(52038),
+        d = s(61859),
+        g = s(84933),
+        u = s(78327);
+      var m = s(10886),
+        S = s(19654),
+        x = s(3209),
+        C = s(51706),
+        L = s(32754),
+        I = s(51272),
+        M = s(14256),
+        T = s.n(M),
+        _ = s(1909),
+        v = s(73067),
+        A = s(56283),
+        w = s(96715);
+      const D = (e) => {
         const t = o.createRef(),
           [s, n] = o.useState(""),
-          r = o.createRef();
+          r = o.createRef(),
+          l = (e) => {
+            t.current &&
+              t.current.ownerDocument.defaultView.navigator.clipboard
+                .writeText(t.current.value)
+                .then((e) => {
+                  n((0, d.we)("#EventDisplay_Share_CopiedToClipboard"));
+                })
+                .catch((e) => {
+                  n((0, d.we)("#EventDisplay_Share_FailedToCopyToClipboard")),
+                    console.error("Failed to copy link to clipboard:", e);
+                });
+          };
         return (0, i.jsxs)("div", {
           children: [
             (0, i.jsxs)("div", {
-              className: (0, h.A)(l().FlexRowContainer, M().linkField),
-              onClick: (e) => {
-                t.current &&
-                  t.current.ownerDocument.defaultView.navigator.clipboard
-                    .writeText(t.current.value)
-                    .then((e) => {
-                      n((0, p.we)("#EventDisplay_Share_CopiedToClipboard"));
-                    })
-                    .catch((e) => {
-                      n(
-                        (0, p.we)(
-                          "#EventDisplay_Share_FailedToCopyToClipboard",
-                        ),
-                      ),
-                        console.error("Failed to copy link to clipboard:", e);
-                    });
-              },
+              className: (0, p.A)(c().FlexRowContainer, T().linkField),
+              onClick: l,
               children: [
                 (0, i.jsx)("span", {
-                  className: M().LinkInputLabel,
-                  children: (0, p.we)(
+                  className: T().LinkInputLabel,
+                  children: (0, d.we)(
                     e.labelOverride
                       ? e.labelOverride
                       : "#EventDisplay_Share_Link",
                   ),
                 }),
-                (0, i.jsx)("textarea", {
-                  className: M().LinkInput,
+                (0, i.jsx)("input", {
+                  className: T().LinkInput,
                   ref: t,
                   value: e.eventLink,
                   readOnly: !0,
                 }),
                 document.queryCommandSupported("copy") &&
-                  (0, i.jsx)("div", {
-                    className: (0, h.A)(l().Button, l().Icon, M().LinkButton),
-                    title: (0, p.we)("#ToolTip_CopyLinkToClipboard"),
-                    children: (0, i.jsx)(C.he, {
-                      toolTipContent: (0, p.we)("#ToolTip_CopyLinkToClipboard"),
+                  (0, i.jsx)(a.Z, {
+                    className: (0, p.A)(c().Button, c().Icon, T().LinkButton),
+                    onActivate: l,
+                    children: (0, i.jsx)(L.Gq, {
+                      toolTipContent: (0, d.we)("#ToolTip_CopyLinkToClipboard"),
                       children: (0, i.jsx)("img", {
-                        className: M().ClipboardIcon,
-                        src: A.A,
+                        className: T().ClipboardIcon,
+                        src: w.A,
                       }),
                     }),
                   }),
@@ -542,18 +540,18 @@
             }),
             (0, i.jsx)("div", {
               ref: r,
-              className: M().ClipboardText,
+              className: T().ClipboardText,
               children: s,
             }),
           ],
         });
       };
-      class D extends o.Component {
+      class j extends o.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {
-          g.iA.logged_in
+          u.iA.logged_in
             ? this.setState({ bShareOnSteamDialog: !0 })
-            : g.TS.IN_CLIENT
+            : u.TS.IN_CLIENT
               ? console.log(
                   "ShareEventOnSocialMediaDialog: In Client: Cannot use login widget. We expect to be already logged in.",
                 )
@@ -569,31 +567,31 @@
             partnerEventStore: r,
           } = this.props;
           return this.state.bRequireLoginToShare
-            ? (0, i.jsx)(x.o0, {
-                strTitle: (0, p.we)("#EventDisplay_Share_NotLoggedIn"),
-                strDescription: (0, p.we)(
+            ? (0, i.jsx)(C.o0, {
+                strTitle: (0, d.we)("#EventDisplay_Share_NotLoggedIn"),
+                strDescription: (0, d.we)(
                   "#EventDisplay_Share_NotLoggedIn_Description",
                 ),
-                strOKButtonText: (0, p.we)("#MobileLogin_SignIn"),
+                strOKButtonText: (0, d.we)("#MobileLogin_SignIn"),
                 onCancel: this.props.closeModal,
-                onOK: () => (0, c.vg)(),
+                onOK: () => (0, h.vg)(),
               })
             : this.state.bShareOnSteamDialog
-              ? (0, i.jsx)(_.J, {
+              ? (0, i.jsx)(v.J, {
                   eventLink: e,
                   appid: s,
                   emoticonStore: o,
                   partnerEventStore: r,
                   closeModal: n,
                 })
-              : (0, i.jsx)(x.o0, {
+              : (0, i.jsx)(C.o0, {
                   strDescription: "",
-                  strTitle: (0, p.we)("#Button_Share"),
+                  strTitle: (0, d.we)("#Button_Share"),
                   onCancel: this.props.closeModal,
                   onOK: this.props.closeModal,
                   bAlertDialog: !0,
                   modalClassName: "EventDisplay_Share_Dialog",
-                  children: (0, i.jsx)(j, {
+                  children: (0, i.jsx)(E, {
                     eventLink: e,
                     sharePageUrls: t,
                     fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
@@ -601,119 +599,119 @@
                 });
         }
       }
-      (0, n.Cg)([d.oI], D.prototype, "ShareOnSteamActivityFeed", null);
-      const j = (e) => {
+      (0, n.Cg)([g.oI], j.prototype, "ShareOnSteamActivityFeed", null);
+      const E = (e) => {
         const {
             eventLink: t,
             sharePageUrls: s,
             fnShareOnSteamActivityFeed: n,
           } = e,
-          a = (0, g.Y2)(),
-          [c, d] = (0, o.useState)((0, r.sfN)(g.TS.LANGUAGE)),
-          x = (0, o.useMemo)(() => {
+          l = (0, u.Y2)(),
+          [h, g] = (0, o.useState)((0, r.sfN)(u.TS.LANGUAGE)),
+          C = (0, o.useMemo)(() => {
             const e = new URL(t);
-            return e.searchParams.set("l", (0, r.LgB)(c)), e.href;
-          }, [c, t]);
+            return e.searchParams.set("l", (0, r.LgB)(h)), e.href;
+          }, [h, t]);
         return (0, i.jsxs)("div", {
-          className: (0, h.A)(l().FlexColumnContainer, M().share_controls_ctn),
+          className: (0, p.A)(c().FlexColumnContainer, T().share_controls_ctn),
           children: [
-            !a &&
+            !l &&
               (0, i.jsxs)(i.Fragment, {
                 children: [
                   (0, i.jsxs)("div", {
-                    className: M().ShareLanguagePicker,
+                    className: T().ShareLanguagePicker,
                     children: [
-                      (0, i.jsx)(v.JU, {
-                        className: M().LanguageLabel,
-                        children: (0, p.we)(
+                      (0, i.jsx)(A.JU, {
+                        className: T().LanguageLabel,
+                        children: (0, d.we)(
                           "#EventDisplay_Share_LanguageLabel",
                         ),
                       }),
                       (0, i.jsx)("div", {
-                        children: (0, i.jsx)(T.Ng, {
-                          selectedLang: c,
-                          fnOnLanguageChanged: d,
+                        children: (0, i.jsx)(_.Ng, {
+                          selectedLang: h,
+                          fnOnLanguageChanged: g,
                         }),
                       }),
                     ],
                   }),
                   (0, i.jsxs)("div", {
-                    className: (0, h.A)(
-                      l().FlexRowContainer,
-                      M().ShareButtonContainer,
+                    className: (0, p.A)(
+                      c().FlexRowContainer,
+                      T().ShareButtonContainer,
                     ),
                     style: { flexWrap: "wrap" },
                     children: [
-                      (0, i.jsx)(C.he, {
-                        toolTipContent: (0, p.we)(
+                      (0, i.jsx)(L.he, {
+                        toolTipContent: (0, d.we)(
                           "#EventDisplay_Share_OnSteam",
                         ),
-                        children: (0, i.jsxs)("div", {
+                        children: (0, i.jsxs)(a.Z, {
                           onClick: n,
-                          className: (0, h.A)(
-                            l().Button,
-                            M().ShareBtn,
-                            M().ShareSteamBtn,
+                          className: (0, p.A)(
+                            c().Button,
+                            T().ShareBtn,
+                            T().ShareSteamBtn,
                           ),
                           children: [
                             (0, i.jsx)("img", {
-                              className: M().SteamIcon,
+                              className: T().SteamIcon,
                               src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNDAwcHgiIGhlaWdodD0iMTQwOXB4IiB2aWV3Qm94PSIwIDAgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNDAwIDE0MDkiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjk4LjE5NSwxMC4xMjVjLTM2NC4zNDcsMC02NjIuODM4LDI4MC45MzgtNjkxLjIwNiw2MzcuOTY5TDM3OC43NCw4MDEuNzk3CgljMzEuNTAyLTIxLjUzOSw2OS41NTUtMzQuMTMzLDExMC40OTUtMzQuMTMzYzMuNjY5LDAsNy4zMTUsMC4wOSwxMC45MzksMC4zMTNsMTY1LjMzLTIzOS42MzdjMC0xLjEzNy0wLjAyOS0yLjI1LTAuMDI5LTMuMzk1CgljMC0xNDQuMjI3LDExNy4zMzUtMjYxLjU3NCwyNjEuNTgyLTI2MS41NzRjMTQ0LjIzMywwLDI2MS41ODMsMTE3LjM0OCwyNjEuNTgzLDI2MS41NzRjMCwxNDQuMjQ2LTExNy4zNSwyNjEuNTk4LTI2MS41ODMsMjYxLjU5OAoJYy0xLjk5LDAtMy45NS0wLjA0Ny01LjkyNi0wLjA5TDY4NS4zNDEsOTU0LjY4OGMwLjExOSwzLjA3NCwwLjIzLDYuMTkxLDAuMjMsOS4yOTdjMCwxMDguMjczLTg4LjA3NiwxOTYuMzUyLTE5Ni4zMzYsMTk2LjM1MgoJYy05NS4wNDEsMC0xNzQuNDk0LTY3Ljg0OC0xOTIuNDk2LTE1Ny42NzZMMzAuODcyLDg5Mi43NTRjODIuMzIsMjkxLjEzNywzNDkuODA3LDUwNC41ODIsNjY3LjMyMyw1MDQuNTgyCgljMzgzLjA2MiwwLDY5My41OTgtMzEwLjU1MSw2OTMuNTk4LTY5My42MTNDMTM5MS43OTMsMzIwLjY2NCwxMDgxLjI1NywxMC4xMjUsNjk4LjE5NSwxMC4xMjUiLz4KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ0MS42NDgsMTA2Mi41NjNsLTg1LjIwMi0zNS4yMDNjMTUuMTA1LDMxLjQ0NSw0MS4yMyw1Ny43NjIsNzUuOTExLDcyLjIxNQoJYzc0Ljk2MSwzMS4yNSwxNjEuNDEtNC4zMzYsMTkyLjY2Ny03OS4zNTljMTUuMTEyLTM2LjMxMywxNS4yMjQtNzYuMzU1LDAuMjIzLTExMi43NDJjLTE0Ljk3OS0zNi4zOTEtNDMuMjUtNjQuNzczLTc5LjU3Mi03OS45MjIKCWMtMzYuMDQ3LTE1LjAwNC03NC42NTYtMTQuNDM4LTEwOC41ODctMS42MzdsODguMDA5LDM2LjM5MWM1NS4zMDQsMjMuMDUxLDgxLjQ0NCw4Ni41NTksNTguNDA4LDE0MS44NTUKCUM1NjAuNDc2LDEwNTkuNDU3LDQ5Ni45NDQsMTA4NS42MTMsNDQxLjY0OCwxMDYyLjU2MyIvPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEwMS4zNTMsNTI0Ljk2MWMwLTk2LjExMy03OC4xODQtMTc0LjMxMy0xNzQuMjk1LTE3NC4zMTNjLTk2LjA5NiwwLTE3NC4yOTQsNzguMTk5LTE3NC4yOTQsMTc0LjMxMwoJYzAsOTYuMTAyLDc4LjE5OCwxNzQuMjc3LDE3NC4yOTQsMTc0LjI3N0MxMDIzLjE2OSw2OTkuMjM4LDExMDEuMzUzLDYyMS4wNjMsMTEwMS4zNTMsNTI0Ljk2MSBNNzk2LjQxNSw1MjQuNjU2CgljMC03Mi4zMjQsNTguNjM4LTEzMC45MTgsMTMwLjk0LTEzMC45MThjNzIuMzE2LDAsMTMwLjkyNSw1OC41OTQsMTMwLjkyNSwxMzAuOTE4YzAsNzIuMzE2LTU4LjYwOCwxMzAuOTE4LTEzMC45MjUsMTMwLjkxOAoJQzg1NS4wNTMsNjU1LjU3NCw3OTYuNDE1LDU5Ni45NzMsNzk2LjQxNSw1MjQuNjU2Ii8+Cjwvc3ZnPgo=",
                             }),
                             (0, i.jsx)("span", {
                               style: { whiteSpace: "nowrap" },
-                              children: (0, p.we)(
+                              children: (0, d.we)(
                                 "#EventDisplay_Share_OnMyStatus",
                               ),
                             }),
                           ],
                         }),
                       }),
-                      (0, i.jsx)(C.he, {
-                        toolTipContent: (0, p.we)(
+                      (0, i.jsx)(L.he, {
+                        toolTipContent: (0, d.we)(
                           "#EventDisplay_Share_OnFaceBook",
                         ),
-                        children: (0, i.jsx)(L.uU, {
+                        children: (0, i.jsx)(I.uU, {
                           href: s.strFacebookUrl,
-                          className: M().ShareBtn,
+                          className: T().ShareBtn,
                           children: (0, i.jsx)("img", {
-                            className: (0, h.A)(l().Button),
-                            src: u.A,
+                            className: (0, p.A)(c().Button),
+                            src: m.A,
                           }),
                         }),
                       }),
-                      (0, i.jsx)(C.he, {
-                        toolTipContent: (0, p.we)(
+                      (0, i.jsx)(L.he, {
+                        toolTipContent: (0, d.we)(
                           "#EventDisplay_Share_OnTwitter",
                         ),
-                        children: (0, i.jsx)(L.uU, {
+                        children: (0, i.jsx)(I.uU, {
                           href: s.strTwitterUrl,
-                          className: M().ShareBtn,
+                          className: T().ShareBtn,
                           children: (0, i.jsx)("img", {
-                            className: (0, h.A)(l().Button),
-                            src: S.A,
+                            className: (0, p.A)(c().Button),
+                            src: x.A,
                           }),
                         }),
                       }),
-                      (0, i.jsx)(C.he, {
-                        toolTipContent: (0, p.we)(
+                      (0, i.jsx)(L.he, {
+                        toolTipContent: (0, d.we)(
                           "#EventDisplay_Share_OnReddit",
                         ),
-                        children: (0, i.jsx)(L.uU, {
+                        children: (0, i.jsx)(I.uU, {
                           href: s.strRedditUrl,
-                          className: M().ShareBtn,
+                          className: T().ShareBtn,
                           children: (0, i.jsx)("img", {
-                            className: (0, h.A)(l().Button),
-                            src: m.A,
+                            className: (0, p.A)(c().Button),
+                            src: S.A,
                           }),
                         }),
                       }),
                     ],
                   }),
-                  (0, i.jsx)("div", { className: l().Divider }),
+                  (0, i.jsx)("div", { className: c().Divider }),
                 ],
               }),
-            (0, i.jsx)(w, { eventLink: x }),
+            (0, i.jsx)(D, { eventLink: C }),
           ],
         });
       };

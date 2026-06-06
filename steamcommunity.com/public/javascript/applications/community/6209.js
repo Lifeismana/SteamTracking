@@ -17,8 +17,8 @@
         n = i(56545),
         a = i(37085),
         l = i(69078),
-        p = i(68336),
-        d = i(39393),
+        d = i(68336),
+        p = i(39393),
         m = i(86318),
         c = i(29210),
         g = i(81393),
@@ -33,6 +33,7 @@
             (this.m_mapSharedClipLoaders = new Map()),
             (this.m_mapActiveTimelines = new Map()),
             (this.m_mapManualRecordingCallbacks = new Map()),
+            (this.m_bEnableH265Recording = !1),
             (this.m_bLoadingClips = !0),
             (this.m_bLoadingAppsWithBackgroundVideo = !0),
             (this.m_bClipLoadingTriggered = !1),
@@ -61,17 +62,38 @@
               l.xM.RegisterForNotifyClipCreated(this.OnClipCreated),
               l.xM.RegisterForNotifyExportProgress(this.OnExportProgress),
               l.xM.RegisterForNotifyLowDiskSpace(this.OnLowDiskSpace),
+              l.xM.RegisterForNotifyStateChanged(this.OnStateChanged),
               await this.LoadAppsWithBackgroundVideo(),
-              await this.CheckEnoughDiskSpace());
+              await this.CheckEnoughDiskSpace(),
+              await this.UpdateState());
+        }
+        async UpdateState() {
+          var e;
+          const t = await l.xM.GetState({});
+          if (!t.BSuccess())
+            return void console.warn(
+              "Failed to initialize game recording state",
+            );
+          const i = t.Body().toObject();
+          this.m_bEnableH265Recording =
+            null !== (e = null == i ? void 0 : i.is_h265_enabled) &&
+            void 0 !== e &&
+            e;
+        }
+        OnStateChanged() {
+          return this.UpdateState(), a.R;
         }
         GetAppsWithBackgroundVideo() {
           return this.m_rgAppsWithBackgroundVideo;
+        }
+        IsGameRecordingH265Enabled() {
+          return this.m_bEnableH265Recording;
         }
         GetTimelineLoaderForGame(e) {
           (0, g.wT)(e, "Invalid GameID: " + e);
           let t = this.m_mapTimelineLoaders.get(e);
           if (!t) {
-            let i = new d.SX();
+            let i = new p.SX();
             i.LoadTimelinesForBackgroundVideo(e),
               (t = { loader: i, nRefCount: 0 }),
               this.m_mapTimelineLoaders.set(e, t);
@@ -97,7 +119,7 @@
           (0, g.wT)(e, "Invalid ClipID: " + e);
           let t = this.m_mapClipLoaders.get(e);
           if (!t) {
-            let i = new d.SX();
+            let i = new p.SX();
             i.LoadTimelinesForClip(e),
               (t = { loader: i, nRefCount: 0 }),
               this.m_mapClipLoaders.set(e, t);
@@ -115,7 +137,7 @@
           (0, g.wT)(e, "Invalid clip");
           let t = this.m_mapSharedClipLoaders.get(e.clip_id);
           if (!t) {
-            let i = new d.SX();
+            let i = new p.SX();
             i.LoadTimelinesForSharedClip(e),
               (t = { loader: i, nRefCount: 0 }),
               this.m_mapClipLoaders.set(e.clip_id, t);
@@ -315,7 +337,7 @@
             this.m_clipsGroupByGame.get(e.game_id).push(e);
         }
         async SaveClip(e, t, i, r, o, s, n) {
-          const p = await l.xM.SaveClip({
+          const d = await l.xM.SaveClip({
             game_id: e,
             start: r,
             end: o,
@@ -324,8 +346,8 @@
             temporary: s,
             force_thumbnail: n,
           });
-          if (p.GetEResult() == a.R) {
-            const e = p.Body().summary().toObject();
+          if (d.GetEResult() == a.R) {
+            const e = d.Body().summary().toObject();
             return (
               this.InternalAddClipSummary(e),
               (0, m.tG)("Saved clip", e),
@@ -333,7 +355,7 @@
               { clipSummary: e, result: a.R }
             );
           }
-          return (0, m.tH)("Failed to save clip"), { result: p.GetEResult() };
+          return (0, m.tH)("Failed to save clip"), { result: d.GetEResult() };
         }
         async DeleteClip(e) {
           const t = await l.xM.DeleteClip({ clip_id: e });
@@ -618,7 +640,7 @@
         }
         ReportClipShare(e, t, i, r, o) {
           (0, m.q_)(`ReportClipShare ${JSON.stringify(e)} ${t} ${i} ${r} ${o}`),
-            p._5.ReportClipShare(this.m_transport, {
+            d._5.ReportClipShare(this.m_transport, {
               gameid: e.ConvertTo64BitString(),
               share_method: t,
               seconds: i,
@@ -628,7 +650,7 @@
         }
         ReportClipRange(e, t, i, r, o) {
           (0, m.q_)("ReportClipRange", JSON.stringify(e), t, i, r, o);
-          const s = n.w.Init(p.IR);
+          const s = n.w.Init(d.IR);
           s.Body().set_gameid(e.ConvertTo64BitString()),
             s.Body().set_original_range_method(t),
             s.Body().set_seconds(i),
@@ -638,7 +660,7 @@
             s.Body().end().set_original_range_method(o.originalRangeMethod),
             s.Body().end().set_latest_range_method(o.latestRangeMethod),
             s.Body().end().set_delta_ms(Math.ceil(o.relativeMS)),
-            p._5.ReportClipRange(this.m_transport, s);
+            d._5.ReportClipRange(this.m_transport, s);
         }
         GetRecordingState() {
           return this.m_recordingState;
@@ -689,6 +711,7 @@
         (0, r.Cg)([o.sH], y.prototype, "m_currentlyExportingClip", void 0),
         (0, r.Cg)([o.sH], y.prototype, "m_recordingState", void 0),
         (0, r.Cg)([o.sH], y.prototype, "m_bEnoughDiskSpace", void 0),
+        (0, r.Cg)([s.oI], y.prototype, "OnStateChanged", null),
         (0, r.Cg)([s.oI], y.prototype, "GetTimelineLoaderForGame", null),
         (0, r.Cg)([s.oI], y.prototype, "GetTimelineLoaderForClip", null),
         (0, r.Cg)([s.oI], y.prototype, "GetTimelineLoaderForSharedClip", null),

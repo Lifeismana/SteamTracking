@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Kaufauftrag erstellen:",
     "Button_Close": "Schließen",
     "Search_ListingQuantity": "Zum Verkauf verfügbare Anzahl: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Anz.: %1$s",
     "Bucket_PriceFrom": "Ab %1$s",
     "AccessorySearch_AttachedAccessoryType": "Angebrachter %1$s",
     "FilterResults_Placeholder": "Ergebnisse filtern …",

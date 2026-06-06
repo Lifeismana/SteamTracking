@@ -123,8 +123,8 @@
         r = n(64238),
         i = n.n(r),
         o = n(69041),
-        c = n(75659),
-        a = n(11526),
+        a = n(75659),
+        c = n(11526),
         l = n(11820),
         h = n(73406),
         C = n(90534),
@@ -136,12 +136,12 @@
           children: r,
           color: i,
           variant: o,
-          ...c
+          ...a
         } = e;
         return r || !n
           ? (0, s.jsxs)(C.az, {
               position: "relative",
-              ...c,
+              ...a,
               width: "fit-content",
               children: [
                 (0, s.jsx)("div", {
@@ -159,10 +159,10 @@
                   }),
               ],
             })
-          : (0, s.jsx)(x, { size: t, color: i, variant: o, ...c });
+          : (0, s.jsx)(x, { size: t, color: i, variant: o, ...a });
       }
       function x(e) {
-        const { className: t, color: n, ...r } = (0, a.mz)(e, u);
+        const { className: t, color: n, ...r } = (0, c.mz)(e, u);
         return (0, s.jsx)("div", {
           "data-accent-color": n,
           className: i()(t, h.Spinner),
@@ -170,7 +170,7 @@
         });
       }
       const u = [
-        ...c.L,
+        ...a.L,
         { prop: "size", responsive: !0, className: (e) => h[`Size-${e}`] },
         { prop: "variant", className: (e) => h[`Variant-${e}`] },
       ];
@@ -180,7 +180,7 @@
         e.preventDefault();
       }
       const _ = [
-          ...c.L,
+          ...a.L,
           { prop: "size", responsive: !0, className: (e) => o[`Size-${e}`] },
           { prop: "variant", className: (e) => o[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
@@ -202,7 +202,7 @@
               variant: t = "default",
               size: n = "2",
               minWidth: r = "fit-content",
-              color: c,
+              color: a,
               loading: l,
               children: h,
               onClick: C,
@@ -213,7 +213,7 @@
             g = l
               ? (0, s.jsx)(p, {
                   size: n,
-                  color: c,
+                  color: a,
                   variant: "bright",
                   children: h,
                 })
@@ -222,13 +222,13 @@
             H = x && m.TS.IN_GAMEPADUI ? f.fu : "button";
           return (0, s.jsx)(H, {
             type: "button",
-            ...(0, a.mz)(
+            ...(0, c.mz)(
               {
                 ...u,
                 variant: t,
                 size: n,
                 minWidth: r,
-                color: c,
+                color: a,
                 className: i()(o.Button, d && o.Icon),
                 onClick: v,
               },
@@ -242,15 +242,15 @@
               variant: t = "default",
               size: n = "2",
               minWidth: r = "fit-content",
-              disabled: c,
+              disabled: a,
               icon: h,
               gamepadFocusable: C = !0,
               ...d
             } = e,
-            p = c ? g : void 0,
+            p = a ? g : void 0,
             x = C && m.TS.IN_GAMEPADUI ? f.Ii : "a";
           return (0, s.jsx)(x, {
-            ...(0, a.mz)(
+            ...(0, c.mz)(
               {
                 onClick: p,
                 ...d,
@@ -271,8 +271,8 @@
         r = n(90626),
         i = n(73788),
         o = n(28505),
-        c = n(94621),
-        a = n(8871),
+        a = n(94621),
+        c = n(8871),
         l = n(32754),
         h = n(45699),
         C = n(85585),
@@ -329,16 +329,16 @@
           r = n && "object" == typeof n;
         return (
           r && n.offset
-            ? s.push((0, c.cY)(n.offset))
-            : (r && void 0 !== n.offset) || s.push((0, c.cY)(2)),
+            ? s.push((0, a.cY)(n.offset))
+            : (r && void 0 !== n.offset) || s.push((0, a.cY)(2)),
           r && n.flip
-            ? s.push((0, c.UU)(n.flip))
-            : (r && void 0 !== n.flip) || s.push((0, c.UU)()),
+            ? s.push((0, a.UU)(n.flip))
+            : (r && void 0 !== n.flip) || s.push((0, a.UU)()),
           r && n.shift
-            ? s.push((0, c.BN)(n.shift))
-            : (r && void 0 !== n.shift) || s.push((0, c.BN)()),
+            ? s.push((0, a.BN)(n.shift))
+            : (r && void 0 !== n.shift) || s.push((0, a.BN)()),
           s.push(
-            (0, c.Ej)({
+            (0, a.Ej)({
               apply: (n) => {
                 const { rects: s, elements: r, availableHeight: i } = n,
                   o = { boxSizing: "border-box", zIndex: "1" };
@@ -360,15 +360,15 @@
                     unContentWidth: s.floating.width,
                     unTargetWidth: s.reference.width,
                   }));
-                const c =
+                const a =
                   "number" == typeof t ? `${t}px` : `var(--spacing-${t})`;
                 "function" == typeof e.maxHeight
                   ? (o.maxHeight = e.maxHeight({
                       unAvailableHeight: i,
-                      gutter: c,
+                      gutter: a,
                     }))
                   : "number" == typeof e.maxHeight
-                    ? (o.maxHeight = `min( calc( ${i}px - ${c} ), ${e.maxHeight}px )`)
+                    ? (o.maxHeight = `min( calc( ${i}px - ${a} ), ${e.maxHeight}px )`)
                     : (o.maxHeight =
                         "number" == typeof t
                           ? i - t + "px"
@@ -394,21 +394,21 @@
                 placement: s,
                 interactions: r = {},
               } = e;
-              let c = t;
+              let a = t;
               0;
-              const a = (0, i.we)({
-                  open: c,
+              const c = (0, i.we)({
+                  open: a,
                   onOpenChange: n,
                   middleware: _(e),
                   whileElementsMounted: o.ll,
                   placement: s && "object" == typeof s ? s.initial : s,
                 }),
-                l = (0, i.kp)(a.context, { enabled: !!r.click }),
-                h = (0, i.iQ)(a.context, { enabled: !!r.focus }),
+                l = (0, i.kp)(c.context, { enabled: !!r.click }),
+                h = (0, i.iQ)(c.context, { enabled: !!r.focus }),
                 C = { handleClose: (0, i.iB)() },
                 d = "function" == typeof r.hover ? r.hover(C) : C,
-                p = (0, i.Mk)(a.context, { enabled: !!r.hover, ...d }),
-                x = (0, i.s9)(a.context),
+                p = (0, i.Mk)(c.context, { enabled: !!r.hover, ...d }),
+                x = (0, i.s9)(c.context),
                 { getFloatingProps: u, getReferenceProps: f } = (0, i.bv)([
                   l,
                   h,
@@ -416,10 +416,10 @@
                   x,
                 ]);
               return {
-                floating: a,
+                floating: c,
                 getFloatingProps: u,
                 getReferenceProps: f,
-                open: c,
+                open: a,
               };
             })(n);
           return (0, s.jsx)(u.Provider, { value: r, children: t });
@@ -432,7 +432,7 @@
             ? s
               ? (0, r.cloneElement)(n, {
                   ...s.getReferenceProps(n.props),
-                  ref: (0, a.XB)(n.props.ref, s.floating.refs.setReference),
+                  ref: (0, c.XB)(n.props.ref, s.floating.refs.setReference),
                 })
               : (console.error(
                   "<PopoverAnchor> must be a child of <PopoverRoot>.",
@@ -442,26 +442,26 @@
         },
         Positioner: function (e) {
           const { children: t, className: n, ref: o } = e,
-            c = (0, r.useContext)(u),
-            a = (0, i.SV)([o, c?.floating.refs.setFloating]),
+            a = (0, r.useContext)(u),
+            c = (0, i.SV)([o, a?.floating.refs.setFloating]),
             h = (0, l.gK)();
-          if (!c)
+          if (!a)
             return (
               console.error(
                 "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
-          if (!c.open) return null;
+          if (!a.open) return null;
           let C = r.Children.only(t),
             d = r.Fragment;
           C.type == v.FocusManager &&
             ((C = r.Children.only(C.props.children)), (d = f));
           const p = (0, r.cloneElement)(C, {
-            ref: a,
-            style: c.floating.floatingStyles,
+            ref: c,
+            style: a.floating.floatingStyles,
             className: n,
-            ...c.getFloatingProps(),
+            ...a.getFloatingProps(),
           });
           return (0, s.jsx)(i.XF, {
             root: h?.targetElement,
@@ -478,25 +478,25 @@
         r = n(39479),
         i = n(64238),
         o = n.n(i),
-        c = n(11526),
-        a = n(75659),
+        a = n(11526),
+        c = n(75659),
         l = n(44041);
       function h(e) {
         const { as: t = "div", ref: n, ...r } = e,
-          i = (0, c.mz)({ ...r, className: o()(l.Box, e.className) }, d),
-          a = t;
-        return (0, s.jsx)(a, { ref: n, ...i });
+          i = (0, a.mz)({ ...r, className: o()(l.Box, e.className) }, d),
+          c = t;
+        return (0, s.jsx)(c, { ref: n, ...i });
       }
       function C(e) {
-        const { as: t = "div", ref: n, navProps: i, ...a } = e,
-          h = (0, c.mz)({ ...a, className: o()(l.Box, a.className) }, d),
+        const { as: t = "div", ref: n, navProps: i, ...c } = e,
+          h = (0, a.mz)({ ...c, className: o()(l.Box, c.className) }, d),
           C = t;
         return (0, s.jsx)(r.J, {
           ...i,
           children: (0, s.jsx)(C, { ref: n, ...h }),
         });
       }
-      const d = a.h;
+      const d = c.h;
     },
     59805: (e, t, n) => {
       "use strict";
@@ -505,9 +505,9 @@
         r = n(39049),
         i = n(75659),
         o = n(20187),
-        c = n(11526),
-        a = n(90626);
-      const l = a.createContext({ depth: 0 });
+        a = n(11526),
+        c = n(90626);
+      const l = c.createContext({ depth: 0 });
       var h = n(11820),
         C = n(64238),
         d = n.n(C);
@@ -527,9 +527,9 @@
                   ),
                   "h1");
             return "h" + n;
-          })(t, (0, a.useContext)(l).depth);
+          })(t, (0, c.useContext)(l).depth);
         return (0, s.jsx)(o, {
-          ...(0, c.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, x),
+          ...(0, a.mz)({ ...e, className: d()((0, h.T)(), r.Heading, n) }, x),
         });
       }
       const x = [
@@ -549,15 +549,15 @@
         r = n(55348),
         i = n(11526),
         o = n(75659),
-        c = n(64238),
-        a = n.n(c),
+        a = n(64238),
+        c = n.n(a),
         l = n(65274);
       function h(e) {
         const { as: t = "span", ref: n, className: r, ...o } = e,
-          c = t;
-        return (0, s.jsx)(c, {
+          a = t;
+        return (0, s.jsx)(a, {
           ref: n,
-          ...(0, i.mz)({ ...o, className: a()(l.Text, r) }, d),
+          ...(0, i.mz)({ ...o, className: c()(l.Text, r) }, d),
         });
       }
       const C = [
@@ -619,11 +619,11 @@
         r = n(20187),
         i = n(11526),
         o = n(50122),
-        c = n(8527),
-        a = n(45699);
+        a = n(8527),
+        c = n(45699);
       function l(e) {
         const { underline: t = "auto", ...n } = e,
-          r = c.TS.IN_GAMEPADUI ? a.Ii : "a";
+          r = a.TS.IN_GAMEPADUI ? c.Ii : "a";
         return (0, s.jsx)(r, {
           ...(0, i.mz)({ ...n, underline: t, className: o.TextLink }, h),
         });
@@ -648,8 +648,8 @@
         r = n(83392),
         i = n(59805),
         o = n(28491),
-        c = n(10430),
-        a = n(20187),
+        a = n(10430),
+        c = n(20187),
         l = n(53965),
         h = n(37603),
         C = n(39479),
@@ -784,10 +784,10 @@
           (o += i[0].length), s.push(i.groups.before);
           const e = i.groups.tagname,
             n = i.groups.contents || "";
-          let c = null;
-          n && (c = H(n, t));
-          const a = v.createElement(e, {}, c);
-          s.push(a);
+          let a = null;
+          n && (a = H(n, t));
+          const c = v.createElement(e, {}, a);
+          s.push(c);
         }
         return s.push(e.slice(o)), v.createElement(v.Fragment, null, ...s);
       }
@@ -805,7 +805,7 @@
         M = n(90534),
         T = n(49560);
       n(42327);
-      function R(e) {
+      function y(e) {
         const {
             children: t,
             hoverContent: n,
@@ -813,10 +813,10 @@
             bTooltipMode: i,
             popoverProps: o,
           } = e,
-          [c, a] = (0, v.useState)(!1);
+          [a, c] = (0, v.useState)(!1);
         return (0, s.jsxs)(T.A.Root, {
-          open: c,
-          onOpenChange: a,
+          open: a,
+          onOpenChange: c,
           interactions: {
             hover: (e) => {
               let t = { ...e, delay: { open: r, close: 0 } };
@@ -832,8 +832,8 @@
           ],
         });
       }
-      var y = n(60859),
-        A = n.n(y);
+      var R = n(60859),
+        A = n.n(R);
       function E() {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -932,7 +932,7 @@
         );
       }
       function P(e) {
-        const t = (0, c.xC)();
+        const t = (0, a.xC)();
         return "initial" === t || "sm" === t
           ? null
           : (0, s.jsx)("footer", {
@@ -1021,7 +1021,7 @@
                       (0, s.jsxs)(r.s, {
                         gap: "5",
                         children: [
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(y, {
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:
@@ -1037,11 +1037,11 @@
                                     z.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/weibo_logo.svg?v=1",
                                 }),
-                                (0, s.jsx)(a.EY, { children: "微博" }),
+                                (0, s.jsx)(c.EY, { children: "微博" }),
                               ],
                             }),
                           }),
-                          (0, s.jsx)(R, {
+                          (0, s.jsx)(y, {
                             hoverContent: (0, s.jsx)("img", {
                               alt: "",
                               src:
@@ -1057,7 +1057,7 @@
                                     z.TS.STORE_CDN_URL +
                                     "public/shared/images/footer/wechat_logo.svg?v=1",
                                 }),
-                                (0, s.jsx)(a.EY, { children: "微信" }),
+                                (0, s.jsx)(c.EY, { children: "微信" }),
                               ],
                             }),
                           }),
@@ -1122,6 +1122,7 @@
         (B.japanese = () => n.e(4788).then(n.t.bind(n, 24788, 19))),
         (B.koreana = () => n.e(3838).then(n.t.bind(n, 83838, 19))),
         (B.latam = () => n.e(1990).then(n.t.bind(n, 91990, 19))),
+        (B.malay = () => n.e(7141).then(n.t.bind(n, 97141, 19))),
         (B.norwegian = () => n.e(8953).then(n.t.bind(n, 18953, 19))),
         (B.polish = () => n.e(8766).then(n.t.bind(n, 58766, 19))),
         (B.portuguese = () => n.e(3110).then(n.t.bind(n, 93110, 19))),
@@ -1287,7 +1288,7 @@
         );
       }
       function $() {
-        const e = (0, c.xC)();
+        const e = (0, a.xC)();
         return (0, s.jsxs)(r.s, {
           gridArea: "main",
           direction: "column",
@@ -1308,7 +1309,7 @@
                 }),
               ],
             }),
-            (0, s.jsx)(a.EY, {
+            (0, s.jsx)(c.EY, {
               as: "p",
               size: "1",
               className: b.LegalNotice,

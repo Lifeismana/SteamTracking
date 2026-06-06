@@ -6534,7 +6534,7 @@
           const {
               placeholderWidth: e,
               placeholderHeight: t,
-              holdGampadFocus: r,
+              holdGamepadFocus: r,
               onRender: i,
               style: s,
               mode: n,
@@ -6558,7 +6558,13 @@
             children: d && this.props.children,
           });
           return (
-            r && (B = (0, a.jsx)(l.Z, { focusableIfEmpty: !0, children: B })), B
+            r &&
+              (B = (0, a.jsx)(l.Z, {
+                focusableIfEmpty: !0,
+                style: { height: "100%" },
+                children: B,
+              })),
+            B
           );
         }
       }

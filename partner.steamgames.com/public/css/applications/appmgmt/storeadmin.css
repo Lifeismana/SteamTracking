@@ -3286,10 +3286,8 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: -10px;
-  left: 10px;
-  width: calc(100% - 20px);
+  position: absolute;
+  top: 50%;
 }
 .BasicUI ._16au-uWHggl6G731aw_eHt {
   top: 8px;

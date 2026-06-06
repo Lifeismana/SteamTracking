@@ -168,7 +168,7 @@
     },
     92557: (e, t, a) => {
       "use strict";
-      a.d(t, { K8: () => Ie, P2: () => Be, jA: () => Ce });
+      a.d(t, { K8: () => Pe, P2: () => Ge, jA: () => Be });
       var s = a(34629),
         n = a(7850),
         i = a(22837),
@@ -186,7 +186,7 @@
         g = a(14947),
         S = a(68797),
         x = a(17720);
-      class j {
+      class w {
         constructor(e) {
           (0, g.Gn)(this),
             (this.m_stats = {
@@ -269,9 +269,9 @@
         m_stats = void 0;
         m_lastUpdateTime = void 0;
       }
-      (0, s.Cg)([g.sH], j.prototype, "m_stats", void 0),
-        (0, s.Cg)([g.sH], j.prototype, "m_lastUpdateTime", void 0);
-      class w {
+      (0, s.Cg)([g.sH], w.prototype, "m_stats", void 0),
+        (0, s.Cg)([g.sH], w.prototype, "m_lastUpdateTime", void 0);
+      class j {
         m_mapPerEventStats = new Map();
         m_mapSummaryStats = new Map();
         m_bLoadedFromConfig = !1;
@@ -282,13 +282,13 @@
           if (!this.m_bLoadedFromConfig) {
             let e = (0, v.Tc)("trackingdatasummary", "application_config");
             this.ValidateStoreDefault(e) &&
-              this.m_mapSummaryStats.set(e.clan_account_id, new j(e));
+              this.m_mapSummaryStats.set(e.clan_account_id, new w(e));
             let t = (0, v.Tc)("trackingdataevents", "application_config");
             this.ValidateStoreDefaultList(t) &&
               t.forEach((e) => {
                 let t = x.b.InitFromClanID(e.clan_account_id),
                   a = this.GetKey(t, e.event_gid);
-                this.m_mapPerEventStats.set(a, new j(e));
+                this.m_mapPerEventStats.set(a, new w(e));
               }),
               (this.m_bLoadedFromConfig = !0);
           }
@@ -319,7 +319,7 @@
           let a = this.GetKey(e, t);
           return (
             this.m_mapPerEventStats.has(a) ||
-              this.m_mapPerEventStats.set(a, new j(null)),
+              this.m_mapPerEventStats.set(a, new w(null)),
             this.m_mapPerEventStats.get(a)
           );
         }
@@ -327,7 +327,7 @@
           return (
             this.LazyInit(),
             this.m_mapSummaryStats.has(e.GetAccountID()) ||
-              this.m_mapSummaryStats.set(e.GetAccountID(), new j(null)),
+              this.m_mapSummaryStats.set(e.GetAccountID(), new w(null)),
             this.m_mapSummaryStats.get(e.GetAccountID())
           );
         }
@@ -359,13 +359,13 @@
               (0, g.h5)(() => {
                 this.m_mapSummaryStats.set(
                   e.GetAccountID(),
-                  new j(t.data.summary),
+                  new w(t.data.summary),
                 ),
                   t.data.events_detail.forEach((t) => {
                     let a = this.GetKey(e, t.event_gid);
                     if (this.m_mapPerEventStats.has(a)) {
                       this.m_mapPerEventStats.get(a).reset(t);
-                    } else this.m_mapPerEventStats.set(a, new j(t));
+                    } else this.m_mapPerEventStats.set(a, new w(t));
                   });
               }),
               !0
@@ -383,18 +383,18 @@
           return Boolean(n && n.m_stats);
         }
       }
-      (0, s.Cg)([g.sH], w.prototype, "m_mapPerEventStats", void 0),
-        (0, s.Cg)([g.sH], w.prototype, "m_mapSummaryStats", void 0),
-        (0, s.Cg)([g.XI], w.prototype, "LazyInit", null);
-      const D = new w();
+      (0, s.Cg)([g.sH], j.prototype, "m_mapPerEventStats", void 0),
+        (0, s.Cg)([g.sH], j.prototype, "m_mapSummaryStats", void 0),
+        (0, s.Cg)([g.XI], j.prototype, "LazyInit", null);
+      const D = new j();
       var E = a(55263),
         b = a(84811),
         T = a(41550),
         y = a(32541),
         A = a(42011),
         C = a(52885),
-        N = a(32803),
-        I = a(46107),
+        I = a(32803),
+        N = a(46107),
         B = a(43667),
         f = a(64940),
         P = a(90316),
@@ -478,8 +478,8 @@
           h = p.HD.GetTimeNowWithOverride(),
           [u, g] = _.useState(h - te.Kp.PerMonth),
           [S, x] = _.useState(h),
-          [j, w] = _.useState(-1),
-          b = j >= 0;
+          [w, j] = _.useState(-1),
+          b = w >= 0;
         return (0, n.jsx)(Q.o0, {
           strTitle: (0, M.we)("#EventDashboard_Stats_title"),
           strDescription: (0, M.we)("#EventDashboard_Stats_desc"),
@@ -546,7 +546,7 @@
                 ),
                 !0
               );
-            })(t, s, r ? m : u, d ? Number.MAX_SAFE_INTEGER : S, w).then(() =>
+            })(t, s, r ? m : u, d ? Number.MAX_SAFE_INTEGER : S, j).then(() =>
               a(),
             ),
           children: Boolean(t.appid && !s)
@@ -619,7 +619,7 @@
                     (0, n.jsx)(X.t, {
                       position: "center",
                       size: "medium",
-                      string: (0, M.we)("#EventDashboard_Stats_Progress", j),
+                      string: (0, M.we)("#EventDashboard_Stats_Progress", w),
                     }),
                 ],
               }),
@@ -1017,8 +1017,8 @@
         ge = a(81393),
         Se = a(84933),
         xe = a(61336),
-        je = a(92007),
-        we = a(18663),
+        we = a(92007),
+        je = a(18663),
         De = a(30470),
         Ee = a(45737),
         be = a.n(Ee);
@@ -1089,23 +1089,26 @@
               })
             : null;
       }
-      var ye = a(85693);
-      const Ae = _.lazy(() =>
+      var ye = a(85693),
+        Ae = a(76217),
+        Ce = a(45699),
+        Ie = a(23310);
+      const Ne = _.lazy(() =>
           Promise.all([
             a.e(6597),
             a.e(8970),
             a.e(7937),
             a.e(9197),
             a.e(4796),
-            a.e(8614),
             a.e(6226),
             a.e(4781),
             a.e(706),
-            a.e(6883),
+            a.e(5191),
             a.e(2389),
             a.e(7262),
             a.e(1215),
-            a.e(8759),
+            a.e(5656),
+            a.e(6908),
             a.e(596),
             a.e(1703),
             a.e(598),
@@ -1115,7 +1118,7 @@
             a.e(8396),
           ]).then(a.bind(a, 49850)),
         ),
-        Ce = (0, d.PA)((e) => {
+        Be = (0, d.PA)((e) => {
           const {
               event: t,
               lang: a,
@@ -1136,19 +1139,19 @@
               include_basic_info: !0,
               include_release: !0,
             }),
-            [j, w] = (0, h.TB)(v);
+            [w, j] = (0, h.TB)(v);
           if (
             (_.useEffect(() => window.scrollTo(0, 0), [u, v]),
             !g && t.GetEventType() == i.ajI)
           )
-            return (0, n.jsx)(N.OG, {
+            return (0, n.jsx)(I.OG, {
               eventModel: t,
-              route: N.PH.k_eStoreSalePage,
+              route: I.PH.k_eStoreSalePage,
               bPopup: !1,
             });
-          const D = (0, N.Bw)(t, N.PH.k_eStoreNewsHub, "allowRelative"),
-            T = (0, N.Bw)(t, N.PH.k_eStoreUsersNewsHub, "allowRelative");
-          if (!t.bLoaded || !w || (u && !S && x !== E.eR))
+          const D = (0, I.Bw)(t, I.PH.k_eStoreNewsHub, "allowRelative"),
+            T = (0, I.Bw)(t, I.PH.k_eStoreUsersNewsHub, "allowRelative");
+          if (!t.bLoaded || !j || (u && !S && x !== E.eR))
             return (0, n.jsx)("div", {
               className: ue().FlexCenter,
               style: { height: "400px" },
@@ -1157,8 +1160,8 @@
                 string: (0, M.we)("#Loading"),
               }),
             });
-          let I = t.GetDescriptionWithFallback(a);
-          return (0, n.jsx)(Ne, {
+          let N = t.GetDescriptionWithFallback(a);
+          return (0, n.jsx)(fe, {
             event: t,
             lang: a,
             titleBar: p,
@@ -1173,7 +1176,7 @@
                         {
                           name: (0, M.we)(
                             "#BreadCrumbs_GameEvents",
-                            S?.GetName() || w.group_name,
+                            S?.GetName() || j.group_name,
                           ),
                           url: D,
                         },
@@ -1195,7 +1198,7 @@
                     className: G().EventBroadcastCtn,
                     children: (0, n.jsx)(_.Suspense, {
                       fallback: null,
-                      children: (0, n.jsx)(Ae, {
+                      children: (0, n.jsx)(Ne, {
                         event: t,
                         bIsPreview: g,
                         accountIDs: g ? t.jsondata.broadcast_whitelist : void 0,
@@ -1234,7 +1237,7 @@
                             ),
                             children: [
                               (0, n.jsx)(C.fh, {
-                                text: I || "",
+                                text: N || "",
                                 partnerEventStore: s,
                                 showErrorInfo: g,
                                 event: t,
@@ -1248,7 +1251,7 @@
                                   className: (0, O.A)(G().ReadMoreCnt),
                                   children: [
                                     (0, n.jsx)(_e.m, { gidEvent: t.GID }),
-                                    (0, n.jsx)("a", {
+                                    (0, n.jsx)(Ce.Ii, {
                                       className: (0, O.A)(
                                         F().Button,
                                         "LinkButton",
@@ -1261,7 +1264,7 @@
                                   ],
                                 }),
                               Boolean(t.jsondata.associated_appid) &&
-                                (0, n.jsx)(je.e, {
+                                (0, n.jsx)(we.e, {
                                   id: t.jsondata.associated_appid,
                                   inputType: "game",
                                   bApplyUserContentPref: !1,
@@ -1287,9 +1290,9 @@
                         (0, n.jsxs)(b.tH, {
                           children: [
                             Boolean(t.appid) &&
-                              (0, n.jsx)(we.lS, { appid: t.appid }),
+                              (0, n.jsx)(je.lS, { appid: t.appid }),
                             Boolean(t.jsondata.sale_social_media_items) &&
-                              (0, n.jsx)(we.lz, {
+                              (0, n.jsx)(je.lz, {
                                 gidClanEvent: t.GID,
                                 rgSocial: t.jsondata.sale_social_media_items,
                               }),
@@ -1298,7 +1301,7 @@
                       ],
                     }),
                     (0, n.jsx)(b.tH, {
-                      children: (0, n.jsx)(fe, {
+                      children: (0, n.jsx)(Le, {
                         event: t,
                         lang: a,
                         nOverrideStartTime: l,
@@ -1349,7 +1352,7 @@
             }),
           });
         }),
-        Ne = (0, d.PA)((e) => {
+        fe = (0, d.PA)((e) => {
           const {
               event: t,
               lang: a,
@@ -1358,11 +1361,12 @@
               postbody: o,
               footer: l,
             } = e,
-            d = (0, I.m0)(t, "background", a),
+            d = (0, N.m0)(t, "background", a),
             c = t.BIsImageSafeForAllAges("background", a),
             _ = "lang_" + (0, i.wwZ)(a),
             m = !!d && t.BImageNeedScreenshotFallback("background", a);
-          return (0, n.jsxs)("div", {
+          return (0, n.jsxs)(Ae.Z, {
+            scrollIntoViewType: Ie.Yo.NoTransformSparseContent,
             className: (0, O.A)(
               G().EventDetailsPageContainer,
               _,
@@ -1379,13 +1383,13 @@
                 clanId: t.clanSteamID.GetAccountID(),
               }),
               s,
-              (0, n.jsx)(Ie, { strImageURL: d }),
-              (0, n.jsx)(Be, { strImageURL: d, body: r, postbody: o }),
+              (0, n.jsx)(Pe, { strImageURL: d }),
+              (0, n.jsx)(Ge, { strImageURL: d, body: r, postbody: o }),
               Boolean(l) && (0, n.jsx)(b.tH, { children: l }),
             ],
           });
         }),
-        Ie = (e) => {
+        Pe = (e) => {
           const { strImageURL: t } = e;
           return (0, n.jsxs)("div", {
             className: G().EventCoverImageCtn,
@@ -1417,7 +1421,7 @@
             ],
           });
         },
-        Be = (e) => {
+        Ge = (e) => {
           const { body: t, postbody: a, strImageURL: s } = e;
           return (0, n.jsxs)("div", {
             className: G().EventBodyCtn,
@@ -1443,7 +1447,7 @@
             ],
           });
         };
-      function fe(e) {
+      function Le(e) {
         const {
             event: t,
             lang: a,
@@ -1473,8 +1477,8 @@
                   className: G().EventDetailsSticky,
                   children: [
                     S.is_ogg
-                      ? (0, n.jsx)(Pe, { appid: S.appid })
-                      : (0, n.jsx)(Ge, { clanSteamID: l }),
+                      ? (0, n.jsx)(ke, { appid: S.appid })
+                      : (0, n.jsx)(He, { clanSteamID: l }),
                     (0, n.jsx)(L.j, {
                       event: t,
                       nOverrideEndTime: r,
@@ -1501,7 +1505,7 @@
                         }),
                       ],
                     }),
-                    (0, n.jsx)(He, { event: t, bIsOGG: S.is_ogg }),
+                    (0, n.jsx)(Oe, { event: t, bIsOGG: S.is_ogg }),
                     Boolean(t.jsondata.meet_steam_groups) &&
                       (0, n.jsx)(Te, { event: t, lang: a }),
                   ],
@@ -1515,7 +1519,7 @@
             ),
             null);
       }
-      function Pe(e) {
+      function ke(e) {
         const { appid: t } = e;
         (0, ge.wT)(t && 0 != t, "Expected Appid In Game Info Section");
         const [a] = (0, E.t7)(t, {
@@ -1553,7 +1557,7 @@
           ],
         });
       }
-      function Ge(e) {
+      function He(e) {
         const { clanSteamID: t } = e,
           [a, s] = (0, h.TB)(t.GetAccountID());
         return s
@@ -1581,12 +1585,12 @@
             ),
             null);
       }
-      const Le = ["", "en-US", "en-GB", "zh-CN", "es-ES", "br-BR"];
-      let ke = class extends _.Component {
+      const Re = ["", "en-US", "en-GB", "zh-CN", "es-ES", "br-BR"];
+      let Fe = class extends _.Component {
         GenerateOptions() {
           let e = new Array();
           return (
-            Le.forEach((t) =>
+            Re.forEach((t) =>
               e.push((0, n.jsx)("option", { value: t, children: t }, t)),
             ),
             e
@@ -1627,9 +1631,9 @@
           });
         }
       };
-      (0, s.Cg)([Se.oI], ke.prototype, "OnLanguageChange", null),
-        (ke = (0, s.Cg)([d.PA], ke));
-      let He = class extends _.Component {
+      (0, s.Cg)([Se.oI], Fe.prototype, "OnLanguageChange", null),
+        (Fe = (0, s.Cg)([d.PA], Fe));
+      let Oe = class extends _.Component {
         m_cancelSignal = l().CancelToken.source();
         componentDidMount() {
           const { event: e } = this.props;
@@ -1716,11 +1720,11 @@
           });
         }
       };
-      He = (0, s.Cg)([d.PA], He);
+      Oe = (0, s.Cg)([d.PA], Oe);
     },
     99637: (e, t, a) => {
       "use strict";
-      a.d(t, { K: () => j });
+      a.d(t, { K: () => w });
       var s = a(7850),
         n = a(90626),
         i = a(92298),
@@ -1738,7 +1742,7 @@
         g = a.n(v);
       const S = "hh:mm a",
         x = "HH:mm";
-      function j(e) {
+      function w(e) {
         const {
           nLatestTime: t,
           nEarliestTime: a,
@@ -1746,14 +1750,14 @@
           onError: d,
           strAlsoShowTimeZone: p,
           disabled: v,
-          bNoDefaultDate: j,
+          bNoDefaultDate: w,
           className: b,
           strDescToolTip: T,
           strDescription: y,
           bShowTimeZone: A,
           strInvalidDateTimeLocalizedMsg: C,
-          fnIsValidDateTime: N,
-          bWeekdaysOnly: I,
+          fnIsValidDateTime: I,
+          bWeekdaysOnly: N,
           fnSetTimeToUpdate: B,
           bForce24HourFormat: f,
         } = e;
@@ -1788,7 +1792,7 @@
               }, [d, i]),
               d
             );
-          })(H, F, C, N, d),
+          })(H, F, C, I, d),
           V = !d && M;
         let U, W;
         if (t && a && t == a && a > l.HD.GetTimeNowWithOverride()) {
@@ -1801,7 +1805,7 @@
           }),
             (P = x);
         }
-        G || !a || j || (W = g().unix(a));
+        G || !a || w || (W = g().unix(a));
         const z = g().tz.guess(),
           K = g().unix(G).tz(z),
           q = !!p && z != p && g().unix(G).tz(p),
@@ -1809,7 +1813,7 @@
             fnOnInput: Y,
             fnOnInputBlur: Q,
             fnOnChange: X,
-          } = w(
+          } = j(
             D,
             (e) => {
               if (v) return;
@@ -1828,7 +1832,7 @@
             fnOnInput: J,
             fnOnInputBlur: Z,
             fnOnChange: $,
-          } = w(
+          } = j(
             E,
             (e) => {
               if (v) return;
@@ -1897,7 +1901,7 @@
                             ((0 != s.weekday() && 6 != s.weekday()) ||
                               (i = !1));
                           return i;
-                        })(a, t, I, e),
+                        })(a, t, N, e),
                       initialValue: W,
                       inputProps: {
                         placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
@@ -1969,7 +1973,7 @@
           ],
         });
       }
-      function w(e, t, a) {
+      function j(e, t, a) {
         const [s, i] = n.useState(!1);
         return {
           fnOnInput: (e) => {
@@ -2086,8 +2090,8 @@
         g = a(60092),
         S = a(90316),
         x = a(95695),
-        j = a(51706),
-        w = a(738),
+        w = a(51706),
+        j = a(738),
         D = a(22797),
         E = a(52038),
         b = a(56011),
@@ -2138,8 +2142,8 @@
             className: (0, E.A)(x.Button, S.AdminButton, x.ValveOnlyBackground),
             onClick: (a) => {
               let n = !1;
-              (0, w.pg)(
-                (0, s.jsx)(j.o0, {
+              (0, j.pg)(
+                (0, s.jsx)(w.o0, {
                   strTitle: (0, T.we)("#EventAdmin_Moderation_HideEventInSC"),
                   strDescription: (0, T.we)(
                     "#EventAdmin_Moderation_HideEventInSC_Desc",
@@ -2179,15 +2183,15 @@
                             );
                         }
                         e.closeModal && e.closeModal(),
-                          (0, w.pg)(
+                          (0, j.pg)(
                             n
-                              ? (0, s.jsx)(j.o0, {
+                              ? (0, s.jsx)(w.o0, {
                                   bAlertDialog: !0,
                                   children: (0, T.we)(
                                     "#EventDisplay_Share_Success",
                                   ),
                                 })
-                              : (0, s.jsx)(j.KG, {
+                              : (0, s.jsx)(w.KG, {
                                   children:
                                     (0, T.we)("#EventDisplay_Share_Failure") +
                                     " " +

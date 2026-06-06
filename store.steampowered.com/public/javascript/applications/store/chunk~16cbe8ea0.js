@@ -569,7 +569,7 @@
     },
     41550: (e, t, n) => {
       "use strict";
-      n.d(t, { AD: () => ee, vA: () => ie, He: () => ne });
+      n.d(t, { AD: () => te, vA: () => le, He: () => oe });
       var o = n(34629),
         a = n(7850),
         s = n(14947),
@@ -626,23 +626,24 @@
       var X = n(69409),
         Z = n(18663),
         Y = n(38535),
-        Q = n(23338);
-      const J = i.lazy(() =>
+        Q = n(23338),
+        J = n(23310);
+      const $ = i.lazy(() =>
         Promise.all([
           n.e(6597),
           n.e(8970),
           n.e(7937),
           n.e(9197),
           n.e(4796),
-          n.e(8614),
           n.e(6226),
           n.e(4781),
           n.e(706),
-          n.e(6883),
+          n.e(5191),
           n.e(2389),
           n.e(7262),
           n.e(1215),
-          n.e(8759),
+          n.e(5656),
+          n.e(6908),
           n.e(596),
           n.e(1703),
           n.e(598),
@@ -652,7 +653,7 @@
           n.e(8396),
         ]).then(n.bind(n, 49850)),
       );
-      function $(e) {
+      function ee(e) {
         const [t, n] = (0, q.t7)(e.appid, { include_assets: !0 }),
           [o, s] = (0, p.TB)(e.clanID);
         let r = "";
@@ -667,7 +668,7 @@
           })
         );
       }
-      let ee = class extends i.Component {
+      let te = class extends i.Component {
         m_loader = null;
         m_refPage = i.createRef();
         m_refContent = i.createRef();
@@ -681,7 +682,7 @@
           super(e),
             !this.props.bShowOnlyInitialEvent &&
               this.props.initialEvent &&
-              ((this.m_loader = new re(this.props.partnerEventStore)),
+              ((this.m_loader = new ie(this.props.partnerEventStore)),
               this.m_loader.InitAroundEvent(
                 this.props.initialEvent,
                 this.props.additionalParams,
@@ -855,7 +856,7 @@
               n = t;
             s.push(
               (0, a.jsx)(
-                ne,
+                oe,
                 {
                   ref: t ? this.m_refScrollAnchor : null,
                   event: e,
@@ -882,8 +883,8 @@
               ref: this.m_refPage,
               children: [
                 this.props.showAppHeader &&
-                  (0, a.jsx)(ie, { appId: r, clanId: i }),
-                (0, a.jsx)("div", {
+                  (0, a.jsx)(le, { appId: r, clanId: i }),
+                (0, a.jsx)(d.Z, {
                   className: (0, G.A)(
                     M().AppPartnerEventsBody,
                     M().EndlessScroll,
@@ -893,6 +894,7 @@
                   onClick: this.OnBackgroundClick,
                   tabIndex: -1,
                   onKeyDown: this.OnKeyDown,
+                  scrollIntoViewType: J.Yo.NoTransformSparseContent,
                   children: n
                     ? (0, a.jsx)("div", {
                         className: M().NoEvents,
@@ -943,7 +945,7 @@
                                       }),
                                     }),
                                   this.props.onAppIconClick &&
-                                    (0, a.jsx)($, {
+                                    (0, a.jsx)(ee, {
                                       appid: r,
                                       clanID: i,
                                       onAppIconClick: this.props.onAppIconClick,
@@ -953,7 +955,7 @@
                             }),
                           }),
                           !t &&
-                            (0, a.jsx)(te, {
+                            (0, a.jsx)(ne, {
                               loader: this.m_loader,
                               location: "top",
                             }),
@@ -966,7 +968,7 @@
                             children: s,
                           }),
                           !t &&
-                            (0, a.jsx)(te, {
+                            (0, a.jsx)(ne, {
                               loader: this.m_loader,
                               location: "bottom",
                             }),
@@ -978,23 +980,23 @@
           );
         }
       };
-      (0, o.Cg)([R.oI], ee.prototype, "ScrollToNextEvent", null),
-        (0, o.Cg)([R.oI], ee.prototype, "ScrollToPrevEvent", null),
-        (0, o.Cg)([R.oI], ee.prototype, "OnScrollComplete", null),
-        (0, o.Cg)([R.oI], ee.prototype, "Close", null),
-        (0, o.Cg)([R.oI], ee.prototype, "OnBackgroundClick", null),
-        (0, o.Cg)([R.oI], ee.prototype, "OnKeyDown", null),
-        (0, o.Cg)([R.oI], ee.prototype, "OnScroll", null),
-        (0, o.Cg)([R.oI], ee.prototype, "OnTouchStart", null),
-        (0, o.Cg)([R.oI], ee.prototype, "OnTouchMove", null),
-        (0, o.Cg)([R.oI], ee.prototype, "OnWheel", null),
-        (ee = (0, o.Cg)([r.PA], ee));
-      const te = (0, r.PA)((e) => {
+      (0, o.Cg)([R.oI], te.prototype, "ScrollToNextEvent", null),
+        (0, o.Cg)([R.oI], te.prototype, "ScrollToPrevEvent", null),
+        (0, o.Cg)([R.oI], te.prototype, "OnScrollComplete", null),
+        (0, o.Cg)([R.oI], te.prototype, "Close", null),
+        (0, o.Cg)([R.oI], te.prototype, "OnBackgroundClick", null),
+        (0, o.Cg)([R.oI], te.prototype, "OnKeyDown", null),
+        (0, o.Cg)([R.oI], te.prototype, "OnScroll", null),
+        (0, o.Cg)([R.oI], te.prototype, "OnTouchStart", null),
+        (0, o.Cg)([R.oI], te.prototype, "OnTouchMove", null),
+        (0, o.Cg)([R.oI], te.prototype, "OnWheel", null),
+        (te = (0, o.Cg)([r.PA], te));
+      const ne = (0, r.PA)((e) => {
           let t = e.loader.GetNewerState(),
             n = e.loader.GetOlderState();
-          return t == se.Loading && n == se.Loading
+          return t == re.Loading && n == re.Loading
             ? null
-            : ("top" == e.location ? t : n) == se.Loading
+            : ("top" == e.location ? t : n) == re.Loading
               ? (0, a.jsx)("div", {
                   className: M().DirectionState,
                   children: (0, a.jsx)(T.t, {
@@ -1004,11 +1006,11 @@
                 })
               : null;
         }),
-        ne = i.forwardRef(function (e, t) {
+        oe = i.forwardRef(function (e, t) {
           const n = (0, O.Qn)(),
             [o, s] = (0, q.t7)(e.event.appid, { include_assets: !0 }),
             r = (0, Y.Zj)(e.event.appid);
-          return (0, a.jsx)(oe, {
+          return (0, a.jsx)(ae, {
             ref: t,
             ...e,
             bInGamepadUI: n,
@@ -1016,7 +1018,7 @@
             storeItem: o,
           });
         });
-      let oe = class extends i.Component {
+      let ae = class extends i.Component {
         m_refContent = i.createRef();
         m_sendReadInfo = new L.LU();
         m_bSentRead = !1;
@@ -1071,7 +1073,7 @@
                 "editor" == E ? C().InEditor : "",
               ),
               children: [
-                (0, a.jsx)(ae, { ...this.props, eLanguage: _ }),
+                (0, a.jsx)(se, { ...this.props, eLanguage: _ }),
                 (0, a.jsx)("div", {
                   className: C().LibraryEventTitleContainer,
                   children: (0, a.jsxs)("div", {
@@ -1154,7 +1156,7 @@
                     className: C().EventBroadcastCtn,
                     children: (0, a.jsx)(i.Suspense, {
                       fallback: null,
-                      children: (0, a.jsx)(J, { event: this.props.event }),
+                      children: (0, a.jsx)($, { event: this.props.event }),
                     }),
                   }),
                 e.BHasTag("steam_award_nomination_request") &&
@@ -1227,7 +1229,7 @@
           });
         }
       };
-      function ae(e) {
+      function se(e) {
         const {
             event: t,
             fnFilterImageURLsForKnownFailures: n,
@@ -1237,7 +1239,7 @@
           } = e,
           i = t.BImageNeedScreenshotFallback("background", s),
           c = t.type;
-        let d = (0, U.WC)(t, "background", s, m.wI.background_main);
+        let d = (0, U.WC)(t, "background", s, m.wI.background_main, !i);
         return (
           n && d && (d = n(d)),
           (0, a.jsxs)(a.Fragment, {
@@ -1263,24 +1265,24 @@
           })
         );
       }
-      var se;
-      (0, o.Cg)([R.oI], oe.prototype, "OnEnterVisible", null),
-        (0, o.Cg)([R.oI], oe.prototype, "OnLeaveVisible", null),
-        (oe = (0, o.Cg)([r.PA], oe)),
+      var re;
+      (0, o.Cg)([R.oI], ae.prototype, "OnEnterVisible", null),
+        (0, o.Cg)([R.oI], ae.prototype, "OnLeaveVisible", null),
+        (ae = (0, o.Cg)([r.PA], ae)),
         (function (e) {
           (e[(e.Idle = 1)] = "Idle"),
             (e[(e.Loading = 2)] = "Loading"),
             (e[(e.EndOfContent = 3)] = "EndOfContent");
-        })(se || (se = {}));
-      class re {
+        })(re || (re = {}));
+      class ie {
         k_nMaxPerDirection = 3;
         m_nAppID = 0;
         m_clanSteamID;
         m_partnerEventStore;
         m_additionalParams;
         m_rgEvents = [];
-        m_eOlderDirection = se.Idle;
-        m_eNewerDirection = se.Idle;
+        m_eOlderDirection = re.Idle;
+        m_eNewerDirection = re.Idle;
         constructor(e) {
           (0, s.Gn)(this), (this.m_partnerEventStore = e);
         }
@@ -1301,8 +1303,8 @@
           (this.m_nAppID = e.appid),
             (this.m_clanSteamID = e.clanSteamID),
             (this.m_rgEvents = []),
-            (this.m_eOlderDirection = se.Loading),
-            (this.m_eNewerDirection = se.Loading),
+            (this.m_eOlderDirection = re.Loading),
+            (this.m_eNewerDirection = re.Loading),
             (this.m_additionalParams = t),
             this.m_rgEvents.push(e);
           let o = null;
@@ -1319,24 +1321,24 @@
           (0, s.h5)(() => {
             if (!o || 0 == o.length)
               return (
-                (this.m_eOlderDirection = se.EndOfContent),
-                void (this.m_eNewerDirection = se.EndOfContent)
+                (this.m_eOlderDirection = re.EndOfContent),
+                void (this.m_eNewerDirection = re.EndOfContent)
               );
             let t = o.findIndex((t) => t.GID == e.GID),
               n = t,
               a = t >= 0 ? o.length - t - 1 : 0;
             (this.m_eNewerDirection =
-              n >= this.k_nMaxPerDirection ? se.Idle : se.EndOfContent),
+              n >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent),
               (this.m_eOlderDirection =
-                a >= this.k_nMaxPerDirection ? se.Idle : se.EndOfContent),
+                a >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent),
               (this.m_rgEvents = o);
           });
         }
         async LoadMoreAtEnd() {
-          if (this.m_eOlderDirection != se.Idle) return;
+          if (this.m_eOlderDirection != re.Idle) return;
           if (0 == this.m_rgEvents.length) return;
           let e = this.m_rgEvents[this.m_rgEvents.length - 1];
-          this.m_eOlderDirection = se.Loading;
+          this.m_eOlderDirection = re.Loading;
           let t = null;
           try {
             const n = this.m_partnerEventStore;
@@ -1350,19 +1352,19 @@
             );
           } catch (e) {}
           (0, s.h5)(() => {
-            if (!t) return void (this.m_eOlderDirection = se.Idle);
+            if (!t) return void (this.m_eOlderDirection = re.Idle);
             const e = new Set(this.m_rgEvents.map((e) => e.GID));
             for (let n of t)
               e.has(n.GID) || (this.m_rgEvents.push(n), e.add(n.GID));
             this.m_eOlderDirection =
-              t.length >= this.k_nMaxPerDirection ? se.Idle : se.EndOfContent;
+              t.length >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent;
           });
         }
         async LoadMoreAtBeginning() {
-          if (this.m_eNewerDirection != se.Idle) return;
+          if (this.m_eNewerDirection != re.Idle) return;
           if (0 == this.m_rgEvents.length) return;
           let e = this.m_rgEvents[0];
-          this.m_eNewerDirection = se.Loading;
+          this.m_eNewerDirection = re.Loading;
           let t = null;
           try {
             const n = this.m_partnerEventStore;
@@ -1375,19 +1377,19 @@
             );
           } catch (e) {}
           (0, s.h5)(() => {
-            if (!t) return void (this.m_eNewerDirection = se.Idle);
+            if (!t) return void (this.m_eNewerDirection = re.Idle);
             const e = new Set(this.m_rgEvents.map((e) => e.GID));
             for (let n of t.reverse())
               e.has(n.GID) || (this.m_rgEvents.unshift(n), e.add(n.GID));
             this.m_eNewerDirection =
-              t.length >= this.k_nMaxPerDirection ? se.Idle : se.EndOfContent;
+              t.length >= this.k_nMaxPerDirection ? re.Idle : re.EndOfContent;
           });
         }
       }
-      (0, o.Cg)([s.sH.shallow], re.prototype, "m_rgEvents", void 0),
-        (0, o.Cg)([s.sH], re.prototype, "m_eOlderDirection", void 0),
-        (0, o.Cg)([s.sH], re.prototype, "m_eNewerDirection", void 0);
-      const ie = (0, r.PA)((e) =>
+      (0, o.Cg)([s.sH.shallow], ie.prototype, "m_rgEvents", void 0),
+        (0, o.Cg)([s.sH], ie.prototype, "m_eOlderDirection", void 0),
+        (0, o.Cg)([s.sH], ie.prototype, "m_eNewerDirection", void 0);
+      const le = (0, r.PA)((e) =>
         (0, a.jsx)("div", {
           className: (0, G.A)(
             M().AppPartnerEventsBanner,
@@ -1569,82 +1571,84 @@
           S = m.Fm.Get().BOwnsApp(t);
         let g = Boolean(t !== c.DU);
         const v = (0, o.jsx)("img", { className: f().AppBannerLogo, src: i });
-        return (0, o.jsxs)("div", {
-          className: f().AppBannerCtn,
-          children: [
-            (0, o.jsx)("div", {
-              className: f().AppBannerBackground,
-              style: { backgroundImage: `url(${i})` },
-            }),
-            (0, o.jsxs)("div", {
-              className: (0, A.A)(f().AppBannerGroup, p),
+        return (0, C.Qn)()
+          ? null
+          : (0, o.jsxs)("div", {
+              className: f().AppBannerCtn,
               children: [
-                g
-                  ? Boolean(t)
-                    ? (0, o.jsx)(a.Q, {
-                        id: h,
-                        className: f().AppBannerLogoCtn,
-                        hoverProps: {
-                          direction: "overlay",
-                          style: { minWidth: "320px" },
-                        },
-                        children: v,
-                      })
-                    : (0, o.jsx)(s.u, {
-                        id: h,
-                        hoverClassName: f().AppBannerLogoCtn,
-                        children: v,
-                      })
-                  : (0, o.jsxs)("div", {
-                      className: f().AppBannerLogoCtn,
-                      children: [v, " "],
-                    }),
+                (0, o.jsx)("div", {
+                  className: f().AppBannerBackground,
+                  style: { backgroundImage: `url(${i})` },
+                }),
                 (0, o.jsxs)("div", {
-                  className: f().AppBannerTitle,
+                  className: (0, A.A)(f().AppBannerGroup, p),
                   children: [
-                    d,
-                    (0, o.jsx)("div", {
-                      className: f().NewsHubSubTitle,
-                      children: (0, D.we)("#EventDisplay_NewsHubSubtitle"),
+                    g
+                      ? Boolean(t)
+                        ? (0, o.jsx)(a.Q, {
+                            id: h,
+                            className: f().AppBannerLogoCtn,
+                            hoverProps: {
+                              direction: "overlay",
+                              style: { minWidth: "320px" },
+                            },
+                            children: v,
+                          })
+                        : (0, o.jsx)(s.u, {
+                            id: h,
+                            hoverClassName: f().AppBannerLogoCtn,
+                            children: v,
+                          })
+                      : (0, o.jsxs)("div", {
+                          className: f().AppBannerLogoCtn,
+                          children: [v, " "],
+                        }),
+                    (0, o.jsxs)("div", {
+                      className: f().AppBannerTitle,
+                      children: [
+                        d,
+                        (0, o.jsx)("div", {
+                          className: f().NewsHubSubTitle,
+                          children: (0, D.we)("#EventDisplay_NewsHubSubtitle"),
+                        }),
+                      ],
                     }),
+                    g &&
+                      (0, o.jsxs)("div", {
+                        className: f().AppBannerLinks,
+                        children: [
+                          Boolean(!S && t) &&
+                            (0, o.jsx)("div", {
+                              className: f().HeaderWishlistButton,
+                              children: (0, o.jsx)(y._, {
+                                appid: t,
+                                bIsFree: Boolean(_?.is_free),
+                                bIsComingSoon: Boolean(_?.is_coming_soon),
+                                className: (0, A.A)(
+                                  f().ActionButton,
+                                  f().WishlistBtnShort,
+                                ),
+                              }),
+                            }),
+                          (0, o.jsx)("div", {
+                            className: f().HeaderFollowButton,
+                            children: Boolean(t)
+                              ? (0, o.jsx)(I.do, {
+                                  appid: t,
+                                  className: f().HeaderButtonDark,
+                                })
+                              : (0, o.jsx)(I.of, {
+                                  clanAccountID: n,
+                                  className: f().HeaderButtonDark,
+                                }),
+                          }),
+                          (0, o.jsx)(j, { ...e }),
+                        ],
+                      }),
                   ],
                 }),
-                g &&
-                  (0, o.jsxs)("div", {
-                    className: f().AppBannerLinks,
-                    children: [
-                      Boolean(!S && t) &&
-                        (0, o.jsx)("div", {
-                          className: f().HeaderWishlistButton,
-                          children: (0, o.jsx)(y._, {
-                            appid: t,
-                            bIsFree: Boolean(_?.is_free),
-                            bIsComingSoon: Boolean(_?.is_coming_soon),
-                            className: (0, A.A)(
-                              f().ActionButton,
-                              f().WishlistBtnShort,
-                            ),
-                          }),
-                        }),
-                      (0, o.jsx)("div", {
-                        className: f().HeaderFollowButton,
-                        children: Boolean(t)
-                          ? (0, o.jsx)(I.do, {
-                              appid: t,
-                              className: f().HeaderButtonDark,
-                            })
-                          : (0, o.jsx)(I.of, {
-                              clanAccountID: n,
-                              className: f().HeaderButtonDark,
-                            }),
-                      }),
-                      (0, o.jsx)(j, { ...e }),
-                    ],
-                  }),
               ],
-            }),
-          ],
-        });
+            });
       });
     },
     42011: (e, t, n) => {

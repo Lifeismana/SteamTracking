@@ -200,20 +200,6 @@
 	height: 100%;
 }
 
-.commentnotification_browseoption .browseOptionImage {
-	display: none;
-}
-
-.commentnotification_browseoption.active .browseOptionImage {
-	display: block;
-}
-
-.commentnotification_browseoption.active .browseOption a {
-	cursor: default;
-	text-decoration: none;
-	color: #EBEBEB;
-}
-
 @media screen and (max-width: 910px)
 {
 	html.responsive .commentnotification.moderatormessage .commentnotification_newposts {
@@ -295,18 +281,6 @@
 
 .body_content_box p {
 	margin: 0 0 16px 0;
-}
-
-
-@media screen and (max-width: 910px)
-{
-	html.responsive #mainContents {
-		width: auto;
-	}
-
-	html.responsive #rightContents {
-		float: none;
-	}
 }
 
 @media screen and ( max-width: 480px )

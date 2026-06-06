@@ -808,7 +808,7 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 	this.m_bScreenshotModalActive = true;
 
-	var $Modal = $J('<div/>', {'class': 'screenshot_popup_modal' } );
+	var $Modal = $J('<dialog/>', {'class': 'screenshot_popup_modal' } );
 
 	var $Title = $J('<a/>' );
 	if ( Steam.BIsUserInSteamClient() )

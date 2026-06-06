@@ -8,7 +8,7 @@
 	font-weight: normal;
 	border-bottom: 1px solid #445f7f;
 	color: #fff;
-	padding: 20px 0 5px 0;
+	padding-bottom: 5px;
 }
 
 .review_box {
@@ -203,11 +203,6 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	margin-left: 8px;
 }
 
-#rightContents
-{
-	margin-top: 20px;
-}
-
 .review_list #leftContents {
 	max-width: 640px;
 	width: auto;
@@ -218,7 +213,6 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	background: #1b1b1b;
 	background: rgba(27,27,27,.36);
 	padding: 10px 10px 10px 11px;
-	margin: 29px 0 10px 0;
 }
 
 .giantNumber {

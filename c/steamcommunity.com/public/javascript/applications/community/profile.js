@@ -6827,6 +6827,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, _] = (0, _.useState)(!1),
@@ -6868,7 +6869,9 @@
             });
           })(_.steamid),
           _ = (0, _.useRef)(null),
-          _ = (0, _.useRef)(null);
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)(_.steamid);
         let _ = "";
         if (_.isSuccess && _.data > 0) {
           const _ = Math.floor((_.data - new Date().getTime() / 1e3) / 86400);
@@ -6882,7 +6885,7 @@
                 onCancel: () => __webpack_require__(!1),
                 onOK: async () => {
                   var _, _;
-                  if (!_.current) return;
+                  if ((_(!0), !_.current)) return;
                   const _ = _.current.value,
                     _ = 86400 * parseInt(_),
                     _ = Math.floor(new Date().getTime() / 1e3) + _,
@@ -6898,11 +6901,13 @@
                     rtCooldownEnds: _,
                     bClearOpenReports: _,
                   }),
-                    __webpack_require__(!1);
+                    __webpack_require__(!1),
+                    _(!1);
                 },
                 strTitle: _._.Localize("#setcooldown_dialogtitle"),
                 strDescription: _._.Localize("#setcooldown_dialogdescription"),
                 strOKButtonText: _._.Localize("#setcooldown_setbutton"),
+                bOKDisabled: _,
                 children: [
                   _.isLoading &&
                     (0, _.jsxs)("p", {
@@ -6931,6 +6936,19 @@
                     (0, _.jsx)("p", {
                       children: _._.Localize("#setcooldown_nocooldown"),
                     }),
+                  _.isSuccess &&
+                    !!_.data &&
+                    (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsx)("p", {
+                        children: _._.Localize(
+                          "#setcooldown_statssummary",
+                          _.data.total_acquitted_reports,
+                          _.data.total_reports,
+                          _.data.acquitted_reports_in_last_week,
+                          _.data.reports_in_last_week,
+                        ),
+                      }),
+                    }),
                   (0, _.jsxs)("p", {
                     children: [
                       (0, _.jsxs)("label", {
@@ -6956,6 +6974,7 @@
                         ],
                       }),
                       (0, _.jsx)("button", {
+                        disabled: _,
                         onClick: async () => {
                           await _.mutateAsync({
                             rtCooldownEnds: 0,
@@ -7039,6 +7058,184 @@
             }),
           ],
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "get_content_report_subject_group",
+        _ = "get_content_report_subject_audit_log";
+      async function _(_, _, _, _) {
+        return Promise.all([
+          _.invalidateQueries({
+            queryKey: [_, _, _],
+          }),
+          _.invalidateQueries({
+            queryKey: [_, _, _, _],
+          }),
+        ]);
+      }
+      function _(_, _) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _) {
+            return {
+              queryKey: [_, _, _],
+              queryFn: async () => {
+                const _ = _._.Init(_._);
+                _.Body().set_subject_type(_), _.Body().set_subject_group_id(_);
+                const _ = await _._.GetContentReportSubjectGroup(_, _);
+                if (!_.BSuccess())
+                  throw new Error(
+                    "Failed in GetContentReportSubjectGroup, EResult: " +
+                      _.GetEResult(),
+                  );
+                return _.Body().toObject();
+              },
+            };
+          })(_, _, _),
+        );
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _, _) {
+            return {
+              queryKey: [_, _, _, _],
+              queryFn: async () => {
+                if (void 0 === _ || void 0 === _ || void 0 === _) return;
+                const _ = _._.Init(_._);
+                return (
+                  _.Body().set_subject_type(_),
+                  _.Body().set_subject_group_id(_),
+                  _.Body().set_subject_id(_),
+                  (await _._.GetAuditLog(_, _)).Body().toObject()
+                );
+              },
+            };
+          })(_, _, _, _),
+        );
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => {
+            const _ = _._.Init(_._);
+            _.Body().set_subject_type(_),
+              _.Body().set_subject_group_id(_),
+              _.Body().set_subject_id(_),
+              _.Body().set_required_level(_.eNewLevel),
+              _.eReason && _.Body().set_reason(_.eReason),
+              _.strNote && _.Body().set_note(_.strNote);
+            const _ = await _._.EscalateSubject(_, _);
+            if (_.GetEResult() !== _._)
+              throw new Error(`Failed to escalate subject: ${_.GetEMsg()}`);
+          },
+          onSuccess: async (_, _) => {
+            await _(_, _, _, _);
+          },
+        });
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async (_) => {
+            const _ = _._.Init(_._);
+            if (
+              (_.Body().set_subject_type(_),
+              _.Body().set_subject_group_id(_),
+              _.Body().set_subject_id(_),
+              _.eResolution && _.Body().set_updated_resolution(_.eResolution),
+              _.eReason && _.Body().set_updated_reason(_.eReason),
+              _.rgSanctions)
+            )
+              for (const _ of _.rgSanctions) {
+                const _ = new _._();
+                _.set_sanction(_.sanction),
+                  _.days && _.set_days(_.days),
+                  _.Body().add_updated_sanctions(_);
+              }
+            const _ = await _._.ResolveDisputedSubject(_, _);
+            if (!_.BSuccess())
+              throw new Error(
+                `Failed to resolve disputed subject (EResult ${_.GetEResult()})`,
+              );
+          },
+          onSuccess: async () => {
+            await _(_, _, _, _);
+          },
+        });
+      }
+      function _(_, _, _, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_steamid(_),
+              _.Body().set_subject_type(_),
+              _.Body().set_subject_group_id(_),
+              _.Body().set_subject_id(_),
+              _.Body().set_details(_);
+            await _._.DisputeModerationForSubject(_, _);
+          },
+          onSuccess: async () => {
+            await _(_, _, _, _);
+          },
+        });
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_subject_type(_),
+              _.Body().set_subject_group_id(_),
+              _.Body().set_subject_id(_),
+              _.Body().set_owner_dispute_details(_);
+            const _ = await _._.UpdateSubject(_, _);
+            if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
+          },
+          onSuccess: async () => {
+            await _(_, _, _, _);
+          },
+        });
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: ["reporterstats", _],
+              queryFn: async () => {
+                const _ = _._.Init(_._);
+                __webpack_require__.Body().set_steamid(_);
+                const _ = await _._.GetReporterStats(_, _);
+                if (!_.BSuccess()) throw new Error("EResult " + _.GetEResult());
+                return _.Body().toObject();
+              },
+            };
+          })(_, _),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

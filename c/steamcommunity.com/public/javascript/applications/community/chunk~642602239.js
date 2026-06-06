@@ -7326,11 +7326,7 @@
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
             _ = this.GetEventType() == _.ajI,
-            _ = _._.is_valve_email,
-            _ =
-              this.BIsNextFest(_) &&
-              !!this.startTime &&
-              (this.startTime > new Date("2026-03-01").getTime() / 1e3 || _);
+            _ = this.BShowNextFestHeader(!0);
           return _ || _ || _ || _ || _
             ? [
                 ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, _),
@@ -7704,6 +7700,13 @@
             !(!_ || _ != _._) &&
             (_ ? _.startsWith(_) : _.startsWith(_) && !_.includes("prev"))
           );
+        }
+        BShowNextFestHeader(_) {
+          return _ && _._.is_valve_email
+            ? this.BIsNextFest(!0)
+            : this.BIsNextFest(!1) &&
+                !!this.startTime &&
+                this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }
         GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
           var _, _;
@@ -13333,7 +13336,7 @@
           kind: _.sKind,
           default: _.bDefault,
           srcLang: (0, _.wwZ)(_),
-          label: (0, _._)("#language_selection_" + (0, _.LgB)(_)),
+          label: (0, _._)(_),
         });
       }
     },

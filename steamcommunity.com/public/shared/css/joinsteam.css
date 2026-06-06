@@ -282,7 +282,7 @@ p .csgoheadline{
 	flex-wrap: wrap;
 }
 
-.joinsteam .section_title {
+body.joinsteam .section_title {
 	text-transform: uppercase;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	font-size: 34px;
@@ -429,7 +429,7 @@ body.joinsteam.verify_email {
 	margin: 40px 0;
 }
 
-.newaccount_email_header_text {
+body h2.newaccount_email_header_text.newaccount_email_header_text {
 	font-size: 30px;
 	line-height: 35px;
 	letter-spacing: 0.05em;

@@ -60,6 +60,8 @@
         Separator: "vvXhWtkA9z6wjvMnq8Cfh",
         IncludExcludeItemOption: "_3Cu9n_EGnwgQDa94O5JQYa",
         ItemOptionTitle: "_1KOTz4KFHV7evGoyiIIhmZ",
+        OptionColumn: "_29uhbNe06vW1DnR0UERABv",
+        Percent: "_3pU4B55o9M0cH7n06CQ15l",
         ResultHeader: "_2Vl5GTvbioLQmgltncA3xD",
         PenaltySelector: "_28XsJixV0GJwbwa0EysF95",
         VariantTypes: "_3Zp2QG7HhI-jivO6IldhoV",
@@ -216,6 +218,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
           const [_, _] = (0, _.useState)(""),
@@ -283,39 +286,9 @@
               const _ = (0, _._)(0, _.data.heroes.length - 1);
               _.fnSetSelectedHero(_.data.heroes[_]._);
             }
-          }, [_, _]),
-            _.useEffect(() => {
-              _.data &&
-                null == _.data.facets.find((_) => _.index + 1 == _.nFacet) &&
-                _.fnSetSelectedFacet(_.data.facets[0].index + 1);
-            }, [_, _]);
+          }, [_, _]);
           const _ = _.data,
-            _ = _.data,
-            _ = _ ? _.facets.find((_) => _.index + 1 == _.nFacet) : void 0,
-            _ = _
-              ? _.data.facets.findIndex((_) => _.index + 1 == _.nFacet)
-              : -1;
-          let _ = "";
-          switch (_?.color) {
-            case 0:
-              _ = "Red";
-              break;
-            case 1:
-              _ = "Yellow";
-              break;
-            case 2:
-              _ = "Green";
-              break;
-            case 3:
-              _ = "Blue";
-              break;
-            case 4:
-              _ = "Purple";
-              break;
-            case 5:
-              _ = "Gray";
-          }
-          const _ = _.document?.body;
+            _ = (_.data, _.document?.body);
           return (0, _.jsxs)("div", {
             className: _().HeroOption,
             children: [
@@ -329,28 +302,6 @@
                   backgroundImage: `url( ${_._.IMG_URL}heroes/${_?.name.replace("npc_dota_hero_", "")}.png`,
                 },
                 onClick: () => __webpack_require__(!0),
-              }),
-              (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().Facet,
-                  _()[`FacetColor${_}${_?.gradient_id}`],
-                ),
-                onClick: () =>
-                  (() => {
-                    if (_.data) {
-                      const _ = _.data.facets.findIndex(
-                        (_) => _.index + 1 == _.nFacet,
-                      );
-                      if (-1 != _) {
-                        const _ = (_ + 1) % _.data.facets.length;
-                        _.fnSetSelectedFacet(_.data.facets[_].index + 1);
-                      }
-                    }
-                  })(),
-                children: (0, _.jsx)("div", {
-                  className: _().BackgroundTexture,
-                  children: _ >= 0 ? _?.facets[_]?.title_loc : "invalid",
-                }),
               }),
               _ &&
                 _.createPortal(
@@ -452,16 +403,18 @@
                         !(
                           !_.is_lategame_suggested ||
                           (_.eItemFilter != _.ITEM_OPTIONS_LATE &&
-                            !_.ITEM_OPTIONS_EARLY_LATE)
+                            _.eItemFilter != _.ITEM_OPTIONS_EARLY_LATE)
                         ) ||
                           !(
                             !_.is_earlygame_suggested ||
                             (_.eItemFilter != _.ITEM_OPTIONS_EARLY &&
-                              !_.ITEM_OPTIONS_EARLY_LATE)
+                              _.eItemFilter != _.ITEM_OPTIONS_EARLY_LATE)
                           ) ||
-                        (!_.is_earlygame_suggested &&
-                          !_.is_lategame_suggested &&
-                          _.eItemFilter == _.ITEM_OPTIONS_NOT_EARLY_LATE),
+                            (!_.is_earlygame_suggested &&
+                              !_.is_lategame_suggested &&
+                              _.eItemFilter == _.ITEM_OPTIONS_NOT_EARLY_LATE) ||
+                        (_.eItemFilter == _.ITEM_OPTIONS_CUSTOM &&
+                          _.fnCustomFilter(_)),
                     ).map((_) =>
                       (0, _.jsxs)(
                         "div",
@@ -500,7 +453,8 @@
           (_[(_.ITEM_OPTIONS_LATE = 3)] = "ITEM_OPTIONS_LATE"),
           (_[(_.ITEM_OPTIONS_EARLY_LATE = 4)] = "ITEM_OPTIONS_EARLY_LATE"),
           (_[(_.ITEM_OPTIONS_NOT_EARLY_LATE = 5)] =
-            "ITEM_OPTIONS_NOT_EARLY_LATE");
+            "ITEM_OPTIONS_NOT_EARLY_LATE"),
+          (_[(_.ITEM_OPTIONS_CUSTOM = 6)] = "ITEM_OPTIONS_CUSTOM");
       })(_ || (_ = {}));
       const _ = (_) => {
           const [_, _] = _.useState(!1),
@@ -531,6 +485,7 @@
                     },
                     bAllowEmpty: _.bAllowEmpty,
                     eItemFilter: _.eItemFilter,
+                    fnCustomFilter: _.fnCustomFilter,
                   }),
                   _,
                 ),
@@ -569,6 +524,43 @@
                   (0, _.jsx)("option", {
                     value: 16,
                     children: "Hard Support",
+                  }),
+                ],
+              }),
+            ],
+          }),
+        _ = (_) =>
+          (0, _.jsxs)("div", {
+            className: _().Option,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().Name,
+                children: "Tier",
+              }),
+              (0, _.jsxs)("select", {
+                className: _().TierSelector,
+                value: _.nTier,
+                onChange: (_) => _.fnSetTier(parseInt(_.target.value)),
+                children: [
+                  (0, _.jsx)("option", {
+                    value: 0,
+                    children: "Tier 1",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 1,
+                    children: "Tier 2",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 2,
+                    children: "Tier 3",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 3,
+                    children: "Tier 4",
+                  }),
+                  (0, _.jsx)("option", {
+                    value: 4,
+                    children: "Tier 5",
                   }),
                 ],
               }),
@@ -656,22 +648,16 @@
         );
       }
       const _ = "pregameitems",
+        _ = "neutralitems",
         _ = "maingameitemsequence",
         _ = "abilities",
         _ = (_) => {
           const _ = new URLSearchParams(_.strConfig),
             _ = (0, _._)();
           let _ = parseInt(_.get("nHeroID") || "0"),
-            _ = parseInt(_.get("nFacet") || "1"),
             _ = parseInt(_.get("nPosition") || "0"),
             _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrAlliedHeroFacets") || "1,1,1,1")
-              .split(",")
-              .map(Number),
             _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrEnemyHeroFacets") || "1,1,1,1,1")
               .split(",")
               .map(Number),
             _ = (
@@ -685,34 +671,22 @@
           const _ = () => {
               const _ = {
                 nHeroID: _,
-                nFacet: _,
                 nPosition: _,
                 arrAlliedHeroIDs: _,
-                arrAlliedHeroFacets: _,
                 arrEnemyHeroIDs: _,
-                arrEnemyHeroFacets: _,
                 nAverageMMR: parseInt(_),
                 nGameMode: _,
                 arrSkilledAbilities: _,
               };
               __webpack_require__.push(_._.dotaplustester(_.strFeature, _(_)));
             },
-            _ = (_) => {
-              console.log("2"), (_ = _), _();
-            },
             _ = (_, _) => {
               console.log("4"), (_[_] = _), _();
             },
             _ = (_, _) => {
-              console.log("5"), (_[_] = _), _();
-            },
-            _ = (_, _) => {
               console.log("6"), (_[_] = _), _();
             },
-            _ = (_, _) => {
-              console.log("7"), (_[_] = _), _();
-            },
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !0, _).data;
+            _ = (0, _._)(_, _, _, _, parseInt(_), _, !0, _).data;
           let _ = [];
           if (_ && _.backend_response.outputs.length > 0)
             for (
@@ -745,12 +719,10 @@
                       children: (0, _.jsx)(_, {
                         strLabel: "Your Hero",
                         nHeroID: _,
-                        nFacet: _,
                         fnSetSelectedHero: (_) => {
                           return (_ = _), console.log("1"), (_ = _), void _();
                           var _;
                         },
-                        fnSetSelectedFacet: (_) => _(_),
                       }),
                     }),
                     (0, _.jsxs)("div", {
@@ -759,30 +731,22 @@
                         (0, _.jsx)(_, {
                           strLabel: "Ally #1",
                           nHeroID: _[0],
-                          nFacet: _[0],
                           fnSetSelectedHero: (_) => _(0, _),
-                          fnSetSelectedFacet: (_) => _(0, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Ally #2",
                           nHeroID: _[1],
-                          nFacet: _[1],
                           fnSetSelectedHero: (_) => _(1, _),
-                          fnSetSelectedFacet: (_) => _(1, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Ally #3",
                           nHeroID: _[2],
-                          nFacet: _[2],
                           fnSetSelectedHero: (_) => _(2, _),
-                          fnSetSelectedFacet: (_) => _(2, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Ally #4",
                           nHeroID: _[3],
-                          nFacet: _[3],
                           fnSetSelectedHero: (_) => _(3, _),
-                          fnSetSelectedFacet: (_) => _(3, _),
                         }),
                       ],
                     }),
@@ -792,37 +756,27 @@
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #1",
                           nHeroID: _[0],
-                          nFacet: _[0],
                           fnSetSelectedHero: (_) => _(0, _),
-                          fnSetSelectedFacet: (_) => _(0, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #2",
                           nHeroID: _[1],
-                          nFacet: _[1],
                           fnSetSelectedHero: (_) => _(1, _),
-                          fnSetSelectedFacet: (_) => _(1, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #3",
                           nHeroID: _[2],
-                          nFacet: _[2],
                           fnSetSelectedHero: (_) => _(2, _),
-                          fnSetSelectedFacet: (_) => _(2, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #4",
                           nHeroID: _[3],
-                          nFacet: _[3],
                           fnSetSelectedHero: (_) => _(3, _),
-                          fnSetSelectedFacet: (_) => _(3, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #5",
                           nHeroID: _[4],
-                          nFacet: _[4],
                           fnSetSelectedHero: (_) => _(4, _),
-                          fnSetSelectedFacet: (_) => _(4, _),
                         }),
                       ],
                     }),
@@ -930,16 +884,9 @@
           const _ = new URLSearchParams(_.strConfig),
             _ = (0, _._)();
           let _ = parseInt(_.get("nHeroID") || "0"),
-            _ = parseInt(_.get("nFacet") || "1"),
             _ = parseInt(_.get("nPosition") || "0"),
             _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrAlliedHeroFacets") || "1,1,1,1")
-              .split(",")
-              .map(Number),
             _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0,0")
-              .split(",")
-              .map(Number),
-            _ = (_.get("arrEnemyHeroFacets") || "1,1,1,1,1")
               .split(",")
               .map(Number),
             _ = _.get("nAverageMMR") || "2000",
@@ -947,18 +894,15 @@
           const _ = () => {
               const _ = {
                 nHeroID: _,
-                nFacet: _,
                 nPosition: _,
                 arrAlliedHeroIDs: _,
-                arrAlliedHeroFacets: _,
                 arrEnemyHeroIDs: _,
-                arrEnemyHeroFacets: _,
                 nAverageMMR: parseInt(_),
                 nGameMode: _,
               };
               __webpack_require__.push(_._.dotaplustester(_.strFeature, _(_)));
             },
-            _ = (0, _._)(_, _, _, _, _, _, _, parseInt(_), _, !0).data;
+            _ = (0, _._)(_, _, _, _, parseInt(_), _, !0).data;
           let _ = [];
           if (
             _ &&
@@ -977,16 +921,7 @@
                 _.backend_response.outputs[0].categorical_crossentropy
                   .value_sequence[0].value[_],
               );
-          const _ = (_) => {
-              (_ = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
+          const _ = (_, _) => {
               (_[_] = _), _();
             },
             _ = (_, _) => {
@@ -1008,9 +943,7 @@
                           children: (0, _.jsx)(_, {
                             strLabel: "Your Hero",
                             nHeroID: _,
-                            nFacet: _,
                             fnSetSelectedHero: (_) => ((_ = _), void _()),
-                            fnSetSelectedFacet: (_) => _(_),
                           }),
                         }),
                         (0, _.jsxs)("div", {
@@ -1019,30 +952,22 @@
                             (0, _.jsx)(_, {
                               strLabel: "Ally #1",
                               nHeroID: _[0],
-                              nFacet: _[0],
                               fnSetSelectedHero: (_) => _(0, _),
-                              fnSetSelectedFacet: (_) => _(0, _),
                             }),
                             (0, _.jsx)(_, {
                               strLabel: "Ally #2",
                               nHeroID: _[1],
-                              nFacet: _[1],
                               fnSetSelectedHero: (_) => _(1, _),
-                              fnSetSelectedFacet: (_) => _(1, _),
                             }),
                             (0, _.jsx)(_, {
                               strLabel: "Ally #3",
                               nHeroID: _[2],
-                              nFacet: _[2],
                               fnSetSelectedHero: (_) => _(2, _),
-                              fnSetSelectedFacet: (_) => _(2, _),
                             }),
                             (0, _.jsx)(_, {
                               strLabel: "Ally #4",
                               nHeroID: _[3],
-                              nFacet: _[3],
                               fnSetSelectedHero: (_) => _(3, _),
-                              fnSetSelectedFacet: (_) => _(3, _),
                             }),
                           ],
                         }),
@@ -1052,37 +977,27 @@
                             (0, _.jsx)(_, {
                               strLabel: "Enemy #1",
                               nHeroID: _[0],
-                              nFacet: _[0],
                               fnSetSelectedHero: (_) => _(0, _),
-                              fnSetSelectedFacet: (_) => _(0, _),
                             }),
                             (0, _.jsx)(_, {
                               strLabel: "Enemy #2",
                               nHeroID: _[1],
-                              nFacet: _[1],
                               fnSetSelectedHero: (_) => _(1, _),
-                              fnSetSelectedFacet: (_) => _(1, _),
                             }),
                             (0, _.jsx)(_, {
                               strLabel: "Enemy #3",
                               nHeroID: _[2],
-                              nFacet: _[2],
                               fnSetSelectedHero: (_) => _(2, _),
-                              fnSetSelectedFacet: (_) => _(2, _),
                             }),
                             (0, _.jsx)(_, {
                               strLabel: "Enemy #4",
                               nHeroID: _[3],
-                              nFacet: _[3],
                               fnSetSelectedHero: (_) => _(3, _),
-                              fnSetSelectedFacet: (_) => _(3, _),
                             }),
                             (0, _.jsx)(_, {
                               strLabel: "Enemy #5",
                               nHeroID: _[4],
-                              nFacet: _[4],
                               fnSetSelectedHero: (_) => _(4, _),
-                              fnSetSelectedFacet: (_) => _(4, _),
                             }),
                           ],
                         }),
@@ -1145,16 +1060,279 @@
           const _ = new URLSearchParams(_.strConfig),
             _ = (0, _._)();
           let _ = parseInt(_.get("nHeroID") || "0"),
-            _ = parseInt(_.get("nFacet") || "0"),
             _ = parseInt(_.get("nPosition") || "0"),
             _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
-            _ = (_.get("arrAlliedHeroFacets") || "0,0,0,0")
-              .split(",")
-              .map(Number),
             _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0,0")
               .split(",")
               .map(Number),
-            _ = (_.get("arrEnemyHeroFacets") || "0,0,0,0,0")
+            _ = _.get("nAverageMMR") || "2000",
+            _ = parseInt(_.get("nGameMode") || "22"),
+            _ = parseInt(_.get("nTier") || "0"),
+            _ = (_.get("arrTrinkets") || "0,0,0,0").split(",").map(Number),
+            _ = (_.get("arrEnchantments") || "0,0,0,0").split(",").map(Number);
+          let _ = (0, _._)(_).data;
+          const _ = (_, _) => {
+              (_[_] = _), _();
+            },
+            _ = (_, _) => {
+              (_[_] = _), _();
+            },
+            _ = () => {
+              const _ = _({
+                nHeroID: _,
+                nPosition: _,
+                arrAlliedHeroIDs: _,
+                arrEnemyHeroIDs: _,
+                nAverageMMR: parseInt(_),
+                nGameMode: _,
+                nTier: _,
+                arrTrinkets: _,
+                arrEnchantments: _,
+              });
+              _.strConfig != _ &&
+                __webpack_require__.push(_._.dotaplustester(_.strFeature, _));
+            },
+            _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = (0, _._)(_);
+          let _;
+          switch (_.data?.primary_attr) {
+            case 0:
+              _ = "strength";
+              break;
+            case 1:
+              _ = "agility";
+              break;
+            case 2:
+              _ = "intelligence";
+              break;
+            case 3:
+              _ = "universal";
+          }
+          const _ = (0, _._)(_, _, _, _, parseInt(_), _, !0, _, _, _).data,
+            _ = (0, _._)(_, _ + 1);
+          if (!_.data || !_.data || !_.data)
+            return (0, _.jsx)("div", {
+              className: _().Loading,
+              children: "Loading hero and item data...",
+            });
+          const _ = _.data,
+            _ = _.tier[_].enhancements.map((_) => _.ability_id),
+            _ = (_) =>
+              _.neutral_item_tier == _ ||
+              (!(_.neutral_item_tier > _) &&
+                -1 != _.neutral_item_tier && _.neutral_item_tier < _ &&
+                0 == _?.filter((_) => _.neutral_item_tier < _).length);
+          return (0, _.jsx)("div", {
+            className: _().DotaPlusTesterSubPage,
+            children: (0, _.jsxs)("div", {
+              className: _().Content,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().HeroList,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().YourHero,
+                      children: (0, _.jsx)(_, {
+                        strLabel: "Your Hero",
+                        nHeroID: _,
+                        fnSetSelectedHero: (_) => ((_ = _), void _()),
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Allies,
+                      children: [
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #1",
+                          nHeroID: _[0],
+                          fnSetSelectedHero: (_) => _(0, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #2",
+                          nHeroID: _[1],
+                          fnSetSelectedHero: (_) => _(1, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #3",
+                          nHeroID: _[2],
+                          fnSetSelectedHero: (_) => _(2, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Ally #4",
+                          nHeroID: _[3],
+                          fnSetSelectedHero: (_) => _(3, _),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().Enemies,
+                      children: [
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #1",
+                          nHeroID: _[0],
+                          fnSetSelectedHero: (_) => _(0, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #2",
+                          nHeroID: _[1],
+                          fnSetSelectedHero: (_) => _(1, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #3",
+                          nHeroID: _[2],
+                          fnSetSelectedHero: (_) => _(2, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #4",
+                          nHeroID: _[3],
+                          fnSetSelectedHero: (_) => _(3, _),
+                        }),
+                        (0, _.jsx)(_, {
+                          strLabel: "Enemy #5",
+                          nHeroID: _[4],
+                          fnSetSelectedHero: (_) => _(4, _),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, _.jsx)("div", {
+                  className: _().Separator,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().MiscInfo,
+                  children: [
+                    (0, _.jsx)(_, {
+                      nPosition: _,
+                      fnSetPosition: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      nGameMode: _,
+                      fnSetGameMode: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      strMMR: _,
+                      fnSetMMR: (_) => {
+                        (_ = _), _();
+                      },
+                    }),
+                    (0, _.jsx)(_, {
+                      nTier: _,
+                      fnSetTier: (_) => {
+                        _ != _ &&
+                          ((_ = [0, 0, 0, 0, 0]),
+                          (_ = [0, 0, 0, 0, 0]),
+                          (_ = _),
+                          _());
+                      },
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().IncludExcludeItemOption,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().ItemOptionTitle,
+                      children: "Trinkets",
+                    }),
+                    (0, _._)(0, _.tier[_].trinket_options - 1).map((_) => {
+                      const _ =
+                        _?.backend_response.outputs[0].categorical_crossentropy.value.indexOf(
+                          _[_],
+                        );
+                      return (0, _.jsxs)(
+                        "div",
+                        {
+                          className: _().OptionColumn,
+                          children: [
+                            (0, _.jsx)(
+                              _,
+                              {
+                                nItemID: _[_],
+                                fnSetSelectedItem: (_) => {
+                                  return (_ = _), (_[_] = _), void _();
+                                  var _;
+                                },
+                                bShowName: !0,
+                                bAllowEmpty: !0,
+                                eItemFilter: _.ITEM_OPTIONS_CUSTOM,
+                                fnCustomFilter: _,
+                                fnOverlayText: (_) =>
+                                  _.neutral_item_tier.toString(),
+                              },
+                              `Trinket_${_}`,
+                            ),
+                            _ >= 0 &&
+                              (0, _.jsx)("div", {
+                                className: _().Percent,
+                                children: `${(100 * _?.backend_response.outputs[0].categorical_crossentropy.weight[_]).toFixed(2)}%`,
+                              }),
+                          ],
+                        },
+                        `result_${_}`,
+                      );
+                    }),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().IncludExcludeItemOption,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().ItemOptionTitle,
+                      children: "Enhancements",
+                    }),
+                    (0, _._)(0, _.tier[_].enhancement_options - 1).map((_) => {
+                      const _ =
+                        _?.backend_response.outputs[1].categorical_crossentropy.value.indexOf(
+                          _[_],
+                        );
+                      return (0, _.jsxs)(
+                        "div",
+                        {
+                          className: _().OptionColumn,
+                          children: [
+                            (0, _.jsx)(
+                              _,
+                              {
+                                nItemID: _[_],
+                                fnSetSelectedItem: (_) => {
+                                  return (_ = _), (_[_] = _), void _();
+                                  var _;
+                                },
+                                bShowName: !0,
+                                bAllowEmpty: !0,
+                                eItemFilter: _.ITEM_OPTIONS_CUSTOM,
+                                fnCustomFilter: (_) => _.includes(_._),
+                              },
+                              `Trinket_${_}`,
+                            ),
+                            _ >= 0 &&
+                              (0, _.jsx)("div", {
+                                className: _().Percent,
+                                children: `${(100 * _?.backend_response.outputs[1].categorical_crossentropy.weight[_]).toFixed(2)}%`,
+                              }),
+                          ],
+                        },
+                        `result_${_}`,
+                      );
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        },
+        _ = (_) => {
+          const _ = new URLSearchParams(_.strConfig),
+            _ = (0, _._)();
+          let _ = parseInt(_.get("nHeroID") || "0"),
+            _ = parseInt(_.get("nPosition") || "0"),
+            _ = (_.get("arrAlliedHeroIDs") || "0,0,0,0").split(",").map(Number),
+            _ = (_.get("arrEnemyHeroIDs") || "0,0,0,0,0")
               .split(",")
               .map(Number),
             _ = _.get("nAverageMMR") || "2000",
@@ -1178,12 +1356,9 @@
           const _ = () => {
             const _ = _({
               nHeroID: _,
-              nFacet: _,
               nPosition: _,
               arrAlliedHeroIDs: _,
-              arrAlliedHeroFacets: _,
               arrEnemyHeroIDs: _,
-              arrEnemyHeroFacets: _,
               nAverageMMR: parseInt(_),
               nGameMode: _,
               nLobbyType: _,
@@ -1201,21 +1376,7 @@
             _ = [];
           for (const _ of _) 0 != _ && _.set(_, 3e5);
           for (const _ of _) 0 != _ && _.set(_, -1e6);
-          const _ = (0, _._)(
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            parseInt(_),
-            _,
-            _,
-            _,
-            [],
-            _,
-          ).data;
+          const _ = (0, _._)(_, _, _, _, parseInt(_), _, _, _, [], _).data;
           if (
             _ &&
             _.backend_response.outputs.length > 0 &&
@@ -1258,15 +1419,6 @@
           }
           const _ = (0, _._)(),
             _ = (0, _._)(),
-            _ = (_) => {
-              (_ = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
-            _ = (_, _) => {
-              (_[_] = _), _();
-            },
             _ = (_, _) => {
               (_[_] = _), _();
             },
@@ -1306,9 +1458,7 @@
                       children: (0, _.jsx)(_, {
                         strLabel: "Your Hero",
                         nHeroID: _,
-                        nFacet: _,
                         fnSetSelectedHero: (_) => ((_ = _), void _()),
-                        fnSetSelectedFacet: (_) => _(_),
                       }),
                     }),
                     (0, _.jsxs)("div", {
@@ -1317,30 +1467,22 @@
                         (0, _.jsx)(_, {
                           strLabel: "Ally #1",
                           nHeroID: _[0],
-                          nFacet: _[0],
                           fnSetSelectedHero: (_) => _(0, _),
-                          fnSetSelectedFacet: (_) => _(0, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Ally #2",
                           nHeroID: _[1],
-                          nFacet: _[1],
                           fnSetSelectedHero: (_) => _(1, _),
-                          fnSetSelectedFacet: (_) => _(1, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Ally #3",
                           nHeroID: _[2],
-                          nFacet: _[2],
                           fnSetSelectedHero: (_) => _(2, _),
-                          fnSetSelectedFacet: (_) => _(2, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Ally #4",
                           nHeroID: _[3],
-                          nFacet: _[3],
                           fnSetSelectedHero: (_) => _(3, _),
-                          fnSetSelectedFacet: (_) => _(3, _),
                         }),
                       ],
                     }),
@@ -1350,37 +1492,27 @@
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #1",
                           nHeroID: _[0],
-                          nFacet: _[0],
                           fnSetSelectedHero: (_) => _(0, _),
-                          fnSetSelectedFacet: (_) => _(0, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #2",
                           nHeroID: _[1],
-                          nFacet: _[1],
                           fnSetSelectedHero: (_) => _(1, _),
-                          fnSetSelectedFacet: (_) => _(1, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #3",
                           nHeroID: _[2],
-                          nFacet: _[2],
                           fnSetSelectedHero: (_) => _(2, _),
-                          fnSetSelectedFacet: (_) => _(2, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #4",
                           nHeroID: _[3],
-                          nFacet: _[3],
                           fnSetSelectedHero: (_) => _(3, _),
-                          fnSetSelectedFacet: (_) => _(3, _),
                         }),
                         (0, _.jsx)(_, {
                           strLabel: "Enemy #5",
                           nHeroID: _[4],
-                          nFacet: _[4],
                           fnSetSelectedHero: (_) => _(4, _),
-                          fnSetSelectedFacet: (_) => _(4, _),
                         }),
                       ],
                     }),
@@ -1599,66 +1731,6 @@
                 }),
                 (0, _.jsx)("div", {
                   className: _().Header,
-                  children: "Variant 1",
-                }),
-                (0, _.jsx)("div", {
-                  className: _().ItemList,
-                  children: [].map((_, _) =>
-                    (0, _.jsxs)(
-                      "div",
-                      {
-                        className: _().Item,
-                        onClick: () => _(_.nItemID),
-                        children: [
-                          (0, _.jsx)(_, {
-                            nItemID: _.nItemID,
-                          }),
-                          _.fScore > 0 &&
-                            (0, _.jsx)("div", {
-                              className: _().Weight,
-                              children: `${(100 * _.fScore).toFixed(2)}%`,
-                            }),
-                        ],
-                      },
-                      `${_.nItemID}_${_}`,
-                    ),
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: _().Separator,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().Header,
-                  children: "Variant 2",
-                }),
-                (0, _.jsx)("div", {
-                  className: _().ItemList,
-                  children: [].map((_, _) =>
-                    (0, _.jsxs)(
-                      "div",
-                      {
-                        className: _().Item,
-                        onClick: () => _(_.nItemID),
-                        children: [
-                          (0, _.jsx)(_, {
-                            nItemID: _.nItemID,
-                          }),
-                          _.fScore > 0 &&
-                            (0, _.jsx)("div", {
-                              className: _().Weight,
-                              children: `${(100 * _.fScore).toFixed(2)}%`,
-                            }),
-                        ],
-                      },
-                      `${_.nItemID}_${_}`,
-                    ),
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: _().Separator,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().Header,
                   children: "Next Item Options",
                 }),
                 _.map((_, _) =>
@@ -1716,6 +1788,12 @@
                 strFeature: _.strFeature,
                 strConfig: _.strConfig,
               });
+              break;
+            case _:
+              _ = (0, _.jsx)(_, {
+                strFeature: _.strFeature,
+                strConfig: _.strConfig,
+              });
           }
           if (null == _)
             return (0, _.jsx)(_._, {
@@ -1756,6 +1834,14 @@
                     ),
                     onClick: () => _(_),
                     children: "Main Game Items",
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().Option,
+                      _.strFeature == _ && _().Selected,
+                    ),
+                    onClick: () => _(_),
+                    children: "Neutral Items",
                   }),
                 ],
               }),

@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Bestelling plaatsen:",
     "Button_Close": "Sluiten",
     "Search_ListingQuantity": "Aantal te koop: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Aantal: %1$s",
     "Bucket_PriceFrom": "Van %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s aangesloten",
     "FilterResults_Placeholder": "Resultaten filteren ...",

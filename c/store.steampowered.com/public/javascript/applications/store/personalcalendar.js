@@ -581,6 +581,7 @@
                         horizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
+                        holdGamepadFocus: _,
                         children: _,
                       })
                     : _;
@@ -794,7 +795,7 @@
           const {
               placeholderWidth: _,
               placeholderHeight: _,
-              holdGampadFocus: _,
+              holdGamepadFocus: _,
               onRender: _,
               style: _,
               mode: _,
@@ -825,6 +826,9 @@
             _ &&
               (_ = (0, _.jsx)(_._, {
                 focusableIfEmpty: !0,
+                style: {
+                  height: "100%",
+                },
                 children: _,
               })),
             _
@@ -1038,6 +1042,26 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
           default: () => _,
@@ -1084,6 +1108,7 @@
       function _() {
         const _ = (0, _._)(_),
           _ = _ ? JSON.parse(_) : void 0,
+          _ = (0, _._)(940),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -1149,7 +1174,7 @@
                 hideArrows: !1,
                 disableEdgeWrap: !0,
                 hidePips: _,
-                bPreventSnapCarousel: !(0, _._)(),
+                screenIsWide: _,
                 startingSlide: 10,
                 className: _ ? void 0 : "fiveElementEightGap",
                 children: _.map((_, _) =>
@@ -1301,9 +1326,10 @@
         const _ = (0, _._)({
             appid: _.nAppID,
           }),
-          _ = (0, _._)(_.data, (0, _._)() ? "hero_capsule" : "main_capsule"),
+          _ = (0, _._)(940),
           [_, _] = _.useState(!1),
           _ = _.useRef(null),
+          _ = (0, _._)(_.data, _ ? "main_capsule" : "hero_capsule"),
           { data: _ } = (0, _._)(),
           _ = _?.preferences?.disable_microtrailers;
         return (

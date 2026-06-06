@@ -20,6 +20,7 @@
         Open: "_2HPVMueZXbMmvgW8C6iOw7",
         DemoButton: "_2Mu1VwOBzB0kLcDCRbJD6w",
         WishlistButton: "_3FAid_cwwxW8-9Sp6pSPqS",
+        ShowInGamepadUI: "_2f6Nut1kQFb4WnCmz4uXDG",
         WishlistButtonText: "_2GqXfP0dBAJl9ozuBV3Jqh",
         WishlistLoadingText: "_2k23LU1oBxEHe-_Qff-1k3",
         WishlistButtonNotTop: "_3W_yknADVFtPgqx9Wh2ayW",
@@ -4426,6 +4427,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 87134, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
         (_.polish = () =>
@@ -5365,7 +5368,13 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, snr: _, classOverride: _, styleOverride: _ } = _,
+        const {
+            _: _,
+            snr: _,
+            classOverride: _,
+            styleOverride: _,
+            bShowInGamepadUI: _,
+          } = _,
           { data: _ } = (0, _._)(_),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() =>
@@ -5404,7 +5413,11 @@
         return _ && _?.type != _._._
           ? null
           : (0, _.jsxs)(_._, {
-              className: (0, _._)(_().WishlistButton, _),
+              className: (0, _._)(
+                _().WishlistButton,
+                _ && _().ShowInGamepadUI,
+                _,
+              ),
               onActivate: _,
               style: _,
               children: [
@@ -9030,6 +9043,56 @@
           return _ && (0, _._)(_)
             ? `${_._.STORE_BASE_URL}app/${((0, _._))(_)[0]}`
             : `${_._.STORE_BASE_URL}${_.store_url_path}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(_(_.GetAnonymousServiceTransport(), _, _));
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["LocalizedTagNames", _],
+          queryFn: async () => {
+            const _ = `LocalizedTagNames2_${_}`,
+              _ = await _.GetObject(_),
+              _ = _._.Init(_._);
+            _.Body().set_language(_),
+              _?.version_hash && _.Body().set_have_version_hash(_.version_hash);
+            const _ = await _._.GetTagList(_, _);
+            let _;
+            if (_.GetEResult() == _._)
+              (_ = _.Body().toObject()), _ && _.StoreObject(_, _);
+            else if (_.GetEResult() == _._) _ = _ || void 0;
+            else {
+              if (!_) throw _.GetErrorMessage();
+              console.warn(
+                "Couldn't load updated tag localization, will continue with what we have from storage.",
+              ),
+                (_ = _);
+            }
+            const _ = {};
+            return (
+              (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _
+            );
+          },
+          staleTime: 36e5,
+        };
+      }
+      function _(_, _) {
+        const { data: _ } = _(_);
+        return _ && _[_];
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

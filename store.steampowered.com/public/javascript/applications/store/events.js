@@ -736,7 +736,7 @@
               }),
               (0, s.jsx)(f.Z, {
                 className: A().OtherEvents,
-                "flow-children": "column",
+                "flow-children": "row",
                 navEntryPreferPosition: E.iU.PREFERRED_CHILD,
                 children: p.map((e) =>
                   (0, s.jsx)(B.u, { event: e }, e.AnnouncementGID),
@@ -4751,8 +4751,9 @@
                     "HorizontalTileCtn",
                   ),
                   children: [
-                    (0, s.jsx)("div", {
+                    (0, s.jsx)(f.Z, {
                       className: Ve().HorizontalTiles,
+                      "flow-children": "row",
                       children: e.map((n) =>
                         (0, s.jsx)(
                           dn,

@@ -379,20 +379,18 @@ div.visibilityselect .toolsIcon
 }
 
 div.visibilityselect {
-	position: relative;
-	cursor: pointer;
-	width: 200px;
 	color: #939393;
-	font-size: 14px;
-	padding: 0 8px 0 8px;
+	cursor: pointer;
 	margin-right: 5px;
+	padding: 0 8px;
+	position: relative;
+	width: fit-content;
 }
 .panel.admin div.visibilityselect {
 	padding-left: 0px;
 }
 
 div.visibilityselect_options {
-	width: 200px;
 	color: #000000;
 	font-size: 12px;
 	background-color: #d5d5d5;
@@ -403,7 +401,7 @@ div.visibilityselect_options {
 div.visibilityselect #visibilityselect_arrow {
 	position: absolute;
 	right: 10px;
-	top: 4px;
+	top: 6px;
 	width: 16px;
 	height: 16px;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/sharedfiles/icons/icon_arrow_down.png' );
@@ -421,8 +419,7 @@ div.visibilityselect.focus #visibilityselect_arrow{
 }
 
 div.visibilityselect div.option, div.visibilityselect_options div.option {
-	padding: 4px;
-	padding-left: 0px;
+	padding: 4px 20px 4px 0;
 	cursor: default;
 	border-bottom: none;
 }
@@ -2722,10 +2719,6 @@ gap: 10px;
 
 .forum_list_unread {
 	font-weight: bold;
-	color: #ffffff;
-}
-
-.forum_list .rightbox_list_option.selected {
 	color: #ffffff;
 }
 

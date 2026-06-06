@@ -220,6 +220,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 97273, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 77281, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 77194, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 64042, 19))),
         (_.polish = () =>
@@ -3060,6 +3062,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 18303, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 64375, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 37144, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 94843, 19))),
         (_.polish = () =>
@@ -3710,7 +3714,7 @@
             onValueSettled: _,
           } = _,
           _ = (0, _.useRef)(null),
-          _ = (0, _.useRef)(-1),
+          _ = (0, _.useRef)(null),
           [_] = (0, _.useState)(() => new Set()),
           [_, _] = (0, _.useState)(!1);
         return (0, _.jsx)(_.Provider, {
@@ -3731,18 +3735,36 @@
                 ) {
                   const _ = _.current.getBoundingClientRect(),
                     _ = _(_.clientX - _.left, [0, _.width], [_, _]);
-                  _.current = _(_, _);
-                }
+                  _.current = {
+                    activeValueIndex: _(_, _),
+                    bMoved: !1,
+                  };
+                } else
+                  _.current = {
+                    activeValueIndex: 0,
+                    bMoved: !1,
+                  };
                 _(!0);
               }
             },
             onPointerUp: (_) => {
+              var _;
               const _ = _.target;
-              _.hasPointerCapture(_.pointerId) &&
-                (_.releasePointerCapture(_.pointerId), _ && _(_), _(!1));
+              __webpack_require__.hasPointerCapture(_.pointerId) &&
+                (__webpack_require__.releasePointerCapture(_.pointerId),
+                _ &&
+                  (null === (_ = _.current) || void 0 === _
+                    ? void 0
+                    : _.bMoved) &&
+                  _(_),
+                _(!1));
             },
             onPointerMove: (_) => {
-              if (_.target.hasPointerCapture(_.pointerId) && _.current) {
+              if (
+                _.target.hasPointerCapture(_.pointerId) &&
+                _.current &&
+                _.current
+              ) {
                 const _ = _.current.getBoundingClientRect(),
                   _ = _({
                     value: _(_.clientX - _.left, [0, _.width], [_, _]),
@@ -3751,14 +3773,20 @@
                     step: _,
                   }),
                   _ = [..._];
-                (_[_.current] = _),
+                (_[_.current.activeValueIndex] = _),
                   _.sort((_, _) => _ - _),
-                  (_.current = _.indexOf(_)),
+                  (_.current.activeValueIndex = _.indexOf(_)),
+                  (_.current.bMoved = !0),
                   _(_);
               }
             },
             onClick: (_) => {
-              if (!_.current) return;
+              var _;
+              if (
+                !_.current ||
+                (null === (_ = _.current) || void 0 === _ ? void 0 : _.bMoved)
+              )
+                return;
               const _ = _.current.getBoundingClientRect(),
                 _ = _(_.clientX - _.left, [0, _.width], [_, _]),
                 _ = _({
@@ -3769,7 +3797,7 @@
                 }),
                 _ = _(_, _),
                 _ = [..._];
-              (_[_] = _), _(_);
+              (_[_] = _), _(_), _ && _(_);
             },
             children: (0, _.jsx)("div", {
               className: _.Inner,
@@ -3913,8 +3941,8 @@
       }
       function _(_) {
         const { value: _, min: _, max: _, step: _ } = _,
-          _ = Math.round((_ - _) / _);
-        return _._(_ * _ + _, _, _);
+          _ = Math.round((_ - _) / _) / (1 / _);
+        return _._(_ + _, _, _);
       }
       function _(_, _, _) {
         return ((_ - _) / (_ - _)) * 100;
@@ -7985,6 +8013,82 @@
             : _
         )();
         return ((null != _ ? _ : _).instances[_] = _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_[_]) {
+          if ("community_icon" == _) {
+            const _ = _.asset_url_format
+              .replace(/^steam\//, "images/")
+              .replace("${FILENAME}", `${_[_]}.jpg`)
+              .replace(/\?.*$/, "");
+            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
+          }
+          {
+            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
+            return `${_._.STORE_ITEM_BASE_URL}${_}`;
+          }
+        }
+      }
+      function _(_, _ = "full") {
+        let _ = "";
+        switch (_) {
+          case "thumb":
+            _ = ".116x65";
+            break;
+          case "600x338":
+            _ = ".600x338";
+            break;
+          case "1920x1080":
+            _ = ".1920x1080";
+            break;
+          case "full":
+            _ = "";
+            break;
+          default:
+            (0, _._)(_, `Invalid size: ${_}`);
+        }
+        return (
+          _._.STORE_ITEM_BASE_URL +
+          _.filename.replace(/\.([^.]+)(\?.*)?$/, `${_}.$1$2`)
+        );
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)();
+        if (_)
+          return [
+            ...(_.all_ages_screenshots || []),
+            ...(!_ && _.mature_content_screenshots
+              ? _.mature_content_screenshots
+              : []),
+          ].sort((_, _) => _.ordinal - _.ordinal);
+      }
+      function _(_, _ = !1) {
+        const { data: _ } = (0, _._)({
+          appid: _,
+        });
+        return void 0 === _
+          ? void 0
+          : null === _
+            ? null
+            : _ && _.library_capsule_2x
+              ? _(_, "library_capsule_2x")
+              : _.library_capsule
+                ? _(_, "library_capsule")
+                : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
       }
     },
   },

@@ -168,7 +168,7 @@
     "moderation_subjecttype_unknown": "(Unbekannt)",
     "moderation_resolvewithnoaction": "Geschlossen, ohne Maßnahmen zu ergreifen",
     "moderation_resolutionstatus_pending": "Moderation ausstehend",
-    "moderation_resolutionstatus_acquitted": "Überprüft: Keine Maßnahmen erforderlich",
+    "moderation_resolutionstatus_acquitted": "Überprüft: Keine Maßnahmen ergriffen",
     "moderation_resolutionstatus_purged": "Inhalt sofort gelöscht",
     "moderation_resolutionstatus_removed": "Inhalt entfernt",
     "moderation_resolutionstatus_relabelled": "Inhalt umbenannt",
@@ -290,11 +290,12 @@
     "setcooldown_nocooldown": "Aktuell keine Pause verhängt",
     "setcooldown_days": "Tage",
     "setcooldown_newcooldownlabel": "Neu verhängte Pause für den Nutzer:",
-    "setcooldown_clearcooldown": "Löschen",
+    "setcooldown_clearcooldown": "Verhängte Pause löschen",
     "setcooldown_cooldownsummary": "(%1$s Tage)",
     "setcooldown_dialogtitle": "Pause verhängen",
     "setcooldown_dialogdescription": "Verhängen Sie für einen Nutzer, der das System missbraucht hat, eine Pause und hindern Sie ihn daran, Inhalte zu melden oder Moderationsentscheidungen anzufechten.",
     "setcooldown_setbutton": "Pause verhängen",
     "setcooldown_clearopenreports": "Offene Meldungen dieses Nutzers löschen",
+    "setcooldown_statssummary": "Keine Maßnahmen für %1$s/%2$s Inhalten ergriffen, %3$s/%4$s in der letzten Woche.",
     "nocomma": ""
 }

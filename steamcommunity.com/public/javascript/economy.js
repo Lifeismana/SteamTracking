@@ -2947,7 +2947,7 @@ function ShowItemHoverAsPopup( elNewInfo, fnOnDismiss )
 	$Info.show();
 	$Info.css('opacity',1);
 
-	var $Modal = $J('<div/>',{'class': 'newmodal economy_modal_ctn'});
+	var $Modal = $J('<dialog/>',{'class': 'newmodal economy_modal_ctn'});
 	var $PopupCtn = $J('<div/>', {'class': 'economy_item_popup' } );
 	var $Scroll = $J('<div/>', {'class' : 'economy_item_popup_scroll'} );
 	var $DismissBtn = $J('<div/>', {'class': 'economy_item_popup_dismiss'} ).text('X');

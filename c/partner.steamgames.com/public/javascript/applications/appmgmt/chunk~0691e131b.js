@@ -7485,15 +7485,18 @@
             (this.m_strExtendedErrorMessage = _);
         }
         onAuthComplete = (_) => {
-          this.m_eStatus = _.bSuccess ? _ : _;
-          const _ = _.bSuccess
-            ? {
-                ..._,
-                strAccountName: this.m_strAccountName,
-                steamid: this.m_steamid,
-              }
-            : _;
-          this.m_onLoginComplete && this.m_onLoginComplete(_);
+          let _;
+          (this.m_eStatus = _.bSuccess ? _ : _),
+            (_ = _.bSuccess
+              ? {
+                  ..._,
+                  strAccountName: this.m_strAccountName,
+                  steamid: this.m_steamid,
+                }
+              : {
+                  bSuccess: !1,
+                }),
+            this.m_onLoginComplete && this.m_onLoginComplete(_);
         };
         SetOnLoginComplete(_) {
           this.m_onLoginComplete = _;
@@ -7729,12 +7732,17 @@
           _ = new Blob([_], {
             type: "image/gif",
           }),
-          _ = URL.createObjectURL(_);
+          _ = URL.createObjectURL(_),
+          _ = `rgb(${_[0]}, ${_[1]}, ${_[2]})`;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().QRBits, _),
+          style: {
+            "--qr-bright-color": _,
+          },
           children: (0, _.jsx)("img", {
             className: _().QRImg,
             src: _,
+            alt: "",
           }),
         });
       }
@@ -7754,6 +7762,7 @@
             onStatusChange: _,
             platform: _,
             deckStyling: _,
+            activeBitValue: _ = 255,
           } = _,
           _ = _._.IN_STEAMUI ? _ : _,
           {
@@ -7810,7 +7819,8 @@
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id && _(_.refreshInfo.login_token_id);
         }, [_.refreshInfo, _]);
-        const _ = _._.EUNIVERSE !== _.wLO;
+        const _ = _._.EUNIVERSE !== _.wLO,
+          _ = `rgb(${_}, ${_}, ${_})`;
         return (0, _.jsx)("div", {
           className: _().Column,
           children: (0, _.jsxs)("div", {
@@ -7821,7 +7831,7 @@
               (0, _.jsx)(_, {
                 borderWidth: 0,
                 activeBitColor: [21, 23, 28],
-                inactiveBitColor: _ ? [255, 0, 255] : [255, 255, 255],
+                inactiveBitColor: _ ? [_, 0, _] : [_, _, _],
                 quality: _(_),
                 className: (0, _._)(
                   _().LoginQR,
@@ -7836,6 +7846,9 @@
                   className: _().Overlay,
                   children: (0, _.jsx)("div", {
                     className: _().Box,
+                    style: {
+                      "--qr-bright-color": _,
+                    },
                     children: _,
                   }),
                 }),
@@ -7959,7 +7972,7 @@
                           ..._
                         } = _.data,
                         _ = new FormData();
-                      Object.keys(_).forEach((_) => _.append(_, _[_]));
+                      Object.entries(_).forEach(([_, _]) => _.append(_, _));
                       const _ = await _().post(_, _),
                         _ = 200 === _.status && _.data.result === _._;
                       _ && window.location.assign(_);
@@ -7994,7 +8007,7 @@
         const { embedded: _, children: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           children: (0, _.jsx)(_.Provider, {
-            value: _,
+            value: _ ?? !1,
             children: (0, _.jsxs)("div", {
               className: _().Login,
               children: [
@@ -8105,20 +8118,21 @@
             isProbablySharedPC: _ = !1,
           } = _,
           _ = (0, _.useCallback)(
-            ({
-              bSuccess: _,
-              strRefreshToken: _,
-              strAccessToken: _,
-              strAccountName: _,
-              strNewGuardData: _,
-            }) => {
-              _ &&
+            (_) => {
+              if (_.bSuccess) {
+                const {
+                  strRefreshToken: _,
+                  strAccessToken: _,
+                  strAccountName: _,
+                  strNewGuardData: _,
+                } = _;
                 _({
                   strRefreshToken: _,
                   strAccessToken: _,
                   strAccountName: _,
                   strNewGuardData: _,
                 });
+              }
             },
             [_],
           ),
@@ -8231,7 +8245,8 @@
             isProbablySharedPC: _,
             onShowAgreement: _,
           }),
-          _ = _();
+          _ = _(),
+          _ = (0, _.useId)();
         if (null != _ && _ != _._)
           return (0, _.jsx)("div", {
             className: _().Login,
@@ -8316,8 +8331,9 @@
             },
             children: [
               !1,
-              (0, _.jsx)("div", {
+              (0, _.jsx)("h2", {
                 className: _().PrimaryHeader,
+                _: _,
                 children: _.refreshInfo
                   ? (0, _._)("#Login_RefreshSignIn")
                   : (0, _._)("#Login_SignInTitle"),
@@ -8329,6 +8345,7 @@
           });
           return (0, _.jsxs)(_, {
             title: _,
+            titleId: _,
             children: [_ && (0, _.jsx)(_, {}), _],
           });
         }
@@ -8488,7 +8505,9 @@
               }),
           _ = _ && !_,
           _ = _ && !!_,
-          _ = !!_.refreshInfo;
+          _ = !!_.refreshInfo,
+          _ = (0, _.useId)(),
+          _ = (0, _.useId)();
         return (0, _.jsxs)(_, {
           onSubmit: () => {
             _().then(() => {
@@ -8501,6 +8520,7 @@
               tone: _ ? "danger" : void 0,
               label: (0, _.jsx)(_, {
                 highlight: !0,
+                inputId: _,
                 children: (0, _._)("#Login_SignIn_WithAccountName"),
               }),
               value: _,
@@ -8509,10 +8529,12 @@
               },
               autoFocus: _,
               disabled: _,
+              _: _,
             }),
             (0, _.jsx)(_, {
               tone: _ ? "danger" : void 0,
               label: (0, _.jsx)(_, {
+                inputId: _,
                 children: (0, _._)("#Login_Password"),
               }),
               value: _,
@@ -8521,6 +8543,7 @@
               },
               type: "password",
               autoFocus: _,
+              _: _,
             }),
             _
               ? (0, _.jsx)(_._, {
@@ -8576,7 +8599,6 @@
           _._.STORE_BASE_URL +
           "join/?guest=1&purchaseType=gift&checkout=1&redir=" +
           encodeURIComponent(_.redirectURL);
-        _._.STORE_BASE_URL, encodeURIComponent(_.redirectURL);
         return (0, _.jsx)("div", {
           className: _().GuestLayout,
           children: (0, _.jsx)(_, {
@@ -8702,32 +8724,36 @@
         });
       }
       function _(_) {
-        const { label: _, error: _, tone: _, autoFocus: _, ..._ } = _,
+        const { label: _, error: _, tone: _, autoFocus: _, _: _, ..._ } = _,
           _ = _ ?? (_ ? "danger" : void 0);
         return (0, _.jsxs)("div", {
           className: _().TextField,
           children: [
             "string" == typeof _
               ? (0, _.jsx)(_, {
+                  inputId: _,
                   children: _,
                 })
               : _,
-            (0, _.jsx)(_, {
-              type: "error",
-              children: _,
-            }),
+            _ &&
+              (0, _.jsx)(_, {
+                type: "error",
+                children: _,
+              }),
             (0, _.jsx)(_, {
               autoFocus: _,
               tone: _,
+              _: _,
               ..._,
             }),
           ],
         });
       }
       function _(_) {
-        const { children: _, highlight: _ } = _;
-        return (0, _.jsx)("div", {
+        const { children: _, inputId: _, highlight: _ } = _;
+        return (0, _.jsx)("label", {
           className: (0, _._)(_().FieldLabel, _ && _().Highlight),
+          htmlFor: _,
           children: _,
         });
       }
@@ -8740,6 +8766,7 @@
           className: _,
           autoFocus: _,
           disabled: _,
+          _: _,
         } = _;
         return (0, _.jsx)("input", {
           value: _,
@@ -8748,6 +8775,7 @@
           onChange: (_) => __webpack_require__(_.target.value),
           className: (0, _._)(_().TextInput, "danger" === _ && _().Danger, _),
           disabled: _,
+          _: _,
         });
       }
       function _(_) {
@@ -8762,6 +8790,7 @@
         let _ = () => {
           _ && __webpack_require__(!_);
         };
+        const _ = (0, _.useId)();
         return (0, _.jsxs)("div", {
           className: _().CheckboxField,
           onClick: _,
@@ -8770,9 +8799,11 @@
           },
           children: [
             (0, _.jsx)(_, {
+              labelledBy: _,
               value: _,
             }),
-            (0, _.jsx)("div", {
+            (0, _.jsx)("label", {
+              _: _,
               className: _().CheckboxFieldLabel,
               children: _,
             }),
@@ -8780,10 +8811,13 @@
         });
       }
       function _(_) {
-        const { value: _ } = _;
+        const { value: _, labelledBy: _ } = _;
         return (0, _.jsx)("div", {
           tabIndex: 0,
           className: _().Checkbox,
+          "aria-labelledby": _,
+          role: "checkbox",
+          "aria-checked": _,
           children:
             _ &&
             (0, _.jsx)("div", {
@@ -8796,7 +8830,10 @@
       }
       function _(_) {
         const { refreshLogin: _, ..._ } = _;
-        return _ && SteamClient.User?.StartShutdown
+        return _ &&
+          "SteamClient" in globalThis &&
+          "User" in SteamClient &&
+          "StartShutdown" in SteamClient.User
           ? (0, _.jsx)(_, {})
           : (0, _.jsx)(_, {
               ..._,
@@ -8997,6 +9034,7 @@
                       children: (0, _._)("#Button_Retry"),
                     }),
                     _ &&
+                      _ &&
                       (0, _.jsx)(_, {
                         onRequestOffline: _,
                       }),
@@ -9375,6 +9413,7 @@
             justifyContent: _,
             gap: _,
             className: _,
+            ariaLabelledBy: _,
             children: _,
           } = _,
           _ = (0, _._)(
@@ -9388,9 +9427,10 @@
                 gap: "number" == typeof _ ? `${_}px` : _,
               }
             : void 0;
-        return (0, _.jsx)("div", {
+        return (0, _.jsx)("section", {
           className: _,
           style: _,
+          "aria-labelledby": _,
           children: _,
         });
       }
@@ -9414,7 +9454,7 @@
         });
       }
       function _(_) {
-        const { onChange: _, backupCode: _, ..._ } = _;
+        const { onChange: _, backupCode: _ = !1, ..._ } = _;
         return (0, _.jsx)(_, {
           length: _(_),
           backupCode: _,
@@ -9442,12 +9482,13 @@
                   children: _,
                 })
               : null,
-          ).filter(Boolean),
+          )?.filter(Boolean),
         });
       }
       function _(_) {
-        const { title: _, children: _, compact: _ } = _,
-          _ = _();
+        const { title: _, titleId: _, children: _, compact: _ } = _,
+          _ = _(),
+          _ = (0, _.useId)();
         return (0, _.jsxs)(_, {
           gap: _._.IN_STEAMUI ? 0 : 32,
           className: (0, _._)(
@@ -9456,10 +9497,12 @@
             _ && _().Compact,
             _._.IN_STEAMUI && "IN_CLIENT",
           ),
+          ariaLabelledBy: _ ?? _,
           children: [
             "string" == typeof _
               ? (0, _.jsx)("div", {
                   className: _().PrimaryHeader,
+                  _: _ ?? _,
                   children: _,
                 })
               : _,

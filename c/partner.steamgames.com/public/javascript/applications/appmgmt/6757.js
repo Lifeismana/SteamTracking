@@ -21,6 +21,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -230,25 +231,24 @@
       const _ = (_) => {
         const _ = _.createRef(),
           [_, _] = _.useState(""),
-          _ = _.createRef();
+          _ = _.createRef(),
+          _ = (_) => {
+            _.current &&
+              _.current.ownerDocument.defaultView.navigator.clipboard
+                .writeText(_.current.value)
+                .then((_) => {
+                  _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
+                })
+                .catch((_) => {
+                  _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
+                    console.error("Failed to copy link to clipboard:", _);
+                });
+          };
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsxs)("div", {
               className: (0, _._)(_().FlexRowContainer, _().linkField),
-              onClick: (_) => {
-                _.current &&
-                  _.current.ownerDocument.defaultView.navigator.clipboard
-                    .writeText(_.current.value)
-                    .then((_) => {
-                      _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
-                    })
-                    .catch((_) => {
-                      _(
-                        (0, _._)("#EventDisplay_Share_FailedToCopyToClipboard"),
-                      ),
-                        console.error("Failed to copy link to clipboard:", _);
-                    });
-              },
+              onClick: _,
               children: [
                 (0, _.jsx)("span", {
                   className: _().LinkInputLabel,
@@ -258,16 +258,16 @@
                       : "#EventDisplay_Share_Link",
                   ),
                 }),
-                (0, _.jsx)("textarea", {
+                (0, _.jsx)("input", {
                   className: _().LinkInput,
                   ref: _,
                   value: _.eventLink,
                   readOnly: !0,
                 }),
                 document.queryCommandSupported("copy") &&
-                  (0, _.jsx)("div", {
+                  (0, _.jsx)(_._, {
                     className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                    title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                    onActivate: _,
                     children: (0, _.jsx)(_._, {
                       toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
                       children: (0, _.jsx)("img", {
@@ -391,7 +391,7 @@
                     children: [
                       (0, _.jsx)(_._, {
                         toolTipContent: (0, _._)("#EventDisplay_Share_OnSteam"),
-                        children: (0, _.jsxs)("div", {
+                        children: (0, _.jsxs)(_._, {
                           onClick: _,
                           className: (0, _._)(
                             _().Button,

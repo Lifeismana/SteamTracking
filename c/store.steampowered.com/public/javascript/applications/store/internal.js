@@ -35,6 +35,7 @@
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
@@ -71,11 +72,14 @@
         SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
+        IndicatorPosition: "_1Dgxrv7wtUW1EViSgrdMlA",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
         "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
         "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
+        disabled: "_3gVhaCZ4k3QSnF9WhRZk5m",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
+        "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
         "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
       };
     },
@@ -1034,9 +1038,12 @@
         });
       }
       function _(_) {
+        const { radius: _ } = _;
         return (0, _.jsx)(_._, {
-          className: _.Indicator,
-          radius: _.radius,
+          className: _.IndicatorPosition,
+          children: (0, _.jsx)("div", {
+            className: _.Indicator,
+          }),
         });
       }
       function _(_, _) {
@@ -1048,7 +1055,7 @@
             : 0;
       }
       (_.Item = function (_) {
-        const { value: _, children: _ } = _,
+        const { value: _, children: _, disabled: _ } = _,
           _ = (0, _.useContext)(_),
           [_, _] = (0, _.useState)(),
           { register: _, unregister: _ } = _ || {};
@@ -1062,16 +1069,16 @@
           return null;
         const { value: _, onValueChange: _, radius: _, size: _ } = _,
           _ = _ === _,
-          _ = _ ? void 0 : () => _(_),
           _ = void 0 === _ ? _ : _;
         return (0, _.jsx)(_._, {
           justify: "center",
           align: "center",
-          radius: _,
           ref: _,
-          onClick: _,
+          onClick: (_) => {
+            _.stopPropagation(), _.preventDefault(), _ || _ || _(_);
+          },
           "data-selected": _ ? "true" : "false",
-          className: _()(_.Item, _ && _[`Size-${_}`]),
+          className: _()(_.Item, _ && _[`Size-${_}`], _ ? _.disabled : ""),
           children: _,
         });
       }),
@@ -1156,8 +1163,11 @@
             },
             children: (0, _.jsx)(_.Provider, {
               value: _,
-              children: (0, _.jsxs)("div", {
+              children: (0, _.jsxs)(_._, {
                 className: _.SegmentedControl,
+                style: {
+                  "--outer-radius": `var(--radius-${_})`,
+                },
                 children: [
                   _,
                   null !== _ &&
@@ -1622,6 +1632,206 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1,
+        _ = 2,
+        _ = 3;
+      function _(_, _, _, _) {
+        const _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _._)();
+        _.current = _;
+        const [_, _] = (0, _.useState)(void 0),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = {
+              include_assets: _,
+              include_release: _,
+              include_platforms: _,
+              include_all_purchase_options: _,
+              include_screenshots: _,
+              include_trailers: _,
+              include_ratings: _,
+              include_tag_count: _,
+              include_reviews: _,
+              include_basic_info: _,
+              include_supported_languages: _,
+              include_full_description: _,
+              include_included_items: _,
+              include_assets_without_overrides: _,
+              apply_user_filters: _,
+              include_links: _,
+            };
+            let _ = null;
+            return (
+              !_ ||
+                _ < 0 ||
+                _._.Get().BHasStoreItem(_, _, _) ||
+                (void 0 !== _ && _ && _ == _.current) ||
+                (_ !== _.current && (_(void 0), (_.current = _)),
+                (_ = _().CancelToken.source()),
+                _._.Get()
+                  .QueueStoreItemRequest(_, _, _)
+                  .then((_) => {
+                    _?.token.reason || _.current !== _ || _(_ == _._), _();
+                  })),
+              () => _?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return [null, _];
+        if (!1 === _) return [void 0, _];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, _];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, _];
+        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
+        return _ ? [_, _] : [null, _];
+      }
+      function _(_, _, _) {
+        return _(_, _._._, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, _._._, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, _._._, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = _(_, _, _);
+        let _;
+        _?.GetStoreItemType() != _._._ ||
+          _.GetAssets()?.GetHeaderURL() ||
+          1 != _?.GetIncludedAppIDs().length ||
+          (_ = _.GetIncludedAppIDs()[0]);
+        const [_, _] = _(_, _);
+        return _ && _?.BIsVisible() ? [_, _] : [_, _];
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)(),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            if (!_ || 0 == _.length) return;
+            const _ = {
+                include_assets: _,
+                include_release: _,
+                include_platforms: _,
+                include_all_purchase_options: _,
+                include_screenshots: _,
+                include_trailers: _,
+                include_ratings: _,
+                include_tag_count: _,
+                include_reviews: _,
+                include_basic_info: _,
+                include_supported_languages: _,
+                include_full_description: _,
+                include_included_items: _,
+                include_assets_without_overrides: _,
+                apply_user_filters: _,
+                include_links: _,
+              },
+              _ = _.filter(
+                (_) =>
+                  !(
+                    _._.Get().BHasStoreItem(_, _, _) ||
+                    _._.Get().BIsStoreItemMissing(_, _)
+                  ),
+              );
+            if (0 == _.length) return;
+            const _ = _().CancelToken.source(),
+              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
+            return (
+              Promise.all(_).then(() => {
+                _.token.reason || _();
+              }),
+              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return _;
+        if (
+          !_.every(
+            (_) =>
+              _._.Get().BHasStoreItem(_, _, _) ||
+              _._.Get().BIsStoreItemMissing(_, _),
+          )
+        )
+          return _;
+        return _.every((_) =>
+          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
+        )
+          ? _
+          : _;
+      }
+      function _(_, _, _) {
+        return _(_, _._._, _, _);
+      }
+      function _() {
+        _.useEffect(
+          () => (
+            _._.Get().SetReturnUnavailableItems(!0),
+            () => _._.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -1849,7 +2059,7 @@
             onValueSettled: _,
           } = _,
           _ = (0, _.useRef)(null),
-          _ = (0, _.useRef)(-1),
+          _ = (0, _.useRef)(null),
           [_] = (0, _.useState)(() => new Set()),
           [_, _] = (0, _.useState)(!1);
         return (0, _.jsx)(_.Provider, {
@@ -1870,18 +2080,31 @@
                 ) {
                   const _ = _.current.getBoundingClientRect(),
                     _ = _(_.clientX - _.left, [0, _.width], [_, _]);
-                  _.current = _(_, _);
-                }
+                  _.current = {
+                    activeValueIndex: _(_, _),
+                    bMoved: !1,
+                  };
+                } else
+                  _.current = {
+                    activeValueIndex: 0,
+                    bMoved: !1,
+                  };
                 _(!0);
               }
             },
             onPointerUp: (_) => {
               const _ = _.target;
               _.hasPointerCapture(_.pointerId) &&
-                (_.releasePointerCapture(_.pointerId), _ && _(_), _(!1));
+                (_.releasePointerCapture(_.pointerId),
+                _ && _.current?.bMoved && _(_),
+                _(!1));
             },
             onPointerMove: (_) => {
-              if (_.target.hasPointerCapture(_.pointerId) && _.current) {
+              if (
+                _.target.hasPointerCapture(_.pointerId) &&
+                _.current &&
+                _.current
+              ) {
                 const _ = _.current.getBoundingClientRect(),
                   _ = _({
                     value: _(_.clientX - _.left, [0, _.width], [_, _]),
@@ -1890,14 +2113,15 @@
                     step: _,
                   }),
                   _ = [..._];
-                (_[_.current] = _),
+                (_[_.current.activeValueIndex] = _),
                   _.sort((_, _) => _ - _),
-                  (_.current = _.indexOf(_)),
+                  (_.current.activeValueIndex = _.indexOf(_)),
+                  (_.current.bMoved = !0),
                   _(_);
               }
             },
             onClick: (_) => {
-              if (!_.current) return;
+              if (!_.current || _.current?.bMoved) return;
               const _ = _.current.getBoundingClientRect(),
                 _ = _(_.clientX - _.left, [0, _.width], [_, _]),
                 _ = _({
@@ -1908,7 +2132,7 @@
                 }),
                 _ = _(_, _),
                 _ = [..._];
-              (_[_] = _), _(_);
+              (_[_] = _), _(_), _ && _(_);
             },
             children: (0, _.jsx)("div", {
               className: _.Inner,
@@ -2052,8 +2276,8 @@
       }
       function _(_) {
         const { value: _, min: _, max: _, step: _ } = _,
-          _ = Math.round((_ - _) / _);
-        return _._(_ * _ + _, _, _);
+          _ = Math.round((_ - _) / _) / (1 / _);
+        return _._(_ + _, _, _);
       }
       function _(_, _, _) {
         return ((_ - _) / (_ - _)) * 100;
@@ -2550,6 +2774,7 @@
               radius: _,
               hasValue: _,
               tabIndex: 0,
+              cursor: "pointer",
               ..._,
             }),
             _ = (0, _._)(_, _, _, void 0);

@@ -4927,7 +4927,7 @@
                           r.GetSaleSectionByID(e),
                           d,
                           i,
-                          r.GetSaleSectionIndexByID(e),
+                          r.GetSaleSectionIndexByID(e, !0),
                         ),
                       },
                       "li_" + e,
@@ -5255,33 +5255,44 @@
           const e =
               a.jsondata.localized_sale_logo &&
               a.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
-            u = a
+            u = a.BUsesContentHubForItemSource(),
+            m = a
               .GetSaleSections()
               .some((e) => "contenthubtitle" === e.section_type),
-            m = a.BUsesContentHubForItemSource() && u;
-          let j;
-          j = e
+            j = u && m;
+          let v;
+          v = e
             ? 0
             : a.BUsesContentHubForItemSource()
               ? 20
               : a.jsondata.sale_header_offset || 0;
-          let v = !1;
-          530 === a.jsondata.sale_header_offset && (v = !0);
-          const f = re.nY
+          let f = !1;
+          530 === a.jsondata.sale_header_offset && (f = !0);
+          const T = re.nY
               .Get()
               .BIsPartnerTakeoverActive(
                 a.GetContentHubType(),
                 a.GetContentHubCategory(),
                 a.GetContentHubTag(),
               ),
-            T = Boolean(!f),
-            B = c
+            B = Boolean(!T),
+            G = c
               ? !I && p?.BIsBackgroundImageEnabled()
                 ? be.S.EPreviewMode_EditBackground
                 : be.S.EPreviewMode_Enabled
               : be.S.EPreviewMode_Disabled,
-            G = A || a.GetEventType() != r.ajI,
-            M = (0, Le.m)(a.clanSteamID);
+            M = A || a.GetEventType() != r.ajI,
+            L = (0, Le.m)(a.clanSteamID),
+            R = u ? o.Yo.NoTransform : o.Yo.NoTransformSparseContent,
+            E = (0, C.A)(
+              h().SaleOuterContainer,
+              w && h().SaleOuterTopMargin,
+              f && h().SaleNewSizing,
+              h()[`CustomStyle_${a.jsondata.sale_vanity_id}`],
+              "SaleOuterContainer",
+              e && h().SalePageLogoSet,
+              j && h().ContentHub,
+            );
           return (0, n.jsx)(g.tH, {
             children: (0, n.jsx)(i.EU, {
               eventModel: a,
@@ -5293,28 +5304,20 @@
                   language: d,
                   bIsPreview: !!c,
                   children: [
-                    T && (0, n.jsx)(i.Sn, {}),
+                    B && (0, n.jsx)(i.Sn, {}),
                     (0, n.jsx)(z, { eventModel: a }),
                     !!p &&
-                      (G || M) &&
+                      (M || L) &&
                       (0, n.jsx)(Ua, {
                         backgroundImageEditModel: p,
                         bBackgroundImgGroupEditMode: I,
                         fnSetBackgroundImgGroupEditMode: k,
-                        bShowAsValveOnly: !G,
+                        bShowAsValveOnly: !M,
                       }),
                     (0, n.jsxs)(s.Z, {
-                      className: (0, C.A)({
-                        [h().SaleOuterContainer]: !0,
-                        [h().SaleOuterTopMargin]: w,
-                        [h().SaleNewSizing]: v,
-                        [h()[`CustomStyle_${a.jsondata.sale_vanity_id}`]]: !0,
-                        SaleOuterContainer: !0,
-                        [h().SalePageLogoSet]: e,
-                        [h().ContentHub]: m,
-                      }),
-                      style: m ? void 0 : { marginTop: `${j || 0}px` },
-                      scrollIntoViewType: o.Yo.NoTransformSparseContent,
+                      style: j ? void 0 : { marginTop: `${v || 0}px` },
+                      className: E,
+                      scrollIntoViewType: R,
                       children: [
                         (0, n.jsx)(Z, { eventModel: a, language: d }),
                         (0, n.jsx)(ee, {
@@ -5322,7 +5325,7 @@
                         }),
                         (0, n.jsx)(ie, { event: a, broadcastEmbedContext: D }),
                         (0, n.jsx)(Xa, {
-                          ePreviewMode: B,
+                          ePreviewMode: G,
                           event: a,
                           backgroundImageEditModel: p,
                           language: d,

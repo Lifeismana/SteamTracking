@@ -290,11 +290,12 @@
     "setcooldown_nocooldown": "Δεν υπάρχει περίοδος αδράνειας",
     "setcooldown_days": "ημέρες",
     "setcooldown_newcooldownlabel": "Νέα περίοδος αδράνειας για τον χρήστη:",
-    "setcooldown_clearcooldown": "Εκκαθάριση",
+    "setcooldown_clearcooldown": "Εκκαθάριση περιόδου αδράνειας",
     "setcooldown_cooldownsummary": "(%1$s ημέρες)",
     "setcooldown_dialogtitle": "Ορισμός περιόδου αδράνειας αναφορών",
     "setcooldown_dialogdescription": "Αποκλείστε έναν χρήστη από το να αναφέρει περιεχόμενο ή να αμφισβητεί ενέργειες επιτήρησης, όταν έχει κάνει κατάχρηση του συστήματος.",
     "setcooldown_setbutton": "Ορισμός περιόδου αδράνειας",
     "setcooldown_clearopenreports": "Εκκαθάριση των μη επιλυμένων αναφορών του χρήστη",
+    "setcooldown_statssummary": "Έγινε απαλλαγή %1$s/%2$s αναφορών, %3$s/%4$s την τελευταία εβδομάδα.",
     "nocomma": ""
 }

@@ -511,8 +511,7 @@ a.general_btn:hover {
 
 .rightDetailsBlock
 {
-	position: relative;
-	padding-bottom: 8px;
+	padding-bottom: 10px;
 	font-size: 13px;
 }
 
@@ -998,22 +997,13 @@ h3 {
 
 /** browse/filter **/
 
-.browseOptionImage
-{
-	position: absolute;
-	height: 35px;
-	width: 305px;
-	left: -22px;
-}
-
 .browseOption
 {
+	height: 37px;
+	line-height: 37px;
+	margin-inline: -10px;
+	padding: 2px 0 1px 10px;
 	position: relative;
-	margin-left: -10px;
-	margin-right: -10px;
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 .browseOption.notSelected:hover,
 .browseOption.notSelected.gpfocus {
@@ -1027,6 +1017,15 @@ h3 {
 
 .browseOption.notSelected a:hover {
 	text-decoration: none;
+}
+
+.browseOption .rightbox_list_selection_background {
+	left: -16px;
+	width: calc(100% + 16px);
+}
+
+.browseOption.selected .rightbox_list_selection_background {
+	display: block;
 }
 
 .browseOptionSubtext
@@ -1090,9 +1089,6 @@ div.appselect #appselect_arrow {
 	background-repeat: no-repeat;
 }
 
-div.appselect.focus #appselect_arrow{
-}
-
 div.appselect div.option
 {
 	padding: 4px;
@@ -1146,10 +1142,10 @@ div.dayselect {
 	float: right;
 
 	cursor: pointer;
-	margin-right: 5px;
-	top: -3px;
+	margin-right: 15px;
+	padding-inline-end: 17px;
+	top: 6px;
 
-	width: 100px;
 	line-height: 20px;
 	color: #8a8a8a;
 	font-size: 12px;
@@ -1212,20 +1208,17 @@ div.dayselect div.option img, div.dayselect_options div.option img {
 div.sortselect {
 	height: 20px;
 
-	border: 1px solid #4a6922;
 	position: relative;
 	float: right;
 
 	cursor: pointer;
-	margin-right: 5px;
-	top: -3px;
+	margin-right: 15px;
+	padding-inline-end: 17px;
+	top: 6px;
 
-	width: 130px;
 	line-height: 20px;
 	color: #8a8a8a;
 	font-size: 12px;
-	background-color: #000000;
-	border: 1px solid #4a6922;
 }
 
 div.sortselect_options {
@@ -1263,9 +1256,7 @@ div.sortselect div.option, div.sortselect_options div.option {
 
 div.sortselect #sortselect_activesort
 {
-	background-color: #3c516e;
 	color: #ffffff;
-	border-bottom: 1px solid #707070;
 }
 
 div.sortselect_options div.option{
@@ -2255,13 +2246,13 @@ textarea {
 
 .workshopBrowsePaging
 {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
 	font-size: 12px;
 	line-height: 24px;
-	padding-right: 10px;
-	display: flex;
-	background: rgba(0, 0, 0, 0.2);
-	padding: 2px 6px;
-	margin-bottom: 8px;
+	margin-block: 0 8px;
+	padding: 2px 10px 2px 6px;
 }
 
 .workshopBrowseSortingControls
@@ -2866,20 +2857,29 @@ input.inputTagsFilter:checked + label:hover
 	color: #67c1f5;
 }
 .filterOption {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
 	margin-left: -10px;
 	padding-left: 10px;
 	margin-right: -10px;
 	min-height: 20px;
-	padding-top: 0px;
-	padding-bottom: 3px;
+	padding-block: 2px;
 }
 .filterOption:hover {
 	background-color: rgba(27,43,59,1);
 }
 
+.filterOption > label {
+	align-items: center;
+	display: flex;
+	flex: 1 0 0;
+	flex-direction: row;
+}
+
 .filterOption .tag_filter_control_not {
 	float: right;
-	margin: 3px 3px 0px 0px;
+	margin-inline-end: 3px;
 	width: 16px;
 	height: 16px;
 	cursor: pointer;
@@ -2966,15 +2966,10 @@ input.searchText
 	flex-wrap: wrap;
 	align-items: center;
 	margin-bottom: 10px;
-	gap: 2px;
+	gap: 7px;
 }
 .searchedTermsContainer:empty {
 	display: none;
-}
-
-.searchedTermsContainerEndPadding
-{
-	margin-bottom: 10px;
 }
 
 .profileAppFilter {
@@ -2996,6 +2991,7 @@ input.searchText
 	color: #d2ff96;
 	font-size: 14px;
 	white-space: nowrap;
+	margin: unset;
 }
 
 
@@ -3602,39 +3598,6 @@ div.hover {
 	line-height: 30px;
 }
 
-.followStatsBlock
-{
-}
-
-.followStatValue
-{
-	float: left;
-	padding-top: 8px;
-}
-
-.followStatsContainer
-{
-	float: left;
-}
-
-.followStat
-{
-	color: #787875;
-	padding-top: 8px;
-}
-
-.followStatsTitleContainer
-{
-	float: left;
-	margin-left: 20px;
-}
-
-.followStatName
-{
-	color: #494947;
-	padding-top: 8px;
-}
-
 .workshopAuthorHeader
 {
 	padding-top: 10px;
@@ -3805,7 +3768,6 @@ div.hover {
 
 
 #ig_header {
-	height: 212px;
 	margin-top: 15px;
 	position: relative;
 }
@@ -3848,7 +3810,7 @@ div.hover {
 	/*background: #262627 url('https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/greenlight_content_background.png') top center no-repeat;*/
 	width: 950px;
 	max-width: 950px;
-	margin: 0 auto 0 auto;
+	margin: 0 auto;
 }
 
 html.responsive #ig_bottom {
@@ -4971,13 +4933,24 @@ a.readmore_link
 		width: auto;
 	}
 
-	html.responsive #ig_bottom {
-		padding: 0 1%;
-	}
 }
+	html.responsive.GamepadMode #profileBlock {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive.GamepadMode #rightContents {
+		float: none;
+		width: auto;
+	}
 
 @media screen and (max-width: 910px)
 {
+	html.responsive:not(.GamepadMode) .sharedfiles_item_page_header,
+	html.responsive #ig_bottom {
+		padding-inline: 1%;
+	}
+
 	html.responsive .workshopItemPreviewImage {
 		width: 100%;
 		min-width: 64px;

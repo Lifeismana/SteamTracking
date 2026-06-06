@@ -154,17 +154,17 @@
               ? this.fromString(e, 256)
               : this.fromString(e, t));
       }
-      function o() {
+      function i() {
         return new r(null);
       }
       "Microsoft Internet Explorer" == navigator.appName
-        ? ((r.prototype.am = function (e, t, n, s, r, o) {
-            for (var i = 32767 & t, a = t >> 15; --o >= 0; ) {
+        ? ((r.prototype.am = function (e, t, n, s, r, i) {
+            for (var o = 32767 & t, a = t >> 15; --i >= 0; ) {
               var c = 32767 & this[e],
                 l = this[e++] >> 15,
-                u = a * c + l * i;
+                u = a * c + l * o;
               (r =
-                ((c = i * c + ((32767 & u) << 15) + n[s] + (1073741823 & r)) >>>
+                ((c = o * c + ((32767 & u) << 15) + n[s] + (1073741823 & r)) >>>
                   30) +
                 (u >>> 15) +
                 a * l +
@@ -175,21 +175,21 @@
           }),
           (s = 30))
         : "Netscape" != navigator.appName
-          ? ((r.prototype.am = function (e, t, n, s, r, o) {
-              for (; --o >= 0; ) {
-                var i = t * this[e++] + n[s] + r;
-                (r = Math.floor(i / 67108864)), (n[s++] = 67108863 & i);
+          ? ((r.prototype.am = function (e, t, n, s, r, i) {
+              for (; --i >= 0; ) {
+                var o = t * this[e++] + n[s] + r;
+                (r = Math.floor(o / 67108864)), (n[s++] = 67108863 & o);
               }
               return r;
             }),
             (s = 26))
-          : ((r.prototype.am = function (e, t, n, s, r, o) {
-              for (var i = 16383 & t, a = t >> 14; --o >= 0; ) {
+          : ((r.prototype.am = function (e, t, n, s, r, i) {
+              for (var o = 16383 & t, a = t >> 14; --i >= 0; ) {
                 var c = 16383 & this[e],
                   l = this[e++] >> 14,
-                  u = a * c + l * i;
+                  u = a * c + l * o;
                 (r =
-                  ((c = i * c + ((16383 & u) << 14) + n[s] + r) >> 28) +
+                  ((c = o * c + ((16383 & u) << 14) + n[s] + r) >> 28) +
                   (u >> 14) +
                   a * l),
                   (n[s++] = 268435455 & c);
@@ -203,12 +203,12 @@
       (r.prototype.FV = Math.pow(2, 52)),
         (r.prototype.F1 = 52 - s),
         (r.prototype.F2 = 2 * s - 52);
-      var i,
+      var o,
         a,
         c = new Array();
-      for (i = "0".charCodeAt(0), a = 0; a <= 9; ++a) c[i++] = a;
-      for (i = "a".charCodeAt(0), a = 10; a < 36; ++a) c[i++] = a;
-      for (i = "A".charCodeAt(0), a = 10; a < 36; ++a) c[i++] = a;
+      for (o = "0".charCodeAt(0), a = 0; a <= 9; ++a) c[o++] = a;
+      for (o = "a".charCodeAt(0), a = 10; a < 36; ++a) c[o++] = a;
+      for (o = "A".charCodeAt(0), a = 10; a < 36; ++a) c[o++] = a;
       function l(e) {
         return "0123456789abcdefghijklmnopqrstuvwxyz".charAt(e);
       }
@@ -217,7 +217,7 @@
         return null == n ? -1 : n;
       }
       function h(e) {
-        var t = o();
+        var t = i();
         return t.fromInt(e), t;
       }
       function d(e) {
@@ -276,8 +276,8 @@
         return e;
       }
       function w(e) {
-        (this.r2 = o()),
-          (this.q3 = o()),
+        (this.r2 = i()),
+          (this.q3 = i()),
           r.ONE.dlShiftTo(2 * e.t, this.r2),
           (this.mu = this.r2.divide(e)),
           (this.m = e);
@@ -298,7 +298,7 @@
           e.squareTo(t), this.reduce(t);
         }),
         (f.prototype.convert = function (e) {
-          var t = o();
+          var t = i();
           return (
             e.abs().dlShiftTo(this.m.t, t),
             t.divRemTo(this.m, null, t),
@@ -307,7 +307,7 @@
           );
         }),
         (f.prototype.revert = function (e) {
-          var t = o();
+          var t = i();
           return e.copyTo(t), this.reduce(t), t;
         }),
         (f.prototype.reduce = function (e) {
@@ -356,26 +356,26 @@
             n = 2;
           }
           (this.t = 0), (this.s = 0);
-          for (var s = e.length, o = !1, i = 0; --s >= 0; ) {
+          for (var s = e.length, i = !1, o = 0; --s >= 0; ) {
             var a = 8 == n ? 255 & e[s] : u(e, s);
             a < 0
-              ? "-" == e.charAt(s) && (o = !0)
-              : ((o = !1),
-                0 == i
+              ? "-" == e.charAt(s) && (i = !0)
+              : ((i = !1),
+                0 == o
                   ? (this[this.t++] = a)
-                  : i + n > this.DB
+                  : o + n > this.DB
                     ? ((this[this.t - 1] |=
-                        (a & ((1 << (this.DB - i)) - 1)) << i),
-                      (this[this.t++] = a >> (this.DB - i)))
-                    : (this[this.t - 1] |= a << i),
-                (i += n) >= this.DB && (i -= this.DB));
+                        (a & ((1 << (this.DB - o)) - 1)) << o),
+                      (this[this.t++] = a >> (this.DB - o)))
+                    : (this[this.t - 1] |= a << o),
+                (o += n) >= this.DB && (o -= this.DB));
           }
           8 == n &&
             128 & e[0] &&
             ((this.s = -1),
-            i > 0 && (this[this.t - 1] |= ((1 << (this.DB - i)) - 1) << i)),
+            o > 0 && (this[this.t - 1] |= ((1 << (this.DB - o)) - 1) << o)),
             this.clamp(),
-            o && r.ZERO.subTo(this, this);
+            i && r.ZERO.subTo(this, this);
         }),
         (r.prototype.clamp = function () {
           for (var e = this.s & this.DM; this.t > 0 && this[this.t - 1] == e; )
@@ -395,13 +395,13 @@
           var n,
             s = e % this.DB,
             r = this.DB - s,
-            o = (1 << r) - 1,
-            i = Math.floor(e / this.DB),
+            i = (1 << r) - 1,
+            o = Math.floor(e / this.DB),
             a = (this.s << s) & this.DM;
           for (n = this.t - 1; n >= 0; --n)
-            (t[n + i + 1] = (this[n] >> r) | a), (a = (this[n] & o) << s);
-          for (n = i - 1; n >= 0; --n) t[n] = 0;
-          (t[i] = a), (t.t = this.t + i + 1), (t.s = this.s), t.clamp();
+            (t[n + o + 1] = (this[n] >> r) | a), (a = (this[n] & i) << s);
+          for (n = o - 1; n >= 0; --n) t[n] = 0;
+          (t[o] = a), (t.t = this.t + o + 1), (t.s = this.s), t.clamp();
         }),
         (r.prototype.rShiftTo = function (e, t) {
           t.s = this.s;
@@ -410,11 +410,11 @@
           else {
             var s = e % this.DB,
               r = this.DB - s,
-              o = (1 << s) - 1;
+              i = (1 << s) - 1;
             t[0] = this[n] >> s;
-            for (var i = n + 1; i < this.t; ++i)
-              (t[i - n - 1] |= (this[i] & o) << r), (t[i - n] = this[i] >> s);
-            s > 0 && (t[this.t - n - 1] |= (this.s & o) << r),
+            for (var o = n + 1; o < this.t; ++o)
+              (t[o - n - 1] |= (this[o] & i) << r), (t[o - n] = this[o] >> s);
+            s > 0 && (t[this.t - n - 1] |= (this.s & i) << r),
               (t.t = this.t - n),
               t.clamp();
           }
@@ -439,9 +439,9 @@
         (r.prototype.multiplyTo = function (e, t) {
           var n = this.abs(),
             s = e.abs(),
-            o = n.t;
-          for (t.t = o + s.t; --o >= 0; ) t[o] = 0;
-          for (o = 0; o < s.t; ++o) t[o + n.t] = n.am(0, s[o], t, o, 0, n.t);
+            i = n.t;
+          for (t.t = i + s.t; --i >= 0; ) t[i] = 0;
+          for (i = 0; i < s.t; ++i) t[i + n.t] = n.am(0, s[i], t, i, 0, n.t);
           (t.s = 0), t.clamp(), this.s != e.s && r.ZERO.subTo(t, t);
         }),
         (r.prototype.squareTo = function (e) {
@@ -464,19 +464,19 @@
         (r.prototype.divRemTo = function (e, t, n) {
           var s = e.abs();
           if (!(s.t <= 0)) {
-            var i = this.abs();
-            if (i.t < s.t)
+            var o = this.abs();
+            if (o.t < s.t)
               return (
                 null != t && t.fromInt(0), void (null != n && this.copyTo(n))
               );
-            null == n && (n = o());
-            var a = o(),
+            null == n && (n = i());
+            var a = i(),
               c = this.s,
               l = e.s,
               u = this.DB - d(s[s.t - 1]);
             u > 0
-              ? (s.lShiftTo(u, a), i.lShiftTo(u, n))
-              : (s.copyTo(a), i.copyTo(n));
+              ? (s.lShiftTo(u, a), o.lShiftTo(u, n))
+              : (s.copyTo(a), o.copyTo(n));
             var h = a.t,
               m = a[h - 1];
             if (0 != m) {
@@ -486,7 +486,7 @@
                 _ = 1 << this.F2,
                 C = n.t,
                 S = C - h,
-                v = null == t ? o() : t;
+                v = null == t ? i() : t;
               for (
                 a.dlShiftTo(S, v),
                   n.compareTo(v) >= 0 && ((n[n.t++] = 1), n.subTo(v, n)),
@@ -534,12 +534,12 @@
         }),
         (r.prototype.exp = function (e, t) {
           if (e > 4294967295 || e < 1) return r.ONE;
-          var n = o(),
-            s = o(),
-            i = t.convert(this),
+          var n = i(),
+            s = i(),
+            o = t.convert(this),
             a = d(e) - 1;
-          for (i.copyTo(n); --a >= 0; )
-            if ((t.sqrTo(n, s), (e & (1 << a)) > 0)) t.mulTo(s, i, n);
+          for (o.copyTo(n); --a >= 0; )
+            if ((t.sqrTo(n, s), (e & (1 << a)) > 0)) t.mulTo(s, o, n);
             else {
               var c = n;
               (n = s), (s = c);
@@ -560,25 +560,25 @@
           var n,
             s = (1 << t) - 1,
             r = !1,
-            o = "",
-            i = this.t,
-            a = this.DB - ((i * this.DB) % t);
-          if (i-- > 0)
+            i = "",
+            o = this.t,
+            a = this.DB - ((o * this.DB) % t);
+          if (o-- > 0)
             for (
-              a < this.DB && (n = this[i] >> a) > 0 && ((r = !0), (o = l(n)));
-              i >= 0;
+              a < this.DB && (n = this[o] >> a) > 0 && ((r = !0), (i = l(n)));
+              o >= 0;
             )
               a < t
-                ? ((n = (this[i] & ((1 << a) - 1)) << (t - a)),
-                  (n |= this[--i] >> (a += this.DB - t)))
-                : ((n = (this[i] >> (a -= t)) & s),
-                  a <= 0 && ((a += this.DB), --i)),
+                ? ((n = (this[o] & ((1 << a) - 1)) << (t - a)),
+                  (n |= this[--o] >> (a += this.DB - t)))
+                : ((n = (this[o] >> (a -= t)) & s),
+                  a <= 0 && ((a += this.DB), --o)),
                 n > 0 && (r = !0),
-                r && (o += l(n));
-          return r ? o : "0";
+                r && (i += l(n));
+          return r ? i : "0";
         }),
         (r.prototype.negate = function () {
-          var e = o();
+          var e = i();
           return r.ZERO.subTo(this, e), e;
         }),
         (r.prototype.abs = function () {
@@ -598,7 +598,7 @@
             : this.DB * (this.t - 1) + d(this[this.t - 1] ^ (this.s & this.DM));
         }),
         (r.prototype.mod = function (e) {
-          var t = o();
+          var t = i();
           return (
             this.abs().divRemTo(e, null, t),
             this.s < 0 && t.compareTo(r.ZERO) > 0 && e.subTo(t, t),
@@ -624,7 +624,7 @@
         (w.prototype.convert = function (e) {
           if (e.s < 0 || e.t > 2 * this.m.t) return e.mod(this.m);
           if (e.compareTo(this.m) < 0) return e;
-          var t = o();
+          var t = i();
           return e.copyTo(t), this.reduce(t), t;
         }),
         (w.prototype.revert = function (e) {
@@ -667,21 +667,21 @@
           var t = this.chunkSize(e),
             n = Math.pow(e, t),
             s = h(n),
-            r = o(),
-            i = o(),
+            r = i(),
+            o = i(),
             a = "";
-          for (this.divRemTo(s, r, i); r.signum() > 0; )
-            (a = (n + i.intValue()).toString(e).substr(1) + a),
-              r.divRemTo(s, r, i);
-          return i.intValue().toString(e) + a;
+          for (this.divRemTo(s, r, o); r.signum() > 0; )
+            (a = (n + o.intValue()).toString(e).substr(1) + a),
+              r.divRemTo(s, r, o);
+          return o.intValue().toString(e) + a;
         }),
         (r.prototype.fromRadix = function (e, t) {
           this.fromInt(0), null == t && (t = 10);
           for (
             var n = this.chunkSize(t),
               s = Math.pow(t, n),
-              o = !1,
-              i = 0,
+              i = !1,
+              o = 0,
               a = 0,
               c = 0;
             c < e.length;
@@ -689,13 +689,13 @@
           ) {
             var l = u(e, c);
             l < 0
-              ? "-" == e.charAt(c) && 0 == this.signum() && (o = !0)
+              ? "-" == e.charAt(c) && 0 == this.signum() && (i = !0)
               : ((a = t * a + l),
-                ++i >= n &&
-                  (this.dMultiply(s), this.dAddOffset(a, 0), (i = 0), (a = 0)));
+                ++o >= n &&
+                  (this.dMultiply(s), this.dAddOffset(a, 0), (o = 0), (a = 0)));
           }
-          i > 0 && (this.dMultiply(Math.pow(t, i)), this.dAddOffset(a, 0)),
-            o && r.ZERO.subTo(this, this);
+          o > 0 && (this.dMultiply(Math.pow(t, o)), this.dAddOffset(a, 0)),
+            i && r.ZERO.subTo(this, this);
         }),
         (r.prototype.fromNumber = function (e, t, n) {
           if ("number" == typeof t)
@@ -713,24 +713,24 @@
                     this.subTo(r.ONE.shiftLeft(e - 1), this);
           else {
             var s = new Array(),
-              o = 7 & e;
+              i = 7 & e;
             (s.length = 1 + (e >> 3)),
               t.nextBytes(s),
-              o > 0 ? (s[0] &= (1 << o) - 1) : (s[0] = 0),
+              i > 0 ? (s[0] &= (1 << i) - 1) : (s[0] = 0),
               this.fromString(s, 256);
           }
         }),
         (r.prototype.bitwiseTo = function (e, t, n) {
           var s,
             r,
-            o = Math.min(e.t, this.t);
-          for (s = 0; s < o; ++s) n[s] = t(this[s], e[s]);
+            i = Math.min(e.t, this.t);
+          for (s = 0; s < i; ++s) n[s] = t(this[s], e[s]);
           if (e.t < this.t) {
-            for (r = e.s & this.DM, s = o; s < this.t; ++s)
+            for (r = e.s & this.DM, s = i; s < this.t; ++s)
               n[s] = t(this[s], r);
             n.t = this.t;
           } else {
-            for (r = this.s & this.DM, s = o; s < e.t; ++s) n[s] = t(r, e[s]);
+            for (r = this.s & this.DM, s = i; s < e.t; ++s) n[s] = t(r, e[s]);
             n.t = e.t;
           }
           (n.s = t(this.s, e.s)), n.clamp();
@@ -802,9 +802,9 @@
           if (n <= 0) return !1;
           var s = t.shiftRight(n);
           (e = (e + 1) >> 1) > b.length && (e = b.length);
-          for (var i = o(), a = 0; a < e; ++a) {
-            i.fromInt(b[a]);
-            var c = i.modPow(s, this);
+          for (var o = i(), a = 0; a < e; ++a) {
+            o.fromInt(b[a]);
+            var c = o.modPow(s, this);
             if (0 != c.compareTo(r.ONE) && 0 != c.compareTo(t)) {
               for (var l = 1; l++ < n && 0 != c.compareTo(t); )
                 if (0 == (c = c.modPowInt(2, this)).compareTo(r.ONE)) return !1;
@@ -814,7 +814,7 @@
           return !0;
         }),
         (r.prototype.clone = function () {
-          var e = o();
+          var e = i();
           return this.copyTo(e), e;
         }),
         (r.prototype.intValue = function () {
@@ -874,31 +874,31 @@
           return this.compareTo(e) > 0 ? this : e;
         }),
         (r.prototype.and = function (e) {
-          var t = o();
+          var t = i();
           return this.bitwiseTo(e, p, t), t;
         }),
         (r.prototype.or = function (e) {
-          var t = o();
+          var t = i();
           return this.bitwiseTo(e, g, t), t;
         }),
         (r.prototype.xor = function (e) {
-          var t = o();
+          var t = i();
           return this.bitwiseTo(e, _, t), t;
         }),
         (r.prototype.andNot = function (e) {
-          var t = o();
+          var t = i();
           return this.bitwiseTo(e, C, t), t;
         }),
         (r.prototype.not = function () {
-          for (var e = o(), t = 0; t < this.t; ++t) e[t] = this.DM & ~this[t];
+          for (var e = i(), t = 0; t < this.t; ++t) e[t] = this.DM & ~this[t];
           return (e.t = this.t), (e.s = ~this.s), e;
         }),
         (r.prototype.shiftLeft = function (e) {
-          var t = o();
+          var t = i();
           return e < 0 ? this.rShiftTo(-e, t) : this.lShiftTo(e, t), t;
         }),
         (r.prototype.shiftRight = function (e) {
-          var t = o();
+          var t = i();
           return e < 0 ? this.lShiftTo(-e, t) : this.rShiftTo(e, t), t;
         }),
         (r.prototype.getLowestSetBit = function () {
@@ -925,36 +925,36 @@
           return this.changeBit(e, _);
         }),
         (r.prototype.add = function (e) {
-          var t = o();
+          var t = i();
           return this.addTo(e, t), t;
         }),
         (r.prototype.subtract = function (e) {
-          var t = o();
+          var t = i();
           return this.subTo(e, t), t;
         }),
         (r.prototype.multiply = function (e) {
-          var t = o();
+          var t = i();
           return this.multiplyTo(e, t), t;
         }),
         (r.prototype.divide = function (e) {
-          var t = o();
+          var t = i();
           return this.divRemTo(e, t, null), t;
         }),
         (r.prototype.remainder = function (e) {
-          var t = o();
+          var t = i();
           return this.divRemTo(e, null, t), t;
         }),
         (r.prototype.divideAndRemainder = function (e) {
-          var t = o(),
-            n = o();
+          var t = i(),
+            n = i();
           return this.divRemTo(e, t, n), new Array(t, n);
         }),
         (r.prototype.modPow = function (e, t) {
           var n,
             s,
             r = e.bitLength(),
-            i = h(1);
-          if (r <= 0) return i;
+            o = h(1);
+          if (r <= 0) return o;
           (n = r < 18 ? 1 : r < 48 ? 3 : r < 144 ? 4 : r < 768 ? 5 : 6),
             (s = r < 8 ? new m(t) : t.isEven() ? new w(t) : new f(t));
           var a = new Array(),
@@ -962,15 +962,15 @@
             l = n - 1,
             u = (1 << n) - 1;
           if (((a[1] = s.convert(this)), n > 1)) {
-            var p = o();
+            var p = i();
             for (s.sqrTo(a[1], p); c <= u; )
-              (a[c] = o()), s.mulTo(p, a[c - 2], a[c]), (c += 2);
+              (a[c] = i()), s.mulTo(p, a[c - 2], a[c]), (c += 2);
           }
           var g,
             _,
             C = e.t - 1,
             S = !0,
-            v = o();
+            v = i();
           for (r = d(e[C]) - 1; C >= 0; ) {
             for (
               r >= l
@@ -982,20 +982,20 @@
             )
               (g >>= 1), --c;
             if (((r -= c) < 0 && ((r += this.DB), --C), S))
-              a[g].copyTo(i), (S = !1);
+              a[g].copyTo(o), (S = !1);
             else {
-              for (; c > 1; ) s.sqrTo(i, v), s.sqrTo(v, i), (c -= 2);
-              c > 0 ? s.sqrTo(i, v) : ((_ = i), (i = v), (v = _)),
-                s.mulTo(v, a[g], i);
+              for (; c > 1; ) s.sqrTo(o, v), s.sqrTo(v, o), (c -= 2);
+              c > 0 ? s.sqrTo(o, v) : ((_ = o), (o = v), (v = _)),
+                s.mulTo(v, a[g], o);
             }
             for (; C >= 0 && !(e[C] & (1 << r)); )
-              s.sqrTo(i, v),
-                (_ = i),
-                (i = v),
+              s.sqrTo(o, v),
+                (_ = o),
+                (o = v),
                 (v = _),
                 --r < 0 && ((r = this.DB - 1), --C);
           }
-          return s.revert(i);
+          return s.revert(o);
         }),
         (r.prototype.modInverse = function (e) {
           var t = e.isEven();
@@ -1003,8 +1003,8 @@
           for (
             var n = e.clone(),
               s = this.clone(),
-              o = h(1),
-              i = h(0),
+              i = h(1),
+              o = h(0),
               a = h(0),
               c = h(1);
             0 != n.signum();
@@ -1012,11 +1012,11 @@
             for (; n.isEven(); )
               n.rShiftTo(1, n),
                 t
-                  ? ((o.isEven() && i.isEven()) ||
-                      (o.addTo(this, o), i.subTo(e, i)),
-                    o.rShiftTo(1, o))
-                  : i.isEven() || i.subTo(e, i),
-                i.rShiftTo(1, i);
+                  ? ((i.isEven() && o.isEven()) ||
+                      (i.addTo(this, i), o.subTo(e, o)),
+                    i.rShiftTo(1, i))
+                  : o.isEven() || o.subTo(e, o),
+                o.rShiftTo(1, o);
             for (; s.isEven(); )
               s.rShiftTo(1, s),
                 t
@@ -1026,8 +1026,8 @@
                   : c.isEven() || c.subTo(e, c),
                 c.rShiftTo(1, c);
             n.compareTo(s) >= 0
-              ? (n.subTo(s, n), t && o.subTo(a, o), i.subTo(c, i))
-              : (s.subTo(n, s), t && a.subTo(o, a), c.subTo(i, c));
+              ? (n.subTo(s, n), t && i.subTo(a, i), o.subTo(c, o))
+              : (s.subTo(n, s), t && a.subTo(i, a), c.subTo(o, c));
           }
           return 0 != s.compareTo(r.ONE)
             ? r.ZERO
@@ -1048,10 +1048,10 @@
             (t = n), (n = s);
           }
           var r = t.getLowestSetBit(),
-            o = n.getLowestSetBit();
-          if (o < 0) return t;
+            i = n.getLowestSetBit();
+          if (i < 0) return t;
           for (
-            r < o && (o = r), o > 0 && (t.rShiftTo(o, t), n.rShiftTo(o, n));
+            r < i && (i = r), i > 0 && (t.rShiftTo(i, t), n.rShiftTo(i, n));
             t.signum() > 0;
           )
             (r = t.getLowestSetBit()) > 0 && t.rShiftTo(r, t),
@@ -1059,7 +1059,7 @@
               t.compareTo(n) >= 0
                 ? (t.subTo(n, t), t.rShiftTo(1, t))
                 : (n.subTo(t, n), n.rShiftTo(1, n));
-          return o > 0 && n.lShiftTo(o, n), n;
+          return i > 0 && n.lShiftTo(i, n), n;
         }),
         (r.prototype.isProbablePrime = function (e) {
           var t,
@@ -1089,21 +1089,21 @@
               n,
               s,
               r,
-              o,
               i,
+              o,
               a,
               c = "",
               l = 0;
             do {
               (r = (t = e.charCodeAt(l++)) >> 2),
-                (o = ((3 & t) << 4) | ((n = e.charCodeAt(l++)) >> 4)),
-                (i = ((15 & n) << 2) | ((s = e.charCodeAt(l++)) >> 6)),
+                (i = ((3 & t) << 4) | ((n = e.charCodeAt(l++)) >> 4)),
+                (o = ((15 & n) << 2) | ((s = e.charCodeAt(l++)) >> 6)),
                 (a = 63 & s),
-                isNaN(n) ? (i = a = 64) : isNaN(s) && (a = 64),
+                isNaN(n) ? (o = a = 64) : isNaN(s) && (a = 64),
                 (c +=
                   this.base64.charAt(r) +
-                  this.base64.charAt(o) +
                   this.base64.charAt(i) +
+                  this.base64.charAt(o) +
                   this.base64.charAt(a));
             } while (l < e.length);
             return c;
@@ -1115,19 +1115,19 @@
               n,
               s,
               r,
-              o = "",
-              i = 0;
+              i = "",
+              o = 0;
             do {
-              (t = this.base64.indexOf(e.charAt(i++))),
-                (n = this.base64.indexOf(e.charAt(i++))),
-                (s = this.base64.indexOf(e.charAt(i++))),
-                (r = this.base64.indexOf(e.charAt(i++))),
-                (o += String.fromCharCode((t << 2) | (n >> 4))),
+              (t = this.base64.indexOf(e.charAt(o++))),
+                (n = this.base64.indexOf(e.charAt(o++))),
+                (s = this.base64.indexOf(e.charAt(o++))),
+                (r = this.base64.indexOf(e.charAt(o++))),
+                (i += String.fromCharCode((t << 2) | (n >> 4))),
                 64 != s &&
-                  (o += String.fromCharCode(((15 & n) << 4) | (s >> 2))),
-                64 != r && (o += String.fromCharCode(((3 & s) << 6) | r));
-            } while (i < e.length);
-            return o;
+                  (i += String.fromCharCode(((15 & n) << 4) | (s >> 2))),
+                64 != r && (i += String.fromCharCode(((3 & s) << 6) | r));
+            } while (o < e.length);
+            return i;
           },
         },
         A = {
@@ -1191,8 +1191,8 @@
       });
       var s,
         r,
-        o = n(34629),
-        i = n(14947),
+        i = n(34629),
+        o = n(14947),
         a = n(41735),
         c = n.n(a),
         l = n(56545),
@@ -1210,8 +1210,8 @@
           identity_secret: n,
           secret_1: s,
           status: r,
-          uri: o,
-          server_time: i,
+          uri: i,
+          server_time: o,
           ...a
         } = e;
         return {
@@ -1250,7 +1250,7 @@
         m_strExtendedErrorMessage = "";
         m_onDeviceDetailsCallback;
         constructor(e, t, n, s) {
-          (0, i.Gn)(this),
+          (0, o.Gn)(this),
             (this.m_transport = e),
             (this.m_onCompleteCallback = t),
             (this.m_onDeviceDetailsCallback = n),
@@ -1312,8 +1312,8 @@
             }
             const {
               new_challenge_url: r,
-              new_client_id: o,
-              refresh_token: i,
+              new_client_id: i,
+              refresh_token: o,
               access_token: a,
               account_name: c,
               had_remote_interaction: u,
@@ -1321,17 +1321,17 @@
             } = t.Body().toObject();
             return (
               (this.m_bRemoteInteraction = !!u),
-              i
+              o
                 ? (this.m_onCompleteCallback({
                     bSuccess: !0,
-                    strRefreshToken: i,
+                    strRefreshToken: o,
                     strAccessToken: a,
                     strAccountName: c,
                     strNewGuardData: f,
                   }),
                   n)
                 : (r && (this.m_strChallengeURL = r),
-                  o && (this.m_strClientID = o),
+                  i && (this.m_strClientID = i),
                   this.StartPolling(!1),
                   n)
             );
@@ -1369,9 +1369,9 @@
         s.has("need_password") &&
           (s.delete("need_password"), (n.search = s.toString())),
           t.append("redir", n.toString());
-        const o = `${f.TS.LOGIN_BASE_URL}jwt/finalizelogin`;
+        const i = `${f.TS.LOGIN_BASE_URL}jwt/finalizelogin`;
         return c()
-          .post(o, t, { withCredentials: !0 })
+          .post(i, t, { withCredentials: !0 })
           .then(
             (e) => {
               const { data: t } = e;
@@ -1389,7 +1389,7 @@
                   ),
                   r.k_PrimaryDomainFail
                 );
-              const { transfer_info: n, steamID: s, primary_domain: o } = t;
+              const { transfer_info: n, steamID: s, primary_domain: i } = t;
               return Promise.all(
                 n.map(({ url: e, params: t }) =>
                   (async function (e, t) {
@@ -1398,18 +1398,18 @@
                     try {
                       const r = new FormData();
                       Object.keys(t).forEach((e) => r.append(e, t[e]));
-                      const o = await c().post(e, r, {
+                      const i = await c().post(e, r, {
                         withCredentials: !0,
                         timeout: 1e4,
                       });
-                      200 !== o.status
+                      200 !== i.status
                         ? ((0, _.ZI)(
-                            `Transfer login to ${n.host} failed with status code: ${o.status}`,
+                            `Transfer login to ${n.host} failed with status code: ${i.status}`,
                           ),
                           (s = !1))
-                        : o.data.result !== h.R &&
+                        : i.data.result !== h.R &&
                           ((0, _.ZI)(
-                            `Transfer login to ${n.host} failed with result: ${o.data.result}`,
+                            `Transfer login to ${n.host} failed with result: ${i.data.result}`,
                           ),
                           (s = !1));
                     } catch (e) {
@@ -1433,7 +1433,7 @@
                       }),
                       n
                     );
-                  })(e, o),
+                  })(e, i),
                 () => r.k_SecondaryDomainFail,
               );
             },
@@ -1443,12 +1443,12 @@
             ),
           );
       }
-      (0, o.Cg)([i.sH], S.prototype, "m_strChallengeURL", void 0),
-        (0, o.Cg)([i.sH], S.prototype, "m_bRemoteInteraction", void 0),
-        (0, o.Cg)([i.sH], S.prototype, "m_eFailureState", void 0),
-        (0, o.Cg)([i.sH], S.prototype, "m_strExtendedErrorMessage", void 0),
-        (0, o.Cg)([u.o], S.prototype, "PollForUpdate", null),
-        (0, o.Cg)([u.o], S.prototype, "SetTokenToRevoke", null);
+      (0, i.Cg)([o.sH], S.prototype, "m_strChallengeURL", void 0),
+        (0, i.Cg)([o.sH], S.prototype, "m_bRemoteInteraction", void 0),
+        (0, i.Cg)([o.sH], S.prototype, "m_eFailureState", void 0),
+        (0, i.Cg)([o.sH], S.prototype, "m_strExtendedErrorMessage", void 0),
+        (0, i.Cg)([u.o], S.prototype, "PollForUpdate", null),
+        (0, i.Cg)([u.o], S.prototype, "SetTokenToRevoke", null);
     },
     4717: (e, t, n) => {
       "use strict";
@@ -1463,9 +1463,9 @@
       });
       var s = n(41735),
         r = n.n(s),
-        o = n(60778);
-      const i = n(80407).A,
-        a = new o.wd("Login"),
+        i = n(60778);
+      const o = n(80407).A,
+        a = new i.wd("Login"),
         c = a.Info,
         l = (a.Debug, a.Warning),
         u = a.Error;
@@ -1482,9 +1482,9 @@
           s = "";
         try {
           let e = { "Content-Type": "multipart/form-data" },
-            o = await r().post(n, t, { headers: e });
-          if (200 != o.status) return !1;
-          s = o.data.gid;
+            i = await r().post(n, t, { headers: e });
+          if (200 != i.status) return !1;
+          s = i.data.gid;
         } catch (e) {
           return !1;
         }
@@ -1494,8 +1494,8 @@
         return h(e, "rendercaptcha") + `?gid=${t}`;
       }
       function p(e, t) {
-        let n = i.getPublicKey(t.publickey_mod, t.publickey_exp),
-          s = i.encrypt(e, n);
+        let n = o.getPublicKey(t.publickey_mod, t.publickey_exp),
+          s = o.encrypt(e, n);
         return !1 === s ? null : s;
       }
       async function g(e, t, n) {
@@ -1510,55 +1510,55 @@
           let n = d();
           n.append("username", t);
           let s,
-            o = h(e, "getrsakey");
+            i = h(e, "getrsakey");
           try {
             let e = { "Content-Type": "multipart/form-data" },
-              t = await r().post(o, n, { headers: e });
+              t = await r().post(i, n, { headers: e });
             if (200 != t.status)
               return (
                 console.log("GetRSAKey failure: "), console.log(t.status), null
               );
-            let i = t.data;
+            let o = t.data;
             if (
               !(
-                i &&
-                i.success &&
-                i.publickey_mod &&
-                i.publickey_exp &&
-                i.timestamp
+                o &&
+                o.success &&
+                o.publickey_mod &&
+                o.publickey_exp &&
+                o.timestamp
               )
             )
-              return console.log("GetRSAKey failure: "), console.log(i), null;
-            s = i;
+              return console.log("GetRSAKey failure: "), console.log(o), null;
+            s = o;
           } catch (e) {
             return console.log("GetRSAKey exception: "), console.log(e), null;
           }
           return s;
         })(e, n.strUserName);
         if (!s) return console.error(`Failed to get RSA key from ${e}`), null;
-        let o = await (async function (e, t, n, s) {
-          const o = p(n.strPassword, s);
-          if (!o) return null;
-          let i = d();
-          i.append("password", o),
-            i.append("username", n.strUserName),
-            i.append("twofactorcode", n.strTwoFactorCode || ""),
-            i.append("emailauth", n.strEmailAuthCode || ""),
-            i.append("loginfriendlyname", ""),
-            i.append("captchagid", n.gidCaptcha || ""),
-            i.append("captcha_text", n.strCaptchaText || ""),
-            i.append("emailsteamid", n.emailSteamID || ""),
-            i.append("rsatimestamp", s.timestamp),
-            i.append("remember_login", n.bRememberLogin ? "true" : "false");
+        let i = await (async function (e, t, n, s) {
+          const i = p(n.strPassword, s);
+          if (!i) return null;
+          let o = d();
+          o.append("password", i),
+            o.append("username", n.strUserName),
+            o.append("twofactorcode", n.strTwoFactorCode || ""),
+            o.append("emailauth", n.strEmailAuthCode || ""),
+            o.append("loginfriendlyname", ""),
+            o.append("captchagid", n.gidCaptcha || ""),
+            o.append("captcha_text", n.strCaptchaText || ""),
+            o.append("emailsteamid", n.emailSteamID || ""),
+            o.append("rsatimestamp", s.timestamp),
+            o.append("remember_login", n.bRememberLogin ? "true" : "false");
           let a = {};
           t &&
-            (i.append("oauth_client_id", t),
-            i.append("mobile_chat_client", "true"));
+            (o.append("oauth_client_id", t),
+            o.append("mobile_chat_client", "true"));
           let c,
             l = h(e, "dologin");
           try {
             a.headers = { "Content-Type": "multipart/form-data" };
-            let e = await r().post(l, i, a);
+            let e = await r().post(l, o, a);
             if (200 != e.status) return null;
             let t = e.data;
             if (!t) return null;
@@ -1568,7 +1568,7 @@
           }
           return c;
         })(e, t, n, s);
-        return o;
+        return i;
       }
     },
     92120: (e, t, n) => {
@@ -1583,8 +1583,8 @@
       });
       var s = n(7850),
         r = n(2160),
-        o = n(22837),
-        i = n(37085),
+        i = n(22837),
+        o = n(37085),
         a = n(51883),
         c = n(41735),
         l = n.n(c),
@@ -1608,8 +1608,8 @@
           length: t,
           value: n,
           onChange: r,
-          onPaste: o,
-          tone: i,
+          onPaste: i,
+          tone: o,
           autoFocus: a,
           disabled: c,
           loading: l,
@@ -1668,7 +1668,7 @@
                 (n.value = t.charAt(s)),
                 (n = n.nextElementSibling),
                 s++;
-            f(), e.preventDefault(), o && o();
+            f(), e.preventDefault(), i && i();
           },
           b = [];
         for (let e = 0; e < t; e++)
@@ -1699,7 +1699,7 @@
         return (0, s.jsxs)(S.Z, {
           className: (0, v.A)(
             x().SegmentedCharacterInput,
-            "danger" === i && x().Danger,
+            "danger" === o && x().Danger,
             c && x().Disabled,
             h && x().BackupCode,
           ),
@@ -1739,8 +1739,8 @@
         Q = 10,
         q = 11,
         W = 13,
-        Y = 14,
-        $ = 15,
+        $ = 14,
+        Y = 15,
         K = 16;
       class X extends k.gf {
         m_eStatus = U;
@@ -1771,18 +1771,18 @@
               (0, f.ZI)(
                 "Cannot start an already started auth session. Create a new session instance.",
               ),
-              i.Ze
+              o.Ze
             );
           const s = e.replace(/[^\x00-\x7F]/g, ""),
             r = t.replace(/[^\x00-\x7F]/g, "").slice(0, 64);
-          if (!s.length || !r.length) return i.nO;
+          if (!s.length || !r.length) return o.nO;
           if (
             ((this.m_eStatus = H),
             (this.m_bUsingCodeOverride = !1),
             "anonymous" == e)
           )
             return (
-              this.SetFailureState(k.eF.AnonymousLogin, se.EResult(i.FK)), i.FK
+              this.SetFailureState(k.eF.AnonymousLogin, se.EResult(o.FK)), o.FK
             );
           try {
             const t = await (async function (e, t) {
@@ -1791,7 +1791,7 @@
               try {
                 await e.MakeReady();
                 const t = await a.kX.GetPasswordRSAPublicKey(e, n);
-                if ((t.DEBUG_LogToConsole(), t.GetEResult() !== i.R))
+                if ((t.DEBUG_LogToConsole(), t.GetEResult() !== o.R))
                   return (
                     (0, f.ZI)(
                       `Failed to get RSA key with EResult: ${t.GetEResult()}`,
@@ -1801,12 +1801,12 @@
                 const {
                   publickey_exp: s,
                   publickey_mod: r,
-                  timestamp: o,
+                  timestamp: i,
                 } = t.Body().toObject();
-                return s && r && o
-                  ? { publickey_exp: s, publickey_mod: r, timestamp: o }
+                return s && r && i
+                  ? { publickey_exp: s, publickey_mod: r, timestamp: i }
                   : ((0, f.ZI)(
-                      `Missing expected field in RSA Key: ${JSON.stringify({ publickey_exp: s, publickey_mod: r, timestamp: o })}`,
+                      `Missing expected field in RSA Key: ${JSON.stringify({ publickey_exp: s, publickey_mod: r, timestamp: i })}`,
                     ),
                     null);
               } catch (e) {
@@ -1818,8 +1818,8 @@
             if (!t)
               return (
                 (0, f.ZI)("Cannot start auth session without a valid RSA key"),
-                this.SetFailureState(k.eF.Network, se.EResult(i.Sq)),
-                i.Sq
+                this.SetFailureState(k.eF.Network, se.EResult(o.Sq)),
+                o.Sq
               );
             const u = (0, f.P8)(r, t),
               h = M.w.Init(a.iP);
@@ -1836,11 +1836,11 @@
               (0, f.ZI)("Failed to GetDeviceDetails"), (0, f.ZI)(e);
             }
             if (
-              (h.Body().set_language((0, o.sfN)(A.TS.LANGUAGE)),
+              (h.Body().set_language((0, i.sfN)(A.TS.LANGUAGE)),
               null != this.m_onGetMachineAuth)
             ) {
               const e = await this.m_onGetMachineAuth(s);
-              e.eresult == i.R && h.Body().set_guard_data(e.data);
+              e.eresult == o.R && h.Body().set_guard_data(e.data);
             }
             await this.m_transport.MakeReady();
             const d = await a.kX.BeginAuthSessionViaCredentials(
@@ -1852,16 +1852,16 @@
               (0, I.h5)(async () => {
                 const t = d.GetEResult(),
                   n = d.Hdr().transport_error();
-                if (t !== i.R)
+                if (t !== o.R)
                   switch (t) {
-                    case i.Um:
+                    case o.Um:
                       return (this.m_eStatus = P), t;
-                    case i.Sq:
-                    case i.a_:
+                    case o.Sq:
+                    case o.a_:
                       return (
-                        this.SetFailureState(k.eF.Network, se.EResult(i.Sq)), t
+                        this.SetFailureState(k.eF.Network, se.EResult(o.Sq)), t
                       );
-                    case i.h_:
+                    case o.h_:
                       return (
                         this.SetFailureState(
                           k.eF.RateLimitExceeded,
@@ -1869,7 +1869,7 @@
                         ),
                         t
                       );
-                    case i.oH:
+                    case o.oH:
                       if (this.m_onShowAgreement)
                         this.m_onShowAgreement(
                           d.Body().agreement_session_url(),
@@ -1884,7 +1884,7 @@
                         (this.m_eStatus = U),
                         t
                       );
-                    case i.uN:
+                    case o.uN:
                     default:
                       return (
                         (0, f.ZI)(
@@ -1903,13 +1903,13 @@
                 const {
                   client_id: s,
                   request_id: r,
-                  interval: o,
+                  interval: i,
                   allowed_confirmations: u,
                   steamid: h,
                   weak_token: m,
                 } = d.Body().toObject();
                 if (
-                  ((this.m_msPollInterval = 1e3 * o),
+                  ((this.m_msPollInterval = 1e3 * i),
                   (this.m_strClientID = s),
                   (this.m_rgRequestID = r),
                   (this.m_steamid = h),
@@ -1926,9 +1926,9 @@
                           headers: { "Content-Type": "multipart/form-data" },
                           withCredentials: !0,
                         })
-                      ).data.result == i.R
+                      ).data.result == o.R
                     )
-                      return (this.m_eStatus = V), this.StartPolling(!0), i.R;
+                      return (this.m_eStatus = V), this.StartPolling(!0), o.R;
                   } catch (e) {
                     if (
                       ((0, f.tG)(
@@ -1942,15 +1942,15 @@
                             k.eF.Network,
                             se.AjaxFailureWithCode(t.response.status),
                           ),
-                          i.Sq)
+                          o.Sq)
                         : (this.SetFailureState(
                             k.eF.Network,
                             se.AjaxFailureNoCode(),
                           ),
-                          i.Sq);
+                          o.Sq);
                     }
                     return (
-                      this.SetFailureState(k.eF.Network, se.EResult(i.eH)), i.eH
+                      this.SetFailureState(k.eF.Network, se.EResult(o.eH)), o.eH
                     );
                   }
                 }
@@ -1992,7 +1992,7 @@
               (0, f.tG)(e),
               this.SetFailureState(k.eF.Generic, se.FailedToStart()),
               this.m_onCompleteCallback({ bSuccess: !1 }),
-              i.zi
+              o.zi
             );
           }
         }
@@ -2032,7 +2032,7 @@
               default:
                 throw new Error("Attempted to clear code in invalid state");
             }
-            return Promise.resolve(i.R);
+            return Promise.resolve(o.R);
           }
           try {
             await this.m_transport.MakeReady();
@@ -2047,32 +2047,32 @@
                 this.m_transport,
                 s,
               ),
-              o = r.GetEResult();
-            if (o !== i.R) {
+              i = r.GetEResult();
+            if (i !== o.R) {
               if (!t)
                 return (
                   (0, f.ZI)(
-                    `Failed to automatically update session with local SG info. Result ${o}. Transport ${r.Hdr().transport_error()}`,
+                    `Failed to automatically update session with local SG info. Result ${i}. Transport ${r.Hdr().transport_error()}`,
                   ),
-                  o
+                  i
                 );
-              switch (o) {
-                case i.QR:
-                case i.b7:
-                  return (this.m_eStatus = n ? Q : q), o;
-                case i.ob:
+              switch (i) {
+                case o.QR:
+                case o.b7:
+                  return (this.m_eStatus = n ? Q : q), i;
+                case o.ob:
                   return (
-                    this.SetFailureState(k.eF.Expired, se.EResult(o)),
+                    this.SetFailureState(k.eF.Expired, se.EResult(i)),
                     this.m_onCompleteCallback({ bSuccess: !1 }),
-                    o
+                    i
                   );
-                case i.h_:
+                case o.h_:
                   return (
-                    this.SetFailureState(k.eF.RateLimitExceeded, se.EResult(o)),
+                    this.SetFailureState(k.eF.RateLimitExceeded, se.EResult(i)),
                     this.m_onCompleteCallback({ bSuccess: !1 }),
-                    o
+                    i
                   );
-                case i.oH:
+                case o.oH:
                   if (this.m_onShowAgreement)
                     this.m_onShowAgreement(r.Body().agreement_session_url());
                   else {
@@ -2083,26 +2083,26 @@
                   return (
                     this.m_onCompleteCallback({ bSuccess: !1 }),
                     (this.m_eStatus = U),
-                    o
+                    i
                   );
                 default:
                   return (
                     (0, f.ZI)(
-                      `Failed to update auth session with SG code. Result: ${o}`,
+                      `Failed to update auth session with SG code. Result: ${i}`,
                     ),
-                    this.SetFailureState(k.eF.Generic, se.EResult(o)),
+                    this.SetFailureState(k.eF.Generic, se.EResult(i)),
                     this.m_onCompleteCallback({ bSuccess: !1 }),
-                    o
+                    i
                   );
               }
             }
-            return (this.m_eStatus = W), this.StartPolling(), o;
+            return (this.m_eStatus = W), this.StartPolling(), i;
           } catch (e) {
             return (
               (0, f.ZI)(`Failed to update auth session with SG code. ${e}`),
               this.SetFailureState(k.eF.Generic, se.FailedToAddCode()),
               this.m_onCompleteCallback({ bSuccess: !1 }),
-              i.zi
+              o.zi
             );
           }
         }
@@ -2136,7 +2136,7 @@
                 this.m_weakAuthWebInterface.GetServiceTransport(),
                 e,
               );
-            i.R != t.GetEResult()
+            o.R != t.GetEResult()
               ? (t.DEBUG_LogToConsole(),
                 (0, f.ZI)(
                   "An unexpected error occured while adding an authenticator",
@@ -2152,7 +2152,7 @@
               "An unexpected error occured while moving an authenticator",
               e,
             ),
-              this.SetFailureState(k.eF.MoveAuthenticator, se.EResult(i.zi));
+              this.SetFailureState(k.eF.MoveAuthenticator, se.EResult(o.zi));
           }
         }
         async ResendMoveCode() {
@@ -2161,7 +2161,7 @@
               this.m_weakAuthWebInterface.GetServiceTransport(),
               e,
             );
-          i.R != t.GetEResult() &&
+          o.R != t.GetEResult() &&
             (t.DEBUG_LogToConsole(),
             (0, f.ZI)(
               "An unexpected error occured while adding an authenticator",
@@ -2178,7 +2178,7 @@
             this.m_weakAuthWebInterface.GetServiceTransport(),
             t,
           );
-          i.c3 == n.GetEResult()
+          o.c3 == n.GetEResult()
             ? (this.m_eStatus = 12)
             : n.Body().success()
               ? (n.DEBUG_LogToConsole(),
@@ -2242,21 +2242,22 @@
           }
         }
         SetFailureState(e, t, n = "") {
-          (this.m_eStatus = $),
+          (this.m_eStatus = Y),
             (this.m_eFailureState = e),
             (this.m_strErrorReference = t),
             (this.m_strExtendedErrorMessage = n);
         }
         onAuthComplete = (e) => {
-          this.m_eStatus = e.bSuccess ? Y : $;
-          const t = e.bSuccess
-            ? {
-                ...e,
-                strAccountName: this.m_strAccountName,
-                steamid: this.m_steamid,
-              }
-            : e;
-          this.m_onLoginComplete && this.m_onLoginComplete(t);
+          let t;
+          (this.m_eStatus = e.bSuccess ? $ : Y),
+            (t = e.bSuccess
+              ? {
+                  ...e,
+                  strAccountName: this.m_strAccountName,
+                  steamid: this.m_steamid,
+                }
+              : { bSuccess: !1 }),
+            this.m_onLoginComplete && this.m_onLoginComplete(t);
         };
         SetOnLoginComplete(e) {
           this.m_onLoginComplete = e;
@@ -2296,8 +2297,8 @@
           AjaxFailureWithCode: (e) => `af-${e}`,
         },
         re = 0,
-        oe = 1,
-        ie = 2,
+        ie = 1,
+        oe = 2,
         ae = 3,
         ce = 4;
       class le extends k.gf {
@@ -2318,9 +2319,9 @@
               console.error(
                 "Cannot start an already started auth session. Create a new session instance.",
               ),
-              i.zi
+              o.zi
             );
-          this.m_eStatus = oe;
+          this.m_eStatus = ie;
           try {
             await this.m_transport.MakeReady();
             const e = M.w.Init(a.R9);
@@ -2334,7 +2335,7 @@
             const t = await a.kX.BeginAuthSessionViaQR(this.m_transport, e),
               n = t.GetEResult(),
               s = t.Hdr().transport_error();
-            if (n !== i.R)
+            if (n !== o.R)
               return (
                 console.error(
                   `Failed to start auth session. Result: ${n} Transport: ${s}`,
@@ -2345,16 +2346,16 @@
               );
             const {
               client_id: r,
-              challenge_url: o,
+              challenge_url: i,
               interval: c,
               request_id: l,
             } = t.Body().toObject();
             return (
               (this.m_strClientID = r),
-              (this.m_strChallengeURL = o),
+              (this.m_strChallengeURL = i),
               (this.m_msPollInterval = 1e3 * c),
               (this.m_rgRequestID = l),
-              (this.m_eStatus = ie),
+              (this.m_eStatus = oe),
               this.StartPolling(!1),
               n
             );
@@ -2365,7 +2366,7 @@
               ),
               (this.m_eFailureState = k.eF.Generic),
               this.m_onCompleteCallback({ bSuccess: !1 }),
-              i.zi
+              o.zi
             );
           }
         }
@@ -2396,17 +2397,17 @@
           quality: t = ue.M,
           children: n,
           className: r,
-          activeBitColor: o = [33, 35, 40],
-          inactiveBitColor: i = [255, 255, 255],
+          activeBitColor: i = [33, 35, 40],
+          inactiveBitColor: o = [255, 255, 255],
           borderWidth: a = 3,
           typeNumber: c = 6,
         } = e;
         const l = (function (e, t = {}) {
           const { typeNumber: n, errorCorrectLevel: s } = t,
-            [r, o] = (0, u.useState)();
+            [r, i] = (0, u.useState)();
           return (
             (0, u.useEffect)(() => {
-              o(fe()(e, { typeNumber: n, errorCorrectLevel: s }).modules);
+              i(fe()(e, { typeNumber: n, errorCorrectLevel: s }).modules);
             }, [e, n, s]),
             r
           );
@@ -2420,68 +2421,74 @@
         const d = (function (e, t, n) {
             const s = e.length,
               r = e[0].length,
-              o = new Uint8Array(40 + (s + 2) * r);
-            let i = 0;
-            (o[i++] = 71),
-              (o[i++] = 73),
-              (o[i++] = 70),
-              (o[i++] = 56),
-              (o[i++] = 57),
-              (o[i++] = 97),
-              (o[i++] = s),
-              (o[i++] = 0),
-              (o[i++] = r),
-              (o[i++] = 0),
+              i = new Uint8Array(40 + (s + 2) * r);
+            let o = 0;
+            (i[o++] = 71),
+              (i[o++] = 73),
+              (i[o++] = 70),
+              (i[o++] = 56),
+              (i[o++] = 57),
+              (i[o++] = 97),
+              (i[o++] = s),
+              (i[o++] = 0),
+              (i[o++] = r),
+              (i[o++] = 0),
               (0, pe.wT)(
                 "transparent" != t || "transparent" != n,
                 "Trying to use transparent for both colors in QR",
               ),
-              (o[i++] = 161),
-              (o[i++] = 0),
-              (o[i++] = 0),
+              (i[o++] = 161),
+              (i[o++] = 0),
+              (i[o++] = 0),
               "transparent" == t
-                ? ((o[i++] = 0), (o[i++] = 0), (o[i++] = 0))
-                : ((o[i++] = t[0]), (o[i++] = t[1]), (o[i++] = t[2])),
+                ? ((i[o++] = 0), (i[o++] = 0), (i[o++] = 0))
+                : ((i[o++] = t[0]), (i[o++] = t[1]), (i[o++] = t[2])),
               "transparent" == n
-                ? ((o[i++] = 0), (o[i++] = 0), (o[i++] = 0))
-                : ((o[i++] = n[0]), (o[i++] = n[1]), (o[i++] = n[2])),
-              (o[i++] = 255),
-              (o[i++] = 255),
-              (o[i++] = 255),
-              (o[i++] = 255),
-              (o[i++] = 255),
-              (o[i++] = 255),
+                ? ((i[o++] = 0), (i[o++] = 0), (i[o++] = 0))
+                : ((i[o++] = n[0]), (i[o++] = n[1]), (i[o++] = n[2])),
+              (i[o++] = 255),
+              (i[o++] = 255),
+              (i[o++] = 255),
+              (i[o++] = 255),
+              (i[o++] = 255),
+              (i[o++] = 255),
               ("transparent" != t && "transparent" != n) ||
-                ((o[i++] = 33),
-                (o[i++] = 249),
-                (o[i++] = 4),
-                (o[i++] = 1),
-                (o[i++] = 0),
-                (o[i++] = 0),
-                (o[i++] = "transparent" == t ? 0 : 1),
-                (o[i++] = 0)),
-              (o[i++] = 44),
-              (o[i++] = 0),
-              (o[i++] = 0),
-              (o[i++] = 0),
-              (o[i++] = 0),
-              (o[i++] = s),
-              (o[i++] = 0),
-              (o[i++] = r),
-              (o[i++] = 0),
-              (o[i++] = 0),
-              (o[i++] = 7);
+                ((i[o++] = 33),
+                (i[o++] = 249),
+                (i[o++] = 4),
+                (i[o++] = 1),
+                (i[o++] = 0),
+                (i[o++] = 0),
+                (i[o++] = "transparent" == t ? 0 : 1),
+                (i[o++] = 0)),
+              (i[o++] = 44),
+              (i[o++] = 0),
+              (i[o++] = 0),
+              (i[o++] = 0),
+              (i[o++] = 0),
+              (i[o++] = s),
+              (i[o++] = 0),
+              (i[o++] = r),
+              (i[o++] = 0),
+              (i[o++] = 0),
+              (i[o++] = 7);
             for (let t = 0; t < e.length; t++) {
-              (o[i++] = s + 1), (o[i++] = 128);
-              for (let n = 0; n < e.length; n++) o[i++] = e[t][n] ? 0 : 1;
+              (i[o++] = s + 1), (i[o++] = 128);
+              for (let n = 0; n < e.length; n++) i[o++] = e[t][n] ? 0 : 1;
             }
-            return (o[i++] = 1), (o[i++] = 129), (o[i++] = 0), (o[i++] = 59), o;
-          })(h, o, i),
+            return (i[o++] = 1), (i[o++] = 129), (i[o++] = 0), (i[o++] = 59), i;
+          })(h, i, o),
           m = new Blob([d], { type: "image/gif" }),
-          f = URL.createObjectURL(m);
+          f = URL.createObjectURL(m),
+          p = `rgb(${o[0]}, ${o[1]}, ${o[2]})`;
         return (0, s.jsx)("div", {
           className: (0, v.A)(_e().QRBits, r),
-          children: (0, s.jsx)("img", { className: _e().QRImg, src: f }),
+          style: { "--qr-bright-color": p },
+          children: (0, s.jsx)("img", {
+            className: _e().QRImg,
+            src: f,
+            alt: "",
+          }),
         });
       }
       !(function (e) {
@@ -2498,17 +2505,18 @@
             transport: t,
             onComplete: n,
             onStatusChange: r,
-            platform: i,
+            platform: o,
             deckStyling: a,
+            activeBitValue: c = 255,
           } = e,
-          c = A.TS.IN_STEAMUI ? Fe : Ge,
+          l = A.TS.IN_STEAMUI ? Fe : Ge,
           {
-            eStatus: l,
-            strChallengeURL: h,
-            strClientID: d,
-            bHadRemoteInteraction: m,
-            reset: f,
-            setTokenToRevoke: p,
+            eStatus: h,
+            strChallengeURL: d,
+            strClientID: m,
+            bHadRemoteInteraction: f,
+            reset: p,
+            setTokenToRevoke: g,
           } = (function (e) {
             const [t, n] = (0, u.useState)(new le(e));
             return (
@@ -2531,24 +2539,25 @@
                 setTokenToRevoke: t.SetTokenToRevoke,
               }))
             );
-          })({ transport: t, onComplete: n, onDeviceDetails: c });
-        (0, u.useEffect)(() => r && r(l), [r, l]);
-        const g = l === ie ? h : A.TS.STORE_BASE_URL,
-          _ = l === re || l === oe || m,
-          C = l === ce,
-          S = l === ae,
-          y = S
+          })({ transport: t, onComplete: n, onDeviceDetails: l });
+        (0, u.useEffect)(() => r && r(h), [r, h]);
+        const _ = h === oe ? d : A.TS.STORE_BASE_URL,
+          C = h === re || h === ie || f,
+          S = h === ce,
+          y = h === ae,
+          x = y
             ? (0, s.jsx)(Ee, {})
-            : C
-              ? (0, s.jsx)(Te, { reset: f })
-              : _
+            : S
+              ? (0, s.jsx)(Te, { reset: p })
+              : C
                 ? (0, s.jsx)(be, { size: "small" })
                 : null,
-          x = _ || C || S;
+          w = C || S || y;
         (0, u.useEffect)(() => {
-          e.refreshInfo?.login_token_id && p(e.refreshInfo.login_token_id);
-        }, [e.refreshInfo, p]);
-        const w = A.TS.EUNIVERSE !== o.wLO;
+          e.refreshInfo?.login_token_id && g(e.refreshInfo.login_token_id);
+        }, [e.refreshInfo, g]);
+        const b = A.TS.EUNIVERSE !== i.wLO,
+          T = `rgb(${c}, ${c}, ${c})`;
         return (0, s.jsx)("div", {
           className: ve().Column,
           children: (0, s.jsxs)("div", {
@@ -2557,22 +2566,23 @@
               (0, s.jsx)(Ce, {
                 borderWidth: 0,
                 activeBitColor: [21, 23, 28],
-                inactiveBitColor: w ? [255, 0, 255] : [255, 255, 255],
-                quality: we(g),
+                inactiveBitColor: b ? [c, 0, c] : [c, c, c],
+                quality: we(_),
                 className: (0, v.A)(
                   ve().LoginQR,
                   a && ve().QRLoginDeck,
-                  x && ve().Blur,
-                  w && ve().NonPublic,
+                  w && ve().Blur,
+                  b && ve().NonPublic,
                 ),
-                children: g,
+                children: _,
               }),
-              x &&
+              w &&
                 (0, s.jsx)("div", {
                   className: ve().Overlay,
                   children: (0, s.jsx)("div", {
                     className: ve().Box,
-                    children: y,
+                    style: { "--qr-bright-color": T },
+                    children: x,
                   }),
                 }),
             ],
@@ -2683,14 +2693,14 @@
                       if (200 !== s.status || !s?.data?.success) return !1;
                       const {
                           success: r,
-                          login_url: o,
+                          login_url: i,
                           error: a,
                           ...c
                         } = s.data,
                         u = new FormData();
-                      Object.keys(c).forEach((e) => u.append(e, c[e]));
-                      const h = await l().post(o, u),
-                        d = 200 === h.status && h.data.result === i.R;
+                      Object.entries(c).forEach(([e, t]) => u.append(e, t));
+                      const h = await l().post(i, u),
+                        d = 200 === h.status && h.data.result === o.R;
                       d && window.location.assign(e);
                       return d;
                     })(t.current)
@@ -2723,7 +2733,7 @@
         const { embedded: t, children: n, ...r } = e;
         return (0, s.jsx)(g.tH, {
           children: (0, s.jsx)(Ae.Provider, {
-            value: t,
+            value: t ?? !1,
             children: (0, s.jsxs)("div", {
               className: de().Login,
               children: [(0, s.jsx)(He, { ...r }), n],
@@ -2775,9 +2785,9 @@
       }
       function Be(e) {
         const { launcherType: t, variant: n, redirectUrl: r } = e;
-        if (t === o.A2g) return null;
+        if (t === i.A2g) return null;
         if ("none" == n) return null;
-        const i = void 0 !== t;
+        const o = void 0 !== t;
         let a;
         switch (n ?? "normal") {
           default:
@@ -2788,7 +2798,7 @@
             a = "#Login_NoSteamworksAccount";
         }
         return (0, s.jsxs)("div", {
-          className: (0, v.A)(de().AccountCreation, i && de().InClient),
+          className: (0, v.A)(de().AccountCreation, o && de().InClient),
           children: [
             (0, s.jsx)("span", {
               className: de().AccountCreationPrompt,
@@ -2826,24 +2836,25 @@
             isProbablySharedPC: s = !1,
           } = e,
           r = (0, u.useCallback)(
-            ({
-              bSuccess: e,
-              strRefreshToken: n,
-              strAccessToken: s,
-              strAccountName: r,
-              strNewGuardData: o,
-            }) => {
-              e &&
+            (e) => {
+              if (e.bSuccess) {
+                const {
+                  strRefreshToken: n,
+                  strAccessToken: s,
+                  strAccountName: r,
+                  strNewGuardData: i,
+                } = e;
                 t({
                   strRefreshToken: n,
                   strAccessToken: s,
                   strAccountName: r,
-                  strNewGuardData: o,
+                  strNewGuardData: i,
                 });
+              }
             },
             [t],
           ),
-          o = (function (e) {
+          i = (function (e) {
             const [t, n] = (0, u.useState)(new X(e));
             return (
               (0, u.useEffect)(() => {
@@ -2887,13 +2898,13 @@
           ),
           [m, p] = (0, u.useState)(""),
           [g, _] = (0, u.useState)(n && !s && "0" != localStorage?.getItem(l)),
-          C = !(o.eStatus === U || o.eStatus === H || o.eStatus === P);
+          C = !(i.eStatus === U || i.eStatus === H || i.eStatus === P);
         (0, u.useEffect)(() => {
           e.refreshInfo?.login_token_id &&
-            o.setTokenToRevoke(e.refreshInfo.login_token_id);
-        }, [e.refreshInfo, o]);
+            i.setTokenToRevoke(e.refreshInfo.login_token_id);
+        }, [e.refreshInfo, i]);
         return {
-          password: o,
+          password: i,
           onComplete: r,
           eQRStatus: a,
           onQRStatusChange: c,
@@ -2906,7 +2917,7 @@
             _(e), localStorage?.setItem(l, e ? "1" : "0");
           },
           onPasswordSubmit: () =>
-            h && m ? o.start(h, m, g) : Promise.resolve(i.nO),
+            h && m ? i.start(h, m, g) : Promise.resolve(o.nO),
           bInPasswordFlow: C,
           onTryOffline: () => {
             (0, f.tG)(`Logging in offline with username ${h}`),
@@ -2920,78 +2931,79 @@
             transport: t,
             onSuccess: n,
             platform: r,
-            autoFocus: o,
+            autoFocus: i,
             refreshInfo: a,
             renderSuccess: c = () => (0, s.jsx)(Dt, {}),
             lastResult: l,
-            joinLinkVariant: u,
-            defaultAccountName: h,
-            secureComputer: d = !0,
-            isProbablySharedPC: m = !1,
-            onShowAgreement: p,
-            creationRedirectUrl: g,
+            joinLinkVariant: h,
+            defaultAccountName: d,
+            secureComputer: m = !0,
+            isProbablySharedPC: p = !1,
+            onShowAgreement: g,
+            creationRedirectUrl: C,
           } = e,
-          C = A.TS.IN_STEAMUI ? Fe : Ge,
-          S = A.TS.IN_STEAMUI
+          S = A.TS.IN_STEAMUI ? Fe : Ge,
+          y = A.TS.IN_STEAMUI
             ? (e) => SteamClient.Auth.GetSteamGuardData(e)
             : null,
-          y = (function () {
+          x = (function () {
             const e =
               window?.location && (0, _.f3)(window.location, "need_password");
             return void 0 !== e && "false" !== e && "0" !== e;
           })(),
-          x = Ue({
+          w = Ue({
             transport: t,
             platform: r,
             onSuccess: n,
             refreshInfo: a,
-            onDeviceDetails: C,
-            onGetMachineAuth: S,
-            defaultAccountName: h,
-            secureComputer: d,
-            isProbablySharedPC: m,
-            onShowAgreement: p,
+            onDeviceDetails: S,
+            onGetMachineAuth: y,
+            defaultAccountName: d,
+            secureComputer: m,
+            isProbablySharedPC: p,
+            onShowAgreement: g,
           }),
-          w = ke();
-        if (null != l && l != i.R)
+          b = ke(),
+          T = (0, u.useId)();
+        if (null != l && l != o.R)
           return (0, s.jsx)("div", {
             className: de().Login,
             children: (0, s.jsx)(dt, {
               reset: () => window.location.reload(),
               failure: k.eF.Generic,
               errorReference: l.toString(),
-              extendedErrorMessage: x.password.strExtendedErrorMessage,
+              extendedErrorMessage: w.password.strExtendedErrorMessage,
             }),
           });
-        const b = !(0, A.Y2)();
-        if (!x.bInPasswordFlow) {
+        const R = !(0, A.Y2)();
+        if (!w.bInPasswordFlow) {
           const n = (0, s.jsxs)("div", {
-            className: (0, v.A)(de().SideBySide, w && de().Embedded),
+            className: (0, v.A)(de().SideBySide, b && de().Embedded),
             children: [
               (0, s.jsx)(Ve, {
-                strAccountName: x.strAccountName,
-                onAccountNameChange: x.onAccountNameChange,
-                strPassword: x.strPassword,
-                onPasswordChange: x.onPasswordChange,
-                bRememberMe: x.bRememberMe,
-                onRememberMeChange: x.onRememberMeChange,
-                onSubmit: x.onPasswordSubmit,
-                status: x.password.eStatus,
-                autoFocus: o,
-                secureComputer: d,
+                strAccountName: w.strAccountName,
+                onAccountNameChange: w.onAccountNameChange,
+                strPassword: w.strPassword,
+                onPasswordChange: w.onPasswordChange,
+                bRememberMe: w.bRememberMe,
+                onRememberMeChange: w.onRememberMeChange,
+                onSubmit: w.onPasswordSubmit,
+                status: w.password.eStatus,
+                autoFocus: i,
+                secureComputer: m,
                 refreshInfo: e.refreshInfo,
               }),
-              b &&
+              R &&
                 (0, s.jsx)(ze, {
                   transport: t,
-                  onQRStatusChange: x.onQRStatusChange,
-                  onComplete: x.onComplete,
+                  onQRStatusChange: w.onQRStatusChange,
+                  onComplete: w.onComplete,
                   platform: r,
                   refreshInfo: a,
                 }),
             ],
           });
-          if (w) {
+          if (b) {
             const t = A.TS.IN_STEAMUI,
               r = t ? A.TS.LAUNCHER_TYPE : void 0;
             return (0, s.jsxs)(Rt, {
@@ -3016,15 +3028,15 @@
                     (0, s.jsx)(Me, { variant: e.helpLinkVariant }),
                     (0, s.jsx)(Be, {
                       launcherType: r,
-                      variant: u,
-                      redirectUrl: g,
+                      variant: h,
+                      redirectUrl: C,
                     }),
                   ],
                 }),
               ],
             });
           }
-          const i = (0, s.jsxs)("div", {
+          const o = (0, s.jsxs)("div", {
             style: {
               display: "flex",
               flexDirection: "column",
@@ -3033,8 +3045,9 @@
             },
             children: [
               !1,
-              (0, s.jsx)("div", {
+              (0, s.jsx)("h2", {
                 className: de().PrimaryHeader,
+                id: T,
                 children: e.refreshInfo
                   ? (0, E.we)("#Login_RefreshSignIn")
                   : (0, E.we)("#Login_SignInTitle"),
@@ -3043,12 +3056,13 @@
             ],
           });
           return (0, s.jsxs)(kt, {
-            title: i,
-            children: [y && (0, s.jsx)(Oe, {}), n],
+            title: o,
+            titleId: T,
+            children: [x && (0, s.jsx)(Oe, {}), n],
           });
         }
-        const T = x.password.eStatus;
-        switch (T) {
+        const L = w.password.eStatus;
+        switch (L) {
           case W:
             return e.renderLoading
               ? (0, s.jsx)(s.Fragment, { children: e.renderLoading() })
@@ -3057,46 +3071,46 @@
           case q:
           case O:
           case Q:
-            const t = T === Z || T === q;
+            const t = L === Z || L === q;
             return (0, s.jsx)(ft, {
               type: t ? "mobile" : "email",
-              onSubmitCode: x.password.addCode,
-              status: T,
-              associatedLabel: x.password.strConfirmationAssociatedMessage,
-              accountName: x.password.strAccountName,
-              onBack: x.password.goBack,
+              onSubmitCode: w.password.addCode,
+              status: L,
+              associatedLabel: w.password.strConfirmationAssociatedMessage,
+              accountName: w.password.strAccountName,
+              onBack: w.password.goBack,
               onCodeHelp: e.onCodeHelp,
             });
           case z:
           case V:
-            const n = T === z;
+            const n = L === z;
             return (0, s.jsx)(wt, {
               type: n ? "mobile" : "email",
-              accountName: x.password.strAccountName,
-              onUseCodeOverride: x.password.useCodeOverride,
+              accountName: w.password.strAccountName,
+              onUseCodeOverride: w.password.useCodeOverride,
               onCodeHelp: e.onCodeHelp,
             });
           case K:
-            return (0, s.jsx)(mt, { reset: x.password.reset });
-          case $:
-            return (0, s.jsx)(dt, {
-              reset: x.password.reset,
-              failure: x.password.eFailureState,
-              onRequestOffline: x.onTryOffline,
-              errorReference: x.password.strErrorReference,
-              extendedErrorMessage: x.password.strExtendedErrorMessage,
-            });
+            return (0, s.jsx)(mt, { reset: w.password.reset });
           case Y:
+            return (0, s.jsx)(dt, {
+              reset: w.password.reset,
+              failure: w.password.eFailureState,
+              onRequestOffline: w.onTryOffline,
+              errorReference: w.password.strErrorReference,
+              extendedErrorMessage: w.password.strExtendedErrorMessage,
+            });
+          case $:
             return (0, s.jsx)(kt, { compact: !0, children: c() });
           default:
             return (
-              (0, f.ZI)(`Unknown Phase: ${T}`),
+              (0, f.ZI)(`Unknown Phase: ${L}`),
               (0, s.jsx)(dt, {
-                reset: x.password.reset,
+                reset: w.password.reset,
                 failure: k.eF.Generic,
-                onRequestOffline: x.onTryOffline,
-                errorReference: x.password.strErrorReference,
-                extendedErrorMessage: x.password.strExtendedErrorMessage,
+                onRequestOffline: w.onTryOffline,
+                errorReference: w.password.strErrorReference,
+                extendedErrorMessage: w.password.strExtendedErrorMessage,
               })
             );
         }
@@ -3104,37 +3118,37 @@
       function Pe(e) {
         if (!e.refreshInfo) return null;
         let t;
-        switch (e.refreshInfo?.reason ?? i.zi) {
-          case i.zi:
-          case i.Vr:
+        switch (e.refreshInfo?.reason ?? o.zi) {
+          case o.zi:
+          case o.Vr:
           default:
             t = "#Login_RefreshReason_Generic";
             break;
-          case i.KH:
+          case o.KH:
             t = "#Login_RefreshReason_LoggedInElsewhere";
             break;
-          case i.CF:
+          case o.CF:
             t = "#Login_RefreshReason_LogonSessionReplaced";
             break;
-          case i.Um:
+          case o.Um:
             t = "#Login_RefreshReason_InvalidPassword";
             break;
-          case i.fY:
+          case o.fY:
             t = "#Login_RefreshReason_Revoked";
             break;
-          case i.ob:
+          case o.ob:
             t = "#Login_RefreshReason_Expired";
             break;
-          case i.cr:
+          case o.cr:
             t = "#Login_RefreshReason_PasswordRequiredToKickSession";
             break;
-          case i.uN:
+          case o.uN:
             t = "#Login_RefreshReason_AccountDisabled";
             break;
-          case i.sG:
+          case o.sG:
             t = "#Login_RefreshReason_ParentalControlRestricted";
             break;
-          case i.h_:
+          case o.h_:
             t = "#Login_RefreshReason_RateLimitExceeded";
         }
         return (0, s.jsxs)("div", {
@@ -3162,8 +3176,8 @@
             onSubmit: t,
             status: n,
             autoFocus: r,
-            refreshInfo: o,
-            strAccountName: i,
+            refreshInfo: i,
+            strAccountName: o,
             onAccountNameChange: a,
             strPassword: c,
             onPasswordChange: l,
@@ -3190,9 +3204,11 @@
           v = S
             ? (0, s.jsx)(ct, { children: (0, E.we)("#Login_CheckCredentials") })
             : (0, s.jsx)(ct, { children: " " }),
-          y = r && !i,
-          x = r && !!i,
-          w = !!e.refreshInfo;
+          y = r && !o,
+          x = r && !!o,
+          w = !!e.refreshInfo,
+          b = (0, u.useId)(),
+          T = (0, u.useId)();
         return (0, s.jsxs)(Tt, {
           onSubmit: () => {
             t().then(() => {
@@ -3205,24 +3221,30 @@
               tone: S ? "danger" : void 0,
               label: (0, s.jsx)(Xe, {
                 highlight: !0,
+                inputId: b,
                 children: (0, E.we)("#Login_SignIn_WithAccountName"),
               }),
-              value: i,
+              value: o,
               onChange: (e) => {
                 p(!0), a(e);
               },
               autoFocus: y,
               disabled: w,
+              id: b,
             }),
             (0, s.jsx)(Ke, {
               tone: S ? "danger" : void 0,
-              label: (0, s.jsx)(Xe, { children: (0, E.we)("#Login_Password") }),
+              label: (0, s.jsx)(Xe, {
+                inputId: T,
+                children: (0, E.we)("#Login_Password"),
+              }),
               value: c,
               onChange: (e) => {
                 p(!0), l(e);
               },
               type: "password",
               autoFocus: x,
+              id: T,
             }),
             m
               ? (0, s.jsx)(R.he, {
@@ -3253,10 +3275,10 @@
       function ze(e) {
         const t = (0, m.R7)(),
           n = () => t.ownerWindow.screen.width < Ze,
-          [r, o] = (0, u.useState)(n());
+          [r, i] = (0, u.useState)(n());
         return (
           (0, L.l6)(t.ownerWindow, "resize", () => {
-            o(n());
+            i(n());
           }),
           (0, s.jsx)("div", {
             className: de().QRSection,
@@ -3269,7 +3291,6 @@
           A.TS.STORE_BASE_URL +
           "join/?guest=1&purchaseType=gift&checkout=1&redir=" +
           encodeURIComponent(e.redirectURL);
-        A.TS.STORE_BASE_URL, encodeURIComponent(e.redirectURL);
         return (0, s.jsx)("div", {
           className: de().GuestLayout,
           children: (0, s.jsx)(kt, {
@@ -3301,15 +3322,15 @@
         });
       }
       function qe(e) {
-        return (0, s.jsx)($e, { ...e });
+        return (0, s.jsx)(Ye, { ...e });
       }
       function We(e) {
         const [t, n] = (0, u.useState)(!1);
         return t
-          ? (0, s.jsx)($e, { ...e, bShowHideButton: !0, setShowQR: n })
-          : (0, s.jsx)(Ye, { setShowQR: n });
+          ? (0, s.jsx)(Ye, { ...e, bShowHideButton: !0, setShowQR: n })
+          : (0, s.jsx)($e, { setShowQR: n });
       }
-      function Ye(e) {
+      function $e(e) {
         return (0, s.jsxs)("div", {
           className: de().MessagingContainer,
           children: [
@@ -3337,13 +3358,13 @@
           ],
         });
       }
-      function $e(e) {
+      function Ye(e) {
         const {
           onQRStatusChange: t,
           transport: n,
           onComplete: r,
-          platform: o,
-          refreshInfo: i,
+          platform: i,
+          refreshInfo: o,
           bShowHideButton: a = !1,
           setShowQR: c,
         } = e;
@@ -3360,8 +3381,8 @@
                 onStatusChange: t,
                 transport: n,
                 onComplete: r,
-                platform: o,
-                refreshInfo: i,
+                platform: i,
+                refreshInfo: o,
               }),
             }),
             a &&
@@ -3385,21 +3406,24 @@
         });
       }
       function Ke(e) {
-        const { label: t, error: n, tone: r, autoFocus: o, ...i } = e,
-          a = r ?? (n ? "danger" : void 0);
+        const { label: t, error: n, tone: r, autoFocus: i, id: o, ...a } = e,
+          c = r ?? (n ? "danger" : void 0);
         return (0, s.jsxs)("div", {
           className: de().TextField,
           children: [
-            "string" == typeof t ? (0, s.jsx)(Xe, { children: t }) : t,
-            (0, s.jsx)(et, { type: "error", children: n }),
-            (0, s.jsx)(Je, { autoFocus: o, tone: a, ...i }),
+            "string" == typeof t
+              ? (0, s.jsx)(Xe, { inputId: o, children: t })
+              : t,
+            n && (0, s.jsx)(et, { type: "error", children: n }),
+            (0, s.jsx)(Je, { autoFocus: i, tone: c, id: o, ...a }),
           ],
         });
       }
       function Xe(e) {
-        const { children: t, highlight: n } = e;
-        return (0, s.jsx)("div", {
-          className: (0, v.A)(de().FieldLabel, n && de().Highlight),
+        const { children: t, inputId: n, highlight: r } = e;
+        return (0, s.jsx)("label", {
+          className: (0, v.A)(de().FieldLabel, r && de().Highlight),
+          htmlFor: n,
           children: t,
         });
       }
@@ -3408,18 +3432,20 @@
           value: t,
           onChange: n,
           type: r = "text",
-          tone: o,
-          className: i,
+          tone: i,
+          className: o,
           autoFocus: a,
           disabled: c,
+          id: l,
         } = e;
         return (0, s.jsx)("input", {
           value: t,
           type: r,
           autoFocus: a,
           onChange: (e) => n(e.target.value),
-          className: (0, v.A)(de().TextInput, "danger" === o && de().Danger, i),
+          className: (0, v.A)(de().TextInput, "danger" === i && de().Danger, o),
           disabled: c,
+          id: l,
         });
       }
       function et(e) {
@@ -3431,18 +3457,20 @@
       }
       function tt(e) {
         const { label: t, onChange: n, value: r } = e;
-        let o = () => {
+        let i = () => {
           n && n(!r);
         };
+        const o = (0, u.useId)();
         return (0, s.jsxs)("div", {
           className: de().CheckboxField,
-          onClick: o,
+          onClick: i,
           onKeyPress: (e) => {
-            " " == e.key && (o(), e.preventDefault());
+            " " == e.key && (i(), e.preventDefault());
           },
           children: [
-            (0, s.jsx)(nt, { value: r }),
-            (0, s.jsx)("div", {
+            (0, s.jsx)(nt, { labelledBy: o, value: r }),
+            (0, s.jsx)("label", {
+              id: o,
               className: de().CheckboxFieldLabel,
               children: t,
             }),
@@ -3450,10 +3478,13 @@
         });
       }
       function nt(e) {
-        const { value: t } = e;
+        const { value: t, labelledBy: n } = e;
         return (0, s.jsx)("div", {
           tabIndex: 0,
           className: de().Checkbox,
+          "aria-labelledby": n,
+          role: "checkbox",
+          "aria-checked": t,
           children:
             t &&
             (0, s.jsx)("div", {
@@ -3464,20 +3495,23 @@
       }
       function st(e) {
         const { refreshLogin: t, ...n } = e;
-        return t && SteamClient.User?.StartShutdown
-          ? (0, s.jsx)(ot, {})
+        return t &&
+          "SteamClient" in globalThis &&
+          "User" in SteamClient &&
+          "StartShutdown" in SteamClient.User
+          ? (0, s.jsx)(it, {})
           : (0, s.jsx)(rt, { ...n });
       }
       function rt(e) {
         return (0, s.jsx)("div", {
           className: de().SignInButtonContainer,
-          children: (0, s.jsx)(it, {
+          children: (0, s.jsx)(ot, {
             ...e,
             children: (0, E.we)("#Login_SignIn"),
           }),
         });
       }
-      function ot() {
+      function it() {
         return (0, s.jsxs)("div", {
           className: de().RefreshButtonContainer,
           children: [
@@ -3494,18 +3528,18 @@
           ],
         });
       }
-      function it(e) {
+      function ot(e) {
         return (0, s.jsx)(at, { type: "submit", ...e });
       }
       function at(e) {
-        const { className: t, loading: n, disabled: r, children: o, ...i } = e,
+        const { className: t, loading: n, disabled: r, children: i, ...o } = e,
           a = r || n;
         return (0, s.jsxs)("button", {
           className: (0, v.A)(de().SubmitButton, n && de().Loading, t),
           disabled: a,
-          ...i,
+          ...o,
           children: [
-            o,
+            i,
             n &&
               (0, s.jsx)("div", {
                 className: de().LoadingContainer,
@@ -3567,8 +3601,8 @@
             reset: t,
             failure: n,
             onRequestOffline: r,
-            errorReference: o,
-            extendedErrorMessage: i,
+            errorReference: i,
+            extendedErrorMessage: o,
           } = e,
           { title: a, description: c } = (function (e, t = "") {
             let n = { title: "", description: "" };
@@ -3616,7 +3650,7 @@
             }
             t && (n.description = t);
             return n;
-          })(n, i),
+          })(n, o),
           l = A.TS.IN_STEAMUI && n == k.eF.Network;
         return (0, s.jsxs)(kt, {
           compact: !0,
@@ -3646,15 +3680,15 @@
                       onClick: t,
                       children: (0, E.we)("#Button_Retry"),
                     }),
-                    l && (0, s.jsx)(ht, { onRequestOffline: r }),
+                    l && r && (0, s.jsx)(ht, { onRequestOffline: r }),
                   ],
                 }),
               ],
             }),
-            o &&
+            i &&
               (0, s.jsx)("div", {
                 className: de().MutedErrorReference,
-                children: (0, E.we)("#Login_Error_Reference", o),
+                children: (0, E.we)("#Login_Error_Reference", i),
               }),
           ],
         });
@@ -3668,8 +3702,8 @@
             type: t,
             onSubmitCode: n,
             status: r,
-            accountName: o,
-            associatedLabel: i,
+            accountName: i,
+            associatedLabel: o,
             onBack: a,
           } = e,
           [c, l] = (0, u.useState)([]),
@@ -3696,7 +3730,7 @@
             : ((T =
                 "mobile" === t
                   ? (0, s.jsx)(_t, {})
-                  : (0, s.jsx)(Ct, { emailAddress: i })),
+                  : (0, s.jsx)(Ct, { emailAddress: o })),
               (b = "#Login_UseBackupCode")),
           (0, s.jsx)(kt, {
             title: (0, s.jsx)(jt, {}),
@@ -3709,7 +3743,7 @@
                 alignItems: "center",
                 gap: 14,
                 children: [
-                  (0, s.jsx)(St, { type: t, accountName: o }),
+                  (0, s.jsx)(St, { type: t, accountName: i }),
                   (0, s.jsxs)("div", {
                     className: de().ConfirmationEntryContainer,
                     children: [
@@ -3837,7 +3871,7 @@
             "mobile" === n
               ? (0, E.we)("#Login_MobileProtectingAccount")
               : (0, E.we)("#Login_EmailProtectingAccount"),
-          o = ke();
+          i = ke();
         return (0, s.jsxs)("div", {
           className: de().ProtectingAccount,
           children: [
@@ -3851,7 +3885,7 @@
                 }),
               ),
             }),
-            !o &&
+            !i &&
               (0, s.jsx)("div", { className: de().Description, children: r }),
           ],
         });
@@ -3919,9 +3953,9 @@
       }
       function wt(e) {
         const { type: t, accountName: n, onUseCodeOverride: r } = e,
-          o = ke(),
-          i = (0, s.jsx)(pt, { type: "mobile", onCodeHelp: e.onCodeHelp }),
-          a = o
+          i = ke(),
+          o = (0, s.jsx)(pt, { type: "mobile", onCodeHelp: e.onCodeHelp }),
+          a = i
             ? (0, s.jsx)("div", {
                 style: { paddingBottom: "20px" },
                 children: (0, s.jsx)(bt, {
@@ -3948,7 +3982,7 @@
               (0, s.jsx)(vt, {}),
               (0, s.jsxs)("div", {
                 className: de().LinkContainer,
-                children: [a, i],
+                children: [a, o],
               }),
             ],
           }),
@@ -3956,17 +3990,17 @@
       }
       function bt(e) {
         const { children: t, align: n, inline: r } = e,
-          o = (0, v.A)(de().TextLink, "center" === n && de().TextAlignCenter);
+          i = (0, v.A)(de().TextLink, "center" === n && de().TextAlignCenter);
         if ("href" in e) {
           const n = A.TS.IN_STEAMUI
             ? `steam://openurl_external/${e.href}`
             : e.href;
-          return (0, s.jsx)("a", { className: o, href: n, children: t });
+          return (0, s.jsx)("a", { className: i, href: n, children: t });
         }
         {
           const n = r ? "span" : "div";
           return (0, s.jsx)(n, {
-            className: o,
+            className: i,
             onClick: e.onClick,
             children: t,
           });
@@ -3985,35 +4019,41 @@
             alignItems: t,
             justifyContent: n,
             gap: r,
-            className: o,
-            children: i,
+            className: i,
+            ariaLabelledBy: o,
+            children: a,
           } = e,
-          a = (0, v.A)(
+          c = (0, v.A)(
             de().FlexCol,
             "center" === t && de().AlignItemsCenter,
             "center" === n && de().JustifyContentCenter,
-            o,
+            i,
           ),
-          c = r ? { gap: "number" == typeof r ? `${r}px` : r } : void 0;
-        return (0, s.jsx)("div", { className: a, style: c, children: i });
+          l = r ? { gap: "number" == typeof r ? `${r}px` : r } : void 0;
+        return (0, s.jsx)("section", {
+          className: c,
+          style: l,
+          "aria-labelledby": o,
+          children: a,
+        });
       }
       function Et(e) {
         const {
             children: t,
             justifyContent: n,
             alignItems: r,
-            className: o,
+            className: i,
           } = e,
-          i = {
+          o = {
             display: "flex",
             flexDirection: "row",
             justifyContent: n,
             alignItems: r,
           };
-        return (0, s.jsx)("div", { style: i, className: o, children: t });
+        return (0, s.jsx)("div", { style: o, className: i, children: t });
       }
       function Lt(e) {
-        const { onChange: t, backupCode: n, ...r } = e;
+        const { onChange: t, backupCode: n = !1, ...r } = e;
         return (0, s.jsx)(w, {
           length: ee(n),
           backupCode: n,
@@ -4036,28 +4076,31 @@
                   children: e,
                 })
               : null,
-          ).filter(Boolean),
+          )?.filter(Boolean),
         });
       }
       function kt(e) {
-        const { title: t, children: n, compact: r } = e,
-          o = ke();
+        const { title: t, titleId: n, children: r, compact: i } = e,
+          o = ke(),
+          a = (0, u.useId)();
         return (0, s.jsxs)(Rt, {
           gap: A.TS.IN_STEAMUI ? 0 : 32,
           className: (0, v.A)(
             de().StandardLayout,
             o && de().Embedded,
-            r && de().Compact,
+            i && de().Compact,
             A.TS.IN_STEAMUI && "IN_CLIENT",
           ),
+          ariaLabelledBy: n ?? a,
           children: [
             "string" == typeof t
               ? (0, s.jsx)("div", {
                   className: de().PrimaryHeader,
+                  id: n ?? a,
                   children: t,
                 })
               : t,
-            (0, s.jsx)("div", { className: de().FormContainer, children: n }),
+            (0, s.jsx)("div", { className: de().FormContainer, children: r }),
           ],
         });
       }
@@ -4065,17 +4108,17 @@
         const {
           realm: t = A.TS.EREALM,
           launcherType: n = A.TS.IN_STEAMUI ? A.TS.LAUNCHER_TYPE : void 0,
-          className: i = de().HeaderLogo,
+          className: o = de().HeaderLogo,
         } = e;
-        return n === o.A2g
-          ? (0, s.jsx)("div", { className: i })
+        return n === i.A2g
+          ? (0, s.jsx)("div", { className: o })
           : (0, s.jsxs)("div", {
               className: de().LogoContainer,
               children: [
                 (0, s.jsx)(It, { onBack: e.onBack }),
                 t !== r.TU.k_ESteamRealmChina
-                  ? (0, s.jsx)(Nt, { className: i })
-                  : (0, s.jsx)(Mt, { className: i }),
+                  ? (0, s.jsx)(Nt, { className: o })
+                  : (0, s.jsx)(Mt, { className: o }),
                 " ",
               ],
             });

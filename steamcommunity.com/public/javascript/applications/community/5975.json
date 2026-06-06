@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "注文する：",
     "Button_Close": "閉じる",
     "Search_ListingQuantity": "販売数量：%1$s",
+    "Search_ListingQuantity_Abbreviation": "数量：%1$s",
     "Bucket_PriceFrom": "%1$s～",
     "AccessorySearch_AttachedAccessoryType": "装着中の%1$s",
     "FilterResults_Placeholder": "結果を絞り込む...",

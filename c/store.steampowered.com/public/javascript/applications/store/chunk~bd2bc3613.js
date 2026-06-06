@@ -6922,7 +6922,7 @@
           const {
               placeholderWidth: _,
               placeholderHeight: _,
-              holdGampadFocus: _,
+              holdGamepadFocus: _,
               onRender: _,
               style: _,
               mode: _,
@@ -6953,6 +6953,9 @@
             _ &&
               (_ = (0, _.jsx)(_._, {
                 focusableIfEmpty: !0,
+                style: {
+                  height: "100%",
+                },
                 children: _,
               })),
             _

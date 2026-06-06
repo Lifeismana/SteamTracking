@@ -10,12 +10,12 @@
         i.d(t, {
           CGameRecordingStore: () => y,
           default: () => C,
-          k_strGRFAQ: () => h,
+          k_strGRFAQ: () => _,
         });
       var r = i(34629),
         o = i(14947),
-        s = i(73745),
-        n = i(56545),
+        n = i(73745),
+        s = i(56545),
         a = i(37085),
         l = i(69078),
         p = i(68336),
@@ -24,8 +24,8 @@
         c = i(29210),
         g = i(81393),
         u = i(30470),
-        _ = i(61859);
-      const h = "23B7-49AD-4A28-9590";
+        h = i(61859);
+      const _ = "23B7-49AD-4A28-9590";
       class y {
         constructor() {
           (0, o.Gn)(this);
@@ -38,6 +38,7 @@
         m_mapManualRecordingCallbacks = new Map();
         m_fnGetAchievementInfo;
         m_strLastClipID;
+        m_bEnableH265Recording = !1;
         m_transport;
         m_bLoadingClips = !0;
         m_bLoadingAppsWithBackgroundVideo = !0;
@@ -65,11 +66,28 @@
               l.xM.RegisterForNotifyClipCreated(this.OnClipCreated),
               l.xM.RegisterForNotifyExportProgress(this.OnExportProgress),
               l.xM.RegisterForNotifyLowDiskSpace(this.OnLowDiskSpace),
+              l.xM.RegisterForNotifyStateChanged(this.OnStateChanged),
               await this.LoadAppsWithBackgroundVideo(),
-              await this.CheckEnoughDiskSpace());
+              await this.CheckEnoughDiskSpace(),
+              await this.UpdateState());
+        }
+        async UpdateState() {
+          const e = await l.xM.GetState({});
+          if (!e.BSuccess())
+            return void console.warn(
+              "Failed to initialize game recording state",
+            );
+          const t = e.Body().toObject();
+          this.m_bEnableH265Recording = t?.is_h265_enabled ?? !1;
+        }
+        OnStateChanged() {
+          return this.UpdateState(), a.R;
         }
         GetAppsWithBackgroundVideo() {
           return this.m_rgAppsWithBackgroundVideo;
+        }
+        IsGameRecordingH265Enabled() {
+          return this.m_bEnableH265Recording;
         }
         GetTimelineLoaderForGame(e) {
           (0, g.wT)(e, "Invalid GameID: " + e);
@@ -251,13 +269,13 @@
             desc: i,
             visibility: r,
           });
-          let s;
+          let n;
           if (o.GetEResult() == a.R) {
             const e = o.Body().summary().toObject();
             this.InternalAddClipSummary(e),
-              (s = `${u.TS.COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${e.published_file_id}`);
+              (n = `${u.TS.COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${e.published_file_id}`);
           }
-          return { eResult: o.GetEResult(), strURL: s };
+          return { eResult: o.GetEResult(), strURL: n };
         }
         async LoadAppsWithBackgroundVideo() {
           try {
@@ -318,15 +336,15 @@
               this.m_clipsGroupByGame.set(e.game_id, []),
             this.m_clipsGroupByGame.get(e.game_id).push(e);
         }
-        async SaveClip(e, t, i, r, o, s, n) {
+        async SaveClip(e, t, i, r, o, n, s) {
           const p = await l.xM.SaveClip({
             game_id: e,
             start: r,
             end: o,
             name: i,
             src_clip_id: t,
-            temporary: s,
-            force_thumbnail: n,
+            temporary: n,
+            force_thumbnail: s,
           });
           if (p.GetEResult() == a.R) {
             const e = p.Body().summary().toObject();
@@ -573,7 +591,7 @@
             o.GetEResult()
           );
         }
-        async LoadThumbnails(e, t, i, r, o, s) {
+        async LoadThumbnails(e, t, i, r, o, n) {
           return (
             await l.xM.GetThumbnails({
               recording_id: e,
@@ -581,7 +599,7 @@
               timeline_id: i,
               start_offset_us: r.map((e) => Math.floor(e).toString()),
               major_axis: o,
-              time_precision: s ? l.$C.v : l.$C.E,
+              time_precision: n ? l.$C.v : l.$C.E,
             })
           )
             .Body()
@@ -596,7 +614,7 @@
         }
         GetBestClipTitle(e) {
           const t = this.GetClipSummary(e);
-          return t ? t.name || (0, _.$z)(t.date_recorded) : "";
+          return t ? t.name || (0, h.$z)(t.date_recorded) : "";
         }
         ManuallyDeleteRecordingForApps(e) {
           l.xM.ManuallyDeleteRecordingsForApps({ game_ids: e });
@@ -626,17 +644,17 @@
         }
         ReportClipRange(e, t, i, r, o) {
           (0, m.q_)("ReportClipRange", JSON.stringify(e), t, i, r, o);
-          const s = n.w.Init(p.IR);
-          s.Body().set_gameid(e.ConvertTo64BitString()),
-            s.Body().set_original_range_method(t),
-            s.Body().set_seconds(i),
-            s.Body().start().set_original_range_method(r.originalRangeMethod),
-            s.Body().start().set_latest_range_method(r.latestRangeMethod),
-            s.Body().start().set_delta_ms(Math.ceil(r.relativeMS)),
-            s.Body().end().set_original_range_method(o.originalRangeMethod),
-            s.Body().end().set_latest_range_method(o.latestRangeMethod),
-            s.Body().end().set_delta_ms(Math.ceil(o.relativeMS)),
-            p._5.ReportClipRange(this.m_transport, s);
+          const n = s.w.Init(p.IR);
+          n.Body().set_gameid(e.ConvertTo64BitString()),
+            n.Body().set_original_range_method(t),
+            n.Body().set_seconds(i),
+            n.Body().start().set_original_range_method(r.originalRangeMethod),
+            n.Body().start().set_latest_range_method(r.latestRangeMethod),
+            n.Body().start().set_delta_ms(Math.ceil(r.relativeMS)),
+            n.Body().end().set_original_range_method(o.originalRangeMethod),
+            n.Body().end().set_latest_range_method(o.latestRangeMethod),
+            n.Body().end().set_delta_ms(Math.ceil(o.relativeMS)),
+            p._5.ReportClipRange(this.m_transport, n);
         }
         GetRecordingState() {
           return this.m_recordingState;
@@ -687,31 +705,32 @@
         (0, r.Cg)([o.sH], y.prototype, "m_currentlyExportingClip", void 0),
         (0, r.Cg)([o.sH], y.prototype, "m_recordingState", void 0),
         (0, r.Cg)([o.sH], y.prototype, "m_bEnoughDiskSpace", void 0),
-        (0, r.Cg)([s.oI], y.prototype, "GetTimelineLoaderForGame", null),
-        (0, r.Cg)([s.oI], y.prototype, "GetTimelineLoaderForClip", null),
-        (0, r.Cg)([s.oI], y.prototype, "GetTimelineLoaderForSharedClip", null),
-        (0, r.Cg)([s.oI], y.prototype, "OnTimelineChanged", null),
-        (0, r.Cg)([s.oI], y.prototype, "OnRecordingSessionChanged", null),
-        (0, r.Cg)([s.oI], y.prototype, "OnTimelineEntryChanged", null),
-        (0, r.Cg)([s.oI], y.prototype, "OnTimelineEntryRemoved", null),
-        (0, r.Cg)([s.oI], y.prototype, "OnClipCreated", null),
-        (0, r.Cg)([s.oI], y.prototype, "UploadClip", null),
-        (0, r.Cg)([s.oI], y.prototype, "SaveClip", null),
-        (0, r.Cg)([s.oI], y.prototype, "DeleteClip", null),
-        (0, r.Cg)([s.oI], y.prototype, "ExportClip", null),
-        (0, r.Cg)([s.oI], y.prototype, "UpdateClipExportPath", null),
-        (0, r.Cg)([s.oI], y.prototype, "OnExportProgress", null),
-        (0, r.Cg)([s.oI], y.prototype, "TakeScreenshot", null),
-        (0, r.Cg)([s.oI], y.prototype, "RegisterManualRecordingCallback", null),
-        (0, r.Cg)([s.oI], y.prototype, "StartRecording", null),
-        (0, r.Cg)([s.oI], y.prototype, "StopRecording", null),
-        (0, r.Cg)([s.oI], y.prototype, "SwitchRecordedGame", null),
-        (0, r.Cg)([s.oI], y.prototype, "CreateUserTimelineMarkers", null),
-        (0, r.Cg)([s.oI], y.prototype, "UpdateUserTimelineMarkers", null),
-        (0, r.Cg)([s.oI], y.prototype, "RemoveUserTimelineMarker", null),
-        (0, r.Cg)([s.oI], y.prototype, "LoadThumbnails", null),
-        (0, r.Cg)([s.oI], y.prototype, "GetAchievementInfo", null),
-        (0, r.Cg)([s.oI], y.prototype, "OnLowDiskSpace", null);
+        (0, r.Cg)([n.oI], y.prototype, "OnStateChanged", null),
+        (0, r.Cg)([n.oI], y.prototype, "GetTimelineLoaderForGame", null),
+        (0, r.Cg)([n.oI], y.prototype, "GetTimelineLoaderForClip", null),
+        (0, r.Cg)([n.oI], y.prototype, "GetTimelineLoaderForSharedClip", null),
+        (0, r.Cg)([n.oI], y.prototype, "OnTimelineChanged", null),
+        (0, r.Cg)([n.oI], y.prototype, "OnRecordingSessionChanged", null),
+        (0, r.Cg)([n.oI], y.prototype, "OnTimelineEntryChanged", null),
+        (0, r.Cg)([n.oI], y.prototype, "OnTimelineEntryRemoved", null),
+        (0, r.Cg)([n.oI], y.prototype, "OnClipCreated", null),
+        (0, r.Cg)([n.oI], y.prototype, "UploadClip", null),
+        (0, r.Cg)([n.oI], y.prototype, "SaveClip", null),
+        (0, r.Cg)([n.oI], y.prototype, "DeleteClip", null),
+        (0, r.Cg)([n.oI], y.prototype, "ExportClip", null),
+        (0, r.Cg)([n.oI], y.prototype, "UpdateClipExportPath", null),
+        (0, r.Cg)([n.oI], y.prototype, "OnExportProgress", null),
+        (0, r.Cg)([n.oI], y.prototype, "TakeScreenshot", null),
+        (0, r.Cg)([n.oI], y.prototype, "RegisterManualRecordingCallback", null),
+        (0, r.Cg)([n.oI], y.prototype, "StartRecording", null),
+        (0, r.Cg)([n.oI], y.prototype, "StopRecording", null),
+        (0, r.Cg)([n.oI], y.prototype, "SwitchRecordedGame", null),
+        (0, r.Cg)([n.oI], y.prototype, "CreateUserTimelineMarkers", null),
+        (0, r.Cg)([n.oI], y.prototype, "UpdateUserTimelineMarkers", null),
+        (0, r.Cg)([n.oI], y.prototype, "RemoveUserTimelineMarker", null),
+        (0, r.Cg)([n.oI], y.prototype, "LoadThumbnails", null),
+        (0, r.Cg)([n.oI], y.prototype, "GetAchievementInfo", null),
+        (0, r.Cg)([n.oI], y.prototype, "OnLowDiskSpace", null);
       const C = y;
     },
   },

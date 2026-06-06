@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "구매 주문:",
     "Button_Close": "닫기",
     "Search_ListingQuantity": "판매 수량: %1$s개",
+    "Search_ListingQuantity_Abbreviation": "수량: %1$s",
     "Bucket_PriceFrom": "시작 가격: %1$s",
     "AccessorySearch_AttachedAccessoryType": "부착된 %1$s",
     "FilterResults_Placeholder": "검색 결과 필터링...",

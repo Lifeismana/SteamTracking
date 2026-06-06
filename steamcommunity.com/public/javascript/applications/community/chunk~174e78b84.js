@@ -4,31 +4,31 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2162],
   {
-    72255: (e, a, s) => {
-      s.d(a, { rt: () => r });
-      var c = s(88267);
+    72255: (e, c, s) => {
+      s.d(c, { rt: () => r });
+      var a = s(88267);
       function r(e) {
         switch (null == e ? void 0 : e.toUpperCase()) {
           case "AE":
-            return c.Cv;
+            return a.Cv;
           case "AU":
-            return c.m1;
+            return a.m1;
           case "BR":
-            return c.iU;
+            return a.iU;
           case "CA":
-            return c.cX;
+            return a.cX;
           case "CH":
           case "LI":
-            return c.ln;
+            return a.ln;
           case "CL":
-            return c.D5;
+            return a.D5;
           case "CN":
           case "XC":
-            return c.C6;
+            return a.C6;
           case "CO":
-            return c.G1;
+            return a.G1;
           case "CR":
-            return c.uZ;
+            return a.uZ;
           case "AD":
           case "AL":
           case "AT":
@@ -74,57 +74,57 @@
           case "SK":
           case "SM":
           case "VA":
-            return c.a4;
+            return a.a4;
           case "GB":
           case "GG":
           case "GS":
           case "IM":
           case "JE":
-            return c.dz;
+            return a.dz;
           case "HK":
-            return c.bO;
+            return a.bO;
           case "ID":
-            return c.DP;
+            return a.DP;
           case "IL":
-            return c.G7;
+            return a.G7;
           case "IN":
-            return c.T_;
+            return a.T_;
           case "JP":
-            return c.xm;
+            return a.xm;
           case "KR":
-            return c.yR;
+            return a.yR;
           case "KW":
-            return c.Gx;
+            return a.Gx;
           case "KZ":
-            return c.X0;
+            return a.X0;
           case "MX":
-            return c.ds;
+            return a.ds;
           case "MY":
-            return c.Jw;
+            return a.Jw;
           case "NO":
-            return c.KE;
+            return a.KE;
           case "NZ":
-            return c.WS;
+            return a.WS;
           case "PE":
-            return c.D4;
+            return a.D4;
           case "PH":
-            return c.En;
+            return a.En;
           case "PL":
-            return c.sY;
+            return a.sY;
           case "QA":
-            return c.w7;
+            return a.w7;
           case "RU":
-            return c.Fq;
+            return a.Fq;
           case "SA":
-            return c.CR;
+            return a.CR;
           case "SG":
-            return c.wA;
+            return a.wA;
           case "TH":
-            return c.cm;
+            return a.cm;
           case "TW":
-            return c.Jb;
+            return a.Jb;
           case "UA":
-            return c.SJ;
+            return a.SJ;
           case "AF":
           case "AG":
           case "AI":
@@ -281,197 +281,129 @@
           case "YT":
           case "ZM":
           case "ZW":
-            return c.CS;
+            return a.CS;
           case "UY":
-            return c.lK;
+            return a.lK;
           case "VN":
-            return c.aQ;
+            return a.aQ;
           case "ZA":
-            return c.de;
+            return a.de;
           default:
-            return console.assert(!1, `Unhandled country code: ${e}`), c.CS;
+            return console.assert(!1, `Unhandled country code: ${e}`), a.CS;
         }
       }
     },
-    88267: (e, a, s) => {
-      s.d(a, {
-        Bz: () => w,
-        C6: () => D,
-        CR: () => F,
+    88267: (e, c, s) => {
+      s.d(c, {
+        Bz: () => x,
+        C6: () => H,
+        CR: () => l,
         CS: () => r,
-        Cv: () => $,
-        D4: () => m,
-        D5: () => K,
-        DP: () => C,
-        En: () => G,
+        Cv: () => m,
+        D4: () => Z,
+        D5: () => d,
+        DP: () => A,
+        En: () => B,
         Fq: () => S,
-        G1: () => O,
-        G7: () => Z,
-        Gx: () => V,
-        HQ: () => X,
-        JW: () => H,
-        Jb: () => f,
-        Jw: () => A,
-        KE: () => E,
-        OD: () => k,
-        S1: () => Q,
-        SJ: () => L,
-        T_: () => p,
-        WS: () => U,
-        X0: () => Y,
-        a4: () => n,
-        aQ: () => i,
-        aU: () => J,
-        bO: () => b,
-        bj: () => B,
-        cX: () => d,
-        cm: () => _,
-        de: () => P,
-        ds: () => N,
-        dz: () => t,
-        iU: () => T,
-        jT: () => W,
-        lK: () => v,
+        G1: () => W,
+        G7: () => Q,
+        Gx: () => h,
+        HQ: () => z,
+        JW: () => i,
+        Jb: () => Y,
+        Jw: () => E,
+        KE: () => T,
+        OD: () => y,
+        S1: () => k,
+        SJ: () => P,
+        T_: () => J,
+        WS: () => F,
+        X0: () => b,
+        a4: () => t,
+        aQ: () => K,
+        aU: () => w,
+        bO: () => V,
+        bj: () => D,
+        cX: () => I,
+        cm: () => N,
+        de: () => o,
+        ds: () => U,
+        dz: () => n,
+        iU: () => C,
+        jT: () => X,
+        lK: () => _,
         ln: () => u,
-        m1: () => I,
-        mh: () => z,
-        rg: () => c,
+        m1: () => O,
+        mh: () => j,
+        rg: () => a,
         sY: () => M,
-        tn: () => g,
-        uZ: () => x,
-        w7: () => h,
-        wA: () => o,
-        xm: () => l,
-        xt: () => y,
-        yR: () => R,
+        tn: () => $,
+        uZ: () => v,
+        w7: () => p,
+        wA: () => R,
+        xm: () => G,
+        xt: () => f,
+        yR: () => L,
       });
-      const c = 0,
+      const a = 0,
         r = 1,
-        t = 2,
-        n = 3,
+        n = 2,
+        t = 3,
         u = 4,
         S = 5,
         M = 6,
-        T = 7,
-        l = 8,
-        E = 9,
-        C = 10,
-        A = 11,
-        G = 12,
-        o = 13,
-        _ = 14,
-        i = 15,
-        R = 16,
-        B = 17,
-        L = 18,
-        N = 19,
-        d = 20,
-        I = 21,
-        U = 22,
-        D = 23,
-        p = 24,
-        K = 25,
-        m = 26,
-        O = 27,
-        P = 28,
-        b = 29,
-        f = 30,
-        F = 31,
-        $ = 32,
-        H = 33,
-        J = 34,
-        Z = 35,
-        W = 36,
-        Y = 37,
-        V = 38,
-        h = 39,
-        x = 40,
-        v = 41,
-        y = 42,
-        w = 43,
-        k = 44,
-        Q = 45,
-        X = 46,
-        g = 47,
-        z = 48;
+        C = 7,
+        G = 8,
+        T = 9,
+        A = 10,
+        E = 11,
+        B = 12,
+        R = 13,
+        N = 14,
+        K = 15,
+        L = 16,
+        D = 17,
+        P = 18,
+        U = 19,
+        I = 20,
+        O = 21,
+        F = 22,
+        H = 23,
+        J = 24,
+        d = 25,
+        Z = 26,
+        W = 27,
+        o = 28,
+        V = 29,
+        Y = 30,
+        l = 31,
+        m = 32,
+        i = 33,
+        w = 34,
+        Q = 35,
+        X = 36,
+        b = 37,
+        h = 38,
+        p = 39,
+        v = 40,
+        _ = 41,
+        f = 42,
+        x = 43,
+        y = 44,
+        k = 45,
+        z = 46,
+        $ = 47,
+        j = 48;
     },
-    42834: (e, a, s) => {
-      s.d(a, { DT: () => M, b0: () => u, bu: () => S, pd: () => T });
-      var c = s(8527),
-        r = s(39777),
-        t = s(81393),
-        n = s(38535);
-      function u(e, a) {
-        if (e[a]) {
-          if ("community_icon" == a) {
-            const s = e.asset_url_format
-              .replace(/^steam\//, "images/")
-              .replace("${FILENAME}", `${e[a]}.jpg`)
-              .replace(/\?.*$/, "");
-            return `${c.TS.MEDIA_CDN_COMMUNITY_URL}${s}`;
-          }
-          {
-            const s = e.asset_url_format.replace("${FILENAME}", e[a]);
-            return `${c.TS.STORE_ITEM_BASE_URL}${s}`;
-          }
-        }
-      }
-      function S(e, a = "full") {
-        let s = "";
-        switch (a) {
-          case "thumb":
-            s = ".116x65";
-            break;
-          case "600x338":
-            s = ".600x338";
-            break;
-          case "1920x1080":
-            s = ".1920x1080";
-            break;
-          case "full":
-            s = "";
-            break;
-          default:
-            (0, t.z_)(a, `Invalid size: ${a}`);
-        }
-        return (
-          c.TS.STORE_ITEM_BASE_URL +
-          e.filename.replace(/\.([^.]+)(\?.*)?$/, `${s}.$1$2`)
-        );
-      }
-      function M(e) {
-        const { data: a } = (0, r.j4)(e),
-          s = (0, n.dy)();
-        if (a)
-          return [
-            ...(a.all_ages_screenshots || []),
-            ...(!s && a.mature_content_screenshots
-              ? a.mature_content_screenshots
-              : []),
-          ].sort((e, a) => e.ordinal - a.ordinal);
-      }
-      function T(e, a = !1) {
-        const { data: s } = (0, r.lv)({ appid: e });
-        return void 0 === s
-          ? void 0
-          : null === s
-            ? null
-            : a && s.library_capsule_2x
-              ? u(s, "library_capsule_2x")
-              : s.library_capsule
-                ? u(s, "library_capsule")
-                : `${c.TS.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
-      }
-    },
-    69345: (e, a, s) => {
-      s.d(a, { n: () => t });
+    69345: (e, c, s) => {
+      s.d(c, { n: () => n });
       s(7850);
-      var c = s(60014),
+      var a = s(60014),
         r = s(8527);
-      function t(e, a, s) {
-        return (0, c.aL)(
+      function n(e, c, s) {
+        return (0, a.aL)(
           e ? `${r.TS.STORE_BASE_URL}${e.store_url_path}` : void 0,
-          a,
+          c,
           s,
         );
       }

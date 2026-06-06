@@ -643,6 +643,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
@@ -919,7 +920,7 @@
                     appId: _,
                     clanId: _,
                   }),
-                (0, _.jsx)("div", {
+                (0, _.jsx)(_._, {
                   className: (0, _._)(
                     _().AppPartnerEventsBody,
                     _().EndlessScroll,
@@ -929,6 +930,7 @@
                   onClick: this.OnBackgroundClick,
                   tabIndex: -1,
                   onKeyDown: this.OnKeyDown,
+                  scrollIntoViewType: _._.NoTransformSparseContent,
                   children: _
                     ? (0, _.jsx)("div", {
                         className: _().NoEvents,
@@ -1296,7 +1298,7 @@
           } = _,
           _ = _.BImageNeedScreenshotFallback("background", _),
           _ = _.type;
-        let _ = (0, _._)(_, "background", _, _._.background_main);
+        let _ = (0, _._)(_, "background", _, _._.background_main, !_);
         return (
           _ && _ && (_ = __webpack_require__(_)),
           (0, _.jsxs)(_.Fragment, {
@@ -1642,88 +1644,90 @@
           className: _().AppBannerLogo,
           src: _,
         });
-        return (0, _.jsxs)("div", {
-          className: _().AppBannerCtn,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().AppBannerBackground,
-              style: {
-                backgroundImage: `url(${_})`,
-              },
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(_().AppBannerGroup, _),
+        return (0, _._)()
+          ? null
+          : (0, _.jsxs)("div", {
+              className: _().AppBannerCtn,
               children: [
-                _
-                  ? Boolean(_)
-                    ? (0, _.jsx)(_._, {
-                        _: _,
-                        className: _().AppBannerLogoCtn,
-                        hoverProps: {
-                          direction: "overlay",
-                          style: {
-                            minWidth: "320px",
-                          },
-                        },
-                        children: _,
-                      })
-                    : (0, _.jsx)(_._, {
-                        _: _,
-                        hoverClassName: _().AppBannerLogoCtn,
-                        children: _,
-                      })
-                  : (0, _.jsxs)("div", {
-                      className: _().AppBannerLogoCtn,
-                      children: [_, " "],
-                    }),
+                (0, _.jsx)("div", {
+                  className: _().AppBannerBackground,
+                  style: {
+                    backgroundImage: `url(${_})`,
+                  },
+                }),
                 (0, _.jsxs)("div", {
-                  className: _().AppBannerTitle,
+                  className: (0, _._)(_().AppBannerGroup, _),
                   children: [
-                    _,
-                    (0, _.jsx)("div", {
-                      className: _().NewsHubSubTitle,
-                      children: (0, _._)("#EventDisplay_NewsHubSubtitle"),
+                    _
+                      ? Boolean(_)
+                        ? (0, _.jsx)(_._, {
+                            _: _,
+                            className: _().AppBannerLogoCtn,
+                            hoverProps: {
+                              direction: "overlay",
+                              style: {
+                                minWidth: "320px",
+                              },
+                            },
+                            children: _,
+                          })
+                        : (0, _.jsx)(_._, {
+                            _: _,
+                            hoverClassName: _().AppBannerLogoCtn,
+                            children: _,
+                          })
+                      : (0, _.jsxs)("div", {
+                          className: _().AppBannerLogoCtn,
+                          children: [_, " "],
+                        }),
+                    (0, _.jsxs)("div", {
+                      className: _().AppBannerTitle,
+                      children: [
+                        _,
+                        (0, _.jsx)("div", {
+                          className: _().NewsHubSubTitle,
+                          children: (0, _._)("#EventDisplay_NewsHubSubtitle"),
+                        }),
+                      ],
                     }),
+                    _ &&
+                      (0, _.jsxs)("div", {
+                        className: _().AppBannerLinks,
+                        children: [
+                          Boolean(!_ && _) &&
+                            (0, _.jsx)("div", {
+                              className: _().HeaderWishlistButton,
+                              children: (0, _.jsx)(_._, {
+                                appid: _,
+                                bIsFree: Boolean(_?.is_free),
+                                bIsComingSoon: Boolean(_?.is_coming_soon),
+                                className: (0, _._)(
+                                  _().ActionButton,
+                                  _().WishlistBtnShort,
+                                ),
+                              }),
+                            }),
+                          (0, _.jsx)("div", {
+                            className: _().HeaderFollowButton,
+                            children: Boolean(_)
+                              ? (0, _.jsx)(_._, {
+                                  appid: _,
+                                  className: _().HeaderButtonDark,
+                                })
+                              : (0, _.jsx)(_._, {
+                                  clanAccountID: _,
+                                  className: _().HeaderButtonDark,
+                                }),
+                          }),
+                          (0, _.jsx)(_, {
+                            ..._,
+                          }),
+                        ],
+                      }),
                   ],
                 }),
-                _ &&
-                  (0, _.jsxs)("div", {
-                    className: _().AppBannerLinks,
-                    children: [
-                      Boolean(!_ && _) &&
-                        (0, _.jsx)("div", {
-                          className: _().HeaderWishlistButton,
-                          children: (0, _.jsx)(_._, {
-                            appid: _,
-                            bIsFree: Boolean(_?.is_free),
-                            bIsComingSoon: Boolean(_?.is_coming_soon),
-                            className: (0, _._)(
-                              _().ActionButton,
-                              _().WishlistBtnShort,
-                            ),
-                          }),
-                        }),
-                      (0, _.jsx)("div", {
-                        className: _().HeaderFollowButton,
-                        children: Boolean(_)
-                          ? (0, _.jsx)(_._, {
-                              appid: _,
-                              className: _().HeaderButtonDark,
-                            })
-                          : (0, _.jsx)(_._, {
-                              clanAccountID: _,
-                              className: _().HeaderButtonDark,
-                            }),
-                      }),
-                      (0, _.jsx)(_, {
-                        ..._,
-                      }),
-                    ],
-                  }),
               ],
-            }),
-          ],
-        });
+            });
       });
     },
     chunkid: (module, module_exports, __webpack_require__) => {

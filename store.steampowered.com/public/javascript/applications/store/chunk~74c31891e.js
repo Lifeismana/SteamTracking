@@ -67,6 +67,32 @@
         hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
       };
     },
+    5729: (e, n, t) => {
+      "use strict";
+      t.d(n, { H: () => a, s: () => i });
+      var o = t(90626),
+        s = t(11158);
+      let r = 0;
+      function a(e, n) {
+        (0, o.useEffect)(() => {
+          if (!e && !n)
+            return (
+              r++,
+              () => {
+                0 == --r && (0, s.s)();
+              }
+            );
+        }, [e, n]);
+      }
+      function i(e) {
+        const [n, t] = (0, o.useState)(!1);
+        (0, o.useEffect)(() => {
+          const n = window.setTimeout(() => t(!0), e);
+          return () => window.clearTimeout(n);
+        }, [e]),
+          a(n);
+      }
+    },
     94057: (e, n, t) => {
       "use strict";
       t.d(n, { w: () => p });
@@ -302,7 +328,7 @@
     },
     90609: (e, n, t) => {
       "use strict";
-      t.d(n, { d: () => Qe });
+      t.d(n, { d: () => Ve });
       var o = t(19367),
         s = t(90626),
         r = t(72034),
@@ -377,19 +403,19 @@
         }
       }
       var I = t(85320),
-        y = t(56631),
-        f = t(35400),
+        f = t(56631),
+        y = t(35400),
         D = t(6878),
         C = t(22837),
-        x = t(8527),
-        b = t(67645),
+        b = t(8527),
+        x = t(67645),
         j = t(53807),
         S = t(62490),
         k = t(84811),
         N = t(22797),
         G = t(37474);
       const B = s.Fragment;
-      function A(e) {
+      function T(e) {
         const {
             reservationPackageID: n,
             depositPackageID: t,
@@ -400,8 +426,8 @@
             bDeliveryOverrideOnlyIfOutOfStock: l,
             section: u,
           } = e,
-          { data: _ } = (0, b.DR)(n),
-          { data: m } = (0, b.DR)(r),
+          { data: _ } = (0, x.DR)(n),
+          { data: m } = (0, x.DR)(r),
           g = (0, s.useMemo)(
             () => [
               {
@@ -431,7 +457,7 @@
             size: "small",
             position: "center",
           });
-        const w = !x.iA.logged_in || !_.account_restricted_from_purchasing,
+        const w = !b.iA.logged_in || !_.account_restricted_from_purchasing,
           v =
             _.reservation_state == j.G.k_EPurchaseReservationState_Reserved
               ? _
@@ -471,21 +497,21 @@
           ],
         });
       }
-      var T = t(28188),
+      var A = t(28188),
         F = t(60014),
         E = t(55963),
         L = t(73371),
         O = t.n(L),
         P = t(52038),
         M = t(94636),
-        R = t(20446),
-        H = t(9202),
-        W = t.n(H),
-        q = t(35380);
-      function U(e) {
+        H = t(20446),
+        R = t(9202),
+        W = t.n(R),
+        U = t(35380);
+      function q(e) {
         const { appid: n, color: t, bgcolor: o } = e,
           s = (0, F.n9)(),
-          r = (0, q.$5)(n),
+          r = (0, U.$5)(n),
           a = (0, E.L3)(s);
         return (0, d.jsx)("div", {
           className: W().WishlistHoverCtn,
@@ -498,15 +524,16 @@
               "WishlistButton",
             ),
             styleOverride: { color: t, backgroundColor: o },
+            bShowInGamepadUI: !0,
           }),
         });
       }
       function $(e) {
         const n = Number(e.args.appid);
         if (!n) return null;
-        const t = (0, R.O)(e.args.color, "black"),
-          o = (0, R.O)(e.args.bgcolor, "white");
-        return (0, d.jsx)(U, { appid: n, color: t, bgcolor: o });
+        const t = (0, H.O)(e.args.color, "black"),
+          o = (0, H.O)(e.args.bgcolor, "white");
+        return (0, d.jsx)(q, { appid: n, color: t, bgcolor: o });
       }
       var z = t(10026),
         Q = t.n(z),
@@ -566,8 +593,8 @@
       function se(e) {
         const n = Number(e.args.appid);
         if (!n) return null;
-        const t = (0, R.O)(e.args.color, "black"),
-          o = (0, R.O)(e.args.bgcolor, "white");
+        const t = (0, H.O)(e.args.color, "black"),
+          o = (0, H.O)(e.args.bgcolor, "white");
         return (0, d.jsx)(oe, { appid: n, color: t, bgcolor: o });
       }
       var re = t(94057),
@@ -658,8 +685,8 @@
         pe = t(7193),
         he = t(39199),
         Ie = t(60860),
-        ye = t(76647),
-        fe = t(40353);
+        fe = t(76647),
+        ye = t(40353);
       function De(e) {
         const { eventModel: n, nEventBadgeID: t } = e,
           o = (0, de.fy)(t);
@@ -705,17 +732,17 @@
           children: (0, ie.D)(c),
         });
       }
-      function xe(e) {
+      function be(e) {
         const { event: n } = e.context,
           t = Number.parseInt((0, m.j$)(e.args, "eventid"));
         return u.iA.logged_in && t
           ? (0, d.jsx)(De, { nEventBadgeID: t, eventModel: n })
           : null;
       }
-      function be(e) {
+      function xe(e) {
         const { nDoorIndex: n, children: t } = e,
-          o = (0, f.OM)(n),
-          { fnOpenDoor: r } = (0, f.OC)(),
+          o = (0, y.OM)(n),
+          { fnOpenDoor: r } = (0, y.OC)(),
           [a, i] = s.useState(!1),
           [l, _] = s.useState(!1);
         return (0, d.jsx)(_e.$n, {
@@ -749,10 +776,10 @@
       function je(e) {
         const n = Number.parseInt((0, m.j$)(e.args)) || 0;
         return n >= 0 && n < 32
-          ? (0, d.jsx)(be, { nDoorIndex: n, children: e.children })
+          ? (0, d.jsx)(xe, { nDoorIndex: n, children: e.children })
           : null;
       }
-      const Se = (0, ge.y)(ye.H);
+      const Se = (0, ge.y)(fe.H);
       function ke(e) {
         const n = Number.parseInt((0, m.j$)(e.args)),
           { event: t, showErrorInfo: o } = e.context;
@@ -773,8 +800,8 @@
                 promotionName: "",
                 appVisibilityTracker: null,
                 ePreviewMode: o
-                  ? fe.S.EPreviewMode_Enabled
-                  : fe.S.EPreviewMode_Disabled,
+                  ? ye.S.EPreviewMode_Enabled
+                  : ye.S.EPreviewMode_Disabled,
               }),
             });
           }
@@ -789,8 +816,8 @@
       var Ne = t(30894),
         Ge = t(18657),
         Be = t.n(Ge),
-        Ae = t(81204);
-      function Te(e) {
+        Te = t(81204);
+      function Ae(e) {
         const { clanAccountID: n, color: t, bgcolor: o } = e;
         (0, Ne.L2)();
         const [r, a] = s.useState(!1);
@@ -798,7 +825,7 @@
           className: (0, P.A)(Be().BBCodeFollowButton, r && Be().isHovered),
           onMouseEnter: () => a(!0),
           onMouseLeave: () => a(!1),
-          children: (0, d.jsx)(Ae.Q, {
+          children: (0, d.jsx)(Te.Q, {
             nCreatorAccountID: n,
             classOverride: O().FollowGameButtonNotTop,
             styleOverride: { color: t, backgroundColor: o },
@@ -810,9 +837,9 @@
         const { event: n } = e.context,
           t = Number(e.args.groupid) || n.clanSteamID.GetAccountID();
         if (!t) return null;
-        const o = (0, R.O)(e.args.color, "black"),
-          s = (0, R.O)(e.args.bgcolor, "white");
-        return (0, d.jsx)(Te, { clanAccountID: t, color: o, bgcolor: s });
+        const o = (0, H.O)(e.args.color, "black"),
+          s = (0, H.O)(e.args.bgcolor, "white");
+        return (0, d.jsx)(Ae, { clanAccountID: t, color: o, bgcolor: s });
       }
       let Ee = null;
       function Le(e) {
@@ -821,8 +848,8 @@
           o = Number.parseInt((0, m.j$)(e.args, "itemdefid")),
           s = Number.parseInt((0, m.j$)(e.args, "maxquantity")),
           r = (0, m.j$)(e.args, "calltoaction");
-        return (0, y.gS)(t, o)
-          ? (0, d.jsx)(T.f, {
+        return (0, f.gS)(t, o)
+          ? (0, d.jsx)(A.f, {
               language: e.language,
               clanAccountID: n.clanSteamID.GetAccountID(),
               itemDefSetting: { nAppID: t, nItemDefID: o, max_quantity: s },
@@ -879,19 +906,19 @@
             "hide" in e.args &&
             Boolean(Number.parseInt((0, m.j$)(e.args, "hide")));
         return n >= 0
-          ? (0, d.jsx)(Re, { nDoorIndex: n, bHide: t, children: e.children })
+          ? (0, d.jsx)(He, { nDoorIndex: n, bHide: t, children: e.children })
           : null;
       }
-      function Re(e) {
+      function He(e) {
         const { nDoorIndex: n, bHide: t, children: o } = e,
-          s = (0, f.OM)(n);
+          s = (0, y.OM)(n);
         return null == s
           ? null
           : (s && !t) || (!s && t)
             ? (0, d.jsx)(d.Fragment, { children: e.children })
             : null;
       }
-      function He(e) {
+      function Re(e) {
         if (u.iA.logged_in) {
           const n = Number.parseInt((0, m.j$)(e.args)),
             t = Number.parseInt((0, m.j$)(e.args, "mod"));
@@ -905,7 +932,7 @@
           ? (0, d.jsx)("div", { className: n.trim(), children: e.children })
           : (0, d.jsx)(d.Fragment, { children: e.children });
       }
-      function qe(e) {
+      function Ue(e) {
         return (0, d.jsx)("span", {
           className: D.LocalizeBlock,
           children: (0, c.oW)(
@@ -917,7 +944,7 @@
           ),
         });
       }
-      function Ue(e) {
+      function qe(e) {
         let n = (0, m.j$)(e.args);
         return n
           ? (0, d.jsx)(ce, { giveawayid: n })
@@ -944,7 +971,7 @@
             s = (0, m.j$)(e.args, "out_of_stock_override"),
             a = (0, m.j$)(e.args, "delivery_override"),
             i = (0, m.j$)(e.args, "delivery_override_out_of_stock");
-          return (0, d.jsx)(A, {
+          return (0, d.jsx)(T, {
             section: r,
             reservationPackageID: o,
             depositPackageID: n,
@@ -956,16 +983,18 @@
         }
         return (0, d.jsx)(d.Fragment, {});
       }
-      var ze = t(52885);
-      function Qe(e) {
+      var ze = t(5729),
+        Qe = t(52885);
+      function Ve(e) {
         const { bSalePage: n } = e,
           [t, d] = s.useState(i.KN.IsInitialized());
         return (
+          (0, ze.H)(t, n),
           s.useEffect(() => {
             a.Vw.Init(new r.D(u.TS.WEBAPI_BASE_URL)),
               l.O3.Init(),
               n &&
-                ze.us.AddDictionary(
+                Qe.us.AddDictionary(
                   (null == Ee &&
                     (Ee = new Map([
                       [
@@ -985,21 +1014,21 @@
                         "deckcompatuserlibrarycount",
                         { Constructor: Pe, autocloses: !1 },
                       ],
-                      ["giveawayinfo", { Constructor: Ue, autocloses: !1 }],
+                      ["giveawayinfo", { Constructor: qe, autocloses: !1 }],
                       ["price", { Constructor: ue.zD, autocloses: !1 }],
                       ["pricesavings", { Constructor: ue.y7, autocloses: !1 }],
                       [
                         "eventdoorvisibility",
                         { Constructor: Me, autocloses: !1 },
                       ],
-                      ["chooseaccount", { Constructor: He, autocloses: !1 }],
+                      ["chooseaccount", { Constructor: Re, autocloses: !1 }],
                       [
                         "badgecurrentlevel",
-                        { Constructor: xe, autocloses: !1 },
+                        { Constructor: be, autocloses: !1 },
                       ],
                       ["optindoorquest", { Constructor: je, autocloses: !1 }],
                       ["classname", { Constructor: We, autocloses: !1 }],
-                      ["localize", { Constructor: qe, autocloses: !1 }],
+                      ["localize", { Constructor: Ue, autocloses: !1 }],
                       ["salesection", { Constructor: ke, autocloses: !1 }],
                       [
                         "reservationbutton",

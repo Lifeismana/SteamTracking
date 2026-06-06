@@ -32,6 +32,7 @@ ${BASE_URL}datafeed/herodata
 ${BASE_URL}datafeed/herolist
 ${BASE_URL}datafeed/itemdata
 ${BASE_URL}datafeed/itemlist
+${BASE_URL}datafeed/neutralitems
 ${BASE_URL}datafeed/patchnotes
 ${BASE_URL}datafeed/patchnoteslist
 ${BASE_URL}eminenceofristul
@@ -391,6 +392,7 @@ ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
 ${COMMUNITY_BASE_URL}sharedfiles/itemsetvisibility
 ${COMMUNITY_BASE_URL}sharedfiles/markassuspicious
+${COMMUNITY_BASE_URL}sharedfiles/moderationqueueview/?appid=${appid}
 ${COMMUNITY_BASE_URL}sharedfiles/reportitem
 ${COMMUNITY_BASE_URL}sharedfiles/updaterestrictedcountries
 ${COMMUNITY_BASE_URL}sharedfiles/votingqueue/?appid=${appid}&matchingFileType=${}
@@ -1642,6 +1644,7 @@ ${STORE_BASE_URL}subscriber_agreement/${LANGUAGE}?deck_ssa=1
 ${STORE_BASE_URL}tag/browse/
 ${STORE_BASE_URL}tags/${}/${tagid}
 ${STORE_BASE_URL}tags/${}/${}
+${STORE_BASE_URL}trailer/assets/?trailer=${}
 ${STORE_BASE_URL}twofactor/emergency_codes
 ${STORE_BASE_URL}twofactor/manage
 ${STORE_BASE_URL}twofactor/manage_action

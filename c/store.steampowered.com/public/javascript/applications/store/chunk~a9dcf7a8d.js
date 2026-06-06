@@ -3,6 +3,13 @@
   {
     chunkid: (module) => {
       module.exports = {
+        TrailerTitle: "_2jWguvQbMj3mHe0ytRpzNm",
+        Category: "_3oxiEsdJdYRkKvYSWGAfih",
+        Visible: "_3afqMxr7HnEfdxJwBg6GRd",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TrailerPlayer: "_3LAiT6FD5iZnZ-uET79Wp5",
         LoadingThrobber: "_15cczWGd-yOWsvm-9HmolD",
         FadeIn: "_1yORKdHdas5wMAwXKG12PY",
@@ -111,12 +118,64 @@
         Inner: "B70ft0fskXDtxOVqwbNFW",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
-        Category: "_2YhOhoyYNbue9fEPMYPiq2",
-        Visible: "_2cpBClyttSkWAsgMArc0BM",
-      };
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2;
+      function _(_) {
+        const {
+            name: _,
+            trailerCategory: _,
+            trailerDisplay: _,
+            mouseOver: _,
+          } = _,
+          [_, _] = _.useState(!1);
+        if (
+          (_.useEffect(() => {
+            _ != _ && _(!0);
+          }, [_]),
+          _.useEffect(() => {
+            if (_) return void _(!0);
+            if (!_) return;
+            const _ = setTimeout(() => _(!1), 3e3);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          null == _ || _ == _)
+        )
+          return;
+        const _ =
+          _ == _
+            ? _._.Localize("#StoreTrailer_Title_TrailerPreview")
+            : (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: (0, _._)({
+            [_().TrailerTitle]: !0,
+            [_().Visible]: _,
+          }),
+          children: _._.LocalizeReact(
+            "#StoreTrailer_Title_Combiner",
+            (0, _.jsx)("span", {
+              className: _().Category,
+              children: _,
+            }),
+            _,
+          ),
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2642,63 +2701,6 @@
             _: "M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z",
             fill: "currentColor",
           }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = 0,
-        _ = 1,
-        _ = 2;
-      function _(_) {
-        const {
-            name: _,
-            trailerCategory: _,
-            trailerDisplay: _,
-            mouseOver: _,
-          } = _,
-          [_, _] = _.useState(!1);
-        if (
-          (_.useEffect(() => {
-            _ != _ && _(!0);
-          }, [_]),
-          _.useEffect(() => {
-            if (_) return void _(!0);
-            if (!_) return;
-            const _ = setTimeout(() => _(!1), 3e3);
-            return () => clearTimeout(_);
-          }, [_, _]),
-          null == _ || _ == _)
-        )
-          return;
-        const _ =
-          _ == _ ? (0, _._)("#StoreTrailer_Title_TrailerPreview") : (0, _._)(_);
-        return (0, _.jsx)("div", {
-          className: (0, _._)({
-            [_().TrailerTitle]: !0,
-            [_().Visible]: _,
-          }),
-          children: (0, _._)(
-            "#StoreTrailer_Title_Combiner",
-            (0, _.jsx)("span", {
-              className: _().Category,
-              children: _,
-            }),
-            _,
-          ),
         });
       }
     },

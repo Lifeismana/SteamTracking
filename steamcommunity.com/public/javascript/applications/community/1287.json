@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Vytvoření příkazu k nákupu",
     "Button_Close": "Zavřít",
     "Search_ListingQuantity": "Množství k prodeji: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Množství: %1$s",
     "Bucket_PriceFrom": "Od %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s",
     "FilterResults_Placeholder": "Filtrovat výsledky...",

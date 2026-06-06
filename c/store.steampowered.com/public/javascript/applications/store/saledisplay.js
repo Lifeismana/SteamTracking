@@ -4782,7 +4782,7 @@
                           _.GetSaleSectionByID(_),
                           _,
                           _,
-                          _.GetSaleSectionIndexByID(_),
+                          _.GetSaleSectionIndexByID(_, !0),
                         ),
                       },
                       "li_" + _,
@@ -5118,10 +5118,11 @@
           const _ =
               _.jsondata.localized_sale_logo &&
               _.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
+            _ = __webpack_require__.BUsesContentHubForItemSource(),
             _ = __webpack_require__
               .GetSaleSections()
               .some((_) => "contenthubtitle" === _.section_type),
-            _ = __webpack_require__.BUsesContentHubForItemSource() && _;
+            _ = _ && _;
           let _;
           _ = _
             ? 0
@@ -5142,7 +5143,17 @@
                 : _._.EPreviewMode_Enabled
               : _._.EPreviewMode_Disabled,
             _ = _ || __webpack_require__.GetEventType() != _.ajI,
-            _ = (0, _._)(_.clanSteamID);
+            _ = (0, _._)(_.clanSteamID),
+            _ = _ ? _._.NoTransform : _._.NoTransformSparseContent,
+            _ = (0, _._)(
+              _().SaleOuterContainer,
+              _ && _().SaleOuterTopMargin,
+              _ && _().SaleNewSizing,
+              _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
+              "SaleOuterContainer",
+              _ && _().SalePageLogoSet,
+              _ && _().ContentHub,
+            );
           return (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
               eventModel: _,
@@ -5167,21 +5178,13 @@
                         bShowAsValveOnly: !_,
                       }),
                     (0, _.jsxs)(_._, {
-                      className: (0, _._)({
-                        [_().SaleOuterContainer]: !0,
-                        [_().SaleOuterTopMargin]: _,
-                        [_().SaleNewSizing]: _,
-                        [_()[`CustomStyle_${_.jsondata.sale_vanity_id}`]]: !0,
-                        SaleOuterContainer: !0,
-                        [_().SalePageLogoSet]: _,
-                        [_().ContentHub]: _,
-                      }),
                       style: _
                         ? void 0
                         : {
                             marginTop: `${_ || 0}px`,
                           },
-                      scrollIntoViewType: _._.NoTransformSparseContent,
+                      className: _,
+                      scrollIntoViewType: _,
                       children: [
                         (0, _.jsx)(_, {
                           eventModel: _,
@@ -5774,27 +5777,8 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      let _ = 0;
-      function _(_) {
-        const [_, _] = (0, _.useState)(!1);
-        (0, _.useEffect)(() => {
-          const _ = window.setTimeout(() => __webpack_require__(!0), _);
-          return () => window.clearTimeout(_);
-        }, [_]),
-          (function (_) {
-            (0, _.useEffect)(() => {
-              if (!_)
-                return (
-                  _++,
-                  () => {
-                    0 == --_ && (0, _._)();
-                  }
-                );
-            }, [_]);
-          })(_);
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5847,7 +5831,7 @@
                 _(_);
             }, [_, _, _, _]);
           })(_, _),
-          _(1500),
+          (0, _._)(1500),
           !_)
         )
           return (0, _.jsx)("div", {

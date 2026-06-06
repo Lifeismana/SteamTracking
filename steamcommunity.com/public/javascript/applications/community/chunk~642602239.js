@@ -6417,14 +6417,10 @@
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
             r = this.GetEventType() == s.ajI,
-            a = M.iA.is_valve_email,
-            o =
-              this.BIsNextFest(a) &&
-              !!this.startTime &&
-              (this.startTime > new Date("2026-03-01").getTime() / 1e3 || a);
-          return t || i || n || r || o
+            a = this.BShowNextFestHeader(!0);
+          return t || i || n || r || a
             ? [
-                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, o),
+                ...this.GenerateDynamicSaleSections(!1, !1, !1, !1, a),
                 ...this.GetSaleSections(),
                 ...this.GenerateDynamicSaleSections(!!t, !!i, n, r, !1),
               ]
@@ -6790,6 +6786,13 @@
             !(!n || r != _.GU) &&
             (e ? n.startsWith(i) : n.startsWith(i) && !n.includes("prev"))
           );
+        }
+        BShowNextFestHeader(e) {
+          return e && M.iA.is_valve_email
+            ? this.BIsNextFest(!0)
+            : this.BIsNextFest(!1) &&
+                !!this.startTime &&
+                this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }
         GenerateDynamicCreatorHomeItemBrowserSection(e, t) {
           var i, n;
@@ -12039,7 +12042,7 @@
           kind: t.sKind,
           default: t.bDefault,
           srcLang: (0, s.wwZ)(n),
-          label: (0, l.we)("#language_selection_" + (0, s.LgB)(n)),
+          label: (0, l.uD)(n),
         });
       }
     },

@@ -327,7 +327,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { closeModal: _, packageID: _ } = _,
+        const { closeModal: _, packageID: _, bPackageVisible: _ } = _,
           _ = (0, _._)(_),
           _ = _.some((_) => _.nPriceInCents > _.nOldPriceInCents),
           _ = (function (_, _) {
@@ -419,7 +419,11 @@
               (0, _.jsx)("div", {}),
             ));
         if (_) {
-          let _ = (0, _._)("#PricingDashboard_PriceProposal_Publish_Title");
+          let _ = (0, _._)(
+            _
+              ? "#PricingDashboard_PriceProposal_Publish_Title"
+              : "#PricingDashboard_StageNewPrices_title",
+          );
           return (
             _ == _.RequiresCooldown &&
               (_ = (0, _._)(
@@ -440,10 +444,16 @@
         }
         let _ = _ == _.Loading || _ == _.Loading;
         return (0, _.jsxs)(_._, {
-          strTitle: (0, _._)("#PricingDashboard_PriceProposal_Publish_Title"),
+          strTitle: (0, _._)(
+            _
+              ? "#PricingDashboard_PriceProposal_Publish_Title"
+              : "#PricingDashboard_StageNewPrices_title",
+          ),
           bAlertDialog: !1,
           strOKButtonText: (0, _._)(
-            "#PricingDashboard_PriceProposal_Publish_Button",
+            _
+              ? "#PricingDashboard_PriceProposal_Publish_Button"
+              : "#PricingDashboard_StageNewPrices_ok",
           ),
           bOKDisabled: _,
           bCancelDisabled: _,
@@ -460,10 +470,13 @@
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _._)(
-                    "#PricingDashboard_PriceProposal_Publish_Explanation",
+                    _
+                      ? "#PricingDashboard_PriceProposal_Publish_Explanation"
+                      : "#PricingDashboard_StageNewPrices_desc",
                     _.length,
                   ),
                   _ &&
+                    _ &&
                     (0, _.jsx)("div", {
                       className: _().PublishWarning,
                       children: (0, _._)(
@@ -494,7 +507,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { packageID: _, bShowCancel: _ } = _,
           _ = (0, _._)(_),
@@ -583,19 +597,26 @@
       }
       function _(_) {
         const { packageID: _ } = _,
-          [_, _, _] = (0, _._)();
+          [_, _, _] = (0, _._)(),
+          { data: _ } = (0, _._)({
+            packageid: _,
+          }),
+          _ = Boolean(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
               onClick: _,
               children: (0, _._)(
-                "#PricingDashboard_PriceProposal_PublishDialog_Button",
+                _
+                  ? "#PricingDashboard_PriceProposal_PublishDialog_Button"
+                  : "#PricingDashboard_StageNewPrices",
               ),
             }),
             (0, _.jsx)(_._, {
               active: _,
               children: (0, _.jsx)(_, {
                 packageID: _,
+                bPackageVisible: _,
                 closeModal: _,
               }),
             }),
@@ -1050,26 +1071,6 @@
               });
             }
           : (_) => null;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _.useRef(_().CancelToken.source());
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            return () =>
-              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
-          }, [_]),
-          _.current
-        );
-      }
     },
   },
 ]);

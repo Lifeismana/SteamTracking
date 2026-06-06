@@ -12698,6 +12698,7 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
           (this.m_editModel = void 0), (0, _._)(this), (this.m_editModel = _);
@@ -12837,6 +12838,19 @@
             ((this.GetJSONData().broadcast_preroll_vod_appid = _),
             this.m_editModel.SetDirty(_._.jsondata_broadcast));
         }
+        GetPrerollTrailer() {
+          return {
+            strAppid: this.GetJSONData().broadcast_preroll_trailer_appid,
+            strTrailerid: this.GetJSONData().broadcsat_preroll_trailer_id,
+          };
+        }
+        SetPrerollTrailer(_, _) {
+          (this.GetJSONData().broadcast_preroll_trailer_appid === _ &&
+            this.GetJSONData().broadcsat_preroll_trailer_id === _) ||
+            ((this.GetJSONData().broadcast_preroll_trailer_appid = _),
+            (this.GetJSONData().broadcsat_preroll_trailer_id = _),
+            this.m_editModel.SetDirty(_._.jsondata_broadcast));
+        }
         SetDropsEnabled(_) {
           this.GetJSONData().broadcast_item_drops_enabled != _ &&
             (_
@@ -12903,6 +12917,7 @@
         (0, _._)([_._], _.prototype, "ClearWhiteList", null),
         (0, _._)([_._], _.prototype, "SetBroadcastContentType", null),
         (0, _._)([_._], _.prototype, "SetPrerollVODAppID", null),
+        (0, _._)([_._], _.prototype, "SetPrerollTrailer", null),
         (0, _._)([_._], _.prototype, "SetDropsEnabled", null),
         (0, _._)([_._], _.prototype, "SetItemDropManual", null),
         (0, _._)([_._], _.prototype, "SetItemDropMinutes", null),
@@ -12963,11 +12978,138 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _, broadcastEditModel: _ } = _,
+          _ = (_) => {},
+          _ = [
+            {
+              name: "Trailer",
+              key: "overview",
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              }),
+              onClick: _,
+            },
+            {
+              name: "Deprecated VOD",
+              key: "mature",
+              contents: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              }),
+              onClick: _,
+            },
+          ];
+        return (0, _.jsxs)(_._, {
+          requireAdmin: !0,
+          clanSteamID: _.GetClanSteamID(),
+          className: (0, _._)(_().ValveOnlyBackground),
+          children: [
+            (0, _.jsx)("div", {
+              className: _().EventEditorTextTitle,
+              children: (0, _._)("#Broadcast_preroll_title"),
+            }),
+            (0, _.jsx)(_._, {
+              tabs: _,
+              bDisableRouting: !0,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        var _;
+        const { editModel: _, broadcastEditModel: _ } = _,
+          _ = (0, _._)(() => (null == _ ? void 0 : _.GetPrerollTrailer())),
+          _ = (0, _._)(_.strAppid ? Number.parseInt(_.strAppid) : void 0),
+          _ = (0, _._)(
+            _,
+            _.strTrailerid ? Number.parseInt(_.strTrailerid) : void 0,
+          ),
+          _ =
+            null === (_ = null == _ ? void 0 : _.microtrailer) || void 0 === _
+              ? void 0
+              : _[0].filename;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().FlexColumnContainer,
+            _().EventDefaultRowContainer,
+          ),
+          children: [
+            (0, _.jsx)("div", {
+              children: (0, _._)("#Broadcast_preroll_trailer_desc"),
+            }),
+            (0, _.jsx)(_._, {
+              type: "text",
+              placeholder: (0, _._)("#Broadcast_preroll_trailer_AppPrompt"),
+              mustBeNumeric: !0,
+              rangeMin: 1,
+              value: _.strAppid || "",
+              onChange: (_) => {
+                var _;
+                return _.SetPrerollTrailer(
+                  _.target.value.trim(),
+                  null !== (_ = _.strTrailerid) && void 0 !== _ ? _ : "",
+                );
+              },
+            }),
+            (0, _.jsx)(_._, {
+              type: "text",
+              placeholder: (0, _._)("#Broadcast_preroll_trailer_TrailerPrompt"),
+              mustBeNumeric: !0,
+              rangeMin: 1,
+              value: _.strTrailerid || "",
+              onChange: (_) =>
+                _.SetPrerollTrailer(_.strAppid || "", _.target.value.trim()),
+            }),
+            _ &&
+              _ &&
+              (0, _.jsx)("a", {
+                href: `${_._.STORE_BASE_URL}trailer/assets/?trailer=${_.substring(0, _.lastIndexOf("/"))}`,
+                children: (0, _._)("#Broadcast_preroll_trailer_link"),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { editModel: _, broadcastEditModel: _ } = _,
+          _ = (0, _._)(() =>
+            null == _ ? void 0 : __webpack_require__.GetPrerollVideo(),
+          );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().FlexColumnContainer,
+            _().EventDefaultRowContainer,
+          ),
+          children: [
+            (0, _.jsx)("div", {
+              children: (0, _._)("#Broadcast_preroll_desc"),
+            }),
+            (0, _.jsx)(_._, {
+              type: "text",
+              placeholder: (0, _._)("#Broadcast_preroll_prompt"),
+              mustBeNumeric: !0,
+              rangeMin: 1,
+              value: _ || "",
+              onChange: (_) =>
+                __webpack_require__.SetPrerollVODAppID(_.target.value.trim()),
+            }),
+            Boolean(_) &&
+              (0, _.jsx)("a", {
+                href: _._.PARTNER_BASE_URL + "apps/landing/" + _,
+                children: (0, _._)("#Broadcast_preroll_app_link"),
+              }),
+          ],
+        });
+      }
       let _ = class extends _.Component {
         constructor() {
           super(...arguments),
@@ -13623,50 +13765,6 @@
                   }),
                 }),
                 (0, _.jsx)(_, {}),
-              ],
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { editModel: _, broadcastEditModel: _ } = _,
-          _ = (0, _._)(() =>
-            null == _ ? void 0 : __webpack_require__.GetPrerollVideo(),
-          );
-        return (0, _.jsxs)(_._, {
-          requireAdmin: !0,
-          clanSteamID: _.GetClanSteamID(),
-          className: (0, _._)(_().ValveOnlyBackground),
-          children: [
-            (0, _.jsx)("div", {
-              className: _().EventEditorTextTitle,
-              children: (0, _._)("#Broadcast_preroll_title"),
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().FlexColumnContainer,
-                _().EventDefaultRowContainer,
-              ),
-              children: [
-                (0, _.jsx)("div", {
-                  children: (0, _._)("#Broadcast_preroll_desc"),
-                }),
-                (0, _.jsx)(_._, {
-                  type: "text",
-                  placeholder: (0, _._)("#Broadcast_preroll_prompt"),
-                  mustBeNumeric: !0,
-                  rangeMin: 1,
-                  value: _ || "",
-                  onChange: (_) =>
-                    __webpack_require__.SetPrerollVODAppID(
-                      _.target.value.trim(),
-                    ),
-                }),
-                Boolean(_) &&
-                  (0, _.jsx)("a", {
-                    href: _._.PARTNER_BASE_URL + "apps/landing/" + _,
-                    children: (0, _._)("#Broadcast_preroll_app_link"),
-                  }),
               ],
             }),
           ],
@@ -19367,8 +19465,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
         const { appid: _, color: _, bgcolor: _ } = _,
           _ = (0, _._)(),
@@ -19388,6 +19485,7 @@
               color: _,
               backgroundColor: _,
             },
+            bShowInGamepadUI: !0,
           }),
         });
       }
@@ -20718,29 +20816,29 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const _ = _.createRef(),
           [_, _] = _.useState(""),
-          _ = _.createRef();
+          _ = _.createRef(),
+          _ = (_) => {
+            _.current &&
+              _.current.ownerDocument.defaultView.navigator.clipboard
+                .writeText(_.current.value)
+                .then((_) => {
+                  _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
+                })
+                .catch((_) => {
+                  _((0, _._)("#EventDisplay_Share_FailedToCopyToClipboard")),
+                    console.error("Failed to copy link to clipboard:", _);
+                });
+          };
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsxs)("div", {
               className: (0, _._)(_().FlexRowContainer, _().linkField),
-              onClick: (_) => {
-                _.current &&
-                  _.current.ownerDocument.defaultView.navigator.clipboard
-                    .writeText(_.current.value)
-                    .then((_) => {
-                      _((0, _._)("#EventDisplay_Share_CopiedToClipboard"));
-                    })
-                    .catch((_) => {
-                      _(
-                        (0, _._)("#EventDisplay_Share_FailedToCopyToClipboard"),
-                      ),
-                        console.error("Failed to copy link to clipboard:", _);
-                    });
-              },
+              onClick: _,
               children: [
                 (0, _.jsx)("span", {
                   className: _().LinkInputLabel,
@@ -20750,16 +20848,16 @@
                       : "#EventDisplay_Share_Link",
                   ),
                 }),
-                (0, _.jsx)("textarea", {
+                (0, _.jsx)("input", {
                   className: _().LinkInput,
                   ref: _,
                   value: _.eventLink,
                   readOnly: !0,
                 }),
                 document.queryCommandSupported("copy") &&
-                  (0, _.jsx)("div", {
+                  (0, _.jsx)(_._, {
                     className: (0, _._)(_().Button, _().Icon, _().LinkButton),
-                    title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
+                    onActivate: _,
                     children: (0, _.jsx)(_._, {
                       toolTipContent: (0, _._)("#ToolTip_CopyLinkToClipboard"),
                       children: (0, _.jsx)("img", {

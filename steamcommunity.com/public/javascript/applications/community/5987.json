@@ -115,7 +115,7 @@
     "moderation_ownerdispute_cancel": "Abbrechen",
     "moderation_editownerdisputedetails_save": "Speichern",
     "moderation_editownerdisputedetails_label": "Code des Tickets: ",
-    "originalresolution_acquitted": "Während der ersten Moderation entlastet",
+    "originalresolution_acquitted": "Keine Maßnahmen nach erster Moderation ergriffen",
     "originalresolution_sanctioned": "Während der ersten Moderation sanktioniert",
     "has_trade_offer": "Dieses Thema hat ein angehängtes Handelsangebot",
     "subjectauditlog_noentries": "Keine Einträge",

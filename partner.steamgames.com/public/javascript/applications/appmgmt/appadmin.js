@@ -20263,5 +20263,22 @@
         return o.useMemo(() => _(), []);
       }
     },
+    4434: (e, t, r) => {
+      "use strict";
+      r.d(t, { m: () => a });
+      var i = r(41735),
+        s = r.n(i),
+        n = r(90626);
+      function a(e) {
+        const t = n.useRef(s().CancelToken.source());
+        return (
+          n.useEffect(() => {
+            const r = t.current;
+            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
+    },
   },
 ]);

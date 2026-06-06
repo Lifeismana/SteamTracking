@@ -205,6 +205,5 @@
     "anonymousreport_createaccount": "إنشاء حساب",
     "anonymousreport_signin_or_join": "%1$s أو %2$s",
     "setcooldown_days": "أيام",
-    "setcooldown_clearcooldown": "مسح",
     "setcooldown_cooldownsummary": "(%1$s أيام)"
 }

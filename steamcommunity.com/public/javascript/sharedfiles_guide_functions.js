@@ -86,7 +86,7 @@ function OnScrollChangeGuideSection()
 function SelectGuideSection( sectionID, scrollType )
 {
 	var sectionElemID = "guideSectionSelection_" + sectionID;
-	var rgChildElements = $( 'GuideTableOfContents').childElements().grep( new Selector( "div.guideSubSectionSelection" ) );
+	var rgChildElements = $( 'GuideTableOfContents').childElements().grep( new Selector( "div.rightbox_list_option" ) );
 	for ( var i = 0; i < rgChildElements.length; i++ )
 	{
 		var elChild = rgChildElements[i];

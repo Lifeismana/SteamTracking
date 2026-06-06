@@ -9,10 +9,6 @@
 .apphub_HomeHeader .responsive_tab_ctn {
 	margin-top: 8px;
 }
-.apphub_HomeHeaderContent
-{
-	padding: 10px 0 0 0;
-}
 body.apphub_blue
 {
 	background: #1b2838;
@@ -501,8 +497,10 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border: 1px solid #000000;
 	border-radius: 3px;
+	box-sizing: border-box;
+	max-width: 100%;
 	padding-left: 5px;
-	width: 235px;
+	width: 242px;
 }
 
 .appHubSearchContainer:has( .appHubSearchTextInput:focus-visible )
@@ -679,7 +677,7 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .rightbox {
 	background: repeat-y url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_box_repeat.png' );
-	margin-bottom: 18px;
+	margin-bottom: 10px;
 }
 .rightbox .content {
 	padding: 16px 14px;
@@ -699,31 +697,6 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 .rightbox_content_header {
 	padding: 11px 14px;
 	margin-bottom: 0px;
-}
-
-.rightbox_list_option {
-	position: relative;
-	line-height: 37px;
-	height: 37px;
-	color: #c9c9c9;
-}
-
-.rightbox_list_option_content {
-	position: relative;
-}
-
-.rightbox_list_option.selected .rightbox_list_selection_background {
-	display: block;
-}
-
-.rightbox_list_selection_background {
-	position: absolute;
-	display: none;
-	left: -27px;
-	top: 0px;
-	background-image: url( 'https://community.fastly.steamstatic.com/public/images/groups/rightcol_option_selected.png' );
-	width: 306px;
-	height: 37px;
 }
 
 
@@ -747,10 +720,6 @@ div.statsselect div.option img, div.statsselect_options div.option img {
 
 .forum_list_unread {
 	font-weight: bold;
-	color: #ffffff;
-}
-
-.forum_list .rightbox_list_option.selected {
 	color: #ffffff;
 }
 

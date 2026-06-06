@@ -44,11 +44,6 @@ center
 }
 
 
-.apphub_background_gamepad_blur {
-
-}
-
-
 .apphub_HeaderTop.workshop
 {
 	background-image:url('https://community.fastly.steamstatic.com/public/shared/images/apphubs/bg_workshop_header.png?v=3');
@@ -575,15 +570,21 @@ a.apphub_more_friends_who_play:hover
 {
 	margin: 0 auto;
 	max-width: 948px;
-	padding: 0 1%;
-	position: relative;
 	text-align: left;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .apphub_Content {
+		width: auto;
+		padding-inline: 1%;
+	}
 }
 
 .apphub_Discussion_Content
 {
 	position: relative;
-	margin: 16px auto 0 auto;
+	margin: 10px auto 0 auto;
 	max-width: 948px;
 	text-align: left;
 }
@@ -1409,6 +1410,8 @@ a.apphub_more_friends_who_play:hover
 /* responsive menu contents */
 h3.apphub_responsive_menu_title {
 	color: #ffffff;
+	font-size: revert;
+	font-weight: revert;
 	margin: 16px 0;
 }
 

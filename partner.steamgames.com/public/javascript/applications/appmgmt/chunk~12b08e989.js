@@ -10241,5 +10241,22 @@
         return l.useMemo(() => b(), []);
       }
     },
+    4434: (e, r, t) => {
+      "use strict";
+      t.d(r, { m: () => n });
+      var i = t(41735),
+        s = t.n(i),
+        a = t(90626);
+      function n(e) {
+        const r = a.useRef(s().CancelToken.source());
+        return (
+          a.useEffect(() => {
+            const t = r.current;
+            return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          r.current
+        );
+      }
+    },
   },
 ]);

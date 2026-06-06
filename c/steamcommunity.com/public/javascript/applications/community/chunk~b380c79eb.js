@@ -19,6 +19,7 @@
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
         "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-inset-glass": "_32JdL4FubsmwHfHXm6OB9I",
         "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-dim": "_2qQgKJgeeqc9lEI-i7HdsM",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
@@ -46,11 +47,14 @@
         SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
+        IndicatorPosition: "_1Dgxrv7wtUW1EViSgrdMlA",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
         "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
         "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
+        disabled: "_3gVhaCZ4k3QSnF9WhRZk5m",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
+        "Variant-inset-glass": "_1gVVovvLBjwCxSH4wWUabt",
         "Variant-dim": "_3qc1Re1q3AH_JYfN49uj8r",
       };
     },
@@ -580,9 +584,12 @@
         });
       }
       function _(_) {
+        const { radius: _ } = _;
         return (0, _.jsx)(_._, {
-          className: _.Indicator,
-          radius: _.radius,
+          className: _.IndicatorPosition,
+          children: (0, _.jsx)("div", {
+            className: _.Indicator,
+          }),
         });
       }
       function _(_, _) {
@@ -594,7 +601,7 @@
             : 0;
       }
       (_.Item = function (_) {
-        const { value: _, children: _ } = _,
+        const { value: _, children: _, disabled: _ } = _,
           _ = (0, _.useContext)(_),
           [_, _] = (0, _.useState)(),
           { register: _, unregister: _ } = _ || {};
@@ -608,16 +615,16 @@
           return null;
         const { value: _, onValueChange: _, radius: _, size: _ } = _,
           _ = _ === _,
-          _ = _ ? void 0 : () => _(_),
           _ = void 0 === _ ? _ : _;
         return (0, _.jsx)(_._, {
           justify: "center",
           align: "center",
-          radius: _,
           ref: _,
-          onClick: _,
+          onClick: (_) => {
+            _.stopPropagation(), _.preventDefault(), _ || _ || _(_);
+          },
           "data-selected": _ ? "true" : "false",
-          className: _()(_.Item, _ && _[`Size-${_}`]),
+          className: _()(_.Item, _ && _[`Size-${_}`], _ ? _.disabled : ""),
           children: _,
         });
       }),
@@ -702,8 +709,11 @@
             },
             children: (0, _.jsx)(_.Provider, {
               value: _,
-              children: (0, _.jsxs)("div", {
+              children: (0, _.jsxs)(_._, {
                 className: _.SegmentedControl,
+                style: {
+                  "--outer-radius": `var(--radius-${_})`,
+                },
                 children: [
                   _,
                   null !== _ &&
@@ -929,6 +939,7 @@
               radius: _,
               hasValue: _,
               tabIndex: 0,
+              cursor: "pointer",
               ..._,
             }),
             _ = (0, _._)(_, _, _, void 0);

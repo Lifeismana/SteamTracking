@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Beställ:",
     "Button_Close": "Stäng",
     "Search_ListingQuantity": "Antal till salu: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Antal: %1$s",
     "Bucket_PriceFrom": "Från %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s fasthängt",
     "FilterResults_Placeholder": "Filtrera resultat ...",

@@ -17,7 +17,7 @@
 	padding-right: 16px;
 }
 
-.guideTopContent .dotHR 
+.guideTopContent .dotHR
 {
 	height: 1px;
 	border-bottom: 1px #61696d dotted;
@@ -161,45 +161,14 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 .guideSubSectionSelectionLink {
 	color: #ebebeb;
 	cursor: pointer;
+	position: relative;
 }
 .guideSubSectionSelectionLink:hover {
 	color: #66C0F4;
 }
 
-.guideSubSectionSelection
-{
-	position: relative;
-}
-
-.guideSubSectionSelectionLink
-{
-	position: relative;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.guideSubSectionSelection .browseOptionImage
-{
-	display: none;
-}
-
-.guideSubSectionSelection.selected
-{
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.guideSubSectionSelection.selected .browseOptionImage
-{
-	display: block;
-	top: 0px;
-}
-
-.guideSubSectionSelection.selected a
-{
+.rightbox_list_option.selected .guideSubSectionSelectionLink {
 	cursor: default;
-	text-decoration: none;
-	color: #EBEBEB;
 }
 
 /* edit page header */

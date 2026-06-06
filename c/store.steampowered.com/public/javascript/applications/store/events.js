@@ -771,7 +771,7 @@
               }),
               (0, _.jsx)(_._, {
                 className: _().OtherEvents,
-                "flow-children": "column",
+                "flow-children": "row",
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 children: _.map((_) =>
                   (0, _.jsx)(
@@ -5025,8 +5025,9 @@
                     "HorizontalTileCtn",
                   ),
                   children: [
-                    (0, _.jsx)("div", {
+                    (0, _.jsx)(_._, {
                       className: _().HorizontalTiles,
+                      "flow-children": "row",
                       children: _.map((_) =>
                         (0, _.jsx)(
                           _,

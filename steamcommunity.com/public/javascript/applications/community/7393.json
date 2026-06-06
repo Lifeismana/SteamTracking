@@ -290,11 +290,12 @@
     "setcooldown_nocooldown": "无当前冷却时间",
     "setcooldown_days": "天",
     "setcooldown_newcooldownlabel": "用户新的冷却时间：",
-    "setcooldown_clearcooldown": "清除",
+    "setcooldown_clearcooldown": "清除冷却时间",
     "setcooldown_cooldownsummary": "（%1$s 天）",
     "setcooldown_dialogtitle": "设置举报冷却时间",
     "setcooldown_dialogdescription": "使滥用系统的用户无法进行内容举报或对处理结果提出争议。",
     "setcooldown_setbutton": "设置冷却时间",
     "setcooldown_clearopenreports": "清除该用户的未解决举报",
+    "setcooldown_statssummary": "%2$s 份举报中的 %1$s 份已判为无责，上周举报的 %4$s 份中 %3$s 份已判为无责。",
     "nocomma": ""
 }

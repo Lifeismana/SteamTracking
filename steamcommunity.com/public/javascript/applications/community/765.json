@@ -290,11 +290,12 @@
     "setcooldown_nocooldown": "Nicio restricție existentă",
     "setcooldown_days": "zile",
     "setcooldown_newcooldownlabel": "Restricție nouă pentru utilizator:",
-    "setcooldown_clearcooldown": "Șterge",
+    "setcooldown_clearcooldown": "Șterge restricția",
     "setcooldown_cooldownsummary": "(%1$s zile)",
     "setcooldown_dialogtitle": "Setează perioada de restricție pentru raportare",
     "setcooldown_dialogdescription": "Blochează posibilitatea unui utilizator de a raporta conținut sau a contesta deciziile de moderarea dacă acesta a abuzat de sistem.",
     "setcooldown_setbutton": "Setează perioada de restricție",
     "setcooldown_clearopenreports": "Șterge raportările nerezolvate ale acestui utilizator",
+    "setcooldown_statssummary": "%1$s/%2$s raportări achitate, %3$s/%4$s fiind în ultima săptămână.",
     "nocomma": ""
 }

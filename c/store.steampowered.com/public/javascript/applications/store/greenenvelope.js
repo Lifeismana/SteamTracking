@@ -817,7 +817,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         if (!_) return;
@@ -829,7 +828,6 @@
         return _.useMemo(() => ((0, _._)(_.type) ? (0, _._)(_) : null), [_]);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1165,6 +1163,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -1179,7 +1179,6 @@
       function _(_) {
         let {
           fallbackLogo: _,
-          app: _,
           data: _,
           location: _,
           icon: _,
@@ -1188,11 +1187,18 @@
           onHide: _,
         } = _;
         const _ = "number" == typeof _?.image,
+          _ = _
+            ? {
+                appid: _.image,
+              }
+            : void 0,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = _?.display_name ?? "",
           _ = _?.title ?? _?.body,
           _ = _?.title ? _.body : null,
           _ = _(_),
-          _ = _ && !_,
+          _ = _ && (!_ || !_),
           [_, _] = _.useState(!1),
           _ = () => _(!0);
         let _ = null;
@@ -1595,7 +1601,6 @@
       function _(_) {
         let {
           fallbackLogo: _,
-          app: _,
           data: _,
           location: _,
           icon: _,
@@ -1604,25 +1609,29 @@
           onHide: _,
         } = _;
         const _ = _(_),
+          _ = _.appid
+            ? {
+                appid: _.appid,
+              }
+            : void 0,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = _(_, _, _),
-          _ = !_;
+          _ = _ && (!_ || !_);
         let _ = "";
         return (
           _.state == _._
             ? (_ =
-                _ && __webpack_require__?.GetName()
+                _ && _?.name
                   ? (0, _._)(
                       "#SteamNotification_AsyncGame_Action_Short",
-                      __webpack_require__.GetName(),
+                      _.name,
                     )
                   : (0, _._)("#SteamNotification_AsyncGame_Action"))
             : _.state == _._ &&
               (_ =
-                _ && __webpack_require__?.GetName()
-                  ? (0, _._)(
-                      "#SteamNotification_AsyncGame_Done_Short",
-                      __webpack_require__.GetName(),
-                    )
+                _ && _?.name
+                  ? (0, _._)("#SteamNotification_AsyncGame_Done_Short", _.name)
                   : (0, _._)("#SteamNotification_AsyncGame_Done")),
           _
             ? (0, _.jsx)(_, {
@@ -1649,7 +1658,7 @@
                       children: _,
                     }),
                     (0, _.jsx)(_, {
-                      children: __webpack_require__?.GetName(),
+                      children: _?.name,
                     }),
                     _
                       ? (0, _.jsx)(_, {
@@ -1739,7 +1748,7 @@
             timestamp: _,
             fnRenderTimestamp: _,
             nUnread: _,
-            app: _,
+            appName: _,
             onHide: _,
             commentTitle: _,
             commentBody: _,
@@ -1774,14 +1783,11 @@
                   ? _
                     ? (0, _._)(
                         "#SteamNotifications_Comment_Your_Screenshot_Game",
-                        _.GetName(),
+                        _,
                       )
                     : (0, _._)("#SteamNotifications_Comment_Your_Screenshot")
                   : _
-                    ? (0, _._)(
-                        "#SteamNotifications_Comment_Screenshot_Game",
-                        _.GetName(),
-                      )
+                    ? (0, _._)("#SteamNotifications_Comment_Screenshot_Game", _)
                     : (0, _._)("#SteamNotifications_Comment_Screenshot"))
             : !_ && _.json_data?.title && (_ = _.json_data.title);
         let _ = null;
@@ -1872,7 +1878,6 @@
       }
       function _(_) {
         let {
-          app: _,
           fallbackLogo: _,
           data: _,
           location: _,
@@ -1882,139 +1887,147 @@
           onHide: _,
         } = _;
         const _ = _(_),
+          _ = _.appid
+            ? {
+                appid: _.appid,
+              }
+            : void 0,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = _(_, _, _),
-          _ = _.appid && !_;
+          _ = _ && (!_ || !_ || !_);
         let _ = "",
           _ = null;
-        return (
-          _
-            ? ((_ = _.GetName()),
-              1 == _.count
-                ? _
-                  ? (_ = (0, _._)(
-                      "#SteamNotifications_Wishlist_OnSale_Single_Short",
-                      (0, _.jsx)("span", {
-                        children: _.GetName(),
-                      }),
-                      (0, _.jsx)("span", {
-                        style: {
-                          color: "#FFFFFF",
-                        },
-                        children: _.GetBestPurchasePriceFormatted(),
-                      }),
-                    ))
-                  : (_ = (0, _._)(
-                      "#SteamNotifications_Wishlist_OnSale_Single",
-                      (0, _.jsx)("span", {
-                        style: {
-                          color: "#FFFFFF",
-                        },
-                        children: _.GetBestPurchasePriceFormatted(),
-                      }),
-                    ))
-                : 2 == _.count
-                  ? _
-                    ? (_ = (0, _._)(
-                        "#SteamNotifications_Wishlist_OnSale_PlusOne_Short",
-                        _.GetName(),
-                      ))
-                    : (_ = (0, _._)(
-                        "#SteamNotifications_Wishlist_OnSale_PlusOne",
-                      ))
-                  : _
-                    ? (_ = (0, _._)(
-                        "#SteamNotifications_Wishlist_OnSale_PlusMany_Short",
-                        _.GetName(),
-                        _.count - 1,
-                      ))
-                    : (_ = (0, _._)(
-                        "#SteamNotifications_Wishlist_OnSale_PlusMany",
-                        _.count - 1,
-                      )))
-            : (_ = (0, _._)("#SteamNotifications_Wishlist_Generic")),
-          _
-            ? (0, _.jsx)(_, {
-                ..._,
-                logo: _,
-                icon: _.icon,
-                title: (0, _._)("#SteamNotifications_Wishlist"),
-                body: _,
-              })
-            : (0, _.jsx)(_, {
-                children: (0, _.jsxs)(_, {
-                  logo: _,
-                  bLoading: _,
-                  ..._,
-                  children: [
-                    (0, _.jsx)(_, {
-                      icon: _,
-                      title: (0, _._)("#SteamNotifications_Wishlist"),
-                      timestamp: _,
-                      location: _,
-                      fnRenderTimestamp: _,
-                    }),
-                    (0, _.jsx)(_, {
-                      multiline: !_,
+        if (_) {
+          const _ = _.name ?? "";
+          (_ = _),
+            1 == _.count
+              ? _
+                ? (_ = (0, _._)(
+                    "#SteamNotifications_Wishlist_OnSale_Single_Short",
+                    (0, _.jsx)("span", {
                       children: _,
                     }),
-                    !!_ &&
-                      (0, _.jsx)(_, {
-                        children: _,
-                      }),
-                    _
-                      ? (0, _.jsx)(_, {
-                          onHide: _,
-                        })
-                      : null,
-                  ],
-                }),
-              })
-        );
+                    (0, _.jsx)("span", {
+                      style: {
+                        color: "#FFFFFF",
+                      },
+                      children: _?.formatted_final_price,
+                    }),
+                  ))
+                : (_ = (0, _._)(
+                    "#SteamNotifications_Wishlist_OnSale_Single",
+                    (0, _.jsx)("span", {
+                      style: {
+                        color: "#FFFFFF",
+                      },
+                      children: _?.formatted_final_price,
+                    }),
+                  ))
+              : 2 == _.count
+                ? _
+                  ? (_ = (0, _._)(
+                      "#SteamNotifications_Wishlist_OnSale_PlusOne_Short",
+                      _,
+                    ))
+                  : (_ = (0, _._)(
+                      "#SteamNotifications_Wishlist_OnSale_PlusOne",
+                    ))
+                : _
+                  ? (_ = (0, _._)(
+                      "#SteamNotifications_Wishlist_OnSale_PlusMany_Short",
+                      _,
+                      _.count - 1,
+                    ))
+                  : (_ = (0, _._)(
+                      "#SteamNotifications_Wishlist_OnSale_PlusMany",
+                      _.count - 1,
+                    ));
+        } else _ = (0, _._)("#SteamNotifications_Wishlist_Generic");
+        return _
+          ? (0, _.jsx)(_, {
+              ..._,
+              logo: _,
+              icon: _.icon,
+              title: (0, _._)("#SteamNotifications_Wishlist"),
+              body: _,
+            })
+          : (0, _.jsx)(_, {
+              children: (0, _.jsxs)(_, {
+                logo: _,
+                bLoading: _,
+                ..._,
+                children: [
+                  (0, _.jsx)(_, {
+                    icon: _,
+                    title: (0, _._)("#SteamNotifications_Wishlist"),
+                    timestamp: _,
+                    location: _,
+                    fnRenderTimestamp: _,
+                  }),
+                  (0, _.jsx)(_, {
+                    multiline: !_,
+                    children: _,
+                  }),
+                  !!_ &&
+                    (0, _.jsx)(_, {
+                      children: _,
+                    }),
+                  _
+                    ? (0, _.jsx)(_, {
+                        onHide: _,
+                      })
+                    : null,
+                ],
+              }),
+            });
       }
       function _(_, _, _ = !1) {
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
-        return !_ || _
+        if (!_ || _)
+          return (0, _.jsx)(_._, {
+            style: {
+              position: "relative",
+            },
+            children: _,
+          });
+        const _ = (0, _._)(_, "community_icon");
+        return _
           ? (0, _.jsx)(_._, {
               style: {
                 position: "relative",
               },
-              children: _,
+              children: (0, _.jsx)("img", {
+                src: _,
+                className: _().ShortLogoDimensions,
+                onError: _,
+              }),
             })
-          : _
-            ? (0, _.jsx)(_._, {
-                style: {
-                  position: "relative",
-                },
-                children: (0, _.jsx)("img", {
-                  src: _?.GetAssets()?.GetCommunityIconURL(),
-                  className: _().ShortLogoDimensions,
+          : (0, _.jsxs)(_._, {
+              style: {
+                position: "relative",
+              },
+              children: [
+                (0, _.jsx)("img", {
+                  className: (0, _._)(_().WishlistBlurImage),
+                  src: _,
                   onError: _,
                 }),
-              })
-            : (0, _.jsxs)(_._, {
-                style: {
-                  position: "relative",
-                },
-                children: [
-                  (0, _.jsx)("img", {
-                    className: (0, _._)(_().WishlistBlurImage),
-                    src: _?.GetAssets()?.GetCommunityIconURL(),
-                    onError: _,
-                  }),
-                  (0, _.jsx)("img", {
-                    src: _?.GetAssets()?.GetCommunityIconURL(),
-                    onError: _,
-                    style: {
-                      position: "absolute",
-                      left: 7,
-                      top: 7,
-                      height: 32,
-                      width: 32,
-                    },
-                  }),
-                ],
-              });
+                (0, _.jsx)("img", {
+                  src: _,
+                  onError: _,
+                  style: {
+                    position: "absolute",
+                    left: 7,
+                    top: 7,
+                    height: 32,
+                    width: 32,
+                  },
+                }),
+              ],
+            });
       }
       function _(_) {
         return (0, _.jsx)("div", {
@@ -2124,11 +2137,7 @@
               };
             }, [_, _]));
         var _, _;
-        const _ = "number" == typeof _?.image,
-          [_] = (0, _._)(_ ? _.image : 0, {
-            include_assets: !0,
-          }),
-          _ = (0, _._)(_.type)
+        const _ = (0, _._)(_.type)
             .replace("k_ESteamNotificationType_", "")
             ?.toLowerCase(),
           _ = (0, _._)(_?.link ?? "#", _);
@@ -2147,7 +2156,6 @@
             data: _,
             timestamp: _.timestamp,
             nUnread: _.rgunread.length,
-            app: _,
             bNewIndicator: (0, _._)(_.item),
             onHide: _,
           }),
@@ -2288,9 +2296,12 @@
             { data: _ } = (0, _._)(_),
             _ = (0, _._)(_) ? _?.owner_steam_id?.GetAccountID() : null,
             { data: _ } = (0, _._)(_),
-            [_] = (0, _._)(_.json_data?.app_id, {
-              include_assets: !0,
-            }),
+            _ = _.json_data?.app_id
+              ? {
+                  appid: _.json_data?.app_id,
+                }
+              : void 0,
+            { data: _ } = (0, _._)(_),
             [_, _] = _(),
             _ = _
               ? _.FilterText(_.account_steam_id.GetAccountID(), _.title)
@@ -2318,7 +2329,7 @@
               postedByDisplayName: _?.m_strPlayerName,
               ownerDisplayName: _?.m_strPlayerName,
               bNewIndicator: (0, _._)(_.item),
-              app: _,
+              appName: _?.name,
               onHide: _,
               commentTitle: _,
               commentBody: _,
@@ -2335,8 +2346,8 @@
               onHide: _,
             } = _,
             _ = _(_),
-            [_] = (0, _._)(_.appid, {
-              include_assets: !0,
+            { data: _ } = (0, _._)({
+              appid: _.appid,
             }),
             [_, _] = (0, _.useState)(""),
             _ = (0, _._)();
@@ -2347,7 +2358,7 @@
                   _._.STORE_BASE_URL +
                     `wishlist/profiles/${_}/?wng=${_.appids.toString()}#sort=discount`,
                 );
-              if (_) return _(_.GetStorePageURL());
+              if (_) return _(_._.STORE_BASE_URL + _.store_url_path);
               const _ = _.appid ? `?appid=${_.appid}` : "";
               _(
                 _._.STORE_BASE_URL +
@@ -2362,7 +2373,6 @@
                 icon: (0, _.jsx)(_.ilR, {}),
                 onActivate: () =>
                   __webpack_require__(() => window.location.assign(_), _.item),
-                app: _,
                 location: _,
                 data: _,
                 timestamp: _.timestamp,
@@ -2509,10 +2519,7 @@
               onHide: _,
             } = _,
             _ = `${_._.COMMUNITY_BASE_URL}my/gamenotifications/`,
-            _ = _(_),
-            [_] = (0, _._)(_.appid, {
-              include_assets: !0,
-            });
+            _ = _(_);
           return (0, _.jsx)("a", {
             href: _,
             onMouseDown: (_) => __webpack_require__(() => {}, _.item, _),
@@ -2526,7 +2533,6 @@
               data: _,
               timestamp: _.timestamp,
               nUnread: _.rgunread.length,
-              app: _,
               bNewIndicator: (0, _._)(_.item),
               onHide: _,
             }),
@@ -2542,20 +2548,23 @@
             } = _,
             _ = _(_),
             { data: _ } = (0, _._)(_.responder_steamid),
-            _ = _.package_id > 0 ? _.package_id : _.bundle_id,
-            _ = _.package_id > 0 ? _._._ : _._._,
-            [_] = (0, _._)(_, _, {
-              include_basic_info: !0,
-              include_assets: !0,
-            }),
-            _ = _ ? `app/${_.GetAppID()}` : "",
+            _ =
+              _.package_id > 0
+                ? {
+                    packageid: _.package_id,
+                  }
+                : {
+                    bundleid: _.bundle_id,
+                  },
+            { data: _ } = (0, _._)(_),
+            _ = _ ? `app/${_.appid}` : "",
             _ = `${_._.STORE_BASE_URL}${_}`,
             _ = !_ || !_,
             _ = (0, _._)("#SteamNotifications_RequestedGameAddedTitle"),
             _ = _
               ? (0, _._)(
                   "#SteamNotifications_RequestedGameAddedBody",
-                  _.GetName() ?? "",
+                  _.name ?? "",
                 )
               : "";
           return (0, _.jsx)("a", {

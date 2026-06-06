@@ -3,6 +3,13 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3749],
   {
+    61593: (e) => {
+      e.exports = {
+        TrailerTitle: "_2jWguvQbMj3mHe0ytRpzNm",
+        Category: "_3oxiEsdJdYRkKvYSWGAfih",
+        Visible: "_3afqMxr7HnEfdxJwBg6GRd",
+      };
+    },
     96974: (e) => {
       e.exports = {
         TrailerPlayer: "_3LAiT6FD5iZnZ-uET79Wp5",
@@ -113,12 +120,53 @@
         Inner: "B70ft0fskXDtxOVqwbNFW",
       };
     },
-    828: (e) => {
-      e.exports = {
-        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
-        Category: "_2YhOhoyYNbue9fEPMYPiq2",
-        Visible: "_2cpBClyttSkWAsgMArc0BM",
-      };
+    54054: (e, t, n) => {
+      "use strict";
+      n.d(t, { Jh: () => h, Tw: () => c, g: () => d, hj: () => m });
+      var r = n(7850),
+        i = n(90626),
+        l = n(52038),
+        s = n(61593),
+        a = n.n(s),
+        o = n(44566),
+        u = n(55672);
+      const c = 0,
+        d = 1,
+        h = 2;
+      function m(e) {
+        const {
+            name: t,
+            trailerCategory: n,
+            trailerDisplay: s,
+            mouseOver: h,
+          } = e,
+          [m, p] = i.useState(!1);
+        if (
+          (i.useEffect(() => {
+            s != c && p(!0);
+          }, [s]),
+          i.useEffect(() => {
+            if (h) return void p(!0);
+            if (!m) return;
+            const e = setTimeout(() => p(!1), 3e3);
+            return () => clearTimeout(e);
+          }, [m, h]),
+          null == n || s == c)
+        )
+          return;
+        const f =
+          s == d
+            ? u.Z.Localize("#StoreTrailer_Title_TrailerPreview")
+            : (0, o.e)(n);
+        return (0, r.jsx)("div", {
+          className: (0, l.A)({ [a().TrailerTitle]: !0, [a().Visible]: m }),
+          children: u.Z.LocalizeReact(
+            "#StoreTrailer_Title_Combiner",
+            (0, r.jsx)("span", { className: a().Category, children: f }),
+            t,
+          ),
+        });
+      }
     },
     44566: (e, t, n) => {
       "use strict";
@@ -798,8 +846,8 @@
       }
       var O = n(54745),
         F = n.n(O);
-      const D = 3e3,
-        z = 1e3;
+      const z = 3e3,
+        D = 1e3;
       function U(e) {
         let { player: t, category: n, title: l } = e,
           s = (0, i.useRef)(null),
@@ -811,7 +859,7 @@
                 a = (0, j.BF)(t);
               (0, i.useEffect)(() => {
                 let e = s.current;
-                (s.current = !1), (!e || a) && r(!0, a ? 0 : z);
+                (s.current = !1), (!e || a) && r(!0, a ? 0 : D);
               }, [a, r, s]);
               let o = (0, i.useCallback)(
                   (e) => {
@@ -829,7 +877,7 @@
                   (t) => {
                     let i = l.current;
                     if (((l.current = null), null == i)) return;
-                    let s = a ? 0 : D;
+                    let s = a ? 0 : z;
                     t.target == i && e.current == i ? r(!n, s) : r(!0, s);
                   },
                   [r, e, a, n],
@@ -874,11 +922,11 @@
                 ref: s,
                 className: f,
                 children: [
-                  (0, r.jsx)($, { thumbnail: m }),
+                  (0, r.jsx)(Q, { thumbnail: m }),
                   (0, r.jsx)(q, {}),
                   (0, r.jsx)("div", {
                     className: _,
-                    children: (0, r.jsx)(Q, { player: t }),
+                    children: (0, r.jsx)($, { player: t }),
                   }),
                   (0, r.jsxs)("div", {
                     className: F().LowerControls,
@@ -938,7 +986,7 @@
       function q(e) {
         return (0, r.jsx)("div", { className: F().GlassBackground });
       }
-      function $(e) {
+      function Q(e) {
         let { thumbnail: t } = e,
           [n, l] = (0, i.useState)(null),
           s = (0, i.useCallback)(
@@ -975,7 +1023,7 @@
           }),
         });
       }
-      function Q(e) {
+      function $(e) {
         let { player: t } = e,
           n = (0, j.BF)(t),
           i = (0, j._8)(t),
@@ -1688,10 +1736,10 @@
         Y1: () => Y,
         zA: () => X,
         c5: () => F,
-        BI: () => D,
+        BI: () => z,
         CS: () => W,
-        tS: () => z,
-        Kf: () => $,
+        tS: () => D,
+        Kf: () => Q,
         AE: () => J,
         M$: () => O,
         Rh: () => ee,
@@ -1903,7 +1951,7 @@
             }),
           });
         });
-      function D(e) {
+      function z(e) {
         let { player: t } = e,
           [n, i] = (0, _.j_)(t),
           l = (0, f.qZ)(n, !1),
@@ -1917,7 +1965,7 @@
           ],
         });
       }
-      function z(e) {
+      function D(e) {
         let t = (0, p.ri)(),
           n = (0, p.Dy)(t, "theater");
         if (!t || !t.bSupportsTheater) return null;
@@ -1998,7 +2046,7 @@
             : null
         );
       }
-      function $(e) {
+      function Q(e) {
         let { player: t, showHoverThumb: n, onTouchSeek: s } = e,
           a = (0, i.useRef)(null),
           [o, d, h] = (0, _.j_)(t),
@@ -2148,11 +2196,11 @@
                 }),
               ],
             }),
-            (0, r.jsx)(Q, { refTimeline: a, hoverState: f, showHoverThumb: n }),
+            (0, r.jsx)($, { refTimeline: a, hoverState: f, showHoverThumb: n }),
           ],
         });
       }
-      function Q(e) {
+      function $(e) {
         let { refTimeline: t, hoverState: n, showHoverThumb: s } = e,
           a = (0, i.useRef)(null),
           [o, c] = (0, i.useState)({ nHoverLeft: 0, bFitsInParent: !1 });
@@ -2384,54 +2432,6 @@
             d: "M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z",
             fill: "currentColor",
           }),
-        });
-      }
-    },
-    46253: (e, t, n) => {
-      "use strict";
-      n.d(t, { Jh: () => h, Tw: () => c, g: () => d, hj: () => m });
-      var r = n(7850),
-        i = n(90626),
-        l = n(52038),
-        s = n(61859),
-        a = n(828),
-        o = n.n(a),
-        u = n(44566);
-      const c = 0,
-        d = 1,
-        h = 2;
-      function m(e) {
-        const {
-            name: t,
-            trailerCategory: n,
-            trailerDisplay: a,
-            mouseOver: h,
-          } = e,
-          [m, p] = i.useState(!1);
-        if (
-          (i.useEffect(() => {
-            a != c && p(!0);
-          }, [a]),
-          i.useEffect(() => {
-            if (h) return void p(!0);
-            if (!m) return;
-            const e = setTimeout(() => p(!1), 3e3);
-            return () => clearTimeout(e);
-          }, [m, h]),
-          null == n || a == c)
-        )
-          return;
-        const f =
-          a == d
-            ? (0, s.we)("#StoreTrailer_Title_TrailerPreview")
-            : (0, u.e)(n);
-        return (0, r.jsx)("div", {
-          className: (0, l.A)({ [o().TrailerTitle]: !0, [o().Visible]: m }),
-          children: (0, s.PP)(
-            "#StoreTrailer_Title_Combiner",
-            (0, r.jsx)("span", { className: o().Category, children: f }),
-            t,
-          ),
         });
       }
     },

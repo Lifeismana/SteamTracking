@@ -36,6 +36,7 @@
         m_mapManualRecordingCallbacks = new Map();
         m_fnGetAchievementInfo;
         m_strLastClipID;
+        m_bEnableH265Recording = !1;
         m_transport;
         m_bLoadingClips = !0;
         m_bLoadingAppsWithBackgroundVideo = !0;
@@ -63,11 +64,28 @@
               _._.RegisterForNotifyClipCreated(this.OnClipCreated),
               _._.RegisterForNotifyExportProgress(this.OnExportProgress),
               _._.RegisterForNotifyLowDiskSpace(this.OnLowDiskSpace),
+              _._.RegisterForNotifyStateChanged(this.OnStateChanged),
               await this.LoadAppsWithBackgroundVideo(),
-              await this.CheckEnoughDiskSpace());
+              await this.CheckEnoughDiskSpace(),
+              await this.UpdateState());
+        }
+        async UpdateState() {
+          const _ = await _._.GetState({});
+          if (!_.BSuccess())
+            return void console.warn(
+              "Failed to initialize game recording state",
+            );
+          const _ = _.Body().toObject();
+          this.m_bEnableH265Recording = _?.is_h265_enabled ?? !1;
+        }
+        OnStateChanged() {
+          return this.UpdateState(), _._;
         }
         GetAppsWithBackgroundVideo() {
           return this.m_rgAppsWithBackgroundVideo;
+        }
+        IsGameRecordingH265Enabled() {
+          return this.m_bEnableH265Recording;
         }
         GetTimelineLoaderForGame(_) {
           (0, _._)(_, "Invalid GameID: " + _);
@@ -731,6 +749,7 @@
         (0, _._)([_._], _.prototype, "m_currentlyExportingClip", void 0),
         (0, _._)([_._], _.prototype, "m_recordingState", void 0),
         (0, _._)([_._], _.prototype, "m_bEnoughDiskSpace", void 0),
+        (0, _._)([_._], _.prototype, "OnStateChanged", null),
         (0, _._)([_._], _.prototype, "GetTimelineLoaderForGame", null),
         (0, _._)([_._], _.prototype, "GetTimelineLoaderForClip", null),
         (0, _._)([_._], _.prototype, "GetTimelineLoaderForSharedClip", null),

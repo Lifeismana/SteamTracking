@@ -47,6 +47,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 84259, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 24475, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 60580, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 36884, 19))),
         (_.polish = () =>
@@ -217,55 +219,6 @@
         PerHour: 3600,
         PerMinute: 60,
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)(_(_.GetAnonymousServiceTransport(), _, _));
-      }
-      function _(_, _, _) {
-        return {
-          queryKey: ["LocalizedTagNames", _],
-          queryFn: async () => {
-            const _ = `LocalizedTagNames2_${_}`,
-              _ = await _.GetObject(_),
-              _ = _._.Init(_._);
-            _.Body().set_language(_),
-              _?.version_hash && _.Body().set_have_version_hash(_.version_hash);
-            const _ = await _._.GetTagList(_, _);
-            let _;
-            if (_.GetEResult() == _._)
-              (_ = _.Body().toObject()), _ && _.StoreObject(_, _);
-            else if (_.GetEResult() == _._) _ = _ || void 0;
-            else {
-              if (!_) throw _.GetErrorMessage();
-              console.warn(
-                "Couldn't load updated tag localization, will continue with what we have from storage.",
-              ),
-                (_ = _);
-            }
-            const _ = {};
-            return (
-              (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _
-            );
-          },
-          staleTime: 36e5,
-        };
-      }
-      function _(_, _) {
-        const { data: _ } = _(_);
-        return _ && _[_];
-      }
     },
   },
 ]);

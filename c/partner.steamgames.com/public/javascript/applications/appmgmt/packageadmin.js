@@ -105,6 +105,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 85629, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 69493, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 93750, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 8982, 19))),
         (_.polish = () =>
@@ -304,6 +306,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 210, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 77850, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 45281, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 73522, 19))),
         (_.polish = () =>

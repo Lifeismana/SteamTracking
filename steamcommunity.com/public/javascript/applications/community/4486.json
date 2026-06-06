@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Розмістити замовлення:",
     "Button_Close": "Закрити",
     "Search_ListingQuantity": "Кількість для продажу: %1$s",
+    "Search_ListingQuantity_Abbreviation": "К-ть: %1$s",
     "Bucket_PriceFrom": "Від %1$s",
     "AccessorySearch_AttachedAccessoryType": "Прикріплено: %1$s",
     "FilterResults_Placeholder": "Фільтрувати результати…",

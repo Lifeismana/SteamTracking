@@ -1619,15 +1619,14 @@
                               .slice(0, _)
                               .map((_) => {
                                 const _ = _
-                                    ? (_) => {
-                                        _(_),
-                                          _.stopPropagation(),
-                                          _.preventDefault();
-                                      }
-                                    : void 0,
-                                  _ = _._;
+                                  ? (_) => {
+                                      _(_),
+                                        _.stopPropagation(),
+                                        _.preventDefault();
+                                    }
+                                  : void 0;
                                 return (0, _.jsx)(
-                                  _,
+                                  _._,
                                   {
                                     event: _,
                                     onClick: _,
@@ -4541,7 +4540,7 @@
           children: (0, _.jsx)(_._, {
             mode: "JustLoad",
             horizontal: !0,
-            holdGampadFocus: !0,
+            holdGamepadFocus: !0,
             children: (0, _.jsx)(_._, {
               dashManifests: _.dashManifests,
               hlsManifest: _.hlsManifest,
@@ -5724,6 +5723,8 @@
           __webpack_require__._("chunkid").then(_._.bind(_, 51495, 19))),
         (_.latam = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 1871, 19))),
+        (_.malay = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 80160, 19))),
         (_.norwegian = () =>
           __webpack_require__._("chunkid").then(_._.bind(_, 70176, 19))),
         (_.polish = () =>

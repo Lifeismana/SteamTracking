@@ -9,8 +9,17 @@ input {
 }
 
 .forum_responsive_newtopic_action {
-	margin: 8px 0;
+	margin-block: 10px;
 	text-align: right;
+}
+
+/* Hide extra controls */
+@media screen and not (max-width: 910px)
+{
+	html.responsive.touch:not(.GamepadMode) div.nonresponsive_hidden.forumselector,
+	html.responsive.touch:not(.GamepadMode) div.nonresponsive_hidden.forum_responsive_newtopic_action {
+		display: none;
+	}
 }
 
 .forum_newtopic_header {
@@ -143,8 +152,7 @@ textarea.forumtopic_reply_textarea {
 	height: 48px;
 	background-color: rgba( 84, 133, 183, 0.4);
 	margin-bottom: 2px;
-	padding-right: 15px;
-	padding-left: 5px;
+	padding-inline: 5px 15px;
 }
 
 .forum_topic_overlay {
@@ -1258,11 +1266,9 @@ a.forum_comment_action:hover {
 	float: right;
 }
 
-.discussion_search_pagingcontrols .pagebtn {
-	height: 15px;
-	line-height: 15px;
+#DiscussionSearchForm {
+	margin-bottom: 10px;
 }
-
 
 .discussionSearchTextContainer
 {
@@ -1270,9 +1276,21 @@ a.forum_comment_action:hover {
 	background-repeat: no-repeat;
 	height: 46px;
 	margin: 0;
-	padding: 0;
 	position: relative;
-	width: 296px;
+	width: calc( min( 100%, 296px ) - 40px );
+}
+
+/* Gross hack to allow container to shrink in width; really this background should be done fully in CSS */
+.discussionSearchTextContainer::before
+{
+	background-image: url(https://community.fastly.steamstatic.com/public/images/sharedfiles/ig/searchbox_workshop_bg_wide_blue.png?v=1);
+	background-position: right;
+	content: '';
+	height: 46px;
+	position: absolute;
+	right: -40px;
+	width: 40px;
+	z-index: 0;
 }
 
 input.discussionSearchText
@@ -1285,7 +1303,7 @@ input.discussionSearchText
 	box-shadow: none;
 	top:13px;
 	left:12px;
-	width: 244px;
+	width: calc( 100% - 12px);
 	height: 20px;
 	background-color:transparent;
 }
@@ -1304,7 +1322,7 @@ input.discussionSearchText:-moz-placeholder {
 {
 	position:absolute;
 	top:14px;
-	left:260px;
+	right:-27px;
 	width:23px;
 	height:18px;
 	padding:0;
@@ -2075,32 +2093,34 @@ select.subforum_select_control {
 	}
 }
 
-.responsive_tab_ctn.forumselector:not(.sharedfiles_responsive_tab) {
-	margin-bottom: 8px;
-	text-align: center;
+.forumselector .responsive_tab_control {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	justify-content: center;
 }
 
-.responsive_tab_ctn.forumselector label {
-	margin-right: 4px;
-	line-height: 25px;
+.forumselector label {
 	color: #ffffff;
+	line-height: 25px;
+	margin-inline-start: 1%;
 }
 
-.responsive_tab_ctn.forumselector .formselector_select_ctn {
-	overflow: hidden;
-	display: inline;
-	padding-bottom: 1px;
+.forumselector.sharedfiles_responsive_tab label {
+	display: none;
 }
 
-.responsive_tab_ctn.forumselector:not(.sharedfiles_responsive_tab) .formselector_select_ctn select {
+.forumselector:not(.sharedfiles_responsive_tab) .formselector_select_ctn select {
+	appearance: none;
+	background-image: url( 'https://community.fastly.steamstatic.com/public/images/mobile/dropdown_30.png' );
+	background-position: top 8px right 6px;
+	background-repeat: no-repeat;
+	background-size: 15px;
 	box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.3);
 	height: 32px;
-	max-width: 99%;
-	padding: 6px;
-}
-
-.discussions_page .responsive_tab_baseline {
-	margin-bottom: 8px;
+	padding: 6px 27px 6px 6px;
+	text-overflow: ellipsis;
 }
 
 h2.forum_modal_detailtitle {
@@ -2111,25 +2131,13 @@ h2.forum_modal_detailtitle {
 
 @media screen and (max-width: 480px)
 {
-	.responsive_tab_ctn.forumselector {
-		text-align: left;
-		margin-bottom: 8px;
+	.forumselector .formselector_select_ctn {
+		flex: 1 0 0;
 	}
 
-	.responsive_tab_ctn.forumselector label {
-		float: left;
-	}
-
-	.responsive_tab_ctn.forumselector:not(.sharedfiles_responsive_tab) {
-		padding: 0 2%;
-	}
-
-	.responsive_tab_ctn.forumselector .formselector_select_ctn {
-		display: block;
-	}
-
-	.responsive_tab_ctn.forumselector .formselector_select_ctn select {
-		width: 99%;
+	.forumselector .formselector_select_ctn select {
+		max-width: unset;
+		width: 100%;
 	}
 }
 
@@ -2146,7 +2154,7 @@ h2.forum_modal_detailtitle {
 
 	.forum_op {
 		max-width: none;
-        background: linear-gradient(155deg, #425174, transparent);
+		background: linear-gradient(155deg, #425174, transparent);
 		padding: 11px;
 	}
 

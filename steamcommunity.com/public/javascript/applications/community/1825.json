@@ -59,6 +59,7 @@
     "BuyOrder_PlaceOrderHeader": "Złóż zamówienie:",
     "Button_Close": "Zamknij",
     "Search_ListingQuantity": "Ilość na sprzedaż: %1$s",
+    "Search_ListingQuantity_Abbreviation": "Liczba: %1$s",
     "Bucket_PriceFrom": "Od: %1$s",
     "AccessorySearch_AttachedAccessoryType": "%1$s na broni",
     "FilterResults_Placeholder": "Filtruj wyniki…",
