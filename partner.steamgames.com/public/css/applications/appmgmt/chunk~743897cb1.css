@@ -5129,8 +5129,8 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   background-color: var(--fancy-table-even-row-background, #666);
 }
 :where(._3m5AH2HSnsvjImS7uUpvxv):not(
-    :nth-last-child(1 of ._3m5AH2HSnsvjImS7uUpvxv)
-  ) {
+  :nth-last-child(1 of ._3m5AH2HSnsvjImS7uUpvxv)
+) {
   border-right: var(--fancy-table-cell-border, 1px solid #aaa);
 }
 :where(._3m5AH2HSnsvjImS7uUpvxv) input {

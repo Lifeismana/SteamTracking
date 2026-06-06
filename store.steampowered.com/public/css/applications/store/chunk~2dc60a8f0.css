@@ -840,11 +840,11 @@
   color: var(--color-accent-11);
 }
 ._0BH1ydyFmSnUvoVK2hIc:where(.RmQIHBmo3QqjBtWih540t):where(
-    [data-accent-color="greyneutral"]
-  ),
+  [data-accent-color="greyneutral"]
+),
 ._0BH1ydyFmSnUvoVK2hIc:where(.RmQIHBmo3QqjBtWih540t):where(
-    [data-dull-color="greyneutral"] [data-accent-color="dull"]
-  ) {
+  [data-dull-color="greyneutral"] [data-accent-color="dull"]
+) {
   --background: rgb(from var(--color-accent-3) r g b / 50%);
   --hover-background: rgb(from var(--color-accent-6) r g b / 50%);
   color: var(--color-accent-11);
@@ -883,20 +883,20 @@
   margin: 0;
 }
 :where(._3A_c3YHYd4YIjA8Y-olnPl):where(
-    address,
-    b,
-    cite,
-    code,
-    dfn,
-    em,
-    i,
-    kbd,
-    q,
-    samp,
-    small,
-    strong,
-    var
-  ) {
+  address,
+  b,
+  cite,
+  code,
+  dfn,
+  em,
+  i,
+  kbd,
+  q,
+  samp,
+  small,
+  strong,
+  var
+) {
   font: unset;
 }
 :where(._3A_c3YHYd4YIjA8Y-olnPl):where(h1, h2, h3, h4, h5, h6) {
@@ -908,17 +908,17 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 :where(._3A_c3YHYd4YIjA8Y-olnPl):where(
-    button,
-    select,
-    [type="button"],
-    [type="image"],
-    [type="reset"],
-    [type="submit"],
-    [type="checkbox"],
-    [type="color"],
-    [type="radio"],
-    [type="range"]
-  ) {
+  button,
+  select,
+  [type="button"],
+  [type="image"],
+  [type="reset"],
+  [type="submit"],
+  [type="checkbox"],
+  [type="color"],
+  [type="radio"],
+  [type="range"]
+) {
   all: unset;
   display: inline-block;
   font-weight: normal;
@@ -935,18 +935,18 @@
   text-align: start;
 }
 :where(._3A_c3YHYd4YIjA8Y-olnPl):where(
-    textarea,
-    input:not(
-        [type="button"],
-        [type="image"],
-        [type="reset"],
-        [type="submit"],
-        [type="checkbox"],
-        [type="color"],
-        [type="radio"],
-        [type="range"]
-      )
-  ) {
+  textarea,
+  input:not(
+    [type="button"],
+    [type="image"],
+    [type="reset"],
+    [type="submit"],
+    [type="checkbox"],
+    [type="color"],
+    [type="radio"],
+    [type="range"]
+  )
+) {
   all: unset;
   display: block;
   width: stretch;

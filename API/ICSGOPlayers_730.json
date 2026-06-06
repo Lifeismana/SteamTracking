@@ -25,25 +25,6 @@
                     "description": "Previously known match sharing code obtained from the SteamID"
                 }
             ]
-        },
-        {
-            "name": "GetPlayerProfileCoin",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "steamid",
-                    "type": "uint64",
-                    "optional": false,
-                    "description": "The steam ID"
-                },
-                {
-                    "name": "coin",
-                    "type": "string",
-                    "optional": false,
-                    "description": "The coin"
-                }
-            ]
         }
     ]
 }

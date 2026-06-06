@@ -23584,8 +23584,8 @@ a {
   }
 }
 .YWN38VK0HL431KtRQHDAQ:not(
-    ._13mSmeKzKRw0Wsg8NNYVUL
-  ).giqX0jDBNCswHushecQaS:hover {
+  ._13mSmeKzKRw0Wsg8NNYVUL
+).giqX0jDBNCswHushecQaS:hover {
   background-color: radial-gradient(
     155.42% 100% at 0% 0%,
     #1f2a39 0 0%,
@@ -23594,8 +23594,8 @@ a {
 }
 @media (prefers-contrast: more) {
   .YWN38VK0HL431KtRQHDAQ:not(
-      ._13mSmeKzKRw0Wsg8NNYVUL
-    ).giqX0jDBNCswHushecQaS:hover {
+    ._13mSmeKzKRw0Wsg8NNYVUL
+  ).giqX0jDBNCswHushecQaS:hover {
     background: #fff;
     color: #000;
   }
@@ -24466,8 +24466,8 @@ a {
 ._15qhiDvzm187LHZ9AFNU4r._2CiVWF0JB-e4gyt1csf70E,
 ._15qhiDvzm187LHZ9AFNU4r._2CiVWF0JB-e4gyt1csf70E:hover,
 ._15qhiDvzm187LHZ9AFNU4r._2CiVWF0JB-e4gyt1csf70E:not(
-    .bTXaVNbFpqOw2m_mfGH0U
-  ):hover {
+  .bTXaVNbFpqOw2m_mfGH0U
+):hover {
   background-color: #23262e;
 }
 ._15qhiDvzm187LHZ9AFNU4r:hover:not(.bTXaVNbFpqOw2m_mfGH0U) {
@@ -25083,8 +25083,8 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
 .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocuswithin.DesktopUI,
 .DesktopUI .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocuswithin,
 .BBGW4g_bAleGAh0nqq6HQ._2fjtlKRYdfL4AziOC_ErX8:not(
-    .kT2ghJ9pXp3Ca8udV1LFN
-  ):hover.DesktopUI,
+  .kT2ghJ9pXp3Ca8udV1LFN
+):hover.DesktopUI,
 .DesktopUI
   .BBGW4g_bAleGAh0nqq6HQ._2fjtlKRYdfL4AziOC_ErX8:not(
     .kT2ghJ9pXp3Ca8udV1LFN
@@ -25094,8 +25094,8 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
 .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocus,
 .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocuswithin,
 .BBGW4g_bAleGAh0nqq6HQ._2fjtlKRYdfL4AziOC_ErX8:not(
-    .kT2ghJ9pXp3Ca8udV1LFN
-  ):hover {
+  .kT2ghJ9pXp3Ca8udV1LFN
+):hover {
   outline: none;
   background: #3d4450;
   color: #fff;
@@ -25145,8 +25145,8 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
 .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocuswithin.DesktopUI::after,
 .DesktopUI .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocuswithin::after,
 .BBGW4g_bAleGAh0nqq6HQ._2fjtlKRYdfL4AziOC_ErX8:not(
-    .kT2ghJ9pXp3Ca8udV1LFN
-  ):hover.DesktopUI::after,
+  .kT2ghJ9pXp3Ca8udV1LFN
+):hover.DesktopUI::after,
 .DesktopUI
   .BBGW4g_bAleGAh0nqq6HQ._2fjtlKRYdfL4AziOC_ErX8:not(
     .kT2ghJ9pXp3Ca8udV1LFN
@@ -25156,8 +25156,8 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
 .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocus::after,
 .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocuswithin::after,
 .BBGW4g_bAleGAh0nqq6HQ._2fjtlKRYdfL4AziOC_ErX8:not(
-    .kT2ghJ9pXp3Ca8udV1LFN
-  ):hover::after {
+  .kT2ghJ9pXp3Ca8udV1LFN
+):hover::after {
   display: none;
 }
 .BBGW4g_bAleGAh0nqq6HQ.vOOfL0F_B20-1KOPB8jfY.gpfocus,
@@ -25174,8 +25174,8 @@ button._32WBlTIPR8mTZ8vqxHQ44C.DialogButton:enabled:active:hover:before {
   cursor: pointer;
 }
 .BBGW4g_bAleGAh0nqq6HQ.DesktopUI._2fjtlKRYdfL4AziOC_ErX8:not(
-    .kT2ghJ9pXp3Ca8udV1LFN
-  ),
+  .kT2ghJ9pXp3Ca8udV1LFN
+),
 .DesktopUI
   .BBGW4g_bAleGAh0nqq6HQ._2fjtlKRYdfL4AziOC_ErX8:not(.kT2ghJ9pXp3Ca8udV1LFN) {
   cursor: default;
@@ -25941,8 +25941,8 @@ dialog._2PlgGFAdWD_fQ4F_085MRm::backdrop {
 ._2syihQbUx8n2mONxnPBJHR._1DIL_NIWlDnLMSeL0S4wsk,
 ._2syihQbUx8n2mONxnPBJHR._1DIL_NIWlDnLMSeL0S4wsk:hover,
 ._2syihQbUx8n2mONxnPBJHR._1DIL_NIWlDnLMSeL0S4wsk:not(
-    ._3Qg3hSFqiaZmoSyn1zhZrK
-  ):hover {
+  ._3Qg3hSFqiaZmoSyn1zhZrK
+):hover {
   color: #414141;
   cursor: default;
 }
