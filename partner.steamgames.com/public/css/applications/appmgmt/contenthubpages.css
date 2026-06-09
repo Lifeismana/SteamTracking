@@ -514,6 +514,10 @@ img {
   border: 1px solid red;
   padding: 2px;
 }
+:where(._2YzOLNBx6TonKU0Zmp20l4) {
+  display: block;
+  box-sizing: border-box;
+}
 ._3NvasCX7YWBZpC8aibkm0E {
   margin-top: var(--spacing-0);
   margin-right: var(--spacing-0);
@@ -1269,9 +1273,8 @@ img {
 :where(._1xbvB3MqxnugiXxR02dPOx) {
   text-align: var(--text-align);
 }
-._2YzOLNBx6TonKU0Zmp20l4 {
-  display: block;
-  box-sizing: border-box;
+:where(._1OB-pyw07DhYE8iZusGAjg) {
+  aspect-ratio: var(--aspect-ratio);
 }
 ._1PUg8GjnBeN7rBK-dcyQFl:focus-visible {
   outline: none;
@@ -1462,7 +1465,7 @@ img {
   --line-height: var(--line-height-4);
   --letter-spacing: var(--letter-spacing-4);
 }
-._3nHL7awgK1Qei1XivGvHMK {
+:where(._3nHL7awgK1Qei1XivGvHMK) {
   box-sizing: border-box;
   display: flex;
 }

@@ -273,9 +273,10 @@
         StoreSaleWidgetRight: "v9uRg57bwOaPsvAnkXESO",
         StoreSaleWidgetHalfLeft: "_111nfdz8Xyg7lDjTWv_OmK",
         StoreSaleWidgetTitle: "_2ekpT6PjwtcFaT4jLQehUK",
-        StoreSaleDiscountBox: "cnkoFkzVCby40gJ0jGGS4",
         StoreSaleWidgetLibraryAssetExtendedTop: "_1uLNByMlXsYSmrGPWyDNhE",
         StoreSaleWidgetLeft: "_3DkfNrtTOLjNYd3yZliMzy",
+        StoreSaleDiscountBox: "cnkoFkzVCby40gJ0jGGS4",
+        PurchaseOption: "_2R_C2rCrJEg8G8_d7-QQKn",
         StoreSaleWidgetImage: "yvqq8z2k4i7-Mzx-JHeNC",
         CapsuleMicroTrailer: "_1M7n5f3gWCHv1wN1smoxWg",
         CapsulePlatform: "_2bCf9u4rlC8De687HY6wnh",
@@ -319,9 +320,9 @@
         Action: "_2zssEuiPfY5YdQlnihDfVD",
         Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
         WishList: "_1djkdp7OAd0mF3a90RKf27",
+        StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
         SingleLineMode: "_1ZlGJxv-xQaABSvaVvMlNq",
         StoreSaleDiscountedPriceCtn: "_3NhLu7mTdty7JufpSpz6Re",
-        StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
         StoreSaleNewItem: "_2_KY_e11FV0ftXR2_7TMmP",
         StoreOriginalPrice: "_3fFFsvII7Y2KXNLDk_krOW",
         PrePurchase: "_2f7BMv_bJMTrHmaOF8B3Ws",
@@ -8388,29 +8389,44 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const { _: _, bSelfPurchaseOption: _ } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = _ && _.item_type == _._._ ? _.self_purchase_option : _;
+        return (0, _.jsx)(_, {
+          purchaseOption: _,
+          ..._,
+        });
+      }
+      function _(_) {
         const {
             bSingleLineMode: _,
-            _: _,
             onlyOneDiscountPct: _,
+            _: _,
+            purchaseOption: _,
             bHidePrePurchase: _,
             bHideReleaseDate: _,
             bHideIfDemo: _,
+            bPurchaseOptionDisplay: _,
             strContainerClassName: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
             bPreferWholeNumbers: _,
+            bSelfPurchaseOption: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (0, _._)(_, _),
+        const _ = _,
+          _ = (0, _._)(_, _),
           _ = (0, _._)({
             [_().StoreSalePriceWidgetContainer]: !0,
             [_().SingleLineMode]: _,
             StoreSalePriceWidgetContainer: !0,
             [_().NewItem]: _,
+            [_().PurchaseOption]: _,
             [_ ?? ""]: !!_,
           });
         if (_.bShowInLibrary)
@@ -8504,9 +8520,7 @@
           nDiscountPercentage: _,
           bIsPrePurchase: _,
           strBestPurchaseOriginalPriceFormatted:
-            _.formatted_price_before_bundle_discount ||
-            _.formatted_original_price ||
-            "",
+            _.formatted_original_price || "",
           strBestPurchasePriceFormatted: _,
           bHideDiscountPercentForCompliance: Boolean(
             _.hide_discount_pct_for_compliance,
@@ -8515,6 +8529,7 @@
           bHidePrePurchase: Boolean(_),
           strDiscountAndPriceClassName: _,
           strPriceFormattedClassName: _,
+          bPurchaseOptionDisplay: _,
         });
       }
       function _(_) {
@@ -8530,6 +8545,7 @@
             bHidePrePurchase: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
+            bPurchaseOptionDisplay: _,
           } = _,
           _ = _;
         let _;
@@ -8547,6 +8563,7 @@
               Discounted: Boolean(_),
               [_().PrePurchase]: Boolean(_),
               [_().NewItem]: Boolean(_),
+              [_().PurchaseOption]: _,
               [_ ?? ""]: !!_,
             }),
             "aria-label": _,
@@ -8581,7 +8598,7 @@
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("span", {
-                            children: "+ ",
+                            children: " ",
                           }),
                           (0, _.jsx)(_._, {
                             toolTipContent: _._.Localize(
@@ -8922,22 +8939,33 @@
           controls: !1,
           autoPlay: !0,
           ref: _,
+          playsInline: !0,
           onTimeUpdate: (_) => {
             _.current = _.currentTarget.currentTime;
           },
-          children: _.microtrailer?.map((_) =>
-            _._.IN_CLIENT && "video/mp4" == _.type
-              ? null
-              : (0, _.jsx)(
-                  "source",
-                  {
-                    src: (0, _._)(_, _.filename || ""),
-                    type: _.type,
-                  },
-                  _.filename,
-                ),
-          ),
+          children: (0, _.jsx)(_, {
+            trailer: _,
+          }),
         });
+      }
+      function _(_) {
+        const { trailer: _ } = _;
+        return _ && _.microtrailer
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.microtrailer?.map((_) =>
+                _._.IN_CLIENT && "video/mp4" == _.type
+                  ? null
+                  : (0, _.jsx)(
+                      "source",
+                      {
+                        src: (0, _._)(_, _.filename || ""),
+                        type: _.type,
+                      },
+                      _.filename,
+                    ),
+              ),
+            })
+          : null;
       }
       !(function (_) {
         (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
@@ -9185,6 +9213,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      async function _(_, _) {
+        const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+          _ = await fetch(_);
+        return (await _.json()).rgOwnedApps || [];
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -9196,11 +9229,7 @@
               queryKey: _(_),
               queryFn: async () => {
                 if (!_) return new Set();
-                const _ = await (async function (_, _) {
-                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgOwnedApps || [];
-                })(0, _);
+                const _ = await _(0, _);
                 return new Set(_);
               },
               staleTime: 6e5,
@@ -9208,9 +9237,24 @@
           })(0, _),
         );
       }
+      function _(_, _, _) {
+        return {
+          queryKey: ["AccountOwnsApp", _, _],
+          queryFn: async () => {
+            if (!_) return !1;
+            const _ = await (async function (_, _, _) {
+              return (await _(0, _)).includes(_);
+            })(0, _, _);
+            return _;
+          },
+          staleTime: 6e5,
+        };
+      }
       function _(_) {
-        const { data: _ } = _();
-        return void 0 === _ ? void 0 : _.has(_);
+        (0, _._)();
+        const _ = _._.accountid,
+          { data: _ } = (0, _._)(_(0, _, _));
+        return void 0 === _ ? void 0 : _;
       }
       function _(_) {
         const _ = (0, _._)(),
@@ -9576,24 +9620,27 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       async function _(_, _) {
+        const _ = "steam://run/" + _;
         _._.IN_CLIENT
           ? (console.log(`Running game ${_} locally.`),
-            (window.location.href = "steam://run/" + _))
+            (window.location.href = _))
           : (console.log(
               `Cannot identify local client. Prompting user to launch ${_}.`,
             ),
-            (async function (_, _) {
-              console.log("prompting for", _);
-              const _ = _._.STORE_BASE_URL + "about/";
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  appid: _,
-                  strGameName: _ || "",
-                  strDownloadSteamUrl: _,
-                }),
-                window,
-              );
-            })(_, _));
+            _(_, _, _));
+      }
+      async function _(_, _, _) {
+        console.log("prompting for", _);
+        const _ = _._.STORE_BASE_URL + "about/";
+        (0, _._)(
+          (0, _.jsx)(_, {
+            appid: _,
+            strGameName: _ || "",
+            strOnOKUrl: _,
+            strDownloadSteamUrl: _,
+          }),
+          window,
+        );
       }
       const _ = (_) => {
         const _ = () => _.closeModal && _.closeModal();
@@ -9625,7 +9672,7 @@
                     className: _().Buttons,
                     children: [
                       (0, _.jsxs)("a", {
-                        href: "steam://run/" + _.appid,
+                        href: _.strOnOKUrl,
                         onClick: _,
                         className: (0, _._)(_().Button, _().LeftButton),
                         children: [
@@ -12742,7 +12789,10 @@
               : console.error(
                   "Neither a package nor bundle ID were provided with an item in AddItemsToAccountCart",
                 ),
-            _.bIsGift && _.flags(!0).set_is_gift(!0);
+            _.bIsGift &&
+              (_.flags(!0).set_is_gift(!0),
+              _.nAccountIDGiftee &&
+                _.gift_info(!0).set_accountid_giftee(_.nAccountIDGiftee));
         }),
           _ && _.Body().set_navdata(_.fromObject((0, _._)(_))),
           _.Body().set_user_country(_);
@@ -12822,7 +12872,7 @@
       function _(_, _, _) {
         _.setQueryData(_(_), _), _(_);
       }
-      function _(_, _, _, _) {
+      function _(_, _, _, _, _) {
         const _ = _(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -12834,20 +12884,15 @@
             if (!_ && !_) throw "nPackageID or nBundleID must be passed.";
             let _;
             if (_(_)) {
-              const [_, _] = await (async function (_, _, _, _, _, _) {
-                return _(
-                  _,
-                  _,
-                  [
-                    {
-                      packageid: _,
-                      bundleid: _,
-                      bIsGift: _,
-                    },
-                  ],
-                  _,
-                );
-              })(_, _, _, _, _, _);
+              const _ = {
+                  packageid: _,
+                  bundleid: _,
+                  bIsGift: _,
+                  nAccountIDGiftee: _,
+                },
+                [_, _] = await (async function (_, _, _, _) {
+                  return _(_, _, [_], _);
+                })(_, _, _, _);
               if (_ != _._) throw `AddToAccountCart failed with ${_}`;
               (_ = _.line_item_ids), _(_, _, _.cart);
             } else {
@@ -13222,7 +13267,7 @@
             storeItemDefaultData: _,
           } = _,
           _ = (0, _._)(),
-          { mutate: _ } = _(_?.packageid, _?.bundleid, !1, _.feature);
+          { mutate: _ } = _(_?.packageid, _?.bundleid, !1, void 0, _.feature);
         return (0, _.jsx)("div", {
           className: (0, _._)(_().Action, _),
           onClick: () => _(),
@@ -13632,6 +13677,7 @@
             children: _,
             bSkipForcingStoreLink: _,
             bOpenInline: _,
+            bFocusable: _ = !0,
           } = _,
           _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
           _ = (0, _._)(_);
@@ -13642,6 +13688,7 @@
               className: _,
               style: _,
               rel: "noopener noreferrer",
+              focusable: _,
               children: _,
             })
           : (0, _.jsx)("span", {

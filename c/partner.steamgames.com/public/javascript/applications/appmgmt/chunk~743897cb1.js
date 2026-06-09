@@ -24039,6 +24039,7 @@
           captionManifest: _,
           screenshot: _,
           forcePause: _,
+          onPlaybackStart: _,
           onPlaybackEnd: _,
           onPlayPauseChange: _,
           onMuteChange: _,
@@ -24183,7 +24184,11 @@
           })(_, !!_),
           _ = _ ? void 0 : _,
           _ = {};
-        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
+        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+        let _ = (0, _._)(() => _.IsBuffering());
+        _.useEffect(() => {
+          _ || (_ && _());
+        }, [_, _]),
           _.use(_._.Ready());
         let _ = (0, _._)(_().TrailerPlayer, _);
         return (0, _.jsxs)("div", {
@@ -26828,22 +26833,19 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest(_ = !0) {
-          const _ = "nextfest",
-            _ = this.jsondata.sale_vanity_id?.toLowerCase(),
+        BIsNextFest(_ = !1) {
+          const _ = this.jsondata.sale_vanity_id?.toLowerCase(),
             _ = new _._(this.clanSteamID).GetAccountID();
           return (
             !(!_ || _ != _._) &&
-            (_
-              ? __webpack_require__.startsWith(_)
-              : __webpack_require__.startsWith(_) &&
-                !__webpack_require__.includes("prev"))
+            !!_.startsWith("nextfest") &&
+            (!_ || (!_.endsWith("preview") && !_.endsWith("press")))
           );
         }
         BShowNextFestHeader(_) {
           return _ && _._.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }

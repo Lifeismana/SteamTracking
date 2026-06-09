@@ -85,7 +85,7 @@
     },
     53965: (e, n, t) => {
       "use strict";
-      t.d(n, { $: () => x, v: () => f });
+      t.d(n, { $: () => g, v: () => x });
       var i = t(7850),
         s = t(64238),
         o = t.n(s),
@@ -141,12 +141,12 @@
         { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
         { prop: "variant", className: (e) => d[`Variant-${e}`] },
       ];
-      var S = t(45699),
-        b = t(8527);
+      var b = t(45699),
+        S = t(8527);
       function C(e) {
         e.preventDefault();
       }
-      const g = [
+      const f = [
           ...a.L,
           { prop: "size", responsive: !0, className: (e) => r[`Size-${e}`] },
           { prop: "variant", className: (e) => r[`Variant-${e}`] },
@@ -164,7 +164,7 @@
             responsive: !0,
           },
         ],
-        x = function (e) {
+        g = function (e) {
           const {
               variant: n = "default",
               size: t = "2",
@@ -174,10 +174,11 @@
               children: d,
               onClick: h,
               icon: p,
-              gamepadFocusable: m = !0,
-              ..._
+              focusable: m,
+              navProps: _,
+              ...C
             } = e,
-            C = l
+            g = l
               ? (0, i.jsx)(u, {
                   size: t,
                   color: a,
@@ -186,77 +187,76 @@
                 })
               : d,
             x = l ? void 0 : h,
-            f = m && b.TS.IN_GAMEPADUI ? S.fu : "button";
-          return (0, i.jsx)(f, {
-            type: "button",
-            ...(0, c.mz)(
-              {
-                ..._,
-                variant: n,
-                size: t,
-                minWidth: s,
-                color: a,
-                className: o()(r.Button, p && r.Icon),
-                onClick: x,
-              },
-              g,
-            ),
-            children: C,
-          });
+            v = m ?? _?.focusable ?? !!x,
+            I = {
+              type: "button",
+              ...(0, c.mz)(
+                {
+                  ...C,
+                  variant: n,
+                  size: t,
+                  minWidth: s,
+                  color: a,
+                  className: o()(r.Button, p && r.Icon),
+                  onClick: x,
+                },
+                f,
+              ),
+              children: g,
+            };
+          return S.TS.IN_GAMEPADUI && (v || _)
+            ? (0, i.jsx)(b.fu, { ...I, ...(_ || {}), focusable: v })
+            : (0, i.jsx)("button", { ...I });
         },
-        f = function (e) {
+        x = function (e) {
           const {
               variant: n = "default",
               size: t = "2",
               minWidth: s = "fit-content",
               disabled: a,
               icon: d,
-              gamepadFocusable: h = !0,
-              ...p
+              focusable: h,
+              navProps: p,
+              ...u
             } = e,
-            u = a ? C : void 0,
-            m = h && b.TS.IN_GAMEPADUI ? S.Ii : "a";
-          return (0, i.jsx)(m, {
-            ...(0, c.mz)(
+            m = a ? C : void 0,
+            _ = (0, c.mz)(
               {
-                onClick: u,
-                ...p,
+                onClick: m,
+                ...u,
                 variant: n,
                 size: t,
                 minWidth: s,
                 className: o()(r.Button, d && r.Icon, (0, l.T)()),
               },
-              g,
-            ),
-          });
+              f,
+            );
+          return S.TS.IN_GAMEPADUI && (h || p)
+            ? (0, i.jsx)(b.Ii, { ..._, ...(p || {}), focusable: h })
+            : (0, i.jsx)("a", { ..._ });
         };
     },
     90534: (e, n, t) => {
       "use strict";
-      t.d(n, { GY: () => h, az: () => d });
+      t.d(n, { az: () => h });
       var i = t(7850),
-        s = t(39479),
-        o = t(64238),
-        r = t.n(o),
-        a = t(11526),
-        c = t(75659),
-        l = t(44041);
-      function d(e) {
-        const { as: n = "div", ref: t, ...s } = e,
-          o = (0, a.mz)({ ...s, className: r()(l.Box, e.className) }, p),
-          c = n;
-        return (0, i.jsx)(c, { ref: t, ...o });
-      }
+        s = t(44041),
+        o = t(39479),
+        r = t(64238),
+        a = t.n(r),
+        c = t(11526),
+        l = t(75659),
+        d = t(8527);
       function h(e) {
-        const { as: n = "div", ref: t, navProps: o, ...c } = e,
-          d = (0, a.mz)({ ...c, className: r()(l.Box, c.className) }, p),
-          h = n;
-        return (0, i.jsx)(s.J, {
-          ...o,
-          children: (0, i.jsx)(h, { ref: t, ...d }),
-        });
+        const { as: n = "div", focusable: t, navProps: r, ref: l, ...h } = e,
+          u = (0, c.mz)({ ...h, className: a()(s.Box, e.className) }, p),
+          m = t ?? r?.focusable ?? !!h.onClick,
+          _ = (0, i.jsx)(n, { ref: l, ...u });
+        return d.TS.IN_GAMEPADUI && (m || r)
+          ? (0, i.jsx)(o.J, { ...(r || {}), focusable: m, children: _ })
+          : _;
       }
-      const p = c.h;
+      const p = l.h;
     },
     20187: (e, n, t) => {
       "use strict";
@@ -332,21 +332,22 @@
       "use strict";
       t.d(n, { Y: () => l });
       var i = t(7850),
-        s = t(20187),
-        o = t(11526),
-        r = t(50122),
+        s = t(50122),
+        o = t(20187),
+        r = t(11526),
         a = t(8527),
         c = t(45699);
       function l(e) {
-        const { underline: n = "auto", ...t } = e,
-          s = a.TS.IN_GAMEPADUI ? c.Ii : "a";
-        return (0, i.jsx)(s, {
-          ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, d),
-        });
+        const { underline: n = "auto", focusable: t, navProps: o, ...l } = e,
+          h = t ?? o?.focusable ?? !!l.href,
+          p = (0, r.mz)({ ...l, underline: n, className: s.TextLink }, d);
+        return a.TS.IN_GAMEPADUI && (h || o)
+          ? (0, i.jsx)(c.Ii, { ...p, ...(o || {}), focusable: h })
+          : (0, i.jsx)("a", { ...p });
       }
       const d = [
-        ...s.Ae,
-        { prop: "underline", className: (e) => r[`Underline-${e}`] },
+        ...o.Ae,
+        { prop: "underline", className: (e) => s[`Underline-${e}`] },
       ];
     },
     11820: (e, n, t) => {
@@ -810,34 +811,34 @@
         u = t(51706),
         m = t(71009),
         _ = t(32754),
-        S = t(61859),
-        b = t(84933),
+        b = t(61859),
+        S = t(84933),
         C = t(30470),
-        g = t(11131),
-        x = t.n(g),
-        f = t(90626),
+        f = t(11131),
+        g = t.n(f),
+        x = t(90626),
         v = t(92724);
       const I = (0, p.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
             m.useOpenWebInSteamClient)(),
             p = t == c.R,
-            [g, I, z] = (0, b.uD)();
+            [f, I, z] = (0, S.uD)();
           return (
-            (0, f.use)((0, v.u)()),
+            (0, x.use)((0, v.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(_.Gq, {
                   toolTipContent: h.Z.Localize("#AddToWishlist_ttip"),
                   children: (0, i.jsx)(s.$, {
                     onClick: I,
-                    children: (0, S.we)("#AddToYourWishlist"),
+                    children: (0, b.we)("#AddToYourWishlist"),
                   }),
                 }),
                 (0, i.jsx)(u.EN, {
-                  active: g,
+                  active: f,
                   children: (0, i.jsxs)(u.o0, {
-                    strTitle: (0, S.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                    className: x().WishlistModalOverride,
+                    strTitle: (0, b.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    className: g().WishlistModalOverride,
                     strDescription: l.F5.Localize("#Wishlist_NotSignedIn"),
                     closeModal: z,
                     bAlertDialog: !0,
@@ -850,7 +851,7 @@
                         children: [
                           (0, i.jsx)(s.$, {
                             onClick: n,
-                            children: (0, S.we)(
+                            children: (0, b.we)(
                               "#OpenInDesktopAppBanner_OpenAppButton",
                             ),
                           }),
@@ -864,7 +865,7 @@
                       !p &&
                         (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(r.EY, {
-                            children: (0, S.oW)(
+                            children: (0, b.oW)(
                               "#GotSteam_NeedSteam",
                               (0, i.jsx)(a.Y, {
                                 href: `${C.TS.STORE_BASE_URL}about`,

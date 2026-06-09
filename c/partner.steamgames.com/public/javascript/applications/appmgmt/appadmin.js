@@ -11564,6 +11564,11 @@
                     _: _._.readString,
                     _: _._.writeRepeatedString,
                   },
+                  group: {
+                    _: 17,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m

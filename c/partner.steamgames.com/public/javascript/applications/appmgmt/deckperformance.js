@@ -139,14 +139,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { dataprops: _, appId: _ } = _;
         return _?.framerate || _?.feedback
           ? (0, _.jsx)(_._, {
-              children: (0, _.jsx)(_, {
-                appId: _,
-                dataprops: _,
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_, {
+                  appId: _,
+                  dataprops: _,
+                }),
               }),
             })
           : (0, _.jsx)(_.Fragment, {});

@@ -671,7 +671,15 @@
           let _ = this.m_sName;
           const _ = this.m_fnIdGenerator?.() ?? null;
           null != _ && (_ += " (" + _ + ")");
-          _(_, _, _.Get().IncludeBacktraceInLog, _, this.m_sName, ..._);
+          _(
+            _,
+            _,
+            _.Get().IncludeBacktraceInLog,
+            _.Get().AllowCSSInLogStyling,
+            _,
+            this.m_sName,
+            ..._,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "Debug", null),
@@ -682,9 +690,11 @@
       class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
+        static k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors";
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
+        m_bAllowCSSInLogStyling = !0;
         m_SettingsChangedCallback = new _._();
         m_bLoading = !0;
         constructor() {
@@ -695,24 +705,30 @@
             _.Info,
             !0,
             this.IncludeBacktraceInLog,
+            this.AllowCSSInLogStyling,
             "LogManager",
             "LogManager",
             ..._,
           );
         }
         async LoadSettings() {
-          const _ = (_) => {
+          const _ = (_, _) => {
             try {
               const _ = localStorage.getItem(_);
-              return _ ? JSON.parse(_) : void 0;
+              return _ ? JSON.parse(_) : _;
             } catch {
-              return;
+              return _;
             }
           };
-          this.m_bIncludeBacktraceInLog = !!_(
+          (this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
-          );
-          const _ = _(_.k_EnabledLogNames_StorageKey);
+            !1,
+          )),
+            (this.m_bAllowCSSInLogStyling = !!_(
+              _.k_AllowCSSInLogColors_StorageKey,
+              !0,
+            ));
+          const _ = _(_.k_EnabledLogNames_StorageKey, void 0);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -731,6 +747,10 @@
             localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
               JSON.stringify(this.m_bIncludeBacktraceInLog),
+            ),
+            localStorage.setItem(
+              _.k_AllowCSSInLogColors_StorageKey,
+              JSON.stringify(this.m_bAllowCSSInLogStyling),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -805,56 +825,66 @@
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
         }
+        get AllowCSSInLogStyling() {
+          return this.m_bAllowCSSInLogStyling;
+        }
+        async SetAllowCSSInLogStyling(_) {
+          (this.m_bAllowCSSInLogStyling = _),
+            this.m_SettingsChangedCallback.Dispatch(),
+            await this.SaveSettings();
+        }
         GetLogNames() {
           return Array.from(this.LogNames).sort();
         }
       }
-      function _(_, _, _, _, _, ..._) {
-        const _ = (function (_) {
-            let _ = 0;
-            for (let _ = 0; _ < _.length; _++)
-              _ = _.charCodeAt(_) + ((_ << 5) - _);
-            return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
-          })(_).map((_, _) =>
-            Math.round(
-              Math.max(0, Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15))),
-            ),
-          ),
-          _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128;
-        var _;
-        let _ = _;
-        _ &&
-          (_ =
-            (function (_) {
-              switch (_) {
-                case _.Debug:
-                  return String.fromCodePoint(128027);
-                case _.Info:
-                  return String.fromCodePoint(8505);
-                case _.Warning:
-                  return String.fromCodePoint(9888);
-                case _.Error:
-                  return String.fromCodePoint(128165);
-              }
-            })(_) +
-            " " +
-            _);
-        const _ =
-            _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
-          _ = _ && _.shift();
-        let _;
+      function _(_, _, _, _, _, _, ..._) {
+        let _,
+          _ = _;
         if (
-          ((_ = _
-            ? [
-                `%c${_}%c:${_ ? " %c" + _ : ""}`,
-                `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
-                "color: transparent; margin-right: -1ch",
-                ...(_ ? [""] : []),
-                ..._,
-              ]
-            : _),
-          _)
-        )
+          (_ &&
+            (_ =
+              (function (_) {
+                switch (_) {
+                  case _.Debug:
+                    return String.fromCodePoint(128027);
+                  case _.Info:
+                    return String.fromCodePoint(8505);
+                  case _.Warning:
+                    return String.fromCodePoint(9888);
+                  case _.Error:
+                    return String.fromCodePoint(128165);
+                }
+              })(_) +
+              " " +
+              _),
+          _ && _)
+        ) {
+          const _ = (function (_) {
+              let _ = 0;
+              for (let _ = 0; _ < _.length; _++)
+                _ = _.charCodeAt(_) + ((_ << 5) - _);
+              return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
+            })(_).map((_, _) =>
+              Math.round(
+                Math.max(
+                  0,
+                  Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15)),
+                ),
+              ),
+            ),
+            _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128,
+            _ = _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
+            _ = _ && _.shift();
+          _ = [
+            `%c${_}%c:${_ ? " %c" + _ : ""}`,
+            `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+            "color: transparent; margin-right: -1ch",
+            ...(_ ? [""] : []),
+            ..._,
+          ];
+        } else _ = [`${_}:`, ..._];
+        var _;
+        if (_)
           console.groupCollapsed(..._),
             console.trace("Callstack"),
             console.groupEnd();
@@ -1579,7 +1609,7 @@
         _(
           "----------------------------------------------------------------------------------",
         ),
-          _("Scrolling Into View:", _);
+          _("Scrolling Into View (NoTransform):", _);
         let _ = [],
           _ = _,
           _ = _(_),
@@ -2775,19 +2805,27 @@
                       _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
                       _
                         ? _(0, _, _)
-                        : _.scrollIntoView({
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          _.scrollIntoView({
                             behavior: _,
                             block: "nearest",
-                          });
+                          }));
                   } else
                     _("No previous element for scrolling, will jump"),
                       _
                         ? _(0, _, "auto")
-                        : _?.scrollIntoView({
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          _?.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
                             inline: "nearest",
-                          });
+                          }));
                 }
               })(this, _, _);
         }
@@ -5536,6 +5574,11 @@
                     _: _.readString,
                     _: _.writeString,
                   },
+                  url: {
+                    _: 5,
+                    _: _.readString,
+                    _: _.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -7554,8 +7597,8 @@
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
                   ((_ ??= {}), (_.componentStack = _.strComponentStack)),
-                _.strUrl && ((_ ??= {}), (_.url = _.strUrl)),
                 _ && _.set_context(JSON.stringify(_)),
+                _.strUrl && _.set_url(_.strUrl),
                 _
               );
             });
@@ -11060,6 +11103,11 @@
                     _: _.readInt32,
                     _: _.writeInt32,
                   },
+                  use_gyro_sw_biases: {
+                    _: 48,
+                    _: _.readBool,
+                    _: _.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -14057,6 +14105,29 @@
           })();
       }
       function _(_) {
+        let _ = _.NotNeeded;
+        return (
+          !(function (_) {
+            if (_()(_).attr("data-nav-modal")) return !0;
+            switch (_.tagName) {
+              case "A":
+              case "INPUT":
+              case "TEXTAREA":
+                return !0;
+              case "DIV":
+                if (_(_) != _.COLUMN) return !0;
+                const _ = _(_.parentElement);
+                return _ == _.ROW || _ == _.ROW_REVERSE;
+              default:
+                return !1;
+            }
+          })(_)
+            ? _(_, _)
+            : (_ = _(_)),
+          _
+        );
+      }
+      function _(_) {
         const _ = _()(_.Element);
         return (
           !_.data("gpFocusDisabled") &&
@@ -14291,25 +14362,7 @@
         const _ = _.parentElement;
         if (!_) return console.error("no parent"), null;
         let _ = _(_);
-        if (_ == _.Unknown)
-          _ = (function (_) {
-            let _ = !1;
-            switch (_.tagName) {
-              case "A":
-              case "INPUT":
-              case "TEXTAREA":
-                _ = !0;
-                break;
-              case "DIV":
-                if (_(_) != _.COLUMN) _ = !0;
-                else {
-                  const _ = _(_.parentElement);
-                  (_ != _.ROW && _ != _.ROW_REVERSE) || (_ = !0);
-                }
-            }
-            let _ = _.NotNeeded;
-            return _ ? (_ = _(_)) : _(_, _), _;
-          })(_);
+        if (_ == _.Unknown) _ = _(_);
         else if (_ == _.InReactTree) return _;
         return _ instanceof _ ? _ : _(_);
       }

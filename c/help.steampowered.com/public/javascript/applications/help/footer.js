@@ -284,6 +284,7 @@
         AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
         JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
+        AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
       };
     },
     chunkid: (module) => {
@@ -771,10 +772,17 @@
             className: _.TextAlign,
             cssProperty: "--text-align",
           },
+          {
+            prop: "aspectRatio",
+            responsive: !0,
+            className: _.AspectRatio,
+            cssProperty: "--aspect-ratio",
+          },
         ];
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, navRef: _, ..._ } = _,
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
           _ = _(
             {
               ..._,
@@ -782,16 +790,20 @@
             },
             _,
           ),
-          _ = !_.disabled && !!_.onClick,
-          _ = _;
-        return (0, _.jsx)(_, {
-          focusable: _,
-          navRef: _,
-          children: (0, _.jsx)(_, {
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
           }),
-        });
+          _ = _(_.direction ?? "row", (0, _._)());
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_, {
+              ...(_ || {}),
+              focusable: _,
+              "flow-children": _,
+              children: _,
+            })
+          : _;
       }
       const _ = [
         ..._,
@@ -960,21 +972,27 @@
         },
       ];
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ..._ } = _,
-          _ = _._.IN_GAMEPADUI ? _._ : "a";
-        return (0, _.jsx)(_, {
-          ..._(
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = _ ?? _?.focusable ?? !!_.href,
+          _ = _(
             {
               ..._,
               underline: _,
               className: _.TextLink,
             },
             _,
-          ),
-        });
+          );
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ..._,
+              ...(_ || {}),
+              focusable: _,
+            })
+          : (0, _.jsx)("a", {
+              ..._,
+            });
       }
       const _ = [
         ..._,
@@ -987,7 +1005,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
           _ = _(
             {
               ..._,
@@ -995,11 +1013,18 @@
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: _,
-          ..._,
-        });
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          });
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = _;
       function _(_) {
@@ -1104,7 +1129,8 @@
               children: _,
               onClick: _,
               icon: _,
-              gamepadFocusable: _ = !0,
+              focusable: _,
+              navProps: _,
               ..._
             } = _,
             _ = _
@@ -1116,23 +1142,32 @@
                 })
               : _,
             _ = _ ? void 0 : _,
-            _ = _ && _._.IN_GAMEPADUI ? _._ : "button";
-          return (0, _.jsx)(_, {
-            type: "button",
-            ..._(
-              {
+            _ = _ ?? _?.focusable ?? !!_,
+            _ = {
+              type: "button",
+              ..._(
+                {
+                  ..._,
+                  variant: _,
+                  size: _,
+                  minWidth: _,
+                  color: _,
+                  className: _()(_.Button, _ && _.Icon),
+                  onClick: _,
+                },
+                _,
+              ),
+              children: _,
+            };
+          return _._.IN_GAMEPADUI && (_ || _)
+            ? (0, _.jsx)(_._, {
                 ..._,
-                variant: _,
-                size: _,
-                minWidth: _,
-                color: _,
-                className: _()(_.Button, _ && _.Icon),
-                onClick: _,
-              },
-              _,
-            ),
-            children: _,
-          });
+                ...(_ || {}),
+                focusable: _,
+              })
+            : (0, _.jsx)("button", {
+                ..._,
+              });
         },
         _ = function (_) {
           const {
@@ -1141,15 +1176,13 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
-              gamepadFocusable: _ = !0,
+              focusable: _,
+              navProps: _,
               ..._
             } = _,
-            _ = _ ? _ : void 0,
-            _ = _ && _._.IN_GAMEPADUI ? _._ : "a";
-          return (0, _.jsx)(_, {
-            ..._(
+            _ = _(
               {
-                onClick: _,
+                onClick: _ ? _ : void 0,
                 ..._,
                 variant: _,
                 size: _,
@@ -1157,13 +1190,21 @@
                 className: _()(_.Button, _ && _.Icon, _()),
               },
               _,
-            ),
-          });
+            );
+          return _._.IN_GAMEPADUI && (_ || _)
+            ? (0, _.jsx)(_._, {
+                ..._,
+                ...(_ || {}),
+                focusable: _,
+              })
+            : (0, _.jsx)("a", {
+                ..._,
+              });
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
           _ = _(
             {
               ..._,
@@ -1171,14 +1212,19 @@
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_, {
-          "flow-children": "grid",
-          children: (0, _.jsx)(_, {
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
-          }),
-        });
+          });
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_, {
+              "flow-children": "grid",
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = [
         ..._,
@@ -1312,7 +1358,6 @@
         _() && (0, _._)(_._), "location" in window && location.reload();
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1454,6 +1499,12 @@
                   middleware: _(_),
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
+                  strategy: "fixed",
+                  platform: {
+                    ..._._,
+                    getOffsetParent: (_) =>
+                      _?.ownerDocument?.defaultView ?? window,
+                  },
                 }),
                 _ = (0, _._)(_.context, {
                   enabled: !!_.click,
@@ -1507,8 +1558,11 @@
         Positioner: function (_) {
           const { children: _, className: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _?.floating.refs.setFloating]),
-            _ = (0, _._)();
+            _ = (0, _._)([
+              _,
+              _?.floating.refs.setFloating,
+              (_) => _?.showPopover?.(),
+            ]);
           if (!_)
             return (
               console.error(
@@ -1523,15 +1577,20 @@
             ((_ = _.Children.only(_.props.children)), (_ = _));
           const _ = (0, _.cloneElement)(_, {
             ref: _,
-            style: _.floating.floatingStyles,
+            style: {
+              ..._.floating.floatingStyles,
+              inset: "unset",
+              border: "none",
+              background: "transparent",
+              color: "inherit",
+              padding: 0,
+            },
             className: _,
+            popover: "manual",
             ..._.getFloatingProps(),
           });
-          return (0, _.jsx)(_._, {
-            root: _?.targetElement,
-            children: (0, _.jsx)(_, {
-              children: _,
-            }),
+          return (0, _.jsx)(_, {
+            children: _,
           });
         },
         FocusManager: _,
@@ -2182,6 +2241,7 @@
               padding: "7",
               zIndex: "1",
               textAlign: "start",
+              _: "footer",
               children: [
                 (0, _.jsx)(_, {}),
                 (0, _.jsxs)(_, {

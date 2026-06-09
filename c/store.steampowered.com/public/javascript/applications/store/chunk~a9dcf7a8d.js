@@ -1288,17 +1288,21 @@
         _ = "responsive_menu_ignore_touch";
       function _(_) {
         return (0, _._)()
-          ? (0, _.jsx)(_, {
-              ..._,
-              localContext: !1,
-            })
-          : (0, _.jsx)(_._, {
-              iosVideoFallback: !0,
-              supportsTheater: !1,
-              supportsFullscreen: !0,
+          ? (0, _.jsx)(_.Suspense, {
               children: (0, _.jsx)(_, {
                 ..._,
-                localContext: !0,
+                localContext: !1,
+              }),
+            })
+          : (0, _.jsx)(_.Suspense, {
+              children: (0, _.jsx)(_._, {
+                iosVideoFallback: !0,
+                supportsTheater: !1,
+                supportsFullscreen: !0,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                  localContext: !0,
+                }),
               }),
             });
       }
@@ -1310,6 +1314,7 @@
           captionManifest: _,
           screenshot: _,
           forcePause: _,
+          onPlaybackStart: _,
           onPlaybackEnd: _,
           onPlayPauseChange: _,
           onMuteChange: _,
@@ -1440,7 +1445,11 @@
           })(_, !!_),
           _ = _ ? void 0 : _,
           _ = {};
-        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
+        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+        let _ = (0, _._)(() => _.IsBuffering());
+        _.useEffect(() => {
+          _ || (_ && _());
+        }, [_, _]),
           _.use(_._.Ready());
         let _ = (0, _._)(_().TrailerPlayer, _);
         return (0, _.jsxs)("div", {

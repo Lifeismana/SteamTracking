@@ -379,6 +379,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -453,6 +454,10 @@
             );
           });
         }
+        HandleRef(_) {
+          (0, _._)(this.m_refElement, _),
+            this.props.containerRef && (0, _._)(this.props.containerRef, _);
+        }
         OnIntersection(_, _) {
           let _ = !1;
           for (const _ of _)
@@ -471,16 +476,18 @@
             rootMargin: _,
             trigger: _,
             horizontal: _,
+            containerRef: _,
             ..._
           } = this.props;
-          return (0, _.jsx)("div", {
-            ref: this.m_refElement,
+          return (0, _.jsx)(_._, {
+            ref: this.HandleRef,
             ..._,
             children: this.props.children,
           });
         }
       }
-      (0, _._)([_._], _.prototype, "OnIntersection", null);
+      (0, _._)([_._], _.prototype, "HandleRef", null),
+        (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
   },
 ]);

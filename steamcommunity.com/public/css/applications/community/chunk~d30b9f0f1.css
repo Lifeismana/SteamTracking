@@ -1998,6 +1998,24 @@ span._11TnLmbm2QkVVfCckvEXbJ {
 ._1slxioflpVbBKK66aKMVlI:hover {
   color: #fff;
 }
+._3LB60XV--dXt2yYQ6dF5aT {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+._3LB60XV--dXt2yYQ6dF5aT img {
+  width: 20px;
+  height: 20px;
+}
+._3LB60XV--dXt2yYQ6dF5aT._3NISN-t8MP65UYQ4p5bNgh {
+  opacity: 1;
+}
 ._2-tz2hqtOXPPtMnVPHNSdx {
   background: linear-gradient(
     77deg,

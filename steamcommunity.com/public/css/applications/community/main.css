@@ -6428,6 +6428,18 @@ a._14GZWzJgooP0mbfTvEQnjA {
   --color-grass-10: #53b365;
   --color-grass-11: #71d083;
   --color-grass-12: #c2f0c2;
+  --color-storegreen-1: #143200;
+  --color-storegreen-2: #173a00;
+  --color-storegreen-3: #1c4700;
+  --color-storegreen-4: #255c00;
+  --color-storegreen-5: #307402;
+  --color-storegreen-6: #5ba32b;
+  --color-storegreen-7: #59bf40;
+  --color-storegreen-8: #6e9d0b;
+  --color-storegreen-9: #8abe1c;
+  --color-storegreen-10: #a1cd44;
+  --color-storegreen-11: #b3e942;
+  --color-storegreen-12: #cefa71;
   --color-brown-1: #12110f;
   --color-brown-2: #1c1816;
   --color-brown-3: #28211d;
@@ -7223,6 +7235,36 @@ a._14GZWzJgooP0mbfTvEQnjA {
   --color-dull-10: var(--color-grass-10);
   --color-dull-11: var(--color-grass-11);
   --color-dull-12: var(--color-grass-12);
+}
+:root:has(._2KPA3I9eXE9r251_-GX_iv > div[data-accent-color="storegreen"]),
+:root [data-accent-color="storegreen"] {
+  --color-accent-1: var(--color-storegreen-1);
+  --color-accent-2: var(--color-storegreen-2);
+  --color-accent-3: var(--color-storegreen-3);
+  --color-accent-4: var(--color-storegreen-4);
+  --color-accent-5: var(--color-storegreen-5);
+  --color-accent-6: var(--color-storegreen-6);
+  --color-accent-7: var(--color-storegreen-7);
+  --color-accent-8: var(--color-storegreen-8);
+  --color-accent-9: var(--color-storegreen-9);
+  --color-accent-10: var(--color-storegreen-10);
+  --color-accent-11: var(--color-storegreen-11);
+  --color-accent-12: var(--color-storegreen-12);
+}
+:root:has(._2KPA3I9eXE9r251_-GX_iv > div[data-dull-color="storegreen"]),
+:root [data-dull-color="storegreen"] {
+  --color-dull-1: var(--color-storegreen-1);
+  --color-dull-2: var(--color-storegreen-2);
+  --color-dull-3: var(--color-storegreen-3);
+  --color-dull-4: var(--color-storegreen-4);
+  --color-dull-5: var(--color-storegreen-5);
+  --color-dull-6: var(--color-storegreen-6);
+  --color-dull-7: var(--color-storegreen-7);
+  --color-dull-8: var(--color-storegreen-8);
+  --color-dull-9: var(--color-storegreen-9);
+  --color-dull-10: var(--color-storegreen-10);
+  --color-dull-11: var(--color-storegreen-11);
+  --color-dull-12: var(--color-storegreen-12);
 }
 :root:has(._2KPA3I9eXE9r251_-GX_iv > div[data-accent-color="brown"]),
 :root [data-accent-color="brown"] {

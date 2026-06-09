@@ -45,9 +45,11 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        var _;
+        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -55,14 +57,23 @@
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_._, {
-          "flow-children": "grid",
-          children: (0, _.jsx)(_, {
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
-          }),
-        });
+          });
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_._, {
+              "flow-children": "grid",
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = [
         ..._._,

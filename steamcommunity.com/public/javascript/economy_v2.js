@@ -596,7 +596,7 @@ function CInventory( owner, appid, contextid, rgContextData )
 	this.m_iNextEmptyItemElement = 0;
 
 	// metadata from the context
-	this.m_cItems = rgContextData.asset_count || 0;
+	this.m_cItems = rgContextData.asset_count ?? 0;
 
 	// tags
 	this.tags = null;

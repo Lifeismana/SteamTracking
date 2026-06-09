@@ -505,13 +505,13 @@
         HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
         PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
         EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
         OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
         MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
         EventType: "_2BWwVF5N-3fDuJRblB6gHb",
@@ -17631,7 +17631,7 @@
                   !a &&
                     (0, n.jsx)("span", {
                       className: b().BottomBarPriceInfo,
-                      children: (0, n.jsx)(A.N, {
+                      children: (0, n.jsx)(A.NF, {
                         id: t,
                         bShowInLibrary: r,
                         onlyOneDiscountPct: u,
@@ -17898,7 +17898,7 @@
                         bPreferAssetWithoutOverride: x,
                       }),
                     (0, n.jsx)(F.J, { id: t }),
-                    (0, n.jsx)(k.m, { id: t, active: p, bIsHoverMode: !0 }),
+                    (0, n.jsx)(k.mj, { id: t, active: p, bIsHoverMode: !0 }),
                   ],
                 }),
                 v &&

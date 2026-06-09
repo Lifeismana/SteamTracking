@@ -120,9 +120,9 @@
         });
       }
       var z = i(82314),
-        w = i(32232),
-        D = i.n(w),
-        f = i(64753),
+        f = i(32232),
+        w = i.n(f),
+        D = i(64753),
         v = i(64238),
         R = i.n(v),
         L = i(96745),
@@ -142,20 +142,21 @@
         M = i.n($),
         K = i(40818),
         q = i(90534),
-        V = i(11526),
-        W = i(50122),
+        V = i(50122),
+        W = i(11526),
         Q = i(8527),
         X = i(45699);
       function J(e) {
-        const { underline: n = "auto", ...i } = e,
-          t = Q.TS.IN_GAMEPADUI ? X.Ii : "a";
-        return (0, r.jsx)(t, {
-          ...(0, V.mz)({ ...i, underline: n, className: W.TextLink }, Z),
-        });
+        const { underline: n = "auto", focusable: i, navProps: t, ...c } = e,
+          a = i ?? t?.focusable ?? !!c.href,
+          s = (0, W.mz)({ ...c, underline: n, className: V.TextLink }, Z);
+        return Q.TS.IN_GAMEPADUI && (a || t)
+          ? (0, r.jsx)(X.Ii, { ...s, ...(t || {}), focusable: a })
+          : (0, r.jsx)("a", { ...s });
       }
       const Z = [
         ...d.Ae,
-        { prop: "underline", className: (e) => W[`Underline-${e}`] },
+        { prop: "underline", className: (e) => V[`Underline-${e}`] },
       ];
       function ee(e) {
         const n = `${Q.TS.PARTNER_BASE_URL}doc/finance/taxfaq`;
@@ -329,7 +330,7 @@
             return "h" + i;
           })(n, (0, t.useContext)(Pe).depth);
         return (0, r.jsx)(a, {
-          ...(0, V.mz)(
+          ...(0, W.mz)(
             { ...e, className: R()((0, pe.T)(), he.Heading, i) },
             be,
           ),
@@ -428,7 +429,7 @@
       function ye(e) {
         const { nPackageID: n } = e,
           i = (0, T.d$)(n),
-          [c, a, s] = (0, f.uD)(),
+          [c, a, s] = (0, D.uD)(),
           o = (0, T.fr)(n),
           [d, l] = (0, t.useState)(!1);
         return i
@@ -469,7 +470,7 @@
           : null;
       }
       const ze = (0, h.FB)();
-      function we(e) {
+      function fe(e) {
         const { nPackageID: n, appids: i } = e,
           t = (0, T.Zz)();
         (0, G.h)(t);
@@ -502,7 +503,7 @@
               }),
               (0, r.jsx)("div", {
                 className: "",
-                children: (0, r.jsx)(De, {
+                children: (0, r.jsx)(we, {
                   nPackageID: a,
                   appids: i.map(Number.parseInt),
                 }),
@@ -511,7 +512,7 @@
           }),
         });
       }
-      function De(e) {
+      function we(e) {
         const { nPackageID: n, appids: i } = e,
           c = (0, p.cT)(),
           {
@@ -672,7 +673,7 @@
                                     "#PricingDashboard_Select_Price",
                                   ),
                                 }),
-                                (0, r.jsx)(fe, { usdRow: a[P.CS] }),
+                                (0, r.jsx)(De, { usdRow: a[P.CS] }),
                               ],
                             }),
                             (0, r.jsxs)(l.s, {
@@ -708,8 +709,8 @@
                     (0, r.jsx)(u.k, {
                       data: a,
                       className: R()(
-                        D().DefaultFancyTable,
-                        D().NoColumnBorders,
+                        w().DefaultFancyTable,
+                        w().NoColumnBorders,
                         M().PackagePricingContext,
                       ),
                       columns: [
@@ -727,8 +728,8 @@
                     (0, r.jsx)(u.k, {
                       data: s,
                       className: R()(
-                        D().DefaultFancyTable,
-                        D().NoColumnBorders,
+                        w().DefaultFancyTable,
+                        w().NoColumnBorders,
                         M().PackagePricingContext,
                       ),
                       columns: [
@@ -752,8 +753,8 @@
                       (0, r.jsx)(u.k, {
                         data: o,
                         className: R()(
-                          D().DefaultFancyTable,
-                          D().NoColumnBorders,
+                          w().DefaultFancyTable,
+                          w().NoColumnBorders,
                           M().PackagePricingContext,
                         ),
                         columns: [
@@ -780,7 +781,7 @@
               ],
             });
       }
-      function fe(e) {
+      function De(e) {
         const { usdRow: n } = e,
           { fnApplyGuidelines: i } = (0, p.gC)((0, T.$i)());
         return (0, r.jsx)(z.e, {
@@ -800,8 +801,8 @@
       }
       function ve(e) {
         const { nPackageID: n, oPricingGuideline: i } = e,
-          [t, c, a] = (0, f.uD)(),
-          s = (0, f.CH)();
+          [t, c, a] = (0, D.uD)(),
+          s = (0, D.CH)();
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(g.$, {
@@ -833,7 +834,7 @@
                   children: (0, r.jsx)(o.X, {
                     config: {
                       "packageadmin-price-editor": (e) =>
-                        (0, r.jsx)(we, { ...e }),
+                        (0, r.jsx)(fe, { ...e }),
                     },
                   }),
                 }),

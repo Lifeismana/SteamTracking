@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Trailer mungkin tidak mewakili pengalaman bermain yang sebenarnya di Steam Deck",
     "StoreItemFound": "%1$s Ditemukan (%2$s)",
     "StoreItemNotFound": "Tidak Ditemukan (%1$s)",
+    "SteamURLAccepted": "%1$s URL Diterima",
+    "SteamURLInvalid": "Eror: URL tidak mengarahkan ke halaman Steam (Toko/Komunitas)",
+    "PriceGrid_NormalPrice": "HARGA NORMAL",
+    "PriceGrid_RecentPrice": "TERENDAH DALAM 30 HARI",
+    "PriceGrid_CurrentPrice": "SEKARANG",
     "Dummy": "dummy"
 }

@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Το τρέιλερ ενδέχεται να μην είναι αντιπροσωπευτικό της πραγματικής εμπειρίας παιχνιδιού στο Steam Deck",
     "StoreItemFound": "%1$s Βρέθηκαν (%2$s)",
     "StoreItemNotFound": "Δεν βρέθηκε (%1$s)",
+    "SteamURLAccepted": "Το URL είναι αποδεκτό: %1$s",
+    "SteamURLInvalid": "Σφάλμα: Το URL δεν αντιστοιχεί σε ιδιοκτησία του Steam (Κατάστημα/Κοινότητα)",
+    "PriceGrid_NormalPrice": "ΚΑΝΟΝΙΚΗ",
+    "PriceGrid_RecentPrice": "ΧΑΜΗΛΟΤΕΡΗ (30 ΗΜΕΡΕΣ)",
+    "PriceGrid_CurrentPrice": "ΤΩΡΑ",
     "Dummy": "dummy"
 }

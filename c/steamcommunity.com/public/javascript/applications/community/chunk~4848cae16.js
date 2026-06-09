@@ -231,6 +231,7 @@
         AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
         JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
+        AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -244,9 +245,12 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, navRef: _, ..._ } = _,
+        var _, _;
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -254,16 +258,24 @@
             },
             _,
           ),
-          _ = !_.disabled && !!_.onClick,
-          _ = _;
-        return (0, _.jsx)(_._, {
-          focusable: _,
-          navRef: _,
-          children: (0, _.jsx)(_, {
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
           }),
-        });
+          _ = (0, _._)(null !== (_ = _.direction) && void 0 !== _ ? _ : "row");
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              "flow-children": _,
+              children: _,
+            })
+          : _;
       }
       const _ = [
         ..._._,
@@ -605,6 +617,12 @@
             responsive: !0,
             className: _.TextAlign,
             cssProperty: "--text-align",
+          },
+          {
+            prop: "aspectRatio",
+            responsive: !0,
+            className: _.AspectRatio,
+            cssProperty: "--aspect-ratio",
           },
         ];
     },

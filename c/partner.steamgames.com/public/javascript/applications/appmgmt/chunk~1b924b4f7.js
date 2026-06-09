@@ -556,6 +556,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -585,6 +586,7 @@
             closeMenu: _,
           } = (0, _._)(_),
           _ = _.useRef(null),
+          _ = (0, _._)(_, _.props.navRef),
           _ = _.useRef(null);
         return (
           _.useEffect(() => {

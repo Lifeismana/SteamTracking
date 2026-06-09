@@ -3,6 +3,12 @@
   {
     chunkid: (module) => {
       module.exports = {
+        SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
+        Focused: "_3NISN-t8MP65UYQ4p5bNgh",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
         GrowOnHoverImplicit: "_23t3208XMavZer6IZIxzSb",
         GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
@@ -58,6 +64,7 @@
         PersonalCalendarWidget: "_1rLdYDrWbYRcVNpPlFd225",
         PersonalCalendarWidgetDay: "uUNiI-Woa-IKlMTl8sNz4",
         TodayCtn: "zxpXN3eSl7IE7Y_HFaDsf",
+        FutureCtn: "_37Rq_2iPWm1eJ7eL072jsC",
         DayTitle: "_1UXC23q3yEmSJ2eQNdi-0W",
         DayOfWeek: "_8gOpVF6uAFG2cGwiwvREf",
         Date: "_2ZLaa9X1KqHlMCSw96mYaW",
@@ -186,6 +193,144 @@
         _: () => _,
       });
       var _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
+        switch (_) {
+          default:
+          case _.k_ECutArrowStyle: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.uMb, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EDoubleArrowStyle: {
+            const _ = "right" == _ ? 180 : 0;
+            return (0, _.jsx)(_.F2T, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EThickChevron: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.l8x, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EFilledArrow: {
+            const _ = "right" == _ ? 90 : 270;
+            return (0, _.jsx)(_.V5W, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EPointyArrow:
+            return (0, _.jsx)(_.L0X, {
+              fill: _ || "white",
+              role: "presentation",
+              direction: _ || "left",
+            });
+        }
+      }
+      function _(_) {
+        const {
+            bIsActive: _,
+            breadcrumbActiveColor: _,
+            breadcrumbColor: _,
+            breadcrumbStyle: _,
+          } = _,
+          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
+        switch (_) {
+          default:
+          case _.k_EPillCrumb:
+            return (0, _.jsx)(_.IGf, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ECircularCrumb:
+            return (0, _.jsx)(_.az8, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ESquareCrumb:
+            return (0, _.jsx)(_.koA, {
+              fill: _,
+              role: "presentation",
+            });
+        }
+      }
+      !(function (_) {
+        (_.k_ECutArrowStyle = "single"),
+          (_.k_EDoubleArrowStyle = "double"),
+          (_.k_EThickChevron = "chevron"),
+          (_.k_EFilledArrow = "filled"),
+          (_.k_EPointyArrow = "pointy");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EPillCrumb = "pill"),
+            (_.k_ECircularCrumb = "circle"),
+            (_.k_ESquareCrumb = "square");
+        })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, _] = _.useState(!1);
+        return {
+          bShowSeeMoreHint: _,
+          panelProps: {
+            onFocusWithin: _.useCallback(
+              (_) => __webpack_require__(_ && !!_),
+              [_],
+            ),
+            onOptionsButton: _.useCallback(() => {
+              _ && 0 !== _.length && (window.location.href = _);
+            }, [_]),
+          },
+        };
+      }
+      function _(_) {
+        const { label: _, shown: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: _()(_.SeeMoreButtonGamepad, _ && _.Focused),
+          children: [
+            (0, _.jsx)("img", {
+              src: `${_._.IMG_URL}ico_gamepad/shared_button_y.svg`,
+              alt: "Y",
+            }),
+            (0, _.jsx)("div", {
+              children: _,
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -235,22 +380,33 @@
           controls: !1,
           autoPlay: !0,
           ref: _,
+          playsInline: !0,
           onTimeUpdate: (_) => {
             _.current = _.currentTarget.currentTime;
           },
-          children: _.microtrailer?.map((_) =>
-            _._.IN_CLIENT && "video/mp4" == _.type
-              ? null
-              : (0, _.jsx)(
-                  "source",
-                  {
-                    src: (0, _._)(_, _.filename || ""),
-                    type: _.type,
-                  },
-                  _.filename,
-                ),
-          ),
+          children: (0, _.jsx)(_, {
+            trailer: _,
+          }),
         });
+      }
+      function _(_) {
+        const { trailer: _ } = _;
+        return _ && _.microtrailer
+          ? (0, _.jsx)(_.Fragment, {
+              children: _.microtrailer?.map((_) =>
+                _._.IN_CLIENT && "video/mp4" == _.type
+                  ? null
+                  : (0, _.jsx)(
+                      "source",
+                      {
+                        src: (0, _._)(_, _.filename || ""),
+                        type: _.type,
+                      },
+                      _.filename,
+                    ),
+              ),
+            })
+          : null;
       }
       !(function (_) {
         (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
@@ -380,6 +536,8 @@
             gap: _,
             children: _,
             bLazyRenderChildren: _,
+            lazyRenderPlaceholderWidth: _,
+            lazyRenderPlaceholderHeight: _,
             startingSlide: _,
           } = _,
           _ = _.useRef(null),
@@ -420,8 +578,8 @@
         return _
           ? (0, _.jsx)(_._, {
               horizontal: !1,
-              placeholderWidth: 1,
-              placeholderHeight: 1,
+              placeholderWidth: _ ?? 1,
+              placeholderHeight: _ ?? 1,
               children: _,
             })
           : _;
@@ -581,8 +739,8 @@
                     ? (0, _.jsx)(_._, {
                         rootMargin: "0px -5px 0px 100%",
                         horizontal: !0,
-                        placeholderWidth: 1,
-                        placeholderHeight: 1,
+                        placeholderWidth: _.lazyRenderPlaceholderWidth ?? 1,
+                        placeholderHeight: _.lazyRenderPlaceholderHeight ?? 1,
                         holdGamepadFocus: _,
                         children: _,
                       })
@@ -783,7 +941,7 @@
           let _ = 0,
             _ = 0;
           if (this.m_refContainer.current) {
-            const _ = this.m_refContainer.current.GetBoundingClientRect();
+            const _ = this.m_refContainer.current.getBoundingClientRect();
             _ && ((_ = _.width), (_ = _.height));
           }
           this.setState({
@@ -817,7 +975,7 @@
           }
           const _ = this.BLoadAndUnload() ? "repeated" : "once";
           let _ = (0, _.jsx)(_._, {
-            ref: this.m_refContainer,
+            containerRef: this.m_refContainer,
             style: _,
             ..._,
             onVisibilityChange: this.OnVisibilityChange,
@@ -843,102 +1001,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _,
-        _,
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.k_ECutArrowStyle = "single"),
-          (_.k_EDoubleArrowStyle = "double"),
-          (_.k_EThickChevron = "chevron"),
-          (_.k_EFilledArrow = "filled"),
-          (_.k_EPointyArrow = "pointy");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_.k_EPillCrumb = "pill"),
-            (_.k_ECircularCrumb = "circle"),
-            (_.k_ESquareCrumb = "square");
-        })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
-        switch (_) {
-          default:
-          case _.k_ECutArrowStyle: {
-            const _ = "right" == _ ? 0 : 180;
-            return (0, _.jsx)(_.uMb, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _.k_EDoubleArrowStyle: {
-            const _ = "right" == _ ? 180 : 0;
-            return (0, _.jsx)(_.F2T, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _.k_EThickChevron: {
-            const _ = "right" == _ ? 0 : 180;
-            return (0, _.jsx)(_.l8x, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _.k_EFilledArrow: {
-            const _ = "right" == _ ? 90 : 270;
-            return (0, _.jsx)(_.V5W, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _.k_EPointyArrow:
-            return (0, _.jsx)(_.L0X, {
-              fill: _ || "white",
-              role: "presentation",
-              direction: _ || "left",
-            });
-        }
-      }
-      function _(_) {
-        const {
-            bIsActive: _,
-            breadcrumbActiveColor: _,
-            breadcrumbColor: _,
-            breadcrumbStyle: _,
-          } = _,
-          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
-        switch (_) {
-          default:
-          case _.k_EPillCrumb:
-            return (0, _.jsx)(_.IGf, {
-              fill: _,
-              role: "presentation",
-            });
-          case _.k_ECircularCrumb:
-            return (0, _.jsx)(_.az8, {
-              fill: _,
-              role: "presentation",
-            });
-          case _.k_ESquareCrumb:
-            return (0, _.jsx)(_.koA, {
-              fill: _,
-              role: "presentation",
-            });
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1013,6 +1078,10 @@
             );
           });
         }
+        HandleRef(_) {
+          (0, _._)(this.m_refElement, _),
+            this.props.containerRef && (0, _._)(this.props.containerRef, _);
+        }
         OnIntersection(_, _) {
           let _ = !1;
           for (const _ of _)
@@ -1031,16 +1100,18 @@
             rootMargin: _,
             trigger: _,
             horizontal: _,
+            containerRef: _,
             ..._
           } = this.props;
-          return (0, _.jsx)("div", {
-            ref: this.m_refElement,
+          return (0, _.jsx)(_._, {
+            ref: this.HandleRef,
             ..._,
             children: this.props.children,
           });
         }
       }
-      (0, _._)([_._], _.prototype, "OnIntersection", null);
+      (0, _._)([_._], _.prototype, "HandleRef", null),
+        (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1094,6 +1165,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         name: "personalcalendarPrefs",
@@ -1114,14 +1186,10 @@
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useCallback)((_) => _(_), []),
           _ = (0, _._)(0, 14, 21),
           _ = (0, _._)(14, 21, !0, !0).flat(),
           _ = (0, _._)(`${_._.STORE_BASE_URL}personalcalendar`, _, _),
-          _ = (0, _.useCallback)(() => {
-            window.location.href = _;
-          }, [_]);
+          { bShowSeeMoreHint: _, panelProps: _ } = (0, _._)(_);
         if (!_.data)
           return (0, _.jsx)(_._, {
             className: _.PersonalCalendarWidget,
@@ -1144,8 +1212,7 @@
           (0, _.jsxs)(_._, {
             className: _.PersonalCalendarWidget,
             navEntryPreferPosition: _._.PREFERRED_CHILD,
-            onFocusWithin: _,
-            onOptionsButton: _,
+            ..._,
             children: [
               (0, _.jsxs)("div", {
                 className: "title_grid",
@@ -1199,8 +1266,9 @@
                   location: "mobile",
                 }),
               _ &&
-                (0, _.jsx)(_, {
-                  focusWithin: _,
+                (0, _.jsx)(_._, {
+                  label: (0, _._)("#PersonalCalendar_Full"),
+                  shown: _,
                 }),
             ],
           })
@@ -1221,20 +1289,6 @@
         });
       }
       function _(_) {
-        const { focusWithin: _ } = _;
-        return (0, _.jsxs)("div", {
-          className: (0, _._)("see_more_gamepad_hint", _ && "hover_active"),
-          children: [
-            (0, _.jsx)("img", {
-              src: `${_._.IMG_URL}ico_gamepad/shared_button_y.svg`,
-            }),
-            (0, _.jsx)("div", {
-              children: (0, _._)("#PersonalCalendar_Full"),
-            }),
-          ],
-        });
-      }
-      function _(_) {
         const {
             nTimestamp: _,
             nNextTimestamp: _,
@@ -1251,6 +1305,7 @@
             _.getDate() === _.getDate() &&
             _.getMonth() === _.getMonth() &&
             _.getFullYear() === _.getFullYear(),
+          _ = _ > _,
           _ = _.toLocaleDateString((0, _._)(), {
             weekday: "short",
           }),
@@ -1273,7 +1328,11 @@
             }
           }, [_, _]),
           (0, _.jsxs)(_._, {
-            className: (0, _._)(_.PersonalCalendarWidgetDay, _ && _.TodayCtn),
+            className: (0, _._)(
+              _.PersonalCalendarWidgetDay,
+              _ && _.TodayCtn,
+              _ && _.FutureCtn,
+            ),
             "flow-children": "column",
             children: [
               (0, _.jsxs)("div", {
@@ -1418,8 +1477,8 @@
       function _() {
         return _._.logged_in
           ? (0, _.jsx)(_._, {
-              placeholderHeight: 408,
-              rootMargin: "0px 0px 100% 0px",
+              placeholderHeight: 390,
+              rootMargin: "100% 0px 100% 0px",
               children: (0, _.jsx)(_, {}),
             })
           : null;

@@ -685,7 +685,7 @@ function InitializeTransaction()
 
 	try
 	{
-				if ( $( 'send_via_email' ) || $('send_via_friends') )
+				if ( $( 'send_via_email' ) || $('send_via_friends') || $( 'send_via_giftee_accountid' ) )
 		{
 			bIsGift = true;
 			if ( $( 'send_via_email' ) && $( 'send_via_email' ).checked )
@@ -3166,6 +3166,10 @@ function SubmitGiftDeliveryForm()
 		{
 			ConfirmRescheduleCancel();
 			return;
+		}
+		else if ( $J('#send_via_giftee_accountid').is(':checked') )
+		{
+			// nothing to validate, no user input related to this option
 		}
 		else
 		{

@@ -1237,6 +1237,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
+        Focused: "_3NISN-t8MP65UYQ4p5bNgh",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         Picker: "tid_OE5NJWCCVJQP1PfRc",
         Tabs: "_1yVkTX9Mo_7qb2sxWhM0Cr",
@@ -1473,13 +1479,13 @@
         HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
         PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
         EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
         OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
         MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
         EventType: "_2BWwVF5N-3fDuJRblB6gHb",
@@ -58763,11 +58769,11 @@
               children: [
                 (0, _.jsxs)("div", {
                   children: [
-                    "To see live stats, go to the &nbps;",
+                    "To see live stats, go to the ",
                     (0, _.jsx)("a", {
-                      href: "https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now",
+                      href: "https://grafana.valve.org/steam/d/a6879b35-cc98-4c51-9233-a55d504556fb/marketing-messages?orgId=2&from=now-7d&to=now&timezone=browser&var-message_type=$__all",
                       target: "_blank",
-                      children: "Graphana Page",
+                      children: "Grafana Page",
                     }),
                   ],
                 }),
@@ -59309,8 +59315,8 @@
                     }),
                     "  |  ",
                     (0, _.jsx)("a", {
-                      href: "https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization",
-                      children: "Graphana: Prioritization Stats Page",
+                      href: "https://grafana.valve.org/steam/d/a6879b35-cc98-4c51-9233-a55d504556fb/marketing-messages?orgId=2&from=now-7d&to=now&timezone=browser&var-message_type=$__all",
+                      children: "Grafana: Marketing Messages Detailed Stats",
                     }),
                   ],
                 }),
@@ -61673,6 +61679,12 @@
           ? null
           : (0, _.jsxs)(_._, {
               children: [
+                (0, _.jsx)("br", {}),
+                (0, _.jsx)("a", {
+                  href: `https://grafana.valve.org/steam/d/e0a6a523-05a9-4b5c-b341-2dc74b3006f0/marketing-message?orgId=2&var-message=${_}`,
+                  children: "Detailed Stats in Grafana",
+                }),
+                (0, _.jsx)("br", {}),
                 (0, _.jsx)("br", {}),
                 (0, _.jsxs)(_._, {
                   children: [
@@ -100575,12 +100587,31 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { label: _, shown: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: _()(_.SeeMoreButtonGamepad, _ && _.Focused),
+          children: [
+            (0, _.jsx)("img", {
+              src: `${_._.IMG_URL}ico_gamepad/shared_button_y.svg`,
+              alt: "Y",
+            }),
+            (0, _.jsx)("div", {
+              children: _,
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -100620,16 +100651,31 @@
             nHiddenCapsules: _,
             title: _,
             subtitle: _,
+            bShowSeeMoreHint: _,
+            bUseGamepadLinkHint: _,
+            onLinkResolved: _,
           } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(),
           { eventModel: _ } = (0, _._)(
             _.sale_page_cross_promo_clan_account_id,
             _.sale_page_cross_promo_event_gid,
             !1,
-          );
+          ),
+          _ =
+            _.link ||
+            (function (_) {
+              return (0, _._)(_.section_type) &&
+                "deck_topplayed" === (0, _._)(_)
+                ? _._.STORE_BASE_URL + "charts/steamdecktopplayed"
+                : _.label_link;
+            })(_) ||
+            _?.GetSaleURL();
         if (
-          "title_image" == _.section_type &&
-          "image" === _.title_image_selected
+          (_.useEffect(() => {
+            _?.(_);
+          }, [_, _]),
+          "title_image" == _.section_type && "image" === _.title_image_selected)
         )
           return null;
         const _ =
@@ -100655,81 +100701,83 @@
             ),
             style: _(_, _, _),
             children: _,
-          });
-        const _ =
-          _.link ||
-          (function (_) {
-            return (0, _._)(_.section_type) && "deck_topplayed" === (0, _._)(_)
-              ? _._.STORE_BASE_URL + "charts/steamdecktopplayed"
-              : _.label_link;
-          })(_) ||
-          _?.GetSaleURL();
-        let _ = null;
-        return (
-          (_?.length ?? 0) > 0 &&
-            ((_ = (0, _.jsx)(_._, {
-              url: _,
-              children: _,
-            })),
-            (_ = (function (_, _) {
-              let _ = null;
-              if ("browseall" === _.label_link_style) {
-                const _ = (0, _._)("#Sale_SectionLink_BrowseAll");
-                _ = (0, _.jsx)(_._, {
-                  className: (0, _._)(
+          }),
+          _ = null;
+        if ((_?.length ?? 0) > 0) {
+          const { strLinkButtonLabel: _, strLinkButtonClasses: _ } = (function (
+            _,
+          ) {
+            let _, _;
+            return (
+              "browseall" === _.label_link_style
+                ? ((_ = (0, _._)("#Sale_SectionLink_BrowseAll")),
+                  (_ = (0, _._)(
                     _.SectionLabelLinkButton,
                     "SaleSectionLabelLinkButton",
-                  ),
-                  url: _,
-                  children: _,
-                });
-              } else if ("deck_topplayed" === (0, _._)(_)) {
-                const _ = (0, _._)("#EventBrowse_MoreEventsBtn");
-                _ = (0, _.jsx)(_._, {
-                  className: (0, _._)(
+                  )))
+                : "deck_topplayed" === (0, _._)(_) &&
+                  ((_ = (0, _._)("#EventBrowse_MoreEventsBtn")),
+                  (_ = (0, _._)(
                     _().EventSectionMoreBtn,
                     "SaleSectionLabelLinkButton",
-                  ),
-                  url: _,
-                  children: _,
-                });
+                  ))),
+              {
+                strLinkButtonLabel: _,
+                strLinkButtonClasses: _,
               }
-              return _;
-            })(_, _))),
-          (0, _.jsxs)("div", {
-            className: (0, _._)(
-              _.SectionLabelCtn,
-              "SaleSectionLabelCtn",
-              _?.BHasSomeImage("product_banner") ? _.SectionLabelImage : "",
-            ),
-            children: [
-              (0, _.jsxs)("div", {
-                className: _.SectionTitleInnerCtn,
-                children: [_, Boolean(_) && _],
-              }),
-              (0, _.jsxs)("div", {
-                className: _.SectionLabelRight,
-                children: [
-                  !!_ &&
-                    (0, _.jsx)(_._, {
-                      className: _.SaleSectionSubtext,
-                      toolTipContent: "#Sale_HiddenItem_Tooltip",
-                      children: (0, _.jsx)("a", {
-                        href: _._.STORE_BASE_URL + "account/preferences",
-                        children: (0, _._)(
-                          1 == _
-                            ? "#Sale_HiddenItem_Single_Short"
-                            : "#Sale_HiddenItems_Short",
-                          _,
-                        ),
-                      }),
+            );
+          })(_);
+          _ &&
+            (_ =
+              _ && _
+                ? (0, _.jsx)(_, {
+                    label: _,
+                    shown: !!_,
+                  })
+                : (0, _.jsx)(_._, {
+                    url: _,
+                    className: _,
+                    children: _,
+                  })),
+            (_ = (0, _.jsx)(_._, {
+              url: _,
+              bFocusable: !_,
+              children: _,
+            }));
+        }
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _.SectionLabelCtn,
+            "SaleSectionLabelCtn",
+            _?.BHasSomeImage("product_banner") ? _.SectionLabelImage : "",
+          ),
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.SectionTitleInnerCtn,
+              children: [_, Boolean(_) && _],
+            }),
+            (0, _.jsxs)("div", {
+              className: _.SectionLabelRight,
+              children: [
+                !!_ &&
+                  (0, _.jsx)(_._, {
+                    className: _.SaleSectionSubtext,
+                    toolTipContent: "#Sale_HiddenItem_Tooltip",
+                    children: (0, _.jsx)("a", {
+                      href: _._.STORE_BASE_URL + "account/preferences",
+                      children: (0, _._)(
+                        1 == _
+                          ? "#Sale_HiddenItem_Single_Short"
+                          : "#Sale_HiddenItems_Short",
+                        _,
+                      ),
                     }),
-                  _,
-                ],
-              }),
-            ],
-          })
-        );
+                  }),
+                _,
+              ],
+            }),
+          ],
+        });
       });
       function _(_, _, _) {
         return {

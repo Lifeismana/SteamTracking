@@ -1856,6 +1856,34 @@ label.send_choice_txt {
 	width: 548px;
 }
 
+.send_choice_warning {
+	color: #ffcc6a;
+	font-weight: 500;
+}
+
+.send_to_accountid_label_ctn {
+	display: inline-flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.send_to_accountid_label_ctn a {
+	text-decoration: none;
+	display: contents;
+}
+
+.send_to_accountid_label_ctn .friend_block_avatar {
+	margin-left: 5px;
+}
+
+.send_to_accountid_label_ctn .friend_block_text {
+	font-size: 16px;
+}
+
+.send_to_accountid_label_ctn .send_via_giftee_desc {
+	color: #ffffff;
+}
+
 #send_via_friends_box {
 	margin-top: 20px;
 }

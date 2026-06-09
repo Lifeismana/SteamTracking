@@ -7688,23 +7688,25 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest(_ = !0) {
+        BIsNextFest(_ = !1) {
           var _;
-          const _ = "nextfest",
-            _ =
+          const _ =
               null === (_ = this.jsondata.sale_vanity_id) || void 0 === _
                 ? void 0
                 : _.toLowerCase(),
             _ = new _._(this.clanSteamID).GetAccountID();
           return (
             !(!_ || _ != _._) &&
-            (_ ? _.startsWith(_) : _.startsWith(_) && !_.includes("prev"))
+            !!__webpack_require__.startsWith("nextfest") &&
+            (!_ ||
+              (!__webpack_require__.endsWith("preview") &&
+                !__webpack_require__.endsWith("press")))
           );
         }
         BShowNextFestHeader(_) {
           return _ && _._.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }

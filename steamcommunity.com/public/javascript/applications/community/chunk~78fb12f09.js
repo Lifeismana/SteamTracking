@@ -85,17 +85,17 @@
     },
     48474: (e, t, n) => {
       "use strict";
-      n.d(t, { $: () => v, v: () => m });
+      n.d(t, { $: () => v, v: () => x });
       var o = n(7850),
         i = n(64238),
         r = n.n(i),
         s = n(69041),
         a = n(75659),
-        c = n(11526),
-        l = n(11820),
+        l = n(11526),
+        c = n(11820),
         p = n(62463),
-        d = n(45699),
-        u = n(8527);
+        u = n(45699),
+        d = n(8527);
       function h(e) {
         e.preventDefault();
       }
@@ -118,70 +118,80 @@
           },
         ],
         v = function (e) {
+          var t;
           const {
-              variant: t = "default",
-              size: n = "2",
-              minWidth: i = "fit-content",
-              color: a,
-              loading: l,
-              children: h,
-              onClick: v,
+              variant: n = "default",
+              size: i = "2",
+              minWidth: a = "fit-content",
+              color: c,
+              loading: h,
+              children: v,
+              onClick: x,
               icon: m,
-              gamepadFocusable: x = !0,
-              ...g
+              focusable: g,
+              navProps: z,
+              ..._
             } = e,
-            z = l
+            S = h
               ? (0, o.jsx)(p.k, {
-                  size: n,
-                  color: a,
+                  size: i,
+                  color: c,
                   variant: "bright",
-                  children: h,
+                  children: v,
                 })
-              : h,
-            _ = l ? void 0 : v,
-            S = x && u.TS.IN_GAMEPADUI ? d.fu : "button";
-          return (0, o.jsx)(S, {
-            type: "button",
-            ...(0, c.mz)(
-              {
-                ...g,
-                variant: t,
-                size: n,
-                minWidth: i,
-                color: a,
-                className: r()(s.Button, m && s.Icon),
-                onClick: _,
-              },
-              f,
-            ),
-            children: z,
-          });
+              : v,
+            P = h ? void 0 : x,
+            w =
+              null !== (t = null != g ? g : null == z ? void 0 : z.focusable) &&
+              void 0 !== t
+                ? t
+                : !!P,
+            b = {
+              type: "button",
+              ...(0, l.mz)(
+                {
+                  ..._,
+                  variant: n,
+                  size: i,
+                  minWidth: a,
+                  color: c,
+                  className: r()(s.Button, m && s.Icon),
+                  onClick: P,
+                },
+                f,
+              ),
+              children: S,
+            };
+          return d.TS.IN_GAMEPADUI && (w || z)
+            ? (0, o.jsx)(u.fu, { ...b, ...(z || {}), focusable: w })
+            : (0, o.jsx)("button", { ...b });
         },
-        m = function (e) {
+        x = function (e) {
           const {
               variant: t = "default",
               size: n = "2",
               minWidth: i = "fit-content",
               disabled: a,
               icon: p,
-              gamepadFocusable: v = !0,
+              focusable: v,
+              navProps: x,
               ...m
             } = e,
-            x = a ? h : void 0,
-            g = v && u.TS.IN_GAMEPADUI ? d.Ii : "a";
-          return (0, o.jsx)(g, {
-            ...(0, c.mz)(
+            g = a ? h : void 0,
+            z = (0, l.mz)(
               {
-                onClick: x,
+                onClick: g,
                 ...m,
                 variant: t,
                 size: n,
                 minWidth: i,
-                className: r()(s.Button, p && s.Icon, (0, l.T)()),
+                className: r()(s.Button, p && s.Icon, (0, c.T)()),
               },
               f,
-            ),
-          });
+            );
+          return d.TS.IN_GAMEPADUI && (v || x)
+            ? (0, o.jsx)(u.Ii, { ...z, ...(x || {}), focusable: v })
+            : (0, o.jsx)("a", { ...z });
         };
     },
     62463: (e, t, n) => {
@@ -192,15 +202,15 @@
         r = n(11526),
         s = n(90534),
         a = n(64238),
-        c = n.n(a),
-        l = n(83392);
+        l = n.n(a),
+        c = n(83392);
       function p(e) {
         const {
           size: t = "3",
           loading: n = !0,
           children: r,
           color: a,
-          variant: c,
+          variant: l,
           ...p
         } = e;
         return r || !n
@@ -215,26 +225,26 @@
                   children: r,
                 }),
                 n &&
-                  (0, o.jsx)(l.s, {
+                  (0, o.jsx)(c.s, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
                     align: "center",
-                    children: (0, o.jsx)(d, { size: t, color: a, variant: c }),
+                    children: (0, o.jsx)(u, { size: t, color: a, variant: l }),
                   }),
               ],
             })
-          : (0, o.jsx)(d, { size: t, color: a, variant: c, ...p });
+          : (0, o.jsx)(u, { size: t, color: a, variant: l, ...p });
       }
-      function d(e) {
-        const { className: t, color: n, ...s } = (0, r.mz)(e, u);
+      function u(e) {
+        const { className: t, color: n, ...s } = (0, r.mz)(e, d);
         return (0, o.jsx)("div", {
           "data-accent-color": n,
-          className: c()(t, i.Spinner),
+          className: l()(t, i.Spinner),
           ...s,
         });
       }
-      const u = [
+      const d = [
         ...n(75659).L,
         { prop: "size", responsive: !0, className: (e) => i[`Size-${e}`] },
         { prop: "variant", className: (e) => i[`Variant-${e}`] },
@@ -242,34 +252,37 @@
     },
     49560: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => z, p: () => g });
+      n.d(t, { A: () => P, p: () => S });
       var o = n(7850),
         i = n(90626),
         r = n(73788),
         s = n(28505),
         a = n(94621),
-        c = n(8871),
-        l = n(45699),
+        l = n(8871),
+        c = n(45699),
         p = n(85585),
-        d = n(7445),
-        u = n(8527),
-        h = n(81393);
-      const f = (0, i.createContext)(null);
-      function v(e) {
-        return u.TS.IN_GAMEPADUI
-          ? (0, o.jsx)(m, { ...e })
-          : (0, o.jsx)(x, { ...e });
+        u = n(7445),
+        d = n(8527),
+        h = n(81393),
+        f = n(64238),
+        v = n.n(f),
+        x = n(11820);
+      const m = (0, i.createContext)(null);
+      function g(e) {
+        return d.TS.IN_GAMEPADUI
+          ? (0, o.jsx)(z, { ...e })
+          : (0, o.jsx)(_, { ...e });
       }
-      function m(e) {
+      function z(e) {
         const { children: t } = e,
-          n = (0, i.useContext)(f);
+          n = (0, i.useContext)(m);
         (0, h.wT)(
           !!n,
           "<Popover.Positioner> must be a child of <Popover.Root>.",
         );
         const r = i.useRef(void 0);
         return (
-          (0, l.O7)(r, !!r.current, !1),
+          (0, c.O7)(r, !!r.current, !1),
           (0, o.jsx)(p.D6, {
             navID: "Popover",
             onCancelButton: () => n.floating.context.onOpenChange(!1),
@@ -277,14 +290,14 @@
             navTreeRef: r,
             children: (0, o.jsx)("div", {
               style: { display: "contents" },
-              children: (0, o.jsx)(d.q, { children: t }),
+              children: (0, o.jsx)(u.q, { children: t }),
             }),
           })
         );
       }
-      function x(e) {
+      function _(e) {
         const { children: t } = e,
-          n = (0, i.useContext)(f);
+          n = (0, i.useContext)(m);
         return (
           (0, h.wT)(
             !!n,
@@ -298,7 +311,7 @@
           })
         );
       }
-      function g(e) {
+      function S(e) {
         const { gutter: t = 0, placement: n } = e,
           o = [],
           i = n && "object" == typeof n;
@@ -359,7 +372,7 @@
           o
         );
       }
-      const z = {
+      const P = {
         Root: function (e) {
           const { children: t, ...n } = e,
             i = (function (e) {
@@ -371,10 +384,10 @@
               } = e;
               let a = t;
               0;
-              const c = (0, r.we)({
+              const l = (0, r.we)({
                   open: a,
                   onOpenChange: n,
-                  middleware: g(e),
+                  middleware: S(e),
                   whileElementsMounted: s.ll,
                   placement: o && "object" == typeof o ? o.initial : o,
                   strategy: "fixed",
@@ -393,36 +406,36 @@
                     },
                   },
                 }),
-                l = (0, r.kp)(c.context, { enabled: !!i.click }),
-                p = (0, r.iQ)(c.context, { enabled: !!i.focus }),
-                d = { handleClose: (0, r.iB)() },
-                u = "function" == typeof i.hover ? i.hover(d) : d,
-                h = (0, r.Mk)(c.context, { enabled: !!i.hover, ...u }),
-                f = (0, r.s9)(c.context),
-                { getFloatingProps: v, getReferenceProps: m } = (0, r.bv)([
-                  l,
+                c = (0, r.kp)(l.context, { enabled: !!i.click }),
+                p = (0, r.iQ)(l.context, { enabled: !!i.focus }),
+                u = { handleClose: (0, r.iB)() },
+                d = "function" == typeof i.hover ? i.hover(u) : u,
+                h = (0, r.Mk)(l.context, { enabled: !!i.hover, ...d }),
+                f = (0, r.s9)(l.context),
+                { getFloatingProps: v, getReferenceProps: x } = (0, r.bv)([
+                  c,
                   p,
                   h,
                   f,
                 ]);
               return {
-                floating: c,
+                floating: l,
                 getFloatingProps: v,
-                getReferenceProps: m,
+                getReferenceProps: x,
                 open: a,
               };
             })(n);
-          return (0, o.jsx)(f.Provider, { value: i, children: t });
+          return (0, o.jsx)(m.Provider, { value: i, children: t });
         },
         Anchor: function (e) {
           const { children: t } = e,
             n = i.Children.only(t),
-            o = (0, i.useContext)(f);
+            o = (0, i.useContext)(m);
           return n
             ? o
               ? (0, i.cloneElement)(n, {
                   ...o.getReferenceProps(n.props),
-                  ref: (0, c.XB)(n.props.ref, o.floating.refs.setReference),
+                  ref: (0, l.XB)(n.props.ref, o.floating.refs.setReference),
                 })
               : (console.error(
                   "<PopoverAnchor> must be a child of <PopoverRoot>.",
@@ -432,8 +445,8 @@
         },
         Positioner: function (e) {
           const { children: t, className: n, ref: s } = e,
-            a = (0, i.useContext)(f),
-            c = (0, r.SV)([
+            a = (0, i.useContext)(m),
+            l = (0, r.SV)([
               s,
               null == a ? void 0 : a.floating.refs.setFloating,
               (e) => {
@@ -452,57 +465,50 @@
               null
             );
           if (!a.open) return null;
-          let l = i.Children.only(t),
+          let c = i.Children.only(t),
             p = i.Fragment;
-          l.type == z.FocusManager &&
-            ((l = i.Children.only(l.props.children)), (p = v));
-          const d = (0, i.cloneElement)(l, {
-            ref: c,
-            style: {
-              ...a.floating.floatingStyles,
-              inset: "unset",
-              border: "none",
-              background: "transparent",
-              color: "inherit",
-              padding: 0,
-            },
-            className: n,
+          c.type == P.FocusManager &&
+            ((c = i.Children.only(c.props.children)), (p = g));
+          const u = (0, i.cloneElement)(c, {
+            ref: l,
+            style: { ...a.floating.floatingStyles },
+            className: v()((0, x.T)(), n),
             popover: "manual",
             ...a.getFloatingProps(),
           });
-          return (0, o.jsx)(p, { children: d });
+          return (0, o.jsx)(p, { children: u });
         },
-        FocusManager: v,
+        FocusManager: g,
       };
     },
     90534: (e, t, n) => {
       "use strict";
-      n.d(t, { A4: () => h, GY: () => d, az: () => p });
+      n.d(t, { A4: () => h, az: () => u });
       var o = n(7850),
-        i = n(39479),
-        r = n(64238),
-        s = n.n(r),
-        a = n(11526),
+        i = n(44041),
+        r = n(39479),
+        s = n(64238),
+        a = n.n(s),
+        l = n(11526),
         c = n(75659),
-        l = n(44041);
-      function p(e) {
-        const { as: t = "div", ref: n, ...i } = e,
-          r = (0, a.mz)({ ...i, className: s()(l.Box, e.className) }, u),
-          c = t;
-        return (0, o.jsx)(c, { ref: n, ...r });
+        p = n(8527);
+      function u(e) {
+        var t;
+        const { as: n = "div", focusable: s, navProps: c, ref: u, ...h } = e,
+          f = (0, l.mz)({ ...h, className: a()(i.Box, e.className) }, d),
+          v =
+            null !== (t = null != s ? s : null == c ? void 0 : c.focusable) &&
+            void 0 !== t
+              ? t
+              : !!h.onClick,
+          x = (0, o.jsx)(n, { ref: u, ...f });
+        return p.TS.IN_GAMEPADUI && (v || c)
+          ? (0, o.jsx)(r.J, { ...(c || {}), focusable: v, children: x })
+          : x;
       }
-      function d(e) {
-        const { as: t = "div", ref: n, navProps: r, ...c } = e,
-          p = (0, a.mz)({ ...c, className: s()(l.Box, c.className) }, u),
-          d = t;
-        return (0, o.jsx)(i.J, {
-          ...r,
-          children: (0, o.jsx)(d, { ref: n, ...p }),
-        });
-      }
-      const u = c.h;
+      const d = c.h;
       function h(e) {
-        return (0, a.Ef)(e, c.L);
+        return (0, l.Ef)(e, c.L);
       }
     },
     59805: (e, t, n) => {
@@ -513,11 +519,11 @@
         r = n(75659),
         s = n(20187),
         a = n(11526),
-        c = n(90626);
-      const l = c.createContext({ depth: 0 });
+        l = n(90626);
+      const c = l.createContext({ depth: 0 });
       var p = n(11820),
-        d = n(64238),
-        u = n.n(d);
+        u = n(64238),
+        d = n.n(u);
       function h(e) {
         const { level: t = "auto", className: n, color: r } = e,
           s = (function (e, t) {
@@ -534,9 +540,9 @@
                   ),
                   "h1");
             return "h" + n;
-          })(t, (0, c.useContext)(l).depth);
+          })(t, (0, l.useContext)(c).depth);
         return (0, o.jsx)(s, {
-          ...(0, a.mz)({ ...e, className: u()((0, p.T)(), i.Heading, n) }, f),
+          ...(0, a.mz)({ ...e, className: d()((0, p.T)(), i.Heading, n) }, f),
         });
       }
       const f = [
@@ -551,33 +557,33 @@
     },
     20187: (e, t, n) => {
       "use strict";
-      n.d(t, { Ae: () => u, EY: () => p, U6: () => d });
+      n.d(t, { Ae: () => d, EY: () => p, U6: () => u });
       var o = n(7850),
         i = n(55348),
         r = n(11526),
         s = n(75659),
         a = n(64238),
-        c = n.n(a),
-        l = n(65274);
+        l = n.n(a),
+        c = n(65274);
       function p(e) {
         const { as: t = "span", ref: n, className: i, ...s } = e,
           a = t;
         return (0, o.jsx)(a, {
           ref: n,
-          ...(0, r.mz)({ ...s, className: c()(l.Text, i) }, u),
+          ...(0, r.mz)({ ...s, className: l()(c.Text, i) }, d),
         });
       }
-      const d = [
+      const u = [
           {
             prop: "weight",
             responsive: !0,
-            className: l.TextWeight,
+            className: c.TextWeight,
             cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
             prop: "align",
             responsive: !0,
-            className: l.TextAlign,
+            className: c.TextAlign,
             cssProperty: "--text-align",
           },
           {
@@ -612,48 +618,54 @@
               ];
             },
           },
-          { prop: "truncate", className: l.Truncate },
+          { prop: "truncate", className: c.Truncate },
           {
             prop: "lineClamp",
             responsive: !0,
-            className: l.LineClamp,
+            className: c.LineClamp,
             cssProperty: "--line-clamp",
           },
           {
             prop: "whiteSpace",
-            className: l.WhiteSpace,
+            className: c.WhiteSpace,
             cssProperty: "--white-space",
           },
         ],
-        u = [
-          ...d,
+        d = [
+          ...u,
           ...s.L,
           {
             prop: "size",
             responsive: !0,
-            className: (e) => l[`TextSize-${e}`],
+            className: (e) => c[`TextSize-${e}`],
           },
         ];
     },
     28491: (e, t, n) => {
       "use strict";
-      n.d(t, { Y: () => l });
+      n.d(t, { Y: () => c });
       var o = n(7850),
-        i = n(20187),
-        r = n(11526),
-        s = n(50122),
+        i = n(50122),
+        r = n(20187),
+        s = n(11526),
         a = n(8527),
-        c = n(45699);
-      function l(e) {
-        const { underline: t = "auto", ...n } = e,
-          i = a.TS.IN_GAMEPADUI ? c.Ii : "a";
-        return (0, o.jsx)(i, {
-          ...(0, r.mz)({ ...n, underline: t, className: s.TextLink }, p),
-        });
+        l = n(45699);
+      function c(e) {
+        var t;
+        const { underline: n = "auto", focusable: r, navProps: c, ...u } = e,
+          d =
+            null !== (t = null != r ? r : null == c ? void 0 : c.focusable) &&
+            void 0 !== t
+              ? t
+              : !!u.href,
+          h = (0, s.mz)({ ...u, underline: n, className: i.TextLink }, p);
+        return a.TS.IN_GAMEPADUI && (d || c)
+          ? (0, o.jsx)(l.Ii, { ...h, ...(c || {}), focusable: d })
+          : (0, o.jsx)("a", { ...h });
       }
       const p = [
-        ...i.Ae,
-        { prop: "underline", className: (e) => s[`Underline-${e}`] },
+        ...r.Ae,
+        { prop: "underline", className: (e) => i[`Underline-${e}`] },
       ];
     },
     11820: (e, t, n) => {

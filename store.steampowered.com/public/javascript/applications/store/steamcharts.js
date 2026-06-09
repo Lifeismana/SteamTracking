@@ -957,7 +957,7 @@
       a.d(t, { Z: () => o });
       var n = a(30894),
         r = a(90626),
-        s = a(96171);
+        s = a(48210);
       function o(e) {
         const t = n.Fm.Get().BIsLoaded() && n.Fm.Get();
         return r.useMemo(
@@ -5682,7 +5682,7 @@
       var n = a(7850),
         r = a(90626),
         s = a(55963),
-        o = a(96171),
+        o = a(48210),
         i = a(62093),
         l = a(60014),
         c = a(3578),
@@ -5925,7 +5925,7 @@
         w = a(80613),
         y = a.n(w),
         I = a(89068),
-        k = a(96171);
+        k = a(48210);
       class T extends w.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -8799,7 +8799,7 @@
         Ia = a(55963),
         ka = a(75279),
         Ta = a(51680),
-        Da = a(706),
+        Da = a(29008),
         Aa = a(58918),
         Na = a(17376),
         Ba = a(51535),
@@ -8992,7 +8992,7 @@
               className: Ga().PriceCell,
               children: (0, r.jsx)("div", {
                 className: Ga().PriceWidget,
-                children: (0, r.jsx)(wa.N, { id: i }),
+                children: (0, r.jsx)(wa.NF, { id: i }),
               }),
             }),
             s(),
@@ -9339,7 +9339,7 @@
               className: Ga().PriceCell,
               children: (0, r.jsx)("div", {
                 className: Ga().PriceWidget,
-                children: (0, r.jsx)(wa.N, { id: d }),
+                children: (0, r.jsx)(wa.NF, { id: d }),
               }),
             }),
             (0, r.jsx)(Xa, { rank: t }),
@@ -9774,7 +9774,7 @@
         return a.current ? (0, r.jsx)(za, { src: a.current }) : null;
       });
       var cn = a(23809),
-        dn = a(91822),
+        dn = a(93341),
         un = a(25489);
       function mn(e) {
         const { MostPlayedOnDeckStore: t, strTimePeriod: a } = e,
@@ -10095,7 +10095,7 @@
               className: Ga().PriceCell,
               children: (0, r.jsx)("div", {
                 className: Ga().PriceWidget,
-                children: (0, r.jsx)(wa.N, { id: n }),
+                children: (0, r.jsx)(wa.NF, { id: n }),
               }),
             }),
             (0, r.jsx)(Fa, {

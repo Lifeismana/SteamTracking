@@ -233,76 +233,88 @@
         AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
         JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
+        AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
       };
     },
     83392: (s, r, e) => {
       "use strict";
-      e.d(r, { s: () => c });
+      e.d(r, { s: () => _ });
       var p = e(7850),
         o = e(39479),
         i = e(64238),
         a = e.n(i),
         t = e(11526),
-        n = e(75659),
-        m = e(68875);
-      function c(s) {
-        const { as: r = "div", ref: e, navRef: i, ...n } = s,
-          c = (0, t.mz)({ ...n, className: a()(s.className, m.Flex) }, l),
-          _ = !n.disabled && !!n.onClick,
-          d = r;
-        return (0, p.jsx)(o.J, {
-          focusable: _,
-          navRef: i,
-          children: (0, p.jsx)(d, { ref: e, ...c }),
-        });
+        n = e(55348),
+        m = e(75659),
+        c = e(68875),
+        l = e(8527);
+      function _(s) {
+        var r, e;
+        const { as: i = "div", focusable: m, navProps: _, ref: u, ...y } = s,
+          v = (0, t.mz)({ ...y, className: a()(s.className, c.Flex) }, d),
+          f =
+            null !== (r = null != m ? m : null == _ ? void 0 : _.focusable) &&
+            void 0 !== r
+              ? r
+              : !!y.onClick,
+          g = (0, p.jsx)(i, { ref: u, ...v }),
+          N = (0, n.n)(null !== (e = y.direction) && void 0 !== e ? e : "row");
+        return l.TS.IN_GAMEPADUI
+          ? (0, p.jsx)(o.J, {
+              ...(_ || {}),
+              focusable: f,
+              "flow-children": N,
+              children: g,
+            })
+          : g;
       }
-      const l = [
-        ...n.h,
+      const d = [
+        ...m.h,
         {
           prop: "direction",
           responsive: !0,
-          className: m.Direction,
+          className: c.Direction,
           cssProperty: "--direction",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: m.Justify,
-          cssProperty: (s) => ["--justify", _(s)],
+          className: c.Justify,
+          cssProperty: (s) => ["--justify", u(s)],
         },
         {
           prop: "align",
           responsive: !0,
-          className: m.Align,
+          className: c.Align,
           cssProperty: "--align",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: m.Gap,
+          className: c.Gap,
           cssProperty: (s) => ["--gap", `var(--spacing-${s})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: m.GapX,
+          className: c.GapX,
           cssProperty: (s) => ["--gap-x", `var(--spacing-${s})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: m.GapY,
+          className: c.GapY,
           cssProperty: (s) => ["--gap-y", `var(--spacing-${s})`],
         },
         {
           prop: "wrap",
           responsive: !0,
-          className: m.Wrap,
+          className: c.Wrap,
           cssProperty: "--wrap",
         },
-        { prop: "inline", responsive: !0, className: m.Inline },
+        { prop: "inline", responsive: !0, className: c.Inline },
       ];
-      function _(s) {
+      function u(s) {
         return /^(between|around|evenly)$/.test(s) ? `space-${s}` : s;
       }
     },
@@ -557,6 +569,12 @@
             responsive: !0,
             className: o.TextAlign,
             cssProperty: "--text-align",
+          },
+          {
+            prop: "aspectRatio",
+            responsive: !0,
+            className: o.AspectRatio,
+            cssProperty: "--aspect-ratio",
           },
         ];
     },

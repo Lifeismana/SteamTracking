@@ -879,6 +879,9 @@
 :where(._1xbvB3MqxnugiXxR02dPOx) {
   text-align: var(--text-align);
 }
+:where(._1OB-pyw07DhYE8iZusGAjg) {
+  aspect-ratio: var(--aspect-ratio);
+}
 :where(._3A_c3YHYd4YIjA8Y-olnPl):where(body, blockquote, dl, dd, figure, p) {
   margin: 0;
 }
@@ -1128,11 +1131,11 @@
     transform: rotate(360deg);
   }
 }
-._2YzOLNBx6TonKU0Zmp20l4 {
+:where(._2YzOLNBx6TonKU0Zmp20l4) {
   display: block;
   box-sizing: border-box;
 }
-._3nHL7awgK1Qei1XivGvHMK {
+:where(._3nHL7awgK1Qei1XivGvHMK) {
   box-sizing: border-box;
   display: flex;
 }

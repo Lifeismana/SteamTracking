@@ -1623,6 +1623,7 @@ ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search
 ${STORE_BASE_URL}search/
 ${STORE_BASE_URL}search/?${}
+${STORE_BASE_URL}search/?${}=${name}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}%2C${strSecondaryCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
@@ -1926,7 +1927,6 @@ ${g_szBaseURL}/apps/addgameandchallengegroup/${appid}
 ${g_szBaseURL}/apps/addmoduleforchallengegroup/${appid}
 ${g_szBaseURL}/apps/ajaxcreategameprofile/${appID}
 ${g_szBaseURL}/apps/ajaxdeletegameprofile/${appID}
-${g_szBaseURL}/apps/cdnpush/${appid}
 ${g_szBaseURL}/apps/communityitems/${appID}
 ${g_szBaseURL}/apps/communityitems/${appID}/${item_type}
 ${g_szBaseURL}/apps/createogg/${appid}
@@ -2375,9 +2375,9 @@ https://facebook.com/dota2/
 https://facebook.com/steam
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
 https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m
+https://grafana.valve.org/steam/d/a6879b35-cc98-4c51-9233-a55d504556fb/marketing-messages?orgId=2&from=now-7d&to=now&timezone=browser&var-message_type=$__all
 https://grafana.valve.org/steam/d/c2d2436a-7206-47d5-8fca-89bdc91db65d/storemarketing-getitemstofeature-filtering?orgId=2&var-type=marketing_messages
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization
-https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now
 https://help.steampowered.com
 https://help.steampowered.com/
 https://help.steampowered.com/${hash}
@@ -3171,6 +3171,7 @@ steam://friends/status/invisible
 steam://friends/status/offline
 steam://friends/status/online
 steam://gamewebcallback/
+steam://install/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/
 steam://nav/games/details/${appid}
@@ -3231,7 +3232,6 @@ steam://openurl_external/https://help.steampowered.com/faqs/view/443B-C1B8-0998-
 steam://openurl_external/https://help.steampowered.com/faqs/view/4593-5CB7-DC3C-64F0
 steam://remoteplay/connect
 steam://remoteplay/connect/${}?appid=${}&${}
-steam://run/${appid}
 steam://run/${}
 steam://run/250820
 steam://rungame/${}/${}

@@ -13,5 +13,8 @@
     "VerifiedProgram_DeckDisclaimer": "قد لا يمثّل المقطع الترويجي طريقة اللعب الفعلية على Steam Deck",
     "StoreItemFound": "تم العثور على %1$s (%2$s)",
     "StoreItemNotFound": "لم يتم العثور عليه (%1$s)",
+    "PriceGrid_NormalPrice": "عادةً",
+    "PriceGrid_RecentPrice": "أقل سعر له خلال 30 يومًا",
+    "PriceGrid_CurrentPrice": "الآن",
     "Dummy": "dummy"
 }

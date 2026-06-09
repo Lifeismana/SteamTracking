@@ -238,7 +238,8 @@
               children: _,
               onClick: _,
               icon: _,
-              gamepadFocusable: _ = !0,
+              focusable: _,
+              navProps: _,
               ..._
             } = _,
             _ = _
@@ -250,23 +251,32 @@
                 })
               : _,
             _ = _ ? void 0 : _,
-            _ = _ && _._.IN_GAMEPADUI ? _._ : "button";
-          return (0, _.jsx)(_, {
-            type: "button",
-            ...(0, _._)(
-              {
+            _ = _ ?? _?.focusable ?? !!_,
+            _ = {
+              type: "button",
+              ...(0, _._)(
+                {
+                  ..._,
+                  variant: _,
+                  size: _,
+                  minWidth: _,
+                  color: _,
+                  className: _()(_.Button, _ && _.Icon),
+                  onClick: _,
+                },
+                _,
+              ),
+              children: _,
+            };
+          return _._.IN_GAMEPADUI && (_ || _)
+            ? (0, _.jsx)(_._, {
                 ..._,
-                variant: _,
-                size: _,
-                minWidth: _,
-                color: _,
-                className: _()(_.Button, _ && _.Icon),
-                onClick: _,
-              },
-              _,
-            ),
-            children: _,
-          });
+                ...(_ || {}),
+                focusable: _,
+              })
+            : (0, _.jsx)("button", {
+                ..._,
+              });
         },
         _ = function (_) {
           const {
@@ -275,13 +285,12 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
-              gamepadFocusable: _ = !0,
+              focusable: _,
+              navProps: _,
               ..._
             } = _,
             _ = _ ? _ : void 0,
-            _ = _ && _._.IN_GAMEPADUI ? _._ : "a";
-          return (0, _.jsx)(_, {
-            ...(0, _._)(
+            _ = (0, _._)(
               {
                 onClick: _,
                 ..._,
@@ -291,8 +300,16 @@
                 className: _()(_.Button, _ && _.Icon, (0, _._)()),
               },
               _,
-            ),
-          });
+            );
+          return _._.IN_GAMEPADUI && (_ || _)
+            ? (0, _.jsx)(_._, {
+                ..._,
+                ...(_ || {}),
+                focusable: _,
+              })
+            : (0, _.jsx)("a", {
+                ..._,
+              });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -547,9 +564,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -557,7 +574,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -565,29 +582,18 @@
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: _,
-          ..._,
-        });
-      }
-      function _(_) {
-        const { _: _ = "div", ref: _, navProps: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, _.className),
-            },
-            _,
-          ),
-          _ = _;
-        return (0, _.jsx)(_._, {
-          ..._,
-          children: (0, _.jsx)(_, {
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
-          }),
-        });
+          });
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = _._;
     },
@@ -740,18 +746,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ..._ } = _,
-          _ = _._.IN_GAMEPADUI ? _._ : "a";
-        return (0, _.jsx)(_, {
-          ...(0, _._)(
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = _ ?? _?.focusable ?? !!_.href,
+          _ = (0, _._)(
             {
               ..._,
               underline: _,
               className: _.TextLink,
             },
             _,
-          ),
-        });
+          );
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ..._,
+              ...(_ || {}),
+              focusable: _,
+            })
+          : (0, _.jsx)("a", {
+              ..._,
+            });
       }
       const _ = [
         ..._._,
@@ -790,9 +803,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -800,14 +814,19 @@
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_._, {
-          "flow-children": "grid",
-          children: (0, _.jsx)(_, {
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
-          }),
-        });
+          });
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_._, {
+              "flow-children": "grid",
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = [
         ..._._,
@@ -903,37 +922,8 @@
         },
       ];
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _ = ["b", "i", "br"]) {
-        const _ = _.join("|"),
-          _ = [],
-          _ = new RegExp(
-            `(?<before>.*?)<(?<tagname>${_})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
-            "gs",
-          );
-        let _,
-          _ = 0;
-        for (; (_ = _.exec(_)); ) {
-          if (!_.groups) continue;
-          if (!_.groups?.endtag) {
-            const _ = _.groups.before.length + _.groups.tagname.length + 2;
-            (_ += _), (_.lastIndex = _.index + _), _.push(_.groups.before);
-            const _ = _[2],
-              _ = _.createElement(_);
-            _.push(_);
-            continue;
-          }
-          (_ += _[0].length), _.push(_.groups.before);
-          const _ = _.groups.tagname,
-            _ = _.groups.contents || "";
-          let _ = null;
-          _ && (_ = _(_, _));
-          const _ = _.createElement(_, {}, _);
-          _.push(_);
-        }
-        return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return "desktop" === (0, _._)(_._);
@@ -1513,7 +1503,7 @@
               _: "p",
               size: "1",
               className: _.LegalNotice,
-              children: _(
+              children: (0, _._)(
                 _.Localize("#footer_legal_notice", new Date().getFullYear()),
               ),
             }),
@@ -1718,6 +1708,63 @@
           method: "footer",
           children: _,
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, ..._) {
+        const _ = [],
+          _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+        let _,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          (_ += _[0].length), __webpack_require__.push(_[1]);
+          const _ = parseInt(_[2]),
+            _ = _[3] || "",
+            _ = _(_, ..._),
+            _ = (_ >= 1 && _ <= _.length ? _[_ - 1] : null)
+              ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
+              : _;
+          __webpack_require__.push(_);
+        }
+        return (
+          __webpack_require__.push(_.substr(_)),
+          _.createElement(_.Fragment, null, ..._)
+        );
+      }
+      function _(_, _ = ["b", "i", "br"]) {
+        const _ = _.join("|"),
+          _ = [],
+          _ = new RegExp(
+            `(?<before>.*?)<(?<tagname>${_})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
+            "gs",
+          );
+        let _,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          if (!_.groups) continue;
+          if (!_.groups?.endtag) {
+            const _ = _.groups.before.length + _.groups.tagname.length + 2;
+            (_ += _), (_.lastIndex = _.index + _), _.push(_.groups.before);
+            const _ = _[2],
+              _ = _.createElement(_);
+            _.push(_);
+            continue;
+          }
+          (_ += _[0].length), _.push(_.groups.before);
+          const _ = _.groups.tagname,
+            _ = _.groups.contents || "";
+          let _ = null;
+          _ && (_ = _(_, _));
+          const _ = _.createElement(_, {}, _);
+          _.push(_);
+        }
+        return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
       }
     },
   },

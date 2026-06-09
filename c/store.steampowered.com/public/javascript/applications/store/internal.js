@@ -556,7 +556,8 @@
               children: _,
               onClick: _,
               icon: _,
-              gamepadFocusable: _ = !0,
+              focusable: _,
+              navProps: _,
               ..._
             } = _,
             _ = _
@@ -568,23 +569,32 @@
                 })
               : _,
             _ = _ ? void 0 : _,
-            _ = _ && _._.IN_GAMEPADUI ? _._ : "button";
-          return (0, _.jsx)(_, {
-            type: "button",
-            ...(0, _._)(
-              {
+            _ = _ ?? _?.focusable ?? !!_,
+            _ = {
+              type: "button",
+              ...(0, _._)(
+                {
+                  ..._,
+                  variant: _,
+                  size: _,
+                  minWidth: _,
+                  color: _,
+                  className: _()(_.Button, _ && _.Icon),
+                  onClick: _,
+                },
+                _,
+              ),
+              children: _,
+            };
+          return _._.IN_GAMEPADUI && (_ || _)
+            ? (0, _.jsx)(_._, {
                 ..._,
-                variant: _,
-                size: _,
-                minWidth: _,
-                color: _,
-                className: _()(_.Button, _ && _.Icon),
-                onClick: _,
-              },
-              _,
-            ),
-            children: _,
-          });
+                ...(_ || {}),
+                focusable: _,
+              })
+            : (0, _.jsx)("button", {
+                ..._,
+              });
         },
         _ = function (_) {
           const {
@@ -593,13 +603,12 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
-              gamepadFocusable: _ = !0,
+              focusable: _,
+              navProps: _,
               ..._
             } = _,
             _ = _ ? _ : void 0,
-            _ = _ && _._.IN_GAMEPADUI ? _._ : "a";
-          return (0, _.jsx)(_, {
-            ...(0, _._)(
+            _ = (0, _._)(
               {
                 onClick: _,
                 ..._,
@@ -609,8 +618,16 @@
                 className: _()(_.Button, _ && _.Icon, (0, _._)()),
               },
               _,
-            ),
-          });
+            );
+          return _._.IN_GAMEPADUI && (_ || _)
+            ? (0, _.jsx)(_._, {
+                ..._,
+                ...(_ || {}),
+                focusable: _,
+              })
+            : (0, _.jsx)("a", {
+                ..._,
+              });
         };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1243,9 +1260,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -1253,7 +1270,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -1261,29 +1278,18 @@
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: _,
-          ..._,
-        });
-      }
-      function _(_) {
-        const { _: _ = "div", ref: _, navProps: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, _.className),
-            },
-            _,
-          ),
-          _ = _;
-        return (0, _.jsx)(_._, {
-          ..._,
-          children: (0, _.jsx)(_, {
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
-          }),
-        });
+          });
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = _._;
     },
@@ -2331,9 +2337,7 @@
             return (0, _._)(
               _,
               (0, _.jsx)(_._, {
-                navProps: {
-                  focusable: !0,
-                },
+                focusable: !0,
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,

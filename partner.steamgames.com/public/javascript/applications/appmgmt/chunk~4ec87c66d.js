@@ -1221,6 +1221,12 @@
         NoColumnBorders: "_3C2djc2HxWtHJaUqVq-cKt",
       };
     },
+    2213: (e) => {
+      e.exports = {
+        SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
+        Focused: "_3NISN-t8MP65UYQ4p5bNgh",
+      };
+    },
     19418: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -1455,13 +1461,13 @@
         HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
         PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
         EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
         OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
         MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
         EventType: "_2BWwVF5N-3fDuJRblB6gHb",
@@ -33473,7 +33479,7 @@
         });
       var Pi = n(18318),
         Bi = n(64610),
-        Ri = n(30294),
+        Ri = n(78730),
         Ni = n(60860);
       function Gi(e) {
         return Boolean(
@@ -39849,7 +39855,7 @@
                     (0, S.TW)(t.end_date),
                   ),
                 }),
-                (0, s.jsx)($.B, {
+                (0, s.jsx)($.Bq, {
                   bIsPrePurchase: !1,
                   bHidePrePurchase: !1,
                   bSingleLineMode: !1,
@@ -47355,7 +47361,7 @@
         });
       }
       var pe = n(26408),
-        ue = n(98665);
+        ue = n(26384);
       function me(e) {
         const { strArrowColor: t, fnUpdateArrowColor: n, arrowStyle: a } = e,
           [i, r] = I.useState(null == t);
@@ -47409,7 +47415,7 @@
           }),
         });
       }
-      var _e = n(91667);
+      var _e = n(20741);
       function ge(e) {
         return (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(Se, { ...e }), (0, s.jsx)(ve, { ...e })],
@@ -55170,11 +55176,11 @@
               children: [
                 (0, s.jsxs)("div", {
                   children: [
-                    "To see live stats, go to the &nbps;",
+                    "To see live stats, go to the ",
                     (0, s.jsx)("a", {
-                      href: "https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now",
+                      href: "https://grafana.valve.org/steam/d/a6879b35-cc98-4c51-9233-a55d504556fb/marketing-messages?orgId=2&from=now-7d&to=now&timezone=browser&var-message_type=$__all",
                       target: "_blank",
-                      children: "Graphana Page",
+                      children: "Grafana Page",
                     }),
                   ],
                 }),
@@ -55652,8 +55658,8 @@
                     }),
                     "  |  ",
                     (0, s.jsx)("a", {
-                      href: "https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization",
-                      children: "Graphana: Prioritization Stats Page",
+                      href: "https://grafana.valve.org/steam/d/a6879b35-cc98-4c51-9233-a55d504556fb/marketing-messages?orgId=2&from=now-7d&to=now&timezone=browser&var-message_type=$__all",
+                      children: "Grafana: Marketing Messages Detailed Stats",
                     }),
                   ],
                 }),
@@ -57824,6 +57830,12 @@
           ? null
           : (0, s.jsxs)(k.tH, {
               children: [
+                (0, s.jsx)("br", {}),
+                (0, s.jsx)("a", {
+                  href: `https://grafana.valve.org/steam/d/e0a6a523-05a9-4b5c-b341-2dc74b3006f0/marketing-message?orgId=2&var-message=${n}`,
+                  children: "Detailed Stats in Grafana",
+                }),
+                (0, s.jsx)("br", {}),
                 (0, s.jsx)("br", {}),
                 (0, s.jsxs)(A.JU, {
                   children: [
@@ -60795,7 +60807,7 @@
                 ")",
               ],
             }),
-            (0, s.jsx)(Na.B, {
+            (0, s.jsx)(Na.Bq, {
               bSingleLineMode: !0,
               bHidePrePurchase: !1,
               nBaseDiscountPercentage: 0,
@@ -71647,7 +71659,7 @@
         }
       }
       var pe = n(71381),
-        ue = n(30294),
+        ue = n(78730),
         me = n(12155),
         he = n(32754),
         _e = n(52038),
@@ -75158,7 +75170,7 @@
         });
       });
       var _n = n(23310),
-        gn = n(91822),
+        gn = n(93341),
         Sn = n(62307);
       function vn(e) {
         const {
@@ -93918,164 +93930,186 @@
           : null;
       }
     },
-    30294: (e, t, n) => {
+    78730: (e, t, n) => {
       "use strict";
-      n.d(t, { jR: () => b, ue: () => y });
+      n.d(t, { ue: () => I, jR: () => A });
       var s = n(7850),
         a = n(22837),
         i = n(75844),
-        r = n(18318),
-        o = n(38390),
-        l = n(60860),
-        c = n(95695),
-        d = n.n(c),
-        p = n(52393),
-        u = n(90595),
-        m = n(32754),
-        h = n(10224),
-        _ = n(52038),
-        g = n(61859),
+        r = n(90626),
+        o = n(18318),
+        l = n(38390),
+        c = n(60860),
+        d = n(95695),
+        p = n.n(d),
+        u = n(52393),
+        m = n(90595),
+        h = n(32754),
+        _ = n(64238),
+        g = n.n(_),
         S = n(78327),
-        v = n(75982),
-        x = n(46745),
-        f = n(46107);
-      function y(e, t) {
+        v = n(2213);
+      function x(e) {
+        const { label: t, shown: n } = e;
+        return (0, s.jsxs)("div", {
+          className: g()(v.SeeMoreButtonGamepad, n && v.Focused),
+          children: [
+            (0, s.jsx)("img", {
+              src: `${S.TS.IMG_URL}ico_gamepad/shared_button_y.svg`,
+              alt: "Y",
+            }),
+            (0, s.jsx)("div", { children: t }),
+          ],
+        });
+      }
+      var f = n(10224),
+        y = n(52038),
+        D = n(61859),
+        b = n(75982),
+        j = n(46745),
+        w = n(46107);
+      function I(e, t) {
         return (
-          g.NT.GetWithFallback(e.localized_label, t) ||
+          D.NT.GetWithFallback(e.localized_label, t) ||
           ("#Sale_default_label" === e.default_label
             ? ""
-            : (0, g.we)(e.default_label))
+            : (0, D.we)(e.default_label))
         );
       }
-      function D(e) {
+      function C(e) {
         const { event: t, elTitle: n, language: a } = e,
-          i = (0, h.zI)(),
-          r = (0, f.m0)(t, i ? "product_mobile_banner" : "product_banner", a);
+          i = (0, f.zI)(),
+          r = (0, w.m0)(t, i ? "product_mobile_banner" : "product_banner", a);
         return (0, s.jsxs)("div", {
-          className: d().SaleImageCtn,
+          className: p().SaleImageCtn,
           children: [
-            (0, s.jsx)("div", { className: d().SaleImageHelper, children: n }),
+            (0, s.jsx)("div", { className: p().SaleImageHelper, children: n }),
             (0, s.jsx)("img", { src: r, alt: n }),
           ],
         });
       }
-      const b = (0, i.PA)((e) => {
+      const A = (0, i.PA)((e) => {
         const {
             section: t,
             event: n,
             language: a,
             nHiddenCapsules: i,
-            title: c,
-            subtitle: h,
+            title: d,
+            subtitle: _,
+            bShowSeeMoreHint: g,
+            bUseGamepadLinkHint: v,
+            onLinkResolved: f,
           } = e,
-          f = (0, l.yD)(),
-          { eventModel: y } = (0, o.B9)(
+          w = (0, S.Qn)(),
+          I = (0, c.yD)(),
+          { eventModel: A } = (0, l.B9)(
             t.sale_page_cross_promo_clan_account_id,
             t.sale_page_cross_promo_event_gid,
             !1,
-          );
+          ),
+          E =
+            e.link ||
+            (function (e) {
+              return (0, o.ye)(e.section_type) &&
+                "deck_topplayed" === (0, o.Pm)(e)
+                ? S.TS.STORE_BASE_URL + "charts/steamdecktopplayed"
+                : e.label_link;
+            })(t) ||
+            A?.GetSaleURL();
         if (
-          "title_image" == t.section_type &&
-          "image" === t.title_image_selected
+          (r.useEffect(() => {
+            f?.(E);
+          }, [E, f]),
+          "title_image" == t.section_type && "image" === t.title_image_selected)
         )
           return null;
-        const b =
-          c || (0, v.yO)(t, n, a, n.clanSteamID.GetAccountID(), f.eLocation);
-        if (!b) return null;
-        const I = h || (0, v.CP)(t, n, a);
-        let C = (0, s.jsx)("div", {
-            className: (0, _.A)(d().SaleSectionHeader, "SaleSectionHeader"),
-            style: j(t, n, a),
-            children: y?.BHasSomeImage("product_banner")
-              ? (0, s.jsx)(D, { ...e, event: y, elTitle: b })
-              : b,
+        const P =
+          d || (0, b.yO)(t, n, a, n.clanSteamID.GetAccountID(), I.eLocation);
+        if (!P) return null;
+        const B = _ || (0, b.CP)(t, n, a);
+        let R = (0, s.jsx)("div", {
+            className: (0, y.A)(p().SaleSectionHeader, "SaleSectionHeader"),
+            style: T(t, n, a),
+            children: A?.BHasSomeImage("product_banner")
+              ? (0, s.jsx)(C, { ...e, event: A, elTitle: P })
+              : P,
           }),
-          A = (0, s.jsx)("div", {
-            className: (0, _.A)(
-              d().SaleSectionHeader,
-              d().SaleSectionSubtitle,
+          N = (0, s.jsx)("div", {
+            className: (0, y.A)(
+              p().SaleSectionHeader,
+              p().SaleSectionSubtitle,
               "SaleSectionSubtitle",
             ),
-            style: w(t, n, a),
-            children: I,
-          });
-        const T =
-          e.link ||
-          (function (e) {
-            return (0, r.ye)(e.section_type) &&
-              "deck_topplayed" === (0, r.Pm)(e)
-              ? S.TS.STORE_BASE_URL + "charts/steamdecktopplayed"
-              : e.label_link;
-          })(t) ||
-          y?.GetSaleURL();
-        let k = null;
-        return (
-          (T?.length ?? 0) > 0 &&
-            ((C = (0, s.jsx)(u.q, { url: T, children: C })),
-            (k = (function (e, t) {
-              let n = null;
-              if ("browseall" === e.label_link_style) {
-                const e = (0, g.we)("#Sale_SectionLink_BrowseAll");
-                n = (0, s.jsx)(u.q, {
-                  className: (0, _.A)(
-                    x.SectionLabelLinkButton,
+            style: k(t, n, a),
+            children: B,
+          }),
+          G = null;
+        if ((E?.length ?? 0) > 0) {
+          const { strLinkButtonLabel: e, strLinkButtonClasses: n } = (function (
+            e,
+          ) {
+            let t, n;
+            return (
+              "browseall" === e.label_link_style
+                ? ((t = (0, D.we)("#Sale_SectionLink_BrowseAll")),
+                  (n = (0, y.A)(
+                    j.SectionLabelLinkButton,
                     "SaleSectionLabelLinkButton",
-                  ),
-                  url: t,
-                  children: e,
-                });
-              } else if ("deck_topplayed" === (0, r.Pm)(e)) {
-                const e = (0, g.we)("#EventBrowse_MoreEventsBtn");
-                n = (0, s.jsx)(u.q, {
-                  className: (0, _.A)(
-                    d().EventSectionMoreBtn,
+                  )))
+                : "deck_topplayed" === (0, o.Pm)(e) &&
+                  ((t = (0, D.we)("#EventBrowse_MoreEventsBtn")),
+                  (n = (0, y.A)(
+                    p().EventSectionMoreBtn,
                     "SaleSectionLabelLinkButton",
-                  ),
-                  url: t,
-                  children: e,
-                });
-              }
-              return n;
-            })(t, T))),
-          (0, s.jsxs)("div", {
-            className: (0, _.A)(
-              x.SectionLabelCtn,
-              "SaleSectionLabelCtn",
-              y?.BHasSomeImage("product_banner") ? x.SectionLabelImage : "",
-            ),
-            children: [
-              (0, s.jsxs)("div", {
-                className: x.SectionTitleInnerCtn,
-                children: [C, Boolean(I) && A],
-              }),
-              (0, s.jsxs)("div", {
-                className: x.SectionLabelRight,
-                children: [
-                  !!i &&
-                    (0, s.jsx)(m.he, {
-                      className: p.SaleSectionSubtext,
-                      toolTipContent: "#Sale_HiddenItem_Tooltip",
-                      children: (0, s.jsx)("a", {
-                        href: S.TS.STORE_BASE_URL + "account/preferences",
-                        children: (0, g.PP)(
-                          1 == i
-                            ? "#Sale_HiddenItem_Single_Short"
-                            : "#Sale_HiddenItems_Short",
-                          i,
-                        ),
-                      }),
+                  ))),
+              { strLinkButtonLabel: t, strLinkButtonClasses: n }
+            );
+          })(t);
+          e &&
+            (G =
+              w && v
+                ? (0, s.jsx)(x, { label: e, shown: !!g })
+                : (0, s.jsx)(m.q, { url: E, className: n, children: e })),
+            (R = (0, s.jsx)(m.q, { url: E, bFocusable: !G, children: R }));
+        }
+        return (0, s.jsxs)("div", {
+          className: (0, y.A)(
+            j.SectionLabelCtn,
+            "SaleSectionLabelCtn",
+            A?.BHasSomeImage("product_banner") ? j.SectionLabelImage : "",
+          ),
+          children: [
+            (0, s.jsxs)("div", {
+              className: j.SectionTitleInnerCtn,
+              children: [R, Boolean(B) && N],
+            }),
+            (0, s.jsxs)("div", {
+              className: j.SectionLabelRight,
+              children: [
+                !!i &&
+                  (0, s.jsx)(h.he, {
+                    className: u.SaleSectionSubtext,
+                    toolTipContent: "#Sale_HiddenItem_Tooltip",
+                    children: (0, s.jsx)("a", {
+                      href: S.TS.STORE_BASE_URL + "account/preferences",
+                      children: (0, D.PP)(
+                        1 == i
+                          ? "#Sale_HiddenItem_Single_Short"
+                          : "#Sale_HiddenItems_Short",
+                        i,
+                      ),
                     }),
-                  k,
-                ],
-              }),
-            ],
-          })
-        );
+                  }),
+                G,
+              ],
+            }),
+          ],
+        });
       });
-      function j(e, t, n) {
+      function T(e, t, n) {
         return {
           fontFamily: t.jsondata.sale_font
-            ? I(t.jsondata.sale_font, n)
+            ? E(t.jsondata.sale_font, n)
             : void 0,
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: `${t.jsondata.sale_section_font_size}px`,
@@ -94085,10 +94119,10 @@
           color: e.label_color,
         };
       }
-      function w(e, t, n) {
+      function k(e, t, n) {
         return {
           fontFamily: t.jsondata.sale_font
-            ? I(t.jsondata.sale_font, n)
+            ? E(t.jsondata.sale_font, n)
             : void 0,
           fontWeight: 300,
           fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
@@ -94101,7 +94135,7 @@
           opacity: "50%",
         };
       }
-      function I(e, t) {
+      function E(e, t) {
         return (
           (e = e || ""),
           t === a._Q1
@@ -94215,7 +94249,7 @@
                   !a &&
                     (0, s.jsx)("span", {
                       className: v().BottomBarPriceInfo,
-                      children: (0, s.jsx)(f.N, {
+                      children: (0, s.jsx)(f.NF, {
                         id: t,
                         bShowInLibrary: i,
                         onlyOneDiscountPct: p,
@@ -94482,7 +94516,7 @@
                         bPreferAssetWithoutOverride: S,
                       }),
                     (0, s.jsx)(M.J, { id: t }),
-                    (0, s.jsx)(C.m, { id: t, active: u, bIsHoverMode: !0 }),
+                    (0, s.jsx)(C.mj, { id: t, active: u, bIsHoverMode: !0 }),
                   ],
                 }),
                 w &&

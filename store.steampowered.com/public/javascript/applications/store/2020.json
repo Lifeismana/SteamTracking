@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "宣傳片可能與實際 Steam Deck 遊戲過程不完全相符",
     "StoreItemFound": "%1$s 找到了（%2$s）",
     "StoreItemNotFound": "未找到（%1$s）",
+    "SteamURLAccepted": "%1$s URL is Accepted",
+    "SteamURLInvalid": "Error URL not to a Steam property (store/community)",
+    "PriceGrid_NormalPrice": "一般價格",
+    "PriceGrid_RecentPrice": "30 天內最低",
+    "PriceGrid_CurrentPrice": "目前價格",
     "Dummy": "dummy"
 }

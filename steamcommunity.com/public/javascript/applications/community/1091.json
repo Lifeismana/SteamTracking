@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "O trailer pode não representar a jogabilidade no Steam Deck",
     "StoreItemFound": "%1$s encontrados (%2$s)",
     "StoreItemNotFound": "Não encontrados (%1$s)",
+    "SteamURLAccepted": "%1$s URL aceito",
+    "SteamURLInvalid": "Erro: URL não encaminha para uma página do Steam (Loja/Comunidade)",
+    "PriceGrid_NormalPrice": "NORMAL",
+    "PriceGrid_RecentPrice": "MENOR ÚLT. 30 DIAS",
+    "PriceGrid_CurrentPrice": "AGORA",
     "Dummy": "dummy"
 }

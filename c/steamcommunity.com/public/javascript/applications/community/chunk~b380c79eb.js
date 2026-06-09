@@ -313,9 +313,7 @@
             return (0, _._)(
               _,
               (0, _.jsx)(_._, {
-                navProps: {
-                  focusable: !0,
-                },
+                focusable: !0,
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,
@@ -493,14 +491,7 @@
                   state: _,
                   children: (0, _.jsx)(_, {
                     ref: _,
-                    style: {
-                      ..._.floating.floatingStyles,
-                      inset: "unset",
-                      border: "none",
-                      background: "transparent",
-                      color: "inherit",
-                      padding: 0,
-                    },
+                    style: _.floating.floatingStyles,
                     ..._.getFloatingProps({
                       popover: "manual",
                     }),

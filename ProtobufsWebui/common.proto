@@ -3117,6 +3117,7 @@ message CVRGamepadUI_Message_SetHMDSettings_Request {
 	optional string performance_profile_value = 7;
 	optional bool perf_graph_in_hmd = 8;
 	optional bool record_vr_stats = 9;
+	optional bool record_tracking = 10;
 }
 
 message CVRGamepadUI_Message_SetHMDSettings_Response {
@@ -3784,6 +3785,7 @@ message StoreItem_PurchaseOption {
 	optional bool price_cannot_be_displayed_as_discount = 52 [default = false];
 	optional int64 price_to_base_discount_on = 53;
 	optional uint32 free_with_master_sub_appid = 54;
+	optional string formatted_lowest_recent_price = 55;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3791,6 +3793,7 @@ message StoreItem_PurchaseOption_Discount {
 	optional int64 discount_amount = 1;
 	optional string discount_description = 2;
 	optional uint32 discount_end_date = 3;
+	optional uint32 master_sub_appid = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

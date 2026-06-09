@@ -2208,7 +2208,7 @@ function ReparentAppLandingPageForSmallScreens()
 	{
 		// on tablet we provide a learn more link which opens a dialog containing early access details
 		fn_reparent( $J('#earlyAccessBody'), $J('#earlyAccessTabletDialogContent') );
-		fn_reparent( $J('#earlyAccessTabletContent'), $J('#purchaseOptionsContent') );
+		fn_reparent( $J('#earlyAccessTabletContent'), $J('#earlyAccessHeader_Gamepad') );
 	}
 	else
 	{
@@ -2216,7 +2216,15 @@ function ReparentAppLandingPageForSmallScreens()
 	}
 
 	// move purchase options into a new container for responsive UX
-	fn_reparent( '#game_area_purchase', $J('#purchaseOptionsContent') );
+	if ( !bUseGamepadScreenMode )
+	{
+		fn_reparent( '#game_area_purchase', $J( '#purchaseOptionsContent' ) );
+	}
+	else
+	{
+		// Hide it
+		$J( '#game_area_purchase' ).hide();
+	}
 
 	// order the action buttons
 	fn_reparent( '#reportBtn', $J('#rowBtnActions') );

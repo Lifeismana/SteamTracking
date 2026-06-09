@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Trailer có thể không đại diện cho trải nghiệm chơi thực trên Steam Deck",
     "StoreItemFound": "Tìm thấy: %1$s (%2$s)",
     "StoreItemNotFound": "Không tìm thấy (%1$s)",
+    "SteamURLAccepted": "%1$s URL được chấp nhận",
+    "SteamURLInvalid": "Lỗi: URL không thuộc hệ thống của Steam (cửa hàng/cộng đồng)",
+    "PriceGrid_NormalPrice": "THÔNG THƯỜNG",
+    "PriceGrid_RecentPrice": "THẤP NHẤT 30 NGÀY QUA",
+    "PriceGrid_CurrentPrice": "HIỆN TẠI",
     "Dummy": "dummy"
 }

@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2rIZm",
       };
     },
-    647: (e, t, r) => {
+    844: (e, t, r) => {
       "use strict";
       r.d(t, { InitializeGamepadNavigation: () => an });
       var i,
         n = r(669),
         s = r.n(n),
-        a = r(305),
+        a = r(353),
         o = r(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -84,10 +84,10 @@
         );
       }
       var _ = r(629),
-        h = r(889),
-        b = r(738),
-        f = r(93),
-        p = r(924);
+        h = r(615),
+        b = r(664),
+        f = r(867),
+        p = r(954);
       class B {
         m_NavigationController;
         m_postMessage;
@@ -488,8 +488,8 @@
         (0, _.Cg)([h.o], F.prototype, "OnKeyUp", null),
         (0, _.Cg)([h.o], F.prototype, "Reset", null);
       var A,
-        E = r(544),
-        N = r(856);
+        E = r(110),
+        N = r(878);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -654,7 +654,15 @@
           let i = this.m_sName;
           const n = this.m_fnIdGenerator?.() ?? null;
           null != n && (i += " (" + n + ")");
-          k(e, r, L.Get().IncludeBacktraceInLog, i, this.m_sName, ...t);
+          k(
+            e,
+            r,
+            L.Get().IncludeBacktraceInLog,
+            L.Get().AllowCSSInLogStyling,
+            i,
+            this.m_sName,
+            ...t,
+          );
         }
       }
       (0, _.Cg)([h.o], x.prototype, "Debug", null),
@@ -665,9 +673,11 @@
       class L {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
+        static k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors";
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
+        m_bAllowCSSInLogStyling = !0;
         m_SettingsChangedCallback = new N.l();
         m_bLoading = !0;
         constructor() {
@@ -678,24 +688,30 @@
             A.Info,
             !0,
             this.IncludeBacktraceInLog,
+            this.AllowCSSInLogStyling,
             "LogManager",
             "LogManager",
             ...e,
           );
         }
         async LoadSettings() {
-          const e = (e) => {
+          const e = (e, t) => {
             try {
-              const t = localStorage.getItem(e);
-              return t ? JSON.parse(t) : void 0;
+              const r = localStorage.getItem(e);
+              return r ? JSON.parse(r) : t;
             } catch {
-              return;
+              return t;
             }
           };
-          this.m_bIncludeBacktraceInLog = !!e(
+          (this.m_bIncludeBacktraceInLog = !!e(
             L.k_IncludeBacktraceInLog_StorageKey,
-          );
-          const t = e(L.k_EnabledLogNames_StorageKey);
+            !1,
+          )),
+            (this.m_bAllowCSSInLogStyling = !!e(
+              L.k_AllowCSSInLogColors_StorageKey,
+              !0,
+            ));
+          const t = e(L.k_EnabledLogNames_StorageKey, void 0);
           if (Array.isArray(t)) {
             this.m_setEnabledDebugLogs = new Set(t);
             for (const e of t) this.m_setKnownDebugLogs.add(e);
@@ -714,6 +730,10 @@
             localStorage.setItem(
               L.k_IncludeBacktraceInLog_StorageKey,
               JSON.stringify(this.m_bIncludeBacktraceInLog),
+            ),
+            localStorage.setItem(
+              L.k_AllowCSSInLogColors_StorageKey,
+              JSON.stringify(this.m_bAllowCSSInLogStyling),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -788,72 +808,82 @@
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
         }
+        get AllowCSSInLogStyling() {
+          return this.m_bAllowCSSInLogStyling;
+        }
+        async SetAllowCSSInLogStyling(e) {
+          (this.m_bAllowCSSInLogStyling = e),
+            this.m_SettingsChangedCallback.Dispatch(),
+            await this.SaveSettings();
+        }
         GetLogNames() {
           return Array.from(this.LogNames).sort();
         }
       }
-      function k(e, t, r, i, n, ...s) {
-        const a = (function (e) {
-            let t = 0;
-            for (let r = 0; r < e.length; r++)
-              t = e.charCodeAt(r) + ((t << 5) - t);
-            return [255 & t, (t >> 8) & 255, (t >> 16) & 255];
-          })(n).map((e, t) =>
-            Math.round(
-              Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))),
-            ),
-          ),
-          o = (299 * (l = a)[0] + 587 * l[1] + 114 * l[2]) / 1e3 >= 128;
-        var l;
-        let c = i;
-        r &&
-          (c =
-            (function (e) {
-              switch (e) {
-                case A.Debug:
-                  return String.fromCodePoint(128027);
-                case A.Info:
-                  return String.fromCodePoint(8505);
-                case A.Warning:
-                  return String.fromCodePoint(9888);
-                case A.Error:
-                  return String.fromCodePoint(128165);
-              }
-            })(e) +
-            " " +
-            c);
-        const u =
-            s.length >= 1 && "string" == typeof s[0] && s[0].includes("%c"),
-          d = u && s.shift();
-        let m;
+      function k(e, t, r, i, n, s, ...a) {
+        let o,
+          l = n;
         if (
-          ((m = t
-            ? [
-                `%c${c}%c:${u ? " %c" + d : ""}`,
-                `color: ${o ? "black" : "white"}; background: rgb(${a.join(",")}); padding: 0 1ch; border-radius: 3px;`,
-                "color: transparent; margin-right: -1ch",
-                ...(u ? [""] : []),
-                ...s,
-              ]
-            : s),
-          r)
-        )
-          console.groupCollapsed(...m),
+          (r &&
+            (l =
+              (function (e) {
+                switch (e) {
+                  case A.Debug:
+                    return String.fromCodePoint(128027);
+                  case A.Info:
+                    return String.fromCodePoint(8505);
+                  case A.Warning:
+                    return String.fromCodePoint(9888);
+                  case A.Error:
+                    return String.fromCodePoint(128165);
+                }
+              })(e) +
+              " " +
+              l),
+          i && t)
+        ) {
+          const e = (function (e) {
+              let t = 0;
+              for (let r = 0; r < e.length; r++)
+                t = e.charCodeAt(r) + ((t << 5) - t);
+              return [255 & t, (t >> 8) & 255, (t >> 16) & 255];
+            })(s).map((e, t) =>
+              Math.round(
+                Math.max(
+                  0,
+                  Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15)),
+                ),
+              ),
+            ),
+            t = (299 * (c = e)[0] + 587 * c[1] + 114 * c[2]) / 1e3 >= 128,
+            r = a.length >= 1 && "string" == typeof a[0] && a[0].includes("%c"),
+            i = r && a.shift();
+          o = [
+            `%c${l}%c:${r ? " %c" + i : ""}`,
+            `color: ${t ? "black" : "white"}; background: rgb(${e.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+            "color: transparent; margin-right: -1ch",
+            ...(r ? [""] : []),
+            ...a,
+          ];
+        } else o = [`${l}:`, ...a];
+        var c;
+        if (r)
+          console.groupCollapsed(...o),
             console.trace("Callstack"),
             console.groupEnd();
         else
           switch (e) {
             case A.Debug:
             case A.Info:
-              console.log(...m);
+              console.log(...o);
               break;
             case A.Warning:
-              console.warn(...m);
+              console.warn(...o);
               break;
             case A.Error:
               console.clogerror
-                ? console.clogerror(3, ...m)
-                : console.error(...m);
+                ? console.clogerror(3, ...o)
+                : console.error(...o);
           }
       }
       function j(e, t, ...r) {
@@ -1493,7 +1523,7 @@
         fe(
           "----------------------------------------------------------------------------------",
         ),
-          fe("Scrolling Into View:", t);
+          fe("Scrolling Into View (NoTransform):", t);
         let s = [],
           a = t,
           o = we(t),
@@ -2636,16 +2666,24 @@
                       e.Tree.Controller.BIsRestoringHistory() && (s = "auto"),
                       c
                         ? Te(0, l, s)
-                        : l.scrollIntoView({ behavior: s, block: "nearest" });
+                        : (fe(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            l,
+                          ),
+                          l.scrollIntoView({ behavior: s, block: "nearest" }));
                   } else
                     fe("No previous element for scrolling, will jump"),
                       c
                         ? Te(0, l, "auto")
-                        : l?.scrollIntoView({
+                        : (fe(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            l,
+                          ),
+                          l?.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
                             inline: "nearest",
-                          });
+                          }));
                 }
               })(this, t, e);
         }
@@ -5080,6 +5118,7 @@
                   message: { n: 2, br: st.readString, bw: at.writeString },
                   count: { n: 3, br: st.readUint32, bw: at.writeUint32 },
                   context: { n: 4, br: st.readString, bw: at.writeString },
+                  url: { n: 5, br: st.readString, bw: at.writeString },
                 },
               }),
             Wt.sm_m
@@ -6881,8 +6920,8 @@
                 n.set_message(JSON.stringify(t.message)),
                 t.strComponentStack &&
                   ((s ??= {}), (s.componentStack = t.strComponentStack)),
-                t.strUrl && ((s ??= {}), (s.url = t.strUrl)),
                 s && n.set_context(JSON.stringify(s)),
+                t.strUrl && n.set_url(t.strUrl),
                 n
               );
             });
@@ -10003,6 +10042,11 @@
                     br: st.readInt32,
                     bw: at.writeInt32,
                   },
+                  use_gyro_sw_biases: {
+                    n: 48,
+                    br: st.readBool,
+                    bw: at.writeBool,
+                  },
                 },
               }),
             Bi.sm_m
@@ -12662,7 +12706,7 @@
                 pe = e;
               })(!0),
               (function () {
-                Object.assign(window, yn),
+                Object.assign(window, Sn),
                   window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
               })(),
               !1;
@@ -12711,7 +12755,7 @@
             cn.get(this)?.forEach((e) => e()),
               ln.delete(this),
               cn.delete(this),
-              s()(this).attr("data-nav-modal") && wn(this);
+              s()(this).attr("data-nav-modal") && yn(this);
           });
       }
       function bn(e, t = !1) {
@@ -12722,7 +12766,7 @@
           .addBack(r)
           .each(function () {
             var e;
-            _n((e = this)) || pn(e);
+            _n((e = this)) || Bn(e);
           }),
           (function () {
             for (let e = un.length - 1; e >= 0; e--)
@@ -12741,6 +12785,29 @@
           })();
       }
       function fn(e) {
+        let t = en.NotNeeded;
+        return (
+          !(function (e) {
+            if (s()(e).attr("data-nav-modal")) return !0;
+            switch (e.tagName) {
+              case "A":
+              case "INPUT":
+              case "TEXTAREA":
+                return !0;
+              case "DIV":
+                if (le(e) != De.COLUMN) return !0;
+                const t = le(e.parentElement);
+                return t == De.ROW || t == De.ROW_REVERSE;
+              default:
+                return !1;
+            }
+          })(e)
+            ? dn(e, t)
+            : (t = Bn(e)),
+          t
+        );
+      }
+      function pn(e) {
         const t = s()(e.Element);
         return (
           !t.data("gpFocusDisabled") &&
@@ -12750,15 +12817,15 @@
             "hidden" !== t.css("overflow"))
         );
       }
-      function pn(e) {
+      function Bn(e) {
         const t = s()(e),
-          r = Bn(e);
+          r = wn(e);
         if (r instanceof ke || r == en.InReactTree)
           return dn(e, en.InReactTree), en.InReactTree;
         const n = r.Tree;
         let a,
           o = t.data("panel") || {},
-          l = fn;
+          l = pn;
         if (
           (t.attr("data-nav-modal")
             ? (a = (function (e, t) {
@@ -12963,33 +13030,15 @@
         };
         return a.SetProperties(q), dn(e, a), a;
       }
-      function Bn(e) {
+      function wn(e) {
         const t = e.parentElement;
         if (!t) return console.error("no parent"), null;
         let r = gn(t);
-        if (r == en.Unknown)
-          r = (function (e) {
-            let t = !1;
-            switch (e.tagName) {
-              case "A":
-              case "INPUT":
-              case "TEXTAREA":
-                t = !0;
-                break;
-              case "DIV":
-                if (le(e) != De.COLUMN) t = !0;
-                else {
-                  const r = le(e.parentElement);
-                  (r != De.ROW && r != De.ROW_REVERSE) || (t = !0);
-                }
-            }
-            let r = en.NotNeeded;
-            return t ? (r = pn(e)) : dn(e, r), r;
-          })(t);
+        if (r == en.Unknown) r = fn(t);
         else if (r == en.InReactTree) return r;
-        return r instanceof Ue ? r : Bn(t);
+        return r instanceof Ue ? r : wn(t);
       }
-      function wn(e) {
+      function yn(e) {
         const t = s()(e).data("unregisterNavTree");
         console.assert(t, "missing unregister binding"),
           t(),
@@ -12997,7 +13046,7 @@
           s()(e).removeData("unregisterNavTree"),
           s()(e).removeClass("navTreeModal");
       }
-      const yn = {
+      const Sn = {
         InstrumentFocusElements: bn,
         ForceUpdateFocusElements: function (e) {
           hn(s()(e)), bn(s()(e));
@@ -13005,7 +13054,7 @@
         GPNavFocusChild: function (e) {
           let t = gn(e[0]);
           return (
-            t instanceof Ue || (t = Bn(e[0])),
+            t instanceof Ue || (t = wn(e[0])),
             t instanceof Ue && t.BTakeFocus(i.APPLICATION),
             !1
           );
@@ -13022,7 +13071,7 @@
               hn(t)),
             t.attr("data-nav-modal", "true"),
             r && bn(t),
-            () => wn(e)
+            () => yn(e)
           );
         },
         GPShowVirtualKeyboard: function (e = !0) {
@@ -13035,7 +13084,7 @@
         },
       };
     },
-    738: (e, t, r) => {
+    664: (e, t, r) => {
       "use strict";
       r.d(t, { T: () => i, h: () => n });
       const i = "GamepadInput";
@@ -13048,12 +13097,12 @@
           (e[(e.Full = 4)] = "Full");
       })(n || (n = {}));
     },
-    924: (e, t, r) => {
+    954: (e, t, r) => {
       "use strict";
       r.d(t, { A7: () => a, Vp: () => o, n4: () => l });
       var i = r(629),
-        n = r(889),
-        s = r(738);
+        n = r(615),
+        s = r(664);
       class a {
         PostMessage(e) {}
         RegisterForMessage(e) {}

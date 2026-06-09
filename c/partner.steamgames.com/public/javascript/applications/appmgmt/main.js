@@ -6798,6 +6798,11 @@
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
+                  use_gyro_sw_biases: {
+                    _: 48,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -10896,7 +10901,7 @@
         _(
           "----------------------------------------------------------------------------------",
         ),
-          _("Scrolling Into View:", _);
+          _("Scrolling Into View (NoTransform):", _);
         let _ = [],
           _ = _,
           _ = _(_),
@@ -12089,19 +12094,27 @@
                       _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
                       _
                         ? _(0, _, _)
-                        : _.scrollIntoView({
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          _.scrollIntoView({
                             behavior: _,
                             block: "nearest",
-                          });
+                          }));
                   } else
                     _("No previous element for scrolling, will jump"),
                       _
                         ? _(0, _, "auto")
-                        : _?.scrollIntoView({
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          _?.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
                             inline: "nearest",
-                          });
+                          }));
                 }
               })(this, _, _);
         }
@@ -12247,14 +12260,31 @@
         );
       }
       function _() {
-        const _ = _.useRef(null),
+        const _ = _.useRef({
+            width: 0,
+            height: 0,
+          }),
+          _ = _.useRef(null),
           _ = _.useCallback(
             (_) => {
-              _.current?.BFocusWithin() &&
+              if (!_.current?.BFocusWithin()) return;
+              const _ = Math.round(_.contentRect.width),
+                _ = Math.round(_.contentRect.height),
+                _ = Math.abs(_ - _.current.width),
+                _ = Math.abs(_ - _.current.height);
+              (_ >= 1 || _ >= 1) &&
+                ((_.current = {
+                  width: _,
+                  height: _,
+                }),
+                _(
+                  "KeepFocusedElementInViewOnResize scrolling focused element into view due to resize of",
+                  _.target,
+                ),
                 _.current.Node()?.GetLastFocusElement()?.scrollIntoView({
                   behavior: "auto",
                   block: "nearest",
-                });
+                }));
             },
             [_],
           );
@@ -12972,8 +13002,8 @@
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
                   ((_ ??= {}), (_.componentStack = _.strComponentStack)),
-                _.strUrl && ((_ ??= {}), (_.url = _.strUrl)),
                 _ && _.set_context(JSON.stringify(_)),
+                _.strUrl && _.set_url(_.strUrl),
                 _
               );
             });
@@ -15162,10 +15192,10 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  reservation_type: {
+                  collection_time_active: {
                     _: 17,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -16861,6 +16891,11 @@
                   },
                   context: {
                     _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 5,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -25573,6 +25608,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  formatted_lowest_recent_price: {
+                    _: 55,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -25640,6 +25680,11 @@
                   },
                   discount_end_date: {
                     _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  master_sub_appid: {
+                    _: 4,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -28286,6 +28331,36 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  position_is_waitlist: {
+                    _: 22,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  user_waitlist_token: {
+                    _: 23,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  queue_in_waitlist: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  queue_waitlist_token: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  collection_time_active: {
+                    _: 26,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  reservation_not_allowed: {
+                    _: 27,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -30901,6 +30976,107 @@
         _ = window.Config ? () => Promise.resolve() : _._;
       window.Config && Object.assign(_._, window.Config),
         window.UserConfig && Object.assign(_._, window.UserConfig);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _, _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_.k_ECutArrowStyle = "single"),
+            (_.k_EDoubleArrowStyle = "double"),
+            (_.k_EThickChevron = "chevron"),
+            (_.k_EFilledArrow = "filled"),
+            (_.k_EPointyArrow = "pointy");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EPillCrumb = "pill"),
+            (_.k_ECircularCrumb = "circle"),
+            (_.k_ESquareCrumb = "square");
+        })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
+        switch (_) {
+          default:
+          case _._.k_ECutArrowStyle: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.uMb, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EDoubleArrowStyle: {
+            const _ = "right" == _ ? 180 : 0;
+            return (0, _.jsx)(_.F2T, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EThickChevron: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.l8x, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EFilledArrow: {
+            const _ = "right" == _ ? 90 : 270;
+            return (0, _.jsx)(_.V5W, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EPointyArrow:
+            return (0, _.jsx)(_.L0X, {
+              fill: _ || "white",
+              role: "presentation",
+              direction: _ || "left",
+            });
+        }
+      }
+      function _(_) {
+        const {
+            bIsActive: _,
+            breadcrumbActiveColor: _,
+            breadcrumbColor: _,
+            breadcrumbStyle: _,
+          } = _,
+          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
+        switch (_) {
+          default:
+          case _._.k_EPillCrumb:
+            return (0, _.jsx)(_.IGf, {
+              fill: _,
+              role: "presentation",
+            });
+          case _._.k_ECircularCrumb:
+            return (0, _.jsx)(_.az8, {
+              fill: _,
+              role: "presentation",
+            });
+          case _._.k_ESquareCrumb:
+            return (0, _.jsx)(_.koA, {
+              fill: _,
+              role: "presentation",
+            });
+        }
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -33655,26 +33831,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _, _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_.k_ECutArrowStyle = "single"),
-            (_.k_EDoubleArrowStyle = "double"),
-            (_.k_EThickChevron = "chevron"),
-            (_.k_EFilledArrow = "filled"),
-            (_.k_EPointyArrow = "pointy");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.k_EPillCrumb = "pill"),
-            (_.k_ECircularCrumb = "circle"),
-            (_.k_ESquareCrumb = "square");
-        })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -34448,15 +34604,18 @@
             gap: _,
             children: _,
             bLazyRenderChildren: _,
+            lazyRenderPlaceholderWidth: _,
+            lazyRenderPlaceholderHeight: _,
             startingSlide: _,
           } = _,
+          _ = _.useRef(null),
           _ = _.useRef(null);
         _.useLayoutEffect(() => {
-          _.current?.scrollIntoView({
-            inline: "start",
-            block: "nearest",
-            behavior: "auto",
-          });
+          _.current &&
+            _.current &&
+            (_.current.scrollLeft +=
+              _.current.getBoundingClientRect().left -
+              _.current.getBoundingClientRect().left);
         }, [_]);
         const _ = (0, _.jsxs)(_._, {
           "flow-children": "row",
@@ -34472,6 +34631,7 @@
             _.ScrollSnapCarousel,
             _.className,
           ),
+          ref: _,
           children: [
             _ &&
               _.Children.map(_, (_, _) =>
@@ -34486,8 +34646,8 @@
         return _
           ? (0, _.jsx)(_._, {
               horizontal: !1,
-              placeholderWidth: 1,
-              placeholderHeight: 1,
+              placeholderWidth: _ ?? 1,
+              placeholderHeight: _ ?? 1,
               children: _,
             })
           : _;
@@ -34647,8 +34807,8 @@
                     ? (0, _.jsx)(_._, {
                         rootMargin: "0px -5px 0px 100%",
                         horizontal: !0,
-                        placeholderWidth: 1,
-                        placeholderHeight: 1,
+                        placeholderWidth: _.lazyRenderPlaceholderWidth ?? 1,
+                        placeholderHeight: _.lazyRenderPlaceholderHeight ?? 1,
                         holdGamepadFocus: _,
                         children: _,
                       })
@@ -39489,8 +39649,8 @@
             "Hmd_SupportsGpuBusMonitoring_Bool"),
           (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
             "DriverProvidedIPDVisibility_Bool"),
-          (_[(_.Prop_Hmd_SupportsVRGamepadFocus_Bool = 2117)] =
-            "Prop_Hmd_SupportsVRGamepadFocus_Bool"),
+          (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
+            "Prop_SupportsVRGamepadMode_Bool"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -39511,6 +39671,8 @@
             "DriverRequestedMuraFeather_OuterBottom_Int32"),
           (_[(_.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
             "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+          (_[(_.Hmd_ForceRoomViewOutsideChaperone_Bool = 2500)] =
+            "Hmd_ForceRoomViewOutsideChaperone_Bool"),
           (_[(_.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
           (_[(_.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
           (_[(_.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
@@ -39655,7 +39817,7 @@
             (_[(_.SmoothStep = 3)] = "SmoothStep"),
             (_[(_.SmootherStep = 4)] = "SmootherStep");
         })(_ || (_ = {}));
-      var _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -39689,20 +39851,38 @@
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.System = 1)] = "System"),
-            (_[(_.SteamInput = 2)] = "SteamInput"),
-            (_[(_.VRInput = 3)] = "VRInput");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.SceneApp = 1)] = "SceneApp"),
             (_[(_.Panel = 2)] = "Panel");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.ControllerPairing = 0)] = "ControllerPairing"),
+            (_[(_.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
+            (_[(_.SystemButtonHideDashboard = 2)] =
+              "SystemButtonHideDashboard"),
+            (_[(_.SystemButtonDashboardHidden = 3)] =
+              "SystemButtonDashboardHidden"),
+            (_[(_.SystemButtonShowDashboard = 4)] =
+              "SystemButtonShowDashboard"),
+            (_[(_.PairWifiDongle = 5)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 6)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
             (_[(_.ThirdPartyClient = 1)] = "ThirdPartyClient"),
             (_[(_.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
             (_[(_.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"),
+            (_[(_.AuroraFloor = 1)] = "AuroraFloor");
+        })(_ || (_ = {}));
+      var _, _;
+      !(function (_) {
+        (_[(_.Curved = 0)] = "Curved"), (_[(_.Flat = 1)] = "Flat");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"), (_[(_.Aurora = 1)] = "Aurora");
         })(_ || (_ = {}));
       (0, _._)(_()["error-shake-duration"]);
       function _(_, _) {
@@ -42812,7 +42992,7 @@
           let _ = 0,
             _ = 0;
           if (this.m_refContainer.current) {
-            const _ = this.m_refContainer.current.GetBoundingClientRect();
+            const _ = this.m_refContainer.current.getBoundingClientRect();
             _ && ((_ = _.width), (_ = _.height));
           }
           this.setState({
@@ -42846,7 +43026,7 @@
           }
           const _ = this.BLoadAndUnload() ? "repeated" : "once";
           let _ = (0, _.jsx)(_._, {
-            ref: this.m_refContainer,
+            containerRef: this.m_refContainer,
             style: _,
             ..._,
             onVisibilityChange: this.OnVisibilityChange,
@@ -48328,87 +48508,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
-        switch (_) {
-          default:
-          case _._.k_ECutArrowStyle: {
-            const _ = "right" == _ ? 0 : 180;
-            return (0, _.jsx)(_.uMb, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EDoubleArrowStyle: {
-            const _ = "right" == _ ? 180 : 0;
-            return (0, _.jsx)(_.F2T, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EThickChevron: {
-            const _ = "right" == _ ? 0 : 180;
-            return (0, _.jsx)(_.l8x, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EFilledArrow: {
-            const _ = "right" == _ ? 90 : 270;
-            return (0, _.jsx)(_.V5W, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EPointyArrow:
-            return (0, _.jsx)(_.L0X, {
-              fill: _ || "white",
-              role: "presentation",
-              direction: _ || "left",
-            });
-        }
-      }
-      function _(_) {
-        const {
-            bIsActive: _,
-            breadcrumbActiveColor: _,
-            breadcrumbColor: _,
-            breadcrumbStyle: _,
-          } = _,
-          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
-        switch (_) {
-          default:
-          case _._.k_EPillCrumb:
-            return (0, _.jsx)(_.IGf, {
-              fill: _,
-              role: "presentation",
-            });
-          case _._.k_ECircularCrumb:
-            return (0, _.jsx)(_.az8, {
-              fill: _,
-              role: "presentation",
-            });
-          case _._.k_ESquareCrumb:
-            return (0, _.jsx)(_.koA, {
-              fill: _,
-              role: "presentation",
-            });
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48449,6 +48548,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -48523,6 +48623,10 @@
             );
           });
         }
+        HandleRef(_) {
+          (0, _._)(this.m_refElement, _),
+            this.props.containerRef && (0, _._)(this.props.containerRef, _);
+        }
         OnIntersection(_, _) {
           let _ = !1;
           for (const _ of _)
@@ -48541,16 +48645,18 @@
             rootMargin: _,
             trigger: _,
             horizontal: _,
+            containerRef: _,
             ..._
           } = this.props;
-          return (0, _.jsx)("div", {
-            ref: this.m_refElement,
+          return (0, _.jsx)(_._, {
+            ref: this.HandleRef,
             ..._,
             children: this.props.children,
           });
         }
       }
-      (0, _._)([_._], _.prototype, "OnIntersection", null);
+      (0, _._)([_._], _.prototype, "HandleRef", null),
+        (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -50269,7 +50375,15 @@
           let _ = this.m_sName;
           const _ = this.m_fnIdGenerator?.() ?? null;
           null != _ && (_ += " (" + _ + ")");
-          _(_, _, _.Get().IncludeBacktraceInLog, _, this.m_sName, ..._);
+          _(
+            _,
+            _,
+            _.Get().IncludeBacktraceInLog,
+            _.Get().AllowCSSInLogStyling,
+            _,
+            this.m_sName,
+            ..._,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "Debug", null),
@@ -50280,9 +50394,11 @@
       class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
+        static k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors";
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
+        m_bAllowCSSInLogStyling = !0;
         m_SettingsChangedCallback = new _._();
         m_bLoading = !0;
         constructor() {
@@ -50293,24 +50409,30 @@
             _.Info,
             !0,
             this.IncludeBacktraceInLog,
+            this.AllowCSSInLogStyling,
             "LogManager",
             "LogManager",
             ..._,
           );
         }
         async LoadSettings() {
-          const _ = (_) => {
+          const _ = (_, _) => {
             try {
               const _ = localStorage.getItem(_);
-              return _ ? JSON.parse(_) : void 0;
+              return _ ? JSON.parse(_) : _;
             } catch {
-              return;
+              return _;
             }
           };
-          this.m_bIncludeBacktraceInLog = !!_(
+          (this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
-          );
-          const _ = _(_.k_EnabledLogNames_StorageKey);
+            !1,
+          )),
+            (this.m_bAllowCSSInLogStyling = !!_(
+              _.k_AllowCSSInLogColors_StorageKey,
+              !0,
+            ));
+          const _ = _(_.k_EnabledLogNames_StorageKey, void 0);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -50329,6 +50451,10 @@
             localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
               JSON.stringify(this.m_bIncludeBacktraceInLog),
+            ),
+            localStorage.setItem(
+              _.k_AllowCSSInLogColors_StorageKey,
+              JSON.stringify(this.m_bAllowCSSInLogStyling),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -50403,56 +50529,66 @@
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
         }
+        get AllowCSSInLogStyling() {
+          return this.m_bAllowCSSInLogStyling;
+        }
+        async SetAllowCSSInLogStyling(_) {
+          (this.m_bAllowCSSInLogStyling = _),
+            this.m_SettingsChangedCallback.Dispatch(),
+            await this.SaveSettings();
+        }
         GetLogNames() {
           return Array.from(this.LogNames).sort();
         }
       }
-      function _(_, _, _, _, _, ..._) {
-        const _ = (function (_) {
-            let _ = 0;
-            for (let _ = 0; _ < _.length; _++)
-              _ = _.charCodeAt(_) + ((_ << 5) - _);
-            return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
-          })(_).map((_, _) =>
-            Math.round(
-              Math.max(0, Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15))),
-            ),
-          ),
-          _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128;
-        var _;
-        let _ = _;
-        _ &&
-          (_ =
-            (function (_) {
-              switch (_) {
-                case _.Debug:
-                  return String.fromCodePoint(128027);
-                case _.Info:
-                  return String.fromCodePoint(8505);
-                case _.Warning:
-                  return String.fromCodePoint(9888);
-                case _.Error:
-                  return String.fromCodePoint(128165);
-              }
-            })(_) +
-            " " +
-            _);
-        const _ =
-            _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
-          _ = _ && _.shift();
-        let _;
+      function _(_, _, _, _, _, _, ..._) {
+        let _,
+          _ = _;
         if (
-          ((_ = _
-            ? [
-                `%c${_}%c:${_ ? " %c" + _ : ""}`,
-                `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
-                "color: transparent; margin-right: -1ch",
-                ...(_ ? [""] : []),
-                ..._,
-              ]
-            : _),
-          _)
-        )
+          (_ &&
+            (_ =
+              (function (_) {
+                switch (_) {
+                  case _.Debug:
+                    return String.fromCodePoint(128027);
+                  case _.Info:
+                    return String.fromCodePoint(8505);
+                  case _.Warning:
+                    return String.fromCodePoint(9888);
+                  case _.Error:
+                    return String.fromCodePoint(128165);
+                }
+              })(_) +
+              " " +
+              _),
+          _ && _)
+        ) {
+          const _ = (function (_) {
+              let _ = 0;
+              for (let _ = 0; _ < _.length; _++)
+                _ = _.charCodeAt(_) + ((_ << 5) - _);
+              return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
+            })(_).map((_, _) =>
+              Math.round(
+                Math.max(
+                  0,
+                  Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15)),
+                ),
+              ),
+            ),
+            _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128,
+            _ = _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
+            _ = _ && _.shift();
+          _ = [
+            `%c${_}%c:${_ ? " %c" + _ : ""}`,
+            `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+            "color: transparent; margin-right: -1ch",
+            ...(_ ? [""] : []),
+            ..._,
+          ];
+        } else _ = [`${_}:`, ..._];
+        var _;
+        if (_)
           console.groupCollapsed(..._),
             console.trace("Callstack"),
             console.groupEnd();

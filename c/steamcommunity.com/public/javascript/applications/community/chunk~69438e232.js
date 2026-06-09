@@ -971,9 +971,10 @@
         StoreSaleWidgetRight: "v9uRg57bwOaPsvAnkXESO",
         StoreSaleWidgetHalfLeft: "_111nfdz8Xyg7lDjTWv_OmK",
         StoreSaleWidgetTitle: "_2ekpT6PjwtcFaT4jLQehUK",
-        StoreSaleDiscountBox: "cnkoFkzVCby40gJ0jGGS4",
         StoreSaleWidgetLibraryAssetExtendedTop: "_1uLNByMlXsYSmrGPWyDNhE",
         StoreSaleWidgetLeft: "_3DkfNrtTOLjNYd3yZliMzy",
+        StoreSaleDiscountBox: "cnkoFkzVCby40gJ0jGGS4",
+        PurchaseOption: "_2R_C2rCrJEg8G8_d7-QQKn",
         StoreSaleWidgetImage: "yvqq8z2k4i7-Mzx-JHeNC",
         CapsuleMicroTrailer: "_1M7n5f3gWCHv1wN1smoxWg",
         CapsulePlatform: "_2bCf9u4rlC8De687HY6wnh",
@@ -1017,9 +1018,9 @@
         Action: "_2zssEuiPfY5YdQlnihDfVD",
         Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
         WishList: "_1djkdp7OAd0mF3a90RKf27",
+        StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
         SingleLineMode: "_1ZlGJxv-xQaABSvaVvMlNq",
         StoreSaleDiscountedPriceCtn: "_3NhLu7mTdty7JufpSpz6Re",
-        StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
         StoreSaleNewItem: "_2_KY_e11FV0ftXR2_7TMmP",
         StoreOriginalPrice: "_3fFFsvII7Y2KXNLDk_krOW",
         PrePurchase: "_2f7BMv_bJMTrHmaOF8B3Ws",
@@ -1682,6 +1683,137 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+          bForceShowCompatInfo: !1,
+          bSteamOS: !1,
+          bSteamDeck: !1,
+        }),
+        _ = () => _.useContext(_);
+      function _() {
+        const { bForceShowCompatInfo: _, bSteamDeck: _, bSteamOS: _ } = _();
+        return _
+          ? _ || _ || "steamdeck" == _._.FORCED_DISPLAY_MODE
+            ? [!0, _._]
+            : [!0, _._]
+          : [!1, _._];
+      }
+      function _(_) {
+        const { _: _, className: _ } = _,
+          { data: _ } = (0, _._)(_);
+        return _
+          ? (0, _.jsx)(_, {
+              category: null == _ ? void 0 : _.steam_deck_compat_category,
+              className: _,
+            })
+          : null;
+      }
+      const _ = (_) => {
+          const { category: _, className: _ } = _;
+          if (!_) return null;
+          const _ = _(_);
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.SteamDeckCompatInfo, _),
+            children: [
+              (0, _.jsx)(_.lRD, {}),
+              (0, _.jsx)(_, {
+                className: _.SteamDeckCompatIcon,
+              }),
+            ],
+          });
+        },
+        _ = (_) => {
+          const { category: _, elControllerSupport: _ } = _,
+            _ = _(_);
+          return (0, _.jsxs)("div", {
+            className: (0, _._)(_.SteamDeckCompatInfo, _.className),
+            children: [
+              _,
+              (0, _.jsx)(_, {
+                className: _.SteamDeckCompatIcon,
+              }),
+            ],
+          });
+        };
+      function _(_) {
+        var _, _;
+        const { eDisplay: _, storeItemPlatform: _, className: _ } = _;
+        return _ == _._
+          ? (0, _.jsx)(_, {
+              category:
+                null !==
+                  (_ = null == _ ? void 0 : _.steam_deck_compat_category) &&
+                void 0 !== _
+                  ? _
+                  : _._,
+              className: _,
+            })
+          : _ == _._
+            ? (0, _.jsx)(_, {
+                category:
+                  null !==
+                    (_ = null == _ ? void 0 : _.steam_os_compat_category) &&
+                  void 0 !== _
+                    ? _
+                    : _._,
+                className: _,
+              })
+            : null;
+      }
+      const _ = {
+          [_._]: _.jIP,
+          [_._]: _.aVR,
+          [_._]: _.o5Q,
+          [_._]: _.WX$,
+        },
+        _ = {
+          [_._]: _.WX$,
+          [_._]: _.jIP,
+          [_._]: _.ZjT,
+        };
+      function _(_) {
+        return _[_] || _.WX$;
+      }
+      function _(_) {
+        return _[_] || _.WX$;
+      }
+      _._, _._, _._, _._;
+      _._, _._, _._;
+      _._, _._, _._, _._;
+      _._, _._, _._, _._;
+      _._, _._, _._;
+      _._, _._, _._;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1997,7 +2129,6 @@
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
       var _ = {};
       __webpack_require__._(_),
@@ -2013,7 +2144,6 @@
         _ = 5,
         _ = 6,
         _ = 9,
-        _ = 15,
         _ = 0,
         _ = 1;
       class _ extends _.Message {
@@ -16368,10 +16498,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, snr: _, classOverride: _ } = _,
@@ -16380,42 +16506,7 @@
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           _ = _ && "appid" in _ ? _.appid : void 0,
           _ = (0, _._)(_),
-          { mutateAsync: _ } = (function (_, _, _, _ = _._._) {
-            const _ = (0, _._)(),
-              _ = _._.accountid;
-            return (0, _._)({
-              mutationKey: ["useUpdateAppIgnore", _, _, _],
-              mutationFn: async () => {
-                if (null == _) return;
-                const _ =
-                    _._.STORE_BASE_URL + "recommended/ignorerecommendation",
-                  _ = new FormData();
-                _.append("appid", "" + _),
-                  _.append("sessionid", (0, _._)()),
-                  _.append("remove", _ ? "0" : "1"),
-                  _ && _.append("snr", _),
-                  _.append("ignore_reason", "" + _);
-                const _ = await fetch(_, {
-                  method: "POST",
-                  body: _,
-                  credentials: "include",
-                });
-                if (!_._)
-                  throw new Error(
-                    `Ignore App ${_ ? "add" : "remove"} of appid ${_} failed (${_.status})`,
-                  );
-              },
-              onMutate: () => {
-                null != _ && _(_ ? [_] : void 0, _ ? void 0 : [_]);
-              },
-              onError: () => {
-                null != _ && _(_ ? void 0 : [_], _ ? [_] : void 0);
-              },
-              onSuccess: () => {
-                (0, _._)();
-              },
-            });
-          })(_, !_, _),
+          { mutateAsync: _ } = (0, _._)(_, !_, _),
           _ = _ && "appid" in _ && _._.Get().BIsGameIgnored(_.appid);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().IgnoreButton, _),
@@ -17664,6 +17755,26 @@
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      var _, _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_.k_ECutArrowStyle = "single"),
+            (_.k_EDoubleArrowStyle = "double"),
+            (_.k_EThickChevron = "chevron"),
+            (_.k_EFilledArrow = "filled"),
+            (_.k_EPointyArrow = "pointy");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EPillCrumb = "pill"),
+            (_.k_ECircularCrumb = "circle"),
+            (_.k_ESquareCrumb = "square");
+        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -20498,29 +20609,44 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const { _: _, bSelfPurchaseOption: _ } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = _ && _.item_type == _._._ ? _.self_purchase_option : _;
+        return (0, _.jsx)(_, {
+          purchaseOption: _,
+          ..._,
+        });
+      }
+      function _(_) {
         const {
             bSingleLineMode: _,
-            _: _,
             onlyOneDiscountPct: _,
+            _: _,
+            purchaseOption: _,
             bHidePrePurchase: _,
             bHideReleaseDate: _,
             bHideIfDemo: _,
+            bPurchaseOptionDisplay: _,
             strContainerClassName: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
             bPreferWholeNumbers: _,
+            bSelfPurchaseOption: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         if (!_) return null;
-        const _ = (0, _._)(_, _),
+        const _ = _,
+          _ = (0, _._)(_, _),
           _ = (0, _._)({
             [_().StoreSalePriceWidgetContainer]: !0,
             [_().SingleLineMode]: _,
             StoreSalePriceWidgetContainer: !0,
             [_().NewItem]: _,
+            [_().PurchaseOption]: _,
             [null != _ ? _ : ""]: !!_,
           });
         if (_.bShowInLibrary)
@@ -20614,9 +20740,7 @@
           nDiscountPercentage: _,
           bIsPrePurchase: _,
           strBestPurchaseOriginalPriceFormatted:
-            _.formatted_price_before_bundle_discount ||
-            _.formatted_original_price ||
-            "",
+            _.formatted_original_price || "",
           strBestPurchasePriceFormatted: _,
           bHideDiscountPercentForCompliance: Boolean(
             _.hide_discount_pct_for_compliance,
@@ -20625,6 +20749,7 @@
           bHidePrePurchase: Boolean(_),
           strDiscountAndPriceClassName: _,
           strPriceFormattedClassName: _,
+          bPurchaseOptionDisplay: _,
         });
       }
       function _(_) {
@@ -20640,6 +20765,7 @@
             bHidePrePurchase: _,
             strDiscountAndPriceClassName: _,
             strPriceFormattedClassName: _,
+            bPurchaseOptionDisplay: _,
           } = _,
           _ = _;
         let _;
@@ -20657,6 +20783,7 @@
               Discounted: Boolean(_),
               [_().PrePurchase]: Boolean(_),
               [_().NewItem]: Boolean(_),
+              [_().PurchaseOption]: _,
               [null != _ ? _ : ""]: !!_,
             }),
             "aria-label": _,
@@ -20691,7 +20818,7 @@
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("span", {
-                            children: "+ ",
+                            children: " ",
                           }),
                           (0, _.jsx)(_._, {
                             toolTipContent: _._.Localize(
@@ -21443,6 +21570,87 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
+        switch (_) {
+          default:
+          case _._.k_ECutArrowStyle: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.uMb, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EDoubleArrowStyle: {
+            const _ = "right" == _ ? 180 : 0;
+            return (0, _.jsx)(_.F2T, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EThickChevron: {
+            const _ = "right" == _ ? 0 : 180;
+            return (0, _.jsx)(_.l8x, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EFilledArrow: {
+            const _ = "right" == _ ? 90 : 270;
+            return (0, _.jsx)(_.V5W, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _._.k_EPointyArrow:
+            return (0, _.jsx)(_.L0X, {
+              fill: _ || "white",
+              role: "presentation",
+              direction: _ || "left",
+            });
+        }
+      }
+      function _(_) {
+        const {
+            bIsActive: _,
+            breadcrumbActiveColor: _,
+            breadcrumbColor: _,
+            breadcrumbStyle: _,
+          } = _,
+          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
+        switch (_) {
+          default:
+          case _._.k_EPillCrumb:
+            return (0, _.jsx)(_.IGf, {
+              fill: _,
+              role: "presentation",
+            });
+          case _._.k_ECircularCrumb:
+            return (0, _.jsx)(_.az8, {
+              fill: _,
+              role: "presentation",
+            });
+          case _._.k_ESquareCrumb:
+            return (0, _.jsx)(_.koA, {
+              fill: _,
+              role: "presentation",
+            });
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 1778623200;
       function _(_, _) {
@@ -21605,6 +21813,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -21618,7 +21827,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        var _, _;
+        var _;
         const { _: _, active: _, bIsHoverMode: _, eGrowOnActivate: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = _.useRef(0),
@@ -21659,25 +21868,37 @@
           controls: !1,
           autoPlay: !0,
           ref: _,
+          playsInline: !0,
           onTimeUpdate: (_) => {
             _.current = _.currentTarget.currentTime;
           },
-          children:
-            null === (_ = _.microtrailer) || void 0 === _
-              ? void 0
-              : __webpack_require__.map((_) =>
-                  _._.IN_CLIENT && "video/mp4" == _.type
-                    ? null
-                    : (0, _.jsx)(
-                        "source",
-                        {
-                          src: (0, _._)(_, _.filename || ""),
-                          type: _.type,
-                        },
-                        _.filename,
-                      ),
-                ),
+          children: (0, _.jsx)(_, {
+            trailer: _,
+          }),
         });
+      }
+      function _(_) {
+        var _;
+        const { trailer: _ } = _;
+        return _ && _.microtrailer
+          ? (0, _.jsx)(_.Fragment, {
+              children:
+                null === (_ = _.microtrailer) || void 0 === _
+                  ? void 0
+                  : _.map((_) =>
+                      _._.IN_CLIENT && "video/mp4" == _.type
+                        ? null
+                        : (0, _.jsx)(
+                            "source",
+                            {
+                              src: (0, _._)(_, _.filename || ""),
+                              type: _.type,
+                            },
+                            _.filename,
+                          ),
+                    ),
+            })
+          : null;
       }
       !(function (_) {
         (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
@@ -22171,6 +22392,53 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _ = _._._) {
+        const _ = (0, _._)(),
+          _ = _._.accountid;
+        return (0, _._)({
+          mutationKey: ["useUpdateAppIgnore", _, _, _],
+          mutationFn: async () => {
+            if (null == _) return;
+            const _ = _._.STORE_BASE_URL + "recommended/ignorerecommendation",
+              _ = new FormData();
+            _.append("appid", "" + _),
+              _.append("sessionid", (0, _._)()),
+              _.append("remove", _ ? "0" : "1"),
+              _ && _.append("snr", _),
+              _.append("ignore_reason", "" + _);
+            const _ = await fetch(_, {
+              method: "POST",
+              body: _,
+              credentials: "include",
+            });
+            if (!_._)
+              throw new Error(
+                `Ignore App ${_ ? "add" : "remove"} of appid ${_} failed (${_.status})`,
+              );
+          },
+          onMutate: () => {
+            null != _ && _(_ ? [_] : void 0, _ ? void 0 : [_]);
+          },
+          onError: () => {
+            null != _ && _(_ ? void 0 : [_], _ ? [_] : void 0);
+          },
+          onSuccess: () => {
+            (0, _._)();
+          },
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -22181,6 +22449,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      async function _(_, _) {
+        const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
+          _ = await fetch(_);
+        return (await _.json()).rgOwnedApps || [];
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -22192,11 +22465,7 @@
               queryKey: _(_),
               queryFn: async () => {
                 if (!_) return new Set();
-                const _ = await (async function (_, _) {
-                  const _ = (0, _._)(_._.STORE_BASE_URL, _, _._.country_code),
-                    _ = await fetch(_);
-                  return (await _.json()).rgOwnedApps || [];
-                })(0, _);
+                const _ = await _(0, _);
                 return new Set(_);
               },
               staleTime: 6e5,
@@ -22204,9 +22473,24 @@
           })(0, _),
         );
       }
+      function _(_, _, _) {
+        return {
+          queryKey: ["AccountOwnsApp", _, _],
+          queryFn: async () => {
+            if (!_) return !1;
+            const _ = await (async function (_, _, _) {
+              return (await _(0, _)).includes(_);
+            })(0, _, _);
+            return _;
+          },
+          staleTime: 6e5,
+        };
+      }
       function _(_) {
-        const { data: _ } = _();
-        return void 0 === _ ? void 0 : _.has(_);
+        (0, _._)();
+        const _ = _._.accountid,
+          { data: _ } = (0, _._)(_(0, _, _));
+        return void 0 === _ ? void 0 : _;
       }
       function _(_) {
         const _ = (0, _._)(),
@@ -24601,6 +24885,7 @@
           captionManifest: _,
           screenshot: _,
           forcePause: _,
+          onPlaybackStart: _,
           onPlaybackEnd: _,
           onPlayPauseChange: _,
           onMuteChange: _,
@@ -24745,7 +25030,11 @@
           })(_, !!_),
           _ = _ ? void 0 : _,
           _ = {};
-        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
+        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+        let _ = (0, _._)(() => _.IsBuffering());
+        _.useEffect(() => {
+          _ || (_ && _());
+        }, [_, _]),
           _.use(_._.Ready());
         let _ = (0, _._)(_().TrailerPlayer, _);
         return (0, _.jsxs)("div", {
@@ -25362,26 +25651,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _, _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_.k_ECutArrowStyle = "single"),
-            (_.k_EDoubleArrowStyle = "double"),
-            (_.k_EThickChevron = "chevron"),
-            (_.k_EFilledArrow = "filled"),
-            (_.k_EPointyArrow = "pointy");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_.k_EPillCrumb = "pill"),
-            (_.k_ECircularCrumb = "circle"),
-            (_.k_ESquareCrumb = "square");
-        })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -25500,24 +25769,27 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       async function _(_, _) {
+        const _ = "steam://run/" + _;
         _._.IN_CLIENT
           ? (console.log(`Running game ${_} locally.`),
-            (window.location.href = "steam://run/" + _))
+            (window.location.href = _))
           : (console.log(
               `Cannot identify local client. Prompting user to launch ${_}.`,
             ),
-            (async function (_, _) {
-              console.log("prompting for", _);
-              const _ = _._.STORE_BASE_URL + "about/";
-              (0, _._)(
-                (0, _.jsx)(_, {
-                  appid: _,
-                  strGameName: _ || "",
-                  strDownloadSteamUrl: _,
-                }),
-                window,
-              );
-            })(_, _));
+            _(_, _, _));
+      }
+      async function _(_, _, _) {
+        console.log("prompting for", _);
+        const _ = _._.STORE_BASE_URL + "about/";
+        (0, _._)(
+          (0, _.jsx)(_, {
+            appid: _,
+            strGameName: _ || "",
+            strOnOKUrl: _,
+            strDownloadSteamUrl: _,
+          }),
+          window,
+        );
       }
       const _ = (_) => {
         const _ = () => _.closeModal && _.closeModal();
@@ -25549,7 +25821,7 @@
                     className: _().Buttons,
                     children: [
                       (0, _.jsxs)("a", {
-                        href: "steam://run/" + _.appid,
+                        href: _.strOnOKUrl,
                         onClick: _,
                         className: (0, _._)(_().Button, _().LeftButton),
                         children: [
@@ -25603,130 +25875,6 @@
           }),
         });
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-          bForceShowCompatInfo: !1,
-          bSteamOS: !1,
-          bSteamDeck: !1,
-        }),
-        _ = () => _.useContext(_),
-        _ = 0,
-        _ = 1,
-        _ = 2;
-      function _() {
-        const { bForceShowCompatInfo: _, bSteamDeck: _, bSteamOS: _ } = _();
-        return _
-          ? _ || _ || "steamdeck" == _._.FORCED_DISPLAY_MODE
-            ? [!0, _]
-            : [!0, _]
-          : [!1, _];
-      }
-      function _(_) {
-        const { _: _, className: _ } = _,
-          { data: _ } = (0, _._)(_);
-        return _
-          ? (0, _.jsx)(_, {
-              category: null == _ ? void 0 : _.steam_deck_compat_category,
-              className: _,
-            })
-          : null;
-      }
-      const _ = (_) => {
-          const { category: _, className: _ } = _;
-          if (!_) return null;
-          const _ = _(_);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.SteamDeckCompatInfo, _),
-            children: [
-              (0, _.jsx)(_.lRD, {}),
-              (0, _.jsx)(_, {
-                className: _.SteamDeckCompatIcon,
-              }),
-            ],
-          });
-        },
-        _ = (_) => {
-          const { category: _, elControllerSupport: _ } = _,
-            _ = _(_);
-          return (0, _.jsxs)("div", {
-            className: (0, _._)(_.SteamDeckCompatInfo, _.className),
-            children: [
-              _,
-              (0, _.jsx)(_, {
-                className: _.SteamDeckCompatIcon,
-              }),
-            ],
-          });
-        };
-      function _(_) {
-        var _, _;
-        const { eDisplay: _, storeItemPlatform: _, className: _ } = _;
-        return _ == _
-          ? (0, _.jsx)(_, {
-              category:
-                null !==
-                  (_ = null == _ ? void 0 : _.steam_deck_compat_category) &&
-                void 0 !== _
-                  ? _
-                  : _._,
-              className: _,
-            })
-          : _ == _
-            ? (0, _.jsx)(_, {
-                category:
-                  null !==
-                    (_ = null == _ ? void 0 : _.steam_os_compat_category) &&
-                  void 0 !== _
-                    ? _
-                    : _._,
-                className: _,
-              })
-            : null;
-      }
-      const _ = {
-          [_._]: _.jIP,
-          [_._]: _.aVR,
-          [_._]: _.o5Q,
-          [_._]: _.WX$,
-        },
-        _ = {
-          [_._]: _.WX$,
-          [_._]: _.jIP,
-          [_._]: _.ZjT,
-        };
-      function _(_) {
-        return _[_] || _.WX$;
-      }
-      function _(_) {
-        return _[_] || _.WX$;
-      }
-      _._, _._, _._, _._;
-      _._, _._, _._;
-      _._, _._, _._, _._;
-      _._, _._, _._, _._;
-      _._, _._, _._;
-      _._, _._, _._;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -29216,18 +29364,18 @@
             gap: _,
             children: _,
             bLazyRenderChildren: _,
+            lazyRenderPlaceholderWidth: _,
+            lazyRenderPlaceholderHeight: _,
             startingSlide: _,
           } = _,
+          _ = _.useRef(null),
           _ = _.useRef(null);
         _.useLayoutEffect(() => {
-          var _;
-          null === (_ = _.current) ||
-            void 0 === _ ||
-            _.scrollIntoView({
-              inline: "start",
-              block: "nearest",
-              behavior: "auto",
-            });
+          _.current &&
+            _.current &&
+            (_.current.scrollLeft +=
+              _.current.getBoundingClientRect().left -
+              _.current.getBoundingClientRect().left);
         }, [_]);
         const _ = (0, _.jsxs)(_._, {
           "flow-children": "row",
@@ -29243,6 +29391,7 @@
             _.ScrollSnapCarousel,
             _.className,
           ),
+          ref: _,
           children: [
             _ &&
               _.Children.map(_, (_, _) =>
@@ -29257,8 +29406,8 @@
         return _
           ? (0, _.jsx)(_._, {
               horizontal: !1,
-              placeholderWidth: 1,
-              placeholderHeight: 1,
+              placeholderWidth: null != _ ? _ : 1,
+              placeholderHeight: null != _ ? _ : 1,
               children: _,
             })
           : _;
@@ -29415,12 +29564,21 @@
                 arrowFill: _.arrowFill,
                 arrowStyle: _.arrowStyle,
                 children: _.Children.map(_.children, (_, _) => {
+                  var _, _;
                   const _ = _.bLazyRenderChildren
                     ? (0, _.jsx)(_._, {
                         rootMargin: "0px -5px 0px 100%",
                         horizontal: !0,
-                        placeholderWidth: 1,
-                        placeholderHeight: 1,
+                        placeholderWidth:
+                          null !== (_ = _.lazyRenderPlaceholderWidth) &&
+                          void 0 !== _
+                            ? _
+                            : 1,
+                        placeholderHeight:
+                          null !== (_ = _.lazyRenderPlaceholderHeight) &&
+                          void 0 !== _
+                            ? _
+                            : 1,
                         holdGamepadFocus: _,
                         children: _,
                       })
@@ -29943,6 +30101,21 @@
           return "CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate";
         }
       }
+      !(function (_) {
+        _.GetGameFrameRateStats = function (_, _) {
+          return _.SendMsg(
+            "GamePerformanceStats.GetGameFrameRateStats#1",
+            (0, _._)(_, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            },
+          );
+        };
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
         const {
@@ -30415,20 +30588,6 @@
             return null;
         }
       }
-      !(function (_) {
-        _.GetGameFrameRateStats = function (_, _) {
-          return _.SendMsg(
-            "GamePerformanceStats.GetGameFrameRateStats#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            },
-          );
-        };
-      })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -32252,7 +32411,10 @@
               : console.error(
                   "Neither a package nor bundle ID were provided with an item in AddItemsToAccountCart",
                 ),
-            _.bIsGift && _.flags(!0).set_is_gift(!0);
+            _.bIsGift &&
+              (_.flags(!0).set_is_gift(!0),
+              _.nAccountIDGiftee &&
+                _.gift_info(!0).set_accountid_giftee(_.nAccountIDGiftee));
         }),
           _ && _.Body().set_navdata(_.fromObject((0, _._)(_))),
           _.Body().set_user_country(_);
@@ -32359,7 +32521,7 @@
       function _(_, _, _) {
         _.setQueryData(_(_), _), _(_);
       }
-      function _(_, _, _, _) {
+      function _(_, _, _, _, _) {
         const _ = _(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -32372,20 +32534,15 @@
             if (!_ && !_) throw "nPackageID or nBundleID must be passed.";
             let _;
             if (_(_)) {
-              const [_, _] = await (async function (_, _, _, _, _, _) {
-                return _(
-                  _,
-                  _,
-                  [
-                    {
-                      packageid: _,
-                      bundleid: _,
-                      bIsGift: _,
-                    },
-                  ],
-                  _,
-                );
-              })(_, _, _, _, _, _);
+              const _ = {
+                  packageid: _,
+                  bundleid: _,
+                  bIsGift: _,
+                  nAccountIDGiftee: _,
+                },
+                [_, _] = await (async function (_, _, _, _) {
+                  return _(_, _, [_], _);
+                })(_, _, _, _);
               if (_ != _._) throw `AddToAccountCart failed with ${_}`;
               (_ = _.line_item_ids), _(_, _, _.cart);
             } else {
@@ -32769,6 +32926,7 @@
             null == _ ? void 0 : _.packageid,
             null == _ ? void 0 : _.bundleid,
             !1,
+            void 0,
             _.feature,
           );
         return (0, _.jsx)("div", {
@@ -47976,6 +48134,7 @@
             children: _,
             bSkipForcingStoreLink: _,
             bOpenInline: _,
+            bFocusable: _ = !0,
           } = _,
           _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
           _ = (0, _._)(_);
@@ -47986,6 +48145,7 @@
               className: _,
               style: _,
               rel: "noopener noreferrer",
+              focusable: _,
               children: _,
             })
           : (0, _.jsx)("span", {
@@ -49588,6 +49748,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { bAllowOutsideOfDeck: _ } = _;
@@ -49832,7 +49993,7 @@
           let _ = 0,
             _ = 0;
           if (this.m_refContainer.current) {
-            const _ = this.m_refContainer.current.GetBoundingClientRect();
+            const _ = this.m_refContainer.current.getBoundingClientRect();
             _ && ((_ = _.width), (_ = _.height));
           }
           this.setState({
@@ -49866,7 +50027,7 @@
           }
           const _ = this.BLoadAndUnload() ? "repeated" : "once";
           let _ = (0, _.jsx)(_._, {
-            ref: this.m_refContainer,
+            containerRef: this.m_refContainer,
             style: _,
             ..._,
             onVisibilityChange: this.OnVisibilityChange,
@@ -50590,87 +50751,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { arrowFill: _, arrowStyle: _, direction: _ } = _;
-        switch (_) {
-          default:
-          case _._.k_ECutArrowStyle: {
-            const _ = "right" == _ ? 0 : 180;
-            return (0, _.jsx)(_.uMb, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EDoubleArrowStyle: {
-            const _ = "right" == _ ? 180 : 0;
-            return (0, _.jsx)(_.F2T, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EThickChevron: {
-            const _ = "right" == _ ? 0 : 180;
-            return (0, _.jsx)(_.l8x, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EFilledArrow: {
-            const _ = "right" == _ ? 90 : 270;
-            return (0, _.jsx)(_.V5W, {
-              fill: _ || "white",
-              role: "presentation",
-              angle: _,
-            });
-          }
-          case _._.k_EPointyArrow:
-            return (0, _.jsx)(_.L0X, {
-              fill: _ || "white",
-              role: "presentation",
-              direction: _ || "left",
-            });
-        }
-      }
-      function _(_) {
-        const {
-            bIsActive: _,
-            breadcrumbActiveColor: _,
-            breadcrumbColor: _,
-            breadcrumbStyle: _,
-          } = _,
-          _ = _ ? _ || "#FFFFFF" : _ || "#606974";
-        switch (_) {
-          default:
-          case _._.k_EPillCrumb:
-            return (0, _.jsx)(_.IGf, {
-              fill: _,
-              role: "presentation",
-            });
-          case _._.k_ECircularCrumb:
-            return (0, _.jsx)(_.az8, {
-              fill: _,
-              role: "presentation",
-            });
-          case _._.k_ESquareCrumb:
-            return (0, _.jsx)(_.koA, {
-              fill: _,
-              role: "presentation",
-            });
-        }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -50696,6 +50776,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -50773,6 +50854,10 @@
             );
           });
         }
+        HandleRef(_) {
+          (0, _._)(this.m_refElement, _),
+            this.props.containerRef && (0, _._)(this.props.containerRef, _);
+        }
         OnIntersection(_, _) {
           let _ = !1;
           for (const _ of _)
@@ -50791,16 +50876,18 @@
             rootMargin: _,
             trigger: _,
             horizontal: _,
+            containerRef: _,
             ..._
           } = this.props;
-          return (0, _.jsx)("div", {
-            ref: this.m_refElement,
+          return (0, _.jsx)(_._, {
+            ref: this.HandleRef,
             ..._,
             children: this.props.children,
           });
         }
       }
-      (0, _._)([_._], _.prototype, "OnIntersection", null);
+      (0, _._)([_._], _.prototype, "HandleRef", null),
+        (0, _._)([_._], _.prototype, "OnIntersection", null);
     },
   },
 ]);

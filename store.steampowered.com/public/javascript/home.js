@@ -3167,9 +3167,9 @@ GHomepage = {
 		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
-		let $ImgCtn = $CapCtn.children('.capsule_image_ctn').first();
+		let $ImgCtn = $CapCtn.find('.capsule_image_ctn').first();
 
-		const strMicrotrailerWebmSrc = strMicrotrailerData || rgItemData?.microtrailer;
+		const strMicrotrailerWebmSrc = strMicrotrailerData ?? rgItemData?.microtrailer;
 		if ( GDynamicStore.s_preferences.disable_microtrailers || !strMicrotrailerWebmSrc )
 		{
 			if ( rgItemData?.screenshots )
@@ -3572,6 +3572,8 @@ GHomepage = {
 
 		var itemParams = { 'class' : 'community_recommendation_app responsive_scroll_snap_start' };
 		let $Item = $J( '<div>', itemParams );
+		$Item.data( 'microtrailerOnImageHover', 1 );
+
 		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 		if ( bUseGamepadScreenMode )
 		{
@@ -3588,55 +3590,16 @@ GHomepage = {
 		// app image
 		// app image anchor
 		var $ImageCapsule = $J ( '<div/>' );
-		$ImageCapsule.addClass('capsule');
+		$ImageCapsule.addClass('capsule capsule_image_ctn');
 
-		const imgSrc = rgItemData.main_capsule_2x ? rgItemData.main_capsule_2x : rgItemData.main_capsule;
+		var $Image = $J('<img/>', { src: 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData.header, 'data-image2x-url': rgItemData.header_2x ?? '',  alt: rgItemData.name } );
 
-		var $Image = $J('<img/>', { src: 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'data-image-url': imgSrc, alt: rgItemData.name } );
-		if ( !imgSrc )
-		{
-			$Image.css({'height': '353px' });
-		}
 		$Image.bind('error', function(){
 			$Image.attr('src', rgItemData.header  );
-			$Image.css({'height': '353x' });
+			$Image.css({'height': '337x' });
 		});
 		$ImageCapsule.append( $Image );
 		$ItemLink.append( $ImageCapsule );
-
-		// micro trailer
-		if ( rgItemData.microtrailer && !GDynamicStore.s_preferences.disable_microtrailers )
-		{
-			let $Video = $J( '<video class="microtrailer_video" loop muted playsinline aria-hidden=true>' ).appendTo( $ImageCapsule );
-			$Video.on( "canplay", function() {
-				$Item.addClass( "has_microtrailer" );
-			} );
-			$Video.on( "playing", function() {
-				$Item.addClass( "has_microtrailer" );
-			} );
-
-			$Item.hover(
-				function () {
-					if ( !$Video.hasClass( "added_source" ) )
-					{
-						$Video.addClass( "added_source" );
-						$Video.append( $J( "<source>", { src: rgItemData.microtrailer, type: "video/webm" } ) );
-					}
-
-					playPromise = $Video[0].play();
-					if ( playPromise )
-					{
-						playPromise.catch( function( e ) {
-							$Item.removeClass( 'has_microtrailer' );
-						} );
-					}
-				},
-
-				function () {
-					$Video[0].pause();
-				}
-			);
-		}
 
 		var $RightCol = $J( '<div>', { class : 'right_col' } ).appendTo( $Item );
 		$J('<div/>', { class: 'app_name'} ).html( rgItemData.name ).appendTo( $RightCol );
@@ -3737,6 +3700,8 @@ GHomepage = {
 		let $BottomCtn = $J('<div/>', {class: 'info_bottom_ctn'});
 		$J('<div/>', {'class': 'price_ctn'}).html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;').appendTo($BottomCtn);
 		$RightCol.append( $BottomCtn );
+
+		GHomepage.AddHoverEffectToCapsule( $Item, rgItemData, rgItemData.microtrailer );
 
 		return $Item;
 	},
@@ -5210,20 +5175,6 @@ function InitTabSectionMicrotrailer()
 				elMicrotrailer.pause();
 		}
 
-		const fnRestartVideoIfVisible = function()
-		{
-			let $elMicrotrailer = $J( '.tab_preview.focus' ).find( '.tab_preview_video' )[0];
-			if ( $elMicrotrailer )
-			{
-				const rect = $elMicrotrailer.getBoundingClientRect();
-				const bIsVisible = rect.top >= 0 && rect.left >= 0 && rect.bottom <= window.innerHeight && rect.right <= window.innerWidth;
-				if ( bIsVisible )
-				{
-					fnPlayTabMicrotrailer();
-				}
-			}
-		}
-
 		const intersectionObserver = new IntersectionObserver( ([e]) =>
 		{
 			let bIsVisible = e.isIntersecting;
@@ -5240,8 +5191,6 @@ function InitTabSectionMicrotrailer()
 		intersectionObserver.observe( elRightSection );
 
 		GHomepage.m_TabItemPreviewMicrotrailerTimeout = window.setTimeout( fnPauseTabMicrotrailer, k_nMicrotrailerTimeoutMS );
-
-		$J( window ).on( 'scroll resize mouseover vgp_onfocus', fnRestartVideoIfVisible );
 	}
 }
 

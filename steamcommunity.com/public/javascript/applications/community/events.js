@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [4268],
   {
-    34418: (e) => {
+    12037: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
@@ -151,7 +151,7 @@
         P = t(84143),
         M = t(50433),
         y = t(16261),
-        B = t(34418),
+        B = t(12037),
         F = t(12155);
       function N(e) {
         return (0, o.jsxs)("div", {
@@ -271,15 +271,14 @@
                             className: B.EventsSummariesCtn,
                             children: t.slice(0, d).map((e) => {
                               const n = a
-                                  ? (n) => {
-                                      a(e),
-                                        n.stopPropagation(),
-                                        n.preventDefault();
-                                    }
-                                  : void 0,
-                                t = M.u;
+                                ? (n) => {
+                                    a(e),
+                                      n.stopPropagation(),
+                                      n.preventDefault();
+                                  }
+                                : void 0;
                               return (0, o.jsx)(
-                                t,
+                                M.u,
                                 { event: e, onClick: n, nSummaryMaxLength: r },
                                 e.GID,
                               );

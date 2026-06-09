@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Fragman, Steam Deck'teki gerçek oynanışı yansıtmayabilir.",
     "StoreItemFound": "%1$s Bulundu (%2$s)",
     "StoreItemNotFound": "Bulunamadı (%1$s)",
+    "SteamURLAccepted": "%1$s URL'i Kabul Edildi",
+    "SteamURLInvalid": "Hata: URL bir Steam varlığı değil (mağaza/topluluk)",
+    "PriceGrid_NormalPrice": "NORMALDE",
+    "PriceGrid_RecentPrice": "SON 30 GÜNDE EN DÜŞÜK FİYAT",
+    "PriceGrid_CurrentPrice": "ŞİMDİ",
     "Dummy": "dummy"
 }

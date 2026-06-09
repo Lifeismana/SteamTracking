@@ -281,8 +281,8 @@
               h = t ? "true" : void 0;
             return (0, c.Q)(
               i,
-              (0, r.jsx)(s.GY, {
-                navProps: { focusable: !0 },
+              (0, r.jsx)(s.az, {
+                focusable: !0,
                 "data-selected": d,
                 "data-focused": h,
                 "aria-disabled": l,
@@ -437,14 +437,7 @@
                   state: s,
                   children: (0, r.jsx)(u, {
                     ref: c,
-                    style: {
-                      ...s.floating.floatingStyles,
-                      inset: "unset",
-                      border: "none",
-                      background: "transparent",
-                      color: "inherit",
-                      padding: 0,
-                    },
+                    style: s.floating.floatingStyles,
                     ...s.getFloatingProps({ popover: "manual" }),
                     render: t,
                     children: (0, r.jsx)(i.ph, {

@@ -108,7 +108,7 @@
     },
     42103: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { HardwarePerformance: () => v, default: () => S });
+      t.r(a), t.d(a, { HardwarePerformance: () => y, default: () => v });
       var r = t(7850),
         i = t(90626),
         s = t(7878),
@@ -127,29 +127,32 @@
         b = t(11577),
         g = t(52038),
         j = t(26408),
-        k = t(47911);
-      function S(e) {
+        k = t(47911),
+        S = t(84811);
+      function v(e) {
         const { dataprops: a, appId: t } = e;
         return a?.framerate || a?.feedback
           ? (0, r.jsx)(b.m, {
-              children: (0, r.jsx)(v, { appId: t, dataprops: a }),
+              children: (0, r.jsx)(S.tH, {
+                children: (0, r.jsx)(y, { appId: t, dataprops: a }),
+              }),
             })
           : (0, r.jsx)(r.Fragment, {});
       }
-      function v(e) {
+      function y(e) {
         const { dataprops: a, appName: t } = e;
         return a?.framerate || a?.feedback
           ? (0, r.jsxs)("div", {
               className: s.PerformanceContainer,
               children: [
                 Boolean(a?.framerate) &&
-                  (0, r.jsx)(F, {
+                  (0, r.jsx)(P, {
                     appId: Number(e.appId),
                     appName: t,
                     frameRateData: a.framerate,
                   }),
                 Boolean(a?.feedback) &&
-                  (0, r.jsx)(y, {
+                  (0, r.jsx)(F, {
                     appId: Number(e.appId),
                     feedbackData: a.feedback,
                   }),
@@ -157,7 +160,7 @@
             })
           : (0, r.jsx)(r.Fragment, {});
       }
-      function y(e) {
+      function F(e) {
         const { feedbackData: a } = e;
         if (!a || !a.daily?.length)
           return (0, r.jsx)("div", {
@@ -219,7 +222,7 @@
                     "#GamePerformanceStats_CustomerFeedback",
                   ),
                 }),
-                (0, r.jsx)(N, { nAgreePercent: _ }),
+                (0, r.jsx)(L, { nAgreePercent: _ }),
                 (0, r.jsx)("div", {
                   children: k.Z.Localize(
                     "#GamePerformanceStats_NumberOfReports",
@@ -243,7 +246,7 @@
                     }),
                   ),
                 }),
-                (0, r.jsx)(L, { feedback: a }),
+                (0, r.jsx)(G, { feedback: a }),
               ],
             }),
             (0, r.jsx)(n.u, {
@@ -257,19 +260,19 @@
                 children: [
                   (0, r.jsx)(l.W, {
                     dataKey: "date",
-                    tickFormatter: P,
+                    tickFormatter: N,
                     stroke: "white",
                   }),
                   (0, r.jsx)(o.h, {
                     stroke: "white",
                     domain: [() => 0, (e) => Math.max(e, 20)],
                   }),
-                  (0, r.jsx)(m.m, { labelFormatter: P }),
+                  (0, r.jsx)(m.m, { labelFormatter: N }),
                   t.map((e) =>
                     (0, r.jsx)(
                       d.y,
                       {
-                        shape: (0, r.jsx)(G, { fill: e.fill }),
+                        shape: (0, r.jsx)(T, { fill: e.fill }),
                         fill: e.fill,
                         dataKey: e.key,
                         stackId: "day",
@@ -285,7 +288,7 @@
           ],
         });
       }
-      function F(e) {
+      function P(e) {
         const { appId: a, appName: t, frameRateData: c } = e,
           d = i.useMemo(() => {
             let e = [];
@@ -379,11 +382,11 @@
                   (0, r.jsx)(p.d, { strokeDasharray: "3 3", color: "red" }),
                   (0, r.jsx)(l.W, {
                     dataKey: "date",
-                    tickFormatter: P,
+                    tickFormatter: N,
                     stroke: "white",
                   }),
                   (0, r.jsx)(o.h, { stroke: "white" }),
-                  (0, r.jsx)(m.m, { labelFormatter: P }),
+                  (0, r.jsx)(m.m, { labelFormatter: N }),
                   (0, r.jsx)(h.N, {
                     type: "natural",
                     dataKey: "mean",
@@ -397,10 +400,10 @@
           ],
         });
       }
-      function P(e) {
+      function N(e) {
         return (0, x._l)(e);
       }
-      function N(e) {
+      function L(e) {
         const { nAgreePercent: a } = e;
         return (0, r.jsxs)("div", {
           className: s.FeedbackAgree,
@@ -428,7 +431,7 @@
           ],
         });
       }
-      function L(e) {
+      function G(e) {
         const { feedback: a } = e;
         let t = new Array(
           {
@@ -491,7 +494,7 @@
           })
         );
       }
-      const G = (e) => {
+      const T = (e) => {
         const { fill: a, x: t, y: i, width: s, height: n } = e;
         return (0, r.jsx)("rect", { x: t, y: i, width: s, height: n, fill: a });
       };

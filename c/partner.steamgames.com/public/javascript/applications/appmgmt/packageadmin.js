@@ -187,18 +187,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ..._ } = _,
-          _ = _._.IN_GAMEPADUI ? _._ : "a";
-        return (0, _.jsx)(_, {
-          ...(0, _._)(
+        const { underline: _ = "auto", focusable: _, navProps: _, ..._ } = _,
+          _ = _ ?? _?.focusable ?? !!_.href,
+          _ = (0, _._)(
             {
               ..._,
               underline: _,
               className: _.TextLink,
             },
             _,
-          ),
-        });
+          );
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ..._,
+              ...(_ || {}),
+              focusable: _,
+            })
+          : (0, _.jsx)("a", {
+              ..._,
+            });
       }
       const _ = [
         ..._._,

@@ -6774,23 +6774,23 @@
         BIsValidForRealm(e) {
           return this.GetIncludedRealmList().includes(e);
         }
-        BIsNextFest(e = !0) {
+        BIsNextFest(e = !1) {
           var t;
-          const i = "nextfest",
-            n =
+          const i =
               null === (t = this.jsondata.sale_vanity_id) || void 0 === t
                 ? void 0
                 : t.toLowerCase(),
-            r = new d.b(this.clanSteamID).GetAccountID();
+            n = new d.b(this.clanSteamID).GetAccountID();
           return (
-            !(!n || r != _.GU) &&
-            (e ? n.startsWith(i) : n.startsWith(i) && !n.includes("prev"))
+            !(!i || n != _.GU) &&
+            !!i.startsWith("nextfest") &&
+            (!e || (!i.endsWith("preview") && !i.endsWith("press")))
           );
         }
         BShowNextFestHeader(e) {
           return e && M.iA.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }

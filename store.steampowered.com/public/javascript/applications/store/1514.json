@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Upoutávka nemusí odpovídat skutečnému zážitku na zařízení Steam Deck",
     "StoreItemFound": "%1$s Nalezeno (%2$s)",
     "StoreItemNotFound": "Nenalezeno (%1$s)",
+    "SteamURLAccepted": "%1$s URL adresa je správná",
+    "SteamURLInvalid": "Chyba: URL adresa nevede do služby Steam (obchod/komunita)",
+    "PriceGrid_NormalPrice": "BĚŽNÁ CENA",
+    "PriceGrid_RecentPrice": "NEJNIŽŠÍ CENA",
+    "PriceGrid_CurrentPrice": "AKTUÁLNÍ CENA",
     "Dummy": "dummy"
 }

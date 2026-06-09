@@ -166,9 +166,7 @@
             return (0, _._)(
               _,
               (0, _.jsx)(_._, {
-                navProps: {
-                  focusable: !0,
-                },
+                focusable: !0,
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,

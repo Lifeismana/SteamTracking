@@ -1396,18 +1396,6 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 ._2hhNOdcC6yLwL_rugP3YLf .v9uRg57bwOaPsvAnkXESO {
   grid-area: right;
 }
-._2hhNOdcC6yLwL_rugP3YLf .cnkoFkzVCby40gJ0jGGS4 {
-  font-size: clamp(18px, 3vw, 25px);
-  padding: 1px 5px;
-  box-sizing: border-box;
-  height: -webkit-fill-available;
-}
-.BasicUI ._2hhNOdcC6yLwL_rugP3YLf .cnkoFkzVCby40gJ0jGGS4 {
-  font-size: unset;
-  line-height: unset;
-  padding: 0px 4px;
-  text-shadow: unset;
-}
 ._2hhNOdcC6yLwL_rugP3YLf .WishlistButton {
   display: none;
 }
@@ -1419,6 +1407,25 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 }
 ._1uLNByMlXsYSmrGPWyDNhE ._3DkfNrtTOLjNYd3yZliMzy {
   aspect-ratio: 377 / 452;
+}
+.cnkoFkzVCby40gJ0jGGS4 {
+  font-size: clamp(18px, 3vw, 25px);
+  padding: 1px 5px;
+  box-sizing: border-box;
+  height: -webkit-fill-available;
+}
+.BasicUI .cnkoFkzVCby40gJ0jGGS4 {
+  font-size: unset;
+  line-height: unset;
+  padding: 0px 4px;
+  text-shadow: unset;
+}
+._2R_C2rCrJEg8G8_d7-QQKn._2R_C2rCrJEg8G8_d7-QQKn .cnkoFkzVCby40gJ0jGGS4 {
+  height: 100%;
+  background-color: #a1cd44;
+  color: #000;
+  font-weight: 500;
+  padding: 2px 3px;
 }
 .yvqq8z2k4i7-Mzx-JHeNC {
   cursor: pointer;
@@ -2134,6 +2141,16 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   position: relative;
   cursor: default;
 }
+._2s-O5T3qJJYR2AUq4b9jIN._2R_C2rCrJEg8G8_d7-QQKn._2R_C2rCrJEg8G8_d7-QQKn {
+  color: var(--gpStoreLightestGrey);
+  background: #071d35;
+  flex-wrap: nowrap;
+}
+._2s-O5T3qJJYR2AUq4b9jIN._2R_C2rCrJEg8G8_d7-QQKn._2R_C2rCrJEg8G8_d7-QQKn
+  ._3j4dI1yA7cRfCvK8h406OB:first-child {
+  margin-left: 8px;
+  font-size: 14px;
+}
 ._2s-O5T3qJJYR2AUq4b9jIN._1ZlGJxv-xQaABSvaVvMlNq ._3NhLu7mTdty7JufpSpz6Re {
   flex-direction: row;
   align-items: center;
@@ -2192,6 +2209,9 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   padding-right: 8px;
   height: auto;
   flex-wrap: wrap;
+}
+.BasicUI ._2s-O5T3qJJYR2AUq4b9jIN._2R_C2rCrJEg8G8_d7-QQKn {
+  column-gap: 2px;
 }
 .kW6m4Sjqacp5hykrj5LEo {
   display: flex;
@@ -2292,6 +2312,9 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   flex-direction: row;
   gap: 4px;
 }
+._2R_C2rCrJEg8G8_d7-QQKn ._3NhLu7mTdty7JufpSpz6Re {
+  align-items: center;
+}
 ._3NhLu7mTdty7JufpSpz6Re ._3j4dI1yA7cRfCvK8h406OB {
   padding: 0px;
   line-height: 1.3;
@@ -2303,6 +2326,12 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   line-height: unset;
   text-shadow: unset;
   color: #fff;
+}
+._2R_C2rCrJEg8G8_d7-QQKn ._3NhLu7mTdty7JufpSpz6Re ._3j4dI1yA7cRfCvK8h406OB {
+  font-size: 14px;
+}
+.gpfocus.contextMenuItem ._3NhLu7mTdty7JufpSpz6Re ._3j4dI1yA7cRfCvK8h406OB {
+  color: #000;
 }
 .cnkoFkzVCby40gJ0jGGS4 {
   font-size: 26px;
@@ -2353,6 +2382,9 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   margin-top: 2px;
   position: relative;
 }
+._2R_C2rCrJEg8G8_d7-QQKn ._3NhLu7mTdty7JufpSpz6Re ._3fFFsvII7Y2KXNLDk_krOW {
+  font-size: 12px;
+}
 .BasicUI ._3fFFsvII7Y2KXNLDk_krOW {
   font-size: unset;
   letter-spacing: unset;
@@ -2361,6 +2393,9 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   color: #ccd8e3;
   opacity: 0.6;
   text-decoration: line-through;
+}
+.gpfocus.contextMenuItem ._3fFFsvII7Y2KXNLDk_krOW {
+  color: #000;
 }
 ._3fFFsvII7Y2KXNLDk_krOW::before {
   content: "";
@@ -2451,6 +2486,23 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   font-size: unset;
   font-weight: 500;
   text-decoration: line-through;
+}
+._2R_C2rCrJEg8G8_d7-QQKn ._3mInDnGL3LlUC7uPs1CfOP {
+  padding: 2px 0px 2px 3px;
+  border-radius: 1px;
+  font-size: 14px;
+}
+._2R_C2rCrJEg8G8_d7-QQKn._1g0B-RjwkUV0_MDURgy3Bi ._3mInDnGL3LlUC7uPs1CfOP {
+  color: #ccd8e3;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+._2R_C2rCrJEg8G8_d7-QQKn:not(._1g0B-RjwkUV0_MDURgy3Bi)
+  ._3mInDnGL3LlUC7uPs1CfOP {
+  text-decoration: none;
+  font-size: 16px;
+  color: #a1cd44;
+  margin-right: 8px;
 }
 ._1BejQFnnmkHMi9stswiJzf {
   border-radius: 2px;
@@ -4362,6 +4414,7 @@ html.responsive.touch:not(.GamepadMode) ._1cOoCFwafBlSkwllIMf3XM {
 .BasicUI
   ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
   max-width: unset;
+  background-size: cover;
 }
 .BasicUI ._1cOoCFwafBlSkwllIMf3XM.mntHD0WiARnsfz_kMYssq .carousel__slider {
   overflow: visible;

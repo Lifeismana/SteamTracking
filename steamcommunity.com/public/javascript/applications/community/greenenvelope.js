@@ -31,7 +31,7 @@
       i.r(t),
         i.d(t, {
           GreenEnvelope: () => A,
-          default: () => R,
+          default: () => L,
           useSteamNotifications: () => w,
         });
       var n = i(7850),
@@ -43,18 +43,18 @@
         a = i(60011),
         d = i(23809),
         u = i(88997),
-        m = i(88080),
-        f = i(4869),
+        f = i(88080),
+        m = i(4869),
         _ = i(12155),
         h = i(52038),
         p = i(61859),
         v = i(30470),
         N = i(84811),
         g = i(29553),
-        b = i.n(g),
-        y = i(16264),
+        y = i.n(g),
+        b = i(16264),
         T = i(60383);
-      const U = new m.cE(),
+      const U = new f.cE(),
         A = (0, N.Nr)(function (e) {
           const { bResponsiveHeader: t, notifications: i } = e;
           l.useEffect(() => {
@@ -67,7 +67,7 @@
                 (async function (e) {
                   let t = null;
                   try {
-                    t = await (0, m.tM)(
+                    t = await (0, f.tM)(
                       e,
                       v.iA.steamid,
                       (0, o.sfN)(v.TS.LANGUAGE),
@@ -82,9 +82,9 @@
           const r = w();
           return t
             ? (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(C, {}), (0, n.jsx)(x, {})],
+                children: [(0, n.jsx)(j, {}), (0, n.jsx)(x, {})],
               })
-            : (0, n.jsx)(S, { nTotalUnviewed: r.nUnviewed });
+            : (0, n.jsx)(I, { nTotalUnviewed: r.nUnviewed });
         });
       function w() {
         return (0, r.q3)(() => ({
@@ -101,18 +101,18 @@
           n = (0, a.BM)(),
           o = null == i ? void 0 : i.settings;
         return e.notifications.filter(
-          (e) => !(0, m.jb)(e.type, o, n) && !(0, m.XT)(e.item),
+          (e) => !(0, f.jb)(e.type, o, n) && !(0, f.XT)(e.item),
         );
       }
-      function S(e) {
+      function I(e) {
         const { nTotalUnviewed: t } = e,
           i = l.useRef(null),
           o = M(),
-          [s, r] = l.useState(b().AnimateBell);
+          [s, r] = l.useState(y().AnimateBell);
         l.useEffect(() => {
           i.current ||
             ((i.current = (0, u.lX)(
-              (0, n.jsx)(B, { popupRef: i }),
+              (0, n.jsx)(S, { popupRef: i }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -150,18 +150,18 @@
             },
             id: "green_envelope_menu_root",
             className: (0, h.A)(
-              b().NotificationsButton,
-              t ? b().Green : b().Grey,
+              y().NotificationsButton,
+              t ? y().Green : y().Grey,
               s,
             ),
-            children: (0, n.jsx)(f.$0s, {
-              className: b().SVGNotifications,
+            children: (0, n.jsx)(m.$0s, {
+              className: y().SVGNotifications,
               "aria-label": (0, p.we)("#NotificationsMenu_Title"),
             }),
           }),
         });
       }
-      const B = (e) => {
+      const S = (e) => {
           var t;
           const { popupRef: i } = e,
             o = l.useRef(null),
@@ -181,9 +181,9 @@
             null === (t = o.current) || void 0 === t ? void 0 : t.scrollHeight,
             s,
           ]);
-          const c = s ? void 0 : b().MenuScrollbarHidden;
+          const c = s ? void 0 : y().MenuScrollbarHidden;
           return (0, n.jsxs)("div", {
-            className: b().NotificationsMenu,
+            className: y().NotificationsMenu,
             onClick: () => {
               var e;
               return null === (e = null == i ? void 0 : i.current) ||
@@ -192,32 +192,32 @@
                 : e.Hide();
             },
             children: [
-              (0, n.jsx)(I, {}),
+              (0, n.jsx)(B, {}),
               (0, n.jsxs)("div", {
-                className: (0, h.A)(b().NotificationsMenuScrollable, c),
+                className: (0, h.A)(y().NotificationsMenuScrollable, c),
                 ref: o,
                 children: [
+                  (0, n.jsx)(j, {}),
+                  (0, n.jsx)(R, {}),
                   (0, n.jsx)(C, {}),
-                  (0, n.jsx)(k, {}),
-                  (0, n.jsx)(L, {}),
                 ],
               }),
             ],
           });
         },
-        I = () => {
+        B = () => {
           const e = `${v.TS.COMMUNITY_BASE_URL}profiles/${v.iA.steamid}/notifications`;
           return (0, n.jsxs)("div", {
-            className: (0, h.A)(b().NotificationHeader),
+            className: (0, h.A)(y().NotificationHeader),
             children: [
               (0, n.jsx)("div", {
-                className: b().AllNotificationsTitle,
+                className: y().AllNotificationsTitle,
                 children: (0, p.we)("#NotificationsMenu_Title"),
               }),
               (0, n.jsx)("a", {
                 href: e,
                 children: (0, n.jsx)("div", {
-                  className: b().AllNotificationsButton,
+                  className: y().AllNotificationsButton,
                   children: (0, p.we)("#NotificationsMenu_ViewAll"),
                 }),
               }),
@@ -227,11 +227,11 @@
         x = () => {
           const e = `${v.TS.COMMUNITY_BASE_URL}profiles/${v.iA.steamid}/notifications`;
           return (0, n.jsx)("div", {
-            className: (0, h.A)(b().NotificationHeader, b().ResponsiveViewAll),
+            className: (0, h.A)(y().NotificationHeader, y().ResponsiveViewAll),
             children: (0, n.jsx)("a", {
               href: e,
               children: (0, n.jsx)("div", {
-                className: b().AllNotificationsButton,
+                className: y().AllNotificationsButton,
                 children: (0, p.we)("#NotificationsMenu_ViewAll"),
               }),
             }),
@@ -244,15 +244,15 @@
           U.MarkItemRead(t.notification_id),
           e();
       }
-      function k() {
+      function R() {
         const e = M();
         return 0 == e.length
           ? null
           : (0, n.jsx)("div", {
-              className: b().NotificationsMenuEntriesContainer,
+              className: y().NotificationsMenuEntriesContainer,
               children: e.map((e, t) =>
                 (0, n.jsx)(
-                  y.R1,
+                  b.R1,
                   {
                     rollup: e,
                     onNotificationClick: E,
@@ -264,7 +264,7 @@
               ),
             });
       }
-      const j = [
+      const k = [
         {
           fnUrl: () =>
             `${v.TS.COMMUNITY_BASE_URL}profiles/${v.iA.steamid}/inventory/#pending_gifts`,
@@ -315,7 +315,7 @@
         {
           fnUrl: () => `${v.TS.COMMUNITY_BASE_URL}my/moderatormessages`,
           countItem: "moderator_messages",
-          icon: f.hJ4,
+          icon: m.hJ4,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
           feature: s.qR,
         },
@@ -333,12 +333,12 @@
           strLocToken: "#Notification_FamilyInvitePinned_Body",
         },
       ];
-      function C() {
+      function j() {
         const e = w();
         return (0, n.jsx)(n.Fragment, {
-          children: j.map((t) =>
+          children: k.map((t) =>
             (0, n.jsx)(
-              y.QR,
+              b.QR,
               {
                 url: t.fnUrl(),
                 count: e.summary[t.countItem],
@@ -351,36 +351,37 @@
           ),
         });
       }
-      function L() {
+      function C() {
         return (0, n.jsxs)("div", {
-          className: b().EmptyNotificationsCtn,
+          className: y().EmptyNotificationsCtn,
           children: [
             (0, n.jsx)("div", {
-              className: b().EmptyNotificationsTitle,
+              className: y().EmptyNotificationsTitle,
               children: (0, p.we)("#NotificationsList_EmptyTitle_New"),
             }),
             (0, n.jsx)("div", {
-              className: b().EmptyNotificationsBody,
+              className: y().EmptyNotificationsBody,
               children: (0, p.we)("#NotificationsList_EmptyBody"),
             }),
           ],
         });
       }
-      const R = A;
+      const L = A;
     },
     60383: (e, t, i) => {
       "use strict";
-      i.d(t, { J: () => c });
+      i.d(t, { J: () => a });
       var n = i(34629),
         o = i(7850),
-        s = i(90626),
-        r = i(56011),
-        l = i(73745);
-      class c extends s.Component {
+        s = i(76217),
+        r = i(90626),
+        l = i(56011),
+        c = i(73745);
+      class a extends r.Component {
         constructor() {
           super(...arguments),
             (this.m_observer = null),
-            (this.m_refElement = s.createRef()),
+            (this.m_refElement = r.createRef()),
             (this.m_elTracked = null),
             (this.m_bPreviouslyIntersecting = !1);
         }
@@ -428,7 +429,7 @@
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
               this.props.thresholds && (e.threshold = this.props.thresholds),
-              (this.m_observer = (0, l.md)(t, this.OnIntersection, e));
+              (this.m_observer = (0, c.md)(t, this.OnIntersection, e));
           }
           this.m_observer &&
             t &&
@@ -436,16 +437,20 @@
             (this.m_observer.observe(t), (this.m_elTracked = t));
         }
         FindScrollableAncestor(e) {
-          return r.Kf(e, (e) => {
+          return l.Kf(e, (e) => {
             const t = this.props.horizontal
               ? window.getComputedStyle(e).overflowX
               : window.getComputedStyle(e).overflowY;
             return (
               "scroll" == t ||
               "auto" == t ||
-              !!e.classList.contains(c.GetScrollableClassname())
+              !!e.classList.contains(a.GetScrollableClassname())
             );
           });
+        }
+        HandleRef(e) {
+          (0, c.cZ)(this.m_refElement, e),
+            this.props.containerRef && (0, c.cZ)(this.props.containerRef, e);
         }
         OnIntersection(e, t) {
           let i = !1;
@@ -465,16 +470,18 @@
             rootMargin: t,
             trigger: i,
             horizontal: n,
-            ...s
+            containerRef: r,
+            ...l
           } = this.props;
-          return (0, o.jsx)("div", {
-            ref: this.m_refElement,
-            ...s,
+          return (0, o.jsx)(s.Z, {
+            ref: this.HandleRef,
+            ...l,
             children: this.props.children,
           });
         }
       }
-      (0, n.Cg)([l.oI], c.prototype, "OnIntersection", null);
+      (0, n.Cg)([c.oI], a.prototype, "HandleRef", null),
+        (0, n.Cg)([c.oI], a.prototype, "OnIntersection", null);
     },
   },
 ]);

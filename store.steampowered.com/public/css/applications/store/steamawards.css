@@ -1739,7 +1739,10 @@ html.responsive.GamepadMode .carousel__slider-tray-wrapper {
 :where(._1xbvB3MqxnugiXxR02dPOx) {
   text-align: var(--text-align);
 }
-._3nHL7awgK1Qei1XivGvHMK {
+:where(._1OB-pyw07DhYE8iZusGAjg) {
+  aspect-ratio: var(--aspect-ratio);
+}
+:where(._3nHL7awgK1Qei1XivGvHMK) {
   box-sizing: border-box;
   display: flex;
 }
