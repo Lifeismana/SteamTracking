@@ -273,6 +273,7 @@
     "Settings_Controller_GenericGamepadSupport": "为通用控制器启用蒸汽平台输入",
     "Settings_Controller_SCPairing": "与新的蒸汽平台控制器（2015 版）配对",
     "Settings_Controller_NoController": "未检测到控制器。连接控制器以在蒸汽平台中管理其设置。",
+    "Settings_ControllerCalibration_CalibrateJoystick_Description": "调整摇杆死区以修复无法准确回中的摇杆的“漂移”问题。若想针对每款游戏单独覆盖此死区偏好设置，请在对应游戏的蒸汽平台输入配置摇杆设置中，更改“死区来源”下拉菜单中的设置。",
     "Settings_ControllerCalibration_HapticsEnable": "蒸汽平台触感",
     "Settings_ControllerCalibration_Grip_Sensor_Desc": "Steam Controller 的握持传感器可检测手与控制器握把之间的范围。您可以在蒸汽平台输入中将其用作普通按键，或用作陀螺仪激活按键。请使用下方设置调整手部检测的灵敏度。",
     "Settings_Customization_StartupVideo_Desc": "选择启动蒸汽平台时要播放的自定义影片，个性化您的蒸汽平台体验。此设置按设备生效，而非按用户生效。",
@@ -502,6 +503,5 @@
     "HardwareDeviceName_Generic": "蒸汽平台设备",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
-    "Settings_ControllerCalibration_CalibrateJoystick_Description": "调整摇杆死区以修复无法准确回中的摇杆的“漂移”问题。若想针对每款游戏单独覆盖此死区偏好设置，请在对应游戏的蒸汽平台输入配置摇杆设置中，更改“死区来源”下拉菜单中的设置。"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。"
 }

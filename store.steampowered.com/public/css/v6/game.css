@@ -193,17 +193,24 @@ body.v6 .game_area_purchase h2.package_group {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
-	padding-left: var(--gpSpace-Gutter);
-	margin-right: 8px;
 }
 
 .gamehighlight_gamepadskeleton_item {
-	width: 94%;
-	min-width: 94%;
+	width: 60%;
+	min-width: 60%;
 	scroll-snap-align: center;
 	aspect-ratio: 16 / 9;
 
 	background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+.gamehighlight_titlecard {
+	padding-left: 30%;
+	height: stretch;
+	width: auto;
+	min-width: auto;
+	position: relative;
+	overflow: hidden;
 }
 
 .highlight_player_item {
@@ -7069,6 +7076,11 @@ body.v6 .game_area_already_owned.page_content {
 .agegate_age_validation p {
 	margin-top: 10px;
 	text-align: center;
+}
+
+
+#summaryBarTop {
+	height: 244px;
 }
 
 @media screen and (max-width: 910px)

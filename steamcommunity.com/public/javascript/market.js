@@ -856,11 +856,6 @@ BuyItemDialog = {
 		$('market_buynow_dialog_cancel_close').observe( 'click', this.OnCancel.bindAsEventListener(this) );
 		$('market_buynow_dialog_close').observe( 'click', this.OnCancel.bindAsEventListener(this) );
 
-		$('market_buynow_dialog').style.visibility = 'hidden';
-		$('market_buynow_dialog').show();
-		$('market_buynow_dialog').hide();
-		$('market_buynow_dialog').style.visibility = '';
-
 		this.m_bInitialized = true;
 	},
 

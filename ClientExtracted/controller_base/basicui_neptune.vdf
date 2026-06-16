@@ -2330,19 +2330,38 @@
 		"mode"		"dpad"
 		"inputs"
 		{
+			"dpad_west"
+			{
+			}
+			"dpad_east"
+			{
+			}
 			"dpad_north"
 			{
 				"activators"
 				{
-					"Full_Press"
+					"Start_Press"
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser LEFTSTICK_UP, Move Up"
+							"binding"		"mouse_wheel SCROLL_UP"
 						}
 						"settings"
 						{
 							"haptic_intensity"		"1"
+						}
+					}
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_wheel SCROLL_UP"
+						}
+						"settings"
+						{
+							"hold_repeats"		"1"
+							"repeat_rate" 		"20"
+							"haptic_intensity"	"0"
 						}
 					}
 				}
@@ -2351,49 +2370,28 @@
 			{
 				"activators"
 				{
-					"Full_Press"
+					"Start_Press"
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser LEFTSTICK_DOWN, Move Down"
+							"binding"		"mouse_wheel SCROLL_DOWN"
 						}
 						"settings"
 						{
 							"haptic_intensity"		"1"
 						}
 					}
-				}
-			}
-			"dpad_east"
-			{
-				"activators"
-				{
-					"Full_Press"
+					"Long_Press"
 					{
 						"bindings"
 						{
-							"binding"		"game_action WebBrowser LEFTSTICK_RIGHT, Move Right"
+							"binding"		"mouse_wheel SCROLL_DOWN"
 						}
 						"settings"
 						{
-							"haptic_intensity"		"1"
-						}
-					}
-				}
-			}
-			"dpad_west"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"game_action WebBrowser LEFTSTICK_LEFT, Move Left"
-						}
-						"settings"
-						{
-							"haptic_intensity"		"1"
+							"hold_repeats"		"1"
+							"repeat_rate" 		"20"
+							"haptic_intensity"	"0"
 						}
 					}
 				}
@@ -2401,7 +2399,9 @@
 		}
 		"settings"
 		{
-			"requires_click"		"0"
+			"requires_click"	"0"
+			"layout"			"3"
+			"deadzone"			"12000"
 		}
 	}
 	"group"
@@ -3738,6 +3738,22 @@
 							"binding"		"game_action Default RearRightUpper"
 						}
 					}
+				}
+			}
+			"button_rightauxcapsense"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action empty_binding"
+						}
+					}
+				}
+				"disabled_activators"
+				{
 				}
 			}
 		}

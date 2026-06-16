@@ -2289,6 +2289,12 @@ html, body { height:100%; }
     margin: 4px 0px 8px 0px;
 }
 
+.SysReqAndroidCallout
+{
+    color: #AC966A;
+    max-width: 11em;
+}
+
 .Music .SysReqRowLabel
 {
 	width: 160px;

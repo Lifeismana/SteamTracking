@@ -4653,7 +4653,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_Settings_Streaming_Resolution900p" 	"1600x900 (900p)"
 "Steam_Settings_Streaming_Resolution720p" 	"1280x720 (720p)"
 "Steam_Settings_Streaming_Resolution480p" 	"852x480 (480p)"
-"Steam_Settings_Streaming_SoftwareEncodingThreads_Description"	"Jumlah utas pengodean software"
+"Steam_Settings_Streaming_SoftwareEncodingThreads_Description"	"Jumlah thread pengodean software"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_0"	"Otomatis"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_1"	"1"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_2"	"2"

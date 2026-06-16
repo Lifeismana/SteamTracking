@@ -607,7 +607,7 @@
         n = s.n(a),
         r = s(90626),
         i = s(37085),
-        l = s(96171),
+        l = s(48210),
         o = s(84933),
         c = s(16021);
       const u = 1,
@@ -806,7 +806,7 @@
         g = s(12155),
         p = s(52038),
         h = s(78327),
-        f = s(51706),
+        f = s(74568),
         v = s(22797),
         x = s(44433),
         y = s(91970),
@@ -1801,7 +1801,7 @@
           e.GetBestPurchaseOption().formatted_final_price
           ? (0, a.jsx)("div", {
               className: V.MessagePriceCtn,
-              children: (0, a.jsx)(L.N, { id: t, bHidePrePurchase: !0 }),
+              children: (0, a.jsx)(L.NF, { id: t, bHidePrePurchase: !0 }),
             })
           : (0, a.jsx)("div", { className: V.NoPrice });
       }

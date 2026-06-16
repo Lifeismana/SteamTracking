@@ -313,9 +313,7 @@
             return (0, _._)(
               _,
               (0, _.jsx)(_._, {
-                navProps: {
-                  focusable: !0,
-                },
+                focusable: !0,
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,
@@ -337,7 +335,6 @@
         },
       );
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -393,6 +390,21 @@
             middleware: (0, _._)(_),
             whileElementsMounted: _._,
             placement: _ && "object" == typeof _ ? _.initial : _,
+            strategy: "fixed",
+            platform: {
+              ..._._,
+              getOffsetParent: (_) => {
+                var _, _;
+                return null !==
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.ownerDocument) ||
+                    void 0 === _
+                      ? void 0
+                      : _.defaultView) && void 0 !== _
+                  ? _
+                  : window;
+              },
+            },
           }),
           _ = (0, _._)(_.context, {
             enabled: !!_.click,
@@ -477,24 +489,32 @@
         Positioner: function (_) {
           const { children: _, render: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]),
-            _ = (0, _._)();
+            _ = (0, _._)([
+              _,
+              null == _ ? void 0 : _.floating.refs.setFloating,
+              (_) => {
+                var _;
+                return null === (_ = null == _ ? void 0 : _.showPopover) ||
+                  void 0 === _
+                  ? void 0
+                  : _.call(_);
+              },
+            ]);
           return _
             ? _.open
-              ? (0, _.jsx)(_._, {
-                  root: null == _ ? void 0 : _.targetElement,
+              ? (0, _.jsx)(_, {
+                  state: _,
                   children: (0, _.jsx)(_, {
-                    state: _,
-                    children: (0, _.jsx)(_, {
-                      ref: _,
-                      style: _.floating.floatingStyles,
-                      ..._.getFloatingProps(),
-                      render: _,
-                      children: (0, _.jsx)(_._, {
-                        elementsRef: _.elementsRef,
-                        labelsRef: _.labelsRef,
-                        children: _,
-                      }),
+                    ref: _,
+                    style: _.floating.floatingStyles,
+                    ..._.getFloatingProps({
+                      popover: "manual",
+                    }),
+                    render: _,
+                    children: (0, _.jsx)(_._, {
+                      elementsRef: _.elementsRef,
+                      labelsRef: _.labelsRef,
+                      children: _,
                     }),
                   }),
                 })

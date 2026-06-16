@@ -123,6 +123,13 @@
             'Conectar un control o presionar "Enter"',
           Language_Name: "Español — Latinoamérica",
         },
+        malay: {
+          Steam_Language_Selection_Label: "Pilih bahasa",
+          Steam_Welcome: "Selamat Datang",
+          OOBE_Plug_In_Controller_Alt_Text:
+            "Sambungkan alat kawalan atau tekan kekunci enter",
+          Language_Name: "Malay",
+        },
         norwegian: {
           Steam_Language_Selection_Label: "Velg et språk",
           Steam_Welcome: "Velkommen",

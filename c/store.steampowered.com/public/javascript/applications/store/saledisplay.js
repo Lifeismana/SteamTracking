@@ -5123,15 +5123,17 @@
               .GetSaleSections()
               .some((_) => "contenthubtitle" === _.section_type),
             _ = _ && _;
-          let _;
-          _ = _
-            ? 0
+          let _,
+            _ = !0;
+          _
+            ? (_ = 0)
             : __webpack_require__.BUsesContentHubForItemSource()
-              ? 20
-              : _.jsondata.sale_header_offset || 0;
-          let _ = !1;
-          530 === _.jsondata.sale_header_offset && (_ = !0);
-          const _ = _._.Get().BIsPartnerTakeoverActive(
+              ? (_ = 20)
+              : __webpack_require__.GetEventType() == _.ajI
+                ? ((_ = 0), (_ = !1))
+                : (_ = _.jsondata.sale_header_offset || 0);
+          const _ = _ && 530 === _.jsondata.sale_header_offset,
+            _ = _._.Get().BIsPartnerTakeoverActive(
               __webpack_require__.GetContentHubType(),
               __webpack_require__.GetContentHubCategory(),
               __webpack_require__.GetContentHubTag(),
@@ -5807,17 +5809,16 @@
           [_, _] = _.useState(
             _ ?? _._.GetClanEventFromAnnouncementGID(_._.ANNOUNCEMENT_GID),
           );
-        if (
-          (_.useEffect(() => {
-            if (!_ && _?.AnnouncementGID != _._.ANNOUNCEMENT_GID) {
-              const _ = new _._(_._.CLANSTEAMID);
-              _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                _,
-                _._.ANNOUNCEMENT_GID,
-                null,
-              ).then(_);
-            }
-          }, [_, _]),
+        _.useEffect(() => {
+          if (!_ && _?.AnnouncementGID != _._.ANNOUNCEMENT_GID) {
+            const _ = new _._(_._.CLANSTEAMID);
+            _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+              _,
+              _._.ANNOUNCEMENT_GID,
+              null,
+            ).then(_);
+          }
+        }, [_, _]),
           (function (_, _) {
             const _ = (0, _._)(() => _._.Get().GetEventModelJson()),
               [_, _] = _.useState();
@@ -5830,10 +5831,9 @@
               )),
                 _(_);
             }, [_, _, _, _]);
-          })(_, _),
-          (0, _._)(1500),
-          !_)
-        )
+          })(_, _);
+        const _ = (0, _._)();
+        if (((0, _._)(1500), !_))
           return (0, _.jsx)("div", {
             className: _().FlexCenter,
             style: {
@@ -5845,8 +5845,9 @@
             }),
           });
         const _ =
-          _.visibility_state !== _._.k_EEventStateVisible &&
-          _.visibility_state !== _._.k_EEventStateUnlisted;
+          (_.visibility_state !== _._.k_EEventStateVisible &&
+            _.visibility_state !== _._.k_EEventStateUnlisted) ||
+          _;
         return (0, _.jsx)(_, {
           eventModel: _,
           children: (0, _.jsx)(_._, {

@@ -85,7 +85,7 @@
     },
     53965: (e, n, t) => {
       "use strict";
-      t.d(n, { $: () => x, v: () => f });
+      t.d(n, { $: () => g, v: () => x });
       var i = t(7850),
         s = t(64238),
         o = t.n(s),
@@ -94,8 +94,8 @@
         c = t(11526),
         l = t(11820),
         d = t(73406),
-        h = t(90534),
-        p = t(83392);
+        p = t(90534),
+        h = t(83392);
       function u(e) {
         const {
           size: n = "3",
@@ -106,7 +106,7 @@
           ...a
         } = e;
         return s || !t
-          ? (0, i.jsxs)(h.az, {
+          ? (0, i.jsxs)(p.az, {
               position: "relative",
               ...a,
               width: "fit-content",
@@ -117,7 +117,7 @@
                   children: s,
                 }),
                 t &&
-                  (0, i.jsx)(p.s, {
+                  (0, i.jsx)(h.s, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
@@ -141,12 +141,12 @@
         { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
         { prop: "variant", className: (e) => d[`Variant-${e}`] },
       ];
-      var S = t(45699),
+      var f = t(45699),
         b = t(8527);
-      function C(e) {
+      function S(e) {
         e.preventDefault();
       }
-      const g = [
+      const C = [
           ...a.L,
           { prop: "size", responsive: !0, className: (e) => r[`Size-${e}`] },
           { prop: "variant", className: (e) => r[`Variant-${e}`] },
@@ -164,7 +164,7 @@
             responsive: !0,
           },
         ],
-        x = function (e) {
+        g = function (e) {
           const {
               variant: n = "default",
               size: t = "2",
@@ -172,12 +172,13 @@
               color: a,
               loading: l,
               children: d,
-              onClick: h,
-              icon: p,
-              gamepadFocusable: m = !0,
-              ..._
+              onClick: p,
+              icon: h,
+              focusable: m,
+              navProps: _,
+              ...S
             } = e,
-            C = l
+            g = l
               ? (0, i.jsx)(u, {
                   size: t,
                   color: a,
@@ -185,82 +186,85 @@
                   children: d,
                 })
               : d,
-            x = l ? void 0 : h,
-            f = m && b.TS.IN_GAMEPADUI ? S.fu : "button";
-          return (0, i.jsx)(f, {
-            type: "button",
-            ...(0, c.mz)(
-              {
-                ..._,
-                variant: n,
-                size: t,
-                minWidth: s,
-                color: a,
-                className: o()(r.Button, p && r.Icon),
-                onClick: x,
-              },
-              g,
-            ),
-            children: C,
-          });
+            x = l ? void 0 : p,
+            v = m ?? _?.focusable ?? !!x,
+            w = {
+              type: "button",
+              ...(0, c.mz)(
+                {
+                  ...S,
+                  variant: n,
+                  size: t,
+                  minWidth: s,
+                  color: a,
+                  className: o()(r.Button, h && r.Icon),
+                  onClick: x,
+                },
+                C,
+              ),
+              children: g,
+            };
+          return b.TS.IN_GAMEPADUI && (v || _)
+            ? (0, i.jsx)(f.fu, { ...w, ...(_ || {}), focusable: v })
+            : (0, i.jsx)("button", { ...w });
         },
-        f = function (e) {
+        x = function (e) {
           const {
               variant: n = "default",
               size: t = "2",
               minWidth: s = "fit-content",
               disabled: a,
               icon: d,
-              gamepadFocusable: h = !0,
-              ...p
+              focusable: p,
+              navProps: h,
+              ...u
             } = e,
-            u = a ? C : void 0,
-            m = h && b.TS.IN_GAMEPADUI ? S.Ii : "a";
-          return (0, i.jsx)(m, {
-            ...(0, c.mz)(
+            m = a ? S : void 0,
+            _ = (0, c.mz)(
               {
-                onClick: u,
-                ...p,
+                onClick: m,
+                ...u,
                 variant: n,
                 size: t,
                 minWidth: s,
                 className: o()(r.Button, d && r.Icon, (0, l.T)()),
               },
-              g,
-            ),
-          });
+              C,
+            );
+          return b.TS.IN_GAMEPADUI && (p || h)
+            ? (0, i.jsx)(f.Ii, { ..._, ...(h || {}), focusable: p })
+            : (0, i.jsx)("a", { ..._ });
         };
     },
     90534: (e, n, t) => {
       "use strict";
-      t.d(n, { GY: () => h, az: () => d });
+      t.d(n, { az: () => h });
       var i = t(7850),
-        s = t(39479),
-        o = t(64238),
-        r = t.n(o),
-        a = t(11526),
-        c = t(75659),
-        l = t(44041);
-      function d(e) {
-        const { as: n = "div", ref: t, ...s } = e,
-          o = (0, a.mz)({ ...s, className: r()(l.Box, e.className) }, p),
-          c = n;
-        return (0, i.jsx)(c, { ref: t, ...o });
-      }
+        s = t(44041),
+        o = t(39479),
+        r = t(64238),
+        a = t.n(r),
+        c = t(11526),
+        l = t(75659),
+        d = t(8527),
+        p = t(11820);
       function h(e) {
-        const { as: n = "div", ref: t, navProps: o, ...c } = e,
-          d = (0, a.mz)({ ...c, className: r()(l.Box, c.className) }, p),
-          h = n;
-        return (0, i.jsx)(s.J, {
-          ...o,
-          children: (0, i.jsx)(h, { ref: t, ...d }),
-        });
+        const { as: n = "div", focusable: t, navProps: r, ref: l, ...h } = e,
+          m = (0, c.mz)(
+            { ...h, className: a()(s.Box, (0, p.T)(), e.className) },
+            u,
+          ),
+          _ = t ?? r?.focusable ?? !!h.onClick,
+          f = (0, i.jsx)(n, { ref: l, ...m });
+        return d.TS.IN_GAMEPADUI && (_ || r)
+          ? (0, i.jsx)(o.J, { ...(r || {}), focusable: _, children: f })
+          : f;
       }
-      const p = c.h;
+      const u = l.h;
     },
     20187: (e, n, t) => {
       "use strict";
-      t.d(n, { Ae: () => p, EY: () => d, U6: () => h });
+      t.d(n, { Ae: () => h, EY: () => d, U6: () => p });
       var i = t(7850),
         s = t(55348),
         o = t(11526),
@@ -273,10 +277,10 @@
           a = n;
         return (0, i.jsx)(a, {
           ref: t,
-          ...(0, o.mz)({ ...r, className: c()(l.Text, s) }, p),
+          ...(0, o.mz)({ ...r, className: c()(l.Text, s) }, h),
         });
       }
-      const h = [
+      const p = [
           {
             prop: "weight",
             responsive: !0,
@@ -318,8 +322,8 @@
             cssProperty: "--white-space",
           },
         ],
-        p = [
-          ...h,
+        h = [
+          ...p,
           ...r.L,
           {
             prop: "size",
@@ -332,21 +336,22 @@
       "use strict";
       t.d(n, { Y: () => l });
       var i = t(7850),
-        s = t(20187),
-        o = t(11526),
-        r = t(50122),
+        s = t(50122),
+        o = t(20187),
+        r = t(11526),
         a = t(8527),
         c = t(45699);
       function l(e) {
-        const { underline: n = "auto", ...t } = e,
-          s = a.TS.IN_GAMEPADUI ? c.Ii : "a";
-        return (0, i.jsx)(s, {
-          ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, d),
-        });
+        const { underline: n = "auto", focusable: t, navProps: o, ...l } = e,
+          p = t ?? o?.focusable ?? !!l.href,
+          h = (0, r.mz)({ ...l, underline: n, className: s.TextLink }, d);
+        return a.TS.IN_GAMEPADUI && (p || o)
+          ? (0, i.jsx)(c.Ii, { ...h, ...(o || {}), focusable: p })
+          : (0, i.jsx)("a", { ...h });
       }
       const d = [
-        ...s.Ae,
-        { prop: "underline", className: (e) => r[`Underline-${e}`] },
+        ...o.Ae,
+        { prop: "underline", className: (e) => s[`Underline-${e}`] },
       ];
     },
     11820: (e, n, t) => {
@@ -359,7 +364,7 @@
     },
     84547: (e, n, t) => {
       "use strict";
-      t.d(n, { E: () => h, l: () => p });
+      t.d(n, { E: () => p, l: () => h });
       var i = t(7850),
         s = t(64753),
         o = t(8527),
@@ -375,11 +380,11 @@
           onCancel: n,
           strOKButtonText: r.Z.Localize("#Button_OK"),
           onOK: () => {
-            p(), n();
+            h(), n();
           },
         });
       }
-      function h() {
+      function p() {
         const [e, n, t] = (0, s.uD)();
         return {
           elDialogElement: (0, i.jsx)(c.E, {
@@ -389,7 +394,7 @@
           fnShowLogonDialog: n,
         };
       }
-      function p() {
+      function h() {
         const e = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
         window.location.href = e;
       }
@@ -642,17 +647,17 @@
       })();
       window.ClientConnectionAPI = a;
     },
-    51706: (e, n, t) => {
+    74568: (e, n, t) => {
       "use strict";
       t.d(n, {
         mt: () => l,
-        o0: () => h.o0,
-        eV: () => p.eV,
-        KG: () => h.KG,
-        Ee: () => h.Ee,
+        o0: () => p.o0,
+        eV: () => h.eV,
+        KG: () => p.KG,
+        Ee: () => p.Ee,
         x_: () => a.x_,
         of: () => d,
-        pY: () => h.pY,
+        pY: () => p.pY,
         EN: () => r.E,
       });
       var i = t(7850),
@@ -660,15 +665,7 @@
         o = t(56283),
         r = t(21869),
         a = t(2654);
-      t(72739),
-        t(48902),
-        t(60155),
-        t(25118),
-        t(84933),
-        t(52745),
-        t(13871),
-        t(78327),
-        t(28460);
+      t(37049);
       function c(e) {
         const { labelledBy: n } = e || {},
           [t, i] = s.useState(void 0);
@@ -684,9 +681,9 @@
             className: s,
             modalClassName: l,
             children: d,
-            ...h
+            ...p
           } = e,
-          { headerId: p, context: u } = c({ labelledBy: e["aria-labelledby"] });
+          { headerId: h, context: u } = c({ labelledBy: e["aria-labelledby"] });
         return (0, i.jsx)(o.t6.Provider, {
           value: u,
           children: (0, i.jsx)(r.E, {
@@ -696,9 +693,9 @@
               className: l,
               children: (0, i.jsx)(o.UC, {
                 role: "dialog",
-                "aria-labelledby": p,
+                "aria-labelledby": h,
                 className: s,
-                ...h,
+                ...p,
                 children: d,
               }),
             }),
@@ -713,9 +710,188 @@
         });
       }
       t(81194);
-      var h = t(78395),
-        p = t(10411);
+      var p = t(78395),
+        h = t(10411);
       t(76222);
+    },
+    37049: (e, n, t) => {
+      "use strict";
+      t.d(n, { w: () => S });
+      var i = t(7850),
+        s = t(90626),
+        o = t(72739),
+        r = t(48902),
+        a = t(60155),
+        c = t(25118),
+        l = t(84933),
+        d = t(52745),
+        p = t(13871),
+        h = t(21869),
+        u = t(78327),
+        m = t(66703),
+        _ = t(52038),
+        f = t(28460);
+      function b(e) {
+        const { popup: n, className: t, ...o } = e,
+          r = (0, f.GD)(n),
+          a = s.useRef(null);
+        return (
+          s.useEffect(() => {
+            const e = a.current;
+            if (e && (0, m.Fj)(n, "Window.SetResizeGrip")) {
+              let t = 0,
+                i = 0;
+              const s = e.getBoundingClientRect(),
+                o = e.ownerDocument.defaultView;
+              s &&
+                o &&
+                !r &&
+                ((t = Math.ceil(o.innerWidth - s.left)),
+                (i = Math.ceil(o.innerHeight - s.top))),
+                n.SteamClient.Window.SetResizeGrip(t, i);
+            }
+            return () => {
+              (0, m.Fj)(n, "Window.SetResizeGrip") &&
+                n.SteamClient.Window.SetResizeGrip(0, 0);
+            };
+          }, [n, r]),
+          r
+            ? null
+            : (0, i.jsx)("div", {
+                className: (0, _.A)("window_resize_grip", t),
+                ref: a,
+                ...o,
+              })
+        );
+      }
+      const S = (e) =>
+        (function (e) {
+          const n = (0, p.R7)().ownerWindow,
+            t = (0, u.Qn)(),
+            [o, r] = s.useState(() =>
+              t ||
+              (!0 === e.onlyPopoutIfNeeded &&
+                e.popupHeight < 0.9 * n.innerHeight &&
+                e.popupWidth < 0.9 * n.innerWidth &&
+                "visible" == n.document.visibilityState)
+                ? "inline"
+                : "popout",
+            );
+          return "inline" === o
+            ? (0, i.jsx)(h.E, { active: !0, children: e.children })
+            : "popout" === o
+              ? (0, i.jsx)(C, { ...e })
+              : null;
+        })({ modal: !0, ...e });
+      function C(e) {
+        const {
+            strName: n,
+            strTitle: t,
+            popupWidth: h,
+            popupHeight: u,
+            browserType: m,
+            onDismiss: _,
+            refPopup: f,
+            children: S,
+            titleBarClassName: C,
+            saveDimensionsKey: x,
+          } = e,
+          v = (0, p.R7)(),
+          w = v?.ownerWindow,
+          I = (0, d.yk)(),
+          z = { ...(0, r.h3)(x), onClose: _ };
+        let j = 0;
+        e.resizable && (j |= p.Wf.Resizable),
+          (e.minWidth || e.minHeight) &&
+            (j |= p.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (j |= p.Wf.FullScreen);
+        const O = "PopupWindow_" + (n ? `${n}_` : "") + s.useId(),
+          { popup: N, element: W } = (0, r.OJ)(
+            O,
+            {
+              title: t,
+              dimensions: { width: h, height: u },
+              html_class: "client_chat_frame fullheight ModalDialogPopup",
+              body_class: "fullheight ModalDialogBody",
+              popup_class: "fullheight",
+              browserType: m,
+              minWidth: e.minWidth,
+              minHeight: e.minHeight,
+              replace_existing_popup: !0,
+              center_on_window: I?.BCenterPopupsOnWindow() ? w : void 0,
+              eCreationFlags: j,
+              target_browser: I?.GetBrowserInfo(),
+            },
+            z,
+          );
+        if (
+          (s.useEffect(
+            () => ((0, l.cZ)(f, N), () => (0, l.cZ)(f, void 0)),
+            [f, N],
+          ),
+          s.useEffect(() => {
+            N && (N.document.title = t ?? n);
+          }, [N, t, n]),
+          !W)
+        )
+          return null;
+        const R = e.modal ?? e.onlyPopoutIfNeeded,
+          k = !e.resizable;
+        return (0, i.jsxs)(i.Fragment, {
+          children: [
+            R && (0, i.jsx)(g, { popup: N }),
+            o.createPortal(
+              (0, i.jsxs)(p.kc, {
+                ownerWindow: N,
+                children: [
+                  (0, i.jsxs)("div", {
+                    className: "PopupFullWindow",
+                    onContextMenu: a.aE,
+                    children: [
+                      (0, i.jsx)(c.c, {
+                        className: C,
+                        hideMin: k,
+                        hideMax: k,
+                        popup: N,
+                        hideActions: !_,
+                      }),
+                      (0, i.jsx)(d.EO, {
+                        bCenterPopupsOnWindow: I?.BCenterPopupsOnWindow(),
+                        browserInfo: I?.GetBrowserInfo(),
+                        children: S,
+                      }),
+                    ],
+                  }),
+                  e.resizable && (0, i.jsx)(b, { popup: N }),
+                ],
+              }),
+              W,
+            ),
+          ],
+        });
+      }
+      function g(e) {
+        const { popup: n } = e,
+          t = s.useCallback(() => {
+            n?.SteamClient.Window.BringToFront();
+          }, [n]);
+        return (
+          s.useEffect(t, [t]),
+          (0, i.jsx)(h.E, {
+            active: !0,
+            children: (0, i.jsx)("div", {
+              style: {
+                position: "fixed",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+              },
+              onClick: t,
+            }),
+          })
+        );
+      }
     },
     71009: (e, n, t) => {
       "use strict";
@@ -733,8 +909,8 @@
         c = t(62381),
         l = t(97824),
         d = t(78327),
-        h = t(2627),
-        p = t(61859);
+        p = t(2627),
+        h = t(61859);
       const u = (0, a.Nr)(function (e) {
         const { fnOpenInSteamClient: n } = m();
         return (0, i.jsx)("div", {
@@ -747,7 +923,7 @@
                 children: (0, i.jsx)("div", {
                   onClick: n,
                   className: l.BannerButton,
-                  children: (0, p.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  children: (0, h.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 }),
               }),
               (0, i.jsx)("div", {
@@ -756,12 +932,12 @@
                   className: l.BannerTitle,
                   children: [
                     (0, i.jsx)("b", {
-                      children: (0, p.we)(
+                      children: (0, h.we)(
                         "#OpenInDesktopAppBanner_NotSignedIn",
                       ),
                     }),
                     (0, i.jsx)("br", {}),
-                    (0, p.we)("#OpenInDesktopAppBanner_Body"),
+                    (0, h.we)("#OpenInDesktopAppBanner_Body"),
                   ],
                 }),
               }),
@@ -781,7 +957,7 @@
         }, []);
         const t = o.useCallback(() => {
           let n = `${(0, d.yl)()}//openurl/`;
-          const t = (0, h.VY)("browserid");
+          const t = (0, p.VY)("browserid");
           if (t) {
             const e = new URL(window.location.href),
               i = new URLSearchParams(e.search);
@@ -796,7 +972,7 @@
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => I, default: () => z });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => w, default: () => I });
       var i = t(7850),
         s = t(53965),
         o = t(83392),
@@ -805,41 +981,41 @@
         c = t(37085),
         l = t(62151),
         d = t(84547),
-        h = t(55672),
-        p = t(84811),
-        u = t(51706),
+        p = t(55672),
+        h = t(84811),
+        u = t(74568),
         m = t(71009),
         _ = t(32754),
-        S = t(61859),
+        f = t(61859),
         b = t(84933),
-        C = t(30470),
-        g = t(11131),
-        x = t.n(g),
-        f = t(90626),
+        S = t(30470),
+        C = t(11131),
+        g = t.n(C),
+        x = t(90626),
         v = t(92724);
-      const I = (0, p.Nr)(function (e) {
+      const w = (0, h.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
             m.useOpenWebInSteamClient)(),
-            p = t == c.R,
-            [g, I, z] = (0, b.uD)();
+            h = t == c.R,
+            [C, w, I] = (0, b.uD)();
           return (
-            (0, f.use)((0, v.u)()),
+            (0, x.use)((0, v.u)()),
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(_.Gq, {
-                  toolTipContent: h.Z.Localize("#AddToWishlist_ttip"),
+                  toolTipContent: p.Z.Localize("#AddToWishlist_ttip"),
                   children: (0, i.jsx)(s.$, {
-                    onClick: I,
-                    children: (0, S.we)("#AddToYourWishlist"),
+                    onClick: w,
+                    children: (0, f.we)("#AddToYourWishlist"),
                   }),
                 }),
                 (0, i.jsx)(u.EN, {
-                  active: g,
+                  active: C,
                   children: (0, i.jsxs)(u.o0, {
-                    strTitle: (0, S.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                    className: x().WishlistModalOverride,
+                    strTitle: (0, f.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    className: g().WishlistModalOverride,
                     strDescription: l.F5.Localize("#Wishlist_NotSignedIn"),
-                    closeModal: z,
+                    closeModal: I,
                     bAlertDialog: !0,
                     children: [
                       (0, i.jsxs)(o.s, {
@@ -850,24 +1026,24 @@
                         children: [
                           (0, i.jsx)(s.$, {
                             onClick: n,
-                            children: (0, S.we)(
+                            children: (0, f.we)(
                               "#OpenInDesktopAppBanner_OpenAppButton",
                             ),
                           }),
                           (0, i.jsx)(s.$, {
                             color: "dull",
                             onClick: d.l,
-                            children: h.Z.Localize("#Login_SignIn"),
+                            children: p.Z.Localize("#Login_SignIn"),
                           }),
                         ],
                       }),
-                      !p &&
+                      !h &&
                         (0, i.jsx)(i.Fragment, {
                           children: (0, i.jsx)(r.EY, {
-                            children: (0, S.oW)(
+                            children: (0, f.oW)(
                               "#GotSteam_NeedSteam",
                               (0, i.jsx)(a.Y, {
-                                href: `${C.TS.STORE_BASE_URL}about`,
+                                href: `${S.TS.STORE_BASE_URL}about`,
                               }),
                             ),
                           }),
@@ -879,7 +1055,7 @@
             })
           );
         }),
-        z = I;
+        I = w;
     },
   },
 ]);

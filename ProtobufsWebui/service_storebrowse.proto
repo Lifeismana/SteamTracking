@@ -21,6 +21,12 @@ message CHardwarePackageDetails {
 	optional bool not_allowed_to_reserved_because_already_owned = 19;
 	optional uint32 appid_ownership_not_allowed_to_reserve = 20;
 	optional uint32 account_first_date_purchase_requirement = 21;
+	optional bool position_is_waitlist = 22;
+	optional string user_waitlist_token = 23;
+	optional bool queue_in_waitlist = 24;
+	optional string queue_waitlist_token = 25;
+	optional uint32 collection_time_active = 26;
+	optional bool reservation_not_allowed = 27;
 }
 
 message CStoreBrowse_GetContentHubConfig_Request {

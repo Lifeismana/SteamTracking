@@ -38,7 +38,7 @@
 ._2hZemvW0chMhSn36Vr0RF9 {
   line-height: 24px;
 }
-._2IVd64AHN6R428cgcPqW7M {
+:where(._2IVd64AHN6R428cgcPqW7M) {
   box-sizing: border-box;
   display: grid;
   justify-content: flex-start;

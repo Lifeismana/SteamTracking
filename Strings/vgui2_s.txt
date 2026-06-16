@@ -199,96 +199,6 @@
 #!/bin/sh\nexit 0\n
 #3CScs
 #FLR
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
 #bML"
 #include
 #include is NULL
@@ -320,6 +230,7 @@ $\nY8O
 %04u%02u%02uT%02u%02u%02uZ
 %04u-%02u-%02u
 %04u-%02u-%02u %02u:%02u:%02u
+%04x:%04x
 %0MM
 %0VV
 %5EUeu
@@ -383,7 +294,7 @@ $\nY8O
 %s: set timezone to %s\n
 %s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
 %s: system() failed, errno %d\n
-%s:%dx%d@%d
+%s:%dx%d@%d %u
 %sToday
 %sTomorrow
 %sYesterday
@@ -976,6 +887,7 @@ $\nY8O
 : Tried to copy from a message with a different type. to:
 : Tried to merge from a message with a different type.  to:
 : failed to parse contents
+:%dx%d@%d %u
 :active
 :disabled
 :empty
@@ -2512,7 +2424,6 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
@@ -3861,6 +3772,7 @@ execl
 execl failed, errno %d\n
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
+expected valid output parameter 'mode'
 extend .$0 {\n
 extendee
 extension_range
@@ -4298,6 +4210,7 @@ internal write transform logic error
 invalid
 invalid ICC profile color space
 invalid PNG color type
+invalid RGB output range parsed from mode string
 invalid after png_start_read_image or png_read_update_info
 invalid alpha mode
 invalid background gamma type
@@ -4659,6 +4572,7 @@ modifiers
 mongolian
 mount
 mprotect
+ms-MY
 msync
 munmap
 mwa!

@@ -237,58 +237,67 @@
         AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
         JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
+        AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
       };
+    },
+    91239: (s) => {
+      s.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
     },
     90534: (s, r, e) => {
       "use strict";
-      e.d(r, { GY: () => l, az: () => c });
+      e.d(r, { az: () => _ });
       var p = e(7850),
-        o = e(39479),
-        i = e(64238),
-        a = e.n(i),
-        t = e(11526),
-        n = e(75659),
-        m = e(44041);
-      function c(s) {
-        const { as: r = "div", ref: e, ...o } = s,
-          i = (0, t.mz)({ ...o, className: a()(m.Box, s.className) }, _),
-          n = r;
-        return (0, p.jsx)(n, { ref: e, ...i });
+        o = e(44041),
+        i = e(39479),
+        a = e(64238),
+        t = e.n(a),
+        n = e(11526),
+        c = e(75659),
+        m = e(8527),
+        l = e(11820);
+      function _(s) {
+        const { as: r = "div", focusable: e, navProps: a, ref: c, ..._ } = s,
+          u = (0, n.mz)(
+            { ..._, className: t()(o.Box, (0, l.T)(), s.className) },
+            d,
+          ),
+          f = e ?? a?.focusable ?? !!_.onClick,
+          y = (0, p.jsx)(r, { ref: c, ...u });
+        return m.TS.IN_GAMEPADUI && (f || a)
+          ? (0, p.jsx)(i.J, { ...(a || {}), focusable: f, children: y })
+          : y;
       }
-      function l(s) {
-        const { as: r = "div", ref: e, navProps: i, ...n } = s,
-          c = (0, t.mz)({ ...n, className: a()(m.Box, n.className) }, _),
-          l = r;
-        return (0, p.jsx)(o.J, {
-          ...i,
-          children: (0, p.jsx)(l, { ref: e, ...c }),
-        });
-      }
-      const _ = n.h;
+      const d = c.h;
     },
     83392: (s, r, e) => {
       "use strict";
-      e.d(r, { s: () => c });
+      e.d(r, { s: () => _ });
       var p = e(7850),
         o = e(39479),
         i = e(64238),
         a = e.n(i),
         t = e(11526),
-        n = e(75659),
-        m = e(68875);
-      function c(s) {
-        const { as: r = "div", ref: e, navRef: i, ...n } = s,
-          c = (0, t.mz)({ ...n, className: a()(s.className, m.Flex) }, l),
-          _ = !n.disabled && !!n.onClick,
-          d = r;
-        return (0, p.jsx)(o.J, {
-          focusable: _,
-          navRef: i,
-          children: (0, p.jsx)(d, { ref: e, ...c }),
-        });
+        n = e(55348),
+        c = e(75659),
+        m = e(68875),
+        l = e(8527);
+      function _(s) {
+        const { as: r = "div", focusable: e, navProps: i, ref: c, ..._ } = s,
+          u = (0, t.mz)({ ..._, className: a()(s.className, m.Flex) }, d),
+          f = e ?? i?.focusable ?? !!_.onClick,
+          y = (0, p.jsx)(r, { ref: c, ...u }),
+          v = (0, n.n)(_.direction ?? "row");
+        return l.TS.IN_GAMEPADUI
+          ? (0, p.jsx)(o.J, {
+              ...(i || {}),
+              focusable: f,
+              "flow-children": v,
+              children: y,
+            })
+          : y;
       }
-      const l = [
-        ...n.h,
+      const d = [
+        ...c.h,
         {
           prop: "direction",
           responsive: !0,
@@ -299,7 +308,7 @@
           prop: "justify",
           responsive: !0,
           className: m.Justify,
-          cssProperty: (s) => ["--justify", _(s)],
+          cssProperty: (s) => ["--justify", u(s)],
         },
         {
           prop: "align",
@@ -333,7 +342,7 @@
         },
         { prop: "inline", responsive: !0, className: m.Inline },
       ];
-      function _(s) {
+      function u(s) {
         return /^(between|around|evenly)$/.test(s) ? `space-${s}` : s;
       }
     },
@@ -589,6 +598,12 @@
             className: o.TextAlign,
             cssProperty: "--text-align",
           },
+          {
+            prop: "aspectRatio",
+            responsive: !0,
+            className: o.AspectRatio,
+            cssProperty: "--aspect-ratio",
+          },
         ];
     },
     11526: (s, r, e) => {
@@ -596,8 +611,8 @@
       e.d(r, {
         Fd: () => n,
         ti: () => t,
-        To: () => m,
-        w7: () => c,
+        To: () => c,
+        w7: () => m,
         mz: () => a,
       });
       var p = e(10430),
@@ -690,16 +705,16 @@
         const [r, e] = s.split(" ");
         return `rgb( from ${`var(--color-${r})`} r g b / ${e} )`;
       }
-      function m(s, r) {
+      function c(s, r) {
         return s.startsWith("text") ? `var(--color-${s}-${r})` : n(s);
       }
-      function c(s) {
+      function m(s) {
         return s.startsWith("text") ? `var(--color-${s})` : n(s);
       }
     },
     55348: (s, r, e) => {
       "use strict";
-      e.d(r, { I: () => i });
+      e.d(r, { I: () => i, n: () => a });
       var p = e(10430);
       const o = p.IE.reduce((s, r, e) => ((s[r] = e), s), {});
       function i(s, r) {
@@ -707,24 +722,35 @@
         for (let e = o[r]; e >= 0; e--) if (p.IE[e] in s) return s[p.IE[e]];
         return s.initial;
       }
+      function a(s) {
+        return i(s, (0, p.xC)());
+      }
+    },
+    11820: (s, r, e) => {
+      "use strict";
+      e.d(r, { T: () => o });
+      var p = e(91239);
+      function o() {
+        return p.Reset;
+      }
     },
     39479: (s, r, e) => {
       "use strict";
-      e.d(r, { J: () => m });
+      e.d(r, { J: () => c });
       var p = e(7850),
         o = e(8871),
         i = e(90626),
         a = e(7745),
         t = e(90665),
         n = e(74882);
-      function m(s) {
-        const { children: r, "flow-children": e, ...m } = s,
-          { gamepadEvents: c } = (0, t.C7)(s);
-        e && (m.layout = (0, a.O)(e)),
-          c.onOKButton ||
-            ("onClick" in r.props && r.props.onClick && (c.onOKButton = t._K));
-        const { ref: l, node: _ } = (0, t.qp)(m);
-        (0, n.Ui)(c, l);
+      function c(s) {
+        const { children: r, "flow-children": e, ...c } = s,
+          { gamepadEvents: m } = (0, t.C7)(s);
+        e && (c.layout = (0, a.O)(e)),
+          m.onOKButton ||
+            ("onClick" in r.props && r.props.onClick && (m.onOKButton = t._K));
+        const { ref: l, node: _ } = (0, t.qp)(c);
+        (0, n.Ui)(m, l);
         const d = (0, o.Ue)(l, r.props?.ref);
         return (0, p.jsx)(t.TJ.Provider, {
           value: _,

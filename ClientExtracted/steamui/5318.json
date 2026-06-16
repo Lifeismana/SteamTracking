@@ -290,10 +290,12 @@
     "setcooldown_nocooldown": "Наразі блокування немає",
     "setcooldown_days": "дн.",
     "setcooldown_newcooldownlabel": "Нове блокування для користувача:",
-    "setcooldown_clearcooldown": "Очистити",
+    "setcooldown_clearcooldown": "Скасувати блокування",
     "setcooldown_cooldownsummary": "(%1$s дн.)",
     "setcooldown_dialogtitle": "Встановити блокування в системі скарг на вміст",
     "setcooldown_dialogdescription": "Забороняє користувачу скаржитися на вміст й оспорювати рішення модератора через зловживання системою скарг на вміст.",
     "setcooldown_setbutton": "Встановити блокування",
+    "setcooldown_clearopenreports": "Видалити нерозглянуті скарги цього користувача",
+    "setcooldown_statssummary": "%1$s/%2$s скарг виправдано, %3$s/%4$s за минулий тиждень.",
     "nocomma": ""
 }

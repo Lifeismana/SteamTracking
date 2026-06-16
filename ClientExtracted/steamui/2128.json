@@ -290,10 +290,12 @@
     "setcooldown_nocooldown": "Tidak ada waktu jeda",
     "setcooldown_days": "hari",
     "setcooldown_newcooldownlabel": "Waktu jeda baru untuk pengguna:",
-    "setcooldown_clearcooldown": "Hapus",
+    "setcooldown_clearcooldown": "Hapus waktu jeda",
     "setcooldown_cooldownsummary": "(%1$s hari)",
     "setcooldown_dialogtitle": "Atur waktu jeda pelaporan",
     "setcooldown_dialogdescription": "Memblokir pengguna dari melaporkan konten atau menyengketakan moderasi saat mereka menyalahgunakan sistem.",
     "setcooldown_setbutton": "Atur waktu jeda",
+    "setcooldown_clearopenreports": "Hapus laporan yang belum terselesaikan milik pengguna ini",
+    "setcooldown_statssummary": "%1$s/%2$s laporan dibebaskan, %3$s/%4$s dalam seminggu terakhir.",
     "nocomma": ""
 }

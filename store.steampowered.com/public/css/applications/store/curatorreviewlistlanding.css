@@ -511,13 +511,15 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50%;
+  top: 8px;
+}
+@media screen and (max-width: 910px) {
+  html.responsive ._16au-uWHggl6G731aw_eHt {
+    left: -8px;
+  }
 }
 .BasicUI ._16au-uWHggl6G731aw_eHt {
-  top: 8px;
-  left: 0px;
-  width: unset;
-  justify-content: unset;
+  left: -8px;
 }
 .IeC3X0McKdGC79BsC3VvM {
   flex-shrink: 0;

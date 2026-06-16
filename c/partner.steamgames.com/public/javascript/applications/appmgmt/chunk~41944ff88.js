@@ -237,53 +237,49 @@
         AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
         JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
+        AspectRatio: "_1OB-pyw07DhYE8iZusGAjg",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
-              className: _()(_.Box, _.className),
+              className: _()(_.Box, (0, _._)(), _.className),
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: _,
-          ..._,
-        });
-      }
-      function _(_) {
-        const { _: _ = "div", ref: _, navProps: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, _.className),
-            },
-            _,
-          ),
-          _ = _;
-        return (0, _.jsx)(_._, {
-          ..._,
-          children: (0, _.jsx)(_, {
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
-          }),
-        });
+          });
+        return _._.IN_GAMEPADUI && (_ || _)
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = _._;
     },
@@ -298,9 +294,11 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, navRef: _, ..._ } = _,
+        const { _: _ = "div", focusable: _, navProps: _, ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -308,16 +306,20 @@
             },
             _,
           ),
-          _ = !_.disabled && !!_.onClick,
-          _ = _;
-        return (0, _.jsx)(_._, {
-          focusable: _,
-          navRef: _,
-          children: (0, _.jsx)(_, {
+          _ = _ ?? _?.focusable ?? !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
           }),
-        });
+          _ = (0, _._)(_.direction ?? "row");
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_._, {
+              ...(_ || {}),
+              focusable: _,
+              "flow-children": _,
+              children: _,
+            })
+          : _;
       }
       const _ = [
         ..._._,
@@ -660,6 +662,12 @@
             className: _.TextAlign,
             cssProperty: "--text-align",
           },
+          {
+            prop: "aspectRatio",
+            responsive: !0,
+            className: _.AspectRatio,
+            cssProperty: "--aspect-ratio",
+          },
         ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -784,6 +792,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
@@ -791,6 +800,19 @@
         if ("object" != typeof _) return _;
         for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
         return _.initial;
+      }
+      function _(_) {
+        return _(_, (0, _._)());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return _.Reset;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

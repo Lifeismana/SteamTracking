@@ -8436,10 +8436,10 @@ var CLSTAMP = "steamdb";
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  reservation_type: {
+                  collection_time_active: {
                     _: 17,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -87750,6 +87750,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  formatted_lowest_recent_price: {
+                    _: 55,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -87817,6 +87822,11 @@ var CLSTAMP = "steamdb";
                   },
                   discount_end_date: {
                     _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  master_sub_appid: {
+                    _: 4,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -90462,6 +90472,36 @@ var CLSTAMP = "steamdb";
                     _: 21,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  position_is_waitlist: {
+                    _: 22,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  user_waitlist_token: {
+                    _: 23,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  queue_in_waitlist: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  queue_waitlist_token: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  collection_time_active: {
+                    _: 26,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  reservation_not_allowed: {
+                    _: 27,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -104019,6 +104059,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  record_tracking: {
+                    _: 10,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -105181,6 +105226,18 @@ var CLSTAMP = "steamdb";
           return "CSteamVR_VRGamepadUI_Message";
         }
       }
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
+      _.Message;
       _.Message;
       _.Message;
       _.Message;
@@ -117833,6 +117890,11 @@ var CLSTAMP = "steamdb";
                     _: 47,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  use_gyro_sw_biases: {
+                    _: 48,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),

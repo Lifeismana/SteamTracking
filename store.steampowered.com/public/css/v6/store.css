@@ -75,110 +75,13 @@ body.v6 div#store_header {
 	background-repeat: no-repeat;
 }
 
-body.v6 #footer {
-	font-family: Arial, Helvetica, sans-serif;
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	padding: 16px 0 60px 0;
-	margin: 0;
-
-	text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-
-    background: #171a21;
-}
-
 body.v6.movescrolltocontent #footer {
 	position: relative;
 }
 
-	body.v6.infinite_scrolling #footer.small_footer {
-		position: relative;
-		top: auto;
-		bottom: auto;
-	}
-
-	body.v6.infinite_scrolling #footer_spacer.small_footer {
-		height: 50px;
-	}
-
-    body.v6 #footer .footer_content {
-        width: 940px;
-        margin: 0px auto;
-        padding-top: 16px;
-    }
-    body.v6 #footer #footer_logo {
-        float: left;
-        padding-top: 2px;
-    }
-    body.v6 #footer #footer_logo img {
-        height: 25px;
-        width: auto;
-    }
-	body.v6 #footer #footer_logo_steam {
-		float: right;
-		padding-top: 2px;
-	}
-    body.v6 #footer #footer_text {
-        float: left;
-        margin-left: 12px;
-        color: #8F98A0;
-		font-size: 12px;
-		line-height: 16px;
-    }
-    body.v6 #footer #footer_text a {
-        color: #C6D4DF;
-    }
-    body.v6 #footer #footer_text a:hover {
-        color: #ffffff;
-    }
-    body.v6 #footer .rule{
-        height: 8px;
-		border-top: 1px solid #363c44;
-    }
-    body.v6 #footer .valve_links {
-        margin-top: 8px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
-
-		        font-size: 13px;
-        color: #61686D;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
-		align-items: center;
-		flex-direction: row;
-    }
-    body.v6 #footer .valve_links a {
-		color: #C6D4DF;
-		display: flex;
-		align-items: center;
-    }
-    body.v6 #footer .valve_links a:hover {
-        color: #ffffff;
-    }
-	body.v6 #footer .valve_links img {
-		margin-right: 4px;
-	}
-    body.v6 #footer_nav .pulldown {
-        color: #969eab !important;
-        background: rgba(150, 158, 171, 0.3);
-    }
-	body.v6 #footer .extra_space {
-		height: 60px;
-	}
-
-
 body.v6.sale_page_n_section #footer
 {
 	z-index: 2;
-}
-
-
-body #footer .responsive_optin_link {
-	display: none;
 }
 
 body.v6.blue #footer {

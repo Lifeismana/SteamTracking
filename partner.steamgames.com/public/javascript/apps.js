@@ -2323,22 +2323,6 @@ function PrepareApp( appid, section )
 }
 
 
-function CDNApp( appid )
-{
-	ShowHideDiff( false );
-	ShowHideOutput( true );
-	$('appOutput').innerHTML = "Publishing app images...";
-
-	AppsAjaxRequest( g_szBaseURL + "/apps/cdnpush/" + appid,
-					{},
-					function( results )
-					{
-						StandardCallback( results, 'appOutput' );
-					}
-				);
-}
-
-
 function DiffApp( appid, section )
 {
 	$('appOutput').innerHTML = '';

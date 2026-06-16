@@ -290,10 +290,12 @@
     "setcooldown_nocooldown": "No current cooldown",
     "setcooldown_days": "days",
     "setcooldown_newcooldownlabel": "New cooldown for user:",
-    "setcooldown_clearcooldown": "Clear",
+    "setcooldown_clearcooldown": "Clear cooldown",
     "setcooldown_cooldownsummary": "(%1$s days)",
     "setcooldown_dialogtitle": "Set reporting cooldown",
     "setcooldown_dialogdescription": "Block a user from reporting content or disputing moderation when they have abused the system.",
     "setcooldown_setbutton": "Set cooldown",
+    "setcooldown_clearopenreports": "Clear this user's unresolved reports",
+    "setcooldown_statssummary": "%1$s/%2$s reports acquitted, %3$s/%4$s in the last week.",
     "nocomma": ""
 }

@@ -290,10 +290,12 @@
     "setcooldown_nocooldown": "Hiện không có thời gian chờ nào",
     "setcooldown_days": "ngày",
     "setcooldown_newcooldownlabel": "Thời gian chờ mới cho người dùng:",
-    "setcooldown_clearcooldown": "Xóa",
+    "setcooldown_clearcooldown": "Xóa thời gian chờ",
     "setcooldown_cooldownsummary": "(%1$s ngày)",
     "setcooldown_dialogtitle": "Đặt thời gian chờ tố cáo",
     "setcooldown_dialogdescription": "Chặn người dùng tố cáo nội dung hoặc phản đối quyết định điều hành khi họ lạm dụng hệ thống.",
     "setcooldown_setbutton": "Đặt thời gian chờ",
+    "setcooldown_clearopenreports": "Xóa các tố cáo chưa được giải quyết của người dùng này",
+    "setcooldown_statssummary": "%1$s/%2$s tố cáo không phạt, %3$s/%4$s vào tuần trước.",
     "nocomma": ""
 }

@@ -113,7 +113,7 @@
     },
     36080: (t, c, n) => {
       "use strict";
-      n.r(c), n.d(c, { default: () => Bt });
+      n.r(c), n.d(c, { default: () => Ft });
       var e = n(7850),
         l = n(83392),
         s = n(90534),
@@ -207,8 +207,8 @@
       const _ = (0, V.l)(async function (t) {
           if (j[t]) return j[t]();
         }),
-        w = _.Localize;
-      var b = n(20187),
+        b = _.Localize;
+      var w = n(20187),
         y = n(3049);
       const S = {
         Label: function (t) {
@@ -225,13 +225,13 @@
           a = null == s ? void 0 : s.get(n.propertyid);
         return !a || a.hide_from_description
           ? null
-          : (0, e.jsx)(b.EY, {
+          : (0, e.jsx)(w.EY, {
               as: "div",
               ...l,
               children: _.LocalizeReact(
                 "#ItemDescription_AssetPropertyLabelColonValue",
                 a.localized_label,
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(w.EY, {
                   whiteSpace: "pre-wrap",
                   children: (0, e.jsx)(z, { property: n }),
                 }),
@@ -309,7 +309,7 @@
       function R(t) {
         const { children: c, ...n } = t,
           l = i.useRef(null),
-          a = i.useCallback(() => `${Y}px`, []),
+          a = i.useCallback(() => `${P}px`, []),
           v = i.useCallback((t) => {
             const c = l.current;
             if (c && 0 != t.deltaY) {
@@ -331,14 +331,14 @@
             (0, e.jsx)(O.A.Positioner, {
               children: (0, e.jsx)(s.az, {
                 marginX: "2",
-                children: (0, e.jsx)(E, { ...n, refHover: l }),
+                children: (0, e.jsx)(Y, { ...n, refHover: l }),
               }),
             }),
           ],
         });
       }
-      const Y = 346;
-      function E(t) {
+      const P = 346;
+      function Y(t) {
         var c;
         const { description: n, asset: l, bHideImage: s = !1, refHover: a } = t;
         let i,
@@ -349,39 +349,39 @@
         const { data: r } = H(v, n ? void 0 : i),
           o = null != n ? n : r;
         return o
-          ? (0, e.jsx)(At.Root, {
+          ? (0, e.jsx)(Pt.Root, {
               description: o,
               asset: l,
               bInteractable: !1,
-              children: (0, e.jsxs)(At.Container, {
+              children: (0, e.jsxs)(Pt.Container, {
                 maxHeight: "90vh",
                 overflow: "auto",
                 ref: a,
                 children: [
-                  (0, e.jsxs)(At.Content, {
+                  (0, e.jsxs)(Pt.Content, {
                     children: [
                       !s &&
                         (0, e.jsxs)(e.Fragment, {
                           children: [
-                            (0, e.jsx)(At.Image, {}),
-                            (0, e.jsx)(At.Separator, {}),
+                            (0, e.jsx)(Pt.Image, {}),
+                            (0, e.jsx)(Pt.Separator, {}),
                           ],
                         }),
-                      (0, e.jsx)(At.Name, {}),
-                      (0, e.jsx)(At.GameInfo, {}),
-                      (0, e.jsx)(At.Descriptions, {}),
-                      (0, e.jsx)(At.OwnerDescriptions, {}),
-                      (0, e.jsx)(At.Tags, {}),
-                      (0, e.jsx)(At.AssetProperties, {}),
+                      (0, e.jsx)(Pt.Name, {}),
+                      (0, e.jsx)(Pt.GameInfo, {}),
+                      (0, e.jsx)(Pt.Descriptions, {}),
+                      (0, e.jsx)(Pt.OwnerDescriptions, {}),
+                      (0, e.jsx)(Pt.Tags, {}),
+                      (0, e.jsx)(Pt.AssetProperties, {}),
                     ],
                   }),
-                  (0, e.jsx)(At.SellOnMarket, {}),
+                  (0, e.jsx)(Pt.SellOnMarket, {}),
                 ],
               }),
             })
           : null;
       }
-      var P = n(28491),
+      var E = n(28491),
         N = n(6083);
       function G(t, c) {
         return t.name_color ? `#${t.name_color}` : c;
@@ -397,7 +397,7 @@
       }
       function $(t) {
         const { description: c, asset: n, style: l = {}, ...s } = t;
-        return (0, e.jsx)(b.EY, {
+        return (0, e.jsx)(w.EY, {
           contrast: "note",
           ...s,
           style: { ...(null != l ? l : {}), color: G(c) },
@@ -406,7 +406,7 @@
       }
       function F(t) {
         const { description: c, asset: n, style: l = {}, ...s } = t;
-        return (0, e.jsx)(P.Y, {
+        return (0, e.jsx)(E.Y, {
           contrast: "note",
           underline: "hover",
           ...s,
@@ -428,29 +428,51 @@
           s = n.container_properties.contained_items;
         return (0, e.jsx)("ul", {
           children: s.map((t, c) =>
-            (0, e.jsx)(U, { appid: l, contained_item: t }, c),
+            (0, e.jsx)(J, { appid: l, contained_item: t }, c),
           ),
         });
       }
       function U(t) {
+        var c;
+        const n = t.context.itemDescription,
+          l = parseInt(t.args.index || "-1");
+        let s;
+        (null === (c = n.container_properties) || void 0 === c
+          ? void 0
+          : c.contained_items) &&
+          l >= 0 &&
+          l < n.container_properties.contained_items.length &&
+          (s = n.container_properties.contained_items[l]);
+        const a = n.appid,
+          { data: i } = H(a, s);
+        return i && s ? (0, e.jsx)(Z, { appid: a, description: i }, l) : null;
+      }
+      function J(t) {
         const { appid: c, contained_item: n } = t,
           { data: l } = H(c, n);
         return l
           ? (0, e.jsx)("li", {
-              children: (0, e.jsx)(R, {
-                description: l,
-                children:
-                  l.marketable && l.market_hash_name
-                    ? (0, e.jsx)(F, {
-                        description: l,
-                        href: D.N.Item(c, l.market_hash_name),
-                      })
-                    : (0, e.jsx)($, { description: l }),
-              }),
+              children: (0, e.jsx)(Z, { appid: c, description: l }),
             })
           : null;
       }
-      function J(t, c) {
+      function Z(t) {
+        const { appid: c, description: n } = t;
+        return (0, e.jsx)(R, {
+          description: n,
+          children:
+            n.marketable && n.market_hash_name
+              ? (0, e.jsx)(F, {
+                  description: n,
+                  href: D.N.Item(
+                    c,
+                    n.market_bucket_group_id || n.market_hash_name,
+                  ),
+                })
+              : (0, e.jsx)($, { description: n }),
+        });
+      }
+      function q(t, c) {
         var n, e;
         return (
           null === (n = null == t ? void 0 : t.public_data) || void 0 === n
@@ -466,9 +488,9 @@
                 : e.steamid) || c,
             );
       }
-      var Z = n(29233),
-        q = n(62220);
-      function K(t) {
+      var K = n(29233),
+        X = n(62220);
+      function Q(t) {
         var c, n;
         const l = parseInt(
             null !==
@@ -479,40 +501,41 @@
               ? n
               : "0",
           ),
-          s = Z.b2.InitFromAccountID(l, u.TS.EUNIVERSE).ConvertTo64BitString(),
-          { data: a, isLoading: i } = (0, q.jn)(s);
+          s = K.b2.InitFromAccountID(l, u.TS.EUNIVERSE).ConvertTo64BitString(),
+          { data: a, isLoading: i } = (0, X.jn)(s);
         if (!a && i) return null;
-        const v = J(a, s);
-        return (0, e.jsx)(P.Y, {
+        const v = q(a, s);
+        return (0, e.jsx)(E.Y, {
           href: v,
           "data-miniprofile": l,
           children: a ? a.public_data.persona_name : l,
         });
       }
-      var X = n(52967),
-        Q = n(42780),
-        tt = n(47535),
-        ct = n(78312),
-        nt = n(1736),
-        et = n(60869);
-      function lt(t) {
+      var tt = n(52967),
+        ct = n(42780),
+        nt = n(47535),
+        et = n(78312),
+        lt = n(1736),
+        st = n(60869);
+      function at(t) {
         const { itemDescription: c, bbcode: n = "" } = t,
           e = i.useMemo(() => {
             const t = {
-              ...tt.L,
-              ...et.I,
-              ...ct.F,
-              url: { Constructor: nt._ },
+              ...nt.L,
+              ...st.I,
+              ...et.F,
+              url: { Constructor: lt._ },
               container_item_list: { Constructor: W },
-              persona: { Constructor: K },
-              date: { Constructor: st },
+              container_item: { Constructor: U },
+              persona: { Constructor: Q },
+              date: { Constructor: it },
             };
-            return new X.B(t, (t) => new Q.R8(), u.TS.LANGUAGE);
+            return new tt.B(t, (t) => new ct.R8(), u.TS.LANGUAGE);
           }, []),
           l = i.useMemo(() => ({ itemDescription: c }), [c]);
         return i.useMemo(() => e.ParseBBCode(n, l), [e, n, l]);
       }
-      function st(t) {
+      function it(t) {
         var c, n;
         const e = parseInt(
           null !==
@@ -526,7 +549,7 @@
         if (!e) return null;
         return new Date(1e3 * e).toLocaleString((0, y.J)());
       }
-      function at(t) {
+      function vt(t) {
         const { description: c, type: n = "descriptions", ...s } = t,
           a = c[n];
         return (0, e.jsx)(l.s, {
@@ -535,11 +558,11 @@
             null == a
               ? void 0
               : a.map((t, n) =>
-                  (0, e.jsx)(it, { line: t, description: c, ...s }, n),
+                  (0, e.jsx)(rt, { line: t, description: c, ...s }, n),
                 ),
         });
       }
-      function it(t) {
+      function rt(t) {
         var c, n;
         const { line: l, description: s, ...a } = t,
           i = {
@@ -556,7 +579,7 @@
             : "";
         switch ((v || (v = " "), l.type)) {
           case "html":
-            return (0, e.jsx)(b.EY, {
+            return (0, e.jsx)(w.EY, {
               ...i,
               children: (0, e.jsx)("span", {
                 style: { display: "contents" },
@@ -564,28 +587,28 @@
               }),
             });
           case "bbcode":
-            return (0, e.jsx)(b.EY, {
+            return (0, e.jsx)(w.EY, {
               ...i,
-              children: (0, e.jsx)(lt, { itemDescription: s, bbcode: v }),
+              children: (0, e.jsx)(at, { itemDescription: s, bbcode: v }),
             });
           default:
-            return (0, e.jsx)(b.EY, { ...i, children: v });
+            return (0, e.jsx)(w.EY, { ...i, children: v });
         }
       }
-      const vt = i.createContext(void 0);
-      function rt() {
-        return i.useContext(vt).description;
-      }
-      function ot() {
-        return i.useContext(vt).asset;
-      }
+      const ot = i.createContext(void 0);
       function ht() {
-        return i.useContext(vt).bInteractable;
+        return i.useContext(ot).description;
       }
-      var dt = n(64753);
-      function ut(t) {
+      function dt() {
+        return i.useContext(ot).asset;
+      }
+      function ut() {
+        return i.useContext(ot).bInteractable;
+      }
+      var pt = n(64753);
+      function ft(t) {
         const { action: c } = t,
-          n = ot();
+          n = dt();
         if (!n) return null;
         const l = c.link.match(
             /GetGooValue\(\s*'?[^']*'?\s*,\s*'?[^']*'?\s*,\s*'?(?<appid>[0-9]+)'?\s*,\s*'?(?<item_type>[0-9]+)'?\s*,\s*'?(?<border_color>[0-9]+)'?/,
@@ -604,7 +627,7 @@
         )
           return null;
         const { appid: v, item_type: r, border_color: o } = s;
-        return (0, e.jsx)(pt, {
+        return (0, e.jsx)(gt, {
           contextid: a,
           assetid: i,
           appid: parseInt(v),
@@ -612,7 +635,7 @@
           border_color: parseInt(o),
         });
       }
-      function pt(t) {
+      function gt(t) {
         var c;
         const {
             contextid: n,
@@ -648,12 +671,12 @@
               align: "start",
               marginTop: "2",
               children: [
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(w.EY, {
                   as: "div",
                   contrast: "body",
                   children: _.LocalizeReact(
                     "#ItemDescription_ThisItemIsWorthGems",
-                    (0, e.jsx)(b.EY, {
+                    (0, e.jsx)(w.EY, {
                       color: "sky-11",
                       children: _.Localize(
                         "#ItemDescription_XGems",
@@ -672,14 +695,14 @@
                   color: "green",
                   onClick: () => window.GrindIntoGoo(i, n, s),
                   size: "1",
-                  children: w("#ItemDescription_TurnIntoGemsButton"),
+                  children: b("#ItemDescription_TurnIntoGemsButton"),
                 }),
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(w.EY, {
                   as: "div",
                   contrast: "body",
-                  children: (0, dt.xh)(
-                    w("#ItemDescription_GemDescription"),
-                    (0, e.jsx)(P.Y, {
+                  children: (0, pt.xh)(
+                    b("#ItemDescription_GemDescription"),
+                    (0, e.jsx)(E.Y, {
                       underline: "auto",
                       color: "greyneutral-12",
                       href: `${u.TS.COMMUNITY_BASE_URL}tradingcards/boostercreator/`,
@@ -690,7 +713,7 @@
             })
           : null;
       }
-      function ft(t) {
+      function mt(t) {
         const { actions: c } = t,
           [n, s] = i.useMemo(() => {
             let t = [],
@@ -703,8 +726,8 @@
                     ? void 0
                     : s.startsWith("javascript:GetGooValue")
                 )
-                  ? n.push((0, e.jsx)(ut, { action: c }, l))
-                  : t.push((0, e.jsx)(gt, { action: c }, l));
+                  ? n.push((0, e.jsx)(ft, { action: c }, l))
+                  : t.push((0, e.jsx)(xt, { action: c }, l));
               }),
               [t, n]
             );
@@ -716,12 +739,12 @@
           ],
         });
       }
-      function gt(t) {
+      function xt(t) {
         const c = r(),
-          n = rt(),
-          l = ot(),
-          s = i.useContext(vt).listingID;
-        return (0, e.jsx)(mt, {
+          n = ht(),
+          l = dt(),
+          s = i.useContext(ot).listingID;
+        return (0, e.jsx)(Ct, {
           ...t,
           ownerSteamID: c,
           description: n,
@@ -729,7 +752,7 @@
           listingID: s,
         });
       }
-      function mt(t) {
+      function Ct(t) {
         const {
             action: c,
             description: n,
@@ -783,8 +806,8 @@
           children: c.name,
         });
       }
-      var xt = n(72255);
-      function Ct(t) {
+      var Vt = n(72255);
+      function jt(t) {
         const {
             eWalletCurrency: c,
             appid: n,
@@ -830,7 +853,7 @@
                   color: "dull",
                   href: `${u.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}${r ? `?sellorderassetid=${r}` : ""}`,
                   size: "1",
-                  children: w("#SellOnMarket_ViewListing"),
+                  children: b("#SellOnMarket_ViewListing"),
                 }),
               })
             : (0, e.jsxs)(l.s, {
@@ -839,20 +862,20 @@
                 gapY: "3",
                 direction: "column",
                 children: [
-                  (0, e.jsx)(Vt, { isLoading: h, priceOverview: o }),
+                  (0, e.jsx)(_t, { isLoading: h, priceOverview: o }),
                   i &&
                     (0, e.jsx)(a.v, {
                       size: "1",
                       color: "dull",
                       href: `${u.TS.COMMUNITY_BASE_URL}market/listings/${n}/${encodeURIComponent(s)}`,
-                      children: w("#SellOnMarket_View"),
+                      children: b("#SellOnMarket_View"),
                     }),
-                  i && !v && (0, e.jsx)(jt, {}),
+                  i && !v && (0, e.jsx)(bt, {}),
                 ],
               })
           : null;
       }
-      function Vt(t) {
+      function _t(t) {
         const { isLoading: c, priceOverview: n } = t;
         return c ||
           (null == n ? void 0 : n.lowest_price) ||
@@ -860,23 +883,23 @@
           ? (0, e.jsxs)(s.az, {
               paddingStart: "3",
               children: [
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(w.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.lowest_price)
-                    ? w("#SellOnMarket_LowestPrice", n.lowest_price)
+                    ? b("#SellOnMarket_LowestPrice", n.lowest_price)
                     : " ",
                 }),
-                (0, e.jsx)(b.EY, {
+                (0, e.jsx)(w.EY, {
                   as: "div",
                   children: (null == n ? void 0 : n.volume)
-                    ? w("#SellOnMarket_Volume", n.volume)
+                    ? b("#SellOnMarket_Volume", n.volume)
                     : " ",
                 }),
               ],
             })
           : null;
       }
-      function jt() {
+      function bt() {
         const t = r();
         return u.iA.logged_in && t && t == u.iA.steamid
           ? (0, e.jsx)(s.az, {
@@ -884,56 +907,56 @@
                 color: "green",
                 onClick: () => window.SellCurrentSelection(),
                 size: "1",
-                children: w("#SellOnMarket_SellThisItem"),
+                children: b("#SellOnMarket_SellThisItem"),
               }),
             })
           : null;
       }
-      var _t = n(58256),
-        wt = n(11685);
-      function bt() {
+      var wt = n(58256),
+        yt = n(11685);
+      function St() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: w("#ItemDescription_TradeProtectedTooltip"),
+          title: b("#ItemDescription_TradeProtectedTooltip"),
           children: [
             (0, e.jsx)(s.az, {
-              className: wt.TradeProtectionLabel,
-              children: w("#ItemDescription_TradeProtected"),
+              className: yt.TradeProtectionLabel,
+              children: b("#ItemDescription_TradeProtected"),
             }),
-            (0, e.jsx)(_t._, {
-              className: wt.TradeProtectionIcon,
-              alt: w("#ItemDescription_TradeProtected"),
+            (0, e.jsx)(wt._, {
+              className: yt.TradeProtectionIcon,
+              alt: b("#ItemDescription_TradeProtected"),
               src: `${u.TS.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
             }),
           ],
         });
       }
-      var yt = n(43694);
-      function St() {
+      var Mt = n(43694);
+      function zt() {
         return (0, e.jsxs)(s.az, {
           position: "relative",
-          title: w("#ItemDescription_ListedItemTooltip"),
+          title: b("#ItemDescription_ListedItemTooltip"),
           children: [
             (0, e.jsx)(s.az, {
-              className: yt.ListedItemLabel,
-              children: w("#ItemDescription_ListedItem"),
+              className: Mt.ListedItemLabel,
+              children: b("#ItemDescription_ListedItem"),
             }),
-            (0, e.jsx)(_t._, {
-              className: yt.ListedItemIcon,
-              alt: w("#ItemDescription_ListedItem"),
+            (0, e.jsx)(wt._, {
+              className: Mt.ListedItemIcon,
+              alt: b("#ItemDescription_ListedItem"),
               src: `${u.TS.COMMUNITY_CDN_URL}public/images/economy/listed_on_market.png`,
             }),
           ],
         });
       }
-      var Mt = n(65646),
-        zt = n(59805),
-        kt = n(96171),
-        Lt = n(42834),
-        It = n(69345),
-        Tt = n(39777),
-        Ht = n(45179);
-      const Ot = {
+      var kt = n(65646),
+        Lt = n(59805),
+        It = n(96171),
+        Tt = n(42834),
+        Ht = n(69345),
+        Ot = n(39777),
+        At = n(45179);
+      const Rt = {
         Root: function (t) {
           const {
               description: c,
@@ -951,15 +974,15 @@
               }),
               [c, n, l, s],
             );
-          return (0, e.jsx)(vt.Provider, { value: v, children: a });
+          return (0, e.jsx)(ot.Provider, { value: v, children: a });
         },
         Container: function (t) {
           const { children: c, ...n } = t,
-            s = rt();
+            s = ht();
           return (0, e.jsx)(l.s, {
             direction: "column",
             border: `2px solid ${G(s, "#3A3A3A")}`,
-            className: Ht.ItemDescription,
+            className: At.ItemDescription,
             ...n,
             children: c,
           });
@@ -976,7 +999,7 @@
         },
         Image: function (t) {
           const { bAllowAnimatedIcon: c = !0 } = t,
-            n = rt(),
+            n = ht(),
             a =
               `${u.TS.COMMUNITY_CDN_URL}economy/image/${n.icon_url_large || n.icon_url}/330x192` +
               (c ? "?allow_animated=1" : "");
@@ -992,29 +1015,29 @@
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
-                  children: (0, e.jsx)(bt, {}),
+                  children: (0, e.jsx)(St, {}),
                 }),
               !!n.sealed &&
                 1 == n.sealed_type &&
                 (0, e.jsx)(s.az, {
                   position: "absolute",
                   style: { left: "0", bottom: "0" },
-                  children: (0, e.jsx)(St, {}),
+                  children: (0, e.jsx)(zt, {}),
                 }),
             ],
           });
         },
         Separator: function () {
-          return (0, e.jsx)(Mt.w, {
+          return (0, e.jsx)(kt.w, {
             color: "dull-10",
             size: "4",
             marginY: "2",
           });
         },
         Name: function (t) {
-          const c = rt(),
-            n = ot();
-          return (0, e.jsx)(zt.D, {
+          const c = ht(),
+            n = dt();
+          return (0, e.jsx)(Lt.D, {
             size: "7",
             weight: "heavy",
             ...t,
@@ -1022,7 +1045,7 @@
           });
         },
         FraudWarnings: function () {
-          const { fraudwarnings: t } = rt();
+          const { fraudwarnings: t } = ht();
           return t && 0 != t.length
             ? (0, e.jsx)(s.az, {
                 borderColor: "dull-6",
@@ -1030,12 +1053,12 @@
                 background: "dull-4",
                 children: t.map((t, c) =>
                   (0, e.jsxs)(
-                    b.EY,
+                    w.EY,
                     {
                       color: "red-9",
                       as: "div",
                       children: [
-                        (0, e.jsx)(Pt, {
+                        (0, e.jsx)(Gt, {
                           style: {
                             height: "1.25em",
                             verticalAlign: "text-bottom",
@@ -1052,28 +1075,28 @@
             : null;
         },
         GameInfo: function (t) {
-          const c = rt(),
-            { gameURL: n, strName: a, iconURL: i } = Rt(t.hrefGame);
+          const c = ht(),
+            { gameURL: n, strName: a, iconURL: i } = Yt(t.hrefGame);
           return (0, e.jsxs)(l.s, {
             direction: "row",
             gapX: "2",
             align: "center",
             children: [
-              (0, e.jsx)(Et, {
+              (0, e.jsx)(Nt, {
                 href: n,
                 children: i
-                  ? (0, e.jsx)(_t._, {
+                  ? (0, e.jsx)(wt._, {
                       alt: null != a ? a : "",
                       src: i,
-                      className: Ht.GameImage,
+                      className: At.GameImage,
                     })
-                  : (0, e.jsx)(s.az, { className: Ht.GameImagePlaceholder }),
+                  : (0, e.jsx)(s.az, { className: At.GameImagePlaceholder }),
               }),
               (0, e.jsxs)(l.s, {
                 direction: "column",
                 children: [
-                  (0, e.jsx)(Yt, { ...t }),
-                  (0, e.jsx)(b.EY, {
+                  (0, e.jsx)(Et, { ...t }),
+                  (0, e.jsx)(w.EY, {
                     size: "3",
                     contrast: "description",
                     children: c.type,
@@ -1083,11 +1106,11 @@
             ],
           });
         },
-        GameName: Yt,
+        GameName: Et,
         Descriptions: function () {
-          const t = rt();
+          const t = ht();
           return (0, e.jsx)(e.Fragment, {
-            children: (0, e.jsx)(at, {
+            children: (0, e.jsx)(vt, {
               description: t,
               contrast: "body",
               size: "3",
@@ -1095,14 +1118,14 @@
           });
         },
         Actions: function () {
-          const t = rt(),
-            c = ht(),
+          const t = ht(),
+            c = ut(),
             { actions: n } = t;
-          return c ? n && (0, e.jsx)(ft, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(mt, { actions: n }) : null;
         },
         OwnerDescriptions: function () {
-          const t = rt();
-          return (0, e.jsx)(at, {
+          const t = ht();
+          return (0, e.jsx)(vt, {
             description: t,
             type: "owner_descriptions",
             contrast: "body",
@@ -1110,26 +1133,26 @@
           });
         },
         OwnerActions: function () {
-          const t = rt(),
-            c = ht(),
+          const t = ht(),
+            c = ut(),
             { owner_actions: n } = t;
-          return c ? n && (0, e.jsx)(ft, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(mt, { actions: n }) : null;
         },
         MarketActions: function () {
-          const t = rt(),
-            c = ht(),
+          const t = ht(),
+            c = ut(),
             { market_actions: n } = t;
-          return c ? n && (0, e.jsx)(ft, { actions: n }) : null;
+          return c ? n && (0, e.jsx)(mt, { actions: n }) : null;
         },
         Tags: function () {
-          const t = rt(),
+          const t = ht(),
             { tags: c } = t;
           return c && c.length
-            ? (0, e.jsxs)(b.EY, {
+            ? (0, e.jsxs)(w.EY, {
                 size: "3",
                 contrast: "note",
                 children: [
-                  w("#ItemDescription_Tags"),
+                  b("#ItemDescription_Tags"),
                   " ",
                   " ",
                   c.map((t) => t.localized_tag_name).join(", "),
@@ -1138,7 +1161,7 @@
             : null;
         },
         AssetProperties: function () {
-          const t = ot();
+          const t = dt();
           return t && t.asset_properties && 0 != t.asset_properties.length
             ? (0, e.jsx)(l.s, {
                 direction: "column",
@@ -1153,15 +1176,15 @@
             : null;
         },
         SellOnMarket: function () {
-          const t = rt(),
-            c = ot(),
-            n = ht(),
-            l = (0, xt.rt)(u.iA.country_code),
+          const t = ht(),
+            c = dt(),
+            n = ut(),
+            l = (0, Vt.rt)(u.iA.country_code),
             s = !!t.sealed && 1 == t.sealed_type;
           if (!t.marketable && 1 != t.sealed_type) return null;
           const a = t.market_hash_name || t.market_name || t.name;
           return a
-            ? (0, e.jsx)(Ct, {
+            ? (0, e.jsx)(jt, {
                 eWalletCurrency: l,
                 appid: t.appid,
                 hashName: a,
@@ -1172,78 +1195,78 @@
             : null;
         },
       };
-      const At = Object.assign(function (t) {
+      const Pt = Object.assign(function (t) {
         const {
           description: c,
           asset: n,
           bInteractable: l = !0,
           bIncludeMarketInfo: s = !0,
         } = t;
-        return (0, e.jsx)(At.Root, {
+        return (0, e.jsx)(Pt.Root, {
           description: c,
           asset: n,
           bInteractable: l,
-          children: (0, e.jsxs)(At.Container, {
+          children: (0, e.jsxs)(Pt.Container, {
             children: [
-              (0, e.jsxs)(At.Content, {
+              (0, e.jsxs)(Pt.Content, {
                 children: [
-                  (0, e.jsx)(At.Image, {}),
-                  (0, e.jsx)(At.Separator, {}),
-                  (0, e.jsx)(At.Name, {}),
-                  (0, e.jsx)(At.FraudWarnings, {}),
-                  (0, e.jsx)(At.GameInfo, {}),
-                  (0, e.jsx)(At.Descriptions, {}),
-                  (0, e.jsx)(At.Actions, {}),
-                  (0, e.jsx)(At.OwnerDescriptions, {}),
-                  (0, e.jsx)(At.OwnerActions, {}),
-                  (0, e.jsx)(At.Tags, {}),
-                  (0, e.jsx)(At.AssetProperties, {}),
+                  (0, e.jsx)(Pt.Image, {}),
+                  (0, e.jsx)(Pt.Separator, {}),
+                  (0, e.jsx)(Pt.Name, {}),
+                  (0, e.jsx)(Pt.FraudWarnings, {}),
+                  (0, e.jsx)(Pt.GameInfo, {}),
+                  (0, e.jsx)(Pt.Descriptions, {}),
+                  (0, e.jsx)(Pt.Actions, {}),
+                  (0, e.jsx)(Pt.OwnerDescriptions, {}),
+                  (0, e.jsx)(Pt.OwnerActions, {}),
+                  (0, e.jsx)(Pt.Tags, {}),
+                  (0, e.jsx)(Pt.AssetProperties, {}),
                 ],
               }),
-              s && (0, e.jsx)(At.SellOnMarket, {}),
+              s && (0, e.jsx)(Pt.SellOnMarket, {}),
             ],
           }),
         });
-      }, Ot);
-      function Rt(t) {
-        const c = rt().appid,
-          { data: n } = (0, Tt.lv)({ appid: c }),
-          { data: e } = (0, Tt.J$)({ appid: c }),
-          l = n && n.community_icon ? (0, Lt.b0)(n, "community_icon") : void 0,
-          s = (0, It.n)(e);
+      }, Rt);
+      function Yt(t) {
+        const c = ht().appid,
+          { data: n } = (0, Ot.lv)({ appid: c }),
+          { data: e } = (0, Ot.J$)({ appid: c }),
+          l = n && n.community_icon ? (0, Tt.b0)(n, "community_icon") : void 0,
+          s = (0, Ht.n)(e);
         return {
           gameURL:
             null != t
               ? t
               : (null == e ? void 0 : e.visible) &&
-                  (null == e ? void 0 : e.type) !== kt.uE.pl
+                  (null == e ? void 0 : e.type) !== It.uE.pl
                 ? s
                 : void 0,
           iconURL: l,
           strName: null == e ? void 0 : e.name,
         };
       }
-      function Yt(t) {
-        const { gameURL: c, strName: n } = Rt(t.hrefGame);
+      function Et(t) {
+        const { gameURL: c, strName: n } = Yt(t.hrefGame);
         return c
-          ? (0, e.jsx)(P.Y, {
+          ? (0, e.jsx)(E.Y, {
               href: c,
               size: "3",
               contrast: "description",
               underline: "hover",
               children: n,
             })
-          : (0, e.jsx)(b.EY, {
+          : (0, e.jsx)(w.EY, {
               size: "3",
               contrast: "description",
               children: n,
             });
       }
-      function Et(t) {
+      function Nt(t) {
         const { children: c, href: n } = t;
         return n ? (0, e.jsx)("a", { href: n, children: c }) : c;
       }
-      function Pt(t) {
+      function Gt(t) {
         return (0, e.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 20 20",
@@ -1257,9 +1280,9 @@
           }),
         });
       }
-      var Nt = n(81393),
-        Gt = n(84811);
-      function Bt(t) {
+      var Bt = n(81393),
+        $t = n(84811);
+      function Ft(t) {
         const {
             name: c,
             bIsMarket: n,
@@ -1278,10 +1301,10 @@
                 const e = window;
                 e.UpdateReactItemInfo ||
                   (e.UpdateReactItemInfo = (t, c, n) => {
-                    const e = Wt.get(t);
+                    const e = Jt.get(t);
                     e
                       ? e(c, n)
-                      : (0, Nt.wT)(!1, `Updater not registered: ${t}`);
+                      : (0, Bt.wT)(!1, `Updater not registered: ${t}`);
                   });
                 if (
                   null === (n = e.g_mapPendingItemInfo) || void 0 === n
@@ -1293,9 +1316,9 @@
                   c(n, l), e.g_mapPendingItemInfo.delete(t);
                 }
                 return (
-                  Wt.set(t, c),
+                  Jt.set(t, c),
                   () => {
-                    Wt.delete(t);
+                    Jt.delete(t);
                   }
                 );
               })(c, (t, c) => d(t && { description: t, asset: c })),
@@ -1304,14 +1327,14 @@
           h
             ? (0, e.jsx)(o, {
                 steamidOwner: v,
-                children: (0, e.jsx)(Gt.tH, {
+                children: (0, e.jsx)($t.tH, {
                   children: n
-                    ? (0, e.jsx)(Dt, {
+                    ? (0, e.jsx)(Ut, {
                         description: h.description,
                         asset: h.asset,
                         bHideActionsForUnique: a,
                       })
-                    : (0, e.jsx)($t, {
+                    : (0, e.jsx)(Dt, {
                         description: h.description,
                         asset: h.asset,
                         bInteractable: l,
@@ -1323,7 +1346,7 @@
             : null
         );
       }
-      function $t(t) {
+      function Dt(t) {
         const {
           description: c,
           asset: n,
@@ -1331,34 +1354,34 @@
           bIncludeMarketInfo: s,
           strSelectItemAction: a,
         } = t;
-        return (0, e.jsx)(At.Root, {
+        return (0, e.jsx)(Pt.Root, {
           description: c,
           asset: n,
           bInteractable: l,
-          children: (0, e.jsxs)(At.Container, {
+          children: (0, e.jsxs)(Pt.Container, {
             children: [
-              (0, e.jsxs)(At.Content, {
+              (0, e.jsxs)(Pt.Content, {
                 children: [
-                  (0, e.jsx)(At.Image, {}),
-                  (0, e.jsx)(At.Separator, {}),
-                  (0, e.jsx)(At.Name, {}),
-                  (0, e.jsx)(At.FraudWarnings, {}),
-                  (0, e.jsx)(At.GameInfo, {}),
-                  (0, e.jsx)(At.Descriptions, {}),
-                  (0, e.jsx)(At.Actions, {}),
-                  (0, e.jsx)(At.OwnerDescriptions, {}),
-                  (0, e.jsx)(At.OwnerActions, {}),
-                  (0, e.jsx)(At.Tags, {}),
-                  (0, e.jsx)(At.AssetProperties, {}),
+                  (0, e.jsx)(Pt.Image, {}),
+                  (0, e.jsx)(Pt.Separator, {}),
+                  (0, e.jsx)(Pt.Name, {}),
+                  (0, e.jsx)(Pt.FraudWarnings, {}),
+                  (0, e.jsx)(Pt.GameInfo, {}),
+                  (0, e.jsx)(Pt.Descriptions, {}),
+                  (0, e.jsx)(Pt.Actions, {}),
+                  (0, e.jsx)(Pt.OwnerDescriptions, {}),
+                  (0, e.jsx)(Pt.OwnerActions, {}),
+                  (0, e.jsx)(Pt.Tags, {}),
+                  (0, e.jsx)(Pt.AssetProperties, {}),
                 ],
               }),
-              s && !a && (0, e.jsx)(At.SellOnMarket, {}),
-              !!a && (0, e.jsx)(Ft, { strLabel: a }),
+              s && !a && (0, e.jsx)(Pt.SellOnMarket, {}),
+              !!a && (0, e.jsx)(Wt, { strLabel: a }),
             ],
           }),
         });
       }
-      function Ft(t) {
+      function Wt(t) {
         const { strLabel: c } = t;
         return (0, e.jsx)(l.s, {
           background: "greyneutral-3",
@@ -1375,11 +1398,11 @@
           }),
         });
       }
-      function Dt(t) {
+      function Ut(t) {
         var c;
         const { description: n, asset: s, bHideActionsForUnique: a } = t,
           i = !(a && !n.commodity);
-        return (0, e.jsx)(At.Root, {
+        return (0, e.jsx)(Pt.Root, {
           description: n,
           asset: s,
           children: (0, e.jsxs)(l.s, {
@@ -1400,7 +1423,7 @@
                 align: "center",
                 minHeight: "360px",
                 justify: "center",
-                children: (0, e.jsx)(At.Image, {}),
+                children: (0, e.jsx)(Pt.Image, {}),
               }),
               (0, e.jsxs)(l.s, {
                 flexGrow: "1",
@@ -1410,19 +1433,19 @@
                 gapY: "2",
                 minWidth: "0",
                 children: [
-                  (0, e.jsx)(At.Name, {}),
-                  (0, e.jsx)(At.GameInfo, {
+                  (0, e.jsx)(Pt.Name, {}),
+                  (0, e.jsx)(Pt.GameInfo, {
                     hrefGame: `${u.TS.COMMUNITY_BASE_URL}market/search?appid=${null !== (c = n.appid) && void 0 !== c ? c : 0}`,
                   }),
-                  (0, e.jsx)(At.Descriptions, {}),
-                  i && (0, e.jsx)(At.MarketActions, {}),
+                  (0, e.jsx)(Pt.Descriptions, {}),
+                  i && (0, e.jsx)(Pt.MarketActions, {}),
                 ],
               }),
             ],
           }),
         });
       }
-      const Wt = new Map();
+      const Jt = new Map();
     },
     65423: (t, c, n) => {
       "use strict";
@@ -1618,24 +1641,35 @@
     },
     19997: (t, c, n) => {
       "use strict";
-      n.d(c, { x: () => o });
+      n.d(c, { x: () => h });
       var e = n(7850),
         l = n(39479),
         s = n(64238),
         a = n.n(s),
         i = n(75659),
         v = n(11526),
-        r = n(75180);
-      function o(t) {
-        const { as: c = "div", ref: n, ...s } = t,
-          i = (0, v.mz)({ ...s, className: a()(r.Grid, t.className) }, h),
-          o = c;
-        return (0, e.jsx)(l.J, {
-          "flow-children": "grid",
-          children: (0, e.jsx)(o, { ref: n, ...i }),
-        });
+        r = n(75180),
+        o = n(8527);
+      function h(t) {
+        var c;
+        const { as: n = "div", ref: s, focusable: i, navProps: h, ...u } = t,
+          p = (0, v.mz)({ ...u, className: a()(r.Grid, t.className) }, d),
+          f =
+            null !== (c = null != i ? i : null == h ? void 0 : h.focusable) &&
+            void 0 !== c
+              ? c
+              : !!u.onClick,
+          g = (0, e.jsx)(n, { ref: s, ...p });
+        return o.TS.IN_GAMEPADUI
+          ? (0, e.jsx)(l.J, {
+              "flow-children": "grid",
+              ...(h || {}),
+              focusable: f,
+              children: g,
+            })
+          : g;
       }
-      const h = [
+      const d = [
         ...i.h,
         {
           prop: "display",
@@ -2029,8 +2063,8 @@
       }
       var j = n(58256),
         _ = n(77914),
-        w = n(67619),
-        b = n(61023),
+        b = n(67619),
+        w = n(61023),
         y = n(89047),
         S = n(92148),
         M = n(59366),
@@ -2146,9 +2180,9 @@
         );
       }
       function R(t) {
-        return Y(t, !1);
+        return P(t, !1);
       }
-      function Y(t, c) {
+      function P(t, c) {
         const {
             rgOptions: n,
             filter: e = A,
@@ -2213,7 +2247,7 @@
           maxSelected: v,
         };
       }
-      const E = {
+      const Y = {
         Root: function (t) {
           const {
               children: c,
@@ -2347,7 +2381,7 @@
               multiselect: C,
               onClear: V,
               refPopover: j,
-              clearable: w,
+              clearable: b,
               filterPlaceholder: S,
               onIndexSelected: M,
               popoverPlacement: k,
@@ -2357,14 +2391,14 @@
             T = { tabIndex: 0, children: c },
             H = C ? Array.isArray(r) && r.length > 0 : !!r,
             O =
-              H && w
+              H && b
                 ? (0, e.jsx)(_.g, {
                     onClick: V,
                     cursor: "pointer",
                     hitSlop: !0,
                   })
                 : (0, e.jsx)(y.V, {}),
-            A = (0, e.jsx)(b.j, {
+            A = (0, e.jsx)(w.j, {
               beforeContent: n,
               afterContent: O,
               hasValue: H,
@@ -2392,7 +2426,7 @@
           });
         },
       };
-      function P(t) {
+      function E(t) {
         return t
           ? "string" == typeof t
             ? t
@@ -2413,7 +2447,7 @@
             filter: a,
             filterPlaceholder: i,
             placeholder: v,
-            getOptionLabel: r = P,
+            getOptionLabel: r = E,
             ...o
           } = t,
           h = R({
@@ -2444,9 +2478,9 @@
             }),
           ],
         });
-      }, E);
+      }, Y);
       function G(t) {
-        return Y(t, !0);
+        return P(t, !0);
       }
       const B = Object.assign(function (t) {
           const {
@@ -2456,7 +2490,7 @@
               filter: a,
               filterPlaceholder: i,
               placeholder: v,
-              getOptionLabel: r = P,
+              getOptionLabel: r = E,
               maxSelected: o,
               ...h
             } = t,
@@ -2497,7 +2531,7 @@
               }),
             ],
           });
-        }, E),
+        }, Y),
         $ = (0, l.createContext)(null);
       function F(t) {
         const c = (0, l.useContext)($);
@@ -2903,7 +2937,7 @@
                   active: l.facets[t.facet] && l.facets[t.facet][t.tag],
                   onActiveChange: (c) =>
                     ((t, c, e) => {
-                      const a = bt(l, t, c, e);
+                      const a = wt(l, t, c, e);
                       n({ ...l, facets: s(l.facets, a.facets) }, !0);
                     })(t.facet, t.tag, c),
                   label: t.strLabel,
@@ -2933,7 +2967,7 @@
               color: a ? "accent" : "dull",
               onClick: () => {
                 let t = { ...l, facets: { ...l.facets } };
-                for (const n of c) t = bt(t, n.facet, n.tag, !1);
+                for (const n of c) t = wt(t, n.facet, n.tag, !1);
                 n({ ...l, facets: s(l.facets, t.facets) }, !0);
               },
               children: "All",
@@ -2947,7 +2981,7 @@
                     active: l.facets[t.facet] && l.facets[t.facet][t.tag],
                     onActiveChange: (c) =>
                       ((t, c, e) => {
-                        const a = bt(l, t, c, e);
+                        const a = wt(l, t, c, e);
                         n({ ...l, facets: s(l.facets, a.facets) }, !0);
                       })(t.facet, t.tag, c),
                     label: t.strLabel,
@@ -2966,7 +3000,7 @@
           children: c,
         });
       }
-      function wt(t) {
+      function bt(t) {
         return (0, e.jsx)(nt.x, {
           gapY: "2",
           gapX: "2",
@@ -2978,7 +3012,7 @@
           ...t,
         });
       }
-      function bt(t, c, n, e) {
+      function wt(t, c, n, e) {
         const l = { ...t, facets: { ...t.facets, [c]: { ...t.facets[c] } } },
           s = "string" == typeof n ? [n] : n;
         for (const t of s) l.facets[c][t] = !0;
@@ -2991,7 +3025,7 @@
         const { facet: c, state: n, onStateChange: l } = t;
         switch (c.fieldType) {
           case "checkbox": {
-            const t = (t, c, e) => l(bt(n, t, c, e), !0);
+            const t = (t, c, e) => l(wt(n, t, c, e), !0);
             return (0, e.jsx)(gt, { ...c, value: n.facets, onChange: t });
           }
           case "select": {
@@ -3004,16 +3038,16 @@
                   e[`${c.facet}_${n}`] = { facet: c.facet, tag: n };
               }
               for (const t of c)
-                e[`${t.facet}_${t.tag}`] || (s = bt(s, t.facet, t.tag, !0)),
+                e[`${t.facet}_${t.tag}`] || (s = wt(s, t.facet, t.tag, !0)),
                   delete e[`${t.facet}_${t.tag}`];
-              for (const t of Object.values(e)) s = bt(s, t.facet, t.tag, !1);
+              for (const t of Object.values(e)) s = wt(s, t.facet, t.tag, !1);
               l(s, !0);
             };
             return (0, e.jsx)(rt, { ...c, value: n.facets, onChange: t });
           }
           case "toggle":
           case "togglebutton": {
-            const t = (t) => l(bt(n, c.facet, c.tag, t), !0),
+            const t = (t) => l(wt(n, c.facet, c.tag, t), !0),
               s = n.facets[c.facet] && n.facets[c.facet][c.tag];
             return "toggle" === c.fieldType
               ? (0, e.jsx)(xt, {
@@ -3184,7 +3218,7 @@
                   "number" != typeof r)
                 ) {
                   const c = d.current.getBoundingClientRect(),
-                    n = Yt(t.clientX - c.left, [0, c.width], [a, i]);
+                    n = Pt(t.clientX - c.left, [0, c.width], [a, i]);
                   u.current = { activeValueIndex: Ht(r, n), bMoved: !1 };
                 } else u.current = { activeValueIndex: 0, bMoved: !1 };
                 g(!0);
@@ -3209,8 +3243,8 @@
                 u.current
               ) {
                 const c = d.current.getBoundingClientRect(),
-                  n = Et({
-                    value: Yt(t.clientX - c.left, [0, c.width], [a, i]),
+                  n = Yt({
+                    value: Pt(t.clientX - c.left, [0, c.width], [a, i]),
                     min: a,
                     max: i,
                     step: o,
@@ -3231,8 +3265,8 @@
               )
                 return;
               const n = d.current.getBoundingClientRect(),
-                e = Yt(t.clientX - n.left, [0, n.width], [a, i]),
-                l = Et({ value: e, min: a, max: i, step: o }),
+                e = Pt(t.clientX - n.left, [0, n.width], [a, i]),
+                l = Yt({ value: e, min: a, max: i, step: o }),
                 s = Ht(r, e),
                 p = [...r];
               (p[s] = l), v(p), h && h(p);
@@ -3265,8 +3299,8 @@
           a = (0, l.useContext)(It);
         (0, f.wT)(a, "SliderRange must be used within a SliderRoot!");
         const { min: i, max: v } = a,
-          r = Pt(c, i, v),
-          o = 100 - Pt(n, i, v);
+          r = Et(c, i, v),
+          o = 100 - Et(n, i, v);
         return (0, z.Q)(
           s,
           (0, e.jsx)("div", {
@@ -3297,7 +3331,7 @@
           [d, i],
         );
         const m = p > -1,
-          x = { "--handle-pct": `${Pt(m ? v[p] : s, s, a)}%` };
+          x = { "--handle-pct": `${Et(m ? v[p] : s, s, a)}%` };
         m || (x.display = "none");
         const C = {
           ref: u,
@@ -3314,7 +3348,7 @@
               case "ArrowDown": {
                 const c = "ArrowRight" === t.key || "ArrowUp" === t.key,
                   n = r * (c ? 1 : -1),
-                  e = Et({ value: v[p] + n, min: s, max: a, step: r }),
+                  e = Yt({ value: v[p] + n, min: s, max: a, step: r }),
                   l = [...v];
                 (l[p] = e),
                   o(l),
@@ -3327,7 +3361,7 @@
               case "PageDown": {
                 const c = "PageUp" === t.key,
                   n = Math.round((a - s) / 10) * (c ? 1 : -1),
-                  e = Et({ value: v[p] + n, min: s, max: a, step: r }),
+                  e = Yt({ value: v[p] + n, min: s, max: a, step: r }),
                   l = [...v];
                 (l[p] = e),
                   o(l),
@@ -3346,17 +3380,17 @@
           { value: v[p], bDragActive: n.bDragActive },
         );
       }
-      function Yt(t, c, n) {
+      function Pt(t, c, n) {
         if (c[0] === c[1] || n[0] === n[1]) return n[0];
         const e = ((n[1] - n[0]) / (c[1] - c[0])) * (t - c[0]) + n[0];
         return zt.OQ(e, n[0], n[1]);
       }
-      function Et(t) {
+      function Yt(t) {
         const { value: c, min: n, max: e, step: l } = t,
           s = Math.round((c - n) / l) / (1 / l);
         return zt.OQ(s + n, n, e);
       }
-      function Pt(t, c, n) {
+      function Et(t, c, n) {
         return ((t - c) / (n - c)) * 100;
       }
       var Nt = n(48906);
@@ -3586,10 +3620,10 @@
         _c =
           n.p +
           "images/applications/community/deagle.png?v=valveisgoodatcaching",
-        wc =
+        bc =
           n.p +
           "images/applications/community/glock.png?v=valveisgoodatcaching",
-        bc =
+        wc =
           n.p +
           "images/applications/community/usp_silencer.png?v=valveisgoodatcaching",
         yc =
@@ -3625,12 +3659,12 @@
         Rc =
           n.p +
           "images/applications/community/negev.png?v=valveisgoodatcaching",
-        Yc =
+        Pc =
           n.p + "images/applications/community/m249.png?v=valveisgoodatcaching",
-        Ec =
+        Yc =
           n.p +
           "images/applications/community/knife_push.png?v=valveisgoodatcaching",
-        Pc =
+        Ec =
           n.p +
           "images/applications/community/knife_survival_bowie.png?v=valveisgoodatcaching",
         Nc =
@@ -3708,8 +3742,8 @@
           fiveseven: (0, s.YJ)(Vc),
           revolver: (0, s.YJ)(jc),
           deagle: (0, s.YJ)(_c),
-          glock: (0, s.YJ)(wc),
-          usp_silencer: (0, s.YJ)(bc),
+          glock: (0, s.YJ)(bc),
+          usp_silencer: (0, s.YJ)(wc),
           elite: (0, s.YJ)(yc),
           hkp2000: (0, s.YJ)(Sc),
           cz75a: (0, s.YJ)(Mc),
@@ -3722,9 +3756,9 @@
           sawedoff: (0, s.YJ)(Oc),
           xm1014: (0, s.YJ)(Ac),
           negev: (0, s.YJ)(Rc),
-          m249: (0, s.YJ)(Yc),
-          knife_push: (0, s.YJ)(Ec),
-          knife_survival_bowie: (0, s.YJ)(Pc),
+          m249: (0, s.YJ)(Pc),
+          knife_push: (0, s.YJ)(Yc),
+          knife_survival_bowie: (0, s.YJ)(Ec),
           knife_gypsy_jackknife: (0, s.YJ)(Nc),
           knife_falchion: (0, s.YJ)(Gc),
           knife_tactical: (0, s.YJ)(Bc),
@@ -4906,7 +4940,7 @@
               s || (s = l()),
                 (s[c] && s[c][n]) ||
                   (t || (t = { ...i, facets: { ...i.facets } }),
-                  (t = bt(t, c, n, !1)));
+                  (t = wt(t, c, n, !1)));
           x(e), t && v(t, !0);
         }, [u, i, v, h, d, p]);
         const C = (t = [], c = []) => {
@@ -4948,11 +4982,11 @@
           ].some((t) => t);
         return (0, e.jsxs)(e.Fragment, {
           children: [
-            (0, e.jsx)(wt, {
+            (0, e.jsx)(bt, {
               minWidth: n,
               children: h.map(({ facet: t, img: c, toggle: n }) =>
                 (0, e.jsx)(
-                  wn,
+                  bn,
                   {
                     ...t,
                     onChange: V,
@@ -5011,7 +5045,7 @@
               ],
             }),
             (0, e.jsx)(o.w, { size: "4", color: "dull-9", marginTop: "4" }),
-            (0, e.jsxs)(wt, {
+            (0, e.jsxs)(bt, {
               minHeight: "88px",
               minWidth: n,
               children: [
@@ -5169,7 +5203,7 @@
           })
         );
       });
-      function wn(t) {
+      function bn(t) {
         const { toggle: c, onChange: n, ...l } = t,
           s = (t, e) => {
             if (e && c && e.length > 1) {
@@ -5187,9 +5221,9 @@
           };
         return t.rgOptions.length > 15
           ? (0, e.jsx)(kn, { toggle: c, onChange: s, ...l })
-          : (0, e.jsx)(bn, { toggle: c, onChange: s, ...l });
+          : (0, e.jsx)(wn, { toggle: c, onChange: s, ...l });
       }
-      function bn(t) {
+      function wn(t) {
         const {
             rgOptions: c,
             strLabel: n,
@@ -5536,15 +5570,15 @@
         });
       }
       const Rn = 2;
-      function Yn(t, c, n) {
+      function Pn(t, c, n) {
         return (0, l.useMemo)(() => {
           if (!c) return [];
-          const e = Pn[t];
+          const e = En[t];
           return e ? e(c, n) : Nn(c, void 0, n);
         }, [c, n, t]);
       }
-      const En = 753,
-        Pn = { [En]: (t, c) => Nn(t, 3, c) };
+      const Yn = 753,
+        En = { [Yn]: (t, c) => Nn(t, 3, c) };
       function Nn(t, c, n) {
         const e = "number" == typeof c ? c : Rn,
           l = [],
@@ -5564,7 +5598,7 @@
         return (0, e.jsx)(e.Fragment, {
           children: c.flatMap((t, s) => [
             (0, e.jsxs)(
-              wt,
+              bt,
               {
                 children: [
                   t.map((t) =>
@@ -5605,7 +5639,7 @@
           r = v[$n];
         delete v[$n];
         !n.app || delete v[Fn];
-        const o = Yn(Bn, v, s);
+        const o = Pn(Bn, v, s);
         return (0, e.jsxs)(i.az, {
           ...a,
           children: [
@@ -5726,9 +5760,9 @@
                       ((t, c) => {
                         if (Wn.includes(t)) {
                           let t = s;
-                          for (const e of Wn) t = bt(t, n, e, c);
+                          for (const e of Wn) t = wt(t, n, e, c);
                           a(t, !0);
-                        } else a(bt(s, n, t, c), !0);
+                        } else a(wt(s, n, t, c), !0);
                       })(t, c),
                     label: l[t].localized_name,
                     icon: Un[t],
@@ -5988,7 +6022,7 @@
           V = (
             (null === (n = g.data) || void 0 === n ? void 0 : n.results) || []
           ).slice(0, 10),
-          w = m({
+          b = m({
             onTextChange: i,
             suggestions: C.map((t) => `app|${t.appid}`).concat(
               V.map((t) => `item|${t.market_hash_name}`),
@@ -6015,9 +6049,9 @@
               }
             },
           }),
-          [b, y] = (0, l.useState)(!1),
+          [w, y] = (0, l.useState)(!1),
           [S, M] = (0, l.useState)(!1),
-          z = b || !S,
+          z = w || !S,
           k = (0, Zn.wY)(
             (0, l.useCallback)((t) => {
               const c = t.contentRect.width < 300;
@@ -6056,7 +6090,7 @@
                 )
               : at.Localize("#AdvancedSearch_TextSearch_Placeholder");
         return (0, e.jsxs)(x.Root, {
-          state: w,
+          state: b,
           popoverWidth: h,
           children: [
             (0, e.jsx)(x.TextInput, {
@@ -6068,6 +6102,7 @@
               ref: k,
               onFocus: () => M(!0),
               onBlur: () => M(!1),
+              maxLength: 90,
               clearable: !0,
             }),
             (0, e.jsxs)(x.Suggestions, {
@@ -6298,7 +6333,7 @@
           }, [h, o, V, r, v]),
           g.isLoading)
         )
-          return (0, e.jsx)(be, {});
+          return (0, e.jsx)(we, {});
         if (g.isError || !g.data || !C || !x)
           return (0, e.jsx)(fe, {
             children: (0, e.jsx)(d.EY, {
@@ -6361,7 +6396,7 @@
         let p = [];
         if (v)
           for (let t = 0; t < 20; t++)
-            p.push((0, e.jsx)(w.O, { width: "92px", height: "138px" }, t));
+            p.push((0, e.jsx)(b.O, { width: "92px", height: "138px" }, t));
         const f = s.iA.logged_in,
           [g, m] = (0, l.useState)(null),
           x = (0, Zn.wY)(m);
@@ -6570,7 +6605,7 @@
               enabled: !!t,
             });
           })(c);
-        if (l.isLoading) return (0, e.jsx)(be, {});
+        if (l.isLoading) return (0, e.jsx)(we, {});
         if (l.isError || !l.data)
           return (0, e.jsx)(fe, {
             children: (0, e.jsx)(d.EY, {
@@ -6589,7 +6624,7 @@
       }
       function me(t) {
         const { appid: c, facets: n, ...l } = t,
-          s = Yn(c, n);
+          s = Pn(c, n);
         return 0 === s.length
           ? (0, e.jsx)(e.Fragment, {
               children: (0, e.jsxs)(fe, {
@@ -6711,7 +6746,7 @@
           align: "center",
           gap: "2",
           children: [
-            c && (0, e.jsx)(we, { icon: c, size: s }),
+            c && (0, e.jsx)(be, { icon: c, size: s }),
             (0, e.jsx)(d.EY, {
               color: l ? "accent-8" : void 0,
               contrast: l ? void 0 : "title",
@@ -6721,7 +6756,7 @@
         });
       }
       const _e = {};
-      function we(t) {
+      function be(t) {
         const { icon: c, size: n } = t,
           [s, a] = (0, l.useState)(!!_e[c]);
         (0, l.useEffect)(() => {
@@ -6746,7 +6781,7 @@
             })
           : (0, e.jsx)(i.az, { width: r, height: r, background: "dull-10" });
       }
-      function be() {
+      function we() {
         return (0, e.jsx)(r.s, {
           justify: "center",
           align: "center",

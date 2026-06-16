@@ -1559,48 +1559,49 @@
     },
     54492: (e, t, n) => {
       "use strict";
-      n.d(t, { J: () => d });
+      n.d(t, { J: () => p });
       var a = n(7850),
         r = n(72737),
         s = n(34104),
         i = n(39777),
-        o = n(91822),
+        o = n(93341),
         c = n(52038),
         l = n(78327),
-        u = n(58855);
-      function d(e) {
-        const { bAllowOutsideOfDeck: t } = e;
-        return (0, l.Qn)() || t ? (0, a.jsx)(p, { ...e }) : null;
-      }
+        u = n(58855),
+        d = n(53305);
       function p(e) {
+        const { bAllowOutsideOfDeck: t } = e;
+        return (0, l.Qn)() || t ? (0, a.jsx)(g, { ...e }) : null;
+      }
+      function g(e) {
         const { className: t, id: n } = e,
           l = (0, i.qI)(n),
-          [d, p] = (0, o.FD)();
-        let g = "unknown";
-        if (p == o.H1)
+          [p, g] = (0, o.FD)();
+        let m = "unknown";
+        if (g == d.c9)
           switch (l.data?.steam_os_compat_category) {
             case r.Hi:
-              g = "steamoscompatible";
+              m = "steamoscompatible";
               break;
             case r.u_:
-              g = "steamosunsupported";
+              m = "steamosunsupported";
               break;
             case r.xs:
-              g = "steamosunknown";
+              m = "steamosunknown";
           }
         else
           switch (l.data?.steam_deck_compat_category) {
             case s.I2:
-              g = "verified";
+              m = "verified";
               break;
             case s.sd:
-              g = "playable";
+              m = "playable";
               break;
             case s.V8:
-              g = "unsupported";
+              m = "unsupported";
           }
         return (0, a.jsx)("div", {
-          className: (0, c.A)(u.CompatIcon, "ds_steam_deck_compat", g, t),
+          className: (0, c.A)(u.CompatIcon, "ds_steam_deck_compat", m, t),
         });
       }
     },

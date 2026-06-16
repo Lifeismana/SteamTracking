@@ -1031,7 +1031,6 @@ message CMsgClientLogon {
 	optional string machine_name = 96;
 	optional string machine_name_userchosen = 97;
 	optional string country_override = 98;
-	optional bool is_steam_box_deprecated = 99;
 	optional uint64 client_instance_id = 100;
 	optional string two_factor_code = 101;
 	optional bool supports_rate_limit_response = 102;
@@ -1039,10 +1038,8 @@ message CMsgClientLogon {
 	optional int32 priority_reason = 104;
 	optional .CMsgClientSecret embedded_client_secret = 105;
 	optional bool disable_partner_autogrants = 106;
-	optional bool is_steam_deck_deprecated = 107;
 	optional string access_token = 108;
 	optional bool is_chrome_os = 109;
-	optional bool is_tesla_deprecated = 110;
 	optional uint32 gaming_device_type = 111;
 }
 
@@ -1404,6 +1401,11 @@ message CMsgClientSettings {
 	optional bool steamos_vrs_enabled = 22015;
 	optional bool steamos_separate_led_colors = 22016;
 	optional bool steamos_wifi_reload_wifi_driver_on_sleep = 22017;
+	optional bool steamos_cec_control = 22019;
+	optional bool steamos_cec_suspend_tv = 22020;
+	optional bool steamos_cec_suspend_device = 22021;
+	optional bool steamos_cec_wake_tv = 22022;
+	optional bool steamos_cec_wake_device = 22023;
 	optional bool setting_validation_bool = 23001;
 	optional int32 setting_validation_enum = 23002 [(.description) = "enum"];
 	optional int32 setting_validation_int32 = 23003;
@@ -2247,11 +2249,13 @@ message CMsgSystemDisplay {
 	optional bool is_hdr_capable = 16;
 	optional bool is_hdr_output_active = 17;
 	repeated int32 supported_refresh_rates = 18;
+	optional int32 rgb_range = 19 [(.description) = "enum"];
 }
 
 message CMsgSystemDisplayManagerSetMode {
 	optional int32 display_id = 1;
 	optional int32 mode_id = 2;
+	optional int32 rgb_range = 3 [(.description) = "enum"];
 }
 
 message CMsgSystemDisplayManagerState {
@@ -3105,6 +3109,7 @@ message CVRGamepadUI_Message_SetHMDSettings_Request {
 	optional string performance_profile_value = 7;
 	optional bool perf_graph_in_hmd = 8;
 	optional bool record_vr_stats = 9;
+	optional bool record_tracking = 10;
 }
 
 message CVRGamepadUI_Message_SetHMDSettings_Response {
@@ -3305,6 +3310,19 @@ message CVRGamepadUIShared_PathProperty_HMDSettings {
 	optional float display_brightness_user_value = 1;
 	optional float display_brightness_min = 2;
 	optional float display_brightness_max = 3;
+	optional float display_refresh_rate_value = 4;
+	repeated float display_refresh_rates_available = 5;
+	optional bool supersample_manual_override = 10;
+	optional float supersample_scale_value = 11;
+	optional float supersample_scale_min = 12;
+	optional float supersample_scale_max = 13;
+	optional float supersample_scale_step = 14;
+	repeated uint32 supersample_effective_resolution = 15;
+	optional uint32 frames_to_throttle_value = 20;
+	optional bool motion_smoothing_value = 21;
+	optional string performance_profile_value = 50;
+	optional bool perf_graph_in_hmd_value = 51;
+	optional bool record_vr_stats_value = 52;
 }
 
 message CVRGamepadUIShared_PathProperty_PowerOptions {
@@ -3631,6 +3649,7 @@ message StoreItem_PurchaseOption {
 	optional bool price_cannot_be_displayed_as_discount = 52 [default = false];
 	optional int64 price_to_base_discount_on = 53;
 	optional uint32 free_with_master_sub_appid = 54;
+	optional string formatted_lowest_recent_price = 55;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist
@@ -3638,6 +3657,7 @@ message StoreItem_PurchaseOption_Discount {
 	optional int64 discount_amount = 1;
 	optional string discount_description = 2;
 	optional uint32 discount_end_date = 3;
+	optional uint32 master_sub_appid = 4;
 }
 
 // Used by: Checkout, MarketingMessages, PartnerStoreBrowse, SteamCharts, Store, StoreAppSimilarity, StoreBrowse, StoreMarketing, StoreQuery, StoreTopSellers, UserStoreVisit, Wishlist

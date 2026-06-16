@@ -3027,7 +3027,8 @@
       function n(e) {
         const { data: t } = (0, s.Yo)(e),
           r = (0, a.dy)();
-        if (!t) return;
+        if (void 0 === t) return;
+        if (null === t) return null;
         const i = [...(t.highlights || []), ...(t.other_trailers || [])];
         return r ? i.filter((e) => !!e.all_ages) : i;
       }

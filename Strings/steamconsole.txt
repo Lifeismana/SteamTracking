@@ -46,96 +46,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
 #!/bin/sh\nexit 0\n
 #FLR
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
 #include
 #include is NULL
 #tDq
@@ -340,11 +250,11 @@ $\nY8O
 0000000000000000000000000000000000000000
 00:00:00
 01/01/00
-0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
 1000
+0123456789
 10CSteamUser
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryI20ModuleAddressRange_tE
@@ -1368,7 +1278,6 @@ G7:VulkanPipelinesV%u%%
 GAME_
 GCC: (Debian 9.3.0-22) 9.3.0
 GCash
-GKR^
 GLIBC_2.17
 Galician
 Game
@@ -2512,7 +2421,6 @@ Unknown Driver
 Unknown GameID type
 Unknown HTTP 4xx
 Unknown HTTP 5xx
-Unknown destination '%s' - use 'local' or 'cloud'\n
 Unknown error
 Unknown version %d for vpk %s
 Unloading Steam API...
@@ -2548,7 +2456,7 @@ Urdu
 UsableInGame
 Usage: api_logging <enabled> <verbose>\n
 Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>\n
-Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags> [<destination>]\n
+Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags>\n
 Usage: force_install_dir <directory>\n
 Usage: set_var <name> <value>
 Usage: sign_install_script <appid> <filename> <output filename>\n
@@ -3190,6 +3098,7 @@ controller_rog_ally
 controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
+controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
 controller_switch_joycon_left
@@ -3287,7 +3196,7 @@ downloading
 driver
 driver_desc
 drm_wrap
-drm_wrap <appid> <input filename> <output filename> <toolname> <flags> [<destination>]: upload executable to back end for DRM wrapping
+drm_wrap <appid> <input filename> <output filename> <toolname> <flags>: upload executable to back end for DRM wrapping
 dual_stack
 dutch
 dynamic_cast
@@ -3818,6 +3727,7 @@ month
 mopay
 mount
 mp4-single
+ms-MY
 msn.com
 msync
 munmap

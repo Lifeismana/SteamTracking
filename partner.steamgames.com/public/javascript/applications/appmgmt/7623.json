@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "La bande-annonce peut ne pas représenter l'expérience de jeu réelle sur Steam Deck",
     "StoreItemFound": "%1$s trouvé(s) (%2$s)",
     "StoreItemNotFound": "Introuvable(s) (%1$s)",
+    "SteamURLAccepted": "%1$s URL acceptée",
+    "SteamURLInvalid": "Erreur : l'URL ne redirige pas vers un article du magasin ou de la communauté Steam.",
+    "PriceGrid_NormalPrice": "NORMALEMENT",
+    "PriceGrid_RecentPrice": "PLUS BAS (30 DER. JOURS)",
+    "PriceGrid_CurrentPrice": "ACTUELLEMENT",
     "Dummy": "dummy"
 }

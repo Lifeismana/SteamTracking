@@ -162,7 +162,7 @@
           "marketingmessage_art_eventcapsule",
           "marketingmessage_art_2_eventcapsule",
         ],
-        h = ["spotlight_art", "spotlight_art_hero"],
+        h = ["spotlight_art_hero"],
         g = [...n, ...o, ...a, ...r, ...l, ...c, ...h];
       function d(e) {
         return Array.isArray(e) ? e[0] : e;

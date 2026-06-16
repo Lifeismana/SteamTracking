@@ -849,6 +849,7 @@ This should take less than a minute."
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Spanish-Latin America)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamese)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonesian)"
+"SteamUI_Selection_Malay"		"Bahasa Melayu (Malay)"
 
 
 
@@ -5066,6 +5067,7 @@ Set a category for these games to help you find them quickly and organize your L
 "DownloadRegion_br_manaus"			"Brazil - Manaus"
 "DownloadRegion_br_belem"			"Brazil - Belém"
 "DownloadRegion_br_salvador"			"Brazil - Salvador"
+"DownloadRegion_guam"			"Guam"
 
 "SettingsController_AutosaveName"	"Controller Configuration"
 "ControllerBinding_Offline_Save"	"[Offline AutoSave]"

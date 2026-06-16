@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Traileri ei välttämättä edusta todellista pelikokemusta Steam Deckillä",
     "StoreItemFound": "%1$s Löydettiin %2$s",
     "StoreItemNotFound": "Ei löydetty %1$s",
+    "SteamURLAccepted": "%1$s – URL-osoite hyväksytään",
+    "SteamURLInvalid": "Virhe! URL ei osoita Steam-kohteeseen (kauppaan tai yhteisöön)",
+    "PriceGrid_NormalPrice": "NORMAALIHINTA",
+    "PriceGrid_RecentPrice": "30 PÄIVÄN ALIN",
+    "PriceGrid_CurrentPrice": "NYT",
     "Dummy": "dummy"
 }

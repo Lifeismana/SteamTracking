@@ -3,6 +3,13 @@
   {
     chunkid: (module) => {
       module.exports = {
+        TrailerTitle: "_2jWguvQbMj3mHe0ytRpzNm",
+        Category: "_3oxiEsdJdYRkKvYSWGAfih",
+        Visible: "_3afqMxr7HnEfdxJwBg6GRd",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
         AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
@@ -785,16 +792,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let { children: _ } = _;
@@ -806,6 +803,65 @@
           audioMuted: _,
           setAudioMuted: _,
           children: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 0,
+        _ = 1,
+        _ = 2;
+      function _(_) {
+        const {
+            name: _,
+            trailerCategory: _,
+            trailerDisplay: _,
+            mouseOver: _,
+          } = _,
+          [_, _] = _.useState(!1);
+        if (
+          (_.useEffect(() => {
+            _ != _ && _(!0);
+          }, [_]),
+          _.useEffect(() => {
+            if (_) return void _(!0);
+            if (!_) return;
+            const _ = setTimeout(() => _(!1), 3e3);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          null == _ || _ == _)
+        )
+          return;
+        const _ =
+          _ == _
+            ? _._.Localize("#StoreTrailer_Title_TrailerPreview")
+            : (0, _._)(_);
+        return (0, _.jsx)("div", {
+          className: (0, _._)({
+            [_().TrailerTitle]: !0,
+            [_().Visible]: _,
+          }),
+          children: _._.LocalizeReact(
+            "#StoreTrailer_Title_Combiner",
+            (0, _.jsx)("span", {
+              className: _().Category,
+              children: _,
+            }),
+            _,
+          ),
         });
       }
       const _ = new _._("TrailerAppVideo"),
@@ -825,14 +881,13 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
-          _ = (function (_, _) {
-            const _ = _?.GetAllTrailers().GetAllTrailers("blocked" == _);
-            return _ && _.length > 0 ? _[0] : void 0;
-          })(_, _),
-          _ = (_ ?? !0) && _ && !_.BIsAllAges() && "masked" == _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (_ ?? !0) && _ && !_.all_ages && "masked" == _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(_._),
+          [_, _] = _.useState(_),
           _ = _.useRef(void 0),
           _ = _.useRef(void 0),
           [_, _] = _.useState(),
@@ -861,31 +916,32 @@
           }, [_, _, _, _]);
         const _ = (function (_, _, _, _, _) {
           return _.useCallback(() => {
-            _ == _._
+            _ == _
               ? _(!0)
-              : _ == _._ && _.current
+              : _ == _ && _.current
                 ? _.current.paused
                   ? _.current.play()
                   : _.current.pause()
-                : _ == _._ && _.current
+                : _ == _ && _.current
                   ? _.current.IsPaused()
                     ? _.current.Play()
                     : _.current.Pause()
-                  : _ == _._ && _ && _.TogglePlayPause();
+                  : _ == _ && _ && _.TogglePlayPause();
           }, [_, _, _, _, _]);
         })(_, _, _, _, _);
         _.useEffect(() => {
           _ && (_.current = _);
         }, [_, _]);
         const _ = _.GetScreenshots("allowed" != _),
-          _ = _ && _.length > 0 ? _[0] : _.GetAssets().GetMainCapsuleURL();
+          _ =
+            _ && _.length > 0 ? _[0] : _ ? (0, _._)(_, "main_capsule") : void 0;
         return (0, _.jsxs)(_._, {
           className: _().AppCarouselTrailerCtn,
           onMouseEnter: () => _(!0),
           onMouseLeave: () => _(!1),
           children: [
             (0, _.jsx)("img", {
-              className: (0, _._)(_().AppMainCap, _ != _._ && _().Hidden),
+              className: (0, _._)(_().AppMainCap, _ != _ && _().Hidden),
               src: _,
               onClick: _,
             }),
@@ -898,9 +954,9 @@
                   (0, _._)(_ ?? _, String(!_), 3650), _(_), _(_);
                 },
               }),
-            (0, _.jsx)(_._, {
+            (0, _.jsx)(_, {
               name: _.GetName(),
-              trailerCategory: _?.GetTrailerCategory(),
+              trailerCategory: _?.trailer_category,
               trailerDisplay: _,
               mouseOver: _,
             }),
@@ -969,13 +1025,11 @@
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
           _ = _?.GetMicroTrailer("blocked" == _),
+          [_, _] = (0, _.useState)(null),
           _ = !!_ || !!_;
         _.useEffect(() => {
           let _ = !1;
-          _ &&
-            _ &&
-            _ &&
-            (_ = _ === _._ || (_ === _._ && !_) || (_ === _._ && !_)),
+          _ && _ && _ && (_ = _ === _ || (_ === _ && !_) || (_ === _ && !_)),
             _(_),
             _?.(_ && _);
         }, [_, _, _, _, _, _, _, _]),
@@ -997,27 +1051,27 @@
           })(_, _),
           _.useEffect(() => {
             _ ||
-              (_(_._),
+              (_(_),
               _(!1),
               _(!1),
               _.current && (_.current.pause(), (_.current.currentTime = 0)),
-              _.current && (_.current.Pause(), _.current.SeekToStart()));
+              _ && (_.Pause(), _.SeekToStart()));
           }, [_, _, _, _]);
         const _ = _.useRef(!1);
         return (
           _.useEffect(() => {
-            if (_ && _ === _._)
+            if (_ && _ === _)
               if ((_(!0), _))
-                if (_.current) {
-                  _.Debug("Starting microtrailer"), _(_._);
+                if (_) {
+                  _.Debug("Starting microtrailer"), _(_);
                   const _ = () =>
                     (function (_, _, _) {
                       if (_.current) return;
                       (_.current = !0),
                         _.Debug("Starting main trailer"),
-                        _(_._),
+                        _(_),
                         __webpack_require__.Play();
-                    })(_, _, _.current);
+                    })(_, _, _);
                   _ || !_.current
                     ? _()
                     : (_(!0),
@@ -1030,7 +1084,7 @@
                           _.Warning(`Failed to play ${_}: `, _);
                       }));
                 } else
-                  _ && (_.Debug("Starting broadcast player"), _(_._), _.Play());
+                  _ && (_.Debug("Starting broadcast player"), _(_), _.Play());
               else _.Debug("Showing image");
             var _, _, _;
           }, [_, _, _, _, _, _, _, _, _]),
@@ -1058,18 +1112,18 @@
             const [_, _] = _.useState(!1);
             _.useEffect(() => {
               _ && !_
-                ? _ == _._ && _ && _
+                ? _ == _ && _ && _
                   ? (__webpack_require__.pause(), _(!0))
-                  : _ == _._ && _ && _
+                  : _ == _ && _ && _
                     ? (_.Pause(), _(!0))
-                    : _ == _._ && _ && !_.IsPaused() && (_.Pause(), _(!0))
+                    : _ == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
                 : !_ &&
                   _ &&
-                  (_ == _._ && _
+                  (_ == _ && _
                     ? __webpack_require__.play()
-                    : _ == _._ && _
+                    : _ == _ && _
                       ? _.Play()
-                      : _ == _._ && _ && _.IsPaused() && _.Play(),
+                      : _ == _ && _ && _.IsPaused() && _.Play(),
                   _(!1));
             }, [_, _, _, _, _, _, _, _]);
           })(_, _, _.current, _, _.current, _, _),
@@ -1109,6 +1163,7 @@
                     !_ &&
                     (0, _.jsx)(_, {
                       ref: _,
+                      onRefChange: _,
                       trailer: _,
                       eTrailerDisplay: _,
                       fadeRatio: _,
@@ -1139,6 +1194,7 @@
           fadeRatio: _,
           onPlayPauseChange: _,
           onPlaybackEnd: _,
+          onRefChange: _,
         } = _;
         (0, _.useEffect)(() => {
           if (void 0 !== _ && _.current) {
@@ -1147,17 +1203,22 @@
             _.current.SetVolume(_, _);
           }
         }, [_, _]);
-        let _ = _ != _._,
+        let _ = _ != _,
           _ = _(!1, _);
+        const _ = (0, _.useMemo)(() => (0, _._)(_), [_]),
+          _ = (0, _.useCallback)((_) => {
+            (_.current = _), _(_);
+          }, []);
         return (0, _.jsx)(_, {
           children: (0, _.jsx)("div", {
             className: _,
             children: (0, _.jsx)(_._, {
               ref: _,
-              dashManifests: __webpack_require__.GetTrailersDash(),
-              hlsManifest: __webpack_require__.GetTrailerHls(),
+              dashManifests: _.rgDashTrailers,
+              hlsManifest: _.rgHlsTrailers[0],
+              captionManifest: _.captions_manifest,
               screenshot: "",
-              altText: "",
+              altText: _.trailer_name,
               forcePause: _,
               muteWhenAutoplayBlocked: !0,
               onPlaybackEnd: _,
@@ -1169,9 +1230,9 @@
       function _(_, _) {
         return (0, _._)({
           [_().AppVideo]: !0,
-          [_().PlayFullTrailer]: _ == _._,
-          [_().PlayMicrotrailer]: _ == _._,
-          [_().NoTrailer]: _ == _._,
+          [_().PlayFullTrailer]: _ == _,
+          [_().PlayMicrotrailer]: _ == _,
+          [_().NoTrailer]: _ == _,
           [_().Microtrailer]: _,
           [_().Trailer]: !_,
         });
@@ -1248,7 +1309,7 @@
               (0, _.jsx)(_._, {
                 eDisplay: _,
                 className: _().DeckVerifiedLogo,
-                storeItem: _,
+                storeItemPlatform: _?.GetPlatforms(),
               }),
             (0, _.jsxs)("div", {
               className: _().VideoArea,
@@ -1614,7 +1675,7 @@
                       ? 1
                       : __webpack_require__.has(_)
                         ? __webpack_require__.get(_) -
-                          __webpack_require__.get(_)
+                          (__webpack_require__.get(_) ?? 0)
                         : _.get(_) - _.get(_),
                 ),
               [_, _, _],
@@ -1669,7 +1730,8 @@
           ),
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = new _._("DiscoveryQueueWizard").Debug,
         _ = 1,
         _ = 1400,
@@ -1825,6 +1887,8 @@
           })((_) => _(_), _.length),
           _ = (_) => _._(_ + _, _) && (_._(_, -1, 1) || _),
           _ = (0, _._)(_._.STORE_BASE_URL + "explore?dq=widget"),
+          _ = !(0, _._)() && !(0, _._)() && _ === _._._,
+          _ = (0, _._)(_._.STORE_BASE_URL + "explore/next/" + _._._),
           _ = _[_] !== _,
           { nQueueStart: _, nCount: _ } = (function (_, _) {
             let _ = 0;
@@ -1881,6 +1945,17 @@
                         }),
                       ),
                     }),
+                    _ &&
+                      (0, _.jsx)(_._, {
+                        className: _().ClassicQueueLink,
+                        children: (0, _._)(
+                          "#DiscoveryQueue_ClassicQueue_Link",
+                          (0, _.jsx)(_._, {
+                            className: _().LearnMoreLink,
+                            href: (0, _._)(_),
+                          }),
+                        ),
+                      }),
                     (0, _.jsx)(_._, {
                       className: _().ControlsCtn,
                       children: (0, _.jsx)(_._, {

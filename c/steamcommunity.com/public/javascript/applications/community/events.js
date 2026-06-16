@@ -289,15 +289,14 @@
                               .slice(0, _)
                               .map((_) => {
                                 const _ = _
-                                    ? (_) => {
-                                        _(_),
-                                          _.stopPropagation(),
-                                          _.preventDefault();
-                                      }
-                                    : void 0,
-                                  _ = _._;
+                                  ? (_) => {
+                                      _(_),
+                                        _.stopPropagation(),
+                                        _.preventDefault();
+                                    }
+                                  : void 0;
                                 return (0, _.jsx)(
-                                  _,
+                                  _._,
                                   {
                                     event: _,
                                     onClick: _,

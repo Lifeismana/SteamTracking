@@ -325,97 +325,7 @@
 #ETHw
 #FLR
 #PCDATA
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
 #Q7z
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
 #\t#\v#'#)#/#3#5#E#Q#S#Y#c#k#
 #\v+(bF&drJ:x#
 #]hK Ed
@@ -825,6 +735,7 @@ $ffn
 &\n"k_EClanESportTournamentStreamEvent
 &\n"k_EClanPreAnnounceMajorUpdateEvent
 &\n"k_EClientPersonaStateFlagQueryPort
+&\n"k_ECodecUsagePlatformSteamHardware
 &\n"k_ESteamReviewScore_MostlyNegative
 &\n"k_ESteamReviewScore_MostlyPositive
 &aacute;
@@ -1743,17 +1654,14 @@ $ffn
 0.15
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
+00:54:04
 01/01/00
-1000
-1024
-10000
 0123456789
 0123456789.
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-03:02:02
 08bX
 0?0L
 0A/8
@@ -1794,6 +1702,9 @@ $ffn
 1.5.6
 10.0.0.0/8
 100 127.0.0.1 stale
+1000
+1024
+10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2072,7 +1983,9 @@ $ffn
 12CProtoBufMsgIvE
 12CRefCounted1I29IHTTPStreamingResponseHandler20CRefCountServiceBaseILb1E6CRefMTEE
 12CStdMemAlloc
+12CVideoBuffer
 12CVideoPlayer
+12IVideoBuffer
 12IVideoPlayer
 13CAudioEncoder
 13CHTTPResponse
@@ -2345,6 +2258,7 @@ $ffn
 3-WH
 30!]^JV
 3072
+30000
 30>9
 30CWorkItemNetFilterOnDisconnect
 31CAdHocValidation_SimpleCallback
@@ -2380,7 +2294,6 @@ $ffn
 3|rN>
 4000
 4096
-30000
 41CHTTPDefaultRedirectEnableHandlerInternal
 41CNetConnectionImmediateDisconnectWorkItem
 44,4
@@ -2430,9 +2343,9 @@ $ffn
 6*Fc7
 6-nn
 6144
+60000000
 64CK\vH
 65536
-60000000
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -4687,6 +4600,7 @@ CreateBoundSocket: asked to bind to local v6 address (%s), but k_uNetFlagAllowIP
 CreateBoundSocket: failed to create socket, error %s (%d)\n
 CreateInterface
 CreateRTMPStream
+CreateVideoBuffer
 CreateVideoEncoder
 CreateVideoPlayer
 CreateVideoRecordingSegmentWriter
@@ -4928,6 +4842,7 @@ DeleteAudioEncoder
 DeleteAudioFileDecoder
 DeleteAudioResampler
 DeleteRTMPStream
+DeleteVideoBuffer
 DeleteVideoDecoder
 DeleteVideoEncoder
 DeleteVideoPlayer
@@ -6007,8 +5922,9 @@ HTTP/1.0
 HTTP/1.1
 HTTP/1.1 101 Switching Protocols\r\n
 HTTP/2 was not negotiated for COpenSSLConnection\n
-HTTPClient address Invalid! DispatchRequest - %p finished (%s) successfull (%s) \n
+HTTPClient address invalid! DispatchRequest - %p finished (%s) successfull (%s) \n
 HTTPClient has too many reqs already queued waiting for connection to address %s! DispatchRequest - %p as failure early. \n
+HTTPClient proxy connect address invalid! DispatchRequest - %p finished (%s) successfull (%s) \n
 HTTPClient shutting down - DispatchRequest - %p finished (%s) successfull (%s) \n
 HTTPMirror
 HTTPS Tunnel established, proceeding to send actual HTTP request through OpenSSL with connection %p\n
@@ -6590,7 +6506,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun  2 2026
+Jun  9 2026
 June
 K'iche'
 K(\f]C15
@@ -11098,6 +11014,7 @@ aria_init_key
 armenian
 array
 asctime_r
+asin
 asn1
 asn1 encoding routines
 asn1 error
@@ -12082,6 +11999,7 @@ controller_rog_ally
 controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
+controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
 controller_switch_joycon_left
@@ -14533,7 +14451,6 @@ k_EClanTripEvent
 k_EClientPersonaStateFlagStatus
 k_ECodecUsagePlatformLinux
 k_ECodecUsagePlatformMacOS
-k_ECodecUsagePlatformSteamDeck
 k_ECodecUsagePlatformUnknown
 k_ECodecUsagePlatformWindows
 k_ECodecUsageReasonBroadcasting
@@ -16509,6 +16426,7 @@ mp r not prime
 mp4-single
 mp4a.40.2
 mprotect
+ms-MY
 msCTLSign
 msCodeCom
 msCodeInd
@@ -17581,6 +17499,7 @@ popconfig
 popen
 port
 portuguese
+position_is_waitlist
 positive_int_value
 posix_fadvise
 posix_memalign
@@ -17799,7 +17718,9 @@ quantil
 quechua
 queue
 queue_head_position_now
+queue_in_waitlist
 queue_position
+queue_waitlist_token
 quot
 qwest
 qwilt
@@ -17950,6 +17871,7 @@ res master
 reseed error
 reservation_country_code
 reservation_state
+reservation_type
 reserved
 reserved_range
 resizeNumBits >= 0
@@ -19998,6 +19920,7 @@ userClass
 userId
 userNotice
 userPassword
+user_waitlist_token
 usleep
 utf8only
 utime

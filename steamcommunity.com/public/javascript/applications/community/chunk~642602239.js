@@ -600,10 +600,10 @@
       i.d(t, {
         Bw: () => R,
         EX: () => E,
-        Hx: () => j,
+        Hx: () => G,
         JP: () => B,
         LJ: () => C,
-        OG: () => G,
+        OG: () => j,
         PH: () => n,
         T7: () => I,
         tj: () => k,
@@ -836,7 +836,7 @@
           "forceAbsolute" === i || !w(t, e) ? "absolute" : "relative",
         );
       }
-      function G(e) {
+      function j(e) {
         const { eventModel: t, route: i, bPopup: n = !0 } = e,
           a = w(i, t),
           s = T(t, i, a ? "relative" : "absolute");
@@ -847,7 +847,7 @@
           a && s ? (0, r.jsx)(d.rd, { push: !0, to: s }) : null
         );
       }
-      function j(e, t, i) {
+      function G(e, t, i) {
         const n = A(e, t, !1);
         return "admin" === i ? n + "partnerevents" : "";
       }
@@ -1092,9 +1092,9 @@
           hK: () => B,
         });
       var s = {};
-      i.r(s), i.d(s, { rg: () => R, kE: () => G });
+      i.r(s), i.d(s, { rg: () => R, kE: () => j });
       var o = {};
-      i.r(o), i.d(o, { hu: () => j, yt: () => k });
+      i.r(o), i.d(o, { hu: () => G, yt: () => k });
       var l = i(80613),
         c = i.n(l),
         d = i(89068),
@@ -1118,8 +1118,8 @@
         T = 13,
         M = 14,
         R = 1,
-        G = 2,
-        j = 1,
+        j = 2,
+        G = 1,
         k = 3;
       function x(e) {
         return "unknown EVirtualItemRewardEvent ( " + e + " )";
@@ -3231,77 +3231,19 @@
           return "CSteamAwards_Nominate_Request";
         }
       }
-      class G extends s.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            G.prototype.nominations || l.Sg(G.M()),
-            s.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
-                fields: { nominations: { n: 1, c: A, r: !0, q: !0 } },
-              }),
-            G.sm_m
-          );
-        }
-        static MBF() {
-          return G.sm_mbf || (G.sm_mbf = l.w0(G.M())), G.sm_mbf;
-        }
-        toObject(e = !1) {
-          return G.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return l.BT(G.M(), e, t);
-        }
-        static fromObject(e) {
-          return l.Uq(G.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (o().BinaryReader)(e),
-            i = new G();
-          return G.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return l.zj(G.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (o().BinaryWriter)();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          l.i0(G.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (o().BinaryWriter)();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_Nominate_Response";
-        }
-      }
       class j extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            j.prototype.category_id || l.Sg(j.M()),
-            s.Message.initialize(this, e, 0, -1, void 0, null);
+            j.prototype.nominations || l.Sg(j.M()),
+            s.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             j.sm_m ||
               (j.sm_m = {
                 proto: j,
-                fields: {
-                  category_id: {
-                    n: 1,
-                    br: l.qM.readUint32,
-                    bw: l.gp.writeUint32,
-                  },
-                },
+                fields: { nominations: { n: 1, c: A, r: !0, q: !0 } },
               }),
             j.sm_m
           );
@@ -3336,6 +3278,64 @@
         serializeBase64String() {
           var e = new (o().BinaryWriter)();
           return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamAwards_Nominate_Response";
+        }
+      }
+      class G extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            G.prototype.category_id || l.Sg(G.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            G.sm_m ||
+              (G.sm_m = {
+                proto: G,
+                fields: {
+                  category_id: {
+                    n: 1,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                },
+              }),
+            G.sm_m
+          );
+        }
+        static MBF() {
+          return G.sm_mbf || (G.sm_mbf = l.w0(G.M())), G.sm_mbf;
+        }
+        toObject(e = !1) {
+          return G.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(G.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(G.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            i = new G();
+          return G.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(G.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(G.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamAwards_GetNominationRecommendations_Request";
@@ -3723,7 +3723,7 @@
               );
             }),
             (e.Nominate = function (e, t) {
-              return e.SendMsg("SteamAwards.Nominate#1", (0, c.I8)(R, t), G, {
+              return e.SendMsg("SteamAwards.Nominate#1", (0, c.I8)(R, t), j, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });
@@ -3731,7 +3731,7 @@
             (e.GetNominationRecommendations = function (e, t) {
               return e.SendMsg(
                 "SteamAwards.GetNominationRecommendations#1",
-                (0, c.I8)(j, t),
+                (0, c.I8)(G, t),
                 k,
                 { bConstMethod: !0, ePrivilege: 1 },
               );
@@ -4069,7 +4069,7 @@
       i.d(t, {
         B8: () => k,
         N2: () => E,
-        Pk: () => j,
+        Pk: () => G,
         Sz: () => M,
         Tu: () => A,
         W4: () => B,
@@ -4077,7 +4077,7 @@
         Zb: () => T,
         _J: () => x,
         ck: () => D,
-        d$: () => G,
+        d$: () => j,
         j$: () => I,
       });
       var n = i(7850),
@@ -4271,7 +4271,7 @@
                     id: s,
                     children: e.children,
                   });
-                return (0, n.jsx)(G, {
+                return (0, n.jsx)(j, {
                   className: i,
                   href: t,
                   id: s,
@@ -4282,7 +4282,7 @@
               autocloses: !1,
             },
           ],
-          ["quote", { Constructor: j, autocloses: !1 }],
+          ["quote", { Constructor: G, autocloses: !1 }],
           [
             "pullquote",
             {
@@ -4516,7 +4516,7 @@
                   T = ("0" + B.getUTCHours()).slice(-2),
                   M = ("0" + B.getUTCMinutes()).slice(-2),
                   R = `${E}${A}${C}T${T}${M}00Z`;
-                let G;
+                let j;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
                   (e += "VERSION:2.0\r\n"),
@@ -4528,15 +4528,15 @@
                     _ && (e += `LOCATION:${_.replace("\n", "\\n")}\r\n`),
                     (e += "END:VEVENT\r\n"),
                     (e += "END:VCALENDAR\r\n"),
-                    (G = `data:text/calendar;charset=utf-8;base64,${c.fromByteArray(new TextEncoder().encode(e))}`);
+                    (j = `data:text/calendar;charset=utf-8;base64,${c.fromByteArray(new TextEncoder().encode(e))}`);
                 } catch (e) {
                   console.error(e);
                 }
-                let j =
+                let G =
                   "https://calendar.google.com/calendar/render?action=TEMPLATE";
-                (j += `&text=${encodeURI(l)}`),
-                  (j += `&details=${encodeURI(m)}`),
-                  (j += `&dates=${encodeURI(w + "/" + R)}`);
+                (G += `&text=${encodeURI(l)}`),
+                  (G += `&details=${encodeURI(m)}`),
+                  (G += `&dates=${encodeURI(w + "/" + R)}`);
                 const k = (e) => {
                   if ("ReactNativeWebView" in window) {
                     const t = window.ReactNativeWebView,
@@ -4558,13 +4558,13 @@
                   ),
                   id: p,
                   children: [
-                    G &&
+                    j &&
                       (0, n.jsx)("a", {
                         className: (0, f.A)(
                           "SaleSectionCalendarEventLink",
                           a().CalendarEventLink,
                         ),
-                        href: G,
+                        href: j,
                         onClick: k,
                         download: "calendar.ics",
                         children: "Apple",
@@ -4574,16 +4574,16 @@
                         "SaleSectionCalendarEventLink",
                         a().CalendarEventLink,
                       ),
-                      href: j,
+                      href: G,
                       children: "Google",
                     }),
-                    G &&
+                    j &&
                       (0, n.jsx)("a", {
                         className: (0, f.A)(
                           "SaleSectionCalendarEventLink",
                           a().CalendarEventLink,
                         ),
-                        href: G,
+                        href: j,
                         onClick: k,
                         download: "calendar.ics",
                         children: "Outlook",
@@ -4601,7 +4601,7 @@
                 const t = I(e.args),
                   i = "button" == I(e.args, "style") ? a().LinkButton : void 0,
                   r = i && I(e.args, "buttoncolor");
-                return (0, n.jsx)(G, {
+                return (0, n.jsx)(j, {
                   className: i,
                   style: { backgroundColor: r },
                   href: `${S.TS.PARTNER_BASE_URL}doc/${t}`,
@@ -4688,7 +4688,7 @@
       function R(e) {
         return C("h3", e, (0, f.A)(a().Header3, "BB_Header3"));
       }
-      const G = (e) => {
+      const j = (e) => {
         const { href: t, ...i } = e;
         let r,
           a = (0, m.OZ)(t);
@@ -4716,7 +4716,7 @@
           }),
         });
       };
-      function j(e) {
+      function G(e) {
         const t = I(e.args, "author");
         return (0, n.jsxs)("blockquote", {
           className: (0, f.A)(a().BlockQuote, e.className),
@@ -5023,7 +5023,7 @@
       "use strict";
       i.d(t, {
         A4: () => k,
-        iy: () => G,
+        iy: () => j,
         ZA: () => P,
         g8: () => D,
         Dn: () => O,
@@ -5131,16 +5131,16 @@
         s.zcX,
         s.yhO,
       ];
-      function G(e) {
+      function j(e) {
         return (
           R.some((t) => t == e.GetEventType()) &&
           !e.BHasTag("steam_award_nomination_request") &&
           !e.BHasTag("curator")
         );
       }
-      const j = [s.HRy, s.LOv, s.HFK];
+      const G = [s.HRy, s.LOv, s.HFK];
       function k(e) {
-        return !j.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+        return !G.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       const x = [s.Fwr, s.HFK];
       function D(e) {
@@ -5368,37 +5368,37 @@
             null == e ? void 0 : e.sale_carousel_breadcrumb_style,
         };
       }
-      function pe(e, t) {
-        (e.library_spotlight = void 0),
-          e.email_setting &&
-            ((e.email_setting.locked = void 0),
-            (e.email_setting.force_feature_id = void 0)),
-          (e.steam_award_category_suggestion = void 0),
-          (e.steam_award_category_voteids = void 0),
-          (e.action_end_time = void 0),
-          (e.ownership_requirement_info = void 0),
-          (e.sale_use_subscription_layout = void 0),
-          (e.app_right_requirement_info = void 0),
-          (e.clone_from_event_gid = t),
-          (e.clone_from_sale_enabled = e.bSaleEnabled),
-          (e.bSaleEnabled = !1),
-          (e.sale_discount_event_id = void 0),
-          (e.valve_access_log = []),
-          (e.bInvisibleGameOptIn = void 0),
-          (e.rt_migrated_time = void 0),
-          (e.optin_tagid || e.sale_opt_in_page_name) &&
-            ((e.tagged_items = void 0),
-            (e.tagged_item_filter = void 0),
-            (e.auto_item_tags = void 0)),
-          (e.optin_prune_tagid = void 0),
-          (e.optin_tagid = void 0),
-          (e.sale_opt_in_page_name = void 0),
-          (e.prune_list_optin_name = void 0),
-          (e.optin_only = void 0),
-          (e.child_demo_appid_for_repost = void 0),
-          (e.sale_vanity_id = void 0),
-          (e.sale_update_landing_page_vanity_id = void 0),
-          (e.automatically_push_updated_source = void 0);
+      function pe(e, t, i) {
+        (t.library_spotlight = void 0),
+          t.email_setting &&
+            ((t.email_setting.locked = void 0),
+            (t.email_setting.force_feature_id = void 0)),
+          (t.steam_award_category_suggestion = void 0),
+          (t.steam_award_category_voteids = void 0),
+          (t.action_end_time = void 0),
+          (t.ownership_requirement_info = void 0),
+          (t.sale_use_subscription_layout = void 0),
+          (t.app_right_requirement_info = void 0),
+          (t.clone_from_event_gid = i),
+          (t.clone_from_sale_enabled = t.bSaleEnabled),
+          (t.bSaleEnabled = e == s.ajI),
+          (t.sale_discount_event_id = void 0),
+          (t.valve_access_log = []),
+          (t.bInvisibleGameOptIn = void 0),
+          (t.rt_migrated_time = void 0),
+          (t.optin_tagid || t.sale_opt_in_page_name) &&
+            ((t.tagged_items = void 0),
+            (t.tagged_item_filter = void 0),
+            (t.auto_item_tags = void 0)),
+          (t.optin_prune_tagid = void 0),
+          (t.optin_tagid = void 0),
+          (t.sale_opt_in_page_name = void 0),
+          (t.prune_list_optin_name = void 0),
+          (t.optin_only = void 0),
+          (t.child_demo_appid_for_repost = void 0),
+          (t.sale_vanity_id = void 0),
+          (t.sale_update_landing_page_vanity_id = void 0),
+          (t.automatically_push_updated_source = void 0);
       }
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
@@ -6774,23 +6774,23 @@
         BIsValidForRealm(e) {
           return this.GetIncludedRealmList().includes(e);
         }
-        BIsNextFest(e = !0) {
+        BIsNextFest(e = !1) {
           var t;
-          const i = "nextfest",
-            n =
+          const i =
               null === (t = this.jsondata.sale_vanity_id) || void 0 === t
                 ? void 0
                 : t.toLowerCase(),
-            r = new d.b(this.clanSteamID).GetAccountID();
+            n = new d.b(this.clanSteamID).GetAccountID();
           return (
-            !(!n || r != _.GU) &&
-            (e ? n.startsWith(i) : n.startsWith(i) && !n.includes("prev"))
+            !(!i || n != _.GU) &&
+            !!i.startsWith("nextfest") &&
+            (!e || (!i.endsWith("preview") && !i.endsWith("press")))
           );
         }
         BShowNextFestHeader(e) {
           return e && M.iA.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }
@@ -10519,8 +10519,8 @@
       }
       var M = i(42060),
         R = i.n(M),
-        G = i(51272),
-        j = i(81962);
+        j = i(51272),
+        G = i(81962);
       function k(e) {
         return e.recent_emoticons;
       }
@@ -10871,11 +10871,11 @@
             (0, r.jsx)(T, {
               children: (0, m.PP)(
                 "#AddonPicker_AcquireAtPointsShopOrMarket",
-                (0, r.jsx)(G.uU, {
+                (0, r.jsx)(j.uU, {
                   href: `${p.TS.STORE_BASE_URL}points/shop/c/emoticons`,
                   children: (0, m.we)("#AddonPicker_AcquireAtPointsShop_Link"),
                 }),
-                (0, r.jsx)(G.uU, {
+                (0, r.jsx)(j.uU, {
                   href: `${p.TS.COMMUNITY_BASE_URL}market`,
                   children: (0, m.we)(
                     "#AddonPicker_AcquireAtPointsShopOrMarket_Link",
@@ -10919,7 +10919,7 @@
                       (0, r.jsx)(T, {
                         children: (0, m.PP)(
                           "#AddonPicker_AcquireAtPointsShop",
-                          (0, r.jsx)(G.uU, {
+                          (0, r.jsx)(j.uU, {
                             href: `${p.TS.STORE_BASE_URL}points/shop/c/stickers`,
                             children: (0, m.we)(
                               "#AddonPicker_AcquireAtPointsShop_Link",
@@ -10966,7 +10966,7 @@
                       (0, r.jsx)(T, {
                         children: (0, m.PP)(
                           "#AddonPicker_AcquireAtPointsShop",
-                          (0, r.jsx)(G.uU, {
+                          (0, r.jsx)(j.uU, {
                             href: `${p.TS.STORE_BASE_URL}points/shop/c/chateffects`,
                             children: (0, m.we)(
                               "#AddonPicker_AcquireAtPointsShop_Link",
@@ -11064,7 +11064,7 @@
         return (0, r.jsxs)("div", {
           className: R().EmoticonItem,
           children: [
-            (0, r.jsx)(j.n, { emoticon: t.name, large: i }),
+            (0, r.jsx)(G.n, { emoticon: t.name, large: i }),
             n && (0, r.jsx)($, {}),
           ],
         });
@@ -11100,7 +11100,7 @@
             sticker: { name: i, appid: n },
           } = e,
           [a] = (0, c.t7)(n, {});
-        return (0, r.jsx)(j.c, {
+        return (0, r.jsx)(G.c, {
           target: t,
           title: i,
           subtitle: null == a ? void 0 : a.GetName(),
@@ -11152,7 +11152,7 @@
           } = e,
           s = a[i],
           [o] = (0, c.t7)(n, {});
-        return (0, r.jsx)(j.c, {
+        return (0, r.jsx)(G.c, {
           target: t,
           title: i,
           subtitle: null == o ? void 0 : o.GetName(),
@@ -11422,8 +11422,8 @@
         T = i(61859),
         M = i(73745),
         R = i(14771),
-        G = i(61336),
-        j = i(78327),
+        j = i(61336),
+        G = i(78327),
         k = i(6878),
         x = i.n(k),
         D = i(32803),
@@ -11468,9 +11468,9 @@
         }
         ToggleMenu(e) {
           const t = g.KN.Get().BIsUserLoggedIn();
-          t || j.TS.IN_CLIENT
+          t || G.TS.IN_CLIENT
             ? (!t &&
-                j.TS.IN_CLIENT &&
+                G.TS.IN_CLIENT &&
                 console.log(
                   "EventReminderWidget: In Client: Cannot use login widget. We expect to be already logged in.",
                 ),
@@ -11590,7 +11590,7 @@
                 ),
               })
             : null;
-        const s = (0, c.sfN)(j.TS.LANGUAGE);
+        const s = (0, c.sfN)(G.TS.LANGUAGE);
         return (0, r.jsx)(N, { lang: s, ...n, eventModel: a });
       }
       function O(e) {
@@ -11661,7 +11661,7 @@
                 ? "app/" + t.appid
                 : "group/" + t.clanSteamID.GetAccountID(),
               n = "l=" + (0, c.LgB)(d);
-            return `${j.TS.STORE_BASE_URL}${(0, D.LJ)()}/download/${i}/${e}/${t.GID}?${n}`;
+            return `${G.TS.STORE_BASE_URL}${(0, D.LJ)()}/download/${i}/${e}/${t.GID}?${n}`;
           },
           U = v.O.BHasValidatedEmail(),
           N = v.O.BHasPushNotification(),
@@ -11755,8 +11755,8 @@
                       (0, r.jsx)("div", {
                         className: F.FlexColumnContainer,
                         children: (0, r.jsx)("a", {
-                          href: j.TS.STORE_BASE_URL + "account/",
-                          target: j.TS.IN_CLIENT ? void 0 : "_blank",
+                          href: G.TS.STORE_BASE_URL + "account/",
+                          target: G.TS.IN_CLIENT ? void 0 : "_blank",
                           onClick: () => M(p.E.k_eReminder_EmailUnverified),
                           children: (0, T.we)(
                             "#EventReminder_NotifyByEmail_Missing_Add",
@@ -11793,8 +11793,8 @@
                       (0, r.jsx)("div", {
                         className: F.FlexColumnContainer,
                         children: (0, r.jsx)("a", {
-                          href: j.TS.STORE_BASE_URL + "mobile/?show=steamapp",
-                          target: j.TS.IN_CLIENT ? void 0 : "_blank",
+                          href: G.TS.STORE_BASE_URL + "mobile/?show=steamapp",
+                          target: G.TS.IN_CLIENT ? void 0 : "_blank",
                           onClick: () => M(p.E.k_eReminder_MobilePushMissing),
                           children: (0, T.we)(
                             "#EventReminder_NotifyByMobile_Install",
@@ -11824,7 +11824,7 @@
                         }),
                         (0, r.jsx)("a", {
                           className: z.ReminderOption,
-                          target: j.TS.IN_CLIENT ? void 0 : "_blank",
+                          target: G.TS.IN_CLIENT ? void 0 : "_blank",
                           href: (() => {
                             const e = encodeURIComponent(
                                 (() => {
@@ -11855,11 +11855,11 @@
                                   n + R.Kp.PerHour,
                               ),
                               s =
-                                (j.TS.IN_CLIENT
+                                (G.TS.IN_CLIENT
                                   ? "steam://openurl_external/"
                                   : "") +
                                 `https://calendar.google.com/calendar/r/eventedit?text=${e}&details=${i}&dates=${r}/${a}`;
-                            return (0, G.k2)(s);
+                            return (0, j.k2)(s);
                           })(),
                           onClick: () => M(p.E.k_eReminder_CalendarGoogle),
                           children: (0, T.we)(

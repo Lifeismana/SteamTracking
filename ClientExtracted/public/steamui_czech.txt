@@ -1536,7 +1536,7 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_CloudEnableLinkContinued"	"pro zapnutí funkce Steam Cloud na Vašem účtu."
 
 "Start_Server_FSMount_Error_Title"	"Dedikovaný server – chyba souborového systému"
-"Start_Server_FSMount_Error" 		"Nepodařilo se připojit systém souborů služby Steam."
+"Start_Server_FSMount_Error" 		"Nepodařilo se připojit souborový systém služby Steam."
 
 "Steam_Subscription_Success_WithShipping$purchasetype=regular"	"Váš nákup hry %subscription% byl úspěšně dokončen.\n\nZe své knihovny služby Steam můžete odteď hrát kteroukoli z vydaných her získaných tímto nákupem. Jakmile bude odesláno zboží spojené s Vaší objednávkou, obdržíte také e-mail s potvrzením. Děkujeme za Váš nákup!"
 "Steam_Subscription_Success_WithShipping$purchasetype=gift"	"Dárková kopie hry %subscription% byla odeslána uživateli %giftee%. Jakmile bude odesláno zboží spojené s Vaší objednávkou, obdržíte také e-mail s potvrzením. Děkujeme za Váš nákup!"
@@ -3496,7 +3496,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "SteamUI_JoinDialog_InstallScriptInfo"	"Probíhá prvotní nastavení%dots% \n\nInstalace: %stepname% (krok %step% ze %steptotal%)"
 
 
-"SteamUI_GameRequires_NTFS_Detail"	"Hra, kterou instalujete, vyžaduje jednotku se systémem souborů NTFS\na nelze ji nainstalovat na jednotku se systémem FAT32. Další informace naleznete\nna stránce podpory odkázané níže."
+"SteamUI_GameRequires_NTFS_Detail"	"Hra, kterou instalujete, vyžaduje jednotku se souborovým systémem NTFS\na nelze ji nainstalovat na jednotku se systémem FAT32. Další informace naleznete\nna stránce podpory odkázané níže."
 "SteamUI_GameRequires_64BitOS_Detail"	"Hra, kterou instalujete, vyžaduje 64bitovou verzi systému Windows.\nJestliže nemáte k dispozici zařízení s tímto systémem, klikněte níže pro informace o tom, jak zažádat o vrácení peněz."
 
 "SteamUI_SiteLicense_LockedDetail"	"Pro tento produkt nejsou momentálně dostupné žádné licence.\nZkuste to později nebo upozorněte místního správce."
@@ -4007,7 +4007,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "steam_menu_minimode"		"Kompaktní režim"
 "steam_menu_largemode"	"Standardní režim"
 "steam_menu_bigpicturemode"	"Režim Big Picture"
-"steam_menu_close_bigpicturemode"	"Ukončit Big Picture"
+"steam_menu_close_bigpicturemode"	"Ukončit režim Big Picture"
 "steam_menu_startvr"		"Režim SteamVR (BETA)"
 "steam_menu_exitvr"		"Ukončit režim SteamVR (BETA)"
 
@@ -4596,7 +4596,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_Settings_Streaming_DeviceName" "NÁZEV ZAŘÍZENÍ"
 "Steam_Settings_Streaming_Status" "STAV"
 "Steam_Settings_Streaming_EnableStreaming" "Povolit funkci Remote Play"
-"Steam_Settings_Streaming_Pair" "Spárovat se Steam Link"
+"Steam_Settings_Streaming_Pair" "Spárovat s aplikací Steam Link"
 "Steam_Settings_Streaming_Unpair" "Zrušit spárování"
 "Steam_Settings_Streaming_UnpairConfirmation" "Opravdu chcete zrušit spárování všech zařízení?"
 "Steam_Settings_Streaming_SetPIN" "Nastavit kód"

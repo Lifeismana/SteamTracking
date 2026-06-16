@@ -25,7 +25,6 @@ message CContentModeration_ClaimBatchForModeration_Request {
 }
 
 message CContentModeration_ClaimBatchForModeration_Response {
-	optional int32 selected_subject_type = 1 [(.description) = "enum"];
 	repeated .ContentReportSubject subject = 2;
 }
 

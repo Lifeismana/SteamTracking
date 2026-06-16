@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Трейлер может не отражать реальный геймплей на Steam Deck",
     "StoreItemFound": "Найдено %1$s (%2$s)",
     "StoreItemNotFound": "Не найдено (%1$s)",
+    "SteamURLAccepted": "%1$s Ссылка принята",
+    "SteamURLInvalid": "Ошибка: ссылка не ведёт на страницу в Steam (в магазине или сообществе)",
+    "PriceGrid_NormalPrice": "ОБЫЧНАЯ",
+    "PriceGrid_RecentPrice": "МИН. ЗА 30 ДНЕЙ",
+    "PriceGrid_CurrentPrice": "СЕЙЧАС",
     "Dummy": "dummy"
 }

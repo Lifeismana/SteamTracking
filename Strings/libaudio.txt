@@ -802,6 +802,7 @@ boolean
 btowc
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 byte
+c>jvS
 cActualReplacements == cReplacements
 cannot create shim for unknown locale::facet
 card.profile.port
@@ -1032,6 +1033,7 @@ not enough space for format expansion (Please submit full bug report at https://
 null
 num > 0
 numElements >= 0
+oP 'K
 object
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put

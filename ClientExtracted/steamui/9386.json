@@ -290,10 +290,12 @@
     "setcooldown_nocooldown": "Er geldt momenteel geen afkoelperiode",
     "setcooldown_days": "dagen",
     "setcooldown_newcooldownlabel": "Nieuwe afkoelperiode voor gebruiker:",
-    "setcooldown_clearcooldown": "Wissen",
+    "setcooldown_clearcooldown": "Afkoelperiode opheffen",
     "setcooldown_cooldownsummary": "(%1$s dagen)",
     "setcooldown_dialogtitle": "Afkoelperiode voor rapporteren instellen",
     "setcooldown_dialogdescription": "De gebruiker kan geen inhoud rapporteren of bezwaar aantekenen tegen moderatiebeslissingen als ze misbruik hebben gemaakt van het systeem.",
     "setcooldown_setbutton": "Afkoelperiode instellen",
+    "setcooldown_clearopenreports": "Niet-opgeloste meldingen van deze gebruiker wissen",
+    "setcooldown_statssummary": "Vrijspraak bij %1$s/%2$s meldingen, %3$s/%4$s in de afgelopen week.",
     "nocomma": ""
 }

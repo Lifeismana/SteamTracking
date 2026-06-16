@@ -99,19 +99,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-      });
-      const _ = 0,
-        _ = 1,
-        _ = 2,
-        _ = 3;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       const _ = 0,
         _ = 1,
@@ -120,8 +107,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -135,24 +120,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
           bForceShowCompatInfo: !1,
           bSteamOS: !1,
           bSteamDeck: !1,
         }),
-        _ = () => _.useContext(_),
-        _ = 0,
-        _ = 1,
-        _ = 2;
+        _ = () => _.useContext(_);
       function _() {
         const { bForceShowCompatInfo: _, bSteamDeck: _, bSteamOS: _ } = _();
         return _
           ? _ || _ || "steamdeck" == _._.FORCED_DISPLAY_MODE
-            ? [!0, _]
-            : [!0, _]
-          : [!1, _];
+            ? [!0, _._]
+            : [!0, _._]
+          : [!1, _._];
       }
       function _(_) {
         const { _: _, className: _ } = _,
@@ -201,6 +184,30 @@
       _._, _._, _._, _._;
       _._, _._, _._;
       _._, _._, _._;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2,
+        _ = 3;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 0,
+        _ = 1,
+        _ = 2;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2480,6 +2487,21 @@
           return "CGamePerformanceStats_GetGameFrameRateStats_Response_FrameRate";
         }
       }
+      !(function (_) {
+        _.GetGameFrameRateStats = function (_, _) {
+          return _.SendMsg(
+            "GamePerformanceStats.GetGameFrameRateStats#1",
+            (0, _._)(_, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            },
+          );
+        };
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
           results: _,
@@ -2983,20 +3005,6 @@
             return null;
         }
       }
-      !(function (_) {
-        _.GetGameFrameRateStats = function (_, _) {
-          return _.SendMsg(
-            "GamePerformanceStats.GetGameFrameRateStats#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
-              eWebAPIKeyRequirement: 2,
-            },
-          );
-        };
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

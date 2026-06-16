@@ -316,97 +316,7 @@
 #:*S8,}gNzl
 #ETHw
 #FLR
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
 #Q7z
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
 #\t#\v#'#)#/#3#5#E#Q#S#Y#c#k#
 #\v+(bF&drJ:x#
 #]hK Ed
@@ -826,6 +736,7 @@ $ffn
 &\n"k_EClanESportTournamentStreamEvent
 &\n"k_EClanPreAnnounceMajorUpdateEvent
 &\n"k_EClientPersonaStateFlagQueryPort
+&\n"k_ECodecUsagePlatformSteamHardware
 &\n"k_ESteamReviewScore_MostlyNegative
 &\n"k_ESteamReviewScore_MostlyPositive
 &aacute;
@@ -1740,6 +1651,7 @@ $ffn
 00000000
 000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798990123456789abcdef
 00:00:00
+00:54:04
 01/01/00
 0123456789
 0123456789.
@@ -1747,7 +1659,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-03:02:02
 08bX
 0?0L
 0A/8
@@ -2131,6 +2042,7 @@ $ffn
 14ConCommandBase
 14ISSLConnection
 1536
+15000
 155.133.240.0/23
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -2172,6 +2084,7 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
+18446744073709551615
 18CFutureSharedStateIbE
 18CHTTPClientRequest
 18CHTTPRequestHandle
@@ -2334,6 +2247,7 @@ $ffn
 3-WH
 30!]^JV
 3072
+30000
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -2432,6 +2346,7 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
+524288
 52F*
 55Ly
 55j_WW
@@ -2454,7 +2369,9 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
+60000000
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\`
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2507,12 +2424,6 @@ $ffn
 8/A0
 8000
 8192
-15000
-30000
-65536
-524288
-60000000
-18446744073709551615
 82\n:XPH
 88n|
 88pH
@@ -2659,6 +2570,7 @@ $ffn
 @MaxOutstandingSendThreadItemFatalAssert
 @MaxOutstandingSendThreadItemFatalAssertSecondsAtLimit
 @MaxOutstandingSendThreadItemSleep
+@VLV
 @bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 @bEnableFrameFuncOverageWarnings
 @bEnableHTTP2OnAllCHTTPClients
@@ -5747,8 +5659,9 @@ HTTP/1.0
 HTTP/1.1
 HTTP/1.1 101 Switching Protocols\r\n
 HTTP/2 was not negotiated for COpenSSLConnection\n
-HTTPClient address Invalid! DispatchRequest - %p finished (%s) successfull (%s) \n
+HTTPClient address invalid! DispatchRequest - %p finished (%s) successfull (%s) \n
 HTTPClient has too many reqs already queued waiting for connection to address %s! DispatchRequest - %p as failure early. \n
+HTTPClient proxy connect address invalid! DispatchRequest - %p finished (%s) successfull (%s) \n
 HTTPClient shutting down - DispatchRequest - %p finished (%s) successfull (%s) \n
 HTTPMirror
 HTTPS Tunnel established, proceeding to send actual HTTP request through OpenSSL with connection %p\n
@@ -6171,7 +6084,7 @@ JoinedGroup
 Joystick
 JpL9=
 July
-Jun  2 2026
+Jun  9 2026
 June
 K'iche'
 K(\f]C15
@@ -10108,6 +10021,7 @@ aria_init_key
 armenian
 array
 asctime_r
+asin
 asn1
 asn1 encoding routines
 asn1 error
@@ -10986,6 +10900,7 @@ controller_rog_ally
 controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
+controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
 controller_switch_joycon_left
@@ -13369,7 +13284,6 @@ k_EClanTripEvent
 k_EClientPersonaStateFlagStatus
 k_ECodecUsagePlatformLinux
 k_ECodecUsagePlatformMacOS
-k_ECodecUsagePlatformSteamDeck
 k_ECodecUsagePlatformUnknown
 k_ECodecUsagePlatformWindows
 k_ECodecUsageReasonBroadcasting
@@ -15316,6 +15230,7 @@ mp exponent not congruent to d
 mp r not prime
 mp4-single
 mprotect
+ms-MY
 msCTLSign
 msCodeCom
 msCodeInd
@@ -16364,6 +16279,7 @@ popconfig
 popen
 port
 portuguese
+position_is_waitlist
 positive_int_value
 posix_fadvise
 posix_memalign
@@ -16579,7 +16495,9 @@ quantil
 quechua
 queue
 queue_head_position_now
+queue_in_waitlist
 queue_position
+queue_waitlist_token
 qwest
 qwilt
 r$0I
@@ -16729,6 +16647,7 @@ res master
 reseed error
 reservation_country_code
 reservation_state
+reservation_type
 reserved
 reserved_range
 resizeNumBits >= 0
@@ -18499,6 +18418,7 @@ userClass
 userId
 userNotice
 userPassword
+user_waitlist_token
 usleep
 utf8only
 utime

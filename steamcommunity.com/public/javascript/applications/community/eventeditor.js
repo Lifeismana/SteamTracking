@@ -444,7 +444,7 @@
         Label: "I1zVikvORZt41zc-QTAsw",
       };
     },
-    79092: (e, t, a) => {
+    56964: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => sc });
       var n = a(90626),
@@ -2736,16 +2736,18 @@
           });
       }
       function ht(e, t, a) {
-        const n = o.mh.CreateClone();
+        const n = o.mh.CreateClone(),
+          i = n.GetEventModel();
         if (
-          ((n.GetEventModel().jsondata.sale_header_offset = 530),
+          ((i.jsondata.sale_header_offset = 36 != i.GetEventType() ? 530 : 0),
           a && a.length > 0)
         ) {
           const e = t.GetLanguagesWithTokens();
-          t.ClearLanguagesTokens(a),
-            (n.GetEventModel().jsondata.bSaleEnabled = !0),
+          t.ClearLanguagesTokens(a);
+          const s = i.jsondata.bSaleEnabled;
+          (i.jsondata.bSaleEnabled = !0),
             ot(n, t, e),
-            (n.GetEventModel().jsondata.bSaleEnabled = !1);
+            (i.jsondata.bSaleEnabled = s);
         }
         e("clone");
       }
@@ -4308,7 +4310,7 @@
         wa = a(60860),
         Ca = a(30294),
         fa = a(56654),
-        ya = a(24862),
+        ya = a(92290),
         Da = a(16989);
       function Ta(e) {
         const { editModel: t } = e,
@@ -4943,7 +4945,7 @@
           ],
         });
       }
-      var Oa = a(98665);
+      var Oa = a(26384);
       function Pa(e) {
         const { strArrowColor: t, fnUpdateArrowColor: a, arrowStyle: s } = e,
           [o, l] = n.useState(null == t);
@@ -4997,7 +4999,7 @@
           }),
         });
       }
-      var za = a(91667);
+      var za = a(20741);
       function Ua(e) {
         return (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(Ha, { ...e }), (0, i.jsx)(qa, { ...e })],
@@ -9077,7 +9079,7 @@
                 (a.background_gradient_top = n.background_gradient_top),
                 (a.border_color = n.border_color),
                 (a.border_width = n.border_width)),
-                ie.nG.SetSaleSectionType(a, e),
+                ie.nG.SetSaleSectionType(t.GetEventType(), a, e),
                 t.GetEventModel().jsondata.sale_sections.push(a),
                 t.SetDirty(ie.IQ.jsondata_sales),
                 (0, Sa.mi)((0, Sa.LY)(a), !0),
@@ -18528,7 +18530,7 @@
         fd = a(99487),
         yd = a(38677),
         Dd = a(39199),
-        Td = a(64305),
+        Td = a(47162),
         Id = a(40353);
       function Gd(e) {
         const { eventModel: t, nEventBadgeID: a } = e,

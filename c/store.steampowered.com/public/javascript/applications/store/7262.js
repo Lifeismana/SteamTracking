@@ -13,7 +13,28 @@
     },
     chunkid: (module) => {
       module.exports = {
+        PopupScreenshotModal: "yloqxGhIEzvGIwbQbo6KP",
+        PopupScreenshotContainer: "_1wwvw8QMJqug_-ioZdRJTC",
+        PopupScreenshot: "_31XZuVC3l846TjPDScscaS",
+        ButtonCtn: "_3MyspS-H5SnsUnKa3yhdtJ",
+        ButtonIcon: "_1tCO1rmBfntUI0TlpTly1F",
+        Disabled: "_1a_f8VY56CtjgePDRTaC-W",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ErrorDiv: "_2FXMECiK-1oag3HieTiKJW",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PreviewCtn: "_16SknI_KfMn45zQAvi-Xrs",
+        SVG: "_3Mns5ZEBThi10kv9zwdCRr",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -544,8 +565,125 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const [_, _] = _.useState(void 0),
+          _ = _.useCallback(() => _(void 0), []),
+          _ = (0, _.jsx)(_._, {
+            active: void 0 !== _,
+            children: (0, _.jsx)(_, {
+              closeModal: _,
+              rgImageURL: _,
+            }),
+          });
+        return [_, _];
+      }
+      function _(_) {
+        const { closeModal: _, rgImageURL: _ } = _,
+          [_, _] = _.useState(0),
+          _ = _?.length ?? 0,
+          _ = _.useCallback(() => {
+            _(0 == _ ? _ - 1 : _ - 1);
+          }, [_, _]),
+          _ = _.useCallback(() => {
+            _(_ && _ + 1 >= _ ? 0 : _ + 1);
+          }, [_, _, _]);
+        return (0, _.jsxs)(_._, {
+          title: (0, _._)("#SaleTech_Screenshot_Viewer"),
+          bAllowFullSize: !0,
+          bOKDisabled: !0,
+          closeModal: _,
+          bHideCloseIcon: !0,
+          modalClassName: _().PopupScreenshotModal,
+          children: [
+            (0, _.jsx)(_, {
+              index: _,
+              numElements: _?.length || 0,
+              fnForward: _,
+              fnBackwards: _,
+              fnClose: _,
+              bCircular: !0,
+            }),
+            (0, _.jsx)("div", {
+              className: _().PopupScreenshotContainer,
+              children: (0, _.jsx)("img", {
+                className: _().PopupScreenshot,
+                src: _?.[_],
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+          index: _,
+          numElements: _,
+          fnForward: _,
+          fnBackwards: _,
+          fnClose: _,
+          bCircular: _,
+        } = _;
+        (0, _._)("ArrowLeft", () => _?.(), !0, !0),
+          (0, _._)("Left", () => _?.(), !0, !0),
+          (0, _._)("ArrowRight", () => _?.(), !0, !0),
+          (0, _._)("Right", () => _?.(), !0, !0),
+          (0, _._)("Escape", () => _ && _(), !0, !0),
+          (0, _._)("Esc", () => _ && _(), !0, !0);
+        let _ = _ > 1;
+        return (0, _.jsxs)("div", {
+          className: _().ButtonCtn,
+          children: [
+            _ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      0 !== _ || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 270,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().ButtonIcon,
+                      _ !== _ - 1 || _ ? null : _().Disabled,
+                    ),
+                    onClick: _,
+                    children: (0, _.jsx)(_.V5W, {
+                      angle: 90,
+                    }),
+                  }),
+                ],
+              }),
+            (0, _.jsx)("div", {
+              className: _().ButtonIcon,
+              onClick: _,
+              children: (0, _.jsx)(_._, {}),
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -591,6 +729,169 @@
         return (0, _.jsx)("div", {
           className: (0, _._)(_.CompatIcon, "ds_steam_deck_compat", _, _),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            className: _,
+            srcs: _,
+            lazyLoad: _,
+            width: _,
+            height: _,
+            alt: _,
+            crossOrigin: _,
+          } = _,
+          [_, _] = _.useState(_.length),
+          [_, _] = _.useState(0);
+        _.useEffect(() => {
+          _ != _.length && (_(_.length), _(0));
+        }, [_, _.length]);
+        const _ = _.useCallback(() => {
+          _.onImageError && _.onImageError(_.srcs[_]),
+            _ + 1 < _.srcs.length && _(_ + 1);
+        }, [_, _]);
+        return 0 == _.length
+          ? null
+          : (0, _.jsx)("img", {
+              className: _,
+              src: _[_],
+              crossOrigin: _,
+              onError: _,
+              loading: _ ? "lazy" : void 0,
+              width: _,
+              height: _,
+              alt: _,
+            });
+      }
+      function _(_) {
+        const [_, _] = _.useState(!1),
+          {
+            className: _,
+            src: _,
+            lazyLoad: _,
+            width: _,
+            height: _,
+            alt: _,
+            crossOrigin: _,
+          } = _;
+        return _
+          ? (0, _.jsxs)("div", {
+              className: _.ErrorDiv,
+              children: [
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Image_ErrorTitle", _),
+                }),
+                (0, _.jsx)("ul", {
+                  children: (0, _.jsx)("li", {
+                    children: (0, _._)("#Image_Error_msg1"),
+                  }),
+                }),
+                (0, _.jsx)("p", {
+                  children: (0, _._)("#Image_Error_suggestion"),
+                }),
+              ],
+            })
+          : (0, _.jsx)(_._, {
+              className: _,
+              src: _,
+              onError: () => __webpack_require__(!0),
+              crossOrigin: _,
+              loading: _ ? "lazy" : void 0,
+              width: _,
+              height: _,
+              alt: _,
+            });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1.3,
+        _ = 3,
+        _ = 256;
+      function _(_) {
+        const [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)({
+            naturalWidth: 0,
+            naturalHeight: 0,
+            displayWidth: 0,
+            displayHeight: 0,
+          }),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _._)();
+        return (
+          (0, _.useEffect)(() => {
+            if (
+              _.naturalWidth > _.displayWidth * _ &&
+              _.naturalHeight > _.displayHeight * _ &&
+              _.naturalWidth > _
+            ) {
+              _.naturalWidth / _.naturalHeight < _ && __webpack_require__(!0);
+            }
+          }, [_]),
+          _
+            ? (0, _.jsxs)("span", {
+                className: _.PreviewCtn,
+                children: [
+                  _,
+                  (0, _.jsx)("span", {
+                    className: _.SVG,
+                    children: (0, _.jsx)(_.YNO, {}),
+                  }),
+                  (0, _.jsx)("img", {
+                    ..._,
+                    className: (0, _._)({
+                      ...(_.className && {
+                        [_.className]: !0,
+                      }),
+                    }),
+                    onClick: (_) => {
+                      _.src && _([_.src]);
+                    },
+                  }),
+                ],
+              })
+            : (0, _.jsx)("img", {
+                ..._,
+                ref: _,
+                onLoad: (_) => {
+                  if (!_.currentTarget.closest("a") && !(0, _._)()) {
+                    const {
+                      naturalWidth: _,
+                      naturalHeight: _,
+                      width: _,
+                      height: _,
+                    } = _.currentTarget;
+                    _({
+                      naturalWidth: _,
+                      naturalHeight: _,
+                      displayWidth: _,
+                      displayHeight: _,
+                    });
+                  }
+                },
+              })
+        );
       }
     },
   },

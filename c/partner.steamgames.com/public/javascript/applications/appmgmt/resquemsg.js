@@ -345,28 +345,35 @@
       function _(_) {
         const [_, _] = (0, _.useState)(null),
           { fnAddProductID: _ } = _();
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsx)(_._, {
-              children: "Add Product SKU:",
-            }),
-            (0, _.jsx)("p", {
-              children:
-                "Select an item for which we want to communicate a reservation status.",
-            }),
-            (0, _.jsx)(_, {
-              selected: _,
-              setSelected: _,
-            }),
-            (0, _.jsxs)(_._, {
-              disabled: !_,
-              onClick: () => {
-                _(_), __webpack_require__(null);
-              },
-              children: ["Add ", _?.product_description, " To List"],
-            }),
-          ],
-        });
+        return (
+          console.log("AddProductToReservationPositionMessage selected: ", _),
+          (0, _.jsxs)("div", {
+            children: [
+              (0, _.jsx)(_._, {
+                children: "Add Product SKU:",
+              }),
+              (0, _.jsx)("p", {
+                children:
+                  "Select an item for which we want to communicate a reservation status.",
+              }),
+              (0, _.jsx)(_, {
+                selected: _,
+                setSelected: _,
+              }),
+              (0, _.jsxs)(_._, {
+                disabled: !_,
+                onClick: () => {
+                  _(_), __webpack_require__(null);
+                },
+                children: [
+                  "Add '",
+                  _?.product_description ?? _?.product_identifier,
+                  "' To List",
+                ],
+              }),
+            ],
+          })
+        );
       }
       function _(_) {
         const { selected: _, setSelected: _ } = _,
@@ -412,7 +419,7 @@
           options: _,
           value: _,
           onChange: (_) => {
-            _ && __webpack_require__(_);
+            _ && __webpack_require__(_.value);
           },
         });
       }
@@ -614,8 +621,17 @@
                 _.edistributor == _.edistributor &&
                 _.product_identifier == _.product_identifier,
             );
-          })(_),
-          _ = _.product_description + " " + _.distributor,
+          })(_);
+        if (!_)
+          return (0, _.jsxs)("div", {
+            children: [
+              "Unexpected: Could not find ProductID: ",
+              _.edistributor,
+              " : ",
+              _.product_identifier,
+            ],
+          });
+        const _ = _.product_description + " " + _.distributor,
           _ = (function (_) {
             const [_, _] = (0, _.useState)(() =>
               _.Get().GetPositionMessagingForProduct(_),
@@ -936,7 +952,7 @@
           children: [
             (0, _.jsx)("h1", {
               className: _().PageTitle,
-              children: "Reservation Queue - Messaging Tools",
+              children: "Lawrence's Reservation Queue Position Messaging Tools",
             }),
             (0, _.jsx)("hr", {
               className: "VO",

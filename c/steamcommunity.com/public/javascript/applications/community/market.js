@@ -512,24 +512,58 @@
         });
       }
       function _(_) {
+        var _;
+        const _ = _.context.itemDescription,
+          _ = parseInt(_.args.index || "-1");
+        let _;
+        (null === (_ = _.container_properties) || void 0 === _
+          ? void 0
+          : _.contained_items) &&
+          _ >= 0 &&
+          _ < _.container_properties.contained_items.length &&
+          (_ = _.container_properties.contained_items[_]);
+        const _ = _.appid,
+          { data: _ } = _(_, _);
+        return _ && _
+          ? (0, _.jsx)(
+              _,
+              {
+                appid: _,
+                description: _,
+              },
+              _,
+            )
+          : null;
+      }
+      function _(_) {
         const { appid: _, contained_item: _ } = _,
           { data: _ } = _(_, _);
         return _
           ? (0, _.jsx)("li", {
               children: (0, _.jsx)(_, {
+                appid: _,
                 description: _,
-                children:
-                  _.marketable && _.market_hash_name
-                    ? (0, _.jsx)(_, {
-                        description: _,
-                        href: _._.Item(_, _.market_hash_name),
-                      })
-                    : (0, _.jsx)(_, {
-                        description: _,
-                      }),
               }),
             })
           : null;
+      }
+      function _(_) {
+        const { appid: _, description: _ } = _;
+        return (0, _.jsx)(_, {
+          description: _,
+          children:
+            _.marketable && _.market_hash_name
+              ? (0, _.jsx)(_, {
+                  description: _,
+                  href: _._.Item(
+                    _,
+                    _.market_bucket_group_id || _.market_hash_name,
+                  ),
+                })
+              : (0, _.jsx)(_, {
+                  description: _,
+                }),
+        });
       }
       function _(_, _) {
         var _, _;
@@ -587,6 +621,9 @@
                 Constructor: _._,
               },
               container_item_list: {
+                Constructor: _,
+              },
+              container_item: {
                 Constructor: _,
               },
               persona: {
@@ -1883,9 +1920,11 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
+        var _;
+        const { _: _ = "div", ref: _, focusable: _, navProps: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -1893,14 +1932,23 @@
             },
             _,
           ),
-          _ = _;
-        return (0, _.jsx)(_._, {
-          "flow-children": "grid",
-          children: (0, _.jsx)(_, {
+          _ =
+            null !== (_ = null != _ ? _ : null == _ ? void 0 : _.focusable) &&
+            void 0 !== _
+              ? _
+              : !!_.onClick,
+          _ = (0, _.jsx)(_, {
             ref: _,
             ..._,
-          }),
-        });
+          });
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_._, {
+              "flow-children": "grid",
+              ...(_ || {}),
+              focusable: _,
+              children: _,
+            })
+          : _;
       }
       const _ = [
         ..._._,
@@ -7102,6 +7150,7 @@
               ref: _,
               onFocus: () => _(!0),
               onBlur: () => _(!1),
+              maxLength: 90,
               clearable: !0,
             }),
             (0, _.jsxs)(_.Suggestions, {

@@ -4057,7 +4057,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "steam_view_screenshots" "查看我的截图…"
 "steam_screenshot_not_loaded" "无法读取截图： %file_not_loaded_filename%"
 "steam_screenshots_no_selection_title" "在互联网上分享您喜爱游戏的截图"
-"steam_screenshots_no_selection_instructions" "按 %screenshot_hotkey% 键在游戏中截图\n\n选择您想要添加到在线截图库中的截图\n\n按住 Shift 或 Control 键来选择多张图片\n\n设置您的图片可见性为公开来将它们分享到互联网上"
+"steam_screenshots_no_selection_instructions" "按 %screenshot_hotkey% 键在游戏中截图\n\n选择您想要上传到在线库中的截图\n\n按住 Shift 或 Ctrl 键来选择多张截图\n\n将截图的可见性设置为公开，即可将其分享到网上"
 
 
 "steam_screenshots_page_single_day" "%FirstDayInRange%"

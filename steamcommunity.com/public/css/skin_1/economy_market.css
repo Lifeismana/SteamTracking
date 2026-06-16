@@ -2328,10 +2328,10 @@ input.filter_search_box:focus {
 	color: #60acde;
 }
 
-#market_buy_commodity_popup .market_dialog_content input[type="text"],
-#market_buy_commodity_popup .market_dialog_content select,
-#market_buy_commodity_popup .market_dialog_content textarea,
-#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+.market_dialog_content input[type="text"],
+.market_dialog_content select,
+.market_dialog_content textarea,
+.market_dialog_content .dselect_container .trigger {
 	box-sizing: border-box;
 	margin-block: 3px 10px;
 	padding: 3px;
@@ -2339,16 +2339,16 @@ input.filter_search_box:focus {
 	width: 100%;
 }
 
-html.GamepadMode #market_buy_commodity_popup .market_dialog_content input[type="text"],
-html.GamepadMode #market_buy_commodity_popup .market_dialog_content select,
-html.GamepadMode #market_buy_commodity_popup .market_dialog_content textarea {
+html.GamepadMode .market_dialog_content input[type="text"],
+html.GamepadMode .market_dialog_content select,
+html.GamepadMode .market_dialog_content textarea {
 	padding: 8px 10px;
 }
 
-html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content input[type="text"],
-html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content select,
-html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content textarea,
-html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+html:not(.GamepadMode) .market_dialog_content input[type="text"],
+html:not(.GamepadMode) .market_dialog_content select,
+html:not(.GamepadMode) .market_dialog_content textarea,
+html:not(.GamepadMode) .market_dialog_content .dselect_container .trigger {
 	background-color: rgba( 0, 0, 0, 0.4);
 	border: 1px solid #000;
 	border-radius: 3px;
@@ -2409,7 +2409,7 @@ html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 
-#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+.market_dialog_content .dselect_container .trigger {
 	cursor: pointer;
 	display: block;
 	overflow: hidden;
@@ -2419,22 +2419,22 @@ html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
 	white-space: nowrap;
 }
 
-html.GamepadMode #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+html.GamepadMode .market_dialog_content .dselect_container .trigger {
 	padding: 8px 27px 8px 10px;
 }
 
-html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger.activetrigger {
+html:not(.GamepadMode) .market_dialog_content .dselect_container .trigger.activetrigger {
 	border-radius: 3px 3px 0 0;
 }
 
-html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger:hover,
-html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger.activetrigger {
+html:not(.GamepadMode) .market_dialog_content .dselect_container .trigger:hover,
+html:not(.GamepadMode) .market_dialog_content .dselect_container .trigger.activetrigger {
 	background-color: #67c1f5; /* Old browsers */
 	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
 }
 
-#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger::after {
+.market_dialog_content .dselect_container .trigger::after {
 	background: url('https://community.fastly.steamstatic.com/public/images/economy/ico_arrow_dn_for_select.png') no-repeat left center;
 	content: '';
 	inset: 0 0 0 auto;

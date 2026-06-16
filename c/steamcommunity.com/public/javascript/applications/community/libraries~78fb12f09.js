@@ -511,6 +511,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1212,7 +1213,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_, 2),
@@ -1640,8 +1640,7 @@
           if (((_ = _ || {}), !_)) throw new Error("No node provided");
           return !1 !== _.call(_, _) && _(_, _);
         },
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       function _(_) {
         const _ = _.useRef(void 0),
           _ = _.useCallback((_) => {
@@ -2479,19 +2478,6 @@
           _ = _.relatedTarget;
         return !_ || !_(_, _);
       }
-      function _(_) {
-        _(_, _()).forEach((_) => {
-          (_.dataset.tabindex = _.getAttribute("tabindex") || ""),
-            _.setAttribute("tabindex", "-1");
-        });
-      }
-      function _(_) {
-        _.querySelectorAll("[data-tabindex]").forEach((_) => {
-          const _ = _.dataset.tabindex;
-          delete _.dataset.tabindex,
-            _ ? _.setAttribute("tabindex", _) : _.removeAttribute("tabindex");
-        });
-      }
       const _ = {
           border: 0,
           clip: "rect(0 0 0 0)",
@@ -2523,150 +2509,7 @@
             ..._,
           });
         }),
-        _ = _.createContext(null),
-        _ = _("portal");
-      function _(_) {
-        const { children: _, _: _, root: _, preserveTabOrder: _ = !0 } = _,
-          _ = (function (_) {
-            void 0 === _ && (_ = {});
-            const { _: _, root: _ } = _,
-              _ = _(),
-              _ = _(),
-              [_, _] = _.useState(null),
-              _ = _.useRef(null);
-            return (
-              _(
-                () => () => {
-                  null == _ || _.remove(),
-                    queueMicrotask(() => {
-                      _.current = null;
-                    });
-                },
-                [_],
-              ),
-              _(() => {
-                if (!_) return;
-                if (_.current) return;
-                const _ = _ ? document.getElementById(_) : null;
-                if (!_) return;
-                const _ = document.createElement("div");
-                (_._ = _),
-                  __webpack_require__.setAttribute(_, ""),
-                  _.appendChild(_),
-                  (_.current = _),
-                  _(_);
-              }, [_, _]),
-              _(() => {
-                if (null === _) return;
-                if (!_) return;
-                if (_.current) return;
-                let _ = _ || (null == _ ? void 0 : _.portalNode);
-                _ && !(0, _._)(_) && (_ = _.current), (_ = _ || document.body);
-                let _ = null;
-                _ &&
-                  ((_ = document.createElement("div")),
-                  (_._ = _),
-                  _.appendChild(_));
-                const _ = document.createElement("div");
-                (_._ = _),
-                  _.setAttribute(_, ""),
-                  (_ = _ || _),
-                  _.appendChild(_),
-                  (_.current = _),
-                  _(_);
-              }, [_, _, _, _]),
-              _
-            );
-          })({
-            _: _,
-            root: _,
-          }),
-          [_, _] = _.useState(null),
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = null == _ ? void 0 : _.modal,
-          _ = null == _ ? void 0 : _.open,
-          _ = !!_ && !_.modal && _.open && _ && !(!_ && !_);
-        return (
-          _.useEffect(() => {
-            if (_ && _ && !_)
-              return (
-                _.addEventListener("focusin", _, !0),
-                _.addEventListener("focusout", _, !0),
-                () => {
-                  _.removeEventListener("focusin", _, !0),
-                    _.removeEventListener("focusout", _, !0);
-                }
-              );
-            function _(_) {
-              if (_ && _(_)) {
-                ("focusin" === _.type ? _ : _)(_);
-              }
-            }
-          }, [_, _, _]),
-          _.useEffect(() => {
-            _ && (_ || _(_));
-          }, [_, _]),
-          (0, _.jsxs)(_.Provider, {
-            value: _.useMemo(
-              () => ({
-                preserveTabOrder: _,
-                beforeOutsideRef: _,
-                afterOutsideRef: _,
-                beforeInsideRef: _,
-                afterInsideRef: _,
-                portalNode: _,
-                setFocusManagerState: _,
-              }),
-              [_, _],
-            ),
-            children: [
-              _ &&
-                _ &&
-                (0, _.jsx)(_, {
-                  "data-type": "outside",
-                  ref: _,
-                  onFocus: (_) => {
-                    if (_(_, _)) {
-                      var _;
-                      null == (_ = _.current) || _.focus();
-                    } else {
-                      const _ = _() || (null == _ ? void 0 : _.domReference);
-                      null == _ || _.focus();
-                    }
-                  },
-                }),
-              _ &&
-                _ &&
-                (0, _.jsx)("span", {
-                  "aria-owns": _._,
-                  style: _,
-                }),
-              _ && _.createPortal(_, _),
-              _ &&
-                _ &&
-                (0, _.jsx)(_, {
-                  "data-type": "outside",
-                  ref: _,
-                  onFocus: (_) => {
-                    if (_(_, _)) {
-                      var _;
-                      null == (_ = _.current) || _.focus();
-                    } else {
-                      const _ = _() || (null == _ ? void 0 : _.domReference);
-                      null == _ || _.focus(),
-                        (null == _ ? void 0 : _.closeOnFocusOut) &&
-                          (null == _ ||
-                            _.onOpenChange(!1, _.nativeEvent, "focus-out"));
-                    }
-                  },
-                }),
-            ],
-          })
-        );
-      }
+        _ = _.createContext(null);
       const _ = () => _.useContext(_),
         _ = "data-floating-ui-focusable";
       function _(_) {

@@ -1221,6 +1221,12 @@
         NoColumnBorders: "_3C2djc2HxWtHJaUqVq-cKt",
       };
     },
+    2213: (e) => {
+      e.exports = {
+        SeeMoreButtonGamepad: "_3LB60XV--dXt2yYQ6dF5aT",
+        Focused: "_3NISN-t8MP65UYQ4p5bNgh",
+      };
+    },
     19418: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -1455,13 +1461,13 @@
         HideInWideMode: "_3itHivPkrgI7TWENi1yxjI",
         OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
         HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
         PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
         EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
         OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
         MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
         OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
-        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
         UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
         OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
         EventType: "_2BWwVF5N-3fDuJRblB6gHb",
@@ -5409,7 +5415,7 @@
           return this.m_oSpotlight.title;
         }
         GetAssetCount() {
-          return (0, o.Uh)(this.m_oSpotlight.image);
+          return (0, o.Uh)(this.m_oSpotlight.vertical_capsule);
         }
         GetLocalizedAltText(e) {
           return (
@@ -11406,7 +11412,7 @@
         }
         BIsSpotlightArtRequest() {
           return Boolean(
-            this.m_oInput.art_requests?.find((e) => "spotlight_art" == e),
+            this.m_oInput.art_requests?.find((e) => "spotlight_art_hero" == e),
           );
         }
         BIsSalePageArtRequest() {
@@ -33473,7 +33479,7 @@
         });
       var Pi = n(18318),
         Bi = n(64610),
-        Ri = n(30294),
+        Ri = n(78730),
         Ni = n(60860);
       function Gi(e) {
         return Boolean(
@@ -39129,7 +39135,7 @@
     },
     84361: (e, t, n) => {
       "use strict";
-      n.d(t, { OL: () => Le, Vi: () => Re, sw: () => Ee });
+      n.d(t, { OL: () => Ge, Vi: () => Pe, sw: () => Te });
       var s = n(7850),
         a = n(16811),
         i = n(65946),
@@ -39291,7 +39297,7 @@
                   (0, s.jsxs)("div", {
                     className: d().AssetSpecs,
                     children: [
-                      (0, s.jsx)(Le, {
+                      (0, s.jsx)(Ge, {
                         strTemplateURL:
                           "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                         strDocURL:
@@ -39468,10 +39474,10 @@
                   (0, s.jsxs)("div", {
                     children: [
                       o
-                        .filter((e) =>
-                          r.BIsMarketingMessageArtRequest()
-                            ? e.startsWith("marketingmessage_art_2")
-                            : !e.startsWith("marketingmessage_art_2"),
+                        .filter(
+                          (e) =>
+                            !e.startsWith("marketingmessage_art_2") &&
+                            "spotlight_art" != e,
                         )
                         .map((e) =>
                           (0, s.jsx)(
@@ -39638,16 +39644,14 @@
           ],
         });
       }
-      var $ = n(3740);
-      function J(e) {
+      function $(e) {
         const { planIdentify: t } = e,
           n = (0, a.bE)(),
           [r, o, l] = (0, i.q3)(() => {
             let e = 0;
             return (
-              n.BHasPreviewArtOfType("spotlight_art") && e++,
               n.BHasPreviewArtOfType("spotlight_art_hero") && e++,
-              [n.BIsSpotlightArtRequest(), e, 2]
+              [n.BIsSpotlightArtRequest(), e, 1]
             );
           });
         return r
@@ -39665,7 +39669,7 @@
                       className: d().SectionCtn,
                       children: (0, s.jsx)("div", {
                         className: d().AssetSpecs,
-                        children: (0, s.jsx)(Le, {
+                        children: (0, s.jsx)(Ge, {
                           strTemplateURL:
                             "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                           strDocURL:
@@ -39723,7 +39727,7 @@
                                   }),
                                   (0, s.jsx)("li", {
                                     children: (0, S.we)(
-                                      "#AssetRequest_SpotlightHero_Design3",
+                                      "#AssetRequest_SpotlightHero_Design4",
                                     ),
                                   }),
                                 ],
@@ -39749,76 +39753,6 @@
                         }),
                       ],
                     }),
-                    (0, s.jsxs)("div", {
-                      className: d().SectionCtn,
-                      children: [
-                        (0, s.jsx)("div", {
-                          className: d().AssetSpecs,
-                          children: (0, s.jsxs)("div", {
-                            className: d().AssetTypeCtn,
-                            children: [
-                              (0, s.jsx)("div", {
-                                className: d().AssetTitle,
-                                children: (0, S.we)(
-                                  "#AssetRequest_ArtType_spotlight_art",
-                                ),
-                              }),
-                              (0, s.jsx)("div", {
-                                children: (0, S.we)(
-                                  "#AssetRequest_General_Size",
-                                  306,
-                                  260,
-                                ),
-                              }),
-                              (0, s.jsx)("br", {}),
-                              (0, s.jsx)("div", {
-                                children: (0, S.we)(
-                                  "#AssetRequest_Spotlight_Usage",
-                                ),
-                              }),
-                              (0, s.jsx)("br", {}),
-                              (0, s.jsxs)("ul", {
-                                children: [
-                                  (0, s.jsx)("li", {
-                                    children: (0, S.we)(
-                                      "#AssetRequest_Spotlight_Design",
-                                    ),
-                                  }),
-                                  (0, s.jsx)("li", {
-                                    children: (0, S.we)(
-                                      "#AssetRequest_Spotlight_Design2",
-                                    ),
-                                  }),
-                                  (0, s.jsx)("li", {
-                                    children: (0, S.we)(
-                                      "#AssetRequest_Spotlight_Design3",
-                                    ),
-                                  }),
-                                  (0, s.jsx)("li", {
-                                    children: (0, S.we)(
-                                      "#AssetRequest_Spotlight_Design4",
-                                    ),
-                                  }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        }),
-                        (0, s.jsx)("div", {
-                          className: d().AssetUploadPreviewCtn,
-                          children: (0, s.jsxs)("div", {
-                            className: d().AssetUploadPreview,
-                            children: [
-                              (0, s.jsx)(C, {
-                                planID: t.id,
-                                promoAssetType: "spotlight_art",
-                              }),
-                              (0, s.jsx)(X, { planIdentify: t }),
-                            ],
-                          }),
-                        }),
-                      ],
-                    }),
                   ],
                 }),
                 (0, s.jsx)("br", {}),
@@ -39826,51 +39760,12 @@
             })
           : null;
       }
-      function X(e) {
-        const { planIdentify: t } = e,
-          n = (0, a.bE)().GetPreviewArtOfType("spotlight_art");
-        return (0, s.jsxs)("div", {
-          className: d().SpotlightPreviewCtn,
-          children: [
-            (0, s.jsx)("img", {
-              src: n?.filename ? x(t.id, n.lang, n.filename) : void 0,
-            }),
-            (0, s.jsxs)("div", {
-              className: d().Content,
-              children: [
-                (0, s.jsx)("div", {
-                  className: d().Title,
-                  children: (0, S.we)("#AssetRequest_Type_" + t.type),
-                }),
-                (0, s.jsx)("div", {
-                  className: d().Subtitle,
-                  children: (0, S.we)(
-                    "#AssetRequest_Spotlight_End",
-                    (0, S.TW)(t.end_date),
-                  ),
-                }),
-                (0, s.jsx)($.B, {
-                  bIsPrePurchase: !1,
-                  bHidePrePurchase: !1,
-                  bSingleLineMode: !1,
-                  nDiscountPercentage: 50,
-                  nBaseDiscountPercentage: null,
-                  strBestPurchasePriceFormatted: "$14.99",
-                  strBestPurchaseOriginalPriceFormatted: "$30.00",
-                  bHideDiscountPercentForCompliance: !1,
-                  bShowNewFlag: !1,
-                }),
-              ],
-            }),
-          ],
-        });
-      }
-      var Q = n(78327),
-        Z = n(24484),
-        ee = n(48996),
-        te = n(258),
-        ne = n(18509);
-      function se(e) {
+      var J = n(78327),
+        X = n(24484),
+        Q = n(48996),
+        Z = n(258),
+        ee = n(18509);
+      function te(e) {
         const { planIdentify: t } = e,
           n = (0, a.bE)(),
           [r, o, l, c] = (0, i.q3)(() => [
@@ -39900,7 +39795,7 @@
                     (0, s.jsxs)("div", {
                       className: d().AssetSpecs,
                       children: [
-                        (0, s.jsx)(Le, {
+                        (0, s.jsx)(Ge, {
                           strTemplateURL:
                             "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                           strDocURL:
@@ -39970,7 +39865,7 @@
                               planID: t.id,
                               promoAssetType: "takeover_art",
                             }),
-                            (0, s.jsx)(ae, {
+                            (0, s.jsx)(ne, {
                               planIdentify: t,
                               promoAssetType: "takeover_art",
                             }),
@@ -39985,7 +39880,7 @@
                               planID: t.id,
                               promoAssetType: "takeover_mobile_art",
                             }),
-                            (0, s.jsx)(ae, {
+                            (0, s.jsx)(ne, {
                               planIdentify: t,
                               promoAssetType: "takeover_mobile_art",
                             }),
@@ -40001,7 +39896,7 @@
           })
         );
       }
-      function ae(e) {
+      function ne(e) {
         const { planIdentify: t, promoAssetType: n } = e,
           i = (0, a.bE)().GetPreviewArtOfType(n);
         return (0, s.jsx)("div", {
@@ -40011,7 +39906,7 @@
           }),
         });
       }
-      function ie(e) {
+      function se(e) {
         const { planIdentify: t } = e,
           n = (0, a.bE)(),
           [r, o, l] = (0, i.q3)(() => [
@@ -40035,7 +39930,7 @@
                     (0, s.jsxs)("div", {
                       className: d().AssetSpecs,
                       children: [
-                        (0, s.jsx)(Le, {
+                        (0, s.jsx)(Ge, {
                           strTemplateURL:
                             "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                           strDocURL:
@@ -40090,7 +39985,7 @@
                               planID: t.id,
                               promoAssetType: "takeunder_art",
                             }),
-                            (0, s.jsx)(re, {
+                            (0, s.jsx)(ae, {
                               planIdentify: t,
                               promoAssetType: "takeunder_art",
                             }),
@@ -40105,7 +40000,7 @@
                               planID: t.id,
                               promoAssetType: "takeunder_mobile_art",
                             }),
-                            (0, s.jsx)(re, {
+                            (0, s.jsx)(ae, {
                               planIdentify: t,
                               promoAssetType: "takeunder_mobile_art",
                             }),
@@ -40121,7 +40016,7 @@
           })
         );
       }
-      function re(e) {
+      function ae(e) {
         const { planIdentify: t, promoAssetType: n } = e,
           i = (0, a.bE)().GetPreviewArtOfType(n);
         return (0, s.jsx)("div", {
@@ -40131,8 +40026,8 @@
           }),
         });
       }
-      var oe = n(73744);
-      function le(e) {
+      var ie = n(73744);
+      function re(e) {
         const { planIdentify: t } = e,
           n = (0, a.bE)(),
           [r, o, l, c, p, u, m] = (0, i.q3)(() => [
@@ -40164,7 +40059,7 @@
                     children: (0, s.jsxs)("div", {
                       className: d().AssetSpecs,
                       children: [
-                        (0, s.jsx)(Le, {
+                        (0, s.jsx)(Ge, {
                           strTemplateURL:
                             "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                           strDocURL:
@@ -40255,8 +40150,8 @@
                             (0, s.jsx)("div", {
                               children: (0, S.we)(
                                 "#AssetRequest_General_Size",
-                                (0, oe.qj)(oe.Fj.sale_logo.width),
-                                (0, oe.qj)(oe.Fj.sale_logo.height),
+                                (0, ie.qj)(ie.Fj.sale_logo.width),
+                                (0, ie.qj)(ie.Fj.sale_logo.height),
                               ),
                             }),
                             (0, s.jsx)("div", {
@@ -40307,8 +40202,8 @@
                             (0, s.jsx)("div", {
                               children: (0, S.we)(
                                 "#AssetRequest_General_Size",
-                                (0, oe.qj)(oe.Fj.capsule.width),
-                                (0, oe.qj)(oe.Fj.capsule.height),
+                                (0, ie.qj)(ie.Fj.capsule.width),
+                                (0, ie.qj)(ie.Fj.capsule.height),
                               ),
                             }),
                             (0, s.jsx)("div", {
@@ -40359,8 +40254,8 @@
                             (0, s.jsx)("div", {
                               children: (0, S.we)(
                                 "#AssetRequest_General_Size",
-                                (0, oe.qj)(oe.Fj.localized_title_image.width),
-                                (0, oe.qj)(oe.Fj.localized_title_image.height),
+                                (0, ie.qj)(ie.Fj.localized_title_image.width),
+                                (0, ie.qj)(ie.Fj.localized_title_image.height),
                               ),
                             }),
                             (0, s.jsx)("div", {
@@ -40411,8 +40306,8 @@
                             (0, s.jsx)("div", {
                               children: (0, S.we)(
                                 "#AssetRequest_General_Size",
-                                (0, oe.qj)(oe.Fj.product_banner.width),
-                                (0, oe.qj)(oe.Fj.product_banner.height),
+                                (0, ie.qj)(ie.Fj.product_banner.width),
+                                (0, ie.qj)(ie.Fj.product_banner.height),
                               ),
                             }),
                             (0, s.jsx)("div", {
@@ -40463,8 +40358,8 @@
                             (0, s.jsx)("div", {
                               children: (0, S.we)(
                                 "#AssetRequest_General_Size",
-                                (0, oe.qj)(oe.Fj.product_mobile_banner.width),
-                                (0, oe.qj)(oe.Fj.product_mobile_banner.height),
+                                (0, ie.qj)(ie.Fj.product_mobile_banner.width),
+                                (0, ie.qj)(ie.Fj.product_mobile_banner.height),
                               ),
                             }),
                             (0, s.jsx)("div", {
@@ -40505,7 +40400,7 @@
           })
         );
       }
-      function ce(e) {
+      function oe(e) {
         const { planIdentify: t } = e,
           n = (0, a.bE)(),
           [r, o, l, c] = (0, i.q3)(() => [
@@ -40636,9 +40531,9 @@
           ],
         });
       }
-      var de = n(47531),
-        pe = n.n(de);
-      function ue(e) {
+      var le = n(47531),
+        ce = n.n(le);
+      function de(e) {
         const {
           bCompleted: t,
           bRequired: n,
@@ -40648,28 +40543,28 @@
         } = e;
         return (0, s.jsx)("div", {
           children: (0, s.jsxs)("div", {
-            className: pe().ChecklistBlockCtn,
+            className: ce().ChecklistBlockCtn,
             children: [
               (0, s.jsxs)("div", {
-                className: pe().ChecklistTitleCtn,
+                className: ce().ChecklistTitleCtn,
                 children: [
                   t
                     ? (0, s.jsx)("span", {
-                        className: pe().Completed,
+                        className: ce().Completed,
                         children: "✓ ",
                       })
                     : n
-                      ? (0, s.jsx)("div", { className: pe().RequiredToggle })
-                      : (0, s.jsx)("div", { className: pe().OptionalToggle }),
+                      ? (0, s.jsx)("div", { className: ce().RequiredToggle })
+                      : (0, s.jsx)("div", { className: ce().OptionalToggle }),
                   (0, s.jsx)("span", {
-                    className: pe().ChecklistTitle,
+                    className: ce().ChecklistTitle,
                     children: a,
                   }),
                   !r &&
                     (0, s.jsxs)("span", {
                       className: (0, L.A)({
-                        [pe().Required]: n,
-                        [pe().Optional]: !n,
+                        [ce().Required]: n,
+                        [ce().Optional]: !n,
                       }),
                       children: [
                         " ",
@@ -40683,25 +40578,25 @@
                 ],
               }),
               (0, s.jsx)("div", {
-                className: pe().ChecklistDescription,
+                className: ce().ChecklistDescription,
                 children: i,
               }),
             ],
           }),
         });
       }
-      var me = n(37085),
-        he = n(96171),
-        _e = n(64753),
-        ge = n(8527),
-        Se = n(41735),
-        ve = n.n(Se),
-        xe = n(44165),
-        fe = n(76684),
-        ye = n(78395),
-        De = n(21869),
-        be = n(68797);
-      function je(e) {
+      var pe = n(37085),
+        ue = n(96171),
+        me = n(64753),
+        he = n(8527),
+        _e = n(41735),
+        ge = n.n(_e),
+        Se = n(44165),
+        ve = n(76684),
+        xe = n(78395),
+        fe = n(21869),
+        ye = n(68797);
+      function De(e) {
         const t = (0, a.bE)(),
           [n, r, o, l, c] = (0, i.q3)(() => [
             t.GetUpdateEventGID(),
@@ -40710,12 +40605,12 @@
             t.GetEventCreateAccountID(),
             t.GetEventCreateRTime(),
           ]);
-        return r != he.c6.qI
+        return r != ue.c6.qI
           ? (0, s.jsx)("div", {
               children:
                 "Error wrong store item type assocatiated, please reach out to Steam Contact",
             })
-          : (0, s.jsx)(ue, {
+          : (0, s.jsx)(de, {
               bCompleted: Boolean(n),
               title: (0, S.we)("#AssetRequest_UpdateAnnouncement"),
               bRequired: !0,
@@ -40727,20 +40622,20 @@
                           "#AssetRequest_EventLinked_Desc",
                           (0, s.jsx)("a", {
                             target: "_blank",
-                            href: `${Q.TS.COMMUNITY_BASE_URL}ogg/${o}/partnerevents/edit/${n}`,
+                            href: `${J.TS.COMMUNITY_BASE_URL}ogg/${o}/partnerevents/edit/${n}`,
                           }),
                         ),
                       }),
                       (0, s.jsxs)("div", {
-                        className: pe().AgreementAcceptedBlock,
+                        className: ce().AgreementAcceptedBlock,
                         children: [
                           (0, S.we)("#AssetRequest_EventRuleAccepted"),
                           (0, s.jsx)(N.p, { accountID: l }),
-                          (0, s.jsx)(fe.K4, { dateAndTime: c }),
-                          (0, s.jsx)(we, {}),
+                          (0, s.jsx)(ve.K4, { dateAndTime: c }),
+                          (0, s.jsx)(be, {}),
                         ],
                       }),
-                      ge.iA.is_support && (0, s.jsx)(Te, {}),
+                      he.iA.is_support && (0, s.jsx)(Ce, {}),
                     ],
                   })
                 : (0, s.jsxs)("div", {
@@ -40749,53 +40644,53 @@
                         "#AssetRequest_UpdateAnnouncement_desc",
                         (0, s.jsx)("a", {
                           href:
-                            Q.TS.PARTNER_BASE_URL +
+                            J.TS.PARTNER_BASE_URL +
                             "doc/store/assets/promos#popup_update",
                         }),
                       ),
-                      (0, s.jsx)(Ie, {}),
+                      (0, s.jsx)(je, {}),
                     ],
                   }),
             });
       }
-      function we(e) {
-        const [t, n, a] = (0, _e.uD)();
+      function be(e) {
+        const [t, n, a] = (0, me.uD)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(p.$n, {
               onClick: n,
               children: (0, S.we)("#AssetRequest_CreateEvent_ReadRules"),
             }),
-            (0, s.jsx)(De.E, {
+            (0, s.jsx)(fe.E, {
               active: t,
-              children: (0, s.jsx)(ye.o0, {
+              children: (0, s.jsx)(xe.o0, {
                 bAlertDialog: !0,
                 closeModal: a,
-                children: (0, s.jsx)(Ae, {}),
+                children: (0, s.jsx)(Ie, {}),
               }),
             }),
           ],
         });
       }
-      function Ie(e) {
-        const [t, n, a] = (0, _e.uD)();
+      function je(e) {
+        const [t, n, a] = (0, me.uD)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(p.$n, {
               onClick: n,
               children: (0, S.we)("#AssetRequest_CreateEvent_Title"),
             }),
-            (0, s.jsx)(De.E, {
+            (0, s.jsx)(fe.E, {
               active: t,
-              children: (0, s.jsx)(Ce, { closeModal: a }),
+              children: (0, s.jsx)(we, { closeModal: a }),
             }),
           ],
         });
       }
-      function Ce(e) {
+      function we(e) {
         const { closeModal: t } = e,
           [n, i] = (0, r.useState)(!1),
-          o = (0, xe.f1)(),
+          o = (0, Se.f1)(),
           c = (0, a.bE)(),
           [d, m] = (0, r.useState)(!1),
           h = (0, u.vs)();
@@ -40805,26 +40700,26 @@
               strDialogTitle: (0, S.we)("#AssetRequest_CreateEvent_Title"),
               closeModal: t,
             })
-          : (0, s.jsxs)(ye.o0, {
+          : (0, s.jsxs)(xe.o0, {
               strTitle: (0, S.we)("#AssetRequest_CreateEvent_Title"),
               strDescription: (0, S.we)("#AssetRequest_CreateEvent_Desc"),
               strOKButtonText: (0, S.we)("#Sale_New_CreateEvent"),
               onCancel: t,
               onOK: async () => {
                 if ((h.fnSetLoading(!0), d))
-                  c.SetUpdateEvent(1, "fakegiddonnotsave", ge.iA.accountid, o),
+                  c.SetUpdateEvent(1, "fakegiddonnotsave", he.iA.accountid, o),
                     h.fnSetSuccess(!0);
                 else {
                   const e = await (async function (e, t) {
                     const n = new FormData();
-                    n.append("sessionid", Q.TS.SESSIONID),
+                    n.append("sessionid", J.TS.SESSIONID),
                       n.append("gid_promotionplan", e);
                     const s =
-                      Q.TS.PARTNER_BASE_URL +
+                      J.TS.PARTNER_BASE_URL +
                       "partnerevents/ajaxcreatemarketingmessagemajorevent";
                     try {
-                      const e = await ve().post(s, n, { withCredentials: !0 });
-                      if (e?.data?.success == me.R) return e.data;
+                      const e = await ge().post(s, n, { withCredentials: !0 });
+                      if (e?.data?.success == pe.R) return e.data;
                       console.error(
                         "OnSubmitCreateMarketingMessageMajorUpdate error code  " +
                           e?.data?.success +
@@ -40834,7 +40729,7 @@
                         t.fnSetStrError(e?.data?.msg),
                         t.fnSetError(!0);
                     } catch (e) {
-                      const n = (0, be.H)(e);
+                      const n = (0, ye.H)(e);
                       console.error(
                         "OnSubmitCreateMarketingMessageMajorUpdate " +
                           n.strErrorMsg,
@@ -40849,7 +40744,7 @@
                     (c.SetUpdateEvent(
                       e.clan_account_id,
                       e.clan_event_gid,
-                      ge.iA.accountid,
+                      he.iA.accountid,
                       o,
                     ),
                     h.fnSetSuccess(!0));
@@ -40857,20 +40752,20 @@
               },
               bOKDisabled: !n,
               children: [
-                (0, s.jsx)(Ae, {}),
+                (0, s.jsx)(Ie, {}),
                 (0, s.jsx)("br", {}),
                 Boolean(n)
                   ? (0, s.jsxs)(s.Fragment, {
                       children: [
                         (0, s.jsxs)("div", {
-                          className: pe().AgreementAcceptedBlock,
+                          className: ce().AgreementAcceptedBlock,
                           children: [
                             (0, S.we)("#AssetRequest_EventRuleAccepted"),
-                            (0, s.jsx)(N.p, { accountID: ge.iA.accountid }),
-                            (0, s.jsx)(fe.K4, { dateAndTime: o }),
+                            (0, s.jsx)(N.p, { accountID: he.iA.accountid }),
+                            (0, s.jsx)(ve.K4, { dateAndTime: o }),
                           ],
                         }),
-                        Boolean(ge.iA.is_support) &&
+                        Boolean(he.iA.is_support) &&
                           (0, s.jsx)(p.Yh, {
                             checked: d,
                             className: l().ValveOnlyBackground,
@@ -40888,7 +40783,7 @@
               ],
             });
       }
-      function Ae() {
+      function Ie() {
         return (0, s.jsxs)("ul", {
           children: [
             (0, s.jsx)("li", {
@@ -40903,20 +40798,20 @@
           ],
         });
       }
-      function Te(e) {
-        const [t, n, a] = (0, _e.uD)();
+      function Ce(e) {
+        const [t, n, a] = (0, me.uD)();
         return (0, s.jsxs)("div", {
           className: l().ValveOnlyBackground,
           children: [
             (0, s.jsx)(p.$n, { onClick: n, children: "(VO) Unlink Event" }),
-            (0, s.jsx)(De.E, {
+            (0, s.jsx)(fe.E, {
               active: t,
-              children: (0, s.jsx)(ke, { closeModal: a }),
+              children: (0, s.jsx)(Ae, { closeModal: a }),
             }),
           ],
         });
       }
-      function ke(e) {
+      function Ae(e) {
         const { closeModal: t } = e,
           n = (0, a.bE)(),
           i = (0, u.vs)();
@@ -40926,7 +40821,7 @@
               strDialogTitle: "Unlink Event",
               closeModal: t,
             })
-          : (0, s.jsx)(ye.o0, {
+          : (0, s.jsx)(xe.o0, {
               strTitle: "Unlink Event",
               strDescription: (0, S.we)("#Dialog_AreYouSure"),
               onCancel: t,
@@ -40934,14 +40829,14 @@
                 i.fnSetLoading(!0);
                 const e = await (async function (e, t) {
                   const n = new FormData();
-                  n.append("sessionid", Q.TS.SESSIONID),
+                  n.append("sessionid", J.TS.SESSIONID),
                     n.append("gid_promotionplan", e);
                   const s =
-                    Q.TS.PARTNER_BASE_URL +
+                    J.TS.PARTNER_BASE_URL +
                     "partnerevents/ajaxremovemarketingmessagemajorevent";
                   try {
-                    const e = await ve().post(s, n, { withCredentials: !0 });
-                    if (e?.data?.success == me.R) return e.data;
+                    const e = await ge().post(s, n, { withCredentials: !0 });
+                    if (e?.data?.success == pe.R) return e.data;
                     console.error(
                       "OnSubmitRemoveUpdateFromInputPipeline error code  " +
                         e?.data?.success +
@@ -40951,7 +40846,7 @@
                       t.fnSetStrError(e?.data?.msg),
                       t.fnSetError(!0);
                   } catch (e) {
-                    const n = (0, be.H)(e);
+                    const n = (0, ye.H)(e);
                     console.error(
                       "OnSubmitRemoveUpdateFromInputPipeline " + n.strErrorMsg,
                       n,
@@ -40967,7 +40862,7 @@
               },
             });
       }
-      function Ee(e) {
+      function Te(e) {
         const { planIdentify: t, bAdminView: n } = e,
           o = (0, a.bE)(),
           [c, u, m] = (0, i.q3)(() => [
@@ -40990,7 +40885,7 @@
             Boolean(u) &&
               (0, s.jsxs)(s.Fragment, {
                 children: [
-                  (0, s.jsx)(Be, {}),
+                  (0, s.jsx)(Ee, {}),
                   (0, s.jsx)("br", {}),
                   (0, s.jsx)("br", {}),
                 ],
@@ -41006,7 +40901,7 @@
                       !n &&
                       (0, s.jsxs)(s.Fragment, {
                         children: [
-                          (0, s.jsx)(Pe, {
+                          (0, s.jsx)(ke, {
                             oInput: o,
                             partnerID: t.permitted_partner_id,
                           }),
@@ -41017,8 +40912,8 @@
                     Boolean(h)
                       ? (0, s.jsxs)(s.Fragment, {
                           children: [
-                            (0, s.jsx)(Ne, {}),
-                            (0, s.jsx)(Ge, {
+                            (0, s.jsx)(Be, {}),
+                            (0, s.jsx)(Re, {
                               planIdentify: t,
                               fnSetShowDetails: _,
                             }),
@@ -41049,23 +40944,23 @@
               (0, s.jsxs)(s.Fragment, {
                 children: [
                   (0, s.jsx)("br", {}),
+                  (0, s.jsx)(te, { planIdentify: t }),
                   (0, s.jsx)(se, { planIdentify: t }),
-                  (0, s.jsx)(ie, { planIdentify: t }),
-                  (0, s.jsx)(J, { planIdentify: t }),
+                  (0, s.jsx)($, { planIdentify: t }),
                   (0, s.jsx)(T, { planIdentify: t, index: 0 }),
                   (0, s.jsx)(T, { planIdentify: t, index: 1 }),
-                  (0, s.jsx)(le, { planIdentify: t }),
-                  (0, s.jsx)(ce, { planIdentify: t }),
+                  (0, s.jsx)(re, { planIdentify: t }),
+                  (0, s.jsx)(oe, { planIdentify: t }),
                 ],
               }),
           ],
         });
       }
-      function Pe(e) {
+      function ke(e) {
         const { oInput: t, partnerID: n } = e,
-          a = (0, ee.sk)(t.GetDiscountEventID()),
-          i = (0, te.vV)(t.GetDiscountEventID()),
-          r = `${Q.TS.PARTNER_BASE_URL}promotion/discounts/dashboard/${n}?de=${t.GetDiscountEventID()}`;
+          a = (0, Q.sk)(t.GetDiscountEventID()),
+          i = (0, Z.vV)(t.GetDiscountEventID()),
+          r = `${J.TS.PARTNER_BASE_URL}promotion/discounts/dashboard/${n}?de=${t.GetDiscountEventID()}`;
         return (0, s.jsxs)("div", {
           className: (0, L.A)(l().SectionCtn, l().Bright),
           children: [
@@ -41084,11 +40979,11 @@
                 }),
               ],
             }),
-            (0, s.jsx)(ne.Lc, { rgPackagesDiscounts: a, oDiscountEvent: i }),
+            (0, s.jsx)(ee.Lc, { rgPackagesDiscounts: a, oDiscountEvent: i }),
           ],
         });
       }
-      function Be(e) {
+      function Ee(e) {
         return (0, s.jsxs)("div", {
           className: d().AssetRequestDoneCtn,
           children: [
@@ -41107,9 +41002,9 @@
           ],
         });
       }
-      function Re(e) {
+      function Pe(e) {
         const [t] = (0, r.useState)(() =>
-            (0, Z.Tc)("promotion_plan_identity", "application_config"),
+            (0, X.Tc)("promotion_plan_identity", "application_config"),
           ),
           n = Math.floor(Date.now() / 1e3);
         return (0, s.jsxs)("div", {
@@ -41120,11 +41015,11 @@
                 children:
                   "Warning: Promotion is over. No further access is granted.",
               }),
-            (0, s.jsx)(Ee, { planIdentify: t, bAdminView: !1 }),
+            (0, s.jsx)(Te, { planIdentify: t, bAdminView: !1 }),
           ],
         });
       }
-      function Ne(e) {
+      function Be(e) {
         const t = (0, a.bE)();
         return (0, s.jsxs)("div", {
           className: (0, L.A)(l().SectionCtn, l().Bright),
@@ -41178,7 +41073,7 @@
                       "#AssetRequest_Requirements_5",
                       (0, s.jsx)("a", {
                         target: "_blank",
-                        href: `${Q.TS.PARTNER_BASE_URL}doc/store/assets/promos`,
+                        href: `${J.TS.PARTNER_BASE_URL}doc/store/assets/promos`,
                       }),
                     ),
                   }),
@@ -41201,7 +41096,7 @@
           ],
         });
       }
-      function Ge(e) {
+      function Re(e) {
         const { fnSetShowDetails: t } = e,
           n = (0, a.bE)(),
           [
@@ -41234,8 +41129,7 @@
               n.BIsMarketingMessageEventCapsuleRequest(),
             n.BIsMarketingMessageArtRequest_2() ||
               n.BIsMarketingMessageEventCapsuleRequest_2(),
-            n.BHasPreviewArtOfType("spotlight_art") &&
-              n.BHasPreviewArtOfType("spotlight_art_hero"),
+            n.BHasPreviewArtOfType("spotlight_art_hero"),
             n.BHasPreviewArtOfType("marketingmessage_art") ||
               n.BHasPreviewArtOfType("marketingmessage_art_eventcapsule"),
             n.BHasPreviewArtOfType("marketingmessage_art_2") ||
@@ -41285,35 +41179,35 @@
               children: (0, S.we)("#AssetRequest_CheckList"),
             }),
             Boolean(j) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: w,
                 title: (0, S.we)("#AssetRequest_Check_Takeover"),
                 bRequired: !0,
                 children: (0, S.we)("#AssetRequest_Check_Takeover_desc"),
               }),
             Boolean(I) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: C,
                 title: (0, S.we)("#AssetRequest_Check_Takeunder"),
                 bRequired: !0,
                 children: (0, S.we)("#AssetRequest_Check_Takeunder_desc"),
               }),
             Boolean(A) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: T,
                 title: (0, S.we)("#AssetRequest_Check_SalePage"),
                 bRequired: !0,
                 children: (0, S.we)("#AssetRequest_Check_SalePage_desc"),
               }),
             Boolean(r) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: u,
                 title: (0, S.we)("#AssetRequest_Check_Spotlight"),
                 bRequired: !0,
                 children: (0, S.we)("#AssetRequest_Check_desc"),
               }),
             Boolean(M) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: !0,
                 title: (0, S.we)("#AssetRequest_Check_AutoRenderMM"),
                 bSkipOptional: !0,
@@ -41321,29 +41215,29 @@
                 children: (0, S.we)("#AssetRequest_Check_AutoRenderMM_desc"),
               }),
             Boolean(o) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: m,
                 title: (0, S.we)("#AssetRequest_Check_MM"),
                 bRequired: !0,
                 children: (0, S.we)("#AssetRequest_Check_desc"),
               }),
             Boolean(c) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: v,
                 title: (0, S.we)("#AssetRequest_Check_MM") + " #2",
                 bRequired: !0,
                 children: (0, S.we)("#AssetRequest_Check_desc"),
               }),
             Boolean(R) &&
-              (0, s.jsx)(ue, {
+              (0, s.jsx)(de, {
                 bCompleted: N,
                 title: (0, S.we)("#AssetRequest_Check_PromoApp"),
                 bRequired: !0,
                 children: (0, S.we)("#AssetRequest_Check_PromoApp_desc"),
               }),
-            (0, s.jsx)(Me, {}),
-            Boolean(B) && (0, s.jsx)(je, {}),
-            (0, s.jsxs)(ue, {
+            (0, s.jsx)(Ne, {}),
+            Boolean(B) && (0, s.jsx)(De, {}),
+            (0, s.jsxs)(de, {
               bCompleted: b.trim().length > 0,
               title: (0, S.we)("#AssetRequest_Check_ContactInfo"),
               bRequired: !0,
@@ -41367,7 +41261,7 @@
                 }),
               ],
             }),
-            (0, s.jsxs)(ue, {
+            (0, s.jsxs)(de, {
               bCompleted: x,
               title: (0, S.we)("#AssetRequest_Check_Special"),
               bRequired: !1,
@@ -41401,7 +41295,7 @@
                 className: d().SubmitButton,
                 onClick: (e) =>
                   (0, h.pg)(
-                    (0, s.jsx)(Oe, { strURL: y, fnSetShowDetails: t }),
+                    (0, s.jsx)(Me, { strURL: y, fnSetShowDetails: t }),
                     (0, g.uX)(e),
                   ),
                 children: (0, S.we)(
@@ -41414,10 +41308,10 @@
           ],
         });
       }
-      function Me(e) {
+      function Ne(e) {
         const t = (0, a.bE)(),
           [n] = (0, i.q3)(() => [t.GetArtInputLink()]);
-        return (0, s.jsxs)(ue, {
+        return (0, s.jsxs)(de, {
           bCompleted: n?.length > 0 && p.pd.validateUrl(n),
           title: (0, S.we)("#AssetRequest_Link_Title"),
           bRequired: !0,
@@ -41440,7 +41334,7 @@
           ],
         });
       }
-      function Le(e) {
+      function Ge(e) {
         const { strTemplateURL: t, strDocURL: n, strTemplateName: a } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -41467,7 +41361,7 @@
           ],
         });
       }
-      function Oe(e) {
+      function Me(e) {
         const { closeModal: t, strURL: n, fnSetShowDetails: i } = e,
           { fnUpdatePipelineInputAsPartner: r } = ((0, a.bE)(), (0, a.NY)()),
           [o] = (0, I.QD)("inputaccesskey", void 0),
@@ -47355,7 +47249,7 @@
         });
       }
       var pe = n(26408),
-        ue = n(98665);
+        ue = n(26384);
       function me(e) {
         const { strArrowColor: t, fnUpdateArrowColor: n, arrowStyle: a } = e,
           [i, r] = I.useState(null == t);
@@ -47409,7 +47303,7 @@
           }),
         });
       }
-      var _e = n(91667);
+      var _e = n(20741);
       function ge(e) {
         return (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(Se, { ...e }), (0, s.jsx)(ve, { ...e })],
@@ -47960,22 +47854,6 @@
                     (0, s.jsx)("h4", { children: "Static Assets Only" }),
                     (0, s.jsxs)("div", {
                       children: [
-                        (0, s.jsx)("h3", { children: "Spotlight Banner" }),
-                        (0, s.jsxs)("div", {
-                          children: [
-                            (0, s.jsx)("span", { children: "306px x 260px" }),
-                            " (.webp)",
-                          ],
-                        }),
-                        (0, s.jsx)(Be, {
-                          oEditableSpotlight: t,
-                          assetType: "image",
-                        }),
-                        (0, s.jsx)("br", {}),
-                      ],
-                    }),
-                    (0, s.jsxs)("div", {
-                      children: [
                         (0, s.jsx)("h3", {
                           children: "Spotlight Vertical Capsule",
                         }),
@@ -48096,19 +47974,24 @@
             t.GetModel(),
             t.GetAssetCount(),
           ]);
-        return (0, s.jsx)(se, {
-          bIsDirty: i,
-          bSaveDisabled: 0 == c,
-          fnOnRevert: () => t.RevertChanges(),
-          fnOnSave: async () => {
-            const e = await n(
-              a.ii.k_ConfigPage_Spotlight,
-              l,
-              t.GetAssetParams(),
-            );
-            return e && t.Reset((0, Ce.S0)(a.ii.k_ConfigPage_Spotlight, r)), e;
-          },
-        });
+        return (
+          console.log(t),
+          (0, s.jsx)(se, {
+            bIsDirty: i,
+            bSaveDisabled: 0 == c,
+            fnOnRevert: () => t.RevertChanges(),
+            fnOnSave: async () => {
+              const e = await n(
+                a.ii.k_ConfigPage_Spotlight,
+                l,
+                t.GetAssetParams(),
+              );
+              return (
+                e && t.Reset((0, Ce.S0)(a.ii.k_ConfigPage_Spotlight, r)), e
+              );
+            },
+          })
+        );
       }
       var Ge = n(92391),
         Me = n(34629),
@@ -50087,12 +49970,10 @@
               bShowInternalControls: t,
               promotionPlanID: _.GetID(),
             }),
-          _.BHasSpotlightIDs(0) &&
-            (!n ||
-              n.includes("spotlight_art") ||
-              n.includes("spotlight_art_hero")) &&
+          !_.BHasSpotlightIDs(0) ||
+            (n && !n.includes("spotlight_art_hero")) ||
             S.push({
-              artworkType: "spotlight_art",
+              artworkType: "spotlight_art_hero",
               id: _.GetSpotlightIDs(0),
               promotionPlanID: _.GetID(),
             }),
@@ -55170,11 +55051,11 @@
               children: [
                 (0, s.jsxs)("div", {
                   children: [
-                    "To see live stats, go to the &nbps;",
+                    "To see live stats, go to the ",
                     (0, s.jsx)("a", {
-                      href: "https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now",
+                      href: "https://grafana.valve.org/steam/d/a6879b35-cc98-4c51-9233-a55d504556fb/marketing-messages?orgId=2&from=now-7d&to=now&timezone=browser&var-message_type=$__all",
                       target: "_blank",
-                      children: "Graphana Page",
+                      children: "Grafana Page",
                     }),
                   ],
                 }),
@@ -55652,8 +55533,8 @@
                     }),
                     "  |  ",
                     (0, s.jsx)("a", {
-                      href: "https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization",
-                      children: "Graphana: Prioritization Stats Page",
+                      href: "https://grafana.valve.org/steam/d/a6879b35-cc98-4c51-9233-a55d504556fb/marketing-messages?orgId=2&from=now-7d&to=now&timezone=browser&var-message_type=$__all",
+                      children: "Grafana: Marketing Messages Detailed Stats",
                     }),
                   ],
                 }),
@@ -57824,6 +57705,12 @@
           ? null
           : (0, s.jsxs)(k.tH, {
               children: [
+                (0, s.jsx)("br", {}),
+                (0, s.jsx)("a", {
+                  href: `https://grafana.valve.org/steam/d/e0a6a523-05a9-4b5c-b341-2dc74b3006f0/marketing-message?orgId=2&var-message=${n}`,
+                  children: "Detailed Stats in Grafana",
+                }),
+                (0, s.jsx)("br", {}),
                 (0, s.jsx)("br", {}),
                 (0, s.jsxs)(A.JU, {
                   children: [
@@ -60795,7 +60682,7 @@
                 ")",
               ],
             }),
-            (0, s.jsx)(Na.B, {
+            (0, s.jsx)(Na.Bq, {
               bSingleLineMode: !0,
               bHidePrePurchase: !1,
               nBaseDiscountPercentage: 0,
@@ -71647,7 +71534,7 @@
         }
       }
       var pe = n(71381),
-        ue = n(30294),
+        ue = n(78730),
         me = n(12155),
         he = n(32754),
         _e = n(52038),
@@ -75158,7 +75045,7 @@
         });
       });
       var _n = n(23310),
-        gn = n(91822),
+        gn = n(93341),
         Sn = n(62307);
       function vn(e) {
         const {
@@ -93918,164 +93805,186 @@
           : null;
       }
     },
-    30294: (e, t, n) => {
+    78730: (e, t, n) => {
       "use strict";
-      n.d(t, { jR: () => b, ue: () => y });
+      n.d(t, { ue: () => I, jR: () => A });
       var s = n(7850),
         a = n(22837),
         i = n(75844),
-        r = n(18318),
-        o = n(38390),
-        l = n(60860),
-        c = n(95695),
-        d = n.n(c),
-        p = n(52393),
-        u = n(90595),
-        m = n(32754),
-        h = n(10224),
-        _ = n(52038),
-        g = n(61859),
+        r = n(90626),
+        o = n(18318),
+        l = n(38390),
+        c = n(60860),
+        d = n(95695),
+        p = n.n(d),
+        u = n(52393),
+        m = n(90595),
+        h = n(32754),
+        _ = n(64238),
+        g = n.n(_),
         S = n(78327),
-        v = n(75982),
-        x = n(46745),
-        f = n(46107);
-      function y(e, t) {
+        v = n(2213);
+      function x(e) {
+        const { label: t, shown: n } = e;
+        return (0, s.jsxs)("div", {
+          className: g()(v.SeeMoreButtonGamepad, n && v.Focused),
+          children: [
+            (0, s.jsx)("img", {
+              src: `${S.TS.IMG_URL}ico_gamepad/shared_button_y.svg`,
+              alt: "Y",
+            }),
+            (0, s.jsx)("div", { children: t }),
+          ],
+        });
+      }
+      var f = n(10224),
+        y = n(52038),
+        D = n(61859),
+        b = n(75982),
+        j = n(46745),
+        w = n(46107);
+      function I(e, t) {
         return (
-          g.NT.GetWithFallback(e.localized_label, t) ||
+          D.NT.GetWithFallback(e.localized_label, t) ||
           ("#Sale_default_label" === e.default_label
             ? ""
-            : (0, g.we)(e.default_label))
+            : (0, D.we)(e.default_label))
         );
       }
-      function D(e) {
+      function C(e) {
         const { event: t, elTitle: n, language: a } = e,
-          i = (0, h.zI)(),
-          r = (0, f.m0)(t, i ? "product_mobile_banner" : "product_banner", a);
+          i = (0, f.zI)(),
+          r = (0, w.m0)(t, i ? "product_mobile_banner" : "product_banner", a);
         return (0, s.jsxs)("div", {
-          className: d().SaleImageCtn,
+          className: p().SaleImageCtn,
           children: [
-            (0, s.jsx)("div", { className: d().SaleImageHelper, children: n }),
+            (0, s.jsx)("div", { className: p().SaleImageHelper, children: n }),
             (0, s.jsx)("img", { src: r, alt: n }),
           ],
         });
       }
-      const b = (0, i.PA)((e) => {
+      const A = (0, i.PA)((e) => {
         const {
             section: t,
             event: n,
             language: a,
             nHiddenCapsules: i,
-            title: c,
-            subtitle: h,
+            title: d,
+            subtitle: _,
+            bShowSeeMoreHint: g,
+            bUseGamepadLinkHint: v,
+            onLinkResolved: f,
           } = e,
-          f = (0, l.yD)(),
-          { eventModel: y } = (0, o.B9)(
+          w = (0, S.Qn)(),
+          I = (0, c.yD)(),
+          { eventModel: A } = (0, l.B9)(
             t.sale_page_cross_promo_clan_account_id,
             t.sale_page_cross_promo_event_gid,
             !1,
-          );
+          ),
+          E =
+            e.link ||
+            (function (e) {
+              return (0, o.ye)(e.section_type) &&
+                "deck_topplayed" === (0, o.Pm)(e)
+                ? S.TS.STORE_BASE_URL + "charts/steamdecktopplayed"
+                : e.label_link;
+            })(t) ||
+            A?.GetSaleURL();
         if (
-          "title_image" == t.section_type &&
-          "image" === t.title_image_selected
+          (r.useEffect(() => {
+            f?.(E);
+          }, [E, f]),
+          "title_image" == t.section_type && "image" === t.title_image_selected)
         )
           return null;
-        const b =
-          c || (0, v.yO)(t, n, a, n.clanSteamID.GetAccountID(), f.eLocation);
-        if (!b) return null;
-        const I = h || (0, v.CP)(t, n, a);
-        let C = (0, s.jsx)("div", {
-            className: (0, _.A)(d().SaleSectionHeader, "SaleSectionHeader"),
-            style: j(t, n, a),
-            children: y?.BHasSomeImage("product_banner")
-              ? (0, s.jsx)(D, { ...e, event: y, elTitle: b })
-              : b,
+        const P =
+          d || (0, b.yO)(t, n, a, n.clanSteamID.GetAccountID(), I.eLocation);
+        if (!P) return null;
+        const B = _ || (0, b.CP)(t, n, a);
+        let R = (0, s.jsx)("div", {
+            className: (0, y.A)(p().SaleSectionHeader, "SaleSectionHeader"),
+            style: T(t, n, a),
+            children: A?.BHasSomeImage("product_banner")
+              ? (0, s.jsx)(C, { ...e, event: A, elTitle: P })
+              : P,
           }),
-          A = (0, s.jsx)("div", {
-            className: (0, _.A)(
-              d().SaleSectionHeader,
-              d().SaleSectionSubtitle,
+          N = (0, s.jsx)("div", {
+            className: (0, y.A)(
+              p().SaleSectionHeader,
+              p().SaleSectionSubtitle,
               "SaleSectionSubtitle",
             ),
-            style: w(t, n, a),
-            children: I,
-          });
-        const T =
-          e.link ||
-          (function (e) {
-            return (0, r.ye)(e.section_type) &&
-              "deck_topplayed" === (0, r.Pm)(e)
-              ? S.TS.STORE_BASE_URL + "charts/steamdecktopplayed"
-              : e.label_link;
-          })(t) ||
-          y?.GetSaleURL();
-        let k = null;
-        return (
-          (T?.length ?? 0) > 0 &&
-            ((C = (0, s.jsx)(u.q, { url: T, children: C })),
-            (k = (function (e, t) {
-              let n = null;
-              if ("browseall" === e.label_link_style) {
-                const e = (0, g.we)("#Sale_SectionLink_BrowseAll");
-                n = (0, s.jsx)(u.q, {
-                  className: (0, _.A)(
-                    x.SectionLabelLinkButton,
+            style: k(t, n, a),
+            children: B,
+          }),
+          G = null;
+        if ((E?.length ?? 0) > 0) {
+          const { strLinkButtonLabel: e, strLinkButtonClasses: n } = (function (
+            e,
+          ) {
+            let t, n;
+            return (
+              "browseall" === e.label_link_style
+                ? ((t = (0, D.we)("#Sale_SectionLink_BrowseAll")),
+                  (n = (0, y.A)(
+                    j.SectionLabelLinkButton,
                     "SaleSectionLabelLinkButton",
-                  ),
-                  url: t,
-                  children: e,
-                });
-              } else if ("deck_topplayed" === (0, r.Pm)(e)) {
-                const e = (0, g.we)("#EventBrowse_MoreEventsBtn");
-                n = (0, s.jsx)(u.q, {
-                  className: (0, _.A)(
-                    d().EventSectionMoreBtn,
+                  )))
+                : "deck_topplayed" === (0, o.Pm)(e) &&
+                  ((t = (0, D.we)("#EventBrowse_MoreEventsBtn")),
+                  (n = (0, y.A)(
+                    p().EventSectionMoreBtn,
                     "SaleSectionLabelLinkButton",
-                  ),
-                  url: t,
-                  children: e,
-                });
-              }
-              return n;
-            })(t, T))),
-          (0, s.jsxs)("div", {
-            className: (0, _.A)(
-              x.SectionLabelCtn,
-              "SaleSectionLabelCtn",
-              y?.BHasSomeImage("product_banner") ? x.SectionLabelImage : "",
-            ),
-            children: [
-              (0, s.jsxs)("div", {
-                className: x.SectionTitleInnerCtn,
-                children: [C, Boolean(I) && A],
-              }),
-              (0, s.jsxs)("div", {
-                className: x.SectionLabelRight,
-                children: [
-                  !!i &&
-                    (0, s.jsx)(m.he, {
-                      className: p.SaleSectionSubtext,
-                      toolTipContent: "#Sale_HiddenItem_Tooltip",
-                      children: (0, s.jsx)("a", {
-                        href: S.TS.STORE_BASE_URL + "account/preferences",
-                        children: (0, g.PP)(
-                          1 == i
-                            ? "#Sale_HiddenItem_Single_Short"
-                            : "#Sale_HiddenItems_Short",
-                          i,
-                        ),
-                      }),
+                  ))),
+              { strLinkButtonLabel: t, strLinkButtonClasses: n }
+            );
+          })(t);
+          e &&
+            (G =
+              w && v
+                ? (0, s.jsx)(x, { label: e, shown: !!g })
+                : (0, s.jsx)(m.q, { url: E, className: n, children: e })),
+            (R = (0, s.jsx)(m.q, { url: E, bFocusable: !G, children: R }));
+        }
+        return (0, s.jsxs)("div", {
+          className: (0, y.A)(
+            j.SectionLabelCtn,
+            "SaleSectionLabelCtn",
+            A?.BHasSomeImage("product_banner") ? j.SectionLabelImage : "",
+          ),
+          children: [
+            (0, s.jsxs)("div", {
+              className: j.SectionTitleInnerCtn,
+              children: [R, Boolean(B) && N],
+            }),
+            (0, s.jsxs)("div", {
+              className: j.SectionLabelRight,
+              children: [
+                !!i &&
+                  (0, s.jsx)(h.he, {
+                    className: u.SaleSectionSubtext,
+                    toolTipContent: "#Sale_HiddenItem_Tooltip",
+                    children: (0, s.jsx)("a", {
+                      href: S.TS.STORE_BASE_URL + "account/preferences",
+                      children: (0, D.PP)(
+                        1 == i
+                          ? "#Sale_HiddenItem_Single_Short"
+                          : "#Sale_HiddenItems_Short",
+                        i,
+                      ),
                     }),
-                  k,
-                ],
-              }),
-            ],
-          })
-        );
+                  }),
+                G,
+              ],
+            }),
+          ],
+        });
       });
-      function j(e, t, n) {
+      function T(e, t, n) {
         return {
           fontFamily: t.jsondata.sale_font
-            ? I(t.jsondata.sale_font, n)
+            ? E(t.jsondata.sale_font, n)
             : void 0,
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: `${t.jsondata.sale_section_font_size}px`,
@@ -94085,10 +93994,10 @@
           color: e.label_color,
         };
       }
-      function w(e, t, n) {
+      function k(e, t, n) {
         return {
           fontFamily: t.jsondata.sale_font
-            ? I(t.jsondata.sale_font, n)
+            ? E(t.jsondata.sale_font, n)
             : void 0,
           fontWeight: 300,
           fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
@@ -94101,7 +94010,7 @@
           opacity: "50%",
         };
       }
-      function I(e, t) {
+      function E(e, t) {
         return (
           (e = e || ""),
           t === a._Q1
@@ -94215,7 +94124,7 @@
                   !a &&
                     (0, s.jsx)("span", {
                       className: v().BottomBarPriceInfo,
-                      children: (0, s.jsx)(f.N, {
+                      children: (0, s.jsx)(f.NF, {
                         id: t,
                         bShowInLibrary: i,
                         onlyOneDiscountPct: p,
@@ -94482,7 +94391,7 @@
                         bPreferAssetWithoutOverride: S,
                       }),
                     (0, s.jsx)(M.J, { id: t }),
-                    (0, s.jsx)(C.m, { id: t, active: u, bIsHoverMode: !0 }),
+                    (0, s.jsx)(C.mj, { id: t, active: u, bIsHoverMode: !0 }),
                   ],
                 }),
                 w &&

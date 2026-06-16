@@ -571,6 +571,10 @@ textarea.forumtopic_reply_textarea {
 	color: #ffffff;
 }
 
+.forum_topic_blocked .forum_op_header, .forum_topic_blocked .topic, .forum_topic_blocked .content {
+	display: none;
+}
+
 .forumtopic_comments .commentthread_user_avatar {
 }
 

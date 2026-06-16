@@ -975,7 +975,12 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	background-position: 0 -288px;
 }
 
-
+:where(dialog) {
+	color: inherit;
+	background: transparent;
+	border: none;
+	overflow: visible;
+}
 
 .newmodal {
 			font-family: "Motiva Sans", Sans-serif;
@@ -2874,6 +2879,9 @@ body.v6 #footer_nav .popup_menu .hr{
 }
 .shared_game_rating .game_rating_icon {
 	margin-right: 10px;
+}
+.shared_game_rating .game_rating_icon a {
+	display: block;
 }
 .shared_game_rating .game_rating_icon img {
 	max-height: 90px;

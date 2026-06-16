@@ -3205,7 +3205,7 @@ La beta è terminata: riavvia Steam per tornare alla versione attuale."
 "Steam_ContentBetaOptOutOK"	"Sei uscito con successo dalla beta."
 "Steam_ContentBetaOptOutProblem"	"C'è stato un problema nell'uscita dalla beta."
 
-"Steam_Settings_NotifyMeWithSteamInstantMessages"	"Desidero che mi vengano segnalate informazioni relative a novità o modifiche ai miei giochi, nuovi rilasci o altri presto in arrivo."
+"Steam_Settings_NotifyMeWithSteamInstantMessages"	"Desidero che mi vengano segnalate informazioni relative a novità o modifiche ai miei giochi, nuove uscite o altri presto in arrivo."
 "Steam_Settings_DownloadsTitle"	"Download"
 "Steam_Settings_CloudTitle"	"Cloud"
 "Steam_Settings_FamilyTitle" "Famiglia"

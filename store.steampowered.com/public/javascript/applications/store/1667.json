@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Трейлер може не демонструвати реальний ігролад на Steam Deck",
     "StoreItemFound": "Знайдено: %1$s (%2$s)",
     "StoreItemNotFound": "Не знайдено (%1$s)",
+    "SteamURLAccepted": "Посилання %1$s прийнято",
+    "SteamURLInvalid": "Помилка: посилання не вказує на сторінку крамниці чи спільноти Steam",
+    "PriceGrid_NormalPrice": "ЗВИЧАЙНА",
+    "PriceGrid_RecentPrice": "МІН. ЗА 30 ДНІВ",
+    "PriceGrid_CurrentPrice": "NOW",
     "Dummy": "dummy"
 }

@@ -41,7 +41,7 @@ message CHardwareUpdate_UpdateStateChanged_Notification {
 }
 
 message CMsgAvailableHardwareUpdate {
-	optional uint32 etype = 1;
+	optional int32 etype = 1 [(.description) = "enum"];
 	optional uint32 hardware_id = 2;
 	optional string serial_number = 3;
 	optional string current_ts = 4;

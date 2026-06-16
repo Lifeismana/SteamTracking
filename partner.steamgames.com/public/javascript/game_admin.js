@@ -620,7 +620,7 @@ function OnImagesLoadComplete( images )
 			divAllAgesAppropriate.hide();
 
 		// add language select
-		var selectLanguage = $J( '<select class="image_language_select"></select>');
+		var selectLanguage = $J( '<select id="image_language_select_form" class="image_language_select"></select>');
 		var languages = GetSupportedLanguages();
 		for ( var key in languages )
 		{
@@ -778,6 +778,12 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 
 		    if ( strSelectedType == 'ScreenshotLocalized' )
 		        strKey = strKey + nParentID;
+
+			if ( imageType.localized && !strSelectedLanguage )
+			{
+				alert( 'Please ensure that a language is selected for every image where available.' );
+				return false;
+			}
 
 		    if ( imageType.localized )
 		        strKey = strKey + '|' + strSelectedLanguage;

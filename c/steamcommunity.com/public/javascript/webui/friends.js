@@ -3199,8 +3199,8 @@ var CLSTAMP = "steamdb";
           "./en-gb.js": 2103,
           "./en-ie": 35964,
           "./en-ie.js": 35964,
-          "./en-il": 74379,
-          "./en-il.js": 74379,
+          "./en-il": 96760,
+          "./en-il.js": 96760,
           "./en-in": 50765,
           "./en-in.js": 50765,
           "./en-nz": 71502,
@@ -20081,6 +20081,7 @@ var CLSTAMP = "steamdb";
             captionManifest: _,
             screenshot: _,
             forcePause: _,
+            onPlaybackStart: _,
             onPlaybackEnd: _,
             onPlayPauseChange: _,
             onMuteChange: _,
@@ -20225,7 +20226,11 @@ var CLSTAMP = "steamdb";
             })(_, !!_),
             _ = _ ? void 0 : _,
             _ = {};
-          _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
+          _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+          let _ = (0, _._)(() => _.IsBuffering());
+          _.useEffect(() => {
+            _ || (_ && _());
+          }, [_, _]),
             _.use(_.Ready());
           let _ = (0, _._)(_().TrailerPlayer, "responsive_menu_ignore_touch");
           return (0, _.jsxs)("div", {
@@ -67661,8 +67666,8 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        var _ = __webpack_require__("chunkid");
         const _ = _.memo(function () {
           const _ = (0, _._)();
           return (
@@ -70626,6 +70631,7 @@ var CLSTAMP = "steamdb";
             bHaptics: _.haptics_enabled ?? !1,
             bSWAntiDrift: _.gyro_sw_antidrift_enabled ?? !1,
             bIMUOneEuroFilter: _.gyro_one_euro_filter_enabled ?? !1,
+            bUseSWBiases: _.use_gyro_sw_biases ?? !0,
             nLHapticStrength: _.haptic_strength_left ?? 0,
             nRHapticStrength: _.haptic_strength_right ?? 0,
             flLPadPressureCurve: _.pad_pressure_curve_left ?? 0,
@@ -76041,17 +76047,34 @@ var CLSTAMP = "steamdb";
               (_ || 0 === _) && (_.scrollPaddingBottom = _),
               (_ || 0 === _) && (_.scrollPaddingLeft = _);
             const { ref: _, navRef: _ } = (function () {
-                const _ = _.useRef(null),
+                const _ = _.useRef({
+                    width: 0,
+                    height: 0,
+                  }),
+                  _ = _.useRef(null),
                   _ = _.useCallback(
                     (_) => {
-                      _.current?.BFocusWithin() &&
+                      if (!_.current?.BFocusWithin()) return;
+                      const _ = Math.round(_.contentRect.width),
+                        _ = Math.round(_.contentRect.height),
+                        _ = Math.abs(_ - _.current.width),
+                        _ = Math.abs(_ - _.current.height);
+                      (_ >= 1 || _ >= 1) &&
+                        ((_.current = {
+                          width: _,
+                          height: _,
+                        }),
+                        _(
+                          "KeepFocusedElementInViewOnResize scrolling focused element into view due to resize of",
+                          _.target,
+                        ),
                         _.current
                           .Node()
                           ?.GetLastFocusElement()
                           ?.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
-                          });
+                          }));
                     },
                     [_],
                   );
@@ -77001,7 +77024,7 @@ var CLSTAMP = "steamdb";
           _(
             "----------------------------------------------------------------------------------",
           ),
-            _("Scrolling Into View:", _);
+            _("Scrolling Into View (NoTransform):", _);
           let _ = [],
             _ = _,
             _ = _(_),
@@ -78219,19 +78242,27 @@ var CLSTAMP = "steamdb";
                         _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
                         _
                           ? _(0, _, _)
-                          : _.scrollIntoView({
+                          : (_(
+                              "Scrolling Into View (via browser scrollIntoView):",
+                              _,
+                            ),
+                            _.scrollIntoView({
                               behavior: _,
                               block: "nearest",
-                            });
+                            }));
                     } else
                       _("No previous element for scrolling, will jump"),
                         _
                           ? _(0, _, "auto")
-                          : _?.scrollIntoView({
+                          : (_(
+                              "Scrolling Into View (via browser scrollIntoView):",
+                              _,
+                            ),
+                            _?.scrollIntoView({
                               behavior: "auto",
                               block: "nearest",
                               inline: "nearest",
-                            });
+                            }));
                   }
                 })(this, _, _);
           }
@@ -80615,7 +80646,8 @@ var CLSTAMP = "steamdb";
         function _(_) {
           const { data: _ } = (0, _._)(_),
             _ = (0, _._)();
-          if (!_) return;
+          if (void 0 === _) return;
+          if (null === _) return null;
           const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
           return _ ? _.filter((_) => !!_.all_ages) : _;
         }
@@ -82930,6 +82962,99 @@ var CLSTAMP = "steamdb";
                 }
               })(_, _)
             : void 0;
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _() {
+          return "PrivateApps_" + _._.accountid;
+        }
+        function _() {
+          return _._.IN_STEAMUI;
+        }
+        async function _(_, _) {
+          try {
+            const _ = _();
+            await _.StoreObject(_, _);
+          } catch (_) {
+            const _ = new Error(
+              `WritePrivateAppsToLocalCache failed with result ${_?.result}, ${_?.message}`,
+            );
+            (0, _._)().ReportError(_, {
+              bIncludeMessageInIdentifier: !0,
+            }),
+              console.warn(_);
+          }
+        }
+        const _ = ["AccountPrivateApps"];
+        function _(_) {
+          const {
+            transport: _,
+            storage: _,
+            bUseLocalCache: _,
+            bEnabled: _,
+          } = _;
+          return {
+            queryKey: _,
+            queryFn: async () => {
+              let _;
+              _ &&
+                (_ = await (async function (_) {
+                  const _ = _();
+                  return await _.GetObject(_);
+                })(_));
+              const _ = _._.Init(_._),
+                _ = await _._.GetPrivateAppList(_, _);
+              if (!_.BSuccess()) {
+                if (_) return new Set(_);
+                throw _.GetErrorMessage();
+              }
+              return (
+                _ && (await _(_, _.Body().private_apps(!0).appids())),
+                new Set(_.Body().private_apps(!0).appids())
+              );
+            },
+            enabled: _,
+          };
+        }
+        function _() {
+          const _ = (0, _._)(),
+            _ = (0, _._)(),
+            _ = _();
+          return (0, _._)(
+            _({
+              transport: _,
+              storage: _,
+              bUseLocalCache: _,
+              bEnabled: !!_._.accountid,
+            }),
+          );
+        }
+        function _(_) {
+          const { data: _ } = _();
+          return !!_._.accountid && !!_ && (_ ? _.has(_) : void 0);
+        }
+        function _() {
+          const _ = (0, _._)(),
+            _ = _(),
+            _ = (0, _._)();
+          return (0, _._)({
+            mutationFn: async (_) => {
+              _.setQueryData(_, () => new Set(_)), _ && (await _(_, _));
+            },
+          });
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -93511,99 +93636,6 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid");
-        function _() {
-          return "PrivateApps_" + _._.accountid;
-        }
-        function _() {
-          return _._.IN_STEAMUI;
-        }
-        async function _(_, _) {
-          try {
-            const _ = _();
-            await _.StoreObject(_, _);
-          } catch (_) {
-            const _ = new Error(
-              `WritePrivateAppsToLocalCache failed with result ${_?.result}, ${_?.message}`,
-            );
-            (0, _._)().ReportError(_, {
-              bIncludeMessageInIdentifier: !0,
-            }),
-              console.warn(_);
-          }
-        }
-        const _ = ["AccountPrivateApps"];
-        function _(_) {
-          const {
-            transport: _,
-            storage: _,
-            bUseLocalCache: _,
-            bEnabled: _,
-          } = _;
-          return {
-            queryKey: _,
-            queryFn: async () => {
-              let _;
-              _ &&
-                (_ = await (async function (_) {
-                  const _ = _();
-                  return await _.GetObject(_);
-                })(_));
-              const _ = _._.Init(_._),
-                _ = await _._.GetPrivateAppList(_, _);
-              if (!_.BSuccess()) {
-                if (_) return new Set(_);
-                throw _.GetErrorMessage();
-              }
-              return (
-                _ && (await _(_, _.Body().private_apps(!0).appids())),
-                new Set(_.Body().private_apps(!0).appids())
-              );
-            },
-            enabled: _,
-          };
-        }
-        function _() {
-          const _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = _();
-          return (0, _._)(
-            _({
-              transport: _,
-              storage: _,
-              bUseLocalCache: _,
-              bEnabled: !!_._.accountid,
-            }),
-          );
-        }
-        function _(_) {
-          const { data: _ } = _();
-          return !!_._.accountid && !!_ && (_ ? _.has(_) : void 0);
-        }
-        function _() {
-          const _ = (0, _._)(),
-            _ = _(),
-            _ = (0, _._)();
-          return (0, _._)({
-            mutationFn: async (_) => {
-              _.setQueryData(_, () => new Set(_)), _ && (await _(_, _));
-            },
-          });
-        }
-      },
-      chunkid: (module, module_exports, __webpack_require__) => {
-        "use strict";
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
-        });
-        var _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ =
             (__webpack_require__("chunkid"),
             __webpack_require__("chunkid"),
@@ -94566,6 +94598,7 @@ var CLSTAMP = "steamdb";
               if (_ && _ && !_.visible) return;
               let _ = _.ownerDocument.defaultView;
               if (!_ || _.closed) return;
+              _.showPopover();
               const _ = _.querySelector(".hover_arrow.left"),
                 _ = _.querySelector(".hover_arrow.right"),
                 _ = _.querySelector(".hover_arrow.top"),
@@ -94663,6 +94696,7 @@ var CLSTAMP = "steamdb";
             ),
             _ = !_ || _.visible;
           return (0, _.jsx)("div", {
+            popover: "manual",
             ref: _,
             className: (0, _._)(
               _().HoverPositionOuter,
@@ -102217,22 +102251,19 @@ var CLSTAMP = "steamdb";
           BIsValidForRealm(_) {
             return this.GetIncludedRealmList().includes(_);
           }
-          BIsNextFest(_ = !0) {
-            const _ = "nextfest",
-              _ = this.jsondata.sale_vanity_id?.toLowerCase(),
+          BIsNextFest(_ = !1) {
+            const _ = this.jsondata.sale_vanity_id?.toLowerCase(),
               _ = new _._(this.clanSteamID).GetAccountID();
             return (
               !(!_ || _ != _._) &&
-              (_
-                ? __webpack_require__.startsWith(_)
-                : __webpack_require__.startsWith(_) &&
-                  !__webpack_require__.includes("prev"))
+              !!_.startsWith("nextfest") &&
+              (!_ || (!_.endsWith("preview") && !_.endsWith("press")))
             );
           }
           BShowNextFestHeader(_) {
             return _ && _._.is_valve_email
-              ? this.BIsNextFest(!0)
-              : this.BIsNextFest(!1) &&
+              ? this.BIsNextFest(!1)
+              : this.BIsNextFest(!0) &&
                   !!this.startTime &&
                   this.startTime > new Date("2026-03-01").getTime() / 1e3;
           }
@@ -110687,7 +110718,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
         const _ = "separator",
           _ = "spacer";
@@ -110710,6 +110740,7 @@ var CLSTAMP = "steamdb";
           }
           m_setPagedSettingsInstances = new Set();
         }
+        var _;
         function _(_) {
           const {
               stylesheet: _,
@@ -110805,7 +110836,15 @@ var CLSTAMP = "steamdb";
             ],
           });
         }
-        (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
+        (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0),
+          (function (_) {
+            (_[(_.k_EPagedSettingsInitialFocus_Default = 0)] =
+              "k_EPagedSettingsInitialFocus_Default"),
+              (_[(_.k_EPagedSettingsInitialFocus_PageList = 1)] =
+                "k_EPagedSettingsInitialFocus_PageList"),
+              (_[(_.k_EPagedSettingsInitialFocus_PageContent = 2)] =
+                "k_EPagedSettingsInitialFocus_PageContent");
+          })(_ || (_ = {}));
         const _ = _.forwardRef(function (_, _) {
           const { activePage: _, style: _, stylesheet: _ } = _,
             _ = _.useContext(_),
@@ -110850,7 +110889,12 @@ var CLSTAMP = "steamdb";
         }
         const _ = _.createContext(void 0),
           _ = _.forwardRef(function (_, _) {
-            const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
+            const {
+                stylesheet: _ = _(),
+                pages: _,
+                onPageRequested: _,
+                eInitialFocus: _,
+              } = _,
               _ = _.useId(),
               _ = null == _.page,
               [_, _] = _.useState(() =>
@@ -110890,13 +110934,11 @@ var CLSTAMP = "steamdb";
               _ = (0, _._)(
                 "DialogContentTransition",
                 _.PagedSettingDialog_ContentColumn,
-              ),
-              _ = (0, _._)();
+              );
             _.useEffect(() => {
-              !_.bManuallyFocusPageContent &&
-                _.state?.bDirectNav &&
+              _ === _.k_EPagedSettingsInitialFocus_PageContent &&
                 _.current?.TakeFocus();
-            }, [_.state]);
+            }, []);
             const { refForPageList: _, refForPage: _ } = (function () {
               const _ = _.useMemo(() => new _(), []);
               _.useEffect(
@@ -111933,8 +111975,8 @@ var CLSTAMP = "steamdb";
               "Hmd_SupportsGpuBusMonitoring_Bool"),
             (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
               "DriverProvidedIPDVisibility_Bool"),
-            (_[(_.Prop_Hmd_SupportsVRGamepadFocus_Bool = 2117)] =
-              "Prop_Hmd_SupportsVRGamepadFocus_Bool"),
+            (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
+              "Prop_SupportsVRGamepadMode_Bool"),
             (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
               "DriverRequestedMuraCorrectionMode_Int32"),
             (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -111955,6 +111997,8 @@ var CLSTAMP = "steamdb";
               "DriverRequestedMuraFeather_OuterBottom_Int32"),
             (_[(_.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
               "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+            (_[(_.Hmd_ForceRoomViewOutsideChaperone_Bool = 2500)] =
+              "Hmd_ForceRoomViewOutsideChaperone_Bool"),
             (_[(_.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
             (_[(_.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
             (_[(_.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
@@ -112104,7 +112148,7 @@ var CLSTAMP = "steamdb";
               (_[(_.SmoothStep = 3)] = "SmoothStep"),
               (_[(_.SmootherStep = 4)] = "SmootherStep");
           })(_ || (_ = {}));
-        var _, _, _, _, _, _, _;
+        var _, _, _, _, _, _, _, _;
         !(function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -112138,20 +112182,38 @@ var CLSTAMP = "steamdb";
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.Invalid = 0)] = "Invalid"),
-              (_[(_.System = 1)] = "System"),
-              (_[(_.SteamInput = 2)] = "SteamInput"),
-              (_[(_.VRInput = 3)] = "VRInput");
-          })(_ || (_ = {})),
-          (function (_) {
-            (_[(_.Invalid = 0)] = "Invalid"),
               (_[(_.SceneApp = 1)] = "SceneApp"),
               (_[(_.Panel = 2)] = "Panel");
+          })(_ || (_ = {})),
+          (function (_) {
+            (_[(_.ControllerPairing = 0)] = "ControllerPairing"),
+              (_[(_.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
+              (_[(_.SystemButtonHideDashboard = 2)] =
+                "SystemButtonHideDashboard"),
+              (_[(_.SystemButtonDashboardHidden = 3)] =
+                "SystemButtonDashboardHidden"),
+              (_[(_.SystemButtonShowDashboard = 4)] =
+                "SystemButtonShowDashboard"),
+              (_[(_.PairWifiDongle = 5)] = "PairWifiDongle"),
+              (_[(_.TourSendOff = 6)] = "TourSendOff"),
+              (_[(_.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.None = 0)] = "None"),
               (_[(_.ThirdPartyClient = 1)] = "ThirdPartyClient"),
               (_[(_.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
               (_[(_.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
+          })(_ || (_ = {})),
+          (function (_) {
+            (_[(_.Default = 0)] = "Default"),
+              (_[(_.AuroraFloor = 1)] = "AuroraFloor");
+          })(_ || (_ = {}));
+        var _, _;
+        !(function (_) {
+          (_[(_.Curved = 0)] = "Curved"), (_[(_.Flat = 1)] = "Flat");
+        })(_ || (_ = {})),
+          (function (_) {
+            (_[(_.Default = 0)] = "Default"), (_[(_.Aurora = 1)] = "Aurora");
           })(_ || (_ = {}));
         var _ = __webpack_require__("chunkid");
         const _ = 1,
@@ -122616,7 +122678,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           _.useEffect(() => {
@@ -122787,12 +122848,10 @@ var CLSTAMP = "steamdb";
           const { className: _, active: _, children: _ } = _;
           return (0, _.jsx)(_, {
             active: _,
-            children: (0, _.jsx)(_._, {
-              children: (0, _.jsx)("div", {
-                className: _,
-                tabIndex: -1,
-                children: _,
-              }),
+            children: (0, _.jsx)("div", {
+              className: _,
+              tabIndex: -1,
+              children: _,
             }),
           });
         }
@@ -123845,7 +123904,6 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         function _(_) {
           const { active: _, children: _ } = _,
@@ -123875,9 +123933,7 @@ var CLSTAMP = "steamdb";
             !_ || !_)
           )
             return null;
-          let _ = (0, _.jsx)(_._, {
-            children: _,
-          });
+          let _ = _;
           return (
             _ &&
               (_ = (0, _.jsx)(_, {
@@ -129057,8 +129113,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -129068,28 +129122,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__._(_),
-          _ = __webpack_require__("chunkid");
-        const _ = _.createContext({}),
-          _ = () => _.useContext(_);
-        function _(_) {
-          const [_, _] = _.useState(null),
-            _ = _.useMemo(
-              () => ({
-                targetElement: _,
-              }),
-              [_],
-            );
-          return (0, _.jsxs)(_.Provider, {
-            value: _,
-            children: [
-              (0, _.jsx)("div", {
-                ref: _,
-              }),
-              _.children,
-            ],
-          });
-        }
+          _ = __webpack_require__._(_);
         function _(_) {
           const { divProps: _, tooltipProps: _ } = _({
             ..._,
@@ -129242,10 +129275,9 @@ var CLSTAMP = "steamdb";
               hoverPositionProps: _,
               children: _,
             } = _,
-            [_, _] = _.useState(_),
-            _ = _();
-          if (
-            (_.useEffect(() => {
+            [_, _] = _.useState(_);
+          return (
+            _.useEffect(() => {
               if (_) {
                 if (_) {
                   const _ = window.setTimeout(() => _(!0), _);
@@ -129254,18 +129286,13 @@ var CLSTAMP = "steamdb";
                 _(!0);
               } else (0, _._)() || _(!1);
             }, [_]),
-            !_)
-          )
-            return null;
-          if (!_ || !_) return null;
-          const { targetElement: _ } = _;
-          return _.createPortal(
-            (0, _.jsx)(_._, {
-              target: _,
-              ..._,
-              children: _,
-            }),
-            _ ?? _.ownerDocument.body,
+            _ && _ && _
+              ? (0, _.jsx)(_._, {
+                  target: _,
+                  ..._,
+                  children: _,
+                })
+              : null
           );
         }
       },
@@ -131543,7 +131570,15 @@ var CLSTAMP = "steamdb";
             let _ = this.m_sName;
             const _ = this.m_fnIdGenerator?.() ?? null;
             null != _ && (_ += " (" + _ + ")");
-            _(_, _, _.Get().IncludeBacktraceInLog, _, this.m_sName, ..._);
+            _(
+              _,
+              _,
+              _.Get().IncludeBacktraceInLog,
+              _.Get().AllowCSSInLogStyling,
+              _,
+              this.m_sName,
+              ..._,
+            );
           }
         }
         (0, _._)([_._], _.prototype, "Debug", null),
@@ -131554,9 +131589,11 @@ var CLSTAMP = "steamdb";
         class _ {
           static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
           static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
+          static k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors";
           m_setKnownDebugLogs = new Set();
           m_setEnabledDebugLogs = new Set();
           m_bIncludeBacktraceInLog = !1;
+          m_bAllowCSSInLogStyling = !0;
           m_SettingsChangedCallback = new _._();
           m_bLoading = !0;
           constructor() {
@@ -131567,24 +131604,30 @@ var CLSTAMP = "steamdb";
               _.Info,
               !0,
               this.IncludeBacktraceInLog,
+              this.AllowCSSInLogStyling,
               "LogManager",
               "LogManager",
               ..._,
             );
           }
           async LoadSettings() {
-            const _ = (_) => {
+            const _ = (_, _) => {
               try {
                 const _ = localStorage.getItem(_);
-                return _ ? JSON.parse(_) : void 0;
+                return _ ? JSON.parse(_) : _;
               } catch {
-                return;
+                return _;
               }
             };
-            this.m_bIncludeBacktraceInLog = !!_(
+            (this.m_bIncludeBacktraceInLog = !!_(
               _.k_IncludeBacktraceInLog_StorageKey,
-            );
-            const _ = _(_.k_EnabledLogNames_StorageKey);
+              !1,
+            )),
+              (this.m_bAllowCSSInLogStyling = !!_(
+                _.k_AllowCSSInLogColors_StorageKey,
+                !0,
+              ));
+            const _ = _(_.k_EnabledLogNames_StorageKey, void 0);
             if (Array.isArray(_)) {
               this.m_setEnabledDebugLogs = new Set(_);
               for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -131603,6 +131646,10 @@ var CLSTAMP = "steamdb";
               localStorage.setItem(
                 _.k_IncludeBacktraceInLog_StorageKey,
                 JSON.stringify(this.m_bIncludeBacktraceInLog),
+              ),
+              localStorage.setItem(
+                _.k_AllowCSSInLogColors_StorageKey,
+                JSON.stringify(this.m_bAllowCSSInLogStyling),
               ),
               this.LogAsLogManager(
                 "Saved enabled debug log names. Will print log messages for:",
@@ -131677,59 +131724,67 @@ var CLSTAMP = "steamdb";
               this.m_SettingsChangedCallback.Dispatch(),
               await this.SaveSettings();
           }
+          get AllowCSSInLogStyling() {
+            return this.m_bAllowCSSInLogStyling;
+          }
+          async SetAllowCSSInLogStyling(_) {
+            (this.m_bAllowCSSInLogStyling = _),
+              this.m_SettingsChangedCallback.Dispatch(),
+              await this.SaveSettings();
+          }
           GetLogNames() {
             return Array.from(this.LogNames).sort();
           }
         }
-        function _(_, _, _, _, _, ..._) {
-          const _ = (function (_) {
-              let _ = 0;
-              for (let _ = 0; _ < _.length; _++)
-                _ = _.charCodeAt(_) + ((_ << 5) - _);
-              return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
-            })(_).map((_, _) =>
-              Math.round(
-                Math.max(
-                  0,
-                  Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15)),
+        function _(_, _, _, _, _, _, ..._) {
+          let _,
+            _ = _;
+          if (
+            (_ &&
+              (_ =
+                (function (_) {
+                  switch (_) {
+                    case _.Debug:
+                      return String.fromCodePoint(128027);
+                    case _.Info:
+                      return String.fromCodePoint(8505);
+                    case _.Warning:
+                      return String.fromCodePoint(9888);
+                    case _.Error:
+                      return String.fromCodePoint(128165);
+                  }
+                })(_) +
+                " " +
+                _),
+            _ && _)
+          ) {
+            const _ = (function (_) {
+                let _ = 0;
+                for (let _ = 0; _ < _.length; _++)
+                  _ = _.charCodeAt(_) + ((_ << 5) - _);
+                return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
+              })(_).map((_, _) =>
+                Math.round(
+                  Math.max(
+                    0,
+                    Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15)),
+                  ),
                 ),
               ),
-            ),
-            _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128;
+              _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128,
+              _ =
+                _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
+              _ = _ && _.shift();
+            _ = [
+              `%c${_}%c:${_ ? " %c" + _ : ""}`,
+              `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+              "color: transparent; margin-right: -1ch",
+              ...(_ ? [""] : []),
+              ..._,
+            ];
+          } else _ = [`${_}:`, ..._];
           var _;
-          let _ = _;
-          _ &&
-            (_ =
-              (function (_) {
-                switch (_) {
-                  case _.Debug:
-                    return String.fromCodePoint(128027);
-                  case _.Info:
-                    return String.fromCodePoint(8505);
-                  case _.Warning:
-                    return String.fromCodePoint(9888);
-                  case _.Error:
-                    return String.fromCodePoint(128165);
-                }
-              })(_) +
-              " " +
-              _);
-          const _ =
-              _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
-            _ = _ && _.shift();
-          let _;
-          if (
-            ((_ = _
-              ? [
-                  `%c${_}%c:${_ ? " %c" + _ : ""}`,
-                  `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
-                  "color: transparent; margin-right: -1ch",
-                  ...(_ ? [""] : []),
-                  ..._,
-                ]
-              : _),
-            _)
-          )
+          if (_)
             console.groupCollapsed(..._),
               console.trace("Callstack"),
               console.groupEnd();
@@ -135159,70 +135214,69 @@ var CLSTAMP = "steamdb";
         191: "7c724535791fc623d815",
         277: "fd13a07a6644f30f9071",
         316: "b4a4125ab8550ef83a0b",
-        382: "bf5e0d89a18ca8a3000a",
+        382: "bd7c341d702783a6bb01",
         474: "6a9d0b4e2892dded462e",
-        496: "c3625cdf1e6b263bbd7f",
-        530: "2a0c5e146ce31e612138",
+        496: "dc80d981a188793b4a04",
         684: "305a3dbe70504b78d062",
         762: "8a41f18c9f3ef97f5303",
-        898: "3ef8ca95192b73c4e55e",
-        902: "070dae27b0b598957f3a",
+        898: "739128251c75400fe314",
+        902: "70fceaa5f59fcd5291e1",
         947: "77123a0d43c051462d19",
-        975: "e168fed296f187186697",
-        976: "74820ed13b81e42a2ba4",
+        975: "e85448a655b11ef0cfa2",
+        976: "99a016d3b4e14dfa7773",
         1087: "528474e24b1fe3b6964d",
-        1144: "e744c922ca12e0085851",
-        1158: "595bb0bcab22f86c19d3",
-        1196: "0601220ecd38d4ecfe3f",
+        1144: "fb470ded92ef3536170f",
+        1158: "f62dcf0d173679541747",
         1224: "8cf7b28930c7b7c56321",
-        1225: "7512efb5922f36bb1a17",
+        1225: "43320fc89b0515dce1ff",
         1316: "95b56d32d13df1681194",
         1330: "d8ab1ac01d7f47e93aca",
-        1449: "be34a4d4a3e4ea5a260b",
+        1449: "797b5812ecd2fee4cc0e",
         1499: "9fe8b05c384130e7eefa",
         1571: "301c37a370bcf304422d",
-        1639: "3b9e78a3c79f9adc78a3",
-        1849: "e4b798fabf4be7475c62",
+        1639: "d50be5cfce4d0c7e4730",
+        1849: "b9ec718bd1c6f8fdb959",
         1954: "cdb57476846154dcd34b",
-        1973: "297d79a8ed49a4c34920",
-        1990: "6ed9a711c3c31ea29ad1",
-        2116: "74852b9609a0974490e1",
-        2177: "2f1133ae27774597ac44",
-        2256: "dd618349a5110d7a8460",
-        2281: "e80e9468c647e250a2b3",
+        1973: "61ca690a01f560ad88ef",
+        1990: "a16177de6377e21241bc",
+        2116: "ea9fa133b7bbaa4ad988",
+        2177: "99542907def8d4b4c7ed",
+        2256: "5f35e79793b82caa406d",
+        2281: "ce97a4e82f795fcdef25",
         2292: "2648171bbf7a4e541935",
-        2320: "989e4c23359ac2bdd8f5",
-        2435: "7cdf6acaf218f502b153",
-        2506: "61bebf0de3aaeffbd749",
+        2320: "2ded7802d7053124fcd4",
+        2435: "3dc419b618a414840f3c",
+        2506: "e44ce0da74ead1452b84",
         2520: "7c5d5cf73ebae13e884c",
         2532: "dcb8b3c7c4c795e99ba1",
-        2632: "26f6a47b49956caa0c77",
+        2632: "5c577326a8d294ac3545",
         2687: "88cec42ebce5159a6c62",
-        2749: "2b979c2c44436d6f7d3b",
+        2749: "a9e5574db5f0a3ce416e",
         2945: "2895f4933307edc83db3",
-        2954: "498848b58d758f114d0b",
+        2954: "ca70836ffebc13ff9499",
         2993: "e6827764a5e82e106259",
         3e3: "f25eceb68319028bebb7",
         3016: "5350f4e10ad588ceb109",
         3159: "200991dd6114e56702ed",
-        3199: "acc7f97606aeb7420432",
-        3202: "989702adb883eeff3987",
+        3199: "35e0c150ac82baa3e546",
+        3202: "2629e7fb221d75676221",
         3232: "24d7f289046539df24da",
-        3307: "d35d2c5edf6b38c152db",
-        3382: "3533ebf922f2620074e8",
+        3307: "f3f0f3ce81a1568f599f",
+        3382: "61dbf1a6d753cf90b8e8",
         3415: "af0a539ae9a2911a881f",
         3485: "dc24d873e5b1cbdc703a",
-        3577: "932294649a590ea979ad",
-        3710: "54f1f7da608c63fe3a3f",
+        3577: "9d89520e1d62e72d6508",
+        3710: "5b9197b74e3dfd884428",
         3778: "5ad02f9df50ec34a4519",
         3789: "054d0d1457e489ab83cd",
         3810: "e5049fe30dd9a6434d81",
         3875: "f4eb6016a7ef30ff0ad4",
-        3898: "d59c628b3a32fa854a3a",
-        3912: "e68862febb6376ff49d1",
+        3898: "4f1f9bd3ecff74266f63",
+        3912: "58593e7539f4643bba96",
         4006: "6a9edc709dead2505056",
+        4061: "583a77cbdb10c686e8ce",
         4154: "a42f5c8a931faec32b3e",
-        4227: "46c30faecf0f2a3f4393",
+        4227: "377a79ff43e6aec7509b",
         4295: "e2c54df00cd7fc6e55c9",
         4302: "5f96b098b87755d88881",
         4352: "de92a58e851fd1f40a2a",
@@ -135231,16 +135285,16 @@ var CLSTAMP = "steamdb";
         4473: "a209d4c4eed7ffcf9dfc",
         4488: "6fc4650152e31925c959",
         4776: "fcef25c79464d2dab63c",
-        4777: "4b928b4fc0d25a26740c",
+        4777: "58457c06919625eb21fc",
         4779: "909f21776039059914ce",
         4787: "f933b9746b9145fdf8c7",
         4844: "9b0a060abc338b33c9ea",
         4976: "64302f81ca781929b15c",
-        5018: "797ed6ada6a68344276d",
-        5094: "7c1d3055a0e4420ea657",
-        5110: "cbb60d8629acf8075f7f",
-        5136: "df9e2d5626e6a911d789",
-        5241: "de7f16bf9716606feb2e",
+        5018: "d533a5ece9c3671e2ec5",
+        5094: "2b1ad5b86e63fd347387",
+        5110: "2015a4cb9f04a9d6dcb2",
+        5136: "4dec12fc729f60a266ef",
+        5241: "599d9b0ccfd58bf69a42",
         5341: "7a78f0e1927e9759e826",
         5358: "9675b4823f0fba708fc4",
         5480: "d623db031a5e27e6bd30",
@@ -135249,21 +135303,22 @@ var CLSTAMP = "steamdb";
         5617: "6d58f25bd9f169dac32a",
         5725: "9df6705c3295a6e2f4bf",
         5893: "96383102d13b4093c331",
-        6031: "92c29659ec5f6786f35d",
-        6059: "a9a261422b1662246ce6",
+        5997: "0004f43ecb3180c75fab",
+        6031: "4781c163dc15d1e7ef54",
+        6059: "6d194dc03352b712fd9e",
         6127: "079be2dc7d25f9ce1c8d",
-        6149: "97040f065cae320921ba",
-        6165: "beea73d75bbee99785e7",
+        6149: "abca3160d88f02440aaa",
+        6165: "0c285ce0d27939743b99",
         6196: "78fec0ba9a1dc917788a",
-        6208: "9acac49e8fb018aaee3b",
-        6239: "80f5487acd6154b78fd8",
+        6208: "380c65dbda090e0a0ecc",
+        6239: "61d5204dedec0b2f59f1",
         6305: "c044efd90090b19dbff0",
-        6332: "16a9d6185c3c6b60b226",
+        6332: "44d929a2fe34d59aa7e1",
         6385: "f66f814b48e10c54f083",
         6447: "6f045cac304ca03dae04",
-        6518: "6d5149aca938984c98c7",
-        6523: "20eaceb495dcfe8287a1",
-        6562: "7d9bb53902f94095eb00",
+        6518: "51b6f2bd89d7195e1e4c",
+        6523: "dd7ab31d025de4afef82",
+        6562: "7886f686b6fd004db9eb",
         6609: "e86f870358e54ad3dfa0",
         6637: "bee05b6c76a9dd2fe06d",
         6888: "2ae8e28929899aaa51ef",
@@ -135275,48 +135330,48 @@ var CLSTAMP = "steamdb";
         7279: "c4f9ba5cb2bffe95725a",
         7365: "f987ca3985bf3429944e",
         7418: "7680875bb68efceaf698",
-        7462: "d956c64b1ea92263987a",
+        7462: "6ac57e2a9d9fb8d63c0a",
         7464: "4d9b87e17a35b4b6c79f",
         7468: "53e0875c52dff3de164a",
         7487: "57b6d1e2b2714ad59b41",
-        7539: "c18394e7e44beb092ed7",
-        7591: "65dea1d8d831c37f1e19",
-        7637: "8328be80efde20bba38b",
-        7653: "5a5f29184af6d830ec7e",
+        7539: "9241fc5c927ed9f0fca5",
+        7591: "432f4114f47a31c4d7e1",
+        7637: "f96ed1ecfa45f67ac6f0",
+        7653: "82795ba92e4ffd861772",
         7673: "065a311d75b3213d4f15",
-        7786: "92980eeb3a0ace13c873",
+        7786: "68080689c3cd59d3ccf8",
         7788: "50e0ef8b71f813e096c3",
         7861: "2a1b2fbd3a988273124b",
         7904: "116aefb93e005baea38e",
-        8016: "6183ca512b221fb41a90",
-        8025: "7318912db5de9f56689c",
+        8016: "a7e3e7ebde73d8555bd5",
+        8025: "c8377f1674b7cf573fe9",
         8106: "c8c8b20aced0617e2917",
         8191: "7c71b0175a3b35434ec8",
         8194: "0919c0bfecd38a2be954",
         8246: "d8dd4a47668b5bf225ab",
-        8306: "5d5a6ae24da8b1cc1853",
-        8311: "311b84aeb838de2d06fe",
+        8306: "446e93f37c3424458880",
+        8311: "608dc0cdff7ba2697cec",
         8366: "fbd35ad496eb7892a424",
         8566: "cd93e0bf03daf5972185",
-        8703: "ef3313bd9bbfa7fbbd00",
+        8703: "67ac57b68d49d69b2571",
         8759: "ea1ea31bf8c3bbce45b3",
         8766: "62af14dba1cfc865f4aa",
-        8822: "bac1cfc51e681f12efee",
+        8822: "5225f62d681ba7f73777",
         8833: "0db29dc3b45b31acb4a4",
         8855: "c8a83af43e6778167e14",
         8871: "9761ac1dbfa20310cb28",
         8930: "09e9591229c2c4c1261b",
-        8967: "be5cfd7781eca0f59f34",
-        9027: "8429762babf935443b49",
-        9152: "1dd45c93219229143b0a",
+        8967: "c136af6f9b31c76d6c11",
+        9027: "02fd4ea403a0c6cefdd6",
+        9152: "e79f393147d857b6cfd2",
         9273: "702b2119e94a4b56417e",
         9401: "0c0cd9c24baf6ebde222",
         9457: "ce41abf3a35616c14aab",
-        9712: "a99f93bd72c8edcd0eb2",
+        9712: "40be0a9cc8e2ae1e9ba6",
         9746: "e66c1783691186eb564b",
-        9808: "e4839ddff0a542d52a00",
-        9925: "baf4cedc2d5da7e5c17a",
-        9930: "255926cfc58405cd4218",
+        9808: "9c6ba74e3ff3d10123de",
+        9925: "e3df7913569bb5a20cbe",
+        9930: "322e841cd83fabde8d08",
         9947: "a34e340ef27436623142",
       }[_]),
     (_.miniCssF = (_) =>
@@ -135329,7 +135384,7 @@ var CLSTAMP = "steamdb";
       {
         3159: "75a6e9ff11215c0f2a0b",
         7462: "523990cc8b40094c4a05",
-        7653: "1d0297b8d6884e36a103",
+        7653: "450f3b3b5930168f1985",
       }[_]),
     (_._ = (function () {
       if ("object" == typeof globalThis) return globalThis;
@@ -135564,6 +135619,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [3987, 9489, 1068], () => _(19334));
+  var _ = _._(void 0, [3987, 9489, 1068], () => _(19668));
   _ = _._(_);
 })();

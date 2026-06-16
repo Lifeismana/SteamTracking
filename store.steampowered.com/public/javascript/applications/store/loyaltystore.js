@@ -2338,7 +2338,7 @@
         c = i(51883),
         d = i(72034),
         m = i(28240),
-        u = i(51706);
+        u = i(74568);
       function p(e) {
         return (0, s.jsx)(n.x_, {
           onEscKeypress: e.closeModal,
@@ -2475,7 +2475,7 @@
         });
       };
     },
-    51706: (e, t, i) => {
+    74568: (e, t, i) => {
       "use strict";
       i.d(t, {
         mt: () => c,
@@ -2493,15 +2493,7 @@
         n = i(56283),
         a = i(21869),
         o = i(2654);
-      i(72739),
-        i(48902),
-        i(60155),
-        i(25118),
-        i(84933),
-        i(52745),
-        i(13871),
-        i(78327),
-        i(28460);
+      i(37049);
       function l(e) {
         const { labelledBy: t } = e || {},
           [i, s] = r.useState(void 0);
@@ -2549,6 +2541,185 @@
       var m = i(78395),
         u = i(10411);
       i(76222);
+    },
+    37049: (e, t, i) => {
+      "use strict";
+      i.d(t, { w: () => w });
+      var s = i(7850),
+        r = i(90626),
+        n = i(72739),
+        a = i(48902),
+        o = i(60155),
+        l = i(25118),
+        c = i(84933),
+        d = i(52745),
+        m = i(13871),
+        u = i(21869),
+        p = i(78327),
+        h = i(66703),
+        _ = i(52038),
+        g = i(28460);
+      function f(e) {
+        const { popup: t, className: i, ...n } = e,
+          a = (0, g.GD)(t),
+          o = r.useRef(null);
+        return (
+          r.useEffect(() => {
+            const e = o.current;
+            if (e && (0, h.Fj)(t, "Window.SetResizeGrip")) {
+              let i = 0,
+                s = 0;
+              const r = e.getBoundingClientRect(),
+                n = e.ownerDocument.defaultView;
+              r &&
+                n &&
+                !a &&
+                ((i = Math.ceil(n.innerWidth - r.left)),
+                (s = Math.ceil(n.innerHeight - r.top))),
+                t.SteamClient.Window.SetResizeGrip(i, s);
+            }
+            return () => {
+              (0, h.Fj)(t, "Window.SetResizeGrip") &&
+                t.SteamClient.Window.SetResizeGrip(0, 0);
+            };
+          }, [t, a]),
+          a
+            ? null
+            : (0, s.jsx)("div", {
+                className: (0, _.A)("window_resize_grip", i),
+                ref: o,
+                ...n,
+              })
+        );
+      }
+      const w = (e) =>
+        (function (e) {
+          const t = (0, m.R7)().ownerWindow,
+            i = (0, p.Qn)(),
+            [n, a] = r.useState(() =>
+              i ||
+              (!0 === e.onlyPopoutIfNeeded &&
+                e.popupHeight < 0.9 * t.innerHeight &&
+                e.popupWidth < 0.9 * t.innerWidth &&
+                "visible" == t.document.visibilityState)
+                ? "inline"
+                : "popout",
+            );
+          return "inline" === n
+            ? (0, s.jsx)(u.E, { active: !0, children: e.children })
+            : "popout" === n
+              ? (0, s.jsx)(y, { ...e })
+              : null;
+        })({ modal: !0, ...e });
+      function y(e) {
+        const {
+            strName: t,
+            strTitle: i,
+            popupWidth: u,
+            popupHeight: p,
+            browserType: h,
+            onDismiss: _,
+            refPopup: g,
+            children: w,
+            titleBarClassName: y,
+            saveDimensionsKey: M,
+          } = e,
+          x = (0, m.R7)(),
+          C = x?.ownerWindow,
+          j = (0, d.yk)(),
+          b = { ...(0, a.h3)(M), onClose: _ };
+        let v = 0;
+        e.resizable && (v |= m.Wf.Resizable),
+          (e.minWidth || e.minHeight) &&
+            (v |= m.Wf.ApplyBrowserScaleToDimensions),
+          e.fullscreen && (v |= m.Wf.FullScreen);
+        const S = "PopupWindow_" + (t ? `${t}_` : "") + r.useId(),
+          { popup: N, element: B } = (0, a.OJ)(
+            S,
+            {
+              title: i,
+              dimensions: { width: u, height: p },
+              html_class: "client_chat_frame fullheight ModalDialogPopup",
+              body_class: "fullheight ModalDialogBody",
+              popup_class: "fullheight",
+              browserType: h,
+              minWidth: e.minWidth,
+              minHeight: e.minHeight,
+              replace_existing_popup: !0,
+              center_on_window: j?.BCenterPopupsOnWindow() ? C : void 0,
+              eCreationFlags: v,
+              target_browser: j?.GetBrowserInfo(),
+            },
+            b,
+          );
+        if (
+          (r.useEffect(
+            () => ((0, c.cZ)(g, N), () => (0, c.cZ)(g, void 0)),
+            [g, N],
+          ),
+          r.useEffect(() => {
+            N && (N.document.title = i ?? t);
+          }, [N, i, t]),
+          !B)
+        )
+          return null;
+        const A = e.modal ?? e.onlyPopoutIfNeeded,
+          D = !e.resizable;
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            A && (0, s.jsx)(I, { popup: N }),
+            n.createPortal(
+              (0, s.jsxs)(m.kc, {
+                ownerWindow: N,
+                children: [
+                  (0, s.jsxs)("div", {
+                    className: "PopupFullWindow",
+                    onContextMenu: o.aE,
+                    children: [
+                      (0, s.jsx)(l.c, {
+                        className: y,
+                        hideMin: D,
+                        hideMax: D,
+                        popup: N,
+                        hideActions: !_,
+                      }),
+                      (0, s.jsx)(d.EO, {
+                        bCenterPopupsOnWindow: j?.BCenterPopupsOnWindow(),
+                        browserInfo: j?.GetBrowserInfo(),
+                        children: w,
+                      }),
+                    ],
+                  }),
+                  e.resizable && (0, s.jsx)(f, { popup: N }),
+                ],
+              }),
+              B,
+            ),
+          ],
+        });
+      }
+      function I(e) {
+        const { popup: t } = e,
+          i = r.useCallback(() => {
+            t?.SteamClient.Window.BringToFront();
+          }, [t]);
+        return (
+          r.useEffect(i, [i]),
+          (0, s.jsx)(u.E, {
+            active: !0,
+            children: (0, s.jsx)("div", {
+              style: {
+                position: "fixed",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+              },
+              onClick: i,
+            }),
+          })
+        );
+      }
     },
     22797: (e, t, i) => {
       "use strict";
@@ -2941,111 +3112,6 @@
         const t = `${c(e.top)} ${c(e.right)} ${c(e.bottom)} ${c(e.left)}`;
         return { padding: t, scrollPadding: t };
       }
-    },
-    60383: (e, t, i) => {
-      "use strict";
-      i.d(t, { J: () => l });
-      var s = i(34629),
-        r = i(7850),
-        n = i(90626),
-        a = i(56011),
-        o = i(84933);
-      class l extends n.Component {
-        static GetScrollableClassname() {
-          return "vt-scrollable";
-        }
-        m_observer = null;
-        m_refElement = n.createRef();
-        m_elTracked = null;
-        m_bPreviouslyIntersecting = !1;
-        BTriggerOnce() {
-          return "once" == (this.props.trigger || "once");
-        }
-        GetBoundingClientRect() {
-          return this.m_refElement.current
-            ? this.m_refElement.current.getBoundingClientRect()
-            : null;
-        }
-        DestroyObserver() {
-          this.m_observer &&
-            (this.m_observer.disconnect(),
-            (this.m_observer = null),
-            (this.m_elTracked = null));
-        }
-        componentWillUnmount() {
-          this.DestroyObserver();
-        }
-        componentDidMount() {
-          this.UpdateObserver(null);
-        }
-        componentDidUpdate(e) {
-          this.UpdateObserver(e);
-        }
-        UpdateObserver(e) {
-          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
-          this.m_observer &&
-            e &&
-            (e.rootMargin != this.m_observer.rootMargin ||
-              e.thresholds != this.m_observer.thresholds) &&
-            this.DestroyObserver();
-          let t = this.m_refElement.current;
-          if (
-            (this.m_observer &&
-              t != this.m_elTracked &&
-              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
-              (this.m_elTracked = null)),
-            !this.m_observer && t)
-          ) {
-            let e = { root: this.FindScrollableAncestor(t) };
-            this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              this.props.thresholds && (e.threshold = this.props.thresholds),
-              (this.m_observer = (0, o.md)(t, this.OnIntersection, e));
-          }
-          this.m_observer &&
-            t &&
-            t != this.m_elTracked &&
-            (this.m_observer.observe(t), (this.m_elTracked = t));
-        }
-        FindScrollableAncestor(e) {
-          return a.Kf(e, (e) => {
-            const t = this.props.horizontal
-              ? window.getComputedStyle(e).overflowX
-              : window.getComputedStyle(e).overflowY;
-            return (
-              "scroll" == t ||
-              "auto" == t ||
-              !!e.classList.contains(l.GetScrollableClassname())
-            );
-          });
-        }
-        OnIntersection(e, t) {
-          let i = !1;
-          for (const t of e)
-            if (t.isIntersecting) {
-              i = !0;
-              break;
-            }
-          this.m_bPreviouslyIntersecting != i &&
-            ((this.m_bPreviouslyIntersecting = i),
-            this.props.onVisibilityChange && this.props.onVisibilityChange(i),
-            i && this.BTriggerOnce() && this.DestroyObserver());
-        }
-        render() {
-          let {
-            onVisibilityChange: e,
-            rootMargin: t,
-            trigger: i,
-            horizontal: s,
-            ...n
-          } = this.props;
-          return (0, r.jsx)("div", {
-            ref: this.m_refElement,
-            ...n,
-            children: this.props.children,
-          });
-        }
-      }
-      (0, s.Cg)([o.oI], l.prototype, "OnIntersection", null);
     },
     4434: (e, t, i) => {
       "use strict";
@@ -11028,7 +11094,7 @@
         u = i(84933),
         p = i(17083),
         h = i(51819),
-        _ = i(51706),
+        _ = i(74568),
         g = i(61859),
         f = i(22580),
         w = i(71698),

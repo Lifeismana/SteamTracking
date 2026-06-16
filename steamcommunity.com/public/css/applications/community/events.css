@@ -157,7 +157,7 @@
 }
 .BasicUI ._1snIw0RvJduvDtqpmwtKJ9 {
   margin: unset;
-  gap: var(--gpSpace-Gap);
+  gap: var(--gpSpace-Gap, 12px);
 }
 ._2vEwZPNBe2qcTuxZf5cpiD {
   display: flex;

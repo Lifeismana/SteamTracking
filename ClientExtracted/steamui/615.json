@@ -290,10 +290,12 @@
     "setcooldown_nocooldown": "Žádné aktuální omezení",
     "setcooldown_days": "dnů",
     "setcooldown_newcooldownlabel": "Nové omezení pro uživatele:",
-    "setcooldown_clearcooldown": "Smazat",
+    "setcooldown_clearcooldown": "Smazat omezení",
     "setcooldown_cooldownsummary": "(%1$s dnů)",
     "setcooldown_dialogtitle": "Nastavení omezení nahlašování",
     "setcooldown_dialogdescription": "Umožňuje zamezit uživateli v nahlašování obsahu nebo zpochybňování rozhodnutí, v případě, že zneužil systém.",
     "setcooldown_setbutton": "Nastavit omezení",
+    "setcooldown_clearopenreports": "Smazat nevyřešená nahlášení tohoto uživatele",
+    "setcooldown_statssummary": "%1$s/%2$s zproštěno, %3$s/%4$s za poslední týden",
     "nocomma": ""
 }

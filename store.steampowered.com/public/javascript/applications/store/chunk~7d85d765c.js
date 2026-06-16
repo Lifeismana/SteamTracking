@@ -4,43 +4,113 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4867],
   {
-    34010: (e, t, a) => {
-      a.d(t, {
-        M5: () => b,
-        MU: () => C,
-        MX: () => D,
-        Rt: () => f,
-        U7: () => g,
-        fn: () => _,
-        j: () => B,
-      });
-      var r = a(34629),
-        s = a(16021),
-        o = a(41735),
-        n = a.n(o),
+    3067: (t, e, a) => {
+      a.d(e, { td: () => n });
+      var s = a(34629),
         i = a(14947),
+        r = a(78327);
+      r.TS.CHAT_BASE_URL, r.TS.CHAT_BASE_URL;
+      class o {
+        bValid = !1;
+        stream = { 0: "#Broadcast_EnglishMain" };
+        name = "";
+        appName = "";
+        appID = 0;
+        link = "";
+        linkName = "";
+        tabIcon = "";
+        offlineImage = "";
+        gidEvent = "";
+        constructor(t) {
+          (0, i.Gn)(this), this.init(t);
+        }
+        init(t) {
+          (this.bValid = t.bValid),
+            (this.stream = t.stream),
+            (this.name = t.name),
+            (this.appName = t.appName),
+            (this.appID = t.appID),
+            (this.link = t.link),
+            (this.linkName = t.linkName),
+            (this.tabIcon = t.tabIcon),
+            (this.offlineImage = t.offlineImage),
+            (this.gidEvent = t.gidEvent);
+        }
+      }
+      (0, s.Cg)([i.sH], o.prototype, "bValid", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "stream", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "name", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "appName", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "appID", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "link", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "linkName", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "tabIcon", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "offlineImage", void 0),
+        (0, s.Cg)([i.sH], o.prototype, "gidEvent", void 0);
+      let n = new o({
+        bValid: !1,
+        stream: { 0: "#Broadcast_EnglishMain" },
+        name: "",
+        appName: "",
+        appID: 0,
+        link: "",
+        linkName: "",
+        tabIcon: "",
+        offlineImage: "",
+      });
+    },
+    4299: (t, e, a) => {
+      var s, i;
+      a.d(e, { J8: () => r, X8: () => i }),
+        (function (t) {
+          (t[(t.Hover = 0)] = "Hover"),
+            (t[(t.ClickPopup = 1)] = "ClickPopup"),
+            (t[(t.ClickSurroundingRegion = 2)] = "ClickSurroundingRegion");
+        })(s || (s = {})),
+        (function (t) {
+          (t[(t.Chat = 0)] = "Chat"),
+            (t[(t.Notification = 1)] = "Notification"),
+            (t[(t.Error = 2)] = "Error");
+        })(i || (i = {}));
+      class r {}
+    },
+    34010: (t, e, a) => {
+      a.d(e, {
+        M5: () => b,
+        MU: () => D,
+        MX: () => I,
+        Rt: () => y,
+        U7: () => B,
+        fn: () => g,
+        j: () => C,
+      });
+      var s = a(34629),
+        i = a(16021),
+        r = a(41735),
+        o = a.n(r),
+        n = a(14947),
         d = a(37085),
         m = a(17720),
-        c = a(45285),
-        l = a(54728),
+        l = a(45285),
+        c = a(54728),
         p = a(44165),
-        u = a(68033),
-        h = a(68797),
-        A = a(78327),
+        h = a(68033),
+        _ = a(68797),
+        u = a(78327),
         S = a(75515);
-      function _(e) {
-        return Boolean(e && e.thumbnail_http_address);
+      function g(t) {
+        return Boolean(t && t.thumbnail_http_address);
       }
-      function b(e, t) {
-        if (t || e) {
-          const a = t || e;
-          return Boolean(a && B.Get().BIsAppStreaming(a));
+      function b(t, e) {
+        if (e || t) {
+          const a = e || t;
+          return Boolean(a && C.Get().BIsAppStreaming(a));
         }
         return !1;
       }
-      class B {
+      class C {
         constructor() {
-          (0, i.Gn)(this);
+          (0, n.Gn)(this);
         }
         static s_GlobalStore;
         m_inFlightRequests = new Map();
@@ -57,25 +127,25 @@
         m_setStreamChangedListeners = new Set();
         m_bUseFakeData = !1;
         m_onLoadContextCall = new Map();
-        BHasStreams(e) {
-          const t = this.GetStreams(e);
-          return Boolean(t && t.length > 0);
+        BHasStreams(t) {
+          const e = this.GetStreams(t);
+          return Boolean(e && e.length > 0);
         }
-        AddCallbackOnNewContext(e, t, a) {
-          this.m_onLoadContextCall.set(this.GetStreamsLookupKeyFromDef(e), {
-            name: t,
+        AddCallbackOnNewContext(t, e, a) {
+          this.m_onLoadContextCall.set(this.GetStreamsLookupKeyFromDef(t), {
+            name: e,
             fnCallback: a,
           });
         }
-        ClearCallbackOnNewContext(e) {
+        ClearCallbackOnNewContext(t) {
           this.m_onLoadContextCall.set(
-            this.GetStreamsLookupKeyFromDef(e),
+            this.GetStreamsLookupKeyFromDef(t),
             null,
           );
         }
-        GetPlayReadyStream(e) {
-          let t = this.GetStreamsLookupKeyFromDef(e);
-          return this.m_playReadyStream.get(t);
+        GetPlayReadyStream(t) {
+          let e = this.GetStreamsLookupKeyFromDef(t);
+          return this.m_playReadyStream.get(e);
         }
         BIsEmbeddedBroadcastHiddenByDefaultUserSettings() {
           return Boolean(this.m_bUserPreferenceHideBroadcastByDefault);
@@ -83,12 +153,12 @@
         BIsEmbeddedStreamCollapsed() {
           return Boolean(this.m_bCollapsed);
         }
-        SetEmbeddedStreamCollapsed(e) {
-          this.m_bCollapsed != e && (this.m_bCollapsed = e);
+        SetEmbeddedStreamCollapsed(t) {
+          this.m_bCollapsed != t && (this.m_bCollapsed = t);
         }
-        GetConcurrentStreams(e) {
-          const t = this.GetStreams(e);
-          return t ? t.filter((e) => _(e)).length : 0;
+        GetConcurrentStreams(t) {
+          const e = this.GetStreams(t);
+          return e ? e.filter((t) => g(t)).length : 0;
         }
         GetChatVisibility() {
           return "remove" === this.m_pageChatStatus ||
@@ -106,180 +176,180 @@
                   : "show";
         }
         ToggleChatVisibility() {
-          const e = this.GetChatVisibility();
-          "remove" !== e && (this.m_bUserChatExpanded = "hide" === e);
+          const t = this.GetChatVisibility();
+          "remove" !== t && (this.m_bUserChatExpanded = "hide" === t);
         }
-        DebugDumpContextAndAvailableContext(e) {
-          console.log("Requested context", this.GetStreamsLookupKeyFromDef(e)),
+        DebugDumpContextAndAvailableContext(t) {
+          console.log("Requested context", this.GetStreamsLookupKeyFromDef(t)),
             console.log("Available context count: ", this.m_lookupStreams.size),
-            this.m_lookupStreams.forEach((e, t) => {
-              console.log(t, e.length);
+            this.m_lookupStreams.forEach((t, e) => {
+              console.log(e, t.length);
             });
         }
-        GetStreams(e) {
-          const t = this.GetStreamsLookupKeyFromDef(e);
-          return this.m_lookupStreams.get(t);
+        GetStreams(t) {
+          const e = this.GetStreamsLookupKeyFromDef(t);
+          return this.m_lookupStreams.get(e);
         }
-        GetBroadcastURL(e) {
-          let t = null;
+        GetBroadcastURL(t) {
+          let e = null;
           return (
-            (t = e.steamid
-              ? new m.b(e.steamid)
-              : m.b.InitFromAccountID(e.accountid)),
-            A.TS.COMMUNITY_BASE_URL +
+            (e = t.steamid
+              ? new m.b(t.steamid)
+              : m.b.InitFromAccountID(t.accountid)),
+            u.TS.COMMUNITY_BASE_URL +
               "broadcast/watch/" +
-              t.ConvertTo64BitString()
+              e.ConvertTo64BitString()
           );
         }
-        BIsAppStreaming(e) {
-          let t = !1;
+        BIsAppStreaming(t) {
+          let e = !1;
           return (
             this.m_lookupStreams.forEach((a) => {
-              t ||
-                (t =
+              e ||
+                (e =
                   Boolean(a) &&
                   a.some(
-                    (t) =>
-                      l.es.GetOrCreateBroadcastInfo(t.steamid).m_nAppID === e,
+                    (e) =>
+                      c.es.GetOrCreateBroadcastInfo(e.steamid).m_nAppID === t,
                   ));
             }),
-            t
+            e
           );
         }
-        GetStreamsForAppID(e) {
-          const t = new Array();
+        GetStreamsForAppID(t) {
+          const e = new Array();
           return (
             this.m_lookupStreams.forEach((a) => {
               a?.forEach((a) => {
-                l.es.GetOrCreateBroadcastInfo(a.steamid).m_nAppID === e &&
-                  t.push(a);
+                c.es.GetOrCreateBroadcastInfo(a.steamid).m_nAppID === t &&
+                  e.push(a);
               });
             }),
-            t
+            e
           );
         }
-        AddStreamChangedListener(e) {
-          this.m_setStreamChangedListeners.add(e);
+        AddStreamChangedListener(t) {
+          this.m_setStreamChangedListeners.add(t);
         }
-        RemoveStreamChangedListener(e) {
-          this.m_setStreamChangedListeners.delete(e);
+        RemoveStreamChangedListener(t) {
+          this.m_setStreamChangedListeners.delete(t);
         }
-        async LoadBIsEmbeddedBroadcastHidden(e) {
+        async LoadBIsEmbeddedBroadcastHidden(t) {
           if (void 0 === this.m_bUserPreferenceHideBroadcastByDefault) {
-            let t = (0, A.Tc)("broadcastuser", "application_config");
-            if (!t)
+            let e = (0, u.Tc)("broadcastuser", "application_config");
+            if (!e)
               try {
                 let a =
-                    A.TS.STORE_BASE_URL +
+                    u.TS.STORE_BASE_URL +
                     "broadcast/ajaxgetuserbroadcastpreferences",
-                  r = await n().get(a, { params: {}, cancelToken: e.token });
-                t = r.data;
-              } catch (e) {
+                  s = await o().get(a, { params: {}, cancelToken: t.token });
+                e = s.data;
+              } catch (t) {
                 console.log(
-                  "LoadBIsEmbeddedBroadcastHidden: " + (0, h.H)(e).strErrorMsg,
+                  "LoadBIsEmbeddedBroadcastHidden: " + (0, _.H)(t).strErrorMsg,
                 ),
-                  (t = { bHideStoreBroadcast: !1 });
+                  (e = { bHideStoreBroadcast: !1 });
               }
-            (0, i.h5)(() => {
+            (0, n.h5)(() => {
               (this.m_bUserPreferenceHideBroadcastByDefault =
-                t.bHideStoreBroadcast),
-                (this.m_bCollapsed = t.bHideStoreBroadcast);
+                e.bHideStoreBroadcast),
+                (this.m_bCollapsed = e.bHideStoreBroadcast);
             });
           }
           return this.m_bUserPreferenceHideBroadcastByDefault;
         }
-        async SetupEmbeddableVOD(e, t) {
+        async SetupEmbeddableVOD(t, e) {
           (this.m_bUseFakeData = !1),
             (this.m_streamChatStatus = "remove"),
-            await s.A.Get().QueueAppRequest(e.nAppIDVOD, {
+            await i.A.Get().QueueAppRequest(t.nAppIDVOD, {
               include_assets: !0,
               include_trailers: !0,
             });
-          const a = s.A.Get().GetApp(e.nAppIDVOD),
-            r = new S.TT();
+          const a = i.A.Get().GetApp(t.nAppIDVOD),
+            s = new S.TT();
           if (
-            ((r.accountid = 0),
-            (r.nAppIDVOD = e.nAppIDVOD),
-            (r.default_selection_priority = S.mY.k_ePrimary),
-            (r.current_selection_priority = S.mY.k_ePrimary),
-            (r.thumbnail_http_address = a?.GetAssets().GetHeaderURL() || ""),
-            (r.title = a?.GetName() || ""),
-            this.GetStreams(e).unshift(r),
-            t)
+            ((s.accountid = 0),
+            (s.nAppIDVOD = t.nAppIDVOD),
+            (s.default_selection_priority = S.mY.k_ePrimary),
+            (s.current_selection_priority = S.mY.k_ePrimary),
+            (s.thumbnail_http_address = a?.GetAssets().GetHeaderURL() || ""),
+            (s.title = a?.GetName() || ""),
+            this.GetStreams(t).unshift(s),
+            e)
           ) {
-            const t = this.GetStreamsLookupKeyFromDef(e);
-            this.m_playReadyStream.set(t, r);
+            const e = this.GetStreamsLookupKeyFromDef(t);
+            this.m_playReadyStream.set(e, s);
           }
         }
-        async HintLoadEmbeddablePreviewStreams(e) {
-          let t = null,
+        async HintLoadEmbeddablePreviewStreams(t) {
+          let e = null,
             a = {
-              eventid: e.event ? e.event.GID : void 0,
-              previewAccounts: Boolean(e.bIsPreview && e.accountIDs)
-                ? e.accountIDs.slice().sort().join(",")
+              eventid: t.event ? t.event.GID : void 0,
+              previewAccounts: Boolean(t.bIsPreview && t.accountIDs)
+                ? t.accountIDs.slice().sort().join(",")
                 : void 0,
             };
           try {
             return (
-              (t = await n().get(
-                A.TS.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpreview",
+              (e = await o().get(
+                u.TS.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpreview",
                 { params: a },
               )),
-              this.HandleHintLoadBroadcastResponse(e, t.data)
+              this.HandleHintLoadBroadcastResponse(t, e.data)
             );
-          } catch (e) {
-            let t = (0, h.H)(e);
+          } catch (t) {
+            let e = (0, _.H)(t);
             console.error(
               "HintLoadEmbeddablePreviewStreams hit error loading: " +
-                t.strErrorMsg,
-              t,
+                e.strErrorMsg,
+              e,
             );
           }
           return [];
         }
-        async HintLoadEmbeddableStreams(e) {
-          let t = this.MapEmbeddableStreamToRequest(e),
-            a = this.GetStreamsLookupKeyFromParam(t);
+        async HintLoadEmbeddableStreams(t) {
+          let e = this.MapEmbeddableStreamToRequest(t),
+            a = this.GetStreamsLookupKeyFromParam(e);
           if (!this.m_inFlightRequests.has(a)) {
-            this.m_lookupKeyToEmbedStreamDef.set(a, e);
-            const r = this.InternalHintLoadEmbeddableStreams(e, t);
-            this.m_inFlightRequests.set(a, r);
+            this.m_lookupKeyToEmbedStreamDef.set(a, t);
+            const s = this.InternalHintLoadEmbeddableStreams(t, e);
+            this.m_inFlightRequests.set(a, s);
           }
           return this.m_inFlightRequests.get(a);
         }
-        async InternalHintLoadEmbeddableStreams(e, t) {
-          let a = (0, A.Tc)(
+        async InternalHintLoadEmbeddableStreams(t, e) {
+          let a = (0, u.Tc)(
             "broadcast_available_for_page",
             "application_config",
           );
-          if ((0, S.h7)(a)) return this.HandleHintLoadBroadcastResponse(e, a);
+          if ((0, S.h7)(a)) return this.HandleHintLoadBroadcastResponse(t, a);
           try {
             let a = null;
             return (
-              (a = await n().get(
-                A.TS.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpage",
-                { params: t },
+              (a = await o().get(
+                u.TS.STORE_BASE_URL + "broadcast/ajaxgetstreamersforpage",
+                { params: e },
               )),
-              this.HandleHintLoadBroadcastResponse(e, a.data)
+              this.HandleHintLoadBroadcastResponse(t, a.data)
             );
-          } catch (e) {
-            let t = (0, h.H)(e);
+          } catch (t) {
+            let e = (0, _.H)(t);
             console.error(
-              "HintLoadEmbeddableStreams hit error loading: " + t.strErrorMsg,
-              t,
+              "HintLoadEmbeddableStreams hit error loading: " + e.strErrorMsg,
+              e,
             );
           }
           return [];
         }
-        async HandleHintLoadBroadcastResponse(e, t) {
+        async HandleHintLoadBroadcastResponse(t, e) {
           (this.m_bUseFakeData = !1),
-            e.bIsPreview &&
-              (t?.filtered?.length > 0
+            t.bIsPreview &&
+              (e?.filtered?.length > 0
                 ? this.ExtractBroadcastPrioritiesFromPartnerEventForPreview(
-                    e.event,
-                    t.filtered,
+                    t.event,
+                    e.filtered,
                   )
-                : ((t = {
+                : ((e = {
                     filtered: [{}],
                     success: 1,
                     total_count: 1,
@@ -287,380 +357,2016 @@
                     broadcast_chat_visibility: "hide",
                   }),
                   (this.m_bUseFakeData = !0))),
-            t.broadcast_chat_visibility &&
-              (this.m_pageChatStatus = t.broadcast_chat_visibility);
+            e.broadcast_chat_visibility &&
+              (this.m_pageChatStatus = e.broadcast_chat_visibility);
           const a = new Array();
-          (0, i.h5)(() => {
-            t.filtered.forEach((e) => {
-              if (!e.steamid) {
-                const t = m.b.InitFromAccountID(e.accountid);
-                e.steamid = t.ConvertTo64BitString();
+          (0, n.h5)(() => {
+            e.filtered.forEach((t) => {
+              if (!t.steamid) {
+                const e = m.b.InitFromAccountID(t.accountid);
+                t.steamid = e.ConvertTo64BitString();
               }
-              const t = l.es.GetOrCreateBroadcastInfo(e.steamid),
-                r = e.appid ? Number(e.appid) : l.fO;
-              (t.m_nAppID = r),
-                (t.m_strAppId = "" + r),
-                void 0 === e.current_selection_priority &&
-                  (e.current_selection_priority = e.default_selection_priority),
-                r != l.fO && a.push(r);
+              const e = c.es.GetOrCreateBroadcastInfo(t.steamid),
+                s = t.appid ? Number(t.appid) : c.fO;
+              (e.m_nAppID = s),
+                (e.m_strAppId = "" + s),
+                void 0 === t.current_selection_priority &&
+                  (t.current_selection_priority = t.default_selection_priority),
+                s != c.fO && a.push(s);
             });
           });
-          const r = this.GetStreamsLookupKeyFromDef(e);
+          const s = this.GetStreamsLookupKeyFromDef(t);
           if (
-            (this.m_lookupStreams.set(r, t.filtered),
-            this.m_onLoadContextCall.has(r))
+            (this.m_lookupStreams.set(s, e.filtered),
+            this.m_onLoadContextCall.has(s))
           ) {
-            const e = this.m_onLoadContextCall.get(r);
-            e
-              ? ("dev" == A.TS.WEB_UNIVERSE &&
+            const t = this.m_onLoadContextCall.get(s);
+            t
+              ? ("dev" == u.TS.WEB_UNIVERSE &&
                   console.log(
                     "CBroadcastEmbeddableStore initialized after caller using callback to " +
-                      e.name,
+                      t.name,
                   ),
-                e.fnCallback())
-              : "dev" == A.TS.WEB_UNIVERSE &&
+                t.fnCallback())
+              : "dev" == u.TS.WEB_UNIVERSE &&
                 console.log(
                   "CBroadcastEmbeddableStore initialized after caller, however callback is since cleared",
                 );
           }
-          const s = this.GetStreams(e);
-          return await this.AutoStartVideoStream(e, s), s;
+          const i = this.GetStreams(t);
+          return await this.AutoStartVideoStream(t, i), i;
         }
-        ExtractBroadcastPrioritiesFromPartnerEventForPreview(e, t) {
-          const a = Array.from(e.jsondata.broadcast_whitelist ?? []),
-            r = Array.from(e.jsondata.broadcast_priority ?? []),
-            s = new Map();
-          for (let e = 0; e < a.length && !(e >= r.length); e++)
-            s.set(a[e], (0, S.PH)(r[e]));
-          t.forEach((e) => {
-            const t = Number(e.accountid);
-            s.has(t) && (e.current_selection_priority = s.get(t));
+        ExtractBroadcastPrioritiesFromPartnerEventForPreview(t, e) {
+          const a = Array.from(t.jsondata.broadcast_whitelist ?? []),
+            s = Array.from(t.jsondata.broadcast_priority ?? []),
+            i = new Map();
+          for (let t = 0; t < a.length && !(t >= s.length); t++)
+            i.set(a[t], (0, S.PH)(s[t]));
+          e.forEach((t) => {
+            const e = Number(t.accountid);
+            i.has(e) && (t.current_selection_priority = i.get(e));
           });
         }
-        async AutoStartVideoStream(e, t) {
-          let a = this.GetStreamsLookupKeyFromDef(e);
+        async AutoStartVideoStream(t, e) {
+          let a = this.GetStreamsLookupKeyFromDef(t);
           if (this.m_bMapHasStartedVideo.get(a)) return null;
           if (this.m_bUseFakeData) {
             if (!this.m_playReadyStream.get(a)) {
-              const e = {
+              const t = {
                 accountid: 0,
                 thumbnail_http_address: "",
                 default_selection_priority: S.mY.k_eGeneral,
                 current_selection_priority: S.mY.k_eGeneral,
               };
-              this.m_playReadyStream.set(a, e);
+              this.m_playReadyStream.set(a, t);
             }
             return this.m_playReadyStream;
           }
-          return this.PlayFromAvailableStreams(e, t);
+          return this.PlayFromAvailableStreams(t, e);
         }
-        async PlayFromAvailableStreams(e, t, a = !1) {
-          const r = new Set();
+        async PlayFromAvailableStreams(t, e, a = !1) {
+          const s = new Set();
           for (;;) {
-            const s = t.filter((e) => !(r.has(e) || (a && e.nAppIDVOD))),
-              o = this.GetAutoStartStream(s);
-            if (!o) return null;
-            if (await this.AttemptToPlayStream(e, o)) return o;
-            r.add(o);
+            const i = e.filter((t) => !(s.has(t) || (a && t.nAppIDVOD))),
+              r = this.GetAutoStartStream(i);
+            if (!r) return null;
+            if (await this.AttemptToPlayStream(t, r)) return r;
+            s.add(r);
           }
         }
-        async AttemptToPlayStream(e, t) {
-          let a = this.GetStreamsLookupKeyFromDef(e);
+        async AttemptToPlayStream(t, e) {
+          let a = this.GetStreamsLookupKeyFromDef(t);
           if (
             (this.m_bMapHasStartedVideo.set(a, !0),
-            this.m_mapBroadcastChecked.has(t.accountid) ||
+            this.m_mapBroadcastChecked.has(e.accountid) ||
               this.m_mapBroadcastChecked.set(
-                t.accountid,
-                this.InternalAttemptToPlayStream(e, t),
+                e.accountid,
+                this.InternalAttemptToPlayStream(t, e),
               ),
-            t.nAppIDVOD)
+            e.nAppIDVOD)
           )
-            this.m_playReadyStream.set(a, t);
+            this.m_playReadyStream.set(a, e);
           else {
-            const r = await this.m_mapBroadcastChecked.get(t.accountid);
-            if (r?.success != d.R) return null;
-            (t.steamid = r.steamid),
-              this.m_playReadyStream.set(a, t),
-              this.GetConcurrentStreams(e) > 1
+            const s = await this.m_mapBroadcastChecked.get(e.accountid);
+            if (s?.success != d.R) return null;
+            (e.steamid = s.steamid),
+              this.m_playReadyStream.set(a, e),
+              this.GetConcurrentStreams(t) > 1
                 ? (this.m_streamChatStatus = "hide")
-                : (this.m_streamChatStatus = t.broadcast_chat_visibility),
-              this.m_setStreamChangedListeners.forEach((e) => e(t));
-            g(
-              l.es.GetOrCreateBroadcastInfo(t.steamid).m_nAppID,
-              c.Mc.iy,
-              t.snr,
+                : (this.m_streamChatStatus = e.broadcast_chat_visibility),
+              this.m_setStreamChangedListeners.forEach((t) => t(e));
+            B(
+              c.es.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
+              l.Mc.iy,
+              e.snr,
             );
           }
-          return t;
+          return e;
         }
-        async InternalAttemptToPlayStream(e, t) {
-          this.GetStreamsLookupKeyFromDef(e);
+        async InternalAttemptToPlayStream(t, e) {
+          this.GetStreamsLookupKeyFromDef(t);
           let a = null;
           try {
-            const e = A.TS.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast";
-            let r = {
-              broadcastaccountid: t.accountid,
-              viewer_token: l.es.GetViewerToken(),
+            const t = u.TS.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast";
+            let s = {
+              broadcastaccountid: e.accountid,
+              viewer_token: c.es.GetViewerToken(),
               origin: self.origin,
             };
-            return (a = await n().get(e, { params: r })), a.data;
-          } catch (e) {
-            let t = (0, h.H)(e);
-            console.error("Broadcast.AttemptToPlayStream: " + t.strErrorMsg, t);
+            return (a = await o().get(t, { params: s })), a.data;
+          } catch (t) {
+            let e = (0, _.H)(t);
+            console.error("Broadcast.AttemptToPlayStream: " + e.strErrorMsg, e);
           }
           return null;
         }
-        GetAutoStartStream(e) {
-          if (!e) return null;
-          const t = e.filter((e) => _(e)),
-            a = t.reduce((e, t) => Math.max(e, f(t)), 0),
-            r = t.filter((e) => f(e) === a);
-          if (0 === r.length) return null;
-          return r[Math.floor(Math.random() * r.length)];
+        GetAutoStartStream(t) {
+          if (!t) return null;
+          const e = t.filter((t) => g(t)),
+            a = e.reduce((t, e) => Math.max(t, y(e)), 0),
+            s = e.filter((t) => y(t) === a);
+          if (0 === s.length) return null;
+          return s[Math.floor(Math.random() * s.length)];
         }
-        MapEmbeddableStreamToRequest(e) {
+        MapEmbeddableStreamToRequest(t) {
           return {
-            appid: e.appid,
-            promotionName: e.bIsPreview ? "preview" : e.promotionName,
-            clanid: e.clanid
-              ? e.clanid
-              : e.event
-                ? e.event.clanSteamID.GetAccountID()
+            appid: t.appid,
+            promotionName: t.bIsPreview ? "preview" : t.promotionName,
+            clanid: t.clanid
+              ? t.clanid
+              : t.event
+                ? t.event.clanSteamID.GetAccountID()
                 : void 0,
-            listid: e.listid,
-            subid: e.subid,
-            bundleid: e.bundleid,
-            eventid: e.event ? e.event.GID : void 0,
-            previewAccounts: Boolean(e.bIsPreview && e.accountIDs)
-              ? e.accountIDs.slice().sort().join(",")
+            listid: t.listid,
+            subid: t.subid,
+            bundleid: t.bundleid,
+            eventid: t.event ? t.event.GID : void 0,
+            previewAccounts: Boolean(t.bIsPreview && t.accountIDs)
+              ? t.accountIDs.slice().sort().join(",")
               : void 0,
             test: false,
-            cc: A.TS.COUNTRY,
-            l: A.TS.LANGUAGE,
-            hubtype: e.event?.GetContentHubType(),
-            hubcategory: e.event?.GetContentHubCategory(),
-            hubtagid: e.event?.GetContentHubTag(),
-            tabuniqueid: e.tabuniqueid,
-            tabfilter: e.tabfilter,
+            cc: u.TS.COUNTRY,
+            l: u.TS.LANGUAGE,
+            hubtype: t.event?.GetContentHubType(),
+            hubcategory: t.event?.GetContentHubCategory(),
+            hubtagid: t.event?.GetContentHubTag(),
+            tabuniqueid: t.tabuniqueid,
+            tabfilter: t.tabfilter,
             rt_now_override_test: p.HD.BHasTimeOverride()
               ? p.HD.GetTimeNowWithOverride()
               : void 0,
           };
         }
-        GetStreamsLookupKeyFromDef(e) {
+        GetStreamsLookupKeyFromDef(t) {
           return this.GetStreamsLookupKeyFromParam(
-            this.MapEmbeddableStreamToRequest(e),
+            this.MapEmbeddableStreamToRequest(t),
           );
         }
-        GetStreamsLookupKeyFromParam(e) {
-          return JSON.stringify(e);
+        GetStreamsLookupKeyFromParam(t) {
+          return JSON.stringify(t);
         }
         static Get() {
           return (
-            B.s_GlobalStore ||
-              ((B.s_GlobalStore = new B()),
-              "dev" == A.TS.WEB_UNIVERSE &&
-                (window.g_BroadcastEmbeddableStore = B.s_GlobalStore),
-              B.s_GlobalStore.Init()),
-            B.s_GlobalStore
+            C.s_GlobalStore ||
+              ((C.s_GlobalStore = new C()),
+              "dev" == u.TS.WEB_UNIVERSE &&
+                (window.g_BroadcastEmbeddableStore = C.s_GlobalStore),
+              C.s_GlobalStore.Init()),
+            C.s_GlobalStore
           );
         }
         Init() {}
       }
-      function f(e) {
-        return e.current_selection_priority || S.mY.k_eGeneral;
+      function y(t) {
+        return t.current_selection_priority || S.mY.k_eGeneral;
       }
-      function C(e) {
-        e.sort((e, t) =>
-          f(e) != f(t)
-            ? f(t) - f(e)
-            : e.viewer_count != t.viewer_count
-              ? t.viewer_count - e.viewer_count
-              : t.accountid - e.accountid,
+      function D(t) {
+        t.sort((t, e) =>
+          y(t) != y(e)
+            ? y(e) - y(t)
+            : t.viewer_count != e.viewer_count
+              ? e.viewer_count - t.viewer_count
+              : e.accountid - t.accountid,
         );
       }
-      async function g(e, t, a) {
-        if (e > 0 && 7 != e && a) {
-          let r = new URLSearchParams();
-          r.append("page_action", "" + t),
-            r.append("snr", a),
-            n().post(
-              A.TS.STORE_BASE_URL + "ajaxreportproductaction/" + e + "/",
-              r,
+      async function B(t, e, a) {
+        if (t > 0 && 7 != t && a) {
+          let s = new URLSearchParams();
+          s.append("page_action", "" + e),
+            s.append("snr", a),
+            o().post(
+              u.TS.STORE_BASE_URL + "ajaxreportproductaction/" + t + "/",
+              s,
             );
         }
       }
-      (0, r.Cg)([i.sH], B.prototype, "m_lookupStreams", void 0),
-        (0, r.Cg)([i.sH], B.prototype, "m_playReadyStream", void 0),
-        (0, r.Cg)([i.sH], B.prototype, "m_pageChatStatus", void 0),
-        (0, r.Cg)([i.sH], B.prototype, "m_streamChatStatus", void 0),
-        (0, r.Cg)([i.sH], B.prototype, "m_bUserChatExpanded", void 0),
-        (0, r.Cg)(
-          [i.sH],
-          B.prototype,
+      (0, s.Cg)([n.sH], C.prototype, "m_lookupStreams", void 0),
+        (0, s.Cg)([n.sH], C.prototype, "m_playReadyStream", void 0),
+        (0, s.Cg)([n.sH], C.prototype, "m_pageChatStatus", void 0),
+        (0, s.Cg)([n.sH], C.prototype, "m_streamChatStatus", void 0),
+        (0, s.Cg)([n.sH], C.prototype, "m_bUserChatExpanded", void 0),
+        (0, s.Cg)(
+          [n.sH],
+          C.prototype,
           "m_bUserPreferenceHideBroadcastByDefault",
           void 0,
         ),
-        (0, r.Cg)([i.sH], B.prototype, "m_bCollapsed", void 0),
-        (0, r.Cg)(
-          [i.XI],
-          B.prototype,
+        (0, s.Cg)([n.sH], C.prototype, "m_bCollapsed", void 0),
+        (0, s.Cg)(
+          [n.XI],
+          C.prototype,
           "HintLoadEmbeddablePreviewStreams",
           null,
         ),
-        (0, r.Cg)([i.XI], B.prototype, "AttemptToPlayStream", null);
-      const D = new u.T();
+        (0, s.Cg)([n.XI], C.prototype, "AttemptToPlayStream", null);
+      const I = new h.T();
     },
-    60727: (e, t, a) => {
-      a.d(t, { l: () => m, m: () => d });
-      var r = a(34629),
-        s = a(14947),
-        o = a(17720),
-        n = a(44165),
-        i = a(6379);
+    60727: (t, e, a) => {
+      a.d(e, { l: () => m, m: () => d });
+      var s = a(34629),
+        i = a(14947),
+        r = a(17720),
+        o = a(44165),
+        n = a(6379);
       class d {
         constructor() {
-          (0, s.Gn)(this);
+          (0, i.Gn)(this);
         }
         m_mapBroadcasterSteamIDToEvents = new Map();
         m_mapBroadcasterSteamIDData = new Map();
-        static GetBBCodeParam(e, t, a = "") {
-          const r = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
-          return r ? r[1] : a;
+        static GetBBCodeParam(t, e, a = "") {
+          const s = new RegExp(`\\W${e}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(t);
+          return s ? s[1] : a;
         }
-        static ParseCalendarEventPresentersFromText(e) {
-          const t = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
+        static ParseCalendarEventPresentersFromText(t) {
+          const e = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
             a = new Array();
           for (;;) {
-            const r = t.exec(e);
-            if (null === r) break;
-            const s = r[1],
-              n = r[2],
-              i = d.GetBBCodeParam(s, "steamid"),
+            const s = e.exec(t);
+            if (null === s) break;
+            const i = s[1],
+              o = s[2],
+              n = d.GetBBCodeParam(i, "steamid"),
               m = {
-                steamID: i ? new o.b(i) : void 0,
-                name: d.GetBBCodeParam(s, "name"),
-                title: d.GetBBCodeParam(s, "title"),
-                company: d.GetBBCodeParam(s, "company"),
-                photo: d.GetBBCodeParam(s, "photo"),
-                bio: n,
+                steamID: n ? new r.b(n) : void 0,
+                name: d.GetBBCodeParam(i, "name"),
+                title: d.GetBBCodeParam(i, "title"),
+                company: d.GetBBCodeParam(i, "company"),
+                photo: d.GetBBCodeParam(i, "photo"),
+                bio: o,
               };
             a.push(m);
           }
           return a;
         }
-        static ParseEventModelPresenters(e, t) {
-          const a = e.GetDescriptionWithFallback(t);
+        static ParseEventModelPresenters(t, e) {
+          const a = t.GetDescriptionWithFallback(e);
           return d.ParseCalendarEventPresentersFromText(a);
         }
-        static ParseEventAppReferencesFromText(e) {
-          const t = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
+        static ParseEventAppReferencesFromText(t) {
+          const e = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
             a = new Set();
           for (;;) {
-            const r = t.exec(e);
-            if (null === r) break;
-            const s = r[1];
-            a.add(Number(s));
+            const s = e.exec(t);
+            if (null === s) break;
+            const i = s[1];
+            a.add(Number(i));
           }
           return a;
         }
-        static ParseEventModelAppReferences(e, t) {
-          const a = e.GetDescriptionWithFallback(t),
-            r = d.ParseEventAppReferencesFromText(a);
-          if (e.jsondata?.referenced_appids)
-            for (const t of e.jsondata.referenced_appids) r.add(t);
-          return r;
+        static ParseEventModelAppReferences(t, e) {
+          const a = t.GetDescriptionWithFallback(e),
+            s = d.ParseEventAppReferencesFromText(a);
+          if (t.jsondata?.referenced_appids)
+            for (const e of t.jsondata.referenced_appids) s.add(e);
+          return s;
         }
-        async BuildBroadcasterSteamIDToActiveEventMap(e) {
-          const t = n.HD.GetTimeNowWithOverride(),
-            a = e.GetCalendarItemsInTimeRange(t - 3600, t);
-          for (const e of a.rgCalendarItems)
-            i.O3.QueueLoadPartnerEvent(e.clanid, e.unique_id);
-          const r = a.rgCalendarItems.map((e) =>
-              i.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                o.b.InitFromClanID(e.clanid),
-                e.unique_id,
+        async BuildBroadcasterSteamIDToActiveEventMap(t) {
+          const e = o.HD.GetTimeNowWithOverride(),
+            a = t.GetCalendarItemsInTimeRange(e - 3600, e);
+          for (const t of a.rgCalendarItems)
+            n.O3.QueueLoadPartnerEvent(t.clanid, t.unique_id);
+          const s = a.rgCalendarItems.map((t) =>
+              n.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                r.b.InitFromClanID(t.clanid),
+                t.unique_id,
                 0,
               ),
             ),
-            s = await Promise.all(r),
+            i = await Promise.all(s),
             d = new Map();
-          for (const e of s)
-            if (e && !(e.endTime && e.endTime < t))
-              for (const t of e.GetBroadcastWhitelistAsSteamIDs())
-                d.has(t) ? d.get(t).push(e) : d.set(t, [e]);
+          for (const t of i)
+            if (t && !(t.endTime && t.endTime < e))
+              for (const e of t.GetBroadcastWhitelistAsSteamIDs())
+                d.has(e) ? d.get(e).push(t) : d.set(e, [t]);
           return d;
         }
-        IsBroadcasterAlreadyBound(e, t) {
-          const a = this.m_mapBroadcasterSteamIDToEvents.get(e),
-            r = a ? a.length : 0;
-          if ((t ? t.length : 0) != r) return !1;
-          for (let e = 0; e < r; e++) if (a[e] != t[e].GID) return !1;
+        IsBroadcasterAlreadyBound(t, e) {
+          const a = this.m_mapBroadcasterSteamIDToEvents.get(t),
+            s = a ? a.length : 0;
+          if ((e ? e.length : 0) != s) return !1;
+          for (let t = 0; t < s; t++) if (a[t] != e[t].GID) return !1;
           return !0;
         }
-        static BuildSteamIDToPresenterMapFromEventList(e, t) {
+        static BuildSteamIDToPresenterMapFromEventList(t, e) {
           let a = new Map();
-          for (const r of e) {
-            if (!r) continue;
-            const e = d.ParseEventModelPresenters(r, t);
-            for (const t of e)
-              t.steamID && a.set(t.steamID.ConvertTo64BitString(), t);
+          for (const s of t) {
+            if (!s) continue;
+            const t = d.ParseEventModelPresenters(s, e);
+            for (const e of t)
+              e.steamID && a.set(e.steamID.ConvertTo64BitString(), e);
           }
           return a;
         }
-        RemoveCachedDataIfNotInMap(e) {
-          const t = new Array();
-          this.m_mapBroadcasterSteamIDToEvents.forEach((a, r) => {
-            e.has(r) || t.push(r);
+        RemoveCachedDataIfNotInMap(t) {
+          const e = new Array();
+          this.m_mapBroadcasterSteamIDToEvents.forEach((a, s) => {
+            t.has(s) || e.push(s);
           }),
-            t.forEach((e) => {
-              this.m_mapBroadcasterSteamIDData.delete(e),
-                this.m_mapBroadcasterSteamIDToEvents.delete(e);
+            e.forEach((t) => {
+              this.m_mapBroadcasterSteamIDData.delete(t),
+                this.m_mapBroadcasterSteamIDToEvents.delete(t);
             });
         }
-        static BuildAppIDRefsForEventList(e, t) {
+        static BuildAppIDRefsForEventList(t, e) {
           const a = new Set();
-          for (const r of e) {
-            d.ParseEventModelAppReferences(r, t).forEach((e) => a.add(e));
+          for (const s of t) {
+            d.ParseEventModelAppReferences(s, e).forEach((t) => a.add(t));
           }
           return Array.from(a);
         }
-        UpdateCachedDataFromEvents(e, t) {
-          e.forEach((e, a) => {
-            if (this.IsBroadcasterAlreadyBound(a, e)) return;
-            const r = {
-              m_mapPresenters: d.BuildSteamIDToPresenterMapFromEventList(e, t),
-              m_rgAppIDs: d.BuildAppIDRefsForEventList(e, t),
+        UpdateCachedDataFromEvents(t, e) {
+          t.forEach((t, a) => {
+            if (this.IsBroadcasterAlreadyBound(a, t)) return;
+            const s = {
+              m_mapPresenters: d.BuildSteamIDToPresenterMapFromEventList(t, e),
+              m_rgAppIDs: d.BuildAppIDRefsForEventList(t, e),
             };
-            this.m_mapBroadcasterSteamIDData.set(a, r),
+            this.m_mapBroadcasterSteamIDData.set(a, s),
               this.m_mapBroadcasterSteamIDToEvents.set(
                 a,
-                e.map((e) => e.GID),
+                t.map((t) => t.GID),
               );
           });
         }
-        async SynchronizeEventsWithBroadcasts(e, t) {
-          const a = await this.BuildBroadcasterSteamIDToActiveEventMap(e);
+        async SynchronizeEventsWithBroadcasts(t, e) {
+          const a = await this.BuildBroadcasterSteamIDToActiveEventMap(t);
           this.RemoveCachedDataIfNotInMap(a),
-            this.UpdateCachedDataFromEvents(a, t);
+            this.UpdateCachedDataFromEvents(a, e);
         }
-        GetPresenterMapForBroadcasterSteamID(e) {
-          return this.m_mapBroadcasterSteamIDData.get(e)?.m_mapPresenters;
+        GetPresenterMapForBroadcasterSteamID(t) {
+          return this.m_mapBroadcasterSteamIDData.get(t)?.m_mapPresenters;
         }
-        GetAppIDListForBroadcasterSteamID(e) {
-          return this.m_mapBroadcasterSteamIDData.get(e)?.m_rgAppIDs;
+        GetAppIDListForBroadcasterSteamID(t) {
+          return this.m_mapBroadcasterSteamIDData.get(t)?.m_rgAppIDs;
         }
       }
-      (0, r.Cg)([s.sH], d.prototype, "m_mapBroadcasterSteamIDData", void 0);
+      (0, s.Cg)([i.sH], d.prototype, "m_mapBroadcasterSteamIDData", void 0);
       const m = new d();
     },
-    68033: (e, t, a) => {
-      a.d(t, { A: () => d, T: () => i });
-      var r = a(30193),
-        s = a(78327),
-        o = a(41735),
-        n = a.n(o);
-      class i extends r.pN {
+    54728: (t, e, a) => {
+      a.d(e, { es: () => N, fK: () => G, a0: () => P, fO: () => E });
+      var s = a(34629),
+        i = a(41735),
+        r = a.n(i),
+        o = a(14947),
+        n = a(3067),
+        d = a(4299);
+      function m(t, e, a) {
+        return [t, e, a];
+      }
+      class l extends Error {}
+      class c extends d.J8 {
+        m_appid;
+        constructor(t) {
+          super(), (this.m_appid = t || 0);
+        }
+        GetAppID() {
+          return this.m_appid;
+        }
+        parseColor(t) {
+          if ("string" != typeof t || !t.match(/^#[0-9a-fA-F]{6}$/))
+            throw new l("expected color string");
+          return [
+            parseInt(t.substring(1, 3), 16),
+            parseInt(t.substring(3, 5), 16),
+            parseInt(t.substring(5, 7), 16),
+          ];
+        }
+        parseString(t) {
+          if ("string" == typeof t) return t;
+          throw new l("expected string");
+        }
+        parseNumber(t) {
+          if ("number" == typeof t) return t;
+          throw new l("expected number");
+        }
+        parseDate(t) {
+          if ("number" == typeof t) return new Date(t);
+          throw new l("expected timestamp");
+        }
+        parseArray(t, e) {
+          let a = [];
+          if ("object" != typeof t || !Array.isArray(t))
+            throw new l("expected array");
+          let s = t.length;
+          for (let i = 0; i < s; ++i)
+            try {
+              a.push(e(t[i]));
+            } catch (t) {
+              throw ((t.message += "\n...while parsing array element " + i), t);
+            }
+          return a;
+        }
+        parseDict(t, e) {
+          let a = new Map();
+          if ("object" != typeof t || Array.isArray(t))
+            throw new l("expected object");
+          for (let s in t)
+            try {
+              a.set(s, e(t[s]));
+            } catch (t) {
+              throw (
+                ((t.message += "\n...while parsing dictionary element " + s), t)
+              );
+            }
+          return a;
+        }
+        parseBracket(t) {
+          let e = {
+            name: this.parseString(t.name),
+            start: this.parseDate(t.start),
+            color: [255, 0, 255],
+          };
+          return (
+            "params" in t &&
+              (e.params = this.parseDict(
+                t.params,
+                this.parseString.bind(this),
+              )),
+            "end" in t && (e.end = this.parseDate(t.end)),
+            "color" in t && (e.color = this.parseColor(t.color)),
+            e
+          );
+        }
+        parseMarker(t) {
+          let e = { time: this.parseDate(t.time), color: [0, 255, 255] };
+          return (
+            "name" in t && (e.name = this.parseString(t.name)),
+            "params" in t &&
+              (e.params = this.parseDict(
+                t.params,
+                this.parseString.bind(this),
+              )),
+            "color" in t && (e.color = this.parseColor(t.color)),
+            e
+          );
+        }
+        parseSoundTrack(t) {
+          let e = {};
+          return (
+            "song_title" in t &&
+              (e.song_title = this.parseString(t.song_title)),
+            "appid" in t && (e.appid = this.parseNumber(t.appid)),
+            "song_index" in t &&
+              (e.song_index = this.parseNumber(t.song_index)),
+            e
+          );
+        }
+        parseBroadcastGameData(t) {
+          let e = { appid: 0, brackets: [], markers: [] };
+          return (
+            "appid" in t && (e.appid = this.parseNumber(t.appid)),
+            "brackets" in t &&
+              (e.brackets = this.parseArray(
+                t.brackets,
+                this.parseBracket.bind(this),
+              )),
+            "markers" in t &&
+              (e.markers = this.parseArray(
+                t.markers,
+                this.parseMarker.bind(this),
+              )),
+            "soundtrack" in t &&
+              (e.soundtrack = this.parseSoundTrack(t.soundtrack)),
+            e
+          );
+        }
+        convertTime(t, e) {
+          return t - e / 1e3;
+        }
+        UpdateMarkers(t, e) {
+          let a = [],
+            s = [];
+          for (const i of t)
+            i.persistent
+              ? (s.length > 0 &&
+                  (s[s.length - 1].nTimeEnd = this.convertTime(i.Timestamp, e)),
+                i.name.length > 0 &&
+                  s.push({
+                    strTemplateName: i.name,
+                    nTimeStart: this.convertTime(i.Timestamp, e),
+                    nTimeEnd: -1,
+                    color: m(i.color_r, i.color_g, i.color_b),
+                  }))
+              : a.push({
+                  strTemplateName: i.name,
+                  nTime: this.convertTime(i.Timestamp, e),
+                  color: m(i.color_r, i.color_g, i.color_b),
+                });
+          return { rgMarkers: a, rgSegments: s };
+        }
+        UpdateRegions(t) {
+          let e = [];
+          for (const a of t)
+            e.push({
+              strTemplateName: a.name,
+              min: { x: a.min_x, y: a.min_y },
+              max: { x: a.max_x, y: a.max_y },
+              behavior: a.behavior,
+            });
+          return e;
+        }
+        UpdateSoundtrack(t, e) {}
+      }
+      var p = a(36064),
+        h = a(47143),
+        _ = a(25489),
+        u = a(78327),
+        S = a(6419),
+        g = a(81952),
+        b = a(36586),
+        C = a(6144),
+        y = a(37085);
+      class D {
+        m_elVideo = null;
+        m_peerConnection = null;
+        m_strBroadcastSteamID = void 0;
+        m_ulWebRTCSessionID = void 0;
+        m_schCandidateTimer = new C.LU();
+        m_nHostCandidateGeneration = void 0;
+        m_nCandidateUpdateIntervalMS = void 0;
+        m_listeners = new C.Ji();
+        m_bFirstPlay = !0;
+        m_bStatsViewVisible = !1;
+        m_schCaptureDisplayStatsTrigger = new C.LU();
+        m_stats = new g._L();
+        constructor(t) {
+          (0, o.Gn)(this), (this.m_elVideo = t);
+        }
+        async PlayMPD(t, e, a) {}
+        async PlayWebRTC(t, e, a, s, i) {
+          (this.m_strBroadcastSteamID = t),
+            (this.m_ulWebRTCSessionID = a),
+            (this.m_nHostCandidateGeneration = 0),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "pause",
+              this.OnVideoPause,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "resize",
+              this.OnVideoResize,
+            );
+          let o = {
+            iceServers: [
+              { urls: ["stun:" + s] },
+              { urls: ["turn:" + s], username: e, credential: a },
+            ],
+            iceTransportPolicy: "relay",
+          };
+          (this.m_peerConnection = new RTCPeerConnection(o)),
+            (this.m_peerConnection.oniceconnectionstatechange = ((t) => {
+              this.m_peerConnection &&
+                (console.log(
+                  "BroadcastWebRTC: ICE connection state changed to " +
+                    this.m_peerConnection.iceConnectionState,
+                ),
+                "failed" === this.m_peerConnection.iceConnectionState
+                  ? this.OnWebRTCConnectionFailed()
+                  : "disconnected" ===
+                      this.m_peerConnection.iceConnectionState &&
+                    this.OnWebRTCConnectionRetry());
+            }).bind(this)),
+            (this.m_peerConnection.onicecandidate = ((t) => {
+              if (t.candidate) {
+                const e = new FormData();
+                e.append("broadcaststeamid", this.m_strBroadcastSteamID),
+                  e.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+                  e.append("sdp_mid", t.candidate.sdpMid),
+                  e.append(
+                    "sdp_mline_index",
+                    String(t.candidate.sdpMLineIndex),
+                  ),
+                  e.append("candidate", t.candidate.candidate),
+                  r()
+                    .post(
+                      `${u.TS.CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate`,
+                      e,
+                    )
+                    .then((t) => {
+                      const e = t.data;
+                      (e.success && e.success == y.R) ||
+                        console.log(
+                          "Failed to add a WebRTC session ICE candidate: " +
+                            String(e.success),
+                        );
+                    })
+                    .catch((t) =>
+                      console.log(
+                        "Failed to add a WebRTC session ICE candidate" + t,
+                      ),
+                    );
+              }
+            }).bind(this)),
+            (this.m_peerConnection.ontrack = ((t) => {
+              "video" === t.track.kind &&
+                ((this.m_elVideo.src = null),
+                (this.m_elVideo.srcObject = t.streams[0]),
+                this.Play());
+            }).bind(this)),
+            this.m_peerConnection
+              .setRemoteDescription({ type: "offer", sdp: i })
+              .then(async () => {
+                await this.m_peerConnection.setLocalDescription(
+                  await this.m_peerConnection.createAnswer(),
+                );
+                const t = new FormData();
+                t.append("broadcaststeamid", this.m_strBroadcastSteamID),
+                  t.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+                  t.append(
+                    "answer",
+                    this.m_peerConnection.localDescription.sdp,
+                  );
+                try {
+                  await r()
+                    .post(
+                      `${u.TS.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
+                      t,
+                    )
+                    .then((t) => {
+                      const e = t.data;
+                      if (!e.success || e.success != y.R)
+                        throw new Error(String(e.success));
+                    });
+                } catch (t) {
+                  return (
+                    console.log(
+                      "Failed to set the WebRTC session answer: " + t,
+                    ),
+                    void this.OnWebRTCConnectionRetry()
+                  );
+                }
+                (this.m_nCandidateUpdateIntervalMS = 250),
+                  this.m_schCandidateTimer.Schedule(
+                    this.m_nCandidateUpdateIntervalMS,
+                    () => this.GetHostCandidates(),
+                  );
+              });
+        }
+        async GetHostCandidates() {
+          const t = new FormData();
+          t.append("broadcaststeamid", this.m_strBroadcastSteamID),
+            t.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+            t.append(
+              "candidate_generation",
+              String(this.m_nHostCandidateGeneration),
+            );
+          try {
+            await r()
+              .post(
+                `${u.TS.CHAT_BASE_URL}broadcast/getbroadcastwebrtccandidates`,
+                t,
+              )
+              .then((t) => {
+                const e = t.data,
+                  a = e.data;
+                if (!e.success || e.success != y.R)
+                  throw new Error(String(e.success));
+                a.candidate_generation > this.m_nHostCandidateGeneration
+                  ? (a.candidates.forEach((t) => {
+                      const e = new RTCIceCandidate({
+                        sdpMid: t.sdp_mid,
+                        sdpMLineIndex: t.sdp_mline_index,
+                        candidate: t.candidate,
+                      });
+                      this.m_peerConnection
+                        .addIceCandidate(e)
+                        .catch((t) => console.error(t));
+                    }),
+                    (this.m_nHostCandidateGeneration = a.candidate_generation))
+                  : this.m_nHostCandidateGeneration > 0 &&
+                    (this.m_nCandidateUpdateIntervalMS *= 2);
+              });
+          } catch (t) {
+            return (
+              console.log("Failed to get WebRTC session ICE candidates" + t),
+              void this.OnWebRTCConnectionRetry()
+            );
+          }
+          this.m_schCandidateTimer.Schedule(
+            this.m_nCandidateUpdateIntervalMS,
+            () => this.GetHostCandidates(),
+          );
+        }
+        DispatchEvent(t, e = null) {
+          let a = new CustomEvent(t, {
+            cancelable: !0,
+            bubbles: !0,
+            detail: e,
+          });
+          this.m_elVideo.dispatchEvent(a);
+        }
+        OnWebRTCConnectionRetry() {
+          this.DispatchEvent("valve-webrtcretry");
+        }
+        OnWebRTCConnectionFailed() {
+          this.DispatchEvent("valve-webrtcfailed");
+        }
+        Close() {
+          this.m_listeners.Unregister(),
+            this.m_schCandidateTimer.Cancel(),
+            this.m_schCaptureDisplayStatsTrigger.Cancel(),
+            this.m_peerConnection &&
+              (this.m_peerConnection.close(), (this.m_peerConnection = null)),
+            this.m_elVideo.pause(),
+            (this.m_elVideo.srcObject = null),
+            this.m_stats &&
+              (this.m_stats.GetFPSMonitor().Close(), (this.m_stats = null)),
+            (this.m_bFirstPlay = !0);
+        }
+        IsBuffering() {
+          return !1;
+        }
+        GetCurrentPlayTime() {
+          return 0;
+        }
+        GetLiveContentStartTime() {
+          return null;
+        }
+        GetAvailableVideoStartTime() {
+          return 0;
+        }
+        GetBufferedLiveEdgeTime() {
+          return 0;
+        }
+        IsPaused() {
+          return this.m_elVideo.paused;
+        }
+        async Play() {
+          const t = this.m_bFirstPlay;
+          this.m_bFirstPlay = !1;
+          let e = !1;
+          const a = () => {
+            (e = !0),
+              this.m_stats
+                .GetFPSMonitor()
+                .StartTracking(() =>
+                  this.m_stats.ExtractFrameInfo(this.m_elVideo),
+                );
+          };
+          try {
+            await this.m_elVideo.play(), a();
+          } catch (t) {
+            t.name;
+          }
+          !e && t && this.DispatchEvent("valve-userinputneeded");
+        }
+        Pause() {
+          this.m_elVideo.pause();
+        }
+        CanSeek() {
+          return !1;
+        }
+        SeekAndPlay(t) {
+          return this.Play(), 0;
+        }
+        Seek(t) {
+          return 0;
+        }
+        JumpTime(t) {
+          return 0;
+        }
+        IsMuted() {
+          return this.m_elVideo.muted;
+        }
+        SetMuted(t) {
+          this.m_elVideo.muted = t;
+        }
+        SetVolume(t) {
+          (t = _.OQ(t, 0, 1)), (this.m_elVideo.volume = t);
+        }
+        GetVolume() {
+          return this.m_elVideo.volume;
+        }
+        GetDASHPlayerStats() {
+          return this.m_stats;
+        }
+        SetStatsViewIsVisible(t) {
+          t && !this.m_bStatsViewVisible
+            ? (this.CaptureStatsForDisplay(),
+              this.m_schCaptureDisplayStatsTrigger.Schedule(
+                250,
+                this.CaptureStatsForDisplay,
+              ))
+            : !t &&
+              this.m_bStatsViewVisible &&
+              this.m_schCaptureDisplayStatsTrigger.Cancel(),
+            (this.m_bStatsViewVisible = t);
+        }
+        CaptureStatsForDisplay() {
+          this.m_stats.SetHTMLVideoPlayerDisplay(
+            this.m_elVideo.videoWidth,
+            this.m_elVideo.videoHeight,
+            this.m_elVideo.clientWidth,
+            this.m_elVideo.clientHeight,
+          ),
+            this.m_schCaptureDisplayStatsTrigger.Schedule(
+              250,
+              this.CaptureStatsForDisplay,
+            );
+        }
+        OnVideoPause(t) {
+          this.m_stats.GetFPSMonitor().Close();
+        }
+        OnVideoResize(t) {
+          this.m_stats.GetFPSMonitor().SetWindowResized();
+        }
+        GetVideoRepresentations() {
+          let t = [];
+          return t.push({ id: b.Y, displayName: "Auto", selected: !0 }), t;
+        }
+        SetVideoRepresentation(t) {}
+        IsLiveContent() {
+          return !0;
+        }
+        BHasTimedText() {
+          return !1;
+        }
+      }
+      (0, s.Cg)([S.o], D.prototype, "PlayWebRTC", null),
+        (0, s.Cg)([o.XI.bound], D.prototype, "CaptureStatsForDisplay", null),
+        (0, s.Cg)([S.o], D.prototype, "OnVideoPause", null),
+        (0, s.Cg)([S.o], D.prototype, "OnVideoResize", null);
+      var B = a(22837),
+        I = a(55815),
+        f = a(62490),
+        A = a(81393),
+        v = a(61859),
+        w = a(68797),
+        T = a(6469),
+        V = a(43882),
+        k = a(66703);
+      const E = 7;
+      var G, P;
+      !(function (t) {
+        (t[(t.None = 0)] = "None"),
+          (t[(t.Unlocking = 1)] = "Unlocking"),
+          (t[(t.Loading = 2)] = "Loading"),
+          (t[(t.Ready = 3)] = "Ready"),
+          (t[(t.Error = 4)] = "Error");
+      })(G || (G = {}));
+      class R {
+        m_rtUnlockTime = 0;
+        m_schUnlockTimeout = new C.LU();
+        m_broadcast;
+        m_video;
+        UnlockH264(t, e) {
+          this.BCanUnlockH264()
+            ? (t.SetState(G.Unlocking, ""),
+              console.log("Unlocking H.264 for broadcast video playback"),
+              this.RequestUnlockH264(),
+              (this.m_broadcast = t),
+              (this.m_video = e),
+              (this.m_rtUnlockTime = Date.now()),
+              this.m_schUnlockTimeout.Schedule(100, () =>
+                this.CheckUnlockState(),
+              ))
+            : t.SetState(G.Error, (0, v.we)("#BroadcastWatch_MinBrowser"));
+        }
+        BCanUnlockH264() {
+          return (0, k.Dp)("RemotePlay.UnlockH264")
+            ? (console.log("Client supports direct H.264 unlock"), !0)
+            : (0, k.Dp)("BrowserView.PostMessageToParent")
+              ? (console.log("Client supports browserview H.264 unlock"), !0)
+              : (console.log("Client does not support H.264 unlock"), !1);
+        }
+        RequestUnlockH264() {
+          (0, k.Dp)("RemotePlay.UnlockH264")
+            ? (console.log("Requesting direct H.264 unlock"),
+              SteamClient.RemotePlay.UnlockH264())
+            : (0, k.Dp)("BrowserView.PostMessageToParent")
+              ? (console.log("Requesting browserview unlock"),
+                SteamClient.BrowserView.PostMessageToParent(
+                  "UnlockH264Request",
+                  "CUnlockH264Helper",
+                ))
+              : console.log(
+                  "Failed to request H.264 unlock: no method supported",
+                );
+        }
+        CheckUnlockState() {
+          if (this.m_broadcast.m_eWatchState != G.Unlocking) return;
+          if ((0, p.Mc)() || (0, p.aM)())
+            return (
+              console.log("Unlocking H.264 successful"),
+              this.m_broadcast.SetState(G.None, ""),
+              void this.m_video.Restart()
+            );
+          Date.now() - this.m_rtUnlockTime > 6e3
+            ? (console.log(
+                "Unlocking H.264 timed out (Steam client or servers offline?)",
+              ),
+              this.m_broadcast.SetState(
+                G.Error,
+                (0, v.we)("#BroadcastWatch_MinBrowser"),
+              ))
+            : this.m_schUnlockTimeout.Schedule(100, () =>
+                this.CheckUnlockState(),
+              );
+        }
+      }
+      class U {
+        constructor() {
+          (0, o.Gn)(this);
+        }
+        m_steamIDBroadcast = "";
+        m_ulBroadcastID = "";
+        m_ulViewerToken = "";
+        m_strCDNAuthUrlParameters = void 0;
+        m_bWebRTC = !1;
+        m_data;
+        m_eWatchState = G.None;
+        m_strStateDescription = "";
+        m_rgVideos = [];
+        m_schManifestTimeout = new C.LU();
+        m_schHeartbeatTimeout = new C.LU();
+        SetState(t, e = "") {
+          (this.m_eWatchState = t),
+            (this.m_strStateDescription = e),
+            t == G.Error && console.log(this.m_strStateDescription);
+        }
+      }
+      (0, s.Cg)([o.sH], U.prototype, "m_ulBroadcastID", void 0),
+        (0, s.Cg)([o.sH], U.prototype, "m_eWatchState", void 0),
+        (0, s.Cg)([o.sH], U.prototype, "m_strStateDescription", void 0),
+        (0, s.Cg)([o.XI], U.prototype, "SetState", null);
+      class H {
+        m_steamIDBroadcast = "";
+        m_bInitialized = !1;
+        m_strTitle = "";
+        m_strAppId = "" + E;
+        m_nAppID = E;
+        m_strAppTitle = "";
+        m_strThumbnailUrl = "";
+        m_nViewerCount = 0;
+        m_bIsOnline = !1;
+        m_schUpdateTimeout = new C.LU();
+        m_nRefCount = 0;
+        constructor(t) {
+          (0, o.Gn)(this), (this.m_steamIDBroadcast = t);
+        }
+      }
+      (0, s.Cg)([o.sH], H.prototype, "m_bInitialized", void 0),
+        (0, s.Cg)([o.sH], H.prototype, "m_strTitle", void 0),
+        (0, s.Cg)([o.sH], H.prototype, "m_strAppId", void 0),
+        (0, s.Cg)([o.sH], H.prototype, "m_nAppID", void 0),
+        (0, s.Cg)([o.sH], H.prototype, "m_strAppTitle", void 0),
+        (0, s.Cg)([o.sH], H.prototype, "m_strThumbnailUrl", void 0),
+        (0, s.Cg)([o.sH], H.prototype, "m_nViewerCount", void 0),
+        (0, s.Cg)([o.sH], H.prototype, "m_bIsOnline", void 0);
+      class O {
+        constructor() {
+          (0, o.Gn)(this);
+        }
+        m_eWatchState = G.None;
+        m_strStateDescription = "";
+        m_rgVideos = [];
+        SetState(t, e = "") {
+          (this.m_eWatchState = t),
+            (this.m_strStateDescription = e),
+            t == G.Error && console.log(this.m_strStateDescription);
+        }
+      }
+      (0, s.Cg)([o.sH], O.prototype, "m_eWatchState", void 0),
+        (0, s.Cg)([o.sH], O.prototype, "m_strStateDescription", void 0),
+        (0, s.Cg)([o.XI], O.prototype, "SetState", null);
+      class L extends O {
+        m_clipID;
+        m_data;
+      }
+      class M extends O {
+        m_nAppIDVOD;
+        m_manifestURL;
+      }
+      class F {
+        m_mapBroadcasts = new Map();
+        m_mapClips = new Map();
+        m_mapVODs = new Map();
+        m_activeVideo = null;
+        m_broadcastSettings = { nVolume: 1, bMuted: !1, ulViewerToken: "0" };
+        m_schSaveSettings = new C.LU();
+        m_broadcastInfos = {};
+        constructor() {
+          (0, o.Gn)(this), this.LoadBroadcastSettings();
+        }
+        GetBroadcastState(t) {
+          if (t.IsBroadcastClip()) {
+            let e = this.m_mapClips.get(t.GetBroadcastClipID());
+            return e ? e.m_eWatchState : G.None;
+          }
+          if (t.IsBroadcastVOD()) {
+            const e = this.m_mapVODs.get(t.GetBroadcastAppIDVOD());
+            return e ? e.m_eWatchState : G.None;
+          }
+          {
+            let e = this.m_mapBroadcasts.get(t.GetBroadcastSteamID());
+            return e ? e.m_eWatchState : G.None;
+          }
+        }
+        GetBroadcastStateDescription(t) {
+          if (t.IsBroadcastClip()) {
+            let e = this.m_mapClips.get(t.GetBroadcastClipID());
+            return e ? e.m_strStateDescription : "";
+          }
+          if (t.IsBroadcastVOD()) {
+            const e = this.m_mapVODs.get(t.GetBroadcastAppIDVOD());
+            return e ? e.m_strStateDescription : "";
+          }
+          {
+            let e = this.m_mapBroadcasts.get(t.GetBroadcastSteamID());
+            return e ? e.m_strStateDescription : "";
+          }
+        }
+        CreateBroadcastVideo(t, e, a, s) {
+          let i = this.GetOrCreateBroadcast(e),
+            { nVolume: r, bMuted: o } = this.m_broadcastSettings,
+            n = new W(t, r, o, a);
+          if (
+            (n.SetBroadcastSteamID(e),
+            i.m_rgVideos.push(n),
+            (i.m_bWebRTC = s),
+            !(0, p.Mc)() && !(0, p.aM)())
+          ) {
+            return new R().UnlockH264(i, n), n;
+          }
+          return n;
+        }
+        CreateClipVideo(t, e, a) {
+          let s = this.GetOrCreateClip(e),
+            { nVolume: i, bMuted: r } = this.m_broadcastSettings,
+            o = new W(t, i, r, a);
+          if (
+            (o.SetBroadcastClipID(e),
+            s.m_rgVideos.push(o),
+            !(0, p.Mc)() && !(0, p.aM)())
+          ) {
+            return new R().UnlockH264(s, o), o;
+          }
+          return o;
+        }
+        CreateVODVideo(t, e, a) {
+          let s = this.GetOrCreateVOD(e),
+            { nVolume: i, bMuted: r } = this.m_broadcastSettings,
+            o = new W(t, i, r, a);
+          if (
+            (o.SetBroadcastAppIDVOD(e),
+            s.m_rgVideos.push(o),
+            !(0, p.Mc)() && !(0, p.aM)())
+          ) {
+            return new R().UnlockH264(s, o), o;
+          }
+          return o;
+        }
+        StartVideo(t) {
+          if (t.IsBroadcastClip()) {
+            console.log(`Starting clip for ${t.GetBroadcastClipID()}`);
+            let e = this.m_mapClips.get(t.GetBroadcastClipID());
+            if (!e) return;
+            this.SetActiveVideo(t),
+              e.m_eWatchState == G.None
+                ? this.GetClipManifest(e, t.GetWatchLocation())
+                : e.m_eWatchState == G.Ready && t.StartClip(e);
+          } else if (t.IsBroadcastVOD()) {
+            console.log(`Starting VOD for ${t.GetBroadcastAppIDVOD()}`);
+            let e = this.m_mapVODs.get(t.GetBroadcastAppIDVOD());
+            if (!e) return;
+            this.SetActiveVideo(t),
+              e.m_eWatchState == G.None
+                ? this.GetVODManifest(e, t.GetWatchLocation())
+                : e.m_eWatchState == G.Ready && t.StartVOD(e);
+          } else {
+            let e = this.m_mapBroadcasts.get(t.GetBroadcastSteamID());
+            if (!e) return;
+            this.SetActiveVideo(t),
+              e.m_eWatchState == G.None
+                ? this.GetBroadcastManifest(e, t.GetWatchLocation())
+                : e.m_eWatchState == G.Ready && t.StartBroadcast(e);
+          }
+        }
+        SetActiveVideo(t) {
+          this.m_mapBroadcasts.forEach((e) => {
+            for (let a of e.m_rgVideos) a != t && a.StopPlaybackTillUserInput();
+          }),
+            this.m_mapClips.forEach((e) => {
+              for (let a of e.m_rgVideos)
+                a != t && a.StopPlaybackTillUserInput();
+            }),
+            (this.m_activeVideo = t);
+        }
+        PauseAllVideo() {
+          this.m_mapBroadcasts.forEach((t) => {
+            for (let e of t.m_rgVideos) e.StopPlaybackTillUserInput();
+          });
+        }
+        async StopVideo(t) {
+          let e = t.GetBroadcastSteamID(),
+            a = this.m_mapBroadcasts.get(e);
+          t.Stop(),
+            a &&
+              (a.m_ulBroadcastID &&
+                (async function (t, e, a) {
+                  if (!e) return;
+                  let s = new FormData();
+                  s.append("steamid", t),
+                    s.append("broadcastid", e),
+                    s.append("viewertoken", a);
+                  try {
+                    await r().post(
+                      u.TS.CHAT_BASE_URL + "broadcast/stopwatching",
+                      s,
+                    );
+                  } catch {}
+                })(
+                  e,
+                  a.m_ulBroadcastID,
+                  this.m_broadcastSettings.ulViewerToken,
+                ),
+              f.Wp(a.m_rgVideos, (e) => e == t),
+              this.RemoveBroadcastIfUnused(a));
+        }
+        StartInfo(t) {
+          const e = this.GetOrCreateBroadcastInfo(t);
+          return (
+            e.m_nRefCount++,
+            (e.m_bInitialized && e.m_schUpdateTimeout.IsScheduled()) ||
+              this.LoadBroadcastInfo(e),
+            e
+          );
+        }
+        StopInfo(t) {
+          t.m_nRefCount--;
+        }
+        GetOrCreateBroadcastInfo(t) {
+          if (!t) {
+            return new H("");
+          }
+          if (!this.m_broadcastInfos[t]) {
+            const e = (0, o.sH)(new H(t));
+            this.m_broadcastInfos[t] = e;
+          }
+          return this.m_broadcastInfos[t];
+        }
+        GetOrCreateBroadcast(t) {
+          let e = this.m_mapBroadcasts.get(t);
+          return (
+            e ||
+            ((e = new U()),
+            (e.m_steamIDBroadcast = t),
+            (e.m_eWatchState = G.None),
+            this.m_mapBroadcasts.set(t, e),
+            e)
+          );
+        }
+        GetBroadcast(t) {
+          return this.m_mapBroadcasts.get(t);
+        }
+        GetBroadcastClip(t) {
+          return this.m_mapClips.get(t);
+        }
+        GetBroadcastVOD(t) {
+          return this.m_mapVODs.get(t);
+        }
+        RemoveBroadcastIfUnused(t) {
+          t.m_rgVideos.length ||
+            (t.m_schHeartbeatTimeout.Cancel(),
+            t.m_schManifestTimeout.Cancel(),
+            this.m_mapBroadcasts.delete(t.m_steamIDBroadcast));
+        }
+        GetOrCreateClip(t) {
+          let e = this.m_mapClips.get(t);
+          return (
+            e ||
+            ((e = new L()),
+            (e.m_clipID = t),
+            (e.m_eWatchState = G.None),
+            this.m_mapClips.set(t, e),
+            e)
+          );
+        }
+        GetOrCreateVOD(t) {
+          let e = this.m_mapVODs.get(t);
+          return (
+            e ||
+            ((e = new M()),
+            (e.m_nAppIDVOD = t),
+            (e.m_eWatchState = G.None),
+            this.m_mapVODs.set(t, e),
+            e)
+          );
+        }
+        async LoadBroadcastInfo(t) {
+          let e = "0",
+            a = this.m_mapBroadcasts.get(t.m_steamIDBroadcast);
+          if ((a && (e = a.m_ulBroadcastID), 0 == t.m_nRefCount)) return;
+          const s = {
+            steamid: t.m_steamIDBroadcast,
+            broadcastid: e,
+            location:
+              a &&
+              a.m_rgVideos &&
+              a.m_rgVideos[0] &&
+              a.m_rgVideos[0].GetWatchLocation(),
+          };
+          try {
+            const e = await r().get(
+              `${u.TS.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
+              { params: s },
+            );
+            if (!e || !e.data || !e.data.success || e.data.success != y.R)
+              return void (t.m_bInitialized = !0);
+            const a = e.data;
+            (0, o.h5)(() => {
+              (t.m_bInitialized = !0),
+                (t.m_strTitle = a.title),
+                (t.m_strAppId = a.appid),
+                (t.m_nAppID = Number.parseInt(a.appid)),
+                (t.m_strAppTitle = a.app_title),
+                (t.m_strThumbnailUrl = a.thumbnail_url),
+                (t.m_nViewerCount = a.viewer_count),
+                (t.m_bIsOnline = a.is_online),
+                !t.m_strTitle &&
+                  n.td &&
+                  ((t.m_strTitle = n.td.name),
+                  (t.m_strAppTitle = n.td.appName || n.td.name));
+              const e = a.update_interval;
+              e &&
+                "number" == typeof e &&
+                t.m_schUpdateTimeout.Schedule(1e3 * e, () =>
+                  this.LoadBroadcastInfo(t),
+                );
+            });
+          } catch (t) {
+            console.error(t);
+          }
+        }
+        DelayedGetBroadcastManifest(t, e, a = Date.now()) {
+          t.m_schManifestTimeout.Schedule(5e3, () =>
+            this.GetBroadcastManifest(t, e, a),
+          );
+        }
+        async GetBroadcastManifest(t, e, a = Date.now()) {
+          t.SetState(G.Loading, "");
+          let s = {
+              steamid: t.m_steamIDBroadcast,
+              broadcastid: 0,
+              viewertoken: this.m_broadcastSettings.ulViewerToken,
+              watchlocation: e,
+              sessionid: u.TS.SESSIONID,
+              is_webrtc: t.m_bWebRTC,
+            },
+            i = null;
+          try {
+            i = await r().get(
+              u.TS.CHAT_BASE_URL + "broadcast/getbroadcastmpd/",
+              { params: s, withCredentials: !0 },
+            );
+          } catch (t) {
+            let e = (0, w.H)(t);
+            console.error(
+              "Failed to get broadcast manifest!" + e.strErrorMsg,
+              e,
+            );
+          }
+          if (!i || 200 != i.status)
+            return void t.SetState(
+              G.Error,
+              (0, v.we)("#BroadcastWatch_RequestFailed"),
+            );
+          let o = i.data;
+          o.viewertoken && this.SetViewerToken(o.viewertoken);
+          let n = o.success;
+          if ("ready" == n)
+            t.SetState(G.Ready),
+              (t.m_ulBroadcastID = o.broadcastid),
+              (t.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
+              (t.m_strCDNAuthUrlParameters = o.cdn_auth_url_parameters),
+              (t.m_bWebRTC = o.is_webrtc),
+              (t.m_data = o),
+              this.LoadBroadcast(t),
+              setTimeout(() => {
+                t.m_schHeartbeatTimeout.Schedule(
+                  1e3 * t.m_data.heartbeat_interval,
+                  () => this.HeartbeatBroadcast(t),
+                );
+              }, 3e4 * Math.random());
+          else if ("waiting" == n) {
+            t.SetState(
+              G.Loading,
+              (0, v.we)("#BroadcastWatch_WaitingForResponse"),
+            );
+            let s = Date.now() - a;
+            if (s > 6e4)
+              return void t.SetState(
+                G.Error,
+                (0, v.we)("#BroadcastWatch_NotAvailable"),
+              );
+            let i = s > 3e4 ? o.retry : 5e3;
+            t.m_schManifestTimeout.Schedule(i, () =>
+              this.GetBroadcastManifest(t, e, a),
+            );
+          } else
+            "waiting_for_start" == n
+              ? (t.SetState(
+                  G.Loading,
+                  (0, v.we)("#BroadcastWatch_WaitingForStart"),
+                ),
+                t.m_schManifestTimeout.Schedule(o.retry, () =>
+                  this.GetBroadcastManifest(t, e, a),
+                ))
+              : "waiting_for_reconnect" == n
+                ? (t.SetState(
+                    G.Loading,
+                    (0, v.we)("#BroadcastWatch_WaitingForReconnect"),
+                  ),
+                  t.m_schManifestTimeout.Schedule(o.retry, () =>
+                    this.GetBroadcastManifest(t, e, a),
+                  ))
+                : "end" == n
+                  ? t.SetState(
+                      G.Error,
+                      (0, v.we)("#BroadcastWatch_NotAvailable"),
+                    )
+                  : "too_many_broadcasts" == n
+                    ? t.SetState(
+                        G.Error,
+                        (0, v.we)("#BroadcastWatch_TooManyBroadcasts"),
+                      )
+                    : "system_not_supported" == n
+                      ? t.SetState(
+                          G.Error,
+                          (0, v.we)("#BroadcastWatch_SystemNotSupported"),
+                        )
+                      : "user_restricted" == n
+                        ? t.SetState(
+                            G.Error,
+                            (0, v.we)("#BroadcastWatch_UserRestricted"),
+                          )
+                        : "poor_upload_quality" == n
+                          ? t.SetState(
+                              G.Error,
+                              (0, v.we)("#BroadcastWatch_PoorUploadQuality"),
+                            )
+                          : "request_failed" == n
+                            ? t.SetState(
+                                G.Error,
+                                (0, v.we)("#BroadcastWatch_RequestFailed"),
+                              )
+                            : "too_many_viewers" == n
+                              ? t.SetState(
+                                  G.Error,
+                                  (0, v.we)("#BroadcastWatch_TooManyViewers"),
+                                )
+                              : t.SetState(
+                                  G.Error,
+                                  (0, v.we)("#BroadcastWatch_NotAvailable"),
+                                );
+        }
+        async GetClipManifest(t, e) {
+          t.SetState(G.Loading, "");
+          let a = {
+              clipid: t.m_clipID,
+              watchlocation: e,
+              sessionid: u.TS.SESSIONID,
+            },
+            s = null;
+          try {
+            s = await r().get(u.TS.CHAT_BASE_URL + "broadcast/getclipdetails", {
+              params: a,
+              withCredentials: !0,
+            });
+          } catch (t) {
+            console.error(t), console.log("Failed to get clip manifest!");
+          }
+          if (!s || 200 != s.status)
+            return void t.SetState(
+              G.Error,
+              (0, v.we)("#BroadcastWatch_RequestFailed"),
+            );
+          let i = s.data;
+          i.success == y.R
+            ? (t.SetState(G.Ready), (t.m_data = i), this.LoadClip(t))
+            : t.SetState(G.Error, (0, v.we)("#BroadcastWatch_RequestFailed"));
+        }
+        async GetVODManifest(t, e) {
+          t.SetState(G.Loading, "");
+          let a = await T.K.Get().LoadVODForAppID(t.m_nAppIDVOD);
+          a
+            ? (t.SetState(G.Ready),
+              (t.m_manifestURL = a.video_url),
+              this.LoadVOD(t))
+            : t.SetState(G.Error, (0, v.we)("#BroadcastWatch_RequestFailed"));
+        }
+        async HeartbeatBroadcast(t) {
+          let e = new FormData();
+          e.append("steamid", t.m_steamIDBroadcast),
+            e.append("broadcastid", t.m_ulBroadcastID),
+            e.append("viewertoken", this.m_broadcastSettings.ulViewerToken),
+            r().post(u.TS.CHAT_BASE_URL + "broadcast/heartbeat/", e),
+            t.m_schHeartbeatTimeout.Schedule(
+              1e3 * t.m_data.heartbeat_interval,
+              () => this.HeartbeatBroadcast(t),
+            );
+        }
+        LoadBroadcast(t) {
+          t.m_rgVideos.findIndex((t) => t == this.m_activeVideo) >= 0 &&
+            this.m_activeVideo.StartBroadcast(t);
+        }
+        LoadClip(t) {
+          t.m_rgVideos.findIndex((t) => t == this.m_activeVideo) >= 0 &&
+            this.m_activeVideo.StartClip(t);
+        }
+        LoadVOD(t) {
+          t.m_rgVideos.findIndex((t) => t == this.m_activeVideo) >= 0 &&
+            this.m_activeVideo.StartVOD(t);
+        }
+        BroadcastDownloadFailed(t, e = !0, a = h.N_.Invalid) {
+          t.Stop();
+          let s = this.m_mapBroadcasts.get(t.GetBroadcastSteamID());
+          s &&
+            s.m_eWatchState != G.Loading &&
+            (s.m_bWebRTC && e && (s.m_bWebRTC = !1),
+            a == h.N_.StreamGone
+              ? this.DelayedGetBroadcastManifest(s, t.GetWatchLocation())
+              : this.GetBroadcastManifest(s, t.GetWatchLocation()));
+        }
+        UserInputClickVideo(t) {
+          if (
+            this.m_activeVideo != t &&
+            (this.PauseAllVideo(),
+            (this.m_activeVideo = t),
+            !t.IsBroadcastClip() && !t.IsBroadcastVOD())
+          ) {
+            let e = this.m_mapBroadcasts.get(t.GetBroadcastSteamID());
+            this.GetBroadcastManifest(e, t.GetWatchLocation());
+          }
+          t.UserInputClick();
+        }
+        LoadBroadcastSettings() {
+          if (!window.localStorage) return;
+          let t = window.localStorage.getItem("broadcastSettings");
+          if (!t) return;
+          let e = JSON.parse(t);
+          if (!e) return;
+          Object.assign(this.m_broadcastSettings, e);
+          let a = this.m_broadcastSettings;
+          (a.bMuted = !!a.bMuted),
+            (a.nVolume = _.OQ(a.nVolume, 0, 1)),
+            "string" != typeof a.ulViewerToken && (a.ulViewerToken = "0");
+        }
+        SaveBroadcastSettings() {
+          window.localStorage &&
+            this.m_schSaveSettings.Schedule(1e3, () => {
+              try {
+                window.localStorage.setItem(
+                  "broadcastSettings",
+                  JSON.stringify(this.m_broadcastSettings),
+                );
+              } catch (t) {}
+            });
+        }
+        SetViewerToken(t) {
+          this.m_broadcastSettings.ulViewerToken != t &&
+            ((this.m_broadcastSettings.ulViewerToken = t),
+            this.SaveBroadcastSettings());
+        }
+        GetViewerToken() {
+          return this.m_broadcastSettings.ulViewerToken;
+        }
+        SaveVolumeChange(t, e) {
+          (this.m_broadcastSettings.nVolume == t &&
+            this.m_broadcastSettings.bMuted == e) ||
+            ((this.m_broadcastSettings.nVolume = t),
+            (this.m_broadcastSettings.bMuted = e),
+            this.SaveBroadcastSettings());
+        }
+      }
+      (0, s.Cg)([o.sH], F.prototype, "m_mapBroadcasts", void 0),
+        (function (t) {
+          (t[(t.Timeline = 1)] = "Timeline"), (t[(t.Minimap = 2)] = "Minimap");
+        })(P || (P = {}));
+      class W {
+        m_elVideo = null;
+        m_player = null;
+        m_listeners = new C.Ji();
+        m_gameDataParser = null;
+        m_eWatchLocation = I.nn.Tq;
+        m_bStartWithSubtitles = !1;
+        m_steamIDBroadcast = null;
+        m_BroadcastInfo = null;
+        m_broadcastClipID = null;
+        m_nBroadcastAppIDVOD = null;
+        m_bPaused = !1;
+        m_nPlaybackTime = 0;
+        m_bBuffering = !1;
+        m_bOnLiveEdge = !1;
+        m_nVolume = 0;
+        m_bMuted = !1;
+        m_bUserInputNeeded = !1;
+        m_bIsReplay = !1;
+        m_nTimelineDuration = 1800;
+        m_nVideoStartPos = 0;
+        m_nVideoEndPos = 0;
+        m_editorStartTime = 0;
+        m_editorEndTime = 0;
+        m_rgMarkers = o.sH.array();
+        m_rgSegments = o.sH.array();
+        m_rgRegions = o.sH.array();
+        m_fnOnVideoEnd;
+        m_videoEndingTimer;
+        constructor(t, e, a, s) {
+          (0, o.Gn)(this),
+            (this.m_elVideo = t),
+            (this.m_nVolume = e),
+            (this.m_bMuted = a),
+            (this.m_eWatchLocation = s);
+        }
+        SetBroadcastSteamID(t) {
+          this.m_steamIDBroadcast = t;
+        }
+        GetBroadcastSteamID() {
+          return this.m_steamIDBroadcast;
+        }
+        GetWatchLocation() {
+          return this.m_eWatchLocation;
+        }
+        IsPaused() {
+          return this.m_bPaused;
+        }
+        GetPlaybackTime() {
+          return this.m_nPlaybackTime;
+        }
+        SetStatsViewIsVisible(t) {
+          this.m_player && this.m_player.SetStatsViewIsVisible(t);
+        }
+        GetDASHPlayerStats() {
+          return this.m_player.GetDASHPlayerStats();
+        }
+        BHasDASHStats() {
+          return null != this.m_player;
+        }
+        IsTimelineMapActive() {
+          return !1;
+        }
+        CanSeek() {
+          return this.m_player && this.m_player.CanSeek();
+        }
+        IsBuffering() {
+          return this.m_bBuffering;
+        }
+        IsOnLiveEdge() {
+          return this.m_bOnLiveEdge;
+        }
+        GetVideoAvailableStartTime() {
+          return this.m_nVideoStartPos;
+        }
+        GetVolume() {
+          return this.m_nVolume;
+        }
+        GetUserInputNeeded() {
+          return this.m_bUserInputNeeded;
+        }
+        IsReplay() {
+          return this.m_bIsReplay;
+        }
+        IsBroadcastClip() {
+          return null != this.m_broadcastClipID;
+        }
+        SetBroadcastClipID(t) {
+          this.m_broadcastClipID = t;
+        }
+        GetBroadcastClipID() {
+          return this.m_broadcastClipID;
+        }
+        IsBroadcastVOD() {
+          return null != this.m_nBroadcastAppIDVOD;
+        }
+        SetBroadcastAppIDVOD(t) {
+          this.m_nBroadcastAppIDVOD = t;
+        }
+        GetBroadcastAppIDVOD() {
+          return this.m_nBroadcastAppIDVOD;
+        }
+        GetVideoRepresentations() {
+          return this.m_player ? this.m_player.GetVideoRepresentations() : [];
+        }
+        SetVideoRepresentation(t) {
+          this.m_player.SetVideoRepresentation(t);
+        }
+        GetBroadcastInfo() {
+          return this.m_BroadcastInfo;
+        }
+        BHasTimedText() {
+          return this.m_player?.BHasTimedText();
+        }
+        BHasPlayer() {
+          return Boolean(this.m_player);
+        }
+        ListSubtitles() {
+          return this.m_elVideo.textTracks;
+        }
+        GetSubtitles() {
+          for (let t = 0; t < this.m_elVideo.textTracks.length; t++) {
+            const e = this.m_elVideo.textTracks[t];
+            if ("showing" === e.mode) return e;
+          }
+          return null;
+        }
+        SetSubtitles(t) {
+          let e = t ? v.bi[t] : B.xPp;
+          this.m_player.SetSubtitles(e);
+        }
+        SetStartWithSubtitles(t) {
+          this.m_bStartWithSubtitles = t;
+        }
+        GetBroadcastState() {
+          return N.GetBroadcastState(this);
+        }
+        GetBroadcastStateDescription() {
+          return N.GetBroadcastStateDescription(this);
+        }
+        SetOnVideoCallback(t) {
+          this.m_fnOnVideoEnd = t;
+        }
+        InitPlayer() {
+          (0, A.wT)(!this.m_player, "Initialized twice?"),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "playing",
+              this.OnVideoPlaying,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "pause",
+              this.OnVideoPause,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "timeupdate",
+              this.OnVideoTimeUpdate,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "volumechange",
+              this.OnVolumeUpdated,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-bufferupdate",
+              this.OnVideoTimeUpdate,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-gamedataupdate",
+              this.OnGameDataUpdate,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-downloadfailed",
+              this.OnDownloadFailed,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-webrtcretry",
+              this.OnWebRTCRetry,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-webrtcfailed",
+              this.OnWebRTCFailed,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elVideo,
+              "valve-userinputneeded",
+              this.OnUserInputNeeded,
+            ),
+            (this.m_bPaused = !1),
+            (this.m_nPlaybackTime = 0),
+            (this.m_bBuffering = !1),
+            (this.m_nTimelineDuration = 1800),
+            (this.m_nVideoStartPos = 0),
+            (this.m_nVideoEndPos = 0),
+            this.m_rgMarkers.clear(),
+            this.m_rgSegments.clear(),
+            (this.m_bUserInputNeeded = !1),
+            (this.m_bIsReplay = !1);
+        }
+        Restart() {
+          this.IsMuted() ||
+            this.IsPaused() ||
+            this.GetUserInputNeeded() ||
+            this.Play();
+        }
+        StartBroadcast(t) {
+          if ((this.InitPlayer(), t.m_data.url)) {
+            let e = new h.Zn(this.m_elVideo);
+            e.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+              (this.m_player = e),
+              e.PlayMPD(
+                t.m_data.url,
+                t.m_data.hls_url,
+                void 0,
+                t.m_strCDNAuthUrlParameters,
+              );
+          } else {
+            let e = new D(this.m_elVideo);
+            (this.m_player = e),
+              e.PlayWebRTC(
+                this.m_steamIDBroadcast,
+                t.m_ulViewerToken,
+                t.m_data.webrtc_session_id,
+                t.m_data.webrtc_turn_server,
+                t.m_data.webrtc_offer_sdp,
+              );
+          }
+          this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
+          let e = this.m_player.GetDASHPlayerStats();
+          e &&
+            e.SetBroadcasterAndViewerInfo(
+              this.m_steamIDBroadcast,
+              u.iA.steamid,
+              t.m_ulBroadcastID,
+              t.m_ulViewerToken,
+            ),
+            (this.m_BroadcastInfo = N.StartInfo(this.m_steamIDBroadcast));
+        }
+        StartClip(t) {
+          this.InitPlayer();
+          let e = new h.Zn(this.m_elVideo);
+          e.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = e),
+            e.PlayMPD(t.m_data.clip_url),
+            this.SetVolume(this.m_nVolume),
+            this.m_player.SetMuted(this.m_bMuted);
+        }
+        StartVOD(t) {
+          this.InitPlayer();
+          let e = new h.Zn(this.m_elVideo);
+          e.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = e),
+            u.iA.logged_in &&
+              t.m_nAppIDVOD &&
+              e.SetBookmarkAdapter(new V.M(t.m_nAppIDVOD)),
+            e.PlayMPD(t.m_manifestURL),
+            this.SetVolume(this.m_nVolume),
+            this.m_player.SetMuted(this.m_bMuted);
+        }
+        Stop() {
+          this.m_listeners.Unregister(),
+            this.m_BroadcastInfo &&
+              (N.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
+            (this.m_gameDataParser = null),
+            this.m_player && (this.m_player.Close(), (this.m_player = null));
+        }
+        TogglePlayPause() {
+          !this.m_player || this.m_player.IsPaused()
+            ? this.Play()
+            : this.Pause();
+        }
+        Play() {
+          const t = this.GetBroadcastState();
+          t == G.None || this.IsBroadcastClip()
+            ? N.StartVideo(this)
+            : t == G.Ready &&
+              (N.SetActiveVideo(this),
+              this.m_player
+                ? this.m_player.Play()
+                : this.IsBroadcastVOD()
+                  ? this.StartVOD(N.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
+                  : this.StartBroadcast(
+                      N.GetBroadcast(this.m_steamIDBroadcast),
+                    ));
+        }
+        Pause() {
+          console.log(
+            "Pause ",
+            this.m_steamIDBroadcast,
+            this.m_nBroadcastAppIDVOD,
+            this.m_broadcastClipID,
+          ),
+            this.m_player && this.m_player.Pause();
+        }
+        JumpTime(t) {
+          this.m_player.JumpTime(t);
+        }
+        Seek(t) {
+          this.m_player?.Seek(t);
+        }
+        SeekAndPlay(t) {
+          this.m_player.SeekAndPlay(t);
+        }
+        JumpToLiveEdge() {
+          this.m_player.IsLiveContent()
+            ? this.SeekAndPlay(this.m_player.GetBufferedLiveEdgeTime())
+            : this.SeekAndPlay(this.m_player.GetAvailableVideoStartTime());
+        }
+        SetVolume(t) {
+          this.m_player && this.m_player.SetVolume(t),
+            (this.m_nVolume = this.m_player.GetVolume()),
+            N.SaveVolumeChange(t, this.m_bMuted);
+        }
+        SetMute(t) {
+          this.m_player && this.m_player.SetMuted(t),
+            (this.m_bMuted = t),
+            N.SaveVolumeChange(this.m_nVolume, t);
+        }
+        IsMuted() {
+          return this.m_bMuted;
+        }
+        OnVideoPlaying() {
+          (this.m_bPaused = !1),
+            0 === this.m_editorStartTime &&
+              0 === this.m_editorEndTime &&
+              ((this.m_editorStartTime = this.GetVideoAvailableStartTime()),
+              (this.m_editorEndTime =
+                this.GetVideoAvailableStartTime() +
+                this.GetTimelineDuration()));
+        }
+        OnVideoPause() {
+          this.m_bPaused = !0;
+        }
+        OnVideoTimeUpdate() {
+          if (
+            (window.clearTimeout(this.m_videoEndingTimer),
+            this.IsBroadcastClip())
+          )
+            (this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
+              (this.m_nVideoStartPos =
+                this.m_player.GetAvailableVideoStartTime()),
+              (this.m_nVideoEndPos = this.m_player.GetBufferedLiveEdgeTime()),
+              (this.m_nTimelineDuration =
+                this.m_nVideoEndPos - this.m_nVideoStartPos),
+              (this.m_bOnLiveEdge = !1),
+              (this.m_bBuffering = this.m_player.IsBuffering());
+          else {
+            if (
+              ((this.m_nPlaybackTime = this.m_player.GetCurrentPlayTime()),
+              (this.m_nVideoStartPos =
+                this.m_player.GetAvailableVideoStartTime()),
+              (this.m_nVideoEndPos = Math.max(
+                this.m_player.GetBufferedLiveEdgeTime(),
+                this.m_nPlaybackTime,
+              )),
+              this.IsBroadcastVOD() &&
+                ((this.m_nTimelineDuration = this.m_nVideoEndPos),
+                this.m_fnOnVideoEnd &&
+                  this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br))
+            ) {
+              const t = 400;
+              this.m_videoEndingTimer = window.setTimeout(() => {
+                this.m_fnOnVideoEnd();
+              }, t);
+            }
+            (this.m_bBuffering = this.m_player.IsBuffering()),
+              (this.m_bOnLiveEdge =
+                this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br),
+              this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
+          }
+        }
+        OnVolumeUpdated() {
+          (this.m_nVolume = this.m_player.GetVolume()),
+            (this.m_bMuted = this.m_player.IsMuted());
+        }
+        OnGameDataUpdate(t) {
+          let e = t.detail;
+          if (!e || "object" != typeof e.gamedata) return;
+          (this.m_gameDataParser &&
+            this.m_gameDataParser.GetAppID() == e.gamedata.__appid) ||
+            (this.m_gameDataParser = new c(e.gamedata.__appid));
+          const a = this.m_player.GetLiveContentStartTime().getTime();
+          if ("timelinemarkers" in e.gamedata) {
+            const t = this.m_gameDataParser.UpdateMarkers(
+              e.gamedata.__timelinemarkers,
+              a,
+            );
+            t &&
+              (this.m_rgMarkers.replace(t.rgMarkers || []),
+              this.m_rgSegments.replace(t.rgSegments || []));
+            const s = this.m_gameDataParser.UpdateRegions(e.gamedata.__regions);
+            s && this.m_rgRegions.replace(s);
+          } else
+            "soundtrack" in e.gamedata &&
+              this.m_gameDataParser.UpdateSoundtrack(
+                this.m_steamIDBroadcast,
+                e.gamedata.soundtrack,
+              );
+        }
+        OnDownloadFailed(t) {
+          let e = t.detail || h.N_.Invalid;
+          N.BroadcastDownloadFailed(this, !0, e);
+        }
+        OnWebRTCRetry() {
+          N.BroadcastDownloadFailed(this, !1);
+        }
+        OnWebRTCFailed() {
+          N.BroadcastDownloadFailed(this, !0);
+        }
+        OnUserInputNeeded() {
+          this.m_bUserInputNeeded = !0;
+        }
+        UserInputClick() {
+          (this.m_bUserInputNeeded = !1),
+            this.m_player ? this.JumpToLiveEdge() : this.Play();
+        }
+        StopPlaybackTillUserInput() {
+          this.Stop(), this.OnUserInputNeeded();
+        }
+        GetTimelineStartPos() {
+          return this.m_nVideoEndPos - this.m_nTimelineDuration;
+        }
+        GetTimelineDuration() {
+          return this.m_nTimelineDuration;
+        }
+        GetTimeAtMousePosition(t, e, a, s) {
+          let i = _.Fu(t, e.left, e.right, a, s);
+          return Math.floor(i + 0.5);
+        }
+        GetPercentOffsetFromTime(t, e) {
+          let a = 0,
+            s = 0;
+          return (
+            e == P.Timeline
+              ? ((s = this.m_nVideoEndPos), (a = s - this.m_nTimelineDuration))
+              : ((a = 0), (s = 0)),
+            _.Fu(t, a, s, 0, 100)
+          );
+        }
+        GetTimelineMarkers() {
+          return this.m_rgMarkers;
+        }
+        GetTimelineSegments() {
+          return this.m_rgSegments;
+        }
+        GetGameDataRegions() {
+          return this.m_rgRegions;
+        }
+        BHasMarkersOrSegments() {
+          return this.has_segments || this.has_markers;
+        }
+        get has_markers() {
+          return this.m_rgMarkers.length > 0;
+        }
+        get has_segments() {
+          return this.m_rgSegments.length > 0;
+        }
+      }
+      (0, s.Cg)([o.sH], W.prototype, "m_player", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_bPaused", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_nPlaybackTime", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_bBuffering", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_bOnLiveEdge", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_nVolume", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_bMuted", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_bUserInputNeeded", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_bIsReplay", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_nTimelineDuration", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_nVideoStartPos", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_nVideoEndPos", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_editorStartTime", void 0),
+        (0, s.Cg)([o.sH], W.prototype, "m_editorEndTime", void 0),
+        (0, s.Cg)([o.XI.bound], W.prototype, "StartBroadcast", null),
+        (0, s.Cg)([o.XI.bound], W.prototype, "StartClip", null),
+        (0, s.Cg)([o.XI.bound], W.prototype, "StartVOD", null),
+        (0, s.Cg)([S.o], W.prototype, "OnVideoPlaying", null),
+        (0, s.Cg)([S.o], W.prototype, "OnVideoPause", null),
+        (0, s.Cg)([o.XI.bound], W.prototype, "OnVideoTimeUpdate", null),
+        (0, s.Cg)([S.o], W.prototype, "OnVolumeUpdated", null),
+        (0, s.Cg)([o.XI.bound], W.prototype, "OnGameDataUpdate", null),
+        (0, s.Cg)([S.o], W.prototype, "OnDownloadFailed", null),
+        (0, s.Cg)([S.o], W.prototype, "OnWebRTCRetry", null),
+        (0, s.Cg)([S.o], W.prototype, "OnWebRTCFailed", null),
+        (0, s.Cg)([S.o], W.prototype, "OnUserInputNeeded", null);
+      const N = new F();
+      window.uiBroadcastWatchStore = N;
+    },
+    68033: (t, e, a) => {
+      a.d(e, { A: () => d, T: () => n });
+      var s = a(30193),
+        i = a(78327),
+        r = a(41735),
+        o = a.n(r);
+      class n extends s.pN {
         constructor() {
           super();
         }
@@ -668,45 +2374,45 @@
           return !0;
         }
         GetServerTime() {
-          return s.TS.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
+          return i.TS.PAGE_TIMESTAMP + Math.floor(performance.now() / 1e3);
         }
         async RequestEmoticonListInternal() {
-          let e = [];
+          let t = [];
           try {
-            let t = await n().get(s.TS.CHAT_BASE_URL + "actions/EmoticonData", {
+            let e = await o().get(i.TS.CHAT_BASE_URL + "actions/EmoticonData", {
               withCredentials: !0,
             });
-            if (t.data.emoticons)
-              for (let a of t.data.emoticons) {
-                let t = a.name;
-                if (t.startsWith("^")) e.push({ name: t });
+            if (e.data.emoticons)
+              for (let a of e.data.emoticons) {
+                let e = a.name;
+                if (e.startsWith("^")) t.push({ name: e });
                 else {
-                  let r = { name: t.substr(1, t.length - 2) },
-                    s = r.name.toLowerCase();
-                  s != r.name && (r.name_normalized = s),
-                    a.time_last_used && (r.last_used = a.time_last_used),
-                    a.use_count && (r.use_count = a.use_count),
-                    a.time_received && (r.time_received = a.time_received),
-                    a.appid && (r.appid = a.appid),
-                    e.push(r);
+                  let s = { name: e.substr(1, e.length - 2) },
+                    i = s.name.toLowerCase();
+                  i != s.name && (s.name_normalized = i),
+                    a.time_last_used && (s.last_used = a.time_last_used),
+                    a.use_count && (s.use_count = a.use_count),
+                    a.time_received && (s.time_received = a.time_received),
+                    a.appid && (s.appid = a.appid),
+                    t.push(s);
                 }
               }
-          } catch (e) {
-            console.error("error loading emoticon list", e);
+          } catch (t) {
+            console.error("error loading emoticon list", t);
           }
-          this.OnEmoticonListReceived(e);
+          this.OnEmoticonListReceived(t);
         }
       }
-      const d = new i();
+      const d = new n();
     },
-    10886: (e, t, a) => {
-      a.d(t, { A: () => r });
-      const r =
+    10886: (t, e, a) => {
+      a.d(e, { A: () => s });
+      const s =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
     },
-    3209: (e, t, a) => {
-      a.d(t, { A: () => r });
-      const r =
+    3209: (t, e, a) => {
+      a.d(e, { A: () => s });
+      const s =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
     },
   },

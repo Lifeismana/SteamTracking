@@ -29,12 +29,14 @@
         LineItemCol: "HhD4RK0A4phOlAwZQDckk",
         LineItemDetailsRow: "_1wLomHB2PWPNx7TsNYpdtm",
         Text: "_2aGDkEAUaGvF4KHHZRRkEj",
+        NoWrap: "c0VFjXtN_fgP-PR6wQe66",
         LineItemDetailsRowTop: "_1aXXp4afkXP3Ez03MjTY3D",
         LineItemSpaceBetween: "_3L6hUlrzXOezye2BqWz-T7",
         LineItemTitle: "EflKs0JjldhDSxbUBaiOp",
         LineItemPricingOptions: "_2BTcfC4-tZENmEAXbVzKA7",
         LineItemDropDown: "QL-7d2s_ZGbceWxP5eoY4",
         PlatformIcons: "_2FgjpNRRiZkDXAB53vFFOh",
+        PurchaseOptionPickerCtn: "_2iq-WR8SMiZcAwSnm-8-eE",
         AddLineItemCtn: "_3-GZz-m5p_fxd2pqPGK6u9",
         AddLineItemIcon: "_4Uz7u01J6OO_P0hhfb0Kc",
         PendingLineItem: "_3w61e3curroiu7lCOKvLN8",
@@ -652,6 +654,77 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(_);
+        return (0, _._)({
+          mutationFn: (_) =>
+            (async function (_, _, _, _, _) {
+              const _ = _._.Init(_._);
+              _.Body().set_line_item_id(_),
+                _.Body().set_user_country(_._.country_code),
+                _ && _.Body().set_gift_info(_._.fromObject(_)),
+                _ && _.Body().set_flags(_._.fromObject(_)),
+                _ && _.Body().set_apply_gidcoupon(_);
+              const _ = await _._.ModifyLineItem(_, _);
+              return (
+                _.BSuccess() ||
+                  console.warn(`Failed to update gift info: ${_.GetEResult()}`),
+                [_.GetEResult(), _.Body().toObject()]
+              );
+            })(_, _.lineItemID, _.lineItemFlags, _.giftInfo, _.gidCoupon),
+          onMutate: async (_) => {
+            await _.cancelQueries({
+              queryKey: _,
+            });
+            const _ = _.getQueryData(_);
+            return (
+              _.setQueryData(_, (_) => ({
+                ...(_ ?? {}),
+                line_items:
+                  _?.line_items?.map((_) =>
+                    _.line_item_id !== _.lineItemID
+                      ? _
+                      : {
+                          ..._,
+                          flags: _.lineItemFlags || _.flags,
+                          gift_info: _.giftInfo || _.gift_info,
+                        },
+                  ) ?? [],
+              })),
+              {
+                previousCart: _,
+              }
+            );
+          },
+          onSuccess: ([_, _], _, { previousCart: _ }) => {
+            _ == _._
+              ? ((0, _._)(_, _, _.cart), _ && _())
+              : _.setQueryData(_, _);
+          },
+          onError: (_, _, _) => {
+            _?.previousCart && _.setQueryData(_, _.previousCart);
+          },
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -666,10 +739,15 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { text: _, children: _, className: _ } = _;
+        const { text: _, children: _, className: _, noWrap: _ } = _;
         return (0, _.jsx)(_._, {
           "flow-children": "row",
-          className: _()(_().LineItemDetailsRow, _ && _().Text, _),
+          className: _()(
+            _().LineItemDetailsRow,
+            _ && _().Text,
+            _ && _().NoWrap,
+            _,
+          ),
           children: _,
         });
       }
@@ -711,6 +789,50 @@
         const _ = parseInt(_.original_price.amount_in_cents),
           _ = parseInt(_.subtotal.amount_in_cents);
         return Math.min(99, Math.floor(((_ - _) / _) * 100 + 0.5));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          { storeBrowseContext: _, cacheStoreItemData: _ } = (0, _._)();
+        return (0, _._)({
+          queryKey: (0, _._)(_, _),
+          queryFn: async () =>
+            (async function (_, _, _, _, _, _) {
+              const _ = _._.Init(_._);
+              (0, _._)(_) || (0, _._)(_)
+                ? (_.Body().set_gidshoppingcart(_.gid),
+                  _ && _.Body().set_gift_info(_._.fromObject(_)))
+                : (0, _._)(_) && _.Body().set_gidreplayoftransid(_.gid);
+              (0, _._)(_, _), _ && (0, _._)(_, _);
+              const _ = await _._.ValidateCart(_, _);
+              _.BSuccess() ||
+                console.warn(
+                  `Failed to validate shopping cart: ${_.GetEResult()}`,
+                );
+              if (_ && _)
+                for (const _ of _.Body().cart_items()) _(_.store_item(), _);
+              return _.Body().toObject();
+            })(_, _, _, _, _, _),
+          staleTime: 1 / 0,
+          enabled: _._.logged_in || !(0, _._)(_),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -2099,15 +2221,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
         _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -2120,41 +2239,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          { storeBrowseContext: _, cacheStoreItemData: _ } = (0, _._)();
-        return (0, _._)({
-          queryKey: (0, _._)(_, _),
-          queryFn: async () =>
-            (async function (_, _, _, _, _, _) {
-              const _ = _._.Init(_._);
-              (0, _._)(_) || (0, _._)(_)
-                ? (_.Body().set_gidshoppingcart(_.gid),
-                  _ && _.Body().set_gift_info(_._.fromObject(_)))
-                : (0, _._)(_) && _.Body().set_gidreplayoftransid(_.gid);
-              (0, _._)(_, _), _ && (0, _._)(_, _);
-              const _ = await _._.ValidateCart(_, _);
-              _.BSuccess() ||
-                console.warn(
-                  `Failed to validate shopping cart: ${_.GetEResult()}`,
-                );
-              if (_ && _)
-                for (const _ of _.Body().cart_items()) _(_.store_item(), _);
-              return _.Body().toObject();
-            })(_, _, _, _, _, _),
-          staleTime: 1 / 0,
-          enabled: _._.logged_in || !(0, _._)(_),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2163,68 +2249,6 @@
         _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)("cart_config", "application_config");
-      }
-      function _() {
-        const _ = (0, _._)();
-        return !(0, _._)(_) && !(0, _._)(_);
-      }
-      function _() {
-        const _ = (0, _._)();
-        return (0, _._)(_);
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(_);
-        return (0, _._)({
-          mutationFn: (_) =>
-            (async function (_, _, _, _, _) {
-              const _ = _._.Init(_._);
-              _.Body().set_line_item_id(_),
-                _.Body().set_user_country(_._.country_code),
-                _ && _.Body().set_gift_info(_._.fromObject(_)),
-                _ && _.Body().set_flags(_._.fromObject(_)),
-                _ && _.Body().set_apply_gidcoupon(_);
-              const _ = await _._.ModifyLineItem(_, _);
-              return (
-                _.BSuccess() ||
-                  console.warn(`Failed to update gift info: ${_.GetEResult()}`),
-                [_.GetEResult(), _.Body().toObject()]
-              );
-            })(_, _.lineItemID, _.lineItemFlags, _.giftInfo, _.gidCoupon),
-          onMutate: async (_) => {
-            await _.cancelQueries({
-              queryKey: _,
-            });
-            const _ = _.getQueryData(_);
-            return (
-              _.setQueryData(_, (_) => ({
-                ..._,
-                line_items: _.line_items.map((_) =>
-                  _.line_item_id !== _.lineItemID
-                    ? _
-                    : {
-                        ..._,
-                        flags: _.lineItemFlags || _.flags,
-                        gift_info: _.giftInfo || _.gift_info,
-                      },
-                ),
-              })),
-              {
-                previousCart: _,
-              }
-            );
-          },
-          onSuccess: ([_, _], _, { previousCart: _ }) => {
-            _ == _._
-              ? ((0, _._)(_, _, _.cart), _ && _())
-              : _.setQueryData(_, _);
-          },
-          onError: (_, _, { previousCart: _ }) => {
-            _.setQueryData(_, _);
-          },
-        });
       }
       const _ = {
           include_basic_info: !0,
@@ -2240,7 +2264,7 @@
         };
       function _() {
         const [_] = (0, _._)();
-        return _(_, _);
+        return (0, _._)(_, _);
       }
       function _(_) {
         return (
@@ -2358,6 +2382,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2747,7 +2773,13 @@
             _?.accountid_giftee || (_ ? _.gift_info?.accountid_giftee : void 0),
           _ = (0, _._)() && !_?.restrict_add_additional_to_cart,
           _ = _.errors?.adult_content_restricted,
-          _ = (0, _._)(_.packageid, _.bundleid, _(_), "cart-add-additional"),
+          _ = (0, _._)(
+            _.packageid,
+            _.bundleid,
+            _(_),
+            void 0,
+            "cart-add-additional",
+          ),
           _ = _.useId(),
           _ = _.useId();
         return (0, _.jsxs)(_._, {
@@ -3925,6 +3957,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.memo(function (_) {
         const { scheduledTime: _, onScheduledTimeChange: _ } = _,
@@ -4883,6 +4916,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

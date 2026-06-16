@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "予告編は実際のSteam Deckでのゲームプレイを反映していない場合があります",
     "StoreItemFound": "%1$s 見つかりました（%2$s）",
     "StoreItemNotFound": "見つかりませんでした（%1$s）",
+    "SteamURLAccepted": "%1$s URLが承認されました",
+    "SteamURLInvalid": "エラー：Steamプロパティ（ストア／コミュニティ）へのURLではありません",
+    "PriceGrid_NormalPrice": "通常",
+    "PriceGrid_RecentPrice": "過去30日間の最安値",
+    "PriceGrid_CurrentPrice": "現在",
     "Dummy": "dummy"
 }

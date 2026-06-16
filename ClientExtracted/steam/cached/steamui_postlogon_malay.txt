@@ -1,0 +1,41 @@
+﻿"lang" {
+"Language" "malay" 
+"Tokens" 
+{ 
+"Steam_TellTale_EmailPrompt"	"Telltale, penerbit %subscription%, ingin terus berhubung dengan anda. Sila masukkan alamat e-mel anda di bawah untuk mendaftar kepada surat berita Telltale yang termasuk pengumuman permainan baharu, pratonton proses pembangunan di sebalik tabir, komik, ruang masakan dan nasihat serta tawaran istimewa yang muncul secara berkala. Anda pasti tidak akan menyesal!"
+
+"Steam_Football2K9_EmailPrompt"	"SEGA, penerbit %subscription%, ingin menawarkan diskaun istimewa kepada anda di Subside Sports sebagai tanda penghargaan atas pembelian anda. Sila masukkan alamat e-mel anda di bawah untuk menerima baucar diskaun sebanyak 10% yang boleh digunakan bagi mana-mana produk yang tersedia di kedai dalam talian Subside Sports."
+
+"Steam_TwoTribes_EmailPrompt"	"Jika anda ingin terus berhubung dengan Two Tribes, anda boleh melanggan surat berita kami. Anda hanya perlu mengisi alamat e-mel anda dan kami akan menyediakan kemas kini tetap tentang semua permainan hebat yang kami hasilkan kepada anda!"
+
+
+"charity_title" "Sid Meier's Civilization V"
+
+"charity_imagetext" "Sumbangan amal"
+
+"charity_header" "2K Games menderma sejumlah $250,000 kepada empat badan amal berasaskan pendidikan dan pilihan pengguna akan menentukan cara wang tersebut diagihkan. Kami akan mengumpul undian daripada pelanggan dan mengagihkan dana tersebut seperti yang telah anda arahkan. Kami juga menyambut kehadiran NVIDIA Foundation yang bekerjasama dengan kami dalam inisiatif ini dengan menyumbang derma tambahan sebanyak $20,000 kepada program ini."
+
+"charity_choice"	"Badan amal manakah yang ingin anda sokong?"
+
+"charity_asia"		"Central Asia Institute"
+"charity_asia_details"	"Central Asia Institute mempromosikan dan menyokong pendidikan berasaskan komuniti, terutamanya untuk perempuan di Pakistan dan Afghanistan. Kami telah membantu untuk menubuhkan lebih daripada 150 buah sekolah dan telah menyediakan peluang pendidikan kepada 64,000 pelajar. Untuk mendapatkan maklumat lanjut tentang Central Asia Institute atau Pennies for Peace, sila hubungi kami di 406-585-7841 atau lawati www.ikat.org. Nama Central Asia Institute dan Pennies for Peace digunakan dengan kebenarannya yang tidak membentuk sokongan tersurat atau tersirat bagi mana-mana produk, perkhidmatan, syarikat atau individu dalam apa-apa jua cara sekalipun."
+
+"charity_schools"	"Building Schools for Africa"
+"charity_schools_details" "Building Schools for Africa merupakan organisasi kemanusiaan kecil yang mempercayai bahawa cara terbaik untuk membantu individu supaya bebas daripada kemiskinan, penyakit dan eksploitasi adalah melalui pendidikan. Kami membina sekolah dengan air bersih dan tandas serta menyediakan peralatan dan benih untuk menanam sumber makanan di kawasan pendalaman Cameroon yang membolehkan keluarga petani menjanakan pendapatan sebanyak $1 setiap minggu. Kami boleh menyediakan semua kemudahan ini hanya dengan kos sebanyak $20,000 bagi setiap sekolah. Oleh sebab kami membayar sendiri semua perbelanjaan kami, setiap wang yang dijanakan akan dibelanjakan untuk membina sekolah tanpa sebarang potongan. Terima kasih atas bantuan anda."
+
+"charity_read"		"Room to Read®"
+"charity_read_details"	"Room to Read® berusaha untuk mengubah kehidupan jutaan kanak-kanak di negara yang sedang membangun dengan memfokuskan kepada keupayaan celik huruf dan kesamarataan jantina dalam pendidikan. Melalui kerjasama dengan komuniti tempatan, organisasi rakan kongsi dan kerajaan, kami membangunkan keupayaan celik huruf dan tabiat membaca dalam kalangan kanak-kanak sekolah rendah dan memastikan kanak-kanak perempuan mempunyai kemahiran dan sokongan yang diperlukan untuk melengkapkan pendidikan menengah mereka. Ketahui lebih lanjut di www.roomtoread.org."
+
+"charity_scholarship"	"Scholarship America®"
+"charity_scholarship_details"	"Scholarship America® ialah organisasi perkhidmatan pendidikan kebangsaan yang menyediakan sokongan kepada pelajar untuk memasuki dan menamatkan pengajian dari kolej. Kami mempunyai tiga program teras yang membantu kami mencapai misi kami: Dollars for Scholars®, Scholarship Management Services® dan Dreamkeepers. Scholarship America telah mengagihkan lebih daripada $2 bilion dalam bantuan biasiswa kepada lebih daripada 1.7 juta pelajar sejak 1958. Maklumat lanjut tersedia di www.scholarshipamerica.org."
+
+"charity_footer"	"Undian akan tutup pada 31 Disember 2010 jam 11:59PM EST (31 Disember 11:59AM GMT+8). Satu undian setiap pengguna. Tidak sah di semua wilayah. Untuk maklumat lanjut tentang NVIDIA Foundation, lawati "
+"charity_footer_link"	"http://www.nvidia.com/object/corporate_community.html"
+
+"charity_launchgame"	"Lancarkan permainan"
+
+
+
+
+}
+}

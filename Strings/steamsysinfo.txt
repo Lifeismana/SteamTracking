@@ -365,6 +365,7 @@ $\nY8O
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )\n$k_EPersonaStateFlag_ClientTypeMobile
+)\n%k_EAppTestType_SteamChina_BuildReview
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
 )\n%k_EBrowserGPUStatus_DisabledJSRequest
@@ -503,6 +504,7 @@ $\nY8O
 -+xX0123456789abcdefABCDEF
 -0123456789
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
+-\n)k_EAppTestType_SteamChina_StorePageReview
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
 -\n)k_ECommentThreadTypeScreenshot_Deprecated
 -\n)k_EContentCheckProvider_Google_DEPRECATED
@@ -583,6 +585,7 @@ $\nY8O
 .placeholder.proto
 .steam_exec_test.sh
 .y4w
+/\n+k_EAppTestType_SteamDeckCompatibilityReview
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_ECommentThreadTypePublishedFile_Developer
 /\n+k_ECommunityItemClass_MiniProfileBackground
@@ -650,6 +653,7 @@ $\nY8O
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
+0\n,k_EAppTestType_SteamFrameCompatibilityReview
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
 0\n,k_EContentModerationSanction_CommunityBanned
@@ -758,6 +762,7 @@ $\nY8O
 29CMsgChildProcessQueryResponse
 2<QF
 2\n.k_ECommentThreadTypePublishedFile_Announcement
+2\n.k_EContentReportReason_AutoCreatedOnModeration
 2\n.k_EContentReportReason_BullyingAndIntimidation
 2\n.k_EContentReportReason_GenderedOtherHarassment
 2\n.k_EContentReportReason_OtherCommercialActivity
@@ -845,6 +850,7 @@ $\nY8O
 8\n\textension
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
+9\n5k_EAppTestType_SteamChinaPlatformOperator_BuildReview
 9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
@@ -869,6 +875,7 @@ $\nY8O
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
 <empty>\n
 = or is NULL
+=\n9k_EAppTestType_SteamChinaPlatformOperator_StorePageReview
 =\n9k_EContentReportReason_FakedGenderedNonConsensualMaterial
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
@@ -3469,6 +3476,7 @@ Zong
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nParsing attempt:
 \nYg:a
+\n\fEAppTestType
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -3915,6 +3923,7 @@ controller_rog_ally
 controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
+controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
 controller_switch_joycon_left
@@ -4306,6 +4315,8 @@ k_EACState_Connected
 k_EACState_ConnectedSlow
 k_EACState_Disconnected
 k_EACState_Unknown
+k_EAppTestType_BuildReview
+k_EAppTestType_StorePageReview
 k_EAppTypeApplication
 k_EAppTypeBeta
 k_EAppTypeComic

@@ -7770,8 +7770,7 @@
       function _(_) {
         return _.GetModalManager(_);
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         _.useEffect(() => {
           if (_)
@@ -7940,12 +7939,10 @@
         const { className: _, active: _, children: _ } = _;
         return (0, _.jsx)(_, {
           active: _,
-          children: (0, _.jsx)(_._, {
-            children: (0, _.jsx)("div", {
-              className: _,
-              tabIndex: -1,
-              children: _,
-            }),
+          children: (0, _.jsx)("div", {
+            className: _,
+            tabIndex: -1,
+            children: _,
           }),
         });
       }
@@ -8370,6 +8367,366 @@
         "m_Value",
         void 0,
       );
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            target: _,
+            visibilityObserver: _,
+            className: _,
+            style: _,
+            bEnablePointerEvents: _,
+            direction: _ = "right",
+            nBodyAlignment: _ = 0.5,
+            nBodyDistance: _ = 8,
+            nAllowOffscreenPx: _ = 10,
+            nMaxLateralMoveOnScreen: _,
+            onNoSpace: _,
+            bTopmost: _,
+            children: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(null),
+          [_, _] = _.useState(null),
+          _ = _.useCallback(() => {
+            let _ = _;
+            if (!_ || !_ || !_) return;
+            if (_ && _ && !_.visible) return;
+            let _ = _.ownerDocument.defaultView;
+            if (!_ || _.closed) return;
+            _.showPopover();
+            const _ = _.querySelector(".hover_arrow.left"),
+              _ = _.querySelector(".hover_arrow.right"),
+              _ = _.querySelector(".hover_arrow.top"),
+              _ = _.querySelector(".hover_arrow.bottom"),
+              _ = _.getBoundingClientRect(),
+              _ = _.getBoundingClientRect(),
+              _ = "overlay" == _ || "overlay-center" == _,
+              _ = _.getBoundingClientRect();
+            _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;"),
+              _ && _.setAttribute("style", "display: none;");
+            let _ = _;
+            _.matches(":dir(rtl)") &&
+              ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
+            let {
+                nLeft: _,
+                nTop: _,
+                nOverflow: _,
+                nLateralOverflow: _,
+              } = _(_, _, _, _, _, _, _),
+              _ = _;
+            if (_ > (_ ?? 10) && !_) {
+              const _ = (function (_) {
+                  switch (_) {
+                    case "right":
+                      return "left";
+                    case "left":
+                      return "right";
+                    case "bottom":
+                      return "top";
+                    case "top":
+                      return "bottom";
+                    case "overlay":
+                      return "overlay";
+                    case "overlay-center":
+                      return "overlay-center";
+                  }
+                })(_),
+                {
+                  nLeft: _,
+                  nTop: _,
+                  nOverflow: _,
+                  nLateralOverflow: _,
+                } = _(_, _, _, _, _, _, _);
+              if (
+                (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
+                _ > (_ ?? 10))
+              )
+                return (
+                  console.log(
+                    "Not showing hover because it didn't fit in the main or alt direction",
+                  ),
+                  _.setAttribute("style", "display: none;"),
+                  _(!0),
+                  void _?.()
+                );
+            }
+            0 === _ ||
+              _ ||
+              ([_, _] = (function (_, _, _, _, _) {
+                let _ = Math.max(_[0], _[1]);
+                void 0 !== _ && (_ = Math.min(_, _));
+                _ = Math.max(0, _);
+                const _ = _[0] > _[1] ? _ : -_;
+                "left" === _ || "right" === _ ? (_ += _) : (_ += _);
+                return [_, _];
+              })(_, _, _, _, _));
+            let _ = null;
+            switch (_) {
+              case "left":
+                _ = _;
+                break;
+              case "right":
+                _ = _;
+                break;
+              case "top":
+                _ = _;
+                break;
+              case "bottom":
+                _ = _;
+            }
+            _ && _.setAttribute("style", ""),
+              _ != _ && _(_),
+              _ != _ && _(_),
+              _ || _(!0);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
+        _.useEffect(() => _(), [_]);
+        let _ = Object.assign(
+            {
+              left: _,
+              top: _,
+            },
+            _,
+          ),
+          _ = !_ || _.visible;
+        return (0, _.jsx)("div", {
+          popover: "manual",
+          ref: _,
+          className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
+          children: (0, _.jsx)("div", {
+            ..._,
+            className: (0, _._)(
+              _().HoverPosition,
+              _ && _ && _().Ready,
+              _ && _().NoSpace,
+              _ && _().EnablePointerEvents,
+              _,
+            ),
+            style: _,
+            ref: _,
+            children: _,
+          }),
+        });
+      }
+      function _(_, _, _, _, _, _, _) {
+        const _ = _.innerWidth,
+          _ = _.innerHeight;
+        let _, _, _, _;
+        switch (_) {
+          case "right":
+            (_ = _.right + _ - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
+              (_ = Math.max(0, _ + _.width - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+            break;
+          case "left":
+            (_ = _.left - _ - _.width - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
+              (_ = Math.max(0, 0 - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
+            break;
+          case "bottom":
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.bottom + _ - _.top),
+              (_ = Math.max(0, _ + _.height - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+            break;
+          case "top":
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.top - _ - _.height - _.top),
+              (_ = Math.max(0, 0 - _)),
+              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
+            break;
+          case "overlay":
+            (_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]);
+            break;
+          case "overlay-center":
+            (_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
+              (_ = _.top - _.top + 0.5 * _.height - 0.5 * _.height),
+              (_ = 0),
+              (_ = [0, 0]);
+        }
+        return {
+          nLeft: _,
+          nTop: _,
+          nOverflow: _,
+          nLateralOverflow: _,
+        };
+      }
+      function _(_, _, _, _) {
+        return Math.max(0, Math.min(1, _)) * (_ - _) + _;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { divProps: _, tooltipProps: _ } = _({
+          ..._,
+          toolTipContent: _.toolTipContent
+            ? (0, _.jsx)(_, {
+                children: _(_.toolTipContent),
+              })
+            : null,
+        });
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            _.children,
+          ],
+        });
+      }
+      function _(_) {
+        const { divProps: _, tooltipProps: _ } = _(_);
+        return (0, _.jsxs)(_._, {
+          className: "tool-tip-source",
+          noFocusRing: !0,
+          focusable: _.bNavStop ?? !!_.onClick,
+          ..._,
+          children: [
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            _.children,
+          ],
+        });
+      }
+      function _(_) {
+        const { children: _ } = _,
+          { divProps: _, tooltipProps: _ } = _({
+            ..._,
+            toolTipContent: _.toolTipContent
+              ? (0, _.jsx)(_, {
+                  children: _(_.toolTipContent),
+                })
+              : null,
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _.cloneElement(_, {
+              ..._,
+              ..._.props,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            toolTipContent: _,
+            nDelayShowMS: _ = 300,
+            bDisabled: _,
+            direction: _,
+            nBodyAlignment: _,
+            nBodyDistance: _,
+            nAllowOffscreenPx: _,
+            nMaxLateralMoveOnScreen: _,
+            strTooltipClassname: _,
+            bNavStop: _,
+            bTopmost: _,
+            usePointerEvents: _,
+            children: _,
+            onMouseLeave: _,
+            ..._
+          } = _,
+          _ = {
+            direction: _,
+            nBodyAlignment: _,
+            nBodyDistance: _,
+            nAllowOffscreenPx: _,
+            nMaxLateralMoveOnScreen: _,
+            className: _,
+            bTopmost: _,
+          },
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(),
+          _ = _.useCallback(
+            (_) => {
+              (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
+                (_(!0), _(_.currentTarget));
+            },
+            [_],
+          ),
+          _ = _.useCallback(() => {
+            _(!1);
+          }, []);
+        _.useEffect(() => {
+          _ && _ && _(!1);
+        }, [_, _]);
+        const _ = {
+          active: _ && !_,
+          target: _,
+          nDelayShowMS: _,
+          hoverPositionProps: _,
+          children: _,
+        };
+        let _ = {
+          ..._,
+        };
+        return (
+          _
+            ? ((_.onPointerEnter = _), (_.onPointerLeave = _))
+            : ((_.onMouseEnter = _), (_.onMouseLeave = _)),
+          {
+            divProps: _,
+            stateHandlers: {
+              setTarget: _,
+              setHovered: _,
+            },
+            tooltipProps: _,
+          }
+        );
+      }
+      function _(_) {
+        return "string" == typeof _ ? _._.LocalizeIfToken(_, !0) : _;
+      }
+      function _(_) {
+        return (0, _.jsx)("div", {
+          ..._,
+          className: (0, _._)(_().TextToolTip, _.className),
+        });
+      }
+      function _(_) {
+        const {
+            active: _,
+            target: _,
+            nDelayShowMS: _ = 300,
+            hoverPositionProps: _,
+            children: _,
+          } = _,
+          [_, _] = _.useState(_);
+        return (
+          _.useEffect(() => {
+            if (_) {
+              if (_) {
+                const _ = window.setTimeout(() => _(!0), _);
+                return () => window.clearTimeout(_);
+              }
+              _(!0);
+            } else (0, _._)() || _(!1);
+          }, [_]),
+          _ && _ && _
+            ? (0, _.jsx)(_, {
+                target: _,
+                ..._,
+                children: _,
+              })
+            : null
+        );
+      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -8379,7 +8736,7 @@
             icon: _,
             small: _,
           } = _,
-          _ = _ ? _._ : _._;
+          _ = _ ? _ : _;
         let _ = _;
         return (
           (_ ??= _ ? (0, _.jsx)(_.Jru, {}) : void 0),
@@ -10046,7 +10403,7 @@
           role: "option",
           "aria-selected": _,
           children: Boolean(_.tooltip)
-            ? (0, _.jsx)(_._, {
+            ? (0, _.jsx)(_, {
                 toolTipContent: _.tooltip,
                 bTopmost: !0,
                 className: "TooltipContainer",
@@ -12258,14 +12615,31 @@
             (_ || 0 === _) && (_.scrollPaddingBottom = _),
             (_ || 0 === _) && (_.scrollPaddingLeft = _);
           const { ref: _, navRef: _ } = (function () {
-              const _ = _.useRef(null),
+              const _ = _.useRef({
+                  width: 0,
+                  height: 0,
+                }),
+                _ = _.useRef(null),
                 _ = _.useCallback(
                   (_) => {
-                    _.current?.BFocusWithin() &&
+                    if (!_.current?.BFocusWithin()) return;
+                    const _ = Math.round(_.contentRect.width),
+                      _ = Math.round(_.contentRect.height),
+                      _ = Math.abs(_ - _.current.width),
+                      _ = Math.abs(_ - _.current.height);
+                    (_ >= 1 || _ >= 1) &&
+                      ((_.current = {
+                        width: _,
+                        height: _,
+                      }),
+                      _(
+                        "KeepFocusedElementInViewOnResize scrolling focused element into view due to resize of",
+                        _.target,
+                      ),
                       _.current.Node()?.GetLastFocusElement()?.scrollIntoView({
                         behavior: "auto",
                         block: "nearest",
-                      });
+                      }));
                   },
                   [_],
                 );
@@ -12711,8 +13085,8 @@
             "Hmd_SupportsGpuBusMonitoring_Bool"),
           (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
             "DriverProvidedIPDVisibility_Bool"),
-          (_[(_.Prop_Hmd_SupportsVRGamepadFocus_Bool = 2117)] =
-            "Prop_Hmd_SupportsVRGamepadFocus_Bool"),
+          (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
+            "Prop_SupportsVRGamepadMode_Bool"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -12733,6 +13107,8 @@
             "DriverRequestedMuraFeather_OuterBottom_Int32"),
           (_[(_.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
             "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+          (_[(_.Hmd_ForceRoomViewOutsideChaperone_Bool = 2500)] =
+            "Hmd_ForceRoomViewOutsideChaperone_Bool"),
           (_[(_.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
           (_[(_.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
           (_[(_.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
@@ -12877,7 +13253,7 @@
             (_[(_.SmoothStep = 3)] = "SmoothStep"),
             (_[(_.SmootherStep = 4)] = "SmootherStep");
         })(_ || (_ = {}));
-      var _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -12911,20 +13287,38 @@
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.System = 1)] = "System"),
-            (_[(_.SteamInput = 2)] = "SteamInput"),
-            (_[(_.VRInput = 3)] = "VRInput");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.SceneApp = 1)] = "SceneApp"),
             (_[(_.Panel = 2)] = "Panel");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.ControllerPairing = 0)] = "ControllerPairing"),
+            (_[(_.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
+            (_[(_.SystemButtonHideDashboard = 2)] =
+              "SystemButtonHideDashboard"),
+            (_[(_.SystemButtonDashboardHidden = 3)] =
+              "SystemButtonDashboardHidden"),
+            (_[(_.SystemButtonShowDashboard = 4)] =
+              "SystemButtonShowDashboard"),
+            (_[(_.PairWifiDongle = 5)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 6)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
             (_[(_.ThirdPartyClient = 1)] = "ThirdPartyClient"),
             (_[(_.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
             (_[(_.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"),
+            (_[(_.AuroraFloor = 1)] = "AuroraFloor");
+        })(_ || (_ = {}));
+      var _, _;
+      !(function (_) {
+        (_[(_.Curved = 0)] = "Curved"), (_[(_.Flat = 1)] = "Flat");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"), (_[(_.Aurora = 1)] = "Aurora");
         })(_ || (_ = {}));
       !(function (_) {
         if ("string" != typeof _) return NaN;
@@ -13761,9 +14155,7 @@
           !_ || !_)
         )
           return null;
-        let _ = (0, _.jsx)(_._, {
-          children: _,
-        });
+        let _ = _;
         return (
           _ &&
             (_ = (0, _.jsx)(_, {
@@ -19520,22 +19912,19 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest(_ = !0) {
-          const _ = "nextfest",
-            _ = this.jsondata.sale_vanity_id?.toLowerCase(),
+        BIsNextFest(_ = !1) {
+          const _ = this.jsondata.sale_vanity_id?.toLowerCase(),
             _ = new _._(this.clanSteamID).GetAccountID();
           return (
             !(!_ || _ != _._) &&
-            (_
-              ? __webpack_require__.startsWith(_)
-              : __webpack_require__.startsWith(_) &&
-                !__webpack_require__.includes("prev"))
+            !!_.startsWith("nextfest") &&
+            (!_ || (!_.endsWith("preview") && !_.endsWith("press")))
           );
         }
         BShowNextFestHeader(_) {
           return _ && _._.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }
@@ -21451,7 +21840,7 @@
             children: [
               _.format("LT"),
               _
-                ? (0, _.jsx)(_._, {
+                ? (0, _.jsx)(_, {
                     toolTipContent: _.format("Z") + ", " + _,
                     children: (0, _.jsxs)("span", {
                       children: [" ", _.zoneAbbr()],
@@ -21526,7 +21915,7 @@
               stylesmodule: _.stylesmodule,
             }),
           });
-          return (0, _.jsx)(_._, {
+          return (0, _.jsx)(_, {
             toolTipContent: _,
             direction: "top",
             className: _.className,
@@ -29181,7 +29570,7 @@
               _: _,
             }),
             _
-              ? (0, _.jsx)(_._, {
+              ? (0, _.jsx)(_, {
                   toolTipContent: "#Login_RememberMe_Tooltip",
                   direction: "bottom",
                   children: (0, _.jsx)(_, {
@@ -30686,7 +31075,7 @@
                   (0, _.jsxs)("div", {
                     className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
                     children: [
-                      (0, _.jsx)(_._, {
+                      (0, _.jsx)(_, {
                         className: _.CheckboxWrapper,
                         bTopmost: !0,
                         toolTipContent: (0, _._)(
@@ -30724,7 +31113,7 @@
                   (0, _.jsxs)("div", {
                     className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
                     children: [
-                      (0, _.jsx)(_._, {
+                      (0, _.jsx)(_, {
                         className: _.CheckboxWrapper,
                         bTopmost: !0,
                         toolTipContent: (0, _._)(
@@ -31605,7 +31994,7 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return (0, _.jsx)(_._, {
+        return (0, _.jsx)(_, {
           toolTipContent: _,
           direction: "top",
           children: (0, _.jsx)(_._, {
@@ -31648,7 +32037,6 @@
           })
         );
       }
-      __webpack_require__("chunkid");
       const _ = "ː",
         _ = 604800;
       class _ {
@@ -31946,7 +32334,7 @@
           !_.startsWith("steam://")
             ? (0, _._)(_)
             : void 0;
-        return (0, _.jsx)(_._, {
+        return (0, _.jsx)(_, {
           toolTipContent: _,
           direction: "top",
           children: (0, _.jsx)(_._, {
@@ -35853,7 +36241,7 @@
         _(
           "----------------------------------------------------------------------------------",
         ),
-          _("Scrolling Into View:", _);
+          _("Scrolling Into View (NoTransform):", _);
         let _ = [],
           _ = _,
           _ = _(_),
@@ -37046,19 +37434,27 @@
                       _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
                       _
                         ? _(0, _, _)
-                        : _.scrollIntoView({
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          _.scrollIntoView({
                             behavior: _,
                             block: "nearest",
-                          });
+                          }));
                   } else
                     _("No previous element for scrolling, will jump"),
                       _
                         ? _(0, _, "auto")
-                        : _?.scrollIntoView({
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          _?.scrollIntoView({
                             behavior: "auto",
                             block: "nearest",
                             inline: "nearest",
-                          });
+                          }));
                 }
               })(this, _, _);
         }
@@ -38428,6 +38824,11 @@
                   },
                   context: {
                     _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  url: {
+                    _: 5,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -40449,8 +40850,8 @@
                 _.set_message(JSON.stringify(_.message)),
                 _.strComponentStack &&
                   ((_ ??= {}), (_.componentStack = _.strComponentStack)),
-                _.strUrl && ((_ ??= {}), (_.url = _.strUrl)),
                 _ && _.set_context(JSON.stringify(_)),
+                _.strUrl && _.set_url(_.strUrl),
                 _
               );
             });
@@ -61527,6 +61928,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  formatted_lowest_recent_price: {
+                    _: 55,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -61594,6 +62000,11 @@
                   },
                   discount_end_date: {
                     _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  master_sub_appid: {
+                    _: 4,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -64239,6 +64650,36 @@
                     _: 21,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  position_is_waitlist: {
+                    _: 22,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  user_waitlist_token: {
+                    _: 23,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  queue_in_waitlist: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  queue_waitlist_token: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  collection_time_active: {
+                    _: 26,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  reservation_not_allowed: {
+                    _: 27,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -68896,208 +69337,6 @@
               : null
           );
         }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            target: _,
-            visibilityObserver: _,
-            className: _,
-            style: _,
-            bEnablePointerEvents: _,
-            direction: _ = "right",
-            nBodyAlignment: _ = 0.5,
-            nBodyDistance: _ = 8,
-            nAllowOffscreenPx: _ = 10,
-            nMaxLateralMoveOnScreen: _,
-            onNoSpace: _,
-            bTopmost: _,
-            children: _,
-            ..._
-          } = _,
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(null),
-          [_, _] = _.useState(null),
-          _ = _.useCallback(() => {
-            let _ = _;
-            if (!_ || !_ || !_) return;
-            if (_ && _ && !_.visible) return;
-            let _ = _.ownerDocument.defaultView;
-            if (!_ || _.closed) return;
-            const _ = _.querySelector(".hover_arrow.left"),
-              _ = _.querySelector(".hover_arrow.right"),
-              _ = _.querySelector(".hover_arrow.top"),
-              _ = _.querySelector(".hover_arrow.bottom"),
-              _ = _.getBoundingClientRect(),
-              _ = _.getBoundingClientRect(),
-              _ = "overlay" == _ || "overlay-center" == _,
-              _ = _.getBoundingClientRect();
-            _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;");
-            let _ = _;
-            _.matches(":dir(rtl)") &&
-              ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
-            let {
-                nLeft: _,
-                nTop: _,
-                nOverflow: _,
-                nLateralOverflow: _,
-              } = _(_, _, _, _, _, _, _),
-              _ = _;
-            if (_ > (_ ?? 10) && !_) {
-              const _ = (function (_) {
-                  switch (_) {
-                    case "right":
-                      return "left";
-                    case "left":
-                      return "right";
-                    case "bottom":
-                      return "top";
-                    case "top":
-                      return "bottom";
-                    case "overlay":
-                      return "overlay";
-                    case "overlay-center":
-                      return "overlay-center";
-                  }
-                })(_),
-                {
-                  nLeft: _,
-                  nTop: _,
-                  nOverflow: _,
-                  nLateralOverflow: _,
-                } = _(_, _, _, _, _, _, _);
-              if (
-                (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
-                _ > (_ ?? 10))
-              )
-                return (
-                  console.log(
-                    "Not showing hover because it didn't fit in the main or alt direction",
-                  ),
-                  _.setAttribute("style", "display: none;"),
-                  _(!0),
-                  void _?.()
-                );
-            }
-            0 === _ ||
-              _ ||
-              ([_, _] = (function (_, _, _, _, _) {
-                let _ = Math.max(_[0], _[1]);
-                void 0 !== _ && (_ = Math.min(_, _));
-                _ = Math.max(0, _);
-                const _ = _[0] > _[1] ? _ : -_;
-                "left" === _ || "right" === _ ? (_ += _) : (_ += _);
-                return [_, _];
-              })(_, _, _, _, _));
-            let _ = null;
-            switch (_) {
-              case "left":
-                _ = _;
-                break;
-              case "right":
-                _ = _;
-                break;
-              case "top":
-                _ = _;
-                break;
-              case "bottom":
-                _ = _;
-            }
-            _ && _.setAttribute("style", ""),
-              _ != _ && _(_),
-              _ != _ && _(_),
-              _ || _(!0);
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
-        _.useEffect(() => _(), [_]);
-        let _ = Object.assign(
-            {
-              left: _,
-              top: _,
-            },
-            _,
-          ),
-          _ = !_ || _.visible;
-        return (0, _.jsx)("div", {
-          ref: _,
-          className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
-          children: (0, _.jsx)("div", {
-            ..._,
-            className: (0, _._)(
-              _().HoverPosition,
-              _ && _ && _().Ready,
-              _ && _().NoSpace,
-              _ && _().EnablePointerEvents,
-              _,
-            ),
-            style: _,
-            ref: _,
-            children: _,
-          }),
-        });
-      }
-      function _(_, _, _, _, _, _, _) {
-        const _ = _.innerWidth,
-          _ = _.innerHeight;
-        let _, _, _, _;
-        switch (_) {
-          case "right":
-            (_ = _.right + _ - _.left),
-              (_ = _(_.top - _.top, _.height, _.height, _)),
-              (_ = Math.max(0, _ + _.width - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
-            break;
-          case "left":
-            (_ = _.left - _ - _.width - _.left),
-              (_ = _(_.top - _.top, _.height, _.height, _)),
-              (_ = Math.max(0, 0 - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
-            break;
-          case "bottom":
-            (_ = _(_.left - _.left, _.width, _.width, _)),
-              (_ = _.bottom + _ - _.top),
-              (_ = Math.max(0, _ + _.height - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
-            break;
-          case "top":
-            (_ = _(_.left - _.left, _.width, _.width, _)),
-              (_ = _.top - _ - _.height - _.top),
-              (_ = Math.max(0, 0 - _)),
-              (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
-            break;
-          case "overlay":
-            (_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]);
-            break;
-          case "overlay-center":
-            (_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
-              (_ = _.top - _.top + 0.5 * _.height - 0.5 * _.height),
-              (_ = 0),
-              (_ = [0, 0]);
-        }
-        return {
-          nLeft: _,
-          nTop: _,
-          nOverflow: _,
-          nLateralOverflow: _,
-        };
-      }
-      function _(_, _, _, _) {
-        return Math.max(0, Math.min(1, _)) * (_ - _) + _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -79590,214 +79829,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_) {
-        const [_, _] = _.useState(null),
-          _ = _.useMemo(
-            () => ({
-              targetElement: _,
-            }),
-            [_],
-          );
-        return (0, _.jsxs)(_.Provider, {
-          value: _,
-          children: [
-            (0, _.jsx)("div", {
-              ref: _,
-            }),
-            _.children,
-          ],
-        });
-      }
-      function _(_) {
-        const { divProps: _, tooltipProps: _ } = _({
-          ..._,
-          toolTipContent: _.toolTipContent
-            ? (0, _.jsx)(_, {
-                children: _(_.toolTipContent),
-              })
-            : null,
-        });
-        return (0, _.jsxs)(_._, {
-          className: "tool-tip-source",
-          noFocusRing: !0,
-          focusable: _.bNavStop ?? !!_.onClick,
-          ..._,
-          children: [
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-            _.children,
-          ],
-        });
-      }
-      function _(_) {
-        const { divProps: _, tooltipProps: _ } = _(_);
-        return (0, _.jsxs)(_._, {
-          className: "tool-tip-source",
-          noFocusRing: !0,
-          focusable: _.bNavStop ?? !!_.onClick,
-          ..._,
-          children: [
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-            _.children,
-          ],
-        });
-      }
-      function _(_) {
-        const { children: _ } = _,
-          { divProps: _, tooltipProps: _ } = _({
-            ..._,
-            toolTipContent: _.toolTipContent
-              ? (0, _.jsx)(_, {
-                  children: _(_.toolTipContent),
-                })
-              : null,
-          });
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            _.cloneElement(_, {
-              ..._,
-              ..._.props,
-            }),
-            (0, _.jsx)(_, {
-              ..._,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            toolTipContent: _,
-            nDelayShowMS: _ = 300,
-            bDisabled: _,
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
-            nMaxLateralMoveOnScreen: _,
-            strTooltipClassname: _,
-            bNavStop: _,
-            bTopmost: _,
-            usePointerEvents: _,
-            children: _,
-            onMouseLeave: _,
-            ..._
-          } = _,
-          _ = {
-            direction: _,
-            nBodyAlignment: _,
-            nBodyDistance: _,
-            nAllowOffscreenPx: _,
-            nMaxLateralMoveOnScreen: _,
-            className: _,
-            bTopmost: _,
-          },
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(),
-          _ = _.useCallback(
-            (_) => {
-              (_ && "pointerType" in _ && "mouse" != _.pointerType) ||
-                (_(!0), _(_.currentTarget));
-            },
-            [_],
-          ),
-          _ = _.useCallback(() => {
-            _(!1);
-          }, []);
-        _.useEffect(() => {
-          _ && _ && _(!1);
-        }, [_, _]);
-        const _ = {
-          active: _ && !_,
-          target: _,
-          nDelayShowMS: _,
-          hoverPositionProps: _,
-          children: _,
-        };
-        let _ = {
-          ..._,
-        };
-        return (
-          _
-            ? ((_.onPointerEnter = _), (_.onPointerLeave = _))
-            : ((_.onMouseEnter = _), (_.onMouseLeave = _)),
-          {
-            divProps: _,
-            stateHandlers: {
-              setTarget: _,
-              setHovered: _,
-            },
-            tooltipProps: _,
-          }
-        );
-      }
-      function _(_) {
-        return "string" == typeof _ ? _._.LocalizeIfToken(_, !0) : _;
-      }
-      function _(_) {
-        return (0, _.jsx)("div", {
-          ..._,
-          className: (0, _._)(_().TextToolTip, _.className),
-        });
-      }
-      function _(_) {
-        const {
-            active: _,
-            target: _,
-            nDelayShowMS: _ = 300,
-            hoverPositionProps: _,
-            children: _,
-          } = _,
-          [_, _] = _.useState(_),
-          _ = _();
-        if (
-          (_.useEffect(() => {
-            if (_) {
-              if (_) {
-                const _ = window.setTimeout(() => _(!0), _);
-                return () => window.clearTimeout(_);
-              }
-              _(!0);
-            } else (0, _._)() || _(!1);
-          }, [_]),
-          !_)
-        )
-          return null;
-        if (!_ || !_) return null;
-        const { targetElement: _ } = _;
-        return _.createPortal(
-          (0, _.jsx)(_._, {
-            target: _,
-            ..._,
-            children: _,
-          }),
-          _ ?? _.ownerDocument.body,
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       const _ = {
         _: "y",
@@ -80906,7 +80937,15 @@
           let _ = this.m_sName;
           const _ = this.m_fnIdGenerator?.() ?? null;
           null != _ && (_ += " (" + _ + ")");
-          _(_, _, _.Get().IncludeBacktraceInLog, _, this.m_sName, ..._);
+          _(
+            _,
+            _,
+            _.Get().IncludeBacktraceInLog,
+            _.Get().AllowCSSInLogStyling,
+            _,
+            this.m_sName,
+            ..._,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "Debug", null),
@@ -80917,9 +80956,11 @@
       class _ {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
+        static k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors";
         m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
+        m_bAllowCSSInLogStyling = !0;
         m_SettingsChangedCallback = new _._();
         m_bLoading = !0;
         constructor() {
@@ -80930,24 +80971,30 @@
             _.Info,
             !0,
             this.IncludeBacktraceInLog,
+            this.AllowCSSInLogStyling,
             "LogManager",
             "LogManager",
             ..._,
           );
         }
         async LoadSettings() {
-          const _ = (_) => {
+          const _ = (_, _) => {
             try {
               const _ = localStorage.getItem(_);
-              return _ ? JSON.parse(_) : void 0;
+              return _ ? JSON.parse(_) : _;
             } catch {
-              return;
+              return _;
             }
           };
-          this.m_bIncludeBacktraceInLog = !!_(
+          (this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
-          );
-          const _ = _(_.k_EnabledLogNames_StorageKey);
+            !1,
+          )),
+            (this.m_bAllowCSSInLogStyling = !!_(
+              _.k_AllowCSSInLogColors_StorageKey,
+              !0,
+            ));
+          const _ = _(_.k_EnabledLogNames_StorageKey, void 0);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -80966,6 +81013,10 @@
             localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
               JSON.stringify(this.m_bIncludeBacktraceInLog),
+            ),
+            localStorage.setItem(
+              _.k_AllowCSSInLogColors_StorageKey,
+              JSON.stringify(this.m_bAllowCSSInLogStyling),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -81040,56 +81091,66 @@
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
         }
+        get AllowCSSInLogStyling() {
+          return this.m_bAllowCSSInLogStyling;
+        }
+        async SetAllowCSSInLogStyling(_) {
+          (this.m_bAllowCSSInLogStyling = _),
+            this.m_SettingsChangedCallback.Dispatch(),
+            await this.SaveSettings();
+        }
         GetLogNames() {
           return Array.from(this.LogNames).sort();
         }
       }
-      function _(_, _, _, _, _, ..._) {
-        const _ = (function (_) {
-            let _ = 0;
-            for (let _ = 0; _ < _.length; _++)
-              _ = _.charCodeAt(_) + ((_ << 5) - _);
-            return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
-          })(_).map((_, _) =>
-            Math.round(
-              Math.max(0, Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15))),
-            ),
-          ),
-          _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128;
-        var _;
-        let _ = _;
-        _ &&
-          (_ =
-            (function (_) {
-              switch (_) {
-                case _.Debug:
-                  return String.fromCodePoint(128027);
-                case _.Info:
-                  return String.fromCodePoint(8505);
-                case _.Warning:
-                  return String.fromCodePoint(9888);
-                case _.Error:
-                  return String.fromCodePoint(128165);
-              }
-            })(_) +
-            " " +
-            _);
-        const _ =
-            _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
-          _ = _ && _.shift();
-        let _;
+      function _(_, _, _, _, _, _, ..._) {
+        let _,
+          _ = _;
         if (
-          ((_ = _
-            ? [
-                `%c${_}%c:${_ ? " %c" + _ : ""}`,
-                `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
-                "color: transparent; margin-right: -1ch",
-                ...(_ ? [""] : []),
-                ..._,
-              ]
-            : _),
-          _)
-        )
+          (_ &&
+            (_ =
+              (function (_) {
+                switch (_) {
+                  case _.Debug:
+                    return String.fromCodePoint(128027);
+                  case _.Info:
+                    return String.fromCodePoint(8505);
+                  case _.Warning:
+                    return String.fromCodePoint(9888);
+                  case _.Error:
+                    return String.fromCodePoint(128165);
+                }
+              })(_) +
+              " " +
+              _),
+          _ && _)
+        ) {
+          const _ = (function (_) {
+              let _ = 0;
+              for (let _ = 0; _ < _.length; _++)
+                _ = _.charCodeAt(_) + ((_ << 5) - _);
+              return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
+            })(_).map((_, _) =>
+              Math.round(
+                Math.max(
+                  0,
+                  Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15)),
+                ),
+              ),
+            ),
+            _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128,
+            _ = _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
+            _ = _ && _.shift();
+          _ = [
+            `%c${_}%c:${_ ? " %c" + _ : ""}`,
+            `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+            "color: transparent; margin-right: -1ch",
+            ...(_ ? [""] : []),
+            ..._,
+          ];
+        } else _ = [`${_}:`, ..._];
+        var _;
+        if (_)
           console.groupCollapsed(..._),
             console.trace("Callstack"),
             console.groupEnd();
@@ -81731,7 +81792,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 76075), _((_._ = _));
+      return (_ = 48428), _((_._ = _));
       var _;
     });
     _._();

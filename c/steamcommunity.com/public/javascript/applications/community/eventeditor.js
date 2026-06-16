@@ -2742,16 +2742,18 @@
           });
       }
       function _(_, _, _) {
-        const _ = _._.CreateClone();
+        const _ = _._.CreateClone(),
+          _ = _.GetEventModel();
         if (
-          ((_.GetEventModel().jsondata.sale_header_offset = 530),
+          ((_.jsondata.sale_header_offset = 36 != _.GetEventType() ? 530 : 0),
           _ && _.length > 0)
         ) {
           const _ = _.GetLanguagesWithTokens();
-          _.ClearLanguagesTokens(_),
-            (_.GetEventModel().jsondata.bSaleEnabled = !0),
+          _.ClearLanguagesTokens(_);
+          const _ = _.jsondata.bSaleEnabled;
+          (_.jsondata.bSaleEnabled = !0),
             _(_, _, _),
-            (_.GetEventModel().jsondata.bSaleEnabled = !1);
+            (_.jsondata.bSaleEnabled = _);
         }
         _("clone");
       }
@@ -9509,7 +9511,7 @@
                 (_.background_gradient_top = _.background_gradient_top),
                 (_.border_color = _.border_color),
                 (_.border_width = _.border_width)),
-                _._.SetSaleSectionType(_, _),
+                _._.SetSaleSectionType(_.GetEventType(), _, _),
                 _.GetEventModel().jsondata.sale_sections.push(_),
                 _.SetDirty(_._.jsondata_sales),
                 (0, _._)((0, _._)(_), !0),

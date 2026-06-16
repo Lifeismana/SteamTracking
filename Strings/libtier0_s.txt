@@ -99,8 +99,8 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tmp/.steam-sem-names
+00:54:08
 0123456789ABCDEF
-03:02:07
 12CStdMemAlloc
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
@@ -288,7 +288,7 @@ IsStackTrackingFiltered
 IsValidBoolValue
 JArray
 Jobs/Coroutines
-Jun  2 2026
+Jun  9 2026
 Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
@@ -356,7 +356,6 @@ Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsProcessWOW64
 Plat_IsSteamConsoleMode
-Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
@@ -372,6 +371,7 @@ Plat_Realloc
 Plat_RelativeTickFrequency
 Plat_RelativeTicks
 Plat_SetAllocErrorFn
+Plat_ShouldUseSteamDeckClientBranch
 Plat_TickAddMicroSec
 Plat_TickDiffMicroSec
 Plat_TickDiffMilliSec

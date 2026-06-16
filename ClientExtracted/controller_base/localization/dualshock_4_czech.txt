@@ -46,7 +46,7 @@
 	"origin_ps4_button_dpad_w"					"Směrový kříž – doleva"
 	"origin_ps4_button_dpad_e"					"Směrový kříž – doprava"
 	"origin_ps4_gyro_move"						"Gyroskop – pohyb"
-	"origin_ps4_gyro_pitch"						"Gyroskop – sklonění"
+	"origin_ps4_gyro_pitch"						"Gyroskop – klopení"
 	"origin_ps4_gyro_yaw"						"Gyroskop – otáčení"
 	"origin_ps4_gyro_roll"						"Gyroskop – naklánění"
 	"origin_ps4_shoulder_l"						"Levý nárazník (L1)"

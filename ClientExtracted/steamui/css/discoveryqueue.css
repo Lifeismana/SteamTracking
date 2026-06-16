@@ -1252,6 +1252,29 @@
   background-color: #e3d6d1;
   color: #000;
 }
+._2jWguvQbMj3mHe0ytRpzNm {
+  position: absolute;
+  z-index: 11;
+  top: -20px;
+  left: 0;
+  padding: 3px 4px;
+  color: #fff;
+  background-color: #333;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  user-select: none;
+}
+._2jWguvQbMj3mHe0ytRpzNm ._3oxiEsdJdYRkKvYSWGAfih {
+  font-weight: 600;
+}
+._2jWguvQbMj3mHe0ytRpzNm {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+._2jWguvQbMj3mHe0ytRpzNm._3afqMxr7HnEfdxJwBg6GRd {
+  top: 0;
+  opacity: 1;
+}
 @keyframes _3qHy0ZfVKo5p8TWje-jtAG {
   from {
     background-position: 0 100%;

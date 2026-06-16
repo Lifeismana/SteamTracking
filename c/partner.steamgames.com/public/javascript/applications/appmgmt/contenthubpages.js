@@ -166,9 +166,7 @@
             return (0, _._)(
               _,
               (0, _.jsx)(_._, {
-                navProps: {
-                  focusable: !0,
-                },
+                focusable: !0,
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,
@@ -192,8 +190,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__._(_);
       __webpack_require__("chunkid");
       (0, _.createContext)(null);
       function _(_) {
@@ -322,24 +321,26 @@
         _ = function (_) {
           const { children: _, render: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _?.floating.refs.setFloating]),
-            _ = (0, _._)();
+            _ = (0, _._)([
+              _,
+              _?.floating.refs.setFloating,
+              (_) => _?.showPopover?.(),
+            ]);
           return _
             ? _.open
-              ? (0, _.jsx)(_._, {
-                  root: _?.targetElement,
+              ? (0, _.jsx)(_, {
+                  state: _,
                   children: (0, _.jsx)(_, {
-                    state: _,
-                    children: (0, _.jsx)(_, {
-                      ref: _,
-                      style: _.floating.floatingStyles,
-                      ..._.getFloatingProps(),
-                      render: _,
-                      children: (0, _.jsx)(_._, {
-                        elementsRef: _.elementsRef,
-                        labelsRef: _.labelsRef,
-                        children: _,
-                      }),
+                    ref: _,
+                    style: _.floating.floatingStyles,
+                    ..._.getFloatingProps({
+                      popover: "manual",
+                    }),
+                    render: _,
+                    children: (0, _.jsx)(_._, {
+                      elementsRef: _.elementsRef,
+                      labelsRef: _.labelsRef,
+                      children: _,
                     }),
                   }),
                 })
@@ -396,8 +397,6 @@
           });
         };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -549,6 +548,7 @@
             ref: _,
             variant: _ = "default",
             color: _,
+            align: _ = "center",
             ..._
           } = _,
           _ = "indeterminate" === _,
@@ -557,7 +557,7 @@
             _ || (_ && __webpack_require__(!!_ || !_));
           };
         return (0, _.jsxs)(_._, {
-          align: "center",
+          align: _,
           ref: _,
           role: "checkbox",
           "aria-checked": _ ? "mixed" : _,
@@ -691,6 +691,12 @@
                   middleware: _(_),
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
+                  strategy: "fixed",
+                  platform: {
+                    ..._._,
+                    getOffsetParent: (_) =>
+                      _?.ownerDocument?.defaultView ?? window,
+                  },
                 }),
                 _ = (0, _._)(_.context, {
                   enabled: !!_.click,

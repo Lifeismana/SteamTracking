@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "ตัวอย่างโฆษณาอาจไม่แสดงให้เห็นเกมเพลย์จริงบน Steam Deck",
     "StoreItemFound": "%1$s พบแล้ว (%2$s)",
     "StoreItemNotFound": "ไม่พบ (%1$s)",
+    "SteamURLAccepted": "%1$s URL ได้รับการยอมรับ",
+    "SteamURLInvalid": "URL ที่ไม่ถูกต้องไม่นำไปยังคุณสมบัติ Steam (ร้านค้า/ชุมชน)",
+    "PriceGrid_NormalPrice": "NORMALLY",
+    "PriceGrid_RecentPrice": "ต่ำสุดใน 30 วัน",
+    "PriceGrid_CurrentPrice": "NOW",
     "Dummy": "dummy"
 }

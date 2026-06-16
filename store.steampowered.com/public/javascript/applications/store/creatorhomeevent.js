@@ -488,19 +488,20 @@
         r = t(44165),
         i = t(90626),
         s = t(82429);
-      function l(e, n) {
-        const t = new a.lh();
+      function l(e, n, t) {
+        const i = new a.lh();
         return (
-          (t.clanSteamID = o.b.InitFromClanID(e)),
-          (t.GID = "fakeevent_" + c++),
-          (t.visibility_state = a.zv.k_EEventStateUnlisted),
-          (t.visibilityStartTime = (0, r.sB)() - 1),
-          (t.jsondata.bSaleEnabled = !0),
-          (t.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
-          (t.jsondata.sale_vanity_id = n),
-          (t.jsondata.sale_header_offset = 0),
-          (t.jsondata.sale_header_disable_top_margin = !1),
-          t
+          (i.type = n),
+          (i.clanSteamID = o.b.InitFromClanID(e)),
+          (i.GID = "fakeevent_" + c++),
+          (i.visibility_state = a.zv.k_EEventStateUnlisted),
+          (i.visibilityStartTime = (0, r.sB)() - 1),
+          (i.jsondata.bSaleEnabled = !0),
+          (i.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
+          (i.jsondata.sale_vanity_id = t),
+          (i.jsondata.sale_header_offset = 0),
+          (i.jsondata.sale_header_disable_top_margin = !1),
+          i
         );
       }
       let c = 1234;
@@ -559,7 +560,7 @@
         o = t(90626),
         r = t(56283),
         i = t(84811),
-        s = t(51706),
+        s = t(74568),
         l = t(61859),
         c = t(22797),
         d = t(17618),
@@ -1588,7 +1589,7 @@
         Be = t(61336),
         Ne = t(64846),
         Me = t(56283),
-        Ue = t(51706),
+        Ue = t(74568),
         Re = t(738),
         Pe = t(48479),
         Oe = t(30294),
@@ -4832,34 +4833,36 @@
               .GetSaleSections()
               .some((e) => "contenthubtitle" === e.section_type),
             I = g && u;
-          let S;
-          S = e
-            ? 0
+          let S,
+            f = !0;
+          e
+            ? (S = 0)
             : t.BUsesContentHubForItemSource()
-              ? 20
-              : t.jsondata.sale_header_offset || 0;
-          let f = !1;
-          530 === t.jsondata.sale_header_offset && (f = !0);
-          const D = oe.nY
+              ? (S = 20)
+              : t.GetEventType() == o.ajI
+                ? ((S = 0), (f = !1))
+                : (S = t.jsondata.sale_header_offset || 0);
+          const D = f && 530 === t.jsondata.sale_header_offset,
+            T = oe.nY
               .Get()
               .BIsPartnerTakeoverActive(
                 t.GetContentHubType(),
                 t.GetContentHubCategory(),
                 t.GetContentHubTag(),
               ),
-            T = Boolean(!D),
-            L = c
+            L = Boolean(!T),
+            B = c
               ? !C && m?.BIsBackgroundImageEnabled()
                 ? je.S.EPreviewMode_EditBackground
                 : je.S.EPreviewMode_Enabled
               : je.S.EPreviewMode_Disabled,
-            B = G || t.GetEventType() != o.ajI,
-            N = (0, Ne.m)(t.clanSteamID),
-            M = g ? i.Yo.NoTransform : i.Yo.NoTransformSparseContent,
-            U = (0, b.A)(
+            N = G || t.GetEventType() != o.ajI,
+            M = (0, Ne.m)(t.clanSteamID),
+            U = g ? i.Yo.NoTransform : i.Yo.NoTransformSparseContent,
+            R = (0, b.A)(
               h().SaleOuterContainer,
               w && h().SaleOuterTopMargin,
-              f && h().SaleNewSizing,
+              D && h().SaleNewSizing,
               h()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
               "SaleOuterContainer",
               e && h().SalePageLogoSet,
@@ -4876,20 +4879,20 @@
                   language: d,
                   bIsPreview: !!c,
                   children: [
-                    T && (0, a.jsx)(s.Sn, {}),
+                    L && (0, a.jsx)(s.Sn, {}),
                     (0, a.jsx)(q, { eventModel: t }),
                     !!m &&
-                      (B || N) &&
+                      (N || M) &&
                       (0, a.jsx)(Ot, {
                         backgroundImageEditModel: m,
                         bBackgroundImgGroupEditMode: C,
                         fnSetBackgroundImgGroupEditMode: E,
-                        bShowAsValveOnly: !B,
+                        bShowAsValveOnly: !N,
                       }),
                     (0, a.jsxs)(r.Z, {
                       style: I ? void 0 : { marginTop: `${S || 0}px` },
-                      className: U,
-                      scrollIntoViewType: M,
+                      className: R,
+                      scrollIntoViewType: U,
                       children: [
                         (0, a.jsx)(Z, { eventModel: t, language: d }),
                         (0, a.jsx)(ee, {
@@ -4897,7 +4900,7 @@
                         }),
                         (0, a.jsx)(se, { event: t, broadcastEmbedContext: A }),
                         (0, a.jsx)(Xt, {
-                          ePreviewMode: L,
+                          ePreviewMode: B,
                           event: t,
                           backgroundImageEditModel: m,
                           language: d,
@@ -5310,7 +5313,7 @@
         const x = (0, i.sfN)(r.TS.LANGUAGE),
           [v] = (0, g.QD)("livepreview");
         return (
-          v && (_ = (0, u.U)(n, "creatorhome_fake")),
+          v && (_ = (0, u.U)(n, i.ajI, "creatorhome_fake")),
           o.useEffect(() => {
             c.KN.InitGlobal().then(() => p(!1));
           }),
@@ -5363,17 +5366,16 @@
           [_, v] = r.useState(
             d ?? l.O3.GetClanEventFromAnnouncementGID(p.P9.ANNOUNCEMENT_GID),
           );
-        if (
-          (r.useEffect(() => {
-            if (!d && _?.AnnouncementGID != p.P9.ANNOUNCEMENT_GID) {
-              const e = new s.b(p.UF.CLANSTEAMID);
-              l.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                e,
-                p.P9.ANNOUNCEMENT_GID,
-                null,
-              ).then(v);
-            }
-          }, [_, d]),
+        r.useEffect(() => {
+          if (!d && _?.AnnouncementGID != p.P9.ANNOUNCEMENT_GID) {
+            const e = new s.b(p.UF.CLANSTEAMID);
+            l.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+              e,
+              p.P9.ANNOUNCEMENT_GID,
+              null,
+            ).then(v);
+          }
+        }, [_, d]),
           (function (e, n) {
             const t = (0, h.q3)(() => x.TU.Get().GetEventModelJson()),
               [a, o] = r.useState();
@@ -5386,10 +5388,9 @@
               )),
                 n(e);
             }, [e, n, a, t]);
-          })(_, v),
-          (0, o.s)(1500),
-          !_)
-        )
+          })(_, v);
+        const I = (0, x.ty)();
+        if (((0, o.s)(1500), !_))
           return (0, a.jsx)("div", {
             className: g().FlexCenter,
             style: { height: "500px" },
@@ -5398,9 +5399,10 @@
               string: (0, m.we)("#Loading"),
             }),
           });
-        const I =
-          _.visibility_state !== i.zv.k_EEventStateVisible &&
-          _.visibility_state !== i.zv.k_EEventStateUnlisted;
+        const j =
+          (_.visibility_state !== i.zv.k_EEventStateVisible &&
+            _.visibility_state !== i.zv.k_EEventStateUnlisted) ||
+          I;
         return (0, a.jsx)(S, {
           eventModel: _,
           children: (0, a.jsx)(b.oJ, {
@@ -5410,7 +5412,7 @@
                 promotionName: n,
                 language: t,
                 eventModel: _,
-                bIsPreview: I,
+                bIsPreview: j,
               }),
             }),
           }),

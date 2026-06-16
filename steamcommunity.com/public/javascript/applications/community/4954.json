@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "El avance podría no representar la jugabilidad real en Steam Deck",
     "StoreItemFound": "%1$s encontrados (%2$s)",
     "StoreItemNotFound": "No se encontró (%1$s)",
+    "SteamURLAccepted": "URL %1$s aceptado",
+    "SteamURLInvalid": "Error: el URL no corresponde a una propiedad de Steam (la tienda o la Comunidad).",
+    "PriceGrid_NormalPrice": "NORMALMENTE",
+    "PriceGrid_RecentPrice": "MÁS BAJO EN 30 DÍAS",
+    "PriceGrid_CurrentPrice": "ACTUAL",
     "Dummy": "dummy"
 }

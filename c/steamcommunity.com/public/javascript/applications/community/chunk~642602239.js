@@ -6274,7 +6274,7 @@
             null == _ ? void 0 : _.sale_carousel_breadcrumb_style,
         };
       }
-      function _(_, _) {
+      function _(_, _, _) {
         (_.library_spotlight = void 0),
           _.email_setting &&
             ((_.email_setting.locked = void 0),
@@ -6287,7 +6287,7 @@
           (_.app_right_requirement_info = void 0),
           (_.clone_from_event_gid = _),
           (_.clone_from_sale_enabled = _.bSaleEnabled),
-          (_.bSaleEnabled = !1),
+          (_.bSaleEnabled = _ == _.ajI),
           (_.sale_discount_event_id = void 0),
           (_.valve_access_log = []),
           (_.bInvisibleGameOptIn = void 0),
@@ -7688,23 +7688,25 @@
         BIsValidForRealm(_) {
           return this.GetIncludedRealmList().includes(_);
         }
-        BIsNextFest(_ = !0) {
+        BIsNextFest(_ = !1) {
           var _;
-          const _ = "nextfest",
-            _ =
+          const _ =
               null === (_ = this.jsondata.sale_vanity_id) || void 0 === _
                 ? void 0
                 : _.toLowerCase(),
             _ = new _._(this.clanSteamID).GetAccountID();
           return (
             !(!_ || _ != _._) &&
-            (_ ? _.startsWith(_) : _.startsWith(_) && !_.includes("prev"))
+            !!__webpack_require__.startsWith("nextfest") &&
+            (!_ ||
+              (!__webpack_require__.endsWith("preview") &&
+                !__webpack_require__.endsWith("press")))
           );
         }
         BShowNextFestHeader(_) {
           return _ && _._.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }

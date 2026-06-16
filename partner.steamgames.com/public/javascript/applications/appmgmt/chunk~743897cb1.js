@@ -21690,20 +21690,21 @@
           captionManifest: n,
           screenshot: l,
           forcePause: m,
-          onPlaybackEnd: u,
-          onPlayPauseChange: _,
-          onMuteChange: p,
-          uiMode: B,
-          altText: b,
-          title: h,
-          category: w,
-          statsURL: M,
-          muteWhenAutoplayBlocked: S,
-          localContext: z,
-          focus: v,
+          onPlaybackStart: u,
+          onPlaybackEnd: _,
+          onPlayPauseChange: p,
+          onMuteChange: B,
+          uiMode: h,
+          altText: w,
+          title: M,
+          category: S,
+          statsURL: z,
+          muteWhenAutoplayBlocked: v,
+          localContext: R,
+          focus: j,
         } = e;
-        (h = h || ""), (w = w || Pe.$m.$z);
-        let [R, j] = (function (e, t, r, i, s, n, o) {
+        (M = M || ""), (S = S || Pe.$m.$z);
+        let [T, I] = (function (e, t, r, i, s, n, o) {
           let l = g(),
             c = (0, a.useRef)(void 0);
           c.current || (c.current = new y(l));
@@ -21730,7 +21731,7 @@
             }, [o]),
             [m, c.current]
           );
-        })(r, s, n, M, u, _, p);
+        })(r, s, n, z, _, p, B);
         !(function (e, t) {
           (0, a.useImperativeHandle)(
             e,
@@ -21752,14 +21753,14 @@
             }),
             [t],
           );
-        })(t, j),
+        })(t, I),
           (function (e, t) {
             (t = !!t),
               (0, a.useEffect)(() => {
                 e.SetMuteWhenAutoplayBlocked(t);
               }, [e, t]);
-          })(j, !!S);
-        let [T, I] = (function (e) {
+          })(I, !!v);
+        let [F, x] = (function (e) {
             let t = (0, a.useRef)(null),
               r = (0, a.useRef)(null),
               i = (0, a.useRef)(null),
@@ -21803,11 +21804,11 @@
               ),
               m = (0, d.wY)(l);
             return [m, i.current];
-          })(j),
-          F = C(),
-          x = z && F ? F.refFullscreen : null,
-          U = (0, d.Ue)(T, x),
-          W = (function (e, t) {
+          })(I),
+          U = C(),
+          W = R && U ? U.refFullscreen : null,
+          O = (0, d.Ue)(F, W),
+          E = (function (e, t) {
             let r = (0, a.useRef)(!1),
               i = (0, a.useRef)(!1),
               s = (0, a.useRef)(!1);
@@ -21822,35 +21823,39 @@
               t || (s.current = !0),
               !s.current
             );
-          })(j, !!m),
-          O = W ? void 0 : R,
-          E = {};
-        I && ((E.width = `${I.nWidth}px`), (E.height = `${I.nHeight}px`)),
+          })(I, !!m),
+          q = E ? void 0 : T,
+          A = {};
+        x && ((A.width = `${x.nWidth}px`), (A.height = `${x.nHeight}px`));
+        let P = (0, b.q3)(() => I.IsBuffering());
+        a.useEffect(() => {
+          P || (u && u());
+        }, [P, u]),
           a.use(ne.n.Ready());
-        let q = (0, f.A)(o().TrailerPlayer, pt);
+        let N = (0, f.A)(o().TrailerPlayer, pt);
         return (0, i.jsxs)("div", {
-          ref: U,
-          className: q,
+          ref: O,
+          className: N,
           "data-trailer-player": !0,
           children: [
             (0, i.jsx)("video", {
-              ref: O,
-              style: E,
+              ref: q,
+              style: A,
               controls: !1,
               playsInline: !0,
-              "aria-label": b,
+              "aria-label": w,
               crossOrigin: "anonymous",
             }),
             (0, i.jsx)(bt, {
-              player: j,
-              uiMode: B,
-              category: w,
-              title: h,
-              focus: v,
+              player: I,
+              uiMode: h,
+              category: S,
+              title: M,
+              focus: j,
             }),
-            (0, i.jsx)(ft, { player: j }),
-            !W && (0, i.jsx)(ht, { player: j, screenshot: l }),
-            !W && (0, i.jsx)(We, { player: j }),
+            (0, i.jsx)(ft, { player: I }),
+            !E && (0, i.jsx)(ht, { player: I, screenshot: l }),
+            !E && (0, i.jsx)(We, { player: I }),
           ],
         });
       }
@@ -24278,19 +24283,19 @@
         BIsValidForRealm(e) {
           return this.GetIncludedRealmList().includes(e);
         }
-        BIsNextFest(e = !0) {
-          const t = "nextfest",
-            r = this.jsondata.sale_vanity_id?.toLowerCase(),
-            i = new m.b(this.clanSteamID).GetAccountID();
+        BIsNextFest(e = !1) {
+          const t = this.jsondata.sale_vanity_id?.toLowerCase(),
+            r = new m.b(this.clanSteamID).GetAccountID();
           return (
-            !(!r || i != _.GU) &&
-            (e ? r.startsWith(t) : r.startsWith(t) && !r.includes("prev"))
+            !(!t || r != _.GU) &&
+            !!t.startsWith("nextfest") &&
+            (!e || (!t.endsWith("preview") && !t.endsWith("press")))
           );
         }
         BShowNextFestHeader(e) {
           return e && U.iA.is_valve_email
-            ? this.BIsNextFest(!0)
-            : this.BIsNextFest(!1) &&
+            ? this.BIsNextFest(!1)
+            : this.BIsNextFest(!0) &&
                 !!this.startTime &&
                 this.startTime > new Date("2026-03-01").getTime() / 1e3;
         }
@@ -42799,7 +42804,7 @@
         E = r(14987),
         q = r(60014),
         A = r(35380),
-        P = r(91822),
+        P = r(93341),
         N = r(96006),
         G = r(94191),
         k = r(94095),
@@ -42900,11 +42905,11 @@
                             bPreferAssetWithoutOverride: Y,
                           }),
                           (0, i.jsx)(Q.J, { id: J }),
-                          (0, i.jsx)(x.m, {
+                          (0, i.jsx)(x.mj, {
                             id: J,
                             active: J && te,
                             bIsHoverMode: !0,
-                            eGrowOnActivate: x.C.k_ETrailerGrowAmount_Medium,
+                            eGrowOnActivate: x.C0.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),
@@ -43001,7 +43006,7 @@
                             children: (0, i.jsx)("div", {
                               className:
                                 y().StoreSalePriceActionWidgetContainer,
-                              children: (0, i.jsx)(F.N, { id: J }),
+                              children: (0, i.jsx)(F.NF, { id: J }),
                             }),
                           }),
                       (0, i.jsx)("div", {
@@ -43160,7 +43165,7 @@
                         (0, i.jsx)(u.h, { id: t, className: "CartBtn" }),
                     ],
                   }),
-                Boolean(!h) && (0, i.jsx)(o.N, { id: t }),
+                Boolean(!h) && (0, i.jsx)(o.NF, { id: t }),
                 Boolean(w) && (0, i.jsx)(m.Q8, { id: t }),
               ],
             }),

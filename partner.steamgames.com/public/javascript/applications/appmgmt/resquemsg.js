@@ -346,23 +346,30 @@
       function T(e) {
         const [t, i] = (0, s.useState)(null),
           { fnAddProductID: o } = S();
-        return (0, n.jsxs)("div", {
-          children: [
-            (0, n.jsx)(j.JU, { children: "Add Product SKU:" }),
-            (0, n.jsx)("p", {
-              children:
-                "Select an item for which we want to communicate a reservation status.",
-            }),
-            (0, n.jsx)(b, { selected: t, setSelected: i }),
-            (0, n.jsxs)(j.$n, {
-              disabled: !t,
-              onClick: () => {
-                o(t), i(null);
-              },
-              children: ["Add ", t?.product_description, " To List"],
-            }),
-          ],
-        });
+        return (
+          console.log("AddProductToReservationPositionMessage selected: ", t),
+          (0, n.jsxs)("div", {
+            children: [
+              (0, n.jsx)(j.JU, { children: "Add Product SKU:" }),
+              (0, n.jsx)("p", {
+                children:
+                  "Select an item for which we want to communicate a reservation status.",
+              }),
+              (0, n.jsx)(b, { selected: t, setSelected: i }),
+              (0, n.jsxs)(j.$n, {
+                disabled: !t,
+                onClick: () => {
+                  o(t), i(null);
+                },
+                children: [
+                  "Add '",
+                  t?.product_description ?? t?.product_identifier,
+                  "' To List",
+                ],
+              }),
+            ],
+          })
+        );
       }
       function b(e) {
         const { selected: t, setSelected: i } = e,
@@ -410,7 +417,7 @@
           options: c,
           value: u,
           onChange: (e) => {
-            e && i(e);
+            e && i(e.value);
           },
         });
       }
@@ -418,9 +425,9 @@
         R = i(99637),
         y = i(8905),
         A = i(9154),
-        C = i(738),
-        k = i(48479),
-        P = i(56011),
+        P = i(738),
+        C = i(48479),
+        k = i(56011),
         I = i(61859),
         D = i(95695),
         L = i(92825),
@@ -589,7 +596,7 @@
                 "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
             }),
             (0, n.jsx)(j.$n, {
-              onClick: (e) => (0, C.pg)((0, n.jsx)(X, {}), (0, P.uX)(e)),
+              onClick: (e) => (0, P.pg)((0, n.jsx)(X, {}), (0, k.uX)(e)),
               children: "Force Reload Definitions on Steam Servers",
             }),
           ],
@@ -603,22 +610,31 @@
                 t.edistributor == e.edistributor &&
                 t.product_identifier == e.product_identifier,
             );
-          })(t),
-          o = i.product_description + " " + i.distributor,
+          })(t);
+        if (!i)
+          return (0, n.jsxs)("div", {
+            children: [
+              "Unexpected: Could not find ProductID: ",
+              t.edistributor,
+              " : ",
+              t.product_identifier,
+            ],
+          });
+        const o = i.product_description + " " + i.distributor,
           a = (function (e) {
             const [t, i] = (0, s.useState)(() =>
               f.Get().GetPositionMessagingForProduct(e),
             );
             return (0, p.hL)(f.Get().GetPositionListChangeCallback(e), i), t;
           })(t);
-        return (0, n.jsxs)(k.qx, {
+        return (0, n.jsxs)(C.qx, {
           bStartMinimized: !1,
           title: o,
           tooltip: `distributor enum: ${i.edistributor}, part number: ${i.part_number}, product identifier: ${i.product_identifier}`,
           children: [
             (0, n.jsx)(j.$n, {
               onClick: (e) =>
-                (0, C.pg)((0, n.jsx)(J, { productID: t }), (0, P.uX)(e)),
+                (0, P.pg)((0, n.jsx)(J, { productID: t }), (0, k.uX)(e)),
               children: "Add new start position",
             }),
             (0, n.jsxs)("table", {
@@ -681,15 +697,15 @@
               children: [
                 (0, n.jsx)(j.$n, {
                   onClick: (e) =>
-                    (0, C.pg)(
+                    (0, P.pg)(
                       (0, n.jsx)(J, { productID: t, existingPositionMsg: t }),
-                      (0, P.uX)(e),
+                      (0, k.uX)(e),
                     ),
                   children: "Update",
                 }),
                 (0, n.jsx)(j.$n, {
                   onClick: (e) =>
-                    (0, C.pg)((0, n.jsx)(Z, { positionMsg: t }), (0, P.uX)(e)),
+                    (0, P.pg)((0, n.jsx)(Z, { positionMsg: t }), (0, k.uX)(e)),
                   children: "Delete",
                 }),
               ],
@@ -888,7 +904,7 @@
           children: [
             (0, n.jsx)("h1", {
               className: ne().PageTitle,
-              children: "Reservation Queue - Messaging Tools",
+              children: "Lawrence's Reservation Queue Position Messaging Tools",
             }),
             (0, n.jsx)("hr", { className: "VO" }),
             (0, n.jsxs)("div", {
@@ -1098,9 +1114,9 @@
           strDescription: R,
           bShowTimeZone: y,
           strInvalidDateTimeLocalizedMsg: A,
-          fnIsValidDateTime: C,
-          bWeekdaysOnly: k,
-          fnSetTimeToUpdate: P,
+          fnIsValidDateTime: P,
+          bWeekdaysOnly: C,
+          fnSetTimeToUpdate: k,
           bForce24HourFormat: I,
         } = e;
         let D =
@@ -1134,7 +1150,7 @@
               }, [c, o]),
               c
             );
-          })(B, F, A, C, c),
+          })(B, F, A, P, c),
           z = !c && Y;
         let O, W;
         if (t && i && t == i && i > l.HD.GetTimeNowWithOverride()) {
@@ -1165,7 +1181,7 @@
               (e = e.clone()).hour(i.hour()),
                 e.minute(i.minute()),
                 e.second(0),
-                P(e.unix()),
+                k(e.unix()),
                 E(e);
             },
             U,
@@ -1193,7 +1209,7 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              P(n), E(f().unix(n));
+              k(n), E(f().unix(n));
             },
             G,
           );
@@ -1243,7 +1259,7 @@
                             ((0 != n.weekday() && 6 != n.weekday()) ||
                               (o = !1));
                           return o;
-                        })(i, t, k, e),
+                        })(i, t, C, e),
                       initialValue: W,
                       inputProps: {
                         placeholder: (0, h.we)("#DateTimePicker_Enter_Date"),

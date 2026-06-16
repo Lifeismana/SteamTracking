@@ -10674,6 +10674,7 @@
                     br: be.qM.readString,
                     bw: be.gp.writeRepeatedString,
                   },
+                  group: { n: 17, br: be.qM.readString, bw: be.gp.writeString },
                 },
               }),
             Jr.sm_m

@@ -3300,7 +3300,8 @@
       function _(_) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
-        if (!_) return;
+        if (void 0 === _) return;
+        if (null === _) return null;
         const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
         return _ ? _.filter((_) => !!_.all_ages) : _;
       }

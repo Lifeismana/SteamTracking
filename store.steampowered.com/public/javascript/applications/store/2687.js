@@ -177,7 +177,7 @@
       n.d(t, { q: () => b });
       var a = n(7850),
         s = n(99171),
-        r = n(96171),
+        r = n(48210),
         o = n(39777),
         i = n(90626),
         c = n(43976),
@@ -201,13 +201,13 @@
             bShowAddToCart: S,
             bShowWishlistButton: w,
           } = e,
-          g = (0, i.useRef)(null),
-          [j, P] = (0, i.useState)(!1),
+          j = (0, i.useRef)(null),
+          [g, P] = (0, i.useState)(!1),
           { data: C } = (0, o.J$)(t);
         if (
           ((0, i.useEffect)(() => {
-            g.current && P(g.current.offsetWidth < 370);
-          }, [g]),
+            j.current && P(j.current.offsetWidth < 370);
+          }, [j]),
           !t || !("appid" in t || "bundleid" in t || "packageid" in t))
         )
           return null;
@@ -217,7 +217,7 @@
           children: [
             !D &&
               (0, a.jsxs)("div", {
-                ref: g,
+                ref: j,
                 className: (0, h.A)(
                   d().CapsuleBottomBar,
                   "CapsuleBottomBar",
@@ -246,13 +246,13 @@
                   !b &&
                     (0, a.jsx)(u.Q, {
                       id: t,
-                      bMinimizePlatforms: j,
+                      bMinimizePlatforms: g,
                       bHideWindows: !0,
                     }),
                   !s &&
                     (0, a.jsx)("span", {
                       className: d().BottomBarPriceInfo,
-                      children: (0, a.jsx)(m.N, {
+                      children: (0, a.jsx)(m.NF, {
                         id: t,
                         bShowInLibrary: l,
                         onlyOneDiscountPct: A,
@@ -294,13 +294,13 @@
     },
     22687: (e, t, n) => {
       "use strict";
-      n.d(t, { W: () => R, J: () => F });
+      n.d(t, { W: () => R, J: () => M });
       var a = n(7850),
         s = n(45699),
         r = n(76217),
         o = n(23310),
-        i = n(96171),
-        c = n(706),
+        i = n(48210),
+        c = n(29008),
         l = n(20433);
       var d = n(78588),
         u = n(12424),
@@ -316,8 +316,8 @@
         A = n(55963),
         S = n(33924),
         w = n(18654),
-        g = n.n(w),
-        j = n(94191),
+        j = n.n(w),
+        g = n(94191),
         P = n(72860),
         C = n(70300),
         y = n(54492),
@@ -330,8 +330,8 @@
         k = n.n(H),
         O = n(90421),
         W = n(5309),
-        M = n(71420);
-      const F = "capsule_index_";
+        F = n(71420);
+      const M = "capsule_index_";
       function R(e) {
         const {
             capsule: t,
@@ -351,21 +351,21 @@
           S = (0, x.$5)(n ? A?.related_items?.parent_appid : void 0),
           { data: w } = (0, b.J$)(S);
         if (!A || !f) return null;
-        const j = !!w && !!S,
+        const g = !!w && !!S,
           P = (0, a.jsx)(G, {
             ...e,
             strExtraParams: e.strExtraParams,
             id: f,
             bIsHovered: _,
-            bHasParentAppToDisplay: j,
+            bHasParentAppToDisplay: g,
             onlyOneDiscountPct: u,
             bShowEarlyAccessBanner: p,
             bUsePanel: !d && !h,
           });
         return (0, a.jsxs)(r.Z, {
           className: (0, E.A)({
-            [g().OuterCapsuleContainer]: !0,
-            [F + i]: 0 == i,
+            [j().OuterCapsuleContainer]: !0,
+            [M + i]: 0 == i,
           }),
           navEntryPreferPosition: o.iU.PREFERRED_CHILD,
           navKey: l,
@@ -380,7 +380,7 @@
                       children: P,
                     })
                   : (0, a.jsx)(c.Q, {
-                      className: g().CapsuleContainer,
+                      className: j().CapsuleContainer,
                       id: f,
                       elElementToAppend: e.elElementToAppendToHover,
                       bShowDemoButton: e.bShowDemoButton,
@@ -399,7 +399,7 @@
                 Boolean(s) && (0, a.jsx)(a.Fragment, { children: s }),
               ],
             }),
-            j &&
+            g &&
               (0, a.jsx)(L, {
                 strExtraParams: e.strExtraParams,
                 parentID: S,
@@ -423,13 +423,13 @@
           { data: m } = (0, b.lv)(n);
         return m
           ? (0, a.jsx)(s.ml, {
-              className: g().CapsuleParentInfo,
+              className: j().CapsuleParentInfo,
               ...(0, P.S)(r, d, u, c, t),
               children: (0, a.jsxs)(C.oj, {
                 appid: r.appid,
                 children: [
                   (0, a.jsx)("div", {
-                    className: g().ParentType,
+                    className: j().ParentType,
                     children: (0, N.we)(
                       o == i.uE.Ov
                         ? "#SalePage_ParentApp_SoundTrack"
@@ -470,13 +470,13 @@
           } = e,
           S = (0, I.n9)(),
           w = (0, D.w)(),
-          g = (0, _._)(t),
+          j = (0, _._)(t),
           { data: P } = (0, b.J$)(t);
         if (!P) return null;
         const C = o
             ? void 0
             : (0, T.NT)(
-                (0, A.It)(`${(0, M._)(P, f)}${i ? `?${i}` : ""}`, S, w),
+                (0, A.It)(`${(0, F._)(P, f)}${i ? `?${i}` : ""}`, S, w),
               ),
           N = o ? r.Z : s.Ii,
           B = !!p;
@@ -492,8 +492,8 @@
                   preferredFocus: u,
                   focusable: !0,
                   children: [
-                    (0, a.jsx)(j.V, {
-                      appids: g,
+                    (0, a.jsx)(g.V, {
+                      appids: j,
                       hide_status_banners: n,
                       show_early_access: v,
                     }),
@@ -504,7 +504,7 @@
                         bPreferAssetWithoutOverride: x,
                       }),
                     (0, a.jsx)(y.J, { id: t }),
-                    (0, a.jsx)(h.m, { id: t, active: m, bIsHoverMode: !0 }),
+                    (0, a.jsx)(h.mj, { id: t, active: m, bIsHoverMode: !0 }),
                   ],
                 }),
                 B &&
@@ -578,7 +578,7 @@
       "use strict";
       n.d(t, { _: () => w, r: () => S });
       var a = n(7850),
-        s = n(96171),
+        s = n(48210),
         r = n(39777),
         o = n(60014),
         i = n(58918),
@@ -617,7 +617,7 @@
             bIsFree: p,
             bIsComingSoon: S,
             className: w,
-            bTextMode: j,
+            bTextMode: g,
           } = e,
           P = (0, u.$5)(r),
           { bIsOwned: C } = (0, i.ZJ)(P),
@@ -625,14 +625,14 @@
           { mutateAsync: D } = (0, l.s)(r, !y, (0, m.L3)(s)),
           { elDialogElement: E, fnShowLogonDialog: N } = (0, A.E)();
         if (C || (!S && p))
-          return p ? (0, a.jsx)(g, { possibleDemoAppID: r }) : null;
+          return p ? (0, a.jsx)(j, { possibleDemoAppID: r }) : null;
         let T = null;
         return (
-          t && !j
+          t && !g
             ? (T = (0, a.jsx)(b.k, { size: 18 }))
             : y
-              ? y && (T = j ? (0, v.we)("#OnWishlist") : (0, a.jsx)(_.qnF, {}))
-              : (T = j
+              ? y && (T = g ? (0, v.we)("#OnWishlist") : (0, a.jsx)(_.qnF, {}))
+              : (T = g
                   ? (0, v.we)("#wishlist_add_to_wishlist")
                   : (0, a.jsx)(_.T4m, {})),
           (0, a.jsxs)(a.Fragment, {
@@ -652,7 +652,7 @@
           })
         );
       }
-      function g(e) {
+      function j(e) {
         const { possibleDemoAppID: t, className: n } = e,
           o = (0, u.$5)(t),
           { data: i } = (0, r.J$)(o);
@@ -660,13 +660,13 @@
           ? (i.type != s.uE.ue && i.type != s.uE.Vi) ||
             !i.related_items?.parent_appid
             ? null
-            : (0, a.jsx)(j, {
+            : (0, a.jsx)(g, {
                 parentAppID: i.related_items?.parent_appid,
                 className: n,
               })
           : null;
       }
-      function j(e) {
+      function g(e) {
         const { parentAppID: t, className: n } = e,
           s = (0, u.$5)(t),
           { data: o } = (0, r.J$)(s),

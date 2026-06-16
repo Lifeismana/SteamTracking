@@ -160,7 +160,7 @@
           "marketingmessage_art_eventcapsule",
           "marketingmessage_art_2_eventcapsule",
         ],
-        _ = ["spotlight_art", "spotlight_art_hero"],
+        _ = ["spotlight_art_hero"],
         _ = [..._, ..._, ..._, ..._, ..._, ..._, ..._];
       function _(_) {
         return Array.isArray(_) ? _[0] : _;

@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Este posibil ca trailerul să nu conțină secvențe de joc reale de pe Steam Deck",
     "StoreItemFound": "%1$s găsit (%2$s)",
     "StoreItemNotFound": "Niciun rezultat (%1$s)",
+    "SteamURLAccepted": "URL-ul %1$s este acceptat",
+    "SteamURLInvalid": "Eroare: URL-ul nu este o proprietate Steam (magazin/comunitate)",
+    "PriceGrid_NormalPrice": "ÎN MOD NORMAL",
+    "PriceGrid_RecentPrice": "MINIM (30 ZILE)",
+    "PriceGrid_CurrentPrice": "ACUM",
     "Dummy": "dummy"
 }

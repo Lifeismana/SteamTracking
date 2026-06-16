@@ -172,7 +172,7 @@
       "use strict";
       n.d(t, { e: () => l });
       var r = n(49632),
-        i = n(96171);
+        i = n(48210);
       function l(e) {
         switch (e) {
           case i.$m.oe:
@@ -586,7 +586,7 @@
         P = n(72670),
         S = n.n(P),
         T = n(8871);
-      const k = (0, i.forwardRef)(function (e, t) {
+      const j = (0, i.forwardRef)(function (e, t) {
         let { children: n, ...i } = e,
           l = (0, T.QS)((e) => {
             if (!e) return;
@@ -610,9 +610,9 @@
           s = (0, T.Ue)(l, t);
         return (0, r.jsx)("div", { ref: s, ...i, children: n });
       });
-      var j = n(98505),
+      var k = n(98505),
         w = n(29390),
-        I = n(96171),
+        I = n(48210),
         R = n(86927),
         V = n(49632);
       const E = 200,
@@ -621,9 +621,9 @@
         let { player: t, category: n, title: l, focus: s } = e,
           a = (0, i.useRef)(null),
           o = (0, i.useRef)(null),
-          [u, c] = (0, j.Cl)(t, w.M$),
+          [u, c] = (0, k.Cl)(t, w.M$),
           [d, h] = (0, i.useState)(!1),
-          m = (0, j.o$)(d, h, a);
+          m = (0, k.o$)(d, h, a);
         u = u || d;
         let p = (function (e) {
             let t = (0, C.ri)(),
@@ -648,7 +648,7 @@
           })(t),
           f = (0, R.b$)(!!s),
           _ = (0, g.A)(S().PlayerControls, u && S().ShowControls);
-        return (0, r.jsx)(j.F8.Provider, {
+        return (0, r.jsx)(k.F8.Provider, {
           value: m,
           children: (0, r.jsxs)("div", {
             ref: f,
@@ -662,7 +662,7 @@
                 children: [
                   (0, r.jsx)(A, { player: t, enabled: u && !d }),
                   (0, r.jsx)(N, {}),
-                  (0, r.jsxs)(k, {
+                  (0, r.jsxs)(j, {
                     ref: o,
                     className: S().LowerControls,
                     children: [
@@ -759,7 +759,7 @@
               },
               [l],
             );
-            let c = (0, j.Ps)(o);
+            let c = (0, k.Ps)(o);
             return {
               refBackground: n,
               inputEvents: c,
@@ -801,7 +801,7 @@
       function G(e) {
         let t,
           { player: n, refControlsHover: l } = e,
-          [s, a, o, u] = (0, j.qi)(n),
+          [s, a, o, u] = (0, k.qi)(n),
           [c, d] = (function (e) {
             let [t, n] = (0, i.useState)(!1),
               r = (0, i.useCallback)(() => n(!0), [n]);
@@ -853,10 +853,10 @@
           s = (0, i.useRef)(null),
           [a, o] = (function (e, t, n) {
             let [r, l] = (function (e, t) {
-              let [n, r] = (0, j.if)(),
+              let [n, r] = (0, k.if)(),
                 l = (0, i.useRef)(null),
                 s = (0, i.useRef)(!0),
-                a = (0, j.BF)(t);
+                a = (0, k.BF)(t);
               (0, i.useEffect)(() => {
                 let e = s.current;
                 (s.current = !1), (!e || a) && r(!0, a ? 0 : D);
@@ -891,7 +891,7 @@
           })(s, t, w.M$),
           u = (0, i.useRef)(null),
           [c, d] = (0, i.useState)(!1),
-          h = (0, j.o$)(c, d, u);
+          h = (0, k.o$)(c, d, u);
         a = a || c;
         let [m, p] = (function (e) {
             let [t, n] = (0, i.useState)(null),
@@ -912,7 +912,7 @@
           })(t),
           f = (0, g.A)(F().ControlGroup, a && F().ShowControls),
           _ = (0, g.A)(F().CenterControls, !!m && F().Hide);
-        return (0, r.jsx)(j.F8.Provider, {
+        return (0, r.jsx)(k.F8.Provider, {
           value: h,
           children: (0, r.jsxs)("div", {
             className: F().PlayerControls,
@@ -1025,9 +1025,9 @@
       }
       function $(e) {
         let { player: t } = e,
-          n = (0, j.BF)(t),
-          i = (0, j._8)(t),
-          s = (0, j.Ps)(i),
+          n = (0, k.BF)(t),
+          i = (0, k._8)(t),
+          s = (0, k.Ps)(i),
           a = n ? (0, r.jsx)(l.ud, {}) : (0, r.jsx)(l.E$, {});
         return (0, r.jsx)("div", {
           className: F().CenteredPlayToggle,
@@ -1045,9 +1045,9 @@
       function ne(e) {
         let { player: t, category: n, title: l } = e,
           [s, a] = (function (e) {
-            let [t, n] = (0, j.if)(),
+            let [t, n] = (0, k.if)(),
               r = (0, i.useRef)(!0),
-              l = (0, j.BF)(e);
+              l = (0, k.BF)(e);
             (0, i.useEffect)(() => {
               let e = r.current;
               (r.current = !1), (!e || l) && n(!0, l ? 0 : te);
@@ -1057,7 +1057,7 @@
             }, [n]);
             return [t, s];
           })(t, w.M$),
-          o = (0, j.BF)(t),
+          o = (0, k.BF)(t),
           u = (function (e, t) {
             let n = (0, i.useCallback)(
               (n) => {
@@ -1081,8 +1081,8 @@
             );
             return n;
           })(t, a),
-          c = (0, j._8)(t),
-          [d, h, m, p] = (0, j.qi)(t),
+          c = (0, k._8)(t),
+          [d, h, m, p] = (0, k.qi)(t),
           f = (0, i.useCallback)(() => {
             p(), a();
           }, [p, a]),
@@ -1096,7 +1096,7 @@
           ),
           y = (0, i.useRef)(null),
           [C, v] = (0, i.useState)(!1),
-          b = (0, j.o$)(C, v, y);
+          b = (0, k.o$)(C, v, y);
         const x = d
             ? "#TrailerPlayer_Unmute_Tooltip"
             : "#TrailerPlayer_Mute_Tooltip",
@@ -1104,7 +1104,7 @@
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip";
         let S = (0, g.A)(Y().ControlGroup, s && Y().ShowControls);
-        return (0, r.jsx)(j.F8.Provider, {
+        return (0, r.jsx)(k.F8.Provider, {
           value: b,
           children: (0, r.jsxs)(X.Z, {
             className: Y().PlayerControls,
@@ -1177,12 +1177,16 @@
         oe = "responsive_menu_ignore_touch";
       function ue(e) {
         return (0, C.ri)()
-          ? (0, r.jsx)(ce, { ...e, localContext: !1 })
-          : (0, r.jsx)(C.QY, {
-              iosVideoFallback: !0,
-              supportsTheater: !1,
-              supportsFullscreen: !0,
-              children: (0, r.jsx)(ce, { ...e, localContext: !0 }),
+          ? (0, r.jsx)(i.Suspense, {
+              children: (0, r.jsx)(ce, { ...e, localContext: !1 }),
+            })
+          : (0, r.jsx)(i.Suspense, {
+              children: (0, r.jsx)(C.QY, {
+                iosVideoFallback: !0,
+                supportsTheater: !1,
+                supportsFullscreen: !0,
+                children: (0, r.jsx)(ce, { ...e, localContext: !0 }),
+              }),
             });
       }
       function ce(e) {
@@ -1193,20 +1197,21 @@
           captionManifest: s,
           screenshot: o,
           forcePause: u,
-          onPlaybackEnd: c,
-          onPlayPauseChange: d,
-          onMuteChange: p,
-          uiMode: f,
-          altText: y,
-          title: v,
-          category: b,
-          statsURL: x,
-          muteWhenAutoplayBlocked: P,
-          localContext: S,
-          focus: T,
+          onPlaybackStart: c,
+          onPlaybackEnd: d,
+          onPlayPauseChange: p,
+          onMuteChange: f,
+          uiMode: v,
+          altText: b,
+          title: x,
+          category: P,
+          statsURL: S,
+          muteWhenAutoplayBlocked: T,
+          localContext: j,
+          focus: R,
         } = e;
-        (v = v || ""), (b = b || I.$m.$z);
-        let [k, R] = (function (e, t, n, r, l, s, a) {
+        (x = x || ""), (P = P || I.$m.$z);
+        let [E, M] = (function (e, t, n, r, l, s, a) {
           let o = (0, m.F)(),
             u = (0, i.useRef)(void 0);
           u.current || (u.current = new _(o));
@@ -1233,7 +1238,7 @@
             }, [a]),
             [c, u.current]
           );
-        })(n, l, s, x, c, d, p);
+        })(n, l, s, S, d, p, f);
         !(function (e, t) {
           (0, i.useImperativeHandle)(
             e,
@@ -1255,14 +1260,14 @@
             }),
             [t],
           );
-        })(t, R),
+        })(t, M),
           (function (e, t) {
             (t = !!t),
               (0, i.useEffect)(() => {
                 e.SetMuteWhenAutoplayBlocked(t);
               }, [e, t]);
-          })(R, !!P);
-        let [E, M] = (function (e) {
+          })(M, !!T);
+        let [L, H] = (function (e) {
             let t = (0, i.useRef)(null),
               n = (0, i.useRef)(null),
               r = (0, i.useRef)(null),
@@ -1284,7 +1289,7 @@
                 },
                 [t, s],
               );
-            (0, j.U1)(e, a);
+            (0, k.U1)(e, a);
             let o = (0, i.useCallback)(
                 (e) => {
                   (n.current = {
@@ -1297,11 +1302,11 @@
               ),
               u = (0, h.wY)(o);
             return [u, r.current];
-          })(R),
-          L = (0, C.ri)(),
-          H = S && L ? L.refFullscreen : null,
-          A = (0, h.Ue)(E, H),
-          B = (function (e, t) {
+          })(M),
+          A = (0, C.ri)(),
+          B = j && A ? A.refFullscreen : null,
+          N = (0, h.Ue)(L, B),
+          G = (function (e, t) {
             let n = (0, i.useRef)(!1),
               r = (0, i.useRef)(!1),
               l = (0, i.useRef)(!1);
@@ -1316,35 +1321,39 @@
               t || (l.current = !0),
               !l.current
             );
-          })(R, !!u),
-          N = B ? void 0 : k,
-          G = {};
-        M && ((G.width = `${M.nWidth}px`), (G.height = `${M.nHeight}px`)),
+          })(M, !!u),
+          O = G ? void 0 : E,
+          F = {};
+        H && ((F.width = `${H.nWidth}px`), (F.height = `${H.nHeight}px`));
+        let z = (0, y.q3)(() => M.IsBuffering());
+        i.useEffect(() => {
+          z || (c && c());
+        }, [z, c]),
           i.use(V.n.Ready());
-        let O = (0, g.A)(a().TrailerPlayer, oe);
+        let D = (0, g.A)(a().TrailerPlayer, oe);
         return (0, r.jsxs)("div", {
-          ref: A,
-          className: O,
+          ref: N,
+          className: D,
           "data-trailer-player": !0,
           children: [
             (0, r.jsx)("video", {
-              ref: N,
-              style: G,
+              ref: O,
+              style: F,
               controls: !1,
               playsInline: !0,
-              "aria-label": y,
+              "aria-label": b,
               crossOrigin: "anonymous",
             }),
             (0, r.jsx)(de, {
-              player: R,
-              uiMode: f,
-              category: b,
-              title: v,
-              focus: T,
+              player: M,
+              uiMode: v,
+              category: P,
+              title: x,
+              focus: R,
             }),
-            (0, r.jsx)(he, { player: R }),
-            !B && (0, r.jsx)(me, { player: R, screenshot: o }),
-            !B && (0, r.jsx)(w.MT, { player: R }),
+            (0, r.jsx)(he, { player: M }),
+            !G && (0, r.jsx)(me, { player: M, screenshot: o }),
+            !G && (0, r.jsx)(w.MT, { player: M }),
           ],
         });
       }
@@ -1461,10 +1470,10 @@
         F8: () => d,
         Ps: () => v,
         QR: () => f,
-        U1: () => j,
+        U1: () => k,
         Ug: () => g,
         Uo: () => w,
-        _8: () => k,
+        _8: () => j,
         fd: () => S,
         if: () => b,
         j_: () => P,
@@ -1702,12 +1711,12 @@
       function T(e) {
         return (0, i.q3)(() => e.IsPaused());
       }
-      function k(e) {
+      function j(e) {
         return (0, r.useCallback)(() => {
           e.TogglePlayPause();
         }, [e]);
       }
-      function j(e, t) {
+      function k(e, t) {
         (0, r.useEffect)(() => {
           const n = (0, l.fm)(() => {
             let n = e.GetMaxVideoDimensions(),
@@ -1767,8 +1776,8 @@
         P = n(84666),
         S = n.n(P),
         T = n(36586),
-        k = n(3946),
-        j = n(78327),
+        j = n(3946),
+        k = n(78327),
         w = n(62490),
         I = n(22837);
       const R = parseInt(S().nContextMenuEdgePadding),
@@ -1849,7 +1858,7 @@
       }
       function H(e) {
         let { player: t, refButton: n, onClose: i } = e,
-          l = (0, k.F)(),
+          l = (0, j.F)(),
           s = t.GetVideoRepresentations().map((e) => {
             let n = (function (e) {
               return (0, T.n)(e)
@@ -1885,7 +1894,7 @@
       }
       function A(e) {
         let { onClose: t } = e,
-          n = (0, k.F)(),
+          n = (0, j.F)(),
           l = 1 == n.m_bAutoplayEnabled,
           s = (0, i.useCallback)(() => {
             n.m_fnSetAutoplayEnabled && n.m_fnSetAutoplayEnabled(!l), t();
@@ -1901,7 +1910,7 @@
       }
       function B(e) {
         let { player: t, refButton: n, onClose: l } = e;
-        const s = (0, I.sfN)(j.TS.LANGUAGE);
+        const s = (0, I.sfN)(k.TS.LANGUAGE);
         let a = (0, i.useMemo)(() => {
             let e = [...t.GetCaptionRepresentations()],
               n = e.findIndex((e) => e.m_eLanguage == s);

@@ -21,7 +21,7 @@
 "app_task_servers"	"Servery"
 "app_task_news"		"Novinky"
 "app_task_bigpicture"	"Big Picture"
-"app_task_exit_bigpicture"	"Ukončit Big Picture"
+"app_task_exit_bigpicture"	"Ukončit režim Big Picture"
 "app_task_friend_status" "Stav služby Steam"
 "app_task_exit_steam"	"Ukončit klienta"
 "app_task_screenshots"	"Snímky"

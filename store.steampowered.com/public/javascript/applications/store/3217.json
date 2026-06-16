@@ -13,5 +13,10 @@
     "VerifiedProgram_DeckDisclaimer": "Traileren afspejler muligvis ikke reelt gameplay på Steam Deck",
     "StoreItemFound": "%1$s fundet (%2$s)",
     "StoreItemNotFound": "Ikke fundet (%1$s)",
+    "SteamURLAccepted": "%1$s URL er accepteret",
+    "SteamURLInvalid": "Fejl: URL er ikke til Steam (butik/fællesskab)",
+    "PriceGrid_NormalPrice": "NORMALT",
+    "PriceGrid_RecentPrice": "BUNDPRIS (30 DAGE)",
+    "PriceGrid_CurrentPrice": "NU",
     "Dummy": "dummy"
 }

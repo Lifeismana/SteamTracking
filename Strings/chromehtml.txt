@@ -147,96 +147,6 @@
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
 #!/bin/sh\nexit 0\n
-#Panorama_Lang_Arabic
-#Panorama_Lang_Brazilian
-#Panorama_Lang_Bulgarian
-#Panorama_Lang_Czech
-#Panorama_Lang_Danish
-#Panorama_Lang_Dutch
-#Panorama_Lang_English
-#Panorama_Lang_Finnish
-#Panorama_Lang_French
-#Panorama_Lang_German
-#Panorama_Lang_Greek
-#Panorama_Lang_Hungarian
-#Panorama_Lang_Indonesian
-#Panorama_Lang_Italian
-#Panorama_Lang_Japanese
-#Panorama_Lang_Korean
-#Panorama_Lang_Latam_Spanish
-#Panorama_Lang_Norwegian
-#Panorama_Lang_Polish
-#Panorama_Lang_Portuguese
-#Panorama_Lang_Romanian
-#Panorama_Lang_Russian
-#Panorama_Lang_Simplified_Chinese
-#Panorama_Lang_Spanish
-#Panorama_Lang_Swedish
-#Panorama_Lang_Thai
-#Panorama_Lang_Traditional_Chinese
-#Panorama_Lang_Turkish
-#Panorama_Lang_Ukrainian
-#Panorama_Lang_Vietnamese
-#Panorama_Selection_Arabic
-#Panorama_Selection_Brazilian
-#Panorama_Selection_Bulgarian
-#Panorama_Selection_Czech
-#Panorama_Selection_Danish
-#Panorama_Selection_Dutch
-#Panorama_Selection_English
-#Panorama_Selection_Finnish
-#Panorama_Selection_French
-#Panorama_Selection_German
-#Panorama_Selection_Greek
-#Panorama_Selection_Hungarian
-#Panorama_Selection_Indonesian
-#Panorama_Selection_Italian
-#Panorama_Selection_Japanese
-#Panorama_Selection_Korean
-#Panorama_Selection_Latam_Spanish
-#Panorama_Selection_Norwegian
-#Panorama_Selection_Polish
-#Panorama_Selection_Portuguese
-#Panorama_Selection_Romanian
-#Panorama_Selection_Russian
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Selection_Spanish
-#Panorama_Selection_Swedish
-#Panorama_Selection_Thai
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Selection_Turkish
-#Panorama_Selection_Ukrainian
-#Panorama_Selection_Vietnamese
-#SteamUI_Selection_Arabic
-#SteamUI_Selection_Brazilian
-#SteamUI_Selection_Bulgarian
-#SteamUI_Selection_Czech
-#SteamUI_Selection_Danish
-#SteamUI_Selection_Dutch
-#SteamUI_Selection_English
-#SteamUI_Selection_Finnish
-#SteamUI_Selection_French
-#SteamUI_Selection_German
-#SteamUI_Selection_Greek
-#SteamUI_Selection_Hungarian
-#SteamUI_Selection_Indonesian
-#SteamUI_Selection_Italian
-#SteamUI_Selection_Japanese
-#SteamUI_Selection_Korean
-#SteamUI_Selection_Latam_Spanish
-#SteamUI_Selection_Norwegian
-#SteamUI_Selection_Polish
-#SteamUI_Selection_Portuguese
-#SteamUI_Selection_Romanian
-#SteamUI_Selection_Russian
-#SteamUI_Selection_Simplified_Chinese
-#SteamUI_Selection_Spanish
-#SteamUI_Selection_Swedish
-#SteamUI_Selection_Thai
-#SteamUI_Selection_Traditional_Chinese
-#SteamUI_Selection_Turkish
-#SteamUI_Selection_Ukrainian
-#SteamUI_Selection_Vietnamese
 $'24A
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
@@ -461,6 +371,7 @@ $\n k_SystemAudioPortDirection_Input
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )\n$k_EPersonaStateFlag_ClientTypeMobile
+)\n%k_EAppTestType_SteamChina_BuildReview
 )\n%k_EBrowserFeatureStatus_DisabledOffOk
 )\n%k_EBrowserGPUStatus_DisabledBlocklist
 )\n%k_EBrowserGPUStatus_DisabledJSRequest
@@ -648,6 +559,7 @@ $\n k_SystemAudioPortDirection_Input
 --vmodule=
 -0123456789
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
+-\n)k_EAppTestType_SteamChina_StorePageReview
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
 -\n)k_ECommentThreadTypeScreenshot_Deprecated
 -\n)k_EContentCheckProvider_Google_DEPRECATED
@@ -740,7 +652,6 @@ $\n k_SystemAudioPortDirection_Input
 -realm=Global
 -restart-on-ui-mode-change
 -startcount=%d
--steamdeck
 -steamdeckdisplay
 -steamframe
 -steamid=%llu
@@ -823,6 +734,7 @@ $\n k_SystemAudioPortDirection_Input
 .google.protobuf.SourceCodeInfo
 .placeholder.proto
 .steam_exec_test.sh
+/\n+k_EAppTestType_SteamDeckCompatibilityReview
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_ECommentThreadTypePublishedFile_Developer
 /\n+k_ECommunityItemClass_MiniProfileBackground
@@ -880,6 +792,7 @@ $\n k_SystemAudioPortDirection_Input
 0123456789ABCDEF
 0123456789abcdef
 0\n#k_EAsyncGameSessionUserStateUnknown
+0\n,k_EAppTestType_SteamFrameCompatibilityReview
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
 0\n,k_EContentModerationSanction_CommunityBanned
@@ -1188,6 +1101,7 @@ $\n k_SystemAudioPortDirection_Input
 28CMsgSetTouchGesturesToCancel
 2<QF
 2\n.k_ECommentThreadTypePublishedFile_Announcement
+2\n.k_EContentReportReason_AutoCreatedOnModeration
 2\n.k_EContentReportReason_BullyingAndIntimidation
 2\n.k_EContentReportReason_GenderedOtherHarassment
 2\n.k_EContentReportReason_OtherCommercialActivity
@@ -1277,6 +1191,7 @@ $\n k_SystemAudioPortDirection_Input
 9CMsgClose
 9CMsgKeyUp
 9CMsgPaste
+9\n5k_EAppTestType_SteamChinaPlatformOperator_BuildReview
 9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
@@ -1299,6 +1214,7 @@ $\n k_SystemAudioPortDirection_Input
 <\n8k_ESteamDeckCompatibilityResultDisplayType_Informational
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
 = or is NULL
+=\n9k_EAppTestType_SteamChinaPlatformOperator_StorePageReview
 =\n9k_EContentReportReason_FakedGenderedNonConsensualMaterial
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
@@ -3380,7 +3296,6 @@ Plat_FloatTime
 Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
-Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS3
 Plat_IsSteamOS3FactoryImage
@@ -4161,6 +4076,7 @@ Zulu
 \n&ESteamOSCompatibilityResultDisplayType
 \n(ESteamDeckCompatibilityResultDisplayType
 \nParsing attempt:
+\n\fEAppTestType
 \n\fEGpuDriverId
 \n\fEUpdaterType
 \n\fFieldOptions
@@ -4698,6 +4614,7 @@ controller_rog_ally
 controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
+controller_steamframe_pair
 controller_steamos_handheld
 controller_switch2_pro
 controller_switch_joycon_left
@@ -5181,6 +5098,8 @@ k_EACState_Connected
 k_EACState_ConnectedSlow
 k_EACState_Disconnected
 k_EACState_Unknown
+k_EAppTestType_BuildReview
+k_EAppTestType_StorePageReview
 k_EAppTypeApplication
 k_EAppTypeBeta
 k_EAppTypeComic
@@ -5634,6 +5553,7 @@ month
 mopay
 mount
 mp4-single
+ms-MY
 msync
 multiple_raster_threads
 munmap

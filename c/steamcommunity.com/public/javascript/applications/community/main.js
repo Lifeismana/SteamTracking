@@ -3084,8 +3084,7 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -3830,9 +3829,7 @@
                     children: (0, _.jsx)(_._, {
                       children: (0, _.jsx)(_, {
                         children: (0, _.jsx)(_, {
-                          children: (0, _.jsx)(_._, {
-                            children: _.children,
-                          }),
+                          children: _.children,
                         }),
                       }),
                     }),
@@ -8243,6 +8240,11 @@
                     _: 47,
                     _: _._.readInt32,
                     _: _._.writeInt32,
+                  },
+                  use_gyro_sw_biases: {
+                    _: 48,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -12804,7 +12806,7 @@
         _(
           "----------------------------------------------------------------------------------",
         ),
-          _("Scrolling Into View:", _);
+          _("Scrolling Into View (NoTransform):", _);
         let _ = [],
           _ = _,
           _ = _(_),
@@ -14138,20 +14140,28 @@
                       _.Tree.Controller.BIsRestoringHistory() && (_ = "auto"),
                       _
                         ? _(0, _, _)
-                        : _.scrollIntoView({
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          _.scrollIntoView({
                             behavior: _,
                             block: "nearest",
-                          });
+                          }));
                   } else
                     _("No previous element for scrolling, will jump"),
                       _
                         ? _(0, _, "auto")
-                        : null == _ ||
-                          _.scrollIntoView({
-                            behavior: "auto",
-                            block: "nearest",
-                            inline: "nearest",
-                          });
+                        : (_(
+                            "Scrolling Into View (via browser scrollIntoView):",
+                            _,
+                          ),
+                          null == _ ||
+                            _.scrollIntoView({
+                              behavior: "auto",
+                              block: "nearest",
+                              inline: "nearest",
+                            }));
                 }
               })(this, _, _);
         }
@@ -14325,14 +14335,34 @@
         );
       }
       function _() {
-        const _ = _.useRef(null),
+        const _ = _.useRef({
+            width: 0,
+            height: 0,
+          }),
+          _ = _.useRef(null),
           _ = _.useCallback(
             (_) => {
               var _, _, _;
-              (null === (_ = _.current) || void 0 === _
-                ? void 0
-                : __webpack_require__.BFocusWithin()) &&
-                (null ===
+              if (
+                !(null === (_ = _.current) || void 0 === _
+                  ? void 0
+                  : _.BFocusWithin())
+              )
+                return;
+              const _ = Math.round(_.contentRect.width),
+                _ = Math.round(_.contentRect.height),
+                _ = Math.abs(_ - _.current.width),
+                _ = Math.abs(_ - _.current.height);
+              (_ >= 1 || _ >= 1) &&
+                ((_.current = {
+                  width: _,
+                  height: _,
+                }),
+                _(
+                  "KeepFocusedElementInViewOnResize scrolling focused element into view due to resize of",
+                  _.target,
+                ),
+                null ===
                   (_ =
                     null === (_ = _.current.Node()) || void 0 === _
                       ? void 0
@@ -19058,10 +19088,10 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  reservation_type: {
+                  collection_time_active: {
                     _: 17,
-                    _: _._.readBool,
-                    _: _._.writeBool,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -47580,6 +47610,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  formatted_lowest_recent_price: {
+                    _: 55,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -47645,6 +47680,11 @@
                   },
                   discount_end_date: {
                     _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  master_sub_appid: {
+                    _: 4,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -50222,6 +50262,36 @@
                     _: 21,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  position_is_waitlist: {
+                    _: 22,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  user_waitlist_token: {
+                    _: 23,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  queue_in_waitlist: {
+                    _: 24,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  queue_waitlist_token: {
+                    _: 25,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  collection_time_active: {
+                    _: 26,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  reservation_not_allowed: {
+                    _: 27,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -53638,14 +53708,15 @@
       function _(_) {
         const { data: _ } = (0, _._)(_),
           _ = (0, _._)();
-        if (!_) return;
+        if (void 0 === _) return;
+        if (null === _) return null;
         const _ = [...(_.highlights || []), ...(_.other_trailers || [])];
         return _ ? _.filter((_) => !!_.all_ages) : _;
       }
-      function _(_, _) {
+      function _(_, _, _) {
         const _ = _(_);
-        if (_ && _)
-          return __webpack_require__.find((_) => _.trailer_base_id === _);
+        if (_ && 0 != _.length)
+          return _ ? _.find((_) => _.trailer_base_id === _) : _ ? _[0] : void 0;
       }
       function _(_) {
         let _ = _(_);
@@ -60270,6 +60341,7 @@
             if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
+            _.showPopover();
             const _ = _.querySelector(".hover_arrow.left"),
               _ = _.querySelector(".hover_arrow.right"),
               _ = _.querySelector(".hover_arrow.top"),
@@ -60367,6 +60439,7 @@
           ),
           _ = !_ || _.visible;
         return (0, _.jsx)("div", {
+          popover: "manual",
           ref: _,
           className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
           children: (0, _.jsx)("div", {
@@ -60848,7 +60921,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -62048,43 +62120,6 @@
         GetOnlyAllAgesScreenshots() {
           return this.m_rgOnlyAllAgesScreenshots;
         }
-      }
-      function _(_) {
-        if (_)
-          switch (_.GetStoreItemType()) {
-            case _._._:
-              return {
-                appid: _.GetAppID(),
-              };
-            case _._._:
-              return {
-                packageid: _.GetID(),
-              };
-            case _._._:
-              return {
-                bundleid: _.GetID(),
-              };
-            case _._._:
-              return {
-                tagid: _.GetID(),
-              };
-            case _._._:
-              return {
-                creatorid: _.GetID(),
-              };
-            case _._._:
-              return {
-                hubcategoryid: _.GetID(),
-              };
-            case _._._:
-            case _._._:
-              return;
-            default:
-              return void (0, _._)(
-                _.GetStoreItemType(),
-                `Unknown EStoreItemType ${_.GetStoreItemType()} ${(0, _._)(_.GetStoreItemType())} `,
-              );
-          }
       }
       function _(_) {
         if (_)
@@ -83045,7 +83080,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = "separator",
@@ -83067,6 +83101,7 @@
           (this.m_setPagedSettingsInstances = new Set()), (0, _._)(this);
         }
       }
+      var _;
       function _(_) {
         const {
             stylesheet: _,
@@ -83162,7 +83197,15 @@
           ],
         });
       }
-      (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
+      (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0),
+        (function (_) {
+          (_[(_.k_EPagedSettingsInitialFocus_Default = 0)] =
+            "k_EPagedSettingsInitialFocus_Default"),
+            (_[(_.k_EPagedSettingsInitialFocus_PageList = 1)] =
+              "k_EPagedSettingsInitialFocus_PageList"),
+            (_[(_.k_EPagedSettingsInitialFocus_PageContent = 2)] =
+              "k_EPagedSettingsInitialFocus_PageContent");
+        })(_ || (_ = {}));
       const _ = _.forwardRef(function (_, _) {
         var _;
         const { activePage: _, style: _, stylesheet: _ } = _,
@@ -83212,7 +83255,12 @@
       const _ = _.createContext(void 0),
         _ = _.forwardRef(function (_, _) {
           var _;
-          const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
+          const {
+              stylesheet: _ = _(),
+              pages: _,
+              onPageRequested: _,
+              eInitialFocus: _,
+            } = _,
             _ = _.useId(),
             _ = null == _.page,
             [_, _] = _.useState(() =>
@@ -83259,18 +83307,12 @@
             _ = (0, _._)(
               "DialogContentTransition",
               _.PagedSettingDialog_ContentColumn,
-            ),
-            _ = (0, _._)();
+            );
           _.useEffect(() => {
-            var _, _;
-            !_.bManuallyFocusPageContent &&
-              (null === (_ = _.state) || void 0 === _
-                ? void 0
-                : _.bDirectNav) &&
-              (null === (_ = _.current) ||
-                void 0 === _ ||
-                __webpack_require__.TakeFocus());
-          }, [_.state]);
+            var _;
+            _ === _.k_EPagedSettingsInitialFocus_PageContent &&
+              (null === (_ = _.current) || void 0 === _ || _.TakeFocus());
+          }, []);
           const { refForPageList: _, refForPage: _ } = (function () {
             const _ = _.useMemo(() => new _(), []);
             _.useEffect(
@@ -84375,8 +84417,8 @@
             "Hmd_SupportsGpuBusMonitoring_Bool"),
           (_[(_.DriverProvidedIPDVisibility_Bool = 2108)] =
             "DriverProvidedIPDVisibility_Bool"),
-          (_[(_.Prop_Hmd_SupportsVRGamepadFocus_Bool = 2117)] =
-            "Prop_Hmd_SupportsVRGamepadFocus_Bool"),
+          (_[(_.Prop_SupportsVRGamepadMode_Bool = 2117)] =
+            "Prop_SupportsVRGamepadMode_Bool"),
           (_[(_.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
             "DriverRequestedMuraCorrectionMode_Int32"),
           (_[(_.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
@@ -84397,6 +84439,8 @@
             "DriverRequestedMuraFeather_OuterBottom_Int32"),
           (_[(_.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
             "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
+          (_[(_.Hmd_ForceRoomViewOutsideChaperone_Bool = 2500)] =
+            "Hmd_ForceRoomViewOutsideChaperone_Bool"),
           (_[(_.AttachedDeviceId_String = 3e3)] = "AttachedDeviceId_String"),
           (_[(_.SupportedButtons_Uint64 = 3001)] = "SupportedButtons_Uint64"),
           (_[(_.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
@@ -84541,7 +84585,7 @@
             (_[(_.SmoothStep = 3)] = "SmoothStep"),
             (_[(_.SmootherStep = 4)] = "SmootherStep");
         })(_ || (_ = {}));
-      var _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.RecenterCountdown = 1)] = "RecenterCountdown"),
@@ -84575,20 +84619,38 @@
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.System = 1)] = "System"),
-            (_[(_.SteamInput = 2)] = "SteamInput"),
-            (_[(_.VRInput = 3)] = "VRInput");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.SceneApp = 1)] = "SceneApp"),
             (_[(_.Panel = 2)] = "Panel");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.ControllerPairing = 0)] = "ControllerPairing"),
+            (_[(_.WelcomeToSteamFrame = 1)] = "WelcomeToSteamFrame"),
+            (_[(_.SystemButtonHideDashboard = 2)] =
+              "SystemButtonHideDashboard"),
+            (_[(_.SystemButtonDashboardHidden = 3)] =
+              "SystemButtonDashboardHidden"),
+            (_[(_.SystemButtonShowDashboard = 4)] =
+              "SystemButtonShowDashboard"),
+            (_[(_.PairWifiDongle = 5)] = "PairWifiDongle"),
+            (_[(_.TourSendOff = 6)] = "TourSendOff"),
+            (_[(_.SteamGuidedTourFinished = 7)] = "SteamGuidedTourFinished");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
             (_[(_.ThirdPartyClient = 1)] = "ThirdPartyClient"),
             (_[(_.SteamVRClientUnified = 2)] = "SteamVRClientUnified"),
             (_[(_.SteamVRClientLegacyDual = 3)] = "SteamVRClientLegacyDual");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"),
+            (_[(_.AuroraFloor = 1)] = "AuroraFloor");
+        })(_ || (_ = {}));
+      var _, _;
+      !(function (_) {
+        (_[(_.Curved = 0)] = "Curved"), (_[(_.Flat = 1)] = "Flat");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.Default = 0)] = "Default"), (_[(_.Aurora = 1)] = "Aurora");
         })(_ || (_ = {}));
       (0, _._)(_()["error-shake-duration"]);
       function _(_, _) {
@@ -89374,7 +89436,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         _.useEffect(() => {
@@ -89548,12 +89609,10 @@
         const { className: _, active: _, children: _ } = _;
         return (0, _.jsx)(_, {
           active: _,
-          children: (0, _.jsx)(_._, {
-            children: (0, _.jsx)("div", {
-              className: _,
-              tabIndex: -1,
-              children: _,
-            }),
+          children: (0, _.jsx)("div", {
+            className: _,
+            tabIndex: -1,
+            children: _,
           }),
         });
       }
@@ -90710,7 +90769,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { active: _, children: _ } = _,
@@ -90740,9 +90798,7 @@
           !_ || !_)
         )
           return null;
-        let _ = (0, _.jsx)(_._, {
-          children: _,
-        });
+        let _ = _;
         return (
           _ &&
             (_ = (0, _.jsx)(_, {
@@ -95812,8 +95868,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -95823,28 +95877,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_) {
-        const [_, _] = _.useState(null),
-          _ = _.useMemo(
-            () => ({
-              targetElement: _,
-            }),
-            [_],
-          );
-        return (0, _.jsxs)(_.Provider, {
-          value: _,
-          children: [
-            (0, _.jsx)("div", {
-              ref: _,
-            }),
-            _.children,
-          ],
-        });
-      }
+        _ = __webpack_require__._(_);
       function _(_) {
         var _;
         const { divProps: _, tooltipProps: _ } = _({
@@ -96001,10 +96034,9 @@
             hoverPositionProps: _,
             children: _,
           } = _,
-          [_, _] = _.useState(_),
-          _ = _();
-        if (
-          (_.useEffect(() => {
+          [_, _] = _.useState(_);
+        return (
+          _.useEffect(() => {
             if (_) {
               if (_) {
                 const _ = window.setTimeout(() => _(!0), _);
@@ -96013,18 +96045,13 @@
               _(!0);
             } else (0, _._)() || _(!1);
           }, [_]),
-          !_)
-        )
-          return null;
-        if (!_ || !_) return null;
-        const { targetElement: _ } = _;
-        return _.createPortal(
-          (0, _.jsx)(_._, {
-            target: _,
-            ..._,
-            children: _,
-          }),
-          null != _ ? _ : _.ownerDocument.body,
+          _ && _ && _
+            ? (0, _.jsx)(_._, {
+                target: _,
+                ..._,
+                children: _,
+              })
+            : null
         );
       }
     },
@@ -97982,7 +98009,15 @@
               ? _
               : null;
           null != _ && (_ += " (" + _ + ")");
-          _(_, _, _.Get().IncludeBacktraceInLog, _, this.m_sName, ..._);
+          _(
+            _,
+            _,
+            _.Get().IncludeBacktraceInLog,
+            _.Get().AllowCSSInLogStyling,
+            _,
+            this.m_sName,
+            ..._,
+          );
         }
       }
       (0, _._)([_._], _.prototype, "Debug", null),
@@ -97995,6 +98030,7 @@
           (this.m_setKnownDebugLogs = new Set()),
             (this.m_setEnabledDebugLogs = new Set()),
             (this.m_bIncludeBacktraceInLog = !1),
+            (this.m_bAllowCSSInLogStyling = !0),
             (this.m_SettingsChangedCallback = new _._()),
             (this.m_bLoading = !0),
             this.LoadSettings();
@@ -98004,24 +98040,30 @@
             _.Info,
             !0,
             this.IncludeBacktraceInLog,
+            this.AllowCSSInLogStyling,
             "LogManager",
             "LogManager",
             ..._,
           );
         }
         async LoadSettings() {
-          const _ = (_) => {
+          const _ = (_, _) => {
             try {
               const _ = localStorage.getItem(_);
-              return _ ? JSON.parse(_) : void 0;
+              return _ ? JSON.parse(_) : _;
             } catch {
-              return;
+              return _;
             }
           };
-          this.m_bIncludeBacktraceInLog = !!_(
+          (this.m_bIncludeBacktraceInLog = !!_(
             _.k_IncludeBacktraceInLog_StorageKey,
-          );
-          const _ = _(_.k_EnabledLogNames_StorageKey);
+            !1,
+          )),
+            (this.m_bAllowCSSInLogStyling = !!_(
+              _.k_AllowCSSInLogColors_StorageKey,
+              !0,
+            ));
+          const _ = _(_.k_EnabledLogNames_StorageKey, void 0);
           if (Array.isArray(_)) {
             this.m_setEnabledDebugLogs = new Set(_);
             for (const _ of _) this.m_setKnownDebugLogs.add(_);
@@ -98040,6 +98082,10 @@
             localStorage.setItem(
               _.k_IncludeBacktraceInLog_StorageKey,
               JSON.stringify(this.m_bIncludeBacktraceInLog),
+            ),
+            localStorage.setItem(
+              _.k_AllowCSSInLogColors_StorageKey,
+              JSON.stringify(this.m_bAllowCSSInLogStyling),
             ),
             this.LogAsLogManager(
               "Saved enabled debug log names. Will print log messages for:",
@@ -98114,56 +98160,66 @@
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
         }
+        get AllowCSSInLogStyling() {
+          return this.m_bAllowCSSInLogStyling;
+        }
+        async SetAllowCSSInLogStyling(_) {
+          (this.m_bAllowCSSInLogStyling = _),
+            this.m_SettingsChangedCallback.Dispatch(),
+            await this.SaveSettings();
+        }
         GetLogNames() {
           return Array.from(this.LogNames).sort();
         }
       }
-      function _(_, _, _, _, _, ..._) {
-        const _ = (function (_) {
-            let _ = 0;
-            for (let _ = 0; _ < _.length; _++)
-              _ = _.charCodeAt(_) + ((_ << 5) - _);
-            return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
-          })(_).map((_, _) =>
-            Math.round(
-              Math.max(0, Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15))),
-            ),
-          ),
-          _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128;
-        var _;
-        let _ = _;
-        _ &&
-          (_ =
-            (function (_) {
-              switch (_) {
-                case _.Debug:
-                  return String.fromCodePoint(128027);
-                case _.Info:
-                  return String.fromCodePoint(8505);
-                case _.Warning:
-                  return String.fromCodePoint(9888);
-                case _.Error:
-                  return String.fromCodePoint(128165);
-              }
-            })(_) +
-            " " +
-            _);
-        const _ =
-            _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
-          _ = _ && _.shift();
-        let _;
+      function _(_, _, _, _, _, _, ..._) {
+        let _,
+          _ = _;
         if (
-          ((_ = _
-            ? [
-                `%c${_}%c:${_ ? " %c" + _ : ""}`,
-                `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
-                "color: transparent; margin-right: -1ch",
-                ...(_ ? [""] : []),
-                ..._,
-              ]
-            : _),
-          _)
-        )
+          (_ &&
+            (_ =
+              (function (_) {
+                switch (_) {
+                  case _.Debug:
+                    return String.fromCodePoint(128027);
+                  case _.Info:
+                    return String.fromCodePoint(8505);
+                  case _.Warning:
+                    return String.fromCodePoint(9888);
+                  case _.Error:
+                    return String.fromCodePoint(128165);
+                }
+              })(_) +
+              " " +
+              _),
+          _ && _)
+        ) {
+          const _ = (function (_) {
+              let _ = 0;
+              for (let _ = 0; _ < _.length; _++)
+                _ = _.charCodeAt(_) + ((_ << 5) - _);
+              return [255 & _, (_ >> 8) & 255, (_ >> 16) & 255];
+            })(_).map((_, _) =>
+              Math.round(
+                Math.max(
+                  0,
+                  Math.min(255, 255 * (0.8 * (_ / 255 - 0.5) + 0.15)),
+                ),
+              ),
+            ),
+            _ = (299 * (_ = _)[0] + 587 * _[1] + 114 * _[2]) / 1e3 >= 128,
+            _ = _.length >= 1 && "string" == typeof _[0] && _[0].includes("%c"),
+            _ = _ && _.shift();
+          _ = [
+            `%c${_}%c:${_ ? " %c" + _ : ""}`,
+            `color: ${_ ? "black" : "white"}; background: rgb(${_.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+            "color: transparent; margin-right: -1ch",
+            ...(_ ? [""] : []),
+            ..._,
+          ];
+        } else _ = [`${_}:`, ..._];
+        var _;
+        if (_)
           console.groupCollapsed(..._),
             console.trace("Callstack"),
             console.groupEnd();
@@ -98184,6 +98240,7 @@
       }
       (_.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
         (_.k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog"),
+        (_.k_AllowCSSInLogColors_StorageKey = "AllowCSSInLogColors"),
         (window.DebugLogEnable = (..._) =>
           _.Get().SetDebugLogsEnabled(!0, ..._)),
         (window.DebugLogDisable = (..._) =>
